@@ -319,7 +319,7 @@ print(t[1]) -- will be fast because it's just grabbing the number from the table
 
 #### Rawset, rawget, rawequal
 
-When playing with metatables, you may run into some problems. What happens if you need to use the `__index` metamethod to create new values in a table, but that table's metatable also has a `__newindex` metamethod in it? You'll want to use the Luau built-in function `rawset` to set the value without invoking any metamethods. Take the following code as an example of what happens if you don't use these functions.
+When playing with metatables, you may run into some problems. If you need to use the `__index` metamethod to create new values in a table, but that table's metatable also has a `__newindex` metamethod, you'll want to use the Luau built-in function `Global.LuaGlobals.rawset()` to set the value without invoking any metamethods. Take the following code as an example of what happens if you don't use these functions.
 
 ```lua
 local t = setmetatable({}, {
