@@ -1,4 +1,4 @@
-name: CaptureUIHideMode
+name: UICaptureMode
 type: enum
 summary: ''
 description: ''
@@ -16,7 +16,7 @@ items:
     value: 1
     tags: []
     deprecation_message: ''
-  - name: Core
+  - name: PlayerGui
     summary: ''
     value: 2
     tags: []

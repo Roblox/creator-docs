@@ -16,6 +16,7 @@
         "tags": ["CrossServerMessaging"],
         "operationId": "CrossServerMessaging_Publish",
         "x-roblox-cloud-api-operation-name": "Publish a Message",
+        "x-roblox-stability": "BETA",
         "description": "Publish a message to a pre-defined topic of an experience, with the size of the message up to 1,024 characters (1 KB). Requires the **Publish** permission for API keys and the **universe-messaging-service:publish** scope for OAuth 2.0 apps. See [Cross-server messaging](../../../cloud-services/cross-server-messaging.md#subscribe-users-to-receive-messages) for defining and subscribing users to a topic.",
         "parameters": [
           {
@@ -80,6 +81,20 @@
             "description": "Server internal error / Unknown error."
           }
         },
+        "x-roblox-rate-limits": {
+          "perIp": {
+            "period": "MINUTE",
+            "maxInPeriod": 10000
+          },
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 5000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 5000
+          }
+        },
         "security": [
           {
             "roblox-api-key": ["Label.Publish"]
@@ -88,6 +103,10 @@
             "roblox-oauth2": ["universe-messaging-service:publish"]
           }
         ],
+        "x-roblox-scopes": {
+          "required": ["universe-messaging-service:publish"],
+          "conditional": []
+        },
         "x-roblox-cloud-api-operation": true
       }
     }
@@ -110,11 +129,13 @@
     "securitySchemes": {
       "roblox-api-key": {
         "type": "apiKey",
-        "name": "roblox-api-key",
-        "in": "header"
+        "description": "A configurable key that allows granular access to Roblox resources. See https://create.roblox.com/docs/cloud/auth/api-keys for more information.",
+        "in": "header",
+        "name": "x-api-key"
       },
       "roblox-oauth2": {
         "type": "oauth2",
+        "description": "Build or authorize apps to access Roblox resources. See https://create.roblox.com/docs/cloud/auth/oauth2-overview for more information.",
         "flows": {
           "authorizationCode": {
             "authorizationUrl": "https://apis.roblox.com/oauth/v1/authorize",

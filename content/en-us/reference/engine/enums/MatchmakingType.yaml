@@ -1,23 +1,30 @@
 name: MatchmakingType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Used with `Class.DataModel.MatchmakingType` to represent how players in the
+  server are handled by matchmaking.
+description: |
+  This enum is used with `Class.DataModel.MatchmakingType` to represent how
+  players in the server are handled by matchmaking.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      Includes desktop, mobile, cross-play enabled players, etc.
     value: 1
     tags: []
     deprecation_message: ''
   - name: XboxOnly
-    summary: ''
+    summary: |
+      Xbox players with cross-play disabled.
     value: 2
     tags: []
     deprecation_message: ''
   - name: PlayStationOnly
-    summary: ''
+    summary: |
+      PlayStation players with cross-play disabled.
     value: 3
     tags: []
     deprecation_message: ''

@@ -3,6 +3,8 @@ title: Assistant
 description: How to use Assistant to help build, grow, and monetize your creations.
 ---
 
+import BetaAlert from '../includes/beta-features/beta-alert.md'
+
 **Assistant** is an AI helper that accelerates content creation by helping you get started, supplementing your skills, and assisting with ongoing development. It can do the following and much more:
 
 - Answer how to do things on Roblox
@@ -10,6 +12,7 @@ description: How to use Assistant to help build, grow, and monetize your creatio
 - Insert objects from the Creator Store
 - "Explain this code" by selecting parts of a script in the Script Editor
 - Create materials to restyle your objects
+- Generate 3D objects to populate your scene
 
 <Alert severity="info">
 [Built with Meta Llama 3](https://llama.meta.com/llama3/license/)
@@ -54,6 +57,17 @@ If you need general knowledge or help while creating an experience, you can ask 
 When given a request to generate a material, Assistant in Studio can quickly style existing parts through a lightweight implementation of the [Material Generator](../studio/material-generator.md).
 
 <img src="../assets/assistant/Studio-Quick-Styling-Material.png" width="360" alt="Material variations shown in Assistant for quick styling." />
+
+### Generate 3D models
+
+<BetaAlert betaName="Assistant Mesh Generation" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} />
+
+The `/generate` command enables [mesh generation](https://corp.roblox.com/newsroom/2025/03/introducing-roblox-cube), powered by Roblox's Cube 3D model.
+
+1. In the Assistant chat window, type a command such as `/generate a red buggy with knobby tires`.
+1. Assistant generates the corresponding object and adds it directly to your workspace for further customization.
+
+<img src="../assets/assistant/Studio-Generated-Green-Dragon.jpg" width="360" alt="A generated green dragon provided by Assistant in Studio." />
 
 ## Access Assistant
 

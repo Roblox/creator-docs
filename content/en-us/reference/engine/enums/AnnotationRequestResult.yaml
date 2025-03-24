@@ -21,3 +21,8 @@ items:
     value: 2
     tags: []
     deprecation_message: ''
+  - name: ErrorModerated
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''

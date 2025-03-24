@@ -119,8 +119,7 @@ properties:
       an existing `Class.MeshPart`.
     code_samples: []
     type: Content
-    tags:
-      - Hidden
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -283,8 +282,7 @@ properties:
       application such as [Blender](https://www.blender.org/).
     code_samples: []
     type: Content
-    tags:
-      - Hidden
+    tags: []
     deprecation_message: ''
     security:
       read: None

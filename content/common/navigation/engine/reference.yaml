@@ -265,6 +265,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/AudioSearchParams.yaml
         ignoreTranslation: true
+      - title: AudioTextToSpeech
+        path: /reference/engine/classes/AudioTextToSpeech
+        type: engineapi
+        source: /reference/engine/classes/AudioTextToSpeech.yaml
+        ignoreTranslation: true
       - title: AvatarCreationService
         path: /reference/engine/classes/AvatarCreationService
         type: engineapi
@@ -1464,6 +1469,11 @@ navigation:
         path: /reference/engine/classes/MarketplaceService
         type: engineapi
         source: /reference/engine/classes/MarketplaceService.yaml
+        ignoreTranslation: true
+      - title: MatchmakingService
+        path: /reference/engine/classes/MatchmakingService
+        type: engineapi
+        source: /reference/engine/classes/MatchmakingService.yaml
         ignoreTranslation: true
       - title: MaterialService
         path: /reference/engine/classes/MaterialService
@@ -2975,6 +2985,16 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/VRStatusService.yaml
         ignoreTranslation: true
+      - title: WebSocketClient
+        path: /reference/engine/classes/WebSocketClient
+        type: engineapi
+        source: /reference/engine/classes/WebSocketClient.yaml
+        ignoreTranslation: true
+      - title: WebSocketService
+        path: /reference/engine/classes/WebSocketService
+        type: engineapi
+        source: /reference/engine/classes/WebSocketService.yaml
+        ignoreTranslation: true
       - title: WedgePart
         path: /reference/engine/classes/WedgePart
         type: engineapi
@@ -3617,11 +3637,6 @@ navigation:
         path: /reference/engine/enums/CameraType
         type: engineapi
         source: /reference/engine/enums/CameraType.yaml
-        ignoreTranslation: true
-      - title: CaptureUIHideMode
-        path: /reference/engine/enums/CaptureUIHideMode
-        type: engineapi
-        source: /reference/engine/enums/CaptureUIHideMode.yaml
         ignoreTranslation: true
       - title: CatalogCategoryFilter
         path: /reference/engine/enums/CatalogCategoryFilter
@@ -5013,6 +5028,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/StartCorner.yaml
         ignoreTranslation: true
+      - title: StateObjectFieldType
+        path: /reference/engine/enums/StateObjectFieldType
+        type: engineapi
+        source: /reference/engine/enums/StateObjectFieldType.yaml
+        ignoreTranslation: true
       - title: Status
         path: /reference/engine/enums/Status
         type: engineapi
@@ -5303,6 +5323,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/TweenStatus.yaml
         ignoreTranslation: true
+      - title: UICaptureMode
+        path: /reference/engine/enums/UICaptureMode
+        type: engineapi
+        source: /reference/engine/enums/UICaptureMode.yaml
+        ignoreTranslation: true
       - title: UIDragDetectorBoundingBehavior
         path: /reference/engine/enums/UIDragDetectorBoundingBehavior
         type: engineapi
@@ -5487,6 +5512,11 @@ navigation:
         path: /reference/engine/enums/WaterForce
         type: engineapi
         source: /reference/engine/enums/WaterForce.yaml
+        ignoreTranslation: true
+      - title: WebSocketState
+        path: /reference/engine/enums/WebSocketState
+        type: engineapi
+        source: /reference/engine/enums/WebSocketState.yaml
         ignoreTranslation: true
       - title: WeldConstraintPreserve
         path: /reference/engine/enums/WeldConstraintPreserve

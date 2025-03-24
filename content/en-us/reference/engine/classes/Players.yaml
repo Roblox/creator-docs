@@ -46,7 +46,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players.BubbleChat
     summary: |
@@ -76,8 +77,11 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
-    writeCapabilities: []
+    capabilities:
+      - Chat
+      - Players
+    writeCapabilities:
+      - Chat
   - name: Players.CharacterAutoLoads
     summary: |
       Indicates whether `Class.Player.Character|characters` will respawn
@@ -107,7 +111,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players.ClassicChat
     summary: |
@@ -136,8 +141,11 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
-    writeCapabilities: []
+    capabilities:
+      - Chat
+      - Players
+    writeCapabilities:
+      - Chat
   - name: Players.LocalPlayer
     summary: |
       The `Class.Player` that the `Class.LocalScript` is running for.
@@ -163,7 +171,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players.MaxPlayers
     summary: |
@@ -187,7 +196,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players.NumPlayers
     summary: |
@@ -212,7 +222,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players.PreferredPlayers
     summary: |
@@ -235,7 +246,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players.RespawnTime
     summary: |
@@ -264,7 +276,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players.UseStrafingAnimations
     summary: ''
@@ -282,7 +295,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players.localPlayer
     summary: ''
@@ -305,7 +319,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players.numPlayers
     summary: |
@@ -333,7 +348,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
 methods:
   - name: Players:Chat

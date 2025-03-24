@@ -73,6 +73,25 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: AssetService:CanEditAssetAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: content
+        type: Content
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AssetService:CreateAssetAsync
     summary: |
       Uploads a new asset to Roblox from the given object.
@@ -240,11 +259,12 @@ methods:
       Returns a new `Class.EditableMesh` object created from an existing mesh
       content ID.
     description: |
-      Returns a new `Class.EditableMesh` object created from an existing `Class.EditableMesh`
-      or mesh `Datatype.Content` ID. By default, an `Class.EditableMesh` created from this method
-      will be fixed size such that mesh data can only be modified, not added nor
-      removed. A fixed size `Class.EditableMesh` consumes less memory and should
-      be preferred when possible.
+      Returns a new `Class.EditableMesh` object created from an existing
+      `Class.EditableMesh` or mesh `Datatype.Content` ID. By default, an
+      `Class.EditableMesh` created from this method will be fixed size such that
+      mesh data can only be modified, not added nor removed. A fixed size
+      `Class.EditableMesh` consumes less memory and should be preferred when
+      possible.
 
       If the device-specific editable memory budget is exhausted, creation will
       fail and this method will return `nil`.

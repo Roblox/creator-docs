@@ -218,6 +218,12 @@ The following example demonstrates how a partial and full transparency in this m
 </TabItem>
 </Tabs>
 
+There are two outcomes of `Enum.AlphaMode|Transparency` mode, depending on whether the `Class.MeshPart.Transparency` is set to `0` or **at&nbsp;least** `0.02`, although numerical precision may result in small values such as `0.01` triggering the opaque transparency.
+
+- When alpha is used to cut out the shape of mostly opaque objects with hard edges such as foliage, lace fabric, and netting, set the `Class.MeshPart.Transparency` to `0`. When parts of the surface are fully opaque, the Roblox engine can render them with proper depth‑based occlusion. Opaque surfaces also generally work better with depth‑based effects like `Class.DepthOfFieldEffect`, glass and water refraction, and water reflection.
+
+- When alpha is used to add detail to semi‑transparent objects or objects with smooth gradients of transparency, set the `Class.MeshPart.Transparency` to **at&nbsp;least** `0.02`. This improves the quality of blending for objects such as dirty windows and soft‑edged feathers, but it will not work with all effects.
+
 #### Color tinting
 
 You can apply a tint to your color map by modifying the `Class.SurfaceAppearance.Color` property. Tinting does not affect performance and you can save on memory by reusing a single ColorMap with different tints. Use color tinting to create additional low-cost variation between your `Class.MeshPart` PBR textures or to programmatically modify your PBR surface colors in real-time.

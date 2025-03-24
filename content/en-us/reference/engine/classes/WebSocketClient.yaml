@@ -1,54 +1,22 @@
-name: StyleRule
+name: WebSocketClient
 type: class
 category:
-memory_category: Gui
+memory_category: Instances
 summary: ''
 description: ''
 code_samples: []
 inherits:
-  - StyleBase
-tags: []
+  - Instance
+tags:
+  - NotCreatable
+  - NotReplicated
 deprecation_message: ''
 properties:
-  - name: StyleRule.Priority
+  - name: WebSocketClient.ConnectionState
     summary: ''
     description: ''
     code_samples: []
-    type: int
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-    writeCapabilities: []
-  - name: StyleRule.Selector
-    summary: ''
-    description: ''
-    code_samples: []
-    type: string
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-    writeCapabilities: []
-  - name: StyleRule.SelectorError
-    summary: ''
-    description: ''
-    code_samples: []
-    type: string
+    type: WebSocketState
     tags:
       - ReadOnly
       - NotReplicated
@@ -60,17 +28,17 @@ properties:
     category: Data
     serialization:
       can_load: false
-      can_save: false
+      can_save: true
     capabilities: []
     writeCapabilities: []
 methods:
-  - name: StyleRule:GetProperties
+  - name: WebSocketClient:Close
     summary: ''
     description: ''
     code_samples: []
     parameters: []
     returns:
-      - type: Dictionary
+      - type: void
         summary: ''
     tags: []
     deprecation_message: ''
@@ -78,31 +46,13 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: StyleRule:GetProperty
+  - name: WebSocketClient:Send
     summary: ''
     description: ''
     code_samples: []
     parameters:
-      - name: name
+      - name: data
         type: string
-        default:
-        summary: ''
-    returns:
-      - type: Variant
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: StyleRule:SetProperties
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: styleProperties
-        type: Dictionary
         default:
         summary: ''
     returns:
@@ -114,21 +64,26 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: StyleRule:SetProperty
+events:
+  - name: WebSocketClient.Closed
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: WebSocketClient.MessageReceived
     summary: ''
     description: ''
     code_samples: []
     parameters:
-      - name: name
+      - name: data
         type: string
         default:
-        summary: ''
-      - name: value
-        type: Variant
-        default:
-        summary: ''
-    returns:
-      - type: void
         summary: ''
     tags: []
     deprecation_message: ''
@@ -136,5 +91,15 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-events: []
+  - name: WebSocketClient.Opened
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

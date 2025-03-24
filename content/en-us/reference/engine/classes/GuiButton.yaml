@@ -64,6 +64,24 @@ properties:
     capabilities:
       - UI
     writeCapabilities: []
+  - name: GuiButton.HoverHapticEffect
+    summary: ''
+    description: ''
+    code_samples: []
+    type: HapticEffect
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Haptic
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiButton.Modal
     summary: |
       If `true` while the GUI element is visible, the mouse will not be locked
@@ -80,6 +98,24 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
+  - name: GuiButton.PressHapticEffect
+    summary: ''
+    description: ''
+    code_samples: []
+    type: HapticEffect
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Haptic
     serialization:
       can_load: true
       can_save: true
