@@ -15,7 +15,7 @@ constructors:
 constants: []
 properties:
 methods:
-  - name: Enum:GetEnums
+  - name: Enums:GetEnums
     summary: |
       Returns an array of all `Datatype.Enum|Enums`.
     description: |
