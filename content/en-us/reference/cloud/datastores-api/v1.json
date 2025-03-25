@@ -96,10 +96,9 @@
             "roblox-api-key": ["Label.DatastoresList"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["universe-datastores.control:list"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "universe-datastores.control:list" }
+        ],
         "x-roblox-cloud-api-operation": true,
         "x-roblox-lua-equivalent": "DataStoreService:ListDataStoresAsync",
         "x-roblox-cloud-api-operation-code-samples": [
@@ -111,7 +110,7 @@
         "x-roblox-rate-limits": {
           "description": "See [Throttling](../../../cloud/guides/data-store-api-handling#throttling)."
         },
-        "x-roblox-replacements": [
+        "x-roblox-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores",
             "httpMethod": "GET"
@@ -231,10 +230,9 @@
             "roblox-api-key": ["Label.DatastoreListObjectKeys"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["universe-datastores.objects:list"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "universe-datastores.objects:list" }
+        ],
         "x-roblox-cloud-api-operation": true,
         "x-roblox-lua-equivalent": "DataStore:ListKeysAsync",
         "x-roblox-cloud-api-operation-code-samples": [
@@ -246,7 +244,7 @@
         "x-roblox-rate-limits": {
           "description": "See [Throttling](../../../cloud/guides/data-store-api-handling#throttling)."
         },
-        "x-roblox-replacements": [
+        "x-roblox-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries",
             "httpMethod": "GET"
@@ -372,10 +370,9 @@
             "roblox-api-key": ["Label.DatastoreReadObject"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["universe-datastores.objects:read"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "universe-datastores.objects:read" }
+        ],
         "x-roblox-cloud-api-operation": true,
         "x-roblox-lua-equivalent": "GlobalDataStore:GetAsync",
         "x-roblox-cloud-api-operation-code-samples": [
@@ -387,7 +384,7 @@
         "x-roblox-rate-limits": {
           "description": "See [Throttling](../../../cloud/guides/data-store-api-handling#throttling)."
         },
-        "x-roblox-replacements": [
+        "x-roblox-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}",
             "httpMethod": "GET"
@@ -521,23 +518,20 @@
             ]
           }
         ],
-        "x-roblox-scopes": {
-          "required": [],
-          "conditional": [
-            {
-              "name": "universe-datastores.objects:update",
-              "description": "If the entry key being set exists."
-            },
-            {
-              "name": "universe-datastores.objects:create",
-              "description": "If the entry key being set doesn't exist."
-            },
-            {
-              "name": "universe-datastores.control:create",
-              "description": "If the Data Store the entry key is in doesn't exist."
-            }
-          ]
-        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe-datastores.objects:update",
+            "description": "If the entry key being set exists."
+          },
+          {
+            "name": "universe-datastores.objects:create",
+            "description": "If the entry key being set doesn't exist."
+          },
+          {
+            "name": "universe-datastores.control:create",
+            "description": "If the Data Store the entry key is in doesn't exist."
+          }
+        ],
         "x-roblox-cloud-api-operation": true,
         "x-roblox-lua-equivalent": "GlobalDataStore:SetAsync",
         "x-roblox-cloud-api-operation-code-samples": [
@@ -549,7 +543,7 @@
         "x-roblox-rate-limits": {
           "description": "See [Throttling](../../../cloud/guides/data-store-api-handling#throttling)."
         },
-        "x-roblox-replacements": [
+        "x-roblox-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}",
             "httpMethod": "PATCH"
@@ -625,10 +619,9 @@
             "roblox-api-key": ["Label.DatastoreDeleteObject"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["universe-datastores.objects:delete"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "universe-datastores.objects:delete" }
+        ],
         "x-roblox-cloud-api-operation": true,
         "x-roblox-lua-equivalent": "GlobalDataStore:RemoveAsync",
         "x-roblox-cloud-api-operation-code-samples": [
@@ -640,7 +633,7 @@
         "x-roblox-rate-limits": {
           "description": "See [Throttling](../../../cloud/guides/data-store-api-handling#throttling)."
         },
-        "x-roblox-replacements": [
+        "x-roblox-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}",
             "httpMethod": "DELETE"
@@ -797,23 +790,20 @@
             ]
           }
         ],
-        "x-roblox-scopes": {
-          "required": [],
-          "conditional": [
-            {
-              "name": "universe-datastores.objects:update",
-              "description": "If the entry key being incremented exists."
-            },
-            {
-              "name": "universe-datastores.objects:create",
-              "description": "If the entry key being incremented doesn't exist."
-            },
-            {
-              "name": "universe-datastores.control:create",
-              "description": "If the Data Store the entry key is in doesn't exist."
-            }
-          ]
-        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe-datastores.objects:update",
+            "description": "If the entry key being incremented exists."
+          },
+          {
+            "name": "universe-datastores.objects:create",
+            "description": "If the entry key being incremented doesn't exist."
+          },
+          {
+            "name": "universe-datastores.control:create",
+            "description": "If the Data Store the entry key is in doesn't exist."
+          }
+        ],
         "x-roblox-cloud-api-operation": true,
         "x-roblox-lua-equivalent": "GlobalDataStore:IncrementAsync",
         "x-roblox-cloud-api-operation-code-samples": [
@@ -825,7 +815,7 @@
         "x-roblox-rate-limits": {
           "description": "See [Throttling](../../../cloud/guides/data-store-api-handling#throttling)."
         },
-        "x-roblox-replacements": [
+        "x-roblox-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}:increment",
             "httpMethod": "POST"
@@ -957,10 +947,9 @@
             "roblox-api-key": ["Label.DatastoreReadVersion"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["universe-datastores.versions:read"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "universe-datastores.versions:read" }
+        ],
         "x-roblox-cloud-api-operation": true,
         "x-roblox-lua-equivalent": "DataStore:GetVersionAsync",
         "x-roblox-cloud-api-operation-code-samples": [
@@ -978,7 +967,7 @@
             "maxInPeriod": 5000
           }
         },
-        "x-roblox-replacements": [
+        "x-roblox-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}",
             "httpMethod": "GET"
@@ -1116,10 +1105,9 @@
             "roblox-api-key": ["Label.DatastoreListVersions"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["universe-datastores.versions:list"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "universe-datastores.versions:list" }
+        ],
         "x-roblox-cloud-api-operation": true,
         "x-roblox-lua-equivalent": "DataStore:ListVersionsAsync",
         "x-roblox-cloud-api-operation-code-samples": [
@@ -1131,7 +1119,7 @@
         "x-roblox-rate-limits": {
           "description": "See [Throttling](../../../cloud/guides/data-store-api-handling#throttling)."
         },
-        "x-roblox-replacements": [
+        "x-roblox-alternatives": [
           {
             "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}:listRevisions",
             "httpMethod": "GET"

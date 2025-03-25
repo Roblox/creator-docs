@@ -85,10 +85,9 @@
             "roblox-api-key": ["Label.Write"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["universe-places:write"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "universe-places:write" }
+        ],
         "x-roblox-cloud-api-operation": true,
         "x-roblox-code-samples": [
           {

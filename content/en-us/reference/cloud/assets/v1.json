@@ -80,10 +80,10 @@
             "roblox-oauth2": ["asset:read", "asset:write"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["asset:read", "asset:write"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "asset:read" },
+          { "name": "asset:write" }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Create Asset",
@@ -175,10 +175,9 @@
             "roblox-oauth2": ["asset:read"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["asset:read"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "asset:read" }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Get Asset without readMask",
@@ -299,10 +298,10 @@
             "roblox-oauth2": ["asset:read", "asset:write"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["asset:read", "asset:write"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "asset:read" },
+          { "name": "asset:write" }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Update Content Only and Create a New Version",
@@ -386,10 +385,10 @@
             "roblox-oauth2": ["asset:read", "asset:write"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["asset:read", "asset:write"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "asset:read" },
+          { "name": "asset:write" }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Archive Asset",
@@ -461,10 +460,10 @@
             "roblox-oauth2": ["asset:read", "asset:write"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["asset:read", "asset:write"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "asset:read" },
+          { "name": "asset:write" }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Restore Asset",
@@ -542,10 +541,9 @@
             "roblox-oauth2": ["asset:read"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["asset:read"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "asset:read" }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Get Asset Version",
@@ -632,10 +630,9 @@
             "roblox-oauth2": ["asset:read"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["asset:read"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "asset:read" }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "List Asset Versions",
@@ -725,10 +722,10 @@
             "roblox-oauth2": ["asset:read", "asset:write"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["asset:read", "asset:write"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "asset:read" },
+          { "name": "asset:write" }
+        ],
         "x-roblox-rate-limits": {
           "perIp": {
             "period": "MINUTE",
@@ -811,10 +808,9 @@
             "roblox-oauth2": ["asset:read"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["asset:read"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "asset:read" }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Get Operation",

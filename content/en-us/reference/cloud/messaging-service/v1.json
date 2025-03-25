@@ -103,10 +103,9 @@
             "roblox-oauth2": ["universe-messaging-service:publish"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["universe-messaging-service:publish"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "universe-messaging-service:publish" }
+        ],
         "x-roblox-cloud-api-operation": true
       }
     }
