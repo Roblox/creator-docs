@@ -5,7 +5,7 @@ description: Lists legacy REST APIs for Open Cloud.
 
 This section contains documentation for Roblox's legacy REST APIs.
 
-- Roblox offers API key and/or OAuth 2.0 support **for the select legacy API endpoints listed on this page**. These endpoints have the same stability guarantees as the Open Cloud v2 and v1 APIs. See the tables below for the list of available operations and authentication types.
+- Roblox offers API key and/or OAuth 2.0 support **for the select legacy API endpoints listed on this page**. All endpoints on this page use the same stability guarantees as the Open Cloud v2 and v1 APIs and are currently **Beta**. Beta endpoints are ready for public use. Breaking changes are possible but rare. See the tables below for the list of available operations and authentication types.
 
 - All other legacy API endpoints use cookie-based authentication. We do not recommend depending on these APIs, as they can incorporate breaking changes without notice and rely on sharing cookies with application code.
 
