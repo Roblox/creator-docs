@@ -13,7 +13,9 @@
   "paths": {
     "/cloud/v2/creator-store-products": {
       "post": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Create Creator Store Product",
         "description": "Add a Creator Store product.",
         "operationId": "Cloud_CreateCreatorStoreProduct",
@@ -43,7 +45,9 @@
         "x-roblox-docs": {
           "category": "Monetization",
           "methodProperties": {
-            "scopes": ["creator-store-product:write"]
+            "scopes": [
+              "creator-store-product:write"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/CreatorStoreProduct",
@@ -54,7 +58,9 @@
     },
     "/cloud/v2/creator-store-products/{creator_store_product_id}": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Get Creator Store Product",
         "description": "Get a Creator Store product.",
         "operationId": "Cloud_GetCreatorStoreProduct",
@@ -85,7 +91,9 @@
         "x-roblox-docs": {
           "category": "Monetization",
           "methodProperties": {
-            "scopes": ["creator-store-product:read"]
+            "scopes": [
+              "creator-store-product:read"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/CreatorStoreProduct",
@@ -94,7 +102,9 @@
         }
       },
       "patch": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Update Creator Store Product",
         "description": "Update a Creator Store product.",
         "operationId": "Cloud_UpdateCreatorStoreProduct",
@@ -153,7 +163,9 @@
         "x-roblox-docs": {
           "category": "Monetization",
           "methodProperties": {
-            "scopes": ["creator-store-product:write"]
+            "scopes": [
+              "creator-store-product:write"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/CreatorStoreProduct",
@@ -164,7 +176,9 @@
     },
     "/cloud/v2/groups/{group_id}": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Get Group",
         "description": "Gets the specified group.",
         "operationId": "Cloud_GetGroup",
@@ -206,7 +220,9 @@
     },
     "/cloud/v2/groups/{group_id}/join-requests": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "List Group Join Requests",
         "description": "List join requests under a group.",
         "operationId": "Cloud_ListGroupJoinRequests",
@@ -268,7 +284,9 @@
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
-            "scopes": ["group:read"]
+            "scopes": [
+              "group:read"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/GroupJoinRequest",
@@ -279,7 +297,9 @@
     },
     "/cloud/v2/groups/{group_id}/join-requests/{join_request_id}:accept": {
       "post": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Accept Group Join Request",
         "description": "Accepts a join request.",
         "operationId": "Cloud_AcceptGroupJoinRequest",
@@ -323,7 +343,9 @@
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
-            "scopes": ["group:write"]
+            "scopes": [
+              "group:write"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/GroupJoinRequest",
@@ -334,7 +356,9 @@
     },
     "/cloud/v2/groups/{group_id}/join-requests/{join_request_id}:decline": {
       "post": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Decline Group Join Request",
         "description": "Declines a join request.",
         "operationId": "Cloud_DeclineGroupJoinRequest",
@@ -378,7 +402,9 @@
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
-            "scopes": ["group:write"]
+            "scopes": [
+              "group:write"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/GroupJoinRequest",
@@ -389,7 +415,9 @@
     },
     "/cloud/v2/groups/{group_id}/memberships": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "List Group Memberships",
         "description": "List group members in a group.",
         "operationId": "Cloud_ListGroupMemberships",
@@ -462,7 +490,9 @@
     },
     "/cloud/v2/groups/{group_id}/memberships/{membership_id}": {
       "patch": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Update Group Membership",
         "description": "Updates the group membership for a particular group member. This action\n requires the requester to be able to manage lower ranked members. Guest or\n Owner ranks cannot be assigned, and a requester cannot change their own\n rank.",
         "operationId": "Cloud_UpdateGroupMembership",
@@ -512,7 +542,9 @@
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
-            "scopes": ["group:write"]
+            "scopes": [
+              "group:write"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/GroupMembership",
@@ -523,7 +555,9 @@
     },
     "/cloud/v2/groups/{group_id}/roles": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "List Group Roles",
         "description": "List roles in a group.\n\n The permissions field for roles is viewable based on the requester's access\n and scopes.\n\n Permissions for the guest role are always visible - a scope is not needed.\n\n If the requester is a member of the group and has the `group:read` scope,\n permissions in their role are visible.\n\n If the requester is the owner of the group and has the `group:read` scope,\n permissions in all roles are visible.",
         "operationId": "Cloud_ListGroupRoles",
@@ -588,7 +622,9 @@
     },
     "/cloud/v2/groups/{group_id}/roles/{role_id}": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Get Group Role",
         "description": "Get the group role",
         "operationId": "Cloud_GetGroupRole",
@@ -639,7 +675,9 @@
     },
     "/cloud/v2/groups/{group_id}/shout": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Get Group Shout",
         "description": "Gets the group shout.\n\n If a guest can view the group shout, this is always retrievable.\n\n If a guest cannot, a member who has the permissions to view the group\n shout, along with the `group:read` scope, will be able to read the group\n shout.",
         "operationId": "Cloud_GetGroupShout",
@@ -681,7 +719,9 @@
     },
     "/cloud/v2/universes/{universe_id}": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Get Universe",
         "description": "Gets the specified universe.",
         "operationId": "Cloud_GetUniverse",
@@ -721,7 +761,9 @@
         }
       },
       "patch": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Update Universe",
         "description": "Updates the specified universe.\n\n This method is guaranteed to return all updated fields.\n This method may additionally return the full resource.",
         "operationId": "Cloud_UpdateUniverse",
@@ -771,7 +813,9 @@
         "x-roblox-docs": {
           "category": "Universes and places",
           "methodProperties": {
-            "scopes": ["universe:write"]
+            "scopes": [
+              "universe:write"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/Universe",
@@ -782,7 +826,9 @@
     },
     "/cloud/v2/universes/{universe_id}/data-stores": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "List Data Stores",
         "description": "Returns a list of data stores.",
         "operationId": "Cloud_ListDataStores",
@@ -844,7 +890,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe-datastores.control:list"]
+            "scopes": [
+              "universe-datastores.control:list"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/DataStore",
@@ -855,7 +903,9 @@
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "List Data Store Entries",
         "description": "Returns a list of entries from a data store.\n\n Only the `path` and `id` fields are populated; use `GetDataStoreEntry`\n to retrieve other fields.\n\n Specify the wildcard scope (`-`) to list entries from all scopes.",
         "operationId": "Cloud_ListDataStoreEntries__Using_Universes",
@@ -935,7 +985,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe-datastores.objects:list"]
+            "scopes": [
+              "universe-datastores.objects:list"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/DataStoreEntry",
@@ -944,7 +996,9 @@
         }
       },
       "post": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Create Data Store Entry",
         "description": "Creates an entry with the provided ID and value.\n\n Returns a 400 Bad Request if the entry exists.",
         "operationId": "Cloud_CreateDataStoreEntry__Using_Universes",
@@ -1008,7 +1062,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe-datastores.objects:create"]
+            "scopes": [
+              "universe-datastores.objects:create"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/DataStoreEntry",
@@ -1019,7 +1075,9 @@
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Get Data Store Entry",
         "description": "Gets the specified entry.\n\n To get the entry at a specific revision, add `@<revisionId>` to the end of\n the path.\n\n For example, to get `my-entry` at the revision ID\n `08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`, use the path\n `/v2/universes/1234/data-stores/5678/entries/my-entry@08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`.\n\n If your entry ID contains one or more `@` characters, and you want to get\n the latest version rather than at any specific revision, append the special\n revision ID `@latest` to the end of the path. Otherwise, the segment of the\n entry ID after the last `@` will be interpreted as a revision ID.\n\n For example, to get the latest revision of `my-entry`, use the path\n `/v2/universes/1234/data-stores/5678/entries/my@entry@latest`.\n\n To get the entry that was current at a specific time, add\n `@latest:<timestamp>` to the end of the path, where `<timestamp>` is\n RFC-3339 formatted. The given timestamp must be after\n the Unix epoch (1/1/1970) and not more than ten minutes in the future.\n\n For example, to get the revision of `my-entry` that was current on\n 12/2/2024 at 06:00 UTC, use the path\n `/v2/universes/1234/data-stores/5678/entries/my-entry@latest:2024-12-02T06:00:00Z`.",
         "operationId": "Cloud_GetDataStoreEntry__Using_Universes_DataStores",
@@ -1068,7 +1126,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe-datastores.objects:read"]
+            "scopes": [
+              "universe-datastores.objects:read"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/DataStoreEntry",
@@ -1077,7 +1137,9 @@
         }
       },
       "delete": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Delete Data Store Entry",
         "description": "Marks the specified entry for deletion.\n\n Entries are not be deleted immediately; instead, the `state` field will\n be set to `DELETED`. Permanent deletion occurs after 30 days.\n\n On success, returns 200 OK. If the entry doesn't exist, returns\n 404 Not Found.",
         "operationId": "Cloud_DeleteDataStoreEntry__Using_Universes_DataStores",
@@ -1120,7 +1182,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe-datastores.objects:delete"]
+            "scopes": [
+              "universe-datastores.objects:delete"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/DataStoreEntry",
@@ -1129,7 +1193,9 @@
         }
       },
       "patch": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Update Data Store Entry",
         "description": "Updates the value, attributes, and users of an entry.\n\n Updating specific revisions of the entry is **unsupported**. If you specify\n a revision ID in the path and `allow_missing` is `true`, the update request\n will instead create a new entry with the `@<revisionId>` suffix as part of\n the key.\n\n Partial update is **unsupported**. If attributes or users are not\n provided when updating the value, they will be cleared. Value must always\n be provided when updating an entry.",
         "operationId": "Cloud_UpdateDataStoreEntry__Using_Universes_DataStores",
@@ -1197,7 +1263,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe-datastores.objects:update"]
+            "scopes": [
+              "universe-datastores.objects:update"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/DataStoreEntry",
@@ -1208,7 +1276,9 @@
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}:increment": {
       "post": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Increment Data Store Entry",
         "description": "Increments the value of the specified entry. Both the existing value and\n the increment amount must be integers.\n\n If the entry doesn't exist, creates an entry with the specified value.\n\n Incrementing specific revisions of the entry is **unsupported**. If you\n specify a revision ID in the path, the increment request will create a new\n entry with the `@<revisionId>` suffix as part of the key.\n\n Known issue: the value may be incremented past the valid range of  values.\n When this happens, the returned value will be clamped to the valid range,\n but the backend may persist the original value. This behavior is maintained\n for backwards compatibility reasons, but may change in a future version of\n this API.",
         "operationId": "Cloud_IncrementDataStoreEntry__Using_Universes_DataStores",
@@ -1281,7 +1351,9 @@
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}:listRevisions": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "List Data Store Entry Revisions",
         "description": "List revisions of the data store entry.\n\n This method returns partial data store entries.\n\n In particular, only the `path`, `id`, `createTime`, `revisionCreateTime`,\n `revisionId`, `etag`, and `state` fields are populated. Both the `path` and\n `id` fields will have an `@<version>` suffix.\n\n In order to get the full entry at a revision, you can use the provided\n `path` field with the `GetDataStoreEntry` method, i.e. `GET\n /v1/universes/1234/data-stores/5678/entries/my-entry@<version>`.",
         "operationId": "Cloud_ListDataStoreEntryRevisions__Using_Universes_DataStores",
@@ -1361,7 +1433,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe-datastores.versions:list"]
+            "scopes": [
+              "universe-datastores.versions:list"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/DataStoreEntry",
@@ -1372,7 +1446,9 @@
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "List Data Store Entries",
         "description": "Returns a list of entries from a data store.\n\n Only the `path` and `id` fields are populated; use `GetDataStoreEntry`\n to retrieve other fields.\n\n Specify the wildcard scope (`-`) to list entries from all scopes.",
         "operationId": "Cloud_ListDataStoreEntries__Using_Universes_DataStores",
@@ -1461,7 +1537,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe-datastores.objects:list"]
+            "scopes": [
+              "universe-datastores.objects:list"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/DataStoreEntry",
@@ -1470,7 +1548,9 @@
         }
       },
       "post": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Create Data Store Entry",
         "description": "Creates an entry with the provided ID and value.\n\n Returns a 400 Bad Request if the entry exists.",
         "operationId": "Cloud_CreateDataStoreEntry__Using_Universes_DataStores",
@@ -1543,7 +1623,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe-datastores.objects:create"]
+            "scopes": [
+              "universe-datastores.objects:create"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/DataStoreEntry",
@@ -1554,7 +1636,9 @@
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries/{entry_id}": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Get Data Store Entry",
         "description": "Gets the specified entry.\n\n To get the entry at a specific revision, add `@<revisionId>` to the end of\n the path.\n\n For example, to get `my-entry` at the revision ID\n `08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`, use the path\n `/v2/universes/1234/data-stores/5678/entries/my-entry@08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`.\n\n If your entry ID contains one or more `@` characters, and you want to get\n the latest version rather than at any specific revision, append the special\n revision ID `@latest` to the end of the path. Otherwise, the segment of the\n entry ID after the last `@` will be interpreted as a revision ID.\n\n For example, to get the latest revision of `my-entry`, use the path\n `/v2/universes/1234/data-stores/5678/entries/my@entry@latest`.\n\n To get the entry that was current at a specific time, add\n `@latest:<timestamp>` to the end of the path, where `<timestamp>` is\n RFC-3339 formatted. The given timestamp must be after\n the Unix epoch (1/1/1970) and not more than ten minutes in the future.\n\n For example, to get the revision of `my-entry` that was current on\n 12/2/2024 at 06:00 UTC, use the path\n `/v2/universes/1234/data-stores/5678/entries/my-entry@latest:2024-12-02T06:00:00Z`.",
         "operationId": "Cloud_GetDataStoreEntry__Using_Universes_DataStores_Scopes",
@@ -1612,7 +1696,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe-datastores.objects:read"]
+            "scopes": [
+              "universe-datastores.objects:read"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/DataStoreEntry",
@@ -1621,7 +1707,9 @@
         }
       },
       "delete": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Delete Data Store Entry",
         "description": "Marks the specified entry for deletion.\n\n Entries are not be deleted immediately; instead, the `state` field will\n be set to `DELETED`. Permanent deletion occurs after 30 days.\n\n On success, returns 200 OK. If the entry doesn't exist, returns\n 404 Not Found.",
         "operationId": "Cloud_DeleteDataStoreEntry__Using_Universes_DataStores_Scopes",
@@ -1673,7 +1761,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe-datastores.objects:delete"]
+            "scopes": [
+              "universe-datastores.objects:delete"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/DataStoreEntry",
@@ -1682,7 +1772,9 @@
         }
       },
       "patch": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Update Data Store Entry",
         "description": "Updates the value, attributes, and users of an entry.\n\n Updating specific revisions of the entry is **unsupported**. If you specify\n a revision ID in the path and `allow_missing` is `true`, the update request\n will instead create a new entry with the `@<revisionId>` suffix as part of\n the key.\n\n Partial update is **unsupported**. If attributes or users are not\n provided when updating the value, they will be cleared. Value must always\n be provided when updating an entry.",
         "operationId": "Cloud_UpdateDataStoreEntry__Using_Universes_DataStores_Scopes",
@@ -1759,7 +1851,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe-datastores.objects:update"]
+            "scopes": [
+              "universe-datastores.objects:update"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/DataStoreEntry",
@@ -1770,7 +1864,9 @@
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries/{entry_id}:increment": {
       "post": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Increment Data Store Entry",
         "description": "Increments the value of the specified entry. Both the existing value and\n the increment amount must be integers.\n\n If the entry doesn't exist, creates an entry with the specified value.\n\n Incrementing specific revisions of the entry is **unsupported**. If you\n specify a revision ID in the path, the increment request will create a new\n entry with the `@<revisionId>` suffix as part of the key.\n\n Known issue: the value may be incremented past the valid range of  values.\n When this happens, the returned value will be clamped to the valid range,\n but the backend may persist the original value. This behavior is maintained\n for backwards compatibility reasons, but may change in a future version of\n this API.",
         "operationId": "Cloud_IncrementDataStoreEntry__Using_Universes_DataStores_Scopes",
@@ -1852,7 +1948,9 @@
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries/{entry_id}:listRevisions": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "List Data Store Entry Revisions",
         "description": "List revisions of the data store entry.\n\n This method returns partial data store entries.\n\n In particular, only the `path`, `id`, `createTime`, `revisionCreateTime`,\n `revisionId`, `etag`, and `state` fields are populated. Both the `path` and\n `id` fields will have an `@<version>` suffix.\n\n In order to get the full entry at a revision, you can use the provided\n `path` field with the `GetDataStoreEntry` method, i.e. `GET\n /v1/universes/1234/data-stores/5678/entries/my-entry@<version>`.",
         "operationId": "Cloud_ListDataStoreEntryRevisions__Using_Universes_DataStores_Scopes",
@@ -1941,7 +2039,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe-datastores.versions:list"]
+            "scopes": [
+              "universe-datastores.versions:list"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/DataStoreEntry",
@@ -1952,7 +2052,9 @@
     },
     "/cloud/v2/universes/{universe_id}/data-stores:snapshot": {
       "post": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Snapshot Data Stores",
         "description": "Takes a new snapshot of the data stores in an experience.\n\n After a snapshot, the next write to every key in the experience will\n create a versioned backup of the previous data, regardless of the time of\n the last write.\n\n In effect, all data current at the time of the snapshot is guaranteed to be\n available as a versioned backup for at least 30 days.\n\n Snapshots can be taken once per UTC day, per experience. If the latest\n snapshot was taken within the same UTC day, this operation is a no-op and\n the time of the latest snapshot will be returned.\n\n For more information on using snapshots, see the [Data\n Stores](https://create.roblox.com/docs/cloud-services/data-stores#snapshots)\n Engine guide.",
         "operationId": "Cloud_SnapshotDataStores",
@@ -1993,7 +2095,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe-datastores.control:snapshot"]
+            "scopes": [
+              "universe-datastores.control:snapshot"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/DataStore",
@@ -2004,7 +2108,9 @@
     },
     "/cloud/v2/universes/{universe_id}/memory-store/queues/{queue_id}/items": {
       "post": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Create Memory Store Queue Item",
         "description": "Creates a new queue item.\n\n If `ttl` is set, the item will automatically be removed from the queue\n after the time interval specified.\n\n If a numerical `priority` is set, the item will be inserted into the queue\n based on the priority value. The higher the value, the closer to the front\n of the queue the item will be. If priority values are the same then the\n item will be inserted after existing values with the same priority.",
         "operationId": "Cloud_CreateMemoryStoreQueueItem",
@@ -2054,7 +2160,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe.memory-store.queue:write"]
+            "scopes": [
+              "universe.memory-store.queue:write"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/MemoryStoreQueueItem",
@@ -2065,7 +2173,9 @@
     },
     "/cloud/v2/universes/{universe_id}/memory-store/queues/{queue_id}/items:discard": {
       "post": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Discard Memory Store Queue Items",
         "description": "Discards read items from the front of the queue.\n\n Takes a `readId` from a previous `Read` operation.",
         "operationId": "Cloud_DiscardMemoryStoreQueueItems",
@@ -2109,7 +2219,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe.memory-store.queue:discard"]
+            "scopes": [
+              "universe.memory-store.queue:discard"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/MemoryStoreQueueItem",
@@ -2120,7 +2232,9 @@
     },
     "/cloud/v2/universes/{universe_id}/memory-store/queues/{queue_id}/items:read": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Read Memory Store Queue Items",
         "description": "Returns the specified number of items at the front of the queue.",
         "operationId": "Cloud_ReadMemoryStoreQueueItems",
@@ -2188,7 +2302,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe.memory-store.queue:dequeue"]
+            "scopes": [
+              "universe.memory-store.queue:dequeue"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/MemoryStoreQueueItem",
@@ -2199,7 +2315,9 @@
     },
     "/cloud/v2/universes/{universe_id}/memory-store/sorted-maps/{sorted_map_id}/items": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "List Memory Store Sorted Map Items",
         "description": "Gets and returns items in the map with a given order and filter.",
         "operationId": "Cloud_ListMemoryStoreSortedMapItems",
@@ -2278,7 +2396,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe.memory-store.sorted-map:read"]
+            "scopes": [
+              "universe.memory-store.sorted-map:read"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
@@ -2287,7 +2407,9 @@
         }
       },
       "post": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Create Memory Store Sorted Map Item",
         "description": "Creates the specified map item if it doesn't exist.",
         "operationId": "Cloud_CreateMemoryStoreSortedMapItem",
@@ -2351,7 +2473,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe.memory-store.sorted-map:write"]
+            "scopes": [
+              "universe.memory-store.sorted-map:write"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
@@ -2362,7 +2486,9 @@
     },
     "/cloud/v2/universes/{universe_id}/memory-store/sorted-maps/{sorted_map_id}/items/{item_id}": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Get Memory Store Sorted Map Item",
         "description": "Gets and returns the value of the given key in the map.",
         "operationId": "Cloud_GetMemoryStoreSortedMapItem",
@@ -2411,7 +2537,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe.memory-store.sorted-map:read"]
+            "scopes": [
+              "universe.memory-store.sorted-map:read"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
@@ -2420,7 +2548,9 @@
         }
       },
       "delete": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Delete Memory Store Sorted Map Item",
         "description": "Deletes the specified item from the map.",
         "operationId": "Cloud_DeleteMemoryStoreSortedMapItem",
@@ -2463,7 +2593,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe.memory-store.sorted-map:write"]
+            "scopes": [
+              "universe.memory-store.sorted-map:write"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
@@ -2472,7 +2604,9 @@
         }
       },
       "patch": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Update Memory Store Sorted Map Item",
         "description": "Updates the specified map item.",
         "operationId": "Cloud_UpdateMemoryStoreSortedMapItem",
@@ -2540,7 +2674,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe.memory-store.sorted-map:write"]
+            "scopes": [
+              "universe.memory-store.sorted-map:write"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
@@ -2551,7 +2687,9 @@
     },
     "/cloud/v2/universes/{universe_id}/memory-store:flush": {
       "post": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Flush Memory Store",
         "description": "Asynchronously flush all data structures in the universe.",
         "operationId": "Cloud_FlushMemoryStore",
@@ -2600,7 +2738,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe.memory-store:flush"]
+            "scopes": [
+              "universe.memory-store:flush"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/MemoryStore",
@@ -2611,7 +2751,9 @@
     },
     "/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{scope_id}/entries": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "List Ordered Data Store Entries",
         "description": "Returns a list of entries from an ordered data store.",
         "operationId": "Cloud_ListOrderedDataStoreEntries",
@@ -2699,7 +2841,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe.ordered-data-store.scope.entry:read"]
+            "scopes": [
+              "universe.ordered-data-store.scope.entry:read"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/OrderedDataStoreEntry",
@@ -2708,7 +2852,9 @@
         }
       },
       "post": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Create Ordered Data Store Entry",
         "description": "Creates an entry with the provided ID and value.\n\n Returns a 400 Bad Request if the entry exists.",
         "operationId": "Cloud_CreateOrderedDataStoreEntry",
@@ -2781,7 +2927,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe.ordered-data-store.scope.entry:write"]
+            "scopes": [
+              "universe.ordered-data-store.scope.entry:write"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/OrderedDataStoreEntry",
@@ -2792,7 +2940,9 @@
     },
     "/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{scope_id}/entries/{entry_id}": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Get Ordered Data Store Entry",
         "description": "Gets the specified entry.",
         "operationId": "Cloud_GetOrderedDataStoreEntry",
@@ -2850,7 +3000,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe.ordered-data-store.scope.entry:read"]
+            "scopes": [
+              "universe.ordered-data-store.scope.entry:read"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/OrderedDataStoreEntry",
@@ -2859,7 +3011,9 @@
         }
       },
       "delete": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Delete Ordered Data Store Entry",
         "description": "Deletes the specified entry.\n\n On success, returns 200 OK. If the entry doesn't exist, returns\n 404 Not Found.",
         "operationId": "Cloud_DeleteOrderedDataStoreEntry",
@@ -2911,7 +3065,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe.ordered-data-store.scope.entry:write"]
+            "scopes": [
+              "universe.ordered-data-store.scope.entry:write"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/OrderedDataStoreEntry",
@@ -2920,7 +3076,9 @@
         }
       },
       "patch": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Update Ordered Data Store Entry",
         "description": "Updates the value of an entry.",
         "operationId": "Cloud_UpdateOrderedDataStoreEntry",
@@ -2997,7 +3155,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe.ordered-data-store.scope.entry:write"]
+            "scopes": [
+              "universe.ordered-data-store.scope.entry:write"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/OrderedDataStoreEntry",
@@ -3008,7 +3168,9 @@
     },
     "/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{scope_id}/entries/{entry_id}:increment": {
       "post": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Increment Ordered Data Store Entry",
         "description": "Increments the value of the specified entry. Both the existing value and\n the increment amount must be integers.\n\n If the entry doesn't exist, creates an entry with the specified value.\n\n Known issue: the value may be incremented past the valid range of  values.\n When this happens, the returned value will be clamped to the valid range,\n but the backend may persist the original value. This behavior is maintained\n for backwards compatibility reasons, but may change in a future version of\n this API.",
         "operationId": "Cloud_IncrementOrderedDataStoreEntry",
@@ -3076,7 +3238,9 @@
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe.ordered-data-store.scope.entry:write"]
+            "scopes": [
+              "universe.ordered-data-store.scope.entry:write"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/OrderedDataStoreEntry",
@@ -3087,7 +3251,9 @@
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Get Place",
         "description": "Gets the specified place.",
         "operationId": "Cloud_GetPlace",
@@ -3136,7 +3302,9 @@
         }
       },
       "patch": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Update Place",
         "description": "Updates the specified place.",
         "operationId": "Cloud_UpdatePlace",
@@ -3195,7 +3363,9 @@
         "x-roblox-docs": {
           "category": "Universes and places",
           "methodProperties": {
-            "scopes": ["universe.place:write"]
+            "scopes": [
+              "universe.place:write"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/Place",
@@ -3206,7 +3376,9 @@
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/instances/{instance_id}": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Get Instance",
         "description": "Gets an instance and its property data.\n\n The maximum supported response data size is 500,000 bytes. If this limit is\n exceeded, the returned `Operation` will be completed with an error result\n that has an error code of `422`.",
         "operationId": "Cloud_GetInstance",
@@ -3263,7 +3435,9 @@
         "x-roblox-docs": {
           "category": "Universes and places",
           "methodProperties": {
-            "scopes": ["universe.place.instance:read"]
+            "scopes": [
+              "universe.place.instance:read"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/Instance",
@@ -3272,7 +3446,9 @@
         }
       },
       "patch": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Update Instance",
         "description": "Updates an instance's property data.\n\n When updating a `Script` instance's source property, the maximum supported\n property size is 200,000 bytes after UTF-8 encoding.",
         "operationId": "Cloud_UpdateInstance",
@@ -3348,7 +3524,9 @@
         "x-roblox-docs": {
           "category": "Universes and places",
           "methodProperties": {
-            "scopes": ["universe.place.instance:write"]
+            "scopes": [
+              "universe.place.instance:write"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/Instance",
@@ -3359,7 +3537,9 @@
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/instances/{instance_id}:listChildren": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "List Instance Children",
         "description": "Lists an instance's children.\n\n The maximum supported response data size is 500,000 bytes. If this limit is\n exceeded, the returned `Operation` will be completed with an error result\n that has an error code of `422`.",
         "operationId": "Cloud_ListInstanceChildren",
@@ -3439,7 +3619,9 @@
         "x-roblox-docs": {
           "category": "Universes and places",
           "methodProperties": {
-            "scopes": ["universe.place.instance:read"]
+            "scopes": [
+              "universe.place.instance:read"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/Instance",
@@ -3450,7 +3632,9 @@
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/luau-execution-session-tasks": {
       "post": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Create Luau Execution Session Task",
         "description": "Creates a task but does not wait for the task to complete.\n\n To check whether a task has\n completed, call the `GetLuauExecutionSessionTask` method and inspect the\n `state` field of the returned resource.\n\n Quotas:\n * 5 calls per minute per API key owner\n * 45 calls per minute per IP address",
         "operationId": "Cloud_CreateLuauExecutionSessionTask__Using_Universes",
@@ -3500,7 +3684,9 @@
         "x-roblox-docs": {
           "category": "Luau execution",
           "methodProperties": {
-            "scopes": ["universe.place.luau-execution-session:write"]
+            "scopes": [
+              "universe.place.luau-execution-session:write"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/LuauExecutionSessionTask",
@@ -3511,7 +3697,9 @@
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/luau-execution-session-tasks/{luau_execution_session_task_id}/logs": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "List Luau Execution Session Task Logs",
         "description": "Lists log chunks generated by a `LuauExecutionSessionTask`.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
         "operationId": "Cloud_ListLuauExecutionSessionTaskLogs__Using_Universes_Places",
@@ -3572,7 +3760,11 @@
             "description": "The view in which to retrieve the luau execution session task log.\n\n Supports FLAT and STRUCTURED.\n\n Defaults to FLAT.",
             "schema": {
               "example": "VIEW_UNSPECIFIED",
-              "enum": ["VIEW_UNSPECIFIED", "FLAT", "STRUCTURED"],
+              "enum": [
+                "VIEW_UNSPECIFIED",
+                "FLAT",
+                "STRUCTURED"
+              ],
               "type": "string",
               "format": "enum"
             }
@@ -3608,7 +3800,9 @@
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{task_id}": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Get Luau Execution Session Task",
         "description": "Gets information about a task.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
         "operationId": "Cloud_GetLuauExecutionSessionTask__Using_Universes_Places_LuauExecutionSessions",
@@ -3655,7 +3849,11 @@
             "description": "The view in which to retrieve the luau execution session task.\n\n Supports BASIC and FULL.\n\n Defaults to BASIC.",
             "schema": {
               "example": "VIEW_UNSPECIFIED",
-              "enum": ["VIEW_UNSPECIFIED", "BASIC", "FULL"],
+              "enum": [
+                "VIEW_UNSPECIFIED",
+                "BASIC",
+                "FULL"
+              ],
               "type": "string",
               "format": "enum"
             }
@@ -3691,7 +3889,9 @@
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{task_id}/logs": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "List Luau Execution Session Task Logs",
         "description": "Lists log chunks generated by a `LuauExecutionSessionTask`.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
         "operationId": "Cloud_ListLuauExecutionSessionTaskLogs__Using_Universes_Places_LuauExecutionSessions",
@@ -3761,7 +3961,11 @@
             "description": "The view in which to retrieve the luau execution session task log.\n\n Supports FLAT and STRUCTURED.\n\n Defaults to FLAT.",
             "schema": {
               "example": "VIEW_UNSPECIFIED",
-              "enum": ["VIEW_UNSPECIFIED", "FLAT", "STRUCTURED"],
+              "enum": [
+                "VIEW_UNSPECIFIED",
+                "FLAT",
+                "STRUCTURED"
+              ],
               "type": "string",
               "format": "enum"
             }
@@ -3797,7 +4001,9 @@
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "List User Restrictions",
         "description": "List user restrictions for users that have ever been banned in either a\n universe or a specific place.",
         "operationId": "Cloud_ListUserRestrictions__Using_Universes",
@@ -3868,7 +4074,9 @@
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
-            "scopes": ["universe.user-restriction:read"]
+            "scopes": [
+              "universe.user-restriction:read"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/UserRestriction",
@@ -3879,7 +4087,9 @@
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions/{user_restriction_id}": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Get User Restriction",
         "description": "Get the user restriction.",
         "operationId": "Cloud_GetUserRestriction__Using_Universes_Places",
@@ -3928,7 +4138,9 @@
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
-            "scopes": ["universe.user-restriction:read"]
+            "scopes": [
+              "universe.user-restriction:read"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/UserRestriction",
@@ -3937,7 +4149,9 @@
         }
       },
       "patch": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Update User Restriction",
         "description": "Update the user restriction.",
         "operationId": "Cloud_UpdateUserRestriction__Using_Universes_Places",
@@ -4023,7 +4237,9 @@
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
-            "scopes": ["universe.user-restriction:write"]
+            "scopes": [
+              "universe.user-restriction:write"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/UserRestriction",
@@ -4034,7 +4250,9 @@
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/versions/{version_id}/luau-execution-session-tasks": {
       "post": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Create Luau Execution Session Task",
         "description": "Creates a task but does not wait for the task to complete.\n\n To check whether a task has\n completed, call the `GetLuauExecutionSessionTask` method and inspect the\n `state` field of the returned resource.\n\n Quotas:\n * 5 calls per minute per API key owner\n * 45 calls per minute per IP address",
         "operationId": "Cloud_CreateLuauExecutionSessionTask__Using_Universes_Places",
@@ -4093,7 +4311,9 @@
         "x-roblox-docs": {
           "category": "Luau execution",
           "methodProperties": {
-            "scopes": ["universe.place.luau-execution-session:write"]
+            "scopes": [
+              "universe.place.luau-execution-session:write"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/LuauExecutionSessionTask",
@@ -4104,7 +4324,9 @@
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/versions/{version_id}/luau-execution-session-tasks/{luau_execution_session_task_id}/logs": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "List Luau Execution Session Task Logs",
         "description": "Lists log chunks generated by a `LuauExecutionSessionTask`.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
         "operationId": "Cloud_ListLuauExecutionSessionTaskLogs__Using_Universes_Places_Versions",
@@ -4174,7 +4396,11 @@
             "description": "The view in which to retrieve the luau execution session task log.\n\n Supports FLAT and STRUCTURED.\n\n Defaults to FLAT.",
             "schema": {
               "example": "VIEW_UNSPECIFIED",
-              "enum": ["VIEW_UNSPECIFIED", "FLAT", "STRUCTURED"],
+              "enum": [
+                "VIEW_UNSPECIFIED",
+                "FLAT",
+                "STRUCTURED"
+              ],
               "type": "string",
               "format": "enum"
             }
@@ -4210,7 +4436,9 @@
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/versions/{version_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{task_id}": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Get Luau Execution Session Task",
         "description": "Gets information about a task.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
         "operationId": "Cloud_GetLuauExecutionSessionTask__Using_Universes_Places_Versions_LuauExecutionSessions",
@@ -4266,7 +4494,11 @@
             "description": "The view in which to retrieve the luau execution session task.\n\n Supports BASIC and FULL.\n\n Defaults to BASIC.",
             "schema": {
               "example": "VIEW_UNSPECIFIED",
-              "enum": ["VIEW_UNSPECIFIED", "BASIC", "FULL"],
+              "enum": [
+                "VIEW_UNSPECIFIED",
+                "BASIC",
+                "FULL"
+              ],
               "type": "string",
               "format": "enum"
             }
@@ -4302,7 +4534,9 @@
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/versions/{version_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{task_id}/logs": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "List Luau Execution Session Task Logs",
         "description": "Lists log chunks generated by a `LuauExecutionSessionTask`.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
         "operationId": "Cloud_ListLuauExecutionSessionTaskLogs__Using_Universes_Places_Versions_LuauExecutionSessions",
@@ -4381,7 +4615,11 @@
             "description": "The view in which to retrieve the luau execution session task log.\n\n Supports FLAT and STRUCTURED.\n\n Defaults to FLAT.",
             "schema": {
               "example": "VIEW_UNSPECIFIED",
-              "enum": ["VIEW_UNSPECIFIED", "FLAT", "STRUCTURED"],
+              "enum": [
+                "VIEW_UNSPECIFIED",
+                "FLAT",
+                "STRUCTURED"
+              ],
               "type": "string",
               "format": "enum"
             }
@@ -4417,7 +4655,9 @@
     },
     "/cloud/v2/universes/{universe_id}/subscription-products/{subscription_product_id}/subscriptions/{subscription_id}": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Get Subscription",
         "description": "Get the subscription.\n\n The `universe.subscription-product.subscription:read` scope only allows\n you to get your own subscriptions—or rather, the subscription ID must\n match the user ID that makes the request—so its best use case is with\n OAuth 2.0 authentication rather than an API key. To read all\n subscriptions for a universe, use the `universe:write` scope.",
         "operationId": "Cloud_GetSubscription",
@@ -4455,7 +4695,11 @@
             "description": "The view in which to retrieve the subscription.\n\n Supports BASIC and FULL.\n\n Defaults to BASIC.",
             "schema": {
               "example": "VIEW_UNSPECIFIED",
-              "enum": ["VIEW_UNSPECIFIED", "BASIC", "FULL"],
+              "enum": [
+                "VIEW_UNSPECIFIED",
+                "BASIC",
+                "FULL"
+              ],
               "type": "string",
               "format": "enum"
             }
@@ -4491,7 +4735,9 @@
     },
     "/cloud/v2/universes/{universe_id}/user-restrictions": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "List User Restrictions",
         "description": "List user restrictions for users that have ever been banned in either a\n universe or a specific place.",
         "operationId": "Cloud_ListUserRestrictions",
@@ -4553,7 +4799,9 @@
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
-            "scopes": ["universe.user-restriction:read"]
+            "scopes": [
+              "universe.user-restriction:read"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/UserRestriction",
@@ -4564,7 +4812,9 @@
     },
     "/cloud/v2/universes/{universe_id}/user-restrictions/{user_restriction_id}": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Get User Restriction",
         "description": "Get the user restriction.",
         "operationId": "Cloud_GetUserRestriction__Using_Universes",
@@ -4604,7 +4854,9 @@
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
-            "scopes": ["universe.user-restriction:read"]
+            "scopes": [
+              "universe.user-restriction:read"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/UserRestriction",
@@ -4613,7 +4865,9 @@
         }
       },
       "patch": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Update User Restriction",
         "description": "Update the user restriction.",
         "operationId": "Cloud_UpdateUserRestriction__Using_Universes",
@@ -4690,7 +4944,9 @@
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
-            "scopes": ["universe.user-restriction:write"]
+            "scopes": [
+              "universe.user-restriction:write"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/UserRestriction",
@@ -4701,7 +4957,9 @@
     },
     "/cloud/v2/universes/{universe_id}/user-restrictions:listLogs": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "List User Restriction Logs",
         "description": "List changes to UserRestriction resources within a given universe.\n This includes both universe-level and place-level restrictions.\n\n For universe-level restriction logs, the `place` field will be empty.",
         "operationId": "Cloud_ListUserRestrictionLogs",
@@ -4763,7 +5021,9 @@
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
-            "scopes": ["universe.user-restriction:read"]
+            "scopes": [
+              "universe.user-restriction:read"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/UserRestriction",
@@ -4774,7 +5034,9 @@
     },
     "/cloud/v2/universes/{universe_id}:publishMessage": {
       "post": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Publish Universe Message",
         "description": "Publishes a message to the universe's live servers.\n\n Servers can consume messages via\n [MessagingService](https://create.roblox.com/docs/reference/engine/classes/MessagingService).",
         "operationId": "Cloud_PublishUniverseMessage",
@@ -4809,7 +5071,9 @@
         "x-roblox-docs": {
           "category": "Universes and places",
           "methodProperties": {
-            "scopes": ["universe-messaging-service:publish"]
+            "scopes": [
+              "universe-messaging-service:publish"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/Universe",
@@ -4820,7 +5084,9 @@
     },
     "/cloud/v2/universes/{universe_id}:restartServers": {
       "post": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Restart Universe Servers",
         "description": "Restarts all active servers for a specific universe if and only if a new\n version of the experience has been published. Used for releasing experience\n updates.",
         "operationId": "Cloud_RestartUniverseServers",
@@ -4861,7 +5127,9 @@
         "x-roblox-docs": {
           "category": "Universes and places",
           "methodProperties": {
-            "scopes": ["universe:write"]
+            "scopes": [
+              "universe:write"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/Universe",
@@ -4872,7 +5140,9 @@
     },
     "/cloud/v2/users/{user_id}": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Get User",
         "description": "Gets a user's basic and advanced information.\n\n To access a user's public information, no additional scopes are required.\n\n To access a user's verification status, you need the following scopes:\n * user.advanced.read\n\n To access a user's social account information, you need the following\n scopes:\n * user.social.read",
         "operationId": "Cloud_GetUser",
@@ -4914,7 +5184,9 @@
     },
     "/cloud/v2/users/{user_id}/inventory-items": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "List Inventory Items",
         "description": "List the inventory items in a user's inventory.\n\n The inventory items returned depend on the target user’s choice under\n **Settings > Privacy > Who can see my inventory?**:\n * If the user granted inventory visibility to \"Everyone,\" then any API key\n or OAuth2 token can be used to view the target’s inventory, no matter what\n scopes it has or who created it.\n * If the user has not granted inventory visibility to \"Everyone\":\n   * Their inventory can still be viewed with an API key created by the\n   target user with **Inventory: Read** permission.\n   * Their inventory can still be viewed with an OAuth2 token if the target\n   user authorizes an app requesting permissions for the\n   `user.inventory-item:read` scope.\n\n Rate Limits:\n * API Keys - 100 requests/minute per API key owner (can be user or group).\n Rate limits are enforced across all of an owner's API keys.\n * OAuth2 Tokens - 20 requests/minute per OAuth2 access token",
         "operationId": "Cloud_ListInventoryItems",
@@ -4987,7 +5259,9 @@
     },
     "/cloud/v2/users/{user_id}/notifications": {
       "post": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Create User Notification",
         "description": "Sends a notification to a user.",
         "operationId": "Cloud_CreateUserNotification",
@@ -5028,7 +5302,9 @@
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
-            "scopes": ["user.user-notification:write"]
+            "scopes": [
+              "user.user-notification:write"
+            ]
           },
           "resource": {
             "$ref": "#/components/schemas/UserNotification",
@@ -5039,7 +5315,9 @@
     },
     "/cloud/v2/users/{user_id}:generateThumbnail": {
       "get": {
-        "tags": ["Cloud"],
+        "tags": [
+          "Cloud"
+        ],
         "summary": "Generate User Thumbnail",
         "description": "Generates and returns the URL for the user's avatar thumbnail.",
         "operationId": "Cloud_GenerateUserThumbnail",
@@ -5068,7 +5346,11 @@
             "description": "Specify the format of the generated thumbnail. Default is `PNG`.",
             "schema": {
               "example": "FORMAT_UNSPECIFIED",
-              "enum": ["FORMAT_UNSPECIFIED", "PNG", "JPEG"],
+              "enum": [
+                "FORMAT_UNSPECIFIED",
+                "PNG",
+                "JPEG"
+              ],
               "type": "string",
               "format": "enum"
             }
@@ -5079,7 +5361,11 @@
             "description": "Specify the shape of the thumbnail. Default is `ROUND` (circular).",
             "schema": {
               "example": "SHAPE_UNSPECIFIED",
-              "enum": ["SHAPE_UNSPECIFIED", "ROUND", "SQUARE"],
+              "enum": [
+                "SHAPE_UNSPECIFIED",
+                "ROUND",
+                "SQUARE"
+              ],
               "type": "string",
               "format": "enum"
             }
@@ -5218,7 +5504,9 @@
         },
         "description": "Represents a product in the Creator Store. This resource is used to manage\n distribution and pricing of assets on the Creator Store.",
         "x-aep-resource": {
-          "patterns": ["creator-store-products/{creator_store_product_id}"],
+          "patterns": [
+            "creator-store-products/{creator_store_product_id}"
+          ],
           "plural": "creator-store-products",
           "singular": "creator-store-product"
         },
@@ -5233,7 +5521,10 @@
             "videoAssetId",
             "fontFamilyAssetId"
           ],
-          "seller": ["userSeller", "groupSeller"]
+          "seller": [
+            "userSeller",
+            "groupSeller"
+          ]
         }
       },
       "DataStore": {
@@ -5259,7 +5550,9 @@
         },
         "description": "Represents a data store.",
         "x-aep-resource": {
-          "patterns": ["universes/{universe_id}/data-stores/{data_store_id}"],
+          "patterns": [
+            "universes/{universe_id}/data-stores/{data_store_id}"
+          ],
           "plural": "data-stores",
           "singular": "data-store"
         },
@@ -5296,7 +5589,11 @@
           "state": {
             "readOnly": true,
             "example": "STATE_UNSPECIFIED",
-            "enum": ["STATE_UNSPECIFIED", "ACTIVE", "DELETED"],
+            "enum": [
+              "STATE_UNSPECIFIED",
+              "ACTIVE",
+              "DELETED"
+            ],
             "type": "string",
             "description": "The state of the data store entry.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | STATE_UNSPECIFIED | The default value. This value is used if the state is omitted. |\n  | ACTIVE | The default state of a newly created data store entry. |\n  | DELETED | The data store entry is marked as deleted. At some point in the future, it will be permanently deleted. |",
             "format": "enum"
@@ -5488,13 +5785,17 @@
         },
         "description": "A mini-community within Roblox for communication, discussions, and more.",
         "x-aep-resource": {
-          "patterns": ["groups/{group_id}"],
+          "patterns": [
+            "groups/{group_id}"
+          ],
           "plural": "groups",
           "singular": "group"
         },
         "x-resource": true,
         "x-oneOf": {
-          "Owner": ["owner"]
+          "Owner": [
+            "owner"
+          ]
         }
       },
       "GroupJoinRequest": {
@@ -5565,7 +5866,9 @@
         },
         "description": "A membership to a group. A user ID can be used in place of a membership ID.",
         "x-aep-resource": {
-          "patterns": ["groups/{group_id}/memberships/{group_membership_id}"],
+          "patterns": [
+            "groups/{group_id}/memberships/{group_membership_id}"
+          ],
           "plural": "group-memberships",
           "singular": "group-membership"
         },
@@ -5629,14 +5932,20 @@
         },
         "description": "A configurable property to grant specific privileges for members within a\n group.",
         "x-aep-resource": {
-          "patterns": ["groups/{group_id}/roles/{group_role_id}"],
+          "patterns": [
+            "groups/{group_id}/roles/{group_role_id}"
+          ],
           "plural": "group-roles",
           "singular": "group-role"
         },
         "x-resource": true,
         "x-oneOf": {
-          "Description": ["description"],
-          "MemberCount": ["memberCount"]
+          "Description": [
+            "description"
+          ],
+          "MemberCount": [
+            "memberCount"
+          ]
         }
       },
       "GroupRole_RolePermissions": {
@@ -5816,13 +6125,17 @@
         },
         "description": "A single status post on a group that can hold important group updates or\n other information.",
         "x-aep-resource": {
-          "patterns": ["groups/{group_id}/shout"],
+          "patterns": [
+            "groups/{group_id}/shout"
+          ],
           "plural": "group-shouts",
           "singular": "group-shout"
         },
         "x-resource": true,
         "x-oneOf": {
-          "Poster": ["poster"]
+          "Poster": [
+            "poster"
+          ]
         }
       },
       "IncrementDataStoreEntryRequest": {
@@ -5847,7 +6160,9 @@
         },
         "description": "Increments the entry value.\n\n If the value is not numeric, this request fails.",
         "x-oneOf": {
-          "Amount": ["amount"]
+          "Amount": [
+            "amount"
+          ]
         }
       },
       "IncrementOrderedDataStoreEntryRequest": {
@@ -5861,7 +6176,9 @@
         },
         "description": "Increments the entry value.",
         "x-oneOf": {
-          "Amount": ["amount"]
+          "Amount": [
+            "amount"
+          ]
         }
       },
       "Instance": {
@@ -5927,7 +6244,9 @@
         },
         "description": "Represents an item in a user's inventory.",
         "x-aep-resource": {
-          "patterns": ["users/{user_id}/inventory-items/{inventory_item_id}"],
+          "patterns": [
+            "users/{user_id}/inventory-items/{inventory_item_id}"
+          ],
           "plural": "inventory-items",
           "singular": "inventory-item"
         },
@@ -6022,7 +6341,9 @@
         },
         "description": "Specific fields only applicable to assets",
         "x-oneOf": {
-          "CollectibleDetails": ["collectibleDetails"]
+          "CollectibleDetails": [
+            "collectibleDetails"
+          ]
         }
       },
       "InventoryItem_BadgeDetails": {
@@ -6069,10 +6390,18 @@
         },
         "description": "Specific fields that are applicable to a collectible.",
         "x-oneOf": {
-          "InstanceId": ["instanceId"],
-          "InstanceState": ["instanceState"],
-          "ItemId": ["itemId"],
-          "SerialNumber": ["serialNumber"]
+          "InstanceId": [
+            "instanceId"
+          ],
+          "InstanceState": [
+            "instanceState"
+          ],
+          "ItemId": [
+            "itemId"
+          ],
+          "SerialNumber": [
+            "serialNumber"
+          ]
         }
       },
       "InventoryItem_GamePassDetails": {
@@ -6399,7 +6728,10 @@
         },
         "x-resource": true,
         "x-oneOf": {
-          "result": ["error", "output"]
+          "result": [
+            "error",
+            "output"
+          ]
         }
       },
       "LuauExecutionSessionTaskLog": {
@@ -6519,7 +6851,9 @@
         },
         "description": "Represents the memory store of the universe.",
         "x-aep-resource": {
-          "patterns": ["universes/{universe_id}/memory-store"],
+          "patterns": [
+            "universes/{universe_id}/memory-store"
+          ],
           "plural": "memory-stores",
           "singular": "memory-store"
         },
@@ -6572,7 +6906,10 @@
         },
         "x-resource": true,
         "x-oneOf": {
-          "expiration": ["ttl", "expireTime"]
+          "expiration": [
+            "ttl",
+            "expireTime"
+          ]
         }
       },
       "MemoryStoreSortedMapItem": {
@@ -6630,8 +6967,14 @@
         },
         "x-resource": true,
         "x-oneOf": {
-          "expiration": ["ttl", "expireTime"],
-          "sortKey": ["stringSortKey", "numericSortKey"]
+          "expiration": [
+            "ttl",
+            "expireTime"
+          ],
+          "sortKey": [
+            "stringSortKey",
+            "numericSortKey"
+          ]
         }
       },
       "Money": {
@@ -6676,7 +7019,10 @@
         "description": "This resource represents a long-running operation that is the result of a\n network API call.",
         "x-resource": true,
         "x-oneOf": {
-          "result": ["error", "response"]
+          "result": [
+            "error",
+            "response"
+          ]
         }
       },
       "OrderedDataStoreEntry": {
@@ -6708,7 +7054,9 @@
         },
         "x-resource": true,
         "x-oneOf": {
-          "Value": ["value"]
+          "Value": [
+            "value"
+          ]
         }
       },
       "Place": {
@@ -6751,19 +7099,30 @@
         },
         "description": "Represents a Roblox place.",
         "x-aep-resource": {
-          "patterns": ["universes/{universe_id}/places/{place_id}"],
+          "patterns": [
+            "universes/{universe_id}/places/{place_id}"
+          ],
           "plural": "places",
           "singular": "place"
         },
         "x-resource": true,
         "x-oneOf": {
-          "Description": ["description"],
-          "DisplayName": ["displayName"],
-          "ServerSize": ["serverSize"]
+          "Description": [
+            "description"
+          ],
+          "DisplayName": [
+            "displayName"
+          ],
+          "ServerSize": [
+            "serverSize"
+          ]
         }
       },
       "PublishUniverseMessageRequest": {
-        "required": ["topic", "message"],
+        "required": [
+          "topic",
+          "message"
+        ],
         "type": "object",
         "properties": {
           "topic": {
@@ -6828,7 +7187,9 @@
         },
         "description": "Returns whether a new snapshot was taken and the time of the latest snapshot\n after the operation (regardless of whether a new snapshot was taken).",
         "x-oneOf": {
-          "NewSnapshotTaken": ["newSnapshotTaken"]
+          "NewSnapshotTaken": [
+            "newSnapshotTaken"
+          ]
         }
       },
       "Status": {
@@ -6929,7 +7290,11 @@
           "purchasePlatform": {
             "readOnly": true,
             "example": "PURCHASE_PLATFORM_UNSPECIFIED",
-            "enum": ["PURCHASE_PLATFORM_UNSPECIFIED", "DESKTOP", "MOBILE"],
+            "enum": [
+              "PURCHASE_PLATFORM_UNSPECIFIED",
+              "DESKTOP",
+              "MOBILE"
+            ],
             "type": "string",
             "description": "The platform on which the subscription was purchased.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | PURCHASE_PLATFORM_UNSPECIFIED | The purchase platform is unspecified. |\n  | DESKTOP | The subscription was purchased on the Roblox website. |\n  | MOBILE | The subscription was purchased on the Roblox mobile app. |",
             "format": "enum"
@@ -6965,7 +7330,9 @@
         },
         "x-resource": true,
         "x-oneOf": {
-          "subscriber": ["user"]
+          "subscriber": [
+            "user"
+          ]
         }
       },
       "Subscription_ExpirationDetails": {
@@ -7035,7 +7402,11 @@
           "visibility": {
             "readOnly": true,
             "example": "VISIBILITY_UNSPECIFIED",
-            "enum": ["VISIBILITY_UNSPECIFIED", "PUBLIC", "PRIVATE"],
+            "enum": [
+              "VISIBILITY_UNSPECIFIED",
+              "PUBLIC",
+              "PRIVATE"
+            ],
             "type": "string",
             "description": "Whether or not the universe is publicly accessible.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | VISIBILITY_UNSPECIFIED | Updates using this value will throw an error on the backend. |\n  | PUBLIC | The universe is public. |\n  | PRIVATE | The universe is private. If a universe's visibility is set to PRIVATE, all active players will immediately be removed from all running servers. |",
             "format": "enum"
@@ -7120,20 +7491,39 @@
         },
         "description": "Represents a Roblox experience.",
         "x-aep-resource": {
-          "patterns": ["universes/{universe_id}"],
+          "patterns": [
+            "universes/{universe_id}"
+          ],
           "plural": "universes",
           "singular": "universe"
         },
         "x-resource": true,
         "x-oneOf": {
-          "ConsoleEnabled": ["consoleEnabled"],
-          "DesktopEnabled": ["desktopEnabled"],
-          "MobileEnabled": ["mobileEnabled"],
-          "PrivateServerPriceRobux": ["privateServerPriceRobux"],
-          "TabletEnabled": ["tabletEnabled"],
-          "VoiceChatEnabled": ["voiceChatEnabled"],
-          "VrEnabled": ["vrEnabled"],
-          "owner": ["user", "group"]
+          "ConsoleEnabled": [
+            "consoleEnabled"
+          ],
+          "DesktopEnabled": [
+            "desktopEnabled"
+          ],
+          "MobileEnabled": [
+            "mobileEnabled"
+          ],
+          "PrivateServerPriceRobux": [
+            "privateServerPriceRobux"
+          ],
+          "TabletEnabled": [
+            "tabletEnabled"
+          ],
+          "VoiceChatEnabled": [
+            "voiceChatEnabled"
+          ],
+          "VrEnabled": [
+            "vrEnabled"
+          ],
+          "owner": [
+            "user",
+            "group"
+          ]
         }
       },
       "Universe_SocialLink": {
@@ -7215,7 +7605,9 @@
         },
         "description": "Represents any registered user of Roblox.",
         "x-aep-resource": {
-          "patterns": ["users/{user_id}"],
+          "patterns": [
+            "users/{user_id}"
+          ],
           "plural": "users",
           "singular": "user"
         },
@@ -7246,7 +7638,9 @@
         },
         "description": "Represents a notification sent to a user.",
         "x-aep-resource": {
-          "patterns": ["users/{user_id}/notifications/{user_notification_id}"],
+          "patterns": [
+            "users/{user_id}/notifications/{user_notification_id}"
+          ],
           "plural": "user-notifications",
           "singular": "user-notification"
         },
@@ -7258,7 +7652,10 @@
           "type": {
             "writeOnly": true,
             "example": "TYPE_UNSPECIFIED",
-            "enum": ["TYPE_UNSPECIFIED", "MOMENT"],
+            "enum": [
+              "TYPE_UNSPECIFIED",
+              "MOMENT"
+            ],
             "type": "string",
             "description": "The type of notification.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | TYPE_UNSPECIFIED | The default value. This value is unused. |\n  | MOMENT | A notification type representing a moment. |",
             "format": "enum"
@@ -7288,7 +7685,9 @@
         },
         "description": "Details about the notification.",
         "x-oneOf": {
-          "callToAction": ["joinExperience"]
+          "callToAction": [
+            "joinExperience"
+          ]
         }
       },
       "UserNotification_Payload_AnalyticsData": {
@@ -7332,7 +7731,10 @@
         },
         "description": "A parameter value that a template uses to render a notification message.",
         "x-oneOf": {
-          "value": ["stringValue", "int64Value"]
+          "value": [
+            "stringValue",
+            "int64Value"
+          ]
         }
       },
       "UserNotification_Source": {
@@ -7347,7 +7749,9 @@
         },
         "description": "The source of the notification.",
         "x-oneOf": {
-          "source": ["universe"]
+          "source": [
+            "universe"
+          ]
         }
       },
       "UserRestriction": {
@@ -7459,18 +7863,21 @@
           },
           "gameServerScript": {
             "$ref": "#/components/schemas/UserRestrictionLog_Moderator_GameServerScript",
-            "description": "A moderator identified as a Luau script on game server."
+            "description": "A moderator identified as a Lua script on game server."
           }
         },
         "description": "An entity capturing the author of a state change.",
         "x-oneOf": {
-          "kind": ["robloxUser", "gameServerScript"]
+          "kind": [
+            "robloxUser",
+            "gameServerScript"
+          ]
         }
       },
       "UserRestrictionLog_Moderator_GameServerScript": {
         "type": "object",
         "properties": {},
-        "description": "Represents a user-written Luau script executed on game server."
+        "description": "Represents a user-written Lua script executed on game server."
       },
       "UserRestrictionLog_RestrictionType": {
         "type": "object",
@@ -7482,7 +7889,9 @@
         },
         "description": "The type of restriction.",
         "x-oneOf": {
-          "kind": ["gameJoinRestriction"]
+          "kind": [
+            "gameJoinRestriction"
+          ]
         }
       },
       "UserRestrictionLog_RestrictionType_GameJoinRestriction": {
@@ -7602,8 +8011,12 @@
         },
         "description": "Instance is the base class for all classes in the Roblox class hierarchy.",
         "x-oneOf": {
-          "Details": ["Details"],
-          "Name": ["Name"]
+          "Details": [
+            "Details"
+          ],
+          "Name": [
+            "Name"
+          ]
         }
       },
       "roblox.engine.InstanceDetails": {
@@ -7615,20 +8028,25 @@
           },
           "LocalScript": {
             "$ref": "#/components/schemas/roblox.engine.LocalScript",
-            "description": "A LocalScript is a Luau source container that runs its contents on the client (player's device) instead of the server."
+            "description": "A LocalScript is a Lua code container that runs its contents on the client (player's device) instead of the server."
           },
           "ModuleScript": {
             "$ref": "#/components/schemas/roblox.engine.ModuleScript",
-            "description": "A ModuleScript is a type of Luau source container that runs once and must return exactly one value."
+            "description": "A ModuleScript is a type of Lua source container that runs once and must return exactly one value."
           },
           "Script": {
             "$ref": "#/components/schemas/roblox.engine.Script",
-            "description": "A Script is a Luau source container that can access server-side objects, properties, and events, such as to award badges to players using BadgeService, while LocalScripts on the client cannot."
+            "description": "A Script is a Lua code container that can access server-side objects, properties, and events, such as to award badges to players using BadgeService, while LocalScripts on the client cannot."
           }
         },
         "description": "Contains instance type-specific details about a data model instance.",
         "x-oneOf": {
-          "kind": ["Folder", "LocalScript", "ModuleScript", "Script"]
+          "kind": [
+            "Folder",
+            "LocalScript",
+            "ModuleScript",
+            "Script"
+          ]
         }
       },
       "roblox.engine.LocalScript": {
@@ -7641,7 +8059,12 @@
           },
           "RunContext": {
             "example": "Legacy",
-            "enum": ["Legacy", "Server", "Client", "Plugin"],
+            "enum": [
+              "Legacy",
+              "Server",
+              "Client",
+              "Plugin"
+            ],
             "type": "string",
             "description": "Determines the context under which the script will run.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | Legacy | Runs in legacy script containers dependent on the type of script used, such as LocalScript or Script. |\n  | Server | Runs on the server. |\n  | Client | Runs on the client. |\n  | Plugin | Runs as a descendant of Plugin instances. |",
             "format": "enum"
@@ -7651,11 +8074,17 @@
             "description": "The code to be executed."
           }
         },
-        "description": "A LocalScript is a Luau source container that runs its contents on the client (player's device) instead of the server.",
+        "description": "A LocalScript is a Lua code container that runs its contents on the client (player's device) instead of the server.",
         "x-oneOf": {
-          "Enabled": ["Enabled"],
-          "RunContext": ["RunContext"],
-          "Source": ["Source"]
+          "Enabled": [
+            "Enabled"
+          ],
+          "RunContext": [
+            "RunContext"
+          ],
+          "Source": [
+            "Source"
+          ]
         }
       },
       "roblox.engine.ModuleScript": {
@@ -7666,9 +8095,11 @@
             "description": "The code to be executed."
           }
         },
-        "description": "A ModuleScript is a type of Luau source container that runs once and must return exactly one value.",
+        "description": "A ModuleScript is a type of Lua source container that runs once and must return exactly one value.",
         "x-oneOf": {
-          "Source": ["Source"]
+          "Source": [
+            "Source"
+          ]
         }
       },
       "roblox.engine.Script": {
@@ -7681,7 +8112,12 @@
           },
           "RunContext": {
             "example": "Legacy",
-            "enum": ["Legacy", "Server", "Client", "Plugin"],
+            "enum": [
+              "Legacy",
+              "Server",
+              "Client",
+              "Plugin"
+            ],
             "type": "string",
             "description": "Determines the context in which the script will run.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | Legacy | Runs in legacy script containers dependent on the type of script used, such as LocalScript or Script. |\n  | Server | Runs on the server. |\n  | Client | Runs on the client. |\n  | Plugin | Runs as a descendant of Plugin instances. |",
             "format": "enum"
@@ -7691,11 +8127,17 @@
             "description": "The code to be executed."
           }
         },
-        "description": "A Script is a Luau source container that can access server-side objects, properties, and events, such as to award badges to players using BadgeService, while LocalScripts on the client cannot.",
+        "description": "A Script is a Lua code container that can access server-side objects, properties, and events, such as to award badges to players using BadgeService, while LocalScripts on the client cannot.",
         "x-oneOf": {
-          "Enabled": ["Enabled"],
-          "RunContext": ["RunContext"],
-          "Source": ["Source"]
+          "Enabled": [
+            "Enabled"
+          ],
+          "RunContext": [
+            "RunContext"
+          ],
+          "Source": [
+            "Source"
+          ]
         }
       }
     }
