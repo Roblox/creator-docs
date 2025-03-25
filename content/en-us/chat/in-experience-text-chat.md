@@ -225,7 +225,7 @@ Both the [chat window](../chat/chat-window.md) and [bubble chat](../chat/bubble-
 
 ### Migrate speaker "extra data"
 
-The legacy Lua chat system allowed devleopers to use `SetExtraData` on the `Speaker` class. This data was used to format the name color, chat color, or to apply name tags for a given speaker.
+The legacy Lua chat system allowed developers to use `SetExtraData` on the `Speaker` class. This data was used to format the name color, chat color, or to apply name tags for a given speaker.
 
 ```lua title='Legacy Chat System SetExtraData'
 -- An example of setting extra data on a speaker in the legacy chat system

@@ -34,7 +34,7 @@ Alternatively, you can use the [Open Cloud API](../../cloud/guides/experience-no
 
 ### Include the package
 
-To implement Experience Notifications, you must obtain the Lua package from the [Creator Store](../../production/creator-store.md).
+To implement Experience Notifications, you must obtain the Luau package from the [Creator Store](../../production/creator-store.md).
 
 1. From the [View](../../studio/view-tab.md) tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 

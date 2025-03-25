@@ -159,9 +159,9 @@ functions:
     code_samples:
   - name: coroutine.create
     summary: |
-      Creates a new coroutine, with body f. f must be a Lua function.
+      Creates a new coroutine, with body f. f must be a Luau function.
     description: |
-      Creates a new coroutine, with body f. f must be a Lua function.
+      Creates a new coroutine, with body f. f must be a Luau function.
     parameters:
       - name: f
         type: function
@@ -251,7 +251,7 @@ functions:
       Creates a new coroutine and returns a function that, when called, resumes
       the coroutine.
     description: |
-      Creates a new coroutine, with body f. f must be a Lua function. Returns a
+      Creates a new coroutine, with body f. f must be a Luau function. Returns a
       function that resumes the coroutine each time it is called. Any arguments
       passed to the function behave as the extra arguments to resume. Returns
       the same values returned by resume, except the first boolean. In case of

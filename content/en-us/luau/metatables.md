@@ -218,7 +218,7 @@ local t = setmetatable({}, metatable)
 print(t.x) --> 1
 ```
 
-`__index` was fired when x was indexed in the table and not found. Lua then searched through the `__index` table for an index called x, and, finding one, returned that.
+`__index` was fired when x was indexed in the table and not found. Luau then searched through the `__index` table for an index called x, and, finding one, returned that.
 
 Now you can easily do that with a simple function, but there's a lot more where
 that came from. Take this for example:
@@ -319,7 +319,7 @@ print(t[1]) -- will be fast because it's just grabbing the number from the table
 
 #### Rawset, rawget, rawequal
 
-When playing with metatables, you may run into some problems. What happens if you need to use the `__index` metamethod to create new values in a table, but that table's metatable also has a `__newindex` metamethod in it? You'll want to use the Lua built-in function rawset to set the value without invoking any metamethods. Take the following code as an example of what happens if you don't use these functions.
+When playing with metatables, you may run into some problems. If you need to use the `__index` metamethod to create new values in a table, but that table's metatable also has a `__newindex` metamethod, you'll want to use the Luau built-in function `Global.LuaGlobals.rawset()` to set the value without invoking any metamethods. Take the following code as an example of what happens if you don't use these functions.
 
 ```lua
 local t = setmetatable({}, {
@@ -353,7 +353,7 @@ print(t[1]) -- prints 10
 
 ## Use the set datatype
 
-A **set** is a collection of items with no order and no duplicate elements. An item either **is** or **is not** contained within a set. Using metatables, you can construct and manipulate sets within Lua scripts.
+A **set** is a collection of items with no order and no duplicate elements. An item either **is** or **is not** contained within a set. Using metatables, you can construct and manipulate sets within Luau scripts.
 
 ### Basic methods
 

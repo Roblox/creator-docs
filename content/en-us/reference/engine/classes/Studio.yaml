@@ -1543,9 +1543,9 @@ properties:
     writeCapabilities: []
   - name: Studio.Keyword Color
     summary: |
-      Sets the text color of built-in Lua keywords.
+      Sets the text color of built-in Luau keywords.
     description: |
-      Sets the text color of built-in Lua keywords.
+      Sets the text color of built-in Luau keywords.
     code_samples:
     type: Color3
     tags:

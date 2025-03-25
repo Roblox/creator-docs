@@ -428,7 +428,7 @@ Rather than creating these instances when a class object is instantiated, the co
 
 ### Composition
 
-Although inheritance is possible in Lua using
+Although inheritance is possible in Luau using
 [metatables](../luau/metatables.md), the project opts to instead allow classes
 to extend each other through **composition**. When combining classes through
 composition, the "child" object is instantiated in the `new()` method of the
@@ -447,13 +447,13 @@ as well as to distinguish between the project's classes and Roblox instances.
 The role of the `destroy()` method is to destroy any instances created by the
 object, disconnect any connections, and call `destroy()` on any child objects.
 This is particularly important for connections because instances with active
-connections are not cleaned up by the Lua garbage collector, even if no
+connections are not cleaned up by the Luau garbage collector, even if no
 references to the instance or connections to the instance remain.
 
 ### Singletons
 
 Singletons, as the name suggests, are classes for which only one object can ever
-exist. They are the project's equivalent of Roblox's [Services](../scripting/services.md). Rather than storing a reference to the singleton object and passing it around in the Lua code, [Plant][planturl] takes
+exist. They are the project's equivalent of Roblox's [Services](../scripting/services.md). Rather than storing a reference to the singleton object and passing it around in the Luau code, [Plant][planturl] takes
 advantage of the fact that requiring a `Class.ModuleScript` caches its returned value. This means that requiring the same singleton `Class.ModuleScript`
 from different places consistently provides the same returned object.
 The only exception to this rule would be if different environments (client or server) accessed the `Class.ModuleScript`.
@@ -656,8 +656,8 @@ topics.
 
 - [Client-Server Model](../projects/client-server.md) &mdash; An overview of the
   client-server model in Roblox.
-- [Luau](../luau/) &mdash; Details on **Luau**, the Roblox scripting language
-  derived from [Lua 5.1](https://www.lua.org/pil/5.1.html).
+- [Luau](../luau/) &mdash; Details on **Luau**, the Roblox-created scripting language
+  descended from [Lua 5.1](https://www.lua.org/pil/5.1.html).
 - [Remote Events and Callbacks](../scripting/events/remote.md) &mdash; All about
   remote network events and callbacks for communication across the client-server
   boundary.

@@ -3,9 +3,9 @@ type: class
 category: Social
 memory_category: Instances
 summary: |
-  Houses the Lua code responsible for running the legacy chat system.
+  Houses the Luau code responsible for running the legacy chat system.
 description: |
-  The **Chat** service houses the Lua code responsible for running the
+  The **Chat** service houses the Luau code responsible for running the
   [legacy chat system](../../../chat/legacy/legacy-chat-system.md). Similar to
   `Class.StarterPlayerScripts`, default objects like `Class.Script|Scripts` and
   `Class.ModuleScript|ModuleScripts` are inserted into the service.
@@ -119,7 +119,7 @@ methods:
   - name: Chat:InvokeChatCallback
     summary: |
       Invoke a chat callback function registered by
-      `Class.Chat:RegisterChatCallback()|RegisterChatCallback`. Used by the Lua
+      `Class.Chat:RegisterChatCallback()|RegisterChatCallback`. Used by the Luau
       Chat System.
     description: |
       InvokeChatCallback will call a function registered by
@@ -128,9 +128,9 @@ methods:
       return the result of the registered function, or raise an error if no
       function has been registered.
 
-      This function is called by the Lua Chat System so that chat callbacks may
+      This function is called by the Luau Chat System so that chat callbacks may
       be registered to change the behavior of certain features. Unless you are
-      replacing the default Lua Chat System with your own, you should not need
+      replacing the default Luau Chat System with your own, you should not need
       to call this function. You can read about the different callback functions
       at `Class.Chat:RegisterChatCallback()`.
     code_samples:
@@ -162,9 +162,9 @@ methods:
       event (`Class.Chat:InvokeChatCallback()|InvokeChatCallback`).
     description: |
       RegisterChatCallback binds a function to some chat system event in order
-      to affect the behavior of the Lua chat system. The first argument
+      to affect the behavior of the Luau chat system. The first argument
       determines the event (using the `Enum.ChatCallbackType` enum) to which the
-      second argument, the function, shall be bound. The default Lua chat system
+      second argument, the function, shall be bound. The default Luau chat system
       uses `Class.Chat:InvokeChatCallback()|InvokeChatCallback` to invoke
       registered functions. Attempting to register a server- or client- only
       callback on a peer that isn't a server or client respectively will raise

@@ -3,9 +3,9 @@ type: class
 category: Scripting
 memory_category: Script
 summary: |
-  An object that contains and runs Lua code on the server.
+  An object that contains and runs Luau code on the server.
 description: |
-  A `Class.Script` is a Lua code container that can access server-side objects,
+  A `Class.Script` is a Luau source container that can access server-side objects,
   properties, and events, such as to award badges to players using
   `Class.BadgeService`, while `Class.LocalScript|LocalScripts` on the client
   cannot.

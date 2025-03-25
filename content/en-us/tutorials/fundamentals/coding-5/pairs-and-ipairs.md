@@ -1,6 +1,6 @@
 ---
 title: pairs and ipairs
-description: pairs() and ipairs() are used to go through Roblox Lua tables. This lesson covers how to code them for a script and when to use them.
+description: pairs() and ipairs() are used to go through Luau tables. This lesson covers how to code them for a script and when to use them.
 next: /tutorials/fundamentals/coding-5/return-values-from-tables
 prev: /tutorials/fundamentals/coding-5/intro-to-dictionaries
 ---

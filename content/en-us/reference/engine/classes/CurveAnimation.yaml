@@ -61,7 +61,7 @@ description: |
 
   As for other `Class.AnimationClip` types (such as `Class.KeyframeSequence`),
   if you want to download the CurveAnimation corresponding to an existing
-  uploaded Animation using Lua scripts, use
+  uploaded Animation using Luau scripts, use
   AnimationClipProvider:AnimationClipAsync.
 code_samples:
 inherits:

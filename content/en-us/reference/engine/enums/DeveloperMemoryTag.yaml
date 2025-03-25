@@ -37,7 +37,7 @@ items:
   - name: LuaHeap
     value: 4
     summary: |
-      All of the data in Lua, including everything happening in core scripts,
+      All of the data in Luau, including everything happening in core scripts,
       built-in data types, etc.
     tags: []
     deprecation_message: ''

@@ -1,11 +1,11 @@
 ---
 title: Make changes to arrays
-description: Learn how to add, remove, and find values in an array in Roblox Lua using tables.
+description: Learn how to add, remove, and find values in an array in Luau using tables.
 next: /tutorials/fundamentals/coding-5/intro-to-dictionaries
 prev: /tutorials/fundamentals/coding-5/loops-and-arrays
 ---
 
-An array's contents will often have to be changed, like when needing to remove an item from a player's inventory. Lua has **prebuilt functions** for use with tables to make this easier.
+An array's contents will often have to be changed, like when needing to remove an item from a player's inventory. Luau has **built-in functions** for use with tables to make this easier.
 
 This article will outline prebuilt functions for tables like add and remove while describing how to search for a value.
 
