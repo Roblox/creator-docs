@@ -190,7 +190,7 @@ per frame on both the server and the client.
 
     Alternatively, you can apply the `CollisionFidelity = Precise` filter to the [Explorer](../studio/explorer.md#property-filters) which shows a count of all mesh parts with the precise fidelity and allows you to easily select them.
 
-  - For an in-depth walkthrough on how to choose a collision fidelity option that balances your precision and performance requirements, see [Set Physics and Rendering Parameters](../tutorials/environmental-art/assemble-an-asset-library.md#collisionfidelity).
+  - For an in-depth walkthrough on how to choose a collision fidelity option that balances your precision and performance requirements, see [Set Physics and Rendering Parameters](../tutorials/curriculums/environmental-art/assemble-an-asset-library.md#collisionfidelity).
 
 ### MicroProfiler scopes
 
@@ -362,7 +362,7 @@ same `MeshId` are handled in a single draw call when:
   near each other forces the engine to render the overlapping pixels multiple
   times, which can hurt performance. For more information on identifying and
   fixing this issue, see
-  [Delete Layered Transparencies](../tutorials/environmental-art/optimize-your-experience.md#delete-layered-transparencies).
+  [Delete Layered Transparencies](../tutorials/curriculums/environmental-art/optimize-your-experience.md#delete-layered-transparencies).
 
 ### Mitigation
 
