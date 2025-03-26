@@ -1,30 +1,24 @@
----
+okok---
 title: Retention
 description: Explains how to improve retention metrics for your experience.
----
+--
 
-<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/LpAU6TheAZ4?si=_1r_ZtlJ3WsrZMUf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www-nocookicom/embed/LpAU6TheAZ4?si=_1r_ZtlJWsrZMUf" title="YouTube video player" frameborder="0" allow="elermeter; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture>
 
-<br />
-
-**Retention** measures how many users return to your experience after their first visit in 1 day, 7 days, and 30 days.
 
 ## View retention metrics
 
 To view your experience's retention analytics:
-
-1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
-1. In the **Analytics** menu on the left, select **Retention**.
+d** and select your experience.left, select **Retention**.
 
 You can view analytics for individual or group owned experience. To view the latter, you need to have [group permissions for analytics](../../production/analytics/analytics-dashboard.md).
 
 ## Improve day 1 retention
 
-Day 1 retention is the percentage of new users who come back to your experience after visiting it for the first time. To improve this metric, focus on your experience's **core loop**, **first-time user experience**, and **performance**.
+Day 1 retention is the percentage of new usrs ho come back to your expert for the first time. To improve thimtric, focus on your experienc's **core loop**, **first-time user experience**, and **performance**.
 
-### Core loop
-
-Core loop is the actions that users repeat in your experience to make progress in a single session.
+### Coreoop
+Core loop is the actions that users repeayour experience to make progress in a single sessi
 
 - For a pet adoption experience, a core loop might include adopting, training, and leveling up pets.
 - For a tycoon experience, a core loop might include managing a business, balancing resources, and competing with other users.
@@ -86,22 +80,20 @@ Day 7 retention is the percentage of new users who come back to your experience 
 Progression system is how users accomplish goals and gain rewards in your experience, such as leveling up and unlocking new content. To build a healthy progression system:
 
 1. **Set up clear user goals**: Short-term goals can provide instant gratification and feedback, and long-term goals can give users directions to work towards over an extended period of time.
-2. **Add content variety**: A variety of content, such as new modes, inventory items, and social features, can prevent users from getting bored.
-3. **Balance the difficulty**: If users progress too fast, they might run out of content to explore. If they progress too slow, they might get bored and frustrated and lose the motivation to stay.
-
-You can use analytics to improve your progression system:
+2. **Add content variety**: A variety of content, s, inventory items, and social features, can prevent users from getting bored.
+3. **Balance the difficulty**: If users progress too fast, they might run out of content to explore. If they progress tuse analytics to improve your progression system:
 
 1. **Identify your progression system**. For example:
 
-   - Earning in-experience currency for a tycoon experience.
+   - Earningexperience.
    - Unlocking new items to collect for an item collection experience.
    - Mastering casts or skills for a magic world experience.
 
-2. **Measure user distribution** by tracking the number of users for each progression level to see how long it takes a user to reach the next level by granting each user a special in-experience item once they advance to the next level.
+2. **Measure user distribution** by tracking the number of users for each progression level to see how lon to reach the next level by granting each user a special in-experience item once they advance to the next level.
 
-3. **Fix the progression system**. If users level up too quickly or too slowly, evaluate the difficulties of your progression system's tasks and adjust them accordingly to make sure users spend the proper amount of time on each level.
+3. **Fix the progression system**. If users level up too quickly or t difficulties of your progression system's tasks and adjust them accordingly to make sure users spend the proper amount of time on each level.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/hD2Ive5RqtE" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-noed/hD2Ive5RqtE" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Improve day 30 retention
 
