@@ -2,9 +2,17 @@ name: AudioChannelSplitter
 type: class
 category:
 memory_category: Internal
-summary: ''
-description: ''
-code_samples: []
+summary: |
+  Splits an audio stream into component channels so that each can be processed independently.
+description: |
+  `Class.AudioChannelSplitter` splits an audio stream into component channels
+  so that each can be processed independently. It provides one **Input** pin,
+  one combined **Output** pin, as well as the following secondary output pins,
+  all of which can be connected to/from by `Class.Wire|Wires`: **Left**, **Right**, **Center**, **SurroundLeft**, **SurroundRight**, **Sub**, **BackLeft**, **BackRight**, **TopLeft**, **TopRight**, **TopBackLeft**, and **TopBackRight**.
+
+  <img src="/assets/engine-api/enums/AudioChannelLayout/Surround_7_1_4.jpg" width="810" alt="Diagram showing position of all potential channels." />
+code_samples:
+  - audio-wiring---splitting-mixing
 inherits:
   - Instance
 tags:
@@ -12,8 +20,23 @@ tags:
 deprecation_message: ''
 properties:
   - name: AudioChannelSplitter.Layout
-    summary: ''
-    description: ''
+    summary: |
+      Controls the input channel layout to be split from.
+    description: |
+      Controls the input channel layout to be split from. When changed, all
+      audio streams prior to this channel splitter's input may need to be
+      up-mixed (widened to at least as many channels as the input requires).
+      
+      The **Output** pin produces a copy of the stream wired to **Input** but,
+      depending on the value of `Class.AudioChannelSplitter.Layout`:
+      
+      - For `Enum.AudioChannelLayout.Mono|Mono`, the **Center** pin produces an audio stream.
+      - For `Enum.AudioChannelLayout.Stereo|Stereo`, the **Left** and **Right** pins produce audio streams.
+      - For `Enum.AudioChannelLayout.Quad|Quad`, the **Left**, **Right**, **BackLeft**, and **BackRight** pins produce audio streams.
+      - `Enum.AudioChannelLayout.Surround_5|Surround_5` is the same as `Quad`, plus **Center** produces an audio stream.
+      - `Enum.AudioChannelLayout.Surround_5_1|Surround_5_1` is the same as `Surround_5`, plus **Sub** produces an audio stream.
+      - `Enum.AudioChannelLayout.Surround_7_1|Surround_7_1` is the same as `Surround_5_1`, plus **SurroundLeft** and **SurroundRight** produce audio streams.
+      - For `Enum.AudioChannelLayout.Surround_7_1_4|Surround_7_1_4`, all secondary output pins produce audio streams.
     code_samples: []
     type: AudioChannelLayout
     tags: []
@@ -31,8 +54,12 @@ properties:
     writeCapabilities: []
 methods:
   - name: AudioChannelSplitter:GetConnectedWires
-    summary: ''
-    description: ''
+    summary: |
+      Returns an array of `Class.Wire|Wires` that are connected to the specified
+      pin.
+    description: |
+      Returns an array of `Class.Wire|Wires` that are connected to the specified
+      pin.
     code_samples: []
     parameters:
       - name: pin
@@ -49,8 +76,11 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: AudioChannelSplitter:GetInputPins
-    summary: ''
-    description: ''
+    summary: |
+      Returns the input pin available for `Class.Wire.TargetName`.
+    description: |
+      Returns a table containing one string, `"Input"`, indicating the input pin
+      available for `Class.Wire.TargetName`.
     code_samples: []
     parameters: []
     returns:
@@ -63,8 +93,25 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: AudioChannelSplitter:GetOutputPins
-    summary: ''
-    description: ''
+    summary: |
+      Returns the output pins that can be selected by `Class.Wire.SourceName`.
+    description: |
+      Returns a table of strings indicating which output pins are available for
+      `Class.Wire.SourceName`:
+      
+      - `"Output"`
+      - `"Left"`
+      - `"Right"`
+      - `"Center"`
+      - `"SurroundLeft"`
+      - `"SurroundRight"`
+      - `"BackLeft"`
+      - `"BackRight"`
+      - `"Sub"`
+      - `"TopLeft"`
+      - `"TopRight"`
+      - `"TopBackLeft"`
+      - `"TopBackRight"`
     code_samples: []
     parameters: []
     returns:
@@ -78,26 +125,35 @@ methods:
     writeCapabilities: []
 events:
   - name: AudioChannelSplitter.WiringChanged
-    summary: ''
-    description: ''
+    summary: |
+      Fires when another instance is connected to or disconnected from the
+      `Class.AudioChannelSplitter` via a `Class.Wire`.
+    description: |
+      Event that fires after a `Class.Wire` becomes connected or disconnected,
+      and that `Class.Wire` is now or was previously connected to a pin on the
+      `Class.AudioChannelSplitter` and to some other wirable instance.
     code_samples: []
     parameters:
       - name: connected
         type: bool
         default:
-        summary: ''
+        summary: |
+          Whether the instance got connected or disconnected.
       - name: pin
         type: string
         default:
-        summary: ''
+        summary: |
+          The pin on the `Class.AudioChannelSplitter` that the `Class.Wire` targets.
       - name: wire
         type: Wire
         default:
-        summary: ''
+        summary: |
+          The `Class.Wire` between the `Class.AudioChannelSplitter` and the other instance.
       - name: instance
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The other instance that is or was connected through the `Class.Wire`.
     tags: []
     deprecation_message: ''
     security: None

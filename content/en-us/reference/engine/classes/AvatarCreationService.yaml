@@ -195,7 +195,9 @@ methods:
       tokens at once.
     description: |
       Gets the avatar creation token details for a list of avatar creation
-      tokens at once. Returns an array of avatar creation token details; each
+      tokens at once (tokens are generated through the
+      [token creation](../../../production/monetization/avatar-creation-token.md) process).
+      Returns an array of avatar creation token details; each
       token detail is a dictionary with the fields indicated in the example
       result below:
 
@@ -295,7 +297,9 @@ methods:
     description: |
       Prompts a `Class.Player` to purchase and create an avatar from a
       `Class.HumanoidDescription`. The price of the creation is dictated by the
-      price attributed to the avatar creation token.
+      price attributed to the avatar creation token. This avatar creation token
+      is required for the purchasing and creation of the body and can be generated
+      by following the [token creation](../../../production/monetization/avatar-creation-token.md) process.
 
       For avatar creation, the `Class.HumanoidDescription` is expected to
       include new assets to be created for each of the 6 body parts
@@ -347,6 +351,8 @@ methods:
           was created for. Furthermore, the token creator must maintain ID
           verification and
           [Roblox Premium](https://www.roblox.com/premium/membership).
+          To create a token for utilization in this API, follow the
+          [token creation](../../../production/monetization/avatar-creation-token.md) process.
       - name: player
         type: Player
         default:

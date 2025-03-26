@@ -132,7 +132,7 @@ The real-time translation API currently only supports RCC authentication. As a r
   <tr>
     <td>translations</td>
     <td>`Dictionary<string, string>`</td>
-    <td>A map containing the requested translations. The key is the IETF BCP-47 language code, and the value is the translated text for that language. The map will contain all requested translations.</td>
+    <td>A map containing the requested translations. The key is the IETF BCP-47 language code, and the value is the translated text for that language. The map will contain all requested translations. If the source text was filtered, this map will be empty. </td>
   </tr>
 </tbody>
 </table>

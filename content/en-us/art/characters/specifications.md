@@ -28,7 +28,7 @@ Avatar character models are made up of 15 separate mesh objects and require addi
 
 ### Body scale
 
-Roblox supports 3 standards of body scales: **Normal**, **Slender**, and **Classic**. These standards allow developers to create experiences and spaces with consistent body sizes for standardizing movement and interaction. While the minimum sizes for each body scale is the same, each body scale has a unique maximum total body size, as well as a range for each body asset.
+Roblox supports 3 standards of body scales: **Normal**, **Slender**, and **Classic**. These standards allow developers to create experiences and spaces with consistent body sizes for standardizing movement and interaction. You can select a body scale on import using [Rig Scale options](../modeling/3d-importer.md#rig-general), or modify the [body scale manually](../../art/accessories/body-scale.md). Body scale persists when the asset is [uploaded to the Marketplace](../../marketplace/publish-to-marketplace.md#upload-an-asset).
 
 <center>
 <figure>

@@ -5552,7 +5552,7 @@ navigation:
     path: /reference/engine/globals
     source: /reference/engine/globals.md
     section:
-      - title: Luau Globals
+      - title: Lua Globals
         path: /reference/engine/globals/LuaGlobals
         type: engineapi
         source: /reference/engine/globals/LuaGlobals.yaml

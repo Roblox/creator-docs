@@ -28,6 +28,12 @@ description: |
   `Class.EditableImage`, the editable image is published as an image and the
   property is set to a new asset ID.
 
+  #### Update Limitations
+  
+  Only a single `Class.EditableImage` can be updated per frame on the display
+  side. For example, if you update three `Class.EditableImage` objects which are
+  currently being displayed, it will take three frames for all of them to be updated. 
+
   #### Enabling EditableImage for Published Experiences
 
   For security purposes, using `Class.EditableImage` fails by default for

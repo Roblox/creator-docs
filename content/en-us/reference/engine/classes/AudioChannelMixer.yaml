@@ -2,9 +2,17 @@ name: AudioChannelMixer
 type: class
 category:
 memory_category: Internal
-summary: ''
-description: ''
-code_samples: []
+summary: |
+  Combines multiple audio streams into a single, multichannel audio stream.
+description: |
+  `Class.AudioChannelMixer` mixes multiple audio streams into a single,
+  multichannel stream. It provides one combined **Input** pin, one **Output**
+  pin, as well as the following secondary input pins, all of which can be
+  connected to/from by `Class.Wire|Wires`: **Left**, **Right**, **Center**, **SurroundLeft**, **SurroundRight**, **Sub**, **BackLeft**, **BackRight**, **TopLeft**, **TopRight**, **TopBackLeft**, and **TopBackRight**.
+
+  <img src="/assets/engine-api/enums/AudioChannelLayout/Surround_7_1_4.jpg" width="810" alt="Diagram showing position of all potential channels." />
+code_samples:
+  - audio-wiring---splitting-mixing
 inherits:
   - Instance
 tags:
@@ -12,8 +20,20 @@ tags:
 deprecation_message: ''
 properties:
   - name: AudioChannelMixer.Layout
-    summary: ''
-    description: ''
+    summary: |
+      Controls the output channel layout to be mixed to.
+    description: |
+      Controls the output channel layout to be mixed to. The **Input** pin of
+      `Class.AudioChannelMixer` is always forwarded "as-is" to **Output**, but
+      depending on the value of `Layout`:
+      
+      - For `Enum.AudioChannelLayout.Mono|Mono`, the **Center** pin consumes audio streams.
+      - For `Enum.AudioChannelLayout.Stereo|Stereo`, the **Left** and **Right** pins consume audio streams.
+      - For `Enum.AudioChannelLayout.Quad|Quad`, the **Left**, **Right**, **BackLeft**, and **BackRight** pins consume audio streams.
+      - `Enum.AudioChannelLayout.Surround_5|Surround_5` is the same as `Quad`, plus **Center** consumes an audio stream.
+      - `Enum.AudioChannelLayout.Surround_5_1|Surround_5_1` is the same as `Surround_5`, plus **Sub** consumes an audio stream.
+      - `Enum.AudioChannelLayout.Surround_7_1|Surround_7_1` is the same as `Surround_5_1`, plus **SurroundLeft** and **SurroundRight** consume audio streams.
+      - For `Enum.AudioChannelLayout.Surround_7_1_4|Surround_7_1_4`, all secondary input pins consume audio streams.
     code_samples: []
     type: AudioChannelLayout
     tags: []
@@ -31,8 +51,12 @@ properties:
     writeCapabilities: []
 methods:
   - name: AudioChannelMixer:GetConnectedWires
-    summary: ''
-    description: ''
+    summary: |
+      Returns an array of `Class.Wire|Wires` that are connected to the specified
+      pin.
+    description: |
+      Returns an array of `Class.Wire|Wires` that are connected to the specified
+      pin.
     code_samples: []
     parameters:
       - name: pin
@@ -49,8 +73,25 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: AudioChannelMixer:GetInputPins
-    summary: ''
-    description: ''
+    summary: |
+      Returns the input pins that can be selected by `Class.Wire.TargetName`.
+    description: |
+      Returns a table of strings indicating which input pins are available for
+      `Class.Wire.TargetName`:
+      
+      - `"Input"`
+      - `"Left"`
+      - `"Right"`
+      - `"Center"`
+      - `"SurroundLeft"`
+      - `"SurroundRight"`
+      - `"BackLeft"`
+      - `"BackRight"`
+      - `"Sub"`
+      - `"TopLeft"`
+      - `"TopRight"`
+      - `"TopBackLeft"`
+      - `"TopBackRight"`
     code_samples: []
     parameters: []
     returns:
@@ -63,8 +104,11 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: AudioChannelMixer:GetOutputPins
-    summary: ''
-    description: ''
+    summary: |
+      Returns the output pin available for `Class.Wire.SourceName`.
+    description: |
+      Returns a table containing one string, `"Output"`, indicating the output pin
+      available for `Class.Wire.SourceName`.
     code_samples: []
     parameters: []
     returns:
@@ -78,26 +122,35 @@ methods:
     writeCapabilities: []
 events:
   - name: AudioChannelMixer.WiringChanged
-    summary: ''
-    description: ''
+    summary: |
+      Fires when another instance is connected to or disconnected from the
+      `Class.AudioChannelMixer` via a `Class.Wire`.
+    description: |
+      Event that fires after a `Class.Wire` becomes connected or disconnected,
+      and that `Class.Wire` is now or was previously connected to a pin on the
+      `Class.AudioChannelMixer` and to some other wirable instance.
     code_samples: []
     parameters:
       - name: connected
         type: bool
         default:
-        summary: ''
+        summary: |
+          Whether the instance got connected or disconnected.
       - name: pin
         type: string
         default:
-        summary: ''
+        summary: |
+          The pin on the `Class.AudioChannelMixer` that the `Class.Wire` targets.
       - name: wire
         type: Wire
         default:
-        summary: ''
+        summary: |
+          The `Class.Wire` between the `Class.AudioChannelMixer` and the other instance.
       - name: instance
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The other instance that is or was connected through the `Class.Wire`.
     tags: []
     deprecation_message: ''
     security: None

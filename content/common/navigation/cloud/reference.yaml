@@ -224,12 +224,6 @@ navigation:
             path: /cloud/legacy/avatar/v1
   - title: Localization
     section:
-      - title: Economy
-        type: cloudlegacy
-        ignoreTranslation: true
-        versions:
-          - name: v1
-            path: /cloud/legacy/economy/v1
       - title: Game internationalization v2
         type: cloudlegacy
         ignoreTranslation: true
@@ -276,6 +270,12 @@ navigation:
             path: /cloud/legacy/clientsettings/v1
   - title: Thumbnails
     section:
+      - title: Metrics
+        type: cloudlegacy
+        ignoreTranslation: true
+        versions:
+          - name: v1
+            path: /cloud/legacy/metrics/v1
       - title: Thumbnails
         type: cloudlegacy
         ignoreTranslation: true
@@ -288,12 +288,6 @@ navigation:
         versions:
           - name: v1
             path: /cloud/legacy/thumbnailsresizer/v1
-      - title: Metrics
-        type: cloudlegacy
-        ignoreTranslation: true
-        versions:
-          - name: v1
-            path: /cloud/legacy/metrics/v1
   - title: Universes
     section:
       - title: Badges
@@ -358,6 +352,12 @@ navigation:
         versions:
           - name: v1
             path: /cloud/legacy/contacts/v1
+      - title: Economy
+        type: cloudlegacy
+        ignoreTranslation: true
+        versions:
+          - name: v1
+            path: /cloud/legacy/economy/v1
       - title: Followings v2
         type: cloudlegacy
         ignoreTranslation: true
@@ -400,30 +400,30 @@ navigation:
         versions:
           - name: v1
             path: /cloud/legacy/inventory/v1
-      - title: Presence
-        type: cloudlegacy
-        ignoreTranslation: true
-        versions:
-          - name: v1
-            path: /cloud/legacy/presence/v1
-      - title: Users
-        type: cloudlegacy
-        ignoreTranslation: true
-        versions:
-          - name: v1
-            path: /cloud/legacy/users/v1
       - title: Premium features
         type: cloudlegacy
         ignoreTranslation: true
         versions:
           - name: v1
             path: /cloud/legacy/premiumfeatures/v1
+      - title: Presence
+        type: cloudlegacy
+        ignoreTranslation: true
+        versions:
+          - name: v1
+            path: /cloud/legacy/presence/v1
       - title: Trades
         type: cloudlegacy
         ignoreTranslation: true
         versions:
           - name: v1
             path: /cloud/legacy/trades/v1
+      - title: Users
+        type: cloudlegacy
+        ignoreTranslation: true
+        versions:
+          - name: v1
+            path: /cloud/legacy/users/v1
   - title: Ad configuration
     type: cloudlegacy
     ignoreTranslation: true

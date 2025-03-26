@@ -45,11 +45,11 @@ Place removed from experience |  | &check;
 **Allow place to be copied as a template using Create Place API** changed | &check; | &check;
 **Allow place to be updated using Save Place API** changed | &check; | &check;
 
-### Place edits
+{/* ### Place edits
 
 Event | Shown in Studio | Shown in Creator Hub
 :--- | :---: | :---:
-Script draft committed | &check; |
+Script draft committed | &check; | */}
 
 ### Experience configuration
 
