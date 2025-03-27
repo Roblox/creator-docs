@@ -4,9 +4,9 @@ summary: |
   A list of functions and variables that are native to Luau.
 description: |
   The following is a list of functions and variables that are native to Luau.
-  These functions can be used in a standard installation of both [Luau](https://luau.org) and
-  [Lua 5.1.4](https://www.lua.org/manual/5.1/), though there are some
-  differences in how some of these work on Roblox.
+  These functions can be used in a standard installation of both
+  [Luau](https://luau.org) and [Lua 5.1.4](https://www.lua.org/manual/5.1/),
+  though there are some differences in how some of these work on Roblox.
 code_samples:
 properties:
   - name: _G

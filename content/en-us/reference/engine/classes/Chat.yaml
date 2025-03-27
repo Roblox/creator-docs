@@ -164,8 +164,8 @@ methods:
       RegisterChatCallback binds a function to some chat system event in order
       to affect the behavior of the Luau chat system. The first argument
       determines the event (using the `Enum.ChatCallbackType` enum) to which the
-      second argument, the function, shall be bound. The default Luau chat system
-      uses `Class.Chat:InvokeChatCallback()|InvokeChatCallback` to invoke
+      second argument, the function, shall be bound. The default Luau chat
+      system uses `Class.Chat:InvokeChatCallback()|InvokeChatCallback` to invoke
       registered functions. Attempting to register a server- or client- only
       callback on a peer that isn't a server or client respectively will raise
       an error. The following sections describe in what ways registered
