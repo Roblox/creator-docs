@@ -29,7 +29,7 @@ description: |
   property is set to a new asset ID.
 
   #### Update Limitations
-  
+
   Only a single `Class.EditableImage` can be updated per frame on the display
   side. For example, if you update three `Class.EditableImage` objects which are
   currently being displayed, it will take three frames for all of them to be updated. 
@@ -60,7 +60,7 @@ inherits:
   - Object
 tags:
   - NotCreatable
-deprecation_message: ''
+deprecation_message: ""
 properties:
   - name: EditableImage.Size
     summary: |
@@ -78,7 +78,7 @@ properties:
     tags:
       - ReadOnly
       - NotReplicated
-    deprecation_message: ''
+    deprecation_message: ""
     security:
       read: None
       write: None
@@ -91,16 +91,16 @@ properties:
     writeCapabilities: []
 methods:
   - name: EditableImage:Destroy
-    summary: ''
+    summary: ""
     description: |
       Destroys the contents of the image, immediately reclaiming used memory.
     code_samples: []
     parameters: []
     returns:
       - type: void
-        summary: ''
+        summary: ""
     tags: []
-    deprecation_message: ''
+    deprecation_message: ""
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -145,9 +145,9 @@ methods:
           added image.
     returns:
       - type: void
-        summary: ''
+        summary: ""
     tags: []
-    deprecation_message: ''
+    deprecation_message: ""
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -181,9 +181,9 @@ methods:
           of the added image.
     returns:
       - type: void
-        summary: ''
+        summary: ""
     tags: []
-    deprecation_message: ''
+    deprecation_message: ""
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -235,9 +235,9 @@ methods:
             image.
     returns:
       - type: void
-        summary: ''
+        summary: ""
     tags: []
-    deprecation_message: ''
+    deprecation_message: ""
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -295,9 +295,9 @@ methods:
             (i.e. `Image.Size / 2`).
     returns:
       - type: void
-        summary: ''
+        summary: ""
     tags: []
-    deprecation_message: ''
+    deprecation_message: ""
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -338,9 +338,9 @@ methods:
           added image.
     returns:
       - type: void
-        summary: ''
+        summary: ""
     tags: []
-    deprecation_message: ''
+    deprecation_message: ""
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -383,9 +383,9 @@ methods:
           added image.
     returns:
       - type: void
-        summary: ''
+        summary: ""
     tags: []
-    deprecation_message: ''
+    deprecation_message: ""
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -394,11 +394,7 @@ methods:
     summary: |
       Reads a rectangular region of pixels into a buffer.
     description: |
-      A version of `Class.EditableImage:ReadPixels()|ReadPixels()` that returns
-      a buffer instead of a table. Each number in the buffer is a single byte,
-      while each number in the table is 4 bytes, making
-      `Class.EditableImage:ReadPixelsBuffer()|ReadPixelsBuffer()` more
-      memory-efficient than `Class.EditableImage:ReadPixels()|ReadPixels()`.
+      Reads a rectangular region of pixels from an `Class.EditableImage` and returns it as a buffer. Each number in the buffer is a single byte, with pixels stored in a sequence of four bytes (red, green, blue, and alpha).
 
       Note that this method uses alpha instead of transparency, unlike the
       `Class.EditableImage` drawing methods.
@@ -423,7 +419,7 @@ methods:
           `Size.X * Size.Y * 4` bytes.
     tags:
       - CustomLuaState
-    deprecation_message: ''
+    deprecation_message: ""
     security: None
     thread_safety: Safe
     capabilities: []
@@ -432,11 +428,7 @@ methods:
     summary: |
       Writes a rectangular region of pixels into the image.
     description: |
-      A version of `Class.EditableImage:WritePixels()|WritePixels()` that takes
-      a buffer instead of a table. Each number in the buffer is a single byte,
-      while each number in the table is 4 bytes, making
-      `Class.EditableImage:WritePixelsBuffer()|WritePixelsBuffer()` more
-      memory-efficient than `Class.EditableImage:WritePixels()|WritePixels()`.
+      Writes a rectangular region of pixels to an `Class.EditableImage` from a buffer. Each number in the buffer is a single byte, with pixels stored in a sequence of four bytes (red, green, blue, and alpha).
 
       Note that this method uses alpha instead of transparency, unlike the
       `Class.EditableImage` drawing methods.
@@ -462,10 +454,10 @@ methods:
           `Size.X * Size.Y * 4` bytes.
     returns:
       - type: void
-        summary: ''
+        summary: ""
     tags:
       - CustomLuaState
-    deprecation_message: ''
+    deprecation_message: ""
     security: None
     thread_safety: Unsafe
     capabilities: []
