@@ -98,8 +98,8 @@ methods:
     description: |
       Uploads a new asset to Roblox from the given object.
 
-      Currently, this method can only be used in locally loaded plugins and uploads
-      assets without prompting first.
+      Currently, this method can only be used in locally loaded plugins and
+      uploads assets without prompting first.
     code_samples:
       - AssetService-CreateAssetAsync
     parameters:
@@ -156,8 +156,8 @@ methods:
     description: |
       Uploads a new version for an existing asset from the given object.
 
-      Currently, this method can only be used in locally loaded plugins and uploads
-      assets without prompting first.
+      Currently, this method can only be used in locally loaded plugins and
+      uploads assets without prompting first.
     code_samples:
       - AssetService-CreateAssetVersionAsync
     parameters:

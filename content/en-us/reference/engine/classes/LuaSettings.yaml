@@ -5,8 +5,8 @@ memory_category: Instances
 summary: ''
 description: |
   The LuaSettings allows you to change certain properties, in regards to how
-  Roblox handles Luau, its dialect of Lua. It is labeled as **Lua** in the Roblox Studio Settings
-  menu.
+  Roblox handles Luau, its dialect of Lua. It is labeled as **Lua** in the
+  Roblox Studio Settings menu.
 code_samples:
 inherits:
   - Instance

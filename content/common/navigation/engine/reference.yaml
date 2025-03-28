@@ -610,6 +610,16 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/ConeHandleAdornment.yaml
         ignoreTranslation: true
+      - title: ConfigService
+        path: /reference/engine/classes/ConfigService
+        type: engineapi
+        source: /reference/engine/classes/ConfigService.yaml
+        ignoreTranslation: true
+      - title: ConfigSnapshot
+        path: /reference/engine/classes/ConfigSnapshot
+        type: engineapi
+        source: /reference/engine/classes/ConfigSnapshot.yaml
+        ignoreTranslation: true
       - title: Configuration
         path: /reference/engine/classes/Configuration
         type: engineapi
@@ -3772,6 +3782,11 @@ navigation:
         path: /reference/engine/enums/ComputerMovementMode
         type: engineapi
         source: /reference/engine/enums/ComputerMovementMode.yaml
+        ignoreTranslation: true
+      - title: ConfigSnapshotErrorState
+        path: /reference/engine/enums/ConfigSnapshotErrorState
+        type: engineapi
+        source: /reference/engine/enums/ConfigSnapshotErrorState.yaml
         ignoreTranslation: true
       - title: ConnectionError
         path: /reference/engine/enums/ConnectionError

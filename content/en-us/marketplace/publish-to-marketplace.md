@@ -241,7 +241,7 @@ The following location options are available for all items:
   </tr>
   <tr>
     <td>Experience By Place ID (API Only)</td>
-    <td>Users can only purchase the original stock of this item in the experiences associated with the provided Place ID. Only one Place ID per experience is required and creators can update and change Place IDs at any time. <br /> <br />After saving a new Place ID, the experience owner needs to manually [enable the avatar item](../production/monetization/avatar-items.md) for their experience.</td>
+    <td>Users can only purchase the original stock of this item in the experiences associated with the provided Place ID. Only one Place ID per experience is required and creators can update and change Place IDs at any time. <br /> <br />After saving a new Place ID, the experience owner must manually [enable the avatar item](../production/monetization/avatar-items.md) for their experience.</td>
   </tr>
 </tbody>
 </table>

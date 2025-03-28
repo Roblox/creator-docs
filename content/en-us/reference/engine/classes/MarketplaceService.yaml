@@ -241,18 +241,16 @@ methods:
       Prompts a user to purchase an item with the given `assetId`. Does not work
       for USD Creator Store purchases.
     description: |
-      Prompts a user to purchase an item with the given `assetId`. **This does
-      not work for
-      [USD Creator Store](../../../production/sell-on-creator-store.md)
-      purchases**. If prompting a purchase of a
-      [limited](../../../marketplace/marketplace-fees-and-commissions.md#limiteds)
-      item:
+      Prompts a user to purchase an item with the given `assetId`. 
+      - This does not work for [USD Creator Store](../../../production/sell-on-creator-store.md) purchases. 
+      -  If the item has the [Sale Location](../../../marketplace/publish-to-marketplace.md#sale-location) set as `Experience By Place ID (API Only)`, you must call `Class.MarketplaceService:PromptPurchase` from a server script.
+      - If prompting a purchase of a [limited](../../../marketplace/marketplace-fees-and-commissions.md#limiteds) item:
+        - (Recommended) Server requests prompt original copies until they run out,
+          regardless of the price. Once original copies run out, resale copies are
+          prompted.
+        - Client requests prompt from the lowest resale price even if original
+          copies are available.
 
-      - (Recommended) Server requests prompt original copies until they run out,
-        regardless of the price. Once original copies run out, resale copies are
-        prompted.
-      - Client requests prompt from the lowest resale price even if original
-        copies are available.
     code_samples:
       - MarketplaceService-PromptPurchase1
       - market

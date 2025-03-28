@@ -1687,6 +1687,28 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: Player:OverrideStreamingRadii
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: minRadius
+        type: int
+        default:
+        summary: ''
+      - name: targetRadius
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Player:RemoveReplicationFocus
     summary: ''
     description: ''
