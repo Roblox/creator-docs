@@ -61,7 +61,7 @@ inherits:
   - Object
 tags:
   - NotCreatable
-deprecation_message: ""
+deprecation_message: ''
 properties:
   - name: EditableImage.Size
     summary: |
@@ -79,7 +79,7 @@ properties:
     tags:
       - ReadOnly
       - NotReplicated
-    deprecation_message: ""
+    deprecation_message: ''
     security:
       read: None
       write: None
@@ -92,16 +92,16 @@ properties:
     writeCapabilities: []
 methods:
   - name: EditableImage:Destroy
-    summary: ""
+    summary: ''
     description: |
       Destroys the contents of the image, immediately reclaiming used memory.
     code_samples: []
     parameters: []
     returns:
       - type: void
-        summary: ""
+        summary: ''
     tags: []
-    deprecation_message: ""
+    deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -146,9 +146,9 @@ methods:
           added image.
     returns:
       - type: void
-        summary: ""
+        summary: ''
     tags: []
-    deprecation_message: ""
+    deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -182,9 +182,9 @@ methods:
           of the added image.
     returns:
       - type: void
-        summary: ""
+        summary: ''
     tags: []
-    deprecation_message: ""
+    deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -236,9 +236,9 @@ methods:
             image.
     returns:
       - type: void
-        summary: ""
+        summary: ''
     tags: []
-    deprecation_message: ""
+    deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -296,9 +296,9 @@ methods:
             (i.e. `Image.Size / 2`).
     returns:
       - type: void
-        summary: ""
+        summary: ''
     tags: []
-    deprecation_message: ""
+    deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -339,9 +339,9 @@ methods:
           added image.
     returns:
       - type: void
-        summary: ""
+        summary: ''
     tags: []
-    deprecation_message: ""
+    deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -384,9 +384,9 @@ methods:
           added image.
     returns:
       - type: void
-        summary: ""
+        summary: ''
     tags: []
-    deprecation_message: ""
+    deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -420,7 +420,7 @@ methods:
           `Size.X * Size.Y * 4` bytes.
     tags:
       - CustomLuaState
-    deprecation_message: ""
+    deprecation_message: ''
     security: None
     thread_safety: Safe
     capabilities: []
@@ -455,10 +455,10 @@ methods:
           `Size.X * Size.Y * 4` bytes.
     returns:
       - type: void
-        summary: ""
+        summary: ''
     tags:
       - CustomLuaState
-    deprecation_message: ""
+    deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
