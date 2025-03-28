@@ -395,11 +395,9 @@ methods:
     summary: |
       Reads a rectangular region of pixels into a buffer.
     description: |
-      A version of `Class.EditableImage:ReadPixels()|ReadPixels()` that returns
-      a buffer instead of a table. Each number in the buffer is a single byte,
-      while each number in the table is 4 bytes, making
-      `Class.EditableImage:ReadPixelsBuffer()|ReadPixelsBuffer()` more
-      memory-efficient than `Class.EditableImage:ReadPixels()|ReadPixels()`.
+      Reads a rectangular region of pixels from an `Class.EditableImage` and
+      returns it as a buffer. Each number in the buffer is a single byte, with pixels
+      stored in a sequence of four bytes (red, green, blue, and alpha).
 
       Note that this method uses alpha instead of transparency, unlike the
       `Class.EditableImage` drawing methods.
@@ -433,11 +431,9 @@ methods:
     summary: |
       Writes a rectangular region of pixels into the image.
     description: |
-      A version of `Class.EditableImage:WritePixels()|WritePixels()` that takes
-      a buffer instead of a table. Each number in the buffer is a single byte,
-      while each number in the table is 4 bytes, making
-      `Class.EditableImage:WritePixelsBuffer()|WritePixelsBuffer()` more
-      memory-efficient than `Class.EditableImage:WritePixels()|WritePixels()`.
+      Writes a rectangular region of pixels to an `Class.EditableImage` from a
+      buffer. Each number in the buffer is a single byte, with pixels stored in a
+      sequence of four bytes (red, green, blue, and alpha).
 
       Note that this method uses alpha instead of transparency, unlike the
       `Class.EditableImage` drawing methods.
