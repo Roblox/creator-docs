@@ -85,7 +85,7 @@ For the part, the script will change its Color property to a new Color3, a data 
 
    Your code should look similar to the code below.
 
-   ```lua title='Updates the color of PracticePart'
+   ```lua title="Updates the color of PracticePart"
    -- Changes the color of a part
    workspace.PracticePart.Color = Color3.fromRGB(255, 230, 50)
    ```

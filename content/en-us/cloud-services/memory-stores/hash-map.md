@@ -15,7 +15,7 @@ Otherwise, hash maps use the same [API request](../../cloud-services/memory-stor
 
 To get a hash map, call `Class.MemoryStoreService:GetHashMap()` with a name for the hash map. The name is global within the experience, so you can access the same hash map on any script using this name.
 
-```lua title='Getting a Hash Map'
+```lua title="Getting a Hash Map"
 local MemoryStoreService = game:GetService("MemoryStoreService")
 
 local hashMap = MemoryStoreService:GetHashMap("HashMap1")
@@ -68,7 +68,7 @@ To add a new key or overwrite the value of a key in the hash map, call `Class.Me
 Under the EU General Data Protection Regulation (GDPR), if your memory stores have user data subject to the [right to be forgotten](https://gdpr.eu/right-to-be-forgotten/) you must remove the data within 30 days, even if you set your memory store key's expiration up to 45 days.
 </Alert>
 
-```lua title='Adding Data to a Hash Map'
+```lua title="Adding Data to a Hash Map"
 local MemoryStoreService = game:GetService("MemoryStoreService")
 
 local hashMap = MemoryStoreService:GetHashMap("HashMap1")
@@ -89,7 +89,7 @@ You can either get a value associated with a specific key or get multiple key-va
 
 To get a value associated with one key from the hash map, call `Class.MemoryStoreHashMap:GetAsync()` with the key **name**.
 
-```lua title='Getting a Particular Key from a Hash Map'
+```lua title="Getting a Particular Key from a Hash Map"
 local MemoryStoreService = game:GetService("MemoryStoreService")
 
 local hashMap = MemoryStoreService:GetHashMap("HashMap1")
@@ -116,7 +116,7 @@ end
 
 To get all the key-value pairs from the hash map as a single operation, call `Class.MemoryStoreHashMap:ListItemsAsync()` with the desired page size. This function lists all existing keys in a paginated manner. For example, the following code sample retrieves up to 32 items from the hash map.
 
-```lua title='Listing items in a Hash Map'
+```lua title="Listing items in a Hash Map"
 local MemoryStoreService = game:GetService("MemoryStoreService")
 
 local hashMap = MemoryStoreService:GetHashMap("HashMap1")
@@ -153,7 +153,7 @@ For most experiences, multiple servers can update the same key concurrently and 
 
 For example, the following code sample updates the resource count of a resource in a shared inventory. `Class.MemoryStoreHashMap:UpdateAsync()|UpdateAsync()` ensures that all player contributions will make their way into this shared inventory, even if these contributions are made simultaneously. In this function, it also enforces a max resource count of 500.
 
-```lua title='Updating Resource Count for a Resource in a Shared Inventory'
+```lua title="Updating Resource Count for a Resource in a Shared Inventory"
 local MemoryStoreService = game:GetService("MemoryStoreService")
 
 local hashMap = MemoryStoreService:GetHashMap("ResourceInventory")
@@ -189,7 +189,7 @@ You can use `Class.MemoryStoreHashMap:RemoveAsync()` for both removing one key f
 
 To remove a key from the hash map, call `Class.MemoryStoreHashMap:RemoveAsync()` with a key **name**.
 
-```lua title='Remove a Key from a Hash Map'
+```lua title="Remove a Key from a Hash Map"
 local MemoryStoreService = game:GetService("MemoryStoreService")
 
 local hashMap = MemoryStoreService:GetHashMap("HashMap1")
@@ -213,7 +213,7 @@ end
 
 To delete all data in a hash map, list all your items with `Class.MemoryStoreHashMap:ListItemsAsync()`, then remove them with `Class.MemoryStoreHashMap:RemoveAsync()`.
 
-```lua title='Delete all data in a Hash Map'
+```lua title="Delete all data in a Hash Map"
 local MemoryStoreService = game:GetService("MemoryStoreService")
 
 local hashMap = MemoryStoreService:GetHashMap("HashMap1")

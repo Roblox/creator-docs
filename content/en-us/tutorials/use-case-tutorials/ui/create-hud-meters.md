@@ -322,7 +322,7 @@ To disable the default health meter, you'll use a **client script** (`Class.Loca
 
    Paste the following code inside the **HideDefaultHealthMeter** script:
 
-		```lua title='HideDefaultHealthMeter'
+		```lua title="HideDefaultHealthMeter"
 		local StarterGui = game:GetService("StarterGui")
 
 		-- Hide default health meter
@@ -371,7 +371,7 @@ All default Roblox character models contain a `Class.Humanoid` class which provi
 
 3. In the editor window for the **UpdateCustomMeter** script, paste the following code:
 
-		```lua title='UpdateCustomMeter'
+		```lua title="UpdateCustomMeter"
 		local Players = game:GetService("Players")
 
 		-- Reference to local player, character, and humanoid
@@ -490,7 +490,7 @@ To add an extra level of polish to the custom meter, you can animate health chan
 
 2. Select all lines (<kbd>Ctrl</kbd><kbd>A</kbd> or <kbd>⌘</kbd><kbd>A</kbd>) and then paste over them (<kbd>Ctrl</kbd><kbd>V</kbd> or <kbd>⌘</kbd><kbd>V</kbd>) with the following code:
 
-		```lua title='UpdateCustomMeter'
+		```lua title="UpdateCustomMeter"
 		local Players = game:GetService("Players")
 		local TweenService = game:GetService("TweenService")
 
@@ -597,7 +597,7 @@ The default health meter system includes a brief, subtle red tint on the screen 
 
 2. Select all lines and paste over them with the following code:
 
-		```lua title='UpdateCustomMeter'
+		```lua title="UpdateCustomMeter"
 		local Workspace = game:GetService("Workspace")
 		local Players = game:GetService("Players")
 		local TweenService = game:GetService("TweenService")

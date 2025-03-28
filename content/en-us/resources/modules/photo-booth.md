@@ -61,7 +61,7 @@ The module is preconfigured to work for most use cases, but it can be easily cus
 
 1. Paste the following code into the new script.
 
-   ```lua title='LocalScript - ConfigurePhotoBooth' highlight='5-7'
+   ```lua title="LocalScript - ConfigurePhotoBooth" highlight="5-7"
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
    local PhotoBooth = require(ReplicatedStorage:WaitForChild("PhotoBooth"))
@@ -77,7 +77,7 @@ The module is preconfigured to work for most use cases, but it can be easily cus
 
 Every time the photo booth displays a new screen to a local client, a corresponding event is fired. These events can be connected in a `Class.LocalScript` so that you can respond with your own custom logic.
 
-```lua title='LocalScript' highlight='5-7, 9-11, 13-15'
+```lua title="LocalScript" highlight="5-7, 9-11, 13-15"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local PhotoBooth = require(ReplicatedStorage:WaitForChild("PhotoBooth"))
@@ -99,7 +99,7 @@ end)
 
 By default, the photo booth hides all `Class.ScreenGui|ScreenGuis` and `Class.CoreGui|CoreGuis` when a photo is staged. If you want to override this auto-hiding behavior and programmatically decide which GUIs should remain visible, include the [hideOtherGuis](#hideotherguis) and [showOtherGuis](#showotherguis) callbacks and respond with your own custom logic.
 
-```lua title='LocalScript' highlight='17, 26, 39'
+```lua title="LocalScript" highlight="17, 26, 39"
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local StarterGui = game:GetService("StarterGui")
@@ -279,7 +279,7 @@ Overrides default configuration options through the following keys/values in the
 </TabItem>
 </Tabs>
 
-```lua title='LocalScript - ConfigurePhotoBooth'
+```lua title="LocalScript - ConfigurePhotoBooth"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local PhotoBooth = require(ReplicatedStorage:WaitForChild("PhotoBooth"))
@@ -300,7 +300,7 @@ setBackgrounds(backgrounds: `Library.table`)
 
 Overrides the default backgrounds provided by the photo booth. Background images should be at 16:9 aspect ratio (1024&times;768) for an optimal experience and their asset IDs should be included in the backgrounds array. 1–4&nbsp;(inclusive) backgrounds can be provided.
 
-```lua title='LocalScript' highlight='5-8'
+```lua title="LocalScript" highlight="5-8"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local PhotoBooth = require(ReplicatedStorage:WaitForChild("PhotoBooth"))
@@ -317,7 +317,7 @@ PhotoBooth.setBackgrounds({
 
 Fires when the countdown starts. This event can only be connected in a `Class.LocalScript`.
 
-```lua title='LocalScript' hightlight='5-7'
+```lua title="LocalScript' hightlight='5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local PhotoBooth = require(ReplicatedStorage:WaitForChild("PhotoBooth"))
@@ -331,7 +331,7 @@ end)
 
 Fires when the printout is shown to the user. This event can only be connected in a `Class.LocalScript`.
 
-```lua title='LocalScript' hightlight='5-7'
+```lua title="LocalScript' hightlight='5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local PhotoBooth = require(ReplicatedStorage:WaitForChild("PhotoBooth"))
@@ -345,7 +345,7 @@ end)
 
 Fires when the printout is closed and the camera button is showing again. This event can only be connected in a `Class.LocalScript`.
 
-```lua title='LocalScript' hightlight='5-7'
+```lua title="LocalScript' hightlight='5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local PhotoBooth = require(ReplicatedStorage:WaitForChild("PhotoBooth"))

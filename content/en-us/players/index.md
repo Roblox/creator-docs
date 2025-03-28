@@ -55,7 +55,7 @@ Notice that the event is called `Class.Player.PlayerRemoving`, not `Class.Player
 
 To save a user's data when they leave an experience, use the `Class.Players.PlayerRemoving` event in a `Class.Script`. The following example `Class.Script` listens to the event and attempts to save a user's data using their user ID as the data store key.
 
-```lua title='Script in ServerScriptService'
+```lua title="Script in ServerScriptService"
 local DataStoreService = game:GetService("DataStoreService")
 local playerDataStore = DataStoreService:GetDataStore("PlayerData")
 
@@ -92,7 +92,7 @@ When the player's `Class.Humanoid` dies, its body parts fall to the ground and t
 
 You can use the `Class.Humanoid.Died` event to handle scoring for a kill or create a custom ragdoll model. The following `Class.Script` connects to `Class.Player.CharacterAdded` to retrieve each user's character model, then connects to the character's `Class.Humanoid` object. When the humanoid's `Class.Humanoid.Died` event fires, the script increments the number of times the user's humanoid has died and outputs that number.
 
-```lua title='Script in ServerScriptService'
+```lua title="Script in ServerScriptService"
 game:GetService("Players").PlayerAdded:Connect(function(player)
 	local deaths = 0
 	player.CharacterAdded:Connect(function(character)

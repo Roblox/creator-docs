@@ -230,7 +230,7 @@ The content folder's location depends on the user's operating system:
 	</tbody>
 </table>
 
-```lua title='Apply Avatar Head Shot Thumbnail'
+```lua title="Apply Avatar Head Shot Thumbnail"
 local Players = game:GetService("Players")
 
 local player = Players.LocalPlayer

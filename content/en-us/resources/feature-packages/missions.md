@@ -35,7 +35,7 @@ To get the packages from your inventory into your experience:
 
 	<Grid item container xs={12} sm={6} direction='row'>
 	<Grid item container direction='column'>
-	<BrowseSampleCard href='https://create.roblox.com/store/asset/94918533221001' description='The Core Feature Package offers shared DataStore table logic for all feature packages.' title='Core Feature Package' assetId={94918533221001}  />
+	<BrowseSampleCard href='https://create.roblox.com/store/asset/94918533221001' description='The Core feature package offers shared data store logic for all feature packages.' title='Core Feature Package' assetId={94918533221001}  />
 	</Grid>
 	</Grid>
 

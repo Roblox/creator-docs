@@ -101,7 +101,7 @@ The module is preconfigured to work for most use cases, but it can be easily cus
 1. In **StarterPlayerScripts**, create a new `Class.LocalScript` and rename it to **ConfigureScavengerHunt**.
 1. Paste the following code into the new script.
 
-   ```lua title='LocalScript - ConfigureScavengerHunt' highlight='5-9'
+   ```lua title="LocalScript - ConfigureScavengerHunt" highlight="5-9"
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
    local ScavengerHunt = require(ReplicatedStorage:WaitForChild("ScavengerHunt"))
@@ -119,7 +119,7 @@ Every time a player collects a token or enters a region, the [collected](#collec
 
 Similarly, when a player collects **all** tokens or enters **all** tagged regions, the [allCollected](#allcollected) event fires and the connected function receives the associated `Class.Player`. This function is only fired once per player and it can be used to reward that player with a [badge](../../production/publishing/badges.md), access to a new area, [in-experience currency](../../production/monetization/developer-products.md), etc.
 
-```lua title='Script' highlight='5-7, 9-11'
+```lua title="Script" highlight="5-7, 9-11"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local ScavengerHunt = require(ReplicatedStorage:WaitForChild("ScavengerHunt"))
@@ -139,7 +139,7 @@ This module exposes several options to customize its default GUI, but you can op
 
 When `useCustomModals` is set to `true` in the [configureClient](#configureclient) function, the [showInfoModal](#showinfomodal) event fires every time the player activates the token tracker. Similarly, the [showCompleteModal](#showcompletemodal) event fires when the player has collected everything in the scavenger hunt. Both of these events can be listened to in a `Class.LocalScript`.
 
-```lua title='LocalScript' highlight='6-10, 12-16'
+```lua title="LocalScript" highlight="6-10, 12-16"
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
@@ -166,7 +166,7 @@ When using custom modals, be sure to provide a way for players to close/hide the
 
 By default, the scavenger hunt hides all `Class.ScreenGui|ScreenGuis` and `Class.CoreGui|CoreGuis` (except for the player list) when the info modal or completion modal appears. If you want to override this auto-hiding behavior and programmatically decide which GUIs should remain visible, include the [hideOtherGuis](#hideotherguis) and [showOtherGuis](#showotherguis) callbacks and respond with your own custom logic.
 
-```lua title='LocalScript' highlight='24, 37'
+```lua title="LocalScript" highlight="24, 37"
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local StarterGui = game:GetService("StarterGui")
@@ -459,7 +459,7 @@ Overrides default client-side configuration options through the following keys/v
 </TabItem>
 </Tabs>
 
-```lua title='LocalScript'
+```lua title="LocalScript"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local ScavengerHunt = require(ReplicatedStorage:WaitForChild("ScavengerHunt"))
@@ -512,7 +512,7 @@ Overrides default server-side configuration options through the following keys/v
 </tbody>
 </table>
 
-```lua title='Script' highlight='5-7'
+```lua title="Script" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local ScavengerHunt = require(ReplicatedStorage:WaitForChild("ScavengerHunt"))
@@ -530,7 +530,7 @@ disable()
 
 Hides all UI for the scavenger hunt, disconnects all input event listeners, and prevents players from collecting tokens or interacting with regions. This function can only be called from a `Class.Script`.
 
-```lua title='Script' highlight='5'
+```lua title="Script" highlight="5"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local ScavengerHunt = require(ReplicatedStorage:WaitForChild("ScavengerHunt"))
@@ -546,7 +546,7 @@ enable()
 
 Shows all UI for the scavenger hunt, connects all input event listeners, and allows players to collect tokens and interact with regions. This function can only be called from a `Class.Script`.
 
-```lua title='Script' highlight='5'
+```lua title="Script" highlight="5"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local ScavengerHunt = require(ReplicatedStorage:WaitForChild("ScavengerHunt"))
@@ -582,7 +582,7 @@ Fires when a player collides with a token or enters a region. The connected func
 </tbody>
 </table>
 
-```lua title='Script' highlight='5-7'
+```lua title="Script" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local ScavengerHunt = require(ReplicatedStorage:WaitForChild("ScavengerHunt"))
@@ -610,7 +610,7 @@ Fires when a player collects all tokens or enters all regions in the scavenger h
 </tbody>
 </table>
 
-```lua title='Script' highlight='5-7'
+```lua title="Script" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local ScavengerHunt = require(ReplicatedStorage:WaitForChild("ScavengerHunt"))
@@ -624,7 +624,7 @@ end)
 
 Fires when the player clicks on the token tracker when the `useCustomModals` [configuration](#configureclient) option is set to true. This event can only be connected in a `Class.LocalScript`.
 
-```lua title='LocalScript' highlight='6-9'
+```lua title="LocalScript" highlight="6-9"
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
@@ -640,7 +640,7 @@ end)
 
 Fires when the player clicks on the token tracker when the `useCustomModals` [configuration](#configureclient) option is set to `true` and the player has collected all tokens in the scavenger hunt. This event can only be connected in a `Class.LocalScript`.
 
-```lua title='LocalScript' highlight='6-9'
+```lua title="LocalScript" highlight="6-9"
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 

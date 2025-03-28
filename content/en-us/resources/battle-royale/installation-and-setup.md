@@ -114,7 +114,7 @@ Each place must be cross-associated so that players can teleport from the lobby 
 
 4. Locate the `_places` table and paste the copied ID from step #1 as the value of the `lobby` key.
 
-   ```lua title='Lobby-MainConfiguration'
+   ```lua title="Lobby-MainConfiguration"
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
    local RunService = game:GetService("RunService")
    local Players = game:GetService("Players")

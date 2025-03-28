@@ -37,7 +37,7 @@ Though putting scripts under actors grants them the capability for parallel exec
 
 Alternatively, you can use `Datatype.RBXScriptSignal:ConnectParallel()` method when you want to schedule a signal callback to immediately run your code in parallel upon triggering. You don't need to call `Library.task.desynchronize()` inside the signal callback.
 
-```lua title='Desynchronize a Thread'
+```lua title="Desynchronize a Thread"
 local RunService = game:GetService("RunService")
 
 RunService.Heartbeat:ConnectParallel(function()
@@ -330,4 +330,4 @@ To apply the maximum benefits of parallel programming, refer to the following be
 
    <img src="../assets/scripting/scripts/FewerVsMoreActorsDark.png" width="100%" alt="Demonstration of how using more actors balances the load across cores" />
 
-   This doesn't mean you should use as many `Class.Actor|Actors` as possible. You should still divide code into `Class.Actor|Actors` based on logic units rather than breaking code with connected logic to different `Class.Actor|Actors`. For example, if you want to enable [raycasting validation](#server-side-raycasting-validation) in parallel, it's reasonable to use 64 `Class.Actor|Actors` and more instead of just 4, even if you're targeting 4-core systems. This is valuable for scalability of the system and allows it to distribute the work based on the capability of the underlying hardware. However, you also shouldn't use too many `Class.Actor|Actors`, which are hard to maintain.
+  This doesn't mean you should use as many `Class.Actor|Actors` as possible. You should still divide code into `Class.Actor|Actors` based on logic units rather than breaking code with connected logic to different `Class.Actor|Actors`. For example, if you want to enable [raycasting validation](#server-side-raycasting-validation) in parallel, it's reasonable to use 64 `Class.Actor|Actors` and more instead of just 4, even if you're targeting 4-core systems. This is valuable for scalability of the system and allows it to distribute the work based on the capability of the underlying hardware. However, you also shouldn't use too many `Class.Actor|Actors`, which are hard to maintain.

@@ -64,7 +64,7 @@ Simply inserting the **SocialInteractions** module will enable both the **body o
 
 1. Paste the following code into the new script, using the [configure](#configure) function to customize the module's behavior.
 
-   ```lua title='LocalScript' highlight='6-9'
+   ```lua title="LocalScript" highlight="6-9"
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
    local SocialInteractions = require(ReplicatedStorage:WaitForChild("SocialInteractions"))
@@ -177,7 +177,7 @@ Also note that trigger words are **case-insensitive**, so typing `hey` is the sa
 
 The list of trigger words that activate each animation is configurable, and additional animations can be added via the [setTriggerWordsForChatAnimation](#settriggerwordsforchatanimation) function. For example, the following `Class.LocalScript` links the [Tilt](https://www.roblox.com/catalog/3360692915/Tilt) animation with the string pattern of `cra+zy` to support trigger words like `crazy` and `craaaaaazy`. It also registers an additional string pattern of `coo+l` for the [Applaud](https://www.roblox.com/catalog/5915779043/Applaud) animation to support words like `cool` and `coooool`.
 
-```lua title='LocalScript' highlight='6, 9'
+```lua title="LocalScript" highlight="6, 9"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local SocialInteractions = require(ReplicatedStorage:WaitForChild("SocialInteractions"))
@@ -233,7 +233,7 @@ Overrides default configuration options through the following keys/values in the
 </tbody>
 </table>
 
-```lua title='LocalScript' highlight='6-9'
+```lua title="LocalScript" highlight="6-9"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local SocialInteractions = require(ReplicatedStorage:WaitForChild("SocialInteractions"))
@@ -255,7 +255,7 @@ Registers a new animation in the chat animation feature. Typing any word that ma
 
 Note that trigger words are **case-insensitive** to players, so a pattern of `woah` will accept chat phrases of `woah`, `WOAH`, `Woah`, and other variations.
 
-```lua title='LocalScript' highlight='6-9'
+```lua title="LocalScript" highlight="6-9"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local SocialInteractions = require(ReplicatedStorage:WaitForChild("SocialInteractions"))
@@ -291,7 +291,7 @@ Fires when a chat animation plays. The connected function receives the animation
 </tbody>
 </table>
 
-```lua title='LocalScript' highlight='5-7'
+```lua title="LocalScript" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local SocialInteractions = require(ReplicatedStorage:WaitForChild("SocialInteractions"))

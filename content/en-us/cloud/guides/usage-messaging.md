@@ -21,11 +21,11 @@ Currently, the API can only target live experience servers through HTTP.
 
 ## Limits
 
-Limit | Description
---- | ---
-**Rate** | Roblox throttles message requests at `50 + (5 * number_of_players_in_experience)`. For example, an experience with 20 players begins to throttle at 150 message requests per minute.
-**Topic size** | 80 characters
-**Message size** | 1,024 characters (1 KB)
+| Limit            | Description                                                                                                                                                                          |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Rate**         | Roblox throttles message requests at `50 + (5 * number_of_players_in_experience)`. For example, an experience with 20 players begins to throttle at 150 message requests per minute. |
+| **Topic size**   | 80 characters                                                                                                                                                                        |
+| **Message size** | 1,024 characters (1 KB)                                                                                                                                                              |
 
 ## Set up a topic for messaging
 
@@ -72,7 +72,7 @@ After [setting up](#set-up-a-topic-for-messaging) a topic, publish a message to 
 
 3. Add the API key and universe to a `POST` request, as in this example:
 
-   ```bash title='Example Request for Publishing a Message'
+   ```bash title="Example Request for Publishing a Message"
    curl -L -X POST 'https://apis.roblox.com/cloud/v2/universes/{universe}:publishMessage' \
    -H 'x-api-key: {api-key}' \
    -H 'Content-Type: application/json' \

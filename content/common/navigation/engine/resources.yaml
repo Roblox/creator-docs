@@ -9,6 +9,12 @@ navigation:
     path: /resources/feature-packages/bundles
   - title: Missions
     path: /resources/feature-packages/missions
+  - title: Season passes
+    path: /resources/feature-packages/season-passes
+  - title: Engagement rewards
+    path: /resources/feature-packages/engagement-rewards
+  - title: Changelog
+    path: /resources/feature-packages/changelog
   - heading: Developer modules
   - title: Overview
     path: /resources/modules/

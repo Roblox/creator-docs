@@ -140,7 +140,7 @@ The skinned character's mesh positions aren't updated when the Creature animates
 
 1. We placed the following `Class.LocalScript` in **StarterPlayer** → **StarterPlayerScripts**. This essentially runs the VFX update function.
 
-   ```lua title='Local Script'
+   ```lua title="Local Script"
    -- Add this snippet to an existing local script that makes PreSimulation
    -- connections
 
@@ -150,7 +150,7 @@ The skinned character's mesh positions aren't updated when the Creature animates
    RunService.PreSimulation:Connect(vfx.updateVfx)
    ```
 
-   ```lua title='Module Script'
+   ```lua title="Module Script"
    -- This module attached parts to animations so they are updated as the
    -- animation plays. It is a workaround for the current limitations
    -- with Joints and Bones and will not always be necessary.

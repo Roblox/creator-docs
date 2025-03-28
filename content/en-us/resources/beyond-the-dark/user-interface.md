@@ -63,7 +63,7 @@ Building the map inside Studio involved using `Class.Part|Parts` and `Class.Surf
    src="../../assets/resources/beyond-the-dark/user-interface/UITweenModule.png"
    width="320" />
 
-   ```lua title='UITweenModule ModuleScript'
+   ```lua title="UITweenModule ModuleScript"
    local TweenService = game:GetService("TweenService")
    local UITween = {}
 
@@ -191,7 +191,7 @@ Building the map inside Studio involved using `Class.Part|Parts` and `Class.Surf
    return UITween
    ```
 
-   ```lua title='Applying UI Tween to Objects'
+   ```lua title="Applying UI Tween to Objects"
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
    -- Add UITween Module

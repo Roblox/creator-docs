@@ -26,7 +26,7 @@ In the [Explorer](../studio/explorer.md) window, expand the `Class.TextChatServi
 <TabItem label="Scripting">
 From a client script within `Class.StarterPlayerScripts`, enable each component as desired:
 
-```lua title='Client Script'
+```lua title="Client Script"
 local TextChatService = game:GetService("TextChatService")
 
 local ChatWindowConfiguration = TextChatService:FindFirstChildOfClass("ChatWindowConfiguration")
@@ -425,7 +425,7 @@ Sometimes, you might want to show non‑player dialogue in the chat window, such
 
 To deliver a system message to the local player, call `Class.TextChannel:DisplaySystemMessage()|DisplaySystemMessage()` from the default **RBXGeneral** channel with a prefix before the player's display name.
 
-```lua title='Client Script'
+```lua title="Client Script"
 local Players = game:GetService("Players")
 local TextChatService = game:GetService("TextChatService")
 
@@ -589,7 +589,7 @@ Below is a reference of the default system messages that are emitted by the chat
 
 You can also stylize non-player dialogue and add [chat bubbles](../chat/bubble-chat.md) to make it appear like messages are coming from an NPC or object within the 3D world.
 
-```lua title='Client Script'
+```lua title="Client Script"
 local TextChatService = game:GetService("TextChatService")
 local Workspace = game:GetService("Workspace")
 

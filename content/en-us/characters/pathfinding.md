@@ -41,7 +41,7 @@ The direct line-of-sight distance for pathfinding from the start to the finish p
 
 Pathfinding is initiated through `Class.PathfindingService` and its `Class.PathfindingService:CreatePath()|CreatePath()` function.
 
-```lua title='LocalScript' highlight='1, 3'
+```lua title="LocalScript" highlight="1, 3"
 local PathfindingService = game:GetService("PathfindingService")
 
 local path = PathfindingService:CreatePath()
@@ -98,7 +98,7 @@ local path = PathfindingService:CreatePath()
 </tbody>
 </table>
 
-```lua title='LocalScript' highlight='3-10'
+```lua title="LocalScript" highlight="3-10"
 local PathfindingService = game:GetService("PathfindingService")
 
 local path = PathfindingService:CreatePath({
@@ -115,7 +115,7 @@ Note that the agent can climb `Class.TrussPart|TrussParts` during pathfinding as
 
 <img src="../assets/avatar/pathfinding/Path-TrussPart.jpg" width="800" alt="Path going up a climbable TrussPart ladder" />
 
-```lua title='LocalScript - Truss Climbing Path' highlight='6,8'
+```lua title="LocalScript - Truss Climbing Path" highlight="6,8"
 local PathfindingService = game:GetService("PathfindingService")
 
 local path = PathfindingService:CreatePath({
@@ -134,7 +134,7 @@ This section uses the following pathfinding script for the player's character. T
 1. Set the `TEST_DESTINATION` variable to a `Datatype.Vector3` destination in your 3D world that the player character can reach.
 1. Proceed through the following sections to learn about path computation and character movement.
 
-```lua title='LocalScript - Character Pathfinding' highlight='11'
+```lua title="LocalScript - Character Pathfinding" highlight="11"
 local PathfindingService = game:GetService("PathfindingService")
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
@@ -203,7 +203,7 @@ followPath(TEST_DESTINATION)
 
 After you've created a valid path with `Class.PathfindingService:CreatePath()|CreatePath()`, it must be **computed** by calling `Class.Path:ComputeAsync()` with a `Datatype.Vector3` for both the starting point and destination.
 
-```lua title='LocalScript - Character Pathfinding' highlight='5, 21'
+```lua title="LocalScript - Character Pathfinding" highlight="5, 21"
 local PathfindingService = game:GetService("PathfindingService")
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
@@ -236,7 +236,7 @@ end
 
 Once the `Class.Path` is computed, it will contain a series of **waypoints** that trace the path from start to end. These points can be gathered with the `Class.Path:GetWaypoints()` function.
 
-```lua title='LocalScript - Character Pathfinding' highlight='13, 24, 26'
+```lua title="LocalScript - Character Pathfinding" highlight="13, 24, 26"
 local PathfindingService = game:GetService("PathfindingService")
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
@@ -278,7 +278,7 @@ end
 
 Each waypoint consists of both a **position** (`Datatype.Vector3`) and **action** (`Enum.PathWaypointAction|PathWaypointAction`). To move a character containing a `Class.Humanoid`, like a typical Roblox character, the easiest way is to call `Class.Humanoid:MoveTo()` from waypoint to waypoint, using the `Class.Humanoid.MoveToFinished|MoveToFinished` event to detect when the character reaches each waypoint.
 
-```lua title='LocalScript - Character Pathfinding' highlight='40-51, 54-55'
+```lua title="LocalScript - Character Pathfinding" highlight="40-51, 54-55"
 local PathfindingService = game:GetService("PathfindingService")
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
@@ -351,7 +351,7 @@ Many Roblox worlds are dynamic; parts might move or fall and floors may collapse
 Paths may also become blocked somewhere **behind** the agent, such as a pile of rubble falling on a path as the agent runs away, but that doesn't mean the agent should stop moving. The <Typography noWrap>`if blockedWaypointIndex >= nextWaypointIndex`</Typography> check makes sure that the path is re-computed only if the blocked waypoint is **ahead** of the current waypoint.
 </Alert>
 
-```lua title='LocalScript - Character Pathfinding' highlight='16, 29-37'
+```lua title="LocalScript - Character Pathfinding" highlight="16, 29-37"
 local PathfindingService = game:GetService("PathfindingService")
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
@@ -412,7 +412,7 @@ When working with `Class.Terrain` and `Class.BasePart` materials, you can includ
 
 Keys in the `Costs` table should be string names representing `Enum.Material` names, for example `Water` for `Enum.Material.Water`.
 
-```lua title='LocalScript - Character Pathfinding' highlight='6-10'
+```lua title="LocalScript - Character Pathfinding" highlight="6-10"
 local PathfindingService = game:GetService("PathfindingService")
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
@@ -443,7 +443,7 @@ In some cases, [material preference](#set-material-costs) is not enough. For exa
 
 1. Include a `Costs` table within `Class.PathfindingService:CreatePath()|CreatePath()` containing a matching key and associated numeric value. A modifier can be defined as non-traversable by setting its value to `Library.math.huge`.
 
-   ```lua title='LocalScript - Character Pathfinding' highlight='6-8'
+   ```lua title="LocalScript - Character Pathfinding" highlight="6-8"
    local PathfindingService = game:GetService("PathfindingService")
    local Players = game:GetService("Players")
    local RunService = game:GetService("RunService")
@@ -501,7 +501,7 @@ To create a `Class.PathfindingLink` using this example:
 
 1. Include a `Costs` table within `Class.PathfindingService:CreatePath()|CreatePath()` containing both a `Water` key and a custom key matching the `Class.PathfindingLink.Label|Label` property name. Assign the custom key a lower value than `Water`.
 
-   ```lua title='LocalScript - Character Pathfinding' highlight='6-9'
+   ```lua title="LocalScript - Character Pathfinding" highlight="6-9"
    local PathfindingService = game:GetService("PathfindingService")
    local Players = game:GetService("Players")
    local RunService = game:GetService("RunService")
@@ -517,7 +517,7 @@ To create a `Class.PathfindingLink` using this example:
 
 1. In the event which fires when a waypoint is reached, add a custom check for the `Class.PathfindingLink.Label|Label` modifier name and take a different action than `Class.Humanoid:MoveTo()`&nbsp;&mdash; in this case, calling a function to seat the agent in the boat, move the boat across the water, and continue the agent's path upon arrival at the destination island.
 
-   ```lua title='LocalScript - Character Pathfinding' highlight='52-56, 72'
+   ```lua title="LocalScript - Character Pathfinding" highlight="52-56, 72"
    local PathfindingService = game:GetService("PathfindingService")
    local Players = game:GetService("Players")
    local RunService = game:GetService("RunService")

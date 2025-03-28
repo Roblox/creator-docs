@@ -22,7 +22,7 @@ object, such as typical playable characters, follow this basic pattern:
 For example, the following `Class.LocalScript`, when placed in
 `Class.StarterPlayerScripts`, loads a "kick" animation onto the player's character and plays it. The script also utilizes the `Class.AnimationTrack:GetMarkerReachedSignal()|GetMarkerReachedSignal()` method to detect when a specific [animation event](../animation/events.md) occurs.
 
-```lua title='LocalScript - Play Custom Animation on Player Character'
+```lua title="LocalScript - Play Custom Animation on Player Character"
 local Players = game:GetService("Players")
 
 local player = Players.LocalPlayer
@@ -52,7 +52,7 @@ end)
 
 To play animations on rigs that do **not** contain a `Class.Humanoid`, you must create an `Class.AnimationController` with a child `Class.Animator`. For example, the following `Class.Script` (assumed to be a direct child of the rig) loads a "kick" animation and plays it.
 
-```lua title='Script - Play Custom Animation on Character Rig'
+```lua title="Script - Play Custom Animation on Character Rig"
 local rig = script.Parent
 
 -- Create a new "Animation" instance and assign an animation asset ID
@@ -95,7 +95,7 @@ climbing, swimming, and jumping. You can replace these [default animations](#def
 
 3. In the new script, paste the following code:
 
-   ```lua title='Script - Replace Default Character Animations'
+   ```lua title="Script - Replace Default Character Animations"
    local Players = game:GetService("Players")
 
    local function onCharacterAdded(character)
@@ -129,7 +129,7 @@ climbing, swimming, and jumping. You can replace these [default animations](#def
 
 4. For each line that references a [default character animation](#default-character-animations), uncomment it and paste the replacement ID after `rbxassetid://`. For example, to change the default run animation to the <a href="https://www.roblox.com/catalog/658830056/Ninja-Run" target="_blank" rel="noopener">Ninja&nbsp;Run</a> variant:
 
-   ```lua title='Script - Replace Default Character Animations' highlight='14'
+   ```lua title="Script - Replace Default Character Animations" highlight="14"
    local Players = game:GetService("Players")
 
    local function onCharacterAdded(character)
@@ -174,7 +174,7 @@ setting the animation's `Weight` value under the following formula:
 
 In the following example, `idle.Animation1` will play ⅓ of the time the character is idle, while `idle.Animation2` will play ⅔ of the time.
 
-```lua title='Script - Replace Default Character Animations' highlight='3,4'
+```lua title="Script - Replace Default Character Animations" highlight="3,4"
 	animateScript.idle.Animation1.AnimationId = "rbxassetid://656117400"
 	animateScript.idle.Animation2.AnimationId = "rbxassetid://656118341"
 	animateScript.idle.Animation1.Weight.Value = 5

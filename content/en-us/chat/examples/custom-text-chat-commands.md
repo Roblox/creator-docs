@@ -20,7 +20,7 @@ The following example shows how to create a chat command that allows players to 
 
 4. Insert the following `Class.Script` inside `Class.ServerScriptService` to define a callback for the chat command that scales the character's size:
 
-   ```lua title='Script' highlight='4,6'
+   ```lua title="Script" highlight="4,6"
    local TextChatService = game:GetService("TextChatService")
    local Players = game:GetService("Players")
 

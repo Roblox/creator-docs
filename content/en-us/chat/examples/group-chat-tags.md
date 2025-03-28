@@ -7,7 +7,7 @@ This example demonstrates how to assign chat tags to players based on their memb
 
 First, create a script in ServerScriptStorage, and add the following code to it:
 
-```lua title='Server'
+```lua title="Server"
 local Players = game:GetService("Players")
 
 -- Replace 123456 with the Group ID you want to check for
@@ -32,7 +32,7 @@ Instead, set a player attribute when they join the server. Setting an attribute 
 
 Then create a `LocalScript` in **StartCharacterScripts**, and add the following code to it to display a **\[Fan\]** tag in the chat window:
 
-```lua title='Client'
+```lua title="Client"
 local Players = game:GetService("Players")
 local TextChatService = game:GetService("TextChatService")
 

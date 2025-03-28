@@ -77,7 +77,7 @@ By default, an invite prompt for the player shows a menu of their friends with *
 <Tabs>
 <TabItem label="Multiple friends">
 
-```lua title='LocalScript - Invite Multiple Friends' highlight='7-8'
+```lua title="LocalScript - Invite Multiple Friends" highlight="7-8"
 local SocialService = game:GetService("SocialService")
 local Players = game:GetService("Players")
 
@@ -91,7 +91,7 @@ inviteOptions.PromptMessage = "Ask your friends to join the adventure!"
 </TabItem>
 <TabItem label="Specific friend">
 
-```lua title='LocalScript - Invite Specific Friend' highlight='5,8-10'
+```lua title="LocalScript - Invite Specific Friend" highlight="5,8-10"
 local SocialService = game:GetService("SocialService")
 local Players = game:GetService("Players")
 
@@ -132,7 +132,7 @@ By default, the invite notification that friends receive contains the sender's `
 
 1. In the `Class.ExperienceInviteOptions` object for the invite prompt, paste the asset ID as the value of the `Class.ExperienceInviteOptions.InviteMessageId|InviteMessageId` property.
 
-   ```lua title='LocalScript - Invite Multiple Friends' highlight='7,8'
+   ```lua title="LocalScript - Invite Multiple Friends" highlight="7,8"
    local SocialService = game:GetService("SocialService")
    local Players = game:GetService("Players")
 
@@ -155,7 +155,7 @@ Once prompted, the player will see an on-screen prompt to invite multiple friend
 <Tabs>
 <TabItem label="Multiple Friends">
 
-```lua title='LocalScript - Invite Multiple Friends' highlight='8-10,16-18'
+```lua title="LocalScript - Invite Multiple Friends" highlight="8-10,16-18"
 local SocialService = game:GetService("SocialService")
 local Players = game:GetService("Players")
 
@@ -178,7 +178,7 @@ end
 </TabItem>
 <TabItem label="Specific Friend">
 
-```lua title='LocalScript - Invite Specific Friend' highlight='5,8,9,13-15,21-23'
+```lua title="LocalScript - Invite Specific Friend" highlight="5,8,9,13-15,21-23"
 local SocialService = game:GetService("SocialService")
 local Players = game:GetService("Players")
 
@@ -215,7 +215,7 @@ To further improve in-experience cooperation or to incentivize player invites, y
    <Tabs>
    <TabItem label="Multiple Friends">
 
-   ```lua title='LocalScript - Invite Multiple Friends' highlight='1,7-11,14-15,27-29'
+   ```lua title="LocalScript - Invite Multiple Friends" highlight="1,7-11,14-15,27-29"
    local HttpService = game:GetService("HttpService")
    local SocialService = game:GetService("SocialService")
    local Players = game:GetService("Players")
@@ -250,7 +250,7 @@ To further improve in-experience cooperation or to incentivize player invites, y
    </TabItem>
    <TabItem label="Specific Friend">
 
-   ```lua title='LocalScript - Invite Specific Friend' highlight='1,6,8-12,15-17,29-31'
+   ```lua title="LocalScript - Invite Specific Friend" highlight="1,6,8-12,15-17,29-31"
    local HttpService = game:GetService("HttpService")
    local SocialService = game:GetService("SocialService")
    local Players = game:GetService("Players")
@@ -293,7 +293,7 @@ To further improve in-experience cooperation or to incentivize player invites, y
 
 1. For incoming friends who join via the notification, check for launch data on the server side through `Class.Player:GetJoinData()`. If you encode multiple pieces of data into JSON for the invite prompt, remember to decode it with `Class.HttpService:JSONDecode()|JSONDecode()`.
 
-   ```lua title='Script - Using Invite Launch Data' highlight='1,5-6,8-10'
+   ```lua title="Script - Using Invite Launch Data" highlight="1,5-6,8-10"
    local HttpService = game:GetService("HttpService")
    local Players = game:GetService("Players")
 

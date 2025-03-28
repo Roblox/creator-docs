@@ -74,8 +74,8 @@ To view and edit the anchor point of a selected `Class.GuiObject`:
 
 2. Enter a new `Datatype.Vector2` coordinate and press <kbd>Enter</kbd>.
 
-	 <Alert severity="success">
-	 Studio infers the intended value pair when a single number is entered. For example, entering simply `0.5` will be converted to <Typography noWrap>`0.5, 0.5`</Typography> for a center anchor point.
+    <Alert severity="success">
+    Studio infers the intended value pair when a single number is entered. For example, entering simply `0.5` will be converted to <Typography noWrap>`0.5, 0.5`</Typography> for a center anchor point.
    </Alert>
 
 ### ZIndex
@@ -176,7 +176,7 @@ A reliable approach on both phones and tablets is **relative** positioning of cu
 
 The following code, placed in a client-side script within `Class.StarterPlayerScripts`, fetches the position of the jump button and creates a placeholder [button](../ui/buttons.md) 20 pixels to its left.
 
-```lua title='Client Script - Custom Button Near Jump Button'
+```lua title="Client Script - Custom Button Near Jump Button"
 local Players = game:GetService("Players")
 local UserInputService = game:GetService("UserInputService")
 

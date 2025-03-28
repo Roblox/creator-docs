@@ -42,14 +42,14 @@ To publish an existing place of an experience with [Place Publishing API](../../
 
 1. Add the API Key in the **x-api-key** header of a `POST` request to the API. The following two example requests reference a Roblox XML place file (`.rbxlx`) and a binary place file (`.rbxl`).
 
-   ```bash title='XML Place File Request'
+   ```bash title="XML Place File Request"
    $ curl --verbose --location POST 'https://apis.roblox.com/universes/v1/{universeId}/places/{placeId}/versions?versionType=Published' \
    --header 'x-api-key: <your-api-key>' \
    --header 'Content-Type: application/xml' \
    --data-binary @/home/placefiles/place1.rbxlx
    ```
 
-   ```bash title='Binary Place File Request'
+   ```bash title="Binary Place File Request"
    $ curl --verbose --location POST 'https://apis.roblox.com/universes/v1/{universeId}/places/{placeId}/versions?versionType=Published' \
    --header 'x-api-key: <your-api-key>' \
    --header 'Content-Type: application/octet-stream' \
@@ -60,7 +60,7 @@ To publish an existing place of an experience with [Place Publishing API](../../
 
 1. If you send your request correctly, you receive a success response body with the place version number in the following format:
 
-   ```json title='Example Response Body'
+   ```json title="Example Response Body"
    { "versionNumber": 7 }
    ```
 

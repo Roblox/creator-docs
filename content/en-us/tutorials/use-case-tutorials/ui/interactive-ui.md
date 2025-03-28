@@ -408,7 +408,7 @@ The following stateful object controller module lets you attach behavior to UI o
 
 2. Paste the following code inside the module:
 
-		```lua title='StatefulObjectController'
+		```lua title="StatefulObjectController"
 		local TweenService = game:GetService("TweenService")
 
 		local StatefulObjectController = {}
@@ -501,7 +501,7 @@ An additional module initializes and controls the two volume sliders. It also al
 
 2. Paste the following code inside the module:
 
-		```lua title='SliderController'
+		```lua title="SliderController"
 		local SliderController = {}
 		SliderController.__index = SliderController
 
@@ -601,7 +601,7 @@ With the [settings button](#create-the-settings-button) and [settings menu](#cre
 
 2. Paste the following code inside the script:
 
-		```lua title='SettingsScript'
+		```lua title="SettingsScript"
 		local ReplicatedStorage = game:GetService("ReplicatedStorage")
 		local SoundService = game:GetService("SoundService")
 

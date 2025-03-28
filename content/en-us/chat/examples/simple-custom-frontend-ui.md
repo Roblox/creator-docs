@@ -16,7 +16,7 @@ This example shows how to use the `Class.TextChatService` API to design your own
    3. Create a `LocalScript` and parent it to the `TextBox`.
    4. Add the following code to the `LocalScript`:
 
-      ```lua title='Client'
+      ```lua title="Client"
       --!strict
       local TextChatService = game:GetService("TextChatService")
 
@@ -49,7 +49,7 @@ This example shows how to use the `Class.TextChatService` API to design your own
    4. Create a `LocalScript` and parent it to the `ScrollingFrame`.
    5. Add the following code to the `LocalScript`:
 
-      ```lua title='Client'
+      ```lua title="Client"
       --!strict
       local TextChatService = game:GetService("TextChatService")
 
