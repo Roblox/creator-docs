@@ -5,7 +5,7 @@ description: Example of how to assign chat tags to players based on their member
 
 This example demonstrates how to assign chat tags to players based on their membership of a group. Chat tags are a way to visually identify a player in the chat window and useful for indicating a player's role, status, or group membership.
 
-First, create a script in ServerScriptStorage, and add the following code to it:
+First, create a script in ServerScriptService, and add the following code to it:
 
 ```lua title="Server"
 local Players = game:GetService("Players")
