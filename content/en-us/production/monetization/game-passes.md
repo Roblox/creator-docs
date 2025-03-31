@@ -48,10 +48,9 @@ To create a pass:
 To use scripting, you need a pass ID. To get the pass ID:
 
 1. Go to **Monetization** &rang; **Passes**.
-2. Hover over the pass and click the **&ctdot;** menu.
-3. Click **Copy Asset ID** to copy the ID to your clipboard.
+1. Hover over a pass' thumbnail, click the **&ctdot;** button, and select **Copy Asset ID** from the context menu.
 
-   <img src="../../assets/creator-dashboard/Pass-Copy-Asset-ID.png" width="400" />
+   <img src="../../assets/creator-dashboard/Options-Button-Pass.png" width="200" />
 
 ## Sell a pass
 

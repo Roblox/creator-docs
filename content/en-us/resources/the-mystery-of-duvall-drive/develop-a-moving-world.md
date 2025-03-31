@@ -413,11 +413,7 @@ The false wall was a model group that we would move back the moment players ente
   </figure>
 </GridContainer>
 
-Because `Class.TweenService` is such a general system, all our wall data model had to contain was the same components. For example, the following image is an example of a general door script that calls a sound defined by a "value" below the "Grow_Wall" model.
-
-<img src="../../assets/resources/mystery-of-duvall-drive/developing-a-moving-world/general-door-script.png" width="100%" />
-
-That same script, with some modifications in the following code sample, also triggered audio for the pantry moving. This added a lot to the movement!
+Because `Class.TweenService` is such a general system, all our wall data model had to contain was the same components. For example, a general "Door_Script" script plays a sound defined by a "value" below the "Grow_Wall" model. That same script, with some modifications in the following code sample, also triggered audio for the pantry moving. This added a lot to the movement!
 
 ```lua
 local Players = game:GetService("Players")

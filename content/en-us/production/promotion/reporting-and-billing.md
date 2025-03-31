@@ -28,7 +28,7 @@ Ads Manager provides accurate and transparent reporting through the use of click
 </thead>
 <tbody>
   <tr>
-    <td>Name</td>
+    <td>Campaign</td>
     <td>The name of the ad campaign.</td>
   </tr>
   <tr>
@@ -57,7 +57,7 @@ Ads Manager provides accurate and transparent reporting through the use of click
   </tr>
   <tr>
     <td>Click-through rate (CTR)</td>
-    <td>Percentage calculated by dividing the number of clicks by the number of impressions and multiplying by 100.</td>
+    <td>The percentage calculated by dividing the number of clicks by the number of impressions and multiplying by 100.</td>
   </tr>
   <tr>
     <td>Cost-per-play (CPP)</td>
@@ -69,7 +69,7 @@ Ads Manager provides accurate and transparent reporting through the use of click
   </tr>
   <tr>
     <td>Play rate</td>
-    <td>Percentage calculated by dividing the number of plays by the number of impressions.</td>
+    <td>The percentage calculated by dividing the number of plays by the number of impressions.</td>
   </tr>
   <tr>
     <td>Budget</td>
@@ -86,6 +86,14 @@ Ads Manager provides accurate and transparent reporting through the use of click
   <tr>
     <td>Payment method</td>
     <td>The method used to pay for your advertising campaign, categorized as either card or ad credit.</td>
+  </tr>
+  <tr>
+    <td>7D playtime</td>
+    <td>The total estimated playtime over 7 days from the latest conversion, for players who converted through an ad within the selected date range.</td>
+  </tr>
+  <tr>
+    <td>30D Robux earnings</td>
+    <td>The estimated total Robux earnings over 30 days from the latest conversion, for players who converted through an ad in the selected date range. Excludes subscriptions, engagement payouts, and immersive ads.</td>
   </tr>
 </tbody>
 </table>

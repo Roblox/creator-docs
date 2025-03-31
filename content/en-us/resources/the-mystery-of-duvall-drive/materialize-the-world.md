@@ -198,10 +198,6 @@ Material Variants are also used to create wet and dry versions of our materials.
 
 Creating a Material Variant can be done inside the [Material Manager](../../parts/materials.md#material-manager). As the name suggests, the Material Manager also allows you to manage both default and material variants in one place.
 
-Creating a Material Variant is very straight-forward. Let's start with opening up the Material Manager located under the Model Tab.
-
-<img src="../../assets/resources/mystery-of-duvall-drive/materializing-the-world/material-manager.png" width="70%" />
-
 Once the Material Manager is open you will click the Circle Plus button in the upper left of the window to edit and add a new Variant. When adding a name, it's a good idea to add a suffix of \_MV after your name so you can easily pick out the new material variant from the default materials.
 
 Choose a **Base Material** that most closely relates to your new material. You can think of the Base Material field as the **Physical Properties** of the material, which affects things like friction, density, weight, hit effects, and footstep sounds.

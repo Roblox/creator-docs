@@ -605,7 +605,7 @@ navigation:
         path: /production/promotion/share-links
       - title: Player invite prompts
         path: /production/promotion/invite-prompts
-      - title: Friend invite reward system
+      - title: Friend referral system
         path: /production/promotion/referral-system
       - title: Discover page nominations
         path: /production/promotion/nominate-for-the-discover-page

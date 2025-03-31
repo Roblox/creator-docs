@@ -3,7 +3,7 @@ title: Player invite prompts
 description: Invite prompts are prompts sent to the player of an experience to invite their friends to join them.
 ---
 
-In addition to common [promotion](../../production/promotion/index.md) methods for increasing your player base, you can implement **invite&nbsp;prompts** directly inside your experience, encouraging players to invite their friends and increase co-experience gameplay.
+In addition to common [promotion](../../production/promotion/index.md) methods for increasing your player base, you can implement **invite prompts** directly inside your experience, encouraging players to invite their friends and increase co-experience gameplay.
 
 The invite prompt system features the following:
 
@@ -114,9 +114,6 @@ By default, the invite notification that friends receive contains the sender's `
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. Similar to [badges](../../production/publishing/badges.md), notification strings are tied to a **specific experience**. Locate that experience's thumbnail and click on it.
 1. In the left column, under **Engagement**, click **Notifications**.
-
-   <img src="../../assets/creator-dashboard/Experience-Nav-Engagement-Notifications.png" width="330" />
-
 1. In the center region, click the **Create a Notification String** button.
 1. Fill in an identifier name (only visible to you) and the custom notification text. Note that you must include **\{experienceName\}** as a placeholder to identify the experience's name for invited friends, and you can optionally include the sender's `Class.Player.DisplayName|DisplayName` through the **\{displayName\}** placeholder.
 
@@ -126,10 +123,7 @@ By default, the invite notification that friends receive contains the sender's `
    - <Typography variant="subtitle2" color="primary">\{displayName\} just cleared the sixth stage of \{experienceName\}. Can you?</Typography>
 
 1. When ready, click the **Create Notification String** button.
-1. On the notifications page, click the **&ctdot;** button for the notification and select **Copy Asset ID**.
-
-   <img src="../../assets/creator-dashboard/Notifications-Invite-Prompt-Copy-Asset-ID.png" width="780" />
-
+1. On the notifications page, in the table of notifications, click the **&ctdot;** button in the **Actions** column and select **Copy Asset ID**.
 1. In the `Class.ExperienceInviteOptions` object for the invite prompt, paste the asset ID as the value of the `Class.ExperienceInviteOptions.InviteMessageId|InviteMessageId` property.
 
    ```lua title="LocalScript - Invite Multiple Friends" highlight="7,8"
@@ -208,7 +202,7 @@ end
 
 ## Include launch data
 
-To further improve in-experience cooperation or to incentivize player invites, you can include **launch&nbsp;data** in an invite prompt, useful for scenarios such as routing invited friends to a coordinate location or personalizing the joining experience for the invitee.
+To further improve in-experience cooperation or to incentivize player invites, you can include **launch data** in an invite prompt, useful for scenarios such as routing invited friends to a coordinate location or personalizing the joining experience for the invitee.
 
 1. When [prompting an invite](#prompt-an-invite), include an `Class.ExperienceInviteOptions` object with relevant data that will be used when the friend joins the experience, for example the sender's `Class.Player.UserId`, the ID of a [badge](../../production/publishing/badges.md) to award to the friend upon joining, or a coordinate location to spawn the friend at. If you need to compile multiple pieces of data, encode the data using `Class.HttpService:JSONEncode()|JSONEncode()`.
 

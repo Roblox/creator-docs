@@ -79,10 +79,8 @@ Roblox pays out earnings on the 25th of the following month from when you insert
 The following requirements take effect from June 1st, 2024.
 </Alert>
 
-While anyone can insert ad units into their experiences, Roblox only serves ads into ad units if the experience or group owner and experience is eligible to serve ads. In Creator Hub, you can see and manage your publisher eligibility status in a new "Eligibility" tab on the immersive ads page.
+While anyone can insert ad units into their experiences, Roblox only serves ads into ad units if the experience or group owner and experience is eligible to serve ads. In Creator Hub, you can see and manage your publisher eligibility status in a new **Eligibility** tab on the immersive ads page.
 
-<img src="../../assets/creator-dashboard/Immersive-Ads-Eligibility.png" width = "80%"/>
-<br />
 Experiences must meet the following criteria to be eligible to be an ad publisher:
 
 - Your account must have **2-factor authentication (2FA)** enabled.
@@ -285,7 +283,7 @@ To insert a portal ad:
 1. Open the Creator Store.
    1. In the menu bar, navigate to the **View** tab.
    1. Select **Toolbox**. The [Toolbox](../../projects/assets/toolbox.md) window displays with the **Creator Store** tab open.
-1. In the **Categories** section, click the **See&nbsp;All** button. All categories display.
+1. In the **Categories** section, click the **See All** button. All categories display.
 
    <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
@@ -361,9 +359,7 @@ By tracking these trends over time, you can make strategic decisions on the numb
 To view Immersive Ad metrics:
 
 1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on the dashboard and select your experience.
-2. Navigate to the **Monetization** tab and select **Immersive Ads**.
-
-   <img src="../../assets/creator-dashboard/Experience-Nav-Monetization-Immersive-Ads.png" width="330" />
+2. Navigate to the **Monetization** tab and select **Ads**.
 
 <Alert severity="info">
    Metrics graphs that report impressions and teleports per ad unit use each ad unit's name in Studio.

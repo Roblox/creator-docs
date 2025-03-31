@@ -100,8 +100,6 @@ To create your own floor geometry:
    1. Set **Rotate** to `90`.
    1. Set **Move** to `5` studs. This allows you to equally position all greybox geometry on or away from each other in 5 stud increments.
 
-   <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/SnapToGrid.jpg" alt="Studio's Model tab with the Snap to Grid settings highlighted." width="60%"/>
-
 1. Using **block** parts, create symmetrical left and right surfaces for the **main floor** of your building. This geometry represents the length of your playable interior, and its symmetry denotes the center of the map.
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/GeneralFloor-1.jpg" alt="An angled top-down view of the main floor greybox geometry highlighted in yellow." width="100%"/>
@@ -130,8 +128,6 @@ To exactly recreate the floor geometry within the sample [Environment Art - Grey
 
    1. Set **Rotate** to `90`.
    1. Set **Move** to `5` studs. This allows you to equally position all greybox geometry on or away from each other in 5 stud increments.
-
-   <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/SnapToGrid.jpg" alt="Studio's Model tab with the Snap to Grid settings highlighted." width="60%"/>
 
 1. Add and configure a **block** part for the left-side surface of the **main floor**. You can use this same process for each step as you create all of the playable areas.
 

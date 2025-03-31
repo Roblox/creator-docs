@@ -31,11 +31,8 @@ With the `Class.Teams` service present, you can create a new team through the fo
 
 You can now select the new `Class.Team` object and, in the **Properties** window, change the team **Name** or assign a unique **TeamColor**. A team's name and color both appear in the experience's player list.
 
-<GridContainer numColumns="2">
-  <img src="../assets/players/teams/Change-Team-Name.png" />
-  <img src="../assets/players/teams/Set-TeamColor.png" />
-</GridContainer>
-
+<img src="../assets/players/teams/Change-Team-Name.png" />
+  
 ## Assign users to teams
 
 By default, Roblox **auto-assigns** new users joining the experience to the team with the fewest members, and you can still use the following steps to assign users to a specific team:
@@ -53,14 +50,8 @@ By default, Roblox **auto-assigns** new users joining the experience to the team
 You can use `Class.SpawnLocation` objects to spawn users of different teams at specific locations when they join or respawn. By default, `Class.SpawnLocation|SpawnLocations` are **neutral** and any user can spawn upon them, so you need to lock each one to the team that can occupy it using the following steps:
 
 1. In the **Model** tab, click the **Spawn** button to insert a `Class.SpawnLocation`.
-
-   <img src="../assets/players/teams/Model-Tab-Spawn.png" width="500" />
-
 2. With the new `Class.SpawnLocation` selected, uncheck the **Neutral** checkbox in the **Properties** window.
-
-3. Set the **TeamColor** property of selected `Class.SpawnLocation` to the **team color** of an existing team that you want to assign to the spawn. For example, if the intended team's `Class.Team.TeamColor` is **Teal**, set the spawn's `Class.SpawnLocation.TeamColor` to the same.
-
-   <img src="../assets/players/teams/Set-TeamColor.png" width="320" />
+3. Set the **TeamColor** property of the selected `Class.SpawnLocation` to the **team color** of an existing team that you want to assign to the spawn. For example, if the intended team's `Class.Team.TeamColor` is **Teal**, set the spawn's `Class.SpawnLocation.TeamColor` to the same.
 
 <Alert severity="warning">
 The `Class.SpawnLocation.TeamColor` property is different from the `Class.SpawnLocation.BrickColor` and `Class.SpawnLocation.Color` properties which represent the visual color of the spawn object and are not related to team functionality.
