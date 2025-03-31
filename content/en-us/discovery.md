@@ -10,64 +10,105 @@ Roblox's [mission](https://devforum.roblox.com/t/discovery-on-roblox-past-presen
 
 On Home, our **Recommended for You** algorithm decides what experiences to show each user in two stages:
 
-<img src="/assets/analytics/discovery/Retrieval-And-Ranking-Diagram.png" alt="Diagram of how all experiences are sorted, ranked, and finally displayed on home page." />
+<img src="./assets/analytics/discovery/Retrieval-And-Ranking-Diagram.png" alt="Diagram of how all experiences are sorted, ranked, and finally displayed on home page." />
+
+Recommended for You is designed to personalize content, connecting users with experiences that foster deep engagement, social interaction, and repeat play.
 
 **Retrieval (stage 1)**: Roblox selects a subset of experiences that each user might enjoy playing based on signals like engagement, retention, monetization, friend plays, similar experiences, and variety.
 
-**Ranking (stage 2)**: Roblox ranks the selected experiences based on 3 main signals:
+**Ranking (stage 2)**: Roblox ranks the selected experiences based on 6 key signals:
 
-1. **Engagement (playtime)** tracks how users engage in your experience. Metrics that contribute to playtime include [session time](./production/analytics/engagement.md#improve-average-session-time), sessions, [retention](./production/analytics/retention.md), and [qualified play through rate](./production/analytics/acquisition.md#improve-acquisition). This is the main signal that we optimize for.
-2. **Monetization (revenue)** tracks how users invest in your experience. Metrics that contribute to revenue include [payer conversion](./production/analytics/monetization.md#improve-payer-conversion-rate) and [average revenue per paying user](./production/analytics/monetization.md#improve-average-revenue-per-paying-user-arppu).
-3. **Ecosystem health** ensures that Roblox continues building a vibrant platform. We want to reward creations that bring new users to Roblox and that creators continue to invest in with updates, events, and more.
+<table>
+<thead>
+  <tr>
+    <th>**Metric**</th>
+    <th>**Definition**</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>**Qualified play through rate (qPTR)**</td>
+    <td>The number of engaging plays divided by the number of impressions from Recommended for You.</td>
+  </tr>
+  <tr>
+    <td>**7 day playtime per user**</td>
+    <td>Total playing time per user in your experience within the last 7 days (maximum of 60 minutes per user, per experience, per day).</td>
+  </tr>
+  <tr>
+    <td>**7 day play days per user**</td>
+    <td>Total unique days users have engaged with your experience over the last 7 days.</td>
+  </tr>
+  <tr>
+    <td>**7 day spend days per user**</td>
+    <td>Total unique days users have spent Robux in your experience over the last 7 days.</td>
+  </tr>
+  <tr>
+    <td>**7 day Robux spent per user**</td>
+    <td>Total Robux spent per user in your experience over the last 7 days.</td>
+  </tr>
+  <tr>
+    <td>**7 day intentional co-play days per user**</td>
+    <td>Frequency of users intentionally playing with friends over the last 7 days (through join, invite, or private server rather than through matchmaking).</td>
+  </tr>
+</tbody>
+</table>
 
-Roblox's recommendation system uses **explore and expand** phases to understand the signals above. For example, you might see a spike in new users from recommendations (explore) after a content update. If that new user cohort has good engagement and monetization, Roblox is more likely to continue to recommend your experience to those user cohorts (expand).
+When all of these signals improve together in an experience, the recommendation algorithm picks it up. Improving your [retention](./production/analytics/retention.md), [engagement](./production/analytics/engagement.md), and [monetization](./production/analytics/monetization.md) directly enhances our recommendation signals, resulting in better Home visibility.
 
-When ranking experiences for recommendations, Roblox only considers engagement, monetization, and ecosystem health signals from **users who join through recommendations**. Users who join from other sources, such as [sponsored ads](./production/promotion/ads-manager.md#sponsored-experiences), can help the system start exploring your experience but don't impact recommendation rankings.
+Roblox's recommendation system uses **explore and expand** phases to understand the 6 key signals. For example, you might see a spike in new users from recommendations (explore) after a content update. If that new user cohort has good engagement and monetization, Roblox is more likely to continue to recommend your experience to those user cohorts (expand).
 
-<img src="/assets/analytics/discovery/Explore-And-Expand-Graph.png" alt="An analytic Plays Per Source graph indicating new and returning users." />
+[Sponsored ads](./production/promotion/ads-manager.md) can amplify the discovery of your experience. By attracting new and relevant users to your experience, ads help the Recommended for You algorithm learn which types of users are more likely to engage with and enjoy your content. To understand how your ad campaigns are influencing organic growth, review your [acquisition analytics](./production/analytics/acquisition.md) to track trends in both paid and organic traffic.
 
-For a detailed overview, please see our [discovery vision post](https://devforum.roblox.com/t/discovery-on-roblox-past-present-and-future-vision/2859111) and [RDC talk](https://www.youtube-nocookie.com/embed/V1uFFUUCLpo).
+<img src="./assets/analytics/discovery/Explore-And-Expand-Graph.png" alt="An analytic Plays Per Source graph indicating new and returning users." />
 
-## How you can get discovered via recommendations
+For a detailed overview, see our [discovery vision post](https://devforum.roblox.com/t/discovery-on-roblox-past-present-and-future-vision/2859111) and [RDC talk](https://www.youtube-nocookie.com/embed/V1uFFUUCLpo).
 
-The best way to get discovered via recommendations is to continue to invest in engagement, monetization, and ecosystem health for your experience:
+## Use Home Recommendations analytics to grow your experience
 
-1. **Engagement (playtime)**: [Session time](./production/analytics/engagement.md#improve-average-session-time), [retention](./production/analytics/retention.md), and [qualified play through rate](./production/analytics/acquisition.md#improve-acquisition)
-2. **Monetization (revenue)**: [Payer conversion](./production/analytics/monetization.md#improve-payer-conversion-rate), [revenue per paying user](./production/analytics/monetization.md#improve-average-revenue-per-paying-user-arppu)
-3. **Ecosystem health**: Continue to invest in regular content and events updates
+The **Home Recommendations** dashboard helps you monitor these recommendation signals. To access it, go to **Analytics** > **Acquisition** on the Creator Hub and select the **Home Recommendations** tab.
 
-On your experience overview page, use the **Daily Benchmarks** section to compare your experience metrics with similar games that your users also play:
+You can use the Home Recommendation dashboard to:
 
-<img src="/assets/analytics/discovery/Daily-Benchmark-Graphs.png" alt="A series of graphs helping compare benchmarks with other experiences." />
+**1. Analyze your Home Recommendation impressions and plays trends.**
 
-Your similar experience benchmarks are updated daily. Roblox does not use these benchmarks as a direct signal in the discovery algorithm. These benchmarks are designed to give you a point of comparison as you work on improving your engagement, monetization, and acquisition.
+For example, if you notice a dip in Home Recommendation impressions starting on March 3rd, you can analyze the corresponding recommendation signal trends.
+
+<img src="./assets/analytics/discovery/Home-Recommendation-Impressions.png" alt="A graph of users with home recommendation impressions." />
+
+**2. Analyze recommendation signal trends for optimization.**
+
+Keep in mind that changes to your recommendation signals usually show up in impression changes a few days later. So, if you noticed that your qualified play-through rate dipped on February 28th, that is likely what led to the impression drop on March 3rd.
+
+<img src="./assets/analytics/discovery/Qualified-Play-Through-Impressions.png" alt="A graph of qualified play through rate impressions." />
+
+It's also important to identify recommendation signals that are below benchmark as areas of opportunity. Benchmarks **do not** directly impact the recommendation algorithm, but are meant to provide you with a point of comparison.
+
+In the following charts, the 7 day playtime and 7 day play days are both below benchmark. In this case, you might want to consider improving your [onboarding funnel](./production/analytics/funnel-events.md) to encourage users to visit your experience more often.
+
+<img src="./assets/analytics/discovery/Below-Benchmark-Charts.png" alt="A graph of 7-day playtime per user and 7-day play days per user impressions." />
+
+**3. Discover other experiences your users also enjoy.**
+
+You can find a list of similar experiences based on relevant benchmarks at the bottom of the Home Recommendations page. This list is meant to show you other experiences your users enjoy.
+
+<img src="./assets/analytics/discovery/Similar-Experiences.png" alt="List of similar experiences on the Home Recommendations page." />
 
 <br />
 <h5>Frequently asked questions</h5>
 <br />
-**What metric should I focus on to get discovered via recommendations?**
+**Do I have to optimize for every recommendation signal in the Recommended for You algorithm?**
 
-You should focus on metrics that are below benchmark in your Daily Benchmark section and related graphs. For example, the experience in the image above is below benchmark on **average session time** and **D1 retention**. To address this, consider focusing on:
+While optimizing for all recommendation signals is beneficial, it's most effective to focus on creating a high-quality, engaging experience. Prioritize core gameplay, user retention, and accurate metadata to improve overall user experience. To improve QPTR, focusing on your [thumbnail personalization](./production/publishing/thumbnails.md#thumbnail-personalization-for-the-home-page) strategy is key. This includes showcasing new content or gameplay, keeping multiple variations active, avoiding overly similar thumbnails, and monitoring QPTR over time, especially after surges in Home recommendations.
 
-1. Tracking and improving your [onboarding funnel](./production/analytics/funnel-events.md).
-2. Optimizing your onboarding funnel will likely improve [session time](./production/analytics/engagement.md#improve-average-session-time) and [retention](./production/analytics/retention.md), which both contribute to your experience's engagement (playtime).
+It's important to note that you may notice a temporary drop in QPTR when your impressions increase, particularly during initial discovery phases. This is a normal occurrence as new users discover your experience, and QPTR should stabilize as traffic patterns normalize.
+
+**Do these recommendation signals favor larger experiences with more players?**
+
+No. These recommendation signals are calculated as averages per user, not total values. This ensures that smaller experiences with highly engaged users are not disadvantaged. We are focused on per user engagement, not total engagement. The Recommended for You algorithm is designed to match users with experiences they are most likely to enjoy. By prioritizing user satisfaction, you'll create experiences that resonate with your audience and foster long-term engagement.
 
 **Why did my daily active users increase or decline?**
 
-If your daily active users increases or declines substantially, consider investigating the following:
-
-View [acquisition analytics](./production/analytics/acquisition.md) to understand where new and returning users are coming from by source, such as recommendations, search, sponsored, or others.
-If plays from recommendations contributed the most to your user change, look for key metric drops in your Daily Benchmarks and related charts, such as qualified play through rate, during the same time period.
-
-New metric change insights are being actively tested on your **Experience Overview** page to make the above easier for you to investigate:
-
-<img src="/assets/analytics/discovery/Experience-Overview-Graph.png" alt="A weekly Daily Active User Change graph indicating a drop in key metrics." />
-<br />
-**How can I attract an initial audience to my new experience?**
-
-If you have a brand new experience, you may not have enough users for recommendations to understand how your engagement and monetization metrics compare with other experiences.
-
-Consider driving new users to your experience with [social media links](./production/promotion/social-media-links.md), [sponsored ads](./production/promotion/ads-manager.md#sponsored-experiences), and other channels so that recommendations can get enough signal. Roblox continues to add recommendations improvements to be better at discovering new experiences.
+If your daily active users increases or declines substantially, consider investigating your [acquisition analytics](./production/analytics/acquisition.md) to understand where new and returning users are coming from by source, such as recommendations, search, sponsored, or others. If plays from recommendations contributed the most to your user change, look at your Home recommendation signal charts to identify major movements.
 
 ## Best practices for discovery
 
@@ -75,7 +116,7 @@ Your content must always adhere to our [Community Standards](https://en.help.rob
 
 - **Be accurate.** Avoid using irrelevant keywords in your metadata and follow the [metadata best practices](./production/publishing/publish-experiences-and-places.md#metadata-best-practices).
 - **Build trust.** You should not rely on promotional monetary rewards to drive engagement. Instead, your metadata should reflect what your experience is about.
-- **Use unique metadata.** Focus on using original imagery and naming that you or your teammates created to help your experience stand out. Avoid publishing content with repetitive titles and images that have been previously published. When using  [thumbnail personalization](./production/publishing/thumbnails.md#thumbnail-personalization-for-the-home-page), make sure all thumbnails accurately reflect your experience.
+- **Use unique metadata.** Focus on using original imagery and naming that you or your teammates created to help your experience stand out. Avoid publishing content with repetitive titles and images that have been previously published. When using [thumbnail personalization](./production/publishing/thumbnails.md#thumbnail-personalization-for-the-home-page), make sure all thumbnails accurately reflect your experience.
 - **Add your own spin to existing trends** in the title, images, description, and in-experience content when you follow trends. Unique updates add value and differentiate your experience from other experiences following the same trend.
 
 ### Issues that limit exposure
