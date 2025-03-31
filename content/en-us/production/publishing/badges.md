@@ -17,9 +17,9 @@ You can create up to 5 badges for free in a 24‑hour period (GMT) for each expe
 To create a badge:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-1. Locate the associated experience, click the **&ctdot;** in the corner of its thumbnail, and select **Create Badge**.
+1. Hover over an experience's thumbnail, click the **&ctdot;** button, and select **Create Badge**.
 
-   <img src="../../assets/creator-dashboard/Experience-Context-Menu-Create-Badge.png" width="420" alt="Create Badge option from Creator Dashboard" />
+   <img src="../../assets/creator-dashboard/Options-Button-Experience-Public.png" width="200" />
 
 1. On the create page, click the **Upload Image** button and then select/confirm the image you want to use as the badge's icon. When creating an image to use for a badge, consider the following:
 
@@ -47,7 +47,7 @@ To create a badge:
    - **Description** — A description of what the player can do to earn the badge.
    - **Badge is Enabled** — Whether or not the badge will be enabled when it is created. Disabled badges are not shown under the **Badges** section of the experience's main page and cannot be earned by players.
 
-1. Click the **Create Badge** button. The new badge displays within the **Engagement**&nbsp;&rarr; **Badges** section on the [Creator Dashboard](https://create.roblox.com/dashboard/creations). If the new badge is enabled, it will also be shown under the **Badges** section of the experience's main page.
+1. Click the **Create Badge** button. The new badge displays within the **Engagement** &rang; **Badges** section on the [Creator Dashboard](https://create.roblox.com/dashboard/creations). If the new badge is enabled, it will also be shown under the **Badges** section of the experience's main page.
 
    <figure>
 	 <img src="../../assets/publishing/badges/Badge-Experience-Page.png" width="780" />
@@ -63,12 +63,9 @@ Common badge scripting workflows include [awarding badges](#award-badges), check
 A badge's ID is its unique identifier. You'll need this ID when implementing workflows such as [awarding the badge](#award-badges) to a player.
 
 1. On the [Creator Dashboard](https://create.roblox.com/dashboard/creations), navigate to the associated experience's **Badges** section under **Engagement**.
+2. Hover over a badge's thumbnail, click the **&ctdot;** button, and select **Copy Asset ID** from the context menu.
 
-   <img src="../../assets/creator-dashboard/Experience-Nav-Engagement-Badges.png" width="330" alt="Badges button indicated for an experience on the Creator Dashboard" />
-
-1. Click the **&ctdot;** button for a badge and select **Copy Asset ID**.
-
-   <img src="../../assets/creator-dashboard/Badge-Copy-Asset-ID.png" width="400" />
+   <img src="../../assets/creator-dashboard/Options-Button-Badge.png" width="200" />
 
 ### Award badges
 

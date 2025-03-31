@@ -17,8 +17,6 @@ Many contraptions in Roblox will use multiple constraints to build more complica
 
 2. To view constraints and attachments, in the **Model** tab, toggle on **Constraint Details**.
 
-   <img src="../../../assets/tutorials/building-a-hinged-door/introToConstraints_toggleConstraintDetailed.png" width="60%" />
-
 ## Add attachments
 
 You will need to add attachments to the ferris wheel to determine where it will rotate. When working with attachments, it helps to move the pieces you are working with apart so you can clearly see the position and orientation of the attachments.

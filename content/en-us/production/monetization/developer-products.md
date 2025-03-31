@@ -35,11 +35,10 @@ To create a developer product:
 
 To use scripting, you need a developer product ID. To get the product ID:
 
-1. Go to **Monetization** > **Developer Products**.
-2. Hover over the product and click the **&ctdot;** menu.
-3. Click **Copy Asset ID** to copy the ID to your clipboard.
+1. Go to **Monetization** &rang; **Developer Products**.
+1. Hover over a product's thumbnail, click the **&ctdot;** button, and select **Copy Asset ID** from the context menu.
 
-   <img src="../../assets/creator-dashboard/Developer-Product-Copy-Asset-ID.png" width="400" />
+   <img src="../../assets/creator-dashboard/Options-Button-Developer-Product.png" width="200" />
 
 ## Sell a developer product
 

@@ -50,11 +50,8 @@ For [group](../projects/groups.md) experiences, only the group owner or members 
 <TabItem label="All group experiences">
 If you're the group owner or a member with sufficient permissions, you can configure collaboration across **all** group experiences, for example grant **Edit** permission to an "Audio&nbsp;Artist" group role so they can fine-tune audio playback across multiple group experiences.
 
-1. From the [Creator Dashboard](https://create.roblox.com/dashboard/creations), select the group from the **View&nbsp;As** dropdown menu and navigate to **Collaboration**&nbsp;&rang; **Roles**.
-
-   <img src="../assets/creator-dashboard/Nav-Collaboration-Roles.png" width="280" alt="Roles option indicated in the Collaboration section on the Creator Dashboard." />
-
-1. Enable [Edit all group experiences](../projects/groups.md#roles-and-permissions) for roles that should have editing permission. Remember to click **Save&nbsp;Changes** for each role that you change.
+1. From the [Creator Dashboard](https://create.roblox.com/dashboard/creations), select the group from the **View As** dropdown menu and navigate to **Collaboration** &rang; **Roles**.
+1. Enable [Edit all group experiences](../projects/groups.md#roles-and-permissions) for roles that should have editing permission. Remember to click **Save Changes** for each role that you change.
 
 In Studio's **Manage Collaborators** window for any group-owned experience, eligible roles display **Edit** permission but are muted to indicate that you can't change the permission level from Studio.
 
@@ -108,22 +105,32 @@ Those who have permission to edit an experience can join a collaborative session
 
    <Tabs>
    <TabItem label="Group-Owned Experience">
-   Select the group from the upper‑left selector menu. Then, make sure **Creations** is selected on the left and **My&nbsp;Experiences** in the main panel.
 
-   <img src="../assets/studio/collaboration/Access-Session-Group.png" width="710" alt="A close up view of the Creator Dashboard with the group selected, as well as Creations and My Experiences." />
+	 1. Select the group from the upper‑left selector menu.
+	 2. Make sure **Creations** is selected on the left and **My Experiences** in the main panel.
+
+     <Grid container spacing={1} alignItems="center">
+	   <Grid item><Chip label="My Experiences" color="primary" size="medium" /></Grid>
+	   <Grid item><Chip label="Shared With Me" color="secondary" size="medium" /></Grid>
+     </Grid>
 
    </TabItem>
    <TabItem label="User-Owned Experience">
-   Select your personal account from the upper‑left selector menu. Then, make sure **Creations** is selected on the left and **Shared&nbsp;With&nbsp;Me** in the main panel.
 
-   <img src="../assets/studio/collaboration/Access-Session-User.png" width="710" alt="A close up view of the Creator Dashboard with the group selected, as well as Creations and My Experiences." />
+	 1. Select your personal account from the upper‑left selector menu.
+	 2. Make sure **Creations** is selected on the left and **Shared With Me** in the main panel.
+
+     <Grid container spacing={1} alignItems="center">
+	   <Grid item><Chip label="My Experiences" color="secondary" size="medium" /></Grid>
+	   <Grid item><Chip label="Shared With Me" color="primary" size="medium" /></Grid>
+     </Grid>
 
    </TabItem>
    </Tabs>
 
-1. Hover over the experience to collaborate on and click the **Edit&nbsp;in&nbsp;Studio** button.
+1. Hover over the experience's tile and click the **Edit in Studio** button to collaborate.
 
-   <img src="../assets/creator-dashboard/Experience-Context-Menu-Edit.png" width="184" alt="A close up view of an experience icon with the Edit in Studio button highlighted." />
+   <img src="../assets/creator-dashboard/Edit-Button-Experience.png" width="200" alt="A close up view of an experience tile with the Edit in Studio button highlighted." />
 
 ### View collaborators
 
@@ -131,7 +138,7 @@ While working in a collaborative session, you can see the current collaborators 
 
 <img src="../assets/studio/general/Toolbar-Current-Collaborators.png" width="754" alt="Studio's menu bar with icons of the current collaborators highlighted." />
 
-To view more details on the current collaborators, click on any of the icons to open the **Live&nbsp;Collaborators** window. In this window, you can see whether a user is active or inactive inside Studio, as well as an indication of where the user is working. Users become inactive if they do not use Studio for more than 5 minutes.
+To view more details on the current collaborators, click on any of the icons to open the **Live Collaborators** window. In this window, you can see whether a user is active or inactive inside Studio, as well as an indication of where the user is working. Users become inactive if they do not use Studio for more than 5 minutes.
 
 <img src="../assets/studio/collaboration/Live-Collaborators-Status.png" width="280" alt="Live Collaborators window with icons of current collaborators, as well as their activity status." />
 
@@ -148,13 +155,13 @@ By default, selected code in the [Script Editor](../studio/script-editor.md) and
 </Grid>
 </Grid>
 
-To make all collaborators' selections invisible to only you while still seeing their work, uncheck **Show collaborator selections** at the bottom of the [Live&nbsp;Collaborators](#view-collaborators) window.
+To make all collaborators' selections invisible to only you while still seeing their work, uncheck **Show collaborator selections** at the bottom of the [Live Collaborators](#view-collaborators) window.
 
 <img src="../assets/studio/collaboration/Live-Collaborators-Toggle-Selections.png" width="280" />
 
 ### Join collaborators
 
-To quickly jump to a location in the workspace or to the exact line in a script that a collaborator is editing, hover over their name in the [Live&nbsp;Collaborators](#view-collaborators) window and click **Join**.
+To quickly jump to a location in the workspace or to the exact line in a script that a collaborator is editing, hover over their name in the [Live Collaborators](#view-collaborators) window and click **Join**.
 
 <img src="../assets/studio/collaboration/Live-Collaborators-Join.png" width="280" />
 
@@ -186,7 +193,7 @@ Live Scripting is **enabled** by default. If you and your team prefer to collabo
 Through **Drafts** mode, you can independently edit and test scripts without affecting the experience for others. After you finish drafting a script, you can [commit](#commit-drafts) it to the shared repository and [Team Test](../studio/home-tab.md#team-test) the committed version with collaborators.
 
 <Alert severity="warning">
-Drafts Mode is **disabled** by default. To enable it, open the [Game Settings](../studio/game-settings.md) window, select the **Other** tab, and turn on **Enable&nbsp;Drafts&nbsp;Mode**.
+Drafts Mode is **disabled** by default. To enable it, open the [Game Settings](../studio/game-settings.md) window, select the **Other** tab, and turn on **Enable Drafts Mode**.
 
 Note that all collaborators will need to exit the session for the change to take effect. Alternatively, you can [disable collaboration](#disable-collaboration) and then reenable it to restart the session.
 </Alert>
@@ -205,7 +212,7 @@ To commit your local edits to the repository, left-click a script, or hold <kbd>
 
 #### Compare and merge changes
 
-If another collaborator commits changes to the same script that you're editing, an icon with a green **&CirclePlus;** symbol appears in the **Drafts** window. To view their changes, right‑click the script and select **Compare&nbsp;With&nbsp;Server**.
+If another collaborator commits changes to the same script that you're editing, an icon with a green **&CirclePlus;** symbol appears in the **Drafts** window. To view their changes, right‑click the script and select **Compare With Server**.
 
 <img src="../assets/studio/collaboration/Drafts-Compare.png" alt="The Drafts window with the green plus icon highlighted to the left of a changed script, and the right-click popup window showing with the Compare With Server option highlighted." width="360" />
 
@@ -215,7 +222,7 @@ In the **(Diff)** tab that opens in the [Script Editor](../studio/script-editor.
 
 To merge their changes into your script:
 
-1. In the **Drafts** window, right‑click the script and select **Merge&nbsp;From&nbsp;Server**.
+1. In the **Drafts** window, right‑click the script and select **Merge From Server**.
 
    <img src="../assets/studio/collaboration/Drafts-Merge.png" alt="The Drafts window right-click popup window showing with the Merge From Server option highlighted." width="360" />
 
@@ -225,32 +232,32 @@ To merge their changes into your script:
    - Check **Server** to merge the committed changes into your draft, or leave it unchecked to ignore them.
    - Check **Other** to manually edit the script and save the changes to your draft.
 
-1. Once you've previewed the merge resolution, click **Merge&nbsp;All** to update your local script.
+1. Once you've previewed the merge resolution, click **Merge All** to update your local script.
 
 #### Restore deleted scripts
 
-If a collaborator deletes a script that you're editing, an icon with a red **&#8856;** symbol appears in the **Drafts** window. To restore the script, right‑click it and select **Restore&nbsp;Script**. Scripts are restored to the place's **Workspace** tree, so you may need to manually re‑parent them back to their original location.
+If a collaborator deletes a script that you're editing, an icon with a red **&#8856;** symbol appears in the **Drafts** window. To restore the script, right‑click it and select **Restore Script**. Scripts are restored to the place's **Workspace** tree, so you may need to manually re‑parent them back to their original location.
 
 <img src="../assets/studio/collaboration/Drafts-Restore.png" alt="The Drafts window with the red cross icon highlighted to the left of a deleted script, and the right-click popup window showing with the Restore Script option highlighted." width="360" />
 
 ### View script history
 
-All script changes, whether saved by a collaborator, auto-saved, or committed by a collaborator through [Drafts](#drafts-mode) mode, are logged in the **Version&nbsp;History** window. To access it:
+All script changes, whether saved by a collaborator, auto-saved, or committed by a collaborator through [Drafts](#drafts-mode) mode, are logged in the **Version History** window. To access it:
 
 1. Right-click the script in the [Explorer](../studio/explorer.md) window and select **View Script History**.
 2. In the **Version History** window that opens, you'll see all committed versions of the script, the commit date, which collaborator committed, and more. From this window, the following actions are possible:
 
    <Tabs>
    <TabItem label="Compare With Previous">
-   To compare any version (except the oldest) with its previous version, select it and click **Compare&nbsp;With&nbsp;Previous&nbsp;Version**. In the **(Diff)** tab that opens in the [Script Editor](../studio/script-editor.md), code from the newer version appears in green while code from the older version appears in red.
+   To compare any version (except the oldest) with its previous version, select it and click **Compare With Previous Version**. In the **(Diff)** tab that opens in the [Script Editor](../studio/script-editor.md), code from the newer version appears in green while code from the older version appears in red.
    </TabItem>
    <TabItem label="Compare Selected">
-	 To compare any **two** versions, hold <kbd>Ctrl</kbd> or <kbd>⌘</kbd> and select both, then click **Compare&nbsp;Selected&nbsp;Versions**. In the **(Diff)** tab that opens in the [Script Editor](../studio/script-editor.md), code from the newer version appears in green while code from the older version appears in red.
+	 To compare any **two** versions, hold <kbd>Ctrl</kbd> or <kbd>⌘</kbd> and select both, then click **Compare Selected Versions**. In the **(Diff)** tab that opens in the [Script Editor](../studio/script-editor.md), code from the newer version appears in green while code from the older version appears in red.
    </TabItem>
 	 <TabItem label="Open">
-	 If the version **Comment** indicates just one script was committed, select it and click **Open&nbsp;Script** to open it in the [Script Editor](../studio/script-editor.md).
+	 If the version **Comment** indicates just one script was committed, select it and click **Open Script** to open it in the [Script Editor](../studio/script-editor.md).
 
-	 If the version **Comment** indicates more than one script was committed&nbsp;— commonly the result of an auto‑save on multiple unsaved scripts&nbsp;— you can click **Show** within the version's row to open a popup displaying the script(s) and their respective version. Then, from the version history window, click **Open&nbsp;All&nbsp;Scripts&nbsp;From&nbsp;Batch** to open them in the [Script Editor](../studio/script-editor.md).
+	 If the version **Comment** indicates more than one script was committed (commonly the result of an auto‑save on multiple unsaved scripts), you can click **Show** within the version's row to open a popup displaying the script(s) and their respective version. Then, from the version history window, click **Open All Scripts From Batch** to open them in the [Script Editor](../studio/script-editor.md).
    </TabItem>
    </Tabs>
 

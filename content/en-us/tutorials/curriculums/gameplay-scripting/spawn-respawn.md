@@ -139,7 +139,7 @@ The important note with this script is that the properties are completely option
 
 If you change the values of these properties, it's important to playtest so that you can see the impact of your new settings. You can recreate what players experience in a multiplayer environment by selecting at least two characters in the **Clients and Servers** section of the **Test** tab.
 
-<img src="../../../assets/tutorials/gameplay-scripting/tutorial-gs-server.png" alt="Studio's Test tab with the the players dropdown highlighted. This setting needs to be at least two players to see the impact of your new settings." width="60%"/>
+<img src="../../../assets/studio/general/Test-Tab-Clients-Servers.png" width="760" alt="Studio's Test tab with the the players dropdown highlighted. This setting needs to be at least two players to see the impact of your new settings." />
 
 <Alert severity="info">
 Try changing some of these values and playtesting with multiple players to see how they affect the gameplay of the experience. For instance, how might player strategy change if you chose to hide the health display?

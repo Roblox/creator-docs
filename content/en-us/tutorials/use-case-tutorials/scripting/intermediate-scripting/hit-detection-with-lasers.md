@@ -367,12 +367,7 @@ Now the laser blaster should print `Player hit` to the Output window every time 
 Two players are needed to test if the weapon raycast is finding other players, so you need to start a local server.
 
 1. Select the **Test** tab in Studio.
-
-   ![](../../../../assets/tutorials/hit-detection-with-lasers/Test-Tab.png)
-
 2. Make sure the players dropdown is set to '2 Players' and click the Start button to **start** a local server with 2 clients. Three windows will appear. The first window will be the local server, the other windows will be the clients for Player1 and Player2.
-
-   ![](../../../../assets/tutorials/hit-detection-with-lasers/Test-Tab-Start-Button.png)
 
 3. On one client, test shooting the other player with the weapon by clicking on them. "Player hit" should be displayed in the output each time a player is shot.
 

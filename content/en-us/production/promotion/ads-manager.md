@@ -9,7 +9,9 @@ The Ads Manager feature is in beta.
 
 The **Ads Manager** offers you control over your ad campaigns, empowering you to create, optimize, and measure ads effectively while reaching your campaign objectives. You can use this tool to manage your ad campaigns, ads reporting, and ads billings in one place.
 
-With the Ads Manager, you can create campaigns for immersive ads for ad units within experiences (like [image ads](#image-ads), [video ads](#video-ads), and [portal ads](#portal-ads)), [sponsored experiences](#sponsored-experiences) that appear on the Home page, and [search ads](./search-ads.md) that appear on Search results.
+With the [new Ads Manager](#manage-ads-new), you can create and manage ad campaigns for sponsored experiences that appear on a player's Home page.
+
+With the [classic Ads Manager](#manage-ads-classic), you can create and manage ad campaigns for sponsored experiences, immersive ads inside experiences, and search ads that appear on Search results.
 
 ## Create an ad account
 
@@ -28,9 +30,6 @@ To create an ad account:
 Before you can create and manage ads on Roblox, you must first add a payment method to your ad account:
 
 1. Go to **Payment Settings** in the Ads Manager.
-
-   <img src="../../assets/promotion/ads-manager/Menu-Payment-Settings.png" width="258" />
-
 2. Choose one of the two available payment methods.
    1. **Credit or Debit Card**: Credit or debit cards are available for users 18 and above. A temporary $1.00 USD hold will be placed on the card and refunded after verification is complete within 7 business days.
    2. **Robux Ad Credit**: Converting Robux into ad credits to fund your campaigns is available for all users 13 and up.
@@ -52,9 +51,57 @@ This minimum conversation requirement streamlines the conversion process, preven
    Converting Robux to ad credit is a permanent and irreversible action. After you convert Robux to ad credits, you can only spend your ad credits on ad campaigns within the Ads Manager.
 </Alert>
 
-## Create an ad campaign
+## Manage ads (New)
 
-An **ad campaign** is a coordinated series of ads designed to achieve a specific goal. To create an ad campaign:
+<Alert severity="info">
+   The new Ads Manager is currently only available for sponsored experiences.
+</Alert>
+
+The new Ads Manager simplifies campaign creation to help you reach more players and maximize the impact of your ads.
+
+<h5 style={{marginTop: '36px'}}>Budgets</h5>
+
+When you create an ad campaign, you must set budgeting parameters to control campaign spending. There are two different types of budgets:
+
+- A **daily budget** is the maximum amount you pay for your ads per day.
+- A **lifetime budget** is the maximum amount you pay for your ads for the entire duration of the campaign.
+
+You can pay for campaign budgets using either your debit or credit card on file, or your existing ad credit balance. If you fund a campaign with ad credits, you can't modify it after it's published. If you have unused ad credits after your campaign ends, those credits are refunded to your account.
+
+<h5 style={{marginTop: '36px'}}>Automated bidding</h5>
+
+With auto-bidding, you set an ad budget and duration and Roblox automatically calculates the bid that will get you the most plays at the lowest cost.
+
+<h5 style={{marginTop: '36px'}}>Custom thumbnails</h5>
+
+An ad creative is the thumbnail that shows up on a player's Home page when you sponsor an experience. You can select up to 5 thumbnails for your ad campaign, which are then evenly distributed across players' Home pages. After you create a campaign, you can edit the campaign to turn specific thumbnails on and off.
+
+You can use existing thumbnail images you have previously uploaded to the Creator Hub, or upload new ad-specific images with the Ads Manager. Any image you use as a thumbnail is resized to a ratio of 16:9 when displayed on the Home page.
+
+### Define the campaign
+
+To create an ad campaign with the new Ads Manager:
+
+1. Go to **Manage Ads** and click **Create Campaign**.
+2. Under **Experience**, select the experience you want players to join when they click on your ad.
+3. Under **Goal & Name**, enter a name for the campaign. Currently, the only goal available is **Maximize plays**, which gets you the most plays at the lowest cost.
+4. Under **Budget & Schedule**:
+    1. Choose between a **Daily Budget** and a **Lifetime Budget**.
+    2. Select a **Payment Method**. If you're using ad credits, make sure the campaign budget does not exceed the available ad credits in your account.
+    3. Set a **Duration** for your campaign.
+    4. Set a **Start Date** and a **Start Time** for your campaign.
+5. Under **Creative**, choose up to 5 thumbnails to show on players' Home page.
+6. Click **Publish** and confirm submission. Your ad campaign will go live after it's approved by the moderation team.
+
+<Alert severity="info">
+   Roblox tries to complete moderation within 24 hours for each ad submitted. Ads that do not pass moderation show the status of rejected.
+</Alert>
+
+## Manage ads (Classic)
+
+The classic Ads Manager gives you a more detailed way to create ad campaigns, including defining targeting and bidding parameters for ad sets, and creating immersive and search ads.
+
+An **ad campaign** is a coordinated series of ads designed to achieve a specific goal. To create an ad campaign with the Classic Ads Manager:
 
 1. [Define the campaign](#define-the-campaign).
 2. [Define an ad set](#define-an-ad-set).
@@ -83,7 +130,7 @@ You can't set both a daily and lifetime budget. Budgets are paid for by either y
 
 To set up an ad campaign:
 
-1. Go to **Manage Ads** and click **Create**.
+1. Go to **Manage Ads (Classic)** and click **Create**.
 2. Select your **Payment Method**. If you're using ad credits, make sure the campaign budget does not exceed the available ad credits in your account. Ad credits are debited after campaign submission based on your set budget.
 3. Select a **Campaign Objective** from the dropdown.
 
@@ -148,7 +195,7 @@ To define an ad set:
    </table>
 
    <Alert severity="warning">
-      Selecting **Standard Inventory** and **Limited Inventory** exclude experiences with more mature content and can limit your reach. Regardless of what option you select, your ads aren't shown to users under the age of 13 or in experiences that don't comply with the Roblox community standards. For more information, see the [advertising standards](./comply-with-advertising-standards.md) and the [brand suitability tables](#brand-suitability-tables).
+      Selecting **Standard Inventory** and **Limited Inventory** exclude experiences with more mature content and can limit your reach. Regardless of what option you select, your ads aren't shown to users under the age of 13 or in experiences that don't comply with the Roblox community standards. For more information, see the [advertising standards](./comply-with-advertising-standards.md) and the brand suitability tables.
    </Alert>
 
    See the following for a breakdown of what types of content you can expect for each [content maturity](content-maturity.md) label:
@@ -180,12 +227,12 @@ To define an ad set:
    </tbody>
    </table>
 
-5. Choose which [genres](#genre-targeting) you want to target with your ads.
+5. Choose which genres you want to target with your ads.
 
    - For sponsored experiences, this represents the genre interests of your audience.
    - For immersive ads, this represents the genre of the experiences your ads are displayed in.
 
-6. Determine a max bid price to show your ads to players through the available ad units placed in experiences. Bids are reflected as CPM (cost-per-thousand impressions), meaning that your max bid for CPM is the maximum amount you're willing to pay for every thousand impressions. For more information about Roblox's bidding system, see [Bidding and auction](#bidding-and-auction).
+6. Determine a max bid price to show your ads to players through the available ad units placed in experiences. Bids are reflected as CPM (cost-per-thousand impressions), meaning that your max bid for CPM is the maximum amount you're willing to pay for every thousand impressions.
 7. Enter a name for your ad set.
 8. Click **Next**.
 
@@ -195,7 +242,7 @@ To maximize your advertising reach and use both in-experience portals and sponso
    When you define your ad set, an audience estimation displays that indicates how many Roblox user accounts your ads can reach over a month when applying your targeting parameters and placements. It estimates a maximum number of users on the platform who might be exposed to your ads, but does not take into consideration your budget limits or bidding parameters.
 </Alert>
 
-#### Brand suitability tables
+<h5 style={{marginTop: '36px'}}>Brand suitability tables</h5>
 
 Brand suitability tables show what types of content you can expect to appear alongside your immersive ads depending on your brand suitability inventory selection.
 
@@ -312,7 +359,7 @@ For more information on content exclusions associated with content maturity, see
 </table>
 
 <br />
-<h5>Always excluded content</h5>
+<h6>Always excluded content</h6>
 
 To support brand safety, all content on Roblox must continue to follow the Roblox [community standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards). The community standards set a high bar for content that is safe and civil for the platform.
 
@@ -325,7 +372,7 @@ For example, the following content is not allowed on the platform in any context
 - Discussion or depiction of use of illegal drugs or regulated substances including tobacco, vaping, and steroids
 - Discussion or depiction of political content including political parties, political candidates, and elected officials
 
-#### Bidding and auction
+<h5 style={{marginTop: '36px'}}>Bidding and auction</h5>
 
 Ads on Roblox work in a bidding system, where you bid to have your ads shown to users through the available ad units placed in an experience. When determining your bidding settings, bids are reflected as CPM (cost-per-thousand impressions). Your max bid for CPM is the maximum amount you're willing to pay every thousand times your ad is seen by the user. A higher CPM can increase the chances of winning the auction, but it also means you pay more.
 
@@ -342,17 +389,17 @@ All eligible ads participate in a **second price auction**. The ad with the high
 
 For example, you want to display your ad on a website so you submit a bid of $10. Another advertiser submits a bid of $12 for their own ad and wins the auction because their bid is higher. They're then charged $10.01, which is the price of the second highest bid (in this case, your bid) plus one cent.
 
-#### Genre targeting
+<h5 style={{marginTop: '36px'}}>Genre targeting</h5>
 
 Genre targeting helps you target your ads to reach people who are more likely to engage with your experience. You can use your ad sets to target particular genres.
 
 <br />
-<h5>Experience genre</h5>
+<h6>Experience genre</h6>
 
 Experience genres are based on the genre of the experiences your [immersive ads](../../production/monetization/immersive-ads.md) are served in. For example,selecting only "Roleplaying" means your ads only appear in experiences classified as "Roleplaying."<br />
 
 <br />
-<h5>Audience genre</h5>
+<h6>Audience genre</h6>
 
 For **sponsored experiences**, audience genre targeting is based on user preferences. Ads are only served to users who like to play experiences in the selected genres.
 
@@ -376,20 +423,20 @@ There are nine genres available for targeting:
 
 You can create three different types of ads using the Ads Manager:
 
-- [Sponsored experiences](#sponsored-experiences), which appear as sponsored experience tiles on the Home page.
+- **Sponsored experiences**, which appear as sponsored experience tiles on the Home page.
 - Immersive ads, which include:
-  - [Portal ads](#portal-ads), which are static, non-clickable images within the 3D space of an experience, with a door that teleports a player into an advertiser's experience.
-  - [Image ads](#image-ads), which are static, non-clickable images within the 3D space of an experience.
-  - [Video ads](#video-ads), which are either auto-playing (non-rewarded) or click-to-play (can be rewarded) videos within the 3D space of an experience.
-- [Search ads](#search-ads), which allow you to promote your experience to users ages 13+ who are actively searching for experiences or genres of experiences using specific keywords.
+  - **Portal ads**, which are static, non-clickable images within the 3D space of an experience, with a door that teleports a player into an advertiser's experience.
+  - **Image ads**, which are static, non-clickable images within the 3D space of an experience.
+  - **Video ads**, which are either auto-playing (non-rewarded) or click-to-play (can be rewarded) videos within the 3D space of an experience.
+- **Search ads**, which allow you to promote your experience to users ages 13+ who are actively searching for experiences or genres of experiences using specific keywords.
 
 The ad type is determined by your [campaign objective](#define-the-campaign). For example, campaign objectives valuing awareness are displayed as image ads, while campaign objectives valuing visits are displayed as tile and portal ads.
 
 Roblox reviews each submitted ad prior to it being run. Make sure your ad is eligible to run by following the [advertising standards](./comply-with-advertising-standards.md).
 
-#### Sponsored experiences
+<h5 style={{marginTop: '36px'}}>Sponsored experiences</h5>
 
-You can create a sponsored experience for All Ages, 9+ and 13+ experiences by choosing the Visits campaign objective. Currently, you can't run sponsored ads for 17+ experiences.
+You can create a sponsored experience for all 13+ users and experiences by choosing the Visits campaign objective.
 
 To create a sponsored experience ad:
 
@@ -399,7 +446,7 @@ To create a sponsored experience ad:
 4. Enter a name for your ad.
 5. Click **Next**.
 
-#### Portal ads
+<h5 style={{marginTop: '36px'}}>Portal ads</h5>
 
 <video controls src="../../assets/monetization/immersive-ads/Overview-PortalAd.mp4" width="640"></video>
 
@@ -415,7 +462,7 @@ To create a portal ad:
 4. Enter a name for your ad.
 5. Click **Next**.
 
-#### Image ads
+<h5 style={{marginTop: '36px'}}>Image ads</h5>
 
 <img src="../../assets/monetization/immersive-ads/Overview-ImageAd.jpg" width="640" />
 
@@ -426,7 +473,7 @@ To create an image ad:
 3. Enter a name for your ad.
 4. Click **Next**.
 
-#### Video ads
+<h5 style={{marginTop: '36px'}}>Video ads</h5>
 
 To create a video ad:
 
@@ -435,13 +482,13 @@ To create a video ad:
 3. Enter a name for your ad.
 4. Click **Next**.
 
-#### Search ads
+<h5 style={{marginTop: '36px'}}>Search ads</h5>
 
 Search ads have unique audience targeting, and a specific bidding and auction process for keywords. For more information, see [Search ads](./search-ads.md).
 
-#### Live preview of ads
+<h5 style={{marginTop: '36px'}}>Live preview of ads</h5>
 
-You can use live preview to see what your immersive ad looks like to the players inside an experience. Live preview is available for immersive ads in [portal](#portal-ads), [image](#image-ads), and [video](#video-ads) formats.
+You can use live preview to see what your immersive ad looks like to the players inside an experience. Live preview is available for immersive ads in portal, image, and video formats.
 
 After selecting and uploading an image or video file, click **Live Preview** next to the image or video thumbnail. This takes you to a demo experience created by Roblox to teach users how to build and advertise on the Roblox platform. Inside the experience, you can see and interact with the ad format you selected in Ads Manager.
 

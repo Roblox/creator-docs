@@ -22,9 +22,6 @@ To create the platform and track of your elevator:
 
 1. In the menu bar, select the **Model** tab.
 1. In the **Parts** section, click the dropdown arrow and select **Block**. A block part displays in the workspace that's about to become the platform users ride up and down the elevator.
-
-   <img width="50%" img src="../../../assets/tutorials/creating-neon-signs/Add-Block.jpg" />
-
 1. In the **Explorer** window, select the block, then in the **Properties** window,
 
    1. Set **Name** to **Platform**.
