@@ -145,7 +145,8 @@ The content folder's location depends on the user's operating system:
 
 <Tabs>
   <TabItem label="Windows">
-    `C:\Program Files (x86)\Roblox\Versions\<version>\content`
+    `%LOCALAPPDATA%\Roblox\Versions\<version>\content`<br />
+    (alternatively `C:\Program Files (x86)\Roblox\Versions\<version>\content`)
   </TabItem>
   <TabItem label="Mac">
     `Applications/RobloxStudio.app/Contents/Resources/content`
