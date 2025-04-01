@@ -35,7 +35,7 @@ methods:
         type: StyleRule
         default:
         summary: ''
-      - name: index
+      - name: priority
         type: int?
         default:
         summary: ''

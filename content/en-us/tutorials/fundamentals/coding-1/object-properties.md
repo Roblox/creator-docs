@@ -1,6 +1,6 @@
 ---
 title: Object properties
-description: Learn how to use Lua to change the appearance properties of different objects, such as color and shape.
+description: Learn how to use Luau to change the appearance properties of different objects, such as color and shape.
 next: /tutorials/fundamentals/coding-1/parents-and-children
 prev: /tutorials/fundamentals/coding-1/create-a-script
 ---
@@ -85,7 +85,7 @@ For the part, the script will change its Color property to a new Color3, a data 
 
    Your code should look similar to the code below.
 
-   ```lua title='Updates the color of PracticePart'
+   ```lua title="Updates the color of PracticePart"
    -- Changes the color of a part
    workspace.PracticePart.Color = Color3.fromRGB(255, 230, 50)
    ```

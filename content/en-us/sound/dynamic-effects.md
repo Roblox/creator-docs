@@ -3,6 +3,10 @@ title: Dynamic effects
 description: Dynamic Effects modify or enhance the audio of your experience.
 ---
 
+<Alert severity = 'warning'>
+Dynamic effects are now deprecated in favor of the more robust functionality of audio effects. For more information, see [Audio effects](../audio/effects.md).
+</Alert>
+
 Dynamic effects modify or enhance the audio of individual `Class.Sound` objects or an entire `Class.SoundGroup`. You can apply these effects to make your audio more immersive within your experience, such as using `Class.ReverbSoundEffect` in large rooms to make them feel massive.
 
 ## Apply dynamic effects

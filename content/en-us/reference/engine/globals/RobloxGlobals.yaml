@@ -3,9 +3,9 @@ type: global
 summary: |
   Built-in functions and constants unique to Roblox.
 description: |
-  Roblox has several unique built-in functions and variables in its Lua
-  implementation. These are only found on Roblox and are not packaged by default
-  with Lua.
+  Roblox provides several unique built-in functions and variables in its
+  embedding of Luau. These are only found on Roblox and are not packaged by
+  default with Luau or Lua.
 code_samples:
 properties:
   - name: Enum
@@ -84,7 +84,7 @@ functions:
       duration (in seconds) has passed, with throttling.
     description: |
       Schedules a function to be executed after `delayTime` seconds have passed,
-      without yielding the current thread. This function allows multiple Lua
+      without yielding the current thread. This function allows multiple Luau
       threads to be executed in parallel from the same stack. The delay will
       have a minimum duration of 29 milliseconds, but this minimum may be higher
       depending on the target framerate and various throttling conditions. If
@@ -276,14 +276,14 @@ functions:
       Roblox-specific types (e.g. Vector3).
     description: |
       Returns the type of the object specified, as a string. This function is
-      more accurate than Lua's native `type` function, as it does not denote
+      more accurate than Luau's native `type` function, as it does not denote
       Roblox-specific types as `userdata`.
     parameters:
       - name: object
         type: Variant
         default:
         summary: |
-          The Lua type that will have its type checked.
+          The Luau type that will have its type checked.
     returns:
       - type: string
         summary: ''
@@ -360,7 +360,7 @@ functions:
       Behaves similarly to print, except with more distinct formatting (yellow);
       intended for messages which describe potential problems.
     description: |
-      Behaves identically to Lua's print function, except the output is styled
+      Behaves identically to Luau's print function, except the output is styled
       as a warning, with yellow text and a timestamp. This function accepts any
       number of arguments, and will attempt to convert them into strings which
       will then be joined together with spaces between them.

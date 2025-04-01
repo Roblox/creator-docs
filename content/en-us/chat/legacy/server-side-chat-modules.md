@@ -18,12 +18,12 @@ You can use the following chat modules to support server-side behaviors of the [
 
 ## ChatService
 
-**ChatService** is a singleton object that handles the server-side behavior of the Lua Chat System, such as [ChatChannels](#chatchannel) and [ChatSpeakers](#chatspeaker).
+**ChatService** is a singleton object that handles the server-side behavior of the Lua chat system, such as [ChatChannels](#chatchannel) and [ChatSpeakers](#chatspeaker).
 
 All `ModuleScript` s within the **ChatModules** folder should return a function, and that function will be called with the ChatService singleton.
 
 <Alert severity="warning">
-ChatService chat module is different from the `Class.Chat` engine service hosting the Lua code responsible for running the Legacy Chat System.
+**ChatService** chat module is different from the `Class.Chat` engine service hosting the Lua code responsible for running the legacy chat system.
 </Alert>
 
 ### Methods

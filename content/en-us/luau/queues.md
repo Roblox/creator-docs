@@ -89,7 +89,7 @@ return Queue
 
 The following code sample is a usage example as a `Class.Script` under `Class.Workspace`. You can modify the code, type, and storage location to fit your own usage, as long as you have the previous implementation code sample properly stored.
 
-```lua title='Regular Queue Usage Example'
+```lua title="Regular Queue Usage Example"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Queue = require(ReplicatedStorage:WaitForChild("Queue"))
 

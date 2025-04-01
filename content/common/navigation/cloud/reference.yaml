@@ -1,7 +1,10 @@
 navigation:
-  - heading: Cloud
-  - title: Overview
+  - heading: Overview
+  - title: Reference
     path: /cloud/
+  - title: Guides
+    path: /cloud/guides/
+    navigation: /cloud/guides.yaml
   - heading: Authentication
   - title: API keys
     path: /cloud/auth/api-keys
@@ -27,6 +30,63 @@ navigation:
     path: /cloud/reference/errors
   - title: OpenAPI descriptions
     path: /cloud/reference/openapi
+  - heading: Use Case Reference
+  - title: All features
+    section:
+      - title: Accounts
+        path: /cloud/features/accounts
+      - title: Assets
+        path: /cloud/features/assets
+      - title: Avatars
+        path: /cloud/features/avatars
+      - title: Badges
+        path: /cloud/features/badges
+      - title: Bans and blocks
+        path: /cloud/features/bans-and-blocks
+      - title: Chats
+        path: /cloud/features/chats
+      - title: Creator Store
+        path: /cloud/features/creator-store
+      - title: Developer products
+        path: /cloud/features/developer-products
+      - title: Friends
+        path: /cloud/features/friends
+      - title: Game passes
+        path: /cloud/features/game-passes
+      - title: Groups
+        path: /cloud/features/groups
+      - title: Interactions
+        path: /cloud/features/interactions
+      - title: Inventories
+        path: /cloud/features/inventories
+      - title: Localization
+        path: /cloud/features/localization
+      - title: Luau execution
+        path: /cloud/features/luau-execution
+      - title: Metadata
+        path: /cloud/features/metadata
+      - title: Notifications
+        path: /cloud/features/notifications
+      - title: Places
+        path: /cloud/features/places
+      - title: Private servers
+        path: /cloud/features/private-servers
+      - title: Sponsored campaigns
+        path: /cloud/features/sponsored-campaigns
+      - title: Storage
+        path: /cloud/features/storage
+      - title: Team Create
+        path: /cloud/features/team-create
+      - title: Thumbnails
+        path: /cloud/features/thumbnails
+      - title: Trades
+        path: /cloud/features/trades
+      - title: Universes
+        path: /cloud/features/universes
+      - title: User profiles
+        path: /cloud/features/user-profiles
+      - title: Users
+        path: /cloud/features/users
   - heading: Open Cloud v2
   - title: All Cloud API # doesn't show anywhere
     path: /cloud/reference/
@@ -39,7 +99,6 @@ navigation:
       - name: v1
         path: /reference/cloud/assets/v1
   - title: Data stores
-    path: /reference/cloud/datastores-api/v1
     section:
       - title: Standard data stores
         type: cloudapi
@@ -65,7 +124,6 @@ navigation:
   - title: Overview
     path: /cloud/legacy
   - title: Accounts
-    path: /cloud/legacy/accountinformation/v1
     section:
       - title: Account information
         type: cloudlegacy
@@ -97,6 +155,12 @@ navigation:
         versions:
           - name: v1
             path: /cloud/legacy/auth/v1
+      - title: Private messages
+        type: cloudlegacy
+        ignoreTranslation: true
+        versions:
+          - name: v1
+            path: /cloud/legacy/privatemessages/v1
       - title: Two-step verification
         type: cloudlegacy
         ignoreTranslation: true
@@ -104,7 +168,6 @@ navigation:
           - name: v1
             path: /cloud/legacy/twostepverification/v1
   - title: Assets
-    path: /cloud/legacy/assetdelivery/v2
     section:
       - title: Asset delivery v2
         type: cloudlegacy
@@ -143,7 +206,6 @@ navigation:
           - name: v1
             path: /cloud/legacy/publish/v1
   - title: Avatar
-    path: /cloud/legacy/avatar/v3
     section:
       - title: Avatar v3
         type: cloudlegacy
@@ -164,14 +226,7 @@ navigation:
           - name: v1
             path: /cloud/legacy/avatar/v1
   - title: Localization
-    path: /cloud/legacy/economy/v1
     section:
-      - title: Economy
-        type: cloudlegacy
-        ignoreTranslation: true
-        versions:
-          - name: v1
-            path: /cloud/legacy/economy/v1
       - title: Game internationalization v2
         type: cloudlegacy
         ignoreTranslation: true
@@ -203,7 +258,6 @@ navigation:
           - name: v1
             path: /cloud/legacy/translationroles/v1
   - title: Metadata
-    path: /cloud/legacy/clientsettings/v2
     section:
       - title: Client settings v2
         type: cloudlegacy
@@ -218,8 +272,13 @@ navigation:
           - name: v1
             path: /cloud/legacy/clientsettings/v1
   - title: Thumbnails
-    path: /cloud/legacy/thumbnails/v1
     section:
+      - title: Metrics
+        type: cloudlegacy
+        ignoreTranslation: true
+        versions:
+          - name: v1
+            path: /cloud/legacy/metrics/v1
       - title: Thumbnails
         type: cloudlegacy
         ignoreTranslation: true
@@ -232,95 +291,7 @@ navigation:
         versions:
           - name: v1
             path: /cloud/legacy/thumbnailsresizer/v1
-      - title: Metrics
-        type: cloudlegacy
-        ignoreTranslation: true
-        versions:
-          - name: v1
-            path: /cloud/legacy/metrics/v1
-  - title: Users and groups
-    path: /cloud/legacy/contacts/v1
-    section:
-      - title: Contacts
-        type: cloudlegacy
-        ignoreTranslation: true
-        versions:
-          - name: v1
-            path: /cloud/legacy/contacts/v1
-      - title: Followings v2
-        type: cloudlegacy
-        ignoreTranslation: true
-        versions:
-          - name: v2
-            path: /cloud/legacy/followings/v2
-      - title: Followings v1
-        type: cloudlegacy
-        ignoreTranslation: true
-        versions:
-          - name: v1
-            path: /cloud/legacy/followings/v1
-      - title: Friends
-        type: cloudlegacy
-        ignoreTranslation: true
-        versions:
-          - name: v1
-            path: /cloud/legacy/friends/v1
-      - title: Groups v2
-        type: cloudlegacy
-        ignoreTranslation: true
-        versions:
-          - name: v2
-            path: /cloud/legacy/groups/v2
-      - title: Groups v1
-        type: cloudlegacy
-        ignoreTranslation: true
-        versions:
-          - name: v1
-            path: /cloud/legacy/groups/v1
-      - title: Inventory v2
-        type: cloudlegacy
-        ignoreTranslation: true
-        versions:
-          - name: v2
-            path: /cloud/legacy/inventory/v2
-      - title: Inventory v1
-        type: cloudlegacy
-        ignoreTranslation: true
-        versions:
-          - name: v1
-            path: /cloud/legacy/inventory/v1
-      - title: Presence
-        type: cloudlegacy
-        ignoreTranslation: true
-        versions:
-          - name: v1
-            path: /cloud/legacy/presence/v1
-      - title: Users
-        type: cloudlegacy
-        ignoreTranslation: true
-        versions:
-          - name: v1
-            path: /cloud/legacy/users/v1
-      - title: Premium features
-        type: cloudlegacy
-        ignoreTranslation: true
-        versions:
-          - name: v1
-            path: /cloud/legacy/premiumfeatures/v1
-      - title: Private messages
-        type: cloudlegacy
-        ignoreTranslation: true
-        versions:
-          - name: v1
-            path: /cloud/legacy/privatemessages/v1
-      - title: Trades
-        type: cloudlegacy
-        ignoreTranslation: true
-        versions:
-          - name: v1
-            path: /cloud/legacy/trades/v1
   - title: Universes
-    path: /cloud/legacy/badges/v1
     section:
       - title: Badges
         type: cloudlegacy
@@ -376,6 +347,86 @@ navigation:
         versions:
           - name: v1
             path: /cloud/legacy/games/v1
+  - title: Users and groups
+    section:
+      - title: Contacts
+        type: cloudlegacy
+        ignoreTranslation: true
+        versions:
+          - name: v1
+            path: /cloud/legacy/contacts/v1
+      - title: Economy
+        type: cloudlegacy
+        ignoreTranslation: true
+        versions:
+          - name: v1
+            path: /cloud/legacy/economy/v1
+      - title: Followings v2
+        type: cloudlegacy
+        ignoreTranslation: true
+        versions:
+          - name: v2
+            path: /cloud/legacy/followings/v2
+      - title: Followings v1
+        type: cloudlegacy
+        ignoreTranslation: true
+        versions:
+          - name: v1
+            path: /cloud/legacy/followings/v1
+      - title: Friends
+        type: cloudlegacy
+        ignoreTranslation: true
+        versions:
+          - name: v1
+            path: /cloud/legacy/friends/v1
+      - title: Groups v2
+        type: cloudlegacy
+        ignoreTranslation: true
+        versions:
+          - name: v2
+            path: /cloud/legacy/groups/v2
+      - title: Groups v1
+        type: cloudlegacy
+        ignoreTranslation: true
+        versions:
+          - name: v1
+            path: /cloud/legacy/groups/v1
+      - title: Inventory v2
+        type: cloudlegacy
+        ignoreTranslation: true
+        versions:
+          - name: v2
+            path: /cloud/legacy/inventory/v2
+      - title: Inventory v1
+        type: cloudlegacy
+        ignoreTranslation: true
+        versions:
+          - name: v1
+            path: /cloud/legacy/inventory/v1
+      - title: Premium features
+        type: cloudlegacy
+        ignoreTranslation: true
+        versions:
+          - name: v1
+            path: /cloud/legacy/premiumfeatures/v1
+      - title: Presence
+        type: cloudlegacy
+        ignoreTranslation: true
+        versions:
+          - name: v1
+            path: /cloud/legacy/presence/v1
+      - title: Trades
+        type: cloudlegacy
+        ignoreTranslation: true
+        versions:
+          - name: v1
+            path: /cloud/legacy/trades/v1
+      - title: Users
+        type: cloudlegacy
+        ignoreTranslation: true
+        versions:
+          - name: v1
+            path: /cloud/legacy/users/v1
   - title: Ad configuration
     type: cloudlegacy
     ignoreTranslation: true

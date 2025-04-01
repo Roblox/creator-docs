@@ -1,12 +1,12 @@
-name: Lua globals
+name: Luau globals
 type: global
 summary: |
-  A list of functions and variables that are native to Lua.
+  A list of functions and variables that are native to Luau.
 description: |
-  The following is a list of functions and variables that are native to Lua.
-  These functions can be used in a standard installation of
-  [Lua 5.1.4](https://www.lua.org/manual/5.1/), though there are some
-  differences in how some of these work on Roblox.
+  The following is a list of functions and variables that are native to Luau.
+  These functions can be used in a standard installation of both
+  [Luau](https://luau.org) and [Lua 5.1.4](https://www.lua.org/manual/5.1/),
+  though there are some differences in how some of these work on Roblox.
 code_samples:
 properties:
   - name: _G
@@ -61,8 +61,8 @@ functions:
       Performs the specified operation of the garbage collector.
     description: |
       Performs the specified operation of the garbage collector. Note that
-      Roblox's Lua sandbox only allows the `count` option to be used (the total
-      memory in use by Lua, in kilobytes), as other options can interfere with
+      Roblox's Luau sandbox only allows the `count` option to be used (the total
+      memory in use by Luau, in kilobytes), as other options can interfere with
       existing processes. Effectively, this makes `Global.LuaGlobals.gcinfo()` a
       superior alternative that should be used instead.
     parameters:
@@ -225,10 +225,10 @@ functions:
     summary: |
       Returns the provided code as a function that can be executed.
     description: |
-      Loads Lua code from a string and returns it as a function.
+      Loads Luau code from a string and returns it as a function.
 
-      Unlike standard Lua 5.1, Roblox's Lua cannot load the binary version of
-      Lua using `loadstring()`.
+      Unlike standard Lua 5.1, Roblox's Luau cannot load the compiled bytecode
+      using `loadstring()`.
 
       `loadstring()` is disabled by default. For guidance around enabling it,
       see `Class.ServerScriptService`.
@@ -244,13 +244,13 @@ functions:
         type: string
         default:
         summary: |
-          The specified string to be loaded as Lua code.
+          The specified string to be loaded as Luau code.
       - name: chunkname
         type: string
         default:
         summary: |
           An optional chunk name for error messages and debug information. If
-          unspecified, Lua uses the `contents` string.
+          unspecified, Luau uses the `contents` string.
     returns:
       - type: Variant
         summary: ''

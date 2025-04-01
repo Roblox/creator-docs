@@ -3,7 +3,7 @@ title: Avatar Setup
 description: The Avatar setup tool previews animations, clothing, accessories, and body constructs on avatar rigs, directly in Studio.
 ---
 
-The **Avatar Setup Tool** allows you to auto-setup avatar meshes, preview animations, clothing, skin tones, and test avatar character bodies directly in Studio. Marketplace creators can also begin the uploading and validation process from this tool to quickly publish their assets.
+The **Avatar Setup tool** allows you to auto-setup avatar meshes, preview animations, clothing, skin tones, and test avatar character bodies directly in Studio. Marketplace creators can also begin the uploading and validation process from this tool to quickly publish their assets.
 
 If a character model does not include all of Roblox's required [avatar components](../characters/index.md#components-of-an-avatar), the Avatar Setup tool **automatically generate these components** for you using [auto-setup](#auto-setup).
 
@@ -62,7 +62,12 @@ Roblox intends to continue releasing updated versions of the auto-setup ML model
 
 ### Valid inputs
 
-If the base mesh meets the [body model requirements](#body-model-requirements), auto-setup supports the following inputs:
+The Avatar Setup tool automatically detects the input of the selected mesh and performs different actions depending on the detected input.
+
+- If the selected model contains all the required components for a Roblox avatar, the Avatar Setup tool immediately opens the selected model in the [test interface](#test-interface).
+- If the selected model does not contain all the required components for a Roblox avatar, the Avatar Setup tool begins the auto-setup functionality depending on the input detected.
+
+Auto-setup detects the following partial avatar body inputs:
 
 <table><thead>
   <tr>
@@ -72,19 +77,19 @@ If the base mesh meets the [body model requirements](#body-model-requirements), 
 <tbody>
   <tr>
     <td><img src="../../assets/avatar/avatar-setup/Partial-Inputs-None-Rigged.png"/></td>
-    <td><Alert severity = 'success'>A full-body mesh object with **no rigging**.</Alert>This is the most common case where the input is the full-body mesh object doesn't include rigging data or other components. The input body must meet auto-setup's [model requirements](#body-model-requirements). <br /><br /> In this case, auto-setup creates the rest of the avatar components automatically.</td>
+    <td><Alert severity = 'success'>A single or multiple mesh body with **no rigging**.</Alert>The most common input is a single mesh object that doesn't include rigging data or other components. The input body must meet auto-setup's [model requirements](#body-model-requirements). <br /><br /> In this case, auto-setup creates the rest of the avatar components automatically.</td>
   </tr>
   <tr>
     <td><img src="../../assets/avatar/avatar-setup/Partial-Inputs-Body-Rigged.png"/></td>
-    <td><Alert severity = "success">A full-body mesh with **only body rigging**.</Alert>If the full-body mesh includes a compatible R15 body rig, auto-setup uses the provided rig, and creates the facial rig and all other components. <br /><br /> The input body rig must follow Roblox's [rigging configuration](../characters/specifications.md#rigging), otherwise auto-setup creates a brand new rig for you.</td>
+    <td><Alert severity = "success">A single or multiple mesh body with **only body rigging**.</Alert>If the provided meshes include a compatible R15 body rig, auto-setup uses the provided rig, and creates the facial rig and all other components. <br /><br /> The input body rig must follow Roblox's [rigging configuration](../characters/specifications.md#rigging), otherwise auto-setup creates a brand new rig for you.</td>
   </tr>
   <tr>
     <td><img src="../../assets/avatar/avatar-setup/Partial-Inputs-Head-Rigged.png"/><br /></td>
-    <td><Alert severity = "error">A full-body mesh with **only facial rigging**.</Alert>At this time, auto-setup does not support cases where only a facial rig is present with the input model. <br /> <br /> If you intend to use your own custom facial rigging, you must also include an R15 rig and set the FaceRootJoint (and all child bones) as a child of the R15 head joint. For more information, see [optional rig requirements](#optional-rig-requirements). </td>
+    <td><Alert severity = "error">A single or multiple mesh with **only facial rigging**.</Alert>At this time, auto-setup does not support cases where only a facial rig is present with the input model. <br /> <br /> If you intend to use your own custom facial rigging, you must also include an R15 rig and set the FaceRootJoint (and all child bones) as a child of the R15 head joint. For more information, see [optional rig requirements](#optional-rig-requirements). </td>
   </tr>
   <tr>
     <td><img src="../../assets/avatar/avatar-setup/Partial-Inputs-All-Rigged.png"/><br /></td>
-    <td><Alert severity = "success">A full-body mesh with **both body and facial rigging**.</Alert>If the body rig, facial rig, and appropriate FACS data is included, auto-setup preserves that data and only generates the missing Roblox-specific components.<br /><br />For more information, see [optional rig requirements](#optional-rig-requirements).</td>
+    <td><Alert severity = "success">A single mesh body with **both body and facial rigging**.</Alert>If the body rig, facial rig, and appropriate FACS data is included, auto-setup preserves that data and only generates the missing Roblox-specific components. **Bodies comprised of multiple meshes are not supported for this input.**<br /><br />For more information, see [optional rig requirements](#optional-rig-requirements).</td>
   </tr>
 </tbody></table>
 
@@ -98,7 +103,7 @@ Many existing [downloadable resources](../../avatar/resources.md) for avatar bod
 
 The full requirements for the input body model are as follows:
 
-1. **Single or multiple mesh** — Auto-setup accepts bodies comprised of 1 or more meshes. If your body includes multiple meshes, the tool automatically recombines all selected meshes as a single mesh, then decimates the combined parts to the appropriate R15 structure.
+1. **Single or multiple mesh** — In most cases, auto-setup accepts bodies comprising of 1 or more meshes. If your body includes multiple meshes, the tool automatically recombines all selected meshes as a single mesh, then decimates the combined parts to the appropriate R15 structure.
 2. **5 distinct head components** — Whether you are using a single or multi-mesh character model, the following head components are required:
 
    1. **2 eyes** — Heads must include 2 connected eyebags containing half-sphere eyes that do not share any vertices with the head component.
@@ -183,13 +188,15 @@ The full requirements for the input body model are as follows:
 
 You can use your own custom body and face rig for your character model input. If auto-setup detects a [Roblox supported R15 rig](../characters/specifications.md#rigging), the original rigging data is preserved when generating avatar components.
 
-If including custom facial animation data, adhere to the following:
+If your body mesh includes custom facial animation data, adhere to the following:
 
-1. Facial rig must include a `RootFaceJoint` bone (usually [mapped](../characters/facial-animation/create-basic-heads.md#map) as `DynamicHead`) whose parent is the `Head` joint of the R15 rig.
-2. All the other facial animation joints are descendants of the `RootFaceJoint`, and not direct children of the `Head` joint.
-3. Animations need to be provided for the [17 required poses](../characters/specifications.md#facial-animations), at minimum.
-4. Neutral animation must map to frame `0`.
-5. Since the head is part of the single mesh with the body, the facial animation mappings must be included with the single body mesh:
+1. A supported R15 body rig is required when submitting custom facial rigs and facial animation data.
+   1. This [specific input type](#valid-inputs) requires a single mesh body and does not support a multiple mesh body.
+2. Facial rig must include a `RootFaceJoint` bone (usually [mapped](../characters/facial-animation/create-basic-heads.md#map) as `DynamicHead`) whose parent is the `Head` joint of the R15 rig.
+3. All the other facial animation joints are descendants of the `RootFaceJoint`, and not direct children of the `Head` joint.
+4. Animations need to be provided for the [17 required poses](../characters/specifications.md#facial-animations), at minimum.
+5. Neutral animation must map to frame `0`.
+6. Since the head is part of the single mesh with the body, the facial animation mappings must be included with the single body mesh:
    1. The mapping between animation frames and facial poses are stored in the extra attributes / custom properties of the provided single mesh.
    2. The name of the root face joint is stored in the extra attributes / custom properties of the single mesh, mapping `RootFaceJoint` to the corresponding name (usually `DynamicHead`).
 

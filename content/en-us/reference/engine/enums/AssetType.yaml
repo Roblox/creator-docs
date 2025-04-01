@@ -36,7 +36,7 @@ items:
   - name: Lua
     value: 5
     summary: |
-      The asset is Lua code, for example a `Class.ModuleScript`.
+      The asset is Luau code, for example a `Class.ModuleScript`.
     tags: []
     deprecation_message: ''
   - name: Hat

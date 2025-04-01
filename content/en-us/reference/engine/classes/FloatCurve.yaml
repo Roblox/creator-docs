@@ -85,10 +85,10 @@ methods:
     writeCapabilities: []
   - name: FloatCurve:GetKeys
     summary: |
-      Returns a copy of all the keys in the FloatCurve as a Lua array of
+      Returns a copy of all the keys in the FloatCurve as a Luau array of
       `Datatype.FloatCurveKey|FloatCurveKeys`.
     description: |
-      Returns a copy of all the keys in the FloatCurve as a Lua array of
+      Returns a copy of all the keys in the FloatCurve as a Luau array of
       `Datatype.FloatCurveKey|FloatCurveKeys`.
     code_samples:
     parameters: []

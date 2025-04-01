@@ -1,0 +1,23 @@
+name: UICaptureMode
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: All
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: None
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: PlayerGui
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''

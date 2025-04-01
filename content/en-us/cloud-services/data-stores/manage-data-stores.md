@@ -236,9 +236,9 @@ Disabling caching is useful if you have multiple servers writing to a key with h
 
 ## Serialization
 
-The `Class.DataStoreService` stores data in JSON format. When you save Lua data in Studio, Roblox uses a process called serialization to convert that data into JSON to save it in data stores. Roblox then converts your data back to Lua and returns it to you in another process called deserialization.
+The `Class.DataStoreService` stores data in JSON format. When you save Luau data in Studio, Roblox uses a process called serialization to convert that data into JSON to save it in data stores. Roblox then converts your data back to Luau and returns it to you in another process called deserialization.
 
-Serialization and deserialization support the following Lua data types:
+Serialization and deserialization support the following Luau data types:
 
 - [Nil](../../luau/nil.md)
 - [Booleans](../../luau/booleans.md)
@@ -255,7 +255,7 @@ If you try to store a data type that serialization doesn't support, you either:
 - Fail in storing that data type and get an error message.
 - Succeed in storing that data type as `nil`.
 
-To debug why your data type is being stored as `nil`, you can use the `Class.HttpService.JSONEncode|JSONEncode` function. When you pass your Lua data type into this function, you receive it back in the format Roblox would have stored it with data stores, which lets you preview and investigate the returned data.
+To debug why your data type is being stored as `nil`, you can use the `Class.HttpService.JSONEncode|JSONEncode` function. When you pass your Luau data type into this function, you receive it back in the format Roblox would have stored it with data stores, which lets you preview and investigate the returned data.
 
 <Alert severity="info">
   Serialization doesn't happen when you use the [DataStore Open Cloud API](/cloud/reference/DataStore) because that data is already sent to Roblox in JSON format and doesn't need to be converted.

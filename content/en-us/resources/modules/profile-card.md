@@ -207,7 +207,7 @@ Overrides default configuration options through the following keys/values in the
 </tbody>
 </table>
 
-```lua title='LocalScript' highlight='5-10'
+```lua title="LocalScript" highlight="5-10"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local ProfileCard = require(ReplicatedStorage:WaitForChild("ProfileCard"))

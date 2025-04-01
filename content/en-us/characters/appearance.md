@@ -3,12 +3,7 @@ title: Character appearance
 description: Customize your in-experience character appearance and properties with the Avatar Game Settings and HumanoidDescription.
 ---
 
-Most experiences let players use their own Roblox avatar, although some
-implement an in-experience customization system like the [Merch
-Booth](/resources/modules/merch-booth) module.
-Other experiences make limited
-[modifications](../characters/appearance.md)
-to player avatars such as helmets, wings, or accessories that match the genre.
+Most experiences let players use their own Roblox avatar, although some implement an in-experience customization system like the [UGC Homestore](/resources/templates.md#ugc-homestore) template. Other experiences make limited [modifications](../characters/appearance.md) to player avatars such as helmets, wings, or accessories that match the genre.
 
 To create a unique experience that alters the appearance of your users, you can customize the default character properties with the following:
 

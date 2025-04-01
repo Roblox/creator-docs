@@ -14,20 +14,69 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
-  - name: UGCValidationService:DoesMeshHaveSkinningData
+  - name: UGCValidationService:CalculateEditableMeshModifiedCageBoundingBox
     summary: ''
     description: ''
     code_samples: []
     parameters:
-      - name: meshId
-        type: string
+      - name: referenceUVValues
+        type: Array
+        default:
+        summary: ''
+      - name: innerCage
+        type: Object
+        default:
+        summary: ''
+      - name: innerTransform
+        type: CFrame
+        default:
+        summary: ''
+      - name: outerCage
+        type: Object
+        default:
+        summary: ''
+      - name: outerTransform
+        type: CFrame
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: Tuple
         summary: ''
-    tags:
-      - Yields
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: UGCValidationService:CalculateEditableMeshNumModifiedCageUVsInSet
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: referenceUVValues
+        type: Array
+        default:
+        summary: ''
+      - name: innerCage
+        type: Object
+        default:
+        summary: ''
+      - name: innerTransform
+        type: CFrame
+        default:
+        summary: ''
+      - name: outerCage
+        type: Object
+        default:
+        summary: ''
+      - name: outerTransform
+        type: CFrame
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags: []
     deprecation_message: ''
     security: RobloxScriptSecurity
     thread_safety: Unsafe

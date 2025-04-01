@@ -16,6 +16,7 @@
         "tags": ["Places"],
         "operationId": "Places_CreatePlaceVersionApiKey",
         "x-roblox-cloud-api-operation-name": "Publish a Place",
+        "x-roblox-stability": "BETA",
         "description": "Publish a new place or update an existing place with a new version. Provide a RBXL or RBXLX file in the data-binary.",
         "parameters": [
           {
@@ -84,6 +85,9 @@
             "roblox-api-key": ["Label.Write"]
           }
         ],
+        "x-roblox-scopes": [
+          { "name": "universe-places:write" }
+        ],
         "x-roblox-cloud-api-operation": true,
         "x-roblox-code-samples": [
           {
@@ -91,10 +95,20 @@
             "script": "curl --location --request POST 'https://apis.roblox.com/universes/v1/{universeId}/places/{placeId}/versions?versionType=Published' \n--header 'x-api-key: abc...' \n--header 'Content-Type: application/xml' \n--data-raw '<roblox></roblox>'\n"
           }
         ],
+        "x-roblox-rate-limits": {
+          "perIp": {
+            "period": "MINUTE",
+            "maxInPeriod": 30
+          },
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 30
+          }
+        },
         "x-roblox-throttling-limit": {
           "perApiKey": {
             "periodInSeconds": "60",
-            "maxInPeriod": 10
+            "maxInPeriod": 30
           }
         },
         "x-roblox-size-limit": 10485760
@@ -105,8 +119,9 @@
     "securitySchemes": {
       "roblox-api-key": {
         "type": "apiKey",
-        "name": "roblox-api-key",
-        "in": "header"
+        "description": "A configurable key that allows granular access to Roblox resources. See https://create.roblox.com/docs/cloud/auth/api-keys for more information.",
+        "in": "header",
+        "name": "x-api-key"
       }
     }
   }

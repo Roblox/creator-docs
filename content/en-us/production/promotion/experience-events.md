@@ -17,9 +17,6 @@ To create an event, you must have the [Edit all group experiences](../../project
 
 1. Navigate to an experience's page on the [Creator Dashboard][creatordashboard].
 2. In the left column, expand the **Engagement** branch and click **Events&nbsp;&amp;&nbsp;Updates**.
-
-   <img src="../../assets/creator-dashboard/Experience-Nav-Engagement-Events-Updates.png" width="330" alt="Events and Updates button indicated for an experience on the Creator Dashboard" />
-
 3. Click the **Create Event or Update** button.
 4. Add a **thumbnail** to promote your event. If you don't add any thumbnails for the event, the primary [experience thumbnail](../publishing/thumbnails.md) will be used instead.
 
@@ -116,9 +113,6 @@ Players who click **Notify Me** for an upcoming event will receive stream notifi
 To delete an event and remove its [detail page](#event-details-page):
 
 1. On an experience's **Events &amp; Updates** page, click the tab corresponding to the event's timing (**Active**, **Scheduled**, or **Finished**).
-
-   <img src="../../assets/creator-dashboard/Experience-Nav-Engagement-Events-Updates.png" width="330" alt="Events and Updates button indicated for an experience on the Creator Dashboard" />
-
 2. Hover over the event thumbnail, click the **&ctdot;** button, and select **Delete&nbsp;Event**.
 
    <img src="../../assets/creator-dashboard/Event-Context-Menu-Delete-Event.png" width="600" alt="Event's right-click context menu indicating the selection of Delete Event" />
@@ -170,9 +164,6 @@ To announce an update:
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 2. Click on the thumbnail of the experience you want to associate with the update. The experience's **Overview** page displays.
 3. In the left-hand navigation, under **Engagement**, click **Events&nbsp;&amp;&nbsp;Updates**.
-
-	 <img src="../../assets/creator-dashboard/Experience-Nav-Engagement-Events-Updates.png" width="330" alt="Events and Updates button indicated for an experience on the Creator Dashboard" />
-
 4. Click **Create Event or Update**.
 5. At the top of the creation form, click on the link to the old updates page.
 6. In the input field, describe what has been updated in your experience, then click the **Preview** button to see how the update will display for desktop, tablet, and phone users.

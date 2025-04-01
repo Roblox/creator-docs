@@ -161,7 +161,8 @@ While many creators focus on a single area, the following tutorials walk you thr
    <Typography variant='body1' >
      <ul>
      <li>Learn how to set global and local lighting properties to enhance <a href="./use-case-tutorials/lighting/enhance-indoor-environments.md">indoor</a> and <a href="./use-case-tutorials/lighting/enhance-outdoor-environments-with-future-lighting.md">outdoor</a> environments</li>
-     <li>Learn how to play <a href="./use-case-tutorials/audio/play-background-music.md">background</a> and <a href="./use-case-tutorials/audio/in-game-sounds.md">positional</a> audio for player immersion</li>
+     <li>Learn how to play <a href="./use-case-tutorials/audio/add-3D-audio.md">positional</a> and <a href="./use-case-tutorials/audio/add-2D-audio.md">non-positional</a> audio for player immersion</li>
+     <li>Learn how to integrate different <a href="./use-case-tutorials/audio/add-voice-chat.md">voice chat</a> configurations into your gameplay</li>
      <li>Learn how to <a href="./use-case-tutorials/modeling/assemble-modular-environments.md">assemble modular assets</a> that snap together in numerous configurations</li>
      </ul></Typography>
      <div style={{marginTop:16}}>

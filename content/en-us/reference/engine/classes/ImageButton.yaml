@@ -106,8 +106,7 @@ properties:
       `Class.ImageButton.ScaleType|ScaleType` property.
     code_samples: []
     type: Content
-    tags:
-      - Hidden
+    tags: []
     deprecation_message: ''
     security:
       read: None

@@ -22,7 +22,7 @@ To tween the **position** of a `Class.GuiObject`:
 
 The following code snippet moves an `Class.ImageLabel` within a `Class.ScreenGui` to the exact center of the screen:
 
-```lua title='UI Tween - Position' highlight='8,10,12,13,15'
+```lua title="UI Tween - Position" highlight="8,10,12,13,15"
 local TweenService = game:GetService("TweenService")
 local Players = game:GetService("Players")
 
@@ -51,7 +51,7 @@ To tween the **size** of a `Class.GuiObject`:
 
 The following code snippet scales an `Class.ImageLabel` within a `Class.ScreenGui` to 40% of the screen width or height (whichever is smaller) from the object's center anchor point:
 
-```lua title='UI Tween - Size' highlight='8,10,11,13,16,18'
+```lua title="UI Tween - Size" highlight="8,10,11,13,16,18"
 local TweenService = game:GetService("TweenService")
 local Players = game:GetService("Players")
 
@@ -81,7 +81,7 @@ To tween the **rotation** of a `Class.GuiObject`:
 1. Pass a `Datatype.TweenInfo` and the target rotation to `Class.TweenService:Create()`.
 1. Play the tween with `Class.Tween:Play()`.
 
-```lua title='UI Tween - Size' highlight='8,10,13,15'
+```lua title="UI Tween - Size" highlight="8,10,13,15"
 local TweenService = game:GetService("TweenService")
 local Players = game:GetService("Players")
 
@@ -138,7 +138,7 @@ Multiple properties control UI transparency, depending on the object type. You c
 As a modern alternative to `Class.TextLabel.TextStrokeTransparency` and `Class.TextButton.TextStrokeTransparency`, you can tween stroke transparency on a `Class.UIStroke` object as outlined in [Stroke](#stroke).
 </Alert>
 
-```lua title='UI Tween - Image Transparency' highlight='8,11,13'
+```lua title="UI Tween - Image Transparency" highlight="8,11,13"
 local TweenService = game:GetService("TweenService")
 local Players = game:GetService("Players")
 
@@ -154,7 +154,7 @@ local tween = TweenService:Create(object, tweenInfo, {ImageTransparency = target
 tween:Play()
 ```
 
-```lua title='UI Tween - Canvas Group Transparency' highlight='8,11,13'
+```lua title="UI Tween - Canvas Group Transparency" highlight="8,11,13"
 local TweenService = game:GetService("TweenService")
 local Players = game:GetService("Players")
 
@@ -209,7 +209,7 @@ Multiple properties control UI color, depending on the object type. You can twee
 As a modern alternative to `Class.GuiObject.BorderColor3`, `Class.TextLabel.TextStrokeColor3`, and `Class.TextButton.TextStrokeColor3`, you can tween stroke color on a `Class.UIStroke` object as outlined in [Stroke](#stroke).
 </Alert>
 
-```lua title='UI Tween - Image Color' highlight='8,11,13'
+```lua title="UI Tween - Image Color" highlight="8,11,13"
 local TweenService = game:GetService("TweenService")
 local Players = game:GetService("Players")
 
@@ -225,7 +225,7 @@ local tween = TweenService:Create(object, tweenInfo, {ImageColor3 = targetColor}
 tween:Play()
 ```
 
-```lua title='UI Tween - Canvas Group Color' highlight='8,11,13'
+```lua title="UI Tween - Canvas Group Color" highlight="8,11,13"
 local TweenService = game:GetService("TweenService")
 local Players = game:GetService("Players")
 
@@ -293,7 +293,7 @@ Alternatively, you can apply a `Class.UIStroke` child and tween its thickness, c
 	</tbody>
 </table>
 
-```lua title='UI Tween - UIStroke Color & Thickness' highlight='8-11,13,14,17,19'
+```lua title="UI Tween - UIStroke Color & Thickness" highlight="8-11,13,14,17,19"
 local TweenService = game:GetService("TweenService")
 local Players = game:GetService("Players")
 
@@ -319,7 +319,7 @@ tween:Play()
 
 You can combine any of the [single-property tweens](#single-property-tweens) into more complex tweens by passing multiple target properties to `Class.TweenService:Create()`, for example **position&nbsp;+&nbsp;rotation** or **size&nbsp;+&nbsp;transparency**.
 
-```lua title='UI Tween - Position & Rotation' highlight='8,10,11,14,16'
+```lua title="UI Tween - Position & Rotation" highlight="8,10,11,14,16"
 local TweenService = game:GetService("TweenService")
 local Players = game:GetService("Players")
 
@@ -338,7 +338,7 @@ local tween = TweenService:Create(object, tweenInfo, {Position = targetPosition,
 tween:Play()
 ```
 
-```lua title='UI Tween - Size & Transparency' highlight='13,14,17,19'
+```lua title="UI Tween - Size & Transparency" highlight="13,14,17,19"
 local TweenService = game:GetService("TweenService")
 local Players = game:GetService("Players")
 
@@ -364,7 +364,7 @@ tween:Play()
 
 You can chain UI animations to occur one after another by playing subsequent tweens upon the previous tween's `Class.TweenBase.Completed|Completed` event. For example, the following script moves an object to the center of the screen, then rotates it by 45&deg;.
 
-```lua title='UI Tween Sequence' highlight='10,11,14,15,18,21-23'
+```lua title="UI Tween Sequence" highlight="10,11,14,15,18,21-23"
 local TweenService = game:GetService("TweenService")
 local Players = game:GetService("Players")
 
@@ -465,7 +465,7 @@ Using the easing options of `Datatype.TweenInfo`, you can control the easing **s
 </TabItem>
 </Tabs>
 
-```lua title='Easing Style - Cubic' highlight='1'
+```lua title="Easing Style - Cubic" highlight="1"
 local tweenInfo = TweenInfo.new(2, Enum.EasingStyle.Cubic)
 local tween = TweenService:Create(object, tweenInfo, {Rotation = 45})
 ```
@@ -497,7 +497,7 @@ local tween = TweenService:Create(object, tweenInfo, {Rotation = 45})
 </tbody>
 </table>
 
-```lua title='Easing direction - InOut' highlight='1'
+```lua title="Easing direction - InOut" highlight="1"
 local tweenInfo = TweenInfo.new(2, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut)
 local tween = TweenService:Create(object, tweenInfo, {Rotation = 45})
 ```
@@ -519,7 +519,7 @@ The "typewriter" effect is ideal for `Class.TextLabel|TextLabels` that tell a st
 
 1. Paste the following code into the script:
 
-   ```lua title='ModuleScript - AnimateUI'
+   ```lua title="ModuleScript - AnimateUI"
    local LocalizationService = game:GetService("LocalizationService")
    local Players = game:GetService("Players")
 
@@ -575,7 +575,7 @@ The "typewriter" effect is ideal for `Class.TextLabel|TextLabels` that tell a st
 1. Create a `Class.TextLabel` in a suitable location, such as within a `Class.ScreenGui` parented to `Class.StarterGui`.
 1. Insert a new `Class.LocalScript` as a direct child of the label and paste in the following code. Note that each message is output by calling `AnimateUI.typeWrite()` with parameters for the parent object, the string to output, and the delay between characters.
 
-   ```lua title='LocalScript' highlight='3,5,10,11,15,16'
+   ```lua title="LocalScript" highlight="3,5,10,11,15,16"
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
    local AnimateUI = require(ReplicatedStorage:WaitForChild("AnimateUI"))

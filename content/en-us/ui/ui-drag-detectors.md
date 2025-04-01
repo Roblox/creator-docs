@@ -231,7 +231,7 @@ The following slider designates its container as the `Class.UIDragDetector.Bound
 To test this example, download the <a href="../assets/ui/ui-drag-detectors/TransparencySlider.rbxm">`TransparencySlider.rbxm`</a> file, right‑click `Class.StarterGui` in the [Explorer](../studio/explorer.md) window, select **Insert&nbsp;from&nbsp;File**, and choose the downloaded file.
 </Alert>
 
-```lua title='UIDragDetector - Event Signal Transparency Change'
+```lua title="UIDragDetector - Event Signal Transparency Change"
 -- Hierarchy is SliderContainer ⟩ Handle ⟩ UIDragDetector ⟩ (this script)
 local sliderContainer = script.Parent.Parent.Parent
 local handle = sliderContainer:FindFirstChild("Handle")
@@ -272,7 +272,7 @@ The following detector has its `Class.UIDragDetector.DragStyle|DragStyle` set to
 To test this example, download the <a href="../assets/ui/ui-drag-detectors/HueRotator.rbxm">`HueRotator.rbxm`</a> file, right‑click `Class.StarterGui` in the [Explorer](../studio/explorer.md) window, select **Insert&nbsp;from&nbsp;File**, and choose the downloaded file.
 </Alert>
 
-```lua title='UIDragDetector - DragRotation Change'
+```lua title="UIDragDetector - DragRotation Change"
 local handle = script.Parent.Parent  -- UI element to drag
 local uiDragDetector = handle:FindFirstChildWhichIsA("UIDragDetector")
 
@@ -301,7 +301,7 @@ By default, the returned `Datatype.UDim2` and float will be the **final** desire
 
 The following example drags a UI element following a sine wave computed by the change in **X** coordinate input. Note that the detector's `Class.UIDragDetector.DragSpace|DragSpace` is set to `Enum.UIDragDetectorDragSpace.Relative`.
 
-```lua title='UIDragDetector - Drag Following Sine Wave'
+```lua title="UIDragDetector - Drag Following Sine Wave"
 local frame = script.Parent  -- UI element to drag
 local uiDragDetector = frame:FindFirstChildWhichIsA("UIDragDetector")
 
@@ -339,7 +339,7 @@ The following example utilizes a constraint function that clamps the planar drag
 To test this example, download the <a href="../assets/ui/ui-drag-detectors/GridDrag.rbxm">`GridDrag.rbxm`</a> file, right‑click `Class.StarterGui` in the [Explorer](../studio/explorer.md) window, select **Insert&nbsp;from&nbsp;File**, and choose the downloaded file.
 </Alert>
 
-```lua title='UIDragDetector - Drag in Grid, Snapping to Tiles'
+```lua title="UIDragDetector - Drag in Grid, Snapping to Tiles"
 -- Hierarchy is GridContainer ⟩ Handle ⟩ UIDragDetector ⟩ (this script)
 local gridContainer = script.Parent.Parent.Parent
 local handle = gridContainer:FindFirstChild("Handle")  -- UI element to drag

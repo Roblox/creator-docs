@@ -263,7 +263,7 @@ When anything collides with the volume, the `Touched` event handler function get
 - Plays and waits for the animation to end.
 - Sets debounce back to `false`.
 
-Setting debounce from `false` to `true` to `false` again after the animation finishes playing is a debounce pattern that prevents the animation from repeatedly triggering as players continuously collide with the volume. For more information on this debounce pattern, see [Detecting Collisions](../../../scripting/debounce.md#detecting-collisions).
+Setting debounce from `false` to `true` to `false` again after the animation finishes playing is a debounce pattern that prevents the animation from repeatedly triggering as players continuously collide with the volume. For more information on this debounce pattern, see [Detect collisions](../../../scripting/debounce.md#detect-collisions).
 
 </AccordionDetails>
 </BaseAccordion>

@@ -23,7 +23,7 @@ If you've never used Roblox Studio or coded before, start here before following 
 - [Setting up Roblox Studio](../../studio/setup.md) - Install
   and configure Roblox Studio.
 - [Create your first experience](../first-experience/index.md) - Build a simple experience.
-- [Coding fundamentals](../../tutorials/fundamentals/coding-1/coding-fundamentals.md) - Learn the basics of programming with Lua.
+- [Coding fundamentals](../../tutorials/fundamentals/coding-1/coding-fundamentals.md) - Learn the basics of programming with Luau.
 
 </AccordionDetails>
 </BaseAccordion>

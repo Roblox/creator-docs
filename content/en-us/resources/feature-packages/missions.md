@@ -9,7 +9,11 @@ This feature package is in beta.
 
 The **Missions** feature package offers out-of-the-box functionality to create missions that players can complete to achieve rewards and progress in your experience. All missions must have an ID, category, and a list of tasks that players must complete to finish the mission. However, the tasks list can be empty, allowing the mission's rewards to be claimed immediately.
 
-Using the package's customization options, you can personalize all missions to meet your unique gameplay requirements.
+Using the package's customization options, you can personalize all missions to meet your unique gameplay requirements, such as:
+
+- Creating missions that [onboard](../../production/game-design/onboarding.md) new players into your experience and improve [D1 retention](../../production/game-design/analytics-essentials.md#retention-metrics).
+- Targetting [D7 and D30 retention](../../production/game-design/analytics-essentials.md#retention-metrics) by adding mid- to long-term goals and a sense of progression.
+- Increasing [engagement](../../production/game-design/analytics-essentials.md#engagement-metrics) by surfacing the various systems in your game and rewarding players for interacting with them.
 
 <img src="../../assets/resources/feature-packages/Missions/Missions-Intro.png" width="100%" />
 
@@ -31,7 +35,7 @@ To get the packages from your inventory into your experience:
 
 	<Grid item container xs={12} sm={6} direction='row'>
 	<Grid item container direction='column'>
-	<BrowseSampleCard href='https://create.roblox.com/store/asset/94918533221001' description='The Core Feature Package offers shared DataStore table logic for all feature packages.' title='Core Feature Package' assetId={94918533221001}  />
+	<BrowseSampleCard href='https://create.roblox.com/store/asset/94918533221001' description='The Core feature package offers shared data store logic for all feature packages.' title='Core Feature Package' assetId={94918533221001}  />
 	</Grid>
 	</Grid>
 

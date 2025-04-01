@@ -140,7 +140,7 @@ The skinned character's mesh positions aren't updated when the Creature animates
 
 1. We placed the following `Class.LocalScript` in **StarterPlayer** → **StarterPlayerScripts**. This essentially runs the VFX update function.
 
-   ```lua title='Local Script'
+   ```lua title="Local Script"
    -- Add this snippet to an existing local script that makes PreSimulation
    -- connections
 
@@ -150,7 +150,7 @@ The skinned character's mesh positions aren't updated when the Creature animates
    RunService.PreSimulation:Connect(vfx.updateVfx)
    ```
 
-   ```lua title='Module Script'
+   ```lua title="Module Script"
    -- This module attached parts to animations so they are updated as the
    -- animation plays. It is a workaround for the current limitations
    -- with Joints and Bones and will not always be necessary.
@@ -207,7 +207,7 @@ The skinned character's mesh positions aren't updated when the Creature animates
    ```
 
 2. We created a **VFXUpdateModule** `Class.ModuleScript` to tell any objects tagged appropriately with **AnimatedVfxModel** to update on a play event.
-3. We tagged the necessary model groups with the **AnimatedVfxModel** using the **Tag&nbsp;Editor**, accessible from the [View](../../studio/view-tab.md) tab. Using tags allows the **VFXUpdateModule** to know which object to look for as the first VFX child and to apply the update.
+3. We tagged the necessary model groups with the **AnimatedVfxModel** using the **Tag Editor**, accessible from the [View](../../studio/view-tab.md) tab. Using tags allows the **VFXUpdateModule** to know which object to look for as the first VFX child and to apply the update.
 
    <img
    alt="VFX In Studio Example"
@@ -274,18 +274,9 @@ Because we animated the character outside of Studio, we needed to use the Animat
 
 To import an animation:
 
-1. In the Plugins tab, select the Animation Editor.
-   <img
-   alt="Animation Editor In Studio"
-   src="../../assets/resources/beyond-the-dark/custom-characters/Animation-Editor.png"
-   width="70%" />
-
+1. In the **Avatar** tab, select the **Animation Editor**.
 2. Select the rigged character that you want to animate in Roblox. The character should be the same one you are rigging in your external DCC application.
-3. Click the button in the upper-left section of the editor window, select Import From FBX Animation, and locate your exported `.fbx` animation file.
-   <img
-   alt="Animation Import Example 1"
-   src="../../assets/resources/beyond-the-dark/custom-characters/Animation-Import.png"
-   width="60%" />
+3. Click the **&ctdot;** button in the upper-left section of the editor window, select **Import From FBX Animation**, and locate your exported `.fbx` animation file.
 
    <img
    alt="Animation Import Example 2"

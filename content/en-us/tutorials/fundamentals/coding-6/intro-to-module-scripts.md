@@ -141,7 +141,7 @@ end
 return RewardManager
 ```
 
-```lua title='Script - TreasureChestScript'
+```lua title="Script - TreasureChestScript"
 local ServerStorage = game:GetService("ServerStorage")
 
 -- Load module script

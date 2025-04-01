@@ -5,7 +5,11 @@ description: Learn about the bundles feature package.
 
 The **Bundles** feature package offers out-of-the-box functionality to sell collections of items to players at a discount. You can choose whether to allow players to purchase bundles using a custom in-experience currency or Robux, which bundle type you want to use, what set of items you want to sell, and how you want to prompt players during their gameplay.
 
-Using the package's customization options, you can tailor your bundles to meet the design and monetization goals of your experiences.
+Using the package's customization options, you can tailor your bundles to meet the design and monetization goals of your experiences, such as:
+
+- Targetting a low [conversion rate](../../production/game-design/analytics-essentials.md#monetization-metrics) metric by offering discounted [starter packs](../../production/game-design/starter-pack-design.md) that provide value to new players and encourage early spend.
+- Increasing [spend depth](../../production/game-design/analytics-essentials.md#monetization-metrics) by bundling items at various price points to appeal to a range of players.
+- Monetizing live operations (LiveOps) [events](../../production/game-design/liveops-essentials.md#content-cadence) by offering limited-time bundles of exclusive items.
 
 <img src="../../assets/resources/feature-packages/Bundles/Bundles-Intro.png" width="100%" />
 
@@ -27,7 +31,7 @@ To get the packages from your inventory into your experience:
 
     <Grid item container xs={12} sm={6} direction='row'>
     <Grid item container direction='column'>
-    <BrowseSampleCard href='https://create.roblox.com/store/asset/94918533221001' description='The Core Feature Package offers shared DataStore table logic for all feature packages.' title='Core Feature Package' assetId={94918533221001}  />
+    <BrowseSampleCard href='https://create.roblox.com/store/asset/94918533221001' description='The Core feature package offers shared data store logic for all feature packages.' title='Core Feature Package' assetId={94918533221001}  />
     </Grid>
     </Grid>
 
@@ -50,7 +54,7 @@ To get the packages from your inventory into your experience:
 
 5. Click the **Feature Package Core** tile, then the **Bundle Feature Package** tile. Both package folders display in the **Explorer** window.
 6. Drag the package folders into **ReplicatedStorage**.
-7. Allow DataStore calls to track player purchases with the packages.
+7. Allow data store calls to track player purchases with the packages.
    1. In the **Home** tab of the menu bar, select **Game Settings**.
 
       <img src="../../assets/studio/general/Home-Tab-Game-Settings.png" width="760" alt="Game Settings button indicated in Home tab" />
@@ -374,7 +378,7 @@ You mainly need to hook up four things once dragging the **Bundles** feature pac
    ```
 
 <Alert severity="warning">
-When awarding purchases, ensure that you also check and record `receiptInfo.PurchaseId` in your DataStores.
+When awarding purchases, ensure that you also check and record `receiptInfo.PurchaseId` in your data stores.
 </Alert>
 
 Consider the following best practice guidance on redundant recordings of ReceiptIds:
@@ -383,7 +387,7 @@ Consider the following best practice guidance on redundant recordings of Receipt
 
 - The **Bundles** feature package will not record the ReceiptId if the purchase fails at any step, so you should ensure that you are recording the ReceiptId in your tables before processing the receipt as part of your purchaseHandler.
 
-- This redundancy helps ensure that all purchase logic has been appropriately handled and that your DataStore+Bundles Feature Package's DataStore reaches eventual consistency, with the your data store being the source of truth.
+- This redundancy helps ensure that all purchase logic has been appropriately handled and that your data store and the **Bundles** feature package's data store reach eventual consistency, with your data store being the source of truth.
 
 ## Configure constants
 

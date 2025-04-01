@@ -54,7 +54,8 @@
         "LocalUserSecurity",
         "RobloxScriptSecurity",
         "RobloxSecurity",
-        "NotAccessibleSecurity"
+        "NotAccessibleSecurity",
+        "WritePlayerSecurity"
       ]
     },
     "tags": {

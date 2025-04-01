@@ -3,17 +3,15 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  Instance is the base class for all classes in the Roblox class hierarchy which
-  can be part of the DataModel tree.
+  `Instance` is the base class for all classes in the Roblox class hierarchy
+  which can be part of the `Class.DataModel` tree.
 description: |
-  Instance is the base class for all classes in the Roblox class hierarchy which
-  can be part of the DataModel tree. It is not possible to directly create
-  Instance objects.
+  `Instance` is the base class for all classes in the Roblox class hierarchy
+  which can be part of the `Class.DataModel` tree.
 
-  Instance has a special function called `Datatype.Instance.new()` which is used
-  to create objects via code. This function takes the name of the class as a
-  parameter and returns the created object. Abstract classes and services cannot
-  be created with the Instance.new function.
+  It is not possible to directly create root `Instance` objects, but the special
+  `Datatype.Instance.new()` constructor creates objects via code, taking the
+  name of the class as a parameter and returning the created object.
 code_samples:
 inherits:
   - Object
@@ -65,10 +63,10 @@ properties:
     description: |
       The set of capabilities allowed to be used for scripts inside this
       instance. For the capabilities to take effect, `Class.Instance.Sandboxed`
-      property has to be enabled.
+      property must be enabled.
 
       This property is used by an experimental feature. See
-      [Script Capabilities](../../../scripting/capabilities.md) page for further
+      [script capabilities](../../../scripting/capabilities.md) for further
       details.
     code_samples: []
     type: SecurityCapabilities
@@ -88,13 +86,10 @@ properties:
     summary: |
       A non-unique identifier of the `Class.Instance`.
     description: |
-      A non-unique identifier of the `Class.Instance`.
-
-      This property is an identifier that describes an object. Names are not
-      necessarily unique identifiers however; multiple children of an object may
-      share the same name. Names are used to keep the object hierarchy
-      organized, along with allowing scripts to access specific objects. The
-      name of an instance cannot exceed 100 characters in size.
+      A non-unique identifier of the `Class.Instance`. Names are used to keep
+      the object hierarchy organized, along with allowing scripts to access
+      specific objects. The name of an instance cannot exceed 100 characters in
+      size.
 
       The name of an object is often used to access the object through the data
       model hierarchy using the following methods:
@@ -107,22 +102,22 @@ properties:
       local baseplate = Workspace:FindFirstChild("BasePlate")
       ```
 
-      In order to make an object accessible using the dot operator, an object's
-      Name must follow a certain syntax. The objects name must start with an
-      underscore or letter. The rest of the name can only contain letters,
-      numbers, or underscores (no other special characters). If an objects name
-      does not follow this syntax it will not be accessible using the dot
-      operator and Lua will not interpret its name as an identifier.
+      In order to make an object accessible using the dot operator (`.`), its
+      name must start with an underscore or letter, and the rest of the name can
+      only contain letters, numbers, or underscores (no other special
+      characters). If an object's name does not follow this syntax, it will not
+      be accessible using the dot operator and Luau will not interpret its name
+      as an identifier.
 
-      If more than one object with the same name are siblings then any attempt
-      to index an object by that name will return the only one of the objects
-      found similar to `Class.Instance:FindFirstChild()`, but not always the
-      desired object. If a specific object needs to be accessed through code, it
-      is recommended to give it a unique name, or guarantee that none of its
-      siblings share the same name as it.
+      If more than one object with the same name are siblings, any attempt to
+      index an object by that name will return only one of the objects, similar
+      to `Class.Instance:FindFirstChild()`, but not always the desired object.
+      If a specific object needs to be accessed through code, it's recommended
+      to give it a unique name or guarantee that none of its siblings share the
+      same name.
 
-      Note, a full name showing the instance's hierarchy can be obtained using
-      `Class.Instance:GetFullName()`.
+      See also `Class.Instance:GetFullName()` to obtain a full name including
+      the object's hierarchy.
     code_samples:
     type: string
     tags: []
@@ -141,79 +136,56 @@ properties:
     summary: |
       Determines the hierarchical parent of the `Class.Instance`.
     description: |
-      The Parent property determines the hierarchical parent of the
+      The `Parent` property determines the hierarchical parent of the
       `Class.Instance`. The following terminology is commonly used when talking
       about how this property is set:
 
-      - An object is a **child** (**parented to**) another object when its
-        Parent is set to that object.
+      - An object is a **child** of, or is **parented to**, another object when
+        its `Parent` is set to that object.
+
       - The **descendants** of an `Class.Instance` are the children of that
         object, plus the descendants of the children as well.
+
       - The **ancestors** of an `Class.Instance` are all the objects that the
-        Instance is a descendant of.
+        instance is a descendant of.
 
-      It is from this property that many other API members get their name, such
-      as `Class.Instance:GetChildren()|GetChildren` and
-      `Class.Instance:FindFirstChild()|FindFirstChild`.
+      It is from the `Parent` property that many other API members get their
+      name, such as `Class.Instance:GetChildren()|GetChildren()` and
+      `Class.Instance:FindFirstChild()|FindFirstChild()`. This property is also
+      used to manage whether an object exists in the experience or needs to be
+      removed. As long as an object's parent is in the `Class.DataModel`, is
+      stored in a variable, or is referenced by another object's property, the
+      object remains in the experience; otherwise, the object will automatically
+      be removed.
 
-      The `Class.Instance:Remove()|Remove` function sets this property to nil.
-      Calling `Class.Instance:Destroy()|Destroy` will set the Parent of an
+      Calling `Class.Instance:Destroy()|Destroy()` will set the `Parent` of an
       `Class.Instance` and all of its descendants to `nil`, and also **lock**
-      the Parent property. An error is raised when setting the Parent of a
+      the `Parent` property. An error is raised when setting the `Parent` of a
       destroyed object.
 
-      This property is also used to manage whether an object exists in the game
-      or needs removed. As long as an objects parent is in the
-      `Class.DataModel`, is stored in a variable, or is referenced by another
-      objects property, then the object remains in the game. Otherwise, the
-      object will automatically be removed. The top level `Class.DataModel`
-      object (the one referred to as the `game` by scripts) has no parent, but
-      always has a reference held to it by the game engine, and exists for the
-      duration of a session.
-
       Newly created objects using `Datatype.Instance.new()` will not have a
-      parent, and usually will not be visible or function until one is set. The
-      most elementary creation of an object has two steps: creating the object,
-      then setting its parent.
+      parent, and usually will not be visible or function until one is set.
 
-      ```
-      local Workspace = game:GetService("Workspace")
-
-      -- Create a part and parent it to the workspace
-      local part = Instance.new("Part")
-      part.Parent = Workspace
-      -- Instance new can also take the parent as a second parameter, although it is not recommended
-      Instance.new("NumberValue", Workspace)
-      ```
-
-      When a change is made to certain properties while an instance is parented
-      in the `Class.DataModel`, the engine may need to perform extra work
-      internally (for things like replication, rendering, and GUI layout).
-      Whenever possible, change an instance's properties **before** you set its
-      Parent, rather than after, to avoid performing that work redundantly.
-
-      #### Object Replication
+      ##### Object Replication
 
       An object created by the server will not replicate to clients until it is
-      parented to some object that is replicated. When creating an object then
-      setting many properties, it's recommended to **set Parent last**. This
-      ensures the object replicates once, instead of replicating many property
-      changes.
+      parented to some object that is replicated. When creating an object and
+      setting many properties, it's recommended to set the `Parent` property
+      **last**. This ensures the object replicates once, instead of replicating
+      many property changes.
 
       ```lua
       local Workspace = game:GetService("Workspace")
 
-      local part = Instance.new("Part") -- Avoid using the second parameter here
-      part.Anchored = true
-      part.BrickColor = BrickColor.new("Really red")
-      -- Potentially many other property changes could go here here...
-      -- Always set parent last!
+      -- Set new instance's parent last (recommended)
+      local part = Instance.new("Part")
+      part.Position = Vector3.new(0, 10, 0)
       part.Parent = Workspace
       ```
 
-      However, if you were parenting your parts to a `Class.Model` whose parent
-      hasn't been set yet, then parenting each part to that model is okay as the
-      model would not have replicated yet.
+      However, if parenting parts to a `Class.Model` whose parent hasn't been
+      set yet, parenting each part to that model is acceptable since the model
+      would not have replicated.
     code_samples:
     type: Instance
     tags:
@@ -254,14 +226,13 @@ properties:
     writeCapabilities: []
   - name: Instance.Sandboxed
     summary: |
-      Turns the instance to be a Sandboxed Container.
+      Turns the instance to be a sandboxed container.
     description: |
-      Turns the instance to be a Sandboxed Container. Sandboxed Containers are
-      an experimental feature which limits the actions that scripts inside a
-      particular container can perform.
-
-      See [Script Capabilities](../../../scripting/capabilities.md) page for
-      further details.
+      Turns the instance to be a **sandboxed container**, an experimental
+      feature which limits the actions that scripts inside a particular
+      container can perform. See
+      [script capabilities](../../../scripting/capabilities.md) for further
+      details.
     code_samples: []
     type: bool
     tags:
@@ -278,8 +249,11 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: Instance.UniqueId
-    summary: ''
-    description: ''
+    summary: |
+      A unique identifier for the instance.
+    description: |
+      A unique identifier for the instance, distinct from `Class.Instance.Name`
+      which is not necessarily unique.
     code_samples: []
     type: UniqueId
     tags:
@@ -359,22 +333,22 @@ methods:
     summary: |
       This function destroys all of an instance's children.
     description: |
-      This function destroys all of an instance's children.
+      This function destroys all of an instance's children and descendants.
 
-      As `Class.Instance:Destroy()` also calls itself on the children of an
-      object it is used on, this function will destroy all descendants.
-
-      #### Alternatives to ClearAllChildren
-
-      If the developer does not wish to destroy all descendants, they should use
+      If you do not wish to destroy **all** children and descendants, use either
       `Class.Instance:GetChildren()` or `Class.Instance:GetDescendants()` to
-      loop through an object and select what to destroy. For example, the
-      following code sample will destroy all parts in an object.
+      loop through those children/descendants and select what to destroy. For
+      example, the following code sample will destroy all
+      `Class.BasePart|BaseParts` descending from a `Class.Model`:
 
       ```
-      for _, instance in object:GetDescendants() do
-      	if instance:IsA("BasePart") then
-      		instance:Destroy()
+      local Workspace = game:GetService("Workspace")
+
+      local model = Workspace:FindFirstChild("TestModel")
+
+      for _, descendant in model:GetDescendants() do
+      	if descendant:IsA("BasePart") then
+      		descendant:Destroy()
       	end
       end
       ```
@@ -395,7 +369,7 @@ methods:
       Create a copy of an instance and all its descendants, ignoring instances
       that are not `Class.Instance.Archivable|Archivable`.
     description: |
-      **Clone** creates a copy of an instance and all of its descendants,
+      `Clone()` creates a copy of an instance and all of its descendants,
       ignoring all instances that are not
       `Class.Instance.Archivable|Archivable`. The copy of the root instance is
       returned by this method and its `Class.Instance.Parent|Parent` is set to
@@ -489,10 +463,10 @@ methods:
 
       This function works upwards, meaning it starts at the instance's immediate
       `Class.Instance.Parent` and works up towards the `Class.DataModel`. If no
-      matching ancestor is found, it returns nil.
+      matching ancestor is found, it returns `nil`.
 
       The following code snippet would find the first ancestor of the object
-      named 'Car'.
+      named `Car`.
 
       ```
       local car = object:FindFirstAncestor("Car")
@@ -528,7 +502,7 @@ methods:
 
       This function works upwards, meaning it starts at the instance's immediate
       `Class.Instance.Parent` and works up towards the `Class.DataModel`. If no
-      matching ancestor is found, it returns nil.
+      matching ancestor is found, it returns `nil`.
 
       A common use of this function is finding the `Class.Model` a
       `Class.BasePart` belongs to. For example:
@@ -569,7 +543,7 @@ methods:
 
       This function works upwards, meaning it starts at the instance's immediate
       `Class.Instance.Parent` and works up towards the `Class.DataModel`. If no
-      matching ancestor is found, it returns nil.
+      matching ancestor is found, it returns `nil`.
 
       Unlike `Class.Instance:FindFirstAncestorOfClass()`, this function uses
       `Class.Object:IsA()` which respects class inheritance. For example:
@@ -588,7 +562,7 @@ methods:
       local part = object:FindFirstAncestorWhichIsA("BasePart")
       ```
 
-      See also, `Class.Instance:FindFirstAncestor()`.
+      See also `Class.Instance:FindFirstAncestor()`.
     code_samples:
     parameters:
       - name: className
@@ -663,7 +637,7 @@ methods:
       this way is that the introduction of new properties does not impose a risk
       on your code.
 
-      #### Performance Note
+      ##### Performance Notes
 
       `Class.Instance:FindFirstChild()|FindFirstChild()` takes about 20% longer
       than using the dot operator and almost 8 times longer than simply storing
@@ -700,19 +674,13 @@ methods:
   - name: Instance:FindFirstChildOfClass
     summary: |
       Returns the first child of the `Class.Instance` whose
-      `Class.Object.ClassName|ClassName` is equal to the given className.
+      `Class.Object.ClassName|ClassName` is equal to the given class name.
     description: |
       Returns the first child of the `Class.Instance` whose
-      `Class.Object.ClassName|ClassName` is equal to the given className.
-
-      If no matching child is found, this function returns nil.
-
-      Unlike `Class.Instance:FindFirstChildWhichIsA()` this function uses only
-      returns objects whose class matches the given className, ignoring class
-      inheritance.
-
-      Developers looking for a child by name should use
-      `Class.Instance:FindFirstChild()` instead.
+      `Class.Object.ClassName|ClassName` is equal to the given `className`.
+      Unlike `Class.Instance:FindFirstChildWhichIsA()`, this function only
+      returns objects whose class matches `className`, ignoring class
+      inheritance. If no matching child is found, this function returns `nil`.
     code_samples:
       - Instance-FindFirstChildOfClass1
     parameters:
@@ -739,9 +707,10 @@ methods:
       Returns the first child of the `Class.Instance` for whom
       `Class.Object:IsA()` returns true for the given className.
 
-      If no matching child is found, this function returns nil. If the optional
-      recursive argument is true, this function searches all descendants rather
-      than only the immediate children of the `Class.Instance`.
+      If no matching child is found, this function returns `nil`. If the
+      optional recursive argument is true, this function searches all
+      descendants rather than only the immediate children of the
+      `Class.Instance`.
 
       Unlike `Class.Instance:FindFirstChildOfClass()`, this function uses
       `Class.Object:IsA()` which respects class inheritance. For example:
@@ -837,7 +806,7 @@ methods:
       attribute name. If no attribute has been assigned, `nil` is returned.
 
       For example, the following code snippet sets and then gets the value of
-      the instance's **InitialPosition** attribute:
+      the instance's `InitialPosition` attribute:
 
       ```lua
       local Workspace = game:GetService("Workspace")
@@ -849,7 +818,7 @@ methods:
       print(initialPosition)
       ```
 
-      #### See Also
+      ##### See Also
 
       - `Class.Instance:SetAttribute()` which sets the attribute with the given
         name to the given value.
@@ -889,8 +858,7 @@ methods:
       attribute name return the same event.
 
       The following code example returns a signal that fires the function
-      `attributeChanged()` when the part's **InitialPosition** attribute
-      changes:
+      `attributeChanged()` when the part's `InitialPosition` attribute changes:
 
       ```lua
       local Workspace = game:GetService("Workspace")
@@ -1015,18 +983,17 @@ methods:
     summary: |
       Returns a coded string of the debug ID used internally by Roblox.
     description: |
-      Returns a coded string of the debug ID used internally by Roblox.
-
-      Note:
+      Returns a coded string of the debug ID used internally by Roblox. Note
+      that:
 
       - This item is protected. Attempting to use it in a `Class.Script` or
-        `Class.LocalScript` will cause an error
+        `Class.LocalScript` will cause an error.
       - A debug ID is an ID used in debugging processes. It allows a debugger to
         read each instruction before an application processes it. All objects in
         Roblox act like processes and each run instructions (or 'code') that can
-        be debugged if needed
+        be debugged if needed.
       - This can be helpful for plugins which need to distinguish similar
-        objects from one-another (such as objects that share the same name)
+        objects from one-another (such as objects that share the same name).
     code_samples:
       - Instance-GetDebugId1
     parameters:
@@ -1085,7 +1052,7 @@ methods:
       This function is useful for logging and debugging. You shouldn't attempt
       to parse the returned string for any useful operation; this function does
       not escape periods (or any other symbol) in object names. In other words,
-      although its output often appears to be a valid Lua identifier, it is not
+      although its output often appears to be a valid Luau identifier, it is not
       guaranteed.
     code_samples:
       - Instance-GetFullName1
@@ -1217,18 +1184,16 @@ methods:
     writeCapabilities: []
   - name: Instance:IsDescendantOf
     summary: |
-      Returns true if an `Class.Instance` is a descendant of the given ancestor.
+      Returns `true` if an `Class.Instance` is a descendant of the given
+      ancestor.
     description: |
-      Returns true if an `Class.Instance` is a descendant of the given ancestor.
+      Returns `true` if an `Class.Instance` is a descendant of the given
+      ancestor.
 
-      An `Class.Instance` is considered the descendant of an object if the
-      instance's parent or one of its parent's parent is set to the object.
+      Note that `IsDescendantOf()` cannot be used with a parameter of `nil` to
+      check if an object has been removed.
 
-      Note, `Class.DataModel` is a descendant of nil. This means IsDescendantOf
-      cannot be used with a parameter of nil to check if an object has been
-      removed.
-
-      See also, `Class.Instance:IsAncestorOf()`.
+      See also `Class.Instance:IsAncestorOf()`.
     code_samples:
       - Instance-IsDescendantOf1
     parameters:
@@ -1247,15 +1212,42 @@ methods:
     thread_safety: Safe
     capabilities: []
     writeCapabilities: []
+  - name: Instance:IsPropertyModified
+    summary: |
+      Returns `true` if the value stored in the specified property is
+      non-default.
+    description: |
+      Returns `true` if the value stored in the specified property is
+      non‑default. For example, if outputting the
+      `Class.TextLabel.Rotation|Rotation` property of a `Class.TextLabel`
+      indicates `0`, then calling `IsPropertyModified("Rotation")` on the label
+      will return `false` because `0` is the default value for
+      `Class.TextLabel.Rotation`.
+    code_samples: []
+    parameters:
+      - name: property
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: |
+          Boolean indicating whether the property is modified.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:Remove
     summary: |
-      Sets the object's Parent to nil, and does the same for all its
+      Sets the object's `Parent` to `nil`, and does the same for all its
       descendants.
     description: |
-      The Remove function sets the object's `Class.Instance.Parent` to nil, and
-      does the same for all its descendants.
+      This function sets the object's `Class.Instance.Parent` to `nil`, and does
+      the same for all its descendants.
 
-      If the object is referenced before being removed it is possible to
+      If the object is referenced before being removed, it is possible to
       retrieve the object at a later point.
     code_samples:
       - Instance-Remove1
@@ -1268,7 +1260,7 @@ methods:
     deprecation_message: |
       This item is deprecated in favor of `Class.Instance:Destroy()` and
       `Class.Instance:ClearAllChildren()`. If you must remove an object from the
-      game, and wish to use the object later, set its Parent property to nil
+      game, and wish to use the object later, set its `Parent` property to `nil`
       instead of using this method.
     security: None
     thread_safety: Unsafe
@@ -1302,6 +1294,28 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: Instance:ResetPropertyToDefault
+    summary: ''
+    description: |
+      Resets a property to its default value. For example, calling
+      `ResetPropertyToDefault("Rotation")` on a `Class.TextLabel` is equivalent
+      to setting its `Class.TextLabel.Rotation|Rotation` to `0` (the property's
+      default value).
+    code_samples: []
+    parameters:
+      - name: property
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:SetAttribute
     summary: |
       Sets the attribute with the given name to the given value.
@@ -1311,7 +1325,7 @@ methods:
       returned by default.
 
       For example, the following code snippet sets the instance's
-      **InitialPosition** attribute to `Datatype.Vector3|Vector3.new(0, 10, 0)`:
+      `InitialPosition` attribute to `Datatype.Vector3|Vector3.new(0, 10, 0)`:
 
       ```lua
       local Workspace = game:GetService("Workspace")
@@ -1320,7 +1334,7 @@ methods:
       part:SetAttribute("InitialPosition", Vector3.new(0, 10, 0))
       ```
 
-      #### Limitations
+      ##### Limitations
 
       Naming requirements and restrictions:
 
@@ -1333,7 +1347,7 @@ methods:
       When attempting to set an attribute to an unsupported type, an error will
       be thrown.
 
-      See also:
+      ##### See Also
 
       - `Class.Instance:GetAttribute()` which returns the value that has been
         assigned to the given attribute name.
@@ -1370,7 +1384,7 @@ methods:
       the `timeOut` parameter is specified, this method will time out after the
       specified number of seconds and return `nil`.
 
-      #### Primary Usage
+      ##### Primary Usage
 
       `Class.Instance:WaitForChild()|WaitForChild()` is extremely important when
       working on code run by the client in a `Class.LocalScript`. The Roblox
@@ -1381,7 +1395,7 @@ methods:
       may not be streamed to the client, potentially causing scripts to break
       when indexing objects that do not yet exist on the client.
 
-      #### Notes
+      ##### Notes
 
       - This function does not yield if a child with the given name exists when
         the call is made.
@@ -1559,9 +1573,9 @@ events:
       Fires when the `Class.Instance.Parent` property of the object or one of
       its ancestors is changed.
 
-      This event includes two parameters, _child_ and _parent_. _Child_ refers
-      to the `Class.Instance` whose `Class.Instance.Parent` was actually
-      changed. _Parent_ refers to this instance's new `Class.Instance.Parent`.
+      This event includes two parameters: `child` refers to the `Class.Instance`
+      whose `Class.Instance.Parent` was actually changed, while `parent` refers
+      to this instance's new `Class.Instance.Parent`.
 
       You can use this event to track the deletion of an instance in Studio,
       such as manual deletion in the Explorer or through a plugin. If you need
@@ -1675,7 +1689,7 @@ events:
       `Class.Instance` to something other than this `Class.Instance`. Note, this
       event will also fire when a child is destroyed (using
       `Class.Instance:Destroy()`) as the destroy function sets an object's
-      parent to nil.
+      parent to `nil`.
 
       This function only works for immediate children of the `Class.Instance`.
       For a function that captures all descendants, use
@@ -1700,15 +1714,14 @@ events:
     summary: |
       Fires after a descendant is added to the `Class.Instance`.
     description: |
-      The DescendantAdded event fires after a descendant is added to the
-      `Class.Instance`.
+      This event fires after a descendant is added to the `Class.Instance`.
 
-      As DescendantAdded fires for every descendant, parenting an object to the
+      As it fires for every descendant, parenting an object to the
       `Class.Instance` will fire the event for this object and all of its
       descendants individually.
 
-      Developers only concerned with the immediate children of the
-      `Class.Instance` should use `Class.Instance.ChildAdded` instead.
+      If you're only concerned with the **direct children** of the
+      `Class.Instance`, use `Class.Instance.ChildAdded` instead.
 
       See also `Class.Instance.DescendantRemoving`.
     code_samples:
@@ -1743,7 +1756,7 @@ events:
       If a descendant has children, this event fires with the descendant first,
       followed by its descendants.
 
-      #### Warning
+      ##### Warning
 
       This event fires with the descendant object that is being removed.
       Attempting to set the `Class.Instance.Parent|Parent` of the descendant to

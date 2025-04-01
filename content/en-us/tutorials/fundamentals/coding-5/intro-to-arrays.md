@@ -1,11 +1,11 @@
 ---
 title: Intro to arrays
-description: Learn how to use arrays in Roblox Lua to store multiple values at a time. This tutorial shows how to create and change arrays while making an interactive NPC in Roblox.
+description: Learn how to use arrays in Luau to store multiple values at a time. This tutorial shows how to create and change arrays while making an interactive NPC in Roblox.
 next: /tutorials/fundamentals/coding-5/loops-and-arrays
 prev: /tutorials/fundamentals/coding-5/landing
 ---
 
-**Data structures** are how coders store and organize entire sets of data. In Lua, data structures are created with tables. **Tables** can hold any number of values.
+**Data structures** are how coders store and organize entire sets of data. In Luau, data structures are created with tables. **Tables** can hold any number of values.
 
 This article covers using **arrays**, a specific table type, to create a talking character.
 
@@ -212,7 +212,7 @@ Use the array size to check when it's time to cycle back to the first piece of d
 
 ## Summary
 
-Data structures are how sets of data are stored. Lua uses tables to create data structures. Arrays are a type of table that can hold ordered lists of information. Each value within the array is assigned an index number, starting with index 1.
+Data structures are how sets of data are stored. Luau uses tables to create data structures. Arrays are a type of table that can hold ordered lists of information. Each value within the array is assigned an index number, starting with index 1.
 
 This script used an array to create a list of possible dialogue lines for a Non-Playable Character (NPC).
 

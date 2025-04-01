@@ -26,7 +26,7 @@ In the [Explorer](../studio/explorer.md) window, expand the `Class.TextChatServi
 <TabItem label="Scripting">
 From a client script within `Class.StarterPlayerScripts`, enable each component as desired:
 
-```lua title='Client Script'
+```lua title="Client Script"
 local TextChatService = game:GetService("TextChatService")
 
 local ChatWindowConfiguration = TextChatService:FindFirstChildOfClass("ChatWindowConfiguration")
@@ -285,7 +285,7 @@ Appearance of the **channel tabs** is customizable through `Class.ChannelTabsCon
 
 ## Customize messages
 
-You can customize the appearance of chat message bodies and prefixes using `Class.ChatWindowMessageProperties` and `Class.TextChatService.OnChatWindowAdded` callbacks without overriding the existing UI. The customization options let you modify the appearance of chat messages to match your experience's theme, and you can also sort or highlight messages from different user groups by adding chat tags and coloring prefixes.
+You can customize the appearance of chat message bodies and prefixes using `Class.ChatWindowMessageProperties` and `Class.TextChatService.OnChatWindowAdded` callbacks without overriding the existing UI. The customization options let you modify the appearance of chat messages to match your experience's theme, and you can also sort or highlight messages from different user groups by coloring prefixes or adding [chat tags](./examples/group-chat-tags.md).
 
 <Alert severity="info">
 `Class.ChatWindowMessageProperties` and `Class.TextChatService.OnChatWindowAdded|OnChatWindowAdded` only affect the appearance of messages in the chat window. To customize chat bubbles, see [Bubble Chat](../chat/bubble-chat.md).
@@ -354,35 +354,6 @@ TextChatService.OnChatWindowAdded = function(message: TextChatMessage)
 end
 ```
 
-### Add chat tags
-
-If your experience has users with special [attributes](../studio/properties.md#instance-attributes) like VIP status, you can attach chat tags wrapped in brackets to the front of user messages to highlight their messages. The following `Class.LocalScript` in `Class.StarterPlayerScripts` examines all `Class.Player` instances representing users in your experience and appends VIP chat tags to those with the `IsVIP` attribute.
-
-<img src="../assets/players/in-experience-text-chat/Chat-Tag-VIP.png" width="780" alt="VIP chat tag appended to user name in the chat window." />
-
-```lua title="Appending Chat Tags"
-local TextChatService = game:GetService("TextChatService")
-local Players = game:GetService("Players")
-
-local chatWindowConfiguration = TextChatService.ChatWindowConfiguration
-
-TextChatService.OnChatWindowAdded = function(message: TextChatMessage)
-	local properties = chatWindowConfiguration:DeriveNewMessageProperties()
-
-	if message.TextSource then
-		local player = Players:GetPlayerByUserId(message.TextSource.UserId)
-		if player:GetAttribute("IsVIP") then
-			properties.PrefixText = "[VIP] " .. message.PrefixText
-
-			properties.PrefixTextProperties = chatWindowConfiguration:DeriveNewMessageProperties()
-			properties.PrefixTextProperties.TextColor3 = Color3.fromRGB(255, 125, 50)
-		end
-	end
-
-	return properties
-end
-```
-
 ### Rich text customization
 
 Rich text [font color tags](../ui/rich-text.md#supported-tags) can be used to format chat messages, helpful if you want to apply formatting to very specific parts of the message. Note that rich text does not support gradients, but the following code sample shows how you can move the user name (stored in `Class.TextChatMessage.PrefixText`) into the message body and then apply rich text tagging to only the name portion.
@@ -425,7 +396,7 @@ Sometimes, you might want to show non‑player dialogue in the chat window, such
 
 To deliver a system message to the local player, call `Class.TextChannel:DisplaySystemMessage()|DisplaySystemMessage()` from the default **RBXGeneral** channel with a prefix before the player's display name.
 
-```lua title='Client Script'
+```lua title="Client Script"
 local Players = game:GetService("Players")
 local TextChatService = game:GetService("TextChatService")
 
@@ -444,7 +415,7 @@ For a more detailed guide on how to customize the appearance of system messages,
 
 #### Default system messages
 
-When `Class.TextChatService.CreateDefaultTextChannels` is true, one of the default text channels is the RBXSystem channel. The default chat scripts automatically display system messages in this channel. You can customize the appearance of these messages using the `Class.TextChannel.OnIncomingMessage` callback.
+When `Class.TextChatService.CreateDefaultTextChannels` is `true`, one of the default text channels is the `RBXSystem` channel. The default chat scripts automatically display system messages in this channel. You can customize the appearance of these messages using the `Class.TextChannel.OnIncomingMessage` callback.
 
 You might want to customize or alter the system messages that are automatically emitted by the chat system. Since the default system messages are localized for users, you should reference them by `TextChatMessage.Metadata` in your [text chat callbacks](../chat/in-experience-text-chat.md#text-chat-hooks-and-callbacks) if you wish to customize their appearance.
 
@@ -589,7 +560,7 @@ Below is a reference of the default system messages that are emitted by the chat
 
 You can also stylize non-player dialogue and add [chat bubbles](../chat/bubble-chat.md) to make it appear like messages are coming from an NPC or object within the 3D world.
 
-```lua title='Client Script'
+```lua title="Client Script"
 local TextChatService = game:GetService("TextChatService")
 local Workspace = game:GetService("Workspace")
 

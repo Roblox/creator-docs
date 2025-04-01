@@ -689,7 +689,8 @@ events:
           The time (in seconds) that has elapsed since the previous frame.
     tags: []
     deprecation_message: |
-      This event has been superseded by `Class.RunService.PreRender|PreRender` which should be used for new work.
+      This event has been superseded by `Class.RunService.PreRender|PreRender`
+      which should be used for new work.
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -713,7 +714,9 @@ events:
           The time (in seconds) that has elapsed since the previous frame.
     tags: []
     deprecation_message: |
-      This event has been superseded by `Class.RunService.PreSimulation|PreSimulation` which should be used for new work.
+      This event has been superseded by
+      `Class.RunService.PreSimulation|PreSimulation` which should be used for
+      new work.
     security: None
     thread_safety: Unsafe
     capabilities: []

@@ -49,7 +49,7 @@ return Stack
 
 The following code sample is a usage example as a `Class.Script` under `Class.Workspace`. You can modify the code, type, and storage location to fit your own usage, as long as you have the previous implementation code sample properly stored.
 
-```lua title='Stack Usage Example'
+```lua title="Stack Usage Example"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Stack = require(ReplicatedStorage:WaitForChild("Stack"))
 
@@ -80,7 +80,7 @@ When running `pop()` on a stack, make sure the stack is not empty.
 
 If you run the previous code sample without changing anything, the expected output is:
 
-```lua title='Example Output'
+```lua title="Example Output"
 10
 5
 20

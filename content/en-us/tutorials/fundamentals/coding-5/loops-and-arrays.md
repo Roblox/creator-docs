@@ -1,6 +1,6 @@
 ---
 title: Loops and arrays
-description: Learn how to iterate, or go through, arrays in Roblox Lua using loops.
+description: Learn how to iterate, or go through, arrays in Luau using loops.
 next: /tutorials/fundamentals/coding-5/make-changes-to-arrays
 prev: /tutorials/fundamentals/coding-5/intro-to-arrays
 ---
@@ -207,7 +207,7 @@ This will be demonstrated by quickly adding particles to a whole folder of parts
 
    ```lua
    local partsFolder = workspace.PartsFolder
-   
+
    -- Gets an array listing the parts in PartsFolder
    local partsArray = partsFolder:GetChildren()
    ```
@@ -217,7 +217,7 @@ This will be demonstrated by quickly adding particles to a whole folder of parts
    ```lua title="Completed script"
    -- Gets an array listing the parts in PartsFolder
    local partsArray = partsFolder:GetChildren()
-   
+
    -- Adds particles to every part in the array
    for index, part in ipairs(partsArray) do
    	local particles = Instance.new("ParticleEmitter")

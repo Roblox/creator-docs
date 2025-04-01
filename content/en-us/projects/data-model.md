@@ -62,7 +62,7 @@ modeling](/parts/solid-modeling).
 ### Scripts
 
 You can add interactivity and behavior to your place's 3D world and define logic
-with scripts. You write scripts in the Lua programming language to do things
+with scripts. You write scripts in the Luau programming language to do things
 like moving parts, calling other scripts, and responding to events. Because
 Roblox works in a client-server model, you can run scripts on the server,
 client, or have them communicate across the network boundary.

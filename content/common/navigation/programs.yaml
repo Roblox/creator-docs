@@ -1,0 +1,38 @@
+backTo:
+  title: Back to platform
+  path: /platform
+navigation:
+  - title: Overview
+    path: /creator-programs/
+  - title: Brand Developer Directory
+    path: /creator-programs/brand-developer-directory
+  - title: Community Feedback
+    path: /creator-programs/feedback
+  - title: Creator Affiliate Pilot
+    path: /creator-programs/creator-affiliate
+  - title: Creator Events
+    path: /creator-programs/creator-events
+  - title: Creator Fund
+    path: /creator-fund
+  - title: Creator Spotlights
+    path: /creator-programs/spotlights
+  - title: Developer Awards
+    path: /creator-programs/developer-awards
+  - title: Inspire
+    path: /creator-programs/inspire
+  - title: Learn & Explore Sort
+    path: /creator-programs/learn-explore-sort
+  - title: Managed Brand Integrations
+    path: /creator-programs/managed-brand-integrations
+  - title: Notable Translators
+    path: /creator-programs/notable-translators
+  - title: Roblox Developers Conference (RDC)
+    path: /creator-programs/rdc
+  - title: Roblox Innovation Awards
+    path: /creator-programs/innovation-awards
+  - title: Roblox Research Panel
+    path: /creator-programs/research-panel
+  - title: Today's Picks on Home
+    path: /creator-programs/todays-picks-home
+  - title: Today's Picks on Marketplace
+    path: /creator-programs/todays-picks-marketplace

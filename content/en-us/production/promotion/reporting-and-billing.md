@@ -7,12 +7,12 @@ Use the reporting and billing tools in the Ads Manager to effectively manage you
 
 ## Reporting
 
-The ads reporting tool provides the information necessary to manage ad campaigns at the campaign, the ad set, and the individual ad level. This allows advertisers to evaluate campaign performance, optimize strategies, and reach their campaign objectives.
+The ads reporting tool provides the information necessary to manage ad campaigns at the campaign, the ad set, and the individual ad level. This allows you to evaluate campaign performance, optimize strategies, and reach your campaign objectives.
 
 Ads Manager provides accurate and transparent reporting through the use of click-based attribution for conversion tracking.
 
-- [Ad campaign reports](#ad-campaign-reports) offer insights into overall campaign effectiveness and enable advertisers to compare and optimize various campaigns they have running at the same time. The campaign report level provides a holistic view of performance, guiding budget allocation and strategy adjustments.
-- [Ad set reports](#ad-set-reports) highlight targeting and budget effectiveness and enable advertisers to make adjustments to improve audience engagement. The ad set report level provides information on how to optimize ads for specific audiences.
+- [Ad campaign reports](#ad-campaign-reports) offer insights into overall campaign effectiveness and enable you to compare and optimize various campaigns you have running at the same time. The campaign report level provides a holistic view of performance, guiding budget allocation and strategy adjustments.
+- [Ad set reports](#ad-set-reports) highlight targeting and budget effectiveness and enable you to make adjustments to improve audience engagement. The ad set report level provides information on how to optimize ads for specific audiences.
 - [Individual ad reports](#individual-ad-reports) assess creative impact and help guide design improvements.
 
 ### Ad campaign reports
@@ -28,11 +28,11 @@ Ads Manager provides accurate and transparent reporting through the use of click
 </thead>
 <tbody>
   <tr>
-    <td>Name</td>
+    <td>Campaign</td>
     <td>The name of the ad campaign.</td>
   </tr>
   <tr>
-    <td>Off/On</td>
+    <td>Off/on</td>
     <td>A toggle indicating if the ad campaign is active, paused, or disabled.</td>
   </tr>
   <tr>
@@ -48,7 +48,7 @@ Ads Manager provides accurate and transparent reporting through the use of click
     <td>**Image impression**: the user looked at the ad for at least 1 second, the ad occupied 1.5% of the viewport, and was viewed at an angle of up to 55 degrees with at least 50% of the image ad pixels visible.<br/><br/>**Video impression**: the user looked at the ad for at least 0.5 seconds, the ad occupied 1.5% of the viewport, and was viewed at an angle of up to 55 degrees with at least 50% of the video ad pixels visible.</td>
   </tr>
   <tr>
-    <td>Cost Per Mille (CPM)</td>
+    <td>Cost-per-mille (CPM)</td>
     <td>The cost of 1,000 impressions of your ad.</td>
   </tr>
   <tr>
@@ -56,11 +56,11 @@ Ads Manager provides accurate and transparent reporting through the use of click
     <td>The number of times users clicked on your ad on the Home and Search pages.</td>
   </tr>
   <tr>
-    <td>Click-Through Rate (CTR)</td>
-    <td>Percentage calculated by dividing the number of clicks by the number of impressions and multiplying by 100.</td>
+    <td>Click-through rate (CTR)</td>
+    <td>The percentage calculated by dividing the number of clicks by the number of impressions and multiplying by 100.</td>
   </tr>
   <tr>
-    <td>Cost Per Play (CPP)</td>
+    <td>Cost-per-play (CPP)</td>
     <td>The average cost incurred for each play, calculated by dividing the total campaign cost by the number of plays.</td>
   </tr>
   <tr>
@@ -69,7 +69,7 @@ Ads Manager provides accurate and transparent reporting through the use of click
   </tr>
   <tr>
     <td>Play rate</td>
-    <td>Percentage calculated by dividing the number of plays by the number of impressions.</td>
+    <td>The percentage calculated by dividing the number of plays by the number of impressions.</td>
   </tr>
   <tr>
     <td>Budget</td>
@@ -86,6 +86,14 @@ Ads Manager provides accurate and transparent reporting through the use of click
   <tr>
     <td>Payment method</td>
     <td>The method used to pay for your advertising campaign, categorized as either card or ad credit.</td>
+  </tr>
+  <tr>
+    <td>7D playtime</td>
+    <td>The total estimated playtime over 7 days from the latest conversion, for players who converted through an ad within the selected date range.</td>
+  </tr>
+  <tr>
+    <td>30D Robux earnings</td>
+    <td>The estimated total Robux earnings over 30 days from the latest conversion, for players who converted through an ad in the selected date range. Excludes subscriptions, engagement payouts, and immersive ads.</td>
   </tr>
 </tbody>
 </table>
@@ -107,7 +115,7 @@ Ads Manager provides accurate and transparent reporting through the use of click
     <td>The name of the ad set.</td>
   </tr>
   <tr>
-    <td>Off/On</td>
+    <td>Off/on</td>
     <td>A toggle indicating if the ad campaign is active, paused, or disabled.</td>
   </tr>
   <tr>
@@ -131,7 +139,7 @@ Ads Manager provides accurate and transparent reporting through the use of click
     <td>**Image impression**: the user looked at the ad for at least 1 second, the ad occupied 1.5% of the viewport, and was viewed at an angle of up to 55 degrees with at least 50% of the image ad pixels visible.<br/><br/>**Video impression**: the user looked at the ad for at least 0.5 seconds, the ad occupied 1.5% of the viewport, and was viewed at an angle of up to 55 degrees with at least 50% of the video ad pixels visible.</td>
   </tr>
   <tr>
-    <td>Cost Per Mille (CPM)</td>
+    <td>Cost-per-mille (CPM)</td>
     <td>The cost of 1,000 impressions of your ad.</td>
   </tr>
   <tr>
@@ -139,11 +147,11 @@ Ads Manager provides accurate and transparent reporting through the use of click
     <td>The number of times users clicked on your ad on the Home and Search pages.</td>
   </tr>
   <tr>
-    <td>Cost Per Click (CPC)</td>
+    <td>Cost-per-click (CPC)</td>
     <td>The cost for each click on your ad on the Home and Search pages.</td>
   </tr>
   <tr>
-    <td>Click-Through Rate (CTR)</td>
+    <td>Click-through rate (CTR)</td>
     <td>Percentage calculated by dividing the number of clicks by the number of impressions and multiplying by 100.</td>
   </tr>
   <tr>
@@ -155,7 +163,7 @@ Ads Manager provides accurate and transparent reporting through the use of click
     <td>Percentage calculated by dividing the number of plays by the number of impressions.</td>
   </tr>
   <tr>
-    <td>Cost Per Play (CPP)</td>
+    <td>Cost-per-play (CPP)</td>
     <td>The average cost incurred for each play, calculated by dividing the total campaign cost by the number of plays.</td>
   </tr>
 </tbody>
@@ -202,7 +210,7 @@ Ads Manager provides accurate and transparent reporting through the use of click
     <td>**Image impression**: the user looked at the ad for at least 1 second, the ad occupied 1.5% of the viewport, and was viewed at an angle of up to 55 degrees with at least 50% of the image ad pixels visible.<br/><br/>**Video impression**: the user looked at the ad for at least 0.5 seconds, the ad occupied 1.5% of the viewport, and was viewed at an angle of up to 55 degrees with at least 50% of the video ad pixels visible.</td>
   </tr>
   <tr>
-    <td>Cost Per Mille (CPM)</td>
+    <td>Cost-per-mille (CPM)</td>
     <td>The cost of 1,000 impressions of your ad.</td>
   </tr>
   <tr>
@@ -218,7 +226,7 @@ Ads Manager provides accurate and transparent reporting through the use of click
     <td>Percentage calculated by dividing the number of plays by the number of impressions.</td>
   </tr>
   <tr>
-    <td>Cost Per Play (CPP)</td>
+    <td>Cost-per-play (CPP)</td>
     <td>The average cost incurred for each play, calculated by dividing the total campaign cost by the number of plays.</td>
   </tr>
 </tbody>
@@ -228,9 +236,9 @@ Ads Manager provides accurate and transparent reporting through the use of click
 
 The delivery column of the Ads Manager defines the **status** of your campaign, ad set, or individual ad.
 
-- The [ad campaign status](#ad-campaign-status) offers a valuable overview of the campaign's overall progress, helping advertisers identify and optimize active, underperforming, or completed campaigns for better results.
-- The [ad set status](#ad-set-status) highlights the performance of each ad set in terms of targeting and budget allocation, enabling advertisers to fine-tune their strategies for improved audience engagement and to reach their campaign objectives.
-- The [individual ad status](#individual-ad-status) provides insights into the delivery status of each individual ad, allowing advertisers to monitor their effectiveness and note any dependencies on their parent ad sets or Campaigns.
+- The [ad campaign status](#ad-campaign-status) offers a valuable overview of the campaign's overall progress, helping you identify and optimize active, underperforming, or completed campaigns for better results.
+- The [ad set status](#ad-set-status) highlights the performance of each ad set in terms of targeting and budget allocation, enabling you to fine-tune your strategies for improved audience engagement and to reach your campaign objectives.
+- The [individual ad status](#individual-ad-status) provides insights into the delivery status of each individual ad, allowing you to monitor their effectiveness and note any dependencies on their parent ad sets or campaigns.
 
 #### Ad campaign status
 
@@ -345,9 +353,7 @@ The delivery column of the Ads Manager defines the **status** of your campaign, 
 
 ## Billing
 
-The ads billing tool charges advertisers for ad placements on Roblox using the payment method they have on file. To view billing information, go to **Billing Center** > **Payment Activity**.
-
-<img src="../../assets/promotion/ads-manager/Payment-Activity.png" width="360" />
+The ads billing tool charges you for ad placements on Roblox using the payment method you have on file. To view billing information, go to **Billing Center** > **Payment Activity**.
 
 ### Credit and debit cards
 
@@ -362,9 +368,9 @@ You can get charged at two different points when you use a credit or debit card:
 
 The ad spend daily limit of credit and debit cards is $300 USD.
 
-The payment threshold for Roblox advertisers is $100 USD. Whenever an advertiser account accrues a balance of $100 through advertising on Roblox, their payment method on file is charged. If the payment threshold is not reached by the end of the month, the remaining outstanding balance is paid instead.
+The payment threshold for Roblox advertisers is $100 USD. Whenever an advertiser account accrues a balance of $100 through advertising on Roblox, the payment method on file is charged. If the payment threshold is not reached by the end of the month, the remaining outstanding balance is paid instead.
 
-For example, if an advertiser's account reaches the $100 payment threshold on May 7th due to their campaign parameters, their payment method gets charged $100 on May 7th. If they accrue less than $100, their payment method gets charged the amount at the monthly billing cycle's close.
+For example, if your account reaches the $100 payment threshold on May 7th due to their campaign parameters, your payment method gets charged $100 on May 7th. If you accrue less than $100, your payment method gets charged the amount at the monthly billing cycle's close.
 
 <img src="../../assets/promotion/ads-manager/Payment-Activity-1.png" width="780" />
 
@@ -374,7 +380,7 @@ Campaigns using ad credit are settled at the end of the campaign at the end date
 
 There is no daily spend limit when using ad credits.
 
-For example, if an advertiser sets a 100 ad credit campaign to run from 8/1 to 8/7, 100 ad credits are debited from their account. But if the campaign has only spent 75 ad credits by the end, the remaining 25 credits are refunded in ad credits.
+For example, if you set a 100 ad credit campaign to run from 8/1 to 8/7, 100 ad credits are debited from your account. But if the campaign has only spent 75 ad credits by the end, the remaining 25 credits are refunded in ad credits.
 
 The following are ad credit-related activities:
 
@@ -383,10 +389,8 @@ The following are ad credit-related activities:
 - **Unused:** Ad credit allocated to a specific campaign but not used, which is returned on the campaign end date. This feature makes sure that your ad credits are used efficiently and returned when appropriate.
 - **Ad Fraud Refund:** Any refunds applied back to your account. Refunds credited for a specific campaign remain locked to that campaign, not credited at the account level.
 
-<img src="../../assets/promotion/ads-manager/Payment-Activity-1.png" width="780" />
-
 ## Ad fraud protection
 
-Roblox uses advanced detection methods for bots and other fraudulent activities to make sure that advertisers don't pay for fraudulent traffic, and regularly adjusts billing and reporting to safeguard their interests. After 14 days from the campaign end date, campaigns are analyzed for fraudulent traffic, and transaction amounts are refunded accordingly. If invalid traffic is detected, refunds are applied 16 days after the campaign end date. This proactive approach helps maintain the integrity of your campaigns and ensures fair spending.
+Roblox uses advanced detection methods for bots and other fraudulent activities to make sure that you don't pay for fraudulent traffic, and regularly adjusts billing and reporting to safeguard their interests. After 14 days from the campaign end date, campaigns are analyzed for fraudulent traffic, and transaction amounts are refunded accordingly. If invalid traffic is detected, refunds are applied 16 days after the campaign end date. This proactive approach helps maintain the integrity of your campaigns and ensures fair spending.
 
-Accounts responsible for ad fraud have their accounts suspended to prevent ongoing abuse. In addition, Roblox might suspend ad campaigns or advertiser accounts for non-payment of services properly rendered. Roblox expects advertisers to act with integrity and follow the [advertising standards](./comply-with-advertising-standards.md).
+Accounts responsible for ad fraud have their accounts suspended to prevent ongoing abuse. In addition, Roblox might suspend ad campaigns or advertiser accounts for non-payment of services properly rendered. Roblox expects you to act with integrity and follow the [advertising standards](./comply-with-advertising-standards.md).

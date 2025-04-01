@@ -94,7 +94,7 @@ Much like larger problems can be broken into smaller problems, some algorithms c
 
 Think of your real-life morning time algorithm to get dressed. If that's your main algorithm, it might use one algorithm for picking out your clothes, and a second algorithm for putting clothes on.
 
-```lua title='Getting Dressed Pseudocode'
+```lua title="Getting Dressed Pseudocode"
 -- First algorithm for picking clothes
 local function pickClothes()
     pick top clothing

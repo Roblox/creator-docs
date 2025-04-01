@@ -108,7 +108,7 @@ The 3D Importer provides the following settings for all meshes:
 
 #### Rig general
 
-The 3D Importer provides the following settings for meshes with rigging data:
+The 3D Importer provides the following settings for meshes with rigging data, typically character bodies or clothing accessories:
 
 <table>
 <thead>
@@ -128,7 +128,7 @@ The 3D Importer provides the following settings for meshes with rigging data:
   </tr>
   <tr>
     <td>Rig Scale</td>
-    <td>If Rig Type is set to R15, the importer provides further options to specify [body type scaling](../../art/characters/specifications.md#body-scale). The options are:<br />- **Default**<br />- **Rthro**<br />- **Rthro Narrow**</td>
+    <td>If Rig Type is set to R15, the importer provides additional options to specify [body type scaling](../../art/characters/specifications.md#body-scale). The options are:<br />- **Default**<br />- **Rthro**<br />- **Rthro Narrow**</td>
   </tr>
 </tbody>
 </table>

@@ -60,7 +60,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.AutoJumpEnabled
     summary: |
@@ -91,7 +92,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.CameraMaxZoomDistance
     summary: |
@@ -121,7 +123,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.CameraMinZoomDistance
     summary: |
@@ -151,7 +154,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.CameraMode
     summary: |
@@ -194,7 +198,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.CanLoadCharacterAppearance
     summary: |
@@ -228,7 +233,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.Character
     summary: |
@@ -279,7 +285,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.CharacterAppearance
     summary: |
@@ -310,7 +317,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.CharacterAppearanceId
     summary: |
@@ -341,7 +349,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.DataComplexity
     summary: |
@@ -384,7 +393,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.DataReady
     summary: |
@@ -412,7 +422,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.DevCameraOcclusionMode
     summary: |
@@ -438,7 +449,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.DevComputerCameraMode
     summary: |
@@ -481,7 +493,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.DevComputerMovementMode
     summary: |
@@ -523,7 +536,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.DevEnableMouseLock
     summary: |
@@ -557,7 +571,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.DevTouchCameraMode
     summary: |
@@ -596,7 +611,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.DevTouchMovementMode
     summary: |
@@ -635,7 +651,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.DisplayName
     summary: |
@@ -671,7 +688,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.FollowUserId
     summary: |
@@ -701,7 +719,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.GameplayPaused
     summary: |
@@ -732,7 +751,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.HasVerifiedBadge
     summary: |
@@ -752,7 +772,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.HealthDisplayDistance
     summary: |
@@ -779,7 +800,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.LocaleId
     summary: |
@@ -815,7 +837,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.MembershipType
     summary: |
@@ -839,7 +862,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.NameDisplayDistance
     summary: |
@@ -866,7 +890,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.Neutral
     summary: |
@@ -893,7 +918,28 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
+    writeCapabilities: []
+  - name: Player.PartyId
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: WritePlayerSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.ReplicationFocus
     summary: |
@@ -924,14 +970,15 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.RespawnLocation
     summary: |
       If set, the player will respawn at the given `Class.SpawnLocation`.
     description: |
       If set, the player will respawn at the given `Class.SpawnLocation`. This
-      property can only be set through Lua and must contain a reference to a
+      property can only be set through Luau and must contain a reference to a
       valid `Class.SpawnLocation`, which must meet the following criteria:
 
       - Descendant of `Class.Workspace`
@@ -962,7 +1009,26 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
+    writeCapabilities: []
+  - name: Player.StepIdOffset
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.Team
     summary: |
@@ -990,7 +1056,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.TeamColor
     summary: |
@@ -1021,7 +1088,28 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
+    writeCapabilities: []
+  - name: Player.ThirdPartyTextChatRestrictionStatus
+    summary: ''
+    description: ''
+    code_samples: []
+    type: ChatRestrictionStatus
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.UserId
     summary: |
@@ -1052,7 +1140,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.userId
     summary: ''
@@ -1072,7 +1161,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
 methods:
   - name: Player:AddReplicationFocus
@@ -1090,28 +1180,6 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: Player:AddReplicationFocusPosition
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: center
-        type: Vector3
-        default:
-        summary: ''
-      - name: radius
-        type: int
-        default:
-        summary: ''
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxSecurity
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
@@ -1619,6 +1687,28 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: Player:OverrideStreamingRadii
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: minRadius
+        type: int
+        default:
+        summary: ''
+      - name: targetRadius
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Player:RemoveReplicationFocus
     summary: ''
     description: ''
@@ -1634,28 +1724,6 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: Player:RemoveReplicationFocusPosition
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: center
-        type: Vector3
-        default:
-        summary: ''
-      - name: radius
-        type: int
-        default:
-        summary: ''
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxSecurity
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
@@ -2661,7 +2729,7 @@ events:
       Fires when a player chats in-game using Roblox's provided chat bar.
     description: |
       The Chatted event fires when a `Class.Player` types a message and presses
-      enter in Roblox's provided chat bar. This is done using some Lua bindings
+      enter in Roblox's provided chat bar. This is done using some Luau bindings
       by the default chat script. You can prevent players from chatting by using
       `Class.StarterGui:SetCoreGuiEnabled()` and disabling the Chat
       `Enum.CoreGuiType`.

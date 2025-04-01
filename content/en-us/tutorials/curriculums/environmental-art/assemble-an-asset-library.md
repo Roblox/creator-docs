@@ -227,7 +227,7 @@ The `Class.MeshPart.CollisionFidelity` property determines how closely the physi
   </figure>
 </GridContainer>
 
-You can set this property to a different value to reduce the precision of a mesh's hitbox. For example, when you set this property to **Hull**, the Roblox Engine significantly reduces the vertices of the mesh's hitbox, and when you set this property to **Box**, the engine reduces the mesh's hitbox to a cube that surrounds the mesh. In addition, if you want to increase the precision of a mesh's hitbox, you can set this property to **PreviseConvexDecomposition** to increase the amount of vertices in the hitbox
+You can set this property to a different value to reduce the precision of a mesh's hitbox. For example, when you set this property to **Hull**, the Roblox Engine significantly reduces the vertices of the mesh's hitbox, and when you set this property to **Box**, the engine reduces the mesh's hitbox to a cube that surrounds the mesh. In addition, if you want to increase the precision of a mesh's hitbox, you can set this property to **PreciseConvexDecomposition** to increase the amount of vertices in the hitbox.
 
 <GridContainer numColumns="3">
   <figure>

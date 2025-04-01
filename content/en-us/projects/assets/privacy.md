@@ -51,18 +51,9 @@ To grant a creator permission to use a private asset in any of these scenarios:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. In the upper tab bar, select **Development Items**, then click either **Audio** or **Videos**. All of your audio or video assets display.
-
-   <img src="../../assets/creator-dashboard/Development-Items-Asset-Privacy.png" alt="A close up view of tabs on the Creator Dashboard. The Development Items tab and its Audio and Videos subtabs are highlighted." width="780"/>
-
 1. Select the asset you want the creator to have permission to use in any of their experiences. The asset's **Configure** page displays.
 1. In the asset's left-hand navigation, select **Permissions**. The asset's **Permissions** page displays.
-
-   <img src="../../assets/creator-dashboard/Asset-Settings-Permissions-Button.png" alt="A close up view of a Swamp SFX asset's left-hand menu. The Permissions navigation menu item is highlighted." width="330" />
-
-1. Under **Collaborator Access** → **Creators**, search for the friend you want to grant permission to your private asset. The creator displays beneath the search bar with their access visible.
-
-   <img src="../../assets/creator-dashboard/Asset-Settings-Permissions-Creators.png" alt="A close up view of the Creators Collaborator Access settings. The search friends bar is highlighted." width="780" />
-
+1. Under **Collaborator Access** &rang; **Creators**, search for the friend you want to grant permission to your private asset. The creator displays beneath the search bar with their access visible.
 1. At the bottom of the page, click the **Save Changes** button.
 
 ### To groups
@@ -90,17 +81,8 @@ To grant a group permission to use a private asset in any of these scenarios:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. Select **Development Items**, then click either **Audio** or **Videos**.
-
-   <img src="../../assets/creator-dashboard/Development-Items-Asset-Privacy.png" alt="A close up view of tabs on the Creator Dashboard. The Development Items tab and its Audio and Videos subtabs are highlighted." width="780"/>
-
-1. Select the asset you want the group to have permission to use in any of their experiences and **Permissions**.
-
-   <img src="../../assets/creator-dashboard/Asset-Settings-Permissions-Button.png" alt="A close up view of a Swamp SFX asset's left-hand menu. The Permissions navigation menu item is highlighted." width="330" />
-
+1. Select the asset you want the group to have permission to use in any of their experiences, then navigate to **Permissions**.
 1. Under **Collaborator Access** &rarr; **Creators**, search for the group that you want to grant permission to. You can also see and remove existing groups.
-
-   <img src="../../assets/creator-dashboard/Asset-Settings-Permissions-Groups.png" alt="A close up view of the Creators Collaborator Access settings. The search friends bar is highlighted." width="780" />
-
 1. Click the **Save Changes** button.
 
 ### To experiences
@@ -132,13 +114,8 @@ To grant an experience permission to use a private asset:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. In the upper tab bar, select **Development Items**, then click either **Audio** or **Videos**. All of your audio or video assets display.
-
-   <img src="../../assets/creator-dashboard/Development-Items-Asset-Privacy.png" alt="A close up view of tabs on the Creator Dashboard. The Development Items tab and its Audio and Videos subtabs are highlighted." width="780"/>
-
 1. Select the asset you want the experience to have permission to use. The asset's **Configure** page displays.
 1. Under **Experience Access**, type the experience's universe ID into the **Enter Universe IDs** input, then click the **Add** button. The experience displays beneath the input with its access visible.
-
-	<img src="../../assets/creator-dashboard/Asset-Settings-Permissions-Experiences.png" alt="A close up view of the Experience Collaborator Access settings. The Enter Universe IDs input is highlighted." width="780" />
 
    <Alert severity="info">
    If you want to give multiple experiences permission to use your private access at the same time, you can enter multiple universe IDs as long as you separate them with a comma.
@@ -154,13 +131,7 @@ To grant an experience permission to use many private assets in the previous sce
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. Select one of your or your group's experiences. The experience's overview page displays.
 1. In the experience's left-hand navigation, navigate to the **Configure** section, then select **Permissions**. The asset's **Permissions** page displays.
-
-   <img src="../../assets/creator-dashboard/Experience-Nav-Configure-Permissions.png" alt="A close up view of the left-hand navigation. The Permissions navigation item menu item is highlighted." width="330" />
-
 1. In the **Enter asset IDs** input, type every asset ID you want the experience to have access to separated by commas, then click the **Add** button. All private assets the experience has access to display beneath the input with the asset's name, ID, owner, and asset type.
-
-   <img src="../../assets/creator-dashboard/Experience-Settings-Permissions-Assets-Input.png" alt="A close up view of the Enter asset IDs input." width="780" />
-
 1. At the bottom of the page, click the **Save Changes** button.
 
   </TabItem>
@@ -185,12 +156,7 @@ You can view every private asset that an experience you or a group you belong to
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. Select one of your or your group's experiences. The experience's overview page displays.
 1. In the experience's left-hand navigation, navigate to the **Configure** section, then select **Permissions**. The asset's **Permissions** page displays.
-
-   <img src="../../assets/creator-dashboard/Permissions-Page.png" alt="An asset's Permissions page." width="100%"/>
-
-1. **(Optional)** You can download the data for offline processing by clicking the downward arrow icon.
-
-   <img src="../../assets/creator-dashboard/Permissions-Page-CSV.png" alt="An asset's Permissions page with the downward arrow icon highlighted to download the asset's data to a .CSV file." width="100%"/>
+1. **(Optional)** You can download the data for offline processing by clicking the download arrow button.
 
 ## Revoke permissions
 
@@ -204,16 +170,7 @@ To revoke permission for a creator to use a private asset in any additional expe
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. In the upper tab bar, select **Development Items**, then click either **Audio** or **Videos**. All of your audio or video assets display.
-
-   <img src="../../assets/creator-dashboard/Development-Items-Asset-Privacy.png" alt="A close up view of tabs on the Creator Dashboard. The Development Items tab and its Audio and Videos subtabs are highlighted." width="780"/>
-
 1. Select the asset you want to revoke permission for one or more creators to use in their own experiences. The asset's **Configure** page displays.
-1. In the asset's left-hand navigation, select **Permissions**. The asset's **Permissions** page displays, and under **Collaborator Access** &rarr; **Creators**, all creators who have permission to use the asset display.
-
-   <img src="../../assets/creator-dashboard/Asset-Settings-Permissions-Button.png" alt="A close up view of a Swamp SFX asset's left-hand menu. The Permissions navigation menu item is highlighted." width="330" />
-
-1. Navigate to the creator you want to revoke permission, then click the **Remove** button to the right of their name.
-
-   <img src="../../assets/creator-dashboard/Asset-Settings-Permissions-Remove-Creator.png" alt="A close up view of a Creator tile that has access to an asset. The Remove button is highlighted." width="780" />
-
+1. In the asset's left-hand navigation, select **Permissions**. The asset's **Permissions** page displays.
+1. Under **Collaborator Access** &rang; **Creators**, all creators who have permission to use the asset display. Navigate to the creator you want to revoke permission, then click the **Remove** button to the right of their name.
 1. At the bottom of the page, click the **Save Changes** button.

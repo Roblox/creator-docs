@@ -21,17 +21,17 @@ Currently, the API can only target live experience servers through HTTP.
 
 ## Limits
 
-Limit | Description
---- | ---
-**Rate** | Roblox throttles message requests at `50 + (5 * number_of_players_in_experience)`. For example, an experience with 20 players begins to throttle at 150 message requests per minute.
-**Topic size** | 80 characters
-**Message size** | 1,024 characters (1 KB)
+| Limit            | Description                                                                                                                                                                          |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Rate**         | Roblox throttles message requests at `50 + (5 * number_of_players_in_experience)`. For example, an experience with 20 players begins to throttle at 150 message requests per minute. |
+| **Topic size**   | 80 characters                                                                                                                                                                        |
+| **Message size** | 1,024 characters (1 KB)                                                                                                                                                              |
 
 ## Set up a topic for messaging
 
 Before you can publish a message to your experience's live servers, you must set up a **topic**, which is a customized message channel that is accessible from multiple servers. After defining a topic, you subscribe users to the topic in order to receive your incoming messages.
 
-Currently, you can only define a topic in Studio and use Lua `Class.MessagingService:SubscribeAsync()` to subscribe users to it. The following code sample subscribes any user to a topic when they join the experience:
+Currently, you can only define a topic in Studio and use the Luau API `Class.MessagingService:SubscribeAsync()` to subscribe users to it. The following code sample subscribes any user to a topic when they join the experience:
 
 ```lua title= 'Set up and Subscribe Users to a Topic'
 local MessagingService = game:GetService("MessagingService")
@@ -57,7 +57,7 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 
 After [setting up](#set-up-a-topic-for-messaging) a topic, publish a message to your experience's live servers:
 
-1. [Create an API key](./api-keys.md#creating-an-API-key) on [Creator Dashboard](https://create.roblox.com/dashboard/credentials) and copy it somewhere safe. Make sure you perform the following settings:
+1. [Create an API key](../auth/api-keys.md#create-api-keys) on [Creator Dashboard](https://create.roblox.com/dashboard/credentials) and copy it somewhere safe. Make sure you perform the following settings:
 
    1. Add **messaging-service** to **Access Permissions**.
    2. Select an experience, and add the **universe-messaging-service:publish** operation.
@@ -66,13 +66,13 @@ After [setting up](#set-up-a-topic-for-messaging) a topic, publish a message to 
 
    1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
    1. Find the experience that you want to publish your messages to.
-   1. Click the **&ctdot;** button on the target experience's thumbnail to display a list of options, then select **Copy Universe ID**.
+   1. Hover over an experience's thumbnail, click the **&ctdot;** button, and select **Copy Universe ID**.
 
-      <img src="../../assets/creator-dashboard/Experience-Context-Menu-Copy-Universe-ID.png" width="420" alt="Copy Universe ID option from Creator Dashboard" />
+      <img src="../../assets/creator-dashboard/Options-Button-Experience-Public.png" width="200" />
 
 3. Add the API key and universe to a `POST` request, as in this example:
 
-   ```bash title='Example Request for Publishing a Message'
+   ```bash title="Example Request for Publishing a Message"
    curl -L -X POST 'https://apis.roblox.com/cloud/v2/universes/{universe}:publishMessage' \
    -H 'x-api-key: {api-key}' \
    -H 'Content-Type: application/json' \
@@ -98,14 +98,14 @@ Third-party app support through OAuth 2.0 is a beta feature that might be subjec
 
 To use Messaging Service API for your application and request permissions from your users, perform the following settings:
 
-1. When [registering your application](./oauth2-registration.md#registering-an-app), under **Permissions**, select the **universe-messaging-service:publish** scope.
-2. When [implementing the authorization flow](../../cloud/auth/oauth2-overview.md#implementing-authorization-flows), include `universe-messaging-service:publish` in the `scope` parameter of the authorization URL that redirects users back to your application, like the following example:
+1. When [registering your application](../auth/oauth2-registration.md#register-your-app), under **Permissions**, select the **universe-messaging-service:publish** scope.
+2. When [implementing the authorization flow](../../cloud/auth/oauth2-overview.md), include `universe-messaging-service:publish` in the `scope` parameter of the authorization URL that redirects users back to your application, like the following example:
 
    ```plain
    https://authorize.roblox.com?client_id=816547628409595165403873012&redirect_uri=https://my-app.com/redirect&scope=openid+universe-messaging-service:publish&response_type=Code&prompts=login+consent&nonce=12345&state=6789
    ```
 
-3. Request access to the `universeId` of the experience that the user wants to publish their messages to. Your application can send a `POST` request to the [token resources endpoint](oauth2-reference.md#token-exchange) with the access token, client ID and secret or the `code challenge`, depending on your [implementation of your authorization flow](../../cloud/auth/oauth2-overview.md#implementing-authorization-flows), as request parameters to get a list of `universeIds` of experiences that the user granted permission to:
+3. Request access to the `universeId` of the experience that the user wants to publish their messages to. Your application can send a `POST` request to the [token resources endpoint](../auth/oauth2-reference.md#token-exchange) with the access token, client ID and secret or the `code challenge`, depending on your [implementation of your authorization flow](../../cloud/auth/oauth2-overview.md#implementing-authorization-flows), as request parameters to get a list of `universeIds` of experiences that the user granted permission to:
 
    ```bash title="Example Request"
    curl --location --request POST 'https://apis.roblox.com/oauth/v1/token/resources' \
