@@ -25,7 +25,7 @@ export const sections = [
       {
         title: "Reuse and update with packages",
         description: "Packages are reusable sets of assets that can contain models, scripts, multimedia files, and more. They let you bundle, share, maintain, and update them across everywhere they're used in your projects, automatically.",
-        video: "https://www.youtube.com/embed/AzKZy2BqIh8?si=psaB0UlA8UvaT8qv",
+        video: "https://www.youtube-nocookie.com/embed/AzKZy2BqIh8?si=psaB0UlA8UvaT8qv",
         links: [
           { text: "Learn more", href: "./projects/assets/packages" },
         ]
