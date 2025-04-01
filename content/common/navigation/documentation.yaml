@@ -16,7 +16,7 @@ columns:
         - title: Assets
           navigation: /assets.yaml
           path: /assets
-        - title: Cloud apps
+        - title: Open Cloud
           navigation: /cloud/reference.yaml
           path: /cloud/
 
