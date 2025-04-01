@@ -109,7 +109,7 @@ properties:
 methods:
   - name: HttpService:GenerateGUID
     summary: |
-      Generates a /GUID random string, optionally with curly braces.
+      Generates a UUID/GUID random string, optionally with curly braces.
     description: |
       This method generates a **random universally unique identifier
       ([UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier))**
