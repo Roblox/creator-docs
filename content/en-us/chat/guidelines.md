@@ -41,8 +41,8 @@ For communication shared by users that can be seen by other users, even if it do
 - All incoming text that originates from another user must first use [Text Filtering](../ui/text-filtering.md) before your experience displays it.
 - Communication between users must respect user privacy settings.
   - `Class.TextChannel:SendAsync()` handles basic privacy and parental settings automatically.
-  - `Class.TextChannel:SetDirectChatRequester()` must be used to mark `TextChannels` created for direct chat.
-- In-experience communication should be [reportable for abuse](https://en.help.roblox.com/hc/en-us/articles/203312410-How-to-Report-Rule-Violations). `TextChannels` handle this automatically.
+  - `Class.TextChannel:SetDirectChatRequester()` must be used to mark `Class.TextChannel|TextChannels` created for direct chat.
+- In-experience communication should be [reportable for abuse](https://en.help.roblox.com/hc/en-us/articles/203312410-How-to-Report-Rule-Violations). `Class.TextChannel|TextChannels` handle this automatically.
 
 ## Respect privacy settings
 

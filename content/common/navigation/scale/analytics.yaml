@@ -20,6 +20,8 @@ navigation:
     path: /production/analytics/acquisition
   - title: Audience
     path: /production/analytics/audience
+  - title: Feedback
+    path: /production/analytics/feedback
   - title: Monetization
     path: /production/analytics/monetization
   

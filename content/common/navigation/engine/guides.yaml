@@ -419,7 +419,7 @@ navigation:
         section:
           - title: Overview
             path: /chat/in-experience-text-chat
-          - title: Guidelies
+          - title: Guidelines
             path: /chat/guidelines
           - title: Chat window
             path: /chat/chat-window
@@ -428,14 +428,14 @@ navigation:
           - title: Examples
             path: /chat/examples/simple-custom-frontend-ui
             section:
-              - title: Custom UI
-                path: /chat/examples/simple-custom-frontend-ui
               #- title: Custom System Messages
               #  path: /chat/examples/custom-system-messages
               - title: Chat tags
                 path: /chat/examples/group-chat-tags
               - title: Proximity chat
                 path: /chat/examples/proximity-chat
+              - title: Custom UI
+                path: /chat/examples/simple-custom-frontend-ui
               - title: Custom chat commands
                 path: /chat/examples/custom-text-chat-commands
           - title: Legacy chat system

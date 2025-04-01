@@ -336,7 +336,7 @@ Roblox offers several tools to import, store, and publish your assets:
     </tbody>
 </table>
 
-## Archiving Assets
+## Archiving assets
 
 To further help with organization, you can archive most asset types in the **Creations** &rang; **Development Items** section of the [Creator Dashboard][CreatorDashboardURL]. Simply hover over an asset's thumbnail, click the **&ctdot;** button, and select **Archive** from the context menu.
 
