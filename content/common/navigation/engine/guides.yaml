@@ -1,23 +1,19 @@
 defaultType: markdown
 navigation:
-  - heading: Learn the basics
+  - heading: Overview
   - title: Get started
-    path: /get-started
-  - title: Platform overview
-    path: /platform
-  - title: Creation overview
+    path: /experiences
+  - title: Tutorials
+    navigation: /engine/tutorials.yaml
+    path: /tutorials
+  - title: Resources
+    navigation: /engine/resources.yaml
+    path: /samples
+  - title: Engine API reference
+    path: https://create.roblox.com/docs/reference/engine
+  - heading: Guides
+  - title: Overview
     path: /creation
-  - title: Assistant
-    path: /assistant/guide
-    section:
-      - title: Overview
-        path: /assistant/guide
-      - title: Prompt guide and examples
-        path: /assistant/prompt-engineering
-  - heading: Create
-  - title: Roblox Studio
-    path: /studio/
-    navigation: /engine/studio.yaml
   - title: Projects
     path: /projects
     section:
@@ -32,6 +28,15 @@ navigation:
             path: /projects/client-server
           - title: Instance streaming
             path: /workspace/streaming
+      - title: Manage
+        path: /production/publishing/publish-experiences-and-places
+        section:
+          - title: Experiences and places
+            path: /production/publishing/publish-experiences-and-places
+          - title: Experience ownership transfer
+            path: /projects/experience-ownership-transfer
+          - title: Transfer animations
+            path: /projects/transfer-animations
       - title: Work in teams
         path: /projects/groups
         section:
@@ -39,37 +44,12 @@ navigation:
             path: /projects/groups
           - title: Collaboration
             path: /projects/collaboration
-      - title: Experience ownership transfer
-        path: /projects/experience-ownership-transfer
-        section:
-          - title: Transfer animations
-            path: /projects/transfer-animations
       - title: Activity history
         path: /projects/activity-history
       - title: External tools
         path: /projects/external-tools
       - title: Place files
         path: /projects/place-files
-  - title: Assets
-    path: /projects/assets/
-    section:
-      - title: Overview
-        path: /projects/assets/
-      - title: Manage
-        path: /projects/assets/manager
-        section:
-          - title: Asset manager
-            path: /projects/assets/manager
-          - title: Toolbox
-            path: /projects/assets/toolbox
-          - title: External catalog queries
-            path: /projects/assets/api
-      - title: Packages
-        path: /projects/assets/packages
-      - title: Asset privacy
-        path: /projects/assets/privacy
-      - title: In-experience asset creation
-        path: /projects/assets/in-experience-asset-creation
   - title: 3D workspace
     path: /workspace/
     section:
@@ -439,7 +419,7 @@ navigation:
         section:
           - title: Overview
             path: /chat/in-experience-text-chat
-          - title: Guidelines
+          - title: Guidelies
             path: /chat/guidelines
           - title: Chat window
             path: /chat/chat-window
@@ -518,203 +498,11 @@ navigation:
     path: /unity
   - title: Roblox for Unreal developers
     path: /unreal
-
-  - heading: Distribute
-  - title: Overview
-    path: /production/
-  - title: Roblox user base
-    path: /production/roblox-user-base
-  - title: Discovery
-    path: /discovery
-  - title: Publish
-    section:
-      - title: Experiences
-        path: /production/publishing/publish-experiences-and-places
-        section:
-          - title: Overview
-            path: /production/publishing/publish-experiences-and-places
-          - title: Genres
-            path: /production/publishing/experience-genres
-          - title: Icons
-            path: /production/publishing/experience-icons
-          - title: Thumbnails
-            path: /production/publishing/thumbnails
-          - title: Badges
-            path: /production/publishing/badges
+#  - title: Publish
+    # section:
       # - title: Accessories
       #   section:
       #   - title: Publishing
       #     path: /production/publishing/publishing-to-marketplace
       #   - title: Avatar Marketplace Thumbnails
       #     path: /production/publishing/marketplace-thumbnails
-      - title: Assets
-        path: /production/creator-store
-        section:
-          - title: Creator Store
-            path: /production/creator-store
-          - title: Creator Store sales
-            path: /production/sell-on-creator-store
-      - title: Guidelines
-        path: /production/promotion/content-maturity
-        section:
-          - title: Content maturity
-            path: /production/promotion/content-maturity
-          - title: GDPR and CCPA
-            path: /production/publishing/about-GDPR-and-CCPA
-          - title: DMCA
-            path: /production/publishing/dmca-guidelines
-          - title: Accessibility
-            path: /production/publishing/accessibility
-          - title: Console
-            path: /production/publishing/console-guidelines
-          - title: VR
-            path: /production/publishing/vr-guidelines
-      - title: Account verification
-        path: /production/publishing/account-verification
-      - title: Rights Manager
-        path: /production/publishing/rights-manager
-      - title: AI data sharing
-        path: /ai-data-sharing
-  - title: Promotion
-    path: /production/promotion/
-    section:
-      - title: Overview
-        path: /production/promotion/
-      - title: Advertising
-        path: /production/promotion/advertise-on-roblox
-        section:
-          - title: Overview
-            path: /production/promotion/advertise-on-roblox
-          - title: Ad campaigns
-            path: /production/promotion/ads-manager
-          - title: Reporting and billing
-            path: /production/promotion/reporting-and-billing
-          - title: Search ads
-            path: /production/promotion/search-ads
-          - title: Sponsored items
-            path: /production/promotion/sponsor-items
-          - title: Advertising standards
-            path: /production/promotion/comply-with-advertising-standards
-      - title: Events and updates
-        path: /production/promotion/experience-events
-      - title: Notifications
-        path: /production/promotion/experience-notifications
-      - title: Social media links
-        path: /production/promotion/social-media-links
-      - title: Share links
-        path: /production/promotion/share-links
-      - title: Player invite prompts
-        path: /production/promotion/invite-prompts
-      - title: Friend referral system
-        path: /production/promotion/referral-system
-      - title: Discover page nominations
-        path: /production/promotion/nominate-for-the-discover-page
-      - title: Get featured on Roblox‑owned channels
-        path: /production/promotion/get-featured-on-roblox-owned-channels
-      - title: Deep links
-        path: /production/promotion/deeplinks
-  - title: Monetization
-    path: /production/monetization/
-    section:
-      - title: Overview
-        path: /production/monetization/
-      - title: Earn on Roblox
-        path: /production/earn-on-roblox
-      - title: Products
-        section:
-          - title: Immersive ads
-            path: /production/monetization/immersive-ads
-          - title: Subscriptions
-            path: /production/monetization/subscriptions
-          - title: Passes
-            path: /production/monetization/game-passes
-          - title: Developer products
-            path: /production/monetization/developer-products
-          - title: Price optimization
-            path: /production/monetization/price-optimization
-          - title: Avatar items
-            path: /production/monetization/avatar-items
-          - title: Avatar creation tokens
-            path: /production/monetization/avatar-creation-token
-          - title: Engagement-based payouts
-            path: /production/monetization/engagement-based-payouts
-          - title: Paid access in Robux
-            path: /production/monetization/paid-access-robux
-          - title: Paid access in local currency
-            path: /production/monetization/paid-access-local-currency
-          - title: Private servers
-            path: /production/monetization/private-servers
-      - title: Virtual item policies
-        path: /production/monetization/virtual-items
-  - title: Localization
-    path: /production/localization/
-    section:
-      - title: Overview
-        path: /production/localization/
-      - title: Automatic translation
-        path: /production/localization/automatic-translations
-        section:
-          - title: Overview
-            path: /production/localization/automatic-translations
-          - title: Translate dynamic content
-            path: /production/localization/auto-translate-dynamic-content
-      - title: Custom translation
-        path: /production/localization/custom-translations
-        section:
-          - title: Overview
-            path: /production/localization/custom-translations
-          - title: Cloud localization table
-            path: /production/localization/manual-translations
-          - title: Dynamic content
-            path: /production/localization/translate-dynamic-content
-          - title: Scripting
-            path: /production/localization/localize-with-scripting
-      - title: Work with translators
-        path: /production/localization/work-with-translators
-      - title: Language codes
-        path: /production/localization/language-codes
-  - title: Analytics
-    path: /production/analytics/
-    section:
-      - title: Overview
-        path: /production/analytics/
-      - title: Monitor
-        section:
-          - title: Performance
-            path: /production/analytics/performance
-          - title: Error report
-            path: /production/analytics/error-report
-      - title: Dashboards
-        path: /production/analytics/analytics-dashboard
-        section:
-          - title: Overview
-            path: /production/analytics/analytics-dashboard
-          - title: Retention
-            path: /production/analytics/retention
-          - title: Engagement
-            path: /production/analytics/engagement
-          - title: Acquisition
-            path: /production/analytics/acquisition
-          - title: Audience
-            path: /production/analytics/audience
-          - title: Feedback
-            path: /production/analytics/feedback
-          - title: Monetization
-            path: /production/analytics/monetization
-      - title: Event types
-        path: /production/analytics/event-types
-        section:
-          - title: Overview
-            path: /production/analytics/event-types
-          - title: Economy events
-            path: /production/analytics/economy-events
-          - title: Funnel events
-            path: /production/analytics/funnel-events
-          - title: Custom events
-            path: /production/analytics/custom-events
-          - title: Custom fields
-            path: /production/analytics/custom-fields
-  - heading: For educators
-  - title: Educator onboarding
-    path: /education/educator-onboarding/landing
-    navigation: /education.yaml

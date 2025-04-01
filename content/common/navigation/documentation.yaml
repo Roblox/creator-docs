@@ -1,45 +1,63 @@
 columns:
   - - title: Overview
       path: /
-    - title: Engine
-      path: /get-started
+    - title: Create
+      path: /platform
       items:
-        - title: Guides
+        - title: Overview
+          navigation: /platform.yaml
+          path: /platform
+        - title: Experiences
           navigation: /engine/guides.yaml
-          path: /get-started
-        - title: Tutorials
-          navigation: /engine/tutorials.yaml
-          path: /tutorials/
-        - title: Reference
-          navigation: /engine/reference.yaml
-          path: /reference/engine
-        - title: Resources
-          navigation: /engine/resources.yaml
-          path: /samples/
-        - title: Art
-          navigation: /engine/art.yaml
-          path: /art/
-        - title: Design
-          navigation: /engine/design.yaml
-          path: /production/game-design/
-    - title: Avatar
-      path: /avatar/
-      items:
-        - title: Guides
+          path: /experiences
+        - title: Avatar
           navigation: /avatar/guides.yaml
-          path: /avatar/
-        - title: Tutorials
-          navigation: /avatar/tutorials.yaml
-          path: /avatar/tutorials
-        - title: Resources
-          navigation: /avatar/resources.yaml
-          path: /avatar/resources
-    - title: Cloud
-      path: /cloud/
-      items:
-        - title: Reference
+          path: /avatar
+        - title: Assets
+          navigation: /assets.yaml
+          path: /assets
+        - title: Cloud apps
           navigation: /cloud/reference.yaml
           path: /cloud/
-        - title: Guides
-          navigation: /cloud/guides.yaml
-          path: /cloud/guides/
+
+    # # SCALE NAV REWORK
+    - title: Scale
+      path: /scale/
+      items:
+        - title: Overview
+          navigation: /scale/overview.yaml
+          path: /scale/
+        - title: Discovery
+          navigation: /scale/discovery.yaml
+          path: /discovery/
+        - title: Localization
+          navigation: /scale/localization.yaml
+          path: /production/localization/
+        - title: Analytics
+          navigation: /scale/analytics.yaml
+          path: /production/analytics/
+        - title: Design
+          navigation: /scale/design.yaml
+          path: /production/game-design/
+    #   # SCALE NAV REWORK
+
+    # MONETIZE NAV REWORK
+    - title: Monetize
+      path: /monetize/
+      items:
+        - title: Overview
+          navigation: /monetize/overview.yaml
+          path: /monetize
+        - title: Experiences
+          navigation: /monetize/experiences.yaml
+          path: /monetize-experiences
+        - title: Avatar
+          navigation: /monetize/avatar.yaml
+          path: /monetize-avatar
+        - title: Assets
+          navigation: /monetize/assets.yaml
+          path: /production/sell-on-creator-store
+        - title: Affiliates
+          navigation: /monetize/affiliates.yaml
+          path: /affiliates
+      # MONETIZE NAV REWORK

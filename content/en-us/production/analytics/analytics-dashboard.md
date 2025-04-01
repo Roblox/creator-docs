@@ -75,7 +75,7 @@ You can filter by the following metrics:
   </tr>
   <tr>
     <td>OS (Operating System)</td>
-    <td>Android, iOS, Xbox One, OSX, Playstation and Windows.</td>
+    <td>Android, iOS, Xbox One, OSX, PlayStation and Windows.</td>
     <td>Analyze latest trends across different OS types. Users might be double counted if they use more than one device.</td>
   </tr>
   <tr>
