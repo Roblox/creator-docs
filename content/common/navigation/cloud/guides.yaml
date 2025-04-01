@@ -1,3 +1,6 @@
+backTo:
+  title: Back to Cloud apps
+  path: /cloud/
 navigation:
   - heading: Guides
   - title: Overview

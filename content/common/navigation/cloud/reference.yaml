@@ -1,7 +1,10 @@
 navigation:
-  - heading: Cloud
-  - title: Overview
+  - heading: Overview
+  - title: Reference
     path: /cloud/
+  - title: Guides
+    path: /cloud/guides/
+    navigation: /cloud/guides.yaml
   - heading: Authentication
   - title: API keys
     path: /cloud/auth/api-keys

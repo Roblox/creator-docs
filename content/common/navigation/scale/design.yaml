@@ -1,14 +1,18 @@
 navigation:
-  - heading: Design
-  - title: Overview
+  - heading: Overview
+  - title: Get started
     path: /production/game-design/
+
   - heading: Design your experience
   - title: Design for Roblox
     path: /production/game-design/design-for-roblox
+  - title: Roblox user base
+    path: /production/roblox-user-base
   - title: Core loops
     path: /production/game-design/core-loops
   - title: Prototyping
     path: /production/game-design/prototyping
+
   - heading: Build your experience
   - title: Onboarding
     path: /production/game-design/onboarding
@@ -18,6 +22,14 @@ navigation:
     path: /production/game-design/introduction-to-quest-design
   - title: UI and UX
     path: /production/game-design/ui-ux-design
+  - title: Device guidelines
+    section:
+    - title: Accessibility
+      path: /production/publishing/accessibility
+    - title: Console
+      path: /production/publishing/console-guidelines
+    - title: VR
+      path: /production/publishing/vr-guidelines
   - heading: Monetize your experience
   - title: Monetization
     path: /production/game-design/monetization-foundations
@@ -31,6 +43,7 @@ navigation:
     path: /production/game-design/contextual-purchases
   - title: Virtual economies
     path: /production/game-design/balance-virtual-economies
+
   - heading: Support your experience
   - title: LiveOps essentials
     path: /production/game-design/liveops-essentials

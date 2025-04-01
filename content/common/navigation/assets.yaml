@@ -1,0 +1,68 @@
+navigation:
+  - heading: Overview
+  - title: Overview
+    path: /assets
+  - title: Assets
+    path: /projects/assets/
+  - title: Manage
+    path: /projects/assets/manager
+    section:
+      - title: Asset manager
+        path: /projects/assets/manager
+      - title: Toolbox
+        path: /projects/assets/toolbox
+      - title: External catalog queries
+        path: /projects/assets/api
+  - title: Packages
+    path: /projects/assets/packages
+  - title: Asset privacy
+    path: /projects/assets/privacy
+  - title: Creator Store
+    path: /production/creator-store
+  - heading: Creation tools
+  - title: Studio
+    path: /art/overview-studio
+  - title: Third-party software
+    section:
+      - title: Overview
+        path: /art/overview-dcc
+      - title: Blender
+        path: /art/blender
+  - title: In-experience
+    path: /projects/assets/in-experience-asset-creation
+  - heading: 3D Art
+  - title: Overview
+    path: /art/
+  - title: Modeling
+    section:
+      - title: Overview
+        path: /art/modeling/
+      - title: Modeling specifications
+        path: /art/modeling/specifications
+      - title: Reference assets
+        path: /art/modeling/project-files
+      - title: Rigging and skinning
+        path: /art/modeling/rigging
+      - title: Blender and Maya export settings
+        path: /art/modeling/export-requirements
+      - title: 3D Importer
+        path: /art/modeling/3d-importer
+      - title: Roblox Blender plugin
+        path: /art/modeling/roblox-blender-plugin
+
+  - title: Texturing
+    section:
+      - title: Texture specifications
+        path: /art/modeling/texture-specifications
+      - title: Physically-based rendering (PBR)
+        path: /art/modeling/surface-appearance
+      - title: PBR material references
+        path: /art/modeling/material-reference
+
+  - title: Animation
+    section:
+      - title: Export from Maya
+        path: /art/characters/export-avatar-animations-from-maya
+      - title: Head animation
+        path: /art/characters/facial-animation/animate-heads
+  

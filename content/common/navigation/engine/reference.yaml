@@ -1,6 +1,9 @@
 # Don't edit this navigation file. It's auto-generated and automatically syncs with
 # engine reference YAML files in content/en-us/reference/engine/.
 
+backTo:
+  title: Back to platform
+  path: /platform
 navigation:
   - heading: Engine API
   - title: Overview

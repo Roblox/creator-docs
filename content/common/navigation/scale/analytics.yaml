@@ -1,0 +1,36 @@
+navigation:
+  - heading: Overview
+  - title: Get started
+    path: /production/analytics/
+    
+  - heading: Monitor
+  - title: Performance
+    path: /production/analytics/performance
+  - title: Error report
+    path: /production/analytics/error-report
+ 
+  - heading: Dashboards
+  - title: Overview
+    path: /production/analytics/analytics-dashboard
+  - title: Retention
+    path: /production/analytics/retention
+  - title: Engagement
+    path: /production/analytics/engagement
+  - title: Acquisition
+    path: /production/analytics/acquisition
+  - title: Audience
+    path: /production/analytics/audience
+  - title: Monetization
+    path: /production/analytics/monetization
+  
+  - heading: Event types
+  - title: Overview
+    path: /production/analytics/event-types
+  - title: Economy events
+    path: /production/analytics/economy-events
+  - title: Funnel events
+    path: /production/analytics/funnel-events
+  - title: Custom events
+    path: /production/analytics/custom-events
+  - title: Custom fields
+    path: /production/analytics/custom-fields

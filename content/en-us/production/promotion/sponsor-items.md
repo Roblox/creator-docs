@@ -1,7 +1,7 @@
 ---
 title: Sponsored items
 comment: Changes to this article require additional review
-description: Sponsoring items allows you to increase the discoverability of 3D user-generated content within the Avatar Marketplace.
+description: Sponsoring items allows you to increase the discoverability of 3D user-generated content within the Marketplace.
 ---
 
 Sponsor items to increase the discoverability of your 3D user-generated content to users within the [Marketplace](https://www.roblox.com/catalog). You can choose your audience, schedule the duration of your ad, and specify your budget per day. Sponsored item ads cycles can run anywhere from 24 hours to 28 days.
