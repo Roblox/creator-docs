@@ -70,10 +70,6 @@ methods:
       determine whether the player can send an invite, as this ability may vary
       depending on the platform or player.
 
-      <img
-      src="../../../assets/promotion/invite-prompts/Prompt-Multiple-Friends-Custom-Message.png"
-      width="806" />
-
       See
       [Player Invite Prompts](../../../production/promotion/invite-prompts.md)
       for more details on implementing invite prompts, customizing prompts and

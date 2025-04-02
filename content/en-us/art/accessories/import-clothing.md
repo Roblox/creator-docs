@@ -64,6 +64,10 @@ After successful import, your model object should populate in your project as a 
 
 With the `Class.Model` in your project, the last step in the process of clothing creation requires you to use the Accessory Fitting Tool to convert this object to a standard `Class.Accessory` that avatar characters can equip.
 
+<Alert severity = 'warning'>
+For shoes, you must convert the left shoe and the right shoe as separate accessories. Use the following instructions for each shoe before grouping both shoe accessories as a `Class.Model` when [saving to Roblox](../../marketplace/publish-to-marketplace.md#upload-an-asset).
+</Alert>
+
 To generate the accessory object:
 
 1. In the Avatar tab, select the [**Accessory Fitting Tool**](../accessories/accessory-fitting-tool.md). The Accessory Fitting Tool panel displays on the left side of the workspace.

@@ -1,6 +1,6 @@
 ---
 title: Experience notifications
-description: Experience Notifications are a way for users to keep up with their favorite experiences through timely, personalized notifications.
+description: Send experience notifications within your experience with Luau APIs. Experience notifications are a way for users to keep up with their favorite experiences through timely, personalized notifications.
 ---
 
 import Intro from '../../includes/experience-notifications/intro.md'

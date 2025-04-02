@@ -299,12 +299,6 @@ navigation:
         versions:
           - name: v1
             path: /cloud/legacy/badges/v1
-      - title: Chat
-        type: cloudlegacy
-        ignoreTranslation: true
-        versions:
-          - name: v2
-            path: /cloud/legacy/chat/v2
       - title: Develop v2
         type: cloudlegacy
         ignoreTranslation: true
