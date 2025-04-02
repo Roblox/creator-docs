@@ -50,7 +50,7 @@ The **Rig Builder** tool lets you insert pre-built rigs, typically for animation
 
 ## Avatar Setup
 
-The **Avatar Setup** tool lets you easily preview animations, clothing, accessories, and body constructs on avatar models, directly in Studio. Avatar item creators can upload and validate assets for the Marketplace from this tool. See [Avatar Setup](../art/modeling/avatar-setup.md) for usage details.
+The **Avatar Setup** tool lets you easily preview animations, clothing, accessories, and body constructs on avatar models, directly in Studio. Avatar item creators can upload and validate assets for the Marketplace from this tool. See [Avatar Setup](../avatar-setup/index.md) for usage details.
 
 <img src="../assets/studio/general/Avatar-Tab-Avatar-Setup.png" width="760" alt="Avatar Preview button indicated in Avatar tab" />
 

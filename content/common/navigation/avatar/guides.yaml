@@ -44,16 +44,16 @@ navigation:
         path: /art/accessories/import-clothing
   - title: Characters
     section:
-    - title: Overview
-      path: /art/characters/
-    - title: Specifications
-      path: /art/characters/specifications
-    - title: Reference files
-      path: /art/characters/project-files
-    - title: Export settings
-      path: /art/characters/export-settings
-    - title: Import into Studio
-      path: /art/characters/import
+      - title: Overview
+        path: /art/characters/
+      - title: Specifications
+        path: /art/characters/specifications
+      - title: Reference files
+        path: /art/characters/project-files
+      - title: Export settings
+        path: /art/characters/export-settings
+      - title: Import into Studio
+        path: /art/characters/import
   - title: Heads
     section:
       - title: Overview
@@ -81,10 +81,16 @@ navigation:
     section:
       - title: 3D Importer
         path: /art/modeling/3d-importer
+      - title: Avatar Setup
+        section:
+          - title: Overview
+            path: /avatar-setup/
+          - title: Auto-setup requirements
+            path: /avatar-setup/auto-setup-requirements
+          - title: Edit tools
+            path: /avatar-setup/tools
       - title: Accessory Fitting
         path: /art/accessories/accessory-fitting-tool
-      - title: Avatar Setup
-        path: /art/modeling/avatar-setup
       - title: Automatic Skinning Transfer
         path: /art/accessories/automatic-skinning-transfer
       - title: Thumbnails

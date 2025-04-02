@@ -3,7 +3,7 @@ title: AI data sharing
 description: Understand AI data sharing policies and how to update your preferences.
 ---
 
-Roblox has a suite of AI-powered solutions, including [Code Assist](studio/script-editor.md#code-assist), [Material Generator](studio/material-generator.md), [Assistant](assistant/guide.md), in-experience chat translation, [Texture Generator](studio/texture-generator.md), and [Avatar Setup](art/modeling/avatar-setup.md). These tools help you quickly find information, accelerate the creation process, and complement your existing skillset.
+Roblox has a suite of AI-powered solutions, including [Code Assist](studio/script-editor.md#code-assist), [Material Generator](studio/material-generator.md), [Assistant](assistant/guide.md), in-experience chat translation, [Texture Generator](studio/texture-generator.md), and [Avatar Setup](/avatar-setup/index.md). These tools help you quickly find information, accelerate the creation process, and complement your existing skillset.
 
 To improve these tools and build new ones, Roblox uses data to train its generative AI models.
 

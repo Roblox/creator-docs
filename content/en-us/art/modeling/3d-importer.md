@@ -124,7 +124,7 @@ The 3D Importer provides the following settings for meshes with rigging data, ty
   </tr>
   <tr>
     <td>Validate UGC Body</td>
-    <td>After importing, Studio opens the assets in the [Avatar Setup](../../art/modeling/avatar-setup.md) tool, allowing you to quickly begin testing and uploading avatar assets to the Marketplace.</td>
+    <td>After importing, Studio opens the assets in the [Avatar Setup](../../avatar-setup/index.md) tool, allowing you to quickly begin testing and uploading avatar assets to the Marketplace.</td>
   </tr>
   <tr>
     <td>Rig Scale</td>

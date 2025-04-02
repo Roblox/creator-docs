@@ -6,7 +6,7 @@ description: Verify the important aspects of your character model in a custom St
 
 Test your character model in Studio to understand how it looks and feels within a Roblox experience. To test your custom character in Studio, first [import the character model](../../characters/import.md) into your Studio project.
 
-You can test in Studio using the [Avatar Setup tool](../../modeling/avatar-setup.md) to preview and test various components of your avatar character.
+You can test in Studio using the [Avatar Setup tool](../../../avatar-setup/) to preview and test various components of your avatar character.
 
 You can also playtest your character in the [Avatar Test experience](https://www.roblox.com/games/13176231501/Avatar-Test-Place). This experience provides a wide variety of environmental and clothing tests to ensure that your character model and related components work as expected.
 

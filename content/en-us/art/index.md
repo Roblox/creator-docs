@@ -340,7 +340,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 
 <a href="../animation/capture.md"><Typography variant='body1' style={{marginBottom: 12}}>Animation Capture</Typography></a>
 
-<a href="./modeling/avatar-setup.md"><Typography variant='body1' style={{marginBottom: 12}}>Avatar Setup</Typography></a>
+<a href="../avatar-setup/"><Typography variant='body1' style={{marginBottom: 12}}>Avatar Setup</Typography></a>
 
 <a href="../parts/materials.md"><Typography variant='body1' style={{marginBottom: 12}}>Material Generator</Typography></a>
 
