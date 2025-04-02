@@ -62,8 +62,13 @@ To upload your asset:
 1. In Studio, add the marketplace item to your workspace.
 
    - For accessories and clothing, the item must be an `Class.Accessory` object. For information on the required specifications, see [Accessory Specifications](../art/accessories/specifications.md)
+
      - Upload clothing and accessories as an `Class.Accessory`. For information on converting your `Class.Model` into an `Class.Accessory`, see [Accessory Fitting Tool](../art/accessories/accessory-fitting-tool.md).
-     - For shoes, select both left and right shoe accessories and right-click > `Group as a Model` before step 2.
+     - If uploading shoes, each shoe must be their own accessory object:
+
+       - Name the respective shoe accessories `LeftShoeAccessory` and `RightShoeAccessory`.
+       - Select both left and right shoe accessories and right-click > **Group as a Model** before step 2.
+
      - For bodies and heads, the item must be a `Class.Model`. For information on the required specifications, see [Avatar Character Specifications](../art/characters/specifications.md).
        - You can add a default skin color to your body by adding a `Class.BodyColors` object to your model.
 
