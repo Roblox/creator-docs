@@ -111,12 +111,25 @@ methods:
     summary: |
       Generates a UUID/GUID random string, optionally with curly braces.
     description: |
-      This method randomly creates a [universally unique identifier
-      [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+      This method generates a **random universally unique identifier**
+      ([UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier))
       string. The sixteen octets of a UUID are represented as 32 hexadecimal
-      (base 16) digits, displayed in 5 groups separated by hyphens in the form
-      `8-4-4-4-12` for a total of 36 characters, for example
+      (base&nbsp;16) digits, displayed in five groups separated by hyphens in
+      the form `8-4-4-4-12` for a total of 36 characters, for example
       `123e4567-e89b-12d3-a456-426655440000`.
+      
+      The UUID specification used is [Version 4
+      (random)](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)),
+      variant 1 (DCE 1.1, ISO/IEC 11578:1996). UUIDs of this version are the
+      most commonly used due to their simplicity, as they are entirely randomly
+      generated. Note that this version does not have certain features that
+      other UUID versions have, such as encoded timestamps, MAC addresses, or
+      time-based sorting like [UUIDv7](https://uuid7.com/) or
+      [ULID](https://github.com/ulid/spec).
+
+      There are over 5.3&times;10<sup>36</sup> unique v4 UUIDs, in which the
+      probability of finding a duplicate within 103 trillion UUIDs is one in a
+      billion.
 
       The `wrapInCurlyBraces` argument determines whether the returned string is
       wrapped in curly braces (`{}`). For instance:
