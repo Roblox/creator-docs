@@ -19,14 +19,24 @@ Once you set up a webhook, whenever a target event occurs, Roblox sends a reques
 
 Roblox currently supports the following event triggers for notifications:
 
-- **Subscription Cancelled** - When a user cancels a [subscription](../../production/monetization/subscriptions.md), a message is sent containing the subscription and subscriber, as well as the reason given for the cancellation.
-- **Subscription Purchased** - When a user purchases a subscription, a message is sent containing the subscription and subscriber.
-- **Subscription Refunded** - When a user receives a refund for their subscription, a message is sent containing the subscription and subscriber.
-- **Subscription Renewed** - When a user renews a subscription, a message is sent containing the subscription and subscriber.
-- **Subscription Resubscribed** - When a user resubscribes to a subscription, a message is sent containing the subscription and subscriber.
-- ["Right to be forgotten"](https://gdpr.eu/right-to-be-forgotten/) data deletion requests under the General Data Protection Regulation (**GDPR**).
+### Subscriptions
+
+- **Subscription Cancelled** — When a user cancels a [subscription](../../production/monetization/subscriptions.md), a message is sent containing the subscription and subscriber, as well as the reason given for the cancellation.
+- **Subscription Purchased** — When a user purchases a subscription, a message is sent containing the subscription and subscriber.
+- **Subscription Refunded** — When a user receives a refund for their subscription, a message is sent containing the subscription and subscriber.
+- **Subscription Renewed** — When a user renews a subscription, a message is sent containing the subscription and subscriber.
+- **Subscription Resubscribed** — When a user resubscribes to a subscription, a message is sent containing the subscription and subscriber.
 
 For more information on subscription events and their fields, see the [Cloud API Subscription](../../cloud/reference/Subscription/) reference.
+
+### Compliance
+
+- **Right to Erasure Request** — When a user submits a data deletion request under the [General Data Protection Regulation (**GDPR**)](https://gdpr.eu/right-to-be-forgotten/).
+
+### Commerce
+
+- **Commerce Product Order Refunded** — When a user has recieved a refund for their commerce product order.
+- **Commerce Product Order Paid** — When a user has paid for their commerce product order.
 
 ## Configure webhooks on Creator Dashboard
 
@@ -41,7 +51,7 @@ To set up a webhook:
 1. Navigate to the [Webhooks](https://create.roblox.com/settings/webhooks) section of the Creator Dashboard.
 1. Click the **Add Webhook** button.
 1. Complete the configuration fields:
-   1. **Webhook URL** — Specify the URL where you want to receive notifications and accept incoming webhook URLs from third-party entities. For more information on the requirements, see [Set up webhook URLs](#set-up-webhook-urls).
+   1. **Webhook URL** — Specify the URL where you can receive notifications. For more information on the requirements, see [Set up webhook URLs](#set-up-webhook-urls).
    2. **Name** — Use a custom name to differentiate your configuration from others. By default the value is the same as the Webhook URL.
    3. **Secret** (optional) — Supply a secret if you want to verify that notifications you receive are coming from Roblox. For more information, see [Verify webhook security](#verify-webhook-security).
    4. **Triggers** — Choose one or more options from the list of [supported triggers](#supported-triggers) of events for which you want to receive notifications.
@@ -88,15 +98,15 @@ You can test whether the webhook you've configured can successfully receive noti
 3. Click the pencil icon next to the target webhook.
 4. Click the **Test Response** button.
 
-The system then sends a notification in the `SampleNotification` type, which includes the **User ID** of the user who triggers the notification, as the following example schema shows:
+A `SampleNotification` event is sent, which includes the **User ID** of the user who triggers the notification, as the following example schema shows:
 
 ```json title="SampleNotification Schema"
-Body: {
+{
   "NotificationId": "string",
   "EventType": "SampleNotification",
-  "EventTime": "2023-12-30T16:24:24.2118874Z", // Type: ISO 8601 Timestamp
+  "EventTime": "2023-12-30T16:24:24.2118874Z",
   "EventPayload": {
-    "UserId": 1 // Type: Long
+    "UserId": 1
   }
 }
 ```
@@ -105,19 +115,19 @@ If you are integrating your webhook with a third-party service, you can test it 
 
 ## Verify webhook security
 
-Once you configure your server to receive payloads, it starts to listen for any payload sent to the endpoint. If you set a secret when configuring your webhook, Roblox sends a `roblox-signature` along with every webhook notification to help protect your data security. This way, you can use the it to verify that the notification is from Roblox and limit your server to only receive requests originating from Roblox. The signature is in the payload header for custom endpoints and in the footer for third-party servers.
+Once you configure your server to receive payloads, it starts to listen for any payload sent to the endpoint. If you set a secret when configuring your webhook, Roblox sends a `roblox-signature` in each webhook notification to ensure that the request actually came from Roblox. The signature is in the payload header for custom endpoints and in the footer for third-party servers.
 
-```csv title="Signature Format with Secret for Custom Endpoints"
+```csv title="Signature Format with a Secret for Custom Endpoints"
 
-"roblox-signature": "t=<timestamp>,v1=<signature>"
+t=<timestamp>,v1=<signature>
 
 ```
 
-If you don't have a secret for your webhook, the signature you receive only contains the timestamp value on when the notification is sent:
+If you did not set a secret for your webhook, the signature will only contain the timestamp of when the notification was sent:
 
-```csv title="Signature Format without Secret for Custom Endpoints"
+```csv title="Signature Format without a Secret for Custom Endpoints"
 
-"roblox-signature": "t=<timestamp>"
+t=<timestamp>
 
 ```
 
@@ -128,9 +138,8 @@ To verify a signature:
 
 1. Extract the timestamp and signature values. All signatures for webhooks with secrets share the same format as a CSV string with these two values following by the prefixes:
 
-   - `t`: The timestamp value on when the notification is sent.
+   - `t`: The timestamp of when the notification is sent.
    - `v1`: The signature value generated using the secret provided by the Creator Dashboard configuration.
-     You can extract these two values using the `split()` function, which separates the string based on a delimiter, in this case, the `,` character.
 
 1. Re-create the base string of `roblox-signature` by concatenating:
 
@@ -138,7 +147,7 @@ To verify a signature:
    1. The period character `.`.
    1. The JSON string of the request body.
 
-1. Compute a Hash-based message authentication code (HMAC) with the SHA256 hash function using the secret you defined during the configuration as the key and the base string you generated through step 2 as the message. Convert the result to Base64 format to get the expected signature.
+1. Compute a hash-based message authentication code (HMAC) with the SHA256 hash function using the secret you defined during the configuration as the key and the base string you generated through step 2 as the message. Convert the result to Base64 format to get the expected signature.
 1. Compare the extracted signature value to the expected signature. If you generated the signature correctly, the value should be the same.
 
 1. (Optional) To prevent replay attacks, a type of cyber attack where attackers intercept and resend data to gain unauthorized access or perform malicious actions, it's helpful to compare the extracted timestamp value with the current timestamp and ensure it falls within a reasonable time limit. For example, a 10-minute window is usually a good reasonable time limit.
@@ -178,38 +187,27 @@ When the target event of your webhook is triggered, it sends a request to your w
 
 The **fixed payload schema fields** can help maintain consistency across all webhook requests, with the following fields available:
 
-1. `NotificationId`, `string`: A unique identifier for each notification sent. If the same `NotificationId` is received twice, it is considered a duplicate.
-2. `EventType`, `string`: A string represents the type of event for which the notification was triggered.
-3. `EventTime`, `timestamp`: An approximate timestamp indicating when the event was triggered.
+1. `NotificationId` (string): A unique identifier for each notification sent. If the same `NotificationId` is received twice, it is considered a duplicate.
+2. `EventType` (string): Indicates the type of event for which the notification was triggered.
+3. `EventTime` (string): The timestamp of when the event was triggered.
 
 The **variable payload schema fields** provides flexibility for webhooks to accommodate various types of events, which include:
 
-1. `EventPayload`, `object`: Contains information specific to the `EventType` that triggered the webhook. The structure of the `EventPayload` schema varies based on the type of event.
+1. `EventPayload` (object): Contains information specific to the `EventType` that triggered the webhook. The structure of the `EventPayload` schema varies based on the type of event.
 
 The following example shows the payload schema of the **Right To Erasure Request** event:
 
 ```json title="Example Schema for Right to Erasure Request"
-
-Body:{
-
+{
    "NotificationId": "string",
-
    "EventType": "RightToErasureRequest",
-
    "EventTime": "2023-12-30T16:24:24.2118874Z",
-
    "EventPayload": {
-
-      "UserId": 1, // Type: Long
-
-      "GameIds": [ // Type: An array of Longs
-
+      "UserId": 1,
+      "GameIds": [
          1234, 2345
-
       ]
-
    }
-
 }
 ```
 
@@ -217,56 +215,59 @@ Body:{
 
 If you store any **Personally Identifiable Information (PII)** of your users, such as their User IDs, you must delete this information when a user submits such a request to comply with the GDPR [right to erasure](https://gdpr-info.eu/art-17-gdpr/) compliance requirements. You can create a bot to handle webhook notifications and help automate data deletion, provided you're storing PII in a data store. See [Automating Right to Erasure Requests Deletion](../../cloud/webhooks/automate-right-to-erasure.md) for an example on how to create a bot within Guilded or Discord that uses the [Open Cloud API for data stores](../../cloud/guides/usage-data-stores.md) to delete PII data as an automation solution. This example can be adapted for handling other notifications, such as subscription events.
 
-If you use a custom endpoint as your webhook server instead of a third-party tool, you can extract the data subject to deletion from the webhook payload and build your own automation solution. The following code sample provides an example solution and adds prevention to replay attacks by verifying that the request is coming from Roblox:
+If you use a custom endpoint as your webhook server instead of a third-party tool, you can extract the data subject to deletion from the webhook payload and build your own automation solution. The following code sample is an example of a server that has prevention against replay attacks by verifying the timestamp and that the request is coming from Roblox:
 
-```php title="Extracting PII from Payload"
-const crypto = require('crypto')
+```javascript title="Extracting PII from Payload"
+const crypto = require('crypto');
 const express = require('express');
+
+const secret = '<Your secret>' // This can be set as an environment variable
+
 let app = express();
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-// This is a sample only code
+
 app.all('/*', function (req, res) {
-   console.log('-------- New Request Seen -------');
-   // 1. Extract the timestamp and signature
-   const shared_secret = '<Your secret>' // This can be set as an environment variable
-   const hmac = crypto.createHmac('sha256', shared_secret)
-   const roblox_signature_header = req.headers['roblox-signature'].split(',')
-   // 'roblox-signature' is present in all requests:
-   // Timestamp(t) is present in all requests, however signature value(v1) is not set unless a secret is shared during the webhook configuration.
-   // Fetch header component at Index 0 -> 't=' and Index 1 -> 'v1='
-   const timestamp = roblox_signature_header.find(e => e.startsWith('t=')).substring(2);
-   const extracted_signature = roblox_signature_header.find(e => e.startsWith('v1='));
-   // 2. Prevent Replay attack: 300 seconds window
-   const request_timestamp_ms = timestamp * 1000;
-   const window_time_ms = 300 * 1000
-   const oldest_timestamp_allowed = Date.now() - window_time_ms;
-   if (request_timestamp_ms < oldest_timestamp_allowed) {
-      res.status(403).send('Expired Request')
+   console.log('New request recieved');
+
+   // Extract the timestamp and signature from header
+   const signatureHeader = req.headers['roblox-signature'].split(',');
+   const timestamp = signatureHeader.find(e => e.startsWith('t=')).substring(2);
+   const signature = signatureHeader.find(e => e.startsWith('v1=')).substring(3);
+
+   // Ensure the request came within a 300 second window to prevent replay attacks
+   const requestTimestampMs = timestamp * 1000;
+   const windowTimeMs = 300 * 1000;
+   const oldestTimestampAllowed = Date.now() - windowTimeMs;
+
+   if (requestTimestampMs < oldestTimestampAllowed) {
+      return res.status(403).send('Expired Request');
    }
-   // 3. Validate Signature
-   if (extracted_signature !== undefined) {
-      const signature_v1 = extracted_signature.substring(3);
-      const message = `${timestamp}.${JSON.stringify(req.body)}`
-      const base64_signature = hmac.update(message).digest('base64')
-      if (signature_v1 !== base64_signature) {
-         res.status(401).send('Unauthorized Request')
-      }
+
+   // Validate signature
+   const message = `${timestamp}.${JSON.stringify(req.body)}`;
+   const hmac = crypto.createHmac('sha256', secret);
+   const calculatedSignature = hmac.update(message).digest('base64');
+
+   if (signature !== calculatedSignature) {
+      return res.status(401).send('Unauthorized Request');
    }
-   // 4. Your logic to handle payload
-   const payloadBody = req.body
-   const eventType = payloadBody['EventType']
+
+   // Your logic to handle payload
+   const payloadBody = req.body;
+   const eventType = payloadBody['EventType'];
+
    if (eventType === 'RightToErasureRequest'){
-      const userId = payloadBody['EventPayload']['UserId']
-      const gameIds = payloadBody['EventPayload']['GameIds']
-      const gameIdString = gameIds.toString()
-      console.log(`The payload: UserId=${userId} and GameIds=${gameIdString}`)
-      // If you store PII in data stores, use the UserId and GameIds to make a data store call to delete the information.
+      const userId = payloadBody['EventPayload']['UserId'];
+      const gameIds = payloadBody['EventPayload']['GameIds'];
+
+      console.log(`Payload data: UserId=${userId} and GameIds=${gameIds}`);
+      // If you store PII in data stores, use the UserId and GameIds to delete the information from data stores.
    }
-   // 5. Return Response
-   res.json({ message: 'Processed the message Successfully' });
-})
+
+   return res.json({ message: 'Processed the message successfully' });
+});
+
 app.listen(8080, function () {
-   console.log('This is a Sample application')
-})
+   console.log('Server started');
+});
 ```
