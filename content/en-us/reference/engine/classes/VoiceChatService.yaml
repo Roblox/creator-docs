@@ -16,6 +16,23 @@ tags:
   - Service
 deprecation_message: ''
 properties:
+  - name: VoiceChatService.DefaultDistanceAttenuation
+    summary: ''
+    description: ''
+    code_samples: []
+    type: VoiceChatDistanceAttenuationType
+    tags: []
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: VoiceChatService.EnableDefaultVoice
     summary: |
       Controls whether each voice-eligible player can be heard as though they

@@ -20,7 +20,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Object
+      - type: ConfigSnapshot
         summary: ''
     tags:
       - Yields
@@ -39,7 +39,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: Object
+      - type: ConfigSnapshot
         summary: ''
     tags:
       - Yields

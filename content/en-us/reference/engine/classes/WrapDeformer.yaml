@@ -63,7 +63,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Object
+      - type: EditableMesh
         summary: ''
     tags:
       - Yields

@@ -488,5 +488,19 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: IKControl:Solve
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

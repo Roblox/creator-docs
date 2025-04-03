@@ -170,7 +170,7 @@ methods:
           Position at which the top-left corner of the added image will be
           drawn.
       - name: image
-        type: Object
+        type: EditableImage
         default:
         summary: |
           The `Class.EditableImage` to draw into this `Class.EditableImage`.
@@ -200,7 +200,7 @@ methods:
     code_samples: []
     parameters:
       - name: mesh
-        type: Object
+        type: EditableMesh
         default:
         summary: |
           The `Class.EditableMesh` used to project into.
@@ -275,7 +275,7 @@ methods:
           The rotation angle in degrees, applied around the pivot point of the
           source image.
       - name: image
-        type: Object
+        type: EditableImage
         default:
         summary: |
           The source `Class.EditableImage` to be drawn into this image.
@@ -396,8 +396,8 @@ methods:
       Reads a rectangular region of pixels into a buffer.
     description: |
       Reads a rectangular region of pixels from an `Class.EditableImage` and
-      returns it as a buffer. Each number in the buffer is a single byte, with pixels
-      stored in a sequence of four bytes (red, green, blue, and alpha).
+      returns it as a buffer. Each number in the buffer is a single byte, with
+      pixels stored in a sequence of four bytes (red, green, blue, and alpha).
 
       Note that this method uses alpha instead of transparency, unlike the
       `Class.EditableImage` drawing methods.
@@ -432,8 +432,8 @@ methods:
       Writes a rectangular region of pixels into the image.
     description: |
       Writes a rectangular region of pixels to an `Class.EditableImage` from a
-      buffer. Each number in the buffer is a single byte, with pixels stored in a
-      sequence of four bytes (red, green, blue, and alpha).
+      buffer. Each number in the buffer is a single byte, with pixels stored in
+      a sequence of four bytes (red, green, blue, and alpha).
 
       Note that this method uses alpha instead of transparency, unlike the
       `Class.EditableImage` drawing methods.

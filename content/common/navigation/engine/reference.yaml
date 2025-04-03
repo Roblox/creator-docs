@@ -5461,6 +5461,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/VirtualInputMode.yaml
         ignoreTranslation: true
+      - title: VoiceChatDistanceAttenuationType
+        path: /reference/engine/enums/VoiceChatDistanceAttenuationType
+        type: engineapi
+        source: /reference/engine/enums/VoiceChatDistanceAttenuationType.yaml
+        ignoreTranslation: true
       - title: VoiceChatState
         path: /reference/engine/enums/VoiceChatState
         type: engineapi

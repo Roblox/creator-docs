@@ -35,5 +35,6 @@ items:
       Uses the `Class.SurfaceAppearance.ColorMap|ColorMap` alpha channel to
       control the amount of `Class.SurfaceAppearance.Color` tinting.
     value: 2
-    tags: []
+    tags:
+      - NotBrowsable
     deprecation_message: ''

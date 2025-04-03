@@ -20,10 +20,10 @@ description: |
   used from multiple `Class.Actor` scripts (Parallel Luau).
 
   Many of the functions accept an offset in bytes from the start of the buffer.
-  Offset of `0` from the start of the buffer memory block accesses the first byte.
-  All offsets, counts and sizes should be non-negative integer numbers. If the
-  bytes that are accessed by any read or write operation are outside the buffer
-  memory, an error is thrown.
+  Offset of `0` from the start of the buffer memory block accesses the first
+  byte. All offsets, counts and sizes should be non-negative integer numbers. If
+  the bytes that are accessed by any read or write operation are outside the
+  buffer memory, an error is thrown.
 
   The `read` and `write` methods that work with integers and floats use
   [little-endian](https://en.wikipedia.org/wiki/Endianness) encoding.
@@ -101,10 +101,13 @@ functions:
     description: |
       Reads a range of bits into an unsigned integer from the buffer based on a
       specific `bitCount` integer from `0` to `32`, inclusive. For example:
-      
-      - `buffer.readbits(b, 0, 8)` is equivalent to `Library.buffer.readu8(b, 0)`.
-      - `buffer.readbits(b, 0, 16)` is equivalent to `Library.buffer.readu16(b, 0)`.
-      - `buffer.readbits(b, 0, 32)` is equivalent to `Library.buffer.readu32(b, 0)`.
+
+      - `buffer.readbits(b, 0, 8)` is equivalent to
+        `Library.buffer.readu8(b, 0)`.
+      - `buffer.readbits(b, 0, 16)` is equivalent to
+        `Library.buffer.readu16(b, 0)`.
+      - `buffer.readbits(b, 0, 32)` is equivalent to
+        `Library.buffer.readu32(b, 0)`.
       - `buffer.readbits(b, 0, 24)` reads 24 bits from the buffer.
 
       Note that `0` bit width is supported only to not error in generalized
@@ -313,7 +316,8 @@ functions:
       to `32`, inclusive.
     description: |
       Writes data to the buffer based on a specific `bitCount` integer from `0`
-      to `32`, inclusive. `value` is treated as an unsigned 32‑bit number and only `bitCount` least significant bits are written.
+      to `32`, inclusive. `value` is treated as an unsigned 32‑bit number and
+      only `bitCount` least significant bits are written.
 
       Note that `0` bit width is supported only to not error in generalized
       cases where bit count is dynamic, and writing 0 bits has no effect. Also
