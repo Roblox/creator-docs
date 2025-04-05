@@ -366,7 +366,7 @@ happens alongside the instance itself.
 
 This is particularly useful for instances created at runtime, as attributes set
 on a new instance before it is parented to the data model will replicate
-atomically with the instance itself. This circumvents any need to write code to
+automatically with the instance itself. This circumvents any need to write code to
 "wait" for extra data to be replicated via a `Class.RemoteEvent` or
 `Class.StringValue`.
 
