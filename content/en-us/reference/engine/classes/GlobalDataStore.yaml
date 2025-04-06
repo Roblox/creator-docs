@@ -222,8 +222,9 @@ methods:
       metadata for the given key.
 
       Values in data stores are versioned, meaning
-      `Class.GlobalDataStore:SetAsync()` will create a new version every time it
-      is called. Prior versions can be accessed through
+      `Class.GlobalDataStore:SetAsync()` New versions will be created by using SetAsync, but only once every hour. 
+       New versions can only be generated if at least one hour has passed since the previous version was created
+      . Prior versions can be accessed through
       `Class.DataStore:ListVersionsAsync()`/`Class.DataStore:GetVersionAsync()`
       for up to 30 days at which point they are permanently deleted.
 
