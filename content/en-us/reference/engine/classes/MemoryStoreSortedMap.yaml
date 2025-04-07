@@ -40,8 +40,8 @@ methods:
         summary: |
           A tuple of two values:
 
-          - Key value, or nil -- if there's no item with the specified key.
-          - Sort key, or nil -- if there's no sort key associated with the
+          - Key value, or `nil` if there's no item with the specified key.
+          - Sort key, or `nil` if there's no sort key associated with the
             specified key.
     tags:
       - Yields
@@ -172,15 +172,15 @@ methods:
       with these exceptions:
 
       - If the key does not exist, the old value and old sort key passed to the
-        function will be nil.
-      - If the function returns nil, the update is canceled.
+        function will be `nil`.
+      - If the function returns `nil`, the update is canceled.
 
       The new value and new sort key is saved only if the key was not updated
       (e.g. by a different game server) since the moment it was read. If the
       value or sort key did change, the transform function is invoked again with
       the most recent item value and sort key. This cycle repeats until the
       value and sort key are saved successfully or the transform function
-      returns nil to abort the operation.
+      returns `nil` to abort the operation.
     code_samples:
       - updating-sorted-map-memory-store
     parameters:

@@ -155,13 +155,13 @@ If the raycast operation finds an object hit by the ray, it will return a `Datat
     </tbody>
 </table>
 
-The **Position** property will be the position of the object that the mouse is hovering over. If the mouse isn't hovering over any object within a distance of `MAX_MOUSE_DISTANCE`, `raycastResult` will be nil.
+The **Position** property will be the position of the object that the mouse is hovering over. If the mouse isn't hovering over any object within a distance of `MAX_MOUSE_DISTANCE`, `raycastResult` will be `nil`.
 
 1. Create an if statement to check whether `raycastResult` exists.
 
 2. If `raycastResult` has a value, return its **Position** property.
 
-3. If `raycastResult` is nil then find the end of the raycast. Calculate the 3D position of the mouse by adding `screenToWorldRay.Origin` and `directionVector` together.
+3. If `raycastResult` is `nil` then find the end of the raycast. Calculate the 3D position of the mouse by adding `screenToWorldRay.Origin` and `directionVector` together.
 
 ```lua
 local function getWorldMousePosition()

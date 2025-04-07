@@ -323,7 +323,7 @@ methods:
       If `Enum.ContextActionResult.Pass` is returned in the callback function,
       every action below it in the stack (last function called gets executed
       first) will get a chance to process it. Anything other than Pass will be
-      treated as `Enum.ContextActionResult.Sink`, including nil. It will also
+      treated as `Enum.ContextActionResult.Sink`, including `nil`. It will also
       sink if the callback is yielded.
     code_samples:
     parameters:
@@ -540,7 +540,7 @@ methods:
     returns:
       - type: string
         summary: |
-          A content string from the Tool's TextureId, or nil if one could not be
+          A content string from the Tool's TextureId, or `nil` if one could not be
           found.
     tags: []
     deprecation_message: ''

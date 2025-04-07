@@ -129,7 +129,7 @@ end
 
 ## Delete attributes
 
-To delete an attribute, set its value to nil.
+To delete an attribute, set its value to `nil`.
 
 ```lua title="Delete Attribute"
 local cabbage = script.Parent

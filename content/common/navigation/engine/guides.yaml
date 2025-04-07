@@ -463,14 +463,16 @@ navigation:
         section:
           - title: Overview
             path: /cloud-services/data-stores/
-          - title: Manage data stores
-            path: /cloud-services/data-stores/manage-data-stores
-          - title: Best practices
-            path: /cloud-services/data-stores/best-practices
+          - title: Data Stores Manager
+            path: /cloud-services/data-stores/data-stores-manager
+          - title: Versioning, listing, and caching
+            path: /cloud-services/data-stores/versioning-listing-and-caching
           - title: Error codes and limits
             path: /cloud-services/data-stores/error-codes-and-limits
           - title: Observability
             path: /cloud-services/data-stores/observability
+          - title: Best practices
+            path: /cloud-services/data-stores/best-practices
           - title: Implement player data and purchase systems
             path: /cloud-services/data-stores/player-data-purchasing
       - title: Memory stores

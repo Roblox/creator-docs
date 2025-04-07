@@ -365,10 +365,10 @@ methods:
     writeCapabilities: []
   - name: Plugin:GetSetting
     summary: |
-      Retrieves a previously stored value with the given key, or nil if the
+      Retrieves a previously stored value with the given key, or `nil` if the
       given key doesn't exist.
     description: |
-      Retrieves a previously stored value with the given key, or nil if the
+      Retrieves a previously stored value with the given key, or `nil` if the
       given key doesn't exist.
 
       Because multiple instances of the same plugin can run simultaneously (for

@@ -251,7 +251,7 @@ properties:
       for Gamepads).
     description: |
       Sets the `Class.GuiObject` currently being focused on by the GUI Navigator
-      (used for Gamepads). This may reset to nil if the object is off-screen.
+      (used for Gamepads). This may reset to `nil` if the object is off-screen.
 
       This property is changed by the `Class.GuiObject.SelectionGained` and
       `Class.GuiObject.SelectionLost` events.

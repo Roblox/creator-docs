@@ -288,7 +288,7 @@ methods:
       Throws an error in these scenarios:
 
       - The `Class.GetTextBoundsParams.Font` has a blank family.
-      - The `params` argument was nil.
+      - The `params` argument was `nil`.
       - The font family or font face failed to download.
     code_samples:
       - TextService-GetTextBoundsAsync-1

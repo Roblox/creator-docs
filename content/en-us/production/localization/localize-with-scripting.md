@@ -430,7 +430,7 @@ return TranslationHelper
 ```
 
 <Alert severity="info">
-If your experience's source language is not English, change the value of the  <InlineCode>sourceLanguageCode</InlineCode> variable to the country code of the experience's source language.
+If your experience's source language is not English, change the value of the  `sourceLanguageCode` variable to the country code of the experience's source language.
 </Alert>
 
 Once the module is in `Class.ReplicatedStorage`, require it from a `Class.LocalScript` to call the module's functions. The following code uses this module's helper function to translate an individual string:

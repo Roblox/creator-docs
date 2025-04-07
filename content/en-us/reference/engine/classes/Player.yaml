@@ -367,7 +367,7 @@ properties:
       - Strings cost their length divided by 100 in data complexity units.
       - Instances cost their DataCost in data complexity units.
       - Saving the default value (0 for numbers, false for booleans, "" for
-        strings and nil for Instances) removes the key from the DataComplexity
+        strings and `nil` for Instances) removes the key from the DataComplexity
         count.
       - If, when using the SaveBoolean, SaveString, SaveNumber or SaveInstance
         functions, the DataComplexity for the player goes over the limit
@@ -900,7 +900,7 @@ properties:
       The Neutral property determines whether the player is on a specific team.
 
       - When _true_, the player is not on a specific team. This also means that
-        the `Class.Player.Team` property will be nil and the
+        the `Class.Player.Team` property will be `nil` and the
         `Class.Player.TeamColor` will be white.
       - When _false_, the player is on a specific team. The `Class.Player.Team`
         property will correspond to the `Class.Team` that the player is on, as
@@ -950,7 +950,7 @@ properties:
       over the network (such as physics, streaming, etc) replicate at different
       rates depending on how close objects are to the replication focus.
 
-      When this property is nil, it reverts to its default behavior which is to
+      When this property is `nil`, it reverts to its default behavior which is to
       treat the local player's character's `Class.Model.PrimaryPart|PrimaryPart`
       as the replication focus.
 
@@ -1037,7 +1037,7 @@ properties:
       The Team property is a reference to a `Class.Team` object within the
       `Class.Teams` service. It determines the team the player is on; if the
       `Class.Player` isn't on a team or has an invalid `Class.Player.TeamColor`,
-      this property is nil. When this property is set, the player has joined the
+      this property is `nil`. When this property is set, the player has joined the
       `Class.Team` and the `Class.Team.PlayerAdded` event fires on the
       associated team. Similarly, `Class.Team.PlayerRemoved` fires when the
       property is unset from a certain `Class.Team`.
@@ -1502,7 +1502,7 @@ methods:
     description: |
       This function returns a boolean value that was previously saved to the
       player with `Class.Player:SaveBoolean()` with the same key. Returns false
-      if the key doesn't exist, not nil.
+      if the key doesn't exist, not `nil`.
     code_samples:
     parameters:
       - name: key
@@ -1572,7 +1572,7 @@ methods:
       `Class.Player:SaveInstance()` with the same key.
     description: |
       This function returns an instance that was previously saved to the player
-      with `Class.Player:SaveInstance()` with the same key. Returns nil if the
+      with `Class.Player:SaveInstance()` with the same key. Returns `nil` if the
       key doesn't exist.
     code_samples:
       - Player-LoadInstance1
@@ -1601,7 +1601,7 @@ methods:
       This function was once used by an ancient data persistence method to
       return a number value that was previously saved to the player with
       `Class.Player:SaveNumber()` with the same key. Returns 0 if the key
-      doesn't exist, not nil.
+      doesn't exist, not `nil`.
     code_samples:
       - Player-LoadNumber1
     parameters:
@@ -1628,7 +1628,7 @@ methods:
     description: |
       This function returns a string value that was previously saved to the
       player with `Class.Player:SaveString()` with the same key. Returns an
-      empty string ("") if the key doesn't exist, not nil..
+      empty string ("") if the key doesn't exist, not `nil`.
     code_samples:
       - Player-LoadString1
     parameters:

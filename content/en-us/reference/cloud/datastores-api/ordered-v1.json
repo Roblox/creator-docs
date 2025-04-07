@@ -3,7 +3,8 @@
   "info": {
     "title": "Ordered data stores (beta)",
     "description": "This page includes reference documentation for working with ordered data stores. For more information on using the API, see [Handle API requests for data stores](../../../cloud/guides/data-store-api-handling.md) and the [usage guide](../../../cloud/guides/usage-data-stores.md).",
-    "version": "0.0.1"
+    "version": "0.0.1",
+    "x-roblox-extensions-version": "1.0.0"
   },
   "servers": [
     {

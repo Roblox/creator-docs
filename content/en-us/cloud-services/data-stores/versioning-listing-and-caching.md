@@ -1,5 +1,5 @@
 ---
-title: Manage data stores
+title: Versioning, listing, and caching
 description: How to manage data stores through versioning, listing, and caching.
 ---
 
