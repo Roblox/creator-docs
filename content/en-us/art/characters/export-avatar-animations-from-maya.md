@@ -131,20 +131,13 @@ To test the animation in Studio:
 
 1. Open a pre-built character rig.
 
-   1. In the menu bar, navigate to the **Avatar** tab.
-   1. In the **Rig** section, click **Rig Builder**. The **Rig Builder** window displays with the R15 tab options open by default.
-
-      <img width="760" img src="../../assets/studio/general/Avatar-Tab-Rig-Builder.png" alt="Studio's Avatar tab with the Rig Builder tool highlighted." />
-
+   1. From the toolbar's **Avatar** tab, click **Rig Builder**.
    1. Select any rig you want to use as a test. The rig displays within the viewport.
 
 1. Connect the rig to the **Animation Editor**.
 
-   1. In the **Animation** section of the **Avatar** tab, click **Animation Editor**. The **Animation Editor** window displays.
-
-      <img width="760" img src="../../assets/studio/general/Avatar-Tab-Animation-Editor.png" alt="Studio's Avatar tab with the Animation Editor tool highlighted." />
-
-   1. In the viewport, click your rig. A dialog displays in the Animation Editor.
+   1. From the toolbar's **Avatar** tab, click **Animation Editor**. The [Animation Editor](../../animation/editor.md) window displays.
+   1. In the viewport, click your rig. A dialog displays in the editor.
    1. In the **Animation Name** field, enter a new animation name, then click the **Create** button. The Animation Editor window displays the media and playback controls, timeline, and track list.
 
 1. Import your avatar animation into the rig.

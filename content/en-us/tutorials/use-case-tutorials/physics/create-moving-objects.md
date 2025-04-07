@@ -134,7 +134,7 @@ The sample [Moving Objects](https://www.roblox.com/games/17560154079/UCT-Linear-
 To configure a `Class.LinearVelocity` constraint:
 
 1. **(Optional)** Make the constraint visible in the 3D space so that you can reference its linear direction.
-   1. In the menu bar, navigate to the **Model** tab, then the **Constraints** section.
+   1. Navigate to the toolbar's **Model** tab, then the **Constraints** section.
    1. If it's not currently enabled, click **Constraint Details** to display constraint visual aids.
 
    <img src="../../../assets/tutorials/laser-traps-with-beams/Attachments-1.png" alt="A close up view of the Studio's Constraints section UI." width="40%" />
@@ -160,12 +160,10 @@ To configure a `Class.LinearVelocity` constraint:
 
 1. Verify the amount of force you set moves the mesh 15 studs per second along the world's negative X axis.
 
-   1. In the menu bar, navigate to the **Test** tab.
-   1. In the **Simulation** section, click the **Mode Picker**. A dropdown menu displays.
+   1. In the toolbar, navigate to the **Test** tab.
+   1. Select **Run** from the playtest modes. Studio simulates the experience at the current camera position without your avatar in the 3D space.
 
-      <img src="../../../assets/studio/general/Test-Tab-Playtest-Options.png" width="800" alt="Rapid playtest options in Test tab of Studio" />
-
-   1. Select **Run**. Studio simulates the experience at the current camera position without your avatar in the 3D space.
+   <img src="../../../assets/studio/general/Test-Tab-Playtest-Options.png" width="760" alt="Rapid playtest options in Studio." />
 
    <video controls src="../../../assets/tutorials/creating-moving-objects/LV-4.mp4" width="80%" alt="A lily pad floats from the left to the right of the screen across a river." ></video>
 
@@ -247,12 +245,10 @@ To configure a prismatic constraint:
 
 1. Verify the amount of force you set moves the log 40 studs per second along the world's negative X axis.
 
-   1. In the menu bar, navigate to the **Test** tab.
-   1. In the **Simulation** section, click the **Mode Picker**. A dropdown menu displays.
+   1. In the toolbar, navigate to the **Test** tab.
+   1. Select **Run** from the playtest modes. Studio simulates the experience at the current camera position without your avatar in the 3D space.
 
-      <img src="../../../assets/studio/general/Test-Tab-Playtest-Options.png" width="800" alt="Rapid playtest options in Test tab of Studio." />
-
-   1. Select **Run**. Studio simulates the experience at the current camera position without your avatar in the 3D space.
+   <img src="../../../assets/studio/general/Test-Tab-Playtest-Options.png" width="760" alt="Rapid playtest options in Studio." />
 
    <video controls src="../../../assets/tutorials/creating-moving-objects/PC-4.mp4" width="90%" alt="A log floats on a river from the left to the right of the screen." ></video>
 

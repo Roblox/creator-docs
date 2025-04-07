@@ -20,9 +20,6 @@ The most efficient workflow is to [create a package](#create-packages), [share i
 You can create a package from any single object or any single parent and children branch of objects. If you want to create a package for a single object, we recommend adding it to a `Class.Model` grouping first so that you can add, remove, or scale instance within the package later without breaking the package.
 
 1. In the **Explorer** window or 3D viewport, right-click the desired object and select **Convert to Package**.
-
-   <img src="../../assets/studio/packages/Contextual-Menu-Convert.png" alt="The context menu that display when you right-click an object in the Explorer window. The Convert to Package menu item is highlighted." width="300" />
-
 1. In the new window, fill in the package details. In particular, if you're working in a [group](../../projects/groups.md), set **Ownership** to the appropriate group in which you have permission to create/edit group experiences.
 
    <Alert severity="warning">
@@ -46,17 +43,17 @@ Don't delete or move the **PackageLink** instance! Doing so for any package copy
 
 To insert a package that doesn't already exist in the current place, you must **initially** insert it from the [Toolbox](../../projects/assets/toolbox.md):
 
-- From **Inventory** &rarr; **My Packages** for packages that you've published to or obtained from the [Creator Store](../../production/creator-store.md), as well as packages that a friend owns and has given you [permissions](#share-and-access-levels) to use.
-- From **Creations** &rarr; **Group Packages** for packages published by members of your [group](../../projects/groups.md) (including yourself).
+- From **Inventory** ⟩ **My Packages** for packages that you've published to or obtained from the [Creator Store](../../production/creator-store.md), as well as packages that a friend owns and has given you [permissions](#share-and-access-levels) to use.
+- From **Creations** ⟩ **Group Packages** for packages published by members of your [group](../../projects/groups.md) (including yourself).
 
 <GridContainer numColumns="2">
   <figure>
     <img src="../../assets/studio/toolbox/Inventory-My-Packages.png" alt="A close up view of the Toolbox with both the Inventory tab and the assets dropdown menu highlighted." width="360" />
-    <figcaption>Toolbox &rarr; Inventory &rarr; My Packages</figcaption>
+    <figcaption>Toolbox ⟩ Inventory ⟩ My Packages</figcaption>
   </figure>
   <figure>
     <img src="../../assets/studio/toolbox/Creations-Group-Packages.png" alt="A close up view of the Toolbox with the Creations tab highlighted." width="360" />
-    <figcaption>Toolbox &rarr; Creations &rarr; Group Packages</figcaption>
+    <figcaption>Toolbox ⟩ Creations ⟩ Group Packages</figcaption>
   </figure>
 </GridContainer>
 
@@ -78,9 +75,6 @@ You can publish any changes you make to a package as a new version to make them 
 To publish changes to a package:
 
 1. In the **Explorer** window or 3D viewport, right-click the modified copy and select **Publish to Package**.
-
-   <img src="../../assets/studio/packages/Contextual-Menu-Publish.png" alt="The context menu that display when you right-click an object in the Explorer window. The Publish to Package menu item is highlighted." width="300" />
-
 1. If a package copy has [auto-update](#automatic-updates) turned on, it immediately pulls in the updated version when you open the place that contains them. Other copies get a white dot on the package icon that indicates an update is available. You can [individually update](#update-outdated-copies) or [mass-update](#mass-updates) them as needed.
 
    <img src="../../assets/studio/packages/Package-Update-Available.png" alt="Two packages in the Explorer set to auto-update, and one with an update available." width="215" />

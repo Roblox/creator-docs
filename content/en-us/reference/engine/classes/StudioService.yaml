@@ -123,10 +123,7 @@ properties:
     description: |
       **GridSize** determines the distance in studs by which Studio's drag and
       move tools move objects each tick. This is set in the user's
-      [Model](../../../studio/model-tab.md) tab under the
-      **Snap&nbsp;to&nbsp;Grid** section.
-
-      <img src="/assets/studio/general/Model-Tab-Transform-Snapping.png" width="768" alt="Transform snapping tools indicated in Model tab" />
+      toolbar's **Model** tab.
     code_samples:
     type: float
     tags:
@@ -150,10 +147,7 @@ properties:
     description: |
       **RotateIncrement** determines the angle in degrees by which Studio's
       rotation tool will rotate selected objects each tick. This is set in the
-      user's [Model](../../../studio/model-tab.md) tab under the
-      **Snap&nbsp;to&nbsp;Grid** section.
-
-      <img src="/assets/studio/general/Model-Tab-Transform-Snapping.png" width="768" alt="Transform snapping tools indicated in Model tab" />
+      user's toolbar's **Model** tab.
     code_samples:
     type: float
     tags:

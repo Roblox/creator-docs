@@ -39,10 +39,7 @@ Before importing a 3D object, ensure that the `.fbx`, `.gltf` or `.obj` meets St
 
 To import a 3D object:
 
-1. In the Home or Avatar tab, click **Import 3D**. A file browser displays.
-
-   <img src="../../assets/studio/general/Avatar-Tab-Import-3D.png" width="760" alt="Top ribbon of the Avatar tab in Studio highlighting the Import 3D button."  />
-
+1. In the toolbar's **Home** or **Avatar** tab, click **Import 3D**. A file browser displays.
 2. Select the `.fbx`, `.gltf` or `.obj` you intend to import. The Importer window displays.
 3. Verify the object preview and check that the [import settings](#import-settings) are correct for your object.
 4. Verify any [warning or error messages](#warnings-and-errors).

@@ -136,10 +136,7 @@ Eligible users can see two types of video ads within Roblox experiences, dependi
 
 To insert a video ad:
 
-1. From the [Home](../../studio/home-tab.md) or [Model](../../studio/model-tab.md) tab, insert a **Block** part into your experience.
-
-   <img src="../../assets/studio/general/Home-Tab-Part-Tools.png" width="716" alt="Part menu indicated in Home tab" />
-
+1. From the toolbar's **Home** or **Model** tab, [insert](../../parts/index.md#insert-parts) a **Block** part into your experience.
 1. Scale the part to at least 8 studs wide and 4.5 studs tall, but no more than 32 studs wide and 18 studs tall.
 1. In the [Explorer](../../studio/explorer.md) window, add an **AdGui** object to the part.
    1. Hover over the part and click the **&CirclePlus;** button. A contextual menu displays.
@@ -206,10 +203,7 @@ In order for the ad unit to be valid and serve ads once you publish the experien
 
 To insert an image ad:
 
-1. From the [Home](../../studio/home-tab.md) or [Model](../../studio/model-tab.md) tab, insert a **Block** part into your experience.
-
-   <img src="../../assets/studio/general/Home-Tab-Part-Tools.png" width="716" alt="Part menu indicated in Home tab" />
-
+1. From the toolbar's **Home** or **Model** tab, [insert](../../parts/index.md#insert-parts) a **Block** part into your experience.
 1. In the [Properties](../../studio/properties.md) window, navigate to the **Face** property and choose a face, or keep the default face.
 1. Scale the part to at least 8 studs wide and 4.5 studs tall, but no more than 32 studs wide and 18 studs tall.
 1. In the [Explorer](../../studio/explorer.md) window, add an **AdGui** object to the part.
@@ -281,7 +275,7 @@ For example, the following two portal ad packages have the exact same core compo
 To insert a portal ad:
 
 1. Open the Creator Store.
-   1. In the menu bar, navigate to the **View** tab.
+   1. In the toolbar, navigate to the **View** tab.
    1. Select **Toolbox**. The [Toolbox](../../projects/assets/toolbox.md) window displays with the **Creator Store** tab open.
 1. In the **Categories** section, click the **See All** button. All categories display.
 

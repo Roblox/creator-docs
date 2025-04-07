@@ -8,7 +8,7 @@ next: /resources/beyond-the-dark/layered-clothing
 prev: /resources/beyond-the-dark/building-architecture
 ---
 
-You can import custom meshes to create everything from NPCs to an animated cloth of a sail boat. We used the custom setting of the Avatar Importer (now the [3D Importer](../../art/modeling/3d-importer.md)) to bring in more exotic custom characters, like the mysterious black hole creatures and the friendly, if unaware, service droids.
+You can import custom meshes to create everything from NPCs to an animated cloth of a sail boat. We used the custom setting of the [3D Importer](../../art/modeling/3d-importer.md) to bring in more exotic custom characters, like the mysterious black hole creatures and the friendly, if unaware, service droids.
 
 The following sections go over how we used [rigging and skinning](../../art/modeling/rigging.md), [PBR (surface
 appearance)](/art/modeling/surface-appearance), and VFX to build one of our more complicated characters that we named the "Creature." We wanted it to glow, emit some light, have trails of particle smoke, and a fluid motion that involved skinning a rig with enough joints to create the convincing waves of its tentacles.
@@ -274,7 +274,7 @@ Because we animated the character outside of Studio, we needed to use the Animat
 
 To import an animation:
 
-1. In the **Avatar** tab, select the **Animation Editor**.
+1. In the toolbar's **Avatar** tab, open the **Animation Editor**.
 2. Select the rigged character that you want to animate in Roblox. The character should be the same one you are rigging in your external DCC application.
 3. Click the **&ctdot;** button in the upper-left section of the editor window, select **Import From FBX Animation**, and locate your exported `.fbx` animation file.
 

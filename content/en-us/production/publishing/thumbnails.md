@@ -180,7 +180,9 @@ Free camera mode is a useful tool to capture in-experience screenshots and video
 
 1. Go to an experience where you have server-side [Developer Console](../../studio/developer-console.md) access.
 
-2. In the **Home** tab of the menu bar, go to the **Test** section and click **Play**.
+2. Click the **Play** button from the playtesting options.
+
+   <img src="../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Play button highlighted in Studio's playtesting options." width="228" />
 
 3. Press <kbd>Left Shift</kbd> and <kbd>P</kbd>.
 

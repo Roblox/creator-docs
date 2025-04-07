@@ -375,7 +375,7 @@ Two players are needed to test if the weapon raycast is finding other players, s
     <source src="../../../../assets/tutorials/hit-detection-with-lasers/Output-Video.mp4" />
    </video>
 
-You can find out more about the Test tab [here](../../../../studio/test-tab.md).
+You can find out more about the **Test** tab [here](../../../../studio/test-tab.md).
 
 ## Find the laser position
 

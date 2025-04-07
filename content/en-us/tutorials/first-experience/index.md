@@ -113,8 +113,8 @@ To insert this tutorial's asset pack from the Creator Store to your Studio inven
 
 To get this asset pack from your inventory into your experience:
 
-1. In the menu bar, select the **View** tab.
-1. In the **Show** section, click **Toolbox**. The **Toolbox** window displays.
+1. In the toolbar, select the **View** tab.
+1. Click **Toolbox**. The **Toolbox** window displays.
 
    <img src="../../assets/studio/general/View-Tab-Toolbox.png" alt="Studio's View tab with the Toolbox tool highlighted." width="876" />
 
@@ -222,9 +222,9 @@ To organize folders into their correct container services for the catapult to wo
    1. Press `Delete`.
 
 1. Playtest to verify that the catapult now works properly.
-   1. In the menu bar, click the **Play** button. Studio enters playtest mode.
+   1. In the toolbar, click the **Play** button. Studio enters playtest mode.
 
-      <img src="../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Studio's Home tab with the Play button highlighted in the menu bar." width="800" />
+      <img src="../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Play button highlighted in Studio's playtesting options." width="228" />
 
    1. Equip the **Ice** projectile to the catapult, aim it toward the nearest floating platform, then launch it at the targets.
 
@@ -238,9 +238,9 @@ To organize folders into their correct container services for the catapult to wo
          <video src="../../assets/getting-started/Scripts-5C.mp4" controls width="80%" alt=""></video>
       </figure>
 
-   1. When you're done playtesting, navigate back to the menu bar and click the **Stop** button. Studio exits playtest mode.
+   1. When you're done playtesting, click the **Stop** button. Studio exits playtest mode.
 
-      <img src="../../assets/studio/general/Quick-Access-Toolbar-Stop.png" alt="Studio's Home tab with the Stop button highlighted in the menu bar." width="800" />
+      <img src="../../assets/studio/general/Quick-Access-Toolbar-Stop.png" alt="Stop button highlighted in Studio's playtesting options." width="228" />
 
 ## Customize projectiles
 

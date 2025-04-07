@@ -7,10 +7,10 @@ You can use a third party modeling tool, such as [Blender](https://www.blender.o
 
 This guide covers the basic workflow for converting a 3D model into a layerable model in Blender using the following steps:
 
-1. [**Importing**](#import) a 3D asset into a template Blender project file.
-2. [**Parenting**](#parent-and-weight) the imported mesh object to the project file's armature rig with Blender's Automatic Weights feature.
+1. [Importing](#import) a 3D asset into a template Blender project file.
+2. [Parenting](#parent-and-weight) the imported mesh object to the project file's armature rig with Blender's Automatic Weights feature.
    1. Manual skinning is not covered, see [Skin a simple mesh](../modeling/skin-a-simple-mesh.md) for an overview of manual skinning.
-3. [**Editing**](#edit-inner-and-outer-cage-meshes) the Inner and Outer Cage meshes to represent the inner and outer surface of the model.
+3. [Editing](#edit-inner-and-outer-cage-meshes) the Inner and Outer Cage meshes to represent the inner and outer surface of the model.
 
 A full list of asset requirements for a layered model can be found in [Layered model specifications](../../art/accessories/specifications.md).
 

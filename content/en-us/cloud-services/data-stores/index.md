@@ -18,9 +18,10 @@ By default, experiences tested in Studio can't access data stores, so you must f
 
 To enable Studio access in a [published](../../production/publishing/publish-experiences-and-places.md) experience:
 
-1. Go to **Home** > **Game Settings** > **Security**.
-2. Enable the **Enable Studio Access to API Services** toggle.
-3. Click **Save**.
+1. Open [Game Settings](../../studio/game-settings.md).
+2. Navigate to **Security**.
+3. Enable the **Enable Studio Access to API Services** toggle.
+4. Click **Save**.
 
 ## Access data stores
 

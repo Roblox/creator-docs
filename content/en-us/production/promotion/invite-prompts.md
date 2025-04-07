@@ -16,23 +16,18 @@ You can also track and reward inviters and invitees using the [Friend Invite Rew
    <Tabs>
    <TabItem label="In-experience prompt">
      <figure>
-     <img src="../../assets/promotion/invite-prompts/Prompt-Multiple-Friends-Custom-Message.png" width="840" height="403" />
-   <figcaption><center>Prompt to invite multiple friends</center></figcaption>
-     </figure>
-     <figure>
-     <img src="../../assets/promotion/invite-prompts/Prompt-Specific-Friend-Custom-Message.png" width="840" height="403" />
-   <figcaption><center>Prompt to invite a specific friend</center></figcaption>
+     <img src="../../assets/promotion/invite-prompts/Invite-From-Experience.png" width="840" height="403" />
      </figure>
    </TabItem>
    <TabItem label="Invite notification">
     <GridContainer numColumns="2">
       <figure>
-      <img src="../../assets/promotion/invite-prompts/Notification-Lock-Screen-Custom-Message.png" width="403" height="840" />
-    <figcaption><center>Notification on phone lock screen</center></figcaption>
-      </figure>
-      <figure>
-      <img src="../../assets/promotion/invite-prompts/Notification-Roblox-App-Custom-Message.png" width="403" height="840" />
+      <img src="../../assets/promotion/invite-prompts/Invite-App-Notification-Stream.png" width="403" height="403" />
     <figcaption><center>Notification in Roblox app</center></figcaption>
+      </figure>
+			<figure>
+      <img src="../../assets/promotion/invite-prompts/Invite-Phone-Lock-Screen.png" width="403" height="403" />
+    <figcaption><center>Notification on phone lock screen</center></figcaption>
       </figure>
      </GridContainer>
    </TabItem>

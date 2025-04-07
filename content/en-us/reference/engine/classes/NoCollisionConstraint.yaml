@@ -14,11 +14,7 @@ description: |
 
   The most common way to create this constraint is by selecting
   **No&nbsp;Collision** through Studio's **Create** menu in the
-  [Model](../../../studio/model-tab.md) tab.
-
-  <img
-  src="../../../assets/studio/general/Model-Tab-Constraints-Create-Menu.png"
-  width="754" alt="Constraint picker indicated in Studio toolbar" />
+  toolbar's **Model** tab.
 
   Unlike most constraints, `Class.NoCollisionConstraint` does not utilize any
   `Class.Attachment|Attachments`. Note that the tool acts differently based on

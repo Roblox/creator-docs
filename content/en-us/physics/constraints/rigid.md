@@ -9,7 +9,7 @@ A `Class.RigidConstraint` connects two `Class.Attachment|Attachments` or `Class.
 To attach two `Class.BasePart|BaseParts` together, versus two `Class.Attachment|Attachments` or `Class.Bone|Bones`, see [WeldConstraint](../../physics/constraints/weld.md).
 </Alert>
 
-The fastest way to create a `Class.RigidConstraint` is by selecting **Rigid&nbsp;Constraint** through Studio's **Create** menu in the [Model](../../studio/model-tab.md) tab.
+The fastest way to create a `Class.RigidConstraint` is by selecting **Rigid Constraint** through Studio's **Create** menu in the toolbar's **Model** tab.
 
 <img
 src="../../assets/studio/general/Model-Tab-Constraints-Create-Menu.png"

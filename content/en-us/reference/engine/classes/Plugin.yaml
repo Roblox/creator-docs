@@ -63,10 +63,9 @@ properties:
       Returns the grid snapping size the user has set in Studio.
     description: |
       Returns the grid snapping size the user has set in Studio under the
-      [Model](../../../studio/model-tab.md) or
-      [Avatar](../../../studio/avatar-tab.md) tabs. Note that this property may
-      have slight rounding errors; for example it may be 0.0099999997764826 for
-      a user setting of 1 or 0.4000000059604645 for a user setting of 0.4.
+      toolbar's **Model** or **Avatar** tabs. Note that this property may have
+      slight rounding errors; for example it may be `0.0099999997764826` for a
+      user setting of `1` or `0.4000000059604645` for a user setting of `0.4`.
     code_samples:
     type: float
     tags:

@@ -1,20 +1,20 @@
 ---
-title: Audience
-description: Explains how to interpret and improve audience metrics for your experience.
+title: Demographics
+description: Explains how to interpret and improve demographics metrics for your experience.
 ---
 
-**Audience** shows you the age, gender, country, and language of monthly active users who play your experience. You can use this data to prioritize future content updates and secure brand sponsorships.
+**Demographics** shows you the age, gender, country, and language of monthly active users who play your experience. You can use this data to prioritize future content updates and secure brand sponsorships.
 
-To view your experience's audience analytics:
+To view your experience's demographic analytics:
 
 1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
-1. In the **Analytics** menu on the left, select **Audience**.
+1. In the **Analytics** menu on the left, select **Demographics**.
 
 You can view analytics for individual or group owned experiences. To view the latter, you need to have [group permissions for analytics](../../production/analytics/analytics-dashboard.md#grant-group-permission).
 
-## View audience metrics
+## View audience demographics
 
-On the audience page you can see a breakdown of your monthly active users into the following categories:
+On the demographics page you can see a breakdown of your monthly active users into the following categories:
 
 | Source            | Description                                                                                                                                                             |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -29,13 +29,13 @@ For privacy reasons, if there are less than 3 users in any age or gender groups,
 </Alert>
 
 <figure>
-    <img src="../../assets/analytics/audience/analytics-audience.png" width="100%"/>
+    <img src="../../assets/analytics/demographics/analytics-demographics.png" width="100%"/>
     <figcaption></figcaption>
   </figure>
 
 ## Identify audience opportunities
 
-Consider the following strategies for using audience data to improve your experience:
+Consider the following strategies for using demographics data to improve your experience:
 
 - Prioritize content that your audience might be interested in.
 - [Localize](../../production/localization/index.md) your experience metadata such as titles with your audience in mind.

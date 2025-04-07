@@ -43,8 +43,8 @@ To get the packages from your inventory into your experience:
 
     </Grid>
 
-2. In the menu bar, select the **View** tab.
-3. In the **Show** section, click **Toolbox**. The **Toolbox** window displays.
+2. In the toolbar, select the [View](../../studio/view-tab.md) tab.
+3. Click **Toolbox**. The **Toolbox** window displays.
 
    <img src="../../assets/studio/general/View-Tab-Toolbox.png" alt="Studio's View tab with the Toolbox tool highlighted." width="876" />
 
@@ -55,10 +55,7 @@ To get the packages from your inventory into your experience:
 5. Click the **Feature Package Core** tile, then the **Bundle Feature Package** tile. Both package folders display in the **Explorer** window.
 6. Drag the package folders into **ReplicatedStorage**.
 7. Allow data store calls to track player purchases with the packages.
-   1. In the **Home** tab of the menu bar, select **Game Settings**.
-
-      <img src="../../assets/studio/general/Home-Tab-Game-Settings.png" width="760" alt="Game Settings button indicated in Home tab" />
-
+   1. In the toolbar's **Home** tab, select **Game Settings**.
    1. Navigate to the **Security** tab, then enable **Enable Studio Access to API Services**.
 
 ## Define currencies
