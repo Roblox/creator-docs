@@ -71,14 +71,14 @@ To export a mesh in Maya as a `.fbx` file:
 4. On the right-hand side of the window, navigate to the **Options...** section.
 5. In the **Geometry** section, enable **Smooth Mesh** and **Referenced Asset Content**.
 6. In the **Animation** section, enable **Animation**. Avatar characters with [facial animation data](../../art/characters/facial-animation/index.md) require animation data.
-7. If you need to import textures as a `.png`, in the **Embed Media** section, enable **Embed Media**.
-8. In the **Advanced Options** section,
+7. Enable **Bake Animation**.
+8. If you need to import textures as a `.png`, in the **Embed Media** section, enable **Embed Media**.
+9. In the **Advanced Options** section,
    - Navigate to **Units**, then enable **Automatic**.
    - Navigate to **Axis Conversion**, then set the **Up Axis** property to **Y**.
-   - If you have issues importing your model, navigate to **FBX File Format**, then set the **Type** property to **Binary**, and the **Version** property to **FBX 2020**.
-9. Click the **Export All** button.
-   <img src="../../assets/accessories/lc-requirements-maya-settings.png" />
-10. After exporting, use Studio's [3D importer](../../art/modeling/3d-importer.md) to import your model. See [Test characters in Studio](../../art/characters/testing/studio.md) for additional importing and testing information.
+10. Click the **Export All** button.
+    <img src="../../assets/accessories/lc-requirements-maya-settings-with-animation.png" />
+11. After exporting, use Studio's [3D importer](../../art/modeling/3d-importer.md) to import your model. See [Test characters in Studio](../../art/characters/testing/studio.md) for additional importing and testing information.
 
 </TabItem>
 </Tabs>

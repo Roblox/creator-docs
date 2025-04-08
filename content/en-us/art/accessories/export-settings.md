@@ -48,9 +48,10 @@ To export a mesh in Maya as a `.fbx` file:
 8. In the **Advanced Options** section,
    - Navigate to **Units**, then enable **Automatic**.
    - Navigate to **Axis Conversion**, then set the **Up Axis** property to **Y**.
-   - Navigate to **FBX File Format**, then set the **Type** property to **Binary**, and the **Version** property to **FBX 2020**.
 9. Click the **Export All** button.
+
    <img src="../../assets/accessories/lc-requirements-maya-settings.png" />
+
 10. After exporting, use Studio's [3D Importer](../../art/modeling/3d-importer.md) to import your model and the [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) to convert the model into an accessory.
 
 </TabItem>

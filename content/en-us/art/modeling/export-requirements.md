@@ -46,14 +46,15 @@ To export a mesh in Maya as a `.fbx` file:
 3. Near the bottom of the window, click the **Files of type** dropdown, then select **FBX export**.
 4. On the right-hand side of the window, navigate to the **Options...** section.
 5. In the **Geometry** section, enable **Smooth Mesh** and **Referenced Asset Content**.
-6. In the **Animation** section, disable **Animation**, unless you need to import an animation to Studio.
+6. In the **Animation** section, disable **Animation**, unless you need to import an animation to Studio. Some avatar assets require animation.
+   1. If you are exporting animation, enable **Bake Animation**.
 7. If you need to import textures as a `.png`, in the **Embed Media** section, enable **Embed Media**.
 8. In the **Advanced Options** section,
    - Navigate to **Units**, then enable **Automatic**.
    - Navigate to **Axis Conversion**, then set the **Up Axis** property to **Y**.
-   - Navigate to **FBX File Format**, then set the **Type** property to **Binary**, and the **Version** property to **FBX 2020**.
 9. Click the **Export All** button.
-   <img src="../../assets/accessories/lc-requirements-maya-settings.png" alt="Blender export sidebar showing Bake Animation as unchecked"  />
+
+   <img src="../../assets/accessories/lc-requirements-maya-settings.png" alt="Maya export sidebar showing Bake Animation as unchecked"  />
 
 </TabItem>
 </Tabs>
