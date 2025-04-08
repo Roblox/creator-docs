@@ -688,7 +688,7 @@ properties:
       A reference to the humanoid's _Left Leg_ part.
     description: |
       A reference to the humanoid's _Left Leg_ part. The value of this property
-      will always be nil if the humanoid's `Enum.RigType` is set to R15.
+      will always be `nil` if the humanoid's `Enum.RigType` is set to R15.
     code_samples:
     type: BasePart
     tags:
@@ -941,7 +941,7 @@ properties:
       A reference to the humanoid's _Right Leg_ part.
     description: |
       A reference to the humanoid's _Right Leg_ part. The value of this property
-      will always be nil if the humanoid's RigType is set to R15.
+      will always be `nil` if the humanoid's RigType is set to R15.
     code_samples:
     type: BasePart
     tags:
@@ -1191,7 +1191,7 @@ properties:
       part, plus the `Class.Humanoid.WalkToPoint` translated in object space
       relative to the rotation of the part.
 
-      This can be described in Lua as:
+      This can be described in Luau as:
 
       ```lua
       goal = humanoid.WalkToPart.CFrame:pointToObjectSpace(humanoid.WalkToPoint)
@@ -2809,7 +2809,7 @@ events:
         **true** and `currentSeatPart` will be the seat they are currently
         sitting in.
       - If the character got up from a seat, the `active` parameter will be
-        **false** and `currentSeatPart` will be nil.
+        **false** and `currentSeatPart` will be `nil`.
 
       See also:
 

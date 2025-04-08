@@ -53,7 +53,7 @@ Each tutorial series includes a set of lessons covering specific topics in Roblo
 <Grid item XSmall={4} XLarge={4}>
 ![alt](../../assets/education/edu-landingPages/thumbnail_traps_312x200.jpg)
 <h4>Coding Fundamentals </h4>
-A comprehensive course covering a variety of topics in Roblox Lua.
+A comprehensive course covering a variety of topics in Luau, a descendant of Lua developed by Roblox.
 <a href="../../tutorials/fundamentals/coding-1/coding-fundamentals.md">
 <Button variant="text">View</Button>
 </a>

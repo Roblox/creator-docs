@@ -29,9 +29,9 @@ To publish an existing place of an experience with [Place Publishing API](../../
 
    1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
    1. Find the experience with the place that you want to update.
-   1. Hover over the thumbnail of the target experience and click the **&ctdot;** button to display a list of options, then select **Copy Universe ID** from the list.
+   1. Hover over the experience's thumbnail, click the **&ctdot;** button, and select **Copy Universe ID**.
 
-      <img src="../../assets/creator-dashboard/Experience-Context-Menu-Copy-Universe-ID.png" width="420" alt="Copy Universe ID option from Creator Dashboard" />
+      <img src="../../assets/creator-dashboard/Options-Button-Experience-Public.png" width="200" />
 
 1. Get the **Place ID** of the place that you want to update.
 
@@ -42,14 +42,14 @@ To publish an existing place of an experience with [Place Publishing API](../../
 
 1. Add the API Key in the **x-api-key** header of a `POST` request to the API. The following two example requests reference a Roblox XML place file (`.rbxlx`) and a binary place file (`.rbxl`).
 
-   ```bash title='XML Place File Request'
+   ```bash title="XML Place File Request"
    $ curl --verbose --location POST 'https://apis.roblox.com/universes/v1/{universeId}/places/{placeId}/versions?versionType=Published' \
    --header 'x-api-key: <your-api-key>' \
    --header 'Content-Type: application/xml' \
    --data-binary @/home/placefiles/place1.rbxlx
    ```
 
-   ```bash title='Binary Place File Request'
+   ```bash title="Binary Place File Request"
    $ curl --verbose --location POST 'https://apis.roblox.com/universes/v1/{universeId}/places/{placeId}/versions?versionType=Published' \
    --header 'x-api-key: <your-api-key>' \
    --header 'Content-Type: application/octet-stream' \
@@ -60,7 +60,7 @@ To publish an existing place of an experience with [Place Publishing API](../../
 
 1. If you send your request correctly, you receive a success response body with the place version number in the following format:
 
-   ```json title='Example Response Body'
+   ```json title="Example Response Body"
    { "versionNumber": 7 }
    ```
 

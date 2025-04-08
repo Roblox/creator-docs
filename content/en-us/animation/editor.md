@@ -167,23 +167,17 @@ rigs.
 
 ## Create an animation
 
-You can only create animations using rigs. If you don't have a rig available, insert a pre-built rig using the [Rig Builder](../studio/rig-builder.md) plugin. The pre-built rigs have all of the basic parts and mechanisms to
+You can only create animations using rigs. If you don't have a rig available, insert a pre-built rig using the [Rig Builder](../studio/rig-builder.md) tool. The pre-built rigs have all of the basic parts and mechanisms to
 build a character animation.
-
-<img src="../assets/studio/general/Avatar-Tab-Rig-Builder.png" width="760" />
 
 If you have a rig, you can create a new animation for it using the following steps:
 
-1. In the menu bar, navigate to the **Avatar** tab.
-2. In the **Animations** section, click the **Animation Editor** to display its window.
-
-   <img src="../assets/studio/general/Avatar-Tab-Animation-Editor.png" width="760" />
-
-3. Select the rig you want to create an animation for to display the creation dialog.
+1. From the toolbar's **Avatar** tab, click **Animation Editor**.
+2. Select the rig you want to create an animation for to display the creation dialog.
 
    <img src="../assets/animation/animation-editor/Create-Animation-Dialog.png" width="380" />
 
-4. In the **Animation Name** field, enter a new animation name, then
+3. In the **Animation Name** field, enter a new animation name, then
    click the **Create** button. The Animation Editor window displays
    the [media and playback controls](#media-and-playback-controls), [timeline](#timeline), and [track list](#track-list).
 
@@ -224,7 +218,7 @@ To create a pose:
 
    <Alert severity="info" variant="standard">
    When creating poses, you can toggle between **Move** and **Rotate**
-   modes by pressing <kbd>R</kbd>. These modes work exactly like moving and rotating base objects, including the snap settings and incremental values located in the **Snap&nbsp;to&nbsp;Grid** section of the **Model** tab.
+   modes by pressing <kbd>R</kbd>. These modes work exactly like moving and rotating base objects, including the snap settings and incremental values located in the toolbar's **Model** tab.
    </Alert>
 
 5. Continue moving or rotating bones or meshes until you get the desired pose.

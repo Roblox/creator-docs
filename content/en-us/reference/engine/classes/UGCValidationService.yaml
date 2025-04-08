@@ -24,7 +24,7 @@ methods:
         default:
         summary: ''
       - name: innerCage
-        type: Object
+        type: EditableMesh
         default:
         summary: ''
       - name: innerTransform
@@ -32,7 +32,7 @@ methods:
         default:
         summary: ''
       - name: outerCage
-        type: Object
+        type: EditableMesh
         default:
         summary: ''
       - name: outerTransform
@@ -58,7 +58,7 @@ methods:
         default:
         summary: ''
       - name: innerCage
-        type: Object
+        type: EditableMesh
         default:
         summary: ''
       - name: innerTransform
@@ -66,7 +66,7 @@ methods:
         default:
         summary: ''
       - name: outerCage
-        type: Object
+        type: EditableMesh
         default:
         summary: ''
       - name: outerTransform

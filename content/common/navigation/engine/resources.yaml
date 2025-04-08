@@ -1,3 +1,6 @@
+backTo:
+  title: Back to experiences
+  path: /experiences
 navigation:
   - heading: Code samples
   - title: Overview
@@ -9,6 +12,12 @@ navigation:
     path: /resources/feature-packages/bundles
   - title: Missions
     path: /resources/feature-packages/missions
+  - title: Season passes
+    path: /resources/feature-packages/season-passes
+  - title: Engagement rewards
+    path: /resources/feature-packages/engagement-rewards
+  - title: Changelog
+    path: /resources/feature-packages/changelog
   - heading: Developer modules
   - title: Overview
     path: /resources/modules/
@@ -44,6 +53,52 @@ navigation:
     path: /resources/roblox-connect
   - title: Plant reference project
     path: /resources/plant-reference-project
+
+  - heading: Resources
+  - title: The Mystery of Duvall Drive
+    path: /resources/the-mystery-of-duvall-drive/
+    section:
+      - title: Overview
+        path: /resources/the-mystery-of-duvall-drive/
+      - title: Construct the house
+        path: /resources/the-mystery-of-duvall-drive/construct-the-house
+      - title: Materialize the world
+        path: /resources/the-mystery-of-duvall-drive/materialize-the-world
+      - title: Immersive narrative
+        path: /resources/the-mystery-of-duvall-drive/immersive-narrative
+      - title: Stream in immersion
+        path: /resources/the-mystery-of-duvall-drive/stream-in-immersion
+      - title: Develop a moving world
+        path: /resources/the-mystery-of-duvall-drive/develop-a-moving-world
+      - title: Design dark soundscapes
+        path: /resources/the-mystery-of-duvall-drive/design-dark-soundscapes
+      - title: Technical overview
+        path: /resources/the-mystery-of-duvall-drive/technical-overview
+        section:
+          - title: Overview
+            path: /resources/the-mystery-of-duvall-drive/technical-overview
+          - title: Main design requirements
+            path: /resources/the-mystery-of-duvall-drive/main-design-requirements
+          - title: Foundational gameplay systems
+            path: /resources/the-mystery-of-duvall-drive/foundational-gameplay-systems
+          - title: Supporting systems
+            path: /resources/the-mystery-of-duvall-drive/supporting-systems
+  - title: Beyond the Dark
+    path: /resources/beyond-the-dark/
+    section:
+      - title: Overview
+        path: /resources/beyond-the-dark/
+      - title: Architecture
+        path: /resources/beyond-the-dark/building-architecture
+      - title: Characters
+        path: /resources/beyond-the-dark/custom-characters
+      - title: Layered clothing
+        path: /resources/beyond-the-dark/layered-clothing
+      - title: Sound design
+        path: /resources/beyond-the-dark/sound-design
+      - title: User interface
+        path: /resources/beyond-the-dark/user-interface
+
   - title: Battle Royale
     path: /resources/battle-royale/
     section:
@@ -67,40 +122,3 @@ navigation:
     path: /resources/weapons-kit
   - title: NPC kit
     path: /resources/npc-kit
-  - heading: Creator programs
-  - title: Overview
-    path: /creator-programs/
-  - title: All programs
-    section:
-      - title: Brand Developer Directory
-        path: /creator-programs/brand-developer-directory
-      - title: Community Feedback
-        path: /creator-programs/feedback
-      - title: Creator Affiliate Pilot
-        path: /creator-programs/creator-affiliate
-      - title: Creator Events
-        path: /creator-programs/creator-events
-      - title: Creator Fund
-        path: /creator-fund
-      - title: Creator Spotlights
-        path: /creator-programs/spotlights
-      - title: Developer Awards
-        path: /creator-programs/developer-awards
-      - title: Inspire
-        path: /creator-programs/inspire
-      - title: Learn & Explore Sort
-        path: /creator-programs/learn-explore-sort
-      - title: Managed Brand Integrations
-        path: /creator-programs/managed-brand-integrations
-      - title: Notable Translators
-        path: /creator-programs/notable-translators
-      - title: Roblox Developers Conference (RDC)
-        path: /creator-programs/rdc
-      - title: Roblox Innovation Awards
-        path: /creator-programs/innovation-awards
-      - title: Roblox Research Panel
-        path: /creator-programs/research-panel
-      - title: Today's Picks on Home
-        path: /creator-programs/todays-picks-home
-      - title: Today's Picks on Marketplace
-        path: /creator-programs/todays-picks-marketplace

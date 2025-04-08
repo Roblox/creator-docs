@@ -3,7 +3,7 @@ title: Terrain Editor
 description: The Terrain Editor tools generate and sculpt realistic terrain environments such as mountains, bodies of water, grass-covered hills, or a flat desert.
 ---
 
-The **Terrain Editor**, accessible from the [Home](../studio/home-tab.md) or [View](../studio/view-tab.md) tab, lets you generate and manipulate [environmental terrain](../parts/terrain.md) through its [Create](#create-tab) and [Edit](#edit-tab) toolsets.
+The **Terrain Editor**, accessible from the toolbar's [Home](./home-tab.md) tab, lets you generate and manipulate [environmental terrain](../parts/terrain.md) through its [Create](#create-tab) and [Edit](#edit-tab) toolsets.
 
 <img src="../assets/studio/general/Home-Tab-Terrain-Editor.png" width="716" alt="Terrain Editor indicated in Home tab" />
 

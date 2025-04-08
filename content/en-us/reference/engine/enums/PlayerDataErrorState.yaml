@@ -16,8 +16,13 @@ items:
     value: 1
     tags: []
     deprecation_message: ''
-  - name: None
+  - name: ReleaseFailed
     summary: ''
     value: 2
+    tags: []
+    deprecation_message: ''
+  - name: None
+    summary: ''
+    value: 3
     tags: []
     deprecation_message: ''

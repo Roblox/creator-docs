@@ -29,11 +29,7 @@ To create a mood:
 1. Add a character model with an animatable head to the viewport.
 1. Open the **Face Animation Editor**.
 
-   1. In the menu bar, navigate to the **Avatar** tab.
-   1. In the **Animation** section, click on the Animation Editor. The Animation Editor window displays.
-
-      <img width="760" img src="../../../assets/studio/general/Avatar-Tab-Animation-Editor.png" />
-
+   1. From the toolbar's **Avatar** tab, click **Animation Editor**. The [Animation Editor](../../../animation/editor.md) window displays.
    1. In the viewport, select your character model with an animatable head. A dialog displays.
 
       <img width="40%" img src="../../../assets/animation/animation-editor/Create-Animation-Dialog.png" />

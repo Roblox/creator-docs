@@ -3,6 +3,10 @@ title: Automatically translate dynamic content
 description: Explain how to generate translations in real time for dynamic content.
 ---
 
+<Alert severity = 'warning'>
+The following feature is currently in early development and is subject to change. For the latest updates and changes, see the [announcement](https://devforum.roblox.com/t/introducing-the-real-time-translation-api/3550206).
+</Alert>
+
 The standard translation workflow detects strings in your experience based on how frequently they're viewed by players and adds them to your localization table for translation. It might miss uncommon strings and/or strings generated during gameplay, such as dynamically generated text or text created by players. You can use the translate text API to generate translations for these strings in real-time, ensuring that your experience is fully localized.
 
 ## Translate text into a player's language
@@ -128,7 +132,7 @@ The real-time translation API currently only supports RCC authentication. As a r
   <tr>
     <td>translations</td>
     <td>`Dictionary<string, string>`</td>
-    <td>A map containing the requested translations. The key is the IETF BCP-47 language code, and the value is the translated text for that language. The map will contain all requested translations.</td>
+    <td>A map containing the requested translations. The key is the IETF BCP-47 language code, and the value is the translated text for that language. The map will contain all requested translations. If the source text was filtered, this map will be empty. </td>
   </tr>
 </tbody>
 </table>

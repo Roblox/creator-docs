@@ -1,3 +1,6 @@
+backTo:
+  title: Back to Open Cloud
+  path: /cloud/
 navigation:
   - heading: Guides
   - title: Overview

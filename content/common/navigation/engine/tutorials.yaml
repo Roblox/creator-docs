@@ -1,3 +1,6 @@
+backTo:
+  title: Back to experiences
+  path: /experiences/
 navigation:
   - heading: Get started
   - title: Overview

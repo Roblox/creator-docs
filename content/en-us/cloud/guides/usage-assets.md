@@ -201,7 +201,6 @@ To update an existing asset by an HTTP request:
    1. Select the **Development Items** category.
    1. Select the category of your asset and find the target asset.
    1. Hover over the thumbnail of the target asset and click the **&ctdot;** button to display a list of options, then select **Copy Asset ID** from the list.
-      <img src="../../assets/open-cloud/copy-asset-id.png" width="50%" />
 
 <Tabs>
 <TabItem label="Asset Content">

@@ -23,7 +23,7 @@ Because of the diversity of content you'll find on Roblox, we use the term **exp
 
 Roblox is an **all ages** platform where everyone can join, socialize, learn, and play safely. Various experiences may be targeted at a specific age range or grade level. For example, one math related experience might target fifth grade arithmetic while another might target high school robotics.
 
-Roblox can also be used for creation. Roblox Studio is used for building and coding all Roblox experiences. Our team typically recommends it for ages 10 and up, although some students may certainly start younger. Younger students typically focus on the creation and design of environments, such as recreating historical landmarks, while older students who are comfortable reading and typing can begin learning to code with the language Lua and built-in IDE.
+Roblox can also be used for creation. Roblox Studio is used for building and coding all Roblox experiences. Our team typically recommends it for ages 10 and up, although some students may certainly start younger. Younger students typically focus on the creation and design of environments, such as recreating historical landmarks, while older students who are comfortable reading and typing can begin learning to code with the language Luau and built-in IDE.
 
 #### Hardware requirements for play and game-based learning
 
@@ -97,7 +97,7 @@ Whenever Roblox is installed on any computer, two pieces of software are include
 
 ### Code in Roblox Studio
 
-Roblox Studio uses a typed-out scripting language called **Lua**. It's best described as similar to Python, but even easier to teach since Lua doesn't require strict adherence to indentations and other syntax that create hurdles for new learners. Roblox Studio does not currently offer drag-and-drop coding, like the type found in Scratch.
+Roblox Studio uses a typed-out scripting language called **Luau**. It's best described as similar to Python, but even easier to teach since Luau doesn't require strict adherence to indentations and other syntax that create hurdles for new learners. Roblox Studio does not currently offer drag-and-drop coding, like the type found in Scratch.
 
 ### Installation and classroom networks
 

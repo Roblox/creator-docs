@@ -24,7 +24,7 @@ To charge users for paid access in local currency, you must:
 - Have a verified email address.
 - Be 13 years of age or older with a [verified ID](./../publishing/account-verification.md#verify-through-government-id).
 - Successfully [set up an account with Roblox's third-party payment provider Tipalti](#set-up-your-account-to-receive-payouts).
-- Reside in a country supported by Tipalti. See [Payment methods coverage](https://support.tipalti.com/Content/Topics/UserGuide/PaymentInformation/PaymentMethodsCoverage/IntroUSD.htm?Highlight=payment%20coverage#USD) for a list of eligible countries.
+- Reside in a country supported by Tipalti. See [Payment methods coverage](https://support.tipalti.com/Content/Topics/UserGuide/PaymentInformation/PaymentMethodsCoverage/IntroUSD.htm) for a list of eligible countries.
 
 <Alert severity="warning">
 Users residing in Argentina, China, Colombia, India, Indonesia, Russia, Taiwan, Turkey, UAE, Ukraine, or Vietnam are not able to purchase paid access experiences in local currency.
@@ -108,7 +108,7 @@ Before becoming available to users, your paid access experience must undergo a p
 
 To enable paid access in Roblox Studio:
 
-1. In Studio, go to **Home** > **Game Settings**.
+1. Open [Game Settings](../../studio/game-settings.md).
 2. Under **Monetization**, click **Configure on Creator Hub**.
 3. Follow the steps to [enable paid access in the Creator Hub](#enable-paid-access-in-the-creator-hub).
 

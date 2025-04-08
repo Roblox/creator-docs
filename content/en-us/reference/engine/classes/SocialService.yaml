@@ -23,6 +23,24 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: SocialService:GetPlayersByPartyId
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: partyId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Instances
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: SocialService:HideSelfView
     summary: |
       Hides the calling player's self view.
@@ -51,10 +69,6 @@ methods:
       `Class.SocialService:CanSendGameInviteAsync()|CanSendGameInviteAsync()` to
       determine whether the player can send an invite, as this ability may vary
       depending on the platform or player.
-
-      <img
-      src="../../../assets/promotion/invite-prompts/Prompt-Multiple-Friends-Custom-Message.png"
-      width="806" />
 
       See
       [Player Invite Prompts](../../../production/promotion/invite-prompts.md)
@@ -143,6 +157,24 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: SocialService:UpdatePlayerPartyData
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: partyId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
@@ -283,6 +315,21 @@ events:
     tags: []
     deprecation_message: ''
     security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: SocialService.PlayerPartyDataChanged
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: partyId
+        type: string
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []

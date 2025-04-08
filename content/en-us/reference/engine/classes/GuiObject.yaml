@@ -1604,7 +1604,7 @@ events:
 
       When a GUI loses selection focus, the value of the
       `Class.GuiService.SelectionObject|SelectionObject` property changes either
-      to nil or to the GUI element that gains selection focus. To determine
+      to `nil` or to the GUI element that gains selection focus. To determine
       which GUI gained selection, or if no GUI is selected, check the value of
       this property.
     code_samples:
@@ -1683,7 +1683,7 @@ events:
         type: Array
         default:
         summary: |
-          A Lua array of `Datatype.Vector2` objects, each indicating the
+          A Luau array of `Datatype.Vector2` objects, each indicating the
           position of all the fingers involved in the gesture.
       - name: totalTranslation
         type: Vector2
@@ -1737,7 +1737,7 @@ events:
         type: Array
         default:
         summary: |
-          A Lua array of `Datatype.Vector2` objects, each indicating the
+          A Luau array of `Datatype.Vector2` objects, each indicating the
           position of all the fingers involved in the pinch gesture.
       - name: scale
         type: float
@@ -1789,7 +1789,7 @@ events:
         type: Array
         default:
         summary: |
-          A Lua array of `Datatype.Vector2` objects, each indicating the
+          A Luau array of `Datatype.Vector2` objects, each indicating the
           position of all the fingers involved in the gesture.
       - name: rotation
         type: float

@@ -86,9 +86,6 @@ You can test whether the webhook you've configured can successfully receive noti
 1. Navigate to the [Webhooks](https://create.roblox.com/settings/webhooks) configuration page.
 2. Select the webhook you want to test from the list of configured webhooks.
 3. Click the pencil icon next to the target webhook.
-
-   <img src="../../assets/creator-dashboard/Configure-Webhook.png" width="780" alt="The pencil icon next to an example webhook" />
-
 4. Click the **Test Response** button.
 
 The system then sends a notification in the `SampleNotification` type, which includes the **User ID** of the user who triggers the notification, as the following example schema shows:
@@ -110,7 +107,7 @@ If you are integrating your webhook with a third-party service, you can test it 
 
 Once you configure your server to receive payloads, it starts to listen for any payload sent to the endpoint. If you set a secret when configuring your webhook, Roblox sends a `roblox-signature` along with every webhook notification to help protect your data security. This way, you can use the it to verify that the notification is from Roblox and limit your server to only receive requests originating from Roblox. The signature is in the payload header for custom endpoints and in the footer for third-party servers.
 
-```csv title='Signature Format with Secret for Custom Endpoints'
+```csv title="Signature Format with Secret for Custom Endpoints"
 
 "roblox-signature": "t=<timestamp>,v1=<signature>"
 
@@ -118,7 +115,7 @@ Once you configure your server to receive payloads, it starts to listen for any 
 
 If you don't have a secret for your webhook, the signature you receive only contains the timestamp value on when the notification is sent:
 
-```csv title='Signature Format without Secret for Custom Endpoints'
+```csv title="Signature Format without Secret for Custom Endpoints"
 
 "roblox-signature": "t=<timestamp>"
 
@@ -191,7 +188,7 @@ The **variable payload schema fields** provides flexibility for webhooks to acco
 
 The following example shows the payload schema of the **Right To Erasure Request** event:
 
-```json title='Example Schema for Right to Erasure Request'
+```json title="Example Schema for Right to Erasure Request"
 
 Body:{
 
@@ -222,7 +219,7 @@ If you store any **Personally Identifiable Information (PII)** of your users, su
 
 If you use a custom endpoint as your webhook server instead of a third-party tool, you can extract the data subject to deletion from the webhook payload and build your own automation solution. The following code sample provides an example solution and adds prevention to replay attacks by verifying that the request is coming from Roblox:
 
-```php title='Extracting PII from Payload'
+```php title="Extracting PII from Payload"
 const crypto = require('crypto')
 const express = require('express');
 let app = express();

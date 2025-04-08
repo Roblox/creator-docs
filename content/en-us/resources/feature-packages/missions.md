@@ -35,7 +35,7 @@ To get the packages from your inventory into your experience:
 
 	<Grid item container xs={12} sm={6} direction='row'>
 	<Grid item container direction='column'>
-	<BrowseSampleCard href='https://create.roblox.com/store/asset/94918533221001' description='The Core Feature Package offers shared DataStore table logic for all feature packages.' title='Core Feature Package' assetId={94918533221001}  />
+	<BrowseSampleCard href='https://create.roblox.com/store/asset/94918533221001' description='The Core feature package offers shared data store logic for all feature packages.' title='Core Feature Package' assetId={94918533221001}  />
 	</Grid>
 	</Grid>
 
@@ -47,8 +47,8 @@ To get the packages from your inventory into your experience:
 
 	</Grid>
 
-2. In the menu bar, select the **View** tab.
-3. In the **Show** section, click **Toolbox**. The **Toolbox** window displays.
+2. In the toolbar, select the [View](../../studio/view-tab.md) tab.
+3. Click **Toolbox**. The **Toolbox** window displays.
 
    <img src="../../assets/studio/general/View-Tab-Toolbox.png" alt="Studio's View tab with the Toolbox tool highlighted." width="876" />
 

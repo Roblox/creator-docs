@@ -160,7 +160,7 @@ Switch.flip()
 
 ### Encapsulation
 
-Encapsulation is the practice of creating a layer of abstraction around objects or scripting logic to hide complexity. You can use `Class.ModuleScript|ModuleScripts` to encapsulate Roblox objects with custom Lua functions to simplify code.
+Encapsulation is the practice of creating a layer of abstraction around objects or scripting logic to hide complexity. You can use `Class.ModuleScript|ModuleScripts` to encapsulate Roblox objects with custom Luau functions to simplify code.
 
 For example, you can use encapsulation to:
 

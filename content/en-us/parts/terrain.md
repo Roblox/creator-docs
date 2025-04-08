@@ -183,7 +183,7 @@ To add animated grass to the **Grass** material:
 
    <img src="../assets/studio/properties/Terrain-GrassLength.png" width="320" alt="GrassLength property of Terrain object in Properties window of Studio" />
 
-	 <img src="../assets/modeling/terrain/Terrain-GrassLength.jpg" width="720" alt="GrassLength comparison depicted on rolling grassland hills." />
+    <img src="../assets/modeling/terrain/Terrain-GrassLength.jpg" width="720" alt="GrassLength comparison depicted on rolling grassland hills." />
 
 4. Adjust the direction and strength of its animation through [global wind](../environment/global-wind.md).
 
@@ -297,9 +297,9 @@ To import a heightmap and optional colormap:
    To apply one consistent material across all of the generated terrain, select the **Material** tab and pick a terrain material.
    </TabItem>
    <TabItem label="Colormap">
-	 To apply a colormap, click the **Colormap** tab, click its import button, and choose the file to import. Colors on the image should match the following RGB/hex values and use hard edges, since anti‑aliasing or edge smoothing may create pixel colors outside the expected value ranges.
+    To apply a colormap, click the **Colormap** tab, click its import button, and choose the file to import. Colors on the image should match the following RGB/hex values and use hard edges, since anti‑aliasing or edge smoothing may create pixel colors outside the expected value ranges.
 
-	 The following table describes color mapping to a corresponding material. If your colormap contains a color that's not in the table, Studio chooses the closest matching material; for this reason, it is best to download the <a href="../assets/modeling/terrain/RobloxColorMapIndex.png" target="_blank" rel="noopener">`RobloxColorMapIndex`</a> file and directly sample its colors, or type the exact RGB/hex values into the color picker of your image editing application.
+   The following table describes color mapping to a corresponding material. If your colormap contains a color that's not in the table, Studio chooses the closest matching material; for this reason, it is best to download the <a href="../assets/modeling/terrain/RobloxColorMapIndex.png" target="_blank" rel="noopener">`RobloxColorMapIndex`</a> file and directly sample its colors, or type the exact RGB/hex values into the color picker of your image editing application.
 
    <table size="small">
    <thead>
@@ -469,7 +469,7 @@ To import a heightmap and optional colormap:
 
 You can script terrain generation using the `Class.Terrain` class. For example, to create terrain with grass material that fills a volume, you can use methods such as `Class.Terrain:FillBall()|FillBall()`, `Class.Terrain:FillBlock()|FillBlock()`, `Class.Terrain:FillCylinder()|FillCylinder()`, `Class.Terrain:FillRegion()|FillRegion()`, or `Class.Terrain:FillWedge()|FillWedge()`.
 
-```lua title='Fill Block Volume'
+```lua title="Fill Block Volume"
 workspace.Terrain:FillBlock(CFrame.new(0, 0, 0), Vector3.new(4, 4, 4), Enum.Material.Grass)
 ```
 
@@ -555,8 +555,8 @@ To transform a region:
 
    <Alert severity="info">
    Holding <kbd>Shift</kbd> while dragging any **scale** handle scales the region proportionally across all other axes, and holding <kbd>Ctrl</kbd> or <kbd>⌘</kbd> while dragging scales the region equally in both the positive and negative direction along that axis.
-	 
-	 Holding <kbd>Shift</kbd> while dragging any **rotate** ring toggles between rotation snapping or free‑form rotation.
+
+    Holding <kbd>Shift</kbd> while dragging any **rotate** ring toggles between rotation snapping or free‑form rotation.
    </Alert>
 
    <Alert severity="success">

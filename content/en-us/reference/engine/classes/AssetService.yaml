@@ -38,7 +38,7 @@ methods:
           - `Size` – A `Datatype.Vector2` that specifies the image's desired
             width and height.
     returns:
-      - type: Object
+      - type: EditableImage
         summary: ''
     tags: []
     deprecation_message: ''
@@ -65,7 +65,7 @@ methods:
           `Class.EditableMesh.FixedSize|FixedSize` will always be `false` for
           empty editable meshes.
     returns:
-      - type: Object
+      - type: EditableMesh
         summary: ''
     tags: []
     deprecation_message: ''
@@ -94,10 +94,12 @@ methods:
     writeCapabilities: []
   - name: AssetService:CreateAssetAsync
     summary: |
-      Creates a new asset from the given object.
+      Uploads a new asset to Roblox from the given object.
     description: |
-      Creates a new asset from the given object in Plugin or Open Cloud Luau
-      Execution context.
+      Uploads a new asset to Roblox from the given object.
+
+      Currently, this method can only be used in locally loaded plugins and
+      uploads assets without prompting first.
     code_samples:
       - AssetService-CreateAssetAsync
     parameters:
@@ -150,10 +152,12 @@ methods:
     writeCapabilities: []
   - name: AssetService:CreateAssetVersionAsync
     summary: |
-      Creates a new version for an existing asset from the given object.
+      Uploads a new version for an existing asset from the given object.
     description: |
-      Creates a new version for an existing asset from the given object in
-      Plugin or Open Cloud Luau Execution context.
+      Uploads a new version for an existing asset from the given object.
+
+      Currently, this method can only be used in locally loaded plugins and
+      uploads assets without prompting first.
     code_samples:
       - AssetService-CreateAssetVersionAsync
     parameters:
@@ -240,7 +244,7 @@ methods:
           Currently no options are available since resizing via
           `Class.EditableImage.Size|Size` is not supported.
     returns:
-      - type: Object
+      - type: EditableImage
         summary: |
           A new `Class.EditableImage` containing the provided image.
     tags:
@@ -288,7 +292,7 @@ methods:
             only modify their values. Set to `false` if the ability to change
             the mesh topology is required, at the expense of using more memory.
     returns:
-      - type: Object
+      - type: EditableMesh
         summary: |
           The new `Class.EditableMesh` instance.
     tags:

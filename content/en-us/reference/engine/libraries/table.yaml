@@ -13,9 +13,9 @@ properties:
 functions:
   - name: table.clear
     summary: |
-      Sets all keys in the given table to nil.
+      Sets all keys in the given table to `nil`.
     description: |
-      Sets the value for all keys within the given table to nil. This causes the
+      Sets the value for all keys within the given table to `nil`. This causes the
       `#` operator to return `0` for the given table. The allocated capacity of
       the table's array portion is maintained, which allows for efficient re-use
       of the space.
@@ -445,7 +445,7 @@ functions:
       The error `invalid order function for sorting` is thrown if both
       `comp(a, b)` and `comp(b, a)` return `true`.
 
-      If `comp` is not given, then the standard Lua operator `<` is used
+      If `comp` is not given, then the standard Luau operator `<` is used
       instead.
     parameters:
       - name: t

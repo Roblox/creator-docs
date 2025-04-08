@@ -18,7 +18,7 @@ Similar to other UI elements in your experience, these messages are intended to 
 
 First, create a `LocalScript` in **StartCharacterScripts**, and add the following code to it:
 
-```lua title='Client'
+```lua title="Client"
 local Players = game:GetService("Players")
 
 local TextChatService = game:GetService("TextChatService")
@@ -31,9 +31,9 @@ To customize the appearance of the message, use the `TextChannel.OnIncomingMessa
 
 When `TextChannel.OnIncomingMessage` returns a `TextChatMessageProperties` instance, it's used to override the default message properties. This allows us to customize the appearance of our message.
 
-In the same Script as before, add the following code. We will set the `TextColor` property of the `TextChatMessageProperties` Instance to red. This will change the color of the message to red when the message's metadata is "WelcomeMessage".
+In the same script as before, add the following code. We will set the `TextColor` property of the `TextChatMessageProperties` Instance to red. This will change the color of the message to red when the message's metadata is "WelcomeMessage".
 
-```lua title='Client'
+```lua title="Client"
 TextChannel.OnIncomingMessage = function(message: TextChatMessage)
   if message.Metadata == "WelcomeMessage" then
     local overrideProperties = Instance.new("TextChatMessageProperties")
@@ -51,7 +51,7 @@ Use metadata however you see fit to categorize messages and apply different styl
 
 For example, you could use metadata to identify system messages, error messages, or messages from specific systems in your experience. We can use this method to group similar messages together and apply the same style to all messages in that group.
 
-```lua title='Client'
+```lua title="Client"
 TextChannel:DisplaySystemMessage("This is an error!", "Game.Error.Generic")
 TextChannel:DisplaySystemMessage("Could not find save data!", "Game.Error.SaveDataNotFound")
 

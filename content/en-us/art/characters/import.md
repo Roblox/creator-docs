@@ -6,7 +6,7 @@ description: Use the 3D Importer to add third-party models to Studio before test
 Use the following instructions to import a full character body model into Studio as a `Model` object that you can save to use in your experience, share with others, or upload to the Marketplace.
 
 <Alert severity ='info'>
-If you are using a single-mesh character body for the Roblox Auto-Setup tool, see [Avatar auto-setup](../modeling/avatar-setup.md#avatar-auto-setup).
+If you are using a single-mesh character body for the Roblox Auto-Setup tool, see [Avatar auto-setup](../../avatar-setup/).
 </Alert>
 
 Studio's 3D Importer provides a quick and easy way to import third-party 3D assets into your projects. The importer provides object previews and error-checking to ensure that your asset meets Roblox's [general 3D requirements](../modeling/specifications.md).
@@ -15,7 +15,7 @@ Keep in mind, your character model must also follow Roblox's [avatar character s
 
 To import your asset:
 
-1. In Studio, navigate to the **Avatar tab** and select the **3D Importer**.
+1. In Studio, navigate to the toolbar's **Avatar** tab and select the **3D Importer**.
 2. In the file browser, select the `.fbx` or `.gltf` file saved locally. The 3D Importer loads a preview of the object.
 
     <img src="../../assets/art/avatar/Avatar-3D-Importer.png" width = "60%"/>

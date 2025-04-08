@@ -31,7 +31,7 @@ To get the packages from your inventory into your experience:
 
     <Grid item container xs={12} sm={6} direction='row'>
     <Grid item container direction='column'>
-    <BrowseSampleCard href='https://create.roblox.com/store/asset/94918533221001' description='The Core Feature Package offers shared DataStore table logic for all feature packages.' title='Core Feature Package' assetId={94918533221001}  />
+    <BrowseSampleCard href='https://create.roblox.com/store/asset/94918533221001' description='The Core feature package offers shared data store logic for all feature packages.' title='Core Feature Package' assetId={94918533221001}  />
     </Grid>
     </Grid>
 
@@ -43,8 +43,8 @@ To get the packages from your inventory into your experience:
 
     </Grid>
 
-2. In the menu bar, select the **View** tab.
-3. In the **Show** section, click **Toolbox**. The **Toolbox** window displays.
+2. In the toolbar, select the [View](../../studio/view-tab.md) tab.
+3. Click **Toolbox**. The **Toolbox** window displays.
 
    <img src="../../assets/studio/general/View-Tab-Toolbox.png" alt="Studio's View tab with the Toolbox tool highlighted." width="876" />
 
@@ -54,11 +54,8 @@ To get the packages from your inventory into your experience:
 
 5. Click the **Feature Package Core** tile, then the **Bundle Feature Package** tile. Both package folders display in the **Explorer** window.
 6. Drag the package folders into **ReplicatedStorage**.
-7. Allow DataStore calls to track player purchases with the packages.
-   1. In the **Home** tab of the menu bar, select **Game Settings**.
-
-      <img src="../../assets/studio/general/Home-Tab-Game-Settings.png" width="760" alt="Game Settings button indicated in Home tab" />
-
+7. Allow data store calls to track player purchases with the packages.
+   1. In the toolbar's **Home** tab, select **Game Settings**.
    1. Navigate to the **Security** tab, then enable **Enable Studio Access to API Services**.
 
 ## Define currencies
@@ -378,7 +375,7 @@ You mainly need to hook up four things once dragging the **Bundles** feature pac
    ```
 
 <Alert severity="warning">
-When awarding purchases, ensure that you also check and record `receiptInfo.PurchaseId` in your DataStores.
+When awarding purchases, ensure that you also check and record `receiptInfo.PurchaseId` in your data stores.
 </Alert>
 
 Consider the following best practice guidance on redundant recordings of ReceiptIds:
@@ -387,7 +384,7 @@ Consider the following best practice guidance on redundant recordings of Receipt
 
 - The **Bundles** feature package will not record the ReceiptId if the purchase fails at any step, so you should ensure that you are recording the ReceiptId in your tables before processing the receipt as part of your purchaseHandler.
 
-- This redundancy helps ensure that all purchase logic has been appropriately handled and that your DataStore+Bundles Feature Package's DataStore reaches eventual consistency, with the your data store being the source of truth.
+- This redundancy helps ensure that all purchase logic has been appropriately handled and that your data store and the **Bundles** feature package's data store reach eventual consistency, with your data store being the source of truth.
 
 ## Configure constants
 

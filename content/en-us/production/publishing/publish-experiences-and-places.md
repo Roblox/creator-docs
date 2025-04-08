@@ -29,7 +29,7 @@ can [release it to the public](#release-to-the-public), although beta testing sh
     name and icon. This doesn't necessarily gauge marketing appeal, but it can help
     you test the experience without impacting its rating. When testing is
     complete, you can remove the ghost version and conduct a
-    [full&nbsp;release](#full-release).
+    [full release](#full-release).
   </TabItem>
 	<TabItem label="Full release">
     When you're ready to release an experience to the world, you can [release it to the public](#release-to-the-public) under its final name with a complete description, icon, and other promotional imagery. For guidance on release names, descriptions, and promotional materials, review [metadata best practices](#metadata-best-practices), experience [icons](../../production/publishing/experience-icons.md), and [experience thumbnails](../../production/publishing/thumbnails.md).
@@ -84,14 +84,11 @@ The [start place](#start-place) of an experience cannot be instantly swapped wit
 1. If desired, save/backup your **current** start place to a `.rbxl` file or to a new place within the experience.
 1. Navigate to the [Creator Dashboard][creatordashboard] and click on the thumbnail of the experience for which you want to change the start place. The experience's **Overview** page displays.
 1. In the left-hand navigation, under **Configure**, select **Places**.
-
-   <img src="../../assets/creator-dashboard/Experience-Nav-Places-Icon.png" width="330" alt="Places button indicated for an experience on the Creator Dashboard" />
-
 1. Click the **Edit in Studio** button for the intended **new** start place. Studio opens and loads that specific place.
 
    <img src="../../assets/creator-dashboard/Experience-Change-Start-Place.png" width="550" />
 
-1. Select **File** &rarr; **Publish to Roblox As…** in the menu bar (do not select simply **Publish&nbsp;to&nbsp;Roblox** as it would publish the place over itself).
+1. Select **File** &rang; **Publish to Roblox As…** in the menu bar (do not select simply **Publish to Roblox** as it would publish the place over itself).
 1. In the window that appears, click the tile for the same experience, then choose the **current** start place. Click the **Overwrite** button.
 
    <img src="../../assets/publishing/experiences-places-assets/Publish-Window-Select-Start-Place.png" width="720" />
@@ -109,9 +106,9 @@ Most experience settings are configurable from the [Creator Dashboard][creatorda
 1. Select the experience you want to configure from your [list of creations](https://create.roblox.com/dashboard/creations) on the dashboard.
 1. Click on the category you wish to configure from the left-hand navigation.
 
-The **Communication Settings** category allows you to enable **strong language** if your experience receives a Restricted maturity label. You can find this under the **Audience** section of the left-hand navigation. Enable the toggle to relax the text chat filter for some strong language in your experience. This also adds a tag above your experience page to warn other users that your experience may include strong language.
+The **Communication Settings** category allows you to enable **strong language** if your experience receives a **Restricted** maturity label. You can find this under the **Audience** section of the left-hand navigation. Enable the toggle to relax the text chat filter for some strong language in your experience. This also adds a tag above your experience page to warn other users that your experience may include strong language.
 
-<img src="../../assets/publishing/experiences-places-assets/Strong-Language-Pill.png" width="375" alt="Pill indicating the experience contains strong language" />
+<img src="../../assets/publishing/experiences-places-assets/Maturity-Label-Strong-Language.jpg" width="780" alt="Label indicating the experience contains strong language" />
 
 Regardless of whether or not you activate the toggle, players do not face moderation consequences just for using strong language in chat or voice in 17+ games, but they cannot violate [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410#safety) and [Terms of Use](https://www.roblox.com/info/terms). For example, players can type an expletive if they are scared by a monster, but they cannot abuse another player using strong language or otherwise.
 
@@ -121,20 +118,18 @@ In-experience assets and experience metadata cannot contain strong language, eve
 
 ### Game settings
 
-Once an experience is published, the [Game Settings](../../studio/game-settings.md) window contains many Studio-level settings and customization options. To open it, click the **Game Settings** button in the [Home](../../studio/home-tab.md) tab of the ribbon menu.
-
-<img src="../../assets/studio/general/Home-Tab-Game-Settings.png" width="760" alt="Game Settings button indicated in Home tab" />
+Once an experience is published, the [Game Settings](../../studio/game-settings.md) window contains many Studio-level settings and customization options. To open it, click the **Game Settings** button in the toolbar's **Home** tab.
 
 ## Release to the public
 
 New experiences begin as **private** and are only accessible to you and members of your group with the correct [permissions](../../projects/groups.md#roles-and-permissions). When appropriate, you can release an experience to the public as follows:
 
 1. Navigate to the [Creator Dashboard][creatordashboard].
-1. Locate the experience, click the **&ctdot;** in the corner of its thumbnail, and select **Make Public**.
+1. Hover over an experience's thumbnail, click the **&ctdot;** button, and select **Make Public**.
 
-   <img src="../../assets/creator-dashboard/Experience-Context-Menu-Make-Public.png" width="420" alt="Make Public option from Creator Dashboard" />
+   <img src="../../assets/creator-dashboard/Options-Button-Experience-Private.png" width="200" />
 
-1. **(Recommended)** Explore how to provide [Content Maturity labels and content descriptors](#content-maturity) for the experience.
+1. **(Recommended)** Explore how to provide [Content maturity labels and content descriptors](#content-maturity) for the experience.
 
 ### Link to experiences
 
@@ -143,13 +138,13 @@ Once an experience is [public](#release-to-the-public), you can copy its link fr
 <Tabs>
 <TabItem label="Creator Dashboard">
 
-1. Locate the experience, click the **&ctdot;** in the corner of its thumbnail, and select **Copy URL**.
+1. Hover over an experience's thumbnail, click the **&ctdot;** button, and select **Copy URL**.
 
-   <img src="../../assets/creator-dashboard/Experience-Context-Menu-Copy-URL.png" width="420" alt="Copy URL option from Creator Dashboard" />
+   <img src="../../assets/creator-dashboard/Options-Button-Experience-Public.png" width="200" />
 
 1. Share the copied URL with others as a direct link to the experience's landing page featuring a **play** button.
 
-   <img src="../../assets/publishing/experiences-places-assets/Experience-Page-Example.jpg" width="100%" />
+   <img src="../../assets/publishing/experiences-places-assets/Experience-Page-Example.jpg" width="1120" />
 
 </TabItem>
 <TabItem label="Roblox app">
@@ -183,21 +178,15 @@ To allow the community to access an editable copy of your experience:
 1. Navigate to the [Creator Dashboard][creatordashboard].
 2. Click on the thumbnail of the experience you want to allow users to copy. The experience's **Overview** page displays.
 3. In the left-hand navigation, under **Configure**, select **Places**.
-
-   <img src="../../assets/creator-dashboard/Experience-Nav-Places-Icon.png" width="330" alt="Places button indicated for an experience on the Creator Dashboard" />
-
 4. Click the **start place** marked with a star icon. The place's **Basic Settings** page displays.
 
    <img src="../../assets/creator-dashboard/Places-Start-Place-Icon.png" width="200" alt="Start place tile indicated in Places display on the Creator Dashboard" />
 
 5. In the place's left-hand navigation menu, select **Permissions**.
-
-   <img src="../../assets/creator-dashboard/Place-Nav-Permissions.png" width="330" alt="Permissions button indicated for a place on the Creator Dashboard" />
-
 6. Enable **Allow users to download a copy of this Place**.
-7. Click the **Save Changes** button. Your experience is now uncopylocked and creators can access an editable copy of it from the experience's main page.
+7. Click the **Save Changes** button. Your experience is now uncopylocked and creators can access an editable copy of it from the experience's main page by clicking the **&ctdot;** button and selecting **Edit in Studio**.
 
-   <img src="../../assets/publishing/experiences-places-assets/Edit-Place-Elemental-Academy.png" width="780" />
+   <img src="../../assets/publishing/experiences-places-assets/Edit-Place-In-Studio.jpg" width="780" />
 
 ## Update experiences
 
@@ -223,9 +212,9 @@ Depending on the number of servers to replace, this process can take up to six m
 To restart all servers for updates:
 
 1. Navigate to the [Creator Dashboard][creatordashboard].
-1. Click the **&ctdot;** in the corner of the experience's thumbnail and select **Restart Servers for Updates**.
+1. Hover over the experience's thumbnail, click the **&ctdot;** button, and select **Restart Servers for Updates**.
 
-   <img src="../../assets/creator-dashboard/Experience-Context-Menu-Restart-Servers.png" width="420" alt="Restart Servers for Updates option from Creator Dashboard" />
+   <img src="../../assets/creator-dashboard/Options-Button-Experience-Public.png" width="200" />
 
 1. Confirm restart by clicking the **Restart** button.
 
@@ -241,9 +230,9 @@ Please note that users will automatically reconnect after the servers have shut 
 To shut down all servers:
 
 1. Navigate to the [Creator Dashboard][creatordashboard].
-1. Click the **&ctdot;** in the corner of the experience's thumbnail and select **Shut Down All Servers**.
+1. Hover over an experience's thumbnail, click the **&ctdot;** button, and select **Shut Down All Servers**.
 
-   <img src="../../assets/creator-dashboard/Experience-Context-Menu-Shutdown-Servers.png" width="420" alt="Shut Down All Servers option from Creator Dashboard" />
+   <img src="../../assets/creator-dashboard/Options-Button-Experience-Public.png" width="200" />
 
 1. Confirm shutdown by clicking the **OK** button.
 

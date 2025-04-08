@@ -26,7 +26,7 @@ You can also use `Class.LocalScript` objects for client-side scripts, but we rec
 `Class.ModuleScript` objects are reusable modules that script objects
 load by calling the `Global.LuaGlobals.require()` function. Module scripts must return exactly one
 value and run once and only once
-per Lua environment. As a result, subsequent calls to `Global.LuaGlobals.require()` return a
+per Luau environment. As a result, subsequent calls to `Global.LuaGlobals.require()` return a
 cached value. You can execute arbitrary code in a `Class.ModuleScript`, but you only need to return what you need in other scripts.
 
 Multiple scripts can require
@@ -88,7 +88,7 @@ A `Class.ModuleScript` runs only when another script imports it using the `Globa
 
 <Alert severity="warning">
 Don't require `Class.ModuleScript|ModuleScripts` in a recursive or circular manner,
-otherwise Studio throws an error: <InlineCode>Requested module was required recursively</InlineCode>.
+otherwise Studio throws an error: `Requested module was required recursively`.
 </Alert>
 
 To access a `Class.ModuleScript` from another script using the `Global.LuaGlobals.require()`
@@ -185,7 +185,7 @@ Switch.flip()
 
 #### Encapsulation
 
-Encapsulation is the practice of creating a layer of abstraction around objects or scripting logic to hide complexity. You can use `Class.ModuleScript|ModuleScripts` to encapsulate Roblox objects with custom Lua functions to simplify code.
+Encapsulation is the practice of creating a layer of abstraction around objects or scripting logic to hide complexity. You can use `Class.ModuleScript|ModuleScripts` to encapsulate Roblox objects with custom Luau functions to simplify code.
 
 For example, you can use encapsulation to:
 

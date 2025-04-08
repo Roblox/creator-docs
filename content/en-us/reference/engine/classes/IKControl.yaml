@@ -218,8 +218,8 @@ properties:
       you control over how intermediate parts in your character should bend. It
       can be anything that has a position in the world, such as
       `Class.BasePart`, `Class.Attachment`, `Class.Bone`, `Class.Motor6D`. It is
-      by default nil. When you specify it, the underlying solver will make the
-      parts bend towards it. When it is nil, the solver will try to make elbows
+      by default `nil`. When you specify it, the underlying solver will make the
+      parts bend towards it. When it is `nil`, the solver will try to make elbows
       and knees bend appropriately based on the limb of the character. The limb
       will be "Arm" when you select as `Class.IKControl.EndEffector|EndEffector`
       either the _LeftHand_ or _RightHand_ and as
@@ -485,6 +485,20 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: IKControl:Solve
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []

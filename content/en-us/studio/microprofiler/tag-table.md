@@ -306,7 +306,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   </tr>
   <tr>
     <td>LuaGC</td>
-    <td>Lua garbage collection cycle. Label provides memory estimates on total allocation and how much was deallocated. </td>
+    <td>Luau garbage collection cycle. Label provides memory estimates on total allocation and how much was deallocated. </td>
     <td>Pool lua tables and other collectable objects or try to reduce creating temporary tables or strings</td>
   </tr>
   <tr>

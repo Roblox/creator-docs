@@ -42,7 +42,7 @@ description: |
   
 code_samples:
 inherits:
-  - Instance
+  - PVInstance
 tags:
   - NotReplicated
 deprecation_message: ''

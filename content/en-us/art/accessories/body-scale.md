@@ -36,7 +36,7 @@ See the [accessory apecifications](../../art/accessories/specifications.md#body-
 
 Roblox represents body scale in the engine by an `AvatarPartScaleType` `Class.StringValue` object within each avatar character part and associated accessory. In most cases, asset creators do not need to directly access or modify this value object since tools, such as the [Accessory Fitting Tool](../accessories/accessory-fitting-tool.md), automatically generate the appropriate value object on accessory creation.
 
-In cases where you may need to identify the current body scale of a body part or accessory, the following table defines the `AvatarPartScaleType` value for each type of body size.
+In cases where you may need to identify the current body scale of a body part or accessory, the following table defines the `AvatarPartScaleType` value for each type of body size. When importing your model, use the 3D Importer's [Rig Scale](../modeling/3d-importer.md#rig-general) to automatically apply a scale to your icustom asset.
 
 <table>
 <thead>

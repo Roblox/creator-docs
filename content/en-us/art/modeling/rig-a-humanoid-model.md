@@ -46,7 +46,7 @@ For better visualization and access to your bone objects, set your bone objects 
 To set the bone visualization:
 
 1. In the **Viewport**, click on any of the bones in your armature.
-2. In the **Properties Editor panel**, select the **Object Data Properties tab**.
+2. In the **Properties Editor panel**, select the **Object Data Properties** tab.
 3. Expand Viewport Display, navigate to the **Show** property, then enable **In Front**.
    <video controls src="../../assets/modeling/meshes/rigging-humanoid/2-bone-visualization.mp4" width="100%"></video>
 

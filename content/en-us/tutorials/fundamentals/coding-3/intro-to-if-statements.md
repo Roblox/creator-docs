@@ -1,6 +1,6 @@
 ---
 title: Intro to if statements
-description: Learn how to code if statements in Roblox Lua.
+description: Learn how to code if statements in Luau.
 next: /tutorials/fundamentals/coding-3/traps-with-if-statements
 prev: /tutorials/fundamentals/coding-3/landing
 ---
@@ -11,9 +11,9 @@ In experiences, there are often many cause-and-effect relationships. For example
 - If a player has a power-up, then they can run super fast.
 - If a player says "Happy Birthday" in chat, then confetti rains.
 
-Scripts use conditional statements to handle these types of situations. **Conditional statements** are lines of code that only run if certain conditions are true. One type of conditional statement is an **if/then statement**. In Lua, the syntax pattern for if statements looks like this:
+Scripts use conditional statements to handle these types of situations. **Conditional statements** are lines of code that only run if certain conditions are true. One type of conditional statement is an **if/then statement**. In Luau, the syntax pattern for if statements looks like this:
 
-```lua title='if then syntax'
+```lua title="if then syntax"
    if "something happens" then
       -- Make something else happen
 end
@@ -87,7 +87,7 @@ Now, purposely change the statement to see what happens when the math equation i
 
 ### Math operators
 
-The table below lists some common Lua operators. More information about operators can be found on [Luau Operators](../../../luau/operators.md).
+The table below lists some common Luau operators. More information about operators can be found on [Luau Operators](../../../luau/operators.md).
 
 <table>
 <thead>

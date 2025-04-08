@@ -21,7 +21,7 @@ You can configure common camera settings directly within Studio's `Class.Starter
 
 Together, `Class.StarterPlayer.CameraMaxZoomDistance|CameraMaxZoomDistance` and `Class.StarterPlayer.CameraMinZoomDistance|CameraMinZoomDistance` set the range in which players can zoom the camera in respect to their player character. Setting a very high maximum such as 500 allows players to zoom the camera far out in space. If you want to lock the camera to a specific distance away from the character and prevent zooming, set both of these properties to the same value.
 
-```lua title='LocalScript - Camera Zoom Range' highlight='5,6'
+```lua title="LocalScript - Camera Zoom Range" highlight="5,6"
 local Players = game:GetService("Players")
 
 local player = Players.LocalPlayer

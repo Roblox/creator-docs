@@ -60,10 +60,19 @@ You can't update or edit assets and thumbnails after uploading. You must test al
 To upload your asset:
 
 1. In Studio, add the marketplace item to your workspace.
+
    - For accessories and clothing, the item must be an `Class.Accessory` object. For information on the required specifications, see [Accessory Specifications](../art/accessories/specifications.md)
+
      - Upload clothing and accessories as an `Class.Accessory`. For information on converting your `Class.Model` into an `Class.Accessory`, see [Accessory Fitting Tool](../art/accessories/accessory-fitting-tool.md).
-   - For bodies and heads, the item must be a `Class.Model`. For information on the required specifications, see [Avatar Character Specifications](../art/characters/specifications.md).
-2. In the **Explorer** window, right click the object and select **Save to Roblox**.
+     - If uploading shoes, each shoe must be their own accessory object:
+
+       - Name the respective shoe accessories `LeftShoeAccessory` and `RightShoeAccessory`.
+       - Select both left and right shoe accessories and right-click > **Group as a Model** before step 2.
+
+     - For bodies and heads, the item must be a `Class.Model`. For information on the required specifications, see [Avatar Character Specifications](../art/characters/specifications.md).
+       - You can add a default skin color to your body by adding a `Class.BodyColors` object to your model.
+
+2. In the **Explorer** window, right-click the object and select **Save to Roblox**.
 3. In **Submit As**, select **Avatar Asset**.
 4. In the **Asset type** dropdown menu, select the appropriate marketplace asset type. Validation begins upon selection.
    <Alert severity = 'info'>
@@ -240,7 +249,7 @@ The following location options are available for all items:
   </tr>
   <tr>
     <td>Experience By Place ID (API Only)</td>
-    <td>Users can only purchase the original stock of this item in the experiences associated with the provided Place ID. Only one Place ID per experience is required and creators can update and change Place IDs at any time. <br /> <br />After saving a new Place ID, the experience owner needs to manually [enable the avatar item](../production/monetization/avatar-items.md) for their experience.</td>
+    <td>Users can only purchase the original stock of this item in the experiences associated with the provided Place ID. Only one Place ID per experience is required and creators can update and change Place IDs at any time. <br /> <br />After saving a new Place ID, the experience owner must manually [enable the avatar item](../production/monetization/avatar-items.md) for their experience.</td>
   </tr>
 </tbody>
 </table>

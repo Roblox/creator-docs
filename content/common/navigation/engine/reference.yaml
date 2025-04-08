@@ -1,6 +1,9 @@
 # Don't edit this navigation file. It's auto-generated and automatically syncs with
 # engine reference YAML files in content/en-us/reference/engine/.
 
+backTo:
+  title: Back to platform
+  path: /platform
 navigation:
   - heading: Engine API
   - title: Overview
@@ -609,6 +612,16 @@ navigation:
         path: /reference/engine/classes/ConeHandleAdornment
         type: engineapi
         source: /reference/engine/classes/ConeHandleAdornment.yaml
+        ignoreTranslation: true
+      - title: ConfigService
+        path: /reference/engine/classes/ConfigService
+        type: engineapi
+        source: /reference/engine/classes/ConfigService.yaml
+        ignoreTranslation: true
+      - title: ConfigSnapshot
+        path: /reference/engine/classes/ConfigSnapshot
+        type: engineapi
+        source: /reference/engine/classes/ConfigSnapshot.yaml
         ignoreTranslation: true
       - title: Configuration
         path: /reference/engine/classes/Configuration
@@ -2985,6 +2998,16 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/VRStatusService.yaml
         ignoreTranslation: true
+      - title: WebSocketClient
+        path: /reference/engine/classes/WebSocketClient
+        type: engineapi
+        source: /reference/engine/classes/WebSocketClient.yaml
+        ignoreTranslation: true
+      - title: WebSocketService
+        path: /reference/engine/classes/WebSocketService
+        type: engineapi
+        source: /reference/engine/classes/WebSocketService.yaml
+        ignoreTranslation: true
       - title: WedgePart
         path: /reference/engine/classes/WedgePart
         type: engineapi
@@ -3628,11 +3651,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/CameraType.yaml
         ignoreTranslation: true
-      - title: CaptureUIHideMode
-        path: /reference/engine/enums/CaptureUIHideMode
-        type: engineapi
-        source: /reference/engine/enums/CaptureUIHideMode.yaml
-        ignoreTranslation: true
       - title: CatalogCategoryFilter
         path: /reference/engine/enums/CatalogCategoryFilter
         type: engineapi
@@ -3767,6 +3785,11 @@ navigation:
         path: /reference/engine/enums/ComputerMovementMode
         type: engineapi
         source: /reference/engine/enums/ComputerMovementMode.yaml
+        ignoreTranslation: true
+      - title: ConfigSnapshotErrorState
+        path: /reference/engine/enums/ConfigSnapshotErrorState
+        type: engineapi
+        source: /reference/engine/enums/ConfigSnapshotErrorState.yaml
         ignoreTranslation: true
       - title: ConnectionError
         path: /reference/engine/enums/ConnectionError
@@ -5023,6 +5046,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/StartCorner.yaml
         ignoreTranslation: true
+      - title: StateObjectFieldType
+        path: /reference/engine/enums/StateObjectFieldType
+        type: engineapi
+        source: /reference/engine/enums/StateObjectFieldType.yaml
+        ignoreTranslation: true
       - title: Status
         path: /reference/engine/enums/Status
         type: engineapi
@@ -5313,6 +5341,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/TweenStatus.yaml
         ignoreTranslation: true
+      - title: UICaptureMode
+        path: /reference/engine/enums/UICaptureMode
+        type: engineapi
+        source: /reference/engine/enums/UICaptureMode.yaml
+        ignoreTranslation: true
       - title: UIDragDetectorBoundingBehavior
         path: /reference/engine/enums/UIDragDetectorBoundingBehavior
         type: engineapi
@@ -5428,6 +5461,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/VirtualInputMode.yaml
         ignoreTranslation: true
+      - title: VoiceChatDistanceAttenuationType
+        path: /reference/engine/enums/VoiceChatDistanceAttenuationType
+        type: engineapi
+        source: /reference/engine/enums/VoiceChatDistanceAttenuationType.yaml
+        ignoreTranslation: true
       - title: VoiceChatState
         path: /reference/engine/enums/VoiceChatState
         type: engineapi
@@ -5497,6 +5535,11 @@ navigation:
         path: /reference/engine/enums/WaterForce
         type: engineapi
         source: /reference/engine/enums/WaterForce.yaml
+        ignoreTranslation: true
+      - title: WebSocketState
+        path: /reference/engine/enums/WebSocketState
+        type: engineapi
+        source: /reference/engine/enums/WebSocketState.yaml
         ignoreTranslation: true
       - title: WeldConstraintPreserve
         path: /reference/engine/enums/WeldConstraintPreserve

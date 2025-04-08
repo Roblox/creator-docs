@@ -20,10 +20,10 @@ description: |
   used from multiple `Class.Actor` scripts (Parallel Luau).
 
   Many of the functions accept an offset in bytes from the start of the buffer.
-  Offset of 0 from the start of the buffer memory block accesses the first byte.
-  All offsets, counts and sizes should be non-negative integer numbers. If the
-  bytes that are accessed by any read or write operation are outside the buffer
-  memory, an error is thrown.
+  Offset of `0` from the start of the buffer memory block accesses the first
+  byte. All offsets, counts and sizes should be non-negative integer numbers. If
+  the bytes that are accessed by any read or write operation are outside the
+  buffer memory, an error is thrown.
 
   The `read` and `write` methods that work with integers and floats use
   [little-endian](https://en.wikipedia.org/wiki/Endianness) encoding.
@@ -34,7 +34,7 @@ functions:
     summary: |
       Creates a buffer.
     description: |
-      Creates a buffer of the requested size with all bytes initialized to 0.
+      Creates a buffer of the requested size with all bytes initialized to `0`.
       Size limit is 1 GiB, or 1,073,741,824 bytes. Keep in mind that larger
       buffers might fail to allocate if device is running low on memory.
     parameters:
@@ -94,6 +94,48 @@ functions:
         summary: ''
     tags:
     code_samples:
+  - name: buffer.readbits
+    summary: |
+      Reads a range of bits into an unsigned integer from the buffer based on a
+      specific `bitCount` integer from `0` to `32`, inclusive.
+    description: |
+      Reads a range of bits into an unsigned integer from the buffer based on a
+      specific `bitCount` integer from `0` to `32`, inclusive. For example:
+
+      - `buffer.readbits(b, 0, 8)` is equivalent to
+        `Library.buffer.readu8(b, 0)`.
+      - `buffer.readbits(b, 0, 16)` is equivalent to
+        `Library.buffer.readu16(b, 0)`.
+      - `buffer.readbits(b, 0, 32)` is equivalent to
+        `Library.buffer.readu32(b, 0)`.
+      - `buffer.readbits(b, 0, 24)` reads 24 bits from the buffer.
+
+      Note that `0` bit width is supported only to not error in generalized
+      cases where bit count is dynamic, and reading 0 bits returns `0`. Also
+      note that, since the max size of the buffer is 1&nbsp;GB, `bitOffset`
+      cannot be handled as a 32‑bit integer number like byte offset in other
+      buffer functions.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: bitOffset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from `0`.
+      - name: bitCount
+        type: number
+        default:
+        summary: |
+          Integer bit count to read. Error is thrown if this value is not in
+          range of `0` to `32`, inclusive.
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
   - name: buffer.readi8
     summary: |
       Reads an 8-bit signed integer from the buffer.
@@ -109,7 +151,7 @@ functions:
         type: number
         default:
         summary: |
-          Offset from the beginning of the buffer memory, starting from 0.
+          Offset from the beginning of the buffer memory, starting from `0`.
     returns:
       - type: number
         summary: ''
@@ -130,7 +172,7 @@ functions:
         type: number
         default:
         summary: |
-          Offset from the beginning of the buffer memory, starting from 0.
+          Offset from the beginning of the buffer memory, starting from `0`.
     returns:
       - type: number
         summary: ''
@@ -151,7 +193,7 @@ functions:
         type: number
         default:
         summary: |
-          Offset from the beginning of the buffer memory, starting from 0.
+          Offset from the beginning of the buffer memory, starting from `0`.
     returns:
       - type: number
         summary: ''
@@ -172,7 +214,7 @@ functions:
         type: number
         default:
         summary: |
-          Offset from the beginning of the buffer memory, starting from 0.
+          Offset from the beginning of the buffer memory, starting from `0`.
     returns:
       - type: number
         summary: ''
@@ -193,7 +235,7 @@ functions:
         type: number
         default:
         summary: |
-          Offset from the beginning of the buffer memory, starting from 0.
+          Offset from the beginning of the buffer memory, starting from `0`.
     returns:
       - type: number
         summary: ''
@@ -214,7 +256,7 @@ functions:
         type: number
         default:
         summary: |
-          Offset from the beginning of the buffer memory, starting from 0.
+          Offset from the beginning of the buffer memory, starting from `0`.
     returns:
       - type: number
         summary: ''
@@ -238,7 +280,7 @@ functions:
         type: number
         default:
         summary: |
-          Offset from the beginning of the buffer memory, starting from 0.
+          Offset from the beginning of the buffer memory, starting from `0`.
     returns:
       - type: number
         summary: ''
@@ -262,9 +304,50 @@ functions:
         type: number
         default:
         summary: |
-          Offset from the beginning of the buffer memory, starting from 0.
+          Offset from the beginning of the buffer memory, starting from `0`.
     returns:
       - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.writebits
+    summary: |
+      Writes data to the buffer based on a specific `bitCount` integer from `0`
+      to `32`, inclusive.
+    description: |
+      Writes data to the buffer based on a specific `bitCount` integer from `0`
+      to `32`, inclusive. `value` is treated as an unsigned 32‑bit number and
+      only `bitCount` least significant bits are written.
+
+      Note that `0` bit width is supported only to not error in generalized
+      cases where bit count is dynamic, and writing 0 bits has no effect. Also
+      note that, since the max size of the buffer is 1&nbsp;GB, `bitOffset`
+      cannot be handled as a 32‑bit integer number like byte offset in other
+      buffer functions.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: bitOffset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from `0`.
+      - name: bitCount
+        type: number
+        default:
+        summary: |
+          Integer bit count to write. Error is thrown if this value is not in
+          range of `0` to `32`, inclusive.
+      - name: value
+        type: number
+        default:
+        summary: |
+          Unsigned 32‑bit number. Only `bitCount` least significant bits are
+          written.
+    returns:
+      - type: void
         summary: ''
     tags:
     code_samples:
@@ -283,7 +366,7 @@ functions:
         type: number
         default:
         summary: |
-          Offset from the beginning of the buffer memory, starting from 0.
+          Offset from the beginning of the buffer memory, starting from `0`.
       - name: value
         type: number
         default:
@@ -309,7 +392,7 @@ functions:
         type: number
         default:
         summary: |
-          Offset from the beginning of the buffer memory, starting from 0.
+          Offset from the beginning of the buffer memory, starting from `0`.
       - name: value
         type: number
         default:
@@ -335,7 +418,7 @@ functions:
         type: number
         default:
         summary: |
-          Offset from the beginning of the buffer memory, starting from 0.
+          Offset from the beginning of the buffer memory, starting from `0`.
       - name: value
         type: number
         default:
@@ -361,7 +444,7 @@ functions:
         type: number
         default:
         summary: |
-          Offset from the beginning of the buffer memory, starting from 0.
+          Offset from the beginning of the buffer memory, starting from `0`.
       - name: value
         type: number
         default:
@@ -387,7 +470,7 @@ functions:
         type: number
         default:
         summary: |
-          Offset from the beginning of the buffer memory, starting from 0.
+          Offset from the beginning of the buffer memory, starting from `0`.
       - name: value
         type: number
         default:
@@ -413,7 +496,7 @@ functions:
         type: number
         default:
         summary: |
-          Offset from the beginning of the buffer memory, starting from 0.
+          Offset from the beginning of the buffer memory, starting from `0`.
       - name: value
         type: number
         default:
@@ -439,7 +522,7 @@ functions:
         type: number
         default:
         summary: |
-          Offset from the beginning of the buffer memory, starting from 0.
+          Offset from the beginning of the buffer memory, starting from `0`.
       - name: value
         type: number
         default:
@@ -465,7 +548,7 @@ functions:
         type: number
         default:
         summary: |
-          Offset from the beginning of the buffer memory, starting from 0.
+          Offset from the beginning of the buffer memory, starting from `0`.
       - name: value
         type: number
         default:
@@ -491,7 +574,7 @@ functions:
         type: number
         default:
         summary: |
-          Offset from the beginning of the buffer memory, starting from 0.
+          Offset from the beginning of the buffer memory, starting from `0`.
       - name: count
         type: number
         default:
@@ -518,7 +601,7 @@ functions:
         type: number
         default:
         summary: |
-          Offset from the beginning of the buffer memory, starting from 0.
+          Offset from the beginning of the buffer memory, starting from `0`.
       - name: value
         type: string
         default:
@@ -556,7 +639,7 @@ functions:
         type: number
         default:
         summary: |
-          Offset from the beginning of the buffer memory, starting from 0.
+          Offset from the beginning of the buffer memory, starting from `0`.
       - name: source
         type: buffer
         default:
@@ -566,7 +649,7 @@ functions:
         type: number?
         default: 0
         summary: |
-          Offset from the beginning of the buffer memory, starting from 0.
+          Offset from the beginning of the buffer memory, starting from `0`.
       - name: count
         type: number?
         default:
@@ -594,7 +677,7 @@ functions:
         type: number
         default:
         summary: |
-          Offset from the beginning of the buffer memory, starting from 0.
+          Offset from the beginning of the buffer memory, starting from `0`.
       - name: value
         type: number
         default:

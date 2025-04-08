@@ -3,7 +3,8 @@
   "info": {
     "title": "Assets API",
     "description": "You can send and receive the following request and response payloads to create assets on Roblox. For information on the usage of the API, see the [usage guide](../../../cloud/guides/usage-assets.md).",
-    "version": "0.0.1"
+    "version": "0.0.1",
+    "x-roblox-extensions-version": "1.0.0"
   },
   "servers": [
     {
@@ -80,10 +81,10 @@
             "roblox-oauth2": ["asset:read", "asset:write"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["asset:read", "asset:write"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "asset:read" },
+          { "name": "asset:write" }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Create Asset",
@@ -175,10 +176,9 @@
             "roblox-oauth2": ["asset:read"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["asset:read"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "asset:read" }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Get Asset without readMask",
@@ -269,7 +269,7 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Operation",
-                  "example": "{\\\"previews\\\": [\\n    {\\\"asset\\\": \\\"assets/123\\\", \\\"altText\\\": \\\"preview 1\\\"},\\n    {\\\"asset\\\": \\\"assets/456\\\", \\\"altText\\\": \\\"preview 2\\\"}\\n]}"
+                  "example": "{\"previews\": [\n  {\"asset\": \"assets/123\", \"altText\": \"preview 1\"},\n  {\"asset\": \"assets/456\", \"altText\": \"preview 2\"}\n]}"
                 }
               }
             }
@@ -299,10 +299,10 @@
             "roblox-oauth2": ["asset:read", "asset:write"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["asset:read", "asset:write"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "asset:read" },
+          { "name": "asset:write" }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Update Content Only and Create a New Version",
@@ -386,10 +386,10 @@
             "roblox-oauth2": ["asset:read", "asset:write"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["asset:read", "asset:write"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "asset:read" },
+          { "name": "asset:write" }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Archive Asset",
@@ -461,10 +461,10 @@
             "roblox-oauth2": ["asset:read", "asset:write"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["asset:read", "asset:write"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "asset:read" },
+          { "name": "asset:write" }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Restore Asset",
@@ -542,10 +542,9 @@
             "roblox-oauth2": ["asset:read"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["asset:read"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "asset:read" }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Get Asset Version",
@@ -632,10 +631,9 @@
             "roblox-oauth2": ["asset:read"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["asset:read"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "asset:read" }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "List Asset Versions",
@@ -725,10 +723,10 @@
             "roblox-oauth2": ["asset:read", "asset:write"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["asset:read", "asset:write"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "asset:read" },
+          { "name": "asset:write" }
+        ],
         "x-roblox-rate-limits": {
           "perIp": {
             "period": "MINUTE",
@@ -811,10 +809,9 @@
             "roblox-oauth2": ["asset:read"]
           }
         ],
-        "x-roblox-scopes": {
-          "required": ["asset:read"],
-          "conditional": []
-        },
+        "x-roblox-scopes": [
+          { "name": "asset:read" }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Get Operation",
@@ -972,7 +969,7 @@
         "properties": {
           "moderationState": {
             "type": "string",
-            "description": "The moderation state of the asset. Can be `MODERATION_STATE_REVIEWING`, `MODERATION_STATE_REJECTED`, or `MODERATION_STATE_APPROVED`."
+            "description": "The moderation state of the asset. Can be `Reviewing`, `Rejected`, or `Approved`."
           }
         },
         "description": "The moderation result of the asset. "

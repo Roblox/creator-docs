@@ -217,7 +217,7 @@ Additional caged clothing items from How to cage Roblox's 3D [clothing video gui
 
 ## Auto-setup references
 
-The following assets are designed for the specific [auto-setup requirements](../art/modeling/avatar-setup.md#model-requirements). If uploaded as-is, these assets will fail normal validation.
+The following assets are designed for the specific [auto-setup requirements](../avatar-setup/index.md#model-requirements). If uploaded as-is, these assets will fail normal validation.
 
 <Grid container alignItems='stretch' style={{margin: -6}}>
 
@@ -230,7 +230,7 @@ The following assets are designed for the specific [auto-setup requirements](../
 <center> <img src="../assets/art/resources/Archer-Girl-Preview.png" width="100%" /> </center>
 </figure>
 <figure>
-A comprehensive `.zip` folder of an [Avatar Auto-Setup](../art/modeling/avatar-setup.md#avatar-auto-setup) ready character model, including clothing and rigid accessory assets and PBR texture assets. <br /> <br />
+A comprehensive `.zip` folder of an [Avatar Auto-Setup](../avatar-setup/index.md#avatar-auto-setup) ready character model, including clothing and rigid accessory assets and PBR texture assets. <br /> <br />
 This Auto-Setup template is not compatible with the traditional avatar creation workflow.
 </figure>
 </CardContent>
@@ -251,7 +251,7 @@ This Auto-Setup template is not compatible with the traditional avatar creation 
 <center> <img src="../assets/art/resources/StylizedMale-Preview.png" width="100%" /> </center>
 </figure>
 <figure>
-A comprehensive `.zip` folder of an [Avatar Auto-Setup](../art/modeling/avatar-setup.md#avatar-auto-setup) ready character model, including the base body and associated PBR textures. <br /> <br />
+A comprehensive `.zip` folder of an [Avatar Auto-Setup](../avatar-setup/index.md#avatar-auto-setup) ready character model, including the base body and associated PBR textures. <br /> <br />
 This Auto-Setup template is not compatible with the traditional avatar creation workflow.
 </figure>
 </CardContent>

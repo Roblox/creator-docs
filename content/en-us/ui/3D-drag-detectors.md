@@ -210,7 +210,7 @@ Permission of players to interact with a given drag detector instance can be spe
 </tbody>
 </table>
 
-```lua title='DragDetector - Scripted Drag Permission'
+```lua title="DragDetector - Scripted Drag Permission"
 local dragDetector = script.Parent.DragDetector
 dragDetector.PermissionPolicy = Enum.DragDetectorPermissionPolicy.Scriptable
 
@@ -302,7 +302,7 @@ Through the following event signals, you can detect when a user starts, continue
 </tbody>
 </table>
 
-```lua title='DragDetector - Event Signals' highlight='7,9,11,13,15,17'
+```lua title="DragDetector - Event Signals" highlight="7,9,11,13,15,17"
 local dragDetector = script.Parent.DragDetector
 
 local highlight = Instance.new("Highlight")
@@ -326,7 +326,7 @@ end)
 
 In addition to [event signals](#event-signals), you can monitor changes to the detector's `Class.DragDetector.DragFrame|DragFrame` directly.
 
-```lua title='DragDetector - DragFrame Changes' highlight='3,6'
+```lua title="DragDetector - DragFrame Changes" highlight="3,6"
 local dragDetector = script.Parent.DragDetector
 
 dragDetector:GetPropertyChangedSignal("DragFrame"):Connect(function()
@@ -339,7 +339,7 @@ end)
 
 If you set a detector's `Class.DragDetector.DragStyle|DragStyle` to **Scriptable**, you can provide your own function that takes in a `Datatype.Ray` and returns a world space `Datatype.CFrame`. The detector will move the motion so that the dragged object goes to that custom location/orientation.
 
-```lua title='DragDetector - Scripted DragStyle' highlight='2,7,31,32,34'
+```lua title="DragDetector - Scripted DragStyle" highlight="2,7,31,32,34"
 local Workspace = game:GetService("Workspace")
 
 local dragDetector = script.Parent.DragDetector
@@ -382,7 +382,7 @@ dragDetector:SetDragStyleFunction(followTheCursor)
 
 Drag detectors do not have built-in motion rules about grids and snapping, but you can register custom constraint functions to edit the detector's `Class.DragDetector.DragFrame|DragFrame` before it is applied. For example, you can keep motion on a grid by rounding positions to multiples of the grid increment, or simulate a chess game with rules of motion legal to each piece.
 
-```lua title='DragDetector - Custom Constraint Function' highlight='4,14,27,28,30'
+```lua title="DragDetector - Custom Constraint Function" highlight="4,14,27,28,30"
 local dragDetector = script.Parent.DragDetector
 local startPartPosition = nil
 
@@ -446,7 +446,7 @@ You can combine drag detectors with `Class.Constraint|Constraints`, for example 
 
 <video src="../assets/ui/3D-drag-detectors/Color-Slider.mp4" controls width="800" alt="Drag detectors used in 3D user interface to control a particle emitter"></video>
 
-```lua title='DragDetector - 3D User Interface'
+```lua title="DragDetector - 3D User Interface"
 local model = script.Parent
 local slider = model.SliderPart
 local originPart = model.OriginPart

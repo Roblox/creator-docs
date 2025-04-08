@@ -17,7 +17,7 @@ The Validation Tool plugin is compatible with Blender 3.5.1+. You may experience
 
 To install the Validation Tool in Blender:
 
-1. Download [**ValidationTool_Blender.zip**](../../assets/art/ValidationTool_V2.zip) and save the .zip file locally. Do not open the .zip file.
+1. Download [ValidationTool_Blender.zip](../../assets/art/ValidationTool_V2.zip) and save the .zip file locally. Do not open the .zip file.
 2. In Blender, navigate to **Edit** > **Preferences**.
 3. In Preferences, go to the **Add-Ons** section on the left sidebar.
 

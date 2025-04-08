@@ -1,6 +1,6 @@
 ---
 title: Conditionals
-description: A tutorial series on how to use if statements in Lua within Roblox Studio.
+description: A tutorial series on how to use if statements in Luau within Roblox Studio.
 next: /tutorials/fundamentals/coding-3/intro-to-if-statements
 prev: /tutorials/fundamentals/coding-2/multiple-parameters-and-arguments
 ---
@@ -42,7 +42,7 @@ Many experiences have actions that only take place if a list of requirements are
 <tbody>
    <tr>
     <td>[Intro to If Statements](../coding-3/intro-to-if-statements.md)</td>
-    <td>Learn how if statements work and how to code them within Roblox Lua.</td>
+    <td>Learn how if statements work and how to code them in Luau.</td>
    </tr>
    <tr>
     <td>[If Statement Practice: Trap Parts](../coding-3/traps-with-if-statements.md)</td>

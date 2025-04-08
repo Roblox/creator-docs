@@ -13,7 +13,7 @@ Like all Open Cloud APIs, data store endpoints require all requests to include t
 
 All endpoints have two types of universe level throttling: **request-per-minute throttling** and **throughput throttling**. With every experience, **request-per-minute throttling** allows you to send a certain number of requests per minute, and **throughput throttling** allows you to send a certain amount of data per minute, regardless of the number of API keys.
 
-Unlike the Lua API, these limits currently do not scale based on user counts. Exceeding these limits causes the endpoint to return `429 Too Many Requests`.
+Unlike the Luau API, these limits currently do not scale based on user counts. Exceeding these limits causes the endpoint to return `429 Too Many Requests`.
 
 ### Standard data stores throttling limits
 
@@ -212,9 +212,9 @@ You can obtain the **Universe ID** of an experience with the following steps:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 2. Find the experience with data stores that you want to access.
-3. Click the **&ctdot;** button on the target experience's thumbnail to display a list of options, then select **Copy Universe ID**.
+3. Hover over the experience's thumbnail, click the **&ctdot;** button, and select **Copy Universe ID**.
 
-   <img src="../../assets/creator-dashboard/Experience-Context-Menu-Copy-Universe-ID.png" width="420" alt="Copy Universe ID option from Creator Dashboard" />
+   <img src="../../assets/creator-dashboard/Options-Button-Experience-Public.png" width="200" />
 
 ### Scopes
 
@@ -255,7 +255,7 @@ Additionally, if you want to enumerate all the keys stored in a data store that 
 
 You can't pass `Scope` and `AllScopes` parameters on the same request, otherwise the call returns an error. Leveraging the helping functions from the Open Cloud APIs for data stores module, the following code illustrates how you can read every key in a data store with a custom scope:
 
-```python title='List Keys for Different Scopes'
+```python title="List Keys for Different Scopes"
 # Set up
 import tutorialFunctions
 DatastoresApi = tutorialFunctions.DataStores()
@@ -274,7 +274,7 @@ print(specialScopeKeys.content)
 
 Keys with the corresponding scope are returned in the response:
 
-```json title='Example Responses for Different Scopes'
+```json title="Example Responses for Different Scopes"
 
 // Response for global scope
 { "keys": [{ "scope": "global", "key": "User_2" }], "nextPageCursor": "" }
@@ -296,7 +296,7 @@ If you don't include the `content-md5` header in your request, there is a chance
 
 You can use the language of your choice to calculate the value of the `content-md5` header. The following example uses Python. The [hashlib.md5()](https://docs.python.org/3/library/hashlib.html) and [base64.b64encode()](https://docs.python.org/3/library/base64.html#base64.b64encode) functions are available in Python standard libraries (2.7, 3+).
 
-```python title='Generating Content-MD5'
+```python title="Generating Content-MD5"
 # With prompts
 $ python -c "import base64, hashlib; print('content-md5: ' + str(base64.b64encode(hashlib.md5(bytes(input('content: '), encoding='utf8')).digest()), encoding='utf8'))"
 content: 750

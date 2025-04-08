@@ -14,9 +14,9 @@ Roblox has four categories of HTTP REST API:
 - [Legacy with API key and/or OAuth 2.0 authentication](legacy.md)
 - [Legacy with cookie authentication](legacy.md)
 
-Whenever possible, use the Open Cloud v2 API. This API has the strongest stability guarantees and regularly adds new resources. The Open Cloud v1 API also has strong stability guarantees, but a more limited set of resources.
+Whenever possible, use Open Cloud v2, Open Cloud v1, or legacy endpoints that support API key and/or OAuth 2.0 authentication. These APIs have strong stability guarantees and regularly add new resources.
 
-The legacy APIs, no matter which types of authentication they support, can incorporate breaking changes without notice and have minimal stability guarantees. They are not part of the Open Cloud v2 or v1 APIs, and we don't recommend them for production applications.
+Legacy API endpoints with cookie authentication can incorporate breaking changes without notice and have minimal stability guarantees. We don't recommend them for production applications.
 
 <Alert severity="info">
 Roblox also offers [webhooks](./webhooks/webhook-notifications.md), which can notify your applications when certain events occur, such as refunds or changes to subscriptions.

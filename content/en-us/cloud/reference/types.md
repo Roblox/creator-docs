@@ -14,7 +14,7 @@ of data, which are described in the following sections.
 Uses RFC 3339, where generated output will always be Z-normalized and uses 0, 3,
 6 or 9 fractional digits. Offsets other than "Z" are also accepted.
 
-```json title='Example Timestamp'
+```json title="Example Timestamp"
 { "timestamp": "1972-01-01T10:00:20.021Z" }
 ```
 
@@ -26,7 +26,7 @@ digits (also none) as long as they fit into nano-seconds precision and the
 suffix "s" is required. The range must be from -315,576,000,000 to
 315,576,000,000 seconds, inclusive.
 
-```json title='Example Durations'
+```json title="Example Durations"
 {
   "duration-9": "1.000340012s",
   "duration-0": "1s"
@@ -39,7 +39,7 @@ Byte data are encoded as a string using standard base64 encoding with paddings.
 Either standard or URL-safe base64 encoding with or without paddings are
 supported.
 
-```json title='Example Bytes'
+```json title="Example Bytes"
 {
   "bytes": "YWJjMTIzIT8kKiYoKSctRbLx+"
 }
@@ -51,7 +51,7 @@ A FieldMask is a string that describes the fields to act on when making a
 request. To construct a field mask, you specify comma delimited JSON field names
 in a string. For example, given the following resource:
 
-```json title='Example JSON resource'
+```json title="Example JSON resource"
 {
   "foo": {
     "a": "c",

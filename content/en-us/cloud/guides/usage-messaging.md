@@ -21,17 +21,17 @@ Currently, the API can only target live experience servers through HTTP.
 
 ## Limits
 
-Limit | Description
---- | ---
-**Rate** | Roblox throttles message requests at `50 + (5 * number_of_players_in_experience)`. For example, an experience with 20 players begins to throttle at 150 message requests per minute.
-**Topic size** | 80 characters
-**Message size** | 1,024 characters (1 KB)
+| Limit            | Description                                                                                                                                                                          |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Rate**         | Roblox throttles message requests at `50 + (5 * number_of_players_in_experience)`. For example, an experience with 20 players begins to throttle at 150 message requests per minute. |
+| **Topic size**   | 80 characters                                                                                                                                                                        |
+| **Message size** | 1,024 characters (1 KB)                                                                                                                                                              |
 
 ## Set up a topic for messaging
 
 Before you can publish a message to your experience's live servers, you must set up a **topic**, which is a customized message channel that is accessible from multiple servers. After defining a topic, you subscribe users to the topic in order to receive your incoming messages.
 
-Currently, you can only define a topic in Studio and use Lua `Class.MessagingService:SubscribeAsync()` to subscribe users to it. The following code sample subscribes any user to a topic when they join the experience:
+Currently, you can only define a topic in Studio and use the Luau API `Class.MessagingService:SubscribeAsync()` to subscribe users to it. The following code sample subscribes any user to a topic when they join the experience:
 
 ```lua title= 'Set up and Subscribe Users to a Topic'
 local MessagingService = game:GetService("MessagingService")
@@ -66,13 +66,13 @@ After [setting up](#set-up-a-topic-for-messaging) a topic, publish a message to 
 
    1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
    1. Find the experience that you want to publish your messages to.
-   1. Click the **&ctdot;** button on the target experience's thumbnail to display a list of options, then select **Copy Universe ID**.
+   1. Hover over an experience's thumbnail, click the **&ctdot;** button, and select **Copy Universe ID**.
 
-      <img src="../../assets/creator-dashboard/Experience-Context-Menu-Copy-Universe-ID.png" width="420" alt="Copy Universe ID option from Creator Dashboard" />
+      <img src="../../assets/creator-dashboard/Options-Button-Experience-Public.png" width="200" />
 
 3. Add the API key and universe to a `POST` request, as in this example:
 
-   ```bash title='Example Request for Publishing a Message'
+   ```bash title="Example Request for Publishing a Message"
    curl -L -X POST 'https://apis.roblox.com/cloud/v2/universes/{universe}:publishMessage' \
    -H 'x-api-key: {api-key}' \
    -H 'Content-Type: application/json' \

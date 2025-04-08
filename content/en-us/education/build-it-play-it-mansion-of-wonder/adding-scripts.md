@@ -2,7 +2,7 @@
 title: Add scripts
 prev: /education/build-it-play-it-mansion-of-wonder/using-particles-for-actions
 next: /education/build-it-play-it-mansion-of-wonder/next-steps-advanced
-description: Learn how to use Lua code to manipulate beams and emitters to add tutorial mechanics to your game in the Roblox Build It Play It Mansion of Wonder.
+description: Learn how to use Luau code to manipulate beams and emitters to add tutorial mechanics to your game in the Roblox Build It Play It Mansion of Wonder.
 ---
 
 Time to bring all this work together! Now that you've created the beam and particle components, you'll add in three premade scripts. These scripts manage the tutorial by telling components when to do what. For example, the scripts will create beams for new players and emit particles whenever they interact with goals.

@@ -70,12 +70,6 @@ Roblox Battle Royale must be structured as a game with six unique places. To beg
 Once the lobby place is published, you'll need to add **five additional places** to the game:
 
 1. If it's not already visible, open the **Asset Manager** window (View → Asset Manager).
-
-   <img
-   alt="Toggle Game Explorer"
-   src="../../assets/resources/battle-royale/installation-and-setup/Toggle-Game-Explorer.png"
-   width="80%" />
-
 2. Double-click the **Places** folder.
 
    <img
@@ -114,7 +108,7 @@ Each place must be cross-associated so that players can teleport from the lobby 
 
 4. Locate the `_places` table and paste the copied ID from step #1 as the value of the `lobby` key.
 
-   ```lua title='Lobby-MainConfiguration'
+   ```lua title="Lobby-MainConfiguration"
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
    local RunService = game:GetService("RunService")
    local Players = game:GetService("Players")
@@ -196,13 +190,7 @@ Each place must be cross-associated so that players can teleport from the lobby 
 
 By default, Roblox balances players/servers for an optimal social gameplay experience, but a battle royale should allow for bigger and more intense battles. To achieve this:
 
-1. Click on the **Game Settings** button from the **Home** tab.
-
-   <img
-   alt="Game Settings"
-   src="../../assets/resources/battle-royale/installation-and-setup/Game-Settings.png"
-   width="80%" />
-
+1. Open [Game Settings](../../studio/game-settings.md).
 2. Select the **Places** tab.
 3. For each of the six places, click the button and select **Edit**.
 

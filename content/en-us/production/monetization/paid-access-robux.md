@@ -50,7 +50,7 @@ To enable paid access in the Creator Hub:
 
 To enable paid access in Roblox Studio:
 
-1. In Studio, go to **Home** > **Game Settings**.
+1. Open [Game Settings](../../studio/game-settings.md).
 2. Under **Monetization**, click **Configure on Creator Hub**.
 3. Follow the steps to [enable paid access in the Creator Hub](#enable-paid-access-in-the-creator-hub).
 

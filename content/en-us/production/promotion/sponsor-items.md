@@ -1,7 +1,7 @@
 ---
 title: Sponsored items
 comment: Changes to this article require additional review
-description: Sponsoring items allows you to increase the discoverability of 3D user-generated content within the Avatar Marketplace.
+description: Sponsoring items allows you to increase the discoverability of 3D user-generated content within the Marketplace.
 ---
 
 Sponsor items to increase the discoverability of your 3D user-generated content to users within the [Marketplace](https://www.roblox.com/catalog). You can choose your audience, schedule the duration of your ad, and specify your budget per day. Sponsored item ads cycles can run anywhere from 24 hours to 28 days.
@@ -49,9 +49,6 @@ To create a new sponsored item:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. In left-hand navigation, under **Ads**, select **Sponsored Items**.
-
-   <img src="../../assets/creator-dashboard/Creations-Nav-Ads-Sponsored-Items.png" width="290" alt="Sponsored Items button indicated for an experience on the Creator Dashboard" />
-
 1. In the horizontal navigation, select **Items**. All filters update.
 1. In the top-right corner, click the **Create Sponsored Ad** button. The **Sponsor This Item** page displays.
 1. Click the **Select Item** dropdown menu, then select the item you want to sponsor. The **Icon** section displays the current version of your item's icon.
@@ -70,9 +67,6 @@ To view a sponsored item's statistics:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. In left-hand navigation, under **Ads**, select **Sponsored Items**.
-
-   <img src="../../assets/creator-dashboard/Creations-Nav-Ads-Sponsored-Items.png" width="290" alt="Sponsored Items button indicated for an experience on the Creator Dashboard" />
-
 1. In the horizontal navigation, select the **Items** tab. All filters update.
 1. Click the **Select Item** dropdown menu, then select the sponsored item you want to view the statistics for. A high-level view of the statistics for this sponsored item displays.
 
@@ -131,9 +125,6 @@ To cancel a sponsored item:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. In left-hand navigation, under **Ads**, select **Sponsored Items**.
-
-   <img src="../../assets/creator-dashboard/Creations-Nav-Ads-Sponsored-Items.png" width="290" alt="Sponsored Items button indicated for an experience on the Creator Dashboard" />
-
 1. In the horizontal navigation, select the **Items** tab. All filters update.
 1. Click the **Select Item** dropdown menu, then select the sponsored item you want to cancel. A high-level view of the statistics for this sponsored item displays.
 1. Select the **&ctdot;** button, then **Stop**. A warning pop-up dialog displays to confirm that you want to stop your ad.

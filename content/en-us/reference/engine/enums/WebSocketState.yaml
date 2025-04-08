@@ -1,0 +1,28 @@
+name: WebSocketState
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Connecting
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Open
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Closing
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Closed
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
