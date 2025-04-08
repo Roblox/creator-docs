@@ -17,10 +17,8 @@ width="100%"></video>
 
 Before you begin to create a beam, it's useful to toggle on visibility of attachments so you can see where the beam starts and ends.
 
-1. In the menu bar, navigate to the **Model** tab, then the **Constraints** section.
+1. Navigate to the toolbar's **Model** tab.
 2. If it's not currently enabled, toggle on **Constraint Details**.
-
-   <img src="../assets/studio/general/Model-Tab-Constraint-Details.png" width="754" alt="Constraint Details toggle indicated in Model tab" />
 
 To create a beam:
 

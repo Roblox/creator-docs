@@ -158,7 +158,7 @@ end)
 
 ### Outside your experience
 
-To enable developer product purchases outside your experience, you must work with the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` API. After a user makes a purchase in the Store tab of your experience details page, you must use `ProcessReceipt` to confirm their purchase and grant them their items once they enter your experience.
+To enable developer product purchases outside your experience, you must work with the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` API. After a user makes a purchase in the **Store** tab of your experience details page, you must use `ProcessReceipt` to confirm their purchase and grant them their items once they enter your experience.
 
 <Alert severity="warning">
 Do **not** use the `Class.MarketplaceService:PromptProductPurchaseFinished|PromptProductPurchaseFinished` event to process purchases. You must use the `ProcessReceipt` callback instead.

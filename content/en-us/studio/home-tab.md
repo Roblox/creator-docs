@@ -13,8 +13,6 @@ The **Home** tab contains basic tools for building and testing your experience.
 
 The first section from left contains tools for copying, cutting, pasting, and duplicating instances. You can perform these operations on both 3D world objects or instances in the [Explorer](../studio/explorer.md) window.
 
-<img src="../assets/studio/general/Home-Tab-Clipboard-Tools.png" width="716" alt="Clipboard tools indicated in Home tab" />
-
 <table>
   <thead>
     <tr>
@@ -68,7 +66,7 @@ The primary transform tools include **Select**, **Move**, **Scale**, and **Rotat
   </figure>
 </GridContainer>
 
-Tool transform **snapping increments** are based on **studs** for moving/scaling or **degrees** for rotating, each adjustable in the [Model](../studio/model-tab.md#transform-snapping) tab. While transforming, you can temporarily toggle snapping by holding the <kbd>Shift</kbd> key.
+Tool transform **snapping increments** are based on **studs** for moving/scaling or **degrees** for rotating, each adjustable in the toolbar's [Model](./model-tab.md) tab. While transforming, you can temporarily toggle snapping by holding the <kbd>Shift</kbd> key.
 
 <Alert severity="info">
 If the selected object and its visual draggers are not currently in view within the 3D viewport, you can press the <kbd>Tab</kbd> key to "summon" the draggers to your mouse pointer position, allowing you to transform the selected object from your current viewpoint.

@@ -39,7 +39,7 @@ After you supply the texture maps to these properties, you can apply your new cu
 
 To create `Class.MaterialVariant` objects for your tileable textures:
 
-1. In the **Home** or **Model** tab of the menu bar, click the **Material Manager** button. The **Material Manager** window opens.
+1. In the toolbar's **Home** or **Model** tab, click the **Material Manager** button. The **Material Manager** window opens.
 2. In the **Materials** list, select the base material that most aligns with your tileable texture. For example, if you were creating a `Class.MaterialVariant` object for the Lumpy Moss tileable texture, choose the default ground material so the material inherits its physical properties.
 3. In the **Toolbar**, click the **⊕** icon. A new `Class.MaterialVariant` displays in the palette with an icon in the bottom-right corner that indicates it's a custom material.
 
@@ -120,10 +120,7 @@ Using the 3D Importer, you can import the sample modular kit and props into Stud
 
 To import your modular assets and props into the experience:
 
-1. In the **Home** or **Avatar** tab, click the **Import 3D** button. A file browser displays.
-
-   <img src="../../../assets/studio/general/Avatar-Tab-Import-3D.png" alt="Studio's Avatar tab with the 3D Importer highlighted." width="100%" />
-
+1. In the toolbar's **Home** or **Avatar** tab, click the **Import 3D** button. A file browser displays.
 2. Select a `.fbx` file for either a modular asset or prop.
 3. Verify the object preview and check that the import settings are correct for your object.
 

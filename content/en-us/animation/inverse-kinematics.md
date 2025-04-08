@@ -65,8 +65,8 @@ You can add and edit `Class.IKControl` programmatically or directly through the 
 
 To quickly test your `Class.IKControl` using an `Class.Attachment` as a target:
 
-1. In the Test tab, select **Play** to start the Play test.
-2. In the Explorer, navigate to **Workspace** → your user's `Class.Model`. This `Class.Model` instance is named as your current Roblox account.
+1. In the toolbar's **Test** tab, select **Play** to start the playtest.
+2. In the **Explorer**, navigate to **Workspace** → your user's `Class.Model`. This `Class.Model` instance is named as your current Roblox account.
 3. Click the **⊕** icon next to your character model's `HumanoidRootPart` and add an **Attachment**.
 
    <img src="../assets/animation/inverse-kinematics/IK-Add-Attachment.png"

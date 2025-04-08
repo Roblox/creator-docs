@@ -56,7 +56,7 @@ To test the module in Studio, the **FriendsLocator** module must be run in a mul
    })
    ```
 
-1. From the [Test](../../studio/test-tab.md) tab, select the following combination for **Clients&nbsp;and&nbsp;Servers**, then click the **Start** button. Three new instances of Studio will open; one simulated server and two simulated clients.
+1. From the toolbar's **Test** tab, select the following combination for **Clients&nbsp;and&nbsp;Servers**, then click the **Start** button. Three new instances of Studio will open; one simulated server and two simulated clients.
 
    <img src="../../assets/developer-modules/friends-locator/Clients-Servers-Start.png" width="800" />
 

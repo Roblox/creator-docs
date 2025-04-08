@@ -43,7 +43,7 @@ All `ModuleScript` s within the **ChatModules** folder should return a function,
 #### GetChannel
 
 - **Parameters:** `Library.string`: `channelName`
-- **Description:** Returns the channel with the given name, or nil if it does not exist.
+- **Description:** Returns the channel with the given name, or `nil` if it does not exist.
 - **Returns:** [ChatChannel](#chatchannel)
 
 #### AddSpeaker
@@ -61,7 +61,7 @@ All `ModuleScript` s within the **ChatModules** folder should return a function,
 #### GetSpeaker
 
 - **Parameters:** `Library.string`: `speakerName`
-- **Description:** Returns the speaker with the given name, or nil if it doesn't exist.
+- **Description:** Returns the speaker with the given name, or `nil` if it doesn't exist.
 - **Returns:** [ChatSpeaker](#chatspeaker)
 
 #### GetChannelList
@@ -404,7 +404,7 @@ By default, each user has a [ChatSpeaker](#chatspeaker) that is automatically ad
 #### MuteSpeaker
 
 - **Parameters:** `Library.string`: `speakerName` , `Library.string`: `reason = nil` , [int](../../luau/numbers.md#int) `duration = 0`
-- **Description:** Mutes the speaker with the given `speakerName` in the channel for a duration specified in seconds. If `duration` is nil or 0, the mute is indefinite. If `reason` is provided, then a message will be sent to the channel with the reason included.
+- **Description:** Mutes the speaker with the given `speakerName` in the channel for a duration specified in seconds. If `duration` is `nil` or 0, the mute is indefinite. If `reason` is provided, then a message will be sent to the channel with the reason included.
 - **Returns:** void
 
 #### UnmuteSpeaker

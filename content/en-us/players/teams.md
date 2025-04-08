@@ -9,12 +9,8 @@ You can divide users in your experience to multiple teams using the `Class.Teams
 
 By default, your **Explorer** hierarchy includes the `Class.Teams` service. If you don't find it or accidentally deleted it, you can still add it to your experience through the following steps:
 
-1. In the **Model** tab, click the **Service** icon in the **Advanced** section to display a list of services.
-
-   <img src="../assets/studio/general/Model-Tab-Advanced-Options.png" width="754" alt="Advanced options indicated in Model tab" />
-
+1. In the **Model** tab, click the **Service** icon to display a list of services.
 2. From the **Insert Service** window, select **Teams** and click the **Insert** button.
-
 3. You can now find the **Teams** folder in the **Explorer** hierarchy.
 
    <img src="../assets/players/teams/Explorer-Teams-Object.png" width="320" />

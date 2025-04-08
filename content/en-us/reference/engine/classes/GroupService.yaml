@@ -204,7 +204,7 @@ methods:
       }
       ```
 
-      Note, if a group has no owner the Owner field will be set to nil.
+      Note, if a group has no owner the Owner field will be set to `nil`.
 
       This function has a number of useful applications, including loading the
       latest description and logo of a group for display in a group base.

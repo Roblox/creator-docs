@@ -19,10 +19,7 @@ The first step in creating your environment is to create a small island that pla
 
 To create the island:
 
-1. In the menu bar, navigate to the **Home** tab, then click the **Terrain Editor** button. The **Terrain Editor** window displays.
-
-   <img src="../../../../assets/studio/general/Home-Tab-Terrain-Editor.png" alt="Studio's Home tab with the Terrain Editor tool highlighted." width="716" />
-
+1. Navigate to the toolbar's **Home** tab and click the **Terrain Editor** button.
 1. In the **Terrain Editor** window, click the **Edit** tab, then the **Draw** button.
 
    <img src="../../../../assets/studio/terrain-editor/Edit-Tab-Draw.png" alt="Studio's Terrain Editor window with both the Edit tab and Draw button highlighted." width="360" />
@@ -166,7 +163,7 @@ To apply materials to the island:
 1. In the viewport, drag along the edges of the island to apply blades of grass, leaving space in the middle of the island for
    the spawn location and the initial platforms.
 1. In the **Explorer** window, select the **SpawnLocation** object.
-1. In the **Home** tab, select the **Move** tool.
+1. In the toolbar's **Home** tab, select the **Move** tool.
 1. In the viewport, move the spawn location toward the edge of the island to make space for the first platform. The sample [Island Jump - Building](https://www.roblox.com/games/14239096301/Island-Jump-Building) `.rbxl` file uses a position of `-127, -3, 9`.
 
    <video controls loop muted>
@@ -185,14 +182,15 @@ Once you are happy with your island's appearance, you can playtest your experien
 
 To playtest your experience:
 
-1. In the menu bar, click the **Play** button. Studio enters playtest mode.
+1. Click the **Play** button from the playtesting options.
 
-   <img src="../../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Studio's Home tab with the Play button highlighted in the menu bar." width="716" />
+	 <img src="../../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Play button highlighted in Studio's playtesting options." width="228" />
 
 1. Walk around the island and check out how it looks while playing. When you're
-   done, navigate back to the menu bar and click the **Stop** button. Studio exits playtest mode.
+   done, click the **Stop** button. Studio exits playtest mode.
 
-   <img src="../../../../assets/studio/general/Quick-Access-Toolbar-Stop.png" alt="Studio's Home tab with the Stop button highlighted in the menu bar." width="716" />
+   <img src="../../../../assets/studio/general/Quick-Access-Toolbar-Stop.png" alt="Stop button highlighted in Studio's playtesting options." width="228" />
+
    <video controls loop muted>
    <source src="../../../../assets/tutorials/create-an-environment-with-terrain/create-an-environment-with-terrain-walking.mp4" />
    </video>

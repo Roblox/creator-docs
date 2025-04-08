@@ -150,11 +150,11 @@ methods:
     writeCapabilities: []
   - name: Pose:RemoveSubPose
     summary: |
-      Removes a sub `Class.Pose` from the `Class.Pose` by parenting it to nil.
+      Removes a sub `Class.Pose` from the `Class.Pose` by parenting it to `nil`.
     description: |
-      Removes a sub `Class.Pose` from the `Class.Pose` by parenting it to nil.
+      Removes a sub `Class.Pose` from the `Class.Pose` by parenting it to `nil`.
       This is functionally identical to setting the new pose's
-      `Class.Instance.Parent` to nil.
+      `Class.Instance.Parent` to `nil`.
 
       Note: If an `Class.Instance` other than `Class.Pose` is used as a
       `Class.Pose` parameter, this function removes that `Class.Instance` and

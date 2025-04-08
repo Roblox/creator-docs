@@ -598,7 +598,8 @@ https://www.youtube-nocookie.com/embed/qfWKYgO63OI
 https://github.com/evaera/roblox-animation-transfer?tab=readme-ov-file#roblosecurity
 https://github.com/evaera/roblox-animation-transfer?tab=readme-ov-file
 https://github.com/evaera/roblox-animation-transfer
-https://support.tipalti.com/Content/Topics/UserGuide/PaymentInformation/PaymentMethodsCoverage/IntroUSD.htm?Highlight=payment%20coverage#USD
+https://support.tipalti.com/
+https://support.tipalti.com/Content/Topics/UserGuide/PaymentInformation/PaymentMethodsCoverage/IntroUSD.htm
 https://github.com/Roblox/creator-docs/tree/main/content/en-us/reference/cloud
 https://www.youtube.com/playlist?list=PLuEQ5BB-Z1PK3EcpypEHHMlc2lknQCJyP
 https://docs.blender.org/manual/en/2.80/scene_layout/object/editing/transform/control/pivot_point/index.html

@@ -495,11 +495,11 @@ functions:
   - name: string.match
     summary: |
       Looks for the first match of pattern in the string `s`. If a match is
-      found, it is returned; otherwise, it returns nil. A third, optional
+      found, it is returned; otherwise, it returns `nil`. A third, optional
       numerical argument, init, specifies where to start the search.
     description: |
       Looks for the first match of pattern in the string `s`. If a match is
-      found, it is returned; otherwise, it returns nil. A third, optional
+      found, it is returned; otherwise, it returns `nil`. A third, optional
       numerical argument, init, specifies where to start the search; its default
       value is 1 and can be negative.
     parameters:

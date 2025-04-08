@@ -28,14 +28,7 @@ Before you begin to record your face, ensure that you're in a well lit room clos
 
 To record your face and create an animation:
 
-1. Open the **Animation Editor**.
-
-   1. In the menu bar, navigate to the **Avatar** tab.
-   1. In the **Animations** section, click on the **Animation Editor**. The **Animation Editor** window displays.
-
-   <img src="../assets/studio/general/Avatar-Tab-Animation-Editor.png"
-      width="760" />
-
+1. From the toolbar's **Avatar** tab, click **Animation Editor**. The [Animation Editor](../animation/editor.md) window displays.
 2. In the **Explorer** window, select the rig you want your video to animate. A dialog displays.
 
    <img src="../assets/animation/animation-editor/Create-Animation-Dialog.png"
@@ -90,14 +83,7 @@ Before you import a video to the Animation Editor, ensure the **.mp4** or **.mov
 
 To import a video to create an animation:
 
-1. Open the **Animation Editor**.
-
-   1. In the menu bar, navigate to the **Avatar** tab.
-   1. In the **Animations** section, click on the **Animation Editor**. The **Animation Editor** window displays.
-
-   <img src="../assets/studio/general/Avatar-Tab-Animation-Editor.png"
-      width="760" />
-
+1. From the toolbar's **Avatar** tab, click **Animation Editor**. The [Animation Editor](../animation/editor.md) window displays.
 2. In the **Explorer** window, select the R15 rig you want your video to animate. A dialog displays.
 
    <img src="../assets/animation/animation-editor/Create-Animation-Dialog.png"

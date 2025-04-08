@@ -209,12 +209,12 @@ methods:
   - name: Keyframe:RemoveMarker
     summary: |
       Removes a `Class.KeyframeMarker` from the `Class.Keyframe` by settings its
-      `Class.Instance.Parent` to nil.
+      `Class.Instance.Parent` to `nil`.
     description: |
       This function removes a `Class.KeyframeMarker` from the `Class.Keyframe`
-      by settings its `Class.Instance.Parent` to nil.
+      by settings its `Class.Instance.Parent` to `nil`.
 
-      The KeyframeMarker's `Class.Instance.Parent` is set to nil but it is not
+      The KeyframeMarker's `Class.Instance.Parent` is set to `nil` but it is not
       destroyed. This means, provided the marker is referenced it can be
       re-parented later.
 
@@ -257,7 +257,7 @@ methods:
   - name: Keyframe:RemovePose
     summary: |
       Removes a `Class.Pose` from the `Class.Keyframe` by setting its
-      `Class.Instance.Parent` to nil.
+      `Class.Instance.Parent` to `nil`.
     description: |
       This function removes a `Class.Pose` from the `Class.Keyframe` by setting
       its `Class.Instance.Parent` to `nil` without destroying it. This means the

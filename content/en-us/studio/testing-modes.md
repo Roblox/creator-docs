@@ -11,8 +11,6 @@ import BetaAlert from '../includes/beta-features/beta-alert.md'
 
 Because of the underlying [client-server model](../projects/client-server.md) of the Roblox Engine, it's important that you test your experience in various modes before [releasing it to the public](../production/publishing/publish-experiences-and-places.md#release-to-the-public). All of the testing options are accessible from the [Test](../studio/test-tab.md) tab.
 
-<img src="../assets/studio/general/Toolbar-Test-Tab.png" width="840" alt="Test tab indicated in Studio toolbar" />
-
 ## Playtest options
 
 <PlaytestOptions components={props.components} />
@@ -80,19 +78,15 @@ Using the **clients and servers** options, you can launch multiple sessions of S
 
 1. When you're finished testing, press the **Cleanup** button from any of the simulation sessions to close all simulated clients and the simulated server.
 
-   <img src="../assets/studio/general/Test-Tab-Clients-Servers-Cleanup.png" width="810" alt="Cleanup button indicated in Test tab" />
-
 ## Collaborative testing
 
 If you're working on an experience with others in [Collaboration](../projects/collaboration.md) mode, you can test with other creators as follows:
 
-1. In the **Clients and Servers** section, select **Team Test** in the upper box and press the **Start** button to publish the current state of the experience and create a new Studio session with your character inserted.
+1. Select **Team Test** in the upper box and press the **Start** button to publish the current state of the experience and create a new Studio session with your character inserted.
 
    <img src="../assets/studio/general/Test-Tab-Clients-Servers-Team-Test.png" width="760" alt="Team Test setup indicated in Test tab" />
 
 1. Other collaborators can then join by pressing **Join** from the **Test** tab.
-
-   <img src="../assets/studio/general/Test-Tab-Clients-Servers-Team-Test-Join.png" width="760" alt="Team Test join button indicated in Test tab" />
 
    <Alert severity="info">
    Only one team test session can run at any given time. To close a session and kick out all testers, click the **Shutdown&nbsp;Server** button.

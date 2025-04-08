@@ -118,9 +118,7 @@ In-experience assets and experience metadata cannot contain strong language, eve
 
 ### Game settings
 
-Once an experience is published, the [Game Settings](../../studio/game-settings.md) window contains many Studio-level settings and customization options. To open it, click the **Game Settings** button in the [Home](../../studio/home-tab.md) tab of the ribbon menu.
-
-<img src="../../assets/studio/general/Home-Tab-Game-Settings.png" width="760" alt="Game Settings button indicated in Home tab" />
+Once an experience is published, the [Game Settings](../../studio/game-settings.md) window contains many Studio-level settings and customization options. To open it, click the **Game Settings** button in the toolbar's **Home** tab.
 
 ## Release to the public
 

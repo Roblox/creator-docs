@@ -2611,17 +2611,17 @@ methods:
     writeCapabilities: []
   - name: BasePart:GetNetworkOwner
     summary: |
-      Returns the current player who is the network owner of this part, or nil
+      Returns the current player who is the network owner of this part, or `nil`
       in case of the server.
     description: |
-      Returns the current player who is the network owner of this part, or nil
+      Returns the current player who is the network owner of this part, or `nil`
       in case of the server.
     code_samples:
     parameters: []
     returns:
       - type: Instance
         summary: |
-          The current player who is the network owner of this part, or nil in
+          The current player who is the network owner of this part, or `nil` in
           case of the server.
     tags: []
     deprecation_message: ''
@@ -2863,7 +2863,7 @@ methods:
       Sets the given player as network owner for this and all connected parts.
     description: |
       Sets the given player as network owner for this and all connected parts.
-      When playerInstance is nil, the server will be the owner instead of a
+      When playerInstance is `nil`, the server will be the owner instead of a
       player.
     code_samples:
     parameters:

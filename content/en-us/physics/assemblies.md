@@ -3,7 +3,7 @@ title: Assemblies
 description: Explains physical assemblies and how they behave in Roblox's rigid body physics engine.
 ---
 
-An **assembly** is one or more [parts](../parts/index.md) welded by a rigid `Class.WeldConstraint|WeldConstraint` or connected through moveable joints, like `Class.Motor6D|Motor6Ds`. You can group an assembly of parts in a [Model](../parts/models.md) container to quickly organize the parts and related objects as a single asset.
+An **assembly** is one or more [parts](../parts/index.md) welded by a rigid `Class.WeldConstraint|WeldConstraint` or connected through moveable joints, like `Class.Motor6D|Motor6Ds`. You can group an assembly of parts in a [model](../parts/models.md) container to quickly organize the parts and related objects as a single asset.
 
 <Grid container spacing={0}>
   <Grid item XSmall={6} XLarge={3}>

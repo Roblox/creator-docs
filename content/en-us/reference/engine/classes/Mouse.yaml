@@ -318,7 +318,7 @@ properties:
       - If `Class.Mouse.TargetFilter` has been set, the target filter and its
         descendants will be ignored.
       - When the mouse is not pointing at a `Class.BasePart`, for example when
-        it is pointing at the sky, Target will be nil.
+        it is pointing at the sky, Target will be `nil`.
       - Developers looking for the position of the mouse in 3D space should use
         `Class.Mouse.Hit`.
     code_samples:
@@ -352,7 +352,7 @@ properties:
       effects or decorations that should not affect `Class.Mouse.Hit` or
       `Class.Mouse.Target`.
 
-      This property can be set to any `Class.Instance` or nil, for example:
+      This property can be set to any `Class.Instance` or `nil`, for example:
 
       ```lua
       local Players = game:GetService("Players")
@@ -393,7 +393,7 @@ properties:
       This property isn't meaningful when the mouse is not pointing at a part,
       for example when the mouse is pointing at the sky. At the moment, this
       property is set to 'Right' under these circumstances. Before using this
-      property, check that the mouse's target is not nil.
+      property, check that the mouse's target is not `nil`.
 
       ```lua
       local Players = game:GetService("Players")

@@ -43,7 +43,7 @@ Numbers are notated with the most significant digits first (big-endian). There a
 - [Binary (base-2)](https://wikipedia.org/wiki/Binary_number) — Begin the number with `0b` followed by 0s or 1s, for instance `0b1100` (12 in decimal format).
 
 <Alert severity="info">
-To aid in the readability of long numbers, you can include underscores anywhere within a number literal without changing the value, <b>except</b> at the beginning where this would make it an identifier. For example, <InlineCode>1_234_567</InlineCode> is the same as <InlineCode>1234567</InlineCode>, both of which are equal to 1,234,567.
+To aid in the readability of long numbers, you can include underscores anywhere within a number literal without changing the value, <b>except</b> at the beginning where this would make it an identifier. For example, `1_234_567` is the same as `1234567`, both of which are equal to 1,234,567.
 </Alert>
 
 ## Operations

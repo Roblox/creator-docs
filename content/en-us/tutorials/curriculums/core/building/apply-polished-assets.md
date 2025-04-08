@@ -56,8 +56,8 @@ You can add the library to your inventory within Studio by clicking the **Add to
 
 To get the asset library from your inventory into your experience:
 
-1. In the menu bar, select the **View** tab.
-2. In the **Show** section, click **Toolbox**. The **Toolbox** window displays.
+1. In the toolbar, select the [View](../../../../studio/view-tab.md) tab.
+2. Click **Toolbox**. The **Toolbox** window displays.
 
    <img src="../../../../assets/studio/general/View-Tab-Toolbox.png" alt="Studio's View tab with the Toolbox tool highlighted." width="876" />
 
@@ -124,7 +124,7 @@ To apply the asset library to your platforms:
    1. Right-click **PlatformA**. A contextual menu displays.
    1. From the contextual menu, select **Copy**.
 1. In the **Platforms** folder, paste **PlatformA** into the **Level_1** model.
-1. In the **Home** tab, use the **Move** and **Scale** tools to position and scale the model to the size of your first placeholder sea stack platform.
+1. In the toolbar's **Home** tab, use the **Move** and **Scale** tools to position and scale the model to the size of your first placeholder sea stack platform.
 
    <img src="../../../../assets/tutorials/core-building-and-scripting/First-Platform.jpg" alt="A view of the sample laser tag experience with only the first platform visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
 
@@ -298,7 +298,7 @@ To apply the asset library to your sea stacks:
 
 1. In the **Explorer** window, navigate to the asset library and copy **SeaStackMesh**.
 1. In the **Platforms** folder, paste **SeaStackMesh** into one of your level models.
-1. In the **Home** tab, use the **Move**, **Scale**, and **Rotate** tools to position, scale, and rotate the mesh until it is the length of your placeholder sea stack. If necessary, use more than one instance of the **SeaStackMesh** mesh.
+1. In the toolbar's **Home** tab, use the **Move**, **Scale**, and **Rotate** tools to position, scale, and rotate the mesh until it is the length of your placeholder sea stack. If necessary, use more than one instance of the **SeaStackMesh** mesh.
 
    <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-3.jpg" alt="A view of the sample laser tag experience with all of the platforms visible with the polished assets, as well as the first sea stack. Other greybox sea stacks are transluscent in the distance." width="80%" />
 
@@ -870,7 +870,7 @@ To apply the asset library to your coins:
 
 1. In the **Explorer** window, navigate to the asset library and copy **Coin**.
 1. In the **Platforms** folder, paste **Coin** into the **Coins** folder.
-1. In the **Home** tab, use the **Move** and **Rotate** tools to position and rotate the mesh until it's at the same configuration of first your placeholder coin.
+1. In the toolbar's **Home** tab, use the **Move** and **Rotate** tools to position and rotate the mesh until it's at the same configuration of first your placeholder coin.
 1. Repeat this process, adding and configuring **coin** assets wherever you set your initial coin placeholder objects.
 
    <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/Coins-Final.jpg" alt="A view of shiny gold coins hovering over each level of sea stack platform." width="80%" />
@@ -1052,7 +1052,7 @@ To apply the asset library to your mountains:
 
 1. In the **Explorer** window, navigate to the asset library and copy **MountainMesh**.
 1. In the **Platforms** folder, paste **MountainMesh** into the **Mountains** folder.
-1. In the **Home** tab, use the **Move**, **Scale**, and **Rotate** tools to position, scale, and rotate the mesh along the border of your water terrain.
+1. In the toolbar's **Home** tab, use the **Move**, **Scale**, and **Rotate** tools to position, scale, and rotate the mesh along the border of your water terrain.
 1. Repeat this process, adding and configuring mountains of different sizes and rotations until the border of your water terrain has cover.
 
    <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/Mountains-Final.jpg" alt="A view of the polished sea stacks, platform, and coins, with a mountain range in the background." width="80%" />
@@ -1168,14 +1168,14 @@ After you finish applying your asset library and constructing your environment, 
 
 To playtest your experience:
 
-1. In the menu bar, click the **Play** button. Studio enters playtest mode.
+1. Click the **Play** button from the playtesting options.
 
-   <img src="../../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Studio's Home tab with the Play button highlighted in the menu bar." width="716" />
+	 <img src="../../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Play button highlighted in Studio's playtesting options." width="228" />
 
 1. Play your experience and try to reach the flare at the top of the stacks.
-1. When you're done, navigate back to the menu bar, and click the **Stop** button. Studio exits playtest mode.
+1. When you're done, click the **Stop** button. Studio exits playtest mode.
 
-   <img src="../../../../assets/studio/general/Quick-Access-Toolbar-Stop.png" alt="Studio's Home tab with the Stop button highlighted in the menu bar." width="716" />
+   <img src="../../../../assets/studio/general/Quick-Access-Toolbar-Stop.png" alt="Stop button highlighted in Studio's playtesting options." width="228" />
 
 Congratulations on completing the Core Curriculum! Now that you have experience creating a simple experience from start to finish, you can extend your project with new gameplay features or additional levels, explore Studio's additional [features](../../../../platform.md), or follow additional tutorial curricula, such as the [Environmental art curriculum](../../environmental-art/index.md) that teaches you how to create a high-quality laser tag environment. Happy creating!
 

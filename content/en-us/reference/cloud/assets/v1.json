@@ -3,7 +3,8 @@
   "info": {
     "title": "Assets API",
     "description": "You can send and receive the following request and response payloads to create assets on Roblox. For information on the usage of the API, see the [usage guide](../../../cloud/guides/usage-assets.md).",
-    "version": "0.0.1"
+    "version": "0.0.1",
+    "x-roblox-extensions-version": "1.0.0"
   },
   "servers": [
     {
@@ -968,7 +969,7 @@
         "properties": {
           "moderationState": {
             "type": "string",
-            "description": "The moderation state of the asset. Can be `MODERATION_STATE_REVIEWING`, `MODERATION_STATE_REJECTED`, or `MODERATION_STATE_APPROVED`."
+            "description": "The moderation state of the asset. Can be `Reviewing`, `Rejected`, or `Approved`."
           }
         },
         "description": "The moderation result of the asset. "

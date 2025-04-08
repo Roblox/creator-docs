@@ -123,8 +123,8 @@ For example, if you don't test your UI on a range of screen sizes, players with 
 
 To emulate your UI on various screen sizes:
 
-1. In the menu bar, select the **Test** tab.
-1. In the **Emulation** section, click **Device**. The viewport changes to reflect the aspect ratio of an average laptop.
+1. In the toolbar, select the **Test** tab.
+1. Click **Device**. The viewport changes to reflect the aspect ratio of an average laptop.
 
    <img src="../../../assets/studio/general/Test-Tab-Emulation-Device.png" width="800" alt="Device button indicated in Test tab" />
 

@@ -1604,7 +1604,7 @@ events:
 
       When a GUI loses selection focus, the value of the
       `Class.GuiService.SelectionObject|SelectionObject` property changes either
-      to nil or to the GUI element that gains selection focus. To determine
+      to `nil` or to the GUI element that gains selection focus. To determine
       which GUI gained selection, or if no GUI is selected, check the value of
       this property.
     code_samples:

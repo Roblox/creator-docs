@@ -56,7 +56,7 @@ methods:
 
       Note:
 
-      - This function will return nil if the className parameter is an existing
+      - This function will return `nil` if the className parameter is an existing
         class, but the class is not a service.
       - If you attempt to fetch a service that is present under another Object,
         an error will be thrown stating that the "singleton serviceName already
