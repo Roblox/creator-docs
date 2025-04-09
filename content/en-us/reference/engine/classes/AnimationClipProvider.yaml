@@ -131,7 +131,7 @@ methods:
 
       This function performs the same function to
       `Class.AnimationClipProvider:RegisterActiveAnimationClip()|RegisterActiveAnimationClip`
-      yet generates an _active://_ URL instead of a hash.
+      yet generates a hash instead of an `active://` URL.
 
       The ID generated can be used for the `Class.Animation.AnimationId`
       property to test animations.

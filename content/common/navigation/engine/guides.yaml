@@ -440,6 +440,23 @@ navigation:
                 path: /chat/examples/custom-text-chat-commands
           - title: Legacy chat system
             path: /chat/legacy/legacy-chat-system
+
+  - title: Matchmaking
+    path: /matchmaking/
+    section:
+      - title: Overview
+        path: /matchmaking/
+      - title: Server scoring
+        path: /matchmaking/scoring
+      - title: Attributes and signals
+        path: /matchmaking/attributes-and-signals
+      - title: Customize your matchmaking configuration
+        path: /matchmaking/customize-matchmaking
+      - title: Analytics
+        path: /matchmaking/analytics
+      - title: Glossary
+        path: /matchmaking/glossary
+
   - title: Performance optimization
     path: /performance-optimization/
     section:
