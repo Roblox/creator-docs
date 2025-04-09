@@ -124,8 +124,10 @@ methods:
       This function increments the value of a key by the provided amount (both
       must be integers).
 
-      `Class.OrderedDataStore` does not support versioning, so calling this
-      method on an `Class.OrderedDataStore` key will overwrite the current value
+      Values in `Class.GlobalDataStore|GlobalDataStores` are **versioned** as outlined
+      in [versioning](../../../cloud-services/data-stores/versioning-listing-and-caching.md#versioning).
+      `Class.OrderedDataStore|OrderedDataStores` do not support versioning, so calling this
+      method on an ordered data store key will overwrite the current value
       with the incremented value and make previous versions inaccessible.
     code_samples:
     parameters:
@@ -221,14 +223,10 @@ methods:
       This function sets the latest value, `Class.Player.UserId|UserIds`, and
       metadata for the given key.
 
-      Values in data stores are versioned, meaning
-      `Class.GlobalDataStore:SetAsync()` will create a new version every time it
-      is called. Prior versions can be accessed through
-      `Class.DataStore:ListVersionsAsync()`/`Class.DataStore:GetVersionAsync()`
-      for up to 30 days at which point they are permanently deleted.
-
-      `Class.OrderedDataStore` does not support versioning, so calling this
-      method on an `Class.OrderedDataStore` key will overwrite the current value
+      Values in `Class.GlobalDataStore|GlobalDataStores` are **versioned** as outlined
+      in [versioning](../../../cloud-services/data-stores/versioning-listing-and-caching.md#versioning).
+      `Class.OrderedDataStore|OrderedDataStores` do not support versioning, so calling this
+      method on an ordered data store key will overwrite the current value
       and make previous versions inaccessible.
 
       Metadata definitions must always be updated with a value, even if there
@@ -302,14 +300,11 @@ methods:
       specified through the second parameter. If the callback returns `nil`, the
       write operation is cancelled and the value remains unchanged.
 
-      If the update succeeds, a new version of the value will be created and
-      prior versions will remain accessible through
-      `Class.DataStore:ListVersionsAsync()` and
-      `Class.DataStore:GetVersionAsync()`.
-
-      `Class.OrderedDataStore` does not support versioning, so calling this
-      function on an `Class.OrderedDataStore` key will overwrite the current
-      value and make previous versions inaccessible.
+      Values in `Class.GlobalDataStore|GlobalDataStores` are **versioned** as outlined
+      in [versioning](../../../cloud-services/data-stores/versioning-listing-and-caching.md#versioning).
+      `Class.OrderedDataStore|OrderedDataStores` do not support versioning, so calling this
+      method on an ordered data store key will overwrite the current value
+      and make previous versions inaccessible.
 
       In cases where another game server updated the key in the short timespan
       between retrieving the key's current value and setting the key's value,
