@@ -8,7 +8,7 @@ For professional development studios, setting up third-party tools and investing
 <Alert severity="info">
 Although this page covers several popular tools, it shouldn't be taken as a strict recommendation of them. Every team has different needs, so this page is intended to help you examine ways to improve your workflow rather than tell you to download anything in particular.
 
-Tools mentioned on this page are not maintained by Roblox and may change or stop working at any time. Be sure to evaluate each tool carefully to ensure it meets your team’s security, reliability, and compatibility requirements.
+Tools mentioned on this page are not maintained by Roblox, and may change or stop working at any time.
 </Alert>
 
 ## The syncing problem
