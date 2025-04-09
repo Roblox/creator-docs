@@ -117,7 +117,7 @@ To export your avatar animation from Maya:
 1. Click the **Advanced Options** dropdown for additional export settings, then in the **FBX File Format** section,
 
    1. Set **Type** to **Binary**.
-   1. Set **Version** to **FBX 2020**.
+   1. If required, set **Version** to **FBX 2020**.
 
       <img width="80%" img src="../../assets/animation/exporting-avatar-animations-from-maya/FBX-File-Format.jpg" alt="A close up view of the Options pane. The FBX File Format settings are highlighted." />
 

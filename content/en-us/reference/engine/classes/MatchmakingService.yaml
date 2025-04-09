@@ -2,8 +2,8 @@ name: MatchmakingService
 type: class
 category:
 memory_category: Instances
-summary: ''
-description: ''
+summary: 'The service responsible for managing custom matchmaking data.'
+description: '`Class.MatchmakingService` is responsible for managing custom matchmaking attributes. Use it to read and write matchmaking data.'
 code_samples: []
 inherits:
   - Instance
@@ -15,17 +15,17 @@ deprecation_message: ''
 properties: []
 methods:
   - name: MatchmakingService:GetServerAttribute
-    summary: ''
-    description: ''
+    summary: 'Retrieves the value of a specific server attribute.'
+    description: 'Retrieves the value of a specific server attribute. '
     code_samples: []
     parameters:
       - name: name
         type: string
         default:
-        summary: ''
+        summary: 'The name of the server attribute. Limited to a maximum of 50 characters.'
     returns:
       - type: Tuple
-        summary: ''
+        summary: 'Returns the server attribute value if the attribute is found and if the error is `nil`. Otherwise, returns `nil` for the attribute value and an error message.'
     tags: []
     deprecation_message: ''
     security: None
@@ -33,17 +33,17 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: MatchmakingService:InitializeServerAttributesForStudio
-    summary: ''
-    description: ''
+    summary: 'Initiates the server attribute schema and its values to test in Studio.'
+    description: 'Initiates the server attribute schema and its values to test in Studio. This method is optional and has no effect when running outside of Studio.'
     code_samples: []
     parameters:
       - name: serverAttributes
         type: Dictionary
         default:
-        summary: ''
+        summary: 'An array of attribute name-value pairs.'
     returns:
       - type: Tuple
-        summary: ''
+        summary: 'Returns `true` if the call succeeded. Otherwise, returns `false` and an error message.'
     tags: []
     deprecation_message: ''
     security: None
@@ -51,21 +51,22 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: MatchmakingService:SetServerAttribute
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: 'Assigns a value to a specific server attribute.'
+    description: 'Assigns a value to a specific server attribute.'
+    code_samples:
+      - Matchmaking-Service-Code-Sample
     parameters:
       - name: name
         type: string
         default:
-        summary: ''
+        summary: 'The name of the server attribute. Limited to a maximum of 50 characters.'
       - name: value
         type: Variant
         default:
-        summary: ''
+        summary: 'The value of the server attribute. Limited to a maximum of 50 characters.'
     returns:
       - type: Tuple
-        summary: ''
+        summary: 'Returns `true` if the call succeeded. Otherwise, returns `false` and an error message.'
     tags: []
     deprecation_message: ''
     security: None

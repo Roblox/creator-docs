@@ -433,3 +433,9 @@ navigation:
     versions:
       - name: v2
         path: /cloud/legacy/notifications/v2
+  - title: Matchmaking
+    type: cloudlegacy
+    ignoreTranslation: true
+    versions:
+      - name: v2
+        path: /cloud/legacy/matchmaking/v1
