@@ -12,6 +12,10 @@ description: Introduction to Quest Design, achievements, and dailies.
 
 Quests are a game mechanic in which players complete objectives in order to earn rewards like items, currency, or badges. Quests provide players with fresh goals and incentives, which can motivate them to play longer and more often, increasing their [engagement](../../production/analytics/engagement.md). They can also reduce boredom and provide a sense of progression and accomplishment that lead to better [retention](../../production/analytics/retention.md).
 
+<Alert severity="info">
+For out-of-the-box functionality to create quests, see the [Missions](../../resources/feature-packages/missions.md) feature package.
+</Alert>
+
 ## Quest structure
 
 Structurally, quests consist of three components:
