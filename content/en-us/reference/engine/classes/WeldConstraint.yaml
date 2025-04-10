@@ -12,8 +12,7 @@ description: |
   touching, they can be welded together.
 
   The most common way to create a weld constraint is by selecting **Weld**
-  through Studio's **Create** menu in the toolbar's **Model**
-  tab.
+  through Studio's **Create** menu in the toolbar's **Model** tab.
 
   Note that this tool behaves differently depending on how many
   `Class.BasePart|BaseParts` are selected when the tool is activated:

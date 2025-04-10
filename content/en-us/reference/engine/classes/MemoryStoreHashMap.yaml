@@ -140,7 +140,8 @@ methods:
       value and passes it to a transform function, which returns the new value
       for the item, with these exceptions:
 
-      - If the key does not exist, the old value passed to the function is `nil`.
+      - If the key does not exist, the old value passed to the function is
+        `nil`.
       - If the function returns `nil`, the update is canceled.
 
       The new value is saved only if the key was not updated (for example, by a

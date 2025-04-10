@@ -100,7 +100,8 @@ methods:
         type: Instance
         default:
         summary: |
-          The player who triggered the custom event. `nil` if not player related.
+          The player who triggered the custom event. `nil` if not player
+          related.
       - name: eventCategory
         type: string
         default:

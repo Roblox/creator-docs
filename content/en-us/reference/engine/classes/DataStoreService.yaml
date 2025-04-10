@@ -100,12 +100,13 @@ methods:
     summary: |
       Returns the default data store.
     description: |
-      This function returns the default `Class.GlobalDataStore`.
-      If you want to access a specific **named** data store instead, you should use the
+      This function returns the default `Class.GlobalDataStore`. If you want to
+      access a specific **named** data store instead, you should use the
       `Class.DataStoreService:GetDataStore()|GetDataStore()` function.
 
-      Note that the `Class.DataStore` returned by this function always uses the scope `u`.
-      See [Data stores](../../../cloud-services/data-stores/index.md) for details on scope.
+      Note that the `Class.DataStore` returned by this function always uses the
+      scope `u`. See [Data stores](../../../cloud-services/data-stores/index.md)
+      for details on scope.
     code_samples:
       - get-a-globaldatastore-instance
     parameters: []

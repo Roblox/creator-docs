@@ -1,0 +1,55 @@
+name: SerializationService
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties: []
+methods:
+  - name: SerializationService:DeserializeInstancesAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: buffer
+        type: buffer
+        default:
+        summary: ''
+    returns:
+      - type: Instances
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: SerializationService:SerializeInstancesAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: inputInstances
+        type: Instances
+        default:
+        summary: ''
+    returns:
+      - type: buffer
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+events: []
+callbacks: []

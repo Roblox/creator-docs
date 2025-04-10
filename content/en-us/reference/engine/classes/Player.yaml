@@ -950,9 +950,9 @@ properties:
       over the network (such as physics, streaming, etc) replicate at different
       rates depending on how close objects are to the replication focus.
 
-      When this property is `nil`, it reverts to its default behavior which is to
-      treat the local player's character's `Class.Model.PrimaryPart|PrimaryPart`
-      as the replication focus.
+      When this property is `nil`, it reverts to its default behavior which is
+      to treat the local player's character's
+      `Class.Model.PrimaryPart|PrimaryPart` as the replication focus.
 
       This property should only be set on the server with a `Class.Script`, not
       a `Class.LocalScript`. Note that this property does not change or update
@@ -1037,8 +1037,8 @@ properties:
       The Team property is a reference to a `Class.Team` object within the
       `Class.Teams` service. It determines the team the player is on; if the
       `Class.Player` isn't on a team or has an invalid `Class.Player.TeamColor`,
-      this property is `nil`. When this property is set, the player has joined the
-      `Class.Team` and the `Class.Team.PlayerAdded` event fires on the
+      this property is `nil`. When this property is set, the player has joined
+      the `Class.Team` and the `Class.Team.PlayerAdded` event fires on the
       associated team. Similarly, `Class.Team.PlayerRemoved` fires when the
       property is unset from a certain `Class.Team`.
     code_samples:

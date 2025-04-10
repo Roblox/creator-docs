@@ -1,55 +1,30 @@
 ---
-title: Experience notifications
-description: Send experience notifications from the web with Open Cloud APIs. Experience notifications are a way for users to keep up with their favorite experiences through timely, personalized notifications.
+title: User notifications
+description: Use Open Cloud to send experience notifications to users. Help players keep up with their favorite experiences through timely, personalized notifications.
 ---
 
 import Intro from '../../includes/experience-notifications/intro.md'
-import Eligibility from '../../includes/experience-notifications/eligibility.md'
-import ImplementationCreateNotificationString from '../../includes/experience-notifications/implementation-create-notification-string.md'
-import DeliverySystem from '../../includes/experience-notifications/delivery-system.md'
-import AnalyticsOverview from '../../includes/experience-notifications/analytics-overview.md'
-import AnalyticsNotificationsSummary from '../../includes/experience-notifications/analytics-notification-summary.md'
-import AnalyticsItemizedStats from '../../includes/experience-notifications/analytics-itemized-stats.md'
-import Guidelines from '../../includes/experience-notifications/guidelines.md'
 
 <Intro components={props.components} />
 
-## Eligibility requirements
+After they receive a notification, users can join the experience directly via the **Join** button and spawn according to your [launch data](#include-launch-and-analytics-data).
 
-<Eligibility components={props.components} />
-
-## Usage guidelines
-
-<Guidelines components={props.components} />
+For more information on features, eligibility requirements, usage guidelines, and the corresponding Engine API, see the [Experiences guide](../../production/promotion/experience-notifications.md).
 
 ## Implementation
 
-Implementing Experience Notifications begins with [creating a notification string](#create-a-notification-string). Once a notification string is set up, you can [send notifications](#send-an-experience-notification) with optional [custom parameters](#customize-notifications-using-parameters).
+The [UserNotification](/cloud/reference/UserNotification) resource lets you send experience notifications to users. Before using it, you must [generate an API key](../../cloud/auth/api-keys.md) or [configure OAuth 2.0](../../cloud/auth/oauth2-overview.md) for your app. The examples on this page use API keys.
 
-Alternatively, you can use the [Engine API](../../production/promotion/experience-notifications.md) to trigger notifications through server-side scripts.
+To send an experience notification to a user:
 
-### Create a notification string
-
-<ImplementationCreateNotificationString components={props.components} />
-
-### Send an experience notification
-
-The [UserNotification](../../cloud/reference/UserNotification) API lets you send Experience Notifications to users. Before using it, you must [generate an API key](../../cloud/auth/api-keys.md) or [configure OAuth 2.0](../../cloud/auth/oauth2-overview.md) for your app. The examples on this page use API keys.
-
-Notifications will be delivered to [opted-in](https://en.help.roblox.com/hc/en-us/articles/24769602332692-Out-of-Experience-Notifications) users age 13+ through their Roblox notification stream, at which point they can join the experience directly via the **Join** button on the notification and spawn according to your [launch data](#include-launch-and-analytics-data).
-
-<img src="../../assets/open-cloud/experience-notifications/Notification-Stream.png" width="393" alt="Notifications stream on the Roblox app" />
-
-To send an Experience Notification to a user:
-
-1. Copy the API key to the `x-api-key` request header of the [Create User Notification](../../cloud/reference/UserNotification#Create-User-Notification) call.
-2. In your request:
-
+1. [Create a notification string](../../production/promotion/experience-notifications.md#create-a-notification-string) in the [Creator Dashboard](https://create.roblox.com/dashboard/creations). This step must be done in the Creator Dashboard; there's no Open Cloud API for it.
+1. Form the request:
+   1. Copy the API key to the `x-api-key` request header.
    1. Copy the notification string asset ID as the value of the `payload.message_id` property.
-   2. Set `payload.type` to `"MOMENT"`.
-   3. Set `source.universe` to be the universe resource URL `"universes/${UniverseID}"`.
+   1. Set `payload.type` to `"MOMENT"`.
+   1. Set `source.universe` to be the universe resource URL `"universes/${UniverseID}"`.
 
-```bash title="Send an Experience Notification"
+```bash title="Send an experience notification"
 curl --location 'https://apis.roblox.com/cloud/v2/users/${UserId}/notifications' \
 --header 'x-api-key: ${ApiKey}' \
 --header 'Content-Type: application/json' \
@@ -75,11 +50,11 @@ Example response which returns the notification ID in the `id` field:
 
 ### Customize notifications using parameters
 
-To customize the notification for each recipient, you can include **parameters** in the [notification string](#create-a-notification-string), then customize the parameters when calling the API. For example, you can define the notification string as:
+To customize the notification for each recipient, include **parameters** in the [notification string](#implementation). Then customize the parameters when calling the API. For example, you can define the notification string as:
 
 <p><Chip label="{userId-friend} beat your high score by {points} points! Time to level up?" size="large" color="primary" variant="outlined" /></p>
 
-Then, set the `userId-friend` and `points` parameters in the script:
+Add the `userId-friend` and `points` parameters in the script:
 
 ```bash title="Customize Notification Using Parameters"
 curl --location 'https://apis.roblox.com/cloud/v2/users/${UserId}/notifications' \
@@ -102,7 +77,7 @@ curl --location 'https://apis.roblox.com/cloud/v2/users/${UserId}/notifications'
 
 ### Include launch and analytics data
 
-To further improve user experience, you can include **launch data** in the notification, useful for scenarios such as routing users to a coordinate location or personalizing the joining experience. Additionally, you can include [analytics](#analytics) data to segment the performance of different categories of notifications.
+To further improve user experience, you can include **launch data** in the notification, useful for scenarios such as routing users to a coordinate location or personalizing the joining experience. Additionally, you can include [analytics](../../production/promotion/experience-notifications.md#analytics) data to segment the performance of different categories of notifications.
 
 ```bash title="Include Launch Data and Analytics Data"
 curl --location 'https://apis.roblox.com/cloud/v2/users/${UserId}/notifications' \
@@ -125,18 +100,8 @@ curl --location 'https://apis.roblox.com/cloud/v2/users/${UserId}/notifications'
 }'
 ```
 
-## Delivery system
+## Rate limits and delivery
 
-<DeliverySystem components={props.components} />
+Each user can receive **one** notification per day from a given experience, and you receive transparent feedback when a user's throttle limit is reached.
 
-## Analytics
-
-<AnalyticsOverview components={props.components} />
-
-### Notifications summary
-
-<AnalyticsNotificationsSummary components={props.components} />
-
-### Itemized stats
-
-<AnalyticsItemizedStats components={props.components} />
+There are many other reasons that a notification might not be delivered. For more information, see [Delivery system](../../production/promotion/experience-notifications.md#delivery-system) in the Engine guide.
