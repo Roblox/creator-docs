@@ -1,4 +1,4 @@
-name: UICaptureMode
+name: ActionOnAutoResumeSync
 type: enum
 summary: ''
 description: ''
@@ -6,13 +6,18 @@ code_samples: []
 tags: []
 deprecation_message: ''
 items:
-  - name: All
+  - name: DontResume
     summary: ''
     value: 0
     tags: []
     deprecation_message: ''
-  - name: None
+  - name: KeepStudio
     summary: ''
     value: 1
+    tags: []
+    deprecation_message: ''
+  - name: KeepLocal
+    summary: ''
+    value: 2
     tags: []
     deprecation_message: ''

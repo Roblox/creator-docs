@@ -540,8 +540,8 @@ methods:
     returns:
       - type: string
         summary: |
-          A content string from the Tool's TextureId, or `nil` if one could not be
-          found.
+          A content string from the Tool's TextureId, or `nil` if one could not
+          be found.
     tags: []
     deprecation_message: ''
     security: None

@@ -14,6 +14,17 @@ import Guidelines from '../../includes/experience-notifications/guidelines.md'
 
 <Intro components={props.components} />
 
+The experience notification system features the following:
+
+- **Customizable notifications with parameters** &mdash; Full flexibility to customize the [notification message](#create-a-notification-string) with parameters, for example:
+
+	<p><Chip label="Your gold goose egg has hatched!" size="large" color="primary" variant="outlined" /></p>
+	<p><Chip label="Allie @LaterSk8er1 just beat your record on the Tokyo Tour track!" size="large" color="primary" variant="outlined" /></p>
+
+- **Launch Data** &mdash; Include optional [launch data](#include-launch-and-analytics-data) that can be read through `Class.Player:GetJoinData()` when the notification recipient joins. This could involve routing a user to a coordinate location or personalizing their joining experience.
+
+- **Analytics Support** &mdash; Track your reachable audience and the performance of your notifications in the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+
 ## Eligibility requirements
 
 <Eligibility components={props.components} />
@@ -24,7 +35,7 @@ import Guidelines from '../../includes/experience-notifications/guidelines.md'
 
 ## Implementation
 
-Implementing Experience Notifications begins with [creating a notification string](#create-a-notification-string) and including the [package](#include-the-package) in your project. Once these are set up, you can [send notifications](#send-an-experience-notification) with optional [custom parameters](#customize-notifications-using-parameters).
+Implementing experience notifications begins with [creating a notification string](#create-a-notification-string) and including the [package](#include-the-package) in your project. Once these are set up, you can [send notifications](#send-an-experience-notification) with optional [custom parameters](#customize-notifications-using-parameters).
 
 Alternatively, you can use the [Open Cloud API](../../cloud/guides/experience-notifications.md) to trigger notifications through freeform API requests.
 
@@ -34,7 +45,7 @@ Alternatively, you can use the [Open Cloud API](../../cloud/guides/experience-no
 
 ### Include the package
 
-To implement Experience Notifications, you must obtain the Luau package from the [Creator Store](../../production/creator-store.md).
+To implement experience notifications, you must obtain the Luau package from the [Creator Store](../../production/creator-store.md).
 
 1. From the [View](../../studio/view-tab.md) tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
@@ -66,7 +77,7 @@ Once you've [created a notification string](#create-a-notification-string) and i
 
 To send a basic notification to a specific user, include the [notification string](#create-a-notification-string) asset ID in the payload's `messageId` field, then call the [createUserNotification](#createusernotification) function with the recipient's `Class.Player.UserId` and the request data.
 
-```lua title="Send an Experience Notification"
+```lua title="Send an experience notification"
 local ServerScriptService = game:GetService("ServerScriptService")
 
 local OCUserNotification = require(ServerScriptService.OpenCloud.V2.UserNotification)
@@ -230,7 +241,7 @@ end
 
 Sends a notification from a server‑side script. Requires the recipient's `Class.Player.UserId` and a [UserNotification](#usernotification). Returns a [UserNotificationResult](#usernotificationresult).
 
-```lua title="Send an Experience Notification"
+```lua title="Send an experience notification"
 local ServerScriptService = game:GetService("ServerScriptService")
 
 local OCUserNotification = require(ServerScriptService.OpenCloud.V2.UserNotification)

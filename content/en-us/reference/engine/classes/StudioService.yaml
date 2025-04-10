@@ -122,8 +122,8 @@ properties:
       move objects each tick.
     description: |
       **GridSize** determines the distance in studs by which Studio's drag and
-      move tools move objects each tick. This is set in the user's
-      toolbar's **Model** tab.
+      move tools move objects each tick. This is set in the user's toolbar's
+      **Model** tab.
     code_samples:
     type: float
     tags:
@@ -438,8 +438,8 @@ methods:
       - type: Instances
         summary: |
           The imported `Class.File|Files`. Returns an empty list if no files
-          were selected. Returns `nil` if the user selected one or more files that
-          were too large (FileSize greater than 100 megabytes).
+          were selected. Returns `nil` if the user selected one or more files
+          that were too large (FileSize greater than 100 megabytes).
     tags:
       - Yields
     deprecation_message: ''

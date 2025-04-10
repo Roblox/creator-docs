@@ -105,6 +105,23 @@ properties:
       can_save: false
     capabilities: []
     writeCapabilities: []
+  - name: Studio.ActionOnAutoResumeSync
+    summary: ''
+    description: ''
+    code_samples: []
+    type: ActionOnAutoResumeSync
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Directories
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.ActionOnStopSync
     summary: ''
     description: ''
