@@ -5,7 +5,7 @@ description: The Creator Store is where you can find all assets for public use i
 
 The **Creator Store** features assets made by Roblox and the Roblox community for the community to use within their experiences, including models, images, meshes, audio, fonts, videos, and plugins.
 
-You can create and distribute models, images, meshes, plugins, and audio sound effects under 10 seconds to the Creator Store for others to use as long as you are the original creator, and it adheres to Roblox's [Community Rules][CommunityRulesURL] and [Terms&nbsp;of&nbsp;Use][TermsUseURL]. If you have a [seller account](./sell-on-creator-store.md), you can also sell your plugins to other creators.
+You can create and distribute models, images, meshes, plugins, and audio sound effects under 10 seconds to the Creator Store for others to use as long as you are the original creator, and it adheres to Roblox's [Community Rules][CommunityRulesURL] and [Terms&nbsp;of&nbsp;Use][TermsUseURL]. If you have a [seller account](./sell-on-creator-store.md), you can also sell your models and plugins to other creators.
 
 <Alert severity="warning">
 To maintain community safety, Roblox may terminate accounts that publish spam or assets with malicious or obfuscated code.
@@ -137,7 +137,7 @@ Every asset that you import must adhere to the [Community Rules][CommunityRulesU
 </tbody>
 </table>
 
-You can also choose to **sell** plugins on the Creator Store for **United States Dollars**. Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. Note that you can only set USD pricing for plugins through the Creator Dashboard. For more information, see [Sell on the Creator Store](./sell-on-creator-store.md).
+You can also choose to **sell** models and plugins on the Creator Store for **United States Dollars**. Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. Note that you can only set USD pricing for models and plugins through the Creator Dashboard. For more information, see [Sell on the Creator Store](./sell-on-creator-store.md).
 
 ### Through Creator Dashboard
 
@@ -146,7 +146,7 @@ To distribute an asset through the [Creator Dashboard](https://create.roblox.com
 1. In the horizontal navigation, select [Development Items](https://create.roblox.com/dashboard/creations?activeTab=Model). All assets you have [previously imported](../projects/assets/manager.md#import-assets) display within their respective category.
 1. Select the asset that you want to distribute. The asset's **Configure** page displays.
 1. In the **Settings** section, enable the **Distribute on Creator Store** toggle.
-1. **(Optional)** If you have a [seller account](./sell-on-creator-store.md) and are distributing a plugin, set a price in USD for the asset in the **USD Pricing** field. If you keep the default value of **Free**, the asset will be free to all creators.
+1. **(Optional)** If you have a [seller account](./sell-on-creator-store.md) and are distributing a model or plugin, set a price in USD for the asset in the **USD Pricing** field. If you keep the default value of **Free**, the asset will be free to all creators.
 1. **(Optional)** If you are [ID or phone verified](../production/publishing/account-verification.md), add up to 5 supplementary thumbnails for your asset.
 1. Click the **Save** button.
 1. If you are distributing an audio asset for the first time, enable all legal agreements, then click the **Submit** button.
@@ -155,7 +155,7 @@ The asset will become public and visible to everyone within the Creator Store, p
 
 ### Through Studio
 
-You can upload assets directly in Studio from the [Toolbox](../projects/assets/toolbox.md) or [Explorer](../studio/explorer.md) window. However, you must complete the process on the [Creator Dashboard](#through-creator-dashboard) to list an asset for sale on the Creator Store, distribute audio assets under 10 seconds, or set a [USD price](./sell-on-creator-store.md) for a plugin.
+You can upload assets directly in Studio from the [Toolbox](../projects/assets/toolbox.md) or [Explorer](../studio/explorer.md) window. However, you must complete the process on the [Creator Dashboard](#through-creator-dashboard) to list an asset for sale on the Creator Store, distribute audio assets under 10 seconds, or set a [USD price](./sell-on-creator-store.md) for a model or plugin.
 
 <Tabs>
 <TabItem label="Toolbox">

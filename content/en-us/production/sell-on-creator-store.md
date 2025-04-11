@@ -42,7 +42,7 @@ If you violate any of these requirements after you create your seller account, y
 
 ### For customers
 
-Only **individual** user accounts may purchase assets for USD on the Creator Store. Groups are ineligible to purchase plugins.
+Only **individual** user accounts may purchase paid assets (models and plugins) for USD on the Creator Store. Groups are ineligible to purchase assets.
 
 Transactions between any individual customer and seller are **capped** per month for safey purposes. If you're buying a lot of assets from one seller in a single month, any purchase over the limit will be prohibited until the following month. This includes any purchases between alternate accounts for either the customer or seller.
 
@@ -50,7 +50,7 @@ Transactions between any individual customer and seller are **capped** per month
 
 Every asset that you sell on the Creator Store must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), and [Digital Millennium Copyright Act](./publishing/dmca-guidelines.md) (DMCA). If any asset breaks these rules, the asset and your account may be subject to moderation.
 
-In addition, you can only sell plugins that you own from an **individual** user account. Group-owned assets are ineligible. If you want to sell a group-owned asset, consider re‑uploading them under individual ownership.
+In addition, you can only sell models and plugins that you own from an **individual** user account. Group-owned models and plugins are ineligible. If you want to sell a group-owned asset, consider re‑uploading them under individual ownership.
 
 ## Seller account
 
