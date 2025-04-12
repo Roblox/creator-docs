@@ -44,6 +44,9 @@ properties:
       occur in the game world (Workspace). For example, a button that opens a
       widget should have this property be true, as showing a widget is visible
       to the user even if the game view isn't visible.
+
+      When the `Class.Plugin` is used with the **Next Gen Studio Preview** beta option enabled, this property
+      will have no effect and will always behave like if it was set to false.
     code_samples:
     type: bool
     tags:
