@@ -84,7 +84,7 @@ methods:
           The specified `Enum.VibrationMotor` checked to see if it supports the
           specified `Enum.UserInputType`.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Boolean of `true` if the specified motor is available to be used with
           the specified `Enum.UserInputType`, `false` if not.
@@ -110,7 +110,7 @@ methods:
           The specified `Enum.UserInputType` checked to see if it supports
           haptic feedback.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Boolean of `true` if the specified `Enum.UserInputType` supports
           haptic feedback.
@@ -149,7 +149,7 @@ methods:
           How intensely the motor should vibrate. Only uses the first value in
           the tuple, which should be a number.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

@@ -37,7 +37,7 @@ properties:
 
       If `false`, user can only read messages in the `Class.TextChannel`.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

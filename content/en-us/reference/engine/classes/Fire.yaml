@@ -105,7 +105,7 @@ properties:
       ```
     code_samples:
       - Toggle-Fire-Effect
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

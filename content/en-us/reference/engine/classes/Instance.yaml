@@ -43,7 +43,7 @@ properties:
       print(part:Clone())  --> nil
       ```
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -209,7 +209,7 @@ properties:
       being altered by users in an unauthorized manner. It has been deprecated
       and does not do anything.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - Hidden
     deprecation_message: |
@@ -234,7 +234,7 @@ properties:
       [script capabilities](../../../scripting/capabilities.md) for further
       details.
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''
@@ -274,7 +274,7 @@ properties:
     summary: ''
     description: ''
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - Hidden
       - NotReplicated
@@ -321,7 +321,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -356,7 +356,7 @@ methods:
       - Instance-ClearAllChildren1
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -445,7 +445,7 @@ methods:
       - Instance-Destroy1
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -657,7 +657,7 @@ methods:
         summary: |
           The `Class.Instance.Name` to be searched for.
       - name: recursive
-        type: bool
+        type: boolean
         default: false
         summary: |
           Whether or not the search should be conducted recursively.
@@ -739,7 +739,7 @@ methods:
         summary: |
           The `Class.Object.ClassName` to be searched for.
       - name: recursive
-        type: bool
+        type: boolean
         default: false
         summary: |
           Whether or not the search should be conducted recursively.
@@ -1143,7 +1143,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1173,7 +1173,7 @@ methods:
         summary: |
           The descendant `Class.Instance`.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           True if the `Class.Instance` is an ancestor of the given descendant.
     tags: []
@@ -1203,7 +1203,7 @@ methods:
         summary: |
           The ancestor `Class.Instance`.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           True if the `Class.Instance` is a descendant of the given ancestor.
     tags: []
@@ -1230,7 +1230,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Boolean indicating whether the property is modified.
     tags: []
@@ -1253,7 +1253,7 @@ methods:
       - Instance-Remove1
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1286,7 +1286,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1308,7 +1308,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1366,7 +1366,7 @@ methods:
         summary: |
           The value to set the specified attribute to.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1473,7 +1473,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1494,7 +1494,7 @@ methods:
         default:
         summary: ''
       - name: recursive
-        type: bool
+        type: boolean
         default: false
         summary: ''
     returns:
@@ -1536,7 +1536,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -1553,7 +1553,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated

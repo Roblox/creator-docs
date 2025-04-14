@@ -7,29 +7,32 @@ description: |
   This enum is used by `Class.UIStroke.LineJoinMode` to determine how corners
   are interpreted.
 
-  See also:
-
-  For a more detailed walkthrough of the UIStroke object, take a look at the
-  Applying Strokes article.
+  For a more detailed walkthrough of the `Class.UIStroke` object, see [here](../../../ui/appearance-modifiers.md#stroke).
 code_samples:
 tags: []
 deprecation_message: ''
 items:
   - name: Round
     summary: |
-      The corners are rounded (see image above).
+      The corners are rounded.
+
+      <img src="/assets/ui/ui-objects/UIStroke-LineJoinMode-Round.png" width="376" />
     value: 0
     tags: []
     deprecation_message: ''
   - name: Bevel
     summary: |
-      The corners are beveled (see image above).
+      The corners are beveled.
+
+      <img src="/assets/ui/ui-objects/UIStroke-LineJoinMode-Bevel.png" width="376" />
     value: 1
     tags: []
     deprecation_message: ''
   - name: Miter
     summary: |
-      The corners are mitered (see image above).
+      The corners are mitered.
+
+      <img src="/assets/ui/ui-objects/UIStroke-LineJoinMode-Miter.png" width="376" />
     value: 2
     tags: []
     deprecation_message: ''

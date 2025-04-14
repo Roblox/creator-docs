@@ -70,7 +70,7 @@ methods:
         summary: |
           The content ID of the animation.
       - name: useCache
-        type: bool
+        type: boolean
         default:
         summary: |
           True if a cached version can be returned.

@@ -53,7 +53,7 @@ properties:
       invalid since they can result in infinite computation; attempting to
       create one will log an error.
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated

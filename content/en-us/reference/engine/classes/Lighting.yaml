@@ -389,7 +389,7 @@ properties:
       4&times;4&times;4 studs to display a realistic shadow. Shadows are also
       recalculated when `Class.BasePart|BaseParts` are moving.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -473,7 +473,7 @@ properties:
       Although this property can be set by scripts, it recommended this property
       is set in Roblox Studio prior to publishing the place.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - Deprecated
     deprecation_message: |
@@ -494,7 +494,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - NotScriptable
     deprecation_message: ''
@@ -750,7 +750,7 @@ methods:
         summary: |
           The number of minutes after midnight.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -785,7 +785,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -816,7 +816,7 @@ events:
     code_samples:
     parameters:
       - name: skyChanged
-        type: bool
+        type: boolean
         default:
         summary: ''
     tags: []

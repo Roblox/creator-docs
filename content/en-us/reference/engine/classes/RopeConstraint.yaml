@@ -131,7 +131,7 @@ properties:
       Enables the winch motor which has the effect or reeling in/out the length
       of the rope to `Class.RopeConstraint.WinchTarget|WinchTarget`.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

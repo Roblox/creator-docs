@@ -36,7 +36,7 @@ properties:
       notify player's when their first join that chat messages may be translated
       into the player's preferred language.
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''
@@ -170,7 +170,7 @@ properties:
       true. Also note that mute and unmute commands apply to all
       `Class.TextChannel|TextChannels`.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -235,7 +235,7 @@ properties:
       Messages from different TextChannels can be separated into different tabs
       in the chat window using `Class.ChannelTabsConfiguration`.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -276,7 +276,7 @@ methods:
         summary: |
           The text to be displayed in the chat bubble.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -304,7 +304,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields
@@ -337,7 +337,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields

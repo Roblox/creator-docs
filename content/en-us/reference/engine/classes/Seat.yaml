@@ -63,7 +63,7 @@ properties:
       Whether or not the seat is usable. If set to true, the seat will act as a
       normal part.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -114,7 +114,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

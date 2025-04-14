@@ -73,7 +73,7 @@ properties:
       `Enum.DragDetectorResponseStyle.Physical` and the parent object is
       unanchored.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -162,7 +162,7 @@ properties:
       If true, the `Class.DragDetector` responds to user input; if false, it
       does not.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -513,7 +513,7 @@ properties:
       respond to these events and `Class.RemoteEvent|RemoteEvents` may be used
       to send any resulting changes that should be replicated to the server.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -737,7 +737,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -775,7 +775,7 @@ methods:
           orientation of the pivot in world space. If this function returns
           `nil`, the object will not be moved.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -828,7 +828,7 @@ methods:
           `Class.BasePart.Color|Color`, `Class.Instance:HasTag()|HasTag()`
           value, or other details.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -870,7 +870,7 @@ events:
           If using a VR input device, the `Datatype.CFrame` of the hand holding
           the cursor/pointer/controller.
       - name: isModeSwitchKeyDown
-        type: bool
+        type: boolean
         default:
         summary: |
           If the drag detector's `Class.DragDetector.DragStyle|DragStyle` has
@@ -944,7 +944,7 @@ events:
           If using a VR input device, the `Datatype.CFrame` of the hand holding
           the cursor/pointer/controller.
       - name: isModeSwitchKeyDown
-        type: bool
+        type: boolean
         default:
         summary: |
           If the drag detector's `Class.DragDetector.DragStyle|DragStyle` has

@@ -1585,7 +1585,7 @@ methods:
         summary: |
           An emote asset ID.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1605,7 +1605,7 @@ methods:
       - get-accessories
     parameters:
       - name: includeRigidAccessories
-        type: bool
+        type: boolean
         default:
         summary: |
           Set to true if rigid accessories from the rigid accessory properties
@@ -1762,7 +1762,7 @@ methods:
           `Class.HumanoidDescription:SetEmotes()|set` or
           `Class.HumanoidDescription:AddEmote()|added`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1791,13 +1791,13 @@ methods:
           Each entry specifies for an individual accessory the AccessoryType,
           AssetId, IsLayered, Order and Puffiness.
       - name: includeRigidAccessories
-        type: bool
+        type: boolean
         default:
         summary: |
           Set to true if rigid accessories are also included in the passed in
           array (they would have to not specify Order).
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1854,7 +1854,7 @@ methods:
 
           .
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1919,7 +1919,7 @@ methods:
 
           .
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

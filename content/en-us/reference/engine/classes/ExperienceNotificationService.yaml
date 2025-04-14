@@ -47,7 +47,7 @@ methods:
       - ExperienceNotificationService1
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -84,7 +84,7 @@ methods:
       - ExperienceNotificationService1
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the local player can be prompted to enable notifications.
     tags:

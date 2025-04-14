@@ -262,7 +262,7 @@ properties:
       Enabling `Class.AlignOrientation.PrimaryAxisOnly|PrimaryAxisOnly` also
       enables the `Class.AlignOrientation.AlignType|AlignType` property.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: |
       This property is deprecated. Depending on your usage case, set
@@ -293,7 +293,7 @@ properties:
       the constraint applies torque to both attachments in **equal and opposite
       directions**.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -342,7 +342,7 @@ properties:
       `Class.AlignOrientation.Responsiveness|Responsiveness`. If true, the
       physics solver reacts as quickly as possible to complete the alignment.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

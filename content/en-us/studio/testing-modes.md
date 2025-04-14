@@ -98,13 +98,9 @@ If you're working on an experience with others in [Collaboration](../projects/co
 
 ## Controller emulation
 
-<BetaAlert betaName="Gamepad Emulator" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
-
 <ControllerEmulator components={props.components} />
 
 ## VR emulation
-
-<BetaAlert betaName="VR Emulator" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
 
 **VR emulation** lets you test VR experiences in Studio without a physical headset. Just like emulating any other device, use the [device selector](#device-emulation) menu to choose the **Meta&nbsp;Quest&nbsp;2** or **Meta&nbsp;Quest&nbsp;3**. The [controller emulator](#controller-emulation) automatically selects the appropriate controller for the headset.
 
@@ -117,7 +113,7 @@ The combination of a headset and multiple controllers, each with motion tracking
 
 - For motion tracking emulation, press <kbd>Alt</kbd><kbd>1</kbd> (<kbd>⌥</kbd><kbd>1</kbd>) to lock the mouse to and unlock the mouse from the viewport.
 
-- Use <kbd>Shift</kbd><kbd>&larr;</kbd> or <kbd>Shift</kbd><kbd>&rarr;</kbd> to switch between the headset, left controller, and right controller. For example, you might use the **Headset** option to look around as you walk forward with the left controller button, but then switch to the **Right&nbsp;Controller** when you need to use motion controls to aim at a target.
+- Use <kbd>Shift</kbd><kbd>&larr;</kbd> or <kbd>Shift</kbd><kbd>&rarr;</kbd> to switch between common combinations of the headset, left controller, and right controller. For example, you might use the **Headset** option to look around as you walk forward with the left controller button, but then switch to the **Right&nbsp;Controller** when you need to use motion controls to aim at a target.
 
 ## VR headsets
 

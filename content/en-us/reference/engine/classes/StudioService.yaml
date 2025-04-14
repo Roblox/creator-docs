@@ -79,7 +79,7 @@ properties:
     summary: ''
     description: ''
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -98,7 +98,7 @@ properties:
     summary: ''
     description: ''
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -185,7 +185,7 @@ properties:
     summary: ''
     description: ''
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -204,7 +204,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -268,7 +268,7 @@ properties:
       with <kbd>Ctrl</kbd><kbd>L</kbd> or <kbd>⌘</kbd><kbd>L</kbd>. Plugins can
       read from this property if they implement their own object movement tools.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''

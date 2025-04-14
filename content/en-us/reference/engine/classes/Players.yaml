@@ -33,7 +33,7 @@ properties:
       the ban API. This property is not scriptable and can only be modified in
       Studio.
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
       - NotScriptable
@@ -64,7 +64,7 @@ properties:
       There are two other chat modes, `Class.Players.ClassicChat` and a chat
       mode where both classic and bubble chat are enabled.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -99,7 +99,7 @@ properties:
       competitive games in which players do not respawn until a game round ends.
     code_samples:
       - player-respawn-timer
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''
@@ -128,7 +128,7 @@ properties:
       There are two other chat modes, `Class.Players.BubbleChat` and a chat mode
       where both classic and bubble chat are enabled.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -283,7 +283,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - NotScriptable
     deprecation_message: ''
@@ -372,7 +372,7 @@ methods:
         summary: |
           The message chatted.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -535,7 +535,7 @@ methods:
         summary: |
           The specified chat style being set.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -564,7 +564,7 @@ methods:
         summary: |
           The message being chatted.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -744,7 +744,7 @@ methods:
           - `ExcludeAltAccounts` (optional; boolean) — When `true`, Roblox does
             not attempt to ban alt accounts. Default is `false`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields
@@ -1308,7 +1308,7 @@ methods:
           </tbody>
           </table>
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields

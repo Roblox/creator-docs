@@ -60,7 +60,7 @@ properties:
       as doing so implies that you intentionally want to disregard the device's
       safe insets.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -117,7 +117,7 @@ properties:
       See `Class.ScreenGui.ScreenInsets|ScreenInsets` for details on how screen
       insets affect the contents of a `Class.ScreenGui`.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''

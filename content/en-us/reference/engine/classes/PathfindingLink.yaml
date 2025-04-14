@@ -60,7 +60,7 @@ properties:
       Enables a path to traverse a link in both directions. The default value is
       `true`.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

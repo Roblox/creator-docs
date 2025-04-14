@@ -112,7 +112,7 @@ methods:
         summary: |
           The data to include in the message.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields

@@ -1,0 +1,2088 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Toolbox.Service",
+    "version": "1.0",
+    "x-roblox-extensions-version": "1.0.0"
+  },
+  "paths": {
+    "/toolbox-service/v2/assets:search": {
+      "get": {
+        "tags": [
+          "ToolboxService"
+        ],
+        "parameters": [
+          {
+            "name": "searchCategoryType",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SearchCategoryType"
+                }
+              ],
+              "description": "This represents a \"subset\" of Toolbox.Service.CategoryType options and represent the full set\r\nof \"categories\" (or asset types) that can be searched upon from the toolbox search API.",
+              "x-enumNames": [
+                "Audio",
+                "Model",
+                "Decal",
+                "Plugin",
+                "MeshPart",
+                "Video",
+                "FontFamily"
+              ],
+              "x-enum-varnames": [
+                "Audio",
+                "Model",
+                "Decal",
+                "Plugin",
+                "MeshPart",
+                "Video",
+                "FontFamily"
+              ],
+              "x-enum-descriptions": [
+                "Audio",
+                "Model",
+                "Decal",
+                "Plugin",
+                "MeshPart",
+                "Video",
+                "FontFamily"
+              ]
+            }
+          },
+          {
+            "name": "query",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "modelSubTypes",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ModelSubType"
+              },
+              "nullable": true
+            }
+          },
+          {
+            "name": "excludedModelSubTypes",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ModelSubType"
+              },
+              "nullable": true
+            }
+          },
+          {
+            "name": "creator",
+            "in": "query",
+            "schema": {
+              "pattern": "^(user|group)/\\d+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "schema": {
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32",
+              "default": 25
+            }
+          },
+          {
+            "name": "sortDirection",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SortDirection"
+                }
+              ],
+              "description": "Represents the direction in which to sort the results",
+              "default": "None",
+              "x-enumNames": [
+                "None",
+                "Ascending",
+                "Descending"
+              ],
+              "x-enum-varnames": [
+                "None",
+                "Ascending",
+                "Descending"
+              ],
+              "x-enum-descriptions": [
+                "None",
+                "Ascending",
+                "Descending"
+              ]
+            }
+          },
+          {
+            "name": "sortCategory",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SortCategory"
+                }
+              ],
+              "description": "The category to sort the search results by.",
+              "default": "Relevance",
+              "x-enumNames": [
+                "Relevance",
+                "Trending",
+                "Top",
+                "AudioDuration",
+                "CreateTime"
+              ],
+              "x-enum-varnames": [
+                "Relevance",
+                "Trending",
+                "Top",
+                "AudioDuration",
+                "CreateTime"
+              ],
+              "x-enum-descriptions": [
+                "Relevance",
+                "Trending",
+                "Top",
+                "AudioDuration",
+                "CreateTime"
+              ]
+            }
+          },
+          {
+            "name": "audioMinDurationSeconds",
+            "in": "query",
+            "schema": {
+              "maximum": 2147483647,
+              "minimum": 0,
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          },
+          {
+            "name": "audioMaxDurationSeconds",
+            "in": "query",
+            "schema": {
+              "maximum": 2147483647,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "audioArtist",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "audioAlbum",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "audioTypes",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/SearchAudioTypeModel"
+              },
+              "nullable": true
+            }
+          },
+          {
+            "name": "includeOnlyVerifiedCreators",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "minPriceCents",
+            "in": "query",
+            "schema": {
+              "maximum": 2147483647,
+              "minimum": 0,
+              "type": "integer",
+              "format": "int64",
+              "default": 0
+            }
+          },
+          {
+            "name": "maxPriceCents",
+            "in": "query",
+            "schema": {
+              "maximum": 2147483647,
+              "minimum": 0,
+              "type": "integer",
+              "format": "int64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "facets",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "nullable": true
+            }
+          },
+          {
+            "name": "searchView",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/SearchView"
+                }
+              ],
+              "description": "This view controls which fields are populated in the search response. A lighter\r\nview will result in faster response times and higher reliability.",
+              "default": "Core",
+              "x-enumNames": [
+                "IDs",
+                "Core",
+                "Full"
+              ],
+              "x-enum-varnames": [
+                "IDs",
+                "Core",
+                "Full"
+              ],
+              "x-enum-descriptions": [
+                "IDs",
+                "Core",
+                "Full"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SearchCreatorStoreAssetsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": {
+              "ScopeName": "creator-store-product:read",
+              "TargetResourceSpecifier": ""
+            }
+          }
+        ],
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Asset": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "The unique identifier of the asset.",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the asset.",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "description": "The description of the asset.",
+            "nullable": true
+          },
+          "assetTypeId": {
+            "type": "integer",
+            "description": "The type that the asset belongs to.",
+            "format": "int32",
+            "nullable": true
+          },
+          "socialLinks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SocialLinkModel"
+            },
+            "description": "The social links associated with the asset.",
+            "nullable": true
+          },
+          "createTime": {
+            "type": "string",
+            "description": "The time the asset was created.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updateTime": {
+            "type": "string",
+            "description": "The time the asset was last updated.",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Representation of an asset.",
+        "nullable": true
+      },
+      "AssetSubType": {
+        "enum": [
+          "Invalid",
+          "Ad",
+          "MaterialPack",
+          "Package"
+        ],
+        "type": "string",
+        "x-enumNames": [
+          "Invalid",
+          "Ad",
+          "MaterialPack",
+          "Package"
+        ],
+        "x-enum-varnames": [
+          "Invalid",
+          "Ad",
+          "MaterialPack",
+          "Package"
+        ],
+        "x-enum-descriptions": [
+          "Invalid",
+          "Ad",
+          "MaterialPack",
+          "Package"
+        ]
+      },
+      "Audio": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Asset"
+          }
+        ],
+        "properties": {
+          "durationSeconds": {
+            "type": "integer",
+            "description": "The duration of the audio file in seconds.",
+            "format": "int32"
+          },
+          "audioType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SearchAudioTypeModel"
+              }
+            ],
+            "description": "The type of audio (Music or SoundEffect).",
+            "x-enumNames": [
+              "Music",
+              "SoundEffect"
+            ],
+            "x-enum-varnames": [
+              "Music",
+              "SoundEffect"
+            ],
+            "x-enum-descriptions": [
+              "Music",
+              "SoundEffect"
+            ]
+          },
+          "artist": {
+            "type": "string",
+            "description": "The audio artist.",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "description": "The audio title.",
+            "nullable": true
+          },
+          "album": {
+            "type": "string",
+            "description": "The audio album. Only relevant for Music audio.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Representation of an audio asset.",
+        "nullable": true
+      },
+      "AudioType": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32",
+        "x-enumNames": [
+          "Music",
+          "SoundEffect",
+          "Unknown"
+        ],
+        "x-enum-varnames": [
+          "Music",
+          "SoundEffect",
+          "Unknown"
+        ],
+        "x-enum-descriptions": [
+          "Music",
+          "SoundEffect",
+          "Unknown"
+        ]
+      },
+      "CorrectionState": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "description": "Determines the state of the Toolbox response depending on spell checking status and the input arguments.",
+        "format": "int32",
+        "x-enumNames": [
+          "NoCorrection",
+          "CorrectionAvailable",
+          "CorrectionAccepted"
+        ],
+        "x-enum-varnames": [
+          "NoCorrection",
+          "CorrectionAvailable",
+          "CorrectionAccepted"
+        ],
+        "x-enum-descriptions": [
+          "NoCorrection",
+          "CorrectionAvailable",
+          "CorrectionAccepted"
+        ]
+      },
+      "CreatorModelV2": {
+        "type": "object",
+        "properties": {
+          "creator": {
+            "type": "string",
+            "description": "The creator type and ID. E.g. user/123 or group/456.",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "description": "The creator's name.",
+            "nullable": true
+          },
+          "verified": {
+            "type": "boolean",
+            "description": "Whether the creator is verified.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Model representing a creator.",
+        "nullable": true
+      },
+      "CreatorStoreAsset": {
+        "type": "object",
+        "properties": {
+          "voting": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/VotingModel"
+              }
+            ],
+            "description": "The asset's voting details.",
+            "nullable": true
+          },
+          "creator": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CreatorModelV2"
+              }
+            ],
+            "description": "The asset creator's details.",
+            "nullable": true
+          },
+          "creatorStoreProduct": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CreatorStoreProduct"
+              }
+            ],
+            "description": "The asset's product details.",
+            "nullable": true
+          },
+          "asset": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Asset"
+              },
+              {
+                "$ref": "#/components/schemas/Audio"
+              },
+              {
+                "$ref": "#/components/schemas/Decal"
+              },
+              {
+                "$ref": "#/components/schemas/MeshPart"
+              },
+              {
+                "$ref": "#/components/schemas/Model"
+              }
+            ],
+            "description": "The asset information.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Representation of a creator store asset.",
+        "nullable": true
+      },
+      "CreatorStoreProduct": {
+        "type": "object",
+        "properties": {
+          "purchasePrice": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Money"
+              }
+            ],
+            "description": "The price of the asset, including the currency code.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The asset's creator store product information.",
+        "nullable": true
+      },
+      "CreatorType": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "description": "Creator Type for querying",
+        "format": "int32",
+        "x-enumNames": [
+          "User",
+          "Group",
+          "Invalid"
+        ],
+        "x-enum-varnames": [
+          "User",
+          "Group",
+          "Invalid"
+        ],
+        "x-enum-descriptions": [
+          "User",
+          "Group",
+          "Invalid"
+        ]
+      },
+      "Decal": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Asset"
+          }
+        ],
+        "properties": {
+          "textureId": {
+            "type": "integer",
+            "description": "The texture id of the decal.",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Representation of a decal asset.",
+        "nullable": true
+      },
+      "Decimal": {
+        "type": "object",
+        "properties": {
+          "significand": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "exponent": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "nullable": true
+      },
+      "FilterSortRange": {
+        "type": "object",
+        "properties": {
+          "ascending": {
+            "type": "boolean"
+          },
+          "minA": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "minB": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "maxA": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "maxB": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "keyword": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "number",
+            "format": "double"
+          },
+          "byteValue": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "startDateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDateTime": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false,
+        "nullable": true
+      },
+      "HomeAssetsResponse": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ToolboxItemApiPageResponse"
+          }
+        ],
+        "properties": {
+          "totalResults": {
+            "type": "integer",
+            "description": "Gets or sets total results",
+            "format": "int64"
+          },
+          "searchDebugInfo": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ISearchDebugInfo"
+              }
+            ],
+            "description": "Gets or sets the search infra debug info",
+            "nullable": true
+          },
+          "contextualRecommendationsPollingFrequencyInSeconds": {
+            "type": "integer",
+            "description": "Gets or sets the contextual recommendations polling frequency",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response from the HomeController's Assets endpoints",
+        "nullable": true
+      },
+      "ISearchDebugInfo": {
+        "type": "object",
+        "properties": {
+          "libraryQueryOptions": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/LibraryQueryOptions"
+              },
+              {
+                "$ref": "#/components/schemas/QueryOptionConfigElement"
+              }
+            ],
+            "description": "Class passed to ToolboxItemStore when querying",
+            "nullable": true,
+            "readOnly": true
+          },
+          "serializedCcsSearchResponseDebugInfo": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "additionalImplData": {
+            "type": "object",
+            "properties": {
+              "SND_INFRA_ALGORITHM_NAME": {
+                "nullable": true
+              },
+              "SND_INFRA_BLENDERS": {
+                "nullable": true
+              },
+              "ELASTIC_SEARCH_EXPLANATIONS": {
+                "nullable": true
+              },
+              "ELASTIC_SEARCH_DOCUMENTS": {
+                "nullable": true
+              }
+            },
+            "additionalProperties": false,
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false,
+        "nullable": true
+      },
+      "ImageSearchStatus": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "description": "Enum representing possible outcomes of image search",
+        "format": "int32",
+        "x-enumNames": [
+          "Success",
+          "InputImageFiltered",
+          "FailedImageConversion",
+          "ImageSearchDisabled"
+        ],
+        "x-enum-varnames": [
+          "Success",
+          "InputImageFiltered",
+          "FailedImageConversion",
+          "ImageSearchDisabled"
+        ],
+        "x-enum-descriptions": [
+          "Success",
+          "InputImageFiltered",
+          "FailedImageConversion",
+          "ImageSearchDisabled"
+        ]
+      },
+      "LibraryQueryOptions": {
+        "type": "object",
+        "properties": {
+          "contextMatch": {
+            "type": "string",
+            "nullable": true
+          },
+          "isMultiplicativeSearchEnabled": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "sortByRankingScore": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SortByRankingScore"
+              }
+            ],
+            "nullable": true
+          },
+          "assetAnalysisScores": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/ThresholdWithFallback"
+            },
+            "nullable": true
+          },
+          "assetStats": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/ThresholdWithFallback"
+            },
+            "nullable": true
+          },
+          "excludeModeratedAssets": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "filterForVisibleAssets": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "includeHumanEvaluationVerifiedOnly": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "filterOutHumanEvaluationVerifiedMalicious": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "filterOutLowQualityThumbnails": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Class passed to ToolboxItemStore when querying",
+        "nullable": true
+      },
+      "LinkType": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "type": "integer",
+        "format": "int32",
+        "x-enumNames": [
+          "Invalid",
+          "Facebook",
+          "Twitter",
+          "Youtube",
+          "Twitch",
+          "Discord",
+          "Github",
+          "Guilded",
+          "Roblox",
+          "Devforum"
+        ],
+        "x-enum-varnames": [
+          "Invalid",
+          "Facebook",
+          "Twitter",
+          "Youtube",
+          "Twitch",
+          "Discord",
+          "Github",
+          "Guilded",
+          "Roblox",
+          "Devforum"
+        ],
+        "x-enum-descriptions": [
+          "Invalid",
+          "Facebook",
+          "Twitter",
+          "Youtube",
+          "Twitch",
+          "Discord",
+          "Github",
+          "Guilded",
+          "Roblox",
+          "Devforum"
+        ]
+      },
+      "MeshPart": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Asset"
+          }
+        ],
+        "properties": {
+          "meshId": {
+            "type": "integer",
+            "description": "The mesh id of the meshpart.",
+            "format": "int64"
+          },
+          "textureId": {
+            "type": "integer",
+            "description": "The texture id of the meshpart.",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Representation of a mesh asset.",
+        "nullable": true
+      },
+      "Model": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Asset"
+          }
+        ],
+        "properties": {
+          "subTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ModelSubType"
+            },
+            "description": "The subtypes that the model belongs to.",
+            "nullable": true
+          },
+          "hasScripts": {
+            "type": "boolean",
+            "description": "Whether the model has scripts."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Representation of a model asset.",
+        "nullable": true
+      },
+      "ModelSubType": {
+        "enum": [
+          "Ad",
+          "MaterialPack",
+          "Package"
+        ],
+        "type": "string",
+        "description": "The supported model subtypes.",
+        "x-enumNames": [
+          "Ad",
+          "MaterialPack",
+          "Package"
+        ],
+        "x-enum-varnames": [
+          "Ad",
+          "MaterialPack",
+          "Package"
+        ],
+        "x-enum-descriptions": [
+          "Ad",
+          "MaterialPack",
+          "Package"
+        ]
+      },
+      "Money": {
+        "type": "object",
+        "properties": {
+          "currencyCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "quantity": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Decimal"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "nullable": true
+      },
+      "QueryFacets": {
+        "type": "object",
+        "properties": {
+          "appliedFacets": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Facets that are already applied to the search.",
+            "nullable": true
+          },
+          "availableFacets": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The unused and still available facets.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The facets of a query.",
+        "nullable": true
+      },
+      "QueryOptionConfigElement": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/LibraryQueryOptions"
+          }
+        ],
+        "properties": {
+          "contextMatch": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Deserialization for nested objects of DefaultQueryOptions.QueryOptions array in appsettings",
+        "nullable": true
+      },
+      "RankingType": {
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34
+        ],
+        "type": "integer",
+        "format": "int32",
+        "x-enumNames": [
+          "Relevance",
+          "MostTaken",
+          "Favorites",
+          "Updated",
+          "Ratings",
+          "Trending",
+          "AllTime",
+          "LEGACY_Model_Search_IR600LogMultiplicative",
+          "LEGACY_Plugin_SearchAndSort_Monetization",
+          "LEGACY_Model_Sort_InsertRatioSearchRankingValue",
+          "Y2022_Q1_Model_AllTime",
+          "Y2022_Q1_Model_Trending",
+          "LEGACY_AnyAssetType_Sort_SalesCountAllTime",
+          "Y2022_Q3_Model_IR600MSD",
+          "Y2022_Q3_Model_Sort_InsertRatioMSD",
+          "Y2022_Q3_Model_AllTimeMSD",
+          "Y2022_Q3_Model_TrendingMSD",
+          "Y2022_Q3_Plugin_SearchAndSort_Monetization_MSD",
+          "LEGACY_AnyAssetType_Sort_SalesCountPastWeek",
+          "Y2022_Q4_Model_Search_IR600MSD",
+          "Y2022_Q4_Model_Sort_InsertRatioMSD",
+          "Y2022_Q4_Model_AllTimeMSD",
+          "Y2022_Q4_Plugin_SearchAndSort_Monetization_MSD",
+          "Y2023_Q2_Audio_SearchAndSort_Trending",
+          "Y2023_Q2_Audio_SearchAndSort_AllTime",
+          "Y2023_Q2_Model_TrendingMSD",
+          "Y2023_Q2_Audio_Duration",
+          "DefaultMatchScore",
+          "Y2024_Q1_Audio_Trending",
+          "Y2024_Q1_Audio_Top",
+          "Y2024_Q2_Plugin_SearchAndSort_Monetization_MSD",
+          "Y2024_Q3_Audio_CreatedDate",
+          "Y2024_Q4_Audio_TopListened"
+        ],
+        "x-enum-varnames": [
+          "Relevance",
+          "MostTaken",
+          "Favorites",
+          "Updated",
+          "Ratings",
+          "Trending",
+          "AllTime",
+          "LEGACY_Model_Search_IR600LogMultiplicative",
+          "LEGACY_Plugin_SearchAndSort_Monetization",
+          "LEGACY_Model_Sort_InsertRatioSearchRankingValue",
+          "Y2022_Q1_Model_AllTime",
+          "Y2022_Q1_Model_Trending",
+          "LEGACY_AnyAssetType_Sort_SalesCountAllTime",
+          "Y2022_Q3_Model_IR600MSD",
+          "Y2022_Q3_Model_Sort_InsertRatioMSD",
+          "Y2022_Q3_Model_AllTimeMSD",
+          "Y2022_Q3_Model_TrendingMSD",
+          "Y2022_Q3_Plugin_SearchAndSort_Monetization_MSD",
+          "LEGACY_AnyAssetType_Sort_SalesCountPastWeek",
+          "Y2022_Q4_Model_Search_IR600MSD",
+          "Y2022_Q4_Model_Sort_InsertRatioMSD",
+          "Y2022_Q4_Model_AllTimeMSD",
+          "Y2022_Q4_Plugin_SearchAndSort_Monetization_MSD",
+          "Y2023_Q2_Audio_SearchAndSort_Trending",
+          "Y2023_Q2_Audio_SearchAndSort_AllTime",
+          "Y2023_Q2_Model_TrendingMSD",
+          "Y2023_Q2_Audio_Duration",
+          "DefaultMatchScore",
+          "Y2024_Q1_Audio_Trending",
+          "Y2024_Q1_Audio_Top",
+          "Y2024_Q2_Plugin_SearchAndSort_Monetization_MSD",
+          "Y2024_Q3_Audio_CreatedDate",
+          "Y2024_Q4_Audio_TopListened"
+        ],
+        "x-enum-descriptions": [
+          "Relevance",
+          "MostTaken",
+          "Favorites",
+          "Updated",
+          "Ratings",
+          "Trending",
+          "AllTime",
+          "LEGACY_Model_Search_IR600LogMultiplicative",
+          "LEGACY_Plugin_SearchAndSort_Monetization",
+          "LEGACY_Model_Sort_InsertRatioSearchRankingValue",
+          "Y2022_Q1_Model_AllTime",
+          "Y2022_Q1_Model_Trending",
+          "LEGACY_AnyAssetType_Sort_SalesCountAllTime",
+          "Y2022_Q3_Model_IR600MSD",
+          "Y2022_Q3_Model_Sort_InsertRatioMSD",
+          "Y2022_Q3_Model_AllTimeMSD",
+          "Y2022_Q3_Model_TrendingMSD",
+          "Y2022_Q3_Plugin_SearchAndSort_Monetization_MSD",
+          "LEGACY_AnyAssetType_Sort_SalesCountPastWeek",
+          "Y2022_Q4_Model_Search_IR600MSD",
+          "Y2022_Q4_Model_Sort_InsertRatioMSD",
+          "Y2022_Q4_Model_AllTimeMSD",
+          "Y2022_Q4_Plugin_SearchAndSort_Monetization_MSD",
+          "Y2023_Q2_Audio_SearchAndSort_Trending",
+          "Y2023_Q2_Audio_SearchAndSort_AllTime",
+          "Y2023_Q2_Model_TrendingMSD",
+          "Y2023_Q2_Audio_Duration",
+          "DefaultMatchScore",
+          "Y2024_Q1_Audio_Trending",
+          "Y2024_Q1_Audio_Top",
+          "Y2024_Q2_Plugin_SearchAndSort_Monetization_MSD",
+          "Y2024_Q3_Audio_CreatedDate",
+          "Y2024_Q4_Audio_TopListened"
+        ]
+      },
+      "SearchAudioTypeModel": {
+        "enum": [
+          "Music",
+          "SoundEffect"
+        ],
+        "type": "string",
+        "description": "Represents audio type values that will be properly displayed in Swagger UI.",
+        "x-enumNames": [
+          "Music",
+          "SoundEffect"
+        ],
+        "x-enum-varnames": [
+          "Music",
+          "SoundEffect"
+        ],
+        "x-enum-descriptions": [
+          "Music",
+          "SoundEffect"
+        ]
+      },
+      "SearchCategoryType": {
+        "enum": [
+          "Audio",
+          "Model",
+          "Decal",
+          "Plugin",
+          "MeshPart",
+          "Video",
+          "FontFamily"
+        ],
+        "type": "string",
+        "description": "This represents a \"subset\" of Toolbox.Service.CategoryType options and represent the full set\r\nof \"categories\" (or asset types) that can be searched upon from the toolbox search API.",
+        "x-enumNames": [
+          "Audio",
+          "Model",
+          "Decal",
+          "Plugin",
+          "MeshPart",
+          "Video",
+          "FontFamily"
+        ],
+        "x-enum-varnames": [
+          "Audio",
+          "Model",
+          "Decal",
+          "Plugin",
+          "MeshPart",
+          "Video",
+          "FontFamily"
+        ],
+        "x-enum-descriptions": [
+          "Audio",
+          "Model",
+          "Decal",
+          "Plugin",
+          "MeshPart",
+          "Video",
+          "FontFamily"
+        ]
+      },
+      "SearchCreatorStoreAssetsResponse": {
+        "type": "object",
+        "properties": {
+          "nextPageToken": {
+            "type": "string",
+            "description": "The page token to view the next page of results.",
+            "nullable": true
+          },
+          "queryFacets": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/QueryFacets"
+              }
+            ],
+            "description": "The applied and available facets of a query.",
+            "nullable": true
+          },
+          "creatorStoreAssets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CreatorStoreAsset"
+            },
+            "description": "The list of creator store assets returned by the search query.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The response for the SearchCreatorStoreAssets endpoint.",
+        "nullable": true
+      },
+      "SearchView": {
+        "enum": [
+          "IDs",
+          "Core",
+          "Full"
+        ],
+        "type": "string",
+        "description": "This view controls which fields are populated in the search response. A lighter\r\nview will result in faster response times and higher reliability.",
+        "x-enumNames": [
+          "IDs",
+          "Core",
+          "Full"
+        ],
+        "x-enum-varnames": [
+          "IDs",
+          "Core",
+          "Full"
+        ],
+        "x-enum-descriptions": [
+          "IDs",
+          "Core",
+          "Full"
+        ]
+      },
+      "SocialLinkModel": {
+        "type": "object",
+        "properties": {
+          "linkType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/LinkType"
+              }
+            ],
+            "description": "Gets or sets the link type.",
+            "x-enumNames": [
+              "Invalid",
+              "Facebook",
+              "Twitter",
+              "Youtube",
+              "Twitch",
+              "Discord",
+              "Github",
+              "Guilded",
+              "Roblox",
+              "Devforum"
+            ],
+            "x-enum-varnames": [
+              "Invalid",
+              "Facebook",
+              "Twitter",
+              "Youtube",
+              "Twitch",
+              "Discord",
+              "Github",
+              "Guilded",
+              "Roblox",
+              "Devforum"
+            ],
+            "x-enum-descriptions": [
+              "Invalid",
+              "Facebook",
+              "Twitter",
+              "Youtube",
+              "Twitch",
+              "Discord",
+              "Github",
+              "Guilded",
+              "Roblox",
+              "Devforum"
+            ]
+          },
+          "url": {
+            "type": "string",
+            "description": "Gets or sets the Url.",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "description": "Gets or sets the title.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Model for a Social Link.",
+        "nullable": true
+      },
+      "SortByRankingScore": {
+        "type": "object",
+        "properties": {
+          "rankingType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/RankingType"
+              }
+            ],
+            "x-enumNames": [
+              "Relevance",
+              "MostTaken",
+              "Favorites",
+              "Updated",
+              "Ratings",
+              "Trending",
+              "AllTime",
+              "LEGACY_Model_Search_IR600LogMultiplicative",
+              "LEGACY_Plugin_SearchAndSort_Monetization",
+              "LEGACY_Model_Sort_InsertRatioSearchRankingValue",
+              "Y2022_Q1_Model_AllTime",
+              "Y2022_Q1_Model_Trending",
+              "LEGACY_AnyAssetType_Sort_SalesCountAllTime",
+              "Y2022_Q3_Model_IR600MSD",
+              "Y2022_Q3_Model_Sort_InsertRatioMSD",
+              "Y2022_Q3_Model_AllTimeMSD",
+              "Y2022_Q3_Model_TrendingMSD",
+              "Y2022_Q3_Plugin_SearchAndSort_Monetization_MSD",
+              "LEGACY_AnyAssetType_Sort_SalesCountPastWeek",
+              "Y2022_Q4_Model_Search_IR600MSD",
+              "Y2022_Q4_Model_Sort_InsertRatioMSD",
+              "Y2022_Q4_Model_AllTimeMSD",
+              "Y2022_Q4_Plugin_SearchAndSort_Monetization_MSD",
+              "Y2023_Q2_Audio_SearchAndSort_Trending",
+              "Y2023_Q2_Audio_SearchAndSort_AllTime",
+              "Y2023_Q2_Model_TrendingMSD",
+              "Y2023_Q2_Audio_Duration",
+              "DefaultMatchScore",
+              "Y2024_Q1_Audio_Trending",
+              "Y2024_Q1_Audio_Top",
+              "Y2024_Q2_Plugin_SearchAndSort_Monetization_MSD",
+              "Y2024_Q3_Audio_CreatedDate",
+              "Y2024_Q4_Audio_TopListened"
+            ],
+            "x-enum-varnames": [
+              "Relevance",
+              "MostTaken",
+              "Favorites",
+              "Updated",
+              "Ratings",
+              "Trending",
+              "AllTime",
+              "LEGACY_Model_Search_IR600LogMultiplicative",
+              "LEGACY_Plugin_SearchAndSort_Monetization",
+              "LEGACY_Model_Sort_InsertRatioSearchRankingValue",
+              "Y2022_Q1_Model_AllTime",
+              "Y2022_Q1_Model_Trending",
+              "LEGACY_AnyAssetType_Sort_SalesCountAllTime",
+              "Y2022_Q3_Model_IR600MSD",
+              "Y2022_Q3_Model_Sort_InsertRatioMSD",
+              "Y2022_Q3_Model_AllTimeMSD",
+              "Y2022_Q3_Model_TrendingMSD",
+              "Y2022_Q3_Plugin_SearchAndSort_Monetization_MSD",
+              "LEGACY_AnyAssetType_Sort_SalesCountPastWeek",
+              "Y2022_Q4_Model_Search_IR600MSD",
+              "Y2022_Q4_Model_Sort_InsertRatioMSD",
+              "Y2022_Q4_Model_AllTimeMSD",
+              "Y2022_Q4_Plugin_SearchAndSort_Monetization_MSD",
+              "Y2023_Q2_Audio_SearchAndSort_Trending",
+              "Y2023_Q2_Audio_SearchAndSort_AllTime",
+              "Y2023_Q2_Model_TrendingMSD",
+              "Y2023_Q2_Audio_Duration",
+              "DefaultMatchScore",
+              "Y2024_Q1_Audio_Trending",
+              "Y2024_Q1_Audio_Top",
+              "Y2024_Q2_Plugin_SearchAndSort_Monetization_MSD",
+              "Y2024_Q3_Audio_CreatedDate",
+              "Y2024_Q4_Audio_TopListened"
+            ],
+            "x-enum-descriptions": [
+              "Relevance",
+              "MostTaken",
+              "Favorites",
+              "Updated",
+              "Ratings",
+              "Trending",
+              "AllTime",
+              "LEGACY_Model_Search_IR600LogMultiplicative",
+              "LEGACY_Plugin_SearchAndSort_Monetization",
+              "LEGACY_Model_Sort_InsertRatioSearchRankingValue",
+              "Y2022_Q1_Model_AllTime",
+              "Y2022_Q1_Model_Trending",
+              "LEGACY_AnyAssetType_Sort_SalesCountAllTime",
+              "Y2022_Q3_Model_IR600MSD",
+              "Y2022_Q3_Model_Sort_InsertRatioMSD",
+              "Y2022_Q3_Model_AllTimeMSD",
+              "Y2022_Q3_Model_TrendingMSD",
+              "Y2022_Q3_Plugin_SearchAndSort_Monetization_MSD",
+              "LEGACY_AnyAssetType_Sort_SalesCountPastWeek",
+              "Y2022_Q4_Model_Search_IR600MSD",
+              "Y2022_Q4_Model_Sort_InsertRatioMSD",
+              "Y2022_Q4_Model_AllTimeMSD",
+              "Y2022_Q4_Plugin_SearchAndSort_Monetization_MSD",
+              "Y2023_Q2_Audio_SearchAndSort_Trending",
+              "Y2023_Q2_Audio_SearchAndSort_AllTime",
+              "Y2023_Q2_Model_TrendingMSD",
+              "Y2023_Q2_Audio_Duration",
+              "DefaultMatchScore",
+              "Y2024_Q1_Audio_Trending",
+              "Y2024_Q1_Audio_Top",
+              "Y2024_Q2_Plugin_SearchAndSort_Monetization_MSD",
+              "Y2024_Q3_Audio_CreatedDate",
+              "Y2024_Q4_Audio_TopListened"
+            ]
+          },
+          "sortRange": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/FilterSortRange"
+              }
+            ],
+            "nullable": true
+          },
+          "sortableAudienceType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SortableAudienceType"
+              }
+            ],
+            "x-enumNames": [
+              "VALUE",
+              "DEVELOPER_SEGMENT"
+            ],
+            "x-enum-varnames": [
+              "VALUE",
+              "DEVELOPER_SEGMENT"
+            ],
+            "x-enum-descriptions": [
+              "VALUE",
+              "DEVELOPER_SEGMENT"
+            ]
+          },
+          "audienceName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "nullable": true
+      },
+      "SortCategory": {
+        "enum": [
+          "Relevance",
+          "Trending",
+          "Top",
+          "AudioDuration",
+          "CreateTime"
+        ],
+        "type": "string",
+        "description": "The category to sort the search results by.",
+        "x-enumNames": [
+          "Relevance",
+          "Trending",
+          "Top",
+          "AudioDuration",
+          "CreateTime"
+        ],
+        "x-enum-varnames": [
+          "Relevance",
+          "Trending",
+          "Top",
+          "AudioDuration",
+          "CreateTime"
+        ],
+        "x-enum-descriptions": [
+          "Relevance",
+          "Trending",
+          "Top",
+          "AudioDuration",
+          "CreateTime"
+        ]
+      },
+      "SortDirection": {
+        "enum": [
+          "None",
+          "Ascending",
+          "Descending"
+        ],
+        "type": "string",
+        "description": "Represents the direction in which to sort the results",
+        "x-enumNames": [
+          "None",
+          "Ascending",
+          "Descending"
+        ],
+        "x-enum-varnames": [
+          "None",
+          "Ascending",
+          "Descending"
+        ],
+        "x-enum-descriptions": [
+          "None",
+          "Ascending",
+          "Descending"
+        ]
+      },
+      "SortableAudienceType": {
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "format": "int32",
+        "x-enumNames": [
+          "VALUE",
+          "DEVELOPER_SEGMENT"
+        ],
+        "x-enum-varnames": [
+          "VALUE",
+          "DEVELOPER_SEGMENT"
+        ],
+        "x-enum-descriptions": [
+          "VALUE",
+          "DEVELOPER_SEGMENT"
+        ]
+      },
+      "SpellCheckerResult": {
+        "type": "object",
+        "properties": {
+          "correctionState": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CorrectionState"
+              }
+            ],
+            "description": "The state of spell correction: Toolbox.Service.CorrectionState",
+            "x-enumNames": [
+              "NoCorrection",
+              "CorrectionAvailable",
+              "CorrectionAccepted"
+            ],
+            "x-enum-varnames": [
+              "NoCorrection",
+              "CorrectionAvailable",
+              "CorrectionAccepted"
+            ],
+            "x-enum-descriptions": [
+              "NoCorrection",
+              "CorrectionAvailable",
+              "CorrectionAccepted"
+            ]
+          },
+          "correctedQuery": {
+            "type": "string",
+            "description": "The spell corrected query if available.",
+            "nullable": true
+          },
+          "userQuery": {
+            "type": "string",
+            "description": "The user query that originated the correction.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The result of spell checker.",
+        "nullable": true
+      },
+      "SubcategoryModel": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the subcategory.",
+            "nullable": true
+          },
+          "displayName": {
+            "type": "string",
+            "description": "The display name of the subcategory.",
+            "nullable": true
+          },
+          "hidden": {
+            "type": "boolean",
+            "description": "Whether this category should be hidden in client side lists"
+          },
+          "searchKeywords": {
+            "type": "string",
+            "description": "The search keywords to use for this subcategory",
+            "nullable": true,
+            "deprecated": true
+          },
+          "queryParams": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SubcategoryQueryParams"
+              }
+            ],
+            "description": "The parameters we'll use when getting assets",
+            "nullable": true
+          },
+          "path": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The full path of the subcategory",
+            "nullable": true
+          },
+          "index": {
+            "type": "integer",
+            "description": "The index/order of the subcategory in the list",
+            "format": "int32"
+          },
+          "children": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/SubcategoryModel"
+            },
+            "description": "The children nested under this subcategory.",
+            "nullable": true
+          },
+          "childCount": {
+            "type": "integer",
+            "description": "The number of children",
+            "format": "int32",
+            "readOnly": true
+          },
+          "thumbnail": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SubcategoryThumbnail"
+              }
+            ],
+            "description": "Optional thumbnail information for the subcategory",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a basic subcategory.",
+        "nullable": true
+      },
+      "SubcategoryQueryParams": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "The search keyword to use",
+            "nullable": true
+          },
+          "assetSubTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AssetSubType"
+            },
+            "description": "A list of subtypes to use (e.g. MaterialPack, Ad, etc.)",
+            "nullable": true
+          },
+          "creatorTargetId": {
+            "type": "integer",
+            "description": "The creator target ID filter.",
+            "format": "int64",
+            "nullable": true
+          },
+          "creatorType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CreatorType"
+              }
+            ],
+            "description": "The creator type ID.",
+            "nullable": true
+          },
+          "excludeAssetSubTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AssetSubType"
+            },
+            "description": "A list of subtype to remove https://jira.rbx.com/browse/STM-2597.",
+            "nullable": true
+          },
+          "audioTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AudioType"
+            },
+            "description": "A list of audio types to include (e.g. Music, SoundEffect, Unknown).",
+            "nullable": true
+          },
+          "uiSortIntent": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/UiSortIntent"
+              }
+            ],
+            "description": "The UI sort intent.",
+            "nullable": true
+          },
+          "sortDirection": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SortDirection"
+              }
+            ],
+            "description": "The sort direction.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The parameters we'll use when querying assets\r\nNOTE: All fields *must* be nullable to avoid improper filtering",
+        "nullable": true
+      },
+      "SubcategoryThumbnail": {
+        "type": "object",
+        "properties": {
+          "assetId": {
+            "type": "integer",
+            "description": "The asset id to use for the thumbnail image",
+            "format": "int64"
+          },
+          "backgroundColor": {
+            "type": "string",
+            "description": "The color to use for the background gradient, in hex format, ex: #FFFFFF",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Data class representing a subcategory thumbnail\r\nThese property names are lower-case because obelix doesn't support DataContract/DataMember yet",
+        "nullable": true
+      },
+      "ThresholdWithFallback": {
+        "type": "object",
+        "properties": {
+          "min": {
+            "type": "number",
+            "format": "float",
+            "nullable": true
+          },
+          "max": {
+            "type": "number",
+            "format": "float",
+            "nullable": true
+          },
+          "fallbackField": {
+            "type": "string",
+            "nullable": true
+          },
+          "fallbackMin": {
+            "type": "number",
+            "format": "float",
+            "nullable": true
+          },
+          "fallbackMax": {
+            "type": "number",
+            "format": "float",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "nullable": true
+      },
+      "ToolboxItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "item id",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "description": "item name",
+            "nullable": true
+          },
+          "debugInfo": {
+            "type": "object",
+            "properties": {
+              "SND_INFRA_ALGORITHM_NAME": {
+                "nullable": true
+              },
+              "SND_INFRA_BLENDERS": {
+                "nullable": true
+              },
+              "ELASTIC_SEARCH_EXPLANATIONS": {
+                "nullable": true
+              },
+              "ELASTIC_SEARCH_DOCUMENTS": {
+                "nullable": true
+              }
+            },
+            "additionalProperties": false,
+            "description": "debug",
+            "nullable": true
+          },
+          "searchResultSource": {
+            "type": "string",
+            "description": "Search result source eg SemanticScann, lexical",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The model of an toolbox item",
+        "nullable": true
+      },
+      "ToolboxItemApiPageResponse": {
+        "type": "object",
+        "properties": {
+          "previousPageCursor": {
+            "type": "string",
+            "description": "Gets or sets the exclusive start key for the previous page of results.",
+            "nullable": true
+          },
+          "nextPageCursor": {
+            "type": "string",
+            "description": "Gets or sets the exclusive start key for the next page of results.",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ToolboxItem"
+            },
+            "description": "Gets or sets the data of the array.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The API standard pagination response. This is supposed to only be used for public endpoints.",
+        "nullable": true
+      },
+      "ToolboxItemsPageResponse": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ToolboxItemApiPageResponse"
+          }
+        ],
+        "properties": {
+          "totalResults": {
+            "type": "integer",
+            "description": "Gets or sets total results",
+            "format": "int64"
+          },
+          "filteredKeyword": {
+            "type": "string",
+            "description": "Gets or sets the filtered version of the query's filtered keyword",
+            "nullable": true
+          },
+          "searchDebugInfo": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ISearchDebugInfo"
+              }
+            ],
+            "description": "Gets or sets the search infra debug info",
+            "nullable": true
+          },
+          "spellCheckerResult": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SpellCheckerResult"
+              }
+            ],
+            "description": "Gets or sets the result of the spell checker",
+            "nullable": true
+          },
+          "queryFacets": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/QueryFacets"
+              }
+            ],
+            "description": "Gets or sets the applied and available facets of a query.",
+            "nullable": true
+          },
+          "imageSearchStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ImageSearchStatus"
+              }
+            ],
+            "description": "Gets or sets the status of image search, conveying whether the search succeeded or hit any errors.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "toolbox items pagination response.",
+        "nullable": true
+      },
+      "UiSortIntent": {
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "type": "integer",
+        "format": "int32",
+        "x-enumNames": [
+          "Relevance",
+          "MostTaken",
+          "Favorites",
+          "Updated",
+          "Ratings",
+          "Trending",
+          "AllTime",
+          "Top",
+          "Duration",
+          "DateCreated",
+          "DateModified",
+          "Creator",
+          "Name"
+        ],
+        "x-enum-varnames": [
+          "Relevance",
+          "MostTaken",
+          "Favorites",
+          "Updated",
+          "Ratings",
+          "Trending",
+          "AllTime",
+          "Top",
+          "Duration",
+          "DateCreated",
+          "DateModified",
+          "Creator",
+          "Name"
+        ],
+        "x-enum-descriptions": [
+          "Relevance",
+          "MostTaken",
+          "Favorites",
+          "Updated",
+          "Ratings",
+          "Trending",
+          "AllTime",
+          "Top",
+          "Duration",
+          "DateCreated",
+          "DateModified",
+          "Creator",
+          "Name"
+        ]
+      },
+      "VotingModel": {
+        "type": "object",
+        "properties": {
+          "showVotes": {
+            "type": "boolean",
+            "description": "Gets or sets show votes."
+          },
+          "upVotes": {
+            "type": "integer",
+            "description": "Gets or sets success.",
+            "format": "int64"
+          },
+          "downVotes": {
+            "type": "integer",
+            "description": "Gets or sets down votes.",
+            "format": "int64"
+          },
+          "canVote": {
+            "type": "boolean",
+            "description": "Gets or sets can vote."
+          },
+          "userVote": {
+            "type": "boolean",
+            "description": "Gets or sets user vote.",
+            "nullable": true
+          },
+          "hasVoted": {
+            "type": "boolean",
+            "description": "Gets UserVote.",
+            "readOnly": true
+          },
+          "voteCount": {
+            "type": "integer",
+            "description": "The total number of votes",
+            "format": "int64"
+          },
+          "upVotePercent": {
+            "type": "integer",
+            "description": "The percentage of total votes that have been UpVotes",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "model for voting.",
+        "nullable": true
+      }
+    },
+    "securitySchemes": {
+      "roblox-api-key": {
+        "type": "apiKey",
+        "description": "A configurable key that allows granular access to Roblox resources. See https://create.roblox.com/docs/cloud/auth/api-keys for more information.",
+        "in": "header",
+        "name": "x-api-key"
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "https://apis.roblox.com"
+    }
+  ]
+}

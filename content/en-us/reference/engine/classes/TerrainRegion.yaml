@@ -21,7 +21,7 @@ properties:
       The state of this property shows whether or not this `Class.TerrainRegion`
       contains _smooth terrain_.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -73,7 +73,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated

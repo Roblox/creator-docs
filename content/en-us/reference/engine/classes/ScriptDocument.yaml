@@ -250,7 +250,7 @@ methods:
       - ScriptDocument-HasSelectedText-GetSelectedText
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
@@ -274,7 +274,7 @@ methods:
       - ScriptDocument-IsCommandBar
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''

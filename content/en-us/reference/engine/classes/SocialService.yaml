@@ -50,7 +50,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -89,7 +89,7 @@ methods:
           Optional `Class.ExperienceInviteOptions` object for customizing the
           prompt.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -130,7 +130,7 @@ methods:
           or similar. For example, you can pass a string defining what region of
           an experience the calling player's character is currently in.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -152,7 +152,7 @@ methods:
         summary: |
           The position to place the self view .
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -170,7 +170,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -200,7 +200,7 @@ methods:
           The `Class.Player` instance of the player potentially sending a call
           invite.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the specified player can send a call invite.
     tags:
@@ -241,7 +241,7 @@ methods:
           Optional `Class.Player.UserId` of the potential **recipient**, used to
           check whether the sender can invite that specific recipient.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the specified player can send an invite.
     tags:

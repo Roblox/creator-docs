@@ -69,7 +69,7 @@ properties:
       `Class.BasePart.Orientation` is set on a part. The spanning tree may still
       disable them if they are redundant or form a cycle.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -95,7 +95,7 @@ properties:
       properties are set, then the constraint will ensure that its two connected
       parts will be locked together.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''

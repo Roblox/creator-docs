@@ -37,7 +37,7 @@ properties:
       systems for retrying operations yourself. It is possible that automatic
       retry will be enabled again in the future.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''

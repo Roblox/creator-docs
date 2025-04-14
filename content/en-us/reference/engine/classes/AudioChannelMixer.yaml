@@ -141,7 +141,7 @@ events:
     code_samples: []
     parameters:
       - name: connected
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether the instance got connected or disconnected.

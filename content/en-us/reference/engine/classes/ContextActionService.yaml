@@ -213,7 +213,7 @@ methods:
           when the bound inputs are triggered: string (actionName),
           `Enum.UserInputState` and an InputObject.
       - name: createTouchButton
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether a GUI button should be created for the action on touch input
@@ -225,7 +225,7 @@ methods:
           Any number of `Enum.KeyCode` or `Enum.UserInputType` representing the
           inputs to bind to the action.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -262,7 +262,7 @@ methods:
           when the bound inputs are triggered: string (actionName),
           `Enum.UserInputState` and an InputObject.
       - name: createTouchButton
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether a GUI button should be created for the action on touch input
@@ -280,7 +280,7 @@ methods:
           Any number of Enum.KeyCode or Enum.UserInputType representing the
           inputs to bind to the action.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -336,7 +336,7 @@ methods:
         default:
         summary: ''
       - name: createTouchButton
-        type: bool
+        type: boolean
         default:
         summary: ''
       - name: inputTypes
@@ -344,7 +344,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -383,7 +383,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -579,7 +579,7 @@ methods:
           A text description of the action, such as "Honk the car's horn" or
           "Open the inventory".
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -618,7 +618,7 @@ methods:
         summary: |
           The value to which the Image property should be set.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -657,7 +657,7 @@ methods:
         summary: |
           The position within the ContextButtonFrame.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -696,7 +696,7 @@ methods:
         summary: |
           The text to display on the button.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -728,7 +728,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -759,7 +759,7 @@ methods:
         summary: |
           The same KeyCode originally sent to BindActivate.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -778,7 +778,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

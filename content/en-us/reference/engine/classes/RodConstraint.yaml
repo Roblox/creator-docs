@@ -131,7 +131,7 @@ properties:
       `Class.RodConstraint.LimitAngle1|LimitAngle1` properties control the
       angles between the rod and the respective attachments.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

@@ -82,7 +82,7 @@ methods:
           `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` events
           connected to the same `Class.UnreliableRemoteEvent`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -132,7 +132,7 @@ methods:
           `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` events
           connected to the same `Class.UnreliableRemoteEvent`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -174,7 +174,7 @@ methods:
           `Class.UnreliableRemoteEvent.OnServerEvent|OnServerEvent` events
           connected to the same `Class.UnreliableRemoteEvent`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

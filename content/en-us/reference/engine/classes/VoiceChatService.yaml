@@ -49,7 +49,7 @@ properties:
       `Enum.AudioApiRollout|Disabled`, disabling the default voice setup
       effectively disables voice chat altogether.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -137,7 +137,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
@@ -169,7 +169,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
@@ -183,7 +183,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
@@ -211,7 +211,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
@@ -250,7 +250,7 @@ methods:
         summary: |
           The `Class.Player.UserId` to check.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           If that user has voice enabled.
     tags:

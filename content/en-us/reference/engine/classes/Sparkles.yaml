@@ -92,7 +92,7 @@ properties:
       ```
     code_samples:
       - Give-Sparkles
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

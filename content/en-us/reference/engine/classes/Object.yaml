@@ -182,7 +182,7 @@ methods:
           The class against which the Object's class will be checked.
           Case-sensitive.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Describes whether the Object's class matched or is a subclass of the
           given class.
@@ -203,7 +203,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated

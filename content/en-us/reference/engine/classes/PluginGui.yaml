@@ -109,7 +109,7 @@ methods:
           The function to bind the close button to. If no function is specified
           then any previously specified function will be unbound.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

@@ -30,7 +30,7 @@ properties:
     description: |
       Sets whether the sun, moon, and stars will show.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

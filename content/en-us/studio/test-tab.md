@@ -33,8 +33,6 @@ Using the **Clients and Servers** options, you can launch multiple sessions of S
 
 ## Controller emulation
 
-<BetaAlert betaName="Gamepad Emulator" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
-
 <ControllerEmulator components={props.components} />
 
 ## Player emulator

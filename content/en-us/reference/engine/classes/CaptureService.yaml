@@ -50,7 +50,7 @@ methods:
           A callback function that is called with the `contentId` of the new
           capture once it is ready.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -79,7 +79,7 @@ methods:
           each `contentId` to a boolean indicating if the user accepted saving
           that capture.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -126,7 +126,7 @@ methods:
         summary: |
           An optional callback function invoked if the user denies sharing.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -148,7 +148,7 @@ methods:
         default: nil
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

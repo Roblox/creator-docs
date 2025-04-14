@@ -77,7 +77,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -108,7 +108,7 @@ methods:
           The `Enum.RigType` that the outfit will be created for if the player
           confirms the prompt.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -131,7 +131,7 @@ methods:
         summary: |
           The outfitId of the outfit to delete.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -154,7 +154,7 @@ methods:
         summary: |
           The outfitId of the outfit to rename.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -186,7 +186,7 @@ methods:
           The `Enum.RigType` that the avatar will be saved for if the player
           confirms the prompt.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -214,11 +214,11 @@ methods:
         summary: |
           The type of item being prompted to favorite.
       - name: shouldFavorite
-        type: bool
+        type: boolean
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -250,7 +250,7 @@ methods:
         summary: |
           The HumanoidRigType to update the outfit to.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -452,7 +452,7 @@ methods:
         summary: |
           The `Enum.AvatarItemType` of the specified asset or bundle.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the `LocalPlayer` has favorited the given bundle or asset.
     tags:
