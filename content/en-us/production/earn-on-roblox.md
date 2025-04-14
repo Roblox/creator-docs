@@ -237,7 +237,7 @@ After purchasing a Limited, there is up to a 30‑day holding period when the it
 </TabItem>
 </Tabs>
 
-## Create and sell models and Studio Plugins
+## Create and sell models and Studio plugins
 
 You can create and sell Studio [plugins](../studio/plugins.md) or [models](../parts/models.md) to the creator community through the [Creator Store](../production/creator-store.md). A plugin is an extension that adds additional features or functionality to [Roblox Studio](../studio/index.md) and helps improve creator workflows. You can either offer plugins for free or sell them for a minimum of $4.99 USD. Models can be offered for free or for a minimum price of $2.99. Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information, see [Sell on the Creator Store](../production/sell-on-creator-store.md).
 

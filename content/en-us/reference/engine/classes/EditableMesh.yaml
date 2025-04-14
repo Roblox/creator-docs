@@ -174,7 +174,7 @@ properties:
     deprecation_message: ''
     security:
       read: None
-      write: RobloxSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Data
     serialization:
