@@ -347,7 +347,7 @@ functions:
           Unsigned 32‑bit number. Only `bitCount` least significant bits are
           written.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
     code_samples:
@@ -373,7 +373,7 @@ functions:
         summary: |
           An integer number in range [-128, 127].
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
     code_samples:
@@ -399,7 +399,7 @@ functions:
         summary: |
           An integer number in range [0, 255].
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
     code_samples:
@@ -425,7 +425,7 @@ functions:
         summary: |
           An integer number in range [-32,768, 32,767].
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
     code_samples:
@@ -451,7 +451,7 @@ functions:
         summary: |
           An integer number in range [0, 65,535].
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
     code_samples:
@@ -477,7 +477,7 @@ functions:
         summary: |
           An integer number in range [-2,147,483,648, 2,147,483,647].
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
     code_samples:
@@ -503,7 +503,7 @@ functions:
         summary: |
           An integer number in range [0, 4,294,967,295].
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
     code_samples:
@@ -529,7 +529,7 @@ functions:
         summary: |
           A single-precision floating-point number.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
     code_samples:
@@ -555,7 +555,7 @@ functions:
         summary: |
           A double-precision floating-point number.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
     code_samples:
@@ -614,7 +614,7 @@ functions:
           Number of bytes to take from the string. This value cannot be larger
           than the string length.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
     code_samples:
@@ -657,7 +657,7 @@ functions:
           Number of bytes to copy. If omitted, the whole `source` data starting
           from `sourceOffset` is taken.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
     code_samples:
@@ -690,7 +690,7 @@ functions:
           Number of bytes to write. If omitted, all bytes after the specified
           offset are set.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
     code_samples:

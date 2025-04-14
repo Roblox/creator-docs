@@ -43,7 +43,7 @@ properties:
 
       This property is not intended for use in the game.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - Hidden
     deprecation_message: ''
@@ -74,7 +74,7 @@ properties:
       these three properties.
     code_samples:
       - Auto-Jump-Toggle
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -317,7 +317,7 @@ properties:
       future, changing it will not change any existing player characters.
       Changes to this property will only take effect when a player respawns.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -566,7 +566,7 @@ properties:
       to lock the mouse.
     code_samples:
       - enabling-a-player-s-mouse-lock
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -631,7 +631,7 @@ properties:
       the character will come from the passed in `Class.HumanoidDescription`.
     code_samples:
       - disabling-a-player-s-appearance
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -736,7 +736,7 @@ properties:
       See also [Avatar Emotes](../../../characters/emotes.md), an article
       detailing how to control, customize, and play avatar emotes.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

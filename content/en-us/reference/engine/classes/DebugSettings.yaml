@@ -67,7 +67,7 @@ properties:
     description: |
       Whether or not a stacktrace is displayed in the output for an error.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -128,7 +128,7 @@ properties:
     description: |
       Whether or not sound warnings should be reported.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

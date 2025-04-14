@@ -107,7 +107,7 @@ methods:
         summary: |
           Key to remove.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields
@@ -148,7 +148,7 @@ methods:
           **(Optional)** Sort key to set for this key. Accepted types are a
           number (integer or decimal) or a string.
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields

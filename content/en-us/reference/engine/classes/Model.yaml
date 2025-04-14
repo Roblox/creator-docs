@@ -258,7 +258,7 @@ methods:
         default: nil
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -289,7 +289,7 @@ methods:
       - Manual-Joint-Creation
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -539,7 +539,7 @@ methods:
       - Simple-Joint-Creation
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -581,7 +581,7 @@ methods:
         summary: |
           The `Datatype.Vector3` the `Class.Model` is moved to.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -602,7 +602,7 @@ methods:
         default: nil
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -622,7 +622,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -665,7 +665,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -685,7 +685,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -722,7 +722,7 @@ methods:
         summary: |
           The `Datatype.CFrame` to be set.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -755,7 +755,7 @@ methods:
         summary: |
           The `Datatype.Vector3` to translate the `Class.Model` by.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -769,7 +769,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -786,7 +786,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -807,7 +807,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -828,7 +828,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated

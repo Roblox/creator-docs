@@ -222,6 +222,10 @@ For more information on how to design fair loot boxes from two experts in the fi
 
 Bundles are a great way to package up items that go together, whether it's a group of items that new players would find appealing or items that share a common theme. Because a bundle has multiple items, ensure players can clearly see each one and let them know what each item does. As best practice, have a comparison to other bundles to gauge the value of grouped items.
 
+<Alert severity="info">
+For out-of-the-box functionality to create bundles, see the [Bundles](../../resources/feature-packages/bundles.md) feature package.
+</Alert>
+
 ## Starter packs
 
 <figure>

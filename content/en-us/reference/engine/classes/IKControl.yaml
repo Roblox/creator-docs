@@ -92,7 +92,7 @@ properties:
       default. When `Class.IKControl.Enabled|Enabled` is false, the IK control
       is off and isn't resolved by the underlying solver.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -219,12 +219,12 @@ properties:
       can be anything that has a position in the world, such as
       `Class.BasePart`, `Class.Attachment`, `Class.Bone`, `Class.Motor6D`. It is
       by default `nil`. When you specify it, the underlying solver will make the
-      parts bend towards it. When it is `nil`, the solver will try to make elbows
-      and knees bend appropriately based on the limb of the character. The limb
-      will be "Arm" when you select as `Class.IKControl.EndEffector|EndEffector`
-      either the _LeftHand_ or _RightHand_ and as
-      `Class.IKControl.ChainRoot|ChainRoot` the corresponding _LeftUpperArm_ or
-      _RightUpperArm_, and it will be "Leg" when you select as
+      parts bend towards it. When it is `nil`, the solver will try to make
+      elbows and knees bend appropriately based on the limb of the character.
+      The limb will be "Arm" when you select as
+      `Class.IKControl.EndEffector|EndEffector` either the _LeftHand_ or
+      _RightHand_ and as `Class.IKControl.ChainRoot|ChainRoot` the corresponding
+      _LeftUpperArm_ or _RightUpperArm_, and it will be "Leg" when you select as
       `Class.IKControl.EndEffector|EndEffector` either the _LeftFoot_ or
       _RightFoot_ and as `Class.IKControl.ChainRoot|ChainRoot` the corresponding
       _LeftUpperLeg_ or _RightUpperLeg_. In all other cases, if you don't
@@ -494,7 +494,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

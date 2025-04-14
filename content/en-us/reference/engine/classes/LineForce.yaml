@@ -53,7 +53,7 @@ properties:
       determining the direction will also start at
       `Class.LineForce.Attachment0|Attachment0`.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -75,7 +75,7 @@ properties:
       When true, the force magnitude is multiplied by the inverse square of the
       distance.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -146,7 +146,7 @@ properties:
       `Class.Constraint.Attachment1|Attachment1` as the target direction without
       any dynamic relationship.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

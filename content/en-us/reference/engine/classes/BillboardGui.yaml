@@ -68,7 +68,7 @@ properties:
       part or attachment in the 3D world while the `Class.BillboardGui` itself
       remains in the `Class.PlayerGui`.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -124,7 +124,7 @@ properties:
         it's `0`.
       - `Class.BillboardGui.Brightness|Brightness` has no effect.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -183,7 +183,7 @@ properties:
       Even when this property is `false`, `Class.GuiObject|GuiObjects` that are
       **completely** outside of the canvas will not render.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

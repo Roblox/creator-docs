@@ -319,7 +319,7 @@ properties:
       If `true`, the `Class.UIDragDetector` responds to user input; if `false`,
       it does not.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -719,7 +719,7 @@ methods:
           in the desired space and relativity. If this function returns `nil`,
           the object will not be moved.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

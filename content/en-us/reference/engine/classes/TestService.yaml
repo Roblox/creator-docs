@@ -207,7 +207,7 @@ properties:
       If set to true, the game will start running when the TestService's
       `Class.TestService:Run()` method is called.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -277,7 +277,7 @@ properties:
       - Try to keep this value within a rational range (1 to 8 players at most),
         or else your computer's CPU will get overloaded.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -298,7 +298,7 @@ properties:
       Sets whether or not the physics engine should be throttled to 30 FPS while
       the test is being ran.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
       - Deprecated
@@ -321,7 +321,7 @@ properties:
       Sets whether or not the physics environment should be throttled while
       running this test.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -342,7 +342,7 @@ properties:
       Sets whether or not physics objects will be allowed to fall asleep while
       the test simulation is running.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -420,7 +420,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -485,7 +485,7 @@ methods:
       - TestService-Check1
     parameters:
       - name: condition
-        type: bool
+        type: boolean
         default:
         summary: ''
       - name: description
@@ -501,7 +501,7 @@ methods:
         default: 0
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -531,7 +531,7 @@ methods:
         default: 0
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -548,7 +548,7 @@ methods:
       - TestService-Done1
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -577,7 +577,7 @@ methods:
         default: 0
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -609,7 +609,7 @@ methods:
         default: 0
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -639,7 +639,7 @@ methods:
         default: 0
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -659,7 +659,7 @@ methods:
       - TestService-Require1
     parameters:
       - name: condition
-        type: bool
+        type: boolean
         default:
         summary: ''
       - name: description
@@ -675,7 +675,7 @@ methods:
         default: 0
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -709,7 +709,7 @@ methods:
       - TestService-Warn1
     parameters:
       - name: condition
-        type: bool
+        type: boolean
         default:
         summary: ''
       - name: description
@@ -725,7 +725,7 @@ methods:
         default: 0
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -743,7 +743,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
@@ -759,7 +759,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields
@@ -777,7 +777,7 @@ events:
     code_samples:
     parameters:
       - name: condition
-        type: bool
+        type: boolean
         default:
         summary: ''
       - name: text

@@ -280,6 +280,4 @@ end
 
 ## Controller emulation
 
-<BetaAlert betaName="Gamepad Emulator" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
-
 <ControllerEmulator components={props.components} />

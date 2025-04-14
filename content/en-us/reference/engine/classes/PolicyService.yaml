@@ -49,7 +49,7 @@ methods:
           The brand project ID provided by Roblox. Represents all assets
           associated with a brand project.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether or not the brand project can be shown to the specific user.
     tags:

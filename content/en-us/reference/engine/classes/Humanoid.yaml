@@ -68,7 +68,7 @@ properties:
       the `Class.StarterPlayer.AutoJumpEnabled` property.
     code_samples:
       - Auto-Jump-Toggle
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -124,7 +124,7 @@ properties:
       </table>
     code_samples:
       - AutoRotate
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -150,7 +150,7 @@ properties:
       the character's body parts and accessories to change size, but only if
       `AutomaticScalingEnabled` is true.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -172,7 +172,7 @@ properties:
       Determines whether the humanoid's joints break when in the
       `Enum.HumanoidStateType.Dead` state. Defaults to true.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -355,7 +355,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -600,7 +600,7 @@ properties:
       `Class.Humanoid.JumpHeight`, depending on the value of
       `Class.Humanoid.UseJumpPower`.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''
@@ -867,7 +867,7 @@ properties:
       similar to sitting, except that jumping does not free the humanoid from
       the state.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -891,7 +891,7 @@ properties:
       `Character|character` dies if the Neck `Class.Motor6D` is removed or
       disconnected even momentarily. This property defaults to true.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1040,7 +1040,7 @@ properties:
       - It is possible to detect when a Humanoid sits by connecting to the
         `Class.Humanoid.Seated` event.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1126,7 +1126,7 @@ properties:
       false, the `Class.Humanoid.JumpPower` value is used to apply an upward
       force.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1325,7 +1325,7 @@ methods:
         summary: |
           The `Class.Accessory` to be attached.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1347,7 +1347,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -1373,7 +1373,7 @@ methods:
         default: Poison
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -1409,7 +1409,7 @@ methods:
       - R15-Package-Importer
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1459,7 +1459,7 @@ methods:
         summary: |
           The `Enum.HumanoidStateType` that the `Class.Humanoid` is to perform.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1510,7 +1510,7 @@ methods:
         summary: |
           The `Class.Tool` to equip.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1750,7 +1750,7 @@ methods:
         summary: |
           The given `Enum.HumanoidStateType`.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the given `Enum.HumanoidStateType` is enabled.
     tags: []
@@ -1793,7 +1793,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -1817,7 +1817,7 @@ methods:
         default: Poison
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -1896,13 +1896,13 @@ methods:
         summary: |
           The direction to walk in.
       - name: relativeToCamera
-        type: bool
+        type: boolean
         default: false
         summary: |
           Set to `true` if the `moveDirection` parameter should be taken as
           relative to the `Class.Workspace.CurrentCamera|CurrentCamera`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1965,7 +1965,7 @@ methods:
         summary: |
           The `Class.BasePart` to set `Class.Humanoid.WalkToPart` to.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1993,7 +1993,7 @@ methods:
       - remove-accessories-after-loading
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -2014,7 +2014,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -2039,7 +2039,7 @@ methods:
         default: Poison
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -2079,7 +2079,7 @@ methods:
           The `Class.Part` `Class.Instance` which will be parented to the
           character.
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
@@ -2109,13 +2109,13 @@ methods:
         summary: |
           The `Enum.HumanoidStateType` to be enabled or disabled.
       - name: enabled
-        type: bool
+        type: boolean
         default:
         summary: |
           `true` if `state` is to be enabled, `false` if `state` is to be
           disabled.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -2162,7 +2162,7 @@ methods:
         summary: |
           The damage, or amount to be deduced from the `Class.Humanoid.Health`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -2194,7 +2194,7 @@ methods:
       - unequip-tool-keybind
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -2233,7 +2233,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -2288,7 +2288,7 @@ methods:
         default: Default
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields
@@ -2329,7 +2329,7 @@ methods:
         default: Default
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields
@@ -2353,7 +2353,7 @@ methods:
         summary: |
           name of the emote to play.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           successfully played.
     tags:
@@ -2532,7 +2532,7 @@ events:
     code_samples:
     parameters:
       - name: active
-        type: bool
+        type: boolean
         default:
         summary: |
           Describes whether the `Class.Humanoid` is entering or leaving the
@@ -2562,7 +2562,7 @@ events:
     code_samples:
     parameters:
       - name: active
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the `Freefall`
@@ -2594,7 +2594,7 @@ events:
     code_samples:
     parameters:
       - name: active
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the `GettingUp`
@@ -2651,7 +2651,7 @@ events:
     code_samples:
     parameters:
       - name: active
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the `Jumping`
@@ -2684,7 +2684,7 @@ events:
       - humanoid-moveto-without-time-out
     parameters:
       - name: reached
-        type: bool
+        type: boolean
         default:
         summary: |
           A boolean indicating whether the `Class.Humanoid` reached is goal.
@@ -2717,7 +2717,7 @@ events:
     code_samples:
     parameters:
       - name: active
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the
@@ -2749,7 +2749,7 @@ events:
     code_samples:
     parameters:
       - name: active
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the `Ragdoll`
@@ -2820,7 +2820,7 @@ events:
       - finding-a-player-s-seat
     parameters:
       - name: active
-        type: bool
+        type: boolean
         default:
         summary: |
           True if the `Class.Humanoid` is sitting down.
@@ -2900,7 +2900,7 @@ events:
           The `Enum.HumanoidStateType` for which the enabled state has been
           changed.
       - name: isEnabled
-        type: bool
+        type: boolean
         default:
         summary: |
           True if the state is now enabled.
@@ -2978,7 +2978,7 @@ events:
     code_samples:
     parameters:
       - name: active
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the

@@ -43,7 +43,7 @@ methods:
       Disconnects the connection from the event.
     parameters:
     returns:
-      - type: void
+      - type: ()
         summary: ''
     code_samples: []
     tags: []

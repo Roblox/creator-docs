@@ -362,7 +362,7 @@ properties:
       Determines whether scrolling is allowed on the frame. If `false`, no
       scroll bars will be rendered.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -380,7 +380,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - Hidden
       - NotReplicated

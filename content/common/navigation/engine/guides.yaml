@@ -10,7 +10,8 @@ navigation:
     navigation: /engine/resources.yaml
     path: /samples
   - title: Engine API reference
-    path: https://create.roblox.com/docs/reference/engine
+    path: /reference/engine
+    navigation: /engine/reference.yaml
   - heading: Guides
   - title: Overview
     path: /creation

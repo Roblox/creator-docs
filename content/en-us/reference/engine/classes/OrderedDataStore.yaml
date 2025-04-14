@@ -46,7 +46,7 @@ methods:
     code_samples:
     parameters:
       - name: ascending
-        type: bool
+        type: boolean
         default:
         summary: |
           A boolean indicating whether the returned data pages are in ascending

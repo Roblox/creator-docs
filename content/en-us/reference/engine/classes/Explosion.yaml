@@ -297,7 +297,7 @@ properties:
       the default `Class.Explosion` functionality.
     code_samples:
       - Explosion-Visible
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

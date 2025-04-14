@@ -159,7 +159,7 @@ methods:
         summary: |
           The world position where the computed path finishes.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields

@@ -63,7 +63,7 @@ properties:
       they would normally be collided with. See
       [Character Pathfinding](../../../characters/pathfinding.md) for details.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

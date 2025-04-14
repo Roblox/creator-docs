@@ -167,7 +167,7 @@ properties:
       Fixed-sized meshes allow changing the values of vertex attributes but do
       not allow vertices and triangles to be added or deleted.
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -186,7 +186,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -335,7 +335,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1186,7 +1186,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1227,7 +1227,7 @@ methods:
         summary: |
           Stable normal ID to reset.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1253,7 +1253,7 @@ methods:
         summary: |
           Color to set.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1279,7 +1279,7 @@ methods:
         summary: |
           Alpha to set.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1305,7 +1305,7 @@ methods:
         summary: |
           List of new stable color IDs to use for the given face's vertices.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState
@@ -1332,7 +1332,7 @@ methods:
         summary: |
           List of new stable normal IDs to use for the given face's vertices.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState
@@ -1359,7 +1359,7 @@ methods:
         summary: |
           List of new stable UV IDs to use for the given face's vertices.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState
@@ -1386,7 +1386,7 @@ methods:
         summary: |
           List of new stable vertex IDs to use for the given face.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState
@@ -1414,7 +1414,7 @@ methods:
         summary: |
           Normal vector to set.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1440,7 +1440,7 @@ methods:
         summary: |
           Position in the mesh's local object space.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1466,7 +1466,7 @@ methods:
         summary: |
           UV coordinates.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1492,7 +1492,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1518,7 +1518,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1544,7 +1544,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1563,7 +1563,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

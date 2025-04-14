@@ -28,45 +28,49 @@ properties:
       can_save: true
     capabilities: []
     writeCapabilities: []
-  - name: VideoPlayer.AutoLoad
+  - name: VideoPlayer.AutoLoadInStudio
     summary: ''
     description: ''
     code_samples: []
-    type: bool
-    tags: []
+    type: boolean
+    tags:
+      - NotReplicated
+      - NotScriptable
     deprecation_message: ''
     security:
       read: None
-      write: None
+      write: RobloxScriptSecurity
     thread_safety: ReadSafe
-    category: Asset
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-    writeCapabilities: []
-  - name: VideoPlayer.IsPlaying
-    summary: ''
-    description: ''
-    code_samples: []
-    type: bool
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: RobloxSecurity
-    thread_safety: ReadSafe
-    category: Playback
+    category: AutoPlayInEditMode
     serialization:
       can_load: false
       can_save: false
     capabilities: []
     writeCapabilities: []
-  - name: VideoPlayer.IsReady
+  - name: VideoPlayer.AutoPlayInStudio
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
+    tags:
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: AutoPlayInEditMode
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
+    writeCapabilities: []
+  - name: VideoPlayer.IsLoaded
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -81,11 +85,30 @@ properties:
       can_save: false
     capabilities: []
     writeCapabilities: []
+  - name: VideoPlayer.IsPlaying
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Playback
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: VideoPlayer.Looping
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -132,23 +155,6 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
-    writeCapabilities: []
-  - name: VideoPlayer.Thumbnail
-    summary: ''
-    description: ''
-    code_samples: []
-    type: ContentId
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Asset
-    serialization:
-      can_load: true
-      can_save: true
     capabilities: []
     writeCapabilities: []
   - name: VideoPlayer.TimeLength
@@ -223,13 +229,13 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: VideoPlayer:Play
+  - name: VideoPlayer:GetInputPins
     summary: ''
     description: ''
     code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: Array
         summary: ''
     tags: []
     deprecation_message: ''
@@ -237,15 +243,72 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: VideoPlayer:Stop
+  - name: VideoPlayer:GetOutputPins
     summary: ''
     description: ''
     code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: Array
         summary: ''
     tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: VideoPlayer:Pause
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: VideoPlayer:Play
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: VideoPlayer:Unload
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: VideoPlayer:LoadAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: AssetFetchStatus
+        summary: ''
+    tags:
+      - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -268,6 +331,48 @@ events:
     description: ''
     code_samples: []
     parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: VideoPlayer.PlayFailed
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: error
+        type: AssetFetchStatus
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: VideoPlayer.WiringChanged
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: connected
+        type: boolean
+        default:
+        summary: ''
+      - name: pin
+        type: string
+        default:
+        summary: ''
+      - name: wire
+        type: Wire
+        default:
+        summary: ''
+      - name: instance
+        type: Instance
+        default:
+        summary: ''
     tags: []
     deprecation_message: ''
     security: None

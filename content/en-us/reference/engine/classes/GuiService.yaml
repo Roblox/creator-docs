@@ -30,7 +30,7 @@ properties:
       `Class.GuiService.GuiNavigationEnabled` is enabled but you will have to
       set `Class.GuiService.SelectedObject` manually to start Gui navigation.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -51,7 +51,7 @@ properties:
       Toggles whether or not objects in the `Class.CoreGui` can be navigated
       using a Gamepad.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - Hidden
       - NotReplicated
@@ -72,7 +72,7 @@ properties:
     description: |
       Used to enable and disable the default controller GUI navigation.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -92,7 +92,7 @@ properties:
       This property tells whether or not a modal dialog is visible, such as the
       game menu or a purchase prompt.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -116,7 +116,7 @@ properties:
       The IsWindows property defines if the user is playing on a computer
       running Windows.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -139,7 +139,7 @@ properties:
     description: |
       Returns true if any menu of `Class.CoreGui` is open.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -229,7 +229,7 @@ properties:
       effects and animations to be reduced or completely removed.
     code_samples:
       - GuiService-ReducedMotionEnabled
-    type: bool
+    type: boolean
     tags:
       - Hidden
       - ReadOnly
@@ -314,7 +314,7 @@ properties:
       Used to enable and disable touch controls and touch control display UI.
       Defaults to true.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -351,7 +351,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -395,7 +395,7 @@ methods:
         summary: |
           The selection(s) added.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -428,7 +428,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -446,7 +446,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
@@ -466,7 +466,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Indicates whether the Emotes menu is open.
     tags: []
@@ -495,7 +495,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether or not the `Class.Player.GameplayPaused|gameplay paused`
           notification has been disabled.
@@ -556,7 +556,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           A boolean indicating whether the Inspect Menu feature is enabled.
     tags: []
@@ -606,7 +606,7 @@ methods:
         summary: |
           The name of the player being Inspected to show in the Inspect menu.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -647,7 +647,7 @@ methods:
         summary: |
           The `Class.Player.UserId|UserId` of the player to inspect.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -667,7 +667,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
@@ -691,7 +691,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -719,7 +719,7 @@ methods:
         summary: |
           The parent of selection whose descendants are searched.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -753,11 +753,11 @@ methods:
     code_samples:
     parameters:
       - name: isOpen
-        type: bool
+        type: boolean
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -785,12 +785,12 @@ methods:
     code_samples:
     parameters:
       - name: enabled
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether or not the built-in notification GUI is disabled.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -833,13 +833,13 @@ methods:
     code_samples:
     parameters:
       - name: enabled
-        type: bool
+        type: boolean
         default:
         summary: |
           A boolean indicating whether to enable or disable the Inspect Menu
           feature.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

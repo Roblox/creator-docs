@@ -116,7 +116,7 @@ methods:
         summary: |
           The `Class.Pose` to be added.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -168,7 +168,7 @@ methods:
         summary: |
           The `Class.Pose` to be removed.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

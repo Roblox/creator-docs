@@ -66,7 +66,7 @@ properties:
     summary: ''
     description: ''
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -125,7 +125,7 @@ properties:
       aggregate data about data sent by Instance type. The data sent for initial
       loading is compressed so the contributions are approximate.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -166,7 +166,7 @@ properties:
         happens if the part was just moved out of the Workspace, and was
         previously being simulated.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -221,7 +221,7 @@ properties:
         `Class.Player.ReplicationFocus` that can have physical instances
         streamed in.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -243,7 +243,7 @@ properties:
       recommended to keep this setting enabled to help discover potential bugs
       while testing in Studio.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -265,7 +265,7 @@ properties:
       will be outlined in red. This will only be shown if
       `Class.Workspace.StreamingEnabled` is set to true.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -288,7 +288,7 @@ properties:
       the current animation being played by the Player's `Class.Humanoid`, if
       any.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

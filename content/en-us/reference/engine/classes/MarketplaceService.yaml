@@ -84,7 +84,7 @@ methods:
         summary: |
           Not available at this time.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -108,7 +108,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -134,7 +134,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -160,7 +160,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -193,7 +193,7 @@ methods:
         summary: |
           The user being prompted to purchase Premium.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -220,7 +220,7 @@ methods:
         default:
         summary: ''
       - name: equipIfPurchased
-        type: bool
+        type: boolean
         default: true
         summary: ''
       - name: currencyType
@@ -228,7 +228,7 @@ methods:
         default: Default
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -271,7 +271,7 @@ methods:
         default:
         summary: ''
       - name: equipIfPurchased
-        type: bool
+        type: boolean
         default: true
         summary: ''
       - name: currencyType
@@ -280,7 +280,7 @@ methods:
         summary: |
           Ignored.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -306,7 +306,7 @@ methods:
         summary: |
           The ID of the subscription to subscribe to.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1024,7 +1024,7 @@ methods:
         summary: |
           The asset ID for which the given player's inventory is tested.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Indicates whether the given player's inventory contains the given
           asset.
@@ -1057,7 +1057,7 @@ methods:
         summary: |
           The bundle ID for which the given player's inventory is tested.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Indicates whether the given player's inventory contains the given
           bundle.
@@ -1107,7 +1107,7 @@ methods:
           The pass ID you want to check for. Not to be confused with an asset
           ID.
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields
@@ -1188,7 +1188,7 @@ events:
         default:
         summary: ''
       - name: wasPurchased
-        type: bool
+        type: boolean
         default:
         summary: ''
     tags: []
@@ -1230,7 +1230,7 @@ events:
           The ID number of the pass shown in the prompt. Not to be confused with
           an asset ID.
       - name: wasPurchased
-        type: bool
+        type: boolean
         default:
         summary: |
           Indicates if the user pressed **OK** (true), **Cancel** (false) on the
@@ -1324,7 +1324,7 @@ events:
           The ID number of the developer product shown in the prompt. Not to be
           confused with an asset ID.
       - name: isPurchased
-        type: bool
+        type: boolean
         default:
         summary: |
           Indicates if the user pressed **OK** (true), **Cancel** (false) on the
@@ -1374,7 +1374,7 @@ events:
         summary: |
           The asset ID of the item shown in the prompt.
       - name: isPurchased
-        type: bool
+        type: boolean
         default:
         summary: |
           Indicates if the user pressed **OK** (true), **Cancel** (false) on the
@@ -1417,7 +1417,7 @@ events:
         summary: |
           The ID of the subscription with a status change.
       - name: didTryPurchasing
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether the user attempted to purchase the subscription.

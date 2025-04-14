@@ -107,7 +107,7 @@ properties:
     description: |
       If true, wheels won't roll without user input.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: |
       The SkateboardPlatform object has been deprecated and is no longer
@@ -168,7 +168,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: |

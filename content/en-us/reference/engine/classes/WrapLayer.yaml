@@ -121,7 +121,7 @@ properties:
       Allows for disabling of the `Class.WrapLayer` object as if it does not
       exist.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

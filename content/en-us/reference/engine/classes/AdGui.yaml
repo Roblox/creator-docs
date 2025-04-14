@@ -34,7 +34,7 @@ properties:
     description: |
       The property enables the AdGui to serve video ads.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -106,7 +106,7 @@ callbacks:
           - `AdEventType` – A `Enum.AdEventType` enum value describing the AdGui
             events.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the callback has successfully reacted to the event.
     tags: []

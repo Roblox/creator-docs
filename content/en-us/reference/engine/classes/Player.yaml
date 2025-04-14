@@ -81,7 +81,7 @@ properties:
       basis using these three properties.
     code_samples:
       - Auto-Jump-Toggle
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -222,7 +222,7 @@ properties:
       the new appearance.
     code_samples:
       - disabling-a-player-s-appearance
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -404,7 +404,7 @@ properties:
       indicate when the player's data is available to load. Becomes true when
       data is available.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - Hidden
       - ReadOnly
@@ -560,7 +560,7 @@ properties:
       to lock the mouse.
     code_samples:
       - toggling-mouse-lock-ability
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -740,7 +740,7 @@ properties:
         `Enum.StreamingIntegrityMode` for more details on when gameplay is
         paused.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -761,7 +761,7 @@ properties:
       The HasVerifiedBadge `Class.Player` property indicates if the player has a
       Verified Badge.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -907,7 +907,7 @@ properties:
         will the `Class.Player.TeamColor`.
     code_samples:
       - checking-if-a-player-is-neutral
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -950,9 +950,9 @@ properties:
       over the network (such as physics, streaming, etc) replicate at different
       rates depending on how close objects are to the replication focus.
 
-      When this property is `nil`, it reverts to its default behavior which is to
-      treat the local player's character's `Class.Model.PrimaryPart|PrimaryPart`
-      as the replication focus.
+      When this property is `nil`, it reverts to its default behavior which is
+      to treat the local player's character's
+      `Class.Model.PrimaryPart|PrimaryPart` as the replication focus.
 
       This property should only be set on the server with a `Class.Script`, not
       a `Class.LocalScript`. Note that this property does not change or update
@@ -1037,8 +1037,8 @@ properties:
       The Team property is a reference to a `Class.Team` object within the
       `Class.Teams` service. It determines the team the player is on; if the
       `Class.Player` isn't on a team or has an invalid `Class.Player.TeamColor`,
-      this property is `nil`. When this property is set, the player has joined the
-      `Class.Team` and the `Class.Team.PlayerAdded` event fires on the
+      this property is `nil`. When this property is set, the player has joined
+      the `Class.Team` and the `Class.Team.PlayerAdded` event fires on the
       associated team. Similarly, `Class.Team.PlayerRemoved` fires when the
       property is unset from a certain `Class.Team`.
     code_samples:
@@ -1175,7 +1175,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1200,7 +1200,7 @@ methods:
       - Player-ClearCharacterAppearance1
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1425,7 +1425,7 @@ methods:
       - check-if-a-player-s-appearance-has-loaded
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           A boolean indicating whether or not the appearance of the player's
           character has loaded.
@@ -1453,7 +1453,7 @@ methods:
       - Player-IsVerified
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           A boolean indicating whether the player is verified.
     tags: []
@@ -1487,7 +1487,7 @@ methods:
         summary: |
           The message to show the user upon kicking.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1510,7 +1510,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -1557,7 +1557,7 @@ methods:
           An instance of the asset being loaded, which can be obtained using the
           `Class.InsertService:LoadAsset()` function.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1673,13 +1673,13 @@ methods:
         summary: |
           The Vector3 direction that the player should move.
       - name: relativeToCamera
-        type: bool
+        type: boolean
         default: false
         summary: |
           A boolean indicating whether the player should move relative to the
           player's camera.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1701,7 +1701,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1719,7 +1719,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1742,11 +1742,11 @@ methods:
         default:
         summary: ''
       - name: value
-        type: bool
+        type: boolean
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1777,7 +1777,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1808,7 +1808,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1839,7 +1839,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1873,7 +1873,7 @@ methods:
         summary: |
           The age of the account in days.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1904,12 +1904,12 @@ methods:
     code_samples:
     parameters:
       - name: value
-        type: bool
+        type: boolean
         default:
         summary: |
           A boolean indicating whether or not the player sees filtered chat.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1927,7 +1927,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -2013,11 +2013,11 @@ methods:
         default:
         summary: ''
       - name: value
-        type: bool
+        type: boolean
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -2043,7 +2043,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -2069,7 +2069,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -2094,7 +2094,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -2317,7 +2317,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields
@@ -2349,7 +2349,7 @@ methods:
         summary: |
           The `Class.Player.UserId` of the specified player.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           A boolean indicating whether a player is a friend of the specified
           user.
@@ -2388,7 +2388,7 @@ methods:
         summary: |
           The _groupId_ of the specified group.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           A boolean indicating whether the player is in the specified group.
     tags:
@@ -2439,7 +2439,7 @@ methods:
       - Player-LoadCharacter1
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields
@@ -2477,7 +2477,7 @@ methods:
           parts/colors, body scaling, accessories, clothing, and animations that
           will be equipped to the loaded character.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields
@@ -2524,7 +2524,7 @@ methods:
         summary: |
           Optional timeout for the request.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields
@@ -2545,7 +2545,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields
@@ -2568,7 +2568,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields
@@ -2586,7 +2586,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields

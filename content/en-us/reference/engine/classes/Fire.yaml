@@ -23,9 +23,9 @@ description: |
   `Class.Instance.Parent|Parent` is set to `nil` all existing particles
   immediately disappear, similar to the behavior of
   `Class.ParticleEmitter:Clear()`. It is possible to set the
-  `Class.Instance.Parent|Parent` to `nil` and back to the exact original object to
-  achieve the same effect. If immediate disappearance is not desired, try moving
-  the Fire's parent to some far away position, then
+  `Class.Instance.Parent|Parent` to `nil` and back to the exact original object
+  to achieve the same effect. If immediate disappearance is not desired, try
+  moving the Fire's parent to some far away position, then
   `Class.Instance:Destroy()|Destroy` the Fire after a few seconds using
   `Class.Debris:AddItem()`. This will give the existing particles time to
   expire.
@@ -90,9 +90,9 @@ properties:
       will continue to render until their lifetime expires. This property is
       useful for keeping pre-made fire effects off until they are needed later.
       Since flame particles are destroyed when the `Class.Fire` object's
-      `Class.Instance.Parent` is set to `nil`, this property is useful in allowing
-      existing particles the opportunity to expire before destroying the Fire
-      object altogether. See the function below.
+      `Class.Instance.Parent` is set to `nil`, this property is useful in
+      allowing existing particles the opportunity to expire before destroying
+      the Fire object altogether. See the function below.
 
       ```
       local Debris = game:GetService("Debris")
@@ -105,7 +105,7 @@ properties:
       ```
     code_samples:
       - Toggle-Fire-Effect
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

@@ -22,7 +22,7 @@ properties:
       This property specifies whether the `Class.GlobalDataStore` should work
       with all scopes.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -51,7 +51,7 @@ methods:
           feature name and the value is a boolean which specifies whether to
           enable.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

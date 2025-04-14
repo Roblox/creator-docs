@@ -2,8 +2,8 @@
 # engine reference YAML files in content/en-us/reference/engine/.
 
 backTo:
-  title: Back to platform
-  path: /platform
+  title: Back to experiences
+  path: /experiences
 navigation:
   - heading: Engine API
   - title: Overview
@@ -1288,6 +1288,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/ImageLabel.yaml
         ignoreTranslation: true
+      - title: ImportSession
+        path: /reference/engine/classes/ImportSession
+        type: engineapi
+        source: /reference/engine/classes/ImportSession.yaml
+        ignoreTranslation: true
       - title: IncrementalPatchBuilder
         path: /reference/engine/classes/IncrementalPatchBuilder
         type: engineapi
@@ -2238,6 +2243,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/SensorBase.yaml
         ignoreTranslation: true
+      - title: SerializationService
+        path: /reference/engine/classes/SerializationService
+        type: engineapi
+        source: /reference/engine/classes/SerializationService.yaml
+        ignoreTranslation: true
       - title: ServerReplicator
         path: /reference/engine/classes/ServerReplicator
         type: engineapi
@@ -2277,11 +2287,6 @@ navigation:
         path: /reference/engine/classes/ShirtGraphic
         type: engineapi
         source: /reference/engine/classes/ShirtGraphic.yaml
-        ignoreTranslation: true
-      - title: ShorelineUpgraderService
-        path: /reference/engine/classes/ShorelineUpgraderService
-        type: engineapi
-        source: /reference/engine/classes/ShorelineUpgraderService.yaml
         ignoreTranslation: true
       - title: SkateboardController
         path: /reference/engine/classes/SkateboardController
@@ -3300,6 +3305,11 @@ navigation:
         path: /reference/engine/enums/AccessoryType
         type: engineapi
         source: /reference/engine/enums/AccessoryType.yaml
+        ignoreTranslation: true
+      - title: ActionOnAutoResumeSync
+        path: /reference/engine/enums/ActionOnAutoResumeSync
+        type: engineapi
+        source: /reference/engine/enums/ActionOnAutoResumeSync.yaml
         ignoreTranslation: true
       - title: ActionOnStopSync
         path: /reference/engine/enums/ActionOnStopSync

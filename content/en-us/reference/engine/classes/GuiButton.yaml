@@ -50,7 +50,7 @@ properties:
       `Class.ImageButton.HoverImage|HoverImage` is not `nil`, nor on mouse click
       if its `Class.ImageButton.PressedImage|PressedImage` is not `nil`.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -90,7 +90,7 @@ properties:
       If `true` while the GUI element is visible, the mouse will not be locked
       unless the right mouse button is down.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -128,7 +128,7 @@ properties:
     description: |
       A boolean property which indicates whether the object has been selected.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

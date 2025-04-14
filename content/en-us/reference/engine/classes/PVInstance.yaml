@@ -119,7 +119,7 @@ methods:
           The `Datatype.CFrame` that the `Class.PVInstance` pivot should equal
           after moving it.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

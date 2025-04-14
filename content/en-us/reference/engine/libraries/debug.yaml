@@ -314,7 +314,7 @@ functions:
           [MicroProfiler](../../../studio/microprofiler/index.md) label
           displays.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
     code_samples:
@@ -328,7 +328,7 @@ functions:
       `Library.debug.profilebegin()` opened.
     parameters:
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
     code_samples:
@@ -373,7 +373,7 @@ functions:
       automatically assigned value (typically, the script name).
     parameters:
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
     code_samples:
@@ -387,7 +387,7 @@ functions:
       [Native Code Generation](../../../luau/native-code-gen.md) page.
     parameters:
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
     code_samples:

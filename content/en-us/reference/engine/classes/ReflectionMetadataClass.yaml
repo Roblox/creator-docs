@@ -62,7 +62,7 @@ properties:
       Toggles whether or not this object can be inserted through the Advanced
       Objects menu.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

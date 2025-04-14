@@ -178,7 +178,7 @@ properties:
 
       Default is `true`, meaning filtering is enabled.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -305,7 +305,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -323,7 +323,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -348,7 +348,7 @@ methods:
         summary: |
           The `Class.Sound` to be played.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -386,7 +386,7 @@ methods:
           `Enum.ListenerType.ObjectCFrame`, a `Datatype.CFrame` for
           `Enum.ListenerType.CFrame`, or `nil` for `Enum.ListenerType.Camera`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

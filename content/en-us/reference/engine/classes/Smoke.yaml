@@ -69,9 +69,9 @@ properties:
       will continue to render until their lifetime expires. This property is
       useful for keeping pre-made smoke effects off until they are needed later.
       Since smoke particles are destroyed when the `Class.Smoke` object's
-      `Class.Instance.Parent` is set to `nil`, this property is useful in allowing
-      existing particles the opportunity to expire before destroying the Fire
-      object altogether. See the function below.
+      `Class.Instance.Parent` is set to `nil`, this property is useful in
+      allowing existing particles the opportunity to expire before destroying
+      the Fire object altogether. See the function below.
 
       ```
       local Debris = game:GetService("Debris")
@@ -84,7 +84,7 @@ properties:
       ```
     code_samples:
       - Add-Smoke-to-Fire
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

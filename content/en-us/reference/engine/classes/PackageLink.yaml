@@ -37,7 +37,7 @@ properties:
       automatically updated to the latest version when entering a given place.
       The game will periodically check for new updates while a place is open.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

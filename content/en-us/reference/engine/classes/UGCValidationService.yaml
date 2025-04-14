@@ -82,5 +82,57 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: UGCValidationService:ValidateEditableMeshFacialBounds
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: editableMesh
+        type: EditableMesh
+        default:
+        summary: ''
+      - name: boundsScale
+        type: float
+        default:
+        summary: ''
+      - name: partSize
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: boolean
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: UGCValidationService:ValidateEditableMeshFacialExpressiveness
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: editableMesh
+        type: EditableMesh
+        default:
+        summary: ''
+      - name: minDelta
+        type: float
+        default:
+        summary: ''
+      - name: partSize
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: float
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

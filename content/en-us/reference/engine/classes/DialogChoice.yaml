@@ -23,7 +23,7 @@ properties:
       option after other dialog choices. Clicking on the goodbye option will
       exit the dialog.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

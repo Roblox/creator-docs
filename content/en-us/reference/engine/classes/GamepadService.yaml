@@ -28,7 +28,7 @@ properties:
       gamepad virtual cursor.
     code_samples:
       - GamepadService-GamepadCursorEnabled
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -52,7 +52,7 @@ methods:
       - GamepadService-DisableGamepadCursor
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -135,7 +135,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

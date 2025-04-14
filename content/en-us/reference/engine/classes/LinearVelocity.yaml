@@ -78,7 +78,7 @@ properties:
       physics solver will always apply a force that is large enough to achieve
       the target velocity.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

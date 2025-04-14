@@ -133,7 +133,7 @@ methods:
         summary: |
           The `Class.Keyframe` to be added.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -168,8 +168,8 @@ methods:
       by setting its parent to `nil`.
     description: |
       This function removes a `Class.Keyframe` from the `Class.KeyframeSequence`
-      by setting its parent to `nil`. It is functionally identical to setting the
-      keyframe's parent to `nil`.
+      by setting its parent to `nil`. It is functionally identical to setting
+      the keyframe's parent to `nil`.
 
       This sets the keyframe's parent to `nil`, but does not destroy it. This
       means, provided another reference to the keyframe remains, it can be
@@ -186,7 +186,7 @@ methods:
         summary: |
           The `Class.Keyframe` to be removed.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

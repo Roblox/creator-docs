@@ -27,7 +27,7 @@ properties:
       mesh. It is only changeable in Studio. This is useful for meshes that are
       typically modeled as "cards" such as a leaf, hair, or cloth.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -45,7 +45,7 @@ properties:
     summary: ''
     description: ''
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - Hidden
     deprecation_message: ''
@@ -64,7 +64,7 @@ properties:
     summary: ''
     description: ''
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - Hidden
     deprecation_message: ''
@@ -365,7 +365,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

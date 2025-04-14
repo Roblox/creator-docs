@@ -26,7 +26,7 @@ properties:
       shown by default. The default message has been removed, so this no longer
       does anything.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
       - Deprecated
@@ -237,7 +237,7 @@ methods:
           The loading `Class.ScreenGui` that is to be displayed during
           teleportation.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -325,7 +325,7 @@ methods:
         summary: |
           The value to store.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -371,7 +371,7 @@ methods:
           the destination place. Can be retrieved using
           `Class.TeleportService:GetArrivingTeleportGui()`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -426,7 +426,7 @@ methods:
           the destination place. Can be retrieved using
           `Class.TeleportService:GetArrivingTeleportGui()`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -482,7 +482,7 @@ methods:
           the destination place. Can be retrieved using
           `Class.TeleportService:GetArrivingTeleportGui()`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -533,7 +533,7 @@ methods:
           the destination place. Can be retrieved using
           `Class.TeleportService:GetArrivingTeleportGui()`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

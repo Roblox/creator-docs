@@ -113,7 +113,7 @@ properties:
       [Game Passes](../../../production/monetization/game-passes.md) and
       [clothing](../../../art/classic-clothing.md).
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''
@@ -254,7 +254,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -309,7 +309,7 @@ properties:
     description: |
       This property is discontinued and no longer takes effect.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - Hidden
       - NotReplicated
@@ -841,7 +841,7 @@ properties:
       - `Class.Workspace.StreamingTargetRadius`
       - `Class.Workspace.StreamingIntegrityMode`
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1007,7 +1007,7 @@ properties:
       similar to how `Class.BasePart.CanCollide` is ignored. For more
       information on the behavior of CanTouch, please visit its property page.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - NotScriptable
     deprecation_message: ''
@@ -1054,7 +1054,7 @@ methods:
           An array of `Class.BasePart|BaseParts` for whom joints are to be
           broken.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1313,7 +1313,7 @@ methods:
           `Enum.JointCreationMode|Enum.JointCreationMode.Surface` has the same
           behavior which equates to Join Always.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1371,7 +1371,7 @@ methods:
         summary: |
           An array of `Class.BasePart|parts` for whom joints are to be made.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1392,7 +1392,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           True if the PGS solver is enabled.
     tags: []
@@ -1447,7 +1447,7 @@ methods:
           An array of `Class.BasePart|BaseParts` for whom joints are to be
           broken.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1473,7 +1473,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

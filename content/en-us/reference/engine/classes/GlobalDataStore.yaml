@@ -124,11 +124,13 @@ methods:
       This function increments the value of a key by the provided amount (both
       must be integers).
 
-      Values in `Class.GlobalDataStore|GlobalDataStores` are **versioned** as outlined
-      in [versioning](../../../cloud-services/data-stores/versioning-listing-and-caching.md#versioning).
-      `Class.OrderedDataStore|OrderedDataStores` do not support versioning, so calling this
-      method on an ordered data store key will overwrite the current value
-      with the incremented value and make previous versions inaccessible.
+      Values in `Class.GlobalDataStore|GlobalDataStores` are **versioned** as
+      outlined in
+      [versioning](../../../cloud-services/data-stores/versioning-listing-and-caching.md#versioning).
+      `Class.OrderedDataStore|OrderedDataStores` do not support versioning, so
+      calling this method on an ordered data store key will overwrite the
+      current value with the incremented value and make previous versions
+      inaccessible.
     code_samples:
     parameters:
       - name: key
@@ -223,11 +225,12 @@ methods:
       This function sets the latest value, `Class.Player.UserId|UserIds`, and
       metadata for the given key.
 
-      Values in `Class.GlobalDataStore|GlobalDataStores` are **versioned** as outlined
-      in [versioning](../../../cloud-services/data-stores/versioning-listing-and-caching.md#versioning).
-      `Class.OrderedDataStore|OrderedDataStores` do not support versioning, so calling this
-      method on an ordered data store key will overwrite the current value
-      and make previous versions inaccessible.
+      Values in `Class.GlobalDataStore|GlobalDataStores` are **versioned** as
+      outlined in
+      [versioning](../../../cloud-services/data-stores/versioning-listing-and-caching.md#versioning).
+      `Class.OrderedDataStore|OrderedDataStores` do not support versioning, so
+      calling this method on an ordered data store key will overwrite the
+      current value and make previous versions inaccessible.
 
       Metadata definitions must always be updated with a value, even if there
       are no changes to the current value; otherwise the current value will be
@@ -300,11 +303,12 @@ methods:
       specified through the second parameter. If the callback returns `nil`, the
       write operation is cancelled and the value remains unchanged.
 
-      Values in `Class.GlobalDataStore|GlobalDataStores` are **versioned** as outlined
-      in [versioning](../../../cloud-services/data-stores/versioning-listing-and-caching.md#versioning).
-      `Class.OrderedDataStore|OrderedDataStores` do not support versioning, so calling this
-      method on an ordered data store key will overwrite the current value
-      and make previous versions inaccessible.
+      Values in `Class.GlobalDataStore|GlobalDataStores` are **versioned** as
+      outlined in
+      [versioning](../../../cloud-services/data-stores/versioning-listing-and-caching.md#versioning).
+      `Class.OrderedDataStore|OrderedDataStores` do not support versioning, so
+      calling this method on an ordered data store key will overwrite the
+      current value and make previous versions inaccessible.
 
       In cases where another game server updated the key in the short timespan
       between retrieving the key's current value and setting the key's value,

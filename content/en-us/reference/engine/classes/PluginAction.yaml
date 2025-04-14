@@ -54,7 +54,7 @@ properties:
 
       - `Class.Plugin.CreatePluginAction`, creates a PluginAction
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated

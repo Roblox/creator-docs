@@ -583,7 +583,7 @@ methods:
           bound function accepts a parameter, it passes `Enum.CloseReason`
           specifying the reason for the server shutdown.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -726,7 +726,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -764,7 +764,7 @@ methods:
         summary: |
           The given `Enum.GearType`.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether gear of the given `Enum.GearType` is permitted in the game.
     tags:
@@ -807,7 +807,7 @@ methods:
       - Custom-Loading-Screen
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the client has finished loading the game for the first time.
     tags: []
@@ -847,7 +847,7 @@ methods:
         summary: |
           The ID to set the `Class.DataModel.PlaceId` to.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -875,7 +875,7 @@ methods:
         summary: |
           The ID to set the `Class.DataModel.GameId` to.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -901,7 +901,7 @@ methods:
         default: SaveAll
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields
@@ -965,7 +965,7 @@ events:
       - DataModel-GraphicsQualityChangeRequest1
     parameters:
       - name: betterQuality
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether the user has prompted an increase (_true_) or a decrease

@@ -56,7 +56,7 @@ properties:
       effect with a custom effect as demonstrated in the following code sample.
     code_samples:
       - Custom-ForceField
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

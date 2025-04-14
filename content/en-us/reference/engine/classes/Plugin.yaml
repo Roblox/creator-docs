@@ -26,7 +26,7 @@ properties:
       Returns whether the user enabled `Collisions` in Studio under the Model
       tab.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -45,7 +45,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -86,7 +86,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -122,14 +122,14 @@ methods:
     code_samples:
     parameters:
       - name: exclusiveMouse
-        type: bool
+        type: boolean
         default:
         summary: |
           A boolean specifying whether to activate the plugin with exclusive
           mouse. If true, a `Class.PluginMouse` can be retrieved via
           `Class.Plugin:GetMouse()`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -185,7 +185,7 @@ methods:
         summary: |
           The name of the icon used to display the plugin.
       - name: allowBinding
-        type: bool
+        type: boolean
         default: true
         summary: |
           Whether the `Class.PluginAction` will be hidden from Studio's
@@ -298,7 +298,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -443,7 +443,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           A boolean indicating whether the plugin is currently active.
     tags: []
@@ -470,7 +470,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether this plugin is currently active with an exclusive mouse.
     tags: []
@@ -485,7 +485,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
@@ -534,7 +534,7 @@ methods:
         default: 1
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -555,7 +555,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -571,7 +571,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -602,7 +602,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -665,7 +665,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -755,7 +755,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -833,7 +833,7 @@ methods:
         default:
         summary: ''
       - name: isR15
-        type: bool
+        type: boolean
         default: true
         summary: ''
     returns:
@@ -858,7 +858,7 @@ methods:
     code_samples:
     parameters:
       - name: isR15
-        type: bool
+        type: boolean
         default: true
         summary: ''
     returns:
@@ -910,7 +910,7 @@ methods:
         default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields
