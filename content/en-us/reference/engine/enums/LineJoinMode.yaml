@@ -7,10 +7,21 @@ description: |
   This enum is used by `Class.UIStroke.LineJoinMode` to determine how corners
   are interpreted.
 
-  See also:
+  <figure>
+  <img src="../../../assets/ui/ui-objects/UIStroke-LineJoinMode-Round.png" width="376" />
+  <figcaption><code>LineJoinMode</code> = <code>Enum.LineJoinMode.Round|Round</code></figcaption>
+  </figure>
+  <figure>
+  <img src="../../../assets/ui/ui-objects/UIStroke-LineJoinMode-Bevel.png" width="376" />
+  <figcaption><code>LineJoinMode</code> = <code>Enum.LineJoinMode.Bevel|Bevel</code></figcaption>
+  </figure>
+  <figure>
+  <img src="../../../assets/ui/ui-objects/UIStroke-LineJoinMode-Miter.png" width="376" />
+  <figcaption><code>LineJoinMode</code> = <code>Enum.LineJoinMode.Miter|Miter</code></figcaption>
+  </figure>
 
   For a more detailed walkthrough of the UIStroke object, take a look at the
-  Applying Strokes article.
+  [UIStroke class](Class.UIStroke).
 code_samples:
 tags: []
 deprecation_message: ''
