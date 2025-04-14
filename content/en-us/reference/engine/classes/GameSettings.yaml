@@ -46,7 +46,7 @@ properties:
     deprecation_message: ''
     security:
       read: RobloxScriptSecurity
-      write: RobloxSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Video
     serialization:

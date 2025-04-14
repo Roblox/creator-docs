@@ -53,7 +53,7 @@
         "PluginSecurity",
         "LocalUserSecurity",
         "RobloxScriptSecurity",
-        "RobloxSecurity",
+        "RobloxEngineSecurity",
         "NotAccessibleSecurity",
         "WritePlayerSecurity"
       ]

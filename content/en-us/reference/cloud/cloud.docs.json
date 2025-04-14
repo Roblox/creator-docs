@@ -3,7 +3,8 @@
   "info": {
     "title": "Cloud API",
     "description": "The Roblox Open Cloud v2 API. This is a subset of endpoints that Roblox\nprovides. See https://create.roblox.com/docs/cloud/open-cloud for more\ndetails.",
-    "version": "2.0.0"
+    "version": "2.0.0",
+    "x-roblox-extensions-version": "1.0.0"
   },
   "servers": [
     {
@@ -53,7 +54,26 @@
             "$ref": "#/components/schemas/CreatorStoreProduct",
             "name": "CreatorStoreProduct"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 150
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "max_in_period": 30
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/creator-store-products/{creator_store_product_id}": {
@@ -99,7 +119,26 @@
             "$ref": "#/components/schemas/CreatorStoreProduct",
             "name": "CreatorStoreProduct"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 150
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "max_in_period": 30
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       },
       "patch": {
         "tags": [
@@ -171,7 +210,26 @@
             "$ref": "#/components/schemas/CreatorStoreProduct",
             "name": "CreatorStoreProduct"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 150
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "max_in_period": 30
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/groups/{group_id}": {
@@ -215,7 +273,26 @@
             "$ref": "#/components/schemas/Group",
             "name": "Group"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 150
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "max_in_period": 30
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/groups/{group_id}/join-requests": {
@@ -292,7 +369,26 @@
             "$ref": "#/components/schemas/GroupJoinRequest",
             "name": "GroupJoinRequest"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 300
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "max_in_period": 90
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/groups/{group_id}/join-requests/{join_request_id}:accept": {
@@ -351,7 +447,26 @@
             "$ref": "#/components/schemas/GroupJoinRequest",
             "name": "GroupJoinRequest"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "max_in_period": 90
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/groups/{group_id}/join-requests/{join_request_id}:decline": {
@@ -410,7 +525,26 @@
             "$ref": "#/components/schemas/GroupJoinRequest",
             "name": "GroupJoinRequest"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "max_in_period": 90
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/groups/{group_id}/memberships": {
@@ -485,7 +619,26 @@
             "$ref": "#/components/schemas/GroupMembership",
             "name": "GroupMembership"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 300
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "max_in_period": 90
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/groups/{group_id}/memberships/{membership_id}": {
@@ -550,7 +703,26 @@
             "$ref": "#/components/schemas/GroupMembership",
             "name": "GroupMembership"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 300
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "max_in_period": 90
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/groups/{group_id}/roles": {
@@ -617,7 +789,26 @@
             "$ref": "#/components/schemas/GroupRole",
             "name": "GroupRole"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 300
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "max_in_period": 90
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/groups/{group_id}/roles/{role_id}": {
@@ -670,7 +861,26 @@
             "$ref": "#/components/schemas/GroupRole",
             "name": "GroupRole"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 300
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "max_in_period": 90
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/groups/{group_id}/shout": {
@@ -714,7 +924,26 @@
             "$ref": "#/components/schemas/GroupShout",
             "name": "GroupShout"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 150
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "max_in_period": 30
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}": {
@@ -758,7 +987,26 @@
             "$ref": "#/components/schemas/Universe",
             "name": "Universe"
           }
-        }
+        },
+        "x-roblox-stability": "STABLE",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "max_in_period": 100
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       },
       "patch": {
         "tags": [
@@ -821,7 +1069,26 @@
             "$ref": "#/components/schemas/Universe",
             "name": "Universe"
           }
-        }
+        },
+        "x-roblox-stability": "STABLE",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "max_in_period": 100
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/data-stores": {
@@ -898,7 +1165,19 @@
             "$ref": "#/components/schemas/DataStore",
             "name": "DataStore"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 5000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries": {
@@ -993,7 +1272,19 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 5000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       },
       "post": {
         "tags": [
@@ -1070,7 +1361,19 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 5000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}": {
@@ -1134,7 +1437,19 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 1000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       },
       "delete": {
         "tags": [
@@ -1190,7 +1505,19 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 1000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       },
       "patch": {
         "tags": [
@@ -1271,7 +1598,19 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 1000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}:increment": {
@@ -1346,7 +1685,19 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 5000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}:listRevisions": {
@@ -1441,7 +1792,19 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 1000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries": {
@@ -1545,7 +1908,19 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 5000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       },
       "post": {
         "tags": [
@@ -1631,7 +2006,19 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 5000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries/{entry_id}": {
@@ -1704,7 +2091,19 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 1000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       },
       "delete": {
         "tags": [
@@ -1769,7 +2168,19 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 1000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       },
       "patch": {
         "tags": [
@@ -1859,7 +2270,19 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 1000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries/{entry_id}:increment": {
@@ -1943,7 +2366,19 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 5000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries/{entry_id}:listRevisions": {
@@ -2047,7 +2482,19 @@
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 1000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/data-stores:snapshot": {
@@ -2103,7 +2550,19 @@
             "$ref": "#/components/schemas/DataStore",
             "name": "DataStore"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 60
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/memory-store/queues/{queue_id}/items": {
@@ -2168,7 +2627,19 @@
             "$ref": "#/components/schemas/MemoryStoreQueueItem",
             "name": "MemoryStoreQueueItem"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 1000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/memory-store/queues/{queue_id}/items:discard": {
@@ -2227,7 +2698,19 @@
             "$ref": "#/components/schemas/MemoryStoreQueueItem",
             "name": "MemoryStoreQueueItem"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 1000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/memory-store/queues/{queue_id}/items:read": {
@@ -2310,7 +2793,19 @@
             "$ref": "#/components/schemas/MemoryStoreQueueItem",
             "name": "MemoryStoreQueueItem"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 1000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/memory-store/sorted-maps/{sorted_map_id}/items": {
@@ -2404,7 +2899,19 @@
             "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
             "name": "MemoryStoreSortedMapItem"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 1000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       },
       "post": {
         "tags": [
@@ -2481,7 +2988,19 @@
             "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
             "name": "MemoryStoreSortedMapItem"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 1000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/memory-store/sorted-maps/{sorted_map_id}/items/{item_id}": {
@@ -2545,7 +3064,19 @@
             "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
             "name": "MemoryStoreSortedMapItem"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 1000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       },
       "delete": {
         "tags": [
@@ -2601,7 +3132,19 @@
             "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
             "name": "MemoryStoreSortedMapItem"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 1000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       },
       "patch": {
         "tags": [
@@ -2682,7 +3225,19 @@
             "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
             "name": "MemoryStoreSortedMapItem"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 1000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/memory-store:flush": {
@@ -2746,7 +3301,19 @@
             "$ref": "#/components/schemas/MemoryStore",
             "name": "MemoryStore"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 1000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{scope_id}/entries": {
@@ -2849,7 +3416,19 @@
             "$ref": "#/components/schemas/OrderedDataStoreEntry",
             "name": "OrderedDataStoreEntry"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 100
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       },
       "post": {
         "tags": [
@@ -2935,7 +3514,19 @@
             "$ref": "#/components/schemas/OrderedDataStoreEntry",
             "name": "OrderedDataStoreEntry"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 500
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{scope_id}/entries/{entry_id}": {
@@ -3008,7 +3599,19 @@
             "$ref": "#/components/schemas/OrderedDataStoreEntry",
             "name": "OrderedDataStoreEntry"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 100
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       },
       "delete": {
         "tags": [
@@ -3073,7 +3676,19 @@
             "$ref": "#/components/schemas/OrderedDataStoreEntry",
             "name": "OrderedDataStoreEntry"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 500
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       },
       "patch": {
         "tags": [
@@ -3163,7 +3778,19 @@
             "$ref": "#/components/schemas/OrderedDataStoreEntry",
             "name": "OrderedDataStoreEntry"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 500
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{scope_id}/entries/{entry_id}:increment": {
@@ -3246,7 +3873,19 @@
             "$ref": "#/components/schemas/OrderedDataStoreEntry",
             "name": "OrderedDataStoreEntry"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 500
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}": {
@@ -3299,7 +3938,26 @@
             "$ref": "#/components/schemas/Place",
             "name": "Place"
           }
-        }
+        },
+        "x-roblox-stability": "STABLE",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "max_in_period": 100
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       },
       "patch": {
         "tags": [
@@ -3371,7 +4029,26 @@
             "$ref": "#/components/schemas/Place",
             "name": "Place"
           }
-        }
+        },
+        "x-roblox-stability": "STABLE",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "max_in_period": 100
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/instances/{instance_id}": {
@@ -3443,7 +4120,19 @@
             "$ref": "#/components/schemas/Instance",
             "name": "Instance"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 45
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       },
       "patch": {
         "tags": [
@@ -3532,7 +4221,19 @@
             "$ref": "#/components/schemas/Instance",
             "name": "Instance"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 45
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/instances/{instance_id}:listChildren": {
@@ -3627,7 +4328,19 @@
             "$ref": "#/components/schemas/Instance",
             "name": "Instance"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 45
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/luau-execution-session-tasks": {
@@ -3692,311 +4405,19 @@
             "$ref": "#/components/schemas/LuauExecutionSessionTask",
             "name": "LuauExecutionSessionTask"
           }
-        }
-      }
-    },
-    "/cloud/v2/universes/{universe_id}/places/{place_id}/luau-execution-session-tasks/{luau_execution_session_task_id}/logs": {
-      "get": {
-        "tags": [
-          "Cloud"
-        ],
-        "summary": "List Luau Execution Session Task Logs",
-        "description": "Lists log chunks generated by a `LuauExecutionSessionTask`.\n\nQuotas:\n* 45 calls per minute per API key owner or IP address",
-        "operationId": "Cloud_ListLuauExecutionSessionTaskLogs__Using_Universes_Places",
-        "parameters": [
-          {
-            "name": "universe_id",
-            "in": "path",
-            "description": "The universe ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "place_id",
-            "in": "path",
-            "description": "The place ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "luau_execution_session_task_id",
-            "in": "path",
-            "description": "The luau-execution-session-task ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "maxPageSize",
-            "in": "query",
-            "description": "The maximum number of luau execution session task logs to return. The\nservice might return fewer than this value. If unspecified, at most 10000\nluau execution session task logs are returned. The maximum value is 10000\nand higher values are set to 10000.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "examples": {
-              "maxPageSize": {
-                "description": "An integer between 1 and 10000, inclusive",
-                "value": 10000
-              }
-            }
-          },
-          {
-            "name": "pageToken",
-            "in": "query",
-            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\nWhen paginating, all other parameters provided to the subsequent call must\nmatch the call that provided the page token.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "view",
-            "in": "query",
-            "description": "The view in which to retrieve the luau execution session task log.\n\nSupports FLAT and STRUCTURED.\n\nDefaults to FLAT.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | VIEW_UNSPECIFIED | The luau execution session task log view is not specified; the default will be used. |\n  | FLAT | If this view is selected, the `messages` field will be populated (and the `structuredMessages` field will not). Each entry of the `messages` array contains only the log message, without additional medata.  This is the default. |\n  | STRUCTURED | If this view is selected, the `structuredMessages` field will be populated (and the `messages` field will not). Each entry of the `structuredMessages` array contains the log message plus additional metadata (see `LogMessage` for details). |",
-            "schema": {
-              "example": "VIEW_UNSPECIFIED",
-              "enum": [
-                "VIEW_UNSPECIFIED",
-                "FLAT",
-                "STRUCTURED"
-              ],
-              "type": "string",
-              "format": "enum"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ListLuauExecutionSessionTaskLogsResponse"
-                }
-              }
-            }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 5
           }
         },
-        "x-visibility": "BETA",
-        "x-roblox-docs": {
-          "category": "Luau execution",
-          "methodProperties": {
-            "scopes": [
-              "universe.place.luau-execution-session:read",
-              "universe.place.luau-execution-session:write"
-            ]
-          },
-          "resource": {
-            "$ref": "#/components/schemas/LuauExecutionSessionTaskLog",
-            "name": "LuauExecutionSessionTaskLog"
+        "security": [
+          {
+            "roblox-api-key": []
           }
-        }
-      }
-    },
-    "/cloud/v2/universes/{universe_id}/places/{place_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{task_id}": {
-      "get": {
-        "tags": [
-          "Cloud"
-        ],
-        "summary": "Get Luau Execution Session Task",
-        "description": "Gets information about a task.\n\nQuotas:\n* 45 calls per minute per API key owner or IP address",
-        "operationId": "Cloud_GetLuauExecutionSessionTask__Using_Universes_Places_LuauExecutionSessions",
-        "parameters": [
-          {
-            "name": "universe_id",
-            "in": "path",
-            "description": "The universe ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "place_id",
-            "in": "path",
-            "description": "The place ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "luau_execution_session_id",
-            "in": "path",
-            "description": "The luau-execution-session ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "task_id",
-            "in": "path",
-            "description": "The task ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "view",
-            "in": "query",
-            "description": "The view in which to retrieve the luau execution session task.\n\nSupports BASIC and FULL.\n\nDefaults to BASIC.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | VIEW_UNSPECIFIED | The luau execution session task view is not specified; the default will be used. |\n  | BASIC | Excludes the `script` field. |\n  | FULL | Includes all fields. |",
-            "schema": {
-              "example": "VIEW_UNSPECIFIED",
-              "enum": [
-                "VIEW_UNSPECIFIED",
-                "BASIC",
-                "FULL"
-              ],
-              "type": "string",
-              "format": "enum"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LuauExecutionSessionTask"
-                }
-              }
-            }
-          }
-        },
-        "x-visibility": "BETA",
-        "x-roblox-docs": {
-          "category": "Luau execution",
-          "methodProperties": {
-            "scopes": [
-              "universe.place.luau-execution-session:read",
-              "universe.place.luau-execution-session:write"
-            ]
-          },
-          "resource": {
-            "$ref": "#/components/schemas/LuauExecutionSessionTask",
-            "name": "LuauExecutionSessionTask"
-          }
-        }
-      }
-    },
-    "/cloud/v2/universes/{universe_id}/places/{place_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{task_id}/logs": {
-      "get": {
-        "tags": [
-          "Cloud"
-        ],
-        "summary": "List Luau Execution Session Task Logs",
-        "description": "Lists log chunks generated by a `LuauExecutionSessionTask`.\n\nQuotas:\n* 45 calls per minute per API key owner or IP address",
-        "operationId": "Cloud_ListLuauExecutionSessionTaskLogs__Using_Universes_Places_LuauExecutionSessions",
-        "parameters": [
-          {
-            "name": "universe_id",
-            "in": "path",
-            "description": "The universe ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "place_id",
-            "in": "path",
-            "description": "The place ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "luau_execution_session_id",
-            "in": "path",
-            "description": "The luau-execution-session ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "task_id",
-            "in": "path",
-            "description": "The task ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "maxPageSize",
-            "in": "query",
-            "description": "The maximum number of luau execution session task logs to return. The\nservice might return fewer than this value. If unspecified, at most 10000\nluau execution session task logs are returned. The maximum value is 10000\nand higher values are set to 10000.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "examples": {
-              "maxPageSize": {
-                "description": "An integer between 1 and 10000, inclusive",
-                "value": 10000
-              }
-            }
-          },
-          {
-            "name": "pageToken",
-            "in": "query",
-            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\nWhen paginating, all other parameters provided to the subsequent call must\nmatch the call that provided the page token.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "view",
-            "in": "query",
-            "description": "The view in which to retrieve the luau execution session task log.\n\nSupports FLAT and STRUCTURED.\n\nDefaults to FLAT.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | VIEW_UNSPECIFIED | The luau execution session task log view is not specified; the default will be used. |\n  | FLAT | If this view is selected, the `messages` field will be populated (and the `structuredMessages` field will not). Each entry of the `messages` array contains only the log message, without additional medata.  This is the default. |\n  | STRUCTURED | If this view is selected, the `structuredMessages` field will be populated (and the `messages` field will not). Each entry of the `structuredMessages` array contains the log message plus additional metadata (see `LogMessage` for details). |",
-            "schema": {
-              "example": "VIEW_UNSPECIFIED",
-              "enum": [
-                "VIEW_UNSPECIFIED",
-                "FLAT",
-                "STRUCTURED"
-              ],
-              "type": "string",
-              "format": "enum"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ListLuauExecutionSessionTaskLogsResponse"
-                }
-              }
-            }
-          }
-        },
-        "x-visibility": "BETA",
-        "x-roblox-docs": {
-          "category": "Luau execution",
-          "methodProperties": {
-            "scopes": [
-              "universe.place.luau-execution-session:read",
-              "universe.place.luau-execution-session:write"
-            ]
-          },
-          "resource": {
-            "$ref": "#/components/schemas/LuauExecutionSessionTaskLog",
-            "name": "LuauExecutionSessionTaskLog"
-          }
-        }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions": {
@@ -4048,14 +4469,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "filter",
-            "in": "query",
-            "description": "This field may be set in order to filter the resources returned.\n\nThe `filter` field supports a very small subset of CEL:\n\n* Only the `game_join_restriction.active` field is supported.\n* Only the `==` operator is available; no other operators nor\n  built-ins are supported.\n\nExample filter: `game_join_restriction.active == \"true\"`",
-            "schema": {
-              "type": "string"
-            }
           }
         ],
         "responses": {
@@ -4082,7 +4495,26 @@
             "$ref": "#/components/schemas/UserRestriction",
             "name": "UserRestriction"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "max_in_period": 150
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "max_in_period": 30
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions/{user_restriction_id}": {
@@ -4146,7 +4578,26 @@
             "$ref": "#/components/schemas/UserRestriction",
             "name": "UserRestriction"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "max_in_period": 150
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "max_in_period": 30
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       },
       "patch": {
         "tags": [
@@ -4245,7 +4696,26 @@
             "$ref": "#/components/schemas/UserRestriction",
             "name": "UserRestriction"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "max_in_period": 150
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "max_in_period": 30
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/versions/{version_id}/luau-execution-session-tasks": {
@@ -4319,119 +4789,19 @@
             "$ref": "#/components/schemas/LuauExecutionSessionTask",
             "name": "LuauExecutionSessionTask"
           }
-        }
-      }
-    },
-    "/cloud/v2/universes/{universe_id}/places/{place_id}/versions/{version_id}/luau-execution-session-tasks/{luau_execution_session_task_id}/logs": {
-      "get": {
-        "tags": [
-          "Cloud"
-        ],
-        "summary": "List Luau Execution Session Task Logs",
-        "description": "Lists log chunks generated by a `LuauExecutionSessionTask`.\n\nQuotas:\n* 45 calls per minute per API key owner or IP address",
-        "operationId": "Cloud_ListLuauExecutionSessionTaskLogs__Using_Universes_Places_Versions",
-        "parameters": [
-          {
-            "name": "universe_id",
-            "in": "path",
-            "description": "The universe ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "place_id",
-            "in": "path",
-            "description": "The place ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "version_id",
-            "in": "path",
-            "description": "The version ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "luau_execution_session_task_id",
-            "in": "path",
-            "description": "The luau-execution-session-task ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "maxPageSize",
-            "in": "query",
-            "description": "The maximum number of luau execution session task logs to return. The\nservice might return fewer than this value. If unspecified, at most 10000\nluau execution session task logs are returned. The maximum value is 10000\nand higher values are set to 10000.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "examples": {
-              "maxPageSize": {
-                "description": "An integer between 1 and 10000, inclusive",
-                "value": 10000
-              }
-            }
-          },
-          {
-            "name": "pageToken",
-            "in": "query",
-            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\nWhen paginating, all other parameters provided to the subsequent call must\nmatch the call that provided the page token.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "view",
-            "in": "query",
-            "description": "The view in which to retrieve the luau execution session task log.\n\nSupports FLAT and STRUCTURED.\n\nDefaults to FLAT.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | VIEW_UNSPECIFIED | The luau execution session task log view is not specified; the default will be used. |\n  | FLAT | If this view is selected, the `messages` field will be populated (and the `structuredMessages` field will not). Each entry of the `messages` array contains only the log message, without additional medata.  This is the default. |\n  | STRUCTURED | If this view is selected, the `structuredMessages` field will be populated (and the `messages` field will not). Each entry of the `structuredMessages` array contains the log message plus additional metadata (see `LogMessage` for details). |",
-            "schema": {
-              "example": "VIEW_UNSPECIFIED",
-              "enum": [
-                "VIEW_UNSPECIFIED",
-                "FLAT",
-                "STRUCTURED"
-              ],
-              "type": "string",
-              "format": "enum"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ListLuauExecutionSessionTaskLogsResponse"
-                }
-              }
-            }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 5
           }
         },
-        "x-visibility": "BETA",
-        "x-roblox-docs": {
-          "category": "Luau execution",
-          "methodProperties": {
-            "scopes": [
-              "universe.place.luau-execution-session:read",
-              "universe.place.luau-execution-session:write"
-            ]
-          },
-          "resource": {
-            "$ref": "#/components/schemas/LuauExecutionSessionTaskLog",
-            "name": "LuauExecutionSessionTaskLog"
+        "security": [
+          {
+            "roblox-api-key": []
           }
-        }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/versions/{version_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{task_id}": {
@@ -4441,7 +4811,7 @@
         ],
         "summary": "Get Luau Execution Session Task",
         "description": "Gets information about a task.\n\nQuotas:\n* 45 calls per minute per API key owner or IP address",
-        "operationId": "Cloud_GetLuauExecutionSessionTask__Using_Universes_Places_Versions_LuauExecutionSessions",
+        "operationId": "Cloud_GetLuauExecutionSessionTask",
         "parameters": [
           {
             "name": "universe_id",
@@ -4529,7 +4899,19 @@
             "$ref": "#/components/schemas/LuauExecutionSessionTask",
             "name": "LuauExecutionSessionTask"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 45
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/places/{place_id}/versions/{version_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{task_id}/logs": {
@@ -4539,7 +4921,7 @@
         ],
         "summary": "List Luau Execution Session Task Logs",
         "description": "Lists log chunks generated by a `LuauExecutionSessionTask`.\n\nQuotas:\n* 45 calls per minute per API key owner or IP address",
-        "operationId": "Cloud_ListLuauExecutionSessionTaskLogs__Using_Universes_Places_Versions_LuauExecutionSessions",
+        "operationId": "Cloud_ListLuauExecutionSessionTaskLogs",
         "parameters": [
           {
             "name": "universe_id",
@@ -4650,7 +5032,19 @@
             "$ref": "#/components/schemas/LuauExecutionSessionTaskLog",
             "name": "LuauExecutionSessionTaskLog"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 45
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/subscription-products/{subscription_product_id}/subscriptions/{subscription_id}": {
@@ -4730,7 +5124,26 @@
             "$ref": "#/components/schemas/Subscription",
             "name": "Subscription"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 500
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "max_in_period": 3
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/user-restrictions": {
@@ -4773,14 +5186,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "filter",
-            "in": "query",
-            "description": "This field may be set in order to filter the resources returned.\n\nThe `filter` field supports a very small subset of CEL:\n\n* Only the `game_join_restriction.active` field is supported.\n* Only the `==` operator is available; no other operators nor\n  built-ins are supported.\n\nExample filter: `game_join_restriction.active == \"true\"`",
-            "schema": {
-              "type": "string"
-            }
           }
         ],
         "responses": {
@@ -4807,7 +5212,26 @@
             "$ref": "#/components/schemas/UserRestriction",
             "name": "UserRestriction"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "max_in_period": 150
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "max_in_period": 30
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/user-restrictions/{user_restriction_id}": {
@@ -4862,7 +5286,26 @@
             "$ref": "#/components/schemas/UserRestriction",
             "name": "UserRestriction"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "max_in_period": 150
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "max_in_period": 30
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       },
       "patch": {
         "tags": [
@@ -4952,7 +5395,26 @@
             "$ref": "#/components/schemas/UserRestriction",
             "name": "UserRestriction"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "max_in_period": 150
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "max_in_period": 30
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}/user-restrictions:listLogs": {
@@ -5029,7 +5491,26 @@
             "$ref": "#/components/schemas/UserRestriction",
             "name": "UserRestriction"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "max_in_period": 150
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "max_in_period": 30
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}:publishMessage": {
@@ -5079,7 +5560,26 @@
             "$ref": "#/components/schemas/Universe",
             "name": "Universe"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 5000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "max_in_period": 5000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/universes/{universe_id}:restartServers": {
@@ -5135,7 +5635,26 @@
             "$ref": "#/components/schemas/Universe",
             "name": "Universe"
           }
-        }
+        },
+        "x-roblox-stability": "STABLE",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 30
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "max_in_period": 30
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/users/{user_id}": {
@@ -5179,7 +5698,26 @@
             "$ref": "#/components/schemas/User",
             "name": "User"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 1000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "max_in_period": 10
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/users/{user_id}/inventory-items": {
@@ -5254,7 +5792,26 @@
             "$ref": "#/components/schemas/InventoryItem",
             "name": "InventoryItem"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "max_in_period": 20
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/users/{user_id}/notifications": {
@@ -5310,7 +5867,26 @@
             "$ref": "#/components/schemas/UserNotification",
             "name": "UserNotification"
           }
-        }
+        },
+        "x-roblox-stability": "STABLE",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "max_in_period": 4000
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "max_in_period": 4000
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     },
     "/cloud/v2/users/{user_id}:generateThumbnail": {
@@ -5401,7 +5977,26 @@
             "$ref": "#/components/schemas/User",
             "name": "User"
           }
-        }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 1000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "max_in_period": 10
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
       }
     }
   },
@@ -5422,7 +6017,7 @@
           },
           "basePrice": {
             "$ref": "#/components/schemas/Money",
-            "description": "The base price of the product. For more information, see\n[Money](../../cloud/reference/types.md#money). Each product type (such as\n`pluginAssetId`) supports a set of specific prices. Currently, only setting\na base price in USD is supported.\n\nIn order to set a price, the Creator Store product must support the price\ntier. For example, a plugin can be set at the following prices: $0, $4.99,\n$5.99, $6.99, $7.99, $8.99, $9.99, $10.99, $11.99, $12.99, $13.99, $14.99,\nIn order to set the price of a plugin to $4.99, the following base price\nmust be set:\n```\n\"basePrice\": {\n  \"currencyCode\": \"USD\",\n  \"quantity\": {\n    \"significand\": 4990000000,\n    \"exponent\": -9\n  }\n}\n```\n\nNote: The exponent **must** be -9, and the significand must be in this\nformat. The corresponding [Decimal](../../cloud/reference/types.md#decimal)\nformat is `significand * 10^exponent`.\n\nIf you want to set the price of a plugin to $0 (i.e. free), use the\nfollowing `base_price`\n\n```\n\"basePrice\": {\n  \"currencyCode\": \"USD\",\n  \"quantity\": {\n    \"significand\": 0,\n    \"exponent\": 0\n  }\n}\n```\n\nNote: You must still set the `currencyCode` to USD, even for\nfree products.\n\nThe actual purchase price is based on this base price, but often differs\nslightly due to locale-specific considerations.\n\nSet this to zero to make the product free."
+            "description": "The base price of the product. For more information, see\n[Money](../../cloud/reference/types.md#money). Each product type (such as\n`pluginAssetId`) supports a set of specific prices. Currently, only setting\na base price in USD is supported.\n\nDepending on type, each Creator Store product has a fixed set of supported\nprices; see the `productType` attribute for the full list. For example, to\nset the price of a plugin to $4.99, use the following base price:\n```\n\"basePrice\": {\n  \"currencyCode\": \"USD\",\n  \"quantity\": {\n    \"significand\": 4990000000,\n    \"exponent\": -9\n  }\n}\n```\n\nNote: The exponent **must** be -9, and the significand must be in this\nformat. The corresponding [Decimal](../../cloud/reference/types.md#decimal)\nformat is `significand * 10^exponent`.\n\nIf you want to set the price of a plugin to $0 (i.e. free), use the\nfollowing `base_price`\n\n```\n\"basePrice\": {\n  \"currencyCode\": \"USD\",\n  \"quantity\": {\n    \"significand\": 0,\n    \"exponent\": 0\n  }\n}\n```\n\nNote: You must still set the `currencyCode` to USD, even for\nfree products.\n\nThe actual purchase price is based on this base price, but often differs\nslightly due to locale-specific considerations.\n\nSet this to zero to make the product free."
           },
           "purchasePrice": {
             "$ref": "#/components/schemas/Money",
@@ -7596,7 +8191,7 @@
             "readOnly": true,
             "example": true,
             "type": "boolean",
-            "description": "Specifies if the user is ID-verified.\n\nTo access this data, you need an API key / OAuth token with the following\nscope: user.advanced:read"
+            "description": "Specifies if the user is identity-verified. Verification includes, but\nisn't limited to, non-VoIP phone numbers or government IDs.\n\nTo access this data, you need an API key / OAuth token with the following\nscope: user.advanced:read"
           },
           "socialNetworkProfiles": {
             "$ref": "#/components/schemas/User_SocialNetworkProfiles",
@@ -8138,6 +8733,26 @@
           "Source": [
             "Source"
           ]
+        }
+      }
+    },
+    "securitySchemes": {
+      "roblox-api-key": {
+        "type": "apiKey",
+        "description": "A configurable key that allows granular access to Roblox resources. See https://create.roblox.com/docs/cloud/auth/api-keys for more information.",
+        "in": "header",
+        "name": "x-api-key"
+      },
+      "roblox-oauth2": {
+        "type": "oauth2",
+        "description": "OAuth 2.0 authentication for Roblox APIs. See https://create.roblox.com/docs/cloud/auth/oauth2-overview for more information.",
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "https://apis.roblox.com/oauth/v1/authorize",
+            "tokenUrl": "https://apis.roblox.com/oauth/v1/token",
+            "refreshUrl": "https://apis.roblox.com/oauth/v1/token",
+            "scopes": {}
+          }
         }
       }
     }

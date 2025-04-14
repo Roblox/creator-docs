@@ -53,8 +53,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -75,8 +75,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -97,8 +97,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -115,8 +115,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -133,8 +133,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -151,8 +151,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -169,8 +169,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -191,8 +191,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -213,8 +213,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -235,8 +235,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -257,8 +257,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -279,8 +279,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -301,8 +301,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -323,8 +323,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -345,8 +345,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -367,8 +367,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -389,8 +389,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -411,8 +411,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -433,8 +433,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -455,8 +455,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -473,8 +473,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -495,8 +495,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -517,8 +517,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -539,8 +539,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -561,8 +561,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -583,8 +583,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -605,8 +605,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -623,8 +623,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -645,8 +645,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -667,8 +667,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -685,8 +685,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -703,8 +703,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -725,8 +725,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -747,8 +747,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -769,8 +769,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -791,8 +791,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -813,8 +813,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -835,8 +835,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -878,8 +878,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
@@ -900,8 +900,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Material Overrides
     serialization:
