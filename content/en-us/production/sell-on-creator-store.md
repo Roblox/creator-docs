@@ -3,7 +3,7 @@ title: Sell on the Creator Store
 description: An explanation of Creator Store seller accounts, their prerequisites, and how to create one.
 ---
 
-You can sell [plugins](../studio/plugins.md) and now, [models](../parts/models) on the Creator Store for **United States Dollars** (USD). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted.
+You can sell [plugins](../studio/plugins.md) and [models](../parts/models.md) on the Creator Store for **United States Dollars** (USD). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted.
 
 <Alert severity="success">
 As of <tbd>, you can now start selling your models! [Create a seller account by onboarding, if you have not already,](#complete-the-application-form) to start monetizing your models!
