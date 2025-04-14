@@ -64,15 +64,15 @@ Here's a list of all the available acquisition sources:
   </tr>
   <tr>
     <td>Sponsored ads</td>
-    <td>Acquisition from [Sponsored Experiences](../promotion/ads-manager.md#sponsored-experiences) and **Sponsored Takeovers** on **Home**</td>
+    <td>Acquisition from [sponsored experiences](../promotion/ads-manager.md#sponsored-experiences) and **Sponsored Takeovers** on **Home**</td>
   </tr>
   <tr>
     <td>Search ads</td>
-    <td>Acquisition from [Search Ads](../promotion/search-ads.md)</td>
+    <td>Acquisition from [search ads](../promotion/search-ads.md)</td>
   </tr>
   <tr>
     <td>Portal ads</td>
-    <td>Acquisition from [Portal Ads](../promotion/ads-manager.md#portal-ads)</td>
+    <td>Acquisition from [portal ads](../promotion/ads-manager.md#portal-ads)</td>
   </tr>
   <tr>
     <td>Teleport</td>
@@ -86,7 +86,7 @@ Here's a list of all the available acquisition sources:
 
 ## Acquisition attribution
 
-The dashboard categorizes results for each acquisition source as follows:
+You can view the acquisition dashboard by [acquisition source](#acquisition-sources) or by [share links](../promotion/share-links.md). The dashboard categorizes results for both views as follows:
 
 <table>
   <tr>
@@ -119,7 +119,7 @@ The dashboard categorizes results for each acquisition source as follows:
   </tr>
 </table>
 
-<img src="../../assets/analytics/acquisition/New-Users-Funnel.png" width= "100%" alt="Chart indicating new users funnel."/>
+<img src="../../assets/analytics/acquisition/New-Users-Funnel.png" width= "100%" alt="Chart indicating new users funnel by acquisition source."/>
 
 ## Improve acquisition
 
@@ -161,3 +161,10 @@ Here are some tips to get users to visit your experience from external sources:
 1. **Create social accounts and post regularly**: Add social accounts such as Twitter, YouTube, and Instagram to your Roblox Experience Detail Page. Share regular updates, teasers, and screenshots to build buzz for your experience. Reply to other large social accounts to grow your following.
 2. **Create a user community**: Users in your community can share feedback, suggestions, bug reports, fan art, and more. Engage with your community regularly by hosting events and replying to comments and suggestions.
 3. **Partner with other creators and influencers**: You can partner with other creators who make similar experiences to grow together. You can also reach out to influencers who have large followings on platforms like YouTube or Twitch to see if they're willing to use or review your experience.
+4. **Create [share links](../promotion/share-links.md)**: Track your off-platform user acquisition and use the **New users funnel** table to understand:
+    - **Users with qualified plays**: How many new users are joining from each link?
+    - **7-day playtime per user**: Which links are bringing in users who engage the most?
+    - **D7 retention**: Which platforms drive users that keep coming back?
+    - **30-day revenue per user**: Which channels are attracting users who spend in-experience?
+
+<img src="../../assets/analytics/acquisition/Share-Link-Acquisition-Dashboard.png" width= "100%" alt="Chart indicating new users funnel by share links."/>

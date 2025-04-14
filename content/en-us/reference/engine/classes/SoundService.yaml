@@ -67,9 +67,30 @@ properties:
       can_save: true
     capabilities: []
     writeCapabilities: []
-  - name: SoundService.DefaultListenerLocation
+  - name: SoundService.CharacterSoundsUseNewApi
     summary: ''
     description: ''
+    code_samples: []
+    type: RolloutState
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: SoundService.DefaultListenerLocation
+    summary: |
+      Determines where (if anywhere) to place an `Class.AudioListener` by
+      default.
+    description: |
+      Determines where to place an `Class.AudioListener` by default. See
+      `Enum.ListenerLocation` for detailed descriptions of each option.
     code_samples: []
     type: ListenerLocation
     tags: []
@@ -157,7 +178,7 @@ properties:
 
       Default is `true`, meaning filtering is enabled.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -284,7 +305,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -302,7 +323,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -327,7 +348,7 @@ methods:
         summary: |
           The `Class.Sound` to be played.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -365,7 +386,7 @@ methods:
           `Enum.ListenerType.ObjectCFrame`, a `Datatype.CFrame` for
           `Enum.ListenerType.CFrame`, or `nil` for `Enum.ListenerType.Camera`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

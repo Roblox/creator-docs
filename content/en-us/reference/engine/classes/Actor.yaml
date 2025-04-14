@@ -142,7 +142,7 @@ methods:
         summary: |
           The contents of the message to send to the Actor.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

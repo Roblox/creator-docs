@@ -95,4 +95,4 @@ Service | Description
 `Class.MemoryStoreService` | For storing frequent and ephemeral data that change rapidly.
 `Class.MessagingService` | For communicating between multiple servers during live sessions.
 
-Cloud services also have corresponding web APIs; they're accessible from external scripts or tools. For more information, see [Open Cloud](../cloud/open-cloud/index.md).
+Cloud services also have corresponding web APIs; they're accessible from external scripts or tools. For more information, see [Open Cloud](../cloud/guides/index.md).

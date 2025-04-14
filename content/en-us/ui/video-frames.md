@@ -17,19 +17,19 @@ To upload video assets, you must be a 13+ [ID verified](https://en.help.roblox.c
 
 - You have the legal rights to use the video asset.
 - It adheres to the [Roblox Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846).
-- It's 30 seconds or less in either `.mp4` or `.mov` format.
+- It's 60 seconds or less in either `.mp4` or `.mov` format.
 - Its resolution is less than or equal to 4096&times;2160.
-- It's less than 375 MB.
+- It's less than 750 MB.
 - It includes only English, Spanish, Portuguese, Indonesian, Chinese (simplified and traditional), Japanese, and/or Korean audio and text.
 
 Videos that don't meet these requirements are rejected. Alpha channels are not supported and will be ignored. When uploading videos, consider the following:
 
 - Each video upload costs 2,000 Robux.
-- You can upload a maximum of three videos within any 30-day period, starting from the date of your first video upload.
+- You can upload a maximum of ten videos within any 30-day period, starting from the date of your first video upload.
 
 ### Upload
 
-You can upload videos through the [Asset Manager](../projects/assets/manager.md), the [Creator Dashboard](https://create.roblox.com/dashboard/creations?activeTab=Video), or the [Open Cloud API](../cloud/open-cloud/usage-assets.md). To upload through the [Asset Manager](../projects/assets/manager.md):
+You can upload videos through the [Asset Manager](../projects/assets/manager.md), the [Creator Dashboard](https://create.roblox.com/dashboard/creations?activeTab=Video), or the [Open Cloud API](../cloud/guides/usage-assets.md). To upload through the [Asset Manager](../projects/assets/manager.md):
 
 1. In the [View](../studio/view-tab.md) tab, click **Asset Manager**.
 

@@ -92,7 +92,7 @@ properties:
       Only meaningful when `Class.AngularVelocity.RelativeTo|RelativeTo` is set
       to `Enum.ActuatorRelativeTo|Attachment1`.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

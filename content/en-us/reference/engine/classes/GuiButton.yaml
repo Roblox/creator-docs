@@ -50,7 +50,7 @@ properties:
       `Class.ImageButton.HoverImage|HoverImage` is not `nil`, nor on mouse click
       if its `Class.ImageButton.PressedImage|PressedImage` is not `nil`.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -58,6 +58,24 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
+  - name: GuiButton.HoverHapticEffect
+    summary: ''
+    description: ''
+    code_samples: []
+    type: HapticEffect
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Haptic
     serialization:
       can_load: true
       can_save: true
@@ -72,7 +90,7 @@ properties:
       If `true` while the GUI element is visible, the mouse will not be locked
       unless the right mouse button is down.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -86,13 +104,31 @@ properties:
     capabilities:
       - UI
     writeCapabilities: []
+  - name: GuiButton.PressHapticEffect
+    summary: ''
+    description: ''
+    code_samples: []
+    type: HapticEffect
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Haptic
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiButton.Selected
     summary: |
       A boolean property which indicates whether the object has been selected.
     description: |
       A boolean property which indicates whether the object has been selected.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

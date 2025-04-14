@@ -48,8 +48,6 @@ learning how to build an environment and navigating Studio's UI, try the [core c
    </AccordionDetails>
    </BaseAccordion>
 
-   <br />
-
    <BaseAccordion>
    <AccordionSummary>
       <Typography variant="h4">Chapter 2 - Wireframe your layouts</Typography>
@@ -60,8 +58,6 @@ learning how to build an environment and navigating Studio's UI, try the [core c
 
    </AccordionDetails>
    </BaseAccordion>
-
-   <br />
 
    <BaseAccordion>
    <AccordionSummary>
@@ -82,5 +78,3 @@ learning how to build an environment and navigating Studio's UI, try the [core c
 
    </AccordionDetails>
    </BaseAccordion>
-
-   <br />

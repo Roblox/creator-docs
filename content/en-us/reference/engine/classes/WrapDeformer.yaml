@@ -38,8 +38,12 @@ methods:
         type: Content
         default:
         summary: ''
+      - name: cageOrigin
+        type: CoordinateFrame?
+        default:
+        summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -59,7 +63,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Object
+      - type: EditableMesh
         summary: ''
     tags:
       - Yields

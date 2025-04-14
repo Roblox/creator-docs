@@ -24,7 +24,7 @@ Which advertising product is right for your content depends on the type of conte
 </thead>
 <tbody>
   <tr>
-    <td>[Immersive ads](../../production/promotion/ads-manager.md)</td>
+    <td>[Immersive ads](../../production/monetization/immersive-ads.md)</td>
     <td>Experiences, Videos, Images </td>
     <td>Within the **[immersive ad units](../../production/monetization/immersive-ads.md)** publisher place within their experiences</td>
   </tr>
@@ -34,7 +34,7 @@ Which advertising product is right for your content depends on the type of conte
     <td>Search results for experiences</td>
   </tr>
   <tr>
-    <td>[Sponsored experiences](../../production/promotion/ads-manager.md)</td>
+    <td>[Sponsored experiences](../../production/promotion/ads-manager.md#sponsored-experiences)</td>
     <td>All ages, 9+, 13+ experiences</td>
     <td>Within the **Sponsored** category on the [Home](https://www.roblox.com/home) page</td>
   </tr>
@@ -57,7 +57,7 @@ In general, independent advertisements are advertisements that fall outside of R
 - Does the content promote where or how to purchase something available outside the experience?
 - Does the content contain a call to action encouraging the purchase of something available outside the experience?
 
-If your content is advertising, you are fully responsible for ensuring this content complies with all Roblox policies and any applicable local laws or regulations. For example, independent advertisements must adhere to Roblox's [Independent Advertising Policy](https://en.help.roblox.com/hc/articles/203313410#independent-advertisement-publishing), [Community Standards](https://en.help.roblox.com/hc/articles/203313410), and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), which require that you hide advertisements from users who are ineligible to receive ads and disclose that content is advertising in a way that Roblox users who encounter it will understand. For more information, see [Comply with Advertising Standards](../../production/promotion/comply-with-advertising-standards.md).
+If your content is advertising, you are fully responsible for ensuring this content complies with all Roblox policies and any applicable local laws or regulations. For example, independent advertisements must adhere to Roblox's [Independent Advertising Policy](https://en.help.roblox.com/hc/articles/203313410#independent-advertisement-publishing), [Community Standards](https://en.help.roblox.com/hc/articles/203313410), and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), which require that you hide advertisements from users who are ineligible to receive ads and disclose that content is advertising in a way that Roblox users who encounter it will understand. For more information, see the [advertising standards](../../production/promotion/comply-with-advertising-standards.md).
 
 <Alert severity="warning">
    If you violate any of Roblox's advertising standards, Roblox may suspend your experience and/or account.

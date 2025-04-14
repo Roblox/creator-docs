@@ -36,10 +36,10 @@ While a waterfall is a continuous and connected stream of water that involves mu
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../../../assets/tutorials/creating-waterfalls/Falls-Components.png" alt="Snoqualmie Falls with all five components highlighted." width="100%"/>
+    <img src="../../../assets/tutorials/creating-waterfalls/Falls-Components.png" alt="Snoqualmie Falls with all five components highlighted." width="98%"/>
   </figure>
   <figure>
-    <img src="../../../assets/tutorials/creating-waterfalls/Sample-Components.png" alt="The sample waterfall with the same five components highlighted to compare the reference image with the final result." width="100%"/>
+    <img src="../../../assets/tutorials/creating-waterfalls/Sample-Components.png" alt="The sample waterfall with the same five components highlighted to compare the reference image with the final result." width="99%"/>
   </figure>
 </GridContainer>
 

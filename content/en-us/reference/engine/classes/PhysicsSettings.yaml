@@ -24,7 +24,7 @@ properties:
       When set to true, physically simulated objects will stop being simulated
       if they have little to no motion for a set period of time.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -47,7 +47,7 @@ properties:
       gray surface outline on the surface of the part's bounding box that is
       currently facing the ground.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -72,7 +72,7 @@ properties:
       Parts that are attached together by `Class.JointInstance` will share the
       same color.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -89,7 +89,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -110,7 +110,7 @@ properties:
       When set to true, parts that are actively being physically simulated will
       have a red outline.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -171,7 +171,7 @@ properties:
       	</tr>
       </tbody></table>
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -188,7 +188,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -205,7 +205,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -222,7 +222,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -239,7 +239,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -262,7 +262,7 @@ properties:
       adorns on the parts in contact islands, where each contact island is
       assigned a random color.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -353,7 +353,7 @@ properties:
       	</tr>
       </tbody></table>
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -370,7 +370,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -391,7 +391,7 @@ properties:
       When set to true, XYZ axes are rendered at the `Class.BasePart.CFrame` of
       every part.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -408,7 +408,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -429,7 +429,7 @@ properties:
       When set to true, every individual mechanism of parts is given a unique
       color.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -452,7 +452,7 @@ properties:
       supposed to render an XYZ axis on the root part of a `Class.Model`, but
       the axis rendering component doesn't work correctly.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -469,7 +469,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -492,7 +492,7 @@ properties:
       and each part that the player has network ownership over is outlined with
       the same color.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -515,7 +515,7 @@ properties:
       supposed to render a large XYZ axis in the center of each
       `Class.BasePart`, but the axis rendering component doesn't work correctly.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -539,7 +539,7 @@ properties:
       and if they are within the player's simulation radius. If both conditions
       are met, that player will becomes the network owner of that object.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -556,7 +556,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -573,7 +573,7 @@ properties:
     summary: ''
     description: ''
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -590,7 +590,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -611,7 +611,7 @@ properties:
       When set to true, parts that aren't aligned on the 1x1x1 grid will be
       outlined yellow.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -634,7 +634,7 @@ properties:
       supposed to render a large XYZ axis in the center of the world, but the
       axis rendering component doesn't work correctly.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -655,7 +655,7 @@ properties:
       When set to true, Roblox will fall back to using its legacy CSG solver
       when performing solid model operations.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -672,7 +672,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -689,7 +689,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -706,7 +706,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -723,7 +723,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -740,7 +740,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -779,7 +779,7 @@ properties:
     summary: ''
     description: ''
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - Hidden
       - NotReplicated
@@ -832,7 +832,7 @@ properties:
     summary: ''
     description: ''
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -853,7 +853,7 @@ properties:
       This property is supposed to show the `Class.BasePart.ReceiveAge` of a
       part, but it does not work correctly.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -927,7 +927,7 @@ properties:
       	</tr>
       </tbody></table>
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -970,7 +970,7 @@ properties:
       When set to true, the underlying collision geometry for
       `Class.PartOperation` and `Class.MeshPart` is rendered.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -993,7 +993,7 @@ properties:
       shows aerodynamic force, torque, and center of pressure for the hovered or
       selected mechanisms.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1010,7 +1010,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1107,7 +1107,7 @@ properties:
       If set to true, version 2 of Roblox's CSG solver will be used instead of
       version 1.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

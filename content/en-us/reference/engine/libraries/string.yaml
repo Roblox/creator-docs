@@ -202,7 +202,7 @@ functions:
           <tr>
             <td><code>q</code></td>
             <td>string</td>
-            <td>String in a form suitable to be safely read back by the Lua interpreter. The string is written between double quotes and all double quotes, new lines, embedded zeros, and backslashes are correctly escaped.</td>
+            <td>String in a form suitable to be safely read back by the Luau interpreter. The string is written between double quotes and all double quotes, new lines, embedded zeros, and backslashes are correctly escaped.</td>
             <td>"print(\"Hi\")"</td>
           </tr>
           <tr>
@@ -495,11 +495,11 @@ functions:
   - name: string.match
     summary: |
       Looks for the first match of pattern in the string `s`. If a match is
-      found, it is returned; otherwise, it returns nil. A third, optional
+      found, it is returned; otherwise, it returns `nil`. A third, optional
       numerical argument, init, specifies where to start the search.
     description: |
       Looks for the first match of pattern in the string `s`. If a match is
-      found, it is returned; otherwise, it returns nil. A third, optional
+      found, it is returned; otherwise, it returns `nil`. A third, optional
       numerical argument, init, specifies where to start the search; its default
       value is 1 and can be negative.
     parameters:

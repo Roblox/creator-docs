@@ -54,7 +54,8 @@
         "LocalUserSecurity",
         "RobloxScriptSecurity",
         "RobloxSecurity",
-        "NotAccessibleSecurity"
+        "NotAccessibleSecurity",
+        "WritePlayerSecurity"
       ]
     },
     "tags": {
@@ -84,6 +85,20 @@
     "thread_safety": {
       "description": "Thread safety of this item. Enum. Automated.",
       "enum": ["Unsafe", "ReadSafe", "Safe", "ReadOnly"]
+    },
+    "capabilities": {
+      "description": "Features that have read capabilities to this item. Array of strings. Automated.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "writeCapabilities": {
+      "description": "Features that have write capabilities to this item. Array of strings. Automated.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     }
   },
   "properties": {
@@ -206,6 +221,12 @@
               }
             },
             "required": ["can_load", "can_save"]
+          },
+          "capabilities": {
+            "$ref": "#/definitions/capabilities"
+          },
+          "writeCapabilities": {
+            "$ref": "#/definitions/writeCapabilities"
           }
         },
         "required": [
@@ -219,7 +240,8 @@
           "security",
           "thread_safety",
           "category",
-          "serialization"
+          "serialization",
+          "capabilities"
         ]
       }
     },
@@ -264,7 +286,13 @@
             "description": "Security tag for this method. String. Automated.",
             "$ref": "#/definitions/security_tags"
           },
-          "thread_safety": { "$ref": "#/definitions/thread_safety" }
+          "thread_safety": { "$ref": "#/definitions/thread_safety" },
+          "capabilities": {
+            "$ref": "#/definitions/capabilities"
+          },
+          "writeCapabilities": {
+            "$ref": "#/definitions/writeCapabilities"
+          }
         },
         "required": [
           "name",
@@ -276,7 +304,8 @@
           "tags",
           "deprecation_message",
           "security",
-          "thread_safety"
+          "thread_safety",
+          "capabilities"
         ]
       }
     },
@@ -318,7 +347,12 @@
             "description": "Security tag for this event. String. Automated.",
             "$ref": "#/definitions/security_tags"
           },
-          "thread_safety": { "$ref": "#/definitions/thread_safety" }
+          "capabilities": {
+            "$ref": "#/definitions/capabilities"
+          },
+          "writeCapabilities": {
+            "$ref": "#/definitions/writeCapabilities"
+          }
         },
         "required": [
           "name",
@@ -329,7 +363,7 @@
           "tags",
           "deprecation_message",
           "security",
-          "thread_safety"
+          "capabilities"
         ]
       }
     },
@@ -374,7 +408,13 @@
             "description": "Security tag for this callback. String. Automated.",
             "$ref": "#/definitions/security_tags"
           },
-          "thread_safety": { "$ref": "#/definitions/thread_safety" }
+          "thread_safety": { "$ref": "#/definitions/thread_safety" },
+          "capabilities": {
+            "$ref": "#/definitions/capabilities"
+          },
+          "writeCapabilities": {
+            "$ref": "#/definitions/writeCapabilities"
+          }
         },
         "required": [
           "name",
@@ -386,7 +426,8 @@
           "tags",
           "deprecation_message",
           "security",
-          "thread_safety"
+          "thread_safety",
+          "capabilities"
         ]
       }
     }

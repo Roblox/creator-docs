@@ -248,8 +248,8 @@ functions:
       Returns `m` and `e` such that `x` = `m`\*`2`^`e`.
     description: |
       Returns `m` and `e` such that `x` = `m`\*`2`^`e`. `e` is an integer and
-      the absolute value of `m` is in the range of 0.5 to 1 (inclusive of 0.5
-      but exclusive of 1), or zero when `x` is zero.
+      the absolute value of `m` is in the range of `0.5` to `1` (inclusive of
+      `0.5` but exclusive of `1`), or zero when `x` is zero.
     parameters:
       - name: x
         type: number
@@ -279,6 +279,37 @@ functions:
     returns:
       - type: number
         summary: ''
+    tags:
+    code_samples:
+  - name: math.lerp
+    summary: |
+      Returns the linear interpolation between `a` and `b`.
+    description: |
+      Returns the linear interpolation between `a` and `b` based on the factor
+      `t`.
+
+      This function uses the formula `a`+`(b-a)`\*`t`. `t` is typically between
+      `0` and `1` but values outside this range are acceptable.
+    parameters:
+      - name: a
+        type: number
+        default:
+        summary: |
+          The starting value.
+      - name: b
+        type: number
+        default:
+        summary: |
+          The ending value.
+      - name: t
+        type: number
+        default:
+        summary: |
+          The interpolation factor, typically between `0` and `1`.
+    returns:
+      - type: number
+        summary: |
+          The interpolated value between `a` and `b`.
     tags:
     code_samples:
   - name: math.log
@@ -315,6 +346,46 @@ functions:
     returns:
       - type: number
         summary: ''
+    tags:
+    code_samples:
+  - name: math.map
+    summary: |
+      Returns the value of `x` mapped from one range to another.
+    description: |
+      Returns a value that represents `x` mapped linearly from the input range
+      (`inmin` to `inmax`) to the output range (`outmin` to `outmax`). This is
+      achieved by determining the relative position of `x` within the input
+      range and applying that ratio to the output range.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: |
+          The number to be mapped.
+      - name: inmin
+        type: number
+        default:
+        summary: |
+          The lower bound of the input range.
+      - name: inmax
+        type: number
+        default:
+        summary: |
+          The upper bound of the input range.
+      - name: outmin
+        type: number
+        default:
+        summary: |
+          The lower bound of the output range.
+      - name: outmax
+        type: number
+        default:
+        summary: |
+          The upper bound of the output range.
+    returns:
+      - type: number
+        summary: |
+          The value of `x` mapped to the output range.
     tags:
     code_samples:
   - name: math.max
@@ -379,9 +450,9 @@ functions:
       Returns a Perlin noise value.
     description: |
       Returns a Perlin noise value. The returned value is most often between the
-      range of -1 to 1 (inclusive) but sometimes may be outside that range; if
-      the interval is critical to you, use `Library.math.clamp(noise, -1, 1)` on
-      the output.
+      range of `-1` to `1` (inclusive) but sometimes may be outside that range;
+      if the interval is critical to you, use `Library.math.clamp(noise, -1, 1)`
+      on the output.
 
       If you leave arguments out, they will be interpreted as zero, so
       `Library.math.noise(1.158)` is equivalent to
@@ -393,9 +464,9 @@ functions:
       will always return `0.48397532105446` and `Library.math.noise(1.158, 6)`
       will always return `0.15315161645412`.
 
-      If `x`, `y`, and `z` are all integers, the return value will be 0. For
+      If `x`, `y`, and `z` are all integers, the return value will be `0`. For
       fractional values of `x`, `y`, and `z`, the return value will gradually
-      fluctuate between -0.5 and 0.5. For coordinates that are close to each
+      fluctuate between `-0.5` and `0.5`. For coordinates that are close to each
       other, the return values will also be close to each other.
     parameters:
       - name: x
@@ -455,10 +526,10 @@ functions:
       Returns a random number within the range provided.
     description: |
       When called without arguments, returns a uniform pseudo-random real number
-      in the range of 0 to 1 (inclusive of 0 but exclusive of 1).
+      in the range of `0` to `1` (inclusive of `0` but exclusive of `1`).
 
       When called with an integer number `m`, returns a uniform pseudo-random
-      integer in the range of 1 to `m`, inclusive.
+      integer in the range of `1` to `m`, inclusive.
 
       When called with two integer numbers `m` and `n`, returns a uniform
       pseudo-random integer in the range of `m` to `n`, inclusive.
@@ -492,7 +563,7 @@ functions:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
     code_samples:
@@ -502,12 +573,12 @@ functions:
       number.
     description: |
       Returns the integer with the smallest difference between it and the given
-      number. For example, the value 5.8 returns 6.
+      number. For example, the value `5.8` returns `6`.
 
-      For values like 0.5 that are equidistant to two integers, the value with
+      For values like `0.5` that are equidistant to two integers, the value with
       the greater difference between it and zero is chosen. In other words, the
-      function "rounds away from zero" such that 0.5 rounds to 1 and -0.5 rounds
-      to -1.
+      function "rounds away from zero" such that `0.5` rounds to `1` and `-0.5`
+      rounds to `-1`.
     parameters:
       - name: x
         type: number
@@ -521,11 +592,11 @@ functions:
     code_samples:
   - name: math.sign
     summary: |
-      Returns -1 if `x` is less than 0, 0 if `x` equals 0, or 1 if `x` is
-      greater than 0.
+      Returns `-1` if `x` is less than `0`, `0` if `x` equals `0`, or `1` if `x`
+      is greater than `0`.
     description: |
-      Returns -1 if `x` is less than 0, 0 if `x` equals 0, or 1 if `x` is
-      greater than 0.
+      Returns `-1` if `x` is less than `0`, `0` if `x` equals `0`, or `1` if `x`
+      is greater than `0`.
     parameters:
       - name: x
         type: number

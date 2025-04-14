@@ -1,0 +1,23 @@
+name: InputActionType
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Bool
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Float
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Direction2D
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''

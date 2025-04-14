@@ -34,8 +34,8 @@ You can add this model to your inventory within Studio by clicking the **Add to 
 
 To get this blaster asset from your inventory into your experience:
 
-1. In the menu bar, select the **View** tab.
-2. In the **Show** section, click **Toolbox**. The **Toolbox** window displays.
+1. In the toolbar, select the **View** tab.
+2. Click **Toolbox**. The **Toolbox** window displays.
 
    <img src="../../../assets/studio/general/View-Tab-Toolbox.png" width="776" />
 
@@ -76,7 +76,7 @@ Before you add a `Class.Beam` object to your blaster, it's important to configur
 To configure attachments for the laser beam:
 
 1. **(Optional)** Make attachment visual aids larger in the 3D space so that you can clearly visualize the start and end of the laser beam.
-   1. In the menu bar, navigate to the **Model** tab, then the **Constraints** section.
+   1. Navigate to the toolbar's **Model** tab, then the **Constraints** section.
    1. Set **Scale** to `2.5` to make each attachment visual aid larger.
 
    <img src="../../../assets/tutorials/laser-traps-with-beams/Attachments-1.png" width="50%" />
@@ -164,13 +164,13 @@ To script the behavior that damages the player:
 
 3. Test the behavior by walking into the laser beam.
 
-   1. In the menu bar, click the **Play** button. Studio enters playtest mode.
+   1. In the toolbar, click the **Play** button. Studio enters playtest mode.
 
-      <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png" width="716" />
+      <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png" width="228" alt="Play button highlighted in Studio's playtesting options." />
 
-   1. Walk into the laser beam to see your character fall apart. When you're done, navigate back to the menu bar and click the **Stop** button. Studio exits playtest mode.
+   1. Walk into the laser beam to see your character fall apart. When you're done, click the **Stop** button. Studio exits playtest mode.
 
-      <img src="../../../assets/studio/general/Quick-Access-Toolbar-Stop.png" width="716" />
+      <img src="../../../assets/studio/general/Quick-Access-Toolbar-Stop.png" width="228" alt="Stop button highlighted in Studio's playtesting options." />
 
    <Alert severity="warning">
    If the behavior isn't working correctly, make sure the script is a child of **LaserBeamBlaster**, and that the collision box is named `CollisionBox`.

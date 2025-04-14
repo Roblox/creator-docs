@@ -5,6 +5,10 @@ description: A list of tags for the MicroProfiler.
 
 The following is a list of common tags in the MicroProfiler, grouped by category. Understanding these tags can help you identify problematic code in your experience. The tables contain tag label, descriptions and performance advice for improving performance and optimizing your experience.
 
+## Sleep
+
+When threads aren't actively performing tasks, they enter a sleep state, with tags to indicate how long the thread was sleeping. At any given time, it's extremely common for most worker threads to be in a sleep state.
+
 ## AI/navigation
 
 <table>
@@ -302,7 +306,7 @@ The following is a list of common tags in the MicroProfiler, grouped by category
   </tr>
   <tr>
     <td>LuaGC</td>
-    <td>Lua garbage collection cycle. Label provides memory estimates on total allocation and how much was deallocated. </td>
+    <td>Luau garbage collection cycle. Label provides memory estimates on total allocation and how much was deallocated. </td>
     <td>Pool lua tables and other collectable objects or try to reduce creating temporary tables or strings</td>
   </tr>
   <tr>
@@ -340,7 +344,7 @@ The following is a list of common tags in the MicroProfiler, grouped by category
     <td>Reduce the amount and complexity of physically simulated bodies.</td>
   </tr>
   <tr>
-    <td>Simulation/physicsSteppedTotal/physicsStepped/SpacialFilter/filterStep</td>
+    <td>Simulation/physicsSteppedTotal/physicsStepped/SpatialFilter/filterStep</td>
     <td>Updates simulation islands, arranging parts according to network ownership, local simulation. Islands are non-interacting groups of parts which can be simulated independently.</td>
     <td>Avoid setting network ownership frequently. Keep groups of parts far enough away from each other so they can be simulated separately.</td>
   </tr>

@@ -21,8 +21,8 @@ description: |
   An `Class.EditableMesh` is displayed when it's linked to a new
   `Class.MeshPart`, through `Class.AssetService:CreateMeshPartAsync()`. You can
   create more `Class.MeshPart` instances that reference the same
-  `Class.EditableMesh` content, or link to an existing `Class.MeshPart` through
-  `Class.MeshPart:ApplyMesh()`.
+  `Class.EditableMesh` `Datatype.Content`, or link to an existing
+  `Class.MeshPart` through `Class.MeshPart:ApplyMesh()`.
 
   To recalculate collision and fluid geometry after editing, you can again call
   `Class.AssetService:CreateMeshPartAsync()` and `Class.MeshPart:ApplyMesh()` to
@@ -167,7 +167,7 @@ properties:
       Fixed-sized meshes allow changing the values of vertex attributes but do
       not allow vertices and triangles to be added or deleted.
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -186,7 +186,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -335,7 +335,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -671,7 +671,65 @@ methods:
       - type: Array
         summary: |
           List of face IDs which use the given attribute ID.
-    tags: []
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetFacesWithColor
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: colorId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetFacesWithNormal
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: normalId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetFacesWithUV
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: uvId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -794,6 +852,148 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: EditableMesh:GetVertexColors
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetVertexFaceColor
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: ''
+      - name: faceId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: int64
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetVertexFaceNormal
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: ''
+      - name: faceId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: int64
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetVertexFaceUV
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: ''
+      - name: faceId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: int64
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetVertexFaces
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetVertexNormals
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetVertexUVs
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetVertices
     summary: |
       Returns all vertices as a list of stable vertex IDs.
@@ -828,7 +1028,65 @@ methods:
       - type: Array
         summary: |
           List of vertex IDs which use the given attribute ID.
-    tags: []
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetVerticesWithColor
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: colorId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetVerticesWithNormal
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: normalId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetVerticesWithUV
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: uvId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -928,7 +1186,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -969,7 +1227,7 @@ methods:
         summary: |
           Stable normal ID to reset.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -995,7 +1253,7 @@ methods:
         summary: |
           Color to set.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1021,7 +1279,7 @@ methods:
         summary: |
           Alpha to set.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1047,7 +1305,7 @@ methods:
         summary: |
           List of new stable color IDs to use for the given face's vertices.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState
@@ -1074,7 +1332,7 @@ methods:
         summary: |
           List of new stable normal IDs to use for the given face's vertices.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState
@@ -1101,7 +1359,7 @@ methods:
         summary: |
           List of new stable UV IDs to use for the given face's vertices.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState
@@ -1128,7 +1386,7 @@ methods:
         summary: |
           List of new stable vertex IDs to use for the given face.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState
@@ -1156,7 +1414,7 @@ methods:
         summary: |
           Normal vector to set.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1182,7 +1440,7 @@ methods:
         summary: |
           Position in the mesh's local object space.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1208,7 +1466,85 @@ methods:
         summary: |
           UV coordinates.
     returns:
-      - type: void
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:SetVertexFaceColor
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: ''
+      - name: faceId
+        type: int64
+        default:
+        summary: ''
+      - name: colorId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:SetVertexFaceNormal
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: ''
+      - name: faceId
+        type: int64
+        default:
+        summary: ''
+      - name: normalId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:SetVertexFaceUV
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: ''
+      - name: faceId
+        type: int64
+        default:
+        summary: ''
+      - name: uvId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1227,7 +1563,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

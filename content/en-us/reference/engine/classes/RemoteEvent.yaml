@@ -68,7 +68,7 @@ methods:
           Values to pass to all `Class.RemoteEvent.OnClientEvent|OnClientEvent`
           events connected to the same `Class.RemoteEvent`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -112,7 +112,7 @@ methods:
           Values to pass to `Class.RemoteEvent.OnClientEvent|OnClientEvent`
           events connected to the same `Class.RemoteEvent`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -149,7 +149,7 @@ methods:
           Values to pass to `Class.RemoteEvent.OnServerEvent|OnServerEvent`
           events connected to the same `Class.RemoteEvent`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

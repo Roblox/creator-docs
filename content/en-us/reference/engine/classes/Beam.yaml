@@ -239,7 +239,7 @@ properties:
       When this property is set to false, the beam's
       `Class.Beam.Segments|Segments` will not be displayed.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -264,7 +264,7 @@ properties:
       `Class.Workspace.CurrentCamera|CurrentCamera`, regardless of its
       orientation.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -650,7 +650,7 @@ methods:
         summary: |
           The desired offset of the texture cycle.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

@@ -92,7 +92,7 @@ properties:
       after calling `Class.Humanoid:ApplyDescription()` if this property doesn't
       match the actual `Class.Accessory` contents.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

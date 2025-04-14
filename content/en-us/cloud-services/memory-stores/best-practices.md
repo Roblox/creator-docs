@@ -32,7 +32,7 @@ To shard a sorted map, consider splitting your data into alphabetic subsections 
 Use a helper function to get the correct sorted map from an item key. This way, you don't have to repeat the same block of code for every function call.
 </Alert>
 
-```lua title='Sharding a Sorted Map'
+```lua title="Sharding a Sorted Map"
 -- Initialize the MemoryStore Service
 local MemoryStoreService = game:GetService("MemoryStoreService")
 
@@ -81,7 +81,7 @@ One solution is to use a revolving queue, which means creating multiple queues a
    - For remove operations, pass the IDs from the read to each queue.
    - For add operations, add to the queue at the add pointer and increment the pointer.
 
-```lua title='Sharding a Queue'
+```lua title="Sharding a Queue"
 -- Initialize the MemoryStore Service
 local MemoryStoreService = game:GetService("MemoryStoreService")
 

@@ -136,10 +136,10 @@ In Roblox, the position of a UI object is represented by a `Datatype.UDim2` coor
 - `Datatype.UDim.Offset|Offset` values represent how many **pixels** to shift the object on the corresponding axis, additive of any `Datatype.UDim.Scale|Scale` values.
 
 <figure>
-<img src="../../../assets/ui/general/UDim2-Components.png" width="334" />
+<img src="../../../assets/ui/misc/UDim2-Components.png" width="334" />
 </figure>
 
-<img src="../../../assets/ui/general/Scale-Offset-Positioning.png" width="840" />
+<img src="../../../assets/ui/misc/Scale-Offset-Positioning.png" width="840" />
 
 To position a UI object in the upper-right corner of the screen container, `Datatype.UDim.Scale|Scale` is the best approach because an **X** value of `1` (100%) represents the right edge of the container, regardless of the screen's physical pixel size. Similarly, a **Y** scale value of `0` (0%) represents the top edge of the container.
 
@@ -322,7 +322,7 @@ To disable the default health meter, you'll use a **client script** (`Class.Loca
 
    Paste the following code inside the **HideDefaultHealthMeter** script:
 
-		```lua title='HideDefaultHealthMeter'
+		```lua title="HideDefaultHealthMeter"
 		local StarterGui = game:GetService("StarterGui")
 
 		-- Hide default health meter
@@ -371,7 +371,7 @@ All default Roblox character models contain a `Class.Humanoid` class which provi
 
 3. In the editor window for the **UpdateCustomMeter** script, paste the following code:
 
-		```lua title='UpdateCustomMeter'
+		```lua title="UpdateCustomMeter"
 		local Players = game:GetService("Players")
 
 		-- Reference to local player, character, and humanoid
@@ -490,7 +490,7 @@ To add an extra level of polish to the custom meter, you can animate health chan
 
 2. Select all lines (<kbd>Ctrl</kbd><kbd>A</kbd> or <kbd>⌘</kbd><kbd>A</kbd>) and then paste over them (<kbd>Ctrl</kbd><kbd>V</kbd> or <kbd>⌘</kbd><kbd>V</kbd>) with the following code:
 
-		```lua title='UpdateCustomMeter'
+		```lua title="UpdateCustomMeter"
 		local Players = game:GetService("Players")
 		local TweenService = game:GetService("TweenService")
 
@@ -597,7 +597,7 @@ The default health meter system includes a brief, subtle red tint on the screen 
 
 2. Select all lines and paste over them with the following code:
 
-		```lua title='UpdateCustomMeter'
+		```lua title="UpdateCustomMeter"
 		local Workspace = game:GetService("Workspace")
 		local Players = game:GetService("Players")
 		local TweenService = game:GetService("TweenService")

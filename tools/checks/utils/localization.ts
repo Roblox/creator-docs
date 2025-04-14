@@ -11,17 +11,21 @@ import { getNonEditableFilesList } from './files.js';
 import { areEqualFileImports, FileImports, getFileImports } from './imports.js';
 
 export enum Locale {
+  ID_ID = 'id-id',
   DE_DE = 'de-de',
   EN_US = 'en-us',
   ES_ES = 'es-es',
   FR_FR = 'fr-fr',
   IT_IT = 'it-it',
-  JA_JP = 'ja-jp',
-  KO_KR = 'ko-kr',
+  PL_PL = 'pl-pl',
   PT_BR = 'pt-br',
-  RU_RU = 'ru-ru',
+  VI_VN = 'vi-vn',
+  TR_TR = 'tr-tr',
+  TH_TH = 'th-th',
   ZH_CN = 'zh-cn',
   ZH_TW = 'zh-tw',
+  JA_JP = 'ja-jp',
+  KO_KR = 'ko-kr',
 }
 
 const LOCALE_REGEX = /\/([a-z]{2}-[a-z]{2})\//;

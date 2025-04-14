@@ -101,12 +101,12 @@ methods:
     description: ''
     code_samples: []
     parameters:
-      - name: table
+      - name: styleProperties
         type: Dictionary
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -128,7 +128,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

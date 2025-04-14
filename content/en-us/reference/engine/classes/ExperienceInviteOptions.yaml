@@ -66,7 +66,7 @@ properties:
     description: |
       Used to set a parameter in `Class.Player:GetJoinData()` when a friend
       joins from the invite notification; maximum of 200 characters. See
-      [Including Launch Data](../../../production/promotion/invite-prompts.md#including-launch-data)
+      [Include launch data](../../../production/promotion/invite-prompts.md#include-launch-data)
       for a usage example.
     code_samples: []
     type: string
@@ -90,12 +90,6 @@ properties:
       "Ask your friends to join the adventure!" for a multi-friend invite
       prompt, or "Invite this friend to join the adventure!" for a specific
       friend invite prompt.
-
-      <img
-      src="../../../assets/promotion/invite-prompts/Prompt-Multiple-Friends-Custom-Message.png"
-      width="840" /> <img
-      src="../../../assets/promotion/invite-prompts/Prompt-Specific-Friend-Custom-Message.png"
-      width="840" />
     code_samples: []
     type: string
     tags: []

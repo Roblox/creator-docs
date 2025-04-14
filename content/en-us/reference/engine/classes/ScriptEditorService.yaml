@@ -29,7 +29,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -50,7 +50,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -61,10 +61,10 @@ methods:
   - name: ScriptEditorService:FindScriptDocument
     summary: |
       Returns the open `Class.ScriptDocument` corresponding to the given
-      `Class.LuaSourceContainer`, or nil if the given script is not open.
+      `Class.LuaSourceContainer`, or `nil` if the given script is not open.
     description: |
       Returns the open `Class.ScriptDocument` corresponding to the given
-      `Class.LuaSourceContainer`, or nil if the given script is not open.
+      `Class.LuaSourceContainer`, or `nil` if the given script is not open.
     code_samples:
       - ScriptDocument-CloseAsync
       - ScriptDocument-ViewportChanged
@@ -195,6 +195,7 @@ methods:
             preselect: boolean?,
             textEdit: {
               newText: string,
+              insert: { start: { line: number, character: number }, ["end"]: { line: number, character: number } },
               replace: { start: { line: number, character: number }, ["end"]: { line: number, character: number } },
             }?
           }
@@ -234,8 +235,8 @@ methods:
         item ahead of all others and selects it for the user by default. No
         effect if false or missing.
       - `Response.items[n].textEdit` If present, accepting the completion
-        applies this text edit - replacing the span between the positions start
-        and end with newText.
+        applies this text edit - inserting or replacing the span between the
+        positions start and end with newText.
 
       If a callback returns a malformed result or encounters an error, the
       editor discards the modified Response table and uses the built-in
@@ -256,7 +257,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -340,7 +341,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -420,7 +421,7 @@ methods:
         summary: |
           The function to return new script content.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields

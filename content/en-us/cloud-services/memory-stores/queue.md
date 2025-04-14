@@ -11,7 +11,7 @@ Memory store queues are useful for order-based processing and storing user infor
 
 To get a queue, call `Class.MemoryStoreService:GetQueue()` with a **name**, which is global within the experience for any script to access, and an optional **invisibility timeout** in seconds, which prevents duplicated processing of the same queue item. Invisibility timeout is 30 seconds by default if you leave it empty like the following code sample.
 
-```lua title='Getting an Empty Queue'
+```lua title="Getting an Empty Queue"
 local MemoryStoreService = game:GetService("MemoryStoreService")
 
 local queue = MemoryStoreService:GetQueue("Queue1")
@@ -52,7 +52,7 @@ All functions accessing data structures in memory stores are asynchronous networ
 
 To add a new item to the queue, call `Class.MemoryStoreQueue:AddAsync()` with the item value, an expiration time in seconds, and an optional priority of the item. If you want to keep your queue in the FIFO sequence, you can leave the priority empty or pass `0`.
 
-```lua title='Adding Data to a Queue'
+```lua title="Adding Data to a Queue"
 local MemoryStoreService = game:GetService("MemoryStoreService")
 
 local queue = MemoryStoreService:GetQueue("Queue1")
@@ -69,7 +69,7 @@ end
 
 To read one or more items from the queue at once, call `Class.MemoryStoreQueue:ReadAsync()`, which returns an `id` representing the read item. When you finish processing items, immediately call `Class.MemoryStoreQueue:RemoveAsync()` to delete them from the queue with its `id`. This ensures that you never process an item more than once. To capture and respond to all items that are continuously being added to a queue, include a [loop](../../luau/control-structures.md) like the following code sample:
 
-```lua title='Reading and Removing Data from Queue with Loop'
+```lua title="Reading and Removing Data from Queue with Loop"
 local MemoryStoreService = game:GetService("MemoryStoreService")
 
 local queue = MemoryStoreService:GetQueue("Queue1")

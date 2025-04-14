@@ -68,7 +68,7 @@ properties:
       the `Class.StarterPlayer.AutoJumpEnabled` property.
     code_samples:
       - Auto-Jump-Toggle
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -124,7 +124,7 @@ properties:
       </table>
     code_samples:
       - AutoRotate
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -150,7 +150,7 @@ properties:
       the character's body parts and accessories to change size, but only if
       `AutomaticScalingEnabled` is true.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -172,7 +172,7 @@ properties:
       Determines whether the humanoid's joints break when in the
       `Enum.HumanoidStateType.Dead` state. Defaults to true.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -355,7 +355,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -600,7 +600,7 @@ properties:
       `Class.Humanoid.JumpHeight`, depending on the value of
       `Class.Humanoid.UseJumpPower`.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''
@@ -688,7 +688,7 @@ properties:
       A reference to the humanoid's _Left Leg_ part.
     description: |
       A reference to the humanoid's _Left Leg_ part. The value of this property
-      will always be nil if the humanoid's `Enum.RigType` is set to R15.
+      will always be `nil` if the humanoid's `Enum.RigType` is set to R15.
     code_samples:
     type: BasePart
     tags:
@@ -867,7 +867,7 @@ properties:
       similar to sitting, except that jumping does not free the humanoid from
       the state.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -891,7 +891,7 @@ properties:
       `Character|character` dies if the Neck `Class.Motor6D` is removed or
       disconnected even momentarily. This property defaults to true.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -941,7 +941,7 @@ properties:
       A reference to the humanoid's _Right Leg_ part.
     description: |
       A reference to the humanoid's _Right Leg_ part. The value of this property
-      will always be nil if the humanoid's RigType is set to R15.
+      will always be `nil` if the humanoid's RigType is set to R15.
     code_samples:
     type: BasePart
     tags:
@@ -970,8 +970,10 @@ properties:
       driving part of the `Class.Humanoid` that controls a humanoid's movement
       through the 3D world. This part is normally invisible.
 
-      Note that in the case of player characters, **RootPart** is the same as
-      the `Class.Model.PrimaryPart` of the `Class.Player.Character` model.
+      For R15 characters, `Class.Model.PrimaryPart` of the
+      `Class.Player.Character` model is set to **HumanoidRootPart**.
+
+      For R6 characters, `Class.Model.PrimaryPart` is set to the `Head` part.
     code_samples:
     type: BasePart
     tags:
@@ -1038,7 +1040,7 @@ properties:
       - It is possible to detect when a Humanoid sits by connecting to the
         `Class.Humanoid.Seated` event.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1124,7 +1126,7 @@ properties:
       false, the `Class.Humanoid.JumpPower` value is used to apply an upward
       force.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1189,7 +1191,7 @@ properties:
       part, plus the `Class.Humanoid.WalkToPoint` translated in object space
       relative to the rotation of the part.
 
-      This can be described in Lua as:
+      This can be described in Luau as:
 
       ```lua
       goal = humanoid.WalkToPart.CFrame:pointToObjectSpace(humanoid.WalkToPoint)
@@ -1323,7 +1325,7 @@ methods:
         summary: |
           The `Class.Accessory` to be attached.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1345,7 +1347,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -1371,7 +1373,7 @@ methods:
         default: Poison
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -1407,7 +1409,7 @@ methods:
       - R15-Package-Importer
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1440,10 +1442,11 @@ methods:
 
       Note that in order to set the `Class.Humanoid` state using this method,
       you must do so from a `Class.LocalScript` and the client must have
-      [network ownership](../../../physics/network-ownership.md) of the `Class.Player.Character`.
-      Alternatively, you can call this method from a server-side `Class.Script`, but the
-      server must have network ownership of the player character.
-      
+      [network ownership](../../../physics/network-ownership.md) of the
+      `Class.Player.Character`. Alternatively, you can call this method from a
+      server-side `Class.Script`, but the server must have network ownership of
+      the player character.
+
       See also `Class.Humanoid:SetStateEnabled()` to enable or disable a
       particular state, and `Class.Humanoid:GetState()` to get the current
       humanoid state.
@@ -1456,7 +1459,7 @@ methods:
         summary: |
           The `Enum.HumanoidStateType` that the `Class.Humanoid` is to perform.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1489,9 +1492,8 @@ methods:
       end
       ```
 
-      When this method is called, the `Class.Humanoid` will first
-      automatically unequip all `Class.Tool|Tools` that it currently has
-      equipped.
+      When this method is called, the `Class.Humanoid` will first automatically
+      unequip all `Class.Tool|Tools` that it currently has equipped.
 
       Although they will be equipped, `Class.Tool|Tools` for which
       `Class.Tool.RequiresHandle` is _true_ will not function if they have no
@@ -1508,7 +1510,7 @@ methods:
         summary: |
           The `Class.Tool` to equip.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1583,8 +1585,8 @@ methods:
     description: |
       This method returns what `Enum.BodyPartR15` a `Class.Part` is, or
       `Enum.BodyPartR15.Unknown` if the part is not an R15 body part. This
-      method allows developers to retrieve player body parts independent of
-      what the actual body part names are, instead returning an enum.
+      method allows developers to retrieve player body parts independent of what
+      the actual body part names are, instead returning an enum.
 
       It can be used in conjunction with `Class.Humanoid:ReplaceBodyPartR15()`.
       For example, if a player's body part touches something, this function will
@@ -1619,8 +1621,8 @@ methods:
       Returns the `Enum.Limb` enum that is associated with the given
       `Class.Part`.
     description: |
-      This method returns the `Enum.Limb` enum that is associated with the
-      given `Class.Part`. It works for both R15 and R6 rigs, for example:
+      This method returns the `Enum.Limb` enum that is associated with the given
+      `Class.Part`. It works for both R15 and R6 rigs, for example:
 
       ```lua
       -- For R15
@@ -1672,10 +1674,10 @@ methods:
       Returns an array of all `Class.AnimationTrack|AnimationTracks` that are
       currently being played on the `Class.Humanoid`.
     description: |
-      This method returns an array of all
-      `Class.AnimationTrack|AnimationTracks` that are currently being played on
-      the `Class.Humanoid`. A typical use for this method is stopping
-      currently playing tracks using `Class.AnimationTrack:Stop()`.
+      This method returns an array of all `Class.AnimationTrack|AnimationTracks`
+      that are currently being played on the `Class.Humanoid`. A typical use for
+      this method is stopping currently playing tracks using
+      `Class.AnimationTrack:Stop()`.
 
       Beware that this method will not return
       `Class.AnimationTrack|AnimationTracks` that have loaded but are **not
@@ -1748,7 +1750,7 @@ methods:
         summary: |
           The given `Enum.HumanoidStateType`.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the given `Enum.HumanoidStateType` is enabled.
     tags: []
@@ -1791,7 +1793,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -1815,7 +1817,7 @@ methods:
         default: Poison
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -1832,8 +1834,8 @@ methods:
       Loads an `Class.Animation` onto a `Class.Humanoid`, returning an
       `Class.AnimationTrack` that can be used for playback.
     description: |
-      This method loads an `Class.Animation` onto a `Class.Humanoid`,
-      returning an `Class.AnimationTrack` that can be used for playback.
+      This method loads an `Class.Animation` onto a `Class.Humanoid`, returning
+      an `Class.AnimationTrack` that can be used for playback.
     code_samples:
     parameters:
       - name: animation
@@ -1873,16 +1875,15 @@ methods:
       ```
 
       When this method is called, the `Class.Humanoid` will move until the
-      method is called again. However, if the default control scripts are
-      being used, this method will be overwritten when called on player
-      `Class.Player.Character|Characters`. This can be avoided by either not
-      using the default control scripts, or calling this function every frame
-      using `Class.RunService:BindToRenderStep()` (see example).
+      method is called again. However, this method will be overwritten in the
+      next frame by Roblox's default character control script. This can be
+      avoided by either calling this function every frame using
+      `Class.RunService:BindToRenderStep()` (see example), or overwriting the
+      control scripts in `Class.StarterPlayerScripts`.
 
-      This method can be called on the server, but this should only be done
-      when the server has
-      [network ownership](../../../physics/network-ownership.md) of the
-      humanoid's assembly.
+      This method can be called on the server, but this should only be done when
+      the server has [network ownership](../../../physics/network-ownership.md)
+      of the humanoid's assembly.
 
       See also `Class.Humanoid:MoveTo()` which makes a`Class.Humanoid` walk to a
       point, and `Class.Player:Move()` which effectively calls this function.
@@ -1895,13 +1896,13 @@ methods:
         summary: |
           The direction to walk in.
       - name: relativeToCamera
-        type: bool
+        type: boolean
         default: false
         summary: |
           Set to `true` if the `moveDirection` parameter should be taken as
           relative to the `Class.Workspace.CurrentCamera|CurrentCamera`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1964,7 +1965,7 @@ methods:
         summary: |
           The `Class.BasePart` to set `Class.Humanoid.WalkToPart` to.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1992,7 +1993,7 @@ methods:
       - remove-accessories-after-loading
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -2013,7 +2014,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -2038,7 +2039,7 @@ methods:
         default: Poison
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -2057,8 +2058,8 @@ methods:
       Dynamically replaces a R15/Rthro limb part in a Humanoid with a different
       part. The part is automatically scaled as normal.
 
-      This method is useful for modifying characters during gameplay or
-      building characters from a base rig. The related method
+      This method is useful for modifying characters during gameplay or building
+      characters from a base rig. The related method
       `Class.Humanoid:GetBodyPartR15()|GetBodyPartR15` can come in handy when
       using this method.
 
@@ -2078,7 +2079,7 @@ methods:
           The `Class.Part` `Class.Instance` which will be parented to the
           character.
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
@@ -2108,13 +2109,13 @@ methods:
         summary: |
           The `Enum.HumanoidStateType` to be enabled or disabled.
       - name: enabled
-        type: bool
+        type: boolean
         default:
         summary: |
           `true` if `state` is to be enabled, `false` if `state` is to be
           disabled.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -2127,12 +2128,12 @@ methods:
       Lowers the `Class.Humanoid.Health` of the `Class.Humanoid` by the given
       _amount_ if it is not protected by a `Class.ForceField`.
     description: |
-      This method lowers the `Class.Humanoid.Health` of the `Class.Humanoid`
-      by the given _amount_ if it is not protected by a `Class.ForceField`
+      This method lowers the `Class.Humanoid.Health` of the `Class.Humanoid` by
+      the given _amount_ if it is not protected by a `Class.ForceField`
 
-      This method accepts negative values for the _amount_ parameter. This
-      will increase the humanoid's `Class.Humanoid.Health`. However this will
-      only have an effect if no `Class.ForceField` is present.
+      This method accepts negative values for the _amount_ parameter. This will
+      increase the humanoid's `Class.Humanoid.Health`. However this will only
+      have an effect if no `Class.ForceField` is present.
 
       #### How do ForceFields protect against TakeDamage
 
@@ -2161,7 +2162,7 @@ methods:
         summary: |
           The damage, or amount to be deduced from the `Class.Humanoid.Health`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -2193,7 +2194,7 @@ methods:
       - unequip-tool-keybind
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -2232,7 +2233,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -2287,7 +2288,7 @@ methods:
         default: Default
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields
@@ -2328,7 +2329,7 @@ methods:
         default: Default
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields
@@ -2342,8 +2343,8 @@ methods:
       Plays emotes and returns if was successfully ran.
     description: |
       If the emote could not be played because the emoteName is not found in the
-      HumanoidDescription, this method will give an error. The method will return true
-      to indicate that the emote was played successfully.
+      HumanoidDescription, this method will give an error. The method will
+      return true to indicate that the emote was played successfully.
     code_samples:
     parameters:
       - name: emoteName
@@ -2352,7 +2353,7 @@ methods:
         summary: |
           name of the emote to play.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           successfully played.
     tags:
@@ -2531,7 +2532,7 @@ events:
     code_samples:
     parameters:
       - name: active
-        type: bool
+        type: boolean
         default:
         summary: |
           Describes whether the `Class.Humanoid` is entering or leaving the
@@ -2561,7 +2562,7 @@ events:
     code_samples:
     parameters:
       - name: active
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the `Freefall`
@@ -2593,7 +2594,7 @@ events:
     code_samples:
     parameters:
       - name: active
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the `GettingUp`
@@ -2650,7 +2651,7 @@ events:
     code_samples:
     parameters:
       - name: active
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the `Jumping`
@@ -2683,7 +2684,7 @@ events:
       - humanoid-moveto-without-time-out
     parameters:
       - name: reached
-        type: bool
+        type: boolean
         default:
         summary: |
           A boolean indicating whether the `Class.Humanoid` reached is goal.
@@ -2716,7 +2717,7 @@ events:
     code_samples:
     parameters:
       - name: active
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the
@@ -2748,7 +2749,7 @@ events:
     code_samples:
     parameters:
       - name: active
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the `Ragdoll`
@@ -2808,7 +2809,7 @@ events:
         **true** and `currentSeatPart` will be the seat they are currently
         sitting in.
       - If the character got up from a seat, the `active` parameter will be
-        **false** and `currentSeatPart` will be nil.
+        **false** and `currentSeatPart` will be `nil`.
 
       See also:
 
@@ -2819,7 +2820,7 @@ events:
       - finding-a-player-s-seat
     parameters:
       - name: active
-        type: bool
+        type: boolean
         default:
         summary: |
           True if the `Class.Humanoid` is sitting down.
@@ -2899,7 +2900,7 @@ events:
           The `Enum.HumanoidStateType` for which the enabled state has been
           changed.
       - name: isEnabled
-        type: bool
+        type: boolean
         default:
         summary: |
           True if the state is now enabled.
@@ -2977,7 +2978,7 @@ events:
     code_samples:
     parameters:
       - name: active
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the

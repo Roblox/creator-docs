@@ -107,7 +107,7 @@ By default, `Raycast()` does **not** respect the `Class.BasePart.CanCollide` pro
 
 The `Datatype.RaycastResult.Instance|Instance` value is the most critical of these properties for the sample laser tag experience's gameplay because it communicates when rays collide with other players. To retrieve this information, the experience uses the **ReplicatedStorage** > **LaserRay** > **castLaserRay** > **getPlayerFromDescendant** helper function. If it returns `nil`, the instance isn't part of a player, meaning the ray hit an inanimate object within the environment.
 
-`castLaserRay()` then uses `Datatype.RaycastResult.Position|Position` and `Datatype.RaycastResult.Normal|Normal` to create a new `Datatype.CFrame` that it calls the ray's `destination`. Every ray has a destination, and it's either where the ray hit in the 3D space, or the point at the end of its maximum distance. Depending on how well your players aim, many or most `taggedPlayer` values are nil.
+`castLaserRay()` then uses `Datatype.RaycastResult.Position|Position` and `Datatype.RaycastResult.Normal|Normal` to create a new `Datatype.CFrame` that it calls the ray's `destination`. Every ray has a destination, and it's either where the ray hit in the 3D space, or the point at the end of its maximum distance. Depending on how well your players aim, many or most `taggedPlayer` values are `nil`.
 
 ```lua title="castLaserRay"
 if result then

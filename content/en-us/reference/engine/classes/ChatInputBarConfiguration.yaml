@@ -68,7 +68,7 @@ properties:
       Whether to enable autocomplete for the chat input bar. Set to `false` to
       disable autocomplete.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -133,7 +133,7 @@ properties:
     description: |
       Whether to show the default chat input bar. Set to `false` to hide.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -177,7 +177,7 @@ properties:
       that respond to changes in the input bar's focus state.
     code_samples:
       - ChatInputBarConfiguration-Typing-Indicator
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -276,7 +276,7 @@ properties:
       - When a message is sent, `Class.TextBox.Text` will automatically clear.
 
       For security, some limitations are imposed on the `Class.TextBox` when it
-      is promoted to `Class.ChatInputBarConfiguration.TextBox`. Lua code will
+      is promoted to `Class.ChatInputBarConfiguration.TextBox`. Luau code will
       not be able to:
 
       - Change the `Class.TextBox.Text` property.

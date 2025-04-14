@@ -50,7 +50,7 @@ properties:
 
       This is used when rendering game thumbnails.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -88,7 +88,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -107,7 +107,7 @@ properties:
     description: |
       Toggles the enabled state of the framerate manager.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - Hidden
       - NotReplicated
@@ -130,7 +130,7 @@ properties:
       Sets whether materials should be generated per part, or per unique
       appearance in Roblox's obj exporter.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -183,9 +183,9 @@ properties:
     writeCapabilities: []
   - name: RenderSettings.MeshCacheSize
     summary: |
-      The size in bytes of the mesh cache. Defaults to 32 MBs.
+      The size in bytes of the mesh cache. Defaults to 32 MB.
     description: |
-      The size in bytes of the mesh cache. Defaults to 32 MBs.
+      The size in bytes of the mesh cache. Defaults to 32 MB (32 * 2^20 bytes).
     code_samples:
     type: int
     tags: []
@@ -258,7 +258,7 @@ properties:
       When set to true, Roblox Studio will automatically reload changes that are
       made to files in Roblox's `content` folder.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -279,7 +279,7 @@ properties:
       When set to true, a wireframe of polygons will be shown on all
       `Class.PartOperation` objects.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -300,7 +300,7 @@ properties:
       If set to true, renders bounding boxes around each individual rendered
       entity in the scene.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

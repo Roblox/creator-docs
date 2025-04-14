@@ -40,7 +40,7 @@ end
 printMessage() --> User has more than 10 items!
 ```
 
-Lua uses `nil` to represent nonexistence or nothingness, which evaluates as `false` in conditional statements:
+Luau uses `nil` to represent nonexistence or nothingness, which evaluates as `false` in conditional statements:
 
 ```lua
 local messageToUser
@@ -133,7 +133,7 @@ A big part of adapting to a new development environment is configuring it to mee
 - The **Script Analysis** window shows a summary of errors and warnings, but you might find its utility limited; the Script Editor already highlights these issues as you type.
 - Logging capabilities are minimal, with no concept of log levels like `DEBUG` or `FATAL`. Use `Global.LuaGlobals.print()` and `Global.RobloxGlobals.warn()`.
 
-For more information about configuring Studio for scripting, see [Script Editor](../studio/script-editor.md). For information on using your favorite text editor and version control system, see [External Tools](../projects/external-tools.md).
+For more information about configuring Studio for scripting, see [Script Editor](../studio/script-editor.md). For information on using your favorite text editor and version control system, see [External tools](../projects/external-tools.md).
 
 ## Your second script
 

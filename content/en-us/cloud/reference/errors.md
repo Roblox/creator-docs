@@ -16,7 +16,7 @@ the same format, which include:
 - `message` - A message that explains the error.
 - `details` - An object that contains more information specific to the error.
 
-```json title='Example Error'
+```json title="Example Error"
 {
   "code": "INVALID_ARGUMENT",
   "message": "The provided filter is invalid.",
@@ -99,7 +99,7 @@ All error responses have the same, standard format, which includes:
 
 To analyze the root cause of an error, refer to the value of the `error` field and the `errorDetails` field. Use the `message` field as a supplementary for error handling, as sometimes it might not cover the same level of details as the `errorDetails` field.
 
-```json title='Example Standard DataStores Error Response'
+```json title="Example Standard DataStores Error Response"
 {
   "error": "INVALID_ARGUMENT",
   "message": "Invalid cursor.",
@@ -116,7 +116,7 @@ The example error response shows the high-level Open Cloud `error` as `INVALID_A
 
 All ordered data stores error responses have the same format, which includes:
 
-```json title='Example Ordered DataStores Error Response'
+```json title="Example Ordered DataStores Error Response"
 {
   "code": "INVALID_ARGUMENT",
   "message": "Invalid cursor."

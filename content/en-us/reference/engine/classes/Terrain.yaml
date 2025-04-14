@@ -28,7 +28,7 @@ properties:
       material, although future modifications of this property may control
       additional decorative features.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - NotScriptable
     deprecation_message: ''
@@ -72,7 +72,7 @@ properties:
       legacy terrain engine has been removed, so this property will always be
       true.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -259,7 +259,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -282,7 +282,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -359,7 +359,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -378,7 +378,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -454,7 +454,7 @@ methods:
         summary: |
           The `Enum.Material` of the terrain ball.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -487,7 +487,7 @@ methods:
         summary: |
           The `Enum.Material` of the terrain block.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -530,7 +530,7 @@ methods:
         summary: |
           The `Enum.Material` of the terrain cylinder.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -558,7 +558,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -592,7 +592,7 @@ methods:
         summary: |
           The material with which the wedge will be filled.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -706,11 +706,11 @@ methods:
         default:
         summary: ''
       - name: pasteEmptyCells
-        type: bool
+        type: boolean
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -852,7 +852,7 @@ methods:
         summary: |
           The new material.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -896,7 +896,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -936,7 +936,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -964,7 +964,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1006,7 +1006,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1123,7 +1123,7 @@ methods:
             water) and 1 (full of water). If the `SolidOccupancy` is 1 and the
             `SolidMaterial` is not `Enum.Material|Air`, this will be 0.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState
@@ -1165,7 +1165,7 @@ methods:
           3D array of voxel occupancies (number between 0 and 1). Dimensions
           must exactly match the size of the target region in voxels.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState

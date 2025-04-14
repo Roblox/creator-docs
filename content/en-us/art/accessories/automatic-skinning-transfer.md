@@ -31,6 +31,10 @@ While Automatic Skinning Transfer often works better than manual skinning, there
 
 ### Modify character cages
 
+<Alert severity = 'error'>
+You can't upload assets with a partial cage to the Marketplace. You may use partial cages for assets intended for in-experience use, but the Marketplace validation process will reject assets with partial cages.
+</Alert>
+
 You can modify character cages for the accessories to deform accurately to the expected character surfaces using the Automatic Skinning Transfer. For example, auto-skinning may cause layered clothing to deform based on an incorrect body part because the transfer process is based on the closest distance between the accessory and its inner cage. In the following instance, a beard accessory was modeled using a blocky-type full-body cage. This causes the beard to deform incorrectly because parts of the beard are closer to the character cage's upper chest instead of the chin:
 
 <img src="../../assets/avatar/dynamic-heads/creating-face-accessories/Full-Body-Cage.png" width="60%" />
@@ -38,7 +42,9 @@ You can modify character cages for the accessories to deform accurately to the e
 <video controls width="60%" src="../../assets/avatar/dynamic-heads/creating-face-accessories/videos/AutoSkin-With-Full-Cage.mp4">
 </video>
 
-To prevent a layered accessory from using skinning data from an undesired area of the character's geometry, you can remove parts of the outer cage that the layered accessory shouldn't be skinned to. For example, the following image shows how the outer cage was modified so that it only includes the head geometry. With this improvement to the outer cage, when you automatically transfer skinning data, the beard and partial cage now correctly transfer skinning only from the head geometry.
+To prevent a layered accessory from using skinning data from an undesired area of the character's geometry, you can model your asset on a different character mannequin cage. For example, a blocky-type character will struggle with a beard skinning to the torso, but a character with an actual neck, like a humanoid, won't have this problem.
+
+Alternatively, you can remove parts of the outer cage that the layered accessory shouldn't be skinned to. **This is not a valid workflow for assets intended for the Marketplace**, but you can use this for in-experience assets or assets for other use. For example, the following image shows how the outer cage was modified so that it only includes the head geometry. With this improvement to the outer cage, when you automatically transfer skinning data, the beard and partial cage now correctly transfer skinning only from the head geometry.
 
 <img src="../../assets/avatar/dynamic-heads/creating-face-accessories/Head-Cage-Only.png" width="60%" />
 

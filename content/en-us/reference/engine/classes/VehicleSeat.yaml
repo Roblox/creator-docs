@@ -52,7 +52,7 @@ properties:
       disabled then it will not automatically weld a character to it on
       collision and will not allow a character to control the connected vehicle.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -73,7 +73,7 @@ properties:
       If true, a fancy speed bar will be displayed speed on screen that tells
       you what speed the Vehicle is moving at.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -280,7 +280,7 @@ methods:
         summary: |
           The humanoid being forced to sit in the VehicleSeat.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

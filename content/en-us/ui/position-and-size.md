@@ -17,14 +17,14 @@ The `Class.GuiObject.Position|Position` property is a `Datatype.UDim2` coordinat
 - `Datatype.UDim.Offset|Offset` values represent how many **pixels** to shift the object on the corresponding axis, additive of any `Datatype.UDim.Scale|Scale` values.
 
 <figure>
-<img src="../assets/ui/general/UDim2-Components.png" width="334" />
+<img src="../assets/ui/misc/UDim2-Components.png" width="334" />
 </figure>
 
 To edit the position of a selected `Class.GuiObject`, click the **Position** field in the [Properties](../studio/properties.md) window and enter a new `Datatype.UDim2` coordinate set.
 
 <img src="../assets/studio/properties/GuiObject-Position.png" width="320" />
 
-<img src="../assets/ui/general/Scale-Offset-Positioning.png" width="840" />
+<img src="../assets/ui/misc/Scale-Offset-Positioning.png" width="840" />
 
 <Alert severity="success">
 Brackets and spaces are **optional** when entering a `Datatype.UDim2` in Studio&nbsp;&mdash; you can simply enter the four values separated by commas, for instance `0.25,40,0.1,20`, and Studio will infer the intended value set.
@@ -43,7 +43,7 @@ To edit the size of a selected `Class.GuiObject`, click the **Size** field in th
 
 <img src="../assets/studio/properties/GuiObject-Size.png" width="320" />
 
-<img src="../assets/ui/general/Scale-Sizing.png" width="840" />
+<img src="../assets/ui/misc/Scale-Sizing.png" width="840" />
 
 <Alert severity="success">
 Brackets and spaces are **optional** when entering a `Datatype.UDim2` in Studio&nbsp;&mdash; you can simply enter the four values separated by commas, for instance `0.75,0,0.25,0`, and Studio will infer the intended value set.
@@ -59,10 +59,10 @@ The `Class.GuiObject.AnchorPoint|AnchorPoint` property defines the **origin poin
 
 <Grid container spacing={2}>
   <Grid item>
-		<img src="../assets/ui/general/Anchor-Points.png" width="400" />
+		<img src="../assets/ui/misc/Anchor-Points.png" width="400" />
 	</Grid>
 	<Grid item>
-		<img src="../assets/ui/general/Anchor-Point-Scaling.png" width="400" />
+		<img src="../assets/ui/misc/Anchor-Point-Scaling.png" width="400" />
 	</Grid>
 </Grid>
 
@@ -74,8 +74,8 @@ To view and edit the anchor point of a selected `Class.GuiObject`:
 
 2. Enter a new `Datatype.Vector2` coordinate and press <kbd>Enter</kbd>.
 
-	 <Alert severity="success">
-	 Studio infers the intended value pair when a single number is entered. For example, entering simply `0.5` will be converted to <Typography noWrap>`0.5, 0.5`</Typography> for a center anchor point.
+    <Alert severity="success">
+    Studio infers the intended value pair when a single number is entered. For example, entering simply `0.5` will be converted to <Typography noWrap>`0.5, 0.5`</Typography> for a center anchor point.
    </Alert>
 
 ### ZIndex
@@ -176,7 +176,7 @@ A reliable approach on both phones and tablets is **relative** positioning of cu
 
 The following code, placed in a client-side script within `Class.StarterPlayerScripts`, fetches the position of the jump button and creates a placeholder [button](../ui/buttons.md) 20 pixels to its left.
 
-```lua title='Client Script - Custom Button Near Jump Button'
+```lua title="Client Script - Custom Button Near Jump Button"
 local Players = game:GetService("Players")
 local UserInputService = game:GetService("UserInputService")
 

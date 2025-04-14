@@ -130,7 +130,7 @@ lava.Touched:Connect(kill)
 ```
 
 <Alert severity="info">
-In Lua, any value other than false or nil (an empty value) is evaluated as true in a conditional statement, so in this case you can use `humanoid` directly as the condition.
+In Luau, any value other than false or `nil` (an empty value) is evaluated as true in a conditional statement, so in this case you can use `humanoid` directly as the condition.
 </Alert>
 
 ## Set character health

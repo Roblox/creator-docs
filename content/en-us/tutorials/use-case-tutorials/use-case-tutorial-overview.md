@@ -123,8 +123,6 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 </AccordionDetails>
 </BaseAccordion>
 
-<br /> <br />
-
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>User interfaces</Typography>
 
 <div style={{marginBottom: 24}}>
@@ -216,8 +214,6 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 </AccordionDetails>
 </BaseAccordion>
 
-<br /> <br />
-
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Audio</Typography>
 
 <div style={{marginBottom: 24}}>
@@ -231,9 +227,9 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Background-Music.png" />
  </div>
-   <Typography variant='body1' >Playing background music</Typography>
+   <Typography variant='body1' >Add 2D audio</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="./audio/play-background-music.md">
+       <a underline="none" href="./audio/add-2D-audio.md">
        <Button variant="contained" color="secondary" size='large'
        style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
@@ -247,9 +243,25 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Positional-Audio.png" />
  </div>
-   <Typography variant='body1' >Playing positional sounds</Typography>
+   <Typography variant='body1' >Add 3D audio</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="./audio/in-game-sounds.md">
+       <a underline="none" href="./audio/add-3D-audio.md">
+       <Button variant="contained" color="secondary" size='large'
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
+       </a>
+     </div>
+ </Grid>
+ </Grid>
+
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+ <div class="container"
+ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
+ <img src="../../assets/tutorials/UCT-Overview/Voice-Chat.png" />
+ </div>
+   <Typography variant='body1' >Add voice chat</Typography>
+     <div style={{marginTop:16}}>
+       <a underline="none" href="./audio/add-voice-chat.md">
        <Button variant="contained" color="secondary" size='large'
        style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
@@ -265,15 +277,13 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 </AccordionSummary>
 <AccordionDetails>
 
-- [Audio assets](../../sound/assets.md)
-- [Sound objects](../../sound/objects.md)
-- [Sound groups](../../sound/groups.md)
-- [Dynamic effects](../../sound/dynamic-effects.md)
+- [Audio overview](../../audio/index.md)
+- [Audio assets](../../audio/assets.md)
+- [Audio objects](../../audio/objects.md)
+- [Audio effects](../../audio/effects.md)
 
 </AccordionDetails>
 </BaseAccordion>
-
-<br /> <br />
 
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Lighting</Typography>
 
@@ -330,8 +340,6 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 
 </AccordionDetails>
 </BaseAccordion>
-
-<br /> <br />
 
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>VFX</Typography>
 
@@ -405,8 +413,6 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 </AccordionDetails>
 </BaseAccordion>
 
-<br /> <br />
-
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Physics</Typography>
 
 <div style={{marginBottom: 24}}>
@@ -478,8 +484,6 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 
 </AccordionDetails>
 </BaseAccordion>
-
-<br /> <br />
 
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Animation</Typography>
 
@@ -586,8 +590,6 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
 </AccordionDetails>
 </BaseAccordion>
 
-<br /> <br />
-
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Scripting</Typography>
 
 <div style={{marginBottom: 24}}>
@@ -690,8 +692,6 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
 
 </AccordionDetails>
 </BaseAccordion>
-
-<br /> <br />
 
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Camera and input</Typography>
 

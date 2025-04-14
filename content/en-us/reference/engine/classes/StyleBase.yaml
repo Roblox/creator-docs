@@ -35,12 +35,12 @@ methods:
         type: StyleRule
         default:
         summary: ''
-      - name: index
+      - name: priority
         type: int?
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -58,7 +58,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

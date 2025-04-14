@@ -241,6 +241,21 @@ items:
     value: 302
     tags: []
     deprecation_message: ''
+  - name: PhantomFreeze
+    summary: ''
+    value: 303
+    tags: []
+    deprecation_message: ''
+  - name: AndroidAnticheatKick
+    summary: ''
+    value: 304
+    tags: []
+    deprecation_message: ''
+  - name: AndroidEmulatorKick
+    summary: ''
+    value: 305
+    tags: []
+    deprecation_message: ''
   - name: PlacelaunchErrors
     summary: ''
     value: 512

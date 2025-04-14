@@ -65,7 +65,7 @@ How publishers earn:
 
 - **Portal ads** are static, non-clickable images with a door that teleports users into an advertiser's experience. Advertisers bid on a teleport. Publishers earn for each successful teleport. A teleport is when a user enters the portal and arrives at the advertiser's experience.
 
-To learn more about how advertisers are billed, you can refer to our overview on [ads billing](../promotion/ads-manager.md#ads-billing).
+To learn more about how advertisers are billed, you can refer to our overview on [ads billing](../promotion/reporting-and-billing.md#billing).
 
 Roblox pays out earnings on the 25th of the following month from when you inserted ad units into your experience. For example, if you insert ad units during the month of March, your payout date for the viewable impressions and successful teleports from those ad units is April 25th. You can track your collective earnings from ad Immersive Ads either through the **My Transactions** or **Group Transactions** page. You can also analyze their overall performance through metrics graphs on the Creator Dashboard.
 
@@ -79,10 +79,8 @@ Roblox pays out earnings on the 25th of the following month from when you insert
 The following requirements take effect from June 1st, 2024.
 </Alert>
 
-While anyone can insert ad units into their experiences, Roblox only serves ads into ad units if the experience or group owner and experience is eligible to serve ads. In Creator Hub, you can see and manage your publisher eligibility status in a new "Eligibility" tab on the immersive ads page.
+While anyone can insert ad units into their experiences, Roblox only serves ads into ad units if the experience or group owner and experience is eligible to serve ads. In Creator Hub, you can see and manage your publisher eligibility status in a new **Eligibility** tab on the immersive ads page.
 
-<img src="../../assets/creator-dashboard/Immersive-Ads-Eligibility.png" width = "80%"/>
-<br />
 Experiences must meet the following criteria to be eligible to be an ad publisher:
 
 - Your account must have **2-factor authentication (2FA)** enabled.
@@ -138,10 +136,7 @@ Eligible users can see two types of video ads within Roblox experiences, dependi
 
 To insert a video ad:
 
-1. From the [Home](../../studio/home-tab.md) or [Model](../../studio/model-tab.md) tab, insert a **Block** part into your experience.
-
-   <img src="../../assets/studio/general/Home-Tab-Part-Tools.png" width="716" alt="Part menu indicated in Home tab" />
-
+1. From the toolbar's **Home** or **Model** tab, [insert](../../parts/index.md#insert-parts) a **Block** part into your experience.
 1. Scale the part to at least 8 studs wide and 4.5 studs tall, but no more than 32 studs wide and 18 studs tall.
 1. In the [Explorer](../../studio/explorer.md) window, add an **AdGui** object to the part.
    1. Hover over the part and click the **&CirclePlus;** button. A contextual menu displays.
@@ -208,10 +203,7 @@ In order for the ad unit to be valid and serve ads once you publish the experien
 
 To insert an image ad:
 
-1. From the [Home](../../studio/home-tab.md) or [Model](../../studio/model-tab.md) tab, insert a **Block** part into your experience.
-
-   <img src="../../assets/studio/general/Home-Tab-Part-Tools.png" width="716" alt="Part menu indicated in Home tab" />
-
+1. From the toolbar's **Home** or **Model** tab, [insert](../../parts/index.md#insert-parts) a **Block** part into your experience.
 1. In the [Properties](../../studio/properties.md) window, navigate to the **Face** property and choose a face, or keep the default face.
 1. Scale the part to at least 8 studs wide and 4.5 studs tall, but no more than 32 studs wide and 18 studs tall.
 1. In the [Explorer](../../studio/explorer.md) window, add an **AdGui** object to the part.
@@ -283,9 +275,9 @@ For example, the following two portal ad packages have the exact same core compo
 To insert a portal ad:
 
 1. Open the Creator Store.
-   1. In the menu bar, navigate to the **View** tab.
+   1. In the toolbar, navigate to the **View** tab.
    1. Select **Toolbox**. The [Toolbox](../../projects/assets/toolbox.md) window displays with the **Creator Store** tab open.
-1. In the **Categories** section, click the **See&nbsp;All** button. All categories display.
+1. In the **Categories** section, click the **See All** button. All categories display.
 
    <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
@@ -361,9 +353,7 @@ By tracking these trends over time, you can make strategic decisions on the numb
 To view Immersive Ad metrics:
 
 1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on the dashboard and select your experience.
-2. Navigate to the **Monetization** tab and select **Immersive Ads**.
-
-   <img src="../../assets/creator-dashboard/Experience-Nav-Monetization-Immersive-Ads.png" width="330" />
+2. Navigate to the **Monetization** tab and select **Ads**.
 
 <Alert severity="info">
    Metrics graphs that report impressions and teleports per ad unit use each ad unit's name in Studio.

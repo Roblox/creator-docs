@@ -5,33 +5,14 @@ description: Explains how to install Roblox Studio on your system.
 
 Create immersive 3D experiences on Roblox with **Roblox Studio**, a free application available on Windows and Mac.
 
-<Tabs>
-<TabItem label="Installation">
-1. Click the following **Download Studio** button.
+## System requirements
 
-   <UseStudioButton variant='blueLogoIconButton' />
-
-1. In the pop-up dialog, click the **Download Studio** button.
-
-   <img src="../assets/studio/general/Download-Popup.png" width="400" alt="The pop-up dialog with the Download Studio button highlighted." />
-
-1. Find the Studio installer in your browser's download history and double-click the file.
-
-   - On Windows, the file is `RobloxStudio.exe`.
-   - On Mac, the file is `RobloxStudio.dmg`.
-
-1. After Studio finishes installing, a pop-up confirmation displays. Click the **Launch&nbsp;Studio** button.
-
-1. Sign in to Studio with your Roblox account (if you don't have an account, create one at [roblox.com](https://www.roblox.com/)).
-
-</TabItem>
-<TabItem label="System Requirements">
-<table style={{width: '75%'}} >
+<table style={{width: '75%'}} size="small">
 <thead>
 <tr>
 <th></th>
-<th><Chip label="Minimum" size="large" color="warning" variant="outlined" /></th>
-<th><Chip label="Recommended" size="large" color="success" variant="outlined" /></th>
+<th><Chip label="Minimum" size="medium" color="warning" variant="outlined" /></th>
+<th><Chip label="Recommended" size="medium" color="success" variant="outlined" /></th>
 </tr>
 </thead>
 <tbody>
@@ -53,8 +34,21 @@ Create immersive 3D experiences on Roblox with **Roblox Studio**, a free applica
 </tbody>
 </table>
 
-</TabItem>
-</Tabs>
+## Installation
+
+1. Click the following **Download Studio** button.
+
+   <UseStudioButton variant='blueLogoIconButton' />
+
+1. In the pop-up dialog, click the **Download Studio** button.
+1. Find the Studio installer in your browser's download history and double-click the file.
+
+   - On Windows, the file is `RobloxStudio.exe`.
+   - On Mac, the file is `RobloxStudio.dmg`.
+
+1. After Studio finishes installing, a pop-up confirmation displays. Click the **Launch&nbsp;Studio** button.
+
+1. Sign in to Studio with your Roblox account (if you don't have an account, create one at [roblox.com](https://www.roblox.com/)).
 
 ## Customization
 

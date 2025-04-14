@@ -1,3 +1,6 @@
+backTo:
+  title: Back to experiences
+  path: /experiences/
 navigation:
   - heading: Get started
   - title: Overview
@@ -40,10 +43,12 @@ navigation:
         path: /tutorials/use-case-tutorials/ui/create-a-score-bar
   - title: Audio
     section:
-      - title: Background music
-        path: /tutorials/use-case-tutorials/audio/play-background-music
-      - title: Positional sounds
-        path: /tutorials/use-case-tutorials/audio/in-game-sounds
+      - title: 2D audio
+        path: /tutorials/use-case-tutorials/audio/add-2D-audio
+      - title: 3D audio
+        path: /tutorials/use-case-tutorials/audio/add-3D-audio
+      - title: Voice chat
+        path: /tutorials/use-case-tutorials/audio/add-voice-chat
   - title: Lighting
     section:
       - title: Indoor environments

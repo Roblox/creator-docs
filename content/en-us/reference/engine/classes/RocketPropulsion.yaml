@@ -172,7 +172,7 @@ properties:
       The TargetOffset property determines the world offset from the
       `Class.RocketPropulsion.Target|Target`. Basically, it makes the
       `Class.RocketPropulsion` behave as if the target were really offset by
-      this property. It is especially useful when Target is set to nil, since
+      this property. It is especially useful when Target is set to `nil`, since
       this property then acts as the target position.
     code_samples:
     type: Vector3
@@ -320,7 +320,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -336,7 +336,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -350,7 +350,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated

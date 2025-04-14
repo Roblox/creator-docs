@@ -13,10 +13,20 @@ customize the user experience when someone joins.
 A deep link URL consists of a URL format along with parameters that you specify.
 The following sections describe how to construct each format.
 
-### Requirements and guidelines
+### URL parameters
 
-When constructing deep links, consider the following requirements and
-guidelines:
+Deep links support the following URL parameters. All are optional unless otherwise noted.
+
+Parameter | Description
+:--- | :---
+`placeId` | The place ID to join. Required unless `userId` is specified.
+`userId` | The user ID to join. Results in a "Followed user has left the experience" error if the user left the experience or is offline.
+`accessCode` | The private server access code.
+`linkCode` | The private server link code.
+`gameInstanceId` | The unique identifier of the game instance to join, also called the `Class.DataModel.JobId`.
+`launchData` | Additional information that you want to include within the deep link, such as promotional codes or coordinates. Process using the `Class.Player:GetJoinData()` method. See [Include launch data](invite-prompts#include-launch-data).
+
+### Requirements and guidelines
 
 - You must URL encode special characters, such as spaces. These characters are
   automatically decoded when the user joins your experience.

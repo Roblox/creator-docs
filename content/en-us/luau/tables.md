@@ -209,7 +209,7 @@ fruitColor Yellow
 ```
 
 <Alert severity="warning">
-Unlike using <InlineCode>ipairs()</InlineCode> on an array, using <InlineCode>pairs()</InlineCode> on a dictionary doesn't necessarily return items in the same order that they're in the dictionary.
+Unlike using `ipairs()` on an array, using `pairs()` on a dictionary doesn't necessarily return items in the same order that they're in the dictionary.
 </Alert>
 
 ### Remove key-value pairs

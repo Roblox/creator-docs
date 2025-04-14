@@ -126,8 +126,6 @@ Table of sizes for each template part
 </AccordionDetails>
 </BaseAccordion>
 
-<br />
-
 ## Creating classic clothing
 
 To begin creating classic clothing:

@@ -20,7 +20,7 @@ After you complete this tutorial, you will have an assetID for your animation, a
 
 ## Add rig
 
-**Rigs**, or collections of parts connected by joints like `Class.Bone` or `Class.Motor6D` objects, are necessary to create character animations because they include the internal structure you need to move and rotate body parts into different poses. While you can [create your own rigs](../../../art/modeling/rig-a-humanoid-model.md) using external 3D modeling tools, Studio provides several pre-built rigs that you can access through the [Rig Builder](../../../studio/rig-builder.md) plugin.
+**Rigs**, or collections of parts connected by joints like `Class.Bone` or `Class.Motor6D` objects, are necessary to create character animations because they include the internal structure you need to move and rotate body parts into different poses. While you can [create your own rigs](../../../art/modeling/rig-a-humanoid-model.md) using external 3D modeling tools, Studio provides several pre-built rigs that you can access through the [Rig Builder](../../../studio/rig-builder.md) tool.
 
 <GridContainer numColumns="3">
   <figure>
@@ -43,12 +43,7 @@ The rest of the tutorial provides an in-depth analysis of the different design d
 
 To add a pre-built rig to the 3D space:
 
-1. In the **Avatar** tab, click the **Rig Builder** button. The **Rig Builder** pop-up window displays.
-
-   <img src="../../../assets/studio/general/Avatar-Tab-Rig-Builder.png" width="760" />
-
-   <img src="../../../assets/tutorials/creating-character-animations/Generate-Rig.jpg" alt="" width="30%" />
-
+1. From the toolbar's **Avatar** tab, click **Rig Builder**.
 1. Select a rig type, body shape, then an avatar option. For example, this tutorial uses a **R15** rig type, a **masculine** body shape, and an **Rthro Avatar**. The rig displays in the viewport.
 
    <img src="../../../assets/tutorials/creating-character-animations/Add-Rig-2.jpg" alt="" width="80%" />
@@ -102,19 +97,15 @@ This is an important moment in a character's stride because both feet equally su
 
 To create a first pass Contact pose for the left foot cycle:
 
-1. Open the Animation Editor.
-   1. In the **Avatar** tab, select the **Animation Editor** button. The **Animation Editor** window displays.
-
-   <img src="../../../assets/studio/general/Avatar-Tab-Animation-Editor.png" width="760" />
-
-   1. Select your rig. A contextual menu displays.
-   1. In the **Animation Name** field, input a name for your animation, then click the **Create** button.
-   1. **(Optional)** Set the timeline to 24 frames per second.
-      1. In the **Animation Editor**'s playback tools, click the gear icon.
+1. From the toolbar's **Avatar** tab, click **Animation Editor**. The [Animation Editor](../../../animation/editor.md) window displays.
+1. Select your rig. A contextual menu displays.
+1. In the **Animation Name** field, input a name for your animation, then click the **Create** button.
+1. **(Optional)** Set the timeline to 24 frames per second.
+   1. In the editor's playback tools, click the gear icon.
 
       <img src="../../../assets/tutorials/creating-character-animations/Gear-Icon.png" width="30%" />
 
-      1. From the contextual menu, set **Frame Rate** to **24 fps**.
+   1. From the contextual menu, set **Frame Rate** to **24 fps**.
 
 1. Add a keyframe for each of the rig's body parts to the Animation Editor's track list.
    1. In the **Animation Editor**, click the **+** button. A contextual menu displays.
@@ -127,7 +118,7 @@ To create a first pass Contact pose for the left foot cycle:
       <video controls src="../../../assets/tutorials/creating-character-animations/Left-Contact-2C.mp4" width="90%"></video>
 
 1. Pose the rig's upper body in a bent position.
-   1. In the **Home** tab, select the **Rotate** tool.
+   1. In the toolbar's **Home** tab, select the **Rotate** tool.
    1. In the viewport, select and angle the **UpperTorso** body part so that the torso is slightly bent forward.
 
       <img src="../../../assets/tutorials/creating-character-animations/Left-Contact-3A.jpg" alt="" width="80%" />

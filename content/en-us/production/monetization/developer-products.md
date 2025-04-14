@@ -11,7 +11,7 @@ A **developer product** is an item or ability that a user can purchase more than
    For items or abilities that a user should only purchase **once**, such as a special weapon or a permanent power-up, see [Passes](../../production/monetization/game-passes.md).
 </Alert>
 
-## Create developer products
+## Create a developer product
 
 <Alert severity="warning">
    Before creating a developer product, make sure your experience has been [published](../../production/publishing/publish-experiences-and-places.md) and is accessible on Roblox.
@@ -28,28 +28,41 @@ To create a developer product:
 7. Click **Create Developer Product**.
 
 <Alert severity="info">
-   If you want to use the developer product as a randomized reward, review the [randomized virtual item policy](./randomized-virtual-items-policy.md).
+   If you want to use the developer product as a randomized reward, review the [randomized virtual item policy](./virtual-items.md).
 </Alert>
 
-## Get developer product IDs
+## Get the developer product ID
 
 To use scripting, you need a developer product ID. To get the product ID:
 
-1. Go to **Monetization** > **Developer Products**.
-2. Hover over the product and click the **&ctdot;** menu.
-3. Click **Copy Asset ID** to copy the ID to your clipboard.
+1. Go to **Monetization** &rang; **Developer Products**.
+1. Hover over a product's thumbnail, click the **&ctdot;** button, and select **Copy Asset ID** from the context menu.
 
-   <img src="../../assets/creator-dashboard/Developer-Product-Copy-Asset-ID.png" width="400" />
+   <img src="../../assets/creator-dashboard/Options-Button-Developer-Product.png" width="200" />
 
-## Sell developer products
+## Sell a developer product
 
 <Alert severity="info">
 If you're using [price optimization](./price-optimization.md), make sure to place the script inside a `Class.LocalScript` so that users see personalized product prices.
 </Alert>
 
+Before selling developer products, make sure you are properly processing sales receipts and granting users their purchased products. To do so, you must:
+
+- Use the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` API to check purchase receipts. `ProcessReceipt` automatically reads and acknowledges that a user has purchased a product outside of the experience.
+- Validate each receipt for `User ID`, `Developer Product ID`, and the receipt status.
+- If the receipt has a status of **Open**, grant the user the developer items they have purchased.
+- Respond to the `ProcessReceipt` API with a message acknowledging the receipt and validating that the purchased items were granted.
+
+You can sell developer products in two ways:
+
+- [Inside your experience](#inside-your-experience)
+- [Outside your experience](#outside-your-experience)
+
+### Inside your experience
+
 To implement and sell a developer product inside an experience, call `Class.MarketplaceService|MarketplaceService` functions.
 
-Use `Class.MarketplaceService:GetProductInfo()|GetProductInfo()` to retrieve information about a developer product, like name and price, and then to display that product to users. You can sell the product inside your experience's marketplace, for example. For developer products, the second parameter must be `Enum.InfoType.Product`.
+Use `Class.MarketplaceService:GetProductInfo()|GetProductInfo` to retrieve information about a developer product, like name and price, and then to display that product to users. You can sell the product inside your experience's marketplace, for example. For developer products, the second parameter must be `Enum.InfoType.Product`.
 
 ```lua
 local MarketplaceService = game:GetService("MarketplaceService")
@@ -70,7 +83,7 @@ if success and productInfo then
 end
 ```
 
-Use `Class.MarketplaceService:GetDeveloperProductsAsync()|GetDeveloperProductsAsync()` to retrieve all developer products associated with your experience. This function returns a `Class.Pages|Pages` object that you can inspect and filter to build things like an in-experience store or product list GUI.
+Use `Class.MarketplaceService:GetDeveloperProductsAsync()|GetDeveloperProductsAsync` to retrieve all developer products associated with your experience. This function returns a `Class.Pages|Pages` object that you can inspect and filter to build things like an in-experience store or product list GUI.
 
 ```lua
 local MarketplaceService = game:GetService("MarketplaceService")
@@ -88,7 +101,7 @@ if success and developerProducts then
 end
 ```
 
-Use `Class.MarketplaceService:PromptProductPurchase()|PromptProductPurchase()` to prompt product purchases inside your experience. You can call this function when a user performs actions like pressing a button or talking to a vendor NPC.
+Use `Class.MarketplaceService:PromptProductPurchase()|PromptProductPurchase` to prompt product purchases inside your experience. You can call this function when a user performs actions like pressing a button or talking to a vendor NPC.
 
 ```lua
 local MarketplaceService = game:GetService("MarketplaceService")
@@ -143,9 +156,70 @@ button.MouseButton1Click:Connect(function()
 end)
 ```
 
-## Handle developer product purchases
+### Outside your experience
 
-After a user purchases a developer product, you must handle and record the transaction. To do this, use a `Class.Script` within `Class.ServerScriptService` using the `Class.MarketplaceService.ProcessReceipt()|ProcessReceipt()` function.
+To enable developer product purchases outside your experience, you must work with the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` API. After a user makes a purchase in the **Store** tab of your experience details page, you must use `ProcessReceipt` to confirm their purchase and grant them their items once they enter your experience.
+
+<Alert severity="warning">
+Do **not** use the `Class.MarketplaceService:PromptProductPurchaseFinished|PromptProductPurchaseFinished` event to process purchases. You must use the `ProcessReceipt` callback instead.
+
+The firing of `PromptProductPurchaseFinished` does not mean that a user has successfully purchased an item.
+</Alert>
+
+#### Test mode
+
+<Alert severity="warning">
+Items for sale in test mode cost actual Robux. We recommend testing low-cost developer products.
+</Alert>
+
+The **test mode** feature helps you validate your purchase flow by simulating a developer product purchase outside your experience. You should use test mode to make sure that you have implemented `ProcessReceipt` correctly before enabling external developer product sales.
+
+The developer products you put up for sale in test mode can only be seen by you and by members of your group. They are not visible to users.
+
+To test your implementation:
+
+1. In the **Creator Hub**, go to **Monetization** > **Developer Products**.
+2. Click the **&vellip;** menu and select **External Purchase Settings**.
+3. In the **External Purchase Settings** page, click **Enable test mode**.
+4. Once test mode is active, return to the **Developer Products** page and select a product to test.
+5. In the **Basic Settings** page, select the **Allow external purchases** checkbox and save your changes.
+6. Go to the **Store** tab of the experience details page and purchase the product you made available for sale.
+7. Enter the experience and confirm that you have received the product you purchased. The receipt status of the `ProcessReceipt` API should update to **Closed**.
+
+After you test your implemention, Roblox verifies that the test has been successfully completed and allows you to fully activate the feature to sell developer products outside your experiences.
+
+For more information about the `ProcessReceipt` API and its implementation, see the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` page.
+
+#### Enable external sales
+
+<Alert severity="info">
+You can only enable external sales after you have used test mode to validate your purchase flow.
+</Alert>
+
+To enable external sales:
+
+1. Go to the **External Purchase Settings** page.
+2. Turn on **External Purchases**.
+3. Return to the **Developer Products** page and select the products you want to sell outside of your experience.
+4. In the **Basic Settings** page, select the **Allow external purchases** checkbox and save your changes.
+5. Confirm that the products are now available for purchase in the **Store** tab of the experience details page.
+
+To disable the external sale of a developer product, select the product on the **Developer Products** page and clear the **Allow external purchases** checkbox.
+
+#### Limitations
+
+- Items for sale in test mode cost actual Robux. We recommend testing low-cost developer products.
+- Items for sale in test mode can only be seen by you or by members of your group.
+- To be sold externally, your developer products **must** have a thumbnail.
+- You should not sell the following outside your experience:
+		- Paid random items
+		- Items that are limited to specific quantities, time, place, or user settings and roles
+
+## Handle a developer product purchase
+
+After a user purchases a developer product, you must handle and record the transaction. To do this, use a `Class.Script` within `Class.ServerScriptService` using the `ProcessReceipt` function.
+
+For more information about the `ProcessReceipt` API and its implementation, see the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` page.
 
 ```lua
 local MarketplaceService = game:GetService("MarketplaceService")
@@ -218,7 +292,7 @@ The functions for handling each product ID must return `true` for the transactio
 Although Roblox itself does **not** record the purchase history of developer products by specific users, you can request to [download sales data](../../production/analytics/analytics-dashboard.md#sales-data). If you want to track user-specific purchase history, it's your responsibility to [store the data](../../cloud-services/data-stores/index.md).
 </Alert>
 
-## Developer Product analytics
+## Developer product analytics
 
 Use developer product analytics to analyze the success of individual products, identify trends, and forecast potential future earnings.
 

@@ -11,7 +11,7 @@ After importing your asset into Studio, you can begin **fitting** your imported 
 
 To fit and generate your accessory:
 
-1. In the **Avatar** tab, open the **Accessory Fitting Tool (AFT)**.
+1. In the toolbar's **Avatar** tab, open the **Accessory Fitting Tool** (AFT).
 2. In the new AFT panel, select the **Part** field and, in the workspace, select the accessory `Class.MeshPart` object in the workspace and press **Next**.
 
 3. Set **type** of asset to **Back**. Press **Next** when complete.
@@ -28,7 +28,7 @@ To fit and generate your accessory:
 
      <img src="../../../assets/accessories/accessory-fitting-tool/Generate-Legacy-Accessory.png" width ="60%" alt="A dropdown appears above the GenerateMeshPartAccessory when expanded, displaying a Generate Legacy Accessory option."/>
 
-6. Test your accessory by equipping it to a character and using the Avatar Setup Tool.
+6. Test your accessory by equipping it to a character and using the **Avatar Setup Tool**.
 
    <video controls src="../../../assets/art/accessories/creating-rigid/Testing.mp4" width="100%"></video>
 

@@ -114,7 +114,7 @@ properties:
     description: |
       Whether to show the default chat window. Set to `false` to hide.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

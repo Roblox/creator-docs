@@ -5,7 +5,7 @@ description: Explains how to automate Right to Erasure requests with webhooks an
 
 The **General Data Protection Regulation (GDPR)** is a European regulation on data protection and privacy. It grants individuals the right to request the deletion of their personal data, known as the [right to erasure](https://gdpr-info.eu/art-17-gdpr/). If you store any **Personally Identifiable Information (PII)** of your users, such as their User IDs, you must comply with GDPR requirements by deleting this information upon receiving a user's request.
 
-Instead of handling requests manually, you can [set up a webhook](../../cloud/webhooks/webhook-notifications.md) and use a bot within a third-party messaging application to automate the process. As [data stores](../../cloud-services/data-stores/index.md) being the most common way for storing PII data, this tutorial provides an example on how to create a bot within Guilded or Discord that uses the [Open Cloud API for data stores](../../cloud/open-cloud/usage-data-stores.md) to delete PII data as an automation solution.
+Instead of handling requests manually, you can [set up a webhook](../../cloud/webhooks/webhook-notifications.md) and use a bot within a third-party messaging application to automate the process. As [data stores](../../cloud-services/data-stores/index.md) being the most common way for storing PII data, this tutorial provides an example on how to create a bot within Guilded or Discord that uses the [Open Cloud API for data stores](../../cloud/guides/usage-data-stores.md) to delete PII data as an automation solution.
 
 ## Workflow
 
@@ -13,7 +13,7 @@ Upon completing this tutorial, you should be able to create a locally-running cu
 
 1. Roblox Support receives a right to erasure request from a user.
 1. Roblox webhook is triggered, containing the User ID and a list of Start Place IDs for the experiences they have joined in the payload.
-1. Your bot listens for these webhook notifications, verifies their authenticity, and utilizes the [Open Cloud API for data stores](../../cloud/open-cloud/usage-data-stores.md) to delete the PII data stored in data stores.
+1. Your bot listens for these webhook notifications, verifies their authenticity, and utilizes the [Open Cloud API for data stores](../../cloud/guides/usage-data-stores.md) to delete the PII data stored in data stores.
    <Alert severity="warning">
    To use this solution, make sure your data store keys are identifiable by User IDs, such as containing User IDs as substrings, or you need to modify the scripts to match your own data schema.
    </Alert>
@@ -109,7 +109,7 @@ After you add the webhook, use it to configure the bot with the following steps:
 
 ## Create an Open Cloud API key
 
-To allow your third-party bot to access your data stores for storing PII data of users, [create an Open Cloud API key](../open-cloud/api-keys.md) that can access your experiences and add the **Delete Entry** permission of data stores for data deletion. If you use ordered data stores for storing PII, you also need to add the **Write** permission of ordered data stores. After completion, copy and save the API key in a secure location to use it in later steps.
+To allow your third-party bot to access your data stores for storing PII data of users, [create an Open Cloud API key](../auth/api-keys.md) that can access your experiences and add the **Delete Entry** permission of data stores for data deletion. If you use ordered data stores for storing PII, you also need to add the **Write** permission of ordered data stores. After completion, copy and save the API key in a secure location to use it in later steps.
 
 ## Obtain identifiers of experiences and places
 
@@ -118,9 +118,12 @@ For the bot to locate the PII data requested by users for deletion, obtain the f
 - The **Universe ID**, the unique identifier of your experience.
 - The **Start Place ID**, the unique identifier of the start place of an experience.
 
-To obtain these identifiers, open the [Creations](https://create.roblox.com/dashboard/creations?activeTab=Place) page on **Creator Dashboard**. Then select an experience and copy the **Universe ID** and **Start Place ID**.
+To obtain these identifiers:
 
-<img src="../../assets/creator-dashboard/Experience-Context-Menu-Copy-Universe-ID-Start-Place-ID.png" width="420" alt="Copy Universe ID and Copy Start Place ID options from Creator Dashboard" />
+1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+2. Hover over an experience's thumbnail, click the **&ctdot;** button, and select **Copy Universe ID** and **Copy Start Place ID**, respectively.
+
+   <img src="../../assets/creator-dashboard/Options-Button-Experience-Public.png" width="200" />
 
 ## Add scripts
 

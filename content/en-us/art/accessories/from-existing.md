@@ -196,7 +196,7 @@ Studio's 3D Importer provides a quick and easy way to import third-party 3D asse
 
 To import your asset:
 
-1. In Studio, navigate to the **Avatar tab** and select the **3D Importer**.
+1. In Studio, navigate to the toolbar's **Avatar** tab and select the **3D Importer**.
 2. In the file browser, select the `.fbx` file saved locally. The 3D Importer loads a preview of the object.
 
       <img src="../../assets/art/accessories/creating-rigid/3D-Importer.png" />
@@ -237,7 +237,7 @@ After importing your asset into Studio, you can begin **fitting** your imported 
 
 To fit and generate your accessory:
 
-1. In the **Avatar** tab, open the **Accessory Fitting Tool (AFT)**.
+1. In the toolbar's **Avatar** tab, open the **Accessory Fitting Tool** (AFT).
 2. In the new AFT panel, select the **Part** field and, in the workspace, select the accessory `Class.MeshPart` object in the workspace and press **Next**.
 
    <img src="../../assets/art/accessories/creating-rigid/AFT-Select-Mesh.png" />
@@ -314,7 +314,7 @@ If you intend to sell the asset on the Marketplace, use the following steps to b
 
 ## Publish
 
-After uploading your asset for moderation, you can check your asset's current moderation status on your [Creator Dashboard > Avatar Items](https://create.roblox.com/dashboard/creations). Moderation can take up to 24 hours during which a placeholder icon is used on the creation page.
+After uploading your asset for moderation, you can check your asset's current moderation status in the **Avatar Items** tab of your [Creator Dashboard](https://create.roblox.com/dashboard/creations). Moderation can take up to 24 hours during which a placeholder icon is used on the creation page.
 
 After moderation completes, your item's publishing details become available to edit and enable for sale. See the following for an overview on the various sale options available:
 

@@ -48,7 +48,7 @@ properties:
       enforces that its `Class.Constraint.Attachment1|Attachment1` isn't rotated
       more than a set angle from its `Class.Constraint.Attachment0|Attachment0`.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -150,7 +150,7 @@ properties:
       `Class.Constraint.Attachment1|Attachment1` and the **Y** axis of
       `Class.Constraint.Attachment0|Attachment0`.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

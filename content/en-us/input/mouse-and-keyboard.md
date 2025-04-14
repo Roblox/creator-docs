@@ -15,7 +15,7 @@ Additionally, you can use `Class.ContextActionService` to handle multiple action
 
 The following `Class.LocalScript`, when placed in `Class.StarterPlayerScripts`, captures mouse clicks and prints the mouse position to the [Output](../studio/output.md) window:
 
-```lua title='LocalScript - Output Mouse Click and Position'
+```lua title="LocalScript - Output Mouse Click and Position"
 local UserInputService = game:GetService("UserInputService")
 
 local function onInputEnded(inputObject, processedEvent)

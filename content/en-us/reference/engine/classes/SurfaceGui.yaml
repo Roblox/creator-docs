@@ -60,7 +60,7 @@ properties:
         it's `0`.
       - `Class.SurfaceGui.Brightness|Brightness` has no effect.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -143,7 +143,7 @@ properties:
       Even when this property is `false`, `Class.GuiObject|GuiObjects` that are
       **completely** outside of the canvas will not render.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

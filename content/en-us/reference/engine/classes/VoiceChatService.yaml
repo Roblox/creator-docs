@@ -16,6 +16,23 @@ tags:
   - Service
 deprecation_message: ''
 properties:
+  - name: VoiceChatService.DefaultDistanceAttenuation
+    summary: ''
+    description: ''
+    code_samples: []
+    type: VoiceChatDistanceAttenuationType
+    tags: []
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: VoiceChatService.EnableDefaultVoice
     summary: |
       Controls whether each voice-eligible player can be heard as though they
@@ -26,10 +43,13 @@ properties:
       setup depend on `Class.VoiceChatService.UseAudioApi|UseAudioApi`.
 
       When `Class.VoiceChatService.UseAudioApi|UseAudioApi` is
+      `Enum.AudioApiRollout|Enabled`, disabling this property disables the
+      default setup, but `Class.AudioDeviceInput` will still work. Conversely,
+      when `Class.VoiceChatService.UseAudioApi|UseAudioApi` is
       `Enum.AudioApiRollout|Disabled`, disabling the default voice setup
       effectively disables voice chat altogether.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -57,6 +77,9 @@ properties:
       - An `Class.AudioListener` will be created and parented to
         `Class.Workspace.CurrentCamera`.
 
+      You can disable the default setup by setting
+      `Class.VoiceChatService.EnableDefaultVoice` to `false`.
+
       If `Enum.AudioApiRollout|Disabled`, the voice chat setup is done through
       an internal-only system.
 
@@ -80,6 +103,122 @@ properties:
     capabilities: []
     writeCapabilities: []
 methods:
+  - name: VoiceChatService:getInternalChannelId
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: string
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: VoiceChatService:getInternalGroupId
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: string
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: VoiceChatService:getInternalPublishPause
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: boolean
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: VoiceChatService:getInternalSessionId
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: string
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: VoiceChatService:getInternalSubscribePause
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: boolean
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: VoiceChatService:getInternalSubscribePauseAll
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: boolean
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: VoiceChatService:getInternalVoiceChatApiVersion
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: int
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: VoiceChatService:isInternalPublishPaused
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: boolean
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: VoiceChatService:IsVoiceEnabledForUserIdAsync
     summary: |
       Returns whether or not the given user has voice enabled.
@@ -111,7 +250,7 @@ methods:
         summary: |
           The `Class.Player.UserId` to check.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           If that user has voice enabled.
     tags:

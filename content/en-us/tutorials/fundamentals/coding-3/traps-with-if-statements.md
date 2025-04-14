@@ -1,6 +1,6 @@
 ---
 title: If/then practice with traps
-description: Create a trap that sets the player's health to zero with Roblox Lua.
+description: Create a trap that sets the player's health to zero with Luau.
 next: /tutorials/fundamentals/coding-3/powerups-with-if-statements
 prev: /tutorials/fundamentals/coding-3/intro-to-if-statements
 ---

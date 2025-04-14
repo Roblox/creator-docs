@@ -37,7 +37,7 @@ properties:
       systems for retrying operations yourself. It is possible that automatic
       retry will be enabled again in the future.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''
@@ -66,7 +66,8 @@ methods:
       data store. This function also accepts an optional
       `Class.DataStoreOptions` instance which includes options for enabling
       `Class.DataStoreOptions.AllScopes|AllScopes`. See
-      [Data Stores](../../cloud-services/data-stores) for details on scope.
+      [Data stores](../../../cloud-services/data-stores/index.md) for details on
+      scope.
     code_samples:
     parameters:
       - name: name
@@ -102,6 +103,10 @@ methods:
       This function returns the default `Class.GlobalDataStore`. If you want to
       access a specific **named** data store instead, you should use the
       `Class.DataStoreService:GetDataStore()|GetDataStore()` function.
+
+      Note that the `Class.DataStore` returned by this function always uses the
+      scope `u`. See [Data stores](../../../cloud-services/data-stores/index.md)
+      for details on scope.
     code_samples:
       - get-a-globaldatastore-instance
     parameters: []
@@ -190,8 +195,9 @@ methods:
         type: int
         default: 0
         summary: |
-          **(Optional)** Number of items to be returned in each page. By default
-          is 32.
+          **(Optional)** Number of items to be returned in each page. If no
+          value is given, the engine sends a default value of 0 to the data
+          store web service, which in turn defaults to 32 items per page.
       - name: cursor
         type: string
         default: ''

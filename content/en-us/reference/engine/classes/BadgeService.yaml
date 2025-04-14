@@ -61,7 +61,7 @@ methods:
         summary: |
           The ID of the badge to be awarded.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Boolean of `true` if the badge was awarded successfully.
     tags:
@@ -215,7 +215,7 @@ methods:
         summary: |
           The ID of the badge.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           True if the specified badge is not available to be awarded.
     tags:
@@ -252,7 +252,7 @@ methods:
         summary: |
           The badge ID of the badge.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           True if the badge is associated with the current game.
     tags:
@@ -294,7 +294,7 @@ methods:
         summary: |
           The badge ID of the badge.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           True if the user has the badge.
     tags:
@@ -345,7 +345,7 @@ methods:
         summary: |
           The badge ID of the badge whose ownership will be checked.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Indicates if the specified user has the specified badge.
     tags:

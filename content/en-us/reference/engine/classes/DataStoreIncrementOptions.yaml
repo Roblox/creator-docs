@@ -56,7 +56,7 @@ methods:
         summary: |
           Metadata values to set for the key.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

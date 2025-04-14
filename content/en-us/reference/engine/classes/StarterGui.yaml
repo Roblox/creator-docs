@@ -40,7 +40,7 @@ properties:
       Allows `Class.StarterGui` to process input like `Class.PlayerGui` and
       `Class.CoreGui` do. The default value is `false`.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - Hidden
       - NotReplicated
@@ -68,7 +68,7 @@ properties:
       If one of the children is a PlayerGui and it has its PlayerGui property
       set to false, it will not be cloned.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - Deprecated
     deprecation_message: |
@@ -152,12 +152,31 @@ properties:
       This property determines whether the contents of `Class.StarterGui` is
       visible in Studio.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
       read: None
       write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
+  - name: StarterGui.StudioDefaultStyleSheet
+    summary: ''
+    description: ''
+    code_samples: []
+    type: StyleSheet
+    tags:
+      - Hidden
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
     thread_safety: ReadSafe
     category: Data
     serialization:
@@ -208,7 +227,7 @@ methods:
         summary: |
           The given `Enum.CoreGuiType`.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the given `Enum.CoreGuiType` is enabled.
     tags: []
@@ -764,7 +783,7 @@ methods:
           A table of `Class.BindableEvent|BindableEvents` and
           `Class.BindableFunction|BindableFunctions`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -790,12 +809,12 @@ methods:
         summary: |
           The given `Enum.CoreGuiType`.
       - name: enabled
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether to enable or disable the given `Enum.CoreGuiType`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

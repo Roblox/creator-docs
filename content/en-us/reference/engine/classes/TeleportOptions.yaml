@@ -90,7 +90,7 @@ properties:
       For more information on how to teleport players between servers, see
       [Teleporting Between Places](../../../projects/teleport.md).
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -183,7 +183,7 @@ methods:
         summary: |
           Data to be passed to the destination place.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

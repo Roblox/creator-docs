@@ -15,7 +15,7 @@ If you need to store data that surpasses this limit for your experience, you can
 
 To get a sorted map, call `Class.MemoryStoreService:GetSortedMap()` with a **name** you want to define for the map. The name is global within the experience, so you can access the same sorted map on any script using the name.
 
-```lua title='Getting a Sorted Map'
+```lua title="Getting a Sorted Map"
 local MemoryStoreService = game:GetService("MemoryStoreService")
 
 local sortedMap = MemoryStoreService:GetSortedMap("SortedMap1")
@@ -83,7 +83,7 @@ Note how `player0` sorts after all keys with a sort key. `player6` sorts after a
 Under the EU General Data Protection Regulation (GDPR), if your memory stores have user data subject to [Right to be Forgotten](https://gdpr.eu/right-to-be-forgotten/) you **must** remove the data in 30 days, even if you set your memory store key's expiration up to 45 days.
 </Alert>
 
-```lua title='Adding Data to a Sorted Map'
+```lua title="Adding Data to a Sorted Map"
 local MemoryStoreService = game:GetService("MemoryStoreService")
 
 local sortedMap = MemoryStoreService:GetSortedMap("SortedMap1")
@@ -104,7 +104,7 @@ You can either get a data value and sort key associated with a specific key or g
 
 To get a value and sort key associated with one key from the sorted map, call `Class.MemoryStoreSortedMap:GetAsync()` with the key **name**.
 
-```lua title='Getting a Particular Key from a Sorted Map'
+```lua title="Getting a Particular Key from a Sorted Map"
 local MemoryStoreService = game:GetService("MemoryStoreService")
 
 local sortedMap = MemoryStoreService:GetSortedMap("SortedMap1")
@@ -131,7 +131,7 @@ end
 
 To get data for multiple keys from the sorted map as a single operation, call `Class.MemoryStoreSortedMap:GetRangeAsync()`. This function lists all existing keys by default, but you can set the upper and lower bounds for the key range. For example, the following code sample retrieves up to 20 items starting from the beginning of the sorted map, with keys greater than or equal to `10`, sort keys greater than or equal to `100` and keys less than or equal to `50`, sort keys less than or equal to `500`.
 
-```lua title='Getting a Range of Keys from a Sorted Map'
+```lua title="Getting a Range of Keys from a Sorted Map"
 local MemoryStoreService = game:GetService("MemoryStoreService")
 
 local sortedMap = MemoryStoreService:GetSortedMap("SortedMap1")
@@ -164,7 +164,7 @@ For most experiences, multiple servers can update the same key concurrently and 
 
 For example, the following code sample updates the score in a leaderboard for a player in a game. The score is calculated as kills / deaths. `Class.MemoryStoreSortedMap:UpdateAsync()|UpdateAsync()` ensures that the kills and deaths are updated for the most recent values even if multiple game servers update the same item simultaneously. A player's kills and deaths are monotonically increasing values and can hence only increase in value in a session.
 
-```lua title='Updating the leaderboard score for a player in a Sorted Map'
+```lua title="Updating the leaderboard score for a player in a Sorted Map"
 local MemoryStoreService = game:GetService("MemoryStoreService")
 
 local sortedMap = MemoryStoreService:GetSortedMap("Leaderboard")
@@ -192,7 +192,7 @@ end
 
 The latency for `Class.MemoryStoreSortedMap:UpdateAsync()|UpdateAsync()` is similar to `Class.MemoryStoreSortedMap:GetAsync()|GetAsync()` and `Class.MemoryStoreSortedMap:SetAsync()|SetAsync()` unless there is contention.
 
-When contention occurs, the system automatically retries the operation until one of these three happens: the operation succeeds, the callback function returns nil, or the maximum number of retries is reached. If the system reaches the maximum number of retries, it returns a conflict.
+When contention occurs, the system automatically retries the operation until one of these three happens: the operation succeeds, the callback function returns `nil`, or the maximum number of retries is reached. If the system reaches the maximum number of retries, it returns a conflict.
 
 ## Remove data
 
@@ -202,7 +202,7 @@ You can use `Class.MemoryStoreSortedMap:RemoveAsync()` for both removing one key
 
 To remove a key from the sorted map, call `Class.MemoryStoreSortedMap:RemoveAsync()` with a key **name**.
 
-```lua title='Remove a Key from a Sorted Map'
+```lua title="Remove a Key from a Sorted Map"
 local MemoryStoreService = game:GetService("MemoryStoreService")
 
 local sortedMap = MemoryStoreService:GetSortedMap("SortedMap1")
@@ -226,7 +226,7 @@ end
 
 To delete memory in sorted maps, list all your keys with `Class.MemoryStoreSortedMap:GetRangeAsync()`, then remove them with `Class.MemoryStoreSortedMap:RemoveAsync()`.
 
-```lua title='Delete Memory in a Sorted Map'
+```lua title="Delete Memory in a Sorted Map"
 local MemoryStoreService = game:GetService("MemoryStoreService")
 
 local sortedMap = MemoryStoreService:GetSortedMap("SortedMap1")

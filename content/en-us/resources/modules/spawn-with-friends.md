@@ -54,7 +54,7 @@ This module may result in players spawning in restricted areas like VIP rooms, a
 
 1. Paste the following code into a `Class.Script` within **ServerScriptService**.
 
-   ```lua title='Script'
+   ```lua title="Script"
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
    local CollectionService = game:GetService("CollectionService")
 
@@ -126,7 +126,7 @@ Overrides default configuration options through the following keys/values in the
 </tbody>
 </table>
 
-```lua title='Script' highlight='5-11'
+```lua title="Script" highlight="5-11"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local SpawnWithFriends = require(ReplicatedStorage:WaitForChild("SpawnWithFriends"))
@@ -181,7 +181,7 @@ Allows you to perform custom pre-teleportation checks by hooking up a validator 
 
 This function and its callback can only be used in a `Class.Script` and the callback returns a boolean indicating whether teleportation should proceed. For example, the `return` logic in the following validator function ensures that the spawning player and destination player are on the same team.
 
-```lua title='Script' highlight='6-8, 10'
+```lua title="Script" highlight="6-8, 10"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local SpawnWithFriends = require(ReplicatedStorage:WaitForChild("SpawnWithFriends"))

@@ -15,9 +15,7 @@ Many contraptions in Roblox will use multiple constraints to build more complica
 
    <img src="../../../assets/tutorials/building-a-ferris-wheel/Ferris-Wheel-Edit-Place.png" width="780" alt="Edit in Studio option from the experience's main page" />
 
-2. To view constraints and attachments, in the **Model** tab, toggle on **Constraint Details**.
-
-   <img src="../../../assets/tutorials/building-a-hinged-door/introToConstraints_toggleConstraintDetailed.png" width="60%" />
+2. To view constraints and attachments, toggle on **Constraint Details** in the toolbar's **Model** tab.
 
 ## Add attachments
 

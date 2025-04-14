@@ -2,12 +2,13 @@
 title: Test in Studio
 comments:
 description: Verify the important aspects of your character model in a custom Studio test experience.
-prev: /art/avatar/testing/blender
 ---
 
-Test your character model in Studio to understand how it looks and feels within a Roblox experience.
+Test your character model in Studio to understand how it looks and feels within a Roblox experience. To test your custom character in Studio, first [import the character model](../../characters/import.md) into your Studio project.
 
-Roblox provides an [Avatar Test experience](https://www.roblox.com/games/13176231501/Avatar-Test-Place) that you can open in Studio and import your character model in. This experience provides a wide variety of environmental and clothing tests to ensure that your character model and related components work as expected.
+You can test in Studio using the [Avatar Setup tool](../../../avatar-setup/) to preview and test various components of your avatar character.
+
+You can also playtest your character in the [Avatar Test experience](https://www.roblox.com/games/13176231501/Avatar-Test-Place). This experience provides a wide variety of environmental and clothing tests to ensure that your character model and related components work as expected.
 
 ## Set up test experience
 
@@ -34,7 +35,7 @@ To download the Avatar Test experience:
 
 After you open the test experience in Studio, import your custom character model.
 
-1. In the menu bar, navigate to **Avatar** > **Import 3D**. A file browser displays.
+1. Navigate to toolbar's **Avatar** tab and select **Import 3D**. A file browser displays.
 
    <img src="../../../assets/art/avatar/basic-creation/Testing-3d-Importer.png" />
 

@@ -31,7 +31,7 @@ properties:
     summary: ''
     description: ''
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - NotScriptable
     deprecation_message: ''
@@ -53,7 +53,7 @@ properties:
       inserted into the game, regardless of whether the place owner owns the
       asset.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
       - NotBrowsable
@@ -81,7 +81,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -101,7 +101,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -125,7 +125,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated

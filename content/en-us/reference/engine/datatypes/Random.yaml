@@ -104,7 +104,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     code_samples: []
     tags: []

@@ -46,7 +46,7 @@ methods:
     code_samples:
     parameters:
       - name: ascending
-        type: bool
+        type: boolean
         default:
         summary: |
           A boolean indicating whether the returned data pages are in ascending
@@ -70,7 +70,7 @@ methods:
           Optional parameter. If set, data pages with a value greater than
           **maxValue** will be excluded.
     returns:
-      - type: Instance
+      - type: DataStorePages
         summary: |
           A sorted `Class.DataStorePages` object based on the provided
           arguments.

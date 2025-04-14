@@ -26,7 +26,7 @@ properties:
       Returns whether the user enabled `Collisions` in Studio under the Model
       tab.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -45,7 +45,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -63,10 +63,9 @@ properties:
       Returns the grid snapping size the user has set in Studio.
     description: |
       Returns the grid snapping size the user has set in Studio under the
-      [Model](../../../studio/model-tab.md) or
-      [Avatar](../../../studio/avatar-tab.md) tabs. Note that this property may
-      have slight rounding errors; for example it may be 0.0099999997764826 for
-      a user setting of 1 or 0.4000000059604645 for a user setting of 0.4.
+      toolbar's **Model** or **Avatar** tabs. Note that this property may have
+      slight rounding errors; for example it may be `0.0099999997764826` for a
+      user setting of `1` or `0.4000000059604645` for a user setting of `0.4`.
     code_samples:
     type: float
     tags:
@@ -81,6 +80,23 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
+  - name: Plugin.IsDebuggable
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
     capabilities: []
     writeCapabilities: []
 methods:
@@ -106,14 +122,14 @@ methods:
     code_samples:
     parameters:
       - name: exclusiveMouse
-        type: bool
+        type: boolean
         default:
         summary: |
           A boolean specifying whether to activate the plugin with exclusive
           mouse. If true, a `Class.PluginMouse` can be retrieved via
           `Class.Plugin:GetMouse()`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -169,7 +185,7 @@ methods:
         summary: |
           The name of the icon used to display the plugin.
       - name: allowBinding
-        type: bool
+        type: boolean
         default: true
         summary: |
           Whether the `Class.PluginAction` will be hidden from Studio's
@@ -282,7 +298,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -348,10 +364,10 @@ methods:
     writeCapabilities: []
   - name: Plugin:GetSetting
     summary: |
-      Retrieves a previously stored value with the given key, or nil if the
+      Retrieves a previously stored value with the given key, or `nil` if the
       given key doesn't exist.
     description: |
-      Retrieves a previously stored value with the given key, or nil if the
+      Retrieves a previously stored value with the given key, or `nil` if the
       given key doesn't exist.
 
       Because multiple instances of the same plugin can run simultaneously (for
@@ -427,7 +443,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           A boolean indicating whether the plugin is currently active.
     tags: []
@@ -454,12 +470,26 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether this plugin is currently active with an exclusive mouse.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: Plugin:IsLoadedFromProject
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: boolean
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
@@ -504,7 +534,7 @@ methods:
         default: 1
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -525,7 +555,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -541,7 +571,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -572,7 +602,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -635,7 +665,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -725,7 +755,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -803,7 +833,7 @@ methods:
         default:
         summary: ''
       - name: isR15
-        type: bool
+        type: boolean
         default: true
         summary: ''
     returns:
@@ -828,7 +858,7 @@ methods:
     code_samples:
     parameters:
       - name: isR15
-        type: bool
+        type: boolean
         default: true
         summary: ''
     returns:
@@ -880,7 +910,7 @@ methods:
         default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields

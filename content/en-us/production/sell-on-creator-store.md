@@ -1,5 +1,5 @@
 ---
-title: Sell on the Creator Store
+title: Sell plugins on the Creator Store
 description: An explanation of Creator Store seller accounts, their prerequisites, and how to create one.
 ---
 
@@ -82,7 +82,7 @@ To check the status of your application, revisit the [Seller Onboarding](https:/
 - **Failed** — Your seller account has not been created, either because of an error or because your information was incorrect.
 - **Information Needed** — Stripe requires more information from you before they can confirm your seller account.
 - **Success** — Your seller account has been successfully created. You can set prices and sell assets.
-- **Rejected** - You cannot create a seller account due to fraudulent or malicious activity.
+- **Rejected** — You cannot create a seller account due to fraudulent or malicious activity.
 
 <Alert severity="warning">
 

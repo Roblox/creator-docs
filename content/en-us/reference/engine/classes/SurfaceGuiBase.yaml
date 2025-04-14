@@ -25,7 +25,7 @@ properties:
       3D world while the `Class.SurfaceGui` itself remains in the
       `Class.PlayerGui`.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

@@ -7,3 +7,12 @@ content/en-us/production/promotion/advertise-on-roblox.md
 content/en-us/production/promotion/comply-with-advertising-standards.md
 content/en-us/production/promotion/sponsor-items.md
 content/en-us/production/earn-on-roblox.md
+content/en-us/reference/cloud/cloud.docs.json
+content/en-us/assets.md
+content/en-us/creator-hub.md
+content/en-us/get-started.md
+content/en-us/monetize.md
+content/en-us/platform.md
+content/en-us/scale.md
+content/en-us/studio.md
+content/en-us/education/resources/roblox-educators.md

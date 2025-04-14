@@ -2,8 +2,9 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Messaging Service",
-    "description": "This page contains reference documentation for the Open Cloud v1 Messaging Service API, which can broadcast messages across all servers in your experience.\n\nThe v2 API has its own version of the [Publish Message](/cloud/reference/Universe#Publish-Universe-Message) method. For information on using the v2 method, see the [Messaging usage guide](../../../cloud/open-cloud/usage-messaging.md).",
-    "version": "v1"
+    "description": "This page contains reference documentation for the Open Cloud v1 Messaging Service API, which can broadcast messages across all servers in your experience.\n\nThe v2 API has its own version of the [Publish Message](/cloud/reference/Universe#Publish-Universe-Message) method. For information on using the v2 method, see the [Messaging usage guide](../../../cloud/guides/usage-messaging.md).",
+    "version": "v1",
+    "x-roblox-extensions-version": "1.0.0"
   },
   "servers": [
     {
@@ -16,13 +17,14 @@
         "tags": ["CrossServerMessaging"],
         "operationId": "CrossServerMessaging_Publish",
         "x-roblox-cloud-api-operation-name": "Publish a Message",
+        "x-roblox-stability": "BETA",
         "description": "Publish a message to a pre-defined topic of an experience, with the size of the message up to 1,024 characters (1 KB). Requires the **Publish** permission for API keys and the **universe-messaging-service:publish** scope for OAuth 2.0 apps. See [Cross-server messaging](../../../cloud-services/cross-server-messaging.md#subscribe-users-to-receive-messages) for defining and subscribing users to a topic.",
         "parameters": [
           {
             "name": "universeId",
             "in": "path",
             "required": true,
-            "description": "The identifier of the experience in which you want to send your messages to. You can [copy your experience's Universe ID](../../../cloud/open-cloud/usage-messaging.md#publishing-messages-to-live-servers) on **Creator Dashboard**.",
+            "description": "The identifier of the experience in which you want to send your messages to. You can [copy your experience's Universe ID](../../../cloud/guides/usage-messaging.md#publishing-messages-to-live-servers) on **Creator Dashboard**.",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -80,6 +82,20 @@
             "description": "Server internal error / Unknown error."
           }
         },
+        "x-roblox-rate-limits": {
+          "perIp": {
+            "period": "MINUTE",
+            "maxInPeriod": 10000
+          },
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 5000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 5000
+          }
+        },
         "security": [
           {
             "roblox-api-key": ["Label.Publish"]
@@ -87,6 +103,9 @@
           {
             "roblox-oauth2": ["universe-messaging-service:publish"]
           }
+        ],
+        "x-roblox-scopes": [
+          { "name": "universe-messaging-service:publish" }
         ],
         "x-roblox-cloud-api-operation": true
       }
@@ -110,11 +129,13 @@
     "securitySchemes": {
       "roblox-api-key": {
         "type": "apiKey",
-        "name": "roblox-api-key",
-        "in": "header"
+        "description": "A configurable key that allows granular access to Roblox resources. See https://create.roblox.com/docs/cloud/auth/api-keys for more information.",
+        "in": "header",
+        "name": "x-api-key"
       },
       "roblox-oauth2": {
         "type": "oauth2",
+        "description": "Build or authorize apps to access Roblox resources. See https://create.roblox.com/docs/cloud/auth/oauth2-overview for more information.",
         "flows": {
           "authorizationCode": {
             "authorizationUrl": "https://apis.roblox.com/oauth/v1/authorize",

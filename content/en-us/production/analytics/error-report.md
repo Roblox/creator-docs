@@ -3,7 +3,7 @@ title: Error report
 description: Explains how error reports can help you improve your experience.
 ---
 
-**Error report** lets you view up-to-the-minute Lua system errors and warnings for both server and client. Monitor your error report before and after updating your experience to identify potential issues early.
+**Error report** lets you view up-to-the-minute Luau system errors and warnings for both server and client. Monitor your error report before and after updating your experience to identify potential issues early.
 
 ## View your error report
 

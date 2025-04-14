@@ -124,7 +124,7 @@ functions:
         summary: |
           The `Datatype.SharedTable` to clear.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     code_samples: []
     tags: []
@@ -366,7 +366,7 @@ functions:
           The function that will be called to compute the new value for the
           element.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     code_samples:
       - SharedTable-Update

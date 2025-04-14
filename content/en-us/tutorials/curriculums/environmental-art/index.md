@@ -63,8 +63,6 @@ experience gameplay before investing time into polishing assets.
    </AccordionDetails>
    </BaseAccordion>
 
-   <br />
-
    <BaseAccordion>
    <AccordionSummary>
       <Typography variant="h4">Chapter 2 - Develop polished assets</Typography>
@@ -84,8 +82,6 @@ experience gameplay before investing time into polishing assets.
 
    </AccordionDetails>
    </BaseAccordion>
-
-   <br />
 
    <BaseAccordion>
    <AccordionSummary>
@@ -107,8 +103,6 @@ experience gameplay before investing time into polishing assets.
    </AccordionDetails>
    </BaseAccordion>
 
-   <br />
-
    <BaseAccordion>
    <AccordionSummary>
       <Typography variant="h4">Chapter 4 - Construct your world</Typography>
@@ -129,8 +123,6 @@ experience gameplay before investing time into polishing assets.
    </AccordionDetails>
    </BaseAccordion>
 
-   <br />
-
    <BaseAccordion>
    <AccordionSummary>
       <Typography variant="h4">Chapter 5 - Optimize your experience</Typography>
@@ -150,5 +142,3 @@ experience gameplay before investing time into polishing assets.
 
    </AccordionDetails>
    </BaseAccordion>
-
-   <br />

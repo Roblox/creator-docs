@@ -84,7 +84,7 @@ methods:
         summary: |
           Not available at this time.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -108,7 +108,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -134,7 +134,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -160,7 +160,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -193,7 +193,7 @@ methods:
         summary: |
           The user being prompted to purchase Premium.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -220,7 +220,7 @@ methods:
         default:
         summary: ''
       - name: equipIfPurchased
-        type: bool
+        type: boolean
         default: true
         summary: ''
       - name: currencyType
@@ -228,7 +228,7 @@ methods:
         default: Default
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -241,18 +241,23 @@ methods:
       Prompts a user to purchase an item with the given `assetId`. Does not work
       for USD Creator Store purchases.
     description: |
-      Prompts a user to purchase an item with the given `assetId`. **This does
-      not work for
-      [USD Creator Store](../../../production/sell-on-creator-store.md)
-      purchases**. If prompting a purchase of a
-      [limited](../../../marketplace/marketplace-fees-and-commissions.md#limiteds)
-      item:
+      Prompts a user to purchase an item with the given `assetId`.
 
-      - (Recommended) Server requests prompt original copies until they run out,
-        regardless of the price. Once original copies run out, resale copies are
-        prompted.
-      - Client requests prompt from the lowest resale price even if original
-        copies are available.
+      - This does not work for
+        [USD Creator Store](../../../production/sell-on-creator-store.md)
+        purchases.
+      - If the item has the
+        [Sale Location](../../../marketplace/publish-to-marketplace.md#sale-location)
+        set as `Experience By Place ID (API Only)`, you must call
+        `Class.MarketplaceService:PromptPurchase` from a server script.
+      - If prompting a purchase of a
+        [limited](../../../marketplace/marketplace-fees-and-commissions.md#limiteds)
+        item:
+        - (Recommended) Server requests prompt original copies until they run
+          out, regardless of the price. Once original copies run out, resale
+          copies are prompted.
+        - Client requests prompt from the lowest resale price even if original
+          copies are available.
     code_samples:
       - MarketplaceService-PromptPurchase1
       - market
@@ -266,7 +271,7 @@ methods:
         default:
         summary: ''
       - name: equipIfPurchased
-        type: bool
+        type: boolean
         default: true
         summary: ''
       - name: currencyType
@@ -275,7 +280,7 @@ methods:
         summary: |
           Ignored.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -301,7 +306,7 @@ methods:
         summary: |
           The ID of the subscription to subscribe to.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -368,6 +373,16 @@ methods:
       	  <td>number</td>
       	  <td>The cost of purchasing the asset using Robux.</td>
         </tr>
+        <tr>
+      	  <td><code>ProductId</code></td>
+      	  <td>number</td>
+      	  <td>The product ID if <code>Enum.InfoType</code> is <code>Product</code>.</td>
+        </tr>
+        <tr>
+      	  <td><code>ProductType</code></td>
+      	  <td>string</td>
+      	  <td>A string describing what the product is. Not to be confused with <code>Enum.MarketplaceProductType</code>.</td>
+        </tr>
       	<tr>
       	  <td><code>Created</code></td>
       	  <td>string</td>
@@ -393,10 +408,15 @@ methods:
       	  <td>boolean</td>
       	  <td>Describes whether the asset can be taken for free.</td>
         </tr>
+        <tr>
+      	  <td><code>TargetId</code></td>
+      	  <td>number</td>
+      	  <td>The ID of the product or asset.</td>
+        </tr>
         </tbody>
       </table>
 
-      #### Creator Information
+      ##### Creator Information
 
       <table size="small">
         <thead>
@@ -410,37 +430,32 @@ methods:
       	<tr>
       	  <td><code>Creator</code></td>
       	  <td>table</td>
-      	  <td>Dictionary table of information describing the creator of the asset (see following lines).</td>
-        </tr>
-      	<tr>
-      	  <td><code>Creator.CreatorType</code></td>
-      	  <td>string</td>
-      	  <td>Either <code>User</code> or <code>Group</code>.</td>
-        </tr>
-      	<tr>
-      	  <td><code>Creator.CreatorTargetId</code></td>
-      	  <td>number</td>
-      	  <td>The ID of the creator user or group.</td>
+      	  <td>Dictionary table of information describing the creator of the asset, containing the following fields:</td>
         </tr>
         <tr>
-      	  <td><code>Creator.HasVerifiedBadge</code></td>
-      	  <td>boolean</td>
-      	  <td>Whether the creator has a verified badge.</td>
+      	  <td colspan="2"></td>
+          <td><code>CreatorType</code>: Either <code>User</code> or <code>Group</code>.</td>
         </tr>
-      	<tr>
-      	  <td><code>Creator.Name</code></td>
-      	  <td>string</td>
-      	  <td>The name/username of the creator.</td>
+        <tr>
+      	  <td colspan="2"></td>
+          <td><code>CreatorTargetId</code>: The ID of the creator user or group.</td>
         </tr>
-      	<tr>
-      	  <td><code>Creator.Id</code></td>
-      	  <td>number</td>
-      	  <td>Use <b>Creator.CreatorTargetId</b> instead.</td>
+        <tr>
+      	  <td colspan="2"></td>
+          <td><code>HasVerifiedBadge</code>: Boolean of whether the creator has a verified badge.</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+          <td><code>Name</code>: The name/username of the creator.</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+          <td><code>Id</code>: Use <code>CreatorTargetId</code> instead.</td>
         </tr>
         </tbody>
       </table>
 
-      #### Asset Information
+      ##### Asset Information
 
       <table size="small">
         <thead>
@@ -454,12 +469,17 @@ methods:
       	<tr>
       	  <td><code>AssetId</code></td>
       	  <td>number</td>
-      	  <td>The asset ID if <code>Enum.InfoType</code> is <b>Asset</b>.</td>
+      	  <td>The asset ID if <code>Enum.InfoType</code> is <code>Asset</code>.</td>
         </tr>
       	<tr>
       	  <td><code>AssetTypeId</code></td>
       	  <td>number</td>
       	  <td>The type of asset. See <code>Enum.AssetType</code> for the asset type ID numbers.</td>
+        </tr>
+        <tr>
+      	  <td><code>IconImageAssetId</code></td>
+      	  <td>number</td>
+      	  <td>The asset ID of the product's icon, or <code>0</code> if there isn't one.</td>
         </tr>
       	<tr>
       	  <td><code>IsForSale</code></td>
@@ -484,27 +504,70 @@ methods:
       	<tr>
       	  <td><code>Remaining</code></td>
       	  <td>number</td>
-      	  <td>The remaining number of items a limited unique item may be sold.</td>
+      	  <td>The remaining number of times a limited unique item may be sold.</td>
         </tr>
       	<tr>
       	  <td><code>Sales</code></td>
       	  <td>number</td>
-      	  <td>The number of items the asset has been sold.</td>
-        </tr>
-        <tr>
-      	  <td><code>SaleAvailabilityLocations</code></td>
-      	  <td>table</td>
-      	  <td>The item's <code>Enum.ProductLocationRestriction|ProductLocationRestriction</code> or sale location setting.</td>
-        </tr>
-        <tr>
-      	  <td><code>CanBeSoldInThisGame</code></td>
-      	  <td>boolean</td>
-      	  <td>Describes whether the asset is purchasable in the current experience.</td>
+      	  <td>The number of times the asset has been sold.</td>
         </tr>
         </tbody>
       </table>
 
-      #### Developer Products and Passes
+      #### Collectibles Information
+
+      <table size="small">
+        <thead>
+      	  <tr>
+      	    <th>Key</th>
+      	    <th>Type</th>
+      	    <th>Description</th>
+      	  </tr>
+      	</thead>
+        <tbody>
+        <tr>
+      	  <td><code>CollectibleItemId</code></td>
+      	  <td>string</td>
+      	  <td>The unique item ID of the collectible.</td>
+        </tr>
+      	<tr>
+      	  <td><code>CollectibleProductId</code></td>
+      	  <td>string</td>
+      	  <td>The unique product ID of the collectible.</td>
+        </tr>
+        <tr>
+      	  <td><code>CollectiblesItemDetails</code></td>
+      	  <td>table</td>
+      	  <td>Dictionary table of information describing the collectible, containing the following fields:</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+          <td><code>CollectibleLowestAvailableResaleItemInstanceId</code>: The unique item instance ID of the lowest available resale for the collectible.</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+          <td><code>CollectibleLowestAvailableResaleProductId</code>: The unique product ID of the lowest available resale for the collectible.</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+          <td><code>CollectibleLowestResalePrice</code>: The lowest resale price for the collectible in Robux.</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+          <td><code>IsForSale</code>: Boolean of whether the collectible is available for sale (not resale).</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+          <td><code>IsLimited</code>: Boolean of whether or not the collectible is limited.</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+          <td><code>TotalQuantity</code>: The total quantity of the collectible available for purchase (not resale).</td>
+        </tr>
+        </tbody>
+      </table>
+
+      ##### Sale Location Settings
 
       <table size="small">
         <thead>
@@ -516,15 +579,24 @@ methods:
       	</thead>
         <tbody>
       	<tr>
-      	  <td><code>ProductId</code></td>
-      	  <td>number</td>
-      	  <td>The product ID if <code>Enum.InfoType</code> is <b>Product</b>.</td>
+      	  <td><code>CanBeSoldInThisGame</code></td>
+      	  <td>boolean</td>
+      	  <td>Describes whether the asset is purchasable in the current experience.</td>
         </tr>
-      	<tr>
-      	  <td><code>IconImageAssetId</code></td>
-      	  <td>number</td>
-      	  <td>The asset ID of the product/pass icon, or <code>0</code> if there isn't one.</td>
+        <tr>
+      	  <td><code>SaleLocation</code></td>
+      	  <td>table</td>
+      	  <td>Dictionary table of information describing where the item can be sold, containing the following fields:</td>
         </tr>
+        <tr>
+      	  <td colspan="2"></td>
+      	  <td><code>SaleLocationType</code>: The type of sale location setting. See <code>Enum.ProductLocationRestriction</code> for the sale location setting ID numbers.</td>
+        </tr>
+        <tr>
+      	  <td colspan="2"></td>
+      	  <td><code>UniverseIds</code>: Array table of universes in which the item can be sold (not currently implemented).</td>
+        </tr>
+        </tbody>
       </table>
     code_samples:
       - MarketplaceService-GetProductInfo1
@@ -952,7 +1024,7 @@ methods:
         summary: |
           The asset ID for which the given player's inventory is tested.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Indicates whether the given player's inventory contains the given
           asset.
@@ -985,7 +1057,7 @@ methods:
         summary: |
           The bundle ID for which the given player's inventory is tested.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Indicates whether the given player's inventory contains the given
           bundle.
@@ -1035,7 +1107,7 @@ methods:
           The pass ID you want to check for. Not to be confused with an asset
           ID.
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields
@@ -1116,7 +1188,7 @@ events:
         default:
         summary: ''
       - name: wasPurchased
-        type: bool
+        type: boolean
         default:
         summary: ''
     tags: []
@@ -1158,7 +1230,7 @@ events:
           The ID number of the pass shown in the prompt. Not to be confused with
           an asset ID.
       - name: wasPurchased
-        type: bool
+        type: boolean
         default:
         summary: |
           Indicates if the user pressed **OK** (true), **Cancel** (false) on the
@@ -1252,7 +1324,7 @@ events:
           The ID number of the developer product shown in the prompt. Not to be
           confused with an asset ID.
       - name: isPurchased
-        type: bool
+        type: boolean
         default:
         summary: |
           Indicates if the user pressed **OK** (true), **Cancel** (false) on the
@@ -1302,7 +1374,7 @@ events:
         summary: |
           The asset ID of the item shown in the prompt.
       - name: isPurchased
-        type: bool
+        type: boolean
         default:
         summary: |
           Indicates if the user pressed **OK** (true), **Cancel** (false) on the
@@ -1345,7 +1417,7 @@ events:
         summary: |
           The ID of the subscription with a status change.
       - name: didTryPurchasing
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether the user attempted to purchase the subscription.
@@ -1365,13 +1437,13 @@ callbacks:
       should use `ProcessReceipt` to grant users their purchased product over
       any other granting method. If your `ProcessReceipt` implementation isn't
       correct, you will **not** be able to grant users the products they have
-      purchased on the Experience Detail page.
+      purchased on the Store tab of your experience details page.
 
       A callback to process receipts from
       [developer product](../../../production/monetization/developer-products.md)
       purchases. You can sell developer products inside an experience using
-      `MarketplaceService` functions, or outside an experience on the Experience
-      Detail page.
+      `MarketplaceService` functions, or outside an experience on the Store tab
+      of your experience details page.
 
       You should only set the `ProcessReceipt` callback one time in a single
       server-side `Class.Script|Script`. This callback must handle the receipts
@@ -1456,6 +1528,8 @@ callbacks:
             transaction.
           - `CurrencyType` &mdash; The type of currency spent in the purchase;
             always `Enum.CurrencyType.Robux`.
+          - `ProductPurchaseChannel` — How the user acquired the developer
+            product. One of `Enum.ProductPurchaseChannel`.
     returns:
       - type: ProductPurchaseDecision
         summary: |

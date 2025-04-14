@@ -77,7 +77,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState
@@ -299,7 +299,7 @@ methods:
         summary: |
           The tag to check for.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the instance has the tag.
     tags:
@@ -336,7 +336,7 @@ methods:
         summary: |
           The tag to remove from the instance.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState

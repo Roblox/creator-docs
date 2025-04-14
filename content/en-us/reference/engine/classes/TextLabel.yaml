@@ -291,7 +291,7 @@ properties:
       To use rich text, simply include rich text formatting tags in the
       `Class.TextLabel.Text|Text` string.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -450,7 +450,7 @@ properties:
       A boolean representation of whether the label's text fits within the size
       of it.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -504,7 +504,7 @@ properties:
       the font size up to the maximum font size (100) if there are no size
       constraints.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -646,7 +646,7 @@ properties:
       This property determines whether or not text should wrap at the edges of
       the `Class.TextLabel` element's space.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
       - Deprecated
@@ -684,7 +684,7 @@ properties:
       `Class.GuiBase2d.AbsoluteSize`), then that line will not be rendered at
       all.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

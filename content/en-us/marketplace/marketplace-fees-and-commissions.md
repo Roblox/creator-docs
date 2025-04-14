@@ -219,8 +219,6 @@ For an example of how the publishing advance is recouped, the following table re
 </AccordionDetails>
 </BaseAccordion>
 
-<br /><br />
-
 Rebate credits are reimbursed once per day. See the following guidelines:
 
 - Once per day, Roblox processes rebates from your sales and adds them to your transaction report.

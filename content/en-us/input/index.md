@@ -39,7 +39,7 @@ setting up cross-platform and dynamic inputs.
 
 ## Gamepad
 
-Roblox accepts input from USB gamepads such as Xbox and Playstation controllers.
+Roblox accepts input from USB gamepads such as Xbox and PlayStation controllers.
 Gamepads require additional steps to detect and verify connected gamepads before
 binding controller inputs to actions.
 

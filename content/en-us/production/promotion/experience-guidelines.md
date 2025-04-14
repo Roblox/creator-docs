@@ -32,10 +32,7 @@ To generate experience guidelines:
 
 1. **(Optional)** If you want your experience to include 17+ content, confirm you are at least 17 years old by [verifying your account](../../production/publishing/account-verification.md) so the questionnaire can ask questions to generate the correct age recommendation of 17+.
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and click on the thumbnail of the experience you want to generate experience guidelines for. The experience's **Overview** page displays.
-1. In the left-hand navigation, under **Audience**, click the **Questionnaire** link.
-
-   <img src="../../assets/creator-dashboard/Experience-Nav-Audience-Questionnaire.png" width="330" alt="Questionnaire button indicated for an experience on the Creator Dashboard" />
-
+1. In the left-hand navigation, navigate to the **Audience** section, then select **Maturity & Compliance**.
 1. If you've never taken the questionnaire before, read the notes and details and click **Start** to proceed. If you've previously completed the questionnaire, the **Questionnaire Completed** page displays, but you can click the **Restart** button to start over.
 1. Answer each page of questions based on the content within your experience, then click the **Save and Continue** button. After you've answered every question, the **Questionnaire Preview** page displays all of your answers, the age recommendation and content descriptors for the experience, and any regions where your experience is non-compliant based on your answers.
 1. If you need to modify a previous answer, click the **Edit** button, otherwise click the **Submit** button to immediately publish the guidelines to the experience's main page. If your experience receives an age recommendation of 17+, servers running the experience restart to remove all players except those age-verified as 17+, and Studio removes all players from any active [collaboration](../../projects/collaboration.md) session except those age-verified as 17+.

@@ -95,7 +95,7 @@ properties:
       This property determines whether the `Class.UIStroke` is visible. When set
       to `false`, the stroke will not be rendered. Defaults to `true`.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

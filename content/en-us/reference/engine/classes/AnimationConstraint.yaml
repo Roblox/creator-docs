@@ -81,7 +81,7 @@ properties:
       `Class.AnimationConstraint.MaxForce` and
       `Class.AnimationConstraint.MaxTorque`.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

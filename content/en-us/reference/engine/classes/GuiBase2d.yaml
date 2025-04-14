@@ -27,6 +27,15 @@ properties:
       `Class.GuiBase2d.AbsolutePosition|AbsolutePosition` always represents the
       top-left corner of the `Class.GuiBase2d` element.
 
+      If the `Class.GuiBase2d` is in a `Class.ScreenGui`, the
+      `Class.GuiBase2d.AbsolutePosition|AbsolutePosition` property uses the
+      `Enum.ScreenInsets|CoreUISafeInsets` viewport coordinate system. The
+      origin of this coordinate system is located at the bottom-left corner of
+      the Roblox top bar. Note that this is the same coordinate system used by
+      the `Class.InputObject.Position` property.
+
+      <img src="/assets/engine-api/classes/GuiBase2d/AbsolutePositionCoordinateSystem.png" width="840" alt="Diagram showing the origin of the AbsolutePosition coordinate system." />
+
       See also `Class.GuiBase2d.AbsoluteRotation|AbsoluteRotation` and
       `Class.GuiBase2d.AbsoluteSize|AbsoluteSize`.
     code_samples:
@@ -116,7 +125,7 @@ properties:
 
       See also `Class.GuiBase2d.RootLocalizationTable|RootLocalizationTable`.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -143,7 +152,7 @@ properties:
       localize all `Class.TextLabel.TextButton` that are descendants of the root
       instance.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - Hidden
       - NotReplicated
@@ -301,7 +310,7 @@ properties:
       the selection group and does not move outside of the group from the
       selection behavior direction.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -332,7 +341,7 @@ events:
     code_samples:
     parameters:
       - name: amISelected
-        type: bool
+        type: boolean
         default:
         summary: |
           True if the new selection matches the attached GuiBase2d.

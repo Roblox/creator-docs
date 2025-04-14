@@ -15,13 +15,11 @@ You can update your experience's genre and optional subgenre in the Creator Dash
 You can only change genres once every three months. When creating a new experience, you should only select a genre once you're confident what genre your experience is.
 </Alert>
 
-<img src="../../assets/publishing/experience-metadata/Genre-Settings.png" alt="Content settings page within the Creator Dashboard with fields to edit name, description, genre, and subgenre." />
-
 To update your genre:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-2. Click on the thumbnail of the experience you want to update the genre for. The experience's Overview page displays.
-3. In the left-hand navigation, select **Configure** &rarr; **Settings**.
+2. Click on the thumbnail of the experience you want to update the genre for. The experience's overview page displays.
+3. In the left-hand navigation, select **Configure** &rang; **Settings**.
 4. Select the genre of your experience. For additional guidance, see [Best Practices](#best-practices).
 5. **(Optional)** Select a subgenre if one applies.
 
@@ -29,18 +27,14 @@ When you update your genre, the genre immediately updates on your experience's m
 
 ## Genre accuracy
 
-To ensure genres are accurate and relevant for users, Roblox regularly reviews experiences and may update any genre selections that appear inaccurate. If Roblox updates your experience's genre, you will be notified by email and the change will appear on the experience's Settings page.
+To ensure genres are accurate and relevant for users, Roblox regularly reviews experiences and may update any genre selections that appear inaccurate. If Roblox updates your experience's genre, you will be notified by email and the change will appear on the experience's **Settings** page.
 
-<img src="../../assets/publishing/experience-metadata/Genre-Accuracy.png" alt="Example of banner stating that Roblox has changed the genre of the experience." />
-
-When Roblox changes your genre, you can appeal the decision if you think Roblox made a mistake.
-
-To appeal a genre change made by Roblox:
+When Roblox changes your genre, you can appeal the decision if you think Roblox made a mistake:
 
 1. Confirm that Roblox changed your genre by viewing the change on your experience's **Settings** page within the Creator Dashboard.
 2. Navigate to [roblox.com/support](http://roblox.com/support).
 3. Confirm that you are logged into your Roblox account with edit permissions for the experience.
-4. Select the **Experience Genre** help category, and provide the [Universe ID](../../cloud/open-cloud/data-store-api-handling.md#universe-id) of your experience in the **Universe ID** field.
+4. Select the **Experience Genre** help category, and provide the [Universe ID](../../cloud/guides/data-store-api-handling.md#universe-id) of your experience in the **Universe ID** field.
 5. Click **Continue** to submit your appeal.
 
 Roblox will review your appeal and notify you of the outcome, usually within a few days. If your appeal is accepted, your genre will reset back to the previous genre before Roblox changed it. If your appeal is rejected, your genre will remain the same, and you won't be able to appeal the decision again.
@@ -65,7 +59,6 @@ Use the following genre descriptions and additional subgenres to best represent 
 
 Experiences that emphasize physical challenges and quick reflexes. They normally involve combat or other fast-paced gameplay.
 
-<br/>
 <h6>Subgenres</h6>
 
 - **Battlegrounds & Fighting** — Experiences focused on combat between two or more characters. They often feature a variety of different combat mechanics.
@@ -75,7 +68,6 @@ Experiences that emphasize physical challenges and quick reflexes. They normally
 ### Adventure
 
 Experiences focused on elements such as exploration, solving challenges, and/or interacting with characters to progress through a story or to complete a goal.
-<br/>
 
 <h6>Subgenres</h6>
 - **Exploration** — Experiences where players freely explore worlds. They often involve players uncovering hidden secrets, landmarks, or other unique details at their own pace.
@@ -90,7 +82,6 @@ Experiences focused on learning specific skills or subjects.
 
 Experiences meant to entertain through consumption or creation of content, including audio, visual, or other forms of media.
 
-<br/>
 <h6>Subgenres</h6>
 
 - **Music & Audio** — Experiences for listening, discovering, or creating music and audio.
@@ -101,7 +92,6 @@ Experiences meant to entertain through consumption or creation of content, inclu
 
 Experiences where players navigate surfaces and obstacles to progress. Player actions often involve jumping, climbing, or changing directions.
 
-<br/>
 <h6>Subgenres</h6>
 
 - **Classic Obby** — Experiences where players jump between platforms to progress.
@@ -112,7 +102,6 @@ Experiences where players navigate surfaces and obstacles to progress. Player ac
 
 Experiences focused on casual social play with other players.
 
-<br/>
 <h6>Subgenres</h6>
 
 - **Childhood Game** — Experiences recreating classic childhood games like tag or hide-and-seek.
@@ -127,7 +116,6 @@ Experiences focused on casual social play with other players.
 
 Experiences focused on problem-solving challenges to progress.
 
-<br/>
 <h6>Subgenres</h6>
 
 - **Escape Room** — Experiences focused on solving puzzles to escape a room or building.
@@ -140,7 +128,6 @@ Experiences focused on problem-solving challenges to progress.
 
 Experiences where players embody characters in a fictional world, making choices that affect their journey. Players progress through a system of rules, like stats and abilities.
 
-<br/>
 <h6>Subgenres</h6>
 
 - **Action RPG** — RPG experiences focused on real-time combat.
@@ -153,7 +140,6 @@ Experiences where players embody characters in a fictional world, making choices
 
 Experiences where players immerse themselves in various roles, often with avatar customization. They emphasize creativity, social interaction, and personal expression.
 
-<br/>
 <h6>Subgenres</h6>
 
 - **Animal Sim** — Experiences where players take on the role of an animal in a virtual world.
@@ -170,7 +156,6 @@ Experiences where players immerse themselves in various roles, often with avatar
 
 Experiences where players shoot ranged weapons to defeat other players or enemy units.
 
-<br/>
 <h6>Subgenres</h6>
 
 - **Battle Royale** — Shooter experiences where many players all fight each other. The last player or team standing wins.
@@ -183,7 +168,6 @@ Experiences where players shoot ranged weapons to defeat other players or enemy 
 
 Experiences that support online shopping for users to purchase digital or real-life goods.
 
-<br/>
 <h6>Subgenres</h6>
 
 - **Avatar Shopping** — Experiences that help users browse and purchase avatar items.
@@ -192,7 +176,6 @@ Experiences that support online shopping for users to purchase digital or real-l
 
 Experiences simulating real-world systems, processes, and activities. The focus is on performing specific activities like managing businesses or operating vehicles.
 
-<br/>
 <h6>Subgenres</h6>
 
 - **Idle** — Experiences with little to no player input or interaction.
@@ -215,7 +198,6 @@ Experiences that primarily serve to connect people through hanging out, communic
 
 Experiences focused on sports or racing related competition.
 
-<br/>
 <h6>Subgenres</h6>
 
 - **Racing** — Experiences featuring a racing competition, where the objective is to achieve the fastest time.
@@ -226,7 +208,6 @@ Experiences focused on sports or racing related competition.
 
 Experiences that emphasize the use of skillful thinking or strategic planning.
 
-<br/>
 <h6>Subgenres</h6>
 
 - **Board & Card Games** — Experiences inspired by traditional board and card games in real life. They typically involve a combination of luck and/or skillful thinking.
@@ -237,7 +218,6 @@ Experiences that emphasize the use of skillful thinking or strategic planning.
 
 Experiences where the objective is for players to survive, escape, or defeat something that is threatening them.
 
-<br/>
 <h6>Subgenres</h6>
 
 - **1 vs All** — Experiences where players have different roles and a win condition. Typically one player is "it" and the others need to escape or defeat them.

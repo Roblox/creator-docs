@@ -192,11 +192,32 @@ Caged 3D accessory models and associated PBR textures. Ready for import into Stu
 
 </Grid>
 
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent style={{marginBottom:'66px'}}>
+
+<center>Caging Examples</center>
+<figure>
+<center> <img src="../assets/art/Additional-Caging-Examples.png" width="100%" /> </center>
+</figure>
+<figure>
+Additional caged clothing items from How to cage Roblox's 3D [clothing video guide](https://www.youtube.com/watch?v=QwZaA9Gc-WQ).
+</figure>
+</CardContent>
+
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
+<Button href="../assets/accessories/reference-files/Caging-examples.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
+</CardActions>
+
+</Card>
+
+</Grid>
+
 </Grid>
 
 ## Auto-setup references
 
-The following assets are designed for the specific [auto-setup requirements](../art/modeling/avatar-setup.md#model-requirements). If uploaded as-is, these assets will fail normal validation.
+The following assets are designed for the specific [auto-setup requirements](../avatar-setup/index.md#model-requirements). If uploaded as-is, these assets will fail normal validation.
 
 <Grid container alignItems='stretch' style={{margin: -6}}>
 
@@ -209,7 +230,7 @@ The following assets are designed for the specific [auto-setup requirements](../
 <center> <img src="../assets/art/resources/Archer-Girl-Preview.png" width="100%" /> </center>
 </figure>
 <figure>
-A comprehensive `.zip` folder of an [Avatar Auto-Setup](../art/modeling/avatar-setup.md#avatar-auto-setup) ready character model, including clothing and rigid accessory assets and PBR texture assets. <br /> <br />
+A comprehensive `.zip` folder of an [Avatar Auto-Setup](../avatar-setup/index.md#avatar-auto-setup) ready character model, including clothing and rigid accessory assets and PBR texture assets. <br /> <br />
 This Auto-Setup template is not compatible with the traditional avatar creation workflow.
 </figure>
 </CardContent>
@@ -230,7 +251,7 @@ This Auto-Setup template is not compatible with the traditional avatar creation 
 <center> <img src="../assets/art/resources/StylizedMale-Preview.png" width="100%" /> </center>
 </figure>
 <figure>
-A comprehensive `.zip` folder of an [Avatar Auto-Setup](../art/modeling/avatar-setup.md#avatar-auto-setup) ready character model, including the base body and associated PBR textures. <br /> <br />
+A comprehensive `.zip` folder of an [Avatar Auto-Setup](../avatar-setup/index.md#avatar-auto-setup) ready character model, including the base body and associated PBR textures. <br /> <br />
 This Auto-Setup template is not compatible with the traditional avatar creation workflow.
 </figure>
 </CardContent>
@@ -414,6 +435,7 @@ If you are using Roblox's avatar template files, you must perform the [cleanup s
 <Card style={{height: '100%'}}>
 
 <CardContent style={{marginBottom:'66px'}}>
+
 <figure>
 <img src="../assets/art/avatar/templates/Round-Head-Templates.png" width = "100%"/>
 </figure>
@@ -434,6 +456,7 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 <Card style={{height: '100%'}}>
 
 <CardContent style={{marginBottom:'66px'}}>
+
 <figure>
 <img src="../assets/art/avatar/templates/Square-Head-Templates.png" width = "100%"/>
 </figure>
@@ -454,6 +477,7 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 <Card style={{height: '100%'}}>
 
 <CardContent style={{marginBottom:'66px'}}>
+
 <figure>
 <img src="../assets/art/avatar/templates/Muzzle-Head-Templates.png" width = "100%"/>
 </figure>

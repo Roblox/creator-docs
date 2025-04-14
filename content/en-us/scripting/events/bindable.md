@@ -219,7 +219,7 @@ print(tostring(invokeReturn))  --> table: 0x9fcae7919563a0e9
 
 If a table has a metatable, all of the metatable information is lost in the transfer. In the following code sample, the `NumWheels` property is part of the `Car` metatable. When the server receives the following table, the `truck` table has the `Name` property but **not** the `NumWheels` property.
 
-```lua title='Event Connection'
+```lua title="Event Connection"
 local ServerScriptService = game:GetService("ServerScriptService")
 
 local bindableEvent = ServerScriptService:WaitForChild("TestBindableEvent")
@@ -232,7 +232,7 @@ end
 bindableEvent.Event:Connect(onEvent)
 ```
 
-```lua title='Event Firing'
+```lua title="Event Firing"
 local ServerScriptService = game:GetService("ServerScriptService")
 
 local bindableEvent = ServerScriptService:WaitForChild("TestBindableEvent")

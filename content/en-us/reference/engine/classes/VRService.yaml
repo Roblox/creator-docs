@@ -53,7 +53,7 @@ properties:
 
       This property must be set on the server.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -92,7 +92,7 @@ properties:
       an object. This property prevents players from being able to see through
       walls while in VR. The default value is true.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -153,7 +153,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -200,7 +200,7 @@ properties:
       - `Class.UserInputService.UserCFrameChanged`
     code_samples:
       - UserInputService-UserCFrameChanged
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -310,7 +310,7 @@ methods:
         summary: |
           The specified type of VR device.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           A boolean indicating whether the specified VR device is enabled
           (`true`) or disabled (`false`).
@@ -338,7 +338,7 @@ methods:
       - VRService-RecenterUserHeadCFrame
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -377,7 +377,7 @@ methods:
         summary: |
           The VR device for which the navigation is requested.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -415,7 +415,7 @@ methods:
           The mode you want to set the specified `Enum.VRTouchpad|VRTouchpad`
           to.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -544,7 +544,7 @@ events:
         summary: |
           The `Enum.UserCFrame|UserCFrame` getting enabled or disabled.
       - name: enabled
-        type: bool
+        type: boolean
         default:
         summary: |
           A boolean indicating whether the `Enum.UserCFrame|UserCFrame` is
