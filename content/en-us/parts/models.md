@@ -113,7 +113,7 @@ See [Model Streaming Controls](../workspace/streaming.md#model-streaming-control
 You can distribute models to the [Creator Store](../production/creator-store.md) for other creators to use within their own experiences. As with any asset, all models must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), the [DMCA Guidelines](../production/publishing/dmca-guidelines.md) regarding copyright and Creator Store [asset moderation](../production/creator-store.md#asset-moderation) rules.
 
 <Alert severity="success">
-You can now start selling your models on the creator store! For more information and to start onboarding, see [Selling on the Creator Store](../production/sell-on-creator-store.md).
+You can monetize your models on the creator store by onboarding as a seller.See [Selling on the Creator Store](../production/sell-on-creator-store.md) for more info.
 </Alert>
 
 ### 3D model files
