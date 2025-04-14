@@ -128,7 +128,7 @@ You can create and sell accessories and clothes on the Marketplace. After you pa
 
 You'll receive a [commission](../../marketplace/marketplace-fees-and-commissions.md) every time users purchase your catalog item. If users purchase your catalog item within an experience using the [avatar inspect menu](../../players/avatar-inspect-menu.md) or the [avatar editor service](../../players/avatar-editor.md), the experience owner also receives a commission.
 
-### Models and Plugins
+### Models and plugins
 
 A [plugin](../../studio/plugins.md) is an extension that adds additional functionality to Studio, and a [model](../../parts/models.md) is a reusable asset type. You can offer both to other creators on the [Creator Store](../../production/creator-store.md) for free, or you can sell them for **United States Dollars** (the minimum price is $2.99 for models and $4.99 for plugins). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information on selling models and plugins, see [Sell on the Creator Store](../sell-on-creator-store.md).
 
