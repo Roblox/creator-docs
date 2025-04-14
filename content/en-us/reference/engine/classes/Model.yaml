@@ -452,7 +452,7 @@ methods:
 
       Note this function will throw an error if no primary part exists for the
       `Class.Model`. If this behavior is not desired developers can do the
-      following, which will be equal to nil if there is no primary part.
+      following, which will be equal to `nil` if there is no primary part.
 
           local cFrame = Model.PrimaryPart and Model.PrimaryPart.CFrame
     code_samples:

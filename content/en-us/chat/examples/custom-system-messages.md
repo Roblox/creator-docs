@@ -31,7 +31,7 @@ To customize the appearance of the message, use the `TextChannel.OnIncomingMessa
 
 When `TextChannel.OnIncomingMessage` returns a `TextChatMessageProperties` instance, it's used to override the default message properties. This allows us to customize the appearance of our message.
 
-In the same Script as before, add the following code. We will set the `TextColor` property of the `TextChatMessageProperties` Instance to red. This will change the color of the message to red when the message's metadata is "WelcomeMessage".
+In the same script as before, add the following code. We will set the `TextColor` property of the `TextChatMessageProperties` Instance to red. This will change the color of the message to red when the message's metadata is "WelcomeMessage".
 
 ```lua title="Client"
 TextChannel.OnIncomingMessage = function(message: TextChatMessage)

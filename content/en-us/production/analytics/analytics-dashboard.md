@@ -1,6 +1,6 @@
 ---
 title: Analytics dashboard
-description: Analytics Dashboard helps you measure and gain insight into your experience's performance.
+description: The analytics dashboard helps you measure and gain insight into your experience's performance.
 ---
 
 The **analytics dashboard** helps you measure and gain insight into your experience's performance to adjust content strategies. It visualizes standard key performance indicators (KPIs) of your experience to help you optimize your experience's full lifecycle, including:
@@ -8,7 +8,7 @@ The **analytics dashboard** helps you measure and gain insight into your experie
 - [Retention](../../production/analytics/retention.md) KPIs that measure how many users return to your experience again after their first visit.
 - [Engagement](../../production/analytics/engagement.md) KPIs that reflect how users actively use your experience and represent your core user base.
 - [Acquisition](../../production/analytics/acquisition.md) statistics that show you the sources of users finding your experience and how users from different sources convert.
-- [Audience](../../production/analytics/audience.md) shows you the age, gender, country, and language of monthly active users who play your experience.
+- [Demographics](../../production/analytics/demographics.md) shows you the age, gender, country, and language of monthly active users who play your experience.
 - [Feedback](../../production/analytics/feedback.md) helps you monitor player/community comments and ratings.
 - [Monetization](../../production/analytics/monetization.md) KPIs that help you understand the business performance of your experience.
 
@@ -138,15 +138,15 @@ You can't export the chart data for the given KPI chart if you don't have any da
 
 Benchmarking is the process of measuring your experience's KPIs and comparing them to other experiences on Roblox. With benchmarks displayed on your dashboard, you can monitor the performance of your experience's analytics KPIs among experiences on Roblox to adjust your content strategy and set appropriate goals for improvement.
 
-For KPIs relevant to specific aspects of your user behavior, the analytics dashboard provides **similar experience benchmarks**. Depending on the availability, you might see:
+For KPIs relevant to specific aspects of your user behavior, the analytics dashboard provides **benchmarks for experiences with similar players**. Depending on the availability, you might see:
 
-- **Similar experiences** benchmarks if the model finds enough similar games, such as those on the recommended experiences section on your Experience Details Page.
+- **Experiences with similar players** if the model finds enough experiences enjoyed by players that are similar to yours, such as those on the recommended experiences section on your Experience Details Page.
 - **Genre** benchmarks if the model cannot find enough similar experiences but your game has an internal genre.
 - **All experiences** benchmarks if your game hasn't been labeled with a genre yet.
 
 Your experience may transition from one benchmark set to another as we gather more data to help you compare your experience with the most relevant experiences with at least 100 daily active users. Benchmarks for similar experiences update daily to reflect the most relevant experiences for your user base.
 
-When your benchmark sets update, such as **Genre** updating to **Similar Experience**, the dashboard adds annotations in the charts to identify when your experience transitions from one benchmark set to another.
+When your benchmark sets update, such as **Genre** updating to **Experiences with similar players**, the dashboard adds annotations in the charts to identify when your experience transitions from one benchmark set to another.
 
 <img src="../../assets/analytics/analytics-dashboard/benchmark-transition.png" width= "100%" alt="An example graph showing icon indicating transition from Genre benchmarks to Similar Experiences benchmarks." />
 
@@ -157,14 +157,14 @@ Available KPIs for similar experience benchmarks include:
 - **Monetization** - Average Revenue per Paying Users (ARPPU), Average Revenue per DAU (ARPDAU), Conversion Rate (CVR)
 - **Acquisition** - Qualified Play Through Rate
 
-Each of these KPIs shows its similar experience benchmark in the 50th - 90th percentile range. For example, if you see your Day 1 Retention benchmark's 50th - 90th percentile is 12.4% - 24.1%, it means that:
+Each of these KPIs shows its similar experience benchmark in the 50th - 90th percentile range. For example, if you see your Day 1 Retention benchmark's 50th - 90th percentile is 12.11% - 18.73%, it means that:
 
-- 50% of similar experiences have a Day 1 Retention of 12.4% or lower.
-- 10% of similar experiences have a Day 1 Retention of 24.1% or higher.
+- 50% of experiences with similar players have a Day 1 Retention of 12.11% or lower.
+- 10% of experiences with similar players have a Day 1 Retention of 18.73% or higher.
 
 <img src="../../assets/analytics/analytics-dashboard/benchmark-similar-exp.png" width= "100%" alt="An example shows the D7 retention chart with similar experience benchmarking." />
 
-For KPIs on your experience's overall success, the analytics dashboard uses the top 1000 experiences with the highest total playtime on rolling 30 days as the benchmarking pool, excluding experiences that are less than 30 days old. Each of these KPIs has **Top 200**, **Top 500**, and **Top 1000** as benchmarking tiers. The dashboard displays the appropriate tier for your experience based on your experience's engagement metrics and updates them on a daily basis,
+For KPIs on your experience's overall success, the analytics dashboard uses the top 1000 experiences with the highest total playtime on rolling 30 days as the benchmarking pool, excluding experiences that are less than 30 days old. Each of these KPIs has **Top 200**, **Top 500**, and **Top 1000** as benchmarking tiers. The dashboard displays the appropriate tier for your experience based on your experience's engagement metrics and updates them on a daily basis.
 
 ### View KPI breakdowns
 

@@ -211,7 +211,7 @@ methods:
     returns:
       - type: Instance
         summary: |
-          The `Class.PluginAction` item that was selected or nil.
+          The `Class.PluginAction` item that was selected or `nil`.
     tags:
       - Yields
     deprecation_message: ''

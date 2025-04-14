@@ -24,7 +24,7 @@ methods:
         default:
         summary: ''
       - name: innerCage
-        type: Object
+        type: EditableMesh
         default:
         summary: ''
       - name: innerTransform
@@ -32,7 +32,7 @@ methods:
         default:
         summary: ''
       - name: outerCage
-        type: Object
+        type: EditableMesh
         default:
         summary: ''
       - name: outerTransform
@@ -58,7 +58,7 @@ methods:
         default:
         summary: ''
       - name: innerCage
-        type: Object
+        type: EditableMesh
         default:
         summary: ''
       - name: innerTransform
@@ -66,7 +66,7 @@ methods:
         default:
         summary: ''
       - name: outerCage
-        type: Object
+        type: EditableMesh
         default:
         summary: ''
       - name: outerTransform
@@ -75,6 +75,58 @@ methods:
         summary: ''
     returns:
       - type: Tuple
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: UGCValidationService:ValidateEditableMeshFacialBounds
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: editableMesh
+        type: EditableMesh
+        default:
+        summary: ''
+      - name: boundsScale
+        type: float
+        default:
+        summary: ''
+      - name: partSize
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: UGCValidationService:ValidateEditableMeshFacialExpressiveness
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: editableMesh
+        type: EditableMesh
+        default:
+        summary: ''
+      - name: minDelta
+        type: float
+        default:
+        summary: ''
+      - name: partSize
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: float
         summary: ''
     tags: []
     deprecation_message: ''

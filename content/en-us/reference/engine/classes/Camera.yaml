@@ -33,7 +33,7 @@ description: |
   information on how to adjust and customize the camera's behavior.
 code_samples:
 inherits:
-  - Instance
+  - PVInstance
 tags:
   - NotReplicated
 deprecation_message: ''

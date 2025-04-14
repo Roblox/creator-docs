@@ -8,8 +8,7 @@ navigation:
     path: /studio/
     navigation: /engine/studio.yaml
   - title: Engine API reference
-    path: /reference/engine
-    navigation: /engine/reference.yaml
+    path: https://create.roblox.com/docs/reference/engine
   - title: Open Cloud
     path: /cloud/
   - title: Creator Hub

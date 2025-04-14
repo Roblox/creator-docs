@@ -122,11 +122,8 @@ properties:
       move objects each tick.
     description: |
       **GridSize** determines the distance in studs by which Studio's drag and
-      move tools move objects each tick. This is set in the user's
-      [Model](../../../studio/model-tab.md) tab under the
-      **Snap&nbsp;to&nbsp;Grid** section.
-
-      <img src="/assets/studio/general/Model-Tab-Transform-Snapping.png" width="768" alt="Transform snapping tools indicated in Model tab" />
+      move tools move objects each tick. This is set in the user's toolbar's
+      **Model** tab.
     code_samples:
     type: float
     tags:
@@ -150,10 +147,7 @@ properties:
     description: |
       **RotateIncrement** determines the angle in degrees by which Studio's
       rotation tool will rotate selected objects each tick. This is set in the
-      user's [Model](../../../studio/model-tab.md) tab under the
-      **Snap&nbsp;to&nbsp;Grid** section.
-
-      <img src="/assets/studio/general/Model-Tab-Transform-Snapping.png" width="768" alt="Transform snapping tools indicated in Model tab" />
+      user's toolbar's **Model** tab.
     code_samples:
     type: float
     tags:
@@ -402,11 +396,11 @@ methods:
           A list of file types that the user is allowed to select. File types
           are formatted without a period. For example, {"jpg", "png"} would
           allow only a JPG or PNG file to be selected. If no filter is provided,
-          the filter is nil and allows the user to select any file type.
+          the filter is `nil` and allows the user to select any file type.
     returns:
       - type: Instance
         summary: |
-          The imported `Class.File`. Returns nil if no files were selected, or
+          The imported `Class.File`. Returns `nil` if no files were selected, or
           if the selected file was too large (FileSize greater than 100
           megabytes).
     tags:
@@ -439,13 +433,13 @@ methods:
           A list of file types that the user is allowed to select. File types
           are formatted without a period. For example, {"jpg", "png"} would
           allow only JPG and PNG files to be selected. If no filter is provided,
-          the filter is nil and allows the user to select any file type.
+          the filter is `nil` and allows the user to select any file type.
     returns:
       - type: Instances
         summary: |
           The imported `Class.File|Files`. Returns an empty list if no files
-          were selected. Returns nil if the user selected one or more files that
-          were too large (FileSize greater than 100 megabytes).
+          were selected. Returns `nil` if the user selected one or more files
+          that were too large (FileSize greater than 100 megabytes).
     tags:
       - Yields
     deprecation_message: ''

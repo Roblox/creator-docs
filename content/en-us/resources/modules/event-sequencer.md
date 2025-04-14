@@ -252,7 +252,7 @@ To install the plugin:
    <img src="../../assets/studio/toolbox/Creator-Store-Scene-Manager-Plugin.png" width="360" />
 
 4. Click the plugin's icon to view its details and then click the **Install** button.
-5. Once the plugin is installed, it appears in Studio's [Plugins](../../studio/plugins-tab.md) tab.
+5. Once the plugin is installed, it appears in Studio's **Plugins** tab.
 
 ### Load and unload scenes
 

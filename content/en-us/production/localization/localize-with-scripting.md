@@ -5,13 +5,13 @@ description: Explains how to use localization APIs for specialized translation t
 
 You can use localization APIs for specialized translation tasks that are not automatically handled by [adding translations](../../production/localization/manual-translations.md) to the localization table. Roblox provides a `Class.LocalizationService` to handle all localization scripting needs. Use the `Class.LocalizationService` for the following tasks:
 
-- [**Localizing images and sounds**.](#localize-images-and-sounds)
-- [**Translating part of individual strings**.](#translate-individual-strings)
-- [**Applying translations from multiple languages**.](#switch-languages)
+- [Localizing images and sounds](#localize-images-and-sounds)
+- [Translating part of individual strings](#translate-individual-strings)
+- [Applying translations from multiple languages](#switch-languages)
 
 If you use any localization APIs when translating your experience, listen for any changes to the user's LocaleID to [react to users switching their language](#react-to-users-switching-languages) while in an experience.
 
-When reusing translation code, you should use a [**TranslationHelper ModuleScript**](#create-a-translationhelper-module) to handle errors and missing translations.
+When reusing translation code, you should use a [TranslationHelper ModuleScript](#create-a-translationhelper-module) to handle errors and missing translations.
 
 ## Localize images and sounds
 
@@ -32,7 +32,7 @@ Add localization beyond text in your experience by providing unique images and s
   </figure>
 </GridContainer>
 
-To start localizing images and sounds, add your [**source** and **target**](../../production/localization/manual-translations.md) asset IDs to your localization table. Asset ID entries on the localization table must include a **Key** as an identifier to be called by the API.
+To start localizing images and sounds, add your [source and target](../../production/localization/manual-translations.md) asset IDs to your localization table. Asset ID entries on the localization table must include a **Key** as an identifier to be called by the API.
 
 The following is an example entry on a localization table using asset IDs:
 
@@ -430,7 +430,7 @@ return TranslationHelper
 ```
 
 <Alert severity="info">
-If your experience's source language is not English, change the value of the  <InlineCode>sourceLanguageCode</InlineCode> variable to the country code of the experience's source language.
+If your experience's source language is not English, change the value of the  `sourceLanguageCode` variable to the country code of the experience's source language.
 </Alert>
 
 Once the module is in `Class.ReplicatedStorage`, require it from a `Class.LocalScript` to call the module's functions. The following code uses this module's helper function to translate an individual string:

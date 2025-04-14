@@ -17,15 +17,15 @@ Logical operators return values depending on the boolean values of the given arg
     </tr>
   </thead>
   <tr>
-    <td><InlineCode>and</InlineCode></td>
-    <td>Evaluates as <InlineCode>true</InlineCode> only if both conditions are true</td>
+    <td>`and`</td>
+    <td>Evaluates as `true` only if both conditions are true</td>
   </tr>
   <tr>
-    <td><InlineCode>or</InlineCode></td>
-    <td>Evaluates as <InlineCode>true</InlineCode> if either condition is true</td>
+    <td>`or`</td>
+    <td>Evaluates as `true` if either condition is true</td>
   </tr>
   <tr>
-    <td><InlineCode>not</InlineCode></td>
+    <td>`not`</td>
     <td>Evaluates as the opposite of the condition</td>
   </tr>
 </table>
@@ -44,7 +44,7 @@ print(true and false) -- false
 print(true and true) -- true
 ```
 
-You can use `and` to test multiple conditions in [control structures](./control-structures.md) such as [`if` statements](./control-structures.md#if-statements) and [`while` loops](./control-structures.md#while-loops). For example, the following `if`—`then` statement tests that two conditions are both true:
+You can use `and` to test multiple conditions in [control structures](./control-structures.md) such as [`if` statements](./control-structures.md#if-statements) and [`while` loops](./control-structures.md#while-loops). For example, the following `if`‑`then` statement tests that two conditions are both true:
 
 ```lua
 local pasta = true
@@ -79,7 +79,7 @@ print(true or false) -- true
 print(true or true) -- true
 ```
 
-You can use `or` to perform complex logical tests in [control structures](./control-structures.md). For example, the following `if`—`then` statement tests whether two conditions are true **or** a third condition is true:
+You can use `or` to perform complex logical tests in [control structures](./control-structures.md). For example, the following `if`‑`then` statement tests whether two conditions are true **or** a third condition is true:
 
 ```lua
 local pasta = false
@@ -122,7 +122,7 @@ if not falseVariable then
 end
 ```
 
-You can also use the `not` operator to test for the opposite of an entire multi-condition statement. In the following code sample, the `if`—`then` conditional tests that it's neither true that three is greater than four nor is it true that five is greater than four.
+You can also use the `not` operator to test for the opposite of an entire multi-condition statement. In the following code sample, the `if`‑`then` conditional tests that it's neither true that three is greater than four nor is it true that five is greater than four.
 
 ```lua
 local three = 3
@@ -150,40 +150,40 @@ Relational operators compare two parameters and return a [`boolean`](./booleans.
     </tr>
   </thead>
   <tr>
-    <td><InlineCode>==</InlineCode></td>
+    <td>`==`</td>
     <td>Equal to</td>
-    <td><InlineCode>3 == 5</InlineCode> → <b>false</b></td>
-    <td><InlineCode>__eq</InlineCode></td>
+    <td>`3 == 5` → `false`</td>
+    <td>`__eq`</td>
   </tr>
   <tr>
-    <td><InlineCode>~=</InlineCode></td>
+    <td>`~=`</td>
     <td>Not equal to</td>
-    <td><InlineCode>3 ~= 5</InlineCode> → <b>true</b></td>
+    <td>`3 ~= 5` → `true`</td>
     <td></td>
   </tr>
   <tr>
-    <td><InlineCode>&gt;</InlineCode></td>
+    <td>`>`</td>
     <td>Greater than</td>
-    <td><InlineCode>3 &gt; 5</InlineCode> → <b>false</b></td>
+    <td>`3 > 5` → `false`</td>
     <td></td>
   </tr>
   <tr>
-    <td><InlineCode>&lt;</InlineCode></td>
+    <td>`<`</td>
     <td>Less than</td>
-    <td><InlineCode>3 &lt; 5</InlineCode> → <b>true</b></td>
-    <td><InlineCode>__lt</InlineCode></td>
+    <td>`3 < 5` → `true`</td>
+    <td>`__lt`</td>
   </tr>
   <tr>
-    <td><InlineCode>&gt;=</InlineCode></td>
+    <td>`>=`</td>
     <td>Greater than or equal to</td>
-    <td><InlineCode>3 &gt;= 5</InlineCode> → <b>false</b></td>
+    <td>`3 >= 5` → `false`</td>
     <td></td>
   </tr>
   <tr>
-    <td><InlineCode>&lt;=</InlineCode></td>
+    <td>`<=`</td>
     <td>Less than or equal to</td>
-    <td><InlineCode>3 &lt;= 5</InlineCode> → <b>true</b></td>
-    <td><InlineCode>__le</InlineCode></td>
+    <td>`3 <= 5` → `true`</td>
+    <td>`__le`</td>
   </tr>
 </table>
 
@@ -201,55 +201,55 @@ Luau supports the usual binary operators along with exponentiation, modulus, and
     </tr>
   </thead>
   <tr>
-    <td><InlineCode>+</InlineCode></td>
+    <td>`+`</td>
     <td>Addition</td>
-    <td><InlineCode>1 + 1 = 2</InlineCode></td>
-    <td><InlineCode>__add</InlineCode></td>
+    <td>`1 + 1 = 2`</td>
+    <td>`__add`</td>
   </tr>
   <tr>
-    <td><InlineCode>-</InlineCode></td>
+    <td>`-`</td>
     <td>Subtraction</td>
-    <td><InlineCode>1 - 1 = 0</InlineCode></td>
-    <td><InlineCode>__sub</InlineCode></td>
+    <td>`1 - 1 = 0`</td>
+    <td>`__sub`</td>
   </tr>
   <tr>
-    <td><InlineCode>*</InlineCode></td>
+    <td>`*`</td>
     <td>Multiplication</td>
-    <td><InlineCode>5 * 5 = 25</InlineCode></td>
-    <td><InlineCode>__mul</InlineCode></td>
+    <td>`5 * 5 = 25`</td>
+    <td>`__mul`</td>
   </tr>
   <tr>
-    <td><InlineCode>/</InlineCode></td>
+    <td>`/`</td>
     <td>Division</td>
-    <td><InlineCode>10 / 5 = 2</InlineCode></td>
-    <td><InlineCode>__div</InlineCode></td>
+    <td>`10 / 5 = 2`</td>
+    <td>`__div`</td>
   </tr>
   <tr>
-    <td><InlineCode>//</InlineCode></td>
+    <td>`//`</td>
     <td>Floor Division</td>
     <td>
-      <InlineCode>10 // 4 = 2</InlineCode><br />
-      <InlineCode>-10 // 4 = -3</InlineCode>
+      `10 // 4 = 2`<br />
+      `-10 // 4 = -3`
     </td>
-    <td><InlineCode>__idiv</InlineCode></td>
+    <td>`__idiv`</td>
   </tr>
   <tr>
-    <td><InlineCode>^</InlineCode></td>
+    <td>`^`</td>
     <td>Exponentiation</td>
-    <td><InlineCode>2 ^ 4 = 16</InlineCode></td>
-    <td><InlineCode>__pow</InlineCode></td>
+    <td>`2 ^ 4 = 16`</td>
+    <td>`__pow`</td>
   </tr>
   <tr>
-    <td><InlineCode>%</InlineCode></td>
+    <td>`%`</td>
     <td>Modulus</td>
-    <td><InlineCode>13 % 7 = 6</InlineCode></td>
-    <td><InlineCode>__mod</InlineCode></td>
+    <td>`13 % 7 = 6`</td>
+    <td>`__mod`</td>
   </tr>
   <tr>
-    <td><InlineCode>-</InlineCode></td>
+    <td>`-`</td>
     <td>Unary negation</td>
-    <td><InlineCode>-2 = 0 - 2</InlineCode></td>
-    <td><InlineCode>__unm</InlineCode></td>
+    <td>`-2 = 0 - 2`</td>
+    <td>`__unm`</td>
   </tr>
 </table>
 
@@ -267,57 +267,57 @@ In the following examples, suppose `local x = 3`.
       <th>Operator</th>
       <th>Operation</th>
       <th>Example</th>
-      <th>New Value of <InlineCode>x</InlineCode></th>
+      <th>New Value of `x`</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><InlineCode>+=</InlineCode></td>
+      <td>`+=`</td>
       <td>Addition</td>
-      <td><InlineCode>x += 2</InlineCode></td>
-      <td><InlineCode>5</InlineCode></td>
+      <td>`x += 2`</td>
+      <td>`5`</td>
     </tr>
     <tr>
-      <td><InlineCode>-=</InlineCode></td>
+      <td>`-=`</td>
       <td>Subtraction</td>
-      <td><InlineCode>x -= 2</InlineCode></td>
-      <td><InlineCode>1</InlineCode></td>
+      <td>`x -= 2`</td>
+      <td>`1`</td>
     </tr>
     <tr>
-      <td><InlineCode>*=</InlineCode></td>
+      <td>`*=`</td>
       <td>Multiplication</td>
-      <td><InlineCode>x *= 2</InlineCode></td>
-      <td><InlineCode>6</InlineCode></td>
+      <td>`x *= 2`</td>
+      <td>`6`</td>
     </tr>
     <tr>
-      <td><InlineCode>/=</InlineCode></td>
+      <td>`/=`</td>
       <td>Division</td>
-      <td><InlineCode>x /= 2</InlineCode></td>
-      <td><InlineCode>1.5</InlineCode></td>
+      <td>`x /= 2`</td>
+      <td>`1.5`</td>
     </tr>
     <tr>
-      <td><InlineCode>//=</InlineCode></td>
+      <td>`//=`</td>
       <td>Floor Division</td>
-      <td><InlineCode>x //= 2</InlineCode></td>
-      <td><InlineCode>1</InlineCode></td>
+      <td>`x //= 2`</td>
+      <td>`1`</td>
     </tr>
     <tr>
-      <td><InlineCode>%=</InlineCode></td>
+      <td>`%=`</td>
       <td>Modulus</td>
-      <td><InlineCode>x %= 2</InlineCode></td>
-      <td><InlineCode>1</InlineCode></td>
+      <td>`x %= 2`</td>
+      <td>`1`</td>
     </tr>
     <tr>
-      <td><InlineCode>^=</InlineCode></td>
+      <td>`^=`</td>
       <td>Exponentiation</td>
-      <td><InlineCode>x ^= 2</InlineCode></td>
-      <td><InlineCode>9</InlineCode></td>
+      <td>`x ^= 2`</td>
+      <td>`9`</td>
     </tr>
     <tr>
-      <td><InlineCode>..=</InlineCode></td>
+      <td>`..=`</td>
       <td>Concatenation</td>
-      <td><InlineCode>x ..= " World!" </InlineCode></td>
-      <td><InlineCode>"3 World!"</InlineCode></td>
+      <td>`x ..= " World!" `</td>
+      <td>`"3 World!"`</td>
     </tr>
   </tbody>
 </table>
@@ -336,15 +336,15 @@ Miscellaneous operators include **concatenation** and **length**.
     </tr>
   </thead>
   <tr>
-    <td><InlineCode>..</InlineCode></td>
+    <td>`..`</td>
     <td>Concatenates two strings</td>
-    <td><InlineCode>print("Hello " .. "World!")</InlineCode></td>
-    <td><InlineCode>__concat</InlineCode></td>
+    <td>`print("Hello " .. "World!")`</td>
+    <td>`__concat`</td>
   </tr>
   <tr>
-    <td><InlineCode>#</InlineCode></td>
+    <td>`#`</td>
     <td>Length of table</td>
-    <td>If <InlineCode>tableVar = &#123;1, 2, 3}</InlineCode>, then <InlineCode>#tableVar == 3</InlineCode>.</td>
-    <td><InlineCode>__len</InlineCode></td>
+    <td>If `tableVar = {1, 2, 3}`, then `#tableVar == 3`.</td>
+    <td>`__len`</td>
   </tr>
 </table>

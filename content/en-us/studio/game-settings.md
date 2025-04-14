@@ -5,7 +5,7 @@ description: The Game Settings window contains all Studio-level settings and cus
 
 The **Game Settings** window contains all Studio-level settings and
 customization options for Roblox experiences, including settings for
-[permissions](#permissions), [monetization](#monetization), [security](#security), and [localization](#localization). You can access it from the [Home](../studio/home-tab.md) tab of the toolbar.
+[permissions](#permissions), [monetization](#monetization), [security](#security), and [localization](#localization). You can access it from the toolbar's [Home](./home-tab.md) tab.
 
 <img src="../assets/studio/general/Home-Tab-Game-Settings.png" width="760" alt="Game Settings button indicated in Home tab" />
 

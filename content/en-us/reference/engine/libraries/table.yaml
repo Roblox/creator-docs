@@ -13,12 +13,12 @@ properties:
 functions:
   - name: table.clear
     summary: |
-      Sets all keys in the given table to nil.
+      Sets all keys in the given table to `nil`.
     description: |
-      Sets the value for all keys within the given table to nil. This causes the
-      `#` operator to return `0` for the given table. The allocated capacity of
-      the table's array portion is maintained, which allows for efficient re-use
-      of the space.
+      Sets the value for all keys within the given table to `nil`. This causes
+      the `#` operator to return `0` for the given table. The allocated capacity
+      of the table's array portion is maintained, which allows for efficient
+      re-use of the space.
 
       ```lua
       local grades = {95, 82, 71, 92, 100, 60}

@@ -18,8 +18,8 @@ navigation:
     path: /production/analytics/engagement
   - title: Acquisition
     path: /production/analytics/acquisition
-  - title: Audience
-    path: /production/analytics/audience
+  - title: Demographics
+    path: /production/analytics/demographics
   - title: Feedback
     path: /production/analytics/feedback
   - title: Monetization

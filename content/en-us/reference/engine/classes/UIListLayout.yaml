@@ -33,7 +33,7 @@ description: |
   sorting or alphanumerical Name sorting." />
 
   Padding between siblings is controlled through the
-  `Class.UIListLayout.Padding|Padding` propertly, and wrapping within the parent
+  `Class.UIListLayout.Padding|Padding` property, and wrapping within the parent
   container's bounds through the `Class.UIListLayout.Wraps|Wraps` boolean.
   Alignment of siblings within the parent container is controlled through
   `Class.UIListLayout.HorizontalAlignment|HorizontalAlignment` and

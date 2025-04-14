@@ -24,17 +24,11 @@ In order for team chat, push to chat, or time-based chat to work appropriately, 
 To configure your settings for voice chat:
 
 1. Allow players to use their microphones.
-   1. In the **Home** tab, click **Game Settings** to open the **Game Settings** menu. If the button is disabled, you must first publish your experience to the cloud.
-
-      <img src="../../../assets/studio/general/Home-Tab-Game-Settings.png" width="760" alt="Game Settings button indicated in Home tab" />
-
+   1. In the toolbar's **Home** tab, click **Game Settings**. If the button is disabled, you must first publish your experience to the cloud.
    1. In the lefthand navigation of the **Game Settings** menu, navigate to the **Communication** tab, then toggle **Enable Microphone** so the selector turns from gray to green.
    1. Publish the place to save your changes.
 1. Configure **VoiceChatService** so that it creates the necessary audio objects for voice chat.
-   1. In the **Model** tab, navigate to the **Advanced Options** section, then click **Service**.
-
-      <img src="../../../assets/studio/general/Model-Tab-Advanced-Options.png" width="754" alt="Advanced options indicated in Model tab" />
-
+   1. In the toolbar's **Model** tab, click **Service**.
    1. In the pop-up window, select **VoiceChatService**, then click the **Insert** button. The new service displays in the **Explorer** window along with the default services in every project.
    1. In the **Explorer** window, select **VoiceChatService**, then in the **Properties** window, set **UseAudioApi** to **Enabled**.
 

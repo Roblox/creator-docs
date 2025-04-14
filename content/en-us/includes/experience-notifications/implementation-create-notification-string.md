@@ -2,7 +2,7 @@
 title: include
 ---
 
-As with [Player Invite Prompts](../../production/promotion/invite-prompts.md), you must create and edit your notification strings in the [Creator Dashboard](https://create.roblox.com/dashboard/creations). **There is no default Experience Notification string, so this step is required.**
+As with [Player Invite Prompts](../../production/promotion/invite-prompts.md), you must create and edit your notification strings in the [Creator Dashboard](https://create.roblox.com/dashboard/creations). **There is no default experience notification string, so this step is required.**
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. Similar to [badges](../../production/publishing/badges.md), notification strings are tied to a **specific experience**. Locate that experience's thumbnail and click on it.

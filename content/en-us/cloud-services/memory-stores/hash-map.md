@@ -179,7 +179,7 @@ end
 
 The latency for `Class.MemoryStoreHashMap:UpdateAsync()|UpdateAsync()` is similar to `Class.MemoryStoreHashMap:GetAsync()|GetAsync()` and `Class.MemoryStoreHashMap:SetAsync()|SetAsync()` unless there is contention.
 
-When contention occurs, the system automatically retries the operation until one of these three happens: the operation succeeds, the callback function returns nil, or the maximum number of retries is reached. If the system reaches the maximum number of retries, it returns a conflict.
+When contention occurs, the system automatically retries the operation until one of these three happens: the operation succeeds, the callback function returns `nil`, or the maximum number of retries is reached. If the system reaches the maximum number of retries, it returns a conflict.
 
 ## Remove data
 

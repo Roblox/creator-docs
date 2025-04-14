@@ -84,7 +84,7 @@ For example, if the round is active, the `Class.SpawnLocation.Neutral|Neutral` p
 
 To demonstrate, if you examine **ServerScriptService** > **Gameplay** > **Rounds** > **SpawnPlayersInLobby**, which runs at the end of a round, you can see that for every player that is passed into the `players: { Player }` table, the script:
 
-- Sets their `Class.Player.Neutral` property to true to automatically reset their `Class.Player.Team` to nil, allowing the player to respawn in the lobby when a round isn't active, as the spawn location's `Class.SpawnLocation.Neutral|Neutral` property is also set to **true**.
+- Sets their `Class.Player.Neutral` property to true to automatically reset their `Class.Player.Team` to `nil`, allowing the player to respawn in the lobby when a round isn't active, as the spawn location's `Class.SpawnLocation.Neutral|Neutral` property is also set to **true**.
 - Changes their `PlayerState` to `InLobby` to remove the player's blaster and first-person UI visuals.
 
 For more information on the neutral spawn zone and its functionality for each round, see [Adding Rounds](adding-rounds.md) in the next section of the tutorial.

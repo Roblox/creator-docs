@@ -79,7 +79,7 @@ Looping...
 ```
 
 <Alert severity="error">
-Always include a delay such as <InlineCode>task.wait()</InlineCode> in an infinite loop. Omitting it freezes the experience and crashes Studio.
+Always include a delay such as `Library.task.wait()` in an infinite loop. Omitting it freezes the experience and crashes Studio.
 </Alert>
 
 ## Repeat loops

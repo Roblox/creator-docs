@@ -264,7 +264,7 @@ methods:
       necessary.
     description: |
       Returns a new `Class.HumanoidDescription` with the Shirt and Pants
-      properties updated if necessary. Returns nil if default clothing was not
+      properties updated if necessary. Returns `nil` if default clothing was not
       needed.
 
       Default clothing is necessary if the HumanoidDescription does not
@@ -281,7 +281,7 @@ methods:
       - type: HumanoidDescription
         summary: |
           Returns a HumanoidDescription if default clothing was necessary.
-          Otherwise returns nil.
+          Otherwise returns `nil`.
     tags:
       - Yields
     deprecation_message: ''

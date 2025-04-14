@@ -95,7 +95,7 @@ In addition, a rise in elevation creates both a physical and emotional sense of 
 To create your own floor geometry:
 
 1. Open Roblox Studio with a **Baseplate** template.
-1. In the menu bar, navigate to the **Model** tab, then in the **Snap to Grid** section,
+1. Navigate to the toolbar's **Model** tab, then:
 
    1. Set **Rotate** to `90`.
    1. Set **Move** to `5` studs. This allows you to equally position all greybox geometry on or away from each other in 5 stud increments.
@@ -124,18 +124,15 @@ To create your own floor geometry:
 To exactly recreate the floor geometry within the sample [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) place file:
 
 1. Open Roblox Studio with a **Baseplate** template.
-1. In the menu bar, navigate to the **Model** tab, then in the **Snap to Grid** section,
+1. Navigate to the toolbar's **Model** tab, then:
 
    1. Set **Rotate** to `90`.
    1. Set **Move** to `5` studs. This allows you to equally position all greybox geometry on or away from each other in 5 stud increments.
 
 1. Add and configure a **block** part for the left-side surface of the **main floor**. You can use this same process for each step as you create all of the playable areas.
 
-   1. In the menu bar, select the **Model** tab.
-   1. In the **Parts** section, click the dropdown arrow and select **Block**. A block part displays in the viewport.
-
-      <img src="../../../assets/studio/general/Model-Tab-Part-Tools.png" width="660" alt="Studio's Model tab with the Part button and Part Type Picker elements highlighted." />
-
+   1. Navigate to the toolbar's **Model** tab.
+   1. Click the dropdown arrow on the **Part** button and select **Block**. A block part displays in the viewport.
    1. In the **Explorer** window, select the block, then in the **Properties** window,
       1. Set **Size** to `105, 1, 185`.
       1. Set **CFrame.Position** to `-77.5, 4.5, 252.5`.
@@ -1085,9 +1082,9 @@ It's important to continuously playtest the layout of your environment **at near
 
 To playtest your experience:
 
-1. In the **Test** tab, navigate to the **Play** icon, and click the **Mode Picker**.
+1. In the toolbar's **Test** tab, navigate to the **Play** icon and click the **Mode Picker** dropdown arrow.
 
-   <img src="../../../assets/studio/general/Model-Tab-Quick-Access-Play.png" width="770" alt="Studio's Model tab with the Play button highlighted in the menu bar." />
+   <img src="../../../assets/studio/general/Test-Tab-Playtest-Options.png" width="760" alt="Rapid playtest options in Studio." />
 
 2. Select from one of the following playtest options:
 

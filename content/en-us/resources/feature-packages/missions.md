@@ -47,8 +47,8 @@ To get the packages from your inventory into your experience:
 
 	</Grid>
 
-2. In the menu bar, select the **View** tab.
-3. In the **Show** section, click **Toolbox**. The **Toolbox** window displays.
+2. In the toolbar, select the [View](../../studio/view-tab.md) tab.
+3. Click **Toolbox**. The **Toolbox** window displays.
 
    <img src="../../assets/studio/general/View-Tab-Toolbox.png" alt="Studio's View tab with the Toolbox tool highlighted." width="876" />
 

@@ -8,6 +8,8 @@ The `Class.DataStoreService` lets you store data that needs to persist between s
 
 If you want to add granular permission control to your data stores and access them outside of Studio or Roblox servers, you can use [Open Cloud APIs for data stores](/cloud/reference/DataStore).
 
+To view and monitor all the data stores in an experience through the Creator Hub, use the [Data Stores Manager](./data-stores-manager.md).
+
 For temporary data that you need to update or access frequently, use [memory stores](./../memory-stores/index.md).
 
 ## Enable Studio access
@@ -16,9 +18,10 @@ By default, experiences tested in Studio can't access data stores, so you must f
 
 To enable Studio access in a [published](../../production/publishing/publish-experiences-and-places.md) experience:
 
-1. Go to **Home** > **Game Settings** > **Security**.
-2. Enable the **Enable Studio Access to API Services** toggle.
-3. Click **Save**.
+1. Open [Game Settings](../../studio/game-settings.md).
+2. Navigate to **Security**.
+3. Enable the **Enable Studio Access to API Services** toggle.
+4. Click **Save**.
 
 ## Access data stores
 
@@ -50,15 +53,15 @@ A data store is essentially a dictionary, similar to a Luau table. A unique **ke
 </thead>
 <tbody>
   <tr>
-    <td><InlineCode>31250608</InlineCode></td>
+    <td>`31250608`</td>
     <td>50</td>
   </tr>
   <tr>
-    <td><InlineCode>351675979</InlineCode></td>
+    <td>`351675979`</td>
     <td>20</td>
   </tr>
   <tr>
-    <td><InlineCode>505306092</InlineCode></td>
+    <td>`505306092`</td>
     <td>78000</td>
   </tr>
 </tbody>
@@ -70,15 +73,15 @@ A data store is essentially a dictionary, similar to a Luau table. A unique **ke
 </thead>
 <tbody>
   <tr>
-    <td><InlineCode>ActiveSpecialEvent</InlineCode></td>
+    <td>`ActiveSpecialEvent`</td>
     <td>SummerParty2</td>
   </tr>
   <tr>
-    <td><InlineCode>ActivePromoCode</InlineCode></td>
+    <td>`ActivePromoCode`</td>
     <td>BONUS123</td>
   </tr>
   <tr>
-    <td><InlineCode>CanAccessPartyPlace</InlineCode></td>
+    <td>`CanAccessPartyPlace`</td>
     <td>true</td>
   </tr>
 </tbody>
@@ -160,7 +163,7 @@ end
 ```
 
 <Alert severity="warning">
-  The values you retrieve using `Class.GlobalDataStore:GetAsync()|GetAsync()` sometimes can be out of sync with the backend due to the [caching](../../cloud-services/data-stores/manage-data-stores.md#caching) behavior. For more information, see [Disabling Caching](../../cloud-services/data-stores/manage-data-stores.md#disable-caching).
+  The values you retrieve using `Class.GlobalDataStore:GetAsync()|GetAsync()` sometimes can be out of sync with the backend due to the [caching](./versioning-listing-and-caching.md#caching) behavior. For more information, see [Disabling caching](./versioning-listing-and-caching.md#disable-caching).
 </Alert>
 
 ## Increment data
@@ -200,7 +203,7 @@ end
 ## Metadata
 
 <Alert severity="info">
-Ordered data stores don't support [versioning](../../cloud-services/data-stores/manage-data-stores.md#versioning) and metadata, so `Class.DataStoreKeyInfo|DataStoreKeyInfo` is always `nil` for keys in an `Class.OrderedDataStore|OrderedDataStore`. If you need to support versioning and metadata, use `Class.DataStore|DataStore`.
+Ordered data stores don't support [versioning](versioning-listing-and-caching.md#versioning) and metadata, so `Class.DataStoreKeyInfo|DataStoreKeyInfo` is always `nil` for keys in an `Class.OrderedDataStore|OrderedDataStore`. If you need to support versioning and metadata, use `Class.DataStore|DataStore`.
 </Alert>
 
 There are two types of metadata associated with keys:

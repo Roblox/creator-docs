@@ -15,7 +15,7 @@ Keep in mind, your character model must also follow Roblox's [avatar character s
 
 To import your asset:
 
-1. In Studio, navigate to the **Avatar tab** and select the **3D Importer**.
+1. In Studio, navigate to the toolbar's **Avatar** tab and select the **3D Importer**.
 2. In the file browser, select the `.fbx` or `.gltf` file saved locally. The 3D Importer loads a preview of the object.
 
     <img src="../../assets/art/avatar/Avatar-3D-Importer.png" width = "60%"/>

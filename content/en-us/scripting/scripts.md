@@ -88,7 +88,7 @@ A `Class.ModuleScript` runs only when another script imports it using the `Globa
 
 <Alert severity="warning">
 Don't require `Class.ModuleScript|ModuleScripts` in a recursive or circular manner,
-otherwise Studio throws an error: <InlineCode>Requested module was required recursively</InlineCode>.
+otherwise Studio throws an error: `Requested module was required recursively`.
 </Alert>
 
 To access a `Class.ModuleScript` from another script using the `Global.LuaGlobals.require()`

@@ -167,7 +167,7 @@ functions:
       Returns the metatable of the given table.
     description: |
       Returns the metatable of the given table `t` if it has one, otherwise
-      returns nil. If `t` does have a metatable, and the `__metatable`
+      returns `nil`. If `t` does have a metatable, and the `__metatable`
       metamethod is set, it returns that value instead.
 
       ```lua
@@ -460,7 +460,7 @@ functions:
         default:
         summary: |
           The index to set in `t` to a specified `value`. Must be different from
-          nil.
+          `nil`.
       - name: value
         type: Variant
         default:
@@ -630,7 +630,7 @@ functions:
       Sets the given table's metatable.
     description: |
       Sets the metatable for the given table `t` to `newMeta`. If `newMeta` is
-      nil, the metatable of `t` is removed. Finally, this function returns the
+      `nil`, the metatable of `t` is removed. Finally, this function returns the
       table `t` which was passed to it. If `t` already has a metatable whose
       `__metatable` metamethod is set, calling this on `t` raises an error.
 
@@ -651,7 +651,7 @@ functions:
         type: Variant
         default:
         summary: |
-          If nil, the metatable of the given table `t` is removed. Otherwise,
+          If `nil`, the metatable of the given table `t` is removed. Otherwise,
           the metatable to set for the given table `t`.
     returns:
       - type: table
@@ -660,11 +660,11 @@ functions:
     code_samples:
   - name: tonumber
     summary: |
-      Returns the provided value converted to a number, or nil if impossible.
+      Returns the provided value converted to a number, or `nil` if impossible.
     description: |
       Attempts to convert the arg into a number with a specified base to
       interpret the value in. If it cannot be converted, this function returns
-      nil.
+      `nil`.
 
       The base may be any integer between 2 and 36, inclusive. In bases above
       10, the letter 'A' (in either upper or lower case) represents 10, 'B'
@@ -703,7 +703,7 @@ functions:
     code_samples:
   - name: tostring
     summary: |
-      Returns the provided value converted to a string, or nil if impossible.
+      Returns the provided value converted to a string, or `nil` if impossible.
     description: |
       Receives an argument of any type and converts it to a string in a
       reasonable format. For complete control of how numbers are converted, use

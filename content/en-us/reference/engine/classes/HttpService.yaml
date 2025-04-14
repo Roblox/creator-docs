@@ -117,9 +117,9 @@ methods:
       (base&nbsp;16) digits, displayed in five groups separated by hyphens in
       the form `8-4-4-4-12` for a total of 36 characters, for example
       `123e4567-e89b-12d3-a456-426655440000`.
-      
-      The UUID specification used is [Version 4
-      (random)](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)),
+
+      The UUID specification used is
+      [Version 4 (random)](<https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)>),
       variant 1 (DCE 1.1, ISO/IEC 11578:1996). UUIDs of this version are the
       most commonly used due to their simplicity, as they are entirely randomly
       generated. Note that this version does not have certain features that

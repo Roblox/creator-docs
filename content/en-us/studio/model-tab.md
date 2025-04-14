@@ -5,7 +5,7 @@ description: The Model tab contains tools for manipulating 3D objects and models
 
 import BetaAlert from '../includes/beta-features/beta-alert.md'
 
-The **model** tab contains tools for manipulating 3D objects in the workspace, creating detailed models, working with physical constraints, and adding advanced objects.
+The **Model** tab contains tools for manipulating 3D objects in the workspace, creating detailed models, working with physical constraints, and adding advanced objects.
 
 <img src="../assets/studio/general/Toolbar-Model-Tab.png" width="830" alt="Model tab indicated in Studio toolbar" />
 
@@ -31,7 +31,7 @@ The primary transform tools include **Select**, **Move**, **Scale**, **Rotate**,
   </figure>
 </GridContainer>
 
-Tool transform **snapping increments** are based on **studs** for moving/scaling or **degrees** for rotating, each adjustable in the [Model](../studio/model-tab.md#transform-snapping) tab. While transforming, you can temporarily toggle snapping by holding the <kbd>Shift</kbd> key.
+Tool transform **snapping increments** are based on **studs** for moving/scaling or **degrees** for rotating, each adjustable. While transforming, you can temporarily toggle snapping by holding the <kbd>Shift</kbd> key.
 
 <Alert severity="info">
 If the selected object and its visual draggers are not currently in view within the 3D viewport, you can press the <kbd>Tab</kbd> key to "summon" the draggers to your mouse pointer position, allowing you to transform the selected object from your current viewpoint.
@@ -225,8 +225,6 @@ The **Gameplay** section tools allow you to insert beautiful effects like [light
 ## Advanced options
 
 The **Advanced** section contains tools to insert advanced objects, services, and scripts, as well as configure [collision filtering](../workspace/collisions.md#collision-filtering).
-
-<img src="../assets/studio/general/Model-Tab-Advanced-Options.png" width="754" alt="Advanced options indicated in Model tab" />
 
 <table>
 <thead>
