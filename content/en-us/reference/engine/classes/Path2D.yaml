@@ -16,7 +16,7 @@ properties:
     description: |
       Connects the first and last control points when enabled.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -117,7 +117,7 @@ properties:
       will update correctly, ensuring that querying data will have the correct
       info.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -371,7 +371,7 @@ methods:
         summary: |
           The control point to insert.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -393,7 +393,7 @@ methods:
         summary: |
           The index to remove at.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -417,7 +417,7 @@ methods:
         summary: |
           The new list of control points to set.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -443,7 +443,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

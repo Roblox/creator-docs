@@ -77,7 +77,7 @@ methods:
       - Custom-Loading-Screen
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

@@ -84,10 +84,10 @@ methods:
     writeCapabilities: []
   - name: RotationCurve:GetKeys
     summary: |
-      Returns a copy of all the keys in the rotation curve as a Lua array of
+      Returns a copy of all the keys in the rotation curve as a Luau array of
       `Datatype.RotationCurveKey|RotationCurveKeys`.
     description: |
-      Returns a copy of all the keys in the rotation curve as a Lua array of
+      Returns a copy of all the keys in the rotation curve as a Luau array of
       `Datatype.RotationCurveKey|RotationCurveKeys`.
     code_samples:
     parameters: []

@@ -45,7 +45,7 @@ properties:
       widget should have this property be true, as showing a widget is visible
       to the user even if the game view isn't visible.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''
@@ -88,7 +88,7 @@ properties:
         hidden (and not just in general)
     code_samples:
       - brickcolor-randomizer-plugin
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''
@@ -139,11 +139,11 @@ methods:
     code_samples:
     parameters:
       - name: active
-        type: bool
+        type: boolean
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

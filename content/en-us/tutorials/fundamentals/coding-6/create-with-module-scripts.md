@@ -405,7 +405,7 @@ Now that the two module functions, `canOpenChest()` and `openChest()`, have been
 
 ## Finished scripts
 
-```lua title='Finished TreasureManager Script'
+```lua title="Finished TreasureManager Script"
 
 local TreasureManager = {}
 local Players = game:GetService("Players")
@@ -453,7 +453,7 @@ end
 return TreasureManager
 ```
 
-```lua title='Finished ChestScript'
+```lua title="Finished ChestScript"
 local ServerStorage = game:GetService("ServerStorage")
 -- Require the module script below ⯆
 local treasureManager = require(ServerStorage:WaitForChild("TreasureManager"))
@@ -485,7 +485,7 @@ for chestIndex = 1, #chestsArray do
 end
 ```
 
-```lua title='Finished keyScript'
+```lua title="Finished keyScript"
 local ServerStorage = game:GetService("ServerStorage")
 -- Require the module script below ⯆
 local treasureManager = require(ServerStorage:WaitForChild("TreasureManager"))

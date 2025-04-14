@@ -3,7 +3,7 @@ title: Security tactics and cheat mitigation
 description: Explore security tactics and cheat mitigation tactics for Roblox experiences.
 ---
 
-Roblox uses a [distributed physics system](../../physics/network-ownership.md) in which clients have custody over the physical simulation of objects in their control, typically the player's character and unanchored objects near that character. Additionally, through the use of third party software, exploiters can run arbitrary Lua code on the client to manipulate their client's data model and decompile and view code running on it.
+Roblox uses a [distributed physics system](../../physics/network-ownership.md) in which clients have custody over the physical simulation of objects in their control, typically the player's character and unanchored objects near that character. Additionally, through the use of third party software, exploiters can run arbitrary Luau code on the client to manipulate their client's data model and decompile and view code running on it.
 
 Collectively, this means that a skilled exploiter can potentially execute code to cheat in your game, including:
 

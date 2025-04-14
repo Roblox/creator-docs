@@ -50,7 +50,7 @@ methods:
           A callback function that is called with the `contentId` of the new
           capture once it is ready.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -67,11 +67,10 @@ methods:
       experience's main menu.
     code_samples: []
     parameters:
-      - name: contentIds
+      - name: captures
         type: Array
         default:
-        summary: |
-          An array of `contentId` strings identifying the screenshots to save.
+        summary: ''
       - name: resultCallback
         type: Function
         default:
@@ -80,7 +79,7 @@ methods:
           each `contentId` to a boolean indicating if the user accepted saving
           that capture.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -107,11 +106,10 @@ methods:
       `IsContentSharingAllowed` is true in the returned dictionary.
     code_samples: []
     parameters:
-      - name: contentId
-        type: ContentId
+      - name: captureContent
+        type: Content
         default:
-        summary: |
-          The `contentId` identifying the screenshot to share.
+        summary: ''
       - name: launchData
         type: string
         default:
@@ -128,7 +126,29 @@ methods:
         summary: |
           An optional callback function invoked if the user denies sharing.
     returns:
-      - type: void
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: CaptureService:TakeCapture
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: onCaptureReady
+        type: Function
+        default:
+        summary: ''
+      - name: captureParams
+        type: Dictionary
+        default: nil
+        summary: ''
+    returns:
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

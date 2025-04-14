@@ -35,7 +35,7 @@ The `int64` number type refers to a signed 64-bit integer, which ranges from -2<
 
 ## Notation
 
-Numbers are notated with the most significant digits first (big-endian). There are multiple ways to notate number literals in Roblox Lua:
+Numbers are notated with the most significant digits first (big-endian). There are multiple ways to notate number literals in Luau:
 
 - [Decimal (base-10)](https://wikipedia.org/wiki/Decimal) — Write the digits of the number normally using digits 0–9 with a single optional decimal point, for example `7`, `1.25`, or `-22.5`.
 - [Scientific notation](https://wikipedia.org/wiki/Scientific_notation) — Write a decimal number followed by `e` or `e+`, then an integer to raise the decimal number to a power of 10. For instance, `12e3` is 12 × 10^3 (12,000).
@@ -43,7 +43,7 @@ Numbers are notated with the most significant digits first (big-endian). There a
 - [Binary (base-2)](https://wikipedia.org/wiki/Binary_number) — Begin the number with `0b` followed by 0s or 1s, for instance `0b1100` (12 in decimal format).
 
 <Alert severity="info">
-To aid in the readability of long numbers, you can include underscores anywhere within a number literal without changing the value, <b>except</b> at the beginning where this would make it an identifier. For example, <InlineCode>1_234_567</InlineCode> is the same as <InlineCode>1234567</InlineCode>, both of which are equal to 1,234,567.
+To aid in the readability of long numbers, you can include underscores anywhere within a number literal without changing the value, <b>except</b> at the beginning where this would make it an identifier. For example, `1_234_567` is the same as `1234567`, both of which are equal to 1,234,567.
 </Alert>
 
 ## Operations

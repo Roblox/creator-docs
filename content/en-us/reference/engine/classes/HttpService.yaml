@@ -28,14 +28,8 @@ description: |
 
   ##### Enable HTTP requests
 
-  Request-sending methods aren't enabled by default. To send requests, toggle on
-  **Allow&nbsp;HTTP&nbsp;Requests** through the
-  [Game Settings](../../../studio/game-settings.md) interface in Studio, or set
-  `Class.HttpService.HttpEnabled|HttpEnabled` to `true` in the
-  [Command Bar](../../../studio/ui-overview.md#command-bar) for **unpublished**
-  experiences:
-
-  `game:GetService("HttpService").HttpEnabled = true`
+  Request-sending methods aren't enabled by default. To send requests, you must
+  [enable HTTP requests](#HttpEnabled) for your experience.
 
   ##### Use in plugins
 
@@ -87,11 +81,18 @@ properties:
     summary: |
       Indicates whether HTTP requests can be sent to external websites.
     description: |
-      When set to `true`, you are able to send requests to other websites using
+      When set to `true`, allows scripts to send requests to websites using
       `Class.HttpService:GetAsync()`, `Class.HttpService:PostAsync()`, and
       `Class.HttpService:RequestAsync()`.
+
+      This property must be toggled on through the
+      [Game Settings](../../../studio/game-settings.md) interface in Studio, or
+      for **unpublished** experiences by setting this property to `true` using
+      the [Command Bar](../../../studio/ui-overview.md#command-bar):
+
+      `game:GetService("HttpService").HttpEnabled = true`
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -110,12 +111,25 @@ methods:
     summary: |
       Generates a UUID/GUID random string, optionally with curly braces.
     description: |
-      This method randomly creates a [universally unique identifier
-      [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+      This method generates a **random universally unique identifier**
+      ([UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier))
       string. The sixteen octets of a UUID are represented as 32 hexadecimal
-      (base 16) digits, displayed in 5 groups separated by hyphens in the form
-      `8-4-4-4-12` for a total of 36 characters, for example
+      (base&nbsp;16) digits, displayed in five groups separated by hyphens in
+      the form `8-4-4-4-12` for a total of 36 characters, for example
       `123e4567-e89b-12d3-a456-426655440000`.
+
+      The UUID specification used is
+      [Version 4 (random)](<https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)>),
+      variant 1 (DCE 1.1, ISO/IEC 11578:1996). UUIDs of this version are the
+      most commonly used due to their simplicity, as they are entirely randomly
+      generated. Note that this version does not have certain features that
+      other UUID versions have, such as encoded timestamps, MAC addresses, or
+      time-based sorting like [UUIDv7](https://uuid7.com/) or
+      [ULID](https://github.com/ulid/spec).
+
+      There are over 5.3&times;10<sup>36</sup> unique v4 UUIDs, in which the
+      probability of finding a duplicate within 103 trillion UUIDs is one in a
+      billion.
 
       The `wrapInCurlyBraces` argument determines whether the returned string is
       wrapped in curly braces (`{}`). For instance:
@@ -126,7 +140,7 @@ methods:
       - HttpService-GenerateGUID
     parameters:
       - name: wrapInCurlyBraces
-        type: bool
+        type: boolean
         default: true
         summary: |
           Whether the returned string should be wrapped in curly braces (`{}`).
@@ -145,23 +159,15 @@ methods:
       Returns a `Datatype.Secret` from the secrets store.
     description: |
       This method returns a value previously added to the secrets store for the
-      experience. The secret content is not printable and, for security reasons,
-      secrets are not available when the experience runs locally.
+      experience. The secret content is not printable and not available when the
+      experience runs locally.
 
       The returned `Datatype.Secret` can be transformed using built-in methods
       such as `Datatype.Secret:AddPrefix()`. It is expected to be sent as a part
-      of the HTTP request.
+      of an HTTP request.
 
-      Note that a secret may have an associated domain name. If the domain name
-      is empty, the secret cannot be sent over the network and therefore could
-      not be used as an API key. To allow sending the secret anywhere, set the
-      domain name to `*`. You can also limit the URL to a specific domain name
-      such as `apis.myservice.com` or to subdomains of a domain, for example
-      `*.myservice.org`.
-
-      Production `Datatype.Secret|Secrets` are only available in live servers and Team Create.
-      See [here](../../../studio/game-settings.md#security) for availability details of local
-      `Datatype.Secret|Secrets`.
+      For more information, see the
+      [usage guide](../../../cloud-services/secrets.md).
     code_samples: []
     parameters:
       - name: key
@@ -179,18 +185,18 @@ methods:
     writeCapabilities: []
   - name: HttpService:JSONDecode
     summary: |
-      Decodes a JSON string into a Lua table.
+      Decodes a JSON string into a Luau table.
     description: |
-      This method transforms a JSON object or array into a Lua
+      This method transforms a JSON object or array into a Luau
       [table](../../../luau/tables.md) with the following characteristics:
 
       - Keys of the table are strings or numbers but not both. If a JSON object
         contains both, string keys are ignored.
-      - An empty JSON object generates an empty Lua table (`{}`).
+      - An empty JSON object generates an empty Luau table (`{}`).
       - If the `input` string is not a valid JSON object, this method will throw
         an error.
 
-      To encode a Lua table into a JSON object, use the
+      To encode a Luau table into a JSON object, use the
       `Class.HttpService:JSONEncode()` method.
 
       This method can be used regardless of whether HTTP requests are enabled.
@@ -205,7 +211,7 @@ methods:
     returns:
       - type: Variant
         summary: |
-          The decoded JSON object as a Lua table.
+          The decoded JSON object as a Luau table.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -215,14 +221,14 @@ methods:
     writeCapabilities: []
   - name: HttpService:JSONEncode
     summary: |
-      Generate a JSON string from a Lua table.
+      Generate a JSON string from a Luau table.
     description: |
-      This method transforms a Lua [table](../../../luau/tables.md) into a JSON
+      This method transforms a Luau [table](../../../luau/tables.md) into a JSON
       object or array based on the following guidelines:
 
       - Keys of the table must be either strings or numbers. If a table contains
         both, an array takes priority (string keys are ignored).
-      - An empty Lua table (`{}`) generates an empty JSON array.
+      - An empty Luau table (`{}`) generates an empty JSON array.
       - The value `nil` is never generated.
       - Cyclic table references cause an error.
 
@@ -241,7 +247,7 @@ methods:
         type: Variant
         default:
         summary: |
-          The input Lua table.
+          The input Luau table.
     returns:
       - type: string
         summary: |
@@ -312,7 +318,7 @@ methods:
         summary: |
           The web address you are requesting data from.
       - name: nocache
-        type: bool
+        type: boolean
         default: false
         summary: |
           Whether the request stores (caches) the response.
@@ -365,7 +371,7 @@ methods:
         summary: |
           Modifies the value in the `Content-Type` header sent with the request.
       - name: compress
-        type: bool
+        type: boolean
         default: false
         summary: |
           Determines whether the data is compressed (**gzipped**) when sent.

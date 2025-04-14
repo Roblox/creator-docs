@@ -59,7 +59,7 @@ properties:
       `Class.AudioDeviceInput.Active|Active` is true **and**
       `Class.AudioDeviceInput.Muted|Muted` is false.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -79,7 +79,7 @@ properties:
       Denotes whether this `Class.AudioDeviceInput` is ready to produce sound,
       meaning all network connections have been established.
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -107,7 +107,7 @@ properties:
       `Class.AudioDeviceInput.Muted|Muted` is false.
     code_samples:
       - audio-wiring---push-to-talk
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -124,7 +124,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''
@@ -203,6 +203,34 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: AudioDeviceInput:GetInputPins
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AudioDeviceInput:GetOutputPins
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AudioDeviceInput:GetUserIdAccessList
     summary: |
       Returns a list of user IDs that are either permitted to hear or blocked
@@ -240,7 +268,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -260,7 +288,7 @@ events:
     code_samples: []
     parameters:
       - name: connected
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether the instance got connected or disconnected.

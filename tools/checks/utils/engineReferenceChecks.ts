@@ -118,6 +118,81 @@ ${requiredCheckMessage}`;
   }
 };
 
+export const validateNamesArePrefixed = ({
+  engineApiType,
+  config,
+  contentData,
+  filePath,
+}: {
+  engineApiType: string;
+  config: IConfig;
+  contentData: any;
+  filePath: string;
+}) => {
+  if (engineApiType === "enums" || engineApiType === "globals") {
+    // Enums and globals don't use the prefixed name format
+    return;
+  }
+
+  const expectedPrefix = contentData?.name;
+  if (!expectedPrefix) {
+    return;
+  }
+
+
+  const commentLines: string[] = [];
+
+  for (const field of [
+    'constructors',
+    'methods',
+    'functions',
+    'properties',
+    'events',
+    'callbacks',
+  ]) {
+    const fieldCommentLine = `\n**${field}**`;
+    const items = contentData?.[field];
+    if (!items || !Array.isArray(items)) {
+      continue;
+    }
+
+    for (const item of items) {
+      const name = item?.name;
+      if (!name || typeof name !== 'string') {
+        continue;
+      }
+      if (name.startsWith(expectedPrefix)) {
+        continue;
+      }
+
+      const message = `${Emoji.NoEntry} Requirement: In ${filePath}, ${field} contains an item with the name "${name}" which does not start with the expected prefix "${expectedPrefix}".`;
+      console.log(message);
+      addToSummaryOfRequirements(message);
+
+      if (config.postPullRequestComments) {
+        const commentLine = `- "${name}" does not start with the expected prefix "${expectedPrefix}".`;
+        if (!commentLines.includes(fieldCommentLine)) {
+          commentLines.push(fieldCommentLine);
+        }
+        commentLines.push(commentLine);
+      }
+    }
+  }
+
+  if (commentLines.length > 0) {
+    const commentBody = `Issues found in ${filePath}:\n${commentLines.join('\n')}\n\n${requiredCheckMessage}`;
+    createNewPullRequestComment({
+      body: commentBody,
+      commit_id: config.commitHash,
+      line: 1,
+      path: filePath,
+      pull_number: config.pullRequestNumber,
+      repository: config.repository,
+      subject_type: 'file',
+    });
+  }
+};
+
 export const getEditedProtectedFieldsData = ({
   oldContentData,
   newContentData,
@@ -285,6 +360,13 @@ export const checkEngineReferenceContent = async ({
   }
 
   validateContentDataAgainstSchema({
+    engineApiType,
+    config,
+    filePath,
+    contentData,
+  });
+
+  validateNamesArePrefixed({
     engineApiType,
     config,
     filePath,

@@ -275,7 +275,7 @@ An atomic model is only streamed out when all of its descendant parts are eligib
 
 <img src="../assets/optimization/streaming/ModelStreamingMode-Atomic.svg" width="800" height="336" alt="A diagram showing Atomic model streaming along with children." />
 
-```lua title='LocalScript' highlight='2, 5-6'
+```lua title="LocalScript" highlight="2, 5-6"
 local Workspace = game:GetService("Workspace")
 
 -- Atomic model does not exist at load time; use WaitForChild()
@@ -292,7 +292,7 @@ local part = model.Part
 
 <img src="../assets/optimization/streaming/ModelStreamingMode-Persistent.svg" width="800" height="336" alt="A diagram showing Persistent model streaming along with children." />
 
-```lua title='LocalScript' highlight='2, 5-6'
+```lua title="LocalScript" highlight="2, 5-6"
 local Workspace = game:GetService("Workspace")
 
 -- Persistent model does not exist at load time; use WaitForChild()
@@ -323,7 +323,7 @@ If you set the `Datatype.CFrame` of a player character to a region which isn't c
 
 The following scripts show how to fire a client-to-server [remote event](../scripting/events/remote.md) to teleport a player within a place, yielding at the streaming request before moving the character to a new `Datatype.CFrame`.
 
-```lua title='Script - Teleport Player Character' highlight='7, 10-14'
+```lua title="Script - Teleport Player Character" highlight="7, 10-14"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local teleportEvent = ReplicatedStorage:WaitForChild("TeleportEvent")
@@ -344,7 +344,7 @@ end
 teleportEvent.OnServerEvent:Connect(teleportPlayer)
 ```
 
-```lua title='LocalScript - Fire Remote Event'
+```lua title="LocalScript - Fire Remote Event"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local teleportEvent = ReplicatedStorage:WaitForChild("TeleportEvent")
@@ -366,7 +366,7 @@ In some cases, it's necessary to detect when an object streams in or out and rea
 
 2. From a single `Class.LocalScript`, detect when a tagged object streams in or out through `Class.CollectionService:GetInstanceAddedSignal()|GetInstanceAddedSignal()` and `Class.CollectionService:GetInstanceRemovedSignal()|GetInstanceRemovedSignal()`, then handle the object accordingly. For example, the following code adds tagged `Class.Light` objects into a "flicker" loop when they stream in and removes them when they stream out.
 
-   ```lua title='LocalScript - CollectionService Streaming Detection' highlight='10-15'
+   ```lua title="LocalScript - CollectionService Streaming Detection" highlight="10-15"
    local CollectionService = game:GetService("CollectionService")
 
    local tagName = "FlickerLightSource"
@@ -400,7 +400,7 @@ In some cases, it's necessary to detect when an object streams in or out and rea
 
 The `Class.Player.GameplayPaused` property indicates the player's current pause state. This property can be used with a `Class.Instance:GetPropertyChangedSignal()|GetPropertyChangedSignal()` connection to show or hide a custom GUI.
 
-```lua title='LocalScript'
+```lua title="LocalScript"
 local Players = game:GetService("Players")
 local GuiService = game:GetService("GuiService")
 local player = Players.LocalPlayer

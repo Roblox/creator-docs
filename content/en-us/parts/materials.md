@@ -17,7 +17,7 @@ You can quickly apply materials to [parts](../parts/index.md) through the [Mater
 
 ### Material widget
 
-The **Material** widget is accessible from either the [Home](../studio/home-tab.md) or [Model](../studio/model-tab.md) tabs. Clicking the small dropdown arrow reveals a material picker.
+The **Material** widget is accessible from either the toolbar's **Home** or **Model** tabs. Clicking the small dropdown arrow reveals a material picker.
 
 <img src="../assets/studio/general/Model-Tab-Material-Picker.png" width="704" alt="Studio's Model tab with the Material widget's picker highlighted." />
 
@@ -27,7 +27,7 @@ By default, clicking the overall **Material** button applies the chosen material
 
 ### Material manager
 
-If you've enabled the [Material Picker](#material-widget) beta, access the **Material Manager** from the picker window. If you have not enabled the beta, locate its dedicated button to the left of the **Color** button in the [Home](../studio/home-tab.md) or [Model](../studio/model-tab.md) tab.
+If you've enabled the [Material Picker](#material-widget) beta, access the **Material Manager** from the picker window. If you have not enabled the beta, locate its dedicated button to the left of the **Color** button in the toolbar's **Home** or **Model** tab.
 
 <img src="../assets/studio/general/Model-Tab-Material-Manager.png" width="704" alt="Studio's Model tab with the Material Manager button highlighted." />
 

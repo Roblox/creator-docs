@@ -6,7 +6,7 @@ description: Badges are a special award you can gift users when they meet a goal
 A **badge** is a special award you can gift players when they meet a goal within your experience, such as completing a difficult objective or playing for a certain amount of time. As soon as a player receives a badge, it displays within the **Badges** category of their inventory.
 
 <figure>
-<img src="../../assets/publishing/badges/Badges-Inventory.png" width="724" alt="Example badges in a player's inventory" />
+<img src="../../assets/publishing/badges/Badges-Inventory.png" width="764" alt="Example badges in a player's inventory" />
 <figcaption>Example badges in a player's inventory</figcaption>
 </figure>
 
@@ -17,9 +17,9 @@ You can create up to 5 badges for free in a 24‑hour period (GMT) for each expe
 To create a badge:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-1. Locate the associated experience, click the **&ctdot;** in the corner of its thumbnail, and select **Create Badge**.
+1. Hover over an experience's thumbnail, click the **&ctdot;** button, and select **Create Badge**.
 
-   <img src="../../assets/creator-dashboard/Experience-Context-Menu-Create-Badge.png" width="420" alt="Create Badge option from Creator Dashboard" />
+   <img src="../../assets/creator-dashboard/Options-Button-Experience-Private.png" width="200" />
 
 1. On the create page, click the **Upload Image** button and then select/confirm the image you want to use as the badge's icon. When creating an image to use for a badge, consider the following:
 
@@ -28,13 +28,13 @@ To create a badge:
 
      <GridContainer numColumns="2">
      <figure>
-     <img src="../../assets/publishing/badges/Circular-Trimming-Good.png" alt="Good circular trimming" />
+     <img src="../../assets/publishing/badges/Circular-Trimming-Good.png" width="356" alt="Good circular trimming" />
      <figcaption>
      <Alert severity="success">Main content included</Alert>
      </figcaption>
      </figure>
      <figure>
-     <img src="../../assets/publishing/badges/Circular-Trimming-Bad.png" alt="Bad circular trimming" />
+     <img src="../../assets/publishing/badges/Circular-Trimming-Bad.png" width="356" alt="Bad circular trimming" />
      <figcaption>
      <Alert severity="error">Text content cropped</Alert>
      </figcaption>
@@ -47,12 +47,30 @@ To create a badge:
    - **Description** — A description of what the player can do to earn the badge.
    - **Badge is Enabled** — Whether or not the badge will be enabled when it is created. Disabled badges are not shown under the **Badges** section of the experience's main page and cannot be earned by players.
 
-1. Click the **Create Badge** button. The new badge displays within the **Engagement**&nbsp;&rarr; **Badges** section on the [Creator Dashboard](https://create.roblox.com/dashboard/creations). If the new badge is enabled, it will also be shown under the **Badges** section of the experience's main page.
+1. Click the **Create Badge** button. The new badge displays within the **Engagement** &rang; **Badges** section on the [Creator Dashboard](https://create.roblox.com/dashboard/creations). If the new badge is enabled, it will also be shown under the **Badges** section of the experience's main page.
 
    <figure>
-	 <img src="../../assets/publishing/badges/Badge-Experience-Page.png" width="780" />
-	 <figcaption>Badge on experience's main page</figcaption>
-	 </figure>
+    <img src="../../assets/publishing/badges/Badge-Experience-Page.png" width="780" />
+    <figcaption>Badge on experience's main page</figcaption>
+    </figure>
+
+## Reorder badges
+
+When a badge is first created, it is placed at the end of the badge list. You can reorder up to 50 badges at once using the drag‑and‑drop interface.
+
+To reorder badges:
+
+1. Navigate to the associated experience.
+1. In the side panel under the **Engagement** header, navigate to the **Badges** page.
+1. Select **Reorder** to navigate to the reordering page.
+
+	 <img src="../../assets/publishing/badges/Reorder-Button.png" width="400" alt="Badge reorder button"/>
+
+1. On the reordering page, drag and drop badges into their preferred order.
+
+	 <img src="../../assets/publishing/badges/Reordering.png" width="780" alt="Badge drag-and-drop to reorder" />
+
+1. Select **Save** to save this order. The specified order should now appear on the experience details page.
 
 ## Script badges
 
@@ -63,12 +81,9 @@ Common badge scripting workflows include [awarding badges](#award-badges), check
 A badge's ID is its unique identifier. You'll need this ID when implementing workflows such as [awarding the badge](#award-badges) to a player.
 
 1. On the [Creator Dashboard](https://create.roblox.com/dashboard/creations), navigate to the associated experience's **Badges** section under **Engagement**.
+2. Hover over a badge's thumbnail, click the **&ctdot;** button, and select **Copy Asset ID** from the context menu.
 
-   <img src="../../assets/creator-dashboard/Experience-Nav-Engagement-Badges.png" width="330" alt="Badges button indicated for an experience on the Creator Dashboard" />
-
-1. Click the **&ctdot;** button for a badge and select **Copy Asset ID**.
-
-   <img src="../../assets/creator-dashboard/Badge-Copy-Asset-ID.png" width="400" />
+   <img src="../../assets/creator-dashboard/Options-Button-Badge.png" width="200" />
 
 ### Award badges
 

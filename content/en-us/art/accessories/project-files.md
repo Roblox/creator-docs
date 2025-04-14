@@ -28,6 +28,10 @@ The following `.fbx`, `.blend`, and `.ma` project files are available to use as 
     <td>Caged 3D accessory models ready for import into Studio or in a modeling tool.</td>
   </tr>
   <tr>
+    <td><a href="../../assets/accessories/reference-files/Caging-examples.zip" download>Additional-FBX-assets.zip</a></td>
+    <td>Additional caged clothing items from How to cage Roblox's [3D clothing video guide](https://www.youtube.com/watch?v=QwZaA9Gc-WQ).</td>
+  </tr>
+  <tr>
     <td><a href="../../assets/art/reference-files/ClassicMannequin.fbx" download>ClassicMannequin.fbx</a></td>
     <td>A [Classic body](../../art/characters/specifications.md#classic) type blank mannequin to use in Studio or your modeling application.</td>
   </tr>

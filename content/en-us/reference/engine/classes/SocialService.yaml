@@ -23,6 +23,24 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: SocialService:GetPlayersByPartyId
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: partyId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Instances
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: SocialService:HideSelfView
     summary: |
       Hides the calling player's self view.
@@ -32,7 +50,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -51,10 +69,6 @@ methods:
       `Class.SocialService:CanSendGameInviteAsync()|CanSendGameInviteAsync()` to
       determine whether the player can send an invite, as this ability may vary
       depending on the platform or player.
-
-      <img
-      src="../../../assets/promotion/invite-prompts/Prompt-Multiple-Friends-Custom-Message.png"
-      width="806" />
 
       See
       [Player Invite Prompts](../../../production/promotion/invite-prompts.md)
@@ -75,7 +89,7 @@ methods:
           Optional `Class.ExperienceInviteOptions` object for customizing the
           prompt.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -116,7 +130,7 @@ methods:
           or similar. For example, you can pass a string defining what region of
           an experience the calling player's character is currently in.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -138,11 +152,29 @@ methods:
         summary: |
           The position to place the self view .
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: SocialService:UpdatePlayerPartyData
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: partyId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
@@ -168,7 +200,7 @@ methods:
           The `Class.Player` instance of the player potentially sending a call
           invite.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the specified player can send a call invite.
     tags:
@@ -209,7 +241,7 @@ methods:
           Optional `Class.Player.UserId` of the potential **recipient**, used to
           check whether the sender can invite that specific recipient.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the specified player can send an invite.
     tags:
@@ -283,6 +315,21 @@ events:
     tags: []
     deprecation_message: ''
     security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: SocialService.PlayerPartyDataChanged
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: partyId
+        type: string
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []

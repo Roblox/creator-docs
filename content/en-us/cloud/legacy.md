@@ -3,17 +3,22 @@ title: Legacy overview
 description: Lists legacy REST APIs for Open Cloud.
 ---
 
-This section contains documentation for Roblox's many legacy APIs.
+This section contains documentation for Roblox's legacy REST APIs.
 
-Roblox offers API key and/or OAuth 2.0 support **for the select legacy API endpoints listed on this page**. Instead of sharing cookies, you can grant access to specific permissions and use these more secure authentication methods. These APIs might change without notice and break your application and do not have the stability guarantees of the newer Open Cloud APIs.
+- Roblox offers API key and/or OAuth 2.0 support **for the select legacy API endpoints listed on this page**. All endpoints on this page use the same stability guarantees as the Open Cloud v2 and v1 APIs and are currently **Beta**. Beta endpoints are ready for public use. Breaking changes are possible but rare. See the tables below for the list of available operations and authentication types.
 
-This page summarizes the available operations and authentication types.
+- All other legacy API endpoints use cookie-based authentication. We do not recommend depending on these APIs, as they can incorporate breaking changes without notice and rely on sharing cookies with application code.
 
-<Alert severity="warning">
-  Refer to the left navigation for documentation of legacy APIs that only support cookie authentication and **not** API key and/or OAuth 2.0 authentication.
+## Asset Delivery API
 
-  Just like the legacy APIs listed on this page, those APIs might change without notice. We do not recommend depending on those APIs as they rely on needing to share cookies with application code that interacts with these endpoints.
-</Alert>
+- Base URL: `https://apis.roblox.com/asset-delivery-api`
+- Authentication types: OAuth 2.0 and API key
+- Additional Asset Delivery API endpoints without Open Cloud authentication support can be found [here](/cloud/legacy/assetdelivery/v1).
+
+| **API**                                 | **Path**                                                                  | **Scope**                |
+| :-------------------------------------- | :------------------------------------------------------------------------ | :----------------------- |
+| GetAssetById                            | `GET /v1/assetId/{assetId}`                                               | `legacy-asset:manage`    |
+| GetAssetVersionById                     | `GET /v1/assetId/{assetId}/version/{versionNumber}`                       | `legacy-asset:manage`    |
 
 ## Badges API
 

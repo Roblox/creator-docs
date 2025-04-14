@@ -45,7 +45,7 @@ The module is preconfigured with 7 emotes and it can be easily customized with y
 
 2. Paste the following code into the new **ConfigureEmotes** script. The `useDefaultEmotes` setting of `false` overrides the default emotes and lets you define custom emotes via the [setEmotes](#setemotes) function.
 
-   ```lua title='Script - ConfigureEmotes' highlight='6,9'
+   ```lua title="Script - ConfigureEmotes" highlight="6,9"
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
    local EmoteBar = require(ReplicatedStorage:WaitForChild("EmoteBar"))
@@ -153,7 +153,7 @@ Each emote is represented by a dictionary with the following key-value pairs:
 </tbody>
 </table>
 
-```lua title='LocalScript' highlight='5-7'
+```lua title="LocalScript" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local EmoteBar = require(ReplicatedStorage:WaitForChild("EmoteBar"))
@@ -215,7 +215,7 @@ Overrides default server-side configuration options through the following keys/v
 </tbody>
 </table>
 
-```lua title='Script' highlight='5-8'
+```lua title="Script" highlight="5-8"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local EmoteBar = require(ReplicatedStorage:WaitForChild("EmoteBar"))
@@ -364,7 +364,7 @@ If the value of `guiType` is [EmoteWheel](#emotebarguitype), the following optio
 </TabItem>
 </Tabs>
 
-```lua title='LocalScript - Emote Bar' highlight='5-10'
+```lua title="LocalScript - Emote Bar" highlight="5-10"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local EmoteBar = require(ReplicatedStorage:WaitForChild("EmoteBar"))
@@ -377,7 +377,7 @@ EmoteBar.configureClient({
 })
 ```
 
-```lua title='LocalScript - Emote Wheel' highlight='5-7'
+```lua title="LocalScript - Emote Wheel" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local EmoteBar = require(ReplicatedStorage:WaitForChild("EmoteBar"))
@@ -401,7 +401,7 @@ See [Emote](#emote) for the structure of each emote passed to this function.
 The order of custom emotes in the array determines how each emote is ordered in the UI.
 </Alert>
 
-```lua title='Script - ConfigureEmotes' highlight='5,9'
+```lua title="Script - ConfigureEmotes" highlight="5,9"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local EmoteBar = require(ReplicatedStorage:WaitForChild("EmoteBar"))
@@ -434,7 +434,7 @@ setGuiVisibility(visible: `boolean`)
 
 Shows or hides the emotes GUI. This function can only be called from a `Class.LocalScript` on a specific client.
 
-```lua title='LocalScript' highlight='5'
+```lua title="LocalScript" highlight="5"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local EmoteBar = require(ReplicatedStorage:WaitForChild("EmoteBar"))
@@ -454,7 +454,7 @@ Gets an [Emote](#emote) by name. Returns `nil` if the emote cannot be found. Thi
 Emotes registered on the server with [setEmotes](#setemotes) can be retrieved client-side using this function. This can also be used to retrieve any of the default emotes by name: `"Hello"`, `"Applaud"`, `"Point"`, `"Stadium"`, `"Tilt"`, `"Shrug"`, or `"Salute"`.
 </Alert>
 
-```lua title='LocalScript' highlight='5'
+```lua title="LocalScript" highlight="5"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local EmoteBar = require(ReplicatedStorage:WaitForChild("EmoteBar"))
@@ -470,7 +470,7 @@ playEmote(emote: [Emote](#emote))
 
 Plays the given [Emote](#emote) and fires the [emotePlayed](#emoteplayed) event on the server, if connected. This function can only be called from a `Class.LocalScript` on a specific client.
 
-```lua title='LocalScript' highlight='5-6'
+```lua title="LocalScript" highlight="5-6"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local EmoteBar = require(ReplicatedStorage:WaitForChild("EmoteBar"))
@@ -487,7 +487,7 @@ lockEmote(emoteName: `Library.string`)
 
 Locks the [Emote](#emote) with the given name. This function can only be called from a `Class.LocalScript` on the client.
 
-```lua title='LocalScript' highlight='5'
+```lua title="LocalScript" highlight="5"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local EmoteBar = require(ReplicatedStorage:WaitForChild("EmoteBar"))
@@ -503,7 +503,7 @@ unlockEmote(emoteName: `Library.string`)
 
 Unlocks the [Emote](#emote) with the given name. This function can only be called from a `Class.LocalScript` on the client.
 
-```lua title='LocalScript' highlight='5'
+```lua title="LocalScript" highlight="5"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local EmoteBar = require(ReplicatedStorage:WaitForChild("EmoteBar"))
@@ -535,7 +535,7 @@ Fires when any client plays an emote. This event can only be connected in a `Cla
 </tbody>
 </table>
 
-```lua title='LocalScript' highlight='5-7'
+```lua title="LocalScript" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local EmoteBar = require(ReplicatedStorage:WaitForChild("EmoteBar"))
@@ -563,7 +563,7 @@ Fires when a client clicks a locked emote. This event can only be connected in a
 </tbody>
 </table>
 
-```lua title='LocalScript' highlight='6-8'
+```lua title="LocalScript" highlight="6-8"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
 

@@ -86,7 +86,7 @@ properties:
     code_samples: []
     tags: []
     deprecation_message: ''
-  - name: SourceType
+  - name: Content.SourceType
     type: Enum.ContentSourceType
     summary: |
       The source type of the contained value.
@@ -96,7 +96,7 @@ properties:
     code_samples: []
     tags: []
     deprecation_message: ''
-  - name: Uri
+  - name: Content.Uri
     type: string?
     summary: |
       A URI `string` if `Datatype.Content.SourceType` is
@@ -107,7 +107,7 @@ properties:
     code_samples: []
     tags: []
     deprecation_message: ''
-  - name: Object
+  - name: Content.Object
     type: Object?
     summary: |
       A reference to a non-`nil` `Class.Object` if `Datatype.Content.SourceType`

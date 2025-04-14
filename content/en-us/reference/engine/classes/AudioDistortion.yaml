@@ -20,7 +20,7 @@ properties:
     description: |
       If `true`, audio streams are passed-through unaffected by this effect.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -77,6 +77,34 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: AudioDistortion:GetInputPins
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AudioDistortion:GetOutputPins
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: AudioDistortion.WiringChanged
     summary: |
@@ -89,7 +117,7 @@ events:
     code_samples: []
     parameters:
       - name: connected
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether the instance got connected or disconnected.

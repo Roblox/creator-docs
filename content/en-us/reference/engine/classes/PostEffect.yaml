@@ -33,7 +33,7 @@ properties:
     description: |
       Toggles whether or not the PostEffect is enabled.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

@@ -1,0 +1,33 @@
+navigation:
+  - heading: Experiences
+  - title: Overview
+    path: /discovery
+  - title: Discover page
+    section:
+      - title: Genres
+        path: /production/publishing/experience-genres
+      - title: Icons
+        path: /production/publishing/experience-icons
+      - title: Thumbnails
+        path: /production/publishing/thumbnails
+      - title: Badges
+        path: /production/publishing/badges
+      - title: Discover page nominations
+        path: /production/promotion/nominate-for-the-discover-page
+  - title: Deep links
+    path: /production/promotion/deeplinks
+  - title: Events
+    path: /production/promotion/experience-events
+  - title: Player invite prompts
+    path: /production/promotion/invite-prompts
+  - title: Friend invite reward system
+    path: /production/promotion/referral-system
+  - title: Notifications
+    path: /production/promotion/experience-notifications
+  - title: Social media links
+    path: /production/promotion/social-media-links
+  - title: Share links
+    path: /production/promotion/share-links
+  - title: Get featured on Roblox‑owned channels
+    path: /production/promotion/get-featured-on-roblox-owned-channels
+

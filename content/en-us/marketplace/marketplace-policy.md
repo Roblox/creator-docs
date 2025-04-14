@@ -92,6 +92,7 @@ Do not miscategorize items when you upload them. Proper categorization includes 
 - Hat designs (e.g. baseball caps, beanies, cowboy hats) must be in the Head category.
   - Designs that combine Head items with hair designs (e.g. beanie with hair sticking out, mohawk with headphones) can be in the Head or Hair category.
 - Designs that are components of facial anatomy (e.g. noses, mustache) or accessories that augment facial anatomy (e.g. eyeshadow, blush, wrinkles) must be in the Face category.
+- Roblox automatically detects bodysuits, clothing items that completely cover a body below the head, and automatically categorizes them after upload.
 
 ## Avatar body guidelines
 
@@ -316,9 +317,7 @@ Modesty layers are **required** if your avatar character:
 </table>
 
 </AccordionDetails>
-  </BaseAccordion>
-
-<br /><br />
+</BaseAccordion>
 For all modesty layers, the following applies:
 
 - All modesty layers must be fully opaque. While they can include artistic highlights, shadows, or textures, modesty layers that are sheer or partially transparent are not permitted.
@@ -457,9 +456,7 @@ Avatar bodies cannot include any accessories or clothing. Accessories are items 
 </tbody>
 </table>
 </AccordionDetails>
-  </BaseAccordion>
-
-<br /><br />
+</BaseAccordion>
 
 The following is an example of rejected and accepted version of the same asset:
 

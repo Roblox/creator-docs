@@ -39,7 +39,7 @@ You can also nest tags inside each other as long as you close them in the revers
 
 `<b><i><u>Formatted text</u></i></b>`
 
-### Color
+### Font color
 
 `<font color=""> </font>`
 
@@ -49,7 +49,7 @@ You can also nest tags inside each other as long as you close them in the revers
 <img src="../assets/ui/rich-text/Example-Color.png" width="600" />
 </blockquote>
 
-### Size
+### Font size
 
 `<font size=""> </font>`
 
@@ -95,6 +95,15 @@ Font face/family names are listed on the `Datatype.Font` enum reference page.
 Font weight can be a case-insensitive string name including `Thin`, `ExtraLight`, `Light`, `Regular`, `Medium`, `SemiBold`, `Bold`, `ExtraBold`, or `Heavy`; it can also be a number in factors of 100 between `100` and `900`.
 </Alert>
 
+### Font transparency
+
+`<font transparency=""> </font>`
+
+<blockquote>
+`Text at <font transparency="0.5">50% transparency</font>.`
+<img src="../assets/ui/rich-text/Example-Transparency.png" width="600" />
+</blockquote>
+
 ### Stroke
 
 `<stroke> </stroke>`
@@ -107,15 +116,6 @@ Font weight can be a case-insensitive string name including `Thin`, `ExtraLight`
 <Alert severity="info">
 See [Appearance Modifiers](../ui/appearance-modifiers.md) for details on `<stroke>` tag parameters such as `joins` and `thickness`.
 </Alert>
-
-### Transparency
-
-`<font transparency=""> </font>`
-
-<blockquote>
-`Text at <font transparency="0.5">50% transparency</font>.`
-<img src="../assets/ui/rich-text/Example-Transparency.png" width="600" />
-</blockquote>
 
 ### Bold
 
@@ -155,10 +155,10 @@ See [Appearance Modifiers](../ui/appearance-modifiers.md) for details on `<strok
 
 ### Line break
 
-`<br />`
+`<br/>`
 
 <blockquote>
-`New line occurs after this sentence.<br />Next sentence...`
+`New line occurs after this sentence.<br/>Next sentence...`
 <img src="../assets/ui/rich-text/Example-Line-Break.png" width="600" />
 </blockquote>
 
@@ -180,6 +180,15 @@ See [Appearance Modifiers](../ui/appearance-modifiers.md) for details on `<strok
 `My name is <smallcaps>Diva Dragonslayer</smallcaps>.`<br />
 `My name is <sc>Diva Dragonslayer</sc>.`
 <img src="../assets/ui/rich-text/Example-Small-Caps.png" width="600" />
+</blockquote>
+
+### Mark
+
+`<mark> </mark>`
+
+<blockquote>
+`Text <mark color="#009966" transparency="0">highlighted</mark>.`
+<img src="../assets/ui/rich-text/Example-Highlighted.png" width="600" />
 </blockquote>
 
 ### Comment
@@ -206,31 +215,31 @@ If you want to render certain characters like `<` or `>` and exempt them from co
 </thead>
 <tbody>
   <tr>
-    <td>**&lt;**</td>
+    <td>`<`</td>
     <td>`&lt;`</td>
     <td>`10 &lt; 100`</td>
     <td>10 &lt; 100</td>
   </tr>
   <tr>
-    <td>**&gt;**</td>
+    <td>`>`</td>
     <td>`&gt;`</td>
     <td>`100 &gt; 10`</td>
     <td>100 &gt; 10</td>
   </tr>
   <tr>
-    <td>**"**</td>
+    <td>`"`</td>
     <td>`&quot;`</td>
     <td>`Meet &quot;Diva Dragonslayer&quot;`</td>
     <td>Meet "Diva Dragonslayer"</td>
   </tr>
   <tr>
-    <td>**'**</td>
+    <td>`'`</td>
     <td>`&apos;`</td>
     <td>`Diva&apos;s pet is a falcon!`</td>
     <td>Diva's pet is a falcon!</td>
   </tr>
   <tr>
-    <td>**&amp;**</td>
+    <td>`&`</td>
     <td>`&amp;`</td>
     <td>`Render another escape form <b>&amp;lt;</b> by escaping an ampersand`</td>
     <td>Render another escape form **&amp;lt;** by escaping an ampersand</td>

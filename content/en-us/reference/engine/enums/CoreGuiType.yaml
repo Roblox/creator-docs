@@ -50,10 +50,10 @@ items:
     deprecation_message: ''
   - name: SelfView
     value: 6
-    summary: ''
+    summary: |
+      A player's perspective or view of their own character.
     tags: []
-    deprecation_message: |
-      This option is deprecated and has no effect.
+    deprecation_message: ''
   - name: Captures
     summary: |
       A "capture" button along the right side of the screen.

@@ -42,7 +42,7 @@ properties:
       indirect cycles in the weld graph. Joints disabled this way may be
       re-enabled later when another joint or part is added or removed.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -120,7 +120,7 @@ properties:
       - `Class.JointInstance.Active`, determines if the joint is currently
         active in the world
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

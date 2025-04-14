@@ -50,7 +50,7 @@ methods:
           Item priority. Items with higher priority are retrieved from the queue
           before items with lower priority.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields
@@ -81,7 +81,7 @@ methods:
           Number of items to read. The maximum allowed value of this parameter
           is 100.
       - name: allOrNothing
-        type: bool
+        type: boolean
         default: false
         summary: |
           Controls the behavior of the method in the case the queue has fewer
@@ -129,7 +129,7 @@ methods:
           Identifies the items to delete. Use the value returned by
           `Class.MemoryStoreQueue:ReadAsync()`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields

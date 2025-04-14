@@ -45,7 +45,7 @@ properties:
       the `Class.HandleAdornment.ZIndex` of the adornment is set to -1. If this
       is the case, the adornment will always draw behind 3D geometry.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

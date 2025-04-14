@@ -8,7 +8,7 @@ A **skybox** is a cube made up of six individual images that create an immersive
 Additionally, the `Class.Sky` object includes celestial bodies such as a sun, moon, and stars which dynamically appear, rise, and set based on the
 `Class.Lighting.TimeOfDay|TimeOfDay` or `Class.Lighting.ClockTime|ClockTime`.
 
-Finally, the `Class.Sky` object can be used as a cubemap for reflections in `Class.ViewportFrame|ViewportFrames`. For details, see [Frames](../ui/frames.md#viewportframe).
+Finally, the `Class.Sky` object can be used as a cubemap for reflections in `Class.ViewportFrame|ViewportFrames`. For details, see [viewport frames](../ui/viewport-frames.md).
 
 ## Create skyboxes
 

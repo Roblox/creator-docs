@@ -55,7 +55,7 @@ properties:
       number of columns (not accounting for padding or other factors).
     code_samples:
       - Build-UI-Table
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -86,7 +86,7 @@ properties:
       number of rows (not accounting for padding or other factors).
     code_samples:
       - Build-UI-Table
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

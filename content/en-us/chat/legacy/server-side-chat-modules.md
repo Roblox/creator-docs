@@ -18,12 +18,12 @@ You can use the following chat modules to support server-side behaviors of the [
 
 ## ChatService
 
-**ChatService** is a singleton object that handles the server-side behavior of the Lua Chat System, such as [ChatChannels](#chatchannel) and [ChatSpeakers](#chatspeaker).
+**ChatService** is a singleton object that handles the server-side behavior of the Lua chat system, such as [ChatChannels](#chatchannel) and [ChatSpeakers](#chatspeaker).
 
 All `ModuleScript` s within the **ChatModules** folder should return a function, and that function will be called with the ChatService singleton.
 
 <Alert severity="warning">
-ChatService chat module is different from the `Class.Chat` engine service hosting the Lua code responsible for running the Legacy Chat System.
+**ChatService** chat module is different from the `Class.Chat` engine service hosting the Lua code responsible for running the legacy chat system.
 </Alert>
 
 ### Methods
@@ -43,7 +43,7 @@ ChatService chat module is different from the `Class.Chat` engine service hostin
 #### GetChannel
 
 - **Parameters:** `Library.string`: `channelName`
-- **Description:** Returns the channel with the given name, or nil if it does not exist.
+- **Description:** Returns the channel with the given name, or `nil` if it does not exist.
 - **Returns:** [ChatChannel](#chatchannel)
 
 #### AddSpeaker
@@ -61,7 +61,7 @@ ChatService chat module is different from the `Class.Chat` engine service hostin
 #### GetSpeaker
 
 - **Parameters:** `Library.string`: `speakerName`
-- **Description:** Returns the speaker with the given name, or nil if it doesn't exist.
+- **Description:** Returns the speaker with the given name, or `nil` if it doesn't exist.
 - **Returns:** [ChatSpeaker](#chatspeaker)
 
 #### GetChannelList
@@ -404,7 +404,7 @@ By default, each user has a [ChatSpeaker](#chatspeaker) that is automatically ad
 #### MuteSpeaker
 
 - **Parameters:** `Library.string`: `speakerName` , `Library.string`: `reason = nil` , [int](../../luau/numbers.md#int) `duration = 0`
-- **Description:** Mutes the speaker with the given `speakerName` in the channel for a duration specified in seconds. If `duration` is nil or 0, the mute is indefinite. If `reason` is provided, then a message will be sent to the channel with the reason included.
+- **Description:** Mutes the speaker with the given `speakerName` in the channel for a duration specified in seconds. If `duration` is `nil` or 0, the mute is indefinite. If `reason` is provided, then a message will be sent to the channel with the reason included.
 - **Returns:** void
 
 #### UnmuteSpeaker

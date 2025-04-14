@@ -14,7 +14,7 @@ description: |
 
   This service houses just one property,
   `Class.ServerScriptService.LoadStringEnabled|LoadStringEnabled`, which
-  determines whether the `loadstring` function in Lua is enabled. It's
+  determines whether the `loadstring` function in Luau is enabled. It's
   recommended to keep this disabled for security reasons, as misusing this
   function can lead to remote code execution vulnerabilities.
 
@@ -44,7 +44,7 @@ properties:
       Toggles whether or not the `loadstring` function can be used by server
       scripts. Defaults to false.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
       - NotScriptable

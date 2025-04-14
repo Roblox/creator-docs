@@ -9,7 +9,7 @@ items:
   - name: MainBackground
     value: 0
     summary: |
-      The primary background color used by the ribbon bar and windows.
+      The primary background color used by the toolbar and windows.
     tags: []
     deprecation_message: ''
   - name: Titlebar
@@ -28,7 +28,7 @@ items:
     value: 3
     summary: |
       The background color of tooltips, like those seen when hovering over
-      buttons on the ribbon bar or properties in the Properties window.
+      buttons on the toolbar or properties in the Properties window.
     tags: []
     deprecation_message: ''
   - name: Notification
@@ -96,13 +96,13 @@ items:
   - name: RibbonTab
     value: 15
     summary: |
-      The color of a tab on the ribbon menu (e.g. Home, Model, Test).
+      The color of a tab on the toolbar menu.
     tags: []
     deprecation_message: ''
   - name: RibbonTabTopBar
     value: 16
     summary: |
-      The background color of the ribbon menu.
+      The background color of the toolbar.
     tags: []
     deprecation_message: ''
   - name: Button
@@ -120,7 +120,7 @@ items:
   - name: RibbonButton
     value: 19
     summary: |
-      The background color of buttons on the ribbon menu.
+      The background color of buttons on the toolbar.
     tags: []
     deprecation_message: ''
   - name: ViewPortBackground

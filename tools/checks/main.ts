@@ -4,6 +4,7 @@ console.time(timeMessage);
 import { FileOption, getConfig } from './utils/config.js';
 const config = await getConfig();
 
+import fs from 'fs';
 import path from 'path';
 import { VFile } from 'vfile';
 import { VFileMessage } from 'vfile-message';
@@ -60,6 +61,7 @@ import {
 } from './utils/console.js';
 import { checkMarkdownLint } from './utils/markdownlint.js';
 import { checkEngineReferenceContent } from './utils/engineReferenceChecks.js';
+import { containsOpenApiSchema, validateOpenApiSchema } from './utils/openApiSchemaChecks.js';
 
 let filesToCheck: string[] = [];
 let labelPullRequestAsInappropriate = false;
@@ -67,41 +69,57 @@ let missSpelledWords: string[] = [];
 
 const getFilesToCheck = async () => {
   console.log(`::group::${Emoji.OpenFileFolder} Getting changed files`);
-  if (config.checkLocalizedContent === true) {
-    for (const locale of Object.values(Locale)) {
+  if (config.files === FileOption.All) {
+    if (config.checkLocalizedContent === true) {
+      for (const locale of Object.values(Locale)) {
+        filesToCheck.push(
+          ...getAllContentFileNamesWithExtension({
+            locale,
+            fileExtension: FileExtension.MARKDOWN,
+          }),
+          ...getAllContentFileNamesWithExtension({
+            locale,
+            fileExtension: FileExtension.YAML,
+          }),
+          ...getAllContentFileNamesWithExtension({
+            locale,
+            fileExtension: FileExtension.JSON,
+          })
+        );
+      }
+    } else {
       filesToCheck.push(
         ...getAllContentFileNamesWithExtension({
-          locale,
+          locale: Locale.EN_US,
           fileExtension: FileExtension.MARKDOWN,
         }),
         ...getAllContentFileNamesWithExtension({
-          locale,
+          locale: Locale.EN_US,
           fileExtension: FileExtension.YAML,
+        }),
+        ...getAllContentFileNamesWithExtension({
+          locale: Locale.EN_US,
+          fileExtension: FileExtension.JSON,
         })
       );
     }
-  } else if (config.files === FileOption.All) {
-    filesToCheck.push(
-      ...getAllContentFileNamesWithExtension({
-        locale: Locale.EN_US,
-        fileExtension: FileExtension.MARKDOWN,
-      }),
-      ...getAllContentFileNamesWithExtension({
-        locale: Locale.EN_US,
-        fileExtension: FileExtension.YAML,
-      })
-    );
     filesToCheck.push(...['README.md', 'STYLE.md', 'CODE_OF_CONDUCT.md']);
   } else if (config.files === FileOption.Changed) {
     filesToCheck = await getFilesChangedComparedToBaseByExtension({
       baseBranch: config.baseBranch,
-      fileExtensions: [FileExtension.MARKDOWN, FileExtension.YAML],
+      fileExtensions: [FileExtension.MARKDOWN, FileExtension.YAML, FileExtension.JSON],
     });
   } else if (config.files === FileOption.LastCommit) {
     filesToCheck = await getFilesChangedInLastCommitByExtensions([
       FileExtension.MARKDOWN,
       FileExtension.YAML,
+      FileExtension.JSON,
     ]);
+  }
+  if (!config.checkLocalizedContent) {
+    filesToCheck = filesToCheck.filter((filePath) => {
+      return isLocaleFile(filePath, Locale.EN_US);
+    });
   }
   const prefixesToIgnore = ['.github/', 'content/common/navigation/', 'tools/'];
   filesToCheck = filesToCheck.filter((filePath) => {
@@ -209,8 +227,30 @@ try {
     );
     const isMarkdownFile = filePath.endsWith(FileExtension.MARKDOWN);
     const isYamlFile = filePath.endsWith(FileExtension.YAML);
+    const isJsonFile = filePath.endsWith(FileExtension.JSON);
     console.log(`::group::${Emoji.Mag} Checking`, filePathFromRepoRoot);
+    if (!fs.existsSync(filePath)) {
+      console.log(
+        `${Emoji.NoEntry} File does not exist: ${filePathFromRepoRoot}`
+      );
+      console.log('::endgroup::');
+      continue;
+    }
     const fileContent = readFileSync(filePath);
+
+    if (isJsonFile) {
+      if (containsOpenApiSchema(fileContent)) {
+        await validateOpenApiSchema({
+          config,
+          filePath: filePathFromRepoRoot,
+        });
+      }
+      
+      // The remaining checks are not applicable to JSON files
+      console.log('::endgroup::');
+      continue;
+    }
+    
     if (
       config.checkLocalizedContent &&
       !isLocaleFile(filePathFromRepoRoot, Locale.EN_US) // skip for English

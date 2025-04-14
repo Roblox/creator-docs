@@ -7,7 +7,7 @@ This page covers common patterns with the Open Cloud APIs, particularly around m
 
 ## Paths
 
-To make a request to the Open Cloud APIs, you must first form a URL. This URL is a combination of the base URL (`https://apis.roblox.com/cloud/v2`), the Open Cloud API path (for example, `/universes/{universe-id}/places/{place-id}/user-restrictions`), and any query parameters (for example, `?maxPageSize=25`). A full request URL might look like this:
+To make a request to the Open Cloud APIs, you must first form a URL. This URL is a combination of the base URL (`https://apis.roblox.com/cloud/v2`), the Open Cloud API path (for example, `/universes/{universe_id}/places/{place_id}/user-restrictions`), and any query parameters (for example, `?maxPageSize=25`). A full request URL might look like this:
 
 ```json
 https://apis.roblox.com/cloud/v2/users/4687549151/inventory-items?maxPageSize=100
@@ -17,8 +17,8 @@ Many paths, including the example above, have **path parameters**, designated by
 
 Some resources have multiple path patterns, visible under the **Resource Paths** header in the API reference. For example, the URL for [List User Restrictions](/cloud/reference/UserRestriction#List-User-Restrictions) can be either of the following:
 
-- `https://apis.roblox.com/cloud/cloud/v2/universes/{universe-id}/user-restrictions`
-- `https://apis.roblox.com/cloud/cloud/v2/universes/{universe-id}/places/{place-id}/user-restrictions`
+- `https://apis.roblox.com/cloud/cloud/v2/universes/{universe_id}/user-restrictions`
+- `https://apis.roblox.com/cloud/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions`
 
 You can probably infer the difference between the two: some user restrictions apply to an entire universe (experience), whereas others apply to specific places within a universe. Aside from the small addition to the path and extra path parameter, the calls are identical.
 
@@ -34,7 +34,7 @@ If you specify `maxPageSize` in your request, some methods return paginated
 results—essentially partial responses:
 
 ```json
-GET /cloud/v2/users/{userId}/inventory-items?maxPageSize=25
+GET /cloud/v2/users/{user_id}/inventory-items?maxPageSize=25
 
 {
   "inventoryItems": [
@@ -44,18 +44,39 @@ GET /cloud/v2/users/{userId}/inventory-items?maxPageSize=25
 }
 ```
 
+```json
+GET /cloud/v2/universes/{universe_id}/data-stores?maxPageSize=25
+
+{
+  "dataStores": [
+    ...
+  ],
+  "nextPageToken": "datastore1"
+}
+```
+
 If a response includes a value for `nextPageToken`, use that value in the
 `pageToken` parameter of the subsequent request to retrieve the next page. When
-`nextPageToken` is empty, you've reached the end of your results:
+`nextPageToken` is empty or omitted entirely, you've reached the end of your results:
 
 ```json
-GET /cloud/v2/users/{userId}/inventory-items?maxPageSize=25&pageToken=aaaBBB
+GET /cloud/v2/users/{user_id}/inventory-items?maxPageSize=25&pageToken=aaaBBB
 
 {
   "inventoryItems": [
     ...
   ],
   "nextPageToken": ""
+}
+```
+
+```json
+GET /cloud/v2/universes/{universe_id}/data-stores?maxPageSize=25&pageToken=datastore1
+
+{
+  "dataStores": [
+    ...
+  ]
 }
 ```
 
@@ -115,7 +136,7 @@ def PollForResults(operationPath):
            currentRetries += 1
 ```
 
-For a more complete code sample that uses a fixed retry interval rather than exponential backoff, see [Polling for Results](../open-cloud/instance.md#poll-for-results).
+For a more complete code sample that uses a fixed retry interval rather than exponential backoff, see [Poll for results](../guides/instance.md#poll-for-results).
 
 ## Filtering
 

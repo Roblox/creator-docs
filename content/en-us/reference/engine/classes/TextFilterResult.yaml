@@ -41,6 +41,14 @@ methods:
       This function will return immediately in most cases, although it will
       yield if the target user has just joined the server and their filtering
       info is not yet loaded.
+
+      #### Partial Deprecation Warning
+
+      Calling this function from the client is deprecated and will be disabled
+      in the future to only return an empty string. Text filtering pertaining to
+      chat should be done through `Class.TextChatService` and experiences that
+      do not properly filter player-generated chat text might be subject to
+      moderation.
     code_samples:
     parameters:
       - name: toUserId

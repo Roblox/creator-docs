@@ -29,7 +29,7 @@ files as `Class.MeshPart|MeshParts` as outlined in [Meshes](../parts/meshes.md).
 
 By default, parts are rigid bodies that follow real-world physical mechanics,
 including gravity, collision, and momentum. You can connect related parts
-together as a single [**assembly**](../physics/assemblies.md) using a
+together as a single [assembly](../physics/assemblies.md) using a
 `Class.WeldConstraint`, or a joint like `Class.Motor6D` or `Class.Bone`. As an
 assembly, the connected parts act as a single rigid entity, referencing a common
 position, orientation, and scale.
@@ -131,7 +131,7 @@ You can move a selected part to a new position using the **Move** tool (default 
 <Tabs>
 <TabItem label="Move Tool">
 <figure>
-<img src="../assets/studio/general/Model-Tab-Move.png" width="830" alt="Studio's Model tab with the Move tool highlighted." />
+<img src="../assets/studio/general/Transform-Tool-Move.png" width="562" alt="Studio toolbar with the Move tool highlighted." />
 </figure>
 
 To move a part by an axis dragger along the **X**, **Y**, or **Z** axis, click/drag an arrow pointing along the desired axis of movement.
@@ -168,7 +168,7 @@ While cursor dragging, <kbd>T</kbd> and <kbd>R</kbd> can be used to quickly rota
 
 To scale (resize) a selected part along the **X**, **Y**, or **Z** axis, use the **Scale** tool (default shortcut <kbd>3</kbd>) and click/drag a handle. While dragging, you can temporarily toggle [snapping](../studio/model-tab.md#transform-snapping) by holding <kbd>Shift</kbd>.
 
-<img src="../assets/studio/general/Model-Tab-Scale.png" width="830" alt="Studio's Model tab with the Scale tool highlighted." />
+<img src="../assets/studio/general/Transform-Tool-Scale.png" width="562" alt="Studio toolbar with the Scale tool highlighted." />
 
 <img src="../assets/modeling/parts/Transform-Scale.png" width="720" alt="A block part with the Scale tool's visual aids." />
 
@@ -176,7 +176,7 @@ To scale (resize) a selected part along the **X**, **Y**, or **Z** axis, use the
 
 To rotate a selected part around the **X**, **Y**, or **Z** axis, use the **Rotate** tool (default shortcut <kbd>4</kbd>) and click/drag a rotation ring. While dragging, you can temporarily toggle [snapping](../studio/model-tab.md#transform-snapping) by holding <kbd>Shift</kbd>.
 
-<img src="../assets/studio/general/Model-Tab-Rotate.png" width="830" alt="Studio's Model tab with the Rotate tool highlighted." />
+<img src="../assets/studio/general/Transform-Tool-Rotate.png" width="562" alt="Studio toolbar with the Rotate tool highlighted." />
 
 <img src="../assets/modeling/parts/Transform-Rotate.png" width="720" alt="A block part with the Rotate tool's visual aids." />
 

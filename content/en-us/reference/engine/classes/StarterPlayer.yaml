@@ -43,7 +43,7 @@ properties:
 
       This property is not intended for use in the game.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - Hidden
     deprecation_message: ''
@@ -55,7 +55,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: StarterPlayer.AutoJumpEnabled
     summary: |
@@ -73,7 +74,7 @@ properties:
       these three properties.
     code_samples:
       - Auto-Jump-Toggle
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -84,7 +85,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: StarterPlayer.AvatarJointUpgrade
     summary: ''
@@ -104,7 +106,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: StarterPlayer.CameraMaxZoomDistance
     summary: |
@@ -132,7 +135,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: StarterPlayer.CameraMinZoomDistance
     summary: |
@@ -160,7 +164,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: StarterPlayer.CameraMode
     summary: |
@@ -201,7 +206,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: StarterPlayer.CharacterJumpHeight
     summary: |
@@ -231,7 +237,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: StarterPlayer.CharacterJumpPower
     summary: |
@@ -262,7 +269,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: StarterPlayer.CharacterMaxSlopeAngle
     summary: |
@@ -290,7 +298,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: StarterPlayer.CharacterUseJumpPower
     summary: |
@@ -308,7 +317,7 @@ properties:
       future, changing it will not change any existing player characters.
       Changes to this property will only take effect when a player respawns.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -319,7 +328,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: StarterPlayer.CharacterWalkSpeed
     summary: |
@@ -344,7 +354,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: StarterPlayer.DevCameraOcclusionMode
     summary: |
@@ -369,7 +380,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: StarterPlayer.DevComputerCameraMovementMode
     summary: |
@@ -405,7 +417,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: StarterPlayer.DevComputerMovementMode
     summary: |
@@ -441,7 +454,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: StarterPlayer.DevTouchCameraMovementMode
     summary: |
@@ -476,7 +490,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: StarterPlayer.DevTouchMovementMode
     summary: |
@@ -512,7 +527,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: StarterPlayer.EnableDynamicHeads
     summary: ''
@@ -530,7 +546,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: StarterPlayer.EnableMouseLockOption
     summary: |
@@ -549,7 +566,7 @@ properties:
       to lock the mouse.
     code_samples:
       - enabling-a-player-s-mouse-lock
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -560,7 +577,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: StarterPlayer.HealthDisplayDistance
     summary: |
@@ -589,7 +607,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: StarterPlayer.LoadCharacterAppearance
     summary: |
@@ -612,7 +631,7 @@ properties:
       the character will come from the passed in `Class.HumanoidDescription`.
     code_samples:
       - disabling-a-player-s-appearance
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -623,7 +642,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: 'StarterPlayer.LoadCharacterLayeredClothing '
     summary: |
@@ -648,7 +668,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: StarterPlayer.LuaCharacterController
     summary: ''
@@ -666,7 +687,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: StarterPlayer.NameDisplayDistance
     summary: |
@@ -695,7 +717,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: StarterPlayer.UserEmotesEnabled
     summary: |
@@ -713,7 +736,7 @@ properties:
       See also [Avatar Emotes](../../../characters/emotes.md), an article
       detailing how to control, customize, and play avatar emotes.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -724,7 +747,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
 methods: []
 events: []

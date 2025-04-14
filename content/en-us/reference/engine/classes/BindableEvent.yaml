@@ -69,7 +69,7 @@ methods:
           Values to pass to `Class.BindableEvent.Event|Event` events connected
           to the same `Class.BindableEvent`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

@@ -3,6 +3,10 @@ title: Sound and music
 description: An overview of sound and music features on Roblox
 ---
 
+<Alert severity = 'warning'>
+`Class.Sound`, `Class.SoundGroup`, and `Class.SoundEffect` objects are now deprecated in favor of the more robust functionality of audio objects. For more information, see [Audio](../audio/index.md).
+</Alert>
+
 Sound effects and music enhance your experiences and make them more immersive. You can import your own [audio assets](#audio-assets) or search for free-to-use audio in the [Creator Store](../production/creator-store.md), play audio through `Class.Sound` or objects, and enhance audio playback through [dynamic effects](#dynamic-effects).
 
 ## Audio assets

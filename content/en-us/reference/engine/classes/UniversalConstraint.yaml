@@ -39,7 +39,7 @@ properties:
       primary axes of attachments through a cone constraint. The default value
       is false.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

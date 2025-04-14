@@ -14,16 +14,16 @@ inherits:
 tags: []
 deprecation_message: ''
 properties:
-  - name: AudioPlayer.AssetId
+  - name: AudioPlayer.Asset
     summary: |
       The asset to be loaded into the `Class.AudioPlayer`.
     description: |
       The asset to be loaded into the `Class.AudioPlayer`. If
-      `Class.AudioPlayer.AutoLoad|AutoLoad` is true, the asset loads immediately
-      once this property is assigned. When loading is complete,
-      `Class.AudioPlayer.IsReady|IsReady` becomes true.
+      `Class.AudioPlayer.AutoLoad|AutoLoad` is `true`, the asset loads
+      immediately once this property is assigned. When loading is complete,
+      `Class.AudioPlayer.IsReady|IsReady` becomes `true`.
     code_samples: []
-    type: string
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -37,16 +37,42 @@ properties:
     capabilities:
       - Audio
     writeCapabilities: []
+  - name: AudioPlayer.AssetId
+    summary: |
+      The asset to be loaded into the `Class.AudioPlayer`.
+    description: |
+      The asset to be loaded into the `Class.AudioPlayer`. If
+      `Class.AudioPlayer.AutoLoad|AutoLoad` is `true`, the asset loads
+      immediately once this property is assigned. When loading is complete,
+      `Class.AudioPlayer.IsReady|IsReady` becomes `true`.
+    code_samples: []
+    type: string
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is deprecated; use `Class.AudioPlayer.Asset|Asset` instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Asset
+    serialization:
+      can_load: true
+      can_save: false
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPlayer.AutoLoad
     summary: |
-      Controls whether `Class.AudioPlayer.AssetId|AssetId` loads automatically
-      once assigned.
+      Controls whether `Class.AudioPlayer.Asset|Asset` loads automatically once
+      assigned.
     description: |
-      Controls whether `Class.AudioPlayer.AssetId|AssetId` loads automatically
-      once assigned. If false, the asset will load upon the first attempt to
-      play.
+      Controls whether `Class.AudioPlayer.Asset|Asset` loads automatically once
+      assigned. If `false`, the asset will load upon the first attempt to play.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -69,7 +95,7 @@ properties:
       `Class.AudioPlayer` at runtime, use the `Class.AudioPlayer:Play()|Play()`
       and `Class.AudioPlayer:Stop()|Stop()` methods.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -93,7 +119,7 @@ properties:
       assets unloaded at runtime if there is extreme memory pressure, in which
       case `Class.AudioPlayer.IsReady|IsReady` will become false.
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -164,7 +190,7 @@ properties:
       `Class.AudioPlayer.LoopRegion|LoopRegion`, or
       `Class.AudioPlayer.PlaybackRegion|PlaybackRegion`.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -245,7 +271,7 @@ properties:
     summary: |
       Denotes the length of the loaded asset.
     description: |
-      Denotes the length of the loaded `Class.AudioPlayer.AssetId|AssetId` in
+      Denotes the length of the loaded `Class.AudioPlayer.Asset|Asset` in
       seconds.
     code_samples: []
     type: double
@@ -269,7 +295,7 @@ properties:
       Tracks the current position of the playhead within the asset.
     description: |
       Tracks and controls the current position of the playhead within the
-      `Class.AudioPlayer.AssetId|AssetId`, in seconds.
+      `Class.AudioPlayer.Asset|Asset`, in seconds.
     code_samples: []
     type: double
     tags: []
@@ -329,6 +355,34 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: AudioPlayer:GetInputPins
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AudioPlayer:GetOutputPins
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AudioPlayer:Play
     summary: |
       Plays the `Class.AudioPlayer` from wherever its
@@ -340,7 +394,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -359,7 +413,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -443,7 +497,7 @@ events:
     code_samples: []
     parameters:
       - name: connected
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether the instance got connected or disconnected.

@@ -204,7 +204,7 @@ properties:
       than 0 then the attachments will bounce when they hit the ends of the
       limited range.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -371,7 +371,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - Deprecated
     deprecation_message: |

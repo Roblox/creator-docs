@@ -27,6 +27,10 @@ Engagement metrics reveal how often and for how long players are interacting wit
 
 - **Average session length:** The average session length is how long a player plays your experience on average from the start of their session to the time they log out. This metric helps you design content to fit within that window of time to ensure your experience can be enjoyed by the majority of your players. The average session length also serves as a health metric. If the average session length fluctuates after a significant update or seasonal event, it can inform you how your latest content was received.
 
+<Alert severity="info">
+For out-of-the-box functionality to create engagement rewards, see the [Engagement rewards](../../resources/feature-packages/engagement-rewards.md) feature package.
+</Alert>
+
 ## Retention metrics
 
 <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/LpAU6TheAZ4?si=_1r_ZtlJ3WsrZMUf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

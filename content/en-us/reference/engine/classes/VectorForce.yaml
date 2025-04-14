@@ -61,7 +61,7 @@ properties:
       of `Class.VectorForce.Attachment0|Attachment0`. When false, force is
       applied at `Class.VectorForce.Attachment0|Attachment0`.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

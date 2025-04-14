@@ -152,7 +152,7 @@ properties:
       constraint that allows restitution at the end of its range, such as a
       `Class.PrismaticConstraint` or `Class.RopeConstraint`.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

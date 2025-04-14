@@ -38,7 +38,6 @@ To search and enable an asset for sale:
 
 1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
 2. In the **Monetization** menu, select **Avatar Items**. All avatar items for that experience display.
-   <img src="../../assets/monetization/avatar-items/navigation.png" width="50%" />
 3. Using the search bar, use the item's Asset ID to find the avatar item.
    1. If you do not see the item populate, verify that your Asset ID is correct and that the item creator has added the correct Place ID to the item's sales locations.
 4. Using the dropdown on the thumbnail, click **Enable Sale**.
@@ -64,5 +63,8 @@ The analytics tab enables you to:
 - **View top performing items:** See your top selling and top grossing Avatar Items over a selected time period.
 - **Analyze overall sales and net revenue:** Showcase up to eight top items on a time-series graph.
 - **Monitor your catalog:** Examine a table with up to 400 items, sortable by sales and net revenue.
+- **View buyer demographics:** See the demographic information of buyers, including age, gender, location, and platform.
 
 <img src="../../assets/monetization/avatar-items/avatar-items-analytics-2.png" width="100%" />
+
+<img src="../../assets/monetization/avatar-items/avatar-item-analytics-3.png" width="100%" />

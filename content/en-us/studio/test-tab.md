@@ -9,7 +9,7 @@ import ControllerEmulator from '../includes/studio/controller-emulator.md'
 import PauseResumePhysics from '../includes/studio/pause-resume-physics.md'
 import BetaAlert from '../includes/beta-features/beta-alert.md'
 
-The **test** tab contains tools for testing and debugging an experience, simulating multiple clients, and emulating different devices or users with regional content policies.
+The **Test** tab contains tools for testing and debugging an experience, simulating multiple clients, and emulating different devices or users with regional content policies.
 
 <img src="../assets/studio/general/Toolbar-Test-Tab.png" width="840" alt="Test tab indicated in Studio toolbar." />
 
@@ -32,8 +32,6 @@ Using the **Clients and Servers** options, you can launch multiple sessions of S
 <DeviceEmulator components={props.components} />
 
 ## Controller emulation
-
-<BetaAlert betaName="Gamepad Emulator" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
 
 <ControllerEmulator components={props.components} />
 

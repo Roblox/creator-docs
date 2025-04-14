@@ -8,7 +8,7 @@ Normally, the code within an experience can only affect the server or clients th
 - **Global Announcements** &mdash; Send announcements such as "A user found a special item!" to all the experience's servers.
 - **Real-Time Server Browser** &mdash; Compile a list of all the experience's servers and who is in them (updated every minute) and display the list on a maximum of 20 servers.
 
-You can support cross-server messaging in your experience using `Class.MessagingService`. You can also use the [Teleportation Playground](https://www.roblox.com/games/3112653247/Teleportation-Playground) sample experience to see how cross‑server messaging works before you implement it. Lastly, see [here](../cloud/open-cloud/usage-messaging.md) to explore cross‑server communication using external tools.
+You can support cross-server messaging in your experience using `Class.MessagingService`. You can also use the [Teleportation Playground](https://www.roblox.com/games/3112653247/Teleportation-Playground) sample experience to see how cross‑server messaging works before you implement it. Lastly, see [here](../cloud/guides/usage-messaging.md) to explore cross‑server communication using external tools.
 
 ## Cross-server messaging setup
 

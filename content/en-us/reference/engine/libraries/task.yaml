@@ -155,7 +155,7 @@ functions:
       [Parallel Luau](../../../scripting/multithreading.md).
     parameters:
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
     code_samples:
@@ -179,7 +179,7 @@ functions:
       [Parallel Luau](../../../scripting/multithreading.md).
     parameters:
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
     code_samples:
@@ -253,7 +253,7 @@ functions:
         summary: |
           The thread that will be cancelled.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
     code_samples:

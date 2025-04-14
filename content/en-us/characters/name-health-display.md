@@ -106,7 +106,7 @@ In the following scenario, both **Watchman** and **Octavia** are sufficiently hi
 
 To modify the name or health display for every incoming avatar in an experience, connect the `Class.Players.PlayerAdded` and `Class.Player.CharacterAdded` events in a `Class.Script` and set [display properties](#display-properties) on the character's `Class.Humanoid`.
 
-```lua title='Script - Global Customization' highlight='3,4,8,10,12,14,19'
+```lua title="Script - Global Customization" highlight="3,4,8,10,12,14,19"
 local Players = game:GetService("Players")
 
 local function onPlayerAdded(player)
@@ -132,7 +132,7 @@ You can also customize properties based on a player's `Class.Team`, such as sett
 
 <span id="team-customization-script"></span>
 
-```lua title='Script - Team Customization' highlight='9,12'
+```lua title="Script - Team Customization" highlight="9,12"
 local Players = game:GetService("Players")
 
 local function onPlayerAdded(player)
@@ -182,14 +182,14 @@ In some genres like roleplaying or fighting, you may want to provide a method fo
 
 Once the input is submitted, you can pass it to the server through a [remote event](../scripting/events/remote.md) and then, on the server side, listen for the remote event and assign the [filtered](../ui/text-filtering.md) name to the user character's `Class.Humanoid`.
 
-```lua title='LocalScript - Fire Remote Event' highlight='3,4'
+```lua title="LocalScript - Fire Remote Event" highlight="3,4"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local changeNameEvent = ReplicatedStorage:WaitForChild("ChangeNameEvent")
 changeNameEvent:FireServer("Amory")
 ```
 
-```lua title='Script - Assign Filtered Name' highlight='15,20,23,28'
+```lua title="Script - Assign Filtered Name" highlight="15,20,23,28"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local TextService = game:GetService("TextService")
 

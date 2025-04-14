@@ -2159,15 +2159,13 @@ To apply your asset library to the left-most planter:
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/Planters-1.jpg" width="100%"/>
 
 2. Select the divot part.
-3. In the menu bar, navigate to the **Model** tab, then click the **Negate** button. The part turns translucent.
+3. Navigate to the toolbar's **Model** tab, then click the **Negate** button. The part turns translucent.
 
-   <img src="../../../assets/studio/general/Model-Tab-Negate.png" alt="Negate tool indicated in Model tab" width="732" />
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/Planters-3.jpg" width="100%"/>
 
 4. Select both the negated part and the planter exterior part.
-5. In the **Model** tab, click the **Union** button. The negated part is cut out from the overlapping planter exterior part.
+5. In the toolbar's **Model** tab, click the **Union** button. The negated part is cut out from the overlapping planter exterior part.
 
-   <img src="../../../assets/studio/general/Model-Tab-Union-Negated.png" alt="Union tool indicated in Model tab" width="732" />
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/Planters-5.jpg" width="100%"/>
 
 6. Select the union, then in the **Properties** window,
@@ -3613,13 +3611,7 @@ Using the [Terrain Editor](../../../parts/terrain.md), you can quickly generate 
 
 To apply your own terrain to the outdoor area:
 
-1. Open the **Terrain Editor**.
-
-   1. In the menu bar, navigate to the **Model** tab.
-   1. Click the **Editor** icon.
-
-   <img src="../../../assets/studio/general/Home-Tab-Terrain-Editor.png" width="716" alt="Terrain Editor indicated in Home tab" />
-
+1. From the toolbar's **Home** tab, click **Editor**. The [Terrain Editor](../../../studio/terrain-editor.md) window opens.
 1. Navigate to the **Edit** tab, then click the **Draw** button.
 1. In the **Brush Settings** section, customize your brush according to the material you want to add to your map. For example, the sample starts this process with the settings in the following image.
 
@@ -3648,13 +3640,7 @@ To apply your own terrain to the outdoor area:
 
 To recreate the terrain within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file:
 
-1. Open the **Terrain Editor**.
-
-   1. In the menu bar, navigate to the **Model** tab.
-   1. Click the **Editor** icon.
-
-   <img src="../../../assets/studio/general/Home-Tab-Terrain-Editor.png" width="716" alt="Terrain Editor indicated in Home tab" />
-
+1. From the toolbar's **Home** tab, click **Editor**. The [Terrain Editor](../../../studio/terrain-editor.md) window opens.
 2. Navigate to the **Edit** tab, then click the **Draw** button.
 3. In the **Brush Settings** section,
 

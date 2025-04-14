@@ -42,7 +42,7 @@ methods:
           The part overlap threshold in studs that is ignored before parts are
           considered to be touching.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           True if and only if any of the `Class.Part|parts` in `partList` are
           touching any other parts (parts not in the partList). False if no
@@ -150,7 +150,7 @@ methods:
         default: FireAllEvents
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -204,11 +204,11 @@ methods:
         default: nil
         summary: ''
       - name: terrainCellsAreCubes
-        type: bool
+        type: boolean
         default: false
         summary: ''
       - name: ignoreWater
-        type: bool
+        type: boolean
         default: false
         summary: ''
     returns:
@@ -250,11 +250,11 @@ methods:
         default:
         summary: ''
       - name: terrainCellsAreCubes
-        type: bool
+        type: boolean
         default: false
         summary: ''
       - name: ignoreWater
-        type: bool
+        type: boolean
         default: false
         summary: ''
     returns:
@@ -300,7 +300,7 @@ methods:
         default:
         summary: ''
       - name: ignoreWater
-        type: bool
+        type: boolean
         default: false
         summary: ''
     returns:
@@ -697,7 +697,7 @@ methods:
           Allows you to specify what objects should be effected by the physical
           resolution.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -769,7 +769,7 @@ methods:
         summary: |
           An `Class.Instance` to be ignored.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           True if the `Datatype.Region3` is empty.
     tags:
@@ -816,7 +816,7 @@ methods:
         summary: |
           An array of objects to be ignored.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           True if the `Datatype.Region3` is empty.
     tags:
@@ -1006,7 +1006,7 @@ methods:
           instances that are of type `Class.BasePart`; any other types will be
           ignored.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1028,11 +1028,11 @@ methods:
         default: nil
         summary: ''
       - name: terrainCellsAreCubes
-        type: bool
+        type: boolean
         default: false
         summary: ''
       - name: ignoreWater
-        type: bool
+        type: boolean
         default: false
         summary: ''
     returns:

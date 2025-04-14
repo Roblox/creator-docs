@@ -162,9 +162,9 @@ To replace the default walk animation assetID:
    ```
 
 1. Playtest your experience to ensure your custom walk animation overrides the default animation.
-   1. In the menu bar, click the **Play** button. Studio enters playtest mode.
+   1. In the toolbar, click the **Play** button. Studio enters playtest mode.
 
-      <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="A Studio view of the Home tab with the Play button highlighted." width="716" />
+      <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Play button highlighted in Studio's playtesting options." width="228" />
 
    1. Walk around the space station with your avatar.
 
@@ -263,7 +263,7 @@ When anything collides with the volume, the `Touched` event handler function get
 - Plays and waits for the animation to end.
 - Sets debounce back to `false`.
 
-Setting debounce from `false` to `true` to `false` again after the animation finishes playing is a debounce pattern that prevents the animation from repeatedly triggering as players continuously collide with the volume. For more information on this debounce pattern, see [Detecting Collisions](../../../scripting/debounce.md#detecting-collisions).
+Setting debounce from `false` to `true` to `false` again after the animation finishes playing is a debounce pattern that prevents the animation from repeatedly triggering as players continuously collide with the volume. For more information on this debounce pattern, see [Detect collisions](../../../scripting/debounce.md#detect-collisions).
 
 </AccordionDetails>
 </BaseAccordion>

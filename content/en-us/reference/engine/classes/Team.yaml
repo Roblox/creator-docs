@@ -79,7 +79,7 @@ properties:
       developers may wish to implement their own team balancing system.
     code_samples:
       - Team-Rebalance
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -90,7 +90,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Team.AutoColorCharacters
     summary: |
@@ -105,7 +106,7 @@ properties:
       changed the team colors has since been removed from the default character.
       This property is deprecated and should not be used for new work.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
       - Deprecated
@@ -120,7 +121,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Team.Score
     summary: |
@@ -151,7 +153,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Team.TeamColor
     summary: |
@@ -185,7 +188,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
 methods:
   - name: Team:GetPlayers

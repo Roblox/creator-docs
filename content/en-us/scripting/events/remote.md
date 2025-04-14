@@ -147,7 +147,7 @@ You can use a `Class.LocalScript` to trigger an event on the [server](../../proj
 
 The following `Class.Script` connects an event handler to `Class.RemoteEvent.OnServerEvent|OnServerEvent` that creates a new `Class.Part` on the server. The accompanying `Class.LocalScript` then calls `Class.RemoteEvent:FireServer()|FireServer()` on the `Class.RemoteEvent` instance with the desired `Class.BasePart.Color|Color` and `Class.BasePart.Position|Position` for the part.
 
-```lua title='Event Connection - Script'
+```lua title="Event Connection - Script"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Workspace = game:GetService("Workspace")
 
@@ -166,7 +166,7 @@ end
 remoteEvent.OnServerEvent:Connect(onCreatePart)
 ```
 
-```lua title='Event Firing - LocalScript'
+```lua title="Event Firing - LocalScript"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 -- Get reference to remote event instance
@@ -193,7 +193,7 @@ You can use a `Class.Script` to trigger an event on a [client](../../projects/cl
 
 The following `Class.LocalScript` connects an event handler to the `Class.RemoteEvent.OnClientEvent|OnClientEvent` event. The accompanying `Class.Script` then listens for incoming players to the server and calls `Class.RemoteEvent:FireClient()|FireClient()` for each with arbitrary data.
 
-```lua title='Event Connection - LocalScript'
+```lua title="Event Connection - LocalScript"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
 
@@ -211,7 +211,7 @@ end
 remoteEvent.OnClientEvent:Connect(onNotifyPlayer)
 ```
 
-```lua title='Event Firing - Script'
+```lua title="Event Firing - Script"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
 
@@ -243,7 +243,7 @@ You can use a `Class.Script` to trigger an event on all clients by calling the `
 
 The following `Class.LocalScript` connects an event handler to the `Class.RemoteEvent.OnClientEvent|OnClientEvent` event which outputs a remaining countdown time. The accompanying `Class.Script` then calls `Class.RemoteEvent:FireAllClients()|FireAllClients()` in a loop every second to fire the `Class.RemoteEvent` for all clients.
 
-```lua title='Event Connection - LocalScript'
+```lua title="Event Connection - LocalScript"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 -- Get reference to remote event instance
@@ -257,7 +257,7 @@ end
 remoteEvent.OnClientEvent:Connect(onTimerUpdate)
 ```
 
-```lua title='Event Firing - Script'
+```lua title="Event Firing - Script"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 -- Get reference to remote event instance
@@ -316,7 +316,7 @@ You can use a `Class.LocalScript` to call a function on the [server](../../proje
 
 The following `Class.Script` defines the callback function via `Class.RemoteFunction.OnServerInvoke|OnServerInvoke` and returns the requested `Class.Part` through its `return` value. The accompanying `Class.LocalScript` then calls `Class.RemoteFunction:InvokeServer()|InvokeServer()` with extra arguments defining the requested part color and position.
 
-```lua title='Callback Connection - Script'
+```lua title="Callback Connection - Script"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Workspace = game:GetService("Workspace")
 
@@ -337,7 +337,7 @@ end
 remoteFunction.OnServerInvoke = createPart
 ```
 
-```lua title='Event Invocation - LocalScript'
+```lua title="Event Invocation - LocalScript"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 -- Get reference to remote function instance
@@ -405,7 +405,7 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 
 Functions included as arguments for a `Class.RemoteEvent` or `Class.RemoteFunction` will **not** be replicated across the [client-server](../../projects/client-server.md) boundary, making it impossible to pass functions remotely. Instead, the resulting argument on the receiving side will be `nil`.
 
-```lua title='Event Connection - LocalScript'
+```lua title="Event Connection - LocalScript"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local remoteEvent = ReplicatedStorage:FindFirstChildOfClass("RemoteEvent")
@@ -417,7 +417,7 @@ end
 remoteEvent.OnClientEvent:Connect(onClientEvent)
 ```
 
-```lua title='Event Firing - Script'
+```lua title="Event Firing - Script"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local remoteEvent = ReplicatedStorage:FindFirstChildOfClass("RemoteEvent")
@@ -517,7 +517,7 @@ print(tostring(invokeReturn))  --> table: 0x9fcae7919563a0e9
 
 If a table has a metatable, all of the metatable information is lost in the transfer. In the following code sample, the `NumWheels` property is part of the `Car` metatable. When the server receives the following table, the `truck` table has the `Name` property but **not** the `NumWheels` property.
 
-```lua title='Event Connection - Script'
+```lua title="Event Connection - Script"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local remoteEvent = ReplicatedStorage:FindFirstChildOfClass("RemoteEvent")
@@ -530,7 +530,7 @@ end
 remoteEvent.OnServerEvent:Connect(onEvent)
 ```
 
-```lua title='Event Firing - LocalScript'
+```lua title="Event Firing - LocalScript"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local remoteEvent = ReplicatedStorage:FindFirstChildOfClass("RemoteEvent")
@@ -551,7 +551,7 @@ remoteEvent:FireServer(truck)
 
 If a `Class.RemoteEvent` or `Class.RemoteFunction` passes a value that's only visible to the sender, Roblox doesn't replicate it across the client-server boundary and passes `nil` instead of the value. For example, if a `Class.Script` passes a descendant of `Class.ServerStorage`, the client listening to the event will receive a `nil` value because that object isn't replicable for the client.
 
-```lua title='Event Firing - Script'
+```lua title="Event Firing - Script"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local ServerStorage = game:GetService("ServerStorage")
 local Players = game:GetService("Players")
@@ -570,7 +570,7 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 
 Similarly, if you create a part in a `Class.LocalScript` and try to pass it to a `Class.Script`, the server will see `nil` because the part isn't replicable for the server.
 
-```lua title='Event Firing - LocalScript'
+```lua title="Event Firing - LocalScript"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Workspace = game:GetService("Workspace")
 

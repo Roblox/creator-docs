@@ -25,7 +25,7 @@ properties:
       True if the constraint and both of its parts are in the `Class.Workspace`
       and the constraint's `Class.Constraint.Enabled` property is true.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -109,7 +109,7 @@ properties:
     description: |
       Toggles whether or not the constraint is enabled.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -129,7 +129,7 @@ properties:
     description: |
       Toggles the constraint's visibility.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

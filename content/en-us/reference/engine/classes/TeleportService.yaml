@@ -26,7 +26,7 @@ properties:
       shown by default. The default message has been removed, so this no longer
       does anything.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
       - Deprecated
@@ -237,7 +237,7 @@ methods:
           The loading `Class.ScreenGui` that is to be displayed during
           teleportation.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -325,7 +325,7 @@ methods:
         summary: |
           The value to store.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -371,7 +371,7 @@ methods:
           the destination place. Can be retrieved using
           `Class.TeleportService:GetArrivingTeleportGui()`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -426,7 +426,7 @@ methods:
           the destination place. Can be retrieved using
           `Class.TeleportService:GetArrivingTeleportGui()`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -482,7 +482,7 @@ methods:
           the destination place. Can be retrieved using
           `Class.TeleportService:GetArrivingTeleportGui()`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -533,7 +533,7 @@ methods:
           the destination place. Can be retrieved using
           `Class.TeleportService:GetArrivingTeleportGui()`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -677,9 +677,11 @@ methods:
 
       #### Cross-Platform Play
 
-      Players on Xbox One with cross-platform play disabled will arrive in a
-      different server with players with cross-platform play enabled. This can
-      cause multiple game servers with the same PrivateServerId to exist.
+      Players on Xbox and PlayStation with cross‑play disabled will arrive in a
+      different server than players with cross‑play enabled. This can cause
+      multiple game servers with the same
+      `Class.DataModel.PrivateServerId|PrivateServerId` to exist. You can use
+      `Class.DataModel.MatchmakingType` to differentiate these game servers.
     code_samples:
       - TeleportService-ReserveServer1
       - teleportservice-teleport-to-a-reserved-server-via-chat

@@ -196,7 +196,7 @@ A unique feature of **EventSequencer** is the ability to "seek" around scenes as
 1. Create a new `Class.Script` within `Class.ServerScriptService`.
 1. Paste the following code into the new script.
 
-   ```lua title='Script - Set Seeking Permissions'
+   ```lua title="Script - Set Seeking Permissions"
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
    local EventSequencer = require(ReplicatedStorage:WaitForChild("EventSequencer"))
@@ -252,7 +252,7 @@ To install the plugin:
    <img src="../../assets/studio/toolbox/Creator-Store-Scene-Manager-Plugin.png" width="360" />
 
 4. Click the plugin's icon to view its details and then click the **Install** button.
-5. Once the plugin is installed, it appears in Studio's [Plugins](../../studio/plugins-tab.md) tab.
+5. Once the plugin is installed, it appears in Studio's **Plugins** tab.
 
 ### Load and unload scenes
 
@@ -357,7 +357,7 @@ The **OnSetup** lifecycle hook is intended for initializing assets and variables
 It's recommended that you do **not** call `Global.RobloxGlobals.wait()` or `Library.task.wait()` within **OnSetup**, as it will delay the [OnRun](#onrun) start while the scene's timer continues to count up.
 </Alert>
 
-```lua title='Client Schema' highlight='11,21'
+```lua title="Client Schema" highlight="11,21"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local EventSequencer = require(ReplicatedStorage:WaitForChild("EventSequencer"))
@@ -381,7 +381,7 @@ Schema.OnSetup = function(timePositionObject)
 end
 ```
 
-```lua title='Server Schema' highlight='11,21'
+```lua title="Server Schema" highlight="11,21"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local EventSequencer = require(ReplicatedStorage:WaitForChild("EventSequencer"))
@@ -413,7 +413,7 @@ end
 It's recommended that you do **not** call `Global.RobloxGlobals.wait()` or `Library.task.wait()` within **OnRun**, as it will delay the scene's orchestration while the scene's timer continues to count up.
 </Alert>
 
-```lua title='Client Schema' highlight='1,14'
+```lua title="Client Schema" highlight="1,14"
 Schema.OnRun = function()
 	print("OnRun (Client)")
 
@@ -434,7 +434,7 @@ end
 
 The **OnEndScene** lifecycle hook is useful for cleaning up anything outstanding in the scene, such as disconnecting connections created in [OnSetup](#onsetup) or [OnRun](#onrun) that remain for the duration of the scene.
 
-```lua title='Server Schema' highlight='1,8'
+```lua title="Server Schema" highlight="1,8"
 Schema.OnEndScene = function()
 	print("OnEndScene (Server)")
 
@@ -486,7 +486,7 @@ Creates a `Class.Sound` object in the workspace which plays at a certain time. T
 </tbody>
 </table>
 
-```lua title='Client Schema' highlight='4,13'
+```lua title="Client Schema" highlight="4,13"
 Schema.OnRun = function()
 	print("OnRun (Client)")
 
@@ -566,7 +566,7 @@ Creates an `Class.Animation` which plays at a certain time.
 </tbody>
 </table>
 
-```lua title='Client Schema' highlight='9,25'
+```lua title="Client Schema" highlight="9,25"
 Schema.OnRun = function()
 	print("OnRun (Client)")
 
@@ -634,7 +634,7 @@ Creates a configurable `Class.Tween` which is preserved in seeking and in dynami
 </tbody>
 </table>
 
-```lua title='Client Schema' highlight='9,31'
+```lua title="Client Schema" highlight="9,31"
 Schema.OnRun = function()
 	print("OnRun (Client)")
 
@@ -712,7 +712,7 @@ Executes a custom callback function over a specified duration on a specified fre
 </tbody>
 </table>
 
-```lua title='Client Schema' highlight='9,19'
+```lua title="Client Schema" highlight="9,19"
 Schema.OnRun = function()
 	print("OnRun (Client)")
 
@@ -766,7 +766,7 @@ Similar to [interval](#interval) except that you can define multiple specific st
 </tbody>
 </table>
 
-```lua title='Client Schema' highlight='4,14'
+```lua title="Client Schema" highlight="4,14"
 Schema.OnRun = function()
 	print("OnRun (Client)")
 
@@ -790,7 +790,7 @@ Informs the framework of any modules, UI objects, connections, etc. which are cr
 
 - Informing the framework of a temporary ad-hoc connection such as `Class.RunService.Heartbeat` so that the connection is cleaned up when seeking to an earlier point in the scene's duration.
 
-  ```lua title='Server Schema' highlight='8-10,12'
+  ```lua title="Server Schema" highlight="8-10,12"
   Schema.OnRun = function()
   	print("OnRun (Server)")
 
@@ -810,7 +810,7 @@ Informs the framework of any modules, UI objects, connections, etc. which are cr
 
 - Calling a custom "cleanup" function in a `Class.ModuleScript` that initializes a connection or other reference during the [OnRun](#onrun) lifecycle hook.
 
-  ```lua title='Server Schema' highlight='4,17,19'
+  ```lua title="Server Schema" highlight="4,17,19"
   local ReplicatedStorage = game:GetService("ReplicatedStorage")
   local RunService = game:GetService("RunService")
 
@@ -835,7 +835,7 @@ Informs the framework of any modules, UI objects, connections, etc. which are cr
   end
   ```
 
-  ```lua title='ModuleScript - CustomModule' highlight='5,7-10,12,14-18'
+  ```lua title="ModuleScript - CustomModule" highlight="5,7-10,12,14-18"
   local RunService = game:GetService("RunService")
 
   local CustomModule = {}
@@ -872,7 +872,7 @@ loadScene(sceneName: `Library.string`, startTime: `number` ?)
 
 Programmatically loads a scene by `sceneName` and starts it at `startTime` from its beginning. There will be a 5 second "grace period" for the scene to load from the server before the seek occurs and the scene starts playing. This means that if you call `loadScene("[SceneName]", 20)` at exactly 4:15:00 PM, the framework will wait 5 seconds in addition to the requested 20, kicking off the scene at 4:15:25 PM.
 
-```lua title='Script' highlight='9,12,15'
+```lua title="Script" highlight="9,12,15"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local EventSequencer = require(ReplicatedStorage:WaitForChild("EventSequencer"))
@@ -904,7 +904,7 @@ createSchema(): `Library.table`
 
 Returns an instance of the scene [schema](#scene-schemas) to create logic for the scene.
 
-```lua title='Client Schema' highlight='5'
+```lua title="Client Schema" highlight="5"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local EventSequencer = require(ReplicatedStorage:WaitForChild("EventSequencer"))
@@ -924,7 +924,7 @@ seek(time: `number`)
 
 Seeks to the `time` value, in seconds, from the currently loaded scene's beginning.
 
-```lua title='Script' highlight='5'
+```lua title="Script" highlight="5"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local EventSequencer = require(ReplicatedStorage:WaitForChild("EventSequencer"))
@@ -944,7 +944,7 @@ setSceneWarningTime(endSceneTimeWindow: `number`)
 
 Sets the amount of time from the **end** of all scenes at which a warning is dispatched. You can detect the warning either client-side through [onSceneEndingWarningForClient](#onsceneendingwarningforclient) or server-side through [onSceneEndingWarningForServer](#onsceneendingwarningforserver).
 
-```lua title='Script' highlight='9'
+```lua title="Script" highlight="9"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local EventSequencer = require(ReplicatedStorage:WaitForChild("EventSequencer"))
@@ -981,7 +981,7 @@ Returns the current scene's client-side or server-side [Environment](#environmen
 Do not use this function with [Inline Mode](#inline-mode), as that mode expects you to use existing assets and global property settings for the place, not load in scene-specific assets/properties from the scene's [Environment](#environment) folder. This function will **infinitely yield** if the folder doesn't exist.
 </Alert>
 
-```lua title='Client Schema' highlight='7, 14'
+```lua title="Client Schema" highlight="7, 14"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local EventSequencer = require(ReplicatedStorage:WaitForChild("EventSequencer"))
@@ -1002,7 +1002,7 @@ Schema.OnSetup = function(timePositionObject)
 end
 ```
 
-```lua title='Server Schema' highlight='7,14'
+```lua title="Server Schema" highlight="7,14"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local EventSequencer = require(ReplicatedStorage:WaitForChild("EventSequencer"))
@@ -1036,7 +1036,7 @@ Returns the current scene's **server-side** [Environment](#environment) folder. 
 Do not use this function with [Inline Mode](#inline-mode), as that mode expects you to use existing assets and global property settings for the place, not load in scene-specific assets/properties from the scene's [Environment](#environment) folder. This function will **infinitely yield** if the folder doesn't exist.
 </Alert>
 
-```lua title='Client Schema' highlight='8,15'
+```lua title="Client Schema" highlight="8,15"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local EventSequencer = require(ReplicatedStorage:WaitForChild("EventSequencer"))
@@ -1069,7 +1069,7 @@ Called from the server to know if a scene is currently loading.
 Do not use this function with [Inline Mode](#inline-mode), as that mode expects you to use existing assets and global property settings for the place, not load in scene-specific assets/properties from the scene's [Environment](#environment) folder.
 </Alert>
 
-```lua title='Script' highlight='5'
+```lua title="Script" highlight="5"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local EventSequencer = require(ReplicatedStorage:WaitForChild("EventSequencer"))
@@ -1088,7 +1088,7 @@ print("Scene loaded")
 
 Fires on the client before the scene is about to end. The default time is 3 seconds, but you can configure it through [setSceneWarningTime](#setscenewarningtime). This event can only be connected in a `Class.LocalScript`.
 
-```lua title='LocalScript' highlight='6,8'
+```lua title="LocalScript" highlight="6,8"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local EventSequencer = require(ReplicatedStorage:WaitForChild("EventSequencer"))
@@ -1103,7 +1103,7 @@ end)
 
 Fires on the server before the scene is about to end. The default time is 3 seconds, but you can configure it through [setSceneWarningTime](#setscenewarningtime). This event can only be connected in a `Class.Script`.
 
-```lua title='Script' highlight='6,8'
+```lua title="Script" highlight="6,8"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local EventSequencer = require(ReplicatedStorage:WaitForChild("EventSequencer"))
@@ -1122,7 +1122,7 @@ Fires on the client when the scene is starting. This event can only be connected
 Don't use this event for [Inline Mode](#inline-mode) because that mode expects you to use existing assets and global property settings for the place, not load in scene-specific assets/properties from the scene's [Environment](#environment) folder.
 </Alert>
 
-```lua title='LocalScript' highlight='6,8'
+```lua title="LocalScript" highlight="6,8"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local EventSequencer = require(ReplicatedStorage:WaitForChild("EventSequencer"))
@@ -1137,7 +1137,7 @@ end)
 
 Fires on the server when a scene has reached its [time length](#time-length) and has effectively ended. This event receives an `endedSceneName` string name argument for the scene that just finished and you can chain off this event to conditionally [load another scene](#loadscene). Can only be connected in a `Class.Script`.
 
-```lua title='Script' highlight='6,17'
+```lua title="Script" highlight="6,17"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local EventSequencer = require(ReplicatedStorage:WaitForChild("EventSequencer"))

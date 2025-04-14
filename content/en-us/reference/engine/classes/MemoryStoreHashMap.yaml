@@ -35,7 +35,7 @@ methods:
     returns:
       - type: Variant
         summary: |
-          The value, or nil if the key doesn't exist.
+          The value, or `nil` if the key doesn't exist.
     tags:
       - Yields
     deprecation_message: ''
@@ -84,7 +84,7 @@ methods:
         summary: |
           The key to remove.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields
@@ -119,7 +119,7 @@ methods:
           removed from the hash map. The maximum expiration time is 45 days
           (3,888,000 seconds).
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields
@@ -140,14 +140,15 @@ methods:
       value and passes it to a transform function, which returns the new value
       for the item, with these exceptions:
 
-      - If the key does not exist, the old value passed to the function is nil.
-      - If the function returns nil, the update is canceled.
+      - If the key does not exist, the old value passed to the function is
+        `nil`.
+      - If the function returns `nil`, the update is canceled.
 
       The new value is saved only if the key was not updated (for example, by a
       different game server) since the moment it was read. If the value changed
       in that time, the transform function is called again with the most recent
       item value. This cycle repeats until the value is saved successfully or
-      the transform function returns nil to abort the operation.
+      the transform function returns `nil` to abort the operation.
     code_samples:
       - updating-hash-map-memory-store
     parameters:

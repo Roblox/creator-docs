@@ -31,7 +31,7 @@ properties:
       UI contents will not render, process user input, or update in response to
       changes.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -61,7 +61,7 @@ properties:
       player's `Class.PlayerGui` when their character respawns, and it will
       delete itself when the player's character respawns again.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

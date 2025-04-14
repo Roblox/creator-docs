@@ -60,7 +60,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.AutoJumpEnabled
     summary: |
@@ -80,7 +81,7 @@ properties:
       basis using these three properties.
     code_samples:
       - Auto-Jump-Toggle
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -91,7 +92,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.CameraMaxZoomDistance
     summary: |
@@ -121,7 +123,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.CameraMinZoomDistance
     summary: |
@@ -151,7 +154,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.CameraMode
     summary: |
@@ -194,7 +198,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.CanLoadCharacterAppearance
     summary: |
@@ -217,7 +222,7 @@ properties:
       the new appearance.
     code_samples:
       - disabling-a-player-s-appearance
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -228,7 +233,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.Character
     summary: |
@@ -279,7 +285,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.CharacterAppearance
     summary: |
@@ -310,7 +317,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.CharacterAppearanceId
     summary: |
@@ -341,7 +349,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.DataComplexity
     summary: |
@@ -358,7 +367,7 @@ properties:
       - Strings cost their length divided by 100 in data complexity units.
       - Instances cost their DataCost in data complexity units.
       - Saving the default value (0 for numbers, false for booleans, "" for
-        strings and nil for Instances) removes the key from the DataComplexity
+        strings and `nil` for Instances) removes the key from the DataComplexity
         count.
       - If, when using the SaveBoolean, SaveString, SaveNumber or SaveInstance
         functions, the DataComplexity for the player goes over the limit
@@ -384,7 +393,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.DataReady
     summary: |
@@ -394,7 +404,7 @@ properties:
       indicate when the player's data is available to load. Becomes true when
       data is available.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - Hidden
       - ReadOnly
@@ -412,7 +422,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.DevCameraOcclusionMode
     summary: |
@@ -438,7 +449,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.DevComputerCameraMode
     summary: |
@@ -481,7 +493,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.DevComputerMovementMode
     summary: |
@@ -523,7 +536,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.DevEnableMouseLock
     summary: |
@@ -546,7 +560,7 @@ properties:
       to lock the mouse.
     code_samples:
       - toggling-mouse-lock-ability
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -557,7 +571,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.DevTouchCameraMode
     summary: |
@@ -596,7 +611,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.DevTouchMovementMode
     summary: |
@@ -635,7 +651,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.DisplayName
     summary: |
@@ -671,7 +688,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.FollowUserId
     summary: |
@@ -701,7 +719,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.GameplayPaused
     summary: |
@@ -721,7 +740,7 @@ properties:
         `Enum.StreamingIntegrityMode` for more details on when gameplay is
         paused.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -732,7 +751,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.HasVerifiedBadge
     summary: |
@@ -741,7 +761,7 @@ properties:
       The HasVerifiedBadge `Class.Player` property indicates if the player has a
       Verified Badge.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -752,7 +772,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.HealthDisplayDistance
     summary: |
@@ -779,7 +800,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.LocaleId
     summary: |
@@ -815,7 +837,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.MembershipType
     summary: |
@@ -839,7 +862,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.NameDisplayDistance
     summary: |
@@ -866,7 +890,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.Neutral
     summary: |
@@ -875,14 +900,14 @@ properties:
       The Neutral property determines whether the player is on a specific team.
 
       - When _true_, the player is not on a specific team. This also means that
-        the `Class.Player.Team` property will be nil and the
+        the `Class.Player.Team` property will be `nil` and the
         `Class.Player.TeamColor` will be white.
       - When _false_, the player is on a specific team. The `Class.Player.Team`
         property will correspond to the `Class.Team` that the player is on, as
         will the `Class.Player.TeamColor`.
     code_samples:
       - checking-if-a-player-is-neutral
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -893,7 +918,28 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
+    writeCapabilities: []
+  - name: Player.PartyId
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: WritePlayerSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.ReplicationFocus
     summary: |
@@ -904,9 +950,9 @@ properties:
       over the network (such as physics, streaming, etc) replicate at different
       rates depending on how close objects are to the replication focus.
 
-      When this property is nil, it reverts to its default behavior which is to
-      treat the local player's character's `Class.Model.PrimaryPart|PrimaryPart`
-      as the replication focus.
+      When this property is `nil`, it reverts to its default behavior which is
+      to treat the local player's character's
+      `Class.Model.PrimaryPart|PrimaryPart` as the replication focus.
 
       This property should only be set on the server with a `Class.Script`, not
       a `Class.LocalScript`. Note that this property does not change or update
@@ -924,14 +970,15 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.RespawnLocation
     summary: |
       If set, the player will respawn at the given `Class.SpawnLocation`.
     description: |
       If set, the player will respawn at the given `Class.SpawnLocation`. This
-      property can only be set through Lua and must contain a reference to a
+      property can only be set through Luau and must contain a reference to a
       valid `Class.SpawnLocation`, which must meet the following criteria:
 
       - Descendant of `Class.Workspace`
@@ -962,7 +1009,26 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
+    writeCapabilities: []
+  - name: Player.StepIdOffset
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.Team
     summary: |
@@ -971,8 +1037,8 @@ properties:
       The Team property is a reference to a `Class.Team` object within the
       `Class.Teams` service. It determines the team the player is on; if the
       `Class.Player` isn't on a team or has an invalid `Class.Player.TeamColor`,
-      this property is nil. When this property is set, the player has joined the
-      `Class.Team` and the `Class.Team.PlayerAdded` event fires on the
+      this property is `nil`. When this property is set, the player has joined
+      the `Class.Team` and the `Class.Team.PlayerAdded` event fires on the
       associated team. Similarly, `Class.Team.PlayerRemoved` fires when the
       property is unset from a certain `Class.Team`.
     code_samples:
@@ -990,7 +1056,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.TeamColor
     summary: |
@@ -1021,7 +1088,28 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Players
+    writeCapabilities: []
+  - name: Player.ThirdPartyTextChatRestrictionStatus
+    summary: ''
+    description: ''
+    code_samples: []
+    type: ChatRestrictionStatus
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.UserId
     summary: |
@@ -1052,7 +1140,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.userId
     summary: ''
@@ -1072,9 +1161,28 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
 methods:
+  - name: Player:AddReplicationFocus
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: part
+        type: BasePart
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Player:ClearCharacterAppearance
     summary: |
       Removes all accessories and other character appearance objects from a
@@ -1092,7 +1200,7 @@ methods:
       - Player-ClearCharacterAppearance1
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1317,7 +1425,7 @@ methods:
       - check-if-a-player-s-appearance-has-loaded
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           A boolean indicating whether or not the appearance of the player's
           character has loaded.
@@ -1345,7 +1453,7 @@ methods:
       - Player-IsVerified
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           A boolean indicating whether the player is verified.
     tags: []
@@ -1379,7 +1487,7 @@ methods:
         summary: |
           The message to show the user upon kicking.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1394,7 +1502,7 @@ methods:
     description: |
       This function returns a boolean value that was previously saved to the
       player with `Class.Player:SaveBoolean()` with the same key. Returns false
-      if the key doesn't exist, not nil.
+      if the key doesn't exist, not `nil`.
     code_samples:
     parameters:
       - name: key
@@ -1402,7 +1510,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -1449,7 +1557,7 @@ methods:
           An instance of the asset being loaded, which can be obtained using the
           `Class.InsertService:LoadAsset()` function.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1464,7 +1572,7 @@ methods:
       `Class.Player:SaveInstance()` with the same key.
     description: |
       This function returns an instance that was previously saved to the player
-      with `Class.Player:SaveInstance()` with the same key. Returns nil if the
+      with `Class.Player:SaveInstance()` with the same key. Returns `nil` if the
       key doesn't exist.
     code_samples:
       - Player-LoadInstance1
@@ -1493,7 +1601,7 @@ methods:
       This function was once used by an ancient data persistence method to
       return a number value that was previously saved to the player with
       `Class.Player:SaveNumber()` with the same key. Returns 0 if the key
-      doesn't exist, not nil.
+      doesn't exist, not `nil`.
     code_samples:
       - Player-LoadNumber1
     parameters:
@@ -1520,7 +1628,7 @@ methods:
     description: |
       This function returns a string value that was previously saved to the
       player with `Class.Player:SaveString()` with the same key. Returns an
-      empty string ("") if the key doesn't exist, not nil..
+      empty string ("") if the key doesn't exist, not `nil`.
     code_samples:
       - Player-LoadString1
     parameters:
@@ -1565,13 +1673,53 @@ methods:
         summary: |
           The Vector3 direction that the player should move.
       - name: relativeToCamera
-        type: bool
+        type: boolean
         default: false
         summary: |
           A boolean indicating whether the player should move relative to the
           player's camera.
     returns:
-      - type: void
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: Player:OverrideStreamingRadii
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: minRadius
+        type: int
+        default:
+        summary: ''
+      - name: targetRadius
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: Player:RemoveReplicationFocus
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: part
+        type: BasePart
+        default:
+        summary: ''
+    returns:
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1594,11 +1742,11 @@ methods:
         default:
         summary: ''
       - name: value
-        type: bool
+        type: boolean
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1629,7 +1777,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1660,7 +1808,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1691,7 +1839,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1725,7 +1873,7 @@ methods:
         summary: |
           The age of the account in days.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1756,12 +1904,12 @@ methods:
     code_samples:
     parameters:
       - name: value
-        type: bool
+        type: boolean
         default:
         summary: |
           A boolean indicating whether or not the player sees filtered chat.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1779,7 +1927,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -1865,11 +2013,11 @@ methods:
         default:
         summary: ''
       - name: value
-        type: bool
+        type: boolean
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1895,7 +2043,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1921,7 +2069,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1946,7 +2094,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -2169,7 +2317,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields
@@ -2201,7 +2349,7 @@ methods:
         summary: |
           The `Class.Player.UserId` of the specified player.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           A boolean indicating whether a player is a friend of the specified
           user.
@@ -2240,7 +2388,7 @@ methods:
         summary: |
           The _groupId_ of the specified group.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           A boolean indicating whether the player is in the specified group.
     tags:
@@ -2291,7 +2439,7 @@ methods:
       - Player-LoadCharacter1
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields
@@ -2329,7 +2477,7 @@ methods:
           parts/colors, body scaling, accessories, clothing, and animations that
           will be equipped to the loaded character.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields
@@ -2376,7 +2524,7 @@ methods:
         summary: |
           Optional timeout for the request.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields
@@ -2397,7 +2545,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields
@@ -2420,7 +2568,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields
@@ -2438,7 +2586,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields
@@ -2581,7 +2729,7 @@ events:
       Fires when a player chats in-game using Roblox's provided chat bar.
     description: |
       The Chatted event fires when a `Class.Player` types a message and presses
-      enter in Roblox's provided chat bar. This is done using some Lua bindings
+      enter in Roblox's provided chat bar. This is done using some Luau bindings
       by the default chat script. You can prevent players from chatting by using
       `Class.StarterGui:SetCoreGuiEnabled()` and disabling the Chat
       `Enum.CoreGuiType`.

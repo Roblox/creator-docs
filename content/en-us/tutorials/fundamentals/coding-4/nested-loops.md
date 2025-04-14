@@ -1,6 +1,6 @@
 ---
 title: Nested loops
-description: Learn how to use nested loops. This computer science lesson uses Roblox Lua to combine multiple nested for loops.
+description: Learn how to use nested loops. This computer science lesson uses Luau to combine multiple nested for loops.
 next: /tutorials/fundamentals/coding-5/landing
 prev: /tutorials/fundamentals/coding-4/create-a-timed-bridge
 ---

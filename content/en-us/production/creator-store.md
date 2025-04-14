@@ -29,7 +29,7 @@ These policies only apply to assets on the Creator Store, **not** private models
 
 To open the Creator Store:
 
-1. Navigate to the [View](../studio/view-tab.md) tab of Studio's menu bar.
+1. Navigate to the [View](../studio/view-tab.md) tab in Studio's toolbar.
 
    <img src="../assets/studio/general/Toolbar-View-Tab.png" width="876" alt="View tab indicated in Studio toolbar" />
 
@@ -77,7 +77,7 @@ Users can now leave reviews on Creator Store assets in addition to the currently
 To add an asset to your experience from the [Toolbox](../projects/assets/toolbox.md), click it or drag‑and‑drop it into the 3D viewport.
 
 - If the asset is a model, mesh, image, video, or audio file, it displays in the [Explorer](../studio/explorer.md) window. Assets with 3D content also display in the 3D viewport.
-- If the asset is a plugin, it displays in the [Plugins](../studio/plugins-tab.md) tab of the menu bar.
+- If the asset is a plugin, it displays in the toolbar's **Plugins** tab.
 - If the asset is a font, it displays in your font library within user interface elements such as [text labels](../ui/labels.md) or [buttons](../ui/buttons.md), as well as your [inventory](../projects/assets/toolbox.md#inventory).
 
 <Alert severity="info">

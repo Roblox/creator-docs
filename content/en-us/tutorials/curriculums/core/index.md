@@ -68,8 +68,6 @@ inspect the place files if you want to see the end result of each chapter.
    </AccordionDetails>
    </BaseAccordion>
 
-   <br />
-
    <BaseAccordion>
    <AccordionSummary>
       <Typography variant="h4">Chapter 2 - Script the gameplay</Typography>
@@ -92,8 +90,6 @@ inspect the place files if you want to see the end result of each chapter.
 
    </AccordionDetails>
    </BaseAccordion>
-
-   <br />
 
    <BaseAccordion>
    <AccordionSummary>

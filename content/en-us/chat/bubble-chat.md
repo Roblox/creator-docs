@@ -15,7 +15,7 @@ To enable bubble chat in your experience:
 
    <img src="../assets/players/in-experience-text-chat/TextChatService-BubbleChatConfiguration.png" width="320" />
 
-2. In the [Properties](../studio/properties.md) window, check the `Class.BubbleChatConfiguration.Enabled|Enabled` checkbox.
+2. In the [Properties](../studio/properties.md) window, check the `Class.BubbleChatConfiguration.Enabled` checkbox.
 
    <img src="../assets/players/in-experience-text-chat/TextChatService-BubbleChatConfiguration-Enabled.png" width="320" />
 

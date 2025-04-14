@@ -126,7 +126,7 @@ methods:
         summary: |
           Number of seconds before the `Class.Instance` should be destroyed.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -148,7 +148,7 @@ methods:
         default: 10
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated

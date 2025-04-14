@@ -50,7 +50,7 @@ properties:
       of this property.
     code_samples:
       - TextButton-Active-Debounce
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -328,7 +328,7 @@ properties:
       descendant GUI elements will be rendered regardless of this property's
       value.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -350,7 +350,7 @@ properties:
       This indicates whether a `Class.GuiObject` (and its descendants) can be
       dragged around the screen.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - Deprecated
     deprecation_message: |
@@ -430,7 +430,7 @@ properties:
         `Class.GuiButton` is set to `true`, the
         `Class.GuiObject.GuiState|GuiState` will behave normally again.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -706,7 +706,7 @@ properties:
       re-enable its selectable property.
     code_samples:
       - limiting-textbox-selection
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -781,6 +781,27 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
+  - name: GuiObject.SelectionRect2D
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Rect
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: Unsafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
     capabilities:
       - UI
     writeCapabilities: []
@@ -891,7 +912,7 @@ properties:
       otherwise occupy in the layout is used by other elements instead.
     code_samples:
       - UI-Window
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -981,7 +1002,7 @@ methods:
         summary: |
           How long, in seconds, the tween should take to complete.
       - name: override
-        type: bool
+        type: boolean
         default: false
         summary: |
           Whether the tween will override an in-progress tween.
@@ -991,7 +1012,7 @@ methods:
         summary: |
           A callback function to execute when the tween completes.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the tween will play.
     tags: []
@@ -1049,7 +1070,7 @@ methods:
         summary: |
           How long, in seconds, the tween should take to complete.
       - name: override
-        type: bool
+        type: boolean
         default: false
         summary: |
           Whether the tween will override an in-progress tween.
@@ -1059,7 +1080,7 @@ methods:
         summary: |
           A callback function to execute when the tween completes.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the tween will play.
     tags: []
@@ -1123,7 +1144,7 @@ methods:
         summary: |
           How long, in seconds, the tween should take to complete.
       - name: override
-        type: bool
+        type: boolean
         default: false
         summary: |
           Whether the tween will override an in-progress tween.
@@ -1133,7 +1154,7 @@ methods:
         summary: |
           A callback function to execute when the tween completes.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the tween will play.
     tags: []
@@ -1583,7 +1604,7 @@ events:
 
       When a GUI loses selection focus, the value of the
       `Class.GuiService.SelectionObject|SelectionObject` property changes either
-      to nil or to the GUI element that gains selection focus. To determine
+      to `nil` or to the GUI element that gains selection focus. To determine
       which GUI gained selection, or if no GUI is selected, check the value of
       this property.
     code_samples:
@@ -1662,7 +1683,7 @@ events:
         type: Array
         default:
         summary: |
-          A Lua array of `Datatype.Vector2` objects, each indicating the
+          A Luau array of `Datatype.Vector2` objects, each indicating the
           position of all the fingers involved in the gesture.
       - name: totalTranslation
         type: Vector2
@@ -1716,7 +1737,7 @@ events:
         type: Array
         default:
         summary: |
-          A Lua array of `Datatype.Vector2` objects, each indicating the
+          A Luau array of `Datatype.Vector2` objects, each indicating the
           position of all the fingers involved in the pinch gesture.
       - name: scale
         type: float
@@ -1768,7 +1789,7 @@ events:
         type: Array
         default:
         summary: |
-          A Lua array of `Datatype.Vector2` objects, each indicating the
+          A Luau array of `Datatype.Vector2` objects, each indicating the
           position of all the fingers involved in the gesture.
       - name: rotation
         type: float

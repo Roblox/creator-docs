@@ -8,7 +8,7 @@ description: Price optimization finds the best price points for your passes and 
 <br />
 
 <Alert severity="warning">
-To run a successful price optimization test, your experience has to have enough transactions to produce significant data. In most cases, this means your experience should have had at least 75,000 transactions over the previous 30 days.
+To run a successful price optimization test, your experience has to have enough transactions to produce significant data. In most cases, this means your experience should have had at least 60,000 transactions over the previous 30 days.
 
 To find how many transactions your experience has had, add the total number of product sales over a 30-day period. For more information, see [Pass analytics](./game-passes.md#pass-analytics) and [Developer Product analytics](./developer-products.md#developer-product-analytics).
 </Alert>

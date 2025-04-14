@@ -36,7 +36,7 @@ properties:
       notify player's when their first join that chat messages may be translated
       into the player's preferred language.
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''
@@ -170,7 +170,7 @@ properties:
       true. Also note that mute and unmute commands apply to all
       `Class.TextChannel|TextChannels`.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -235,30 +235,12 @@ properties:
       Messages from different TextChannels can be separated into different tabs
       in the chat window using `Class.ChannelTabsConfiguration`.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
       read: None
       write: PluginSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Chat
-    writeCapabilities: []
-  - name: TextChatService.HasSeenDeprecationDialog
-    summary: ''
-    description: ''
-    code_samples: []
-    type: bool
-    tags: []
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
     thread_safety: ReadSafe
     category: Data
     serialization:
@@ -294,7 +276,7 @@ methods:
         summary: |
           The text to be displayed in the chat bubble.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -309,9 +291,12 @@ methods:
       Determines whether a user has permission to chat in experiences. Factors
       such as parental control settings may prevent the user from sending
       messages. Errors if the userId is not in the current server. Note that
-      this method is only available for use in a `Class.Script` with
+      this method can be used with all current player
+      `Class.Player.UserId|UserIds` in a `Class.Script` with
       `Class.Script.RunContext|RunContext` of `Enum.RunContext.Server` or
-      `Enum.RunContext.Legacy`.
+      `Enum.RunContext.Legacy`. This method can also be used in a
+      `Class.LocalScript` but only with the `Class.Player.UserId|UserId` of the
+      local player.
     code_samples: []
     parameters:
       - name: userId
@@ -319,7 +304,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields
@@ -352,7 +337,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields

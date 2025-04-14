@@ -1,5 +1,5 @@
 backTo:
-  title: Back to guides
+  title: Back to platform
   path: /platform
 navigation:
   - heading: Educator training
@@ -211,7 +211,7 @@ navigation:
             path: /education/build-it-play-it-galactic-speedway/duplicate-and-design
           - title: Group the parts
             path: /education/build-it-play-it-galactic-speedway/grouping-the-parts
-          - title: Add to the gorage
+          - title: Add to the garage
             path: /education/build-it-play-it-galactic-speedway/add-to-the-garage
           - title: Test the speeder
             path: /education/build-it-play-it-galactic-speedway/test-the-speeder

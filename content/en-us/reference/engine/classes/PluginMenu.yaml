@@ -98,7 +98,7 @@ methods:
         summary: |
           The action to add.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -121,7 +121,7 @@ methods:
           The menu to add as a sub menu. Uses its `Class.PluginMenu.Title` and
           `Class.PluginMenu.Icon` to display.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -173,7 +173,7 @@ methods:
       - creating-a-pluginaction-and-pluginmenu
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -189,7 +189,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -211,7 +211,7 @@ methods:
     returns:
       - type: Instance
         summary: |
-          The `Class.PluginAction` item that was selected or nil.
+          The `Class.PluginAction` item that was selected or `nil`.
     tags:
       - Yields
     deprecation_message: ''

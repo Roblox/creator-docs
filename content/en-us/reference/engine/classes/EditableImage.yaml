@@ -28,6 +28,13 @@ description: |
   `Class.EditableImage`, the editable image is published as an image and the
   property is set to a new asset ID.
 
+  #### Update Limitations
+
+  Only a single `Class.EditableImage` can be updated per frame on the display
+  side. For example, if you update three `Class.EditableImage` objects which are
+  currently being displayed, it will take three frames for all of them to be
+  updated.
+
   #### Enabling EditableImage for Published Experiences
 
   For security purposes, using `Class.EditableImage` fails by default for
@@ -91,7 +98,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -138,7 +145,7 @@ methods:
           How the pixels of the source image are blended with the pixels of the
           added image.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -163,7 +170,7 @@ methods:
           Position at which the top-left corner of the added image will be
           drawn.
       - name: image
-        type: Object
+        type: EditableImage
         default:
         summary: |
           The `Class.EditableImage` to draw into this `Class.EditableImage`.
@@ -174,7 +181,7 @@ methods:
           How the pixels of the source image should be blended with the pixels
           of the added image.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -193,7 +200,7 @@ methods:
     code_samples: []
     parameters:
       - name: mesh
-        type: Object
+        type: EditableMesh
         default:
         summary: |
           The `Class.EditableMesh` used to project into.
@@ -228,7 +235,7 @@ methods:
             controls how much of the projection is blended into the resulting
             image.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -268,7 +275,7 @@ methods:
           The rotation angle in degrees, applied around the pivot point of the
           source image.
       - name: image
-        type: Object
+        type: EditableImage
         default:
         summary: |
           The source `Class.EditableImage` to be drawn into this image.
@@ -288,7 +295,7 @@ methods:
             scaling and rotation. Default is the center of the source image
             (i.e. `Image.Size / 2`).
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -331,7 +338,7 @@ methods:
           How the pixels of the source image are blended with the pixels of the
           added image.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -376,7 +383,7 @@ methods:
           How the pixels of the source image are blended with the pixels of the
           added image.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -388,11 +395,9 @@ methods:
     summary: |
       Reads a rectangular region of pixels into a buffer.
     description: |
-      A version of `Class.EditableImage:ReadPixels()|ReadPixels()` that returns
-      a buffer instead of a table. Each number in the buffer is a single byte,
-      while each number in the table is 4 bytes, making
-      `Class.EditableImage:ReadPixelsBuffer()|ReadPixelsBuffer()` more
-      memory-efficient than `Class.EditableImage:ReadPixels()|ReadPixels()`.
+      Reads a rectangular region of pixels from an `Class.EditableImage` and
+      returns it as a buffer. Each number in the buffer is a single byte, with
+      pixels stored in a sequence of four bytes (red, green, blue, and alpha).
 
       Note that this method uses alpha instead of transparency, unlike the
       `Class.EditableImage` drawing methods.
@@ -426,11 +431,9 @@ methods:
     summary: |
       Writes a rectangular region of pixels into the image.
     description: |
-      A version of `Class.EditableImage:WritePixels()|WritePixels()` that takes
-      a buffer instead of a table. Each number in the buffer is a single byte,
-      while each number in the table is 4 bytes, making
-      `Class.EditableImage:WritePixelsBuffer()|WritePixelsBuffer()` more
-      memory-efficient than `Class.EditableImage:WritePixels()|WritePixels()`.
+      Writes a rectangular region of pixels to an `Class.EditableImage` from a
+      buffer. Each number in the buffer is a single byte, with pixels stored in
+      a sequence of four bytes (red, green, blue, and alpha).
 
       Note that this method uses alpha instead of transparency, unlike the
       `Class.EditableImage` drawing methods.
@@ -455,7 +458,7 @@ methods:
           blue, and alpha respectively). The length of the buffer should be
           `Size.X * Size.Y * 4` bytes.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState

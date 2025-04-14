@@ -99,7 +99,7 @@ properties:
       toggling on/off different `Class.Clouds` objects that exist in the same
       place.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

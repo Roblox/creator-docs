@@ -12,6 +12,10 @@ description: Introduction to Quest Design, achievements, and dailies.
 
 Quests are a game mechanic in which players complete objectives in order to earn rewards like items, currency, or badges. Quests provide players with fresh goals and incentives, which can motivate them to play longer and more often, increasing their [engagement](../../production/analytics/engagement.md). They can also reduce boredom and provide a sense of progression and accomplishment that lead to better [retention](../../production/analytics/retention.md).
 
+<Alert severity="info">
+For out-of-the-box functionality to create quests, see the [Missions](../../resources/feature-packages/missions.md) feature package.
+</Alert>
+
 ## Quest structure
 
 Structurally, quests consist of three components:
@@ -114,8 +118,8 @@ An experience's economy is tied to its core loop. When a player engages with the
 For these reasons, it can be beneficial to drip-feed resources to players over time, and one way to do that is through quest rewards. Dailies are an excellent delivery mechanism for currencies because the rewards are reliable, small, and valuable enough to encourage players to return every day.
 
 <figure>
-      <img src="../../assets/game-design/introduction-to-quest-design/quest-design-7.png" alt="A pop-up UI in the Adopt Me! experience that displays tiles in a top-down list to inform players what they need to do for each tile's quest to obtain a reward." width="70%"/>
-      <figcaption>Daily quests in [*Adopt Me!*](https://www.roblox.com/games/920587237/)</figcaption>
+      <img src="../../assets/game-design/introduction-to-quest-design/quest-design-7.png" alt="A pop-up UI in the Pet Simulator X! experience that displays tiles in a top-down list to inform players what they need to do for each tile's quest to obtain a reward." width="70%"/>
+      <figcaption>Daily quests in [*Pet Simulator X!*](https://www.roblox.com/games/6284583030/)</figcaption>
     </figure>
 
 ### Increase engagement

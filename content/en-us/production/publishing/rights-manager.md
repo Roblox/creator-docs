@@ -24,14 +24,8 @@ To register as a rights owner or their authorized representative:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. In the left-hand navigation, select **Rights Manager**. The Rights Manager landing page displays.
-
-   <img src="../../assets/creator-dashboard/Rights-Manager-Navigation.png" width="30%" />
-
 1. Click the **Start Registration** button.
 1. [Verify your account](account-verification.md) with your government issued ID and email address, then click the **Next** button. Each incomplete verification type includes a blue **VERIFY** button you can click to redirect you to the appropriate location to verify your ID or email.
-
-   <img src="../../assets/publishing/rights-manager/Registration-Page.png" width="100%" />
-
 1. Fill out every field in the registration form.
    1. In the **Rights Holder** section, click the **Type of rights holder** dropdown, then:
       1. If you are filling out the form on behalf of yourself, select **I am the rights holder**. An additional field displays asking for your full name.
@@ -50,9 +44,6 @@ Once Roblox accepts your registration, you can create IP removal requests for on
 To file an IP removal request:
 
 1. Near the top of the **Rights Manager** landing page, click the **New Removal Request** button. A new IP removal request form displays.
-
-   <img src="../../assets/publishing/rights-manager/New-Removal-Request.png" width="90%" />
-
 1. Fill out all applicable fields.
    1. If the source of your creation is on Roblox,
       1. In the **Your creation** section, click the **Source of your creation** dropdown, then select **On Roblox**.
@@ -65,9 +56,6 @@ To file an IP removal request:
       1. In the **Description** field, provide any additional information that can help Roblox understand your report. For example, if you are reporting an asset in an experience, provide a screenshot and details of where to find the asset you are reporting.
       1. Click the **Upload** button or drag and drop a maximum of 6 `.pdf`, `.jpg`, or `.png` files from your device that support your removal request.
 1. At the bottom of the page, click the **Add Creation** button. The page updates to display a table that provides the reported creation, a link to your creation, a description of how someone infringed on your copyright, and the supporting media files.
-
-   <img src="../../assets/publishing/rights-manager/First-Reported-Creation.png" width="100%" />
-
 1. **(Optional)** Add more creations for removal to the same IP removal request.
 
    1. Add a new creation for removal.
@@ -75,17 +63,10 @@ To file an IP removal request:
       1. Fill out the fields using the same process in step 2, then click the **Add Creation** button. The new reported creation displays in the table.
    1. Duplicate a creation for removal.
 
-      1. In the table of all reported creations, navigate to the reported creation you want to duplicate, then in the **Actions** column, click the ellipsis button. A contextual menu displays.
-      1. In the contextual menu, select **Duplicate**. A duplicate copy of the reported creation displays above the table.
-
-         <img src="../../assets/publishing/rights-manager/Contextual-Menu.png" width="60%" />
-
+      1. In the table of all reported creations, navigate to the reported creation you want to duplicate, then in the **Actions** column, click the **⁝** button and select **Duplicate**. A duplicate copy of the reported creation displays above the table.
       1. Edit any field, then click the **Add Creation** button. The new reported creation displays in the table.
 
 1. At the bottom of the page, click the **Next** button. The page updates with new fields.
-
-   <img src="../../assets/publishing/rights-manager/Add-Details-Page.png" width="100%" />
-
 1. Fill out every field.
    1. In the **General** section, navigate to the **Request name** field, then enter a name that you can later use to search for your IP removal request.
    1. In the **Legal Agreements** section,
@@ -99,8 +80,6 @@ To file an IP removal request:
 ## Review IP removal requests
 
 All IP removal requests display within a table on the Rights Manager landing page, and you can review each reported creation's status as Roblox processes your report.
-
-<img src="../../assets/publishing/rights-manager/Reviewing-IP-Removal-Requests.png" width="100%" />
 
 A reported creation can have one of three statuses:
 

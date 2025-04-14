@@ -71,7 +71,7 @@ For spec on server-side chat module components such as **ChatSpeaker** and **Cha
 
 When the **ChatServiceRunner** starts up, it requires each module inside of **ChatModules**. It expects each module to return a function as it then calls each of the modules in turn, passing in it's [ChatService](../../chat/legacy/server-side-chat-modules.md#chatservice) object to each function. Regardless of what the module is intended to do (running a bot, adding a filter function, etc), it needs to follow this form in order to work.
 
-```lua title='Sample Module Framework'
+```lua title="Sample Module Framework"
 local function Run(ChatService)
 	-- Code goes here
 end

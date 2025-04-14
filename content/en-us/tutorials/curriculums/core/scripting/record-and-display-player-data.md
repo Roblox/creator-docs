@@ -375,9 +375,9 @@ It's time to see if the coin collection is working as intended. When you touch
 and collect a coin in the game, you should be able to see the amount of coins
 you've collected on the leaderboard UI. To playtest your experience:
 
-1. In the menu bar, click the **Play** button. Studio enters playtest mode.
+1. In the toolbar, click the **Play** button. Studio enters playtest mode.
 
-   <img src="../../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Studio's Home tab with the Play button highlighted in the menu bar." width="716" />
+   <img src="../../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Play button highlighted in Studio's playtesting options." width="228" />
 
 1. Move your character to touch a coin. If your scripts are working correctly, the
 leaderboard UI displays and increase your coin count as you collect more coins.

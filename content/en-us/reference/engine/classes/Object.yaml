@@ -143,7 +143,7 @@ methods:
       **instanceof** operators in other languages, and is a form of
       [type introspection](https://en.wikipedia.org/wiki/Type_introspection). To
       ignore class inheritance, test the `Class.Object.ClassName|ClassName`
-      property directly instead. For checking native Lua data types (number,
+      property directly instead. For checking native Luau data types (number,
       string, etc) use the functions `type` and `typeof`.
 
       Most commonly, this function is used to test if an object is some kind of
@@ -182,7 +182,7 @@ methods:
           The class against which the Object's class will be checked.
           Case-sensitive.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Describes whether the Object's class matched or is a subclass of the
           given class.
@@ -203,7 +203,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated

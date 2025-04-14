@@ -14,7 +14,7 @@ The 3D Importer allows you to import `.fbx`, `.gltf`, or `.obj` 3D models into S
 - Specialized meshes, such as [accessories](../../art/accessories/index.md), or characters with [facial animation data](../../art/characters/facial-animation/index.md).
 
 <Alert severity ='info'>
-To directly import 3D assets using HTTP requests, see the [Open Cloud usage guide for assets](../../cloud/open-cloud/usage-assets.md).
+To directly import 3D assets using HTTP requests, see the [Open Cloud usage guide for assets](../../cloud/guides/usage-assets.md).
 </Alert>
 
 The 3D Importer is divided into three sections:
@@ -39,10 +39,7 @@ Before importing a 3D object, ensure that the `.fbx`, `.gltf` or `.obj` meets St
 
 To import a 3D object:
 
-1. In the Home or Avatar tab, click **Import 3D**. A file browser displays.
-
-   <img src="../../assets/studio/general/Avatar-Tab-Import-3D.png" width="760" alt="Top ribbon of the Avatar tab in Studio highlighting the Import 3D button."  />
-
+1. In the toolbar's **Home** or **Avatar** tab, click **Import 3D**. A file browser displays.
 2. Select the `.fbx`, `.gltf` or `.obj` you intend to import. The Importer window displays.
 3. Verify the object preview and check that the [import settings](#import-settings) are correct for your object.
 4. Verify any [warning or error messages](#warnings-and-errors).
@@ -108,7 +105,7 @@ The 3D Importer provides the following settings for all meshes:
 
 #### Rig general
 
-The 3D Importer provides the following settings for meshes with rigging data:
+The 3D Importer provides the following settings for meshes with rigging data, typically character bodies or clothing accessories:
 
 <table>
 <thead>
@@ -124,11 +121,11 @@ The 3D Importer provides the following settings for meshes with rigging data:
   </tr>
   <tr>
     <td>Validate UGC Body</td>
-    <td>After importing, Studio opens the assets in the [Avatar Setup](../../art/modeling/avatar-setup.md) tool, allowing you to quickly begin testing and uploading avatar assets to the Marketplace.</td>
+    <td>After importing, Studio opens the assets in the [Avatar Setup](../../avatar-setup/index.md) tool, allowing you to quickly begin testing and uploading avatar assets to the Marketplace.</td>
   </tr>
   <tr>
     <td>Rig Scale</td>
-    <td>If Rig Type is set to R15, the importer provides further options to specify [body type scaling](../../art/characters/specifications.md#body-scale). The options are:<br />- **Default**<br />- **Rthro**<br />- **Rthro Narrow**</td>
+    <td>If Rig Type is set to R15, the importer provides additional options to specify [body type scaling](../../art/characters/specifications.md#body-scale). The options are:<br />- **Default**<br />- **Rthro**<br />- **Rthro Narrow**</td>
   </tr>
 </tbody>
 </table>

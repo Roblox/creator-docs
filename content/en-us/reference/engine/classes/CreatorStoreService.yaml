@@ -12,29 +12,6 @@ tags:
   - Service
 deprecation_message: ''
 properties: []
-methods:
-  - name: CreatorStoreService:PerformCreatorStorePurchase
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: productTargetId
-        type: int64
-        default:
-        summary: ''
-      - name: assetType
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: Dictionary
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
+methods: []
 events: []
 callbacks: []

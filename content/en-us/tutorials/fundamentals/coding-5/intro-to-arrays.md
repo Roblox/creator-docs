@@ -1,11 +1,11 @@
 ---
 title: Intro to arrays
-description: Learn how to use arrays in Roblox Lua to store multiple values at a time. This tutorial shows how to create and change arrays while making an interactive NPC in Roblox.
+description: Learn how to use arrays in Luau to store multiple values at a time. This tutorial shows how to create and change arrays while making an interactive NPC in Roblox.
 next: /tutorials/fundamentals/coding-5/loops-and-arrays
 prev: /tutorials/fundamentals/coding-5/landing
 ---
 
-**Data structures** are how coders store and organize entire sets of data. In Lua, data structures are created with tables. **Tables** can hold any number of values.
+**Data structures** are how coders store and organize entire sets of data. In Luau, data structures are created with tables. **Tables** can hold any number of values.
 
 This article covers using **arrays**, a specific table type, to create a talking character.
 
@@ -120,7 +120,7 @@ Use index values to assign specific pieces of dialogue to the NPC. To use a valu
    ```
 
    <Alert severity="warning">
-   If an index doesn't exist, a nil error will display in Output. For example, since this array only has three values, using `dialogueArray[4]` will result in an error.
+   If an index doesn't exist, a `nil` error will display in Output. For example, since this array only has three values, using `dialogueArray[4]` will result in an error.
    </Alert>
 
 2. Playtest and click the NPC. The second array value should appear in the chat bubble. Try changing the code to test out each value in the table.
@@ -212,7 +212,7 @@ Use the array size to check when it's time to cycle back to the first piece of d
 
 ## Summary
 
-Data structures are how sets of data are stored. Lua uses tables to create data structures. Arrays are a type of table that can hold ordered lists of information. Each value within the array is assigned an index number, starting with index 1.
+Data structures are how sets of data are stored. Luau uses tables to create data structures. Arrays are a type of table that can hold ordered lists of information. Each value within the array is assigned an index number, starting with index 1.
 
 This script used an array to create a list of possible dialogue lines for a Non-Playable Character (NPC).
 

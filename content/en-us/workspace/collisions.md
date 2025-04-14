@@ -25,7 +25,7 @@ comes in contact with another, or with a [Terrain](../parts/terrain.md) voxel. I
 
 The following code pattern shows how the `Class.BasePart.Touched|Touched` event can be connected to a custom `onTouched()` function. Note that the event sends the `otherPart` argument to the function, indicating the other part involved in the collision.
 
-```lua title='Part Collision' highlight='3-5, 7'
+```lua title="Part Collision" highlight="3-5, 7"
 local Workspace = game:GetService("Workspace")
 
 local part = Workspace.Part
@@ -39,7 +39,7 @@ part.Touched:Connect(onTouched)
 
 Note that the `Class.BasePart.Touched|Touched` event can fire multiple times in quick succession based on subtle physical collisions, such as when a moving object "settles" into a resting position or when a collision involves a [multi‑part model](#model-collisions). To avoid triggering more `Class.BasePart.Touched|Touched` events than necessary, you can implement a simple debounce system which enforces a "cooldown" period through an instance [attribute](../studio/properties.md#instance-attributes).
 
-```lua title='Part Collision With Cooldown' highlight='3, 6, 9-12'
+```lua title="Part Collision With Cooldown" highlight="3, 6, 9-12"
 local Workspace = game:GetService("Workspace")
 
 local part = Workspace.Part
@@ -65,7 +65,7 @@ The `Class.BasePart.TouchEnded|TouchEnded` event fires when the entire collision
 
 The following code pattern shows how the `Class.BasePart.TouchEnded|TouchEnded` event can be connected to a custom `onTouchEnded()` function. Like `Class.BasePart.Touched|Touched`, the event sends the `otherPart` argument to the function, indicating the other part involved.
 
-```lua title='Non-Collision Detection' highlight='3-5, 7'
+```lua title="Non-Collision Detection" highlight="3-5, 7"
 local Workspace = game:GetService("Workspace")
 
 local part = Workspace.Part
@@ -90,7 +90,7 @@ Collision **groups** let you assign `Class.BasePart|BaseParts` to dedicated grou
   <figcaption>In the video above, the spinning objects are in different collision groups such that they collide with objects of another color but not with objects of their own color</figcaption>
 </figure>
 
-You can easily set up collision groups through Studio's **Collision Groups Editor**, accessible by clicking the **Collision&nbsp;Groups** button in the [Model](../studio/model-tab.md) tab.
+You can easily set up collision groups through Studio's **Collision Groups Editor**, accessible by clicking the **Collision&nbsp;Groups** button in the toolbar's **Model** tab.
 
 <img src="../assets/studio/general/Model-Tab-Collision-Groups.png" width="754" alt="Collision Groups tool indicated in Model tab of Studio" />
 
@@ -266,7 +266,7 @@ constraint. Advantages include:
 Roblox player characters collide with each other by default. This can lead to
 interesting but unintended gameplay, such as characters jumping on top of each other to reach specific areas. If this behavior is undesirable, you can prevent it through the following `Class.Script` in `Class.ServerScriptService`.
 
-```lua title='Script - Disable Character Collisions'
+```lua title="Script - Disable Character Collisions"
 local PhysicsService = game:GetService("PhysicsService")
 local Players = game:GetService("Players")
 
@@ -304,7 +304,7 @@ For joined parts by [solid modeling](../parts/solid-modeling.md) instead of `Cla
 
 The following code sample connects all `Class.BasePart|BaseParts` of a multi‑part model to collision events and tracks the total number of collisions with other parts.
 
-```lua title='Model Collision'
+```lua title="Model Collision"
 local model = script.Parent
 
 local numTouchingParts = 0

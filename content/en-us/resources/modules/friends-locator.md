@@ -45,7 +45,7 @@ To test the module in Studio, the **FriendsLocator** module must be run in a mul
 
 1. Paste the following code into the new **ConfigureFriendsLocator** script. The `showAllPlayers` setting within the [configure](#configure) function ensures that locators are shown for all users while testing in Studio, but not in a published place.
 
-   ```lua title='LocalScript - ConfigureFriendsLocator'
+   ```lua title="LocalScript - ConfigureFriendsLocator"
    local RunService = game:GetService("RunService")
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
@@ -56,7 +56,7 @@ To test the module in Studio, the **FriendsLocator** module must be run in a mul
    })
    ```
 
-1. From the [Test](../../studio/test-tab.md) tab, select the following combination for **Clients&nbsp;and&nbsp;Servers**, then click the **Start** button. Three new instances of Studio will open; one simulated server and two simulated clients.
+1. From the toolbar's **Test** tab, select the following combination for **Clients&nbsp;and&nbsp;Servers**, then click the **Start** button. Three new instances of Studio will open; one simulated server and two simulated clients.
 
    <img src="../../assets/developer-modules/friends-locator/Clients-Servers-Start.png" width="800" />
 
@@ -79,7 +79,7 @@ The **FriendsLocator** module exposes [events](#events) so that you can introduc
 1. Make sure that you've created the **ConfigureFriendsLocator** script outlined in [testing&nbsp;in&nbsp;Studio](#test-in-studio).
 2. Add lines 8 and 11-13 to the script:
 
-   ```lua title='LocalScript - ConfigureFriendsLocator' highlight='8,11-13'
+   ```lua title="LocalScript - ConfigureFriendsLocator" highlight="8,11-13"
    local RunService = game:GetService("RunService")
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
@@ -175,7 +175,7 @@ Overrides default configuration options through the following keys/values in the
 </tbody>
 </table>
 
-```lua title='LocalScript - ConfigureFriendsLocator' highlight='5-11'
+```lua title="LocalScript - ConfigureFriendsLocator" highlight="5-11"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local FriendsLocator = require(ReplicatedStorage:WaitForChild("FriendsLocator"))
@@ -213,7 +213,7 @@ Fires when a locator icon is clicked/activated by the local player. This event c
 </tbody>
 </table>
 
-```lua title='LocalScript'
+```lua title="LocalScript"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
 local Workspace = game:GetService("Workspace")
@@ -263,7 +263,7 @@ Fires when a locator icon is shown/hidden on the local player's screen. This eve
 </tbody>
 </table>
 
-```lua title='LocalScript' highlight='5-7'
+```lua title="LocalScript" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local FriendsLocator = require(ReplicatedStorage:WaitForChild("FriendsLocator"))

@@ -3,7 +3,7 @@ title: Player invite prompts
 description: Invite prompts are prompts sent to the player of an experience to invite their friends to join them.
 ---
 
-In addition to common [promotion](../../production/promotion/index.md) methods for increasing your player base, you can implement **invite&nbsp;prompts** directly inside your experience, encouraging players to invite their friends and increase co-experience gameplay.
+In addition to common [promotion](../../production/promotion/index.md) methods for increasing your player base, you can implement **invite prompts** directly inside your experience, encouraging players to invite their friends and increase co-experience gameplay.
 
 The invite prompt system features the following:
 
@@ -16,23 +16,18 @@ You can also track and reward inviters and invitees using the [Friend Invite Rew
    <Tabs>
    <TabItem label="In-experience prompt">
      <figure>
-     <img src="../../assets/promotion/invite-prompts/Prompt-Multiple-Friends-Custom-Message.png" width="840" height="403" />
-   <figcaption><center>Prompt to invite multiple friends</center></figcaption>
-     </figure>
-     <figure>
-     <img src="../../assets/promotion/invite-prompts/Prompt-Specific-Friend-Custom-Message.png" width="840" height="403" />
-   <figcaption><center>Prompt to invite a specific friend</center></figcaption>
+     <img src="../../assets/promotion/invite-prompts/Invite-From-Experience.png" width="840" height="403" />
      </figure>
    </TabItem>
    <TabItem label="Invite notification">
     <GridContainer numColumns="2">
       <figure>
-      <img src="../../assets/promotion/invite-prompts/Notification-Lock-Screen-Custom-Message.png" width="403" height="840" />
-    <figcaption><center>Notification on phone lock screen</center></figcaption>
-      </figure>
-      <figure>
-      <img src="../../assets/promotion/invite-prompts/Notification-Roblox-App-Custom-Message.png" width="403" height="840" />
+      <img src="../../assets/promotion/invite-prompts/Invite-App-Notification-Stream.png" width="403" height="403" />
     <figcaption><center>Notification in Roblox app</center></figcaption>
+      </figure>
+			<figure>
+      <img src="../../assets/promotion/invite-prompts/Invite-Phone-Lock-Screen.png" width="403" height="403" />
+    <figcaption><center>Notification on phone lock screen</center></figcaption>
       </figure>
      </GridContainer>
    </TabItem>
@@ -69,7 +64,7 @@ By default, an invite prompt for the player shows a menu of their friends with *
   <tr>
     <td>`Class.ExperienceInviteOptions.LaunchData|LaunchData`</td>
     <td>string</td>
-    <td>Used to set a parameter in `Class.Player:GetJoinData()` when a friend joins from the invite notification. Maximum of 200 characters. See [Including Launch Data](#including-launch-data) for a usage example.</td>
+    <td>Used to set a parameter in `Class.Player:GetJoinData()` when a friend joins from the invite notification. Maximum of 200 characters. See [Include launch data](#include-launch-data) for a usage example.</td>
   </tr>
 </tbody>
 </table>
@@ -77,7 +72,7 @@ By default, an invite prompt for the player shows a menu of their friends with *
 <Tabs>
 <TabItem label="Multiple friends">
 
-```lua title='LocalScript - Invite Multiple Friends' highlight='7-8'
+```lua title="LocalScript - Invite Multiple Friends" highlight="7-8"
 local SocialService = game:GetService("SocialService")
 local Players = game:GetService("Players")
 
@@ -91,7 +86,7 @@ inviteOptions.PromptMessage = "Ask your friends to join the adventure!"
 </TabItem>
 <TabItem label="Specific friend">
 
-```lua title='LocalScript - Invite Specific Friend' highlight='5,8-10'
+```lua title="LocalScript - Invite Specific Friend" highlight="5,8-10"
 local SocialService = game:GetService("SocialService")
 local Players = game:GetService("Players")
 
@@ -114,9 +109,6 @@ By default, the invite notification that friends receive contains the sender's `
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. Similar to [badges](../../production/publishing/badges.md), notification strings are tied to a **specific experience**. Locate that experience's thumbnail and click on it.
 1. In the left column, under **Engagement**, click **Notifications**.
-
-   <img src="../../assets/creator-dashboard/Experience-Nav-Engagement-Notifications.png" width="330" />
-
 1. In the center region, click the **Create a Notification String** button.
 1. Fill in an identifier name (only visible to you) and the custom notification text. Note that you must include **\{experienceName\}** as a placeholder to identify the experience's name for invited friends, and you can optionally include the sender's `Class.Player.DisplayName|DisplayName` through the **\{displayName\}** placeholder.
 
@@ -126,13 +118,10 @@ By default, the invite notification that friends receive contains the sender's `
    - <Typography variant="subtitle2" color="primary">\{displayName\} just cleared the sixth stage of \{experienceName\}. Can you?</Typography>
 
 1. When ready, click the **Create Notification String** button.
-1. On the notifications page, click the **&ctdot;** button for the notification and select **Copy Asset ID**.
-
-   <img src="../../assets/creator-dashboard/Notifications-Invite-Prompt-Copy-Asset-ID.png" width="780" />
-
+1. On the notifications page, in the table of notifications, click the **&ctdot;** button in the **Actions** column and select **Copy Asset ID**.
 1. In the `Class.ExperienceInviteOptions` object for the invite prompt, paste the asset ID as the value of the `Class.ExperienceInviteOptions.InviteMessageId|InviteMessageId` property.
 
-   ```lua title='LocalScript - Invite Multiple Friends' highlight='7,8'
+   ```lua title="LocalScript - Invite Multiple Friends" highlight="7,8"
    local SocialService = game:GetService("SocialService")
    local Players = game:GetService("Players")
 
@@ -155,7 +144,7 @@ Once prompted, the player will see an on-screen prompt to invite multiple friend
 <Tabs>
 <TabItem label="Multiple Friends">
 
-```lua title='LocalScript - Invite Multiple Friends' highlight='8-10,16-18'
+```lua title="LocalScript - Invite Multiple Friends" highlight="8-10,16-18"
 local SocialService = game:GetService("SocialService")
 local Players = game:GetService("Players")
 
@@ -178,7 +167,7 @@ end
 </TabItem>
 <TabItem label="Specific Friend">
 
-```lua title='LocalScript - Invite Specific Friend' highlight='5,8,9,13-15,21-23'
+```lua title="LocalScript - Invite Specific Friend" highlight="5,8,9,13-15,21-23"
 local SocialService = game:GetService("SocialService")
 local Players = game:GetService("Players")
 
@@ -208,14 +197,14 @@ end
 
 ## Include launch data
 
-To further improve in-experience cooperation or to incentivize player invites, you can include **launch&nbsp;data** in an invite prompt, useful for scenarios such as routing invited friends to a coordinate location or personalizing the joining experience for the invitee.
+To further improve in-experience cooperation or to incentivize player invites, you can include **launch data** in an invite prompt, useful for scenarios such as routing invited friends to a coordinate location or personalizing the joining experience for the invitee.
 
 1. When [prompting an invite](#prompt-an-invite), include an `Class.ExperienceInviteOptions` object with relevant data that will be used when the friend joins the experience, for example the sender's `Class.Player.UserId`, the ID of a [badge](../../production/publishing/badges.md) to award to the friend upon joining, or a coordinate location to spawn the friend at. If you need to compile multiple pieces of data, encode the data using `Class.HttpService:JSONEncode()|JSONEncode()`.
 
    <Tabs>
    <TabItem label="Multiple Friends">
 
-   ```lua title='LocalScript - Invite Multiple Friends' highlight='1,7-11,14-15,27-29'
+   ```lua title="LocalScript - Invite Multiple Friends" highlight="1,7-11,14-15,27-29"
    local HttpService = game:GetService("HttpService")
    local SocialService = game:GetService("SocialService")
    local Players = game:GetService("Players")
@@ -250,7 +239,7 @@ To further improve in-experience cooperation or to incentivize player invites, y
    </TabItem>
    <TabItem label="Specific Friend">
 
-   ```lua title='LocalScript - Invite Specific Friend' highlight='1,6,8-12,15-17,29-31'
+   ```lua title="LocalScript - Invite Specific Friend" highlight="1,6,8-12,15-17,29-31"
    local HttpService = game:GetService("HttpService")
    local SocialService = game:GetService("SocialService")
    local Players = game:GetService("Players")
@@ -293,7 +282,7 @@ To further improve in-experience cooperation or to incentivize player invites, y
 
 1. For incoming friends who join via the notification, check for launch data on the server side through `Class.Player:GetJoinData()`. If you encode multiple pieces of data into JSON for the invite prompt, remember to decode it with `Class.HttpService:JSONDecode()|JSONDecode()`.
 
-   ```lua title='Script - Using Invite Launch Data' highlight='1,5-6,8-10'
+   ```lua title="Script - Using Invite Launch Data" highlight="1,5-6,8-10"
    local HttpService = game:GetService("HttpService")
    local Players = game:GetService("Players")
 

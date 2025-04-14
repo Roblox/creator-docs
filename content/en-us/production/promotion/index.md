@@ -41,8 +41,12 @@ The following table details promotional methods for experiences on the platform.
 		<td>[Player invite prompts](../../production/promotion/invite-prompts.md), implemented directly inside your experience, encourage players to invite their friends and increase co‑experience gameplay.</td>
 	</tr>
 	<tr>
+		<td>**Friend invite reward system**</td>
+		<td>The [friend reward invite system](../../production/promotion/referral-system.md) rewards existing users for bringing in new users to your experiences.</td>
+	</tr>
+	<tr>
 		<td>**Experience notifications**</td>
-		<td>[Experience Notifications](../../production/promotion/experience-notifications.md) are a way for 13+ users to keep up with their favorite experiences through timely, personalized notifications. As the developer, you can determine what kinds of in‑experience activities are most important to notify your users about, as well as define the notification content.</td>
+		<td>[Notifications](../../production/promotion/experience-notifications.md) are a way for 13+ users to keep up with their favorite experiences through timely, personalized notifications. As the developer, you can determine what kinds of in‑experience activities are most important to notify your users about, as well as define the notification content.</td>
 	</tr>
   <tr>
 		<td>**Special sort categories on Roblox channels**</td>
@@ -72,9 +76,15 @@ The following table details promotional methods for avatar items on the platform
 
 ## Social media
 
-You can direct users to follow you on social media by embedding social media links on your experience's main details page. Social media links connect your audience over the age of 13 to your social media outside of Roblox, which you can use to market updates, monitor community feedback, and promote your experiences. For more information, see [Social media links](../../production/promotion/social-media-links.md).
+[Social media links](./social-media-links.md) are links to your social media channels. Use social media links to promote your social media presence by embedding these links on your experience details page.
 
 <img src="../../assets/promotion/misc/Social-Links-Example.png" width="540" />
+
+## Share links
+
+[Share links](./share-links.md) are links to your Roblox experiences. Use share links on your social media to promote your Roblox experiences and to track metrics for acquisition through off-platform channels.
+
+Unlike social media links, which direct users to your social media channels, share links promote and direct users to your Roblox experiences.
 
 ## Communities
 

@@ -32,17 +32,17 @@ The Roblox Engine doesn't guarantee the order in which objects are replicated fr
    local PickupManager = require(ReplicatedStorage.PickupManager)
    ```
 
-   You **can** use `WaitForChild()` in these scripts to get objects from other services, but doing so largely negates the benefits of using `ReplicatedFirst`.
+   You **can** use `WaitForChild()` in these scripts to get objects from other services, but doing so negates the benefits of using `ReplicatedFirst`.
 
 1. The client continues loading the rest of the experience.
 
 1. When it finishes, the `Class.DataModel.Loaded|game.Loaded` event fires and `Class.DataModel:IsLoaded()|game:IsLoaded()` returns true.
 
-1. `LocalScripts` in `StarterPlayerScripts` run, as well as client `Scripts` in `Class.ReplicatedStorage`. These scripts can safely get objects from `StarterPlayerScripts` and `ReplicatedStorage` without using `WaitForChild()`.
+1. `LocalScripts` in `Players.Player.PlayerScripts` (copied from `StarterPlayerScripts`) run, as well as client `Scripts` in `Class.ReplicatedStorage`. These scripts can safely get objects from `ReplicatedStorage` without using `WaitForChild()`.
 
 1. The player's `Class.Player.Character|Character` model spawns in the experience.
 
-1. `LocalScripts` in `StarterCharacterScripts` run.
+1. `LocalScripts` in `Workspace.Character` (copied from `StarterCharacterScripts`) run.
 
 If your experience uses [instance streaming](../workspace/streaming.md) (`Class.Workspace.StreamingEnabled`), some or most objects might not have loaded into the workspace, so using `WaitForChild()` to access workspace objects becomes an even more important safety measure. In particular, see [Stream in](../workspace/streaming.md#stream-in) and [Per-model streaming controls](../workspace/streaming.md#per-model-streaming-controls) for additional information on loading and tuning streaming behavior.
 
@@ -92,7 +92,7 @@ For information on creating attributes in Studio, see [Instance attributes](../s
 
 To modify an attribute's value, call `Class.Instance:SetAttribute()` with a name and value.
 
-```lua title='Create or Modify Attribute'
+```lua title="Create or Modify Attribute"
 local cabbage = script.Parent
 
 cabbage:SetAttribute("Harvestable", true)
@@ -104,7 +104,7 @@ If the attribute doesn't already exist, this method creates it.
 
 To get the value of one existing attribute, call `Class.Instance:GetAttribute()` on the instance.
 
-```lua title='Get Attribute Value'
+```lua title="Get Attribute Value"
 local cabbage = script.Parent
 
 cabbage:SetAttribute("Harvestable", true)
@@ -115,7 +115,7 @@ print(isHarvestable) --> true
 
 Similarly, you can get all attributes by calling `Class.Instance:GetAttributes()`. This method returns a dictionary of key-value pairs.
 
-```lua title='Get All Attributes'
+```lua title="Get All Attributes"
 local cabbage = script.Parent
 
 local cabbageAttributes = cabbage:GetAttributes()
@@ -129,9 +129,9 @@ end
 
 ## Delete attributes
 
-To delete an attribute, set its value to nil.
+To delete an attribute, set its value to `nil`.
 
-```lua title='Delete Attribute'
+```lua title="Delete Attribute"
 local cabbage = script.Parent
 
 cabbage:SetAttribute("GrowthRate", nil)
@@ -141,19 +141,13 @@ cabbage:SetAttribute("GrowthRate", nil)
 
 There are several ways to listen for changes to properties and attributes:
 
-- The `Class.Instance.Changed` event listens for changes to any property (including attributes) and passes the name of the changed property as a parameter.
-
-  <Alert severity="info">
-  In the case of attribute changes, `Class.Instance.Changed` fires and passes the string `"Attributes"`, which lets you ignore the event, but isn't especially useful otherwise.
-  </Alert>
-
 - The `Class.Instance.AttributeChanged` event listens for changes to any attribute and passes the name of the changed attribute as a parameter.
 - The `Class.Instance:GetPropertyChangedSignal()` method lets you listen for changes to one property and passes no parameters.
 - The `Class.Instance:GetAttributeChangedSignal()` method lets you listen for changes to one attribute and passes no parameters.
 
 Due to the minimal information that these events and methods pass as parameters, all of them are a good fit for anonymous functions, particularly `Class.Instance:GetPropertyChangedSignal()` and `Class.Instance:GetAttributeChangedSignal()`. To learn more about anonymous functions and working with events, see [Events](events/index.md).
 
-```lua title='Listen for Changes'
+```lua title="Listen for Changes"
 local cabbage = script.Parent
 
 -- Local functions

@@ -73,7 +73,11 @@ jobs:
         with:
           GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
           BASE_BRANCH: origin/main
+          CHECK_LOCALIZED_CONTENT: false
+          CHECK_MARKDOWN_LINT: true
           CHECK_PROTECTED_FIELDS: true
+          CHECK_RELATIVE_LINKS: true
+          CHECK_RETEXT_ANALYSIS: true
           COMMIT_HASH: ${{ github.event.pull_request.head.sha }}
           EVENT_NAME: ${{ github.event_name }}
           POST_PULL_REQUEST_COMMENTS: true

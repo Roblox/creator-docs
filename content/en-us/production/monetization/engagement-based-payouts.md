@@ -14,9 +14,7 @@ Payout data can provide vital feedback to help you understand what factors drive
 To access payout data:
 
 1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
-
 2. Navigate to the **Monetization** tab and select **Engagement Payouts**.
-   <img src="../../assets/monetization/engagement-based-payouts/navigation.png" width="40%" />
 
 ### Engagement payouts
 
@@ -48,7 +46,7 @@ Remember that Premium membership should not be a "requirement" to enjoy an exper
 - Honestly and accurately describe the benefits of upgrading within the experience's [description](../../production/publishing/publish-experiences-and-places.md#experience-description).
 - Do not promise Robux or other out-of-experience rewards that you don't control.
 - Do not show the modal as a "paywall" when non-Premium members enter the experience.
-- Consider offering exclusive [merch](../../resources/modules/merch-booth.md) to Premium members, but do not give them a tactical gameplay advantage over others, such as an array of ultra-powerful weapons that non-Premium members can't compete against.
+- Consider offering exclusive merch to Premium members, but do not give them a tactical gameplay advantage over others, such as an array of ultra-powerful weapons that non-Premium members can't compete against.
 
 ### Check membership
 

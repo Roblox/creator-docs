@@ -37,58 +37,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: AdService:HandleWhyThisAdClicked
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: advertiserName
-        type: string
-        default:
-        summary: ''
-      - name: payerName
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: AdService:OnDemandVideoCompleteFromUI
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: result
-        type: ShowAdResult
-        default:
-        summary: ''
-      - name: encryptedAdTrackingData
-        type: string
-        default:
-        summary: ''
-      - name: encryptionMetadata
-        type: string
-        default:
-        summary: ''
-      - name: rewardDetails
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: AdService:ShowVideoAd
     summary: |
       Show mobile video advertisements.
@@ -97,7 +45,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -160,7 +108,7 @@ events:
     code_samples:
     parameters:
       - name: adShown
-        type: bool
+        type: boolean
         default:
         summary: ''
     tags:
@@ -173,22 +121,4 @@ events:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-callbacks:
-  - name: AdService.onDemandVideoPlayInUI
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: data
-        type: Dictionary
-        default:
-        summary: ''
-    returns:
-      - type: VideoFrame
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
+callbacks: []

@@ -100,7 +100,8 @@ methods:
         type: Instance
         default:
         summary: |
-          The player who triggered the custom event. nil if not player related.
+          The player who triggered the custom event. `nil` if not player
+          related.
       - name: eventCategory
         type: string
         default:
@@ -112,7 +113,7 @@ methods:
         summary: |
           Optional. User defined data, could be a string, a number or a table.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -166,7 +167,7 @@ methods:
           A value to be serialized and reported. Serialized length must not
           exceed 1 KB, or 1024 bytes.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -292,7 +293,7 @@ methods:
         summary: |
           Optional. User defined data, could be a string, a number or a table.
     returns:
-      - type: void
+      - type: ()
         summary: |
           No return.
     tags:
@@ -368,7 +369,7 @@ methods:
         type: Instance
         default:
         summary: |
-          The player who triggered the error event, nil if not player related.
+          The player who triggered the error event, `nil` if not player related.
       - name: logLevel
         type: AnalyticsLogLevel
         default:
@@ -399,7 +400,7 @@ methods:
         summary: |
           Optional. User defined data, could be a string, a number or a table.
     returns:
-      - type: void
+      - type: ()
         summary: |
           No return.
     tags:
@@ -530,7 +531,7 @@ methods:
         summary: |
           Optional. User defined data, could be a string, a number or a table.
     returns:
-      - type: void
+      - type: ()
         summary: |
           No return.
     tags:
@@ -575,7 +576,7 @@ methods:
           Limited to 8,000 unique combinations of values across the three custom
           fields per experience.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -653,7 +654,7 @@ methods:
           Limited to 8,000 unique combinations of values across the three custom
           fields per experience.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -722,7 +723,7 @@ methods:
           Limited to 8,000 unique combinations of values across the three custom
           fields per experience.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -771,7 +772,7 @@ methods:
           Limited to 8,000 unique combinations of values across the three custom
           fields per experience.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -809,7 +810,7 @@ methods:
         default: nil
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -853,7 +854,7 @@ methods:
         default: nil
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -891,7 +892,7 @@ methods:
         default: nil
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -929,7 +930,7 @@ methods:
         default: nil
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

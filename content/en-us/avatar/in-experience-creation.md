@@ -34,12 +34,12 @@ Before getting started, familiarize yourself with the following:
 
 ### Import a base body
 
-The base body acts as the initial foundation which users can customize and edit. You can use your own `Class.Model`, or import a custom asset with the [3-D Importer](../art/modeling/3d-importer.md) and setup through [Avatar Setup](../art/modeling/avatar-setup.md).
+The base body acts as the initial foundation which users can customize and edit. You can use your own `Class.Model`, or import a custom asset with the [3-D Importer](../art/modeling/3d-importer.md) and setup through [Avatar Setup](../avatar-setup/index.md).
 
 Base bodies must adhere to Roblox's avatar specifications, and must include components such as the 15 `Class.MeshPart` instances that make up 6 body parts: head, torso, left arm, left leg, right arm, and right leg, as well as other [avatar components](../art/characters/index.md#components-of-an-avatar).
 
 <Alert severity = 'info'>
-If you have a single-mesh body, you can try using the [Avatar Auto Setup](../art/modeling/avatar-setup.md#avatar-auto-setup) to automatically add all the necessary avatar components.
+If you have a single-mesh body, you can try using the [Avatar Auto Setup](../avatar-setup/index.md#avatar-auto-setup) to automatically add all the necessary avatar components.
 </Alert>
 
 For references and samples of properly configured avatar bodies, see [Avatar references](../avatar/resources.md#references).

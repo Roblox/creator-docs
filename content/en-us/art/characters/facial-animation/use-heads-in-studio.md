@@ -52,13 +52,13 @@ By default, when you import a face accessory, it imports as a `Class.MeshPart` o
 
 To import a face accessory:
 
-1. In the Avatar tab, use the [3D Importer](../../../art/modeling/3d-importer.md) to import the custom model into the workspace.
+1. In the toolbar's **Avatar** tab, use the [3D Importer](../../../art/modeling/3d-importer.md) to import the custom model into the workspace.
 
    <img src="../../../assets/avatar/dynamic-heads/using-dynamic-heads-in-studio/Importing-Facial-Accessory-Final-Result.jpg" width="80%" />
 
 2. Using the [Accessory Fitting tool](../../../art/accessories/accessory-fitting-tool.md), convert the `Class.MeshPart` into an `Class.Accessory` instance.
 
-   1. In the **Avatar** tab, click on the **Accessory Fitting Tool**. The **Accessory Fitting Tool** window displays.
+   1. In the toolbar's **Avatar** tab, click on the **Accessory Fitting Tool**. The **Accessory Fitting Tool** window displays.
    2. In the **Explorer** window, select the **MeshPart** you imported as a face accessory. Its name displays in the **Part** field.
    3. Click the **Next** button.
    4. In the **Clothing** category, select **Face**, then click the **Next** button.

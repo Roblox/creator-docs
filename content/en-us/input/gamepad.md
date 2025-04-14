@@ -16,7 +16,7 @@ When binding gamepad inputs, see [common control schemas](#common-control-schema
 
 You can detect whether a player's device currently has a gamepad active using the `Class.UserInputService.GamepadEnabled` property.
 
-```lua title='Detecting Gamepad'
+```lua title="Detecting Gamepad"
 local UserInputService = game:GetService("UserInputService")
 
 if UserInputService.GamepadEnabled then
@@ -26,7 +26,7 @@ end
 
 You can check for connected gamepads via `Class.UserInputService.GamepadConnected` and `Class.UserInputService.GamepadDisconnected` events. These events fire when a device is connected or disconnected respectively, and both events pass a `Enum.UserInputType` to the connected function indicating which gamepad caused the event. In most cases, the connected gamepad is `Enum.UserInputType|Gamepad1`.
 
-```lua title='Checking Connection and Disconnection'
+```lua title="Checking Connection and Disconnection"
 local UserInputService = game:GetService("UserInputService")
 
 UserInputService.GamepadConnected:Connect(function(gamepad)
@@ -40,7 +40,7 @@ end)
 
 You can also query whether a particular controller is connected using the `Class.UserInputService:GetGamepadConnected()` method. This takes a `Enum.UserInputType` as an argument and only accepts values of `Enum.UserInputType|Gamepad1` through `Enum.UserInputType|Gamepad8`.
 
-```lua title='Query Specific Gamepad Connection'
+```lua title="Query Specific Gamepad Connection"
 local UserInputService = game:GetService("UserInputService")
 
 if UserInputService:GetGamepadConnected(Enum.UserInputType.Gamepad1) then
@@ -54,7 +54,7 @@ end
 
 Since gamepads can have different sets of inputs, you should check which inputs are supported with `Class.UserInputService:GetSupportedGamepadKeyCodes()`. This method takes a `Enum.UserInputType` as an argument and returns a table with a list of all available inputs for the specified controller.
 
-```lua title='Verifying Supported Inputs'
+```lua title="Verifying Supported Inputs"
 local UserInputService = game:GetService("UserInputService")
 
 local availableInputs = UserInputService:GetSupportedGamepadKeyCodes(Enum.UserInputType.Gamepad2)
@@ -69,7 +69,7 @@ end
 
 `Class.ContextActionService` is useful for binding controls to both gamepads and other input sources such as [mouse and keyboard](./mouse-and-keyboard.md) inputs or [mobile](../input/mobile.md) touchscreen buttons, or for binding multiple functions to a single button input on any device. For example, the following code sample binds an `OpenSpellBook` action to the gamepad's `Enum.KeyCode.ButtonR2|ButtonR2` button and the keyboard's `Enum.KeyCode.B|B` key.
 
-```lua title='ContextActionService Bind Action'
+```lua title="ContextActionService Bind Action"
 local ContextActionService = game:GetService("ContextActionService")
 
 local function openSpellBook(actionName, inputState, inputObject)
@@ -87,7 +87,7 @@ Functions bound to `Class.ContextActionService` will fire on all input states (`
 
 Alternatively, you can use `Class.UserInputService` to bind controls directly from a gamepad. When detecting gamepad events through this service, use the `Class.UserInputService.InputBegan|InputBegan` event to detect when the button was initially pressed and `Class.UserInputService.InputEnded|InputEnded` to detect when the button is released. In the handling function, the `Class.InputObject.UserInputType` property indicates which gamepad fired the event and `Class.InputObject.KeyCode` indicates the specific button or stick that fired it.
 
-```lua title='UserInputService Button Press Detection'
+```lua title="UserInputService Button Press Detection"
 local UserInputService = game:GetService("UserInputService")
 
 UserInputService.InputBegan:Connect(function(input)
@@ -103,7 +103,7 @@ end)
 
 You can detect the current state of all buttons and sticks on a gamepad with the `Class.UserInputService:GetGamepadState()` method. This is useful if you need to check the current gamepad inputs when a distinct event occurs in your experience, such as checking if specific buttons are being pressed when a character touches an object.
 
-```lua title='Checking State of Gamepad Inputs'
+```lua title="Checking State of Gamepad Inputs"
 local Players = game:GetService("Players")
 local UserInputService = game:GetService("UserInputService")
 
@@ -128,14 +128,14 @@ end)
 
 You can detect how much pressure is being placed on gamepad triggers by checking the `Class.InputObject.Position|Position.Z` value of the input trigger.
 
-```lua title='Testing Trigger Pressure'
+```lua title="Testing Trigger Pressure"
 local UserInputService = game:GetService("UserInputService")
 
 UserInputService.InputChanged:Connect(function(input)
 	if input.UserInputType == Enum.UserInputType.Gamepad1 then
-		if input.KeyCode == Enum.KeyCode.ButtonL1 then
+		if input.KeyCode == Enum.KeyCode.ButtonL2 then
 			print("Pressure on left trigger has changed:", input.Position.Z)
-		elseif input.KeyCode == Enum.KeyCode.ButtonR1 then
+		elseif input.KeyCode == Enum.KeyCode.ButtonR2 then
 			print("Pressure on right trigger has changed:", input.Position.Z)
 		end
 	end
@@ -200,7 +200,7 @@ Many gamepad controllers have motors built in to provide haptic feedback. Adding
 
 Not all controllers have motors so it is important to check for support before attempting to use the haptic motors. To query if a given controller has vibration support, call `Class.HapticService:IsVibrationSupported()`.
 
-```lua title='Check Vibration Support'
+```lua title="Check Vibration Support"
 local HapticService = game:GetService("HapticService")
 
 local gamepad = Enum.UserInputType.Gamepad1
@@ -209,7 +209,7 @@ local isVibrationSupported = HapticService:IsVibrationSupported(gamepad)
 
 Some controllers have multiple motors for various scales of vibration. Once you've checked if a gamepad supports vibration, you should also check if it supports the motors you intend to use through `Class.HapticService:IsMotorSupported()`.
 
-```lua title='Check Motors Supported'
+```lua title="Check Motors Supported"
 local HapticService = game:GetService("HapticService")
 
 local gamepad = Enum.UserInputType.Gamepad1
@@ -264,7 +264,7 @@ end
 
 Once you've confirmed that a player's gamepad [supports vibration](#vibration-support), you can turn on a specific motor with `Class.HapticService:SetMotor()`. This method takes the gamepad and the amplitude of the vibration as arguments. Amplitude can be any value between 0 and 1.
 
-```lua title='Activating Motor'
+```lua title="Activating Motor"
 local HapticService = game:GetService("HapticService")
 
 local gamepad = Enum.UserInputType.Gamepad1
@@ -279,7 +279,5 @@ end
 ```
 
 ## Controller emulation
-
-<BetaAlert betaName="Gamepad Emulator" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
 
 <ControllerEmulator components={props.components} />

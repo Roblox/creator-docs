@@ -1,42 +1,31 @@
+backTo:
+  title: Back to Open Cloud
+  path: /cloud/
 navigation:
-  - heading: Open Cloud
+  - heading: Guides
   - title: Overview
-    path: /cloud/open-cloud/
-  - heading: Authentication
-  - title: OAuth 2.0
-    path: /cloud/open-cloud/oauth2-overview
-    section:
-      - title: Overview
-        path: /cloud/open-cloud/oauth2-overview
-      - title: Registration
-        path: /cloud/open-cloud/oauth2-registration
-      - title: Implementation
-        path: /cloud/open-cloud/oauth2-develop
-      - title: Sample app
-        path: /cloud/open-cloud/oauth2-sample
-  - title: API keys
-    path: /cloud/open-cloud/api-keys
-  - heading: V2 resource guides
+    path: /cloud/guides/
+  - heading: Open Cloud v2 Guides
   - title: User inventories
-    path: /cloud/open-cloud/inventory
+    path: /cloud/guides/inventory
   - title: Engine instances
-    path: /cloud/open-cloud/instance
-  - title: Experience notifications
-    path: /cloud/open-cloud/experience-notifications
+    path: /cloud/guides/instance
+  - title: User notifications
+    path: /cloud/guides/experience-notifications
   - title: Messaging
-    path: /cloud/open-cloud/usage-messaging
-  - heading: V1 resource guides
+    path: /cloud/guides/usage-messaging
+  - heading: Open Cloud v1 Guides
   - title: Assets
-    path: /cloud/open-cloud/usage-assets
+    path: /cloud/guides/usage-assets
   - title: Data stores
-    path: /cloud/open-cloud/usage-data-stores
+    path: /cloud/guides/usage-data-stores
     section:
       - title: Overview
-        path: /cloud/open-cloud/usage-data-stores
+        path: /cloud/guides/usage-data-stores
       - title: Handle requests
-        path: /cloud/open-cloud/data-store-api-handling
+        path: /cloud/guides/data-store-api-handling
   - title: Place publishing
-    path: /cloud/open-cloud/usage-place-publishing
+    path: /cloud/guides/usage-place-publishing
   - heading: Webhooks
   - title: Webhook notifications
     path: /cloud/webhooks/webhook-notifications

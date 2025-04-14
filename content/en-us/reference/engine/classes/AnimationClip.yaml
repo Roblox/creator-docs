@@ -38,7 +38,7 @@ properties:
       `Class.AnimationTrack.Looped` property will default to the original
       `Class.AnimationClip` value. Note also that this value can be overwritten.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

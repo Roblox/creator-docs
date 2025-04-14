@@ -6,7 +6,7 @@ summary: |
   Service containing methods to validate users and prompt them to enable
   experience notifications.
 description: |
-  [Experience Notifications](../../../production/promotion/experience-notifications.md)
+  [Experience notifications](../../../production/promotion/experience-notifications.md)
   are a way for 13+ users to keep up with their favorite experiences through
   timely, personalized notifications. This service contains methods to validate
   users and prompt them to enable notifications.
@@ -40,14 +40,14 @@ methods:
       `Enum.RunContext.Client|Client`.
 
       See
-      [Experience Notifications](../../../production/promotion/experience-notifications.md)
+      [Experience notifications](../../../production/promotion/experience-notifications.md)
       for more details on implementing and customizing notifications, using
       launch data, and more.
     code_samples:
       - ExperienceNotificationService1
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -77,14 +77,14 @@ methods:
       that may occasionally fail.
 
       See
-      [Experience Notifications](../../../production/promotion/experience-notifications.md)
+      [Experience notifications](../../../production/promotion/experience-notifications.md)
       for more details on implementing and customizing notifications, using
       launch data, and more.
     code_samples:
       - ExperienceNotificationService1
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the local player can be prompted to enable notifications.
     tags:
@@ -106,7 +106,7 @@ events:
       `Enum.RunContext.Client|Client`.
 
       See
-      [Experience Notifications](../../../production/promotion/experience-notifications.md)
+      [Experience notifications](../../../production/promotion/experience-notifications.md)
       for more details on implementing and customizing notifications, using
       launch data, and more.
     code_samples:

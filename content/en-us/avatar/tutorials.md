@@ -26,9 +26,7 @@ Learn how to create assets with structured tutorials that walks through each cre
   and configure Roblox Studio.
 
 </AccordionDetails>
-  </BaseAccordion>
-
-<br /> <br />
+</BaseAccordion>
 
 <Card>
 <CardContent>

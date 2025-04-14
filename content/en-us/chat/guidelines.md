@@ -11,7 +11,7 @@ In-experience text chat is any message created within your experience that origi
 - Chat window communication between users
 - Team-specific messages
 
-For sending and delivery, these types of communications must each go through a `Class.TextChannel` instance. This ensures messages respect privacy settings, are visible to moderators, and are properly text filtered.
+For sending and delivery, these types of communications must each go through a `Class.TextChannel` instance. This ensures messages respect privacy settings, are visible to moderators, and are properly text-filtered.
 
 Certain text is **not** considered chat:
 
@@ -37,9 +37,20 @@ For communication shared by users that can be seen by other users, even if it do
 - All experiences that offer in-experience text chat for users must integrate `Class.TextChatService`, per the [Misusing Roblox Systems Community Standard](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
   - Between 30 December 2024 and 30 April 2025, creators that use a custom chat solution not powered by `Class.TextChatService` or a modified or forked [Legacy Chat](legacy/legacy-chat-system.md) can continue to use their existing feature, but must also deploy the `Class.TextChatService:CanUserChatAsync()|CanUserChatAsync()` and `Class.TextChatService:CanUserDirectChatAsync()|CanUserDirectChatAsync()` methods in their experiences.
   - After 30 April 2025, all creators must use the `Class.TextChatService` API.
-  - For more information on migrating, see the [Roblox developer forums](https://devforum.roblox.com/t/migrate-to-textchatservice-removing-support-for-legacy-chat-and-custom-chat-systems/3237100).
+  - For more information on migrating, see the [Roblox Developer Forum](https://devforum.roblox.com/t/migrate-to-textchatservice-removing-support-for-legacy-chat-and-custom-chat-systems/3237100).
 - All incoming text that originates from another user must first use [Text Filtering](../ui/text-filtering.md) before your experience displays it.
 - Communication between users must respect user privacy settings.
-  - `Class.TextChannel:SendAsync` handles basic privacy and parental settings automatically.
-  - `Class.TextChannel:SetDirectChatRequester` must be used to mark `TextChannels` created for direct chat.
-- In-experience communication should be [reportable for abuse](https://en.help.roblox.com/hc/en-us/articles/203312410-How-to-Report-Rule-Violations). `TextChannels` handle this automatically.
+  - `Class.TextChannel:SendAsync()` handles basic privacy and parental settings automatically.
+  - `Class.TextChannel:SetDirectChatRequester()` must be used to mark `Class.TextChannel|TextChannels` created for direct chat.
+- In-experience communication should be [reportable for abuse](https://en.help.roblox.com/hc/en-us/articles/203312410-How-to-Report-Rule-Violations). `Class.TextChannel|TextChannels` handle this automatically.
+
+## Respect privacy settings
+
+Users can have different levels of access to communication features based on their [privacy and content maturity settings](https://www.roblox.com/my/account#!/privacy/Communication/ExperienceChat) or parental controls. Some users might have additional restrictions or constraints depending on which app store they used to install Roblox or their local laws.
+
+The following methods respect these requirements. Use them within your experience to determine how to handle messaging requests:
+
+- `Class.TextChannel:SetDirectChatRequester()`
+- `Class.TextChatService:CanUserChatAsync()`
+- `Class.TextChatService:CanUsersChatAsync()`
+- `Class.TextChatService:CanUsersDirectChatAsync()`

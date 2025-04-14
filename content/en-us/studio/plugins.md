@@ -13,7 +13,7 @@ You can create your own plugins to improve your workflow in Studio. The followin
 
 To begin, you should enable **Plugin Debugging Enabled** in the **Studio** section of Studio's settings. This will expose the `Class.PluginDebugService` in Studio which provides real-time debugging for your plugin's code and makes it easier to reload and save your plugin.
 
-```lua title='EmptyScriptAdder Plugin'
+```lua title="EmptyScriptAdder Plugin"
 local ChangeHistoryService = game:GetService("ChangeHistoryService")
 local Selection = game:GetService("Selection")
 
@@ -141,6 +141,7 @@ To distribute a plugin:
 1. In the **Explorer** window, right-click a plugin script, then select **Publish as Plugin** from the contextual menu.
 1. **(Optional)** In the upper-left corner of the asset configuration window, click the image to upload a 512&times;512 image.
 1. Fill in the following fields:
+
    - **Name**: A title for your plugin.
    - **Description**: A description that describes what a potential user should expect the plugin to do.
    - **Creator**: The creator you'd like to attribute as the creator of the plugin.

@@ -78,7 +78,7 @@ methods:
           The `Datatype.SharedTable` object to register, or `nil` to unregister
           any previously registered `Datatype.SharedTable` object.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

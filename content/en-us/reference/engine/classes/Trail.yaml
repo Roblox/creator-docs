@@ -143,7 +143,7 @@ properties:
       existing segments, call the `Class.Trail:Clear()|Clear()` method at the
       same time.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -171,7 +171,7 @@ properties:
       Changing this property immediately affects all existing and future trail
       segments.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -537,7 +537,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

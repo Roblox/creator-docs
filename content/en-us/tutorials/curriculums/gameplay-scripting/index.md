@@ -46,8 +46,6 @@ Learn how to [sort players into teams](create-teams.md) when a round is active.
 </AccordionDetails>
 </BaseAccordion>
 
-<br />
-
 <BaseAccordion>
 <AccordionSummary>
 <Typography variant="h4">Chapter 2 - Spawn and respawn</Typography>
@@ -56,8 +54,6 @@ Learn how to [sort players into teams](create-teams.md) when a round is active.
 Learn how to [trigger unique actions](spawn-respawn.md) when players spawn and respawn back into a round.
 </AccordionDetails>
 </BaseAccordion>
-
-<br />
 
 <BaseAccordion>
 <AccordionSummary>
@@ -68,8 +64,6 @@ Learn how to [implement rounds](add-rounds.md) that track points, display final 
 </AccordionDetails>
 </BaseAccordion>
 
-<br />
-
 <BaseAccordion>
 <AccordionSummary>
 <Typography variant="h4">Chapter 4 - Implement blasters</Typography>
@@ -79,8 +73,6 @@ Learn how to [script blast behavior](implement-blasters.md) for two different bl
 </AccordionDetails>
 </BaseAccordion>
 
-<br />
-
 <BaseAccordion>
 <AccordionSummary>
 <Typography variant="h4">Chapter 5 - Detect hits</Typography>
@@ -89,5 +81,3 @@ Learn how to [script blast behavior](implement-blasters.md) for two different bl
 Learn how to [perform hit detection](detect-hits.md) from blast data, and allocate damage to reduce player health.
 </AccordionDetails>
 </BaseAccordion>
-
-<br />

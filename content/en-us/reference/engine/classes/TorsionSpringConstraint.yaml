@@ -119,7 +119,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - Hidden
       - Deprecated
@@ -146,7 +146,7 @@ properties:
       secondary axes of attachments through a cone constraint. The default value
       is false.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
