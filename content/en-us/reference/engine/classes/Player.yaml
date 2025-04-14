@@ -1020,8 +1020,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Data
     serialization:
@@ -1705,7 +1705,7 @@ methods:
         summary: ''
     tags: []
     deprecation_message: ''
-    security: RobloxSecurity
+    security: RobloxEngineSecurity
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []

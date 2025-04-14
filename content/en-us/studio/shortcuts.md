@@ -12,7 +12,7 @@ Studio has many default shortcuts and key commands that make development quicker
     <tr>
       <th>Action</th>
 			<th>Windows</th>
-			<th>Mac</th>
+			<th>macOS</th>
       <th>Description</th>
     </tr>
    </thead>
@@ -93,7 +93,7 @@ Studio has many default shortcuts and key commands that make development quicker
     <tr>
       <th>Action</th>
 			<th>Windows</th>
-			<th>Mac</th>
+			<th>macOS</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -152,7 +152,7 @@ Studio has many default shortcuts and key commands that make development quicker
     <tr>
       <th>Action</th>
 			<th>Windows</th>
-			<th>Mac</th>
+			<th>macOS</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -238,7 +238,7 @@ Studio has many default shortcuts and key commands that make development quicker
     <tr>
       <th>Action</th>
 			<th>Windows</th>
-			<th>Mac</th>
+			<th>macOS</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -354,7 +354,7 @@ Studio has many default shortcuts and key commands that make development quicker
     <tr>
       <th>Action</th>
 			<th>Windows</th>
-			<th>Mac</th>
+			<th>macOS</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -383,7 +383,7 @@ Studio has many default shortcuts and key commands that make development quicker
     <tr>
       <th>Action</th>
 			<th>Windows</th>
-			<th>Mac</th>
+			<th>macOS</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -464,7 +464,7 @@ Studio has many default shortcuts and key commands that make development quicker
     <tr>
       <th>Action</th>
 			<th>Windows</th>
-			<th>Mac</th>
+			<th>macOS</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -541,7 +541,7 @@ Studio has many default shortcuts and key commands that make development quicker
     <tr>
       <th>Command</th>
       <th>Windows</th>
-      <th>Mac</th>
+      <th>macOS</th>
     </tr>
   </thead>
   <tbody>
@@ -589,7 +589,7 @@ Studio has many default shortcuts and key commands that make development quicker
     <tr>
       <th>Command</th>
       <th>Windows</th>
-      <th>Mac</th>
+      <th>macOS</th>
     </tr>
   </thead>
   <tbody>
@@ -691,7 +691,7 @@ Studio has many default shortcuts and key commands that make development quicker
     <tr>
       <th>Command</th>
       <th>Windows</th>
-      <th>Mac</th>
+      <th>macOS</th>
     </tr>
   </thead>
   <tbody>
