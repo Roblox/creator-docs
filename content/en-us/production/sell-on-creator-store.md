@@ -5,10 +5,6 @@ description: An explanation of Creator Store seller accounts, their prerequisite
 
 You can sell [plugins](../studio/plugins.md) and [models](../parts/models.md) on the Creator Store for **United States Dollars** (USD). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted.
 
-<Alert severity="success">
-As of <tbd>, you can now start selling your models! [Create a seller account by onboarding, if you have not already,](#complete-the-application-form) to start monetizing your models!
-</Alert>
-
 In order to set any USD prices and sell your assets, you must have a **seller account**. Roblox administers seller accounts through **Stripe**, a third-party payments provider. If you meet Roblox's eligibility [requirements](#for-sellers), you can fill out Stripe's [application form](#complete-the-application-form) to create a seller account.
 
 Once you have a seller account, **you can set USD prices** for your plugins from their asset configuration pages and sell them on the Creator Store.
