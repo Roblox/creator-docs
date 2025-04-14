@@ -1,5 +1,5 @@
 ---
-title: Sell plugins on the Creator Store
+title: Sell on the Creator Store
 description: An explanation of Creator Store seller accounts, their prerequisites, and how to create one.
 ---
 
