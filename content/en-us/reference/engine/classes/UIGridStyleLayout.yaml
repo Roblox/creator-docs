@@ -171,7 +171,7 @@ methods:
       - UI-Sort-Order
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -200,7 +200,7 @@ methods:
         default: nil
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated

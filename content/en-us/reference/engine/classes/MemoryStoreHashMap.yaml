@@ -84,7 +84,7 @@ methods:
         summary: |
           The key to remove.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields
@@ -119,7 +119,7 @@ methods:
           removed from the hash map. The maximum expiration time is 45 days
           (3,888,000 seconds).
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields

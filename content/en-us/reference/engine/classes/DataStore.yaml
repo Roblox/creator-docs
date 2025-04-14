@@ -122,7 +122,7 @@ methods:
         summary: |
           **(Optional)** Cursor to continue iteration.
       - name: excludeDeleted
-        type: bool
+        type: boolean
         default: false
         summary: |
           **(Optional)** Exclude deleted keys from being returned.
@@ -222,7 +222,7 @@ methods:
         summary: |
           Version number of the key to remove.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields

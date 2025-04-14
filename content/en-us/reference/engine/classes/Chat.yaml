@@ -37,7 +37,7 @@ properties:
       This must be done on the client, toggling this value in a server-side
       `Class.Script` will have no effect.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -58,7 +58,7 @@ properties:
       Toggles whether the default chat framework should be automatically loaded
       when the game runs.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -108,7 +108,7 @@ methods:
         summary: |
           An `Enum.ChatColor` specifying the color of the chatted message.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -216,7 +216,7 @@ methods:
           The function to call when the callback is invoked using
           Chat:InvokeChatCallback.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -251,7 +251,7 @@ methods:
         summary: |
           A settings table.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -273,7 +273,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields
@@ -300,7 +300,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields

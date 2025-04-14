@@ -72,7 +72,7 @@ properties:
       Controls whether `Class.AudioPlayer.Asset|Asset` loads automatically once
       assigned. If `false`, the asset will load upon the first attempt to play.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -95,7 +95,7 @@ properties:
       `Class.AudioPlayer` at runtime, use the `Class.AudioPlayer:Play()|Play()`
       and `Class.AudioPlayer:Stop()|Stop()` methods.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -119,7 +119,7 @@ properties:
       assets unloaded at runtime if there is extreme memory pressure, in which
       case `Class.AudioPlayer.IsReady|IsReady` will become false.
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -190,7 +190,7 @@ properties:
       `Class.AudioPlayer.LoopRegion|LoopRegion`, or
       `Class.AudioPlayer.PlaybackRegion|PlaybackRegion`.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -394,7 +394,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -413,7 +413,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -497,7 +497,7 @@ events:
     code_samples: []
     parameters:
       - name: connected
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether the instance got connected or disconnected.

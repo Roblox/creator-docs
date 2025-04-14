@@ -77,7 +77,7 @@ properties:
       Determines whether clicking on the TextBox will clear its
       `Class.TextBox.Text` property
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -290,7 +290,7 @@ properties:
       lines. This also enables players to use the enter key to move onto a new
       line.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -404,7 +404,7 @@ properties:
       XML string, including all of the formatting tags. When focus is lost, the
       text will automatically parse and render the tags as rich text.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -450,7 +450,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -468,7 +468,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -490,7 +490,7 @@ properties:
       If set to true, input native to the platform is used instead of Roblox's
       built-in keyboard.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -662,7 +662,7 @@ properties:
       useful to make read-only TextBoxes from which content can be copied
       in-game.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -682,7 +682,7 @@ properties:
     description: |
       Whether the text fits within the constraints of the TextBox.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -747,7 +747,7 @@ properties:
       significant scaling differences than when AutomaticSize is off.
     code_samples:
       - Long-Text-Wrapping
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -908,7 +908,7 @@ properties:
     summary: ''
     description: ''
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
       - Deprecated
@@ -945,7 +945,7 @@ properties:
       line will not be rendered at all.
     code_samples:
       - Long-Text-Wrapping
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1032,7 +1032,7 @@ methods:
       - TextBox-CaptureFocus1
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1048,7 +1048,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1084,11 +1084,11 @@ methods:
       - TextBox-ReleaseFocus1
     parameters:
       - name: submitted
-        type: bool
+        type: boolean
         default: false
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1118,7 +1118,7 @@ events:
       - TextBox-FocusLost
     parameters:
       - name: enterPressed
-        type: bool
+        type: boolean
         default:
         summary: |
           A boolean indicating whether the client pressed Enter to lose focus

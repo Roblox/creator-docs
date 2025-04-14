@@ -45,7 +45,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -108,7 +108,7 @@ events:
     code_samples:
     parameters:
       - name: adShown
-        type: bool
+        type: boolean
         default:
         summary: ''
     tags:

@@ -92,7 +92,7 @@ properties:
 
       `game:GetService("HttpService").HttpEnabled = true`
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -140,7 +140,7 @@ methods:
       - HttpService-GenerateGUID
     parameters:
       - name: wrapInCurlyBraces
-        type: bool
+        type: boolean
         default: true
         summary: |
           Whether the returned string should be wrapped in curly braces (`{}`).
@@ -318,7 +318,7 @@ methods:
         summary: |
           The web address you are requesting data from.
       - name: nocache
-        type: bool
+        type: boolean
         default: false
         summary: |
           Whether the request stores (caches) the response.
@@ -371,7 +371,7 @@ methods:
         summary: |
           Modifies the value in the `Content-Type` header sent with the request.
       - name: compress
-        type: bool
+        type: boolean
         default: false
         summary: |
           Determines whether the data is compressed (**gzipped**) when sent.

@@ -78,7 +78,7 @@ properties:
       reduced. This means that if you are only analyzing the **volume** of an
       audio stream, you can disable this property to improve performance.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -194,7 +194,7 @@ events:
     code_samples: []
     parameters:
       - name: connected
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether the instance got connected or disconnected.

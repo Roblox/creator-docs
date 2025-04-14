@@ -265,7 +265,7 @@ methods:
         summary: |
           The custom function being bound.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -290,7 +290,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the current environment is running the client.
     tags: []
@@ -312,7 +312,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the current environment is in "edit" mode.
     tags: []
@@ -338,7 +338,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the **Run** button has been pressed to run the simulation in
           Studio.
@@ -361,7 +361,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the experience is currently running.
     tags: []
@@ -387,7 +387,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the current environment is running on the server.
     tags: []
@@ -406,7 +406,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the current environment is running in Studio.
     tags: []
@@ -428,7 +428,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -446,7 +446,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -468,7 +468,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -492,7 +492,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -522,7 +522,7 @@ methods:
         summary: |
           The name of the function being unbound.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

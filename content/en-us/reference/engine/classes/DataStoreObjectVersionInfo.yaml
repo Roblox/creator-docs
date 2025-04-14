@@ -50,7 +50,7 @@ properties:
       This property describes whether the version has been marked as deleted.
       Deleted versions will be permanently deleted after 30 days.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated

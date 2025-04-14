@@ -201,7 +201,7 @@ properties:
       `Class.ParticleEmitter:Emit()|Emit()` on the emitter to emit and render
       particles.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -344,7 +344,7 @@ properties:
       causing each emitted particle to be a static frame chosen randomly from
       the flipbook texture.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -476,7 +476,7 @@ properties:
       `Class.ParticleEmitter.VelocityInheritance|VelocityInheritance` property
       with a value of 1 which may be more appropriate for some effects.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -989,7 +989,7 @@ properties:
       Only applies if the `Class.ParticleEmitter.Drag|Drag` property is greater
       than 0.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1046,7 +1046,7 @@ methods:
       - ParticleEmitter-Burst
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1070,7 +1070,7 @@ methods:
         summary: |
           The number of particles to emit.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

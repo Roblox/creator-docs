@@ -58,7 +58,7 @@ properties:
       `Class.Animator:GetPlayingAnimationTracks()`
     code_samples:
       - AnimationTrack-IsPlaying
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -127,7 +127,7 @@ properties:
     code_samples:
       - Animation-Looping
       - AnimationTrack-DidLoop
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -390,7 +390,7 @@ methods:
         summary: |
           The playback speed the animation is to be changed to.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState
@@ -446,7 +446,7 @@ methods:
           The duration of time that the animation will fade between the old
           weight and the new weight for.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState
@@ -622,7 +622,7 @@ methods:
         summary: |
           The playback speed of the animation.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState
@@ -645,7 +645,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -680,7 +680,7 @@ methods:
           The time, in seconds, for which animation weight is to be faded out
           over.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState

@@ -25,7 +25,7 @@ properties:
     description: |
       Toggles the effect on and off. True by default.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

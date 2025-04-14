@@ -19,7 +19,7 @@ properties:
     description: |
       Whether or not to animate transitions between pages.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -39,7 +39,7 @@ properties:
     description: |
       Whether or not the page layout wraps around at the ends.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -125,7 +125,7 @@ properties:
       Controls the overrides of `NextSelection{Up,Down,Left,Right}`. Defaults to
       true.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -169,7 +169,7 @@ properties:
       Controls the use of scroll wheel, in case that it is intended for
       something else. Defaults to true.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -191,7 +191,7 @@ properties:
       Controls touch scrolling, in case this is a non-interactive layout.
       Defaults to true.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -242,7 +242,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -268,7 +268,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -286,7 +286,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -304,7 +304,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

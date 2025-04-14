@@ -57,7 +57,7 @@ properties:
       `Class.NoCollisionConstraint.Part0|Part0` and
       `Class.NoCollisionConstraint.Part1|Part1`, will collide with each other.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

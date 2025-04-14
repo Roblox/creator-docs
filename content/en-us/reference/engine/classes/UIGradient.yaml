@@ -89,7 +89,7 @@ properties:
     description: |
       Whether the gradient is enabled or not.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

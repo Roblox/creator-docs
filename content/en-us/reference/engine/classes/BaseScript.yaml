@@ -35,7 +35,7 @@ properties:
       since disabling the script from within itself will terminate the thread
       and the line to reenable it will never execute.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -73,7 +73,7 @@ properties:
       since disabling the script from within itself will terminate the thread
       and the line to reenable it will never execute.
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''

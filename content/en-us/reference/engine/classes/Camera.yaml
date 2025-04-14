@@ -407,7 +407,7 @@ properties:
         returns the `Class.Camera.CFrame|CFrame` combined with the
         `Datatype.CFrame` of the user's head.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -537,7 +537,7 @@ properties:
       vehicle or a floor that can help the player ground themselves in their
       physical space.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -940,7 +940,7 @@ methods:
         summary: |
           The duration, in seconds, of the tween.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -982,7 +982,7 @@ methods:
         summary: |
           The number of 45 degree increments by which to pan the `Class.Camera`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1083,7 +1083,7 @@ methods:
         summary: |
           The `Enum.CameraPanMode` to set the `Class.Camera` to.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1147,7 +1147,7 @@ methods:
         summary: |
           The roll angle, in radians, to be applied to the `Class.Camera`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: |
@@ -1176,7 +1176,7 @@ methods:
         summary: |
           The number of 10 degree units by which to tilt the `Class.Camera`.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the `Class.Camera` tilt applied was constrained.
     tags:
@@ -1411,7 +1411,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

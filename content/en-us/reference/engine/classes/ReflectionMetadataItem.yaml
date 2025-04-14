@@ -22,7 +22,7 @@ properties:
       When this value is true, it means that this property/class can be seen in
       Studio, e.g. in the explorer.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -58,7 +58,7 @@ properties:
     summary: ''
     description: ''
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -115,7 +115,7 @@ properties:
       When an object is deprecated, it should not be used anymore for new
       scripts.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -134,7 +134,7 @@ properties:
     description: |
       Toggles whether this property can be edited from the Properties window.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -188,7 +188,7 @@ properties:
       This should determine if a method needs to use stuff on the Roblox main
       servers. This property isn't applied where it should be, though.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -248,7 +248,7 @@ properties:
     summary: ''
     description: ''
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

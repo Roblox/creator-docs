@@ -53,7 +53,7 @@ properties:
       false, nothing will happen when backspace is pressed, and the tool will
       remain equipped.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -81,7 +81,7 @@ properties:
       `Class.Tool.Activated` and `Class.Tool.Deactivated` events from firing.
     code_samples:
       - superjump-tool
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -253,7 +253,7 @@ properties:
       `Class.Tool.Activated`.
     code_samples:
       - sprint-tool
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -282,7 +282,7 @@ properties:
       When set to `true`, the tool will function only with a handle. When set to
       `false`, the tool will function even without a handle.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -348,7 +348,7 @@ methods:
       - invisibility-tool
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -366,7 +366,7 @@ methods:
       - invisibility-tool
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

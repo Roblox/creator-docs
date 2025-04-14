@@ -19,7 +19,7 @@ properties:
     description: |
       Used to hold a boolean value.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -55,7 +55,7 @@ events:
       - BoolValue-Changed1
     parameters:
       - name: value
-        type: bool
+        type: boolean
         default:
         summary: |
           The new value after the change.
@@ -71,7 +71,7 @@ events:
     code_samples:
     parameters:
       - name: value
-        type: bool
+        type: boolean
         default:
         summary: ''
     tags:

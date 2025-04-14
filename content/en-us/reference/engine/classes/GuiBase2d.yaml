@@ -125,7 +125,7 @@ properties:
 
       See also `Class.GuiBase2d.RootLocalizationTable|RootLocalizationTable`.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -152,7 +152,7 @@ properties:
       localize all `Class.TextLabel.TextButton` that are descendants of the root
       instance.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - Hidden
       - NotReplicated
@@ -310,7 +310,7 @@ properties:
       the selection group and does not move outside of the group from the
       selection behavior direction.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -341,7 +341,7 @@ events:
     code_samples:
     parameters:
       - name: amISelected
-        type: bool
+        type: boolean
         default:
         summary: |
           True if the new selection matches the attached GuiBase2d.

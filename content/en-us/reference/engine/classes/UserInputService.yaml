@@ -73,7 +73,7 @@ properties:
     code_samples:
       - UserInputService-DeviceGravityChanged
       - UserInputService-DeviceRotationChanged
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -114,7 +114,7 @@ properties:
       - `Class.UserInputService:GamepadSupports()`
     code_samples:
       - UserInputService-GetActiveGamepad
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -158,7 +158,7 @@ properties:
       used in a `Class.LocalScript`.
     code_samples:
       - UserInputService-DeviceRotationChanged
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -191,7 +191,7 @@ properties:
       used in a `Class.LocalScript`.
     code_samples:
       - UserInputService-KeyboardEnabled
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -224,7 +224,7 @@ properties:
       process other forms of input.
     code_samples:
       - UserInputService-ModalEnabled
-    type: bool
+    type: boolean
     tags:
       - Deprecated
     deprecation_message: |
@@ -370,7 +370,7 @@ properties:
       - `Class.UserInputService:GetMouseButtonsPressed()`
     code_samples:
       - UserInputService-MouseDeltaSensitivity
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -433,7 +433,7 @@ properties:
       used in a `Class.LocalScript`.
     code_samples:
       - UserInputService-LastInputTypeChanged
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -529,7 +529,7 @@ properties:
       `Class.UserInputService.OnScreenKeyboardSize|OnScreenKeyboardSize` and
       `Class.UserInputService.OnScreenKeyboardPosition|OnScreenKeyboardPosition`.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -584,7 +584,7 @@ properties:
       - `Class.UserInputService.TouchEnded`
     code_samples:
       - UserInputService-TouchPinch
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -661,7 +661,7 @@ properties:
       - `Class.UserInputService.UserCFrameChanged`
     code_samples:
       - UserInputService-UserCFrameChanged
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -717,7 +717,7 @@ methods:
         summary: |
           The `Enum.KeyCode` of the button in question.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the given gamepad supports a button corresponding with the
           given `Enum.KeyCode`.
@@ -949,7 +949,7 @@ methods:
         summary: |
           The `Enum.UserInputType` of the gamepad in question.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether a gamepad associated with `Enum.UserInputType` is connected.
     tags: []
@@ -1832,7 +1832,7 @@ methods:
         summary: |
           The `Enum.KeyCode` of the specified button.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the specified gamepad button on the given gamepad is pressed
           is pressed.
@@ -1879,7 +1879,7 @@ methods:
         summary: |
           The `Enum.KeyCode` of the key.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the specified key is being held down.
     tags: []
@@ -1916,7 +1916,7 @@ methods:
         summary: |
           The `Enum.UserInputType` of the mouse button.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the given mouse button is currently held down.
     tags: []
@@ -1977,7 +1977,7 @@ methods:
         summary: |
           The `Enum.UserInputType` of the specified gamepad.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the specified gamepad is a navigation gamepad.
     tags: []
@@ -2007,7 +2007,7 @@ methods:
       - UserInputService-RecenterUserHeadCFrame
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -2057,12 +2057,12 @@ methods:
         summary: |
           The `Enum.UserInputType` of the specified gamepad.
       - name: enabled
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether the specified gamepad can move the GUI navigator.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -2341,7 +2341,7 @@ events:
           An `Class.InputObject` instance, which contains information about the
           user's input.
       - name: gameProcessedEvent
-        type: bool
+        type: boolean
         default:
         summary: |
           Indicates whether the game engine internally observed this input and
@@ -2386,7 +2386,7 @@ events:
           An `Class.InputObject` instance, which contains information about the
           user's input.
       - name: gameProcessedEvent
-        type: bool
+        type: boolean
         default:
         summary: |
           Indicates whether the game engine internally observed this input and
@@ -2428,7 +2428,7 @@ events:
           An `Class.InputObject` instance, which contains information about the
           user input.
       - name: gameProcessedEvent
-        type: bool
+        type: boolean
         default:
         summary: |
           Indicates whether the game engine internally observed this input and
@@ -2541,7 +2541,7 @@ events:
         default:
         summary: ''
       - name: gameProcessedEvent
-        type: bool
+        type: boolean
         default:
         summary: ''
     tags: []
@@ -2654,7 +2654,7 @@ events:
         default:
         summary: ''
       - name: gameProcessedEvent
-        type: bool
+        type: boolean
         default:
         summary: ''
     tags: []
@@ -2724,7 +2724,7 @@ events:
           An `Class.InputObject` instance, which contains information about the
           user's input.
       - name: gameProcessedEvent
-        type: bool
+        type: boolean
         default:
         summary: |
           Indicates whether the game engine internally observed this input and
@@ -2805,7 +2805,7 @@ events:
         summary: |
           The `Enum.UserInputState` of the gesture.
       - name: gameProcessedEvent
-        type: bool
+        type: boolean
         default:
         summary: |
           Indicates whether the game engine internally observed this input and
@@ -2882,7 +2882,7 @@ events:
           An `Class.InputObject` instance, which contains information about the
           user's input.
       - name: gameProcessedEvent
-        type: bool
+        type: boolean
         default:
         summary: |
           Indicates whether the game engine internally observed this input and
@@ -2966,7 +2966,7 @@ events:
         summary: |
           The `Enum.UserInputState` of the gesture.
       - name: gameProcessedEvent
-        type: bool
+        type: boolean
         default:
         summary: |
           Indicates whether the game engine internally observed this input and
@@ -3045,7 +3045,7 @@ events:
         summary: |
           The `Enum.UserInputState` of the gesture.
       - name: gameProcessedEvent
-        type: bool
+        type: boolean
         default:
         summary: |
           Indicates whether the game engine internally observed this input and
@@ -3132,7 +3132,7 @@ events:
         summary: |
           The `Enum.UserInputState` of the gesture.
       - name: gameProcessedEvent
-        type: bool
+        type: boolean
         default:
         summary: |
           Indicates whether the game engine internally observed this input and
@@ -3194,7 +3194,7 @@ events:
           An `Class.InputObject` instance, which contains information about the
           user's input.
       - name: gameProcessedEvent
-        type: bool
+        type: boolean
         default:
         summary: |
           Indicates whether the game engine internally observed this input and
@@ -3258,7 +3258,7 @@ events:
         summary: |
           Number of touches (e.g. fingers) involved in the gesture.
       - name: gameProcessedEvent
-        type: bool
+        type: boolean
         default:
         summary: |
           Indicates whether the game engine internally observed this input and
@@ -3304,7 +3304,7 @@ events:
           An array of `Datatype.Vector2` objects, indicating the position of the
           fingers involved in the tap gesture.
       - name: gameProcessedEvent
-        type: bool
+        type: boolean
         default:
         summary: |
           Indicates whether the game engine internally observed this input and
@@ -3361,7 +3361,7 @@ events:
         summary: |
           A `Datatype.Vector2` indicating the position of the touch.
       - name: processedByUI
-        type: bool
+        type: boolean
         default:
         summary: |
           Whether the user tapped a GUI element.

@@ -93,7 +93,7 @@ properties:
       Determines whether the `Class.ScreenshotHud` closes automatically when a
       screenshot is taken.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -112,7 +112,7 @@ properties:
     description: |
       Determines whether the experience name in the overlay is enabled.
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - Hidden
       - Deprecated
@@ -131,7 +131,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -148,7 +148,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -188,7 +188,7 @@ properties:
     description: |
       Currently disabled with no effect.
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - Hidden
       - Deprecated
@@ -209,7 +209,7 @@ properties:
     description: |
       Determines whether the `Class.ScreenshotHud` is visible.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

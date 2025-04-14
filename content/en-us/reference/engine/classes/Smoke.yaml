@@ -84,7 +84,7 @@ properties:
       ```
     code_samples:
       - Add-Smoke-to-Fire
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

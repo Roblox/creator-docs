@@ -133,7 +133,7 @@ methods:
         summary: |
           The `Class.Keyframe` to be added.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -186,7 +186,7 @@ methods:
         summary: |
           The `Class.Keyframe` to be removed.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

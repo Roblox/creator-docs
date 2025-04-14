@@ -100,7 +100,7 @@ properties:
       playing it.
     code_samples:
       - Sound-Loaded
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -131,7 +131,7 @@ properties:
       should be used instead.
     code_samples:
       - Sound-IsPlaying-IsPaused
-    type: bool
+    type: boolean
     tags:
       - Hidden
       - ReadOnly
@@ -158,7 +158,7 @@ properties:
       play the sound; `Class.Sound:Play()|Play()` should be used instead.
     code_samples:
       - Sound-IsPlaying-IsPaused
-    type: bool
+    type: boolean
     tags:
       - Hidden
       - ReadOnly
@@ -230,7 +230,7 @@ properties:
       times as sound has looped.
     code_samples:
       - Sound-Looping-2
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -354,7 +354,7 @@ properties:
       - `sound.Parent = nil`
       - `sound.Parent.Parent = nil`
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -445,7 +445,7 @@ properties:
       `Class.Sound.LoopRegion|LoopRegion` properties which can more-accurately
       control its playback.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -505,7 +505,7 @@ properties:
       to resume the sound, the time position will reset to `0`.
     code_samples:
       - Sound-Playing
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''
@@ -745,7 +745,7 @@ properties:
     summary: ''
     description: ''
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -778,7 +778,7 @@ methods:
       - Sound-Functions
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -798,7 +798,7 @@ methods:
       - Sound-Functions
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -818,7 +818,7 @@ methods:
       - Sound-Functions
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -836,7 +836,7 @@ methods:
       - Sound-Functions
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -850,7 +850,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -867,7 +867,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -884,7 +884,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated

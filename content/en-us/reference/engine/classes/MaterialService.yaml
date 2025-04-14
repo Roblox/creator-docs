@@ -851,7 +851,7 @@ properties:
       When it's false, built-in materials use the material pack before 2022.
       When it's true, built-in materials use the material pack released in 2022.
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''
@@ -979,7 +979,7 @@ methods:
         summary: |
           Name of the MaterialVariant object.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

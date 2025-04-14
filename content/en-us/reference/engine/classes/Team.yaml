@@ -79,7 +79,7 @@ properties:
       developers may wish to implement their own team balancing system.
     code_samples:
       - Team-Rebalance
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -106,7 +106,7 @@ properties:
       changed the team colors has since been removed from the default character.
       This property is deprecated and should not be used for new work.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
       - Deprecated

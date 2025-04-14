@@ -98,7 +98,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -145,7 +145,7 @@ methods:
           How the pixels of the source image are blended with the pixels of the
           added image.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -181,7 +181,7 @@ methods:
           How the pixels of the source image should be blended with the pixels
           of the added image.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -235,7 +235,7 @@ methods:
             controls how much of the projection is blended into the resulting
             image.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -295,7 +295,7 @@ methods:
             scaling and rotation. Default is the center of the source image
             (i.e. `Image.Size / 2`).
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -338,7 +338,7 @@ methods:
           How the pixels of the source image are blended with the pixels of the
           added image.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -383,7 +383,7 @@ methods:
           How the pixels of the source image are blended with the pixels of the
           added image.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -458,7 +458,7 @@ methods:
           blue, and alpha respectively). The length of the buffer should be
           `Size.X * Size.Y * 4` bytes.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState

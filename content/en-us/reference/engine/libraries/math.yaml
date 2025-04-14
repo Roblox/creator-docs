@@ -563,7 +563,7 @@ functions:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
     code_samples:

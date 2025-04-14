@@ -42,7 +42,7 @@ properties:
       This property will be true when the `Class.VideoFrame.Video` has loaded
       from Roblox servers and is ready to play.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -66,7 +66,7 @@ properties:
       This property sets whether or not the `Class.VideoFrame.Video` repeats
       once it has finished when it is playing.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -89,7 +89,7 @@ properties:
       playing. It can be set to start or pause playback as an alternative to the
       `Class.VideoFrame:Play()` and `Class.VideoFrame:Pause()` functions.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''
@@ -231,7 +231,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -251,7 +251,7 @@ methods:
       - creating-and-playing-a-video
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

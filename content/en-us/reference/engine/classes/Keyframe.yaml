@@ -108,7 +108,7 @@ methods:
         summary: |
           The `Class.KeyframeMarker` being parented to the `Class.Keyframe`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -138,7 +138,7 @@ methods:
         summary: |
           The `Class.Pose` to be added.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -246,7 +246,7 @@ methods:
         summary: |
           The marker being removed from the `Class.Keyframe`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -274,7 +274,7 @@ methods:
         summary: |
           The `Class.Pose` to be removed.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

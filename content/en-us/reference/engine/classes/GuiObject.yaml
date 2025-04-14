@@ -50,7 +50,7 @@ properties:
       of this property.
     code_samples:
       - TextButton-Active-Debounce
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -328,7 +328,7 @@ properties:
       descendant GUI elements will be rendered regardless of this property's
       value.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -350,7 +350,7 @@ properties:
       This indicates whether a `Class.GuiObject` (and its descendants) can be
       dragged around the screen.
     code_samples:
-    type: bool
+    type: boolean
     tags:
       - Deprecated
     deprecation_message: |
@@ -430,7 +430,7 @@ properties:
         `Class.GuiButton` is set to `true`, the
         `Class.GuiObject.GuiState|GuiState` will behave normally again.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -706,7 +706,7 @@ properties:
       re-enable its selectable property.
     code_samples:
       - limiting-textbox-selection
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -912,7 +912,7 @@ properties:
       otherwise occupy in the layout is used by other elements instead.
     code_samples:
       - UI-Window
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1002,7 +1002,7 @@ methods:
         summary: |
           How long, in seconds, the tween should take to complete.
       - name: override
-        type: bool
+        type: boolean
         default: false
         summary: |
           Whether the tween will override an in-progress tween.
@@ -1012,7 +1012,7 @@ methods:
         summary: |
           A callback function to execute when the tween completes.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the tween will play.
     tags: []
@@ -1070,7 +1070,7 @@ methods:
         summary: |
           How long, in seconds, the tween should take to complete.
       - name: override
-        type: bool
+        type: boolean
         default: false
         summary: |
           Whether the tween will override an in-progress tween.
@@ -1080,7 +1080,7 @@ methods:
         summary: |
           A callback function to execute when the tween completes.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the tween will play.
     tags: []
@@ -1144,7 +1144,7 @@ methods:
         summary: |
           How long, in seconds, the tween should take to complete.
       - name: override
-        type: bool
+        type: boolean
         default: false
         summary: |
           Whether the tween will override an in-progress tween.
@@ -1154,7 +1154,7 @@ methods:
         summary: |
           A callback function to execute when the tween completes.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the tween will play.
     tags: []

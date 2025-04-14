@@ -76,7 +76,7 @@ properties:
       affected.
     code_samples:
       - Part-Anchored-Toggle
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -257,7 +257,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -613,7 +613,7 @@ properties:
       [Collisions](../../../workspace/collisions.md).
     code_samples:
       - Fade-Door
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -641,7 +641,7 @@ properties:
       descendants of a given list of parts using an `Datatype.OverlapParams` or
       `Datatype.RaycastParams` object when calling the spatial query functions.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -682,7 +682,7 @@ properties:
       can still be hit by `Class.WorldRoot:Raycast()|Raycasts` and
       `Datatype.OverlapParams` queries.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -706,7 +706,7 @@ properties:
       part casts. Disabling this property for a given part may cause visual
       artifacts on the shadows cast upon that part.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -921,7 +921,7 @@ properties:
       When true, and when `Class.Workspace.FluidForces` is enabled, causes the
       physics engine to compute aerodynamic forces on this `Class.BasePart`.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1353,7 +1353,7 @@ properties:
       every part descendant in a model at once.
     code_samples:
       - Recursive-Unlock
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1420,7 +1420,7 @@ properties:
       See also [Assemblies](../../../physics/assemblies.md), an article
       documenting what root parts are and how to use them.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -2350,7 +2350,7 @@ methods:
         summary: |
           An angular impulse vector to be applied to the assembly.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -2390,7 +2390,7 @@ methods:
         summary: |
           A linear impulse vector to be applied to the assembly.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -2436,7 +2436,7 @@ methods:
         summary: |
           The position, in world space, to apply the impulse.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -2454,7 +2454,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -2478,7 +2478,7 @@ methods:
         summary: |
           The specified part being checked for collidability.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the parts can collide with each other.
     tags: []
@@ -2556,7 +2556,7 @@ methods:
     code_samples:
     parameters:
       - name: recursive
-        type: bool
+        type: boolean
         default: false
         summary: |
           A table of parts connected to the object by any kind of
@@ -2639,7 +2639,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the game engine automatically decides the network owner for
           this part.
@@ -2774,7 +2774,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the object is connected to a part that will hold it in place.
     tags: []
@@ -2819,7 +2819,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -2849,7 +2849,7 @@ methods:
         summary: |
           How much to grow/shrink on the specified side.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the part is resized.
     tags: []
@@ -2873,7 +2873,7 @@ methods:
         summary: |
           The player being given network ownership of the part.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -2891,7 +2891,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -2927,7 +2927,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -2961,7 +2961,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -2986,7 +2986,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated

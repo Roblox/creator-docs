@@ -104,7 +104,7 @@ functions:
           The function that will be executed once `delayTime` seconds have
           passed.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -173,7 +173,7 @@ functions:
         default: Current identity is
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -221,7 +221,7 @@ functions:
         summary: |
           The function that will be executed.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -373,7 +373,7 @@ functions:
           convert them into strings which will then be joined together with
           spaces between them.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
     code_samples:

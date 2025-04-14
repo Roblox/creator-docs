@@ -85,7 +85,7 @@ methods:
           The _Asset ID_ of the game pass. This is **not** the _Game Pass ID_
           (see above).
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the `Class.Player` owns the game pass.
     tags:

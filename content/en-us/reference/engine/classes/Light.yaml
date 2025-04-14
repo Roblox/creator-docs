@@ -59,7 +59,7 @@ properties:
     description: |
       If set to true, light will be emitted from the source object.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -79,7 +79,7 @@ properties:
     description: |
       If set to true, will project shadows if light is blocked by an obstacle.
     code_samples:
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
