@@ -2487,7 +2487,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 1000
+            "max_in_period": 5000
           }
         },
         "security": [
@@ -5720,6 +5720,102 @@
         ]
       }
     },
+    "/cloud/v2/users/{user_id}/asset-quotas": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "summary": "List Asset Quotas",
+        "description": "Returns a list of asset quotas.",
+        "operationId": "Cloud_ListAssetQuotas",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "The user ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of asset quotas to return. The service might return\nfewer than this value. If unspecified, at most 10 asset quotas are\nreturned. The maximum value is 100 and higher values are set to 100.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "examples": {
+              "maxPageSize": {
+                "description": "An integer between 1 and 100, inclusive",
+                "value": 10
+              }
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\nWhen paginating, all other parameters provided to the subsequent call must\nmatch the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\nSupports the following subset of CEL:\n* Only the `quotaType` and `assetType` fields are supported.\n* Only the `==` and `&&` operator are supported.\n\nFor example:\n  `quotaType == RateLimitUpload && assetType == Audio`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListAssetQuotasResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Users and groups",
+          "methodProperties": {
+            "scopes": [
+              "asset:read"
+            ]
+          },
+          "resource": {
+            "$ref": "#/components/schemas/AssetQuota",
+            "name": "AssetQuota"
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "max_in_period": 60
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "max_in_period": 60
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
+      }
+    },
     "/cloud/v2/users/{user_id}/inventory-items": {
       "get": {
         "tags": [
@@ -6006,6 +6102,137 @@
         "type": "object",
         "properties": {},
         "description": "A join request ID."
+      },
+      "AssetQuota": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "example": "users/123/asset-quotas/some-asset-quota",
+            "type": "string",
+            "description": "The resource path of the asset quota.\n\nFormat: `users/{user_id}/asset-quotas/{asset_quota_id}`"
+          },
+          "quotaType": {
+            "example": "QUOTA_TYPE_UNSPECIFIED",
+            "enum": [
+              "QUOTA_TYPE_UNSPECIFIED",
+              "RATE_LIMIT_UPLOAD",
+              "RATE_LIMIT_CREATOR_STORE_DISTRIBUTE"
+            ],
+            "type": "string",
+            "description": "Type of quota.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | QUOTA_TYPE_UNSPECIFIED | The default quota type. |\n  | RATE_LIMIT_UPLOAD | Rate limit on how often one can upload an asset. |\n  | RATE_LIMIT_CREATOR_STORE_DISTRIBUTE | Rate limit on how often one can distribute an asset on the Creator Store. |",
+            "format": "enum"
+          },
+          "assetType": {
+            "example": "ASSET_TYPE_UNSPECIFIED",
+            "enum": [
+              "ASSET_TYPE_UNSPECIFIED",
+              "IMAGE",
+              "TSHIRT",
+              "AUDIO",
+              "MESH",
+              "LUA",
+              "HAT",
+              "PLACE",
+              "MODEL",
+              "SHIRT",
+              "PANTS",
+              "DECAL",
+              "HEAD",
+              "FACE",
+              "GEAR",
+              "ANIMATION",
+              "TORSO",
+              "RIGHT_ARM",
+              "LEFT_ARM",
+              "LEFT_LEG",
+              "RIGHT_LEG",
+              "YOUTUBE_VIDEO",
+              "APP",
+              "CODE",
+              "PLUGIN",
+              "SOLID_MODEL",
+              "MESH_PART",
+              "HAIR_ACCESSORY",
+              "FACE_ACCESSORY",
+              "NECK_ACCESSORY",
+              "SHOULDER_ACCESSORY",
+              "FRONT_ACCESSORY",
+              "BACK_ACCESSORY",
+              "WAIST_ACCESSORY",
+              "CLIMB_ANIMATION",
+              "DEATH_ANIMATION",
+              "FALL_ANIMATION",
+              "IDLE_ANIMATION",
+              "JUMP_ANIMATION",
+              "RUN_ANIMATION",
+              "SWIM_ANIMATION",
+              "WALK_ANIMATION",
+              "POSE_ANIMATION",
+              "LOCALIZATION_TABLE_MANIFEST",
+              "LOCALIZATION_TABLE_TRANSLATION",
+              "EMOTE_ANIMATION",
+              "VIDEO",
+              "TEXTURE_PACK",
+              "TSHIRT_ACCESSORY",
+              "SHIRT_ACCESSORY",
+              "PANTS_ACCESSORY",
+              "JACKET_ACCESSORY",
+              "SWEATER_ACCESSORY",
+              "SHORTS_ACCESSORY",
+              "LEFT_SHOE_ACCESSORY",
+              "RIGHT_SHOE_ACCESSORY",
+              "DRESS_SKIRT_ACCESSORY",
+              "FONT_FAMILY",
+              "FONT_FACE",
+              "MESH_HIDDEN_SURFACE_REMOVAL",
+              "EYEBROW_ACCESSORY",
+              "EYELASH_ACCESSORY",
+              "MOOD_ANIMATION",
+              "DYNAMIC_HEAD",
+              "CODE_SNIPPET",
+              "ADS_VIDEO"
+            ],
+            "type": "string",
+            "description": "The asset type the quota is for.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | ASSET_TYPE_UNSPECIFIED | The default asset type. |\n  | IMAGE | Image |\n  | TSHIRT | Tshirt |\n  | AUDIO | Audio |\n  | MESH | Mesh |\n  | LUA | Lua |\n  | HAT | Hat |\n  | PLACE | Place |\n  | MODEL | Model |\n  | SHIRT | Classic Shirt |\n  | PANTS | Classic Pants |\n  | DECAL | Decal |\n  | HEAD | Head |\n  | FACE | Face |\n  | GEAR | Gear |\n  | ANIMATION | Animation |\n  | TORSO | Torso |\n  | RIGHT_ARM | Right Arm |\n  | LEFT_ARM | Left Arm |\n  | LEFT_LEG | Left Leg |\n  | RIGHT_LEG | Right Leg |\n  | YOUTUBE_VIDEO | YouTube Video |\n  | APP | App |\n  | CODE | Code |\n  | PLUGIN | Plugin |\n  | SOLID_MODEL | Solid Model |\n  | MESH_PART | Mesh Part |\n  | HAIR_ACCESSORY | Hair Accessory |\n  | FACE_ACCESSORY | Face Accessory |\n  | NECK_ACCESSORY | Neck Accessory |\n  | SHOULDER_ACCESSORY | Shoulder Accessory |\n  | FRONT_ACCESSORY | Front Accessory |\n  | BACK_ACCESSORY | Back Accessory |\n  | WAIST_ACCESSORY | Waist Accessory |\n  | CLIMB_ANIMATION | Climb Animation |\n  | DEATH_ANIMATION | Death Animation |\n  | FALL_ANIMATION | Fall Animation |\n  | IDLE_ANIMATION | Idle Animation |\n  | JUMP_ANIMATION | Jump Animation |\n  | RUN_ANIMATION | Run Animation |\n  | SWIM_ANIMATION | Swim Animation |\n  | WALK_ANIMATION | Walk Animation |\n  | POSE_ANIMATION | Pose Animation |\n  | LOCALIZATION_TABLE_MANIFEST | Localization Table Manifest |\n  | LOCALIZATION_TABLE_TRANSLATION | Localization Table Translation |\n  | EMOTE_ANIMATION | Emote Animation |\n  | VIDEO | Video |\n  | TEXTURE_PACK | Texture Pack |\n  | TSHIRT_ACCESSORY | Tshirt Accessory |\n  | SHIRT_ACCESSORY | Shirt Accessory |\n  | PANTS_ACCESSORY | Pants Accessory |\n  | JACKET_ACCESSORY | Jacket Accessory |\n  | SWEATER_ACCESSORY | Sweater Accessory |\n  | SHORTS_ACCESSORY | Shorts Accessory |\n  | LEFT_SHOE_ACCESSORY | Left Shoe Accessory |\n  | RIGHT_SHOE_ACCESSORY | Right Shoe Accessory |\n  | DRESS_SKIRT_ACCESSORY | Dress Skirt Accessory |\n  | FONT_FAMILY | Font Family |\n  | FONT_FACE | Font Face |\n  | MESH_HIDDEN_SURFACE_REMOVAL | Mesh Hidden Surface Removal |\n  | EYEBROW_ACCESSORY | Eyebrow Accessory |\n  | EYELASH_ACCESSORY | Eyelash Accessory |\n  | MOOD_ANIMATION | Mood Animation |\n  | DYNAMIC_HEAD | Dynamic Head |\n  | CODE_SNIPPET | Code Snippet |\n  | ADS_VIDEO | Ads Video |",
+            "format": "enum"
+          },
+          "usage": {
+            "type": "integer",
+            "description": "The current usage of the quota.",
+            "format": "int64"
+          },
+          "capacity": {
+            "type": "integer",
+            "description": "The capacity of the quota.",
+            "format": "int64"
+          },
+          "period": {
+            "example": "PERIOD_UNSPECIFIED",
+            "enum": [
+              "PERIOD_UNSPECIFIED",
+              "MONTH",
+              "DAY"
+            ],
+            "type": "string",
+            "description": "The period of time the quota is for.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | PERIOD_UNSPECIFIED | The default period, which is invalid. Specify another value. |\n  | MONTH | Month |\n  | DAY | Day |",
+            "format": "enum"
+          },
+          "usageResetTime": {
+            "example": "2023-07-05T12:34:56Z",
+            "type": "string",
+            "description": "The time the usage will reset for this quota.",
+            "format": "date-time"
+          }
+        },
+        "description": "For example, a user might be able to upload 100 audio files per month and\nhave uploaded 15 already. In this example:\n- `quotaType` is `RATE_LIMIT_UPLOAD`\n- `assetType` is `AUDIO`\n- `usage` is `15`\n- `capacity` is `100`\n- `period` is `MONTH`\n`usageResetTime` indicates when a new period begins and usage resets to 0.\nThis value **doesn't** necessarily correlate with the first day of a\ncalendar month or midnight on a given day. For more information on the\nupload process, see the\n[usage\nguide](https://create.roblox.com/docs/en-us/cloud/open-cloud/usage-assets).",
+        "x-aep-resource": {
+          "patterns": [
+            "users/{user_id}/asset-quotas/{asset_quota_id}"
+          ],
+          "plural": "asset-quotas",
+          "singular": "asset-quota"
+        },
+        "x-resource": true
       },
       "CreatorStoreProduct": {
         "type": "object",
@@ -7020,6 +7247,23 @@
           }
         },
         "description": "Specific fields that are applicable to a private server."
+      },
+      "ListAssetQuotasResponse": {
+        "type": "object",
+        "properties": {
+          "assetQuotas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AssetQuota"
+            },
+            "description": "The AssetQuotas from the specified User."
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\npage. If this field is omitted, there are no subsequent pages."
+          }
+        },
+        "description": "A list of AssetQuotas in the parent collection."
       },
       "ListDataStoreEntriesResponse": {
         "type": "object",
