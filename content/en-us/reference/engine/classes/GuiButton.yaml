@@ -65,8 +65,10 @@ properties:
       - UI
     writeCapabilities: []
   - name: GuiButton.HoverHapticEffect
-    summary: ''
-    description: ''
+    summary: |
+      A `Class.HapticEffect` instance that will play when the `Class.GuiButton` is being hovered.
+    description: |
+      A `Class.HapticEffect` instance that will play when the `Class.GuiButton` is being hovered.
     code_samples: []
     type: HapticEffect
     tags: []
@@ -105,8 +107,10 @@ properties:
       - UI
     writeCapabilities: []
   - name: GuiButton.PressHapticEffect
-    summary: ''
-    description: ''
+    summary: |
+      A `Class.HapticEffect` instance that will play when the `Class.GuiButton` is being pressed.
+    description: |
+      A `Class.HapticEffect` instance that will play when the `Class.GuiButton` is being pressed.
     code_samples: []
     type: HapticEffect
     tags: []
