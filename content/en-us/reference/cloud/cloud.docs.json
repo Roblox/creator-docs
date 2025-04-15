@@ -6224,7 +6224,7 @@
             "format": "date-time"
           }
         },
-        "description": "For example, a user might be able to upload 100 audio files per month and\nhave uploaded 15 already. In this example:\n- `quotaType` is `RATE_LIMIT_UPLOAD`\n- `assetType` is `AUDIO`\n- `usage` is `15`\n- `capacity` is `100`\n- `period` is `MONTH`\n`usageResetTime` indicates when a new period begins and usage resets to 0.\nThis value **doesn't** necessarily correlate with the first day of a\ncalendar month or midnight on a given day. For more information on the\nupload process, see the\n[usage\nguide](https://create.roblox.com/docs/en-us/cloud/open-cloud/usage-assets).",
+        "description": "Represents a quota for an asset-related action.\n\nFor example, a user might be able to upload 100 audio files per month and\nhave uploaded 15 already. In this example:\n- `quotaType` is `RATE_LIMIT_UPLOAD`\n- `assetType` is `AUDIO`\n- `usage` is `15`\n- `capacity` is `100`\n- `period` is `MONTH`\n`usageResetTime` indicates when a new period begins and usage resets to 0.\nThis value **doesn't** necessarily correlate with the first day of a\ncalendar month or midnight on a given day. For more information on the\nupload process, see the\n[usage\nguide](https://create.roblox.com/docs/en-us/cloud/open-cloud/usage-assets).",
         "x-aep-resource": {
           "patterns": [
             "users/{user_id}/asset-quotas/{asset_quota_id}"
