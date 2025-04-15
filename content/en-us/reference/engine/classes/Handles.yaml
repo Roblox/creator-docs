@@ -3,16 +3,16 @@ type: class
 category: Adornments
 memory_category: Instances
 summary: |
-  The Handles object places 3D handles around any object that its Adornee is set
-  to.
+  Places 3D handles around any object that its `Class.Handles.Adornee|Adornee`
+  is set to.
 description: |
-  The **Handles** object places 3D handles around any object that its Adornee is
-  set to. The Adornee property must be set to a 3D object for the handles to
-  appear. The color can be changed, and the shape of the handles can be set to
-  either arrows or spheres.
+  The `Handles` object places 3D handles around any object that its
+  `Class.Handles.Adornee|Adornee` is set to; this property must be set to a 3D
+  object for the handles to appear. The color can be changed and the shape
+  of the handles can be set to either arrows or spheres.
 
-  For handles to be interactive, they must be parented to a player's PlayerGui
-  or the CoreGui.
+  For handles to be interactive, they must be parented to a player's
+  `Class.PlayerGui` or the `Class.CoreGui`.
 code_samples:
 inherits:
   - HandlesBase
@@ -41,11 +41,10 @@ properties:
     writeCapabilities: []
   - name: Handles.Style
     summary: |
-      Sets the GUI style of the handles. Currently there are only two types;
-      Resize and Movement.
+      Sets the GUI style of the handles.
     description: |
-      Sets the GUI style of the handles. Currently there are only two types;
-      Resize and Movement.
+      Sets the GUI style of the handles. Currently there are only two types:
+      `Enum.HandlesStyle|Resize` and `Enum.HandlesStyle|Movement`.
     code_samples:
     type: HandlesStyle
     tags: []
