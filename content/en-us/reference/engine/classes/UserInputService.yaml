@@ -2821,37 +2821,39 @@ events:
     writeCapabilities: []
   - name: UserInputService.TouchMoved
     summary: |
-      Fired when a user moves their finger on a TouchEnabled device - such as
-      the screen of an Apple iPad or iPhone or a Google Android phone.
+      Fires when a user moves their finger on a `TouchEnabled` device, such as a
+      tablet or smartphone.
     description: |
-      The TouchMoved event fires when a user moves their finger on a
-      TouchEnabled device.
+      Fires when a user moves their finger on a
+      `Class.UserInputService.TouchEnabled|TouchEnabled` device, such as a
+      tablet or smartphone.
 
-      This event can be used to determine when a user moves their finger while
-      touching the screen of a TouchEnabled device. It can be useful to track
-      whether a user is moving their finger on the screen, as well as where the
-      user is moving their finger.
+      This event is useful for tracking whether a user is moving their finger on
+      the screen, as well as where the user is moving their finger.
 
-      The code below prints "Touch moved from" the previous Vector2 position "to
-      " the new Vector2 position of the user's touch on a TouchEnabled device.
+      The code below shows the touch moving from its previous position to a new
+      position on a `Class.UserInputService.TouchEnabled|TouchEnabled` device.
+      Note that the `Class.InputObject.Position` on the passed `touch` parameter
+      is a `Datatype.Vector3`, but only includes X and Y coordinates; Z is
+      always 0.
 
       ```lua
       local UserInputService = game:GetService("UserInputService")
 
       function onTouchMoved(touch, gameProcessedEvent)
       	local oldPosition = touch.Position - touch.Delta
-      	print("Touch moved from " .. tostring(oldPosition) .. "to " .. tostring(touch.Position))
+      	print("Touch moved from " .. tostring(oldPosition) .. " to " .. tostring(touch.Position))
       end
 
       UserInputService.TouchMoved:Connect(onTouchMoved)
       ```
 
-      It can be paired with `Class.UserInputService.TouchStarted` and
+      Pair this event with `Class.UserInputService.TouchStarted` and
       `Class.UserInputService.TouchEnded` to determine when a user starts
       touching the screen, how their finger moves while touching it, and when
       the they stop touching the screen.
 
-      To check if a user's device is TouchEnabled, and that touch events will
+      To check if a user's device supports touch and that touch events will
       fire, see `Class.UserInputService.TouchEnabled`.
 
       This event only fires when the Roblox client window is in focus. For
