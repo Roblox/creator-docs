@@ -1293,11 +1293,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/ImageLabel.yaml
         ignoreTranslation: true
-      - title: ImportSession
-        path: /reference/engine/classes/ImportSession
-        type: engineapi
-        source: /reference/engine/classes/ImportSession.yaml
-        ignoreTranslation: true
       - title: IncrementalPatchBuilder
         path: /reference/engine/classes/IncrementalPatchBuilder
         type: engineapi
@@ -3007,16 +3002,6 @@ navigation:
         path: /reference/engine/classes/VRStatusService
         type: engineapi
         source: /reference/engine/classes/VRStatusService.yaml
-        ignoreTranslation: true
-      - title: WebSocketClient
-        path: /reference/engine/classes/WebSocketClient
-        type: engineapi
-        source: /reference/engine/classes/WebSocketClient.yaml
-        ignoreTranslation: true
-      - title: WebSocketService
-        path: /reference/engine/classes/WebSocketService
-        type: engineapi
-        source: /reference/engine/classes/WebSocketService.yaml
         ignoreTranslation: true
       - title: WedgePart
         path: /reference/engine/classes/WedgePart

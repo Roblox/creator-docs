@@ -590,20 +590,6 @@ properties:
     capabilities: []
     writeCapabilities: []
 methods:
-  - name: Stats:GetHarmonyQualityLevel
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: int
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: Stats:GetMemoryUsageMbForTag
     summary: |
       Returns the number of megabytes that are being consumed in the specified

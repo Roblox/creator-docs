@@ -166,25 +166,6 @@ properties:
     capabilities:
       - UI
     writeCapabilities: []
-  - name: StarterGui.StudioDefaultStyleSheet
-    summary: ''
-    description: ''
-    code_samples: []
-    type: StyleSheet
-    tags:
-      - Hidden
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - UI
-    writeCapabilities: []
   - name: StarterGui.VirtualCursorMode
     summary: ''
     description: ''

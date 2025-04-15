@@ -4,18 +4,7 @@ category: Input
 memory_category: Instances
 summary: |
   Provides haptic feedback to controllers and devices.
-description: |
-  Modern controllers and devices have motors built‑in to provide haptic
-  feedback. Adding rumbles and vibrations can provide subtle feedback that is
-  hard to convey through visuals or audio alone.
-
-  Roblox supports haptics for the following devices:
-
-  - Android and iOS phones supporting haptics including most iPhone, Pixel, and
-    Samsung Galaxy devices
-  - PlayStation gamepads
-  - Xbox gamepads
-  - Quest Touch controller
+description: ''
 code_samples:
 inherits:
   - Instance
@@ -24,9 +13,9 @@ tags:
   - Service
   - NotReplicated
 deprecation_message: |
-  This service will be superseded by `Class.HapticEffect|HapticEffect`, a newer
-  instance that will support multiple haptic effect types, looped effects, and
-  customizable haptics.
+  This service has been superseded by `Class.HapticEffect`, a newer instance
+  that supports multiple haptic effect types, looped effects, and customizable
+  haptics.
 properties: []
 methods:
   - name: HapticService:GetMotor

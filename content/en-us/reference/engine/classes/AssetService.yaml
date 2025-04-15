@@ -73,25 +73,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: AssetService:CanEditAssetAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: content
-        type: Content
-        default:
-        summary: ''
-    returns:
-      - type: boolean
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: AssetService:CreateAssetAsync
     summary: |
       Uploads a new asset to Roblox from the given object.

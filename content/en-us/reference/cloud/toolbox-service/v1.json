@@ -8,21 +8,19 @@
   "paths": {
     "/toolbox-service/v2/assets:search": {
       "get": {
-        "tags": [
-          "ToolboxService"
-        ],
+        "tags": ["ToolboxService"],
         "parameters": [
           {
             "name": "searchCategoryType",
             "in": "query",
             "required": true,
+            "description": "This represents a \"subset\" of Toolbox.Service.CategoryType options and represent the full set\r\nof \"categories\" (or asset types) that can be searched upon from the toolbox search API.",
             "schema": {
               "allOf": [
                 {
                   "$ref": "#/components/schemas/SearchCategoryType"
                 }
               ],
-              "description": "This represents a \"subset\" of Toolbox.Service.CategoryType options and represent the full set\r\nof \"categories\" (or asset types) that can be searched upon from the toolbox search API.",
               "x-enumNames": [
                 "Audio",
                 "Model",
@@ -110,41 +108,29 @@
           {
             "name": "sortDirection",
             "in": "query",
+            "description": "Represents the direction in which to sort the results",
             "schema": {
               "allOf": [
                 {
                   "$ref": "#/components/schemas/SortDirection"
                 }
               ],
-              "description": "Represents the direction in which to sort the results",
               "default": "None",
-              "x-enumNames": [
-                "None",
-                "Ascending",
-                "Descending"
-              ],
-              "x-enum-varnames": [
-                "None",
-                "Ascending",
-                "Descending"
-              ],
-              "x-enum-descriptions": [
-                "None",
-                "Ascending",
-                "Descending"
-              ]
+              "x-enumNames": ["None", "Ascending", "Descending"],
+              "x-enum-varnames": ["None", "Ascending", "Descending"],
+              "x-enum-descriptions": ["None", "Ascending", "Descending"]
             }
           },
           {
             "name": "sortCategory",
             "in": "query",
+            "description": "The category to sort the search results by.",
             "schema": {
               "allOf": [
                 {
                   "$ref": "#/components/schemas/SortCategory"
                 }
               ],
-              "description": "The category to sort the search results by.",
               "default": "Relevance",
               "x-enumNames": [
                 "Relevance",
@@ -260,29 +246,17 @@
           {
             "name": "searchView",
             "in": "query",
+            "description": "This view controls which fields are populated in the search response. A lighter\r\nview will result in faster response times and higher reliability.",
             "schema": {
               "allOf": [
                 {
                   "$ref": "#/components/schemas/SearchView"
                 }
               ],
-              "description": "This view controls which fields are populated in the search response. A lighter\r\nview will result in faster response times and higher reliability.",
               "default": "Core",
-              "x-enumNames": [
-                "IDs",
-                "Core",
-                "Full"
-              ],
-              "x-enum-varnames": [
-                "IDs",
-                "Core",
-                "Full"
-              ],
-              "x-enum-descriptions": [
-                "IDs",
-                "Core",
-                "Full"
-              ]
+              "x-enumNames": ["IDs", "Core", "Full"],
+              "x-enum-varnames": ["IDs", "Core", "Full"],
+              "x-enum-descriptions": ["IDs", "Core", "Full"]
             }
           }
         ],
@@ -373,31 +347,11 @@
         "nullable": true
       },
       "AssetSubType": {
-        "enum": [
-          "Invalid",
-          "Ad",
-          "MaterialPack",
-          "Package"
-        ],
+        "enum": ["Invalid", "Ad", "MaterialPack", "Package"],
         "type": "string",
-        "x-enumNames": [
-          "Invalid",
-          "Ad",
-          "MaterialPack",
-          "Package"
-        ],
-        "x-enum-varnames": [
-          "Invalid",
-          "Ad",
-          "MaterialPack",
-          "Package"
-        ],
-        "x-enum-descriptions": [
-          "Invalid",
-          "Ad",
-          "MaterialPack",
-          "Package"
-        ]
+        "x-enumNames": ["Invalid", "Ad", "MaterialPack", "Package"],
+        "x-enum-varnames": ["Invalid", "Ad", "MaterialPack", "Package"],
+        "x-enum-descriptions": ["Invalid", "Ad", "MaterialPack", "Package"]
       },
       "Audio": {
         "type": "object",
@@ -419,18 +373,9 @@
               }
             ],
             "description": "The type of audio (Music or SoundEffect).",
-            "x-enumNames": [
-              "Music",
-              "SoundEffect"
-            ],
-            "x-enum-varnames": [
-              "Music",
-              "SoundEffect"
-            ],
-            "x-enum-descriptions": [
-              "Music",
-              "SoundEffect"
-            ]
+            "x-enumNames": ["Music", "SoundEffect"],
+            "x-enum-varnames": ["Music", "SoundEffect"],
+            "x-enum-descriptions": ["Music", "SoundEffect"]
           },
           "artist": {
             "type": "string",
@@ -453,35 +398,15 @@
         "nullable": true
       },
       "AudioType": {
-        "enum": [
-          0,
-          1,
-          2
-        ],
+        "enum": [0, 1, 2],
         "type": "integer",
         "format": "int32",
-        "x-enumNames": [
-          "Music",
-          "SoundEffect",
-          "Unknown"
-        ],
-        "x-enum-varnames": [
-          "Music",
-          "SoundEffect",
-          "Unknown"
-        ],
-        "x-enum-descriptions": [
-          "Music",
-          "SoundEffect",
-          "Unknown"
-        ]
+        "x-enumNames": ["Music", "SoundEffect", "Unknown"],
+        "x-enum-varnames": ["Music", "SoundEffect", "Unknown"],
+        "x-enum-descriptions": ["Music", "SoundEffect", "Unknown"]
       },
       "CorrectionState": {
-        "enum": [
-          0,
-          1,
-          2
-        ],
+        "enum": [0, 1, 2],
         "type": "integer",
         "description": "Determines the state of the Toolbox response depending on spell checking status and the input arguments.",
         "format": "int32",
@@ -598,29 +523,13 @@
         "nullable": true
       },
       "CreatorType": {
-        "enum": [
-          1,
-          2,
-          3
-        ],
+        "enum": [1, 2, 3],
         "type": "integer",
         "description": "Creator Type for querying",
         "format": "int32",
-        "x-enumNames": [
-          "User",
-          "Group",
-          "Invalid"
-        ],
-        "x-enum-varnames": [
-          "User",
-          "Group",
-          "Invalid"
-        ],
-        "x-enum-descriptions": [
-          "User",
-          "Group",
-          "Invalid"
-        ]
+        "x-enumNames": ["User", "Group", "Invalid"],
+        "x-enum-varnames": ["User", "Group", "Invalid"],
+        "x-enum-descriptions": ["User", "Group", "Invalid"]
       },
       "Decal": {
         "type": "object",
@@ -783,12 +692,7 @@
         "nullable": true
       },
       "ImageSearchStatus": {
-        "enum": [
-          0,
-          1,
-          2,
-          3
-        ],
+        "enum": [0, 1, 2, 3],
         "type": "integer",
         "description": "Enum representing possible outcomes of image search",
         "format": "int32",
@@ -870,18 +774,7 @@
         "nullable": true
       },
       "LinkType": {
-        "enum": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
+        "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
         "type": "integer",
         "format": "int32",
         "x-enumNames": [
@@ -970,28 +863,12 @@
         "nullable": true
       },
       "ModelSubType": {
-        "enum": [
-          "Ad",
-          "MaterialPack",
-          "Package"
-        ],
+        "enum": ["Ad", "MaterialPack", "Package"],
         "type": "string",
         "description": "The supported model subtypes.",
-        "x-enumNames": [
-          "Ad",
-          "MaterialPack",
-          "Package"
-        ],
-        "x-enum-varnames": [
-          "Ad",
-          "MaterialPack",
-          "Package"
-        ],
-        "x-enum-descriptions": [
-          "Ad",
-          "MaterialPack",
-          "Package"
-        ]
+        "x-enumNames": ["Ad", "MaterialPack", "Package"],
+        "x-enum-varnames": ["Ad", "MaterialPack", "Package"],
+        "x-enum-descriptions": ["Ad", "MaterialPack", "Package"]
       },
       "Money": {
         "type": "object",
@@ -1055,39 +932,8 @@
       },
       "RankingType": {
         "enum": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12,
-          13,
-          15,
-          16,
-          17,
-          18,
-          19,
-          20,
-          21,
-          22,
-          23,
-          24,
-          25,
-          26,
-          27,
-          28,
-          29,
-          30,
-          31,
-          32,
-          33,
-          34
+          1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21,
+          22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34
         ],
         "type": "integer",
         "format": "int32",
@@ -1198,24 +1044,12 @@
         ]
       },
       "SearchAudioTypeModel": {
-        "enum": [
-          "Music",
-          "SoundEffect"
-        ],
+        "enum": ["Music", "SoundEffect"],
         "type": "string",
         "description": "Represents audio type values that will be properly displayed in Swagger UI.",
-        "x-enumNames": [
-          "Music",
-          "SoundEffect"
-        ],
-        "x-enum-varnames": [
-          "Music",
-          "SoundEffect"
-        ],
-        "x-enum-descriptions": [
-          "Music",
-          "SoundEffect"
-        ]
+        "x-enumNames": ["Music", "SoundEffect"],
+        "x-enum-varnames": ["Music", "SoundEffect"],
+        "x-enum-descriptions": ["Music", "SoundEffect"]
       },
       "SearchCategoryType": {
         "enum": [
@@ -1288,28 +1122,12 @@
         "nullable": true
       },
       "SearchView": {
-        "enum": [
-          "IDs",
-          "Core",
-          "Full"
-        ],
+        "enum": ["IDs", "Core", "Full"],
         "type": "string",
         "description": "This view controls which fields are populated in the search response. A lighter\r\nview will result in faster response times and higher reliability.",
-        "x-enumNames": [
-          "IDs",
-          "Core",
-          "Full"
-        ],
-        "x-enum-varnames": [
-          "IDs",
-          "Core",
-          "Full"
-        ],
-        "x-enum-descriptions": [
-          "IDs",
-          "Core",
-          "Full"
-        ]
+        "x-enumNames": ["IDs", "Core", "Full"],
+        "x-enum-varnames": ["IDs", "Core", "Full"],
+        "x-enum-descriptions": ["IDs", "Core", "Full"]
       },
       "SocialLinkModel": {
         "type": "object",
@@ -1502,18 +1320,9 @@
                 "$ref": "#/components/schemas/SortableAudienceType"
               }
             ],
-            "x-enumNames": [
-              "VALUE",
-              "DEVELOPER_SEGMENT"
-            ],
-            "x-enum-varnames": [
-              "VALUE",
-              "DEVELOPER_SEGMENT"
-            ],
-            "x-enum-descriptions": [
-              "VALUE",
-              "DEVELOPER_SEGMENT"
-            ]
+            "x-enumNames": ["VALUE", "DEVELOPER_SEGMENT"],
+            "x-enum-varnames": ["VALUE", "DEVELOPER_SEGMENT"],
+            "x-enum-descriptions": ["VALUE", "DEVELOPER_SEGMENT"]
           },
           "audienceName": {
             "type": "string",
@@ -1524,13 +1333,7 @@
         "nullable": true
       },
       "SortCategory": {
-        "enum": [
-          "Relevance",
-          "Trending",
-          "Top",
-          "AudioDuration",
-          "CreateTime"
-        ],
+        "enum": ["Relevance", "Trending", "Top", "AudioDuration", "CreateTime"],
         "type": "string",
         "description": "The category to sort the search results by.",
         "x-enumNames": [
@@ -1556,48 +1359,20 @@
         ]
       },
       "SortDirection": {
-        "enum": [
-          "None",
-          "Ascending",
-          "Descending"
-        ],
+        "enum": ["None", "Ascending", "Descending"],
         "type": "string",
         "description": "Represents the direction in which to sort the results",
-        "x-enumNames": [
-          "None",
-          "Ascending",
-          "Descending"
-        ],
-        "x-enum-varnames": [
-          "None",
-          "Ascending",
-          "Descending"
-        ],
-        "x-enum-descriptions": [
-          "None",
-          "Ascending",
-          "Descending"
-        ]
+        "x-enumNames": ["None", "Ascending", "Descending"],
+        "x-enum-varnames": ["None", "Ascending", "Descending"],
+        "x-enum-descriptions": ["None", "Ascending", "Descending"]
       },
       "SortableAudienceType": {
-        "enum": [
-          0,
-          1
-        ],
+        "enum": [0, 1],
         "type": "integer",
         "format": "int32",
-        "x-enumNames": [
-          "VALUE",
-          "DEVELOPER_SEGMENT"
-        ],
-        "x-enum-varnames": [
-          "VALUE",
-          "DEVELOPER_SEGMENT"
-        ],
-        "x-enum-descriptions": [
-          "VALUE",
-          "DEVELOPER_SEGMENT"
-        ]
+        "x-enumNames": ["VALUE", "DEVELOPER_SEGMENT"],
+        "x-enum-varnames": ["VALUE", "DEVELOPER_SEGMENT"],
+        "x-enum-descriptions": ["VALUE", "DEVELOPER_SEGMENT"]
       },
       "SpellCheckerResult": {
         "type": "object",
@@ -1961,21 +1736,7 @@
         "nullable": true
       },
       "UiSortIntent": {
-        "enum": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12,
-          13
-        ],
+        "enum": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
         "type": "integer",
         "format": "int32",
         "x-enumNames": [
