@@ -463,7 +463,7 @@ The **Bridge Edge Loops** tool lets you connect multiple edge loops with faces. 
 To use the Bridge Edge Loops tool:
 
 1. In **Edit** mode, select two or more edge loops that you want to connect.
-1. Press the <kbd>Ctrl</kbd> + <kbd>E</kbd> to display a contextual menu for your active edge loops, then select **Bridge Edge Loops** to activate the tool.The **Bridge Edge Loops** panel displays.
+1. Press the <kbd>Ctrl</kbd> + <kbd>E</kbd> hotkey to display a contextual menu for your active edge loops, then select **Bridge Edge Loops** to activate the tool.The **Bridge Edge Loops** panel displays.
 1. Set **Number of Cuts** to the number of subdivisions you want for your new bridge.
 1. **(Optional)** For further precision for curved bridges, increase **Smoothness** to create a more rounded bridge.
 1. Left-click to confirm your bridge.
@@ -498,7 +498,7 @@ The **New Faces from Edges** tool lets you either create an edge if only two ver
 To use the New Faces from Edges tool:
 
 1. In **Edit** mode, select at least three vertices, or two or more edges that form one or more complete perimeters.
-1. Press the <kbd>F</kbd> to activate the tool.
+1. Press the <kbd>F</kbd> hotkey to activate the tool.
 1. Left-click to confirm your new face.
 
 <Alert severity="info">
@@ -560,3 +560,250 @@ To use the Mirror modifier:
 1. Click the **Add Modifier** button, then insert the **Mirror** modifier.
 1. Set **Axis** to **X**, **Y**, and/or **Z** to mirror along one or many axes.
 1. In **Edit** mode, modify your object or any of its mesh elements to see your modifications mirror along an axis or multiple axes.
+
+## Texturing tools
+
+After you finish modeling your 3D object, it's time to apply a texture to your mesh so that it has additional visual characteristics, such as color, depth, and roughness through a [texture map](../art/modeling/surface-appearance.md). These are details that modeling alone can't provide, transforming your object from a blank shape to something that looks either realistic or stylized according to your experience's art requirements.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../assets/art/3p-software/blender/NoTexture.png" width = "60%" />
+    <figcaption>Model without a texture</figcaption>
+
+  </figure>
+  <figure>
+    <img src="../assets/art/3p-software/blender/WithTexture.png" width = "60%" />
+    <figcaption>Model with a texture</figcaption>
+  </figure>
+</GridContainer>
+
+Each of the following sections details how you can use each tool for either UV editing or vertex painting objects, the hotkeys you can use to activate the tool, and their most common use cases for texturing 3D art for the Roblox platform.
+
+### UV editing
+
+UV editing is the process of unwrapping your 3D object's faces and mapping them onto a 2D image texture. This process allows you to use a single texture to apply visual characteristics to multiple objects in Blender, saving you a negative impact on memory in Studio. For example, the following door frame, ceiling, and card reader meshes in the [Laser Tag](../resources/templates.md#laser-tag) template all use the same UV map to add metal adornments.
+
+<GridContainer numColumns="3">
+  <figure>
+    <img src="../assets/tutorials/environmental-art-curriculum/Section2/TrimSheets-Doorway.jpg" alt="An doorway with trim sheet textures applied." width="100%"/>
+  </figure>
+  <figure>
+    <img src="../assets/tutorials/environmental-art-curriculum/Section2/TrimSheets-Ceiling.jpg" alt="A group of ceiling tiles with trim sheet textures applied." width="100%"/>
+  </figure>
+  <figure>
+    <img src="../assets/tutorials/environmental-art-curriculum/Section2/TrimSheets-Reader.jpg" alt="A futuristic card reader with trim sheet textures applied." width="100%"/>
+  </figure>
+</GridContainer>
+
+The "UV" in UV editing stands for the axes on the 2D image map that you use during the mapping process:
+
+- U axis - The horizontal position (left and right movement).
+- V axis - The vertical position (up and down movement).
+
+Because 3D objects use the X, Y, and Z axes in the 3D space, 3D creation applications typically use U and V to avoid confusion when referring to coordinates in 2D image space. That being said, many Blender UI workflows still use X and Y, so it's helpful to know the 2D space equivalent axis.
+
+When you unwrap a 3D object, all active faces flatten into the 2D space in the UV Editor to make up the **UV map**, and different sections of the model split into separate groupings, commonly referred to as **UV islands**. For example, if you were to unwrap a standard Blender cube, each face becomes its own UV island in the UV map.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../assets/art/3p-software/blender/CubeMap.png" alt="A UV map of a 3D cube." width="60%"/>
+    <figcaption>UV map in the UV Editor</figcaption>
+  </figure>
+  <figure>
+    <img src="../assets/art/3p-software/blender/UV-Cube.png" alt="The 3D cube that is being unwrapped." width="60%"/>
+    <figcaption>Cube in the 3D Viewport</figcaption>
+  </figure>
+</GridContainer>
+
+Every point, line, and face in the UV map corresponds to a vertex, edge, and face in the mesh. This means that when you move UV islands to different parts of the texture, their corresponding vertices, edges, and faces update to reflect the area of the texture that they now overlap.
+
+Blender often creates UV islands along **seams**, or connected edges, to minimize distortion and make it easier for you to apply your texture. While this default UV island configuration is a great place to start, it's almost always necessary to modify each island's position, orientation, and scale to overlap the area of the texture you want to project, or mark your own seams to focus on texturing specific areas at a time.
+
+By investing the time to unwrap, arrange, and map your UV islands, you can improve your texture quality and reduce stretching or distortion on all of your 3D art. The following subsections highlight the most common tools for this process, specifically in regards to unwrapping and mapping your objects.
+
+<Alert severity="info">
+For more high-level information on this process, see Blender's official [UV Editor](https://docs.blender.org/manual/en/latest/editors/uv/introduction.html) and [Getting Started with UVs](https://docs.blender.org/manual/en/latest/modeling/meshes/uv/unwrapping/introduction.html#getting-started) documentation.
+</Alert>
+
+#### Mark Seam
+
+The **Mark Seam** tool lets you manually break up a 3D object's UV map into smaller, manageable sections. While this step in the unwrapping process is technically optional, many Roblox creators find it useful for concentrating on collections of related faces for complex objects that require a lot of detailed texture work.
+
+For example, the following rivet gun requires a metal texture for the barrel, and a leather texture for the grip. To make it easier to texture this object, you can mark the seams of the grip, unwrap just the faces between those seams, then map it to a leather texture image.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../assets/art/3p-software/blender/MS-UVMap-Gun.png" alt="A UV map of a grip on a rivet gun." width="84%"/>
+    <figcaption>Grip UV map in the UV Editor</figcaption>
+  </figure>
+  <figure>
+    <img src="../assets/art/3p-software/blender/MS-Seams-Gun.png" alt="The marked seams and enclosed faces on the rivet gun that are being unwrapped." width="60%"/>
+    <figcaption>Marked seams in the 3D Viewport</figcaption>
+  </figure>
+</GridContainer>
+
+To use the Mark Seam tool:
+
+1. Open the **UV Editing** workspace. The UV Editor displays on the lefthand side of the screen, and the 3D viewport displays on the righthand side of the screen in Edit mode.
+1. In the **3D Viewport**, navigate to your 3D object, then select the edges where you want to create seams.
+1. Press the <kbd>Ctrl</kbd> + <kbd>E</kbd> hotkey to open the **Edge** contextual menu.
+1. Select **Mark Seam**. The seam turns red and is ready for the Unwrap tool.
+
+When you are ready to unwrap your object, Blender will unwrap the enclosed faces of the seam as its own island.
+
+<Alert severity="info">
+For more information on this tool, see Blender's official [Seams](https://docs.blender.org/manual/en/latest/modeling/meshes/uv/unwrapping/seams.html) documentation.
+</Alert>
+
+#### Unwrap
+
+The **Unwrap** tool lets you unwrap and clean up the UV map of any marked seams or active faces of a 3D object so that you have a solid foundation of UV islands to work with. This can quickly take UV coordinates from being a complete mess to something more manageable.
+
+Many Roblox creators use this tool for complex shapes that they need full control over when applying textures, such as characters, clothes, and curvy objects, because it works quickly and avoids stretching and distortion.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../assets/art/3p-software/blender/Before-Unwrap.png" alt="A chaotic with disorganized islands." width="75%"/>
+    <figcaption>Before using the Unwrap tool</figcaption>
+  </figure>
+  <figure>
+    <img src="../assets/art/3p-software/blender/After-Unwrap.png" alt="A clean UV map with organized islands." width="70%"/>
+    <figcaption>After using the Unwrap tool</figcaption>
+  </figure>
+</GridContainer>
+
+To use the Unwrap tool:
+
+1. Open the **UV Editing** workspace. The UV Editor displays on the lefthand side of the screen, and the 3D viewport displays on the righthand side of the screen in Edit mode.
+1. In the **3D Viewport**, navigate to your 3D object, then either use the **Mark Seam** tool to create seams, and/or select the specific faces you want to texture.
+1. Press the <kbd>U</kbd> hotkey to open the **UV Mapping** contextual menu.
+1. Select **Unwrap**. Your selection's UV islands display neatly in the UV Editor.
+1. In the **UV Editor**, move, scale, or rotate UV islands to the appropriate position, orientation, and scale on your texture.
+
+<Alert severity="info">
+For more information on this tool, see Blender's official [UV Operators - Unwrap](https://docs.blender.org/manual/en/latest/modeling/meshes/editing/uv.html#Unwrap) documentation.
+</Alert>
+
+#### Follow Active Quads
+
+The **Follow Active Quads** tool lets you generate clean and organized UV islands according to the UV coordinates of a previously unwrapped active face. This is particularly useful for grid-like topology, such as when you're unwrapping walls, floors, or mechanical parts using trim sheets.
+
+Many Roblox creators use this tool to apply a consistent texture to curved 3D objects, such as sidewalks for experiences or belts for accessories.
+
+<video controls src="../assets/art/3p-software/blender/FollowActiveQuads.mp4" width="80%"></video>
+
+To use the Follow Active Quads tool:
+
+1. Open the **UV Editing** workspace. The UV Editor displays on the lefthand side of the screen, and the 3D viewport displays on the righthand side of the screen in Edit mode.
+1. In the **3D Viewport**, navigate to your 3D object, then unwrap every face you want to texture using an active face.
+1. **(Optional)** Configure your active face.
+   1. In the **UV Editor**, select the face you want to be your active face, then press <kbd>Option</kbd> + <kbd>M</kbd> hotkey to open the **Split** contextual menu.
+   1. Select **Selection**. The active face separates from the UV island.
+   1. Move, scale, or rotate your active face to the appropriate position, orientation, and scale that you want other faces in the UV map to follow.
+1. In the **UV Editor**, select all faces you want to follow the active face. Make sure to select your active face last so that Blender knows to use its layout as the guide.
+1. Press the <kbd>U</kbd> hotkey to open the **Unwrap** contextual menu, then select **Follow Active Quads**. Blender aligns your selection's UV coordinates to match the active face's shape and orientation.
+
+<Alert severity="info">
+For more information on this tool, see Blender's official [UV Operators - Follow Active Quads](https://docs.blender.org/manual/en/latest/modeling/meshes/editing/uv.html#follow-active-quads) documentation.
+</Alert>
+
+#### Projection
+
+Projection tools are tools that project a 3D object's surface onto the 2D image texture plane. Each projection tool controls how the object's shape unwraps and maps onto the 2D texture:
+
+- **Cube Projection** - Projects the object's faces onto all six sides of a cube; useful for boxy shapes like crates.
+- **Sphere Projection** - Projects the object's surface onto a sphere; useful for round shapes like eyes.
+- **Cylinder Projection** - Projects the object onto a cylindrical shape; useful for tubes, pipes, and limbs.
+- **Project from View** - Projects the object's selected faces according to the current camera or viewport angle; useful for flat surfaces and decals.
+- **Smart UV Project** - Automatically unwraps the model and generates islands according to a set angle between faces.
+
+It's useful to consider how you can utilize projection tools to save time in the texturing process, especially for simple objects that require repetitive textures. For example, many Roblox creators strategically use these tools to efficiently create UV islands for basic geometric shapes without needing to mark seams from edges.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../assets/art/3p-software/blender/SmartUVProject.png" alt="A UV map using Smart UV Project." width="73%"/>
+    <figcaption>A UV map using Smart UV Project.</figcaption>
+  </figure>
+  <figure>
+    <img src="../assets/art/3p-software/blender/CubeProjection.png" alt="A UV map using Cube Projection." width="70%"/>
+    <figcaption>A UV map using Cube Projection.</figcaption>
+  </figure>
+</GridContainer>
+
+To use a projection tool:
+
+1. Open the **UV Editing** workspace. The UV Editor displays on the lefthand side of the screen, and the 3D viewport displays on the righthand side of the screen in Edit mode.
+1. In the **3D Viewport**, navigate to your 3D object, then select every face.
+1. Press the <kbd>U</kbd> hotkey to open the **UV Mapping** contextual menu, then select one of the following options:
+   - **Cube Projection**
+   - **Sphere Projection**
+   - **Cylinder Projection**
+   - **Project from View**
+   - **Smart UV Project**
+
+<Alert severity="info">
+For more information, see the following official Blender documentation:
+- [Cube Projection](https://docs.blender.org/manual/en/latest/modeling/meshes/editing/uv.html#cube-projection)
+- [Sphere Projection](https://docs.blender.org/manual/en/latest/modeling/meshes/editing/uv.html#sphere-projection)
+- [Cylinder Projection](https://docs.blender.org/manual/en/latest/modeling/meshes/editing/uv.html#cylinder-projection)
+- [Project from View](https://docs.blender.org/manual/en/latest/modeling/meshes/editing/uv.html#project-from-view)
+- [Smart UV Project](https://docs.blender.org/manual/en/latest/modeling/meshes/editing/uv.html#smart-uv-project)
+</Alert>
+
+### Vertex painting
+
+Vertex painting is the process of storing color information directly on the vertices of your 3D object rather than through traditional textures or materials. In this approach, each vertex holds color data that Blender interpolates across the faces of a mesh, creating either smooth gradients or solid blocks of color without the need for UV mapping or image textures.
+
+Vertex painting is useful for adding color variation to your assets in a lightweight, efficient way, especially in stylized workflows or experiences where performance is a concern, as it can reduce texture memory usage and draw calls. Many Roblox creators use vertex painting in conjunction with Studio's default materials, `Class.MaterialVariant` objects, and `Class.SurfaceAppearance` objects to create visual complexity on otherwise simple 3D objects.
+
+<GridContainer numColumns="3">
+  <figure>
+    <img src="../assets/art/3p-software/blender/VP-NoColor.png" alt="A rocket launcher object in Blender without any color." width="100%"/>
+    <figcaption>Object without color</figcaption>
+  </figure>
+  <figure>
+    <img src="../assets/art/3p-software/blender/VP-WithColor.png" alt="A rocket launcher object in Blender with vertex paint on the handle." width="98%"/>
+    <figcaption>Object with vertex paint</figcaption>
+  </figure>
+  <figure>
+    <img src="../assets/art/3p-software/blender/VP-WithTexture.png" alt="A rocket launcher object in Studio with vertex paint and a SurfaceAppearance texture" width="95%"/>
+    <figcaption>Object with vertex paint and image texture</figcaption>
+  </figure>
+</GridContainer>
+
+To vertex paint:
+
+1. Add a color attribute to store color information to your object's vertices.
+   1. In the **3D Viewport**, select your 3D object.
+   1. Navigate to the **Properties editor**, then in the left-hand navigation, select the **Data** tab.
+
+      <img src="../assets/art/blender-ui/Data-Tab.png" width = "40%" alt="Blender's Properties editor with the Data tab highlighted."/>
+
+   1. Click the **Color Attributes** dropdown menu to expand the container, then click the **+** button. The **Add Color Attribute** contextual menu displays.
+   1. Set **Domain** to **Vertex**, **Data Type** to **Color**, then click the **Add** button. Your object now has a color attribute.
+1. Configure the 3D Viewport to display your color attribute.
+   1. In the **3D Viewport**, navigate to the top right-hand corner **Viewport Shading** options, then click the button for the **Solid** shading mode.
+
+      <img src="../assets/art/blender-ui/ViewportShading-Solid.png" width = "40%" alt="Blender's Viewport Shading options with the Solid shading mode highlighted."/>
+
+   1. Click the **Viewport Shading** dropdown arrow, then in the contextual menu, set **Color** to **Attribute**. The 3D Viewport updates to display your color attribute on your object.
+
+      <img src="../assets/art/3p-software/blender/ColorAttribute.png" alt="Blender's Viewport Shading dropdown menu with the dropdown arrow and Color settings highlighted." width="40%"/>
+
+1. Select a color for your brush.
+   1. In **Vertex Paint** mode, navigate to the top left-hand corner, then click on the active color swatch. A contextual menu displays.
+   1. Select your color on the color wheel, or with a RGB, HSV, or Hex code.
+
+      <img src="../assets/art/blender-ui/ActiveSwatch.png" width = "30%" alt="Blender's active swatch UI highlighted."/>
+
+1. Apply color to your object.
+   1. To apply color to individual vertices:
+      1. In the **3D Viewport**, click and drag over your object's vertices to apply your color with a smooth gradient.
+      1. For further precision, press the <kbd>[</kbd> or <kbd>]</kbd> hotkey to increase or decrease the brush size, respectively.
+   1. To flood fill your color,
+      1. In **Edit** mode, select the vertices or faces that you want to apply your color.
+      1. In **Vertex Paint** mode, press the <kbd>Ctrl</kbd> + <kbd>X</kbd> hotkey. Your selected vertices or faces display the new color.
+
+<Alert severity="info">
+For more information on this process, see Blender's official [Vertex Paint](https://docs.blender.org/manual/en/latest/sculpt_paint/vertex_paint/index.html) documentation.
+</Alert>

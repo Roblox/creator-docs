@@ -640,6 +640,10 @@ https://docs.blender.org/manual/en/latest/modeling/meshes/editing/edge/bridge_ed
 https://docs.blender.org/manual/en/latest/modeling/meshes/editing/face/fill.html
 https://docs.blender.org/manual/en/latest/modeling/meshes/editing/vertex/make_face_edge.html
 https://docs.blender.org/manual/en/latest/modeling/meshes/editing/mesh/delete.html
+https://docs.blender.org/manual/en/latest/modeling/meshes/uv/unwrapping/seams.html
+https://docs.blender.org/manual/en/latest/modeling/meshes/editing/uv.html
 https://github.com/ulid/spec
+https://uuid7.com/
 https://uuid7.com/https://survey.roblox.com/jfe/form/SV_2bj5xe6elkuRl8W
 https://www.youtube-nocookie.com/embed/fUMlnldI53A
+https://docs.blender.org/manual/en/latest/sculpt_paint/vertex_paint/index.html
