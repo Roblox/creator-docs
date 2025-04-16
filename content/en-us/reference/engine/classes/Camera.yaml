@@ -31,6 +31,16 @@ description: |
 
   See [Customizing the Camera](../../../workspace/camera.md) for more
   information on how to adjust and customize the camera's behavior.
+
+
+  #### Storing Multiple Cameras
+  
+  Note that when changing `Class.Workspace.CurrentCamera` to a new `Class.Camera`,
+  all other `Class.Camera|Cameras` directly descending from `Class.Workspace` will be
+  destroyed. If you need to store multiple cameras and swap between them on demand,
+  it's recommended that you store them in a `Class.Folder` or `Class.Model` under
+  `Class.Workspace`, inside which they will remain even when
+  `Class.Workspace.CurrentCamera|CurrentCamera` is changed.
 code_samples:
 inherits:
   - PVInstance
