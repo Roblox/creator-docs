@@ -152,7 +152,7 @@ The [Explorer](../studio/explorer.md) window, visible by default, shows a hierar
 
 <img src="../assets/studio/general/View-Tab-Explorer.png" width="876" alt="Studio's View tab with the Explorer button highlighted." />
 
-<img src="../assets/studio/explorer/Location-In-Studio.png" width="800" alt="A close up view of the Explorer window next to a portion of the 3D viewport." />
+<img src="../assets/studio/explorer/Parent-Child-Hierarchy.png" width="320" alt="Explorer hierarchy showing Camera, Terrain, and SignModel as children of Workspace; Board and Post as children of SignModel" />
 
 ### Properties
 
@@ -160,7 +160,7 @@ The [Properties](../studio/properties.md) window lets you adjust properties of a
 
 <img src="../assets/studio/general/View-Tab-Properties.png" width="876" alt="Studio's View tab with the Properties button highlighted." />
 
-<img src="../assets/studio/properties/Location-In-Studio.png" width="800" alt="A close up view of the Properties window next to a portion of the 3D viewport." />
+<img src="../assets/studio/properties/Sections-Example.png" width="320" />
 
 At the bottom of the window, you can define custom [attributes](../studio/properties.md#instance-attributes) for an object, similar to its default properties. Attributes and their values are saved with your place/assets and they're an ideal way for team members to experiment with different values during runtime, even if they don't understand the underlying code.
 

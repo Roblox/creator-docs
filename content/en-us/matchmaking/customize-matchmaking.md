@@ -108,12 +108,12 @@ To create a player attribute:
 2. In the **Create Attribute** page, select **Player Attribute** and enter a unique name for it.
 3. Choose a **Data Type** and a **Default Value** for the attribute.
 4. Under **Data Store Settings**, select the data store that the attribute data lives in.
-5. Enter a **Data Store Key Template** to store the player attribute values.
+5. Enter a **Data Store Key Template** to store the player attribute values. At runtime, the `{UserId}` is replaced by the player's actual user ID.
 6. Enter a **Data Store Value Path** so that matchmaking can locate the player attribute value inside a JSON object in the data store you selected.
 7. Enter a **Data Store Scope** to specify the scope. If you don't enter a scope, it defaults to global.
 8. Click **Save Changes** to save your player attribute.
 
-<img src="../assets/matchmaking/Player_Attribute.png" width="600" alt="The attribute characteristics and data store settings for the creation of a player attribute." />
+<img src="../assets/matchmaking/Player_Attribute.png" width="700" alt="The attribute characteristics and data store settings for the creation of a player attribute." />
 
 The new attribute shows up in the **Player Attributes** list of the **Attributes** tab.
 

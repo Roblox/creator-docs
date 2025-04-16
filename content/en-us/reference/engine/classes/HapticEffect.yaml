@@ -1,0 +1,283 @@
+name: HapticEffect
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: |
+  Modern controllers and devices have motors built‑in to provide haptic
+  feedback. Adding rumbles and vibrations can provide subtle feedback that is
+  hard to convey through visuals or audio.
+
+  Roblox supports haptics for the following devices:
+
+  - Android and iOS phones supporting haptics including most iPhone, Pixel, and
+    Samsung Galaxy devices
+  - PlayStation gamepads
+  - Xbox gamepads
+  - Quest Touch controller
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: HapticEffect.Looped
+    summary: |
+      Whether the haptic effect loops continuously.
+    description: |
+      Whether the haptic effect loops continuously.
+
+      ```
+      local Workspace = game:GetService("Workspace")
+      
+      local effect = Instance.new("HapticEffect")
+      effect.Type = Enum.HapticEffectType.GameplayExplosion
+      effect.Looped = true
+      effect.Parent = Workspace
+
+      -- Start the haptic effect
+      effect:Play()
+      -- After two seconds, stop the effect
+      task.wait(2)
+      effect:Stop()
+      ```
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: HapticEffect.Position
+    summary: |
+      Along with `Class.HapticEffect.Radius|Radius`, specifies the impact
+      position relative to the input device and, effectively, how broadly that
+      impact effects nearby motors.
+    description: |
+      Along with `Class.HapticEffect.Radius|Radius`, specifies the impact
+      position relative to the input device and, effectively, how broadly that
+      impact effects nearby motors. Note that some gamepads do not have both
+      "small" and "large" motors, and that "gamepad large left/right" is not
+      supported on PC.
+
+      <img src="/assets/engine-api/classes/HapticEffect/Position-Radius.png" width="780" />
+
+      ```
+      local Workspace = game:GetService("Workspace")
+      
+      local effect = Instance.new("HapticEffect")
+
+      -- Set the position and radius of impact
+      effect.Position = Vector3.new(0.5, 0.5, 0)
+      effect.Radius = 1
+      effect.Parent = Workspace
+
+      effect:Play()
+      ```
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: HapticEffect.Radius
+    summary: |
+      Along with `Class.HapticEffect.Position|Position`, specifies the impact
+      radius relative to the input device and, effectively, how broadly that
+      impact effects nearby motors.
+    description: |
+      Along with `Class.HapticEffect.Position|Position`, specifies the impact
+      radius relative to the input device and, effectively, how broadly that
+      impact effects nearby motors. Note that some gamepads do not have both
+      "small" and "large" motors, and that "gamepad large left/right" is not
+      supported on PC.
+
+      <img src="/assets/engine-api/classes/HapticEffect/Position-Radius.png" width="780" />
+
+      ```
+      local Workspace = game:GetService("Workspace")
+      
+      local effect = Instance.new("HapticEffect")
+
+      -- Set the position and radius of impact
+      effect.Position = Vector3.new(0.5, 0.5, 0)
+      effect.Radius = 1
+      effect.Parent = Workspace
+
+      -- Play the haptic effect
+      effect:Play()
+      ```
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: HapticEffect.Type
+    summary: |
+      `Enum.HapticEffectType` describing the haptic type.
+    description: |
+      The haptic type, such as `Enum.HapticEffectType.GameplayCollision` for a
+      large immediate rumble that dies down quickly. The
+      `Enum.HapticEffectType.Custom` value lets you specify a haptic with custom
+      waveform keys defined through
+      `Class.HapticEffect:SetWaveformKeys()|SetWaveformKeys()`.
+    code_samples: []
+    type: HapticEffectType
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: HapticEffect.Waveform
+    summary: ''
+    description: ''
+    code_samples: []
+    type: FloatCurve
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+methods:
+  - name: HapticEffect:Play
+    summary: |
+      Plays the haptic effect.
+    description: |
+      Plays the haptic effect.
+
+      ```
+      local Workspace = game:GetService("Workspace")
+      
+      local effect = Instance.new("HapticEffect")
+      effect.Type = Enum.HapticEffectType.GameplayExplosion
+      effect.Parent = Workspace
+
+      -- Play the haptic effect
+      effect:Play()
+      ```
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: HapticEffect:SetWaveformKeys
+    summary: |
+      Method used to define a custom waveform as a table and apply it to the
+      haptic.
+    description: |
+      This method lets you define a custom waveform as a table and apply it to
+      the haptic.
+
+      ```
+      local Workspace = game:GetService("Workspace")
+      
+      local effect = Instance.new("HapticEffect")
+
+      -- Set effect type to custom in order to define a waveform
+      effect.Type = Enum.HapticEffectType.Custom
+      effect.Parent = Workspace
+
+      -- Define the custom waveform curve through a table
+      local rampUpWaveform = {
+      	FloatCurveKey.new(0, 0.3),
+      	FloatCurveKey.new(100, 0.4),
+      	FloatCurveKey.new(300, 0.8),
+      	FloatCurveKey.new(400, 1.0)
+      }
+
+      -- Set waveform through the effect's method
+      effect:SetWaveformKeys(rampUpWaveform)
+      ```
+    code_samples: []
+    parameters:
+      - name: keys
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: HapticEffect:Stop
+    summary: |
+      Stops the haptic effect.
+    description: |
+      Stops the haptic effect.
+
+      ```
+      local Workspace = game:GetService("Workspace")
+      
+      local effect = Instance.new("HapticEffect")
+      effect.Type = Enum.HapticEffectType.GameplayExplosion
+      effect.Looped = true
+      effect.Parent = Workspace
+
+      -- Start the haptic effect
+      effect:Play()
+      -- After two seconds, stop the effect
+      task.wait(2)
+      effect:Stop()
+      ```
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+events: []
+callbacks: []

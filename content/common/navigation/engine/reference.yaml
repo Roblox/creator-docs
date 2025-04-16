@@ -1173,6 +1173,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/HandlesBase.yaml
         ignoreTranslation: true
+      - title: HapticEffect
+        path: /reference/engine/classes/HapticEffect
+        type: engineapi
+        source: /reference/engine/classes/HapticEffect.yaml
+        ignoreTranslation: true
       - title: HapticService
         path: /reference/engine/classes/HapticService
         type: engineapi
@@ -1287,11 +1292,6 @@ navigation:
         path: /reference/engine/classes/ImageLabel
         type: engineapi
         source: /reference/engine/classes/ImageLabel.yaml
-        ignoreTranslation: true
-      - title: ImportSession
-        path: /reference/engine/classes/ImportSession
-        type: engineapi
-        source: /reference/engine/classes/ImportSession.yaml
         ignoreTranslation: true
       - title: IncrementalPatchBuilder
         path: /reference/engine/classes/IncrementalPatchBuilder
@@ -3003,16 +3003,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/VRStatusService.yaml
         ignoreTranslation: true
-      - title: WebSocketClient
-        path: /reference/engine/classes/WebSocketClient
-        type: engineapi
-        source: /reference/engine/classes/WebSocketClient.yaml
-        ignoreTranslation: true
-      - title: WebSocketService
-        path: /reference/engine/classes/WebSocketService
-        type: engineapi
-        source: /reference/engine/classes/WebSocketService.yaml
-        ignoreTranslation: true
       - title: WedgePart
         path: /reference/engine/classes/WedgePart
         type: engineapi
@@ -4180,6 +4170,11 @@ navigation:
         path: /reference/engine/enums/HandlesStyle
         type: engineapi
         source: /reference/engine/enums/HandlesStyle.yaml
+        ignoreTranslation: true
+      - title: HapticEffectType
+        path: /reference/engine/enums/HapticEffectType
+        type: engineapi
+        source: /reference/engine/enums/HapticEffectType.yaml
         ignoreTranslation: true
       - title: HighlightDepthMode
         path: /reference/engine/enums/HighlightDepthMode

@@ -479,20 +479,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: Plugin:IsLoadedFromProject
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: boolean
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: Plugin:Negate
     summary: |
       Negates the given parts and returns the resulting NegateOperations.

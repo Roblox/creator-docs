@@ -160,24 +160,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: SocialService:UpdatePlayerPartyData
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: partyId
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: SocialService:CanSendCallInviteAsync
     summary: |
       Indicates whether the given `Class.Player` can invite other players to a
@@ -315,21 +297,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: SocialService.PlayerPartyDataChanged
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: partyId
-        type: string
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
