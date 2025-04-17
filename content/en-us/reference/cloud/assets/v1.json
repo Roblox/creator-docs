@@ -37,10 +37,7 @@
                     "description": "The binary asset file path and the content type. See [Asset types and limits](../../../cloud/guides/usage-assets.md#supported-asset-types-and-limits)."
                   }
                 },
-                "required": [
-                  "request",
-                  "fileContent"
-                ]
+                "required": ["request", "fileContent"]
               }
             }
           }
@@ -176,9 +173,7 @@
             "roblox-oauth2": ["asset:read"]
           }
         ],
-        "x-roblox-scopes": [
-          { "name": "asset:read" }
-        ],
+        "x-roblox-scopes": [{ "name": "asset:read" }],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Get Asset without readMask",
@@ -254,10 +249,7 @@
                     "description": "The binary asset file path and the content type. See [Asset types and limits](../../../cloud/guides/usage-assets.md#supported-asset-types-and-limits)."
                   }
                 },
-                "required": [
-                  "request",
-                  "fileContent"
-                ]
+                "required": ["request", "fileContent"]
               }
             }
           }
@@ -542,9 +534,7 @@
             "roblox-oauth2": ["asset:read"]
           }
         ],
-        "x-roblox-scopes": [
-          { "name": "asset:read" }
-        ],
+        "x-roblox-scopes": [{ "name": "asset:read" }],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Get Asset Version",
@@ -631,9 +621,7 @@
             "roblox-oauth2": ["asset:read"]
           }
         ],
-        "x-roblox-scopes": [
-          { "name": "asset:read" }
-        ],
+        "x-roblox-scopes": [{ "name": "asset:read" }],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "List Asset Versions",
@@ -691,9 +679,7 @@
                     "description": "The asset version path in the format of `assets/{assetId}/versions/{versionNumber}`."
                   }
                 },
-                "required": [
-                  "assetVersion"
-                ]
+                "required": ["assetVersion"]
               }
             }
           }
@@ -809,9 +795,7 @@
             "roblox-oauth2": ["asset:read"]
           }
         ],
-        "x-roblox-scopes": [
-          { "name": "asset:read" }
-        ],
+        "x-roblox-scopes": [{ "name": "asset:read" }],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Get Operation",
@@ -1028,11 +1012,7 @@
       "State": {
         "type": "string",
         "description": "Whether the asset is active or archived. Unspecified isn't used.",
-        "enum": [
-          "Unspecified",
-          "Active",
-          "Archived"
-        ]
+        "enum": ["Unspecified", "Active", "Archived"]
       },
       "Status": {
         "type": "object",
