@@ -75,6 +75,25 @@ properties:
       can_save: false
     capabilities: []
     writeCapabilities: []
+  - name: DataModel.Environment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: DataModel.GameId
     summary: |
       Describes the ID of the experience that the place running on the server

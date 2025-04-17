@@ -30,7 +30,7 @@ properties:
 
       ```
       local Workspace = game:GetService("Workspace")
-      
+
       local effect = Instance.new("HapticEffect")
       effect.Type = Enum.HapticEffectType.GameplayExplosion
       effect.Looped = true
@@ -72,7 +72,7 @@ properties:
 
       ```
       local Workspace = game:GetService("Workspace")
-      
+
       local effect = Instance.new("HapticEffect")
 
       -- Set the position and radius of impact
@@ -112,7 +112,7 @@ properties:
 
       ```
       local Workspace = game:GetService("Workspace")
-      
+
       local effect = Instance.new("HapticEffect")
 
       -- Set the position and radius of impact
@@ -186,7 +186,7 @@ methods:
 
       ```
       local Workspace = game:GetService("Workspace")
-      
+
       local effect = Instance.new("HapticEffect")
       effect.Type = Enum.HapticEffectType.GameplayExplosion
       effect.Parent = Workspace
@@ -215,7 +215,7 @@ methods:
 
       ```
       local Workspace = game:GetService("Workspace")
-      
+
       local effect = Instance.new("HapticEffect")
 
       -- Set effect type to custom in order to define a waveform
@@ -256,7 +256,7 @@ methods:
 
       ```
       local Workspace = game:GetService("Workspace")
-      
+
       local effect = Instance.new("HapticEffect")
       effect.Type = Enum.HapticEffectType.GameplayExplosion
       effect.Looped = true

@@ -1,0 +1,33 @@
+name: SystemThemeValue
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: error
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: light
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: dark
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: systemLight
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: systemDark
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''

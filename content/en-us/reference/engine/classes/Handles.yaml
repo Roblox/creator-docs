@@ -8,8 +8,8 @@ summary: |
 description: |
   The `Handles` object places 3D handles around any object that its
   `Class.Handles.Adornee|Adornee` is set to; this property must be set to a 3D
-  object for the handles to appear. The color can be changed and the shape
-  of the handles can be set to either arrows or spheres.
+  object for the handles to appear. The color can be changed and the shape of
+  the handles can be set to either arrows or spheres.
 
   For handles to be interactive, they must be parented to a player's
   `Class.PlayerGui` or the `Class.CoreGui`.

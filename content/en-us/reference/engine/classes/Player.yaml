@@ -932,7 +932,7 @@ properties:
     deprecation_message: ''
     security:
       read: None
-      write: WritePlayerSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Data
     serialization:

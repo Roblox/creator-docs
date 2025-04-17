@@ -98,5 +98,5 @@ When selecting the Publish option, you can upload the asset to the Marketplace, 
 For additional resources on the publishing process and Marketplace, see the following:
 
 - [Publish to the Marketplace](../marketplace/publish-to-marketplace.md)
-- [Marketplace fees and commissions](../marketplace/marketplace-fees-and-commissions.md
+- [Marketplace fees and commissions](../marketplace/marketplace-fees-and-commissions.md)
 - [Marketplace policy](../marketplace/marketplace-policy.md)

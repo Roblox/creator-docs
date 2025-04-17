@@ -943,6 +943,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/FaceInstance.yaml
         ignoreTranslation: true
+      - title: FacialAgeEstimationService
+        path: /reference/engine/classes/FacialAgeEstimationService
+        type: engineapi
+        source: /reference/engine/classes/FacialAgeEstimationService.yaml
+        ignoreTranslation: true
       - title: Feature
         path: /reference/engine/classes/Feature
         type: engineapi
@@ -2543,6 +2548,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/SyncScriptBuilder.yaml
         ignoreTranslation: true
+      - title: SystemThemeService
+        path: /reference/engine/classes/SystemThemeService
+        type: engineapi
+        source: /reference/engine/classes/SystemThemeService.yaml
+        ignoreTranslation: true
       - title: TaskScheduler
         path: /reference/engine/classes/TaskScheduler
         type: engineapi
@@ -3431,10 +3441,10 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AnnotationEditingMode.yaml
         ignoreTranslation: true
-      - title: AnnotationRequestResult
-        path: /reference/engine/enums/AnnotationRequestResult
+      - title: AnnotationRequestStatus
+        path: /reference/engine/enums/AnnotationRequestStatus
         type: engineapi
-        source: /reference/engine/enums/AnnotationRequestResult.yaml
+        source: /reference/engine/enums/AnnotationRequestStatus.yaml
         ignoreTranslation: true
       - title: AnnotationRequestType
         path: /reference/engine/enums/AnnotationRequestType
@@ -4020,6 +4030,11 @@ navigation:
         path: /reference/engine/enums/ExplosionType
         type: engineapi
         source: /reference/engine/enums/ExplosionType.yaml
+        ignoreTranslation: true
+      - title: FacialAgeEstimationResultType
+        path: /reference/engine/enums/FacialAgeEstimationResultType
+        type: engineapi
+        source: /reference/engine/enums/FacialAgeEstimationResultType.yaml
         ignoreTranslation: true
       - title: FacialAnimationStreamingState
         path: /reference/engine/enums/FacialAnimationStreamingState
@@ -5160,6 +5175,11 @@ navigation:
         path: /reference/engine/enums/SwipeDirection
         type: engineapi
         source: /reference/engine/enums/SwipeDirection.yaml
+        ignoreTranslation: true
+      - title: SystemThemeValue
+        path: /reference/engine/enums/SystemThemeValue
+        type: engineapi
+        source: /reference/engine/enums/SystemThemeValue.yaml
         ignoreTranslation: true
       - title: TableMajorAxis
         path: /reference/engine/enums/TableMajorAxis

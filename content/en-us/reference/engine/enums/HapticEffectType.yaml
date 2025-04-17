@@ -10,7 +10,8 @@ deprecation_message: ''
 items:
   - name: Custom
     summary: |
-      Allows for application of a custom haptic waveform through the `Class.HapticEffect:SetWaveformKeys()` method.
+      Allows for application of a custom haptic waveform through the
+      `Class.HapticEffect:SetWaveformKeys()` method.
     value: 0
     tags: []
     deprecation_message: ''
@@ -50,7 +51,8 @@ items:
     deprecation_message: ''
   - name: GameplayCollision
     summary: |
-      This effect is a large immediate rumble that dies down quickly, useful to signify a clear and purposeful impact between objects.
+      This effect is a large immediate rumble that dies down quickly, useful to
+      signify a clear and purposeful impact between objects.
     value: 5
     tags: []
     deprecation_message: ''

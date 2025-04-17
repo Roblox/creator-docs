@@ -1,4 +1,4 @@
-name: AnnotationRequestResult
+name: AnnotationRequestStatus
 type: enum
 summary: ''
 description: ''
@@ -11,18 +11,23 @@ items:
     value: 0
     tags: []
     deprecation_message: ''
-  - name: ErrorInternalFailure
+  - name: Loading
     summary: ''
     value: 1
     tags: []
     deprecation_message: ''
-  - name: ErrorNotFound
+  - name: ErrorInternalFailure
     summary: ''
     value: 2
     tags: []
     deprecation_message: ''
-  - name: ErrorModerated
+  - name: ErrorNotFound
     summary: ''
     value: 3
+    tags: []
+    deprecation_message: ''
+  - name: ErrorModerated
+    summary: ''
+    value: 4
     tags: []
     deprecation_message: ''

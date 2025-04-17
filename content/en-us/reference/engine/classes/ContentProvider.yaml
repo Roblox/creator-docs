@@ -328,7 +328,7 @@ methods:
 
       If any of the assets fail to load, an error message appears in the output.
       The method itself will not error and it will continue executing until it
-      has processed each requested instance or asset ID.
+      has processed each requested instance.
 
       ##### Limitations
 
