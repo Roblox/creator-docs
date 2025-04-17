@@ -37,14 +37,7 @@ properties:
       The MeshId is the content ID of the mesh that is to be displayed.
 
       The content ID for a mesh is generated when a developer uploads a mesh to
-      the Roblox website.
-
-      #### How do I create a mesh?
-
-      Meshes can currently only uploaded using `Class.MeshPart|MeshParts` or the
-      asset manager. Once uploaded however, the content ID for the mesh can be
-      used for the MeshId property. For more information, see
-      [Meshes](../../../parts/meshes.md).
+      Roblox.
     code_samples:
       - Mesh-VertexColor
     type: ContentId

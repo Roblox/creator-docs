@@ -12,7 +12,7 @@ Finally, the `Class.Sky` object can be used as a cubemap for reflections in `Cla
 
 ## Create skyboxes
 
-If you've created your own skybox images, you must first [import](../projects/assets/manager.md#import-assets) them to Roblox before you can use them in a skybox. Each image must be seamless along **all edges** of neighboring images when "folded" into a cube.
+If you've created your own skybox images, you must first [import](../projects/assets/manager.md#asset-import) them to Roblox before you can use them in a skybox. Each image must be seamless along **all edges** of neighboring images when "folded" into a cube.
 
 <figure>
 <img src="../assets/lighting-and-effects/skybox/Skybox-Unfolded.png" width="722" />

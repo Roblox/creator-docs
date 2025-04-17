@@ -57,12 +57,7 @@ To insert a package that doesn't already exist in the current place, you must **
   </figure>
 </GridContainer>
 
-Once you've inserted a package into a place's data model, it appears in the **Packages** folder of the [Asset Manager](../../projects/assets/manager.md) and remains there even if you later delete all copies of it. However, when you publish the place, the folder will update to reflect only packages used within the place.
-
-<figure>
-  <img src="../../assets/studio/asset-manager/Packages-Example.png" alt="The Asset Manager window with a few example packages." width="360" />
-  <figcaption>Packages in Asset Manager</figcaption>
-</figure>
+Once you've inserted a package into a published place's data model, it appears in the [Asset Manager](../../projects/assets/manager.md) and remains there even if you later delete all copies of it.
 
 <Alert severity="warning">
 Be careful when inserting assets that you didn't create into your experiences, as they can contain malicious scripts. Save your experience first and then investigate any scripts within unfamiliar assets so that you can easily revert back to the place version.

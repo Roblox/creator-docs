@@ -41,7 +41,7 @@ If the mesh file you are importing contains objects using specific naming conven
 - `Class.WrapLayer` — Objects with both `_InnerCage` `_OuterCage` at the end of their names.
 - `Class.FaceControls` — Objects containing avatar character heads and the appropriate facial animation data.
 
-If you want to bulk-import meshes along with non-3D assets, such as images and audio, you can use the [Asset Manager](../projects/assets/manager.md). However, the Asset Manager doesn't support importing meshes with rigging, skinning, and animation data, accessories, or characters with facial animations.
+If you want to bulk-import meshes along with non-3D assets, such as images and audio, you can use the [Asset Manager](../projects/assets/manager.md); note, however, that it doesn't support importing meshes with rigging, skinning, and animation data, accessories, or characters with facial animations.
 
 ## Customize meshes
 
@@ -78,7 +78,7 @@ If you add both `Class.SurfaceAppearance` and `Class.MaterialVariant` as child o
 <TabItem label="Single Texture">
 If the mesh you import to Studio doesn't come with texture data, or you want to change the existing texture, use the following steps to add a single texture:
 
-1. [Import the texture file](../projects/assets/manager.md#import-assets) to Asset Manager. The file must follow the [texture specifications](../art/modeling/texture-specifications.md). Upon completion, Studio automatically assigns and prompts an asset ID.
+1. [Import the texture file](../projects/assets/manager.md#asset-import). The file must follow the [texture specifications](../art/modeling/texture-specifications.md). Upon completion, Studio automatically assigns and prompts an asset ID.
 2. Copy the asset ID.
 3. In the **Explorer** window, select the **MeshPart** object.
 4. In the **Properties** window, select the **TextureID** field and paste the asset ID of the texture.

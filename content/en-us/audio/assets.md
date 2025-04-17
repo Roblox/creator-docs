@@ -27,7 +27,7 @@ To find audio assets on the Creator Store:
 
 ## Import audio
 
-You can import custom audio through the Asset Manager, Creator Dashboard, and Open Cloud API as long as your audio meets the following requirements:
+You can import custom audio through the [Asset Manager](../projects/assets/manager.md), Creator Dashboard, and Open Cloud API as long as your audio meets the following requirements:
 
 - You have the legal rights to that audio asset.
 - It adheres to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846).
@@ -41,28 +41,17 @@ If you're [ID verified](../production/publishing/account-verification.md), you c
 <Tabs>
   <TabItem key = "1" label="Asset Manager">
 
-To import audio through the Asset Manager:
+To import audio through the **Asset Manager**:
 
-1. In the **View** tab, click **Asset Manager**.
-
-   <img src="../assets/studio/general/View-Tab-Asset-Manager.png" width="776" alt="Asset Manager toggle button in Studio" />
-
-2. Click the **Bulk Import** button.
-
-   <img src="../assets/studio/asset-manager/Import-Button.png" width="360" />
-
-3. Select and then confirm the audio files you want to import from your local system.
-4. Once you confirm the imports and the files import successfully, they display with a green checkmark and a completed status.
-
-   <img src="../assets/studio/asset-manager/Audio-Import.png" width="360" />
+1. Click the **Import** button.
+2. Select and then confirm the audio files you want to import from your local system.
+3. Once you confirm the imports and the files import successfully, they display with a green checkmark and a completed status.
 
    <Alert severity="info">
    To standardize the playback format and check for corrupt or invalid files, Studio transcodes imported audio before saving it as an asset. If you receive an error while importing audio, Studio is likely rejecting it during the transcode process. In addition, some older audio tools generate invalid file headers or frames when exporting.
 
    If Studio continues to reject the audio you're trying to import, ensure your audio tools are updated, then verify that the audio files meet the import requirements.
    </Alert>
-
-Your audio assets are now within the moderation queue and are only visible to you within the **Audio** folder of the Asset Manager.
 
   </TabItem>
   <TabItem key = "2" label="Creator Dashboard">

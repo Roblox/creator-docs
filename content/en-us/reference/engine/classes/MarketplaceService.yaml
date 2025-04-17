@@ -1432,6 +1432,13 @@ callbacks:
     summary: |
       A callback to process receipts of developer product purchases.
     description: |
+      `ProcessReceipt` is a callback to process receipts from
+      [developer product purchases](../../../production/monetization/developer-products.md). You can sell developer products inside an experience using `MarketplaceService` functions, or outside an experience on the Store tab of your experience details page.
+
+      You should only set the `ProcessReceipt` callback one time in a single
+      server-side `Class.Script|Script`. This callback must handle the receipts
+      for all developer products you have for sale.
+
       **IMPORTANT:** We **highly recommend** that you properly implement the
       `ProcessReceipt` callback in order to sell your developer products. You
       should use `ProcessReceipt` to grant users their purchased product over
@@ -1439,17 +1446,7 @@ callbacks:
       correct, you will **not** be able to grant users the products they have
       purchased on the Store tab of your experience details page.
 
-      A callback to process receipts from
-      [developer product](../../../production/monetization/developer-products.md)
-      purchases. You can sell developer products inside an experience using
-      `MarketplaceService` functions, or outside an experience on the Store tab
-      of your experience details page.
-
-      You should only set the `ProcessReceipt` callback one time in a single
-      server-side `Class.Script|Script`. This callback must handle the receipts
-      for all developer products you have for sale.
-
-      #### Guarantees
+      ##### Guarantees
 
       The `ProcessReceipt` callback is called for all unresolved developer
       product purchases when:
@@ -1469,7 +1466,7 @@ callbacks:
         enum of `Enum.ProductPurchaseDecision.PurchaseGranted|PurchaseGranted`.
       - The purchase is successfully recorded on Roblox's backend.
 
-      #### Unresolved developer product purchases
+      ##### Unresolved developer product purchases
 
       An **unresolved developer product purchase** takes place when a user's
       purchase of a developer product has not yet been acknowledged by the
@@ -1478,7 +1475,7 @@ callbacks:
       Unresolved developer product purchases are not removed or refunded after
       the escrow period expires.
 
-      #### Retries and timeouts
+      ##### Retries and timeouts
 
       `ProcessReceipt` has no time-based retry mechanism. If a user makes a
       purchase that returns a `Enum.ProductPurchaseDecision` enum of
@@ -1492,8 +1489,9 @@ callbacks:
       `ProcessReceipt` callback can yield for as long as the server is running,
       and the callback result is still accepted when the result returns.
 
-      #### Limitations
+      ##### Limitations
 
+      - If you don't implement a `ProcessReceipt` callback, your receipts will be auto-acknowledged. You can't get a receipt back after it has been acknowledged.
       - When there are multiple purchases pending for a user, `ProcessReceipt`
         callbacks are called in a non-deterministic order.
       - The user must be on the server for the `ProcessReceipt` callback to be

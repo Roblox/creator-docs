@@ -511,6 +511,11 @@ callbacks:
       If the chat message is sent via `Class.TextChatService:DisplayBubble`,
       `adornee` will be the `partOrCharacter` provided, and `message.TextSource`
       will be `nil`.
+
+      When bound to the client sending a message, this callback is run twice:
+      first when the message is initially sent and received locally, then again
+      when the client receives the result of the filtered message from the
+      server.
     code_samples: []
     parameters:
       - name: message
@@ -549,6 +554,11 @@ callbacks:
       parented under `Class.ChatWindowMessageProperties`, it will also override
       the `Class.ChatWindowConfiguration.TextColor3|TextColor3` property defined
       in `Class.ChatWindowConfiguration`.
+
+      When bound to the client sending a message, this callback is run twice:
+      first when the message is initially sent and received locally, then again
+      when the client receives the result of the filtered message from the
+      server.
     code_samples: []
     parameters:
       - name: message

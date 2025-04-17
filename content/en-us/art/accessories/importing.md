@@ -33,18 +33,14 @@ To import your asset:
 
 If textures didn't load correctly, add them manually. You may need to save and publish your experience in order to access the [Asset Manager](../../projects/assets/manager.md).
 
-1. Open the Asset Manager. You may need to save and publish your experience before accessing your assets.
-2. In the Asset Manager, select the **Bulk Import** button.
-
-   <img src="../../assets/studio/asset-manager/Import-Button.png" width = "60%"/>
-
-3. Upload your image files.
-4. After moderation clears for your image, select the `Class.MeshPart` parented within your imported `Class.Model`.
-5. Add a `Class.SurfaceAppearance` child to your `Class.MeshPart`.
+1. In the **Asset Manager**, click the **Import** button.
+2. Upload your image files.
+3. After moderation clears for your image, select the `Class.MeshPart` parented within your imported `Class.Model`.
+4. Add a `Class.SurfaceAppearance` child to your `Class.MeshPart`.
 
    <img src="../../assets/art/accessories/creating-rigid/Adding-Surface-Appearance.png" />
 
-6. In the `Class.SurfaceAppearance` properties, click each property value and assign the appropriate texture image from the asset dropdown:
+5. In the `Class.SurfaceAppearance` properties, click each property value and assign the appropriate texture image from the asset dropdown:
 
    1. Set the **ColorMap** to the **\_ALB** texture image.
    2. Set the **MetalnessMap** to the **\_MTL** texture image.

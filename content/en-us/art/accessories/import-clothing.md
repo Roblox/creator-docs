@@ -30,15 +30,11 @@ To import your asset:
 <AccordionDetails>
  If textures didn't load correctly, add them manually. You may need to save and publish your experience in order to access the [Asset Manager](../../projects/assets/manager.md).
 
-1.  Open the Asset Manager. You may need to save and publish your experience before accessing your assets.
-2.  In the Asset Manager, select the **Bulk Import** button.
-
-    <img src="../../assets/studio/asset-manager/Import-Button.png" width = "60%"/>
-
-3.  Upload your image files.
-4.  After moderation clears for your image, select the `Class.MeshPart` parented within your imported `Class.Model`.
-5.  If you are using a single basic texture, set the `Class.MeshPart.TextureID` property to your uploaded texture image.
-6.  If you are using PBR Textures:
+1.  In the **Asset Manager**, click the **Import** button.
+2.  Upload your image files.
+3.  After moderation clears for your image, select the `Class.MeshPart` parented within your imported `Class.Model`.
+4.  If you are using a single basic texture, set the `Class.MeshPart.TextureID` property to your uploaded texture image.
+5.  If you are using PBR textures:
 
     1. Add a `Class.SurfaceAppearance` child to your `Class.MeshPart`.
 

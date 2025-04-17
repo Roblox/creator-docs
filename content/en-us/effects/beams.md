@@ -66,7 +66,7 @@ The visual quality of your beams can change depending on the graphics settings o
 
 ### Texture
 
-The `Class.Beam.Texture|Texture` property renders that texture across the length of the beam. You can set a beam's `Class.Beam.Texture|Texture` property to any asset ID. For more information, including how to add or upload your own textures, see [Importing Assets](../projects/assets/manager.md#importing-assets).
+The `Class.Beam.Texture|Texture` property renders that texture across the length of the beam. You can set a beam's `Class.Beam.Texture|Texture` property to any asset ID. For more information, including how to add or upload your own textures, see [here](../projects/assets/manager.md#asset-import).
 
 <img src="../assets/lighting-and-effects/beam/Texture-Applied.png" alt="A texture of dark gray circles against a grey background emits between two attachments." width="800" />
 

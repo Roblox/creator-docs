@@ -53,7 +53,7 @@ If you're creating an image to use as a particle texture, it's best to use `.png
 
 <Alert severity="info">
 For steps on how to import an image for use as a particle texture,
-see [Import assets](../projects/assets/manager.md#import-assets).
+see [here](../projects/assets/manager.md#asset-import).
 </Alert>
 
 To insert an image into a particle emitter:
