@@ -132,7 +132,7 @@ While albedo maps and generic [non-PBR texture maps](../../parts/textures-decals
 
 #### Alpha modes
 
-For objects that require partial or complete sections of transparency, such as grass, leaves, lace, or decals like dirt or grunge, you can use various **alpha modes** to apply transparency to your color map. If your color map image format supports alpha channels, you can apply a grayscale alpha map where 0.0 is opaque and 1.0 is transparent. Similarly, when using an image format such as a `.png`, any opacity on the color map applies as transparency on the asset.
+For objects that require partial or complete sections of transparency, such as grass, leaves, lace, or decals like dirt or grunge, you can use various **alpha modes** to apply transparency to your color map. If your color map image format supports alpha channels, you can apply a grayscale alpha map where `0.0` is transparent and `1.0` is opaque. Similarly, when using an image format such as a `.png`, any opacity on the color map applies as transparency on the asset.
 
 You can apply transparency in two different behaviors by setting the following `Class.SurfaceAppearance.AlphaMode|AlphaMode` values:
 
