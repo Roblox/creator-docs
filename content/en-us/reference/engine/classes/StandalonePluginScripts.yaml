@@ -8,6 +8,15 @@ description: |
   in a standalone plugin `Class.DataModel` when Roblox Studio starts (it is not
   useful outside the context of plugins). When a place to be edited is loaded in
   Roblox Studio, scripts inside this container are not run.
+
+  #### Limited Functionality and Availabilty
+  
+  Throughout the history of this instance, its functionality has been enabled
+  and disabled without notice. Before doing any work with it, make sure to verify
+  that it works as expected before continuing with further work.
+
+  Seemingly, when enabled, **StandalonePluginScripts** work only with Local 
+  `Class.Plugin|Plugins`.
 code_samples:
 inherits:
   - Instance
