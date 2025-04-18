@@ -5,9 +5,10 @@ memory_category: Internal
 summary: |
   Used to play text as speech audio.
 description: |
-  `Class.AudioTextToSpeech` is used to play text as speech audio. It provides a single
-  **Output** pin which can be connected to other pins via `Class.Wire|Wires`.
-  This API is still in development and is not yet publicly available
+  `Class.AudioTextToSpeech` is used to play text as speech audio. It provides a
+  single **Output** pin which can be connected to other pins via
+  `Class.Wire|Wires`. This API is still in development and is not yet publicly
+  available
 code_samples:
   - audio-wiring---text-to-speech
 inherits:
@@ -18,13 +19,14 @@ deprecation_message: ''
 properties:
   - name: AudioTextToSpeech.IsLoaded
     summary: |
-      Denotes whether the `Class.AudioTextToSpeech` object is loaded, buffered, and ready to
-      play.
+      Denotes whether the `Class.AudioTextToSpeech` object is loaded, buffered,
+      and ready to play.
     description: |
-      Denotes whether the `Class.AudioTextToSpeech` object is loaded, buffered, and ready to
-      play. Although uncommon, `Class.AudioTextToSpeech` objects may have their
-      assets unloaded at runtime if there is extreme memory pressure, in which
-      case `Class.AudioTextToSpeech.IsLoaded|IsLoaded` will become false.
+      Denotes whether the `Class.AudioTextToSpeech` object is loaded, buffered,
+      and ready to play. Although uncommon, `Class.AudioTextToSpeech` objects
+      may have their assets unloaded at runtime if there is extreme memory
+      pressure, in which case `Class.AudioTextToSpeech.IsLoaded|IsLoaded` will
+      become false.
     code_samples: []
     type: boolean
     tags:
@@ -46,10 +48,11 @@ properties:
     summary: |
       Denotes whether the `Class.AudioTextToSpeech` object is currently playing.
     description: |
-      Denotes whether the `Class.AudioTextToSpeech` object is currently playing. This
-      property is read-only, but replicates. To play and stop an
-      `Class.AudioTextToSpeech` object at runtime, use the `Class.AudioTextToSpeech:Play()|Play()`
-      and `Class.AudioTextToSpeech:Pause()|Pause()` methods.
+      Denotes whether the `Class.AudioTextToSpeech` object is currently playing.
+      This property is read-only, but replicates. To play and stop an
+      `Class.AudioTextToSpeech` object at runtime, use the
+      `Class.AudioTextToSpeech:Play()|Play()` and
+      `Class.AudioTextToSpeech:Pause()|Pause()` methods.
     code_samples: []
     type: boolean
     tags: []
@@ -69,8 +72,8 @@ properties:
     summary: |
       Controls whether the `Class.AudioTextToSpeech` object loops.
     description: |
-      Controls whether the `Class.AudioTextToSpeech` object loops when exceeding the end of
-      its `Class.AudioTextToSpeech.TimeLength|TimeLength`.
+      Controls whether the `Class.AudioTextToSpeech` object loops when exceeding
+      the end of its `Class.AudioTextToSpeech.TimeLength|TimeLength`.
     code_samples: []
     type: boolean
     tags: []
@@ -88,10 +91,12 @@ properties:
     writeCapabilities: []
   - name: AudioTextToSpeech.Pitch
     summary: |
-      Controls the pitch of the generated speech audio, which will be independent of its speed.
+      Controls the pitch of the generated speech audio, which will be
+      independent of its speed.
     description: |
-      A value in musical semitones. The pitch of the generated speech audio is shifted from 
-      its default value by `AudioTextToSpeech.Pitch` semitones. Ranges from -12.0 to 12.0.
+      A value in musical semitones. The pitch of the generated speech audio is
+      shifted from its default value by `AudioTextToSpeech.Pitch` semitones.
+      Ranges from -12.0 to 12.0.
     code_samples: []
     type: float
     tags: []
@@ -109,10 +114,11 @@ properties:
     writeCapabilities: []
   - name: AudioTextToSpeech.PlaybackSpeed
     summary: |
-      Controls how quickly the speech audio will be played, which controls its pitch.
+      Controls how quickly the speech audio will be played, which controls its
+      pitch.
     description: |
-      Multiplier controlling how quickly the speech audio will be played, directly
-      controlling its perceived pitch. Ranges from 0 to 20.
+      Multiplier controlling how quickly the speech audio will be played,
+      directly controlling its perceived pitch. Ranges from 0 to 20.
     code_samples: []
     type: float
     tags: []
@@ -130,9 +136,11 @@ properties:
     writeCapabilities: []
   - name: AudioTextToSpeech.Speed
     summary: |
-      Controls the speed of the generated speech audio, which will be independent of its pitch.
+      Controls the speed of the generated speech audio, which will be
+      independent of its pitch.
     description: |
-      Multiplier controlling the speed of the generated speech audio. Ranges from 0.5 to 2.0.
+      Multiplier controlling the speed of the generated speech audio. Ranges
+      from 0.5 to 2.0.
     code_samples: []
     type: float
     tags: []
@@ -147,7 +155,7 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []  
+    writeCapabilities: []
   - name: AudioTextToSpeech.Text
     summary: |
       The text to be converted into speech audio by `Class.AudioTextToSpeech`.
@@ -192,7 +200,8 @@ properties:
     writeCapabilities: []
   - name: AudioTextToSpeech.TimePosition
     summary: |
-      Tracks the current position of the playhead within the generated speech audio.
+      Tracks the current position of the playhead within the generated speech
+      audio.
     description: |
       Tracks and controls the current position of the playhead within the
       generated speech audio, in seconds.
@@ -215,7 +224,7 @@ properties:
     summary: |
       The voice style to be used by `Class.AudioTextToSpeech`.
     description: |
-      The voice style to be used by`Class.AudioTextToSpeech`. 
+      The voice style to be used by`Class.AudioTextToSpeech`.
     code_samples: []
     type: string
     tags: []
@@ -275,6 +284,60 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: AudioTextToSpeech:Pause
+    summary: |
+      Pauses the `Class.AudioTextToSpeech` object wherever its
+      `Class.AudioTextToSpeech.TimePosition|TimePosition` is.
+    description: |
+      Pauses the `Class.AudioTextToSpeech` object wherever its
+      `Class.AudioTextToSpeech.TimePosition|TimePosition` is. Replicates from
+      server to client.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AudioTextToSpeech:Play
+    summary: |
+      Plays the `Class.AudioTextToSpeech` from wherever its
+      `Class.AudioTextToSpeech.TimePosition|TimePosition` is.
+    description: |
+      Plays the `Class.AudioTextToSpeech` from wherever its
+      `Class.AudioTextToSpeech.TimePosition|TimePosition` is. Replicates from
+      server to client.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AudioTextToSpeech:Unload
+    summary: |
+      Unload the generated speech audio.
+    description: |
+      Frees resources by unloading the generated speech audio.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AudioTextToSpeech:GetWaveformAsync
     summary: ''
     description: ''
@@ -302,10 +365,9 @@ methods:
     summary: |
       Generates speech audio.
     description: |
-      A blocking call that begins the generation of speech audio based on the 
-      current parameters. It will yield until the speech generation either 
-      completes or fails.
-      Status is returned by an AssetFetchStatus value.
+      A blocking call that begins the generation of speech audio based on the
+      current parameters. It will yield until the speech generation either
+      completes or fails. Status is returned by an AssetFetchStatus value.
     code_samples: []
     parameters: []
     returns:
@@ -318,75 +380,22 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: AudioTextToSpeech:Pause
-    summary: |
-      Pauses the `Class.AudioTextToSpeech` object wherever its
-      `Class.AudioTextToSpeech.TimePosition|TimePosition` is.
-    description: |
-      Pauses the `Class.AudioTextToSpeech` object wherever its
-      `Class.AudioTextToSpeech.TimePosition|TimePosition` is. Replicates from server
-      to client.
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: AudioTextToSpeech:Play
-    summary: |
-      Plays the `Class.AudioTextToSpeech` from wherever its
-      `Class.AudioTextToSpeech.TimePosition|TimePosition` is.
-    description: |
-      Plays the `Class.AudioTextToSpeech` from wherever its
-      `Class.AudioTextToSpeech.TimePosition|TimePosition` is. Replicates from server
-      to client.
-    code_samples: []
-    parameters: []
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: AudioTextToSpeech:Unload
-    summary: |
-      Unload the generated speech audio.
-    description: |
-      Frees resources by unloading the generated speech audio.
-    code_samples: []
-    parameters: []
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
 events:
   - name: AudioTextToSpeech.Ended
     summary: |
-      Fires when the `Class.AudioTextToSpeech` object has completed playback and paused.
+      Fires when the `Class.AudioTextToSpeech` object has completed playback and
+      paused.
     description: |
-      Fires after the `Class.AudioTextToSpeech` object has completed playback and paused.
-      Note this event will **not** fire for audio with
-      `Class.AudioTextToSpeech.Looped|Looped` set to `true` since it continues playing
-      upon reaching its end. This event will also **not** fire when the audio is
-      paused before playback has completed; for this, use
+      Fires after the `Class.AudioTextToSpeech` object has completed playback
+      and paused. Note this event will **not** fire for audio with
+      `Class.AudioTextToSpeech.Looped|Looped` set to `true` since it continues
+      playing upon reaching its end. This event will also **not** fire when the
+      audio is paused before playback has completed; for this, use
       `Class.AudioTextToSpeech:GetPropertyChangedSignal()` on the
       `Class.AudioTextToSpeech.IsPlaying|IsPlaying` property.
 
-      This event is may be used to destroy an `Class.AudioTextToSpeech` object when it has
-      completed playback.
+      This event is may be used to destroy an `Class.AudioTextToSpeech` object
+      when it has completed playback.
     code_samples: []
     parameters: []
     tags: []
@@ -399,8 +408,8 @@ events:
     summary: |
       Fires when the `Class.AudioTextToSpeech` object loops.
     description: |
-      Event that fires after the `Class.AudioTextToSpeech` object loops. This happens when
-      the audio reaches the end of its content and
+      Event that fires after the `Class.AudioTextToSpeech` object loops. This
+      happens when the audio reaches the end of its content and
       `Class.AudioTextToSpeech.Looping|Looping` is `true`.
 
       This event does **not** fire if the audio is looped manually by changing
@@ -432,7 +441,8 @@ events:
         type: string
         default:
         summary: |
-          The pin on the `Class.AudioTextToSpeech` that the `Class.Wire` targets.
+          The pin on the `Class.AudioTextToSpeech` that the `Class.Wire`
+          targets.
       - name: wire
         type: Wire
         default:

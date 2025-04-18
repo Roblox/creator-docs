@@ -1433,7 +1433,10 @@ callbacks:
       A callback to process receipts of developer product purchases.
     description: |
       `ProcessReceipt` is a callback to process receipts from
-      [developer product purchases](../../../production/monetization/developer-products.md). You can sell developer products inside an experience using `MarketplaceService` functions, or outside an experience on the Store tab of your experience details page.
+      [developer product purchases](../../../production/monetization/developer-products.md).
+      You can sell developer products inside an experience using
+      `MarketplaceService` functions, or outside an experience on the Store tab
+      of your experience details page.
 
       You should only set the `ProcessReceipt` callback one time in a single
       server-side `Class.Script|Script`. This callback must handle the receipts
@@ -1491,7 +1494,9 @@ callbacks:
 
       ##### Limitations
 
-      - If you don't implement a `ProcessReceipt` callback, your receipts will be auto-acknowledged. You can't get a receipt back after it has been acknowledged.
+      - If you don't implement a `ProcessReceipt` callback, your receipts will
+        be auto-acknowledged. You can't get a receipt back after it has been
+        acknowledged.
       - When there are multiple purchases pending for a user, `ProcessReceipt`
         callbacks are called in a non-deterministic order.
       - The user must be on the server for the `ProcessReceipt` callback to be
