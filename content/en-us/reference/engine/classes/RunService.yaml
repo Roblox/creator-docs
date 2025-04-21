@@ -669,7 +669,7 @@ events:
         type: double
         default:
         summary: |
-          The time (in seconds) that has elapsed since the previous frame.
+          The time (in seconds) that has elapsed since the previous simulation step.
     tags: []
     deprecation_message: ''
     security: None
