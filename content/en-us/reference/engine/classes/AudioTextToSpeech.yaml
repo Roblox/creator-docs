@@ -3,12 +3,12 @@ type: class
 category:
 memory_category: Internal
 summary: |
-  Used to play text as speech audio.
+  Plays text as speech audio.
 description: |
   `Class.AudioTextToSpeech` is used to play text as speech audio. It provides a
   single **Output** pin which can be connected to other pins via
   `Class.Wire|Wires`. This API is still in development and is not yet publicly
-  available
+  available.
 code_samples:
   - audio-wiring---text-to-speech
 inherits:
