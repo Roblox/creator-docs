@@ -169,6 +169,10 @@ methods:
       `Class.BasePart:SetNetworkOwner()`, this function also loads the animation
       for the server as well.
 
+      Note that the `Class.Animator` must be in the `Class.Workspace` before
+      making a call to `LoadAnimation()` or else it will be unable to retrieve
+      the `Class.AnimationClipProvider` service and error.
+
       You should use this function directly instead of the similarly-named
       `Class.Humanoid:LoadAnimation()` and
       `Class.AnimationController:LoadAnimation()` functions. These are
