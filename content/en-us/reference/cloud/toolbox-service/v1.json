@@ -301,10 +301,7 @@
         },
         "x-roblox-scopes": [
           {
-            "name": {
-              "ScopeName": "creator-store-product:read",
-              "TargetResourceSpecifier": ""
-            }
+            "name": "creator-store-product:read"
           }
         ],
         "security": [

@@ -22,6 +22,8 @@ navigation:
     path: /production/monetization/paid-access-local-currency
   - title: Price optimization
     path: /production/monetization/price-optimization
+  - title: Regional Pricing
+    path: /production/monetization/regional-pricing
 
   - heading: Advertise
   - title: Ads Manager
