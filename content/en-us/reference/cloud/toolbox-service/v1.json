@@ -9,18 +9,20 @@
     "/toolbox-service/v2/assets:search": {
       "get": {
         "tags": ["ToolboxService"],
+        "description": "Search Creator Store for assets.",
         "parameters": [
           {
             "name": "searchCategoryType",
             "in": "query",
+            "description": "The asset type to search within.",
             "required": true,
-            "description": "This represents a \"subset\" of Toolbox.Service.CategoryType options and represent the full set\r\nof \"categories\" (or asset types) that can be searched upon from the toolbox search API.",
             "schema": {
               "allOf": [
                 {
                   "$ref": "#/components/schemas/SearchCategoryType"
                 }
               ],
+              "description": "This represents a \"subset\" of Toolbox.Service.CategoryType options and represent the full set\r\nof \"categories\" (or asset types) that can be searched upon from the toolbox search API.",
               "x-enumNames": [
                 "Audio",
                 "Model",
@@ -53,6 +55,7 @@
           {
             "name": "query",
             "in": "query",
+            "description": "The search terms used to filter the results.",
             "schema": {
               "type": "string"
             }
@@ -60,6 +63,7 @@
           {
             "name": "modelSubTypes",
             "in": "query",
+            "description": "When searching for models, the subtypes associated with the search results.",
             "schema": {
               "type": "array",
               "items": {
@@ -71,6 +75,7 @@
           {
             "name": "excludedModelSubTypes",
             "in": "query",
+            "description": "When searching for models, the subtypes not associated with the search results.",
             "schema": {
               "type": "array",
               "items": {
@@ -82,6 +87,7 @@
           {
             "name": "creator",
             "in": "query",
+            "description": "The creator type and ID. E.g. \"user/123\" or \"group/456\"",
             "schema": {
               "pattern": "^(user|group)/\\d+$",
               "type": "string"
@@ -90,6 +96,7 @@
           {
             "name": "pageToken",
             "in": "query",
+            "description": "The identifier for the desired search results page.",
             "schema": {
               "type": "string"
             }
@@ -97,6 +104,7 @@
           {
             "name": "maxPageSize",
             "in": "query",
+            "description": "The number of assets to be returned. Cannot be larger than 100.",
             "schema": {
               "maximum": 100,
               "minimum": 1,
@@ -108,13 +116,14 @@
           {
             "name": "sortDirection",
             "in": "query",
-            "description": "Represents the direction in which to sort the results",
+            "description": "The sort direction of the search results.",
             "schema": {
               "allOf": [
                 {
                   "$ref": "#/components/schemas/SortDirection"
                 }
               ],
+              "description": "Represents the direction in which to sort the results",
               "default": "None",
               "x-enumNames": ["None", "Ascending", "Descending"],
               "x-enum-varnames": ["None", "Ascending", "Descending"],
@@ -131,6 +140,7 @@
                   "$ref": "#/components/schemas/SortCategory"
                 }
               ],
+              "description": "The category to sort the search results by.",
               "default": "Relevance",
               "x-enumNames": [
                 "Relevance",
@@ -158,6 +168,7 @@
           {
             "name": "audioMinDurationSeconds",
             "in": "query",
+            "description": "When searching for audio, the minimum duration of the audio assets. If included, must be greater than or equal to 0.",
             "schema": {
               "maximum": 2147483647,
               "minimum": 0,
@@ -169,6 +180,7 @@
           {
             "name": "audioMaxDurationSeconds",
             "in": "query",
+            "description": "When searching for audio, the maximum duration of the audio assets. If included, must be greater than or equal to 0.",
             "schema": {
               "maximum": 2147483647,
               "minimum": 1,
@@ -180,6 +192,7 @@
           {
             "name": "audioArtist",
             "in": "query",
+            "description": "When searching for audio, the artist name of the audio assets.",
             "schema": {
               "type": "string"
             }
@@ -187,6 +200,7 @@
           {
             "name": "audioAlbum",
             "in": "query",
+            "description": "When searching for audio, the album name of the audio assets.",
             "schema": {
               "type": "string"
             }
@@ -194,6 +208,7 @@
           {
             "name": "audioTypes",
             "in": "query",
+            "description": "When searching for audio, the type of the audio assets.",
             "schema": {
               "type": "array",
               "items": {
@@ -205,6 +220,7 @@
           {
             "name": "includeOnlyVerifiedCreators",
             "in": "query",
+            "description": "Whether the results should only include assets created by verified creators.",
             "schema": {
               "type": "boolean",
               "default": true
@@ -213,6 +229,7 @@
           {
             "name": "minPriceCents",
             "in": "query",
+            "description": "The minimum price of the asset in cents. If included, must be greater than or equal to 0.",
             "schema": {
               "maximum": 2147483647,
               "minimum": 0,
@@ -224,6 +241,7 @@
           {
             "name": "maxPriceCents",
             "in": "query",
+            "description": "The maximum price of the asset in cents. If included, must be greater than or equal to 0.",
             "schema": {
               "maximum": 2147483647,
               "minimum": 0,
@@ -235,6 +253,7 @@
           {
             "name": "facets",
             "in": "query",
+            "description": "Additional keywords to query by.",
             "schema": {
               "type": "array",
               "items": {
@@ -246,13 +265,14 @@
           {
             "name": "searchView",
             "in": "query",
-            "description": "This view controls which fields are populated in the search response. A lighter\r\nview will result in faster response times and higher reliability.",
+            "description": "Indicates which fields will be populated in the response.",
             "schema": {
               "allOf": [
                 {
                   "$ref": "#/components/schemas/SearchView"
                 }
               ],
+              "description": "This view controls which fields are populated in the search response. A lighter\r\nview will result in faster response times and higher reliability.",
               "default": "Core",
               "x-enumNames": ["IDs", "Core", "Full"],
               "x-enum-varnames": ["IDs", "Core", "Full"],
@@ -281,10 +301,7 @@
         },
         "x-roblox-scopes": [
           {
-            "name": {
-              "ScopeName": "creator-store-product:read",
-              "TargetResourceSpecifier": ""
-            }
+            "name": "creator-store-product:read"
           }
         ],
         "security": [

@@ -142,7 +142,7 @@ In the upper-right corner of the 3D viewport, you can quickly toggle or set comm
 
 ## Common windows
 
-You can toggle on commonly used windows through the [View](../studio/view-tab.md) tab, including the [Explorer](../studio/explorer.md) window, [Properties](../studio/properties.md) window, [Asset&nbsp;Manager](../projects/assets/manager.md), [Toolbox](../projects/assets/toolbox.md), and many others.
+You can toggle on commonly used windows through the [View](../studio/view-tab.md) tab, including the [Explorer](../studio/explorer.md) window, [Properties](../studio/properties.md) window, [Asset Manager](../projects/assets/manager.md), [Toolbox](../projects/assets/toolbox.md), and many others.
 
 <img src="../assets/studio/general/Toolbar-View-Tab.png" width="876" alt="Studio's toolbar and View tab with the tab highlighted." />
 
@@ -168,11 +168,9 @@ At the bottom of the window, you can define custom [attributes](../studio/proper
 
 ### Asset Manager
 
-The [Asset Manager](../projects/assets/manager.md) lets you manage places, images, meshes, packages, audio, and models in your experience. It also provides a mechanism to bulk import large groups of assets.
+The [Asset Manager](../projects/assets/manager.md) lets you manage places, images, meshes, audio, and more. It also provides a mechanism to bulk import large groups of assets.
 
 <img src="../assets/studio/general/View-Tab-Asset-Manager.png" width="776" alt="Studio's View tab with the Asset Manager button highlighted." />
-
-<img src="../assets/studio/asset-manager/Grid-View.png" width="360" alt="The Asset Manager window." />
 
 ### Toolbox
 

@@ -7,7 +7,7 @@ navigation:
   - title: Manage
     path: /projects/assets/manager
     section:
-      - title: Asset manager
+      - title: Asset Manager
         path: /projects/assets/manager
       - title: Toolbox
         path: /projects/assets/toolbox

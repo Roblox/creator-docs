@@ -143,7 +143,7 @@ You can also choose to **sell** plugins on the Creator Store for **United States
 
 To distribute an asset through the [Creator Dashboard](https://create.roblox.com/dashboard/creations):
 
-1. In the horizontal navigation, select [Development Items](https://create.roblox.com/dashboard/creations?activeTab=Model). All assets you have [previously imported](../projects/assets/manager.md#import-assets) display within their respective category.
+1. In the horizontal navigation, select [Development Items](https://create.roblox.com/dashboard/creations?activeTab=Model). All assets you have [previously imported](../projects/assets/manager.md#asset-import) display within their respective category.
 1. Select the asset that you want to distribute. The asset's **Configure** page displays.
 1. In the **Settings** section, enable the **Distribute on Creator Store** toggle.
 1. **(Optional)** If you have a [seller account](./sell-on-creator-store.md) and are distributing a plugin, set a price in USD for the asset in the **USD Pricing** field. If you keep the default value of **Free**, the asset will be free to all creators.
@@ -161,7 +161,7 @@ You can upload assets directly in Studio from the [Toolbox](../projects/assets/t
 <TabItem label="Toolbox">
 Assuming the asset is in your [inventory](../projects/assets/toolbox.md#inventory) and you want to distribute it in the Creator Store:
 
-1. In the [Toolbox](../projects/assets/toolbox.md), select the **Creations** tab. All assets you have [previously imported](../projects/assets/manager.md#import-assets) display within the chosen category.
+1. In the [Toolbox](../projects/assets/toolbox.md), select the **Creations** tab. All assets you have [previously imported](../projects/assets/manager.md#asset-import) display within the chosen category.
 
    <img src="../assets/studio/toolbox/Creations-Tab.png" width="360" />
 

@@ -27,7 +27,7 @@ The **View** tab lets you toggle various windows in Studio, toggle the [view sel
   </tr>
   <tr>
     <td>**Asset Manager**</td>
-    <td>Toggles the [Asset Manager](../projects/assets/manager.md) window for managing the experience's places, images, meshes, and more.</td>
+    <td>Toggles the [Asset Manager](../projects/assets/manager.md) window for managing the experience's places, images, meshes, audio, and more.</td>
   </tr>
   <tr>
     <td>**Toolbox**</td>

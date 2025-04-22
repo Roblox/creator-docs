@@ -78,11 +78,11 @@ The 3D Importer provides the following settings for all meshes:
   </tr>
   <tr>
     <td>Add Model To Inventory</td>
-    <td>If enabled, the 3D Importer adds the model to your Toolbox / Asset Manager inventory as a new asset. By default, this is **enabled**. <br /><br />If disabled, the 3D Importer does not add the asset to your inventory.</td>
+    <td>If enabled, the 3D Importer adds the model to your **Toolbox** and **Asset Manager** inventory as a new asset. By default, this is **enabled**. <br /><br />If disabled, the 3D Importer does not add the asset to your inventory.</td>
   </tr>
   <tr>
     <td>Insert In Workspace</td>
-    <td>If enabled, inserts the model into the Workspace and Toolbox/Asset Manager. By default, this is **enabled**.<br /><br />If disabled, only adds the model to the Toolbox/Asset Manager.</td>
+    <td>If enabled, inserts the model into the `Class.Workspace` as well as your **Toolbox** and **Asset Manager** inventory. By default, this is **enabled**.<br /><br />If disabled, only adds the model to your inventory.</td>
   </tr>
   <tr>
     <td>Insert Using Scene Position</td>

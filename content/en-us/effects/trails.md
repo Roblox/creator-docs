@@ -58,7 +58,7 @@ The visual quality of your trails can change depending on the graphics settings 
 
 ### Texture
 
-The `Class.Trail.Texture|Texture` property renders a texture across the length of the trail. You can set a trail's `Class.Trail.Texture|Texture` property to any asset ID. For more information, including how to add or import your own textures, see [Import assets](../projects/assets/manager.md#import-assets).
+The `Class.Trail.Texture|Texture` property renders a texture across the length of the trail. You can set a trail's `Class.Trail.Texture|Texture` property to any asset ID. For more information, including how to add or import your own textures, see [here](../projects/assets/manager.md#asset-import).
 
 <video src="../assets/lighting-and-effects/trail/Textures.mp4" controls width="800"></video>
 

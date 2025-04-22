@@ -38,12 +38,16 @@ Studio provides several tools to get your third-party content into Studio depend
 - Images
 
   - Uploaded textures must follow Studio's [texture specifications](../art/modeling/specifications.md).
-  - Studio's [Asset Manager](../projects/assets/manager.md) supports `.png`, `.jpg`, `.tga`, or `.bmp` file formats and allows for bulk file imports.
+  - Studio's [Asset Manager](../projects/assets/manager.md) supports `.png`, `.jpg`, `.gif`, `.tga`, or `.bmp` file formats and allows for bulk file imports.
 
 - Sounds
 
   - Uploaded sounds must follow Roblox's [sound requirements](../sound/assets.md#requirements).
-  - Studio's [Asset Manager](../projects/assets/manager.md) supports `.mp3`, and `.ogg` file formats and allows for bulk file imports.
+  - Studio's [Asset Manager](../projects/assets/manager.md) supports `.ogg`, `.mp3`, `.flac`, and `.wav` file formats and allows for bulk file imports.
+
+- Video
+
+  - You can import video assets in either `.mp4` or `.mov` format if all of the [requirements](../ui/video-frames.md) are met.
 
 <Alert severity ='warning'>
 Roblox performs asset moderation on upload of any asset type. Roblox can also moderate assets after the initial upload. For more information, see [Asset moderation](../projects/assets/index.md#asset-moderation).

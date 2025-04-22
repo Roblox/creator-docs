@@ -67,7 +67,7 @@ Within the [Creator Store](#creator-store) section, click the **advanced filter*
 
 You can closely inspect a model, image, mesh, plugin, video, or font asset by hovering over its thumbnail and clicking the magnifying glass icon.
 
-<img src="../../assets/studio/toolbox/Asset-Inspect-Icon.png" width="400" alt="A preview view of an asset in the Asset Manager. The Insect Asset icon is highlighted." />
+<img src="../../assets/studio/toolbox/Asset-Inspect-Icon.png" width="400" alt="A preview view of an asset. The Inspect Asset icon is highlighted." />
 
 When previewing 3D assets like meshes, you can move the virtual camera around to get a better view from all angles. For videos, you can preview the entire video in the popup.
 
@@ -103,7 +103,7 @@ When previewing 3D assets like meshes, you can move the virtual camera around to
 
 In the lower-right corner of the preview frame, the **composition** button reveals the full hierarchy of the asset including `Class.Script|Scripts`, `Class.MeshPart|MeshParts`, `Class.Animation|Animations`, and more. It's recommended to always inspect embedded scripts before bringing a model into your place file, as scripts that you didn't write may contain malicious code that can impact performance or behavior.
 
-<img src="../../assets/studio/general/Preview-Panel-Hierarchy.png" width="560" alt="A preview view of an asset in the Asset Manager, and the full hierarchy of the asset displays underneath the 3D representation. The Asset Composition icon is highlighted." />
+<img src="../../assets/studio/general/Preview-Panel-Hierarchy.png" width="560" alt="A preview view of an asset with the full hierarchy of the asset displayed underneath the 3D representation." />
 
 ## Asset configuration and versioning
 

@@ -24,16 +24,12 @@ To import your asset ([downloadable reference](../../../assets/art/accessories/c
 <AccordionSummary>Add textures manually</AccordionSummary>
 <AccordionDetails>
 
-If textures didn't load correctly, add them manually with the Asset Manager.
+If textures didn't load correctly, add them manually. You may need to save and publish your experience in order to access the [Asset Manager](../../../projects/assets/manager.md).
 
-1.  Open the Asset Manager. You may need to save and publish your experience before accessing your assets.
-2.  In the Asset Manager, select the **Bulk Import** button.
-
-    <img src="../../../assets/studio/asset-manager/Import-Button.png" width = "60%"/>
-
-3.  Upload your image file.
-4.  After moderation clears for your image, select the `Class.MeshPart` parented within your imported `Class.Model`.
-5.  In the TextureID property, select the value field and add the assetID of the texture image.
+1.  In the **Asset Manager**, click the **Import** button.
+2.  Upload your image file.
+3.  After moderation clears for your image, select the `Class.MeshPart` parented within your imported `Class.Model`.
+4.  In the **TextureID** property, select the value field and add the asset ID of the texture image.
 
 </AccordionDetails>
 </BaseAccordion>

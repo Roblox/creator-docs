@@ -34,6 +34,7 @@ description: |
   - `Class.AudioPitchShifter`
   - `Class.AudioPlayer`
   - `Class.AudioReverb`
+  - `Class.AudioTextToSpeech`
 code_samples: []
 inherits:
   - Instance

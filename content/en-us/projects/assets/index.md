@@ -323,7 +323,7 @@ Roblox offers several tools to import, store, and publish your assets:
     <tbody>
         <tr>
             <td>[Asset Manager](../../projects/assets/manager.md)</td>
-            <td>Imports and stores [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [packages](../../projects/assets/packages.md), [audio](../../sound/assets.md), and [models](../../parts/models.md). Only displays assets that you've imported into the currently opened experience.</td>
+            <td>Imports and stores [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [audio](../../sound/assets.md), and more. Only displays assets that you've imported into the currently opened experience.</td>
         </tr>
 				<tr>
             <td>[Toolbox](../../projects/assets/toolbox.md)</td>
@@ -331,7 +331,7 @@ Roblox offers several tools to import, store, and publish your assets:
         </tr>
         <tr>
             <td>[3D Importer](../../art/modeling/3d-importer.md)</td>
-            <td>Imports `.fbx` or `.obj` 3D models from third-party modeling tools as a custom `Class.Model` instance. </td>
+            <td>Imports 3D models from third-party modeling tools as a custom `Class.Model` instance. </td>
         </tr>
     </tbody>
 </table>

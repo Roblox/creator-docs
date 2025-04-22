@@ -102,12 +102,7 @@ properties:
       This property describes the ID of the experience that the place running on
       the server belongs to.
 
-      This ID can be found in the top right corner of the
-      [Asset Manager](../../../projects/assets/manager.md) in Roblox Studio.
-      When using Roblox Studio, if the place has not been published to Roblox
-      then the GameId will correspond with the template being used.
-
-      See also:
+      #### See Also
 
       - `Class.DataModel.PlaceId`, which describes the ID of the place running
         on the server
@@ -258,11 +253,6 @@ properties:
       Describes the ID of the place running on the server.
     description: |
       This property describes the ID of the place running on the server.
-
-      If the place has been published to Roblox, this ID can be found in
-      Studio's [Asset Manager](../../../projects/assets/manager.md) by
-      right-clicking the place inside of the **Places** folder and selecting
-      **Copy ID to Clipboard**.
 
       If the place has not been published to Roblox, this ID will correspond
       with the template being used.

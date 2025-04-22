@@ -15,17 +15,19 @@ To find how many transactions your experience has had, add the total number of p
 
 **Price optimization** lets you find the best price points for your passes and developer products, which can help you earn more money over time while keeping your prices competitive. When you run a price test, subsets of your users see different prices for the same product. At the end of the test, you receive recommendations for the prices that performed best with your audience.
 
-Before using price optimization, you should use the [dynamic price check tool](#use-the-dynamic-price-check-tool) to make sure product prices are dynamically scripted inside your experience. After using price optimization, you can run a [price review period](#run-a-price-review-period) to track the long-term revenue impact of your price changes.
+Before using price optimization, you should use the [dynamic price check tool](#check-for-dynamic-pricing) to make sure product prices are dynamically scripted inside your experience. After using price optimization, you can run a [price review period](#run-a-price-review-period) to track the long-term revenue impact of your price changes.
 
 <img src="../../assets/monetization/price-optimization/Price-Optimization-Example.png" />
 
-## Use the dynamic price check tool
+You can combine price optimization with **Regional Pricing** for your passes to reach a wider audience and build a more accessible and inclusive global economy. For more information about setting region-specific prices, see [Regional Pricing](./regional-pricing.md).
+
+## Check for dynamic pricing
 
 Price optimization can't collect data from and make changes to prices you have hard-coded into your experience. To run a price optimization test on products with hard-coded prices, you must first update them to be dynamically scripted.
 
-Dynamically scripted prices update through `Class.MarketplaceService|MarketplaceService` and use functions like `Class.MarketplaceService:GetProductInfo()|GetProductInfo()` and `Class.MarketplaceService:GetDeveloperProductsAsync()|GetDeveloperProductsAsync()` to retrieve and display product prices you have set through the Creator Hub. For information on how to dynamically script product prices, see [Selling Passes](./game-passes.md#sell-passes) and [Selling Developer Products](./developer-products.md#sell-developer-products).
+Dynamically scripted prices update through `Class.MarketplaceService|MarketplaceService` and use functions like `Class.MarketplaceService:GetProductInfo()|GetProductInfo()` and `Class.MarketplaceService:GetDeveloperProductsAsync()|GetDeveloperProductsAsync()` to retrieve and display product prices you have set through the Creator Hub. For information on how to dynamically script product prices, see [Sell a pass](./game-passes.md#sell-a-pass) and [Sell a developer product](./developer-products.md#sell-a-developer-product).
 
-The dynamic price check tool updates all products for sale with a fake Robux price to identify which of your product prices are hard-coded and which are scripted with `Class.MarketplaceService|MarketplaceService` inside your experience. If a product price updates to the fake Robux price, the price is scripted. If it remains the same, the price is hard-coded.
+The dynamic price check tool updates all products for sale with a fake Robux price or a fake economic location to identify which of your product prices are hard-coded and which are scripted with `Class.MarketplaceService|MarketplaceService` inside your experience. If a product price updates to new price, the price is scripted. If it remains the same, the price is hard-coded.
 
 ```lua title="Client Script for a Dynamically Scripted Product Price"
 local productInfo = MarketplaceService:GetProductInfo(PRODUCT_ID)
@@ -39,22 +41,22 @@ local priceInRobux = 500
 To use the dynamic price check tool:
 
 1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select an experience.
-2. Go to **Monetization products** &rang; **Price Optimization**.
+2. Go to **Monetization** > **Price Optimization**.
 3. Click **Dynamic Price Check**.
-4. In **Add test accounts**, enter up to five Roblox users to test the fake Robux prices inside your experience.
-5. Select a fake Robux price. All of the scripted product prices update to reflect this fake price.
-6. Click **Enable**. After a few minutes, you're able to enter your experience to identify which prices are hard-coded.
+4. Under **Add test accounts**, enter up to five Roblox users to check for hard-coded prices.
+5. Select a testing type.
+    - **Price pinned** updates all dynamically-scripted prices with a set fake Robux amount.
+    - **Location pinned** updates all dynamically-scripted prices with a region-specific price for a fake economic location.
+6. Click **Enable**. After a few minutes, you can enter your experience to identify the hard-coded prices.
 
-<Alert severity="info">
 To disable the dynamic price check tool, go to the **Dynamic Price Check** page and click **Disable**.
-</Alert>
 
 ## Use price optimization
 
 To use price optimization:
 
 1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select an experience.
-2. Go to **Monetization products** &rang; **Price Optimization**.
+2. Go to **Monetization** > **Price Optimization**.
 3. Select the developer products and passes you want to include in the price test. For best results, include all products.
 4. Click **Start Test**. After approximately two weeks, you receive an e-mail notification that the test is complete. The **Price Optimization** page updates with the optimized product prices, the recommended price percentage change, and the approximate long-term revenue impact of applying the new product prices.
 5. Click **Review & Apply prices** to apply the results of the price optimization test.

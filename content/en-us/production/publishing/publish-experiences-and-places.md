@@ -42,7 +42,7 @@ While an experience can consist of many places, each experience can only have on
 
 To publish a place as the start place of an entirely new experience:
 
-1. In the Studio menu bar, select **File** &rarr; **Publish to Roblox**. A contextual menu displays.
+1. In the Studio menu bar, select **File** ⟩ **Publish to Roblox**. A contextual menu displays.
 2. Fill in the following fields, most of which can be [reconfigured](#configure-experiences) later.
 
    - **Name** / **Description** — The experience name and a description that describes what a potential player should expect. See [metadata best practices](#metadata-best-practices) for guidelines.
@@ -60,22 +60,12 @@ Once you publish your experience, you can [configure more settings](#configure-e
 
 ### Additional places
 
-After you have published a [start place](#start-place) to create the overall experience, you can add additional places through the [Asset Manager](../../projects/assets/manager.md). To create a new place within an existing experience:
+After you have published a [start place](#start-place) to create the overall experience, you can add additional places in Studio. To create a new place within an existing experience:
 
-1. From the [View](../../studio/view-tab.md) tab, open the [Asset Manager](../../projects/assets/manager.md).
-
-   <img src="../../assets/studio/general/View-Tab-Asset-Manager.png" width="776" alt="Asset Manager toggle button in Studio" />
-
-1. In its window, click the &#9776; icon in the upper-left and select **Places** from the menu.
-
-   <img src="../../assets/studio/asset-manager/Folder-Menu-Button.png" width="360" />
-
-1. Avoiding the thumbnail/name of your start place, right-click in an empty region of the window and select **Add New Place**. A new place displays with a placeholder name.
-
-   <img src="../../assets/studio/asset-manager/Places-New-Place-Created.png" width="360" />
-
-1. Right-click the new place, select **Rename**, and enter a more descriptive name.
-1. When you double-click the new place, a new Studio session opens for editing the new place.
+1. Open an existing place file or create a new place from any Studio template.
+1. Select **File** ⟩ **Publish to Roblox As…**.
+1. In the window that appears, click the tile for the experience you'd like to add the place to.
+1. In the next view, select **Add as a new place** and then click the **Create** button.
 
 ### Change the start place
 
@@ -88,7 +78,7 @@ The [start place](#start-place) of an experience cannot be instantly swapped wit
 
    <img src="../../assets/creator-dashboard/Experience-Change-Start-Place.png" width="550" />
 
-1. Select **File** &rang; **Publish to Roblox As…** in the menu bar (do not select simply **Publish to Roblox** as it would publish the place over itself).
+1. Select **File** ⟩ **Publish to Roblox As…** in the menu bar (do not select simply **Publish to Roblox** as it would publish the place over itself).
 1. In the window that appears, click the tile for the same experience, then choose the **current** start place. Click the **Overwrite** button.
 
    <img src="../../assets/publishing/experiences-places-assets/Publish-Window-Select-Start-Place.png" width="720" />
@@ -243,19 +233,15 @@ To shut down all servers:
 
 Roblox automatically retains saved versions of each place for version control and backup purposes. To revert to a previously saved version of any place within an experience:
 
-1. With the experience open, access the [Asset Manager](../../projects/assets/manager.md) from the [View](../../studio/view-tab.md) tab.
+1. Navigate to the [Creator Dashboard][creatordashboard] and click on the thumbnail of the experience. The experience's **Overview** page displays.
+1. In the left-hand navigation, under **Configure**, select **Places**.
+1. On the **Places** page, click the thumbnail of the place you'd like to revert to a previous version.
+1. In the left-hand navigation, click **Version History**.
+1. Locate and select the version to revert to, then click the **Restore** button. Confirm the action to restore to that version.
 
-   <img src="../../assets/studio/general/View-Tab-Asset-Manager.png" width="776" alt="Asset Manager toggle button in Studio" />
-
-1. In its window, click the &#9776; icon in the upper-left and select **Places** from the contextual menu.
-
-   <img src="../../assets/studio/asset-manager/Folder-Menu-Button.png" width="360" />
-
-1. Right-click the desired place and select **View History**. The version history window opens.
-1. Locate and select the version to revert to, then click the **Open** button to launch a new Studio session for the selected version.
-1. If the place has been [released to the public](#release-to-the-public) and you want to overwrite the place's live/public version with the reverted version:
-   1. Publish the place you just reverted to, choosing the same experience and same place during the publishing process.
-   2. Restart the servers for updates as outlined in [update experiences](#update-experiences).
+<Alert severity="warning">
+Note that restoring a place to a previous version does **not** automatically publish the changes. If the place has been [released to the public](#release-to-the-public) and you want to overwrite its live/public version with the reverted version, open the place in Studio, publish it, and then restart the servers for updates as outlined in [update experiences](#update-experiences).
+</Alert>
 
 ## Metadata best practices
 
