@@ -9,14 +9,10 @@ description: |
   useful outside the context of plugins). When a place to be edited is loaded in
   Roblox Studio, scripts inside this container are not run.
 
-  #### Limited Functionality and Availabilty
+  #### Limited Functionality and Availability
   
-  Throughout the history of this instance, its functionality has been enabled
-  and disabled without notice. Before doing any work with it, make sure to verify
-  that it works as expected before continuing with further work.
-
-  Seemingly, when enabled, **StandalonePluginScripts** work only with Local 
-  `Class.Plugin|Plugins`.
+  Functionality of this class may be enabled or disabled without notice. Before
+  using it, verify that it works as expected before continuing with further work.
 code_samples:
 inherits:
   - Instance
