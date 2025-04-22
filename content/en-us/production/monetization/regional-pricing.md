@@ -10,7 +10,9 @@ You can choose which of your passes you want to price regionally. When you enabl
 ## Enable Regional Pricing
 
 <Alert severity="warning">
-  Regional prices never exceed or go below 30% of the default price of your pass.
+  Regional prices will never be below 30% of the default price of your pass.
+  
+  For example, if your default price is 100 Robux, the lowest it can be offered is 30 Robux.
 </Alert>
 
 To enable Regional Pricing:
@@ -40,8 +42,8 @@ To use the dynamic price check tool:
 2. Click **&hellip;** and select **Dynamic Price Check**.
 3. Under **Add test accounts**, enter up to five Roblox users to check for hard-coded prices.
 4. Select a testing type.
-    - **Price pinned** updates all dynamically-scripted prices with a set fake Robux amount.
-    - **Location pinned** updates all dynamically-scripted prices with a region-specific price for a fake economic location.
+   - **Price pinned** updates all dynamically-scripted prices with a set fake Robux amount.
+   - **Location pinned** updates all dynamically-scripted prices with a region-specific price for a fake economic location.
 5. Click **Enable**. After a few minutes, you can enter your experience to identify the hard-coded prices.
 
 To disable the dynamic price check tool, go to the **Dynamic Price Check** page and click **Disable**.
