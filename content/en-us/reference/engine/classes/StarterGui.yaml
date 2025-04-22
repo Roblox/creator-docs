@@ -340,7 +340,9 @@ methods:
       </table>
 
       ##### ChatMakeSystemMessage
-
+      <Alert severity="warning">
+      Using this method requires the experience's ChatVersion property to be set to LegacyChatService. This chat system is **deprecated** and usage is discouraged. For experiences using the current **TextChatService**, refer to [DisplaySystemMessage](<https://create.roblox.com/docs/reference/engine/classes/TextChannel#DisplaySystemMessage>)
+      </Alert>
       Display a formatted message in the chat.
 
       <table size="small">
