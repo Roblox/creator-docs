@@ -340,10 +340,10 @@ methods:
       </table>
 
       ##### ChatMakeSystemMessage
-      <Alert severity="warning">
-      Using this method requires the experience's ChatVersion property to be set to LegacyChatService. This chat system is **deprecated** and usage is discouraged. For experiences using the current **TextChatService**, refer to [DisplaySystemMessage](<https://create.roblox.com/docs/reference/engine/classes/TextChannel#DisplaySystemMessage>)
-      </Alert>
-      Display a formatted message in the chat.
+      Display a formatted message in the chat. Using this method requires the experience's
+      `Class.TextChatService.ChatVersion` to be set to `Enum.ChatVersion|LegacyChatService`, although
+      legacy chat is **deprecated** and usage is discouraged. For experiences using the current
+      `Class.TextChatService`, refer to `Class.TextChannel:DisplaySystemMessage()`.
 
       <table size="small">
       	<thead>
