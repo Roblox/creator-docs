@@ -567,8 +567,9 @@ events:
       Fires every frame, after the physics simulation has completed.
     description: |
       The `PostSimulation` event fires every frame, after the physics simulation
-      has completed. The `deltaTimeSim` argument indicates the time that has
-      elapsed since the previous frame.
+      has completed. The `deltaTimeSim` argument indicates the time that the
+      current frame has stepped the physics simulation, not accounting for
+      physics throttling.
 
       This event is useful for making final adjustments to the outcome of the
       simulation. Following this phase, the engine triggers the
@@ -579,7 +580,8 @@ events:
         type: double
         default:
         summary: |
-          The time (in seconds) that has elapsed since the previous frame.
+          The time (in seconds) that the current frame has stepped the physics
+          simulation, not accounting for physics throttling.
     tags: []
     deprecation_message: ''
     security: None
@@ -592,7 +594,7 @@ events:
     description: |
       The `PreAnimation` event fires every frame, prior to the physics
       simulation but after rendering. The `deltaTimeSim` argument indicates the
-      time that has elapsed since the previous frame.
+      time that the current frame has stepped animations.
 
       This event is useful for modifying animation objects, such as adjusting
       their speed or priority. Once the `PreAnimation` event is complete, the
@@ -607,7 +609,7 @@ events:
         type: double
         default:
         summary: |
-          The time (in seconds) that has elapsed since the previous frame.
+          The time (in seconds) that the current frame has stepped animations.
     tags: []
     deprecation_message: ''
     security: None
@@ -656,7 +658,8 @@ events:
       The `PreSimulation` event (replacement for
       `Class.RunService.Stepped|Stepped`) fires every frame, prior to the
       physics simulation. The `deltaTimeSim` argument indicates the time that
-      has elapsed since the previous frame.
+      the current frame will step the physics simulation, not accounting for
+      physics throttling.
 
       This event is useful for adjusting properties like velocity or forces just
       before they're applied as part of the simulation. The simulation then
@@ -669,7 +672,8 @@ events:
         type: double
         default:
         summary: |
-          The time (in seconds) that has elapsed since the previous simulation step.
+          The time (in seconds) that the current frame will step the physics
+          simulation, not accounting for physics throttling.
     tags: []
     deprecation_message: ''
     security: None
