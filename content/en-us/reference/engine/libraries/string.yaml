@@ -8,9 +8,9 @@ description: |
   the global `Library.string` library.
 
   See
-  [String Pattern Reference](../../../luau/strings.md#string-pattern-reference)
-  for details on using `Library.string.match()` and `Library.string.gmatch()` to
-  find a piece, or substring, of a longer string.
+  [String pattern reference](../../../luau/strings.md#string-pattern-reference)
+  for details on using `Library.string.match()`, `Library.string.gmatch()`, and
+  `Library.string.gsub()` to find (and replace) substrings.
 code_samples:
 properties:
 functions:
@@ -421,16 +421,18 @@ functions:
       #### Various Examples
 
       ```lua
-      -- Simple replacement
+      -- Basic replacement
       string.gsub("I love tacos!", "tacos", "Roblox") --> I love Roblox! 1
-      -- Using a pattern (hint: %w+ matches whole words)
-      string.gsub("I like red!", "%w+", "word") --> word word word 3
+      -- Replacement with a pattern
+      string.gsub("I like red!", "%w+", "word") --> word word word! 3
       -- Replacement table
       string.gsub("I play Roblox.", "%w+", {I="Je", play="joue à"}) --> Je joue à Roblox. 3
       -- Replacement function
       string.gsub("I have 2 cats.", "%d+", function(n) return tonumber(n) * 12 end) --> I have 24 cats. 1
       -- Replace only twice
-      string.gsub("aaa", "a", "b", 2) --> "bba", 2
+      string.gsub("aaa", "a", "b", 2) --> bba 2
+      -- Replacement with capture groups (maximum of nine)
+      string.gsub("love2play Roblox", "(%w+)(%d+)(%w+)%s+(%w+)", "I %1 %2 %3 %4!") --> I love 2 play Roblox! 1
       ```
     parameters:
       - name: s
