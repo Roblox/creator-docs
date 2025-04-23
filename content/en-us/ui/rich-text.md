@@ -3,6 +3,7 @@ title: Rich text markup
 description: Rich Text Markup are simple markup tags to style sections of a string.
 comments: |
   1. Replace numbered footnotes with dedicated style.
+machineTranslated: true
 ---
 
 UI **rich text** utilizes simple markup tags to style sections of a string in bold, italics, underline, fill color, stroke variations, and more. You can apply styling tags to `Class.TextLabel`, `Class.TextButton`, and `Class.TextBox` objects.
@@ -14,7 +15,7 @@ You must enable rich text on a per-object basis through its **RichText** propert
 <img src="../assets/ui/rich-text/Enable-Rich-Text.png"
    width="320" />
 
-```lua highlight='2'
+```lua highlight="2"
 local title = Instance.new("TextLabel")
 title.RichText = true
 

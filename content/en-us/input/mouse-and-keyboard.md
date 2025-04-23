@@ -1,6 +1,7 @@
 ---
 title: Mouse and keyboard input
 description: Explains Roblox support for computer mice and keyboards.
+machineTranslated: true
 ---
 
 A large percentage of Roblox sessions are played on devices with a mouse and keyboard, so it's important to properly support these inputs when designing an experience for a wide audience. Once you're comfortable with mouse and keyboard inputs, make your experience compatible across multiple platforms by setting up [mobile](../input/mobile.md) and [gamepad](./gamepad.md) inputs.
@@ -102,7 +103,7 @@ You can customize the appearance and behavior of a user's mouse icon within your
 
 You can change the user's mouse icon in a `Class.LocalScript` by setting the `Class.UserInputService.MouseIcon|MouseIcon` property in `Class.UserInputService` to a custom Roblox asset ID. For example, the following `Class.LocalScript` changes the user's default mouse icon to a circle with a blue dot in the middle:
 
-```lua highlight='3'
+```lua highlight="3"
 local UserInputService = game:GetService("UserInputService")
 
 UserInputService.MouseIcon = "rbxassetid://3400146391"
@@ -112,7 +113,7 @@ UserInputService.MouseIcon = "rbxassetid://3400146391"
 
 You can hide the user's mouse icon by setting the `Class.UserInputService.MouseIconEnabled` to `false` in a `Class.LocalScript`. For example, the following code switches the mouse icon from visible to invisible and back every two seconds:
 
-```lua highlight='5,7'
+```lua highlight="5,7"
 local UserInputService = game:GetService("UserInputService")
 
 while true do
@@ -129,7 +130,7 @@ You can lock the mouse icon's position to the screen using `Class.UserInputServi
 
 If a user's mouse icon is locked in a position, `Class.UserInputService.InputChanged` still fires when the user moves the mouse, passing in the distance the mouse has moved. For example, the following code sample locks the user's mouse icon after one second, then Studio prints the mouse delta whenever the user moves their mouse:
 
-```lua highlight='5'
+```lua highlight="5"
 local UserInputService = game:GetService("UserInputService")
 
 task.wait(5)
