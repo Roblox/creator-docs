@@ -141,7 +141,7 @@ Roblox places limits on certain physical properties, as outlined in the followin
 <tbody>
 	<tr>
 		<td>**Density** (RMU/stud&sup3;)</td>
-		<td>0.01</td>
+		<td>0.0001</td>
 		<td>100</td>
 	</tr>
 	<tr>
