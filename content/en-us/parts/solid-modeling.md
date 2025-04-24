@@ -1,6 +1,7 @@
 ---
 title: Solid modeling
 description: Solid modeling is the process of joining parts together to form complex shapes.
+machineTranslated: true
 ---
 
 **Solid modeling** is the process of joining [parts](../parts/index.md)
@@ -173,7 +174,7 @@ When performing a `Class.BasePart:UnionAsync()|UnionAsync()`, `Class.BasePart:In
 
 To demonstrate `Class.BasePart:UnionAsync()|UnionAsync()`, the following `Class.Script` uses the **Part1** `Class.BasePart` from the workspace, unions it together with the **Part2**, **Part3**, and **Part4** `Class.BasePart|BaseParts`, then parents the resulting `Class.UnionOperation` to the workspace at the original position of **Part1**.
 
-```lua highlight='6'
+```lua highlight="6"
 local Workspace = game:GetService("Workspace")
 
 local mainPart = Workspace.Part1
@@ -201,7 +202,7 @@ end
 
 To demonstrate `Class.BasePart:IntersectAsync()|IntersectAsync()`, the following `Class.Script` uses the **Part1** `Class.BasePart` from the workspace, intersects it with the **Part2** and **Part3** `Class.BasePart|BaseParts`, then parents the resulting `Class.IntersectOperation` to the workspace at the original position of **Part1**.
 
-```lua highlight='6'
+```lua highlight="6"
 local Workspace = game:GetService("Workspace")
 
 local mainPart = Workspace.Part1
@@ -229,7 +230,7 @@ end
 
 To demonstrate `Class.BasePart:SubtractAsync()|SubtractAsync()`, the following `Class.Script` uses the **Part1** `Class.BasePart` from the workspace, negates the **Part2**, **Part3**, and **Part4** `Class.BasePart|BaseParts` from it, then parents the resulting `Class.UnionOperation` to the workspace at the original position of **Part1**.
 
-```lua highlight='6'
+```lua highlight="6"
 local Workspace = game:GetService("Workspace")
 
 local mainPart = Workspace.Part1

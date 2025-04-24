@@ -1,6 +1,7 @@
 ---
 title: Collisions
 description: Explains methods to detect physical collisions, handle collision events, and fine-tune which objects collide with others.
+machineTranslated: true
 ---
 
 A collision occurs when two 3D objects come into contact within the 3D world. For customized collision handling, `Class.BasePart` has a set of [collision events](#collision-events) and [collision filtering](#collision-filtering) techniques, so you can control which physical assemblies collide with others.
@@ -132,7 +133,7 @@ To create a new collision group:
 <TabItem label="Scripting">
 To create a new collision group through scripting, include the `Class.PhysicsService` service and register the group with `Class.PhysicsService:RegisterCollisionGroup()`. It may be helpful to pre-declare your group names in local variables, as the same strings can be used for [assigning objects](#assign-objects-to-groups) and [configuring groups](#configure-group-collisions) within the same script.
 
-```lua title="Collision Group Setup" highlight='1,3,4,7,8'
+```lua title="Collision Group Setup" highlight="1,3,4,7,8"
 local PhysicsService = game:GetService("PhysicsService")
 
 local cubes = "Cubes"
@@ -170,7 +171,7 @@ In the following example, objects in the **Cubes** group will **not** collide wi
 <TabItem label="Scripting">
 To configure how objects in two collision groups interact, call `Class.PhysicsService:CollisionGroupSetCollidable()|CollisionGroupSetCollidable()`, providing the two collision groups and a boolean `true` (collidable) or `false` (non‑collidable). If objects in the same group should or shouldn't collide with each other, use that group name for both the first and second parameters.
 
-```lua title="Collision Group Setup" highlight='15'
+```lua title="Collision Group Setup" highlight="15"
 local PhysicsService = game:GetService("PhysicsService")
 
 local cubes = "Cubes"
@@ -205,7 +206,7 @@ Once assigned, the new group is reflected under the object's `Class.BasePart.Col
 <TabItem label="Scripting">
 To add a `Class.BasePart` to a collision group through scripting, simply assign the group's **string name**, previously registered through `Class.PhysicsService:RegisterCollisionGroup()|RegisterCollisionGroup()`, to the part's `Class.BasePart.CollisionGroup|CollisionGroup` property.
 
-```lua title="Collision Group Setup" highlight='7,8,11,12'
+```lua title="Collision Group Setup" highlight="7,8,11,12"
 local PhysicsService = game:GetService("PhysicsService")
 local Workspace = game:GetService("Workspace")
 
