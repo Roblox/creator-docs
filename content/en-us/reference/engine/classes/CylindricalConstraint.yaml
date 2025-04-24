@@ -81,7 +81,7 @@ description: |
   plane of `Class.Constraint.Attachment0|Attachment0`, from
   -180&nbsp;to&nbsp;180. This lets you tilt the rotating element without
   changing the sliding axis.
-code_samples:
+code_samples: []
 inherits:
   - SlidingBallConstraint
 tags: []
@@ -108,7 +108,7 @@ properties:
       `Class.CylindricalConstraint.AngularSpeed|AngularSpeed`,
       `Class.CylindricalConstraint.AngularResponsiveness|AngularResponsiveness`,
       and `Class.CylindricalConstraint.ServoMaxTorque|ServoMaxTorque`.
-    code_samples:
+    code_samples: []
     type: ActuatorType
     tags: []
     deprecation_message: ''
@@ -128,7 +128,7 @@ properties:
       Enables the angular limits around the rotation axis.
     description: |
       Enables the angular limits around the rotation axis.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -153,7 +153,7 @@ properties:
       `Class.CylindricalConstraint.AngularActuatorType|AngularActuatorType` is
       set to `Enum.ActuatorType|Servo`. Larger values correspond to a faster
       response and smaller values results in more damping and a slower response.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -174,7 +174,7 @@ properties:
     description: |
       Restitution of the two limits, or how elastic they are. Constrained
       between 0 and 1.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -196,7 +196,7 @@ properties:
     description: |
       Target angular speed. This value is unsigned as the servo will always move
       toward its target. In radians per second.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -218,7 +218,7 @@ properties:
     description: |
       The target angular velocity of the motor in radians per second around the
       rotation axis.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -242,7 +242,7 @@ properties:
       Signed angle (in degrees) between the reference axis and the secondary
       axis of `Class.Constraint.Attachment1|Attachment1` around the rotation
       axis. Valid range between -180 and 180.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -267,7 +267,7 @@ properties:
       Direction of the rotation axis as an angle from the **X** axis in the
       **XY** plane of `Class.Constraint.Attachment0|Attachment0`. Valid range
       between -180 and 180.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -291,7 +291,7 @@ properties:
       Lower limit for the angle (in degrees) between the reference axis and the
       SecondaryAxis of `Class.Constraint.Attachment1|Attachment1` around the
       rotation axis. Valid range between -180 and 180.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -313,7 +313,7 @@ properties:
     description: |
       The maximum angular acceleration of the motor in radians per second
       squared.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -335,7 +335,7 @@ properties:
     description: |
       The maximum torque the motor can apply to achieve the target angular
       velocity. Units are mass&nbsp;&times;&nbsp;studs&sup2;/second&sup2;.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -355,7 +355,7 @@ properties:
       Enable the visibility of the rotation axis.
     description: |
       Enable the visibility of the rotation axis.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -376,7 +376,7 @@ properties:
     description: |
       Maximum torque the servo motor can apply. Units are
       mass&nbsp;&times;&nbsp;studs&sup2;/second&sup2;.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -420,7 +420,7 @@ properties:
       Target angle (in degrees) between the reference axis and the secondary
       axis of `Class.Constraint.Attachment1|Attachment1` around the rotation
       axis. Valid range between -180 and 180.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -444,7 +444,7 @@ properties:
       Upper limit for the angle (in degrees) between the reference axis and the
       secondary axis of `Class.Constraint.Attachment1|Attachment1` around the
       rotation axis. Valid range between -180 and 180.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -464,7 +464,7 @@ properties:
       The unit vector direction of the rotation axis in world coordinates.
     description: |
       The unit vector direction of the rotation axis in world coordinates.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - ReadOnly

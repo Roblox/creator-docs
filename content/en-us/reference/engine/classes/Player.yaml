@@ -273,7 +273,7 @@ properties:
       	character = player.CharacterAdded:Wait()
       end
       ```
-    code_samples:
+    code_samples: []
     type: Model
     tags: []
     deprecation_message: ''
@@ -302,7 +302,7 @@ properties:
       Attempting to set the property after the character has spawned will not
       change the character, you must call `Class.Player:LoadCharacter()` to load
       the new appearance.
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - NotBrowsable
@@ -374,7 +374,7 @@ properties:
         (currently 45000 units, defined by DataComplexityLimit), the function
         throws an error, the value is not saved, and any previous value of the
         key that was being saved to is deleted.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - Hidden
@@ -403,7 +403,7 @@ properties:
       This property was once used by an ancient data persistence method to
       indicate when the player's data is available to load. Becomes true when
       data is available.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - Hidden
@@ -676,7 +676,7 @@ properties:
       - Display names may have unicode characters in the string. See
         `Library.utf8|UTF-8` for more information on how to work with strings
         with unicode characters.
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -739,7 +739,7 @@ properties:
       - `Class.Workspace.StreamingIntegrityMode` and
         `Enum.StreamingIntegrityMode` for more details on when gameplay is
         paused.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -1146,7 +1146,7 @@ properties:
   - name: Player.userId
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: int64
     tags:
       - Deprecated
@@ -1396,7 +1396,7 @@ methods:
       identifying and debugging issues that occur in high network latency
       scenarios. It's also useful for masking latency, such as adjusting the
       speed of throwing animations for projectiles.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: float
@@ -1479,7 +1479,7 @@ methods:
 
       When using this method from a `Class.LocalScript`, only the local user's
       client can be kicked.
-    code_samples:
+    code_samples: []
     parameters:
       - name: message
         type: string
@@ -1503,7 +1503,7 @@ methods:
       This function returns a boolean value that was previously saved to the
       player with `Class.Player:SaveBoolean()` with the same key. Returns false
       if the key doesn't exist, not `nil`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
@@ -1879,7 +1879,7 @@ methods:
       the player's own screen. `Class.TextService:FilterStringAsync()` returns a
       `Class.TextFilterResult` object that can be filtered differently according
       to the message's intended use.
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
         type: boolean
@@ -1898,7 +1898,7 @@ methods:
   - name: Player:loadBoolean
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
@@ -1920,7 +1920,7 @@ methods:
   - name: Player:loadInstance
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
@@ -1942,7 +1942,7 @@ methods:
   - name: Player:loadNumber
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
@@ -1963,7 +1963,7 @@ methods:
   - name: Player:loadString
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
@@ -1984,7 +1984,7 @@ methods:
   - name: Player:saveBoolean
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
@@ -2010,7 +2010,7 @@ methods:
   - name: Player:saveInstance
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
@@ -2036,7 +2036,7 @@ methods:
   - name: Player:saveNumber
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
@@ -2061,7 +2061,7 @@ methods:
   - name: Player:saveString
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
@@ -2288,7 +2288,7 @@ methods:
       This function was once used to return whether a player is best friends
       with the specified user, but the best friend feature has since been
       removed.
-    code_samples:
+    code_samples: []
     parameters:
       - name: userId
         type: int64
@@ -2489,7 +2489,7 @@ methods:
       content will be present when the request completes, as streaming is
       affected by the client's network bandwidth, memory limitations, and other
       factors.
-    code_samples:
+    code_samples: []
     parameters:
       - name: position
         type: Vector3
@@ -2520,7 +2520,7 @@ methods:
       This function is used to pause the script until the player's data is
       available to manipulate, or until a certain amount of time has elapsed
       without fetching the player's data
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: boolean
@@ -2539,7 +2539,7 @@ methods:
   - name: Player:isFriendsWith
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: userId
         type: int64
@@ -2561,7 +2561,7 @@ methods:
   - name: Player:waitForDataReady
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: boolean

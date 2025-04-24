@@ -9,7 +9,7 @@ description: |
   [legacy chat system](../../../chat/legacy/legacy-chat-system.md). Similar to
   `Class.StarterPlayerScripts`, default objects like `Class.Script|Scripts` and
   `Class.ModuleScript|ModuleScripts` are inserted into the service.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -36,7 +36,7 @@ properties:
 
       This must be done on the client, toggling this value in a server-side
       `Class.Script` will have no effect.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -57,7 +57,7 @@ properties:
     description: |
       Toggles whether the default chat framework should be automatically loaded
       when the game runs.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -133,7 +133,7 @@ methods:
       replacing the default Luau Chat System with your own, you should not need
       to call this function. You can read about the different callback functions
       at `Class.Chat:RegisterChatCallback()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: callbackType
         type: ChatCallbackType
@@ -201,7 +201,7 @@ methods:
         message to players (useful for implementing a chat exclusion list)
       - Get/set the speaker's name color (`message.ExtraData.NameColor`, a
         Color3) on a message-by-message basis
-    code_samples:
+    code_samples: []
     parameters:
       - name: callbackType
         type: ChatCallbackType
@@ -266,7 +266,7 @@ methods:
     description: |
       Will return false if the player with the specified `Class.Player.UserId`
       is not allowed to chat because of their account settings.
-    code_samples:
+    code_samples: []
     parameters:
       - name: userId
         type: int64
@@ -289,7 +289,7 @@ methods:
     description: |
       Will return false if the two users cannot communicate because their
       account settings do not allow it.
-    code_samples:
+    code_samples: []
     parameters:
       - name: userIdFrom
         type: int64
@@ -337,7 +337,7 @@ methods:
       - Custom chat messages
       - Custom character names
       - Names for a shop in a tycoon-style game
-    code_samples:
+    code_samples: []
     parameters:
       - name: stringToFilter
         type: string
@@ -419,7 +419,7 @@ methods:
       the given player's age settings, so they see what is appropriate to them.
       This function will only work if called from a `Class.Script` on the
       server. If called on a client it will fail.
-    code_samples:
+    code_samples: []
     parameters:
       - name: stringToFilter
         type: string
@@ -452,7 +452,7 @@ events:
       Fires when `Class.Chat:Chat()` is called.
     description: |
       Fires when `Class.Chat:Chat()` is called.
-    code_samples:
+    code_samples: []
     parameters:
       - name: part
         type: Instance

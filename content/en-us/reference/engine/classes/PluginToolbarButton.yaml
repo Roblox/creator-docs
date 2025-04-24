@@ -23,7 +23,7 @@ description: |
   `Class.PluginToolbarButton.ClickableWhenViewportHidden|ClickableWhenViewportHidden`
   to true, you can allow plugin buttons to remain clickable (such as during
   script editing).
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -44,7 +44,7 @@ properties:
       occur in the game world (Workspace). For example, a button that opens a
       widget should have this property be true, as showing a widget is visible
       to the user even if the game view isn't visible.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - NotReplicated
@@ -110,7 +110,7 @@ properties:
       button in the plugin toolbar. When this property is not set, the button
       will instead use the button's text given by
       `Class.PluginToolbar:CreateButton()`.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags:
       - NotReplicated
@@ -136,7 +136,7 @@ methods:
       When the `Class.PluginToolbarButton.Enabled|Enabled` property is toggled
       back on, the button will either revert to the last state set by this
       method or default to inactive if this method hasn't been used previously.
-    code_samples:
+    code_samples: []
     parameters:
       - name: active
         type: boolean

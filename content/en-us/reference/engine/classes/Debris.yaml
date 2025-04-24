@@ -80,7 +80,7 @@ properties:
 
       This property is currently restricted and will error if set. The value is
       hardcoded to 1,000 items.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - Deprecated
@@ -137,7 +137,7 @@ methods:
   - name: Debris:addItem
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: item
         type: Instance

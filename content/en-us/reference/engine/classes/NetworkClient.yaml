@@ -5,7 +5,7 @@ memory_category: Instances
 summary: ''
 description: |
   This service is responsible for connecting a client to a server.
-code_samples:
+code_samples: []
 inherits:
   - NetworkPeer
 tags:
@@ -25,7 +25,7 @@ events:
       Fired when the client successfully connects to a server. Returns a string
       showing the server's IP and Port, and the client's
       `Class.ClientReplicator`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: peer
         type: string
@@ -46,7 +46,7 @@ events:
       Fired if the client fails to connect to the server.
     description: |
       Fired if the client fails to connect to the server.
-    code_samples:
+    code_samples: []
     parameters:
       - name: peer
         type: string

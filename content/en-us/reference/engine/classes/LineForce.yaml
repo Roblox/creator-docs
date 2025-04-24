@@ -36,7 +36,7 @@ description: |
   `Class.Constraint.Attachment1|Attachment1` remains unaffected. However, force
   can be applied to both attachments in **equal and opposite directions** by
   enabling `Class.LineForce.ReactionForceEnabled|ReactionForceEnabled`.
-code_samples:
+code_samples: []
 inherits:
   - Constraint
 tags: []
@@ -52,7 +52,7 @@ properties:
       force is applied at `Class.LineForce.Attachment0|Attachment0` and the line
       determining the direction will also start at
       `Class.LineForce.Attachment0|Attachment0`.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -74,7 +74,7 @@ properties:
     description: |
       When true, the force magnitude is multiplied by the inverse square of the
       distance.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -94,7 +94,7 @@ properties:
       The magnitude of the force.
     description: |
       The magnitude of the force.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -119,7 +119,7 @@ properties:
       of the body mover becomes infinite the closer the two attachments are,
       causing explosions that can't be prevented by scripts. This property
       bounds the force's absolute value.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -145,7 +145,7 @@ properties:
       `Class.Constraint.Attachment0|Attachment0` and uses
       `Class.Constraint.Attachment1|Attachment1` as the target direction without
       any dynamic relationship.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''

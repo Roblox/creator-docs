@@ -26,7 +26,7 @@ description: |
 
   See [Sound Groups](../../../sound/groups.md) for further details on working
   with the `Class.SoundGroup` class.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []

@@ -13,7 +13,7 @@ description: |
 
   - [Data Stores](../../../cloud-services/data-stores/index.md), an in-depth
     guide on data structure, management, error handling, etc.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -27,7 +27,7 @@ properties:
     description: |
       This property indicates when the data store was created in milliseconds
       since epoch.
-    code_samples:
+    code_samples: []
     type: int64
     tags:
       - ReadOnly
@@ -51,7 +51,7 @@ properties:
       This property indicates the name of the data store. It is used as a unique
       identifier to retrieve a data store instance with
       `Class.DataStoreService:GetDataStore()`.
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - ReadOnly
@@ -75,7 +75,7 @@ properties:
     description: |
       This property indicates the last time the data store was updated in
       milliseconds since epoch.
-    code_samples:
+    code_samples: []
     type: int64
     tags:
       - ReadOnly

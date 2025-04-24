@@ -4,7 +4,7 @@ category:
 memory_category: Instances
 summary: ''
 description: ''
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -19,7 +19,7 @@ properties:
     description: |
       This property attaches the `Class.CustomEventReceiver` object to a
       `Class.CustomEvent`.
-    code_samples:
+    code_samples: []
     type: Instance
     tags: []
     deprecation_message: |
@@ -43,7 +43,7 @@ methods:
     description: |
       This function returns the current value of the receiver's
       `Class.CustomEventReceiver.Source` property.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: float
@@ -65,7 +65,7 @@ events:
       This event fires when the receiver is attached to a different
       `Class.CustomEvent`, when the `Class.CustomEventReceiver.Source` property
       is changed.
-    code_samples:
+    code_samples: []
     parameters:
       - name: event
         type: Instance
@@ -87,7 +87,7 @@ events:
       This event fires when the receiver is attached to a different
       `Class.CustomEvent`, when the `Class.CustomEventReceiver.Source` property
       is changed.
-    code_samples:
+    code_samples: []
     parameters:
       - name: event
         type: Instance
@@ -108,7 +108,7 @@ events:
     description: |
       Fires when the value of the CustomEvent's source is changed, passing the
       CustomEvent's new value.
-    code_samples:
+    code_samples: []
     parameters:
       - name: newValue
         type: float

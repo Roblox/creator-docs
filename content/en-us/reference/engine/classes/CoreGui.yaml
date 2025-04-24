@@ -18,7 +18,7 @@ description: |
   enable and disable most elements of the CoreGui. You can also use
   `Class.PlayerGui:SetTopbarTransparency()` to set the transparency of the top
   bar.
-code_samples:
+code_samples: []
 inherits:
   - BasePlayerGui
 tags:
@@ -52,7 +52,7 @@ properties:
     description: |
       The current version of the CoreGui. Everytime the CoreGui is majorly
       changed, this number is increased.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - ReadOnly

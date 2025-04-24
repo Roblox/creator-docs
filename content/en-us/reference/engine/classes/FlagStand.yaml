@@ -7,7 +7,7 @@ summary: |
 description: |
   The `Class.Flag` and `Class.FlagStand` objects allow you to make 'Capture the
   Flag' style games quickly.
-code_samples:
+code_samples: []
 inherits:
   - Part
 tags:
@@ -27,7 +27,7 @@ properties:
 
       The `Class.Flag` and `Class.FlagStand` objects were created to allow
       developers to make 'capture the flag' style games quickly.
-    code_samples:
+    code_samples: []
     type: BrickColor
     tags: []
     deprecation_message: |
@@ -56,7 +56,7 @@ events:
 
       The `Class.Flag` and `Class.FlagStand` objects were created to allow
       developers to make 'capture the flag' style games quickly.
-    code_samples:
+    code_samples: []
     parameters:
       - name: player
         type: Instance

@@ -18,7 +18,7 @@ description: |
 
   For more details on this effect and others, see
   [Post-Processing Effects](../../../environment/post-processing-effects.md).
-code_samples:
+code_samples: []
 inherits:
   - PostEffect
 tags: []
@@ -30,7 +30,7 @@ properties:
     description: |
       Size controls the blur radius, measured in pixels. The larger the size,
       the blurrier the screen will become.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

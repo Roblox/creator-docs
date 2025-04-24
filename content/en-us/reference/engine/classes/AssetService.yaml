@@ -8,7 +8,7 @@ summary: |
 description: |
   **AssetService** is a non-replicated service that handles asset-related
   queries to the Roblox web API.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -368,7 +368,7 @@ methods:
       quickly becomes infeasible. For user-generated worlds, consider
       serializing user creations and saving them in `Class.DataStore|DataStores`
       instead.
-    code_samples:
+    code_samples: []
     parameters:
       - name: placeName
         type: string
@@ -401,7 +401,7 @@ methods:
       Clones a place through the given `templatePlaceID` and puts it into the
       inventory of the given player.
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: player
         type: Instance
@@ -435,7 +435,7 @@ methods:
       Returns an array of asset IDs that are contained in a specified package.
     description: |
       Returns an array of asset IDs that are contained in a specified package.
-    code_samples:
+    code_samples: []
     parameters:
       - name: packageAssetId
         type: int64
@@ -552,7 +552,7 @@ methods:
       account who created the _creationID_ asset.
 
       This member is broken and doesn't function correctly. Avoid using it.
-    code_samples:
+    code_samples: []
     parameters:
       - name: creationID
         type: int64
@@ -660,7 +660,7 @@ methods:
       Saves the state of the current place. Only works for places that are
       created with `Class.AssetService:CreatePlaceAsync()` or which have the API
       enabled through place settings.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()

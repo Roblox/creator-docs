@@ -81,7 +81,7 @@ description: |
   		</tr>
   	</tbody>
   </table>
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -99,7 +99,7 @@ methods:
       triggering their registered callbacks to be invoked.
 
       Yields until the message is received by the backend.
-    code_samples:
+    code_samples: []
     parameters:
       - name: topic
         type: string

@@ -12,7 +12,7 @@ description: |
   It is not possible to directly create root `Instance` objects, but the special
   `Datatype.Instance.new()` constructor creates objects via code, taking the
   name of the class as a parameter and returning the created object.
-code_samples:
+code_samples: []
 inherits:
   - Object
 tags:
@@ -42,7 +42,7 @@ properties:
       part.Archivable = false
       print(part:Clone())  --> nil
       ```
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -120,7 +120,7 @@ properties:
 
       See also `Class.Instance:GetFullName()` to obtain a full name including
       the object's hierarchy.
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -188,7 +188,7 @@ properties:
       However, if parenting parts to a `Class.Model` whose parent hasn't been
       set yet, parenting each part to that model is acceptable since the model
       would not have replicated.
-    code_samples:
+    code_samples: []
     type: Instance
     tags:
       - NotReplicated
@@ -210,7 +210,7 @@ properties:
       This property used to protect objects in the `Class.CoreGui` service from
       being altered by users in an unauthorized manner. It has been deprecated
       and does not do anything.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - Hidden
@@ -277,7 +277,7 @@ properties:
   - name: Instance.archivable
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - Hidden
@@ -479,7 +479,7 @@ methods:
       For variants of this function that find ancestors of a specific class,
       please see `Class.Instance:FindFirstAncestorOfClass()` and
       `Class.Instance:FindFirstAncestorWhichIsA()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: name
         type: string
@@ -520,7 +520,7 @@ methods:
       `Class.Instance.Name`. `Class.Instance:FindFirstAncestorWhichIsA()` also
       exists, using the `Class.Object:IsA()` method instead to respect class
       inheritance.
-    code_samples:
+    code_samples: []
     parameters:
       - name: className
         type: string
@@ -567,7 +567,7 @@ methods:
       ```
 
       See also `Class.Instance:FindFirstAncestor()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: className
         type: string
@@ -735,7 +735,7 @@ methods:
 
       Developers looking for a child by name, should use
       `Class.Instance:FindFirstChild()` instead.
-    code_samples:
+    code_samples: []
     parameters:
       - name: className
         type: string
@@ -766,7 +766,7 @@ methods:
       This method is disabled and cannot be used. To find the first descendant
       of an instance, consider using the `recursive` parameter on
       `Class.Instance:FindFirstChild()` instead.
-    code_samples:
+    code_samples: []
     parameters:
       - name: name
         type: string
@@ -790,7 +790,7 @@ methods:
       If the `Class.Instance` is an `Class.Actor`, the `Class.Actor` itself is
       returned. Otherwise, its closest ancestor `Class.Actor` is returned. If no
       ancestor is an `Class.Actor`, the result is `nil`.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Actor
@@ -828,7 +828,7 @@ methods:
         name to the given value.
       - `Class.Instance:GetAttributes()` which returns a dictionary of key‑value
         pairs for each of the instance's attributes.
-    code_samples:
+    code_samples: []
     parameters:
       - name: attribute
         type: string
@@ -879,7 +879,7 @@ methods:
 
       See also `Class.Instance.AttributeChanged` which fires whenever any
       attribute is changed on the instance.
-    code_samples:
+    code_samples: []
     parameters:
       - name: attribute
         type: string
@@ -921,7 +921,7 @@ methods:
 
       See also `Class.Instance:GetAttribute()` which returns the value that has
       been assigned to the given attribute name.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Dictionary
@@ -1357,7 +1357,7 @@ methods:
         assigned to the given attribute name.
       - `Class.Instance:GetAttributes()` which returns a dictionary of key‑value
         pairs for each of the instance's attributes.
-    code_samples:
+    code_samples: []
     parameters:
       - name: attribute
         type: string
@@ -1439,7 +1439,7 @@ methods:
       Returns an array of the object's children.
     description: |
       The children function returns an array of the object's children.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Instances
@@ -1457,7 +1457,7 @@ methods:
   - name: Instance:clone
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Instance
@@ -1474,7 +1474,7 @@ methods:
   - name: Instance:destroy
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -1491,7 +1491,7 @@ methods:
   - name: Instance:findFirstChild
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: name
         type: string
@@ -1516,7 +1516,7 @@ methods:
   - name: Instance:getChildren
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Instances
@@ -1533,7 +1533,7 @@ methods:
   - name: Instance:isDescendantOf
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: ancestor
         type: Instance
@@ -1554,7 +1554,7 @@ methods:
   - name: Instance:remove
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -1630,7 +1630,7 @@ events:
 
       See also `Class.Instance:GetAttributeChangedSignal()` which returns an
       event that fires when a specific given attribute changes.
-    code_samples:
+    code_samples: []
     parameters:
       - name: attribute
         type: string
@@ -1848,7 +1848,7 @@ events:
   - name: Instance.childAdded
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: child
         type: Instance

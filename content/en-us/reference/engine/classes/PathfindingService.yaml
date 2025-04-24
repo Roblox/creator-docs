@@ -13,7 +13,7 @@ description: |
 
   See [Character Pathfinding](../../../characters/pathfinding.md) for usage
   details.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -37,7 +37,7 @@ properties:
       world. In this case the voxels being used are 4x4x4. This property sets
       the percent of a voxel has to be occupied to be considered empty. Defaults
       to 0.16.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -148,7 +148,7 @@ methods:
       This function computes and returns a `Class.Path` between two
       `Datatype.Vector3|Vector3s`. If the given MaxDistance is greater than 512,
       an error will be thrown. (MaxDistance is too large).
-    code_samples:
+    code_samples: []
     parameters:
       - name: start
         type: Vector3
@@ -186,7 +186,7 @@ methods:
       `Datatype.Vector3|Vector3s`. This function fulfills the same purpose as
       `Class.PathfindingService:ComputeRawPathAsync()`, but creates a much
       smoother path for an NPC to follow in comparison.
-    code_samples:
+    code_samples: []
     parameters:
       - name: start
         type: Vector3
@@ -230,7 +230,7 @@ methods:
 
       To get the waypoints of a `Class.Path` object, you can use the
       `Class.Path:GetWaypoints()` function.
-    code_samples:
+    code_samples: []
     parameters:
       - name: start
         type: Vector3

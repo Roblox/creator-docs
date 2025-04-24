@@ -7,7 +7,7 @@ summary: |
 description: |
   VirtualInputManager is an internal service used by Roblox to record inputs and
   play them back during performance benchmarking tests.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

@@ -7,7 +7,7 @@ description: |
   The PhysicsSettings is a singleton class, which lets you view debugging
   features in Roblox's physics engine. You can find it under the Physics tab in
   Studio's settings menu.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -23,7 +23,7 @@ properties:
     description: |
       When set to true, physically simulated objects will stop being simulated
       if they have little to no motion for a set period of time.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -46,7 +46,7 @@ properties:
       When set to true, parts that are `Class.BasePart.Anchored` will show a
       gray surface outline on the surface of the part's bounding box that is
       currently facing the ground.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -71,7 +71,7 @@ properties:
       `Class.Part` associated with the assembly are outlined with the color.
       Parts that are attached together by `Class.JointInstance` will share the
       same color.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -109,7 +109,7 @@ properties:
     description: |
       When set to true, parts that are actively being physically simulated will
       have a red outline.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -170,7 +170,7 @@ properties:
       		<td>Physics Body that is moving very little along the Y plane, while in contact with another body.</td>
       	</tr>
       </tbody></table>
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -261,7 +261,7 @@ properties:
       When set to true, each contact island will render `Class.SelectionBox`
       adorns on the parts in contact islands, where each contact island is
       assigned a random color.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -352,7 +352,7 @@ properties:
       		<td>Contact point with no special conditions.</td>
       	</tr>
       </tbody></table>
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -390,7 +390,7 @@ properties:
     description: |
       When set to true, XYZ axes are rendered at the `Class.BasePart.CFrame` of
       every part.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -428,7 +428,7 @@ properties:
     description: |
       When set to true, every individual mechanism of parts is given a unique
       color.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -451,7 +451,7 @@ properties:
       An ancient property that hasn't work correctly since late 2007. It's
       supposed to render an XYZ axis on the root part of a `Class.Model`, but
       the axis rendering component doesn't work correctly.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -491,7 +491,7 @@ properties:
       When set to true, each player's character is outlined with a unique color,
       and each part that the player has network ownership over is outlined with
       the same color.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -514,7 +514,7 @@ properties:
       An ancient property that hasn't worked correctly since late 2007. It's
       supposed to render a large XYZ axis in the center of each
       `Class.BasePart`, but the axis rendering component doesn't work correctly.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -538,7 +538,7 @@ properties:
       simulated object will check to see which player is closest to that object,
       and if they are within the player's simulation radius. If both conditions
       are met, that player will becomes the network owner of that object.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -572,7 +572,7 @@ properties:
   - name: PhysicsSettings.AreTerrainReplicationRegionsShown
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -610,7 +610,7 @@ properties:
     description: |
       When set to true, parts that aren't aligned on the 1x1x1 grid will be
       outlined yellow.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -633,7 +633,7 @@ properties:
       An ancient property that hasn't worked correctly since late 2007. It's
       supposed to render a large XYZ axis in the center of the world, but the
       axis rendering component doesn't work correctly.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -654,7 +654,7 @@ properties:
     description: |
       When set to true, Roblox will fall back to using its legacy CSG solver
       when performing solid model operations.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -761,7 +761,7 @@ properties:
       default value is 1.0; smaller values draw smaller arrows and vice versa.
       The default value is a good starting point for a wide range of aerodynamic
       mechanisms.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -778,7 +778,7 @@ properties:
   - name: PhysicsSettings.ForceCSGv2
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - Hidden
@@ -831,7 +831,7 @@ properties:
   - name: PhysicsSettings.IsInterpolationThrottleShown
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -852,7 +852,7 @@ properties:
     description: |
       This property is supposed to show the `Class.BasePart.ReceiveAge` of a
       part, but it does not work correctly.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -926,7 +926,7 @@ properties:
       		<td>Connection between two Primitives.</td>
       	</tr>
       </tbody></table>
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -948,7 +948,7 @@ properties:
       physics engine will adjust the physics environment throttle depending on
       how much work the physics engine is doing, and the current framerate. See
       the enum page for `Enum.EnviromentalPhysicsThrottle` for more information.
-    code_samples:
+    code_samples: []
     type: EnviromentalPhysicsThrottle
     tags: []
     deprecation_message: ''
@@ -969,7 +969,7 @@ properties:
     description: |
       When set to true, the underlying collision geometry for
       `Class.PartOperation` and `Class.MeshPart` is rendered.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -992,7 +992,7 @@ properties:
       hovered mechanisms in Studio's play and run modes. This visualization
       shows aerodynamic force, torque, and center of pressure for the hovered or
       selected mechanisms.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -1068,7 +1068,7 @@ properties:
       `DefaultAuto`, this specifies the maximum time that the physics
       environmental throttle has to wait before it is allowed to automatically
       change.
-    code_samples:
+    code_samples: []
     type: double
     tags: []
     deprecation_message: ''
@@ -1106,7 +1106,7 @@ properties:
     description: |
       If set to true, version 2 of Roblox's CSG solver will be used instead of
       version 1.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''

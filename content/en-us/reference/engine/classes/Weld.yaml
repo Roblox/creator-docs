@@ -33,7 +33,7 @@ description: |
   Welds do not have any directionality. Imagine rigid joints forming a tree,
   branching up from the root part such that all the parts up the tree from the
   root will move and their welded "children" will move with them.
-code_samples:
+code_samples: []
 inherits:
   - JointInstance
 tags: []

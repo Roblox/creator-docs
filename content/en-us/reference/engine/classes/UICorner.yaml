@@ -28,7 +28,7 @@ description: |
   [9‑Slice Design](../../../ui/9-slice.md) for details.
 
   Note that `Class.UICorner` can not be applied to a `Class.ScrollingFrame`.
-code_samples:
+code_samples: []
 inherits:
   - UIComponent
 tags: []
@@ -49,7 +49,7 @@ properties:
         `Class.UICorner.CornerRadius|CornerRadius` is set to a value that leads
         to a calculated result greater than half of the rectangle's minimum
         width or height.
-    code_samples:
+    code_samples: []
     type: UDim
     tags: []
     deprecation_message: ''

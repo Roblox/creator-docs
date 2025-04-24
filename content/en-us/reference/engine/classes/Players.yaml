@@ -63,7 +63,7 @@ properties:
 
       There are two other chat modes, `Class.Players.ClassicChat` and a chat
       mode where both classic and bubble chat are enabled.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - ReadOnly
@@ -127,7 +127,7 @@ properties:
 
       There are two other chat modes, `Class.Players.BubbleChat` and a chat mode
       where both classic and bubble chat are enabled.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - ReadOnly
@@ -157,7 +157,7 @@ properties:
       `Class.ModuleScript|ModuleScripts` required by them, since they run on the
       client. For the server, on which `Class.Script` objects run their code,
       this property is `nil`.
-    code_samples:
+    code_samples: []
     type: Player
     tags:
       - ReadOnly
@@ -182,7 +182,7 @@ properties:
       server. This property can only be set through a specific place's settings
       on the [Creator Dashboard](https://create.roblox.com/dashboard/creations)
       or through [Game Settings](../../../studio/game-settings.md).
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - ReadOnly
@@ -205,7 +205,7 @@ properties:
     description: |
       This property indicates the number of people in the server at the current
       time. It is read only. Meaning it cannot be written to, only read.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - ReadOnly
@@ -232,7 +232,7 @@ properties:
       This property indicates the number of players to which Roblox's matchmaker
       will fill servers. This number will be less than the maximum number of
       players (`Class.Players.MaxPlayers`) supported by the experience.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - ReadOnly
@@ -264,7 +264,7 @@ properties:
       Although this property can be set from within a `Class.Script`, you can
       more easily set it directly on the `Class.Players` object in Studio's
       [Explorer](../../../studio/explorer.md) window.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -301,7 +301,7 @@ properties:
   - name: Players.localPlayer
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Player
     tags:
       - Hidden
@@ -328,7 +328,7 @@ properties:
     description: |
       This property indicates the number of people in the server at the current
       time. It is read only. Meaning it cannot be written to, only read.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - Hidden
@@ -575,7 +575,7 @@ methods:
   - name: Players:getPlayers
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Instances
@@ -592,7 +592,7 @@ methods:
   - name: Players:playerFromCharacter
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: character
         type: Model
@@ -616,7 +616,7 @@ methods:
     description: |
       This function was once used to return a list of players in a game, but has
       since been deprecated in favor of `Class.Players:GetPlayers()`
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Instances

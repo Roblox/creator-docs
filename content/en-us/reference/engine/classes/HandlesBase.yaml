@@ -8,7 +8,7 @@ summary: |
 description: |
   An abstract class for Handle objects, such as `Class.ArcHandles` and
   `Class.Handles`.
-code_samples:
+code_samples: []
 inherits:
   - PartAdornment
 tags:

@@ -8,7 +8,7 @@ summary: |
 description: |
   An instance which is used to create a number value which can never be less
   than the MinValue or more than the MaxValue.
-code_samples:
+code_samples: []
 inherits:
   - ValueBase
 tags:
@@ -20,7 +20,7 @@ properties:
   - name: DoubleConstrainedValue.ConstrainedValue
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: double
     tags:
       - Hidden
@@ -46,7 +46,7 @@ properties:
     description: |
       The highest number that the `Class.DoubleConstrainedValue.Value` property
       can be.
-    code_samples:
+    code_samples: []
     type: double
     tags: []
     deprecation_message: |
@@ -70,7 +70,7 @@ properties:
     description: |
       The lowest number that the `Class.DoubleConstrainedValue.Value` property
       can be.
-    code_samples:
+    code_samples: []
     type: double
     tags: []
     deprecation_message: |
@@ -96,7 +96,7 @@ properties:
       Used to hold a number value between
       `Class.DoubleConstrainedValue.MinValue` and
       `Class.DoubleConstrainedValue.MaxValue`.
-    code_samples:
+    code_samples: []
     type: double
     tags:
       - NotReplicated
@@ -142,7 +142,7 @@ events:
   - name: DoubleConstrainedValue.changed
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
         type: double

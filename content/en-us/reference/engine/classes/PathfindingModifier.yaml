@@ -23,7 +23,7 @@ description: |
   - The part is `Class.BasePart.CanCollide|non-collidable` (and usually
     invisible in game) and we are interested in modifying pathfinding costs of
     paths inside the part, which we call **volume**.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -62,7 +62,7 @@ properties:
       Determines if the parts enclosed by the modifier are traversable, even if
       they would normally be collided with. See
       [Character Pathfinding](../../../characters/pathfinding.md) for details.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''

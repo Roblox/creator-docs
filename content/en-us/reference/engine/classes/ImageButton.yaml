@@ -7,7 +7,7 @@ summary: |
 description: |
   An `Class.ImageButton` behaves similarly to an `Class.ImageLabel` in regards
   to rendering, with the additional behaviors of a `Class.GuiButton`.
-code_samples:
+code_samples: []
 inherits:
   - GuiButton
 tags: []
@@ -20,7 +20,7 @@ properties:
     description: |
       A texture ID that will be used when the `Class.ImageButton` is being
       hovered.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -197,7 +197,7 @@ properties:
       `Class.ImageButton.ImageTransparency|ImageTransparency` to `1`, it will
       result in a plain rectangle that can be used as a button. However, it may
       be better to use a blank `Class.TextButton` instead.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -244,7 +244,7 @@ properties:
     description: |
       A texture ID that can be set as an `Class.ImageButton` property. When the
       button is pressed, it will render this image.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -286,7 +286,7 @@ properties:
       size in texture memory. In contrast,
       `Enum.ResamplerMode.Pixelated|Enum.ResamplerMode.Pixelated` preserves the
       sharp edges of the image pixels.
-    code_samples:
+    code_samples: []
     type: ResamplerMode
     tags: []
     deprecation_message: ''
@@ -325,7 +325,7 @@ properties:
 
       For `Enum.ScaleType.Tile`, the size of each image tile is determined by
       the `Class.ImageButton.TileSize|TileSize` property.
-    code_samples:
+    code_samples: []
     type: ScaleType
     tags: []
     deprecation_message: ''
@@ -350,7 +350,7 @@ properties:
 
       To learn more about 9‑sliced images, see
       [UI 9‑Slice Design](../../../ui/9-slice.md).
-    code_samples:
+    code_samples: []
     type: Rect
     tags: []
     deprecation_message: ''
@@ -379,7 +379,7 @@ properties:
       See also `Class.ImageButton.ScaleType|ScaleType` which determines how an
       image will scale if displayed in a UI element whose size differs from the
       source image.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -409,7 +409,7 @@ properties:
       This property is only active if the
       `Class.ImageButton.ScaleType|ScaleType` property is set to
       `Enum.ScaleType.Tile`.
-    code_samples:
+    code_samples: []
     type: UDim2
     tags: []
     deprecation_message: ''

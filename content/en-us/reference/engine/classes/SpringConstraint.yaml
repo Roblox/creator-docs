@@ -44,7 +44,7 @@ description: |
   `Class.SpringConstraint.MaxLength|MaxLength` values for setting the minimum
   and maximum length of the spring. If the spring's attachments reach these
   limits, they stop moving apart from one another without restitution.
-code_samples:
+code_samples: []
 inherits:
   - Constraint
 tags: []
@@ -56,7 +56,7 @@ properties:
     description: |
       The number of coils visualized on the `Class.SpringConstraint`. This can
       only be set between 0 and 8.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -78,7 +78,7 @@ properties:
     description: |
       The current distance between the constraint's
       `Class.Attachment|Attachments`.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -104,7 +104,7 @@ properties:
       Damping constant for the `Class.SpringConstraint`. Multiplied to the
       velocity of the constraint's `Class.Attachment|Attachments` to reduce the
       spring force applied.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -124,7 +124,7 @@ properties:
       Natural resting length of the spring.
     description: |
       Natural resting length of the spring.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -151,7 +151,7 @@ properties:
       range of motion, you can combine a `Class.SpringConstraint` with another
       constraint that allows restitution at the end of its range, such as a
       `Class.PrismaticConstraint` or `Class.RopeConstraint`.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -175,7 +175,7 @@ properties:
       `Class.Attachment|Attachments`. Some spring systems can give rise to
       forces that grow fast leading to instability. In such cases it is
       recommended to set MaxForce to a reasonable value.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -197,7 +197,7 @@ properties:
     description: |
       The maximum separation the `Class.SpringConstraint` will allow if
       `Class.SpringConstraint.LimitsEnabled|LimitsEnabled` is true.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -219,7 +219,7 @@ properties:
     description: |
       The minimum separation the `Class.SpringConstraint` will allow if
       `Class.SpringConstraint.LimitsEnabled|LimitsEnabled` is true.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -239,7 +239,7 @@ properties:
       The visualized radius of the spring's coils.
     description: |
       The visualized radius of the spring's coils.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -263,7 +263,7 @@ properties:
       The strength of the spring. The higher this value the more force will be
       applied when the attachments are separated a different length than the
       `Class.SpringConstraint.FreeLength|FreeLength`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -283,7 +283,7 @@ properties:
       The visualized thickness of the spring's coils.
     description: |
       The visualized thickness of the spring's coils.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

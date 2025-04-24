@@ -15,7 +15,7 @@ description: |
   `Class.DataStoreKeyInfo` is always `nil` for keys in an
   `Class.OrderedDataStore`. If you need versioning and metadata support, use a
   `Class.DataStore`.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -88,7 +88,7 @@ methods:
 
       To get a specific version, such as a version before the latest, use
       `Class.DataStore:GetVersionAsync()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
@@ -131,7 +131,7 @@ methods:
       calling this method on an ordered data store key will overwrite the
       current value with the incremented value and make previous versions
       inaccessible.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
@@ -194,7 +194,7 @@ methods:
       `Class.GlobalDataStore:RemoveAsync()` or
       `Class.DataStore:RemoveVersionAsync()`, the function will return `nil`,
       `nil` for value and `Class.DataStoreKeyInfo` respectively.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
@@ -252,7 +252,7 @@ methods:
       whatever server last updated it) before making any changes. However, it's
       somewhat slower because it reads before it writes, and it also counts
       against both the read and write limit.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
@@ -361,7 +361,7 @@ methods:
 
       The callback function cannot yield, so do **not** include calls like
       `Library.task.wait()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string

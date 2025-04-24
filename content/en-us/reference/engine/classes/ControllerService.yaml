@@ -6,7 +6,7 @@ summary: |
   Container class for the `Class.HumanoidController` among other classes.
 description: |
   Container class for the `Class.HumanoidController` among other classes.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

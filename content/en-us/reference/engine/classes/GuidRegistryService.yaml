@@ -6,7 +6,7 @@ summary: |
   An internal service, whose functionality is not accessible to developers.
 description: |
   An internal service, whose functionality is not accessible to developers.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

@@ -29,7 +29,7 @@ description: |
   attachment. Setting `Class.AngularVelocity.RelativeTo|RelativeTo` to
   `Enum.ActuatorRelativeTo|Attachment1` also exposes the
   `Class.AngularVelocity.ReactionTorqueEnabled|ReactionTorqueEnabled` property.
-code_samples:
+code_samples: []
 inherits:
   - Constraint
 tags: []
@@ -42,7 +42,7 @@ properties:
       A `Datatype.Vector3` that gives the desired or target angular velocity.
       This vector is set in the `Datatype.CFrame` expressed by the
       `Class.AngularVelocity.RelativeTo|RelativeTo` property.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -62,7 +62,7 @@ properties:
       Magnitude of the maximum torque the constraint can apply.
     description: |
       Magnitude of the maximum torque the constraint can apply.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -91,7 +91,7 @@ properties:
 
       Only meaningful when `Class.AngularVelocity.RelativeTo|RelativeTo` is set
       to `Enum.ActuatorRelativeTo|Attachment1`.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -118,7 +118,7 @@ properties:
       `Class.AngularVelocity.RelativeTo|RelativeTo` can also be set to
       `Enum.ActuatorRelativeTo|Attachment0`, but it makes no physical sense and
       will lead to unpredictable behaviors.
-    code_samples:
+    code_samples: []
     type: ActuatorRelativeTo
     tags: []
     deprecation_message: ''

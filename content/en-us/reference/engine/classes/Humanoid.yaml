@@ -149,7 +149,7 @@ properties:
       `BodyWidthScale`, `HeadScale`. Changing the value of any of these causes
       the character's body parts and accessories to change size, but only if
       `AutomaticScalingEnabled` is true.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -171,7 +171,7 @@ properties:
     description: |
       Determines whether the humanoid's joints break when in the
       `Enum.HumanoidStateType.Dead` state. Defaults to true.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -257,7 +257,7 @@ properties:
       			<td>Fixed size collision boxes, similar to the classic avatar collision</td>
       		</tr>
       </table>
-    code_samples:
+    code_samples: []
     type: HumanoidCollisionType
     tags:
       - Deprecated
@@ -336,7 +336,7 @@ properties:
       override the `DisplayName` property of the Humanoid with the `DisplayName`
       property of the player if the `Class.Humanoid.DisplayName` of
       `StarterHumanoid` is an empty string.
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -405,7 +405,7 @@ properties:
         - You cannot test if the `Class.Humanoid` is swimming with this
           property. You should instead use its `Class.Humanoid:GetState()`
           function.
-    code_samples:
+    code_samples: []
     type: Material
     tags:
       - ReadOnly
@@ -464,7 +464,7 @@ properties:
       this state, `Class.Humanoid.Health|Health` is locked to 0; however, there
       is no error or warning for setting the `Class.Humanoid.Health|Health` of a
       dead humanoid to a positive nonzero value.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -494,7 +494,7 @@ properties:
       [Character Name/Health Display](../../../characters/name-health-display.md)
       for an in-depth guide on controlling the appearance of character names and
       health bars.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -535,7 +535,7 @@ properties:
       [Character Name/Health Display](../../../characters/name-health-display.md)
       for an in-depth guide on controlling the appearance of character names and
       health bars.
-    code_samples:
+    code_samples: []
     type: HumanoidHealthDisplayType
     tags: []
     deprecation_message: ''
@@ -576,7 +576,7 @@ properties:
       ```lua
       Height = LeftLeg.Size.Y + (0.5 * RootPart.Size.Y) + HipHeight
       ```
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -599,7 +599,7 @@ properties:
       value of `Class.Humanoid.JumpPower` or the height of
       `Class.Humanoid.JumpHeight`, depending on the value of
       `Class.Humanoid.UseJumpPower`.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - NotReplicated
@@ -632,7 +632,7 @@ properties:
       [Properties](../../../studio/properties.md) window if
       `Class.Humanoid.UseJumpPower` is set to **false**, as it would not be
       relevant otherwise (instead, `Class.Humanoid.JumpPower` is used).
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -668,7 +668,7 @@ properties:
       [Properties](../../../studio/properties.md) window if
       `Class.Humanoid.UseJumpPower` is set to **true**, as it would not be
       relevant otherwise (instead, `Class.Humanoid.JumpHeight` is used).
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -689,7 +689,7 @@ properties:
     description: |
       A reference to the humanoid's _Left Leg_ part. The value of this property
       will always be `nil` if the humanoid's `Enum.RigType` is set to R15.
-    code_samples:
+    code_samples: []
     type: BasePart
     tags:
       - Hidden
@@ -721,7 +721,7 @@ properties:
       `Class.Humanoid.MaxHealth|MaxHealth`, its health bar may not be displayed,
       depending on its `Class.Humanoid.HealthDisplayType|HealthDisplayType`
       property.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -807,7 +807,7 @@ properties:
       [Character Name/Health Display](../../../characters/name-health-display.md)
       for an in-depth guide on controlling the appearance of character names and
       health bars.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -866,7 +866,7 @@ properties:
       is in a state where it is free-falling and cannot move. This state behaves
       similar to sitting, except that jumping does not free the humanoid from
       the state.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -890,7 +890,7 @@ properties:
       Allows developers to disable the behavior where a player
       `Character|character` dies if the Neck `Class.Motor6D` is removed or
       disconnected even momentarily. This property defaults to true.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -921,7 +921,7 @@ properties:
       not function correctly. For example, if a R15 humanoid's **RigType** is
       set to R6, the `Class.Humanoid` will die as there is no `Class.BasePart`
       called **Torso** connected to a `Class.BasePart` called **Head**.
-    code_samples:
+    code_samples: []
     type: HumanoidRigType
     tags: []
     deprecation_message: ''
@@ -942,7 +942,7 @@ properties:
     description: |
       A reference to the humanoid's _Right Leg_ part. The value of this property
       will always be `nil` if the humanoid's RigType is set to R15.
-    code_samples:
+    code_samples: []
     type: BasePart
     tags:
       - Hidden
@@ -974,7 +974,7 @@ properties:
       `Class.Player.Character` model is set to **HumanoidRootPart**.
 
       For R6 characters, `Class.Model.PrimaryPart` is set to the `Head` part.
-    code_samples:
+    code_samples: []
     type: BasePart
     tags:
       - ReadOnly
@@ -1005,7 +1005,7 @@ properties:
 
       - For a bool describing if the `Class.Humanoid` is currently sitting or
         not, see `Class.Humanoid.Sit`
-    code_samples:
+    code_samples: []
     type: BasePart
     tags:
       - ReadOnly
@@ -1039,7 +1039,7 @@ properties:
         on can be obtained using the `Class.Humanoid.SeatPart` property
       - It is possible to detect when a Humanoid sits by connecting to the
         `Class.Humanoid.Seated` event.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -1071,7 +1071,7 @@ properties:
       classic rocket launcher, set their **TargetPoint**, and then call the
       tool's `Class.Tool:Activate()` function, you can make the NPC fire a
       rocket at the target point.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -1093,7 +1093,7 @@ properties:
       A reference to a humanoid's root driving part. Contrary to the name of
       this property, it will only point to the Torso part if a humanoid doesn't
       have a HumanoidRootPart.
-    code_samples:
+    code_samples: []
     type: BasePart
     tags:
       - Hidden
@@ -1125,7 +1125,7 @@ properties:
       is used to ensure the humanoid jumps to that height. With this set to
       false, the `Class.Humanoid.JumpPower` value is used to apply an upward
       force.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -1162,7 +1162,7 @@ properties:
         studs/second.
       - The speed at which the `Class.Humanoid` is currently walking can be
         obtained using the `Class.Humanoid.Running|Running` event.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -1210,7 +1210,7 @@ properties:
         `Class.Humanoid.MoveToFinished` to fire.
       - If you don't want this to happen, you should repeatedly call MoveTo so
         that the timeout will keep resetting.
-    code_samples:
+    code_samples: []
     type: BasePart
     tags: []
     deprecation_message: ''
@@ -1271,7 +1271,7 @@ properties:
   - name: Humanoid.maxHealth
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -1340,7 +1340,7 @@ methods:
       Adds a BoolValue to the Humanoid's _Status_ object, whose name is equal to
       the string passed as the _status_ argument. If the status already exists,
       a new BoolValue will not be created.
-    code_samples:
+    code_samples: []
     parameters:
       - name: status
         type: string
@@ -1366,7 +1366,7 @@ methods:
       Adds a BoolValue to the Humanoid's _Status_ object, whose name is equal to
       the name of the _Status_ enum passed as the _status_ argument. If the
       status already exists, a new BoolValue will not be created.
-    code_samples:
+    code_samples: []
     parameters:
       - name: status
         type: Status
@@ -1502,7 +1502,7 @@ methods:
       See also:
 
       - To unequip tools, use `Class.Humanoid:UnequipTools()`
-    code_samples:
+    code_samples: []
     parameters:
       - name: tool
         type: Instance
@@ -1566,7 +1566,7 @@ methods:
         that of the passed in server-side outfit asset.
       - `Class.Player:LoadCharacterWithHumanoidDescription()` which spawns a
         player with the look from the passed in `Class.HumanoidDescription`.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: HumanoidDescription
@@ -1598,7 +1598,7 @@ methods:
       This method can be useful for games where hit location is important. For
       example, it can be used to determine if a player is hit in the leg and
       then slow them down based on the injury.
-    code_samples:
+    code_samples: []
     parameters:
       - name: part
         type: Instance
@@ -1683,7 +1683,7 @@ methods:
       `Class.AnimationTrack|AnimationTracks` that have loaded but are **not
       playing**. If you want to track these you will need to index them
       manually.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Array
@@ -1765,7 +1765,7 @@ methods:
     description: |
       The GetStatuses method returns a table of the Humanoid's statuses, and
       custom statuses.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Array
@@ -1786,7 +1786,7 @@ methods:
     description: |
       The HasCustomStatus method returns boolean based on if custom statuses
       exist.
-    code_samples:
+    code_samples: []
     parameters:
       - name: status
         type: string
@@ -1810,7 +1810,7 @@ methods:
       Returns a boolean based on if a status exists.
     description: |
       The HasStatus method returns a boolean based on if a status exists.
-    code_samples:
+    code_samples: []
     parameters:
       - name: status
         type: Status
@@ -1836,7 +1836,7 @@ methods:
     description: |
       This method loads an `Class.Animation` onto a `Class.Humanoid`, returning
       an `Class.AnimationTrack` that can be used for playback.
-    code_samples:
+    code_samples: []
     parameters:
       - name: animation
         type: Animation
@@ -2007,7 +2007,7 @@ methods:
     description: |
       The RemoveCustomStatus method removes the defined custom status from the
       Status model in the Humanoid..
-    code_samples:
+    code_samples: []
     parameters:
       - name: status
         type: string
@@ -2032,7 +2032,7 @@ methods:
     description: |
       The RemoveStatus method removes the defined status from the Status model
       in the Humanoid.
-    code_samples:
+    code_samples: []
     parameters:
       - name: status
         type: Status
@@ -2065,7 +2065,7 @@ methods:
 
       The name of the part passed in should match with the name of the
       BodyPartR15 Enum passed in.
-    code_samples:
+    code_samples: []
     parameters:
       - name: bodyPart
         type: BodyPartR15
@@ -2205,7 +2205,7 @@ methods:
   - name: Humanoid:loadAnimation
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: animation
         type: Animation
@@ -2226,7 +2226,7 @@ methods:
   - name: Humanoid:takeDamage
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: amount
         type: float
@@ -2275,7 +2275,7 @@ methods:
         that of the passed in server-side outfit asset.
       - `Class.Player:LoadCharacterWithHumanoidDescription()` which spawns a
         player with the look from the passed in `Class.HumanoidDescription`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: humanoidDescription
         type: HumanoidDescription
@@ -2316,7 +2316,7 @@ methods:
       is optimized and may incorrectly apply a `Class.HumanoidDescription` if
       the character has been changed by means other than through the
       `Class.HumanoidDescription` system.
-    code_samples:
+    code_samples: []
     parameters:
       - name: humanoidDescription
         type: HumanoidDescription
@@ -2345,7 +2345,7 @@ methods:
       If the emote could not be played because the emoteName is not found in the
       HumanoidDescription, this method will give an error. The method will
       return true to indicate that the emote was played successfully.
-    code_samples:
+    code_samples: []
     parameters:
       - name: emoteName
         type: string
@@ -2458,7 +2458,7 @@ events:
     description: |
       The CustomStatusAdded event fires when a status is added to the Humanoid
       via the `Class.Humanoid:AddCustomStatus()` method.
-    code_samples:
+    code_samples: []
     parameters:
       - name: status
         type: string
@@ -2480,7 +2480,7 @@ events:
     description: |
       The CustomStatusRemoved event fires when a status is removed from the
       Humanoid via the `Class.Humanoid:RemoveCustomStatus()` method.
-    code_samples:
+    code_samples: []
     parameters:
       - name: status
         type: string
@@ -2529,7 +2529,7 @@ events:
       `FallingDown` state is enabled. When this happens this event will fire
       with an _active_ value of _false_, and `Class.Humanoid.GettingUp` will
       fire with an _active_ value of _true_.
-    code_samples:
+    code_samples: []
     parameters:
       - name: active
         type: boolean
@@ -2559,7 +2559,7 @@ events:
       the state is changed while the `Class.Humanoid` is falling. For this
       reason, you should use `Class.Humanoid.StateChanged` and listen for the
       `Landed` state to work out when a `Class.Humanoid` has landed.
-    code_samples:
+    code_samples: []
     parameters:
       - name: active
         type: boolean
@@ -2591,7 +2591,7 @@ events:
       To force a `Class.Humanoid` to fall over, use the
       `Class.Humanoid:ChangeState()` function with
       `Enum.HumanoidStateType.FallingDown`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: active
         type: boolean
@@ -2648,7 +2648,7 @@ events:
 
       You can disable jumping using the `Class.Humanoid:SetStateEnabled()`
       function.
-    code_samples:
+    code_samples: []
     parameters:
       - name: active
         type: boolean
@@ -2714,7 +2714,7 @@ events:
       The PlatformStand `Enum.HumanoidStateType` was associated with the now
       disabled `Class.Platform` part. Despite this, it can still be used by
       developers.
-    code_samples:
+    code_samples: []
     parameters:
       - name: active
         type: boolean
@@ -2746,7 +2746,7 @@ events:
 
       - `Class.Humanoid.FallingDown` for the `Class.Humanoid` event connected
         with the `FallingDown` state, which behaves similarly to `Ragdoll`
-    code_samples:
+    code_samples: []
     parameters:
       - name: active
         type: boolean
@@ -2975,7 +2975,7 @@ events:
       perpendicular to the direction it is facing. This state is currently
       unused, if it is set using `Class.Humanoid:ChangeState()` the state will
       revert to `RunningNoPhysics`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: active
         type: boolean
@@ -3011,7 +3011,7 @@ events:
         `Class.Humanoid.StateChanged` event
       - You can disable swimming using the `Class.Humanoid:SetStateEnabled()`
         function
-    code_samples:
+    code_samples: []
     parameters:
       - name: speed
         type: float

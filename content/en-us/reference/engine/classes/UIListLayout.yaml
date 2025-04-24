@@ -54,7 +54,7 @@ description: |
   - `Class.UIListLayout.ItemLineAlignment|ItemLineAlignment` is **not** set to
     `Enum.ItemLineAlignment.Automatic`.
   - `Class.UIListLayout.Wraps|Wraps` is `true`.
-code_samples:
+code_samples: []
 inherits:
   - UIGridStyleLayout
 tags: []
@@ -205,7 +205,7 @@ properties:
       Determines the amount of free space between each element, set to either a
       scale (percentage of the parent's size in the current direction) or an
       offset (static spacing value similar to pixel size).
-    code_samples:
+    code_samples: []
     type: UDim
     tags: []
     deprecation_message: ''

@@ -30,7 +30,7 @@ properties:
       Used to hold a double value.
     description: |
       Used to hold a double value.
-    code_samples:
+    code_samples: []
     type: double
     tags: []
     deprecation_message: ''
@@ -80,7 +80,7 @@ events:
   - name: NumberValue.changed
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
         type: double

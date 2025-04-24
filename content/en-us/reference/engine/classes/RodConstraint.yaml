@@ -20,7 +20,7 @@ description: |
   other, by enabling the `Class.RodConstraint.LimitsEnabled|LimitsEnabled`
   property and setting `Class.RodConstraint.LimitAngle0|LimitAngle0` and
   `Class.RodConstraint.LimitAngle1|LimitAngle1` respectively.
-code_samples:
+code_samples: []
 inherits:
   - Constraint
 tags: []
@@ -33,7 +33,7 @@ properties:
     description: |
       The current distance between the constraint's
       `Class.Attachment|Attachments`.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -57,7 +57,7 @@ properties:
     description: |
       The distance apart at which the constraint attempts to keep its
       `Class.Attachment|Attachments`. Measured in studs.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -81,7 +81,7 @@ properties:
       This property determines the maximum angle between the rod and
       `Class.Constraint.Attachment0|Attachment0` when
       `Class.RodConstraint.LimitsEnabled|LimitsEnabled` is true.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -105,7 +105,7 @@ properties:
       This property determines the maximum angle between the rod and
       `Class.Constraint.Attachment1|Attachment1` when
       `Class.RodConstraint.LimitsEnabled|LimitsEnabled` is true.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -130,7 +130,7 @@ properties:
       `Class.RodConstraint.LimitAngle0|LimitAngle0` and
       `Class.RodConstraint.LimitAngle1|LimitAngle1` properties control the
       angles between the rod and the respective attachments.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -150,7 +150,7 @@ properties:
       The visualized thickness of the `Class.RodConstraint`.
     description: |
       The visualized thickness of the `Class.RodConstraint`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

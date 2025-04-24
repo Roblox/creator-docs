@@ -38,7 +38,7 @@ description: |
   table of values in which a line break is not appropriate in the middle of
   tabular data, it might be a better idea to use a `Class.UITableLayout`
   instead.
-code_samples:
+code_samples: []
 inherits:
   - UIGridStyleLayout
 tags: []
@@ -49,7 +49,7 @@ properties:
       The number of elements in the grid.
     description: |
       Measures the maximum number of elements in each direction. Read-only.
-    code_samples:
+    code_samples: []
     type: Vector2
     tags:
       - ReadOnly
@@ -74,7 +74,7 @@ properties:
       affected by any `Class.UIScale`, `Class.UISizeConstraint` or
       `Class.UIAspectRatioConstraint` applied to any individual element in the
       grid.
-    code_samples:
+    code_samples: []
     type: Vector2
     tags:
       - ReadOnly
@@ -98,7 +98,7 @@ properties:
       (default {0, 5},{0, 5}) Determines how much space there is between
       elements in the grid. As with all UDim2s, this space can be both in a
       percentage of the parent container's size and raw pixel offset.
-    code_samples:
+    code_samples: []
     type: UDim2
     tags: []
     deprecation_message: ''
@@ -122,7 +122,7 @@ properties:
       parent container's size and raw pixel offset. If the element being size
       has a `Class.UIConstraint` then the size will be determined by the
       constraint, not the grid.
-    code_samples:
+    code_samples: []
     type: UDim2
     tags: []
     deprecation_message: ''
@@ -151,7 +151,7 @@ properties:
         one row/column except for how many can fit within the parent UI element.
       - If set to one, this creates a list similar to those created by
         `Class.UIListLayout`.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -180,7 +180,7 @@ properties:
       Above, the potion is the first `Class.ImageLabel`, followed by the gem and
       the sword. The UIGridLayout is using a `Enum.StartCorner` of BottomRight.
       The `Class.UIGridStyleLayout.FillDirection` is Horizontal.
-    code_samples:
+    code_samples: []
     type: StartCorner
     tags: []
     deprecation_message: ''

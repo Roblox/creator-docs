@@ -26,7 +26,7 @@ description: |
   [monetize](../../../production/monetization/index.md) an experience on Roblox,
   as well as learning to use `Class.DataStoreService`, which is responsible for
   saving and loading all data related to purchases.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -97,7 +97,7 @@ methods:
       Prompts a user to purchase a bundle with the given `bundleId`.
     description: |
       Prompts a user to purchase a bundle with the given `bundleId`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: player
         type: Instance
@@ -149,7 +149,7 @@ methods:
       Prompts a user to purchase a
       [pass](../../../production/monetization/game-passes.md) with the given
       `gamePassId`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: player
         type: Instance
@@ -1092,7 +1092,7 @@ methods:
       function might return false because of caching behavior. Alternatively,
       the function might return true even after the user has deleted the pass
       from their inventory.
-    code_samples:
+    code_samples: []
     parameters:
       - name: userId
         type: int64
@@ -1177,7 +1177,7 @@ events:
   - name: MarketplaceService.PromptBundlePurchaseFinished
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: player
         type: Instance
@@ -1261,7 +1261,7 @@ events:
         to prompt a user to purchase Premium.
       - `Class.Players.PlayerMembershipChanged|PlayerMembershipChanged`, which
         fires when the server recognizes that a user's membership has changed.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
@@ -1309,7 +1309,7 @@ events:
       - For more information on saving and replicating user data like purchases
         and progress, see
         [Implementing player data and purchases](https://devforum.roblox.com/t/implementing-player-data-and-purchasing-systems/2839941).
-    code_samples:
+    code_samples: []
     parameters:
       - name: userId
         type: int64

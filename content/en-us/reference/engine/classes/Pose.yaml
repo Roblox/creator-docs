@@ -58,7 +58,7 @@ properties:
       hierarchy. This means, that the `Class.Pose.CFrame` is applied to the
       motor connecting the part associated with the pose to the part associated
       with the pose's parent.
-    code_samples:
+    code_samples: []
     type: CFrame
     tags: []
     deprecation_message: ''
@@ -76,7 +76,7 @@ properties:
   - name: Pose.MaskWeight
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated

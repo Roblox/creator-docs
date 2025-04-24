@@ -7,7 +7,7 @@ summary: |
 description: |
   If this service is ever instantiated, it moves all of its children into the
   `Class.StarterPack` and then deletes itself.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

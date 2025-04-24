@@ -12,7 +12,7 @@ description: |
   `Class.HandleAdornment.SizeRelativeOffset`) and will be oriented along its
   CFrame. This adornment can listen to input events and is commonly used to make
   dragger tools.
-code_samples:
+code_samples: []
 inherits:
   - HandleAdornment
 tags: []
@@ -23,7 +23,7 @@ properties:
       The length of the line.
     description: |
       The length of the line.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -43,7 +43,7 @@ properties:
       The thickness of the line in pixels.
     description: |
       The thickness of the line in pixels.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

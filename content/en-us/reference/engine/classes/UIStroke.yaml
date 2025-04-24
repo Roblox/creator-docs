@@ -20,7 +20,7 @@ description: |
 
   For more details on the `Class.UIStroke` object, see
   [Appearance Modifiers](../../../ui/appearance-modifiers.md).
-code_samples:
+code_samples: []
 inherits:
   - UIComponent
 tags: []
@@ -43,7 +43,7 @@ properties:
       <img src="../../../assets/ui/ui-objects/UIStroke-Stroke-Mode-Border.png" width="376" />
       <figcaption><code>ApplyStrokeMode</code> = <code>Enum.ApplyStrokeMode.Border|Border</code></figcaption>
       </figure>
-    code_samples:
+    code_samples: []
     type: ApplyStrokeMode
     tags: []
     deprecation_message: ''
@@ -73,7 +73,7 @@ properties:
       <img src="../../../assets/ui/ui-objects/UIStroke-Color-Gradient.png" width="376" />
       <figcaption><code>UIStroke</code> with <code>Class.UIGradient</code> child</figcaption>
       </figure>
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -94,7 +94,7 @@ properties:
     description: |
       This property determines whether the `Class.UIStroke` is visible. When set
       to `false`, the stroke will not be rendered. Defaults to `true`.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -130,7 +130,7 @@ properties:
       <img src="../../../assets/ui/ui-objects/UIStroke-LineJoinMode-Miter.png" width="376" />
       <figcaption><code>LineJoinMode</code> = <code>Enum.LineJoinMode.Miter|Miter</code></figcaption>
       </figure>
-    code_samples:
+    code_samples: []
     type: LineJoinMode
     tags: []
     deprecation_message: ''
@@ -165,7 +165,7 @@ properties:
       property when applied to text objects. This renders and stores many glyph
       sizes each frame, potentially causing performance issues or text
       flickering.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -199,7 +199,7 @@ properties:
       <img src="../../../assets/ui/ui-objects/UIStroke-Transparency-B.png" width="376" />
       <figcaption><code>Transparency</code> = <code>0</code> &nbsp;&middot;&nbsp; <code>Class.TextLabel.TextTransparency</code> = <code>1</code></figcaption>
       </figure>
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

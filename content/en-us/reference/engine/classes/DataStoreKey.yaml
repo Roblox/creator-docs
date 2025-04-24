@@ -14,7 +14,7 @@ description: |
 
   - [Data Stores](../../../cloud-services/data-stores/index.md), an in-depth
     guide on data structure, management, error handling, etc.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -33,7 +33,7 @@ properties:
       If `Class.DataStoreOptions.AllScopes` was set to true when accessing the
       data store through `Class.DataStoreService:GetDataStore()`, the name will
       include its scope as a prefix.
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - ReadOnly

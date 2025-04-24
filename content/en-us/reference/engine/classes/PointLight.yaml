@@ -36,7 +36,7 @@ properties:
       The size of the area that the PointLight will illuminate.
     description: |
       The size of the area that the PointLight will illuminate.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

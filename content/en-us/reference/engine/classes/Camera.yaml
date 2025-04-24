@@ -41,7 +41,7 @@ description: |
   `Class.Folder` or `Class.Model` under `Class.Workspace`, inside which they
   will remain even when `Class.Workspace.CurrentCamera|CurrentCamera` is
   changed.
-code_samples:
+code_samples: []
 inherits:
   - PVInstance
 tags:
@@ -122,7 +122,7 @@ properties:
 
         tween:Play()
         ```
-    code_samples:
+    code_samples: []
     type: CFrame
     tags: []
     deprecation_message: ''
@@ -173,7 +173,7 @@ properties:
       	end
       end
       ```
-    code_samples:
+    code_samples: []
     type: Instance
     tags: []
     deprecation_message: ''
@@ -204,7 +204,7 @@ properties:
       For all `CameraType` settings **except** `Enum.CameraType.Scriptable`, the
       `Class.Camera.CameraSubject|CameraSubject` property represents the object
       whose position the camera's `Class.Camera.Focus|Focus` is set to.
-    code_samples:
+    code_samples: []
     type: CameraType
     tags: []
     deprecation_message: ''
@@ -226,7 +226,7 @@ properties:
 
       This item should be used in a `Class.LocalScript` in order to work as
       expected online.
-    code_samples:
+    code_samples: []
     type: CFrame
     tags:
       - Hidden
@@ -258,7 +258,7 @@ properties:
       visible by the `Class.Camera` rendering into the fullscreen area which may
       be occluded by notches or screen cutouts on some devices. See
       `Class.Camera.ViewportSize|ViewportSize` for more information.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -296,7 +296,7 @@ properties:
       the `Class.Camera` rendering into the fullscreen area which may be
       occluded by notches or screen cutouts on some devices. See
       `Class.Camera.ViewportSize|ViewportSize` for more information.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -324,7 +324,7 @@ properties:
       vertical FOV is kept constant. If this property is set to
       `Enum.FieldOfViewMode.Diagonal`, both horizontal and vertical FOV might be
       changed to keep the diagonal FOV constant.
-    code_samples:
+    code_samples: []
     type: FieldOfViewMode
     tags: []
     deprecation_message: ''
@@ -361,7 +361,7 @@ properties:
 
       `Focus` has no bearing on the position or orientation of the camera; see
       `Class.Camera.CFrame|CFrame` for this.
-    code_samples:
+    code_samples: []
     type: CFrame
     tags: []
     deprecation_message: ''
@@ -416,7 +416,7 @@ properties:
       - The `Class.Camera:GetRenderCFrame()|GetRenderCFrame()` method which
         returns the `Class.Camera.CFrame|CFrame` combined with the
         `Datatype.CFrame` of the user's head.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -451,7 +451,7 @@ properties:
       This property should not be confused with `Class.Humanoid.HeadScale` which
       is a `Class.NumberValue` parented to a `Class.Humanoid` to control its
       scaling.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -479,7 +479,7 @@ properties:
       landscape orientation, the longest axis will be the horizontal axis; in
       this case, the property describes the horizontal field of view of the
       `Class.Camera`.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -508,7 +508,7 @@ properties:
       and `-0.5`.
 
       <img src="/assets/engine-api/classes/Camera/NearPlaneZ.jpg" width="720" alt="Diagram showing how the NearPlaneZ clips (does not render) 3D content between the plane and the camera." />
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -593,7 +593,7 @@ properties:
       during the `Class.RunService.PreRender|PreRender` step. The `ViewportSize`
       of all other cameras in your experience won't be updated, including those
       used for `Class.ViewportFrame|ViewportFrames`.
-    code_samples:
+    code_samples: []
     type: Vector2
     tags:
       - ReadOnly
@@ -612,7 +612,7 @@ properties:
   - name: Camera.focus
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: CFrame
     tags:
       - NotReplicated
@@ -652,7 +652,7 @@ methods:
 
       Note, as this method requires an `ignoreList` to run, you should pass an
       empty table when none is required.
-    code_samples:
+    code_samples: []
     parameters:
       - name: ignoreList
         type: Instances
@@ -685,7 +685,7 @@ methods:
       The pan speed of the `Class.Camera` describes the speed at which the
       `Class.Camera` is rotating around its `Class.Camera.Focus|Focus` around
       the **Y** axis.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: float
@@ -736,7 +736,7 @@ methods:
       If `Class.Terrain` obscures a cast point, `Class.BasePart|BaseParts`
       obscuring the cast point between the obscuring `Class.Terrain` and the
       cast point will not be returned.
-    code_samples:
+    code_samples: []
     parameters:
       - name: castPoints
         type: Array
@@ -788,7 +788,7 @@ methods:
 
       The camera's render `Datatype.CFrame` will only be changed to account for
       the head when the `Class.Camera.HeadLocked|HeadLocked` property is true.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: CFrame
@@ -854,7 +854,7 @@ methods:
       The tilt speed of the `Class.Camera` describes the speed at which the
       `Class.Camera` is rotating around its `Class.Camera.Focus|Focus` around
       the camera's **X** axis.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: float
@@ -931,7 +931,7 @@ methods:
 
       tween:Play()
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: endPos
         type: CFrame
@@ -984,7 +984,7 @@ methods:
 
       PanUnits does not require the `Class.Camera.CameraType|CameraType` to be
       `Scriptable`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: units
         type: int
@@ -1038,7 +1038,7 @@ methods:
       only updated after you set them to `Class.Workspace.CurrentCamera`. The
       mismatch in viewport size causes the camera to return a ray with an
       incorrect `Datatype.Ray.Direction`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: float
@@ -1085,7 +1085,7 @@ methods:
       disabled and the edge bump camera controls are enabled.
 
       SetCameraPan mode has no effect on Windows or Mac users.
-    code_samples:
+    code_samples: []
     parameters:
       - name: mode
         type: CameraPanMode
@@ -1149,7 +1149,7 @@ methods:
       local rollCFrame = CFrame.Angles(0, 0, roll)
       Workspace.CurrentCamera.CFrame = currentCFrame * rollCFrame
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: rollAngle
         type: float
@@ -1178,7 +1178,7 @@ methods:
 
       The rotation is applied to the camera's `Class.Camera.CFrame|CFrame`
       property and is constrained between `-81.05` and `81.05` degrees.
-    code_samples:
+    code_samples: []
     parameters:
       - name: units
         type: int
@@ -1257,7 +1257,7 @@ methods:
       local unitRay = camera:ScreenPointToRay(100, 100)
       local extendedRay = Ray.new(unitRay.Origin, unitRay.Direction * length)
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: float
@@ -1323,7 +1323,7 @@ methods:
       indicating whether `worldPoint` is within the bounds of the screen will be
       `true` regardless of whether the point is obscured by
       `Class.BasePart|BaseParts` or `Class.Terrain`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: worldPoint
         type: Vector3
@@ -1382,7 +1382,7 @@ methods:
       indicating whether `worldPoint` is within the bounds of the screen will be
       `true` regardless of whether the point is obscured by
       `Class.BasePart|BaseParts` or `Class.Terrain`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: worldPoint
         type: Vector3
@@ -1442,7 +1442,7 @@ events:
       You are advised to use `Class.TweenService` to animate the `Class.Camera`
       instead, as it is more reliable and provides more options for easing
       styles.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: |

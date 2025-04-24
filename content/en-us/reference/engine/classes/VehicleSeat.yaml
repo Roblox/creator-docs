@@ -15,7 +15,7 @@ description: |
   have a wheel connected to a beam which is then welded to the seat it will work
   fine, however if you have the wheel connected to a part, which is connected by
   a hinge to the rest of the car, it will not work.
-code_samples:
+code_samples: []
 inherits:
   - BasePart
 tags: []
@@ -28,7 +28,7 @@ properties:
     description: |
       Displays how many hinges are detected by the VehicleSeat. Useful for
       debugging vehicle designs.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - ReadOnly
@@ -51,7 +51,7 @@ properties:
       Toggles whether the `Class.VehicleSeat` is active or not. If the seat is
       disabled then it will not automatically weld a character to it on
       collision and will not allow a character to control the connected vehicle.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -72,7 +72,7 @@ properties:
     description: |
       If true, a fancy speed bar will be displayed speed on screen that tells
       you what speed the Vehicle is moving at.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -91,7 +91,7 @@ properties:
       The maximum speed that can be attained.
     description: |
       The maximum speed that can be attained.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -110,7 +110,7 @@ properties:
       The humanoid that is sitting in the seat.
     description: |
       The humanoid that is sitting in the seat
-    code_samples:
+    code_samples: []
     type: Humanoid
     tags:
       - ReadOnly
@@ -135,7 +135,7 @@ properties:
       The direction of movement, tied to the keys A and D. Must be one of 1
       (right), 0 (straight), or -1 (left). Will refresh back to 0 unless
       constantly set.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - NotReplicated
@@ -160,7 +160,7 @@ properties:
     description: |
       Functions identically to `Class.VehicleSeat.Steer`, but the value is not
       an integer.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -183,7 +183,7 @@ properties:
       The direction of movement, tied to the keys W and S. Must be an integer 1
       (forward) 0 (null) or -1 (reverse). Will refresh back to 0 unless
       constantly set.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - NotReplicated
@@ -208,7 +208,7 @@ properties:
     description: |
       Functions identically to `Class.VehicleSeat.Throttle`, but the value is
       not an integer.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -229,7 +229,7 @@ properties:
     description: |
       How fast the vehicles will be able to attain `Class.VehicleSeat.MaxSpeed`.
       The greater the number, the faster it will reach the maximum speed.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -250,7 +250,7 @@ properties:
     description: |
       The speed at which the vehicle will turn. Higher numbers can cause
       problems and are not necessarily better.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -272,7 +272,7 @@ methods:
     description: |
       Forces the character with the specified `Class.Humanoid` to sit in the
       VehicleSeat.
-    code_samples:
+    code_samples: []
     parameters:
       - name: humanoid
         type: Instance

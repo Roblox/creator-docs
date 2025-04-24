@@ -11,7 +11,7 @@ description: |
   The **BoxHandleAdornment** is a rectangular prism that can be adorned to a
   `Class.BasePart`. This adornment can listen to input events and is commonly
   used to make dragger tools.
-code_samples:
+code_samples: []
 inherits:
   - HandleAdornment
 tags: []
@@ -22,7 +22,7 @@ properties:
       The size of the adornment.
     description: |
       The size of the adornment.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''

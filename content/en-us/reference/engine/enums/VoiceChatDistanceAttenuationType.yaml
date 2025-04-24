@@ -1,18 +1,30 @@
 name: VoiceChatDistanceAttenuationType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Enum used for preset distance attenuation curve options in the default voice chat
+  setup.
+description: |
+  Each value in this enum represents a distance attenuation curve that can be used
+  by `Class.VoiceChatService` when creating the default voice chat setup using
+  `Class.AudioDeviceInput` and `Class.AudioEmitter` objects.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Inverse
-    summary: ''
+    summary: |
+      Represents a distance attenuation curve that follows the inverse-squared law.
+      This is identical to the default distance attenuation of an
+      `Class.AudioEmitter` instance.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Legacy
-    summary: ''
+    summary: |
+      Represents a linear-squared distance attenuation curve with a minimum distance
+      of `7` and a maximum distance of `80`. This is identical to the distance
+      attenuation used in the internal-only default voice setup that does
+      not use `Class.AudioDeviceInput` and `Class.AudioEmitter` objects.
     value: 1
     tags: []
     deprecation_message: ''

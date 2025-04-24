@@ -12,7 +12,7 @@ description: |
 
   The `SurfaceSelection` object is typically used by `Class.Plugin` when the
   user is selecting the face of a `Class.BasePart`.
-code_samples:
+code_samples: []
 inherits:
   - PartAdornment
 tags: []
@@ -25,7 +25,7 @@ properties:
     description: |
       Sets which side the SurfaceSelection will appear on, on the adorned
       `Class.BasePart`.
-    code_samples:
+    code_samples: []
     type: NormalId
     tags: []
     deprecation_message: ''

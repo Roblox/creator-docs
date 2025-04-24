@@ -26,7 +26,7 @@ description: |
 
   - [HumanoidDescription System](../../../characters/appearance.md#humanoiddescription),
     for more information on `Class.HumanoidDescription`.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -48,7 +48,7 @@ properties:
       `Class.HumanoidDescription:GetAccessories()`. These methods can also be
       enabled to work with rigid accessories by setting IncludeRigidAccessories
       parameters to true.
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - NotReplicated
@@ -92,7 +92,7 @@ properties:
         `Class.HumanoidDescription.ShouldersAccessory|ShouldersAccessory` and
         `Class.HumanoidDescription.WaistAccessory|WaistAccessory`, which are
         similar properties that apply accessories like this one
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - NotReplicated
@@ -137,7 +137,7 @@ properties:
         control over the dimensions of a rig
       - `Class.HumanoidDescription.HeadScale|HeadScale`, which provides specific
         control over the scale of the rig's head
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -173,7 +173,7 @@ properties:
         `Class.HumanoidDescription.SwimAnimation|SwimAnimation` and
         `Class.HumanoidDescription.WalkAnimation|WalkAnimation`, which are
         similar properties that determine animations to play on the rig
-    code_samples:
+    code_samples: []
     type: int64
     tags: []
     deprecation_message: ''
@@ -208,7 +208,7 @@ properties:
         provide more realistic rig proportions
       - `Class.HumanoidDescription.HeightScale|WidthScale` and
         `Class.HumanoidDescription.DepthScale|HeightScale`
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -247,7 +247,7 @@ properties:
         head
       - `Class.HumanoidDescription.FaceAccessory|FaceAccessory`, which can apply
         one or more `Class.Accessory` objects to the face
-    code_samples:
+    code_samples: []
     type: int64
     tags: []
     deprecation_message: ''
@@ -291,7 +291,7 @@ properties:
         similar properties that apply accessories like this one
       - `Class.HumanoidDescription.Face|Face`, a property that determines what
         Face texture is used on the head
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - NotReplicated
@@ -330,7 +330,7 @@ properties:
         `Class.HumanoidDescription.SwimAnimation|SwimAnimation` and
         `Class.HumanoidDescription.WalkAnimation|WalkAnimation`, which are
         similar properties that determine animations to play on the rig
-    code_samples:
+    code_samples: []
     type: int64
     tags: []
     deprecation_message: ''
@@ -373,7 +373,7 @@ properties:
         `Class.HumanoidDescription.ShouldersAccessory|ShouldersAccessory` and
         `Class.HumanoidDescription.WaistAccessory|WaistAccessory`, which are
         similar properties that apply accessories like this one
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - NotReplicated
@@ -408,7 +408,7 @@ properties:
         arms
       - `Class.HumanoidDescription.TorsoColor|TorsoColor`, which can change the
         color of the torso underneath the t-shirt texture
-    code_samples:
+    code_samples: []
     type: int64
     tags: []
     deprecation_message: ''
@@ -450,7 +450,7 @@ properties:
         `Class.HumanoidDescription.ShouldersAccessory|ShouldersAccessory` and
         `Class.HumanoidDescription.WaistAccessory|WaistAccessory`, which are
         similar properties that apply accessories like this one
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - NotReplicated
@@ -493,7 +493,7 @@ properties:
         `Class.HumanoidDescription.ShouldersAccessory|ShouldersAccessory` and
         `Class.HumanoidDescription.WaistAccessory|WaistAccessory`, which are
         similar properties that apply accessories like this one
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - NotReplicated
@@ -532,7 +532,7 @@ properties:
         `Class.HumanoidDescription.HairAccessory|HairAccessory` and
         `Class.HumanoidDescription.FaceAccessory|FaceAccessory`, which all can
         apply `Class.Accessory` objects which are joined to the head
-    code_samples:
+    code_samples: []
     type: int64
     tags:
       - NotReplicated
@@ -572,7 +572,7 @@ properties:
         the head
       - `Class.HumanoidDescription.Face|Face`, which applies a texture to the
         front of the head
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -613,7 +613,7 @@ properties:
         `Class.HumanoidDescription.DepthScale|HeightScale` and
         `Class.HumanoidDescription.DepthScale|DepthScale`, which provide finer
         control over other dimensions of a rig
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -649,7 +649,7 @@ properties:
         provide more realistic rig proportions
       - `Class.HumanoidDescription.HeightScale|WidthScale` and
         `Class.HumanoidDescription.DepthScale|DepthScale`
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -688,7 +688,7 @@ properties:
         `Class.HumanoidDescription.SwimAnimation|SwimAnimation` and
         `Class.HumanoidDescription.WalkAnimation|WalkAnimation`, which are
         similar properties that determine animations to play on the rig
-    code_samples:
+    code_samples: []
     type: int64
     tags: []
     deprecation_message: ''
@@ -726,7 +726,7 @@ properties:
         `Class.HumanoidDescription.SwimAnimation|SwimAnimation` and
         `Class.HumanoidDescription.WalkAnimation|WalkAnimation`, which are
         similar properties that determine animations to play on the rig
-    code_samples:
+    code_samples: []
     type: int64
     tags: []
     deprecation_message: ''
@@ -761,7 +761,7 @@ properties:
         properties that also control body part
       - `Class.HumanoidDescription.LeftArmColor|LeftArmColor`, which controls
         the color of this limb
-    code_samples:
+    code_samples: []
     type: int64
     tags:
       - NotReplicated
@@ -802,7 +802,7 @@ properties:
         used for this limb
       - `Class.HumanoidDescription.Shirt|Shirt`, which can apply a texture to
         this limb
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -838,7 +838,7 @@ properties:
         properties that also control body part
       - `Class.HumanoidDescription.LeftLegColor|LeftLegColor`, which controls
         the color of this limb
-    code_samples:
+    code_samples: []
     type: int64
     tags:
       - NotReplicated
@@ -879,7 +879,7 @@ properties:
         used for this limb
       - `Class.HumanoidDescription.Pants|Pants`, which can apply a texture to
         this limb
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -944,7 +944,7 @@ properties:
         `Class.HumanoidDescription.ShouldersAccessory|ShouldersAccessory` and
         `Class.HumanoidDescription.WaistAccessory|WaistAccessory`, which are
         similar properties that apply accessories like this one
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - NotReplicated
@@ -980,7 +980,7 @@ properties:
         `Class.HumanoidDescription.LeftLegColor|LeftLegColor` and
         `Class.HumanoidDescription.RightLegColor|RightLegColor`, which can
         change the color of the body parts underneath the pants texture
-    code_samples:
+    code_samples: []
     type: int64
     tags: []
     deprecation_message: ''
@@ -1021,7 +1021,7 @@ properties:
         control over the dimensions of a rig
       - `Class.HumanoidDescription.HeadScale|HeadScale`, which provides specific
         control over the scale of the rig's head
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -1056,7 +1056,7 @@ properties:
         properties that also control body part
       - `Class.HumanoidDescription.RightArmColor|RightArmColor`, which controls
         the color of this limb
-    code_samples:
+    code_samples: []
     type: int64
     tags:
       - NotReplicated
@@ -1097,7 +1097,7 @@ properties:
         used for this limb
       - `Class.HumanoidDescription.Shirt|Shirt`, which can apply a texture to
         this limb
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -1133,7 +1133,7 @@ properties:
         properties that also control body part
       - `Class.HumanoidDescription.RightLegColor|RightLegColor`, which controls
         the color of this limb
-    code_samples:
+    code_samples: []
     type: int64
     tags:
       - NotReplicated
@@ -1174,7 +1174,7 @@ properties:
         used for this limb
       - `Class.HumanoidDescription.Pants|Pants`, which can apply a texture to
         this limb
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -1214,7 +1214,7 @@ properties:
         `Class.HumanoidDescription.SwimAnimation|SwimAnimation` and
         `Class.HumanoidDescription.WalkAnimation|WalkAnimation`, which are
         similar properties that determine animations to play on the rig
-    code_samples:
+    code_samples: []
     type: int64
     tags: []
     deprecation_message: ''
@@ -1251,7 +1251,7 @@ properties:
         `Class.HumanoidDescription.LeftArmColor|LeftArmColor` and
         `Class.HumanoidDescription.RightArmColor|RightArmColor`, which can
         change the color of the body parts underneath the shirt texture
-    code_samples:
+    code_samples: []
     type: int64
     tags: []
     deprecation_message: ''
@@ -1294,7 +1294,7 @@ properties:
         `Class.HumanoidDescription.NeckAccessory|NeckAccessory` and
         `Class.HumanoidDescription.WaistAccessory|WaistAccessory`, which are
         similar properties that apply accessories like this one
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - NotReplicated
@@ -1333,7 +1333,7 @@ properties:
         `Class.HumanoidDescription.RunAnimation|RunAnimation` and
         `Class.HumanoidDescription.WalkAnimation|WalkAnimation`, which are
         similar properties that determine animations to play on the rig
-    code_samples:
+    code_samples: []
     type: int64
     tags: []
     deprecation_message: ''
@@ -1368,7 +1368,7 @@ properties:
         properties that also control body part
       - `Class.HumanoidDescription.TorsoColor|TorsoColor`, which controls the
         color of this limb
-    code_samples:
+    code_samples: []
     type: int64
     tags:
       - NotReplicated
@@ -1410,7 +1410,7 @@ properties:
       - `Class.HumanoidDescription.GraphicTShirt|GraphicTShirt` and
         `Class.HumanoidDescription.Shirt|Shirt`, which can apply a texture to
         this body part
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -1453,7 +1453,7 @@ properties:
         `Class.HumanoidDescription.NeckAccessory|NeckAccessory` and
         `Class.HumanoidDescription.ShouldersAccessory|ShouldersAccessory`, which
         are similar properties that apply accessories like this one
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - NotReplicated
@@ -1493,7 +1493,7 @@ properties:
         `Class.HumanoidDescription.RunAnimation|RunAnimation` and
         `Class.HumanoidDescription.SwimAnimation|SwimAnimation`, which are
         similar properties that determine animations to play on the rig
-    code_samples:
+    code_samples: []
     type: int64
     tags: []
     deprecation_message: ''
@@ -1529,7 +1529,7 @@ properties:
         provide more realistic rig proportions
       - `Class.HumanoidDescription.HeightScale|HeightScale` and
         `Class.HumanoidDescription.DepthScale|DepthScale`
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -1571,7 +1571,7 @@ methods:
         manipulate what emotes have been added
       - `Class.HumanoidDescription.EmotesChanged|EmotesChanged`, which fires
         after this function is called
-    code_samples:
+    code_samples: []
     parameters:
       - name: name
         type: string
@@ -1657,7 +1657,7 @@ methods:
         that may be returned by this function
       - `Class.HumanoidDescription.EmotesChanged|EmotesChanged`, which fires
         with the value returned this function after it may have changed
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Dictionary
@@ -1710,7 +1710,7 @@ methods:
         returns
       - `Class.HumanoidDescription.EquippedEmotesChanged|EquippedEmotesChanged`,
         which fires when the function returned by this value may have changed
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Array
@@ -1752,7 +1752,7 @@ methods:
         that may be removed
       - `Class.HumanoidDescription:GetEmotes()|GetEmotes`, which can retrieve a
         dictionary of emotes that may be removed
-    code_samples:
+    code_samples: []
     parameters:
       - name: name
         type: string
@@ -1835,7 +1835,7 @@ methods:
         the added emotes on an individual level
       - `Class.HumanoidDescription.EmotesChanged|EmotesChanged`, which fires
         when this function is called
-    code_samples:
+    code_samples: []
     parameters:
       - name: emotes
         type: Dictionary
@@ -1894,7 +1894,7 @@ methods:
         returns a value describing the equipped emotes set by this function
       - `Class.HumanoidDescription.EquippedEmotesChanged|EquippedEmotesChanged`,
         which fires when this function is called
-    code_samples:
+    code_samples: []
     parameters:
       - name: equippedEmotes
         type: Array
@@ -1950,7 +1950,7 @@ events:
         `Class.HumanoidDescription:RemoveEmote()|RemoveEmote` and
         `Class.HumanoidDescription:SetEmotes()`, which can cause this event to
         be fired
-    code_samples:
+    code_samples: []
     parameters:
       - name: newEmotes
         type: Dictionary
@@ -2007,7 +2007,7 @@ events:
       - `Class.HumanoidDescription:GetEquippedEmotes()|GetEquippedEmotes`, which
         can be used to query the currently equipped emotes without this event
         firing
-    code_samples:
+    code_samples: []
     parameters:
       - name: newEquippedEmotes
         type: Array

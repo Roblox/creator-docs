@@ -27,7 +27,7 @@ description: |
   useful to both the server and clients should go in `Class.ReplicatedStorage`
   instead. Finally, you can further organize objects within this service through
   the use of `Class.Folder|Folders` without affecting the way it behaves.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -43,7 +43,7 @@ properties:
     description: |
       Toggles whether or not the `loadstring` function can be used by server
       scripts. Defaults to false.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - NotReplicated

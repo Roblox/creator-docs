@@ -6,7 +6,7 @@ summary: |
   `Class.UIBase` is the base class for UI layout and constraint classes.
 description: |
   `Class.UIBase` is the base class for UI layout and constraint classes.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

@@ -19,7 +19,7 @@ description: |
 
   For more details on this effect and others, see
   [Post-Processing Effects](../../../environment/post-processing-effects.md).
-code_samples:
+code_samples: []
 inherits:
   - PostEffect
 tags: []
@@ -32,7 +32,7 @@ properties:
       Intensity determines how intensely the colors that bloom (determined by
       the `Class.BloomEffect.Threshold|Threshold`) will additively blend with
       themselves. Higher values will produce brighter colors.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -55,7 +55,7 @@ properties:
       manner to `Class.BlurEffect.Size`. Larger values create a wider bloom
       effect, and a value of 0 will disable the bleed (but not the color
       adjustment).
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -76,7 +76,7 @@ properties:
     description: |
       Threshold determines how bright a color can be before it blooms. If set to
       1, only pure white colors will bloom. If set to 0, all colors will bloom.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

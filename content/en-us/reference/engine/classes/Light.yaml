@@ -6,7 +6,7 @@ summary: |
   Light is a root class for dynamic lighting related objects.
 description: |
   Light is a root class for dynamic lighting related objects.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -18,7 +18,7 @@ properties:
       Sets how bright the emitted light is, defaults to 1.
     description: |
       Sets how bright the emitted light is, defaults to 1.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -38,7 +38,7 @@ properties:
       The color of the emitted light.
     description: |
       The color of the emitted light.
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -58,7 +58,7 @@ properties:
       If set to true, light will be emitted from the source object.
     description: |
       If set to true, light will be emitted from the source object.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -78,7 +78,7 @@ properties:
       If set to true, will project shadows if light is blocked by an obstacle.
     description: |
       If set to true, will project shadows if light is blocked by an obstacle.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''

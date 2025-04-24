@@ -11,7 +11,7 @@ description: |
   bubble above the part that they can click on to start a conversation. The
   creator of a place can choose what choices the player can say by inserting
   `Class.DialogChoice` objects into the dialog.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -59,7 +59,7 @@ properties:
       multiplePlayersDialog.InitialPrompt = "Any number of players can interact with me at once."
       multiplePlayersDialog.Parent = multiplePlayersPart
       ```
-    code_samples:
+    code_samples: []
     type: DialogBehaviorType
     tags: []
     deprecation_message: ''
@@ -81,7 +81,7 @@ properties:
     description: |
       The furthest distance that a player can be from the Dialog's parent to
       start a conversation.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -104,7 +104,7 @@ properties:
       will display the content of `Class.Dialog.GoodbyeDialog` as the last
       option after other dialog choices. Clicking on the goodbye option will
       exit the dialog.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -126,7 +126,7 @@ properties:
     description: |
       Sets the sentence that the dialog will show to the player when the chat
       ends
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -146,7 +146,7 @@ properties:
       If true, this dialog is being used by at least one player.
     description: |
       If true, this dialog is being used by at least one player.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -168,7 +168,7 @@ properties:
     description: |
       Sets the first sentence that the dialog will show to the player, once a
       chat is commenced.
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -188,7 +188,7 @@ properties:
       Sets the icon that the initial dialog displays.
     description: |
       Sets the icon that the initial dialog displays.
-    code_samples:
+    code_samples: []
     type: DialogPurpose
     tags: []
     deprecation_message: ''
@@ -208,7 +208,7 @@ properties:
       Sets the color of the NPC's speech bubble.
     description: |
       Sets the color of the NPC's speech bubble.
-    code_samples:
+    code_samples: []
     type: DialogTone
     tags: []
     deprecation_message: ''
@@ -228,7 +228,7 @@ properties:
       Sets the maximum distance that a dialog can be triggered from.
     description: |
       Sets the maximum distance that a dialog can be triggered from.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -248,7 +248,7 @@ properties:
       Sets the offset of the dialog relative to the dialog's parent.
     description: |
       Sets the offset of the dialog relative to the dialog's parent.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -295,7 +295,7 @@ events:
       This event is client-side only and will not fire on the server. It should
       be connected to in either a `Class.LocalScript` or a `Class.ModuleScript`
       required by a `Class.LocalScript`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: player
         type: Instance

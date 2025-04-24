@@ -309,7 +309,7 @@ methods:
       `IsEdit()` will return the inverse of
       `Class.RunService:IsRunning()|IsRunning()`, except when the simulation has
       been paused, in which case both methods will return `false`.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: boolean
@@ -425,7 +425,7 @@ methods:
       `Class.RunService:Run()|Run()` or the **Run** button in Studio; when the
       simulation is paused, `Class.RunService:IsRunning()|IsRunning()` will
       return `false`.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -443,7 +443,7 @@ methods:
     description: |
       The Reset function resets the current game to a waypoint set when Run was
       called. This method should only be used after Run was called.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -465,7 +465,7 @@ methods:
       return `true`. However, `Class.RunService:IsRunMode()|IsRunMode()` will
       only return `true` if the simulation was started using the **Run** button
       in Studio.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -489,7 +489,7 @@ methods:
       restore the experience to the state it was in prior to the simulation
       being run. This means any changes made to the experience by the physics
       simulation and scripts will persist after the simulation has ended.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -514,7 +514,7 @@ methods:
 
       If there is no bound function by the given name, this method takes no
       action and continues without raising an error.
-    code_samples:
+    code_samples: []
     parameters:
       - name: name
         type: string
@@ -574,7 +574,7 @@ events:
       This event is useful for making final adjustments to the outcome of the
       simulation. Following this phase, the engine triggers the
       `Class.RunService.Heartbeat|Heartbeat` event.
-    code_samples:
+    code_samples: []
     parameters:
       - name: deltaTimeSim
         type: double
@@ -603,7 +603,7 @@ events:
 
       After animations are stepped, the engine triggers the
       `Class.RunService.PreSimulation|PreSimulation` event.
-    code_samples:
+    code_samples: []
     parameters:
       - name: deltaTimeSim
         type: double
@@ -638,7 +638,7 @@ events:
 
       Following the `PreRender` phase, the simulation phase begins with the
       `Class.RunService.PreAnimation|PreAnimation` event.
-    code_samples:
+    code_samples: []
     parameters:
       - name: deltaTimeRender
         type: double
@@ -666,7 +666,7 @@ events:
       runs, potentially multiple times, as the physics solver runs at a higher
       frequency than other engine systems. Once this is complete, the
       `Class.RunService.PostSimulation|PostSimulation` event is fired.
-    code_samples:
+    code_samples: []
     parameters:
       - name: deltaTimeSim
         type: double
@@ -710,9 +710,10 @@ events:
       Fires every frame, prior to the physics simulation.
 
       ##### Migration Note
-      
-      This event has been superseded by `Class.RunService.PreSimulation|PreSimulation`
-      which should be used for new work.
+
+      This event has been superseded by
+      `Class.RunService.PreSimulation|PreSimulation` which should be used for
+      new work.
     code_samples: []
     parameters:
       - name: time

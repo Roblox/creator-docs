@@ -65,7 +65,7 @@ properties:
 
       To change the cursor icon, set this property to the asset ID of the image
       you'd like to use.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -90,7 +90,7 @@ properties:
       instance, a character within 10 studs of a `Class.ClickDetector` or
       `Class.DragDetector` with a max activation distance of 5 would not be able
       to use the detector because they are out of range.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -125,7 +125,7 @@ events:
       Note that the player's `Class.Player.Character|Character` must be within
       the `Class.ClickDetector.MaxActivationDistance|MaxActivationDistance` of
       the detector.
-    code_samples:
+    code_samples: []
     parameters:
       - name: playerWhoClicked
         type: Player
@@ -211,7 +211,7 @@ events:
       `Class.Player.Character|Character` must be within the
       `Class.ClickDetector.MaxActivationDistance|MaxActivationDistance` of the
       detector.
-    code_samples:
+    code_samples: []
     parameters:
       - name: playerWhoClicked
         type: Player
@@ -228,7 +228,7 @@ events:
   - name: ClickDetector.mouseClick
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: playerWhoClicked
         type: Player

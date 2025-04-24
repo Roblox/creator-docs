@@ -24,7 +24,7 @@ description: |
   `Class.GuiObject.InputEnded|InputEnded`, only `Class.ImageButton` and
   `Class.TextButton` have convenient dedicated events such as
   `Class.TextButton.Activated|Activated` to detect click/press.
-code_samples:
+code_samples: []
 inherits:
   - GuiBase2d
 tags:
@@ -129,7 +129,7 @@ properties:
       Determines the color of the `Class.GuiObject` background.
     description: |
       Determines the color of the `Class.GuiObject` background.
-    code_samples:
+    code_samples: []
     type: BrickColor
     tags:
       - Hidden
@@ -194,7 +194,7 @@ properties:
 
       If this property is set to `1`, neither the background nor the border will
       render and the GUI background will be completely transparent.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -214,7 +214,7 @@ properties:
       Determines the color of the `Class.GuiObject` border.
     description: |
       Determines the color of the `Class.GuiObject` border.
-    code_samples:
+    code_samples: []
     type: BrickColor
     tags:
       - Hidden
@@ -273,7 +273,7 @@ properties:
 
       Note that `Class.UIStroke` can override this property and allow for more
       advanced border effects.
-    code_samples:
+    code_samples: []
     type: BorderMode
     tags: []
     deprecation_message: ''
@@ -327,7 +327,7 @@ properties:
       `Class.GuiObject.Rotation|Rotation`, this property is **ignored** and
       descendant GUI elements will be rendered regardless of this property's
       value.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -349,7 +349,7 @@ properties:
     description: |
       This indicates whether a `Class.GuiObject` (and its descendants) can be
       dragged around the screen.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - Deprecated
@@ -745,7 +745,7 @@ properties:
       `Class.GuiObject.NextSelectionDown|NextSelectionDown`,
       `Class.GuiObject.NextSelectionLeft|NextSelectionLeft`, and
       `Class.GuiObject.NextSelectionRight|NextSelectionRight` events.
-    code_samples:
+    code_samples: []
     type: GuiObject
     tags: []
     deprecation_message: ''
@@ -852,7 +852,7 @@ properties:
       A mixed property of
       `Class.GuiObject.BackgroundTransparency|BackgroundTransparency` and
       `Class.TextLabel.TextTransparency|TextTransparency`.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - Hidden
@@ -1377,7 +1377,7 @@ events:
       - `Class.GuiObject.MouseMoved`
       - `Class.GuiObject.MouseWheelForward`
       - `Class.GuiObject.MouseWheelBackward`
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int
@@ -1446,7 +1446,7 @@ events:
       - `Class.GuiObject.MouseLeave`
       - `Class.GuiObject.MouseWheelForward`
       - `Class.GuiObject.MouseWheelBackward`
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int
@@ -1487,7 +1487,7 @@ events:
       - `Class.GuiObject.MouseLeave`
       - `Class.GuiObject.MouseMoved`
       - `Class.GuiObject.MouseWheelForward`
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int
@@ -1529,7 +1529,7 @@ events:
       - `Class.GuiObject.MouseLeave`
       - `Class.GuiObject.MouseMoved`
       - `Class.GuiObject.MouseWheelBackward`
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int

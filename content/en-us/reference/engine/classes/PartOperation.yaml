@@ -7,7 +7,7 @@ summary: |
 description: |
   An abstract class that all parts based on
   [solid modeling](../../../parts/solid-modeling.md) inherit from.
-code_samples:
+code_samples: []
 inherits:
   - TriangleMeshPart
 tags: []
@@ -47,7 +47,7 @@ properties:
               </tr>
           </tbody>
       </table>
-    code_samples:
+    code_samples: []
     type: RenderFidelity
     tags: []
     deprecation_message: ''
@@ -92,7 +92,7 @@ properties:
       <figcaption><code>Class.PartOperation.SmoothingAngle|SmoothingAngle</code>
       = 50</figcaption>
       </figure>
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -113,7 +113,7 @@ properties:
       The number of polygons in this solid model.
     description: |
       The number of polygons in this solid model.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - ReadOnly
@@ -142,7 +142,7 @@ properties:
       or `Class.BasePart.BrickColor|BrickColor`. When false, the parts in the
       union will maintain their original colors from before the onion operation
       was performed.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''

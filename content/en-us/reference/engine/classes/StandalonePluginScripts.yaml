@@ -14,7 +14,7 @@ description: |
   Functionality of this class may be enabled or disabled without notice. Before
   using it, verify that it works as expected before continuing with further
   work.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []

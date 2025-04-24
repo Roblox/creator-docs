@@ -42,7 +42,7 @@ description: |
   - If a welded part's `Datatype.CFrame` is updated, that part will move **and**
     all of the connected parts will also move, ensuring they maintain the same
     offset as when the weld was created.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -68,7 +68,7 @@ properties:
       they are enabled and all update when `Class.BasePart.Position` or
       `Class.BasePart.Orientation` is set on a part. The spanning tree may still
       disable them if they are redundant or form a cycle.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - ReadOnly
@@ -94,7 +94,7 @@ properties:
       constraint's `Class.WeldConstraint.Part0` and `Class.WeldConstraint.Part1`
       properties are set, then the constraint will ensure that its two connected
       parts will be locked together.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - NotReplicated
@@ -140,7 +140,7 @@ properties:
       weld.Part1 = partB
       weld.Parent = partA
       ```
-    code_samples:
+    code_samples: []
     type: BasePart
     tags:
       - NotReplicated
@@ -186,7 +186,7 @@ properties:
       weld.Part1 = partB
       weld.Parent = partA
       ```
-    code_samples:
+    code_samples: []
     type: BasePart
     tags:
       - NotReplicated

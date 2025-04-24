@@ -16,7 +16,7 @@ description: |
   `Class.EulerRotationCurve:GetRotationAtTime()` samples all channels
   simultaneously but returns a `Datatype.CFrame` rotated by `X`, `Y`, and `Z`
   according to the specified rotation order.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -27,7 +27,7 @@ properties:
       Euler angles rotation order.
     description: |
       Euler angles rotation order
-    code_samples:
+    code_samples: []
     type: RotationOrder
     tags: []
     deprecation_message: ''
@@ -52,7 +52,7 @@ methods:
       passed `time` argument and returns the result as three Euler angles. If a
       channel curve is missing or no key is found in the curve, the channel is
       evaluated as `nil`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: time
         type: float
@@ -75,7 +75,7 @@ methods:
       Samples the `Class.EulerRotationCurve` at a given `time` and returns the
       corresponding rotation. Empty Euler angles channels are interpreted as
       zero.
-    code_samples:
+    code_samples: []
     parameters:
       - name: time
         type: float
@@ -97,7 +97,7 @@ methods:
       Returns the `Class.FloatCurve` controlling the `X` Euler angle channel. It
       is the first child instance of type `Class.FloatCurve` named `X`. If none
       is found, an empty `Class.FloatCurve` is created.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: FloatCurve
@@ -115,7 +115,7 @@ methods:
       Returns the `Class.FloatCurve` controlling the `Y` Euler angle channel. It
       is the first child instance of type `Class.FloatCurve` named `Y`. If none
       is found, an empty `Class.FloatCurve` is created.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: FloatCurve
@@ -133,7 +133,7 @@ methods:
       Returns the `Class.FloatCurve` controlling the `Z` Euler angle channel. It
       is the first child instance of type `Class.FloatCurve` named `Z`. If none
       is found, an empty `Class.FloatCurve` is created.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: FloatCurve

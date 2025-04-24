@@ -41,7 +41,7 @@ description: |
   `Class.RocketPropulsion.MaxTorque|MaxTorque` to `(0, 0, 0)`, you can have a
   part simply follow another object without facing it (use a `Class.BodyGyro` if
   you want the object to maintain a specific orientation).
-code_samples:
+code_samples: []
 inherits:
   - BodyMover
 tags:
@@ -58,7 +58,7 @@ properties:
       The CartoonFactor property determines the tendency of the part to face the
       `Class.RocketPropulsion.Target|Target`. By default, this property is set
       to `0.7`. If set to `0`, the part will make no effort to face the target.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -81,7 +81,7 @@ properties:
       the part will move toward the `Class.RocketPropulsion.Target|Target`. A
       `Class.RocketPropulsion` will apply a force to decelerate a part if it
       exceeds this speed limit.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -105,7 +105,7 @@ properties:
       `Class.BasePart:GetMass()|mass` will require more thrust in order to
       remain airborne, and thus track the
       `Class.RocketPropulsion.Target|Target`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -128,7 +128,7 @@ properties:
       that may be exerted in order to rotate the part towards the
       `Class.RocketPropulsion.Target|Target`. It functions similarly to
       `Class.BodyGyro.MaxTorque`.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -149,7 +149,7 @@ properties:
       The Target property determines the object towards which the
       `Class.RocketPropulsion` will exert force/torque. If set to `nil`, the
       `Class.RocketPropulsion.TargetOffset|TargetOffset` will be used instead.
-    code_samples:
+    code_samples: []
     type: BasePart
     tags: []
     deprecation_message: ''
@@ -174,7 +174,7 @@ properties:
       `Class.RocketPropulsion` behave as if the target were really offset by
       this property. It is especially useful when Target is set to `nil`, since
       this property then acts as the target position.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -198,7 +198,7 @@ properties:
       `Class.RocketPropulsion.Target` the part must be in order for the
       `Class.RocketPropulsion.ReachedTarget` event to be fired. It does not
       affect the exerted forces in any way.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -221,7 +221,7 @@ properties:
       prevent it from overshooting the `Class.RocketPropulsion.Target|Target`
       and causing a **rubber-banding** effect. It behaves similarly to
       `Class.BodyPosition.D`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -246,7 +246,7 @@ properties:
       `Class.RocketPropulsion.Target|Target` position. The higher this value,
       the more power will be used and the faster it will be used. This property
       works similarly to `Class.BodyPosition.P`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -273,7 +273,7 @@ properties:
       applying dampening using this property is how that effect is avoided. The
       higher this value is set, the greater the dampening curve becomes, or the
       slower the part will approach the goal orientation.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -297,7 +297,7 @@ properties:
       applying torque in order to face the
       `Class.RocketPropulsion.Target|Target`. The higher this value, the more
       power will be used and the faster it will be used.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -317,7 +317,7 @@ methods:
       Causes the Rocket to stop moving towards its target, making it fall.
     description: |
       Causes the Rocket to stop moving towards its target, making it fall.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -333,7 +333,7 @@ methods:
       Causes the rocket to fly towards Target.
     description: |
       Causes the rocket to fly towards Target.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -347,7 +347,7 @@ methods:
   - name: RocketPropulsion:fire
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -371,7 +371,7 @@ events:
       Fired when the Rocket comes within TargetRadius of the Target. This is
       used to make the rocket work, such as make an explosion when it flies near
       the Target.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''

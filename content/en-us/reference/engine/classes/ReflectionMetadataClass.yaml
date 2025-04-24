@@ -8,7 +8,7 @@ summary: |
 description: |
   Registers information about a class, and its members. Should be parented to
   `Class.ReflectionMetadataClasses`
-code_samples:
+code_samples: []
 inherits:
   - ReflectionMetadataItem
 tags: []
@@ -19,7 +19,7 @@ properties:
       A number index, which refers to a specific class icon.
     description: |
       A number index, which refers to a specific class icon.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -40,7 +40,7 @@ properties:
     description: |
       Determines how this class is sorted in the Explorer compared to other
       classes.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -61,7 +61,7 @@ properties:
     description: |
       Toggles whether or not this object can be inserted through the Advanced
       Objects menu.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -80,7 +80,7 @@ properties:
       Sets the class that this class would prefer parenting to.
     description: |
       Sets the class that this class would prefer parenting to.
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''

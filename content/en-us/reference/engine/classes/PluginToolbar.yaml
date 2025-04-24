@@ -19,7 +19,7 @@ description: |
   local toolbar = plugin:CreateToolbar("Three Wise Monkeys")
   local button = toolbar:CreateButton("Mizaru", "See No Evil", "rbxassetid://2778270261")
   ```
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

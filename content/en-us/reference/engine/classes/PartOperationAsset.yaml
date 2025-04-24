@@ -8,7 +8,7 @@ description: |
   An internal instance used to save/load
   <a href="../../../parts/solid-modeling.md">solid models</a> onto the Roblox
   cloud.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []

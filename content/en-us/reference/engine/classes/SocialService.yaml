@@ -13,7 +13,7 @@ description: |
   friends through `Class.SocialService:PromptGameInvite()|PromptGameInvite()`
   and `Class.SocialService:PromptPhoneBook()|PromptPhoneBook()` respectively.
   You may leverage signals when such requests are made.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -47,7 +47,7 @@ methods:
     description: |
       Hides the calling player's self view. If this method is called while the
       self view is already hidden, it does nothing.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -144,7 +144,7 @@ methods:
     description: |
       Shows the calling player's self view. If this method is called while the
       self view is already visible, it does nothing.
-    code_samples:
+    code_samples: []
     parameters:
       - name: selfViewPosition
         type: SelfViewPosition
@@ -283,7 +283,7 @@ events:
       Fires when a player closes an invite prompt.
     description: |
       This event fires when a player closes an invite prompt.
-    code_samples:
+    code_samples: []
     parameters:
       - name: player
         type: Instance
@@ -306,7 +306,7 @@ events:
       Fires when a player closes the phone book prompt.
     description: |
       Fires when a player closes the phone book prompt.
-    code_samples:
+    code_samples: []
     parameters:
       - name: player
         type: Instance

@@ -8,7 +8,7 @@ summary: |
 description: |
   An IntConstrainedValue is used to store a value which can never be less than
   MinValue and can never be more than MaxValue.
-code_samples:
+code_samples: []
 inherits:
   - ValueBase
 tags:
@@ -26,7 +26,7 @@ properties:
       Hold an `Integer` value between `Class.IntConstrainedValue.MinValue` and
       `Class.IntConstrainedValue.MaxValue`. Replaced by
       `Class.IntConstrainedValue.Value`, but still functional.
-    code_samples:
+    code_samples: []
     type: int64
     tags:
       - Hidden
@@ -51,7 +51,7 @@ properties:
     description: |
       The highest number that the `Class.IntConstrainedValue.Value` property can
       be.
-    code_samples:
+    code_samples: []
     type: int64
     tags: []
     deprecation_message: |
@@ -74,7 +74,7 @@ properties:
     description: |
       The lowest number that the `Class.IntConstrainedValue.Value` property can
       be.
-    code_samples:
+    code_samples: []
     type: int64
     tags: []
     deprecation_message: |
@@ -97,7 +97,7 @@ properties:
     description: |
       Used to hold an integer value between `Class.IntConstrainedValue.MinValue`
       and `Class.IntConstrainedValue.MaxValue`.
-    code_samples:
+    code_samples: []
     type: int64
     tags:
       - NotReplicated
@@ -139,7 +139,7 @@ events:
   - name: IntConstrainedValue.changed
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
         type: int64

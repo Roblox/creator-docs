@@ -7,7 +7,7 @@ summary: |
 description: |
   An unfinished advanced variant of the `Class.Dragger` class. Internally, this
   object is an identical implementation of the Dragger class.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []

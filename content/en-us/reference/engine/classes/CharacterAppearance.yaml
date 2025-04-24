@@ -8,7 +8,7 @@ summary: |
   and `Class.Shirt` objects.
 description: |
   Base class for objects that change a character's appearance.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

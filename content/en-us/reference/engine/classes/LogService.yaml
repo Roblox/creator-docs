@@ -11,7 +11,7 @@ description: |
   emitted by this service for any important game logic.
 
   A service that allows you to read outputted text.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -56,7 +56,7 @@ methods:
 
       - `Class.LogService.MessageOut` - An event that fires when text is added
         to the output from the client
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Array

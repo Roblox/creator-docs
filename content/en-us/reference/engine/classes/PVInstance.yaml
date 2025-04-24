@@ -10,7 +10,7 @@ description: |
   cannot be created. It is the base for all objects that have a physical
   location in the world, specifically `Class.BasePart|BaseParts` and
   `Class.Model|Models`.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

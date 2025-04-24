@@ -17,7 +17,7 @@ description: |
 
   See [Solid Modeling](../../../parts/solid-modeling.md) to learn more about
   Studio's solid modeling tools and methods.
-code_samples:
+code_samples: []
 inherits:
   - PartOperation
 tags: []

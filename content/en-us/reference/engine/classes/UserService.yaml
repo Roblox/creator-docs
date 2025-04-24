@@ -6,7 +6,7 @@ summary: |
   A service that handles queries regarding users on the Roblox platform.
 description: |
   A service that handles queries regarding users on the Roblox platform.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

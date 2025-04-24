@@ -12,7 +12,7 @@ description: |
   websites. Used by a range of services, including `Class.MarketplaceService`,
   `Class.InsertService` and `Class.HttpService`. Its functions cannot be
   accessed by developers.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

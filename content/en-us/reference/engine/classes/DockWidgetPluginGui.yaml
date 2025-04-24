@@ -9,7 +9,7 @@ description: |
   to the built-in **Animation Editor** and **Terrain Tools**.
 
   This GUI can be created using `Class.Plugin:CreateDockWidgetPluginGui()`.
-code_samples:
+code_samples: []
 inherits:
   - PluginGui
 tags:
@@ -24,7 +24,7 @@ properties:
     description: |
       Describes whether the previous state of this `Class.DockWidgetPluginGui`
       was restored when it was created.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - ReadOnly

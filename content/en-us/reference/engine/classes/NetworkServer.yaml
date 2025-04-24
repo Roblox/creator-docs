@@ -7,7 +7,7 @@ description: |
   The `Class.NetworkServer` stores all the `Class.NetworkReplicator` in the game
   and handles all connections. `Class.NetworkPeer:SetOutgoingKBPSLimit()` can be
   used to imitate latency while using Start Server.
-code_samples:
+code_samples: []
 inherits:
   - NetworkPeer
 tags:
@@ -20,7 +20,7 @@ methods:
   - name: NetworkServer:EncryptStringForPlayerId
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: toEncrypt
         type: string

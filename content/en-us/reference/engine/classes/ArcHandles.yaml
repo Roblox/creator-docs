@@ -12,7 +12,7 @@ description: |
   `Class.CoreGui`.
 
   <img src="../../../assets/engine-api/classes/ArcHandles/ArcHandles-Example.jpg"  alt="ArcHandles example" />
-code_samples:
+code_samples: []
 inherits:
   - HandlesBase
 tags: []
@@ -23,7 +23,7 @@ properties:
       Sets the current Axes ArcHandles will show.
     description: |
       Sets the current Axes ArcHandles will show.
-    code_samples:
+    code_samples: []
     type: Axes
     tags: []
     deprecation_message: ''
@@ -45,7 +45,7 @@ events:
       Fired when the left mouse button goes down on one of the GUI handles.
     description: |
       Fired when the left mouse button goes down on one of the GUI handles.
-    code_samples:
+    code_samples: []
     parameters:
       - name: axis
         type: Axis
@@ -62,7 +62,7 @@ events:
       Fired when the left mouse button is released on one of the GUI handles.
     description: |
       Fired when the left mouse button is released on one of the GUI handles.
-    code_samples:
+    code_samples: []
     parameters:
       - name: axis
         type: Axis
@@ -81,7 +81,7 @@ events:
     description: |
       Fired when the mouse moves while the MouseButton1Down event has fired, but
       the left mouse button has not been released yet.
-    code_samples:
+    code_samples: []
     parameters:
       - name: axis
         type: Axis
@@ -106,7 +106,7 @@ events:
       Fired when a mouse "enters" the GUI handle.
     description: |
       Fired when a mouse "enters" the GUI handle.
-    code_samples:
+    code_samples: []
     parameters:
       - name: axis
         type: Axis
@@ -123,7 +123,7 @@ events:
       Fired when the mouse leaves the GUI handle.
     description: |
       Fired when the mouse leaves the GUI handle.
-    code_samples:
+    code_samples: []
     parameters:
       - name: axis
         type: Axis

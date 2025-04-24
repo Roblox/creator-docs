@@ -20,7 +20,7 @@ description: |
   touches the Platform a `Class.Weld` constraint is created, so they are
   'attached' to the Platform and can't move until that weld is broken. It can be
   removed by hitting the spacebar, when the player jumps to exit the Platform.
-code_samples:
+code_samples: []
 inherits:
   - Part
 tags:

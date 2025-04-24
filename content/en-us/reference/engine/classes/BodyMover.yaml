@@ -27,7 +27,7 @@ description: |
   An exception is the `Class.RocketPropulsion` class, which exerts **both**
   translational and rotational forces to cause a part to track down another
   part.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

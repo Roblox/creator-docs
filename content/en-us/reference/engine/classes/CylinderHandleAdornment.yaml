@@ -11,7 +11,7 @@ description: |
   The **CylinderHandleAdornment** is a cylinder that can be adorned to a
   `Class.BasePart`. This adornment can listen to input events and is commonly
   used to make dragger tools.
-code_samples:
+code_samples: []
 inherits:
   - HandleAdornment
 tags: []
@@ -24,7 +24,7 @@ properties:
       If `Angle` is `<360`, a cylindrical sector (aka a pie-slice) of that angle
       is rendered instead of a full cylinder. The `Angle` property can be
       combined with `InnerRadius` to render a sector of a hollow cylinder.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -44,7 +44,7 @@ properties:
       The height of the cylinder adornment.
     description: |
       The height of the cylinder adornment.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -66,7 +66,7 @@ properties:
       If `InnerRadius` is >0, a hollow cylinder with that inner radius is
       rendered instead of a full cylinder. The `InnerRadius` property can be
       combined with `Angle` to render a sector of a hollow cylinder.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -86,7 +86,7 @@ properties:
       The radius of the cylinder adornment.
     description: |
       The radius of the cylinder adornment.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

@@ -8,7 +8,7 @@ summary: |
 description: |
   BackpackItem is an abstract class for backpack items such as HopperBins and
   Tools.
-code_samples:
+code_samples: []
 inherits:
   - Model
 tags:
@@ -26,7 +26,7 @@ properties:
 
       If this property is left blank, the `Class.Backpack` GUI will display the
       name of the tool instead.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''

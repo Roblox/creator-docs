@@ -18,7 +18,7 @@ properties:
       Used to hold a `Datatype.CFrame` value.
     description: |
       Used to hold a `Datatype.CFrame` value.
-    code_samples:
+    code_samples: []
     type: CFrame
     tags: []
     deprecation_message: ''
@@ -70,7 +70,7 @@ events:
   - name: CFrameValue.changed
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
         type: CFrame

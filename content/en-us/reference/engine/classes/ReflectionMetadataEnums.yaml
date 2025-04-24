@@ -9,7 +9,7 @@ description: |
   `Class.ReflectionMetadataEnum` objects.
 
   Since it is an internal object, it cannot be used by developers.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []

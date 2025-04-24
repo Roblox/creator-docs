@@ -42,7 +42,7 @@ description: |
     </tr>
   </tbody>
   </table>
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -56,7 +56,7 @@ properties:
       This property determines whether the two linked parts,
       `Class.NoCollisionConstraint.Part0|Part0` and
       `Class.NoCollisionConstraint.Part1|Part1`, will collide with each other.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -76,7 +76,7 @@ properties:
       The second `Class.BasePart` that the constraint connects.
     description: |
       The second `Class.BasePart` that the constraint connects.
-    code_samples:
+    code_samples: []
     type: BasePart
     tags: []
     deprecation_message: ''
@@ -96,7 +96,7 @@ properties:
       The first `Class.BasePart` that the constraint connects.
     description: |
       The first `Class.BasePart` that the constraint connects.
-    code_samples:
+    code_samples: []
     type: BasePart
     tags: []
     deprecation_message: ''

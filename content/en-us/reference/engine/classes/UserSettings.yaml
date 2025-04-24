@@ -59,7 +59,7 @@ methods:
       to default. This function will fail to run correctly from a LocalScript,
       as it does not have permission to restore all of the properties in the
       `Class.UserGameSettings` class.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()

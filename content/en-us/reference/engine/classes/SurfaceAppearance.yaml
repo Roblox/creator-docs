@@ -26,7 +26,7 @@ description: |
   Note that most `Class.SurfaceAppearance` properties cannot be modified by
   scripts, as the necessary pre-processing is usually too expensive during
   runtime.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -54,7 +54,7 @@ properties:
 
       See [here](../../../art/modeling/surface-appearance.md#alpha-modes) for
       more information.
-    code_samples:
+    code_samples: []
     type: AlphaMode
     tags: []
     deprecation_message: ''
@@ -102,7 +102,7 @@ properties:
 
       See [here](../../../art/modeling/surface-appearance.md#color-albedo) for
       more information.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -158,7 +158,7 @@ properties:
 
       See [here](../../../art/modeling/surface-appearance.md#metalness) for more
       information.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -234,7 +234,7 @@ properties:
 
       See [here](../../../art/modeling/surface-appearance.md#normal) for more
       information.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -283,7 +283,7 @@ properties:
 
       See [here](../../../art/modeling/surface-appearance.md#roughness) for more
       information.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''

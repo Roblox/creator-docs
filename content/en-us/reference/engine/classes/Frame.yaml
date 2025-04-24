@@ -22,7 +22,7 @@ description: |
   `Class.GuiObject.Transparency|Transparency`, apply a
   [background gradient](../../../ui/appearance-modifiers.md#gradient) or
   [border](../../../ui/appearance-modifiers.md#stroke), and more.
-code_samples:
+code_samples: []
 inherits:
   - GuiObject
 tags: []
@@ -34,7 +34,7 @@ properties:
     description: |
       Sets what the frame looks like from a selection of pre-determined styles.
       See `Enum.FrameStyle` for a description of each style.
-    code_samples:
+    code_samples: []
     type: FrameStyle
     tags: []
     deprecation_message: ''

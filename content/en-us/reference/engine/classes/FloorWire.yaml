@@ -13,7 +13,7 @@ description: |
   time it works fine. It starts at From's center and goes to To's center. Which
   side of each one it goes into depends on the BaseParts's positions. It chooses
   the fastest route.
-code_samples:
+code_samples: []
 inherits:
   - GuiBase3d
 tags:
@@ -28,7 +28,7 @@ properties:
     description: |
       A decimal number between 0 and 1, through which you can control how far
       all of the decals are along the wire.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: |
@@ -50,7 +50,7 @@ properties:
       The object that the FloorWire travels from.
     description: |
       The object that the FloorWire travels from.
-    code_samples:
+    code_samples: []
     type: BasePart
     tags: []
     deprecation_message: |
@@ -72,7 +72,7 @@ properties:
       The number of studs between each FloorWire segment.
     description: |
       The number of studs between each FloorWire segment.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: |
@@ -94,7 +94,7 @@ properties:
       Sets the texture to be displayed on the FloorWire.
     description: |
       Sets the texture to be displayed on the FloorWire.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: |
@@ -116,7 +116,7 @@ properties:
       Sets the size of the texture used with the FloorWire.
     description: |
       Sets the size of the texture used with the FloorWire.
-    code_samples:
+    code_samples: []
     type: Vector2
     tags: []
     deprecation_message: |
@@ -138,7 +138,7 @@ properties:
       The object that the FloorWire travels to.
     description: |
       The object that the FloorWire travels to.
-    code_samples:
+    code_samples: []
     type: BasePart
     tags: []
     deprecation_message: |
@@ -160,7 +160,7 @@ properties:
       The speed that the textures flow along the wire.
     description: |
       The speed that the textures flow along the wire.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: |
@@ -182,7 +182,7 @@ properties:
       The radius of the wire.
     description: |
       The radius of the wire.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: |

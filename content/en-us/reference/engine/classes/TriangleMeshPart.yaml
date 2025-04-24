@@ -11,7 +11,7 @@ description: |
   management of physical geometry properties between the two sub-classes. It
   implements the read-only
   `Class.TriangleMeshPart.CollisionFidelity|CollisionFidelity`.
-code_samples:
+code_samples: []
 inherits:
   - BasePart
 tags:
@@ -28,7 +28,7 @@ properties:
 
       See [here](../../../workspace/collisions.md#collision-fidelity) for a
       visual representation of the various options.
-    code_samples:
+    code_samples: []
     type: CollisionFidelity
     tags:
       - NotReplicated

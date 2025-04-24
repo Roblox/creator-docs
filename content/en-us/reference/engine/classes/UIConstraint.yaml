@@ -6,7 +6,7 @@ summary: |
   The base class for UI constraint classes.
 description: |
   The base class for UI constraint classes.
-code_samples:
+code_samples: []
 inherits:
   - UIComponent
 tags:

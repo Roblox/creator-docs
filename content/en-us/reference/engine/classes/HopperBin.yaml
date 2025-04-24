@@ -17,7 +17,7 @@ description: |
   - `Class.ContextActionService`
   - `Class.UserInputService`
   - `Class.Player:GetMouse()`
-code_samples:
+code_samples: []
 inherits:
   - BackpackItem
 tags:
@@ -29,7 +29,7 @@ properties:
   - name: HopperBin.Active
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: |
@@ -48,7 +48,7 @@ properties:
   - name: HopperBin.BinType
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: BinType
     tags: []
     deprecation_message: |
@@ -69,7 +69,7 @@ events:
   - name: HopperBin.Deselected
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: |
@@ -82,7 +82,7 @@ events:
   - name: HopperBin.Selected
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: mouse
         type: Instance

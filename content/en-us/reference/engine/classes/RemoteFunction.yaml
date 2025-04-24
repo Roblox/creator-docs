@@ -45,7 +45,7 @@ description: |
   as well as Luau types such as numbers, strings, and booleans, although you
   should carefully explore the
   [limitations](../../../scripting/events/remote.md#argument-limitations).
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -88,7 +88,7 @@ methods:
       - If the client disconnects while it's being invoked,
         `Class.RemoteFunction:InvokeClient()|InvokeClient()` throws an error.
       - If the client doesn't return a value, the server yields forever.
-    code_samples:
+    code_samples: []
     parameters:
       - name: player
         type: Player
@@ -136,7 +136,7 @@ methods:
 
       See [Remote Events and Callbacks](../../../scripting/events/remote.md) for
       code samples and further details on `Class.RemoteFunction`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: arguments
         type: Tuple
@@ -170,7 +170,7 @@ callbacks:
       See [Remote Events and Callbacks](../../../scripting/events/remote.md) for
       code samples and further details on
       `Class.RemoteFunction.OnClientInvoke|OnClientInvoke`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: arguments
         type: Tuple
@@ -200,7 +200,7 @@ callbacks:
       See [Remote Events and Callbacks](../../../scripting/events/remote.md) for
       code samples and further details on
       `Class.RemoteFunction.OnServerInvoke|OnServerInvoke`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: player
         type: Player

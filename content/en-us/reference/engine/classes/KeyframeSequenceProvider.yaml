@@ -35,7 +35,7 @@ methods:
       Returns a `Class.KeyframeSequence` from a given asset URL.
     description: |
       Returns a `Class.KeyframeSequence` from a given asset URL.
-    code_samples:
+    code_samples: []
     parameters:
       - name: assetId
         type: ContentId
@@ -62,7 +62,7 @@ methods:
     description: |
       Returns a `Class.KeyframeSequence` from the supplied assetId. Can
       optionally cache to reduce unnecessary loading freezes.
-    code_samples:
+    code_samples: []
     parameters:
       - name: assetId
         type: int64

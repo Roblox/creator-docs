@@ -10,7 +10,7 @@ description: |
 
   For more information on how to teleport players between servers, see
   [Teleporting Between Places](../../../projects/teleport.md).
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -25,7 +25,7 @@ properties:
       This property used to control whether or not a `Class.Message` would be
       shown by default. The default message has been removed, so this no longer
       does anything.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - NotReplicated
@@ -170,7 +170,7 @@ methods:
       This service does not work during playtesting in Roblox Studio &mdash; To
       test aspects of your game using it, you must publish the game and play it
       in the Roblox application.
-    code_samples:
+    code_samples: []
     parameters:
       - name: setting
         type: string
@@ -311,7 +311,7 @@ methods:
       This service does not work during playtesting in Roblox Studio &mdash; To
       test aspects of your game using it, you must publish the game and play it
       in the Roblox application.
-    code_samples:
+    code_samples: []
     parameters:
       - name: setting
         type: string
@@ -772,7 +772,7 @@ methods:
       For more information on how to teleport players between servers and
       receive user data from a teleport, see
       [Teleporting Between Places](../../../projects/teleport.md#sending-user-data-along-with-teleports).
-    code_samples:
+    code_samples: []
     parameters:
       - name: placeId
         type: int64
@@ -910,7 +910,7 @@ events:
       This service does not work during playtesting in Roblox Studio &mdash; To
       test aspects of your game using it, you must publish the game and play it
       in the Roblox application.
-    code_samples:
+    code_samples: []
     parameters:
       - name: loadingGui
         type: Instance
@@ -994,7 +994,7 @@ events:
 
       For more information on how to teleport players between servers, see
       [Teleporting Between Places](../../../projects/teleport.md).
-    code_samples:
+    code_samples: []
     parameters:
       - name: player
         type: Instance

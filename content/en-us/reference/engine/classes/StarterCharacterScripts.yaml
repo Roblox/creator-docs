@@ -13,7 +13,7 @@ description: |
   If a `Class.LocalScript` named `Animate`, `Sound`, or `Health` is placed in
   this container, it will replace the default script that manages character
   animations, character sounds, and character health regeneration respectively.
-code_samples:
+code_samples: []
 inherits:
   - StarterPlayerScripts
 tags:

@@ -8,7 +8,7 @@ summary: |
 description: |
   A service that is internally responsible for fetching, parsing, and caching
   meshes.
-code_samples:
+code_samples: []
 inherits:
   - CacheableContentProvider
 tags:

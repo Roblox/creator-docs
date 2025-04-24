@@ -19,7 +19,7 @@ description: |
 
   For more information on how to teleport players between servers, see
   [Teleporting Between Places](../../../projects/teleport.md).
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -35,7 +35,7 @@ properties:
 
       For more information on how to teleport players between servers, see
       [Teleporting Between Places](../../../projects/teleport.md).
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -58,7 +58,7 @@ properties:
 
       For more information on how to teleport players between servers, see
       [Teleporting Between Places](../../../projects/teleport.md).
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -89,7 +89,7 @@ properties:
 
       For more information on how to teleport players between servers, see
       [Teleporting Between Places](../../../projects/teleport.md).
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -119,7 +119,7 @@ methods:
 
       For more information on how to teleport players between servers, see
       [Teleporting Between Places](../../../projects/teleport.md).
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Variant
@@ -175,7 +175,7 @@ methods:
       For more information on how to send and receive user data along with
       teleports, see, see
       [Teleporting Between Places](../../../projects/teleport.md#sending-user-data-along-with-teleports).
-    code_samples:
+    code_samples: []
     parameters:
       - name: teleportData
         type: Variant

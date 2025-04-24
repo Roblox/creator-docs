@@ -12,7 +12,7 @@ description: |
   Like all other `Class.SoundEffect|SoundEffects`, a `Class.ReverbSoundEffect`
   can be applied either to a `Class.Sound` or `Class.SoundGroup` by being
   parented to either.
-code_samples:
+code_samples: []
 inherits:
   - SoundEffect
 tags: []
@@ -26,7 +26,7 @@ properties:
       Range: 0.1 to 20 (default 1.5) Sets how long it takes for the
       reverberating echoes to fade out completely. Larger decay times simulate
       larger (empty) spaces
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -46,7 +46,7 @@ properties:
       Controls how many reflections are generated.
     description: |
       Range: 0 to 1 (default 1) Controls how many reflections are generated.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -68,7 +68,7 @@ properties:
       Range: 0 to 1 (default 1) Controls how smooth and reflective the simulated
       surfaces are. The lower this value, the more discrete the echoes are. At
       higher levels the echos will blend more.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -88,7 +88,7 @@ properties:
       The output volume of the original sound.
     description: |
       Range: -80 to 10 (default -6) The output volume of the original sound.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -108,7 +108,7 @@ properties:
       The output volume of the echoed effect.
     description: |
       Range: -80 to 10 (default 0) The output volume of the echoed effect.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

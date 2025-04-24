@@ -42,7 +42,7 @@ properties:
       setting's page on the website.
 
       This property is not intended for use in the game.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - Hidden
@@ -225,7 +225,7 @@ properties:
       Since this property is only relevant for characters being spawned in the
       future, changing it will not change any existing player characters.
       Changes to this property will only take effect when a player respawns.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -257,7 +257,7 @@ properties:
       Since this property is only relevant for characters being spawned in the
       future, changing it will not change any existing player characters.
       Changes to this property will only take effect when a player respawns.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -286,7 +286,7 @@ properties:
       Since this property is only relevant for characters being spawned in the
       future, changing it will not change any existing player characters.
       Changes to this property will only take effect when a player respawns.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -316,7 +316,7 @@ properties:
       Since this property is only relevant for characters being spawned in the
       future, changing it will not change any existing player characters.
       Changes to this property will only take effect when a player respawns.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -342,7 +342,7 @@ properties:
       Since this property is only relevant for characters being spawned in the
       future, changing it will not change any existing player characters.
       Changes to this property will only take effect when a player respawns.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -754,7 +754,7 @@ properties:
 
       See also [Avatar Emotes](../../../characters/emotes.md), an article
       detailing how to control, customize, and play avatar emotes.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''

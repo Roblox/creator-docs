@@ -6,7 +6,7 @@ summary: |
   Base class of all 'Pose Instance' objects.
 description: |
   Base class of all 'Pose Instance' objects.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -18,7 +18,7 @@ properties:
       The easing direction to use to reach the next Pose's value.
     description: |
       The easing direction to use to reach the next Pose's value.
-    code_samples:
+    code_samples: []
     type: PoseEasingDirection
     tags: []
     deprecation_message: ''
@@ -38,7 +38,7 @@ properties:
       The easing style to use to reach the next Pose's value.
     description: |
       The easing style to use to reach the next Pose's value.
-    code_samples:
+    code_samples: []
     type: PoseEasingStyle
     tags: []
     deprecation_message: ''
@@ -56,7 +56,7 @@ properties:
   - name: PoseBase.Weight
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: |

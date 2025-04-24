@@ -37,7 +37,7 @@ properties:
   - name: Selection.SelectionThickness
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -57,7 +57,7 @@ methods:
   - name: Selection:Add
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: instancesToAdd
         type: Instances
@@ -106,7 +106,7 @@ methods:
   - name: Selection:Remove
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: instancesToRemove
         type: Instances

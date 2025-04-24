@@ -66,7 +66,7 @@ methods:
         `Class.Instance:Destroy()` or in a function connected to a signal
         returned by
         `Class.CollectionService:GetInstanceRemovedSignal()|GetInstanceRemovedSignal()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: instance
         type: Instance

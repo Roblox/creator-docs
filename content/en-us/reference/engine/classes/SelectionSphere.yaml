@@ -14,7 +14,7 @@ description: |
 
   For an outline/fill overlay effect which covers non‑primitive geometry such as
   that of a `Class.MeshPart`, see `Class.Highlight`.
-code_samples:
+code_samples: []
 inherits:
   - PVAdornment
 tags: []
@@ -27,7 +27,7 @@ properties:
     description: |
       A `Datatype.BrickColor` version of
       `Class.SelectionBox.SurfaceColor3|SurfaceColor3`.
-    code_samples:
+    code_samples: []
     type: BrickColor
     tags:
       - Hidden
@@ -58,7 +58,7 @@ properties:
       See also `Class.SelectionSphere.Color3|Color3`, a property of the
       superclass `Class.GuiBase3d` which controls the color of the outline
       rather than the surface faces.
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -84,7 +84,7 @@ properties:
       See also `Class.SelectionSphere.Transparency|Transparency`, a property of
       the superclass `Class.GuiBase3d` which controls the transparency of the
       outline rather than the surface.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

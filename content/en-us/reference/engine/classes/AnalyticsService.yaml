@@ -9,7 +9,7 @@ description: |
   **AnalyticsService** is a collection of methods that allows developers to
   track how users interact with their experiences, specifically player
   progression, in-experience economy, funnels, and custom events.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -31,7 +31,7 @@ properties:
       ```lua
       game:GetService("AnalyticsService").ApiKey = "API_KEY"
       ```
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - Deprecated
@@ -152,7 +152,7 @@ methods:
       - **"AnalyticsService: The event value you fired is too long."** – Thrown
         if the **value** parameter was too long after serialization. The length
         limit is 1 KB, or 1024 bytes.
-    code_samples:
+    code_samples: []
     parameters:
       - name: category
         type: string

@@ -8,7 +8,7 @@ summary: |
 description: |
   `PolicyService` helps you query information regarding policy compliance for
   players around the world based on age range, location, and platform type.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

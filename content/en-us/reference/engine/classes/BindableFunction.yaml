@@ -36,7 +36,7 @@ description: |
   invoked, as well as Luau types such as numbers, strings, and booleans,
   although you should carefully explore the
   [limitations](../../../scripting/events/custom.md#argument-limitations).
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -68,7 +68,7 @@ methods:
       See [Custom Events and Callbacks](../../../scripting/events/custom.md) for
       code samples and further details on
       `Class.BindableFunction:Invoke()|Invoke()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: arguments
         type: Tuple
@@ -104,7 +104,7 @@ callbacks:
       See [Custom Events and Callbacks](../../../scripting/events/custom.md) for
       code samples and further details on
       `Class.BindableFunction.OnInvoke|OnInvoke`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: arguments
         type: Tuple

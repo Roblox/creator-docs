@@ -63,7 +63,7 @@ description: |
   if you want to download the CurveAnimation corresponding to an existing
   uploaded Animation using Luau scripts, use
   AnimationClipProvider:AnimationClipAsync.
-code_samples:
+code_samples: []
 inherits:
   - AnimationClip
 tags: []

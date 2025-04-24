@@ -16,7 +16,7 @@ description: |
   Items in the queue can optionally be set to expire after a certain amount of
   time. Expired items simply disappear from the queue as if they were never
   added.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -30,7 +30,7 @@ methods:
       Adds an item to the queue.
     description: |
       Adds an item to the queue.
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
         type: Variant

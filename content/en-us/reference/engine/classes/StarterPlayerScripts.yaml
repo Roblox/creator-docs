@@ -30,7 +30,7 @@ description: |
   `Class.LocalScript|LocalScripts` for each of these to disable them altogether;
   this is useful for experiences that do not follow the typical control
   paradigms of a Roblox experience.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

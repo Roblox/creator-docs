@@ -7,7 +7,7 @@ summary: |
 description: |
   A special type of `Class.StatsItem` which measures a total-count-over-time
   interval. As of right now, this StatsItem goes unused.
-code_samples:
+code_samples: []
 inherits:
   - StatsItem
 tags:

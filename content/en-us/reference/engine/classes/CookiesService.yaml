@@ -10,7 +10,7 @@ description: |
 
   Can only be used by Roblox's backend servers, and therefore is not available
   to developers in any shape or form.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

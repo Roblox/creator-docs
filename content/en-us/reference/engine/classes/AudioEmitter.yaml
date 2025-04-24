@@ -279,7 +279,7 @@ methods:
 
       If the table is empty or `nil`, the `Class.AudioEmitter` defaults to using
       an angle attenuation curve with the constant volume value of `1`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: curve
         type: Dictionary

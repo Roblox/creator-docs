@@ -12,7 +12,7 @@ description: |
 
   - [Data Stores](../../../cloud-services/data-stores/index.md), an in-depth
     guide on data structure, management, error handling, etc.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -26,7 +26,7 @@ properties:
     description: |
       This property indicates when the version was created in milliseconds since
       epoch.
-    code_samples:
+    code_samples: []
     type: int64
     tags:
       - ReadOnly
@@ -49,7 +49,7 @@ properties:
     description: |
       This property describes whether the version has been marked as deleted.
       Deleted versions will be permanently deleted after 30 days.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - ReadOnly
@@ -74,7 +74,7 @@ properties:
       be passed to `Class.DataStore:GetVersionAsync()` or
       `Class.DataStore:RemoveVersionAsync()` to get or remove the version
       respectively.
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - ReadOnly

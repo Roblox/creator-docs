@@ -24,7 +24,7 @@ description: |
   tilt within a cone, as well as
   `Class.UniversalConstraint.Restitution|Restitution` which defines the
   elasticity of the attachments when they reach the limit.
-code_samples:
+code_samples: []
 inherits:
   - Constraint
 tags: []
@@ -38,7 +38,7 @@ properties:
       This property, when enabled, limits the relative angular motion of the
       primary axes of attachments through a cone constraint. The default value
       is false.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -64,7 +64,7 @@ properties:
       In order for this property to take affect, the constraint's
       `Class.UniversalConstraint.LimitsEnabled|LimitsEnabled` property must be
       set to true.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -85,7 +85,7 @@ properties:
     description: |
       This property indicates the constraint's visualization radius, in studs.
       Default value is 0.2.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -110,7 +110,7 @@ properties:
       by `Class.UniversalConstraint.MaxAngle|MaxAngle`. The value defaults to 0
       and can be any floating number in the range of 0 to 1. Only applies when
       `Class.UniversalConstraint.LimitsEnabled|LimitsEnabled` is set to true.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

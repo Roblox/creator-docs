@@ -39,10 +39,10 @@ To implement a referral system, [set up a referral event](#set-up-a-referral-eve
 ```lua
 function onPlayerAdded(player)
 
-	local referredByPlayerId = player:GetJoinData().ReferredByPlayerId
+    local referredByPlayerId = player:GetJoinData().ReferredByPlayerId
 
-	local referrerEvent: RemoteEvent = ReplicatedStorage:FindFirstChild("ReferralReceivedEvent")
-	referrerEvent:FireClient(player, referredByPlayerId)
+    local referrerEvent: RemoteEvent = ReplicatedStorage:FindFirstChild("ReferralReceivedEvent")
+    referrerEvent:FireClient(player, referredByPlayerId)
 end
 
 Players.PlayerAdded:Connect(onPlayerAdded)
@@ -159,23 +159,45 @@ You can implement safeguards to prevent players from exploiting the friend refer
 - Monitor unusual activity and implement corrective measures like banning users or canceling rewards.
 
 ```lua
--- Table to track players who have already been referred
-local referredPlayers = {}
+local DataStoreService = game:GetService("DataStoreService")
+local Players = game:GetService("Players")
 
-function onPlayerAdded(player)
+-- Create or get the datastore for referrals
+local referralDataStore = DataStoreService:GetDataStore("ReferralDataStore")
+
+-- Function to check and mark referral
+local function onPlayerAdded(player)
     local joinData = player:GetJoinData()
     local referredByPlayerId = joinData.ReferredByPlayerId
 
-    -- Check if the player was invited and has not already used a referral
-    if referredByPlayerId and referredByPlayerId ~= 0 and not referredPlayers[player.UserId] then
-        -- Mark the player as referred
-        referredPlayers[player.UserId] = true
+    -- Load player's referral data
+    local success, alreadyReferred = pcall(function()
+        return referralDataStore:GetAsync(tostring(player.UserId))
+    end)
 
+    if not success then
+        warn("Failed to get referral data for player:", player.UserId)
+        return
+    end
+
+    if referredByPlayerId and not alreadyReferred then
         -- Reward inviter and invitee
         rewardReferrer(referredByPlayerId)
         rewardInvitee(player)
+
+        -- Mark the player as referred in DataStore
+        local saveSuccess, err = pcall(function()
+            referralDataStore:SetAsync(tostring(player.UserId), true)
+        end)
+
+        if not saveSuccess then
+            warn("Failed to save referral status for player:", player.UserId, err)
+        end
     end
 end
+
+-- Connect the function to the player joining
+Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
 ## Best practices

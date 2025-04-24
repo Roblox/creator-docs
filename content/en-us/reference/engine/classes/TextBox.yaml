@@ -76,7 +76,7 @@ properties:
     description: |
       Determines whether clicking on the TextBox will clear its
       `Class.TextBox.Text` property
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -211,7 +211,7 @@ properties:
       Determines the font size of a `Class.TextBox` object.
     description: |
       This property determines the font size of a `Class.TextBox` object.
-    code_samples:
+    code_samples: []
     type: FontSize
     tags:
       - NotReplicated
@@ -237,7 +237,7 @@ properties:
       Controls the height of lines, as a multiple of the font's em square size,
       by scaling the spacing between lines of text in the `Class.TextBox`. Valid
       values range from 1.0 to 3.0, defaulting to 1.0.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -265,7 +265,7 @@ properties:
 
       Setting the property to -1 disables the limit and shows the entirety of
       the `Class.TextBox.Text`.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -289,7 +289,7 @@ properties:
       When set to true, text inside a TextBox is able to move onto multiple
       lines. This also enables players to use the enter key to move onto a new
       line.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -349,7 +349,7 @@ properties:
     description: |
       Sets the text color that gets used when no text has been entered into the
       TextBox yet.
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -371,7 +371,7 @@ properties:
     description: |
       Sets the text that gets displayed when no text has been entered into the
       TextBox yet.
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -403,7 +403,7 @@ properties:
       gains focus, the user will be able to edit and interact with the complete
       XML string, including all of the formatting tags. When focus is lost, the
       text will automatically parse and render the tags as rich text.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -493,7 +493,7 @@ properties:
     description: |
       If set to true, input native to the platform is used instead of Roblox's
       built-in keyboard.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -581,7 +581,7 @@ properties:
   - name: TextBox.TextColor
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: BrickColor
     tags:
       - Hidden
@@ -665,7 +665,7 @@ properties:
       disabled, otherwise the Text could be cleared on-focus. This property is
       useful to make read-only TextBoxes from which content can be copied
       in-game.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -685,7 +685,7 @@ properties:
       Whether the text fits within the constraints of the TextBox.
     description: |
       Whether the text fits within the constraints of the TextBox.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - ReadOnly
@@ -893,7 +893,7 @@ properties:
       Controls the truncation of the text displayed in this TextBox.
     description: |
       Controls the truncation of the text displayed in this TextBox.
-    code_samples:
+    code_samples: []
     type: TextTruncate
     tags: []
     deprecation_message: ''
@@ -911,7 +911,7 @@ properties:
   - name: TextBox.TextWrap
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - NotReplicated
@@ -1049,7 +1049,7 @@ methods:
       Returns true if the textbox is focused, or false if it is not.
     description: |
       Returns true if the textbox is focused, or false if it is not.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: boolean
@@ -1167,7 +1167,7 @@ events:
   - name: TextBox.ReturnPressedFromOnScreenKeyboard
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''

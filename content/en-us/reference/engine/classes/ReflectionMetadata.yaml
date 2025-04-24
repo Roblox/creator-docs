@@ -8,7 +8,7 @@ summary: |
 description: |
   A currently unused object whose functionality was split into
   `Class.ReflectionMetadataClasses` and `Class.ReflectionMetadataEnums`.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []

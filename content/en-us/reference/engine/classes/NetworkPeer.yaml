@@ -6,7 +6,7 @@ summary: |
   The NetworkPeer object is the most basic class of the network objects.
 description: |
   The NetworkPeer object is the most basic class of the network objects.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

@@ -8,7 +8,7 @@ summary: |
 description: |
   Used to craft the further choices available to players who have started a
   dialog conversation with an NPC.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -22,7 +22,7 @@ properties:
       will display the content of `Class.DialogChoice.GoodbyeDialog` as the last
       option after other dialog choices. Clicking on the goodbye option will
       exit the dialog.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -44,7 +44,7 @@ properties:
     description: |
       Sets the sentence that the dialog will show to the player when the chat
       ends
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -64,7 +64,7 @@ properties:
       Sets what the NPC will say when the player chooses this DialogChoice.
     description: |
       Sets what the NPC will say when the player chooses this DialogChoice.
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -84,7 +84,7 @@ properties:
       Sets what the player will say when they choose this DialogChoice.
     description: |
       Sets what the player will say when they choose this DialogChoice.
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''

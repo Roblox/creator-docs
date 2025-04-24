@@ -33,7 +33,7 @@ description: |
   has taken effect). This allows quieter sounds to be amplified while louder
   sounds can stay about the same. The `Class.CompressorSoundEffect.GainMakeup`
   determines how much the effect amplifies the sound.
-code_samples:
+code_samples: []
 inherits:
   - SoundEffect
 tags: []
@@ -46,7 +46,7 @@ properties:
     description: |
       Range: 0.1 to 1 (default 0.1) The time the effect takes to become active
       after its Threshold has be reached. Measured in seconds.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -71,7 +71,7 @@ properties:
       threshold. Keep in mind this amplification will occur as long as the
       effect is Active, regardless of whether the Threshold has be reached or
       not. Measured in dB.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -93,7 +93,7 @@ properties:
     description: |
       The ratio between the `Class.CompressorSoundEffect.SideChain` sound
       effect, and this sound effect.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -115,7 +115,7 @@ properties:
     description: |
       Range: 0 to 5 (default 0.1) The time the effect takes to become inactive
       after its sound is below the Threshold. Measured in seconds.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -140,7 +140,7 @@ properties:
       <a rel="nofollow" href="https://en.wikipedia.org/wiki/Ducking">ducking</a>
       effect to the compressor sound effect. The behavior of the sidechain
       depends on the `Class.Sound` or `Class.SoundGroup` linked to it.
-    code_samples:
+    code_samples: []
     type: Instance
     tags: []
     deprecation_message: ''
@@ -163,7 +163,7 @@ properties:
       applies its effect. If the effect's Sound or SoundGroup is below the
       effect will not attenuate the sound, although the GainMakeup will still be
       applied. Measured in dB.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

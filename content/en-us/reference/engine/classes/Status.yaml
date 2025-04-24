@@ -7,7 +7,7 @@ summary: |
 description: |
   Used as a storage for custom Humanoid statuses. This object would've been
   officially used in the RbxStatus library, but remains unfinished.
-code_samples:
+code_samples: []
 inherits:
   - Model
 tags:

@@ -6,7 +6,7 @@ summary: |
   The original name of the `Class.ScreenGui`.
 description: |
   The original name of the `Class.ScreenGui`.
-code_samples:
+code_samples: []
 inherits:
   - ScreenGui
 tags:

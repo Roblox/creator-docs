@@ -73,7 +73,7 @@ properties:
       The action text shown to the user.
     description: |
       This property determines the action text shown to the user.
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -99,7 +99,7 @@ properties:
       will be localized according to the
       `Class.ProximityPrompt.RootLocalizationTable`. When set to true,
       localization will be applied.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -121,7 +121,7 @@ properties:
       This property determines whether the prompt can be activated by
       clicking/tapping on the prompt's UI. When set to false, the prompt cannot
       be activated by click/tap except on mobile.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -142,7 +142,7 @@ properties:
     description: |
       This property indicates whether or this `Class.ProximityPrompt` should be
       shown.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -163,7 +163,7 @@ properties:
     description: |
       This property is used to customize which prompts can be shown at the same
       time.
-    code_samples:
+    code_samples: []
     type: ProximityPromptExclusivity
     tags: []
     deprecation_message: ''
@@ -185,7 +185,7 @@ properties:
       This property determines the gamepad button the player should press to
       trigger the `Class.ProximityPrompt|ProximityPrompt`. Default is
       **ButtonX**.
-    code_samples:
+    code_samples: []
     type: KeyCode
     tags: []
     deprecation_message: ''
@@ -207,7 +207,7 @@ properties:
     description: |
       This property indicates the duration, in seconds, that the player must
       hold the button/key down to trigger the prompt.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -228,7 +228,7 @@ properties:
     description: |
       This property determines the key the player should press to trigger the
       `Class.ProximityPrompt|ProximityPrompt`. Default is <kbd>E</kbd>.
-    code_samples:
+    code_samples: []
     type: KeyCode
     tags: []
     deprecation_message: ''
@@ -251,7 +251,7 @@ properties:
       This property determines the maximum distance a Player's
       `Class.Player.Character|character` can be from the `Class.ProximityPrompt`
       for the prompt to appear.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -273,7 +273,7 @@ properties:
     description: |
       This optional property determines the optional object name text shown to
       the user.
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -301,7 +301,7 @@ properties:
 
       The parent `Class.Part` or `Class.Model` of the prompt will be excluded
       from this check.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -333,7 +333,7 @@ properties:
       `Class.LocalizationService`. If there is no translation available in the
       referenced table it will look for a translation in the parent of that
       table, if it is also a LocalizationTable, and so on.
-    code_samples:
+    code_samples: []
     type: LocalizationTable
     tags: []
     deprecation_message: ''
@@ -364,7 +364,7 @@ properties:
       Developers may also use `Class.ProximityPrompt.PromptButtonHoldBegan` and
       `Class.ProximityPrompt.PromptButtonHoldEnded` in order to utilize the
       `Class.ProximityPrompt.HoldDuration` progress animation feature.
-    code_samples:
+    code_samples: []
     type: ProximityPromptStyle
     tags: []
     deprecation_message: ''
@@ -384,7 +384,7 @@ properties:
       The pixel offset applied to the prompt's UI.
     description: |
       This property indicates the pixel offset applied to the prompt's UI.
-    code_samples:
+    code_samples: []
     type: Vector2
     tags: []
     deprecation_message: ''
@@ -409,7 +409,7 @@ methods:
       the `Class.ProximityPrompt` prompt button. It should be used by developers
       who wish to customize the prompt and trigger it from a prompt GUI button
       press.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -427,7 +427,7 @@ methods:
     description: |
       A counterpoint to `Class.ProximityPrompt:InputHoldBegin()`, this signals
       that the user ended pressing the prompt GUI button.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -449,7 +449,7 @@ events:
       `Class.ProximityPrompt.KeyboardKeyCode|key`/button on a prompt with a
       non-zero `Class.ProximityPrompt.HoldDuration`. One possible usage includes
       to animate a hold progress bar.
-    code_samples:
+    code_samples: []
     parameters:
       - name: playerWhoTriggered
         type: Player
@@ -470,7 +470,7 @@ events:
       This event triggers when the player ends holding down the button on a
       prompt with a non-zero `Class.ProximityPrompt.HoldDuration`. One possible
       usage includes to animate a hold progress bar.
-    code_samples:
+    code_samples: []
     parameters:
       - name: playerWhoTriggered
         type: Player
@@ -489,7 +489,7 @@ events:
     description: |
       This event triggers when the `Class.ProximityPrompt|prompt` becomes
       hidden. This event is triggered client-side for `LocalScripts`.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
@@ -503,7 +503,7 @@ events:
     description: |
       This event triggers when the `Class.ProximityPrompt|prompt` becomes
       visible. This event is triggered client-side for `LocalScripts`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: inputType
         type: ProximityPromptInputType
@@ -526,7 +526,7 @@ events:
       `Class.ProximityPrompt.KeyboardKeyCode|key`/button is released, for longer
       events where the user is required to hold down the button (e.g. heal
       another player over time.)
-    code_samples:
+    code_samples: []
     parameters:
       - name: playerWhoTriggered
         type: Player
@@ -551,7 +551,7 @@ events:
       `Class.ProximityPrompt.KeyboardKeyCode|key`/button is pressed, or after a
       specified amount of time holding the button, if
       `Class.ProximityPrompt.HoldDuration` is used.
-    code_samples:
+    code_samples: []
     parameters:
       - name: playerWhoTriggered
         type: Player

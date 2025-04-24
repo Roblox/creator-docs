@@ -46,7 +46,7 @@ properties:
       which of these methods and what angles (in radians). Additionally, you
       could use `CFrame.new(gyro.Parent.Position, targetPosition)` in order to
       have the BodyGyro "look at" a targetPosition (`Datatype.Vector3`).
-    code_samples:
+    code_samples: []
     type: CFrame
     tags: []
     deprecation_message: ''
@@ -74,7 +74,7 @@ properties:
       applying dampening using this property is how that effect is avoided. The
       higher this value is set, the greater the dampening curve becomes, or the
       slower the part will approach the goal orientation.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -98,7 +98,7 @@ properties:
       (`Class.BodyGyro.CFrame|CFrame`). If a part isn't moving, consider
       increasing this value (also check that it is not
       `Class.BasePart.Anchored|Anchored` or attached to any anchored parts).
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -123,7 +123,7 @@ properties:
       applying torque in order to reach the goal `Class.BodyGyro.CFrame|CFrame`.
       The higher this value, the more power will be used and the faster it will
       be used.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -141,7 +141,7 @@ properties:
   - name: BodyGyro.cframe
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: CFrame
     tags:
       - NotReplicated
@@ -163,7 +163,7 @@ properties:
   - name: BodyGyro.maxTorque
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - NotReplicated

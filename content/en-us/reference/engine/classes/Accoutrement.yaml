@@ -22,7 +22,7 @@ description: |
   accoutrement welds to another part that is massless or one if its parts
   otherwise becomes root. This also doesn't apply for the root part, and it has
   mass like a normal part.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -33,7 +33,7 @@ properties:
       Sets the offset position of the object on the Player.
     description: |
       Sets the offset position of the object on the Player.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - Hidden
@@ -55,7 +55,7 @@ properties:
       The exact CFrame of the Accoutrement.
     description: |
       The exact CFrame of the Accoutrement.
-    code_samples:
+    code_samples: []
     type: CFrame
     tags: []
     deprecation_message: ''
@@ -75,7 +75,7 @@ properties:
       Sets the position of the object on the Player.
     description: |
       Sets the position of the object on the Player.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - Hidden
@@ -97,7 +97,7 @@ properties:
       Sets the offset position of the object on the Player.
     description: |
       Sets the offset position of the object on the Player.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - Hidden
@@ -119,7 +119,7 @@ properties:
       Sets the offset position of the object on the Player.
     description: |
       Sets the offset position of the object on the Player.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - Hidden

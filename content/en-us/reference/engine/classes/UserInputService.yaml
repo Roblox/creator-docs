@@ -496,7 +496,7 @@ properties:
       `Class.UserInputService.OnScreenKeyboardVisible|OnScreenKeyboardVisible`
       and
       `Class.UserInputService.OnScreenKeyboardPosition|OnScreenKeyboardPosition`.
-    code_samples:
+    code_samples: []
     type: Vector2
     tags:
       - ReadOnly
@@ -528,7 +528,7 @@ properties:
       See also
       `Class.UserInputService.OnScreenKeyboardSize|OnScreenKeyboardSize` and
       `Class.UserInputService.OnScreenKeyboardPosition|OnScreenKeyboardPosition`.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - ReadOnly
@@ -607,7 +607,7 @@ properties:
     description: |
       The UserHeadCFrame used to describe the orientation and position of a
       user's head, if they are actively using a virtual reality headset.
-    code_samples:
+    code_samples: []
     type: CFrame
     tags:
       - ReadOnly
@@ -902,7 +902,7 @@ methods:
       - `Class.TextBox:CaptureFocus()`
       - `Class.TextBox:IsFocused()`
       - `Class.TextBox:ReleaseFocus()`
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: TextBox
@@ -983,7 +983,7 @@ methods:
       - `Class.UserInputService:GetGamepadConnected()`
       - `Class.UserInputService:GamepadSupports()`
       - `Class.UserInputService.GamepadEnabled`
-    code_samples:
+    code_samples: []
     parameters:
       - name: gamepadNum
         type: UserInputType
@@ -1225,7 +1225,7 @@ methods:
         is enabled for GUI navigation
       - `Class.UserInputService:GetConnectedGamepads()`, to return all gamepads
         connected regardless of GUI navigational control
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Array
@@ -1590,7 +1590,7 @@ methods:
           </tr>
         </tbody>
       </table>
-    code_samples:
+    code_samples: []
     parameters:
       - name: keyCode
         type: KeyCode
@@ -1969,7 +1969,7 @@ methods:
       - `Class.UserInputService:GetGamepadConnected()`
       - `Class.UserInputService:GamepadSupports()`
       - `Class.UserInputService.GamepadEnabled`
-    code_samples:
+    code_samples: []
     parameters:
       - name: gamepadEnum
         type: UserInputType
@@ -2245,7 +2245,7 @@ events:
       - `Class.UserInputService:GetGamepadConnected()`
       - `Class.UserInputService:GamepadSupports()`
       - `Class.UserInputService.GamepadEnabled`
-    code_samples:
+    code_samples: []
     parameters:
       - name: gamepadNum
         type: UserInputType
@@ -2296,7 +2296,7 @@ events:
       - `Class.UserInputService:GetGamepadConnected()`
       - `Class.UserInputService:GamepadSupports()`
       - `Class.UserInputService.GamepadEnabled`
-    code_samples:
+    code_samples: []
     parameters:
       - name: gamepadNum
         type: UserInputType
@@ -2526,7 +2526,7 @@ events:
     description: |
       **PointerAction** fires when the user performs a specific pointer action.
       In particular, scrolling the mouse wheel.
-    code_samples:
+    code_samples: []
     parameters:
       - name: wheel
         type: float
@@ -2582,7 +2582,7 @@ events:
       - `Class.UserInputService:GetFocusedTextBox()`
       - `Class.TextBox.Focused`
       - `Class.TextBox.FocusLost`
-    code_samples:
+    code_samples: []
     parameters:
       - name: textboxReleased
         type: TextBox
@@ -2627,7 +2627,7 @@ events:
       - `Class.UserInputService:GetFocusedTextBox()`
       - `Class.TextBox.Focused`
       - `Class.TextBox.FocusLost`
-    code_samples:
+    code_samples: []
     parameters:
       - name: textboxFocused
         type: TextBox

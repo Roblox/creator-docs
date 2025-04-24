@@ -8,7 +8,7 @@ description: |
   `Class.GuiObject|GuiObjects` in various Roblox Studio widgets. As of right
   now, the only available PluginGui type is `Class.DockWidgetPluginGui`, but
   there may be more in the future!
-code_samples:
+code_samples: []
 inherits:
   - LayerCollector
 tags:
@@ -22,7 +22,7 @@ properties:
     description: |
       The title that is displayed above the contents of the `Class.PluginGui`.
       Defaults to empty string.
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -100,7 +100,7 @@ methods:
       - `Class.Plugin:CreateDockWidgetPluginGui()` to create a `Class.PluginGui`
       - `Class.DataModel:BindToClose()`, which can be used to bind a function to
         the game ending and should not be confused with this function
-    code_samples:
+    code_samples: []
     parameters:
       - name: function
         type: Function
@@ -245,7 +245,7 @@ events:
       - `Class.PluginGui.PluginDragEntered`
       - `Class.PluginGui.PluginDragLeft`
       - `Class.PluginGui.PluginDragDropped`
-    code_samples:
+    code_samples: []
     parameters:
       - name: dragData
         type: Dictionary

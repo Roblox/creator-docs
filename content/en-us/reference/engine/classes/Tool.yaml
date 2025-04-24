@@ -52,7 +52,7 @@ properties:
       to `Class.Workspace` and removed from the player's `Class.Backpack`. If
       false, nothing will happen when backspace is pressed, and the tool will
       remain equipped.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -281,7 +281,7 @@ properties:
 
       When set to `true`, the tool will function only with a handle. When set to
       `false`, the tool will function even without a handle.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -323,7 +323,7 @@ properties:
       ```lua
       tool.ToolTip = "Shovel - Use to dig"
       ```
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -403,7 +403,7 @@ events:
 
       tool.Activated:Connect(onActivation)
       ```
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
@@ -437,7 +437,7 @@ events:
 
       tool.Deactivated:Connect(toolDeactivated)
       ```
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
@@ -485,7 +485,7 @@ events:
 
       Note that this event does **not** fire when `Class.Tool.RequiresHandle` is
       enabled and no handle is present.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''

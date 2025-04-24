@@ -13,7 +13,7 @@ description: |
   - A `Class.Hole` needs to be parented inside of another `Class.BasePart`
   - The VelocityMotor's `Class.VelocityMotor.Hole` property should be assigned
     to the hole you parented inside of the other part.
-code_samples:
+code_samples: []
 inherits:
   - JointInstance
 tags: []
@@ -24,7 +24,7 @@ properties:
       Displays the angle that the motor is at in radians.
     description: |
       Displays the angle that the motor is at in radians.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -46,7 +46,7 @@ properties:
     description: |
       The desired angle to be reached. The motor will attempt to reach this
       angle.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -66,7 +66,7 @@ properties:
       The `Class.Hole` linked to this VelocityMotor.
     description: |
       The `Class.Hole` linked to this VelocityMotor.
-    code_samples:
+    code_samples: []
     type: Hole
     tags: []
     deprecation_message: ''
@@ -86,7 +86,7 @@ properties:
       The maximum amount of velocity able to be reached.
     description: |
       The maximum amount of velocity able to be reached.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

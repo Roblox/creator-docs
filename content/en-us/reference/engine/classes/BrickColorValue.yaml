@@ -6,7 +6,7 @@ summary: |
   A container object for a single BrickColor value.
 description: |
   An instance which is used to store a BrickColor value.
-code_samples:
+code_samples: []
 inherits:
   - ValueBase
 tags: []
@@ -17,7 +17,7 @@ properties:
       Used to hold a `Datatype.BrickColor` value.
     description: |
       Used to hold a `Datatype.BrickColor` value.
-    code_samples:
+    code_samples: []
     type: BrickColor
     tags: []
     deprecation_message: ''
@@ -67,7 +67,7 @@ events:
   - name: BrickColorValue.changed
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
         type: BrickColor

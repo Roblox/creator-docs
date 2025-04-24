@@ -7,7 +7,7 @@ description: |
   A generic version of the Pages class, which may contain variable data,
   depending on what method it was returned from. See the `Class.Pages` class for
   more information.
-code_samples:
+code_samples: []
 inherits:
   - Pages
 tags:

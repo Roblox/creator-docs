@@ -7,7 +7,7 @@ summary: |
 description: |
   An instance which is used to hold a boolean value. The value can be used for
   many things, including to communicate between scripts.
-code_samples:
+code_samples: []
 inherits:
   - ValueBase
 tags: []
@@ -18,7 +18,7 @@ properties:
       Used to hold a boolean value.
     description: |
       Used to hold a boolean value.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -68,7 +68,7 @@ events:
   - name: BoolValue.changed
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
         type: boolean

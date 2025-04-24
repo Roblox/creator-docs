@@ -16,7 +16,7 @@ description: |
   - When placed under a player's `Class.PlayerGui`, it will be visible only to
     that player
   - Hints will render if placed in the `Class.CoreGui`
-code_samples:
+code_samples: []
 inherits:
   - Message
 tags:

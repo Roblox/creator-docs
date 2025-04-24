@@ -12,7 +12,7 @@ description: |
   on a skateboard, they are stuck to it until they press the escape key. Until
   then, the character uses skateboard animations and travels faster than a
   walking character.
-code_samples:
+code_samples: []
 inherits:
   - Part
 tags:
@@ -28,7 +28,7 @@ properties:
       The SkateboardPlatform's active SkateboardController.
     description: |
       The SkateboardPlatform's active SkateboardController.
-    code_samples:
+    code_samples: []
     type: SkateboardController
     tags:
       - ReadOnly
@@ -54,7 +54,7 @@ properties:
       The `Class.Humanoid` that is controlling the SkateboardPlatform.
     description: |
       The `Class.Humanoid` that is controlling the SkateboardPlatform.
-    code_samples:
+    code_samples: []
     type: Humanoid
     tags:
       - ReadOnly
@@ -82,7 +82,7 @@ properties:
     description: |
       The direction of movement, tied to the keys A and D. Must be 1 (right), 0
       (straight), or -1 (left). Will refresh back to 0 unless constantly set.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: |
@@ -106,7 +106,7 @@ properties:
       If true, wheels won't roll without user input.
     description: |
       If true, wheels won't roll without user input.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: |
@@ -134,7 +134,7 @@ properties:
       The direction of movement, tied to the keys W and S. Must be an integer 1
       (forward), 0 (null), or -1 (reverse). Will refresh back to 0 unless
       constantly set.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: |
@@ -161,7 +161,7 @@ methods:
     description: |
       Adds ''impulseWorld'' to the SkateboardPlatform's
       `Class.BasePart.Velocity`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: impulseWorld
         type: Vector3
@@ -186,7 +186,7 @@ events:
       Fired when the skateboard is equipped.
     description: |
       Fired when the skateboard is equipped.
-    code_samples:
+    code_samples: []
     parameters:
       - name: humanoid
         type: Instance
@@ -218,7 +218,7 @@ events:
       Fired when the SkateboardPlatform's
       `Class.SkateboardPlatform.ControllingHumanoid` changes the force being
       used on the SkateboardPlatform.
-    code_samples:
+    code_samples: []
     parameters:
       - name: newState
         type: MoveState
@@ -245,7 +245,7 @@ events:
       Fired whenever the skateboard is unequipped.
     description: |
       Fired whenever the skateboard is unequipped.
-    code_samples:
+    code_samples: []
     parameters:
       - name: humanoid
         type: Instance
@@ -266,7 +266,7 @@ events:
   - name: SkateboardPlatform.equipped
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: humanoid
         type: Instance
@@ -288,7 +288,7 @@ events:
   - name: SkateboardPlatform.unequipped
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: humanoid
         type: Instance

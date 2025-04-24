@@ -12,7 +12,7 @@ description: |
   raycasts in the ViewportFrame through the WorldModel. Furthermore you can put
   `Class.Humanoid` characters in the WorldModel and their joints will be set-up
   correctly, and you can animate them.
-code_samples:
+code_samples: []
 inherits:
   - WorldRoot
 tags: []

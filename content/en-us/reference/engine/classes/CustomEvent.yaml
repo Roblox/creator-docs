@@ -4,7 +4,7 @@ category:
 memory_category: Instances
 summary: ''
 description: ''
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -21,7 +21,7 @@ methods:
     description: |
       This function returns the `Class.CustomEventReceiver|CustomEventReceivers`
       that are connected to the `Class.CustomEvent`.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Instances
@@ -43,7 +43,7 @@ methods:
       This function sets the value of the `Class.CustomEvent` and fires the
       `Class.CustomEventReceiver.SourceValueChanged` event for all connected
       `CustomEventReceiver|receivers`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: newValue
         type: float
@@ -66,7 +66,7 @@ events:
       Fires when a receiver is connected to the `Class.CustomEvent`.
     description: |
       This event fires when a receiver is connected to the `Class.CustomEvent`
-    code_samples:
+    code_samples: []
     parameters:
       - name: receiver
         type: Instance
@@ -86,7 +86,7 @@ events:
     description: |
       This event fires when a receiver is disconnected from the
       `Class.CustomEvent`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: receiver
         type: Instance

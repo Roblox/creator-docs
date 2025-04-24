@@ -6,7 +6,7 @@ summary: |
   Glue is a type of joint that can break when enough force is applied.
 description: |
   Glue is a type of joint that can break when enough force is applied.
-code_samples:
+code_samples: []
 inherits:
   - JointInstance
 tags:
@@ -20,7 +20,7 @@ properties:
     description: |
       F0 helps determining the Glue face of a `Class.Glue`, which determines the
       amount of force needed to break the joint.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -41,7 +41,7 @@ properties:
     description: |
       F1 helps determining the Glue face of a `Class.Glue`, which determines the
       amount of force needed to break the joint.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -62,7 +62,7 @@ properties:
     description: |
       F2 helps determining the Glue face of a `Class.Glue`, which determines the
       amount of force needed to break the joint.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -83,7 +83,7 @@ properties:
     description: |
       F3 helps determining the Glue face of a `Class.Glue`, which determines the
       amount of force needed to break the joint.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''

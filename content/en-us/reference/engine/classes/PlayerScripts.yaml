@@ -16,7 +16,7 @@ description: |
   Unlike the `Class.Backpack` and `Class.PlayerGui` containers, the
   `Class.PlayerScripts` container is not accessible to the server. Server
   `Class.Script` objects will not run when parented to `Class.PlayerScripts`.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -32,7 +32,7 @@ methods:
     description: |
       Unregisters all ComputerCameraMovementMode enums from the game settings
       menu.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -48,7 +48,7 @@ methods:
       Unregisters all ComputerMovementMode enums from the game settings menu.
     description: |
       Unregisters all ComputerMovementMode enums from the game settings menu.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -64,7 +64,7 @@ methods:
       Unregisters all TouchCameraMovementMode enums from the game settings menu.
     description: |
       Unregisters all TouchCameraMovementMode enums from the game settings menu.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -80,7 +80,7 @@ methods:
       Unregisters all TouchMovementMode enums from the game settings menu.
     description: |
       Unregisters all TouchMovementMode enums from the game settings menu.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -98,7 +98,7 @@ methods:
     description: |
       Registers that a computer camera movement mode is available to be selected
       from the game menu.
-    code_samples:
+    code_samples: []
     parameters:
       - name: cameraMovementMode
         type: ComputerCameraMovementMode
@@ -120,7 +120,7 @@ methods:
     description: |
       Registers that a computer movement mode is available to be selected from
       the game menu.
-    code_samples:
+    code_samples: []
     parameters:
       - name: movementMode
         type: ComputerMovementMode
@@ -142,7 +142,7 @@ methods:
     description: |
       Registers that a touch camera movement mode is available to be selected
       from the game menu.
-    code_samples:
+    code_samples: []
     parameters:
       - name: cameraMovementMode
         type: TouchCameraMovementMode
@@ -164,7 +164,7 @@ methods:
     description: |
       Registers that a touch movement mode is available to be selected from the
       game menu.
-    code_samples:
+    code_samples: []
     parameters:
       - name: movementMode
         type: TouchMovementMode

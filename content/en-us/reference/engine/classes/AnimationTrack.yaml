@@ -8,7 +8,7 @@ description: |
   Controls the playback of an animation on an `Class.Animator`. This object
   cannot be created, instead it is returned by the
   `Class.Animator:LoadAnimation()` method.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -176,7 +176,7 @@ properties:
       This property also allows the developer to play the same animation at
       different priorities, without needing to upload additional versions to
       Roblox.
-    code_samples:
+    code_samples: []
     type: AnimationPriority
     tags: []
     deprecation_message: ''
@@ -752,7 +752,7 @@ events:
       `Class.Keyframe` names can be set in the Roblox Animation Editor when
       creating or editing an animation. They cannot however be set by a
       `Class.Script` on an existing animation prior to playing it.
-    code_samples:
+    code_samples: []
     parameters:
       - name: keyframeName
         type: string

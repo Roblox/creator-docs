@@ -10,7 +10,7 @@ description: |
   interactivity and different ways to customize how the scrolling works.
 
   <img src="/assets/ui/ui-objects/ScrollingFrame-Example.jpg" width="840" alt="Example ScrollingFrame on the screen containing a tabbed category bar and a list of magical items for the player to consider purchasing." />
-code_samples:
+code_samples: []
 inherits:
   - GuiObject
 tags: []
@@ -25,7 +25,7 @@ properties:
       property and the size of the children if
       `Class.ScrollingFrame.AutomaticCanvasSize|AutomaticCanvasSize` is set to
       something other than `Enum.AutomaticSize.None`.
-    code_samples:
+    code_samples: []
     type: Vector2
     tags:
       - ReadOnly
@@ -47,7 +47,7 @@ properties:
       The size of the frame, in offsets, without the scroll bars.
     description: |
       The size of the frame, in offsets, without the scroll bars.
-    code_samples:
+    code_samples: []
     type: Vector2
     tags:
       - ReadOnly
@@ -78,7 +78,7 @@ properties:
       `Enum.AutomaticSize|None`,
       `Class.ScrollingFrame.AbsoluteCanvasSize|AbsoluteCanvasSize` may resize
       depending on its child content.
-    code_samples:
+    code_samples: []
     type: AutomaticSize
     tags: []
     deprecation_message: ''
@@ -104,7 +104,7 @@ properties:
       horizontal scroll bar).
 
       <img src="/assets/ui/ui-objects/ScrollingFrame-Scroll-Bar-Elements.png" width="600" alt="Diagram showing the three image asset elements which construct a scrolling frame's scroll bar." />
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -127,7 +127,7 @@ properties:
       Reflects the **current** positional offset of the canvas within the frame,
       in pixels, and sets the position of scroll bars accordingly. Note that
       this property doesn't do anything if scroll bars aren't visible.
-    code_samples:
+    code_samples: []
     type: Vector2
     tags: []
     deprecation_message: ''
@@ -150,7 +150,7 @@ properties:
       based on the overall size of children within the `ScrollingFrame`,
       consider using
       `Class.ScrollingFrame.AutomaticCanvasSize|AutomaticCanvasSize`.
-    code_samples:
+    code_samples: []
     type: UDim2
     tags: []
     deprecation_message: ''
@@ -172,7 +172,7 @@ properties:
     description: |
       This property determines if and when elastic scrolling is allowed on
       touch‑enabled devices. Defaults to `Enum.ElasticBehavior|WhenScrollable`.
-    code_samples:
+    code_samples: []
     type: ElasticBehavior
     tags: []
     deprecation_message: ''
@@ -196,7 +196,7 @@ properties:
       Indicates whether `Class.ScrollingFrame.CanvasSize|CanvasSize` is inset by
       `Class.ScrollingFrame.ScrollBarThickness|ScrollBarThickness` on the
       horizontal axis.
-    code_samples:
+    code_samples: []
     type: ScrollBarInset
     tags: []
     deprecation_message: ''
@@ -225,7 +225,7 @@ properties:
       scales to fill the space between the cap segments.
 
       <img src="/assets/ui/ui-objects/ScrollingFrame-Scroll-Bar-Elements.png" width="600" alt="Diagram showing the three image asset elements which construct a scrolling frame's scroll bar." />
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -251,7 +251,7 @@ properties:
       white, no colorization occurs. This property is useful for reusing image
       assets; if the source images are completely white with transparency, you
       can set the color of the entire scroll bar at once.
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -276,7 +276,7 @@ properties:
       `Class.ScrollingFrame.BottomImage|BottomImage`). A value of `0` is
       completely opaque and a value of `1` is completely transparent
       (invisible).
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -298,7 +298,7 @@ properties:
     description: |
       Thickness of the scroll bar in pixels; applies to both horizontal and
       vertical scroll bars. If set to `0`, no scroll bars are rendered.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -320,7 +320,7 @@ properties:
       This property determines the direction(s) in which scrolling is allowed.
       If scrolling is disallowed in a direction, the associated scroll bar will
       not appear. Defaults to `Enum.ScrollingDirection.XY`.
-    code_samples:
+    code_samples: []
     type: ScrollingDirection
     tags: []
     deprecation_message: ''
@@ -341,7 +341,7 @@ properties:
     description: |
       Determines whether scrolling is allowed on the frame. If `false`, no
       scroll bars will be rendered.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -367,7 +367,7 @@ properties:
       scroll bar).
 
       <img src="/assets/ui/ui-objects/ScrollingFrame-Scroll-Bar-Elements.png" width="600" alt="Diagram showing the three image asset elements which construct a scrolling frame's scroll bar." />
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -391,7 +391,7 @@ properties:
       Indicates whether `Class.ScrollingFrame.CanvasSize|CanvasSize` is inset by
       `Class.ScrollingFrame.ScrollBarThickness|ScrollBarThickness` on the
       vertical axis.
-    code_samples:
+    code_samples: []
     type: ScrollBarInset
     tags: []
     deprecation_message: ''
@@ -413,7 +413,7 @@ properties:
     description: |
       Indicates whether the vertical scroll bar is positioned to the left or
       right of the canvas. Defaults to `Enum.VerticalScrollBarPosition.Right`.
-    code_samples:
+    code_samples: []
     type: VerticalScrollBarPosition
     tags: []
     deprecation_message: ''

@@ -18,7 +18,7 @@ description: |
 
   The Translator can also be used to manufacture translated strings with inserts
   (data replacements) which may change order based on the target language.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -32,7 +32,7 @@ properties:
     description: |
       The Roblox locale of the output translated strings from this table, for
       example "en-us" or "es-es." Defaults to "en-us".
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - ReadOnly
@@ -75,7 +75,7 @@ methods:
       See
       [Localize with scripting](../../../production/localization/localize-with-scripting.md)
       for more details and usage examples of this function.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
@@ -223,7 +223,7 @@ methods:
       	warn("Cannot load translator for player!")
       end
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: context
         type: Instance

@@ -186,7 +186,7 @@ methods:
       Clears the menu.
     description: |
       Clears the menu.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()

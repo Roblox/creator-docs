@@ -12,7 +12,7 @@ description: |
   Like all other `Class.SoundEffect|SoundEffects`, a TremoloSoundEffect can be
   applied either to a `Class.Sound` or `Class.SoundGroup` by being parented to
   either.
-code_samples:
+code_samples: []
 inherits:
   - SoundEffect
 tags: []
@@ -25,7 +25,7 @@ properties:
       Range: 0 to 1 (default 1) Controls how much the volume will raise and
       lower. This value ranges between 0 (minimum volume) and 1 (maximum
       volume). If set to its minimum, the volume will not oscillate at all.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -47,7 +47,7 @@ properties:
       Range: 0 to 1 (default 0.5) Controls how long during one volume
       oscillation the effect will be active, specifically what percentage
       between 0 (0%) and 1 (100%).
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -68,7 +68,7 @@ properties:
     description: |
       Range: 0.1 to 20 (default 5) Sets how often the effect will oscillate the
       volume. Measured in Hz.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

@@ -36,7 +36,7 @@ properties:
       The stored Ray.
     description: |
       The stored Ray.
-    code_samples:
+    code_samples: []
     type: Ray
     tags: []
     deprecation_message: ''
@@ -83,7 +83,7 @@ events:
   - name: RayValue.changed
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
         type: Ray

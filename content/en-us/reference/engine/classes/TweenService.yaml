@@ -95,7 +95,7 @@ methods:
       Returns a new alpha value for interpolating using the given alpha value,
       `Enum.EasingStyle`, and `Enum.EasingDirection`. The provided `alpha` value
       will be clamped between `0` and `1`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: alpha
         type: float

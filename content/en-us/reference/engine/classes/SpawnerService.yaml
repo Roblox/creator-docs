@@ -10,7 +10,7 @@ description: |
   An internal service that is responsible for the behavior of
   `Class.SpawnLocation|SpawnLocations`. Its functionality is not accessible to
   developers.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

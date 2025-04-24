@@ -13,7 +13,7 @@ description: |
 
   For handles to be interactive, they must be parented to a player's
   `Class.PlayerGui` or the `Class.CoreGui`.
-code_samples:
+code_samples: []
 inherits:
   - HandlesBase
 tags: []
@@ -24,7 +24,7 @@ properties:
       Sets which sides the GUI handles will appear.
     description: |
       Sets which sides the GUI handles will appear.
-    code_samples:
+    code_samples: []
     type: Faces
     tags: []
     deprecation_message: ''
@@ -45,7 +45,7 @@ properties:
     description: |
       Sets the GUI style of the handles. Currently there are only two types:
       `Enum.HandlesStyle|Resize` and `Enum.HandlesStyle|Movement`.
-    code_samples:
+    code_samples: []
     type: HandlesStyle
     tags: []
     deprecation_message: ''
@@ -67,7 +67,7 @@ events:
       Fired when the left mouse button goes down on one of the GUI handles.
     description: |
       Fired when the left mouse button goes down on one of the GUI handles.
-    code_samples:
+    code_samples: []
     parameters:
       - name: face
         type: NormalId
@@ -84,7 +84,7 @@ events:
       Fired when the left mouse button is released on one of the GUI handles.
     description: |
       Fired when the left mouse button is released on one of the GUI handles.
-    code_samples:
+    code_samples: []
     parameters:
       - name: face
         type: NormalId
@@ -103,7 +103,7 @@ events:
     description: |
       Fired when the mouse moves while the MouseButton1Down event has fired, but
       the left mouse button has not been released yet.
-    code_samples:
+    code_samples: []
     parameters:
       - name: face
         type: NormalId
@@ -124,7 +124,7 @@ events:
       Fired when a mouse "enters" the GUI handle.
     description: |
       Fired when a mouse "enters" the GUI handle.
-    code_samples:
+    code_samples: []
     parameters:
       - name: face
         type: NormalId
@@ -141,7 +141,7 @@ events:
       Fired when the mouse leaves the GUI handle.
     description: |
       Fired when the mouse leaves the GUI handle.
-    code_samples:
+    code_samples: []
     parameters:
       - name: face
         type: NormalId

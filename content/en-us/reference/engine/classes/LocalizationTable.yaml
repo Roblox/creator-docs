@@ -59,7 +59,7 @@ properties:
     description: |
       The default IETF tag to use if the ''languageKey'' parameter is excluded
       from the `Class.LocalizationTable:GetString()` method.
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - Hidden
@@ -85,7 +85,7 @@ properties:
     description: |
       The object that is being targeted for localization by this table.
       Localization is applied to it and all of it's descendants.
-    code_samples:
+    code_samples: []
     type: Instance
     tags:
       - Hidden
@@ -111,7 +111,7 @@ properties:
       "en-us" or "es-es." This is typically the "development language" of the
       game. For a Translator that merges multiple LocalizationTable objects,
       it's the LocaleId of the Default LocalizationTable. Defaults to "en-us".
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -129,7 +129,7 @@ methods:
   - name: LocalizationTable:GetContents
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: string
@@ -223,7 +223,7 @@ methods:
     description: |
       The GetString function returns a translation based on the specified
       language and key.
-    code_samples:
+    code_samples: []
     parameters:
       - name: targetLocaleId
         type: string
@@ -257,7 +257,7 @@ methods:
       Returns a `Class.Translator` for entries in this LocalizationTable, in the
       specified language. The translator will first search in this table and
       then look in ancestor tables.
-    code_samples:
+    code_samples: []
     parameters:
       - name: localeId
         type: string
@@ -279,7 +279,7 @@ methods:
     description: |
       Removes an entry from the LocalizationTable, using the specified `key`,
       `source`, and `context` to narrow down the specific entry to be removed.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
@@ -311,7 +311,7 @@ methods:
       Removes a single language translation from the LocalizationTable, using
       the provided `key`, `source`, `context`, and `localeId` to narrow down the
       specific entry to be removed.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
@@ -348,7 +348,7 @@ methods:
       ```lua
       LocalizationTable:RemoveEntry(key, "", "")
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
@@ -373,7 +373,7 @@ methods:
     description: |
       Removes all translations from the LocalizationTable with the specified
       localeId.
-    code_samples:
+    code_samples: []
     parameters:
       - name: localeId
         type: string
@@ -394,7 +394,7 @@ methods:
     description: |
       The SetContents function sets the contents of the LocalizationTable, via
       the legacy JSON format.
-    code_samples:
+    code_samples: []
     parameters:
       - name: contents
         type: string
@@ -421,7 +421,7 @@ methods:
       The entries parameter should be an array of dictionaries in the same
       format as the one returned from the `Class.LocalizationTable:GetEntries()`
       function.
-    code_samples:
+    code_samples: []
     parameters:
       - name: entries
         type: Variant
@@ -439,7 +439,7 @@ methods:
   - name: LocalizationTable:SetEntry
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
@@ -474,7 +474,7 @@ methods:
       Sets the **Context** field of a LocalizationTable entry to `newContext`,
       using the specified `key`, `source`, and `context` to narrow down the
       entry that will have this change applied.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
@@ -510,7 +510,7 @@ methods:
       Sets the **Example** field of a LocalizationTable entry to `example`,
       using the specified `key`, `source`, and `context` to narrow down the
       entry that will have this change applied.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
@@ -546,7 +546,7 @@ methods:
       Sets the **Key** field of a LocalizationTable entry to `newKey`, using the
       specified `key`, `source`, and `context` to narrow down the entry that
       will have this change applied.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
@@ -582,7 +582,7 @@ methods:
       Sets the **Source** field of a LocalizationTable entry to `newSource`,
       using the specified `key`, `source`, and `context` to narrow down the
       entry that will have this change applied.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
@@ -618,7 +618,7 @@ methods:
       Sets the text of the specified localeId in a LocalizationTable entry,
       using the specified `key`, `source`, and `context` to narrow down the
       entry that will have this change applied.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string

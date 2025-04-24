@@ -10,7 +10,7 @@ description: |
   A ServiceProvider is an abstract class, which stores, and provides certain
   singleton classes, depending on what inherited class you are using its members
   with.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -82,7 +82,7 @@ methods:
   - name: ServiceProvider:getService
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: className
         type: string
@@ -103,7 +103,7 @@ methods:
   - name: ServiceProvider:service
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: className
         type: string
@@ -141,7 +141,7 @@ events:
       Fired when a service is created.
     description: |
       Fired when a service is created.
-    code_samples:
+    code_samples: []
     parameters:
       - name: service
         type: Instance
@@ -158,7 +158,7 @@ events:
       Fired when a service is about to be removed.
     description: |
       Fired when a service is about to be removed.
-    code_samples:
+    code_samples: []
     parameters:
       - name: service
         type: Instance

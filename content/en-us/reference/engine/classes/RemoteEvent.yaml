@@ -31,7 +31,7 @@ description: |
   well as Luau types such as numbers, strings, and booleans, although you should
   carefully explore the
   [limitations](../../../scripting/events/remote.md#argument-limitations).
-code_samples:
+code_samples: []
 inherits:
   - BaseRemoteEvent
 tags: []
@@ -59,7 +59,7 @@ methods:
 
       See [Remote Events and Callbacks](../../../scripting/events/remote.md) for
       code samples and further details on `Class.RemoteEvent`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: arguments
         type: Tuple
@@ -98,7 +98,7 @@ methods:
       `Class.RemoteEvent:FireAllClients()|FireAllClients()` which works
       similarly but fires the event for each client connected to the same
       `Class.RemoteEvent`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: player
         type: Player
@@ -140,7 +140,7 @@ methods:
 
       See [Remote Events and Callbacks](../../../scripting/events/remote.md) for
       code samples and further details on `Class.RemoteEvent`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: arguments
         type: Tuple
@@ -173,7 +173,7 @@ events:
       See [Remote Events and Callbacks](../../../scripting/events/remote.md) for
       code samples and further details on
       `Class.RemoteEvent.OnClientEvent|OnClientEvent`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: arguments
         type: Tuple
@@ -201,7 +201,7 @@ events:
       See [Remote Events and Callbacks](../../../scripting/events/remote.md) for
       code samples and further details on
       `Class.RemoteEvent.OnServerEvent|OnServerEvent`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: player
         type: Player

@@ -31,7 +31,7 @@ description: |
   FACS controls. Because those controls only respond to values between 0 and 1,
   the values calculated by the animation system are always clamped to that
   range.
-code_samples:
+code_samples: []
 inherits:
   - PoseBase
 tags: []
@@ -44,7 +44,7 @@ properties:
     description: |
       The value that will be applied to the FACS control corresponding with the
       `Class.NumberPose`.
-    code_samples:
+    code_samples: []
     type: double
     tags: []
     deprecation_message: ''

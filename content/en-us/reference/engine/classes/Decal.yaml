@@ -94,7 +94,7 @@ properties:
 
       For a variant of this property for `Class.BasePart|BaseParts`, see
       `Class.BasePart.LocalTransparencyModifier`.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - Hidden
@@ -116,7 +116,7 @@ properties:
     description: |
       This property dictates how shiny the decal is. It takes a value between 0
       and 1, where 1 is "full shininess".
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -140,7 +140,7 @@ properties:
     description: |
       Sets the specularity, which is how the surface responds to light being
       shined on it.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -278,7 +278,7 @@ properties:
 
       - `Class.GuiObject.ZIndex`, a property which behaves similarly, but for
         GUI elements
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''

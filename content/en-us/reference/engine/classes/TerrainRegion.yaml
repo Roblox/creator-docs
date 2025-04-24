@@ -7,7 +7,7 @@ description: |
   A TerrainRegion is a snapshot of `Class.Terrain` retrieved from the
   `Class.Terrain:CopyRegion()` method. Can be later pasted into the Terrain
   using `Class.Terrain:PasteRegion()`.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -20,7 +20,7 @@ properties:
     description: |
       The state of this property shows whether or not this `Class.TerrainRegion`
       contains _smooth terrain_.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - ReadOnly
@@ -44,7 +44,7 @@ properties:
       The size of this TerrainRegion in cells.
     description: |
       The size of this TerrainRegion in cells.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - ReadOnly
@@ -70,7 +70,7 @@ methods:
       from a plugin, when in edit mode.
 
       The game can't be running, nor can it have a `Class.NetworkServer`.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()

@@ -36,7 +36,7 @@ properties:
       has been disabled due to technical reasons. Therefore, you must implement
       systems for retrying operations yourself. It is possible that automatic
       retry will be enabled again in the future.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - NotReplicated
@@ -68,7 +68,7 @@ methods:
       `Class.DataStoreOptions.AllScopes|AllScopes`. See
       [Data stores](../../../cloud-services/data-stores/index.md) for details on
       scope.
-    code_samples:
+    code_samples: []
     parameters:
       - name: name
         type: string
@@ -183,7 +183,7 @@ methods:
 
       Only data stores containing at least one object will be listed via this
       function.
-    code_samples:
+    code_samples: []
     parameters:
       - name: prefix
         type: string

@@ -13,7 +13,7 @@ description: |
   angular velocity, use a `Class.BodyAngularVelocity` instead. To apply a force
   dynamically so that a part maintains a constant orientation (angular
   position), use a `Class.BodyGyro`.
-code_samples:
+code_samples: []
 inherits:
   - BodyMover
 tags:
@@ -30,7 +30,7 @@ properties:
       relative to the part. Unlike `Class.BodyForce.Force`, this property is
       relative to the part and not the world. The force is exerted at the
       `Class.BodyThrust.Location|Location`, which is also relative to the part.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -52,7 +52,7 @@ properties:
       The Location property determines the relative offset from the center part
       at which the `Class.BodyThrust.Force` is exerted. This is the primary
       means for turning force into torque.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -69,7 +69,7 @@ properties:
   - name: BodyThrust.force
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - NotReplicated
@@ -90,7 +90,7 @@ properties:
   - name: BodyThrust.location
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - NotReplicated

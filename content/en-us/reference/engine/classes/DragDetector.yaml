@@ -49,7 +49,7 @@ properties:
 
       To change the activated cursor icon, set this property to the asset ID of
       the image you'd like to use.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''

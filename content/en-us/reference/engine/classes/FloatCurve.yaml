@@ -10,7 +10,7 @@ description: |
   `Datatype.FloatCurveKey|FloatCurveKeys`. The shape of the interpolation curve
   between two keys is determined by the `Datatype.FloatCurveKey.Interpolation`
   type.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -21,7 +21,7 @@ properties:
       Number of keys in the float curve.
     description: |
       Number of keys in the float curve.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - ReadOnly
@@ -44,7 +44,7 @@ methods:
       Returns a copy of a key at a given index.
     description: |
       Returns a copy of a key at a given index.
-    code_samples:
+    code_samples: []
     parameters:
       - name: index
         type: int
@@ -68,7 +68,7 @@ methods:
       length if no key was found). The second item in the returned array is the
       index of the first key with time greater than or equal to `time` (or the
       curve length if no key was found satisfying the inequality).
-    code_samples:
+    code_samples: []
     parameters:
       - name: time
         type: float
@@ -90,7 +90,7 @@ methods:
     description: |
       Returns a copy of all the keys in the FloatCurve as a Luau array of
       `Datatype.FloatCurveKey|FloatCurveKeys`.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Array
@@ -107,7 +107,7 @@ methods:
       Samples the float curve at a given time passed as argument.
     description: |
       Samples the float curve at a given time passed as argument.
-    code_samples:
+    code_samples: []
     parameters:
       - name: time
         type: float
@@ -133,7 +133,7 @@ methods:
       time is found, it will be replaced. In the returned array, the first value
       is `true` if a key was added or `false` if a previous key was replaced;
       the second value is the index at which the marker was added.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: FloatCurveKey
@@ -156,7 +156,7 @@ methods:
     description: |
       Removes a given number (`count`) of keys starting from the `startingIndex`
       index and returns the number of keys that were removed.
-    code_samples:
+    code_samples: []
     parameters:
       - name: startingIndex
         type: int
@@ -190,7 +190,7 @@ methods:
 
       Returns the number of keys actually inserted. Keys previously stored in
       this curve are removed before the keys passed as arguments are added.
-    code_samples:
+    code_samples: []
     parameters:
       - name: keys
         type: Array

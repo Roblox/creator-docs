@@ -6,7 +6,7 @@ summary: ''
 description: |
   Represents the result of a call to `Class.TextService:FilterStringAsync()`.
   Used to distribute a filtered string accordingly.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -49,7 +49,7 @@ methods:
       chat should be done through `Class.TextChatService` and experiences that
       do not properly filter player-generated chat text might be subject to
       moderation.
-    code_samples:
+    code_samples: []
     parameters:
       - name: toUserId
         type: int64
@@ -75,7 +75,7 @@ methods:
       be used in the context of non-chat text that every user can see, such as
       for a dialog that lets a user write a message on a sign, visible to all
       users on the server even after the author has left.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: string
@@ -97,7 +97,7 @@ methods:
       `Class.Player.UserId` based on age and other details. This should be used
       in the context of non-chat text that one specific user can see, such as
       the name of a pet.
-    code_samples:
+    code_samples: []
     parameters:
       - name: toUserId
         type: int64

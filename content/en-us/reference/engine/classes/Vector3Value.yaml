@@ -20,7 +20,7 @@ properties:
       The stored `Datatype.Vector3`.
     description: |
       The stored `Datatype.Vector3`.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -71,7 +71,7 @@ events:
   - name: Vector3Value.changed
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
         type: Vector3

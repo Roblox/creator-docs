@@ -19,7 +19,7 @@ description: |
 
   - `Class.AssetService`, which can provide information about assets you might
     want to load using InsertService
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -30,7 +30,7 @@ properties:
   - name: InsertService.AllowClientInsertModels
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - NotScriptable
@@ -52,7 +52,7 @@ properties:
       The AllowInsertFreeModels property toggles whether ''Free Models'' can be
       inserted into the game, regardless of whether the place owner owns the
       asset.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - NotReplicated
@@ -74,7 +74,7 @@ methods:
   - name: InsertService:ApproveAssetId
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: assetId
         type: int64
@@ -94,7 +94,7 @@ methods:
   - name: InsertService:ApproveAssetVersionId
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: assetVersionId
         type: int64
@@ -146,7 +146,7 @@ methods:
       `Class.MeshPart.MeshId` is read only, this is the way to create a
       `Class.MeshPart` through scripts without having to clone an existing one.
       It throws errors if creation fails.
-    code_samples:
+    code_samples: []
     parameters:
       - name: meshId
         type: ContentId
@@ -177,7 +177,7 @@ methods:
   - name: InsertService:GetBaseCategories
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Array
@@ -198,7 +198,7 @@ methods:
     description: |
       Returns an array of dictionaries, containing information about various
       Roblox approved sets.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Array
@@ -363,7 +363,7 @@ methods:
       place creator. Can be used in combination with
       `Class.InsertService:LoadAssetVersion()` to load the latest version of a
       model, even if it gets updated while the game is running.
-    code_samples:
+    code_samples: []
     parameters:
       - name: assetId
         type: int64
@@ -382,7 +382,7 @@ methods:
   - name: InsertService:GetUserCategories
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: userId
         type: int64
@@ -457,7 +457,7 @@ methods:
         </tr>
         </tbody>
       </table>
-    code_samples:
+    code_samples: []
     parameters:
       - name: userId
         type: int64
@@ -571,7 +571,7 @@ methods:
   - name: InsertService:loadAsset
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: assetId
         type: int64

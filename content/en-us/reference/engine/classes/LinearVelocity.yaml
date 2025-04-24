@@ -29,7 +29,7 @@ description: |
   `Enum.ActuatorRelativeTo|Attachment1`, force will be applied relative to
   `Class.Constraint.Attachment0|Attachment0` or
   `Class.Constraint.Attachment1|Attachment1` respectively.
-code_samples:
+code_samples: []
 inherits:
   - Constraint
 tags: []
@@ -101,7 +101,7 @@ properties:
       along a line, when
       `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` is
       set to `Enum.VelocityConstraintMode|Line`.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -125,7 +125,7 @@ properties:
       Float value of the velocity when
       `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` is
       set to `Enum.VelocityConstraintMode|Line`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -181,7 +181,7 @@ properties:
       if `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled` is true
       and `Class.LinearVelocity.ForceLimitMode|ForceLimitMode` is
       `Enum.ForceLimitMode|Magnitude`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -238,7 +238,7 @@ properties:
       plane, when
       `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` is
       set to `Enum.VelocityConstraintMode|Plane`.
-    code_samples:
+    code_samples: []
     type: Vector2
     tags: []
     deprecation_message: ''
@@ -275,7 +275,7 @@ properties:
       - If `Class.LinearVelocity.RelativeTo|RelativeTo` is set to
         `Enum.ActuatorRelativeTo|World`, this value must be specified in the
         world space.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -297,7 +297,7 @@ properties:
     description: |
       Sets the `Enum.ActuatorRelativeTo` property for the `Class.LinearVelocity`
       constraint.
-    code_samples:
+    code_samples: []
     type: ActuatorRelativeTo
     tags: []
     deprecation_message: ''
@@ -334,7 +334,7 @@ properties:
       - If `Class.LinearVelocity.RelativeTo|RelativeTo` is set to
         `Enum.ActuatorRelativeTo|World`, this value must be specified in the
         world space.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -358,7 +358,7 @@ properties:
       `Datatype.Vector3` velocity value when
       `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` is
       set to `Enum.VelocityConstraintMode|Vector`.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -381,7 +381,7 @@ properties:
       `Enum.VelocityConstraintMode|Line`, `Enum.VelocityConstraintMode|Plane`,
       or `Enum.VelocityConstraintMode|Vector`. Default is
       `Enum.VelocityConstraintMode|Vector`.
-    code_samples:
+    code_samples: []
     type: VelocityConstraintMode
     tags: []
     deprecation_message: ''

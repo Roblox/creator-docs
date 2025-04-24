@@ -8,7 +8,7 @@ summary: |
 description: |
   Abstract base class for in-between interpolation handlers; parent class of
   `Class.Tween`.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

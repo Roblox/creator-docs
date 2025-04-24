@@ -20,7 +20,7 @@ description: |
   - `Class.ChatInputBarConfiguration`
   - `Class.BubbleChatConfiguration`
   - `Class.ChannelTabsConfiguration`
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

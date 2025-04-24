@@ -24,7 +24,7 @@ description: |
   can be used to disable elements of the `Class.CoreGui`, and
   `Class.StarterGui:SetCore()` can perform a range of functions including
   creating notifications and system messages.
-code_samples:
+code_samples: []
 inherits:
   - BasePlayerGui
 tags:
@@ -39,7 +39,7 @@ properties:
     description: |
       Allows `Class.StarterGui` to process input like `Class.PlayerGui` and
       `Class.CoreGui` do. The default value is `false`.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - Hidden
@@ -67,7 +67,7 @@ properties:
 
       If one of the children is a PlayerGui and it has its PlayerGui property
       set to false, it will not be cloned.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - Deprecated
@@ -129,7 +129,7 @@ properties:
       for `Class.Player|Players` already in the experience. To change the
       orientation for an existing player, use their
       `Class.PlayerGui.ScreenOrientation` property.
-    code_samples:
+    code_samples: []
     type: ScreenOrientation
     tags: []
     deprecation_message: ''
@@ -151,7 +151,7 @@ properties:
     description: |
       This property determines whether the contents of `Class.StarterGui` is
       visible in Studio.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -169,7 +169,7 @@ properties:
   - name: StarterGui.VirtualCursorMode
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: VirtualCursorMode
     tags:
       - NotScriptable

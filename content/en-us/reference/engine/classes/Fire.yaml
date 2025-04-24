@@ -244,7 +244,7 @@ properties:
   - name: Fire.size
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated

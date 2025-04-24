@@ -28,7 +28,7 @@ properties:
       The stored string.
     description: |
       The stored <a href="../../../luau/strings.md">string</a>.
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -79,7 +79,7 @@ events:
   - name: StringValue.changed
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
         type: string

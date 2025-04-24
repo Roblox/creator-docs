@@ -8,7 +8,7 @@ summary: |
 description: |
   Any object containing additional parameters that are used by
   `Class.DataStoreService:GetDataStore()`.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -21,7 +21,7 @@ properties:
     description: |
       This property specifies whether the `Class.GlobalDataStore` should work
       with all scopes.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -41,7 +41,7 @@ methods:
     summary: ''
     description: |
       This function currently has no effect.
-    code_samples:
+    code_samples: []
     parameters:
       - name: experimentalFeatures
         type: Dictionary

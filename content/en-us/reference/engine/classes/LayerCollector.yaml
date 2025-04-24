@@ -15,7 +15,7 @@ description: |
   - A descendant is added to or removed from it.
   - A property of a descendant changes.
   - A property of the `Class.LayerCollector` itself changes.
-code_samples:
+code_samples: []
 inherits:
   - GuiBase2d
 tags:
@@ -30,7 +30,7 @@ properties:
       Toggles the visibility of this `Class.LayerCollector`. When `false`, the
       UI contents will not render, process user input, or update in response to
       changes.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -60,7 +60,7 @@ properties:
       **indirect** descendant of `Class.StarterGui`, it will be cloned into each
       player's `Class.PlayerGui` when their character respawns, and it will
       delete itself when the player's character respawns again.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -93,7 +93,7 @@ properties:
       order. As a result, descendants of a `Class.GuiObject` need to have a
       `Class.GuiObject.ZIndex|ZIndex` value that's at least as high as the
       parent, or they will render underneath their parent.
-    code_samples:
+    code_samples: []
     type: ZIndexBehavior
     tags: []
     deprecation_message: ''
@@ -112,7 +112,7 @@ methods:
   - name: LayerCollector:GetLayoutNodeTree
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Dictionary

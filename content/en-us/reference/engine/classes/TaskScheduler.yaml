@@ -8,7 +8,7 @@ description: |
   TaskScheduler is a read-only settings class responsible for the Task Scheduler
   feature. Can be found in Roblox Studio's settings with the name _Task
   Scheduler_.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -22,7 +22,7 @@ properties:
       The average time divided by the average interval of the duty cycle.
     description: |
       The average time divided by the average interval of the duty cycle.
-    code_samples:
+    code_samples: []
     type: double
     tags:
       - ReadOnly
@@ -43,7 +43,7 @@ properties:
       The current average rate of the task scheduler.
     description: |
       The current average rate of the task scheduler.
-    code_samples:
+    code_samples: []
     type: double
     tags:
       - ReadOnly
@@ -64,7 +64,7 @@ properties:
       The specified thread pooling configuration for the task scheduler.
     description: |
       The specified thread pooling configuration for the task scheduler.
-    code_samples:
+    code_samples: []
     type: ThreadPoolConfig
     tags: []
     deprecation_message: ''
@@ -83,7 +83,7 @@ properties:
       The current size of the thread pool.
     description: |
       The current size of the thread pool.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - ReadOnly

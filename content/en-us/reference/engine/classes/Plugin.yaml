@@ -25,7 +25,7 @@ properties:
     description: |
       Returns whether the user enabled `Collisions` in Studio under the Model
       tab.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - ReadOnly
@@ -66,7 +66,7 @@ properties:
       toolbar's **Model** or **Avatar** tabs. Note that this property may have
       slight rounding errors; for example it may be `0.0099999997764826` for a
       user setting of `1` or `0.4000000059604645` for a user setting of `0.4`.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -119,7 +119,7 @@ methods:
         activated via this function
       - `Class.Plugin.Unloading`, fires immediately before the plugin is
         unloaded or reloaded via uninstallation, deactivation, or updating
-    code_samples:
+    code_samples: []
     parameters:
       - name: exclusiveMouse
         type: boolean
@@ -295,7 +295,7 @@ methods:
       - `Class.Plugin.Deactivation`, fires when the plugin is deactivated
       - `Class.Plugin.Unloading`, fires immediately before the plugin is
         unloaded or reloaded via uninstallation, deactivation, or updating
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -313,7 +313,7 @@ methods:
     description: |
       Returns the `Enum.JointCreationMode` the user has set in Studio under the
       Model tab.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: JointCreationMode
@@ -403,7 +403,7 @@ methods:
     description: |
       Returns the Studio user's userId if they're logged in, otherwise
       returns 0.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: int64
@@ -440,7 +440,7 @@ methods:
     description: |
       This function returns true if this plugin is currently active, after
       having been activated via the `Class.Plugin:Activate()` function.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: boolean
@@ -467,7 +467,7 @@ methods:
       - `Class.Plugin.Deactivation`, fires when the plugin is deactivated
       - `Class.Plugin.Unloading`, fires immediately before the plugin is
         unloaded or reloaded via uninstallation, deactivation, or updating
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: boolean
@@ -484,7 +484,7 @@ methods:
       Negates the given parts and returns the resulting NegateOperations.
     description: |
       Negates the given parts and returns the resulting NegateOperations.
-    code_samples:
+    code_samples: []
     parameters:
       - name: objects
         type: Instances
@@ -554,7 +554,7 @@ methods:
       Opens an upload window for the user's current selection.
     description: |
       Opens an upload window for the user's current selection.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -577,7 +577,7 @@ methods:
       - An object must be selected in order for this to work correctly.
       - Altering the scale fields of the `position` property will not affect the
         dialog popups.
-    code_samples:
+    code_samples: []
     parameters:
       - name: tool
         type: RibbonTool
@@ -601,7 +601,7 @@ methods:
       Separates the given UnionOperations and returns the resulting parts.
     description: |
       Separates the given UnionOperations and returns the resulting parts.
-    code_samples:
+    code_samples: []
     parameters:
       - name: objects
         type: Instances
@@ -754,7 +754,7 @@ methods:
       Unions the given parts and returns the resulting UnionOperation.
     description: |
       Unions the given parts and returns the resulting UnionOperation.
-    code_samples:
+    code_samples: []
     parameters:
       - name: objects
         type: Instances
@@ -812,7 +812,7 @@ methods:
       This function prompts the user to open a .fbx animation file that can be
       loaded onto the `rigModel`, then proceeds to insert the animation as a
       `Class.KeyframeSequence` in the `Class.Workspace`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: rigModel
         type: Instance
@@ -841,7 +841,7 @@ methods:
       Prompts the user to open a .fbx file, uploads the individual components of
       the model as meshes, and generates a character rig for use in animation,
       which is loaded into the `Class.Workspace`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: isR15
         type: boolean
@@ -866,7 +866,7 @@ methods:
       Opens a window in Roblox Studio, which prompts the user to select an asset
       based on the `assetType` specified. Returns what assetId was selected, or
       -1 if the window was closed.
-    code_samples:
+    code_samples: []
     parameters:
       - name: assetType
         type: string
@@ -889,7 +889,7 @@ methods:
     description: |
       Prompts the user to save their current selection with the specified file
       name. Returns true if the user did save the file.
-    code_samples:
+    code_samples: []
     parameters:
       - name: suggestedFileName
         type: string
@@ -919,7 +919,7 @@ events:
 
       - `Class.Plugin.Unloading`, fires immediately before the plugin is
         unloaded or reloaded via uninstallation, deactivation, or updating
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
@@ -946,7 +946,7 @@ events:
       `Class.DockWidgetPluginGui|DockWidgetPluginGuis`, and
       `Class.PluginGui|PluginGuis` are automatically cleaned up when the plugin
       is unloaded so there is no need to remove them.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''

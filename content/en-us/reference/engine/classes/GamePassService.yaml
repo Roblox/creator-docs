@@ -11,7 +11,7 @@ description: |
 
   For more information about game passes, please see
   [Game Passes](../../../production/monetization/game-passes.md).
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

@@ -6,7 +6,7 @@ summary: ''
 description: |
   This service controls all `Class.BaseScript` objects. Most of the properties
   and methods of this service are locked for internal use.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -21,7 +21,7 @@ methods:
       Limits how long a script is allowed to run without yielding.
     description: |
       Limits how long a script is allowed to run without yielding.
-    code_samples:
+    code_samples: []
     parameters:
       - name: seconds
         type: double

@@ -21,7 +21,7 @@ description: |
     exceeding the memory cap, CanvasGroup will render as a blank texture.
   - We recommend using CanvasGroup with static sizes, otherwise a new texture
     would need to be created to accommodate new sizes.
-code_samples:
+code_samples: []
 inherits:
   - GuiObject
 tags: []

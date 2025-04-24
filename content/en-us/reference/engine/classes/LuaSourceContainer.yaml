@@ -8,7 +8,7 @@ description: |
   The base class for all objects which contain Luau code. `Class.Script`,
   `Class.LocalScript`, and `Class.ModuleScript` all inherit from
   **LuaSourceContainer**.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

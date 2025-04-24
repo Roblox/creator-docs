@@ -7,7 +7,7 @@ summary: |
   objects.
 description: |
   The base class for clothing objects.
-code_samples:
+code_samples: []
 inherits:
   - CharacterAppearance
 tags:
@@ -30,7 +30,7 @@ properties:
 
       See also `Class.ShirtGraphic.Color3` which determines the colorization to
       be applied to the `Class.ShirtGraphic` texture.
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''

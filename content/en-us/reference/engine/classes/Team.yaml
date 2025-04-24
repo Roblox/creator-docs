@@ -105,7 +105,7 @@ properties:
       Developers are advised not to use this property as the script which
       changed the team colors has since been removed from the default character.
       This property is deprecated and should not be used for new work.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - NotReplicated
@@ -136,7 +136,7 @@ properties:
 
       This property is deprecated and should not be used by developers for new
       work.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - NotReplicated

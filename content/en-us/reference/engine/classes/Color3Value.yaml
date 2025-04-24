@@ -18,7 +18,7 @@ properties:
       The stored `Datatype.Color3`.
     description: |
       The stored `Datatype.Color3`.
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -69,7 +69,7 @@ events:
   - name: Color3Value.changed
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
         type: Color3

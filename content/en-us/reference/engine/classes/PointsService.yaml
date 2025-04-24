@@ -11,7 +11,7 @@ description: |
   Points are an award system used to showcase a player's achievements and
   participation throughout Roblox. How points are awarded through this service
   is at the discretion of the game's developer.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -30,7 +30,7 @@ methods:
     description: |
       This function returns the number of points the current game has available
       to award to players.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: int
@@ -99,7 +99,7 @@ methods:
     description: |
       This function returns the total number of points a player has in the
       current game.
-    code_samples:
+    code_samples: []
     parameters:
       - name: userId
         type: int64
@@ -125,7 +125,7 @@ methods:
     description: |
       This function returns the total number of points the given player has
       across **_all_** games.
-    code_samples:
+    code_samples: []
     parameters:
       - name: userId
         type: int64

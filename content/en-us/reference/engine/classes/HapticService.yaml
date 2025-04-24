@@ -5,7 +5,7 @@ memory_category: Instances
 summary: |
   Provides haptic feedback to controllers and devices.
 description: ''
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -27,7 +27,7 @@ methods:
       `Class.InputObject.UserInputType|UserInputType` and `Enum.VibrationMotor`.
       This will not return anything if
       `Class.HapticService:SetMotor()|SetMotor()` has not been called prior.
-    code_samples:
+    code_samples: []
     parameters:
       - name: inputType
         type: UserInputType
@@ -58,7 +58,7 @@ methods:
     description: |
       Returns `true` if the specified motor is available to be used with the
       specified `Enum.UserInputType`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: inputType
         type: UserInputType
@@ -90,7 +90,7 @@ methods:
     description: |
       Returns `true` if the specified `Enum.UserInputType` supports haptic
       feedback.
-    code_samples:
+    code_samples: []
     parameters:
       - name: inputType
         type: UserInputType

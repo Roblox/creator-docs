@@ -9,7 +9,7 @@ description: |
   of monetization. It has been superseded by
   [Immersive Ads](../../../production/monetization/immersive-ads.md) which
   should be used instead to serve ad units to visitors of your experience.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -42,7 +42,7 @@ methods:
       Show mobile video advertisements.
     description: |
       Show mobile video advertisements.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -105,7 +105,7 @@ events:
       Fires when an `Class.AdService` video closes.
     description: |
       Fires when an `Class.AdService` video closes.
-    code_samples:
+    code_samples: []
     parameters:
       - name: adShown
         type: boolean

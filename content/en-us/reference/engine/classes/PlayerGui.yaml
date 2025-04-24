@@ -32,7 +32,7 @@ description: |
   local player = Players.LocalPlayer
   local playerGui = player.PlayerGui
   ```
-code_samples:
+code_samples: []
 inherits:
   - BasePlayerGui
 tags:
@@ -45,7 +45,7 @@ properties:
       Describes the player's current screen orientation.
     description: |
       Describes the player's current screen orientation.
-    code_samples:
+    code_samples: []
     type: ScreenOrientation
     tags:
       - ReadOnly
@@ -69,7 +69,7 @@ properties:
     description: |
       Sets the preferred screen orientation mode for this player, if on a mobile
       device.
-    code_samples:
+    code_samples: []
     type: ScreenOrientation
     tags: []
     deprecation_message: ''
@@ -90,7 +90,7 @@ properties:
     description: |
       Overrides the default selection adornment used for gamepads. For best
       results, this should point to a `Class.GuiObject`.
-    code_samples:
+    code_samples: []
     type: GuiObject
     tags: []
     deprecation_message: ''

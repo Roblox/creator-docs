@@ -13,7 +13,7 @@ description: |
 
   Models whose parts are joined by `Class.Motor6D` are usually referred to as
   **rigs**, typically for `Class.Humanoid|Humanoids`.
-code_samples:
+code_samples: []
 inherits:
   - Motor
 tags: []
@@ -22,7 +22,7 @@ properties:
   - name: Motor6D.ChildName
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - ReadOnly
@@ -43,7 +43,7 @@ properties:
   - name: Motor6D.ParentName
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - ReadOnly
@@ -83,7 +83,7 @@ properties:
       overwritten every frame by the `Class.Animator` after
       `Class.RunService.PreAnimation` and before
       `Class.RunService.PreSimulation`.
-    code_samples:
+    code_samples: []
     type: CFrame
     tags:
       - Hidden

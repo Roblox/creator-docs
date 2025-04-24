@@ -9,7 +9,7 @@ description: |
   an AnimationClip. It is used to store information regarding the source rig an
   animation was authored for. It is currently only used for AnimationClips
   authored on R15 rigs.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []

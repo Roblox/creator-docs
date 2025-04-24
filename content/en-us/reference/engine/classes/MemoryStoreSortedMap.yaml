@@ -14,7 +14,7 @@ description: |
   key. Items with numeric sort keys are sorted before items with string sort
   keys, which are sorted before items with no sort key. Items with the same sort
   key and items with no sort key are arranged in alphabetical order by key.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -28,7 +28,7 @@ methods:
       Retrieves the value and sort key of a key in the sorted map.
     description: |
       Retrieves the value and sort key of a key in the sorted map.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
@@ -99,7 +99,7 @@ methods:
       Removes the provided key from the sorted map.
     description: |
       Removes the provided key from the sorted map.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
@@ -122,7 +122,7 @@ methods:
     description: |
       Sets the value and sort key of the key overwriting any existing key value
       and sort key.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string

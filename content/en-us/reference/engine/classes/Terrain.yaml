@@ -13,7 +13,7 @@ description: |
   illusion of having no grid constraint.
 
   For more information, see [Terrain](../../../parts/terrain.md).
-code_samples:
+code_samples: []
 inherits:
   - BasePart
 tags:
@@ -27,7 +27,7 @@ properties:
       Currently enables or disables animated grass on the **Grass** terrain
       material, although future modifications of this property may control
       additional decorative features.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - NotScriptable
@@ -71,7 +71,7 @@ properties:
       Returns true if the current game is using the smooth terrain system. The
       legacy terrain engine has been removed, so this property will always be
       true.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - ReadOnly
@@ -104,7 +104,7 @@ properties:
       To get the color of a material, use: `Class.Terrain:GetMaterialColor()`
 
       To set the color of a material, use: `Class.Terrain:SetMaterialColor()`
-    code_samples:
+    code_samples: []
     type: BinaryString
     tags:
       - NotScriptable
@@ -124,7 +124,7 @@ properties:
       Displays the boundaries of the largest possible editable region.
     description: |
       Displays the boundaries of the largest possible editable region.
-    code_samples:
+    code_samples: []
     type: Region3int16
     tags:
       - ReadOnly
@@ -145,7 +145,7 @@ properties:
       The tint of the Terrain water.
     description: |
       The tint of the Terrain water.
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -164,7 +164,7 @@ properties:
       Controls how opaque the Terrain's water reflections are.
     description: |
       Controls how opaque the Terrain's water reflections are.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -183,7 +183,7 @@ properties:
       The transparency of the Terrain water.
     description: |
       The transparency of the Terrain water.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -203,7 +203,7 @@ properties:
     description: |
       Sets the maximum height of the Terrain water waves in studs. This is
       currently constrained to between 0 and 1.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -224,7 +224,7 @@ properties:
     description: |
       Sets how many times the Terrain water waves will move up and down per
       minute. This is currently constrained to between 0 and 100.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -244,7 +244,7 @@ methods:
       _(OBSOLETE)_ No longer does anything.
     description: |
       _(OBSOLETE)_ No longer does anything.
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int
@@ -275,7 +275,7 @@ methods:
       _(OBSOLETE)_ No longer does anything.
     description: |
       _(OBSOLETE)_ No longer does anything.
-    code_samples:
+    code_samples: []
     parameters:
       - name: region
         type: Region3int16
@@ -298,7 +298,7 @@ methods:
       Returns the world position of the center of the terrain cell (x, y, z).
     description: |
       Returns the world position of the center of the terrain cell (x, y, z).
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int
@@ -328,7 +328,7 @@ methods:
     description: |
       Returns the position of the lower-left-forward corner of the grid cell (x,
       y, z).
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int
@@ -356,7 +356,7 @@ methods:
       Clears the terrain.
     description: |
       Clears the terrain.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -375,7 +375,7 @@ methods:
 
       All places now automatically use the new terrain engine, so this method is
       obsolete.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -419,7 +419,7 @@ methods:
       Returns the number of non-empty cells in the Terrain.
     description: |
       Returns the number of non-empty cells in the Terrain.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: int
@@ -469,7 +469,7 @@ methods:
     description: |
       Fills a block of smooth terrain with a given location, rotation, size, and
       material.
-    code_samples:
+    code_samples: []
     parameters:
       - name: cframe
         type: CFrame
@@ -507,7 +507,7 @@ methods:
 
       Workspace.Terrain:FillCylinder(CFrame.new(0, 50, 0), 5, 30, Enum.Material.Asphalt)
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: cframe
         type: CFrame
@@ -543,7 +543,7 @@ methods:
       Fills a `Datatype.Region3` space with smooth terrain.
     description: |
       Fills a `Datatype.Region3` space with smooth terrain.
-    code_samples:
+    code_samples: []
     parameters:
       - name: region
         type: Region3
@@ -574,7 +574,7 @@ methods:
       `FillWedge()` fills a wedge-shaped volume of `Class.Terrain` with the
       given `Enum.Material` and the area's `Datatype.CFrame` and size. The
       orientation of the wedge is the same as an equivalent `Class.WedgePart`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: cframe
         type: CFrame
@@ -608,7 +608,7 @@ methods:
       Returns the closest CellMaterial from the legacy terrain engine that
       matches the smooth terrain voxel specified. CellBlock will always be
       ''Solid'' and CellOrientation will always be ''NegZ''.
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int
@@ -640,7 +640,7 @@ methods:
     description: |
       Returns the current terrain material color for the specified terrain
       material.
-    code_samples:
+    code_samples: []
     parameters:
       - name: material
         type: Material
@@ -661,7 +661,7 @@ methods:
     description: |
       Returns if the cell is a water cell. The WaterForce parameter will always
       be _None_ and the WaterDirection will always be _NegX_.
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int
@@ -869,7 +869,7 @@ methods:
       CellMaterial.
 
       CellBlock and CellOrientation have no effect.
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int
@@ -917,7 +917,7 @@ methods:
       the CellMaterial.
 
       CellBlock and CellOrientation have no effect.
-    code_samples:
+    code_samples: []
     parameters:
       - name: region
         type: Region3int16
@@ -953,7 +953,7 @@ methods:
     description: |
       Sets current terrain material color for specified terrain material.
       Terrain material will shift its base color toward specified color.
-    code_samples:
+    code_samples: []
     parameters:
       - name: material
         type: Material
@@ -983,7 +983,7 @@ methods:
 
       _Note:_ This API was intended for Roblox's old terrain system, which has
       since been removed from the engine.
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int
@@ -1022,7 +1022,7 @@ methods:
       Returns the grid cell location that contains the point **position**.
     description: |
       Returns the grid cell location that contains the point **position**.
-    code_samples:
+    code_samples: []
     parameters:
       - name: position
         type: Vector3
@@ -1044,7 +1044,7 @@ methods:
     description: |
       Returns the grid cell location that contains the point position,
       preferring empty grid cells when position is on a grid edge.
-    code_samples:
+    code_samples: []
     parameters:
       - name: position
         type: Vector3
@@ -1066,7 +1066,7 @@ methods:
     description: |
       Returns the grid cell location that contains the point position,
       preferring non-empty grid cells when position is on a grid edge.
-    code_samples:
+    code_samples: []
     parameters:
       - name: position
         type: Vector3

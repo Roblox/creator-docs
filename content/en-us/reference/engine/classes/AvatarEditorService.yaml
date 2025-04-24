@@ -33,7 +33,7 @@ description: |
   If you find that your experience requires an adjustment to this throttling,
   you can submit a
   [feature request](https://devforum.roblox.com/t/how-to-post-a-feature-request/37232).
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -74,7 +74,7 @@ methods:
       `Class.AvatarEditorService:GetOutfits()` and
       `Class.AvatarEditorService:GetFavorite()`. Permission does not persist
       between sessions.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -94,7 +94,7 @@ methods:
       `Class.HumanoidDescription` as an outfit. Does not yield. The result can
       be retrieved by listening to the
       `Class.AvatarEditorService.PromptCreateOutfitCompleted` event.
-    code_samples:
+    code_samples: []
     parameters:
       - name: outfit
         type: HumanoidDescription
@@ -123,7 +123,7 @@ methods:
       Prompts the `Class.Players.LocalPlayer` to delete the given outfit. Does
       not yield. The result can be retrieved by listening to the
       `Class.AvatarEditorService.PromptDeleteOutfitCompleted` event.
-    code_samples:
+    code_samples: []
     parameters:
       - name: outfitId
         type: int64
@@ -146,7 +146,7 @@ methods:
       Prompts the `Class.Players.LocalPlayer` to rename the given outfit. Does
       not yield. The result can be retrieved by listening to the
       `Class.AvatarEditorService.PromptRenameOutfitCompleted` event.
-    code_samples:
+    code_samples: []
     parameters:
       - name: outfitId
         type: int64
@@ -172,7 +172,7 @@ methods:
       (R6 or R15). Does not yield and can get the result by listening to the
       PromptSaveAvatarCompleted event. This is similar to how other prompts such
       as PromptPurchase work.
-    code_samples:
+    code_samples: []
     parameters:
       - name: humanoidDescription
         type: HumanoidDescription
@@ -201,7 +201,7 @@ methods:
     description: |
       This function prompts the `Class.Players.LocalPlayer` to favorite or
       unfavorite the given asset or bundle.
-    code_samples:
+    code_samples: []
     parameters:
       - name: itemId
         type: int64
@@ -232,7 +232,7 @@ methods:
     description: |
       Prompts the `Class.Players.LocalPlayer` to update the given outfit with
       the given HumanoidDescription.
-    code_samples:
+    code_samples: []
     parameters:
       - name: outfitId
         type: int64
@@ -270,7 +270,7 @@ methods:
       Default clothing is necessary if the HumanoidDescription does not
       currently have Shirt and Pants equipped and the body colors are too
       similar.
-    code_samples:
+    code_samples: []
     parameters:
       - name: humanoidDescription
         type: HumanoidDescription
@@ -359,7 +359,7 @@ methods:
         "EmotesEnabledForUser": true
       }
       ```
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Dictionary
@@ -381,7 +381,7 @@ methods:
       Gets the item details for a list of items at once. More efficient than
       AvatarEditorService:GetItemDetails if you need to get all the item details
       of a list.
-    code_samples:
+    code_samples: []
     parameters:
       - name: itemIds
         type: Array
@@ -439,7 +439,7 @@ methods:
     description: |
       This function returns if the `Class.Players.LocalPlayer` has favorited the
       given bundle or asset.
-    code_samples:
+    code_samples: []
     parameters:
       - name: itemId
         type: int64
@@ -483,7 +483,7 @@ methods:
           }
       ]
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: assetTypes
         type: Array
@@ -566,7 +566,7 @@ methods:
       |  `Collectible`   |      UGC Limited      |
       |    `Limited`     |    Roblox Limited     |
       | `LimitedUnique`  | Roblox Limited Unique |
-    code_samples:
+    code_samples: []
     parameters:
       - name: itemId
         type: int64
@@ -636,7 +636,7 @@ methods:
         },
       }
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: outfitId
         type: int64
@@ -704,7 +704,7 @@ methods:
               </tr>
           </tbody>
       </table>
-    code_samples:
+    code_samples: []
     parameters:
       - name: outfitSource
         type: OutfitSource
@@ -833,7 +833,7 @@ methods:
           }
       ]
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: bundleId
         type: int64
@@ -904,7 +904,7 @@ methods:
           }
       ]
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: searchParameters
         type: CatalogSearchParams
@@ -933,7 +933,7 @@ events:
       responded to by the user. It can only return the Success or
       PermissionDenied `Enum.AvatarPromptResult|enum` statuses as it does not
       perform any web requests which could fail.
-    code_samples:
+    code_samples: []
     parameters:
       - name: result
         type: AvatarPromptResult
@@ -953,7 +953,7 @@ events:
       This event fires when the PromptSaveOutfit operation is completed. It
       gives a status `Enum.AvatarPromptResult|enum` indicating whether the
       prompt succeeded, failed or permission was not granted by the user.
-    code_samples:
+    code_samples: []
     parameters:
       - name: result
         type: AvatarPromptResult
@@ -977,7 +977,7 @@ events:
       Fires when the PromptDeleteOutfit operation is completed. It gives a
       status `Enum.AvatarPromptResult|enum` indicating whether the prompt
       succeeded, failed or permission was not granted by the user.
-    code_samples:
+    code_samples: []
     parameters:
       - name: result
         type: AvatarPromptResult
@@ -997,7 +997,7 @@ events:
       Fires when the PromptRenameOutfit operation is completed. It gives a
       status `Enum.AvatarPromptResult|enum` indicating whether the prompt
       succeeded, failed or permission was not granted by the user.
-    code_samples:
+    code_samples: []
     parameters:
       - name: result
         type: AvatarPromptResult
@@ -1019,7 +1019,7 @@ events:
       operation is completed. It gives a status `Enum.AvatarPromptResult|enum`
       indicating whether the prompt succeeded, failed or permission was not
       granted by the user.
-    code_samples:
+    code_samples: []
     parameters:
       - name: result
         type: AvatarPromptResult
@@ -1045,7 +1045,7 @@ events:
       is completed. It gives a status `Enum.AvatarPromptResult|enum` indicating
       whether the prompt succeeded, failed or permission was not granted by the
       user.
-    code_samples:
+    code_samples: []
     parameters:
       - name: result
         type: AvatarPromptResult
@@ -1067,7 +1067,7 @@ events:
       is completed. It gives a status `Enum.AvatarPromptResult|enum` indicating
       whether the prompt succeeded, failed or permission was not granted by the
       user.
-    code_samples:
+    code_samples: []
     parameters:
       - name: result
         type: AvatarPromptResult

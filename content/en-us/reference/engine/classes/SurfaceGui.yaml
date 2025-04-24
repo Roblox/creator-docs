@@ -35,7 +35,7 @@ description: |
   - A descendant is added to or removed from the `Class.SurfaceGui`.
   - A property of a descendant of the `Class.SurfaceGui` changes.
   - A property of the `Class.SurfaceGui` itself changes.
-code_samples:
+code_samples: []
 inherits:
   - SurfaceGuiBase
 tags: []
@@ -59,7 +59,7 @@ properties:
       - `Class.SurfaceGui.LightInfluence|LightInfluence` is treated as though
         it's `0`.
       - `Class.SurfaceGui.Brightness|Brightness` has no effect.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -92,7 +92,7 @@ properties:
       Studio and has no effect when either
       `Class.SurfaceGui.LightInfluence|LightInfluence` is `1` or
       `Class.SurfaceGui.AlwaysOnTop|AlwaysOnTop` is `true`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -116,7 +116,7 @@ properties:
       The size of a "virtual screen" in "virtual pixels" which makes
       `Class.SurfaceGui|SurfaceGuis` pixel-to-pixel compatible with
       `Class.ScreenGui|ScreenGuis`.
-    code_samples:
+    code_samples: []
     type: Vector2
     tags: []
     deprecation_message: ''
@@ -142,7 +142,7 @@ properties:
 
       Even when this property is `false`, `Class.GuiObject|GuiObjects` that are
       **completely** outside of the canvas will not render.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -166,7 +166,7 @@ properties:
       lighting, in a range from `0` to `1`. Setting this to `1` means that
       surrounding lighting has complete control over the appearance, while
       setting it to `0` means that the lighting has no effect.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -228,7 +228,7 @@ properties:
       to view the `Class.SurfaceGui`. Also be mindful that a large pixel density
       could negatively affect performance if the face of the adorned part is
       large enough.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -256,7 +256,7 @@ properties:
       When set to `Enum.SurfaceGuiSizingMode.FixedSize`, the `Class.SurfaceGui`
       renders with a fixed size set through
       `Class.SurfaceGui.CanvasSize|CanvasSize`.
-    code_samples:
+    code_samples: []
     type: SurfaceGuiSizingMode
     tags: []
     deprecation_message: ''
@@ -280,7 +280,7 @@ properties:
       `Class.SurfaceGui` instead of for the held `Class.Tool`. If a character is
       within this distance of the `Class.SurfaceGui`, the `Class.Tool` will not
       activate on click.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -303,7 +303,7 @@ properties:
       Layers this `Class.SurfaceGui` in relation to others on the same face
       (changing this does not visually "lift" or "sink" a `Class.SurfaceGui`
       from the surface).
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

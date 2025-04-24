@@ -56,7 +56,7 @@ properties:
 
       For the `Class.Attachment` where the beam ends, see
       `Class.Beam.Attachment1|Attachment1`.
-    code_samples:
+    code_samples: []
     type: Attachment
     tags: []
     deprecation_message: ''
@@ -83,7 +83,7 @@ properties:
 
       For the `Class.Attachment` where the beam originates from, see
       `Class.Beam.Attachment0|Attachment0`.
-    code_samples:
+    code_samples: []
     type: Attachment
     tags: []
     deprecation_message: ''
@@ -108,7 +108,7 @@ properties:
       is 1 by default and can set to any number within the range of 0 to 10000.
       Increasing the value of `Class.Beam.LightInfluence|LightInfluence`
       decreases the effect of this property's value.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -157,7 +157,7 @@ properties:
       color to display correctly, where `n` is the number of
       `Datatype.ColorSequenceKeypoint|ColorSequenceKeypoints` in the
       `Datatype.ColorSequence`.
-    code_samples:
+    code_samples: []
     type: ColorSequence
     tags: []
     deprecation_message: ''
@@ -186,7 +186,7 @@ properties:
       ```lua
       local controlPoint2 = Beam.Attachment0.WorldPosition + (Beam.Attachment0.CFrame.RightVector * Beam.CurveSize0)
       ```
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -215,7 +215,7 @@ properties:
       ```lua
       local controlPoint3 = Beam.Attachment1.WorldPosition - (Beam.Attachment1.CFrame.RightVector * Beam.CurveSize1)
       ```
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -238,7 +238,7 @@ properties:
 
       When this property is set to false, the beam's
       `Class.Beam.Segments|Segments` will not be displayed.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -263,7 +263,7 @@ properties:
       to `true`, ensures that the beam always faces the
       `Class.Workspace.CurrentCamera|CurrentCamera`, regardless of its
       orientation.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -292,7 +292,7 @@ properties:
       is affected by environmental light.
 
       This property does **not** cause the beam to light the environment.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -319,7 +319,7 @@ properties:
 
       See also `Class.Beam.LightEmission|LightEmission` which specifies to what
       degree the colors of the beam are blended with the colors behind it.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -370,7 +370,7 @@ properties:
       `Class.Beam` requires at least `n-1` segments to display correctly, where
       `n` is the number of keypoint associated with the beam's
       `Class.Beam.Color|Color` and `Class.Beam.Transparency|Transparency`.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -402,7 +402,7 @@ properties:
       `Class.Beam.TextureMode|TextureMode`,
       `Class.Beam.TextureLength|TextureLength`, `Class.Beam.Width0|Width0`, and
       `Class.Beam.Width1|Width1` properties.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -424,7 +424,7 @@ properties:
     description: |
       Sets the length of the beam's texture, dependent on
       `Class.Beam.TextureMode|TextureMode`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -458,7 +458,7 @@ properties:
       length.
 
       <img src="/assets/engine-api/enums/TextureMode/Stretch.png" width="720" alt="TextureMode diagram with Stretch mode" />
-    code_samples:
+    code_samples: []
     type: TextureMode
     tags: []
     deprecation_message: ''
@@ -483,7 +483,7 @@ properties:
       will move from `Class.Beam.Attachment0|Attachment0` to
       `Class.Beam.Attachment1|Attachment1`. This direction can be inverted by
       setting this property to a negative number.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -526,7 +526,7 @@ properties:
       at least `n-1` segments in order to display correctly, where `n` is the
       number of `Datatype.NumberSequenceKeypoint|NumberSequenceKeypoints` in the
       `Datatype.NumberSequence`.
-    code_samples:
+    code_samples: []
     type: NumberSequence
     tags: []
     deprecation_message: ''
@@ -550,7 +550,7 @@ properties:
       (`Class.Beam.Attachment0|Attachment0`), in studs. The beam's width will
       change linearly to `Class.Beam.Width1|Width1` studs at its end
       (`Class.Beam.Attachment1|Attachment1`).
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -574,7 +574,7 @@ properties:
       in studs. The beam's width will change linearly from
       `Class.Beam.Width0|Width0` studs at its origin
       (`Class.Beam.Attachment0|Attachment0`).
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -642,7 +642,7 @@ methods:
         `Class.Beam.TextureSpeed|TextureSpeed` property, meaning it will move
         the texture in the opposite direction to the direction the texture
         animates when `Class.Beam.TextureSpeed|TextureSpeed` is greater than 0.
-    code_samples:
+    code_samples: []
     parameters:
       - name: offset
         type: float

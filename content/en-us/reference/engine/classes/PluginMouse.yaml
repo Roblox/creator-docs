@@ -34,7 +34,7 @@ events:
       Fired when Instances are being selected while the mouse is dragging.
     description: |
       Fired when Instances are being selected while the mouse is dragging.
-    code_samples:
+    code_samples: []
     parameters:
       - name: instances
         type: Instances

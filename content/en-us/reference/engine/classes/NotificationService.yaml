@@ -7,7 +7,7 @@ summary: |
 description: |
   An unfinished service that would allow you to schedule notifications.
   Currently goes unimplemented, and cannot be enabled.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -57,7 +57,7 @@ events:
   - name: NotificationService.Roblox17sConnectionChanged
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: connectionName
         type: string
@@ -80,7 +80,7 @@ events:
   - name: NotificationService.Roblox17sEventReceived
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: eventData
         type: Map

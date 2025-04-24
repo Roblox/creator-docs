@@ -32,7 +32,7 @@ description: |
   has a performance penalty. If your game is using pre-2022 terrain materials,
   avoid overriding any built-in materials. Migrate to 2022 materials if
   possible.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

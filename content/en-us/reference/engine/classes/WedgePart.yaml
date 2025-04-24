@@ -12,7 +12,7 @@ description: |
   can be aligned with the rest of your building work. WedgeParts, when used next
   to each other at different angles, can also make great curved ramps without
   the need for CFrame too.
-code_samples:
+code_samples: []
 inherits:
   - FormFactorPart
 tags: []

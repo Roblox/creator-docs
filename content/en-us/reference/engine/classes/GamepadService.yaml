@@ -11,7 +11,7 @@ description: |
   handles APIs used with the gamepad virtual cursor. You can enable the gamepad
   cursor for your experience by setting `Enum.VirtualCursorMode` under
   `Class.StarterGui|StarterGui` to `Enabled`.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

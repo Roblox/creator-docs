@@ -4,7 +4,7 @@ category:
 memory_category: Instances
 summary: ''
 description: ''
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -16,7 +16,7 @@ methods:
   - name: MemStorageConnection:Disconnect
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()

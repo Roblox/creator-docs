@@ -7,7 +7,7 @@ summary: |
 description: |
   `Class.GuiBase2d` is an abstract class inherited by 2D
   `Class.GuiObject|GuiObjects`.
-code_samples:
+code_samples: []
 inherits:
   - GuiBase
 tags:
@@ -38,7 +38,7 @@ properties:
 
       See also `Class.GuiBase2d.AbsoluteRotation|AbsoluteRotation` and
       `Class.GuiBase2d.AbsoluteSize|AbsoluteSize`.
-    code_samples:
+    code_samples: []
     type: Vector2
     tags:
       - ReadOnly
@@ -67,7 +67,7 @@ properties:
 
       See also `Class.GuiBase2d.AbsolutePosition|AbsolutePosition` and
       `Class.GuiBase2d.AbsoluteSize|AbsoluteSize`.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -95,7 +95,7 @@ properties:
 
       See also `Class.GuiBase2d.AbsolutePosition|AbsolutePosition` and
       `Class.GuiBase2d.AbsoluteRotation|AbsoluteRotation`.
-    code_samples:
+    code_samples: []
     type: Vector2
     tags:
       - ReadOnly
@@ -124,7 +124,7 @@ properties:
       re-translated after the cloud table loads if necessary.
 
       See also `Class.GuiBase2d.RootLocalizationTable|RootLocalizationTable`.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -151,7 +151,7 @@ properties:
       `Class.LocalizationTable.Root` property pointed at an instance will
       localize all `Class.TextLabel.TextButton` that are descendants of the root
       instance.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - Hidden
@@ -194,7 +194,7 @@ properties:
       See also `Class.LocalizationService:GetTableEntries()` which explains how
       the `Class.GuiBase2d.RootLocalizationTable|RootLocalizationTable` is used
       for automated localization.
-    code_samples:
+    code_samples: []
     type: LocalizationTable
     tags: []
     deprecation_message: ''
@@ -338,7 +338,7 @@ events:
       `Class.GuiObject`, the event bubbles from that `Class.GuiObject` to all of
       its ancestors, informing them that the selection has
       changed/entered/exited to a `Class.GuiObject` in their descendant tree.
-    code_samples:
+    code_samples: []
     parameters:
       - name: amISelected
         type: boolean

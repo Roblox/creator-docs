@@ -6,7 +6,7 @@ summary: ''
 description: |
   A SkateboardController is an object responsible for translating PlayerActions
   to movements with a `Class.SkateboardPlatform`.
-code_samples:
+code_samples: []
 inherits:
   - Controller
 tags: []
@@ -19,7 +19,7 @@ properties:
     description: |
       The direction of movement, tied to the keys A and D. Must be 1 (right), 0
       (straight), or -1 (left). Will refresh back to 0 unless constantly set.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -44,7 +44,7 @@ properties:
       The direction of movement, tied to the keys W and S. Must be an integer 1
       (forward), 0 (null), or -1 (reverse). Will refresh back to 0 unless
       constantly set.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -70,7 +70,7 @@ events:
       `axis` is fired with either `"Throttle"` if the throttle state of the
       skateboard was updated or `"Steer"` if the steering state of the
       skateboard was updated.
-    code_samples:
+    code_samples: []
     parameters:
       - name: axis
         type: string

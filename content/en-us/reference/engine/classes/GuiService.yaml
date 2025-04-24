@@ -10,7 +10,7 @@ description: |
   **GuiService** allows developers to control what `Class.GuiObject` is
   currently being selected by the gamepad navigator, as well as check if
   Roblox's main menu is currently open.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -29,7 +29,7 @@ properties:
       mean that Gui navigation will still work if
       `Class.GuiService.GuiNavigationEnabled` is enabled but you will have to
       set `Class.GuiService.SelectedObject` manually to start Gui navigation.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -50,7 +50,7 @@ properties:
     description: |
       Toggles whether or not objects in the `Class.CoreGui` can be navigated
       using a Gamepad.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - Hidden
@@ -71,7 +71,7 @@ properties:
       Used to enable and disable the default controller GUI navigation.
     description: |
       Used to enable and disable the default controller GUI navigation.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -91,7 +91,7 @@ properties:
     description: |
       This property tells whether or not a modal dialog is visible, such as the
       game menu or a purchase prompt.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - ReadOnly
@@ -115,7 +115,7 @@ properties:
     description: |
       The IsWindows property defines if the user is playing on a computer
       running Windows.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - ReadOnly
@@ -138,7 +138,7 @@ properties:
       Returns true if any menu of CoreGui is open.
     description: |
       Returns true if any menu of `Class.CoreGui` is open.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - ReadOnly
@@ -313,7 +313,7 @@ properties:
     description: |
       Used to enable and disable touch controls and touch control display UI.
       Defaults to true.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -340,7 +340,7 @@ methods:
       other selectable objects on the screen (maybe from previous menus), but
       you want to the user to only be able to select gui objects in the new
       menu.
-    code_samples:
+    code_samples: []
     parameters:
       - name: selectionName
         type: string
@@ -382,7 +382,7 @@ methods:
       Functions similarly to `Class.GuiService:AddSelectionParent()`, but you
       can give it a tuple of `Class.GuiObject` that you want to be contained in
       the group.
-    code_samples:
+    code_samples: []
     parameters:
       - name: selectionName
         type: string
@@ -425,7 +425,7 @@ methods:
         appear showing the user that has the given `Class.Player.UserId|UserId`.
         This is especially useful when you want to inspect players who aren't in
         the current game
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -463,7 +463,7 @@ methods:
 
       Developers can open or close the Emotes menu by calling the
       `Class.GuiService:SetEmotesMenuOpen()` function.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: boolean
@@ -492,7 +492,7 @@ methods:
       - `Class.Workspace.StreamingIntegrityMode` and
         `Enum.StreamingIntegrityMode` for more details on when gameplay is
         paused.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: boolean
@@ -518,7 +518,7 @@ methods:
       The inset values supplied by this function only take effect on
       `Class.ScreenGui|ScreenGuis` that have their
       `Class.ScreenGui.IgnoreGuiInset|IgnoreGuiInset` property set to false.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Tuple
@@ -553,7 +553,7 @@ methods:
         appear showing the user that has the given `Class.Player.UserId|UserId`.
         This is especially useful when you want to inspect players who aren't in
         the current game
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: boolean
@@ -664,7 +664,7 @@ methods:
       Returns true if the client is using the ten foot interface, which is a
       special version of Roblox's UI, exclusive to consoles. This is the only
       guaranteed way to verify if the user is on a console or not.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: boolean
@@ -684,7 +684,7 @@ methods:
       Removes a group that was created with
       `Class.GuiService:AddSelectionParent()` or
       `Class.GuiService:AddSelectionTuple()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: selectionName
         type: string
@@ -750,7 +750,7 @@ methods:
       Opens or closes the player Emotes menu.
     description: |
       Opens or closes the player Emotes menu.
-    code_samples:
+    code_samples: []
     parameters:
       - name: isOpen
         type: boolean
@@ -782,7 +782,7 @@ methods:
       - `Class.Workspace.StreamingIntegrityMode` and
         `Enum.StreamingIntegrityMode` for more details on when gameplay is
         paused.
-    code_samples:
+    code_samples: []
     parameters:
       - name: enabled
         type: boolean
@@ -830,7 +830,7 @@ methods:
         appear showing the user that has the given `Class.Player.UserId|UserId`.
         This is especially useful when you want to inspect players who aren't in
         the current game
-    code_samples:
+    code_samples: []
     parameters:
       - name: enabled
         type: boolean
@@ -853,7 +853,7 @@ events:
       Fires when the user **closes** the Roblox coregui escape menu.
     description: |
       Fires when the user **closes** the Roblox coregui escape menu.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
@@ -866,7 +866,7 @@ events:
       Fires when the user **opens** the Roblox coregui escape menu.
     description: |
       Fires when the user **opens** the Roblox coregui escape menu.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''

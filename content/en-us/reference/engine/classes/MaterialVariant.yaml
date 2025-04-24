@@ -11,7 +11,7 @@ description: |
   built-in material, or set in the `Class.BasePart.MaterialVariant` property to
   change certain Parts. MaterialVariant objects only work as descendants of
   MaterialService.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -22,7 +22,7 @@ properties:
       Category Material this variant belongs to.
     description: |
       Category Material this variant belongs to.
-    code_samples:
+    code_samples: []
     type: Material
     tags: []
     deprecation_message: ''
@@ -42,7 +42,7 @@ properties:
     description: |
       This property determines the color of the surface. This texture is
       sometimes called the albedo texture. The alpha channel is not used.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -112,7 +112,7 @@ properties:
       EnvironmentSpecularScale and `Class.Lighting.EnvironmentDiffuseScale` to
       1, and `Class.Lighting.Ambient` and `Class.Lighting.OutdoorAmbient` to
       (0,0,0) is recommended.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -165,7 +165,7 @@ properties:
       map and it does not seem to make any visual difference, you may need to
       re-export your mesh along with its tangent information from modeling
       software.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -191,7 +191,7 @@ properties:
       Roughness refers to how much variation the surface has on a very small
       scale. Reflections on smooth surfaces are sharp and concentrated.
       Reflections on rough surfaces are more blurry and dispersed.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -211,7 +211,7 @@ properties:
     description: |
       Determines the scale of textures. Larger values for this property will
       lead to the textures appearing larger, and repeating less frequently.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

@@ -54,7 +54,7 @@ properties:
       It is possible to overwrite this property using the
       `Class.ContentProvider:SetBaseUrl()` function in the command bar; however,
       this is not recommended and may cause asset loading issues.
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - ReadOnly
@@ -157,7 +157,7 @@ methods:
   - name: ContentProvider:ListEncryptedAssets
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Array
@@ -200,7 +200,7 @@ methods:
   - name: ContentProvider:RegisterDefaultEncryptionKey
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: encryptionKey
         type: string
@@ -218,7 +218,7 @@ methods:
   - name: ContentProvider:RegisterDefaultSessionKey
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: sessionKey
         type: string
@@ -236,7 +236,7 @@ methods:
   - name: ContentProvider:RegisterEncryptedAsset
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: assetId
         type: ContentId
@@ -258,7 +258,7 @@ methods:
   - name: ContentProvider:RegisterSessionEncryptedAsset
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: contentId
         type: ContentId
@@ -280,7 +280,7 @@ methods:
   - name: ContentProvider:UnregisterDefaultEncryptionKey
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -294,7 +294,7 @@ methods:
   - name: ContentProvider:UnregisterEncryptedAsset
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: assetId
         type: ContentId
@@ -367,7 +367,7 @@ events:
   - name: ContentProvider.AssetFetchFailed
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: assetId
         type: ContentId

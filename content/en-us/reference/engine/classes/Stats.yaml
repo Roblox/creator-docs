@@ -12,7 +12,7 @@ description: |
 
   The service also stores a tree of `Class.StatsItem` objects which can have
   their values read by plugins.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -27,7 +27,7 @@ properties:
       This property describes how many parts are currently in contact with each
       other, such that one of the two parts are being physically simulated, and
       thus can be recognized by the `Class.BasePart:GetTouchingParts()` method.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - ReadOnly
@@ -54,7 +54,7 @@ properties:
       received from the clients connected to the server. If from a client's
       perspective, this represents the total amount of data being received from
       the server.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -80,7 +80,7 @@ properties:
       server's perspective, this represents the total amount of data being sent
       to the clients connected to the server. If from a client's perspective,
       this represents the total amount of data being sent to the server.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -156,7 +156,7 @@ properties:
       it takes long it takes for Roblox to update all of its Task Scheduler
       jobs, in milliseconds. If this value is high, then it means one of the
       tasks are hogging up a lot of resources.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -181,7 +181,7 @@ properties:
       currently in memory. This includes the `Class.DataModel`, its descendants,
       as well as any object created with `Datatype.Instance.new()` which is
       still present in memory.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - ReadOnly
@@ -204,7 +204,7 @@ properties:
     description: |
       A measurement of how many physically simulated components are currently
       moving in the game world.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - ReadOnly
@@ -231,7 +231,7 @@ properties:
       data being received from the clients connected to the server.If from a
       client's perspective, this represents the total amount of physics data
       being received from the server.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -257,7 +257,7 @@ properties:
       perspective, this represents the total amount of physics data being sent
       to the clients connected to the server.If from a client's perspective,
       this represents the total amount of physics data being sent to the server.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -306,7 +306,7 @@ properties:
       A measurement of how long it takes for the physics engine to update its
       current state, in milliseconds. If this value is high, then it means the
       game instance is under stress from the physics simulations taking place.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -330,7 +330,7 @@ properties:
     description: |
       A measurement of how many physically simulated components currently exist
       in the game world.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - ReadOnly
@@ -597,7 +597,7 @@ methods:
     description: |
       Returns the number of megabytes that are being consumed in the specified
       `Enum.DeveloperMemoryTag` category.
-    code_samples:
+    code_samples: []
     parameters:
       - name: tag
         type: DeveloperMemoryTag
@@ -619,7 +619,7 @@ methods:
     description: |
       Returns the total amount of memory being consumed by the current game
       session, in megabytes.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: float

@@ -91,7 +91,7 @@ properties:
       the [Command Bar](../../../studio/ui-overview.md#command-bar):
 
       `game:GetService("HttpService").HttpEnabled = true`
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''

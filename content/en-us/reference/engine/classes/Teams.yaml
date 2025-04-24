@@ -87,7 +87,7 @@ methods:
     description: |
       Evens the number of people on each team. This function does not work
       correctly and should not be used.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()

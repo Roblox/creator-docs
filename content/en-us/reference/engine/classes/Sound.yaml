@@ -297,7 +297,7 @@ properties:
       The minimum distance at which a 3D `Class.Sound` (direct child of a
       `Class.BasePart` or `Class.Attachment`) will begin to attenuate.
       Effectively, the emitter size.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - Deprecated
@@ -322,7 +322,7 @@ properties:
     description: |
       Sets how high pitched and fast a `Class.Sound` is when it is played. The
       greater the integer, the higher and faster the sound is.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - Deprecated
@@ -353,7 +353,7 @@ properties:
       - `sound:Destroy()`
       - `sound.Parent = nil`
       - `sound.Parent.Parent = nil`
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -533,7 +533,7 @@ properties:
       How `Class.Sound.RollOffMaxDistance|RollOffMaxDistance` impacts the
       attenuation of a sound (manner in which it fades out) is dependent on the
       `Class.Sound.RollOffMode|RollOffMode` property.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -561,7 +561,7 @@ properties:
       How `Class.Sound.RollOffMinDistance|RollOffMinDistance` impacts the
       attenuation of a sound (manner in which it fades out) is dependent on the
       `Class.Sound.RollOffMode|RollOffMode` property.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -587,7 +587,7 @@ properties:
       distance between the listener and parent changes.
 
       For details on the different modes, see `Enum.RollOffMode`.
-    code_samples:
+    code_samples: []
     type: RollOffMode
     tags: []
     deprecation_message: ''
@@ -607,7 +607,7 @@ properties:
       The `Class.SoundGroup` that is linked to this `Class.Sound`.
     description: |
       The `Class.SoundGroup` that is linked to this `Class.Sound`.
-    code_samples:
+    code_samples: []
     type: SoundGroup
     tags: []
     deprecation_message: ''
@@ -629,7 +629,7 @@ properties:
       This property is the content ID of the sound file to associate with the
       `Class.Sound`. See [Audio Assets](../../../sound/assets.md) for more
       information.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -726,7 +726,7 @@ properties:
       Note that if the `Class.Sound` is a member of a `Class.SoundGroup`, its
       playback volume (but not its `Class.Sound.Volume|Volume` property) will be
       influenced by the group's `Class.SoundGroup.Volume` property.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -744,7 +744,7 @@ properties:
   - name: Sound.isPlaying
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - ReadOnly
@@ -847,7 +847,7 @@ methods:
   - name: Sound:pause
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -864,7 +864,7 @@ methods:
   - name: Sound:play
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -881,7 +881,7 @@ methods:
   - name: Sound:stop
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -944,7 +944,7 @@ events:
       reaching their end. This event will also **not** fire when the sound is
       stopped before playback has completed; for this use the
       `Class.Sound.Stopped|Stopped` event.
-    code_samples:
+    code_samples: []
     parameters:
       - name: soundId
         type: string

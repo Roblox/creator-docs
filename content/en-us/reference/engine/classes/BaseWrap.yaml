@@ -8,7 +8,7 @@ description: |
   `Class.MeshPart` is the only valid parent type for `Class.BaseWrap` and that
   it behaves more like a component of `Class.MeshPart` than an independent
   object.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -40,7 +40,7 @@ properties:
       This property is set up automatically by the 3D Importer.
 
       Asset ID for cage mesh.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -62,7 +62,7 @@ properties:
       This property is set up automatically by the 3D Importer.
 
       Cage mesh offset relative to parent `Class.MeshPart`.
-    code_samples:
+    code_samples: []
     type: CFrame
     tags: []
     deprecation_message: ''
@@ -82,7 +82,7 @@ properties:
       Cage mesh offset in world space.
     description: |
       Cage mesh offset in world space.
-    code_samples:
+    code_samples: []
     type: CFrame
     tags:
       - ReadOnly
@@ -163,7 +163,7 @@ properties:
       	end
       end
       ```
-    code_samples:
+    code_samples: []
     type: CFrame
     tags: []
     deprecation_message: ''
@@ -185,7 +185,7 @@ properties:
     description: |
       Describes where the origin (in world space) was while authoring the cage
       mesh in an asset creation tool such as Blender or Maya.
-    code_samples:
+    code_samples: []
     type: CFrame
     tags:
       - ReadOnly

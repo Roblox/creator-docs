@@ -33,7 +33,7 @@ properties:
       Holds a reference to an instance.
     description: |
       Holds a reference to an instance.
-    code_samples:
+    code_samples: []
     type: Instance
     tags: []
     deprecation_message: ''
@@ -84,7 +84,7 @@ events:
   - name: ObjectValue.changed
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
         type: Instance

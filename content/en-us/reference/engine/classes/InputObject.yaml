@@ -2037,7 +2037,7 @@ methods:
   - name: InputObject:IsModifierKeyDown
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: modifierKey
         type: ModifierKey

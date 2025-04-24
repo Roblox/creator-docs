@@ -16,7 +16,7 @@ description: |
 
   Like all other `Class.SoundEffect`, a ChorusSoundEffect can be applied either
   to a `Class.Sound` or `Class.SoundGroup` by being parented to either.
-code_samples:
+code_samples: []
 inherits:
   - SoundEffect
 tags: []
@@ -27,7 +27,7 @@ properties:
       Controls how intense the effect is.
     description: |
       Range: 0 to 1 (default 0.15) Controls how intense the effect is.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -49,7 +49,7 @@ properties:
       Range: 0 to 1 (default 0.5) Percentage of the original sound that will be
       applied to the filter. Raising this value will make the effect sound
       louder and be more apparent.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -70,7 +70,7 @@ properties:
     description: |
       Range: 0 to 20 (default 0.5) How frequently the pitch variation changes.
       Measured in Hz.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

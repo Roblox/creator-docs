@@ -42,7 +42,7 @@ description: |
   - If parented to a `Class.Tool` and given the name **Handle**, a
     `Class.BasePart` can be held by characters. See
     [In-Experience Tools](../../../players/tools.md).
-code_samples:
+code_samples: []
 inherits:
   - PVInstance
 tags:
@@ -111,7 +111,7 @@ properties:
       property can be changed from either a client script **or** a server
       script; changing it from a client script for a server-owned part will have
       no effect.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - NotReplicated
@@ -140,7 +140,7 @@ properties:
       force applied to the center of mass will not cause angular acceleration,
       only linear. An assembly with a low center of mass will have a better time
       staying upright under the effect of gravity.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - ReadOnly
@@ -180,7 +180,7 @@ properties:
       property can be changed from either a client script **or** a server
       script; changing it from a client script for a server-owned part will have
       no effect.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - NotReplicated
@@ -206,7 +206,7 @@ properties:
       If the assembly has an anchored part, the assembly's mass is considered
       infinite. Constraints and other physical interactions between unanchored
       assemblies with a large difference in mass may cause instabilities.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -237,7 +237,7 @@ properties:
 
       For more information on root parts, see
       [Assemblies](../../../physics/assemblies.md).
-    code_samples:
+    code_samples: []
     type: BasePart
     tags:
       - ReadOnly
@@ -640,7 +640,7 @@ properties:
       Beyond this property, it is also possible to exclude parts which are
       descendants of a given list of parts using an `Datatype.OverlapParams` or
       `Datatype.RaycastParams` object when calling the spatial query functions.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -681,7 +681,7 @@ properties:
       never need to compute any kind of part to part collisions. However, they
       can still be hit by `Class.WorldRoot:Raycast()|Raycasts` and
       `Datatype.OverlapParams` queries.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -705,7 +705,7 @@ properties:
       should only be disabled on parts where you want to hide the shadows the
       part casts. Disabling this property for a given part may cause visual
       artifacts on the shadows cast upon that part.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -728,7 +728,7 @@ properties:
       `AssemblyCenterOfMass` converted from world space to local. On simple
       `Class.Part|Parts`, the center of mass is always (0,0,0). It can vary for
       `Class.WedgePart` or `Class.MeshPart` however.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - ReadOnly
@@ -785,7 +785,7 @@ properties:
       Although this property can be directly changed, it's recommended that you
       specify the collision group by setting `Class.BasePart.CollisionGroup` to
       the collision group's **name**.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - NotReplicated
@@ -894,7 +894,7 @@ properties:
     description: |
       The Elasticity of a part is now determined by either its `Enum.Material`
       or its `CustomPhysicalProperties`.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - Hidden
@@ -989,7 +989,7 @@ properties:
       anything. The Friction of a part is now determined by either its
       `Class.BasePart.Material|Material` or its
       `Class.BasePart.CustomPhysicalProperties|CustomPhysicalProperties`.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - Hidden
@@ -1325,7 +1325,7 @@ properties:
         </tr>
       </tbody>
       </table>
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - Hidden
@@ -1381,7 +1381,7 @@ properties:
         `Class.BasePart.Material|Material` or
         `Class.BasePart.CustomPhysicalProperties|CustomPhysicalProperties`, if
         specified.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -1419,7 +1419,7 @@ properties:
 
       See also [Assemblies](../../../physics/assemblies.md), an article
       documenting what root parts are and how to use them.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -1589,7 +1589,7 @@ properties:
 
       WeldConstraints will also be temporarily disabled and re-enabled during
       the move.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - Hidden
@@ -1612,7 +1612,7 @@ properties:
       This returns the time in seconds since the part's physics got last updated
       on the local client (or the server). Returns 0 when the part has no
       physics (Anchored)
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - Hidden
@@ -1850,7 +1850,7 @@ properties:
 
       See also [Assemblies](../../../physics/assemblies.md), an article
       documenting what root parts are and how to use them.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -1909,7 +1909,7 @@ properties:
 
       WeldConstraints will also be temporarily disabled and re-enabled during
       the move.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - NotReplicated
@@ -2056,7 +2056,7 @@ properties:
       		</tr>
       	</thead>
       </table>
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -2281,7 +2281,7 @@ properties:
   - name: BasePart.brickColor
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: BrickColor
     tags:
       - NotReplicated
@@ -2342,7 +2342,7 @@ methods:
       function can be called from either a client script **or** a server script;
       calling it from a client script for a server-owned part will have no
       effect.
-    code_samples:
+    code_samples: []
     parameters:
       - name: impulse
         type: Vector3
@@ -2382,7 +2382,7 @@ methods:
       function can be called from either a client script **or** a server script;
       calling it from a client script for a server-owned part will have no
       effect.
-    code_samples:
+    code_samples: []
     parameters:
       - name: impulse
         type: Vector3
@@ -2423,7 +2423,7 @@ methods:
       function can be called from either a client script **or** a server script;
       calling it from a client script for a server-owned part will have no
       effect.
-    code_samples:
+    code_samples: []
     parameters:
       - name: impulse
         type: Vector3
@@ -2451,7 +2451,7 @@ methods:
     description: |
       Breaks any surface connection with any adjacent part, including
       `Class.Weld` and other `Class.JointInstance`.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -2470,7 +2470,7 @@ methods:
       Returns whether the parts can collide with each other or not. This
       function takes into account the collision groups of the two parts. This
       function will error if the specified part is not a BasePart.
-    code_samples:
+    code_samples: []
     parameters:
       - name: part
         type: BasePart
@@ -2553,7 +2553,7 @@ methods:
       - `Class.Motor`
       - `Class.Motor6D`
       - `Class.WeldConstraint`
-    code_samples:
+    code_samples: []
     parameters:
       - name: recursive
         type: boolean
@@ -2575,7 +2575,7 @@ methods:
       Return all Joints or Constraints that is connected to this Part.
     description: |
       Return all Joints or Constraints that is connected to this Part.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Instances
@@ -2616,7 +2616,7 @@ methods:
     description: |
       Returns the current player who is the network owner of this part, or `nil`
       in case of the server.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Instance
@@ -2636,7 +2636,7 @@ methods:
     description: |
       Returns true if the game engine automatically decides the network owner
       for this part.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: boolean
@@ -2670,7 +2670,7 @@ methods:
       This function used to be relevant when Roblox's lag-compensating
       interpolation of parts online was internal. The interpolation is now
       applied to the `Datatype.CFrame` directly.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: CFrame
@@ -2697,7 +2697,7 @@ methods:
       `Class.BasePart.AssemblyRootPart|AssemblyRootPart` property. It remains
       supported for backwards compatibility, but you should use
       `Class.BasePart.AssemblyRootPart|AssemblyRootPart` directly.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Instance
@@ -2724,7 +2724,7 @@ methods:
       `Class.WorldRoot:GetPartsInPart()` function, which provides more
       flexibility and avoids the special `Class.TouchTransmitter|TouchInterest`
       rules described above. Use `Class.WorldRoot:GetPartsInPart()` instead.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Instances
@@ -2746,7 +2746,7 @@ methods:
       parts in an assembly other than the root part. If the assembly has no
       angular velocity, than the linear velocity will always be the same for
       every position.
-    code_samples:
+    code_samples: []
     parameters:
       - name: position
         type: Vector3
@@ -2771,7 +2771,7 @@ methods:
       place (eg an `Class.BasePart.Anchored|Anchored` part), otherwise returns
       false. In an assembly that has an `Class.BasePart.Anchored|Anchored` part,
       every other part is grounded.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: boolean
@@ -2816,7 +2816,7 @@ methods:
       `Class.Explosion`, unless a `Class.ForceField` object is parented to the
       `Class.BasePart` or ancestor `Class.Model`. For this reason, they are
       often used to make simple destructible buildings and other models.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -2836,7 +2836,7 @@ methods:
       Changes the size of an object just like using the Studio resize tool.
     description: |
       Changes the size of an object just like using the Studio resize tool.
-    code_samples:
+    code_samples: []
     parameters:
       - name: normalId
         type: NormalId
@@ -2865,7 +2865,7 @@ methods:
       Sets the given player as network owner for this and all connected parts.
       When playerInstance is `nil`, the server will be the owner instead of a
       player.
-    code_samples:
+    code_samples: []
     parameters:
       - name: playerInstance
         type: Player
@@ -2888,7 +2888,7 @@ methods:
     description: |
       Lets the game engine dynamically decide who will handle the part's physics
       (one of the clients or the server).
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -2924,7 +2924,7 @@ methods:
   - name: BasePart:breakJoints
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -2941,7 +2941,7 @@ methods:
   - name: BasePart:getMass
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: float
@@ -2958,7 +2958,7 @@ methods:
   - name: BasePart:makeJoints
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -2975,7 +2975,7 @@ methods:
   - name: BasePart:resize
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: normalId
         type: NormalId
@@ -3254,7 +3254,7 @@ events:
     summary: ''
     description: |
       Fired if the part's appearance is affected by the `Class.Shirt` class.
-    code_samples:
+    code_samples: []
     parameters: []
     tags:
       - Deprecated
@@ -3267,7 +3267,7 @@ events:
   - name: BasePart.StoppedTouching
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: otherPart
         type: BasePart

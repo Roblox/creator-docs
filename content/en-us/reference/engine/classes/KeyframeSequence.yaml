@@ -94,7 +94,7 @@ properties:
       Contains the hip height of the `Class.Humanoid` of the model that was used
       to author this `Class.KeyframeSequence`. Default value is 1.35 since that
       is the hip height set for a standard R15 `Character|character`.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - Hidden

@@ -23,7 +23,7 @@ description: |
   `Class.Workspace.CurrentCamera`. Also, it may render differently depending on
   your Studio settings (see **Editor&nbsp;Quality&nbsp;Level** in
   **Rendering**).
-code_samples:
+code_samples: []
 inherits:
   - PostEffect
 tags: []
@@ -36,7 +36,7 @@ properties:
       This property determines by how much the colors of pixels will be shifted.
       A value of `-1` will cause all pixels to be completely black while a value
       of `1` will cause them to be white.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -58,7 +58,7 @@ properties:
       This property determines the separation between the dark and light colors.
       Values less than `0` have reduced contrast while values greater than `0`
       have increased contrast.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -80,7 +80,7 @@ properties:
       This property determines the change in intensity of pixel colors. Values
       above `1` will cause colors to be more vivid while values below `0` will
       make colors more dull, eventually reaching full desaturation at `-1`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -103,7 +103,7 @@ properties:
       are scaled. The effect is multiplicative, so changing this to <Typography
       noWrap>`[255, 0, 0]`</Typography> (red) would cause the green and blue
       channels to be multiplied by `0`.
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''

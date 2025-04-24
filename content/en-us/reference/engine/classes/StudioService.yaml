@@ -23,7 +23,7 @@ description: |
     `Class.StudioService:GetClassIcon()|GetClassIcon`.
   - Plugins that care about which script is currently being edited (if any) can
     read this from `Class.StudioService.ActiveScript|ActiveScript`.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -59,7 +59,7 @@ properties:
 
       StudioService:GetPropertyChangedSignal("ActiveScript"):Connect(onActiveScriptChanged)
       ```
-    code_samples:
+    code_samples: []
     type: Instance
     tags:
       - ReadOnly
@@ -78,7 +78,7 @@ properties:
   - name: StudioService.DraggerSolveConstraints
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - ReadOnly
@@ -97,7 +97,7 @@ properties:
   - name: StudioService.DrawConstraintsOnTop
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - ReadOnly
@@ -124,7 +124,7 @@ properties:
       **GridSize** determines the distance in studs by which Studio's drag and
       move tools move objects each tick. This is set in the user's toolbar's
       **Model** tab.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -148,7 +148,7 @@ properties:
       **RotateIncrement** determines the angle in degrees by which Studio's
       rotation tool will rotate selected objects each tick. This is set in the
       user's toolbar's **Model** tab.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -184,7 +184,7 @@ properties:
   - name: StudioService.ShowConstraintDetails
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - ReadOnly
@@ -241,7 +241,7 @@ properties:
       	print("Bonjour")
       end
       ```
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - ReadOnly
@@ -267,7 +267,7 @@ properties:
       space of an object or global space. By default, this setting is toggled
       with <kbd>Ctrl</kbd><kbd>L</kbd> or <kbd>⌘</kbd><kbd>L</kbd>. Plugins can
       read from this property if they implement their own object movement tools.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - NotReplicated
@@ -315,7 +315,7 @@ methods:
       end
       displayClassIcon(imageLabel, "Part")
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: className
         type: string
@@ -352,7 +352,7 @@ methods:
   - name: StudioService:GizmoRaycast
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: origin
         type: Vector3
@@ -387,7 +387,7 @@ methods:
 
       - `Class.StudioService:PromptImportFiles()`, the same function but for
         loading a list of files instead of a single file
-    code_samples:
+    code_samples: []
     parameters:
       - name: fileTypeFilter
         type: Array
@@ -424,7 +424,7 @@ methods:
 
       - `Class.StudioService:PromptImportFile()`, the same function but for
         loading a single file instead of a list of files
-    code_samples:
+    code_samples: []
     parameters:
       - name: fileTypeFilter
         type: Array

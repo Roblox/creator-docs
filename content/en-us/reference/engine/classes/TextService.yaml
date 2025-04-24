@@ -20,7 +20,7 @@ description: |
   interests of user safety. Developers not using the Roblox default
   `Class.Chat`, or allowing users to otherwise input text must use this
   function.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

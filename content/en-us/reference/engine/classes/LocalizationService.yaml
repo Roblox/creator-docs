@@ -14,7 +14,7 @@ description: |
   LocalizationService will only use its child LocalizationTables for automatic
   text replacement unless `Class.GuiBase2d.RootLocalizationTable` is specified
   on a GUI object or its ancestors.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -30,7 +30,7 @@ properties:
       This property shows the locale ID used for the localization of core and
       internal features such as `Class.CoreGui`. Returns a string with the two
       letter code (for example, `en-us`) for the locale.
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - ReadOnly
@@ -60,7 +60,7 @@ properties:
       their Roblox account which is used for localizing in-experience content.
       This will be a different value when Roblox does not yet internally support
       that player's locale.
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - ReadOnly
@@ -84,7 +84,7 @@ methods:
     description: |
       Returns a list of `Class.LocalizationTable` objects used for localizing
       core scripts.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Instances
@@ -138,7 +138,7 @@ methods:
 
       This function does not yield. It will not wait until the cloud
       `Class.LocalizationTable` has loaded.
-    code_samples:
+    code_samples: []
     parameters:
       - name: instance
         type: Instance

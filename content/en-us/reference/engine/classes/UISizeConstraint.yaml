@@ -32,7 +32,7 @@ properties:
       The largest size, in pixels, the parent object is allowed to be. The **X**
       and **Y** of this value must be greater than or equal to the corresponding
       components of `Class.UISizeConstraint.MinSize|MinSize`.
-    code_samples:
+    code_samples: []
     type: Vector2
     tags: []
     deprecation_message: ''
@@ -54,7 +54,7 @@ properties:
       The smallest size, in pixels, the object is allowed to be. The **X** and
       **Y** of this value must be less than or equal to the corresponding
       components of `Class.UISizeConstraint.MaxSize|MaxSize`.
-    code_samples:
+    code_samples: []
     type: Vector2
     tags: []
     deprecation_message: ''

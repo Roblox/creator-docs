@@ -7,7 +7,7 @@ summary: |
 description: |
   Various miscellaneous options for in-game. Can be accessed from Roblox
   Studio's settings menu under the **Game** tab.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -22,7 +22,7 @@ properties:
       Toggles whether or not video capture is enabled.
     description: |
       Toggles whether or not video capture is enabled.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''

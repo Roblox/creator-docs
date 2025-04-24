@@ -8,7 +8,7 @@ summary: |
 description: |
   The FaceInstance class is an abstract class from which the `Class.Decal` class
   inherits.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -21,7 +21,7 @@ properties:
       Sets what face of the brick the object appears on.
     description: |
       Sets what face of the brick the object appears on.
-    code_samples:
+    code_samples: []
     type: NormalId
     tags: []
     deprecation_message: ''

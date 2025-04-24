@@ -26,7 +26,7 @@ methods:
       Returns the three `Class.FloatCurve|FloatCurves` (X, Y, Z) at the passed
       time argument as an array of three numbers. If a channel curve is missing
       or no key is found in the curve, the channel is evaluated as `nil`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: time
         type: float
@@ -52,7 +52,7 @@ methods:
       Returns the `Class.FloatCurve` controlling the X channel (the first child
       instance of type `Class.FloatCurve` named `X`). If none is found, an empty
       `Class.FloatCurve` is created.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: FloatCurve
@@ -71,7 +71,7 @@ methods:
       Returns the `Class.FloatCurve` controlling the Y channel (the first child
       instance of type `Class.FloatCurve` named `Y`). If none is found, an empty
       `Class.FloatCurve` is created.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: FloatCurve
@@ -90,7 +90,7 @@ methods:
       Returns the `Class.FloatCurve` controlling the Z channel (the first child
       instance of type `Class.FloatCurve` named `Z`). If none is found, an empty
       `Class.FloatCurve` is created.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: FloatCurve

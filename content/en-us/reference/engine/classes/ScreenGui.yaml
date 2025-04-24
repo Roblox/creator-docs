@@ -24,7 +24,7 @@ description: |
 
   If any of these events occur, the `Class.ScreenGui` appearance is recomputed
   on the next frame it gets rendered.
-code_samples:
+code_samples: []
 inherits:
   - LayerCollector
 tags: []
@@ -83,7 +83,7 @@ properties:
       `Class.ScreenGui` containers are drawn. Those with a higher
       `Class.ScreenGui.DisplayOrder|DisplayOrder` will be drawn on top of those
       with a lower value.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -116,7 +116,7 @@ properties:
 
       See `Class.ScreenGui.ScreenInsets|ScreenInsets` for details on how screen
       insets affect the contents of a `Class.ScreenGui`.
-    code_samples:
+    code_samples: []
     type: boolean
     tags:
       - NotReplicated

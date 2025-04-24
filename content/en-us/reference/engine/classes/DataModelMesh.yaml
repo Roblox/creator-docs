@@ -15,7 +15,7 @@ description: |
 
   Note the `Class.MeshPart` and `Class.CharacterMesh` classes do not descend
   from DataModelMesh.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -150,7 +150,7 @@ properties:
       Although this property allows basic modification of a texture, changing a
       texture entirely provides more control. See `Class.MeshPart` for more
       details.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''

@@ -8,7 +8,7 @@ description: |
   This base class provides an API for any instance intended for handling 3D
   spatial queries and simulation, such as `Class.Workspace` and
   `Class.WorldModel`.
-code_samples:
+code_samples: []
 inherits:
   - Model
 tags:
@@ -135,7 +135,7 @@ methods:
       movement is a bottleneck in your code. Simply setting the
       `Class.BasePart.CFrame|CFrame` property of individual parts and welded
       models is fast enough in the majority of cases.
-    code_samples:
+    code_samples: []
     parameters:
       - name: partList
         type: Instances
@@ -193,7 +193,7 @@ methods:
         [collision group](../../../workspace/collisions.md#collision-filtering)
         that does not collide with the "Default" collision group are ignored
         implicitly.
-    code_samples:
+    code_samples: []
     parameters:
       - name: ray
         type: Ray
@@ -239,7 +239,7 @@ methods:
 
       Those looking to **include** a specific group of objects should instead
       use `Class.WorldRoot:FindPartOnRayWithWhitelist()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: ray
         type: Ray
@@ -289,7 +289,7 @@ methods:
 
       Those looking to **exclude** a specific group of objects should instead
       use `Class.WorldRoot:FindPartOnRayWithIgnoreList()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: ray
         type: Ray
@@ -352,7 +352,7 @@ methods:
 
       If no `Class.BasePart|BaseParts` are found, an empty array will be
       returned.
-    code_samples:
+    code_samples: []
     parameters:
       - name: region
         type: Region3
@@ -508,7 +508,7 @@ methods:
       use, and whether the query favors an intersected part's
       `Class.BasePart.CanCollide` value over its `Class.BasePart.CanQuery`
       value.
-    code_samples:
+    code_samples: []
     parameters:
       - name: cframe
         type: CFrame
@@ -558,7 +558,7 @@ methods:
       use, and whether the query favors an intersected part's
       `Class.BasePart.CanCollide` value over its `Class.BasePart.CanQuery`
       value.
-    code_samples:
+    code_samples: []
     parameters:
       - name: position
         type: Vector3
@@ -612,7 +612,7 @@ methods:
       use, and whether the query favors an intersected part's
       `Class.BasePart.CanCollide` value over its `Class.BasePart.CanQuery`
       value.
-    code_samples:
+    code_samples: []
     parameters:
       - name: part
         type: BasePart
@@ -666,7 +666,7 @@ methods:
       - If translate stiffness and rotate stiffness are both equal to 0, then
         the target CFrame will be ignored and physical constraints will be
         solved for the object at the position where it was.
-    code_samples:
+    code_samples: []
     parameters:
       - name: part
         type: BasePart
@@ -756,7 +756,7 @@ methods:
       then `Class.BasePart:GetTouchingParts()` should be used. There is a higher
       cost to using `Class.BasePart:GetTouchingParts()` since a part is needed
       in the `Class.WorldRoot` and the function takes more time to run.
-    code_samples:
+    code_samples: []
     parameters:
       - name: region
         type: Region3
@@ -803,7 +803,7 @@ methods:
       addition of an ignore list. In cases where an inclusion list is required
       instead, developers should check to see if any parts are returned by
       `Class.WorldRoot:FindPartsinRegion3WithWhitelist()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: region
         type: Region3
@@ -1017,7 +1017,7 @@ methods:
   - name: WorldRoot:findPartOnRay
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: ray
         type: Ray
@@ -1050,7 +1050,7 @@ methods:
   - name: WorldRoot:findPartsInRegion3
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: region
         type: Region3

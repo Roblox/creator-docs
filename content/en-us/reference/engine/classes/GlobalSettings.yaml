@@ -17,7 +17,7 @@ description: |
   - `Class.PhysicsSettings`
   - `Class.RenderSettings`
   - `Class.Studio`
-code_samples:
+code_samples: []
 inherits:
   - GenericSettings
 tags:
@@ -31,7 +31,7 @@ methods:
       Returns the value of an FFlag if it exists.
     description: |
       Returns the value of an FFlag if it exists.
-    code_samples:
+    code_samples: []
     parameters:
       - name: name
         type: string
@@ -51,7 +51,7 @@ methods:
       Returns the value of an FVariable, if it exists.
     description: |
       Returns the value of an FVariable, if it exists.
-    code_samples:
+    code_samples: []
     parameters:
       - name: name
         type: string

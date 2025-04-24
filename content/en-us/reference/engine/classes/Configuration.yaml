@@ -51,7 +51,7 @@ description: |
     your code
   - Provides a single location for variables read by multiple scripts in more
     complex games
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []

@@ -12,7 +12,7 @@ description: |
 
   To learn more about using multiple Actors to optimize script performance, see
   [Parallel Luau](../../../scripting/multithreading.md).
-code_samples:
+code_samples: []
 inherits:
   - Model
 tags: []
@@ -43,7 +43,7 @@ methods:
         print("Received Greeting Message:", message)
       end)
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: topic
         type: string
@@ -89,7 +89,7 @@ methods:
         print("Received Greeting Message:", message)
       end)
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: topic
         type: string
@@ -129,7 +129,7 @@ methods:
       -- Assume `actor` is a local variable referring to an Actor instance
       actor:SendMessage("Greeting", "Hello World")
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: topic
         type: string

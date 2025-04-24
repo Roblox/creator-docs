@@ -6,7 +6,7 @@ summary: ''
 description: |
   A Hole is an unused type of surface joint. It can be connected to a
   `Class.MotorFeature` object by using a `Class.VelocityMotor`.
-code_samples:
+code_samples: []
 inherits:
   - Feature
 tags:

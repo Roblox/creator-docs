@@ -325,7 +325,7 @@ methods:
       first) will get a chance to process it. Anything other than Pass will be
       treated as `Enum.ContextActionResult.Sink`, including `nil`. It will also
       sink if the callback is yielded.
-    code_samples:
+    code_samples: []
     parameters:
       - name: actionName
         type: string
@@ -371,7 +371,7 @@ methods:
 
       Note that the `Enum.UserInputType` specified must be `Keyboard` or
       `Gamepad1` through `Gamepad8` in order to be valid.
-    code_samples:
+    code_samples: []
     parameters:
       - name: userInputTypeForActivation
         type: UserInputType
@@ -405,7 +405,7 @@ methods:
       called with the action name itself. Using this function, you can inspect
       all presently bound actions. This is useful when debugging their priority
       levels or stack orders.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Dictionary
@@ -511,7 +511,7 @@ methods:
 
       † Indicates that this field will be `nil` if the associated method was not
       called for the given action.
-    code_samples:
+    code_samples: []
     parameters:
       - name: actionName
         type: string
@@ -535,7 +535,7 @@ methods:
       a `Class.Tool` currently `Class.Tool.Equipped|equipped` by the
       `Class.Player`, or `nil` if there is no such Tool or if the player lacks a
       `Class.Player.Character|Character`.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: string
@@ -746,7 +746,7 @@ methods:
       for activating a `Class.Tool` (or a `Class.HopperBin`) using
       `Class.ContextActionService:BindActivate()|BindActivate`. This function
       essentially undoes the action performed by that function.
-    code_samples:
+    code_samples: []
     parameters:
       - name: userInputTypeForActivation
         type: UserInputType
@@ -775,7 +775,7 @@ methods:
       Removes all functions bound. No actionNames will remain. All touch buttons
       will be removed. If a button was manipulated manually there is no
       guarantee it will be cleaned up.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -801,7 +801,7 @@ methods:
 
       If no such action was bound or if a button was not created, this function
       returns `nil`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: actionName
         type: string
@@ -825,7 +825,7 @@ events:
       Fires when the current player equips a `Class.Tool`.
     description: |
       Fires when the current player equips a `Class.Tool`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: toolEquipped
         type: Instance
@@ -842,7 +842,7 @@ events:
       Fires when the current player unequips a `Class.Tool`.
     description: |
       Fires when the current player unequips a `Class.Tool`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: toolUnequipped
         type: Instance

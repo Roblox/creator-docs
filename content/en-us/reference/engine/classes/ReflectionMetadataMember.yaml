@@ -7,7 +7,7 @@ summary: |
 description: |
   ReflectionMetadataMember represents either a `Function`, `YieldFunction`, or
   `Property` in Roblox's ReflectionMetadata.
-code_samples:
+code_samples: []
 inherits:
   - ReflectionMetadataItem
 tags: []

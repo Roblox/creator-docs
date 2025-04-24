@@ -5,7 +5,7 @@ memory_category: Instances
 summary: ''
 description: |
   See [Data Stores](../../../cloud-services/data-stores/index.md).
-code_samples:
+code_samples: []
 inherits:
   - GlobalDataStore
 tags:
@@ -22,7 +22,7 @@ methods:
       `Class.DataStoreKeyInfo` instance. A version identifier can be found
       through `Class.DataStore:ListVersionsAsync()` or alternatively be the
       identifier returned by `Class.GlobalDataStore:SetAsync()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
@@ -102,7 +102,7 @@ methods:
       If `Class.DataStoreOptions.AllScopes` was set to true when accessing the
       data store through `Class.DataStoreService:GetDataStore()`, keys will be
       returned with all scopes as prefixes.
-    code_samples:
+    code_samples: []
     parameters:
       - name: prefix
         type: string
@@ -206,7 +206,7 @@ methods:
       Unlike `Class.GlobalDataStore:RemoveAsync()`, this function does not
       create a new "tombstone" version and the removed value cannot be retrieved
       later.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string

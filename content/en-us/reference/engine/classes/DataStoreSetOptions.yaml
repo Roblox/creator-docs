@@ -12,7 +12,7 @@ description: |
 
   - [Data Stores](../../../cloud-services/data-stores/index.md), an in-depth
     guide on data structure, management, error handling, etc.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -27,7 +27,7 @@ methods:
     description: |
       This function gets custom metadata associated with this
       `Class.DataStoreSetOptions` instance.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Dictionary
@@ -46,7 +46,7 @@ methods:
       This function sets custom metadata used by
       `Class.GlobalDataStore:SetAsync()` to associate metadata with a key.
       Metadata should be in key-value pair form.
-    code_samples:
+    code_samples: []
     parameters:
       - name: attributes
         type: Dictionary

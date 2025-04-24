@@ -69,7 +69,7 @@ properties:
       When set to `Enum.ModelLevelOfDetail|Disabled` or
       `Enum.ModelLevelOfDetail|Automatic`, lower resolution meshes will not be
       displayed.
-    code_samples:
+    code_samples: []
     type: ModelLevelOfDetail
     tags: []
     deprecation_message: ''
@@ -174,7 +174,7 @@ properties:
       This property is only available in Studio and will throw an error if used
       in a `Script` or `LocalScript`. `Model/ScaleTo` and `Model/GetScale`
       should be used from scripts.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -324,7 +324,7 @@ methods:
       part.Size = size
       part.CFrame = orientation
       ```
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Tuple
@@ -374,7 +374,7 @@ methods:
     description: |
       This value historically returned the CFrame of a central position in the
       model.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: CFrame
@@ -619,7 +619,7 @@ methods:
       Resets the rotation of the model's parts to the previously set identity
       rotation, which is done through the `Class.Model:SetIdentityOrientation()`
       method.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -658,7 +658,7 @@ methods:
       - Physical velocities and forces like `Hinge.MaxServoTorque`
       - Visual properties like sizes of particle emitters
       - Other length properties like `Sound.RollOffMinDistance`
-    code_samples:
+    code_samples: []
     parameters:
       - name: newScaleFactor
         type: float
@@ -682,7 +682,7 @@ methods:
       Sets the identity rotation of the given model, allowing you to reset the
       rotation of the entire model later, through the use of the
       `ResetOrientationToIdentity` method.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -714,7 +714,7 @@ methods:
       Note, this function will throw an error if no `Class.Model.PrimaryPart`
       exists for the model. This can cause issues if, for example, the primary
       part was never set or has been destroyed.
-    code_samples:
+    code_samples: []
     parameters:
       - name: cframe
         type: CFrame
@@ -766,7 +766,7 @@ methods:
   - name: Model:breakJoints
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -783,7 +783,7 @@ methods:
   - name: Model:makeJoints
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -800,7 +800,7 @@ methods:
   - name: Model:move
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: location
         type: Vector3
@@ -821,7 +821,7 @@ methods:
   - name: Model:moveTo
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: location
         type: Vector3

@@ -34,7 +34,7 @@ properties:
 
       Changing the attachments of a trail while a trail is drawing will remove
       all of the segments the trail has already drawn.
-    code_samples:
+    code_samples: []
     type: Attachment
     tags: []
     deprecation_message: ''
@@ -64,7 +64,7 @@ properties:
 
       Changing the attachments of a trail while a trail is drawing will remove
       all of the segments the trail has already drawn.
-    code_samples:
+    code_samples: []
     type: Attachment
     tags: []
     deprecation_message: ''
@@ -89,7 +89,7 @@ properties:
       is 1 by default and can set to any number within the range of 0 to 10000.
       Increasing the value of `Class.Trail.LightInfluence|LightInfluence`
       decreases the effect of this property's value.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -142,7 +142,7 @@ properties:
       end of their `Class.Trail.Lifetime|Lifetime`. To forcibly clean up
       existing segments, call the `Class.Trail:Clear()|Clear()` method at the
       same time.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -170,7 +170,7 @@ properties:
 
       Changing this property immediately affects all existing and future trail
       segments.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -203,7 +203,7 @@ properties:
       If a trail's lifetime changes, existing segments will immediately behave
       as if they always had the new lifetime, meaning that if they've existed
       for longer than the new lifetime, they will be removed immediately.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -235,7 +235,7 @@ properties:
       segments of the trail.
 
       This property does **not** cause the trail to light the environment.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -265,7 +265,7 @@ properties:
 
       See also `Class.Trail.LightEmission|LightEmission` which specifies to what
       degree the colors of the trail are blended with the colors behind it.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -311,7 +311,7 @@ properties:
       This property can be used alongside the `Class.Trail.MinLength|MinLength`
       property which determines the minimum length a trail must be before it's
       drawn.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -342,7 +342,7 @@ properties:
       This property can be used alongside the `Class.Trail.MaxLength|MaxLength`
       property which determines the maximum trail length before its oldest
       segments are erased.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -400,7 +400,7 @@ properties:
       Sets the length of the trail's texture, dependent on
       `Class.Trail.TextureMode|TextureMode`. Changing this property immediately
       affects all existing and future trail segments.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -457,7 +457,7 @@ properties:
         the attachments move, and they will remain in place until their lifetime
         is met. This setting is ideal for trail textures that should appear
         "stamped" where rendered, such as paw prints or tire tracks.
-    code_samples:
+    code_samples: []
     type: TextureMode
     tags: []
     deprecation_message: ''
@@ -481,7 +481,7 @@ properties:
       `Class.Trail.Lifetime|Lifetime`. This value is a
       `Datatype.NumberSequence`, meaning it can be a static value or can change
       throughout the lifetime of the trail segments.
-    code_samples:
+    code_samples: []
     type: NumberSequence
     tags: []
     deprecation_message: ''
@@ -506,7 +506,7 @@ properties:
       For example, if the trail's attachments are 2 stud's apart and the value
       of this property is 0.5, the trail's width will be 1 stud and the trail
       will be centered between the two attachments.
-    code_samples:
+    code_samples: []
     type: NumberSequence
     tags: []
     deprecation_message: ''
@@ -534,7 +534,7 @@ methods:
       trail segments **and** temporarily prevent new segments from being drawn,
       toggle the trail's `Class.Trail.Enabled|Enabled` property to `false` at
       the same time.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()

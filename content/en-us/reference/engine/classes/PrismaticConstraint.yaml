@@ -23,7 +23,7 @@ description: |
   When configuring this constraint, it may be helpful to study
   [Roblox Units](../../../physics/units.md) to understand how Roblox units
   compare to metric units.
-code_samples:
+code_samples: []
 inherits:
   - SlidingBallConstraint
 tags: []

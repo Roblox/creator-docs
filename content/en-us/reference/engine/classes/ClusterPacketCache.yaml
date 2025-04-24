@@ -7,7 +7,7 @@ summary: |
 description: |
   An internal service meant to cache cluster packets. This service will only be
   present if a `Class.NetworkServer` is present.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

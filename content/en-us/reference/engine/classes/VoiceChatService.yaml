@@ -8,7 +8,7 @@ description: |
   **VoiceChatService** is responsible for voice chat's high-level functionality.
   This mostly consists of configuration options, and functions that are not
   specifically-controlled by more-specific instances.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -17,8 +17,19 @@ tags:
 deprecation_message: ''
 properties:
   - name: VoiceChatService.DefaultDistanceAttenuation
-    summary: ''
-    description: ''
+    summary: |
+      Determines which distance attenuation curve the default voice chat setup
+      uses when `Class.AudioDeviceInput` and `Class.AudioEmitter` objects are
+      generated.
+    description: |
+      This property controls the default distance attenuation curve assigned to
+      any generated `Class.AudioEmitter` instances in the default voice chat
+      setup.
+      
+      This property only has an effect if
+      `Class.VoiceChatService.EnableDefaultVoice|EnableDefaultVoice` and
+      `Class.VoiceChatService.UseAudioApi|UseAudioApi` are both enabled, since
+      no `Class.AudioEmitter|AudioEmitters` are otherwise generated.
     code_samples: []
     type: VoiceChatDistanceAttenuationType
     tags: []
@@ -126,7 +137,7 @@ methods:
       	print("Voice chat enabled!")
       end
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: userId
         type: int64

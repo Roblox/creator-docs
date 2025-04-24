@@ -7,7 +7,7 @@ summary: |
 description: |
   A special type of `Class.StatsItem` which measures the runtime average of an
   internal **double** value.
-code_samples:
+code_samples: []
 inherits:
   - StatsItem
 tags:

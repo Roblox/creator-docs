@@ -14,7 +14,7 @@ description: |
   local ControllerService = game:GetService("ControllerService")
   local HumanoidController = ControllerService:FindFirstChildOfClass("HumanoidController")
   ```
-code_samples:
+code_samples: []
 inherits:
   - Controller
 tags: []

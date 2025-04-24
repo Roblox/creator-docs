@@ -8,7 +8,7 @@ description: |
   NetworkSettings is a settings class that allow you to debug a lot of features
   with Roblox's server/client networking. It can be found in Roblox Studio's
   settings, under the **Network** tab.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -21,7 +21,7 @@ properties:
   - name: NetworkSettings.EmulatedTotalMemoryInMB
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - Hidden
@@ -45,7 +45,7 @@ properties:
       memory is available, in MBs. It is stored as a floating point number, so
       it can be read down at the level of available bytes by multiplying its
       value by `1024 * 1024`.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - Hidden
@@ -65,7 +65,7 @@ properties:
   - name: NetworkSettings.HttpProxyEnabled
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -82,7 +82,7 @@ properties:
   - name: NetworkSettings.HttpProxyURL
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -102,7 +102,7 @@ properties:
     description: |
       Instruct the engine to simulate additional lag by delaying all incoming
       messages. Units are seconds.
-    code_samples:
+    code_samples: []
     type: double
     tags: []
     deprecation_message: ''
@@ -124,7 +124,7 @@ properties:
       data will indicate the largest individual Instances sent, as well as
       aggregate data about data sent by Instance type. The data sent for initial
       loading is compressed so the contributions are approximate.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -165,7 +165,7 @@ properties:
         `Class.Instance:GetDebugId()` identifier of the target part. This
         happens if the part was just moved out of the Workspace, and was
         previously being simulated.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -220,7 +220,7 @@ properties:
       - `{2}` – The maximum radius of space around the client's
         `Class.Player.ReplicationFocus` that can have physical instances
         streamed in.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -242,7 +242,7 @@ properties:
       randomizing the order that instances initially arrive on clients. It is
       recommended to keep this setting enabled to help discover potential bugs
       while testing in Studio.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -264,7 +264,7 @@ properties:
       When set to true, regions of space that are being streamed to the client
       will be outlined in red. This will only be shown if
       `Class.Workspace.StreamingEnabled` is set to true.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -287,7 +287,7 @@ properties:
       When set to true, a label will be shown above each player's head, showing
       the current animation being played by the Player's `Class.Humanoid`, if
       any.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''

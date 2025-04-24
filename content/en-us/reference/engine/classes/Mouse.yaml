@@ -53,7 +53,7 @@ description: |
 
     See [Input and Camera](../../../input/index.md) for more information on
     customizing inputs in your experience.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -365,7 +365,7 @@ properties:
 
       Note that the `Class.Player.Character|Character` of the
       `Class.Players.LocalPlayer` is ignored by the mouse automatically.
-    code_samples:
+    code_samples: []
     type: Instance
     tags: []
     deprecation_message: ''
@@ -440,7 +440,7 @@ properties:
       local mouse = player:GetMouse()
       print(mouse.UnitRay.Direction.Magnitude) -- Always 1
       ```
-    code_samples:
+    code_samples: []
     type: Ray
     tags:
       - ReadOnly
@@ -598,7 +598,7 @@ properties:
   - name: Mouse.hit
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: CFrame
     tags:
       - Hidden
@@ -622,7 +622,7 @@ properties:
   - name: Mouse.target
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: BasePart
     tags:
       - ReadOnly
@@ -666,7 +666,7 @@ events:
       You can find out the position of the mouse in world space and if it's
       pointing at any `Class.BasePart` using the `Class.Mouse.Hit|Hit` and
       `Class.Mouse.Target|Target` properties.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
@@ -696,7 +696,7 @@ events:
       You can find out the position of the mouse in world space and if it's
       pointing at any `Class.BasePart` using the `Class.Mouse.Hit|Hit` and
       `Class.Mouse.Target|Target` properties.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
@@ -726,7 +726,7 @@ events:
       You can find out the position of the mouse in world space and if it's
       pointing at any `Class.BasePart` using the `Class.Mouse.Hit|Hit` and
       `Class.Mouse.Target|Target` properties.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
@@ -756,7 +756,7 @@ events:
       You can find out the position of the mouse in world space and if it's
       pointing at any `Class.BasePart` using the `Class.Mouse.Hit|Hit` and
       `Class.Mouse.Target|Target` properties.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
@@ -944,7 +944,7 @@ events:
   - name: Mouse.keyDown
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string

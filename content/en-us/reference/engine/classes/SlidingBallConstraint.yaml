@@ -41,7 +41,7 @@ description: |
   `Class.SlidingBallConstraint|UpperLimit` values, as well as
   `Class.SlidingBallConstraint|Restitution` which defines the elasticity of the
   attachments when they reach either limit.
-code_samples:
+code_samples: []
 inherits:
   - Constraint
 tags:
@@ -73,7 +73,7 @@ properties:
         controlled by `Class.SlidingBallConstraint|Speed`,
         `Class.SlidingBallConstraint|LinearResponsiveness`, and
         `Class.SlidingBallConstraint|ServoMaxForce`.
-    code_samples:
+    code_samples: []
     type: ActuatorType
     tags: []
     deprecation_message: ''
@@ -95,7 +95,7 @@ properties:
     description: |
       The current offset between the constraint's
       `Class.Attachment|Attachments`.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -123,7 +123,7 @@ properties:
       `Class.SlidingBallConstraint|UpperLimit` values, as well as
       `Class.SlidingBallConstraint|Restitution` which defines the elasticity of
       the attachments when they reach either limit.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -148,7 +148,7 @@ properties:
       derived classes' actuator type is set to `Enum.ActuatorType|Servo`. Larger
       values correspond to faster a response and smaller values results in more
       damping and a slower response.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -172,7 +172,7 @@ properties:
       The lower positional limit along the **X** axis of
       `Class.Constraint.Attachment0|Attachment0` if
       `Class.SlidingBallConstraint.LimitsEnabled|LimitsEnabled` is true.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -198,7 +198,7 @@ properties:
       `Class.SlidingBallConstraint.ActuatorType|ActuatorType` is set to
       `Enum.ActuatorType|Motor`, as the constraint attempts to reach its desired
       `Class.SlidingBallConstraint.Velocity|Velocity`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -224,7 +224,7 @@ properties:
       `Class.SlidingBallConstraint.ActuatorType|ActuatorType` is set to
       `Enum.ActuatorType|Motor`, as the constraint attempts to reach its desired
       `Class.SlidingBallConstraint.Velocity|Velocity`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -253,7 +253,7 @@ properties:
       `Class.SlidingBallConstraint.LowerLimit|LowerLimit`, assuming
       `Class.SlidingBallConstraint.LimitsEnabled|LimitsEnabled` is set to true.
       The valid range is between 0&ndash;1.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -279,7 +279,7 @@ properties:
       `Class.SlidingBallConstraint.ActuatorType|ActuatorType` is set to
       `Enum.ActuatorType|Servo`, as the constraint attempts to reach its desired
       `Class.SlidingBallConstraint.Speed|Speed`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -299,7 +299,7 @@ properties:
       The constraint's visualized size.
     description: |
       The constraint's visualized size.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -347,7 +347,7 @@ properties:
       `Enum.ActuatorType|Servo`, as the constraint translates towards its
       `Class.SlidingBallConstraint.TargetPosition|TargetPosition`. Measured in
       studs per second.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -371,7 +371,7 @@ properties:
       The constraint's attempted target position when
       `Class.SlidingBallConstraint.ActuatorType|ActuatorType` is set to
       `Enum.ActuatorType|Servo` Measured in studs.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -395,7 +395,7 @@ properties:
       The upper positional limit along the **X** axis of
       `Class.Constraint.Attachment0|Attachment0` if
       `Class.SlidingBallConstraint.LimitsEnabled|LimitsEnabled` is true.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -419,7 +419,7 @@ properties:
       The constraint's attempted velocity when
       `Class.SlidingBallConstraint.ActuatorType|ActuatorType` is set to
       `Enum.ActuatorType|Motor`. Measured in studs per second.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

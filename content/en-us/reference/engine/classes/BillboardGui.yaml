@@ -45,7 +45,7 @@ description: |
   - A descendant is added to or removed from the `Class.BillboardGui`.
   - A property of a descendant of the `Class.BillboardGui` changes.
   - A property of the `Class.BillboardGui` itself changes.
-code_samples:
+code_samples: []
 inherits:
   - LayerCollector
 tags: []
@@ -67,7 +67,7 @@ properties:
       The `Class.BillboardGui.Adornee|Adornee` property can be used to target a
       part or attachment in the 3D world while the `Class.BillboardGui` itself
       remains in the `Class.PlayerGui`.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -90,7 +90,7 @@ properties:
       Sets the target `Class.BasePart` or `Class.Attachment` that the
       `Class.BillboardGui` is positioned relative to, overriding the parent part
       or attachment.
-    code_samples:
+    code_samples: []
     type: Instance
     tags: []
     deprecation_message: ''
@@ -123,7 +123,7 @@ properties:
       - `Class.BillboardGui.LightInfluence|LightInfluence` is treated as though
         it's `0`.
       - `Class.BillboardGui.Brightness|Brightness` has no effect.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -156,7 +156,7 @@ properties:
       Studio and has no effect when either
       `Class.BillboardGui.LightInfluence|LightInfluence` is `1` or
       `Class.BillboardGui.AlwaysOnTop|AlwaysOnTop` is `true`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -182,7 +182,7 @@ properties:
 
       Even when this property is `false`, `Class.GuiObject|GuiObjects` that are
       **completely** outside of the canvas will not render.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -205,7 +205,7 @@ properties:
       The current distance in studs that the `Class.BillboardGui` is from the
       player's camera. A changed event does not fire for this property unless
       `Class.BillboardGui.DistanceStep|DistanceStep` is more than `0`.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -234,7 +234,7 @@ properties:
       `Class.BillboardGui` is below this value, it will not scale any larger
       than it would at this
       `Class.BillboardGui.DistanceLowerLimit|DistanceLowerLimit` distance.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -260,7 +260,7 @@ properties:
       further from the `Class.BillboardGui`. The property defaults to `0` and
       rounds up starting from
       `Class.BillboardGui.DistanceLowerLimit|DistanceLowerLimit`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -289,7 +289,7 @@ properties:
 
       This property is ignored if the value is less than `0`. The default value
       is `-1`, meaning the property is ignored by default.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -321,7 +321,7 @@ properties:
       `Class.BillboardGui.ExtentsOffsetWorldSpace|ExtentsOffsetWorldSpace` which
       works similarly except the offset orientation is relative to the global
       axes.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -350,7 +350,7 @@ properties:
       similarly but uses stud units, or
       `Class.BillboardGui.ExtentsOffset|ExtentsOffset` which works similarly
       except the offset orientation is relative to the `Class.Camera`.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -374,7 +374,7 @@ properties:
       lighting, in a range from `0` to `1`. Setting this to `1` means that
       surrounding lighting has complete control over the appearance, while
       setting it to `0` means that the lighting has no effect.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -403,7 +403,7 @@ properties:
       enough to ensure that the container's UI is sufficiently small on the
       screen when it appears or disappears, minimizing the sudden pop‑in/out
       effect.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -431,7 +431,7 @@ properties:
       `Class.BillboardGui.Adornee|Adornee` property can be used to attach the
       `Class.BillboardGui` to a `Class.BasePart` or `Class.Attachment` in the
       `Class.Workspace`, instead of parenting it.
-    code_samples:
+    code_samples: []
     type: Instance
     tags: []
     deprecation_message: ''
@@ -454,7 +454,7 @@ properties:
       Unlike `Class.GuiObject.Size`, the
       [scale](../../../ui/position-and-size.md#size) components of this property
       set the billboard's stud size in 3D space.
-    code_samples:
+    code_samples: []
     type: UDim2
     tags: []
     deprecation_message: ''
@@ -511,7 +511,7 @@ properties:
       `Class.BillboardGui.ExtentsOffset|ExtentsOffset`, and
       `Class.BillboardGui.ExtentsOffsetWorldSpace|ExtentsOffsetWorldSpace` which
       are offset properties that work in 3D space instead.
-    code_samples:
+    code_samples: []
     type: Vector2
     tags: []
     deprecation_message: ''
@@ -539,7 +539,7 @@ properties:
       See also `Class.BillboardGui.StudsOffsetWorldSpace|StudsOffsetWorldSpace`
       which works similarly except the offset orientation is relative to the
       global axes.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -566,7 +566,7 @@ properties:
 
       See also `Class.BillboardGui.StudsOffset|StudsOffset` which works
       similarly except the offset orientation is relative to the `Class.Camera`.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''

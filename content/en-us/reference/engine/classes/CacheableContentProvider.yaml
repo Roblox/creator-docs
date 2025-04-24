@@ -10,7 +10,7 @@ description: |
   A variant of the `Class.ContentProvider` that caches assets that have already
   been received. This service is not used directly, but it is used by the
   services that inherit from it.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

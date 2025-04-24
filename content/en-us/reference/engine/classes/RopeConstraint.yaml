@@ -29,7 +29,7 @@ description: |
   value, used to either contract or extend the rope length to
   `Class.RopeConstraint.WinchTarget|WinchTarget`. Setting a negative speed will
   revert to 0, not reverse the winch servo direction.
-code_samples:
+code_samples: []
 inherits:
   - Constraint
 tags: []
@@ -42,7 +42,7 @@ properties:
     description: |
       The current distance between the constraint's
       `Class.Attachment|Attachments`.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -65,7 +65,7 @@ properties:
     description: |
       The maximum distance apart the two `Class.Attachment|Attachments` can be.
       Measured in studs.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -89,7 +89,7 @@ properties:
       Elasticity of the `Class.Attachment|Attachments` connected by the
       constraint when reaching the maximum defined
       `Class.RopeConstraint.Length|Length`. Constrained between 0 and 1.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -109,7 +109,7 @@ properties:
       The visualized thickness of the `Class.RopeConstraint`.
     description: |
       The visualized thickness of the `Class.RopeConstraint`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -130,7 +130,7 @@ properties:
     description: |
       Enables the winch motor which has the effect or reeling in/out the length
       of the rope to `Class.RopeConstraint.WinchTarget|WinchTarget`.
-    code_samples:
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -150,7 +150,7 @@ properties:
       The maximum force that the winch motor can apply.
     description: |
       The maximum force that the winch motor can apply.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -172,7 +172,7 @@ properties:
     description: |
       The sharpness of the winch motor in reaching the
       `Class.RopeConstraint.WinchTarget|WinchTarget`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -194,7 +194,7 @@ properties:
     description: |
       A positive desired velocity at which the winch motor changes the rope
       length.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -214,7 +214,7 @@ properties:
       The target length for the winch motor.
     description: |
       The target length for the winch motor.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

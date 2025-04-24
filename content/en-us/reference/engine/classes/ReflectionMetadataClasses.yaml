@@ -6,7 +6,7 @@ summary: |
   An internal object which cannot be used by developers.
 description: |
   Acts as a `Class.Folder` for `Class.ReflectionMetadataClass` objects.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
