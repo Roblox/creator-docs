@@ -683,7 +683,13 @@ events:
   - name: RunService.RenderStepped
     summary: |
       Fires every frame, prior to the frame being rendered.
-    description: ''
+    description: |
+      Fires every frame, prior to the frame being rendered.
+
+      ##### Migration Note
+
+      This event has been superseded by `Class.RunService.PreRender|PreRender`
+      which should be used for new work.
     code_samples: []
     parameters:
       - name: deltaTime
@@ -692,9 +698,7 @@ events:
         summary: |
           The time (in seconds) that has elapsed since the previous frame.
     tags: []
-    deprecation_message: |
-      This event has been superseded by `Class.RunService.PreRender|PreRender`
-      which should be used for new work.
+    deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -702,7 +706,13 @@ events:
   - name: RunService.Stepped
     summary: |
       Fires every frame, prior to the physics simulation.
-    description: ''
+    description: |
+      Fires every frame, prior to the physics simulation.
+
+      ##### Migration Note
+      
+      This event has been superseded by `Class.RunService.PreSimulation|PreSimulation`
+      which should be used for new work.
     code_samples: []
     parameters:
       - name: time
@@ -717,10 +727,7 @@ events:
         summary: |
           The time (in seconds) that has elapsed since the previous frame.
     tags: []
-    deprecation_message: |
-      This event has been superseded by
-      `Class.RunService.PreSimulation|PreSimulation` which should be used for
-      new work.
+    deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
