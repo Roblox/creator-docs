@@ -53,7 +53,7 @@ methods:
     parameters:
       - name: toUserId
         type: int64
-        default:
+        default: ''
         summary: |
           `Class.Player.UserId` of the user being chatted.
     returns:
@@ -65,7 +65,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: TextFilterResult:GetNonChatStringForBroadcastAsync
     summary: |
@@ -86,7 +87,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: TextFilterResult:GetNonChatStringForUserAsync
     summary: |
@@ -101,7 +103,7 @@ methods:
     parameters:
       - name: toUserId
         type: int64
-        default:
+        default: ''
         summary: |
           `Class.Player.UserId` of the user intended to see/receive the text.
     returns:
@@ -113,7 +115,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 events: []
 callbacks: []

@@ -708,12 +708,12 @@ methods:
     parameters:
       - name: gamepadNum
         type: UserInputType
-        default:
+        default: ''
         summary: |
           The `Enum.UserInputType` of the gamepad.
       - name: gamepadKeyCode
         type: KeyCode
-        default:
+        default: ''
         summary: |
           The `Enum.KeyCode` of the button in question.
     returns:
@@ -725,7 +725,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService:GetConnectedGamepads
     summary: |
@@ -774,7 +775,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService:GetDeviceAcceleration
     summary: |
@@ -804,7 +806,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService:GetDeviceGravity
     summary: |
@@ -846,7 +849,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService:GetDeviceRotation
     summary: |
@@ -881,7 +885,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService:GetFocusedTextBox
     summary: |
@@ -911,7 +916,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService:GetGamepadConnected
     summary: |
@@ -945,7 +951,7 @@ methods:
     parameters:
       - name: gamepadNum
         type: UserInputType
-        default:
+        default: ''
         summary: |
           The `Enum.UserInputType` of the gamepad in question.
     returns:
@@ -956,7 +962,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService:GetGamepadState
     summary: |
@@ -987,7 +994,7 @@ methods:
     parameters:
       - name: gamepadNum
         type: UserInputType
-        default:
+        default: ''
         summary: |
           The `Enum.UserInputType` corresponding with the gamepad in question.
     returns:
@@ -999,7 +1006,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService:GetImageForKeyCode
     summary: |
@@ -1017,7 +1025,7 @@ methods:
     parameters:
       - name: keyCode
         type: KeyCode
-        default:
+        default: ''
         summary: |
           The `Enum.KeyCode` for which to fetch the associated image.
     returns:
@@ -1028,7 +1036,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService:GetKeysPressed
     summary: |
@@ -1058,7 +1067,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService:GetLastInputType
     summary: |
@@ -1087,7 +1097,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService:GetMouseButtonsPressed
     summary: |
@@ -1137,7 +1148,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService:GetMouseDelta
     summary: |
@@ -1168,7 +1180,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService:GetMouseLocation
     summary: |
@@ -1197,7 +1210,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService:GetNavigationGamepads
     summary: |
@@ -1236,7 +1250,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService:GetStringForKeyCode
     summary: |
@@ -1594,7 +1609,7 @@ methods:
     parameters:
       - name: keyCode
         type: KeyCode
-        default:
+        default: ''
         summary: ''
     returns:
       - type: string
@@ -1603,7 +1618,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService:GetSupportedGamepadKeyCodes
     summary: |
@@ -1638,7 +1654,7 @@ methods:
     parameters:
       - name: gamepadNum
         type: UserInputType
-        default:
+        default: ''
         summary: |
           The `Enum.UserInputType` of the gamepad.
     returns:
@@ -1649,7 +1665,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService:GetUserCFrame
     summary: |
@@ -1691,7 +1708,7 @@ methods:
     parameters:
       - name: type
         type: UserCFrame
-        default:
+        default: ''
         summary: |
           The `Enum.UserCFrame` corresponding to the VR device.
     returns:
@@ -1704,7 +1721,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService:IsGamepadButtonDown
     summary: |
@@ -1823,12 +1841,12 @@ methods:
     parameters:
       - name: gamepadNum
         type: UserInputType
-        default:
+        default: ''
         summary: |
           The `Enum.UserInputType` of the given gamepad.
       - name: gamepadKeyCode
         type: KeyCode
-        default:
+        default: ''
         summary: |
           The `Enum.KeyCode` of the specified button.
     returns:
@@ -1840,7 +1858,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService:IsKeyDown
     summary: |
@@ -1875,7 +1894,7 @@ methods:
     parameters:
       - name: keyCode
         type: KeyCode
-        default:
+        default: ''
         summary: |
           The `Enum.KeyCode` of the key.
     returns:
@@ -1886,7 +1905,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService:IsMouseButtonPressed
     summary: |
@@ -1912,7 +1932,7 @@ methods:
     parameters:
       - name: mouseButton
         type: UserInputType
-        default:
+        default: ''
         summary: |
           The `Enum.UserInputType` of the mouse button.
     returns:
@@ -1923,7 +1943,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService:IsNavigationGamepad
     summary: |
@@ -1973,7 +1994,7 @@ methods:
     parameters:
       - name: gamepadEnum
         type: UserInputType
-        default:
+        default: ''
         summary: |
           The `Enum.UserInputType` of the specified gamepad.
     returns:
@@ -1984,7 +2005,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService:RecenterUserHeadCFrame
     summary: |
@@ -2013,7 +2035,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService:SetNavigationGamepad
     summary: |
@@ -2053,12 +2076,12 @@ methods:
     parameters:
       - name: gamepadEnum
         type: UserInputType
-        default:
+        default: ''
         summary: |
           The `Enum.UserInputType` of the specified gamepad.
       - name: enabled
         type: boolean
-        default:
+        default: ''
         summary: |
           Whether the specified gamepad can move the GUI navigator.
     returns:
@@ -2068,7 +2091,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 events:
   - name: UserInputService.DeviceAccelerationChanged
@@ -2101,7 +2125,7 @@ events:
     parameters:
       - name: acceleration
         type: InputObject
-        default:
+        default: ''
         summary: |
           An `Class.InputObject`, with a
           `Class.InputObject.UserInputType|UserInputType` of _'Accelerometer'_,
@@ -2111,7 +2135,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.DeviceGravityChanged
     summary: |
@@ -2147,7 +2172,7 @@ events:
     parameters:
       - name: gravity
         type: InputObject
-        default:
+        default: ''
         summary: |
           An `Class.InputObject`, with a `Class.InputObject.Position` property
           that shows the force of gravity on each local device axis. This
@@ -2157,7 +2182,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.DeviceRotationChanged
     summary: |
@@ -2185,7 +2211,7 @@ events:
     parameters:
       - name: rotation
         type: InputObject
-        default:
+        default: ''
         summary: |
           An `Class.InputObject` providing info about the device's rotation.
           `Class.InputObject.Position` represents the new rotation a
@@ -2194,14 +2220,15 @@ events:
           value.
       - name: cframe
         type: CFrame
-        default:
+        default: ''
         summary: |
           A `Datatype.CFrame` representing the device's current orientation.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.GamepadConnected
     summary: |
@@ -2249,14 +2276,15 @@ events:
     parameters:
       - name: gamepadNum
         type: UserInputType
-        default:
+        default: ''
         summary: |
           The `Enum.UserInputType` of the connected gamepad.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.GamepadDisconnected
     summary: |
@@ -2300,14 +2328,15 @@ events:
     parameters:
       - name: gamepadNum
         type: UserInputType
-        default:
+        default: ''
         summary: |
           The`Enum.UserInputType` of the disconnected gamepad.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.InputBegan
     summary: |
@@ -2336,13 +2365,13 @@ events:
     parameters:
       - name: input
         type: InputObject
-        default:
+        default: ''
         summary: |
           An `Class.InputObject` instance, which contains information about the
           user's input.
       - name: gameProcessedEvent
         type: boolean
-        default:
+        default: ''
         summary: |
           Indicates whether the game engine internally observed this input and
           acted on it. Generally this refers to UI processing, so if a button
@@ -2353,7 +2382,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.InputChanged
     summary: |
@@ -2381,13 +2411,13 @@ events:
     parameters:
       - name: input
         type: InputObject
-        default:
+        default: ''
         summary: |
           An `Class.InputObject` instance, which contains information about the
           user's input.
       - name: gameProcessedEvent
         type: boolean
-        default:
+        default: ''
         summary: |
           Indicates whether the game engine internally observed this input and
           acted on it. Generally this refers to UI processing, so if a button
@@ -2398,7 +2428,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.InputEnded
     summary: |
@@ -2423,13 +2454,13 @@ events:
     parameters:
       - name: input
         type: InputObject
-        default:
+        default: ''
         summary: |
           An `Class.InputObject` instance, which contains information about the
           user input.
       - name: gameProcessedEvent
         type: boolean
-        default:
+        default: ''
         summary: |
           Indicates whether the game engine internally observed this input and
           acted on it. Generally this refers to UI processing, so if a button
@@ -2440,7 +2471,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.JumpRequest
     summary: |
@@ -2488,7 +2520,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.LastInputTypeChanged
     summary: |
@@ -2510,14 +2543,15 @@ events:
     parameters:
       - name: lastInputType
         type: UserInputType
-        default:
+        default: ''
         summary: |
           A `Enum.UserInputType` indicating the last input type.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.PointerAction
     summary: |
@@ -2530,25 +2564,26 @@ events:
     parameters:
       - name: wheel
         type: float
-        default:
+        default: ''
         summary: ''
       - name: pan
         type: Vector2
-        default:
+        default: ''
         summary: ''
       - name: pinch
         type: float
-        default:
+        default: ''
         summary: ''
       - name: gameProcessedEvent
         type: boolean
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.TextBoxFocusReleased
     summary: |
@@ -2586,14 +2621,15 @@ events:
     parameters:
       - name: textboxReleased
         type: TextBox
-        default:
+        default: ''
         summary: |
           The `Class.TextBox` that lost focus.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.TextBoxFocused
     summary: |
@@ -2631,14 +2667,15 @@ events:
     parameters:
       - name: textboxFocused
         type: TextBox
-        default:
+        default: ''
         summary: |
           The `Class.TextBox` that gained focus.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.TouchDrag
     summary: ''
@@ -2647,21 +2684,22 @@ events:
     parameters:
       - name: dragDirection
         type: SwipeDirection
-        default:
+        default: ''
         summary: ''
       - name: numberOfTouches
         type: int
-        default:
+        default: ''
         summary: ''
       - name: gameProcessedEvent
         type: boolean
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.TouchEnded
     summary: |
@@ -2719,13 +2757,13 @@ events:
     parameters:
       - name: touch
         type: InputObject
-        default:
+        default: ''
         summary: |
           An `Class.InputObject` instance, which contains information about the
           user's input.
       - name: gameProcessedEvent
         type: boolean
-        default:
+        default: ''
         summary: |
           Indicates whether the game engine internally observed this input and
           acted on it. Generally this refers to UI processing, so if a button
@@ -2736,7 +2774,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.TouchLongPress
     summary: |
@@ -2795,18 +2834,18 @@ events:
     parameters:
       - name: touchPositions
         type: Array
-        default:
+        default: ''
         summary: |
           An array of `Datatype.Vector2` objects, indicating the position of the
           fingers involved in the gesture.
       - name: state
         type: UserInputState
-        default:
+        default: ''
         summary: |
           The `Enum.UserInputState` of the gesture.
       - name: gameProcessedEvent
         type: boolean
-        default:
+        default: ''
         summary: |
           Indicates whether the game engine internally observed this input and
           acted on it. Generally this refers to UI processing, so if a button
@@ -2817,7 +2856,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.TouchMoved
     summary: |
@@ -2879,13 +2919,13 @@ events:
     parameters:
       - name: touch
         type: InputObject
-        default:
+        default: ''
         summary: |
           An `Class.InputObject` instance, which contains information about the
           user's input.
       - name: gameProcessedEvent
         type: boolean
-        default:
+        default: ''
         summary: |
           Indicates whether the game engine internally observed this input and
           acted on it. Generally this refers to UI processing, so if a button
@@ -2896,7 +2936,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.TouchPan
     summary: |
@@ -2948,28 +2989,28 @@ events:
     parameters:
       - name: touchPositions
         type: Array
-        default:
+        default: ''
         summary: |
           An array of `Datatype.Vector2` objects, indicating the positions of
           the touches (e.g. fingers) involved in the gesture.
       - name: totalTranslation
         type: Vector2
-        default:
+        default: ''
         summary: |
           The size of the pan gesture from start to end (in pixels).
       - name: velocity
         type: Vector2
-        default:
+        default: ''
         summary: |
           The speed of the pan gesture (in pixels) per second.
       - name: state
         type: UserInputState
-        default:
+        default: ''
         summary: |
           The `Enum.UserInputState` of the gesture.
       - name: gameProcessedEvent
         type: boolean
-        default:
+        default: ''
         summary: |
           Indicates whether the game engine internally observed this input and
           acted on it. Generally this refers to UI processing, so if a button
@@ -2980,7 +3021,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.TouchPinch
     summary: |
@@ -3026,29 +3068,29 @@ events:
     parameters:
       - name: touchPositions
         type: Array
-        default:
+        default: ''
         summary: |
           An array of `Datatype.Vector2|Vector2s`, indicating the screen
           position, in pixels, of the fingers involved in the pinch gesture.
       - name: scale
         type: float
-        default:
+        default: ''
         summary: |
           The magnitude of the pinch from start to finish (in pixels) divided by
           the starting pinch positions.
       - name: velocity
         type: float
-        default:
+        default: ''
         summary: |
           The speed of the pinch gesture (in pixels) per second.
       - name: state
         type: UserInputState
-        default:
+        default: ''
         summary: |
           The `Enum.UserInputState` of the gesture.
       - name: gameProcessedEvent
         type: boolean
-        default:
+        default: ''
         summary: |
           Indicates whether the game engine internally observed this input and
           acted on it. Generally this refers to UI processing, so if a button
@@ -3059,7 +3101,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.TouchRotate
     summary: |
@@ -3112,30 +3155,30 @@ events:
     parameters:
       - name: touchPositions
         type: Array
-        default:
+        default: ''
         summary: |
           An array of `Datatype.Vector2|Vector2s`, indicating the positions of
           the fingers involved in the gesture.
       - name: rotation
         type: float
-        default:
+        default: ''
         summary: |
           The number of degree the gesture has rotated since the start of the
           gesture.
       - name: velocity
         type: float
-        default:
+        default: ''
         summary: |
           The change in rotation (in degrees) divided by the duration of the
           change (in seconds).
       - name: state
         type: UserInputState
-        default:
+        default: ''
         summary: |
           The `Enum.UserInputState` of the gesture.
       - name: gameProcessedEvent
         type: boolean
-        default:
+        default: ''
         summary: |
           Indicates whether the game engine internally observed this input and
           acted on it. Generally this refers to UI processing, so if a button
@@ -3146,7 +3189,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.TouchStarted
     summary: |
@@ -3191,13 +3235,13 @@ events:
     parameters:
       - name: touch
         type: InputObject
-        default:
+        default: ''
         summary: |
           An `Class.InputObject` instance, which contains information about the
           user's input.
       - name: gameProcessedEvent
         type: boolean
-        default:
+        default: ''
         summary: |
           Indicates whether the game engine internally observed this input and
           acted on it. Generally this refers to UI processing, so if a button
@@ -3208,7 +3252,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.TouchSwipe
     summary: |
@@ -3251,17 +3296,17 @@ events:
     parameters:
       - name: swipeDirection
         type: SwipeDirection
-        default:
+        default: ''
         summary: |
           An `Enum.SwipeDirection`, indicating the direction the user swiped.
       - name: numberOfTouches
         type: int
-        default:
+        default: ''
         summary: |
           Number of touches (e.g. fingers) involved in the gesture.
       - name: gameProcessedEvent
         type: boolean
-        default:
+        default: ''
         summary: |
           Indicates whether the game engine internally observed this input and
           acted on it. Generally this refers to UI processing, so if a button
@@ -3272,7 +3317,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.TouchTap
     summary: |
@@ -3301,13 +3347,13 @@ events:
     parameters:
       - name: touchPositions
         type: Array
-        default:
+        default: ''
         summary: |
           An array of `Datatype.Vector2` objects, indicating the position of the
           fingers involved in the tap gesture.
       - name: gameProcessedEvent
         type: boolean
-        default:
+        default: ''
         summary: |
           Indicates whether the game engine internally observed this input and
           acted on it. Generally this refers to UI processing, so if a button
@@ -3318,7 +3364,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.TouchTapInWorld
     summary: |
@@ -3359,19 +3406,20 @@ events:
     parameters:
       - name: position
         type: Vector2
-        default:
+        default: ''
         summary: |
           A `Datatype.Vector2` indicating the position of the touch.
       - name: processedByUI
         type: boolean
-        default:
+        default: ''
         summary: |
           Whether the user tapped a GUI element.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.UserCFrameChanged
     summary: |
@@ -3409,12 +3457,12 @@ events:
     parameters:
       - name: type
         type: UserCFrame
-        default:
+        default: ''
         summary: |
           A `Enum.UserCFrame` value indicating which body part moved.
       - name: value
         type: CFrame
-        default:
+        default: ''
         summary: |
           A `Datatype.CFrame` value indicating the updated CFrame of the body
           part that moved.
@@ -3423,7 +3471,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.WindowFocusReleased
     summary: |
@@ -3457,7 +3506,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: UserInputService.WindowFocused
     summary: |
@@ -3493,6 +3543,7 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 callbacks: []

@@ -38,12 +38,13 @@ events:
     parameters:
       - name: instances
         type: Instances
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 callbacks: []

@@ -165,7 +165,7 @@ methods:
     parameters:
       - name: impulseWorld
         type: Vector3
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -178,7 +178,8 @@ methods:
       `Class.VehicleSeat` object can be used to quickly create simple vehicles.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 events:
   - name: SkateboardPlatform.Equipped
@@ -190,13 +191,13 @@ events:
     parameters:
       - name: humanoid
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Humanoid` associated with the character equipping the
           skateboard.
       - name: skateboardController
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.SkateboardController`.
     tags: []
@@ -207,7 +208,8 @@ events:
       `Class.VehicleSeat` object can be used to quickly create simple vehicles.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: SkateboardPlatform.MoveStateChanged
     summary: |
@@ -222,12 +224,12 @@ events:
     parameters:
       - name: newState
         type: MoveState
-        default:
+        default: ''
         summary: |
           The new `Enum.MoveState`.
       - name: oldState
         type: MoveState
-        default:
+        default: ''
         summary: |
           The old `Enum.MoveState`.
     tags: []
@@ -238,7 +240,8 @@ events:
       `Class.VehicleSeat` object can be used to quickly create simple vehicles.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: SkateboardPlatform.Unequipped
     summary: |
@@ -249,7 +252,7 @@ events:
     parameters:
       - name: humanoid
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Humanoid` associated with the character that unequipped the
           skateboard.
@@ -261,7 +264,8 @@ events:
       `Class.VehicleSeat` object can be used to quickly create simple vehicles.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: SkateboardPlatform.equipped
     summary: ''
@@ -270,11 +274,11 @@ events:
     parameters:
       - name: humanoid
         type: Instance
-        default:
+        default: ''
         summary: ''
       - name: skateboardController
         type: Instance
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -283,7 +287,8 @@ events:
       which has also been deprecated. Neither event should be used in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: SkateboardPlatform.unequipped
     summary: ''
@@ -292,7 +297,7 @@ events:
     parameters:
       - name: humanoid
         type: Instance
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -302,6 +307,7 @@ events:
       Neither event should be used in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 callbacks: []

@@ -397,7 +397,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationTrack:AdjustWeight
     summary: |
@@ -453,7 +454,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationTrack:GetMarkerReachedSignal
     summary: |
@@ -495,7 +497,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           The name of the `KeyFrameMarker` the signal is being created for.
     returns:
@@ -507,7 +509,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationTrack:GetTargetInstance
     summary: ''
@@ -516,7 +519,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instance
@@ -525,7 +528,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationTrack:GetTargetNames
     summary: ''
@@ -539,7 +543,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationTrack:GetTimeOfKeyframe
     summary: |
@@ -563,7 +568,7 @@ methods:
     parameters:
       - name: keyframeName
         type: string
-        default:
+        default: ''
         summary: |
           The name associated with the `Class.Keyframe` to be found.
     returns:
@@ -575,7 +580,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationTrack:Play
     summary: |
@@ -629,7 +635,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationTrack:SetTargetInstance
     summary: ''
@@ -638,11 +645,11 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
       - name: target
         type: Instance
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -651,7 +658,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationTrack:Stop
     summary: |
@@ -687,7 +695,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
 events:
   - name: AnimationTrack.DidLoop
@@ -707,7 +716,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationTrack.Ended
     summary: |
@@ -729,7 +739,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationTrack.KeyframeReached
     summary: |
@@ -756,7 +767,7 @@ events:
     parameters:
       - name: keyframeName
         type: string
-        default:
+        default: ''
         summary: |
           The name of the `Class.Keyframe` reached.
     tags: []
@@ -767,7 +778,8 @@ events:
       [Animation Editor](../../../animation/editor.md).
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationTrack.Stopped
     summary: |
@@ -790,6 +802,7 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
 callbacks: []

@@ -60,7 +60,7 @@ events:
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: |
@@ -68,6 +68,7 @@ events:
       should not be used in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 callbacks: []

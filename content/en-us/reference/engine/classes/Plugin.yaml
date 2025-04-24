@@ -123,7 +123,7 @@ methods:
     parameters:
       - name: exclusiveMouse
         type: boolean
-        default:
+        default: ''
         summary: |
           A boolean specifying whether to activate the plugin with exclusive
           mouse. If true, a `Class.PluginMouse` can be retrieved via
@@ -166,17 +166,17 @@ methods:
     parameters:
       - name: actionId
         type: string
-        default:
+        default: ''
         summary: |
           Must be a unique string that identifies this PluginAction from others.
       - name: text
         type: string
-        default:
+        default: ''
         summary: |
           The displayed name of the action.
       - name: statusTip
         type: string
-        default:
+        default: ''
         summary: |
           The displayed description of the action.
       - name: iconName
@@ -235,7 +235,7 @@ methods:
     parameters:
       - name: id
         type: string
-        default:
+        default: ''
         summary: |
           Unique ID for the menu.
       - name: title
@@ -268,7 +268,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           The visible text on the toolbar, labeling the group of buttons
           contained within.
@@ -385,7 +385,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Variant
@@ -422,7 +422,7 @@ methods:
     parameters:
       - name: objects
         type: Instances
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instance
@@ -488,7 +488,7 @@ methods:
     parameters:
       - name: objects
         type: Instances
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instances
@@ -513,7 +513,7 @@ methods:
     parameters:
       - name: script
         type: LuaSourceContainer
-        default:
+        default: ''
         summary: ''
       - name: lineNumber
         type: int
@@ -538,7 +538,7 @@ methods:
     parameters:
       - name: url
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -581,11 +581,11 @@ methods:
     parameters:
       - name: tool
         type: RibbonTool
-        default:
+        default: ''
         summary: ''
       - name: position
         type: UDim2
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -605,7 +605,7 @@ methods:
     parameters:
       - name: objects
         type: Instances
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instances
@@ -644,11 +644,11 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
       - name: value
         type: Variant
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -738,7 +738,7 @@ methods:
     parameters:
       - name: dragData
         type: Dictionary
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -758,7 +758,7 @@ methods:
     parameters:
       - name: objects
         type: Instances
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instance
@@ -783,13 +783,13 @@ methods:
     parameters:
       - name: pluginGuiId
         type: string
-        default:
+        default: ''
         summary: |
           A unique and consistent identifier used to storing the widget's dock
           state and other internal details.
       - name: dockWidgetPluginGuiInfo
         type: DockWidgetPluginGuiInfo
-        default:
+        default: ''
         summary: |
           Describes the `Class.DockWidgetPluginGui` to create (initial state,
           size, etc).
@@ -816,7 +816,7 @@ methods:
     parameters:
       - name: rigModel
         type: Instance
-        default:
+        default: ''
         summary: ''
       - name: isR15
         type: boolean
@@ -870,7 +870,7 @@ methods:
     parameters:
       - name: assetType
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: int64

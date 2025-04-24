@@ -32,7 +32,7 @@ methods:
     parameters:
       - name: derives
         type: Instances
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()

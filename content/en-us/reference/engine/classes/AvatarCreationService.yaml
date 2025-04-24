@@ -177,7 +177,7 @@ methods:
     parameters:
       - name: avatarGeneration2dPreviewParams
         type: Dictionary
-        default:
+        default: ''
         summary: ''
     returns:
       - type: string
@@ -219,7 +219,7 @@ methods:
     parameters:
       - name: tokenIds
         type: Array
-        default:
+        default: ''
         summary: |
           The list of avatar creation token IDs to get details of.
     returns:
@@ -240,7 +240,7 @@ methods:
     parameters:
       - name: previewId
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: EditableImage
@@ -259,7 +259,7 @@ methods:
     parameters:
       - name: generationId
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: HumanoidDescription
@@ -278,7 +278,7 @@ methods:
     parameters:
       - name: humanoidModel
         type: Model
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -346,7 +346,7 @@ methods:
     parameters:
       - name: tokenId
         type: string
-        default:
+        default: ''
         summary: |
           The ID of an avatar creation token. The token must be valid in that
           the universe the method is called from is the same universe the token
@@ -358,12 +358,12 @@ methods:
           process.
       - name: player
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` intended to be presented with the creation prompt.
       - name: humanoidDescription
         type: HumanoidDescription
-        default:
+        default: ''
         summary: |
           The `Class.HumanoidDescription` of the avatar intended for creation.
     returns:
@@ -399,17 +399,17 @@ methods:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` validation is completed for.
       - name: accessory
         type: Instance
-        default:
+        default: ''
         summary: |
           The instance validation is run on.
       - name: accessoryType
         type: AccessoryType
-        default:
+        default: ''
         summary: |
           `Enum.AccessoryType` the instance is expected to be. Expects
           `Enum.AccessoryType.Eyebrow|Eyebrow`,
@@ -452,17 +452,17 @@ methods:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` validation is completed for.
       - name: instance
         type: Instance
-        default:
+        default: ''
         summary: |
           The instance validation is run on.
       - name: bodyPart
         type: BodyPart
-        default:
+        default: ''
         summary: |
           `Enum.BodyPart` the instance is expected to be.
     returns:
@@ -497,12 +497,12 @@ methods:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` validation is completed for.
       - name: humanoidDescription
         type: HumanoidDescription
-        default:
+        default: ''
         summary: |
           `Class.HumanoidDescription` representing the body that validation is
           run on.
@@ -530,11 +530,11 @@ events:
     parameters:
       - name: outfitId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: moderationStatus
         type: ModerationStatus
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''

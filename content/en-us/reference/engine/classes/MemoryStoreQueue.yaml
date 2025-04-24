@@ -34,12 +34,12 @@ methods:
     parameters:
       - name: value
         type: Variant
-        default:
+        default: ''
         summary: |
           The value of the item to add to the queue.
       - name: expiration
         type: int64
-        default:
+        default: ''
         summary: |
           Item expiration time, in seconds, after which the item will be
           automatically removed from the queue.
@@ -57,7 +57,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: MemoryStoreQueue:ReadAsync
     summary: |
@@ -76,7 +77,7 @@ methods:
     parameters:
       - name: count
         type: int
-        default:
+        default: ''
         summary: |
           Number of items to read. The maximum allowed value of this parameter
           is 100.
@@ -109,7 +110,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: MemoryStoreQueue:RemoveAsync
     summary: |
@@ -124,7 +126,7 @@ methods:
     parameters:
       - name: id
         type: string
-        default:
+        default: ''
         summary: |
           Identifies the items to delete. Use the value returned by
           `Class.MemoryStoreQueue:ReadAsync()`.
@@ -136,7 +138,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
 events: []
 callbacks: []

@@ -204,7 +204,7 @@ methods:
     parameters:
       - name: coreGuiType
         type: CoreGuiType
-        default:
+        default: ''
         summary: |
           The given `Enum.CoreGuiType`.
     returns:
@@ -215,7 +215,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: StarterGui:SetCore
     summary: |
@@ -759,12 +760,12 @@ methods:
     parameters:
       - name: parameterName
         type: string
-        default:
+        default: ''
         summary: |
           Selects the functionality with which the call will interact.
       - name: value
         type: Variant
-        default:
+        default: ''
         summary: |
           A table of `Class.BindableEvent|BindableEvents` and
           `Class.BindableFunction|BindableFunctions`.
@@ -775,7 +776,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: StarterGui:SetCoreGuiEnabled
     summary: |
@@ -791,12 +793,12 @@ methods:
     parameters:
       - name: coreGuiType
         type: CoreGuiType
-        default:
+        default: ''
         summary: |
           The given `Enum.CoreGuiType`.
       - name: enabled
         type: boolean
-        default:
+        default: ''
         summary: |
           Whether to enable or disable the given `Enum.CoreGuiType`.
     returns:
@@ -806,7 +808,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: StarterGui:GetCore
     summary: |
@@ -900,7 +903,7 @@ methods:
     parameters:
       - name: parameterName
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Variant
@@ -910,7 +913,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 events: []
 callbacks: []

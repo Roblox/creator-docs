@@ -1042,7 +1042,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: TextBox:IsFocused
     summary: |
@@ -1058,7 +1059,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: TextBox:ReleaseFocus
     summary: |
@@ -1098,7 +1100,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 events:
   - name: TextBox.FocusLost
@@ -1123,13 +1126,13 @@ events:
     parameters:
       - name: enterPressed
         type: boolean
-        default:
+        default: ''
         summary: |
           A boolean indicating whether the client pressed Enter to lose focus
           (_true_) or not (_false_).
       - name: inputThatCausedFocusLoss
         type: InputObject
-        default:
+        default: ''
         summary: |
           An `Class.InputObject` instance indicating the type of input that
           caused the TextBox to lose focus.
@@ -1137,7 +1140,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: TextBox.Focused
     summary: |
@@ -1162,7 +1166,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: TextBox.ReturnPressedFromOnScreenKeyboard
     summary: ''
@@ -1173,6 +1178,7 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 callbacks: []

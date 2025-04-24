@@ -39,7 +39,7 @@ methods:
     parameters:
       - name: buffer
         type: buffer
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instances
@@ -49,7 +49,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - PluginOrOpenCloud
     writeCapabilities: []
   - name: SerializationService:SerializeInstancesAsync
     summary: |
@@ -76,7 +77,7 @@ methods:
     parameters:
       - name: inputInstances
         type: Instances
-        default:
+        default: ''
         summary: ''
     returns:
       - type: buffer
@@ -86,7 +87,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - PluginOrOpenCloud
     writeCapabilities: []
 events: []
 callbacks: []

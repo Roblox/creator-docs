@@ -87,7 +87,7 @@ methods:
     parameters:
       - name: groupId
         type: int64
-        default:
+        default: ''
         summary: |
           The group's ID.
     returns:
@@ -154,7 +154,7 @@ methods:
     parameters:
       - name: groupId
         type: int64
-        default:
+        default: ''
         summary: |
           The group's ID.
     returns:
@@ -214,7 +214,7 @@ methods:
     parameters:
       - name: groupId
         type: int64
-        default:
+        default: ''
         summary: |
           The group ID of the group.
     returns:
@@ -294,7 +294,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The `Class.Player.UserId` of the user.
     returns:

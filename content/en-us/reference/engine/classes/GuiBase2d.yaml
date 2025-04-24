@@ -342,21 +342,22 @@ events:
     parameters:
       - name: amISelected
         type: boolean
-        default:
+        default: ''
         summary: |
           True if the new selection matches the attached GuiBase2d.
       - name: previousSelection
         type: GuiObject
-        default:
+        default: ''
         summary: ''
       - name: newSelection
         type: GuiObject
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 callbacks: []

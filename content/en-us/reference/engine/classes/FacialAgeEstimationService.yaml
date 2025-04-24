@@ -35,7 +35,7 @@ methods:
     parameters:
       - name: inquiryId
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Dictionary

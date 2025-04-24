@@ -64,7 +64,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationController:LoadAnimation
     summary: |
@@ -79,7 +80,7 @@ methods:
     parameters:
       - name: animation
         type: Animation
-        default:
+        default: ''
         summary: |
           The `Class.Animation` to be used.
     returns:
@@ -93,7 +94,8 @@ methods:
       created while editing or at runtime).
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
 events:
   - name: AnimationController.AnimationPlayed
@@ -114,7 +116,7 @@ events:
     parameters:
       - name: animationTrack
         type: AnimationTrack
-        default:
+        default: ''
         summary: |
           The `Class.AnimationTrack` that was played.
     tags:
@@ -122,6 +124,7 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
 callbacks: []

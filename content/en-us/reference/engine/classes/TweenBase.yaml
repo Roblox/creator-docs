@@ -147,7 +147,7 @@ events:
     parameters:
       - name: playbackState
         type: PlaybackState
-        default:
+        default: ''
         summary: |
           The `Enum.PlaybackState` of the tween upon completion.
     tags: []

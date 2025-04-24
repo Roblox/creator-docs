@@ -53,7 +53,7 @@ methods:
     parameters:
       - name: value
         type: Variant
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -108,7 +108,7 @@ events:
     parameters:
       - name: value
         type: Variant
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''

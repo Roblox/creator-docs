@@ -71,7 +71,7 @@ events:
     parameters:
       - name: value
         type: Ray
-        default:
+        default: ''
         summary: |
           The value after the change.
     tags: []
@@ -87,7 +87,7 @@ events:
     parameters:
       - name: value
         type: Ray
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated

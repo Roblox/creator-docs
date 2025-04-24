@@ -344,11 +344,11 @@ methods:
     parameters:
       - name: selectionName
         type: string
-        default:
+        default: ''
         summary: ''
       - name: selectionParent
         type: Instance
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -386,12 +386,12 @@ methods:
     parameters:
       - name: selectionName
         type: string
-        default:
+        default: ''
         summary: |
           The name of the added selection.
       - name: selections
         type: Tuple
-        default:
+        default: ''
         summary: |
           The selection(s) added.
     returns:
@@ -443,7 +443,7 @@ methods:
     parameters:
       - name: notificationId
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: boolean
@@ -596,13 +596,13 @@ methods:
     parameters:
       - name: humanoidDescription
         type: Instance
-        default:
+        default: ''
         summary: |
           A `Class.HumanoidDescription` object that contains the assets to show
           in the Inspect menu.
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           The name of the player being Inspected to show in the Inspect menu.
     returns:
@@ -643,7 +643,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The `Class.Player.UserId|UserId` of the player to inspect.
     returns:
@@ -688,7 +688,7 @@ methods:
     parameters:
       - name: selectionName
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -715,7 +715,7 @@ methods:
     parameters:
       - name: selectionParent
         type: Instance
-        default:
+        default: ''
         summary: |
           The parent of selection whose descendants are searched.
     returns:
@@ -734,7 +734,7 @@ methods:
     parameters:
       - name: notificationInfo
         type: Dictionary
-        default:
+        default: ''
         summary: ''
     returns:
       - type: string
@@ -754,7 +754,7 @@ methods:
     parameters:
       - name: isOpen
         type: boolean
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -786,7 +786,7 @@ methods:
     parameters:
       - name: enabled
         type: boolean
-        default:
+        default: ''
         summary: |
           Whether or not the built-in notification GUI is disabled.
     returns:
@@ -834,7 +834,7 @@ methods:
     parameters:
       - name: enabled
         type: boolean
-        default:
+        default: ''
         summary: |
           A boolean indicating whether to enable or disable the Inspect Menu
           feature.

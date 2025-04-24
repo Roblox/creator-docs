@@ -118,7 +118,7 @@ methods:
     parameters:
       - name: start
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: int
@@ -150,12 +150,12 @@ methods:
     parameters:
       - name: start
         type: Vector3
-        default:
+        default: ''
         summary: |
           The world position where the computed path begins.
       - name: finish
         type: Vector3
-        default:
+        default: ''
         summary: |
           The world position where the computed path finishes.
     returns:
@@ -183,7 +183,7 @@ events:
     parameters:
       - name: blockedWaypointIdx
         type: int
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
@@ -205,7 +205,7 @@ events:
     parameters:
       - name: unblockedWaypointIdx
         type: int
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''

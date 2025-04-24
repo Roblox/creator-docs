@@ -47,12 +47,12 @@ methods:
     parameters:
       - name: topic
         type: string
-        default:
+        default: ''
         summary: |
           The topic used to identify the type of message.
       - name: function
         type: Function
-        default:
+        default: ''
         summary: ''
     returns:
       - type: RBXScriptConnection
@@ -93,12 +93,12 @@ methods:
     parameters:
       - name: topic
         type: string
-        default:
+        default: ''
         summary: |
           The topic used to identify the type of message.
       - name: function
         type: Function
-        default:
+        default: ''
         summary: ''
     returns:
       - type: RBXScriptConnection
@@ -133,12 +133,12 @@ methods:
     parameters:
       - name: topic
         type: string
-        default:
+        default: ''
         summary: |
           The topic used to identify the message being sent.
       - name: message
         type: Tuple
-        default:
+        default: ''
         summary: |
           The contents of the message to send to the Actor.
     returns:

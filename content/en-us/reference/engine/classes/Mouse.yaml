@@ -672,7 +672,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Mouse.Button1Up
     summary: |
@@ -702,7 +703,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Mouse.Button2Down
     summary: |
@@ -732,7 +734,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Mouse.Button2Up
     summary: |
@@ -762,7 +765,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Mouse.Idle
     summary: |
@@ -792,7 +796,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Mouse.KeyDown
     summary: |
@@ -814,7 +819,7 @@ events:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -823,7 +828,8 @@ events:
       be used in all new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Mouse.KeyUp
     summary: |
@@ -845,7 +851,7 @@ events:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -854,7 +860,8 @@ events:
       be used in all new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Mouse.Move
     summary: |
@@ -889,7 +896,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Mouse.WheelBackward
     summary: |
@@ -914,7 +922,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Mouse.WheelForward
     summary: |
@@ -939,7 +948,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Mouse.keyDown
     summary: ''
@@ -948,7 +958,7 @@ events:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -957,6 +967,7 @@ events:
       been deprecated. Neither event should be used in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 callbacks: []

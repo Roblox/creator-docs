@@ -1575,13 +1575,13 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           A string that identifies what emote is being added. Example:
           `"Salute"`.
       - name: assetId
         type: int64
-        default:
+        default: ''
         summary: |
           An emote asset ID.
     returns:
@@ -1591,7 +1591,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: HumanoidDescription:GetAccessories
     summary: |
@@ -1606,7 +1607,7 @@ methods:
     parameters:
       - name: includeRigidAccessories
         type: boolean
-        default:
+        default: ''
         summary: |
           Set to true if rigid accessories from the rigid accessory properties
           should also be included in the return array. False means only include
@@ -1620,7 +1621,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: HumanoidDescription:GetEmotes
     summary: |
@@ -1678,7 +1680,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: HumanoidDescription:GetEquippedEmotes
     summary: |
@@ -1731,7 +1734,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: HumanoidDescription:RemoveEmote
     summary: |
@@ -1756,7 +1760,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           The name of the emote as it was
           `Class.HumanoidDescription:SetEmotes()|set` or
@@ -1768,7 +1772,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: HumanoidDescription:SetAccessories
     summary: |
@@ -1786,13 +1791,13 @@ methods:
     parameters:
       - name: accessories
         type: Array
-        default:
+        default: ''
         summary: |
           Each entry specifies for an individual accessory the AccessoryType,
           AssetId, IsLayered, Order and Puffiness.
       - name: includeRigidAccessories
         type: boolean
-        default:
+        default: ''
         summary: |
           Set to true if rigid accessories are also included in the passed in
           array (they would have to not specify Order).
@@ -1803,7 +1808,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: HumanoidDescription:SetEmotes
     summary: |
@@ -1839,7 +1845,7 @@ methods:
     parameters:
       - name: emotes
         type: Dictionary
-        default:
+        default: ''
         summary: |
           A dictionary of emotes where the key is the emote name and the value
           is an array of emote asset IDs. Example:
@@ -1860,7 +1866,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: HumanoidDescription:SetEquippedEmotes
     summary: |
@@ -1898,7 +1905,7 @@ methods:
     parameters:
       - name: equippedEmotes
         type: Array
-        default:
+        default: ''
         summary: |
           An array of emote names. Example:
 
@@ -1925,7 +1932,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
 events:
   - name: HumanoidDescription.EmotesChanged
@@ -1954,7 +1962,7 @@ events:
     parameters:
       - name: newEmotes
         type: Dictionary
-        default:
+        default: ''
         summary: |
           A dictionary of emotes where the key is the emote name and the value
           is an array of emote asset IDs. Example:
@@ -1972,7 +1980,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: HumanoidDescription.EquippedEmotesChanged
     summary: |
@@ -2011,7 +2020,7 @@ events:
     parameters:
       - name: newEquippedEmotes
         type: Array
-        default:
+        default: ''
         summary: |
           An array of tables describing the name and slot which each emote is
           equipped. Example:
@@ -2029,6 +2038,7 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
 callbacks: []

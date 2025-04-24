@@ -21,7 +21,7 @@ methods:
     parameters:
       - name: instances
         type: Instances
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Dictionary

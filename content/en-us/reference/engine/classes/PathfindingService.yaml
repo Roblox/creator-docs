@@ -152,15 +152,15 @@ methods:
     parameters:
       - name: start
         type: Vector3
-        default:
+        default: ''
         summary: ''
       - name: finish
         type: Vector3
-        default:
+        default: ''
         summary: ''
       - name: maxDistance
         type: float
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Path
@@ -190,15 +190,15 @@ methods:
     parameters:
       - name: start
         type: Vector3
-        default:
+        default: ''
         summary: ''
       - name: finish
         type: Vector3
-        default:
+        default: ''
         summary: ''
       - name: maxDistance
         type: float
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Path
@@ -234,12 +234,12 @@ methods:
     parameters:
       - name: start
         type: Vector3
-        default:
+        default: ''
         summary: |
           Path start coordinates.
       - name: finish
         type: Vector3
-        default:
+        default: ''
         summary: |
           Path finish coordinates.
     returns:

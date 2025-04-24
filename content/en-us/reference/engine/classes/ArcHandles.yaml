@@ -49,13 +49,14 @@ events:
     parameters:
       - name: axis
         type: Axis
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: ArcHandles.MouseButton1Up
     summary: |
@@ -66,13 +67,14 @@ events:
     parameters:
       - name: axis
         type: Axis
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: ArcHandles.MouseDrag
     summary: |
@@ -85,21 +87,22 @@ events:
     parameters:
       - name: axis
         type: Axis
-        default:
+        default: ''
         summary: ''
       - name: relativeAngle
         type: float
-        default:
+        default: ''
         summary: ''
       - name: deltaRadius
         type: float
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: ArcHandles.MouseEnter
     summary: |
@@ -110,13 +113,14 @@ events:
     parameters:
       - name: axis
         type: Axis
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: ArcHandles.MouseLeave
     summary: |
@@ -127,12 +131,13 @@ events:
     parameters:
       - name: axis
         type: Axis
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 callbacks: []

@@ -121,7 +121,7 @@ methods:
     parameters:
       - name: property
         type: string
-        default:
+        default: ''
         summary: |
           The property to connect to.
     returns:
@@ -177,7 +177,7 @@ methods:
     parameters:
       - name: className
         type: string
-        default:
+        default: ''
         summary: |
           The class against which the Object's class will be checked.
           Case-sensitive.
@@ -200,7 +200,7 @@ methods:
     parameters:
       - name: className
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: boolean
@@ -264,7 +264,7 @@ events:
     parameters:
       - name: property
         type: string
-        default:
+        default: ''
         summary: |
           The name of the property that changed.
     tags: []

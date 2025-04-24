@@ -59,7 +59,7 @@ events:
     parameters:
       - name: value
         type: Vector3
-        default:
+        default: ''
         summary: |
           The new value after the change.
     tags: []
@@ -75,7 +75,7 @@ events:
     parameters:
       - name: value
         type: Vector3
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated

@@ -72,7 +72,7 @@ methods:
     parameters:
       - name: arguments
         type: Tuple
-        default:
+        default: ''
         summary: |
           Values to pass to the `Class.BindableFunction.OnInvoke|OnInvoke`
           callback.
@@ -108,7 +108,7 @@ callbacks:
     parameters:
       - name: arguments
         type: Tuple
-        default:
+        default: ''
         summary: |
           The parameters sent through
           `Class.BindableFunction:Invoke()|Invoke()`.

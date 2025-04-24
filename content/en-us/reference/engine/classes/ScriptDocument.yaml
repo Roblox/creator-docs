@@ -337,23 +337,23 @@ methods:
     parameters:
       - name: newText
         type: string
-        default:
+        default: ''
         summary: ''
       - name: startLine
         type: int
-        default:
+        default: ''
         summary: ''
       - name: startCharacter
         type: int
-        default:
+        default: ''
         summary: ''
       - name: endLine
         type: int
-        default:
+        default: ''
         summary: ''
       - name: endCharacter
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Tuple
@@ -384,11 +384,11 @@ methods:
     parameters:
       - name: cursorLine
         type: int
-        default:
+        default: ''
         summary: ''
       - name: cursorCharacter
         type: int
-        default:
+        default: ''
         summary: ''
       - name: anchorLine
         type: int?
@@ -415,7 +415,7 @@ methods:
     parameters:
       - name: edits
         type: Array
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Tuple
@@ -444,11 +444,11 @@ methods:
     parameters:
       - name: cursorLine
         type: int
-        default:
+        default: ''
         summary: ''
       - name: cursorCharacter
         type: int
-        default:
+        default: ''
         summary: ''
       - name: anchorLine
         type: int?
@@ -481,19 +481,19 @@ events:
     parameters:
       - name: positionLine
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: positionCharacter
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: anchorLine
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: anchorCharacter
         type: int64
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
@@ -512,11 +512,11 @@ events:
     parameters:
       - name: startLine
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: endLine
         type: int64
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''

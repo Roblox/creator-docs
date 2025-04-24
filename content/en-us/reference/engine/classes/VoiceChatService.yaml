@@ -25,7 +25,7 @@ properties:
       This property controls the default distance attenuation curve assigned to
       any generated `Class.AudioEmitter` instances in the default voice chat
       setup.
-      
+
       This property only has an effect if
       `Class.VoiceChatService.EnableDefaultVoice|EnableDefaultVoice` and
       `Class.VoiceChatService.UseAudioApi|UseAudioApi` are both enabled, since
@@ -141,7 +141,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The `Class.Player.UserId` to check.
     returns:

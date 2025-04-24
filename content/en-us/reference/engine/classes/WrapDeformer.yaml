@@ -36,11 +36,11 @@ methods:
     parameters:
       - name: content
         type: Content
-        default:
+        default: ''
         summary: ''
       - name: cageOrigin
         type: CoordinateFrame?
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -49,7 +49,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: WrapDeformer:CreateEditableMeshAsync
     summary: |
@@ -70,7 +71,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: WrapDeformer:GetDeformedCFrameAsync
     summary: |
@@ -88,7 +90,7 @@ methods:
     parameters:
       - name: originalCFrame
         type: CFrame
-        default:
+        default: ''
         summary: ''
     returns:
       - type: CFrame
@@ -98,7 +100,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
 events: []
 callbacks: []

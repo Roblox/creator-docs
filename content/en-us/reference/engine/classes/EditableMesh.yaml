@@ -207,7 +207,7 @@ methods:
     parameters:
       - name: boneProperties
         type: Dictionary
-        default:
+        default: ''
         summary: ''
     returns:
       - type: int64
@@ -227,12 +227,12 @@ methods:
     parameters:
       - name: color
         type: Color3
-        default:
+        default: ''
         summary: |
           The new color.
       - name: alpha
         type: float
-        default:
+        default: ''
         summary: |
           The color alpha (transparency).
     returns:
@@ -255,7 +255,7 @@ methods:
     parameters:
       - name: normal
         type: Vector3?
-        default:
+        default: ''
         summary: |
           The normal vector. If the normal value isn't specified, the normal
           will be automatically calculated.
@@ -278,17 +278,17 @@ methods:
     parameters:
       - name: vertexId0
         type: int64
-        default:
+        default: ''
         summary: |
           ID of the first vertex of the triangle.
       - name: vertexId1
         type: int64
-        default:
+        default: ''
         summary: |
           ID of the second vertex of the triangle.
       - name: vertexId2
         type: int64
-        default:
+        default: ''
         summary: |
           ID of the third vertex of the triangle.
     returns:
@@ -310,7 +310,7 @@ methods:
     parameters:
       - name: uv
         type: Vector2
-        default:
+        default: ''
         summary: |
           The new UV coordinate.
     returns:
@@ -332,7 +332,7 @@ methods:
     parameters:
       - name: p
         type: Vector3
-        default:
+        default: ''
         summary: |
           Position in the mesh's local object space.
     returns:
@@ -374,7 +374,7 @@ methods:
     parameters:
       - name: point
         type: Vector3
-        default:
+        default: ''
         summary: |
           Point position in the mesh's local object space.
     returns:
@@ -398,7 +398,7 @@ methods:
     parameters:
       - name: toThisPoint
         type: Vector3
-        default:
+        default: ''
         summary: |
           Point position in the mesh's local object space.
     returns:
@@ -421,12 +421,12 @@ methods:
     parameters:
       - name: center
         type: Vector3
-        default:
+        default: ''
         summary: |
           Center of the sphere in the mesh's local object space.
       - name: radius
         type: float
-        default:
+        default: ''
         summary: |
           Radius of the sphere.
     returns:
@@ -450,7 +450,7 @@ methods:
     parameters:
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -473,7 +473,7 @@ methods:
     parameters:
       - name: vertexId
         type: int64
-        default:
+        default: ''
         summary: |
           Vertex ID around which to get adjacent vertices.
     returns:
@@ -493,7 +493,7 @@ methods:
     parameters:
       - name: boneName
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: int64
@@ -511,7 +511,7 @@ methods:
     parameters:
       - name: boneId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: CFrame
@@ -529,7 +529,7 @@ methods:
     parameters:
       - name: boneId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: boolean
@@ -547,7 +547,7 @@ methods:
     parameters:
       - name: boneId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: string
@@ -565,7 +565,7 @@ methods:
     parameters:
       - name: boneId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: int64
@@ -614,7 +614,7 @@ methods:
     parameters:
       - name: colorId
         type: int64
-        default:
+        default: ''
         summary: |
           Color ID for which to get the color.
     returns:
@@ -636,7 +636,7 @@ methods:
     parameters:
       - name: colorId
         type: int64
-        default:
+        default: ''
         summary: |
           Color ID for which to get the alpha.
     returns:
@@ -676,7 +676,7 @@ methods:
     parameters:
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: |
           Face ID for which to get the color IDs.
     returns:
@@ -699,7 +699,7 @@ methods:
     parameters:
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: |
           Face ID for which to get the normal IDs.
     returns:
@@ -722,7 +722,7 @@ methods:
     parameters:
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: |
           Face ID for which to get the UV IDs.
     returns:
@@ -745,7 +745,7 @@ methods:
     parameters:
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -786,7 +786,7 @@ methods:
     parameters:
       - name: id
         type: int64
-        default:
+        default: ''
         summary: |
           Attribute ID for which to find faces that use it.
     returns:
@@ -807,7 +807,7 @@ methods:
     parameters:
       - name: colorId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -826,7 +826,7 @@ methods:
     parameters:
       - name: normalId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -845,7 +845,7 @@ methods:
     parameters:
       - name: uvId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -864,7 +864,7 @@ methods:
     parameters:
       - name: actions
         type: Array
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Tuple
@@ -896,7 +896,7 @@ methods:
     parameters:
       - name: action
         type: FacsActionUnit
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Tuple
@@ -930,7 +930,7 @@ methods:
     parameters:
       - name: normalId
         type: int64
-        default:
+        default: ''
         summary: |
           Normal ID for which to get the normal vector.
     returns:
@@ -970,7 +970,7 @@ methods:
     parameters:
       - name: vertexId
         type: int64
-        default:
+        default: ''
         summary: |
           Stable vertex ID for which to get the position.
     returns:
@@ -1007,7 +1007,7 @@ methods:
     parameters:
       - name: uvId
         type: int64
-        default:
+        default: ''
         summary: |
           UV ID for which to get the UV coordinate.
     returns:
@@ -1045,7 +1045,7 @@ methods:
     parameters:
       - name: vertexId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -1063,7 +1063,7 @@ methods:
     parameters:
       - name: vertexId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -1081,7 +1081,7 @@ methods:
     parameters:
       - name: vertexId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -1100,11 +1100,11 @@ methods:
     parameters:
       - name: vertexId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: int64
@@ -1122,11 +1122,11 @@ methods:
     parameters:
       - name: vertexId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: int64
@@ -1144,11 +1144,11 @@ methods:
     parameters:
       - name: vertexId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: int64
@@ -1166,7 +1166,7 @@ methods:
     parameters:
       - name: vertexId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -1185,7 +1185,7 @@ methods:
     parameters:
       - name: vertexId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -1204,7 +1204,7 @@ methods:
     parameters:
       - name: vertexId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -1243,7 +1243,7 @@ methods:
     parameters:
       - name: id
         type: int64
-        default:
+        default: ''
         summary: |
           Attribute ID for which to find vertices that use it.
     returns:
@@ -1264,7 +1264,7 @@ methods:
     parameters:
       - name: colorId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -1283,7 +1283,7 @@ methods:
     parameters:
       - name: normalId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -1302,7 +1302,7 @@ methods:
     parameters:
       - name: uvId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -1324,7 +1324,7 @@ methods:
     parameters:
       - name: id
         type: int64
-        default:
+        default: ''
         summary: |
           ID for which to return a debugging information string.
     returns:
@@ -1347,7 +1347,7 @@ methods:
     parameters:
       - name: mergeTolerance
         type: float
-        default:
+        default: ''
         summary: |
           The distance at which the vertices are considered to touch each other.
     returns:
@@ -1377,12 +1377,12 @@ methods:
     parameters:
       - name: origin
         type: Vector3
-        default:
+        default: ''
         summary: |
           Origin of the ray in the mesh's local object space.
       - name: direction
         type: Vector3
-        default:
+        default: ''
         summary: |
           Direction of the ray.
     returns:
@@ -1403,7 +1403,7 @@ methods:
     parameters:
       - name: boneId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -1423,7 +1423,7 @@ methods:
     parameters:
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -1463,7 +1463,7 @@ methods:
     parameters:
       - name: normalId
         type: int64
-        default:
+        default: ''
         summary: |
           Stable normal ID to reset.
     returns:
@@ -1482,11 +1482,11 @@ methods:
     parameters:
       - name: boneId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: cframe
         type: CFrame
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -1504,11 +1504,11 @@ methods:
     parameters:
       - name: boneId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: virtual
         type: boolean
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -1526,11 +1526,11 @@ methods:
     parameters:
       - name: boneId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -1548,11 +1548,11 @@ methods:
     parameters:
       - name: boneId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: parentBoneId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -1572,12 +1572,12 @@ methods:
     parameters:
       - name: colorId
         type: int64
-        default:
+        default: ''
         summary: |
           Stable color ID for which to set the color.
       - name: color
         type: Color3
-        default:
+        default: ''
         summary: |
           Color to set.
     returns:
@@ -1598,12 +1598,12 @@ methods:
     parameters:
       - name: colorId
         type: int64
-        default:
+        default: ''
         summary: |
           Stable color ID for which to set the color alpha.
       - name: alpha
         type: float
-        default:
+        default: ''
         summary: |
           Alpha to set.
     returns:
@@ -1624,12 +1624,12 @@ methods:
     parameters:
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: |
           Face ID for which to update the vertex colors.
       - name: ids
         type: Array
-        default:
+        default: ''
         summary: |
           List of new stable color IDs to use for the given face's vertices.
     returns:
@@ -1651,12 +1651,12 @@ methods:
     parameters:
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: |
           Face ID for which to update the vertex normals.
       - name: ids
         type: Array
-        default:
+        default: ''
         summary: |
           List of new stable normal IDs to use for the given face's vertices.
     returns:
@@ -1678,12 +1678,12 @@ methods:
     parameters:
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: |
           Face ID for which to update the vertex UVs.
       - name: ids
         type: Array
-        default:
+        default: ''
         summary: |
           List of new stable UV IDs to use for the given face's vertices.
     returns:
@@ -1705,12 +1705,12 @@ methods:
     parameters:
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: |
           Face ID for which to update the vertices.
       - name: ids
         type: Array
-        default:
+        default: ''
         summary: |
           List of new stable vertex IDs to use for the given face.
     returns:
@@ -1730,15 +1730,15 @@ methods:
     parameters:
       - name: action
         type: FacsActionUnit
-        default:
+        default: ''
         summary: ''
       - name: boneId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: cframe
         type: CFrame
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -1756,15 +1756,15 @@ methods:
     parameters:
       - name: actions
         type: Array
-        default:
+        default: ''
         summary: ''
       - name: boneIds
         type: Array
-        default:
+        default: ''
         summary: ''
       - name: cframes
         type: Array
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -1782,15 +1782,15 @@ methods:
     parameters:
       - name: action
         type: FacsActionUnit
-        default:
+        default: ''
         summary: ''
       - name: boneIds
         type: Array
-        default:
+        default: ''
         summary: ''
       - name: cframes
         type: Array
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -1811,12 +1811,12 @@ methods:
     parameters:
       - name: normalId
         type: int64
-        default:
+        default: ''
         summary: |
           Stable normal ID for which to set the normal vector.
       - name: normal
         type: Vector3
-        default:
+        default: ''
         summary: |
           Normal vector to set.
     returns:
@@ -1837,12 +1837,12 @@ methods:
     parameters:
       - name: vertexId
         type: int64
-        default:
+        default: ''
         summary: |
           Stable vertex ID of the vertex to position.
       - name: p
         type: Vector3
-        default:
+        default: ''
         summary: |
           Position in the mesh's local object space.
     returns:
@@ -1863,12 +1863,12 @@ methods:
     parameters:
       - name: uvId
         type: int64
-        default:
+        default: ''
         summary: |
           UV ID for which to set the UV coordinates.
       - name: uv
         type: Vector2
-        default:
+        default: ''
         summary: |
           UV coordinates.
     returns:
@@ -1887,11 +1887,11 @@ methods:
     parameters:
       - name: vertexId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: boneWeights
         type: Array
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -1909,11 +1909,11 @@ methods:
     parameters:
       - name: vertexId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: boneIDs
         type: Array
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -1931,15 +1931,15 @@ methods:
     parameters:
       - name: vertexId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: colorId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -1957,15 +1957,15 @@ methods:
     parameters:
       - name: vertexId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: normalId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -1983,15 +1983,15 @@ methods:
     parameters:
       - name: vertexId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: uvId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()

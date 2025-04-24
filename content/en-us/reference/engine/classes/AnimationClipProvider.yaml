@@ -39,7 +39,7 @@ methods:
     parameters:
       - name: assetId
         type: ContentId
-        default:
+        default: ''
         summary: |
           The content ID of the animation.
     returns:
@@ -54,7 +54,8 @@ methods:
       `GetAnimationClipAsync` instead.
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationClipProvider:GetAnimationClipById
     summary: |
@@ -66,12 +67,12 @@ methods:
     parameters:
       - name: assetId
         type: int64
-        default:
+        default: ''
         summary: |
           The content ID of the animation.
       - name: useCache
         type: boolean
-        default:
+        default: ''
         summary: |
           True if a cached version can be returned.
     returns:
@@ -86,7 +87,8 @@ methods:
       `GetAnimationClipAsync` instead.
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationClipProvider:RegisterActiveAnimationClip
     summary: |
@@ -108,7 +110,7 @@ methods:
     parameters:
       - name: animationClip
         type: AnimationClip
-        default:
+        default: ''
         summary: |
           The `Class.AnimationClip` to be used.
     returns:
@@ -119,7 +121,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationClipProvider:RegisterAnimationClip
     summary: |
@@ -143,7 +146,7 @@ methods:
     parameters:
       - name: animationClip
         type: AnimationClip
-        default:
+        default: ''
         summary: |
           The `Class.AnimationClip` to be used.
     returns:
@@ -154,7 +157,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationClipProvider:GetAnimationClipAsync
     summary: |
@@ -169,7 +173,7 @@ methods:
     parameters:
       - name: assetId
         type: ContentId
-        default:
+        default: ''
         summary: |
           The content ID of the animation.
     returns:
@@ -181,7 +185,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationClipProvider:GetAnimations
     summary: |
@@ -197,7 +202,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The user ID of the user.
     returns:
@@ -209,7 +214,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationClipProvider:GetClipEvaluatorAsync
     summary: ''
@@ -218,7 +224,7 @@ methods:
     parameters:
       - name: assetId
         type: ContentId
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ClipEvaluator
@@ -228,7 +234,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
 events: []
 callbacks: []

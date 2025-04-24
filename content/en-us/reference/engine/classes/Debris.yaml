@@ -117,7 +117,7 @@ methods:
     parameters:
       - name: item
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Instance` to add to `Class.Debris`.
       - name: lifetime
@@ -132,7 +132,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: Debris:addItem
     summary: ''
@@ -141,7 +142,7 @@ methods:
     parameters:
       - name: item
         type: Instance
-        default:
+        default: ''
         summary: ''
       - name: lifetime
         type: double
@@ -157,7 +158,8 @@ methods:
       should be used instead.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 events: []
 callbacks: []

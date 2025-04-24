@@ -463,7 +463,7 @@ events:
     parameters:
       - name: mouse
         type: Mouse
-        default:
+        default: ''
         summary: |
           The player's mouse.
     tags: []

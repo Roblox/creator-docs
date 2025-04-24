@@ -103,12 +103,12 @@ methods:
     parameters:
       - name: topic
         type: string
-        default:
+        default: ''
         summary: |
           Determines where the message is sent.
       - name: message
         type: Variant
-        default:
+        default: ''
         summary: |
           The data to include in the message.
     returns:
@@ -177,12 +177,12 @@ methods:
     parameters:
       - name: topic
         type: string
-        default:
+        default: ''
         summary: |
           Determines where to listen for messages.
       - name: callback
         type: Function
-        default:
+        default: ''
         summary: |
           Function to be invoked whenever a message is received.
     returns:

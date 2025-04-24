@@ -20,7 +20,7 @@ methods:
     parameters:
       - name: feedItemIds
         type: Array
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -39,7 +39,7 @@ methods:
     parameters:
       - name: getFeedRequest
         type: Dictionary
-        default:
+        default: ''
         summary: ''
     returns:
       - type: FeedPages
@@ -58,7 +58,7 @@ methods:
     parameters:
       - name: registerFeedItemsRequest
         type: Dictionary
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Dictionary

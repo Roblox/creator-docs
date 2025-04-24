@@ -247,13 +247,13 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           Label for the binding which can be used with
           `Class.RunService.Unbind|Unbind` if the binding is no longer needed.
       - name: priority
         type: int
-        default:
+        default: ''
         summary: |
           Priority of the binding as an integer; it determines when during the
           render step to call the custom function. The lower this number, the
@@ -261,7 +261,7 @@ methods:
           same priority the Roblox Engine will randomly pick one to run first.
       - name: function
         type: Function
-        default:
+        default: ''
         summary: |
           The custom function being bound.
     returns:
@@ -271,7 +271,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService:IsClient
     summary: |
@@ -297,7 +298,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService:IsEdit
     summary: |
@@ -319,7 +321,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService:IsRunMode
     summary: |
@@ -346,7 +349,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService:IsRunning
     summary: |
@@ -368,7 +372,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService:IsServer
     summary: |
@@ -394,7 +399,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService:IsStudio
     summary: |
@@ -413,7 +419,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService:Pause
     summary: |
@@ -434,7 +441,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService:Reset
     summary: |
@@ -454,7 +462,8 @@ methods:
       This item is deprecated and should not be used in new work.
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService:Run
     summary: |
@@ -474,7 +483,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService:Stop
     summary: |
@@ -498,7 +508,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService:UnbindFromRenderStep
     summary: |
@@ -518,7 +529,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           The name of the function being unbound.
     returns:
@@ -528,7 +539,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 events:
   - name: RunService.Heartbeat
@@ -553,14 +565,15 @@ events:
     parameters:
       - name: deltaTime
         type: double
-        default:
+        default: ''
         summary: |
           The time (in seconds) that has elapsed since the previous frame.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService.PostSimulation
     summary: |
@@ -578,7 +591,7 @@ events:
     parameters:
       - name: deltaTimeSim
         type: double
-        default:
+        default: ''
         summary: |
           The time (in seconds) that the current frame has stepped the physics
           simulation, not accounting for physics throttling.
@@ -586,7 +599,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService.PreAnimation
     summary: |
@@ -607,14 +621,15 @@ events:
     parameters:
       - name: deltaTimeSim
         type: double
-        default:
+        default: ''
         summary: |
           The time (in seconds) that the current frame has stepped animations.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService.PreRender
     summary: |
@@ -642,14 +657,15 @@ events:
     parameters:
       - name: deltaTimeRender
         type: double
-        default:
+        default: ''
         summary: |
           The time (in seconds) that has elapsed since the previous frame.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService.PreSimulation
     summary: |
@@ -670,7 +686,7 @@ events:
     parameters:
       - name: deltaTimeSim
         type: double
-        default:
+        default: ''
         summary: |
           The time (in seconds) that the current frame will step the physics
           simulation, not accounting for physics throttling.
@@ -678,7 +694,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService.RenderStepped
     summary: |
@@ -694,14 +711,15 @@ events:
     parameters:
       - name: deltaTime
         type: double
-        default:
+        default: ''
         summary: |
           The time (in seconds) that has elapsed since the previous frame.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService.Stepped
     summary: |
@@ -718,19 +736,20 @@ events:
     parameters:
       - name: time
         type: double
-        default:
+        default: ''
         summary: |
           The duration (in seconds) that `Class.RunService` has been running
           for.
       - name: deltaTime
         type: double
-        default:
+        default: ''
         summary: |
           The time (in seconds) that has elapsed since the previous frame.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 callbacks: []

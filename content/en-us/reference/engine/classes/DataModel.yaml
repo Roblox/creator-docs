@@ -586,7 +586,7 @@ methods:
     parameters:
       - name: function
         type: Function
-        default:
+        default: ''
         summary: |
           A function called before the experience server shuts down. If the
           bound function accepts a parameter, it passes `Enum.CloseReason`
@@ -710,7 +710,7 @@ methods:
     parameters:
       - name: url
         type: ContentId
-        default:
+        default: ''
         summary: |
           The given content URL.
     returns:
@@ -769,7 +769,7 @@ methods:
     parameters:
       - name: gearType
         type: GearType
-        default:
+        default: ''
         summary: |
           The given `Enum.GearType`.
     returns:
@@ -852,7 +852,7 @@ methods:
     parameters:
       - name: placeId
         type: int64
-        default:
+        default: ''
         summary: |
           The ID to set the `Class.DataModel.PlaceId` to.
     returns:
@@ -880,7 +880,7 @@ methods:
     parameters:
       - name: universeId
         type: int64
-        default:
+        default: ''
         summary: |
           The ID to set the `Class.DataModel.GameId` to.
     returns:
@@ -975,7 +975,7 @@ events:
     parameters:
       - name: betterQuality
         type: boolean
-        default:
+        default: ''
         summary: |
           Whether the user has prompted an increase (_true_) or a decrease
           (_false_) in graphics quality.
@@ -996,11 +996,11 @@ events:
     parameters:
       - name: object
         type: Instance
-        default:
+        default: ''
         summary: ''
       - name: descriptor
         type: string
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated

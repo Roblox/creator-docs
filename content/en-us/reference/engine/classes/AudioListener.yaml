@@ -143,7 +143,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioListener:GetAudibilityFor
     summary: ''
@@ -152,7 +153,7 @@ methods:
     parameters:
       - name: emitter
         type: AudioEmitter
-        default:
+        default: ''
         summary: ''
     returns:
       - type: float
@@ -161,7 +162,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioListener:GetConnectedWires
     summary: |
@@ -174,7 +176,7 @@ methods:
     parameters:
       - name: pin
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instances
@@ -183,7 +185,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioListener:GetDistanceAttenuation
     summary: |
@@ -204,7 +207,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioListener:GetInputPins
     summary: ''
@@ -218,7 +222,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioListener:GetInteractingEmitters
     summary: ''
@@ -232,7 +237,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioListener:GetOutputPins
     summary: ''
@@ -246,7 +252,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioListener:SetAngleAttenuation
     summary: |
@@ -282,7 +289,7 @@ methods:
     parameters:
       - name: curve
         type: Dictionary
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -292,7 +299,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioListener:SetDistanceAttenuation
     summary: |
@@ -327,7 +335,7 @@ methods:
     parameters:
       - name: curve
         type: Dictionary
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -337,7 +345,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
 events:
   - name: AudioListener.WiringChanged
@@ -352,29 +361,30 @@ events:
     parameters:
       - name: connected
         type: boolean
-        default:
+        default: ''
         summary: |
           Whether the instance got connected or disconnected.
       - name: pin
         type: string
-        default:
+        default: ''
         summary: |
           The pin on the `Class.AudioListener` that the `Class.Wire` targets.
       - name: wire
         type: Wire
-        default:
+        default: ''
         summary: |
           The `Class.Wire` between the `Class.AudioListener` and the other
           instance.
       - name: instance
         type: Instance
-        default:
+        default: ''
         summary: |
           The other instance that is or was connected through the `Class.Wire`.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
 callbacks: []

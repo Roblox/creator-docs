@@ -47,7 +47,7 @@ methods:
     parameters:
       - name: index
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: RotationCurveKey
@@ -56,7 +56,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RotationCurve:GetKeyIndicesAtTime
     summary: |
@@ -71,7 +72,7 @@ methods:
     parameters:
       - name: time
         type: float
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -80,7 +81,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RotationCurve:GetKeys
     summary: |
@@ -99,7 +101,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RotationCurve:GetValueAtTime
     summary: |
@@ -113,7 +116,7 @@ methods:
     parameters:
       - name: time
         type: float
-        default:
+        default: ''
         summary: |
           Time at which to sample the curve.
     returns:
@@ -124,7 +127,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RotationCurve:InsertKey
     summary: |
@@ -139,7 +143,7 @@ methods:
     parameters:
       - name: key
         type: RotationCurveKey
-        default:
+        default: ''
         summary: |
           `Datatype.RotationCurveKey` to insert.
     returns:
@@ -150,7 +154,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RotationCurve:RemoveKeyAtIndex
     summary: |
@@ -162,7 +167,7 @@ methods:
     parameters:
       - name: startingIndex
         type: int
-        default:
+        default: ''
         summary: |
           Starting index from which to remove keys.
       - name: count
@@ -178,7 +183,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RotationCurve:SetKeys
     summary: |
@@ -196,7 +202,7 @@ methods:
     parameters:
       - name: keys
         type: Array
-        default:
+        default: ''
         summary: |
           Array of `Datatype.RotationCurveKey|RotationCurveKeys`.
     returns:
@@ -207,7 +213,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 events: []
 callbacks: []

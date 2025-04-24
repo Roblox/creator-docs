@@ -322,7 +322,7 @@ methods:
     parameters:
       - name: tag
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -399,7 +399,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - CreateInstances
     writeCapabilities: []
   - name: Instance:Destroy
     summary: |
@@ -483,7 +484,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           The `Class.Instance.Name` to be looked for.
     returns:
@@ -524,7 +525,7 @@ methods:
     parameters:
       - name: className
         type: string
-        default:
+        default: ''
         summary: |
           The `Class.Object.ClassName` to be looked for.
     returns:
@@ -571,7 +572,7 @@ methods:
     parameters:
       - name: className
         type: string
-        default:
+        default: ''
         summary: |
           The `Class.Object.ClassName` to be looked for.
     returns:
@@ -657,7 +658,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           The `Class.Instance.Name` to be searched for.
       - name: recursive
@@ -690,7 +691,7 @@ methods:
     parameters:
       - name: className
         type: string
-        default:
+        default: ''
         summary: |
           The `Class.Object.ClassName` to be looked for.
     returns:
@@ -739,7 +740,7 @@ methods:
     parameters:
       - name: className
         type: string
-        default:
+        default: ''
         summary: |
           The `Class.Object.ClassName` to be searched for.
       - name: recursive
@@ -770,7 +771,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           The `Class.Instance.Name` to search for.
     returns:
@@ -832,7 +833,7 @@ methods:
     parameters:
       - name: attribute
         type: string
-        default:
+        default: ''
         summary: |
           The name of the attribute being retrieved.
     returns:
@@ -883,7 +884,7 @@ methods:
     parameters:
       - name: attribute
         type: string
-        default:
+        default: ''
         summary: |
           The name of the specified attribute for which the change signal is
           being returned.
@@ -1079,7 +1080,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Variant
@@ -1097,7 +1098,7 @@ methods:
     parameters:
       - name: property
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: RBXScriptSignal
@@ -1144,7 +1145,7 @@ methods:
     parameters:
       - name: tag
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: boolean
@@ -1173,7 +1174,7 @@ methods:
     parameters:
       - name: descendant
         type: Instance
-        default:
+        default: ''
         summary: |
           The descendant `Class.Instance`.
     returns:
@@ -1203,7 +1204,7 @@ methods:
     parameters:
       - name: ancestor
         type: Instance
-        default:
+        default: ''
         summary: |
           The ancestor `Class.Instance`.
     returns:
@@ -1231,7 +1232,7 @@ methods:
     parameters:
       - name: property
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: boolean
@@ -1287,7 +1288,7 @@ methods:
     parameters:
       - name: tag
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -1309,7 +1310,7 @@ methods:
     parameters:
       - name: property
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -1361,12 +1362,12 @@ methods:
     parameters:
       - name: attribute
         type: string
-        default:
+        default: ''
         summary: |
           The name of the attribute being set.
       - name: value
         type: Variant
-        default:
+        default: ''
         summary: |
           The value to set the specified attribute to.
     returns:
@@ -1414,12 +1415,12 @@ methods:
     parameters:
       - name: childName
         type: string
-        default:
+        default: ''
         summary: |
           The `Class.Instance.Name` to be looked for.
       - name: timeOut
         type: double
-        default:
+        default: ''
         summary: |
           An optional time out parameter.
     returns:
@@ -1469,7 +1470,8 @@ methods:
       should be used instead.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - CreateInstances
     writeCapabilities: []
   - name: Instance:destroy
     summary: ''
@@ -1495,7 +1497,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
       - name: recursive
         type: boolean
@@ -1537,7 +1539,7 @@ methods:
     parameters:
       - name: ancestor
         type: Instance
-        default:
+        default: ''
         summary: ''
     returns:
       - type: boolean
@@ -1590,12 +1592,12 @@ events:
     parameters:
       - name: child
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Instance` whose `Class.Instance.Parent` has been changed.
       - name: parent
         type: Instance
-        default:
+        default: ''
         summary: |
           The new `Class.Instance.Parent` of the `Class.Instance` whose
           `Class.Instance.Parent` was changed.
@@ -1634,7 +1636,7 @@ events:
     parameters:
       - name: attribute
         type: string
-        default:
+        default: ''
         summary: |
           The name of the attribute that has been changed.
     tags: []
@@ -1674,7 +1676,7 @@ events:
     parameters:
       - name: child
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Instance` that has been added.
     tags: []
@@ -1705,7 +1707,7 @@ events:
     parameters:
       - name: child
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Instance` that has been removed.
     tags: []
@@ -1733,7 +1735,7 @@ events:
     parameters:
       - name: descendant
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Instance` that has been added.
     tags: []
@@ -1787,7 +1789,7 @@ events:
     parameters:
       - name: descendant
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Instance` that is being removed.
     tags: []
@@ -1852,7 +1854,7 @@ events:
     parameters:
       - name: child
         type: Instance
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated

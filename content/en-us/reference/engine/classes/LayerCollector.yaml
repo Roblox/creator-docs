@@ -123,7 +123,8 @@ methods:
       This method should not be used for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 events: []
 callbacks: []

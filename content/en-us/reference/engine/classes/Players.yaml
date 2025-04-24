@@ -368,7 +368,7 @@ methods:
     parameters:
       - name: message
         type: string
-        default:
+        default: ''
         summary: |
           The message chatted.
     returns:
@@ -378,7 +378,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players:GetPlayerByUserId
     summary: |
@@ -412,7 +413,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The `Class.Player.UserId` of the player being specified.
     returns:
@@ -422,7 +423,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players:GetPlayerFromCharacter
     summary: |
@@ -454,7 +456,7 @@ methods:
     parameters:
       - name: character
         type: Model
-        default:
+        default: ''
         summary: |
           A character instance that you want to get the player from.
     returns:
@@ -464,7 +466,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players:GetPlayers
     summary: |
@@ -513,7 +516,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players:SetChatStyle
     summary: |
@@ -541,7 +545,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players:TeamChat
     summary: |
@@ -560,7 +565,7 @@ methods:
     parameters:
       - name: message
         type: string
-        default:
+        default: ''
         summary: |
           The message being chatted.
     returns:
@@ -570,7 +575,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players:getPlayers
     summary: ''
@@ -587,7 +593,8 @@ methods:
       which should be used instead.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players:playerFromCharacter
     summary: ''
@@ -596,7 +603,7 @@ methods:
     parameters:
       - name: character
         type: Model
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Player
@@ -608,7 +615,8 @@ methods:
       `Class.Players:GetPlayerFromCharacter()` which should be used in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players:players
     summary: |
@@ -628,7 +636,8 @@ methods:
       be used in all new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players:BanAsync
     summary: |
@@ -721,7 +730,7 @@ methods:
     parameters:
       - name: config
         type: Dictionary
-        default:
+        default: ''
         summary: |
           - `UserIds` (required; array) — Array of `Class.Player.UserId|UserIds`
             of players to be banned. Max size is `50`.
@@ -751,7 +760,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players:CreateHumanoidModelFromDescription
     summary: |
@@ -765,12 +775,12 @@ methods:
     parameters:
       - name: description
         type: HumanoidDescription
-        default:
+        default: ''
         summary: |
           Specifies the appearance of the returned character.
       - name: rigType
         type: HumanoidRigType
-        default:
+        default: ''
         summary: |
           Specifies whether the returned character will be R6 or R15.
       - name: assetTypeVerification
@@ -789,7 +799,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
+      - Players
     writeCapabilities: []
   - name: Players:CreateHumanoidModelFromUserId
     summary: |
@@ -804,7 +816,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The userId for a Roblox user. (The UserId is the number in the profile
           of the user e.g www.roblox.com/users/1/profile).
@@ -817,7 +829,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players:GetBanHistoryAsync
     summary: |
@@ -841,7 +854,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: BanHistoryPages
@@ -852,7 +865,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players:GetCharacterAppearanceAsync
     summary: |
@@ -874,7 +888,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The `Class.Player.UserId` of the specified player.
     returns:
@@ -886,7 +900,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players:GetCharacterAppearanceInfoAsync
     summary: |
@@ -997,7 +1012,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The \*_userId_ of the specified player.
     returns:
@@ -1010,7 +1025,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players:GetFriendsAsync
     summary: |
@@ -1054,7 +1070,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The user ID of the player being specified.
     returns:
@@ -1065,7 +1081,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players:GetHumanoidDescriptionFromOutfitId
     summary: |
@@ -1081,7 +1098,7 @@ methods:
     parameters:
       - name: outfitId
         type: int64
-        default:
+        default: ''
         summary: |
           The id of the outfit for which the HumanoidDescription is sought.
     returns:
@@ -1094,7 +1111,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
+      - Players
     writeCapabilities: []
   - name: Players:GetHumanoidDescriptionFromUserId
     summary: |
@@ -1109,7 +1128,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The userId for a Roblox user. (The UserId is the number in the profile
           of the user e.g www.roblox.com/users/1/profile).
@@ -1123,7 +1142,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
+      - Players
     writeCapabilities: []
   - name: Players:GetNameFromUserIdAsync
     summary: |
@@ -1145,7 +1166,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The `Class.Player.UserId` of the player being specified.
     returns:
@@ -1157,7 +1178,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players:GetUserIdFromNameAsync
     summary: |
@@ -1179,7 +1201,7 @@ methods:
     parameters:
       - name: userName
         type: string
-        default:
+        default: ''
         summary: |
           The username of the player being specified.
     returns:
@@ -1191,7 +1213,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players:GetUserThumbnailAsync
     summary: |
@@ -1210,17 +1233,17 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The `Class.Player.UserId` of the player being specified.
       - name: thumbnailType
         type: ThumbnailType
-        default:
+        default: ''
         summary: |
           A `Enum.ThumbnailType` describing the type of thumbnail.
       - name: thumbnailSize
         type: ThumbnailSize
-        default:
+        default: ''
         summary: |
           A `Enum.ThumbnailSize` specifying the size of the thumbnail.
     returns:
@@ -1234,7 +1257,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players:UnbanAsync
     summary: |
@@ -1286,7 +1310,7 @@ methods:
     parameters:
       - name: config
         type: Dictionary
-        default:
+        default: ''
         summary: |
           <table><thead>
           <tr>
@@ -1315,7 +1339,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
 events:
   - name: Players.PlayerAdded
@@ -1358,14 +1383,15 @@ events:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: |
           An instance of the player that joined the game.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players.PlayerMembershipChanged
     summary: |
@@ -1396,13 +1422,14 @@ events:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players.PlayerRemoving
     summary: |
@@ -1440,14 +1467,15 @@ events:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: |
           An instance of the player that is leaving the game.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Players.UserSubscriptionStatusChanged
     summary: |
@@ -1468,18 +1496,19 @@ events:
     parameters:
       - name: user
         type: Player
-        default:
+        default: ''
         summary: |
           User whose subscription status has changed.
       - name: subscriptionId
         type: string
-        default:
+        default: ''
         summary: |
           The ID of the subscription with a status change.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
 callbacks: []

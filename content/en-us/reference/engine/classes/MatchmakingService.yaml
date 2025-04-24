@@ -26,7 +26,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           The name of the server attribute. Limited to a maximum of 50
           characters.
@@ -52,7 +52,7 @@ methods:
     parameters:
       - name: serverAttributes
         type: Dictionary
-        default:
+        default: ''
         summary: |
           An array of attribute name-value pairs.
     returns:
@@ -76,13 +76,13 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           The name of the server attribute. Limited to a maximum of 50
           characters.
       - name: value
         type: Variant
-        default:
+        default: ''
         summary: |
           The value of the server attribute. Limited to a maximum of 50
           characters.

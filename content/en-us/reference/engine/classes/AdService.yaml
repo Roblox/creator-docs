@@ -26,7 +26,7 @@ methods:
     parameters:
       - name: devProductId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: AdReward
@@ -64,7 +64,7 @@ methods:
     parameters:
       - name: adFormat
         type: AdFormat
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Variant
@@ -83,11 +83,11 @@ methods:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: ''
       - name: reward
         type: AdReward
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ShowAdResult
@@ -109,7 +109,7 @@ events:
     parameters:
       - name: adShown
         type: boolean
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated

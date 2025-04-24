@@ -1049,7 +1049,7 @@ methods:
     parameters:
       - name: objects
         type: Instances
-        default:
+        default: ''
         summary: |
           An array of `Class.BasePart|BaseParts` for whom joints are to be
           broken.
@@ -1301,12 +1301,12 @@ methods:
     parameters:
       - name: objects
         type: Instances
-        default:
+        default: ''
         summary: |
           An array of `Class.BasePart|BaseParts` for whom joints are to be made.
       - name: jointType
         type: JointCreationMode
-        default:
+        default: ''
         summary: |
           The `Enum.JointCreationMode` to be used. Passing in
           `Enum.JointCreationMode|Enum.JointCreationMode.All` or
@@ -1367,7 +1367,7 @@ methods:
     parameters:
       - name: objects
         type: Instances
-        default:
+        default: ''
         summary: |
           An array of `Class.BasePart|parts` for whom joints are to be made.
     returns:
@@ -1442,7 +1442,7 @@ methods:
     parameters:
       - name: objects
         type: Instances
-        default:
+        default: ''
         summary: |
           An array of `Class.BasePart|BaseParts` for whom joints are to be
           broken.
@@ -1497,7 +1497,7 @@ events:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''

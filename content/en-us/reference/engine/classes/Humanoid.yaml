@@ -1321,7 +1321,7 @@ methods:
     parameters:
       - name: accessory
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Accessory` to be attached.
     returns:
@@ -1331,7 +1331,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:AddCustomStatus
     summary: |
@@ -1344,7 +1345,7 @@ methods:
     parameters:
       - name: status
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: boolean
@@ -1357,7 +1358,8 @@ methods:
       not use it for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:AddStatus
     summary: |
@@ -1383,7 +1385,8 @@ methods:
       not use it for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:BuildRigFromAttachments
     summary: |
@@ -1415,7 +1418,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:ChangeState
     summary: |
@@ -1465,7 +1469,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:EquipTool
     summary: |
@@ -1506,7 +1511,7 @@ methods:
     parameters:
       - name: tool
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Tool` to equip.
     returns:
@@ -1516,7 +1521,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:GetAccessories
     summary: |
@@ -1544,7 +1550,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:GetAppliedDescription
     summary: |
@@ -1575,7 +1582,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:GetBodyPartR15
     summary: |
@@ -1602,7 +1610,7 @@ methods:
     parameters:
       - name: part
         type: Instance
-        default:
+        default: ''
         summary: |
           The specified part being checked to see if it is an R15 body part.
     returns:
@@ -1614,7 +1622,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:GetLimb
     summary: |
@@ -1641,7 +1650,7 @@ methods:
     parameters:
       - name: part
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Part` for which the `Enum.Limb|Enum.Limb` is to be
           retrieved.
@@ -1653,7 +1662,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:GetMoveVelocity
     summary: ''
@@ -1667,7 +1677,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:GetPlayingAnimationTracks
     summary: |
@@ -1694,7 +1705,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:GetState
     summary: |
@@ -1718,7 +1730,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:GetStateEnabled
     summary: |
@@ -1746,7 +1759,7 @@ methods:
     parameters:
       - name: state
         type: HumanoidStateType
-        default:
+        default: ''
         summary: |
           The given `Enum.HumanoidStateType`.
     returns:
@@ -1757,7 +1770,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:GetStatuses
     summary: |
@@ -1778,7 +1792,8 @@ methods:
       not use it for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:HasCustomStatus
     summary: |
@@ -1790,7 +1805,7 @@ methods:
     parameters:
       - name: status
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: boolean
@@ -1803,7 +1818,8 @@ methods:
       not use it for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:HasStatus
     summary: |
@@ -1827,7 +1843,8 @@ methods:
       not use it for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:LoadAnimation
     summary: |
@@ -1840,7 +1857,7 @@ methods:
     parameters:
       - name: animation
         type: Animation
-        default:
+        default: ''
         summary: |
           The `Class.Animation` to load.
     returns:
@@ -1854,7 +1871,8 @@ methods:
       created while editing or at runtime).
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:Move
     summary: |
@@ -1892,7 +1910,7 @@ methods:
     parameters:
       - name: moveDirection
         type: Vector3
-        default:
+        default: ''
         summary: |
           The direction to walk in.
       - name: relativeToCamera
@@ -1908,7 +1926,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:MoveTo
     summary: |
@@ -1956,7 +1975,7 @@ methods:
     parameters:
       - name: location
         type: Vector3
-        default:
+        default: ''
         summary: |
           The position to set `Class.Humanoid.WalkToPoint` to.
       - name: part
@@ -1971,7 +1990,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:RemoveAccessories
     summary: |
@@ -1999,7 +2019,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:RemoveCustomStatus
     summary: |
@@ -2011,7 +2032,7 @@ methods:
     parameters:
       - name: status
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: boolean
@@ -2024,7 +2045,8 @@ methods:
       not use it for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:RemoveStatus
     summary: |
@@ -2049,7 +2071,8 @@ methods:
       not use it for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:ReplaceBodyPartR15
     summary: |
@@ -2069,12 +2092,12 @@ methods:
     parameters:
       - name: bodyPart
         type: BodyPartR15
-        default:
+        default: ''
         summary: |
           The body part to replace. `Enum.BodyPartR15.Unknown` will fail.
       - name: part
         type: BasePart
-        default:
+        default: ''
         summary: |
           The `Class.Part` `Class.Instance` which will be parented to the
           character.
@@ -2085,7 +2108,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:SetStateEnabled
     summary: |
@@ -2105,12 +2129,12 @@ methods:
     parameters:
       - name: state
         type: HumanoidStateType
-        default:
+        default: ''
         summary: |
           The `Enum.HumanoidStateType` to be enabled or disabled.
       - name: enabled
         type: boolean
-        default:
+        default: ''
         summary: |
           `true` if `state` is to be enabled, `false` if `state` is to be
           disabled.
@@ -2121,7 +2145,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:TakeDamage
     summary: |
@@ -2158,7 +2183,7 @@ methods:
     parameters:
       - name: amount
         type: float
-        default:
+        default: ''
         summary: |
           The damage, or amount to be deduced from the `Class.Humanoid.Health`.
     returns:
@@ -2168,7 +2193,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:UnequipTools
     summary: |
@@ -2200,7 +2226,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:loadAnimation
     summary: ''
@@ -2209,7 +2236,7 @@ methods:
     parameters:
       - name: animation
         type: Animation
-        default:
+        default: ''
         summary: ''
     returns:
       - type: AnimationTrack
@@ -2221,7 +2248,8 @@ methods:
       `Class.Animator:LoadAnimation()` should be used instead.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:takeDamage
     summary: ''
@@ -2230,7 +2258,7 @@ methods:
     parameters:
       - name: amount
         type: float
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -2242,7 +2270,8 @@ methods:
       which should be used instead.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:ApplyDescription
     summary: |
@@ -2279,7 +2308,7 @@ methods:
     parameters:
       - name: humanoidDescription
         type: HumanoidDescription
-        default:
+        default: ''
         summary: |
           The `Class.HumanoidDescription` Instance which you want to set the
           character to match.
@@ -2295,7 +2324,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:ApplyDescriptionReset
     summary: |
@@ -2320,7 +2350,7 @@ methods:
     parameters:
       - name: humanoidDescription
         type: HumanoidDescription
-        default:
+        default: ''
         summary: |
           The `Class.HumanoidDescription` instance which you want to set the
           character to match.
@@ -2336,7 +2366,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:PlayEmote
     summary: |
@@ -2349,7 +2380,7 @@ methods:
     parameters:
       - name: emoteName
         type: string
-        default:
+        default: ''
         summary: |
           name of the emote to play.
     returns:
@@ -2361,7 +2392,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
 events:
   - name: Humanoid.AnimationPlayed
@@ -2390,7 +2422,7 @@ events:
     parameters:
       - name: animationTrack
         type: AnimationTrack
-        default:
+        default: ''
         summary: |
           The `Class.AnimationTrack` that has begun playing.
     tags:
@@ -2398,7 +2430,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.ApplyDescriptionFinished
     summary: ''
@@ -2407,13 +2440,14 @@ events:
     parameters:
       - name: description
         type: HumanoidDescription
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.Climbing
     summary: |
@@ -2443,14 +2477,15 @@ events:
     parameters:
       - name: speed
         type: float
-        default:
+        default: ''
         summary: |
           The speed at which the `Class.Humanoid` is currently climbing.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.CustomStatusAdded
     summary: |
@@ -2462,7 +2497,7 @@ events:
     parameters:
       - name: status
         type: string
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -2472,7 +2507,8 @@ events:
       not use it for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.CustomStatusRemoved
     summary: |
@@ -2484,7 +2520,7 @@ events:
     parameters:
       - name: status
         type: string
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -2494,7 +2530,8 @@ events:
       not use it for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.Died
     summary: |
@@ -2515,7 +2552,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.FallingDown
     summary: |
@@ -2533,7 +2571,7 @@ events:
     parameters:
       - name: active
         type: boolean
-        default:
+        default: ''
         summary: |
           Describes whether the `Class.Humanoid` is entering or leaving the
           `FallingDown` `Enum.HumanoidStateType`.
@@ -2541,7 +2579,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.FreeFalling
     summary: |
@@ -2563,7 +2602,7 @@ events:
     parameters:
       - name: active
         type: boolean
-        default:
+        default: ''
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the `Freefall`
           `Enum.HumanoidStateType`.
@@ -2571,7 +2610,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.GettingUp
     summary: |
@@ -2595,7 +2635,7 @@ events:
     parameters:
       - name: active
         type: boolean
-        default:
+        default: ''
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the `GettingUp`
           `Enum.HumanoidStateType`.
@@ -2603,7 +2643,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.HealthChanged
     summary: |
@@ -2623,14 +2664,15 @@ events:
     parameters:
       - name: health
         type: float
-        default:
+        default: ''
         summary: |
           The new value of `Class.Humanoid.Health`.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.Jumping
     summary: |
@@ -2652,7 +2694,7 @@ events:
     parameters:
       - name: active
         type: boolean
-        default:
+        default: ''
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the `Jumping`
           `Enum.HumanoidStateType`.
@@ -2660,7 +2702,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.MoveToFinished
     summary: |
@@ -2685,7 +2728,7 @@ events:
     parameters:
       - name: reached
         type: boolean
-        default:
+        default: ''
         summary: |
           A boolean indicating whether the `Class.Humanoid` reached is goal.
           _True_ if the `Class.Humanoid` is reached its goal, _false_ if the
@@ -2694,7 +2737,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.PlatformStanding
     summary: |
@@ -2718,7 +2762,7 @@ events:
     parameters:
       - name: active
         type: boolean
-        default:
+        default: ''
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the
           `PlatformStanding` `Enum.HumanoidStateType`.
@@ -2726,7 +2770,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.Ragdoll
     summary: |
@@ -2750,7 +2795,7 @@ events:
     parameters:
       - name: active
         type: boolean
-        default:
+        default: ''
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the `Ragdoll`
           `Enum.HumanoidStateType`.
@@ -2758,7 +2803,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.Running
     summary: |
@@ -2784,14 +2830,15 @@ events:
     parameters:
       - name: speed
         type: float
-        default:
+        default: ''
         summary: |
           The speed at which the `Class.Humanoid` is running.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.Seated
     summary: |
@@ -2821,19 +2868,20 @@ events:
     parameters:
       - name: active
         type: boolean
-        default:
+        default: ''
         summary: |
           True if the `Class.Humanoid` is sitting down.
       - name: currentSeatPart
         type: BasePart
-        default:
+        default: ''
         summary: |
           The seat the `Class.Humanoid` is sat in if it is sitting down.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.StateChanged
     summary: |
@@ -2859,19 +2907,20 @@ events:
     parameters:
       - name: old
         type: HumanoidStateType
-        default:
+        default: ''
         summary: |
           The humanoid's previous state type.
       - name: new
         type: HumanoidStateType
-        default:
+        default: ''
         summary: |
           The humanoid's current state type.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.StateEnabledChanged
     summary: |
@@ -2895,20 +2944,21 @@ events:
     parameters:
       - name: state
         type: HumanoidStateType
-        default:
+        default: ''
         summary: |
           The `Enum.HumanoidStateType` for which the enabled state has been
           changed.
       - name: isEnabled
         type: boolean
-        default:
+        default: ''
         summary: |
           True if the state is now enabled.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.StatusAdded
     summary: |
@@ -2920,7 +2970,7 @@ events:
     parameters:
       - name: status
         type: Status
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -2930,7 +2980,8 @@ events:
       not use it for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.StatusRemoved
     summary: |
@@ -2942,7 +2993,7 @@ events:
     parameters:
       - name: status
         type: Status
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -2952,7 +3003,8 @@ events:
       not use it for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.Strafing
     summary: |
@@ -2979,7 +3031,7 @@ events:
     parameters:
       - name: active
         type: boolean
-        default:
+        default: ''
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the
           `StrafingNoPhysics` `Enum.HumanoidStateType`.
@@ -2987,7 +3039,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.Swimming
     summary: |
@@ -3015,14 +3068,15 @@ events:
     parameters:
       - name: speed
         type: float
-        default:
+        default: ''
         summary: |
           The speed the `Class.Humanoid` is currently swimming at.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.Touched
     summary: |
@@ -3063,18 +3117,19 @@ events:
     parameters:
       - name: touchingPart
         type: BasePart
-        default:
+        default: ''
         summary: |
           The `Class.BasePart` the `Class.Humanoid` has come in contact with.
       - name: humanoidPart
         type: BasePart
-        default:
+        default: ''
         summary: |
           The limb of the `Class.Humanoid` that has been touched.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
 callbacks: []

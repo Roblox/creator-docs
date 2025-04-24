@@ -26,7 +26,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -47,7 +47,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -71,7 +71,7 @@ methods:
     parameters:
       - name: script
         type: LuaSourceContainer
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ScriptDocument
@@ -98,7 +98,7 @@ methods:
     parameters:
       - name: script
         type: LuaSourceContainer
-        default:
+        default: ''
         summary: ''
     returns:
       - type: string
@@ -246,15 +246,15 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
       - name: priority
         type: int
-        default:
+        default: ''
         summary: ''
       - name: callbackFunction
         type: Function
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -330,15 +330,15 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
       - name: priority
         type: int
-        default:
+        default: ''
         summary: ''
       - name: callbackFunction
         type: Function
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -366,7 +366,7 @@ methods:
     parameters:
       - name: script
         type: LuaSourceContainer
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Tuple
@@ -412,12 +412,12 @@ methods:
     parameters:
       - name: script
         type: LuaSourceContainer
-        default:
+        default: ''
         summary: |
           Script instance to be updated.
       - name: callback
         type: Function
-        default:
+        default: ''
         summary: |
           The function to return new script content.
     returns:
@@ -444,11 +444,11 @@ events:
     parameters:
       - name: document
         type: ScriptDocument
-        default:
+        default: ''
         summary: ''
       - name: changesArray
         type: Variant
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
@@ -471,7 +471,7 @@ events:
     parameters:
       - name: oldDocument
         type: ScriptDocument
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
@@ -491,7 +491,7 @@ events:
     parameters:
       - name: newDocument
         type: ScriptDocument
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''

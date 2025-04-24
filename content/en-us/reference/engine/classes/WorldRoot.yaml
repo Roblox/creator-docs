@@ -31,7 +31,7 @@ methods:
     parameters:
       - name: partList
         type: Instances
-        default:
+        default: ''
         summary: |
           A list of parts checks to see if any parts in the list are touching
           any parts not in the list.
@@ -80,18 +80,18 @@ methods:
     parameters:
       - name: cframe
         type: CFrame
-        default:
+        default: ''
         summary: |
           The initial position and rotation of the cast block shape.
       - name: size
         type: Vector3
-        default:
+        default: ''
         summary: |
           The size of the cast block shape in studs. The maximum size is 512
           studs.
       - name: direction
         type: Vector3
-        default:
+        default: ''
         summary: |
           Direction of the shapecast, with the magnitude representing the
           maximum distance the shape can travel. The maximum distance is 1024
@@ -139,11 +139,11 @@ methods:
     parameters:
       - name: partList
         type: Instances
-        default:
+        default: ''
         summary: ''
       - name: cframeList
         type: Array
-        default:
+        default: ''
         summary: ''
       - name: eventMode
         type: BulkMoveMode
@@ -197,7 +197,7 @@ methods:
     parameters:
       - name: ray
         type: Ray
-        default:
+        default: ''
         summary: ''
       - name: ignoreDescendantsInstance
         type: Instance
@@ -243,11 +243,11 @@ methods:
     parameters:
       - name: ray
         type: Ray
-        default:
+        default: ''
         summary: ''
       - name: ignoreDescendantsTable
         type: Instances
-        default:
+        default: ''
         summary: ''
       - name: terrainCellsAreCubes
         type: boolean
@@ -293,11 +293,11 @@ methods:
     parameters:
       - name: ray
         type: Ray
-        default:
+        default: ''
         summary: ''
       - name: whitelistDescendantsTable
         type: Instances
-        default:
+        default: ''
         summary: ''
       - name: ignoreWater
         type: boolean
@@ -356,7 +356,7 @@ methods:
     parameters:
       - name: region
         type: Region3
-        default:
+        default: ''
         summary: |
           The `Datatype.Region3` to be checked.
       - name: ignoreDescendantsInstance
@@ -407,12 +407,12 @@ methods:
     parameters:
       - name: region
         type: Region3
-        default:
+        default: ''
         summary: |
           The `Datatype.Region3` to be checked.
       - name: ignoreDescendantsTable
         type: Instances
-        default:
+        default: ''
         summary: |
           An array of objects to be ignored.
       - name: maxParts
@@ -459,12 +459,12 @@ methods:
     parameters:
       - name: region
         type: Region3
-        default:
+        default: ''
         summary: |
           The `Datatype.Region3` to be checked.
       - name: whitelistDescendantsTable
         type: Instances
-        default:
+        default: ''
         summary: |
           An array of objects to check.
       - name: maxParts
@@ -512,12 +512,12 @@ methods:
     parameters:
       - name: cframe
         type: CFrame
-        default:
+        default: ''
         summary: |
           The location of the center of the given box volume to be queried.
       - name: size
         type: Vector3
-        default:
+        default: ''
         summary: |
           The size of the given box volume to be queried.
       - name: overlapParams
@@ -562,12 +562,12 @@ methods:
     parameters:
       - name: position
         type: Vector3
-        default:
+        default: ''
         summary: |
           The location of the center of the given sphere volume to be queried.
       - name: radius
         type: float
-        default:
+        default: ''
         summary: |
           The radius of the given sphere volume to be queried.
       - name: overlapParams
@@ -616,7 +616,7 @@ methods:
     parameters:
       - name: part
         type: BasePart
-        default:
+        default: ''
         summary: |
           The part whose volume is to be checked against other parts.
       - name: overlapParams
@@ -670,12 +670,12 @@ methods:
     parameters:
       - name: part
         type: BasePart
-        default:
+        default: ''
         summary: |
           The part being moved.
       - name: target
         type: CFrame
-        default:
+        default: ''
         summary: |
           The location to move the specified part.
       - name: translateStiffness
@@ -760,7 +760,7 @@ methods:
     parameters:
       - name: region
         type: Region3
-        default:
+        default: ''
         summary: |
           The `Datatype.Region3` to be checked.
       - name: ignoreDescendentsInstance
@@ -807,12 +807,12 @@ methods:
     parameters:
       - name: region
         type: Region3
-        default:
+        default: ''
         summary: |
           The `Datatype.Region3` to be checked.
       - name: ignoreDescendentsTable
         type: Instances
-        default:
+        default: ''
         summary: |
           An array of objects to be ignored.
     returns:
@@ -857,12 +857,12 @@ methods:
     parameters:
       - name: origin
         type: Vector3
-        default:
+        default: ''
         summary: |
           The origin point of the ray.
       - name: direction
         type: Vector3
-        default:
+        default: ''
         summary: |
           The directional vector of the ray. Note that the length of this vector
           matters, as parts/terrain further away than its length will not be
@@ -892,11 +892,11 @@ methods:
     parameters:
       - name: part
         type: BasePart
-        default:
+        default: ''
         summary: ''
       - name: direction
         type: Vector3
-        default:
+        default: ''
         summary: ''
       - name: params
         type: RaycastParams
@@ -938,18 +938,18 @@ methods:
     parameters:
       - name: position
         type: Vector3
-        default:
+        default: ''
         summary: |
           The initial position of the cast spherical shape.
       - name: radius
         type: float
-        default:
+        default: ''
         summary: |
           The radius of the cast spherical shape in studs. The maximum radius is
           256 studs.
       - name: direction
         type: Vector3
-        default:
+        default: ''
         summary: |
           Direction of the shapecast, with the magnitude representing the
           maximum distance the shape can travel. The maximum distance is 1024
@@ -993,7 +993,7 @@ methods:
     parameters:
       - name: dt
         type: float
-        default:
+        default: ''
         summary: |
           The amount of time that will be simulated. This argument must be a
           positive number. Larger values will increase the runtime of this
@@ -1021,7 +1021,7 @@ methods:
     parameters:
       - name: ray
         type: Ray
-        default:
+        default: ''
         summary: ''
       - name: ignoreDescendantsInstance
         type: Instance
@@ -1054,7 +1054,7 @@ methods:
     parameters:
       - name: region
         type: Region3
-        default:
+        default: ''
         summary: ''
       - name: ignoreDescendantsInstance
         type: Instance

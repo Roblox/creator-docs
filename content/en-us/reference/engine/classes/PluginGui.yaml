@@ -115,7 +115,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: PluginGui:GetRelativeMousePosition
     summary: |
@@ -136,7 +137,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 events:
   - name: PluginGui.PluginDragDropped
@@ -158,13 +160,14 @@ events:
     parameters:
       - name: dragData
         type: Dictionary
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: PluginGui.PluginDragEntered
     summary: |
@@ -190,14 +193,15 @@ events:
     parameters:
       - name: dragData
         type: Dictionary
-        default:
+        default: ''
         summary: |
           A copy of the data originally passed to `Class.Plugin:StartDrag()`.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: PluginGui.PluginDragLeft
     summary: |
@@ -222,14 +226,15 @@ events:
     parameters:
       - name: dragData
         type: Dictionary
-        default:
+        default: ''
         summary: |
           A copy of the data originally passed to `Class.Plugin:StartDrag()`.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: PluginGui.PluginDragMoved
     summary: |
@@ -249,13 +254,14 @@ events:
     parameters:
       - name: dragData
         type: Dictionary
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: PluginGui.WindowFocusReleased
     summary: |
@@ -278,7 +284,8 @@ events:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: PluginGui.WindowFocused
     summary: |
@@ -302,6 +309,7 @@ events:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 callbacks: []

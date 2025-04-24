@@ -71,13 +71,14 @@ events:
     parameters:
       - name: face
         type: NormalId
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: Handles.MouseButton1Up
     summary: |
@@ -88,13 +89,14 @@ events:
     parameters:
       - name: face
         type: NormalId
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: Handles.MouseDrag
     summary: |
@@ -107,17 +109,18 @@ events:
     parameters:
       - name: face
         type: NormalId
-        default:
+        default: ''
         summary: ''
       - name: distance
         type: float
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: Handles.MouseEnter
     summary: |
@@ -128,13 +131,14 @@ events:
     parameters:
       - name: face
         type: NormalId
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: Handles.MouseLeave
     summary: |
@@ -145,12 +149,13 @@ events:
     parameters:
       - name: face
         type: NormalId
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 callbacks: []

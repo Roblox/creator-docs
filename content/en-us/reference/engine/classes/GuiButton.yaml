@@ -186,17 +186,18 @@ events:
     parameters:
       - name: inputObject
         type: InputObject
-        default:
+        default: ''
         summary: ''
       - name: clickCount
         type: int
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiButton.MouseButton1Click
     summary: |
@@ -220,7 +221,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiButton.MouseButton1Down
     summary: |
@@ -237,19 +239,20 @@ events:
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **X** screen coordinate in pixels.
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **Y** screen coordinate in pixels.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiButton.MouseButton1Up
     summary: |
@@ -266,19 +269,20 @@ events:
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **X** screen coordinate in pixels.
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **Y** screen coordinate in pixels.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiButton.MouseButton2Click
     summary: |
@@ -302,7 +306,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiButton.MouseButton2Down
     summary: |
@@ -319,19 +324,20 @@ events:
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **X** screen coordinate in pixels.
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **Y** screen coordinate in pixels.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiButton.MouseButton2Up
     summary: |
@@ -348,18 +354,19 @@ events:
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **X** screen coordinate in pixels.
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **Y** screen coordinate in pixels.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 callbacks: []

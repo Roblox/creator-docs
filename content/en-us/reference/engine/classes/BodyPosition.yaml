@@ -191,7 +191,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: BodyPosition:lastForce
     summary: |
@@ -210,7 +211,8 @@ methods:
       which should be used in new work instead,
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
 events:
   - name: BodyPosition.ReachedTarget
@@ -228,6 +230,7 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
 callbacks: []

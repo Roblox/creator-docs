@@ -50,15 +50,15 @@ methods:
     parameters:
       - name: mousePart
         type: Instance
-        default:
+        default: ''
         summary: ''
       - name: pointOnMousePart
         type: Vector3
-        default:
+        default: ''
         summary: ''
       - name: parts
         type: Instances
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -80,7 +80,7 @@ methods:
     parameters:
       - name: mouseRay
         type: Ray
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()

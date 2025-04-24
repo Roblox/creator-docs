@@ -104,7 +104,7 @@ methods:
     parameters:
       - name: marker
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.KeyframeMarker` being parented to the `Class.Keyframe`.
     returns:
@@ -114,7 +114,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: Keyframe:AddPose
     summary: |
@@ -134,7 +135,7 @@ methods:
     parameters:
       - name: pose
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Pose` to be added.
     returns:
@@ -144,7 +145,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: Keyframe:GetMarkers
     summary: |
@@ -184,7 +186,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: Keyframe:GetPoses
     summary: |
@@ -204,7 +207,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: Keyframe:RemoveMarker
     summary: |
@@ -242,7 +246,7 @@ methods:
     parameters:
       - name: marker
         type: Instance
-        default:
+        default: ''
         summary: |
           The marker being removed from the `Class.Keyframe`.
     returns:
@@ -252,7 +256,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: Keyframe:RemovePose
     summary: |
@@ -270,7 +275,7 @@ methods:
     parameters:
       - name: pose
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Pose` to be removed.
     returns:
@@ -280,7 +285,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
 events: []
 callbacks: []

@@ -25,7 +25,7 @@ methods:
     parameters:
       - name: seconds
         type: double
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -47,15 +47,15 @@ events:
     parameters:
       - name: message
         type: string
-        default:
+        default: ''
         summary: ''
       - name: stackTrace
         type: string
-        default:
+        default: ''
         summary: ''
       - name: script
         type: Instance
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''

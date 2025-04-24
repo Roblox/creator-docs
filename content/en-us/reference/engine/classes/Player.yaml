@@ -1172,7 +1172,7 @@ methods:
     parameters:
       - name: part
         type: BasePart
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -1181,7 +1181,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:ClearCharacterAppearance
     summary: |
@@ -1206,7 +1207,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:DistanceFromCharacter
     summary: |
@@ -1231,7 +1233,7 @@ methods:
     parameters:
       - name: point
         type: Vector3
-        default:
+        default: ''
         summary: |
           The location from which player's distance to is being measured.
     returns:
@@ -1242,7 +1244,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:GetJoinData
     summary: |
@@ -1349,7 +1352,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:GetMouse
     summary: |
@@ -1380,7 +1384,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
+      - Players
     writeCapabilities: []
   - name: Player:GetNetworkPing
     summary: |
@@ -1405,7 +1411,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:HasAppearanceLoaded
     summary: |
@@ -1433,7 +1440,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:IsVerified
     summary: |
@@ -1460,7 +1468,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:Kick
     summary: |
@@ -1493,7 +1502,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:LoadBoolean
     summary: |
@@ -1507,7 +1517,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: boolean
@@ -1520,7 +1530,8 @@ methods:
       `Class.DataStoreService` for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:LoadCharacterAppearance
     summary: |
@@ -1552,7 +1563,7 @@ methods:
     parameters:
       - name: assetInstance
         type: Instance
-        default:
+        default: ''
         summary: |
           An instance of the asset being loaded, which can be obtained using the
           `Class.InsertService:LoadAsset()` function.
@@ -1564,7 +1575,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
+      - Players
     writeCapabilities: []
   - name: Player:LoadInstance
     summary: |
@@ -1579,7 +1592,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instance
@@ -1592,7 +1605,8 @@ methods:
       `Class.DataStoreService` for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:LoadNumber
     summary: |
@@ -1607,7 +1621,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: double
@@ -1620,7 +1634,8 @@ methods:
       `Class.DataStoreService` for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:LoadString
     summary: |
@@ -1634,7 +1649,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: string
@@ -1647,7 +1662,8 @@ methods:
       `Class.DataStoreService` for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:Move
     summary: |
@@ -1669,7 +1685,7 @@ methods:
     parameters:
       - name: walkDirection
         type: Vector3
-        default:
+        default: ''
         summary: |
           The Vector3 direction that the player should move.
       - name: relativeToCamera
@@ -1685,7 +1701,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:RemoveReplicationFocus
     summary: ''
@@ -1694,7 +1711,7 @@ methods:
     parameters:
       - name: part
         type: BasePart
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -1703,7 +1720,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:SaveBoolean
     summary: |
@@ -1717,11 +1735,11 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
       - name: value
         type: boolean
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -1734,7 +1752,8 @@ methods:
       `Class.DataStoreService` for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:SaveInstance
     summary: |
@@ -1748,11 +1767,11 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
       - name: value
         type: Instance
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -1765,7 +1784,8 @@ methods:
       `Class.DataStoreService` for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:SaveNumber
     summary: |
@@ -1779,11 +1799,11 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
       - name: value
         type: double
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -1796,7 +1816,8 @@ methods:
       `Class.DataStoreService` for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:SaveString
     summary: |
@@ -1810,11 +1831,11 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
       - name: value
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -1827,7 +1848,8 @@ methods:
       `Class.DataStoreService` for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:SetAccountAge
     summary: |
@@ -1847,7 +1869,7 @@ methods:
     parameters:
       - name: accountAge
         type: int
-        default:
+        default: ''
         summary: |
           The age of the account in days.
     returns:
@@ -1857,7 +1879,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:SetSuperSafeChat
     summary: |
@@ -1883,7 +1906,7 @@ methods:
     parameters:
       - name: value
         type: boolean
-        default:
+        default: ''
         summary: |
           A boolean indicating whether or not the player sees filtered chat.
     returns:
@@ -1893,7 +1916,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:loadBoolean
     summary: ''
@@ -1902,7 +1926,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: boolean
@@ -1915,7 +1939,8 @@ methods:
       work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:loadInstance
     summary: ''
@@ -1924,7 +1949,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instance
@@ -1937,7 +1962,8 @@ methods:
       work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:loadNumber
     summary: ''
@@ -1946,7 +1972,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: double
@@ -1958,7 +1984,8 @@ methods:
       has also been deprecated. Neither function should be used in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:loadString
     summary: ''
@@ -1967,7 +1994,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: string
@@ -1979,7 +2006,8 @@ methods:
       has also been deprecated. Neither function should be used in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:saveBoolean
     summary: ''
@@ -1988,11 +2016,11 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
       - name: value
         type: boolean
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -2005,7 +2033,8 @@ methods:
       work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:saveInstance
     summary: ''
@@ -2014,11 +2043,11 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
       - name: value
         type: Instance
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -2031,7 +2060,8 @@ methods:
       work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:saveNumber
     summary: ''
@@ -2040,11 +2070,11 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
       - name: value
         type: double
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -2056,7 +2086,8 @@ methods:
       has also been deprecated. Neither function should be used in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:saveString
     summary: ''
@@ -2065,11 +2096,11 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
       - name: value
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -2081,7 +2112,8 @@ methods:
       has also been deprecated. Neither function should be used in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:GetFriendsOnline
     summary: |
@@ -2201,7 +2233,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:GetRankInGroup
     summary: |
@@ -2228,7 +2261,7 @@ methods:
     parameters:
       - name: groupId
         type: int64
-        default:
+        default: ''
         summary: |
           The `groupId` of the specified group.
     returns:
@@ -2240,7 +2273,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:GetRoleInGroup
     summary: |
@@ -2266,7 +2300,7 @@ methods:
     parameters:
       - name: groupId
         type: int64
-        default:
+        default: ''
         summary: |
           The _groupId_ of the specified group.
     returns:
@@ -2279,7 +2313,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:IsBestFriendsWith
     summary: |
@@ -2292,7 +2327,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: boolean
@@ -2305,7 +2340,8 @@ methods:
       Use `Class.Player:IsFriendsWith()` instead.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:IsFriendsWith
     summary: |
@@ -2323,7 +2359,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The `Class.Player.UserId` of the specified player.
     returns:
@@ -2336,7 +2372,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:IsInGroup
     summary: |
@@ -2362,7 +2399,7 @@ methods:
     parameters:
       - name: groupId
         type: int64
-        default:
+        default: ''
         summary: |
           The _groupId_ of the specified group.
     returns:
@@ -2374,7 +2411,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:LoadCharacter
     summary: |
@@ -2424,7 +2462,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:LoadCharacterWithHumanoidDescription
     summary: |
@@ -2449,7 +2488,7 @@ methods:
     parameters:
       - name: humanoidDescription
         type: HumanoidDescription
-        default:
+        default: ''
         summary: |
           A `Class.HumanoidDescription` containing traits like body
           parts/colors, body scaling, accessories, clothing, and animations that
@@ -2462,7 +2501,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:RequestStreamAroundAsync
     summary: |
@@ -2493,7 +2533,7 @@ methods:
     parameters:
       - name: position
         type: Vector3
-        default:
+        default: ''
         summary: |
           World location where streaming is requested.
       - name: timeOut
@@ -2509,7 +2549,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:WaitForDataReady
     summary: |
@@ -2534,7 +2575,8 @@ methods:
       `Class.DataStoreService` for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:isFriendsWith
     summary: ''
@@ -2543,7 +2585,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: boolean
@@ -2556,7 +2598,8 @@ methods:
       which should be used instead.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player:waitForDataReady
     summary: ''
@@ -2575,7 +2618,8 @@ methods:
       work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
 events:
   - name: Player.CharacterAdded
@@ -2609,14 +2653,15 @@ events:
     parameters:
       - name: character
         type: Model
-        default:
+        default: ''
         summary: |
           An instance of the character that spawned/respawned.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.CharacterAppearanceLoaded
     summary: |
@@ -2641,14 +2686,15 @@ events:
     parameters:
       - name: character
         type: Model
-        default:
+        default: ''
         summary: |
           The `Class.Player.Character` `Class.Model`.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.CharacterRemoving
     summary: |
@@ -2693,14 +2739,15 @@ events:
     parameters:
       - name: character
         type: Model
-        default:
+        default: ''
         summary: |
           An instance of the character that is being removed.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.Chatted
     summary: |
@@ -2740,12 +2787,12 @@ events:
     parameters:
       - name: message
         type: string
-        default:
+        default: ''
         summary: |
           The content of the message the player typed in chat.
       - name: recipient
         type: Player
-        default:
+        default: ''
         summary: |
           **Deprecated.** For whisper messages, this was the Player who was the
           intended target of the chat message.
@@ -2753,7 +2800,9 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
+      - Players
     writeCapabilities: []
   - name: Player.Idled
     summary: |
@@ -2781,14 +2830,15 @@ events:
     parameters:
       - name: time
         type: double
-        default:
+        default: ''
         summary: |
           The time in seconds the player has been idle.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Player.OnTeleport
     summary: |
@@ -2808,17 +2858,17 @@ events:
     parameters:
       - name: teleportState
         type: TeleportState
-        default:
+        default: ''
         summary: |
           The new `Enum.TeleportState` of the `Class.Player`.
       - name: placeId
         type: int64
-        default:
+        default: ''
         summary: |
           The ID of the place the `Class.Player` is being teleported to.
       - name: spawnName
         type: string
-        default:
+        default: ''
         summary: |
           The name of the spawn to teleport to, if
           `Class.TeleportService:TeleportToSpawnByName()` has been used.
@@ -2826,6 +2876,7 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
 callbacks: []

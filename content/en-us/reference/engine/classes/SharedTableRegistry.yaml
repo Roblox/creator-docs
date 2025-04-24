@@ -34,7 +34,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           The name of the registered `Datatype.SharedTable`.
     returns:
@@ -68,12 +68,12 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           The name of the registered `Datatype.SharedTable`.
       - name: st
         type: SharedTable?
-        default:
+        default: ''
         summary: |
           The `Datatype.SharedTable` object to register, or `nil` to unregister
           any previously registered `Datatype.SharedTable` object.

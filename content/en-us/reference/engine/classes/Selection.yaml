@@ -61,7 +61,7 @@ methods:
     parameters:
       - name: instancesToAdd
         type: Instances
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -110,7 +110,7 @@ methods:
     parameters:
       - name: instancesToRemove
         type: Instances
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -147,7 +147,7 @@ methods:
     parameters:
       - name: selection
         type: Instances
-        default:
+        default: ''
         summary: |
           An array of `Class.Instance|Instances` to set the current selection
           to.

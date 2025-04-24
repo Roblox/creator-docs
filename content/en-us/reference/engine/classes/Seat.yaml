@@ -111,7 +111,7 @@ methods:
     parameters:
       - name: humanoid
         type: Instance
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -120,7 +120,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 events: []
 callbacks: []

@@ -122,7 +122,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: PlayerGui:SetTopbarTransparency
     summary: |
@@ -143,7 +144,7 @@ methods:
     parameters:
       - name: transparency
         type: float
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -153,7 +154,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 events:
   - name: PlayerGui.TopbarTransparencyChangedSignal
@@ -166,13 +168,14 @@ events:
     parameters:
       - name: transparency
         type: float
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 callbacks: []

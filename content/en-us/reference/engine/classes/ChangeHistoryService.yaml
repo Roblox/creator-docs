@@ -37,7 +37,7 @@ methods:
     parameters:
       - name: identifier
         type: string
-        default:
+        default: ''
         summary: |
           Identifies the recording from the previous call to
           `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()`.
@@ -46,12 +46,12 @@ methods:
           value is ignored, and the recording is determined by context.
       - name: operation
         type: FinishRecordingOperation
-        default:
+        default: ''
         summary: |
           Specifies the operation to take.
       - name: finalOptions
         type: Dictionary?
-        default:
+        default: ''
         summary: |
           Optional table of values to pass to
           `Class.ChangeHistoryService.OnFinishRecording|OnFinishRecording`.
@@ -107,7 +107,7 @@ methods:
     parameters:
       - name: identifier
         type: string?
-        default:
+        default: ''
         summary: ''
     returns:
       - type: boolean
@@ -162,7 +162,7 @@ methods:
     parameters:
       - name: state
         type: boolean
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -196,7 +196,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -232,13 +232,13 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           Name of the action being performed suitable for logging and coding
           purposes.
       - name: displayName
         type: string?
-        default:
+        default: ''
         summary: |
           Name of the action being performed to display to the user.
     returns:
@@ -277,27 +277,27 @@ events:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           Name of the action being performed suitable for logging and coding
           purposes.
       - name: displayName
         type: string?
-        default:
+        default: ''
         summary: |
           Name of the action being performed to display to the user.
       - name: identifier
         type: string?
-        default:
+        default: ''
         summary: |
           The identifier for the recording.
       - name: operation
         type: FinishRecordingOperation
-        default:
+        default: ''
         summary: ''
       - name: finalOptions
         type: Dictionary?
-        default:
+        default: ''
         summary: |
           Optional table from
           `Class.ChangeHistoryService.FinishOperation()| FinishOperation()`.
@@ -316,13 +316,13 @@ events:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           Name of the action being performed suitable for logging and coding
           purposes.
       - name: displayName
         type: string?
-        default:
+        default: ''
         summary: |
           Name of the action being performed to display to the user.
     tags: []
@@ -342,7 +342,7 @@ events:
     parameters:
       - name: waypoint
         type: string
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
@@ -361,7 +361,7 @@ events:
     parameters:
       - name: waypoint
         type: string
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''

@@ -94,7 +94,7 @@ methods:
     parameters:
       - name: action
         type: Instance
-        default:
+        default: ''
         summary: |
           The action to add.
     returns:
@@ -116,7 +116,7 @@ methods:
     parameters:
       - name: menu
         type: Instance
-        default:
+        default: ''
         summary: |
           The menu to add as a sub menu. Uses its `Class.PluginMenu.Title` and
           `Class.PluginMenu.Icon` to display.
@@ -141,12 +141,12 @@ methods:
     parameters:
       - name: actionId
         type: string
-        default:
+        default: ''
         summary: |
           Must be a unique string that identifies this PluginAction from others.
       - name: text
         type: string
-        default:
+        default: ''
         summary: |
           The text to be displayed.
       - name: icon

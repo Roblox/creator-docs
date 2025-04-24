@@ -201,26 +201,26 @@ methods:
     parameters:
       - name: actionName
         type: string
-        default:
+        default: ''
         summary: |
           A string representing the action being performed (e.g. "HonkHorn" or
           "OpenDoor").
       - name: functionToBind
         type: Function
-        default:
+        default: ''
         summary: |
           The action-handling function, called with the following parameters
           when the bound inputs are triggered: string (actionName),
           `Enum.UserInputState` and an InputObject.
       - name: createTouchButton
         type: boolean
-        default:
+        default: ''
         summary: |
           Whether a GUI button should be created for the action on touch input
           devices.
       - name: inputTypes
         type: Tuple
-        default:
+        default: ''
         summary: |
           Any number of `Enum.KeyCode` or `Enum.UserInputType` representing the
           inputs to bind to the action.
@@ -231,7 +231,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: ContextActionService:BindActionAtPriority
     summary: |
@@ -250,32 +251,32 @@ methods:
     parameters:
       - name: actionName
         type: string
-        default:
+        default: ''
         summary: |
           A string representing the action being performed (e.g. "HonkHorn" or
           "OpenDoor").
       - name: functionToBind
         type: Function
-        default:
+        default: ''
         summary: |
           The action-handling function, called with the following parameters
           when the bound inputs are triggered: string (actionName),
           `Enum.UserInputState` and an InputObject.
       - name: createTouchButton
         type: boolean
-        default:
+        default: ''
         summary: |
           Whether a GUI button should be created for the action on touch input
           devices.
       - name: priorityLevel
         type: int
-        default:
+        default: ''
         summary: |
           The priority level at which the action should be bound (higher
           considered before lower).
       - name: inputTypes
         type: Tuple
-        default:
+        default: ''
         summary: |
           Any number of Enum.KeyCode or Enum.UserInputType representing the
           inputs to bind to the action.
@@ -286,7 +287,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: ContextActionService:BindActionToInputTypes
     summary: |
@@ -329,19 +331,19 @@ methods:
     parameters:
       - name: actionName
         type: string
-        default:
+        default: ''
         summary: ''
       - name: functionToBind
         type: Function
-        default:
+        default: ''
         summary: ''
       - name: createTouchButton
         type: boolean
-        default:
+        default: ''
         summary: ''
       - name: inputTypes
         type: Tuple
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -353,7 +355,8 @@ methods:
       which should be used in all new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: ContextActionService:BindActivate
     summary: |
@@ -375,12 +378,12 @@ methods:
     parameters:
       - name: userInputTypeForActivation
         type: UserInputType
-        default:
+        default: ''
         summary: |
           Must be Keyboard or Gamepad1 through Gamepad8.
       - name: keyCodesForActivation
         type: Tuple
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -389,7 +392,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: ContextActionService:GetAllBoundActionInfo
     summary: |
@@ -414,7 +418,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: ContextActionService:GetBoundActionInfo
     summary: |
@@ -515,7 +520,7 @@ methods:
     parameters:
       - name: actionName
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Dictionary
@@ -524,7 +529,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: ContextActionService:GetCurrentLocalToolIcon
     summary: |
@@ -546,7 +552,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: ContextActionService:SetDescription
     summary: |
@@ -569,12 +576,12 @@ methods:
     parameters:
       - name: actionName
         type: string
-        default:
+        default: ''
         summary: |
           The name of the action originally passed to BindAction.
       - name: description
         type: string
-        default:
+        default: ''
         summary: |
           A text description of the action, such as "Honk the car's horn" or
           "Open the inventory".
@@ -585,7 +592,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: ContextActionService:SetImage
     summary: |
@@ -609,12 +617,12 @@ methods:
     parameters:
       - name: actionName
         type: string
-        default:
+        default: ''
         summary: |
           The name of the action originally passed to BindAction.
       - name: image
         type: string
-        default:
+        default: ''
         summary: |
           The value to which the Image property should be set.
     returns:
@@ -624,7 +632,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: ContextActionService:SetPosition
     summary: |
@@ -648,12 +657,12 @@ methods:
     parameters:
       - name: actionName
         type: string
-        default:
+        default: ''
         summary: |
           The name of the action originally passed to BindAction.
       - name: position
         type: UDim2
-        default:
+        default: ''
         summary: |
           The position within the ContextButtonFrame.
     returns:
@@ -663,7 +672,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: ContextActionService:SetTitle
     summary: |
@@ -687,12 +697,12 @@ methods:
     parameters:
       - name: actionName
         type: string
-        default:
+        default: ''
         summary: |
           The name of the action originally passed to BindAction.
       - name: title
         type: string
-        default:
+        default: ''
         summary: |
           The text to display on the button.
     returns:
@@ -702,7 +712,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: ContextActionService:UnbindAction
     summary: |
@@ -725,7 +736,7 @@ methods:
     parameters:
       - name: actionName
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -734,7 +745,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: ContextActionService:UnbindActivate
     summary: |
@@ -750,7 +762,7 @@ methods:
     parameters:
       - name: userInputTypeForActivation
         type: UserInputType
-        default:
+        default: ''
         summary: |
           The same UserInputType originally sent to BindActivate.
       - name: keyCodeForActivation
@@ -765,7 +777,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: ContextActionService:UnbindAllActions
     summary: |
@@ -784,7 +797,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: ContextActionService:GetButton
     summary: |
@@ -805,7 +819,7 @@ methods:
     parameters:
       - name: actionName
         type: string
-        default:
+        default: ''
         summary: |
           The name of the action originally passed to BindAction.
     returns:
@@ -817,7 +831,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 events:
   - name: ContextActionService.LocalToolEquipped
@@ -829,13 +844,14 @@ events:
     parameters:
       - name: toolEquipped
         type: Instance
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: ContextActionService.LocalToolUnequipped
     summary: |
@@ -846,12 +862,13 @@ events:
     parameters:
       - name: toolUnequipped
         type: Instance
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 callbacks: []

@@ -56,12 +56,12 @@ methods:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: |
           The user to prompt to purchase items.
       - name: lineItems
         type: Array
-        default:
+        default: ''
         summary: |
           An array of avatar items to be included in the bulk purchase.
 
@@ -80,7 +80,7 @@ methods:
           - `Id`: The ID of the asset or bundle.
       - name: options
         type: Dictionary
-        default:
+        default: ''
         summary: |
           Not available at this time.
     returns:
@@ -101,11 +101,11 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: ''
       - name: bundleId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -127,11 +127,11 @@ methods:
     parameters:
       - name: user
         type: Player
-        default:
+        default: ''
         summary: ''
       - name: subscriptionId
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -153,11 +153,11 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: ''
       - name: gamePassId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -189,7 +189,7 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: |
           The user being prompted to purchase Premium.
     returns:
@@ -213,11 +213,11 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: ''
       - name: productId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: equipIfPurchased
         type: boolean
@@ -264,11 +264,11 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: ''
       - name: assetId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: equipIfPurchased
         type: boolean
@@ -297,12 +297,12 @@ methods:
     parameters:
       - name: user
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` object to be prompted to subscribe.
       - name: subscriptionId
         type: string
-        default:
+        default: ''
         summary: |
           The ID of the subscription to subscribe to.
     returns:
@@ -603,7 +603,7 @@ methods:
     parameters:
       - name: assetId
         type: int64
-        default:
+        default: ''
         summary: |
           The asset ID of the specified product.
       - name: infoType
@@ -695,7 +695,7 @@ methods:
     parameters:
       - name: subscriptionId
         type: string
-        default:
+        default: ''
         summary: |
           The ID of the subscription to check.
     returns:
@@ -770,13 +770,13 @@ methods:
     parameters:
       - name: user
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` object whose subscription details you want to
           check.
       - name: subscriptionId
         type: string
-        default:
+        default: ''
         summary: |
           The ID of the subscription to check.
     returns:
@@ -914,11 +914,11 @@ methods:
     parameters:
       - name: user
         type: Player
-        default:
+        default: ''
         summary: ''
       - name: subscriptionId
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -972,12 +972,12 @@ methods:
     parameters:
       - name: user
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` object whose subscription status you want to check.
       - name: subscriptionId
         type: string
-        default:
+        default: ''
         summary: |
           The ID of the subscription to check for.
     returns:
@@ -1014,13 +1014,13 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Player` whose inventory is tested for ownership of the
           given asset.
       - name: assetId
         type: int64
-        default:
+        default: ''
         summary: |
           The asset ID for which the given player's inventory is tested.
     returns:
@@ -1047,13 +1047,13 @@ methods:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` whose inventory is tested for ownership of the
           given bundle.
       - name: bundleId
         type: int64
-        default:
+        default: ''
         summary: |
           The bundle ID for which the given player's inventory is tested.
     returns:
@@ -1096,13 +1096,13 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The `Class.Player.UserId|UserId` of the `Class.Player` whose inventory
           you're checking.
       - name: gamePassId
         type: int64
-        default:
+        default: ''
         summary: |
           The pass ID you want to check for. Not to be confused with an asset
           ID.
@@ -1133,17 +1133,17 @@ events:
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Player` who received the prompt.
       - name: status
         type: MarketplaceBulkPurchasePromptStatus
-        default:
+        default: ''
         summary: |
           The status of the bulk purchase.
       - name: results
         type: Dictionary
-        default:
+        default: ''
         summary: |
           The table type containing the line items and their status in the
           following format:
@@ -1181,15 +1181,15 @@ events:
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: ''
       - name: bundleId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: wasPurchased
         type: boolean
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1220,18 +1220,18 @@ events:
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Player` who received the prompt.
       - name: gamePassId
         type: int64
-        default:
+        default: ''
         summary: |
           The ID number of the pass shown in the prompt. Not to be confused with
           an asset ID.
       - name: wasPurchased
         type: boolean
-        default:
+        default: ''
         summary: |
           Indicates if the user pressed **OK** (true), **Cancel** (false) on the
           purchase prompt, or if the purchase prompt errored (false).
@@ -1313,19 +1313,19 @@ events:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The `Class.Player.UserId|UserId` of the user who received the
           developer product prompt.
       - name: productId
         type: int64
-        default:
+        default: ''
         summary: |
           The ID number of the developer product shown in the prompt. Not to be
           confused with an asset ID.
       - name: isPurchased
         type: boolean
-        default:
+        default: ''
         summary: |
           Indicates if the user pressed **OK** (true), **Cancel** (false) on the
           purchase prompt, or if the purchase prompt errored (false).
@@ -1365,17 +1365,17 @@ events:
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Player` who received the prompt.
       - name: assetId
         type: int64
-        default:
+        default: ''
         summary: |
           The asset ID of the item shown in the prompt.
       - name: isPurchased
         type: boolean
-        default:
+        default: ''
         summary: |
           Indicates if the user pressed **OK** (true), **Cancel** (false) on the
           purchase prompt, or if the purchase prompt errored (false).
@@ -1408,17 +1408,17 @@ events:
     parameters:
       - name: user
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` who received the prompt.
       - name: subscriptionId
         type: string
-        default:
+        default: ''
         summary: |
           The ID of the subscription with a status change.
       - name: didTryPurchasing
         type: boolean
-        default:
+        default: ''
         summary: |
           Whether the user attempted to purchase the subscription.
     tags: []
@@ -1515,7 +1515,7 @@ callbacks:
     parameters:
       - name: receiptInfo
         type: Dictionary
-        default:
+        default: ''
         summary: |
           The `receiptInfo` table passed to this callback contains the following
           data:

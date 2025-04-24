@@ -29,7 +29,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: |
           The key whose value you want to retrieve.
     returns:
@@ -41,7 +41,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: MemoryStoreHashMap:ListItemsAsync
     summary: |
@@ -55,7 +56,7 @@ methods:
     parameters:
       - name: count
         type: int
-        default:
+        default: ''
         summary: |
           Maximum possible number of items that can be returned.
     returns:
@@ -68,7 +69,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: MemoryStoreHashMap:RemoveAsync
     summary: |
@@ -80,7 +82,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: |
           The key to remove.
     returns:
@@ -91,7 +93,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: MemoryStoreHashMap:SetAsync
     summary: |
@@ -103,17 +106,17 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: |
           The key whose value to set.
       - name: value
         type: Variant
-        default:
+        default: ''
         summary: |
           The value to set.
       - name: expiration
         type: int64
-        default:
+        default: ''
         summary: |
           Item expiration in seconds, after which the item is automatically
           removed from the hash map. The maximum expiration time is 45 days
@@ -126,7 +129,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: MemoryStoreHashMap:UpdateAsync
     summary: |
@@ -154,18 +158,18 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: |
           The key whose value you want to update.
       - name: transformFunction
         type: Function
-        default:
+        default: ''
         summary: |
           The transform function, which you provide. This function takes the old
           value as an input and returns the new value.
       - name: expiration
         type: int64
-        default:
+        default: ''
         summary: |
           Item expiration in seconds, after which the item is automatically
           removed from the hash map. The maximum expiration time is 45 days
@@ -179,7 +183,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
 events: []
 callbacks: []

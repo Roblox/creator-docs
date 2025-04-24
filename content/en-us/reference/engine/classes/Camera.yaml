@@ -656,7 +656,7 @@ methods:
     parameters:
       - name: ignoreList
         type: Instances
-        default:
+        default: ''
         summary: |
           An array of `Class.Instance|Instances` to ignore. Descendants of these
           instances will also be ignored.
@@ -740,12 +740,12 @@ methods:
     parameters:
       - name: castPoints
         type: Array
-        default:
+        default: ''
         summary: |
           An array of `Datatype.Vector3` positions of cast points.
       - name: ignoreList
         type: Instances
-        default:
+        default: ''
         summary: |
           An array of `Class.Instance|Instances` that should be ignored, along
           with their descendants.
@@ -935,18 +935,18 @@ methods:
     parameters:
       - name: endPos
         type: CFrame
-        default:
+        default: ''
         summary: |
           The `Datatype.CFrame` for the `Class.Camera` to tween to.
       - name: endFocus
         type: CFrame
-        default:
+        default: ''
         summary: |
           The `Datatype.CFrame` for the camera's `Class.Camera.Focus|Focus` to
           tween to.
       - name: duration
         type: float
-        default:
+        default: ''
         summary: |
           The duration, in seconds, of the tween.
     returns:
@@ -988,7 +988,7 @@ methods:
     parameters:
       - name: units
         type: int
-        default:
+        default: ''
         summary: |
           The number of 45 degree increments by which to pan the `Class.Camera`.
     returns:
@@ -1042,14 +1042,14 @@ methods:
     parameters:
       - name: x
         type: float
-        default:
+        default: ''
         summary: |
           The position on the **X** axis, in pixels, of the screen point at
           which to originate the `Datatype.Ray`. This position accounts for the
           GUI inset.
       - name: 'y'
         type: float
-        default:
+        default: ''
         summary: |
           The position on the **Y** axis, in pixels, of the screen point at
           which to originate the `Datatype.Ray`. This position accounts for the
@@ -1153,7 +1153,7 @@ methods:
     parameters:
       - name: rollAngle
         type: float
-        default:
+        default: ''
         summary: |
           The roll angle, in radians, to be applied to the `Class.Camera`.
     returns:
@@ -1182,7 +1182,7 @@ methods:
     parameters:
       - name: units
         type: int
-        default:
+        default: ''
         summary: |
           The number of 10 degree units by which to tilt the `Class.Camera`.
     returns:
@@ -1261,14 +1261,14 @@ methods:
     parameters:
       - name: x
         type: float
-        default:
+        default: ''
         summary: |
           The position on the **X** axis, in pixels, of the viewport point at
           which to originate the `Datatype.Ray`, in device safe area
           coordinates.
       - name: 'y'
         type: float
-        default:
+        default: ''
         summary: |
           The position on the **Y** axis, in pixels, of the viewport point at
           which to originate the `Datatype.Ray`, in device safe area
@@ -1327,7 +1327,7 @@ methods:
     parameters:
       - name: worldPoint
         type: Vector3
-        default:
+        default: ''
         summary: |
           The `Datatype.Vector3` world position.
     returns:
@@ -1386,7 +1386,7 @@ methods:
     parameters:
       - name: worldPoint
         type: Vector3
-        default:
+        default: ''
         summary: |
           The `Datatype.Vector3` world position.
     returns:
@@ -1414,11 +1414,11 @@ methods:
     parameters:
       - name: boundingBoxCFrame
         type: CFrame
-        default:
+        default: ''
         summary: ''
       - name: boundingBoxSize
         type: Vector3
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()

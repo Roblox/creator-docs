@@ -33,11 +33,11 @@ methods:
     parameters:
       - name: rule
         type: StyleRule
-        default:
+        default: ''
         summary: ''
       - name: priority
         type: int?
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -55,7 +55,7 @@ methods:
     parameters:
       - name: rules
         type: Instances
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()

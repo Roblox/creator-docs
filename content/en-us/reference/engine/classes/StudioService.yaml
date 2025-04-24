@@ -319,7 +319,7 @@ methods:
     parameters:
       - name: className
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Dictionary
@@ -356,11 +356,11 @@ methods:
     parameters:
       - name: origin
         type: Vector3
-        default:
+        default: ''
         summary: ''
       - name: direction
         type: Vector3
-        default:
+        default: ''
         summary: ''
       - name: raycastParams
         type: RaycastParams

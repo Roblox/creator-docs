@@ -20,7 +20,7 @@ methods:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: ''
     returns:
       - type: string
@@ -55,23 +55,23 @@ events:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: ''
       - name: jsonString
         type: buffer
-        default:
+        default: ''
         summary: ''
       - name: id
         type: int
-        default:
+        default: ''
         summary: ''
       - name: compressedLength
         type: int
-        default:
+        default: ''
         summary: ''
       - name: uncompressedLength
         type: int
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''

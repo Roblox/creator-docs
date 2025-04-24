@@ -45,12 +45,12 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: |
           The key identifying the entry being retrieved from the data store.
       - name: callback
         type: Function
-        default:
+        default: ''
         summary: |
           The function to be executed any time the value associated with **key**
           is changed.
@@ -67,7 +67,8 @@ methods:
       completely replacing the need for this function.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: GlobalDataStore:GetAsync
     summary: |
@@ -92,7 +93,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: |
           The key name for which the value is requested. If
           `Class.DataStoreOptions.AllScopes` was set to true when accessing the
@@ -114,7 +115,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: GlobalDataStore:IncrementAsync
     summary: |
@@ -135,7 +137,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: |
           Key name for which the value should be updated. If
           `Class.DataStoreOptions.AllScopes` was set to true when accessing the
@@ -168,7 +170,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: GlobalDataStore:RemoveAsync
     summary: |
@@ -198,7 +201,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: |
           Key name to be removed. If `Class.DataStoreOptions.AllScopes` was set
           to true when accessing the data store through
@@ -216,7 +219,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: GlobalDataStore:SetAsync
     summary: |
@@ -256,7 +260,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: |
           Key name for which the value should be set. If
           `Class.DataStoreOptions.AllScopes` was set to true when accessing the
@@ -264,7 +268,7 @@ methods:
           name must be prepended with the original scope as in "scope/key".
       - name: value
         type: Variant
-        default:
+        default: ''
         summary: |
           The value that the data store key will be set to.
       - name: userIds
@@ -291,7 +295,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: GlobalDataStore:UpdateAsync
     summary: |
@@ -365,7 +370,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: |
           Key name for which the value should be updated. If
           `Class.DataStoreOptions.AllScopes` was set to true when accessing the
@@ -373,7 +378,7 @@ methods:
           name must be prepended with the original scope as in "scope/key".
       - name: transformFunction
         type: Function
-        default:
+        default: ''
         summary: |
           Transform function that takes the current value and
           `Class.DataStoreKeyInfo` as parameters and returns the new value along
@@ -390,7 +395,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
 events: []
 callbacks: []

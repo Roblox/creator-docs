@@ -237,7 +237,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: VideoFrame:Play
     summary: |
@@ -257,7 +258,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 events:
   - name: VideoFrame.DidLoop
@@ -270,14 +272,15 @@ events:
     parameters:
       - name: video
         type: string
-        default:
+        default: ''
         summary: |
           The content ID of the video that looped.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: VideoFrame.Ended
     summary: |
@@ -290,14 +293,15 @@ events:
     parameters:
       - name: video
         type: string
-        default:
+        default: ''
         summary: |
           The content ID of the paused that ended.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: VideoFrame.Loaded
     summary: |
@@ -308,14 +312,15 @@ events:
     parameters:
       - name: video
         type: string
-        default:
+        default: ''
         summary: |
           The content ID of the loaded video.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: VideoFrame.Paused
     summary: |
@@ -330,14 +335,15 @@ events:
     parameters:
       - name: video
         type: string
-        default:
+        default: ''
         summary: |
           The content ID of the paused video.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: VideoFrame.Played
     summary: |
@@ -352,13 +358,14 @@ events:
     parameters:
       - name: video
         type: string
-        default:
+        default: ''
         summary: |
           The content ID of the played video.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 callbacks: []

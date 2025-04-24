@@ -68,7 +68,7 @@ events:
     parameters:
       - name: value
         type: double
-        default:
+        default: ''
         summary: |
           The value after the change.
     tags: []
@@ -84,7 +84,7 @@ events:
     parameters:
       - name: value
         type: double
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated

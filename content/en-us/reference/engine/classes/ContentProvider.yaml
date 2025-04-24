@@ -115,7 +115,7 @@ methods:
     parameters:
       - name: contentId
         type: ContentId
-        default:
+        default: ''
         summary: |
           The ID of the content to fetch the status for.
     returns:
@@ -143,7 +143,7 @@ methods:
     parameters:
       - name: contentId
         type: ContentId
-        default:
+        default: ''
         summary: ''
     returns:
       - type: RBXScriptSignal
@@ -183,7 +183,7 @@ methods:
     parameters:
       - name: contentId
         type: ContentId
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -204,7 +204,7 @@ methods:
     parameters:
       - name: encryptionKey
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -222,7 +222,7 @@ methods:
     parameters:
       - name: sessionKey
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -240,11 +240,11 @@ methods:
     parameters:
       - name: assetId
         type: ContentId
-        default:
+        default: ''
         summary: ''
       - name: encryptionKey
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -262,11 +262,11 @@ methods:
     parameters:
       - name: contentId
         type: ContentId
-        default:
+        default: ''
         summary: ''
       - name: sessionKey
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -298,7 +298,7 @@ methods:
     parameters:
       - name: assetId
         type: ContentId
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -343,7 +343,7 @@ methods:
     parameters:
       - name: contentIdList
         type: Array
-        default:
+        default: ''
         summary: |
           An array of instances to load.
       - name: callbackFunction
@@ -371,7 +371,7 @@ events:
     parameters:
       - name: assetId
         type: ContentId
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''

@@ -919,7 +919,7 @@ methods:
     parameters:
       - name: material
         type: Material
-        default:
+        default: ''
         summary: |
           Material type to be fetched.
     returns:
@@ -943,12 +943,12 @@ methods:
     parameters:
       - name: material
         type: Material
-        default:
+        default: ''
         summary: |
           BaseMaterial of MaterialVariant.
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           Name of MaterialVariant.
     returns:
@@ -970,12 +970,12 @@ methods:
     parameters:
       - name: material
         type: Material
-        default:
+        default: ''
         summary: |
           The Material type to be changed.
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           Name of the MaterialVariant object.
     returns:

@@ -73,11 +73,11 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: amount
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Tuple
@@ -103,7 +103,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: int
@@ -129,7 +129,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: int
@@ -177,19 +177,19 @@ events:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: pointsAwarded
         type: int
-        default:
+        default: ''
         summary: ''
       - name: userBalanceInGame
         type: int
-        default:
+        default: ''
         summary: ''
       - name: userTotalBalance
         type: int
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: |

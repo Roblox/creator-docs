@@ -20,11 +20,11 @@ methods:
     parameters:
       - name: user
         type: Player
-        default:
+        default: ''
         summary: ''
       - name: commerceProductId
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -42,11 +42,11 @@ methods:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: ''
       - name: url
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -64,7 +64,7 @@ methods:
     parameters:
       - name: commerceProductId
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Dictionary
@@ -99,11 +99,11 @@ events:
     parameters:
       - name: user
         type: Player
-        default:
+        default: ''
         summary: ''
       - name: productId
         type: string
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''

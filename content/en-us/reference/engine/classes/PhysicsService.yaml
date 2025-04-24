@@ -40,11 +40,11 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
       - name: part
         type: BasePart
-        default:
+        default: ''
         summary: ''
     returns:
       - type: boolean
@@ -72,15 +72,15 @@ methods:
     parameters:
       - name: name1
         type: string
-        default:
+        default: ''
         summary: ''
       - name: name2
         type: string
-        default:
+        default: ''
         summary: ''
       - name: collidable
         type: boolean
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -102,11 +102,11 @@ methods:
     parameters:
       - name: name1
         type: string
-        default:
+        default: ''
         summary: ''
       - name: name2
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: boolean
@@ -128,7 +128,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: int
@@ -153,7 +153,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           The name of the collision group being retrieved.
     returns:
@@ -182,7 +182,7 @@ methods:
     parameters:
       - name: name
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: string
@@ -313,7 +313,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: boolean
@@ -343,7 +343,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -373,7 +373,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -415,11 +415,11 @@ methods:
     parameters:
       - name: from
         type: string
-        default:
+        default: ''
         summary: ''
       - name: to
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -447,12 +447,12 @@ methods:
     parameters:
       - name: part
         type: BasePart
-        default:
+        default: ''
         summary: |
           The part being set.
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           The name of collision group that the part's collision group is being
           set to.
@@ -494,7 +494,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()

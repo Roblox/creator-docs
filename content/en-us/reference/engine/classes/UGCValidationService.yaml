@@ -21,19 +21,19 @@ methods:
     parameters:
       - name: outerCage
         type: EditableMesh
-        default:
+        default: ''
         summary: ''
       - name: renderMesh
         type: EditableMesh
-        default:
+        default: ''
         summary: ''
       - name: outerTransform
         type: CFrame
-        default:
+        default: ''
         summary: ''
       - name: scale
         type: Vector3
-        default:
+        default: ''
         summary: ''
     returns:
       - type: float

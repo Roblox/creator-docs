@@ -23,7 +23,7 @@ methods:
     parameters:
       - name: requestOptions
         type: Dictionary
-        default:
+        default: ''
         summary: ''
       - name: priority
         type: ThrottlingPriority

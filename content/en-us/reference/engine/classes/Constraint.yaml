@@ -151,7 +151,7 @@ methods:
     parameters:
       - name: bodyId
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Vector3
@@ -162,7 +162,8 @@ methods:
       This method should not be used in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: Constraint:GetDebugAppliedTorque
     summary: ''
@@ -171,7 +172,7 @@ methods:
     parameters:
       - name: bodyId
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Vector3
@@ -182,7 +183,8 @@ methods:
       This method should not be used in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
 events: []
 callbacks: []

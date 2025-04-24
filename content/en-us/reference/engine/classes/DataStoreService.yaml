@@ -72,7 +72,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           Name of the data store.
       - name: scope
@@ -94,7 +94,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: DataStoreService:GetGlobalDataStore
     summary: |
@@ -117,7 +118,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: DataStoreService:GetOrderedDataStore
     summary: |
@@ -132,7 +134,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
       - name: scope
         type: string
@@ -145,7 +147,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: DataStoreService:GetRequestBudgetForRequestType
     summary: |
@@ -161,7 +164,7 @@ methods:
     parameters:
       - name: requestType
         type: DataStoreRequestType
-        default:
+        default: ''
         summary: ''
     returns:
       - type: int
@@ -170,7 +173,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: DataStoreService:ListDataStoresAsync
     summary: |
@@ -214,7 +218,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
 events: []
 callbacks: []

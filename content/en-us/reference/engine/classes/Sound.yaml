@@ -784,7 +784,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound:Play
     summary: |
@@ -804,7 +805,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound:Resume
     summary: |
@@ -824,7 +826,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound:Stop
     summary: |
@@ -842,7 +845,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound:pause
     summary: ''
@@ -859,7 +863,8 @@ methods:
       should be used instead.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound:play
     summary: ''
@@ -876,7 +881,8 @@ methods:
       be used instead.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound:stop
     summary: ''
@@ -893,7 +899,8 @@ methods:
       be used instead.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
 events:
   - name: Sound.DidLoop
@@ -912,19 +919,20 @@ events:
     parameters:
       - name: soundId
         type: string
-        default:
+        default: ''
         summary: |
           The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that looped.
       - name: numOfTimesLooped
         type: int
-        default:
+        default: ''
         summary: |
           The number of times the `Class.Sound` has looped.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.Ended
     summary: |
@@ -948,14 +956,15 @@ events:
     parameters:
       - name: soundId
         type: string
-        default:
+        default: ''
         summary: |
           The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that has ended.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.Loaded
     summary: |
@@ -971,14 +980,15 @@ events:
     parameters:
       - name: soundId
         type: string
-        default:
+        default: ''
         summary: |
           The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that loaded.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.Paused
     summary: |
@@ -992,7 +1002,7 @@ events:
     parameters:
       - name: soundId
         type: string
-        default:
+        default: ''
         summary: |
           The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that was
           paused.
@@ -1000,7 +1010,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.Played
     summary: |
@@ -1016,7 +1027,7 @@ events:
     parameters:
       - name: soundId
         type: string
-        default:
+        default: ''
         summary: |
           The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that was
           played.
@@ -1024,7 +1035,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.Resumed
     summary: |
@@ -1038,14 +1050,15 @@ events:
     parameters:
       - name: soundId
         type: string
-        default:
+        default: ''
         summary: |
           The `Class.Sound.SoundId|SoundId` of the `Class.Sound` being resumed.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.Stopped
     summary: |
@@ -1060,13 +1073,14 @@ events:
     parameters:
       - name: soundId
         type: string
-        default:
+        default: ''
         summary: |
           The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that stopped.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
 callbacks: []

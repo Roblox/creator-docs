@@ -418,7 +418,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: ProximityPrompt:InputHoldEnd
     summary: |
@@ -436,7 +437,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 events:
   - name: ProximityPrompt.PromptButtonHoldBegan
@@ -453,14 +455,15 @@ events:
     parameters:
       - name: playerWhoTriggered
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` who begins holding down the prompt button.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: ProximityPrompt.PromptButtonHoldEnded
     summary: |
@@ -474,14 +477,15 @@ events:
     parameters:
       - name: playerWhoTriggered
         type: Player
-        default:
+        default: ''
         summary: |
           The player who ended the input hold.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: ProximityPrompt.PromptHidden
     summary: |
@@ -495,7 +499,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: ProximityPrompt.PromptShown
     summary: |
@@ -507,14 +512,15 @@ events:
     parameters:
       - name: inputType
         type: ProximityPromptInputType
-        default:
+        default: ''
         summary: |
           The input that triggers the prompt.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: ProximityPrompt.TriggerEnded
     summary: |
@@ -530,7 +536,7 @@ events:
     parameters:
       - name: playerWhoTriggered
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` who released the key/button, ending the trigger
           event.
@@ -538,7 +544,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: ProximityPrompt.Triggered
     summary: |
@@ -555,13 +562,14 @@ events:
     parameters:
       - name: playerWhoTriggered
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` who triggered the prompt.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 callbacks: []

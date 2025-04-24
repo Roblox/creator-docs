@@ -601,7 +601,7 @@ methods:
     parameters:
       - name: tag
         type: DeveloperMemoryTag
-        default:
+        default: ''
         summary: ''
     returns:
       - type: float

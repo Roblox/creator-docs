@@ -302,7 +302,7 @@ methods:
     parameters:
       - name: selectedCurveObjects
         type: Instances
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -320,7 +320,7 @@ methods:
     parameters:
       - name: selectedCurveObjects
         type: Instances
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -344,7 +344,7 @@ methods:
     parameters:
       - name: sound
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Sound` to be played.
     returns:
@@ -374,12 +374,12 @@ methods:
     parameters:
       - name: listenerType
         type: ListenerType
-        default:
+        default: ''
         summary: |
           The `Enum.ListenerType` of the listener.
       - name: listener
         type: Tuple
-        default:
+        default: ''
         summary: |
           Dependent on the `Enum.ListenerType`. Use a `Class.BasePart` for
           `Enum.ListenerType.ObjectPosition` or

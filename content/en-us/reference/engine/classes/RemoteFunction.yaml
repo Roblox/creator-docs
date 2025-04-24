@@ -92,12 +92,12 @@ methods:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` associated with the client to invoke.
       - name: arguments
         type: Tuple
-        default:
+        default: ''
         summary: |
           Values to pass to the
           `Class.RemoteFunction.OnClientInvoke|OnClientInvoke` callback.
@@ -111,7 +111,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - RemoteEvent
     writeCapabilities: []
   - name: RemoteFunction:InvokeServer
     summary: |
@@ -140,7 +141,7 @@ methods:
     parameters:
       - name: arguments
         type: Tuple
-        default:
+        default: ''
         summary: |
           Values to pass to the
           `Class.RemoteFunction.OnServerInvoke|OnServerInvoke` callback.
@@ -154,7 +155,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - RemoteEvent
     writeCapabilities: []
 events: []
 callbacks:
@@ -174,7 +176,7 @@ callbacks:
     parameters:
       - name: arguments
         type: Tuple
-        default:
+        default: ''
         summary: |
           The parameters sent through
           `Class.RemoteFunction:InvokeClient()|InvokeClient()`.
@@ -186,7 +188,8 @@ callbacks:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - RemoteEvent
     writeCapabilities: []
   - name: RemoteFunction.OnServerInvoke
     summary: |
@@ -204,14 +207,14 @@ callbacks:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` associated with the client that the
           `Class.RemoteFunction:InvokeServer()|InvokeServer()` call originates
           from.
       - name: arguments
         type: Tuple
-        default:
+        default: ''
         summary: |
           The parameters sent through
           `Class.RemoteFunction:InvokeServer()|InvokeServer()`.
@@ -223,5 +226,6 @@ callbacks:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - RemoteEvent
     writeCapabilities: []

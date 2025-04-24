@@ -47,6 +47,29 @@ If necessary, you can nest multiple brackets inside a block comment using the sa
 ]=]
 ```
 
+## Comment directives
+
+Luau uses comments that start with `!` to control features like [type checking](type-checking.md), [native code generation](native-code-gen.md), and [linting](https://luau.org/lint).
+
+```lua
+--!strict
+--!nonstrict
+--!nocheck
+--!native
+--!nolint
+--!optimize 0|1|2
+```
+
+For linting, Roblox Studio enables the following subset of warning codes from the [Luau linter](https://luau.org/lint): 1, 2, 3, 6, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28.
+
+The `--!optimize` directive controls the optimization level of the Luau compiler for the script:
+
+- 0 disables optimizations.
+- 1 enables basic optimizations (default in Studio testing).
+- 2 enables further optimizations (default in live games).
+
+Exact optimizations aren't published and are subject to change. We recommend using the default values unless you have a specific reason not to.
+
 ## To-do comments
 
 Roblox Studio supports special `TODO` comments. Studio bolds any text following `TODO` (until broken by a space):

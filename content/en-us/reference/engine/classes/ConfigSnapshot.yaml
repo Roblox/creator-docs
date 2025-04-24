@@ -58,11 +58,11 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
       - name: defaultValue
         type: Variant
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Variant
@@ -80,7 +80,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: RBXScriptSignal

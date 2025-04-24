@@ -35,7 +35,7 @@ methods:
     parameters:
       - name: theme
         type: SystemThemeValue
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -69,7 +69,7 @@ events:
     parameters:
       - name: theme
         type: SystemThemeValue
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''

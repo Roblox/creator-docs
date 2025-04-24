@@ -636,7 +636,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Environment
     writeCapabilities: []
   - name: Lighting:GetMoonDirection
     summary: |
@@ -660,7 +661,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Environment
     writeCapabilities: []
   - name: Lighting:GetMoonPhase
     summary: |
@@ -679,7 +681,8 @@ methods:
       should not be used.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Environment
     writeCapabilities: []
   - name: Lighting:GetSunDirection
     summary: |
@@ -703,7 +706,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Environment
     writeCapabilities: []
   - name: Lighting:SetMinutesAfterMidnight
     summary: |
@@ -746,7 +750,7 @@ methods:
     parameters:
       - name: minutes
         type: double
-        default:
+        default: ''
         summary: |
           The number of minutes after midnight.
     returns:
@@ -756,7 +760,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Environment
     writeCapabilities: []
   - name: Lighting:getMinutesAfterMidnight
     summary: ''
@@ -773,7 +778,8 @@ methods:
       `Class.Lighting:GetMinutesAfterMidnight()` which should be used instead.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Environment
     writeCapabilities: []
   - name: Lighting:setMinutesAfterMidnight
     summary: ''
@@ -782,7 +788,7 @@ methods:
     parameters:
       - name: minutes
         type: double
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -794,7 +800,8 @@ methods:
       `Class.Lighting:SetMinutesAfterMidnight()` which should be used instead.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Environment
     writeCapabilities: []
 events:
   - name: Lighting.LightingChanged
@@ -817,12 +824,13 @@ events:
     parameters:
       - name: skyChanged
         type: boolean
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Environment
     writeCapabilities: []
 callbacks: []

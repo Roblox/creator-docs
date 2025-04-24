@@ -186,7 +186,7 @@ methods:
     parameters:
       - name: source
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.PartOperation` whose geometry will substitute the geometry
           of this `Class.PartOperation`.
@@ -197,7 +197,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
+      - CSG
     writeCapabilities: []
 events: []
 callbacks: []

@@ -35,7 +35,7 @@ events:
     parameters:
       - name: value
         type: BinaryString
-        default:
+        default: ''
         summary: |
           The new value after the change.
     tags: []

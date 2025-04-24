@@ -662,7 +662,7 @@ methods:
     parameters:
       - name: onboardingId
         type: string
-        default:
+        default: ''
         summary: |
           The onboarding ID to inquire about.
     returns:
@@ -767,7 +767,7 @@ methods:
     parameters:
       - name: onboardingId
         type: string
-        default:
+        default: ''
         summary: |
           The onboarding ID to set as completed.
     returns:
@@ -792,7 +792,7 @@ events:
     parameters:
       - name: isFullscreen
         type: boolean
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
@@ -811,7 +811,7 @@ events:
     parameters:
       - name: isStudioMode
         type: boolean
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''

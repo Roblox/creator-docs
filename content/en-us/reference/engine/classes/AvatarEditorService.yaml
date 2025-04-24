@@ -50,7 +50,7 @@ methods:
     parameters:
       - name: avatarAssetType
         type: AvatarAssetType
-        default:
+        default: ''
         summary: ''
     returns:
       - type: AccessoryType
@@ -98,12 +98,12 @@ methods:
     parameters:
       - name: outfit
         type: HumanoidDescription
-        default:
+        default: ''
         summary: |
           The `Outfit` that the player will be prompted to created.
       - name: rigType
         type: HumanoidRigType
-        default:
+        default: ''
         summary: |
           The `Enum.RigType` that the outfit will be created for if the player
           confirms the prompt.
@@ -127,7 +127,7 @@ methods:
     parameters:
       - name: outfitId
         type: int64
-        default:
+        default: ''
         summary: |
           The outfitId of the outfit to delete.
     returns:
@@ -150,7 +150,7 @@ methods:
     parameters:
       - name: outfitId
         type: int64
-        default:
+        default: ''
         summary: |
           The outfitId of the outfit to rename.
     returns:
@@ -176,12 +176,12 @@ methods:
     parameters:
       - name: humanoidDescription
         type: HumanoidDescription
-        default:
+        default: ''
         summary: |
           The given `Class.HumanoidDescription` being prompted to save.
       - name: rigType
         type: HumanoidRigType
-        default:
+        default: ''
         summary: |
           The `Enum.RigType` that the avatar will be saved for if the player
           confirms the prompt.
@@ -205,17 +205,17 @@ methods:
     parameters:
       - name: itemId
         type: int64
-        default:
+        default: ''
         summary: |
           The ItemId of the item being prompted to favorite.
       - name: itemType
         type: AvatarItemType
-        default:
+        default: ''
         summary: |
           The type of item being prompted to favorite.
       - name: shouldFavorite
         type: boolean
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -236,17 +236,17 @@ methods:
     parameters:
       - name: outfitId
         type: int64
-        default:
+        default: ''
         summary: |
           The outfitId of the outfit to update.
       - name: updatedOutfit
         type: HumanoidDescription
-        default:
+        default: ''
         summary: |
           A HumanoidDescription that represents the new outfit data.
       - name: rigType
         type: HumanoidRigType
-        default:
+        default: ''
         summary: |
           The HumanoidRigType to update the outfit to.
     returns:
@@ -274,7 +274,7 @@ methods:
     parameters:
       - name: humanoidDescription
         type: HumanoidDescription
-        default:
+        default: ''
         summary: |
           The HumanoidDescription to check if default clothing is required.
     returns:
@@ -296,7 +296,7 @@ methods:
     parameters:
       - name: humanoidDescription
         type: HumanoidDescription
-        default:
+        default: ''
         summary: ''
     returns:
       - type: HumanoidDescription
@@ -385,12 +385,12 @@ methods:
     parameters:
       - name: itemIds
         type: Array
-        default:
+        default: ''
         summary: |
           The list of item ids to get details of.
       - name: itemType
         type: AvatarItemType
-        default:
+        default: ''
         summary: |
           The type of the item ids provided.
     returns:
@@ -443,12 +443,12 @@ methods:
     parameters:
       - name: itemId
         type: int64
-        default:
+        default: ''
         summary: |
           The id of the specified asset or bundle.
       - name: itemType
         type: AvatarItemType
-        default:
+        default: ''
         summary: |
           The `Enum.AvatarItemType` of the specified asset or bundle.
     returns:
@@ -487,7 +487,7 @@ methods:
     parameters:
       - name: assetTypes
         type: Array
-        default:
+        default: ''
         summary: |
           The `Enum.AvatarAssetType` that can will be checked for in the
           player's inventory.
@@ -570,12 +570,12 @@ methods:
     parameters:
       - name: itemId
         type: int64
-        default:
+        default: ''
         summary: |
           The ID of the item whose details are being retrieved.
       - name: itemType
         type: AvatarItemType
-        default:
+        default: ''
         summary: |
           An enum value indicating the type of item whose details are being
           retrieved.
@@ -640,7 +640,7 @@ methods:
     parameters:
       - name: outfitId
         type: int64
-        default:
+        default: ''
         summary: |
           The ID of the outfit whose details are being retrieved.
     returns:
@@ -769,7 +769,7 @@ methods:
     parameters:
       - name: assetType
         type: AvatarAssetType
-        default:
+        default: ''
         summary: |
           The type of asset recommendations to retrieve recommendations for.
           Only affects the response when item based recommendations don't exist
@@ -837,7 +837,7 @@ methods:
     parameters:
       - name: bundleId
         type: int64
-        default:
+        default: ''
         summary: |
           A list of recommended bundles.
     returns:
@@ -908,7 +908,7 @@ methods:
     parameters:
       - name: searchParameters
         type: CatalogSearchParams
-        default:
+        default: ''
         summary: |
           An object containing the parameters used for the search.
     returns:
@@ -937,7 +937,7 @@ events:
     parameters:
       - name: result
         type: AvatarPromptResult
-        default:
+        default: ''
         summary: |
           The result of the prompt.
     tags: []
@@ -957,12 +957,12 @@ events:
     parameters:
       - name: result
         type: AvatarPromptResult
-        default:
+        default: ''
         summary: |
           The result of the prompt.
       - name: failureType
         type: Variant
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
@@ -981,7 +981,7 @@ events:
     parameters:
       - name: result
         type: AvatarPromptResult
-        default:
+        default: ''
         summary: |
           The result of the prompt.
     tags: []
@@ -1001,7 +1001,7 @@ events:
     parameters:
       - name: result
         type: AvatarPromptResult
-        default:
+        default: ''
         summary: |
           The result of the prompt.
     tags: []
@@ -1023,12 +1023,12 @@ events:
     parameters:
       - name: result
         type: AvatarPromptResult
-        default:
+        default: ''
         summary: |
           The result of the prompt.
       - name: humanoidDescription
         type: HumanoidDescription
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1049,7 +1049,7 @@ events:
     parameters:
       - name: result
         type: AvatarPromptResult
-        default:
+        default: ''
         summary: |
           The result of the prompt.
     tags: []
@@ -1071,7 +1071,7 @@ events:
     parameters:
       - name: result
         type: AvatarPromptResult
-        default:
+        default: ''
         summary: |
           The result of the prompt.
     tags: []
