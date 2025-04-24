@@ -733,9 +733,9 @@ functions:
     description: |
       Returns the type of its only argument, coded as a string. The possible
       results of this function are `"nil"` (a string, not the value nil),
-      `"number"`, `"string"`, `"boolean"`, `"table"`, `"vector"`, `"function"`, `"thread"`,
-      `"userdata"`, and `"buffer"`. The `buffer` primitive is an addition from
-      Luau, not from Lua.
+      `"number"`, `"string"`, `"boolean"`, `"table"`, `"vector"`, `"function"`,
+      `"thread"`, `"userdata"`, and `"buffer"`. The `buffer` primitive is an
+      addition from Luau, not from Lua.
     parameters:
       - name: v
         type: Variant

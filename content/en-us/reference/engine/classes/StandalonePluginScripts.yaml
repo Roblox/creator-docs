@@ -10,9 +10,10 @@ description: |
   Roblox Studio, scripts inside this container are not run.
 
   #### Limited Functionality and Availability
-  
+
   Functionality of this class may be enabled or disabled without notice. Before
-  using it, verify that it works as expected before continuing with further work.
+  using it, verify that it works as expected before continuing with further
+  work.
 code_samples:
 inherits:
   - Instance

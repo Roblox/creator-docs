@@ -1,4 +1,4 @@
-name: ConfigService
+name: FeedService
 type: class
 category:
 memory_category: Instances
@@ -10,57 +10,20 @@ inherits:
 tags:
   - NotCreatable
   - Service
-  - NotReplicated
 deprecation_message: ''
 properties: []
 methods:
-  - name: ConfigService:ClearTestingValue
+  - name: FeedService:BatchRemoveFeedItemsAsync
     summary: ''
     description: ''
     code_samples: []
     parameters:
-      - name: key
-        type: string
+      - name: feedItemIds
+        type: Array
         default:
         summary: ''
     returns:
       - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: ConfigService:SetTestingValue
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: key
-        type: string
-        default:
-        summary: ''
-      - name: value
-        type: Variant
-        default:
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: ConfigService:GetConfigAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ConfigSnapshot
         summary: ''
     tags:
       - Yields
@@ -69,17 +32,36 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: ConfigService:GetConfigForPlayerAsync
+  - name: FeedService:GetFeedItemsAsync
     summary: ''
     description: ''
     code_samples: []
     parameters:
-      - name: player
-        type: Player
+      - name: getFeedRequest
+        type: Dictionary
         default:
         summary: ''
     returns:
-      - type: ConfigSnapshot
+      - type: FeedPages
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: FeedService:RegisterFeedItemsAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: registerFeedItemsRequest
+        type: Dictionary
+        default:
+        summary: ''
+    returns:
+      - type: Dictionary
         summary: ''
     tags:
       - Yields

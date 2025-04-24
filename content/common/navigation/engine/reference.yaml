@@ -958,6 +958,16 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/FeatureRestrictionManager.yaml
         ignoreTranslation: true
+      - title: FeedPages
+        path: /reference/engine/classes/FeedPages
+        type: engineapi
+        source: /reference/engine/classes/FeedPages.yaml
+        ignoreTranslation: true
+      - title: FeedService
+        path: /reference/engine/classes/FeedService
+        type: engineapi
+        source: /reference/engine/classes/FeedService.yaml
+        ignoreTranslation: true
       - title: File
         path: /reference/engine/classes/File
         type: engineapi
@@ -1787,6 +1797,11 @@ navigation:
         path: /reference/engine/classes/PitchShiftSoundEffect
         type: engineapi
         source: /reference/engine/classes/PitchShiftSoundEffect.yaml
+        ignoreTranslation: true
+      - title: PlaceAssetIdsService
+        path: /reference/engine/classes/PlaceAssetIdsService
+        type: engineapi
+        source: /reference/engine/classes/PlaceAssetIdsService.yaml
         ignoreTranslation: true
       - title: PlacesService
         path: /reference/engine/classes/PlacesService
@@ -4041,10 +4056,20 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/FacialAnimationStreamingState.yaml
         ignoreTranslation: true
+      - title: FacsActionUnit
+        path: /reference/engine/enums/FacsActionUnit
+        type: engineapi
+        source: /reference/engine/enums/FacsActionUnit.yaml
+        ignoreTranslation: true
       - title: FACSDataLod
         path: /reference/engine/enums/FACSDataLod
         type: engineapi
         source: /reference/engine/enums/FACSDataLod.yaml
+        ignoreTranslation: true
+      - title: FeedRankingScoreType
+        path: /reference/engine/enums/FeedRankingScoreType
+        type: engineapi
+        source: /reference/engine/enums/FeedRankingScoreType.yaml
         ignoreTranslation: true
       - title: FieldOfViewMode
         path: /reference/engine/enums/FieldOfViewMode

@@ -72,7 +72,9 @@ properties:
     description: ''
     code_samples: []
     type: float
-    tags: []
+    tags:
+      - Hidden
+      - NotReplicated
     deprecation_message: ''
     security:
       read: RobloxScriptSecurity
@@ -80,8 +82,8 @@ properties:
     thread_safety: ReadSafe
     category: Data
     serialization:
-      can_load: true
-      can_save: true
+      can_load: false
+      can_save: false
     capabilities:
       - UI
     writeCapabilities: []

@@ -17,26 +17,26 @@ Once you set up a webhook, whenever a target event occurs, Roblox sends a reques
 
 ## Supported triggers
 
-Roblox currently supports the following event triggers for notifications:
+Roblox currently supports the following event triggers.
 
-### Subscriptions
+### Subscription
 
-- **Subscription Cancelled** — When a user cancels a [subscription](../../production/monetization/subscriptions.md), a message is sent containing the subscription and subscriber, as well as the reason given for the cancellation.
-- **Subscription Purchased** — When a user purchases a subscription, a message is sent containing the subscription and subscriber.
-- **Subscription Refunded** — When a user receives a refund for their subscription, a message is sent containing the subscription and subscriber.
-- **Subscription Renewed** — When a user renews a subscription, a message is sent containing the subscription and subscriber.
-- **Subscription Resubscribed** — When a user resubscribes to a subscription, a message is sent containing the subscription and subscriber.
+- **Subscription Resubscribed** - When a user resubscribes to a subscription, a message is sent containing the subscription and subscriber.
+- **Subscription Renewed** - When a user renews a subscription, a message is sent containing the subscription and subscriber.
+- **Subscription Refunded** - When a user receives a refund for their subscription, a message is sent containing the subscription and subscriber.
+- **Subscription Purchased** - When a user purchases a subscription, a message is sent containing the subscription and subscriber.
+- **Subscription Cancelled** - When a user cancels a [subscription](../../production/monetization/subscriptions.md), a message is sent containing the subscription and subscriber, as well as the reason given for the cancellation.
 
-For more information on subscription events and their fields, see the [Cloud API Subscription](../../cloud/reference/Subscription/) reference.
+For more information on subscription events and their fields, see the [Subscription](/cloud/reference/Subscription/) reference.
 
 ### Compliance
 
-- **Right to Erasure Request** — When a user submits a data deletion request under the [General Data Protection Regulation (**GDPR**)](https://gdpr.eu/right-to-be-forgotten/).
+- **Right to Erasure Request** - When a user submits a data deletion request under the [General Data Protection Regulation](https://gdpr.eu/right-to-be-forgotten/) (GDPR).
 
 ### Commerce
 
-- **Commerce Product Order Refunded** — When a user has recieved a refund for their commerce product order.
-- **Commerce Product Order Paid** — When a user has paid for their commerce product order.
+- **Commerce Product Order Refunded** - When a user has received a refund for their commerce product order.
+- **Commerce Product Order Paid** - When a user has paid for their commerce product order.
 
 ## Configure webhooks on Creator Dashboard
 
@@ -51,10 +51,10 @@ To set up a webhook:
 1. Navigate to the [Webhooks](https://create.roblox.com/settings/webhooks) section of the Creator Dashboard.
 1. Click the **Add Webhook** button.
 1. Complete the configuration fields:
-   1. **Webhook URL** — Specify the URL where you can receive notifications. For more information on the requirements, see [Set up webhook URLs](#set-up-webhook-urls).
-   2. **Name** — Use a custom name to differentiate your configuration from others. By default the value is the same as the Webhook URL.
-   3. **Secret** (optional) — Supply a secret if you want to verify that notifications you receive are coming from Roblox. For more information, see [Verify webhook security](#verify-webhook-security).
-   4. **Triggers** — Choose one or more options from the list of [supported triggers](#supported-triggers) of events for which you want to receive notifications.
+   1. **Webhook URL** - Specify the URL where you want to receive notifications. For more information on the requirements, see [Set up webhook URLs](#set-up-webhook-urls).
+   2. **Name** - Use a custom name to differentiate your configuration from others. By default the value is the same as the Webhook URL.
+   3. **Secret** (optional) - Supply a secret if you want to verify that notifications you receive are coming from Roblox. For more information, see [Verify webhook security](#verify-webhook-security).
+   4. **Triggers** - Choose one or more options from the list of [supported triggers](#supported-triggers) of events for which you want to receive notifications.
 1. Click the **Save Changes** button.
 
 <Alert severity="info">
@@ -98,9 +98,9 @@ You can test whether the webhook you've configured can successfully receive noti
 3. Click the pencil icon next to the target webhook.
 4. Click the **Test Response** button.
 
-A `SampleNotification` event is sent, which includes the **User ID** of the user who triggers the notification, as the following example schema shows:
+The system then sends a `SampleNotification` event, which includes the **User ID** of the user who triggered the notification, as shown here:
 
-```json title="SampleNotification Schema"
+```json title="SampleNotification schema"
 {
   "NotificationId": "string",
   "EventType": "SampleNotification",
@@ -115,20 +115,16 @@ If you are integrating your webhook with a third-party service, you can test it 
 
 ## Verify webhook security
 
-Once you configure your server to receive payloads, it starts to listen for any payload sent to the endpoint. If you set a secret when configuring your webhook, Roblox sends a `roblox-signature` in each webhook notification to ensure that the request actually came from Roblox. The signature is in the payload header for custom endpoints and in the footer for third-party servers.
+After you configure your server to receive payloads, it starts to listen for any payload sent to the endpoint. If you set a secret when configuring your webhook, Roblox sends a `roblox-signature` in each webhook notification to ensure that the request actually came from Roblox. The signature is in the payload header for custom endpoints and in the footer for third-party servers.
 
-```csv title="Signature Format with a Secret for Custom Endpoints"
-
+```csv title="Signature format with a secret for custom endpoints"
 t=<timestamp>,v1=<signature>
-
 ```
 
-If you did not set a secret for your webhook, the signature will only contain the timestamp of when the notification was sent:
+If you did not set a secret for your webhook, the signature only contains the timestamp of when the notification was sent:
 
-```csv title="Signature Format without a Secret for Custom Endpoints"
-
+```csv title="Signature format without a secret for custom endpoints"
 t=<timestamp>
-
 ```
 
 To verify a signature:
@@ -138,7 +134,7 @@ To verify a signature:
 
 1. Extract the timestamp and signature values. All signatures for webhooks with secrets share the same format as a CSV string with these two values following by the prefixes:
 
-   - `t`: The timestamp of when the notification is sent.
+   - `t`: The timestamp of when the notification was sent.
    - `v1`: The signature value generated using the secret provided by the Creator Dashboard configuration.
 
 1. Re-create the base string of `roblox-signature` by concatenating:
@@ -195,9 +191,9 @@ The **variable payload schema fields** provides flexibility for webhooks to acco
 
 1. `EventPayload` (object): Contains information specific to the `EventType` that triggered the webhook. The structure of the `EventPayload` schema varies based on the type of event.
 
-The following example shows the payload schema of the **Right To Erasure Request** event:
+The following example shows the payload schema of the **Right To Erasure request** event:
 
-```json title="Example Schema for Right to Erasure Request"
+```json title="Example schema for a Right to Erasure request"
 {
    "NotificationId": "string",
    "EventType": "RightToErasureRequest",
@@ -221,7 +217,7 @@ If you use a custom endpoint as your webhook server instead of a third-party too
 const crypto = require('crypto');
 const express = require('express');
 
-const secret = '<Your secret>' // This can be set as an environment variable
+const secret = '<your_secret>' // This can be set as an environment variable
 
 let app = express();
 app.use(express.json());

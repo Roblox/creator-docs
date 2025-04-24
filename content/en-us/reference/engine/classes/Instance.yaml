@@ -73,15 +73,17 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Permissions
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
-    writeCapabilities: []
+    capabilities:
+      - CapabilityControl
+    writeCapabilities:
+      - CapabilityControl
   - name: Instance.Name
     summary: |
       A non-unique identifier of the `Class.Instance`.
@@ -239,15 +241,17 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Permissions
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
-    writeCapabilities: []
+    capabilities:
+      - CapabilityControl
+    writeCapabilities:
+      - CapabilityControl
   - name: Instance.UniqueId
     summary: |
       A unique identifier for the instance.

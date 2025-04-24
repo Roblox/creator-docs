@@ -28,6 +28,24 @@ properties:
     capabilities:
       - UI
     writeCapabilities: []
+  - name: WireframeHandleAdornment.Thickness
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods:
   - name: WireframeHandleAdornment:AddLine
     summary: ''

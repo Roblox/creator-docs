@@ -13,6 +13,25 @@ tags:
   - NotReplicated
 deprecation_message: ''
 properties: []
-methods: []
+methods:
+  - name: LanguageService:GetCapabilitiesUsedInPackageAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: instances
+        type: Instances
+        default:
+        summary: ''
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

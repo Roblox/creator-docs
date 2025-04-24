@@ -116,3 +116,8 @@ items:
     value: 21
     tags: []
     deprecation_message: ''
+  - name: CapabilityControl
+    summary: ''
+    value: 22
+    tags: []
+    deprecation_message: ''

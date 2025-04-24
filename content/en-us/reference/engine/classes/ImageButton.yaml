@@ -35,6 +35,24 @@ properties:
     capabilities:
       - UI
     writeCapabilities: []
+  - name: ImageButton.HoverImageContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: ImageButton.Image
     summary: |
       The image content displayed by the `Class.ImageButton` element. Reads and
@@ -228,6 +246,24 @@ properties:
       button is pressed, it will render this image.
     code_samples:
     type: ContentId
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
+  - name: ImageButton.PressedImageContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
     tags: []
     deprecation_message: ''
     security:

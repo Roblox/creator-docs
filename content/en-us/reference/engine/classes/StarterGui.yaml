@@ -340,10 +340,13 @@ methods:
       </table>
 
       ##### ChatMakeSystemMessage
-      Display a formatted message in the chat. Using this method requires the experience's
-      `Class.TextChatService.ChatVersion` to be set to `Enum.ChatVersion|LegacyChatService`, although
-      legacy chat is **deprecated** and usage is discouraged. For experiences using the current
-      `Class.TextChatService`, refer to `Class.TextChannel:DisplaySystemMessage()`.
+
+      Display a formatted message in the chat. Using this method requires the
+      experience's `Class.TextChatService.ChatVersion` to be set to
+      `Enum.ChatVersion|LegacyChatService`, although legacy chat is
+      **deprecated** and usage is discouraged. For experiences using the current
+      `Class.TextChatService`, refer to
+      `Class.TextChannel:DisplaySystemMessage()`.
 
       <table size="small">
       	<thead>

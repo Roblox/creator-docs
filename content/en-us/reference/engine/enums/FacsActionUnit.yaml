@@ -1,0 +1,258 @@
+name: FacsActionUnit
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: ChinRaiserUpperLip
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: ChinRaiser
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: FlatPucker
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Funneler
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: LowerLipSuck
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: LipPresser
+    summary: ''
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: LipsTogether
+    summary: ''
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: MouthLeft
+    summary: ''
+    value: 7
+    tags: []
+    deprecation_message: ''
+  - name: MouthRight
+    summary: ''
+    value: 8
+    tags: []
+    deprecation_message: ''
+  - name: Pucker
+    summary: ''
+    value: 9
+    tags: []
+    deprecation_message: ''
+  - name: UpperLipSuck
+    summary: ''
+    value: 10
+    tags: []
+    deprecation_message: ''
+  - name: LeftCheekPuff
+    summary: ''
+    value: 11
+    tags: []
+    deprecation_message: ''
+  - name: LeftDimpler
+    summary: ''
+    value: 12
+    tags: []
+    deprecation_message: ''
+  - name: LeftLipCornerDown
+    summary: ''
+    value: 13
+    tags: []
+    deprecation_message: ''
+  - name: LeftLowerLipDepressor
+    summary: ''
+    value: 14
+    tags: []
+    deprecation_message: ''
+  - name: LeftLipCornerPuller
+    summary: ''
+    value: 15
+    tags: []
+    deprecation_message: ''
+  - name: LeftLipStretcher
+    summary: ''
+    value: 16
+    tags: []
+    deprecation_message: ''
+  - name: LeftUpperLipRaiser
+    summary: ''
+    value: 17
+    tags: []
+    deprecation_message: ''
+  - name: RightCheekPuff
+    summary: ''
+    value: 18
+    tags: []
+    deprecation_message: ''
+  - name: RightDimpler
+    summary: ''
+    value: 19
+    tags: []
+    deprecation_message: ''
+  - name: RightLipCornerDown
+    summary: ''
+    value: 20
+    tags: []
+    deprecation_message: ''
+  - name: RightLowerLipDepressor
+    summary: ''
+    value: 21
+    tags: []
+    deprecation_message: ''
+  - name: RightLipCornerPuller
+    summary: ''
+    value: 22
+    tags: []
+    deprecation_message: ''
+  - name: RightLipStretcher
+    summary: ''
+    value: 23
+    tags: []
+    deprecation_message: ''
+  - name: RightUpperLipRaiser
+    summary: ''
+    value: 24
+    tags: []
+    deprecation_message: ''
+  - name: JawDrop
+    summary: ''
+    value: 25
+    tags: []
+    deprecation_message: ''
+  - name: JawLeft
+    summary: ''
+    value: 26
+    tags: []
+    deprecation_message: ''
+  - name: JawRight
+    summary: ''
+    value: 27
+    tags: []
+    deprecation_message: ''
+  - name: Corrugator
+    summary: ''
+    value: 28
+    tags: []
+    deprecation_message: ''
+  - name: LeftBrowLowerer
+    summary: ''
+    value: 29
+    tags: []
+    deprecation_message: ''
+  - name: LeftOuterBrowRaiser
+    summary: ''
+    value: 30
+    tags: []
+    deprecation_message: ''
+  - name: LeftNoseWrinkler
+    summary: ''
+    value: 31
+    tags: []
+    deprecation_message: ''
+  - name: LeftInnerBrowRaiser
+    summary: ''
+    value: 32
+    tags: []
+    deprecation_message: ''
+  - name: RightBrowLowerer
+    summary: ''
+    value: 33
+    tags: []
+    deprecation_message: ''
+  - name: RightOuterBrowRaiser
+    summary: ''
+    value: 34
+    tags: []
+    deprecation_message: ''
+  - name: RightInnerBrowRaiser
+    summary: ''
+    value: 35
+    tags: []
+    deprecation_message: ''
+  - name: RightNoseWrinkler
+    summary: ''
+    value: 36
+    tags: []
+    deprecation_message: ''
+  - name: EyesLookDown
+    summary: ''
+    value: 37
+    tags: []
+    deprecation_message: ''
+  - name: EyesLookLeft
+    summary: ''
+    value: 38
+    tags: []
+    deprecation_message: ''
+  - name: EyesLookUp
+    summary: ''
+    value: 39
+    tags: []
+    deprecation_message: ''
+  - name: EyesLookRight
+    summary: ''
+    value: 40
+    tags: []
+    deprecation_message: ''
+  - name: LeftCheekRaiser
+    summary: ''
+    value: 41
+    tags: []
+    deprecation_message: ''
+  - name: LeftEyeUpperLidRaiser
+    summary: ''
+    value: 42
+    tags: []
+    deprecation_message: ''
+  - name: LeftEyeClosed
+    summary: ''
+    value: 43
+    tags: []
+    deprecation_message: ''
+  - name: RightCheekRaiser
+    summary: ''
+    value: 44
+    tags: []
+    deprecation_message: ''
+  - name: RightEyeUpperLidRaiser
+    summary: ''
+    value: 45
+    tags: []
+    deprecation_message: ''
+  - name: RightEyeClosed
+    summary: ''
+    value: 46
+    tags: []
+    deprecation_message: ''
+  - name: TongueDown
+    summary: ''
+    value: 47
+    tags: []
+    deprecation_message: ''
+  - name: TongueOut
+    summary: ''
+    value: 48
+    tags: []
+    deprecation_message: ''
+  - name: TongueUp
+    summary: ''
+    value: 49
+    tags: []
+    deprecation_message: ''

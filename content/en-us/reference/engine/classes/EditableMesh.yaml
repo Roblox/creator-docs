@@ -200,6 +200,24 @@ properties:
     capabilities: []
     writeCapabilities: []
 methods:
+  - name: EditableMesh:AddBone
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: boneProperties
+        type: Dictionary
+        default:
+        summary: ''
+    returns:
+      - type: int64
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:AddColor
     summary: |
       Adds a new color to the geometry and returns a stable color ID.
@@ -462,6 +480,110 @@ methods:
       - type: Array
         summary: |
           List of IDs of adjacent vertices around the given vertex ID.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetBoneByName
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: boneName
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: int64
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetBoneCFrame
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: boneId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: CFrame
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetBoneIsVirtual
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: boneId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: boolean
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetBoneName
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: boneId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetBoneParent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: boneId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: int64
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetBones
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
     tags: []
     deprecation_message: ''
     security: None
@@ -735,6 +857,70 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: EditableMesh:GetFacsCorrectivePose
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: actions
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetFacsCorrectivePoses
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetFacsPose
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: action
+        type: FacsActionUnit
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetFacsPoses
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetNormal
     summary: |
       Returns the normal vector for the given normal ID.
@@ -847,6 +1033,42 @@ methods:
           List of stable UV IDs.
     tags:
       - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetVertexBoneWeights
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetVertexBones
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -1174,6 +1396,24 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: EditableMesh:RemoveBone
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: boneId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:RemoveFace
     summary: |
       Removes a face using its stable face ID.
@@ -1226,6 +1466,94 @@ methods:
         default:
         summary: |
           Stable normal ID to reset.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:SetBoneCFrame
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: boneId
+        type: int64
+        default:
+        summary: ''
+      - name: cframe
+        type: CFrame
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:SetBoneIsVirtual
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: boneId
+        type: int64
+        default:
+        summary: ''
+      - name: virtual
+        type: boolean
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:SetBoneName
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: boneId
+        type: int64
+        default:
+        summary: ''
+      - name: name
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:SetBoneParent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: boneId
+        type: int64
+        default:
+        summary: ''
+      - name: parentBoneId
+        type: int64
+        default:
+        summary: ''
     returns:
       - type: ()
         summary: ''
@@ -1395,6 +1723,84 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: EditableMesh:SetFacsBonePose
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: action
+        type: FacsActionUnit
+        default:
+        summary: ''
+      - name: boneId
+        type: int64
+        default:
+        summary: ''
+      - name: cframe
+        type: CFrame
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:SetFacsCorrectivePose
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: actions
+        type: Array
+        default:
+        summary: ''
+      - name: boneIds
+        type: Array
+        default:
+        summary: ''
+      - name: cframes
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:SetFacsPose
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: action
+        type: FacsActionUnit
+        default:
+        summary: ''
+      - name: boneIds
+        type: Array
+        default:
+        summary: ''
+      - name: cframes
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:SetNormal
     summary: |
       Set the normal for a normal ID.
@@ -1465,6 +1871,50 @@ methods:
         default:
         summary: |
           UV coordinates.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:SetVertexBoneWeights
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: ''
+      - name: boneWeights
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:SetVertexBones
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: ''
+      - name: boneIDs
+        type: Array
+        default:
+        summary: ''
     returns:
       - type: ()
         summary: ''
