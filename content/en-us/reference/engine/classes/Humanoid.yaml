@@ -1957,7 +1957,7 @@ methods:
       `Class.Humanoid:MoveTo()|MoveTo()` ends if any of the following conditions
       apply:
 
-      - The character arrives at its destination.
+      - The character arrives at its destination. There is a ~1 stud threshold to account for various humanoid speeds and framerates.
 
       - The character gets stuck and the eight-second timer expires.
 

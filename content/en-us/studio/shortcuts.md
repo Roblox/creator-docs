@@ -475,17 +475,11 @@ Studio has many default shortcuts and key commands that make development quicker
 			<td><kbd>F5</kbd></td>
       <td>Start simulating the experience in Studio. Press again to pause a running simulation or resume a paused simulation.</td>
     </tr>
-    <tr>
-      <td>**Stop**</td>
-			<td><kbd>Shift</kbd><kbd>F5</kbd></td>
-			<td><kbd>Shift</kbd><kbd>F5</kbd></td>
-      <td>Stop the current simulation.</td>
-    </tr>
 		<tr>
       <td>**Run**</td>
 			<td><kbd>F8</kbd></td>
 			<td><kbd>F8</kbd></td>
-      <td>Start simulating the experience without your avatar from the current camera position.</td>
+      <td>Simulate the experience without your avatar from the current camera position.</td>
     </tr>
     <tr>
       <td>**Start**</td>
@@ -493,11 +487,35 @@ Studio has many default shortcuts and key commands that make development quicker
 			<td><kbd>F7</kbd></td>
       <td>Simulate the Roblox environment by starting multiple new sessions of Studio.</td>
     </tr>
+    <tr>
+      <td>**Stop**</td>
+			<td><kbd>Shift</kbd><kbd>F5</kbd></td>
+			<td><kbd>Shift</kbd><kbd>F5</kbd></td>
+      <td>Stop the current simulation.</td>
+    </tr>
+    <tr>
+      <td>**Free Camera Mode**</td>
+			<td><kbd>Shift</kbd><kbd>P</kbd></td>
+			<td><kbd>Shift</kbd><kbd>P</kbd></td>
+      <td>While playtesting, enter **Free Camera Mode**. This is useful to take screenshots and recordings.</td>
+    </tr>
 		<tr>
       <td>**Save and Reload Plugins in Debugger**</td>
 			<td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>L</kbd></td>
 			<td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>L</kbd></td>
       <td>Save all plugins in debugger back to disk, stop execution of those plugins, and reload them from disk.</td>
+    </tr>
+		<tr>
+      <td>**Hide CoreGui**</td>
+			<td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>G</kbd></td>
+			<td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>G</kbd></td>
+      <td>While playtesting, hide `Class.CoreGui` objects</td>
+    </tr>
+		<tr>
+      <td>**Hide Custom Gui**</td>
+			<td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>C</kbd></td>
+			<td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>C</kbd></td>
+      <td>While playtesting, hide custom UI objects</td>
     </tr>
     <tr>
       <td>**Stats**</td>
