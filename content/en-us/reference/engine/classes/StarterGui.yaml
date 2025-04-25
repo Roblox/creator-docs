@@ -1,6 +1,5 @@
 name: StarterGui
 type: class
-category: GUI
 memory_category: Instances
 summary: |
   A container for `Class.LayerCollector` objects to be copied into the

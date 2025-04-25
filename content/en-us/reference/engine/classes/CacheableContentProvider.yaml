@@ -1,6 +1,5 @@
 name: CacheableContentProvider
 type: class
-category:
 memory_category: Instances
 summary: |
   A variant of the `Class.ContentProvider` that caches assets that have already

@@ -1,6 +1,5 @@
 name: PluginMenu
 type: class
-category: Plugins
 memory_category: Instances
 summary: |
   A context menu that can be shown in Studio. Displays a list of

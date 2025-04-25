@@ -1,6 +1,5 @@
 name: ParticleEmitter
 type: class
-category: Effects
 memory_category: Instances
 summary: |
   A special object that emits customizable 2D particles into the world.

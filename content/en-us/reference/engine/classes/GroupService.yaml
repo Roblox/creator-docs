@@ -1,6 +1,5 @@
 name: GroupService
 type: class
-category: Social
 memory_category: Instances
 summary: |
   GroupService is a service that allows developers to fetch information about a

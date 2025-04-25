@@ -1,6 +1,5 @@
 name: GamepadService
 type: class
-category:
 memory_category: Instances
 summary: |
   The GamepadService is internally responsible for handling inputs from various

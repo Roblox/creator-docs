@@ -1,6 +1,5 @@
 name: Dialog
 type: class
-category: Social
 memory_category: Instances
 summary: |
   Creates NPC billboard-style dialog bubbles.

@@ -1,6 +1,5 @@
 name: Sound
 type: class
-category: Sounds
 memory_category: Internal
 summary: |
   An object that emits sound. This object can be placed within a

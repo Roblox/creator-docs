@@ -1,6 +1,5 @@
 name: SpawnerService
 type: class
-category:
 memory_category: Instances
 summary: |
   An internal service that is responsible for the behavior of

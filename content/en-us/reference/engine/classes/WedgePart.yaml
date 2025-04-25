@@ -1,6 +1,5 @@
 name: WedgePart
 type: class
-category: Building
 memory_category: Instances
 summary: |
   A type of `Class.BasePart` that has a wedge shape.

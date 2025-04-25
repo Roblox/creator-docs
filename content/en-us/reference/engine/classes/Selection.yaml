@@ -1,6 +1,5 @@
 name: Selection
 type: class
-category: Plugins
 memory_category: Instances
 summary: |
   The Selection service controls the `Class.Instance|Instances` that are

@@ -1,6 +1,5 @@
 name: BillboardGui
 type: class
-category: GUI
 memory_category: Instances
 summary: |
   A container for `Class.GuiObject|GuiObjects` that renders in 3D space facing

@@ -1,6 +1,5 @@
 name: SurfaceAppearance
 type: class
-category:
 memory_category: Instances
 summary: |
   An object that allows developers to override the appearance of a MeshPart with

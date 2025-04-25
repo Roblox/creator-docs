@@ -1,6 +1,5 @@
 name: ReflectionMetadataEvents
 type: class
-category:
 memory_category: Instances
 summary: |
   Acts as a `Class.Folder` containing information about events for a

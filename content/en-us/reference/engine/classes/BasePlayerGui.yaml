@@ -1,6 +1,5 @@
 name: BasePlayerGui
 type: class
-category:
 memory_category: Instances
 summary: |
   The BasePlayerGui is an abstract class which the GUI drawing storage classes

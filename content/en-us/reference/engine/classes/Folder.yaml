@@ -1,6 +1,5 @@
 name: Folder
 type: class
-category: Utility
 memory_category: Instances
 summary: |
   A simple container used to hold and organize Roblox instances.

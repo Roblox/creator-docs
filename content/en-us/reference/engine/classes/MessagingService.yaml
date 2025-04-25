@@ -1,6 +1,5 @@
 name: MessagingService
 type: class
-category:
 memory_category: Instances
 summary: |
   Allows servers of the same experience to communicate with each other.

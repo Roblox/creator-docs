@@ -1,6 +1,5 @@
 name: UIAspectRatioConstraint
 type: class
-category: GUI
 memory_category: Instances
 summary: |
   Ensures the parent UI element maintains a particular aspect ratio.

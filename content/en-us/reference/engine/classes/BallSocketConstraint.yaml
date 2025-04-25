@@ -1,6 +1,5 @@
 name: BallSocketConstraint
 type: class
-category: Constraints
 memory_category: PhysicsParts
 summary: |
   Forces its two attachments into the same position and allows them to freely

@@ -1,6 +1,5 @@
 name: BodyMover
 type: class
-category:
 memory_category: Instances
 summary: |
   Base class for objects that continually exert forces to parts.

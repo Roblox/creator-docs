@@ -1,6 +1,5 @@
 name: Vector3Curve
 type: class
-category:
 memory_category: Instances
 summary: |
   Represents a 3D vector curve, grouping three `Class.FloatCurve` instances.

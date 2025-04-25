@@ -1,6 +1,5 @@
 name: FormFactorPart
 type: class
-category:
 memory_category: Instances
 summary: |
   The FormFactorPart class is an abstract class. It inherits from the BasePart

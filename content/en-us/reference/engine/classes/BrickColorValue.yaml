@@ -1,6 +1,5 @@
 name: BrickColorValue
 type: class
-category: Values
 memory_category: Instances
 summary: |
   A container object for a single BrickColor value.

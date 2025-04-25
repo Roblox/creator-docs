@@ -1,6 +1,5 @@
 name: DataStoreKeyInfo
 type: class
-category:
 memory_category: Instances
 summary: |
   An object specifying information about a particular version of the key.

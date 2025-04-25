@@ -1,6 +1,5 @@
 name: FloorWire
 type: class
-category:
 memory_category: Instances
 summary: |
   A FloorWire attempts to make a wire from two of its properties:

@@ -1,6 +1,5 @@
 name: BackpackItem
 type: class
-category:
 memory_category: PhysicsParts
 summary: |
   BackpackItem is an abstract class for backpack items such as HopperBins and

@@ -112,10 +112,6 @@
       "description": "the type of the API (class, datatype, enum, global, library). Automated.",
       "enum": ["class"]
     },
-    "category": {
-      "type": ["string", "null"],
-      "description": "General category of the class."
-    },
     "memory_category": {
       "type": ["string", "null"],
       "description": "Defines where the class appears in the Memory tab of the Developer Console. Automated."
@@ -435,7 +431,6 @@
   "required": [
     "name",
     "type",
-    "category",
     "memory_category",
     "summary",
     "description",

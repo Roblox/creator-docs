@@ -1,6 +1,5 @@
 name: Model
 type: class
-category: Building
 memory_category: PhysicsParts
 summary: |
   Models are container objects, meaning they group objects together. They are

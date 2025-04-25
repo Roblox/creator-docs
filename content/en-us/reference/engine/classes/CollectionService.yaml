@@ -1,6 +1,5 @@
 name: CollectionService
 type: class
-category: Utility
 memory_category: Instances
 summary: |
   A service which manages instance collections using assigned tags.

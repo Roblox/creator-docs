@@ -1,6 +1,5 @@
 name: Motor
 type: class
-category: Joints
 memory_category: PhysicsParts
 summary: |
   Makes a movable `Class.JointInstance` between two parts.

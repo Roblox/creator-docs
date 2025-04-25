@@ -1,6 +1,5 @@
 name: Humanoid
 type: class
-category: Avatar
 memory_category: Instances
 summary: |
   A special object that gives models the functionality of a character.

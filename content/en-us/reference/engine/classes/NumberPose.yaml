@@ -1,6 +1,5 @@
 name: NumberPose
 type: class
-category:
 memory_category: Animation
 summary: |
   Holds the value applied to a specific FACS control.

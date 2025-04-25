@@ -1,6 +1,5 @@
 name: AnimationController
 type: class
-category: Animations
 memory_category: Animation
 summary: |
   Allows animations to be loaded and applied to a character or model in place of

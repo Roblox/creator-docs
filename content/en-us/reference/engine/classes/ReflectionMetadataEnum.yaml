@@ -1,6 +1,5 @@
 name: ReflectionMetadataEnum
 type: class
-category:
 memory_category: Instances
 summary: |
   Registers information about an `Datatype.Enum` and its EnumItems.

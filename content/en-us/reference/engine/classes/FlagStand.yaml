@@ -1,6 +1,5 @@
 name: FlagStand
 type: class
-category:
 memory_category: PhysicsParts
 summary: |
   The FlagStand object helps you make 'capture the flag' style games.

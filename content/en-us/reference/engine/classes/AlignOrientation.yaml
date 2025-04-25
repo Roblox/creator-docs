@@ -1,6 +1,5 @@
 name: AlignOrientation
 type: class
-category: Constraints
 memory_category: PhysicsParts
 summary: |
   Constraint which applies torque to align two attachments, or to align one

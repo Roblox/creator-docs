@@ -1,6 +1,5 @@
 name: ClusterPacketCache
 type: class
-category:
 memory_category: Instances
 summary: |
   An internal service meant to cache cluster packets.

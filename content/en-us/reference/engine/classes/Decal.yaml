@@ -1,6 +1,5 @@
 name: Decal
 type: class
-category: Building
 memory_category: GraphicsTexture
 summary: |
   The Decal object is an object which applies an image to a face of a

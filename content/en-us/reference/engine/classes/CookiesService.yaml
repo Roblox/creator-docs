@@ -1,6 +1,5 @@
 name: CookiesService
 type: class
-category:
 memory_category: Instances
 summary: |
   A backend service used by Roblox to control HTTP cookies. Its functions are

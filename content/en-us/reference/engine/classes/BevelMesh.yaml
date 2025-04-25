@@ -1,6 +1,5 @@
 name: BevelMesh
 type: class
-category:
 memory_category: Instances
 summary: |
   An abstract class that `Class.BlockMesh` and `Class.CylinderMesh` inherit

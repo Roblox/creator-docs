@@ -1,6 +1,5 @@
 name: TextChatService
 type: class
-category:
 memory_category: Instances
 summary: |
   A service handling in-experience text chat.

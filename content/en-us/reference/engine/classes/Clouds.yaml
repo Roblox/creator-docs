@@ -1,6 +1,5 @@
 name: Clouds
 type: class
-category:
 memory_category: Instances
 summary: |
   Renders realistic clouds that drift slowly across the sky.

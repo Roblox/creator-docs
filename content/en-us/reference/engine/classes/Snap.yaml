@@ -1,6 +1,5 @@
 name: Snap
 type: class
-category: Joints
 memory_category: PhysicsParts
 summary: |
   Holds two parts together and functions identically to `Class.Weld`.

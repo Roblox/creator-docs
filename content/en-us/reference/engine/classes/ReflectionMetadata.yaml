@@ -1,6 +1,5 @@
 name: ReflectionMetadata
 type: class
-category:
 memory_category: Instances
 summary: |
   A currently unused object whose functionality was split into

@@ -1,6 +1,5 @@
 name: UICorner
 type: class
-category:
 memory_category: Instances
 summary: |
   UI modifier which applies deformation to corners of its parent

@@ -1,6 +1,5 @@
 name: BodyVelocity
 type: class
-category: Body Movers
 memory_category: Instances
 summary: |
   Applies a force to maintain a constant velocity.

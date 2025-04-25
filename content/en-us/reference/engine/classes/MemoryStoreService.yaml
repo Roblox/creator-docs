@@ -1,6 +1,5 @@
 name: MemoryStoreService
 type: class
-category: Data
 memory_category: Instances
 summary: |
   Exposes methods to access specific primitives within MemoryStore.

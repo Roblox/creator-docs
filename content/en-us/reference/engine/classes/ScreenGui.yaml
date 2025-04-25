@@ -1,6 +1,5 @@
 name: ScreenGui
 type: class
-category: GUI
 memory_category: Instances
 summary: |
   Primary container of on-screen 2D user interface elements.

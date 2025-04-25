@@ -1,6 +1,5 @@
 name: TeleportAsyncResult
 type: class
-category:
 memory_category: Instances
 summary: |
   The return structure of the `TeleportAsync` function call.

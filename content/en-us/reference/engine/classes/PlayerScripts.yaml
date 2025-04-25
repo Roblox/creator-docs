@@ -1,6 +1,5 @@
 name: PlayerScripts
 type: class
-category: Scripting
 memory_category: Instances
 summary: |
   A container for LocalScripts to be run on the client.

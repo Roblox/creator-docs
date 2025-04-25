@@ -1,6 +1,5 @@
 name: Controller
 type: class
-category:
 memory_category: Instances
 summary: |
   The base class for controller objects, such as the `Class.HumanoidController`

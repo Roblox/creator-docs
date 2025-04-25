@@ -1,6 +1,5 @@
 name: Fire
 type: class
-category: Effects
 memory_category: Instances
 summary: |
   A particle emitter with the visual aesthetic of fire.

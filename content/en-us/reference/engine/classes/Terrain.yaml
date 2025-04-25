@@ -1,6 +1,5 @@
 name: Terrain
 type: class
-category: Building
 memory_category: Instances
 summary: |
   Terrain lets you to create dynamically morphable environments.

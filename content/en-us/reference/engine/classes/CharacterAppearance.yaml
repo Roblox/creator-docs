@@ -1,6 +1,5 @@
 name: CharacterAppearance
 type: class
-category:
 memory_category: Instances
 summary: |
   The base class for objects that change the character's appearance, such as the

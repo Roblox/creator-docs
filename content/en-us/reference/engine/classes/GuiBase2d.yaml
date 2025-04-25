@@ -1,6 +1,5 @@
 name: GuiBase2d
 type: class
-category:
 memory_category: Instances
 summary: |
   An abstract class inherited by 2D `Class.GuiObject|GuiObjects`.

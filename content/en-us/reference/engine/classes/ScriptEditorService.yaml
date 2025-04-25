@@ -1,6 +1,5 @@
 name: ScriptEditorService
 type: class
-category:
 memory_category: Instances
 summary: |
   This service is used for interacting with `Class.ScriptDocument` instances.

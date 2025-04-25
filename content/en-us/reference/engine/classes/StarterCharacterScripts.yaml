@@ -1,6 +1,5 @@
 name: StarterCharacterScripts
 type: class
-category: Scripting
 memory_category: Instances
 summary: |
   Stores instances to be parented to a player's character when it spawns.

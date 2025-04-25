@@ -1,6 +1,5 @@
 name: VideoFrame
 type: class
-category: GUI
 memory_category: Gui
 summary: |
   A GUI object that renders a rectangle, like a `Class.Frame` does, with a

@@ -1,6 +1,5 @@
 name: Seat
 type: class
-category: Gameplay
 memory_category: PhysicsParts
 summary: |
   A type of `Class.BasePart` that characters can 'sit' in. When a character

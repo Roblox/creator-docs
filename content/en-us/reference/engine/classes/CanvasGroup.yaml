@@ -1,6 +1,5 @@
 name: CanvasGroup
 type: class
-category: GUI
 memory_category: Gui
 summary: |
   Blends descendants as a group with color/transparency.

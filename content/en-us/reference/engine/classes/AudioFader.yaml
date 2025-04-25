@@ -1,6 +1,5 @@
 name: AudioFader
 type: class
-category:
 memory_category: Internal
 summary: |
   Adjusts the volume of audio streams.

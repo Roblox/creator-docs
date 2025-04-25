@@ -1,6 +1,5 @@
 name: Wire
 type: class
-category:
 memory_category: Instances
 summary: |
   Connects one or more `Class.Instance|Instances` to form a processing graph of

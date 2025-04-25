@@ -1,6 +1,5 @@
 name: ControllerService
 type: class
-category:
 memory_category: Instances
 summary: |
   Container class for the `Class.HumanoidController` among other classes.

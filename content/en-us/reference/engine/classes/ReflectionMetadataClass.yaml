@@ -1,6 +1,5 @@
 name: ReflectionMetadataClass
 type: class
-category:
 memory_category: Instances
 summary: |
   Registers information about a class, and its members. Should be parented to

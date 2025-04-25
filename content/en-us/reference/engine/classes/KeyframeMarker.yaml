@@ -1,6 +1,5 @@
 name: KeyframeMarker
 type: class
-category: Animations
 memory_category: Animation
 summary: |
   An instance meant to represent an event that will eventually be fired when a

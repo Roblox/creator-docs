@@ -1,6 +1,5 @@
 name: ChannelTabsConfiguration
 type: class
-category:
 memory_category: Instances
 summary: |
   Configures properties of the optional channel tabs in the default chat window.

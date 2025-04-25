@@ -1,6 +1,5 @@
 name: NetworkReplicator
 type: class
-category:
 memory_category: Instances
 summary: |
   An object which handles the replication of other objects either from the

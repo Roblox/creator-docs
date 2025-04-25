@@ -1,6 +1,5 @@
 name: AnimationRigData
 type: class
-category:
 memory_category: Instances
 summary: |
   Used to store information regarding the model an animation was authored for.

@@ -1,6 +1,5 @@
 name: SkateboardPlatform
 type: class
-category:
 memory_category: PhysicsParts
 summary: |
   A SkateboardPlatform can be used to create a skateboard. When characters get

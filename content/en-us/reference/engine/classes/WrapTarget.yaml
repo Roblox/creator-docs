@@ -1,6 +1,5 @@
 name: WrapTarget
 type: class
-category:
 memory_category: Instances
 summary: |
   The WrapTarget object defines a target. A target is the 3D body with only an

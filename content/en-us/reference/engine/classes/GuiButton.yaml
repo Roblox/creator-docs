@@ -1,6 +1,5 @@
 name: GuiButton
 type: class
-category:
 memory_category: Gui
 summary: |
   An abstract class for interactive 2D user interface elements.

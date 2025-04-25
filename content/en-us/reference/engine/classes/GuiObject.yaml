@@ -1,6 +1,5 @@
 name: GuiObject
 type: class
-category:
 memory_category: Gui
 summary: |
   An abstract class for all 2D user interface objects.

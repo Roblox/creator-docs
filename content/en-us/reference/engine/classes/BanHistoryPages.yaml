@@ -1,6 +1,5 @@
 name: BanHistoryPages
 type: class
-category:
 memory_category: Instances
 summary: |
   Returned by `Class.Players:GetBanHistoryAsync` to view the entire ban and

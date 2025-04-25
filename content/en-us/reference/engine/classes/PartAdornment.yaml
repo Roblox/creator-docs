@@ -1,6 +1,5 @@
 name: PartAdornment
 type: class
-category:
 memory_category: Instances
 summary: |
   An abstract class for GUI elements that are adorned to (displayed as attached

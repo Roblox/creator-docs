@@ -1,6 +1,5 @@
 name: AudioLimiter
 type: class
-category:
 memory_category: Internal
 summary: |
   Limits how loud audio streams are allowed to be.

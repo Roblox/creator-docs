@@ -1,6 +1,5 @@
 name: NetworkMarker
 type: class
-category:
 memory_category: Instances
 summary: |
   The NetworkMarker is used to tell the client when the server has finished

@@ -1,6 +1,5 @@
 name: ContextActionService
 type: class
-category: Input
 memory_category: Instances
 summary: |
   A service used to bind user input to contextual actions.

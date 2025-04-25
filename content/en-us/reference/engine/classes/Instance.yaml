@@ -1,6 +1,5 @@
 name: Instance
 type: class
-category:
 memory_category: Instances
 summary: |
   `Instance` is the base class for all classes in the Roblox class hierarchy

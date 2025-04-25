@@ -1,6 +1,5 @@
 name: EditableMesh
 type: class
-category:
 memory_category: Instances
 summary: |
   Instance which allows for the runtime creation and manipulation of meshes.

@@ -1,6 +1,5 @@
 name: DistortionSoundEffect
 type: class
-category: Sounds
 memory_category: Instances
 summary: |
   Distorts audio, making it sound fuzzier and overdriven.

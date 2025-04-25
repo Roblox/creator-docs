@@ -1,6 +1,5 @@
 name: Accoutrement
 type: class
-category: Avatar
 memory_category: Instances
 summary: |
   An object that can attach to a player's character.

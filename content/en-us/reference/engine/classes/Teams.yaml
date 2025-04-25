@@ -1,6 +1,5 @@
 name: Teams
 type: class
-category: Gameplay
 memory_category: Instances
 summary: |
   The Teams service holds a game's `Class.Team` objects. `Class.Team` objects

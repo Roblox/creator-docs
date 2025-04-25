@@ -1,6 +1,5 @@
 name: UISizeConstraint
 type: class
-category: GUI
 memory_category: Instances
 summary: |
   Ensures a `Class.GuiObject` does not become larger or smaller than the

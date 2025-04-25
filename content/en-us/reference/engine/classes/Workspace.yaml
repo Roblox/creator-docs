@@ -1,6 +1,5 @@
 name: Workspace
 type: class
-category: Gameplay
 memory_category: PhysicsParts
 summary: |
   **Workspace** houses 3D objects which are rendered to the 3D world. Objects

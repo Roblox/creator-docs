@@ -1,6 +1,5 @@
 name: Script
 type: class
-category: Scripting
 memory_category: Script
 summary: |
   An object that contains and runs Luau code on the server.

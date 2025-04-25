@@ -1,6 +1,5 @@
 name: ArcHandles
 type: class
-category: Adornments
 memory_category: Instances
 summary: |
   The `Class.ArcHandles` object places 3D arc handles around any 3D object that

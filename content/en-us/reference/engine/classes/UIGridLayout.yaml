@@ -1,6 +1,5 @@
 name: UIGridLayout
 type: class
-category: GUI
 memory_category: Instances
 summary: |
   Positions sibling UI elements by filling rows using the space of the parent UI

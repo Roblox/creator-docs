@@ -1,6 +1,5 @@
 name: PlayerGui
 type: class
-category: GUI
 memory_category: Instances
 summary: |
   A container for a player's currently rendered `Class.ScreenGui|ScreenGuis`.

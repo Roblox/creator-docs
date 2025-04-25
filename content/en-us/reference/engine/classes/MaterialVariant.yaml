@@ -1,6 +1,5 @@
 name: MaterialVariant
 type: class
-category:
 memory_category: Instances
 summary: |
   Represent a variant of a Material.

@@ -1,6 +1,5 @@
 name: MemoryStoreQueue
 type: class
-category:
 memory_category: Instances
 summary: |
   Provides access to a queue within MemoryStore.

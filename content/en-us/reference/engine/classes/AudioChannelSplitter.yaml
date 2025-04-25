@@ -1,6 +1,5 @@
 name: AudioChannelSplitter
 type: class
-category:
 memory_category: Internal
 summary: |
   Splits an audio stream into component channels so that each can be processed

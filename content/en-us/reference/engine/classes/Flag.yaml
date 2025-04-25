@@ -1,6 +1,5 @@
 name: Flag
 type: class
-category:
 memory_category: PhysicsParts
 summary: |
   The Flag object helps you make 'capture the flag' style games.

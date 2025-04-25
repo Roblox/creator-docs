@@ -1,6 +1,5 @@
 name: LocalizationService
 type: class
-category: Localization
 memory_category: Instances
 summary: |
   Handles automated translation.

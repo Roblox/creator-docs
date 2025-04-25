@@ -1,6 +1,5 @@
 name: VoiceChatService
 type: class
-category:
 memory_category: Instances
 summary: |
   **VoiceChatService** is responsible for voice chat's high-level functionality.

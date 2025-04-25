@@ -1,6 +1,5 @@
 name: SelectionBox
 type: class
-category: Adornments
 memory_category: Instances
 summary: |
   Renders a 3D box around its `Class.PVAdornment.Adornee|Adornee`.

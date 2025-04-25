@@ -1,6 +1,5 @@
 name: NumberValue
 type: class
-category: Values
 memory_category: Instances
 summary: |
   A container object for a single double-precision floating point number.

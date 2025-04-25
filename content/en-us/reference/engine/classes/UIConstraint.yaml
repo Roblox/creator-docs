@@ -1,6 +1,5 @@
 name: UIConstraint
 type: class
-category:
 memory_category: Instances
 summary: |
   The base class for UI constraint classes.

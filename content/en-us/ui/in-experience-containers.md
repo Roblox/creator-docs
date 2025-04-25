@@ -39,7 +39,7 @@ Alternatively, you can place the `Class.SurfaceGui` inside a container like `Cla
 </Grid>
 
 <Alert severity="warning">
-Interactive UI elements like `Class.ImageButton|ImageButtons` and `Class.TextButton|TextButtons` inside a `Class.SurfaceGui` will only receive user input if they are parented to the player's `Class.PlayerGui`, typically via placing the `Class.SurfaceGui` inside `Class.StarterGui` as noted above.
+Interactive UI elements like `Class.ImageButton|ImageButtons` and `Class.TextButton|TextButtons` inside a `Class.SurfaceGui` will only receive user input if they are parented to the player's `Class.PlayerGui`, typically via placing the `Class.SurfaceGui` inside `Class.StarterGui` as noted above. Additionally, the part's `Class.BasePart.CanQuery|CanQuery` property must be `true` for the interactive UI element to receive input.
 </Alert>
 
 <Alert severity="success">

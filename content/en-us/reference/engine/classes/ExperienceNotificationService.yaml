@@ -1,6 +1,5 @@
 name: ExperienceNotificationService
 type: class
-category:
 memory_category: Instances
 summary: |
   Service containing methods to validate users and prompt them to enable

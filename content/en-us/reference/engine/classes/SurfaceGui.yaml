@@ -1,6 +1,5 @@
 name: SurfaceGui
 type: class
-category: GUI
 memory_category: Instances
 summary: |
   Container for GuiObjects that are rendered on the surface of a part.
@@ -18,10 +17,12 @@ description: |
   Note that interactive UI elements like `Class.ImageButton|ImageButtons` and
   `Class.TextButton|TextButtons` inside a `Class.SurfaceGui` will only receive
   user input if they are parented to the `Class.PlayerGui`, typically via
-  placing the `Class.SurfaceGui` inside `Class.StarterGui`. The
+  placing the `Class.SurfaceGui` inside `Class.StarterGui` (the
   `Class.SurfaceGui.Adornee|Adornee` property can be used to target a part in
   the 3D world while the `Class.SurfaceGui` itself remains in the
-  `Class.PlayerGui`.
+  `Class.PlayerGui`). Additionally, the part's
+  `Class.BasePart.CanQuery|CanQuery` property must be `true` for the interactive
+  UI element to receive input.
 
   See [In-Experience UI](../../../ui/in-experience-containers.md#surface-ui) for
   a guide on working with `Class.SurfaceGui` containers.

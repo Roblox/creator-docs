@@ -1,6 +1,5 @@
 name: Player
 type: class
-category: Gameplay
 memory_category: Instances
 summary: |
   An object that represents a presently connected client to the game.

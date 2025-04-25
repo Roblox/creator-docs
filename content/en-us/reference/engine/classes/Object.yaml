@@ -1,6 +1,5 @@
 name: Object
 type: class
-category:
 memory_category: Instances
 summary: |
   Object is the base class for all classes in the Roblox class hierarchy.

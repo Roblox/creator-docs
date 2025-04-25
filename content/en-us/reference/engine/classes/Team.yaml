@@ -1,6 +1,5 @@
 name: Team
 type: class
-category: Gameplay
 memory_category: Instances
 summary: |
   The `Class.Team` class represents a faction in a Roblox place. The only valid

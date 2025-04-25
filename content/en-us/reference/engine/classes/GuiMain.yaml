@@ -1,6 +1,5 @@
 name: GuiMain
 type: class
-category:
 memory_category: Instances
 summary: |
   The original name of the `Class.ScreenGui`.

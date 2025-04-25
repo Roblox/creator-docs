@@ -1,6 +1,5 @@
 name: HingeConstraint
 type: class
-category: Constraints
 memory_category: PhysicsParts
 summary: |
   Constrains its attachments to rotate about a single axis.

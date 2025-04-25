@@ -1,6 +1,5 @@
 name: IKControl
 type: class
-category: Animations
 memory_category: Animation
 summary: |
   Specifies a control to generate a procedural animation pose using Inverse

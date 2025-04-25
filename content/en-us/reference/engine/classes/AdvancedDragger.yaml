@@ -1,6 +1,5 @@
 name: AdvancedDragger
 type: class
-category:
 memory_category: Instances
 summary: |
   An unfinished advanced variant of the `Class.Dragger` class.

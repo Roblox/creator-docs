@@ -1,6 +1,5 @@
 name: Keyframe
 type: class
-category: Animations
 memory_category: Animation
 summary: |
   A Keyframe holds the `Class.Pose|Poses` applied to joints in a `Class.Model`

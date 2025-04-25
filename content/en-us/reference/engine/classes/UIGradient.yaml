@@ -1,6 +1,5 @@
 name: UIGradient
 type: class
-category: GUI
 memory_category: Instances
 summary: |
   Applies a color and transparency gradient to the UI elements rendered by the

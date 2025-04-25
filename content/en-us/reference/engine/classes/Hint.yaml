@@ -1,6 +1,5 @@
 name: Hint
 type: class
-category: GUI
 memory_category: Instances
 summary: |
   A Hint is an object that creates a small black bar at the very top of the

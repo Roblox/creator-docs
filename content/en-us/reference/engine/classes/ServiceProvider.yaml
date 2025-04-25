@@ -1,6 +1,5 @@
 name: ServiceProvider
 type: class
-category:
 memory_category: Instances
 summary: |
   A ServiceProvider is an abstract class, which stores, and provides certain

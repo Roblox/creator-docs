@@ -1,6 +1,5 @@
 name: Path
 type: class
-category: Pathfinding
 memory_category: Instances
 summary: |
   Stores the result of paths created by `Class.PathfindingService:CreatePath()`.

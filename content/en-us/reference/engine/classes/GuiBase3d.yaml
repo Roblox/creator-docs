@@ -1,6 +1,5 @@
 name: GuiBase3d
 type: class
-category:
 memory_category: Instances
 summary: |
   An abstract class for 3D GUI elements that are rendered in the world.

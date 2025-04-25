@@ -1,6 +1,5 @@
 name: RemoteEvent
 type: class
-category: Scripting
 memory_category: Instances
 summary: |
   An object which facilitates asynchronous, one-way communication across the

@@ -1,6 +1,5 @@
 name: VRService
 type: class
-category: Input
 memory_category: Instances
 summary: |
   Service responsible for handling interactions between Roblox and Virtual

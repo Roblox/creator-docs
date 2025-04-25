@@ -1,6 +1,5 @@
 name: RunService
 type: class
-category: Scripting
 memory_category: Instances
 summary: |
   Service responsible for all runtime activity and progression of time.

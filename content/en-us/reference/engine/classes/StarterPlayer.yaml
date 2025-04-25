@@ -1,6 +1,5 @@
 name: StarterPlayer
 type: class
-category: Scripting
 memory_category: Instances
 summary: |
   A service which allows the defaults of properties in the `Class.Player` object

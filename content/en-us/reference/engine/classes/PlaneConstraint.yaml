@@ -1,6 +1,5 @@
 name: PlaneConstraint
 type: class
-category:
 memory_category: PhysicsParts
 summary: |
   Moves its attachments into a position/orientation along a plane whose normal

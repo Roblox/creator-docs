@@ -1,6 +1,5 @@
 name: Frame
 type: class
-category: GUI
 memory_category: Gui
 summary: |
   A `Class.GuiObject` that renders as a plain rectangle, generally used as a

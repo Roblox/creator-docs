@@ -1,6 +1,5 @@
 name: CylinderMesh
 type: class
-category:
 memory_category: PhysicsParts
 summary: |
   The CylinderMesh object applies a 'cylinder' mesh to the `Class.BasePart` it

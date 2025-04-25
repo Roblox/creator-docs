@@ -1,6 +1,5 @@
 name: Message
 type: class
-category:
 memory_category: Instances
 summary: |
   Fills the entire screen with a semi-transparent grey background, with centered

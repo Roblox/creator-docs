@@ -1,6 +1,5 @@
 name: Lighting
 type: class
-category: Lighting
 memory_category: Instances
 summary: |
   The `Lighting` service controls global lighting in an experience. It includes

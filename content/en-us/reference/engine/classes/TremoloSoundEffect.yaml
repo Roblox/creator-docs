@@ -1,6 +1,5 @@
 name: TremoloSoundEffect
 type: class
-category: Sounds
 memory_category: Instances
 summary: |
   Creates a trembling effect on a sound by varying the volume of the sound up

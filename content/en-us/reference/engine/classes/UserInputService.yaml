@@ -1,6 +1,5 @@
 name: UserInputService
 type: class
-category: Input
 memory_category: Instances
 summary: |
   `Class.UserInputService` is a service used to detect the type of input

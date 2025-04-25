@@ -1,6 +1,5 @@
 name: HumanoidDescription
 type: class
-category: Avatar
 memory_category: Instances
 summary: |
   Describes the appearance of a Humanoid character including body parts,

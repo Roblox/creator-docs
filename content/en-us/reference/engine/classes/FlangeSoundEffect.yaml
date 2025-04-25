@@ -1,6 +1,5 @@
 name: FlangeSoundEffect
 type: class
-category: Sounds
 memory_category: Instances
 summary: |
   Creates a sweeping or swooshing effect on a sound.

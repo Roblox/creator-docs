@@ -1,6 +1,5 @@
 name: SolidModelContentProvider
 type: class
-category:
 memory_category: Instances
 summary: |
   An internal service which serves no functionality to developers.

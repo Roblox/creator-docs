@@ -1,6 +1,5 @@
 name: BlockMesh
 type: class
-category: Meshes
 memory_category: PhysicsParts
 summary: |
   The BlockMesh object applies a 'brick' mesh to the `Class.BasePart` it is

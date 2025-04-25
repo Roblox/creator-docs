@@ -1,6 +1,5 @@
 name: TextChatMessageProperties
 type: class
-category:
 memory_category: Instances
 summary: |
   Overrides `Class.TextChatMessage` properties when returned by callbacks

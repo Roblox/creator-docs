@@ -1,6 +1,5 @@
 name: ChangeHistoryService
 type: class
-category: Plugins
 memory_category: Instances
 summary: |
   **Must** be used by plugins to communicate to Studio how to undo and redo the

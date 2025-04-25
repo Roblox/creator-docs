@@ -1,6 +1,5 @@
 name: SphereHandleAdornment
 type: class
-category: Adornments
 memory_category: Instances
 summary: |
   The SphereHandleAdornment is a sphere that can be adorned to a BasePart.

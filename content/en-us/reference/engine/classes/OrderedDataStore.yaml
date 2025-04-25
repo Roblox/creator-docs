@@ -1,6 +1,5 @@
 name: OrderedDataStore
 type: class
-category: Data
 memory_category: Instances
 summary: |
   A GlobalDataStore that also allows for ordered data store entries.

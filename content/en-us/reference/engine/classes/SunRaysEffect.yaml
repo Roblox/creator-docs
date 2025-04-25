@@ -1,6 +1,5 @@
 name: SunRaysEffect
 type: class
-category: Post Processing
 memory_category: Instances
 summary: |
   Renders dynamic rays from the sun.

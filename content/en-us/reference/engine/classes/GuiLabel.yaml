@@ -1,6 +1,5 @@
 name: GuiLabel
 type: class
-category:
 memory_category: Gui
 summary: |
   An abstract class for non-interactive 2D user interface elements.

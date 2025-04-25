@@ -1,6 +1,5 @@
 name: FileMesh
 type: class
-category: Meshes
 memory_category: PhysicsParts
 summary: |
   The FileMesh object applies a mesh to a `Class.BasePart` when parented to it.

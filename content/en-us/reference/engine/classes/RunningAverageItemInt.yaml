@@ -1,6 +1,5 @@
 name: RunningAverageItemInt
 type: class
-category:
 memory_category: Instances
 summary: |
   Measures the runtime average of an **integer** value.

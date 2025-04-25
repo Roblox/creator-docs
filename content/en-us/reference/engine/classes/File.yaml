@@ -1,6 +1,5 @@
 name: File
 type: class
-category:
 memory_category: Instances
 summary: |
   An asset loaded from a file on disk.

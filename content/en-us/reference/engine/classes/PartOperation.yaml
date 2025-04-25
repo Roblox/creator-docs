@@ -1,6 +1,5 @@
 name: PartOperation
 type: class
-category:
 memory_category: Instances
 summary: |
   An abstract class that all parts based on solid modeling inherit from.

@@ -1,6 +1,5 @@
 name: Beam
 type: class
-category: Effects
 memory_category: Instances
 summary: |
   Connects two `Class.Attachment|Attachments` by drawing a texture between them.

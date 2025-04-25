@@ -1,6 +1,5 @@
 name: UIFlexItem
 type: class
-category:
 memory_category: Instances
 summary: |
   Defines flex behavior for a `Class.GuiObject` within a `Class.UIListLayout`.

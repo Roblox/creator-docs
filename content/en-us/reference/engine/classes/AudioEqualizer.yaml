@@ -1,6 +1,5 @@
 name: AudioEqualizer
 type: class
-category:
 memory_category: Internal
 summary: |
   Adjusts the frequency content of audio streams.

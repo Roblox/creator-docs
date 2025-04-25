@@ -1,6 +1,5 @@
 name: Animator
 type: class
-category: Animations
 memory_category: Instances
 summary: |
   Responsible for the playback and replication of `Class.Animation|Animations`.

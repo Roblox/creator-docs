@@ -1,6 +1,5 @@
 name: Bone
 type: class
-category:
 memory_category: Instances
 summary: |
   Bones are non-rendered objects that drive the movement of one or more parts

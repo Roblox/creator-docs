@@ -1,6 +1,5 @@
 name: EqualizerSoundEffect
 type: class
-category: Sounds
 memory_category: Instances
 summary: |
   Controls the volume of incoming audio across three frequency ranges.

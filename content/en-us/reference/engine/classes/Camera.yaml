@@ -1,6 +1,5 @@
 name: Camera
 type: class
-category: Gameplay
 memory_category: Instances
 summary: |
   A class which defines a view of the 3D world.

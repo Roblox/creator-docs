@@ -1,6 +1,5 @@
 name: Dragger
 type: class
-category: Input
 memory_category: Instances
 summary: |
   A helper object used to create tools that can drag parts.

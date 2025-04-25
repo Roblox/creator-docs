@@ -1,6 +1,5 @@
 name: CoreGui
 type: class
-category: Plugins
 memory_category: Instances
 summary: |
   The CoreGui is a service used to store Guis created in-game by Roblox for the

@@ -1,6 +1,5 @@
 name: ContentProvider
 type: class
-category: Data
 memory_category: Instances
 summary: |
   Service that is used to load content, or assets, into a game.

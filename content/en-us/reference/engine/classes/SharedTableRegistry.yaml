@@ -1,6 +1,5 @@
 name: SharedTableRegistry
 type: class
-category:
 memory_category: Instances
 summary: |
   Provides a global registry of named `Datatype.SharedTable` objects.

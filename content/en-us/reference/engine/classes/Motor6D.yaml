@@ -1,6 +1,5 @@
 name: Motor6D
 type: class
-category: Joints
 memory_category: PhysicsParts
 summary: |
   Creates an animatable joint between two `Class.BasePart|BaseParts`.

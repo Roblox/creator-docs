@@ -1,6 +1,5 @@
 name: DataStoreKey
 type: class
-category:
 memory_category: Instances
 summary: |
   Object representing a key on a `Class.DataStoreKeyPages` object.

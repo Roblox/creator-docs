@@ -1,6 +1,5 @@
 name: AudioPlayer
 type: class
-category:
 memory_category: Internal
 summary: |
   Used to play audio assets.

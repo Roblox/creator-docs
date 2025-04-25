@@ -1,6 +1,5 @@
 name: ChatInputBarConfiguration
 type: class
-category:
 memory_category: Instances
 summary: |
   Configures properties of the default chat input bar.

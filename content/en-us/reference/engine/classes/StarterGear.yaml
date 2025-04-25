@@ -1,6 +1,5 @@
 name: StarterGear
 type: class
-category: Social
 memory_category: Instances
 summary: |
   If the game allows gear, StarterGear contains all of a player's appropriate

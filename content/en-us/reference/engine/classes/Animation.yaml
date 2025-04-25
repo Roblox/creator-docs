@@ -1,6 +1,5 @@
 name: Animation
 type: class
-category: Animations
 memory_category: Animation
 summary: |
   References an animation asset which can be loaded by an

@@ -1,6 +1,5 @@
 name: PackageLink
 type: class
-category: Scripting
 memory_category: Instances
 summary: |
   Links a `Class.DataModel` instance to a corresponding asset in the cloud.

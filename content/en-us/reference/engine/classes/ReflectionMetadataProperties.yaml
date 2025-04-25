@@ -1,6 +1,5 @@
 name: ReflectionMetadataProperties
 type: class
-category:
 memory_category: Instances
 summary: |
   Acts as a `Class.Folder` containing information about properties for a

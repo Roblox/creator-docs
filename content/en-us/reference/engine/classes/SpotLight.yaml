@@ -1,6 +1,5 @@
 name: SpotLight
 type: class
-category: Lighting
 memory_category: Instances
 summary: |
   A light source that emits light directionally in the shape of a cone with a

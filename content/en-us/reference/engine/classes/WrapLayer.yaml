@@ -1,6 +1,5 @@
 name: WrapLayer
 type: class
-category:
 memory_category: Instances
 summary: |
   The WrapLayer object defines a 3D accessory's inner and outer surfaces and

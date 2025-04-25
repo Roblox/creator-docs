@@ -1,6 +1,5 @@
 name: SensorBase
 type: class
-category:
 memory_category: Instances
 summary: |
   An abstract class for various sensor instance types.

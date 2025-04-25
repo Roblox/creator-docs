@@ -1,6 +1,5 @@
 name: Accessory
 type: class
-category: Avatar
 memory_category: Instances
 summary: |
   An item that a Character can wear.

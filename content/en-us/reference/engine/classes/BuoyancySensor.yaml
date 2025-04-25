@@ -1,6 +1,5 @@
 name: BuoyancySensor
 type: class
-category:
 memory_category: Instances
 summary: |
   A `Class.SensorBase` that outputs data about how its `Class.BasePart` is

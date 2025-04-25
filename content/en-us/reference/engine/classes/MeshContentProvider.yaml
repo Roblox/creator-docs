@@ -1,6 +1,5 @@
 name: MeshContentProvider
 type: class
-category:
 memory_category: Instances
 summary: |
   An internal Roblox service that is responsible for fetching, parsing and

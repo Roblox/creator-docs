@@ -1,6 +1,5 @@
 name: BadgeService
 type: class
-category: Gameplay
 memory_category: Instances
 summary: |
   Provides information on badges and awards them.

@@ -1,6 +1,5 @@
 name: BoxHandleAdornment
 type: class
-category: Adornments
 memory_category: Instances
 summary: |
   A box that can be adorned to a `Class.BasePart`.

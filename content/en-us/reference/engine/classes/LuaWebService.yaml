@@ -1,6 +1,5 @@
 name: LuaWebService
 type: class
-category:
 memory_category: Instances
 summary: |
   An internal service, which is responsible for retrieving HTTP data from

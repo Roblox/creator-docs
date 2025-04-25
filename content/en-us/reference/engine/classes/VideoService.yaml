@@ -1,6 +1,5 @@
 name: VideoService
 type: class
-category:
 memory_category: Instances
 summary: |
   An internal service that offers no functionality to developers.

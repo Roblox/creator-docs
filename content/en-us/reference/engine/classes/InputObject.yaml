@@ -1,6 +1,5 @@
 name: InputObject
 type: class
-category: Input
 memory_category: Instances
 summary: |
   An object created when an input begins that describes a particular user input.

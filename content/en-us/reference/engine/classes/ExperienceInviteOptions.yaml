@@ -1,6 +1,5 @@
 name: ExperienceInviteOptions
 type: class
-category:
 memory_category: Instances
 summary: |
   Used to customize a player invite prompt.

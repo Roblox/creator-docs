@@ -1,6 +1,5 @@
 name: AnimationTrack
 type: class
-category: Animations
 memory_category: Animation
 summary: |
   Controls the playback of an animation on an `Class.Animator`.

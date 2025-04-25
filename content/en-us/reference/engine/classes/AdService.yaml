@@ -1,6 +1,5 @@
 name: AdService
 type: class
-category:
 memory_category: Instances
 summary: |
   A class that allows the display of mobile video ads.

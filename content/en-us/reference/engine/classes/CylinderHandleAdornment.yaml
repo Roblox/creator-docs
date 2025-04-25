@@ -1,6 +1,5 @@
 name: CylinderHandleAdornment
 type: class
-category: Adornments
 memory_category: Instances
 summary: |
   A cylinder that can be adorned to a `Class.BasePart`.

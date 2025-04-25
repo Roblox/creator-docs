@@ -1,6 +1,5 @@
 name: NetworkPeer
 type: class
-category:
 memory_category: Instances
 summary: |
   The NetworkPeer object is the most basic class of the network objects.

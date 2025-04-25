@@ -1,6 +1,5 @@
 name: PathfindingService
 type: class
-category: Pathfinding
 memory_category: Instances
 summary: |
   Used to find logical paths between two points.

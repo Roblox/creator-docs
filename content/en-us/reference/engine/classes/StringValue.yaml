@@ -1,6 +1,5 @@
 name: StringValue
 type: class
-category: Values
 memory_category: Instances
 summary: |
   A container object for a single string.

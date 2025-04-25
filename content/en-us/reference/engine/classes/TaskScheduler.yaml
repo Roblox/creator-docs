@@ -1,6 +1,5 @@
 name: TaskScheduler
 type: class
-category: Settings
 memory_category: Instances
 summary: |
   Collection of settings for the _Task Scheduler_ feature.

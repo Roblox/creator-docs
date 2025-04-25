@@ -1,6 +1,5 @@
 name: TextChatConfigurations
 type: class
-category:
 memory_category: Instances
 summary: |
   The parental class of all text chat configurations.

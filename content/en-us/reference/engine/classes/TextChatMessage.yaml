@@ -1,6 +1,5 @@
 name: TextChatMessage
 type: class
-category:
 memory_category: Instances
 summary: |
   Immutable data object representing a text chat message.

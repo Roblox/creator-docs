@@ -1,6 +1,5 @@
 name: Vector3Value
 type: class
-category: Values
 memory_category: Instances
 summary: |
   A container object for a single Vector3 value.

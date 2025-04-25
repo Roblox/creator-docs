@@ -1,6 +1,5 @@
 name: ObjectValue
 type: class
-category: Values
 memory_category: Instances
 summary: |
   A container object for a reference to another instance.

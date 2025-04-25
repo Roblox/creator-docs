@@ -1,6 +1,5 @@
 name: DataStoreListingPages
 type: class
-category:
 memory_category: Instances
 summary: |
   A special type of `Class.Pages` object whose pages contain

@@ -1,6 +1,5 @@
 name: AudioFlanger
 type: class
-category:
 memory_category: Internal
 summary: |
   Imparts a whooshing or sweeping sound on audio streams.

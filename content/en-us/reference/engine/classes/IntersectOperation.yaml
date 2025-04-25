@@ -1,6 +1,5 @@
 name: IntersectOperation
 type: class
-category:
 memory_category: Instances
 summary: |
   Result of parts that have been intersected into a single solid model.

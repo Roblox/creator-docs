@@ -1,6 +1,5 @@
 name: PlayerMouse
 type: class
-category: Input
 memory_category: Instances
 summary: |
   The PlayerMouse behaves identically to the `Class.Mouse` object that is

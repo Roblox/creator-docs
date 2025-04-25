@@ -1,6 +1,5 @@
 name: AudioChorus
 type: class
-category:
 memory_category: Internal
 summary: |
   Makes an audio stream sound more voluminous. If applied to a single voice, it

@@ -1,6 +1,5 @@
 name: DataStoreInfo
 type: class
-category:
 memory_category: Instances
 summary: |
   Object describing data store information.

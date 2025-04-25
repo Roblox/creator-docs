@@ -1,6 +1,5 @@
 name: RunningAverageItemDouble
 type: class
-category:
 memory_category: Instances
 summary: |
   Measures the runtime average of a **double** value.

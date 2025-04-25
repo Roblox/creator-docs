@@ -1,6 +1,5 @@
 name: BodyThrust
 type: class
-category: Body Movers
 memory_category: Instances
 summary: |
   Applies a constant force to an object at a specific point.

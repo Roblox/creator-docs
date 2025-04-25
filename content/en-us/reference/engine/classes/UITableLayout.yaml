@@ -1,6 +1,5 @@
 name: UITableLayout
 type: class
-category: GUI
 memory_category: Instances
 summary: |
   Lays out sibling UI elements and their child UI elements as rows/columns and

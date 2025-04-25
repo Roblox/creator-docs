@@ -1,6 +1,5 @@
 name: BindableFunction
 type: class
-category: Scripting
 memory_category: Instances
 summary: |
   An object which allows for synchronous two-way communication between scripts

@@ -1,6 +1,5 @@
 name: CurveAnimation
 type: class
-category: Animation
 memory_category: Instances
 summary: |
   Stores animation data in the form of curves for each individual channel to

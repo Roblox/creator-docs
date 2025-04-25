@@ -1,6 +1,5 @@
 name: TeleportOptions
 type: class
-category:
 memory_category: Instances
 summary: |
   Optional input arguments to the `Class.TeleportService:TeleportAsync()`

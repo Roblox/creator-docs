@@ -1,6 +1,5 @@
 name: DataStoreOptions
 type: class
-category:
 memory_category: Instances
 summary: |
   Object used to provide additional parameters to

@@ -1,6 +1,5 @@
 name: ServerScriptService
 type: class
-category: Scripting
 memory_category: Instances
 summary: |
   A container service for server-only `Class.Script` objects.

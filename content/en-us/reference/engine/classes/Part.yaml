@@ -1,6 +1,5 @@
 name: Part
 type: class
-category: Building
 memory_category: PhysicsParts
 summary: |
   A common type of `Class.BasePart` that comes in different primitive shapes.

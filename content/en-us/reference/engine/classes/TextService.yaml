@@ -1,6 +1,5 @@
 name: TextService
 type: class
-category: Utility
 memory_category: Instances
 summary: |
   The TextService is a service internally responsible for handling the display

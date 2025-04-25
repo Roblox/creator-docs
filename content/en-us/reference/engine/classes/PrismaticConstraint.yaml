@@ -1,6 +1,5 @@
 name: PrismaticConstraint
 type: class
-category: Constraints
 memory_category: PhysicsParts
 summary: |
   Constraint which creates a rigid joint between two

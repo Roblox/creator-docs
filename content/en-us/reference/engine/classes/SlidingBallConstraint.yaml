@@ -1,6 +1,5 @@
 name: SlidingBallConstraint
 type: class
-category:
 memory_category: PhysicsParts
 summary: |
   The base class for constraints that allow their attachments to slide along an

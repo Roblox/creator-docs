@@ -1,6 +1,5 @@
 name: MarkerCurve
 type: class
-category:
 memory_category: Instances
 summary: |
   Represents a list of strings markers in chronological order.

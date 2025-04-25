@@ -1,6 +1,5 @@
 name: WrapDeformer
 type: class
-category:
 memory_category: Instances
 summary: |
   Allows for the real-time deformation of a `Class.MeshPart`.

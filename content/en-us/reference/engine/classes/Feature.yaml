@@ -1,6 +1,5 @@
 name: Feature
 type: class
-category:
 memory_category: Instances
 summary: |
   The base class for the legacy motor system.

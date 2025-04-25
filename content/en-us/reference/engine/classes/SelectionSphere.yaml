@@ -1,6 +1,5 @@
 name: SelectionSphere
 type: class
-category: Adornments
 memory_category: Instances
 summary: |
   Renders a 3D sphere around its `Class.PVAdornment.Adornee|Adornee`.

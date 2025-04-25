@@ -1,6 +1,5 @@
 name: ViewportFrame
 type: class
-category: GUI
 memory_category: Gui
 summary: |
   `Class.GuiObject` that renders 3D objects inside its bounds.

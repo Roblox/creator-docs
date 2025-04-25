@@ -1,6 +1,5 @@
 name: Texture
 type: class
-category: Building
 memory_category: GraphicsTexture
 summary: |
   A Texture object applies a repeating texture to the face of a

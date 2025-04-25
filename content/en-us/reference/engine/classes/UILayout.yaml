@@ -1,6 +1,5 @@
 name: UILayout
 type: class
-category:
 memory_category: Instances
 summary: |
   The base class for UI layout classes.

@@ -1,6 +1,5 @@
 name: Clothing
 type: class
-category:
 memory_category: Instances
 summary: |
   Clothing is the base class for the `Class.Shirt` and `Class.Pants` clothing

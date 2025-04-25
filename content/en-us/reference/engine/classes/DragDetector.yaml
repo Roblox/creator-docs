@@ -1,6 +1,5 @@
 name: DragDetector
 type: class
-category:
 memory_category: Instances
 summary: |
   Instance which facilitates and encourages interaction with 3D objects in an

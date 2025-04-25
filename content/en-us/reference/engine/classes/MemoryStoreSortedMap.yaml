@@ -1,6 +1,5 @@
 name: MemoryStoreSortedMap
 type: class
-category:
 memory_category: Instances
 summary: |
   Provides access to a sorted map within `Class.MemoryStoreService`.

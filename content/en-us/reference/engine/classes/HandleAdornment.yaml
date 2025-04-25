@@ -1,6 +1,5 @@
 name: HandleAdornment
 type: class
-category:
 memory_category: Instances
 summary: |
   HandleAdornment is an abstract class inherited by 3D handle adornments.

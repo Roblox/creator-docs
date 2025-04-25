@@ -1,6 +1,5 @@
 name: JointsService
 type: class
-category: Joints
 memory_category: Instances
 summary: |
   A service that stores joints created by surface connections.

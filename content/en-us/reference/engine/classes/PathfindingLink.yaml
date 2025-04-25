@@ -1,6 +1,5 @@
 name: PathfindingLink
 type: class
-category:
 memory_category: Instances
 summary: |
   Connects two locations which otherwise by default are unconnected.

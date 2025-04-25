@@ -1,6 +1,5 @@
 name: BloomEffect
 type: class
-category: Post Processing
 memory_category: Instances
 summary: |
   Simulates the camera viewing a very bright light.

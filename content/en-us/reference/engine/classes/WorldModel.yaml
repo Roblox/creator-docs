@@ -1,6 +1,5 @@
 name: WorldModel
 type: class
-category:
 memory_category: PhysicsParts
 summary: |
   Provides some physics features to a `Class.ViewportFrame`.

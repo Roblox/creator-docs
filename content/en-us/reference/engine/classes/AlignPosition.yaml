@@ -1,6 +1,5 @@
 name: AlignPosition
 type: class
-category: Constraints
 memory_category: PhysicsParts
 summary: |
   Constraint which applies force to move two attachments together, or to move

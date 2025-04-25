@@ -1,6 +1,5 @@
 name: BodyForce
 type: class
-category: Body Movers
 memory_category: Instances
 summary: |
   Applies a constant force to an object.

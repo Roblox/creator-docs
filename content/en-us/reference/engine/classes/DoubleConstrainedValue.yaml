@@ -1,6 +1,5 @@
 name: DoubleConstrainedValue
 type: class
-category: Values
 memory_category: Instances
 summary: |
   An instance which is used to create a number value which can never be less

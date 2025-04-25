@@ -1,6 +1,5 @@
 name: UIGridStyleLayout
 type: class
-category:
 memory_category: Instances
 summary: |
   The base class for grid style UI layouts.

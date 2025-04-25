@@ -1,6 +1,5 @@
 name: Pages
 type: class
-category:
 memory_category: Instances
 summary: |
   An abstract class for pages objects.

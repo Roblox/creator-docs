@@ -1,6 +1,5 @@
 name: AudioDeviceOutput
 type: class
-category:
 memory_category: Internal
 summary: |
   Accepts audio streams to be rendered out to physical hardware devices such as

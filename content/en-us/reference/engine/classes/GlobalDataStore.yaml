@@ -1,6 +1,5 @@
 name: GlobalDataStore
 type: class
-category: Data
 memory_category: Instances
 summary: |
   An object that exposes methods to access a single data store.

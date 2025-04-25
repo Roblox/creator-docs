@@ -1,6 +1,5 @@
 name: PluginGuiService
 type: class
-category: Plugins
 memory_category: Instances
 summary: |
   A service that stores `Class.PluginGui` objects to be displayed in Roblox

@@ -1,6 +1,5 @@
 name: Mouse
 type: class
-category: Input
 memory_category: Instances
 summary: |
   Legacy object that contains members useful for pointer input.

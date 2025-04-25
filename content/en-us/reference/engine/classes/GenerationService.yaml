@@ -1,6 +1,5 @@
 name: GenerationService
 type: class
-category:
 memory_category: Instances
 summary: |
   `GenerationService` is a service that allows developers to generate 3D objects

@@ -1,6 +1,5 @@
 name: Status
 type: class
-category:
 memory_category: PhysicsParts
 summary: |
   An unfinished object which offers no functionality to developers.

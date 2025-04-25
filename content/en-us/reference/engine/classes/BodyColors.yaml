@@ -1,6 +1,5 @@
 name: BodyColors
 type: class
-category: Avatar
 memory_category: Instances
 summary: |
   For a Humanoid character, the BodyColors will specify the colors for the

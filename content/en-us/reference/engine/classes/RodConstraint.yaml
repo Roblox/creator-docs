@@ -1,6 +1,5 @@
 name: RodConstraint
 type: class
-category: Constraints
 memory_category: PhysicsParts
 summary: |
   Keeps two attachments separated by its defined

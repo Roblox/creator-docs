@@ -1,6 +1,5 @@
 name: CaptureService
 type: class
-category:
 memory_category: Instances
 summary: |
   A service which provides control over screenshot capture features.

@@ -1,6 +1,5 @@
 name: TweenBase
 type: class
-category:
 memory_category: Instances
 summary: |
   Abstract base class for in-between interpolation handlers. `Class.Tween`

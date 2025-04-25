@@ -1,6 +1,5 @@
 name: VehicleSeat
 type: class
-category: Input
 memory_category: Instances
 summary: |
   A seat object that can be used to control a vehicle.

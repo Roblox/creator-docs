@@ -1,6 +1,5 @@
 name: UniversalConstraint
 type: class
-category: Constraints
 memory_category: PhysicsParts
 summary: |
   Ensures two axes on two bodies remain perpendicular.

@@ -1,6 +1,5 @@
 name: PluginMouse
 type: class
-category: Plugins
 memory_category: Instances
 summary: |
   The PluginMouse object gives `Class.Plugin|Plugins` access to the mouse. It

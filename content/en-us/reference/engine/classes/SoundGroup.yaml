@@ -1,6 +1,5 @@
 name: SoundGroup
 type: class
-category: Sounds
 memory_category: Internal
 summary: |
   A `Class.SoundGroup` is used to manage the volume and sound effects on

@@ -1,6 +1,5 @@
 name: TextChannel
 type: class
-category:
 memory_category: Instances
 summary: |
   Represents a text chat channel.
@@ -175,6 +174,12 @@ methods:
       Sends a `Class.TextChatMessage` to the server. Can only be used in a
       `Class.LocalScript`, or in a `Class.Script` with
       `Class.Script.RunContext|RunContext` of `Enum.RunContext.Client`.
+
+      The `metadata` argument has a limit of 200 characters. If this is called
+      with a `metadata` argument that has more than 200 characters, the message
+      will not be sent to other users. Instead, the sender will receive a
+      `Class.TextChatMessage` with the `Class.TextChatMessage.Metadata` and
+      `Class.TextChatMessage.Text` properties set to empty strings.
     code_samples: []
     parameters:
       - name: message

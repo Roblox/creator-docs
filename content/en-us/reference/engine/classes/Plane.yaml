@@ -1,6 +1,5 @@
 name: Plane
 type: class
-category:
 memory_category: PhysicsParts
 summary: |
   Constrains Attachment0 and Attachment1 such that both points lie in an plane

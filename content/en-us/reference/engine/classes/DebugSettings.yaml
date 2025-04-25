@@ -1,6 +1,5 @@
 name: DebugSettings
 type: class
-category: Settings
 memory_category: Instances
 summary: |
   Collection of various developer-facing diagnostics information.

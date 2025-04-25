@@ -1,6 +1,5 @@
 name: AudioTextToSpeech
 type: class
-category:
 memory_category: Internal
 summary: |
   Plays text as speech audio.

@@ -1,6 +1,5 @@
 name: SpawnLocation
 type: class
-category: Gameplay
 memory_category: PhysicsParts
 summary: |
   `Class.SpawnLocation|SpawnLocations`, or "spawns" determine where a

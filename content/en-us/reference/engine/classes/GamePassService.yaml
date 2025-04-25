@@ -1,6 +1,5 @@
 name: GamePassService
 type: class
-category: Monetization
 memory_category: Instances
 summary: |
   A service associated with the legacy game pass system. Use

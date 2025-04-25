@@ -1,6 +1,5 @@
 name: HapticService
 type: class
-category: Input
 memory_category: Instances
 summary: |
   Provides haptic feedback to controllers and devices.

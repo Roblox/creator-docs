@@ -1,6 +1,5 @@
 name: GenericSettings
 type: class
-category:
 memory_category: Instances
 summary: |
   The abstract class for settings database classes.

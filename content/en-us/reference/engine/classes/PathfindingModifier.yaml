@@ -1,6 +1,5 @@
 name: PathfindingModifier
 type: class
-category:
 memory_category: Instances
 summary: |
   Modifiers used to represent space that has a higher or lower cost to be

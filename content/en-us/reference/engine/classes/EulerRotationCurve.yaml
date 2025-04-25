@@ -1,6 +1,5 @@
 name: EulerRotationCurve
 type: class
-category:
 memory_category: Instances
 summary: |
   Represents a 3D rotation curve through a group of three

@@ -1,6 +1,5 @@
 name: AnalyticsService
 type: class
-category: Data
 memory_category: Instances
 summary: |
   Collection of methods that allows developers to track how users interact with

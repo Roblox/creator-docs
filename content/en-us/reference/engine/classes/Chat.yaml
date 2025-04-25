@@ -1,6 +1,5 @@
 name: Chat
 type: class
-category: Social
 memory_category: Instances
 summary: |
   Houses the Luau code responsible for running the legacy chat system.

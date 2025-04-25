@@ -1,6 +1,5 @@
 name: ReflectionMetadataItem
 type: class
-category:
 memory_category: Instances
 summary: |
   Acts as abstract properties for generic information about Classes, Members,

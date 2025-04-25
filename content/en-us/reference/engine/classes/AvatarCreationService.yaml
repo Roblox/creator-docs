@@ -1,6 +1,5 @@
 name: AvatarCreationService
 type: class
-category:
 memory_category: Instances
 summary: |
   A service to support developer avatar creators.

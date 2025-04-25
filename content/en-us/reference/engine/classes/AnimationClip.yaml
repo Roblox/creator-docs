@@ -1,6 +1,5 @@
 name: AnimationClip
 type: class
-category: Animations
 memory_category: Instances
 summary: |
   Represents all types of animation data that the Roblox animation system can

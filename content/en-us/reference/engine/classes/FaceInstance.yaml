@@ -1,6 +1,5 @@
 name: FaceInstance
 type: class
-category:
 memory_category: Instances
 summary: |
   The FaceInstance class is an abstract class from which the `Class.Decal` class

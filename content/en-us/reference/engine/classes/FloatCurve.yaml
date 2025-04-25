@@ -1,6 +1,5 @@
 name: FloatCurve
 type: class
-category:
 memory_category: Instances
 summary: |
   A sorted list of time-value pairs that define a curve. Used to animate a

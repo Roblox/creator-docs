@@ -1,6 +1,5 @@
 name: MeshPart
 type: class
-category: Meshes
 memory_category: PhysicsParts
 summary: |
   A form of `Class.BasePart` that includes a physically simulated custom mesh.

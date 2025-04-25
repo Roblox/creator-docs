@@ -1,6 +1,5 @@
 name: Hopper
 type: class
-category:
 memory_category: Instances
 summary: |
   Hopper is the original name of the StarterPack service.

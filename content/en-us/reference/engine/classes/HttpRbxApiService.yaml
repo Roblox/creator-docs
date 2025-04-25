@@ -1,6 +1,5 @@
 name: HttpRbxApiService
 type: class
-category:
 memory_category: Instances
 summary: |
   An internal service whose functionality is not available to developers.

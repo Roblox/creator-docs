@@ -1,6 +1,5 @@
 name: TweenService
 type: class
-category: Animations
 memory_category: Instances
 summary: |
   Used to create `Class.Tween|Tweens` which interpolate, or tween, the

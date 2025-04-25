@@ -1,6 +1,5 @@
 name: BubbleChatConfiguration
 type: class
-category:
 memory_category: Instances
 summary: |
   Allows for customization of text chat bubbles through `Class.TextChatService`.

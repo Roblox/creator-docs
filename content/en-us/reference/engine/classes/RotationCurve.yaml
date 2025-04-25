@@ -1,6 +1,5 @@
 name: RotationCurve
 type: class
-category:
 memory_category: Instances
 summary: |
   Represents a sequence of rotations and the interpolation curve between them.

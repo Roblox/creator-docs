@@ -1,6 +1,5 @@
 name: ModuleScript
 type: class
-category: Scripting
 memory_category: Script
 summary: |
   A script type that runs once when `Global.LuaGlobals.require()` is called with

@@ -1,6 +1,5 @@
 name: InsertService
 type: class
-category: Utility
 memory_category: Instances
 summary: |
   Used to insert assets from the Roblox website.

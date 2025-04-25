@@ -1,6 +1,5 @@
 name: FriendService
 type: class
-category:
 memory_category: Instances
 summary: |
   An internal service which is used to send, cancel, accept and decline friend

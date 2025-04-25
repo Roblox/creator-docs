@@ -1,6 +1,5 @@
 name: BasePart
 type: class
-category:
 memory_category: Instances
 summary: |
   The abstract base class for in-world objects that physically interact.
@@ -54,11 +53,11 @@ properties:
     summary: |
       Determines whether a part is immovable by physics.
     description: |
-      The **Anchored** property determines whether the part will be immovable by
+      The `Anchored` property determines whether the part will be immovable by
       physics. When enabled, a part will never change position due to gravity,
       other part collisions, overlapping other parts, or any other
       physics-related causes. As a result, two anchored parts will never fire
-      the `Class.BasePart.Touched` event on each other.
+      the `Class.BasePart.Touched|Touched` event on each other.
 
       An anchored part may still be moved by changing its
       `Class.BasePart.CFrame|CFrame` or `Class.BasePart.Position|Position`, and
@@ -100,8 +99,8 @@ properties:
 
       Setting the velocity directly may lead to unrealistic motion. Using
       `Class.Torque` or `Class.AngularVelocity` constraint is preferred, or use
-      `Class.BasePart:ApplyAngularImpulse()` if you want instantaneous change in
-      velocity.
+      `Class.BasePart:ApplyAngularImpulse()|ApplyAngularImpulse()` if you want
+      instantaneous change in velocity.
 
       If the part is [owned](../../../physics/network-ownership.md) by the
       server, this property must be changed from a server `Class.Script` (not
@@ -130,8 +129,8 @@ properties:
     summary: |
       The center of mass of the part's assembly in world space.
     description: |
-      A position calculated via the `Class.BasePart.Mass|mass` and
-      `Class.BasePart.Position|position` of all the parts in the assembly.
+      A position calculated via the `Class.BasePart.Mass|Mass` and
+      `Class.BasePart.Position|Position` of all the parts in the assembly.
 
       If the assembly has an anchored part, that part's center of mass will be
       the assembly's center of mass, and the assembly will have infinite mass.
@@ -161,16 +160,18 @@ properties:
       The linear velocity of the part's assembly.
     description: |
       The linear velocity vector of this part's assembly. It's the rate of
-      change in position of the assembly's
-      `Class.BasePart.AssemblyCenterOfMass|center of mass` in studs per second.
+      change in position of
+      `Class.BasePart.AssemblyCenterOfMass|AssemblyCenterOfMass` in studs per
+      second.
 
       If you want to know the velocity at a point other than the assembly's
-      center of mass, use `Class.BasePart:GetVelocityAtPosition()`.
+      center of mass, use
+      `Class.BasePart:GetVelocityAtPosition()|GetVelocityAtPosition()`.
 
       Setting the velocity directly may lead to unrealistic motion. Using a
       `Class.VectorForce` constraint is preferred, or use
-      `Class.BasePart:ApplyImpulse()` if you want instantaneous change in
-      velocity.
+      `Class.BasePart:ApplyImpulse()|ApplyImpulse()` if you want instantaneous
+      change in velocity.
 
       If the part is [owned](../../../physics/network-ownership.md) by the
       server, this property must be changed from a server `Class.Script` (not
@@ -199,9 +200,9 @@ properties:
     summary: |
       The total mass of the part's assembly.
     description: |
-      The sum of the mass of all the `Class.BasePart|parts` in this part's
+      The sum of the mass of all the `Class.BasePart|BaseParts` in this part's
       assembly. Parts that are `Class.BasePart.Massless|Massless` and are not
-      the assembly's root part will not contribute to the AssemblyMass.
+      the assembly's root part will not contribute to the `AssemblyMass`.
 
       If the assembly has an anchored part, the assembly's mass is considered
       infinite. Constraints and other physical interactions between unanchored
@@ -233,7 +234,7 @@ properties:
       The root part can be changed by changing the
       `Class.BasePart.RootPriority|RootPriority` of the parts in the assembly.
 
-      Parts that all share the same AssemblyRootPart are in the same assembly.
+      Parts that all share the same `AssemblyRootPart` are in the same assembly.
 
       For more information on root parts, see
       [Assemblies](../../../physics/assemblies.md).
@@ -273,17 +274,12 @@ properties:
   - name: BasePart.BackParamA
     summary: |
       Determines the first parameter for the SurfaceType on the Back face of a
-      part (+Z direction).
+      part.
     description: |
-      The BackParamA property is relevant when a part's
+      The `BackParamA` property is relevant when a part's
       `Class.BasePart.BackSurface` is set to Motor or SteppingMotor and
       `Class.BasePart.BackSurfaceInput` is set to Sin. It determines the
-      **amplitude** of the motor's rotational velocity, using the following
-      formula:
-
-      `MotorVelocity = ParamA * math.sin(workspace.DistributedGameTime * ParamB)`
-
-      There are no other usages for this property.
+      **amplitude** of the motor's rotational velocity.
     code_samples:
       - Motor-Control
     type: float
@@ -304,18 +300,13 @@ properties:
   - name: BasePart.BackParamB
     summary: |
       Determines the second parameter for the SurfaceType on the Back face of a
-      part (+Z direction).
+      part.
     description: |
-      The BackParamB property is relevant when a part's
+      The `BackParamB` property is relevant when a part's
       `Class.BasePart.BackSurface` is set to Motor or SteppingMotor and
       `Class.BasePart.BackSurfaceInput` is set to Constant or Sin. For Constant,
       it determines the constant rotational velocity of the motor. For Sin, it
-      determines the **frequency** of the motor's rotational velocity, using the
-      following formula:
-
-      `MotorVelocity = ParamB * math.sin(workspace.DistributedGameTime * ParamB)`
-
-      In no other cases is this property used.
+      determines the **frequency** of the motor's rotational velocity.
     code_samples:
       - Motor-Control
     type: float
@@ -335,21 +326,12 @@ properties:
     writeCapabilities: []
   - name: BasePart.BackSurface
     summary: |
-      Determines the type of surface for the Back face of a part (+Z direction).
+      Determines the type of surface for the back face of a part.
     description: |
-      The BackSurface property determines the type of surface used for the +Z
-      direction of a part. When two parts' faces are placed next to each other,
-      they may create a joint between them. If set to Motor, the
-      `Class.BasePart.BackSurfaceInput` determines how a motor joint should
-      behave.
-
-      Most SurfaceTypes render a texture on the part face if the
-      `Class.BasePart.Material` is set to Plastic. Some SurfaceTypes - Hinge,
-      Motor and SteppingMotor - will render a 3D adornment instead. If this
-      property is selected in the Properties window, it will be highlighted in
-      the game world similar to that of a `Class.SurfaceSelection`.
-    code_samples:
-      - Show-All-SurfaceTypes
+      The `BackSurface` property determines the type of surface used for the
+      positive **Z** direction of a part. When two parts' faces are placed next
+      to each other, they may create a joint between them.
+    code_samples: []
     type: SurfaceType
     tags: []
     deprecation_message: ''
@@ -365,9 +347,9 @@ properties:
     writeCapabilities: []
   - name: BasePart.BackSurfaceInput
     summary: |
-      Determines the kind of input for the Back face of a part (+Z direction).
+      Determines the kind of input for the Back face of a part.
     description: |
-      The BackSurfaceInput property determines the kind of input provided to a
+      The `BackSurfaceInput` property determines the kind of input provided to a
       part's `Class.BasePart.BackSurface`. This is only relevant for Motor or
       SteppingMotor SurfaceTypes. This property determines how
       `Class.BasePart.BackParamA` and `Class.BasePart.BackParamB` are used. For
@@ -400,17 +382,12 @@ properties:
   - name: BasePart.BottomParamA
     summary: |
       Determines the first parameter for the SurfaceType on the Bottom face of a
-      part (-Y direction).
+      part.
     description: |
-      The BottomParamA property is relevant when a part's
+      The `BottomParamA` property is relevant when a part's
       `Class.BasePart.BottomSurface` is set to Motor or SteppingMotor and
       `Class.BasePart.BottomSurfaceInput` is set to Sin. It determines the
-      **amplitude** of the motor's rotational velocity, using the following
-      formula:
-
-      `MotorVelocity = ParamA * math.sin(workspace.DistributedGameTime * ParamB)`
-
-      There are no other usages for this property.
+      **amplitude** of the motor's rotational velocity.
     code_samples:
       - Motor-Control
     type: float
@@ -431,18 +408,13 @@ properties:
   - name: BasePart.BottomParamB
     summary: |
       Determines the second parameter for the SurfaceType on the Bottom face of
-      a part (-Y direction).
+      a part.
     description: |
-      The BottomParamB property is relevant when a part's
+      The `BottomParamB` property is relevant when a part's
       `Class.BasePart.BottomSurface` is set to Motor or SteppingMotor and
       `Class.BasePart.BottomSurfaceInput` is set to Constant or Sin. For
       Constant, it determines the constant rotational velocity of the motor. For
-      Sin, it determines the **frequency** of the motor's rotational velocity,
-      using the following formula:
-
-      `MotorVelocity = ParamB * math.sin(workspace.DistributedGameTime * ParamB)`
-
-      In no other cases is this property used.
+      Sin, it determines the **frequency** of the motor's rotational velocity.
     code_samples:
       - Motor-Control
     type: float
@@ -462,22 +434,12 @@ properties:
     writeCapabilities: []
   - name: BasePart.BottomSurface
     summary: |
-      Determines the type of surface for the Bottom face of a part (-Y
-      direction).
+      Determines the type of surface for the bottom face of a part.
     description: |
-      The BottomSurface property determines the type of surface used for the -Y
-      direction of a part. When two parts' faces are placed next to each other,
-      they may create a joint between them. If set to Motor, the
-      `Class.BasePart.BottomSurfaceInput` determines how a motor joint should
-      behave.
-
-      Most SurfaceTypes render a texture on the part face if the
-      `Class.BasePart.Material` is set to Plastic. Some SurfaceTypes - Hinge,
-      Motor and SteppingMotor - will render a 3D adornment instead. If this
-      property is selected in the Properties window, it will be highlighted in
-      the game world similar to that of a `Class.SurfaceSelection`.
-    code_samples:
-      - Show-All-SurfaceTypes
+      The `BottomSurface` property determines the type of surface used for the
+      negative **Y** direction of a part. When two parts' faces are placed next
+      to each other, they may create a joint between them.
+    code_samples: []
     type: SurfaceType
     tags: []
     deprecation_message: ''
@@ -493,11 +455,11 @@ properties:
     writeCapabilities: []
   - name: BasePart.BottomSurfaceInput
     summary: |
-      Determines the kind of input for the Bottom face of a part (-Y direction).
+      Determines the kind of input for the Bottom face of a part.
     description: |
-      The BottomSurfaceInput property determines the kind of input provided to a
-      part's `Class.BasePart.BottomSurface`. This is only relevant for Motor or
-      SteppingMotor SurfaceTypes. This property determines how
+      The `BottomSurfaceInput` property determines the kind of input provided to
+      a part's `Class.BasePart.BottomSurface`. This is only relevant for Motor
+      or SteppingMotor SurfaceTypes. This property determines how
       `Class.BasePart.BottomParamA` and `Class.BasePart.BottomParamB` are used.
       For brevity, these properties will be referred to as ParamA and ParamB,
       respectively.
@@ -529,17 +491,16 @@ properties:
     summary: |
       Determines the color of a part.
     description: |
-      The BrickColor property determines the color of a part. If the part has a
-      `Class.BasePart.Material`, this also determines the color used when
-      rendering the material texture. For more control over the color, the
-      `Class.BasePart.Color` property can be used (it is a Color3 variant of
-      this property). If Color set, this property will use the closest
-      BrickColor.
+      This property determines the color of a part. If the part has a
+      `Class.BasePart.Material|Material`, this also determines the color used
+      when rendering the material texture. For more control over the color, the
+      `Class.BasePart.Color|Color` property can be used and this property will
+      use the closest `BrickColor`.
 
       Other visual properties of a part are determined by
-      `Class.BasePart.Transparency` and `Class.BasePart.Reflectance`.
-    code_samples:
-      - Part-Anchored-Toggle
+      `Class.BasePart.Transparency|Transparency` and
+      `Class.BasePart.Reflectance|Reflectance`.
+    code_samples: []
     type: BrickColor
     tags:
       - NotReplicated
@@ -559,21 +520,20 @@ properties:
       Determines the position and orientation of the `Class.BasePart` in the
       world.
     description: |
-      The **CFrame** property determines both the position and orientation of
-      the `Class.BasePart` in the world. It acts as an arbitrary reference
-      location on the geometry, but `Class.BasePart.ExtentsCFrame|ExtentsCFrame`
+      The `CFrame` property determines both the position and orientation of the
+      `Class.BasePart` in the world. It acts as an arbitrary reference location
+      on the geometry, but `Class.BasePart.ExtentsCFrame|ExtentsCFrame`
       represents the actual `Datatype.CFrame` of its physical center.
 
-      When setting **CFrame** on a part, other joined parts are also moved
+      When setting `CFrame` on a part, other joined parts are also moved
       relative to the part, but it is recommended that you use
       `Class.PVInstance:PivotTo()` to move an entire model, such as when
       teleporting a player's character.
 
-      Unlike setting `Class.BasePart.Position`, setting `Class.BasePart.CFrame`
-      will always move the part to the exact given `Datatype.CFrame`; in other
-      words: **no overlap checking is done** and the physics solver will attempt
-      to resolve any overlap unless both parts are
-      `Class.BasePart.Anchored|Anchored`.
+      Unlike setting `Class.BasePart.Position`, setting `CFrame` will always
+      move the part to the exact given `Datatype.CFrame`; in other words: **no
+      overlap checking is done** and the physics solver will attempt to resolve
+      any overlap unless both parts are `Class.BasePart.Anchored|Anchored`.
 
       For keeping track of positions relative to a part's `Datatype.CFrame`, an
       `Class.Attachment` may be useful.
@@ -596,18 +556,18 @@ properties:
     summary: |
       Determines whether a part may collide with other parts.
     description: |
-      CanCollide determines whether a part will physically interact with other
-      parts. When disabled, other parts can pass through the brick
-      uninterrupted. Parts used for **decoration** usually have CanCollide
-      disabled, as they need not be considered by the physics engine.
+      `CanCollide` determines whether a part will physically interact with other
+      parts. When disabled, other parts can pass through the part uninterrupted.
+      Parts used for **decoration** usually have `CanCollide` disabled, as they
+      need not be considered by the physics engine.
 
-      If a part is not `Class.BasePart.Anchored` and has CanCollide disabled, it
-      may fall out of the world to be eventually destroyed by
+      If a part is not `Class.BasePart.Anchored|Anchored` and has `CanCollide`
+      disabled, it may fall out of the world to be eventually destroyed by
       `Class.Workspace.FallenPartsDestroyHeight`.
 
-      When CanCollide is disabled, parts may still fire the
-      `Class.BasePart.Touched` event (as well the other parts touching them).
-      You can disable this with `Class.BasePart.CanTouch`.
+      When `CanCollide` is disabled, parts may still fire the
+      `Class.BasePart.Touched|Touched` event (as well the other parts touching
+      them). You can disable this with `Class.BasePart.CanTouch|CanTouch`.
 
       For more information on collisions, see
       [Collisions](../../../workspace/collisions.md).
@@ -630,12 +590,13 @@ properties:
     summary: |
       Determines whether the part is considered during spatial query operations.
     description: |
-      CanQuery determines whether the part is considered during spatial query
-      operations, such as
+      This property determines whether the part is considered during spatial
+      query operations, such as
       `Class.WorldRoot:GetPartBoundsInBox()|GetPartBoundsInBox` or
-      `Class.WorldRoot:Raycast()|Raycast`. `CanCollide` must also be disabled
-      when disabling CanQuery. These functions will never include parts whose
-      CanQuery and `CanCollide` is false.
+      `Class.WorldRoot:Raycast()|Raycast`. Note that
+      `Class.BasePart.CanCollide|CanCollide` must be disabled for `CanQuery` to
+      take effect, and spatial query functions will never include parts with
+      `CanQuery` of `false`.
 
       Beyond this property, it is also possible to exclude parts which are
       descendants of a given list of parts using an `Datatype.OverlapParams` or
@@ -661,11 +622,11 @@ properties:
     description: |
       This property determines if `Class.BasePart.Touched|Touched` and
       `Class.BasePart.TouchEnded|TouchEnded` events fire on the part. If `true`,
-      other touching parts must also have `Class.BasePart.CanTouch|CanTouch` set
-      to `true` for touch events to fire. If `false`, touch events cannot be set
-      up for the part and attempting to do so will throw an error. Similarly, if
-      the property is set to `false` after a touch event is connected, the event
-      will be disconnected and the `Class.TouchTransmitter` removed.
+      other touching parts must also have `CanTouch` set to `true` for touch
+      events to fire. If `false`, touch events cannot be set up for the part and
+      attempting to do so will throw an error. Similarly, if the property is set
+      to `false` after a touch event is connected, the event will be
+      disconnected and the `Class.TouchTransmitter` removed.
 
       Note that this collision logic can be set to respect
       [collision groups](../../../workspace/collisions.md#collision-filtering)
@@ -675,8 +636,7 @@ properties:
 
       #### Performance
 
-      There is a small performance gain on parts that have both
-      `Class.BasePart.CanTouch|CanTouch` and
+      There is a small performance gain on parts that have both `CanTouch` and
       `Class.BasePart.CanCollide|CanCollide` set to `false`, as these parts will
       never need to compute any kind of part to part collisions. However, they
       can still be hit by `Class.WorldRoot:Raycast()|Raycasts` and
@@ -723,11 +683,12 @@ properties:
     summary: |
       Describes the world position in which a part's center of mass is located.
     description: |
-      The CenterOfMass property describes the **local** position of a part's
+      The `CenterOfMass` property describes the **local** position of a part's
       center of mass. If this is a single part assembly, this is the
-      `AssemblyCenterOfMass` converted from world space to local. On simple
-      `Class.Part|Parts`, the center of mass is always (0,0,0). It can vary for
-      `Class.WedgePart` or `Class.MeshPart` however.
+      `Class.BasePart.AssemblyCenterOfMass|AssemblyCenterOfMass` converted from
+      world space to local. On simple `Class.Part|Parts`, the center of mass is
+      always `(0, 0, 0)`, but it can vary for `Class.WedgePart` or
+      `Class.MeshPart`.
     code_samples: []
     type: Vector3
     tags:
@@ -748,10 +709,9 @@ properties:
     summary: |
       Describes the name of a part's collision group.
     description: |
-      The `Class.BasePart.CollisionGroup|CollisionGroup` property describes the
-      name of the part's collision group (maximum of 100 characters). Parts
-      start off in the default group whose name is `"Default"`. This value
-      cannot be empty.
+      The `CollisionGroup` property describes the name of the part's collision
+      group (maximum of 100 characters). Parts start off in the default group
+      whose name is `"Default"`. This value cannot be empty.
 
       Although this property itself is non-replicated, the engine internally
       replicates the value through another private property to solve backward
@@ -805,14 +765,16 @@ properties:
     summary: |
       Determines the color of a part.
     description: |
-      The Color property determines the color of a part. If the part has a
-      `Class.BasePart.Material`, this also determines the color used when
-      rendering the material texture. If this property is set,
-      `Class.BasePart.BrickColor` will use the closest BrickColor to the Color3
-      value.
+      The `Color` property determines the color of a part. If the part has a
+      `Class.BasePart.Material|Material`, this also determines the color used
+      when rendering the material texture.
+
+      If this property is set, `Class.BasePart.BrickColor|BrickColor` will use
+      the closest match to this `Color` value.
 
       Other visual properties of a part are determined by
-      `Class.BasePart.Transparency` and `Class.BasePart.Reflectance`.
+      `Class.BasePart.Transparency|Transparency` and
+      `Class.BasePart.Reflectance|Reflectance`.
     code_samples:
       - Character-Health-Body-Color
     type: Color3
@@ -833,10 +795,10 @@ properties:
     summary: |
       Indicates the current physical properties of the part.
     description: |
-      CurrentPhysicalProperties indicates the current physical properties of the
-      part. You can set custom values for the physical properties per part,
+      `CurrentPhysicalProperties` indicates the current physical properties of
+      the part. You can set custom values for the physical properties per part,
       [custom material](../../../parts/materials.md), and material override. The
-      Engine prioritizes more granular definitions when determining the
+      Roblox engine prioritizes more granular definitions when determining the
       effective physical properties of a part. The values in the following list
       are in order from highest to lowest priority:
 
@@ -865,13 +827,12 @@ properties:
     summary: |
       Determines several physical properties of a part.
     description: |
-      CustomPhysicalProperties lets you customize various physical aspects of a
-      `Class.BasePart|Part`, such as its density, friction, and elasticity.
+      `CustomPhysicalProperties` lets you customize various physical aspects of
+      a part, such as its density, friction, and elasticity.
 
       If enabled, this property let's you configure these physical properties.
       If disabled, these physical properties are determined by the
-      `Class.BasePart.Material` of the part. The page for `Enum.Material`
-      contains list of the various part materials.
+      `Class.BasePart.Material|Material` of the part.
     code_samples:
       - Set-CustomPhysicalProperties
     type: PhysicalProperties
@@ -918,7 +879,7 @@ properties:
     summary: |
       Used to enable or disable aerodynamic forces on parts and assemblies.
     description: |
-      When true, and when `Class.Workspace.FluidForces` is enabled, causes the
+      When `true`, and when `Class.Workspace.FluidForces` is enabled, causes the
       physics engine to compute aerodynamic forces on this `Class.BasePart`.
     code_samples: []
     type: boolean
@@ -1012,17 +973,12 @@ properties:
   - name: BasePart.FrontParamA
     summary: |
       Determines the first parameter for the SurfaceType on the Front face of a
-      part (-Z direction).
+      part.
     description: |
-      The FrontParamA property is relevant when a part's
+      The `FrontParamA` property is relevant when a part's
       `Class.BasePart.FrontSurface` is set to Motor or SteppingMotor and
       `Class.BasePart.FrontSurfaceInput` is set to Sin. It determines the
-      **amplitude** of the motor's rotational velocity, using the following
-      formula:
-
-      `MotorVelocity = ParamA * math.sin(workspace.DistributedGameTime * ParamB)`
-
-      In no other cases is this property used.
+      **amplitude** of the motor's rotational velocity.
     code_samples:
       - Motor-Control
     type: float
@@ -1043,18 +999,13 @@ properties:
   - name: BasePart.FrontParamB
     summary: |
       Determines the second parameter for the SurfaceType on the Front face of a
-      part (-Z direction).
+      part.
     description: |
-      The FrontParamB property is relevant when a part's
+      The `FrontParamB` property is relevant when a part's
       `Class.BasePart.FrontSurface` is set to Motor or SteppingMotor and
       `Class.BasePart.FrontSurfaceInput` is set to Constant or Sin. For
       Constant, it determines the constant rotational velocity of the motor. For
-      Sin, it determines the **frequency** of the motor's rotational velocity,
-      using the following formula:
-
-      `MotorVelocity = ParamB * math.sin(workspace.DistributedGameTime * ParamB)`
-
-      In no other cases is this property used.
+      Sin, it determines the **frequency** of the motor's rotational velocity.
     code_samples:
       - Motor-Control
     type: float
@@ -1074,22 +1025,12 @@ properties:
     writeCapabilities: []
   - name: BasePart.FrontSurface
     summary: |
-      Determines the type of surface for the Front face of a part (-Z
-      direction).
+      Determines the type of surface for the front face of a part.
     description: |
-      The FrontSurface property determines the type of surface used for the -Z
-      direction of a part. When two parts' faces are placed next to each other,
-      they may create a joint between them. If set to Motor, the
-      `Class.BasePart.FrontSurfaceInput` determines how a motor joint should
-      behave.
-
-      Most SurfaceTypes render a texture on the part face if the
-      `Class.BasePart.Material` is set to Plastic. Some SurfaceTypes including
-      Hinge, Motor, and SteppingMotor render a 3D adornment instead. If this
-      property is selected in the Properties window, it will be highlighted in
-      the game world similar to that of a `Class.SurfaceSelection`.
-    code_samples:
-      - Show-All-SurfaceTypes
+      The `FrontSurface` property determines the type of surface used for the
+      negative **Z** direction of a part. When two parts' faces are placed next
+      to each other, they may create a joint between them.
+    code_samples: []
     type: SurfaceType
     tags: []
     deprecation_message: ''
@@ -1107,8 +1048,8 @@ properties:
     summary: |
       Determines the kind of input for the Front face of a part (-Z direction).
     description: |
-      The FrontSurfaceInput property determines the kind of input provided to a
-      part's `Class.BasePart.FrontSurface`. This is only relevant for Motor or
+      The `FrontSurfaceInput` property determines the kind of input provided to
+      a part's `Class.BasePart.FrontSurface`. This is only relevant for Motor or
       SteppingMotor SurfaceTypes. This property determines how
       `Class.BasePart.FrontParamA` and `Class.BasePart.FrontParamB` are used.
       For brevity, these properties will be referred to as ParamA and ParamB,
@@ -1140,17 +1081,12 @@ properties:
   - name: BasePart.LeftParamA
     summary: |
       Determines the first parameter for the SurfaceType on the Left face of a
-      part (-Z direction).
+      part.
     description: |
-      The LeftParamA property is relevant when a part's
+      The `LeftParamA` property is relevant when a part's
       `Class.BasePart.LeftSurface` is set to Motor or SteppingMotor and
       `Class.BasePart.LeftSurfaceInput` is set to Sin. It determines the
-      **amplitude** of the motor's rotational velocity, using the following
-      formula:
-
-      `MotorVelocity = ParamA * math.sin(workspace.DistributedGameTime * ParamB)`
-
-      In no other cases is this property used.
+      **amplitude** of the motor's rotational velocity.
     code_samples:
       - Motor-Control
     type: float
@@ -1171,18 +1107,13 @@ properties:
   - name: BasePart.LeftParamB
     summary: |
       Determines the second parameter for the SurfaceType on the Left face of a
-      part (-Z direction).
+      part.
     description: |
       The LeftParamB property is relevant when a part's
       `Class.BasePart.LeftSurface` is set to Motor or SteppingMotor and
       `Class.BasePart.LeftSurfaceInput` is set to Constant or Sin. For Constant,
       it determines the constant rotational velocity of the motor. For Sin, it
-      determines the **frequency** of the motor's rotational velocity, using the
-      following formula:
-
-      `MotorVelocity = ParamB * math.sin(workspace.DistributedGameTime * ParamB)`
-
-      In no other cases is this property used.
+      determines the **frequency** of the motor's rotational velocity.
     code_samples:
       - Motor-Control
     type: float
@@ -1202,21 +1133,12 @@ properties:
     writeCapabilities: []
   - name: BasePart.LeftSurface
     summary: |
-      Determines the type of surface for the Left face of a part (-X direction).
+      Determines the type of surface for the left face of a part.
     description: |
-      The LeftSurface property determines the type of surface used for the -X
-      direction of a part. When two parts' faces are placed next to each other,
-      they may create a joint between them. If set to Motor, the
-      `Class.BasePart.LeftSurfaceInput` determines how a motor joint should
-      behave.
-
-      Most SurfaceTypes render a texture on the part face if the
-      `Class.BasePart.Material` is set to Plastic. Some SurfaceTypes including
-      Hinge, Motor, and SteppingMotor render a 3D adornment instead. If this
-      property is selected in the Properties window, it will be highlighted in
-      the game world similar to that of a `Class.SurfaceSelection`.
-    code_samples:
-      - Show-All-SurfaceTypes
+      The `LeftSurface` property determines the type of surface used for the
+      negative **X** direction of a part. When two parts' faces are placed next
+      to each other, they may create a joint between them.
+    code_samples: []
     type: SurfaceType
     tags: []
     deprecation_message: ''
@@ -1232,9 +1154,9 @@ properties:
     writeCapabilities: []
   - name: BasePart.LeftSurfaceInput
     summary: |
-      Determines the kind of input for the Left face of a part (+X direction).
+      Determines the kind of input for the Left face of a part.
     description: |
-      The LeftSurfaceInput property determines the kind of input provided to a
+      The `LeftSurfaceInput` property determines the kind of input provided to a
       part's `Class.BasePart.LeftSurface`. This is only relevant for Motor or
       SteppingMotor SurfaceTypes. This property determines how
       `Class.BasePart.LeftParamA` and `Class.BasePart.LeftParamB` are used. For
@@ -1269,59 +1191,58 @@ properties:
       Determines a multiplier for `Class.BasePart.Transparency` that is only
       visible to the local client.
     description: |
-      The `Class.BasePart.LocalTransparencyModifier|LocalTransparencyModifier`
-      property is a multiplier to `Class.BasePart.Transparency` that is only
-      visible to the local client. It does not replicate from client to server
-      and is useful for when a part should not render for a specific client,
-      such as how the player does not see their character's body parts when they
-      zoom into first person mode.
+      The `LocalTransparencyModifier` property is a multiplier to
+      `Class.BasePart.Transparency|Transparency` that is only visible to the
+      local client. It does not replicate from client to server and is useful
+      for when a part should not render for a specific client, such as how the
+      player does not see their character's body parts when they zoom into first
+      person mode.
 
       This property modifies the local part's transparency through the following
-      formula, with resulting values clamped between 0 and 1.
+      formula, with resulting values clamped between `0` and `1`.
 
-      ```
-      clientTransparency = 1 - ((1 - part.Transparency) * (1 - part.LocalTransparencyModifier))
-      ```
+      `1` - ((`1` - `Class.BasePart.Transparency|Transparency`) &times; (`1` -
+      `LocalTransparencyModifier`))
 
-      <table>
+      <table size="small">
       <thead>
       <tr>
-        <th>Transparency</th>
-        <th>LocalTransparencyModifier</th>
-        <th>Server-Side Transparency</th>
-        <th>Client-Side Transparency</th>
+        <th><code>Class.BasePart.Transparency|Transparency</code></th>
+        <th><code>LocalTransparencyModifier</code></th>
+        <th>Server-Side</th>
+        <th>Client-Side</th>
       </tr>
       </thead>
       <tbody>
         <tr>
-          <td>0.5</td>
-          <td>0</td>
-          <td>0.5</td>
-          <td>0.5</td>
+          <td><code>0.5</code></td>
+          <td><code>0</code></td>
+          <td><code>0.5</code></td>
+          <td><code>0.5</code></td>
         </tr>
         <tr>
-          <td>0.5</td>
-          <td>0.25</td>
-          <td>0.5</td>
-          <td>0.625</td>
+          <td><code>0.5</code></td>
+          <td><code>0.25</code></td>
+          <td><code>0.5</code></td>
+          <td><code>0.625</code></td>
         </tr>
         <tr>
-          <td>0.5</td>
-          <td>0.5</td>
-          <td>0.5</td>
-          <td>0.75</td>
+          <td><code>0.5</code></td>
+          <td><code>0.5</code></td>
+          <td><code>0.5</code></td>
+          <td><code>0.75</code></td>
         </tr>
         <tr>
-          <td>0.5</td>
-          <td>0.75</td>
-          <td>0.5</td>
-          <td>0.875</td>
+          <td><code>0.5</code></td>
+          <td><code>0.75</code></td>
+          <td><code>0.5</code></td>
+          <td><code>0.875</code></td>
         </tr>
         <tr>
-          <td>0.5</td>
-          <td>1</td>
-          <td>0.5</td>
-          <td>1</td>
+          <td><code>0.5</code></td>
+          <td><code>1</code></td>
+          <td><code>0.5</code></td>
+          <td><code>1</code></td>
         </tr>
       </tbody>
       </table>
@@ -1345,12 +1266,10 @@ properties:
     summary: |
       Determines whether a part is selectable in Studio.
     description: |
-      The Locked property determines whether a `Class.BasePart|part` (or a
-      `Class.Model|model` it is contained within) may be selected in Roblox
-      Studio by clicking on it. This property is most often enabled on parts
-      within environment models that aren't being edited at the moment. Roblox
-      Studio has a Lock/Unlock All tool that can toggle the Locked state of
-      every part descendant in a model at once.
+      The `Locked` property determines whether a part (or a `Class.Model` it is
+      contained within) may be selected in Studio by clicking on it. This
+      property is most often enabled on parts within environment models that
+      aren't being edited at the moment.
     code_samples:
       - Recursive-Unlock
     type: boolean
@@ -1370,13 +1289,13 @@ properties:
     summary: |
       Describes the mass of the part, the product of its density and volume.
     description: |
-      **Mass** is a read-only property that describes the product of a part's
+      `Mass` is a read-only property that describes the product of a part's
       volume and density. It is returned by the
-      `Class.BasePart:GetMass()|GetMass` function.
+      `Class.BasePart:GetMass()|GetMass()` function.
 
       - The volume of a part is determined by its `Class.BasePart.Size|Size` and
         its `Class.Part.Shape|Shape`, which varies depending on the kind of
-        BasePart used, such as `Class.WedgePart`.
+        `Class.BasePart` used, such as `Class.WedgePart`.
       - The density of a part is determined by its
         `Class.BasePart.Material|Material` or
         `Class.BasePart.CustomPhysicalProperties|CustomPhysicalProperties`, if
@@ -1402,9 +1321,9 @@ properties:
       Determines whether the part contributes to the total mass or inertia of
       its rigid body.
     description: |
-      If this property is enabled, the `Class.BasePart|BasePart` will not
-      contribute to the total mass or inertia of its assembly as long as it is
-      welded to another part that has mass.
+      If this property is enabled, the part will not contribute to the total
+      mass or inertia of its assembly as long as it is welded to another part
+      that has mass.
 
       If the part is its own root part according to
       `Class.BasePart.AssemblyRootPart|AssemblyRootPart`, this will be ignored
@@ -1437,28 +1356,28 @@ properties:
     summary: |
       Determines the texture and default physical properties of a part.
     description: |
-      The Material property allows a builder to set a part's texture and default
+      The `Material` property allows you to set a part's texture and default
       physical properties (in the case that
-      `Class.BasePart.CustomPhysicalProperties` is unset). The default Plastic
-      material has a very light texture, and the SmoothPlastic material has no
-      texture at all. Some material textures like DiamondPlate and Granite have
-      very visible textures. Each material's texture reflects sunlight
-      differently, especially Foil.
+      `Class.BasePart.CustomPhysicalProperties|CustomPhysicalProperties` is
+      unset). The default `Enum.Material|Plastic` material has a very light
+      texture, while the `Enum.Material|SmoothPlastic` material has no texture
+      at all. Some material textures like `Enum.Material|DiamondPlate` and
+      `Enum.Material|Granite` have very visible textures. Each material's
+      texture reflects sunlight differently, especially `Enum.Material|Foil`.
 
       Setting this property then enabling
-      `Class.BasePart.CustomPhysicalProperties` will use the default physical
-      properties of a material. For instance, DiamondPlate is a very dense
-      material while Wood is very light. A part's density determines whether it
+      `Class.BasePart.CustomPhysicalProperties|CustomPhysicalProperties` will
+      use the default physical properties of a material. For instance,
+      `Enum.Material|DiamondPlate` is a very dense material while
+      `Enum.Material|Wood` is very light. A part's density determines whether it
       will float in terrain water.
 
-      The Glass material changes rendering behavior on moderate graphics
-      settings. It applies a bit of reflectiveness (similar to
-      `Class.BasePart.Reflectance`) and perspective distortion. The effect is
-      especially pronounced on sphere-shaped parts (set `Class.BasePart.Shape`
-      to Ball). Semitransparent objects and Glass parts behind Glass are not
-      visible.
-    code_samples:
-      - Part-Anchored-Toggle
+      The `Enum.Material|Glass` material changes rendering behavior on moderate
+      graphics settings by applying a bit of reflectiveness (similar to
+      `Class.BasePart.Reflectance|Reflectance`) and perspective distortion. The
+      effect is especially pronounced on sphere-shaped parts. Semi‑transparent
+      parts behind `Enum.Material|Glass` parts are not visible.
+    code_samples: []
     type: Material
     tags: []
     deprecation_message: ''
@@ -1476,12 +1395,12 @@ properties:
     summary: |
       The name of `Class.MaterialVariant`.
     description: |
-      The system searches the `Class.MaterialVariant` instance with specified
-      MaterialVariant name and `Class.BasePart.Material` type. If it
-      successfully finds a matching MaterialVariant instance, it uses this
-      MaterialVariant instance to replace the default material. Default material
-      can be the built-in material or an override MaterialVariant specified in
-      `Class.MaterialService`.
+      The system searches the `Class.MaterialVariant` instance with the
+      specified `MaterialVariant` name and `Class.BasePart.Material|Material`
+      type. If it successfully finds a matching `Class.MaterialVariant`
+      instance, it uses that instance to replace the default material. The
+      default material can be the built-in material or an override
+      `Class.MaterialVariant` specified in `Class.MaterialService`.
     code_samples: []
     type: string
     tags:
@@ -1501,26 +1420,27 @@ properties:
     summary: |
       Describes the rotation of the part in the world.
     description: |
-      The Orientation property describes the part's rotation in degrees around
-      the X, Y and Z axes using a Vector3. The rotations are applied in Y → X →
-      Z order. This differs from proper [Euler angles][1] and is instead
-      [Tait-Bryan angles][2], which describe **yaw, pitch and roll**. It is also
-      worth noting how this property differs from the `Datatype.CFrame.Angles()`
-      constructor, which applies rotations in a different order (Z → Y → X). For
-      better control over the rotation of a part, it is recommended that
-      `Class.BasePart.CFrame` is set instead.
+      The `Orientation` property describes the part's rotation in degrees around
+      the **X**, **Y**, and **Z** axes using a `Datatype.Vector3`. The rotations
+      are applied in **Y**&nbsp;⟩&nbsp;**X**&nbsp;⟩&nbsp;**Z** order. This
+      differs from proper [Euler][1] angles and is instead [Tait-Bryan][2]
+      angles which describe **yaw**, **pitch**, and **roll**.
+
+      It is also worth noting how this property differs from the
+      `Datatype.CFrame.Angles()` constructor which applies rotations in a
+      different order (**Z**&nbsp;⟩&nbsp;**Y**&nbsp;⟩&nbsp;**X**). For better
+      control over the rotation of a part, it's recommended that
+      `Class.BasePart.CFrame|CFrame` is set instead.
 
       [1]: https://en.wikipedia.org/wiki/Euler_angles
       [2]: https://en.wikipedia.org/wiki/Euler_angles#Tait-Bryan_angles
 
-      When setting this property any `Class.Weld|Welds` or
+      When setting this property, any `Class.Weld|Welds` or
       `Class.Motor6D|Motor6Ds` connected to this part will have the matching
       `Class.JointInstance.C0|C0` or `Class.JointInstance.C1|C1` property
-      updated and to allow the part to move relative to any other parts it is
-      joined to.
-
-      WeldConstraints will also be temporarily disabled and re-enabled during
-      the move.
+      updated to allow the part to move relative to any other parts it is joined
+      to. `Class.WeldConstraint|WeldConstraints` will also be temporarily
+      disabled and re-enabled during the move.
     code_samples:
       - Part-Spinner
     type: Vector3
@@ -1543,8 +1463,8 @@ properties:
       Specifies the offset of the part's pivot from its `Datatype.CFrame`.
     description: |
       This property specifies the offset of the part's pivot from its
-      `Datatype.CFrame`, that is `part:GetPivot()` is the same as
-      `part.CFrame * part.PivotOffset`.
+      `Datatype.CFrame`, that is `Class.BasePart:GetPivot()` is the same as
+      `Class.BasePart.CFrame` multiplied by `Class.BasePart.PivotOffset`.
 
       This is convenient for setting the pivot to a location in **local** space,
       but setting a part's pivot to a location in **world** space can be done as
@@ -1577,18 +1497,16 @@ properties:
     summary: |
       Describes the position of the part in the world.
     description: |
-      The Position property describes the coordinates of a `Class.BasePart|part`
-      using a `Datatype.Vector3`. It reflects the position of the part's
-      `Class.BasePart.CFrame`, however it can also be set.
+      The `Position` property describes the coordinates of a part using a
+      `Datatype.Vector3`. It reflects the position of the part's
+      `Class.BasePart.CFrame|CFrame`, however it can also be set.
 
-      When setting this property any `Class.Weld|Welds` or
+      When setting this property, any `Class.Weld|Welds` or
       `Class.Motor6D|Motor6Ds` connected to this part will have the matching
       `Class.JointInstance.C0|C0` or `Class.JointInstance.C1|C1` property
-      updated and to allow the part to move relative to any other parts it is
-      joined to.
-
-      WeldConstraints will also be temporarily disabled and re-enabled during
-      the move.
+      updated to allow the part to move relative to any other parts it is joined
+      to. `Class.WeldConstraint|WeldConstraints` will also be temporarily
+      disabled and re-enabled during the move.
     code_samples: []
     type: Vector3
     tags:
@@ -1609,9 +1527,9 @@ properties:
     summary: |
       Time since last recorded physics update.
     description: |
-      This returns the time in seconds since the part's physics got last updated
-      on the local client (or the server). Returns 0 when the part has no
-      physics (Anchored)
+      Indicates the time in seconds since the part's physics were last updated
+      on the local client or the server. This value will be `0` when the part
+      has no physics (`Class.BasePart.Anchored|Anchored` is `true`).
     code_samples: []
     type: float
     tags:
@@ -1633,16 +1551,15 @@ properties:
     summary: |
       Determines how much a part reflects the skybox.
     description: |
-      The Reflectance property determines how much a `Class.BasePart|part`
-      reflects the skybox. A value of 0 indicates the part is not reflective at
-      all, and a value of 1 indicates the part should fully reflect.
+      The `Reflectance` property determines how much a part reflects the sky. A
+      value of `0` indicates the part is not reflective at all, and a value of
+      `1` indicates the part should fully reflect.
 
-      Reflectance is not affected by `Class.BasePart.Transparency`, unless the
-      part is fully transparent, in which case reflectance will not render at
-      all. Reflectance may or may not be ignored depending on the
-      `Class.BasePart.Material` of the part.
-    code_samples:
-      - Touch-Blink
+      Reflectance is not affected by `Class.BasePart.Transparency|Transparency`
+      unless the part is fully transparent, in which case reflectance will not
+      render at all. Reflectance may or may not be ignored depending on the
+      `Class.BasePart.Material|Material` of the part.
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -1658,15 +1575,16 @@ properties:
     writeCapabilities: []
   - name: BasePart.ResizeIncrement
     summary: |
-      Describes the smallest change in size allowable by the Resize method.
+      Describes the smallest change in size allowable by the
+      `Class.BasePart:Resize()|Resize()` method.
     description: |
-      The ResizeIncrement property is a read-only property that describes the
-      smallest change in size allowable by the `Class.BasePart:Resize()` method.
-      It differs between implementations of the `Class.BasePart` abstract class.
-      For instance, `Class.Part` has this set to 1 and `Class.TrussPart` has
-      this set to 2 (since individual truss sections are 2x2x2 in size).
-    code_samples:
-      - Resize-Handles
+      The `ResizeIncrement` property is a read-only property that describes the
+      smallest change in size allowable by the
+      `Class.BasePart:Resize()|Resize()` method. It differs between
+      implementations of the `Class.BasePart` abstract class; for instance,
+      `Class.Part` has this set to `1` while `Class.TrussPart` has this set to
+      `2` since individual truss sections are 2&times;2&times;2 in size.
+    code_samples: []
     type: int
     tags:
       - ReadOnly
@@ -1686,14 +1604,16 @@ properties:
     summary: |
       Describes the faces on which a part may be resized.
     description: |
-      The ResizeableFaces property (with an **e**, not ResizableFaces) describes
-      using a Faces object the different faces on which a part may be resized.
-      For most implementations of `Class.BasePart`, such as `Class.Part` and
+      The `ResizeableFaces` property uses a `Datatype.Faces` object to describe
+      the different faces on which a part may be resized. For most
+      implementations of `Class.BasePart`, such as `Class.Part` and
       `Class.WedgePart`, this property includes all faces. However,
-      `Class.TrussPart` will set its ResizeableFaces set to only two faces since
-      those kinds of parts must have two `Class.BasePart.Size` dimensions of
-      length 2. This property is most commonly used with tools used for building
-      and manipulating parts and has little use outside of that context. The
+      `Class.TrussPart` will set its `ResizeableFaces` set to only two faces
+      since those kinds of parts must have two `Class.BasePart.Size|Size`
+      dimensions of length `2`.
+
+      This property is most commonly used with tools for building and
+      manipulating parts and has little use outside of that context. The
       `Class.Handles` class, which has the `Class.Handles.Faces` property, can
       be used in conjunction with this property to display only the handles on
       faces that can be resized on a part.
@@ -1717,17 +1637,12 @@ properties:
   - name: BasePart.RightParamA
     summary: |
       Determines the first parameter for the SurfaceType on the Right face of a
-      part (-X direction).
+      part.
     description: |
-      The RightParamA property is relevant when a part's
+      The `RightParamA` property is relevant when a part's
       `Class.BasePart.RightSurface` is set to Motor or SteppingMotor and
       `Class.BasePart.RightSurfaceInput` is set to Sin. It determines the
-      **amplitude** of the motor's rotational velocity, using the following
-      formula:
-
-      `MotorVelocity = ParamA * math.sin(workspace.DistributedGameTime * ParamB)`
-
-      In no other cases is this property used.
+      **amplitude** of the motor's rotational velocity.
     code_samples:
       - Motor-Control
     type: float
@@ -1748,18 +1663,13 @@ properties:
   - name: BasePart.RightParamB
     summary: |
       Determines the second parameter for the SurfaceType on the Right face of a
-      part (-X direction).
+      part.
     description: |
-      The RightParamB property is relevant when a part's
+      The `RightParamB` property is relevant when a part's
       `Class.BasePart.RightSurface` is set to Motor or SteppingMotor and
       `Class.BasePart.RightSurfaceInput` is set to Constant or Sin. For
       Constant, it determines the constant rotational velocity of the motor. For
-      Sin, it determines the **frequency** of the motor's rotational velocity,
-      using the following formula:
-
-      `MotorVelocity = ParamB * math.sin(workspace.DistributedGameTime * ParamB)`
-
-      In no other cases is this property used.
+      Sin, it determines the **frequency** of the motor's rotational velocity.
     code_samples:
       - Motor-Control
     type: float
@@ -1779,22 +1689,12 @@ properties:
     writeCapabilities: []
   - name: BasePart.RightSurface
     summary: |
-      Determines the type of surface for the Right face of a part (+X
-      direction).
+      Determines the type of surface for the right face of a part.
     description: |
-      The RightSurface property determines the type of surface used for the +X
-      direction of a part. When two parts' faces are placed next to each other,
-      they may create a joint between them. If set to Motor, the
-      `Class.BasePart.RightSurfaceInput` determines how a motor joint should
-      behave.
-
-      Most SurfaceTypes render a texture on the part face if the
-      `Class.BasePart.Material` is set to Plastic. Some SurfaceTypes including
-      Hinge, Motor, and SteppingMotor will render a 3D adornment instead. If
-      this property is selected in the Properties window, it will be highlighted
-      in the game world similar to that of a `Class.SurfaceSelection`.
-    code_samples:
-      - Show-All-SurfaceTypes
+      The `RightSurface` property determines the type of surface used for the
+      positive **X** direction of a part. When two parts' faces are placed next
+      to each other, they may create a joint between them.
+    code_samples: []
     type: SurfaceType
     tags: []
     deprecation_message: ''
@@ -1838,12 +1738,11 @@ properties:
     summary: |
       The main rule in determining the root part of an assembly.
     description: |
-      This property is an integer between -127 and 127 that takes precedence
+      This property is an integer between `-127` and `127` that takes precedence
       over all other rules for root part sort. When considering multiple parts
       that are not `Class.BasePart.Anchored|Anchored` and which share the same
       `Class.BasePart.Massless|Massless` value, a part with a higher
-      **RootPriority** will take priority over those with lower
-      **RootPriority**.
+      `RootPriority` will take priority over those with lower `RootPriority`.
 
       You can use this property to control which part of an assembly is the root
       part and keep the root part stable if size changes.
@@ -1868,7 +1767,7 @@ properties:
     summary: |
       Determines a part's change in orientation over time.
     description: |
-      The RotVelocity of a `Class.BasePart|part` describes how its
+      The `RotVelocity` of a `Class.BasePart|part` describes how its
       `Class.BasePart.Orientation` is presently changing. In other words, this
       property describes how the fast part is rotating. The part only rotates if
       it is not anchored.
@@ -1901,14 +1800,12 @@ properties:
     description: |
       The rotation of the part in degrees for the three axes.
 
-      When setting this property any `Class.Weld|Welds` or
+      When setting this property, any `Class.Weld|Welds` or
       `Class.Motor6D|Motor6Ds` connected to this part will have the matching
       `Class.JointInstance.C0|C0` or `Class.JointInstance.C1|C1` property
-      updated and to allow the part to move relative to any other parts it is
-      joined to.
-
-      WeldConstraints will also be temporarily disabled and re-enabled during
-      the move.
+      updated to allow the part to move relative to any other parts it is joined
+      to. `Class.WeldConstraint|WeldConstraints` will also be temporarily
+      disabled and re-enabled during the move.
     code_samples: []
     type: Vector3
     tags:
@@ -1928,24 +1825,25 @@ properties:
     summary: |
       Determines the dimensions of a part (length, width, height).
     description: |
-      A part's `Class.BasePart.Size|Size` property determines its **visual**
-      dimensions, while `Class.BasePart.ExtentsSize|ExtentsSize` represents the
-      actual size used by the physics engine, such as in
+      A part's `Size` property determines its **visual** dimensions, while
+      `Class.BasePart.ExtentsSize|ExtentsSize` represents the actual size used
+      by the physics engine, such as in
       [collision detection](../../../workspace/collisions.md). The individual
-      dimensions (length, width, height) can be as low as 0.001 and as high
-      as 2048. Size dimensions below 0.05 will be **visually** represented as if
-      the part's dimensions are 0.05.
+      dimensions (length, width, height) can be as low as `0.001` and as high as
+      `2048`. Size dimensions below `0.05` will be **visually** represented as
+      if the part's dimensions are `0.05`.
 
-      The size of the part determines its mass which is given by
-      `Class.BasePart:GetMass()`. A part's `Class.BasePart.Size|Size` is used by
-      a variety of other objects:
+      A part's `Size` is used in a variety of additional ways:
 
-      - `Class.ParticleEmitter` to determine the area from which particles are
-        spawned.
-      - `Class.BlockMesh` to partially determine the rendered rectangular prism.
-      - `Class.SpecialMesh` for certain `Class.SpecialMesh.MeshType|MeshTypes`,
-        to determine the size of the rendered mesh.
-      - `Class.SurfaceLight` to determine the space to illuminate.
+      - To influence its mass as given by `Class.BasePart:GetMass()|GetMass()`.
+      - By `Class.ParticleEmitter` to determine the area from which particles
+        are spawned.
+      - By `Class.BlockMesh` to partially determine the rendered rectangular
+        prism.
+      - By `Class.SpecialMesh` for certain
+        `Class.SpecialMesh.MeshType|MeshTypes` to determine the size of the
+        rendered mesh.
+      - By `Class.SurfaceLight` to determine the space to illuminate.
     code_samples:
       - Pyramid-Builder
     type: Vector3
@@ -2079,17 +1977,12 @@ properties:
   - name: BasePart.TopParamA
     summary: |
       Determines the first parameter for the SurfaceType on the Top face of a
-      part (+Y direction).
+      part.
     description: |
       The TopParamA property is relevant when a part's
       `Class.BasePart.TopSurface` is set to Motor or SteppingMotor and
       `Class.BasePart.TopSurfaceInput` is set to Sin. It determines the
-      **amplitude** of the motor's rotational velocity, using the following
-      formula:
-
-      `MotorVelocity = ParamA * math.sin(workspace.DistributedGameTime * ParamB)`
-
-      In no other cases is this property used.
+      **amplitude** of the motor's rotational velocity.
     code_samples:
       - Motor-Control
     type: float
@@ -2110,18 +2003,13 @@ properties:
   - name: BasePart.TopParamB
     summary: |
       Determines the second parameter for the SurfaceType on the Top face of a
-      part (+Y direction).
+      part.
     description: |
       The TopParamB property is relevant when a part's
       `Class.BasePart.TopSurface` is set to Motor or SteppingMotor and
       `Class.BasePart.TopSurfaceInput` is set to Constant or Sin. For Constant,
       it determines the constant rotational velocity of the motor. For Sin, it
-      determines the **frequency** of the motor's rotational velocity, using the
-      following formula:
-
-      `MotorVelocity = ParamB * math.sin(workspace.DistributedGameTime * ParamB)`
-
-      In no other cases is this property used.
+      determines the **frequency** of the motor's rotational velocity.
     code_samples:
       - Motor-Control
     type: float
@@ -2141,21 +2029,12 @@ properties:
     writeCapabilities: []
   - name: BasePart.TopSurface
     summary: |
-      Determines the type of surface for the Top face of a part (+Y direction).
+      Determines the type of surface for the top face of a part.
     description: |
-      The TopSurface property determines the type of surface used for the +Y
-      direction of a part. When two parts' faces are placed next to each other,
-      they may create a joint between them. If set to Motor, the
-      `Class.BasePart.TopSurfaceInput` determines how a motor joint should
-      behave.
-
-      Most SurfaceTypes render a texture on the part face if the
-      `Class.BasePart.Material` is set to Plastic. Some SurfaceTypes - Hinge,
-      Motor and SteppingMotor - will render a 3D adornment instead. If this
-      property is selected in the Properties window, it will be highlighted in
-      the game world similar to that of a `Class.SurfaceSelection`.
-    code_samples:
-      - Show-All-SurfaceTypes
+      The `TopSurface` property determines the type of surface used for the
+      positive **Y** direction of a part. When two parts' faces are placed next
+      to each other, they may create a joint between them.
+    code_samples: []
     type: SurfaceType
     tags: []
     deprecation_message: ''
@@ -2173,7 +2052,7 @@ properties:
     summary: |
       Determines the kind of input for the Top face of a part (+Y direction).
     description: |
-      The TopSurfaceInput property determines the kind of input provided to a
+      The `TopSurfaceInput` property determines the kind of input provided to a
       part's `Class.BasePart.TopSurface`. This is only relevant for Motor or
       SteppingMotor SurfaceTypes. This property determines how
       `Class.BasePart.TopParamA` and `Class.BasePart.TopParamB` are used. For
@@ -2208,25 +2087,22 @@ properties:
       Determines how much a part can be seen through (the inverse of part
       opacity).
     description: |
-      The Transparency property controls the visibility of a part on a scale of
-      0 to 1, where 0 is completely visible (opaque), and a value of 1 is
+      The `Transparency` property controls the visibility of a part on a scale
+      of `0` to `1` where `0` is completely visible (opaque) and `1` is
       completely invisible (not rendered at all).
-
-      `Class.BasePart.Reflectance` can reduce the overall transparency of a
-      brick if set to a value close to 1.
 
       While fully transparent parts are not rendered at all, partially
       transparent objects have some significant rendering costs. Having many
-      translucent parts may slow down the game's performance.
+      translucent parts may impact performance.
 
-      When transparent parts overlap, render order can act unpredictable - try
-      to keep semi-transparent parts from overlapping to avoid this.
+      When transparent parts overlap, render order may act unpredictably, so you
+      should avoid semi-transparent parts from overlapping.
 
-      The `Class.BasePart.LocalTransparencyModifier` is a multiplier to
-      Transparency that is only visible to the local client.
+      See also
+      `Class.BasePart.LocalTransparencyModifier|LocalTransparencyModifier` as a
+      multiplier to `Transparency` that's only visible to the local client.
     code_samples:
       - Fade-Door
-      - X-Ray-Vision
     type: float
     tags: []
     deprecation_message: ''

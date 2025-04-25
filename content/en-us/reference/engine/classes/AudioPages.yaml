@@ -1,6 +1,5 @@
 name: AudioPages
 type: class
-category:
 memory_category: Instances
 summary: |
   A special version of the `Class.Pages` class returned by

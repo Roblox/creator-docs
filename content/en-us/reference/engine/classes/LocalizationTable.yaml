@@ -1,6 +1,5 @@
 name: LocalizationTable
 type: class
-category: Localization
 memory_category: Instances
 summary: |
   A LocalizationTable is a database of translations. It contains source strings

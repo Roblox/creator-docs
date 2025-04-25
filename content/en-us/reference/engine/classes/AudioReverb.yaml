@@ -1,6 +1,5 @@
 name: AudioReverb
 type: class
-category:
 memory_category: Internal
 summary: |
   Reverberates audio streams.

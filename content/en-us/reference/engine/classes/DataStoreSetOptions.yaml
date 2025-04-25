@@ -1,6 +1,5 @@
 name: DataStoreSetOptions
 type: class
-category:
 memory_category: Instances
 summary: |
   Specifies additional parameters for a `Class.GlobalDataStore:SetAsync()` call.

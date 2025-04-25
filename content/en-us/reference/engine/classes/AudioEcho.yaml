@@ -1,6 +1,5 @@
 name: AudioEcho
 type: class
-category:
 memory_category: Internal
 summary: |
   Overlays delayed copies of audio streams.

@@ -1,6 +1,5 @@
 name: SelectionLasso
 type: class
-category:
 memory_category: Instances
 summary: |
   Abstract class for `Class.SelectionPartLasso` and `Class.SelectionPartLasso`.

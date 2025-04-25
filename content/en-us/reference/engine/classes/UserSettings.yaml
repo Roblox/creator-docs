@@ -1,6 +1,5 @@
 name: UserSettings
 type: class
-category: Settings
 memory_category: Instances
 summary: |
   A singleton object that houses basic user settings, which persist across all

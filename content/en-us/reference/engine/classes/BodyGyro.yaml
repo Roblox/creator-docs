@@ -1,6 +1,5 @@
 name: BodyGyro
 type: class
-category: Body Movers
 memory_category: Instances
 summary: |
   Applies a torque to maintain a constant orientation.

@@ -1,6 +1,5 @@
 name: Geometry
 type: class
-category:
 memory_category: Instances
 summary: |
   An internal Roblox service which cannot be used by developers.

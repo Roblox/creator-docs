@@ -1,6 +1,5 @@
 name: Attachment
 type: class
-category: Constraints
 memory_category: Instances
 summary: |
   Defines a point and orientation relative to a parent `Class.BasePart`,

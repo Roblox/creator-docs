@@ -1,6 +1,5 @@
 name: ControllerManager
 type: class
-category:
 memory_category: Instances
 summary: |
   Manages simulated motion control for its assigned

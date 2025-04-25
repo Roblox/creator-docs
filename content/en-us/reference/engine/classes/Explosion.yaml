@@ -1,6 +1,5 @@
 name: Explosion
 type: class
-category: Effects
 memory_category: Instances
 summary: |
   Applies force to `Class.BasePart|BaseParts` within the explosion's

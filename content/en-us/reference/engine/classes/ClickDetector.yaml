@@ -1,6 +1,5 @@
 name: ClickDetector
 type: class
-category: Input
 memory_category: Instances
 summary: |
   An object that provides user input on in-experience `Class.BasePart|BaseParts`

@@ -1,6 +1,5 @@
 name: ReplicatedStorage
 type: class
-category: Utility
 memory_category: Instances
 summary: |
   A container service for objects that are replicated to all clients.

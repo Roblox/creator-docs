@@ -1,6 +1,5 @@
 name: PartOperationAsset
 type: class
-category:
 memory_category: Instances
 summary: |
   An internal service which cannot be used by developers.

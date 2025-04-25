@@ -1,6 +1,5 @@
 name: UIDragDetector
 type: class
-category:
 memory_category: Instances
 summary: |
   Instance which facilitates and encourages interaction with UI elements in an

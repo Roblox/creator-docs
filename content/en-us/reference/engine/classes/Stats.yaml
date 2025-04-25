@@ -1,6 +1,5 @@
 name: Stats
 type: class
-category: Debugging
 memory_category: Instances
 summary: |
   Performance metrics for a game.

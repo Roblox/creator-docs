@@ -1,6 +1,5 @@
 name: Debris
 type: class
-category: Utility
 memory_category: Instances
 summary: |
   Allows scheduling the guaranteed destruction of an object without yielding.  

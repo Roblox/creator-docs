@@ -1,6 +1,5 @@
 name: AudioListener
 type: class
-category:
 memory_category: Internal
 summary: |
   Records an audio stream from its surrounding

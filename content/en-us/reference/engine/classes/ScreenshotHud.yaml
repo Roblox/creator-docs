@@ -1,6 +1,5 @@
 name: ScreenshotHud
 type: class
-category: GUI
 memory_category: Instances
 summary: |
   A 2D user interface that allows users to capture and save screenshots to their

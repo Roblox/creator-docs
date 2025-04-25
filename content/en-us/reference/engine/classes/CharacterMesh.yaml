@@ -1,6 +1,5 @@
 name: CharacterMesh
 type: class
-category: Avatar
 memory_category: Instances
 summary: |
   Modifies the appearance of an R6 body part.

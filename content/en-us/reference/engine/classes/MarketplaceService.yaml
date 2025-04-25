@@ -1,6 +1,5 @@
 name: MarketplaceService
 type: class
-category: Monetization
 memory_category: Instances
 summary: |
   The service responsible for in-experience transactions.

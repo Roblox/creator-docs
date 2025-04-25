@@ -1,6 +1,5 @@
 name: NetworkSettings
 type: class
-category: Settings
 memory_category: Instances
 summary: |
   Settings related to networked engine behaviors.

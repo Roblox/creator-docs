@@ -1,6 +1,5 @@
 name: Tool
 type: class
-category: Gameplay
 memory_category: PhysicsParts
 summary: |
   An object, such as a weapon, that can be equipped by a `Class.Humanoid`.

@@ -1,6 +1,5 @@
 name: ManualSurfaceJointInstance
 type: class
-category:
 memory_category: PhysicsParts
 summary: |
   ManualSurfaceJointInstance is the base class for `Class.ManualGlue` and

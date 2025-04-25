@@ -1,6 +1,5 @@
 name: DataModel
 type: class
-category: Scripting
 memory_category: Instances
 summary: |
   The root of Roblox's parent-child hierarchy. Its direct children are services,

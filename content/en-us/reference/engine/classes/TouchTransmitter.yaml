@@ -1,6 +1,5 @@
 name: TouchTransmitter
 type: class
-category:
 memory_category: Instances
 summary: |
   An internal object used by networking and replication code to transmit

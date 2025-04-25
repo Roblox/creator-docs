@@ -1,6 +1,5 @@
 name: RocketPropulsion
 type: class
-category: Body Movers
 memory_category: Instances
 summary: |
   Applies a force so that a part follows and faces another part.

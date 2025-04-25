@@ -1,6 +1,5 @@
 name: PVInstance
 type: class
-category:
 memory_category: Instances
 summary: |
   Abstract class for all objects that have a physical location in the world,

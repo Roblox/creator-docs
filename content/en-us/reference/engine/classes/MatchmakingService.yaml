@@ -1,6 +1,5 @@
 name: MatchmakingService
 type: class
-category:
 memory_category: Instances
 summary: |
   The service responsible for managing custom matchmaking data.

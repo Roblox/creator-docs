@@ -1,6 +1,5 @@
 name: SoundService
 type: class
-category: Sounds
 memory_category: Instances
 summary: |
   A service that determines various aspects of how `Class.Sound|Sounds` play in

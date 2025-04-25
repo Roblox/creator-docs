@@ -1,6 +1,5 @@
 name: TestService
 type: class
-category: Debugging
 memory_category: Instances
 summary: |
   A service used by Roblox to run controlled tests of the engine. It is

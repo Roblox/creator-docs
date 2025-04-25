@@ -1,6 +1,5 @@
 name: LineForce
 type: class
-category: Constraints
 memory_category: PhysicsParts
 summary: |
   Applies a force along the theoretical line connecting its two

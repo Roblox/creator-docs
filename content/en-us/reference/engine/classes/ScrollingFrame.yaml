@@ -1,6 +1,5 @@
 name: ScrollingFrame
 type: class
-category: GUI
 memory_category: Gui
 summary: |
   `ScrollingFrame` is a special `Class.Frame` type with built-in scrolling

@@ -1,6 +1,5 @@
 name: UserService
 type: class
-category:
 memory_category: Instances
 summary: |
   A service that handles queries regarding users on the Roblox platform.

@@ -1,6 +1,5 @@
 name: Configuration
 type: class
-category: Utility
 memory_category: Instances
 summary: |
   The Configuration object is a container object that is designed to hold value

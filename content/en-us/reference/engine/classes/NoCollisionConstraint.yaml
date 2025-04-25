@@ -1,6 +1,5 @@
 name: NoCollisionConstraint
 type: class
-category: Constraints
 memory_category: PhysicsParts
 summary: |
   An instance used to prevent collisions between two specific parts.

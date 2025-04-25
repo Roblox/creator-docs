@@ -1,6 +1,5 @@
 name: Pose
 type: class
-category: Animations
 memory_category: Animation
 summary: |
   Holds the `Datatype.CFrame` applied to the `Class.Motor6D` connected to its

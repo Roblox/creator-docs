@@ -1,6 +1,5 @@
 name: ChatWindowConfiguration
 type: class
-category:
 memory_category: Instances
 summary: |
   Configures properties of the default chat window.

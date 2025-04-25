@@ -1,6 +1,5 @@
 name: HttpService
 type: class
-category: Data
 memory_category: Instances
 summary: |
   Allows sending HTTP requests and provides various web-related and JSON

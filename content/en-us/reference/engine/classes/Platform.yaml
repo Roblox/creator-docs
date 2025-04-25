@@ -1,6 +1,5 @@
 name: Platform
 type: class
-category:
 memory_category: PhysicsParts
 summary: |
   Historically a form of `Class.Seat` that wouldn't place the player in a

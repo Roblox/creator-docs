@@ -1,6 +1,5 @@
 name: Trail
 type: class
-category: Effects
 memory_category: Instances
 summary: |
   Used to create a trail effect between two attachments.

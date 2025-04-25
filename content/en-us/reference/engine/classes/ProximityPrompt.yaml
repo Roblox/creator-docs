@@ -1,6 +1,5 @@
 name: ProximityPrompt
 type: class
-category:
 memory_category: Instances
 summary: |
   An object that lets you prompt players to interact with an object in the 3D

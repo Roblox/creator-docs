@@ -1,7 +1,6 @@
 {
   "name": "SampleClass",
   "type": "class",
-  "category": null,
   "memory_category": "Instances",
   "summary": "Sample summary.",
   "description": "Sample description.",

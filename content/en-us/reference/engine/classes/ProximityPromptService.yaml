@@ -1,6 +1,5 @@
 name: ProximityPromptService
 type: class
-category:
 memory_category: Instances
 summary: |
   Allows developers to interact with `Class.ProximityPrompt` objects in a global

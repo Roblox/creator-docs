@@ -1,6 +1,5 @@
 name: UIComponent
 type: class
-category:
 memory_category: Instances
 summary: |
   A base class for UI constraint and layout classes.

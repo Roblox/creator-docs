@@ -1,6 +1,5 @@
 name: CompressorSoundEffect
 type: class
-category: Sounds
 memory_category: Instances
 summary: |
   Adjusts the dynamic range of audio.

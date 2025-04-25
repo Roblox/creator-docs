@@ -1,6 +1,5 @@
 name: StarterPlayerScripts
 type: class
-category: Scripting
 memory_category: Instances
 summary: |
   A container for objects to be copied to a Player's PlayerScripts when they

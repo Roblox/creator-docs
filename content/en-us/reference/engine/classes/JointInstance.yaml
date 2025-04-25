@@ -1,6 +1,5 @@
 name: JointInstance
 type: class
-category:
 memory_category: PhysicsParts
 summary: |
   The base class for joints.

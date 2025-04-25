@@ -1,6 +1,5 @@
 name: UnreliableRemoteEvent
 type: class
-category:
 memory_category: Instances
 summary: |
   An object which facilitates asynchronous, unordered and unreliable, one-way

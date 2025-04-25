@@ -1,6 +1,5 @@
 name: TotalCountTimeIntervalItem
 type: class
-category:
 memory_category: Instances
 summary: |
   Measures a total-count-over-time interval.

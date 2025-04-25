@@ -1,6 +1,5 @@
 name: Color3Value
 type: class
-category: Values
 memory_category: Instances
 summary: |
   A container object for a single Color3 value.

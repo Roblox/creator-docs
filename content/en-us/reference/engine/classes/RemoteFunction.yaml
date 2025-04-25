@@ -1,6 +1,5 @@
 name: RemoteFunction
 type: class
-category: Scripting
 memory_category: Instances
 summary: |
   An object which facilitates synchronous, two-way communication across the

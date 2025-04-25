@@ -1,6 +1,5 @@
 name: StudioService
 type: class
-category: Plugins
 memory_category: Instances
 summary: |
   Provides access to configuration of Roblox Studio and allows importing files

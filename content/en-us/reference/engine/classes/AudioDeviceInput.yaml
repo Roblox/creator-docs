@@ -1,6 +1,5 @@
 name: AudioDeviceInput
 type: class
-category:
 memory_category: Internal
 summary: |
   Produces audio streams from physical devices, such as microphones.

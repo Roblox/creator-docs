@@ -1,6 +1,5 @@
 name: EchoSoundEffect
 type: class
-category: Sounds
 memory_category: Instances
 summary: |
   Adds delayed repetitions of a sound with diminishing volume.

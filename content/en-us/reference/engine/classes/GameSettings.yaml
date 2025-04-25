@@ -1,6 +1,5 @@
 name: GameSettings
 type: class
-category: Settings
 memory_category: Instances
 summary: |
   A container for miscellaneous in-game options.

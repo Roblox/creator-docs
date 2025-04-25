@@ -1,6 +1,5 @@
 name: SocialService
 type: class
-category:
 memory_category: Instances
 summary: |
   Facilitates social functions that impact relationships made on the Roblox

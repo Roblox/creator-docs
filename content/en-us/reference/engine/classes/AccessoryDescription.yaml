@@ -1,6 +1,5 @@
 name: AccessoryDescription
 type: class
-category:
 memory_category: Instances
 summary: |
   Describes the appearance of an `Class.Accessory` for the

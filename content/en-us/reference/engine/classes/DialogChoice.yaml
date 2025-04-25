@@ -1,6 +1,5 @@
 name: DialogChoice
 type: class
-category: Social
 memory_category: Instances
 summary: |
   Used to craft the further choices available to players who have started a

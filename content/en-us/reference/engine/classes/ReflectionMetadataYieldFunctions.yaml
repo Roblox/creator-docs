@@ -1,6 +1,5 @@
 name: ReflectionMetadataYieldFunctions
 type: class
-category:
 memory_category: Instances
 summary: |
   Acts as a `Class.Folder` containing information about yielding functions for a

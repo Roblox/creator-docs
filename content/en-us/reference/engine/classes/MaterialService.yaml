@@ -1,6 +1,5 @@
 name: MaterialService
 type: class
-category:
 memory_category: Instances
 summary: |
   The game service responsible for managing materials.

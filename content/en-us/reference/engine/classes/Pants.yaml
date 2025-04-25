@@ -1,6 +1,5 @@
 name: Pants
 type: class
-category: Avatar
 memory_category: Instances
 summary: |
   Displays a Pants texture from the Roblox website to display on a

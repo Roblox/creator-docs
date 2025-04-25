@@ -1,6 +1,5 @@
 name: AssetService
 type: class
-category: Data
 memory_category: Instances
 summary: |
   A non-replicated service that handles asset-related queries to the Roblox web

@@ -1,6 +1,5 @@
 name: Highlight
 type: class
-category:
 memory_category: Instances
 summary: |
   A visual effect which you can use to call attention to a specific object

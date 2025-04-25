@@ -1,6 +1,5 @@
 name: SelectionPartLasso
 type: class
-category:
 memory_category: Instances
 summary: |
   An instance used to display a "lasso" between a `Class.Humanoid` Torso and a

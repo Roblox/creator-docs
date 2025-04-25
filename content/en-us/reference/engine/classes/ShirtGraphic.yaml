@@ -1,6 +1,5 @@
 name: ShirtGraphic
 type: class
-category: Avatar
 memory_category: Instances
 summary: |
   Applies a texture to the front surface of a character's torso, used to display

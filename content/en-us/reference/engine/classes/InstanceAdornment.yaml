@@ -1,6 +1,5 @@
 name: InstanceAdornment
 type: class
-category:
 memory_category: Instances
 summary: |
   A base class for all objects that adorn `Class.Instance` classes.

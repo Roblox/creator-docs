@@ -1,6 +1,5 @@
 name: NegateOperation
 type: class
-category: Building
 memory_category: Instances
 summary: |
   Result of a part that has been negated for use in solid modeling.

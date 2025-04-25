@@ -1,6 +1,5 @@
 name: UIBase
 type: class
-category:
 memory_category: Instances
 summary: |
   `Class.UIBase` is the base class for UI layout and constraint classes.

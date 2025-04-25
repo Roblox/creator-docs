@@ -1,6 +1,5 @@
 name: UIPadding
 type: class
-category: GUI
 memory_category: Instances
 summary: |
   Applies padding to the borders of the parent `Class.GuiObject`.

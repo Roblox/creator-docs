@@ -1,6 +1,5 @@
 name: Handles
 type: class
-category: Adornments
 memory_category: Instances
 summary: |
   Places 3D handles around any object that its `Class.Handles.Adornee|Adornee`

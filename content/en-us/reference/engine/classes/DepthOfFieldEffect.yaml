@@ -1,6 +1,5 @@
 name: DepthOfFieldEffect
 type: class
-category:
 memory_category: Instances
 summary: |
   Simulates a camera lens by blurring parts of a scene not in focus.

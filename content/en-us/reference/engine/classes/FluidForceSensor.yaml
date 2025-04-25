@@ -1,6 +1,5 @@
 name: FluidForceSensor
 type: class
-category:
 memory_category: Instances
 summary: |
   A `Class.SensorBase` that outputs `Class.FluidForceSensor.Force|Force`,

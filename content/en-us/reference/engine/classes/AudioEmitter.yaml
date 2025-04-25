@@ -1,6 +1,5 @@
 name: AudioEmitter
 type: class
-category:
 memory_category: Internal
 summary: |
   Emits audio streams into the world.

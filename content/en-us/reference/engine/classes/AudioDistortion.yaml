@@ -1,6 +1,5 @@
 name: AudioDistortion
 type: class
-category:
 memory_category: Internal
 summary: |
   Distorts audio streams, making them sound fuzzier, grittier, and louder.

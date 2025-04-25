@@ -1,6 +1,5 @@
 name: Visit
 type: class
-category:
 memory_category: Instances
 summary: |
   The Visit service is a backend service used by Roblox. Its functions are not

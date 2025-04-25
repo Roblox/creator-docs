@@ -1,6 +1,5 @@
 name: SurfaceSelection
 type: class
-category: Adornments
 memory_category: Instances
 summary: |
   Highlights a face of a surface in a configurable color.

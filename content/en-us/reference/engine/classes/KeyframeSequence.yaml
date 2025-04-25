@@ -1,6 +1,5 @@
 name: KeyframeSequence
 type: class
-category: Animations
 memory_category: Animation
 summary: |
   This object stores all of the `Class.Keyframe|Keyframes` and other data for

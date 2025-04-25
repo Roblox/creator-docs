@@ -1,6 +1,5 @@
 name: DataStorePages
 type: class
-category: Data
 memory_category: Instances
 summary: |
   A `Class.Pages` object that allows iteration through `Class.OrderedDataStore`

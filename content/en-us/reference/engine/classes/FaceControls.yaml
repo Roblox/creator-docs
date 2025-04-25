@@ -1,6 +1,5 @@
 name: FaceControls
 type: class
-category:
 memory_category: Animation
 summary: |
   The `Class.FaceControls` object defines a set of properties for controlling

@@ -1,6 +1,5 @@
 name: LuaSourceContainer
 type: class
-category:
 memory_category: Instances
 summary: |
   The base class for all objects which contain Luau code.

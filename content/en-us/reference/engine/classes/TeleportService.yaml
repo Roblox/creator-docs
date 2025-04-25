@@ -1,6 +1,5 @@
 name: TeleportService
 type: class
-category: Gameplay
 memory_category: Instances
 summary: |
   Enables transporting `Class.Player|Players` between places and servers.

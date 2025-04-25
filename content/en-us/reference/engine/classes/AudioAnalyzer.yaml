@@ -1,6 +1,5 @@
 name: AudioAnalyzer
 type: class
-category:
 memory_category: Internal
 summary: |
   Takes measurements from audio streams that are connected to it via one or more

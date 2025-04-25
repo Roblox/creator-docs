@@ -1,6 +1,5 @@
 name: BinaryStringValue
 type: class
-category:
 memory_category: Instances
 summary: |
   An internal type of `Class.StringValue` object, that stores a `BinaryString`

@@ -1,6 +1,5 @@
 name: AnimationClipProvider
 type: class
-category: Animations
 memory_category: Animation
 summary: |
   Provides functions to load and preview `Class.AnimationClip|AnimationClips`.

@@ -1,6 +1,5 @@
 name: GlobalSettings
 type: class
-category: Settings
 memory_category: Instances
 summary: |
   Collection of menu settings for Roblox Studio.

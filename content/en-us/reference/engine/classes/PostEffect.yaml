@@ -1,6 +1,5 @@
 name: PostEffect
 type: class
-category:
 memory_category: Instances
 summary: |
   Abstract base class for post-processing effects.

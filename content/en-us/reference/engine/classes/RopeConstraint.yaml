@@ -1,6 +1,5 @@
 name: RopeConstraint
 type: class
-category: Constraints
 memory_category: PhysicsParts
 summary: |
   Simulates rope dynamics, preventing two attachments from separating further

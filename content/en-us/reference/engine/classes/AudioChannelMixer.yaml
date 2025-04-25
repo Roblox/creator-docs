@@ -1,6 +1,5 @@
 name: AudioChannelMixer
 type: class
-category:
 memory_category: Internal
 summary: |
   Combines multiple audio streams into a single, multichannel audio stream.

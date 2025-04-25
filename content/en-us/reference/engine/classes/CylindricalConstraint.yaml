@@ -1,6 +1,5 @@
 name: CylindricalConstraint
 type: class
-category: Constraints
 memory_category: PhysicsParts
 summary: |
   Constrains two attachments on two parts to have a relative linear and

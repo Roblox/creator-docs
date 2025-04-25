@@ -1,6 +1,5 @@
 name: LogService
 type: class
-category: Debugging
 memory_category: Instances
 summary: |
   A service that allows you to read outputted text.

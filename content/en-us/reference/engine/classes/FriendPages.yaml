@@ -1,6 +1,5 @@
 name: FriendPages
 type: class
-category: Data
 memory_category: Instances
 summary: |
   A special version of `Class.Pages` that contains information about a player's

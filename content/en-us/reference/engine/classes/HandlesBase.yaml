@@ -1,6 +1,5 @@
 name: HandlesBase
 type: class
-category:
 memory_category: Instances
 summary: |
   An abstract class for Handle objects, such as `Class.ArcHandles` and

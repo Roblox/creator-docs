@@ -1,6 +1,5 @@
 name: ImageButton
 type: class
-category: GUI
 memory_category: Gui
 summary: |
   A 2D user interface element that displays an interactive image.

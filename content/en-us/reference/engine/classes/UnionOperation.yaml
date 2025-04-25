@@ -1,6 +1,5 @@
 name: UnionOperation
 type: class
-category: Building
 memory_category: Instances
 summary: |
   Result of parts that have been joined together into a single solid model.

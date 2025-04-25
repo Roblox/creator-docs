@@ -1,6 +1,5 @@
 name: VirtualUser
 type: class
-category:
 memory_category: Instances
 summary: |
   VirtualUser is a service that allows you to record the inputs of a user, and

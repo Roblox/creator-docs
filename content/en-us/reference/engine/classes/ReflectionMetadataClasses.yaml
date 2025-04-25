@@ -1,6 +1,5 @@
 name: ReflectionMetadataClasses
 type: class
-category:
 memory_category: Instances
 summary: |
   An internal object which cannot be used by developers.

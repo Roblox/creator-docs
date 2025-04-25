@@ -1,6 +1,5 @@
 name: WeldConstraint
 type: class
-category: Constraints
 memory_category: PhysicsParts
 summary: |
   Connects two `Class.BasePart|BaseParts` together such that their relative

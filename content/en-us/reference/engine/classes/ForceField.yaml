@@ -1,6 +1,5 @@
 name: ForceField
 type: class
-category: Avatar
 memory_category: Instances
 summary: |
   Protects a `Class.Humanoid` from taking damage dealt through the

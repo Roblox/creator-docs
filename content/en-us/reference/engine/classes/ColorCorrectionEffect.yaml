@@ -1,6 +1,5 @@
 name: ColorCorrectionEffect
 type: class
-category: Post Processing
 memory_category: Instances
 summary: |
   Adjusts color-related properties of the rendered world like saturation, tint,

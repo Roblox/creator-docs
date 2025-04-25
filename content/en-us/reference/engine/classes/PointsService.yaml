@@ -1,6 +1,5 @@
 name: PointsService
 type: class
-category: Gameplay
 memory_category: Instances
 summary: |
   This service controls the points award system used to showcase a player's

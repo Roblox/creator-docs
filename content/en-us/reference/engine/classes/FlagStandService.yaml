@@ -1,6 +1,5 @@
 name: FlagStandService
 type: class
-category:
 memory_category: Instances
 summary: |
   An internal service responsible for handling the now deprecated

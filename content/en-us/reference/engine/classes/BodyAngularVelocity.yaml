@@ -1,6 +1,5 @@
 name: BodyAngularVelocity
 type: class
-category: Body Movers
 memory_category: Instances
 summary: |
   Applies a torque to maintain a constant angular velocity.

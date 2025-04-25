@@ -1,6 +1,5 @@
 name: Translator
 type: class
-category: Localization
 memory_category: Instances
 summary: |
   The role of a Translator is to manufacture/return strings localized for the

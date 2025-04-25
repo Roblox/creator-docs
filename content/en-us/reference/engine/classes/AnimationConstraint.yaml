@@ -1,6 +1,5 @@
 name: AnimationConstraint
 type: class
-category:
 memory_category: PhysicsParts
 summary: |
   Aligns two `Class.BasePart|BaseParts` with an animate-able kinematic or

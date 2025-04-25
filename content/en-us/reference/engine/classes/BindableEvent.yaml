@@ -1,6 +1,5 @@
 name: BindableEvent
 type: class
-category: Scripting
 memory_category: Instances
 summary: |
   An object which enables custom events through asynchronous one-way

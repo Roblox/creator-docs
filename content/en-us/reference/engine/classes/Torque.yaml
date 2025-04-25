@@ -1,6 +1,5 @@
 name: Torque
 type: class
-category: Constraints
 memory_category: PhysicsParts
 summary: |
   Applies constant torque to an assembly from its center of mass.

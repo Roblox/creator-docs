@@ -1,6 +1,5 @@
 name: UIListLayout
 type: class
-category: GUI
 memory_category: Instances
 summary: |
   Positions sibling UI elements in rows or columns within the parent UI

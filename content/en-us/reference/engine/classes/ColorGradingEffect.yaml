@@ -1,6 +1,5 @@
 name: ColorGradingEffect
 type: class
-category:
 memory_category: Instances
 summary: |
   Modifies how color values calculated by the renderer should be converted to

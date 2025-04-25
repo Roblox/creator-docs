@@ -1,6 +1,5 @@
 name: LayerCollector
 type: class
-category:
 memory_category: Instances
 summary: |
   The base class of 2D UI containers which render `Class.GuiObject|GuiObjects`

@@ -1,6 +1,5 @@
 name: SpringConstraint
 type: class
-category: Constraints
 memory_category: PhysicsParts
 summary: |
   Simulates spring and damper behavior between two attachments.

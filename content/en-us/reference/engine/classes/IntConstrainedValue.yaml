@@ -1,6 +1,5 @@
 name: IntConstrainedValue
 type: class
-category: Values
 memory_category: Instances
 summary: |
   An IntConstrainedValue is used to store a value which can never be less than

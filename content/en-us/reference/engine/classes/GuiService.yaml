@@ -1,6 +1,5 @@
 name: GuiService
 type: class
-category: Input
 memory_category: Instances
 summary: |
   Allows developers to control what `Class.GuiObject` is currently being

@@ -1,6 +1,5 @@
 name: DataModelMesh
 type: class
-category:
 memory_category: Instances
 summary: |
   The DataModelMesh is an abstract class from which mesh classes descend.

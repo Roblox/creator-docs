@@ -1,6 +1,5 @@
 name: BlurEffect
 type: class
-category: Post Processing
 memory_category: Instances
 summary: |
   Applies a blur to the entire game world.

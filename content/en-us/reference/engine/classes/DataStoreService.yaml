@@ -1,6 +1,5 @@
 name: DataStoreService
 type: class
-category: Data
 memory_category: Instances
 summary: |
   A game service that gives access to persistent data storage across places in a

@@ -1,6 +1,5 @@
 name: Light
 type: class
-category:
 memory_category: Instances
 summary: |
   Light is a root class for dynamic lighting related objects.

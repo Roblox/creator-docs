@@ -1,6 +1,5 @@
 name: BaseScript
 type: class
-category:
 memory_category: Script
 summary: |
   The base class for all script objects which run automatically.

@@ -1,6 +1,5 @@
 name: UITextSizeConstraint
 type: class
-category: GUI
 memory_category: Instances
 summary: |
   Ensures that the size of text rendered by certain `Class.GuiObject` classes

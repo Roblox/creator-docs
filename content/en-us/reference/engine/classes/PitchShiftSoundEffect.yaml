@@ -1,6 +1,5 @@
 name: PitchShiftSoundEffect
 type: class
-category: Sounds
 memory_category: Instances
 summary: |
   Adjusts the pitch of a sound without changing its playback speed.
