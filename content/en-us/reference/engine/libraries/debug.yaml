@@ -139,6 +139,20 @@ functions:
       fnA()
       ```
 
+      ```lua
+      local function fnA()
+
+      end
+
+      local function fnB()
+
+      end
+
+      -- Output line ("l"), name ("n"), and identifier ("f") for both fnA() and fnB()
+      print(debug.info(fnA, "lnf"))  --> 1 fnA function: 0x75e3d3c398a81252
+      print(debug.info(fnB, "lnf"))  --> 5 fnB function: 0x6022a6dc5ccf4ab2
+      ```
+
       Note that this function is similar to
       [debug.getinfo](https://www.lua.org/pil/23.1.html), an unavailable part of
       the standard Lua library which serves a similar purpose.
@@ -178,66 +192,6 @@ functions:
     code_samples:
   - name: debug.info
     summary: |
-      Traverses the entire stack of current thread and returns a string
-      containing the call stack of target function details.
-    description: |
-      Allows programmatic inspection of the call stack. This function differs
-      from `Library.debug.traceback()` in that it guarantees the format of the
-      data it returns. This is useful for general logging and filtering purposes
-      as well as for sending the data to systems expecting structured input,
-      such as crash aggregation.
-
-      ```lua
-      local function fnA()
-
-      end
-
-      local function fnB()
-
-      end
-
-      -- Output line ("l"), name ("n"), and identifier ("f") for both fnA() and fnB()
-      print(debug.info(fnA, "lnf"))  --> 1 fnA function: 0x75e3d3c398a81252
-      print(debug.info(fnB, "lnf"))  --> 5 fnB function: 0x6022a6dc5ccf4ab2
-      ```
-
-      Note that this function is similar to
-      [debug.getinfo](https://www.lua.org/pil/23.1.html), an unavailable part of
-      the standard Lua library which serves a similar purpose.
-    parameters:
-      - name: function
-        type: function
-        default:
-        summary: |
-          The function of the call stack which the information returned should
-          describe.
-      - name: options
-        type: string
-        default:
-        summary: |
-          A string that describes what the returned information should
-          represent. It must only contain 0 or 1 instances of the characters
-          `slnaf`, each representing a piece of information:
-
-          - `s` ([string](/luau/strings.md)) — The function source identifier,
-            equal to the full name of the script the function is defined in.
-          - `l` ([number](/luau/numbers.md)) — The line that `function` is
-            defined on.
-          - `n` ([string](/luau/strings.md)) — The name of the function; may be
-            `nil` for anonymous functions and C functions without an assigned
-            debug name.
-          - `a` ([number](/luau/numbers.md), [boolean](/luau/booleans.md)) —
-            Arity of the function, which refers to the parameter count and
-            whether the function is variadic.
-          - `f` ([function](/luau/functions.md)) — The function which was
-            inspected.
-    returns:
-      - type: Tuple
-        summary: ''
-    tags:
-    code_samples:
-  - name: debug.info
-    summary: |
       Traverses the entire stack of target thread and returns a string
       containing the call stack of target level details.
     description: |
@@ -247,15 +201,7 @@ functions:
       as well as for sending the data to systems expecting structured input,
       such as crash aggregation.
 
-      ```lua
-      local function fnA()
-      	-- Output source identifier ("s") and line ("l") at levels 1 and 2
-      	print(debug.info(1, "sl"))  --> fnA() 3
-      	print(debug.info(2, "sl"))  --> fnA() 7
-      end
-
-      fnA()
-      ```
+      
 
       Note that this function is similar to
       [debug.getinfo](https://www.lua.org/pil/23.1.html), an unavailable part of
