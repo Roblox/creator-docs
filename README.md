@@ -1,7 +1,6 @@
-# Roblox Creator Documentation
 
-This repository holds source code for the creator documentation at [create.roblox.com/docs](https://create.roblox.com/docs).
-
+hjjggghejrzrhf
+ghghgghghgjghghghghghgjghghgjghghggjghhgghgj
 **Note**: Currently, the repository has guides, tutorials, educational content, and the Engine API reference. Code samples are coming soon.
 
 If you're unfamiliar with the GitHub contribution process, see [About pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) and the following video.
@@ -72,34 +71,3 @@ For more detailed steps, see [CONTRIBUTING.md](CONTRIBUTING.md).
 The Roblox documentation has three main document types:
 
 - Conceptual and task-based guides in `.md` files in [content/en-us/](./content/en-us/)
-
-  Guides teach you about a feature or workflow without being overly prescriptive about the end result. They introduce concepts and features and cover the tasks you can accomplish using various tools or other approaches.
-
-  Guides benefit massively from practical, real-world use cases, images, code snippets, and diagrams. Most task-based content should include a numbered list.
-
-- API reference docs in `.yaml` files in [content/en-us/reference](./content/en-us/reference)
-
-  APIs are entirely reference content and should use functional descriptions, linking to guides where appropriate. More than other content types, reference content should be terse and direct; summaries for properties, methods, events, and callbacks don't need to be full sentences.
-
-- Tutorials in `.md` files in [content/en-us/tutorials](./content/en-us/tutorials)
-
-  Compared to task-based guides, tutorials are more self-contained and take you from _nothing_ to _something_. This focus on creating something specific means they're typically much more prescriptive than guides. Tutorials often touch multiple features and concepts at the same time, demonstrating the connections between tools and strategies.
-
-If your contribution doesn't fit within these categories or covers a particularly narrow subject, it might not be a good fit for the documentation. Consider posting it to the [Roblox developer forum](https://devforum.roblox.com/c/resources/71).
-
-## Contribution Basics
-
-Try to limit your edits to one class or feature so that the pull request is easier to review. Bug fixes and smaller improvements have a higher likelihood of fast approval. Large guides often require significant back-and-forth before publication.
-
-To avoid formatting issues, we recommend text editors like github.dev that let you preview Markdown as you write it. For prose, try to follow the guidelines in [STYLE.md](STYLE.md). For code samples, use the [Lua Style Guide](https://roblox.github.io/lua-style-guide/).
-
-To view a page fully formatted per what we see on the `main` branch, replace the entire URL from `content/` and before. Files with the basename `index` should have that name removed. For example, the page for "https://github.com/Roblox/creator-docs/blob/main/content/en-us/avatar/index.md" is rendered at "https://create.roblox.com/docs/en-us/avatar".
-
-## Licenses
-
-- For prose, this project uses the Creative Commons Attribution 4.0 International Public License. For full license text, see [LICENSE](LICENSE).
-- Code samples are available under the MIT License. For full license text, see [LICENSE-CODE](LICENSE-CODE).
-
-## Code of Conduct
-
-To maintain an open, welcoming, diverse, inclusive, and healthy community, this project enforces an adapted version of the Contributor Covenant. For more information, see [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
