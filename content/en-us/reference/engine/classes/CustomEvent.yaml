@@ -76,7 +76,6 @@ events:
       `Class.CustomEvent|CustomEvents` have been superseded by
       `Class.BindableEvent|BindableEvents` and should not be used in new work.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: CustomEvent.ReceiverDisconnected
@@ -96,7 +95,6 @@ events:
       `Class.CustomEvent|CustomEvents` have been superseded by
       `Class.BindableEvent|BindableEvents` and should not be used in new work.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

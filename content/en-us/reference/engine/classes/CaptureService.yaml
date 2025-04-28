@@ -210,7 +210,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: CaptureService.CaptureEnded
@@ -225,7 +224,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: CaptureService.CaptureSaved
@@ -243,7 +241,6 @@ events:
       This event has been superseded by the
       `Class.CaptureService.UserCaptureSaved|UserCaptureSaved` event.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: CaptureService.UserCaptureSaved
@@ -263,7 +260,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

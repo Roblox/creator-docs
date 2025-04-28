@@ -714,7 +714,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities:
       - Animation
     writeCapabilities: []
@@ -737,7 +736,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities:
       - Animation
     writeCapabilities: []
@@ -776,7 +774,6 @@ events:
       function. For more details, see **Animation Events** in
       [Animation Editor](../../../animation/editor.md).
     security: None
-    thread_safety: Unsafe
     capabilities:
       - Animation
     writeCapabilities: []
@@ -800,7 +797,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities:
       - Animation
     writeCapabilities: []

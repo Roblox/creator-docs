@@ -64,7 +64,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: Vector3Value.changed
@@ -82,7 +81,6 @@ events:
       This deprecated event is a variant of `Class.Vector3Value.Changed` which
       should be used instead.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

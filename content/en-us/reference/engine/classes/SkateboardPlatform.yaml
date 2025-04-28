@@ -206,7 +206,6 @@ events:
       vehicles are advised to program their own systems. Additionally, the
       `Class.VehicleSeat` object can be used to quickly create simple vehicles.
     security: None
-    thread_safety: Unsafe
     capabilities:
       - Basic
     writeCapabilities: []
@@ -238,7 +237,6 @@ events:
       vehicles are advised to program their own systems. Additionally, the
       `Class.VehicleSeat` object can be used to quickly create simple vehicles.
     security: None
-    thread_safety: Unsafe
     capabilities:
       - Basic
     writeCapabilities: []
@@ -262,7 +260,6 @@ events:
       vehicles are advised to program their own systems. Additionally, the
       `Class.VehicleSeat` object can be used to quickly create simple vehicles.
     security: None
-    thread_safety: Unsafe
     capabilities:
       - Basic
     writeCapabilities: []
@@ -285,7 +282,6 @@ events:
       This deprecated event is a variant of `Class.SkateboardPlatform.Equipped`
       which has also been deprecated. Neither event should be used in new work.
     security: None
-    thread_safety: Unsafe
     capabilities:
       - Basic
     writeCapabilities: []
@@ -305,7 +301,6 @@ events:
       `Class.SkateboardPlatform.Unequipped` which has also been deprecated.
       Neither event should be used in new work.
     security: None
-    thread_safety: Unsafe
     capabilities:
       - Basic
     writeCapabilities: []

@@ -452,7 +452,6 @@ events:
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: ScriptEditorService.TextDocumentDidClose
@@ -475,7 +474,6 @@ events:
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: ScriptEditorService.TextDocumentDidOpen
@@ -495,7 +493,6 @@ events:
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

@@ -935,7 +935,6 @@ events:
     deprecation_message: |
       This item is deprecated . Do not use it for new work.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: DataModel.GraphicsQualityChangeRequest
@@ -981,7 +980,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: DataModel.ItemChanged
@@ -1007,7 +1005,6 @@ events:
       This function has been superseded by `Class.Object.Changed`, which should
       be used in new work instead.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: DataModel.Loaded
@@ -1041,7 +1038,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks:

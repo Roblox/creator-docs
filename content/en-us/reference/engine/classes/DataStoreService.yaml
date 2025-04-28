@@ -65,7 +65,7 @@ methods:
       data store. This function also accepts an optional
       `Class.DataStoreOptions` instance which includes options for enabling
       `Class.DataStoreOptions.AllScopes|AllScopes`. See
-      [Data stores](../../../cloud-services/data-stores/index.md) for details on
+      [Versioning, listing, and caching](../../../cloud-services/data-stores/versioning-listing-and-caching.md#scopes) for details on
       scope.
     code_samples: []
     parameters:

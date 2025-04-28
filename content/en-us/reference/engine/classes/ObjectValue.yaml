@@ -77,7 +77,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: ObjectValue.changed
@@ -95,7 +94,6 @@ events:
       This event is a deprecated variant of `Class.ObjectValue.Changed` which
       should be used instead.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

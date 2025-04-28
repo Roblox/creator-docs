@@ -75,7 +75,6 @@ events:
       The `Class.HopperBin` object has been superseded by the `Class.Tool`
       object which should be used for all new work.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: HopperBin.Selected
@@ -92,7 +91,6 @@ events:
       The `Class.HopperBin` object has been superseded by the `Class.Tool`
       object which should be used for all new work.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

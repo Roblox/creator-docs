@@ -3,6 +3,10 @@ title: Data model
 description: Explains the hierarchy of objects that describe everything about a place.
 ---
 
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/3Q0R1-Xkw9U" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br />
+
 Every place is represented by a data model, a hierarchy of objects that describe
 everything about the place. The data model contains all objects that make up the
 3D world, such as parts, terrain, lighting, and other environmental elements. It
@@ -16,6 +20,10 @@ the Roblox Engine interprets the data model, see [Client-Server
 Runtime](/projects/client-server).
 
 ## Objects
+
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/FzmFAm00A8g" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br />
 
 You place and organize objects in the data model to describe a place in Roblox.
 Every object in Roblox inherits from the `Class.Instance` class, which defines

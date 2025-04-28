@@ -73,7 +73,6 @@ events:
     tags: []
     deprecation_message: ''
     security: RobloxScriptSecurity
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

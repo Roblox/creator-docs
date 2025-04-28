@@ -117,7 +117,6 @@ events:
       [Immersive Ads](../../../production/monetization/immersive-ads.md) should
       be used as a replacement for `Class.AdService`.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

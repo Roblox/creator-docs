@@ -3126,7 +3126,6 @@ events:
     deprecation_message: |
       This event is deprecated in favor of `Class.BasePart.Touched`.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: BasePart.OutfitChanged
@@ -3140,7 +3139,6 @@ events:
     deprecation_message: |
       This event is deprecated. Do not use it for new work.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: BasePart.StoppedTouching
@@ -3158,7 +3156,6 @@ events:
       This event is deprecated in favor of `Class.BasePart.TouchEnded`, which
       should be used instead.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: BasePart.TouchEnded
@@ -3183,7 +3180,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: BasePart.Touched
@@ -3217,7 +3213,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

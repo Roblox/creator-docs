@@ -942,7 +942,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: AvatarEditorService.PromptCreateOutfitCompleted
@@ -966,7 +965,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: AvatarEditorService.PromptDeleteOutfitCompleted
@@ -986,7 +984,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: AvatarEditorService.PromptRenameOutfitCompleted
@@ -1006,7 +1003,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: AvatarEditorService.PromptSaveAvatarCompleted
@@ -1032,7 +1028,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: AvatarEditorService.PromptSetFavoriteCompleted
@@ -1054,7 +1049,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: AvatarEditorService.PromptUpdateOutfitCompleted
@@ -1076,7 +1070,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []
