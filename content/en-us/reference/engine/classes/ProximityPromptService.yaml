@@ -211,6 +211,8 @@ events:
       key/button is pressed, or after a specified amount of time holding the
       key/button if the prompt's
       `Class.ProximityPrompt.HoldDuration|HoldDuration` is non-zero.
+
+      The signal will only be handled on the client if it was the same client who triggered this event
     code_samples: []
     parameters:
       - name: prompt
