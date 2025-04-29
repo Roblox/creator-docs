@@ -180,7 +180,7 @@ local function onPlayerAdded(player)
         return
     end
 
-    if referredByPlayerId and not alreadyReferred then
+    if referredByPlayerId and referredByPlayerId ~= 0 and not alreadyReferred then
         -- Reward inviter and invitee
         rewardReferrer(referredByPlayerId)
         rewardInvitee(player)
@@ -200,13 +200,6 @@ end
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
-## Best practices
-
-Follow the best practices to get the most out of your friend referral system.
-
-- To encourage players in your experience to take advantage of referrals, add an in-experience button to advertise the referral system. Give the button a descriptive title and connect the button click event to the friend invite modal where players can see the reward banner.
-- Update the title and description of your experience to include the referral system. For example, you can add "[Referral reward live]" to your experience's title to make players who are browsing Roblox aware of referral rewards.
-
 ## Frequently asked questions
 
 **Which experiences are eligible to use this feature?**
@@ -224,3 +217,7 @@ No, players can send an invite to friends they aren't connected with on the Robl
 **Does the referral link expire?**
 
 The link never expires.
+
+**How can I get the most out of this feature?**
+
+You can add an in-experience button to advertise the referral system to encourage players to take advantage of referrals. You can then give the button a descriptive title and connect the button click event to the friend invite modal where players can see the reward banner.
