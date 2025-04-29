@@ -9,7 +9,7 @@
     "/toolbox-service/v2/assets:search": {
       "get": {
         "tags": ["ToolboxService"],
-        "description": "Search Creator Store for assets.",
+        "summary": "Search Creator Store for assets.",
         "parameters": [
           {
             "name": "searchCategoryType",
@@ -512,6 +512,9 @@
               },
               {
                 "$ref": "#/components/schemas/Model"
+              },
+              {
+                "$ref": "#/components/schemas/Plugin"
               }
             ],
             "description": "The asset information.",
@@ -873,6 +876,11 @@
           "hasScripts": {
             "type": "boolean",
             "description": "Whether the model has scripts."
+          },
+          "scriptCount": {
+            "type": "integer",
+            "description": "The number of scripts that are in the model.",
+            "format": "int32"
           }
         },
         "additionalProperties": false,
@@ -904,6 +912,28 @@
           }
         },
         "additionalProperties": false,
+        "nullable": true
+      },
+      "Plugin": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Asset"
+          }
+        ],
+        "properties": {
+          "hasScripts": {
+            "type": "boolean",
+            "description": "Whether the plugin has scripts."
+          },
+          "scriptCount": {
+            "type": "integer",
+            "description": "The number of scripts that are in the plugin.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Representation of a plugin asset.",
         "nullable": true
       },
       "QueryFacets": {

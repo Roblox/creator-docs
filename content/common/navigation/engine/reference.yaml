@@ -718,6 +718,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/CustomEventReceiver.yaml
         ignoreTranslation: true
+      - title: CustomLog
+        path: /reference/engine/classes/CustomLog
+        type: engineapi
+        source: /reference/engine/classes/CustomLog.yaml
+        ignoreTranslation: true
       - title: CylinderHandleAdornment
         path: /reference/engine/classes/CylinderHandleAdornment
         type: engineapi
@@ -943,11 +948,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/FaceInstance.yaml
         ignoreTranslation: true
-      - title: FacialAgeEstimationService
-        path: /reference/engine/classes/FacialAgeEstimationService
-        type: engineapi
-        source: /reference/engine/classes/FacialAgeEstimationService.yaml
-        ignoreTranslation: true
       - title: Feature
         path: /reference/engine/classes/Feature
         type: engineapi
@@ -962,11 +962,6 @@ navigation:
         path: /reference/engine/classes/FeedPages
         type: engineapi
         source: /reference/engine/classes/FeedPages.yaml
-        ignoreTranslation: true
-      - title: FeedService
-        path: /reference/engine/classes/FeedService
-        type: engineapi
-        source: /reference/engine/classes/FeedService.yaml
         ignoreTranslation: true
       - title: File
         path: /reference/engine/classes/File
@@ -1403,11 +1398,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/KeyframeSequenceProvider.yaml
         ignoreTranslation: true
-      - title: LanguageService
-        path: /reference/engine/classes/LanguageService
-        type: engineapi
-        source: /reference/engine/classes/LanguageService.yaml
-        ignoreTranslation: true
       - title: LayerCollector
         path: /reference/engine/classes/LayerCollector
         type: engineapi
@@ -1797,11 +1787,6 @@ navigation:
         path: /reference/engine/classes/PitchShiftSoundEffect
         type: engineapi
         source: /reference/engine/classes/PitchShiftSoundEffect.yaml
-        ignoreTranslation: true
-      - title: PlaceAssetIdsService
-        path: /reference/engine/classes/PlaceAssetIdsService
-        type: engineapi
-        source: /reference/engine/classes/PlaceAssetIdsService.yaml
         ignoreTranslation: true
       - title: PlacesService
         path: /reference/engine/classes/PlacesService
@@ -2562,11 +2547,6 @@ navigation:
         path: /reference/engine/classes/SyncScriptBuilder
         type: engineapi
         source: /reference/engine/classes/SyncScriptBuilder.yaml
-        ignoreTranslation: true
-      - title: SystemThemeService
-        path: /reference/engine/classes/SystemThemeService
-        type: engineapi
-        source: /reference/engine/classes/SystemThemeService.yaml
         ignoreTranslation: true
       - title: TaskScheduler
         path: /reference/engine/classes/TaskScheduler

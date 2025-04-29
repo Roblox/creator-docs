@@ -253,7 +253,7 @@ Limited items that are sold for free follow a different per-unit payout structur
 
 When setting assets on sale, you can [configure your creation](../marketplace/publish-to-marketplace.md#marketplace-settings) as a **Limited** item to set an available quantity for that asset.
 
-At this time, only Roblox-created Limiteds are tradeable, and bodies and heads are not eligible as Limiteds.
+At this time, only Roblox-created Limiteds are tradeable.
 
 ### Per-unit fee
 

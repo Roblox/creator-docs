@@ -1,4 +1,4 @@
-name: SystemThemeService
+name: CustomLog
 type: class
 memory_category: Instances
 summary: ''
@@ -7,33 +7,62 @@ code_samples: []
 inherits:
   - Instance
 tags:
-  - NotCreatable
-  - Service
   - NotReplicated
 deprecation_message: ''
 properties: []
 methods:
-  - name: SystemThemeService:isSystemThemeAvailable
+  - name: CustomLog:Close
     summary: ''
     description: ''
     code_samples: []
     parameters: []
     returns:
-      - type: boolean
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
-    security: RobloxScriptSecurity
+    security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - InternalTest
     writeCapabilities: []
-  - name: SystemThemeService:setTheme
+  - name: CustomLog:GetLogPath
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: string
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - InternalTest
+    writeCapabilities: []
+  - name: CustomLog:Open
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - InternalTest
+    writeCapabilities: []
+  - name: CustomLog:WriteAppend
     summary: ''
     description: ''
     code_samples: []
     parameters:
-      - name: theme
-        type: SystemThemeValue
+      - name: append
+        type: string
         default: ''
         summary: ''
     returns:
@@ -41,38 +70,10 @@ methods:
         summary: ''
     tags: []
     deprecation_message: ''
-    security: RobloxScriptSecurity
+    security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - InternalTest
     writeCapabilities: []
-  - name: SystemThemeService:getSystemThemeAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: SystemThemeValue
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-events:
-  - name: SystemThemeService.OnLuaThemeUpdated
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: theme
-        type: SystemThemeValue
-        default: ''
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    capabilities: []
-    writeCapabilities: []
+events: []
 callbacks: []
