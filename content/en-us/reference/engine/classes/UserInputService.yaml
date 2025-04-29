@@ -1579,8 +1579,8 @@ methods:
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Quote</code></td>
-            <td><img src="../../../assets/scripting/controls/quote.png" width="24" /></td>
-            <td><code>rbxasset://textures/ui/Controls/quote.png</code></td>
+            <td><img src="../../../assets/scripting/controls/apostrophe.png" width="24" /></td>
+            <td><code>rbxasset://textures/ui/Controls/apostrophe.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Comma</code></td>
