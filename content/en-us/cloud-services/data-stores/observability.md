@@ -1,41 +1,124 @@
----
-title: Data store observability
-description: Explains how to use the observability dashboard for data stores.
----
+-- X LAVT — Полная система: деньги, работа, имущество, банкротство, телефон, транспорт
 
-The data stores observability dashboard provides real-time charts on your request counts and on your usage against future data store limits, and allows you to filter the request data by standard or ordered data stores.
+local Players = game:GetService("Players") local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-![An image showing the request count by API dashboard in the Creator Hub.](../../assets/data/data-store/Data-Store-API.png)
+-- RemoteEvents local gainXPEvent = Instance.new("RemoteEvent", ReplicatedStorage) gainXPEvent.Name = "GainXP"
 
-## Access the dashboard
+local buyItemEvent = Instance.new("RemoteEvent", ReplicatedStorage) buyItemEvent.Name = "BuyItem"
 
-The data stores dashboard is available for any experience that uses `Class.DataStoreService`, but you must either be the experience owner or have [analytics group permissions](../../production/analytics/analytics-dashboard.md#grant-group-permission) to access the dashboard.
+local sellItemEvent = Instance.new("RemoteEvent", ReplicatedStorage) sellItemEvent.Name = "SellItem"
 
-1. Navigate to the [Creations](https://create.roblox.com/dashboard/creations) page on the **Creator Hub**.
-2. Under the **Creator Hub** dropdown, select your account or the group owning the target experience.
-3. Select the experience.
-4. In the **Monitoring** dropdown, select **Data Stores**.
+-- Предметы и цены local items = { House = 1000, Car = 1500, Yacht = 5000, Jet = 10000, Phone = 300 }
 
-## Available charts
+-- Создание статистики Players.PlayerAdded:Connect(function(player) local stats = Instance.new("Folder", player) stats.Name = "leaderstats"
 
-- **Request Count by API** on API request count per minute by API method, such as `Class.DataStore:SetAsync()` or `Class.OrderedDataStore:GetSortedAsync()`.
-- **Request Count by Status** on API request count by [response status](#response-status-codes).
-- **Request by API x Status** on response statuses returned by all or a specific API method.
-- **Read Request Type Quota Usage** on number of read API method calls against future read category limits.
-- **Write Request Type Quota Usage** on number of write API method calls against future write category limits.
-- **List Request Type Quota Usage** on number of list API method calls against future list category limits.
-- **Remove Request Type Quota Usage** on number of remove API method calls against future remove category limits.
+local cash = Instance.new("IntValue", stats)
+cash.Name = "Cash"
+cash.Value = 0
 
-Use the selector at the top of the page to filter by standard or ordered data stores. The default view includes both.
+local level = Instance.new("IntValue", stats)
+level.Name = "Level"
+level.Value = 1
 
-Each chart contains data for the past 30 days, and you can select to view a custom time range with the selector at the top of the page. If you select a time range earlier than 30 days, the system returns a **Request Failed** error.
+local xp = Instance.new("IntValue", stats)
+xp.Name = "XP"
+xp.Value = 0
 
-Data from the most recent three minutes might be incomplete, so it's normal to see a drop at the end of the charts.
+local inv = Instance.new("Folder", player)
+inv.Name = "Inventory"
+for itemName in pairs(items) do
+    local b = Instance.new("BoolValue", inv)
+    b.Name = itemName
+    b.Value = false
+end
 
-## Response status codes
+end)
 
-The dashboard's **Request Count by Status** and **Requests by API x Status** charts include status codes of API responses that you can use to understand usage and troubleshoot errors. For a table that lists and describes all of these status codes (aside from `200 OK`), see [Error codes](error-codes-and-limits.md#error-code-reference).
+-- XP и уровень gainXPEvent.OnServerEvent:Connect(function(player, amount) local stats = player:FindFirstChild("leaderstats") local xp = stats and stats:FindFirstChild("XP") local level = stats and stats:FindFirstChild("Level") if xp and level then xp.Value += amount local req = level.Value * 100 if xp.Value >= req then xp.Value -= req level.Value += 1 end end end)
 
-## Service limits
+-- Работающая зона local function setupJobZone(part, money, xp) local prompt = part:FindFirstChildOfClass("ProximityPrompt") or Instance.new("ProximityPrompt", part) prompt.ActionText = "Работать" prompt.ObjectText = part.Name prompt.HoldDuration = 2
 
-For information on current limits, usage quotas, and future limits, see [Limits](error-codes-and-limits.md#limits).
+prompt.Triggered:Connect(function(player)
+    local stats = player:FindFirstChild("leaderstats")
+    local cash = stats and stats:FindFirstChild("Cash")
+    local level = stats and stats:FindFirstChild("Level")
+    if cash and level then
+        local earned = money + (level.Value - 1) * 10
+        cash.Value += earned
+        gainXPEvent:FireServer(player, xp)
+
+        if cash.Value < 0 then
+            local inv = player:FindFirstChild("Inventory")
+            if inv then
+                for _, item in ipairs(inv:GetChildren()) do
+                    if item:IsA("BoolValue") then item.Value = false end
+                end
+            end
+            cash.Value = 0
+        end
+    end
+end)
+
+end
+
+-- Настройка всех рабочих зон local function initJobs() local jobs = { {name = "FarmZone", money = 50, xp = 20}, {name = "ShopZone", money = 30, xp = 15}, {name = "FactoryZone", money = 70, xp = 25}, }
+
+for _, job in ipairs(jobs) do
+    local part = workspace:FindFirstChild(job.name)
+    if part then
+        setupJobZone(part, job.money, job.xp)
+    end
+end
+
+end
+
+-- Выдать транспорт при покупке local function giveVehicle(player, itemName) local modelName = itemName .. "Model" local template = workspace:FindFirstChild(modelName) if template then local clone = template:Clone() clone.Name = player.Name .. "_" .. itemName clone:SetPrimaryPartCFrame(player.Character.HumanoidRootPart.CFrame * CFrame.new(10, 0, 0))
+
+local ownerId = clone:FindFirstChild("OwnerId")
+    if ownerId then
+        ownerId.Value = player.UserId
+    end
+
+    clone.Parent = workspace
+end
+
+end
+
+-- Покупка buyItemEvent.OnServerEvent:Connect(function(player, itemName) local price = items[itemName] if not price then return end
+
+local stats = player:FindFirstChild("leaderstats")
+local inv = player:FindFirstChild("Inventory")
+local cash = stats and stats:FindFirstChild("Cash")
+local owned = inv and inv:FindFirstChild(itemName)
+
+if cash and owned and not owned.Value and cash.Value >= price then
+    cash.Value -= price
+    owned.Value = true
+    if itemName == "Car" or itemName == "Yacht" or itemName == "Jet" then
+        giveVehicle(player, itemName)
+    end
+end
+
+end)
+
+-- Продажа sellItemEvent.OnServerEvent:Connect(function(player, itemName) local price = items[itemName] if not price then return end
+
+local stats = player:FindFirstChild("leaderstats")
+local inv = player:FindFirstChild("Inventory")
+local cash = stats and stats:FindFirstChild("Cash")
+local owned = inv and inv:FindFirstChild(itemName)
+
+if cash and owned and owned.Value then
+    owned.Value = false
+    cash.Value += math.floor(price * 0.5)
+end
+
+end)
+
+-- Проверка транспорта local function setupSeat(seat) seat:GetPropertyChangedSignal("Occupant"):Connect(function() local humanoid = seat.Occupant if humanoid then local character = humanoid.Parent local player = Players:GetPlayerFromCharacter(character) local model = seat:FindFirstAncestorOfClass("Model") local ownerId = model and model:FindFirstChild("OwnerId") if player and ownerId and ownerId.Value ~= player.UserId then humanoid.Sit = false player:Kick("Ты не владеешь этим транспортом!") end end end) end
+
+-- Настройка транспорта local function setupAllVehicles() for _, model in ipairs(workspace:GetChildren()) do if model:IsA("Model") and model:FindFirstChild("OwnerId") then for _, d in ipairs(model:GetDescendants()) do if d:IsA("VehicleSeat") then setupSeat(d) end end end end end
+
+-- Запуск initJobs() setupAllVehicles()
+
+
