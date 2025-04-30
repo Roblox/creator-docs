@@ -470,20 +470,9 @@ methods:
       To learn more about using this function, see **Animation Events** in the
       [Animation Editor](../../../animation/editor.md) article.
 
-      #### More About Keyframes
-
-      `Class.Keyframe` names can be set in the Roblox
-      [Animation Editor](../../../animation/editor.md) when creating or editing
-      an animation. They cannot, however, be set by a `Class.Script` on an
-      existing animation prior to playing it.
-
-      `Class.Keyframe` names do not need to be unique. For example, if an
-      `Class.Animation` has three keyframes named "EmitParticles," the connected
-      event returned by this function will fire each time one of these keyframes
-      is reached.
-
       See also:
 
+      - `Class.KeyframeMarker`
       - `Class.AnimationTrack`, controls the playback of an animation on a
         `Class.Humanoid` or `Class.AnimationController`
       - `Class.Keyframe`, holds the `Class.Pose|Poses` applied to joints in a
@@ -498,12 +487,12 @@ methods:
         type: string
         default: ''
         summary: |
-          The name of the `KeyFrameMarker` the signal is being created for.
+          The name of the `Class.KeyframeMarker` the signal is being created for. Not to be confused with the name of the `Class.Keyframe`.
     returns:
       - type: RBXScriptSignal
         summary: |
           The signal created and fired when the animation reaches the created
-          `KeyFrameMarker`.
+          `KeyframeMarker`. Not to be confused with the name of the `Class.Keyframe`.
     tags: []
     deprecation_message: ''
     security: None

@@ -165,9 +165,9 @@ properties:
       this property will move the scale as though `Model/ScaleTo` was called on
       it.
     description: |
-      Setting this property in the properties pane will scale the model as
+      Setting this property in the Properties window will scale the model as
       though `Model/ScaleTo` was called on it, scaling all descendant Instances
-      in the model such that the model has the specified scale factor relative
+      in the model, such as materials, images, and the 3D geometry of parts, so that the model has the specified scale factor relative
       to its original size.
 
       This property is only available in Studio and will throw an error if used

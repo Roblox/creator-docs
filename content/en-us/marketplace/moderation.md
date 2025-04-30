@@ -21,7 +21,7 @@ Archiving an asset allows you to remove an asset from the Roblox Marketplace pla
 
 If you archive an avatar item:
 
-- Your item will no longer be discoverable in Marketplace, and additional users will not be able to acquire it.
+- Your item will no longer be discoverable in Marketplace and additional users will not be able to acquire it.
 - Existing owners of your item will continue owning the item in the inventory and can equip it on their avatar.
 - The underlying development assets for the avatar item will continue to exist, and you can still insert the archived avatar item into Studio if the assetID is known.
 - An archived item may still be the subject of an IP takedown report, but your decision to archive the item will be considered when applying any account penalties related to the IP report.
@@ -30,7 +30,7 @@ To archive items:
 
 1. Navigate to **Creator Dashboard** > **Creations**.
 2. On the asset you intend to archive, click the three dots on the thumbnail.
-3. Select **Archive in Marketplace**
+3. Select **Archive in Marketplace**.
 
 <Alert severity ='warning'>
 This process is not a substitute for being vigilant about not infringing on the IP rights of others when creating and uploading content.

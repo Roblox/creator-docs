@@ -100,7 +100,7 @@ The following callbacks are called on every `Class.TextChatMessage` that is abou
 
 ## Migrate from legacy chat
 
-This section assists you in migrating from the [legacy chat system](../chat/legacy/legacy-chat-system.md) by providing alternative methods for implementing common chat functionalities and behaviors using `Class.TextChatService`.
+This section assists you in migrating from the legacy chat system by providing alternative methods for implementing common chat functionalities and behaviors using `Class.TextChatService`.
 
 1. In the [Explorer](../studio/explorer.md) window, select `Class.TextChatService`.
 2. In the [Properties](../studio/properties.md) window, find the `Class.TextChatService.ChatVersion|ChatVersion` dropdown and select `Enum.ChatVersion|TextChatService`.

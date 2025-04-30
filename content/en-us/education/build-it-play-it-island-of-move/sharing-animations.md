@@ -49,8 +49,8 @@ Animations saved in an `.RBXM` file can be imported into different rigs by yours
 ### Troubleshooting tips
 
 **Issue**: Animation Not Loading
-In the original `.RBXM` file, make sure there is a saved `Class.KeyFrameSequence` object.
+In the original `.RBXM` file, make sure there is a saved `Class.KeyframeSequence` object.
 
 <img src="../../assets/education/build-it-play-it-island-of-move/sharing-animations/animation-keyframe.png" width="50%" />
 
-If only a `Class.Keyframe` object was imported, try re-exporting the original animation and importing again. Make sure to export the named `Class.KeyFrameSequence` and not just a keyframe object.
+If only a `Class.Keyframe` object was imported, try re-exporting the original animation and importing again. Make sure to export the named `Class.KeyframeSequence` and not just a keyframe object.
