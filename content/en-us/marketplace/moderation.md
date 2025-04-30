@@ -26,6 +26,7 @@ If you archive an avatar item:
 - An archived item may still be the subject of an IP takedown report, but your decision to archive the item will be considered when applying any account penalties related to the IP report.
 
 To archive items:
+
 1. Navigate to **Creator Dashboard** > **Creations**.
 2. On the asset you intend to archive, click the three dots on the thumbnail.
 3. Select **Archive in Marketplace**
