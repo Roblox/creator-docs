@@ -112,6 +112,11 @@ This publishing advance is dependent on the type of Marketplace item being sold:
     <td>1500</td>
     <td>10000</td>
   </tr>
+    <tr>
+    <td>Shoes</td>
+    <td>600</td>
+    <td>5000</td>
+  </tr>
 </tbody>
 </table>
 
