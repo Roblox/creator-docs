@@ -17,7 +17,7 @@ If you believe an asset is infringing on your IP, or that one of your assets has
 
 ## Archive assets
 
-Archiving an asset allows you to remove an asset from the Roblox platform. This process can be used to archive both 2D and 3D avatar items. At this time, archiving Limited items and Bundles are not supported.
+Archiving an asset allows you to remove an asset from the Roblox platform. This process can be used to archive both 2D and 3D avatar items. Avatar items may only be archived if they were published at least 180 days prior. At this time, archiving Limited items is not supported.
 
 You can request a one-time permanent archival of your own items by filling out the support form [here](https://www.roblox.com/support) and selecting "Asset Archive Request" under the DMCA category. This process supports both trademark and copyright requests.
 
