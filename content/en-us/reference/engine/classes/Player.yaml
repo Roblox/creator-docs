@@ -2539,7 +2539,12 @@ methods:
         type: double
         default: 0
         summary: |
-          Optional timeout for the request.
+          Optional timeout for the request, the maximum duration that the engine
+          attempts to stream regions around the `position` parameter before
+          abandoning the request. If you don't specify a value, the timeout is
+          effectively infinite. However, if the client is low on memory, the
+          engine abandons all streaming requests, even those that are still
+          within the timeout duration.
     returns:
       - type: ()
         summary: ''

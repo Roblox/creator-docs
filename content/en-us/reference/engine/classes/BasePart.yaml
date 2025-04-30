@@ -659,12 +659,14 @@ properties:
     summary: |
       Determines whether or not a part casts a shadow.
     description: |
-      Determines whether or not a part casts a shadow.
+      Determines whether or not a part casts a shadow. Disabling this property
+      for a given part can cause visual artifacts on the shadows cast upon that
+      part.
 
-      Note that this feature is **not** designed for performance enhancement. It
-      should only be disabled on parts where you want to hide the shadows the
-      part casts. Disabling this property for a given part may cause visual
-      artifacts on the shadows cast upon that part.
+      This property is not designed for performance enhancement, but in complex
+      scenes, strategically disabling it on certain parts can improve
+      performance. Due to the possibility of visual artifacts, we recommend
+      leaving it enabled on all parts in most situations.
     code_samples: []
     type: boolean
     tags: []

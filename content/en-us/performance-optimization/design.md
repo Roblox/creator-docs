@@ -27,9 +27,11 @@ More generally, testing on a variety of devices can help you check that the expe
 
 ## Streaming and teleportation
 
-- [Instance streaming](../workspace/streaming.md) lets Roblox dynamically load and unload 3D content and is a great option for most experiences, especially larger ones. Streaming improves join times, reduces memory footprint, and increases frame rates. For more information, see [Improving performance](improve.md#instance-streaming).
+- [Instance streaming](../workspace/streaming.md) lets Roblox dynamically load and unload 3D content and is a great option for most places, especially larger ones. Streaming improves join times, reduces memory footprint, and increases frame rate. For more information, see [Improve performance](improve.md#instance-streaming).
 
-- Break large places into more manageable ones and use [teleportation](../projects/teleport.md) to move players between them.
+- Consider breaking large places into more manageable ones and using [teleportation](../projects/teleport.md) to move players between them. This approach can reduce **initial** join times, but imposes additional join times as players teleport from place to place. Benefits to memory usage vary depending on the size of the place and whether you've enabled streaming.
+
+  Even ignoring performance considerations, you might find that having multiple places simplifies the development process, especially if you regularly add new content to your experience or are part of a larger team.
 
 ## Materials and duplication
 

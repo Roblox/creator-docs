@@ -71,6 +71,8 @@ After you have published a [start place](#start-place) to create the overall exp
 1. In the window that appears, click the tile for the experience you'd like to add the place to.
 1. In the next view, select **Add as a new place** and then click the **Create** button.
 
+Whether you choose to have a single, large place or many smaller places is mostly personal preference. For more information, see [Design for performance](../../performance-optimization/design.md#streaming-and-teleportation).
+
 ### Change the start place
 
 The [start place](#start-place) of an experience cannot be instantly swapped with another place, but you can change it through the following steps.

@@ -186,11 +186,11 @@ per frame on both the server and the client.
   - For objects that don't require collisions, disable collisions and use box or
     hull fidelity, since the collision geometry is still stored in memory.
   - You can render collision geometry for debug purposes in Studio by toggling
-  	on **Collision&nbsp;fidelity** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
+  	on **Collision fidelity** from the [Visualization options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 
     Alternatively, you can apply the `CollisionFidelity = Precise` filter to the [Explorer](../studio/explorer.md#property-filters) which shows a count of all mesh parts with the precise fidelity and allows you to easily select them.
 
-  - For an in-depth walkthrough on how to choose a collision fidelity option that balances your precision and performance requirements, see [Set Physics and Rendering Parameters](../tutorials/curriculums/environmental-art/assemble-an-asset-library.md#collisionfidelity).
+  - For an in-depth walkthrough on how to choose a collision fidelity option that balances your precision and performance requirements, see [Set physics and rendering parameters](../tutorials/curriculums/environmental-art/assemble-an-asset-library.md#collisionfidelity).
 
 ### MicroProfiler scopes
 
@@ -338,7 +338,7 @@ same `MeshId` are handled in a single draw call when:
   Objects like decals, textures, and particles don't batch well and introduce
   additional draw calls. Pay extra attention to these object types in a scene. In particular, property changes to `Class.ParticleEmitter|ParticleEmitters` can have a dramatic impact on performance.
 
-- **Missed Instancing Opportunities** - Often, a scene will include the same mesh
+- **Missed instancing opportunities** - Often, a scene will include the same mesh
   duplicated a number of times, but each copy of the mesh has different mesh or
   texture asset IDs. This prevents instancing and can lead to unnecessary draw
   calls.
@@ -362,7 +362,7 @@ same `MeshId` are handled in a single draw call when:
   near each other forces the engine to render the overlapping pixels multiple
   times, which can hurt performance. For more information on identifying and
   fixing this issue, see
-  [Delete Layered Transparencies](../tutorials/curriculums/environmental-art/optimize-your-experience.md#delete-layered-transparencies).
+  [Delete layered transparencies](../tutorials/curriculums/environmental-art/optimize-your-experience.md#delete-layered-transparencies).
 
 ### Mitigation
 
@@ -512,7 +512,7 @@ You can employ the following tactics to reduce unnecessary replication:
 
 ## Asset memory usage
 
-The highest impact mechanism available to creators to improve client memory usage is to enable [Instance Streaming](../workspace/streaming.md).
+The highest impact mechanism available to creators to improve client memory usage is to enable [Instance streaming](../workspace/streaming.md).
 
 ### Instance streaming
 
@@ -525,13 +525,13 @@ If instance streaming is enabled, you can increase the aggressiveness of it. For
 - Reducing use the persistent **StreamingIntegrity**.
 - Reducing the **streaming radius**.
 
-For more information on streaming options and their benefits, see [Streaming Properties](../workspace/streaming.md#streaming-properties).
+For more information on streaming options and their benefits, see [Streaming properties](../workspace/streaming.md#streaming-properties).
 
 ### Other common problems
 
 - **Asset duplication** - A common mistake is to upload the same asset multiple times resulting in different asset IDs. This can lead to the same content being loaded into memory multiple times.
 - **Excessive asset volume** - Even when assets are not identical, there are cases when opportunities to reuse the same asset and save memory are missed.
-- **Audio files** - Audio files can be a surprising contributor to memory usage, particularly if you load all of them into the client at once rather than only loading what you need for a portion of the experience. For strategies, see [Load Times](#load-times).
+- **Audio files** - Audio files can be a surprising contributor to memory usage, particularly if you load all of them into the client at once rather than only loading what you need for a portion of the experience. For strategies, see [Load times](#load-times).
 - **High resolution textures** - Graphics memory consumption for a texture is unrelated to the size of the texture on the disk, but rather the number of pixels in the texture.
   - For example, a 1024x1024 pixel texture consumes four times the graphics memory of a 512x512 texture.
   - Images uploaded to Roblox are transcoded to a fixed format, so there is no memory benefit to uploading images in a color model associated with fewer bytes per pixel. Similarly, compressing images prior to upload or removing the alpha channel from images that don't need it can decrease image size on disk, but either doesn't improve or only minimally improves memory usage. Though the engine automatically downscales texture resolution on some devices, the extent of the downscale depends on the device characteristics, and excessive texture resolution can still cause problems.
@@ -544,9 +544,9 @@ For more information on streaming options and their benefits, see [Streaming Pro
   - Though there is no API to detect similarity of assets automatically, you can collect all the image asset IDs in your place (either manually or with a script), download them, and compare them using external comparison tools.
   - For mesh parts, the best strategy is to take unique mesh IDs and organize them by size to manually identify duplicates.
   - Instead of using separate textures for different colors, upload a single texture and use the `Class.SurfaceAppearance.Color` property to apply various tints to it.
-- **Importing assets in map separately** - Instead of importing an entire map at once, import and reconstruct assets in the map individually and reconstruct them. The 3D importer doesn't do any de-duplication of meshes, so if you were to import a large map with a lot of separate floor tiles, each of those tiles would be imported as a separate asset (even if they are duplicates). This can lead to performance and memory issues down the line, as each mesh is treated as individually and takes up memory and draw calls.
+- **Import assets in map separately** - Instead of importing an entire map at once, import and reconstruct assets in the map individually and reconstruct them. The 3D importer doesn't do any de-duplication of meshes, so if you were to import a large map with a lot of separate floor tiles, each of those tiles would be imported as a separate asset (even if they are duplicates). This can lead to performance and memory issues down the line, as each mesh is treated as individually and takes up memory and draw calls.
 - **Limit the pixels of images** to no more than the necessary amount. Unless an image is occupying a large amount of physical space on the screen, it usually needs at most 512x512 pixels. Most minor images should be smaller than 256x256 pixels.
-- **Use Trim Sheets** to ensure maximum texture reuse in 3D maps. For steps and examples on how to create trim sheets, see [Creating Trim Sheets](../resources/beyond-the-dark/building-architecture.md#creating-trim-sheets).
+- **Use trim sheets** to ensure maximum texture reuse in 3D maps. For steps and examples on how to create trim sheets, see [Create trim sheets](../resources/beyond-the-dark/building-architecture.md#create-trim-sheets).
 
 ## Load times
 
@@ -554,7 +554,7 @@ Many experiences implement custom loading screens and use the `Class.ContentProv
 
 The advantage of this approach is that it lets you ensure important parts of your experience are fully loaded without pop-in. However, a common mistake is overutilizing this method to preload more assets than are actually required.
 
-An example of a bad practice is loading the _entire_ `Class.Workspace`. While this might prevent texture pop-in, it significantly increases load time.
+An example of a bad practice is loading the entire `Class.Workspace`. While this might prevent texture pop-in, it significantly increases load time.
 
 Instead, only use `Class.ContentProvider:PreloadAsync()` in necessary situations, which include:
 
