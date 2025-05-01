@@ -168,7 +168,7 @@ print(testDictionary[part]) -- true
 
 ### Write to dictionaries
 
-To define or rewrite the value of a new or existing dictionary key, declare the key name in brackets (`[key]`) or if the key is a string use (`.key`) followed by `=` and the value:
+To define or rewrite the value of a new or existing dictionary key, declare the key name in brackets (`[key]`) or, if the key is a string, use (`.key`) followed by `=` and the value:
 
 ```lua
 local testDictionary = {
@@ -345,7 +345,7 @@ local function deepFreeze(target)
 
 	-- Check each key of the table and freeze it if it's a table
 	for _, value in target do
-		-- Making sure the value isn't frozen, as if it already is an error will occur
+		-- Make sure the value isn't frozen; if it already is, an error will occur
 		if type(value) == "table" and table.isfrozen(value) == false then
 			deepFreeze(v)
 		end
