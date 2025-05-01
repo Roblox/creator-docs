@@ -104,6 +104,7 @@ https://en.wikipedia.org/wiki/Percent-encoding
 https://en.wikipedia.org/wiki/Photogrammetry
 https://en.wikipedia.org/wiki/Quaternion
 https://en.wikipedia.org/wiki/Radian
+https://en.wikipedia.org/wiki/REST
 https://en.wikipedia.org/wiki/Shard_(database_architecture)
 https://en.wikipedia.org/wiki/Shard_(database_architecture
 https://en.wikipedia.org/wiki/Type_introspection
