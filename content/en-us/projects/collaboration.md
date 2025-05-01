@@ -165,6 +165,44 @@ To quickly jump to a location in the workspace or to the exact line in a script 
 
 <img src="../assets/studio/collaboration/Live-Collaborators-Join.png" width="280" />
 
+## Comments
+
+<Alert severity="success">
+The comments feature is rolling out gradually over the next month. All Studio users will have access by 30 May 2025.
+</Alert>
+
+Roblox Studio has a comments feature that let you pinpoint an object in the 3D viewport and start a conversation with your collaborators, leave to-do notes, and more. Comments update in real-time, which lets you and your team receive and respond to feedback without disrupting your workflow in Studio.
+
+To use this feature, you must have [added collaborators](#manage-collaborators) to your experience.
+
+### Create comments
+
+To create a comment, click the **Comment** button in the upper-right corner of Studio (keyboard shortcut <kbd>C</kbd>).
+
+<img src="../assets/studio/comments/annotations-button.png" alt="Button for comments in the upper-right." width="400" />
+
+In the viewport, note how your cursor turns blue. Click on any object that inherits from `Class.BasePart` (most do, including terrain), type your comment, and click **Submit**.
+
+<img src="../assets/studio/comments/annotations-blue.png" alt="Blue cursor in the viewport." width="300" />
+
+To tag a collaborator in your comment, use the `@username` syntax. Collaborators can then check the [Comments window](#manage-comments) and filter for comments that mention them.
+
+<img src="../assets/studio/comments/annotations-tag.png" alt="Creating a comment in the viewport." width="700" />
+
+- In a user-owned experience, any user with play or edit permissions is available in the tagging dropdown.
+- In a group-owned experience, any user within the group is available in the tagging dropdown.
+
+### Manage comments
+
+The **Comments** window shows a list of all comments, with the most-recent at the top. To open the window, switch to the **View** tab and click the **Comments** button.
+
+<img src="../assets/studio/comments/annotations-window.png" alt="List of comments in the window." width="400" />
+
+- Single-click on a comment to show the full conversation.
+- Double-click on a comment to zoom in on it in the viewport.
+- Use the **&ctdot;** menu in the upper-right corner to show resolved comments, filter for only the comments that you've been tagged in, or hide comments in the viewport.
+- Resolve comments as you and your team address them. After you resolve a comment, it disappears from both the viewport and the main list, but it isn't completely gone; you can always unresolve it later.
+
 ## Collaborative scripting
 
 In a collaborative session, you can code together in real-time through [live scripting](#live-scripting), or you can [draft](#drafts-mode) scripts in a more focused environment before committing them to a collaborator‑shared repository.
