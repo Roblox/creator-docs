@@ -55,8 +55,10 @@ functions:
       cycle.
     description: |
       Accepts a function or a thread (as returned by coroutine.create) and
-      defers it until the end of the current resumption cycle, at which point it
-      is resumed with the engine's scheduler like with `Library.task.spawn()`.
+      defers it until the end of the current resumption cycle, which is a point
+      later in the current frame, but never during the next frame. Once it reaches
+      the end of the current resumption cycle, the function or thread is resumed
+      with the engine's scheduler like with `Library.task.spawn()`.
       Arguments after the first are sent to the function/thread.
 
       This function should be used when a similar behavior to
