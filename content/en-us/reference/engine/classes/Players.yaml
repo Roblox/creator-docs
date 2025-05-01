@@ -386,29 +386,16 @@ methods:
       they are in-game.
     description: |
       This function searches each `Class.Player` in `Class.Players` for one
-      whose `Class.Player.UserId` matches the given UserId. If such a player
-      does not exist, it simply returns `nil`. It is equivalent to the following
-      function:
-
-      ```lua
-      local Players = game:GetService("Players")
-      local function getPlayerByUserId(userId)
-      	for _, player in Players:GetPlayers() do
-      		if player.UserId == userId then
-      			return player
-      		end
-      	end
-      end
-      ```
+      whose `Class.Player.UserId` matches the given `userId`. If such a player
+      does not exist, it returns `nil`.
 
       This method is useful in finding the purchaser of a developer product
-      using `Class.MarketplaceService.ProcessReceipt`, which provides a table
-      that includes the purchaser's UserId and not a reference to the Player
-      object itself. Most games will require a reference to the player in order
-      to grant products.
+      using `Class.MarketplaceService.ProcessReceipt` which provides a table
+      that includes the purchaser's `Class.Player.UserId|UserId` and not a
+      reference to the `Class.Player` object itself. Most experiences will
+      require a reference to the player in order to grant products.
     code_samples:
       - Players-GetPlayerByUserId1
-      - ProcessReceipt-Example
     parameters:
       - name: userId
         type: int64
