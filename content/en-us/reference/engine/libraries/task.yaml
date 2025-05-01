@@ -1,10 +1,10 @@
 name: task
 type: library
 summary: |
-  Allows for functions and threads to be coordinated with the Task Scheduler.
+  Allows for functions and threads to be coordinated with the engine's scheduler.
 description: |
   The **task** library allows for functions and threads to be scheduled with the
-  Task Scheduler.
+  engine's scheduler.
 
   The functions available in this library generally support functions and
   threads. In most cases using a function is sufficient, but for more advanced
@@ -15,29 +15,30 @@ properties:
 functions:
   - name: task.spawn
     summary: |
-      Calls/resumes a function/coroutine immediately through the engine
+      Calls/resumes a function/coroutine immediately through the engine's
       scheduler.
     description: |
-      Accepts a function or a thread (as returned by coroutine.create) and
-      calls/resumes it immediately through the engine's scheduler. Arguments
-      after the first are sent to the function/thread.
+      Accepts a function or a thread (as returned by
+      `Library.coroutine.create()`) and calls/resumes it immediately through the
+      engine's scheduler. Arguments after the first are sent to the
+      function/thread.
 
-      This function is based on the fastSpawn pattern rather than being a
-      replacement for the deprecated global `spawn` function. It is recommended
-      that this function be used in place of fastSpawn.
+      This function is based on the `fastSpawn` pattern rather than being a
+      replacement for the deprecated global `spawn()` function. It is
+      recommended that this function be used in place of `fastSpawn`.
 
       If the calling script is currently running in a serial execution phase,
       then the spawned function or thread is resumed in the current serial
       execution phase. If the calling script is currently running in a parallel
       execution phase, then the spawned function or thread is resumed in the
-      current parallel execution phase. For more information, see
-      [Parallel Luau](../../../scripting/multithreading.md).
+      current parallel execution phase. For more information, see [Parallel
+      Luau](../../../scripting/multithreading.md).
     parameters:
       - name: functionOrThread
         type: function | thread
         default:
         summary: |
-          A function or a thread returned by coroutine.create.
+          A function or a thread returned by `Library.coroutine.create()`.
       - name: ...
         type: Variant
         default:
@@ -54,12 +55,9 @@ functions:
       Calls/resumes a function/coroutine at the end of the current resumption
       cycle.
     description: |
-      Accepts a function or a thread (as returned by coroutine.create) and
-      defers it until the end of the current resumption cycle, which is a point
-      later in the current frame, but never during the next frame. Once it reaches
-      the end of the current resumption cycle, the function or thread is resumed
-      with the engine's scheduler like with `Library.task.spawn()`.
-      Arguments after the first are sent to the function/thread.
+      Accepts a function or a thread (as returned by
+      `Library.coroutine.create()`) and defers it until the end of the current
+      resume point within the current frame.
 
       This function should be used when a similar behavior to
       `Library.task.spawn()` is desirable, but the thread does not need to run
@@ -69,8 +67,8 @@ functions:
       then the deferred function or thread is resumed in a serial execution
       phase. If the calling script is currently running in a parallel execution
       phase, then the deferred function or thread is resumed in a parallel
-      execution phase. For more information, see
-      [Parallel Luau](../../../scripting/multithreading.md).
+      execution phase. For more information, see [Parallel
+      Luau](../../../scripting/multithreading.md).
     parameters:
       - name: functionOrThread
         type: function | thread
@@ -93,17 +91,18 @@ functions:
       Schedules a function/coroutine to be called/resumed on the next Heartbeat
       after the given duration (in seconds) has passed, without throttling.
     description: |
-      Accepts a function or a thread (as returned by coroutine.create) and
-      schedules it to be called/resumed on the next
-      `Class.RunService.Heartbeat|Heartbeat` after the given amount of time in
-      seconds has elapsed. Arguments after the second are sent to the
+      Accepts a function or a thread (as returned by
+      `Library.coroutine.create()`) and schedules it to be called/resumed on the
+      next `Class.RunService.Heartbeat|Heartbeat` after the given amount of time
+      in seconds has elapsed. Arguments after the second are sent to the
       function/thread.
 
-      This function differs from the deprecated global `delay` function in that
-      **no throttling occurs**: on the very same Heartbeat step in which enough
-      time has passed, the function is guaranteed to be called/resumed.
-      Providing a duration of zero (0) will guarantee that the function is
-      called on the very next Heartbeat.
+      This function differs from the deprecated global `delay()` function in
+      that **no throttling occurs**: on the very same
+      `Class.RunService.Heartbeat|Heartbeat` step in which enough time has
+      passed, the function is guaranteed to be called/resumed. Providing a
+      duration of zero (`0`) will guarantee that the function is called on the
+      very next `Class.RunService.Heartbeat|Heartbeat`.
 
       You can calculate the actual time passed by calling `Library.os.clock()`
       upon scheduling and in the scheduled function.
@@ -112,8 +111,8 @@ functions:
       then the delayed function or thread is resumed in a serial execution
       phase. If the calling script is currently running in a parallel execution
       phase, then the delayed function or thread is resumed in a parallel
-      execution phase. For more information, see
-      [Parallel Luau](../../../scripting/multithreading.md).
+      execution phase. For more information, see [Parallel
+      Luau](../../../scripting/multithreading.md).
     parameters:
       - name: duration
         type: number
@@ -142,19 +141,19 @@ functions:
       Causes the following code to be run in parallel.
     description: |
       If the calling script is currently running in a serial execution phase,
-      `desynchronize` suspends the script and the script will be resumed in the
-      next parallel execution phase. If the calling script is currently running
-      in a parallel execution phase, `desynchronize` returns immediately and has
-      no effect.
+      `desynchronize()` suspends the script and the script will be resumed in
+      the next parallel execution phase. If the calling script is currently
+      running in a parallel execution phase, `desynchronize()` returns
+      immediately and has no effect.
 
-      Only scripts which are descendants of an Actor may call this method. If a
-      script outside of an Actor calls this method, an error will be raised.
-      ModuleScript's may also call `desynchronize` as long as the instantiation
-      of the module calling it was required by a script that is a descendant of
-      an Actor.
+      Only scripts which are descendants of an `Class.Actor` may call this
+      method. If a script outside of an `Class.Actor` calls this method, an
+      error will be raised. `Class.ModuleScript|ModuleScripts` may also call
+      `desynchronize()` as long as the instantiation of the module calling it
+      was required by a script that is a descendant of an `Class.Actor`.
 
-      For more information, see
-      [Parallel Luau](../../../scripting/multithreading.md).
+      For more information, see [Parallel
+      Luau](../../../scripting/multithreading.md).
     parameters:
     returns:
       - type: ()
@@ -166,19 +165,19 @@ functions:
       Causes the following code to be run in serial.
     description: |
       If the calling script is currently running in a parallel execution phase,
-      `synchronize` suspends the script and the script will be resumed in the
+      `synchronize()` suspends the script and the script will be resumed in the
       next serial execution phase. If the calling script is currently running in
-      a serial execution phase, `synchronize` returns immediately and has no
+      a serial execution phase, `synchronize()` returns immediately and has no
       effect.
 
-      Only scripts which are descendants of an Actor may call this method. If a
-      script outside of an Actor calls this method, an error will be raised.
-      ModuleScript's may also call `synchronize` as long as the instantiation of
-      the module calling it was required by a script that is a descendant of an
-      Actor.
+      Only scripts which are descendants of an `Class.Actor` may call this
+      method. If a script outside of an `Class.Actor` calls this method, an
+      error will be raised. `Class.ModuleScript|ModuleScripts` may also call
+      `synchronize()` as long as the instantiation of the module calling it was
+      required by a script that is a descendant of an `Class.Actor`.
 
-      For more information, see
-      [Parallel Luau](../../../scripting/multithreading.md).
+      For more information, see [Parallel
+      Luau](../../../scripting/multithreading.md).
     parameters:
     returns:
       - type: ()
@@ -187,19 +186,18 @@ functions:
     code_samples:
   - name: task.wait
     summary: |
-      Yields the current thread until the next Heartbeat in which the given
-      duration (in seconds) has passed, without throttling.
+      Yields the current thread without throttling.
     description: |
       Yields the current thread until the given duration (in seconds) has
       elapsed, then resumes the thread on the next
       `Class.RunService.Heartbeat|Heartbeat` step. The actual amount of time
       elapsed is returned.
 
-      If no duration is given, it will default to zero (0). This means the
+      If no duration is given, it will default to zero (`0`). This means the
       thread resumes on the very next step, which is equivalent in behavior to
-      `RunService.Heartbeat:Wait()`
+      `Class.RunService.Heartbeat:Wait()`
 
-      Unlike the deprecated global `wait`, this function **does not throttle**
+      Unlike the deprecated global `wait()`, this function **does not throttle**
       and guarantees the resumption of the thread on the first Heartbeat that
       occurs when it is due. This function also only returns the elapsed time
       and nothing else.
@@ -226,9 +224,9 @@ functions:
       Cancels a thread, preventing it from being resumed.
     description: |
       Cancels a thread and closes it, preventing it from being resumed manually
-      or by the task scheduler.
+      or by the engine's scheduler.
 
-      This function can be used with other members of the task library that
+      This function can be used with other members of the **task** library that
       return a thread to cancel them before they are resumed. For example:
 
       ```lua
@@ -239,15 +237,13 @@ functions:
       task.cancel(thread)
       ```
 
-      Note: Threads may be in a state where it is impossible to cancel them. For
-      example, the currently executing thread and threads that have resumed
-      another coroutine may not be cancelled. If this is the case, a lua error
-      will be generated.
-
-      However, code should not rely on specific thread states or conditions
-      causing `Library.task.cancel()` to fail. It is possible that future
-      updates will eliminate these constraints and allow threads in these states
-      to be successfully cancelled.
+      Note that threads may be in a state where it is impossible to cancel them.
+      For example, the currently executing thread and threads that have resumed
+      another coroutine may not be cancelled. If this is the case, an error will
+      be generated. However, code should not rely on specific thread states or
+      conditions causing `Library.task.cancel()` to fail. It is possible that
+      future updates will eliminate these constraints and allow threads in these
+      states to be successfully cancelled.
     parameters:
       - name: thread
         type: thread
