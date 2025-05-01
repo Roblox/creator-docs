@@ -809,27 +809,6 @@ properties:
       can_save: false
     capabilities: []
     writeCapabilities: []
-  - name: Studio.DefaultScriptFileDir
-    summary: |
-      Specifies the default prompt directory that will be opened when the user
-      activates the `Execute Script` button in Roblox Studio.
-    description: |
-      Specifies the default prompt directory that will be opened when the user
-      activates the `Execute Script` button in Roblox Studio.
-    code_samples: []
-    type: QDir
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Directories
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-    writeCapabilities: []
   - name: Studio.DeprecatedObjectsShown
     summary: |
       If set to true, deprecated objects will be shown in the Advanced Objects

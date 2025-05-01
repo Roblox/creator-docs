@@ -65,7 +65,7 @@ properties:
     deprecation_message: ''
     security:
       read: None
-      write: NotAccessibleSecurity
+      write: RobloxScriptSecurity
     thread_safety: ReadSafe
     category: Data
     serialization:

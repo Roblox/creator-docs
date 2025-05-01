@@ -26,13 +26,8 @@ items:
     value: 3
     tags: []
     deprecation_message: ''
-  - name: Invalid
-    summary: ''
-    value: 4
-    tags: []
-    deprecation_message: ''
   - name: Sharing
     summary: ''
-    value: 5
+    value: 4
     tags: []
     deprecation_message: ''

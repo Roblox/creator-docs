@@ -61,19 +61,19 @@ When `Class.ChannelTabsConfiguration` is enabled, each default `Class.TextChanne
 	</thead>
 	<tbody>
 		<tr>
-			<td>**RBXGeneral**</td>
+			<td>`RBXGeneral`</td>
 			<td>**General**</td>
 		</tr>
 		<tr>
-			<td>**RBXSystem**</td>
-			<td>**General** (combined into a single tab with **RBXGeneral**)</td>
+			<td>`RBXSystem`</td>
+			<td>**General** (combined into a single tab with `RBXGeneral`)</td>
 		</tr>
 		<tr>
-			<td>**RBXTeam**</td>
+			<td>`RBXTeam`</td>
 			<td>**Team**</td>
 		</tr>
 		<tr>
-			<td>**RBXWhisper**</td>
+			<td>`RBXWhisper`</td>
 			<td>User name of the other player</td>
 		</tr>
 	</tbody>
@@ -388,13 +388,15 @@ TextChatService.OnChatWindowAdded = function(message: TextChatMessage)
 end
 ```
 
-## Send messages from non‑player sources
+## Messages from non‑player sources
 
-Sometimes, you might want to show non‑player dialogue in the chat window, such as "speech" from a public address system or a non‑player character.
+When `Class.TextChatService.CreateDefaultTextChannels` is `true`, one of the default text channels is the `RBXSystem` channel. The default chat scripts automatically display system messages in this channel. You can customize the appearance of these messages using the `Class.TextChannel.OnIncomingMessage` callback.
+
+You might want to customize or alter the system messages that are automatically emitted by the chat system. Since the default system messages are localized for users, you should reference them by `Class.TextChatMessage.Metadata` in your [text chat callbacks](../chat/in-experience-text-chat.md#text-chat-hooks-and-callbacks) if you wish to customize their appearance. For example, you could use `Class.TextChatMessage.Metadata|Metadata` to identify system messages, error messages, or messages from specific systems in your experience.
 
 ### System
 
-To deliver a system message to the local player, call `Class.TextChannel:DisplaySystemMessage()|DisplaySystemMessage()` from the default **RBXGeneral** channel with a prefix before the player's display name.
+To deliver a system message to the local player, such as "speech" from a public address system, call `Class.TextChannel:DisplaySystemMessage()|DisplaySystemMessage()` from the default `RBXGeneral` channel with a prefix before the player's display name.
 
 ```lua title="Client Script"
 local Players = game:GetService("Players")
@@ -410,151 +412,6 @@ generalChannel:DisplaySystemMessage(PREFIX .. player.DisplayName)
 ```
 
 <img src="../assets/players/in-experience-text-chat/Chat-System.jpg" width="800" alt="Image showing a basic system message in the chat window." />
-
-For a more detailed guide on how to customize the appearance of system messages, see [Customizing system messages](./examples/custom-system-messages.md).
-
-#### Default system messages
-
-When `Class.TextChatService.CreateDefaultTextChannels` is `true`, one of the default text channels is the `RBXSystem` channel. The default chat scripts automatically display system messages in this channel. You can customize the appearance of these messages using the `Class.TextChannel.OnIncomingMessage` callback.
-
-You might want to customize or alter the system messages that are automatically emitted by the chat system. Since the default system messages are localized for users, you should reference them by `TextChatMessage.Metadata` in your [text chat callbacks](../chat/in-experience-text-chat.md#text-chat-hooks-and-callbacks) if you wish to customize their appearance.
-
-Below is a reference of the default system messages that are emitted by the chat system:
-
-<table>
-	<thead>
-		<tr>
-			<th>Metadata</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><b>Roblox.ChatTranslation.ChatWindow.SystemMessage</b></td>
-			<td>Indicates that the system may translate chat messages for the Player</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.Notification.Friend.Joined</b></td>
-			<td>Displayed when one of the Player's friends join the experience</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.MessageStatus.Warning.Floodchecked</b></td>
-			<td>Displayed when the Player's sent TextChatMessage was rate limited by the Server</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.MessageStatus.Warning.TextFilterFailed</b></td>
-			<td>Displayed when the Player's sent TextChatMessage could not be displayed due to a Text Filter issue</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.MessageStatus.Warning.InvalidPrivacySettings</b></td>
-			<td>Displayed when the Player's privacy settings prevent them from sending a TextChatMessage</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.MessageStatus.Warning.MessageTooLong</b></td>
-			<td>Displayed when the Player sends a TextChatMessage with content that is too long</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.MessageStatus.Warning.Unknown</b></td>
-			<td>Displays when the system fails to send the Player's TextChatMessage for an unknown reason</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.Help.Info</b></td>
-			<td>Displays the response from the RBXHelpCommand TextChatCommand</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.Version.Info</b></td>
-			<td>Displays the response from the RBXVersionCommand TextChatCommand</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.Team.Success.NowInTeam</b></td>
-			<td>Displayed when the Player's team changes</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.Team.Error.CannotTeamChatIfNotInTeam</b></td>
-			<td>Displayed when the Player triggers the RBXTeamCommand TextChatCommand without being on a `Class.Team`</td>
-		</tr>
-				<tr>
-			<td><b>Roblox.Whisper.Info.Success</b></td>
-			<td>Displayed when the Player successfully starts a Whisper conversation</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.Whisper.Welcome.Sent</b></td>
-			<td>Displayed when entering a Whisper TextChannel</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.Whisper.Error.CannotWhisperToSelf</b></td>
-			<td>An error response from the RBXWhisperCommand TextChatCommand</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.Whisper.Error.TargetDoesNotExist</b></td>
-			<td>An error response from the RBXWhisperCommand TextChatCommand</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.Whisper.Error.TooManyMatches</b></td>
-			<td>An error response from the RBXWhisperCommand TextChatCommand</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.Whisper.Error.Unknown</b></td>
-			<td>An error response from the RBXWhisperCommand TextChatCommand</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.Emote.Error.DoesNotExist</b></td>
-			<td>An error response from the RBXEmoteCommand TextChatCommand</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.Emote.Error.UserEmotesNotEnabled</b></td>
-			<td>An error response from the RBXEmoteCommand TextChatCommand</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.Emote.Error.TemporarilyUnavailable</b></td>
-			<td>An error response from the RBXEmoteCommand TextChatCommand</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.Emote.Error.NotSupported</b></td>
-			<td>An error response from the RBXEmoteCommand TextChatCommand</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.Emote.Error.SwitchToR15</b></td>
-			<td>An error response from the RBXEmoteCommand TextChatCommand</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.Emote.Error.AnimationPlaying</b></td>
-			<td>An error response from the RBXEmoteCommand TextChatCommand</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.Mute.Error.PlayerNotFound</b></td>
-			<td>An error response from the RBXMuteCommand TextChatCommand</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.Mute.Error.MultipleMatches</b></td>
-			<td>An error response from the RBXMuteCommand TextChatCommand</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.Mute.Error.CannotMuteSelf</b></td>
-			<td>An error response from the RBXMuteCommand TextChatCommand</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.Mute.Info.Success</b></td>
-			<td>An success response from the RBXMuteCommand TextChatCommand</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.Unmute.Error.PlayerNotFound</b></td>
-			<td>An error response from the RBXUnmuteCommand TextChatCommand</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.Unmute.Error.MultipleMatches</b></td>
-			<td>An error response from the RBXUnmuteCommand TextChatCommand</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.Unmute.Error.CannotMuteSelf</b></td>
-			<td>An error response from the RBXUnmuteCommand TextChatCommand</td>
-		</tr>
-		<tr>
-			<td><b>Roblox.Unmute.Info.Success</b></td>
-			<td>An success response from the RBXUnmuteCommand TextChatCommand</td>
-		</tr>
-	</tbody>
-</table>
 
 ### NPC/object
 

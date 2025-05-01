@@ -302,7 +302,9 @@ properties:
       - NotReplicated
       - Deprecated
     deprecation_message: |
-      This has been deprecated and directly renamed to `Class.TestService.ThrottlePhysicsToRealtime|ThrottlePhysicsToRealtime` to better reflect its practical use.
+      This has been deprecated and directly renamed to
+      `Class.TestService.ThrottlePhysicsToRealtime|ThrottlePhysicsToRealtime` to
+      better reflect its practical use.
     security:
       read: None
       write: None
@@ -418,9 +420,11 @@ properties:
     writeCapabilities: []
   - name: TestService.ThrottlePhysicsToRealtime
     summary: |
-      Sets whether the test should be throttled to simulate time according to real world time or as fast as possible.
+      Sets whether the test should be throttled to simulate time according to
+      real world time or as fast as possible.
     description: |
-      Sets whether the test should be throttled to simulate time according to real world time or as fast as possible.
+      Sets whether the test should be throttled to simulate time according to
+      real world time or as fast as possible.
     code_samples: []
     type: boolean
     tags: []

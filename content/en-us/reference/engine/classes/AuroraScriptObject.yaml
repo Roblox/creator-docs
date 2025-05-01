@@ -1,0 +1,50 @@
+name: AuroraScriptObject
+type: class
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Deprecated
+deprecation_message: ''
+properties:
+  - name: AuroraScriptObject.BehaviorWeak
+    summary: ''
+    description: ''
+    code_samples: []
+    type: AuroraScript
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: AuroraScriptObject.BoundInstanceWeak
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+methods: []
+events: []
+callbacks: []

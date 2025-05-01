@@ -258,6 +258,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/AudioPlayer.yaml
         ignoreTranslation: true
+      - title: AudioRecorder
+        path: /reference/engine/classes/AudioRecorder
+        type: engineapi
+        source: /reference/engine/classes/AudioRecorder.yaml
+        ignoreTranslation: true
       - title: AudioReverb
         path: /reference/engine/classes/AudioReverb
         type: engineapi
@@ -272,6 +277,11 @@ navigation:
         path: /reference/engine/classes/AudioTextToSpeech
         type: engineapi
         source: /reference/engine/classes/AudioTextToSpeech.yaml
+        ignoreTranslation: true
+      - title: AuroraScriptObject
+        path: /reference/engine/classes/AuroraScriptObject
+        type: engineapi
+        source: /reference/engine/classes/AuroraScriptObject.yaml
         ignoreTranslation: true
       - title: AvatarCreationService
         path: /reference/engine/classes/AvatarCreationService
