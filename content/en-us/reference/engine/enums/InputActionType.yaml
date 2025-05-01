@@ -11,7 +11,7 @@ items:
     value: 0
     tags: []
     deprecation_message: ''
-  - name: Float
+  - name: Direction1D
     summary: ''
     value: 1
     tags: []

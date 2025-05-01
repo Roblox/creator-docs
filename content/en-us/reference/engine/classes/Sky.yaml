@@ -165,6 +165,24 @@ properties:
     capabilities:
       - Environment
     writeCapabilities: []
+  - name: Sky.SkyboxOrientation
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: Sky.SkyboxRt
     summary: |
       Asset ID for the right surface of the skybox.

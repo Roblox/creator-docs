@@ -89,7 +89,7 @@ The `Class.TextChannel.ShouldDeliverCallback` callback should be defined on the 
 
 ### Customize message display
 
-The default `Class.TextChatService` UI relies on [rich text](../ui/rich-text.md) to format and customize how messages are displayed. You can use the following callbacks to format messages before they are displayed to users, for example to add colors or [chat tags](../chat/chat-window.md#add-chat-tags) to user names or format message content.
+The default `Class.TextChatService` UI relies on [rich text](../ui/rich-text.md) to format and customize how messages are displayed. You can use the following callbacks to format messages before they are displayed to users, for example to add colors or [chat tags](../chat/examples/group-chat-tags.md) to user names or format message content.
 
 The following callbacks are called on every `Class.TextChatMessage` that is about to be displayed, which lets you customize chat window appearance based on the `Class.TextChannel`, `Class.TextSource`, or `Class.TextChatMessage` content. When a client sends a message, these callbacks are called once when the message is sent to the server and the `Class.TextChatMessage.Status` value will be `Enum.TextChatMessageStatus.Sending`. Once the message is received by the server and is being delivered to other users, the sender client receives the message again with an updated `Enum.TextChatMessageStatus` value.
 

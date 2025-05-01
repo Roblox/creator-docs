@@ -289,6 +289,24 @@ properties:
     capabilities:
       - Physics
     writeCapabilities: []
+  - name: LinearVelocity.ReactionForceEnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mode
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: LinearVelocity.RelativeTo
     summary: |
       Sets the `Enum.ActuatorRelativeTo` property for the `Class.LinearVelocity`

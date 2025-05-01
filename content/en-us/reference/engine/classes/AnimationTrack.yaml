@@ -487,12 +487,14 @@ methods:
         type: string
         default: ''
         summary: |
-          The name of the `Class.KeyframeMarker` the signal is being created for. Not to be confused with the name of the `Class.Keyframe`.
+          The name of the `Class.KeyframeMarker` the signal is being created
+          for. Not to be confused with the name of the `Class.Keyframe`.
     returns:
       - type: RBXScriptSignal
         summary: |
           The signal created and fired when the animation reaches the created
-          `KeyframeMarker`. Not to be confused with the name of the `Class.Keyframe`.
+          `KeyframeMarker`. Not to be confused with the name of the
+          `Class.Keyframe`.
     tags: []
     deprecation_message: ''
     security: None
