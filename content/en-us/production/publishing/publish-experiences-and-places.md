@@ -95,8 +95,6 @@ The [start place](#start-place) of an experience cannot be instantly swapped wit
 
 You can customize your experience's settings from the [Creator Dashboard][creatordashboard] or within Studio's [Game Settings](../../studio/game-settings.md). Some settings are only configurable within Studio while others are only configurable on the dashboard.
 
-### Creator Dashboard
-
 Most experience settings are configurable from the [Creator Dashboard][creatordashboard], including [localization](../localization/index.md), access settings, [analytics](../analytics/index.md), and [monetization products](../monetization/index.md). You can also fill out the [Maturity & Compliance questionnaire](../promotion/content-maturity.md) required for generating a content maturity label and content descriptors that players use to make informed decisions about what content they interact with. To configure an experience:
 
 1. Select the experience you want to configure from your [list of creations](https://create.roblox.com/dashboard/creations) on the dashboard.
@@ -111,10 +109,6 @@ Regardless of whether or not you activate the toggle, players do not face modera
 <Alert severity="warning">
 In-experience assets and experience metadata cannot contain strong language, even if the toggle is on and your experience is rated 17+. If you include strong language in your assets or experience page, your experience will be moderated.
 </Alert>
-
-### Game settings
-
-Once an experience is published, the [Game Settings](../../studio/game-settings.md) window contains many Studio-level settings and customization options. To open it, click the **Game Settings** button in the toolbar's **Home** tab.
 
 ## Release to the public
 

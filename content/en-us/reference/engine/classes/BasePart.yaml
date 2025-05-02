@@ -255,8 +255,16 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: BasePart.AudioCanCollide
-    summary: ''
-    description: ''
+    summary: |
+      Determines whether the part will physically interact with audio
+      simulation, similar to `Class.BasePart.CastShadow|CastShadow` for
+      lighting.
+    description: |
+      `AudioCanCollide` determines whether the part will physically interact
+      with audio simulation, similar to `Class.BasePart.CastShadow|CastShadow`
+      for lighting.
+
+       When disabled, audio passes through the part; it is not occluded or reflected.
     code_samples: []
     type: boolean
     tags: []

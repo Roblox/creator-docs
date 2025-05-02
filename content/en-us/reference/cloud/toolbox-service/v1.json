@@ -9,7 +9,8 @@
     "/toolbox-service/v2/assets:search": {
       "get": {
         "tags": ["ToolboxService"],
-        "summary": "Search Creator Store for assets.",
+        "summary": "Search Creator Store Assets",
+        "description": "Search Creator Store for assets.",
         "parameters": [
           {
             "name": "searchCategoryType",
