@@ -23,10 +23,6 @@ functions:
       engine's scheduler. Arguments after the first are sent to the
       function/thread.
 
-      This function is based on the `fastSpawn` pattern rather than being a
-      replacement for the deprecated global `spawn()` function. It is
-      recommended that this function be used in place of `fastSpawn`.
-
       If the calling script is currently running in a serial execution phase,
       then the spawned function or thread is resumed in the current serial
       execution phase. If the calling script is currently running in a parallel
