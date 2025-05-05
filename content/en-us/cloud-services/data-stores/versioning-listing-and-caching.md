@@ -88,7 +88,7 @@ end
 
 ### Snapshots
 
-The [Snapshot Data Stores Open Cloud API](/cloud/reference/DataStore#Snapshot-Data-Stores) lets you take a snapshot of all data stores in an experience once a day. Before you publish any experience update that changes your data storage logic, make sure to take a snapshot. Taking a snapshot guarantees that you have the most recent data available from the previous version of the experience.
+The [Snapshot Data Stores Open Cloud API](/cloud/reference/DataStore#Cloud_SnapshotDataStores) lets you take a snapshot of all data stores in an experience once a day. Before you publish any experience update that changes your data storage logic, make sure to take a snapshot. Taking a snapshot guarantees that you have the most recent data available from the previous version of the experience.
 
 For example, without a snapshot, if you publish an update at 3:30 UTC that causes data corruption, the corrupted data overwrites any data written between 3:00-3:30 UTC. If you take a snapshot at 3:29 UTC, though, the corrupted data doesn't overwrite anything written before 3:29 UTC, and the latest data for all keys written between 3:00-3:29 UTC is preserved.
 

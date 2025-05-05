@@ -10,7 +10,7 @@ With Open Cloud, you can access Roblox resources through standard [REST](https:/
 This reference documentation is broken into two sections:
 
 - A [feature-based section](features/accounts.md) that categorizes APIs by use case (Avatars, Game Passes, Users, etc.).
-- A [section that separates endpoints by system](/cloud/reference/DataStore#List-Data-Stores) (Open Cloud v2, v1, or legacy).
+- A [section that separates endpoints by system](/cloud/reference/DataStore#Cloud_ListDataStores) (Open Cloud v2, v1, or legacy).
 
 **Both sections** contain the full list of available API endpoints; use whichever helps you find what you need.
 

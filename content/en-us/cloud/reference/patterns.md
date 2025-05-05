@@ -15,7 +15,7 @@ https://apis.roblox.com/cloud/v2/users/4687549151/inventory-items?maxPageSize=10
 
 Many paths, including the example above, have **path parameters**, designated by curly brackets in the API reference. Path parameters are just variables that you insert before making the request and are almost always IDs: user IDs, group IDs, place IDs, etc. IDs are often numeric, but not necessarily; for example, data store and memory store IDs support a wider character set.
 
-Some resources have multiple path patterns, visible under the **Resource Paths** header in the API reference. For example, the URL for [List User Restrictions](/cloud/reference/UserRestriction#List-User-Restrictions) can be either of the following:
+Some resources have multiple path patterns, visible under the **Resource Paths** header in the API reference. For example, the URL for [List User Restrictions](/cloud/reference/UserRestriction#Cloud_ListUserRestrictions__Using_Universes) can be either of the following:
 
 - `https://apis.roblox.com/cloud/cloud/v2/universes/{universe_id}/user-restrictions`
 - `https://apis.roblox.com/cloud/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions`
