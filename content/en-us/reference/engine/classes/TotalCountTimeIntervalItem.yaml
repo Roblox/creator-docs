@@ -1,13 +1,12 @@
 name: TotalCountTimeIntervalItem
 type: class
-category:
 memory_category: Instances
 summary: |
   Measures a total-count-over-time interval.
 description: |
   A special type of `Class.StatsItem` which measures a total-count-over-time
   interval. As of right now, this StatsItem goes unused.
-code_samples:
+code_samples: []
 inherits:
   - StatsItem
 tags:

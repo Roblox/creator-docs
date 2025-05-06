@@ -1,6 +1,5 @@
 name: LuaSourceContainer
 type: class
-category:
 memory_category: Instances
 summary: |
   The base class for all objects which contain Luau code.
@@ -8,7 +7,7 @@ description: |
   The base class for all objects which contain Luau code. `Class.Script`,
   `Class.LocalScript`, and `Class.ModuleScript` all inherit from
   **LuaSourceContainer**.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

@@ -254,7 +254,7 @@ To more clearly indicate the purpose of the meter, you can add an [image label](
 
    <img src="../../../assets/tutorials/creating-hud-meters/StarterGui-HUDContainer-MeterBar-Icon-Values.png" width="320" alt="Properties window showing the ZIndex of the ImageLabel set to 2." />
 
-4. Locate the icon's `Class.ImageLabel.Image|Image` property and enter `rbxassetid://91715286435585`, the reference to a pre‑uploaded heart image (if desired, you can [import](../../../projects/assets/manager.md#import-assets) your own image and use its asset ID).
+4. Locate the icon's `Class.ImageLabel.Image|Image` property and enter `rbxassetid://91715286435585`, the reference to a pre‑uploaded heart image (if desired, you can [import](../../../projects/assets/manager.md#asset-import) your own image and use its asset ID).
 
    <img src="../../../assets/tutorials/creating-hud-meters/Meter-Design-Icon-Large.png" width="840" alt="Image label of heart added to MeterBar frame." />
 

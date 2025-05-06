@@ -18,10 +18,8 @@ After you [create a trail](#create-trails), you can:
 
 Before you begin to create a trail, it's useful to toggle on visibility of attachments so you can more easily discern how their spacing affects the trail's width.
 
-1. In the menu bar, navigate to the **Model** tab, then the **Constraints** section.
+1. Navigate to the toolbar's **Model** tab.
 2. If it's not currently enabled, toggle on **Constraint Details**.
-
-   <img src="../assets/studio/general/Model-Tab-Constraint-Details.png" width="754" alt="Constraint Details toggle indicated in Model tab" />
 
 The following video demonstrates how attachments that are closer to each other create a trail with a smaller width:
 
@@ -60,7 +58,7 @@ The visual quality of your trails can change depending on the graphics settings 
 
 ### Texture
 
-The `Class.Trail.Texture|Texture` property renders a texture across the length of the trail. You can set a trail's `Class.Trail.Texture|Texture` property to any asset ID. For more information, including how to add or import your own textures, see [Import assets](../projects/assets/manager.md#import-assets).
+The `Class.Trail.Texture|Texture` property renders a texture across the length of the trail. You can set a trail's `Class.Trail.Texture|Texture` property to any asset ID. For more information, including how to add or import your own textures, see [here](../projects/assets/manager.md#asset-import).
 
 <video src="../assets/lighting-and-effects/trail/Textures.mp4" controls width="800"></video>
 

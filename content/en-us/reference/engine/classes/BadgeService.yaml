@@ -1,6 +1,5 @@
 name: BadgeService
 type: class
-category: Gameplay
 memory_category: Instances
 summary: |
   Provides information on badges and awards them.
@@ -52,16 +51,16 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The `Class.Player.UserId` of the user the badge is to be awarded to.
       - name: badgeId
         type: int64
-        default:
+        default: ''
         summary: |
           The ID of the badge to be awarded.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Boolean of `true` if the badge was awarded successfully.
     tags:
@@ -94,13 +93,13 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The `Class.Player.UserId|UserId` of the player to check for ownership
           of the specified badges.
       - name: badgeIds
         type: Array
-        default:
+        default: ''
         summary: |
           The list of IDs of the badges to check ownership of. Maximum length
           of 10.
@@ -167,7 +166,7 @@ methods:
     parameters:
       - name: badgeId
         type: int64
-        default:
+        default: ''
         summary: |
           The badge ID of the badge whose information should be fetched.
     returns:
@@ -211,11 +210,11 @@ methods:
     parameters:
       - name: badgeId
         type: int64
-        default:
+        default: ''
         summary: |
           The ID of the badge.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           True if the specified badge is not available to be awarded.
     tags:
@@ -248,11 +247,11 @@ methods:
     parameters:
       - name: badgeId
         type: int64
-        default:
+        default: ''
         summary: |
           The badge ID of the badge.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           True if the badge is associated with the current game.
     tags:
@@ -285,16 +284,16 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The user ID of the user.
       - name: badgeId
         type: int64
-        default:
+        default: ''
         summary: |
           The badge ID of the badge.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           True if the user has the badge.
     tags:
@@ -335,17 +334,17 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The `Class.Player.UserId` of the player to check for ownership of the
           specified badge.
       - name: badgeId
         type: int64
-        default:
+        default: ''
         summary: |
           The badge ID of the badge whose ownership will be checked.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Indicates if the specified user has the specified badge.
     tags:

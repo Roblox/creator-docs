@@ -1,6 +1,5 @@
 name: ArcHandles
 type: class
-category: Adornments
 memory_category: Instances
 summary: |
   The `Class.ArcHandles` object places 3D arc handles around any 3D object that
@@ -12,7 +11,7 @@ description: |
   `Class.CoreGui`.
 
   <img src="../../../assets/engine-api/classes/ArcHandles/ArcHandles-Example.jpg"  alt="ArcHandles example" />
-code_samples:
+code_samples: []
 inherits:
   - HandlesBase
 tags: []
@@ -23,7 +22,7 @@ properties:
       Sets the current Axes ArcHandles will show.
     description: |
       Sets the current Axes ArcHandles will show.
-    code_samples:
+    code_samples: []
     type: Axes
     tags: []
     deprecation_message: ''
@@ -45,34 +44,34 @@ events:
       Fired when the left mouse button goes down on one of the GUI handles.
     description: |
       Fired when the left mouse button goes down on one of the GUI handles.
-    code_samples:
+    code_samples: []
     parameters:
       - name: axis
         type: Axis
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: ArcHandles.MouseButton1Up
     summary: |
       Fired when the left mouse button is released on one of the GUI handles.
     description: |
       Fired when the left mouse button is released on one of the GUI handles.
-    code_samples:
+    code_samples: []
     parameters:
       - name: axis
         type: Axis
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: ArcHandles.MouseDrag
     summary: |
@@ -81,58 +80,58 @@ events:
     description: |
       Fired when the mouse moves while the MouseButton1Down event has fired, but
       the left mouse button has not been released yet.
-    code_samples:
+    code_samples: []
     parameters:
       - name: axis
         type: Axis
-        default:
+        default: ''
         summary: ''
       - name: relativeAngle
         type: float
-        default:
+        default: ''
         summary: ''
       - name: deltaRadius
         type: float
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: ArcHandles.MouseEnter
     summary: |
       Fired when a mouse "enters" the GUI handle.
     description: |
       Fired when a mouse "enters" the GUI handle.
-    code_samples:
+    code_samples: []
     parameters:
       - name: axis
         type: Axis
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: ArcHandles.MouseLeave
     summary: |
       Fired when the mouse leaves the GUI handle.
     description: |
       Fired when the mouse leaves the GUI handle.
-    code_samples:
+    code_samples: []
     parameters:
       - name: axis
         type: Axis
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 callbacks: []

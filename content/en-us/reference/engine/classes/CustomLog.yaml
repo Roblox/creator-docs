@@ -1,0 +1,79 @@
+name: CustomLog
+type: class
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: CustomLog:Close
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - InternalTest
+    writeCapabilities: []
+  - name: CustomLog:GetLogPath
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: string
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - InternalTest
+    writeCapabilities: []
+  - name: CustomLog:Open
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - InternalTest
+    writeCapabilities: []
+  - name: CustomLog:WriteAppend
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: append
+        type: string
+        default: ''
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - InternalTest
+    writeCapabilities: []
+events: []
+callbacks: []

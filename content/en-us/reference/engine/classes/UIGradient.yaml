@@ -1,6 +1,5 @@
 name: UIGradient
 type: class
-category: GUI
 memory_category: Instances
 summary: |
   Applies a color and transparency gradient to the UI elements rendered by the
@@ -52,7 +51,7 @@ description: |
   - When applying an unchanging gradient on a UI element whose state changes a
     lot, there is a tradeoff between using a `Class.UIGradient` (processing
     time) and a static gradient image (memory).
-code_samples:
+code_samples: []
 inherits:
   - UIComponent
 tags: []
@@ -68,7 +67,7 @@ properties:
       similar manner to `Class.Beam.Color` or `Class.Trail.Color`, except that
       it applies over an on-screen distance determined by the
       `Class.UIGradient.Offset|Offset` and `Class.UIGradient.Rotation|Rotation`.
-    code_samples:
+    code_samples: []
     type: ColorSequence
     tags: []
     deprecation_message: ''
@@ -88,8 +87,8 @@ properties:
       Whether the gradient is enabled or not.
     description: |
       Whether the gradient is enabled or not.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -119,7 +118,7 @@ properties:
 
       Also see `Class.UIGradient.Rotation|Rotation` which also affects the
       geometry of the applied gradient.
-    code_samples:
+    code_samples: []
     type: Vector2
     tags: []
     deprecation_message: ''
@@ -146,7 +145,7 @@ properties:
 
       Also see `Class.UIGradient.Offset|Offset` which also affects the geometry
       of the applied gradient.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -174,7 +173,7 @@ properties:
 
       Note that the envelope values of the
       `Datatype.NumberSequenceKeypoint|NumberSequenceKeypoints` are ignored.
-    code_samples:
+    code_samples: []
     type: NumberSequence
     tags: []
     deprecation_message: ''

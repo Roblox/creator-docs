@@ -1,6 +1,5 @@
 name: UIScale
 type: class
-category: GUI
 memory_category: Instances
 summary: |
   An object that acts as a multiplier for the size of the parent UI element's

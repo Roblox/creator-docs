@@ -1,6 +1,5 @@
 name: InsertService
 type: class
-category: Utility
 memory_category: Instances
 summary: |
   Used to insert assets from the Roblox website.
@@ -19,7 +18,7 @@ description: |
 
   - `Class.AssetService`, which can provide information about assets you might
     want to load using InsertService
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -30,8 +29,8 @@ properties:
   - name: InsertService.AllowClientInsertModels
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - NotScriptable
     deprecation_message: ''
@@ -52,8 +51,8 @@ properties:
       The AllowInsertFreeModels property toggles whether ''Free Models'' can be
       inserted into the game, regardless of whether the place owner owns the
       asset.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - NotReplicated
       - NotBrowsable
@@ -74,14 +73,14 @@ methods:
   - name: InsertService:ApproveAssetId
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: assetId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -94,14 +93,14 @@ methods:
   - name: InsertService:ApproveAssetVersionId
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: assetVersionId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -122,10 +121,10 @@ methods:
     parameters:
       - name: instance
         type: Instance
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -146,21 +145,21 @@ methods:
       `Class.MeshPart.MeshId` is read only, this is the way to create a
       `Class.MeshPart` through scripts without having to clone an existing one.
       It throws errors if creation fails.
-    code_samples:
+    code_samples: []
     parameters:
       - name: meshId
         type: ContentId
-        default:
+        default: ''
         summary: |
           Mesh asset ID.
       - name: collisionFidelity
         type: CollisionFidelity
-        default:
+        default: ''
         summary: |
           Set `Class.MeshPart.CollisionFidelity`.
       - name: renderFidelity
         type: RenderFidelity
-        default:
+        default: ''
         summary: |
           Set `Class.MeshPart.RenderFidelity`.
     returns:
@@ -177,7 +176,7 @@ methods:
   - name: InsertService:GetBaseCategories
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Array
@@ -198,7 +197,7 @@ methods:
     description: |
       Returns an array of dictionaries, containing information about various
       Roblox approved sets.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Array
@@ -223,7 +222,7 @@ methods:
     parameters:
       - name: categoryId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -277,12 +276,12 @@ methods:
     parameters:
       - name: searchText
         type: string
-        default:
+        default: ''
         summary: |
           String used to search for free decals in the Catalog.
       - name: pageNum
         type: int
-        default:
+        default: ''
         summary: |
           The page number in the Catalog to return.
     returns:
@@ -333,12 +332,12 @@ methods:
     parameters:
       - name: searchText
         type: string
-        default:
+        default: ''
         summary: |
           String used to search for free decals in the Catalog.
       - name: pageNum
         type: int
-        default:
+        default: ''
         summary: |
           The page number in the Catalog to return.
     returns:
@@ -363,11 +362,11 @@ methods:
       place creator. Can be used in combination with
       `Class.InsertService:LoadAssetVersion()` to load the latest version of a
       model, even if it gets updated while the game is running.
-    code_samples:
+    code_samples: []
     parameters:
       - name: assetId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: int64
@@ -382,11 +381,11 @@ methods:
   - name: InsertService:GetUserCategories
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -457,11 +456,11 @@ methods:
         </tr>
         </tbody>
       </table>
-    code_samples:
+    code_samples: []
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -530,7 +529,7 @@ methods:
     parameters:
       - name: assetId
         type: int64
-        default:
+        default: ''
         summary: |
           The asset ID of the asset being loaded.
     returns:
@@ -556,7 +555,7 @@ methods:
     parameters:
       - name: assetVersionId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instance
@@ -571,11 +570,11 @@ methods:
   - name: InsertService:loadAsset
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: assetId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instance

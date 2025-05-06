@@ -1,10 +1,9 @@
 name: DraggerService
 type: class
-category:
 memory_category: Instances
 summary: ''
 description: ''
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -16,8 +15,8 @@ properties:
   - name: DraggerService.AlignDraggedObjects
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -35,8 +34,8 @@ properties:
   - name: DraggerService.AngleSnapEnabled
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -54,7 +53,7 @@ properties:
   - name: DraggerService.AngleSnapIncrement
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -73,8 +72,8 @@ properties:
   - name: DraggerService.AnimateHover
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -92,8 +91,8 @@ properties:
   - name: DraggerService.CollisionsEnabled
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -111,7 +110,7 @@ properties:
   - name: DraggerService.DraggerCoordinateSpace
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: DraggerCoordinateSpace
     tags:
       - ReadOnly
@@ -130,7 +129,7 @@ properties:
   - name: DraggerService.DraggerMovementMode
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: DraggerMovementMode
     tags:
       - ReadOnly
@@ -149,7 +148,7 @@ properties:
   - name: DraggerService.GeometrySnapColor
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - ReadOnly
@@ -168,7 +167,7 @@ properties:
   - name: DraggerService.HoverAnimateFrequency
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -187,7 +186,7 @@ properties:
   - name: DraggerService.HoverThickness
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -206,8 +205,8 @@ properties:
   - name: DraggerService.JointsEnabled
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -225,8 +224,8 @@ properties:
   - name: DraggerService.LinearSnapEnabled
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -244,7 +243,7 @@ properties:
   - name: DraggerService.LinearSnapIncrement
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -264,7 +263,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -283,7 +282,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -301,8 +300,8 @@ properties:
   - name: DraggerService.ShowHover
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -320,8 +319,8 @@ properties:
   - name: DraggerService.ShowPivotIndicator
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''

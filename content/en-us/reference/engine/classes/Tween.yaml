@@ -1,6 +1,5 @@
 name: Tween
 type: class
-category: Animations
 memory_category: Instances
 summary: |
   The `Class.Tween` object controls the playback of an interpolation.

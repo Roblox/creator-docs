@@ -1,6 +1,5 @@
 name: StarterGear
 type: class
-category: Social
 memory_category: Instances
 summary: |
   If the game allows gear, StarterGear contains all of a player's appropriate
@@ -64,7 +63,7 @@ description: |
   accessed. Weapons allow players with gear to damage other players, possibly
   without the ability to retaliate. Always play-test games after adding gear to
   them to make sure there are no abuse cases.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []

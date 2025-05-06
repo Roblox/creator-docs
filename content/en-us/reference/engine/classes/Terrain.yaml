@@ -1,6 +1,5 @@
 name: Terrain
 type: class
-category: Building
 memory_category: Instances
 summary: |
   Terrain lets you to create dynamically morphable environments.
@@ -13,7 +12,7 @@ description: |
   illusion of having no grid constraint.
 
   For more information, see [Terrain](../../../parts/terrain.md).
-code_samples:
+code_samples: []
 inherits:
   - BasePart
 tags:
@@ -27,8 +26,8 @@ properties:
       Currently enables or disables animated grass on the **Grass** terrain
       material, although future modifications of this property may control
       additional decorative features.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - NotScriptable
     deprecation_message: ''
@@ -71,8 +70,8 @@ properties:
       Returns true if the current game is using the smooth terrain system. The
       legacy terrain engine has been removed, so this property will always be
       true.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -104,7 +103,7 @@ properties:
       To get the color of a material, use: `Class.Terrain:GetMaterialColor()`
 
       To set the color of a material, use: `Class.Terrain:SetMaterialColor()`
-    code_samples:
+    code_samples: []
     type: BinaryString
     tags:
       - NotScriptable
@@ -124,7 +123,7 @@ properties:
       Displays the boundaries of the largest possible editable region.
     description: |
       Displays the boundaries of the largest possible editable region.
-    code_samples:
+    code_samples: []
     type: Region3int16
     tags:
       - ReadOnly
@@ -145,7 +144,7 @@ properties:
       The tint of the Terrain water.
     description: |
       The tint of the Terrain water.
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -164,7 +163,7 @@ properties:
       Controls how opaque the Terrain's water reflections are.
     description: |
       Controls how opaque the Terrain's water reflections are.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -183,7 +182,7 @@ properties:
       The transparency of the Terrain water.
     description: |
       The transparency of the Terrain water.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -203,7 +202,7 @@ properties:
     description: |
       Sets the maximum height of the Terrain water waves in studs. This is
       currently constrained to between 0 and 1.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -224,7 +223,7 @@ properties:
     description: |
       Sets how many times the Terrain water waves will move up and down per
       minute. This is currently constrained to between 0 and 100.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -244,22 +243,22 @@ methods:
       _(OBSOLETE)_ No longer does anything.
     description: |
       _(OBSOLETE)_ No longer does anything.
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: ''
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: ''
       - name: z
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -275,14 +274,14 @@ methods:
       _(OBSOLETE)_ No longer does anything.
     description: |
       _(OBSOLETE)_ No longer does anything.
-    code_samples:
+    code_samples: []
     parameters:
       - name: region
         type: Region3int16
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -298,19 +297,19 @@ methods:
       Returns the world position of the center of the terrain cell (x, y, z).
     description: |
       Returns the world position of the center of the terrain cell (x, y, z).
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: ''
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: ''
       - name: z
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Vector3
@@ -328,19 +327,19 @@ methods:
     description: |
       Returns the position of the lower-left-forward corner of the grid cell (x,
       y, z).
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: ''
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: ''
       - name: z
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Vector3
@@ -356,10 +355,10 @@ methods:
       Clears the terrain.
     description: |
       Clears the terrain.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -375,10 +374,10 @@ methods:
 
       All places now automatically use the new terrain engine, so this method is
       obsolete.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -403,7 +402,7 @@ methods:
     parameters:
       - name: region
         type: Region3int16
-        default:
+        default: ''
         summary: ''
     returns:
       - type: TerrainRegion
@@ -419,7 +418,7 @@ methods:
       Returns the number of non-empty cells in the Terrain.
     description: |
       Returns the number of non-empty cells in the Terrain.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: int
@@ -440,21 +439,21 @@ methods:
     parameters:
       - name: center
         type: Vector3
-        default:
+        default: ''
         summary: |
           The position of the center of the terrain ball.
       - name: radius
         type: float
-        default:
+        default: ''
         summary: |
           The radius in studs of the terrain ball.
       - name: material
         type: Material
-        default:
+        default: ''
         summary: |
           The `Enum.Material` of the terrain ball.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -469,25 +468,25 @@ methods:
     description: |
       Fills a block of smooth terrain with a given location, rotation, size, and
       material.
-    code_samples:
+    code_samples: []
     parameters:
       - name: cframe
         type: CFrame
-        default:
+        default: ''
         summary: |
           The position and orientation of the terrain block.
       - name: size
         type: Vector3
-        default:
+        default: ''
         summary: |
           The size in studs of the square block - both the height and width.
       - name: material
         type: Material
-        default:
+        default: ''
         summary: |
           The `Enum.Material` of the terrain block.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -507,30 +506,30 @@ methods:
 
       Workspace.Terrain:FillCylinder(CFrame.new(0, 50, 0), 5, 30, Enum.Material.Asphalt)
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: cframe
         type: CFrame
-        default:
+        default: ''
         summary: |
           The position and orientation of the terrain cylinder.
       - name: height
         type: float
-        default:
+        default: ''
         summary: |
           The height in studs of the terrain cylinder.
       - name: radius
         type: float
-        default:
+        default: ''
         summary: |
           The radius in studs of the terrain cylinder.
       - name: material
         type: Material
-        default:
+        default: ''
         summary: |
           The `Enum.Material` of the terrain cylinder.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -543,22 +542,22 @@ methods:
       Fills a `Datatype.Region3` space with smooth terrain.
     description: |
       Fills a `Datatype.Region3` space with smooth terrain.
-    code_samples:
+    code_samples: []
     parameters:
       - name: region
         type: Region3
-        default:
+        default: ''
         summary: ''
       - name: resolution
         type: float
-        default:
+        default: ''
         summary: ''
       - name: material
         type: Material
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -574,25 +573,25 @@ methods:
       `FillWedge()` fills a wedge-shaped volume of `Class.Terrain` with the
       given `Enum.Material` and the area's `Datatype.CFrame` and size. The
       orientation of the wedge is the same as an equivalent `Class.WedgePart`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: cframe
         type: CFrame
-        default:
+        default: ''
         summary: |
           The position and orientation of the wedge to fill.
       - name: size
         type: Vector3
-        default:
+        default: ''
         summary: |
           The size of the wedge to fill.
       - name: material
         type: Material
-        default:
+        default: ''
         summary: |
           The material with which the wedge will be filled.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -608,19 +607,19 @@ methods:
       Returns the closest CellMaterial from the legacy terrain engine that
       matches the smooth terrain voxel specified. CellBlock will always be
       ''Solid'' and CellOrientation will always be ''NegZ''.
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: ''
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: ''
       - name: z
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Tuple
@@ -640,11 +639,11 @@ methods:
     description: |
       Returns the current terrain material color for the specified terrain
       material.
-    code_samples:
+    code_samples: []
     parameters:
       - name: material
         type: Material
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Color3
@@ -661,19 +660,19 @@ methods:
     description: |
       Returns if the cell is a water cell. The WaterForce parameter will always
       be _None_ and the WaterDirection will always be _NegX_.
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: ''
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: ''
       - name: z
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Tuple
@@ -699,18 +698,18 @@ methods:
     parameters:
       - name: region
         type: TerrainRegion
-        default:
+        default: ''
         summary: ''
       - name: corner
         type: Vector3int16
-        default:
+        default: ''
         summary: ''
       - name: pasteEmptyCells
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -730,19 +729,19 @@ methods:
     parameters:
       - name: region
         type: Region3
-        default:
+        default: ''
         summary: |
           Target region to read from. Must be aligned to the voxel grid. Will
           throw an error if region is too large; limit is currently 4194304
           voxels&sup3;.
       - name: resolution
         type: float
-        default:
+        default: ''
         summary: |
           Voxel resolution. Must be 4.
       - name: channelIds
         type: Array
-        default:
+        default: ''
         summary: |
           Array of channel IDs (strings) that need to be accessed from the voxel
           data. Each channel ID represents a type of data that's stored in
@@ -785,14 +784,14 @@ methods:
     parameters:
       - name: region
         type: Region3
-        default:
+        default: ''
         summary: |
           Target region to read from. Must be aligned to the voxel grid. Will
           throw an error if region is too large. The limit is currently 4194304
           voxels^3.
       - name: resolution
         type: float
-        default:
+        default: ''
         summary: |
           Voxel resolution. Must be 4.
     returns:
@@ -832,27 +831,27 @@ methods:
     parameters:
       - name: region
         type: Region3
-        default:
+        default: ''
         summary: |
           The region in which the replacement operation will occur.
       - name: resolution
         type: float
-        default:
+        default: ''
         summary: |
           The resolution at which the replacement operation will take place; at
           the moment this must be exactly 4.
       - name: sourceMaterial
         type: Material
-        default:
+        default: ''
         summary: |
           The old material that shall be replaced.
       - name: targetMaterial
         type: Material
-        default:
+        default: ''
         summary: |
           The new material.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -869,34 +868,34 @@ methods:
       CellMaterial.
 
       CellBlock and CellOrientation have no effect.
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: ''
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: ''
       - name: z
         type: int
-        default:
+        default: ''
         summary: ''
       - name: material
         type: CellMaterial
-        default:
+        default: ''
         summary: ''
       - name: block
         type: CellBlock
-        default:
+        default: ''
         summary: ''
       - name: orientation
         type: CellOrientation
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -917,26 +916,26 @@ methods:
       the CellMaterial.
 
       CellBlock and CellOrientation have no effect.
-    code_samples:
+    code_samples: []
     parameters:
       - name: region
         type: Region3int16
-        default:
+        default: ''
         summary: ''
       - name: material
         type: CellMaterial
-        default:
+        default: ''
         summary: ''
       - name: block
         type: CellBlock
-        default:
+        default: ''
         summary: ''
       - name: orientation
         type: CellOrientation
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -953,18 +952,18 @@ methods:
     description: |
       Sets current terrain material color for specified terrain material.
       Terrain material will shift its base color toward specified color.
-    code_samples:
+    code_samples: []
     parameters:
       - name: material
         type: Material
-        default:
+        default: ''
         summary: ''
       - name: value
         type: Color3
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -983,30 +982,30 @@ methods:
 
       _Note:_ This API was intended for Roblox's old terrain system, which has
       since been removed from the engine.
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: ''
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: ''
       - name: z
         type: int
-        default:
+        default: ''
         summary: ''
       - name: force
         type: WaterForce
-        default:
+        default: ''
         summary: ''
       - name: direction
         type: WaterDirection
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1022,11 +1021,11 @@ methods:
       Returns the grid cell location that contains the point **position**.
     description: |
       Returns the grid cell location that contains the point **position**.
-    code_samples:
+    code_samples: []
     parameters:
       - name: position
         type: Vector3
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Vector3
@@ -1044,11 +1043,11 @@ methods:
     description: |
       Returns the grid cell location that contains the point position,
       preferring empty grid cells when position is on a grid edge.
-    code_samples:
+    code_samples: []
     parameters:
       - name: position
         type: Vector3
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Vector3
@@ -1066,11 +1065,11 @@ methods:
     description: |
       Returns the grid cell location that contains the point position,
       preferring non-empty grid cells when position is on a grid edge.
-    code_samples:
+    code_samples: []
     parameters:
       - name: position
         type: Vector3
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Vector3
@@ -1091,19 +1090,19 @@ methods:
     parameters:
       - name: region
         type: Region3
-        default:
+        default: ''
         summary: |
           Target region to write to. Must be aligned to the voxel grid. Will
           throw an error if region is too large; limit is currently 4194304
           voxels&sup3;.
       - name: resolution
         type: float
-        default:
+        default: ''
         summary: |
           Voxel resolution. Must be 4.
       - name: channels
         type: Dictionary
-        default:
+        default: ''
         summary: |
           Dictionary of voxel data similar to the return value of
           `Class.Terrain:ReadVoxelChannels()|ReadVoxelChannels()`. Keys
@@ -1123,7 +1122,7 @@ methods:
             water) and 1 (full of water). If the `SolidOccupancy` is 1 and the
             `SolidMaterial` is not `Enum.Material|Air`, this will be 0.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState
@@ -1143,29 +1142,29 @@ methods:
     parameters:
       - name: region
         type: Region3
-        default:
+        default: ''
         summary: |
           Target region to write to. Must be aligned to the voxel grid. Will
           throw an error if region is too large.
       - name: resolution
         type: float
-        default:
+        default: ''
         summary: |
           Voxel resolution. Must be 4.
       - name: materials
         type: Array
-        default:
+        default: ''
         summary: |
           3D array of Enum.Material. Dimensions must exactly match the size of
           the target region in voxels.
       - name: occupancy
         type: Array
-        default:
+        default: ''
         summary: |
           3D array of voxel occupancies (number between 0 and 1). Dimensions
           must exactly match the size of the target region in voxels.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState

@@ -1,6 +1,5 @@
 name: CanvasGroup
 type: class
-category: GUI
 memory_category: Gui
 summary: |
   Blends descendants as a group with color/transparency.
@@ -21,7 +20,7 @@ description: |
     exceeding the memory cap, CanvasGroup will render as a blank texture.
   - We recommend using CanvasGroup with static sizes, otherwise a new texture
     would need to be created to accommodate new sizes.
-code_samples:
+code_samples: []
 inherits:
   - GuiObject
 tags: []
@@ -61,24 +60,6 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Appearance
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - UI
-    writeCapabilities: []
-  - name: CanvasGroup.ResolutionScale
-    summary: ''
-    description: ''
-    code_samples: []
-    type: float
-    tags: []
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
-    thread_safety: ReadSafe
-    category: Data
     serialization:
       can_load: true
       can_save: true

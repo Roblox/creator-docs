@@ -1,6 +1,5 @@
 name: KeyframeSequenceProvider
 type: class
-category: Animations
 memory_category: Animation
 summary: |
   Provides functions to load and preview `Class.KeyframeSequence`.
@@ -35,11 +34,11 @@ methods:
       Returns a `Class.KeyframeSequence` from a given asset URL.
     description: |
       Returns a `Class.KeyframeSequence` from a given asset URL.
-    code_samples:
+    code_samples: []
     parameters:
       - name: assetId
         type: ContentId
-        default:
+        default: ''
         summary: |
           The content ID of the animation.
     returns:
@@ -62,16 +61,16 @@ methods:
     description: |
       Returns a `Class.KeyframeSequence` from the supplied assetId. Can
       optionally cache to reduce unnecessary loading freezes.
-    code_samples:
+    code_samples: []
     parameters:
       - name: assetId
         type: int64
-        default:
+        default: ''
         summary: |
           The content ID of the animation.
       - name: useCache
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           True if a cached version can be returned.
     returns:
@@ -111,7 +110,7 @@ methods:
     parameters:
       - name: keyframeSequence
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.KeyframeSequence` to be used.
     returns:
@@ -147,7 +146,7 @@ methods:
     parameters:
       - name: keyframeSequence
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.KeyframeSequence` to be used.
     returns:
@@ -175,7 +174,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The user ID of the user.
     returns:
@@ -202,7 +201,7 @@ methods:
     parameters:
       - name: assetId
         type: ContentId
-        default:
+        default: ''
         summary: |
           The content ID of the animation.
     returns:

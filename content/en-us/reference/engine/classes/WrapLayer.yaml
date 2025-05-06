@@ -1,6 +1,5 @@
 name: WrapLayer
 type: class
-category:
 memory_category: Instances
 summary: |
   The WrapLayer object defines a 3D accessory's inner and outer surfaces and
@@ -16,7 +15,7 @@ description: |
   Internally, WrapLayer also uses the UV layout of the Inner and Outer cages to
   match coordinates to another 3D object's cage. This powers the deformation of
   objects around differently shaped avatars and underlying accessories.
-code_samples:
+code_samples: []
 inherits:
   - BaseWrap
 tags: []
@@ -52,7 +51,7 @@ properties:
       Allows for fine-tuning of clothing items (slight adjustment of
       position/rotation to get a unique look) in contexts such as community-made
       avatar editors.
-    code_samples:
+    code_samples: []
     type: CFrame
     tags: []
     deprecation_message: ''
@@ -72,7 +71,7 @@ properties:
       Sets color used for the debug rendering. See `Class.WrapTarget.DebugMode`.
     description: |
       Sets color used for the debug rendering. See `Class.WrapTarget.DebugMode`
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -96,7 +95,7 @@ properties:
     description: |
       Allows switching between different debugging visualization modes for cage
       meshes.
-    code_samples:
+    code_samples: []
     type: WrapLayerDebugMode
     tags:
       - NotReplicated
@@ -120,8 +119,8 @@ properties:
     description: |
       Allows for disabling of the `Class.WrapLayer` object as if it does not
       exist.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -143,7 +142,7 @@ properties:
       higher order will appear on top of clothing items with lower order. If two
       items have the same order, the deformer composition order is ambiguous and
       depends on serialization order. Default value is 1.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -172,7 +171,7 @@ properties:
       of clothing being worn, compressing all underlying layers. A value of 1
       (default) never compresses anything and infinitely inflates over
       underlying clothing items.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -217,7 +216,7 @@ properties:
       some NPCs or a custom avatar system, this might point to other meshes.
 
       Note: this property is set up automatically by the FBX importer
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -243,7 +242,7 @@ properties:
       space)
 
       Note: this property is set up automatically by the FBX importer
-    code_samples:
+    code_samples: []
     type: CFrame
     tags: []
     deprecation_message: ''
@@ -267,7 +266,7 @@ properties:
       Reference mesh offset relative to parent MeshPart (in the world space)
 
       Note: this property is set up automatically by the FBX importer
-    code_samples:
+    code_samples: []
     type: CFrame
     tags:
       - ReadOnly
@@ -301,7 +300,7 @@ properties:
 
       Valid range is -1 to 1. A value of -1 will maximally expand while a value
       of 1 will maximally shrink. A value of 0 (default) has no effect.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

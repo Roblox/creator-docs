@@ -1,6 +1,5 @@
 name: PluginMouse
 type: class
-category: Plugins
 memory_category: Instances
 summary: |
   The PluginMouse object gives `Class.Plugin|Plugins` access to the mouse. It
@@ -34,16 +33,16 @@ events:
       Fired when Instances are being selected while the mouse is dragging.
     description: |
       Fired when Instances are being selected while the mouse is dragging.
-    code_samples:
+    code_samples: []
     parameters:
       - name: instances
         type: Instances
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 callbacks: []

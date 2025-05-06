@@ -1,6 +1,5 @@
 name: Mouse
 type: class
-category: Input
 memory_category: Instances
 summary: |
   Legacy object that contains members useful for pointer input.
@@ -53,7 +52,7 @@ description: |
 
     See [Input and Camera](../../../input/index.md) for more information on
     customizing inputs in your experience.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -318,7 +317,7 @@ properties:
       - If `Class.Mouse.TargetFilter` has been set, the target filter and its
         descendants will be ignored.
       - When the mouse is not pointing at a `Class.BasePart`, for example when
-        it is pointing at the sky, Target will be nil.
+        it is pointing at the sky, Target will be `nil`.
       - Developers looking for the position of the mouse in 3D space should use
         `Class.Mouse.Hit`.
     code_samples:
@@ -352,7 +351,7 @@ properties:
       effects or decorations that should not affect `Class.Mouse.Hit` or
       `Class.Mouse.Target`.
 
-      This property can be set to any `Class.Instance` or nil, for example:
+      This property can be set to any `Class.Instance` or `nil`, for example:
 
       ```lua
       local Players = game:GetService("Players")
@@ -365,7 +364,7 @@ properties:
 
       Note that the `Class.Player.Character|Character` of the
       `Class.Players.LocalPlayer` is ignored by the mouse automatically.
-    code_samples:
+    code_samples: []
     type: Instance
     tags: []
     deprecation_message: ''
@@ -393,7 +392,7 @@ properties:
       This property isn't meaningful when the mouse is not pointing at a part,
       for example when the mouse is pointing at the sky. At the moment, this
       property is set to 'Right' under these circumstances. Before using this
-      property, check that the mouse's target is not nil.
+      property, check that the mouse's target is not `nil`.
 
       ```lua
       local Players = game:GetService("Players")
@@ -440,7 +439,7 @@ properties:
       local mouse = player:GetMouse()
       print(mouse.UnitRay.Direction.Magnitude) -- Always 1
       ```
-    code_samples:
+    code_samples: []
     type: Ray
     tags:
       - ReadOnly
@@ -598,7 +597,7 @@ properties:
   - name: Mouse.hit
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: CFrame
     tags:
       - Hidden
@@ -622,7 +621,7 @@ properties:
   - name: Mouse.target
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: BasePart
     tags:
       - ReadOnly
@@ -666,13 +665,13 @@ events:
       You can find out the position of the mouse in world space and if it's
       pointing at any `Class.BasePart` using the `Class.Mouse.Hit|Hit` and
       `Class.Mouse.Target|Target` properties.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Mouse.Button1Up
     summary: |
@@ -696,13 +695,13 @@ events:
       You can find out the position of the mouse in world space and if it's
       pointing at any `Class.BasePart` using the `Class.Mouse.Hit|Hit` and
       `Class.Mouse.Target|Target` properties.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Mouse.Button2Down
     summary: |
@@ -726,13 +725,13 @@ events:
       You can find out the position of the mouse in world space and if it's
       pointing at any `Class.BasePart` using the `Class.Mouse.Hit|Hit` and
       `Class.Mouse.Target|Target` properties.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Mouse.Button2Up
     summary: |
@@ -756,13 +755,13 @@ events:
       You can find out the position of the mouse in world space and if it's
       pointing at any `Class.BasePart` using the `Class.Mouse.Hit|Hit` and
       `Class.Mouse.Target|Target` properties.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Mouse.Idle
     summary: |
@@ -791,8 +790,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Mouse.KeyDown
     summary: |
@@ -814,7 +813,7 @@ events:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -822,8 +821,8 @@ events:
       Mouse events have been superseded by `Class.UserInputService` which should
       be used in all new work.
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Mouse.KeyUp
     summary: |
@@ -845,7 +844,7 @@ events:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -853,8 +852,8 @@ events:
       Mouse events have been superseded by `Class.UserInputService` which should
       be used in all new work.
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Mouse.Move
     summary: |
@@ -888,8 +887,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Mouse.WheelBackward
     summary: |
@@ -913,8 +912,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Mouse.WheelForward
     summary: |
@@ -938,17 +937,17 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Mouse.keyDown
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -956,7 +955,7 @@ events:
       This event is a deprecated variant of `Class.Mouse.KeyDown` which has also
       been deprecated. Neither event should be used in new work.
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 callbacks: []

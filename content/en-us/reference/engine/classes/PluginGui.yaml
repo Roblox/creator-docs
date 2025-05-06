@@ -1,6 +1,5 @@
 name: PluginGui
 type: class
-category: Plugins
 memory_category: Instances
 summary: ''
 description: |
@@ -8,7 +7,7 @@ description: |
   `Class.GuiObject|GuiObjects` in various Roblox Studio widgets. As of right
   now, the only available PluginGui type is `Class.DockWidgetPluginGui`, but
   there may be more in the future!
-code_samples:
+code_samples: []
 inherits:
   - LayerCollector
 tags:
@@ -22,7 +21,7 @@ properties:
     description: |
       The title that is displayed above the contents of the `Class.PluginGui`.
       Defaults to empty string.
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -100,7 +99,7 @@ methods:
       - `Class.Plugin:CreateDockWidgetPluginGui()` to create a `Class.PluginGui`
       - `Class.DataModel:BindToClose()`, which can be used to bind a function to
         the game ending and should not be confused with this function
-    code_samples:
+    code_samples: []
     parameters:
       - name: function
         type: Function
@@ -109,13 +108,14 @@ methods:
           The function to bind the close button to. If no function is specified
           then any previously specified function will be unbound.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: PluginGui:GetRelativeMousePosition
     summary: |
@@ -136,7 +136,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 events:
   - name: PluginGui.PluginDragDropped
@@ -158,13 +159,13 @@ events:
     parameters:
       - name: dragData
         type: Dictionary
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: PluginGui.PluginDragEntered
     summary: |
@@ -190,14 +191,14 @@ events:
     parameters:
       - name: dragData
         type: Dictionary
-        default:
+        default: ''
         summary: |
           A copy of the data originally passed to `Class.Plugin:StartDrag()`.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: PluginGui.PluginDragLeft
     summary: |
@@ -222,14 +223,14 @@ events:
     parameters:
       - name: dragData
         type: Dictionary
-        default:
+        default: ''
         summary: |
           A copy of the data originally passed to `Class.Plugin:StartDrag()`.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: PluginGui.PluginDragMoved
     summary: |
@@ -245,17 +246,17 @@ events:
       - `Class.PluginGui.PluginDragEntered`
       - `Class.PluginGui.PluginDragLeft`
       - `Class.PluginGui.PluginDragDropped`
-    code_samples:
+    code_samples: []
     parameters:
       - name: dragData
         type: Dictionary
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: PluginGui.WindowFocusReleased
     summary: |
@@ -277,8 +278,8 @@ events:
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: PluginGui.WindowFocused
     summary: |
@@ -301,7 +302,7 @@ events:
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 callbacks: []

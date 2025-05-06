@@ -1,12 +1,11 @@
 name: Motor
 type: class
-category: Joints
 memory_category: PhysicsParts
 summary: |
   Makes a movable `Class.JointInstance` between two parts.
 description: |
   An object used to make movable `Class.JointInstance` between two Parts.
-code_samples:
+code_samples: []
 inherits:
   - JointInstance
 tags: []
@@ -17,7 +16,7 @@ properties:
       Displays the current rotation of the motor in radians.
     description: |
       Displays the current rotation of the motor in radians.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -39,7 +38,7 @@ properties:
     description: |
       The desired angle to turn the motor to in radians. The motor will attempt
       to reach this angle (provided `Class.Motor.MaxVelocity` is greater than 0.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -61,7 +60,7 @@ properties:
     description: |
       The maximum velocity the motor can use to reach `Class.Motor.DesiredAngle`
       measured in radians per physics frame (1/60th of a second).
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -82,20 +81,21 @@ methods:
       Sets `Class.Motor.DesiredAngle` of the motor.
     description: |
       Sets `Class.Motor.DesiredAngle` of the motor.
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
         type: float
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
 events: []
 callbacks: []

@@ -1,6 +1,5 @@
 name: PluginGuiService
 type: class
-category: Plugins
 memory_category: Instances
 summary: |
   A service that stores `Class.PluginGui` objects to be displayed in Roblox
@@ -10,7 +9,7 @@ description: |
   displayed in Roblox Studio. It only allows PluginGuis to be direct children of
   the service, and PluginGuis are not allowed to be parented anywhere besides
   the service.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

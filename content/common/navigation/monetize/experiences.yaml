@@ -1,0 +1,40 @@
+navigation:
+  - heading: Overview
+  - title: Monetize experiences
+    path: /monetize-experiences
+
+  - heading: Earn
+  - title: Overview
+    path: /production/monetization/
+  - title: Engagement-based payouts
+    path: /production/monetization/engagement-based-payouts
+  - title: Private servers
+    path: /production/monetization/private-servers
+  - title: Subscriptions
+    path: /production/monetization/subscriptions
+  - title: Passes
+    path: /production/monetization/game-passes
+  - title: Developer products
+    path: /production/monetization/developer-products
+  - title: Paid access in Robux
+    path: /production/monetization/paid-access-robux
+  - title: Paid access in local currency
+    path: /production/monetization/paid-access-local-currency
+  - title: Price optimization
+    path: /production/monetization/price-optimization
+  - title: Regional Pricing
+    path: /production/monetization/regional-pricing
+
+  - heading: Advertise
+  - title: Ads Manager
+    path: /production/promotion/ads-manager
+  - title: Reporting and billing
+    path: /production/promotion/reporting-and-billing
+  - title: Roblox-served ads vs. independent ads
+    path: /production/promotion/advertise-on-roblox
+  - title: Immersive ads
+    path: /production/monetization/immersive-ads
+  - title: Search ads
+    path: /production/promotion/search-ads
+  - title: Advertising standards
+    path: /production/promotion/comply-with-advertising-standards

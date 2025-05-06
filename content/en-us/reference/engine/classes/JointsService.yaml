@@ -1,6 +1,5 @@
 name: JointsService
 type: class
-category: Joints
 memory_category: Instances
 summary: |
   A service that stores joints created by surface connections.
@@ -8,7 +7,7 @@ description: |
   The JointsService is a service that stores joints created by surface
   connections. It also has API available for visualizing surface to surface
   contact, and joining surfaces together.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -28,10 +27,10 @@ methods:
     description: |
       Will remove any 'create joints' that were made visible via the
       `Class.JointsService:ShowPermissibleJoints()` method.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -48,10 +47,10 @@ methods:
       Updates all visible joints for the parts assigned by the
       `Class.JointsService:SetJoinAfterMoveTarget()` and
       `Class.JointsService:SetJoinAfterMoveInstance()` methods.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -66,14 +65,14 @@ methods:
     description: |
       Sets the PVInstance that will be connected with the target PVInstance
       specified by `Class.JointsService:SetJoinAfterMoveTarget()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: joinInstance
         type: Instance
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -88,14 +87,14 @@ methods:
     description: |
       Sets the PVInstance that will be connected with the PVInstance specified
       by `Class.JointsService:SetJoinAfterMoveInstance()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: joinTarget
         type: Instance
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -114,10 +113,10 @@ methods:
       the two `Class.BasePart`, which were set with
       `Class.JointsService:SetJoinAfterMoveTarget()` and
       `Class.JointsService:SetJoinAfterMoveInstance()`.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

@@ -1,6 +1,5 @@
 name: Atmosphere
 type: class
-category: Lighting
 memory_category: Instances
 summary: |
   The `Class.Atmosphere` object pushes Roblox closer toward realistic
@@ -25,7 +24,7 @@ description: |
   - [Post-Processing Effects](../../../environment/post-processing-effects.md)
     for how post-processing effects can quickly improve a game's visuals with a
     variety of customizable filters.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -38,7 +37,7 @@ properties:
       A `Datatype.Color3` value which changes the `Class.Atmosphere` hue for
       subtle environmental moods. This is best combined with increased
       `Class.Atmosphere.Haze` to expand the visible effect.
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -64,7 +63,7 @@ properties:
       falling off from `Class.Atmosphere.Color` towards this value. Must be used
       with `Class.Atmosphere.Haze` and `Class.Atmosphere.Glare` levels higher
       than 0 to see any effect.
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -89,7 +88,7 @@ properties:
       them. Note that density does not **directly** affect the skybox &mdash; it
       merely affects in-game objects/terrain and visibility of the skybox
       through them.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -114,7 +113,7 @@ properties:
       glare results in an increased effect of sunlight cast onto the sky and
       world. Must be used with a `Class.Atmosphere.Haze` level higher than 0 to
       see any effect.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -138,7 +137,7 @@ properties:
       above the horizon and into the distance. This can be combined with
       `Class.Atmosphere.Color` to create environmental moods, like a grey tint
       for a polluted alien planet.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -168,7 +167,7 @@ properties:
       the offset, which more clearly silhouettes distant objects/terrain against
       the sky, but too much offset may reveal level-of-detail "popping" for far
       distant terrain and meshes.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

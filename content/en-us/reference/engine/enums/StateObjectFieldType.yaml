@@ -16,33 +16,38 @@ items:
     value: 1
     tags: []
     deprecation_message: ''
-  - name: Float
+  - name: Color3
     summary: ''
     value: 2
     tags: []
     deprecation_message: ''
-  - name: Instance
+  - name: Float
     summary: ''
     value: 3
     tags: []
     deprecation_message: ''
-  - name: Random
+  - name: Instance
     summary: ''
     value: 4
     tags: []
     deprecation_message: ''
-  - name: Vector2
+  - name: Random
     summary: ''
     value: 5
     tags: []
     deprecation_message: ''
-  - name: Vector3
+  - name: Vector2
     summary: ''
     value: 6
     tags: []
     deprecation_message: ''
-  - name: INVALID
+  - name: Vector3
     summary: ''
     value: 7
+    tags: []
+    deprecation_message: ''
+  - name: INVALID
+    summary: ''
+    value: 8
     tags: []
     deprecation_message: ''

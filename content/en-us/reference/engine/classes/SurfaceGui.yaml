@@ -1,6 +1,5 @@
 name: SurfaceGui
 type: class
-category: GUI
 memory_category: Instances
 summary: |
   Container for GuiObjects that are rendered on the surface of a part.
@@ -18,10 +17,12 @@ description: |
   Note that interactive UI elements like `Class.ImageButton|ImageButtons` and
   `Class.TextButton|TextButtons` inside a `Class.SurfaceGui` will only receive
   user input if they are parented to the `Class.PlayerGui`, typically via
-  placing the `Class.SurfaceGui` inside `Class.StarterGui`. The
+  placing the `Class.SurfaceGui` inside `Class.StarterGui` (the
   `Class.SurfaceGui.Adornee|Adornee` property can be used to target a part in
   the 3D world while the `Class.SurfaceGui` itself remains in the
-  `Class.PlayerGui`.
+  `Class.PlayerGui`). Additionally, the part's
+  `Class.BasePart.CanQuery|CanQuery` property must be `true` for the interactive
+  UI element to receive input.
 
   See [In-Experience UI](../../../ui/in-experience-containers.md#surface-ui) for
   a guide on working with `Class.SurfaceGui` containers.
@@ -35,7 +36,7 @@ description: |
   - A descendant is added to or removed from the `Class.SurfaceGui`.
   - A property of a descendant of the `Class.SurfaceGui` changes.
   - A property of the `Class.SurfaceGui` itself changes.
-code_samples:
+code_samples: []
 inherits:
   - SurfaceGuiBase
 tags: []
@@ -59,8 +60,8 @@ properties:
       - `Class.SurfaceGui.LightInfluence|LightInfluence` is treated as though
         it's `0`.
       - `Class.SurfaceGui.Brightness|Brightness` has no effect.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -92,7 +93,7 @@ properties:
       Studio and has no effect when either
       `Class.SurfaceGui.LightInfluence|LightInfluence` is `1` or
       `Class.SurfaceGui.AlwaysOnTop|AlwaysOnTop` is `true`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -116,7 +117,7 @@ properties:
       The size of a "virtual screen" in "virtual pixels" which makes
       `Class.SurfaceGui|SurfaceGuis` pixel-to-pixel compatible with
       `Class.ScreenGui|ScreenGuis`.
-    code_samples:
+    code_samples: []
     type: Vector2
     tags: []
     deprecation_message: ''
@@ -142,8 +143,8 @@ properties:
 
       Even when this property is `false`, `Class.GuiObject|GuiObjects` that are
       **completely** outside of the canvas will not render.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -166,7 +167,7 @@ properties:
       lighting, in a range from `0` to `1`. Setting this to `1` means that
       surrounding lighting has complete control over the appearance, while
       setting it to `0` means that the lighting has no effect.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -228,7 +229,7 @@ properties:
       to view the `Class.SurfaceGui`. Also be mindful that a large pixel density
       could negatively affect performance if the face of the adorned part is
       large enough.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -256,7 +257,7 @@ properties:
       When set to `Enum.SurfaceGuiSizingMode.FixedSize`, the `Class.SurfaceGui`
       renders with a fixed size set through
       `Class.SurfaceGui.CanvasSize|CanvasSize`.
-    code_samples:
+    code_samples: []
     type: SurfaceGuiSizingMode
     tags: []
     deprecation_message: ''
@@ -280,7 +281,7 @@ properties:
       `Class.SurfaceGui` instead of for the held `Class.Tool`. If a character is
       within this distance of the `Class.SurfaceGui`, the `Class.Tool` will not
       activate on click.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -303,7 +304,7 @@ properties:
       Layers this `Class.SurfaceGui` in relation to others on the same face
       (changing this does not visually "lift" or "sink" a `Class.SurfaceGui`
       from the surface).
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

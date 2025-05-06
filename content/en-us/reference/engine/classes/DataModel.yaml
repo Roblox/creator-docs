@@ -1,6 +1,5 @@
 name: DataModel
 type: class
-category: Scripting
 memory_category: Instances
 summary: |
   The root of Roblox's parent-child hierarchy. Its direct children are services,
@@ -75,6 +74,25 @@ properties:
       can_save: false
     capabilities: []
     writeCapabilities: []
+  - name: DataModel.Environment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: DataModel.GameId
     summary: |
       Describes the ID of the experience that the place running on the server
@@ -83,12 +101,7 @@ properties:
       This property describes the ID of the experience that the place running on
       the server belongs to.
 
-      This ID can be found in the top right corner of the
-      [Asset Manager](../../../projects/assets/manager.md) in Roblox Studio.
-      When using Roblox Studio, if the place has not been published to Roblox
-      then the GameId will correspond with the template being used.
-
-      See also:
+      #### See Also
 
       - `Class.DataModel.PlaceId`, which describes the ID of the place running
         on the server
@@ -96,7 +109,7 @@ properties:
         game instance running
       - `Class.TeleportService`, which is a service that can be used to
         transport `Class.Player|Players` between games
-    code_samples:
+    code_samples: []
     type: int64
     tags:
       - ReadOnly
@@ -119,7 +132,7 @@ properties:
     description: |
       This property, along with `Class.DataModel.Genre`, no longer functions
       correctly and attempting to read it may throw an error.
-    code_samples:
+    code_samples: []
     type: GearGenreSetting
     tags:
       - ReadOnly
@@ -152,7 +165,7 @@ properties:
       functions correctly due to genres existing on the Roblox website that are
       not reflected in the `Enum.Genre` enum. As a result, attempting to read
       this property may throw an error.
-    code_samples:
+    code_samples: []
     type: Genre
     tags:
       - ReadOnly
@@ -190,7 +203,7 @@ properties:
         the game server instance belongs to.
       - `Class.HttpService:GenerateGUID()`, a function that can be used to
         generate your own UUIDs.
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - ReadOnly
@@ -240,11 +253,6 @@ properties:
     description: |
       This property describes the ID of the place running on the server.
 
-      If the place has been published to Roblox, this ID can be found in
-      Studio's [Asset Manager](../../../projects/assets/manager.md) by
-      right-clicking the place inside of the **Places** folder and selecting
-      **Copy ID to Clipboard**.
-
       If the place has not been published to Roblox, this ID will correspond
       with the template being used.
 
@@ -256,7 +264,7 @@ properties:
         game instance running
       - `Class.TeleportService`, which is a service that can be used to
         transport `Class.Player|Players` between places
-    code_samples:
+    code_samples: []
     type: int64
     tags:
       - ReadOnly
@@ -424,7 +432,7 @@ properties:
     description: |
       This property was string that could identify the current server as a
       private server.
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - Hidden
@@ -451,7 +459,7 @@ properties:
     description: |
       This property indicates the `Class.Player.UserId|UserId` of the account
       who owns the private server.
-    code_samples:
+    code_samples: []
     type: int64
     tags:
       - Hidden
@@ -477,7 +485,7 @@ properties:
     description: |
       This property is a reference to the `Class.Workspace` service. It always
       points to `Class.Workspace` and will never be `nil`.
-    code_samples:
+    code_samples: []
     type: Workspace
     tags:
       - ReadOnly
@@ -498,7 +506,7 @@ properties:
       Refers to the game's `Class.Lighting` service.
     description: |
       This property was once used to get the game's `Class.Lighting` service.
-    code_samples:
+    code_samples: []
     type: Instance
     tags:
       - ReadOnly
@@ -521,7 +529,7 @@ properties:
   - name: DataModel.workspace
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Workspace
     tags:
       - ReadOnly
@@ -577,13 +585,13 @@ methods:
     parameters:
       - name: function
         type: Function
-        default:
+        default: ''
         summary: |
           A function called before the experience server shuts down. If the
           bound function accepts a parameter, it passes `Enum.CloseReason`
           specifying the reason for the server shutdown.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -660,7 +668,7 @@ methods:
 
       This system was phased out a very long time ago, and recently the APIs for
       setting this message were removed.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: string
@@ -701,7 +709,7 @@ methods:
     parameters:
       - name: url
         type: ContentId
-        default:
+        default: ''
         summary: |
           The given content URL.
     returns:
@@ -723,10 +731,10 @@ methods:
       This method is no longer useful and will always return false. Use
       `Class.RunService:IsServer()` to see if your code is running on the
       server.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -756,15 +764,15 @@ methods:
       determined in a place's settings page under 'Permissions'. Note, all of a
       gear's associated `Enum.GearType|GearTypes` must be enabled for it to be
       permitted in a place.
-    code_samples:
+    code_samples: []
     parameters:
       - name: gearType
         type: GearType
-        default:
+        default: ''
         summary: |
           The given `Enum.GearType`.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether gear of the given `Enum.GearType` is permitted in the game.
     tags:
@@ -807,7 +815,7 @@ methods:
       - Custom-Loading-Screen
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the client has finished loading the game for the first time.
     tags: []
@@ -839,15 +847,15 @@ methods:
       game:SetUniverseId(universeId)
       local dataStore = DataStoreService:GetDataStore("Data")
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: placeId
         type: int64
-        default:
+        default: ''
         summary: |
           The ID to set the `Class.DataModel.PlaceId` to.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -867,15 +875,15 @@ methods:
       To access the `Class.DataStoreService` in an unpublished place, both
       `Class.DataModel:SetUniverseId()` and `Class.DataModel:SetPlaceId()` must
       be set.
-    code_samples:
+    code_samples: []
     parameters:
       - name: universeId
         type: int64
-        default:
+        default: ''
         summary: |
           The ID to set the `Class.DataModel.GameId` to.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -901,7 +909,7 @@ methods:
         default: SaveAll
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields
@@ -920,14 +928,13 @@ events:
     description: |
       This event fires when SetGearSettings is called with a different value for
       _allowedGenres_.
-    code_samples:
+    code_samples: []
     parameters: []
     tags:
       - Deprecated
     deprecation_message: |
       This item is deprecated . Do not use it for new work.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: DataModel.GraphicsQualityChangeRequest
@@ -965,15 +972,14 @@ events:
       - DataModel-GraphicsQualityChangeRequest1
     parameters:
       - name: betterQuality
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           Whether the user has prompted an increase (_true_) or a decrease
           (_false_) in graphics quality.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: DataModel.ItemChanged
@@ -987,11 +993,11 @@ events:
     parameters:
       - name: object
         type: Instance
-        default:
+        default: ''
         summary: ''
       - name: descriptor
         type: string
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -999,7 +1005,6 @@ events:
       This function has been superseded by `Class.Object.Changed`, which should
       be used in new work instead.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: DataModel.Loaded
@@ -1028,12 +1033,11 @@ events:
       - `Class.Instance:WaitForChild()`, a function which can be used to wait
         for an individual `Class.Instance` to replicate without having to wait
         for the whole game to finish loading.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks:

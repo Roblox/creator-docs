@@ -5,15 +5,13 @@ description: Video assets used on VideoFrame instances allow for video playback 
 
 import BetaAlert from '../includes/beta-features/beta-alert.md'
 
-Video assets used in `Class.VideoFrame` instances allow for video playback in experiences. You can [upload](#import-videos) videos that you're certain you have permission to use, such as videos you make yourself, and the [asset privacy](../projects/assets/privacy.md) system automatically ensures that the IDs of your uploaded videos can't be accessed by users without the proper permissions.
+Video assets used in `Class.VideoFrame` instances allow for video playback in experiences. You can [upload](#upload-videos) videos that you're certain you have permission to use, such as videos you make yourself, and the [asset privacy](../projects/assets/privacy.md) system automatically ensures that the IDs of your uploaded videos can't be accessed by users without the proper permissions.
 
-## Import videos
+## Upload videos
 
 <BetaAlert betaName="Video Uploads" leadIn="To upload video assets, enable the beta feature through " leadOut="." components={props.components} />
 
-### Requirements
-
-To upload video assets, you must be a 13+ [ID verified](https://en.help.roblox.com/hc/en-us/articles/4407282410644-Age-ID-Verification) user. You can upload a video as long as it meets the following requirements:
+If you're a 13+ [ID verified](https://en.help.roblox.com/hc/en-us/articles/4407282410644-Age-ID-Verification) user, you can upload videos through the [Asset Manager](../projects/assets/manager.md), the [Creator Dashboard](https://create.roblox.com/dashboard/creations?activeTab=Video), or the [Open Cloud API](../cloud/guides/usage-assets.md). You can upload a video as long as it meets the following requirements:
 
 - You have the legal rights to use the video asset.
 - It adheres to the [Roblox Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846).
@@ -27,25 +25,6 @@ Videos that don't meet these requirements are rejected. Alpha channels are not s
 - Each video upload costs 2,000 Robux.
 - You can upload a maximum of ten videos within any 30-day period, starting from the date of your first video upload.
 
-### Upload
-
-You can upload videos through the [Asset Manager](../projects/assets/manager.md), the [Creator Dashboard](https://create.roblox.com/dashboard/creations?activeTab=Video), or the [Open Cloud API](../cloud/guides/usage-assets.md). To upload through the [Asset Manager](../projects/assets/manager.md):
-
-1. In the [View](../studio/view-tab.md) tab, click **Asset Manager**.
-
-   <img src="../assets/studio/general/View-Tab-Asset-Manager.png" width="776" alt="Asset Manager toggle button in Studio" />
-
-2. Click the **Bulk Import** button.
-
-   <img src="../assets/studio/asset-manager/Import-Button.png" width="360" />
-
-3. Select and then confirm the video files you want to import from your local system.
-4. Once you confirm the uploads and the files upload successfully, they display with a green checkmark and a completed status.
-
-    <img src="../assets/studio/asset-manager/Video-Import.png" width="360" />
-
-The video assets are now within the moderation queue and are only visible to you within the **Video** folder of the [Asset Manager](../projects/assets/manager.md) and, after passing moderation, the [Toolbox](../projects/assets/toolbox.md). Although you are initially the only one who can view and use private video assets, the [asset privacy](../projects/assets/privacy.md) system lets you grant usage permissions to specific friends and experiences.
-
 ## Play videos
 
 A `Class.VideoFrame` must be parented to a `Class.ScreenGui`, `Class.SurfaceGui`, or `Class.BillboardGui` in order to be playable.
@@ -53,11 +32,12 @@ A `Class.VideoFrame` must be parented to a `Class.ScreenGui`, `Class.SurfaceGui`
 To play a video in your experience without code:
 
 1. Create a `Class.ScreenGui` as outlined in [On-Screen UI Containers](../ui/on-screen-containers.md), or a `Class.SurfaceGui` or `Class.BillboardGui` as outlined in [In-Experience UI Containers](../ui/in-experience-containers.md).
-2. Select the new UI container in the [Explorer](../studio/explorer.md) window. Then, in the [Asset Manager](../projects/assets/manager.md), double-click the desired video asset to automatically parent it to the container.
+2. Insert a video from the [Toolbox](../projects/assets/toolbox.md) or [Asset Manager](../projects/assets/manager.md). A new `Class.VideoFrame` object is inserted for the video.
+3. Parent the `Class.VideoFrame` to the container.
 
    <img src="../assets/studio/explorer/StarterGui-ScreenGui-VideoFrame.png" width="320" />
 
-3. With the new `Class.VideoFrame` selected, enable its **Looped** and **Playing** properties in the [Properties](../studio/properties.md) window.
+4. With the new `Class.VideoFrame` selected, enable its **Looped** and **Playing** properties in the [Properties](../studio/properties.md) window.
 
    <img src="../assets/studio/properties/VideoFrame-Looped-Playing.png" width="320" />
 

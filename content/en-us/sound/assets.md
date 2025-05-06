@@ -38,20 +38,11 @@ You can import custom audio as long as it meets the following requirements:
 
 If you're [ID verified](../production/publishing/account-verification.md), you can import 100 free audio assets per 30 days; if you're unverified, you can import 10 free audio assets per 30 days. Studio assigns each new audio asset a **unique asset ID** that you can use within your experiences to [play the audio](../sound/objects.md).
 
-You can import audio through the [Asset Manager](../projects/assets/manager.md), the [Creator Dashboard](https://create.roblox.com/dashboard/creations), or the [Open Cloud API](../cloud/guides/usage-assets.md). To import audio through the Asset Manager:
+You can import audio through the [Asset Manager](../projects/assets/manager.md), the [Creator Dashboard](https://create.roblox.com/dashboard/creations), or the [Open Cloud API](../cloud/guides/usage-assets.md). To import audio through the **Asset Manager**:
 
-1. In the **View** tab, click **Asset Manager**.
-
-   <img src="../assets/studio/general/View-Tab-Asset-Manager.png" width="776" alt="Asset Manager toggle button in Studio" />
-
-1. Click the **Bulk Import** button.
-
-   <img src="../assets/studio/asset-manager/Import-Button.png" width="360" />
-
+1. Click the **Import** button.
 1. Select and then confirm the audio files you want to import from your local system.
 1. Once you confirm the imports and the files import successfully, they display with a green checkmark and a completed status.
-
-   <img src="../assets/studio/asset-manager/Audio-Import.png" width="360" />
 
    <Alert severity="info">
    To standardize the playback format and check for corrupt or invalid files, Studio transcodes imported audio before saving it as an asset. If you receive an error while importing audio, Studio is likely rejecting it during the transcode process. In addition, some older audio tools generate invalid file headers or frames when exporting.
@@ -59,4 +50,4 @@ You can import audio through the [Asset Manager](../projects/assets/manager.md),
    If Studio continues to reject the audio you're trying to import, ensure your audio tools are updated, then verify that the audio files meet the import requirements.
 	</Alert>
 
-The audio assets are now within the moderation queue and are only visible to you within the **Audio** folder of the Asset Manager and, after passing moderation, the Toolbox. Although you are initially the only one who can view and use private audio assets, the [asset privacy](../projects/assets/privacy.md) system lets you grant usage permissions to specific friends and experiences.
+The audio assets are now within the moderation queue. Although you are initially the only one who can view and use private audio assets, the [asset privacy](../projects/assets/privacy.md) system lets you grant usage permissions to specific friends and experiences.

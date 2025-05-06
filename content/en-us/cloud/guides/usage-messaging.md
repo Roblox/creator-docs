@@ -3,7 +3,7 @@ title: Messaging usage guide
 description: Explains how to use Open Cloud Messaging Service API to support cross-server messaging.
 ---
 
-The [Messaging Service API](/cloud/reference/Universe#Publish-Universe-Message) is the Open Cloud equivalent of the Engine `Class.MessagingService`, which lets you communicate across your experience's servers and clients. The Engine API only allows you to write and update scripts manually in Studio for publishing messages, but the Open Cloud API lets you send messages to live servers from external tools to automate and improve your operations workflows.
+The [Messaging Service API](/cloud/reference/Universe#Cloud_PublishUniverseMessage) is the Open Cloud equivalent of the Engine `Class.MessagingService`, which lets you communicate across your experience's servers and clients. The Engine API only allows you to write and update scripts manually in Studio for publishing messages, but the Open Cloud API lets you send messages to live servers from external tools to automate and improve your operations workflows.
 
 ## Usage
 
@@ -66,9 +66,9 @@ After [setting up](#set-up-a-topic-for-messaging) a topic, publish a message to 
 
    1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
    1. Find the experience that you want to publish your messages to.
-   1. Click the **&ctdot;** button on the target experience's thumbnail to display a list of options, then select **Copy Universe ID**.
+   1. Hover over an experience's thumbnail, click the **&ctdot;** button, and select **Copy Universe ID**.
 
-      <img src="../../assets/creator-dashboard/Experience-Context-Menu-Copy-Universe-ID.png" width="420" alt="Copy Universe ID option from Creator Dashboard" />
+      <img src="../../assets/creator-dashboard/Options-Button-Experience-Public.png" width="200" />
 
 3. Add the API key and universe to a `POST` request, as in this example:
 

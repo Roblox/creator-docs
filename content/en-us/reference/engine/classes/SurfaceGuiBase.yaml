@@ -1,6 +1,5 @@
 name: SurfaceGuiBase
 type: class
-category:
 memory_category: Instances
 summary: ''
 description: ''
@@ -20,12 +19,14 @@ properties:
 
       Note that interactive UI elements like `Class.ImageButton|ImageButtons`
       and `Class.TextButton|TextButtons` inside a `Class.SurfaceGui` will only
-      receive user input if they are parented to the `Class.PlayerGui`. The
+      receive user input if they are parented to the `Class.PlayerGui` (the
       `Class.SurfaceGui.Adorneee` property can be used to target a part in the
       3D world while the `Class.SurfaceGui` itself remains in the
-      `Class.PlayerGui`.
+      `Class.PlayerGui`). Additionally, the part's
+      `Class.BasePart.CanQuery|CanQuery` property must be `true` for the
+      interactive UI element to receive input.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

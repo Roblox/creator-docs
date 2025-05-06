@@ -1,6 +1,5 @@
 name: ControllerPartSensor
 type: class
-category:
 memory_category: Instances
 summary: |
   A `Class.SensorBase` that outputs data about another `Class.BasePart` based on

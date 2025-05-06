@@ -1,6 +1,5 @@
 name: UserGameSettings
 type: class
-category: Settings
 memory_category: Instances
 summary: |
   The UserGameSettings is a singleton class found inside of the
@@ -34,7 +33,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -68,7 +67,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -86,7 +85,7 @@ properties:
       The camera movement mode currently in-use by the client on desktop.
     description: |
       The camera movement mode currently in-use by the client on desktop.
-    code_samples:
+    code_samples: []
     type: ComputerCameraMovementMode
     tags: []
     deprecation_message: ''
@@ -105,7 +104,7 @@ properties:
       The type of controls being used by the client on desktop.
     description: |
       The type of controls being used by the client on desktop.
-    code_samples:
+    code_samples: []
     type: ComputerMovementMode
     tags: []
     deprecation_message: ''
@@ -124,7 +123,7 @@ properties:
       Toggles whether or not the client can use the Mouse Lock Switch mode.
     description: |
       Toggles whether or not the client can use the Mouse Lock Switch mode.
-    code_samples:
+    code_samples: []
     type: ControlMode
     tags: []
     deprecation_message: |
@@ -147,7 +146,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -165,7 +164,7 @@ properties:
       Describes how sensitive the camera is when using a gamepad.
     description: |
       Describes how sensitive the camera is when using a gamepad.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -217,7 +216,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -236,7 +235,7 @@ properties:
     description: |
       A <a href="../../../luau/numbers.md">float</a> between 0 and 1
       representing the volume of the game's client.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -271,7 +270,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -291,7 +290,7 @@ properties:
     description: |
       A float between 0 and 4 representing the sensitivity of the client's
       camera sensitivity.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -342,7 +341,7 @@ properties:
   - name: UserGameSettings.RCCProfilerRecordFrameRate
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -359,7 +358,7 @@ properties:
   - name: UserGameSettings.RCCProfilerRecordTimeFrame
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -378,7 +377,7 @@ properties:
       Controls how the client's character is rotated.
     description: |
       Controls how the client's character is rotated.
-    code_samples:
+    code_samples: []
     type: RotationType
     tags: []
     deprecation_message: ''
@@ -397,7 +396,7 @@ properties:
       The graphics quality level set by the client.
     description: |
       The graphics quality level set by the client.
-    code_samples:
+    code_samples: []
     type: SavedQualitySetting
     tags: []
     deprecation_message: ''
@@ -415,7 +414,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
       - NotScriptable
@@ -473,7 +472,7 @@ properties:
       The camera type in-use by the client while on a mobile device.
     description: |
       The camera type in-use by the client while on a mobile device.
-    code_samples:
+    code_samples: []
     type: TouchCameraMovementMode
     tags: []
     deprecation_message: ''
@@ -492,7 +491,7 @@ properties:
       The type of controls being used by the client on a mobile device.
     description: |
       The type of controls being used by the client on a mobile device.
-    code_samples:
+    code_samples: []
     type: TouchMovementMode
     tags: []
     deprecation_message: ''
@@ -510,7 +509,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -527,7 +526,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -544,7 +543,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -561,7 +560,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -595,7 +594,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -612,7 +611,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -631,7 +630,7 @@ methods:
       Returns the camera's Y-invert value.
     description: |
       Returns the camera's Y-invert value.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: int
@@ -658,15 +657,15 @@ methods:
 
       - `Class.UserGameSettings:SetOnboardingCompleted()`, sets onboarding as
         completed
-    code_samples:
+    code_samples: []
     parameters:
       - name: onboardingId
         type: string
-        default:
+        default: ''
         summary: |
           The onboarding ID to inquire about.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether or not the onboarding in particular has been completed yet.
     tags: []
@@ -680,10 +679,10 @@ methods:
       Returns true if the user's Roblox window is in full screen mode.
     description: |
       Returns true if the user's Roblox window is in full screen mode.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
@@ -696,10 +695,10 @@ methods:
       Returns true if the client's game session is in Roblox Studio.
     description: |
       Returns true if the client's game session is in Roblox Studio.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
@@ -714,10 +713,10 @@ methods:
     description: |
       If called, Roblox toggles the menu option to invert the user's camera y
       axis.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -732,10 +731,10 @@ methods:
     description: |
       If called, Roblox toggles the menu option to control the camera
       sensitivity with gamepads.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -763,15 +762,15 @@ methods:
 
       - `Class.UserGameSettings:GetOnboardingCompleted()`, checks if onboarding
         has been completed
-    code_samples:
+    code_samples: []
     parameters:
       - name: onboardingId
         type: string
-        default:
+        default: ''
         summary: |
           The onboarding ID to set as completed.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -791,13 +790,12 @@ events:
       - Full-Screen-Mode-Detection
     parameters:
       - name: isFullscreen
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: UserGameSettings.StudioModeChanged
@@ -807,16 +805,15 @@ events:
     description: |
       Fired when the user's client switches between Studio mode and in-game
       mode. This gets fired periodically in Roblox Studio when a session starts.
-    code_samples:
+    code_samples: []
     parameters:
       - name: isStudioMode
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

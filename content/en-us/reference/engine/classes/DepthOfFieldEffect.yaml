@@ -1,6 +1,5 @@
 name: DepthOfFieldEffect
 type: class
-category:
 memory_category: Instances
 summary: |
   Simulates a camera lens by blurring parts of a scene not in focus.
@@ -19,7 +18,7 @@ description: |
   [Post-Processing Effects](../../../environment/post-processing-effects.md).
 
   <img src="../../../assets/engine-api/classes/DepthOfFieldEffect/Depth-Of-Field-Diagram.svg" />
-code_samples:
+code_samples: []
 inherits:
   - PostEffect
 tags: []
@@ -34,7 +33,7 @@ properties:
       `Class.DepthOfFieldEffect.InFocusRadius|InFocusRadius` value.
 
       <img src="../../../assets/engine-api/classes/DepthOfFieldEffect/Depth-Of-Field-Diagram.svg" />
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -57,7 +56,7 @@ properties:
       focus.
 
       <img src="../../../assets/engine-api/classes/DepthOfFieldEffect/Depth-Of-Field-Diagram.svg" />
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -83,7 +82,7 @@ properties:
       where no blur is applied. Measured in studs.
 
       <img src="../../../assets/engine-api/classes/DepthOfFieldEffect/Depth-Of-Field-Diagram.svg" />
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -107,7 +106,7 @@ properties:
       `Class.DepthOfFieldEffect.InFocusRadius|InFocusRadius` value.
 
       <img src="../../../assets/engine-api/classes/DepthOfFieldEffect/Depth-Of-Field-Diagram.svg" />
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

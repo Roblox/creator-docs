@@ -1,6 +1,5 @@
 name: OpenCloudService
 type: class
-category:
 memory_category: Instances
 summary: ''
 description: ''
@@ -35,15 +34,15 @@ methods:
     parameters:
       - name: version
         type: string
-        default:
+        default: ''
         summary: ''
       - name: methodName
         type: string
-        default:
+        default: ''
         summary: ''
       - name: arguments
         type: Dictionary
-        default:
+        default: ''
         summary: ''
       - name: headers
         type: Dictionary

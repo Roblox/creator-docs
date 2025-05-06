@@ -1,6 +1,5 @@
 name: PathfindingLink
 type: class
-category:
 memory_category: Instances
 summary: |
   Connects two locations which otherwise by default are unconnected.
@@ -8,7 +7,7 @@ description: |
   `Class.PathfindingLink` connects two locations which otherwise by default are
   unconnected. See [here](../../../characters/pathfinding.md#pathfinding-links)
   for usage details.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -19,7 +18,7 @@ properties:
       The originating attachment of the link.
     description: |
       The originating attachment of the link.
-    code_samples:
+    code_samples: []
     type: Attachment
     tags: []
     deprecation_message: ''
@@ -38,7 +37,7 @@ properties:
       The landing attachment of the link.
     description: |
       The landing attachment of the link.
-    code_samples:
+    code_samples: []
     type: Attachment
     tags: []
     deprecation_message: ''
@@ -59,8 +58,8 @@ properties:
     description: |
       Enables a path to traverse a link in both directions. The default value is
       `true`.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

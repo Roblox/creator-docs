@@ -1,6 +1,5 @@
 name: AudioDeviceInput
 type: class
-category:
 memory_category: Internal
 summary: |
   Produces audio streams from physical devices, such as microphones.
@@ -59,7 +58,7 @@ properties:
       `Class.AudioDeviceInput.Active|Active` is true **and**
       `Class.AudioDeviceInput.Muted|Muted` is false.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -79,7 +78,7 @@ properties:
       Denotes whether this `Class.AudioDeviceInput` is ready to produce sound,
       meaning all network connections have been established.
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -107,7 +106,7 @@ properties:
       `Class.AudioDeviceInput.Muted|Muted` is false.
     code_samples:
       - audio-wiring---push-to-talk
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -124,7 +123,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''
@@ -192,7 +191,7 @@ methods:
     parameters:
       - name: pin
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instances
@@ -265,10 +264,10 @@ methods:
     parameters:
       - name: userIds
         type: Array
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -288,30 +287,29 @@ events:
     code_samples: []
     parameters:
       - name: connected
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           Whether the instance got connected or disconnected.
       - name: pin
         type: string
-        default:
+        default: ''
         summary: |
           The pin on the `Class.AudioDeviceInput` that the `Class.Wire` targets.
       - name: wire
         type: Wire
-        default:
+        default: ''
         summary: |
           The `Class.Wire` between the `Class.AudioDeviceInput` and the other
           instance.
       - name: instance
         type: Instance
-        default:
+        default: ''
         summary: |
           The other instance that is or was connected through the `Class.Wire`.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

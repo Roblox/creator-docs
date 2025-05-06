@@ -1,6 +1,5 @@
 name: AudioPlayer
 type: class
-category:
 memory_category: Internal
 summary: |
   Used to play audio assets.
@@ -72,7 +71,7 @@ properties:
       Controls whether `Class.AudioPlayer.Asset|Asset` loads automatically once
       assigned. If `false`, the asset will load upon the first attempt to play.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -95,12 +94,12 @@ properties:
       `Class.AudioPlayer` at runtime, use the `Class.AudioPlayer:Play()|Play()`
       and `Class.AudioPlayer:Stop()|Stop()` methods.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
       read: None
-      write: RobloxSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Playback
     serialization:
@@ -119,7 +118,7 @@ properties:
       assets unloaded at runtime if there is extreme memory pressure, in which
       case `Class.AudioPlayer.IsReady|IsReady` will become false.
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -190,7 +189,7 @@ properties:
       `Class.AudioPlayer.LoopRegion|LoopRegion`, or
       `Class.AudioPlayer.PlaybackRegion|PlaybackRegion`.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -344,7 +343,7 @@ methods:
     parameters:
       - name: pin
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instances
@@ -353,7 +352,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioPlayer:GetInputPins
     summary: ''
@@ -367,7 +367,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioPlayer:GetOutputPins
     summary: ''
@@ -381,7 +382,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioPlayer:Play
     summary: |
@@ -394,13 +396,14 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioPlayer:Stop
     summary: |
@@ -413,13 +416,14 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioPlayer:GetWaveformAsync
     summary: ''
@@ -428,11 +432,11 @@ methods:
     parameters:
       - name: timeRange
         type: NumberRange
-        default:
+        default: ''
         summary: ''
       - name: samples
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -442,7 +446,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
 events:
   - name: AudioPlayer.Ended
@@ -464,8 +469,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioPlayer.Looped
     summary: |
@@ -483,8 +488,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioPlayer.WiringChanged
     summary: |
@@ -497,30 +502,30 @@ events:
     code_samples: []
     parameters:
       - name: connected
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           Whether the instance got connected or disconnected.
       - name: pin
         type: string
-        default:
+        default: ''
         summary: |
           The pin on the `Class.AudioPlayer` that the `Class.Wire` targets.
       - name: wire
         type: Wire
-        default:
+        default: ''
         summary: |
           The `Class.Wire` between the `Class.AudioPlayer` and the other
           instance.
       - name: instance
         type: Instance
-        default:
+        default: ''
         summary: |
           The other instance that is or was connected through the `Class.Wire`.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
 callbacks: []

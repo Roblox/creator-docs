@@ -8,7 +8,7 @@ With the `Class.Model` in your project, the last step in the process of clothing
 
 To generate the accessory object:
 
-1. In the Avatar tab, select the **Accessory Fitting Tool**. The Accessory Fitting Tool panel displays on the left side of the workspace.
+1. In the toolbar's **Avatar** tab, select the **Accessory Fitting Tool**. The Accessory Fitting Tool panel displays on the left side of the workspace.
 2. Select the `Class.Model` of the clothing item in the viewport. The tool's text field populates with the name of the object selected. Alternatively, you can select the object within the Explorer window.
 3. Test out various sample characters, clothing, and animations. See [Test accessories](../../../art/accessories/accessory-fitting-tool.md#test-accessories) for additional information.
    - If required, make minor cage adjustments using the editing features. Larger cage changes may require returning to your third-party modeling software and re-exporting the asset.

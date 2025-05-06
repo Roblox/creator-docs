@@ -1,6 +1,5 @@
 name: FluidForceSensor
 type: class
-category:
 memory_category: Instances
 summary: |
   A `Class.SensorBase` that outputs `Class.FluidForceSensor.Force|Force`,
@@ -96,17 +95,17 @@ methods:
     parameters:
       - name: linearVelocity
         type: Vector3
-        default:
+        default: ''
         summary: |
           Linear velocity in world coordinates.
       - name: angularVelocity
         type: Vector3
-        default:
+        default: ''
         summary: |
           Angular velocity in world coordinates.
       - name: cframe
         type: CFrame
-        default:
+        default: ''
         summary: |
           `Datatype.CFrame` to be used for evaluation.
     returns:

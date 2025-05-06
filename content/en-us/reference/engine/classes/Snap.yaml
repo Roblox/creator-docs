@@ -1,6 +1,5 @@
 name: Snap
 type: class
-category: Joints
 memory_category: PhysicsParts
 summary: |
   Holds two parts together and functions identically to `Class.Weld`.
@@ -29,7 +28,7 @@ description: |
   joints forming a tree branching down from the root part. All the parts down
   the tree from root will move, and their welded "children" in this tree will
   move with them.
-code_samples:
+code_samples: []
 inherits:
   - JointInstance
 tags:

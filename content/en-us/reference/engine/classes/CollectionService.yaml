@@ -1,6 +1,5 @@
 name: CollectionService
 type: class
-category: Utility
 memory_category: Instances
 summary: |
   A service which manages instance collections using assigned tags.
@@ -66,25 +65,26 @@ methods:
         `Class.Instance:Destroy()` or in a function connected to a signal
         returned by
         `Class.CollectionService:GetInstanceRemovedSignal()|GetInstanceRemovedSignal()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: instance
         type: Instance
-        default:
+        default: ''
         summary: ''
       - name: tag
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: CollectionService:GetAllTags
     summary: |
@@ -100,7 +100,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: CollectionService:GetCollection
     summary: |
@@ -115,7 +116,7 @@ methods:
     parameters:
       - name: class
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instances
@@ -128,7 +129,8 @@ methods:
       `Class.CollectionService:GetTagged()` which should be used in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: CollectionService:GetInstanceAddedSignal
     summary: |
@@ -158,7 +160,7 @@ methods:
     parameters:
       - name: tag
         type: string
-        default:
+        default: ''
         summary: |
           The tag to watch for.
     returns:
@@ -169,7 +171,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: CollectionService:GetInstanceRemovedSignal
     summary: |
@@ -197,7 +200,7 @@ methods:
     parameters:
       - name: tag
         type: string
-        default:
+        default: ''
         summary: |
           The tag to watch for.
     returns:
@@ -208,7 +211,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: CollectionService:GetTagged
     summary: |
@@ -233,7 +237,7 @@ methods:
     parameters:
       - name: tag
         type: string
-        default:
+        default: ''
         summary: |
           The tag to search for.
     returns:
@@ -244,7 +248,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: CollectionService:GetTags
     summary: |
@@ -262,7 +267,7 @@ methods:
     parameters:
       - name: instance
         type: Instance
-        default:
+        default: ''
         summary: |
           The instance whose tags should be returned.
     returns:
@@ -274,7 +279,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: CollectionService:HasTag
     summary: |
@@ -290,16 +296,16 @@ methods:
     parameters:
       - name: instance
         type: Instance
-        default:
+        default: ''
         summary: |
           The instance to check for the presence of a tag.
       - name: tag
         type: string
-        default:
+        default: ''
         summary: |
           The tag to check for.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the instance has the tag.
     tags:
@@ -307,7 +313,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: CollectionService:RemoveTag
     summary: |
@@ -327,23 +334,24 @@ methods:
     parameters:
       - name: instance
         type: Instance
-        default:
+        default: ''
         summary: |
           The instance to remove the tag from.
       - name: tag
         type: string
-        default:
+        default: ''
         summary: |
           The tag to remove from the instance.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 events:
   - name: CollectionService.ItemAdded
@@ -360,7 +368,7 @@ events:
     parameters:
       - name: instance
         type: Instance
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -368,8 +376,8 @@ events:
       This item has been superseded by a `Class.CollectionService` tagging
       method. There is currently no means of checking when a tag is added.
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: CollectionService.ItemRemoved
     summary: |
@@ -385,7 +393,7 @@ events:
     parameters:
       - name: instance
         type: Instance
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -393,8 +401,8 @@ events:
       This item has been superseded by a `Class.CollectionService` tagging
       method. There is currently no means of checking when a tag is removed.
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: CollectionService.TagAdded
     summary: |
@@ -407,13 +415,13 @@ events:
     parameters:
       - name: tag
         type: string
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: CollectionService.TagRemoved
     summary: |
@@ -426,12 +434,12 @@ events:
     parameters:
       - name: tag
         type: string
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 callbacks: []

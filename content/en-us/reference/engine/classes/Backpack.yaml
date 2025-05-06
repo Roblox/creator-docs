@@ -1,6 +1,5 @@
 name: Backpack
 type: class
-category: Gameplay
 memory_category: Instances
 summary: |
   A container object that holds a player's inventory. Any `Class.Tool` in a

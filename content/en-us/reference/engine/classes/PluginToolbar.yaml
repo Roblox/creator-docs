@@ -1,6 +1,5 @@
 name: PluginToolbar
 type: class
-category: Plugins
 memory_category: Instances
 summary: ''
 description: |
@@ -19,7 +18,7 @@ description: |
   local toolbar = plugin:CreateToolbar("Three Wise Monkeys")
   local button = toolbar:CreateButton("Mizaru", "See No Evil", "rbxassetid://2778270261")
   ```
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -40,18 +39,18 @@ methods:
     parameters:
       - name: buttonId
         type: string
-        default:
+        default: ''
         summary: |
           A unique button ID.
       - name: tooltip
         type: string
-        default:
+        default: ''
         summary: |
           The text displayed in the tooltip shown when a user hovers over the
           button.
       - name: iconname
         type: string
-        default:
+        default: ''
         summary: |
           The asset ID (e.g. rbxassetid://1507949215) of the icon displayed in
           the button.

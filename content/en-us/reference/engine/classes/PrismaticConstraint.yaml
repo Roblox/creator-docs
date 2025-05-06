@@ -1,6 +1,5 @@
 name: PrismaticConstraint
 type: class
-category: Constraints
 memory_category: PhysicsParts
 summary: |
   Constraint which creates a rigid joint between two
@@ -23,7 +22,7 @@ description: |
   When configuring this constraint, it may be helpful to study
   [Roblox Units](../../../physics/units.md) to understand how Roblox units
   compare to metric units.
-code_samples:
+code_samples: []
 inherits:
   - SlidingBallConstraint
 tags: []

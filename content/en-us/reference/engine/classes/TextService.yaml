@@ -1,6 +1,5 @@
 name: TextService
 type: class
-category: Utility
 memory_category: Instances
 summary: |
   The TextService is a service internally responsible for handling the display
@@ -20,7 +19,7 @@ description: |
   interests of user safety. Developers not using the Roblox default
   `Class.Chat`, or allowing users to otherwise input text must use this
   function.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -66,22 +65,22 @@ methods:
     parameters:
       - name: string
         type: string
-        default:
+        default: ''
         summary: |
           The string for which the text size is to be calculated.
       - name: fontSize
         type: int
-        default:
+        default: ''
         summary: |
           The integer representing the font size used.
       - name: font
         type: Font
-        default:
+        default: ''
         summary: |
           The font used.
       - name: frameSize
         type: Vector2
-        default:
+        default: ''
         summary: |
           The `Class.TextLabel.AbsoluteSize` of the text object to be used.
           Required to compute how the text will wrap.
@@ -94,7 +93,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: TextService:FilterAndTranslateStringAsync
     summary: |
@@ -108,15 +108,15 @@ methods:
     parameters:
       - name: stringToFilter
         type: string
-        default:
+        default: ''
         summary: ''
       - name: fromUserId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: targetLocales
         type: Array
-        default:
+        default: ''
         summary: ''
       - name: textContext
         type: TextFilterContext
@@ -130,7 +130,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: TextService:FilterStringAsync
     summary: |
@@ -186,12 +187,12 @@ methods:
     parameters:
       - name: stringToFilter
         type: string
-        default:
+        default: ''
         summary: |
           The text to be filtered.
       - name: fromUserId
         type: int64
-        default:
+        default: ''
         summary: |
           The userId of the player filtering the text.
       - name: textContext
@@ -207,7 +208,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: TextService:GetFamilyInfoAsync
     summary: |
@@ -250,7 +252,7 @@ methods:
     parameters:
       - name: assetId
         type: ContentId
-        default:
+        default: ''
         summary: |
           Asset ID of the font family to look up.
     returns:
@@ -262,7 +264,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: TextService:GetTextBoundsAsync
     summary: |
@@ -288,14 +291,14 @@ methods:
       Throws an error in these scenarios:
 
       - The `Class.GetTextBoundsParams.Font` has a blank family.
-      - The `params` argument was nil.
+      - The `params` argument was `nil`.
       - The font family or font face failed to download.
     code_samples:
       - TextService-GetTextBoundsAsync-1
     parameters:
       - name: params
         type: GetTextBoundsParams
-        default:
+        default: ''
         summary: |
           A reference to a `Class.GetTextBoundsParams` object.
     returns:
@@ -307,7 +310,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: TextService:GetTextSizeOffsetAsync
     summary: ''
@@ -316,11 +320,11 @@ methods:
     parameters:
       - name: fontSize
         type: int
-        default:
+        default: ''
         summary: ''
       - name: font
         type: Font
-        default:
+        default: ''
         summary: ''
     returns:
       - type: float
@@ -330,7 +334,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 events: []
 callbacks: []

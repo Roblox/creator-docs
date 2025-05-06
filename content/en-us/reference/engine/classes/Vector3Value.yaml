@@ -1,6 +1,5 @@
 name: Vector3Value
 type: class
-category: Values
 memory_category: Instances
 summary: |
   A container object for a single Vector3 value.
@@ -20,7 +19,7 @@ properties:
       The stored `Datatype.Vector3`.
     description: |
       The stored `Datatype.Vector3`.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -59,23 +58,22 @@ events:
     parameters:
       - name: value
         type: Vector3
-        default:
+        default: ''
         summary: |
           The new value after the change.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: Vector3Value.changed
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
         type: Vector3
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -83,7 +81,6 @@ events:
       This deprecated event is a variant of `Class.Vector3Value.Changed` which
       should be used instead.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

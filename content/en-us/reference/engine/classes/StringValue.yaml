@@ -1,6 +1,5 @@
 name: StringValue
 type: class
-category: Values
 memory_category: Instances
 summary: |
   A container object for a single string.
@@ -28,7 +27,7 @@ properties:
       The stored string.
     description: |
       The stored <a href="../../../luau/strings.md">string</a>.
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -67,23 +66,22 @@ events:
     parameters:
       - name: value
         type: string
-        default:
+        default: ''
         summary: |
           The new value after the change.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: StringValue.changed
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
         type: string
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -91,7 +89,6 @@ events:
       This deprecated event is a variant of `Class.StringValue.Changed` which
       should be used instead.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

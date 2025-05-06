@@ -38,7 +38,6 @@ To search and enable an asset for sale:
 
 1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
 2. In the **Monetization** menu, select **Avatar Items**. All avatar items for that experience display.
-   <img src="../../assets/monetization/avatar-items/navigation.png" width="50%" />
 3. Using the search bar, use the item's Asset ID to find the avatar item.
    1. If you do not see the item populate, verify that your Asset ID is correct and that the item creator has added the correct Place ID to the item's sales locations.
 4. Using the dropdown on the thumbnail, click **Enable Sale**.

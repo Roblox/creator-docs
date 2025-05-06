@@ -1,6 +1,5 @@
 name: PatchMapping
 type: class
-category:
 memory_category: Instances
 summary: ''
 description: ''
@@ -16,7 +15,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

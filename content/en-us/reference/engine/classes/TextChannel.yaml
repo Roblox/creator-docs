@@ -1,6 +1,5 @@
 name: TextChannel
 type: class
-category:
 memory_category: Instances
 summary: |
   Represents a text chat channel.
@@ -18,7 +17,7 @@ description: |
 
   To learn more, see
   [In-Experience Text Chat](../../../chat/in-experience-text-chat.md).
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -63,7 +62,7 @@ methods:
     parameters:
       - name: systemMessage
         type: string
-        default:
+        default: ''
         summary: |
           The system message sent to the `Class.TextChannel`.
       - name: metadata
@@ -81,7 +80,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
     writeCapabilities: []
   - name: TextChannel:SetDirectChatRequester
     summary: |
@@ -117,16 +117,17 @@ methods:
     parameters:
       - name: requester
         type: Player
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
     writeCapabilities: []
   - name: TextChannel:AddUserAsync
     summary: |
@@ -148,7 +149,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The userId of the `Class.Player`.
     returns:
@@ -163,7 +164,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
     writeCapabilities: []
   - name: TextChannel:SendAsync
     summary: |
@@ -172,11 +174,17 @@ methods:
       Sends a `Class.TextChatMessage` to the server. Can only be used in a
       `Class.LocalScript`, or in a `Class.Script` with
       `Class.Script.RunContext|RunContext` of `Enum.RunContext.Client`.
+
+      The `metadata` argument has a limit of 200 characters. If this is called
+      with a `metadata` argument that has more than 200 characters, the message
+      will not be sent to other users. Instead, the sender will receive a
+      `Class.TextChatMessage` with the `Class.TextChatMessage.Metadata` and
+      `Class.TextChatMessage.Text` properties set to empty strings.
     code_samples: []
     parameters:
       - name: message
         type: string
-        default:
+        default: ''
         summary: |
           The message to send to the `Class.TextChannel`.
       - name: metadata
@@ -194,7 +202,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
     writeCapabilities: []
 events:
   - name: TextChannel.MessageReceived
@@ -222,14 +231,14 @@ events:
     parameters:
       - name: incomingMessage
         type: TextChatMessage
-        default:
+        default: ''
         summary: |
           The received `Class.TextChatMessage`.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
     writeCapabilities: []
 callbacks:
   - name: TextChannel.OnIncomingMessage
@@ -264,7 +273,7 @@ callbacks:
     parameters:
       - name: message
         type: TextChatMessage
-        default:
+        default: ''
         summary: |
           The incoming `Class.TextChatMessage`.
     returns:
@@ -277,7 +286,8 @@ callbacks:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
     writeCapabilities: []
   - name: TextChannel.ShouldDeliverCallback
     summary: |
@@ -302,12 +312,12 @@ callbacks:
     parameters:
       - name: message
         type: TextChatMessage
-        default:
+        default: ''
         summary: |
           The message being sent, which also contains the sender of the message.
       - name: textSource
         type: TextSource
-        default:
+        default: ''
         summary: |
           The `Class.TextSource` of the user who will be receiving the message.
     returns:
@@ -317,5 +327,6 @@ callbacks:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
     writeCapabilities: []

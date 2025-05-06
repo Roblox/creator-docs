@@ -1,6 +1,5 @@
 name: ScreenshotHud
 type: class
-category: GUI
 memory_category: Instances
 summary: |
   A 2D user interface that allows users to capture and save screenshots to their
@@ -93,7 +92,7 @@ properties:
       Determines whether the `Class.ScreenshotHud` closes automatically when a
       screenshot is taken.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -112,7 +111,7 @@ properties:
     description: |
       Determines whether the experience name in the overlay is enabled.
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - Hidden
       - Deprecated
@@ -131,7 +130,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -148,7 +147,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -188,7 +187,7 @@ properties:
     description: |
       Currently disabled with no effect.
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - Hidden
       - Deprecated
@@ -209,7 +208,7 @@ properties:
     description: |
       Determines whether the `Class.ScreenshotHud` is visible.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

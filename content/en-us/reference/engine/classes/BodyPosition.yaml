@@ -1,6 +1,5 @@
 name: BodyPosition
 type: class
-category: Body Movers
 memory_category: Instances
 summary: |
   Applies a force to maintain a constant position.
@@ -21,7 +20,7 @@ description: |
   resulting force is then capped by `Class.BodyPosition.MaxForce|MaxForce`. Note
   the force applied on the part to achieve the goal position may vary on a
   per-axis basis.
-code_samples:
+code_samples: []
 inherits:
   - BodyMover
 tags:
@@ -44,7 +43,7 @@ properties:
       property is how that effect is avoided. The higher this value is set, the
       greater the dampening curve becomes, or the slower the part will approach
       the goal position.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -68,7 +67,7 @@ properties:
       `Class.BodyPosition.Position|Position`. If a part isn't moving, consider
       increasing this value (also check that it is not
       `Class.BasePart.Anchored|Anchored` or attached to any anchored parts).
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -96,7 +95,7 @@ properties:
       `Class.BodyPosition` exerts increases as the difference between the part's
       current position and the goal position increases. This property is
       multiplied to this force to either amplify or diminish it.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -117,7 +116,7 @@ properties:
     description: |
       The Position property determines the goal position towards which the
       `Class.BodyPosition` will apply force.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -135,7 +134,7 @@ properties:
   - name: BodyPosition.maxForce
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - NotReplicated
@@ -157,7 +156,7 @@ properties:
   - name: BodyPosition.position
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - NotReplicated
@@ -182,7 +181,7 @@ methods:
       Returns the last force in the object.
     description: |
       This function returns the last force in the object.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Vector3
@@ -191,14 +190,15 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: BodyPosition:lastForce
     summary: |
       Returns the last force in the object.
     description: |
       The lastForce function returns the last force in the object.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Vector3
@@ -210,7 +210,8 @@ methods:
       which should be used in new work instead,
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
 events:
   - name: BodyPosition.ReachedTarget
@@ -222,12 +223,12 @@ events:
       Fired when the Parent of the BodyPosition reaches the desired
       `Class.BodyPosition.Position` (within .1 studs). Once this event fires it
       will not fire again until `Class.BodyPosition.Position` is updated.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
 callbacks: []

@@ -1,3 +1,6 @@
+backTo:
+  title: Back to Open Cloud
+  path: /cloud/
 navigation:
   - heading: Guides
   - title: Overview
@@ -7,7 +10,7 @@ navigation:
     path: /cloud/guides/inventory
   - title: Engine instances
     path: /cloud/guides/instance
-  - title: Experience notifications
+  - title: User notifications
     path: /cloud/guides/experience-notifications
   - title: Messaging
     path: /cloud/guides/usage-messaging

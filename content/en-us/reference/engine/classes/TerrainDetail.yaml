@@ -1,6 +1,5 @@
 name: TerrainDetail
 type: class
-category:
 memory_category: Instances
 summary: |
   Determines appearance of a certain terrain face direction.

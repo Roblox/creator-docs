@@ -1,6 +1,5 @@
 name: TextChatService
 type: class
-category:
 memory_category: Instances
 summary: |
   A service handling in-experience text chat.
@@ -20,7 +19,7 @@ description: |
   - `Class.ChatInputBarConfiguration`
   - `Class.BubbleChatConfiguration`
   - `Class.ChannelTabsConfiguration`
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -36,7 +35,7 @@ properties:
       notify player's when their first join that chat messages may be translated
       into the player's preferred language.
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''
@@ -66,7 +65,7 @@ properties:
     deprecation_message: ''
     security:
       read: None
-      write: NotAccessibleSecurity
+      write: RobloxScriptSecurity
     thread_safety: ReadSafe
     category: Data
     serialization:
@@ -170,7 +169,7 @@ properties:
       true. Also note that mute and unmute commands apply to all
       `Class.TextChannel|TextChannels`.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -235,7 +234,7 @@ properties:
       Messages from different TextChannels can be separated into different tabs
       in the chat window using `Class.ChannelTabsConfiguration`.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -267,22 +266,23 @@ methods:
     parameters:
       - name: partOrCharacter
         type: Instance
-        default:
+        default: ''
         summary: |
           The part or character that the bubble to be displayed above.
       - name: message
         type: string
-        default:
+        default: ''
         summary: |
           The text to be displayed in the chat bubble.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
     writeCapabilities: []
   - name: TextChatService:CanUserChatAsync
     summary: |
@@ -301,17 +301,18 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
     writeCapabilities: []
   - name: TextChatService:CanUsersChatAsync
     summary: |
@@ -330,21 +331,22 @@ methods:
     parameters:
       - name: userIdFrom
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: userIdTo
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
     writeCapabilities: []
   - name: TextChatService:CanUsersDirectChatAsync
     summary: |
@@ -388,13 +390,13 @@ methods:
     parameters:
       - name: requesterUserId
         type: int64
-        default:
+        default: ''
         summary: |
           The user who would have initiated the direct chat request. If the
           requesterUserId is not in the current server, this method will error.
       - name: userIds
         type: Array
-        default:
+        default: ''
         summary: |
           A list of users who the requesterUserId would like to chat with
           directly. Users not in the current server are ignored.
@@ -409,7 +411,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
     writeCapabilities: []
 events:
   - name: TextChatService.BubbleDisplayed
@@ -421,17 +424,17 @@ events:
     parameters:
       - name: partOrCharacter
         type: Instance
-        default:
+        default: ''
         summary: ''
       - name: textChatMessage
         type: TextChatMessage
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
     writeCapabilities: []
   - name: TextChatService.MessageReceived
     summary: |
@@ -458,14 +461,14 @@ events:
     parameters:
       - name: textChatMessage
         type: TextChatMessage
-        default:
+        default: ''
         summary: |
           The received `Class.TextChatMessage`.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
     writeCapabilities: []
   - name: TextChatService.SendingMessage
     summary: |
@@ -479,15 +482,15 @@ events:
     parameters:
       - name: textChatMessage
         type: TextChatMessage
-        default:
+        default: ''
         summary: |
           The `Class.TextChatMessage` from the `Class.TextChannel:SendAsync()`
           call.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
     writeCapabilities: []
 callbacks:
   - name: TextChatService.OnBubbleAdded
@@ -511,16 +514,21 @@ callbacks:
       If the chat message is sent via `Class.TextChatService:DisplayBubble`,
       `adornee` will be the `partOrCharacter` provided, and `message.TextSource`
       will be `nil`.
+
+      When bound to the client sending a message, this callback is run twice:
+      first when the message is initially sent and received locally, then again
+      when the client receives the result of the filtered message from the
+      server.
     code_samples: []
     parameters:
       - name: message
         type: TextChatMessage
-        default:
+        default: ''
         summary: |
           The incoming `Class.TextChatMessage`.
       - name: adornee
         type: Instance
-        default:
+        default: ''
         summary: |
           The part or character the bubble chat message is attached to.
     returns:
@@ -532,7 +540,8 @@ callbacks:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
     writeCapabilities: []
   - name: TextChatService.OnChatWindowAdded
     summary: |
@@ -549,11 +558,16 @@ callbacks:
       parented under `Class.ChatWindowMessageProperties`, it will also override
       the `Class.ChatWindowConfiguration.TextColor3|TextColor3` property defined
       in `Class.ChatWindowConfiguration`.
+
+      When bound to the client sending a message, this callback is run twice:
+      first when the message is initially sent and received locally, then again
+      when the client receives the result of the filtered message from the
+      server.
     code_samples: []
     parameters:
       - name: message
         type: TextChatMessage
-        default:
+        default: ''
         summary: |
           The incoming `Class.TextChatMessage`.
     returns:
@@ -565,7 +579,8 @@ callbacks:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
     writeCapabilities: []
   - name: TextChatService.OnIncomingMessage
     summary: |
@@ -593,7 +608,7 @@ callbacks:
     parameters:
       - name: message
         type: TextChatMessage
-        default:
+        default: ''
         summary: |
           The incoming `Class.TextChatMessage`.
     returns:
@@ -607,5 +622,6 @@ callbacks:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
     writeCapabilities: []

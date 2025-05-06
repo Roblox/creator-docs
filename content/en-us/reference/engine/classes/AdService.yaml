@@ -1,6 +1,5 @@
 name: AdService
 type: class
-category:
 memory_category: Instances
 summary: |
   A class that allows the display of mobile video ads.
@@ -9,7 +8,7 @@ description: |
   of monetization. It has been superseded by
   [Immersive Ads](../../../production/monetization/immersive-ads.md) which
   should be used instead to serve ad units to visitors of your experience.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -26,7 +25,7 @@ methods:
     parameters:
       - name: devProductId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: AdReward
@@ -42,10 +41,10 @@ methods:
       Show mobile video advertisements.
     description: |
       Show mobile video advertisements.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -64,7 +63,7 @@ methods:
     parameters:
       - name: adFormat
         type: AdFormat
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Variant
@@ -83,11 +82,11 @@ methods:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: ''
       - name: reward
         type: AdReward
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ShowAdResult
@@ -105,11 +104,11 @@ events:
       Fires when an `Class.AdService` video closes.
     description: |
       Fires when an `Class.AdService` video closes.
-    code_samples:
+    code_samples: []
     parameters:
       - name: adShown
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -118,7 +117,6 @@ events:
       [Immersive Ads](../../../production/monetization/immersive-ads.md) should
       be used as a replacement for `Class.AdService`.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

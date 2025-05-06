@@ -1,6 +1,5 @@
 name: ReflectionMetadataEnums
 type: class
-category:
 memory_category: Instances
 summary: |
   Acts as a `Class.Folder` for `Class.ReflectionMetadataEnum` objects.
@@ -9,7 +8,7 @@ description: |
   `Class.ReflectionMetadataEnum` objects.
 
   Since it is an internal object, it cannot be used by developers.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []

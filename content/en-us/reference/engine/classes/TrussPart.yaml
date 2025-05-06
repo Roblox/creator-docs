@@ -1,6 +1,5 @@
 name: TrussPart
 type: class
-category: Building
 memory_category: Instances
 summary: |
   Similar to a `Class.Part` but with a different visual
@@ -23,7 +22,7 @@ description: |
   it invisible, set `Class.BasePart.CanCollide|CanCollide` on the
   `Class.BasePart` to `false`, and then align the climbable surface of the
   mesh/model with that of the `TrussPart`.
-code_samples:
+code_samples: []
 inherits:
   - BasePart
 tags: []
@@ -38,7 +37,7 @@ properties:
       - `Enum.Style.AlternatingSupports`
       - `Enum.Style.BridgeStyleSupports`
       - `Enum.Style.NoSupports`
-    code_samples:
+    code_samples: []
     type: Style
     tags:
       - NotReplicated

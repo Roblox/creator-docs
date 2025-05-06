@@ -65,9 +65,7 @@ end
 PublishEvent.OnServerEvent:Connect(onUserPublish)
 ```
 
-[In-Experience Creation Demo Arena](https://www.roblox.com/games/12992503026/In-Experience-Creation-Demo-Arena) showcases an example on how you can use this feature. You can join the demo to walk through the in-experience creation workflow as a user and access the place file using the **Edit&nbsp;in&nbsp;Studio** option to reference the design.
-
-<img src="../../assets/misc/In-Experience-Creation-Place.png" width="780" alt="A close up view of an experience's tile on its landing page. The ellipsis button is highlighted." />
+[In-Experience Creation Demo Arena](https://www.roblox.com/games/12992503026/In-Experience-Creation-Demo-Arena) showcases an example on how you can use this feature. You can join the demo to walk through the in-experience creation workflow as a user, or edit the place in Studio to reference the design.
 
 ## Post-creation and attribution
 
@@ -79,8 +77,6 @@ After users create and save an asset from your experience, they can find it in t
 - The **Inventory** tab of their [Toolbox](../../projects/assets/toolbox.md) in Studio.
 
 When users see in-experience creations on their friends' profiles or inventories, they see attribution to the original experience in which the asset was created. Users can click on the attribution link to redirect to the experience page, so they can join the experience and create their own.
-
-<img src="../../assets/creator-dashboard/In-Experience-Creation-Attribution.png" width="24%" alt="An example asset tile that shows the attribution of an in-experience creation."/>
 
 <Alert severity="warning">
 Attribution is currently tied to a specific version of the created asset. If a user saves a package from an experience and further edits in Studio to create a new version, attribution no longer displays for the new version.

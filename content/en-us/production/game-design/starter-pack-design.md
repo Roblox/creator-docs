@@ -10,7 +10,7 @@ According to industry benchmarks, games that implement a starter pack may see an
 The tips below are based on industry best practices and the Developer Excellence team's experience. Feel free to follow our suggestions, or design the starter pack that best suits your own game.
 
 <Alert severity="info">
-For out-of-the-box functionality to sell collections of items to players at a discount, see the [Bundles feature package](../../resources/feature-packages/bundles.md).
+For out-of-the-box functionality to sell collections of items to players at a discount, see the [Bundles](../../resources/feature-packages/bundles.md) feature package.
 </Alert>
 
 ## Availability

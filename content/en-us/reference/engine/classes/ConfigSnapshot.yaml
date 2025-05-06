@@ -1,6 +1,5 @@
 name: ConfigSnapshot
 type: class
-category:
 memory_category: Instances
 summary: ''
 description: ''
@@ -35,7 +34,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -58,11 +57,11 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
       - name: defaultValue
         type: Variant
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Variant
@@ -80,7 +79,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: RBXScriptSignal
@@ -97,7 +96,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -114,7 +113,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

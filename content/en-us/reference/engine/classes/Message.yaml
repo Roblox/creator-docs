@@ -1,6 +1,5 @@
 name: Message
 type: class
-category:
 memory_category: Instances
 summary: |
   Fills the entire screen with a semi-transparent grey background, with centered
@@ -10,7 +9,7 @@ description: |
   text in the middle of the screen.
 
   Messages will not display if the `Class.Message.Text` field is empty.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -29,7 +28,7 @@ properties:
 
       A `Class.Message` will be invisible if its `Class.Message.Text` property
       is blank, however the black bar of a `Class.Hint` will remain visible.
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: |

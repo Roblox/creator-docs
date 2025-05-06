@@ -81,21 +81,27 @@ The physics engine includes the following `Class.Constraint|Constraints` that ap
 
 ## Constraint visualization
 
-To accurately visualize constraints in Studio, you can use the following options from the [Model](../studio/model-tab.md) tab:
+To accurately visualize constraints in Studio, you can use the following options from the toolbar's **Model** tab:
 
 <img src="../assets/studio/general/Model-Tab-Constraints-Section-Labeled.png" width="754" alt="Constraints tools indicated in Model tab" />
 
-<Grid container spacing={2} alignItems="center">
-	<Grid item><img src="../assets/misc/Box-Label-A.png" alt="" width="40" /></Grid>
-	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}><p>**Show Welds** &mdash; Show `Class.WeldConstraint|WeldConstraints`, separately from the visualization of other constraints.</p></Grid>
+<Grid container spacing={2}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-A.png" width="40" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
+	**Show Welds** &mdash; Show `Class.WeldConstraint|WeldConstraints`, separately from the visualization of other constraints.
+	</Grid>
 </Grid>
-<Grid container spacing={2} alignItems="center">
-	<Grid item><img src="../assets/misc/Box-Label-B.png" alt="" width="40" /></Grid>
-	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}><p>**Constraint Details** &mdash; Show complete visual details of non-weld constraints.</p></Grid>
+<Grid container spacing={2}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-B.png" width="40" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
+	**Constraint Details** &mdash; Show complete visual details of non-weld constraints.
+	</Grid>
 </Grid>
-<Grid container spacing={2} alignItems="center">
-	<Grid item><img src="../assets/misc/Box-Label-C.png" alt="" width="40" /></Grid>
-	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}><p>**Scale** &mdash; Relative scale of visualizations.</p></Grid>
+<Grid container spacing={2}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-C.png" width="40" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
+	**Scale** &mdash; Relative scale of visualizations.
+	</Grid>
 </Grid>
 
 <Alert severity="success">
@@ -111,7 +117,7 @@ To create a mover constraint, you can use either the **Create** tool or the [Exp
 <Tabs>
 <TabItem label="Create tool">
 
-1. In the Model tab, access the **Create** button's picker menu and select the desired constraint type, for example **Angular&nbsp;Velocity**.
+1. In the **Model** tab, access the **Create** button's picker menu and select the desired constraint type, for example **Angular&nbsp;Velocity**.
 
    <img src="../assets/studio/general/Model-Tab-Constraints-Create-Menu.png" width="754" alt="Constraint picker indicated in Studio toolbar" />
 
@@ -143,7 +149,7 @@ To create a mover constraint, you can use either the **Create** tool or the [Exp
 
 1. Link the **Attachment0** property to an `Class.Attachment` or `Class.Bone` in two consecutive steps:
 
-   1. In the  v window, click in the **Attachment0** row to reveal the selection cursor.
+   1. In the [Properties](../studio/properties.md) window, click in the **Attachment0** row to reveal the selection cursor.
 
    2. In the **Explorer** window, click on the target `Class.Attachment` or `Class.Bone`.
 
@@ -166,6 +172,6 @@ To create a mover constraint, you can use either the **Create** tool or the [Exp
 
 ## Physical simulation
 
-To simulate physics while [moving](../parts/index.md#move) or [rotating](../parts/index.md#rotate) parts, you can switch to **Physical** mode in the [Model](../studio/model-tab.md) tab, effectively forcing parts to obey physical limitations. For example, if you drag one part around the scene and it collides with another part, it will physically push that part out of the way.
+To simulate physics while [moving](../parts/index.md#move) or [rotating](../parts/index.md#rotate) parts, you can switch to **Physical** mode in the toolbar's **Model** tab, effectively forcing parts to obey physical limitations. For example, if you drag one part around the scene and it collides with another part, it will physically push that part out of the way.
 
 <img src="../assets/physics/constraints/Model-Tab-Mode-Physical.png" alt="" width="670" />

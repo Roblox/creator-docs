@@ -1,6 +1,5 @@
 name: EqualizerSoundEffect
 type: class
-category: Sounds
 memory_category: Instances
 summary: |
   Controls the volume of incoming audio across three frequency ranges.
@@ -15,7 +14,7 @@ description: |
   - Low: 0 - 400 Hz
   - Mid: 400 - 4000 Hz
   - High: 4000+ Hz
-code_samples:
+code_samples: []
 inherits:
   - SoundEffect
 tags: []
@@ -27,7 +26,7 @@ properties:
     description: |
       Range: -80 to 10 (default 0) The output volume of frequencies greater than
       4000 Hz. Measured in dB.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -48,7 +47,7 @@ properties:
     description: |
       Range: -80 to 10 (default 0) The output volume of frequencies lower than
       400 Hz. Measured in dB.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -69,7 +68,7 @@ properties:
     description: |
       Range: -80 to 10 (default 0) The output volume of frequencies between 400
       and 4000 Hz. Measured in dB.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

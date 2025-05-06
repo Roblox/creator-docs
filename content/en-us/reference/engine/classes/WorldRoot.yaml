@@ -1,6 +1,5 @@
 name: WorldRoot
 type: class
-category:
 memory_category: PhysicsParts
 summary: |
   Base class for handling physics simulation and 3D spatial queries.
@@ -8,7 +7,7 @@ description: |
   This base class provides an API for any instance intended for handling 3D
   spatial queries and simulation, such as `Class.Workspace` and
   `Class.WorldModel`.
-code_samples:
+code_samples: []
 inherits:
   - Model
 tags:
@@ -31,7 +30,7 @@ methods:
     parameters:
       - name: partList
         type: Instances
-        default:
+        default: ''
         summary: |
           A list of parts checks to see if any parts in the list are touching
           any parts not in the list.
@@ -42,7 +41,7 @@ methods:
           The part overlap threshold in studs that is ignored before parts are
           considered to be touching.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           True if and only if any of the `Class.Part|parts` in `partList` are
           touching any other parts (parts not in the partList). False if no
@@ -80,18 +79,18 @@ methods:
     parameters:
       - name: cframe
         type: CFrame
-        default:
+        default: ''
         summary: |
           The initial position and rotation of the cast block shape.
       - name: size
         type: Vector3
-        default:
+        default: ''
         summary: |
           The size of the cast block shape in studs. The maximum size is 512
           studs.
       - name: direction
         type: Vector3
-        default:
+        default: ''
         summary: |
           Direction of the shapecast, with the magnitude representing the
           maximum distance the shape can travel. The maximum distance is 1024
@@ -135,22 +134,22 @@ methods:
       movement is a bottleneck in your code. Simply setting the
       `Class.BasePart.CFrame|CFrame` property of individual parts and welded
       models is fast enough in the majority of cases.
-    code_samples:
+    code_samples: []
     parameters:
       - name: partList
         type: Instances
-        default:
+        default: ''
         summary: ''
       - name: cframeList
         type: Array
-        default:
+        default: ''
         summary: ''
       - name: eventMode
         type: BulkMoveMode
         default: FireAllEvents
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -193,22 +192,22 @@ methods:
         [collision group](../../../workspace/collisions.md#collision-filtering)
         that does not collide with the "Default" collision group are ignored
         implicitly.
-    code_samples:
+    code_samples: []
     parameters:
       - name: ray
         type: Ray
-        default:
+        default: ''
         summary: ''
       - name: ignoreDescendantsInstance
         type: Instance
         default: nil
         summary: ''
       - name: terrainCellsAreCubes
-        type: bool
+        type: boolean
         default: false
         summary: ''
       - name: ignoreWater
-        type: bool
+        type: boolean
         default: false
         summary: ''
     returns:
@@ -239,22 +238,22 @@ methods:
 
       Those looking to **include** a specific group of objects should instead
       use `Class.WorldRoot:FindPartOnRayWithWhitelist()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: ray
         type: Ray
-        default:
+        default: ''
         summary: ''
       - name: ignoreDescendantsTable
         type: Instances
-        default:
+        default: ''
         summary: ''
       - name: terrainCellsAreCubes
-        type: bool
+        type: boolean
         default: false
         summary: ''
       - name: ignoreWater
-        type: bool
+        type: boolean
         default: false
         summary: ''
     returns:
@@ -289,18 +288,18 @@ methods:
 
       Those looking to **exclude** a specific group of objects should instead
       use `Class.WorldRoot:FindPartOnRayWithIgnoreList()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: ray
         type: Ray
-        default:
+        default: ''
         summary: ''
       - name: whitelistDescendantsTable
         type: Instances
-        default:
+        default: ''
         summary: ''
       - name: ignoreWater
-        type: bool
+        type: boolean
         default: false
         summary: ''
     returns:
@@ -352,11 +351,11 @@ methods:
 
       If no `Class.BasePart|BaseParts` are found, an empty array will be
       returned.
-    code_samples:
+    code_samples: []
     parameters:
       - name: region
         type: Region3
-        default:
+        default: ''
         summary: |
           The `Datatype.Region3` to be checked.
       - name: ignoreDescendantsInstance
@@ -407,12 +406,12 @@ methods:
     parameters:
       - name: region
         type: Region3
-        default:
+        default: ''
         summary: |
           The `Datatype.Region3` to be checked.
       - name: ignoreDescendantsTable
         type: Instances
-        default:
+        default: ''
         summary: |
           An array of objects to be ignored.
       - name: maxParts
@@ -459,12 +458,12 @@ methods:
     parameters:
       - name: region
         type: Region3
-        default:
+        default: ''
         summary: |
           The `Datatype.Region3` to be checked.
       - name: whitelistDescendantsTable
         type: Instances
-        default:
+        default: ''
         summary: |
           An array of objects to check.
       - name: maxParts
@@ -508,16 +507,16 @@ methods:
       use, and whether the query favors an intersected part's
       `Class.BasePart.CanCollide` value over its `Class.BasePart.CanQuery`
       value.
-    code_samples:
+    code_samples: []
     parameters:
       - name: cframe
         type: CFrame
-        default:
+        default: ''
         summary: |
           The location of the center of the given box volume to be queried.
       - name: size
         type: Vector3
-        default:
+        default: ''
         summary: |
           The size of the given box volume to be queried.
       - name: overlapParams
@@ -558,16 +557,16 @@ methods:
       use, and whether the query favors an intersected part's
       `Class.BasePart.CanCollide` value over its `Class.BasePart.CanQuery`
       value.
-    code_samples:
+    code_samples: []
     parameters:
       - name: position
         type: Vector3
-        default:
+        default: ''
         summary: |
           The location of the center of the given sphere volume to be queried.
       - name: radius
         type: float
-        default:
+        default: ''
         summary: |
           The radius of the given sphere volume to be queried.
       - name: overlapParams
@@ -612,11 +611,11 @@ methods:
       use, and whether the query favors an intersected part's
       `Class.BasePart.CanCollide` value over its `Class.BasePart.CanQuery`
       value.
-    code_samples:
+    code_samples: []
     parameters:
       - name: part
         type: BasePart
-        default:
+        default: ''
         summary: |
           The part whose volume is to be checked against other parts.
       - name: overlapParams
@@ -666,16 +665,16 @@ methods:
       - If translate stiffness and rotate stiffness are both equal to 0, then
         the target CFrame will be ignored and physical constraints will be
         solved for the object at the position where it was.
-    code_samples:
+    code_samples: []
     parameters:
       - name: part
         type: BasePart
-        default:
+        default: ''
         summary: |
           The part being moved.
       - name: target
         type: CFrame
-        default:
+        default: ''
         summary: |
           The location to move the specified part.
       - name: translateStiffness
@@ -697,7 +696,7 @@ methods:
           Allows you to specify what objects should be effected by the physical
           resolution.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -756,11 +755,11 @@ methods:
       then `Class.BasePart:GetTouchingParts()` should be used. There is a higher
       cost to using `Class.BasePart:GetTouchingParts()` since a part is needed
       in the `Class.WorldRoot` and the function takes more time to run.
-    code_samples:
+    code_samples: []
     parameters:
       - name: region
         type: Region3
-        default:
+        default: ''
         summary: |
           The `Datatype.Region3` to be checked.
       - name: ignoreDescendentsInstance
@@ -769,7 +768,7 @@ methods:
         summary: |
           An `Class.Instance` to be ignored.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           True if the `Datatype.Region3` is empty.
     tags:
@@ -803,20 +802,20 @@ methods:
       addition of an ignore list. In cases where an inclusion list is required
       instead, developers should check to see if any parts are returned by
       `Class.WorldRoot:FindPartsinRegion3WithWhitelist()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: region
         type: Region3
-        default:
+        default: ''
         summary: |
           The `Datatype.Region3` to be checked.
       - name: ignoreDescendentsTable
         type: Instances
-        default:
+        default: ''
         summary: |
           An array of objects to be ignored.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           True if the `Datatype.Region3` is empty.
     tags:
@@ -857,12 +856,12 @@ methods:
     parameters:
       - name: origin
         type: Vector3
-        default:
+        default: ''
         summary: |
           The origin point of the ray.
       - name: direction
         type: Vector3
-        default:
+        default: ''
         summary: |
           The directional vector of the ray. Note that the length of this vector
           matters, as parts/terrain further away than its length will not be
@@ -892,11 +891,11 @@ methods:
     parameters:
       - name: part
         type: BasePart
-        default:
+        default: ''
         summary: ''
       - name: direction
         type: Vector3
-        default:
+        default: ''
         summary: ''
       - name: params
         type: RaycastParams
@@ -938,18 +937,18 @@ methods:
     parameters:
       - name: position
         type: Vector3
-        default:
+        default: ''
         summary: |
           The initial position of the cast spherical shape.
       - name: radius
         type: float
-        default:
+        default: ''
         summary: |
           The radius of the cast spherical shape in studs. The maximum radius is
           256 studs.
       - name: direction
         type: Vector3
-        default:
+        default: ''
         summary: |
           Direction of the shapecast, with the magnitude representing the
           maximum distance the shape can travel. The maximum distance is 1024
@@ -993,7 +992,7 @@ methods:
     parameters:
       - name: dt
         type: float
-        default:
+        default: ''
         summary: |
           The amount of time that will be simulated. This argument must be a
           positive number. Larger values will increase the runtime of this
@@ -1006,7 +1005,7 @@ methods:
           instances that are of type `Class.BasePart`; any other types will be
           ignored.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1017,22 +1016,22 @@ methods:
   - name: WorldRoot:findPartOnRay
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: ray
         type: Ray
-        default:
+        default: ''
         summary: ''
       - name: ignoreDescendantsInstance
         type: Instance
         default: nil
         summary: ''
       - name: terrainCellsAreCubes
-        type: bool
+        type: boolean
         default: false
         summary: ''
       - name: ignoreWater
-        type: bool
+        type: boolean
         default: false
         summary: ''
     returns:
@@ -1050,11 +1049,11 @@ methods:
   - name: WorldRoot:findPartsInRegion3
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: region
         type: Region3
-        default:
+        default: ''
         summary: ''
       - name: ignoreDescendantsInstance
         type: Instance

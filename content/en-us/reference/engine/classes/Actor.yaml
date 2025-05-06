@@ -1,6 +1,5 @@
 name: Actor
 type: class
-category:
 memory_category: PhysicsParts
 summary: |
   An `Class.Actor` is a container for code that can be safely split into its own
@@ -12,7 +11,7 @@ description: |
 
   To learn more about using multiple Actors to optimize script performance, see
   [Parallel Luau](../../../scripting/multithreading.md).
-code_samples:
+code_samples: []
 inherits:
   - Model
 tags: []
@@ -43,16 +42,16 @@ methods:
         print("Received Greeting Message:", message)
       end)
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: topic
         type: string
-        default:
+        default: ''
         summary: |
           The topic used to identify the type of message.
       - name: function
         type: Function
-        default:
+        default: ''
         summary: ''
     returns:
       - type: RBXScriptConnection
@@ -89,16 +88,16 @@ methods:
         print("Received Greeting Message:", message)
       end)
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: topic
         type: string
-        default:
+        default: ''
         summary: |
           The topic used to identify the type of message.
       - name: function
         type: Function
-        default:
+        default: ''
         summary: ''
     returns:
       - type: RBXScriptConnection
@@ -129,20 +128,20 @@ methods:
       -- Assume `actor` is a local variable referring to an Actor instance
       actor:SendMessage("Greeting", "Hello World")
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: topic
         type: string
-        default:
+        default: ''
         summary: |
           The topic used to identify the message being sent.
       - name: message
         type: Tuple
-        default:
+        default: ''
         summary: |
           The contents of the message to send to the Actor.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

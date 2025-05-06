@@ -1,6 +1,5 @@
 name: BasePlayerGui
 type: class
-category:
 memory_category: Instances
 summary: |
   The BasePlayerGui is an abstract class which the GUI drawing storage classes
@@ -8,7 +7,7 @@ summary: |
 description: |
   The BasePlayerGui is an abstract class that all GUI drawing storage classes
   inherit from.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -41,13 +40,13 @@ methods:
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: |
           The x position on the screen relative to the top left corner after the
           `Class.GuiService:GetGuiInset()|GuiInset` is applied.
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: |
           The y position on the screen relative to the top left corner after the
           `Class.GuiService:GetGuiInset()|GuiInset` is applied.
@@ -60,7 +59,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 events: []
 callbacks: []

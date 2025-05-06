@@ -1,6 +1,5 @@
 name: ScriptService
 type: class
-category:
 memory_category: Instances
 summary: |
   An unimplemented service that has zero functionality, in a similar manner to
@@ -8,7 +7,7 @@ summary: |
 description: |
   An unimplemented service that has zero functionality, in a similar manner to
   the `LocalWorkspace` service.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

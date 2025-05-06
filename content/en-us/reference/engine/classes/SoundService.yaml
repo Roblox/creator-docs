@@ -1,6 +1,5 @@
 name: SoundService
 type: class
-category: Sounds
 memory_category: Instances
 summary: |
   A service that determines various aspects of how `Class.Sound|Sounds` play in
@@ -53,7 +52,7 @@ properties:
       - Relative room effect level at high frequencies.
       - Early reflections level relative to room effect.
       - Room effect level at mid frequencies.
-    code_samples:
+    code_samples: []
     type: ReverbType
     tags: []
     deprecation_message: ''
@@ -123,7 +122,7 @@ properties:
       It's recommended that you only change this property if your experience
       uses a different scale. For example, when using larger custom characters,
       you may want to reduce `Class.SoundService.DistanceFactor|DistanceFactor`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -151,7 +150,7 @@ properties:
       Increasing this value exaggerates the impact of the Doppler effect,
       whereas decreasing it minimizes it. By default, the value of this property
       is `1`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -177,8 +176,8 @@ properties:
       this property is `false`, other clients will also hear the sound.
 
       Default is `true`, meaning filtering is enabled.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -209,7 +208,7 @@ properties:
       attenuation model which is not influenced by this property. This property
       also has no impact on `Class.Sound|Sounds` which are not parented to a
       `Class.BasePart` or `Class.Attachment`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -282,7 +281,7 @@ methods:
               </tr>
           </tbody>
       </table>
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Tuple
@@ -302,10 +301,10 @@ methods:
     parameters:
       - name: selectedCurveObjects
         type: Instances
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -320,10 +319,10 @@ methods:
     parameters:
       - name: selectedCurveObjects
         type: Instances
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -340,15 +339,15 @@ methods:
       client calling this method, regardless of where it's parented to. This
       method is most useful for playing a `Class.Sound` locally in the Studio
       client, for instance in a `Class.Script` for a `Class.Plugin`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: sound
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Sound` to be played.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -370,23 +369,23 @@ methods:
 
       The listener can be retrieved using
       `Class.SoundService:GetListener()|GetListener()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: listenerType
         type: ListenerType
-        default:
+        default: ''
         summary: |
           The `Enum.ListenerType` of the listener.
       - name: listener
         type: Tuple
-        default:
+        default: ''
         summary: |
           Dependent on the `Enum.ListenerType`. Use a `Class.BasePart` for
           `Enum.ListenerType.ObjectPosition` or
           `Enum.ListenerType.ObjectCFrame`, a `Datatype.CFrame` for
           `Enum.ListenerType.CFrame`, or `nil` for `Enum.ListenerType.Camera`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

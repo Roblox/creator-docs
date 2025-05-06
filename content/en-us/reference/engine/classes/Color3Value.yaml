@@ -1,6 +1,5 @@
 name: Color3Value
 type: class
-category: Values
 memory_category: Instances
 summary: |
   A container object for a single Color3 value.
@@ -18,7 +17,7 @@ properties:
       The stored `Datatype.Color3`.
     description: |
       The stored `Datatype.Color3`.
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -57,23 +56,22 @@ events:
     parameters:
       - name: value
         type: Color3
-        default:
+        default: ''
         summary: |
           The new value after the change.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: Color3Value.changed
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
         type: Color3
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -81,7 +79,6 @@ events:
       This deprecated event is a variant of `Class.Color3Value.Changed` which
       should be used instead.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

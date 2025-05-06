@@ -1,6 +1,5 @@
 name: BindableEvent
 type: class
-category: Scripting
 memory_category: Instances
 summary: |
   An object which enables custom events through asynchronous one-way
@@ -34,7 +33,7 @@ description: |
   well as Luau types such as numbers, strings, and booleans, although you should
   carefully explore the
   [limitations](../../../scripting/events/bindable.md#argument-limitations).
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -60,16 +59,16 @@ methods:
       See [Bindable events and callbacks](../../../scripting/events/bindable.md)
       for code samples and further details on
       `Class.BindableEvent:Fire()|Fire()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: arguments
         type: Tuple
-        default:
+        default: ''
         summary: |
           Values to pass to `Class.BindableEvent.Event|Event` events connected
           to the same `Class.BindableEvent`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -89,17 +88,16 @@ events:
 
       See [Bindable events and callbacks](../../../scripting/events/bindable.md)
       for code samples and further details on `Class.BindableEvent.Event|Event`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: arguments
         type: Tuple
-        default:
+        default: ''
         summary: |
           The parameters sent through `Class.BindableEvent:Fire()|Fire()`.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

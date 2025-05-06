@@ -1,12 +1,11 @@
 name: NetworkPeer
 type: class
-category:
 memory_category: Instances
 summary: |
   The NetworkPeer object is the most basic class of the network objects.
 description: |
   The NetworkPeer object is the most basic class of the network objects.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -25,10 +24,10 @@ methods:
     parameters:
       - name: limit
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

@@ -1,6 +1,5 @@
 name: ContentProvider
 type: class
-category: Data
 memory_category: Instances
 summary: |
   Service that is used to load content, or assets, into a game.
@@ -54,7 +53,7 @@ properties:
       It is possible to overwrite this property using the
       `Class.ContentProvider:SetBaseUrl()` function in the command bar; however,
       this is not recommended and may cause asset loading issues.
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - ReadOnly
@@ -115,7 +114,7 @@ methods:
     parameters:
       - name: contentId
         type: ContentId
-        default:
+        default: ''
         summary: |
           The ID of the content to fetch the status for.
     returns:
@@ -143,7 +142,7 @@ methods:
     parameters:
       - name: contentId
         type: ContentId
-        default:
+        default: ''
         summary: ''
     returns:
       - type: RBXScriptSignal
@@ -157,7 +156,7 @@ methods:
   - name: ContentProvider:ListEncryptedAssets
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Array
@@ -183,10 +182,10 @@ methods:
     parameters:
       - name: contentId
         type: ContentId
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -200,14 +199,14 @@ methods:
   - name: ContentProvider:RegisterDefaultEncryptionKey
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: encryptionKey
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -218,14 +217,14 @@ methods:
   - name: ContentProvider:RegisterDefaultSessionKey
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: sessionKey
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -236,18 +235,18 @@ methods:
   - name: ContentProvider:RegisterEncryptedAsset
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: assetId
         type: ContentId
-        default:
+        default: ''
         summary: ''
       - name: encryptionKey
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -258,18 +257,18 @@ methods:
   - name: ContentProvider:RegisterSessionEncryptedAsset
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: contentId
         type: ContentId
-        default:
+        default: ''
         summary: ''
       - name: sessionKey
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -280,10 +279,10 @@ methods:
   - name: ContentProvider:UnregisterDefaultEncryptionKey
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -294,14 +293,14 @@ methods:
   - name: ContentProvider:UnregisterEncryptedAsset
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: assetId
         type: ContentId
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -326,13 +325,9 @@ methods:
       For each requested asset, the callback function runs, indicating the
       asset's final `Enum.AssetFetchStatus`.
 
-      This method can also take in a list of content ID strings, however these
-      strings must correspond to **image** assets. Attempting to load non-image
-      assets through the use of their content ID strings will result in failure.
-
       If any of the assets fail to load, an error message appears in the output.
       The method itself will not error and it will continue executing until it
-      has processed each requested instance or asset ID.
+      has processed each requested instance.
 
       ##### Limitations
 
@@ -347,9 +342,9 @@ methods:
     parameters:
       - name: contentIdList
         type: Array
-        default:
+        default: ''
         summary: |
-          An array of instances or content ID strings (for images) to load.
+          An array of instances to load.
       - name: callbackFunction
         type: Function
         default: nil
@@ -358,7 +353,7 @@ methods:
           `Datatype.Content|content` string and the asset's final
           `Enum.AssetFetchStatus`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields
@@ -371,16 +366,15 @@ events:
   - name: ContentProvider.AssetFetchFailed
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: assetId
         type: ContentId
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

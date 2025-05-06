@@ -1,12 +1,11 @@
 name: InventoryPages
 type: class
-category: Data
 memory_category: Instances
 summary: ''
 description: |
   The InventoryPages class is used in the case of iterating over a specific
   category in a user's inventory.
-code_samples:
+code_samples: []
 inherits:
   - Pages
 tags:

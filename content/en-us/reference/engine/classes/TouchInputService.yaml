@@ -1,12 +1,11 @@
 name: TouchInputService
 type: class
-category:
 memory_category: Instances
 summary: |
   An internal service responsible for touch inputs on mobile devices.
 description: |
   An internal service responsible for touch inputs on mobile devices.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

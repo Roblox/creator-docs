@@ -1,6 +1,5 @@
 name: Path2D
 type: class
-category:
 memory_category: Instances
 summary: ''
 description: ''
@@ -16,7 +15,7 @@ properties:
     description: |
       Connects the first and last control points when enabled.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -117,7 +116,7 @@ properties:
       will update correctly, ensuring that querying data will have the correct
       info.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -171,7 +170,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: Path2D:GetControlPoint
     summary: |
@@ -183,7 +183,7 @@ methods:
     parameters:
       - name: index
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Path2DControlPoint
@@ -193,7 +193,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: Path2D:GetControlPoints
     summary: |
@@ -212,7 +213,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: Path2D:GetLength
     summary: |
@@ -229,7 +231,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: Path2D:GetMaxControlPoints
     summary: |
@@ -245,7 +248,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: Path2D:GetPositionOnCurve
     summary: |
@@ -263,7 +267,7 @@ methods:
     parameters:
       - name: t
         type: float
-        default:
+        default: ''
         summary: |
           The value to query the `Class.Path2D` at.
     returns:
@@ -274,7 +278,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: Path2D:GetPositionOnCurveArcLength
     summary: |
@@ -291,7 +296,7 @@ methods:
     parameters:
       - name: t
         type: float
-        default:
+        default: ''
         summary: |
           The value to query the Path2D at.
     returns:
@@ -302,7 +307,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: Path2D:GetTangentOnCurve
     summary: |
@@ -315,7 +321,7 @@ methods:
     parameters:
       - name: t
         type: float
-        default:
+        default: ''
         summary: |
           The value to query the `Class.Path2D` at.
     returns:
@@ -325,7 +331,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: Path2D:GetTangentOnCurveArcLength
     summary: |
@@ -338,7 +345,7 @@ methods:
     parameters:
       - name: t
         type: float
-        default:
+        default: ''
         summary: |
           The value to query the `Class.Path2D` at.
     returns:
@@ -349,7 +356,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: Path2D:InsertControlPoint
     summary: |
@@ -362,22 +370,23 @@ methods:
     parameters:
       - name: index
         type: int
-        default:
+        default: ''
         summary: |
           The index to insert at.
       - name: point
         type: Path2DControlPoint
-        default:
+        default: ''
         summary: |
           The control point to insert.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: Path2D:RemoveControlPoint
     summary: |
@@ -389,17 +398,18 @@ methods:
     parameters:
       - name: index
         type: int
-        default:
+        default: ''
         summary: |
           The index to remove at.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: Path2D:SetControlPoints
     summary: |
@@ -413,17 +423,18 @@ methods:
     parameters:
       - name: controlPoints
         type: Array
-        default:
+        default: ''
         summary: |
           The new list of control points to set.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: Path2D:UpdateControlPoint
     summary: |
@@ -435,21 +446,22 @@ methods:
     parameters:
       - name: index
         type: int
-        default:
+        default: ''
         summary: |
           The control point index to update.
       - name: point
         type: Path2DControlPoint
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 events:
   - name: Path2D.ControlPointChanged
@@ -462,7 +474,7 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 callbacks: []

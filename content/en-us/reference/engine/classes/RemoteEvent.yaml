@@ -1,6 +1,5 @@
 name: RemoteEvent
 type: class
-category: Scripting
 memory_category: Instances
 summary: |
   An object which facilitates asynchronous, one-way communication across the
@@ -31,7 +30,7 @@ description: |
   well as Luau types such as numbers, strings, and booleans, although you should
   carefully explore the
   [limitations](../../../scripting/events/remote.md#argument-limitations).
-code_samples:
+code_samples: []
 inherits:
   - BaseRemoteEvent
 tags: []
@@ -59,22 +58,23 @@ methods:
 
       See [Remote Events and Callbacks](../../../scripting/events/remote.md) for
       code samples and further details on `Class.RemoteEvent`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: arguments
         type: Tuple
-        default:
+        default: ''
         summary: |
           Values to pass to all `Class.RemoteEvent.OnClientEvent|OnClientEvent`
           events connected to the same `Class.RemoteEvent`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - RemoteEvent
     writeCapabilities: []
   - name: RemoteEvent:FireClient
     summary: |
@@ -98,27 +98,28 @@ methods:
       `Class.RemoteEvent:FireAllClients()|FireAllClients()` which works
       similarly but fires the event for each client connected to the same
       `Class.RemoteEvent`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: |
           The client of the `Class.Player` to fire the event to.
       - name: arguments
         type: Tuple
-        default:
+        default: ''
         summary: |
           Values to pass to `Class.RemoteEvent.OnClientEvent|OnClientEvent`
           events connected to the same `Class.RemoteEvent`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - RemoteEvent
     writeCapabilities: []
   - name: RemoteEvent:FireServer
     summary: |
@@ -140,22 +141,23 @@ methods:
 
       See [Remote Events and Callbacks](../../../scripting/events/remote.md) for
       code samples and further details on `Class.RemoteEvent`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: arguments
         type: Tuple
-        default:
+        default: ''
         summary: |
           Values to pass to `Class.RemoteEvent.OnServerEvent|OnServerEvent`
           events connected to the same `Class.RemoteEvent`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - RemoteEvent
     writeCapabilities: []
 events:
   - name: RemoteEvent.OnClientEvent
@@ -173,11 +175,11 @@ events:
       See [Remote Events and Callbacks](../../../scripting/events/remote.md) for
       code samples and further details on
       `Class.RemoteEvent.OnClientEvent|OnClientEvent`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: arguments
         type: Tuple
-        default:
+        default: ''
         summary: |
           The parameters sent through
           `Class.RemoteEvent:FireClient()|FireClient()` or
@@ -185,8 +187,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - RemoteEvent
     writeCapabilities: []
   - name: RemoteEvent.OnServerEvent
     summary: |
@@ -201,24 +203,24 @@ events:
       See [Remote Events and Callbacks](../../../scripting/events/remote.md) for
       code samples and further details on
       `Class.RemoteEvent.OnServerEvent|OnServerEvent`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` associated with the client that the
           `Class.RemoteEvent:FireServer()|FireServer()` call originates from.
       - name: arguments
         type: Tuple
-        default:
+        default: ''
         summary: |
           The parameters sent through
           `Class.RemoteEvent:FireServer()|FireServer()`.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - RemoteEvent
     writeCapabilities: []
 callbacks: []

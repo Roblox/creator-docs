@@ -1,6 +1,5 @@
 name: StyleRule
 type: class
-category:
 memory_category: Gui
 summary: ''
 description: ''
@@ -85,7 +84,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Variant
@@ -103,10 +102,10 @@ methods:
     parameters:
       - name: styleProperties
         type: Dictionary
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -121,14 +120,14 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
       - name: value
         type: Variant
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

@@ -1,6 +1,5 @@
 name: SunRaysEffect
 type: class
-category: Post Processing
 memory_category: Instances
 summary: |
   Renders dynamic rays from the sun.
@@ -17,7 +16,7 @@ description: |
 
   For more details on this effect and others, see
   [Post-Processing Effects](../../../environment/post-processing-effects.md).
-code_samples:
+code_samples: []
 inherits:
   - PostEffect
 tags: []
@@ -29,7 +28,7 @@ properties:
     description: |
       Intensity determines the opacity of the sun rays. Values closer to 0 are
       less visible, while values closer to 1 become more visible.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -51,7 +50,7 @@ properties:
       Spread determines how wide the sun rays will spread across the sky. Its
       value should be set between 0 and 1 as values outside that range have
       undefined behavior.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

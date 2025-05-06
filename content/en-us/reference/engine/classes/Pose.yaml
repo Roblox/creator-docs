@@ -1,6 +1,5 @@
 name: Pose
 type: class
-category: Animations
 memory_category: Animation
 summary: |
   Holds the `Datatype.CFrame` applied to the `Class.Motor6D` connected to its
@@ -58,7 +57,7 @@ properties:
       hierarchy. This means, that the `Class.Pose.CFrame` is applied to the
       motor connecting the part associated with the pose to the part associated
       with the pose's parent.
-    code_samples:
+    code_samples: []
     type: CFrame
     tags: []
     deprecation_message: ''
@@ -76,7 +75,7 @@ properties:
   - name: Pose.MaskWeight
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -112,17 +111,18 @@ methods:
     parameters:
       - name: pose
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Pose` to be added.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: Pose:GetSubPoses
     summary: |
@@ -146,15 +146,16 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: Pose:RemoveSubPose
     summary: |
-      Removes a sub `Class.Pose` from the `Class.Pose` by parenting it to nil.
+      Removes a sub `Class.Pose` from the `Class.Pose` by parenting it to `nil`.
     description: |
-      Removes a sub `Class.Pose` from the `Class.Pose` by parenting it to nil.
+      Removes a sub `Class.Pose` from the `Class.Pose` by parenting it to `nil`.
       This is functionally identical to setting the new pose's
-      `Class.Instance.Parent` to nil.
+      `Class.Instance.Parent` to `nil`.
 
       Note: If an `Class.Instance` other than `Class.Pose` is used as a
       `Class.Pose` parameter, this function removes that `Class.Instance` and
@@ -164,17 +165,18 @@ methods:
     parameters:
       - name: pose
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Pose` to be removed.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
 events: []
 callbacks: []

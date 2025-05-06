@@ -1,6 +1,5 @@
 name: ParticleEmitter
 type: class
-category: Effects
 memory_category: Instances
 summary: |
   A special object that emits customizable 2D particles into the world.
@@ -57,7 +56,7 @@ properties:
       Acceleration will slow particles down if the vector points in the opposite
       `Class.ParticleEmitter.EmissionDirection|EmissionDirection` in which they
       are emitted. Otherwise, it will speed them up.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -79,7 +78,7 @@ properties:
     description: |
       Scales the light emitted from the emitter when
       `Class.ParticleEmitter.LightInfluence` is 0.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -115,7 +114,7 @@ properties:
       using the particle's age and its total lifetime. For example, if a
       particle spawned 2 seconds ago and has a 4 second lifetime, the color will
       be whatever is 50% of the way through the `Datatype.ColorSequence`.
-    code_samples:
+    code_samples: []
     type: ColorSequence
     tags: []
     deprecation_message: ''
@@ -143,7 +142,7 @@ properties:
       `Class.ParticleEmitter.VelocityInheritance|VelocityInheritance`. Setting
       this property to a negative value will cause particles' velocities to grow
       exponentially.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -171,7 +170,7 @@ properties:
       If you add a `Class.ParticleEmitter` to an `Class.Attachment`, which has a
       direction, you can rotate the attachment itself
       (`Class.Attachment.Orientation`) instead of using this property.
-    code_samples:
+    code_samples: []
     type: NormalId
     tags: []
     deprecation_message: ''
@@ -200,8 +199,8 @@ properties:
       `Class.ParticleEmitter:Clear()|Clear()`. Then, if desired, call
       `Class.ParticleEmitter:Emit()|Emit()` on the emitter to emit and render
       particles.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -344,7 +343,7 @@ properties:
       causing each emitted particle to be a static frame chosen randomly from
       the flipbook texture.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -367,7 +366,7 @@ properties:
       this value is changed, existing particles will stay active until their
       randomly chosen lifetime ends. A lifetime of 0 will prevent particles from
       emitting at all.
-    code_samples:
+    code_samples: []
     type: NumberRange
     tags: []
     deprecation_message: ''
@@ -399,7 +398,7 @@ properties:
 
       This property does **not** cause particles to light the environment around
       them. To accomplish that, consider using a `Class.PointLight`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -427,7 +426,7 @@ properties:
 
       By default, this value is 1 if inserted with Studio tools. If inserted
       using `Datatype.Instance.new()`, it is 0.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -475,8 +474,8 @@ properties:
       Alternatively, consider using the
       `Class.ParticleEmitter.VelocityInheritance|VelocityInheritance` property
       with a value of 1 which may be more appropriate for some effects.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -523,7 +522,7 @@ properties:
       </tr>
       </tbody>
       </table>
-    code_samples:
+    code_samples: []
     type: ParticleOrientation
     tags: []
     deprecation_message: ''
@@ -547,7 +546,7 @@ properties:
       inverse of frequency, meaning that a rate of 5 emits a particle every 0.2
       seconds. When changed, this property has no affect on any active
       particles.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -578,7 +577,7 @@ properties:
       at all, since the angle of rotation is synchronized with the software
       render speed. For example, if particles rotate at exactly 360 degrees
       every frame, there will be no apparent change in rotation.
-    code_samples:
+    code_samples: []
     type: NumberRange
     tags: []
     deprecation_message: ''
@@ -606,7 +605,7 @@ properties:
 
       Changes to this value only affect new particles; existing particles
       maintain the rotation at which they were originally emitted.
-    code_samples:
+    code_samples: []
     type: NumberRange
     tags: []
     deprecation_message: ''
@@ -632,7 +631,7 @@ properties:
       `Class.ParticleEmitter.ShapePartial|ShapePartial` properties to further
       customize particle emission. For visual examples, see
       [here](../../../effects/particle-emitters.md#shape).
-    code_samples:
+    code_samples: []
     type: ParticleEmitterShape
     tags: []
     deprecation_message: ''
@@ -655,7 +654,7 @@ properties:
       Sets whether particles emit outward only, inward only, or in both
       directions. For visual examples, see
       [here](../../../effects/particle-emitters.md#shape).
-    code_samples:
+    code_samples: []
     type: ParticleEmitterShapeInOut
     tags: []
     deprecation_message: ''
@@ -693,7 +692,7 @@ properties:
 
       For visual examples, see
       [here](../../../effects/particle-emitters.md#shape).
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -714,7 +713,7 @@ properties:
     description: |
       Sets particle emission to either volumetric or surface-only emission. For
       visual examples, see [here](../../../effects/particle-emitters.md#shape).
-    code_samples:
+    code_samples: []
     type: ParticleEmitterShapeStyle
     tags: []
     deprecation_message: ''
@@ -746,7 +745,7 @@ properties:
       For any `Datatype.NumberSequenceKeypoint` with a non-zero envelope value,
       a random value in the envelope range is chosen for each keypoint for each
       particle when it emits.
-    code_samples:
+    code_samples: []
     type: NumberSequence
     tags: []
     deprecation_message: ''
@@ -778,7 +777,7 @@ properties:
       `Class.ParticleEmitter.Drag|Drag`, and
       `Class.ParticleEmitter.VelocityInheritance|VelocityInheritance` can be
       used to affect the speed of active particles over their lifetime.
-    code_samples:
+    code_samples: []
     type: NumberRange
     tags: []
     deprecation_message: ''
@@ -807,7 +806,7 @@ properties:
       Setting one axis to 360 will cause particles to emit in all direction in a
       **circle**. Setting both to 360 will cause particles to emit in all
       directions in a **sphere**.
-    code_samples:
+    code_samples: []
     type: Vector2
     tags: []
     deprecation_message: ''
@@ -831,7 +830,7 @@ properties:
       lifetime. Values greater than 0 cause particles to both shrink
       horizontally and grow vertically, while values less than 0 cause particles
       to both grow horizontally and shrink vertically.
-    code_samples:
+    code_samples: []
     type: NumberSequence
     tags: []
     deprecation_message: ''
@@ -856,7 +855,7 @@ properties:
       `Class.ParticleEmitter.LightInfluence|LightInfluence`, and
       `Class.ParticleEmitter.LightEmission|LightEmission`. Textures with
       transparent backgrounds work best for particles.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -878,7 +877,7 @@ properties:
       A value between 0 and 1 that controls the speed of the particle effect. At
       1, it runs at normal speed; at 0.5 it runs at half speed; at 0 it freezes
       in time.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -910,7 +909,7 @@ properties:
       `Datatype.NumberSequence`. For any `Datatype.NumberSequenceKeypoint` with
       a non-zero envelope value, a random value in the envelope range is chosen
       for each keypoint for each particle when it emits.
-    code_samples:
+    code_samples: []
     type: NumberSequence
     tags: []
     deprecation_message: ''
@@ -938,7 +937,7 @@ properties:
 
       When used in conjunction with `Class.ParticleEmitter.Drag|Drag`, a
       particle emitter can appear to "shed" particles from a moving part.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -962,7 +961,7 @@ properties:
       emitter direction of its parent. When a particle is created its offset is
       picked randomly between 0 and VelocitySpread. This value is measured in
       degrees.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -989,7 +988,7 @@ properties:
       Only applies if the `Class.ParticleEmitter.Drag|Drag` property is greater
       than 0.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1017,7 +1016,7 @@ properties:
       Positive values move particles closer to the camera and negative values
       move particles away. Sufficiently negative values can cause particles to
       render inside or behind the parent part.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -1046,13 +1045,14 @@ methods:
       - ParticleEmitter-Burst
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: ParticleEmitter:Emit
     summary: |
@@ -1070,13 +1070,14 @@ methods:
         summary: |
           The number of particles to emit.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 events: []
 callbacks: []

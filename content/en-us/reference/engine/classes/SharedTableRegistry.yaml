@@ -1,6 +1,5 @@
 name: SharedTableRegistry
 type: class
-category:
 memory_category: Instances
 summary: |
   Provides a global registry of named `Datatype.SharedTable` objects.
@@ -34,7 +33,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           The name of the registered `Datatype.SharedTable`.
     returns:
@@ -68,17 +67,17 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           The name of the registered `Datatype.SharedTable`.
       - name: st
         type: SharedTable?
-        default:
+        default: ''
         summary: |
           The `Datatype.SharedTable` object to register, or `nil` to unregister
           any previously registered `Datatype.SharedTable` object.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

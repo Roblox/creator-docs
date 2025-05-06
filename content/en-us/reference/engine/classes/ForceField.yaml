@@ -1,6 +1,5 @@
 name: ForceField
 type: class
-category: Avatar
 memory_category: Instances
 summary: |
   Protects a `Class.Humanoid` from taking damage dealt through the
@@ -56,7 +55,7 @@ properties:
       effect with a custom effect as demonstrated in the following code sample.
     code_samples:
       - Custom-ForceField
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

@@ -1,6 +1,5 @@
 name: TweenBase
 type: class
-category:
 memory_category: Instances
 summary: |
   Abstract base class for in-between interpolation handlers. `Class.Tween`
@@ -8,7 +7,7 @@ summary: |
 description: |
   Abstract base class for in-between interpolation handlers; parent class of
   `Class.Tween`.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -60,7 +59,7 @@ methods:
       - Tween-Cancel
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -93,7 +92,7 @@ methods:
       - Tween-Pausing
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -120,7 +119,7 @@ methods:
       - Tween-Conflict
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -147,13 +146,12 @@ events:
     parameters:
       - name: playbackState
         type: PlaybackState
-        default:
+        default: ''
         summary: |
           The `Enum.PlaybackState` of the tween upon completion.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

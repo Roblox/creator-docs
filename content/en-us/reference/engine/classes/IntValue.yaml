@@ -1,6 +1,5 @@
 name: IntValue
 type: class
-category: Values
 memory_category: Instances
 summary: |
   A container object for a single integer.
@@ -27,7 +26,7 @@ description: |
   The `Class.IntValue.Changed|Changed` event for this (and other objects like
   it) will run with the new value being stored in the object, instead of a
   string representing the property being changed.
-code_samples:
+code_samples: []
 inherits:
   - ValueBase
 tags: []
@@ -38,7 +37,7 @@ properties:
       Used to hold an integer.
     description: |
       Used to hold an integer.
-    code_samples:
+    code_samples: []
     type: int64
     tags: []
     deprecation_message: ''
@@ -70,23 +69,22 @@ events:
     parameters:
       - name: value
         type: int64
-        default:
+        default: ''
         summary: |
           The new value after the change.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: IntValue.changed
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
         type: int64
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -94,7 +92,6 @@ events:
       This deprecated event is a variant of `Class.IntValue.Changed` which
       should be used instead.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

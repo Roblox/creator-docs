@@ -1,6 +1,5 @@
 name: RenderSettings
 type: class
-category: Settings
 memory_category: Instances
 summary: ''
 description: |
@@ -8,7 +7,7 @@ description: |
   components of Roblox's graphics engine.
 
   It can be found under the `Rendering` tab in Roblox Studio's settings menu.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -25,7 +24,7 @@ properties:
     description: |
       Sets the starting quality level of the framerate manager, when
       `Class.RenderSettings.EnableFRM` is set to true.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -49,8 +48,8 @@ properties:
       frame will look as it should, at the cost of a more unstable frame rate.
 
       This is used when rendering game thumbnails.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -70,7 +69,7 @@ properties:
     description: |
       Sets the graphics quality level in Roblox Studio, when
       `Class.RenderSettings.EnableFRM` is set to false.
-    code_samples:
+    code_samples: []
     type: QualityLevel
     tags: []
     deprecation_message: ''
@@ -88,7 +87,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -106,8 +105,8 @@ properties:
       Toggles the enabled state of the framerate manager.
     description: |
       Toggles the enabled state of the framerate manager.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - Hidden
       - NotReplicated
@@ -129,8 +128,8 @@ properties:
     description: |
       Sets whether materials should be generated per part, or per unique
       appearance in Roblox's obj exporter.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -148,7 +147,7 @@ properties:
       Specifies the behavior of the framerate manager.
     description: |
       Specifies the behavior of the framerate manager.
-    code_samples:
+    code_samples: []
     type: FramerateManagerMode
     tags: []
     deprecation_message: ''
@@ -167,7 +166,7 @@ properties:
       The graphics API that Roblox will use on startup.
     description: |
       The graphics API that Roblox will use on startup.
-    code_samples:
+    code_samples: []
     type: GraphicsMode
     tags: []
     deprecation_message: ''
@@ -183,10 +182,10 @@ properties:
     writeCapabilities: []
   - name: RenderSettings.MeshCacheSize
     summary: |
-      The size in bytes of the mesh cache. Defaults to 32 MBs.
+      The size in bytes of the mesh cache. Defaults to 32 MB.
     description: |
-      The size in bytes of the mesh cache. Defaults to 32 MBs.
-    code_samples:
+      The size in bytes of the mesh cache. Defaults to 32 MB (32 \* 2^20 bytes).
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -215,7 +214,7 @@ properties:
       `Enum.RenderFidelity.Precise`, you will always see the higher resolution
       version and the `Enum.MeshPartDetailLevel` value will be ignored for that
       `Class.MeshPart`.
-    code_samples:
+    code_samples: []
     type: MeshPartDetailLevel
     tags: []
     deprecation_message: ''
@@ -236,7 +235,7 @@ properties:
     description: |
       If `Class.RenderSettings.EnableFRM` is set to true, this property controls
       the quality level in Roblox Studio.
-    code_samples:
+    code_samples: []
     type: QualityLevel
     tags: []
     deprecation_message: ''
@@ -257,8 +256,8 @@ properties:
     description: |
       When set to true, Roblox Studio will automatically reload changes that are
       made to files in Roblox's `content` folder.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -278,8 +277,8 @@ properties:
     description: |
       When set to true, a wireframe of polygons will be shown on all
       `Class.PartOperation` objects.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -299,8 +298,8 @@ properties:
     description: |
       If set to true, renders bounding boxes around each individual rendered
       entity in the scene.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -336,7 +335,7 @@ methods:
       Returns the maximum quality level.
     description: |
       Returns the maximum quality level.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: int

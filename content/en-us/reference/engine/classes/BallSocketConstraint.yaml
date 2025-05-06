@@ -1,6 +1,5 @@
 name: BallSocketConstraint
 type: class
-category: Constraints
 memory_category: PhysicsParts
 summary: |
   Forces its two attachments into the same position and allows them to freely
@@ -32,7 +31,7 @@ description: |
   which, when enabled, lets you restrict **twist** rotation through the
   `Class.BallSocketConstraint.TwistLowerAngle|TwistLowerAngle` and
   `Class.BallSocketConstraint.TwistUpperAngle|TwistUpperAngle` limits.
-code_samples:
+code_samples: []
 inherits:
   - Constraint
 tags: []
@@ -47,8 +46,8 @@ properties:
       based on `Class.BallSocketConstraint.UpperAngle|UpperAngle`. When true, it
       enforces that its `Class.Constraint.Attachment1|Attachment1` isn't rotated
       more than a set angle from its `Class.Constraint.Attachment0|Attachment0`.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -73,7 +72,7 @@ properties:
       `MaxFrictionTorque` specifies the stiffness of the
       `Class.BallSocketConstraint` (how much it resists rotation around its
       `Class.Attachment|Attachments`).
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -93,7 +92,7 @@ properties:
       The visualized radius of the `Class.BallSocketConstraint`.
     description: |
       The visualized radius of the `Class.BallSocketConstraint`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -120,7 +119,7 @@ properties:
       specified by `Class.BallSocketConstraint.UpperAngle|UpperAngle` when
       `Class.BallSocketConstraint.LimitsEnabled|LimitsEnabled` is true.
       Constrained between 0 and 1.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -149,8 +148,8 @@ properties:
       angle is defined as the angle between the **Y** axis of
       `Class.Constraint.Attachment1|Attachment1` and the **Y** axis of
       `Class.Constraint.Attachment0|Attachment0`.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -175,7 +174,7 @@ properties:
       as long as
       `Class.BallSocketConstraint.TwistLimitsEnabled|TwistLimitsEnabled` is
       true.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -201,7 +200,7 @@ properties:
       as long as
       `Class.BallSocketConstraint.TwistLimitsEnabled|TwistLimitsEnabled` is
       true.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -223,7 +222,7 @@ properties:
     description: |
       Sets the upper rotation limit of the `Class.BallSocketConstraint`, as long
       as `Class.BallSocketConstraint.LimitsEnabled|LimitsEnabled` is true.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

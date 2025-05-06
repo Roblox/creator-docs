@@ -1,57 +1,60 @@
 navigation:
+  - heading: Overview
   - title: Get started
     path: /avatar/
-
-  - heading: Classic clothing
+  - title: Tutorials
+    navigation: /avatar/tutorials.yaml
+    path: /avatar/tutorials
+  - title: Resources
+    path: /avatar/resources
+  - heading: Guides
+  - title: Classic clothing
     section:
-  - title: Overview
-    path: /art/classic-clothing
-  - title: Test in Studio
-    path: /art/test-classic-clothing
-  - title: Upload and sell
-    path: /art/upload-classic-clothing
-
-  - heading: Accessories
+      - title: Overview
+        path: /art/classic-clothing
+      - title: Test in Studio
+        path: /art/test-classic-clothing
+      - title: Upload and sell
+        path: /art/upload-classic-clothing
+  - title: Accessories
     section:
-  - title: Overview
-    path: /art/accessories/
-  - title: Specifications
-    path: /art/accessories/specifications
-  - title: Body scale
-    path: /art/accessories/body-scale
-  - title: Export settings
-    path: /art/accessories/export-settings
-  - title: Import into Studio
-    path: /art/accessories/importing
-
-  - heading: Clothing
+      - title: Overview
+        path: /art/accessories/
+      - title: Specifications
+        path: /art/accessories/specifications
+      - title: Body scale
+        path: /art/accessories/body-scale
+      - title: Export settings
+        path: /art/accessories/export-settings
+      - title: Import into Studio
+        path: /art/accessories/importing
+  - title: Clothing
     section:
-  - title: Overview
-    path: /art/accessories/layered-clothing
-  - title: Specifications
-    path: /art/accessories/clothing-specifications
-  - title: Reference files
-    path: /art/accessories/project-files
-  - title: Caging
-    path: /art/accessories/caging-best-practices
-  - title: Export settings
-    path: /art/accessories/clothing-export-settings
-  - title: Import into Studio
-    path: /art/accessories/import-clothing
-
-  - heading: Characters
-  - title: Overview
-    path: /art/characters/
-  - title: Specifications
-    path: /art/characters/specifications
-  - title: Reference files
-    path: /art/characters/project-files
-  - title: Export settings
-    path: /art/characters/export-settings
-  - title: Import into Studio
-    path: /art/characters/import
+      - title: Overview
+        path: /art/accessories/layered-clothing
+      - title: Specifications
+        path: /art/accessories/clothing-specifications
+      - title: Reference files
+        path: /art/accessories/project-files
+      - title: Caging
+        path: /art/accessories/caging-best-practices
+      - title: Export settings
+        path: /art/accessories/clothing-export-settings
+      - title: Import into Studio
+        path: /art/accessories/import-clothing
+  - title: Characters
+    section:
+      - title: Overview
+        path: /art/characters/
+      - title: Specifications
+        path: /art/characters/specifications
+      - title: Reference files
+        path: /art/characters/project-files
+      - title: Export settings
+        path: /art/characters/export-settings
+      - title: Import into Studio
+        path: /art/characters/import
   - title: Heads
-    path: /art/characters/facial-animation/
     section:
       - title: Overview
         path: /art/characters/facial-animation/
@@ -66,45 +69,39 @@ navigation:
   - title: In-experience creation
     path: /avatar/in-experience-creation
 
-  - heading: Publishing and selling
-  - title: Overview
-    path: /marketplace/
-  - title: Policies and guidelines
-    path: /marketplace/marketplace-policy
+  - title: Publish
     section:
-      - title: Marketplace policy
-        path: /marketplace/marketplace-policy
-      - title: Intellectual property
-        path: /marketplace/intellectual-property
-      - title: Moderation
-        path: /marketplace/moderation
-  - title: Publish to Marketplace
-    path: /marketplace/publish-to-marketplace
-  - title: Fees and commissions
-    path: /marketplace/marketplace-fees-and-commissions
-  - title: UGC Homestore
-    path: /marketplace/homestore
-  - title: FAQ
-    path: /marketplace/frequently-asked-questions
-
-  - heading: Studio tools
-  - title: 3D Importer
-    path: /art/modeling/3d-importer
-  - title: Accessory Fitting
-    path: /art/accessories/accessory-fitting-tool
-  - title: Avatar Setup
-    path: /art/modeling/avatar-setup
+      - title: Overview
+        path: /marketplace/
+      - title: Publish to Marketplace
+        path: /marketplace/publish-to-marketplace
+      - title: UGC Homestore
+        path: /marketplace/homestore
+  - title: Studio tools
+    section:
+      - title: 3D Importer
+        path: /art/modeling/3d-importer
+      - title: Avatar Setup
+        section:
+          - title: Overview
+            path: /avatar-setup/
+          - title: Auto-setup requirements
+            path: /avatar-setup/auto-setup-requirements
+          - title: Edit tools
+            path: /avatar-setup/tools
+      - title: Accessory Fitting
+        path: /art/accessories/accessory-fitting-tool
+      - title: Automatic Skinning Transfer
+        path: /art/accessories/automatic-skinning-transfer
+      - title: Thumbnails
+        path: /marketplace/custom-thumbnails
   - title: Validation Errors
     path: /art/validation-errors
-  - title: Automatic Skinning Transfer
-    path: /art/accessories/automatic-skinning-transfer
-  - title: Thumbnails
-    path: /marketplace/custom-thumbnails
-
-  - heading: Third party add-ons
-  - title: Roblox Blender plugin
-    path: /art/modeling/roblox-blender-plugin
-  - title: Calisthenics Tool
-    path: /art/modeling/calisthenics-tool
-  - title: Clothing Validation Tool
-    path: /art/accessories/validation-tool
+  - title: 3rd party add-ons
+    section:
+      - title: Roblox Blender plugin
+        path: /art/modeling/roblox-blender-plugin
+      - title: Calisthenics Tool
+        path: /art/modeling/calisthenics-tool
+      - title: Clothing Validation Tool
+        path: /art/accessories/validation-tool

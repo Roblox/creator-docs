@@ -1,6 +1,5 @@
 name: DataStoreKeyInfo
 type: class
-category:
 memory_category: Instances
 summary: |
   An object specifying information about a particular version of the key.
@@ -16,7 +15,7 @@ description: |
 
   - [Data Stores](../../../cloud-services/data-stores/index.md), an in-depth
     guide on data structure, management, error handling, etc.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -30,7 +29,7 @@ properties:
     description: |
       This property indicates the date and time the object was created,
       formatted as the number of milliseconds since epoch.
-    code_samples:
+    code_samples: []
     type: int64
     tags:
       - ReadOnly
@@ -53,7 +52,7 @@ properties:
     description: |
       This property indicates the date and time the object was last updated,
       formatted as the number of milliseconds since epoch.
-    code_samples:
+    code_samples: []
     type: int64
     tags:
       - ReadOnly
@@ -78,7 +77,7 @@ properties:
       passed to `Class.DataStore:GetVersionAsync()` or
       `Class.DataStore:RemoveVersionAsync()` to get or remove the version
       respectively.
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - ReadOnly
@@ -102,7 +101,7 @@ methods:
     description: |
       This function returns the metadata associated with the latest version of
       the object.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Dictionary
@@ -112,7 +111,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: DataStoreKeyInfo:GetUserIds
     summary: |
@@ -120,7 +120,7 @@ methods:
     description: |
       This function returns an array of `Class.Player.UserId|UserIds` tagged
       with the object.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Array
@@ -130,7 +130,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
 events: []
 callbacks: []

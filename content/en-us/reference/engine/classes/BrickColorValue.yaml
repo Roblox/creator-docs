@@ -1,12 +1,11 @@
 name: BrickColorValue
 type: class
-category: Values
 memory_category: Instances
 summary: |
   A container object for a single BrickColor value.
 description: |
   An instance which is used to store a BrickColor value.
-code_samples:
+code_samples: []
 inherits:
   - ValueBase
 tags: []
@@ -17,7 +16,7 @@ properties:
       Used to hold a `Datatype.BrickColor` value.
     description: |
       Used to hold a `Datatype.BrickColor` value.
-    code_samples:
+    code_samples: []
     type: BrickColor
     tags: []
     deprecation_message: ''
@@ -55,23 +54,22 @@ events:
     parameters:
       - name: value
         type: BrickColor
-        default:
+        default: ''
         summary: |
           The new value after the change.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: BrickColorValue.changed
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
         type: BrickColor
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -79,7 +77,6 @@ events:
       This event is a deprecated variant of `Class.BrickColorValue.Changed`
       which should be used instead.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

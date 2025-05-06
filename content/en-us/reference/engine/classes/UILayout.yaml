@@ -1,12 +1,11 @@
 name: UILayout
 type: class
-category:
 memory_category: Instances
 summary: |
   The base class for UI layout classes.
 description: |
   The base class for UI layout classes.
-code_samples:
+code_samples: []
 inherits:
   - UIComponent
 tags:

@@ -1,6 +1,5 @@
 name: NetworkMarker
 type: class
-category:
 memory_category: Instances
 summary: |
   The NetworkMarker is used to tell the client when the server has finished
@@ -8,7 +7,7 @@ summary: |
 description: |
   The NetworkMarker is used to tell the client when the server has finished
   loading the world for the client.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -23,12 +22,11 @@ events:
       Fired when the server has finished replicating the world to the client.
     description: |
       Fired when the server has finished replicating the world to the client.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

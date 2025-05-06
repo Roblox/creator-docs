@@ -1,6 +1,5 @@
 name: BuoyancySensor
 type: class
-category:
 memory_category: Instances
 summary: |
   A `Class.SensorBase` that outputs data about how its `Class.BasePart` is
@@ -24,7 +23,7 @@ properties:
       submerged in `Class.Terrain` water with at least one voxel of water above
       it.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -46,7 +45,7 @@ properties:
       touching `Class.Terrain` water. The detection measurements are not exact
       and may use the bounding box of the part instead of its exact geometry.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

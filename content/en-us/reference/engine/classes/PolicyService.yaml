@@ -1,6 +1,5 @@
 name: PolicyService
 type: class
-category:
 memory_category: Instances
 summary: |
   Helps you query information regarding policy compliance for players around the
@@ -8,7 +7,7 @@ summary: |
 description: |
   `PolicyService` helps you query information regarding policy compliance for
   players around the world based on age range, location, and platform type.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -39,17 +38,17 @@ methods:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: |
           The `Player` object you're trying to show the brand project to.
       - name: brandProjectId
         type: string
-        default:
+        default: ''
         summary: |
           The brand project ID provided by Roblox. Represents all assets
           associated with a brand project.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether or not the brand project can be shown to the specific user.
     tags:
@@ -163,7 +162,7 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Player` to get policy information for.
     returns:

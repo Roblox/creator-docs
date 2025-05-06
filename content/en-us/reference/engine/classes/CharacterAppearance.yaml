@@ -1,6 +1,5 @@
 name: CharacterAppearance
 type: class
-category:
 memory_category: Instances
 summary: |
   The base class for objects that change the character's appearance, such as the
@@ -8,7 +7,7 @@ summary: |
   and `Class.Shirt` objects.
 description: |
   Base class for objects that change a character's appearance.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

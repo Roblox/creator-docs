@@ -1,6 +1,5 @@
 name: AudioAnalyzer
 type: class
-category:
 memory_category: Internal
 summary: |
   Takes measurements from audio streams that are connected to it via one or more
@@ -78,7 +77,7 @@ properties:
       reduced. This means that if you are only analyzing the **volume** of an
       audio stream, you can disable this property to improve performance.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -122,7 +121,7 @@ methods:
     parameters:
       - name: pin
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instances
@@ -131,7 +130,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioAnalyzer:GetInputPins
     summary: ''
@@ -145,7 +145,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioAnalyzer:GetOutputPins
     summary: ''
@@ -159,7 +160,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioAnalyzer:GetSpectrum
     summary: |
@@ -180,7 +182,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
 events:
   - name: AudioAnalyzer.WiringChanged
@@ -194,30 +197,30 @@ events:
     code_samples: []
     parameters:
       - name: connected
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           Whether the instance got connected or disconnected.
       - name: pin
         type: string
-        default:
+        default: ''
         summary: |
           The pin on the `Class.AudioAnalyzer` that the `Class.Wire` targets.
       - name: wire
         type: Wire
-        default:
+        default: ''
         summary: |
           The `Class.Wire` between the `Class.AudioAnalyzer` and the other
           instance.
       - name: instance
         type: Instance
-        default:
+        default: ''
         summary: |
           The other instance that is or was connected through the `Class.Wire`.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
 callbacks: []

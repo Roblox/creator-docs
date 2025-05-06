@@ -1,6 +1,5 @@
 name: Shirt
 type: class
-category: Avatar
 memory_category: Instances
 summary: |
   Displays a shirt texture on a `Class.Humanoid` rig.

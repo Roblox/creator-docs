@@ -1,6 +1,5 @@
 name: InputObject
 type: class
-category: Input
 memory_category: Instances
 summary: |
   An object created when an input begins that describes a particular user input.
@@ -2037,20 +2036,21 @@ methods:
   - name: InputObject:IsModifierKeyDown
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: modifierKey
         type: ModifierKey
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 events: []
 callbacks: []

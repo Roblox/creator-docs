@@ -1,6 +1,5 @@
 name: StyleBase
 type: class
-category:
 memory_category: Gui
 summary: ''
 description: ''
@@ -33,14 +32,14 @@ methods:
     parameters:
       - name: rule
         type: StyleRule
-        default:
+        default: ''
         summary: ''
       - name: priority
         type: int?
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -55,10 +54,10 @@ methods:
     parameters:
       - name: rules
         type: Instances
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -75,7 +74,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

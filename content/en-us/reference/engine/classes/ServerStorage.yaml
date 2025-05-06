@@ -1,6 +1,5 @@
 name: ServerStorage
 type: class
-category: Utility
 memory_category: Instances
 summary: |
   A container whose contents are only accessible on the server. Objects

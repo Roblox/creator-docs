@@ -1,6 +1,5 @@
 name: BindableFunction
 type: class
-category: Scripting
 memory_category: Instances
 summary: |
   An object which allows for synchronous two-way communication between scripts
@@ -36,7 +35,7 @@ description: |
   invoked, as well as Luau types such as numbers, strings, and booleans,
   although you should carefully explore the
   [limitations](../../../scripting/events/custom.md#argument-limitations).
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -68,11 +67,11 @@ methods:
       See [Custom Events and Callbacks](../../../scripting/events/custom.md) for
       code samples and further details on
       `Class.BindableFunction:Invoke()|Invoke()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: arguments
         type: Tuple
-        default:
+        default: ''
         summary: |
           Values to pass to the `Class.BindableFunction.OnInvoke|OnInvoke`
           callback.
@@ -104,11 +103,11 @@ callbacks:
       See [Custom Events and Callbacks](../../../scripting/events/custom.md) for
       code samples and further details on
       `Class.BindableFunction.OnInvoke|OnInvoke`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: arguments
         type: Tuple
-        default:
+        default: ''
         summary: |
           The parameters sent through
           `Class.BindableFunction:Invoke()|Invoke()`.

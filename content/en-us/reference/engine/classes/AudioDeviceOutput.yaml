@@ -1,6 +1,5 @@
 name: AudioDeviceOutput
 type: class
-category:
 memory_category: Internal
 summary: |
   Accepts audio streams to be rendered out to physical hardware devices such as
@@ -51,7 +50,7 @@ methods:
     parameters:
       - name: pin
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instances
@@ -60,7 +59,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioDeviceOutput:GetInputPins
     summary: ''
@@ -74,7 +74,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioDeviceOutput:GetOutputPins
     summary: ''
@@ -88,7 +89,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
 events:
   - name: AudioDeviceOutput.WiringChanged
@@ -102,31 +104,31 @@ events:
     code_samples: []
     parameters:
       - name: connected
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           Whether the instance got connected or disconnected.
       - name: pin
         type: string
-        default:
+        default: ''
         summary: |
           The pin on the `Class.AudioDeviceOutput` that the `Class.Wire`
           targets.
       - name: wire
         type: Wire
-        default:
+        default: ''
         summary: |
           The `Class.Wire` between the `Class.AudioDeviceOutput` and the other
           instance.
       - name: instance
         type: Instance
-        default:
+        default: ''
         summary: |
           The other instance that is or was connected through the `Class.Wire`.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
 callbacks: []

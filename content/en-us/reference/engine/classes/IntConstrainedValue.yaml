@@ -1,6 +1,5 @@
 name: IntConstrainedValue
 type: class
-category: Values
 memory_category: Instances
 summary: |
   An IntConstrainedValue is used to store a value which can never be less than
@@ -8,7 +7,7 @@ summary: |
 description: |
   An IntConstrainedValue is used to store a value which can never be less than
   MinValue and can never be more than MaxValue.
-code_samples:
+code_samples: []
 inherits:
   - ValueBase
 tags:
@@ -26,7 +25,7 @@ properties:
       Hold an `Integer` value between `Class.IntConstrainedValue.MinValue` and
       `Class.IntConstrainedValue.MaxValue`. Replaced by
       `Class.IntConstrainedValue.Value`, but still functional.
-    code_samples:
+    code_samples: []
     type: int64
     tags:
       - Hidden
@@ -51,7 +50,7 @@ properties:
     description: |
       The highest number that the `Class.IntConstrainedValue.Value` property can
       be.
-    code_samples:
+    code_samples: []
     type: int64
     tags: []
     deprecation_message: |
@@ -74,7 +73,7 @@ properties:
     description: |
       The lowest number that the `Class.IntConstrainedValue.Value` property can
       be.
-    code_samples:
+    code_samples: []
     type: int64
     tags: []
     deprecation_message: |
@@ -97,7 +96,7 @@ properties:
     description: |
       Used to hold an integer value between `Class.IntConstrainedValue.MinValue`
       and `Class.IntConstrainedValue.MaxValue`.
-    code_samples:
+    code_samples: []
     type: int64
     tags:
       - NotReplicated
@@ -126,24 +125,23 @@ events:
     parameters:
       - name: value
         type: int64
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: |
       The IntConstrainedValue object has been deprecated as developers can now
       use the `Library.math.clamp()` function to constrain values.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: IntConstrainedValue.changed
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
         type: int64
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -151,7 +149,6 @@ events:
       This deprecated event is a variant of `Class.IntConstrainedValue.Changed`
       which has also been deprecated. Neither event should be used in new work.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

@@ -1,6 +1,5 @@
 name: AvatarEditorService
 type: class
-category:
 memory_category: Instances
 summary: |
   A service to support developer Avatar Editors.
@@ -33,7 +32,7 @@ description: |
   If you find that your experience requires an adjustment to this throttling,
   you can submit a
   [feature request](https://devforum.roblox.com/t/how-to-post-a-feature-request/37232).
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -50,7 +49,7 @@ methods:
     parameters:
       - name: avatarAssetType
         type: AvatarAssetType
-        default:
+        default: ''
         summary: ''
     returns:
       - type: AccessoryType
@@ -74,10 +73,10 @@ methods:
       `Class.AvatarEditorService:GetOutfits()` and
       `Class.AvatarEditorService:GetFavorite()`. Permission does not persist
       between sessions.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -94,21 +93,21 @@ methods:
       `Class.HumanoidDescription` as an outfit. Does not yield. The result can
       be retrieved by listening to the
       `Class.AvatarEditorService.PromptCreateOutfitCompleted` event.
-    code_samples:
+    code_samples: []
     parameters:
       - name: outfit
         type: HumanoidDescription
-        default:
+        default: ''
         summary: |
           The `Outfit` that the player will be prompted to created.
       - name: rigType
         type: HumanoidRigType
-        default:
+        default: ''
         summary: |
           The `Enum.RigType` that the outfit will be created for if the player
           confirms the prompt.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -123,15 +122,15 @@ methods:
       Prompts the `Class.Players.LocalPlayer` to delete the given outfit. Does
       not yield. The result can be retrieved by listening to the
       `Class.AvatarEditorService.PromptDeleteOutfitCompleted` event.
-    code_samples:
+    code_samples: []
     parameters:
       - name: outfitId
         type: int64
-        default:
+        default: ''
         summary: |
           The outfitId of the outfit to delete.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -146,15 +145,15 @@ methods:
       Prompts the `Class.Players.LocalPlayer` to rename the given outfit. Does
       not yield. The result can be retrieved by listening to the
       `Class.AvatarEditorService.PromptRenameOutfitCompleted` event.
-    code_samples:
+    code_samples: []
     parameters:
       - name: outfitId
         type: int64
-        default:
+        default: ''
         summary: |
           The outfitId of the outfit to rename.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -172,21 +171,21 @@ methods:
       (R6 or R15). Does not yield and can get the result by listening to the
       PromptSaveAvatarCompleted event. This is similar to how other prompts such
       as PromptPurchase work.
-    code_samples:
+    code_samples: []
     parameters:
       - name: humanoidDescription
         type: HumanoidDescription
-        default:
+        default: ''
         summary: |
           The given `Class.HumanoidDescription` being prompted to save.
       - name: rigType
         type: HumanoidRigType
-        default:
+        default: ''
         summary: |
           The `Enum.RigType` that the avatar will be saved for if the player
           confirms the prompt.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -201,24 +200,24 @@ methods:
     description: |
       This function prompts the `Class.Players.LocalPlayer` to favorite or
       unfavorite the given asset or bundle.
-    code_samples:
+    code_samples: []
     parameters:
       - name: itemId
         type: int64
-        default:
+        default: ''
         summary: |
           The ItemId of the item being prompted to favorite.
       - name: itemType
         type: AvatarItemType
-        default:
+        default: ''
         summary: |
           The type of item being prompted to favorite.
       - name: shouldFavorite
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -232,25 +231,25 @@ methods:
     description: |
       Prompts the `Class.Players.LocalPlayer` to update the given outfit with
       the given HumanoidDescription.
-    code_samples:
+    code_samples: []
     parameters:
       - name: outfitId
         type: int64
-        default:
+        default: ''
         summary: |
           The outfitId of the outfit to update.
       - name: updatedOutfit
         type: HumanoidDescription
-        default:
+        default: ''
         summary: |
           A HumanoidDescription that represents the new outfit data.
       - name: rigType
         type: HumanoidRigType
-        default:
+        default: ''
         summary: |
           The HumanoidRigType to update the outfit to.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -264,24 +263,24 @@ methods:
       necessary.
     description: |
       Returns a new `Class.HumanoidDescription` with the Shirt and Pants
-      properties updated if necessary. Returns nil if default clothing was not
+      properties updated if necessary. Returns `nil` if default clothing was not
       needed.
 
       Default clothing is necessary if the HumanoidDescription does not
       currently have Shirt and Pants equipped and the body colors are too
       similar.
-    code_samples:
+    code_samples: []
     parameters:
       - name: humanoidDescription
         type: HumanoidDescription
-        default:
+        default: ''
         summary: |
           The HumanoidDescription to check if default clothing is required.
     returns:
       - type: HumanoidDescription
         summary: |
           Returns a HumanoidDescription if default clothing was necessary.
-          Otherwise returns nil.
+          Otherwise returns `nil`.
     tags:
       - Yields
     deprecation_message: ''
@@ -296,7 +295,7 @@ methods:
     parameters:
       - name: humanoidDescription
         type: HumanoidDescription
-        default:
+        default: ''
         summary: ''
     returns:
       - type: HumanoidDescription
@@ -359,7 +358,7 @@ methods:
         "EmotesEnabledForUser": true
       }
       ```
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Dictionary
@@ -381,16 +380,16 @@ methods:
       Gets the item details for a list of items at once. More efficient than
       AvatarEditorService:GetItemDetails if you need to get all the item details
       of a list.
-    code_samples:
+    code_samples: []
     parameters:
       - name: itemIds
         type: Array
-        default:
+        default: ''
         summary: |
           The list of item ids to get details of.
       - name: itemType
         type: AvatarItemType
-        default:
+        default: ''
         summary: |
           The type of the item ids provided.
     returns:
@@ -439,20 +438,20 @@ methods:
     description: |
       This function returns if the `Class.Players.LocalPlayer` has favorited the
       given bundle or asset.
-    code_samples:
+    code_samples: []
     parameters:
       - name: itemId
         type: int64
-        default:
+        default: ''
         summary: |
           The id of the specified asset or bundle.
       - name: itemType
         type: AvatarItemType
-        default:
+        default: ''
         summary: |
           The `Enum.AvatarItemType` of the specified asset or bundle.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the `LocalPlayer` has favorited the given bundle or asset.
     tags:
@@ -483,11 +482,11 @@ methods:
           }
       ]
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: assetTypes
         type: Array
-        default:
+        default: ''
         summary: |
           The `Enum.AvatarAssetType` that can will be checked for in the
           player's inventory.
@@ -566,16 +565,16 @@ methods:
       |  `Collectible`   |      UGC Limited      |
       |    `Limited`     |    Roblox Limited     |
       | `LimitedUnique`  | Roblox Limited Unique |
-    code_samples:
+    code_samples: []
     parameters:
       - name: itemId
         type: int64
-        default:
+        default: ''
         summary: |
           The ID of the item whose details are being retrieved.
       - name: itemType
         type: AvatarItemType
-        default:
+        default: ''
         summary: |
           An enum value indicating the type of item whose details are being
           retrieved.
@@ -636,11 +635,11 @@ methods:
         },
       }
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: outfitId
         type: int64
-        default:
+        default: ''
         summary: |
           The ID of the outfit whose details are being retrieved.
     returns:
@@ -704,7 +703,7 @@ methods:
               </tr>
           </tbody>
       </table>
-    code_samples:
+    code_samples: []
     parameters:
       - name: outfitSource
         type: OutfitSource
@@ -769,7 +768,7 @@ methods:
     parameters:
       - name: assetType
         type: AvatarAssetType
-        default:
+        default: ''
         summary: |
           The type of asset recommendations to retrieve recommendations for.
           Only affects the response when item based recommendations don't exist
@@ -833,11 +832,11 @@ methods:
           }
       ]
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: bundleId
         type: int64
-        default:
+        default: ''
         summary: |
           A list of recommended bundles.
     returns:
@@ -904,11 +903,11 @@ methods:
           }
       ]
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: searchParameters
         type: CatalogSearchParams
-        default:
+        default: ''
         summary: |
           An object containing the parameters used for the search.
     returns:
@@ -933,17 +932,16 @@ events:
       responded to by the user. It can only return the Success or
       PermissionDenied `Enum.AvatarPromptResult|enum` statuses as it does not
       perform any web requests which could fail.
-    code_samples:
+    code_samples: []
     parameters:
       - name: result
         type: AvatarPromptResult
-        default:
+        default: ''
         summary: |
           The result of the prompt.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: AvatarEditorService.PromptCreateOutfitCompleted
@@ -953,21 +951,20 @@ events:
       This event fires when the PromptSaveOutfit operation is completed. It
       gives a status `Enum.AvatarPromptResult|enum` indicating whether the
       prompt succeeded, failed or permission was not granted by the user.
-    code_samples:
+    code_samples: []
     parameters:
       - name: result
         type: AvatarPromptResult
-        default:
+        default: ''
         summary: |
           The result of the prompt.
       - name: failureType
         type: Variant
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: AvatarEditorService.PromptDeleteOutfitCompleted
@@ -977,17 +974,16 @@ events:
       Fires when the PromptDeleteOutfit operation is completed. It gives a
       status `Enum.AvatarPromptResult|enum` indicating whether the prompt
       succeeded, failed or permission was not granted by the user.
-    code_samples:
+    code_samples: []
     parameters:
       - name: result
         type: AvatarPromptResult
-        default:
+        default: ''
         summary: |
           The result of the prompt.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: AvatarEditorService.PromptRenameOutfitCompleted
@@ -997,17 +993,16 @@ events:
       Fires when the PromptRenameOutfit operation is completed. It gives a
       status `Enum.AvatarPromptResult|enum` indicating whether the prompt
       succeeded, failed or permission was not granted by the user.
-    code_samples:
+    code_samples: []
     parameters:
       - name: result
         type: AvatarPromptResult
-        default:
+        default: ''
         summary: |
           The result of the prompt.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: AvatarEditorService.PromptSaveAvatarCompleted
@@ -1019,21 +1014,20 @@ events:
       operation is completed. It gives a status `Enum.AvatarPromptResult|enum`
       indicating whether the prompt succeeded, failed or permission was not
       granted by the user.
-    code_samples:
+    code_samples: []
     parameters:
       - name: result
         type: AvatarPromptResult
-        default:
+        default: ''
         summary: |
           The result of the prompt.
       - name: humanoidDescription
         type: HumanoidDescription
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: AvatarEditorService.PromptSetFavoriteCompleted
@@ -1045,17 +1039,16 @@ events:
       is completed. It gives a status `Enum.AvatarPromptResult|enum` indicating
       whether the prompt succeeded, failed or permission was not granted by the
       user.
-    code_samples:
+    code_samples: []
     parameters:
       - name: result
         type: AvatarPromptResult
-        default:
+        default: ''
         summary: |
           The result of the prompt.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: AvatarEditorService.PromptUpdateOutfitCompleted
@@ -1067,17 +1060,16 @@ events:
       is completed. It gives a status `Enum.AvatarPromptResult|enum` indicating
       whether the prompt succeeded, failed or permission was not granted by the
       user.
-    code_samples:
+    code_samples: []
     parameters:
       - name: result
         type: AvatarPromptResult
-        default:
+        default: ''
         summary: |
           The result of the prompt.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

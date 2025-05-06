@@ -1,6 +1,5 @@
 name: UIAspectRatioConstraint
 type: class
-category: GUI
 memory_category: Instances
 summary: |
   Ensures the parent UI element maintains a particular aspect ratio.
@@ -23,7 +22,7 @@ description: |
   Note that when a UI object is under control of both a layout structure such as
   `Class.UIListLayout` and a `Class.UIAspectRatioConstraint`, the constraint
   will **override** the layout and control the object's size.
-code_samples:
+code_samples: []
 inherits:
   - UIConstraint
 tags: []
@@ -36,7 +35,7 @@ properties:
       This property determines the width‑to‑height ratio to maintain. To flip
       the ratio to height‑to‑width, take the inverse (divide `1` by the number
       or raise to the -1st power). This value must be greater than `0`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -64,7 +63,7 @@ properties:
       - When set to `Enum.AspectType.ScaleWithParentSize|ScaleWithParentSize`,
         the object's maximum size will be the size of the parent while still
         maintaining the aspect ratio.
-    code_samples:
+    code_samples: []
     type: AspectType
     tags: []
     deprecation_message: ''
@@ -85,7 +84,7 @@ properties:
     description: |
       This property determines which axis to use when setting the new size of
       the object, assuming it would otherwise exceed the size of the parent.
-    code_samples:
+    code_samples: []
     type: DominantAxis
     tags: []
     deprecation_message: ''

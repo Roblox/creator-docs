@@ -1,10 +1,9 @@
 name: PackageService
 type: class
-category:
 memory_category: Instances
 summary: ''
 description: ''
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

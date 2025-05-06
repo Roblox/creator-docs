@@ -1,6 +1,5 @@
 name: BodyForce
 type: class
-category: Body Movers
 memory_category: Instances
 summary: |
   Applies a constant force to an object.
@@ -14,7 +13,7 @@ description: |
   on its own). To apply a force at a specific point (e.g. to apply torque for
   angular acceleration) or apply forces relative to the orientation of the part,
   use a `Class.BodyThrust` instead.
-code_samples:
+code_samples: []
 inherits:
   - BodyMover
 tags:
@@ -29,7 +28,7 @@ properties:
     description: |
       The Force property determines the magnitude of force exerted on each axis,
       relative to the world.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -49,7 +48,7 @@ properties:
     description: |
       A deprecated variant of `Class.BodyForce.Force` that indicates the amount
       of force applied on each axis.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - NotReplicated

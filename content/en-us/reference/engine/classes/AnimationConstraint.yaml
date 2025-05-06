@@ -1,6 +1,5 @@
 name: AnimationConstraint
 type: class
-category:
 memory_category: PhysicsParts
 summary: |
   Aligns two `Class.BasePart|BaseParts` with an animate-able kinematic or
@@ -81,7 +80,7 @@ properties:
       `Class.AnimationConstraint.MaxForce` and
       `Class.AnimationConstraint.MaxTorque`.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

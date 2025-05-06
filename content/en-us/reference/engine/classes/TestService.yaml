@@ -1,6 +1,5 @@
 name: TestService
 type: class
-category: Debugging
 memory_category: Instances
 summary: |
   A service used by Roblox to run controlled tests of the engine. It is
@@ -192,7 +191,7 @@ description: |
   <td>Directly calls the <code>Class.TestService:Message()</code> function.</td>
   </tr>
   </table>
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -206,8 +205,8 @@ properties:
     description: |
       If set to true, the game will start running when the TestService's
       `Class.TestService:Run()` method is called.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -225,7 +224,7 @@ properties:
       A description of the test being executed.
     description: |
       A description of the test being executed.
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -244,7 +243,7 @@ properties:
       Measures how many errors have been recorded in the test session.
     description: |
       Measures how many errors have been recorded in the test session.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - ReadOnly
@@ -276,8 +275,8 @@ properties:
         connected to that server.
       - Try to keep this value within a rational range (1 to 8 players at most),
         or else your computer's CPU will get overloaded.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -297,12 +296,15 @@ properties:
     description: |
       Sets whether or not the physics engine should be throttled to 30 FPS while
       the test is being ran.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - NotReplicated
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This has been deprecated and directly renamed to
+      `Class.TestService.ThrottlePhysicsToRealtime|ThrottlePhysicsToRealtime` to
+      better reflect its practical use.
     security:
       read: None
       write: None
@@ -320,8 +322,8 @@ properties:
     description: |
       Sets whether or not the physics environment should be throttled while
       running this test.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -341,8 +343,8 @@ properties:
     description: |
       Sets whether or not physics objects will be allowed to fall asleep while
       the test simulation is running.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -360,7 +362,7 @@ properties:
       The number of players expected in this test, if any.
     description: |
       The number of players expected in this test, if any.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -381,7 +383,7 @@ properties:
     description: |
       Sets a specific amount of additional latency experienced by players during
       the test session.
-    code_samples:
+    code_samples: []
     type: double
     tags: []
     deprecation_message: ''
@@ -400,7 +402,7 @@ properties:
       Measures how many test calls have been recorded in the test session.
     description: |
       Measures how many test calls have been recorded in the test session.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - ReadOnly
@@ -417,10 +419,14 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: TestService.ThrottlePhysicsToRealtime
-    summary: ''
-    description: ''
+    summary: |
+      Sets whether the test should be throttled to simulate time according to
+      real world time or as fast as possible.
+    description: |
+      Sets whether the test should be throttled to simulate time according to
+      real world time or as fast as possible.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -438,7 +444,7 @@ properties:
       The maximum amount of time that tests are allowed to run for.
     description: |
       The maximum amount of time that tests are allowed to run for.
-    code_samples:
+    code_samples: []
     type: double
     tags: []
     deprecation_message: ''
@@ -457,7 +463,7 @@ properties:
       Measures how many warning calls have been recorded in the test session.
     description: |
       Measures how many warning calls have been recorded in the test session.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - ReadOnly
@@ -485,12 +491,12 @@ methods:
       - TestService-Check1
     parameters:
       - name: condition
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: ''
       - name: description
         type: string
-        default:
+        default: ''
         summary: ''
       - name: source
         type: Instance
@@ -501,7 +507,7 @@ methods:
         default: 0
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -520,7 +526,7 @@ methods:
     parameters:
       - name: text
         type: string
-        default:
+        default: ''
         summary: ''
       - name: source
         type: Instance
@@ -531,7 +537,7 @@ methods:
         default: 0
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -548,7 +554,7 @@ methods:
       - TestService-Done1
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -566,7 +572,7 @@ methods:
     parameters:
       - name: description
         type: string
-        default:
+        default: ''
         summary: ''
       - name: source
         type: Instance
@@ -577,7 +583,7 @@ methods:
         default: 0
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -594,11 +600,11 @@ methods:
       Indicates a fatal error in a TestService run. If this is called inside of
       a script running inside of the TestService, this will initiate a
       breakpoint on the line that invoked the error.
-    code_samples:
+    code_samples: []
     parameters:
       - name: description
         type: string
-        default:
+        default: ''
         summary: ''
       - name: source
         type: Instance
@@ -609,7 +615,7 @@ methods:
         default: 0
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -628,7 +634,7 @@ methods:
     parameters:
       - name: text
         type: string
-        default:
+        default: ''
         summary: ''
       - name: source
         type: Instance
@@ -639,7 +645,7 @@ methods:
         default: 0
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -659,12 +665,12 @@ methods:
       - TestService-Require1
     parameters:
       - name: condition
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: ''
       - name: description
         type: string
-        default:
+        default: ''
         summary: ''
       - name: source
         type: Instance
@@ -675,7 +681,7 @@ methods:
         default: 0
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -686,7 +692,7 @@ methods:
   - name: TestService:ScopeTime
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Dictionary
@@ -709,12 +715,12 @@ methods:
       - TestService-Warn1
     parameters:
       - name: condition
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: ''
       - name: description
         type: string
-        default:
+        default: ''
         summary: ''
       - name: source
         type: Instance
@@ -725,7 +731,7 @@ methods:
         default: 0
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -736,14 +742,14 @@ methods:
   - name: TestService:isFeatureEnabled
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
@@ -756,10 +762,10 @@ methods:
       Runs scripts which are parented to TestService.
     description: |
       Runs scripts which are parented to TestService.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields
@@ -774,28 +780,27 @@ events:
       Fired when the server should collect a conditional test result.
     description: |
       Fired when the server should collect a conditional test result.
-    code_samples:
+    code_samples: []
     parameters:
       - name: condition
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: ''
       - name: text
         type: string
-        default:
+        default: ''
         summary: ''
       - name: script
         type: Instance
-        default:
+        default: ''
         summary: ''
       - name: line
         type: int
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: TestService.ServerCollectResult
@@ -803,24 +808,23 @@ events:
       Fired when the server should collect a test result.
     description: |
       Fired when the server should collect a test result.
-    code_samples:
+    code_samples: []
     parameters:
       - name: text
         type: string
-        default:
+        default: ''
         summary: ''
       - name: script
         type: Instance
-        default:
+        default: ''
         summary: ''
       - name: line
         type: int
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

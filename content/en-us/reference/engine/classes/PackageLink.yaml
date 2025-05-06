@@ -1,6 +1,5 @@
 name: PackageLink
 type: class
-category: Scripting
 memory_category: Instances
 summary: |
   Links a `Class.DataModel` instance to a corresponding asset in the cloud.
@@ -16,7 +15,7 @@ description: |
   and can only be parented to `Class.Instance|Instances` that can be published
   independently of `Class.DataModel` publish. The `Class.PackageLink` instance
   will always be the first child shown in the tree view, regardless of sorting.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -36,8 +35,8 @@ properties:
       This property would allows you to decide if a given package should be
       automatically updated to the latest version when entering a given place.
       The game will periodically check for new updates while a place is open.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -55,7 +54,7 @@ properties:
       The creator of the package asset.
     description: |
       The creator of the package asset.
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - ReadOnly
@@ -94,7 +93,7 @@ properties:
       The asset name of the package.
     description: |
       The asset name of the package.
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - ReadOnly
@@ -116,7 +115,7 @@ properties:
       The id of the asset this package corresponds to.
     description: |
       The id of the asset this package corresponds to.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags:
       - ReadOnly
@@ -137,7 +136,7 @@ properties:
       The package permission for the current Studio user.
     description: |
       The package permission for the current Studio user.
-    code_samples:
+    code_samples: []
     type: PackagePermission
     tags:
       - ReadOnly
@@ -198,7 +197,7 @@ properties:
       Refers to a revision of a specific package.
     description: |
       This property refers to a revision of a specific package
-    code_samples:
+    code_samples: []
     type: int64
     tags:
       - NotReplicated

@@ -1,12 +1,11 @@
 name: SolidModelContentProvider
 type: class
-category:
 memory_category: Instances
 summary: |
   An internal service which serves no functionality to developers.
 description: |
   An internal `Class.ContentProvider` for preloading solid models.
-code_samples:
+code_samples: []
 inherits:
   - CacheableContentProvider
 tags:

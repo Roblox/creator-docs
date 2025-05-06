@@ -1,6 +1,5 @@
 name: RotateV
 type: class
-category: Joints
 memory_category: PhysicsParts
 summary: ''
 description: |
@@ -21,7 +20,7 @@ description: |
 
   - `Sin` &mdash; The joint will rotate based on the `ParamA` and `ParamB`
     properties of `Class.JointInstance.Part0`.
-code_samples:
+code_samples: []
 inherits:
   - DynamicRotate
 tags:

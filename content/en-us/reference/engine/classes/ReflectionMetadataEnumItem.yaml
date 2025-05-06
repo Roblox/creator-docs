@@ -1,6 +1,5 @@
 name: ReflectionMetadataEnumItem
 type: class
-category:
 memory_category: Instances
 summary: |
   Contains information about a specific EnumItem embedded within an Enum.
@@ -10,7 +9,7 @@ description: |
   `Class.ReflectionMetadataEnum`.
 
   Since it is an internal object, it cannot be used by developers.
-code_samples:
+code_samples: []
 inherits:
   - ReflectionMetadataItem
 tags: []

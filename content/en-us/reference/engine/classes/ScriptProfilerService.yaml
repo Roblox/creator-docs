@@ -1,6 +1,5 @@
 name: ScriptProfilerService
 type: class
-category:
 memory_category: Instances
 summary: ''
 description: ''
@@ -20,10 +19,10 @@ methods:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -38,14 +37,14 @@ methods:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: ''
       - name: frequency
         type: int?
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -60,10 +59,10 @@ methods:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -78,7 +77,7 @@ methods:
     parameters:
       - name: jsonString
         type: string?
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Dictionary
@@ -96,7 +95,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -111,10 +110,10 @@ methods:
     parameters:
       - name: frequency
         type: int?
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -128,7 +127,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -144,16 +143,15 @@ events:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: ''
       - name: jsonString
         type: string
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

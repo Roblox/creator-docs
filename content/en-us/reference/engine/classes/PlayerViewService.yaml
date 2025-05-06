@@ -1,6 +1,5 @@
 name: PlayerViewService
 type: class
-category:
 memory_category: Instances
 summary: |
   Provides a way to get additional information about a player's view.

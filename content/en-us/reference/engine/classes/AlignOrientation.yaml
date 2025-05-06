@@ -1,6 +1,5 @@
 name: AlignOrientation
 type: class
-category: Constraints
 memory_category: PhysicsParts
 summary: |
   Constraint which applies torque to align two attachments, or to align one
@@ -52,7 +51,7 @@ description: |
 
   This constraint can use either **one** or **two** attachments in calculating
   its goal. See `Class.AlignOrientation.Mode|Mode` for details.
-code_samples:
+code_samples: []
 inherits:
   - Constraint
 tags: []
@@ -69,7 +68,7 @@ properties:
       `Enum.AlignType|PrimaryAxisLookAt`. The constraint will attempt to
       maintain the specified relationship, as given by the `Enum.AlignType`, by
       applying torques onto the relevant axes.
-    code_samples:
+    code_samples: []
     type: AlignType
     tags: []
     deprecation_message: ''
@@ -94,7 +93,7 @@ properties:
       `Class.Constraint.Attachment0|Attachment0`. Only used when
       `Class.AlignOrientation.Mode|Mode` is set to
       `Enum.OrientationAlignmentMode|OneAttachment`.
-    code_samples:
+    code_samples: []
     type: CFrame
     tags: []
     deprecation_message: ''
@@ -146,7 +145,7 @@ properties:
       as well as `Class.AlignOrientation.MaxTorque|MaxTorque`, are **caps** to
       the angular velocity and torque respectively. The actual scale is
       determined by `Class.AlignOrientation.Responsiveness|Responsiveness`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -172,7 +171,7 @@ properties:
       `Class.AlignOrientation.MaxAngularVelocity|MaxAngularVelocity`, are
       **caps** to the torque and angular velocity respectively. The actual scale
       is determined by `Class.AlignOrientation.Responsiveness|Responsiveness`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -211,7 +210,7 @@ properties:
       `Class.AlignOrientation.PrimaryAxis|PrimaryAxis` and
       `Class.AlignOrientation.SecondaryAxis|SecondaryAxis` properties
       respectively.
-    code_samples:
+    code_samples: []
     type: OrientationAlignmentMode
     tags: []
     deprecation_message: ''
@@ -234,7 +233,7 @@ properties:
       The direction of the goal's **X** axis, represented as a unit
       `Datatype.Vector3`. Only used when `Class.AlignOrientation.Mode|Mode` is
       `Enum.OrientationAlignmentMode|OneAttachment`.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - NotReplicated
@@ -261,8 +260,8 @@ properties:
 
       Enabling `Class.AlignOrientation.PrimaryAxisOnly|PrimaryAxisOnly` also
       enables the `Class.AlignOrientation.AlignType|AlignType` property.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: |
       This property is deprecated. Depending on your usage case, set
@@ -292,8 +291,8 @@ properties:
       `Class.Constraint.Attachment1|Attachment1` remains unaffected. If true,
       the constraint applies torque to both attachments in **equal and opposite
       directions**.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -314,7 +313,7 @@ properties:
     description: |
       Controls how quickly the constraint reaches its goal. Higher values cause
       the attachment(s) to align more rapidly. Value can be between 5 and 200.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -341,8 +340,8 @@ properties:
       `Class.AlignOrientation.MaxAngularVelocity|MaxAngularVelocity`, and
       `Class.AlignOrientation.Responsiveness|Responsiveness`. If true, the
       physics solver reacts as quickly as possible to complete the alignment.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -364,7 +363,7 @@ properties:
       The direction of the goal's **Y** axis, represented as a unit
       `Datatype.Vector3`. Only used when `Class.AlignOrientation.Mode|Mode` is
       `Enum.OrientationAlignmentMode|OneAttachment`.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - NotReplicated

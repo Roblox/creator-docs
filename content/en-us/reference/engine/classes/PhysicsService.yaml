@@ -1,6 +1,5 @@
 name: PhysicsService
 type: class
-category: Building
 memory_category: Instances
 summary: ''
 description: |
@@ -18,7 +17,7 @@ description: |
   See
   [Collision Filtering](../../../workspace/collisions.md#collision-filtering)
   for usage details in Studio and within scripts.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -36,18 +35,18 @@ methods:
 
       - The specified group does not exist.
       - The specified part is not a `Class.BasePart`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
       - name: part
         type: BasePart
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -68,22 +67,22 @@ methods:
       you confirm each group's registration through
       `Class.PhysicsService:IsCollisionGroupRegistered()` before making this
       call.
-    code_samples:
+    code_samples: []
     parameters:
       - name: name1
         type: string
-        default:
+        default: ''
         summary: ''
       - name: name2
         type: string
-        default:
+        default: ''
         summary: ''
       - name: collidable
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -98,18 +97,18 @@ methods:
       Returns whether the two specified collision groups will collide. This
       method will also return true if either of the groups are unregistered, as
       the default collision mask collides with all groups.
-    code_samples:
+    code_samples: []
     parameters:
       - name: name1
         type: string
-        default:
+        default: ''
         summary: ''
       - name: name2
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
@@ -124,11 +123,11 @@ methods:
     description: |
       Creates a new collision group with the given name, and returns the ID of
       the created group.
-    code_samples:
+    code_samples: []
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: int
@@ -149,11 +148,11 @@ methods:
     description: |
       This method returns the ID of the collision group with the specified name.
       It will throw an error if no group with the given name exists.
-    code_samples:
+    code_samples: []
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           The name of the collision group being retrieved.
     returns:
@@ -178,11 +177,11 @@ methods:
       Returns the name of the collision group with the corresponding ID. This
       method will return `nil` if the group with the corresponding ID has not
       been named.
-    code_samples:
+    code_samples: []
     parameters:
       - name: name
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: string
@@ -230,7 +229,7 @@ methods:
           </tr>
         </tbody>
       </table>
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Array
@@ -251,7 +250,7 @@ methods:
     description: |
       Returns the maximum number of collision groups the engine supports. This
       value is currently 32.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: int
@@ -313,10 +312,10 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
@@ -343,10 +342,10 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -369,14 +368,14 @@ methods:
 
       - The name `"Default"` is provided.
       - The method is called from a client.
-    code_samples:
+    code_samples: []
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -411,18 +410,18 @@ methods:
       that you register all collision groups at edit time through the Studio
       [editor](../../../workspace/collisions.md#collision-groups) and rename
       them as infrequently as possible.
-    code_samples:
+    code_samples: []
     parameters:
       - name: from
         type: string
-        default:
+        default: ''
         summary: ''
       - name: to
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -443,21 +442,21 @@ methods:
 
       - The part parameter is not a `Class.BasePart` instance.
       - The specified group does not exist.
-    code_samples:
+    code_samples: []
     parameters:
       - name: part
         type: BasePart
-        default:
+        default: ''
         summary: |
           The part being set.
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           The name of collision group that the part's collision group is being
           set to.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -494,10 +493,10 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

@@ -1,6 +1,5 @@
 name: OrderedDataStore
 type: class
-category: Data
 memory_category: Instances
 summary: |
   A GlobalDataStore that also allows for ordered data store entries.
@@ -43,29 +42,29 @@ methods:
 
       See [Data Stores](../../../cloud-services/data-stores/index.md) for
       request limits and descriptions of the error codes.
-    code_samples:
+    code_samples: []
     parameters:
       - name: ascending
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           A boolean indicating whether the returned data pages are in ascending
           order.
       - name: pagesize
         type: int
-        default:
+        default: ''
         summary: |
           The length of each page. By default is 50. The max allowed value
           is 100.
       - name: minValue
         type: Variant
-        default:
+        default: ''
         summary: |
           Optional parameter. If set, data pages with a value less than
           **minValue** will be excluded.
       - name: maxValue
         type: Variant
-        default:
+        default: ''
         summary: |
           Optional parameter. If set, data pages with a value greater than
           **maxValue** will be excluded.
@@ -79,7 +78,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
 events: []
 callbacks: []

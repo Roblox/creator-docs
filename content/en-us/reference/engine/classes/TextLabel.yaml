@@ -1,6 +1,5 @@
 name: TextLabel
 type: class
-category: GUI
 memory_category: Gui
 summary: |
   A 2D user interface element that displays non-interactive text.
@@ -21,7 +20,7 @@ description: |
   text with `Class.TextLabel.TextScaled|TextScaled` enabled. It is recommended
   that the size of text is no lower than `9`, otherwise it may not be visible to
   many users.
-code_samples:
+code_samples: []
 inherits:
   - GuiLabel
 tags: []
@@ -145,7 +144,7 @@ properties:
       Determines the font size to be used.
     description: |
       This property determines the font size to be used.
-    code_samples:
+    code_samples: []
     type: FontSize
     tags:
       - NotReplicated
@@ -171,7 +170,7 @@ properties:
       Controls the height of lines as a multiple of the font's `em` square size
       by scaling the spacing between lines of text in the `Class.TextLabel`.
       Valid values range from `1.0` to `3.0`, defaulting to `1.0`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -193,7 +192,7 @@ properties:
     description: |
       This property sets whether a `Class.TextLabel` should regard
       `Class.GuiBase2d.Localize` or not.
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - Hidden
@@ -226,7 +225,7 @@ properties:
 
       Setting the property to `-1` disables the limit and shows the entirety of
       the `Class.TextLabel.Text|Text`.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -290,8 +289,8 @@ properties:
 
       To use rich text, simply include rich text formatting tags in the
       `Class.TextLabel.Text|Text` string.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -358,7 +357,7 @@ properties:
       `Class.TextLabel.TextBounds|TextBounds` will be given a string,
       `Class.TextLabel.Font|Font`, `Class.TextLabel.TextSize|TextSize`, and
       frame size.
-    code_samples:
+    code_samples: []
     type: Vector2
     tags:
       - ReadOnly
@@ -380,7 +379,7 @@ properties:
       Determines the color of text.
     description: |
       This property determines the color of text.
-    code_samples:
+    code_samples: []
     type: BrickColor
     tags:
       - Hidden
@@ -449,8 +448,8 @@ properties:
     description: |
       A boolean representation of whether the label's text fits within the size
       of it.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -503,8 +502,8 @@ properties:
       space determined by `Class.GuiObject.AutomaticSize|AutomaticSize` to scale
       the font size up to the maximum font size (100) if there are no size
       constraints.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -525,7 +524,7 @@ properties:
       This property determines the height of one line of rendered text. The unit
       is in offsets, not points (which is used in most document editing
       programs). The `Enum.Font.Legacy` font does not hold this property.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -551,7 +550,7 @@ properties:
 
       As a powerful alternative which supports color gradients, see
       `Class.UIStroke`.
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -582,7 +581,7 @@ properties:
 
       As a powerful alternative which supports color gradients, see
       `Class.UIStroke`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -603,7 +602,7 @@ properties:
     description: |
       This property determines the transparency of all the text rendered by the
       `Class.TextLabel`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -623,7 +622,7 @@ properties:
       Controls the truncation of the text displayed in the `Class.TextLabel`.
     description: |
       Controls the truncation of the text displayed in the `Class.TextLabel`.
-    code_samples:
+    code_samples: []
     type: TextTruncate
     tags: []
     deprecation_message: ''
@@ -645,8 +644,8 @@ properties:
     description: |
       This property determines whether or not text should wrap at the edges of
       the `Class.TextLabel` element's space.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - NotReplicated
       - Deprecated
@@ -683,8 +682,8 @@ properties:
       vertical height of the element (the **Y** component of
       `Class.GuiBase2d.AbsoluteSize`), then that line will not be rendered at
       all.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -710,7 +709,7 @@ properties:
       Note that this property won't affect the read-only properties
       `Class.TextLabel.TextBounds|TextBounds` and
       `Class.TextLabel.TextFits|TextFits`.
-    code_samples:
+    code_samples: []
     type: TextXAlignment
     tags: []
     deprecation_message: ''
@@ -737,7 +736,7 @@ properties:
       Note that this property won't affect the read-only properties
       `Class.TextLabel.TextBounds|TextBounds` and
       `Class.TextLabel.TextFits|TextFits`.
-    code_samples:
+    code_samples: []
     type: TextYAlignment
     tags: []
     deprecation_message: ''

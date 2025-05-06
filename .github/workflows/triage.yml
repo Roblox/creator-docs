@@ -6,6 +6,9 @@ on:
   # https://github.com/actions/labeler#permissions
   pull_request_target:
     types: [labeled, unlabeled, opened, ready_for_review, reopened, synchronize]
+concurrency:
+  group: '${{ github.workflow }}-${{ github.event.pull_request.number }}'
+  cancel-in-progress: true
 
 jobs:
   label-pull-request:
@@ -15,6 +18,12 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
+      - name: Print concurrency key
+        run: |
+          echo "github.workflow == ${{ github.workflow }}"
+          echo "github.event.pull_request.number == ${{ github.event.pull_request.number }}"
+          echo "concurrency key == ${{ github.workflow }}-${{ github.event.pull_request.number }}"
+
       - uses: actions/labeler@v4 # https://github.com/actions/labeler
         with:
           repo-token: '${{ secrets.GITHUB_TOKEN }}'
@@ -27,6 +36,12 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
+      - name: Print concurrency key
+        run: |
+          echo "github.workflow == ${{ github.workflow }}"
+          echo "github.event.pull_request.number == ${{ github.event.pull_request.number }}"
+          echo "concurrency key == ${{ github.workflow }}-${{ github.event.pull_request.number }}"
+
       - uses: actions/first-interaction@v1 # https://github.com/actions/first-interaction
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}

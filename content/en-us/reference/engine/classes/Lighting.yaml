@@ -1,6 +1,5 @@
 name: Lighting
 type: class
-category: Lighting
 memory_category: Instances
 summary: |
   The `Lighting` service controls global lighting in an experience. It includes
@@ -24,7 +23,7 @@ description: |
   contain
   [post‑processing effects](../../../environment/post-processing-effects.md)
   such as `Class.SunRaysEffect` and `Class.BlurEffect`.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -50,7 +49,7 @@ properties:
       non‑occluded areas. In this case,
       `Class.Lighting.OutdoorAmbient|OutdoorAmbient` will be ignored and the hue
       from the `Ambient` property will be applied everywhere.
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -79,7 +78,7 @@ properties:
       noWrap>`[255, 255, 255]`</Typography> will make the place appear brighter
       than its default value of <Typography noWrap>`127, 127, 127`</Typography>
       (as it is more white).
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -109,7 +108,7 @@ properties:
       `Class.Lighting.TimeOfDay|TimeOfDay` or using
       `Class.Lighting:SetMinutesAfterMidnight()|SetMinutesAfterMidnight()` will
       also change this property.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -149,7 +148,7 @@ properties:
       greater than <Typography noWrap>`[0, 0, 0]`</Typography>. Also note that
       the influence of `ColorShift_Bottom` can be very hard to identify when
       `Class.Lighting.GlobalShadows|GlobalShadows` is enabled (default).
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -185,7 +184,7 @@ properties:
       the `Class.Lighting.Ambient|Ambient` and
       `Class.Lighting.OutdoorAmbient|OutdoorAmbient` properties if they are
       greater than <Typography noWrap>`[0, 0, 0]`</Typography>.
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -210,7 +209,7 @@ properties:
       change according to the sky and time of day. When this property is
       increased, it's recommended to decrease `Class.Lighting.Ambient|Ambient`
       and `Class.Lighting.OutdoorAmbient|OutdoorAmbient` accordingly.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -232,7 +231,7 @@ properties:
       Specular light derived from environment with a default of `0`. This
       property will make smooth objects reflect the environment and it is
       especially important to make metal look more realistic.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -256,7 +255,7 @@ properties:
       Defaults to `0` (no exposure compensation) and has a range from `-5` to
       `5`. A value of `1` indicates twice as much exposure and `-1` means half
       as much exposure.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -278,7 +277,7 @@ properties:
       A `Datatype.Color3` value giving the hue of `Lighting` fog. Note that fog
       properties are hidden when `Lighting` contains an `Class.Atmosphere`
       object.
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -301,7 +300,7 @@ properties:
       The depth from the `Class.Workspace.CurrentCamera`, in studs, at which fog
       will be completely opaque. Note that fog properties are hidden when
       `Lighting` contains an `Class.Atmosphere` object.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -324,7 +323,7 @@ properties:
       The depth from the `Class.Workspace.CurrentCamera`, in studs, at which fog
       begins to show. Note that fog properties are hidden when `Lighting`
       contains an `Class.Atmosphere` object.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -353,7 +352,7 @@ properties:
       or moon's position, use
       `Class.Lighting:GetSunDirection()|GetSunDirection()` or
       `Class.Lighting:GetMoonDirection()|GetMoonDirection()`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -388,8 +387,8 @@ properties:
       4&times;4&times;4 studs. This means objects need to be larger than
       4&times;4&times;4 studs to display a realistic shadow. Shadows are also
       recalculated when `Class.BasePart|BaseParts` are moving.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -444,7 +443,7 @@ properties:
       non‑occluded areas. In this case, `OutdoorAmbient` will be ignored and the
       hue from the `Class.Lighting.Ambient|Ambient` property will be applied
       everywhere.
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -472,8 +471,8 @@ properties:
 
       Although this property can be set by scripts, it recommended this property
       is set in Roblox Studio prior to publishing the place.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - Deprecated
     deprecation_message: |
@@ -494,7 +493,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - NotScriptable
     deprecation_message: ''
@@ -516,7 +515,7 @@ properties:
     description: |
       This is supposed to change the color of player shadows, but currently
       doesn't do anything.
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -543,7 +542,7 @@ properties:
       only works when `Class.Lighting.Technology|Technology` mode is
       `Enum.Technology|ShadowMap` or `Enum.Technology|Future` and the device is
       capable of rendering shadow maps.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -568,7 +567,7 @@ properties:
       available options and
       [Lighting Technology](../../../environment/lighting.md#technology) for
       detailed descriptions and visual effects of each option.
-    code_samples:
+    code_samples: []
     type: Technology
     tags: []
     deprecation_message: ''
@@ -598,7 +597,7 @@ properties:
       `Class.Lighting.ClockTime|ClockTime` or using
       `Class.Lighting:SetMinutesAfterMidnight()|SetMinutesAfterMidnight()` will
       also change this property.
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -626,7 +625,7 @@ methods:
       Note that this number will not always be equal to the value given in
       `Class.Lighting:SetMinutesAfterMidnight()|SetMinutesAfterMidnight()` as it
       returns minutes after midnight in the current day.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: double
@@ -636,7 +635,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Environment
     writeCapabilities: []
   - name: Lighting:GetMoonDirection
     summary: |
@@ -650,7 +650,7 @@ methods:
 
       `Class.Lighting:GetSunDirection()|GetSunDirection()` is a variant of this
       method for obtaining the direction of the sun.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Vector3
@@ -660,7 +660,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Environment
     writeCapabilities: []
   - name: Lighting:GetMoonPhase
     summary: |
@@ -668,7 +669,7 @@ methods:
     description: |
       Returns the moon's current phase. There is no way to change the moon's
       phase so this will always return `0.75`.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: float
@@ -679,7 +680,8 @@ methods:
       should not be used.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Environment
     writeCapabilities: []
   - name: Lighting:GetSunDirection
     summary: |
@@ -693,7 +695,7 @@ methods:
 
       `Class.Lighting:GetMoonDirection()|GetMoonDirection()` is a variant of
       this method for obtaining the direction of the moon.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Vector3
@@ -703,7 +705,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Environment
     writeCapabilities: []
   - name: Lighting:SetMinutesAfterMidnight
     summary: |
@@ -742,26 +745,27 @@ methods:
       	task.wait(waitTime)
       end
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: minutes
         type: double
-        default:
+        default: ''
         summary: |
           The number of minutes after midnight.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Environment
     writeCapabilities: []
   - name: Lighting:getMinutesAfterMidnight
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: double
@@ -773,19 +777,20 @@ methods:
       `Class.Lighting:GetMinutesAfterMidnight()` which should be used instead.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Environment
     writeCapabilities: []
   - name: Lighting:setMinutesAfterMidnight
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: minutes
         type: double
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -794,7 +799,8 @@ methods:
       `Class.Lighting:SetMinutesAfterMidnight()` which should be used instead.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Environment
     writeCapabilities: []
 events:
   - name: Lighting.LightingChanged
@@ -813,16 +819,16 @@ events:
 
       In cases where this behavior is not desired, the `Class.Object.Changed`
       event or `Class.Object:GetPropertyChangedSignal()` method can be used.
-    code_samples:
+    code_samples: []
     parameters:
       - name: skyChanged
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Environment
     writeCapabilities: []
 callbacks: []

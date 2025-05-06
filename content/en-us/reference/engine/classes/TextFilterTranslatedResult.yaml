@@ -1,6 +1,5 @@
 name: TextFilterTranslatedResult
 type: class
-category:
 memory_category: Instances
 summary: ''
 description: ''
@@ -60,7 +59,7 @@ methods:
     parameters:
       - name: locale
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: TextFilterResult
@@ -69,7 +68,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: TextFilterTranslatedResult:GetTranslations
     summary: ''
@@ -83,7 +83,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 events: []
 callbacks: []

@@ -1,6 +1,5 @@
 name: TeleportService
 type: class
-category: Gameplay
 memory_category: Instances
 summary: |
   Enables transporting `Class.Player|Players` between places and servers.
@@ -10,7 +9,7 @@ description: |
 
   For more information on how to teleport players between servers, see
   [Teleporting Between Places](../../../projects/teleport.md).
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -25,8 +24,8 @@ properties:
       This property used to control whether or not a `Class.Message` would be
       shown by default. The default message has been removed, so this no longer
       does anything.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - NotReplicated
       - Deprecated
@@ -170,11 +169,11 @@ methods:
       This service does not work during playtesting in Roblox Studio &mdash; To
       test aspects of your game using it, you must publish the game and play it
       in the Roblox application.
-    code_samples:
+    code_samples: []
     parameters:
       - name: setting
         type: string
-        default:
+        default: ''
         summary: |
           The key the value was stored under using
           `Class.TeleportService:SetTeleportSetting()`.
@@ -232,12 +231,12 @@ methods:
     parameters:
       - name: gui
         type: Instance
-        default:
+        default: ''
         summary: |
           The loading `Class.ScreenGui` that is to be displayed during
           teleportation.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -311,21 +310,21 @@ methods:
       This service does not work during playtesting in Roblox Studio &mdash; To
       test aspects of your game using it, you must publish the game and play it
       in the Roblox application.
-    code_samples:
+    code_samples: []
     parameters:
       - name: setting
         type: string
-        default:
+        default: ''
         summary: |
           The key to store the _value_ under. This key can be used to retrieve
           the value using `Class.TeleportService:GetTeleportSetting()`.
       - name: value
         type: Variant
-        default:
+        default: ''
         summary: |
           The value to store.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -348,7 +347,7 @@ methods:
     parameters:
       - name: placeId
         type: int64
-        default:
+        default: ''
         summary: |
           The ID of the place to teleport to.
       - name: player
@@ -359,7 +358,7 @@ methods:
           the client this defaults to the `Class.Players.LocalPlayer`.
       - name: teleportData
         type: Variant
-        default:
+        default: ''
         summary: |
           Optional data to be passed to the destination place. Can be retrieved
           using `Class.TeleportService:GetLocalPlayerTeleportData()`.
@@ -371,7 +370,7 @@ methods:
           the destination place. Can be retrieved using
           `Class.TeleportService:GetArrivingTeleportGui()`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -393,12 +392,12 @@ methods:
     parameters:
       - name: placeId
         type: int64
-        default:
+        default: ''
         summary: |
           The ID of the place to teleport to.
       - name: instanceId
         type: string
-        default:
+        default: ''
         summary: |
           The `Class.DataModel.JobId` of the server instance to teleport to.
       - name: player
@@ -414,7 +413,7 @@ methods:
           Optional name of the `Class.SpawnLocation` to spawn at.
       - name: teleportData
         type: Variant
-        default:
+        default: ''
         summary: |
           Optional data to be passed to the destination place. Can be retrieved
           using `Class.TeleportService:GetLocalPlayerTeleportData()`.
@@ -426,7 +425,7 @@ methods:
           the destination place. Can be retrieved using
           `Class.TeleportService:GetArrivingTeleportGui()`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -449,18 +448,18 @@ methods:
     parameters:
       - name: placeId
         type: int64
-        default:
+        default: ''
         summary: |
           The ID of the place to teleport to.
       - name: reservedServerAccessCode
         type: string
-        default:
+        default: ''
         summary: |
           The reserved server access code returned by
           `Class.TeleportService:ReserveServer()`.
       - name: players
         type: Instances
-        default:
+        default: ''
         summary: |
           An array of `Class.Player|Players` to teleport.
       - name: spawnName
@@ -470,7 +469,7 @@ methods:
           Optional name of the `Class.SpawnLocation` to spawn at.
       - name: teleportData
         type: Variant
-        default:
+        default: ''
         summary: |
           Optional data to be passed to the destination place. Can be retrieved
           using `Class.TeleportService:GetLocalPlayerTeleportData()`.
@@ -482,7 +481,7 @@ methods:
           the destination place. Can be retrieved using
           `Class.TeleportService:GetArrivingTeleportGui()`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -505,12 +504,12 @@ methods:
     parameters:
       - name: placeId
         type: int64
-        default:
+        default: ''
         summary: |
           The ID of the place to teleport to.
       - name: spawnName
         type: string
-        default:
+        default: ''
         summary: |
           The name of the `Class.SpawnLocation` to spawn at.
       - name: player
@@ -521,7 +520,7 @@ methods:
           the client this defaults to the `Class.Players.LocalPlayer`.
       - name: teleportData
         type: Variant
-        default:
+        default: ''
         summary: |
           Optional data to be passed to the destination place. Can be retrieved
           using `Class.TeleportService:GetLocalPlayerTeleportData()`.
@@ -533,7 +532,7 @@ methods:
           the destination place. Can be retrieved using
           `Class.TeleportService:GetArrivingTeleportGui()`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -622,7 +621,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The `Class.Player.UserId` of the `Class.Player`.
     returns:
@@ -688,7 +687,7 @@ methods:
     parameters:
       - name: placeId
         type: int64
-        default:
+        default: ''
         summary: |
           The `Class.DataModel.PlaceId` of the place the reserved server is
           being created for.
@@ -772,16 +771,16 @@ methods:
       For more information on how to teleport players between servers and
       receive user data from a teleport, see
       [Teleporting Between Places](../../../projects/teleport.md#sending-user-data-along-with-teleports).
-    code_samples:
+    code_samples: []
     parameters:
       - name: placeId
         type: int64
-        default:
+        default: ''
         summary: |
           The place ID the player(s) should be teleported to.
       - name: players
         type: Instances
-        default:
+        default: ''
         summary: |
           An array of the player(s) to teleport.
       - name: teleportOptions
@@ -820,17 +819,17 @@ methods:
     parameters:
       - name: placeId
         type: int64
-        default:
+        default: ''
         summary: |
           The ID of the place to teleport to.
       - name: players
         type: Instances
-        default:
+        default: ''
         summary: |
           An array containing the `Class.Player|Players` to teleport.
       - name: teleportData
         type: Variant
-        default:
+        default: ''
         summary: |
           Optional data to be passed to the destination place. Can be retrieved
           using `Class.TeleportService:GetLocalPlayerTeleportData()`.
@@ -910,24 +909,23 @@ events:
       This service does not work during playtesting in Roblox Studio &mdash; To
       test aspects of your game using it, you must publish the game and play it
       in the Roblox application.
-    code_samples:
+    code_samples: []
     parameters:
       - name: loadingGui
         type: Instance
-        default:
+        default: ''
         summary: |
           The _customLoadingScreen_ the `Class.Players.LocalPlayer|LocalPlayer`
           arrived into the place with.
       - name: dataTable
         type: Variant
-        default:
+        default: ''
         summary: |
           The _teleportData_ the `Class.Players.LocalPlayer|LocalPlayer` arrived
           into the place with.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: TeleportService.TeleportInitFailed
@@ -994,38 +992,37 @@ events:
 
       For more information on how to teleport players between servers, see
       [Teleporting Between Places](../../../projects/teleport.md).
-    code_samples:
+    code_samples: []
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Player` instance that failed to teleport.
       - name: teleportResult
         type: TeleportResult
-        default:
+        default: ''
         summary: |
           The reason for the teleport failure.
       - name: errorMessage
         type: string
-        default:
+        default: ''
         summary: |
           The message provided to the player explaining the teleport failure.
       - name: placeId
         type: int64
-        default:
+        default: ''
         summary: |
           The original target place ID of the teleport.
       - name: teleportOptions
         type: Instance
-        default:
+        default: ''
         summary: |
           A `Class.TeleportOptions` object that can be passed back to
           `Class.TeleportService:TeleportAsync()` to retry the failed teleport.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

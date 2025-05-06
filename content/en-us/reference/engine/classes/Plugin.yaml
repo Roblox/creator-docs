@@ -1,6 +1,5 @@
 name: Plugin
 type: class
-category: Plugins
 memory_category: Instances
 summary: ''
 description: |
@@ -25,8 +24,8 @@ properties:
     description: |
       Returns whether the user enabled `Collisions` in Studio under the Model
       tab.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -45,7 +44,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -63,11 +62,10 @@ properties:
       Returns the grid snapping size the user has set in Studio.
     description: |
       Returns the grid snapping size the user has set in Studio under the
-      [Model](../../../studio/model-tab.md) or
-      [Avatar](../../../studio/avatar-tab.md) tabs. Note that this property may
-      have slight rounding errors; for example it may be 0.0099999997764826 for
-      a user setting of 1 or 0.4000000059604645 for a user setting of 0.4.
-    code_samples:
+      toolbar's **Model** or **Avatar** tabs. Note that this property may have
+      slight rounding errors; for example it may be `0.0099999997764826` for a
+      user setting of `1` or `0.4000000059604645` for a user setting of `0.4`.
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -87,7 +85,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -120,17 +118,17 @@ methods:
         activated via this function
       - `Class.Plugin.Unloading`, fires immediately before the plugin is
         unloaded or reloaded via uninstallation, deactivation, or updating
-    code_samples:
+    code_samples: []
     parameters:
       - name: exclusiveMouse
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           A boolean specifying whether to activate the plugin with exclusive
           mouse. If true, a `Class.PluginMouse` can be retrieved via
           `Class.Plugin:GetMouse()`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -167,17 +165,17 @@ methods:
     parameters:
       - name: actionId
         type: string
-        default:
+        default: ''
         summary: |
           Must be a unique string that identifies this PluginAction from others.
       - name: text
         type: string
-        default:
+        default: ''
         summary: |
           The displayed name of the action.
       - name: statusTip
         type: string
-        default:
+        default: ''
         summary: |
           The displayed description of the action.
       - name: iconName
@@ -186,7 +184,7 @@ methods:
         summary: |
           The name of the icon used to display the plugin.
       - name: allowBinding
-        type: bool
+        type: boolean
         default: true
         summary: |
           Whether the `Class.PluginAction` will be hidden from Studio's
@@ -236,7 +234,7 @@ methods:
     parameters:
       - name: id
         type: string
-        default:
+        default: ''
         summary: |
           Unique ID for the menu.
       - name: title
@@ -269,7 +267,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           The visible text on the toolbar, labeling the group of buttons
           contained within.
@@ -296,10 +294,10 @@ methods:
       - `Class.Plugin.Deactivation`, fires when the plugin is deactivated
       - `Class.Plugin.Unloading`, fires immediately before the plugin is
         unloaded or reloaded via uninstallation, deactivation, or updating
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -314,7 +312,7 @@ methods:
     description: |
       Returns the `Enum.JointCreationMode` the user has set in Studio under the
       Model tab.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: JointCreationMode
@@ -365,10 +363,10 @@ methods:
     writeCapabilities: []
   - name: Plugin:GetSetting
     summary: |
-      Retrieves a previously stored value with the given key, or nil if the
+      Retrieves a previously stored value with the given key, or `nil` if the
       given key doesn't exist.
     description: |
-      Retrieves a previously stored value with the given key, or nil if the
+      Retrieves a previously stored value with the given key, or `nil` if the
       given key doesn't exist.
 
       Because multiple instances of the same plugin can run simultaneously (for
@@ -386,7 +384,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Variant
@@ -404,7 +402,7 @@ methods:
     description: |
       Returns the Studio user's userId if they're logged in, otherwise
       returns 0.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: int64
@@ -423,7 +421,7 @@ methods:
     parameters:
       - name: objects
         type: Instances
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instance
@@ -441,10 +439,10 @@ methods:
     description: |
       This function returns true if this plugin is currently active, after
       having been activated via the `Class.Plugin:Activate()` function.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           A boolean indicating whether the plugin is currently active.
     tags: []
@@ -468,10 +466,10 @@ methods:
       - `Class.Plugin.Deactivation`, fires when the plugin is deactivated
       - `Class.Plugin.Unloading`, fires immediately before the plugin is
         unloaded or reloaded via uninstallation, deactivation, or updating
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether this plugin is currently active with an exclusive mouse.
     tags: []
@@ -480,30 +478,16 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: Plugin:IsLoadedFromProject
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: bool
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: Plugin:Negate
     summary: |
       Negates the given parts and returns the resulting NegateOperations.
     description: |
       Negates the given parts and returns the resulting NegateOperations.
-    code_samples:
+    code_samples: []
     parameters:
       - name: objects
         type: Instances
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instances
@@ -528,14 +512,14 @@ methods:
     parameters:
       - name: script
         type: LuaSourceContainer
-        default:
+        default: ''
         summary: ''
       - name: lineNumber
         type: int
         default: 1
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -553,10 +537,10 @@ methods:
     parameters:
       - name: url
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -569,10 +553,10 @@ methods:
       Opens an upload window for the user's current selection.
     description: |
       Opens an upload window for the user's current selection.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -592,18 +576,18 @@ methods:
       - An object must be selected in order for this to work correctly.
       - Altering the scale fields of the `position` property will not affect the
         dialog popups.
-    code_samples:
+    code_samples: []
     parameters:
       - name: tool
         type: RibbonTool
-        default:
+        default: ''
         summary: ''
       - name: position
         type: UDim2
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -616,11 +600,11 @@ methods:
       Separates the given UnionOperations and returns the resulting parts.
     description: |
       Separates the given UnionOperations and returns the resulting parts.
-    code_samples:
+    code_samples: []
     parameters:
       - name: objects
         type: Instances
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instances
@@ -659,14 +643,14 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: ''
       - name: value
         type: Variant
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -753,10 +737,10 @@ methods:
     parameters:
       - name: dragData
         type: Dictionary
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -769,11 +753,11 @@ methods:
       Unions the given parts and returns the resulting UnionOperation.
     description: |
       Unions the given parts and returns the resulting UnionOperation.
-    code_samples:
+    code_samples: []
     parameters:
       - name: objects
         type: Instances
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instance
@@ -798,13 +782,13 @@ methods:
     parameters:
       - name: pluginGuiId
         type: string
-        default:
+        default: ''
         summary: |
           A unique and consistent identifier used to storing the widget's dock
           state and other internal details.
       - name: dockWidgetPluginGuiInfo
         type: DockWidgetPluginGuiInfo
-        default:
+        default: ''
         summary: |
           Describes the `Class.DockWidgetPluginGui` to create (initial state,
           size, etc).
@@ -827,14 +811,14 @@ methods:
       This function prompts the user to open a .fbx animation file that can be
       loaded onto the `rigModel`, then proceeds to insert the animation as a
       `Class.KeyframeSequence` in the `Class.Workspace`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: rigModel
         type: Instance
-        default:
+        default: ''
         summary: ''
       - name: isR15
-        type: bool
+        type: boolean
         default: true
         summary: ''
     returns:
@@ -856,10 +840,10 @@ methods:
       Prompts the user to open a .fbx file, uploads the individual components of
       the model as meshes, and generates a character rig for use in animation,
       which is loaded into the `Class.Workspace`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: isR15
-        type: bool
+        type: boolean
         default: true
         summary: ''
     returns:
@@ -881,11 +865,11 @@ methods:
       Opens a window in Roblox Studio, which prompts the user to select an asset
       based on the `assetType` specified. Returns what assetId was selected, or
       -1 if the window was closed.
-    code_samples:
+    code_samples: []
     parameters:
       - name: assetType
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: int64
@@ -904,14 +888,14 @@ methods:
     description: |
       Prompts the user to save their current selection with the specified file
       name. Returns true if the user did save the file.
-    code_samples:
+    code_samples: []
     parameters:
       - name: suggestedFileName
         type: string
         default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields
@@ -934,12 +918,11 @@ events:
 
       - `Class.Plugin.Unloading`, fires immediately before the plugin is
         unloaded or reloaded via uninstallation, deactivation, or updating
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: Plugin.Unloading
@@ -961,12 +944,11 @@ events:
       `Class.DockWidgetPluginGui|DockWidgetPluginGuis`, and
       `Class.PluginGui|PluginGuis` are automatically cleaned up when the plugin
       is unloaded so there is no need to remove them.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

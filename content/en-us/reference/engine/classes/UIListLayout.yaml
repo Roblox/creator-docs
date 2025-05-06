@@ -1,6 +1,5 @@
 name: UIListLayout
 type: class
-category: GUI
 memory_category: Instances
 summary: |
   Positions sibling UI elements in rows or columns within the parent UI
@@ -33,7 +32,7 @@ description: |
   sorting or alphanumerical Name sorting." />
 
   Padding between siblings is controlled through the
-  `Class.UIListLayout.Padding|Padding` propertly, and wrapping within the parent
+  `Class.UIListLayout.Padding|Padding` property, and wrapping within the parent
   container's bounds through the `Class.UIListLayout.Wraps|Wraps` boolean.
   Alignment of siblings within the parent container is controlled through
   `Class.UIListLayout.HorizontalAlignment|HorizontalAlignment` and
@@ -54,7 +53,7 @@ description: |
   - `Class.UIListLayout.ItemLineAlignment|ItemLineAlignment` is **not** set to
     `Enum.ItemLineAlignment.Automatic`.
   - `Class.UIListLayout.Wraps|Wraps` is `true`.
-code_samples:
+code_samples: []
 inherits:
   - UIGridStyleLayout
 tags: []
@@ -205,7 +204,7 @@ properties:
       Determines the amount of free space between each element, set to either a
       scale (percentage of the parent's size in the current direction) or an
       offset (static spacing value similar to pixel size).
-    code_samples:
+    code_samples: []
     type: UDim
     tags: []
     deprecation_message: ''
@@ -312,7 +311,7 @@ properties:
 
       <img src="../../../assets/engine-api/classes/UIListLayout/Wraps.png" width="800" alt="Diagram showing how Wraps affects how siblings are distributed within the parent container's bounds." />
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

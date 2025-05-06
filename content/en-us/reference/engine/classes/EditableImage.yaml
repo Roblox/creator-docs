@@ -1,6 +1,5 @@
 name: EditableImage
 type: class
-category:
 memory_category: Instances
 summary: |
   Instance which allows for the runtime creation and manipulation of images.
@@ -98,7 +97,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -117,35 +116,35 @@ methods:
     parameters:
       - name: center
         type: Vector2
-        default:
+        default: ''
         summary: |
           Center of the circle, relative to the top-left corner of the
           `Class.EditableImage`. Positions outside the canvas bounds are
           allowed.
       - name: radius
         type: int
-        default:
+        default: ''
         summary: |
           Radius of the circle in pixels.
       - name: color
         type: Color3
-        default:
+        default: ''
         summary: |
           Color of the circle.
       - name: transparency
         type: float
-        default:
+        default: ''
         summary: |
           Transparency of the circle with 0 being fully opaque and 1 being fully
           transparent.
       - name: combineType
         type: ImageCombineType
-        default:
+        default: ''
         summary: |
           How the pixels of the source image are blended with the pixels of the
           added image.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -165,23 +164,23 @@ methods:
     parameters:
       - name: position
         type: Vector2
-        default:
+        default: ''
         summary: |
           Position at which the top-left corner of the added image will be
           drawn.
       - name: image
-        type: Object
-        default:
+        type: EditableImage
+        default: ''
         summary: |
           The `Class.EditableImage` to draw into this `Class.EditableImage`.
       - name: combineType
         type: ImageCombineType
-        default:
+        default: ''
         summary: |
           How the pixels of the source image should be blended with the pixels
           of the added image.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -200,13 +199,13 @@ methods:
     code_samples: []
     parameters:
       - name: mesh
-        type: Object
-        default:
+        type: EditableMesh
+        default: ''
         summary: |
           The `Class.EditableMesh` used to project into.
       - name: projection
         type: Dictionary
-        default:
+        default: ''
         summary: |
           Projection configuration dictionary including the following key-value
           pairs:
@@ -219,7 +218,7 @@ methods:
             space with respect to the mesh.
       - name: brushConfig
         type: Dictionary
-        default:
+        default: ''
         summary: |
           Brush configuration dictionary including the following key-value
           pairs:
@@ -235,7 +234,7 @@ methods:
             controls how much of the projection is blended into the resulting
             image.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -259,29 +258,29 @@ methods:
     parameters:
       - name: position
         type: Vector2
-        default:
+        default: ''
         summary: |
           Position in pixels where the pivot point of the source image will be
           placed on this image.
       - name: scale
         type: Vector2
-        default:
+        default: ''
         summary: |
           Scaling factors for the source image along the X and Y axes.
       - name: rotation
         type: float
-        default:
+        default: ''
         summary: |
           The rotation angle in degrees, applied around the pivot point of the
           source image.
       - name: image
-        type: Object
-        default:
+        type: EditableImage
+        default: ''
         summary: |
           The source `Class.EditableImage` to be drawn into this image.
       - name: options
         type: Dictionary?
-        default:
+        default: ''
         summary: |
           Optional dictionary for additional configuration:
 
@@ -295,7 +294,7 @@ methods:
             scaling and rotation. Default is the center of the source image
             (i.e. `Image.Size / 2`).
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -313,32 +312,32 @@ methods:
     parameters:
       - name: p1
         type: Vector2
-        default:
+        default: ''
         summary: |
           Start point of the line.
       - name: p2
         type: Vector2
-        default:
+        default: ''
         summary: |
           End point of the line.
       - name: color
         type: Color3
-        default:
+        default: ''
         summary: |
           Color of the line.
       - name: transparency
         type: float
-        default:
+        default: ''
         summary: |
           Transparency of the line.
       - name: combineType
         type: ImageCombineType
-        default:
+        default: ''
         summary: |
           How the pixels of the source image are blended with the pixels of the
           added image.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -356,34 +355,34 @@ methods:
     parameters:
       - name: position
         type: Vector2
-        default:
+        default: ''
         summary: |
           Position of the top-left of the rectangle. Unlike other drawing
           methods, this cannot be outside the canvas bounds of the
           `Class.EditableImage`.
       - name: size
         type: Vector2
-        default:
+        default: ''
         summary: |
           Size of the rectangle to draw, in pixels.
       - name: color
         type: Color3
-        default:
+        default: ''
         summary: |
           Color of the rectangle.
       - name: transparency
         type: float
-        default:
+        default: ''
         summary: |
           Transparency of the rectangle.
       - name: combineType
         type: ImageCombineType
-        default:
+        default: ''
         summary: |
           How the pixels of the source image are blended with the pixels of the
           added image.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -396,8 +395,8 @@ methods:
       Reads a rectangular region of pixels into a buffer.
     description: |
       Reads a rectangular region of pixels from an `Class.EditableImage` and
-      returns it as a buffer. Each number in the buffer is a single byte, with pixels
-      stored in a sequence of four bytes (red, green, blue, and alpha).
+      returns it as a buffer. Each number in the buffer is a single byte, with
+      pixels stored in a sequence of four bytes (red, green, blue, and alpha).
 
       Note that this method uses alpha instead of transparency, unlike the
       `Class.EditableImage` drawing methods.
@@ -406,12 +405,12 @@ methods:
     parameters:
       - name: position
         type: Vector2
-        default:
+        default: ''
         summary: |
           Top-left corner of the rectangular region of pixels to read.
       - name: size
         type: Vector2
-        default:
+        default: ''
         summary: |
           Size of the rectangular region of pixels to read.
     returns:
@@ -432,8 +431,8 @@ methods:
       Writes a rectangular region of pixels into the image.
     description: |
       Writes a rectangular region of pixels to an `Class.EditableImage` from a
-      buffer. Each number in the buffer is a single byte, with pixels stored in a
-      sequence of four bytes (red, green, blue, and alpha).
+      buffer. Each number in the buffer is a single byte, with pixels stored in
+      a sequence of four bytes (red, green, blue, and alpha).
 
       Note that this method uses alpha instead of transparency, unlike the
       `Class.EditableImage` drawing methods.
@@ -442,23 +441,23 @@ methods:
     parameters:
       - name: position
         type: Vector2
-        default:
+        default: ''
         summary: |
           Top-left corner of the rectangular region to draw the pixels into.
       - name: size
         type: Vector2
-        default:
+        default: ''
         summary: |
           Size of the rectangular region of pixels to write.
       - name: buffer
         type: buffer
-        default:
+        default: ''
         summary: |
           A buffer where each pixel is represented by four bytes (red, green,
           blue, and alpha respectively). The length of the buffer should be
           `Size.X * Size.Y * 4` bytes.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState

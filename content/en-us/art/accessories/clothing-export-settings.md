@@ -9,10 +9,41 @@ Export your mesh or model as a `.fbx` or `.gltf` to take advantage of all of Stu
 - If you are creating an avatar character model, ensure that your model follows [character specifications](../../art/characters/specifications.md) and use the [character body export settings](../../art/characters/export-settings.md).
 - If you are creating a generic mesh, ensure that your model follows Roblox's [general specifications](../../art/modeling/specifications.md) and use the [general export settings](../../art/modeling/export-requirements.md).
 
+## Before exporting
+
+Before exporting, ensure that you are only exporting the Roblox supported objects related to your model. If you have any modifiers to your mesh or project objects, make sure to apply or delete them before export.
+
+You can export layered clothing models with the following object structure:
+
+<img src="../../assets/modeling/skinned-meshes/Clothing-Data-Model.png" width="60%" alt="Blender clothing data model example" />
+
+- Armature parent
+  - Bones / joints
+  - Primary mesh object
+- Cage parent object
+
+  - Inner cage mesh object
+  - Outer cage mesh object
+
+You can also export shoes together. Even though left and right shoes are separate accessories, you can either export the left and right shoe individually, or export both shoes at the same time using the following structure:
+
+<img src="../../assets/modeling/skinned-meshes/Shoe-Data-Model.png" width="60%" alt="Shoe clothing data model example"/>
+
+- Armature parent
+  - Bones / joints
+  - Left shoe mesh object
+  - Right shoe mesh object
+- Cage parent object
+  - Left shoe inner cage
+  - Left shoe outer cage
+  - Right shoe inner cage
+  - Right shoe outer cage
+
 <Alert severity = 'warning'>
-If you have any modifiers to your mesh or project objects, make sure to apply
-or delete them before export.
+Each shoe must include their own inner and outer cage.
 </Alert>
+
+## Software specific export settings
 
 <Tabs>
   <TabItem label="Blender">
@@ -51,9 +82,8 @@ To export a mesh in Maya as a `.fbx` file:
 7. In the **Advanced Options** section,
    - Navigate to **Units**, then enable **Automatic**.
    - Navigate to **Axis Conversion**, then set the **Up Axis** property to **Y**.
-   - Navigate to **FBX File Format**, then set the **Type** property to **Binary**, and the **Version** property to **FBX 2020**.
 8. Click the **Export All** button.
-   <img src="../../assets/accessories/lc-requirements-maya-settings.png" />
+   <img src="../../assets/accessories/lc-requirements-maya-settings-with-animation.png" />
 9. After exporting, use Studio's [3D Importer](../../art/modeling/3d-importer.md) to import your model and the [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) to convert the model into an accessory.
 
 </TabItem>

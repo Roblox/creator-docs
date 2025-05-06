@@ -1,6 +1,5 @@
 name: ChatWindowConfiguration
 type: class
-category:
 memory_category: Instances
 summary: |
   Configures properties of the default chat window.
@@ -114,7 +113,7 @@ properties:
     description: |
       Whether to show the default chat window. Set to `false` to hide.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -366,7 +365,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
     writeCapabilities: []
 events: []
 callbacks: []

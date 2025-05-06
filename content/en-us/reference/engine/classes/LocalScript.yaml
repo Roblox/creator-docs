@@ -1,6 +1,5 @@
 name: LocalScript
 type: class
-category: Scripting
 memory_category: Script
 summary: |
   An object that contains and runs Luau code on the client (player's device)
@@ -16,7 +15,7 @@ description: |
 
   See [here](../../../projects/data-model.md#client) for a table of valid
   container services from which `Class.LocalScript|LocalScripts` will execute.
-code_samples:
+code_samples: []
 inherits:
   - Script
 tags: []

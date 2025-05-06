@@ -1,3 +1,6 @@
+backTo:
+  title: Back to avatar
+  path: /avatar/
 navigation:
   - heading: Curriculum paths
   - title: Overview

@@ -1,6 +1,5 @@
 name: EchoSoundEffect
 type: class
-category: Sounds
 memory_category: Instances
 summary: |
   Adds delayed repetitions of a sound with diminishing volume.
@@ -27,7 +26,7 @@ description: |
   effect will continue playing even if the original source sound has
   stopped.Like all other `Class.SoundEffect`, a EchoSoundEffect can be applied
   either to a `Class.Sound` or `Class.SoundGroup` by being parented to either.
-code_samples:
+code_samples: []
 inherits:
   - SoundEffect
 tags: []
@@ -44,7 +43,7 @@ properties:
       group, if the sound stops playing before the delay causes an echo, the
       echo will not play. Because of this, it is recommended to apply echo
       effects to SoundGroups and not Sounds.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -64,7 +63,7 @@ properties:
       The output volume of the original sound.
     description: |
       Range: -80 to 10 (default 0) The output volume of the original sound.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -88,7 +87,7 @@ properties:
       won't be audible at all. Setting this at the maximum (1) will have no
       decay, meaning the echoed sound will play at the level of the original and
       will not diminish over time.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -108,7 +107,7 @@ properties:
       The output volume of the echoed effect.
     description: |
       Range: -80 to 10 (default 0) The output volume of the echoed effect.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

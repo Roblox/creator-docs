@@ -1,6 +1,5 @@
 name: GlobalSettings
 type: class
-category: Settings
 memory_category: Instances
 summary: |
   Collection of menu settings for Roblox Studio.
@@ -17,7 +16,7 @@ description: |
   - `Class.PhysicsSettings`
   - `Class.RenderSettings`
   - `Class.Studio`
-code_samples:
+code_samples: []
 inherits:
   - GenericSettings
 tags:
@@ -31,14 +30,14 @@ methods:
       Returns the value of an FFlag if it exists.
     description: |
       Returns the value of an FFlag if it exists.
-    code_samples:
+    code_samples: []
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
@@ -51,11 +50,11 @@ methods:
       Returns the value of an FVariable, if it exists.
     description: |
       Returns the value of an FVariable, if it exists.
-    code_samples:
+    code_samples: []
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: string

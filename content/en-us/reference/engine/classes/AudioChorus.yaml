@@ -1,6 +1,5 @@
 name: AudioChorus
 type: class
-category:
 memory_category: Internal
 summary: |
   Makes an audio stream sound more voluminous. If applied to a single voice, it
@@ -26,7 +25,7 @@ properties:
     description: |
       If `true`, audio streams are passed-through unaffected by this effect.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -117,7 +116,7 @@ methods:
     parameters:
       - name: pin
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instances
@@ -126,7 +125,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioChorus:GetInputPins
     summary: ''
@@ -140,7 +140,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioChorus:GetOutputPins
     summary: ''
@@ -154,7 +155,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
 events:
   - name: AudioChorus.WiringChanged
@@ -168,30 +170,30 @@ events:
     code_samples: []
     parameters:
       - name: connected
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           Whether the instance got connected or disconnected.
       - name: pin
         type: string
-        default:
+        default: ''
         summary: |
           The pin on the `Class.AudioChorus` that the `Class.Wire` targets.
       - name: wire
         type: Wire
-        default:
+        default: ''
         summary: |
           The `Class.Wire` between the `Class.AudioChorus` and the other
           instance.
       - name: instance
         type: Instance
-        default:
+        default: ''
         summary: |
           The other instance that is or was connected through the `Class.Wire`.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
 callbacks: []

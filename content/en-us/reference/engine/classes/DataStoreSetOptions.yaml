@@ -1,6 +1,5 @@
 name: DataStoreSetOptions
 type: class
-category:
 memory_category: Instances
 summary: |
   Specifies additional parameters for a `Class.GlobalDataStore:SetAsync()` call.
@@ -12,7 +11,7 @@ description: |
 
   - [Data Stores](../../../cloud-services/data-stores/index.md), an in-depth
     guide on data structure, management, error handling, etc.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -27,7 +26,7 @@ methods:
     description: |
       This function gets custom metadata associated with this
       `Class.DataStoreSetOptions` instance.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Dictionary
@@ -37,7 +36,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: DataStoreSetOptions:SetMetadata
     summary: |
@@ -46,21 +46,22 @@ methods:
       This function sets custom metadata used by
       `Class.GlobalDataStore:SetAsync()` to associate metadata with a key.
       Metadata should be in key-value pair form.
-    code_samples:
+    code_samples: []
     parameters:
       - name: attributes
         type: Dictionary
-        default:
+        default: ''
         summary: |
           Metadata values to set for the key.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
 events: []
 callbacks: []

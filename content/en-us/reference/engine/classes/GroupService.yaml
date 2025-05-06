@@ -1,6 +1,5 @@
 name: GroupService
 type: class
-category: Social
 memory_category: Instances
 summary: |
   GroupService is a service that allows developers to fetch information about a
@@ -87,7 +86,7 @@ methods:
     parameters:
       - name: groupId
         type: int64
-        default:
+        default: ''
         summary: |
           The group's ID.
     returns:
@@ -154,7 +153,7 @@ methods:
     parameters:
       - name: groupId
         type: int64
-        default:
+        default: ''
         summary: |
           The group's ID.
     returns:
@@ -204,7 +203,7 @@ methods:
       }
       ```
 
-      Note, if a group has no owner the Owner field will be set to nil.
+      Note, if a group has no owner the Owner field will be set to `nil`.
 
       This function has a number of useful applications, including loading the
       latest description and logo of a group for display in a group base.
@@ -214,7 +213,7 @@ methods:
     parameters:
       - name: groupId
         type: int64
-        default:
+        default: ''
         summary: |
           The group ID of the group.
     returns:
@@ -294,7 +293,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The `Class.Player.UserId` of the user.
     returns:

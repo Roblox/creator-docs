@@ -1,6 +1,5 @@
 name: ReflectionMetadataCallbacks
 type: class
-category:
 memory_category: Instances
 summary: |
   Acts as a `Class.Folder` containing information about callbacks for a
@@ -14,7 +13,7 @@ description: |
   `Class.ReflectionMetadataMember|ReflectionMetadataMembers` that are parented
   to this object will be perceived as callbacks under the class this is parented
   to.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []

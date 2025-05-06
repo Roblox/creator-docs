@@ -1,6 +1,5 @@
 name: NoCollisionConstraint
 type: class
-category: Constraints
 memory_category: PhysicsParts
 summary: |
   An instance used to prevent collisions between two specific parts.
@@ -13,12 +12,8 @@ description: |
   car scraping against the car's body.
 
   The most common way to create this constraint is by selecting
-  **No&nbsp;Collision** through Studio's **Create** menu in the
-  [Model](../../../studio/model-tab.md) tab.
-
-  <img
-  src="../../../assets/studio/general/Model-Tab-Constraints-Create-Menu.png"
-  width="754" alt="Constraint picker indicated in Studio toolbar" />
+  **No&nbsp;Collision** through Studio's **Create** menu in the toolbar's
+  **Model** tab.
 
   Unlike most constraints, `Class.NoCollisionConstraint` does not utilize any
   `Class.Attachment|Attachments`. Note that the tool acts differently based on
@@ -46,7 +41,7 @@ description: |
     </tr>
   </tbody>
   </table>
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -60,8 +55,8 @@ properties:
       This property determines whether the two linked parts,
       `Class.NoCollisionConstraint.Part0|Part0` and
       `Class.NoCollisionConstraint.Part1|Part1`, will collide with each other.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -80,7 +75,7 @@ properties:
       The second `Class.BasePart` that the constraint connects.
     description: |
       The second `Class.BasePart` that the constraint connects.
-    code_samples:
+    code_samples: []
     type: BasePart
     tags: []
     deprecation_message: ''
@@ -100,7 +95,7 @@ properties:
       The first `Class.BasePart` that the constraint connects.
     description: |
       The first `Class.BasePart` that the constraint connects.
-    code_samples:
+    code_samples: []
     type: BasePart
     tags: []
     deprecation_message: ''

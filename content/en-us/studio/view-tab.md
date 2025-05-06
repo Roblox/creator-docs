@@ -3,13 +3,11 @@ title: View tab
 description: The View tab lets you toggle various windows in Studio and customize display options.
 ---
 
-The **view** tab lets you toggle various windows in Studio, toggle the [view selector](#view-selector), and customize [display options](#display-options).
+The **View** tab lets you toggle various windows in Studio, toggle the [view selector](#view-selector), and customize [display options](#display-options).
 
 <img src="../assets/studio/general/Toolbar-View-Tab.png" width="876" alt="View tab indicated in Studio toolbar" />
 
 ## Windows and tools
-
-The **Show** section lets you toggle specific windows and tools within Studio. Commonly accessed windows/tools include:
 
 <table>
 <thead>
@@ -29,7 +27,7 @@ The **Show** section lets you toggle specific windows and tools within Studio. C
   </tr>
   <tr>
     <td>**Asset Manager**</td>
-    <td>Toggles the [Asset Manager](../projects/assets/manager.md) window for managing the experience's places, images, meshes, and more.</td>
+    <td>Toggles the [Asset Manager](../projects/assets/manager.md) window for managing the experience's places, images, meshes, audio, and more.</td>
   </tr>
   <tr>
     <td>**Toolbox**</td>
@@ -135,8 +133,6 @@ While in a [collaborative session](../projects/collaboration.md) in Studio, boun
 </Alert>
 
 ## Stats
-
-The **Stats** section contains buttons which toggle on-screen diagnostic information.
 
 <img src="../assets/studio/general/View-Tab-Stats-Tools.png" width="670" alt="Diagnostic stats tools indicated in View tab of Studio" />
 

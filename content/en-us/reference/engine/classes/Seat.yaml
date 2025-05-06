@@ -1,6 +1,5 @@
 name: Seat
 type: class
-category: Gameplay
 memory_category: PhysicsParts
 summary: |
   A type of `Class.BasePart` that characters can 'sit' in. When a character
@@ -62,8 +61,8 @@ properties:
     description: |
       Whether or not the seat is usable. If set to true, the seat will act as a
       normal part.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -82,7 +81,7 @@ properties:
       The humanoid that is sitting in the seat.
     description: |
       The humanoid that is sitting in the seat
-    code_samples:
+    code_samples: []
     type: Humanoid
     tags:
       - ReadOnly
@@ -107,20 +106,21 @@ methods:
     description: |
       Forces the character with the specified `Class.Humanoid` to sit in the
       Seat.
-    code_samples:
+    code_samples: []
     parameters:
       - name: humanoid
         type: Instance
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 events: []
 callbacks: []

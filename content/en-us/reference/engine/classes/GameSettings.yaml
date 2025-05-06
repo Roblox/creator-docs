@@ -1,13 +1,12 @@
 name: GameSettings
 type: class
-category: Settings
 memory_category: Instances
 summary: |
   A container for miscellaneous in-game options.
 description: |
   Various miscellaneous options for in-game. Can be accessed from Roblox
   Studio's settings menu under the **Game** tab.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -22,8 +21,8 @@ properties:
       Toggles whether or not video capture is enabled.
     description: |
       Toggles whether or not video capture is enabled.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -40,13 +39,13 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''
     security:
       read: RobloxScriptSecurity
-      write: RobloxSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Video
     serialization:

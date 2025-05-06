@@ -1,6 +1,5 @@
 name: HingeConstraint
 type: class
-category: Constraints
 memory_category: PhysicsParts
 summary: |
   Constrains its attachments to rotate about a single axis.
@@ -42,7 +41,7 @@ description: |
   `Class.HingeConstraint.UpperAngle|UpperAngle` limits, as well as
   `Class.HingeConstraint.Restitution|Restitution` which defines the elasticity
   of the attachments when they reach either limit.
-code_samples:
+code_samples: []
 inherits:
   - Constraint
 tags: []
@@ -72,7 +71,7 @@ properties:
 
       Note that both actuated and free spinning rotation can be limited by
       setting `Class.HingeConstraint.LimitsEnabled|LimitsEnabled` to true.
-    code_samples:
+    code_samples: []
     type: ActuatorType
     tags: []
     deprecation_message: ''
@@ -97,7 +96,7 @@ properties:
       `Class.HingeConstraint.ActuatorType|ActuatorType` is set to
       `Enum.ActuatorType|Servo`. Larger values correspond to a faster response
       and smaller values results in more damping and a slower response.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -125,7 +124,7 @@ properties:
       `Enum.ActuatorType|Servo` will attempt to maintain while rotating towards
       its `Class.HingeConstraint.TargetAngle|TargetAngle`. Measured in
       radians/second.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -151,7 +150,7 @@ properties:
       `Class.HingeConstraint.ActuatorType|ActuatorType` set to
       `Enum.ActuatorType|Motor` will attempt to achieve. Measured in
       radians/second.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -173,7 +172,7 @@ properties:
       The current angle of the `Class.HingeConstraint`. This angle is calculated
       by measuring the angle separation of the **Y** axes of the
       `Class.Attachment|Attachments`.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -203,8 +202,8 @@ properties:
       rotating. If `Class.HingeConstraint.Restitution|Restitution` is greater
       than 0 then the attachments will bounce when they hit the ends of the
       limited range.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -226,7 +225,7 @@ properties:
       The minimum rotation angle the `Class.HingeConstraint` will allow if
       `Class.HingeConstraint.LimitsEnabled|LimitsEnabled` is true. Measured in
       degrees.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -254,7 +253,7 @@ properties:
       `Enum.ActuatorType|Motor` can apply to achieve its
       `Class.HingeConstraint.AngularVelocity|AngularVelocity`. Measured in
       radians/second&sup2;.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -280,7 +279,7 @@ properties:
       `Class.HingeConstraint.ActuatorType|ActuatorType` set to
       `Enum.ActuatorType|Motor` can apply when trying to reach its desired
       `Class.HingeConstraint.AngularVelocity|AngularVelocity`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -300,7 +299,7 @@ properties:
       The visualized radius of the `Class.HingeConstraint`.
     description: |
       The visualized radius of the `Class.HingeConstraint`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -326,7 +325,7 @@ properties:
       be when they reach the end of the range when
       `Class.HingeConstraint.LimitsEnabled|LimitsEnabled` is true. Constrained
       between 0 and 1.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -352,7 +351,7 @@ properties:
       `Class.HingeConstraint.ActuatorType|ActuatorType` set to
       `Enum.ActuatorType|Servo` can apply when trying to reach its desired
       `Class.HingeConstraint.TargetAngle|TargetAngle`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -371,7 +370,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - Deprecated
     deprecation_message: |
@@ -396,7 +395,7 @@ properties:
       The target angle a `Class.HingeConstraint` will attempt to rotate to if
       its `Class.HingeConstraint.ActuatorType|ActuatorType` is set to
       `Enum.ActuatorType|Servo`. Measured in degrees.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -419,7 +418,7 @@ properties:
       The maximum rotation angle the `Class.HingeConstraint` will allow if
       `Class.HingeConstraint.LimitsEnabled|LimitsEnabled` is true. Measured in
       degrees.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

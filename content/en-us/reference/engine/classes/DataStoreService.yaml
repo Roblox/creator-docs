@@ -1,6 +1,5 @@
 name: DataStoreService
 type: class
-category: Data
 memory_category: Instances
 summary: |
   A game service that gives access to persistent data storage across places in a
@@ -36,8 +35,8 @@ properties:
       has been disabled due to technical reasons. Therefore, you must implement
       systems for retrying operations yourself. It is possible that automatic
       retry will be enabled again in the future.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''
@@ -66,13 +65,13 @@ methods:
       data store. This function also accepts an optional
       `Class.DataStoreOptions` instance which includes options for enabling
       `Class.DataStoreOptions.AllScopes|AllScopes`. See
-      [Data stores](../../../cloud-services/data-stores/index.md) for details on
-      scope.
-    code_samples:
+      [Versioning, listing, and caching](../../../cloud-services/data-stores/versioning-listing-and-caching.md#scopes)
+      for details on scope.
+    code_samples: []
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           Name of the data store.
       - name: scope
@@ -94,7 +93,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: DataStoreService:GetGlobalDataStore
     summary: |
@@ -103,6 +103,10 @@ methods:
       This function returns the default `Class.GlobalDataStore`. If you want to
       access a specific **named** data store instead, you should use the
       `Class.DataStoreService:GetDataStore()|GetDataStore()` function.
+
+      Note that the `Class.DataStore` returned by this function always uses the
+      scope `u`. See [Data stores](../../../cloud-services/data-stores/index.md)
+      for details on scope.
     code_samples:
       - get-a-globaldatastore-instance
     parameters: []
@@ -113,7 +117,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: DataStoreService:GetOrderedDataStore
     summary: |
@@ -128,7 +133,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
       - name: scope
         type: string
@@ -141,7 +146,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: DataStoreService:GetRequestBudgetForRequestType
     summary: |
@@ -157,7 +163,7 @@ methods:
     parameters:
       - name: requestType
         type: DataStoreRequestType
-        default:
+        default: ''
         summary: ''
     returns:
       - type: int
@@ -166,7 +172,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: DataStoreService:ListDataStoresAsync
     summary: |
@@ -179,7 +186,7 @@ methods:
 
       Only data stores containing at least one object will be listed via this
       function.
-    code_samples:
+    code_samples: []
     parameters:
       - name: prefix
         type: string
@@ -210,7 +217,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
 events: []
 callbacks: []

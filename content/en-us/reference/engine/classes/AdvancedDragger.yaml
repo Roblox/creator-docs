@@ -1,13 +1,12 @@
 name: AdvancedDragger
 type: class
-category:
 memory_category: Instances
 summary: |
   An unfinished advanced variant of the `Class.Dragger` class.
 description: |
   An unfinished advanced variant of the `Class.Dragger` class. Internally, this
   object is an identical implementation of the Dragger class.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []

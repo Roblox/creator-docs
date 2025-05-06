@@ -33,10 +33,7 @@ Start by creating parts for the door and its attachments. **Attachments** are wh
 
 New attachments are created in the center of a part. So they can work with the door, the two attachments need to be moved to face each other.
 
-1. To view constraints and attachments, in the **Model** tab, toggle on **Constraint Details**.
-
-   ![alt](../../../assets/tutorials/building-a-hinged-door/introToConstraints_toggleConstraintDetailed.png)
-
+1. To view constraints and attachments, toggle on **Constraint Details** in the toolbar's **Model** tab.
 2. In the Explorer, select **FrameAttachment**.
 
    ![alt](../../../assets/tutorials/building-a-hinged-door/introToConstraints_selectFrameAttachment.png)
@@ -78,7 +75,7 @@ The orientation of an attachment affects how a constraint can move. For the door
    </video>
    </Alert>
 
-2. For accurate rotation, turn on snapping in **Model** → **Snap to Grid**, and checking **Rotate**. Set the value to `90`.
+2. For accurate rotation, turn on rotation snapping in the toolbar's **Model** tab by checking **Rotate** and setting the value to `90`.
 
    ![alt](../../../assets/tutorials/building-a-hinged-door/introToConstraints_snapRotate.png)
 

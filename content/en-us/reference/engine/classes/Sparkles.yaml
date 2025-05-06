@@ -1,6 +1,5 @@
 name: Sparkles
 type: class
-category: Effects
 memory_category: Instances
 summary: |
   A particle emitter with the visual aesthetic of sparkles.
@@ -16,12 +15,12 @@ description: |
 
   When `Class.Sparkles.Enabled` is toggled off, particles emit by this object
   will continue to render until their lifetime expires. When a Sparkles object's
-  `Class.Instance.Parent` is set to nil (and/or `Class.Instance:Destroy()`ed),
+  `Class.Instance.Parent` is set to `nil` (and/or `Class.Instance:Destroy()`ed),
   all particles will instantly disappear. If this effect is not desired, try
   hiding the parent object at a far away position, then removing the Sparkles
   after a few seconds using `Class.Debris` to give the last particles a chance
   to expire. This object does not have a `Class.ParticleEmitter:Clear()` method,
-  but it is possible to set the `Class.Instance.Parent` to nil and back to the
+  but it is possible to set the `Class.Instance.Parent` to `nil` and back to the
   exact same object for the same effect.
 
   Sparkles particles are only emitted from the center of `Class.BasePart` to
@@ -77,9 +76,9 @@ properties:
       will continue to render until their lifetime expires. This property is
       useful for keeping pre-made sparkle effects off until they are needed
       later. Since sparkle particles are destroyed when the `Sparkle` object's
-      `Class.Instance.Parent` is set to nil, this property is useful in allowing
-      existing particles the opportunity to expire before destroying the Fire
-      object altogether. See the function below.
+      `Class.Instance.Parent` is set to `nil`, this property is useful in
+      allowing existing particles the opportunity to expire before destroying
+      the Fire object altogether. See the function below.
 
       ```
       local Debris = game:GetService("Debris")
@@ -92,7 +91,7 @@ properties:
       ```
     code_samples:
       - Give-Sparkles
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

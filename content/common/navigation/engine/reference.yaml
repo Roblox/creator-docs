@@ -1,6 +1,9 @@
 # Don't edit this navigation file. It's auto-generated and automatically syncs with
 # engine reference YAML files in content/en-us/reference/engine/.
 
+backTo:
+  title: Back to experiences
+  path: /experiences
 navigation:
   - heading: Engine API
   - title: Overview
@@ -255,6 +258,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/AudioPlayer.yaml
         ignoreTranslation: true
+      - title: AudioRecorder
+        path: /reference/engine/classes/AudioRecorder
+        type: engineapi
+        source: /reference/engine/classes/AudioRecorder.yaml
+        ignoreTranslation: true
       - title: AudioReverb
         path: /reference/engine/classes/AudioReverb
         type: engineapi
@@ -269,6 +277,11 @@ navigation:
         path: /reference/engine/classes/AudioTextToSpeech
         type: engineapi
         source: /reference/engine/classes/AudioTextToSpeech.yaml
+        ignoreTranslation: true
+      - title: AuroraScriptObject
+        path: /reference/engine/classes/AuroraScriptObject
+        type: engineapi
+        source: /reference/engine/classes/AuroraScriptObject.yaml
         ignoreTranslation: true
       - title: AvatarCreationService
         path: /reference/engine/classes/AvatarCreationService
@@ -715,6 +728,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/CustomEventReceiver.yaml
         ignoreTranslation: true
+      - title: CustomLog
+        path: /reference/engine/classes/CustomLog
+        type: engineapi
+        source: /reference/engine/classes/CustomLog.yaml
+        ignoreTranslation: true
       - title: CylinderHandleAdornment
         path: /reference/engine/classes/CylinderHandleAdornment
         type: engineapi
@@ -950,6 +968,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/FeatureRestrictionManager.yaml
         ignoreTranslation: true
+      - title: FeedPages
+        path: /reference/engine/classes/FeedPages
+        type: engineapi
+        source: /reference/engine/classes/FeedPages.yaml
+        ignoreTranslation: true
       - title: File
         path: /reference/engine/classes/File
         type: engineapi
@@ -1170,6 +1193,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/HandlesBase.yaml
         ignoreTranslation: true
+      - title: HapticEffect
+        path: /reference/engine/classes/HapticEffect
+        type: engineapi
+        source: /reference/engine/classes/HapticEffect.yaml
+        ignoreTranslation: true
       - title: HapticService
         path: /reference/engine/classes/HapticService
         type: engineapi
@@ -1379,11 +1407,6 @@ navigation:
         path: /reference/engine/classes/KeyframeSequenceProvider
         type: engineapi
         source: /reference/engine/classes/KeyframeSequenceProvider.yaml
-        ignoreTranslation: true
-      - title: LanguageService
-        path: /reference/engine/classes/LanguageService
-        type: engineapi
-        source: /reference/engine/classes/LanguageService.yaml
         ignoreTranslation: true
       - title: LayerCollector
         path: /reference/engine/classes/LayerCollector
@@ -2235,6 +2258,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/SensorBase.yaml
         ignoreTranslation: true
+      - title: SerializationService
+        path: /reference/engine/classes/SerializationService
+        type: engineapi
+        source: /reference/engine/classes/SerializationService.yaml
+        ignoreTranslation: true
       - title: ServerReplicator
         path: /reference/engine/classes/ServerReplicator
         type: engineapi
@@ -2274,11 +2302,6 @@ navigation:
         path: /reference/engine/classes/ShirtGraphic
         type: engineapi
         source: /reference/engine/classes/ShirtGraphic.yaml
-        ignoreTranslation: true
-      - title: ShorelineUpgraderService
-        path: /reference/engine/classes/ShorelineUpgraderService
-        type: engineapi
-        source: /reference/engine/classes/ShorelineUpgraderService.yaml
         ignoreTranslation: true
       - title: SkateboardController
         path: /reference/engine/classes/SkateboardController
@@ -2995,16 +3018,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/VRStatusService.yaml
         ignoreTranslation: true
-      - title: WebSocketClient
-        path: /reference/engine/classes/WebSocketClient
-        type: engineapi
-        source: /reference/engine/classes/WebSocketClient.yaml
-        ignoreTranslation: true
-      - title: WebSocketService
-        path: /reference/engine/classes/WebSocketService
-        type: engineapi
-        source: /reference/engine/classes/WebSocketService.yaml
-        ignoreTranslation: true
       - title: WedgePart
         path: /reference/engine/classes/WedgePart
         type: engineapi
@@ -3298,6 +3311,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AccessoryType.yaml
         ignoreTranslation: true
+      - title: ActionOnAutoResumeSync
+        path: /reference/engine/enums/ActionOnAutoResumeSync
+        type: engineapi
+        source: /reference/engine/enums/ActionOnAutoResumeSync.yaml
+        ignoreTranslation: true
       - title: ActionOnStopSync
         path: /reference/engine/enums/ActionOnStopSync
         type: engineapi
@@ -3428,10 +3446,10 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AnnotationEditingMode.yaml
         ignoreTranslation: true
-      - title: AnnotationRequestResult
-        path: /reference/engine/enums/AnnotationRequestResult
+      - title: AnnotationRequestStatus
+        path: /reference/engine/enums/AnnotationRequestStatus
         type: engineapi
-        source: /reference/engine/enums/AnnotationRequestResult.yaml
+        source: /reference/engine/enums/AnnotationRequestStatus.yaml
         ignoreTranslation: true
       - title: AnnotationRequestType
         path: /reference/engine/enums/AnnotationRequestType
@@ -4018,15 +4036,30 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/ExplosionType.yaml
         ignoreTranslation: true
+      - title: FacialAgeEstimationResultType
+        path: /reference/engine/enums/FacialAgeEstimationResultType
+        type: engineapi
+        source: /reference/engine/enums/FacialAgeEstimationResultType.yaml
+        ignoreTranslation: true
       - title: FacialAnimationStreamingState
         path: /reference/engine/enums/FacialAnimationStreamingState
         type: engineapi
         source: /reference/engine/enums/FacialAnimationStreamingState.yaml
         ignoreTranslation: true
+      - title: FacsActionUnit
+        path: /reference/engine/enums/FacsActionUnit
+        type: engineapi
+        source: /reference/engine/enums/FacsActionUnit.yaml
+        ignoreTranslation: true
       - title: FACSDataLod
         path: /reference/engine/enums/FACSDataLod
         type: engineapi
         source: /reference/engine/enums/FACSDataLod.yaml
+        ignoreTranslation: true
+      - title: FeedRankingScoreType
+        path: /reference/engine/enums/FeedRankingScoreType
+        type: engineapi
+        source: /reference/engine/enums/FeedRankingScoreType.yaml
         ignoreTranslation: true
       - title: FieldOfViewMode
         path: /reference/engine/enums/FieldOfViewMode
@@ -4167,6 +4200,11 @@ navigation:
         path: /reference/engine/enums/HandlesStyle
         type: engineapi
         source: /reference/engine/enums/HandlesStyle.yaml
+        ignoreTranslation: true
+      - title: HapticEffectType
+        path: /reference/engine/enums/HapticEffectType
+        type: engineapi
+        source: /reference/engine/enums/HapticEffectType.yaml
         ignoreTranslation: true
       - title: HighlightDepthMode
         path: /reference/engine/enums/HighlightDepthMode
@@ -5153,6 +5191,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/SwipeDirection.yaml
         ignoreTranslation: true
+      - title: SystemThemeValue
+        path: /reference/engine/enums/SystemThemeValue
+        type: engineapi
+        source: /reference/engine/enums/SystemThemeValue.yaml
+        ignoreTranslation: true
       - title: TableMajorAxis
         path: /reference/engine/enums/TableMajorAxis
         type: engineapi
@@ -5457,6 +5500,11 @@ navigation:
         path: /reference/engine/enums/VirtualInputMode
         type: engineapi
         source: /reference/engine/enums/VirtualInputMode.yaml
+        ignoreTranslation: true
+      - title: VoiceChatDistanceAttenuationType
+        path: /reference/engine/enums/VoiceChatDistanceAttenuationType
+        type: engineapi
+        source: /reference/engine/enums/VoiceChatDistanceAttenuationType.yaml
         ignoreTranslation: true
       - title: VoiceChatState
         path: /reference/engine/enums/VoiceChatState

@@ -1,6 +1,5 @@
 name: TextChatMessage
 type: class
-category:
 memory_category: Instances
 summary: |
   Immutable data object representing a text chat message.
@@ -78,17 +77,176 @@ properties:
       `Class.TextChatMessage`.
     description: |
       A general purpose field for storing miscellaneous data about the
-      `Class.TextChatMessage`. The second argument of
+      `TextChatMessage`. The second argument of
       `Class.TextChannel:SendAsync()` and
       `Class.TextChannel:DisplaySystemMessage()` is used to populate this field.
-
-      If `Class.TextChatService.CreateDefaultTextChannels` is `true`, default
-      system messages sent to the system channel have unique
-      `Class.TextChatMessage.Metadata` values.
 
       Use this field to apply additional formatting for special messages within
       `Class.TextChatService.OnIncomingMessage` and
       `Class.TextChannel.OnIncomingMessage` callbacks.
+
+      ```
+      local TextChatService = game:GetService("TextChatService")
+
+      local generalChannel: TextChannel = TextChatService:WaitForChild("TextChannels").RBXGeneral
+
+      generalChannel:DisplaySystemMessage("This is an error!", "Game.Error.Generic")
+      generalChannel:DisplaySystemMessage("Could not find save data!", "Game.Error.SaveDataNotFound")
+
+      generalChannel:DisplaySystemMessage("You won the game!", "Game.Info.Win")
+      generalChannel:DisplaySystemMessage("You lost the game!", "Game.Info.Lose")
+
+      generalChannel.OnIncomingMessage = function(message: TextChatMessage)
+      	if string.find(message.Metadata, "Error") then
+      		local overrideProperties = Instance.new("TextChatMessageProperties")
+      		overrideProperties.TextColor = Color3.fromRGB(255, 0, 0)
+      		return overrideProperties
+      	elseif string.find(message.Metadata, "Info") then
+      		local overrideProperties = Instance.new("TextChatMessageProperties")
+      		overrideProperties.TextColor = Color3.fromRGB(0, 255, 150)
+      		return overrideProperties
+      	end
+
+      	return nil
+      end
+      ```
+
+      As follows is a reference of the default system messages emitted by the chat system:
+
+      <table size="small">
+      <thead>
+        <tr>
+          <th>Metadata</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>Roblox.ChatTranslation.ChatWindow.SystemMessage</code></td>
+          <td>Indicates that the system may translate chat messages for the player.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.Notification.Friend.Joined</code></td>
+          <td>Displayed when one of the player's friends join the experience.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.MessageStatus.Warning.Floodchecked</code></td>
+          <td>Displayed when the player's sent message was rate limited by the server.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.MessageStatus.Warning.TextFilterFailed</code></td>
+          <td>Displayed when the player's sent message could not be displayed due to a text filtering issue.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.MessageStatus.Warning.InvalidPrivacySettings</code></td>
+          <td>Displayed when the player's privacy settings prevent them from sending a message.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.MessageStatus.Warning.MessageTooLong</code></td>
+          <td>Displayed when the player sends a message with content that is too long.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.MessageStatus.Warning.Unknown</code></td>
+          <td>Displays when the system fails to send the player's message for an unknown reason.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.Help.Info</code></td>
+          <td>Displays the response from the <code>RBXHelpCommand</code> <code>Class.TextChatCommand</code>.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.Version.Info</code></td>
+          <td>Displays the response from the <code>RBXVersionCommand</code> <code>Class.TextChatCommand</code>.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.Team.Success.NowInTeam</code></td>
+          <td>Displayed when the player's team changes.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.Team.Error.CannotTeamChatIfNotInTeam</code></td>
+          <td>Displayed when the player triggers the <code>RBXTeamCommand</code> <code>Class.TextChatCommand</code> without being on a <code>Class.Team</code>.</td>
+        </tr>
+            <tr>
+          <td><code>Roblox.Whisper.Info.Success</code></td>
+          <td>Displayed when the player successfully starts a whisper conversation.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.Whisper.Welcome.Sent</code></td>
+          <td>Displayed when entering a whisper <code>Class.TextChannel</code>.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.Whisper.Error.CannotWhisperToSelf</code></td>
+          <td>An error response from the <code>RBXWhisperCommand</code> <code>Class.TextChatCommand</code>.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.Whisper.Error.TargetDoesNotExist</code></td>
+          <td>An error response from the <code>RBXWhisperCommand</code> <code>Class.TextChatCommand</code>.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.Whisper.Error.TooManyMatches</code></td>
+          <td>An error response from the <code>RBXWhisperCommand</code> <code>Class.TextChatCommand</code>.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.Whisper.Error.Unknown</code></td>
+          <td>An error response from the <code>RBXWhisperCommand</code> <code>Class.TextChatCommand</code>.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.Emote.Error.DoesNotExist</code></td>
+          <td>An error response from the <code>RBXEmoteCommand</code> <code>Class.TextChatCommand</code>.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.Emote.Error.UserEmotesNotEnabled</code></td>
+          <td>An error response from the <code>RBXEmoteCommand</code> <code>Class.TextChatCommand</code>.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.Emote.Error.TemporarilyUnavailable</code></td>
+          <td>An error response from the <code>RBXEmoteCommand</code> <code>Class.TextChatCommand</code>.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.Emote.Error.NotSupported</code></td>
+          <td>An error response from the <code>RBXEmoteCommand</code> <code>Class.TextChatCommand</code>.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.Emote.Error.SwitchToR15</code></td>
+          <td>An error response from the <code>RBXEmoteCommand</code> <code>Class.TextChatCommand</code>.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.Emote.Error.AnimationPlaying</code></td>
+          <td>An error response from the <code>RBXEmoteCommand</code> <code>Class.TextChatCommand</code>.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.Mute.Error.PlayerNotFound</code></td>
+          <td>An error response from the <code>RBXMuteCommand</code> <code>Class.TextChatCommand</code>.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.Mute.Error.MultipleMatches</code></td>
+          <td>An error response from the <code>RBXMuteCommand</code> <code>Class.TextChatCommand</code>.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.Mute.Error.CannotMuteSelf</code></td>
+          <td>An error response from the <code>RBXMuteCommand</code> <code>Class.TextChatCommand</code>.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.Mute.Info.Success</code></td>
+          <td>An success response from the <code>RBXMuteCommand</code> <code>Class.TextChatCommand</code>.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.Unmute.Error.PlayerNotFound</code></td>
+          <td>An error response from the <code>RBXUnmuteCommand</code> <code>Class.TextChatCommand</code>.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.Unmute.Error.MultipleMatches</code></td>
+          <td>An error response from the <code>RBXUnmuteCommand</code> <code>Class.TextChatCommand</code>.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.Unmute.Error.CannotMuteSelf</code></td>
+          <td>An error response from the <code>RBXUnmuteCommand</code> <code>Class.TextChatCommand</code>.</td>
+        </tr>
+        <tr>
+          <td><code>Roblox.Unmute.Info.Success</code></td>
+          <td>An success response from the <code>RBXUnmuteCommand</code> <code>Class.TextChatCommand</code>.</td>
+        </tr>
+      </tbody>
+      </table>
     code_samples: []
     type: string
     tags: []

@@ -47,7 +47,7 @@ If you want to align them again, you could change the stud increment movement va
 
 This is why having a consistent pivot location for modular assets is of vital importance so they can connect together at predetermined, incremental distances relative to one another when you enable grid snapping. For example, each mesh in the Modern City sample modular building kit has a minimum length of 7.5 studs and a maximum length that's divisible by 7.5 studs so every mesh can seamlessly align and connect without overlap even when you rotate them.
 
-<img src="../../assets/tutorials/assembling-modular-environments/Pivot-Points-Stud-Diagram.png" width="60%"/>
+<img src="../../../assets/tutorials/assembling-modular-environments/Pivot-Points-Stud-Diagram.png" width="60%"/>
 
 Modular assets can consist of a nearly infinite variety of different shapes, sizes, and silhouettes and embody various purposes such as walls, corners, or decorative additions, so where that consistent pivot should be is different for each modular building kit. For the Modern City sample modular building kit, every mesh has a consistent pivot location either at the forward-most, lower corner, or in a location that allows them to snap to a logical position on the building, such as balconies, cornices, and awnings.
 
@@ -71,14 +71,12 @@ Studio's default settings allow you to freely move and rotate objects to any fra
 
 To configure Studio settings for ideal snapping behavior for the sample modular building kit:
 
-1. In the menu bar, select the **Model** tab.
-1. In the **Tools** section, disable **Collisions**.
-1. In the **Snap to Grid** section,
+1. In the toolbar, select the **Model** tab.
+1. Disable **Collisions**.
+1. Enable **Rotate** and set it to `45`.
+1. Enable **Move** and set it to `7.5`.
 
-   1. Enable **Rotate** and set it to `45`.
-   1. Enable **Move** and set it to `7.5`.
-
-     <img src="../../../assets/tutorials/assembling-modular-environments/Snapping-Behavior-Values.jpg" width="50%"/>
+   <img src="../../../assets/tutorials/assembling-modular-environments/Snapping-Behavior-Values.jpg" width="50%"/>
 
 ## Combine modular assets
 
@@ -97,7 +95,7 @@ To snap modular assets together to create a building using the sample modular bu
 
    <img src="../../../assets/tutorials/assembling-modular-environments/Combining-Overlapping-Meshes.jpg" width="50%"/>
 
-1. In the menu bar, select the **Move** tool, then move the second mesh to a new location on either side of the first mesh. It snaps in 7.5 increments along the same axis.
+1. In the toolbar, select the **Move** tool, then move the second mesh to a new location on either side of the first mesh. It snaps in 7.5 increments along the same axis.
 
    <img src="../../../assets/tutorials/assembling-modular-environments/Combining-Additional-Mesh.jpg" width="50%"/>
 

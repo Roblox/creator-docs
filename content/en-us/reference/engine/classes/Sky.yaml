@@ -1,6 +1,5 @@
 name: Sky
 type: class
-category: Lighting
 memory_category: Instances
 summary: |
   Changes the default appearance of the experience's sky.
@@ -18,7 +17,7 @@ description: |
   `Class.ViewportFrame|ViewportFrames`, in which case only the `Class.Sky`
   object's six **Skybox[…]** properties are used. For details, see
   [viewport frames](../../../ui/viewport-frames.md).
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -29,8 +28,8 @@ properties:
       Sets whether the sun, moon, and stars will show.
     description: |
       Sets whether the sun, moon, and stars will show.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -51,7 +50,7 @@ properties:
     description: |
       The perceived angular size of the moon while using this skybox, in
       degrees.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -71,7 +70,7 @@ properties:
       The texture of the moon while using this skybox.
     description: |
       The texture of the moon while using this skybox.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -91,7 +90,7 @@ properties:
       The URL link to a picture for the back surface of the sky.
     description: |
       The URL link to a picture for the back surface of the sky.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -111,7 +110,7 @@ properties:
       Asset ID for the bottom surface of the skybox.
     description: |
       Asset ID for the bottom surface of the skybox.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -131,7 +130,7 @@ properties:
       Asset ID for the front surface of the skybox.
     description: |
       Asset ID for the front surface of the skybox.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -151,8 +150,26 @@ properties:
       Asset ID for the left surface of the skybox.
     description: |
       Asset ID for the left surface of the skybox.
-    code_samples:
+    code_samples: []
     type: ContentId
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
+  - name: Sky.SkyboxOrientation
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
     tags: []
     deprecation_message: ''
     security:
@@ -171,7 +188,7 @@ properties:
       Asset ID for the right surface of the skybox.
     description: |
       Asset ID for the right surface of the skybox.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -191,7 +208,7 @@ properties:
       Asset ID for the top surface of the skybox.
     description: |
       Asset ID for the top surface of the skybox.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -212,7 +229,7 @@ properties:
     description: |
       How many stars are shown in the skybox. Only works if
       `Class.Sky.CelestialBodiesShown|CelestialBodiesShown` is true.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -232,7 +249,7 @@ properties:
       The perceived angular size of the sun while using this skybox, in degrees.
     description: |
       The perceived angular size of the sun while using this skybox, in degrees.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -252,7 +269,7 @@ properties:
       The texture of the sun while using this skybox.
     description: |
       The texture of the sun while using this skybox.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''

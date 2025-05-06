@@ -1,6 +1,5 @@
 name: TextBox
 type: class
-category: GUI
 memory_category: Gui
 summary: |
   A 2D user interface element that displays player-editable text.
@@ -76,8 +75,8 @@ properties:
     description: |
       Determines whether clicking on the TextBox will clear its
       `Class.TextBox.Text` property
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -211,7 +210,7 @@ properties:
       Determines the font size of a `Class.TextBox` object.
     description: |
       This property determines the font size of a `Class.TextBox` object.
-    code_samples:
+    code_samples: []
     type: FontSize
     tags:
       - NotReplicated
@@ -237,7 +236,7 @@ properties:
       Controls the height of lines, as a multiple of the font's em square size,
       by scaling the spacing between lines of text in the `Class.TextBox`. Valid
       values range from 1.0 to 3.0, defaulting to 1.0.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -265,7 +264,7 @@ properties:
 
       Setting the property to -1 disables the limit and shows the entirety of
       the `Class.TextBox.Text`.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -289,8 +288,8 @@ properties:
       When set to true, text inside a TextBox is able to move onto multiple
       lines. This also enables players to use the enter key to move onto a new
       line.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -349,7 +348,7 @@ properties:
     description: |
       Sets the text color that gets used when no text has been entered into the
       TextBox yet.
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -371,7 +370,7 @@ properties:
     description: |
       Sets the text that gets displayed when no text has been entered into the
       TextBox yet.
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -403,8 +402,8 @@ properties:
       gains focus, the user will be able to edit and interact with the complete
       XML string, including all of the formatting tags. When focus is lost, the
       text will automatically parse and render the tags as rich text.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -446,42 +445,6 @@ properties:
     capabilities:
       - UI
     writeCapabilities: []
-  - name: TextBox.ShouldEmitReturnEvents
-    summary: ''
-    description: ''
-    code_samples: []
-    type: bool
-    tags: []
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - UI
-    writeCapabilities: []
-  - name: TextBox.ShouldEmitUpAndDownArrowEvents
-    summary: ''
-    description: ''
-    code_samples: []
-    type: bool
-    tags: []
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - UI
-    writeCapabilities: []
   - name: TextBox.ShowNativeInput
     summary: |
       If set to true, input native to the platform is used instead of Roblox's
@@ -489,8 +452,8 @@ properties:
     description: |
       If set to true, input native to the platform is used instead of Roblox's
       built-in keyboard.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -577,7 +540,7 @@ properties:
   - name: TextBox.TextColor
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: BrickColor
     tags:
       - Hidden
@@ -661,8 +624,8 @@ properties:
       disabled, otherwise the Text could be cleared on-focus. This property is
       useful to make read-only TextBoxes from which content can be copied
       in-game.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -681,8 +644,8 @@ properties:
       Whether the text fits within the constraints of the TextBox.
     description: |
       Whether the text fits within the constraints of the TextBox.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -747,7 +710,7 @@ properties:
       significant scaling differences than when AutomaticSize is off.
     code_samples:
       - Long-Text-Wrapping
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -889,7 +852,7 @@ properties:
       Controls the truncation of the text displayed in this TextBox.
     description: |
       Controls the truncation of the text displayed in this TextBox.
-    code_samples:
+    code_samples: []
     type: TextTruncate
     tags: []
     deprecation_message: ''
@@ -907,8 +870,8 @@ properties:
   - name: TextBox.TextWrap
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - NotReplicated
       - Deprecated
@@ -945,7 +908,7 @@ properties:
       line will not be rendered at all.
     code_samples:
       - Long-Text-Wrapping
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1032,29 +995,31 @@ methods:
       - TextBox-CaptureFocus1
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: TextBox:IsFocused
     summary: |
       Returns true if the textbox is focused, or false if it is not.
     description: |
       Returns true if the textbox is focused, or false if it is not.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: TextBox:ReleaseFocus
     summary: |
@@ -1084,17 +1049,18 @@ methods:
       - TextBox-ReleaseFocus1
     parameters:
       - name: submitted
-        type: bool
+        type: boolean
         default: false
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 events:
   - name: TextBox.FocusLost
@@ -1118,22 +1084,22 @@ events:
       - TextBox-FocusLost
     parameters:
       - name: enterPressed
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           A boolean indicating whether the client pressed Enter to lose focus
           (_true_) or not (_false_).
       - name: inputThatCausedFocusLoss
         type: InputObject
-        default:
+        default: ''
         summary: |
           An `Class.InputObject` instance indicating the type of input that
           caused the TextBox to lose focus.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: TextBox.Focused
     summary: |
@@ -1157,18 +1123,18 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: TextBox.ReturnPressedFromOnScreenKeyboard
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 callbacks: []

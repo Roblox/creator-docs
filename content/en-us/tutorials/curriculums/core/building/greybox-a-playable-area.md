@@ -113,22 +113,15 @@ Now that you have an organizational structure to contain your assets, you can no
 
 To insert a cylinder part for your first platform:
 
-1. In the menu bar, select the **Home** tab.
-1. In the **Insert** section, click the **Part** dropdown arrow, then select **Cylinder**. A cylinder part displays in the viewport.
-
-   <img src="../../../../assets/studio/general/Home-Tab-Part-Menu-Cylinder.png" alt="Studio's Home tab with both the Part tool's dropdown arrow and Cylinder object highlighted." width="716" />
-
+1. Navigate to the toolbar's **Home** tab.
+1. Click the **Part** dropdown arrow, then select **Cylinder**. A cylinder part displays in the viewport.
 1. In the **Explorer** window, click and drag the new **Part** to the **Blockout_Parts** model. The part becomes a child of the model.
 
    <img src="../../../../assets/tutorials/block-out-a-playable-area/New-Part-As-Child-Of-Model.png" alt="Studio's Explorer window with the new Part highlighted under the Blockout_Parts model object." width="320" />
 
-1. Navigate back to the **Home** tab, then use the **Move**, **Scale**, and **Rotate** tools to position, scale, and rotate your cylinder until it's a large, flat surface in the middle of your island. For more information on these tools, see [Manipulating parts](../../../../parts/index.md#manipulate-parts).
+1. Navigate back to the toolbar's **Home** tab, then use the **Move**, **Scale**, and **Rotate** tools to position, scale, and rotate your cylinder until it's a large, flat surface in the middle of your island. For more information on these tools, see [manipulate parts](../../../../parts/index.md#manipulate-parts).
 
-   <img src="../../../../assets/studio/general/Home-Tab-Move.png" alt="Studio's Home tab with the Move tool highlighted." width="716" />
-
-   <img src="../../../../assets/studio/general/Home-Tab-Scale.png" alt="Studio's Home tab with the Scale tool highlighted." width="716" />
-
-   <img src="../../../../assets/studio/general/Home-Tab-Rotate.png" alt="Studio's Home tab with the Rotate tool highlighted." width="716" />
+   <img src="../../../../assets/studio/general/Home-Tab-Transform-Tools.png" alt="Studio's Home tab with the Move tool highlighted." width="716" />
 
    <img src="../../../../assets/tutorials/block-out-a-playable-area/First-Platform.jpg" alt="A large cylinder object partially sticking out of an island surrounded by water." width="80%" />
 
@@ -137,20 +130,15 @@ To insert a cylinder part for your first platform:
    <img src="../../../../assets/tutorials/block-out-a-playable-area/Final-Platforms.jpg" alt="Many large cylinder objects partially sticking out of an island surrounded by water, and the water itself." width="80%" />
 
 1. In the **Explorer** window, select the **Block_Out** model.
-1. In the **Home** tab, navigate to the **Edit** section, and click the **Anchor** icon. This ensures that the physics system doesn't move your parts when the experience starts.
-
-   <img src="../../../../assets/studio/general/Home-Tab-Anchor.png" alt="Studio's Home tab with the Anchor tool highlighted." width="800" />
+1. In the toolbar's **Home** tab, click the **Anchor** icon. This ensures that the physics system doesn't move your parts when the experience starts.
 
   </TabItem>
   <TabItem key = "2" label="Recreate the sample">
 
 To exactly recreate the sea stack platforms within the sample [Island Jump - Building](https://www.roblox.com/games/14239096301/Island-Jump-Building) experience:
 
-1. In the menu bar, select the **Home** tab.
-1. In the **Insert** section, click the **Part** dropdown arrow, then select **Cylinder**. A cylinder part displays in the viewport.
-
-   <img src="../../../../assets/studio/general/Home-Tab-Part-Menu-Cylinder.png" alt="Studio's Home tab with both the Part tool's dropdown arrow and Cylinder object highlighted." width="716" />
-
+1. Navigate to the toolbar's **Home** tab.
+1. Click the **Part** dropdown arrow, then select **Cylinder**. A cylinder part displays in the viewport.
 1. In the **Explorer** window, click and drag the new **Part** to the **Blockout_Parts** model. The part becomes a child of the model.
 
    <img src="../../../../assets/tutorials/block-out-a-playable-area/New-Part-As-Child-Of-Model.png" alt="Studio's Explorer window with the new Part highlighted under the Blockout_Parts model object." width="320" />
@@ -284,9 +272,7 @@ To exactly recreate the sea stack platforms within the sample [Island Jump - Bui
    <img src="../../../../assets/tutorials/block-out-a-playable-area/Final-Platforms.jpg" alt="Many large cylinder objects partially sticking out of an island and its surrounding water." width="80%" />
 
 1. In the **Explorer** window, select the **Block_Out** model.
-1. In the **Home** tab, navigate to the **Edit** section, and click the **Anchor** icon. This ensures that the physics system doesn't move your parts when the experience starts.
-
-   <img src="../../../../assets/studio/general/Home-Tab-Anchor.png" alt="Studio's Home tab with the Anchor tool highlighted." width="800" />
+1. In the toolbar's **Home** tab, click the **Anchor** icon. This ensures that the physics system doesn't move your parts when the experience starts.
 
   </TabItem>
 </Tabs>
@@ -304,10 +290,7 @@ The [Align Tool](../../../../studio/align-tool.md) aligns parts on either the mi
 To align parts:
 
 1. In the **Explorer** window, select all of your platforms.
-1. In the menu bar, navigate to the **Model** tab, then click the **Align Tool**. The **Align Tool** window displays.
-
-   <img src="../../../../assets/studio/general/Model-Tab-Align-Tool.png" width="660" alt="Studio's Model tab with the Align Tool highlighted." />
-
+1. In the toolbar's **Model** tab, click the **Align Tool**. The **Align Tool** window displays.
 1. In the **Align Tool** window,
 
    1. Set **Mode** to **Min**.
@@ -331,9 +314,7 @@ There are four solid modeling tools:
 - **Negate** – Negates parts, which is useful for making holes and indentations.
 - **Separate** – Separates the union or intersection back into its individual parts.
 
-For the purposes of creating a hollow tunnel, you only need to use the **Union** and **Negate** tools. For a full breakdown of all of the tools, see [Solid modeling](../../../../parts/solid-modeling.md).
-
-<img src="../../../../assets/studio/general/Model-Tab-Solid-Modeling.png" alt="Studio's Model tab with the solid modeling tools highlighted." width="732" />
+For the purposes of creating a hollow tunnel, you only need to use the **Union** and **Negate** tools. For a full breakdown of all of the tools, see [solid modeling](../../../../parts/solid-modeling.md).
 
 To create a hollow tunnel:
 
@@ -382,12 +363,12 @@ To create a hollow tunnel:
    <img src="../../../../assets/tutorials/block-out-a-playable-area/HollowTunnel-Start.jpg" alt="A close-up view of a gray block sticking out of a gray cylinder." width="740" />
 
 1. In the **Explorer** window, select the block part.
-1. In the **Model** tab, navigate to the **Solid Modeling** section, then click the **Negate** button. The part turns translucent.
+1. In the toolbar's **Model** tab, click the **Negate** button. The part turns translucent.
 
    <img src="../../../../assets/tutorials/block-out-a-playable-area/HollowTunnel-Negate.jpg" alt="A close-up view of a partially translucent pink block sticking out of a gray cylinder." width="740" />
 
 1. In the **Explorer** window, select both the negated part and the cylinder tunnel part.
-1. In the **Model** tab, navigate back to the **Solid Modeling** section, then click the **Union** button. The negated part is cut out from the overlapping tunnel cylinder.
+1. In the **Model** tab, click the **Union** button. The negated part is cut out from the overlapping tunnel cylinder.
 
    <img src="../../../../assets/tutorials/block-out-a-playable-area/HollowTunnel-Union.jpg" alt="A close-up view of a gray cylinder with an open tunnel through itself. The tunnel does not have a roof." width="740" />
 
@@ -427,9 +408,9 @@ The following step-by-step instructions teach you how to playtest your experienc
 
 To playtest your experience:
 
-1. In the menu bar, click the **Play** button. Studio enters playtest mode.
+1. In the toolbar, click the **Play** button. Studio enters playtest mode.
 
-   <img src="../../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Studio's Home tab with the Play button highlighted in the menu bar." width="716" />
+   <img src="../../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Play button highlighted in Studio's playtesting options." width="228" />
 
 1. In the **Explorer** window, select the arrow next to your character model that displays your Roblox username. All of your character model's children objects display.
 1. Select **Humanoid**.

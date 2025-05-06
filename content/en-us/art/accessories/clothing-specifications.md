@@ -133,7 +133,7 @@ If setting attachment names manually in Studio, use the following `Class.Attachm
 
 ### Face Accessories
 
-Face accessories, such as hair, eyebrows, and eyelashes are unique accessories that you can bundle with an avatar body upload. At this time, eyebrows and eyelashes can not be uploaded as standalone accessories and must be bundled with avatar bodies. For more information on bundling your face accessories with avatar models, see [Publishing Bodies with Eyelashes and Eyebrows](../accessories/publish-eyebrows-eyelashes.md).
+Face accessories, such as hair, eyebrows, and eyelashes are unique accessories that you can bundle with an avatar body upload. At this time, eyebrows and eyelashes can not be uploaded as standalone accessories and must be bundled with avatar bodies. For more information on bundling your face accessories with avatar models, see [Publishing bodies with eyelashes and eyebrows](../accessories/publish-eyebrows-eyelashes.md).
 
 - **Naming Convention when bundled** - When including these assets with an avatar body upload, the accessory objects must use the following name conventions:
   - `EyebrowAccessory`
@@ -169,13 +169,7 @@ For more information on basic skinning in third-party modeling software, such as
 **Cage meshes**, or **cages**, are invisible meshes that define the inner and outer surfaces of your asset and are fundamental to the layerable properties of clothing items. The inner cage determines the inside surface of a clothing item while the outer cage determines the outside surface of a clothing item.
 
 <Alert severity = 'error'>
-Assets with invalid cage configurations may fail validation and are subject to moderation. This includes, but is not limited to:
-
-<ul>
-<li>**No difference between the two cages** - The outer cage needs to envelope the layered clothing item as much as possible. If the inner and outer cages are exactly the same, the layered accessory behaves like a rigid accessory and doesn't deform.</li>
-<li>**Extreme space between the two cages** - Large spaces between the inner and outer cages can make the accessory look unrealistic puffy or excessively large.</li>
-<li>**Outer cage is within the inner cage** - The outer cage needs to be outside the inner cage otherwise the asset will fail validation.</li>
-</ul>
+Assets with invalid cage configurations may fail validation and are subject to moderation. See [Caging best practices](./caging-best-practices.md) for examples and instructions.
 </Alert>
 
 For a basic overview on caging, see the [Basic Clothing Tutorial](../accessories/creating/caging-setup.md) and the relevant section of the tutorial video at [8:32](https://www.youtube.com/watch?v=C-DwGRBHvmE&t=512s):

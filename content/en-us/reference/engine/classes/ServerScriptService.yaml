@@ -1,6 +1,5 @@
 name: ServerScriptService
 type: class
-category: Scripting
 memory_category: Instances
 summary: |
   A container service for server-only `Class.Script` objects.
@@ -27,7 +26,7 @@ description: |
   useful to both the server and clients should go in `Class.ReplicatedStorage`
   instead. Finally, you can further organize objects within this service through
   the use of `Class.Folder|Folders` without affecting the way it behaves.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -43,8 +42,8 @@ properties:
     description: |
       Toggles whether or not the `loadstring` function can be used by server
       scripts. Defaults to false.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - NotReplicated
       - NotScriptable

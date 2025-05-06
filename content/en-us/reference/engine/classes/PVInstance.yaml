@@ -1,6 +1,5 @@
 name: PVInstance
 type: class
-category:
 memory_category: Instances
 summary: |
   Abstract class for all objects that have a physical location in the world,
@@ -10,7 +9,7 @@ description: |
   cannot be created. It is the base for all objects that have a physical
   location in the world, specifically `Class.BasePart|BaseParts` and
   `Class.Model|Models`.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -114,12 +113,12 @@ methods:
     parameters:
       - name: targetCFrame
         type: CFrame
-        default:
+        default: ''
         summary: |
           The `Datatype.CFrame` that the `Class.PVInstance` pivot should equal
           after moving it.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

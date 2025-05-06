@@ -1,6 +1,5 @@
 name: PostEffect
 type: class
-category:
 memory_category: Instances
 summary: |
   Abstract base class for post-processing effects.
@@ -20,7 +19,7 @@ description: |
   effects you should check Roblox's settings under the "Rendering" section. It
   may be necessary to override the automatic behavior temporarily in order to
   preview post-processing effects.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -32,8 +31,8 @@ properties:
       Toggles whether or not the PostEffect is enabled.
     description: |
       Toggles whether or not the PostEffect is enabled.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

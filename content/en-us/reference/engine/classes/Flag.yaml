@@ -1,6 +1,5 @@
 name: Flag
 type: class
-category:
 memory_category: PhysicsParts
 summary: |
   The Flag object helps you make 'capture the flag' style games.
@@ -15,7 +14,7 @@ description: |
   from the player's backpack and a point will be added to the user's
   leaderstats, if provided. The flag will then regenerate at the originating
   flag stand.
-code_samples:
+code_samples: []
 inherits:
   - Tool
 tags:
@@ -36,7 +35,7 @@ properties:
 
       The `Class.Flag` and `Class.FlagStand` objects were created to allow
       developers to make 'capture the flag' style games quickly.
-    code_samples:
+    code_samples: []
     type: BrickColor
     tags: []
     deprecation_message: |

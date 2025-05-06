@@ -25,11 +25,8 @@ A `Class.Part` is Roblox's primary building block that you can move, resize, rot
 
 To create the backboard and border:
 
-1. In the menu bar, select the **Model** tab.
-1. In the **Parts** section, click the **Part Type Picker** and select **Block**. A block part displays in the workspace that's about to become the backboard of your neon sign.
-
-   <img src="../../../assets/studio/general/Model-Tab-Part-Tools.png" width="660" alt="Studio's Model tab with the Insert Part tool and its Part Type Picker highlighted." />
-
+1. Select the toolbar's **Model** tab.
+1. Click the dropdown arrow on the **Part** button and select **Block**. A block part displays in the workspace that's about to become the backboard of your neon sign.
 1. In the **Explorer** window, select the block, then in the **Properties** window,
 
    1. Set **BrickColor** to **Black**.
@@ -40,10 +37,7 @@ To create the backboard and border:
       <img width="50%" img src="../../../assets/tutorials/creating-neon-signs/Backboard.jpg" />
 
 1. In the **Explorer** window, select **Backboard**, then press <kbd>Ctrl</kbd><kbd>D</kbd> (<kbd>⌘</kbd><kbd>D</kbd>) to duplicate the part.
-1. In the menu bar, select the **Move** tool and use one of the axis arrows to pull the duplicate backboard part away from the original position so you can see each object.
-
-   <img src="../../../assets/studio/general/Home-Tab-Move.png" alt="Studio's Home tab with the Move tool highlighted." width="716" />
-
+1. In the toolbar, select the **Move** tool and use one of the axis arrows to pull the duplicate backboard part away from the original position so you can see each object.
 1. In the **Explorer** window, select the duplicate backboard part that's about to become the border of your neon sign, then in the **Properties** window,
 
    1. Set **BrickColor** to **Lime Green**.
@@ -66,22 +60,19 @@ To create the neon border shape:
 
    <img width="50%" img src="../../../assets/tutorials/creating-neon-signs/Duplicate-Border.jpg" />
 
-1. With the duplicate border part still selected, in the menu bar, navigate to the **Solid Modeling** section and select **Negate**. The border part turns translucent and its **Name** property automatically changes to **NegativePart**.
-
-   <img src="../../../assets/studio/general/Model-Tab-Solid-Modeling.png" alt="Studio's Model tab with the Solid Modeling tools highlighted." width="732" />
-
+1. With the duplicate border part still selected, click the **Negate** button in the toolbar. The border part turns translucent and its **Name** property automatically changes to **NegativePart**.
 1. With **NegativePart** still selected, hold <kbd>Ctrl</kbd>/<kbd>⌘</kbd> and click on the original border part to select both parts at the same time.
 
    <img width="50%" img src="../../../assets/tutorials/creating-neon-signs/NegativePart.jpg" />
 
-1. In the menu bar, select **Union** to fuse both parts together. A border-shaped part displays, and the **Name** property automatically changes to **Union**.
+1. In the toolbar, select **Union** to fuse both parts together. A border-shaped part displays, and the **Name** property automatically changes to **Union**.
 
 1. In the **Explorer** window, select the union, then in the **Properties** window,
 
    1. Set **Name** to **Border**. This helps organize all objects within the workspace.
    1. Set **Material** to **Neon**. This allows the part to glow.
 
-1. In the menu bar, select the **Move** tool and use one of the axis arrows to pull **Border** in front of **Backboard**.
+1. In the toolbar, select the **Move** tool and use one of the axis arrows to pull **Border** in front of **Backboard**.
 
    <GridContainer numColumns="2">
      <img src="../../../assets/tutorials/creating-neon-signs/Moving-Border.jpg" />
@@ -98,14 +89,11 @@ To incorporate neon 3D text from the [open-text](../../../assets/tutorials/creat
 
 1. Import the **open-text** `.obj` file.
 
-   1. In the menu bar, navigate to the **Home** tab, then click **Import 3D**. A file browser displays.
-
-      <img src="../../../assets/studio/general/Home-Tab-Import-3D.png" width="780" alt="Import 3D button indicated in Home tab" />
-
+   1. Navigate to the toolbar's **Home** tab and click **Import 3D**. A file browser displays.
    1. Select the **open-text** `.obj` file, then click the **Open** button. The **Import Preview** window displays.
    1. Keep the default import settings, then click the **Import** button. The open text models display within the viewport.
 
-1. In the menu bar, select the Move tool and use one of the axis arrows to center the text on the sign.
+1. In the toolbar, select the Move tool and use one of the axis arrows to center the text on the sign.
 
    <img width="50%" img src="../../../assets/tutorials/creating-neon-signs/Final-Sign.jpg" />
 

@@ -1,6 +1,5 @@
 name: UITableLayout
 type: class
-category: GUI
 memory_category: Instances
 summary: |
   Lays out sibling UI elements and their child UI elements as rows/columns and
@@ -55,7 +54,7 @@ properties:
       number of columns (not accounting for padding or other factors).
     code_samples:
       - Build-UI-Table
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -86,7 +85,7 @@ properties:
       number of rows (not accounting for padding or other factors).
     code_samples:
       - Build-UI-Table
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

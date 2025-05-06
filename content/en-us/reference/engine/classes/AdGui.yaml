@@ -1,6 +1,5 @@
 name: AdGui
 type: class
-category:
 memory_category: Internal
 summary: ''
 description: ''
@@ -34,7 +33,7 @@ properties:
     description: |
       The property enables the AdGui to serve video ads.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -98,7 +97,7 @@ callbacks:
     parameters:
       - name: eventInfo
         type: Dictionary
-        default:
+        default: ''
         summary: |
           Options table for the method:
 
@@ -106,12 +105,13 @@ callbacks:
           - `AdEventType` – A `Enum.AdEventType` enum value describing the AdGui
             events.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the callback has successfully reacted to the event.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []

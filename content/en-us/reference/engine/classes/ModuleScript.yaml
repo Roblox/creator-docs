@@ -1,6 +1,5 @@
 name: ModuleScript
 type: class
-category: Scripting
 memory_category: Script
 summary: |
   A script type that runs once when `Global.LuaGlobals.require()` is called with
@@ -61,7 +60,7 @@ properties:
     description: |
       Used to store a URL that points to an online script source. Binds the
       online code to the script's `Class.Script.Source`.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags:
       - Deprecated
@@ -88,7 +87,7 @@ properties:
       If you want to read or modify a script that the user has open, consider
       using the `Class.ScriptEditorService` to interact with the Script Editor
       instead.
-    code_samples:
+    code_samples: []
     type: ProtectedString
     tags: []
     deprecation_message: ''

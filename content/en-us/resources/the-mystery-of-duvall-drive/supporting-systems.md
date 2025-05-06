@@ -19,7 +19,7 @@ When a player was near an item of interest, such as a seal, we wanted to have th
 
 This `Class.LocalScript` utilizes a new engine feature `Class.Highlight` that draws an outline of an object and/or fills the object's interior with a defined color; for more information on how to use this feature, see [Highlighting Objects](../../effects/highlighting.md). `Class.Highlight|Highlights` and the mouse cursor **[OnItemIndicator](#onitemindicator)** systems work together, so `Class.Highlight|Highlights` not only determine if a mesh needs a highlight, but it also provides a type of mesh for **OnItemIndicator**.
 
-`HighlightItemsFunc` is used to communicate with other client systems. For example, [**EventManager**](../../resources/the-mystery-of-duvall-drive/foundational-gameplay-systems.md#eventmanager) uses it with an **Enable** command to enable or disable a `Class.Highlight` in certain cutscenes, and **OnItemIndicator** uses `GetType` to enquire about the type of object it is. To detect when an item is no longer present, such as when a corrupt room is destroyed, we connect to `Class.CollectionService.GetInstanceRemovedSignal`.
+`HighlightItemsFunc` is used to communicate with other client systems. For example, [EventManager](../../resources/the-mystery-of-duvall-drive/foundational-gameplay-systems.md#eventmanager) uses it with an **Enable** command to enable or disable a `Class.Highlight` in certain cutscenes, and **OnItemIndicator** uses `GetType` to enquire about the type of object it is. To detect when an item is no longer present, such as when a corrupt room is destroyed, we connect to `Class.CollectionService.GetInstanceRemovedSignal`.
 
 ## Lore and ThoughtBubbles
 
@@ -111,7 +111,7 @@ In a few missions, we teleport players a short distance within a mission, such a
 P1.Touched:Connect(function(otherPart) utils.ProcessPortal(otherPart, P2) end)
 ```
 
-**ProcessPortal** handles checking that otherPart is a human, teleporting the player through a `Datatype.CFrame` coordinate change, and invoking a small cutscene to hide the transition using a **Teleport_Jump** event in [**EventManager**](../../resources/the-mystery-of-duvall-drive/foundational-gameplay-systems.md#eventmanager).
+**ProcessPortal** handles checking that otherPart is a human, teleporting the player through a `Datatype.CFrame` coordinate change, and invoking a small cutscene to hide the transition using a **Teleport_Jump** event in [EventManager](../../resources/the-mystery-of-duvall-drive/foundational-gameplay-systems.md#eventmanager).
 
 ### Configuration scripts
 
@@ -121,7 +121,7 @@ We have several configuration, data definition, and common functionality scripts
 
 **DemoGlobalSettings**. We develop in one place, but release (and playtest) in others. The script checks placeID and enables/disables various cheats and debugging functionality.
 
-**DemoUtils**. Various utility functions. Dealing with transforms. Setting visibility, anchored or other properties. Checking for a point in a box. Finding objects in hierarchy by "dotted" name. Managing TempStorage (that can be used to temporarily move models "somewhere far" and bring back later). Click detector helpers. Grabbing support. Support for checking tags (especially along the hierarchy). Connecting triggers to [**EventManager**](../../resources/the-mystery-of-duvall-drive/foundational-gameplay-systems.md#eventmanager).
+**DemoUtils**. Various utility functions. Dealing with transforms. Setting visibility, anchored or other properties. Checking for a point in a box. Finding objects in hierarchy by "dotted" name. Managing TempStorage (that can be used to temporarily move models "somewhere far" and bring back later). Click detector helpers. Grabbing support. Support for checking tags (especially along the hierarchy). Connecting triggers to [EventManager](../../resources/the-mystery-of-duvall-drive/foundational-gameplay-systems.md#eventmanager).
 
 **AudioUtils**. A couple of functions to play weighted random sounds from a set.
 

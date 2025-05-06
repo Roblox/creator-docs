@@ -1,6 +1,5 @@
 name: Chat
 type: class
-category: Social
 memory_category: Instances
 summary: |
   Houses the Luau code responsible for running the legacy chat system.
@@ -9,7 +8,7 @@ description: |
   [legacy chat system](../../../chat/legacy/legacy-chat-system.md). Similar to
   `Class.StarterPlayerScripts`, default objects like `Class.Script|Scripts` and
   `Class.ModuleScript|ModuleScripts` are inserted into the service.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -36,8 +35,8 @@ properties:
 
       This must be done on the client, toggling this value in a server-side
       `Class.Script` will have no effect.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -57,8 +56,8 @@ properties:
     description: |
       Toggles whether the default chat framework should be automatically loaded
       when the game runs.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -93,13 +92,13 @@ methods:
     parameters:
       - name: partOrCharacter
         type: Instance
-        default:
+        default: ''
         summary: |
           An instance that is the part or character which the _BubbleChat_
           dialog should appear above.
       - name: message
         type: string
-        default:
+        default: ''
         summary: |
           The message string being chatted.
       - name: color
@@ -108,7 +107,7 @@ methods:
         summary: |
           An `Enum.ChatColor` specifying the color of the chatted message.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -133,16 +132,16 @@ methods:
       replacing the default Luau Chat System with your own, you should not need
       to call this function. You can read about the different callback functions
       at `Class.Chat:RegisterChatCallback()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: callbackType
         type: ChatCallbackType
-        default:
+        default: ''
         summary: |
           The type of callback to invoke.
       - name: callbackArguments
         type: Tuple
-        default:
+        default: ''
         summary: |
           The arguments that will be sent to the registered callback function.
     returns:
@@ -201,22 +200,22 @@ methods:
         message to players (useful for implementing a chat exclusion list)
       - Get/set the speaker's name color (`message.ExtraData.NameColor`, a
         Color3) on a message-by-message basis
-    code_samples:
+    code_samples: []
     parameters:
       - name: callbackType
         type: ChatCallbackType
-        default:
+        default: ''
         summary: |
           The callback to which the function shall be registered (this
           determines in what way the function is called).
       - name: callbackFunction
         type: Function
-        default:
+        default: ''
         summary: |
           The function to call when the callback is invoked using
           Chat:InvokeChatCallback.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -247,11 +246,11 @@ methods:
     parameters:
       - name: settings
         type: Variant
-        default:
+        default: ''
         summary: |
           A settings table.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -266,14 +265,14 @@ methods:
     description: |
       Will return false if the player with the specified `Class.Player.UserId`
       is not allowed to chat because of their account settings.
-    code_samples:
+    code_samples: []
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields
@@ -289,18 +288,18 @@ methods:
     description: |
       Will return false if the two users cannot communicate because their
       account settings do not allow it.
-    code_samples:
+    code_samples: []
     parameters:
       - name: userIdFrom
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: userIdTo
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields
@@ -337,21 +336,21 @@ methods:
       - Custom chat messages
       - Custom character names
       - Names for a shop in a tycoon-style game
-    code_samples:
+    code_samples: []
     parameters:
       - name: stringToFilter
         type: string
-        default:
+        default: ''
         summary: |
           The raw string to be filtered, exactly as entered by the player.
       - name: playerFrom
         type: Player
-        default:
+        default: ''
         summary: |
           The author of the text.
       - name: playerTo
         type: Player
-        default:
+        default: ''
         summary: |
           The intended recipient of the provided text; use the author if the
           text is persistent (see description).
@@ -391,12 +390,12 @@ methods:
     parameters:
       - name: stringToFilter
         type: string
-        default:
+        default: ''
         summary: |
           Message string being filtered.
       - name: playerFrom
         type: Player
-        default:
+        default: ''
         summary: |
           Instance of the player sending the message.
     returns:
@@ -419,16 +418,16 @@ methods:
       the given player's age settings, so they see what is appropriate to them.
       This function will only work if called from a `Class.Script` on the
       server. If called on a client it will fail.
-    code_samples:
+    code_samples: []
     parameters:
       - name: stringToFilter
         type: string
-        default:
+        default: ''
         summary: |
           String being filtered.
       - name: playerToFilterFor
         type: Player
-        default:
+        default: ''
         summary: |
           Player that the string is being filtered for.
     returns:
@@ -452,24 +451,23 @@ events:
       Fires when `Class.Chat:Chat()` is called.
     description: |
       Fires when `Class.Chat:Chat()` is called.
-    code_samples:
+    code_samples: []
     parameters:
       - name: part
         type: Instance
-        default:
+        default: ''
         summary: ''
       - name: message
         type: string
-        default:
+        default: ''
         summary: ''
       - name: color
         type: ChatColor
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

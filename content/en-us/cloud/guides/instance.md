@@ -25,12 +25,12 @@ These APIs are currently in beta and have the following restrictions:
 
 - You must have a [collaborative](../../projects/collaboration.md) session enabled for the experience that you want to access.
 
-- Request bodies, such as to [Update Instance](/cloud/reference/Instance#Update-Instance), are limited to 200 KB.
+- Request bodies, such as to [Update Instance](/cloud/reference/Instance#Cloud_UpdateInstance), are limited to 200 KB.
 
 ## List children
 
 List all children of a specific instance by specifying an instance ID and
-calling the [List Instance Children](/cloud/reference/Instance#List-Instance-Children)
+calling the [List Instance Children](/cloud/reference/Instance#Cloud_ListInstanceChildren)
 method.
 
 <Alert severity="info">

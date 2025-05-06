@@ -12,7 +12,7 @@ To skin a simple mesh, you need to:
 - [Set up Blender](#set-up-blender) to Studio's relative scene units before importing a model.
 - [Create, size, and position bones](#position-bones) inside of an armature.
 - [Parent a mesh to an armature](#parent-armature) to bind the skeleton rig to the mesh object.
-- [Weight paint](#weight-painting) the mesh to assign which parts of the mesh will move with which bone.
+- [Weight paint](#weight-paint) the mesh to assign which parts of the mesh will move with which bone.
 
 <Alert severity="info">
 This guide uses a downloadable [example tree model](../../assets/modeling/skinned-meshes/MapleLeafTree.fbx) and [Blender version 3.0](https://www.blender.org/download/releases/3-0/). If you are
@@ -114,7 +114,7 @@ To add additional bones into the armature:
    src="../../assets/modeling/skinned-meshes/Extrude-Last-Bone.mp4"
    width="80%"></video>
 
-4. Press and hold your mouse's scroll wheel to move the camera around the mesh object to see different views and angles to ensure that the bones are within the mesh object. [Reposition the bones](#positioning-bones) as necessary.
+4. Press and hold your mouse's scroll wheel to move the camera around the mesh object to see different views and angles to ensure that the bones are within the mesh object. [Reposition the bones](#position-bones) as necessary.
 5. In the Outliner, expand the **Armature** object. The armature's bone hierarchy displays.
 6. In the Outliner, double-click and **rename** each bone. Bone object names remain the same when you import the mesh object into Studio.
 
@@ -125,7 +125,7 @@ To add additional bones into the armature:
 
 After the bone structure is created and positioned, you need to connect the armature to the mesh object by parenting the armature to the mesh object.
 
-This guide uses Blender's **Automatic Weights** function when you are parenting an armature, as it automatically adds weights and influences to your mesh. This can save you time during the [weight painting](#weight-painting) process.
+This guide uses Blender's **Automatic Weights** function when you are parenting an armature, as it automatically adds weights and influences to your mesh. This can save you time during the [weight painting](#weight-paint) process.
 
 To parent an armature to a mesh:
 
@@ -171,7 +171,7 @@ To update the visualization of your bones:
 
 #### Auto normalize
 
-The [**Auto Normalize**](https://docs.blender.org/manual/en/latest/sculpt_paint/weight_paint/tool_settings/options.html) setting forces the influence on your vertices to equal one. This makes weight painting more efficient by ensuring that each vertex in your character is fully influenced by at least one bone. In this guide, Auto Normalize allows you to first apply full influence to the entire mesh quickly and then make minor adjustments with each bone.
+The [Auto Normalize](https://docs.blender.org/manual/en/latest/sculpt_paint/weight_paint/tool_settings/options.html) setting forces the influence on your vertices to equal one. This makes weight painting more efficient by ensuring that each vertex in your character is fully influenced by at least one bone. In this guide, Auto Normalize allows you to first apply full influence to the entire mesh quickly and then make minor adjustments with each bone.
 
 To enable Auto Normalize:
 

@@ -1,6 +1,5 @@
 name: Clouds
 type: class
-category:
 memory_category: Instances
 summary: |
   Renders realistic clouds that drift slowly across the sky.
@@ -11,7 +10,7 @@ description: |
 
   See the <a href="../../../environment/clouds.md">Dynamic Clouds</a> article
   for a summary of properties and expected results.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -28,7 +27,7 @@ properties:
 
       See the <a href="../../../environment/clouds.md">Dynamic Clouds</a>
       article for a summary of properties and expected results.
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -52,7 +51,7 @@ properties:
 
       See the <a href="../../../environment/clouds.md">Dynamic Clouds</a>
       article for a summary of properties and expected results.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -76,7 +75,7 @@ properties:
 
       See the <a href="../../../environment/clouds.md">Dynamic Clouds</a>
       article for a summary of properties and expected results.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -98,8 +97,8 @@ properties:
       This property toggles rendering of the `Class.Clouds` object. Useful for
       toggling on/off different `Class.Clouds` objects that exist in the same
       place.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

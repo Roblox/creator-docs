@@ -1,6 +1,5 @@
 name: Bone
 type: class
-category:
 memory_category: Instances
 summary: |
   Bones are non-rendered objects that drive the movement of one or more parts
@@ -38,7 +37,7 @@ description: |
   `Class.Attachment|Attachments` which Roblox uses as the bone's reference
   position. The inherited `Class.Attachment.WorldCFrame|WorldCFrame` and other
   world properties return the initial un-transformed position.
-code_samples:
+code_samples: []
 inherits:
   - Attachment
 tags: []
@@ -60,7 +59,7 @@ properties:
       - `Class.Bone.TransformedCFrame|TransformedCFrame` and
         `Class.Bone.TransformedWorldCFrame|TransformedWorldCFrame`, whose values
         are partially determined by this property
-    code_samples:
+    code_samples: []
     type: CFrame
     tags:
       - NotReplicated
@@ -93,7 +92,7 @@ properties:
         this property's value
       - `Class.Bone.TransformedWorldCFrame`, a world-space variant of this
         property
-    code_samples:
+    code_samples: []
     type: CFrame
     tags:
       - Hidden
@@ -126,7 +125,7 @@ properties:
       - `Class.Bone.Transform|Transform`, a property which partially determines
         this property's value
       - `Class.Bone.TransformedCFrame`, a local-space variant of this property
-    code_samples:
+    code_samples: []
     type: CFrame
     tags:
       - ReadOnly

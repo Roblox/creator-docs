@@ -1,12 +1,11 @@
 name: UserService
 type: class
-category:
 memory_category: Instances
 summary: |
   A service that handles queries regarding users on the Roblox platform.
 description: |
   A service that handles queries regarding users on the Roblox platform.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -93,7 +92,7 @@ methods:
     parameters:
       - name: userIds
         type: Array
-        default:
+        default: ''
         summary: |
           An array of `Class.Player.UserId|UserIds` requested.
     returns:

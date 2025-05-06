@@ -1,12 +1,11 @@
 name: BaseScript
 type: class
-category:
 memory_category: Script
 summary: |
   The base class for all script objects which run automatically.
 description: |
   The base class for all script objects which run automatically.
-code_samples:
+code_samples: []
 inherits:
   - LuaSourceContainer
 tags:
@@ -34,8 +33,8 @@ properties:
       Note that the above code snippet cannot be used within the script itself,
       since disabling the script from within itself will terminate the thread
       and the line to reenable it will never execute.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -73,7 +72,7 @@ properties:
       since disabling the script from within itself will terminate the thread
       and the line to reenable it will never execute.
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''
@@ -108,7 +107,7 @@ properties:
 
       For the LinkedSource property for `Class.ModuleScript|ModuleScripts`,
       please see `Class.ModuleScript.LinkedSource`.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags:
       - Deprecated

@@ -1,6 +1,5 @@
 name: SpawnLocation
 type: class
-category: Gameplay
 memory_category: PhysicsParts
 summary: |
   `Class.SpawnLocation|SpawnLocations`, or "spawns" determine where a
@@ -77,7 +76,7 @@ properties:
       similar games.
     code_samples:
       - SpawnLocation-Checkpoints
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -148,7 +147,7 @@ properties:
       still fire.
     code_samples:
       - SpawnLocation-Enabled
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -181,7 +180,7 @@ properties:
       spawn.
     code_samples:
       - SpawnLocation-Checkpoints
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

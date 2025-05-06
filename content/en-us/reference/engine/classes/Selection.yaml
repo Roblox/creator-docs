@@ -1,6 +1,5 @@
 name: Selection
 type: class
-category: Plugins
 memory_category: Instances
 summary: |
   The Selection service controls the `Class.Instance|Instances` that are
@@ -37,7 +36,7 @@ properties:
   - name: Selection.SelectionThickness
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -57,14 +56,14 @@ methods:
   - name: Selection:Add
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: instancesToAdd
         type: Instances
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -106,14 +105,14 @@ methods:
   - name: Selection:Remove
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: instancesToRemove
         type: Instances
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -147,12 +146,12 @@ methods:
     parameters:
       - name: selection
         type: Instances
-        default:
+        default: ''
         summary: |
           An array of `Class.Instance|Instances` to set the current selection
           to.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -183,7 +182,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

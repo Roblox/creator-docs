@@ -145,7 +145,8 @@ The content folder's location depends on the user's operating system:
 
 <Tabs>
   <TabItem label="Windows">
-    `%localappdata%\Roblox\Versions\<version>\content`
+    `%LOCALAPPDATA%\Roblox\Versions\<version>\content`<br />
+    (alternatively `C:\Program Files (x86)\Roblox\Versions\<version>\content`)
   </TabItem>
   <TabItem label="Mac">
     `Applications/RobloxStudio.app/Contents/Resources/content`
@@ -322,7 +323,7 @@ Roblox offers several tools to import, store, and publish your assets:
     <tbody>
         <tr>
             <td>[Asset Manager](../../projects/assets/manager.md)</td>
-            <td>Imports and stores [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [packages](../../projects/assets/packages.md), [audio](../../sound/assets.md), and [models](../../parts/models.md). Only displays assets that you've imported into the currently opened experience.</td>
+            <td>Imports and stores [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [audio](../../sound/assets.md), and more. Only displays assets that you've imported into the currently opened experience.</td>
         </tr>
 				<tr>
             <td>[Toolbox](../../projects/assets/toolbox.md)</td>
@@ -330,18 +331,16 @@ Roblox offers several tools to import, store, and publish your assets:
         </tr>
         <tr>
             <td>[3D Importer](../../art/modeling/3d-importer.md)</td>
-            <td>Imports `.fbx` or `.obj` 3D models from third-party modeling tools as a custom `Class.Model` instance. </td>
+            <td>Imports 3D models from third-party modeling tools as a custom `Class.Model` instance. </td>
         </tr>
     </tbody>
 </table>
 
-## Archiving Assets
+## Archiving assets
 
-To further help with organization, you can archive most asset types in the **Development Items** section of the [Creator Dashboard][CreatorDashboardURL].
+To further help with organization, you can archive most asset types in the **Creations** &rang; **Development Items** section of the [Creator Dashboard][CreatorDashboardURL]. Simply hover over an asset's thumbnail, click the **&ctdot;** button, and select **Archive** from the context menu.
 
-<img src="../../assets/creator-dashboard/Creations-Development-Items.png" width="780" alt="Development Items section on the Creator Dashboard" />
-
-<img src="../../assets/creator-dashboard/Asset-Context-Menu-Archive.png" width="400" alt="A close up view of a Splash Ring asset. The ellipsis button and the Archive menu item are highlighted." />
+<img src="../../assets/creator-dashboard/Options-Button-Asset.png" width="200" alt="Options button indicated for an asset." />
 
 After you archive an asset, it disappears from the website and is no longer usable or visible in Roblox experiences, including your own.
 

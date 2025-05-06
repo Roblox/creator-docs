@@ -21,6 +21,10 @@ Season passes are time-bound design strategies used in Roblox experiences to del
     <figcaption>Season pass in *Jailbreak*</figcaption>
   </figure>
 
+<Alert severity="info">
+For out-of-the-box functionality to create season passes, see the [Season passes](../../resources/feature-packages/season-passes.md) feature package.
+</Alert>
+
 <Alert severity="warning">
 While similar in name, season passes are not game passes. Game passes are one-time purchases that confer gameplay bonuses. To learn how to implement game passes into your experiences, see [Game Passes](../../production/monetization/game-passes.md).
 </Alert>

@@ -154,12 +154,9 @@ Adding [passes](../../production/monetization/game-passes.md) requires pass IDs 
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and select the experience.
 1. In the left column, under **Monetization**, select **Passes**.
+1. Hover over a pass' thumbnail, click the **&ctdot;** button, and select **Copy Asset ID** from the context menu.
 
-   <img src="../../assets/creator-dashboard/Experience-Nav-Monetization-Passes.png" width="330" />
-
-1. Click the **&ctdot;** button for a pass and select **Copy Asset ID**.
-
-   <img src="../../assets/creator-dashboard/Pass-Copy-Asset-ID.png" width="400" />
+   <img src="../../assets/creator-dashboard/Options-Button-Pass.png" width="200" />
 
 1. Paste each copied ID into a comma-delimited list within the `items` table **and** include `Enum.InfoType.GamePass` as the second parameter for [addItemAsync](#additemasync) to indicate that the items are passes. By default, items will appear in the catalog view in alphabetical order, but sorting can be customized via [setCatalogSort](#setcatalogsort).
 
@@ -210,12 +207,9 @@ Adding [developer products](../../production/monetization/developer-products.md)
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and select the experience.
 1. In the left column, under **Monetization**, select **Developer Products**.
+1. Hover over a product's thumbnail, click the **&ctdot;** button, and select **Copy Asset ID** from the context menu.
 
-   <img src="../../assets/creator-dashboard/Experience-Nav-Monetization-Developer-Products.png" width="330" />
-
-1. Click the **&ctdot;** button for a product and select **Copy Asset ID**.
-
-   <img src="../../assets/creator-dashboard/Developer-Product-Copy-Asset-ID.png" width="400" />
+   <img src="../../assets/creator-dashboard/Options-Button-Developer-Product.png" width="200" />
 
 1. Paste each copied ID into a comma-delimited list within the `items` table **and** include `Enum.InfoType.Product` as the second parameter for [addItemAsync](#additemasync) to indicate that the items are developer products. By default, items appear in the catalog view in alphabetical order, but you can customize sorting using [setCatalogSort](#setcatalogsort).
 
@@ -281,7 +275,7 @@ To create a shoppable region:
    <img src="../../assets/developer-modules/merch-booth/Shoppable-Region-Part.jpg" width="80%" />
    <figcaption>Block to detect when players approach the front of the shop counter</figcaption>
 
-1. Using the [Tags](../../studio/properties.md#instance-tags) section of the block's properties, or Studio's [Tag&nbsp;Editor](../../studio/view-tab.md#windows-and-tools), apply the tag `ShopRegion` to the block so that `Class.CollectionService` detects it.
+1. Using the [Tags](../../studio/properties.md#instance-tags) section of the block's properties, or Studio's [Tag Editor](../../studio/view-tab.md#windows-and-tools), apply the tag `ShopRegion` to the block so that `Class.CollectionService` detects it.
 
 1. Set the part's `Class.BasePart.Transparency|Transparency` to the maximum to hide it from players in the experience. Also disable its `Class.BasePart.CanCollide|CanCollide` and `Class.BasePart.CanQuery|CanQuery` properties so that objects do not physically collide with it and raycasts do not detect it.
 

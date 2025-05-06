@@ -1,13 +1,12 @@
 name: NotificationService
 type: class
-category:
 memory_category: Instances
 summary: |
   An internal service which cannot be used by developers.
 description: |
   An unfinished service that would allow you to schedule notifications.
   Currently goes unimplemented, and cannot be enabled.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -19,7 +18,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -57,39 +56,37 @@ events:
   - name: NotificationService.Roblox17sConnectionChanged
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: connectionName
         type: string
-        default:
+        default: ''
         summary: ''
       - name: connectionState
         type: ConnectionState
-        default:
+        default: ''
         summary: ''
       - name: namespaceSequenceNumbers
         type: string
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: NotificationService.Roblox17sEventReceived
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: eventData
         type: Map
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

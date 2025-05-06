@@ -3,7 +3,7 @@ title: Script tab
 description: The Script tab contains tools for writing, testing, and debugging scripts.
 ---
 
-The **script** tab contains tools for writing and testing scripts. You can only access this tab when you're viewing or editing a script.
+The **Script** tab contains tools for writing and testing scripts. You can only access this tab when you're viewing or editing a script.
 
 <img src="../assets/studio/general/Toolbar-Script-Tab.png" width="780" alt="Script tab indicated in Studio toolbar" />
 
@@ -147,7 +147,7 @@ The **Debugger** section lets you control the [debugger](../studio/debugging.md)
 </tbody>
 </table>
 
-In the neighboring **Debug Errors** section, you can opt to treat script errors as impromptu breakpoints.
+You can opt to treat script errors as impromptu breakpoints.
 
 <table>
 <thead>

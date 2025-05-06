@@ -1,6 +1,5 @@
 name: AudioEmitter
 type: class
-category:
 memory_category: Internal
 summary: |
   Emits audio streams into the world.
@@ -43,8 +42,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Emission
     serialization:
@@ -94,8 +93,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Emission
     serialization:
@@ -105,17 +104,26 @@ properties:
       - Audio
     writeCapabilities: []
   - name: AudioEmitter.SimulationFidelity
-    summary: ''
-    description: ''
+    summary: |
+      Controls how detailed the audio simulation should be for this
+      `Class.AudioEmitter`.
+    description: |
+      Controls how detailed the audio simulation should be for this
+      `Class.AudioEmitter`, similar to `Class.MeshPart.CollisionFidelity` or
+      `Class.MeshPart.RenderFidelity`.
+
+      `Class.AudioEmitter|AudioEmitters` and
+      `Class.AudioListener|AudioListeners` which disagree on the necessary level
+      of detail will use the less-detailed option.
     code_samples: []
     type: AudioSimulationFidelity
     tags: []
     deprecation_message: ''
-    security:
+    security: 
       read: None
       write: None
     thread_safety: ReadSafe
-    category: Simulation
+    category: Emission
     serialization:
       can_load: true
       can_save: true
@@ -144,7 +152,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioEmitter:GetAudibilityFor
     summary: ''
@@ -153,7 +162,7 @@ methods:
     parameters:
       - name: listener
         type: AudioListener
-        default:
+        default: ''
         summary: ''
     returns:
       - type: float
@@ -162,7 +171,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioEmitter:GetConnectedWires
     summary: |
@@ -175,7 +185,7 @@ methods:
     parameters:
       - name: pin
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instances
@@ -184,7 +194,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioEmitter:GetDistanceAttenuation
     summary: |
@@ -205,7 +216,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioEmitter:GetInputPins
     summary: ''
@@ -219,7 +231,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioEmitter:GetInteractingListeners
     summary: ''
@@ -233,7 +246,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioEmitter:GetOutputPins
     summary: ''
@@ -247,7 +261,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioEmitter:SetAngleAttenuation
     summary: |
@@ -279,21 +294,22 @@ methods:
 
       If the table is empty or `nil`, the `Class.AudioEmitter` defaults to using
       an angle attenuation curve with the constant volume value of `1`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: curve
         type: Dictionary
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioEmitter:SetDistanceAttenuation
     summary: |
@@ -329,17 +345,18 @@ methods:
     parameters:
       - name: curve
         type: Dictionary
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
 events:
   - name: AudioEmitter.WiringChanged
@@ -353,30 +370,30 @@ events:
     code_samples: []
     parameters:
       - name: connected
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           Whether the instance got connected or disconnected.
       - name: pin
         type: string
-        default:
+        default: ''
         summary: |
           The pin on the `Class.AudioEmitter` that the `Class.Wire` targets.
       - name: wire
         type: Wire
-        default:
+        default: ''
         summary: |
           The `Class.Wire` between the `Class.AudioEmitter` and the other
           instance.
       - name: instance
         type: Instance
-        default:
+        default: ''
         summary: |
           The other instance that is or was connected through the `Class.Wire`.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
 callbacks: []

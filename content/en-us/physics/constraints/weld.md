@@ -9,7 +9,7 @@ A `Class.WeldConstraint` connects two `Class.BasePart|BaseParts` and ensures the
 To attach two `Class.Attachment|Attachments` or `Class.Bone|Bones`, versus two `Class.BasePart|BaseParts`, see [RigidConstraint](../../physics/constraints/rigid.md).
 </Alert>
 
-The fastest way to create a `Class.WeldConstraint` is by selecting **Weld** through Studio's **Create** menu in the [Model](../../studio/model-tab.md) tab.
+The fastest way to create a `Class.WeldConstraint` is by selecting **Weld** through Studio's **Create** menu in the toolbar's **Model** tab.
 
 <img
 src="../../assets/studio/general/Model-Tab-Constraints-Create-Menu.png"

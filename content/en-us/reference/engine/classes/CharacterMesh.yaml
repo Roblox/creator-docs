@@ -1,13 +1,12 @@
 name: CharacterMesh
 type: class
-category: Avatar
 memory_category: Instances
 summary: |
   Modifies the appearance of an R6 body part.
 description: |
   This property modifies the appearance of an R6 body part. It has no effect in
   R15 characters.
-code_samples:
+code_samples: []
 inherits:
   - CharacterAppearance
 tags: []
@@ -20,7 +19,7 @@ properties:
     description: |
       The texture of a CharacterMesh. It can be overridden by Shirts, Pants,
       T-Shirts, and the `Class.CharacterMesh.OverlayTextureId` property.
-    code_samples:
+    code_samples: []
     type: int64
     tags: []
     deprecation_message: ''
@@ -40,7 +39,7 @@ properties:
       The part of the Character's body that is affected.
     description: |
       The part of the Character's body that is affected.
-    code_samples:
+    code_samples: []
     type: BodyPart
     tags: []
     deprecation_message: ''
@@ -60,7 +59,7 @@ properties:
       Used to load a mesh file, and apply it to the given BodyPart.
     description: |
       Used to load a mesh file, and apply it to the given BodyPart.
-    code_samples:
+    code_samples: []
     type: int64
     tags: []
     deprecation_message: ''
@@ -82,7 +81,7 @@ properties:
     description: |
       The assetId of the overlay texture. The overlay covers Shirts, Pants,
       T-Shirts, and the `Class.CharacterMesh.BaseTextureId`.
-    code_samples:
+    code_samples: []
     type: int64
     tags: []
     deprecation_message: ''

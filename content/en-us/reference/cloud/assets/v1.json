@@ -3,7 +3,8 @@
   "info": {
     "title": "Assets API",
     "description": "You can send and receive the following request and response payloads to create assets on Roblox. For information on the usage of the API, see the [usage guide](../../../cloud/guides/usage-assets.md).",
-    "version": "0.0.1"
+    "version": "0.0.1",
+    "x-roblox-extensions-version": "1.0.0"
   },
   "servers": [
     {
@@ -36,10 +37,7 @@
                     "description": "The binary asset file path and the content type. See [Asset types and limits](../../../cloud/guides/usage-assets.md#supported-asset-types-and-limits)."
                   }
                 },
-                "required": [
-                  "request",
-                  "fileContent"
-                ]
+                "required": ["request", "fileContent"]
               }
             }
           }
@@ -175,9 +173,7 @@
             "roblox-oauth2": ["asset:read"]
           }
         ],
-        "x-roblox-scopes": [
-          { "name": "asset:read" }
-        ],
+        "x-roblox-scopes": [{ "name": "asset:read" }],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Get Asset without readMask",
@@ -253,10 +249,7 @@
                     "description": "The binary asset file path and the content type. See [Asset types and limits](../../../cloud/guides/usage-assets.md#supported-asset-types-and-limits)."
                   }
                 },
-                "required": [
-                  "request",
-                  "fileContent"
-                ]
+                "required": ["request", "fileContent"]
               }
             }
           }
@@ -541,9 +534,7 @@
             "roblox-oauth2": ["asset:read"]
           }
         ],
-        "x-roblox-scopes": [
-          { "name": "asset:read" }
-        ],
+        "x-roblox-scopes": [{ "name": "asset:read" }],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Get Asset Version",
@@ -630,9 +621,7 @@
             "roblox-oauth2": ["asset:read"]
           }
         ],
-        "x-roblox-scopes": [
-          { "name": "asset:read" }
-        ],
+        "x-roblox-scopes": [{ "name": "asset:read" }],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "List Asset Versions",
@@ -690,9 +679,7 @@
                     "description": "The asset version path in the format of `assets/{assetId}/versions/{versionNumber}`."
                   }
                 },
-                "required": [
-                  "assetVersion"
-                ]
+                "required": ["assetVersion"]
               }
             }
           }
@@ -808,9 +795,7 @@
             "roblox-oauth2": ["asset:read"]
           }
         ],
-        "x-roblox-scopes": [
-          { "name": "asset:read" }
-        ],
+        "x-roblox-scopes": [{ "name": "asset:read" }],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Get Operation",
@@ -968,7 +953,7 @@
         "properties": {
           "moderationState": {
             "type": "string",
-            "description": "The moderation state of the asset. Can be `MODERATION_STATE_REVIEWING`, `MODERATION_STATE_REJECTED`, or `MODERATION_STATE_APPROVED`."
+            "description": "The moderation state of the asset. Can be `Reviewing`, `Rejected`, or `Approved`."
           }
         },
         "description": "The moderation result of the asset. "
@@ -1027,11 +1012,7 @@
       "State": {
         "type": "string",
         "description": "Whether the asset is active or archived. Unspecified isn't used.",
-        "enum": [
-          "Unspecified",
-          "Active",
-          "Archived"
-        ]
+        "enum": ["Unspecified", "Active", "Archived"]
       },
       "Status": {
         "type": "object",

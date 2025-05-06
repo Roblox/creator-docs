@@ -1,6 +1,5 @@
 name: Pages
 type: class
-category:
 memory_category: Instances
 summary: |
   An abstract class for pages objects.
@@ -21,8 +20,8 @@ properties:
       Whether or not the current page is the last page available.
     description: |
       Whether or not the current page is the last page available.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -45,7 +44,7 @@ methods:
     description: |
       Returns the items on the current page. The keys in the item are determined
       by the source of this object.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Array
@@ -62,10 +61,10 @@ methods:
     description: |
       Iterates to the next page in the pages object, if possible. The request
       limit is the same of the endpoint originally called.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields

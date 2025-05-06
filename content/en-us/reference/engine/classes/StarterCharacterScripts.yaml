@@ -1,6 +1,5 @@
 name: StarterCharacterScripts
 type: class
-category: Scripting
 memory_category: Instances
 summary: |
   Stores instances to be parented to a player's character when it spawns.
@@ -13,7 +12,7 @@ description: |
   If a `Class.LocalScript` named `Animate`, `Sound`, or `Health` is placed in
   this container, it will replace the default script that manages character
   animations, character sounds, and character health regeneration respectively.
-code_samples:
+code_samples: []
 inherits:
   - StarterPlayerScripts
 tags:

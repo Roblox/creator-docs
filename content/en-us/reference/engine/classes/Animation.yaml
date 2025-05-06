@@ -1,6 +1,5 @@
 name: Animation
 type: class
-category: Animations
 memory_category: Animation
 summary: |
   References an animation asset which can be loaded by an
@@ -33,7 +32,7 @@ description: |
   See also [Animation Editor](../../../animation/editor.md) and
   [Using Animations](../../../animation/using.md) to learn how to create and add
   pre-built or custom animations to your game.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -50,7 +49,7 @@ properties:
 
       Note that the animation will need to be loaded onto an
       `Class.AnimationTrack` in order to play it.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''

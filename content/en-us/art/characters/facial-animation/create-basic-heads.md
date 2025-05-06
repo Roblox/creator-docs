@@ -433,7 +433,7 @@ To map your saved poses and the RootFaceJoint:
 
     <video controls width="80%" src="../../../assets/avatar/dynamic-heads/creating-dynamic-heads/videos/2_Mapping_RootFaceJoint.mp4"></video>
 
-As you repeat this process, every additional custom property you create displays in the Custom Properties section of the Object Properties tab within the Properties Editor.
+As you repeat this process, every additional custom property you create displays in the **Custom Properties** section of the **Object Properties** tab within the **Properties Editor**.
 
 <img src="../../../assets/avatar/dynamic-heads/creating-dynamic-heads/Custom-Properties-Example.png" width="40%" />
 

@@ -196,7 +196,7 @@ Studio's 3D Importer provides a quick and easy way to import third-party 3D asse
 
 To import your asset:
 
-1. In Studio, navigate to the **Avatar tab** and select the **3D Importer**.
+1. In Studio, navigate to the toolbar's **Avatar** tab and select the **3D Importer**.
 2. In the file browser, select the `.fbx` file saved locally. The 3D Importer loads a preview of the object.
 
       <img src="../../assets/art/accessories/creating-rigid/3D-Importer.png" />
@@ -205,20 +205,16 @@ To import your asset:
 
 3. Select **Import**. The asset populates in your workspace as a `Class.Model` with the appropriate textures applied as a `Class.SurfaceAppearance`.
 
-   1. If textures didn't load correctly, add them manually. You may need to save and publish your experience in order to access the Asset Manager.
+   1. If textures didn't load correctly, add them manually. You may need to save and publish your experience in order to access the [Asset Manager](../../projects/assets/manager.md).
 
-      1. Open the Asset Manager. You may need to save and publish your experience before accessing your assets.
-      2. In the Asset Manager, select the **Bulk Import** button.
-
-         <img src="../../assets/studio/asset-manager/Import-Button.png" width = "60%"/>
-
-      3. Upload your image files.
-      4. After moderation clears for your image, select the `Class.MeshPart` parented within your imported `Class.Model`.
-      5. Add a `Class.SurfaceAppearance` child to your `Class.MeshPart`.
+      1. In the **Asset Manager**, click the **Import** button.
+      2. Upload your image files.
+      3. After moderation clears for your image, select the `Class.MeshPart` parented within your imported `Class.Model`.
+      4. Add a `Class.SurfaceAppearance` child to your `Class.MeshPart`.
 
          <img src="../../assets/art/accessories/creating-rigid/Adding-Surface-Appearance.png" />
 
-      6. In the `Class.SurfaceAppearance` properties, click each property value and assign the appropriate texture image from the asset dropdown:
+      5. In the `Class.SurfaceAppearance` properties, click each property value and assign the appropriate texture image from the asset dropdown:
 
          1. Set the **ColorMap** to the **\_ALB** texture image.
          2. Set the **MetalnessMap** to the **\_MTL** texture image.
@@ -237,7 +233,7 @@ After importing your asset into Studio, you can begin **fitting** your imported 
 
 To fit and generate your accessory:
 
-1. In the **Avatar** tab, open the **Accessory Fitting Tool (AFT)**.
+1. In the toolbar's **Avatar** tab, open the **Accessory Fitting Tool** (AFT).
 2. In the new AFT panel, select the **Part** field and, in the workspace, select the accessory `Class.MeshPart` object in the workspace and press **Next**.
 
    <img src="../../assets/art/accessories/creating-rigid/AFT-Select-Mesh.png" />
@@ -314,7 +310,7 @@ If you intend to sell the asset on the Marketplace, use the following steps to b
 
 ## Publish
 
-After uploading your asset for moderation, you can check your asset's current moderation status on your [Creator Dashboard > Avatar Items](https://create.roblox.com/dashboard/creations). Moderation can take up to 24 hours during which a placeholder icon is used on the creation page.
+After uploading your asset for moderation, you can check your asset's current moderation status in the **Avatar Items** tab of your [Creator Dashboard](https://create.roblox.com/dashboard/creations). Moderation can take up to 24 hours during which a placeholder icon is used on the creation page.
 
 After moderation completes, your item's publishing details become available to edit and enable for sale. See the following for an overview on the various sale options available:
 

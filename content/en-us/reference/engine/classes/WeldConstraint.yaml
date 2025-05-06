@@ -1,6 +1,5 @@
 name: WeldConstraint
 type: class
-category: Constraints
 memory_category: PhysicsParts
 summary: |
   Connects two `Class.BasePart|BaseParts` together such that their relative
@@ -12,12 +11,7 @@ description: |
   touching, they can be welded together.
 
   The most common way to create a weld constraint is by selecting **Weld**
-  through Studio's **Create** menu in the [Model](../../../studio/model-tab.md)
-  tab.
-
-  <img
-  src="../../../assets/studio/general/Model-Tab-Constraints-Create-Menu.png"
-  width="754" alt="Constraint picker indicated in Studio toolbar" />
+  through Studio's **Create** menu in the toolbar's **Model** tab.
 
   Note that this tool behaves differently depending on how many
   `Class.BasePart|BaseParts` are selected when the tool is activated:
@@ -47,7 +41,7 @@ description: |
   - If a welded part's `Datatype.CFrame` is updated, that part will move **and**
     all of the connected parts will also move, ensuring they maintain the same
     offset as when the weld was created.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -73,8 +67,8 @@ properties:
       they are enabled and all update when `Class.BasePart.Position` or
       `Class.BasePart.Orientation` is set on a part. The spanning tree may still
       disable them if they are redundant or form a cycle.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -99,8 +93,8 @@ properties:
       constraint's `Class.WeldConstraint.Part0` and `Class.WeldConstraint.Part1`
       properties are set, then the constraint will ensure that its two connected
       parts will be locked together.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''
@@ -145,7 +139,7 @@ properties:
       weld.Part1 = partB
       weld.Parent = partA
       ```
-    code_samples:
+    code_samples: []
     type: BasePart
     tags:
       - NotReplicated
@@ -191,7 +185,7 @@ properties:
       weld.Part1 = partB
       weld.Parent = partA
       ```
-    code_samples:
+    code_samples: []
     type: BasePart
     tags:
       - NotReplicated

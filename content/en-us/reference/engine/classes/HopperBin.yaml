@@ -1,6 +1,5 @@
 name: HopperBin
 type: class
-category:
 memory_category: PhysicsParts
 summary: ''
 description: |
@@ -17,7 +16,7 @@ description: |
   - `Class.ContextActionService`
   - `Class.UserInputService`
   - `Class.Player:GetMouse()`
-code_samples:
+code_samples: []
 inherits:
   - BackpackItem
 tags:
@@ -29,8 +28,8 @@ properties:
   - name: HopperBin.Active
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: |
       The `Class.HopperBin` object has been superseded by the `Class.Tool`
@@ -48,7 +47,7 @@ properties:
   - name: HopperBin.BinType
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: BinType
     tags: []
     deprecation_message: |
@@ -69,31 +68,29 @@ events:
   - name: HopperBin.Deselected
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: |
       The `Class.HopperBin` object has been superseded by the `Class.Tool`
       object which should be used for all new work.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: HopperBin.Selected
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: mouse
         type: Instance
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: |
       The `Class.HopperBin` object has been superseded by the `Class.Tool`
       object which should be used for all new work.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

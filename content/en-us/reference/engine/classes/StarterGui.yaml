@@ -1,6 +1,5 @@
 name: StarterGui
 type: class
-category: GUI
 memory_category: Instances
 summary: |
   A container for `Class.LayerCollector` objects to be copied into the
@@ -24,7 +23,7 @@ description: |
   can be used to disable elements of the `Class.CoreGui`, and
   `Class.StarterGui:SetCore()` can perform a range of functions including
   creating notifications and system messages.
-code_samples:
+code_samples: []
 inherits:
   - BasePlayerGui
 tags:
@@ -39,8 +38,8 @@ properties:
     description: |
       Allows `Class.StarterGui` to process input like `Class.PlayerGui` and
       `Class.CoreGui` do. The default value is `false`.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - Hidden
       - NotReplicated
@@ -67,8 +66,8 @@ properties:
 
       If one of the children is a PlayerGui and it has its PlayerGui property
       set to false, it will not be cloned.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - Deprecated
     deprecation_message: |
@@ -129,7 +128,7 @@ properties:
       for `Class.Player|Players` already in the experience. To change the
       orientation for an existing player, use their
       `Class.PlayerGui.ScreenOrientation` property.
-    code_samples:
+    code_samples: []
     type: ScreenOrientation
     tags: []
     deprecation_message: ''
@@ -151,8 +150,8 @@ properties:
     description: |
       This property determines whether the contents of `Class.StarterGui` is
       visible in Studio.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -166,29 +165,10 @@ properties:
     capabilities:
       - UI
     writeCapabilities: []
-  - name: StarterGui.StudioDefaultStyleSheet
-    summary: ''
-    description: ''
-    code_samples: []
-    type: StyleSheet
-    tags:
-      - Hidden
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - UI
-    writeCapabilities: []
   - name: StarterGui.VirtualCursorMode
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: VirtualCursorMode
     tags:
       - NotScriptable
@@ -223,18 +203,19 @@ methods:
     parameters:
       - name: coreGuiType
         type: CoreGuiType
-        default:
+        default: ''
         summary: |
           The given `Enum.CoreGuiType`.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the given `Enum.CoreGuiType` is enabled.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: StarterGui:SetCore
     summary: |
@@ -360,7 +341,12 @@ methods:
 
       ##### ChatMakeSystemMessage
 
-      Display a formatted message in the chat.
+      Display a formatted message in the chat. Using this method requires the
+      experience's `Class.TextChatService.ChatVersion` to be set to
+      `Enum.ChatVersion|LegacyChatService`, although legacy chat is
+      **deprecated** and usage is discouraged. For experiences using the current
+      `Class.TextChatService`, refer to
+      `Class.TextChannel:DisplaySystemMessage()`.
 
       <table size="small">
       	<thead>
@@ -773,23 +759,24 @@ methods:
     parameters:
       - name: parameterName
         type: string
-        default:
+        default: ''
         summary: |
           Selects the functionality with which the call will interact.
       - name: value
         type: Variant
-        default:
+        default: ''
         summary: |
           A table of `Class.BindableEvent|BindableEvents` and
           `Class.BindableFunction|BindableFunctions`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: StarterGui:SetCoreGuiEnabled
     summary: |
@@ -805,22 +792,23 @@ methods:
     parameters:
       - name: coreGuiType
         type: CoreGuiType
-        default:
+        default: ''
         summary: |
           The given `Enum.CoreGuiType`.
       - name: enabled
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           Whether to enable or disable the given `Enum.CoreGuiType`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: StarterGui:GetCore
     summary: |
@@ -914,7 +902,7 @@ methods:
     parameters:
       - name: parameterName
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Variant
@@ -924,7 +912,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 events: []
 callbacks: []

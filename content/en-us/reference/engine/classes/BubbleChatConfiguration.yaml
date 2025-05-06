@@ -1,6 +1,5 @@
 name: BubbleChatConfiguration
 type: class
-category:
 memory_category: Instances
 summary: |
   Allows for customization of text chat bubbles through `Class.TextChatService`.
@@ -128,7 +127,7 @@ properties:
     description: |
       Whether text chat bubbles are enabled. Default is `false`.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -277,7 +276,7 @@ properties:
       Determines if the tail at the bottom of the text chat bubbles is visible.
       Default is `True`.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

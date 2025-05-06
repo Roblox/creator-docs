@@ -1,6 +1,5 @@
 name: Controller
 type: class
-category:
 memory_category: Instances
 summary: |
   The base class for controller objects, such as the `Class.HumanoidController`
@@ -8,7 +7,7 @@ summary: |
 description: |
   The base class for controller objects, such as the `Class.HumanoidController`
   object.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -26,14 +25,14 @@ methods:
     parameters:
       - name: button
         type: Button
-        default:
+        default: ''
         summary: ''
       - name: caption
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -46,14 +45,14 @@ methods:
       Returns whether or not Button is being pressed.
     description: |
       Returns whether or not Button is being pressed.
-    code_samples:
+    code_samples: []
     parameters:
       - name: button
         type: Button
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
@@ -66,14 +65,14 @@ methods:
       Removes the bind on button.
     description: |
       Removes the bind on button.
-    code_samples:
+    code_samples: []
     parameters:
       - name: button
         type: Button
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -84,18 +83,18 @@ methods:
   - name: Controller:bindButton
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: button
         type: Button
-        default:
+        default: ''
         summary: ''
       - name: caption
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -109,14 +108,14 @@ methods:
   - name: Controller:getButton
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: button
         type: Button
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -137,16 +136,15 @@ events:
       Fired when the pressed state of a bound button is changed. This event can
       be used in conjunction with `Class.Controller:GetButton()` to see whether
       a bound button is being pressed down or not.
-    code_samples:
+    code_samples: []
     parameters:
       - name: button
         type: Button
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

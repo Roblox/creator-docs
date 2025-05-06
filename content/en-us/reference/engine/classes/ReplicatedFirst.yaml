@@ -1,6 +1,5 @@
 name: ReplicatedFirst
 type: class
-category: Scripting
 memory_category: Instances
 summary: |
   A container whose contents are replicated to all clients (but not back to the
@@ -77,7 +76,7 @@ methods:
       - Custom-Loading-Screen
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

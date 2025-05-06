@@ -1,6 +1,5 @@
 name: SpotLight
 type: class
-category: Lighting
 memory_category: Instances
 summary: |
   A light source that emits light directionally in the shape of a cone with a
@@ -28,7 +27,7 @@ description: |
     etc.
 
   See also `Class.SurfaceLight` and `Class.PointLight`.
-code_samples:
+code_samples: []
 inherits:
   - Light
 tags: []
@@ -39,7 +38,7 @@ properties:
       The angle of which the light is shone from the SpotLight.
     description: |
       The angle of which the light is shone from the SpotLight.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -59,7 +58,7 @@ properties:
       Sets the side of the parent that the SpotLight comes from.
     description: |
       Sets the side of the parent that the SpotLight comes from.
-    code_samples:
+    code_samples: []
     type: NormalId
     tags: []
     deprecation_message: ''
@@ -79,7 +78,7 @@ properties:
       The size of the area that the SpotLight will illuminate.
     description: |
       The size of the area that the SpotLight will illuminate.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

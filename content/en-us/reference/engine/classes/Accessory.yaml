@@ -1,6 +1,5 @@
 name: Accessory
 type: class
-category: Avatar
 memory_category: Instances
 summary: |
   An item that a Character can wear.
@@ -21,7 +20,7 @@ description: |
   Note: If there are two matching `Attachments`, the resulting `Class.Weld` is a
   child of the Accessory's Handle. This differs from the legacy behavior of Hats
   where the Weld is always a child of the Head of the character.
-code_samples:
+code_samples: []
 inherits:
   - Accoutrement
 tags: []
@@ -37,7 +36,7 @@ properties:
       `Class.Humanoid:ApplyDescription()`. If available on the Marketplace, you
       can set `Enum.AccessoryType` to categorize the Accessory item (for
       example, "Hat" or "Face").
-    code_samples:
+    code_samples: []
     type: AccessoryType
     tags: []
     deprecation_message: ''

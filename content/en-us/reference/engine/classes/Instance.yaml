@@ -1,6 +1,5 @@
 name: Instance
 type: class
-category:
 memory_category: Instances
 summary: |
   `Instance` is the base class for all classes in the Roblox class hierarchy
@@ -12,7 +11,7 @@ description: |
   It is not possible to directly create root `Instance` objects, but the special
   `Datatype.Instance.new()` constructor creates objects via code, taking the
   name of the class as a parameter and returning the created object.
-code_samples:
+code_samples: []
 inherits:
   - Object
 tags:
@@ -42,8 +41,8 @@ properties:
       part.Archivable = false
       print(part:Clone())  --> nil
       ```
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -73,15 +72,17 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Permissions
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
-    writeCapabilities: []
+    capabilities:
+      - CapabilityControl
+    writeCapabilities:
+      - CapabilityControl
   - name: Instance.Name
     summary: |
       A non-unique identifier of the `Class.Instance`.
@@ -118,7 +119,7 @@ properties:
 
       See also `Class.Instance:GetFullName()` to obtain a full name including
       the object's hierarchy.
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -186,7 +187,7 @@ properties:
       However, if parenting parts to a `Class.Model` whose parent hasn't been
       set yet, parenting each part to that model is acceptable since the model
       would not have replicated.
-    code_samples:
+    code_samples: []
     type: Instance
     tags:
       - NotReplicated
@@ -208,8 +209,8 @@ properties:
       This property used to protect objects in the `Class.CoreGui` service from
       being altered by users in an unauthorized manner. It has been deprecated
       and does not do anything.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - Hidden
     deprecation_message: |
@@ -234,20 +235,22 @@ properties:
       [script capabilities](../../../scripting/capabilities.md) for further
       details.
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Permissions
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
-    writeCapabilities: []
+    capabilities:
+      - CapabilityControl
+    writeCapabilities:
+      - CapabilityControl
   - name: Instance.UniqueId
     summary: |
       A unique identifier for the instance.
@@ -261,8 +264,8 @@ properties:
       - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Data
     serialization:
@@ -273,8 +276,8 @@ properties:
   - name: Instance.archivable
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - Hidden
       - NotReplicated
@@ -318,10 +321,10 @@ methods:
     parameters:
       - name: tag
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -356,7 +359,7 @@ methods:
       - Instance-ClearAllChildren1
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -395,7 +398,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - CreateInstances
     writeCapabilities: []
   - name: Instance:Destroy
     summary: |
@@ -445,7 +449,7 @@ methods:
       - Instance-Destroy1
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -475,11 +479,11 @@ methods:
       For variants of this function that find ancestors of a specific class,
       please see `Class.Instance:FindFirstAncestorOfClass()` and
       `Class.Instance:FindFirstAncestorWhichIsA()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           The `Class.Instance.Name` to be looked for.
     returns:
@@ -516,11 +520,11 @@ methods:
       `Class.Instance.Name`. `Class.Instance:FindFirstAncestorWhichIsA()` also
       exists, using the `Class.Object:IsA()` method instead to respect class
       inheritance.
-    code_samples:
+    code_samples: []
     parameters:
       - name: className
         type: string
-        default:
+        default: ''
         summary: |
           The `Class.Object.ClassName` to be looked for.
     returns:
@@ -563,11 +567,11 @@ methods:
       ```
 
       See also `Class.Instance:FindFirstAncestor()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: className
         type: string
-        default:
+        default: ''
         summary: |
           The `Class.Object.ClassName` to be looked for.
     returns:
@@ -653,11 +657,11 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           The `Class.Instance.Name` to be searched for.
       - name: recursive
-        type: bool
+        type: boolean
         default: false
         summary: |
           Whether or not the search should be conducted recursively.
@@ -686,7 +690,7 @@ methods:
     parameters:
       - name: className
         type: string
-        default:
+        default: ''
         summary: |
           The `Class.Object.ClassName` to be looked for.
     returns:
@@ -731,15 +735,15 @@ methods:
 
       Developers looking for a child by name, should use
       `Class.Instance:FindFirstChild()` instead.
-    code_samples:
+    code_samples: []
     parameters:
       - name: className
         type: string
-        default:
+        default: ''
         summary: |
           The `Class.Object.ClassName` to be searched for.
       - name: recursive
-        type: bool
+        type: boolean
         default: false
         summary: |
           Whether or not the search should be conducted recursively.
@@ -762,11 +766,11 @@ methods:
       This method is disabled and cannot be used. To find the first descendant
       of an instance, consider using the `recursive` parameter on
       `Class.Instance:FindFirstChild()` instead.
-    code_samples:
+    code_samples: []
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           The `Class.Instance.Name` to search for.
     returns:
@@ -786,7 +790,7 @@ methods:
       If the `Class.Instance` is an `Class.Actor`, the `Class.Actor` itself is
       returned. Otherwise, its closest ancestor `Class.Actor` is returned. If no
       ancestor is an `Class.Actor`, the result is `nil`.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Actor
@@ -824,11 +828,11 @@ methods:
         name to the given value.
       - `Class.Instance:GetAttributes()` which returns a dictionary of key‑value
         pairs for each of the instance's attributes.
-    code_samples:
+    code_samples: []
     parameters:
       - name: attribute
         type: string
-        default:
+        default: ''
         summary: |
           The name of the attribute being retrieved.
     returns:
@@ -875,11 +879,11 @@ methods:
 
       See also `Class.Instance.AttributeChanged` which fires whenever any
       attribute is changed on the instance.
-    code_samples:
+    code_samples: []
     parameters:
       - name: attribute
         type: string
-        default:
+        default: ''
         summary: |
           The name of the specified attribute for which the change signal is
           being returned.
@@ -917,7 +921,7 @@ methods:
 
       See also `Class.Instance:GetAttribute()` which returns the value that has
       been assigned to the given attribute name.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Dictionary
@@ -1075,7 +1079,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Variant
@@ -1093,7 +1097,7 @@ methods:
     parameters:
       - name: property
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: RBXScriptSignal
@@ -1140,10 +1144,10 @@ methods:
     parameters:
       - name: tag
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1169,11 +1173,11 @@ methods:
     parameters:
       - name: descendant
         type: Instance
-        default:
+        default: ''
         summary: |
           The descendant `Class.Instance`.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           True if the `Class.Instance` is an ancestor of the given descendant.
     tags: []
@@ -1199,11 +1203,11 @@ methods:
     parameters:
       - name: ancestor
         type: Instance
-        default:
+        default: ''
         summary: |
           The ancestor `Class.Instance`.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           True if the `Class.Instance` is a descendant of the given ancestor.
     tags: []
@@ -1227,10 +1231,10 @@ methods:
     parameters:
       - name: property
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Boolean indicating whether the property is modified.
     tags: []
@@ -1253,7 +1257,7 @@ methods:
       - Instance-Remove1
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1283,10 +1287,10 @@ methods:
     parameters:
       - name: tag
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1305,10 +1309,10 @@ methods:
     parameters:
       - name: property
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1353,20 +1357,20 @@ methods:
         assigned to the given attribute name.
       - `Class.Instance:GetAttributes()` which returns a dictionary of key‑value
         pairs for each of the instance's attributes.
-    code_samples:
+    code_samples: []
     parameters:
       - name: attribute
         type: string
-        default:
+        default: ''
         summary: |
           The name of the attribute being set.
       - name: value
         type: Variant
-        default:
+        default: ''
         summary: |
           The value to set the specified attribute to.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1410,12 +1414,12 @@ methods:
     parameters:
       - name: childName
         type: string
-        default:
+        default: ''
         summary: |
           The `Class.Instance.Name` to be looked for.
       - name: timeOut
         type: double
-        default:
+        default: ''
         summary: |
           An optional time out parameter.
     returns:
@@ -1435,7 +1439,7 @@ methods:
       Returns an array of the object's children.
     description: |
       The children function returns an array of the object's children.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Instances
@@ -1453,7 +1457,7 @@ methods:
   - name: Instance:clone
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Instance
@@ -1465,15 +1469,16 @@ methods:
       should be used instead.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - CreateInstances
     writeCapabilities: []
   - name: Instance:destroy
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1487,14 +1492,14 @@ methods:
   - name: Instance:findFirstChild
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
       - name: recursive
-        type: bool
+        type: boolean
         default: false
         summary: ''
     returns:
@@ -1512,7 +1517,7 @@ methods:
   - name: Instance:getChildren
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Instances
@@ -1529,14 +1534,14 @@ methods:
   - name: Instance:isDescendantOf
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: ancestor
         type: Instance
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -1550,10 +1555,10 @@ methods:
   - name: Instance:remove
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1586,19 +1591,18 @@ events:
     parameters:
       - name: child
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Instance` whose `Class.Instance.Parent` has been changed.
       - name: parent
         type: Instance
-        default:
+        default: ''
         summary: |
           The new `Class.Instance.Parent` of the `Class.Instance` whose
           `Class.Instance.Parent` was changed.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: Instance.AttributeChanged
@@ -1626,17 +1630,16 @@ events:
 
       See also `Class.Instance:GetAttributeChangedSignal()` which returns an
       event that fires when a specific given attribute changes.
-    code_samples:
+    code_samples: []
     parameters:
       - name: attribute
         type: string
-        default:
+        default: ''
         summary: |
           The name of the attribute that has been changed.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: Instance.ChildAdded
@@ -1670,13 +1673,12 @@ events:
     parameters:
       - name: child
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Instance` that has been added.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: Instance.ChildRemoved
@@ -1701,13 +1703,12 @@ events:
     parameters:
       - name: child
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Instance` that has been removed.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: Instance.DescendantAdded
@@ -1729,13 +1730,12 @@ events:
     parameters:
       - name: descendant
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Instance` that has been added.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: Instance.DescendantRemoving
@@ -1783,13 +1783,12 @@ events:
     parameters:
       - name: descendant
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Instance` that is being removed.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: Instance.Destroying
@@ -1827,7 +1826,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: Instance.StyledPropertiesChanged
@@ -1838,17 +1836,16 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: Instance.childAdded
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: child
         type: Instance
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -1856,7 +1853,6 @@ events:
       This deprecated event is a variant of `Class.Instance.ChildAdded` which
       should be used instead.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

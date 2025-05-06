@@ -1,6 +1,5 @@
 name: MemoryStoreService
 type: class
-category: Data
 memory_category: Instances
 summary: |
   Exposes methods to access specific primitives within MemoryStore.
@@ -14,7 +13,7 @@ description: |
   [Memory Stores](../../../cloud-services/memory-stores/index.md). For the
   limits and quotas of the service, see
   [Limits and Quotas](../../../cloud-services/memory-stores/index.md#limits-and-quotas).
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -33,7 +32,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           The name of the hash map.
     returns:
@@ -44,7 +43,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: MemoryStoreService:GetQueue
     summary: |
@@ -53,11 +53,11 @@ methods:
       Returns a `Class.MemoryStoreQueue` instance for the provided name. The
       name is global within the game, thus any place that uses the same name
       accesses the same queue.
-    code_samples:
+    code_samples: []
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           Name of the queue.
       - name: invisibilityTimeout
@@ -74,7 +74,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: MemoryStoreService:GetSortedMap
     summary: |
@@ -83,11 +84,11 @@ methods:
       Returns a `Class.MemoryStoreSortedMap` instance for the provided name. The
       name is global within the game, so any place that uses the same name
       accesses the same sorted map.
-    code_samples:
+    code_samples: []
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           Name of the sorted map.
     returns:
@@ -98,7 +99,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
 events: []
 callbacks: []

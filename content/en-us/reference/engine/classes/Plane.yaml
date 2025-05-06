@@ -1,6 +1,5 @@
 name: Plane
 type: class
-category:
 memory_category: PhysicsParts
 summary: |
   Constrains Attachment0 and Attachment1 such that both points lie in an plane
@@ -12,7 +11,7 @@ description: |
   normal is the primary axis of Attachment0. This means that Attachment0 and
   Attachment1 will move to a position/orientation such that the distance between
   Attachment1 and Attachment0, projected onto the Plane unit normal, is zero.
-code_samples:
+code_samples: []
 inherits:
   - PlaneConstraint
 tags:

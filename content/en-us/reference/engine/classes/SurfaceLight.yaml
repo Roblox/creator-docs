@@ -1,6 +1,5 @@
 name: SurfaceLight
 type: class
-category: Lighting
 memory_category: Instances
 summary: |
   A light source that emits illumination of a specified color and brightness
@@ -34,7 +33,7 @@ properties:
       The angle of which the light is shone from the SurfaceLight.
     description: |
       The angle of which the light is shone from the SurfaceLight.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -54,7 +53,7 @@ properties:
       Sets the side of the parent that the SurfaceLight comes from.
     description: |
       Sets the side of the parent that the SurfaceLight comes from.
-    code_samples:
+    code_samples: []
     type: NormalId
     tags: []
     deprecation_message: ''
@@ -74,7 +73,7 @@ properties:
       The distance from the SurfaceLight's face that will illuminate.
     description: |
       The distance from the SurfaceLight's face that will illuminate.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

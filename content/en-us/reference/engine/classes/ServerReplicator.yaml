@@ -1,12 +1,11 @@
 name: ServerReplicator
 type: class
-category:
 memory_category: Instances
 summary: ''
 description: |
   The ServerReplicator's job is to replicate changes from other clients and the
   server over to a certain client.
-code_samples:
+code_samples: []
 inherits:
   - NetworkReplicator
 tags:

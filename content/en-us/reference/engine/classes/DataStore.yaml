@@ -1,11 +1,10 @@
 name: DataStore
 type: class
-category:
 memory_category: Instances
 summary: ''
 description: |
   See [Data Stores](../../../cloud-services/data-stores/index.md).
-code_samples:
+code_samples: []
 inherits:
   - GlobalDataStore
 tags:
@@ -22,11 +21,11 @@ methods:
       `Class.DataStoreKeyInfo` instance. A version identifier can be found
       through `Class.DataStore:ListVersionsAsync()` or alternatively be the
       identifier returned by `Class.GlobalDataStore:SetAsync()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: |
           Key name for which the version info is requested. If
           `Class.DataStoreOptions.AllScopes` was set to true when accessing the
@@ -34,7 +33,7 @@ methods:
           name must be prepended with the original scope as in "scope/key".
       - name: version
         type: string
-        default:
+        default: ''
         summary: |
           Version number of the key for which the version info is requested.
     returns:
@@ -49,7 +48,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: DataStore:GetVersionAtTimeAsync
     summary: |
@@ -62,7 +62,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: |
           Key name for which the version info is requested. If
           `Class.DataStoreOptions.AllScopes` was set to true when accessing the
@@ -70,7 +70,7 @@ methods:
           name must be prepended with the original scope as in "scope/key".
       - name: timestamp
         type: int64
-        default:
+        default: ''
         summary: |
           Unix timestamp in milliseconds for which the requested version was
           current. Must be greater than zero. Must not be more than ten minutes
@@ -88,7 +88,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: DataStore:ListKeysAsync
     summary: |
@@ -102,7 +103,7 @@ methods:
       If `Class.DataStoreOptions.AllScopes` was set to true when accessing the
       data store through `Class.DataStoreService:GetDataStore()`, keys will be
       returned with all scopes as prefixes.
-    code_samples:
+    code_samples: []
     parameters:
       - name: prefix
         type: string
@@ -122,7 +123,7 @@ methods:
         summary: |
           **(Optional)** Cursor to continue iteration.
       - name: excludeDeleted
-        type: bool
+        type: boolean
         default: false
         summary: |
           **(Optional)** Exclude deleted keys from being returned.
@@ -140,7 +141,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: DataStore:ListVersionsAsync
     summary: |
@@ -154,7 +156,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: |
           Key name for the versions to list. If
           `Class.DataStoreOptions.AllScopes` was set to true when accessing the
@@ -194,7 +196,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: DataStore:RemoveVersionAsync
     summary: |
@@ -206,11 +209,11 @@ methods:
       Unlike `Class.GlobalDataStore:RemoveAsync()`, this function does not
       create a new "tombstone" version and the removed value cannot be retrieved
       later.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: |
           Key name for which a version is to be removed. If
           `Class.DataStoreOptions.AllScopes` was set to true when accessing the
@@ -218,18 +221,19 @@ methods:
           name must be prepended with the original scope as in "scope/key".
       - name: version
         type: string
-        default:
+        default: ''
         summary: |
           Version number of the key to remove.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
 events: []
 callbacks: []

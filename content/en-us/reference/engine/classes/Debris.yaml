@@ -1,6 +1,5 @@
 name: Debris
 type: class
-category: Utility
 memory_category: Instances
 summary: |
   Allows scheduling the guaranteed destruction of an object without yielding.  
@@ -80,7 +79,7 @@ properties:
 
       This property is currently restricted and will error if set. The value is
       hardcoded to 1,000 items.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - Deprecated
@@ -117,7 +116,7 @@ methods:
     parameters:
       - name: item
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Instance` to add to `Class.Debris`.
       - name: lifetime
@@ -126,29 +125,30 @@ methods:
         summary: |
           Number of seconds before the `Class.Instance` should be destroyed.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: Debris:addItem
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: item
         type: Instance
-        default:
+        default: ''
         summary: ''
       - name: lifetime
         type: double
         default: 10
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -157,7 +157,8 @@ methods:
       should be used instead.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 events: []
 callbacks: []

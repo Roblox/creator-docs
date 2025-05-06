@@ -1,6 +1,5 @@
 name: HandleAdornment
 type: class
-category:
 memory_category: Instances
 summary: |
   HandleAdornment is an abstract class inherited by 3D handle adornments.
@@ -8,7 +7,7 @@ description: |
   **Note:** For handles to be interactive, they must be parented to a player's
   `Class.PlayerGui` or the `Class.CoreGui`. **HandleAdornment** is an abstract
   class inherited by 3D handle adornments.
-code_samples:
+code_samples: []
 inherits:
   - PVAdornment
 tags:
@@ -19,7 +18,7 @@ properties:
     summary: |
       Determines whether to automatically cull the adornment.
     description: ''
-    code_samples:
+    code_samples: []
     type: AdornCullingMode
     tags: []
     deprecation_message: ''
@@ -44,8 +43,8 @@ properties:
       adornment will still draw on top. The one exception to this behavior is if
       the `Class.HandleAdornment.ZIndex` of the adornment is set to -1. If this
       is the case, the adornment will always draw behind 3D geometry.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -69,7 +68,7 @@ properties:
       be forward relative to the adornee. The offset and rotation of this CFrame
       is applied after any translations due to
       `Class.HandleAdornment.SizeRelativeOffset`.
-    code_samples:
+    code_samples: []
     type: CFrame
     tags: []
     deprecation_message: ''
@@ -102,7 +101,7 @@ properties:
       adornment will be drawn with its center at the exact top of the adornee.
       If set to (1,1,1), the adornment will be drawn in the upper corner of the
       adornee.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -133,7 +132,7 @@ properties:
       If set to -1, ZIndex will force the adornment to draw behind other
       adornments and objects in the Workspace, even if the
       `Class.HandleAdornment.AlwaysOnTop` property for the adornment is true.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -157,13 +156,13 @@ events:
     description: |
       Fires when a user presses down on their left mouse button while hovering
       over the adornment.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: HandleAdornment.MouseButton1Up
     summary: |
@@ -172,38 +171,38 @@ events:
     description: |
       Fires when a user releases their left mouse button while hovering over the
       adornment.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: HandleAdornment.MouseEnter
     summary: |
       Fires when a user moves their mouse over the adornment.
     description: |
       Fires when a user moves their mouse over the adornment.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: HandleAdornment.MouseLeave
     summary: |
       Fires when a user moves their mouse out of the adornment.
     description: |
       Fires when a user moves their mouse out of the adornment.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 callbacks: []

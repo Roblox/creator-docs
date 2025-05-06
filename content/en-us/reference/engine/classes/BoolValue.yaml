@@ -1,13 +1,12 @@
 name: BoolValue
 type: class
-category: Values
 memory_category: Instances
 summary: |
   A container object for a single boolean value.
 description: |
   An instance which is used to hold a boolean value. The value can be used for
   many things, including to communicate between scripts.
-code_samples:
+code_samples: []
 inherits:
   - ValueBase
 tags: []
@@ -18,8 +17,8 @@ properties:
       Used to hold a boolean value.
     description: |
       Used to hold a boolean value.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -55,24 +54,23 @@ events:
       - BoolValue-Changed1
     parameters:
       - name: value
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           The new value after the change.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: BoolValue.changed
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -80,7 +78,6 @@ events:
       This event is a deprecated variant of `Class.BoolValue.Changed` which
       should be used instead.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

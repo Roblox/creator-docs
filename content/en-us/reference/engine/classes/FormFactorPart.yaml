@@ -1,6 +1,5 @@
 name: FormFactorPart
 type: class
-category:
 memory_category: Instances
 summary: |
   The FormFactorPart class is an abstract class. It inherits from the BasePart
@@ -9,7 +8,7 @@ description: |
   The FormFactorPart class is an abstract class. It inherits from the
   `Class.BasePart` class and adds the `Class.FormFactorPart.FormFactor` property
   to classes that inherit from it.
-code_samples:
+code_samples: []
 inherits:
   - BasePart
 tags:
@@ -23,7 +22,7 @@ properties:
     description: |
       This used to specify a grid constraint of the part's size. No longer does
       anything.
-    code_samples:
+    code_samples: []
     type: FormFactor
     tags:
       - NotReplicated
@@ -45,7 +44,7 @@ properties:
     description: |
       Determines how a part acts when resized and the values that which its size
       can take.
-    code_samples:
+    code_samples: []
     type: FormFactor
     tags:
       - Hidden

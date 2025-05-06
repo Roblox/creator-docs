@@ -1,6 +1,5 @@
 name: ServiceVisibilityService
 type: class
-category:
 memory_category: Instances
 summary: ''
 description: ''
@@ -20,8 +19,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Behavior
     serialization:
@@ -37,8 +36,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Behavior
     serialization:

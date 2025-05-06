@@ -7,6 +7,8 @@ For professional development studios, setting up third-party tools and investing
 
 <Alert severity="info">
 Although this page covers several popular tools, it shouldn't be taken as a strict recommendation of them. Every team has different needs, so this page is intended to help you examine ways to improve your workflow rather than tell you to download anything in particular.
+
+Tools mentioned on this page are not maintained by Roblox and may change or stop working at any time.
 </Alert>
 
 ## The syncing problem
@@ -151,7 +153,7 @@ You might also consider adding:
 - A linter like [selene](https://github.com/Kampfkarren/selene) to catch common issues and enforce coding standards
 - A code formatter like [StyLua](https://github.com/JohnnyMorganz/StyLua)
 - A language server like [Luau Language Server](https://github.com/JohnnyMorganz/luau-lsp) for autocompletion, type checking, and more
-- [Open Cloud](../cloud/guides/index.md) scripts (not synced to Studio) to [update a published experience](/cloud/reference/Universe#Update-Universe) or [restart servers](/cloud/reference/Universe#Restart-Universe-Servers)
+- [Open Cloud](../cloud/guides/index.md) scripts (not synced to Studio) to [update a published experience](/cloud/reference/Universe#Cloud_UpdateUniverse) or [restart servers](/cloud/reference/Universe#Cloud_RestartUniverseServers)
 
 ## Assets
 

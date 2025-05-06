@@ -1,6 +1,5 @@
 name: TextChatCommand
 type: class
-category:
 memory_category: Instances
 summary: |
   Represents a text chat command.
@@ -25,7 +24,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -50,7 +49,7 @@ properties:
 
       Use this to disable default commands on a case-by-case basis.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -131,20 +130,20 @@ events:
     parameters:
       - name: originTextSource
         type: TextSource
-        default:
+        default: ''
         summary: |
           A reference to the `Class.TextSource` responsible for triggering the
           command via `Class.TextChannel:SendAsync()`.
       - name: unfilteredText
         type: string
-        default:
+        default: ''
         summary: |
           The full, unfiltered text used to trigger the command that can be used
           to dissect parameters from the command message.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Chat
     writeCapabilities: []
 callbacks: []

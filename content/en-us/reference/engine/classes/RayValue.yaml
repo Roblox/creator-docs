@@ -1,6 +1,5 @@
 name: RayValue
 type: class
-category: Values
 memory_category: Instances
 summary: |
   A container object for a single Ray.
@@ -36,7 +35,7 @@ properties:
       The stored Ray.
     description: |
       The stored Ray.
-    code_samples:
+    code_samples: []
     type: Ray
     tags: []
     deprecation_message: ''
@@ -71,23 +70,22 @@ events:
     parameters:
       - name: value
         type: Ray
-        default:
+        default: ''
         summary: |
           The value after the change.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: RayValue.changed
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
         type: Ray
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -95,7 +93,6 @@ events:
       This event is a deprecated variant of `Class.RayValue.Changed` which
       should be used instead.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

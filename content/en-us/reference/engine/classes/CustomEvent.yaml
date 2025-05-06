@@ -1,10 +1,9 @@
 name: CustomEvent
 type: class
-category:
 memory_category: Instances
 summary: ''
 description: ''
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -21,7 +20,7 @@ methods:
     description: |
       This function returns the `Class.CustomEventReceiver|CustomEventReceivers`
       that are connected to the `Class.CustomEvent`.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Instances
@@ -43,14 +42,14 @@ methods:
       This function sets the value of the `Class.CustomEvent` and fires the
       `Class.CustomEventReceiver.SourceValueChanged` event for all connected
       `CustomEventReceiver|receivers`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: newValue
         type: float
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: |
@@ -66,18 +65,17 @@ events:
       Fires when a receiver is connected to the `Class.CustomEvent`.
     description: |
       This event fires when a receiver is connected to the `Class.CustomEvent`
-    code_samples:
+    code_samples: []
     parameters:
       - name: receiver
         type: Instance
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: |
       `Class.CustomEvent|CustomEvents` have been superseded by
       `Class.BindableEvent|BindableEvents` and should not be used in new work.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: CustomEvent.ReceiverDisconnected
@@ -86,18 +84,17 @@ events:
     description: |
       This event fires when a receiver is disconnected from the
       `Class.CustomEvent`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: receiver
         type: Instance
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: |
       `Class.CustomEvent|CustomEvents` have been superseded by
       `Class.BindableEvent|BindableEvents` and should not be used in new work.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

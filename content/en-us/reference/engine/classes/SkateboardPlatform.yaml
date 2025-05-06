@@ -1,6 +1,5 @@
 name: SkateboardPlatform
 type: class
-category:
 memory_category: PhysicsParts
 summary: |
   A SkateboardPlatform can be used to create a skateboard. When characters get
@@ -12,7 +11,7 @@ description: |
   on a skateboard, they are stuck to it until they press the escape key. Until
   then, the character uses skateboard animations and travels faster than a
   walking character.
-code_samples:
+code_samples: []
 inherits:
   - Part
 tags:
@@ -28,7 +27,7 @@ properties:
       The SkateboardPlatform's active SkateboardController.
     description: |
       The SkateboardPlatform's active SkateboardController.
-    code_samples:
+    code_samples: []
     type: SkateboardController
     tags:
       - ReadOnly
@@ -54,7 +53,7 @@ properties:
       The `Class.Humanoid` that is controlling the SkateboardPlatform.
     description: |
       The `Class.Humanoid` that is controlling the SkateboardPlatform.
-    code_samples:
+    code_samples: []
     type: Humanoid
     tags:
       - ReadOnly
@@ -82,7 +81,7 @@ properties:
     description: |
       The direction of movement, tied to the keys A and D. Must be 1 (right), 0
       (straight), or -1 (left). Will refresh back to 0 unless constantly set.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: |
@@ -106,8 +105,8 @@ properties:
       If true, wheels won't roll without user input.
     description: |
       If true, wheels won't roll without user input.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: |
       The SkateboardPlatform object has been deprecated and is no longer
@@ -134,7 +133,7 @@ properties:
       The direction of movement, tied to the keys W and S. Must be an integer 1
       (forward), 0 (null), or -1 (reverse). Will refresh back to 0 unless
       constantly set.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: |
@@ -161,14 +160,14 @@ methods:
     description: |
       Adds ''impulseWorld'' to the SkateboardPlatform's
       `Class.BasePart.Velocity`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: impulseWorld
         type: Vector3
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: |
@@ -178,7 +177,8 @@ methods:
       `Class.VehicleSeat` object can be used to quickly create simple vehicles.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 events:
   - name: SkateboardPlatform.Equipped
@@ -186,17 +186,17 @@ events:
       Fired when the skateboard is equipped.
     description: |
       Fired when the skateboard is equipped.
-    code_samples:
+    code_samples: []
     parameters:
       - name: humanoid
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Humanoid` associated with the character equipping the
           skateboard.
       - name: skateboardController
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.SkateboardController`.
     tags: []
@@ -206,8 +206,8 @@ events:
       vehicles are advised to program their own systems. Additionally, the
       `Class.VehicleSeat` object can be used to quickly create simple vehicles.
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: SkateboardPlatform.MoveStateChanged
     summary: |
@@ -218,16 +218,16 @@ events:
       Fired when the SkateboardPlatform's
       `Class.SkateboardPlatform.ControllingHumanoid` changes the force being
       used on the SkateboardPlatform.
-    code_samples:
+    code_samples: []
     parameters:
       - name: newState
         type: MoveState
-        default:
+        default: ''
         summary: |
           The new `Enum.MoveState`.
       - name: oldState
         type: MoveState
-        default:
+        default: ''
         summary: |
           The old `Enum.MoveState`.
     tags: []
@@ -237,19 +237,19 @@ events:
       vehicles are advised to program their own systems. Additionally, the
       `Class.VehicleSeat` object can be used to quickly create simple vehicles.
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: SkateboardPlatform.Unequipped
     summary: |
       Fired whenever the skateboard is unequipped.
     description: |
       Fired whenever the skateboard is unequipped.
-    code_samples:
+    code_samples: []
     parameters:
       - name: humanoid
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Humanoid` associated with the character that unequipped the
           skateboard.
@@ -260,21 +260,21 @@ events:
       vehicles are advised to program their own systems. Additionally, the
       `Class.VehicleSeat` object can be used to quickly create simple vehicles.
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: SkateboardPlatform.equipped
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: humanoid
         type: Instance
-        default:
+        default: ''
         summary: ''
       - name: skateboardController
         type: Instance
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -282,17 +282,17 @@ events:
       This deprecated event is a variant of `Class.SkateboardPlatform.Equipped`
       which has also been deprecated. Neither event should be used in new work.
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: SkateboardPlatform.unequipped
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: humanoid
         type: Instance
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -301,7 +301,7 @@ events:
       `Class.SkateboardPlatform.Unequipped` which has also been deprecated.
       Neither event should be used in new work.
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 callbacks: []

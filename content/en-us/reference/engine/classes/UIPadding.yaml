@@ -1,6 +1,5 @@
 name: UIPadding
 type: class
-category: GUI
 memory_category: Instances
 summary: |
   Applies padding to the borders of the parent `Class.GuiObject`.
@@ -8,7 +7,7 @@ description: |
   `Class.UIPadding` applies padding to the borders of the parent
   `Class.GuiObject`, either as a pixel amount (`Datatype.UDim.Offset|Offset`) or
   percentage of the parent's size (`Datatype.UDim.Scale|Scale`).
-code_samples:
+code_samples: []
 inherits:
   - UIComponent
 tags: []
@@ -19,7 +18,7 @@ properties:
       Padding to apply on the bottom side, relative to the parent's normal size.
     description: |
       Padding to apply on the bottom side, relative to the parent's normal size.
-    code_samples:
+    code_samples: []
     type: UDim
     tags: []
     deprecation_message: ''
@@ -39,7 +38,7 @@ properties:
       Padding to apply on the left side, relative to the parent's normal size.
     description: |
       Padding to apply on the left side, relative to the parent's normal size.
-    code_samples:
+    code_samples: []
     type: UDim
     tags: []
     deprecation_message: ''
@@ -59,7 +58,7 @@ properties:
       Padding to apply on the right side, relative to the parent's normal size.
     description: |
       Padding to apply on the right side, relative to the parent's normal size.
-    code_samples:
+    code_samples: []
     type: UDim
     tags: []
     deprecation_message: ''
@@ -79,7 +78,7 @@ properties:
       Padding to apply on the top side, relative to the parent's normal size.
     description: |
       Padding to apply on the top side, relative to the parent's normal size.
-    code_samples:
+    code_samples: []
     type: UDim
     tags: []
     deprecation_message: ''

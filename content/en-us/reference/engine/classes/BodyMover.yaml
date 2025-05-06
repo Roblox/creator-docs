@@ -1,6 +1,5 @@
 name: BodyMover
 type: class
-category:
 memory_category: Instances
 summary: |
   Base class for objects that continually exert forces to parts.
@@ -27,7 +26,7 @@ description: |
   An exception is the `Class.RocketPropulsion` class, which exerts **both**
   translational and rotational forces to cause a part to track down another
   part.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

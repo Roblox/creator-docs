@@ -1,6 +1,5 @@
 name: UnreliableRemoteEvent
 type: class
-category:
 memory_category: Instances
 summary: |
   An object which facilitates asynchronous, unordered and unreliable, one-way
@@ -76,19 +75,20 @@ methods:
     parameters:
       - name: arguments
         type: Tuple
-        default:
+        default: ''
         summary: |
           Values to pass to all
           `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` events
           connected to the same `Class.UnreliableRemoteEvent`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - RemoteEvent
     writeCapabilities: []
   - name: UnreliableRemoteEvent:FireClient
     summary: |
@@ -121,24 +121,25 @@ methods:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: |
           The client of the `Class.Player` to fire the event to.
       - name: arguments
         type: Tuple
-        default:
+        default: ''
         summary: |
           Values to pass to
           `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` events
           connected to the same `Class.UnreliableRemoteEvent`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - RemoteEvent
     writeCapabilities: []
   - name: UnreliableRemoteEvent:FireServer
     summary: |
@@ -168,19 +169,20 @@ methods:
     parameters:
       - name: arguments
         type: Tuple
-        default:
+        default: ''
         summary: |
           Values to pass to
           `Class.UnreliableRemoteEvent.OnServerEvent|OnServerEvent` events
           connected to the same `Class.UnreliableRemoteEvent`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - RemoteEvent
     writeCapabilities: []
 events:
   - name: UnreliableRemoteEvent.OnClientEvent
@@ -208,7 +210,7 @@ events:
     parameters:
       - name: arguments
         type: Tuple
-        default:
+        default: ''
         summary: |
           The parameters sent through
           `Class.UnreliableRemoteEvent:FireClient()|FireClient()` or
@@ -216,8 +218,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - RemoteEvent
     writeCapabilities: []
   - name: UnreliableRemoteEvent.OnServerEvent
     summary: |
@@ -242,21 +244,21 @@ events:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` associated with the client that the
           `Class.UnreliableRemoteEvent:FireServer()|FireServer()` call
           originates from.
       - name: arguments
         type: Tuple
-        default:
+        default: ''
         summary: |
           The parameters sent through
           `Class.UnreliableRemoteEvent:FireServer()|FireServer()`.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - RemoteEvent
     writeCapabilities: []
 callbacks: []

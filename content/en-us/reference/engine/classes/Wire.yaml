@@ -1,6 +1,5 @@
 name: Wire
 type: class
-category:
 memory_category: Instances
 summary: |
   Connects one or more `Class.Instance|Instances` to form a processing graph of
@@ -34,6 +33,7 @@ description: |
   - `Class.AudioPitchShifter`
   - `Class.AudioPlayer`
   - `Class.AudioReverb`
+  - `Class.AudioTextToSpeech`
 code_samples: []
 inherits:
   - Instance
@@ -53,7 +53,7 @@ properties:
       invalid since they can result in infinite computation; attempting to
       create one will log an error.
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated

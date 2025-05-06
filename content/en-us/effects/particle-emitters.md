@@ -53,15 +53,12 @@ If you're creating an image to use as a particle texture, it's best to use `.png
 
 <Alert severity="info">
 For steps on how to import an image for use as a particle texture,
-see [Import assets](../projects/assets/manager.md#import-assets).
+see [here](../projects/assets/manager.md#asset-import).
 </Alert>
 
 To insert an image into a particle emitter:
 
-1. In the menu bar, navigate to the **Home** tab and select **Toolbox**. The **Toolbox** window displays.
-
-   <img src="../assets/studio/general/Home-Tab-Toolbox.png" width="716" alt="Toolbox indicated in Home tab" />
-
+1. Navigate to the toolbar's **Home** tab and select **Toolbox**. The **Toolbox** window displays.
 2. If you want to insert an image that you have previously imported, click the **Inventory** tab. If you want to insert an image from another creator, click the **Creator Store** tab.
 
    <img src="../assets/studio/toolbox/Inventory-Tab.png" width="360" alt="Inventory tab indicated in Studio's Toolbox" />

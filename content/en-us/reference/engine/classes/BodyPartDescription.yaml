@@ -1,6 +1,5 @@
 name: BodyPartDescription
 type: class
-category:
 memory_category: Instances
 summary: |
   Describes the appearance of an avatar body part for the

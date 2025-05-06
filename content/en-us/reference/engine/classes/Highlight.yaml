@@ -1,6 +1,5 @@
 name: Highlight
 type: class
-category:
 memory_category: Instances
 summary: |
   A visual effect which you can use to call attention to a specific object
@@ -51,7 +50,7 @@ description: |
   `Class.Highlight.Enabled|Enabled` set to `false` doesn't display, it still
   takes one of the 31 available slots, so if you plan to permanently disable a
   `Class.Highlight` instance, it's best to delete it rather than disable it.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -117,7 +116,7 @@ properties:
         </tr>
       </tbody>
       </table>
-    code_samples:
+    code_samples: []
     type: HighlightDepthMode
     tags: []
     deprecation_message: ''
@@ -139,8 +138,8 @@ properties:
       performance, but disabled `Class.Highlight` instances will still take one
       of the 31 available slots. If you plan to permanently disable a
       `Class.Highlight` instance, it's best to delete it rather than disable it.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -183,7 +182,7 @@ properties:
         </tr>
       </tbody>
       </table>
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -230,7 +229,7 @@ properties:
         </tr>
       </tbody>
       </table>
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -274,7 +273,7 @@ properties:
         </tr>
       </tbody>
       </table>
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -315,7 +314,7 @@ properties:
         </tr>
       </tbody>
       </table>
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

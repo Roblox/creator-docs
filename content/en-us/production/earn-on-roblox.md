@@ -22,7 +22,7 @@ This page provides information about different ways to earn on Roblox and how to
 
 ## Economy powered by creators
 
-We are building one of the world's largest immersive platforms with 85.3M global daily active users (DAUs) in 16 languages across 190 countries, available across platforms including mobile, desktop, consoles, and VR headsets. In 2024, approximately 60% of our daily active users were 13 and over, and users aged 17 and over accounted for 44% of our daily active users. In 2024, our community visited over 14 million experiences, and in the fourth quarter of 2024 alone, users spent 18.7 billion hours on our platform.
+We are building one of the world's largest immersive platforms with 85.3M global daily active users (DAUs) in 17 languages across 180 countries, available across platforms including mobile, desktop, consoles, and VR headsets. In 2024, approximately 60% of our daily active users were 13 and over, and users aged 17 and over accounted for 44% of our daily active users. In 2024, our community visited over 14 million experiences, and in the fourth quarter of 2024 alone, users spent 18.7 billion hours on our platform.
 
 <GridContainer numColumns="2">
 <figure>

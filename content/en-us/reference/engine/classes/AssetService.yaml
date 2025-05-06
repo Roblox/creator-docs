@@ -1,6 +1,5 @@
 name: AssetService
 type: class
-category: Data
 memory_category: Instances
 summary: |
   A non-replicated service that handles asset-related queries to the Roblox web
@@ -8,7 +7,7 @@ summary: |
 description: |
   **AssetService** is a non-replicated service that handles asset-related
   queries to the Roblox web API.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -31,14 +30,14 @@ methods:
     parameters:
       - name: editableImageOptions
         type: Dictionary?
-        default:
+        default: ''
         summary: |
           Options table containing controls for the method:
 
           - `Size` – A `Datatype.Vector2` that specifies the image's desired
             width and height.
     returns:
-      - type: Object
+      - type: EditableImage
         summary: ''
     tags: []
     deprecation_message: ''
@@ -58,14 +57,14 @@ methods:
     parameters:
       - name: editableMeshOptions
         type: Dictionary?
-        default:
+        default: ''
         summary: |
           Table containing options for the created `Class.EditableMesh`.
           Currently no options are available since
           `Class.EditableMesh.FixedSize|FixedSize` will always be `false` for
           empty editable meshes.
     returns:
-      - type: Object
+      - type: EditableMesh
         summary: ''
     tags: []
     deprecation_message: ''
@@ -73,22 +72,21 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: AssetService:CanEditAssetAsync
+  - name: AssetService:CreateSurfaceAppearance
     summary: ''
     description: ''
     code_samples: []
     parameters:
       - name: content
-        type: Content
-        default:
+        type: Dictionary
+        default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: SurfaceAppearance
         summary: ''
-    tags:
-      - Yields
+    tags: []
     deprecation_message: ''
-    security: RobloxScriptSecurity
+    security: None
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
@@ -105,12 +103,12 @@ methods:
     parameters:
       - name: object
         type: Object
-        default:
+        default: ''
         summary: |
           The object to be created as an asset.
       - name: assetType
         type: AssetType
-        default:
+        default: ''
         summary: |
           Currently supported types are:
 
@@ -163,12 +161,12 @@ methods:
     parameters:
       - name: object
         type: Object
-        default:
+        default: ''
         summary: |
           The object to be created as an asset.
       - name: assetType
         type: AssetType
-        default:
+        default: ''
         summary: |
           Currently supported types are:
 
@@ -182,7 +180,7 @@ methods:
             `Class.EditableImage` root.
       - name: assetId
         type: int64
-        default:
+        default: ''
         summary: |
           The ID of the asset for the new version.
       - name: requestParameters
@@ -231,20 +229,20 @@ methods:
     parameters:
       - name: content
         type: Content
-        default:
+        default: ''
         summary: |
           Reference to asset content stored externally or as an object within
           the place, wrapping a single value of one of the supported
           `Enum.ContentSourceType` values.
       - name: editableImageOptions
         type: Dictionary?
-        default:
+        default: ''
         summary: |
           Table containing options for the created `Class.EditableImage`.
           Currently no options are available since resizing via
           `Class.EditableImage.Size|Size` is not supported.
     returns:
-      - type: Object
+      - type: EditableImage
         summary: |
           A new `Class.EditableImage` containing the provided image.
     tags:
@@ -276,14 +274,14 @@ methods:
     parameters:
       - name: content
         type: Content
-        default:
+        default: ''
         summary: |
           Reference to asset content stored externally or as an object within
           the place, wrapping a single value of one of the supported
           `Enum.ContentSourceType` values.
       - name: editableMeshOptions
         type: Dictionary?
-        default:
+        default: ''
         summary: |
           Options table containing controls for the method:
 
@@ -292,7 +290,7 @@ methods:
             only modify their values. Set to `false` if the ability to change
             the mesh topology is required, at the expense of using more memory.
     returns:
-      - type: Object
+      - type: EditableMesh
         summary: |
           The new `Class.EditableMesh` instance.
     tags:
@@ -318,7 +316,7 @@ methods:
     parameters:
       - name: meshContent
         type: Content
-        default:
+        default: ''
         summary: |
           Reference to asset content stored externally or as an object within
           the place, wrapping a single value of one of the supported
@@ -369,16 +367,16 @@ methods:
       quickly becomes infeasible. For user-generated worlds, consider
       serializing user creations and saving them in `Class.DataStore|DataStores`
       instead.
-    code_samples:
+    code_samples: []
     parameters:
       - name: placeName
         type: string
-        default:
+        default: ''
         summary: |
           Name of the new place.
       - name: templatePlaceID
         type: int64
-        default:
+        default: ''
         summary: |
           `Class.DataModel.PlaceId|PlaceId` of the place to clone.
       - name: description
@@ -402,19 +400,19 @@ methods:
       Clones a place through the given `templatePlaceID` and puts it into the
       inventory of the given player.
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: ''
       - name: placeName
         type: string
-        default:
+        default: ''
         summary: ''
       - name: templatePlaceID
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: description
         type: string
@@ -436,11 +434,11 @@ methods:
       Returns an array of asset IDs that are contained in a specified package.
     description: |
       Returns an array of asset IDs that are contained in a specified package.
-    code_samples:
+    code_samples: []
     parameters:
       - name: packageAssetId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -464,7 +462,7 @@ methods:
     parameters:
       - name: idList
         type: Array
-        default:
+        default: ''
         summary: |
           Array of asset or content IDs for which to retrieve metadata. Max
           batch size is 30.
@@ -512,7 +510,7 @@ methods:
     parameters:
       - name: bundleId
         type: int64
-        default:
+        default: ''
         summary: |
           The ID of the specified bundle.
     returns:
@@ -553,11 +551,11 @@ methods:
       account who created the _creationID_ asset.
 
       This member is broken and doesn't function correctly. Avoid using it.
-    code_samples:
+    code_samples: []
     parameters:
       - name: creationID
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: int64
@@ -606,18 +604,18 @@ methods:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: |
           The user who submits an asset creation.
       - name: instance
         type: Instance
-        default:
+        default: ''
         summary: |
           The asset to be created. Currently can't contain scripts or nest
           non-public assets.
       - name: assetType
         type: AssetType
-        default:
+        default: ''
         summary: |
           The asset type. Currently can only be `Enum.AssetType.Model`.
     returns:
@@ -638,11 +636,11 @@ methods:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: ''
       - name: progressCallback
         type: Function
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Tuple
@@ -661,10 +659,10 @@ methods:
       Saves the state of the current place. Only works for places that are
       created with `Class.AssetService:CreatePlaceAsync()` or which have the API
       enabled through place settings.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields
@@ -707,7 +705,7 @@ methods:
     parameters:
       - name: searchParameters
         type: AudioSearchParams
-        default:
+        default: ''
         summary: ''
     returns:
       - type: AudioPages

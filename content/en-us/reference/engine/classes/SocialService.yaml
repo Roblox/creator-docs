@@ -1,6 +1,5 @@
 name: SocialService
 type: class
-category:
 memory_category: Instances
 summary: |
   Facilitates social functions that impact relationships made on the Roblox
@@ -13,7 +12,7 @@ description: |
   friends through `Class.SocialService:PromptGameInvite()|PromptGameInvite()`
   and `Class.SocialService:PromptPhoneBook()|PromptPhoneBook()` respectively.
   You may leverage signals when such requests are made.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -30,7 +29,7 @@ methods:
     parameters:
       - name: partyId
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instances
@@ -47,10 +46,10 @@ methods:
     description: |
       Hides the calling player's self view. If this method is called while the
       self view is already hidden, it does nothing.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -70,10 +69,6 @@ methods:
       determine whether the player can send an invite, as this ability may vary
       depending on the platform or player.
 
-      <img
-      src="../../../assets/promotion/invite-prompts/Prompt-Multiple-Friends-Custom-Message.png"
-      width="806" />
-
       See
       [Player Invite Prompts](../../../production/promotion/invite-prompts.md)
       for more details on implementing invite prompts, customizing prompts and
@@ -83,7 +78,7 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Player` to prompt with the invite popup.
       - name: experienceInviteOptions
@@ -93,7 +88,7 @@ methods:
           Optional `Class.ExperienceInviteOptions` object for customizing the
           prompt.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -123,18 +118,18 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: |
           The player to prompt with the phone book.
       - name: tag
         type: string
-        default:
+        default: ''
         summary: |
           String to help differentiate between various phone book "entry points"
           or similar. For example, you can pass a string defining what region of
           an experience the calling player's character is currently in.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -148,7 +143,7 @@ methods:
     description: |
       Shows the calling player's self view. If this method is called while the
       self view is already visible, it does nothing.
-    code_samples:
+    code_samples: []
     parameters:
       - name: selfViewPosition
         type: SelfViewPosition
@@ -156,29 +151,11 @@ methods:
         summary: |
           The position to place the self view .
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: SocialService:UpdatePlayerPartyData
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: partyId
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
@@ -199,12 +176,12 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Player` instance of the player potentially sending a call
           invite.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the specified player can send a call invite.
     tags:
@@ -234,7 +211,7 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Player` instance of the player potentially sending an
           invite.
@@ -245,9 +222,28 @@ methods:
           Optional `Class.Player.UserId` of the potential **recipient**, used to
           check whether the sender can invite that specific recipient.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the specified player can send an invite.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: SocialService:GetPartyAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: partyId
+        type: string
+        default: ''
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
     tags:
       - Yields
     deprecation_message: ''
@@ -266,19 +262,18 @@ events:
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Player` instance of the player who had a call invite state
           change.
       - name: inviteState
         type: InviteState
-        default:
+        default: ''
         summary: |
           The new call invite state.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: SocialService.GameInvitePromptClosed
@@ -286,22 +281,21 @@ events:
       Fires when a player closes an invite prompt.
     description: |
       This event fires when a player closes an invite prompt.
-    code_samples:
+    code_samples: []
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Player` instance of the player who closed the prompt.
       - name: recipientIds
         type: Array
-        default:
+        default: ''
         summary: |
           No longer populated; an empty array.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: SocialService.PhoneBookPromptClosed
@@ -309,32 +303,16 @@ events:
       Fires when a player closes the phone book prompt.
     description: |
       Fires when a player closes the phone book prompt.
-    code_samples:
+    code_samples: []
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Player` instance of the player who closed the phone book.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: SocialService.PlayerPartyDataChanged
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: partyId
-        type: string
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks:
@@ -352,12 +330,12 @@ callbacks:
     parameters:
       - name: tag
         type: string
-        default:
+        default: ''
         summary: |
           String to help differentiate between various phone book entry points.
       - name: callParticipantIds
         type: Array
-        default:
+        default: ''
         summary: |
           Array containing all of the players involved in the call. The caller
           will always be the first player in the array.

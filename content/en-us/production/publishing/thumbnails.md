@@ -5,12 +5,12 @@ description: Thumbnail images and videos appear on the Roblox home page and at t
 
 Thumbnails appear on Roblox's [Home](https://www.roblox.com/home) page and at the top of your experience's detail page, allowing you to showcase your experience's features and announce updates or events.
 
-<img src="../../assets/publishing/experience-metadata/Thumbnail-Example.jpg" alt="Example of a thumbnail on an experience's detail page" />
+<img src="../../assets/publishing/experiences-places-assets/Experience-Page-Example.jpg" width="1120" />
 
 To access your thumbnails:
 
 1. In the [Creator Dashboard](https://create.roblox.com/dashboard/creations), select the experience you want to upload a thumbnail for.
-2. Go to **Configure** > **Places** and select a place.
+2. Go to **Configure** &rang; **Places** and select a place.
 3. Click **Thumbnails**. Use the **Home Page** tab and the **Experience Detail Page** tab to customize your experience's thumbnails for these two spaces.
 
 <Alert severity="info">
@@ -44,7 +44,7 @@ To set up thumbnail personalization:
 3. Click **Save changes**.
 4. In the **Start new thumbnail personalization?** dialog, click **Start**. The banner in the **Home Page** tab updates to indicate that thumbnail personalization is active.
 
-<img src="../../assets/publishing/experience-thumbnails/Thumbnail-Home-Page-Tab.png" alt="Example of the Home Page tab" />
+<img src="../../assets/publishing/experience-metadata/Thumbnail-Home-Page-Tab.png" alt="Example of the Home Page tab" />
 
 ### Keep multiple thumbnails active
 
@@ -54,7 +54,7 @@ To get the most out of thumbnail personalization, make sure to **keep multiple t
 
 For example, if you had removed the thumbnail associated with the green line in the chart below too early, you would have missed future additional impressions for what ended up becoming your second-best performing thumbnail.
 
-<img src="../../assets/publishing/experience-thumbnails/Thumbnail-Impressions-Graph.png" width="75%" alt="Example of the Impression by Thumbnail graph" />
+<img src="../../assets/publishing/experience-metadata/Thumbnail-Impressions-Graph.png" width="75%" alt="Example of the Impression by Thumbnail graph" />
 
 We recommend testing multiple new thumbnails with any major experience or content update, and then not making changes to your thumbnails until your experience's next update.
 
@@ -180,7 +180,9 @@ Free camera mode is a useful tool to capture in-experience screenshots and video
 
 1. Go to an experience where you have server-side [Developer Console](../../studio/developer-console.md) access.
 
-2. In the **Home** tab of the menu bar, go to the **Test** section and click **Play**.
+2. Click the **Play** button from the playtesting options.
+
+   <img src="../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Play button highlighted in Studio's playtesting options." width="228" />
 
 3. Press <kbd>Left Shift</kbd> and <kbd>P</kbd>.
 

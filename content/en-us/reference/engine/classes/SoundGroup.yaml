@@ -1,6 +1,5 @@
 name: SoundGroup
 type: class
-category: Sounds
 memory_category: Internal
 summary: |
   A `Class.SoundGroup` is used to manage the volume and sound effects on
@@ -26,7 +25,7 @@ description: |
 
   See [Sound Groups](../../../sound/groups.md) for further details on working
   with the `Class.SoundGroup` class.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []

@@ -1,6 +1,5 @@
 name: SurfaceAppearance
 type: class
-category:
 memory_category: Instances
 summary: |
   An object that allows developers to override the appearance of a MeshPart with
@@ -26,7 +25,7 @@ description: |
   Note that most `Class.SurfaceAppearance` properties cannot be modified by
   scripts, as the necessary pre-processing is usually too expensive during
   runtime.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -54,7 +53,7 @@ properties:
 
       See [here](../../../art/modeling/surface-appearance.md#alpha-modes) for
       more information.
-    code_samples:
+    code_samples: []
     type: AlphaMode
     tags: []
     deprecation_message: ''
@@ -102,12 +101,31 @@ properties:
 
       See [here](../../../art/modeling/surface-appearance.md#color-albedo) for
       more information.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
     security:
       read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
+  - name: SurfaceAppearance.ColorMapContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags:
+      - Hidden
+    deprecation_message: ''
+    security:
+      read: None
       write: PluginSecurity
     thread_safety: ReadSafe
     category: Appearance
@@ -139,12 +157,31 @@ properties:
 
       See [here](../../../art/modeling/surface-appearance.md#metalness) for more
       information.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
     security:
       read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
+  - name: SurfaceAppearance.MetalnessMapContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags:
+      - Hidden
+    deprecation_message: ''
+    security:
+      read: None
       write: PluginSecurity
     thread_safety: ReadSafe
     category: Appearance
@@ -196,12 +233,31 @@ properties:
 
       See [here](../../../art/modeling/surface-appearance.md#normal) for more
       information.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
     security:
       read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
+  - name: SurfaceAppearance.NormalMapContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags:
+      - Hidden
+    deprecation_message: ''
+    security:
+      read: None
       write: PluginSecurity
     thread_safety: ReadSafe
     category: Appearance
@@ -226,12 +282,31 @@ properties:
 
       See [here](../../../art/modeling/surface-appearance.md#roughness) for more
       information.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
     security:
       read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
+  - name: SurfaceAppearance.RoughnessMapContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags:
+      - Hidden
+    deprecation_message: ''
+    security:
+      read: None
       write: PluginSecurity
     thread_safety: ReadSafe
     category: Appearance
@@ -249,8 +324,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Appearance
     serialization:

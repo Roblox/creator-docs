@@ -1,6 +1,5 @@
 name: Humanoid
 type: class
-category: Avatar
 memory_category: Instances
 summary: |
   A special object that gives models the functionality of a character.
@@ -68,7 +67,7 @@ properties:
       the `Class.StarterPlayer.AutoJumpEnabled` property.
     code_samples:
       - Auto-Jump-Toggle
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -124,7 +123,7 @@ properties:
       </table>
     code_samples:
       - AutoRotate
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -149,8 +148,8 @@ properties:
       `BodyWidthScale`, `HeadScale`. Changing the value of any of these causes
       the character's body parts and accessories to change size, but only if
       `AutomaticScalingEnabled` is true.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -171,8 +170,8 @@ properties:
     description: |
       Determines whether the humanoid's joints break when in the
       `Enum.HumanoidStateType.Dead` state. Defaults to true.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -257,7 +256,7 @@ properties:
       			<td>Fixed size collision boxes, similar to the classic avatar collision</td>
       		</tr>
       </table>
-    code_samples:
+    code_samples: []
     type: HumanoidCollisionType
     tags:
       - Deprecated
@@ -336,7 +335,7 @@ properties:
       override the `DisplayName` property of the Humanoid with the `DisplayName`
       property of the player if the `Class.Humanoid.DisplayName` of
       `StarterHumanoid` is an empty string.
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -355,7 +354,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -405,7 +404,7 @@ properties:
         - You cannot test if the `Class.Humanoid` is swimming with this
           property. You should instead use its `Class.Humanoid:GetState()`
           function.
-    code_samples:
+    code_samples: []
     type: Material
     tags:
       - ReadOnly
@@ -464,7 +463,7 @@ properties:
       this state, `Class.Humanoid.Health|Health` is locked to 0; however, there
       is no error or warning for setting the `Class.Humanoid.Health|Health` of a
       dead humanoid to a positive nonzero value.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -494,7 +493,7 @@ properties:
       [Character Name/Health Display](../../../characters/name-health-display.md)
       for an in-depth guide on controlling the appearance of character names and
       health bars.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -535,7 +534,7 @@ properties:
       [Character Name/Health Display](../../../characters/name-health-display.md)
       for an in-depth guide on controlling the appearance of character names and
       health bars.
-    code_samples:
+    code_samples: []
     type: HumanoidHealthDisplayType
     tags: []
     deprecation_message: ''
@@ -576,7 +575,7 @@ properties:
       ```lua
       Height = LeftLeg.Size.Y + (0.5 * RootPart.Size.Y) + HipHeight
       ```
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -599,8 +598,8 @@ properties:
       value of `Class.Humanoid.JumpPower` or the height of
       `Class.Humanoid.JumpHeight`, depending on the value of
       `Class.Humanoid.UseJumpPower`.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''
@@ -632,7 +631,7 @@ properties:
       [Properties](../../../studio/properties.md) window if
       `Class.Humanoid.UseJumpPower` is set to **false**, as it would not be
       relevant otherwise (instead, `Class.Humanoid.JumpPower` is used).
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -668,7 +667,7 @@ properties:
       [Properties](../../../studio/properties.md) window if
       `Class.Humanoid.UseJumpPower` is set to **true**, as it would not be
       relevant otherwise (instead, `Class.Humanoid.JumpHeight` is used).
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -688,8 +687,8 @@ properties:
       A reference to the humanoid's _Left Leg_ part.
     description: |
       A reference to the humanoid's _Left Leg_ part. The value of this property
-      will always be nil if the humanoid's `Enum.RigType` is set to R15.
-    code_samples:
+      will always be `nil` if the humanoid's `Enum.RigType` is set to R15.
+    code_samples: []
     type: BasePart
     tags:
       - Hidden
@@ -721,7 +720,7 @@ properties:
       `Class.Humanoid.MaxHealth|MaxHealth`, its health bar may not be displayed,
       depending on its `Class.Humanoid.HealthDisplayType|HealthDisplayType`
       property.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -807,7 +806,7 @@ properties:
       [Character Name/Health Display](../../../characters/name-health-display.md)
       for an in-depth guide on controlling the appearance of character names and
       health bars.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -866,8 +865,8 @@ properties:
       is in a state where it is free-falling and cannot move. This state behaves
       similar to sitting, except that jumping does not free the humanoid from
       the state.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -890,8 +889,8 @@ properties:
       Allows developers to disable the behavior where a player
       `Character|character` dies if the Neck `Class.Motor6D` is removed or
       disconnected even momentarily. This property defaults to true.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -921,7 +920,7 @@ properties:
       not function correctly. For example, if a R15 humanoid's **RigType** is
       set to R6, the `Class.Humanoid` will die as there is no `Class.BasePart`
       called **Torso** connected to a `Class.BasePart` called **Head**.
-    code_samples:
+    code_samples: []
     type: HumanoidRigType
     tags: []
     deprecation_message: ''
@@ -941,8 +940,8 @@ properties:
       A reference to the humanoid's _Right Leg_ part.
     description: |
       A reference to the humanoid's _Right Leg_ part. The value of this property
-      will always be nil if the humanoid's RigType is set to R15.
-    code_samples:
+      will always be `nil` if the humanoid's RigType is set to R15.
+    code_samples: []
     type: BasePart
     tags:
       - Hidden
@@ -974,7 +973,7 @@ properties:
       `Class.Player.Character` model is set to **HumanoidRootPart**.
 
       For R6 characters, `Class.Model.PrimaryPart` is set to the `Head` part.
-    code_samples:
+    code_samples: []
     type: BasePart
     tags:
       - ReadOnly
@@ -1005,7 +1004,7 @@ properties:
 
       - For a bool describing if the `Class.Humanoid` is currently sitting or
         not, see `Class.Humanoid.Sit`
-    code_samples:
+    code_samples: []
     type: BasePart
     tags:
       - ReadOnly
@@ -1039,8 +1038,8 @@ properties:
         on can be obtained using the `Class.Humanoid.SeatPart` property
       - It is possible to detect when a Humanoid sits by connecting to the
         `Class.Humanoid.Seated` event.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1071,7 +1070,7 @@ properties:
       classic rocket launcher, set their **TargetPoint**, and then call the
       tool's `Class.Tool:Activate()` function, you can make the NPC fire a
       rocket at the target point.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -1093,7 +1092,7 @@ properties:
       A reference to a humanoid's root driving part. Contrary to the name of
       this property, it will only point to the Torso part if a humanoid doesn't
       have a HumanoidRootPart.
-    code_samples:
+    code_samples: []
     type: BasePart
     tags:
       - Hidden
@@ -1125,8 +1124,8 @@ properties:
       is used to ensure the humanoid jumps to that height. With this set to
       false, the `Class.Humanoid.JumpPower` value is used to apply an upward
       force.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1162,7 +1161,7 @@ properties:
         studs/second.
       - The speed at which the `Class.Humanoid` is currently walking can be
         obtained using the `Class.Humanoid.Running|Running` event.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -1210,7 +1209,7 @@ properties:
         `Class.Humanoid.MoveToFinished` to fire.
       - If you don't want this to happen, you should repeatedly call MoveTo so
         that the timeout will keep resetting.
-    code_samples:
+    code_samples: []
     type: BasePart
     tags: []
     deprecation_message: ''
@@ -1271,7 +1270,7 @@ properties:
   - name: Humanoid.maxHealth
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -1321,17 +1320,18 @@ methods:
     parameters:
       - name: accessory
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Accessory` to be attached.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:AddCustomStatus
     summary: |
@@ -1340,14 +1340,14 @@ methods:
       Adds a BoolValue to the Humanoid's _Status_ object, whose name is equal to
       the string passed as the _status_ argument. If the status already exists,
       a new BoolValue will not be created.
-    code_samples:
+    code_samples: []
     parameters:
       - name: status
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -1357,7 +1357,8 @@ methods:
       not use it for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:AddStatus
     summary: |
@@ -1366,14 +1367,14 @@ methods:
       Adds a BoolValue to the Humanoid's _Status_ object, whose name is equal to
       the name of the _Status_ enum passed as the _status_ argument. If the
       status already exists, a new BoolValue will not be created.
-    code_samples:
+    code_samples: []
     parameters:
       - name: status
         type: Status
         default: Poison
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -1383,7 +1384,8 @@ methods:
       not use it for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:BuildRigFromAttachments
     summary: |
@@ -1409,13 +1411,14 @@ methods:
       - R15-Package-Importer
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:ChangeState
     summary: |
@@ -1459,13 +1462,14 @@ methods:
         summary: |
           The `Enum.HumanoidStateType` that the `Class.Humanoid` is to perform.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:EquipTool
     summary: |
@@ -1502,21 +1506,22 @@ methods:
       See also:
 
       - To unequip tools, use `Class.Humanoid:UnequipTools()`
-    code_samples:
+    code_samples: []
     parameters:
       - name: tool
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Tool` to equip.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:GetAccessories
     summary: |
@@ -1544,7 +1549,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:GetAppliedDescription
     summary: |
@@ -1566,7 +1572,7 @@ methods:
         that of the passed in server-side outfit asset.
       - `Class.Player:LoadCharacterWithHumanoidDescription()` which spawns a
         player with the look from the passed in `Class.HumanoidDescription`.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: HumanoidDescription
@@ -1575,7 +1581,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:GetBodyPartR15
     summary: |
@@ -1598,11 +1605,11 @@ methods:
       This method can be useful for games where hit location is important. For
       example, it can be used to determine if a player is hit in the leg and
       then slow them down based on the injury.
-    code_samples:
+    code_samples: []
     parameters:
       - name: part
         type: Instance
-        default:
+        default: ''
         summary: |
           The specified part being checked to see if it is an R15 body part.
     returns:
@@ -1614,7 +1621,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:GetLimb
     summary: |
@@ -1641,7 +1649,7 @@ methods:
     parameters:
       - name: part
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Part` for which the `Enum.Limb|Enum.Limb` is to be
           retrieved.
@@ -1653,7 +1661,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:GetMoveVelocity
     summary: ''
@@ -1667,7 +1676,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:GetPlayingAnimationTracks
     summary: |
@@ -1683,7 +1693,7 @@ methods:
       `Class.AnimationTrack|AnimationTracks` that have loaded but are **not
       playing**. If you want to track these you will need to index them
       manually.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Array
@@ -1694,7 +1704,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:GetState
     summary: |
@@ -1718,7 +1729,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:GetStateEnabled
     summary: |
@@ -1746,18 +1758,19 @@ methods:
     parameters:
       - name: state
         type: HumanoidStateType
-        default:
+        default: ''
         summary: |
           The given `Enum.HumanoidStateType`.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the given `Enum.HumanoidStateType` is enabled.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:GetStatuses
     summary: |
@@ -1765,7 +1778,7 @@ methods:
     description: |
       The GetStatuses method returns a table of the Humanoid's statuses, and
       custom statuses.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Array
@@ -1778,7 +1791,8 @@ methods:
       not use it for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:HasCustomStatus
     summary: |
@@ -1786,14 +1800,14 @@ methods:
     description: |
       The HasCustomStatus method returns boolean based on if custom statuses
       exist.
-    code_samples:
+    code_samples: []
     parameters:
       - name: status
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -1803,21 +1817,22 @@ methods:
       not use it for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:HasStatus
     summary: |
       Returns a boolean based on if a status exists.
     description: |
       The HasStatus method returns a boolean based on if a status exists.
-    code_samples:
+    code_samples: []
     parameters:
       - name: status
         type: Status
         default: Poison
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -1827,7 +1842,8 @@ methods:
       not use it for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:LoadAnimation
     summary: |
@@ -1836,11 +1852,11 @@ methods:
     description: |
       This method loads an `Class.Animation` onto a `Class.Humanoid`, returning
       an `Class.AnimationTrack` that can be used for playback.
-    code_samples:
+    code_samples: []
     parameters:
       - name: animation
         type: Animation
-        default:
+        default: ''
         summary: |
           The `Class.Animation` to load.
     returns:
@@ -1854,7 +1870,8 @@ methods:
       created while editing or at runtime).
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:Move
     summary: |
@@ -1892,23 +1909,24 @@ methods:
     parameters:
       - name: moveDirection
         type: Vector3
-        default:
+        default: ''
         summary: |
           The direction to walk in.
       - name: relativeToCamera
-        type: bool
+        type: boolean
         default: false
         summary: |
           Set to `true` if the `moveDirection` parameter should be taken as
           relative to the `Class.Workspace.CurrentCamera|CurrentCamera`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:MoveTo
     summary: |
@@ -1939,7 +1957,8 @@ methods:
       `Class.Humanoid:MoveTo()|MoveTo()` ends if any of the following conditions
       apply:
 
-      - The character arrives at its destination.
+      - The character arrives at its destination. There is a ~1 stud threshold
+        to account for various humanoid speeds and framerates.
 
       - The character gets stuck and the eight-second timer expires.
 
@@ -1956,7 +1975,7 @@ methods:
     parameters:
       - name: location
         type: Vector3
-        default:
+        default: ''
         summary: |
           The position to set `Class.Humanoid.WalkToPoint` to.
       - name: part
@@ -1965,13 +1984,14 @@ methods:
         summary: |
           The `Class.BasePart` to set `Class.Humanoid.WalkToPart` to.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:RemoveAccessories
     summary: |
@@ -1993,13 +2013,14 @@ methods:
       - remove-accessories-after-loading
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:RemoveCustomStatus
     summary: |
@@ -2007,14 +2028,14 @@ methods:
     description: |
       The RemoveCustomStatus method removes the defined custom status from the
       Status model in the Humanoid..
-    code_samples:
+    code_samples: []
     parameters:
       - name: status
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -2024,7 +2045,8 @@ methods:
       not use it for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:RemoveStatus
     summary: |
@@ -2032,14 +2054,14 @@ methods:
     description: |
       The RemoveStatus method removes the defined status from the Status model
       in the Humanoid.
-    code_samples:
+    code_samples: []
     parameters:
       - name: status
         type: Status
         default: Poison
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -2049,7 +2071,8 @@ methods:
       not use it for new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:ReplaceBodyPartR15
     summary: |
@@ -2065,27 +2088,28 @@ methods:
 
       The name of the part passed in should match with the name of the
       BodyPartR15 Enum passed in.
-    code_samples:
+    code_samples: []
     parameters:
       - name: bodyPart
         type: BodyPartR15
-        default:
+        default: ''
         summary: |
           The body part to replace. `Enum.BodyPartR15.Unknown` will fail.
       - name: part
         type: BasePart
-        default:
+        default: ''
         summary: |
           The `Class.Part` `Class.Instance` which will be parented to the
           character.
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:SetStateEnabled
     summary: |
@@ -2105,23 +2129,24 @@ methods:
     parameters:
       - name: state
         type: HumanoidStateType
-        default:
+        default: ''
         summary: |
           The `Enum.HumanoidStateType` to be enabled or disabled.
       - name: enabled
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           `true` if `state` is to be enabled, `false` if `state` is to be
           disabled.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:TakeDamage
     summary: |
@@ -2158,17 +2183,18 @@ methods:
     parameters:
       - name: amount
         type: float
-        default:
+        default: ''
         summary: |
           The damage, or amount to be deduced from the `Class.Humanoid.Health`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:UnequipTools
     summary: |
@@ -2194,22 +2220,23 @@ methods:
       - unequip-tool-keybind
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:loadAnimation
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: animation
         type: Animation
-        default:
+        default: ''
         summary: ''
     returns:
       - type: AnimationTrack
@@ -2221,19 +2248,20 @@ methods:
       `Class.Animator:LoadAnimation()` should be used instead.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:takeDamage
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: amount
         type: float
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -2242,7 +2270,8 @@ methods:
       which should be used instead.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:ApplyDescription
     summary: |
@@ -2275,11 +2304,11 @@ methods:
         that of the passed in server-side outfit asset.
       - `Class.Player:LoadCharacterWithHumanoidDescription()` which spawns a
         player with the look from the passed in `Class.HumanoidDescription`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: humanoidDescription
         type: HumanoidDescription
-        default:
+        default: ''
         summary: |
           The `Class.HumanoidDescription` Instance which you want to set the
           character to match.
@@ -2288,14 +2317,15 @@ methods:
         default: Default
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:ApplyDescriptionReset
     summary: |
@@ -2316,11 +2346,11 @@ methods:
       is optimized and may incorrectly apply a `Class.HumanoidDescription` if
       the character has been changed by means other than through the
       `Class.HumanoidDescription` system.
-    code_samples:
+    code_samples: []
     parameters:
       - name: humanoidDescription
         type: HumanoidDescription
-        default:
+        default: ''
         summary: |
           The `Class.HumanoidDescription` instance which you want to set the
           character to match.
@@ -2329,14 +2359,15 @@ methods:
         default: Default
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid:PlayEmote
     summary: |
@@ -2345,15 +2376,15 @@ methods:
       If the emote could not be played because the emoteName is not found in the
       HumanoidDescription, this method will give an error. The method will
       return true to indicate that the emote was played successfully.
-    code_samples:
+    code_samples: []
     parameters:
       - name: emoteName
         type: string
-        default:
+        default: ''
         summary: |
           name of the emote to play.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           successfully played.
     tags:
@@ -2361,7 +2392,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
 events:
   - name: Humanoid.AnimationPlayed
@@ -2390,15 +2422,15 @@ events:
     parameters:
       - name: animationTrack
         type: AnimationTrack
-        default:
+        default: ''
         summary: |
           The `Class.AnimationTrack` that has begun playing.
     tags:
       - Deprecated
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.ApplyDescriptionFinished
     summary: ''
@@ -2407,13 +2439,13 @@ events:
     parameters:
       - name: description
         type: HumanoidDescription
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.Climbing
     summary: |
@@ -2443,14 +2475,14 @@ events:
     parameters:
       - name: speed
         type: float
-        default:
+        default: ''
         summary: |
           The speed at which the `Class.Humanoid` is currently climbing.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.CustomStatusAdded
     summary: |
@@ -2458,11 +2490,11 @@ events:
     description: |
       The CustomStatusAdded event fires when a status is added to the Humanoid
       via the `Class.Humanoid:AddCustomStatus()` method.
-    code_samples:
+    code_samples: []
     parameters:
       - name: status
         type: string
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -2471,8 +2503,8 @@ events:
       library which would have allowed you to add conditions to a Humanoid. Do
       not use it for new work.
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.CustomStatusRemoved
     summary: |
@@ -2480,11 +2512,11 @@ events:
     description: |
       The CustomStatusRemoved event fires when a status is removed from the
       Humanoid via the `Class.Humanoid:RemoveCustomStatus()` method.
-    code_samples:
+    code_samples: []
     parameters:
       - name: status
         type: string
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -2493,8 +2525,8 @@ events:
       library which would have allowed you to add conditions to a Humanoid. Do
       not use it for new work.
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.Died
     summary: |
@@ -2514,8 +2546,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.FallingDown
     summary: |
@@ -2529,19 +2561,19 @@ events:
       `FallingDown` state is enabled. When this happens this event will fire
       with an _active_ value of _false_, and `Class.Humanoid.GettingUp` will
       fire with an _active_ value of _true_.
-    code_samples:
+    code_samples: []
     parameters:
       - name: active
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           Describes whether the `Class.Humanoid` is entering or leaving the
           `FallingDown` `Enum.HumanoidStateType`.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.FreeFalling
     summary: |
@@ -2559,19 +2591,19 @@ events:
       the state is changed while the `Class.Humanoid` is falling. For this
       reason, you should use `Class.Humanoid.StateChanged` and listen for the
       `Landed` state to work out when a `Class.Humanoid` has landed.
-    code_samples:
+    code_samples: []
     parameters:
       - name: active
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the `Freefall`
           `Enum.HumanoidStateType`.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.GettingUp
     summary: |
@@ -2591,19 +2623,19 @@ events:
       To force a `Class.Humanoid` to fall over, use the
       `Class.Humanoid:ChangeState()` function with
       `Enum.HumanoidStateType.FallingDown`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: active
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the `GettingUp`
           `Enum.HumanoidStateType`.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.HealthChanged
     summary: |
@@ -2623,14 +2655,14 @@ events:
     parameters:
       - name: health
         type: float
-        default:
+        default: ''
         summary: |
           The new value of `Class.Humanoid.Health`.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.Jumping
     summary: |
@@ -2648,19 +2680,19 @@ events:
 
       You can disable jumping using the `Class.Humanoid:SetStateEnabled()`
       function.
-    code_samples:
+    code_samples: []
     parameters:
       - name: active
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the `Jumping`
           `Enum.HumanoidStateType`.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.MoveToFinished
     summary: |
@@ -2684,8 +2716,8 @@ events:
       - humanoid-moveto-without-time-out
     parameters:
       - name: reached
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           A boolean indicating whether the `Class.Humanoid` reached is goal.
           _True_ if the `Class.Humanoid` is reached its goal, _false_ if the
@@ -2693,8 +2725,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.PlatformStanding
     summary: |
@@ -2714,19 +2746,19 @@ events:
       The PlatformStand `Enum.HumanoidStateType` was associated with the now
       disabled `Class.Platform` part. Despite this, it can still be used by
       developers.
-    code_samples:
+    code_samples: []
     parameters:
       - name: active
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the
           `PlatformStanding` `Enum.HumanoidStateType`.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.Ragdoll
     summary: |
@@ -2746,19 +2778,19 @@ events:
 
       - `Class.Humanoid.FallingDown` for the `Class.Humanoid` event connected
         with the `FallingDown` state, which behaves similarly to `Ragdoll`
-    code_samples:
+    code_samples: []
     parameters:
       - name: active
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the `Ragdoll`
           `Enum.HumanoidStateType`.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.Running
     summary: |
@@ -2784,14 +2816,14 @@ events:
     parameters:
       - name: speed
         type: float
-        default:
+        default: ''
         summary: |
           The speed at which the `Class.Humanoid` is running.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.Seated
     summary: |
@@ -2809,7 +2841,7 @@ events:
         **true** and `currentSeatPart` will be the seat they are currently
         sitting in.
       - If the character got up from a seat, the `active` parameter will be
-        **false** and `currentSeatPart` will be nil.
+        **false** and `currentSeatPart` will be `nil`.
 
       See also:
 
@@ -2820,20 +2852,20 @@ events:
       - finding-a-player-s-seat
     parameters:
       - name: active
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           True if the `Class.Humanoid` is sitting down.
       - name: currentSeatPart
         type: BasePart
-        default:
+        default: ''
         summary: |
           The seat the `Class.Humanoid` is sat in if it is sitting down.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.StateChanged
     summary: |
@@ -2859,19 +2891,19 @@ events:
     parameters:
       - name: old
         type: HumanoidStateType
-        default:
+        default: ''
         summary: |
           The humanoid's previous state type.
       - name: new
         type: HumanoidStateType
-        default:
+        default: ''
         summary: |
           The humanoid's current state type.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.StateEnabledChanged
     summary: |
@@ -2895,20 +2927,20 @@ events:
     parameters:
       - name: state
         type: HumanoidStateType
-        default:
+        default: ''
         summary: |
           The `Enum.HumanoidStateType` for which the enabled state has been
           changed.
       - name: isEnabled
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           True if the state is now enabled.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.StatusAdded
     summary: |
@@ -2920,7 +2952,7 @@ events:
     parameters:
       - name: status
         type: Status
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -2929,8 +2961,8 @@ events:
       library which would have allowed you to add conditions to a Humanoid. Do
       not use it for new work.
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.StatusRemoved
     summary: |
@@ -2942,7 +2974,7 @@ events:
     parameters:
       - name: status
         type: Status
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -2951,8 +2983,8 @@ events:
       library which would have allowed you to add conditions to a Humanoid. Do
       not use it for new work.
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.Strafing
     summary: |
@@ -2975,19 +3007,19 @@ events:
       perpendicular to the direction it is facing. This state is currently
       unused, if it is set using `Class.Humanoid:ChangeState()` the state will
       revert to `RunningNoPhysics`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: active
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the
           `StrafingNoPhysics` `Enum.HumanoidStateType`.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.Swimming
     summary: |
@@ -3011,18 +3043,18 @@ events:
         `Class.Humanoid.StateChanged` event
       - You can disable swimming using the `Class.Humanoid:SetStateEnabled()`
         function
-    code_samples:
+    code_samples: []
     parameters:
       - name: speed
         type: float
-        default:
+        default: ''
         summary: |
           The speed the `Class.Humanoid` is currently swimming at.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: Humanoid.Touched
     summary: |
@@ -3063,18 +3095,18 @@ events:
     parameters:
       - name: touchingPart
         type: BasePart
-        default:
+        default: ''
         summary: |
           The `Class.BasePart` the `Class.Humanoid` has come in contact with.
       - name: humanoidPart
         type: BasePart
-        default:
+        default: ''
         summary: |
           The limb of the `Class.Humanoid` that has been touched.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
 callbacks: []

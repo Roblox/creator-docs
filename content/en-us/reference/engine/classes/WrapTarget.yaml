@@ -1,6 +1,5 @@
 name: WrapTarget
 type: class
-category:
 memory_category: Instances
 summary: |
   The WrapTarget object defines a target. A target is the 3D body with only an
@@ -12,7 +11,7 @@ description: |
   This target, often an Avatar, is what 3D accessories (using WrapLayer) will be
   applied to, allowing multiple accessories items to naturally layer over the
   source target.
-code_samples:
+code_samples: []
 inherits:
   - BaseWrap
 tags: []
@@ -23,7 +22,7 @@ properties:
       Sets color used for the debug rendering. See `Class.WrapTarget.DebugMode`.
     description: |
       Sets color used for the debug rendering. See `Class.WrapTarget.DebugMode`
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -47,7 +46,7 @@ properties:
     description: |
       Allows switching between different debugging visualization modes for cage
       meshes.
-    code_samples:
+    code_samples: []
     type: WrapTargetDebugMode
     tags:
       - NotReplicated
@@ -80,7 +79,7 @@ properties:
       Z-fighting). A value of 0.9 (default) is a reasonable default that solves
       most of the intersections without introducing any significant body
       deformation.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

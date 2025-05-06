@@ -1,6 +1,5 @@
 name: StatsItem
 type: class
-category: Plugins
 memory_category: Instances
 summary: |
   A single performance metric.
@@ -9,7 +8,7 @@ description: |
   benchmark many of the backend components of Roblox. It cannot be created using
   `Datatype.Instance.new()`, but its value can be read by plugins. They can be
   found stored inside of the `Class.Stats` service.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -19,7 +18,7 @@ properties:
   - name: StatsItem.DisplayName
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - Hidden
@@ -42,7 +41,7 @@ methods:
       Returns the StatsItem's value.
     description: |
       Returns the StatsItem's value.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: double
@@ -58,7 +57,7 @@ methods:
       Returns the StatsItem's value as a formatted string.
     description: |
       Returns the StatsItem's value as a formatted string.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: string

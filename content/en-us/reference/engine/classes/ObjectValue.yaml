@@ -1,6 +1,5 @@
 name: ObjectValue
 type: class
-category: Values
 memory_category: Instances
 summary: |
   A container object for a reference to another instance.
@@ -33,7 +32,7 @@ properties:
       Holds a reference to an instance.
     description: |
       Holds a reference to an instance.
-    code_samples:
+    code_samples: []
     type: Instance
     tags: []
     deprecation_message: ''
@@ -72,23 +71,22 @@ events:
     parameters:
       - name: value
         type: Instance
-        default:
+        default: ''
         summary: |
           The value after the change.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: ObjectValue.changed
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
         type: Instance
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -96,7 +94,6 @@ events:
       This event is a deprecated variant of `Class.ObjectValue.Changed` which
       should be used instead.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

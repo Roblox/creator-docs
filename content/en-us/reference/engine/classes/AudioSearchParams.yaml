@@ -1,6 +1,5 @@
 name: AudioSearchParams
 type: class
-category:
 memory_category: Instances
 summary: |
   Instance to be passed to `Class.AssetService:SearchAudio()` to search for

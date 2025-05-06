@@ -1,6 +1,5 @@
 name: NumberValue
 type: class
-category: Values
 memory_category: Instances
 summary: |
   A container object for a single double-precision floating point number.
@@ -30,7 +29,7 @@ properties:
       Used to hold a double value.
     description: |
       Used to hold a double value.
-    code_samples:
+    code_samples: []
     type: double
     tags: []
     deprecation_message: ''
@@ -68,23 +67,22 @@ events:
     parameters:
       - name: value
         type: double
-        default:
+        default: ''
         summary: |
           The value after the change.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: NumberValue.changed
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
         type: double
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -92,7 +90,6 @@ events:
       This event is a deprecated variant of `Class.NumberValue.Changed` which
       should be used instead.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

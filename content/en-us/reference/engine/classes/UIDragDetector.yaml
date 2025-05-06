@@ -1,6 +1,5 @@
 name: UIDragDetector
 type: class
-category:
 memory_category: Instances
 summary: |
   Instance which facilitates and encourages interaction with UI elements in an
@@ -319,7 +318,7 @@ properties:
       If `true`, the `Class.UIDragDetector` responds to user input; if `false`,
       it does not.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -612,13 +611,13 @@ methods:
     parameters:
       - name: priority
         type: int
-        default:
+        default: ''
         summary: |
           The order of priority for functions added via this method. Higher
           values take precedence over lower values.
       - name: function
         type: Function
-        default:
+        default: ''
         summary: |
           Function for modifying or constraining proposed motion. This function
           takes in input `Datatype.UDim2` and float of **proposed** motion and
@@ -634,7 +633,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: UIDragDetector:GetReferencePosition
     summary: |
@@ -659,7 +659,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: UIDragDetector:GetReferenceRotation
     summary: |
@@ -682,7 +683,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: UIDragDetector:SetDragStyleFunction
     summary: |
@@ -710,7 +712,7 @@ methods:
     parameters:
       - name: function
         type: Function
-        default:
+        default: ''
         summary: |
           Function for monitoring
           `Class.UIDragDetector.DragContinue|DragContinue` signals. This
@@ -719,13 +721,14 @@ methods:
           in the desired space and relativity. If this function returns `nil`,
           the object will not be moved.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 events:
   - name: UIDragDetector.DragContinue
@@ -739,14 +742,14 @@ events:
     parameters:
       - name: inputPosition
         type: Vector2
-        default:
+        default: ''
         summary: |
           `Datatype.Vector2` representing the current input position.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: UIDragDetector.DragEnd
     summary: |
@@ -757,14 +760,14 @@ events:
     parameters:
       - name: inputPosition
         type: Vector2
-        default:
+        default: ''
         summary: |
           `Datatype.Vector2` representing the current input position.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: UIDragDetector.DragStart
     summary: |
@@ -775,13 +778,13 @@ events:
     parameters:
       - name: inputPosition
         type: Vector2
-        default:
+        default: ''
         summary: |
           `Datatype.Vector2` representing the current input position.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 callbacks: []

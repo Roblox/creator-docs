@@ -1,6 +1,5 @@
 name: Vector3Curve
 type: class
-category:
 memory_category: Instances
 summary: |
   Represents a 3D vector curve, grouping three `Class.FloatCurve` instances.
@@ -26,11 +25,11 @@ methods:
       Returns the three `Class.FloatCurve|FloatCurves` (X, Y, Z) at the passed
       time argument as an array of three numbers. If a channel curve is missing
       or no key is found in the curve, the channel is evaluated as `nil`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: time
         type: float
-        default:
+        default: ''
         summary: |
           Time at which to get the value.
     returns:
@@ -42,7 +41,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: Vector3Curve:X
     summary: |
@@ -52,7 +52,7 @@ methods:
       Returns the `Class.FloatCurve` controlling the X channel (the first child
       instance of type `Class.FloatCurve` named `X`). If none is found, an empty
       `Class.FloatCurve` is created.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: FloatCurve
@@ -61,7 +61,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: Vector3Curve:Y
     summary: |
@@ -71,7 +72,7 @@ methods:
       Returns the `Class.FloatCurve` controlling the Y channel (the first child
       instance of type `Class.FloatCurve` named `Y`). If none is found, an empty
       `Class.FloatCurve` is created.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: FloatCurve
@@ -80,7 +81,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: Vector3Curve:Z
     summary: |
@@ -90,7 +92,7 @@ methods:
       Returns the `Class.FloatCurve` controlling the Z channel (the first child
       instance of type `Class.FloatCurve` named `Z`). If none is found, an empty
       `Class.FloatCurve` is created.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: FloatCurve
@@ -99,7 +101,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 events: []
 callbacks: []

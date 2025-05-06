@@ -1,6 +1,5 @@
 name: ServiceProvider
 type: class
-category:
 memory_category: Instances
 summary: |
   A ServiceProvider is an abstract class, which stores, and provides certain
@@ -10,7 +9,7 @@ description: |
   A ServiceProvider is an abstract class, which stores, and provides certain
   singleton classes, depending on what inherited class you are using its members
   with.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -31,7 +30,7 @@ methods:
     parameters:
       - name: className
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instance
@@ -56,8 +55,8 @@ methods:
 
       Note:
 
-      - This function will return nil if the className parameter is an existing
-        class, but the class is not a service.
+      - This function will return `nil` if the className parameter is an
+        existing class, but the class is not a service.
       - If you attempt to fetch a service that is present under another Object,
         an error will be thrown stating that the "singleton serviceName already
         exists".
@@ -66,7 +65,7 @@ methods:
     parameters:
       - name: className
         type: string
-        default:
+        default: ''
         summary: |
           The class name of the requested service.
     returns:
@@ -82,11 +81,11 @@ methods:
   - name: ServiceProvider:getService
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: className
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instance
@@ -103,11 +102,11 @@ methods:
   - name: ServiceProvider:service
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: className
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instance
@@ -133,7 +132,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: ServiceProvider.ServiceAdded
@@ -141,16 +139,15 @@ events:
       Fired when a service is created.
     description: |
       Fired when a service is created.
-    code_samples:
+    code_samples: []
     parameters:
       - name: service
         type: Instance
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: ServiceProvider.ServiceRemoving
@@ -158,16 +155,15 @@ events:
       Fired when a service is about to be removed.
     description: |
       Fired when a service is about to be removed.
-    code_samples:
+    code_samples: []
     parameters:
       - name: service
         type: Instance
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

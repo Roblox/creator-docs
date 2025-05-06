@@ -155,13 +155,13 @@ If the raycast operation finds an object hit by the ray, it will return a `Datat
     </tbody>
 </table>
 
-The **Position** property will be the position of the object that the mouse is hovering over. If the mouse isn't hovering over any object within a distance of `MAX_MOUSE_DISTANCE`, `raycastResult` will be nil.
+The **Position** property will be the position of the object that the mouse is hovering over. If the mouse isn't hovering over any object within a distance of `MAX_MOUSE_DISTANCE`, `raycastResult` will be `nil`.
 
 1. Create an if statement to check whether `raycastResult` exists.
 
 2. If `raycastResult` has a value, return its **Position** property.
 
-3. If `raycastResult` is nil then find the end of the raycast. Calculate the 3D position of the mouse by adding `screenToWorldRay.Origin` and `directionVector` together.
+3. If `raycastResult` is `nil` then find the end of the raycast. Calculate the 3D position of the mouse by adding `screenToWorldRay.Origin` and `directionVector` together.
 
 ```lua
 local function getWorldMousePosition()
@@ -367,12 +367,7 @@ Now the laser blaster should print `Player hit` to the Output window every time 
 Two players are needed to test if the weapon raycast is finding other players, so you need to start a local server.
 
 1. Select the **Test** tab in Studio.
-
-   ![](../../../../assets/tutorials/hit-detection-with-lasers/Test-Tab.png)
-
 2. Make sure the players dropdown is set to '2 Players' and click the Start button to **start** a local server with 2 clients. Three windows will appear. The first window will be the local server, the other windows will be the clients for Player1 and Player2.
-
-   ![](../../../../assets/tutorials/hit-detection-with-lasers/Test-Tab-Start-Button.png)
 
 3. On one client, test shooting the other player with the weapon by clicking on them. "Player hit" should be displayed in the output each time a player is shot.
 
@@ -380,7 +375,7 @@ Two players are needed to test if the weapon raycast is finding other players, s
     <source src="../../../../assets/tutorials/hit-detection-with-lasers/Output-Video.mp4" />
    </video>
 
-You can find out more about the Test tab [here](../../../../studio/test-tab.md).
+You can find out more about the **Test** tab [here](../../../../studio/test-tab.md).
 
 ## Find the laser position
 

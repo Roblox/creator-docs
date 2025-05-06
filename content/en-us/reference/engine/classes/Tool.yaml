@@ -1,6 +1,5 @@
 name: Tool
 type: class
-category: Gameplay
 memory_category: PhysicsParts
 summary: |
   An object, such as a weapon, that can be equipped by a `Class.Humanoid`.
@@ -52,8 +51,8 @@ properties:
       to `Class.Workspace` and removed from the player's `Class.Backpack`. If
       false, nothing will happen when backspace is pressed, and the tool will
       remain equipped.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -81,7 +80,7 @@ properties:
       `Class.Tool.Activated` and `Class.Tool.Deactivated` events from firing.
     code_samples:
       - superjump-tool
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -253,7 +252,7 @@ properties:
       `Class.Tool.Activated`.
     code_samples:
       - sprint-tool
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -281,8 +280,8 @@ properties:
 
       When set to `true`, the tool will function only with a handle. When set to
       `false`, the tool will function even without a handle.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -323,7 +322,7 @@ properties:
       ```lua
       tool.ToolTip = "Shovel - Use to dig"
       ```
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -348,7 +347,7 @@ methods:
       - invisibility-tool
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -366,7 +365,7 @@ methods:
       - invisibility-tool
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -403,12 +402,11 @@ events:
 
       tool.Activated:Connect(onActivation)
       ```
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: Tool.Deactivated
@@ -437,12 +435,11 @@ events:
 
       tool.Deactivated:Connect(toolDeactivated)
       ```
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: Tool.Equipped
@@ -463,13 +460,12 @@ events:
     parameters:
       - name: mouse
         type: Mouse
-        default:
+        default: ''
         summary: |
           The player's mouse.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: Tool.Unequipped
@@ -485,12 +481,11 @@ events:
 
       Note that this event does **not** fire when `Class.Tool.RequiresHandle` is
       enabled and no handle is present.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

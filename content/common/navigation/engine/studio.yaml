@@ -1,6 +1,6 @@
 defaultType: markdown
 backTo:
-  title: Back to guides
+  title: Back to platform
   path: /platform
 navigation:
   - heading: Roblox Studio
@@ -8,6 +8,13 @@ navigation:
     path: /studio/
   - title: Setup
     path: /studio/setup
+  - title: Assistant
+    path: /assistant/guide
+    section:
+      - title: Overview
+        path: /assistant/guide
+      - title: Prompt guide and examples
+        path: /assistant/prompt-engineering
   - title: Interface
     path: /studio/ui-overview
   - heading: Building tools

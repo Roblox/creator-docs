@@ -1,6 +1,5 @@
 name: GamepadService
 type: class
-category:
 memory_category: Instances
 summary: |
   The GamepadService is internally responsible for handling inputs from various
@@ -11,7 +10,7 @@ description: |
   handles APIs used with the gamepad virtual cursor. You can enable the gamepad
   cursor for your experience by setting `Enum.VirtualCursorMode` under
   `Class.StarterGui|StarterGui` to `Enabled`.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -28,7 +27,7 @@ properties:
       gamepad virtual cursor.
     code_samples:
       - GamepadService-GamepadCursorEnabled
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -52,13 +51,14 @@ methods:
       - GamepadService-DisableGamepadCursor
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: GamepadService:EnableGamepadCursor
     summary: |
@@ -132,16 +132,17 @@ methods:
     parameters:
       - name: guiObject
         type: Instance
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 events: []
 callbacks: []

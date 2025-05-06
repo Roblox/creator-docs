@@ -1,6 +1,5 @@
 name: Texture
 type: class
-category: Building
 memory_category: GraphicsTexture
 summary: |
   A Texture object applies a repeating texture to the face of a
@@ -22,7 +21,7 @@ description: |
   See also `Class.Decal` for non-repeating surface images, and
   `Class.SurfaceGui` to apply UI elements to in‑experience
   `Class.BasePart|BaseParts`.
-code_samples:
+code_samples: []
 inherits:
   - Decal
 tags: []
@@ -38,7 +37,7 @@ properties:
       [here](../../../parts/textures-decals.md#offsetting-textures).
 
       See also `Class.Texture.OffsetStudsV|OffsetStudsV`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -63,7 +62,7 @@ properties:
       [here](../../../parts/textures-decals.md#offsetting-textures).
 
       See also `Class.Texture.OffsetStudsU|OffsetStudsU`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -98,7 +97,7 @@ properties:
       with the `Class.BasePart`.
 
       See also `Class.Texture.StudsPerTileV|StudsPerTileV`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -133,7 +132,7 @@ properties:
       with the `Class.BasePart`.
 
       See also `Class.Texture.StudsPerTileU|StudsPerTileU`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

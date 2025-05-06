@@ -1,6 +1,5 @@
 name: ReflectionMetadataItem
 type: class
-category:
 memory_category: Instances
 summary: |
   Acts as abstract properties for generic information about Classes, Members,
@@ -8,7 +7,7 @@ summary: |
 description: |
   Acts as abstract properties for generic information about Classes, Members,
   Enums, and EnumItems.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -21,8 +20,8 @@ properties:
     description: |
       When this value is true, it means that this property/class can be seen in
       Studio, e.g. in the explorer.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -40,7 +39,7 @@ properties:
       Describes the category of this class.
     description: |
       Describes the category of this class.
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -57,8 +56,8 @@ properties:
   - name: ReflectionMetadataItem.ClientOnly
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -94,7 +93,7 @@ properties:
       <td>The specified class must be a service.</td>
       </tr>
       </tbody></table>
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -114,8 +113,8 @@ properties:
     description: |
       When an object is deprecated, it should not be used anymore for new
       scripts.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -133,8 +132,8 @@ properties:
       Toggles whether this property can be edited from the Properties window.
     description: |
       Toggles whether this property can be edited from the Properties window.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -167,7 +166,7 @@ properties:
   - name: ReflectionMetadataItem.FFlag
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -187,8 +186,8 @@ properties:
     description: |
       This should determine if a method needs to use stuff on the Roblox main
       servers. This property isn't applied where it should be, though.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -204,7 +203,7 @@ properties:
   - name: ReflectionMetadataItem.PropertyOrder
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -230,7 +229,7 @@ properties:
       available to auto fill when editing a `Class.LocalScript`. If set to
       <a href="../../../luau/strings.md">"Client"</a>, this member will not be
       available to auto fill when editing a `Class.Script`.
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -247,8 +246,8 @@ properties:
   - name: ReflectionMetadataItem.ServerOnly
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -287,7 +286,7 @@ properties:
       The maximum value of this property. Used with
       `Class.ReflectionMetadataItem.UIMinimum` to control the slider bar of this
       property in the `Properties` window.
-    code_samples:
+    code_samples: []
     type: double
     tags: []
     deprecation_message: ''
@@ -310,7 +309,7 @@ properties:
       The minimum value of this property. Used with
       `Class.ReflectionMetadataItem.UIMaximum` to control the slider bar of this
       property in the `Properties` window.
-    code_samples:
+    code_samples: []
     type: double
     tags: []
     deprecation_message: ''
@@ -333,7 +332,7 @@ properties:
       The number of potential values the property's slider bar can be set to,
       `Class.ReflectionMetadataItem.UIMinimum` and
       `Class.ReflectionMetadataItem.UIMaximum`.
-    code_samples:
+    code_samples: []
     type: double
     tags: []
     deprecation_message: ''

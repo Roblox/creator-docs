@@ -1,13 +1,12 @@
 name: HttpRbxApiService
 type: class
-category:
 memory_category: Instances
 summary: |
   An internal service whose functionality is not available to developers.
 description: |
   A version of the `Class.HttpService` used by the admins. Unlike the regular
   service, this one can send GET/POST requests to roblox.com
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -19,11 +18,11 @@ methods:
   - name: HttpRbxApiService:RequestLimitedAsync
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: requestOptions
         type: Dictionary
-        default:
+        default: ''
         summary: ''
       - name: priority
         type: ThrottlingPriority

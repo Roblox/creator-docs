@@ -1,6 +1,5 @@
 name: OpenCloudApiV1
 type: class
-category:
 memory_category: Instances
 summary: ''
 description: ''
@@ -20,7 +19,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: OpenCloudModel
@@ -39,11 +38,11 @@ methods:
     parameters:
       - name: user
         type: string
-        default:
+        default: ''
         summary: ''
       - name: userNotification
         type: OpenCloudModel
-        default:
+        default: ''
         summary: ''
     returns:
       - type: OpenCloudModel

@@ -1,6 +1,5 @@
 name: FlagStandService
 type: class
-category:
 memory_category: Instances
 summary: |
   An internal service responsible for handling the now deprecated
@@ -13,7 +12,7 @@ description: |
   developers to make 'Capture the Flag' style games quickly. However they have
   been deprecated and developers are advised to design their own systems which
   will be more flexible and reliable.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

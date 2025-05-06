@@ -1,6 +1,5 @@
 name: FaceControls
 type: class
-category:
 memory_category: Animation
 summary: |
   The `Class.FaceControls` object defines a set of properties for controlling
@@ -73,7 +72,7 @@ description: |
   See
   [FACS pose reference](../../../art/characters/facial-animation/facs-poses-reference.md)
   for more information on usage and creation of an animatable head.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -84,7 +83,7 @@ properties:
       Raises the chin up; moves the lower lip upwards.
     description: |
       Raises the chin up; moves the lower lip upwards
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -105,7 +104,7 @@ properties:
       Moves the upper lip when ChinRaiser is engaged and touching the upper lip.
     description: |
       Moves the upper lip when ChinRaiser is engaged and touching the upper lip
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -126,7 +125,7 @@ properties:
       Brings the left and right brows inward together.
     description: |
       Brings the left and right brows inward together
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -147,7 +146,7 @@ properties:
       Moves gaze down. This is a required pose for avatars.
     description: |
       Moves gaze down. This is a required pose for avatars.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -168,7 +167,7 @@ properties:
       Moves gaze left. This is a required pose for avatars.
     description: |
       Moves gaze left. This is a required pose for avatars.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -189,7 +188,7 @@ properties:
       Moves gaze right. This is a required pose for avatars.
     description: |
       Moves gaze right. This is a required pose for avatars.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -210,7 +209,7 @@ properties:
       Moves gaze up. This is a required pose for avatars.
     description: |
       Moves gaze up. This is a required pose for avatars.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -233,7 +232,7 @@ properties:
     description: |
       Also known as lip tightener; brings the corners of the mouth inward and
       pressing the lips back against the teeth
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -254,7 +253,7 @@ properties:
       Makes a 'O' shape with the mouth.
     description: |
       Makes a 'O' shape with the mouth
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -277,7 +276,7 @@ properties:
     description: |
       Lowers the jaw downward opening the mouth. This is a required pose for
       avatars.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -297,7 +296,7 @@ properties:
     summary: |
       Moves mouth and jaw to the left (character left).
     description: ''
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -318,7 +317,7 @@ properties:
       Moves mouth and jaw to the right (character right).
     description: |
       Moves mouth and jaw to the right (character right)
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -339,7 +338,7 @@ properties:
       Lowers the left brow down.
     description: |
       Lowers the left brow down
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -360,7 +359,7 @@ properties:
       Puffs up the left cheek.
     description: |
       Puffs up the left cheek
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -381,7 +380,7 @@ properties:
       Squints the left eye.
     description: |
       Squints the left eye
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -402,7 +401,7 @@ properties:
       Moves the corners of the mouth back in Z.
     description: |
       Moves the corners of the mouth back in Z
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -423,7 +422,7 @@ properties:
       Closes the left eyelid. This is a required pose for avatars.
     description: |
       Closes the left eyelid. This is a required pose for avatars.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -446,7 +445,7 @@ properties:
     description: |
       Raises the left eyelid upwards to reveal more of the eye white above the
       iris
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -467,7 +466,7 @@ properties:
       Raises the interior half of the left brow upwards.
     description: |
       Raises the interior half of the left brow upwards
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -488,7 +487,7 @@ properties:
       Lowers the corners of the mouth downwards in a frown.
     description: |
       Lowers the corners of the mouth downwards in a frown
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -511,7 +510,7 @@ properties:
     description: |
       Raises the corners of the mouth upwards in a smile. This is a required
       pose for avatars.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -534,7 +533,7 @@ properties:
     description: |
       Stretches the corners of the mouth apart. This is a required pose for
       avatars.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -557,7 +556,7 @@ properties:
     description: |
       Lowers the lower lip down away from the upper lip revealing the lower
       teeth. This is a required pose for avatars.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -580,7 +579,7 @@ properties:
     description: |
       Raise the left nostril, pulls the brow down slightly, and wrinkles on the
       side of the nose
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -601,7 +600,7 @@ properties:
       Raises the outer part of the left brow upwards.
     description: |
       Raises the outer part of the left brow upwards
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -624,7 +623,7 @@ properties:
     description: |
       Raises the left upper lip away from the lower lip revealing the upper
       teeth. This is a required pose for avatars.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -645,7 +644,7 @@ properties:
       Presses the lips together.
     description: |
       Presses the lips together
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -668,7 +667,7 @@ properties:
     description: |
       Brings the lips together relative to JawDrop. This is a required pose for
       avatars.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -689,7 +688,7 @@ properties:
       Rolls the lower lip up over the teeth.
     description: |
       Rolls the lower lip up over the teeth
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -710,7 +709,7 @@ properties:
       Moves the mouth left.
     description: |
       Moves the mouth left
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -731,7 +730,7 @@ properties:
       Moves the mouth right.
     description: |
       Moves the mouth right
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -754,7 +753,7 @@ properties:
     description: |
       Makes a kiss-like shape with the mouth. This is a required pose for
       avatars.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -775,7 +774,7 @@ properties:
       Lowers the right brow down.
     description: |
       Lowers the right brow down
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -796,7 +795,7 @@ properties:
       Puffs up the right cheek.
     description: |
       Puffs up the right cheek
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -817,7 +816,7 @@ properties:
       Squints the right eye.
     description: |
       Squints the right eye
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -838,7 +837,7 @@ properties:
       Moves the corners of the mouth back in Z.
     description: |
       Moves the corners of the mouth back in Z
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -859,7 +858,7 @@ properties:
       Closes the right eyelid. This is a required pose for avatars.
     description: |
       Closes the right eyelid. This is a required pose for avatars.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -882,7 +881,7 @@ properties:
     description: |
       Raises the right eyelid upwards to reveal more of the eye white above the
       iris
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -903,7 +902,7 @@ properties:
       Raises the interior half of the right brow upwards.
     description: |
       Raises the interior half of the right brow upwards
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -924,7 +923,7 @@ properties:
       Lowers the corners of the mouth downwards in a frown.
     description: |
       Lowers the corners of the mouth downwards in a frown
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -947,7 +946,7 @@ properties:
     description: |
       Raises the corners of the mouth upwards in a smile. This is a required
       pose for avatars.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -970,7 +969,7 @@ properties:
     description: |
       Stretches the corners of the mouth apart. This is a required pose for
       avatars.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -993,7 +992,7 @@ properties:
     description: |
       Lowers the lower lip down away from the upper lip revealing the lower
       teeth. This is a required pose for avatars.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -1016,7 +1015,7 @@ properties:
     description: |
       Raises the right nostril, pulls the brow down slightly, and wrinkles on
       the side of the nose
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -1037,7 +1036,7 @@ properties:
       Raises the outer part of the right brow upwards.
     description: |
       Raises the outer part of the right brow upwards
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -1060,7 +1059,7 @@ properties:
     description: |
       Raises the right upper lip away from the lower lip revealing the upper
       teeth. This is a required pose for avatars.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -1081,7 +1080,7 @@ properties:
       Bends the tongue down.
     description: |
       Bends the tongue down
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -1102,7 +1101,7 @@ properties:
       Extends the tip of the tongue out of the mouth.
     description: |
       Extends the tip of the tongue out of the mouth
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -1123,7 +1122,7 @@ properties:
       Bends the tongue up.
     description: |
       Bends the tongue up
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -1144,7 +1143,7 @@ properties:
       Rolls the upper lip around the teeth.
     description: |
       Rolls the upper lip around the teeth
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated

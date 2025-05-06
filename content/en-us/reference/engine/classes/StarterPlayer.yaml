@@ -1,6 +1,5 @@
 name: StarterPlayer
 type: class
-category: Scripting
 memory_category: Instances
 summary: |
   A service which allows the defaults of properties in the `Class.Player` object
@@ -42,8 +41,8 @@ properties:
       setting's page on the website.
 
       This property is not intended for use in the game.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - Hidden
     deprecation_message: ''
@@ -74,7 +73,7 @@ properties:
       these three properties.
     code_samples:
       - Auto-Jump-Toggle
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -225,7 +224,7 @@ properties:
       Since this property is only relevant for characters being spawned in the
       future, changing it will not change any existing player characters.
       Changes to this property will only take effect when a player respawns.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -257,7 +256,7 @@ properties:
       Since this property is only relevant for characters being spawned in the
       future, changing it will not change any existing player characters.
       Changes to this property will only take effect when a player respawns.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -286,7 +285,7 @@ properties:
       Since this property is only relevant for characters being spawned in the
       future, changing it will not change any existing player characters.
       Changes to this property will only take effect when a player respawns.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -316,8 +315,8 @@ properties:
       Since this property is only relevant for characters being spawned in the
       future, changing it will not change any existing player characters.
       Changes to this property will only take effect when a player respawns.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -342,9 +341,28 @@ properties:
       Since this property is only relevant for characters being spawned in the
       future, changing it will not change any existing player characters.
       Changes to this property will only take effect when a player respawns.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Character
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Players
+    writeCapabilities: []
+  - name: StarterPlayer.ClassicDeath
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags:
+      - NotBrowsable
     deprecation_message: ''
     security:
       read: None
@@ -566,7 +584,7 @@ properties:
       to lock the mouse.
     code_samples:
       - enabling-a-player-s-mouse-lock
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -631,7 +649,7 @@ properties:
       the character will come from the passed in `Class.HumanoidDescription`.
     code_samples:
       - disabling-a-player-s-appearance
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -720,6 +738,25 @@ properties:
     capabilities:
       - Players
     writeCapabilities: []
+  - name: StarterPlayer.RagdollDeath
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags:
+      - NotBrowsable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Character
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Players
+    writeCapabilities: []
   - name: StarterPlayer.UserEmotesEnabled
     summary: |
       Determines if user-owned emotes are loaded when loading avatars.
@@ -735,8 +772,8 @@ properties:
 
       See also [Avatar Emotes](../../../characters/emotes.md), an article
       detailing how to control, customize, and play avatar emotes.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

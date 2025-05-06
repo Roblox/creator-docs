@@ -1,6 +1,5 @@
 name: AnimationClip
 type: class
-category: Animations
 memory_category: Instances
 summary: |
   Represents all types of animation data that the Roblox animation system can
@@ -16,7 +15,7 @@ description: |
   types but inherit from the `Class.AnimationClip` instance. Animation clips
   published to Roblox via the [Animation Editor](../../../animation/editor.md)
   can be loaded into the Roblox Engine using an `Class.Animation` instance.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -37,8 +36,8 @@ properties:
       `Class.Animation.AnimationId|AnimationId`, and the
       `Class.AnimationTrack.Looped` property will default to the original
       `Class.AnimationClip` value. Note also that this value can be overwritten.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

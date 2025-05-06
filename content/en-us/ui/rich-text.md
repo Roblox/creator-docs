@@ -3,6 +3,7 @@ title: Rich text markup
 description: Rich Text Markup are simple markup tags to style sections of a string.
 comments: |
   1. Replace numbered footnotes with dedicated style.
+machineTranslated: true
 ---
 
 UI **rich text** utilizes simple markup tags to style sections of a string in bold, italics, underline, fill color, stroke variations, and more. You can apply styling tags to `Class.TextLabel`, `Class.TextButton`, and `Class.TextBox` objects.
@@ -14,7 +15,7 @@ You must enable rich text on a per-object basis through its **RichText** propert
 <img src="../assets/ui/rich-text/Enable-Rich-Text.png"
    width="320" />
 
-```lua highlight='2'
+```lua highlight="2"
 local title = Instance.new("TextLabel")
 title.RichText = true
 
@@ -215,31 +216,31 @@ If you want to render certain characters like `<` or `>` and exempt them from co
 </thead>
 <tbody>
   <tr>
-    <td>**&lt;**</td>
+    <td>`<`</td>
     <td>`&lt;`</td>
     <td>`10 &lt; 100`</td>
     <td>10 &lt; 100</td>
   </tr>
   <tr>
-    <td>**&gt;**</td>
+    <td>`>`</td>
     <td>`&gt;`</td>
     <td>`100 &gt; 10`</td>
     <td>100 &gt; 10</td>
   </tr>
   <tr>
-    <td>**"**</td>
+    <td>`"`</td>
     <td>`&quot;`</td>
     <td>`Meet &quot;Diva Dragonslayer&quot;`</td>
     <td>Meet "Diva Dragonslayer"</td>
   </tr>
   <tr>
-    <td>**'**</td>
+    <td>`'`</td>
     <td>`&apos;`</td>
     <td>`Diva&apos;s pet is a falcon!`</td>
     <td>Diva's pet is a falcon!</td>
   </tr>
   <tr>
-    <td>**&amp;**</td>
+    <td>`&`</td>
     <td>`&amp;`</td>
     <td>`Render another escape form <b>&amp;lt;</b> by escaping an ampersand`</td>
     <td>Render another escape form **&amp;lt;** by escaping an ampersand</td>

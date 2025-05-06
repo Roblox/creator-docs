@@ -103,8 +103,8 @@ You can add most of the library to your inventory within Studio by clicking the 
 
 To get the asset library from your inventory into your experience:
 
-1. In the menu bar, select the **View** tab.
-1. In the **Show** section, click **Toolbox**. The **Toolbox** window displays.
+1. In the toolbar, select the **View** tab.
+1. Click **Toolbox**. The **Toolbox** window displays.
 
    <img src="../../../assets/studio/general/View-Tab-Toolbox.png" width="876" />
 
@@ -123,8 +123,8 @@ For example, if you don't test your UI on a range of screen sizes, players with 
 
 To emulate your screen to the smallest screen size:
 
-1. In the menu bar, select the **Test** tab.
-1. In the **Emulation** section, click **Device**. The viewport changes to reflect the aspect ratio of an average laptop.
+1. In the toolbar, select the **Test** tab.
+1. Click **Device**. The viewport changes to reflect the aspect ratio of an average laptop.
 
    <img src="../../../assets/studio/general/Test-Tab-Emulation-Device.png" width="800" alt="Device button indicated in Test tab" />
 
@@ -2108,11 +2108,9 @@ A team indicator is a UI element that informs players which team other players i
 To exactly recreate the team indicator within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) experience:
 
 1. Insert a **BillboardGui** object into a temporary rig.
-   1. In the menu bar, navigate to the **Avatar** tab, then click on **Rig Builder**.​
 
-      <img src="../../../assets/studio/general/Avatar-Tab-Rig-Builder.png" width="760" />
-
-   1. ​Select from the available options. The sample uses a **R15** rig type, a **feminine** body shape, and a **Rthro** avatar. The rig displays both in the 3D viewport and in the **Explorer** window under the name **Rig**.
+   1. From the toolbar's **Avatar** tab, click **Rig Builder**.
+   1. Select from the available options. The sample uses a **R15** rig type, a **feminine** body shape, and a **Rthro** avatar. The rig displays both in the 3D viewport and in the **Explorer** window under the name **Rig**.
    1. In the **Explorer** window, navigate to the rig's child **Head** mesh, then click the **⊕** icon. A contextual menu displays.
    1. From the contextual menu, insert a **BillboardGui**.
 
@@ -2288,7 +2286,7 @@ A tagged out indicator is a UI element that informs players when other players a
 To exactly recreate the tagged out indicator within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) experience:
 
 1. Insert a **BillboardGui** object into a temporary rig so that you can visualize the changes in each step of the process.
-   1. In the menu bar, navigate to the **Avatar** tab, then click on **Rig Builder**.​
+   1. From the toolbar's **Avatar** tab, click **Rig Builder**.
    1. ​Select from the available options. The sample uses a **R15** rig type, a **masculine** body shape, and a **Rthro** avatar. The rig displays both in the 3D viewport and in the **Explorer** window under the name **Rig**.
    1. In the **Explorer** window, navigate to the rig's child **Head** mesh, then click the **⊕** icon. A contextual menu displays.
    1. From the contextual menu, insert a **BillboardGui**.

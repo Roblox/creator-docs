@@ -1,6 +1,5 @@
 name: SoundEffect
 type: class
-category:
 memory_category: Instances
 summary: |
   SoundEffect is the base class that all other sound effects derive from. A
@@ -12,7 +11,7 @@ description: |
   being parented to either. Multiple effects can be applied to the same Sound or
   SoundGroup. The order the effects will be applied in is determined by that
   effect's Priority.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -24,8 +23,8 @@ properties:
       Toggles the effect on and off.
     description: |
       Toggles the effect on and off. True by default.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -49,7 +48,7 @@ properties:
       when Priority equals 0 (which is the default). In this case, the base
       priority for the effect will be used. If the priority of two effects are
       equal, then the order is undetermined.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''

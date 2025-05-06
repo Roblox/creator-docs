@@ -1,6 +1,5 @@
 name: TextButton
 type: class
-category: GUI
 memory_category: Gui
 summary: |
   A 2D user interface element that displays interactive text.
@@ -11,7 +10,7 @@ description: |
   You can disable text rendering by setting
   `Class.TextButton.TextTransparency|TextTransparency` to `1`. This will result
   in a plain rectangle that can be used as a button.
-code_samples:
+code_samples: []
 inherits:
   - GuiButton
 tags: []
@@ -136,7 +135,7 @@ properties:
       Determines the font size to be used.
     description: |
       This property determines the font size to be used.
-    code_samples:
+    code_samples: []
     type: FontSize
     tags:
       - NotReplicated
@@ -162,7 +161,7 @@ properties:
       Controls the height of lines as a multiple of the font's `em` square size
       by scaling the spacing between lines of text in the `Class.TextButton`.
       Valid values range from `1.0` to `3.0`, defaulting to `1.0`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -184,7 +183,7 @@ properties:
     description: |
       This property sets whether a `Class.TextButton` should regard
       `Class.GuiBase2d.Localize` or not.
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - Hidden
@@ -217,7 +216,7 @@ properties:
 
       Setting the property to `-1` disables the limit and shows the entirety of
       the `Class.TextButton.Text|Text`.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -281,8 +280,8 @@ properties:
 
       To use rich text, simply include rich text formatting tags in the
       `Class.TextButton.Text|Text` string.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -349,7 +348,7 @@ properties:
       `Class.TextButton.TextBounds|TextBounds` will be given a string,
       `Class.TextButton.Font|Font`, `Class.TextButton.TextSize|TextSize`, and
       frame size.
-    code_samples:
+    code_samples: []
     type: Vector2
     tags:
       - ReadOnly
@@ -371,7 +370,7 @@ properties:
       Determines the color of text.
     description: |
       This property determines the color of text.
-    code_samples:
+    code_samples: []
     type: BrickColor
     tags:
       - Hidden
@@ -440,8 +439,8 @@ properties:
     description: |
       A boolean representation of whether the button's text fits within the size
       of it.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -495,8 +494,8 @@ properties:
       determined by `Class.GuiObject.AutomaticSize|AutomaticSize` to scale the
       font size up to the maximum font size (100) if there are no size
       constraints.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -517,7 +516,7 @@ properties:
       This property determines the height of one line of rendered text. The unit
       is in offsets, not points (which is used in most document editing
       programs). The `Enum.Font.Legacy` font does not hold this property.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -543,7 +542,7 @@ properties:
 
       As a powerful alternative which supports color gradients, see
       `Class.UIStroke`.
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -574,7 +573,7 @@ properties:
 
       As a powerful alternative which supports color gradients, see
       `Class.UIStroke`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -595,7 +594,7 @@ properties:
     description: |
       This property determines the transparency of all the text rendered by the
       `Class.TextButton`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -615,7 +614,7 @@ properties:
       Controls the truncation of the text displayed in the `Class.TextButton`.
     description: |
       Controls the truncation of the text displayed in the `Class.TextButton`.
-    code_samples:
+    code_samples: []
     type: TextTruncate
     tags: []
     deprecation_message: ''
@@ -637,8 +636,8 @@ properties:
     description: |
       This property determines whether or not text should wrap at the edges of
       the `Class.TextButton` element's space.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - NotReplicated
       - Deprecated
@@ -675,8 +674,8 @@ properties:
       vertical height of the element (the **Y** component of
       `Class.GuiBase2d.AbsoluteSize`), then that line will not be rendered at
       all.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -702,7 +701,7 @@ properties:
       Note that this property won't affect the read-only properties
       `Class.TextButton.TextBounds|TextBounds` and
       `Class.TextButton.TextFits|TextFits`.
-    code_samples:
+    code_samples: []
     type: TextXAlignment
     tags: []
     deprecation_message: ''
@@ -729,7 +728,7 @@ properties:
       Note that this property won't affect the read-only properties
       `Class.TextButton.TextBounds|TextBounds` and
       `Class.TextButton.TextFits|TextFits`.
-    code_samples:
+    code_samples: []
     type: TextYAlignment
     tags: []
     deprecation_message: ''

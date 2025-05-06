@@ -1,6 +1,5 @@
 name: SensorBase
 type: class
-category:
 memory_category: Instances
 summary: |
   An abstract class for various sensor instance types.
@@ -50,7 +49,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -69,7 +68,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

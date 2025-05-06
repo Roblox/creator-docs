@@ -1,6 +1,5 @@
 name: ChannelTabsConfiguration
 type: class
-category:
 memory_category: Instances
 summary: |
   Configures properties of the optional channel tabs in the default chat window.
@@ -117,7 +116,7 @@ properties:
     description: |
       Whether to show the channel tabs. Set to `false` to hide.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

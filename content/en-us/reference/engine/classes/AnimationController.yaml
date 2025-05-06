@@ -1,6 +1,5 @@
 name: AnimationController
 type: class
-category: Animations
 memory_category: Animation
 summary: |
   Allows animations to be loaded and applied to a character or model in place of
@@ -64,7 +63,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationController:LoadAnimation
     summary: |
@@ -79,7 +79,7 @@ methods:
     parameters:
       - name: animation
         type: Animation
-        default:
+        default: ''
         summary: |
           The `Class.Animation` to be used.
     returns:
@@ -93,7 +93,8 @@ methods:
       created while editing or at runtime).
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
 events:
   - name: AnimationController.AnimationPlayed
@@ -110,18 +111,18 @@ events:
 
       See `Class.Humanoid.AnimationPlayed` for the `Class.Humanoid` variant of
       this function.
-    code_samples:
+    code_samples: []
     parameters:
       - name: animationTrack
         type: AnimationTrack
-        default:
+        default: ''
         summary: |
           The `Class.AnimationTrack` that was played.
     tags:
       - Deprecated
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
 callbacks: []

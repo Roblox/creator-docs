@@ -1,6 +1,5 @@
 name: RigidConstraint
 type: class
-category: Constraints
 memory_category: PhysicsParts
 summary: |
   Creates a rigid connection between two `Class.Attachment|Attachments` or
@@ -13,10 +12,8 @@ description: |
   `Class.Attachment|Attachments` on a character rig.
 
   The fastest way to create this constraint is by selecting
-  **Rigid&nbsp;Constraint** through Studio's **Create** menu in the
-  [Model](../../../studio/model-tab.md) tab.
-
-  <img src="../../../assets/studio/general/Model-Tab-Constraints-Create-Menu.png" width="754" alt="Constraint picker indicated in Studio toolbar" />
+  **Rigid&nbsp;Constraint** through Studio's **Create** menu in the toolbar's
+  **Model** tab.
 
   Note that this tool behaves differently depending on whether you click on
   existing `Class.BasePart|BaseParts`, `Class.Attachment|Attachments`, or

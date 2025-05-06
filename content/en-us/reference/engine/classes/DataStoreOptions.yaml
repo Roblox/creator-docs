@@ -1,6 +1,5 @@
 name: DataStoreOptions
 type: class
-category:
 memory_category: Instances
 summary: |
   Object used to provide additional parameters to
@@ -8,7 +7,7 @@ summary: |
 description: |
   Any object containing additional parameters that are used by
   `Class.DataStoreService:GetDataStore()`.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -21,8 +20,8 @@ properties:
     description: |
       This property specifies whether the `Class.GlobalDataStore` should work
       with all scopes.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -41,23 +40,24 @@ methods:
     summary: ''
     description: |
       This function currently has no effect.
-    code_samples:
+    code_samples: []
     parameters:
       - name: experimentalFeatures
         type: Dictionary
-        default:
+        default: ''
         summary: |
           Luau table in `key = value` format where the key is the experimental
           feature name and the value is a boolean which specifies whether to
           enable.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
 events: []
 callbacks: []

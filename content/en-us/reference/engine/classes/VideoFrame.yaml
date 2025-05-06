@@ -1,6 +1,5 @@
 name: VideoFrame
 type: class
-category: GUI
 memory_category: Gui
 summary: |
   A GUI object that renders a rectangle, like a `Class.Frame` does, with a
@@ -41,8 +40,8 @@ properties:
     description: |
       This property will be true when the `Class.VideoFrame.Video` has loaded
       from Roblox servers and is ready to play.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -65,8 +64,8 @@ properties:
     description: |
       This property sets whether or not the `Class.VideoFrame.Video` repeats
       once it has finished when it is playing.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -88,8 +87,8 @@ properties:
       This property indicates whether the `Class.VideoFrame.Video` is currently
       playing. It can be set to start or pause playback as an alternative to the
       `Class.VideoFrame:Play()` and `Class.VideoFrame:Pause()` functions.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''
@@ -110,7 +109,7 @@ properties:
     description: |
       This property gets the original source resolution of the
       `Class.VideoFrame.Video` file.
-    code_samples:
+    code_samples: []
     type: Vector2
     tags:
       - ReadOnly
@@ -133,7 +132,7 @@ properties:
     description: |
       This property indicates the length of the `Class.VideoFrame.Video` in
       seconds. If the video is not loaded, this value will be 0.
-    code_samples:
+    code_samples: []
     type: double
     tags:
       - ReadOnly
@@ -157,7 +156,7 @@ properties:
       This property indicates the progress in seconds of the
       `Class.VideoFrame.Video`. It can be changed to move the playback position
       of the video both before and during playback.
-    code_samples:
+    code_samples: []
     type: double
     tags:
       - NotReplicated
@@ -202,7 +201,7 @@ properties:
     description: |
       This property determines how loud the `Class.VideoFrame.Video` plays back.
       It can be set to a number between 0 and 100.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -228,16 +227,17 @@ methods:
 
       As `Class.VideoFrame.TimePosition` is not reset, when the video is resumed
       it will continue from its previous position.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: VideoFrame:Play
     summary: |
@@ -251,13 +251,14 @@ methods:
       - creating-and-playing-a-video
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 events:
   - name: VideoFrame.DidLoop
@@ -266,18 +267,18 @@ events:
     description: |
       An event that fires whenever the `Class.VideoFrame.Video` loops. Returns
       the content ID of the video.
-    code_samples:
+    code_samples: []
     parameters:
       - name: video
         type: string
-        default:
+        default: ''
         summary: |
           The content ID of the video that looped.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: VideoFrame.Ended
     summary: |
@@ -286,36 +287,36 @@ events:
     description: |
       This event fires when the `Class.VideoFrame.Video` has completed playback
       and stopped.
-    code_samples:
+    code_samples: []
     parameters:
       - name: video
         type: string
-        default:
+        default: ''
         summary: |
           The content ID of the paused that ended.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: VideoFrame.Loaded
     summary: |
       Fires when the `Class.VideoFrame.Video` is loaded.
     description: |
       This event fires when the `Class.VideoFrame.Video` is loaded.
-    code_samples:
+    code_samples: []
     parameters:
       - name: video
         type: string
-        default:
+        default: ''
         summary: |
           The content ID of the loaded video.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: VideoFrame.Paused
     summary: |
@@ -326,18 +327,18 @@ events:
       This event fires whenever the `Class.VideoFrame.Video` is paused using
       `Class.VideoFrame:Pause()` or by setting `Class.VideoFrame.Playing` to
       false.
-    code_samples:
+    code_samples: []
     parameters:
       - name: video
         type: string
-        default:
+        default: ''
         summary: |
           The content ID of the paused video.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: VideoFrame.Played
     summary: |
@@ -348,17 +349,17 @@ events:
       This event fires whenever the `Class.VideoFrame.Video` is played using the
       `Class.VideoFrame:Play()` function or by setting
       `Class.VideoFrame.Playing` to true.
-    code_samples:
+    code_samples: []
     parameters:
       - name: video
         type: string
-        default:
+        default: ''
         summary: |
           The content ID of the played video.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 callbacks: []

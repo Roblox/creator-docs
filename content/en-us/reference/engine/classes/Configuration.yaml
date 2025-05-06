@@ -1,6 +1,5 @@
 name: Configuration
 type: class
-category: Utility
 memory_category: Instances
 summary: |
   The Configuration object is a container object that is designed to hold value
@@ -51,7 +50,7 @@ description: |
     your code
   - Provides a single location for variables read by multiple scripts in more
     complex games
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []

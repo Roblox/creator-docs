@@ -1,6 +1,5 @@
 name: SampleClass
 type: class
-category:
 memory_category: 'Instances'
 summary: |-
   Sample summary.

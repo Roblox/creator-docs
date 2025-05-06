@@ -1,6 +1,5 @@
 name: RotationCurve
 type: class
-category:
 memory_category: Instances
 summary: |
   Represents a sequence of rotations and the interpolation curve between them.
@@ -9,7 +8,7 @@ description: |
   `Datatype.RotationCurveKey|RotationCurveKeys` that represent a sequence of
   rotations. The shape of the interpolation curve between two keys is determined
   by the `Datatype.RotationCurveKey.Interpolation` type.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -20,7 +19,7 @@ properties:
       Number of rotation keys in this curve.
     description: |
       Number of rotation keys in this curve.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - ReadOnly
@@ -43,11 +42,11 @@ methods:
       Returns a copy of a key at a given index.
     description: |
       Returns a copy of a key at a given index.
-    code_samples:
+    code_samples: []
     parameters:
       - name: index
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: RotationCurveKey
@@ -56,7 +55,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RotationCurve:GetKeyIndicesAtTime
     summary: |
@@ -67,11 +67,11 @@ methods:
       length if no key was found). The second item in the returned array is the
       index of the first key with time greater than or equal to `time` (or the
       curve length if no key was found satisfying the inequality).
-    code_samples:
+    code_samples: []
     parameters:
       - name: time
         type: float
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -80,7 +80,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RotationCurve:GetKeys
     summary: |
@@ -89,7 +90,7 @@ methods:
     description: |
       Returns a copy of all the keys in the rotation curve as a Luau array of
       `Datatype.RotationCurveKey|RotationCurveKeys`.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Array
@@ -99,7 +100,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RotationCurve:GetValueAtTime
     summary: |
@@ -109,11 +111,11 @@ methods:
       Samples the rotation curve at a given time and returns the corresponding
       rotation as a `Datatype.CFrame`. Empty rotation curves are evaluated as
       `Datatype.CFrame.identity`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: time
         type: float
-        default:
+        default: ''
         summary: |
           Time at which to sample the curve.
     returns:
@@ -124,7 +126,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RotationCurve:InsertKey
     summary: |
@@ -135,11 +138,11 @@ methods:
       time is found, it will be replaced. In the returned array, the first value
       is `true` if a key was added or `false` if a previous key was replaced;
       the second value is the index at which the marker was added.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: RotationCurveKey
-        default:
+        default: ''
         summary: |
           `Datatype.RotationCurveKey` to insert.
     returns:
@@ -150,7 +153,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RotationCurve:RemoveKeyAtIndex
     summary: |
@@ -158,11 +162,11 @@ methods:
     description: |
       Removes a given number (`count`) of keys starting from the `startingIndex`
       index and returns the number of keys that were removed.
-    code_samples:
+    code_samples: []
     parameters:
       - name: startingIndex
         type: int
-        default:
+        default: ''
         summary: |
           Starting index from which to remove keys.
       - name: count
@@ -178,7 +182,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RotationCurve:SetKeys
     summary: |
@@ -192,11 +197,11 @@ methods:
 
       Returns the number of keys actually inserted. Keys previously stored in
       this curve are removed before the keys passed as arguments are added.
-    code_samples:
+    code_samples: []
     parameters:
       - name: keys
         type: Array
-        default:
+        default: ''
         summary: |
           Array of `Datatype.RotationCurveKey|RotationCurveKeys`.
     returns:
@@ -207,7 +212,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 events: []
 callbacks: []

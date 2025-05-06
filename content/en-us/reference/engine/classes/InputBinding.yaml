@@ -1,6 +1,5 @@
 name: InputBinding
 type: class
-category:
 memory_category: Instances
 summary: ''
 description: ''
@@ -11,6 +10,23 @@ tags:
   - NotBrowsable
 deprecation_message: ''
 properties:
+  - name: InputBinding.Down
+    summary: ''
+    description: ''
+    code_samples: []
+    type: KeyCode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Composite Directions
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: InputBinding.KeyCode
     summary: ''
     description: ''
@@ -23,6 +39,23 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: InputBinding.Left
+    summary: ''
+    description: ''
+    code_samples: []
+    type: KeyCode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Composite Directions
     serialization:
       can_load: true
       can_save: true
@@ -62,6 +95,23 @@ properties:
       can_save: true
     capabilities: []
     writeCapabilities: []
+  - name: InputBinding.Right
+    summary: ''
+    description: ''
+    code_samples: []
+    type: KeyCode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Composite Directions
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: InputBinding.Scale
     summary: ''
     description: ''
@@ -73,7 +123,7 @@ properties:
       read: None
       write: None
     thread_safety: ReadSafe
-    category: Data
+    category: Behavior
     serialization:
       can_load: true
       can_save: true
@@ -84,6 +134,40 @@ properties:
     description: ''
     code_samples: []
     type: GuiButton
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: InputBinding.Up
+    summary: ''
+    description: ''
+    code_samples: []
+    type: KeyCode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Composite Directions
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: InputBinding.Vector2Scale
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector2
     tags: []
     deprecation_message: ''
     security:

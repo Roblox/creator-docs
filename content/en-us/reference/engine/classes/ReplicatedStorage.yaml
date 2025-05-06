@@ -1,6 +1,5 @@
 name: ReplicatedStorage
 type: class
-category: Utility
 memory_category: Instances
 summary: |
   A container service for objects that are replicated to all clients.
@@ -31,7 +30,7 @@ description: |
   If a `Class.ModuleScript` within this service is required by any other script,
   it runs as normal. Such modules typically house code that is shared by the
   server and client.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

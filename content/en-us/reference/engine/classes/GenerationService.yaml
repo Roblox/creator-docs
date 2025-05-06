@@ -1,6 +1,5 @@
 name: GenerationService
 type: class
-category:
 memory_category: Instances
 summary: |
   `GenerationService` is a service that allows developers to generate 3D objects
@@ -89,24 +88,24 @@ methods:
     parameters:
       - name: inputs
         type: Dictionary
-        default:
+        default: ''
         summary: |
           A dictionary containing the mesh generation prompts. Currently, the
           only supported key is the `Prompt` (string) that describes the mesh to
           generate.
       - name: player
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` requesting the generation.
       - name: options
         type: Dictionary
-        default:
+        default: ''
         summary: |
           Additional generation options. Currently, no options are supported.
       - name: intermediateResultCallback
         type: Function?
-        default:
+        default: ''
         summary: |
           A callback function triggered with intermediate generation results.
           Useful for retrieving early mesh versions (e.g. before textures are
@@ -144,7 +143,7 @@ methods:
     parameters:
       - name: generationId
         type: string
-        default:
+        default: ''
         summary: |
           The unique ID returned by
           `Class.GenerationService:GenerateMeshAsync()|GenerateMeshAsync()`.

@@ -1,6 +1,5 @@
 name: UITextSizeConstraint
 type: class
-category: GUI
 memory_category: Instances
 summary: |
   Ensures that the size of text rendered by certain `Class.GuiObject` classes
@@ -20,7 +19,7 @@ description: |
   It's recommended that no values lower than 9 be used for
   `Class.UITextSizeConstraint.MinTextSize|MinTextSize` property, otherwise text
   may not be readable to most users.
-code_samples:
+code_samples: []
 inherits:
   - UIConstraint
 tags: []
@@ -40,7 +39,7 @@ properties:
       size. It will scale upwards with the GuiObject's size until the max size
       is reached, at which point it will stay constant if the UI element
       continues to grow.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -69,7 +68,7 @@ properties:
       size. It will scale downwards with the GuiObject's size until the min size
       is reached, at which point it will stay constant if the UI element
       continues to shrink.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''

@@ -149,7 +149,7 @@ local testDictionary = {
 
 ### Read from dictionaries
 
-To read from a dictionary, add a pair of brackets after its reference and specify the key name. Directly reference a string key using quotes (`["key"]`) or use a variable value (`[key]`).
+To read from a dictionary, add a pair of brackets after its reference and specify the key name. Directly reference a string key using either (`["key"]`) or (`.key`), or instead use a variable value (`[key]`).
 
 ```lua
 local part = Instance.new("Part")
@@ -160,13 +160,15 @@ local testDictionary = {
 }
 -- Include quotes for string keys
 print(testDictionary["partType"]) -- Block
+-- Or use . to index string keys without spaces
+print(testDictionary.partType) -- Block
 -- Omit quotes for non-string keys
 print(testDictionary[part]) -- true
 ```
 
 ### Write to dictionaries
 
-To define or rewrite the value of a new or existing dictionary key, declare the key name in brackets (`[key]`) followed by `=` and the value:
+To define or rewrite the value of a new or existing dictionary key, declare the key name in brackets (`[key]`) or, if the key is a string, use (`.key`) followed by `=` and the value:
 
 ```lua
 local testDictionary = {
@@ -176,19 +178,19 @@ local testDictionary = {
 
 -- Change value of existing keys
 testDictionary["fruitName"] = "Cherry"
-testDictionary["sour"] = false
+testDictionary.sour = false
 
 -- Insert new key-value pair
-testDictionary["fruitCount"] = 10
+testDictionary.fruitCount = 10
 
-print(testDictionary["fruitName"]) -- Cherry
-print(testDictionary["sour"]) -- false
-print(testDictionary["fruitCount"]) -- 10
+print(testDictionary.fruitName) -- Cherry
+print(testDictionary.sour) -- false
+print(testDictionary.fruitCount) -- 10
 ```
 
 ### Iterate over dictionaries
 
-To iterate over a dictionary, use the global `pairs()` function in a `for` loop:
+To iterate over a dictionary, use a `for` loop:
 
 ```lua
 local testDictionary = {
@@ -197,7 +199,7 @@ local testDictionary = {
 	sour = true
 }
 
-for key, value in pairs(testDictionary) do
+for key, value in testDictionary do
 	print(key, value)
 end
 
@@ -207,10 +209,6 @@ sour true
 fruitColor Yellow
 ]]
 ```
-
-<Alert severity="warning">
-Unlike using <InlineCode>ipairs()</InlineCode> on an array, using <InlineCode>pairs()</InlineCode> on a dictionary doesn't necessarily return items in the same order that they're in the dictionary.
-</Alert>
 
 ### Remove key-value pairs
 
@@ -223,9 +221,9 @@ local testDictionary = {
 	sour = true
 }
 
-testDictionary["sour"] = nil
+testDictionary.sour = nil
 
-for key, value in pairs(testDictionary) do
+for key, value in testDictionary do
 	print(key, value)
 end
 --[[ Resulting output:
@@ -280,20 +278,21 @@ local clone = table.clone(original)
 To copy a more complex table with nested tables inside it, you'll need to use a recursive function similar to the following:
 
 ```lua
--- The function used for deep copying a table
-local function deepCopy(original)
+-- The function used for deep cloning a table
+local function deepClone(original)
 	-- Define the new table for the copy
-	local copy = {}
+	local clone = table.clone(original) 
 
-	-- Loop through the original table to clone
+	-- Loop through the original table to check for table values
+	-- If a table is found as a value, deep clone it to the key (index)
 	for key, value in original do
-		-- If the type of the value is a table, deep copy it to the key (index)
-		-- Else (or) the type isn't a table, assign the default value to the index instead
-		copy[key] = type(value) == "table" and deepCopy(value) or value
+		if type(value) == "table" then
+			clone[key] = deepClone(value)
+		end
 	end
 
 	-- Return the finalized copy of the deep cloned table
-	return copy
+	return clone
 end
 ```
 
@@ -313,7 +312,7 @@ local original = {
 	}
 }
 
-local clone = deepCopy(original)
+local clone = deepClone(original)
 ```
 
 ## Freeze tables
@@ -345,8 +344,9 @@ local function deepFreeze(target)
 	table.freeze(target)
 
 	-- Check each key of the table and freeze it if it's a table
-	for _, v in target do
-		if type(v) == "table" then
+	for _, value in target do
+		-- Make sure the value isn't frozen; if it already is, an error will occur
+		if type(value) == "table" and table.isfrozen(value) == false then
 			deepFreeze(v)
 		end
 	end

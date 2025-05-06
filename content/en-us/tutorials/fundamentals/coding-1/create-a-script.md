@@ -51,7 +51,7 @@ You'll need the Output window throughout this course, so now is a good time to e
 
    <img src="../../../assets/education/coding-1/helloworld-output_800x150.png" width="80%"/>
 
-4. Click **Stop** to end the playtest. You can now return to the Script tab.
+4. Click **Stop** to end the playtest. You can now return to the **Script** tab.
 
 ## Identify data types
 

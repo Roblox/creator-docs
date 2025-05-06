@@ -1,6 +1,5 @@
 name: AlignPosition
 type: class
-category: Constraints
 memory_category: PhysicsParts
 summary: |
   Constraint which applies force to move two attachments together, or to move
@@ -48,7 +47,7 @@ description: |
 
   This constraint can use either **one** or **two** attachments in calculating
   its goal. See `Class.AlignPosition.Mode|Mode` for details.
-code_samples:
+code_samples: []
 inherits:
   - Constraint
 tags: []
@@ -65,8 +64,8 @@ properties:
       meaning that if the parent's center of mass is not aligned with the
       direction of the force, torque will be applied as well as force. When
       true, force is applied at the parents' center of mass.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -181,7 +180,7 @@ properties:
       `Class.AlignPosition.MaxVelocity|MaxVelocity`, are **caps** to the force
       and velocity respectively. The actual scale is determined by
       `Class.AlignPosition.Responsiveness|Responsiveness`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -207,7 +206,7 @@ properties:
       `Class.AlignPosition.MaxForce|MaxForce`, are **caps** to the velocity and
       force respectively. The actual scale is determined by
       `Class.AlignPosition.Responsiveness|Responsiveness`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -238,7 +237,7 @@ properties:
       disregards `Class.Constraint.Attachment1|Attachment1` and attempts to move
       `Class.Constraint.Attachment0|Attachment0` to
       `Class.AlignPosition.Position|Position`.
-    code_samples:
+    code_samples: []
     type: PositionAlignmentMode
     tags: []
     deprecation_message: ''
@@ -263,7 +262,7 @@ properties:
       `Class.AlignPosition.Mode|Mode` is set to
       `Enum.PositionAlignmentMode|OneAttachment`, in which case
       `Class.Constraint.Attachment1|Attachment1` is disregarded.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -289,8 +288,8 @@ properties:
       `Class.Constraint.Attachment1|Attachment1` remains unaffected. If true,
       the constraint applies force to both attachments in **equal and opposite
       directions**.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -311,7 +310,7 @@ properties:
     description: |
       Controls how quickly the constraint reaches its goal. Higher values cause
       the attachment(s) to align more rapidly. Value can be between 5 and 200.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -338,8 +337,8 @@ properties:
       `Class.AlignPosition.MaxVelocity|MaxVelocity`, and
       `Class.AlignPosition.Responsiveness|Responsiveness`. If true, the physics
       solver reacts as quickly as possible to complete the alignment.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

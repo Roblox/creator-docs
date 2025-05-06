@@ -1,6 +1,5 @@
 name: DragDetector
 type: class
-category:
 memory_category: Instances
 summary: |
   Instance which facilitates and encourages interaction with 3D objects in an
@@ -49,7 +48,7 @@ properties:
 
       To change the activated cursor icon, set this property to the asset ID of
       the image you'd like to use.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -73,7 +72,7 @@ properties:
       `Enum.DragDetectorResponseStyle.Physical` and the parent object is
       unanchored.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -162,7 +161,7 @@ properties:
       If true, the `Class.DragDetector` responds to user input; if false, it
       does not.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -513,7 +512,7 @@ properties:
       respond to these events and `Class.RemoteEvent|RemoteEvents` may be used
       to send any resulting changes that should be replicated to the server.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -685,13 +684,13 @@ methods:
     parameters:
       - name: priority
         type: int
-        default:
+        default: ''
         summary: |
           The order of priority for functions added via this method. Higher
           values take precedence over lower values.
       - name: function
         type: Function
-        default:
+        default: ''
         summary: |
           Function for modifying or constraining proposed motion. This function
           takes an input `Datatype.CFrame` of **proposed** motion and returns a
@@ -737,7 +736,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -767,7 +766,7 @@ methods:
     parameters:
       - name: function
         type: Function
-        default:
+        default: ''
         summary: |
           Function for monitoring `Class.DragDetector.DragContinue|DragContinue`
           signals. This function receives the signal's world space cursor ray
@@ -775,7 +774,7 @@ methods:
           orientation of the pivot in world space. If this function returns
           `nil`, the object will not be moved.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -817,7 +816,7 @@ methods:
     parameters:
       - name: function
         type: Function
-        default:
+        default: ''
         summary: |
           Function for setting the detector's interactivity. This function
           accepts a `Class.Player` parameter for enabling/disabling the detector
@@ -828,7 +827,7 @@ methods:
           `Class.BasePart.Color|Color`, `Class.Instance:HasTag()|HasTag()`
           value, or other details.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -848,30 +847,30 @@ events:
     parameters:
       - name: playerWhoDragged
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` who initiated the drag through
           `Class.DragDetector.DragStart|DragStart` and is now continuing the
           drag.
       - name: cursorRay
         type: Ray
-        default:
+        default: ''
         summary: |
           `Datatype.Ray` emanating from the cursor, aimed into the scene.
       - name: viewFrame
         type: CFrame
-        default:
+        default: ''
         summary: |
           `Datatype.CFrame` of the user's `Class.Camera`.
       - name: vrInputFrame
         type: OptionalCoordinateFrame
-        default:
+        default: ''
         summary: |
           If using a VR input device, the `Datatype.CFrame` of the hand holding
           the cursor/pointer/controller.
       - name: isModeSwitchKeyDown
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           If the drag detector's `Class.DragDetector.DragStyle|DragStyle` has
           both primary and secondary modes of motion, this parameter indicates
@@ -882,7 +881,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: DragDetector.DragEnd
@@ -894,7 +892,7 @@ events:
     parameters:
       - name: playerWhoDragged
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` who initiated the drag through
           `Class.DragDetector.DragStart|DragStart` and has now ended (released)
@@ -902,7 +900,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: DragDetector.DragStart
@@ -914,38 +911,38 @@ events:
     parameters:
       - name: playerWhoDragged
         type: Player
-        default:
+        default: ''
         summary: |
           `Class.Player` who initiated the drag.
       - name: cursorRay
         type: Ray
-        default:
+        default: ''
         summary: |
           `Datatype.Ray` emanating from the cursor, aimed into the scene.
       - name: viewFrame
         type: CFrame
-        default:
+        default: ''
         summary: |
           `Datatype.CFrame` of the user's `Class.Camera`.
       - name: hitFrame
         type: CFrame
-        default:
+        default: ''
         summary: |
           The hit frame of the cursor raycast that initiated the drag.
       - name: clickedPart
         type: BasePart
-        default:
+        default: ''
         summary: |
           The part that was hit by the cursor raycast that initiated the drag.
       - name: vrInputFrame
         type: OptionalCoordinateFrame
-        default:
+        default: ''
         summary: |
           If using a VR input device, the `Datatype.CFrame` of the hand holding
           the cursor/pointer/controller.
       - name: isModeSwitchKeyDown
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           If the drag detector's `Class.DragDetector.DragStyle|DragStyle` has
           both primary and secondary modes of motion, this parameter indicates
@@ -956,7 +953,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

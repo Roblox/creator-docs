@@ -1,6 +1,5 @@
 name: PlayerScripts
 type: class
-category: Scripting
 memory_category: Instances
 summary: |
   A container for LocalScripts to be run on the client.
@@ -16,7 +15,7 @@ description: |
   Unlike the `Class.Backpack` and `Class.PlayerGui` containers, the
   `Class.PlayerScripts` container is not accessible to the server. Server
   `Class.Script` objects will not run when parented to `Class.PlayerScripts`.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -32,10 +31,10 @@ methods:
     description: |
       Unregisters all ComputerCameraMovementMode enums from the game settings
       menu.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -48,10 +47,10 @@ methods:
       Unregisters all ComputerMovementMode enums from the game settings menu.
     description: |
       Unregisters all ComputerMovementMode enums from the game settings menu.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -64,10 +63,10 @@ methods:
       Unregisters all TouchCameraMovementMode enums from the game settings menu.
     description: |
       Unregisters all TouchCameraMovementMode enums from the game settings menu.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -80,10 +79,10 @@ methods:
       Unregisters all TouchMovementMode enums from the game settings menu.
     description: |
       Unregisters all TouchMovementMode enums from the game settings menu.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -98,14 +97,14 @@ methods:
     description: |
       Registers that a computer camera movement mode is available to be selected
       from the game menu.
-    code_samples:
+    code_samples: []
     parameters:
       - name: cameraMovementMode
         type: ComputerCameraMovementMode
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -120,14 +119,14 @@ methods:
     description: |
       Registers that a computer movement mode is available to be selected from
       the game menu.
-    code_samples:
+    code_samples: []
     parameters:
       - name: movementMode
         type: ComputerMovementMode
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -142,14 +141,14 @@ methods:
     description: |
       Registers that a touch camera movement mode is available to be selected
       from the game menu.
-    code_samples:
+    code_samples: []
     parameters:
       - name: cameraMovementMode
         type: TouchCameraMovementMode
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -164,14 +163,14 @@ methods:
     description: |
       Registers that a touch movement mode is available to be selected from the
       game menu.
-    code_samples:
+    code_samples: []
     parameters:
       - name: movementMode
         type: TouchMovementMode
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

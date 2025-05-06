@@ -1,6 +1,5 @@
 name: GetTextBoundsParams
 type: class
-category:
 memory_category: Instances
 summary: |
   Use with `Class.TextService:GetTextBoundsAsync()` to measure the size of text.
@@ -43,7 +42,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

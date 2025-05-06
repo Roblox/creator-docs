@@ -1,6 +1,5 @@
 name: VRService
 type: class
-category: Input
 memory_category: Instances
 summary: |
   Service responsible for handling interactions between Roblox and Virtual
@@ -53,7 +52,7 @@ properties:
 
       This property must be set on the server.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -92,7 +91,7 @@ properties:
       an object. This property prevents players from being able to see through
       walls while in VR. The default value is true.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -153,7 +152,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -200,7 +199,7 @@ properties:
       - `Class.UserInputService.UserCFrameChanged`
     code_samples:
       - UserInputService-UserCFrameChanged
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -233,7 +232,7 @@ methods:
     parameters:
       - name: pad
         type: VRTouchpad
-        default:
+        default: ''
         summary: |
           The specified `Enum.VRTouchpad|VRTouchpad`.
     returns:
@@ -275,7 +274,7 @@ methods:
     parameters:
       - name: type
         type: UserCFrame
-        default:
+        default: ''
         summary: |
           The specified `Enum.UserCFrame|UserCFrame`.
     returns:
@@ -306,11 +305,11 @@ methods:
     parameters:
       - name: type
         type: UserCFrame
-        default:
+        default: ''
         summary: |
           The specified type of VR device.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           A boolean indicating whether the specified VR device is enabled
           (`true`) or disabled (`false`).
@@ -338,7 +337,7 @@ methods:
       - VRService-RecenterUserHeadCFrame
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -368,16 +367,16 @@ methods:
     parameters:
       - name: cframe
         type: CFrame
-        default:
+        default: ''
         summary: |
           The specified `Datatype.CFrame` coordinates.
       - name: inputUserCFrame
         type: UserCFrame
-        default:
+        default: ''
         summary: |
           The VR device for which the navigation is requested.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -404,18 +403,18 @@ methods:
     parameters:
       - name: pad
         type: VRTouchpad
-        default:
+        default: ''
         summary: |
           The specified `Enum.VRTouchpad|VRTouchpad` you want to set the mode
           of.
       - name: mode
         type: VRTouchpadMode
-        default:
+        default: ''
         summary: |
           The mode you want to set the specified `Enum.VRTouchpad|VRTouchpad`
           to.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -443,18 +442,17 @@ events:
     parameters:
       - name: cframe
         type: CFrame
-        default:
+        default: ''
         summary: |
           The requested `Datatype.CFrame` coordinates.
       - name: inputUserCFrame
         type: UserCFrame
-        default:
+        default: ''
         summary: |
           Indicates the VR device for which navigation is requested.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: VRService.TouchpadModeChanged
@@ -475,18 +473,17 @@ events:
     parameters:
       - name: pad
         type: VRTouchpad
-        default:
+        default: ''
         summary: |
           The touchpad that changed mode.
       - name: mode
         type: VRTouchpadMode
-        default:
+        default: ''
         summary: |
           The new mode.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: VRService.UserCFrameChanged
@@ -507,19 +504,18 @@ events:
     parameters:
       - name: type
         type: UserCFrame
-        default:
+        default: ''
         summary: |
           The type of VR device that changed.
       - name: value
         type: CFrame
-        default:
+        default: ''
         summary: |
           The updated `Datatype.CFrame` coordinates of the VR device after the
           change.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: VRService.UserCFrameEnabled
@@ -540,19 +536,18 @@ events:
     parameters:
       - name: type
         type: UserCFrame
-        default:
+        default: ''
         summary: |
           The `Enum.UserCFrame|UserCFrame` getting enabled or disabled.
       - name: enabled
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           A boolean indicating whether the `Enum.UserCFrame|UserCFrame` is
           enabled (`true`) or disabled (`false`).
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

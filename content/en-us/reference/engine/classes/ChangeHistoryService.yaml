@@ -1,6 +1,5 @@
 name: ChangeHistoryService
 type: class
-category: Plugins
 memory_category: Instances
 summary: |
   **Must** be used by plugins to communicate to Studio how to undo and redo the
@@ -18,7 +17,7 @@ description: |
 
   `Class.ChangeHistoryService` is not enabled at runtime, so calling its methods
   in a running experience has no effect.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -37,7 +36,7 @@ methods:
     parameters:
       - name: identifier
         type: string
-        default:
+        default: ''
         summary: |
           Identifies the recording from the previous call to
           `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()`.
@@ -46,17 +45,17 @@ methods:
           value is ignored, and the recording is determined by context.
       - name: operation
         type: FinishRecordingOperation
-        default:
+        default: ''
         summary: |
           Specifies the operation to take.
       - name: finalOptions
         type: Dictionary?
-        default:
+        default: ''
         summary: |
           Optional table of values to pass to
           `Class.ChangeHistoryService.OnFinishRecording|OnFinishRecording`.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -71,7 +70,7 @@ methods:
     description: |
       Returns whether there are actions that can be redone, and, if there are,
       returns the last of them.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Tuple
@@ -89,7 +88,7 @@ methods:
     description: |
       Returns whether there are actions that can be undone, and, if there are,
       returns the last of them.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Tuple
@@ -107,10 +106,10 @@ methods:
     parameters:
       - name: identifier
         type: string?
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
@@ -123,10 +122,10 @@ methods:
       Executes the last action that was undone.
     description: |
       Executes the last action that was undone.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -139,10 +138,10 @@ methods:
       Clears the history, causing all undo/redo waypoints to be removed.
     description: |
       Clears the history, causing all undo/redo waypoints to be removed.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -158,14 +157,14 @@ methods:
       false, the undo/redo list is cleared, and does not repopulate. When set to
       true again, the original list is not restored, but further operations
       append to the list once more
-    code_samples:
+    code_samples: []
     parameters:
       - name: state
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -196,10 +195,10 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -232,13 +231,13 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           Name of the action being performed suitable for logging and coding
           purposes.
       - name: displayName
         type: string?
-        default:
+        default: ''
         summary: |
           Name of the action being performed to display to the user.
     returns:
@@ -255,10 +254,10 @@ methods:
       Undos the last action taken, for which there exists a waypoint.
     description: |
       Undos the last action taken, for which there exists a waypoint.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -277,34 +276,33 @@ events:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           Name of the action being performed suitable for logging and coding
           purposes.
       - name: displayName
         type: string?
-        default:
+        default: ''
         summary: |
           Name of the action being performed to display to the user.
       - name: identifier
         type: string?
-        default:
+        default: ''
         summary: |
           The identifier for the recording.
       - name: operation
         type: FinishRecordingOperation
-        default:
+        default: ''
         summary: ''
       - name: finalOptions
         type: Dictionary?
-        default:
+        default: ''
         summary: |
           Optional table from
           `Class.ChangeHistoryService.FinishOperation()| FinishOperation()`.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: ChangeHistoryService.OnRecordingStarted
@@ -316,19 +314,18 @@ events:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           Name of the action being performed suitable for logging and coding
           purposes.
       - name: displayName
         type: string?
-        default:
+        default: ''
         summary: |
           Name of the action being performed to display to the user.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: ChangeHistoryService.OnRedo
@@ -338,16 +335,15 @@ events:
     description: |
       Fired when the user reverses the undo command. Waypoint describes the type
       action that has been redone.
-    code_samples:
+    code_samples: []
     parameters:
       - name: waypoint
         type: string
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: ChangeHistoryService.OnUndo
@@ -357,16 +353,15 @@ events:
     description: |
       Fired when the user undoes an action in studio. Waypoint describes the
       type action that has been undone.
-    code_samples:
+    code_samples: []
     parameters:
       - name: waypoint
         type: string
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

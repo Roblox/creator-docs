@@ -1,6 +1,5 @@
 name: ImageLabel
 type: class
-category: GUI
 memory_category: Gui
 summary: |
   A 2D user interface element that displays a single non-interactive image.
@@ -193,7 +192,7 @@ properties:
       load.
     code_samples:
       - Image-Load-Time
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -218,7 +217,7 @@ properties:
       its size in texture memory. When set to
       `Enum.ResamplerMode.Pixelated|Enum.ResamplerMode.Pixelated`, the image
       preserves the sharp edges of pixels.
-    code_samples:
+    code_samples: []
     type: ResamplerMode
     tags: []
     deprecation_message: ''
@@ -313,7 +312,7 @@ properties:
       See also `Class.ImageLabel.ScaleType|ScaleType`,
       `Class.ImageLabel.SliceCenter|SliceCenter`, and
       `Class.ImageLabel.SliceScale|SliceScale`.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

@@ -1,19 +1,18 @@
 name: Handles
 type: class
-category: Adornments
 memory_category: Instances
 summary: |
-  The Handles object places 3D handles around any object that its Adornee is set
-  to.
+  Places 3D handles around any object that its `Class.Handles.Adornee|Adornee`
+  is set to.
 description: |
-  For handles to be interactive, they must be parented to a player's PlayerGui
-  or the CoreGui.
+  The `Handles` object places 3D handles around any object that its
+  `Class.Handles.Adornee|Adornee` is set to; this property must be set to a 3D
+  object for the handles to appear. The color can be changed and the shape of
+  the handles can be set to either arrows or spheres.
 
-  The **Handles** object places 3D handles around any object that its Adornee is
-  set to. The Adornee property must be set to a 3D object for the handles to
-  appear. The color can be changed, and the shape of the handles can be set to
-  either arrows or spheres.
-code_samples:
+  For handles to be interactive, they must be parented to a player's
+  `Class.PlayerGui` or the `Class.CoreGui`.
+code_samples: []
 inherits:
   - HandlesBase
 tags: []
@@ -24,7 +23,7 @@ properties:
       Sets which sides the GUI handles will appear.
     description: |
       Sets which sides the GUI handles will appear.
-    code_samples:
+    code_samples: []
     type: Faces
     tags: []
     deprecation_message: ''
@@ -41,12 +40,11 @@ properties:
     writeCapabilities: []
   - name: Handles.Style
     summary: |
-      Sets the GUI style of the handles. Currently there are only two types;
-      Resize and Movement.
+      Sets the GUI style of the handles.
     description: |
-      Sets the GUI style of the handles. Currently there are only two types;
-      Resize and Movement.
-    code_samples:
+      Sets the GUI style of the handles. Currently there are only two types:
+      `Enum.HandlesStyle|Resize` and `Enum.HandlesStyle|Movement`.
+    code_samples: []
     type: HandlesStyle
     tags: []
     deprecation_message: ''
@@ -68,34 +66,34 @@ events:
       Fired when the left mouse button goes down on one of the GUI handles.
     description: |
       Fired when the left mouse button goes down on one of the GUI handles.
-    code_samples:
+    code_samples: []
     parameters:
       - name: face
         type: NormalId
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: Handles.MouseButton1Up
     summary: |
       Fired when the left mouse button is released on one of the GUI handles.
     description: |
       Fired when the left mouse button is released on one of the GUI handles.
-    code_samples:
+    code_samples: []
     parameters:
       - name: face
         type: NormalId
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: Handles.MouseDrag
     summary: |
@@ -104,54 +102,54 @@ events:
     description: |
       Fired when the mouse moves while the MouseButton1Down event has fired, but
       the left mouse button has not been released yet.
-    code_samples:
+    code_samples: []
     parameters:
       - name: face
         type: NormalId
-        default:
+        default: ''
         summary: ''
       - name: distance
         type: float
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: Handles.MouseEnter
     summary: |
       Fired when a mouse "enters" the GUI handle.
     description: |
       Fired when a mouse "enters" the GUI handle.
-    code_samples:
+    code_samples: []
     parameters:
       - name: face
         type: NormalId
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: Handles.MouseLeave
     summary: |
       Fired when the mouse leaves the GUI handle.
     description: |
       Fired when the mouse leaves the GUI handle.
-    code_samples:
+    code_samples: []
     parameters:
       - name: face
         type: NormalId
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 callbacks: []

@@ -1,6 +1,5 @@
 name: StarterPack
 type: class
-category: Gameplay
 memory_category: Instances
 summary: |
   A service-level container whose contents are copied into each player's

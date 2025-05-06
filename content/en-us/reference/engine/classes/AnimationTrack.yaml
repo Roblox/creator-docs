@@ -1,6 +1,5 @@
 name: AnimationTrack
 type: class
-category: Animations
 memory_category: Animation
 summary: |
   Controls the playback of an animation on an `Class.Animator`.
@@ -8,7 +7,7 @@ description: |
   Controls the playback of an animation on an `Class.Animator`. This object
   cannot be created, instead it is returned by the
   `Class.Animator:LoadAnimation()` method.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -58,7 +57,7 @@ properties:
       `Class.Animator:GetPlayingAnimationTracks()`
     code_samples:
       - AnimationTrack-IsPlaying
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -127,7 +126,7 @@ properties:
     code_samples:
       - Animation-Looping
       - AnimationTrack-DidLoop
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -176,7 +175,7 @@ properties:
       This property also allows the developer to play the same animation at
       different priorities, without needing to upload additional versions to
       Roblox.
-    code_samples:
+    code_samples: []
     type: AnimationPriority
     tags: []
     deprecation_message: ''
@@ -390,14 +389,15 @@ methods:
         summary: |
           The playback speed the animation is to be changed to.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationTrack:AdjustWeight
     summary: |
@@ -446,14 +446,15 @@ methods:
           The duration of time that the animation will fade between the old
           weight and the new weight for.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationTrack:GetMarkerReachedSignal
     summary: |
@@ -469,20 +470,9 @@ methods:
       To learn more about using this function, see **Animation Events** in the
       [Animation Editor](../../../animation/editor.md) article.
 
-      #### More About Keyframes
-
-      `Class.Keyframe` names can be set in the Roblox
-      [Animation Editor](../../../animation/editor.md) when creating or editing
-      an animation. They cannot, however, be set by a `Class.Script` on an
-      existing animation prior to playing it.
-
-      `Class.Keyframe` names do not need to be unique. For example, if an
-      `Class.Animation` has three keyframes named "EmitParticles," the connected
-      event returned by this function will fire each time one of these keyframes
-      is reached.
-
       See also:
 
+      - `Class.KeyframeMarker`
       - `Class.AnimationTrack`, controls the playback of an animation on a
         `Class.Humanoid` or `Class.AnimationController`
       - `Class.Keyframe`, holds the `Class.Pose|Poses` applied to joints in a
@@ -495,19 +485,22 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
-          The name of the `KeyFrameMarker` the signal is being created for.
+          The name of the `Class.KeyframeMarker` the signal is being created
+          for. Not to be confused with the name of the `Class.Keyframe`.
     returns:
       - type: RBXScriptSignal
         summary: |
           The signal created and fired when the animation reaches the created
-          `KeyFrameMarker`.
+          `KeyframeMarker`. Not to be confused with the name of the
+          `Class.Keyframe`.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationTrack:GetTargetInstance
     summary: ''
@@ -516,7 +509,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instance
@@ -525,7 +518,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationTrack:GetTargetNames
     summary: ''
@@ -539,7 +533,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationTrack:GetTimeOfKeyframe
     summary: |
@@ -563,7 +558,7 @@ methods:
     parameters:
       - name: keyframeName
         type: string
-        default:
+        default: ''
         summary: |
           The name associated with the `Class.Keyframe` to be found.
     returns:
@@ -575,7 +570,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationTrack:Play
     summary: |
@@ -622,14 +618,15 @@ methods:
         summary: |
           The playback speed of the animation.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationTrack:SetTargetInstance
     summary: ''
@@ -638,20 +635,21 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
       - name: target
         type: Instance
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationTrack:Stop
     summary: |
@@ -680,14 +678,15 @@ methods:
           The time, in seconds, for which animation weight is to be faded out
           over.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
 events:
   - name: AnimationTrack.DidLoop
@@ -706,8 +705,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationTrack.Ended
     summary: |
@@ -728,8 +727,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationTrack.KeyframeReached
     summary: |
@@ -752,11 +751,11 @@ events:
       `Class.Keyframe` names can be set in the Roblox Animation Editor when
       creating or editing an animation. They cannot however be set by a
       `Class.Script` on an existing animation prior to playing it.
-    code_samples:
+    code_samples: []
     parameters:
       - name: keyframeName
         type: string
-        default:
+        default: ''
         summary: |
           The name of the `Class.Keyframe` reached.
     tags: []
@@ -766,8 +765,8 @@ events:
       function. For more details, see **Animation Events** in
       [Animation Editor](../../../animation/editor.md).
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: AnimationTrack.Stopped
     summary: |
@@ -789,7 +788,7 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
 callbacks: []

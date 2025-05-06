@@ -1,6 +1,5 @@
 name: BinaryStringValue
 type: class
-category:
 memory_category: Instances
 summary: |
   An internal type of `Class.StringValue` object, that stores a `BinaryString`
@@ -8,7 +7,7 @@ summary: |
 description: |
   An internal type of `Class.StringValue` object, that stores a `BinaryString`
   value.
-code_samples:
+code_samples: []
 inherits:
   - ValueBase
 tags: []
@@ -31,17 +30,16 @@ events:
       Equivalent changed events exist for similar objects, such as
       `Class.NumberValue` and `Class.StringValue`, depending on what object type
       best suits the need.
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
         type: BinaryString
-        default:
+        default: ''
         summary: |
           The new value after the change.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

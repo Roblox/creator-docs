@@ -1,6 +1,5 @@
 name: VideoDisplay
 type: class
-category:
 memory_category: Gui
 summary: ''
 description: ''
@@ -145,7 +144,7 @@ methods:
     parameters:
       - name: pin
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instances
@@ -154,7 +153,38 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
+    writeCapabilities: []
+  - name: VideoDisplay:GetInputPins
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - UI
+    writeCapabilities: []
+  - name: VideoDisplay:GetOutputPins
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - UI
     writeCapabilities: []
 events:
   - name: VideoDisplay.WiringChanged
@@ -163,25 +193,25 @@ events:
     code_samples: []
     parameters:
       - name: connected
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: ''
       - name: pin
         type: string
-        default:
+        default: ''
         summary: ''
       - name: wire
         type: Wire
-        default:
+        default: ''
         summary: ''
       - name: instance
         type: Instance
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 callbacks: []

@@ -1,12 +1,11 @@
 name: Studio
 type: class
-category: Settings
 memory_category: Instances
 summary: ''
 description: |
   The Studio object is a settings object that is exclusive to Roblox Studio. It
   can be found in Roblox Studio's settings under the Studio tab.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -18,7 +17,7 @@ properties:
   - name: Studio."TODO" Color
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -36,7 +35,7 @@ properties:
   - name: Studio."function" Color
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -54,7 +53,7 @@ properties:
   - name: Studio."local" Color
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -72,7 +71,7 @@ properties:
   - name: Studio."nil" Color
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -90,7 +89,7 @@ properties:
   - name: Studio."self" Color
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -103,6 +102,23 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
+  - name: Studio.ActionOnAutoResumeSync
+    summary: ''
+    description: ''
+    code_samples: []
+    type: ActionOnAutoResumeSync
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Directories
+    serialization:
+      can_load: true
+      can_save: true
     capabilities: []
     writeCapabilities: []
   - name: Studio.ActionOnStopSync
@@ -125,7 +141,7 @@ properties:
   - name: Studio.Active Color
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -142,7 +158,7 @@ properties:
   - name: Studio.Active Hover Over Color
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -163,8 +179,8 @@ properties:
     description: |
       If set to true, Roblox Studio will attempt to transfer script changes that
       were made during a Play Solo session to the opened place.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -186,8 +202,8 @@ properties:
       If set to true, the hover selection box that is shown when mousing over
       selectable objects in the `Class.Workspace` will flash between
       `Hover Over Color` and `Select Color` based on the `Hover Animate Speed`.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -203,8 +219,8 @@ properties:
   - name: Studio.Auto Clean Empty Line
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -220,8 +236,8 @@ properties:
   - name: Studio.Auto Closing Brackets
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -237,8 +253,8 @@ properties:
   - name: Studio.Auto Closing Quotes
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -255,7 +271,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -271,7 +287,7 @@ properties:
   - name: Studio.Auto Indent Rule
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: AutoIndentRule
     tags: []
     deprecation_message: ''
@@ -288,8 +304,8 @@ properties:
   - name: Studio.Auto-Recovery Enabled
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -305,7 +321,7 @@ properties:
   - name: Studio.Auto-Recovery Interval (Minutes)
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -323,12 +339,12 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Directories
     serialization:
@@ -357,7 +373,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -375,7 +391,7 @@ properties:
       Specifies the background color of Roblox Studio's script editor.
     description: |
       Specifies the background color of Roblox Studio's script editor.
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -395,7 +411,7 @@ properties:
       Sets the scrolling mode of the `Advanced Objects` tab in Roblox Studio.
     description: |
       Sets the scrolling mode of the `Advanced Objects` tab in Roblox Studio.
-    code_samples:
+    code_samples: []
     type: ListDisplayMode
     tags: []
     deprecation_message: ''
@@ -412,7 +428,7 @@ properties:
   - name: Studio.Bool Color
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -430,7 +446,7 @@ properties:
   - name: Studio.Bracket Color
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -450,7 +466,7 @@ properties:
       Sets the color of built-in functions and keywords in the script editor.
     description: |
       Sets the color of built-in functions and keywords in the script editor.
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -472,7 +488,7 @@ properties:
     description: |
       Sets how many studs the camera will move forward or backwards when using
       the mouse wheel.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -510,7 +526,7 @@ properties:
     description: |
       Sets the speed in studs/sec that the camera moves while holding down Shift
       with the movement keys.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -531,7 +547,7 @@ properties:
     description: |
       Sets the speed in studs/sec that the camera moves when movement keys are
       pressed.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -565,8 +581,8 @@ properties:
   - name: Studio.Camera Zoom to Mouse Position
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -583,7 +599,58 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: Studio.CameraOrbitSensitivity
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: Studio.CameraPanSensitivity
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: Studio.CameraShiftFactor
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
     tags: []
     deprecation_message: ''
     security:
@@ -600,7 +667,24 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: Studio.CameraZoomSpeed
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
     tags: []
     deprecation_message: ''
     security:
@@ -620,8 +704,8 @@ properties:
     description: |
       If set to true, the output will be automatically cleared when game
       sessions are switched.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -637,8 +721,8 @@ properties:
   - name: Studio.CommandBarLocalState
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -656,7 +740,7 @@ properties:
       Specifies the color of comments in Roblox Studio's script editor.
     description: |
       Specifies the color of comments in Roblox Studio's script editor.
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -674,7 +758,7 @@ properties:
   - name: Studio.Current Line Highlight Color
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -692,7 +776,7 @@ properties:
   - name: Studio.Debugger Current Line Color
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -710,7 +794,7 @@ properties:
   - name: Studio.Debugger Error Line Color
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -725,27 +809,6 @@ properties:
       can_save: false
     capabilities: []
     writeCapabilities: []
-  - name: Studio.DefaultScriptFileDir
-    summary: |
-      Specifies the default prompt directory that will be opened when the user
-      activates the `Execute Script` button in Roblox Studio.
-    description: |
-      Specifies the default prompt directory that will be opened when the user
-      activates the `Execute Script` button in Roblox Studio.
-    code_samples:
-    type: QDir
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Directories
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-    writeCapabilities: []
   - name: Studio.DeprecatedObjectsShown
     summary: |
       If set to true, deprecated objects will be shown in the Advanced Objects
@@ -753,8 +816,8 @@ properties:
     description: |
       If set to true, deprecated objects will be shown in the Advanced Objects
       window, as well as the Object Browser.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -856,7 +919,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -873,7 +936,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -890,7 +953,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -961,8 +1024,8 @@ properties:
     description: |
       When set to true, the script editor and command bar will show an
       autocomplete menu while writing.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -979,7 +1042,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -995,8 +1058,8 @@ properties:
   - name: Studio.Enable CoreScript Debugger
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1012,8 +1075,8 @@ properties:
   - name: Studio.Enable Http Sandboxing
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1029,8 +1092,8 @@ properties:
   - name: Studio.Enable Internal Beta Features
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1046,8 +1109,8 @@ properties:
   - name: Studio.Enable Internal Features
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1064,7 +1127,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1081,7 +1144,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1098,7 +1161,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1115,7 +1178,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1131,8 +1194,8 @@ properties:
   - name: Studio.Enable Temporary Tabs
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1148,8 +1211,8 @@ properties:
   - name: Studio.Enable Temporary Tabs In Explorer
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1166,7 +1229,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1183,7 +1246,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1200,7 +1263,24 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: Studio.EnableSelectionTooltips
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1220,7 +1300,7 @@ properties:
     description: |
       Specifies the color of the wavy underline shown when malformed code is
       detected in the script editor.
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -1242,7 +1322,7 @@ properties:
     description: |
       Sets the highlight color of matches in the script editor's Find Selection
       operation (Ctrl+F).
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -1262,7 +1342,7 @@ properties:
       Specifies the font used in the script editor.
     description: |
       Specifies the font used in the script editor.
-    code_samples:
+    code_samples: []
     type: QFont
     tags: []
     deprecation_message: ''
@@ -1279,8 +1359,8 @@ properties:
   - name: Studio.Format On Paste
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1296,8 +1376,8 @@ properties:
   - name: Studio.Format On Type
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1314,7 +1394,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1330,7 +1410,7 @@ properties:
   - name: Studio.Function Name Color
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -1348,8 +1428,8 @@ properties:
   - name: Studio.Highlight Current Line
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1365,8 +1445,8 @@ properties:
   - name: Studio.Highlight Occurances
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1404,7 +1484,7 @@ properties:
     description: |
       Specifies how frequently the hover animation flashes when the mouse is
       hovering over a selectable object in the `Class.Workspace`.
-    code_samples:
+    code_samples: []
     type: HoverAnimateSpeed
     tags: []
     deprecation_message: ''
@@ -1426,8 +1506,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Tools
     serialization:
@@ -1443,8 +1523,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Tools
     serialization:
@@ -1457,7 +1537,7 @@ properties:
       Specifies the color that the hover selection box uses.
     description: |
       Specifies the color that the hover selection box uses.
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -1491,8 +1571,8 @@ properties:
   - name: Studio.Indent Using Spaces
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1546,7 +1626,7 @@ properties:
       Sets the text color of built-in Luau keywords.
     description: |
       Sets the text color of built-in Luau keywords.
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -1602,7 +1682,7 @@ properties:
     description: |
       Sets the thickness of the `Class.Model.PrimaryPart` selection adornee.
       This value is constrained between 0 and 0.05.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -1620,7 +1700,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1637,7 +1717,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1653,7 +1733,7 @@ properties:
   - name: Studio.LocalAssetsFolder
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: QDir
     tags: []
     deprecation_message: ''
@@ -1672,8 +1752,8 @@ properties:
       Specifies whether or not the Lua Debugger feature is enabled.
     description: |
       Specifies whether or not the Lua Debugger feature is enabled.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1689,8 +1769,8 @@ properties:
   - name: Studio.LuaDebuggerEnabledAtStartup
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - Hidden
       - ReadOnly
@@ -1709,7 +1789,7 @@ properties:
   - name: Studio.Luau Keyword Color
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -1746,7 +1826,7 @@ properties:
       Sets the highlight color of double-clicked variables in the script editor.
     description: |
       Sets the highlight color of double-clicked variables in the script editor.
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -1766,7 +1846,7 @@ properties:
       The maximum number of lines that can be displayed in the output.
     description: |
       The maximum number of lines that can be displayed in the output.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -1783,7 +1863,7 @@ properties:
   - name: Studio.Menu Item Background Color
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -1801,7 +1881,7 @@ properties:
   - name: Studio.Method Color
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -1821,7 +1901,7 @@ properties:
       Specifies the color of numbers in Roblox Studio's script editor.
     description: |
       Specifies the color of numbers in Roblox Studio's script editor.
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -1843,8 +1923,8 @@ properties:
     description: |
       If set to true, audio being played will only be heard if the game window
       is being focused on.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1862,7 +1942,7 @@ properties:
       Sets the text color of operator characters in the script editor.
     description: |
       Sets the text color of operator characters in the script editor.
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -1882,7 +1962,7 @@ properties:
       Specifies the font used by the output.
     description: |
       Specifies the font used by the output.
-    code_samples:
+    code_samples: []
     type: QFont
     tags: []
     deprecation_message: ''
@@ -1901,7 +1981,7 @@ properties:
       Sets the layout mode of the output.
     description: |
       Sets the layout mode of the output.
-    code_samples:
+    code_samples: []
     type: OutputLayoutMode
     tags: []
     deprecation_message: ''
@@ -1924,7 +2004,7 @@ properties:
       Sets the highest permission level that APIs have to have in order to be
       shown in the Object Browser. See `Enum.PermissionLevelShown` for more
       info.
-    code_samples:
+    code_samples: []
     type: PermissionLevelShown
     tags: []
     deprecation_message: ''
@@ -1942,7 +2022,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1963,8 +2043,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Tools
     serialization:
@@ -1975,8 +2055,8 @@ properties:
   - name: Studio.PluginDebuggingEnabled
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -1994,7 +2074,7 @@ properties:
       The directory where local plugins are stored.
     description: |
       The directory where local plugins are stored.
-    code_samples:
+    code_samples: []
     type: QDir
     tags: []
     deprecation_message: ''
@@ -2011,7 +2091,7 @@ properties:
   - name: Studio.Primary Text Color
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -2029,7 +2109,7 @@ properties:
   - name: Studio.Property Color
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -2048,12 +2128,12 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Directories
     serialization:
@@ -2065,12 +2145,12 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Directories
     serialization:
@@ -2085,8 +2165,8 @@ properties:
     description: |
       When set to true, Roblox Studio shortcuts will take priority over inputs
       being captured in the game window.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -2102,7 +2182,7 @@ properties:
   - name: Studio.Ruler Color
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -2120,7 +2200,7 @@ properties:
   - name: Studio.Rulers
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -2137,7 +2217,7 @@ properties:
   - name: Studio.RuntimeUndoBehavior
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: RuntimeUndoBehavior
     tags: []
     deprecation_message: ''
@@ -2154,7 +2234,7 @@ properties:
   - name: Studio.Script Editor Color Preset
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: StudioScriptEditorColorPresets
     tags: []
     deprecation_message: ''
@@ -2171,7 +2251,7 @@ properties:
   - name: Studio.Script Editor Scrollbar Background Color
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -2189,7 +2269,7 @@ properties:
   - name: Studio.Script Editor Scrollbar Handle Color
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -2209,7 +2289,7 @@ properties:
       The time (in seconds) a script can wait to be resumed before timing out.
     description: |
       The time (in seconds) a script can wait to be resumed before timing out.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -2226,8 +2306,8 @@ properties:
   - name: Studio.Scroll Past Last Line
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -2243,7 +2323,7 @@ properties:
   - name: Studio.Secondary Text Color
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -2265,7 +2345,7 @@ properties:
     description: |
       The color of the selection box used with object selections in the
       `Class.Workspace`
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -2284,7 +2364,7 @@ properties:
       Sets the color of the `Class.Model.PrimaryPart` selection box.
     description: |
       Sets the color of the `Class.Model.PrimaryPart` selection box.
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -2301,7 +2381,7 @@ properties:
   - name: Studio.Selected Menu Item Background Color
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -2319,7 +2399,7 @@ properties:
   - name: Studio.Selected Text Color
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -2339,7 +2419,7 @@ properties:
       Sets the background color of selected text in the script editor.
     description: |
       Sets the background color of selected text in the script editor.
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -2362,8 +2442,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Tools
     serialization:
@@ -2376,7 +2456,7 @@ properties:
       Sets the text color of selected text in the script editor.
     description: |
       Sets the text color of selected text in the script editor.
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -2399,8 +2479,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Tools
     serialization:
@@ -2411,8 +2491,8 @@ properties:
   - name: Studio.Set Pivot of Imported Parts
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -2432,8 +2512,8 @@ properties:
     description: |
       If set to true, the `Class.CoreGui` will be visible in the Explorer while
       the game is running.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -2451,8 +2531,8 @@ properties:
       If set to true, basic diagnostic information is shown in the bottom right.
     description: |
       If set to true, basic diagnostic information is shown in the bottom right.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -2468,8 +2548,8 @@ properties:
   - name: Studio.Show FileSyncService
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -2485,8 +2565,8 @@ properties:
   - name: Studio.Show Hidden Objects in Explorer
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -2506,8 +2586,8 @@ properties:
     description: |
       If set to true, hovering over an object in the `Class.Workspace` will show
       a selection box.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -2524,7 +2604,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -2541,7 +2621,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -2561,8 +2641,8 @@ properties:
     description: |
       When set to true, the navigation mesh used by the
       `Class.PathfindingService` will be visualized.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -2579,7 +2659,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -2599,8 +2679,8 @@ properties:
     description: |
       When set to true, the `Class.PluginGuiService` will be shown in Roblox
       Studio's explorer.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -2617,7 +2697,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -2633,8 +2713,8 @@ properties:
   - name: Studio.Show Whitespace
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -2650,8 +2730,8 @@ properties:
   - name: Studio.Show plus button on hover in Explorer
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -2668,7 +2748,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -2684,8 +2764,8 @@ properties:
   - name: Studio.Skip Closing Brackets and Quotes
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -2703,7 +2783,7 @@ properties:
       Specifies the color of strings in the script editor.
     description: |
       Specifies the color of strings in the script editor.
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -2725,7 +2805,7 @@ properties:
     description: |
       Specifies how many spaces are used to represent a tab in the script
       editor.
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -2744,7 +2824,7 @@ properties:
       Specifies the color of normal text in the script editor.
     description: |
       Specifies the color of normal text in the script editor.
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -2764,8 +2844,8 @@ properties:
       If set to true, text in the script editor will be wrapped.
     description: |
       If set to true, text in the script editor will be wrapped.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -2797,7 +2877,7 @@ properties:
       ```lua
       print("The current Studio theme is:", settings().Studio.Theme)
       ```
-    code_samples:
+    code_samples: []
     type: Instance
     tags: []
     deprecation_message: ''
@@ -2816,7 +2896,7 @@ properties:
       Specifies the color scheme of Roblox Studio.
     description: |
       Specifies the color scheme of Roblox Studio.
-    code_samples:
+    code_samples: []
     type: UITheme
     tags:
       - Hidden
@@ -2838,7 +2918,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -2858,7 +2938,7 @@ properties:
     description: |
       Specifies the color of the wavy underline shown when the script analyzer
       picks up a problem that should be addressed in the script editor.
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -2876,7 +2956,7 @@ properties:
   - name: Studio.Whitespace Color
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Color3
     tags:
       - NotReplicated
@@ -2924,12 +3004,11 @@ events:
       The **ThemeChanged** event fires when Studio's `Class.Studio.Theme|Theme`
       changes. The best use of this event is to get the colors from the theme
       that changed and update your plugin's UI accordingly.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

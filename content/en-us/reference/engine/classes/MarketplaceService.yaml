@@ -1,6 +1,5 @@
 name: MarketplaceService
 type: class
-category: Monetization
 memory_category: Instances
 summary: |
   The service responsible for in-experience transactions.
@@ -26,7 +25,7 @@ description: |
   [monetize](../../../production/monetization/index.md) an experience on Roblox,
   as well as learning to use `Class.DataStoreService`, which is responsible for
   saving and loading all data related to purchases.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -56,12 +55,12 @@ methods:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: |
           The user to prompt to purchase items.
       - name: lineItems
         type: Array
-        default:
+        default: ''
         summary: |
           An array of avatar items to be included in the bulk purchase.
 
@@ -80,11 +79,11 @@ methods:
           - `Id`: The ID of the asset or bundle.
       - name: options
         type: Dictionary
-        default:
+        default: ''
         summary: |
           Not available at this time.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -97,18 +96,18 @@ methods:
       Prompts a user to purchase a bundle with the given `bundleId`.
     description: |
       Prompts a user to purchase a bundle with the given `bundleId`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: ''
       - name: bundleId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -127,14 +126,14 @@ methods:
     parameters:
       - name: user
         type: Player
-        default:
+        default: ''
         summary: ''
       - name: subscriptionId
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -149,18 +148,18 @@ methods:
       Prompts a user to purchase a
       [pass](../../../production/monetization/game-passes.md) with the given
       `gamePassId`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: ''
       - name: gamePassId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -189,11 +188,11 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: |
           The user being prompted to purchase Premium.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -213,14 +212,14 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: ''
       - name: productId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: equipIfPurchased
-        type: bool
+        type: boolean
         default: true
         summary: ''
       - name: currencyType
@@ -228,7 +227,7 @@ methods:
         default: Default
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -241,30 +240,37 @@ methods:
       Prompts a user to purchase an item with the given `assetId`. Does not work
       for USD Creator Store purchases.
     description: |
-      Prompts a user to purchase an item with the given `assetId`. 
-      - This does not work for [USD Creator Store](../../../production/sell-on-creator-store.md) purchases. 
-      -  If the item has the [Sale Location](../../../marketplace/publish-to-marketplace.md#sale-location) set as `Experience By Place ID (API Only)`, you must call `Class.MarketplaceService:PromptPurchase` from a server script.
-      - If prompting a purchase of a [limited](../../../marketplace/marketplace-fees-and-commissions.md#limiteds) item:
-        - (Recommended) Server requests prompt original copies until they run out,
-          regardless of the price. Once original copies run out, resale copies are
-          prompted.
+      Prompts a user to purchase an item with the given `assetId`.
+
+      - This does not work for
+        [USD Creator Store](../../../production/sell-on-creator-store.md)
+        purchases.
+      - If the item has the
+        [Sale Location](../../../marketplace/publish-to-marketplace.md#sale-location)
+        set as `Experience By Place ID (API Only)`, you must call
+        `Class.MarketplaceService:PromptPurchase` from a server script.
+      - If prompting a purchase of a
+        [limited](../../../marketplace/marketplace-fees-and-commissions.md#limiteds)
+        item:
+        - (Recommended) Server requests prompt original copies until they run
+          out, regardless of the price. Once original copies run out, resale
+          copies are prompted.
         - Client requests prompt from the lowest resale price even if original
           copies are available.
-
     code_samples:
       - MarketplaceService-PromptPurchase1
       - market
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: ''
       - name: assetId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: equipIfPurchased
-        type: bool
+        type: boolean
         default: true
         summary: ''
       - name: currencyType
@@ -273,7 +279,7 @@ methods:
         summary: |
           Ignored.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -290,16 +296,16 @@ methods:
     parameters:
       - name: user
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` object to be prompted to subscribe.
       - name: subscriptionId
         type: string
-        default:
+        default: ''
         summary: |
           The ID of the subscription to subscribe to.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -596,7 +602,7 @@ methods:
     parameters:
       - name: assetId
         type: int64
-        default:
+        default: ''
         summary: |
           The asset ID of the specified product.
       - name: infoType
@@ -688,7 +694,7 @@ methods:
     parameters:
       - name: subscriptionId
         type: string
-        default:
+        default: ''
         summary: |
           The ID of the subscription to check.
     returns:
@@ -763,13 +769,13 @@ methods:
     parameters:
       - name: user
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` object whose subscription details you want to
           check.
       - name: subscriptionId
         type: string
-        default:
+        default: ''
         summary: |
           The ID of the subscription to check.
     returns:
@@ -907,11 +913,11 @@ methods:
     parameters:
       - name: user
         type: Player
-        default:
+        default: ''
         summary: ''
       - name: subscriptionId
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -965,12 +971,12 @@ methods:
     parameters:
       - name: user
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` object whose subscription status you want to check.
       - name: subscriptionId
         type: string
-        default:
+        default: ''
         summary: |
           The ID of the subscription to check for.
     returns:
@@ -1007,17 +1013,17 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Player` whose inventory is tested for ownership of the
           given asset.
       - name: assetId
         type: int64
-        default:
+        default: ''
         summary: |
           The asset ID for which the given player's inventory is tested.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Indicates whether the given player's inventory contains the given
           asset.
@@ -1040,17 +1046,17 @@ methods:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` whose inventory is tested for ownership of the
           given bundle.
       - name: bundleId
         type: int64
-        default:
+        default: ''
         summary: |
           The bundle ID for which the given player's inventory is tested.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Indicates whether the given player's inventory contains the given
           bundle.
@@ -1085,22 +1091,22 @@ methods:
       function might return false because of caching behavior. Alternatively,
       the function might return true even after the user has deleted the pass
       from their inventory.
-    code_samples:
+    code_samples: []
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The `Class.Player.UserId|UserId` of the `Class.Player` whose inventory
           you're checking.
       - name: gamePassId
         type: int64
-        default:
+        default: ''
         summary: |
           The pass ID you want to check for. Not to be confused with an asset
           ID.
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Yields
@@ -1126,17 +1132,17 @@ events:
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Player` who received the prompt.
       - name: status
         type: MarketplaceBulkPurchasePromptStatus
-        default:
+        default: ''
         summary: |
           The status of the bulk purchase.
       - name: results
         type: Dictionary
-        default:
+        default: ''
         summary: |
           The table type containing the line items and their status in the
           following format:
@@ -1164,30 +1170,28 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: MarketplaceService.PromptBundlePurchaseFinished
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: ''
       - name: bundleId
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: wasPurchased
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: MarketplaceService.PromptGamePassPurchaseFinished
@@ -1213,18 +1217,18 @@ events:
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Player` who received the prompt.
       - name: gamePassId
         type: int64
-        default:
+        default: ''
         summary: |
           The ID number of the pass shown in the prompt. Not to be confused with
           an asset ID.
       - name: wasPurchased
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           Indicates if the user pressed **OK** (true), **Cancel** (false) on the
           purchase prompt, or if the purchase prompt errored (false).
@@ -1236,7 +1240,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: MarketplaceService.PromptPremiumPurchaseFinished
@@ -1254,12 +1257,11 @@ events:
         to prompt a user to purchase Premium.
       - `Class.Players.PlayerMembershipChanged|PlayerMembershipChanged`, which
         fires when the server recognizes that a user's membership has changed.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: MarketplaceService.PromptProductPurchaseFinished
@@ -1302,23 +1304,23 @@ events:
       - For more information on saving and replicating user data like purchases
         and progress, see
         [Implementing player data and purchases](https://devforum.roblox.com/t/implementing-player-data-and-purchasing-systems/2839941).
-    code_samples:
+    code_samples: []
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The `Class.Player.UserId|UserId` of the user who received the
           developer product prompt.
       - name: productId
         type: int64
-        default:
+        default: ''
         summary: |
           The ID number of the developer product shown in the prompt. Not to be
           confused with an asset ID.
       - name: isPurchased
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           Indicates if the user pressed **OK** (true), **Cancel** (false) on the
           purchase prompt, or if the purchase prompt errored (false).
@@ -1327,7 +1329,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: MarketplaceService.PromptPurchaseFinished
@@ -1358,17 +1359,17 @@ events:
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: |
           The `Class.Player` who received the prompt.
       - name: assetId
         type: int64
-        default:
+        default: ''
         summary: |
           The asset ID of the item shown in the prompt.
       - name: isPurchased
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           Indicates if the user pressed **OK** (true), **Cancel** (false) on the
           purchase prompt, or if the purchase prompt errored (false).
@@ -1378,7 +1379,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: MarketplaceService.PromptSubscriptionPurchaseFinished
@@ -1401,23 +1401,22 @@ events:
     parameters:
       - name: user
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` who received the prompt.
       - name: subscriptionId
         type: string
-        default:
+        default: ''
         summary: |
           The ID of the subscription with a status change.
       - name: didTryPurchasing
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           Whether the user attempted to purchase the subscription.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks:
@@ -1425,16 +1424,9 @@ callbacks:
     summary: |
       A callback to process receipts of developer product purchases.
     description: |
-      **IMPORTANT:** We **highly recommend** that you properly implement the
-      `ProcessReceipt` callback in order to sell your developer products. You
-      should use `ProcessReceipt` to grant users their purchased product over
-      any other granting method. If your `ProcessReceipt` implementation isn't
-      correct, you will **not** be able to grant users the products they have
-      purchased on the Store tab of your experience details page.
-
-      A callback to process receipts from
-      [developer product](../../../production/monetization/developer-products.md)
-      purchases. You can sell developer products inside an experience using
+      `ProcessReceipt` is a callback to process receipts from
+      [developer product purchases](../../../production/monetization/developer-products.md).
+      You can sell developer products inside an experience using
       `MarketplaceService` functions, or outside an experience on the Store tab
       of your experience details page.
 
@@ -1442,7 +1434,14 @@ callbacks:
       server-side `Class.Script|Script`. This callback must handle the receipts
       for all developer products you have for sale.
 
-      #### Guarantees
+      **IMPORTANT:** We **highly recommend** that you properly implement the
+      `ProcessReceipt` callback in order to sell your developer products. You
+      should use `ProcessReceipt` to grant users their purchased product over
+      any other granting method. If your `ProcessReceipt` implementation isn't
+      correct, you will **not** be able to grant users the products they have
+      purchased on the Store tab of your experience details page.
+
+      ##### Guarantees
 
       The `ProcessReceipt` callback is called for all unresolved developer
       product purchases when:
@@ -1462,7 +1461,7 @@ callbacks:
         enum of `Enum.ProductPurchaseDecision.PurchaseGranted|PurchaseGranted`.
       - The purchase is successfully recorded on Roblox's backend.
 
-      #### Unresolved developer product purchases
+      ##### Unresolved developer product purchases
 
       An **unresolved developer product purchase** takes place when a user's
       purchase of a developer product has not yet been acknowledged by the
@@ -1471,7 +1470,7 @@ callbacks:
       Unresolved developer product purchases are not removed or refunded after
       the escrow period expires.
 
-      #### Retries and timeouts
+      ##### Retries and timeouts
 
       `ProcessReceipt` has no time-based retry mechanism. If a user makes a
       purchase that returns a `Enum.ProductPurchaseDecision` enum of
@@ -1485,8 +1484,11 @@ callbacks:
       `ProcessReceipt` callback can yield for as long as the server is running,
       and the callback result is still accepted when the result returns.
 
-      #### Limitations
+      ##### Limitations
 
+      - If you don't implement a `ProcessReceipt` callback, your receipts will
+        be auto-acknowledged. You can't get a receipt back after it has been
+        acknowledged.
       - When there are multiple purchases pending for a user, `ProcessReceipt`
         callbacks are called in a non-deterministic order.
       - The user must be on the server for the `ProcessReceipt` callback to be
@@ -1505,7 +1507,7 @@ callbacks:
     parameters:
       - name: receiptInfo
         type: Dictionary
-        default:
+        default: ''
         summary: |
           The `receiptInfo` table passed to this callback contains the following
           data:

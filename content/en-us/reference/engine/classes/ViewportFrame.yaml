@@ -1,6 +1,5 @@
 name: ViewportFrame
 type: class
-category: GUI
 memory_category: Gui
 summary: |
   `Class.GuiObject` that renders 3D objects inside its bounds.
@@ -47,7 +46,7 @@ properties:
       `ViewportFrame`. Defaults to
       <Typography noWrap>`Datatype.Color3|Color3.fromRGB(200, 200, 200)`</Typography>
       (ghost grey).
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -74,7 +73,7 @@ properties:
       this property, `Class.Camera.CFrame` and `Class.Camera.FieldOfView` will
       be saved and replicate with the `ViewportFrame` internally so the client
       can render the frame without a `Class.Camera` object.
-    code_samples:
+    code_samples: []
     type: Camera
     tags:
       - NotReplicated
@@ -102,7 +101,7 @@ properties:
 
       See also `Class.ViewportFrame.ImageTransparency|ImageTransparency` which
       determines the transparency of the rendered image.
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -128,7 +127,7 @@ properties:
 
       See also `Class.ViewportFrame.ImageColor3|ImageColor3` which determines
       how the rendered image will be colorized.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -150,7 +149,7 @@ properties:
       The color of the emitted light. Defaults to
       <Typography noWrap>`Datatype.Color3|Color3.fromRGB(140, 140, 140)`</Typography>
       (silver).
-    code_samples:
+    code_samples: []
     type: Color3
     tags: []
     deprecation_message: ''
@@ -172,7 +171,7 @@ properties:
       A `Datatype.Vector3` representing the direction of the light source from
       position <Typography noWrap>`(0, 0, 0)`</Typography>. Defaults to
       <Typography noWrap>`Datatype.Vector3|Vector3.new(-1, -1, -1)`</Typography>.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags: []
     deprecation_message: ''

@@ -3,7 +3,8 @@
   "info": {
     "title": "Place publishing",
     "description": "You can send and receive the following request and response payloads to publish and update your places on Roblox. For information on the usage of the API, see the [usage guide](../../../cloud/guides/usage-place-publishing.md).",
-    "version": "v1"
+    "version": "v1",
+    "x-roblox-extensions-version": "1.0.0"
   },
   "servers": [
     {
@@ -85,9 +86,7 @@
             "roblox-api-key": ["Label.Write"]
           }
         ],
-        "x-roblox-scopes": [
-          { "name": "universe-places:write" }
-        ],
+        "x-roblox-scopes": [{ "name": "universe-places:write" }],
         "x-roblox-cloud-api-operation": true,
         "x-roblox-code-samples": [
           {

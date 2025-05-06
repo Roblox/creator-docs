@@ -1,6 +1,5 @@
 name: UserSettings
 type: class
-category: Settings
 memory_category: Instances
 summary: |
   A singleton object that houses basic user settings, which persist across all
@@ -39,10 +38,10 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags: []
     deprecation_message: ''
@@ -59,10 +58,10 @@ methods:
       to default. This function will fail to run correctly from a LocalScript,
       as it does not have permission to restore all of the properties in the
       `Class.UserGameSettings` class.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

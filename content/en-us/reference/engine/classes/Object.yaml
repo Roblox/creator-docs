@@ -1,6 +1,5 @@
 name: Object
 type: class
-category:
 memory_category: Instances
 summary: |
   Object is the base class for all classes in the Roblox class hierarchy.
@@ -121,7 +120,7 @@ methods:
     parameters:
       - name: property
         type: string
-        default:
+        default: ''
         summary: |
           The property to connect to.
     returns:
@@ -177,12 +176,12 @@ methods:
     parameters:
       - name: className
         type: string
-        default:
+        default: ''
         summary: |
           The class against which the Object's class will be checked.
           Case-sensitive.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Describes whether the Object's class matched or is a subclass of the
           given class.
@@ -200,10 +199,10 @@ methods:
     parameters:
       - name: className
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: bool
+      - type: boolean
         summary: ''
     tags:
       - Deprecated
@@ -264,13 +263,12 @@ events:
     parameters:
       - name: property
         type: string
-        default:
+        default: ''
         summary: |
           The name of the property that changed.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

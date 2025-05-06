@@ -61,7 +61,7 @@ To add a label to the face of a part:
 
 ## Adjust ImageLabel properties
 
-All images within an `Class.ImageLabel` must be assets that have been [imported](../projects/assets/manager.md#import-assets) to Studio. While the image automatically scales to fit the area of the rectangle, the image looks best when it displays at its native resolution.
+All images within an `Class.ImageLabel` must be assets that have been [imported](../projects/assets/manager.md#asset-import) to Studio. While the image automatically scales to fit the area of the rectangle, the image looks best when it displays at its native resolution.
 
 You can customize the visual appearance of an image with the following
 properties:

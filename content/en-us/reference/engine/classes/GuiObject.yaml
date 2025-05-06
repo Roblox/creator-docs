@@ -1,6 +1,5 @@
 name: GuiObject
 type: class
-category:
 memory_category: Gui
 summary: |
   An abstract class for all 2D user interface objects.
@@ -24,7 +23,7 @@ description: |
   `Class.GuiObject.InputEnded|InputEnded`, only `Class.ImageButton` and
   `Class.TextButton` have convenient dedicated events such as
   `Class.TextButton.Activated|Activated` to detect click/press.
-code_samples:
+code_samples: []
 inherits:
   - GuiBase2d
 tags:
@@ -50,7 +49,7 @@ properties:
       of this property.
     code_samples:
       - TextButton-Active-Debounce
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -129,7 +128,7 @@ properties:
       Determines the color of the `Class.GuiObject` background.
     description: |
       Determines the color of the `Class.GuiObject` background.
-    code_samples:
+    code_samples: []
     type: BrickColor
     tags:
       - Hidden
@@ -194,7 +193,7 @@ properties:
 
       If this property is set to `1`, neither the background nor the border will
       render and the GUI background will be completely transparent.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -214,7 +213,7 @@ properties:
       Determines the color of the `Class.GuiObject` border.
     description: |
       Determines the color of the `Class.GuiObject` border.
-    code_samples:
+    code_samples: []
     type: BrickColor
     tags:
       - Hidden
@@ -273,7 +272,7 @@ properties:
 
       Note that `Class.UIStroke` can override this property and allow for more
       advanced border effects.
-    code_samples:
+    code_samples: []
     type: BorderMode
     tags: []
     deprecation_message: ''
@@ -327,8 +326,8 @@ properties:
       `Class.GuiObject.Rotation|Rotation`, this property is **ignored** and
       descendant GUI elements will be rendered regardless of this property's
       value.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -349,8 +348,8 @@ properties:
     description: |
       This indicates whether a `Class.GuiObject` (and its descendants) can be
       dragged around the screen.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - Deprecated
     deprecation_message: |
@@ -430,7 +429,7 @@ properties:
         `Class.GuiButton` is set to `true`, the
         `Class.GuiObject.GuiState|GuiState` will behave normally again.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -706,7 +705,7 @@ properties:
       re-enable its selectable property.
     code_samples:
       - limiting-textbox-selection
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -745,7 +744,7 @@ properties:
       `Class.GuiObject.NextSelectionDown|NextSelectionDown`,
       `Class.GuiObject.NextSelectionLeft|NextSelectionLeft`, and
       `Class.GuiObject.NextSelectionRight|NextSelectionRight` events.
-    code_samples:
+    code_samples: []
     type: GuiObject
     tags: []
     deprecation_message: ''
@@ -781,27 +780,6 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities:
-      - UI
-    writeCapabilities: []
-  - name: GuiObject.SelectionRect2D
-    summary: ''
-    description: ''
-    code_samples: []
-    type: Rect
-    tags:
-      - Hidden
-      - ReadOnly
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
-    thread_safety: Unsafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: false
     capabilities:
       - UI
     writeCapabilities: []
@@ -873,7 +851,7 @@ properties:
       A mixed property of
       `Class.GuiObject.BackgroundTransparency|BackgroundTransparency` and
       `Class.TextLabel.TextTransparency|TextTransparency`.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - Hidden
@@ -912,7 +890,7 @@ properties:
       otherwise occupy in the layout is used by other elements instead.
     code_samples:
       - UI-Window
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -983,7 +961,7 @@ methods:
     parameters:
       - name: endPosition
         type: UDim2
-        default:
+        default: ''
         summary: |
           Where the GUI should move to.
       - name: easingDirection
@@ -1002,7 +980,7 @@ methods:
         summary: |
           How long, in seconds, the tween should take to complete.
       - name: override
-        type: bool
+        type: boolean
         default: false
         summary: |
           Whether the tween will override an in-progress tween.
@@ -1012,7 +990,7 @@ methods:
         summary: |
           A callback function to execute when the tween completes.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the tween will play.
     tags: []
@@ -1030,7 +1008,8 @@ methods:
         more detailed description of the tween's completion state.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiObject:TweenSize
     summary: |
@@ -1051,7 +1030,7 @@ methods:
     parameters:
       - name: endSize
         type: UDim2
-        default:
+        default: ''
         summary: |
           The size that the GUI should resize.
       - name: easingDirection
@@ -1070,7 +1049,7 @@ methods:
         summary: |
           How long, in seconds, the tween should take to complete.
       - name: override
-        type: bool
+        type: boolean
         default: false
         summary: |
           Whether the tween will override an in-progress tween.
@@ -1080,7 +1059,7 @@ methods:
         summary: |
           A callback function to execute when the tween completes.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the tween will play.
     tags: []
@@ -1098,7 +1077,8 @@ methods:
         more detailed description of the tween's completion state.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiObject:TweenSizeAndPosition
     summary: |
@@ -1119,12 +1099,12 @@ methods:
     parameters:
       - name: endSize
         type: UDim2
-        default:
+        default: ''
         summary: |
           The size that the GUI should resize.
       - name: endPosition
         type: UDim2
-        default:
+        default: ''
         summary: |
           Where the GUI should move to.
       - name: easingDirection
@@ -1144,7 +1124,7 @@ methods:
         summary: |
           How long, in seconds, the tween should take to complete.
       - name: override
-        type: bool
+        type: boolean
         default: false
         summary: |
           Whether the tween will override an in-progress tween.
@@ -1154,7 +1134,7 @@ methods:
         summary: |
           A callback function to execute when the tween completes.
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the tween will play.
     tags: []
@@ -1172,7 +1152,8 @@ methods:
         more detailed description of the tween's completion state.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 events:
   - name: GuiObject.DragBegin
@@ -1187,7 +1168,7 @@ events:
     parameters:
       - name: initialPosition
         type: UDim2
-        default:
+        default: ''
         summary: |
           A `Datatype.UDim2` value of the position of the `Class.GuiObject`
           before any drag operation began.
@@ -1197,8 +1178,8 @@ events:
       This property is deprecated. Use `Class.UIDragDetector` instead, as it
       supports more input types and can be better customized.
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiObject.DragStopped
     summary: |
@@ -1212,13 +1193,13 @@ events:
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **X** screen location in pixels, relative to the top left
           corner of the screen.
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **Y** screen location in pixels, relative to the top left
           corner of the screen.
@@ -1228,8 +1209,8 @@ events:
       This property is deprecated. Use `Class.UIDragDetector` instead, as it
       supports more input types and can be better customized.
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiObject.InputBegan
     summary: |
@@ -1251,7 +1232,7 @@ events:
     parameters:
       - name: input
         type: InputObject
-        default:
+        default: ''
         summary: |
           An `Class.InputObject`, which contains useful data for querying user
           input such as the`Enum.UserInputType|type of input`,
@@ -1260,8 +1241,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiObject.InputChanged
     summary: |
@@ -1285,7 +1266,7 @@ events:
     parameters:
       - name: input
         type: InputObject
-        default:
+        default: ''
         summary: |
           An `Class.InputObject`, which contains useful data for querying user
           input such as the`Enum.UserInputType|type of input`,
@@ -1294,8 +1275,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiObject.InputEnded
     summary: |
@@ -1317,7 +1298,7 @@ events:
     parameters:
       - name: input
         type: InputObject
-        default:
+        default: ''
         summary: |
           An `Class.InputObject`, which contains useful data for querying user
           input such as the`Enum.UserInputType`, `Enum.UserInputState`, and
@@ -1325,8 +1306,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiObject.MouseEnter
     summary: |
@@ -1359,21 +1340,21 @@ events:
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **X** screen coordinate in pixels, relative to the top
           left corner of the screen.
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **Y** screen coordinate in pixels, relative to the top
           left corner of the screen.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiObject.MouseLeave
     summary: |
@@ -1398,25 +1379,25 @@ events:
       - `Class.GuiObject.MouseMoved`
       - `Class.GuiObject.MouseWheelForward`
       - `Class.GuiObject.MouseWheelBackward`
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **X** screen coordinate in pixels, relative to the top
           left corner of the screen.
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **Y** screen coordinate in pixels, relative to the top
           left corner of the screen.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiObject.MouseMoved
     summary: |
@@ -1467,25 +1448,25 @@ events:
       - `Class.GuiObject.MouseLeave`
       - `Class.GuiObject.MouseWheelForward`
       - `Class.GuiObject.MouseWheelBackward`
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **X** screen coordinate in pixels, relative to the top
           left corner of the screen.
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **Y** screen coordinate in pixels, relative to the top
           left corner of the screen.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiObject.MouseWheelBackward
     summary: |
@@ -1508,25 +1489,25 @@ events:
       - `Class.GuiObject.MouseLeave`
       - `Class.GuiObject.MouseMoved`
       - `Class.GuiObject.MouseWheelForward`
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **X** screen coordinate in pixels, relative to the top
           left corner of the screen.
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **Y** screen coordinate in pixels, relative to the top
           left corner of the screen.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiObject.MouseWheelForward
     summary: |
@@ -1550,24 +1531,24 @@ events:
       - `Class.GuiObject.MouseLeave`
       - `Class.GuiObject.MouseMoved`
       - `Class.GuiObject.MouseWheelBackward`
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **X** screen coordinate in pixels, relative to the top
           left corner of the screen.
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: |
           The **Y** coordinate of the user's mouse.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiObject.SelectionGained
     summary: |
@@ -1589,8 +1570,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiObject.SelectionLost
     summary: |
@@ -1604,7 +1585,7 @@ events:
 
       When a GUI loses selection focus, the value of the
       `Class.GuiService.SelectionObject|SelectionObject` property changes either
-      to nil or to the GUI element that gains selection focus. To determine
+      to `nil` or to the GUI element that gains selection focus. To determine
       which GUI gained selection, or if no GUI is selected, check the value of
       this property.
     code_samples:
@@ -1613,8 +1594,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiObject.TouchLongPress
     summary: |
@@ -1637,13 +1618,13 @@ events:
     parameters:
       - name: touchPositions
         type: Array
-        default:
+        default: ''
         summary: |
           An array of `Datatype.Vector2` that describe the **relative**
           positions of the fingers involved in the gesture.
       - name: state
         type: UserInputState
-        default:
+        default: ''
         summary: |
           A `Enum.UserInputState` that describes the state of the gesture:
 
@@ -1655,8 +1636,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiObject.TouchPan
     summary: |
@@ -1681,31 +1662,31 @@ events:
     parameters:
       - name: touchPositions
         type: Array
-        default:
+        default: ''
         summary: |
           A Luau array of `Datatype.Vector2` objects, each indicating the
           position of all the fingers involved in the gesture.
       - name: totalTranslation
         type: Vector2
-        default:
+        default: ''
         summary: |
           Indicates how far the pan gesture has gone from its starting point.
       - name: velocity
         type: Vector2
-        default:
+        default: ''
         summary: |
           Indicates how quickly the gesture is being performed in each
           dimension.
       - name: state
         type: UserInputState
-        default:
+        default: ''
         summary: |
           Indicates the `Enum.UserInputState` of the gesture.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiObject.TouchPinch
     summary: |
@@ -1735,31 +1716,31 @@ events:
     parameters:
       - name: touchPositions
         type: Array
-        default:
+        default: ''
         summary: |
           A Luau array of `Datatype.Vector2` objects, each indicating the
           position of all the fingers involved in the pinch gesture.
       - name: scale
         type: float
-        default:
+        default: ''
         summary: |
           A float that indicates the difference from the beginning of the pinch
           gesture.
       - name: velocity
         type: float
-        default:
+        default: ''
         summary: |
           A float indicating how quickly the pinch gesture is happening.
       - name: state
         type: UserInputState
-        default:
+        default: ''
         summary: |
           Indicates the `Enum.UserInputState` of the gesture.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiObject.TouchRotate
     summary: |
@@ -1787,31 +1768,31 @@ events:
     parameters:
       - name: touchPositions
         type: Array
-        default:
+        default: ''
         summary: |
           A Luau array of `Datatype.Vector2` objects, each indicating the
           position of all the fingers involved in the gesture.
       - name: rotation
         type: float
-        default:
+        default: ''
         summary: |
           A float indicating how much the rotation has gone from the start of
           the gesture.
       - name: velocity
         type: float
-        default:
+        default: ''
         summary: |
           A float that indicates how quickly the gesture is being performed.
       - name: state
         type: UserInputState
-        default:
+        default: ''
         summary: |
           Indicates the `Enum.UserInputState` of the gesture.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiObject.TouchSwipe
     summary: |
@@ -1830,20 +1811,20 @@ events:
     parameters:
       - name: swipeDirection
         type: SwipeDirection
-        default:
+        default: ''
         summary: |
           A `Enum.SwipeDirection` indicating the direction of the swipe gesture
           (Up, Down, Left or Right).
       - name: numberOfTouches
         type: int
-        default:
+        default: ''
         summary: |
           The number of touch points involved in the gesture (usually 1).
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiObject.TouchTap
     summary: |
@@ -1864,14 +1845,14 @@ events:
     parameters:
       - name: touchPositions
         type: Array
-        default:
+        default: ''
         summary: |
           An array of `Datatype.Vector2` that describe the **relative**
           positions of the fingers involved in the gesture.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 callbacks: []

@@ -1,6 +1,5 @@
 name: CFrameValue
 type: class
-category: Values
 memory_category: Instances
 summary: |
   A container object for a single CFrame value.
@@ -18,7 +17,7 @@ properties:
       Used to hold a `Datatype.CFrame` value.
     description: |
       Used to hold a `Datatype.CFrame` value.
-    code_samples:
+    code_samples: []
     type: CFrame
     tags: []
     deprecation_message: ''
@@ -58,23 +57,22 @@ events:
     parameters:
       - name: value
         type: CFrame
-        default:
+        default: ''
         summary: |
           The new value after the change.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: CFrameValue.changed
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: value
         type: CFrame
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated
@@ -82,7 +80,6 @@ events:
       This event is a deprecated variant of `Class.CFrameValue.Changed` which
       should be used instead.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

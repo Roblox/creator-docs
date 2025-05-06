@@ -1,6 +1,5 @@
 name: GuiBase
 type: class
-category:
 memory_category: Instances
 summary: |
   GuiBase is an abstract class which most graphical user interface objects
@@ -8,7 +7,7 @@ summary: |
 description: |
   GuiBase is an abstract class which most graphical user interface objects
   inherit from.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:

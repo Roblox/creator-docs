@@ -1,6 +1,5 @@
 name: MeshPart
 type: class
-category: Meshes
 memory_category: PhysicsParts
 summary: |
   A form of `Class.BasePart` that includes a physically simulated custom mesh.
@@ -13,7 +12,7 @@ description: |
   The mesh and texture of a `Class.MeshPart` are determined by the
   `Class.MeshPart.MeshId|MeshId` and `Class.MeshPart.TextureID|TextureID`
   properties. For more information, see [Meshes](../../../parts/meshes.md).
-code_samples:
+code_samples: []
 inherits:
   - TriangleMeshPart
 tags: []
@@ -26,8 +25,8 @@ properties:
       This property determines whether to render both faces of polygons in the
       mesh. It is only changeable in Studio. This is useful for meshes that are
       typically modeled as "cards" such as a leaf, hair, or cloth.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -44,8 +43,8 @@ properties:
   - name: MeshPart.HasJointOffset
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - Hidden
     deprecation_message: ''
@@ -63,8 +62,8 @@ properties:
   - name: MeshPart.HasSkinnedMesh
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - Hidden
     deprecation_message: ''
@@ -82,7 +81,7 @@ properties:
   - name: MeshPart.JointOffset
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - Hidden
@@ -151,7 +150,7 @@ properties:
       `Class.MeshPart.MeshContent|MeshContent`,
       `Class.MeshPart.TextureContent|TextureContent`, and collision geometry of
       an existing `Class.MeshPart`.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -204,7 +203,7 @@ properties:
               </tr>
           </tbody>
       </table>
-    code_samples:
+    code_samples: []
     type: RenderFidelity
     tags:
       - NotReplicated
@@ -316,7 +315,7 @@ properties:
       Note that the `Class.MeshPart.MeshId` property cannot be changed during
       runtime but the texture can. See
       `Class.MeshPart.TextureContent|TextureContent` for details.
-    code_samples:
+    code_samples: []
     type: ContentId
     tags: []
     deprecation_message: ''
@@ -358,20 +357,21 @@ methods:
         geometry)
       - `Class.MeshPart.FluidFidelity` (with any internal aero geometry)
       - `Class.MeshPart.MeshSize`
-    code_samples:
+    code_samples: []
     parameters:
       - name: meshPart
         type: Instance
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 events: []
 callbacks: []

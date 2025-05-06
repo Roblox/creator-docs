@@ -1,6 +1,5 @@
 name: ReflectionMetadataProperties
 type: class
-category:
 memory_category: Instances
 summary: |
   Acts as a `Class.Folder` containing information about properties for a
@@ -14,7 +13,7 @@ description: |
   `Class.ReflectionMetadataMember|ReflectionMetadataMembers` that are parented
   to this object will be perceived as properties under the class this is
   parented to.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []

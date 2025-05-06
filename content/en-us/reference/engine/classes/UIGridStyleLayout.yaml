@@ -1,12 +1,11 @@
 name: UIGridStyleLayout
 type: class
-category:
 memory_category: Instances
 summary: |
   The base class for grid style UI layouts.
 description: |
   The base class for grid style UI layouts.
-code_samples:
+code_samples: []
 inherits:
   - UILayout
 tags:
@@ -28,7 +27,7 @@ properties:
       `Class.Object.Changed` event immediately after the UI has changed, but if
       the value is read, it will become current and a `Class.Object.Changed`
       event will fire on the next render step.
-    code_samples:
+    code_samples: []
     type: Vector2
     tags:
       - ReadOnly
@@ -59,7 +58,7 @@ properties:
       `Enum.SortOrder.LayoutOrder`.
 
       <img src="../../../assets/engine-api/classes/UIListLayout/FillDirection.png" width="720" />
-    code_samples:
+    code_samples: []
     type: FillDirection
     tags: []
     deprecation_message: ''
@@ -82,7 +81,7 @@ properties:
       The **HorizontalAlignment** property determines the **X** axis alignment
       of the grid of UI elements, much like `Class.TextLabel.TextXAlignment`
       does with `Class.TextLabel.Text`.
-    code_samples:
+    code_samples: []
     type: HorizontalAlignment
     tags: []
     deprecation_message: ''
@@ -113,7 +112,7 @@ properties:
       `Class.Instance.Name` of the child UI objects.
 
       <img src="../../../assets/engine-api/classes/UIListLayout/SortOrder.png" width="720" />
-    code_samples:
+    code_samples: []
     type: SortOrder
     tags: []
     deprecation_message: ''
@@ -136,7 +135,7 @@ properties:
       The **VerticalAlignment** property determines the **Y** axis alignment of
       the grid of UI elements, much like `Class.TextLabel.TextYAlignment` does
       with `Class.TextLabel.Text`.
-    code_samples:
+    code_samples: []
     type: VerticalAlignment
     tags: []
     deprecation_message: ''
@@ -171,14 +170,15 @@ methods:
       - UI-Sort-Order
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: UIGridStyleLayout:SetCustomSortFunction
     summary: |
@@ -193,14 +193,14 @@ methods:
       false. In other words, use this function the same way you would use a '
       function. The sorting should be deterministic, otherwise sort will fail
       and fall back to name order.
-    code_samples:
+    code_samples: []
     parameters:
       - name: function
         type: Function
         default: nil
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -209,7 +209,8 @@ methods:
       by Name or LayoutOrder.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 events: []
 callbacks: []

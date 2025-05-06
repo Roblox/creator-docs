@@ -1,6 +1,5 @@
 name: Path
 type: class
-category: Pathfinding
 memory_category: Instances
 summary: |
   Stores the result of paths created by `Class.PathfindingService:CreatePath()`.
@@ -27,7 +26,7 @@ description: |
   event. This event will fire if, at any time during the path's existence, the
   path is blocked. Note that this can occur **behind** a character moving along
   the path, not just in front of it.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -40,7 +39,7 @@ properties:
       The success of the generated `Class.Path`.
     description: |
       The success of the generated `Class.Path`.
-    code_samples:
+    code_samples: []
     type: PathStatus
     tags:
       - ReadOnly
@@ -62,7 +61,7 @@ methods:
       Returns a table of `Class.Path` instances.
     description: |
       This function returns a table of `Class.Path` instances.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Array
@@ -114,11 +113,11 @@ methods:
       It returns the first waypoint of occlusion if blocked, -1 if not. it
       returns an error if **start** is less than 0 or greater than the number of
       waypoints in the `Class.Path`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: start
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: int
@@ -150,16 +149,16 @@ methods:
     parameters:
       - name: start
         type: Vector3
-        default:
+        default: ''
         summary: |
           The world position where the computed path begins.
       - name: finish
         type: Vector3
-        default:
+        default: ''
         summary: |
           The world position where the computed path finishes.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields
@@ -179,16 +178,15 @@ events:
       [Handling Blocked Paths](../../../characters/pathfinding.md#handling-blocked-paths)
       for details on checking the forward waypoint progress of an agent along a
       path.
-    code_samples:
+    code_samples: []
     parameters:
       - name: blockedWaypointIdx
         type: int
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: Path.Unblocked
@@ -201,16 +199,15 @@ events:
       [Handling Blocked Paths](../../../characters/pathfinding.md#handling-blocked-paths)
       for details on checking the forward waypoint progress of an agent along a
       path.
-    code_samples:
+    code_samples: []
     parameters:
       - name: unblockedWaypointIdx
         type: int
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

@@ -1,6 +1,5 @@
 name: HumanoidRigDescription
 type: class
-category:
 memory_category: Animation
 summary: ''
 description: ''
@@ -1998,16 +1997,17 @@ methods:
     parameters:
       - name: character
         type: Instance
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: HumanoidRigDescription:GetJointNames
     summary: ''
@@ -2021,7 +2021,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: HumanoidRigDescription:GetR15JointNames
     summary: ''
@@ -2035,7 +2036,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: HumanoidRigDescription:GetR6JointNames
     summary: ''
@@ -2049,7 +2051,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
 events: []
 callbacks: []

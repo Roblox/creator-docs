@@ -1,13 +1,12 @@
 name: DebugSettings
 type: class
-category: Settings
 memory_category: Instances
 summary: |
   Collection of various developer-facing diagnostics information.
 description: |
   The DebugSettings allows you to view diagnostics information regarding Roblox.
   It is labeled as **Diagnostics** in the Roblox Studio Settings menu.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -24,7 +23,7 @@ properties:
     description: |
       Describes whether a `Class.DataModel` is actively in memory, as an integer
       (where 1 = true, and 0 = false).
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - ReadOnly
@@ -45,7 +44,7 @@ properties:
       The number of instances active in the simulation.
     description: |
       The number of instances active in the simulation.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - ReadOnly
@@ -66,8 +65,8 @@ properties:
       Whether or not a stacktrace is displayed in the output for an error.
     description: |
       Whether or not a stacktrace is displayed in the output for an error.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -85,7 +84,7 @@ properties:
       Returns the number of internal DataModel jobs actively being processed.
     description: |
       Returns the number of internal DataModel jobs actively being processed.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - ReadOnly
@@ -106,7 +105,7 @@ properties:
       The number of players currently in the active game-instance.
     description: |
       The number of players currently in the active game-instance.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - ReadOnly
@@ -127,8 +126,8 @@ properties:
       Whether or not sound warnings should be reported.
     description: |
       Whether or not sound warnings should be reported.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -148,7 +147,7 @@ properties:
     description: |
       The current client version of Roblox. Can also be retrieved by using the
       version() function.
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - ReadOnly
@@ -171,7 +170,7 @@ properties:
     description: |
       Sets the internal sampling method used to measure elapsed time with
       consistency across platforms.
-    code_samples:
+    code_samples: []
     type: TickCountSampleMethod
     tags: []
     deprecation_message: ''

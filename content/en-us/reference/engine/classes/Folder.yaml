@@ -1,6 +1,5 @@
 name: Folder
 type: class
-category: Utility
 memory_category: Instances
 summary: |
   A simple container used to hold and organize Roblox instances.
@@ -18,7 +17,7 @@ description: |
   you can set up a `Class.Frame` with multiple `Class.Folder` children, each
   with a different `Class.UILayout` type. Additionally, `Class.Folder` contents
   are exempt from the effects of a `Class.UILayout` sibling.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []

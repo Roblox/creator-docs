@@ -1,6 +1,5 @@
 name: AudioChannelMixer
 type: class
-category:
 memory_category: Internal
 summary: |
   Combines multiple audio streams into a single, multichannel audio stream.
@@ -17,8 +16,7 @@ code_samples:
   - audio-wiring---splitting-mixing
 inherits:
   - Instance
-tags:
-  - NotBrowsable
+tags: []
 deprecation_message: ''
 properties:
   - name: AudioChannelMixer.Layout
@@ -71,7 +69,7 @@ methods:
     parameters:
       - name: pin
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Instances
@@ -80,7 +78,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioChannelMixer:GetInputPins
     summary: |
@@ -111,7 +110,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
   - name: AudioChannelMixer:GetOutputPins
     summary: |
@@ -128,7 +128,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
 events:
   - name: AudioChannelMixer.WiringChanged
@@ -142,31 +143,31 @@ events:
     code_samples: []
     parameters:
       - name: connected
-        type: bool
-        default:
+        type: boolean
+        default: ''
         summary: |
           Whether the instance got connected or disconnected.
       - name: pin
         type: string
-        default:
+        default: ''
         summary: |
           The pin on the `Class.AudioChannelMixer` that the `Class.Wire`
           targets.
       - name: wire
         type: Wire
-        default:
+        default: ''
         summary: |
           The `Class.Wire` between the `Class.AudioChannelMixer` and the other
           instance.
       - name: instance
         type: Instance
-        default:
+        default: ''
         summary: |
           The other instance that is or was connected through the `Class.Wire`.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Audio
     writeCapabilities: []
 callbacks: []

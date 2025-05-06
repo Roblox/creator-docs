@@ -1,6 +1,5 @@
 name: Translator
 type: class
-category: Localization
 memory_category: Instances
 summary: |
   The role of a Translator is to manufacture/return strings localized for the
@@ -18,7 +17,7 @@ description: |
 
   The Translator can also be used to manufacture translated strings with inserts
   (data replacements) which may change order based on the target language.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -32,7 +31,7 @@ properties:
     description: |
       The Roblox locale of the output translated strings from this table, for
       example "en-us" or "es-es." Defaults to "en-us".
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - ReadOnly
@@ -75,16 +74,16 @@ methods:
       See
       [Localize with scripting](../../../production/localization/localize-with-scripting.md)
       for more details and usage examples of this function.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: |
           The **Key** value to look up and translate.
       - name: args
         type: Variant
-        default:
+        default: ''
         summary: |
           To be provided if the **Source** text and translations contain format
           strings. Will be a Luau table of values **or** key-value pairs,
@@ -223,18 +222,18 @@ methods:
       	warn("Cannot load translator for player!")
       end
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: context
         type: Instance
-        default:
+        default: ''
         summary: |
           A valid in-game `Class.Instance` to use for context override as
           outlined above. Note that this argument can be arbitrary, for example
           `game`, if you don't require a context override.
       - name: text
         type: string
-        default:
+        default: ''
         summary: |
           The **Source** text to look up and translate.
     returns:

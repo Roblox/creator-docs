@@ -85,7 +85,7 @@ In the [3D importer](../../art/modeling/3d-importer.md#avatar-general), use **Ri
   </tr>
   <tr>
     <td>Torso</td>
-    <td>.8</td>
+    <td>.85</td>
     <td>1.7</td>
     <td>.7</td>
   </tr>

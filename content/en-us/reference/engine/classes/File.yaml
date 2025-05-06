@@ -1,6 +1,5 @@
 name: File
 type: class
-category:
 memory_category: Instances
 summary: |
   An asset loaded from a file on disk.
@@ -14,7 +13,7 @@ description: |
 
   The default `Class.Instance.Name|Name` of a `Class.File` instance will be the
   filename on disk, excluding the path but including the extension.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -28,7 +27,7 @@ properties:
     description: |
       The file size (in bytes) of the local file associated with this
       `Class.File`.
-    code_samples:
+    code_samples: []
     type: int64
     tags:
       - Hidden
@@ -53,7 +52,7 @@ methods:
       This function is used to read the contents of the `Class.File` as a raw
       binary string. This allows the file to be uploaded to web endpoints, or to
       be processed by plugins.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: string
@@ -75,7 +74,7 @@ methods:
       `Class.ImageLabel`.
 
       Throws an error if the file does not exist on disk.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ContentId

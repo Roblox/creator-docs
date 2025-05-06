@@ -1,6 +1,5 @@
 name: Workspace
 type: class
-category: Gameplay
 memory_category: PhysicsParts
 summary: |
   **Workspace** houses 3D objects which are rendered to the 3D world. Objects
@@ -53,7 +52,7 @@ description: |
     `Class.Workspace.CurrentCamera` property.
   - The `Class.Terrain` object can be accessed using the
     `Class.Workspace.Terrain` property.
-code_samples:
+code_samples: []
 inherits:
   - WorldRoot
 tags:
@@ -112,8 +111,8 @@ properties:
       AllowThirdPartySales is set to. This property affects
       [Game Passes](../../../production/monetization/game-passes.md) and
       [clothing](../../../art/classic-clothing.md).
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''
@@ -159,7 +158,7 @@ properties:
       - Visibility of a `Class.Model` in relation to the `Class.Camera`
       - In-game FPS
       - Number of active animations
-    code_samples:
+    code_samples: []
     type: ClientAnimatorThrottlingMode
     tags: []
     deprecation_message: ''
@@ -186,14 +185,14 @@ properties:
 
       When you set this property, all other `Camera` objects in the `Workspace`
       are destroyed, including the previous `CurrentCamera`. If you set this
-      property to nil or to a camera that is not a descendant of the Workspace
+      property to `nil` or to a camera that is not a descendant of the Workspace
       (or the `CurrentCamera` is otherwise destroyed), a new `Camera` will be
       created and assigned. Avoid these scenarios, as destroying the camera can
       have unintended consequences.
 
       For more information, see
       [Scripting the Camera](../../../workspace/camera.md#scripting-the-camera).
-    code_samples:
+    code_samples: []
     type: Camera
     tags:
       - NotReplicated
@@ -235,7 +234,7 @@ properties:
       print(time()) -- Time the game started running
       print(elapsedTime()) -- Time since Roblox started running
       ```
-    code_samples:
+    code_samples: []
     type: double
     tags:
       - NotReplicated
@@ -254,7 +253,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -288,7 +287,7 @@ properties:
 
       This property can be read by scripts, but can only be set by plugins, the
       command bar, or the properties window in Studio.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -308,8 +307,8 @@ properties:
       server or not.
     description: |
       This property is discontinued and no longer takes effect.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - Hidden
       - NotReplicated
@@ -444,7 +443,7 @@ properties:
   - name: Workspace.InterpolationThrottling
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: InterpolationThrottlingMode
     tags:
       - Hidden
@@ -471,7 +470,7 @@ properties:
       `Class.MeshPart|MeshParts`. The `Default` value is the same as `Enabled`.
       If this feature is enabled, built-in avatars will use
       `Class.MeshPart|MeshParts` for the character's Head and Accessories.
-    code_samples:
+    code_samples: []
     type: MeshPartHeadsAndAccessories
     tags:
       - NotScriptable
@@ -618,7 +617,7 @@ properties:
       Note that when assemblies of different simulation rates become connected
       via `Class.Constraint|Constraints` or collisions, the combined mechanism
       will default to the highest simulation rate for stability.
-    code_samples:
+    code_samples: []
     type: PhysicsSteppingMethod
     tags:
       - NotScriptable
@@ -726,7 +725,7 @@ properties:
   - name: Workspace.Retargeting
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: AnimatorRetargetingMode
     tags: []
     deprecation_message: ''
@@ -781,7 +780,7 @@ properties:
 
       For more information, see
       [Deferred Events](../../../scripting/events/deferred.md).
-    code_samples:
+    code_samples: []
     type: SignalBehavior
     tags:
       - NotScriptable
@@ -812,7 +811,7 @@ properties:
       - `Class.Workspace.StreamingMinRadius`
       - `Class.Workspace.StreamingTargetRadius`
       - `Class.Workspace.StreamingIntegrityMode`
-    code_samples:
+    code_samples: []
     type: StreamOutBehavior
     tags:
       - NotScriptable
@@ -840,8 +839,8 @@ properties:
       - `Class.Workspace.StreamingMinRadius`
       - `Class.Workspace.StreamingTargetRadius`
       - `Class.Workspace.StreamingIntegrityMode`
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -898,7 +897,7 @@ properties:
         streaming is enabled
       - `Class.Workspace.StreamingTargetRadius`
       - `Class.Workspace.StreamingIntegrityMode`
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - NotScriptable
@@ -931,7 +930,7 @@ properties:
         streaming is enabled
       - `Class.Workspace.StreamingMinRadius`
       - `Class.Workspace.StreamingIntegrityMode`
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - NotScriptable
@@ -959,7 +958,7 @@ properties:
 
       See [Environmental Terrain](../../../parts/terrain.md) for more
       information.
-    code_samples:
+    code_samples: []
     type: Terrain
     tags:
       - ReadOnly
@@ -1006,8 +1005,8 @@ properties:
       collide will also ignore the `Class.BasePart.CanTouch|CanTouch` property,
       similar to how `Class.BasePart.CanCollide` is ignored. For more
       information on the behavior of CanTouch, please visit its property page.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - NotScriptable
     deprecation_message: ''
@@ -1045,16 +1044,16 @@ methods:
 
       Note, this function cannot be used by scripts and will only function in
       plugins.
-    code_samples:
+    code_samples: []
     parameters:
       - name: objects
         type: Instances
-        default:
+        default: ''
         summary: |
           An array of `Class.BasePart|BaseParts` for whom joints are to be
           broken.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1092,7 +1091,7 @@ methods:
       will perform continuous calculations to ensure physical forces interact
       correctly with the part. Once the `Class.BasePart` is no longer subject to
       physical forces, it will revert to a 'sleeping' state.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: int
@@ -1150,7 +1149,7 @@ methods:
       	local part = Instance.new("Part", Workspace)
       end
       ```
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: int
@@ -1230,7 +1229,7 @@ methods:
         clock
       - `Library.os|os.time()`
       - `Datatype.DateTime`
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: double
@@ -1297,23 +1296,23 @@ methods:
       	Workspace:UnjoinFromOutsiders(parts)
       end
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: objects
         type: Instances
-        default:
+        default: ''
         summary: |
           An array of `Class.BasePart|BaseParts` for whom joints are to be made.
       - name: jointType
         type: JointCreationMode
-        default:
+        default: ''
         summary: |
           The `Enum.JointCreationMode` to be used. Passing in
           `Enum.JointCreationMode|Enum.JointCreationMode.All` or
           `Enum.JointCreationMode|Enum.JointCreationMode.Surface` has the same
           behavior which equates to Join Always.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1363,15 +1362,15 @@ methods:
       `Class.Explosion`, unless a `Class.ForceField` object is parented to the
       `Class.BasePart` or ancestor `Class.Model`. For this reason, they are
       often used to make simple destructible buildings and other models.
-    code_samples:
+    code_samples: []
     parameters:
       - name: objects
         type: Instances
-        default:
+        default: ''
         summary: |
           An array of `Class.BasePart|parts` for whom joints are to be made.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -1389,10 +1388,10 @@ methods:
       As `Class.Workspace.PGSPhysicsSolverEnabled` cannot be accessed by
       scripts, the PGSIsEnabled function allows developers to tell which physics
       solver the game is using.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           True if the PGS solver is enabled.
     tags: []
@@ -1438,16 +1437,16 @@ methods:
       	Workspace:UnjoinFromOutsiders(parts)
       end
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: objects
         type: Instances
-        default:
+        default: ''
         summary: |
           An array of `Class.BasePart|BaseParts` for whom joints are to be
           broken.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1470,10 +1469,10 @@ methods:
 
       This function cannot be used in scripts but will function in the command
       bar or plugins.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1497,12 +1496,11 @@ events:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

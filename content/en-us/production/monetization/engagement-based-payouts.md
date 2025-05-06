@@ -14,9 +14,7 @@ Payout data can provide vital feedback to help you understand what factors drive
 To access payout data:
 
 1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
-
 2. Navigate to the **Monetization** tab and select **Engagement Payouts**.
-   <img src="../../assets/monetization/engagement-based-payouts/navigation.png" width="40%" />
 
 ### Engagement payouts
 

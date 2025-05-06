@@ -1,6 +1,5 @@
 name: PointLight
 type: class
-category: Lighting
 memory_category: Instances
 summary: |
   A light source that emits illumination from a single point.
@@ -36,7 +35,7 @@ properties:
       The size of the area that the PointLight will illuminate.
     description: |
       The size of the area that the PointLight will illuminate.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

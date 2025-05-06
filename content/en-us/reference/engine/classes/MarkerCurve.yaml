@@ -1,6 +1,5 @@
 name: MarkerCurve
 type: class
-category:
 memory_category: Instances
 summary: |
   Represents a list of strings markers in chronological order.
@@ -46,7 +45,7 @@ methods:
     parameters:
       - name: index
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Dictionary
@@ -57,7 +56,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: MarkerCurve:GetMarkers
     summary: |
@@ -75,7 +75,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: MarkerCurve:InsertMarkerAtTime
     summary: |
@@ -88,12 +89,12 @@ methods:
     parameters:
       - name: time
         type: float
-        default:
+        default: ''
         summary: |
           Time at which the marker should be added.
       - name: marker
         type: string
-        default:
+        default: ''
         summary: |
           String value associated with this marker.
     returns:
@@ -107,7 +108,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
   - name: MarkerCurve:RemoveMarkerAtIndex
     summary: |
@@ -118,7 +120,7 @@ methods:
     parameters:
       - name: startingIndex
         type: int
-        default:
+        default: ''
         summary: |
           Index of the first marker to be removed in the MarkerCurve.
       - name: count
@@ -135,7 +137,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Animation
     writeCapabilities: []
 events: []
 callbacks: []

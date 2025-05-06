@@ -39,10 +39,7 @@ Before importing a 3D object, ensure that the `.fbx`, `.gltf` or `.obj` meets St
 
 To import a 3D object:
 
-1. In the Home or Avatar tab, click **Import 3D**. A file browser displays.
-
-   <img src="../../assets/studio/general/Avatar-Tab-Import-3D.png" width="760" alt="Top ribbon of the Avatar tab in Studio highlighting the Import 3D button."  />
-
+1. In the toolbar's **Home** or **Avatar** tab, click **Import 3D**. A file browser displays.
 2. Select the `.fbx`, `.gltf` or `.obj` you intend to import. The Importer window displays.
 3. Verify the object preview and check that the [import settings](#import-settings) are correct for your object.
 4. Verify any [warning or error messages](#warnings-and-errors).
@@ -81,11 +78,11 @@ The 3D Importer provides the following settings for all meshes:
   </tr>
   <tr>
     <td>Add Model To Inventory</td>
-    <td>If enabled, the 3D Importer adds the model to your Toolbox / Asset Manager inventory as a new asset. By default, this is **enabled**. <br /><br />If disabled, the 3D Importer does not add the asset to your inventory.</td>
+    <td>If enabled, the 3D Importer adds the model to your **Toolbox** and **Asset Manager** inventory as a new asset. By default, this is **enabled**. <br /><br />If disabled, the 3D Importer does not add the asset to your inventory.</td>
   </tr>
   <tr>
     <td>Insert In Workspace</td>
-    <td>If enabled, inserts the model into the Workspace and Toolbox/Asset Manager. By default, this is **enabled**.<br /><br />If disabled, only adds the model to the Toolbox/Asset Manager.</td>
+    <td>If enabled, inserts the model into the `Class.Workspace` as well as your **Toolbox** and **Asset Manager** inventory. By default, this is **enabled**.<br /><br />If disabled, only adds the model to your inventory.</td>
   </tr>
   <tr>
     <td>Insert Using Scene Position</td>
@@ -124,7 +121,7 @@ The 3D Importer provides the following settings for meshes with rigging data, ty
   </tr>
   <tr>
     <td>Validate UGC Body</td>
-    <td>After importing, Studio opens the assets in the [Avatar Setup](../../art/modeling/avatar-setup.md) tool, allowing you to quickly begin testing and uploading avatar assets to the Marketplace.</td>
+    <td>After importing, Studio opens the assets in the [Avatar Setup](../../avatar-setup/index.md) tool, allowing you to quickly begin testing and uploading avatar assets to the Marketplace.</td>
   </tr>
   <tr>
     <td>Rig Scale</td>

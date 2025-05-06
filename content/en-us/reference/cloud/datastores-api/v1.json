@@ -3,7 +3,8 @@
   "info": {
     "title": "Standard data stores",
     "description": "This page includes reference documentation for working with standard data stores. For more information on using the API, see [Handle API requests for data stores](../../../cloud/guides/data-store-api-handling.md) and the [usage guide](../../../cloud/guides/usage-data-stores.md).",
-    "version": "v1"
+    "version": "v1",
+    "x-roblox-extensions-version": "1.0.0"
   },
   "servers": [
     {
@@ -96,9 +97,7 @@
             "roblox-api-key": ["Label.DatastoresList"]
           }
         ],
-        "x-roblox-scopes": [
-          { "name": "universe-datastores.control:list" }
-        ],
+        "x-roblox-scopes": [{ "name": "universe-datastores.control:list" }],
         "x-roblox-cloud-api-operation": true,
         "x-roblox-lua-equivalent": "DataStoreService:ListDataStoresAsync",
         "x-roblox-cloud-api-operation-code-samples": [
@@ -230,9 +229,7 @@
             "roblox-api-key": ["Label.DatastoreListObjectKeys"]
           }
         ],
-        "x-roblox-scopes": [
-          { "name": "universe-datastores.objects:list" }
-        ],
+        "x-roblox-scopes": [{ "name": "universe-datastores.objects:list" }],
         "x-roblox-cloud-api-operation": true,
         "x-roblox-lua-equivalent": "DataStore:ListKeysAsync",
         "x-roblox-cloud-api-operation-code-samples": [
@@ -370,9 +367,7 @@
             "roblox-api-key": ["Label.DatastoreReadObject"]
           }
         ],
-        "x-roblox-scopes": [
-          { "name": "universe-datastores.objects:read" }
-        ],
+        "x-roblox-scopes": [{ "name": "universe-datastores.objects:read" }],
         "x-roblox-cloud-api-operation": true,
         "x-roblox-lua-equivalent": "GlobalDataStore:GetAsync",
         "x-roblox-cloud-api-operation-code-samples": [
@@ -619,9 +614,7 @@
             "roblox-api-key": ["Label.DatastoreDeleteObject"]
           }
         ],
-        "x-roblox-scopes": [
-          { "name": "universe-datastores.objects:delete" }
-        ],
+        "x-roblox-scopes": [{ "name": "universe-datastores.objects:delete" }],
         "x-roblox-cloud-api-operation": true,
         "x-roblox-lua-equivalent": "GlobalDataStore:RemoveAsync",
         "x-roblox-cloud-api-operation-code-samples": [
@@ -947,9 +940,7 @@
             "roblox-api-key": ["Label.DatastoreReadVersion"]
           }
         ],
-        "x-roblox-scopes": [
-          { "name": "universe-datastores.versions:read" }
-        ],
+        "x-roblox-scopes": [{ "name": "universe-datastores.versions:read" }],
         "x-roblox-cloud-api-operation": true,
         "x-roblox-lua-equivalent": "DataStore:GetVersionAsync",
         "x-roblox-cloud-api-operation-code-samples": [
@@ -1105,9 +1096,7 @@
             "roblox-api-key": ["Label.DatastoreListVersions"]
           }
         ],
-        "x-roblox-scopes": [
-          { "name": "universe-datastores.versions:list" }
-        ],
+        "x-roblox-scopes": [{ "name": "universe-datastores.versions:list" }],
         "x-roblox-cloud-api-operation": true,
         "x-roblox-lua-equivalent": "DataStore:ListVersionsAsync",
         "x-roblox-cloud-api-operation-code-samples": [

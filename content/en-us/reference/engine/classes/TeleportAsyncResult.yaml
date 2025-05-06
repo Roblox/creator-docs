@@ -1,13 +1,12 @@
 name: TeleportAsyncResult
 type: class
-category:
 memory_category: Instances
 summary: |
   The return structure of the `TeleportAsync` function call.
 description: |
   This class is an instance that is returned by the `TeleportAsync` function
   with information about the teleport.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -30,7 +29,7 @@ properties:
 
       For more information on how to teleport players between servers, see
       [Teleporting Between Places](../../../projects/teleport.md).
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - ReadOnly
@@ -58,7 +57,7 @@ properties:
 
       For more information on how to teleport players between servers, see
       [Teleporting Between Places](../../../projects/teleport.md).
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - ReadOnly

@@ -9,9 +9,11 @@ Designing for performance means following a handful of best practices **as you b
 
 Lower-end devices, particularly mobile devices, have severe memory limitations and are succeptible to crashes due to out of memory (OOM) errors:
 
-- If you want to support lower-end devices, choose a baseline set of devices with certain performance characteristics, test your experience on them throughout the development process, and pay close attention to frame rate and memory usage. As you find problem areas in your experience, use those areas to identify the limits of your devices.
+- If you want to support lower-end devices, choose at least one "baseline" device, test your experience on it throughout the development process, and pay close attention to frame rate and memory usage. As you find problem areas in your experience, use those areas to identify the limits of your device.
 
-  For example, you might test an experience with the **Render** (<kbd>Shift</kbd><kbd>F2</kbd>) and **Summary** (<kbd>Shift</kbd><kbd>F2</kbd>) debug stats enabled. If the frame rate starts to drop in a particularly cluttered area, you could examine the **Draw (scene)** numbers and determine that you need to stay below 600 draw calls and 650,000 triangles. Or you could examine the **Developer Console** (<kbd>F9</kbd>) and note that memory usage is a bit high unless you enable [streaming](../workspace/streaming.md). Having a clear understanding of device limits can help you stay under them as you continue to build your experience.
+  For example, you might test an experience with the **Render** (<kbd>Shift</kbd><kbd>F2</kbd>) and **Summary** (<kbd>Shift</kbd><kbd>F2</kbd>) debug stats enabled. If the frame rate starts to drop in a particularly cluttered area, you could examine the **Draw (scene)** numbers and determine that you need to stay below 1,000 draw calls and 1,000,000 triangles for the experience to run well on your baseline device.
+
+  Or you could examine the **Developer Console** (<kbd>F9</kbd>) and note that memory usage is a bit high unless you enable [streaming](../workspace/streaming.md). Having a clear understanding of device limits can help you stay under them as you continue to build your experience.
 
   ![A Roblox experience with three overlays active.](../assets/optimization/perf-hud.png)
 
@@ -23,13 +25,13 @@ Roblox does not have access to all of a device's memory. Some amount is required
 
 More generally, testing on a variety of devices can help you check that the experience matches your visual and performance expectations at different graphics quality levels. For a much more detailed example of how you might think about optimizing your experience for low-end mobile devices, see [Real World Building and Scripting Optimization](https://devforum.roblox.com/t/real-world-building-and-scripting-optimization-for-roblox/3127146).
 
-<a target="_blank" href="https://devforum.roblox.com/t/real-world-building-and-scripting-optimization-for-roblox/3127146"><img src="../assets/optimization/chicken-rocket.jpg" width="400" alt="Header image for Real World Building and Scripting Optimization." /></a>
-
 ## Streaming and teleportation
 
-- [Instance streaming](../workspace/streaming.md) lets Roblox dynamically load and unload 3D content and is a great option for most experiences, especially larger ones. Streaming improves join times, reduces memory footprint, and increases frame rates. For more information, see [Improving performance](improve.md#instance-streaming).
+- [Instance streaming](../workspace/streaming.md) lets Roblox dynamically load and unload 3D content and is a great option for most places, especially larger ones. Streaming improves join times, reduces memory footprint, and increases frame rate. For more information, see [Improve performance](improve.md#instance-streaming).
 
-- Break large places into more manageable ones and use [teleportation](../projects/teleport.md) to move players between them.
+- Consider breaking large places into more manageable ones and using [teleportation](../projects/teleport.md) to move players between them. This approach can reduce **initial** join times, but imposes additional join times as players teleport from place to place. Benefits to memory usage vary depending on the size of the place and whether you've enabled streaming.
+
+  Even ignoring performance considerations, you might find that having multiple places simplifies the development process, especially if you regularly add new content to your experience or are part of a larger team.
 
 ## Materials and duplication
 
@@ -37,11 +39,11 @@ More generally, testing on a variety of devices can help you check that the expe
 
 - As you create assets, convert them into [packages](../projects/assets/packages.md). Making packages part of your workflow helps avoid the common issue of duplicate assets with different IDs, which can hurt performance.
 
-- When you add meshes and textures, use and reuse them rather than importing duplicate copies. By resizing, rotating, and overlapping, you can create rich, varied environments that require very few [draw calls](improve.md#draw-calls). For more information, see [Remove duplicate textures](../tutorials/environmental-art/optimize-your-experience.md#remove-duplicate-textures).
+- When you add meshes and textures, use and reuse them rather than importing duplicate copies. By resizing, rotating, and overlapping, you can create rich, varied environments that require very few [draw calls](improve.md#draw-calls). For more information, see [Remove duplicate textures](../tutorials/curriculums/environmental-art/optimize-your-experience.md#remove-duplicate-textures).
 
 ## Transparency
 
-- Avoid transparency values other than 0 (visible) and 1 (invisible). When you use partial transparency, be especially careful to avoid [high transparency overdraw](../tutorials/environmental-art/optimize-your-experience.md#delete-layered-transparencies).
+- Avoid transparency values other than 0 (visible) and 1 (invisible). When you use partial transparency, be especially careful to avoid [high transparency overdraw](../tutorials/curriculums/environmental-art/optimize-your-experience.md#delete-layered-transparencies).
 
 ## Scripting
 

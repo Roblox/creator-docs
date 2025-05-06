@@ -1,6 +1,5 @@
 name: ConfigService
 type: class
-category:
 memory_category: Instances
 summary: ''
 description: ''
@@ -14,13 +13,53 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: ConfigService:ClearTestingValue
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: key
+        type: string
+        default: ''
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: ConfigService:SetTestingValue
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: key
+        type: string
+        default: ''
+        summary: ''
+      - name: value
+        type: Variant
+        default: ''
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ConfigService:GetConfigAsync
     summary: ''
     description: ''
     code_samples: []
     parameters: []
     returns:
-      - type: Object
+      - type: ConfigSnapshot
         summary: ''
     tags:
       - Yields
@@ -36,10 +75,10 @@ methods:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: Object
+      - type: ConfigSnapshot
         summary: ''
     tags:
       - Yields

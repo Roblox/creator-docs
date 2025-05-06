@@ -1,13 +1,12 @@
 name: RenderingTest
 type: class
-category:
 memory_category: Instances
 summary: |
   An internal testing utility for the rendering pipeline.
 description: |
   **RenderingTest** is an internal testing utility for the rendering pipeline.
   It is not intended for external use.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -16,7 +15,7 @@ properties:
   - name: RenderingTest.CFrame
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: CFrame
     tags: []
     deprecation_message: ''
@@ -33,7 +32,7 @@ properties:
   - name: RenderingTest.ComparisonDiffThreshold
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -50,7 +49,7 @@ properties:
   - name: RenderingTest.ComparisonMethod
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: RenderingTestComparisonMethod
     tags: []
     deprecation_message: ''
@@ -67,7 +66,7 @@ properties:
   - name: RenderingTest.ComparisonPsnrThreshold
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -84,7 +83,7 @@ properties:
   - name: RenderingTest.Description
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -101,7 +100,7 @@ properties:
   - name: RenderingTest.FieldOfView
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -118,7 +117,7 @@ properties:
   - name: RenderingTest.Orientation
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - Hidden
@@ -138,7 +137,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -154,7 +153,7 @@ properties:
   - name: RenderingTest.Position
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - Hidden
@@ -174,7 +173,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -190,7 +189,7 @@ properties:
   - name: RenderingTest.QualityLevel
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -224,8 +223,8 @@ properties:
   - name: RenderingTest.ShouldSkip
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -241,7 +240,7 @@ properties:
   - name: RenderingTest.Ticket
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     type: string
     tags: []
     deprecation_message: ''
@@ -277,10 +276,10 @@ methods:
     summary: |
       An internal service which cannot be used by developers.
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

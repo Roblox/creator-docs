@@ -1,6 +1,5 @@
 name: GuiButton
 type: class
-category:
 memory_category: Gui
 summary: |
   An abstract class for interactive 2D user interface elements.
@@ -20,7 +19,7 @@ description: |
   when the **A** button is pressed and released. In short, this event is very
   useful for multi-platform user interface programming as it provides a nice
   general interface for a single user input.
-code_samples:
+code_samples: []
 inherits:
   - GuiObject
 tags:
@@ -49,8 +48,8 @@ properties:
       `Class.ImageButton` on mouse hover when its
       `Class.ImageButton.HoverImage|HoverImage` is not `nil`, nor on mouse click
       if its `Class.ImageButton.PressedImage|PressedImage` is not `nil`.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -65,8 +64,12 @@ properties:
       - UI
     writeCapabilities: []
   - name: GuiButton.HoverHapticEffect
-    summary: ''
-    description: ''
+    summary: |
+      A `Class.HapticEffect` instance that will play when the `Class.GuiButton`
+      is being hovered.
+    description: |
+      A `Class.HapticEffect` instance that will play when the `Class.GuiButton`
+      is being hovered.
     code_samples: []
     type: HapticEffect
     tags: []
@@ -89,8 +92,8 @@ properties:
     description: |
       If `true` while the GUI element is visible, the mouse will not be locked
       unless the right mouse button is down.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -105,8 +108,12 @@ properties:
       - UI
     writeCapabilities: []
   - name: GuiButton.PressHapticEffect
-    summary: ''
-    description: ''
+    summary: |
+      A `Class.HapticEffect` instance that will play when the `Class.GuiButton`
+      is being pressed.
+    description: |
+      A `Class.HapticEffect` instance that will play when the `Class.GuiButton`
+      is being pressed.
     code_samples: []
     type: HapticEffect
     tags: []
@@ -127,8 +134,8 @@ properties:
       A boolean property which indicates whether the object has been selected.
     description: |
       A boolean property which indicates whether the object has been selected.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -149,7 +156,7 @@ properties:
     description: |
       Sets the style of the `Class.GuiButton` based on a list of pre-determined
       styles.
-    code_samples:
+    code_samples: []
     type: ButtonStyle
     tags: []
     deprecation_message: ''
@@ -174,21 +181,21 @@ events:
       server, it should only be used in a `Class.LocalScript`, or in a
       `Class.Script` with `Class.Script.RunContext|RunContext` of
       `Enum.RunContext.Client`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: inputObject
         type: InputObject
-        default:
+        default: ''
         summary: ''
       - name: clickCount
         type: int
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiButton.MouseButton1Click
     summary: |
@@ -206,13 +213,13 @@ events:
       `Class.GuiButton.MouseButton1Up|MouseButton1Up`; these events are similar
       but will fire whenever the user presses their left mouse button down or
       up, respectively.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiButton.MouseButton1Down
     summary: |
@@ -225,23 +232,23 @@ events:
       For an event requiring the user to press **and** release their left mouse
       on a `Class.GuiButton` in order for the event to fire, consider using
       `Class.GuiButton.MouseButton1Click|MouseButton1Click`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **X** screen coordinate in pixels.
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **Y** screen coordinate in pixels.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiButton.MouseButton1Up
     summary: |
@@ -254,23 +261,23 @@ events:
       For an event requiring the user to press **and** release their left mouse
       on a `Class.GuiButton` in order for the event to fire, consider using
       `Class.GuiButton.MouseButton1Click|MouseButton1Click`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **X** screen coordinate in pixels.
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **Y** screen coordinate in pixels.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiButton.MouseButton2Click
     summary: |
@@ -288,13 +295,13 @@ events:
       `Class.GuiButton.MouseButton2Up|MouseButton2Up`; these events are similar
       but will fire whenever the user presses their right mouse button down or
       up, respectively.
-    code_samples:
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiButton.MouseButton2Down
     summary: |
@@ -307,23 +314,23 @@ events:
       For an event requiring the user to press **and** release their right mouse
       on a `Class.GuiButton` in order for the event to fire, consider using
       `Class.GuiButton.MouseButton2Click|MouseButton2Click`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **X** screen coordinate in pixels.
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **Y** screen coordinate in pixels.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
   - name: GuiButton.MouseButton2Up
     summary: |
@@ -336,22 +343,22 @@ events:
       For an event requiring the user to press **and** release their right mouse
       on a `Class.GuiButton` in order for the event to fire, consider using
       `Class.GuiButton.MouseButton2Click|MouseButton2Click`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **X** screen coordinate in pixels.
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **Y** screen coordinate in pixels.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - UI
     writeCapabilities: []
 callbacks: []

@@ -1,6 +1,5 @@
 name: MessagingService
 type: class
-category:
 memory_category: Instances
 summary: |
   Allows servers of the same experience to communicate with each other.
@@ -81,7 +80,7 @@ description: |
   		</tr>
   	</tbody>
   </table>
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -99,20 +98,20 @@ methods:
       triggering their registered callbacks to be invoked.
 
       Yields until the message is received by the backend.
-    code_samples:
+    code_samples: []
     parameters:
       - name: topic
         type: string
-        default:
+        default: ''
         summary: |
           Determines where the message is sent.
       - name: message
         type: Variant
-        default:
+        default: ''
         summary: |
           The data to include in the message.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Yields
@@ -177,12 +176,12 @@ methods:
     parameters:
       - name: topic
         type: string
-        default:
+        default: ''
         summary: |
           Determines where to listen for messages.
       - name: callback
         type: Function
-        default:
+        default: ''
         summary: |
           Function to be invoked whenever a message is received.
     returns:

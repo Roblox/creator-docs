@@ -1,6 +1,5 @@
 name: IntersectOperation
 type: class
-category:
 memory_category: Instances
 summary: |
   Result of parts that have been intersected into a single solid model.
@@ -8,9 +7,6 @@ description: |
   An **IntersectOperation** is the result of individual parts that have been
   intersected into a single solid model through Studio's solid modeling
   **Intersect** tool, or through `Class.BasePart:IntersectAsync()`.
-
-  <img src="../../../assets/studio/general/Model-Tab-Intersect.png"
-  alt="Intersect tool indicated in Model tab" width="732" />
 
   See [Solid Modeling](../../../parts/solid-modeling.md) to learn more about
   Studio's solid modeling tools and methods.

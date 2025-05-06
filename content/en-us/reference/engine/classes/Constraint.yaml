@@ -1,6 +1,5 @@
 name: Constraint
 type: class
-category:
 memory_category: PhysicsParts
 summary: |
   The base class for constraint-based objects.
@@ -9,7 +8,7 @@ description: |
   [Mover Constraints](../../../physics/mover-constraints.md) and
   [Mechanical Constraints](../../../physics/mechanical-constraints.md) for more
   details.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -24,8 +23,8 @@ properties:
 
       True if the constraint and both of its parts are in the `Class.Workspace`
       and the constraint's `Class.Constraint.Enabled` property is true.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -47,7 +46,7 @@ properties:
       `Class.Constraint.Attachment1`.
     description: |
       The `Class.Attachment` that is connected to `Class.Constraint.Attachment1`
-    code_samples:
+    code_samples: []
     type: Attachment
     tags: []
     deprecation_message: ''
@@ -68,7 +67,7 @@ properties:
       `Class.Constraint.Attachment0`.
     description: |
       The `Class.Attachment` that is connected to `Class.Constraint.Attachment0`
-    code_samples:
+    code_samples: []
     type: Attachment
     tags: []
     deprecation_message: ''
@@ -88,7 +87,7 @@ properties:
       The color of the constraint.
     description: |
       The color of the constraint.
-    code_samples:
+    code_samples: []
     type: BrickColor
     tags: []
     deprecation_message: ''
@@ -108,8 +107,8 @@ properties:
       Toggles whether or not the constraint is enabled.
     description: |
       Toggles whether or not the constraint is enabled.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -128,8 +127,8 @@ properties:
       Toggles the constraint's visibility.
     description: |
       Toggles the constraint's visibility.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -151,7 +150,7 @@ methods:
     parameters:
       - name: bodyId
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Vector3
@@ -162,7 +161,8 @@ methods:
       This method should not be used in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: Constraint:GetDebugAppliedTorque
     summary: ''
@@ -171,7 +171,7 @@ methods:
     parameters:
       - name: bodyId
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Vector3
@@ -182,7 +182,8 @@ methods:
       This method should not be used in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
 events: []
 callbacks: []

@@ -1,6 +1,5 @@
 name: StudioService
 type: class
-category: Plugins
 memory_category: Instances
 summary: |
   Provides access to configuration of Roblox Studio and allows importing files
@@ -23,7 +22,7 @@ description: |
     `Class.StudioService:GetClassIcon()|GetClassIcon`.
   - Plugins that care about which script is currently being edited (if any) can
     read this from `Class.StudioService.ActiveScript|ActiveScript`.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -59,7 +58,7 @@ properties:
 
       StudioService:GetPropertyChangedSignal("ActiveScript"):Connect(onActiveScriptChanged)
       ```
-    code_samples:
+    code_samples: []
     type: Instance
     tags:
       - ReadOnly
@@ -78,8 +77,8 @@ properties:
   - name: StudioService.DraggerSolveConstraints
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -97,8 +96,8 @@ properties:
   - name: StudioService.DrawConstraintsOnTop
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -122,12 +121,9 @@ properties:
       move objects each tick.
     description: |
       **GridSize** determines the distance in studs by which Studio's drag and
-      move tools move objects each tick. This is set in the user's
-      [Model](../../../studio/model-tab.md) tab under the
-      **Snap&nbsp;to&nbsp;Grid** section.
-
-      <img src="/assets/studio/general/Model-Tab-Transform-Snapping.png" width="768" alt="Transform snapping tools indicated in Model tab" />
-    code_samples:
+      move tools move objects each tick. This is set in the user's toolbar's
+      **Model** tab.
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -150,11 +146,8 @@ properties:
     description: |
       **RotateIncrement** determines the angle in degrees by which Studio's
       rotation tool will rotate selected objects each tick. This is set in the
-      user's [Model](../../../studio/model-tab.md) tab under the
-      **Snap&nbsp;to&nbsp;Grid** section.
-
-      <img src="/assets/studio/general/Model-Tab-Transform-Snapping.png" width="768" alt="Transform snapping tools indicated in Model tab" />
-    code_samples:
+      user's toolbar's **Model** tab.
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -190,8 +183,8 @@ properties:
   - name: StudioService.ShowConstraintDetails
     summary: ''
     description: ''
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -210,7 +203,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - ReadOnly
       - NotReplicated
@@ -247,7 +240,7 @@ properties:
       	print("Bonjour")
       end
       ```
-    code_samples:
+    code_samples: []
     type: string
     tags:
       - ReadOnly
@@ -273,8 +266,8 @@ properties:
       space of an object or global space. By default, this setting is toggled
       with <kbd>Ctrl</kbd><kbd>L</kbd> or <kbd>⌘</kbd><kbd>L</kbd>. Plugins can
       read from this property if they implement their own object movement tools.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - NotReplicated
     deprecation_message: ''
@@ -321,11 +314,11 @@ methods:
       end
       displayClassIcon(imageLabel, "Part")
       ```
-    code_samples:
+    code_samples: []
     parameters:
       - name: className
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Dictionary
@@ -358,15 +351,15 @@ methods:
   - name: StudioService:GizmoRaycast
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: origin
         type: Vector3
-        default:
+        default: ''
         summary: ''
       - name: direction
         type: Vector3
-        default:
+        default: ''
         summary: ''
       - name: raycastParams
         type: RaycastParams
@@ -393,7 +386,7 @@ methods:
 
       - `Class.StudioService:PromptImportFiles()`, the same function but for
         loading a list of files instead of a single file
-    code_samples:
+    code_samples: []
     parameters:
       - name: fileTypeFilter
         type: Array
@@ -402,11 +395,11 @@ methods:
           A list of file types that the user is allowed to select. File types
           are formatted without a period. For example, {"jpg", "png"} would
           allow only a JPG or PNG file to be selected. If no filter is provided,
-          the filter is nil and allows the user to select any file type.
+          the filter is `nil` and allows the user to select any file type.
     returns:
       - type: Instance
         summary: |
-          The imported `Class.File`. Returns nil if no files were selected, or
+          The imported `Class.File`. Returns `nil` if no files were selected, or
           if the selected file was too large (FileSize greater than 100
           megabytes).
     tags:
@@ -430,7 +423,7 @@ methods:
 
       - `Class.StudioService:PromptImportFile()`, the same function but for
         loading a single file instead of a list of files
-    code_samples:
+    code_samples: []
     parameters:
       - name: fileTypeFilter
         type: Array
@@ -439,13 +432,13 @@ methods:
           A list of file types that the user is allowed to select. File types
           are formatted without a period. For example, {"jpg", "png"} would
           allow only JPG and PNG files to be selected. If no filter is provided,
-          the filter is nil and allows the user to select any file type.
+          the filter is `nil` and allows the user to select any file type.
     returns:
       - type: Instances
         summary: |
           The imported `Class.File|Files`. Returns an empty list if no files
-          were selected. Returns nil if the user selected one or more files that
-          were too large (FileSize greater than 100 megabytes).
+          were selected. Returns `nil` if the user selected one or more files
+          that were too large (FileSize greater than 100 megabytes).
     tags:
       - Yields
     deprecation_message: ''

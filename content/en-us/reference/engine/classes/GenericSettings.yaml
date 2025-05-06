@@ -1,12 +1,11 @@
 name: GenericSettings
 type: class
-category:
 memory_category: Instances
 summary: |
   The abstract class for settings database classes.
 description: |
   The abstract class for settings database classes.
-code_samples:
+code_samples: []
 inherits:
   - ServiceProvider
 tags:

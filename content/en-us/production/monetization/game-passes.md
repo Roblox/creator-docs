@@ -6,7 +6,7 @@ description: Passes let you charge users a one-time Robux fee to access privileg
 **Passes** let you charge users a one-time Robux fee to access special privileges inside your experience, such as entry to a restricted area, an in-experience avatar item, or a permanent power-up.
 
 <Alert severity="info">
-   For items that a player might purchase multiple times, such as potions, temporary power-ups, or in-experience currency, see [Developer Products](../../production/monetization/developer-products.md).
+   For items that a player might purchase multiple times, such as potions, temporary power-ups, or in-experience currency, see [Developer products](../../production/monetization/developer-products.md).
 </Alert>
 
 ## Create a pass
@@ -48,10 +48,9 @@ To create a pass:
 To use scripting, you need a pass ID. To get the pass ID:
 
 1. Go to **Monetization** &rang; **Passes**.
-2. Hover over the pass and click the **&ctdot;** menu.
-3. Click **Copy Asset ID** to copy the ID to your clipboard.
+1. Hover over a pass' thumbnail, click the **&ctdot;** button, and select **Copy Asset ID** from the context menu.
 
-   <img src="../../assets/creator-dashboard/Pass-Copy-Asset-ID.png" width="400" />
+   <img src="../../assets/creator-dashboard/Options-Button-Pass.png" width="200" />
 
 ## Sell a pass
 

@@ -1,6 +1,5 @@
 name: PlaneConstraint
 type: class
-category:
 memory_category: PhysicsParts
 summary: |
   Moves its attachments into a position/orientation along a plane whose normal
@@ -11,7 +10,7 @@ description: |
   plane whose normal vector is the primary axis of
   `Class.Constraint.Attachment0|Attachment0`. Both parent assemblies remain free
   to translate and rotate unless otherwise constrained.
-code_samples:
+code_samples: []
 inherits:
   - Constraint
 tags: []

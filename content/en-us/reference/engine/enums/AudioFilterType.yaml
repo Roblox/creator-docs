@@ -88,3 +88,8 @@ items:
     value: 10
     tags: []
     deprecation_message: ''
+  - name: Lowpass6dB
+    summary: ''
+    value: 11
+    tags: []
+    deprecation_message: ''

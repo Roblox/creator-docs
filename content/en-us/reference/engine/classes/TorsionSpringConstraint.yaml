@@ -1,6 +1,5 @@
 name: TorsionSpringConstraint
 type: class
-category: Constraints
 memory_category: PhysicsParts
 summary: |
   A rotational spring that opposes the angular motion between two axes.
@@ -39,7 +38,7 @@ description: |
   to restrict the spring's range within a cone; it also exposes the
   `Class.TorsionSpringConstraint.Restitution|Restitution` value which defines
   the elasticity of the attachments when they reach their limit.
-code_samples:
+code_samples: []
 inherits:
   - Constraint
 tags: []
@@ -51,7 +50,7 @@ properties:
     description: |
       This property indicates the number of spring coils for visualization.
       Default value is 8.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -74,7 +73,7 @@ properties:
       limiting cone is formed at the position of the constraint's
       `Class.Constraint.Attachment0|Attachment0` around its secondary axis with
       an angle equal to `Class.TorsionSpringConstraint.MaxAngle|MaxAngle`.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - ReadOnly
@@ -100,7 +99,7 @@ properties:
       Damping constant for the `Class.TorsionSpringConstraint`. Multiplied to
       the velocity of the constraint's `Class.Attachment|Attachments` to reduce
       the spring force applied.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -119,7 +118,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: bool
+    type: boolean
     tags:
       - Hidden
       - Deprecated
@@ -145,8 +144,8 @@ properties:
       This property, when enabled, limits the relative angular motion of the
       secondary axes of attachments through a cone constraint. The default value
       is false.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -170,7 +169,7 @@ properties:
       secondary axis with an angle equal to
       `Class.TorsionSpringConstraint.MaxAngle|MaxAngle`. Default value is 45
       degrees.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -191,7 +190,7 @@ properties:
     description: |
       This property determines the maximum torque supported by the torsion
       spring. Defaults to 1000.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -212,7 +211,7 @@ properties:
     description: |
       This property indicates the visualization radius of the spring, in studs.
       Default value is 0.4.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -237,7 +236,7 @@ properties:
       `Class.TorsionSpringConstraint.LimitEnabled|LimitEnabled` is true. The
       value defaults to 0 and can be any floating number within the range of 0
       and 1.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -262,7 +261,7 @@ properties:
       torque. The larger the torque value, the faster the axes are pushed
       together when the relative angle is positive (or away from each other if
       the relative angle is negative). The value defaults to 100.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

@@ -1,6 +1,5 @@
 name: StyleSheet
 type: class
-category:
 memory_category: Gui
 summary: ''
 description: ''
@@ -32,10 +31,10 @@ methods:
     parameters:
       - name: derives
         type: Instances
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''

@@ -1,6 +1,5 @@
 name: DistortionSoundEffect
 type: class
-category: Sounds
 memory_category: Instances
 summary: |
   Distorts audio, making it sound fuzzier and overdriven.
@@ -11,7 +10,7 @@ description: |
 
   Like all other `Class.SoundEffect`, a DistortionSoundEffect can be applied
   either to a `Class.Sound` or `Class.SoundGroup` by being parented to either.
-code_samples:
+code_samples: []
 inherits:
   - SoundEffect
 tags: []
@@ -23,7 +22,7 @@ properties:
     description: |
       Range: 0 to 1 (default 0.5) The intensity of the effect. Setting this
       property to its minimum (0) will cause no distortion at all.
-    code_samples:
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''

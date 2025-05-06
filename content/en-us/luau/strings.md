@@ -460,12 +460,25 @@ local key3, val3 = string.match("OneMillion=1000000", pattern)
 print(key3, val3)  --> OneMillion 1000000
 ```
 
-In the previous pattern, the `?` quantifier that follows both of the `%s`
-classes is a safe addition because it makes the space on either side of the
-`=` sign optional. That means the match succeeds if one (or both) spaces are
-missing around the equal sign.
+The `?` quantifier that follows both of the `%s` classes is a safe addition
+because it makes the space on either side of the `=` sign optional. That means
+the match succeeds if one (or both) spaces are missing around the equal sign.
 
-String captures can also be **nested** as the following example:
+In the `Library.string.gsub()` function, you can include capture groups in the
+replacement string using `%1`, `%2`, `%3`, etc., up to `%9`. Even though Luau
+supports up to 32 capture groups before throwing an error, you can only
+reference the first nine with this syntax:
+
+```lua
+local str = "love2play Roblox"
+local pattern = "(%w+)(%d+)(%w+)%s+(%w+)"
+local replacement = "I %1 %2 %3 %4!"
+
+local result = string.gsub(str, pattern, replacement)
+print(result) --> I love 2 play Roblox!
+```
+
+You can also nest string captures:
 
 ```lua
 local places = "The Cloud Kingdom is heavenly, The Forest Kingdom is peaceful"

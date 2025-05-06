@@ -1,6 +1,5 @@
 name: Model
 type: class
-category: Building
 memory_category: PhysicsParts
 summary: |
   Models are container objects, meaning they group objects together. They are
@@ -69,7 +68,7 @@ properties:
       When set to `Enum.ModelLevelOfDetail|Disabled` or
       `Enum.ModelLevelOfDetail|Automatic`, lower resolution meshes will not be
       displayed.
-    code_samples:
+    code_samples: []
     type: ModelLevelOfDetail
     tags: []
     deprecation_message: ''
@@ -166,15 +165,16 @@ properties:
       this property will move the scale as though `Model/ScaleTo` was called on
       it.
     description: |
-      Setting this property in the properties pane will scale the model as
+      Setting this property in the Properties window will scale the model as
       though `Model/ScaleTo` was called on it, scaling all descendant Instances
-      in the model such that the model has the specified scale factor relative
-      to its original size.
+      in the model, such as materials, images, and the 3D geometry of parts, so
+      that the model has the specified scale factor relative to its original
+      size.
 
       This property is only available in Studio and will throw an error if used
       in a `Script` or `LocalScript`. `Model/ScaleTo` and `Model/GetScale`
       should be used from scripts.
-    code_samples:
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -258,7 +258,7 @@ methods:
         default: nil
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -289,7 +289,7 @@ methods:
       - Manual-Joint-Creation
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -324,7 +324,7 @@ methods:
       part.Size = size
       part.CFrame = orientation
       ```
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Tuple
@@ -374,7 +374,7 @@ methods:
     description: |
       This value historically returned the CFrame of a central position in the
       model.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: CFrame
@@ -452,7 +452,7 @@ methods:
 
       Note this function will throw an error if no primary part exists for the
       `Class.Model`. If this behavior is not desired developers can do the
-      following, which will be equal to nil if there is no primary part.
+      following, which will be equal to `nil` if there is no primary part.
 
           local cFrame = Model.PrimaryPart and Model.PrimaryPart.CFrame
     code_samples:
@@ -539,7 +539,7 @@ methods:
       - Simple-Joint-Creation
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -577,11 +577,11 @@ methods:
     parameters:
       - name: position
         type: Vector3
-        default:
+        default: ''
         summary: |
           The `Datatype.Vector3` the `Class.Model` is moved to.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -602,7 +602,7 @@ methods:
         default: nil
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -619,10 +619,10 @@ methods:
       Resets the rotation of the model's parts to the previously set identity
       rotation, which is done through the `Class.Model:SetIdentityOrientation()`
       method.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -658,14 +658,14 @@ methods:
       - Physical velocities and forces like `Hinge.MaxServoTorque`
       - Visual properties like sizes of particle emitters
       - Other length properties like `Sound.RollOffMinDistance`
-    code_samples:
+    code_samples: []
     parameters:
       - name: newScaleFactor
         type: float
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -682,10 +682,10 @@ methods:
       Sets the identity rotation of the given model, allowing you to reset the
       rotation of the entire model later, through the use of the
       `ResetOrientationToIdentity` method.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -714,15 +714,15 @@ methods:
       Note, this function will throw an error if no `Class.Model.PrimaryPart`
       exists for the model. This can cause issues if, for example, the primary
       part was never set or has been destroyed.
-    code_samples:
+    code_samples: []
     parameters:
       - name: cframe
         type: CFrame
-        default:
+        default: ''
         summary: |
           The `Datatype.CFrame` to be set.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -751,11 +751,11 @@ methods:
     parameters:
       - name: delta
         type: Vector3
-        default:
+        default: ''
         summary: |
           The `Datatype.Vector3` to translate the `Class.Model` by.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
@@ -766,10 +766,10 @@ methods:
   - name: Model:breakJoints
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -783,10 +783,10 @@ methods:
   - name: Model:makeJoints
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -800,14 +800,14 @@ methods:
   - name: Model:move
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: location
         type: Vector3
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -821,14 +821,14 @@ methods:
   - name: Model:moveTo
     summary: ''
     description: ''
-    code_samples:
+    code_samples: []
     parameters:
       - name: location
         type: Vector3
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated

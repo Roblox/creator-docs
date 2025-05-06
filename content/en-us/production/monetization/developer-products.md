@@ -35,11 +35,10 @@ To create a developer product:
 
 To use scripting, you need a developer product ID. To get the product ID:
 
-1. Go to **Monetization** > **Developer Products**.
-2. Hover over the product and click the **&ctdot;** menu.
-3. Click **Copy Asset ID** to copy the ID to your clipboard.
+1. Go to **Monetization** &rang; **Developer Products**.
+1. Hover over a product's thumbnail, click the **&ctdot;** button, and select **Copy Asset ID** from the context menu.
 
-   <img src="../../assets/creator-dashboard/Developer-Product-Copy-Asset-ID.png" width="400" />
+   <img src="../../assets/creator-dashboard/Options-Button-Developer-Product.png" width="200" />
 
 ## Sell a developer product
 
@@ -159,7 +158,7 @@ end)
 
 ### Outside your experience
 
-To enable developer product purchases outside your experience, you must work with the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` API. After a user makes a purchase in the Store tab of your experience details page, you must use `ProcessReceipt` to confirm their purchase and grant them their items once they enter your experience.
+To enable developer product purchases outside your experience, you must work with the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` API. After a user makes a purchase in the **Store** tab of your experience details page, you must use `ProcessReceipt` to confirm their purchase and grant them their items once they enter your experience.
 
 <Alert severity="warning">
 Do **not** use the `Class.MarketplaceService:PromptProductPurchaseFinished|PromptProductPurchaseFinished` event to process purchases. You must use the `ProcessReceipt` callback instead.

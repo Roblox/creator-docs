@@ -1,6 +1,5 @@
 name: Team
 type: class
-category: Gameplay
 memory_category: Instances
 summary: |
   The `Class.Team` class represents a faction in a Roblox place. The only valid
@@ -79,7 +78,7 @@ properties:
       developers may wish to implement their own team balancing system.
     code_samples:
       - Team-Rebalance
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -105,8 +104,8 @@ properties:
       Developers are advised not to use this property as the script which
       changed the team colors has since been removed from the default character.
       This property is deprecated and should not be used for new work.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags:
       - NotReplicated
       - Deprecated
@@ -136,7 +135,7 @@ properties:
 
       This property is deprecated and should not be used by developers for new
       work.
-    code_samples:
+    code_samples: []
     type: int
     tags:
       - NotReplicated
@@ -218,7 +217,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
 events:
   - name: Team.PlayerAdded
@@ -244,14 +244,14 @@ events:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` that was added.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
   - name: Team.PlayerRemoved
     summary: |
@@ -276,13 +276,13 @@ events:
     parameters:
       - name: player
         type: Player
-        default:
+        default: ''
         summary: |
           The `Class.Player` removed.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Players
     writeCapabilities: []
 callbacks: []

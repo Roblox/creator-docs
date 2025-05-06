@@ -1,6 +1,5 @@
 name: RunService
 type: class
-category: Scripting
 memory_category: Instances
 summary: |
   Service responsible for all runtime activity and progression of time.
@@ -247,13 +246,13 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           Label for the binding which can be used with
           `Class.RunService.Unbind|Unbind` if the binding is no longer needed.
       - name: priority
         type: int
-        default:
+        default: ''
         summary: |
           Priority of the binding as an integer; it determines when during the
           render step to call the custom function. The lower this number, the
@@ -261,17 +260,18 @@ methods:
           same priority the Roblox Engine will randomly pick one to run first.
       - name: function
         type: Function
-        default:
+        default: ''
         summary: |
           The custom function being bound.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService:IsClient
     summary: |
@@ -290,14 +290,15 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the current environment is running the client.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService:IsEdit
     summary: |
@@ -309,17 +310,18 @@ methods:
       `IsEdit()` will return the inverse of
       `Class.RunService:IsRunning()|IsRunning()`, except when the simulation has
       been paused, in which case both methods will return `false`.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the current environment is in "edit" mode.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService:IsRunMode
     summary: |
@@ -338,7 +340,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the **Run** button has been pressed to run the simulation in
           Studio.
@@ -346,7 +348,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService:IsRunning
     summary: |
@@ -361,14 +364,15 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the experience is currently running.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService:IsServer
     summary: |
@@ -387,14 +391,15 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the current environment is running on the server.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService:IsStudio
     summary: |
@@ -406,14 +411,15 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: bool
+      - type: boolean
         summary: |
           Whether the current environment is running in Studio.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService:Pause
     summary: |
@@ -425,16 +431,17 @@ methods:
       `Class.RunService:Run()|Run()` or the **Run** button in Studio; when the
       simulation is paused, `Class.RunService:IsRunning()|IsRunning()` will
       return `false`.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService:Reset
     summary: |
@@ -443,10 +450,10 @@ methods:
     description: |
       The Reset function resets the current game to a waypoint set when Run was
       called. This method should only be used after Run was called.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -454,7 +461,8 @@ methods:
       This item is deprecated and should not be used in new work.
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService:Run
     summary: |
@@ -465,16 +473,17 @@ methods:
       return `true`. However, `Class.RunService:IsRunMode()|IsRunMode()` will
       only return `true` if the simulation was started using the **Run** button
       in Studio.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService:Stop
     summary: |
@@ -489,16 +498,17 @@ methods:
       restore the experience to the state it was in prior to the simulation
       being run. This means any changes made to the experience by the physics
       simulation and scripts will persist after the simulation has ended.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService:UnbindFromRenderStep
     summary: |
@@ -514,21 +524,22 @@ methods:
 
       If there is no bound function by the given name, this method takes no
       action and continues without raising an error.
-    code_samples:
+    code_samples: []
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           The name of the function being unbound.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 events:
   - name: RunService.Heartbeat
@@ -553,38 +564,40 @@ events:
     parameters:
       - name: deltaTime
         type: double
-        default:
+        default: ''
         summary: |
           The time (in seconds) that has elapsed since the previous frame.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService.PostSimulation
     summary: |
       Fires every frame, after the physics simulation has completed.
     description: |
       The `PostSimulation` event fires every frame, after the physics simulation
-      has completed. The `deltaTimeSim` argument indicates the time that has
-      elapsed since the previous frame.
+      has completed. The `deltaTimeSim` argument indicates the time that the
+      current frame has stepped the physics simulation, not accounting for
+      physics throttling.
 
       This event is useful for making final adjustments to the outcome of the
       simulation. Following this phase, the engine triggers the
       `Class.RunService.Heartbeat|Heartbeat` event.
-    code_samples:
+    code_samples: []
     parameters:
       - name: deltaTimeSim
         type: double
-        default:
+        default: ''
         summary: |
-          The time (in seconds) that has elapsed since the previous frame.
+          The time (in seconds) that the current frame has stepped the physics
+          simulation, not accounting for physics throttling.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService.PreAnimation
     summary: |
@@ -592,7 +605,7 @@ events:
     description: |
       The `PreAnimation` event fires every frame, prior to the physics
       simulation but after rendering. The `deltaTimeSim` argument indicates the
-      time that has elapsed since the previous frame.
+      time that the current frame has stepped animations.
 
       This event is useful for modifying animation objects, such as adjusting
       their speed or priority. Once the `PreAnimation` event is complete, the
@@ -601,18 +614,18 @@ events:
 
       After animations are stepped, the engine triggers the
       `Class.RunService.PreSimulation|PreSimulation` event.
-    code_samples:
+    code_samples: []
     parameters:
       - name: deltaTimeSim
         type: double
-        default:
+        default: ''
         summary: |
-          The time (in seconds) that has elapsed since the previous frame.
+          The time (in seconds) that the current frame has stepped animations.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService.PreRender
     summary: |
@@ -636,18 +649,18 @@ events:
 
       Following the `PreRender` phase, the simulation phase begins with the
       `Class.RunService.PreAnimation|PreAnimation` event.
-    code_samples:
+    code_samples: []
     parameters:
       - name: deltaTimeRender
         type: double
-        default:
+        default: ''
         summary: |
           The time (in seconds) that has elapsed since the previous frame.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService.PreSimulation
     summary: |
@@ -656,69 +669,79 @@ events:
       The `PreSimulation` event (replacement for
       `Class.RunService.Stepped|Stepped`) fires every frame, prior to the
       physics simulation. The `deltaTimeSim` argument indicates the time that
-      has elapsed since the previous frame.
+      the current frame will step the physics simulation, not accounting for
+      physics throttling.
 
       This event is useful for adjusting properties like velocity or forces just
       before they're applied as part of the simulation. The simulation then
       runs, potentially multiple times, as the physics solver runs at a higher
       frequency than other engine systems. Once this is complete, the
       `Class.RunService.PostSimulation|PostSimulation` event is fired.
-    code_samples:
+    code_samples: []
     parameters:
       - name: deltaTimeSim
         type: double
-        default:
+        default: ''
+        summary: |
+          The time (in seconds) that the current frame will step the physics
+          simulation, not accounting for physics throttling.
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities:
+      - Basic
+    writeCapabilities: []
+  - name: RunService.RenderStepped
+    summary: |
+      Fires every frame, prior to the frame being rendered.
+    description: |
+      Fires every frame, prior to the frame being rendered.
+
+      ##### Migration Note
+
+      This event has been superseded by `Class.RunService.PreRender|PreRender`
+      which should be used for new work.
+    code_samples: []
+    parameters:
+      - name: deltaTime
+        type: double
+        default: ''
         summary: |
           The time (in seconds) that has elapsed since the previous frame.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: RunService.RenderStepped
-    summary: |
-      Fires every frame, prior to the frame being rendered.
-    description: ''
-    code_samples: []
-    parameters:
-      - name: deltaTime
-        type: double
-        default:
-        summary: |
-          The time (in seconds) that has elapsed since the previous frame.
-    tags: []
-    deprecation_message: |
-      This event has been superseded by `Class.RunService.PreRender|PreRender`
-      which should be used for new work.
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: RunService.Stepped
     summary: |
       Fires every frame, prior to the physics simulation.
-    description: ''
+    description: |
+      Fires every frame, prior to the physics simulation.
+
+      ##### Migration Note
+
+      This event has been superseded by
+      `Class.RunService.PreSimulation|PreSimulation` which should be used for
+      new work.
     code_samples: []
     parameters:
       - name: time
         type: double
-        default:
+        default: ''
         summary: |
           The duration (in seconds) that `Class.RunService` has been running
           for.
       - name: deltaTime
         type: double
-        default:
+        default: ''
         summary: |
           The time (in seconds) that has elapsed since the previous frame.
     tags: []
-    deprecation_message: |
-      This event has been superseded by
-      `Class.RunService.PreSimulation|PreSimulation` which should be used for
-      new work.
+    deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 callbacks: []

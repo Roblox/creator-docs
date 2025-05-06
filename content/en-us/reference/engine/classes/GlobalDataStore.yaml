@@ -1,6 +1,5 @@
 name: GlobalDataStore
 type: class
-category: Data
 memory_category: Instances
 summary: |
   An object that exposes methods to access a single data store.
@@ -15,7 +14,7 @@ description: |
   `Class.DataStoreKeyInfo` is always `nil` for keys in an
   `Class.OrderedDataStore`. If you need versioning and metadata support, use a
   `Class.DataStore`.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -45,12 +44,12 @@ methods:
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: |
           The key identifying the entry being retrieved from the data store.
       - name: callback
         type: Function
-        default:
+        default: ''
         summary: |
           The function to be executed any time the value associated with **key**
           is changed.
@@ -67,7 +66,8 @@ methods:
       completely replacing the need for this function.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: GlobalDataStore:GetAsync
     summary: |
@@ -88,11 +88,11 @@ methods:
 
       To get a specific version, such as a version before the latest, use
       `Class.DataStore:GetVersionAsync()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: |
           The key name for which the value is requested. If
           `Class.DataStoreOptions.AllScopes` was set to true when accessing the
@@ -114,7 +114,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: GlobalDataStore:IncrementAsync
     summary: |
@@ -124,14 +125,18 @@ methods:
       This function increments the value of a key by the provided amount (both
       must be integers).
 
-      `Class.OrderedDataStore` does not support versioning, so calling this
-      method on an `Class.OrderedDataStore` key will overwrite the current value
-      with the incremented value and make previous versions inaccessible.
-    code_samples:
+      Values in `Class.GlobalDataStore|GlobalDataStores` are **versioned** as
+      outlined in
+      [versioning](../../../cloud-services/data-stores/versioning-listing-and-caching.md#versioning).
+      `Class.OrderedDataStore|OrderedDataStores` do not support versioning, so
+      calling this method on an ordered data store key will overwrite the
+      current value with the incremented value and make previous versions
+      inaccessible.
+    code_samples: []
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: |
           Key name for which the value should be updated. If
           `Class.DataStoreOptions.AllScopes` was set to true when accessing the
@@ -164,7 +169,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: GlobalDataStore:RemoveAsync
     summary: |
@@ -190,11 +196,11 @@ methods:
       `Class.GlobalDataStore:RemoveAsync()` or
       `Class.DataStore:RemoveVersionAsync()`, the function will return `nil`,
       `nil` for value and `Class.DataStoreKeyInfo` respectively.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: |
           Key name to be removed. If `Class.DataStoreOptions.AllScopes` was set
           to true when accessing the data store through
@@ -212,7 +218,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: GlobalDataStore:SetAsync
     summary: |
@@ -221,15 +228,12 @@ methods:
       This function sets the latest value, `Class.Player.UserId|UserIds`, and
       metadata for the given key.
 
-      Values in data stores are versioned, meaning
-      `Class.GlobalDataStore:SetAsync()` will create a new version every time it
-      is called. Prior versions can be accessed through
-      `Class.DataStore:ListVersionsAsync()`/`Class.DataStore:GetVersionAsync()`
-      for up to 30 days at which point they are permanently deleted.
-
-      `Class.OrderedDataStore` does not support versioning, so calling this
-      method on an `Class.OrderedDataStore` key will overwrite the current value
-      and make previous versions inaccessible.
+      Values in `Class.GlobalDataStore|GlobalDataStores` are **versioned** as
+      outlined in
+      [versioning](../../../cloud-services/data-stores/versioning-listing-and-caching.md#versioning).
+      `Class.OrderedDataStore|OrderedDataStores` do not support versioning, so
+      calling this method on an ordered data store key will overwrite the
+      current value and make previous versions inaccessible.
 
       Metadata definitions must always be updated with a value, even if there
       are no changes to the current value; otherwise the current value will be
@@ -251,11 +255,11 @@ methods:
       whatever server last updated it) before making any changes. However, it's
       somewhat slower because it reads before it writes, and it also counts
       against both the read and write limit.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: |
           Key name for which the value should be set. If
           `Class.DataStoreOptions.AllScopes` was set to true when accessing the
@@ -263,7 +267,7 @@ methods:
           name must be prepended with the original scope as in "scope/key".
       - name: value
         type: Variant
-        default:
+        default: ''
         summary: |
           The value that the data store key will be set to.
       - name: userIds
@@ -290,7 +294,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
   - name: GlobalDataStore:UpdateAsync
     summary: |
@@ -302,14 +307,12 @@ methods:
       specified through the second parameter. If the callback returns `nil`, the
       write operation is cancelled and the value remains unchanged.
 
-      If the update succeeds, a new version of the value will be created and
-      prior versions will remain accessible through
-      `Class.DataStore:ListVersionsAsync()` and
-      `Class.DataStore:GetVersionAsync()`.
-
-      `Class.OrderedDataStore` does not support versioning, so calling this
-      function on an `Class.OrderedDataStore` key will overwrite the current
-      value and make previous versions inaccessible.
+      Values in `Class.GlobalDataStore|GlobalDataStores` are **versioned** as
+      outlined in
+      [versioning](../../../cloud-services/data-stores/versioning-listing-and-caching.md#versioning).
+      `Class.OrderedDataStore|OrderedDataStores` do not support versioning, so
+      calling this method on an ordered data store key will overwrite the
+      current value and make previous versions inaccessible.
 
       In cases where another game server updated the key in the short timespan
       between retrieving the key's current value and setting the key's value,
@@ -362,11 +365,11 @@ methods:
 
       The callback function cannot yield, so do **not** include calls like
       `Library.task.wait()`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: key
         type: string
-        default:
+        default: ''
         summary: |
           Key name for which the value should be updated. If
           `Class.DataStoreOptions.AllScopes` was set to true when accessing the
@@ -374,7 +377,7 @@ methods:
           name must be prepended with the original scope as in "scope/key".
       - name: transformFunction
         type: Function
-        default:
+        default: ''
         summary: |
           Transform function that takes the current value and
           `Class.DataStoreKeyInfo` as parameters and returns the new value along
@@ -391,7 +394,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - DataStore
     writeCapabilities: []
 events: []
 callbacks: []

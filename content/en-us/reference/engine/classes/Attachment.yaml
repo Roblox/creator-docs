@@ -1,6 +1,5 @@
 name: Attachment
 type: class
-category: Constraints
 memory_category: Instances
 summary: |
   Defines a point and orientation relative to a parent `Class.BasePart`,
@@ -23,7 +22,7 @@ description: |
     `Class.BasePart` center.
   - `Class.Sound` which will use the attachment's position as the sound's focal
     point, instead of the `Class.BasePart` center.
-code_samples:
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -36,7 +35,7 @@ properties:
     description: |
       Direction of the **X** axis of the attachment, represented as a unit
       `Datatype.Vector3`.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - NotReplicated
@@ -60,7 +59,7 @@ properties:
       will reflect onto the `Class.Attachment.Position|Position` and
       `Class.Attachment.Rotation|Rotation` properties of this object. Similarly,
       a change to either of those properties will reflect onto this property.
-    code_samples:
+    code_samples: []
     type: CFrame
     tags: []
     deprecation_message: ''
@@ -81,7 +80,7 @@ properties:
     description: |
       Orientation of the attachment relative to the orientation of its parent.
       Rotations are in **Z**,&nbsp;**X**,&nbsp;**Y** order.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - Hidden
@@ -105,7 +104,7 @@ properties:
     description: |
       Positional offset of the attachment, relative to the position and
       orientation of its parent.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - Hidden
@@ -128,7 +127,7 @@ properties:
     description: |
       Rotation of the attachment relative to the rotation of its parent.
       Rotations are in **Z**,&nbsp;**Y**,&nbsp;**X** order.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - Hidden
@@ -155,7 +154,7 @@ properties:
     description: |
       Direction of the **Y** axis of the attachment, represented as a unit
       `Datatype.Vector3`.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - NotReplicated
@@ -176,8 +175,8 @@ properties:
       Toggles the in-experience visibility of the attachment.
     description: |
       Toggles the in-experience visibility of the attachment.
-    code_samples:
-    type: bool
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -198,7 +197,7 @@ properties:
     description: |
       Direction of the **X** axis of the attachment relative to the world,
       represented as a unit `Datatype.Vector3` with a length of 1.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - NotReplicated
@@ -222,7 +221,7 @@ properties:
       independent of its parent. The value of this property is equivalent to
       multiplying the `Datatype.CFrame` of the attachment's parent by its own
       `Datatype.CFrame`.
-    code_samples:
+    code_samples: []
     type: CFrame
     tags:
       - NotReplicated
@@ -245,7 +244,7 @@ properties:
     description: |
       Orientation of the attachment relative to the world rather than its own
       parent. Rotations are in **Z**,&nbsp;**X**,&nbsp;**Y** order.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - Hidden
@@ -269,7 +268,7 @@ properties:
     description: |
       Position of the attachment relative to the world rather than its own
       parent.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - Hidden
@@ -293,7 +292,7 @@ properties:
     description: |
       Rotation of the attachment relative to the world rather than its own
       parent.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - Hidden
@@ -322,7 +321,7 @@ properties:
     description: |
       Direction of the **Y** axis of the attachment relative to the world,
       represented as a unit `Datatype.Vector3` with a length of 1.
-    code_samples:
+    code_samples: []
     type: Vector3
     tags:
       - NotReplicated
@@ -344,7 +343,7 @@ methods:
       Returns the value of the attachment's `Class.Attachment.Axis|Axis`.
     description: |
       Returns the value of the attachment's `Class.Attachment.Axis|Axis`.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Vector3
@@ -355,7 +354,8 @@ methods:
       This method is deprecated and should not be used in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: Attachment:GetConstraints
     summary: |
@@ -373,7 +373,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: Attachment:GetSecondaryAxis
     summary: |
@@ -382,7 +383,7 @@ methods:
     description: |
       Returns the value of the attachment's
       `Class.Attachment.SecondaryAxis|SecondaryAxis`.
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: Vector3
@@ -393,21 +394,22 @@ methods:
       This method is deprecated and should not be used in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: Attachment:SetAxis
     summary: |
       Sets the value of the attachment's `Class.Attachment.Axis|Axis`.
     description: |
       Sets the value of the attachment's `Class.Attachment.Axis|Axis`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: axis
         type: Vector3
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -415,7 +417,8 @@ methods:
       This method is deprecated and should not be used in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: Attachment:SetSecondaryAxis
     summary: |
@@ -424,14 +427,14 @@ methods:
     description: |
       Sets the value of the attachment's
       `Class.Attachment.SecondaryAxis|SecondaryAxis`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: axis
         type: Vector3
-        default:
+        default: ''
         summary: ''
     returns:
-      - type: void
+      - type: ()
         summary: ''
     tags:
       - Deprecated
@@ -439,7 +442,8 @@ methods:
       This method is deprecated and should not be used in new work.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 events: []
 callbacks: []

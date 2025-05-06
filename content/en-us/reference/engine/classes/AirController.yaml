@@ -1,6 +1,5 @@
 name: AirController
 type: class
-category:
 memory_category: Instances
 summary: ''
 description: ''
@@ -84,7 +83,7 @@ properties:
       `Class.AirController.TurningMaxTorque|TurningMaxTorque` to bring the
       angular velocity toward 0 when there is no input.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -106,7 +105,7 @@ properties:
       `Class.AirController.MoveMaxForce|MoveMaxForce` to bring the linear
       velocity towards 0 when there is no input.
     code_samples: []
-    type: bool
+    type: boolean
     tags: []
     deprecation_message: ''
     security:

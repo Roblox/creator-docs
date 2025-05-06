@@ -1,13 +1,12 @@
 name: FlagStand
 type: class
-category:
 memory_category: PhysicsParts
 summary: |
   The FlagStand object helps you make 'capture the flag' style games.
 description: |
   The `Class.Flag` and `Class.FlagStand` objects allow you to make 'Capture the
   Flag' style games quickly.
-code_samples:
+code_samples: []
 inherits:
   - Part
 tags:
@@ -27,7 +26,7 @@ properties:
 
       The `Class.Flag` and `Class.FlagStand` objects were created to allow
       developers to make 'capture the flag' style games quickly.
-    code_samples:
+    code_samples: []
     type: BrickColor
     tags: []
     deprecation_message: |
@@ -56,18 +55,18 @@ events:
 
       The `Class.Flag` and `Class.FlagStand` objects were created to allow
       developers to make 'capture the flag' style games quickly.
-    code_samples:
+    code_samples: []
     parameters:
       - name: player
         type: Instance
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: |
       This event was a part of the now deprecated `Class.Flag` service. It
       should not be used in new work.
     security: None
-    thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 callbacks: []

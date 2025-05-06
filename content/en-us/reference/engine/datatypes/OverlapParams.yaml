@@ -119,7 +119,7 @@ methods:
         summary: |
           An instance or an array containing instances to add.
     returns:
-      - type: void
+      - type: ()
         summary: ''
     code_samples: []
     tags: []
