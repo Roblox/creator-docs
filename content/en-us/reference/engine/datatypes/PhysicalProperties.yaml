@@ -113,7 +113,7 @@ properties:
       `Class.AudioEmitter|AudioEmitters`. When using acoustic simulation,
       surfaces with higher absorption will result in less reverb than surfaces
       with lower absorption.
-      
+
       Note that this does not affect the degree to which audio transmits
       **through** surfaces; for that, see
       `Datatype.PhysicalProperties.Density|Density`.
@@ -129,7 +129,8 @@ properties:
       part is, the more force it takes to accelerate it. Acceptable range is
       `0.01` to `100.0` and values outside this range will be clamped.
 
-      When using acoustic simulation, parts with higher density will muffle occluded `Class.AudioEmitter|AudioEmitters` more.
+      When using acoustic simulation, parts with higher density will muffle
+      occluded `Class.AudioEmitter|AudioEmitters` more.
     code_samples: []
     tags: []
     deprecation_message: ''

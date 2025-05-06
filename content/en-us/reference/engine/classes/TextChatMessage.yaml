@@ -77,9 +77,9 @@ properties:
       `Class.TextChatMessage`.
     description: |
       A general purpose field for storing miscellaneous data about the
-      `TextChatMessage`. The second argument of
-      `Class.TextChannel:SendAsync()` and
-      `Class.TextChannel:DisplaySystemMessage()` is used to populate this field.
+      `TextChatMessage`. The second argument of `Class.TextChannel:SendAsync()`
+      and `Class.TextChannel:DisplaySystemMessage()` is used to populate this
+      field.
 
       Use this field to apply additional formatting for special messages within
       `Class.TextChatService.OnIncomingMessage` and
@@ -111,7 +111,8 @@ properties:
       end
       ```
 
-      As follows is a reference of the default system messages emitted by the chat system:
+      As follows is a reference of the default system messages emitted by the
+      chat system:
 
       <table size="small">
       <thead>

@@ -113,7 +113,7 @@ properties:
 
       `Class.AudioListener|AudioListeners` and
       `Class.AudioEmitter|AudioEmitters` which disagree on the necessary level
-      of detail will use the less-detailed option. 
+      of detail will use the less-detailed option.
     code_samples: []
     type: AudioSimulationFidelity
     tags: []
@@ -122,7 +122,7 @@ properties:
       read: None
       write: None
     thread_safety: ReadSafe
-    category: Listening
+    category: Simulation
     serialization:
       can_load: true
       can_save: true

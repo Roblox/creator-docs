@@ -11,17 +11,17 @@ code_samples:
 tags: []
 deprecation_message: ''
 items:
-  - name: Automatic
-    summary: |
-      The audio engine simulates transmission, diffraction, and reflections at a
-      level of detail suitable to most devices.
-    value: 0
-    tags: []
-    deprecation_message: ''
   - name: None
     summary: |
       No acoustic simulation occurs; only direction and distance are taken into
       account.
     value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Automatic
+    summary: |
+      The audio engine simulates transmission, diffraction, and reflections at a
+      level of detail suitable to most devices.
+    value: 1
     tags: []
     deprecation_message: ''

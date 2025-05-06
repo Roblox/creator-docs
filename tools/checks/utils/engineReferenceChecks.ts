@@ -1,4 +1,4 @@
-import Ajv from 'ajv';
+import { Ajv } from 'ajv';
 import { readFileSync } from 'fs';
 import { parse, YAMLParseError } from 'yaml';
 
@@ -9,7 +9,7 @@ import { getOldFile } from './git.js';
 import { createNewPullRequestComment, requiredCheckMessage } from './github.js';
 import { capitalizeFirstLetter, Emoji } from './utils.js';
 
-const ajv = new Ajv.default({ strict: false });
+const ajv = new Ajv({ strict: false });
 
 const schemaPathMap: Record<string, string> = {
   classes: `${repositoryRoot}/tools/schemas/engine/classes.json`,
@@ -103,7 +103,7 @@ ${validationErrors}`;
 \`\`\`json
 ${validationErrors}
 \`\`\`
-  
+
 ${requiredCheckMessage}`;
 
     createNewPullRequestComment({
@@ -129,7 +129,7 @@ export const validateNamesArePrefixed = ({
   contentData: any;
   filePath: string;
 }) => {
-  if (engineApiType === "enums" || engineApiType === "globals") {
+  if (engineApiType === 'enums' || engineApiType === 'globals') {
     // Enums and globals don't use the prefixed name format
     return;
   }
@@ -138,7 +138,6 @@ export const validateNamesArePrefixed = ({
   if (!expectedPrefix) {
     return;
   }
-
 
   const commentLines: string[] = [];
 
@@ -180,7 +179,9 @@ export const validateNamesArePrefixed = ({
   }
 
   if (commentLines.length > 0) {
-    const commentBody = `Issues found in ${filePath}:\n${commentLines.join('\n')}\n\n${requiredCheckMessage}`;
+    const commentBody = `Issues found in ${filePath}:\n${commentLines.join(
+      '\n'
+    )}\n\n${requiredCheckMessage}`;
     createNewPullRequestComment({
       body: commentBody,
       commit_id: config.commitHash,

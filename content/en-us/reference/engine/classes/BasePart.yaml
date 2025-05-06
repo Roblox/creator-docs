@@ -264,7 +264,8 @@ properties:
       with audio simulation, similar to `Class.BasePart.CastShadow|CastShadow`
       for lighting.
 
-       When disabled, audio passes through the part; it is not occluded or reflected.
+      When disabled, audio passes through the part; it is not occluded or
+      reflected.
     code_samples: []
     type: boolean
     tags: []
