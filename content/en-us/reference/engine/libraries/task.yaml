@@ -28,7 +28,7 @@ functions:
       execution phase. If the calling script is currently running in a parallel
       execution phase, then the spawned function or thread is resumed in the
       current parallel execution phase. For more information, see [Parallel
-      Luau](../../../scripting/multithreading.md).
+      Luau](https://create.roblox.com/docs/scripting/multithreading).
     parameters:
       - name: functionOrThread
         type: function | thread
@@ -64,7 +64,7 @@ functions:
       phase. If the calling script is currently running in a parallel execution
       phase, then the deferred function or thread is resumed in a parallel
       execution phase. For more information, see [Parallel
-      Luau](../../../scripting/multithreading.md).
+      Luau](https://create.roblox.com/docs/scripting/multithreading).
     parameters:
       - name: functionOrThread
         type: function | thread
@@ -108,7 +108,7 @@ functions:
       phase. If the calling script is currently running in a parallel execution
       phase, then the delayed function or thread is resumed in a parallel
       execution phase. For more information, see [Parallel
-      Luau](../../../scripting/multithreading.md).
+      Luau](https://create.roblox.com/docs/scripting/multithreading).
     parameters:
       - name: duration
         type: number
@@ -149,7 +149,7 @@ functions:
       was required by a script that is a descendant of an `Class.Actor`.
 
       For more information, see [Parallel
-      Luau](../../../scripting/multithreading.md).
+      Luau](https://create.roblox.com/docs/scripting/multithreading).
     parameters:
     returns:
       - type: ()
@@ -173,7 +173,7 @@ functions:
       required by a script that is a descendant of an `Class.Actor`.
 
       For more information, see [Parallel
-      Luau](../../../scripting/multithreading.md).
+      Luau](https://create.roblox.com/docs/scripting/multithreading).
     parameters:
     returns:
       - type: ()
@@ -202,7 +202,7 @@ functions:
       then the script is resumed in a serial execution phase. If the calling
       script is currently running in a parallel execution phase, then the script
       is resumed in a parallel execution phase. For more information, see
-      [Parallel Luau](../../../scripting/multithreading.md).
+      [Parallel Luau](https://create.roblox.com/docs/scripting/multithreading).
     parameters:
       - name: duration
         type: number
