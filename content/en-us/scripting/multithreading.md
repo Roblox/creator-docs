@@ -33,7 +33,7 @@ For most situations, you shouldn't put an actor as a child of another actor in t
 
 ### Desynchronize threads
 
-Though putting scripts under actors grants them the capability for parallel execution, by default the code still runs on the single thread serially, which doesn't improve the runtime performance. You need to call the `Library.task.desynchronize()`, a yieldable function that suspends the execution of the current coroutine for running code in parallel and resumes it at the next parallel execution opportunity. To switch a script back to serial execution, call `Library.task.synchronize()`.
+Though putting scripts under actors grants them the capability for parallel execution, by default the code still runs on the single thread serially, which doesn't improve the runtime performance. You need to call `Library.task.desynchronize()`, a yieldable function that suspends the execution of the current coroutine for running code in parallel and resumes it at the next parallel execution opportunity. To switch a script back to serial execution, call `Library.task.synchronize()`.
 
 Alternatively, you can use `Datatype.RBXScriptSignal:ConnectParallel()` method when you want to schedule a signal callback to immediately run your code in parallel upon triggering. You don't need to call `Library.task.desynchronize()` inside the signal callback.
 
