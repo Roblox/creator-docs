@@ -119,11 +119,11 @@ properties:
     type: AudioSimulationFidelity
     tags: []
     deprecation_message: ''
-    security: 
+    security:
       read: None
       write: None
     thread_safety: ReadSafe
-    category: Emission
+    category: Simulation
     serialization:
       can_load: true
       can_save: true

@@ -16,11 +16,11 @@ description: |
   necessary; for example, you might want to create an `EditableMesh` just to
   raycast without ever displaying it.
 
-  An `EditableMesh` is displayed when it's linked to a new
-  `Class.MeshPart`, through `Class.AssetService:CreateMeshPartAsync()`. You can
-  create more `Class.MeshPart` instances that reference the same
-  `EditableMesh` `Datatype.Content`, or link to an existing
-  `Class.MeshPart` through `Class.MeshPart:ApplyMesh()`.
+  An `EditableMesh` is displayed when it's linked to a new `Class.MeshPart`,
+  through `Class.AssetService:CreateMeshPartAsync()`. You can create more
+  `Class.MeshPart` instances that reference the same `EditableMesh`
+  `Datatype.Content`, or link to an existing `Class.MeshPart` through
+  `Class.MeshPart:ApplyMesh()`.
 
   To recalculate collision and fluid geometry after editing, you can again call
   `Class.AssetService:CreateMeshPartAsync()` and `Class.MeshPart:ApplyMesh()` to
@@ -34,11 +34,11 @@ description: |
 
   For security purposes, using `EditableMesh` fails by default for published
   experiences. To enable usage, `EditableMesh`, you must be 13+ age verified and
-  ID verified. After you are verified, open Studio's [Game
-  Settings](../../../studio/game-settings.md), select **Security**, and enable
-  the **Allow&nbsp;Mesh&nbsp;&&nbsp;Image&nbsp;APIs** toggle. Remember to review
-  the [Terms of
-  Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use#creators-restrictions-on-use)
+  ID verified. After you are verified, open Studio's
+  [Game Settings](../../../studio/game-settings.md), select **Security**, and
+  enable the **Allow&nbsp;Mesh&nbsp;&&nbsp;Image&nbsp;APIs** toggle. Remember to
+  review the
+  [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use#creators-restrictions-on-use)
   before enabling the toggle.
 
   ##### Permissions
@@ -148,9 +148,8 @@ description: |
 
   ##### FACS Poses
 
-  Animatable heads use the Facial Action Coding System (FACS). See the [FACS
-  poses
-  reference](../../../art/characters/facial-animation/facs-poses-reference.md)
+  Animatable heads use the Facial Action Coding System (FACS). See the
+  [FACS poses reference](../../../art/characters/facial-animation/facs-poses-reference.md)
   for helpful information when using
   `Class.EditableMesh:GetFacsPoses()|GetFacsPoses()` and similar methods.
 
@@ -163,8 +162,7 @@ description: |
   These FACS poses are blended together during animation. Sometimes, the
   blending of the base poses produces poor results. In those cases, you can
   override the blending of specific combinations of base poses with a
-  [corrective
-  pose](../../../art/characters/facial-animation/create-basic-heads.md#combination-poses)
+  [corrective pose](../../../art/characters/facial-animation/create-basic-heads.md#combination-poses)
   that is more pleasing. A corrective pose is specified by 2 or 3
   `Enum.FacsActionUnit` values. Like a base FACS pose, for a corrective pose,
   virtual bones can each have a `Datatype.CFrame` that transforms the bones'
@@ -235,11 +233,13 @@ methods:
         summary: |
           Options table containing bone parameters:
 
-          - `Name` — A string that specifies the bone name. Note that
-          all bone names in a mesh must be unique.
-          - `ParentId` — Optional bone ID of the new bone's parent. 
-          - `CFrame` — Initial `Datatype.CFrame` of the bone in the bind pose of the mesh, in the mesh's local space.
-          - `Virtual` — Boolean that specifies whether this bone is virtual. Virtual bones can only be bound to a `Class.FaceControls` instance.
+          - `Name` — A string that specifies the bone name. Note that all bone
+            names in a mesh must be unique.
+          - `ParentId` — Optional bone ID of the new bone's parent.
+          - `CFrame` — Initial `Datatype.CFrame` of the bone in the bind pose of
+            the mesh, in the mesh's local space.
+          - `Virtual` — Boolean that specifies whether this bone is virtual.
+            Virtual bones can only be bound to a `Class.FaceControls` instance.
     returns:
       - type: int64
         summary: |
@@ -543,10 +543,11 @@ methods:
     writeCapabilities: []
   - name: EditableMesh:GetBoneCFrame
     summary: |
-      Returns the initial `Datatype.CFrame` of the bone in the bind pose of the mesh.
+      Returns the initial `Datatype.CFrame` of the bone in the bind pose of the
+      mesh.
     description: |
-      Returns the initial `Datatype.CFrame` of the bone in the bind pose of the mesh, 
-      in the mesh's local space.
+      Returns the initial `Datatype.CFrame` of the bone in the bind pose of the
+      mesh, in the mesh's local space.
     code_samples: []
     parameters:
       - name: boneId
@@ -934,11 +935,13 @@ methods:
         type: Array
         default: ''
         summary: |
-          Array or 2 or 3 `Enum.FacsActionUnit` values that specify a corrective pose.
+          Array or 2 or 3 `Enum.FacsActionUnit` values that specify a corrective
+          pose.
     returns:
       - type: Tuple
         summary: |
-          Array of bone IDs and corresponding array of bone `Datatype.CFrame|CFrames`.
+          Array of bone IDs and corresponding array of bone
+          `Datatype.CFrame|CFrames`.
     tags: []
     deprecation_message: ''
     security: None
@@ -949,13 +952,15 @@ methods:
     summary: |
       Returns all FACS corrective poses that are in use.
     description: |
-      Returns all FACS corrective poses that are in use. Each corrective pose is specified by 2 or 3 `Enum.FacsActionUnit` values.
+      Returns all FACS corrective poses that are in use. Each corrective pose is
+      specified by 2 or 3 `Enum.FacsActionUnit` values.
     code_samples: []
     parameters: []
     returns:
       - type: Array
         summary: |
-          Array of corrective poses. Each corrective pose is specified by a small array of 2 or 3 `Enum.FacsActionUnit` values.
+          Array of corrective poses. Each corrective pose is specified by a
+          small array of 2 or 3 `Enum.FacsActionUnit` values.
     tags: []
     deprecation_message: ''
     security: None
@@ -999,7 +1004,8 @@ methods:
     returns:
       - type: Array
         summary: |
-          Array of `Enum.FacsActionUnit`, one for each FACS action unit that has a pose defined.
+          Array of `Enum.FacsActionUnit`, one for each FACS action unit that has
+          a pose defined.
     tags: []
     deprecation_message: ''
     security: None
@@ -1125,9 +1131,11 @@ methods:
     writeCapabilities: []
   - name: EditableMesh:GetVertexBoneWeights
     summary: |
-      Returns skinning blend weights for each bone that is associated with the vertex.
+      Returns skinning blend weights for each bone that is associated with the
+      vertex.
     description: |
-      Returns skinning blend weights for each bone that is associated with the vertex.
+      Returns skinning blend weights for each bone that is associated with the
+      vertex.
     code_samples: []
     parameters:
       - name: vertexId
@@ -1138,7 +1146,8 @@ methods:
     returns:
       - type: Array
         summary: |
-          Skinning blend weights for each bone that is associated with the vertex.
+          Skinning blend weights for each bone that is associated with the
+          vertex.
     tags: []
     deprecation_message: ''
     security: None
@@ -1574,7 +1583,8 @@ methods:
     summary: |
       Set the initial `Datatype.CFrame` for a bone in the mesh's bind pose.
     description: |
-      Set the initial `Datatype.CFrame` for a bone in the mesh's bind pose, in the mesh's local space.
+      Set the initial `Datatype.CFrame` for a bone in the mesh's bind pose, in
+      the mesh's local space.
     code_samples: []
     parameters:
       - name: boneId
@@ -1586,7 +1596,8 @@ methods:
         type: CFrame
         default: ''
         summary: |
-          Initial `Datatype.CFrame` for the bone in the mesh's bind pose, in the mesh's local space.
+          Initial `Datatype.CFrame` for the bone in the mesh's bind pose, in the
+          mesh's local space.
     returns:
       - type: ()
         summary: ''
@@ -1838,9 +1849,11 @@ methods:
     writeCapabilities: []
   - name: EditableMesh:SetFacsBonePose
     summary: |
-      Set `Datatype.CFrame` for an individual bone in a specific FACS action unit.
+      Set `Datatype.CFrame` for an individual bone in a specific FACS action
+      unit.
     description: |
-      Set `Datatype.CFrame` for an individual bone in a specific FACS action unit.
+      Set `Datatype.CFrame` for an individual bone in a specific FACS action
+      unit.
     code_samples: []
     parameters:
       - name: action
@@ -1881,7 +1894,8 @@ methods:
         type: Array
         default: ''
         summary: |
-          Array or 2 or 3 `Enum.FacsActionUnit` values to apply as a corrective pose.
+          Array or 2 or 3 `Enum.FacsActionUnit` values to apply as a corrective
+          pose.
       - name: boneIds
         type: Array
         default: ''

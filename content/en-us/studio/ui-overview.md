@@ -303,7 +303,7 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 		<tr>
       <td>[Studio Settings](./setup.md#customization)</td>
       <td>**File** menu</td>
-			<td>Studio application&nbsp;⟩ **Studio Settings**</td>
+			<td>Windows: **File** menu&nbsp;⟩ **Studio Settings**<br />macOS: Studio application&nbsp;⟩ **Studio Settings**</td>
     </tr>
 		<tr>
       <td>Beta Features</td>

@@ -1,7 +1,8 @@
 name: task
 type: library
 summary: |
-  Allows for functions and threads to be coordinated with the engine's scheduler.
+  Allows for functions and threads to be coordinated with the engine's
+  scheduler.
 description: |
   The **task** library allows for functions and threads to be scheduled with the
   engine's scheduler.
@@ -27,8 +28,8 @@ functions:
       then the spawned function or thread is resumed in the current serial
       execution phase. If the calling script is currently running in a parallel
       execution phase, then the spawned function or thread is resumed in the
-      current parallel execution phase. For more information, see [Parallel
-      Luau](https://create.roblox.com/docs/scripting/multithreading).
+      current parallel execution phase. For more information, see
+      [Parallel Luau](../../../scripting/multithreading.md).
     parameters:
       - name: functionOrThread
         type: function | thread
@@ -63,8 +64,8 @@ functions:
       then the deferred function or thread is resumed in a serial execution
       phase. If the calling script is currently running in a parallel execution
       phase, then the deferred function or thread is resumed in a parallel
-      execution phase. For more information, see [Parallel
-      Luau](https://create.roblox.com/docs/scripting/multithreading).
+      execution phase. For more information, see
+      [Parallel Luau](../../../scripting/multithreading.md).
     parameters:
       - name: functionOrThread
         type: function | thread
@@ -107,8 +108,8 @@ functions:
       then the delayed function or thread is resumed in a serial execution
       phase. If the calling script is currently running in a parallel execution
       phase, then the delayed function or thread is resumed in a parallel
-      execution phase. For more information, see [Parallel
-      Luau](https://create.roblox.com/docs/scripting/multithreading).
+      execution phase. For more information, see
+      [Parallel Luau](../../../scripting/multithreading.md).
     parameters:
       - name: duration
         type: number
@@ -148,8 +149,8 @@ functions:
       `desynchronize()` as long as the instantiation of the module calling it
       was required by a script that is a descendant of an `Class.Actor`.
 
-      For more information, see [Parallel
-      Luau](https://create.roblox.com/docs/scripting/multithreading).
+      For more information, see
+      [Parallel Luau](../../../scripting/multithreading.md).
     parameters:
     returns:
       - type: ()
@@ -172,8 +173,8 @@ functions:
       `synchronize()` as long as the instantiation of the module calling it was
       required by a script that is a descendant of an `Class.Actor`.
 
-      For more information, see [Parallel
-      Luau](https://create.roblox.com/docs/scripting/multithreading).
+      For more information, see
+      [Parallel Luau](../../../scripting/multithreading.md).
     parameters:
     returns:
       - type: ()
