@@ -203,7 +203,7 @@ functions:
       then the script is resumed in a serial execution phase. If the calling
       script is currently running in a parallel execution phase, then the script
       is resumed in a parallel execution phase. For more information, see
-      [Parallel Luau](https://create.roblox.com/docs/scripting/multithreading).
+      [Parallel Luau](../../../scripting/multithreading.md).
     parameters:
       - name: duration
         type: number
