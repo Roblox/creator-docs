@@ -71,3 +71,13 @@ items:
     value: 12
     tags: []
     deprecation_message: ''
+  - name: ConnectionClosed
+    summary: ''
+    value: 13
+    tags: []
+    deprecation_message: ''
+  - name: ServerProtocolError
+    summary: ''
+    value: 14
+    tags: []
+    deprecation_message: ''

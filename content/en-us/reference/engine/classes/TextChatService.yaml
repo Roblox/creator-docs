@@ -31,9 +31,10 @@ properties:
     summary: |
       Determines whether a user has chat translation enabled.
     description: |
-      Determines whether a user has chat translation enabled. If true,
-      messages the user receives will be translated into their preferred language.
-      Use <code>Class.TextChatMessage.Translation</code> to get the message translation.
+      Determines whether a user has chat translation enabled. If true, messages
+      the user receives will be translated into their preferred language. Use
+      <code>Class.TextChatMessage.Translation</code> to get the message
+      translation.
     code_samples: []
     type: boolean
     tags:

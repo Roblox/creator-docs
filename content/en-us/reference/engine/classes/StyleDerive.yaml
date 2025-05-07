@@ -9,6 +9,23 @@ inherits:
 tags: []
 deprecation_message: ''
 properties:
+  - name: StyleDerive.Priority
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: StyleDerive.StyleSheet
     summary: ''
     description: ''

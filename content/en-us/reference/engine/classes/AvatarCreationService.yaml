@@ -169,29 +169,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: AvatarCreationService:AutoSetupAvatarAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: player
-        type: Player
-        default: ''
-        summary: ''
-      - name: model
-        type: Model
-        default: ''
-        summary: ''
-    returns:
-      - type: string
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: AvatarCreationService:GenerateAvatar2DPreviewAsync
     summary: ''
     description: ''

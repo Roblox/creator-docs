@@ -34,9 +34,9 @@ description: |
 
   For security purposes, using `EditableMesh` fails by default for published
   experiences. To enable usage, you must be 13+ age verified and ID verified.
-  After you are verified, open Studio's [Game
-  Settings](../../../studio/game-settings.md), select **Security**, and enable
-  the **Allow Mesh &#47; Image APIs** toggle.
+  After you are verified, open Studio's
+  [Game Settings](../../../studio/game-settings.md), select **Security**, and
+  enable the **Allow Mesh &#47; Image APIs** toggle.
 
   ##### Permissions
 
@@ -204,7 +204,8 @@ properties:
     description: ''
     code_samples: []
     type: boolean
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security:
       read: None
@@ -807,31 +808,6 @@ methods:
           List of stable UV IDs.
     tags:
       - CustomLuaState
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetVertexBoneWeights
-    summary: |
-      Returns skinning blend weights for each bone that is associated with the
-      vertex.
-    description: |
-      Returns skinning blend weights for each bone that is associated with the
-      vertex.
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default: ''
-        summary: |
-          Vertex ID for which to get the associated bone weights.
-    returns:
-      - type: Array
-        summary: |
-          Skinning blend weights for each bone that is associated with the
-          vertex.
-    tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
