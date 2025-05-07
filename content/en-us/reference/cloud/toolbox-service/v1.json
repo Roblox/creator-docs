@@ -293,6 +293,9 @@
             }
           }
         },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": true
+        },
         "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
@@ -736,6 +739,44 @@
           "ImageSearchDisabled"
         ]
       },
+      "InstanceCounts": {
+        "type": "object",
+        "properties": {
+          "script": {
+            "type": "integer",
+            "description": "The number of Script instances.",
+            "format": "int32"
+          },
+          "meshPart": {
+            "type": "integer",
+            "description": "The number of MeshPart instances.",
+            "format": "int32"
+          },
+          "animation": {
+            "type": "integer",
+            "description": "The number of Animation instances.",
+            "format": "int32"
+          },
+          "decal": {
+            "type": "integer",
+            "description": "The number of Decal instances.",
+            "format": "int32"
+          },
+          "audio": {
+            "type": "integer",
+            "description": "The number of Audio instances.",
+            "format": "int32"
+          },
+          "tool": {
+            "type": "integer",
+            "description": "The number of Tool instances.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents the count of various instance types within an asset.\r\nSee: https://create.roblox.com/docs/reference/engine/classes/Instance",
+        "nullable": true
+      },
       "LibraryQueryOptions": {
         "type": "object",
         "properties": {
@@ -882,6 +923,24 @@
             "type": "integer",
             "description": "The number of scripts that are in the model.",
             "format": "int32"
+          },
+          "objectMeshSummary": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ObjectMeshSummary"
+              }
+            ],
+            "description": "The summary of the meshes within the model, if they exist.",
+            "nullable": true
+          },
+          "instanceCounts": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/InstanceCounts"
+              }
+            ],
+            "description": "The number of studio Instance types in the model.\r\nSee: https://create.roblox.com/docs/reference/engine/classes/Instance\r\nThese are broken down into specific types, such as MeshPart, Part, Script,\r\nTool, Animation, etc.",
+            "nullable": true
           }
         },
         "additionalProperties": false,
@@ -913,6 +972,24 @@
           }
         },
         "additionalProperties": false,
+        "nullable": true
+      },
+      "ObjectMeshSummary": {
+        "type": "object",
+        "properties": {
+          "triangles": {
+            "type": "integer",
+            "description": "The total number of triangles in the object's mesh.",
+            "format": "int32"
+          },
+          "vertices": {
+            "type": "integer",
+            "description": "The total number of vertices in the object's mesh.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Provides a summary of the mesh characteristics of an object, such as triangle and vertex counts.",
         "nullable": true
       },
       "Plugin": {

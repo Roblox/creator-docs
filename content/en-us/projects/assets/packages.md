@@ -125,35 +125,16 @@ Automatic updating does not apply to [modified](#modifying-packages) package cop
 
 ## Share and access levels
 
-If desired, you can share packages with friends or grant access to specific user roles within your group.
+You can grant permission to friends, experiences, groups, or specific group user roles so that they can freely use your packages in their creations. For more information on asset access, see [Asset privacy](privacy.md).
+
+<Tabs>
+  <TabItem key = "1" label="To collaborators">
+
+To change package permissions for a collaborator, such as a friend or group:
 
 1. In the **Explorer** window, **Toolbox**, or **Asset Manager**, right-click the desired package and select **Package Details**.
 1. In the **Asset Configuration** window, select **Permissions**.
-
-   - For a **group-owned** package, expand the roles tree. Then choose a permission level for each role. Selection boxes that are disabled indicate that the permission is already [configured](../../projects/groups.md#roles-and-permissions) for that role and cannot be changed from this window.
-
-      <img src="../../assets/studio/packages/Permissions-Group.png" alt="A close up view of some settings in the pop-up window. The arrow icon next to the group icon and the member Edit dropdown menu are highlighted." width="700" />
-
-     <table>
-     <thead>
-     	<tr>
-     	<th>Permission</th>
-     	<th>Description</th>
-     	</tr>
-     </thead>
-     <tbody>
-     	<tr>
-     	<td>**Edit**</td>
-     	<td>Members of the role can able to use, view, and edit the current and previous package versions, including publishing changes to it. Granting edit access to a role from this window only grants access to the **specific package**.</td>
-     	</tr>
-     	<tr>
-     	<td>**No Access**</td>
-     	<td>Members of the role do not have access to any new versions of the package, although they retain access to the current version inserted into the place.</td>
-     	</tr>
-     </tbody>
-     </table>
-
-   - For a **user-owned** package, search for friends through the search field, click their username, and choose a permission level.
+1. Using the search bar, input and select a collaborator that you want to grant permission to use your package, then choose a permission level.
 
      <table>
      <thead>
@@ -165,14 +146,37 @@ If desired, you can share packages with friends or grant access to specific user
      <tbody>
      	<tr>
      	<td>**Use & View**</td>
-     	<td>The user can use and view (but not edit) the current and previous package versions. Once you provide a user with this ability, you cannot revoke access to a copy they already inserted into their experience; revoking access prevents reinsertion or package updates, but package copies in their data model remain intact.</td>
+     	<td>The collaborator can use and view (but not edit) the current and previous package versions. Once you provide a collaborator with this ability, you cannot revoke access to a copy they already inserted into their experience; revoking access prevents reinsertion or package updates, but package copies in their data model remain intact.</td>
      	</tr>
      	<tr>
      	<td>**Edit**</td>
-     	<td>The user can use, view, and edit the current and previous package versions, including publishing changes to it.</td>
+     	<td>The collaborator can use, view, and edit the current and previous package versions, including publishing changes to it.</td>
      	</tr>
      </tbody>
      </table>
+
+  </TabItem>
+  <TabItem key = "2" label="To experiences">
+
+To grant package access to an experience, the experience must be editable to either you or a group that you belong to in which you have the **Create and edit group experiences** role permission.
+
+To change package permissions for an experience:
+
+1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+1. In the upper tab bar, select **Development Items**, then click **Models & Packages**.
+1. Select the package you want your experience to have permission to use. The package's **Configure** page displays.
+1. In the package's left-hand navigation, select **Permissions**. The package's **Permissions** page displays.
+1. From the **Experiences** tab, click the **Add experiences** button.
+1. Type the experience's universeID into the **Enter Universe IDs** input, then click the **Add** button. The experience displays beneath the input with its access visible.
+
+   <Alert severity="info">
+   If you want to give multiple experiences permission to use your restricted access at the same time, you can enter multiple universeIDs as long as you separate them with a comma.
+   </Alert>
+
+1. Click the **Done** button to finalize your package asset access permissions.
+
+  </TabItem>
+</Tabs>
 
 ## Modify Packages
 

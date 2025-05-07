@@ -61,7 +61,10 @@ import {
 } from './utils/console.js';
 import { checkMarkdownLint } from './utils/markdownlint.js';
 import { checkEngineReferenceContent } from './utils/engineReferenceChecks.js';
-import { containsOpenApiSchema, validateOpenApiSchema } from './utils/openApiSchemaChecks.js';
+import {
+  containsOpenApiSchema,
+  validateOpenApiSchema,
+} from './utils/openApiSchemaChecks.js';
 
 let filesToCheck: string[] = [];
 let labelPullRequestAsInappropriate = false;
@@ -107,7 +110,11 @@ const getFilesToCheck = async () => {
   } else if (config.files === FileOption.Changed) {
     filesToCheck = await getFilesChangedComparedToBaseByExtension({
       baseBranch: config.baseBranch,
-      fileExtensions: [FileExtension.MARKDOWN, FileExtension.YAML, FileExtension.JSON],
+      fileExtensions: [
+        FileExtension.MARKDOWN,
+        FileExtension.YAML,
+        FileExtension.JSON,
+      ],
     });
   } else if (config.files === FileOption.LastCommit) {
     filesToCheck = await getFilesChangedInLastCommitByExtensions([
@@ -121,7 +128,12 @@ const getFilesToCheck = async () => {
       return isLocaleFile(filePath, Locale.EN_US);
     });
   }
-  const prefixesToIgnore = ['.github/', 'content/common/navigation/', 'tools/'];
+  const prefixesToIgnore = [
+    '.github/',
+    'content/common/navigation/',
+    'tools/',
+    'content/en-us/reference/engine/code_samples/',
+  ];
   filesToCheck = filesToCheck.filter((filePath) => {
     return !prefixesToIgnore.some((prefix) => filePath.startsWith(prefix));
   });
@@ -245,12 +257,12 @@ try {
           filePath: filePathFromRepoRoot,
         });
       }
-      
+
       // The remaining checks are not applicable to JSON files
       console.log('::endgroup::');
       continue;
     }
-    
+
     if (
       config.checkLocalizedContent &&
       !isLocaleFile(filePathFromRepoRoot, Locale.EN_US) // skip for English

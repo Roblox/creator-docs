@@ -82,19 +82,19 @@ The 3D Importer provides the following settings for all meshes:
   </tr>
   <tr>
     <td>Insert In Workspace</td>
-    <td>If enabled, inserts the model into the `Class.Workspace` as well as your **Toolbox** and **Asset Manager** inventory. By default, this is **enabled**.<br /><br />If disabled, only adds the model to your inventory.</td>
+    <td>If enabled, the 3D Importer inserts the model into the `Class.Workspace` as well as your **Toolbox** and **Asset Manager** inventory. If importing from a saved or published experience, this setting also grants permission to the experience to use the restricted asset. By default, this is **enabled**. <br /><br />If disabled, this setting only adds the model to your inventory and does **not** grant the experience permission to use the asset.</td>
   </tr>
   <tr>
     <td>Insert Using Scene Position</td>
-    <td>If enabled, uses the current scene position when inserting the model into the workspace. By default, this is **disabled**.</td>
+    <td>If enabled, the 3D Importer uses the current scene position when inserting the model into the workspace. By default, this is **disabled**.</td>
   </tr>
   <tr>
     <td>Set Pivot to Scene Origin</td>
-    <td>If enabled, sets the pivot point of the entire model to the scene origin. By default, this is **enabled**.</td>
+    <td>If enabled, the 3D Importer sets the pivot point of the entire model to the scene origin. By default, this is **enabled**.</td>
   </tr>
   <tr>
     <td>Anchored</td>
-    <td>If enabled, sets the Anchored property to True on all the imported MeshParts. This is disabled for meshes with rig data / avatars. By default, this is **disabled**.</td>
+    <td>If enabled, the 3D Importer sets the Anchored property to True on all the imported MeshParts. This is disabled for meshes with rig data / avatars. By default, this is **disabled**.</td>
   </tr>
   <tr>
     <td>Uses Cage</td>

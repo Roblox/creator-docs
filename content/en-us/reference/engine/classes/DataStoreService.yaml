@@ -21,36 +21,7 @@ tags:
   - Service
   - NotReplicated
 deprecation_message: ''
-properties:
-  - name: DataStoreService.AutomaticRetry
-    summary: |
-      Sets whether data store functions should automatically retry or not.
-      DataStoreService does not respect this property because automatic retry
-      has been disabled due to technical reasons. Therefore, you must implement
-      systems for retrying operations yourself.
-    description: |
-      Sets whether data store functions should automatically retry or not.
-
-      DataStoreService does not respect this property because automatic retry
-      has been disabled due to technical reasons. Therefore, you must implement
-      systems for retrying operations yourself. It is possible that automatic
-      retry will be enabled again in the future.
-    code_samples: []
-    type: boolean
-    tags:
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: LocalUserSecurity
-      write: LocalUserSecurity
-    thread_safety: ReadSafe
-    category: Behavior
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - DataStore
-    writeCapabilities: []
+properties: []
 methods:
   - name: DataStoreService:GetDataStore
     summary: |

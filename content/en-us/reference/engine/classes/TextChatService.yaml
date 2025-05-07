@@ -29,11 +29,11 @@ deprecation_message: ''
 properties:
   - name: TextChatService.ChatTranslationEnabled
     summary: |
-      Determines if chat translation is enabled.
+      Determines whether a user has chat translation enabled.
     description: |
-      Determines if chat translation is enabled. If true, a system message will
-      notify player's when their first join that chat messages may be translated
-      into the player's preferred language.
+      Determines whether a user has chat translation enabled. If true,
+      messages the user receives will be translated into their preferred language.
+      Use <code>Class.TextChatMessage.Translation</code> to get the message translation.
     code_samples: []
     type: boolean
     tags:

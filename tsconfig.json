@@ -13,7 +13,7 @@
     "strict": true,
 
     /* Module resolution */
-    // "allowImportingTsExtensions": true,
+    "allowImportingTsExtensions": true,
     "allowJs": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
