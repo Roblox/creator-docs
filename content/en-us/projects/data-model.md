@@ -241,7 +241,7 @@ clients, which allows you to have secure, server-side logic.
 can use this container to store objects that you want to clone and parent to the
 workspace or other containers at runtime. For example, you can store large
 objects such as maps in this container until they are needed and move them into
-the workspace only when required This lets you decrease client network traffic
+the workspace only when required. This lets you decrease client network traffic
 on initial join.
 
 <Alert severity="info">
