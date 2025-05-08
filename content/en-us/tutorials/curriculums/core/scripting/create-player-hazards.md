@@ -141,7 +141,7 @@ Players.PlayerRemoving:Connect(onPlayerRemoved)
 The code defines functions to reset coin counts during the appropriate
 lifecycle events:
 
-- `Class.Player.PlayerAdded` fires when a player joins the experience, and sets
+- `Class.Players.PlayerAdded` fires when a player joins the experience, and sets
   the coin count to `0`.
 - `Class.Player.CharacterAdded` fires when a player's character model is added
   to the world. It occurs after `Class.Player.PlayerAdded|PlayerAdded` and
