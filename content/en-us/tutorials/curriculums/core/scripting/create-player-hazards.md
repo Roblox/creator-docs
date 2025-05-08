@@ -144,7 +144,7 @@ lifecycle events:
 - `Class.Players.PlayerAdded` fires when a player joins the experience, and sets
   the coin count to `0`.
 - `Class.Player.CharacterAdded` fires when a player's character model is added
-  to the world. It occurs after `Class.Player.PlayerAdded|PlayerAdded` and
+  to the world. It occurs after `Class.Players.PlayerAdded|PlayerAdded` and
   whenever the player respawns.
 - `Class.Humanoid.Died` fires when a player dies, and sets
   the coin count to `0`. `Library.task.spawn()` creates
