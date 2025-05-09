@@ -736,9 +736,9 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 			<td>Buttons appear contextually on the left side of mezzanine bar when a breakpoint is hit</td>
     </tr>
 		<tr>
-      <td>Other scripting actions</td>
+      <td>Error handling and other scripting actions</td>
 			<td>**Script** tab</td>
-			<td><Chip label="temporarily removed" size="small" color="warning" variant="outlined" /> — See [here](./script-tab.md#other-actions) for shortcut equivalents</td>
+			<td>Application's **View** menu</td>
     </tr>
 		<tr>
       <td>Script Analysis</td>
