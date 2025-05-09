@@ -154,13 +154,13 @@ items:
   - name: GameSettingsTableItem
     value: 25
     summary: |
-      The color of items within tables in the game settings window.
+      The color of items within tables in the settings window.
     tags: []
     deprecation_message: ''
   - name: GameSettingsTooltip
     value: 26
     summary: |
-      The color of tooltips in the game settings window.
+      The color of tooltips in the settings window.
     tags: []
     deprecation_message: ''
   - name: EmulatorBar

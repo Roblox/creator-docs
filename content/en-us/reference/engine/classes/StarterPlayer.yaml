@@ -415,8 +415,8 @@ properties:
 
       If set to `Enum.DevComputerCameraMovementMode|UserChoice` then the
       player's camera movement mode will be determined by whatever the player
-      set in the game settings. Otherwise, the mode will be set based on this
-      property.
+      set in the experience's settings. Otherwise, the mode will be set based on
+      this property.
 
       See `Enum.DevComputerCameraMovementMode` for the different camera modes
       available.
@@ -489,7 +489,8 @@ properties:
 
       If set to `Enum.DevTouchCameraMovementMode|UserChoice` then the player's
       camera movement mode will be determined by whatever the player set in the
-      game settings. Otherwise, the mode will be set based on this property.
+      experience's settings. Otherwise, the mode will be set based on this
+      property.
 
       See `Enum.DevTouchCameraMovementMode` for the different camera modes
       available.
@@ -762,9 +763,8 @@ properties:
       Determines if user-owned emotes are loaded when loading avatars.
     description: |
       This property determines if user-owned emotes are loaded when loading
-      avatars. Setting this property to false disables loading. Developers can
-      set the property in Studio directly or through the
-      [Game Settings menu](../../../studio/game-settings.md).
+      avatars. Setting this property to `false` disables loading. Developers can
+      set the property in Studio directly.
 
       When emote loading is disabled, the emotes UI will still work as long as
       developers choose to use the emotes feature by adding emotes within their

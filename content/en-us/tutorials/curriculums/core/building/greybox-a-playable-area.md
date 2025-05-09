@@ -119,9 +119,9 @@ To insert a cylinder part for your first platform:
 
    <img src="../../../../assets/tutorials/block-out-a-playable-area/New-Part-As-Child-Of-Model.png" alt="Studio's Explorer window with the new Part highlighted under the Blockout_Parts model object." width="320" />
 
-1. Navigate back to the toolbar's **Home** tab, then use the **Move**, **Scale**, and **Rotate** tools to position, scale, and rotate your cylinder until it's a large, flat surface in the middle of your island. For more information on these tools, see [manipulate parts](../../../../parts/index.md#manipulate-parts).
+1. Use the **Move**, **Scale**, and **Rotate** tools to position, scale, and rotate your cylinder until it's a large, flat surface in the middle of your island. For more information on these tools, see [manipulate parts](../../../../parts/index.md#manipulate-parts).
 
-   <img src="../../../../assets/studio/general/Home-Tab-Transform-Tools.png" alt="Studio's Home tab with the Move tool highlighted." width="716" />
+   <img src="../../../../assets/studio/general/Transform-Tools.png" alt="Transform tools indicated in Studio's toolbar." width="563" />
 
    <img src="../../../../assets/tutorials/block-out-a-playable-area/First-Platform.jpg" alt="A large cylinder object partially sticking out of an island surrounded by water." width="80%" />
 

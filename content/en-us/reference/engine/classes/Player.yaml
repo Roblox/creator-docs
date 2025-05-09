@@ -470,9 +470,9 @@ properties:
       non-`Class.UserInputService.GamepadEnabled|GamepadEnabled` devices.
 
       When set to **UserChoice**, a player can choose between any control mode
-      (except **Scriptable**) in the Roblox game settings. In general, it's a
-      good idea to allow players to choose their control mode to maximize
-      accessibility.
+      (except **Scriptable**) in the experience's settings during play. In
+      general, it's a good idea to allow players to choose their control mode to
+      maximize accessibility.
 
       It's possible to create a custom control scheme by setting this property
       to **Scriptable**.
@@ -513,9 +513,9 @@ properties:
       non-`Class.UserInputService.TouchEnabled|TouchEnabled` devices.
 
       When set to **UserChoice**, a player can choose between any control mode
-      (except **Scriptable**) in the Roblox game settings. In general, it is a
-      good idea to allow players to choose their control mode to maximize
-      accessibility.
+      (except **Scriptable**) in the experience's settings during play. In
+      general, it is a good idea to allow players to choose their control mode
+      to maximize accessibility.
 
       It's possible to create a custom control scheme by setting this property
       to **Scriptable**.
@@ -543,10 +543,11 @@ properties:
       Determines if the player can toggle mouse lock.
     description: |
       This property determines if a player is able to toggle `Class.Mouse` lock
-      by pressing **Shift**. A player can disable the mouse lock switch in
-      Roblox's game settings. By default, this property is set to the value of
-      `Class.StarterPlayer.EnableMouseLockOption`. This can be set server-side
-      during run-time by using a `Class.Script`. It can not be set client-side.
+      by pressing <kbd>Shift</kbd>. A player can disable the mouse lock switch in
+      the experience's settings during play. By default, this property is set to
+      the value of `Class.StarterPlayer.EnableMouseLockOption`. This can be set
+      server-side during run-time by using a `Class.Script`. It can not be set
+      client-side.
 
       When mouse lock is enabled, the player's cursor is locked to the center of
       the screen. Moving the mouse will orbit the camera around the player's
@@ -588,9 +589,9 @@ properties:
       `Class.StarterPlayer.DevTouchCameraMovementMode`.
 
       When set to **UserChoice**, a player can choose between any control mode
-      (except **Scriptable**) in the Roblox game settings. In general, it is a
-      good idea to allow players to choose their control mode to maximize
-      accessibility.
+      (except **Scriptable**) in the experience's settings during play. In
+      general, it is a good idea to allow players to choose their control mode
+      to maximize accessibility.
 
       It's possible to create a custom control scheme by setting this property
       to **Scriptable**.
@@ -628,9 +629,9 @@ properties:
       `Class.StarterPlayer.DevTouchMovementMode`.
 
       When set to **UserChoice**, a player can choose between any control mode
-      (except **Scriptable**) in the Roblox game settings. In general, it's a
-      good idea to allow players to choose their control mode to maximize
-      accessibility.
+      (except **Scriptable**) in the experience's settings during play. In
+      general, it's a good idea to allow players to choose their control mode to
+      maximize accessibility.
 
       It's possible to create a custom control scheme by setting this property
       to **Scriptable**.

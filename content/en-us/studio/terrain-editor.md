@@ -256,7 +256,7 @@ The **Transform** tool manipulates entire [selected](#select) regions to a new p
 </figure>
 
 <Alert severity="warning">
-Before rotating a region with the visual **rotate** rings, check the [rotation snapping](../studio/model-tab.md#transform-snapping) settings in Studio's [Model](../studio/model-tab.md) tab. Disable rotation snapping entirely for free-form rotation.
+Before rotating a region with the visual **rotate** rings, check the rotation snapping setting in Studio's toolbar. Disable rotation snapping entirely for free-form rotation.
 </Alert>
 
 <Alert severity="info">

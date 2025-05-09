@@ -135,4 +135,4 @@ game.Loaded:Connect(function()
 end)
 ```
 
-For additional insight, enable **Studio Settings** > **Network** > **Print Join Size Breakdown**, which prints the top 20 instances by size and a percentage breakdown by instance type when you start the experience in Studio.
+For additional insight, enable **Print Join Size Breakdown** from the **Network** tab of [Studio Settings](../studio/setup.md#customization) to print the top 20 instances by size and a percentage breakdown by instance type when you start the experience in Studio.

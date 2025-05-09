@@ -342,11 +342,7 @@ the previous line. If the previous line starts with an incomplete block, the for
 
 ## Editor settings
 
-Many customization options are accessible via **File**&nbsp;&rang; **Studio Settings** (<kbd>Alt</kbd><kbd>S</kbd> on Windows; <kbd>⌥</kbd><kbd>S</kbd> on Mac).
-
-<img src="../assets/studio/general/Studio-Settings-Script-Editor.png" width="750" alt="A close up view of the Studio Settings window with the Script Editor tab selected." />
-
-Commonly modified options include:
+Many customization options are accessible via the **Script Editor** tab of [Studio Settings](../studio/setup.md#customization). Commonly modified options include:
 
 <table>
 <thead>

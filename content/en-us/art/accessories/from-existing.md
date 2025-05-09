@@ -255,7 +255,7 @@ To fit and generate your accessory:
 5. Using both the AFT preview window and the workspace, adjust the position, scale, and rotation of the accessory.
 
    1. Use the AFT preview window and your mannequin as an accurate preview of how your asset fits on the character. The clothing mannequin in the workspace does not accurately portray how rigid accessories attach.
-   2. In the workspace, use the **Move**, **Scale**, and **Rotate** tools in the workspace to adjust the positioning of your rigid accessory.
+   2. In the workspace, use the **Move**, **Scale**, and **Rotate** tools to adjust the positioning of your rigid accessory.
    3. If you accidentally select something else, click back into the AFT panel to reselect the accessory and resume your adjustments using the transformation tools.
 
       <video controls src="../../assets/art/accessories/creating-rigid/Fitting-Mask.mp4" width="100%"></video>
@@ -288,11 +288,8 @@ The publishing process involves three major steps:
 
 If you intend to sell the asset on the Marketplace, use the following steps to begin the validation and upload process:
 
-1. In the Explorer, right-click your accessory object and **Save to Roblox**.
-
-   <img src="../../assets/art/accessories/creating-rigid/Outliner-Save-To-Roblox.png" />
-
-2. In the Asset Configuration Window, set the **Content Type** to **Avatar Item**.
+1. In the **Explorer**, right-click your accessory object and select **Save to Roblox…** from the context menu.
+2. In the **Asset Configuration** window, set the **Content Type** to **Avatar Item**.
 3. Complete the following fields (you can adjust them later):
 
    1. **Title**: The name of your accessory.

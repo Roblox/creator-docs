@@ -41,7 +41,7 @@ Refunds are not available for users who purchase paid access in Robux.
 To enable paid access in the Creator Hub:
 
 1. Go to **Creations** and select an experience.
-2. Go to **Audience** > **Access Settings**.
+2. Go to **Audience** ⟩ **Access Settings**.
 3. Under **Payment**, select **Requires Robux** and enter the amount of Robux you want users to pay for access. The price you enter affects the amount of Robux you earn per sale.
 4. Under **Devices**, select which devices you want to enable paid access for.
 5. Click **Save Changes**.
@@ -50,7 +50,7 @@ To enable paid access in the Creator Hub:
 
 To enable paid access in Roblox Studio:
 
-1. Open [Game Settings](../../studio/game-settings.md).
+1. Open Studio's **File**&nbsp;⟩ **Game Settings** window.
 2. Under **Monetization**, click **Configure on Creator Hub**.
 3. Follow the steps to [enable paid access in the Creator Hub](#enable-paid-access-in-the-creator-hub).
 

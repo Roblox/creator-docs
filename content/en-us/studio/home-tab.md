@@ -49,24 +49,26 @@ The first section from left contains tools for copying, cutting, pasting, and du
 
 The primary transform tools include **Select**, **Move**, **Scale**, and **Rotate**. When you choose a tool, visual draggers display on the selected object in the viewport.
 
-<img src="../assets/studio/general/Home-Tab-Transform-Tools.png" width="716" alt="Transform tools indicated in Home tab" />
+<img src="../assets/studio/general/Transform-Tools.png" width="563" alt="Transform tools indicated in Studio's toolbar." />
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../assets/modeling/parts/Transform-Move-SM.png" alt="Move draggers shown on part in 3D viewport" />
+    <img src="../assets/modeling/parts/Transform-Move-SM.png" alt="Move draggers shown on part in 3D viewport." />
     <figcaption>Move</figcaption>
   </figure>
   <figure>
-    <img src="../assets/modeling/parts/Transform-Scale-SM.png" alt="Scale draggers shown on part in 3D viewport" />
+    <img src="../assets/modeling/parts/Transform-Scale-SM.png" alt="Scale draggers shown on part in 3D viewport." />
     <figcaption>Scale</figcaption>
   </figure>
   <figure>
-    <img src="../assets/modeling/parts/Transform-Rotate-SM.png" alt="Rotate draggers shown on part in 3D viewport" />
+    <img src="../assets/modeling/parts/Transform-Rotate-SM.png" alt="Rotate draggers shown on part in 3D viewport." />
     <figcaption>Rotate</figcaption>
   </figure>
 </GridContainer>
 
-Tool transform **snapping increments** are based on **studs** for moving/scaling or **degrees** for rotating, each adjustable in the toolbar's [Model](./model-tab.md) tab. While transforming, you can temporarily toggle snapping by holding the <kbd>Shift</kbd> key.
+Tool transform **snapping** increments are based on **studs** for moving/scaling or **degrees** for rotating, each adjustable in the toolbar. While transforming, you can temporarily toggle snapping by holding the <kbd>Shift</kbd> key.
+
+<img src="../assets/studio/general/Transform-Snapping.png" width="563" alt="Transform snapping tools indicated in Studio's toolbar." />
 
 <Alert severity="info">
 If the selected object and its visual draggers are not currently in view within the 3D viewport, you can press the <kbd>Tab</kbd> key to "summon" the draggers to your mouse pointer position, allowing you to transform the selected object from your current viewpoint.
@@ -113,7 +115,7 @@ The [Toolbox](../projects/assets/toolbox.md) includes all of the models, images,
 
 The **Part** button inserts a new part into the workspace. Clicking the small dropdown arrow on the button lets you select either **Block**, **Sphere**, **Wedge**, **Corner&nbsp;Wedge**, or **Cylinder**. For more information, see [Parts](../parts/index.md).
 
-<img src="../assets/studio/general/Home-Tab-Part-Tools.png" width="716" alt="Part menu indicated in Home tab" />
+<img src="../assets/studio/general/Insert-Part-Tool.png" width="300" alt="Part tool and its part type picker highlighted." />
 
 ## UI designer
 
@@ -133,7 +135,7 @@ The **Import 3D** tool allows you to import nearly any type of `.fbx` or `.obj` 
 
 Clicking the small dropdown arrow on the **Color** widget reveals a hexagonal color picker.
 
-<img src="../assets/studio/general/Home-Tab-Color-Picker.png" width="776" alt="Studio's Home tab with the Color widget's hexagonal picker." />
+<img src="../assets/studio/general/Color-Picker.png" width="373" alt="Color widget's hexagonal picker." />
 
 By default, clicking the overall **Color** button applies the chosen color to any **selected** parts. If you prefer a fill/paint workflow instead, toggle on **Color&nbsp;Action&nbsp;as&nbsp;Tool** and then click parts in the 3D viewport to apply the chosen color.
 
@@ -147,7 +149,7 @@ For alternative ways to apply custom colors, see [Coloring Parts](../parts/index
 
 Clicking the small dropdown arrow on the **Material** widget reveals a [material](../parts/materials.md) picker.
 
-<img src="../assets/studio/general/Home-Tab-Material-Picker.png" width="776" alt="Studio's Home tab with the Material widget's picker." />
+<img src="../assets/studio/general/Material-Picker.png" width="270" alt="Material widget's picker highlighted." />
 
 By default, clicking the overall **Material** button applies the chosen material to any **selected** parts. If you prefer a fill/paint workflow instead, toggle on **Material&nbsp;Action&nbsp;as&nbsp;Tool** and then click parts in the 3D viewport to apply the chosen material.
 

@@ -124,7 +124,7 @@ To apply the asset library to your platforms:
    1. Right-click **PlatformA**. A contextual menu displays.
    1. From the contextual menu, select **Copy**.
 1. In the **Platforms** folder, paste **PlatformA** into the **Level_1** model.
-1. In the toolbar's **Home** tab, use the **Move** and **Scale** tools to position and scale the model to the size of your first placeholder sea stack platform.
+1. From the toolbar, use the **Move** and **Scale** tools to position and scale the model to the size of your first placeholder sea stack platform.
 
    <img src="../../../../assets/tutorials/core-building-and-scripting/First-Platform.jpg" alt="A view of the sample laser tag experience with only the first platform visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
 
@@ -298,7 +298,7 @@ To apply the asset library to your sea stacks:
 
 1. In the **Explorer** window, navigate to the asset library and copy **SeaStackMesh**.
 1. In the **Platforms** folder, paste **SeaStackMesh** into one of your level models.
-1. In the toolbar's **Home** tab, use the **Move**, **Scale**, and **Rotate** tools to position, scale, and rotate the mesh until it is the length of your placeholder sea stack. If necessary, use more than one instance of the **SeaStackMesh** mesh.
+1. From the toolbar, use the **Move**, **Scale**, and **Rotate** tools to position, scale, and rotate the mesh until it is the length of your placeholder sea stack. If necessary, use more than one instance of the **SeaStackMesh** mesh.
 
    <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-3.jpg" alt="A view of the sample laser tag experience with all of the platforms visible with the polished assets, as well as the first sea stack. Other greybox sea stacks are transluscent in the distance." width="80%" />
 
@@ -870,7 +870,7 @@ To apply the asset library to your coins:
 
 1. In the **Explorer** window, navigate to the asset library and copy **Coin**.
 1. In the **Platforms** folder, paste **Coin** into the **Coins** folder.
-1. In the toolbar's **Home** tab, use the **Move** and **Rotate** tools to position and rotate the mesh until it's at the same configuration of first your placeholder coin.
+1. From the toolbar, use the **Move** and **Rotate** tools to position and rotate the mesh until it's at the same configuration of first your placeholder coin.
 1. Repeat this process, adding and configuring **coin** assets wherever you set your initial coin placeholder objects.
 
    <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/Coins-Final.jpg" alt="A view of shiny gold coins hovering over each level of sea stack platform." width="80%" />
@@ -1052,7 +1052,7 @@ To apply the asset library to your mountains:
 
 1. In the **Explorer** window, navigate to the asset library and copy **MountainMesh**.
 1. In the **Platforms** folder, paste **MountainMesh** into the **Mountains** folder.
-1. In the toolbar's **Home** tab, use the **Move**, **Scale**, and **Rotate** tools to position, scale, and rotate the mesh along the border of your water terrain.
+1. From the toolbar, use the **Move**, **Scale**, and **Rotate** tools to position, scale, and rotate the mesh along the border of your water terrain.
 1. Repeat this process, adding and configuring mountains of different sizes and rotations until the border of your water terrain has cover.
 
    <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/Mountains-Final.jpg" alt="A view of the polished sea stacks, platform, and coins, with a mountain range in the background." width="80%" />

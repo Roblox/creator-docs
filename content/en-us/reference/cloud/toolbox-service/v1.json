@@ -774,7 +774,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Represents the count of various instance types within an asset.\r\nSee: https://create.roblox.com/docs/reference/engine/classes/Instance",
+        "description": "Represents the count of various instance types within an asset.\r\nSee [Instance](https://create.roblox.com/docs/reference/engine/classes/Instance).",
         "nullable": true
       },
       "LibraryQueryOptions": {
@@ -939,7 +939,7 @@
                 "$ref": "#/components/schemas/InstanceCounts"
               }
             ],
-            "description": "The number of studio Instance types in the model.\r\nSee: https://create.roblox.com/docs/reference/engine/classes/Instance\r\nThese are broken down into specific types, such as MeshPart, Part, Script,\r\nTool, Animation, etc.",
+            "description": "The number of studio Instance types in the model.\r\nSee [Instance](https://create.roblox.com/docs/reference/engine/classes/Instance).\r\nThese are broken down into specific types, such as MeshPart, Part, Script,\r\nTool, Animation, etc.",
             "nullable": true
           }
         },

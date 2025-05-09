@@ -78,7 +78,7 @@ Refunds aren't available after 48 hours.
 You must set up a Tipalti account to receive payouts for purchases of paid access in local currency. To set up a Tipalti account:
 
 1. In the Creator Hub, go to **Creations** and select an experience.
-2. Go to **Audience** > **Access Settings**.
+2. Go to **Audience** ⟩ **Access Settings**.
 3. Under **Payment**, select **Send Request**.
 4. Enter your legal first and last name.
 
@@ -95,7 +95,7 @@ For experiences owned by groups, the group owner must be the one to set up a Tip
 To enable paid access in the Creator Hub:
 
 1. Go to **Creations** and select an experience.
-2. Go to **Audience** > **Access Settings**.
+2. Go to **Audience** ⟩ **Access Settings**.
 3. Under **Payment**, select **Requires Local Currency** and then select one of the available revenue share tiers.
 4. Under **Devices**, select which devices you want to enable paid access for. Desktop devices are automatically enabled.
 5. Click **Save Changes**.
@@ -108,7 +108,7 @@ Before becoming available to users, your paid access experience must undergo a p
 
 To enable paid access in Roblox Studio:
 
-1. Open [Game Settings](../../studio/game-settings.md).
+1. Open Studio's **File**&nbsp;⟩ **Game Settings** window.
 2. Under **Monetization**, click **Configure on Creator Hub**.
 3. Follow the steps to [enable paid access in the Creator Hub](#enable-paid-access-in-the-creator-hub).
 

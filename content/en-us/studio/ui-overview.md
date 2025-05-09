@@ -288,7 +288,7 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 		<tr>
       <td>Online Help</td>
       <td>Right side of mezzanine bar or **File** menu</td>
-			<td>Studio application&nbsp;⟩ **Help** menu</td>
+			<td>Application's **Help** menu</td>
     </tr>
 		<tr>
       <td>Share</td>
@@ -303,37 +303,42 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 		<tr>
       <td>[Studio Settings](./setup.md#customization)</td>
       <td>**File** menu</td>
-			<td>Windows: **File** menu&nbsp;⟩ **Studio Settings**<br />macOS: Studio application&nbsp;⟩ **Studio Settings**</td>
+			<td>Windows: **File** menu&nbsp;⟩ **Studio Settings**<br />macOS: Application's main menu&nbsp;⟩ **Studio Settings**</td>
     </tr>
 		<tr>
       <td>Beta Features</td>
       <td>**File** menu</td>
-			<td>Studio application&nbsp;⟩ **File** menu&nbsp;⟩ **Beta&nbsp;Features**</td>
+			<td>Application's **File** menu&nbsp;⟩ **Beta&nbsp;Features**</td>
     </tr>
 		<tr>
       <td>Save to Roblox&nbsp;/&nbsp;As…</td>
       <td>**File** menu</td>
-			<td>Studio application&nbsp;⟩ **File** menu&nbsp;⟩ **Save&nbsp;to&nbsp;Roblox**&nbsp;/&nbsp;**As…**</td>
+			<td>Application's **File** menu&nbsp;⟩ **Save&nbsp;to&nbsp;Roblox**&nbsp;/&nbsp;**As…**</td>
     </tr>
 		<tr>
       <td>Publish to Roblox&nbsp;/&nbsp;As…</td>
       <td>**File** menu</td>
-			<td>Studio application&nbsp;⟩ **File** menu&nbsp;⟩ **Publish&nbsp;to&nbsp;Roblox**&nbsp;/&nbsp;**As…**</td>
+			<td>Application's **File** menu&nbsp;⟩ **Publish&nbsp;to&nbsp;Roblox**&nbsp;/&nbsp;**As…**</td>
     </tr>
 		<tr>
       <td>[Game Settings](./game-settings.md)</td>
       <td>**File** menu or **Home** tab</td>
-			<td>Studio application&nbsp;⟩ **File** menu&nbsp;⟩ **Game&nbsp;Settings**</td>
+			<td>Application's **File** menu&nbsp;⟩ **Game&nbsp;Settings**</td>
     </tr>
 		<tr>
       <td>[Manage Plugins](./plugins-tab.md#manage-plugins)</td>
       <td>**Plugins** tab</td>
-			<td>Studio application&nbsp;⟩ **Plugins** menu&nbsp;⟩ **Manage&nbsp;Plugins**</td>
+			<td>Application's **Plugins** menu&nbsp;⟩ **Manage&nbsp;Plugins**</td>
     </tr>
 		<tr>
       <td>Plugins Folder</td>
       <td>**Plugins** tab</td>
-			<td>Studio application&nbsp;⟩ **Plugins** menu&nbsp;⟩ **Plugins&nbsp;Folder**</td>
+			<td>Application's **Plugins** menu&nbsp;⟩ **Plugins&nbsp;Folder**</td>
+    </tr>
+		<tr>
+      <td>Tools (Localization)</td>
+      <td>**Plugins** tab</td>
+			<td>Application's **Window** menu&nbsp;⟩ **Localization**&nbsp;⟩ **Localization&nbsp;Tool**</td>
     </tr>
 	</tbody>
 </table>
@@ -352,47 +357,47 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
     <tr>
       <td>[Explorer](./explorer.md)</td>
 			<td>**View** tab</td>
-			<td>🄐 **Home** tab&nbsp;⟩ **Explorer**<br />🄑 Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **Explorer**</td>
+			<td>🄐 **Home** tab&nbsp;⟩ **Explorer**<br />🄑 Application's **Window** menu&nbsp;⟩ **Explorer**</td>
     </tr>
 		<tr>
       <td>[Properties](./properties.md)</td>
 			<td>**View** tab</td>
-			<td>🄐 **Home** tab&nbsp;⟩ **Properties**<br />🄑 Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **Properties**</td>
+			<td>🄐 **Home** tab&nbsp;⟩ **Properties**<br />🄑 Application's **Window** menu&nbsp;⟩ **Properties**</td>
     </tr>
 		<tr>
       <td>[Asset Manager](../projects/assets/manager.md)</td>
 			<td>**View** tab</td>
-			<td>Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **Asset&nbsp;Manager**</td>
+			<td>Application's **Window** menu&nbsp;⟩ **Asset&nbsp;Manager**</td>
     </tr>
 		<tr>
       <td>[Toolbox](../projects/assets/toolbox.md)</td>
 			<td>**View** tab</td>
-			<td>🄐 **Home** tab&nbsp;⟩ **Toolbox**<br />🄑 Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **Toolbox**</td>
+			<td>🄐 **Home** tab&nbsp;⟩ **Toolbox**<br />🄑 Application's **Window** menu&nbsp;⟩ **Toolbox**</td>
     </tr>
 		<tr>
       <td>[Output](./output.md)</td>
 			<td>**View** tab</td>
-			<td>🄐 Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **Output**<br />🄑 **Script** tab&nbsp;⟩ **Output**</td>
+			<td>🄐 Application's **Window** menu&nbsp;⟩ **Output**<br />🄑 **Script** tab&nbsp;⟩ **Output**</td>
     </tr>
 		<tr>
       <td>[Command Bar](#command-bar)</td>
 			<td>**View** tab</td>
-			<td>🄐 Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **Command&nbsp;Bar**<br />🄑 **Script** tab&nbsp;⟩ **Command**</td>
+			<td>🄐 Application's **Window** menu&nbsp;⟩ **Command&nbsp;Bar**<br />🄑 **Script** tab&nbsp;⟩ **Command**</td>
     </tr>
 		<tr>
       <td>[Terrain Editor](./terrain-editor.md)</td>
 			<td>**Home** or **View** tab</td>
-			<td>Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **3D**&nbsp;⟩ **Terrain**</td>
+			<td>Application's **Window** menu&nbsp;⟩ **3D**&nbsp;⟩ **Terrain**</td>
     </tr>
 		<tr>
       <td>Object Browser</td>
 			<td>**View** tab</td>
-			<td>Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **Script**&nbsp;⟩ **Object&nbsp;Browser**</td>
+			<td>Application's **Window** menu&nbsp;⟩ **Script**&nbsp;⟩ **Object&nbsp;Browser**</td>
     </tr>
 		<tr>
       <td>Tag Editor</td>
 			<td>**View** tab</td>
-			<td>Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **Script**&nbsp;⟩ **Tag&nbsp;Editor**</td>
+			<td>Application's **Window** menu&nbsp;⟩ **Script**&nbsp;⟩ **Tag&nbsp;Editor**</td>
     </tr>
 	</tbody>
 </table>
@@ -411,7 +416,7 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
     <tr>
       <td>Copy, Cut, Paste, Duplicate</td>
 			<td>**Home** tab</td>
-			<td>Studio application&nbsp;⟩ **Edit** menu</td>
+			<td>Application's **Edit** menu</td>
     </tr>
 		<tr>
       <td>Select, Move, Scale, Rotate, Transform</td>
@@ -451,22 +456,22 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 		<tr>
       <td>[Material Manager](../parts/materials.md#material-manager)</td>
 			<td>**Home** or **Model** tab&nbsp;⟩ Material picker dropdown&nbsp;⟩ **Material&nbsp;Manager**</td>
-			<td>Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **3D**&nbsp;⟩ **Material**</td>
+			<td>Application's **Window** menu&nbsp;⟩ **3D**&nbsp;⟩ **Material**</td>
     </tr>
 		<tr>
       <td>Group</td>
 			<td>**Home** or **Model** tab</td>
-			<td>🄐 **Home** or **Model** tab&nbsp;⟩ **Group**<br />🄑 Studio application&nbsp;⟩ **Edit** menu&nbsp;⟩ **Group**</td>
+			<td>🄐 **Home** or **Model** tab&nbsp;⟩ **Group**<br />🄑 Application's **Edit** menu&nbsp;⟩ **Group**</td>
     </tr>
 		<tr>
       <td>Lock</td>
 			<td>**Home** or **Model** tab</td>
-			<td>🄐 **Home** or **Model** tab&nbsp;⟩ **Lock**<br />🄑 Studio application&nbsp;⟩ **Edit** menu&nbsp;⟩ **Lock**</td>
+			<td>🄐 **Home** or **Model** tab&nbsp;⟩ **Lock**<br />🄑 Application's **Edit** menu&nbsp;⟩ **Lock**</td>
     </tr>
 		<tr>
       <td>Anchor</td>
 			<td>**Home** or **Model** tab</td>
-			<td>🄐 **Home** or **Model** tab&nbsp;⟩ **Anchor**<br />🄑 Studio application&nbsp;⟩ **Edit** menu&nbsp;⟩ **Anchor**</td>
+			<td>🄐 **Home** or **Model** tab&nbsp;⟩ **Anchor**<br />🄑 Application's **Edit** menu&nbsp;⟩ **Anchor**</td>
     </tr>
 		<tr>
       <td>Show UI tools</td>
@@ -481,12 +486,12 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 		<tr>
       <td>[Align tool](./align-tool.md)</td>
 			<td>**Model** tab</td>
-			<td>Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **3D**&nbsp;⟩ **Align**</td>
+			<td>Application's **Window** menu&nbsp;⟩ **3D**&nbsp;⟩ **Align**</td>
     </tr>
 		<tr>
       <td>[Material Generator](./material-generator.md)</td>
 			<td>**Home** or **Model** tab&nbsp;⟩ Material picker dropdown&nbsp;⟩ **Generate**</td>
-			<td>Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **3D**&nbsp;⟩ **Material&nbsp;Generator**</td>
+			<td>Application's **Window** menu&nbsp;⟩ **3D**&nbsp;⟩ **Material&nbsp;Generator**</td>
     </tr>
 		<tr>
       <td>[Solid modeling tools](../parts/solid-modeling.md)</td>
@@ -501,12 +506,12 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 		<tr>
       <td>Show Welds toggle</td>
 			<td>**Model** tab</td>
-			<td>Studio application&nbsp;⟩ **View** menu&nbsp;⟩ **Show&nbsp;Welds**</td>
+			<td>Application's **View** menu&nbsp;⟩ **Show&nbsp;Welds**</td>
     </tr>
 		<tr>
       <td>Show Constraint Details toggle</td>
 			<td>**Model** tab</td>
-			<td>Studio application&nbsp;⟩ **View** menu&nbsp;⟩ **Show&nbsp;Constraint&nbsp;Details**</td>
+			<td>Application's **View** menu&nbsp;⟩ **Show&nbsp;Constraint&nbsp;Details**</td>
     </tr>
 		<tr>
       <td>[Effect pick/insert](../effects/index.md)</td>
@@ -521,7 +526,7 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 		<tr>
       <td>Advanced&nbsp;⟩ Insert Object</td>
 			<td>**Model** tab</td>
-			<td>Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **Insert Object**</td>
+			<td>Application's **Window** menu&nbsp;⟩ **Insert Object**</td>
     </tr>
 		<tr>
       <td>Advanced&nbsp;⟩ Model</td>
@@ -536,12 +541,12 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 		<tr>
       <td>Advanced&nbsp;⟩ Collision Groups</td>
 			<td>**Model** tab</td>
-			<td>Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **3D**&nbsp;⟩ **Collision&nbsp;Groups**</td>
+			<td>Application's **Window** menu&nbsp;⟩ **3D**&nbsp;⟩ **Collision&nbsp;Groups**</td>
     </tr>
 		<tr>
       <td>Advanced&nbsp;⟩ Run Script</td>
 			<td>**Model** tab</td>
-			<td>Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **Script**&nbsp;⟩ **Run&nbsp;Script**</td>
+			<td>Application's **Window** menu&nbsp;⟩ **Script**&nbsp;⟩ **Run&nbsp;Script**</td>
     </tr>
 		<tr>
       <td>Advanced&nbsp;⟩ Script, Local&nbsp;Script, Module&nbsp;Script</td>
@@ -565,17 +570,17 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
     <tr>
       <td>[Import 3D](../art/modeling/3d-importer.md)</td>
 			<td>**Home** or **Avatar** tab</td>
-			<td>Studio application&nbsp;⟩ **File** menu&nbsp;⟩ **Import&nbsp;3D**</td>
+			<td>Application's **File** menu&nbsp;⟩ **Import&nbsp;3D**</td>
     </tr>
 		<tr>
       <td>[Animation Editor](../animation/editor.md)</td>
 			<td>**Avatar** or **View** tab</td>
-			<td>🄐 **Avatar** tab&nbsp;⟩ **Animation**<br />🄑 Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **Avatar**&nbsp;⟩ **Animation**</td>
+			<td>🄐 **Avatar** tab&nbsp;⟩ **Animation**<br />🄑 Application's **Window** menu&nbsp;⟩ **Avatar**&nbsp;⟩ **Animation**</td>
     </tr>
 		<tr>
       <td>[Accessory Fitting Tool](../art/accessories/accessory-fitting-tool.md)</td>
 			<td>**Avatar** tab</td>
-			<td>🄐 **Avatar** tab&nbsp;⟩ **Accessory**<br />🄑 Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **Avatar**&nbsp;⟩ **Accessory**</td>
+			<td>🄐 **Avatar** tab&nbsp;⟩ **Accessory**<br />🄑 Application's **Window** menu&nbsp;⟩ **Avatar**&nbsp;⟩ **Accessory**</td>
     </tr>
 		<tr>
       <td>[Rig Builder](./rig-builder.md)</td>
@@ -585,7 +590,7 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 		<tr>
       <td>[Avatar Setup](../avatar-setup/index.md)</td>
 			<td>**Avatar** tab</td>
-			<td>🄐 **Avatar** tab&nbsp;⟩ **Setup**<br />🄑 Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **Avatar**&nbsp;⟩ **Setup**</td>
+			<td>🄐 **Avatar** tab&nbsp;⟩ **Setup**<br />🄑 Application's **Window** menu&nbsp;⟩ **Avatar**&nbsp;⟩ **Setup**</td>
     </tr>
 	</tbody>
 </table>
@@ -629,7 +634,7 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 		<tr>
       <td>[Device Emulator](./testing-modes.md#device-emulation)</td>
 			<td>**Test** tab</td>
-			<td>Studio application&nbsp;⟩ **View** menu&nbsp;⟩ **Device&nbsp;Emulator**</td>
+			<td>Application's **View** menu&nbsp;⟩ **Device&nbsp;Emulator**</td>
     </tr>
 		<tr>
       <td>[Controller Emulator](./testing-modes.md#controller-emulation)</td>
@@ -639,32 +644,32 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 		<tr>
       <td>[Player Emulator](./testing-modes.md#player-emulation)</td>
 			<td>**Test** tab</td>
-			<td>Studio application&nbsp;⟩ **View** menu&nbsp;⟩ **Player&nbsp;Emulator**</td>
+			<td>Application's **View** menu&nbsp;⟩ **Player&nbsp;Emulator**</td>
     </tr>
 		<tr>
       <td>View Selector</td>
 			<td>**View** tab</td>
-			<td>Studio application&nbsp;⟩ **View** menu&nbsp;⟩ **Show&nbsp;View&nbsp;Selector**</td>
+			<td>Application's **View** menu&nbsp;⟩ **Show&nbsp;View&nbsp;Selector**</td>
     </tr>
 		<tr>
       <td>Grid visualization</td>
 			<td>**View** tab</td>
-			<td>Studio application&nbsp;⟩ **View** menu&nbsp;⟩ **Show&nbsp;Grid** & **Show&nbsp;Grid&nbsp;Material**</td>
+			<td>Application's **View** menu&nbsp;⟩ **Show&nbsp;Grid** & **Show&nbsp;Grid&nbsp;Material**</td>
     </tr>
 		<tr>
       <td>Wireframe Rendering</td>
 			<td>**View** tab</td>
-			<td>Studio application&nbsp;⟩ **View** menu&nbsp;⟩ **Show&nbsp;Wireframe&nbsp;Rendering**</td>
+			<td>Application's **View** menu&nbsp;⟩ **Show&nbsp;Wireframe&nbsp;Rendering**</td>
     </tr>
 		<tr>
       <td>UI Visibility</td>
 			<td>**View** tab</td>
-			<td>Studio application&nbsp;⟩ **View** menu&nbsp;⟩ **Show&nbsp;UI**</td>
+			<td>Application's **View** menu&nbsp;⟩ **Show&nbsp;UI**</td>
     </tr>
 		<tr>
       <td>[Wind Direction](../environment/global-wind.md#wind-direction-widget)</td>
 			<td>**View** tab</td>
-			<td>Studio application&nbsp;⟩ **View** menu&nbsp;⟩ **Show&nbsp;Wind&nbsp;Direction**</td>
+			<td>Application's **View** menu&nbsp;⟩ **Show&nbsp;Wind&nbsp;Direction**</td>
     </tr>
 		<tr>
       <td>[Selection Style](./ui-overview.md#object-selection)</td>
@@ -679,7 +684,7 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 		<tr>
       <td>Mute</td>
 			<td>**Test** tab</td>
-			<td>Studio application&nbsp;⟩ **View** menu&nbsp;⟩ **Mute**</td>
+			<td>Application's **View** menu&nbsp;⟩ **Mute**</td>
     </tr>
 	</tbody>
 </table>
@@ -708,7 +713,7 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 		<tr>
       <td>Find/Replace (advanced)</td>
 			<td>**Script** tab</td>
-			<td>🄐 **Script** tab&nbsp;⟩ **Find** button popup&nbsp;⟩ **Find&nbsp;All**<br />🄑 Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **Script**&nbsp;⟩ **Find&nbsp;All&nbsp;/&nbsp;Replace&nbsp;All**</td>
+			<td>🄐 **Script** tab&nbsp;⟩ **Find** button popup&nbsp;⟩ **Find&nbsp;All**<br />🄑 Application's **Window** menu&nbsp;⟩ **Script**&nbsp;⟩ **Find&nbsp;All&nbsp;/&nbsp;Replace&nbsp;All**</td>
     </tr>
 		<tr>
       <td>Go to Line</td>
@@ -743,42 +748,42 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 		<tr>
       <td>Script Analysis</td>
 			<td>**View** tab</td>
-			<td>🄐 Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **Script**&nbsp;⟩ **Analysis**<br />🄑 **Script** tab&nbsp;⟩ **Analysis**</td>
+			<td>🄐 Application's **Window** menu&nbsp;⟩ **Script**&nbsp;⟩ **Analysis**<br />🄑 **Script** tab&nbsp;⟩ **Analysis**</td>
     </tr>
 		<tr>
       <td>Performance</td>
 			<td>**View** tab</td>
-			<td>Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **Performance**&nbsp;⟩ **Performance**</td>
+			<td>Application's **Window** menu&nbsp;⟩ **Performance**&nbsp;⟩ **Performance**</td>
     </tr>
 		<tr>
       <td>Task Scheduler</td>
 			<td>**View** tab</td>
-			<td>Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **Script**&nbsp;⟩ **Task&nbsp;Scheduler**</td>
+			<td>Application's **Window** menu&nbsp;⟩ **Script**&nbsp;⟩ **Task&nbsp;Scheduler**</td>
     </tr>
 		<tr>
       <td>Script Performance</td>
 			<td>**View** tab</td>
-			<td>🄐 Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **Script**&nbsp;⟩ **Performance**<br />🄑 **Script** tab&nbsp;⟩ **Performance**</td>
+			<td>🄐 Application's **Window** menu&nbsp;⟩ **Script**&nbsp;⟩ **Performance**<br />🄑 **Script** tab&nbsp;⟩ **Performance**</td>
     </tr>
 		<tr>
       <td>Call Stack</td>
 			<td>**View** tab</td>
-			<td>🄐 Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **Debug**&nbsp;⟩ **Call&nbsp;Stack**<br />🄑 **Script** tab&nbsp;⟩ **Call&nbsp;Stack**</td>
+			<td>🄐 Application's **Window** menu&nbsp;⟩ **Debug**&nbsp;⟩ **Call&nbsp;Stack**<br />🄑 **Script** tab&nbsp;⟩ **Call&nbsp;Stack**</td>
     </tr>
 		<tr>
       <td>Breakpoints</td>
 			<td>**View** tab</td>
-			<td>🄐 Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **Debug**&nbsp;⟩ **Breakpoints**<br />🄑 **Script** tab&nbsp;⟩ **Breakpoints**</td>
+			<td>🄐 Application's **Window** menu&nbsp;⟩ **Debug**&nbsp;⟩ **Breakpoints**<br />🄑 **Script** tab&nbsp;⟩ **Breakpoints**</td>
     </tr>
 		<tr>
       <td>Watch</td>
 			<td>**View** tab</td>
-			<td>🄐 Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **Debug**&nbsp;⟩ **Watch**<br />🄑 **Script** tab&nbsp;⟩ **Watch**</td>
+			<td>🄐 Application's **Window** menu&nbsp;⟩ **Debug**&nbsp;⟩ **Watch**<br />🄑 **Script** tab&nbsp;⟩ **Watch**</td>
     </tr>
 		<tr>
       <td>Stats, Render, Physics, Network, Summary</td>
 			<td>**View** tab</td>
-			<td>Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **Performance**</td>
+			<td>Application's **Window** menu&nbsp;⟩ **Performance**</td>
     </tr>
 	</tbody>
 </table>
@@ -797,17 +802,17 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
     <tr>
       <td>[Activity History](../projects/activity-history.md)</td>
 			<td>**View** tab</td>
-			<td>Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **Activity&nbsp;History**</td>
+			<td>Application's **Window** menu&nbsp;⟩ **Activity&nbsp;History**</td>
     </tr>
 		<tr>
       <td>Team Create</td>
 			<td>**View** tab</td>
-			<td>Studio application&nbsp;⟩ **Window** menu&nbsp;⟩ **Collaboration**&nbsp;⟩ **Team&nbsp;Create**</td>
+			<td>Application's **Window** menu&nbsp;⟩ **Collaboration**&nbsp;⟩ **Team&nbsp;Create**</td>
     </tr>
 		<tr>
       <td>Screen Shot</td>
 			<td>**View** tab</td>
-			<td>Studio application&nbsp;⟩ **View** menu&nbsp;⟩ **Screenshot**</td>
+			<td>Application's **View** menu&nbsp;⟩ **Screenshot**</td>
     </tr>
 		<tr>
       <td>Video Record</td>

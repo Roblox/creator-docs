@@ -304,9 +304,9 @@ properties:
       movement.
 
       This property does not affect the movement of the mouse icon. Nor does it
-      affect the _Camera Sensitivity_ setting found in the _Settings_ tab of the
-      client's _Settings_ menu, which also adjusts the sensitivity of events
-      tracking mouse movement.
+      affect the **Camera Sensitivity** setting found in the **Settings** tab of
+      the client's **Settings** menu, which also adjusts the sensitivity of
+      events tracking mouse movement.
 
       This property has a maximum value of 10 and a minimum value of 0. A lower
       value corresponds to lower sensitivity, and a higher value to higher

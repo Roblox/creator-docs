@@ -71,13 +71,13 @@ The `/generate` command enables [mesh generation](https://corp.roblox.com/newsro
 
 ## Access Assistant
 
-Assistant is available in two locations: Studio and the documentation.
+Assistant is available in both Studio and the Roblox documentation.
 
 ### In Studio
 
 To access Assistant from Studio:
 
-1. Click the **Assistant** button in the top-right corner.
+1. Click the **Assistant** button on the right side of the mezzanine bar.
 
    <img src="../assets/studio/general/Toolbar-Assistant.png" width="754" alt="Assistant button indicated in top-right area of toolbar." />
 

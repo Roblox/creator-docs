@@ -221,6 +221,6 @@ Note that [WeldConstraint](../physics/constraints/weld.md) and [NoCollisionConst
 ## Physical simulation
 
 To simulate physics while [moving](../parts/index.md#move) or [rotating](../parts/index.md#rotate) parts, you can switch to **Physical** mode in
-the toolbar's **Model** tab, effectively forcing parts to obey physical limitations. For example, if two parts are attached by a [RopeConstraint](../physics/constraints/rope.md) and you drag one part around the scene, the other part will follow as the rope becomes taut.
+Studio's toolbar, effectively forcing parts to obey physical limitations. For example, if two parts are attached by a [RopeConstraint](../physics/constraints/rope.md) and you drag one part around the scene, the other part will follow as the rope becomes taut.
 
 <img src="../assets/physics/constraints/Model-Tab-Mode-Physical.png" alt="" width="670" />

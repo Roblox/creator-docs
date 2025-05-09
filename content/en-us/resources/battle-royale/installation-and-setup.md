@@ -85,7 +85,7 @@ Once the lobby place is published, you'll need to add **five additional places**
    src="../../assets/resources/battle-royale/installation-and-setup/Battle-Royale-Place-Names.png"
    width="80%" />
 
-5. Publish the game again (File → Publish to Roblox).
+5. Publish the game again (**File** → **Publish to Roblox**).
 
 ## Copy and paste place IDs
 
@@ -190,7 +190,7 @@ Each place must be cross-associated so that players can teleport from the lobby 
 
 By default, Roblox balances players/servers for an optimal social gameplay experience, but a battle royale should allow for bigger and more intense battles. To achieve this:
 
-1. Open [Game Settings](../../studio/game-settings.md).
+1. Open Studio's **File**&nbsp;⟩ **Game Settings** window.
 2. Select the **Places** tab.
 3. For each of the six places, click the button and select **Edit**.
 

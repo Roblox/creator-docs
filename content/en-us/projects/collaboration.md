@@ -55,7 +55,7 @@ If you're the group owner or a member with sufficient permissions, you can confi
 
 In Studio's **Manage Collaborators** window for any group-owned experience, eligible roles display **Edit** permission but are muted to indicate that you can't change the permission level from Studio.
 
-   <img src="../assets/studio/general/Toolbar-Collaborate-Button-From-Off.png" width="754" alt="Studio's menu bar with the Collaborate button highlighted." />
+   <img src="../assets/studio/general/Toolbar-Collaborate-Button-From-Off.png" width="754" alt="Studio's mezzanine bar with the Collaborate button highlighted." />
 
    <img src="../assets/studio/collaboration/Edit-Permission-All-Group-Experiences.png" width="780" alt="Manage Collaborators window showing permission level selection for each group role." />
 
@@ -63,9 +63,9 @@ In Studio's **Manage Collaborators** window for any group-owned experience, elig
 <TabItem label="Per-experience">
 If you're the group's owner, you can grant **Edit** permission on a per-experience basis to roles that do **not** have permission to edit all group experiences. For example, you can temporarily grant **Edit** permission to an "FX&nbsp;Artist" group role so they can fine-tune visual effects before an experience's public release.
 
-1. With the experience open in Studio, click the **Collaborate** button in the upper-right corner.
+1. With the experience open in Studio, click the **Collaborate** button on the right side of the mezzanine bar.
 
-   <img src="../assets/studio/general/Toolbar-Collaborate-Button-From-Off.png" width="754" alt="Studio's menu bar with the Collaborate button highlighted." />
+   <img src="../assets/studio/general/Toolbar-Collaborate-Button-From-Off.png" width="754" alt="Studio's mezzanine bar with the Collaborate button highlighted." />
 
 1. Select **Edit** from the permissions dropdown for the desired roles. Remember that you can only modify roles that do **not** already have edit permission across all group experiences.
 
@@ -82,9 +82,9 @@ For user-owned experiences, you can grant **Play** access to any user or [group]
 
 To give **Edit** permission to a friend for an experience that you own:
 
-1. With the experience open in Studio, click the **Collaborate** button in the upper-right corner.
+1. With the experience open in Studio, click the **Collaborate** button on the right side of the mezzanine bar.
 
-   <img src="../assets/studio/general/Toolbar-Collaborate-Button-From-Off.png" width="754" alt="Studio's menu bar with the Collaborate button highlighted." />
+   <img src="../assets/studio/general/Toolbar-Collaborate-Button-From-Off.png" width="754" alt="Studio's mezzanine bar with the Collaborate button highlighted." />
 
 1. Type into the search bar at the top to search for a collaborator to add. A dropdown appears listing matching collaborators, with friends indicated by the **Friend** label below their name. Select the collaborator to add.
 
@@ -231,7 +231,7 @@ Live Scripting is **enabled** by default. If you and your team prefer to collabo
 Through **Drafts** mode, you can independently edit and test scripts without affecting the experience for others. After you finish drafting a script, you can [commit](#commit-drafts) it to the shared repository and [Team Test](../studio/home-tab.md#team-test) the committed version with collaborators.
 
 <Alert severity="warning">
-Drafts Mode is **disabled** by default. To enable it, open the [Game Settings](../studio/game-settings.md) window, select the **Other** tab, and turn on **Enable Drafts Mode**.
+Drafts Mode is **disabled** by default. To enable it, open Studio's **File**&nbsp;⟩ **Game Settings** window, select the **Other** tab, and turn on **Enable Drafts Mode**.
 
 Note that all collaborators will need to exit the session for the change to take effect. Alternatively, you can [disable collaboration](#disable-collaboration) and then reenable it to restart the session.
 </Alert>

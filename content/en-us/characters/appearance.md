@@ -1,23 +1,18 @@
 ---
 title: Character appearance
-description: Customize your in-experience character appearance and properties with the Avatar Game Settings and HumanoidDescription.
+description: Customize your in-experience character appearance and properties.
 ---
 
 Most experiences let players use their own Roblox avatar, although some implement an in-experience customization system like the [UGC Homestore](/resources/templates.md#ugc-homestore) template. Other experiences make limited [modifications](../characters/appearance.md) to player avatars such as helmets, wings, or accessories that match the genre.
 
-To create a unique experience that alters the appearance of your users, you can customize the default character properties with the following:
-
-- Configure the Avatar [Game Settings](#game-settings) to set basic global avatar appearance defaults for all users.
-- Use [HumanoidDescription](#humanoiddescription) at any point to apply a wide-range of specific character customizations to one or more users in your experience.
+To create a unique experience that alters the appearance of your users, you can customize the default character properties through [game settings](#game-settings) or a [HumanoidDescription](#humanoiddescription).
 
 ## Game settings
 
-The **Avatar** section in [Game Settings](../studio/game-settings.md#avatar) menu allows you to quickly set several global character properties in your experience. When editing the Avatar Game Settings, your avatar displays in the workspace as a visual preview.
+The **Avatar** section in Studio's **File**&nbsp;⟩ **Game Settings** window allows you to quickly set several global character properties in your experience. When editing these settings, your avatar displays in the workspace as a visual preview.
 
 <img src="../assets/avatar/character-customization/Avatar-In-Editor-Window.jpg"
 width="800" />
-
-You can adjust the following character properties in your experience using the Avatar Game Settings:
 
 <table>
 <thead>

@@ -75,7 +75,7 @@ The orientation of an attachment affects how a constraint can move. For the door
    </video>
    </Alert>
 
-2. For accurate rotation, turn on rotation snapping in the toolbar's **Model** tab by checking **Rotate** and setting the value to `90`.
+2. For accurate rotation, turn on rotation snapping in Studio's toolbar by checking **Rotate** and setting the value to `90`.
 
    ![alt](../../../assets/tutorials/building-a-hinged-door/introToConstraints_snapRotate.png)
 

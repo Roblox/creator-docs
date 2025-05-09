@@ -93,7 +93,7 @@ The [start place](#start-place) of an experience cannot be instantly swapped wit
 
 ## Configure experiences
 
-You can customize your experience's settings from the [Creator Dashboard][creatordashboard] or within Studio's [Game Settings](../../studio/game-settings.md). Some settings are only configurable within Studio while others are only configurable on the dashboard.
+You can customize your experience's settings from the [Creator Dashboard][creatordashboard] or within Studio's **File**&nbsp;⟩ **Game Settings** window. Some settings are only configurable within Studio while others are only configurable on the dashboard.
 
 Most experience settings are configurable from the [Creator Dashboard][creatordashboard], including [localization](../localization/index.md), access settings, [analytics](../analytics/index.md), and [monetization products](../monetization/index.md). You can also fill out the [Maturity & Compliance questionnaire](../promotion/content-maturity.md) required for generating a content maturity label and content descriptors that players use to make informed decisions about what content they interact with. To configure an experience:
 

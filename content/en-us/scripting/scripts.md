@@ -277,11 +277,9 @@ To create script objects in the Studio **Explorer** window:
 
 1. Hover over the parent container into which you want to insert a script.
 2. Click the **&CirclePlus;** button that appears to the right of the
-   container to open the **Insert Object** menu.
-3. Select the type of script you want to insert.
-4. Rename the script.
+   container and select the type of script you want to insert.
+3. Rename the script.
 
 <Alert severity="info">
-See our [code samples](../samples/index.md) and [tutorials](../tutorials/index.md) for scripting
-examples.
+See [code samples](../samples/index.md) and [tutorials](../tutorials/index.md) for scripting examples.
 </Alert>

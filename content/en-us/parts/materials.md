@@ -19,7 +19,7 @@ You can quickly apply materials to [parts](../parts/index.md) through the [Mater
 
 The **Material** widget is accessible from either the toolbar's **Home** or **Model** tabs. Clicking the small dropdown arrow reveals a material picker.
 
-<img src="../assets/studio/general/Model-Tab-Material-Picker.png" width="704" alt="Studio's Model tab with the Material widget's picker highlighted." />
+<img src="../assets/studio/general/Material-Picker.png" width="270" alt="Material widget's picker highlighted." />
 
 By default, clicking the overall **Material** button applies the chosen material to any **selected** parts. If you prefer a fill/paint workflow instead, toggle on **Material&nbsp;Action&nbsp;as&nbsp;Tool** and then click parts in the 3D viewport to apply the chosen material.
 

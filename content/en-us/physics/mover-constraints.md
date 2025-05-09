@@ -172,6 +172,6 @@ To create a mover constraint, you can use either the **Create** tool or the [Exp
 
 ## Physical simulation
 
-To simulate physics while [moving](../parts/index.md#move) or [rotating](../parts/index.md#rotate) parts, you can switch to **Physical** mode in the toolbar's **Model** tab, effectively forcing parts to obey physical limitations. For example, if you drag one part around the scene and it collides with another part, it will physically push that part out of the way.
+To simulate physics while [moving](../parts/index.md#move) or [rotating](../parts/index.md#rotate) parts, you can switch to **Physical** mode in the Studio's toolbar, effectively forcing parts to obey physical limitations. For example, if you drag one part around the scene and it collides with another part, it will physically push that part out of the way.
 
 <img src="../assets/physics/constraints/Model-Tab-Mode-Physical.png" alt="" width="670" />

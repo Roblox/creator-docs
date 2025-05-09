@@ -221,41 +221,6 @@ properties:
     description: |
       This property selects the `Enum.HumanoidCollisionType` for R15 and Rthro
       non-player characters.
-
-      The collision geometry for the InnerBox type is calculated at run-time and
-      will not be applied in Studio when the simulation is not running.
-
-      For player `Class.Player.Character|Characters` the CollisionType property
-      will be decided by the Avatar Collision Option in Game Settings.
-
-      This property is writable by `Class.Plugin|Plugins` and can be read by all
-      scripts.
-
-      #### Enums
-
-      <table>
-      	<thead>
-      		<tr>
-      			<th>Name</th>
-      			<th>Value</th>
-      			<th>Description</th>
-      		</tr>
-      	</thead>
-      		<tr>
-      			<td>
-      				<b>OuterBox</b>
-      			</td>
-      			<td>0</td>
-      			<td>Dynamically sized collision boxes based on mesh sizes</td>
-      		</tr>
-      		<tr>
-      			<td>
-      				<b>Innerbox</b>
-      			</td>
-      			<td>1</td>
-      			<td>Fixed size collision boxes, similar to the classic avatar collision</td>
-      		</tr>
-      </table>
     code_samples: []
     type: HumanoidCollisionType
     tags:

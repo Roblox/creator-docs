@@ -26,11 +26,11 @@ properties: []
 methods:
   - name: PlayerScripts:ClearComputerCameraMovementModes
     summary: |
-      Unregisters all ComputerCameraMovementMode enums from the game settings
-      menu.
+      Unregisters all ComputerCameraMovementMode enums from the experience's
+      settings menu.
     description: |
-      Unregisters all ComputerCameraMovementMode enums from the game settings
-      menu.
+      Unregisters all ComputerCameraMovementMode enums from the experience's
+      settings menu.
     code_samples: []
     parameters: []
     returns:
@@ -44,9 +44,11 @@ methods:
     writeCapabilities: []
   - name: PlayerScripts:ClearComputerMovementModes
     summary: |
-      Unregisters all ComputerMovementMode enums from the game settings menu.
+      Unregisters all ComputerMovementMode enums from the experience's
+      settings menu.
     description: |
-      Unregisters all ComputerMovementMode enums from the game settings menu.
+      Unregisters all ComputerMovementMode enums from the experience's
+      settings menu.
     code_samples: []
     parameters: []
     returns:
@@ -60,9 +62,11 @@ methods:
     writeCapabilities: []
   - name: PlayerScripts:ClearTouchCameraMovementModes
     summary: |
-      Unregisters all TouchCameraMovementMode enums from the game settings menu.
+      Unregisters all TouchCameraMovementMode enums from the experience's
+      settings menu.
     description: |
-      Unregisters all TouchCameraMovementMode enums from the game settings menu.
+      Unregisters all TouchCameraMovementMode enums from the experience's
+      settings menu.
     code_samples: []
     parameters: []
     returns:
@@ -76,9 +80,11 @@ methods:
     writeCapabilities: []
   - name: PlayerScripts:ClearTouchMovementModes
     summary: |
-      Unregisters all TouchMovementMode enums from the game settings menu.
+      Unregisters all TouchMovementMode enums from the experience's
+      settings menu.
     description: |
-      Unregisters all TouchMovementMode enums from the game settings menu.
+      Unregisters all TouchMovementMode enums from the experience's
+      settings menu.
     code_samples: []
     parameters: []
     returns:

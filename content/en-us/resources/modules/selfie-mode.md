@@ -84,8 +84,9 @@ By default, **SelfieMode** shows a generic **depth‑of‑field** effect (subtle
 </Tabs>
 
 <Alert severity="warning">
-<p>This effect does not render on mobile devices such as phones and tablets. As such, it will not be offered as an action on those devices.</p>
-On non-mobile devices, the player's graphics quality (**Settings**&nbsp;&rarr; **Graphics&nbsp;Quality**) must be eight or higher to render depth‑of‑field. If their graphics quality is less than eight, they'll be prompted to increase it.
+This effect does not render on mobile devices such as phones and tablets. As such, it will not be offered as an action on those devices.
+
+On non-mobile devices, the player's graphics quality must be eight or higher to render depth‑of‑field. If their graphics quality is less than eight, they'll be prompted to increase it.
 </Alert>
 
 To change the default depth‑of‑field effect, set `depthOfFieldEffect` to your own `Class.DepthOfFieldEffect` instance in a [configure](#configure) call.
