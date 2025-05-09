@@ -32,11 +32,11 @@ You can import custom audio as long as it meets the following requirements:
 - You have the legal rights to that asset.
 - It adheres to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846).
 - It's a single track/stream in either `.mp3`, `.ogg`, `.wav` or `.flac` format.
-- It's less than 20 MB in size and 7 minutes in duration.
+- It's less than 20 MB in size and 10 minutes in duration.
 - Its sample rate is less than or equal to 48 kHz.
 - Its channels are set to mono or stereo 2.0, 3.0, or 5.1 surround.
 
-If you're [ID verified](../production/publishing/account-verification.md), you can import 100 free audio assets per 30 days; if you're unverified, you can import 10 free audio assets per 30 days. Studio assigns each new audio asset a **unique asset ID** that you can use within your experiences to [play the audio](../sound/objects.md).
+If you're [ID verified](../production/publishing/account-verification.md), you can import 100 free audio assets per 30 days; if you're unverified, you can import 40 free audio assets per 30 days. Studio assigns each new audio asset a **unique asset ID** that you can use within your experiences to [play the audio](../sound/objects.md).
 
 You can import audio through the [Asset Manager](../projects/assets/manager.md), the [Creator Dashboard](https://create.roblox.com/dashboard/creations), or the [Open Cloud API](../cloud/guides/usage-assets.md). To import audio through the **Asset Manager**:
 
