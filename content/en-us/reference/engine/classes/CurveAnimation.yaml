@@ -53,7 +53,7 @@ description: |
 
   If you want to preview an Animation before uploading it to the Roblox site,
   you can generate a temporary id using
-  `AnimationClipProvider:RegisterAnimationClip`. This generates a hash
+  `Class.AnimationClipProvider:RegisterAnimationClip()`. This generates a hash
   id that you can use for localized animation testing.
 
   ## Obtaining CurveAnimations
@@ -61,7 +61,7 @@ description: |
   As for other `Class.AnimationClip` types (such as `Class.KeyframeSequence`),
   if you want to download the CurveAnimation corresponding to an existing
   uploaded Animation using Luau scripts, use
-  AnimationClipProvider:AnimationClipAsync.
+  `Class.AnimationClipProvider:GetAnimationClipAsync()`.
 code_samples: []
 inherits:
   - AnimationClip
