@@ -1,8 +1,19 @@
 name: AudioRecorder
 type: class
 memory_category: Internal
-summary: ''
-description: ''
+summary: |
+  Record audio streams in-experience.
+description: |
+  The **AudioRecorder** can be used to record audio streams in-experience.
+  The results can be loaded back into an `Class.AudioPlayer|AudioPlayer` for playback.
+
+  There's a fixed time limit on how long a recording can be, which is **`60` seconds**.
+
+  The recordings from the `Class.AudioRecorder|AudioRecorder` have a sample rate of 96 kHz and the format `f32le`.
+
+  At the moment `Class.AudioDeviceInput|AudioDeviceInput` can not be recorded.
+  The method `Class.AudioRecorder.GetUnrecordableInstancesAsync()|GetUnrecordableInstancesAsync()` can be used
+  to check specifically which instances aren't recordable.
 code_samples: []
 inherits:
   - Instance
@@ -12,7 +23,8 @@ deprecation_message: ''
 properties:
   - name: AudioRecorder.IsRecording
     summary: ''
-    description: ''
+    description: |
+      Returns whether the `Class.AudioRecorder|AudioRecorder` is currently recording.
     code_samples: []
     type: boolean
     tags: []
@@ -30,7 +42,8 @@ properties:
     writeCapabilities: []
   - name: AudioRecorder.TimeLength
     summary: ''
-    description: ''
+    description: |
+      Returns the current length of the recording.
     code_samples: []
     type: double
     tags:
@@ -51,7 +64,8 @@ properties:
 methods:
   - name: AudioRecorder:Clear
     summary: ''
-    description: ''
+    description: |
+      Clears out the recording from the `Class.AudioRecorder|AudioRecorder`.
     code_samples: []
     parameters: []
     returns:
@@ -115,7 +129,8 @@ methods:
     writeCapabilities: []
   - name: AudioRecorder:GetTemporaryContent
     summary: ''
-    description: ''
+    description: |
+      Returns recorded content that can be played back with `Class.AudioPlayer|AudioPlayer`.
     code_samples: []
     parameters: []
     returns:
@@ -130,7 +145,8 @@ methods:
     writeCapabilities: []
   - name: AudioRecorder:Stop
     summary: ''
-    description: ''
+    description: |
+      Stops recording.
     code_samples: []
     parameters: []
     returns:
@@ -145,7 +161,9 @@ methods:
     writeCapabilities: []
   - name: AudioRecorder:CanRecordAsync
     summary: ''
-    description: ''
+    description: |
+      Returns whether the `Class.AudioRecorder|AudioRecorder` can currently record. For instance, this will return `false`
+      if the current recording data has reached the recording time limit. To clear the recording use `Class.AudioRecorder:Clear()|:Clear()`
     code_samples: []
     parameters: []
     returns:
@@ -161,7 +179,8 @@ methods:
     writeCapabilities: []
   - name: AudioRecorder:GetUnrecordableInstancesAsync
     summary: ''
-    description: ''
+    description: |
+      A method that traverses the audio graph to find unrecordable instances.
     code_samples: []
     parameters: []
     returns:
@@ -177,7 +196,8 @@ methods:
     writeCapabilities: []
   - name: AudioRecorder:RecordAsync
     summary: ''
-    description: ''
+    description: |
+      Starts recording.
     code_samples: []
     parameters: []
     returns:
