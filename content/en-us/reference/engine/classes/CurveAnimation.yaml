@@ -53,7 +53,7 @@ description: |
 
   If you want to preview an Animation before uploading it to the Roblox site,
   you can generate a temporary id using
-  `AnimationClipProviderProvider:RegisterAnimationClip`. This generates a hash
+  `AnimationClipProvider:RegisterAnimationClip`. This generates a hash
   id that you can use for localized animation testing.
 
   ## Obtaining CurveAnimations
