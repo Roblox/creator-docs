@@ -123,7 +123,7 @@ You can specify a prefix when listing all data stores or keys, and get back only
   For new experiences, use [listing and prefixes](#listing-and-prefixes) to organize keys in your data store instead of the legacy scopes feature. For existing experiences that use scopes, continue using them.
 </Alert>
 
-Every key in a data store has a default global scope. You can organize keys further by setting a unique string as a scope for the second parameter of `Class.DataStoreService:GetDataStore()|GetDataStore()`. This automatically attaches the scope to the beginning of all keys in all operations done on the data store.
+You can organize keys in a data store further by setting a unique string as a scope for the second parameter of `Class.DataStoreService:GetDataStore()|GetDataStore()`. The default scope (if no scope is given) is "global". The scope is automatically prepended to the beginning of all keys in all operations done on the data store.
 
 <table>
 <thead>
@@ -148,7 +148,7 @@ Every key in a data store has a default global scope. You can organize keys furt
 </tbody>
 </table>
 
-The combination of data store name, scope, and key uniquely identifies a key. All three values are required to identify a key with a scope. For example, you can read a global key named `User_1234` as:
+The combination of data store name, scope, and key uniquely identifies a key. All three values are required to identify a key with a scope. For example, you can read a key named `User_1234` that is in the "global" scope as:
 
 ```lua
 local DataStoreService = game:GetService("DataStoreService")
