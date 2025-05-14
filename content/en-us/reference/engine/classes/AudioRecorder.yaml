@@ -43,7 +43,7 @@ properties:
   - name: AudioRecorder.TimeLength
     summary: ''
     description: |
-      Returns the current length of the recording.
+      Returns the current length of the recording in seconds.
     code_samples: []
     type: double
     tags:
