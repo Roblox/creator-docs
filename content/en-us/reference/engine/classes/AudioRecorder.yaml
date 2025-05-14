@@ -197,7 +197,7 @@ methods:
   - name: AudioRecorder:RecordAsync
     summary: ''
     description: |
-      Starts recording.
+      If `Class.AudioRecorder:CanRecordAsync` returns true, begins recording. If recording cannot begin, this method produces an error.
     code_samples: []
     parameters: []
     returns:
