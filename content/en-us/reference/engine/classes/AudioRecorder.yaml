@@ -9,7 +9,6 @@ description: |
 
   There's a fixed time limit on how long a recording can be, which is **`60` seconds**.
 
-  The recordings from the `Class.AudioRecorder|AudioRecorder` have a sample rate of 96 kHz and the format `f32le`.
 
   At the moment `Class.AudioDeviceInput|AudioDeviceInput` can not be recorded.
   The method `Class.AudioRecorder.GetUnrecordableInstancesAsync()|GetUnrecordableInstancesAsync()` can be used
