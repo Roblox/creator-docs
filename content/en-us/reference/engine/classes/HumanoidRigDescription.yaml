@@ -6,7 +6,8 @@ description: ''
 code_samples: []
 inherits:
   - Instance
-tags: []
+tags:
+  - NotBrowsable
 deprecation_message: ''
 properties:
   - name: HumanoidRigDescription.Chest

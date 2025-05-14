@@ -44,7 +44,7 @@ If you violate any of these requirements after you create your seller account, y
 
 Only **individual** user accounts may purchase assets for USD on the Creator Store. Groups are ineligible to purchase plugins.
 
-Transactions between any individual customer and seller are **capped** per month for safey purposes. If you're buying a lot of assets from one seller in a single month, any purchase over the limit will be prohibited until the following month. This includes any purchases between alternate accounts for either the customer or seller.
+Transactions between any individual customer and seller are **capped** per month for safety purposes. If you're buying a lot of assets from one seller in a single month, any purchase over the limit will be prohibited until the following month. This includes any purchases between alternate accounts for either the customer or seller.
 
 ### For assets
 

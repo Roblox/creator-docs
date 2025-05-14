@@ -42,7 +42,7 @@ You can see the difference immediately if you create an `Actor` and a `Part`. Th
 
 Another useful comparison is the Unreal `Actor` to the Roblox `Class.Model`. Models act as a container for a collection of interconnected parts in the same way that `Actors` in Unreal are containers for components. You specify one of the model's parts as its [primary part](parts/models.md#set-a-primary-part) to define the pivot point. Models also hold scripts, animations, sound effects, prompts, constraints, particle emitters, and more.
 
-For example, an Unreal `Actor` might have a `NiagraComponent` that uses several emitters to achieve the desired visual effect, a mesh for the shape, a physics constraint to add springiness, and a script for player interactivity. In Outliner, you see a single `Actor` named `SpringyFireball`.
+For example, an Unreal `Actor` might have a `NiagaraComponent` that uses several emitters to achieve the desired visual effect, a mesh for the shape, a physics constraint to add springiness, and a script for player interactivity. In Outliner, you see a single `Actor` named `SpringyFireball`.
 
 In Roblox, a comparable `SpringyFireball` model in the Explorer window might look something like this:
 

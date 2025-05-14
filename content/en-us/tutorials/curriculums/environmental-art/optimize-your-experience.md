@@ -38,7 +38,7 @@ When you modify physics and rendering parameters, it's useful near the end of th
 
 ## Cull nonessential content
 
-After you review your physics and rendering parameters, you can review the assets themselves to see where you can cull any nonessential content from the experience that doesn't affect your gameplay, such as identical textures with different assetIDs, complex geometry with a high vertice count, or transparencies that layer on top of each other depending on the camera view. The following sections detail what you can do to review this content, and why it helps optimization efforts.
+After you review your physics and rendering parameters, you can review the assets themselves to see where you can cull any nonessential content from the experience that doesn't affect your gameplay, such as identical textures with different assetIDs, complex geometry with many vertices, or transparencies that layer on top of each other depending on the camera view. The following sections detail what you can do to review this content, and why it helps optimization efforts.
 
 ### Remove duplicate textures
 

@@ -230,7 +230,7 @@ This time, the direction vector for the raycast function will represent the dire
    local function fireWeapon()
    	local mouseLocation = getWorldMousePosition()
 
-   	-- Calculate a normalised direction vector and multiply by laser distance
+   	-- Calculate a normalized direction vector and multiply by laser distance
    	local targetDirection = (mouseLocation - tool.Handle.Position).Unit
    end
    ```
@@ -269,7 +269,7 @@ local function getWorldMousePosition()
 local function fireWeapon()
 	local mouseLocation = getWorldMousePosition()
 
-	-- Calculate a normalised direction vector and multiply by laser distance
+	-- Calculate a normalized direction vector and multiply by laser distance
 	local targetDirection = (mouseLocation - tool.Handle.Position).Unit
 
 	-- The direction to fire the weapon multiplied by a maximum distance
@@ -991,7 +991,7 @@ end
 local function fireWeapon()
 	local mouseLocation = getWorldMousePosition()
 
-	-- Calculate a normalised direction vector and multiply by laser distance
+	-- Calculate a normalized direction vector and multiply by laser distance
 	local targetDirection = (mouseLocation - tool.Handle.Position).Unit
 
 	-- The direction to fire the weapon, multiplied by a maximum distance

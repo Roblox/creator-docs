@@ -44,11 +44,11 @@ methods:
     writeCapabilities: []
   - name: PlayerScripts:ClearComputerMovementModes
     summary: |
-      Unregisters all ComputerMovementMode enums from the experience's
-      settings menu.
+      Unregisters all ComputerMovementMode enums from the experience's settings
+      menu.
     description: |
-      Unregisters all ComputerMovementMode enums from the experience's
-      settings menu.
+      Unregisters all ComputerMovementMode enums from the experience's settings
+      menu.
     code_samples: []
     parameters: []
     returns:
@@ -80,11 +80,11 @@ methods:
     writeCapabilities: []
   - name: PlayerScripts:ClearTouchMovementModes
     summary: |
-      Unregisters all TouchMovementMode enums from the experience's
-      settings menu.
+      Unregisters all TouchMovementMode enums from the experience's settings
+      menu.
     description: |
-      Unregisters all TouchMovementMode enums from the experience's
-      settings menu.
+      Unregisters all TouchMovementMode enums from the experience's settings
+      menu.
     code_samples: []
     parameters: []
     returns:

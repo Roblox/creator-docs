@@ -12,7 +12,7 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: DockWidgetPluginGuiInfo.new
-    summary: Returns a new DockWidgetPuginGuiInfo object.
+    summary: Returns a new DockWidgetPluginGuiInfo object.
     description: The main constructor function for the `Datatype.DockWidgetPluginGuiInfo`.
     parameters:
       - name: InitialDockState

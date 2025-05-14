@@ -211,7 +211,7 @@ At the end of the transition, remaining players will be removed from the arena, 
 
 When players move into the transition state, remove their weapons.
 
-1. In PlayerManager, find the local functions. Copy and paste the highlighted code for `removePlayerWeapon()` below. The code will remove an individual player's weapon if it's actively equipt or in the player's backpack.
+1. In PlayerManager, find the local functions. Copy and paste the highlighted code for `removePlayerWeapon()` below. The code will remove an individual player's weapon if it's actively equipped or in the player's backpack.
 
    ```lua
    local function removePlayerWeapon(whichPlayer)
@@ -227,7 +227,7 @@ When players move into the transition state, remove their weapons.
        end
 
        -- If the player has the weapon in their backpack
-       local backpackWeapon = whichPlayer.Backpack:FindFirstChild("Weapon") 
+       local backpackWeapon = whichPlayer.Backpack:FindFirstChild("Weapon")
 
        if backpackWeapon then
          backpackWeapon:Destroy()
@@ -288,7 +288,7 @@ Cleanup will be its own function in MatchManager. For now, cleanup will just use
      repeat
        task.wait(gameSettings.intermissionDuration)
      until #Players:GetPlayers() >= gameSettings.minimumPlayers
-     
+
      displayManager.updateStatus("Get ready!")
      task.wait(gameSettings.transitionTime)
 
@@ -371,25 +371,25 @@ First, start a function to send players back to the lobby.
 
    ```lua
    while true do
-   	displayManager.updateStatus("Waiting for Players")
+     displayManager.updateStatus("Waiting for Players")
 
-   	repeat
-   		task.wait(gameSettings.intermissionDuration)
-   	until #Players:GetPlayers() >= gameSettings.minimumPlayers
+     repeat
+       task.wait(gameSettings.intermissionDuration)
+     until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
-		displayManager.updateStatus("Get ready!")
-		task.wait(gameSettings.transitionTime)
+     displayManager.updateStatus("Get ready!")
+     task.wait(gameSettings.transitionTime)
 
-		matchManager.prepareGame()
-		local endState = matchEnd.Event:Wait()
+     matchManager.prepareGame()
+     local endState = matchEnd.Event:Wait()
 
-		local endStatus = matchManager.getEndStatus(endState)
-		displayManager.updateStatus(endStatus)
+     local endStatus = matchManager.getEndStatus(endState)
+     displayManager.updateStatus(endStatus)
 
-		matchManager.cleanupMatch()
-		task.wait(gameSettings.transitionTime)
+     matchManager.cleanupMatch()
+     task.wait(gameSettings.transitionTime)
 
-		matchManager.resetMatch()
+     matchManager.resetMatch()
    end
    ```
 
@@ -614,7 +614,7 @@ local function removePlayerWeapon(whichPlayer)
 		end
 
 		-- If the player has the weapon in their backpack
-		local backpackWeapon = whichPlayer.Backpack:FindFirstChild("Weapon") 
+		local backpackWeapon = whichPlayer.Backpack:FindFirstChild("Weapon")
 
 		if backpackWeapon then
 			backpackWeapon:Destroy()

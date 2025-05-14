@@ -1183,6 +1183,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/HandlesBase.yaml
         ignoreTranslation: true
+      - title: HandRigDescription
+        path: /reference/engine/classes/HandRigDescription
+        type: engineapi
+        source: /reference/engine/classes/HandRigDescription.yaml
+        ignoreTranslation: true
       - title: HapticEffect
         path: /reference/engine/classes/HapticEffect
         type: engineapi
@@ -2933,6 +2938,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/VelocityMotor.yaml
         ignoreTranslation: true
+      - title: VideoCapture
+        path: /reference/engine/classes/VideoCapture
+        type: engineapi
+        source: /reference/engine/classes/VideoCapture.yaml
+        ignoreTranslation: true
       - title: VideoCaptureService
         path: /reference/engine/classes/VideoCaptureService
         type: engineapi
@@ -4276,6 +4286,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/HandlesStyle.yaml
         ignoreTranslation: true
+      - title: HandRigDescriptionSide
+        path: /reference/engine/enums/HandRigDescriptionSide
+        type: engineapi
+        source: /reference/engine/enums/HandRigDescriptionSide.yaml
+        ignoreTranslation: true
       - title: HapticEffectType
         path: /reference/engine/enums/HapticEffectType
         type: engineapi
@@ -4630,6 +4645,11 @@ navigation:
         path: /reference/engine/enums/NameOcclusion
         type: engineapi
         source: /reference/engine/enums/NameOcclusion.yaml
+        ignoreTranslation: true
+      - title: NegateOperationHiddenHistory
+        path: /reference/engine/enums/NegateOperationHiddenHistory
+        type: engineapi
+        source: /reference/engine/enums/NegateOperationHiddenHistory.yaml
         ignoreTranslation: true
       - title: NetworkOwnership
         path: /reference/engine/enums/NetworkOwnership

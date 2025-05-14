@@ -27,7 +27,7 @@ description: Prototyping
 - Office supplies
 
 <figure>
-    <img src="../../assets/game-design/prototyping/prototyping-1.png" alt="A stack of cardboard cards, a number 2 pencil, and a handful of semi-transluscent cyan blue dice sit on top of a dark brown table to signify common household objects you can use to prototype your gameplay." width="70%"/>
+    <img src="../../assets/game-design/prototyping/prototyping-1.png" alt="A stack of cardboard cards, a number 2 pencil, and a handful of semi-translucent cyan blue dice sit on top of a dark brown table to signify common household objects you can use to prototype your gameplay." width="70%"/>
     <figcaption>Examples of paper prototyping tools.</figcaption>
   </figure>
 

@@ -7,7 +7,7 @@ Creating a high-quality experience demands many skills such as modeling, scripti
 
 With Studio's **built-in** **collaboration tools**, creators can contribute to experiences independently on their own time, or work together with their team all at the same time.
 
-<img src="../assets/studio/collaboration/Collaborative-Session.jpg" alt="Three creators working together in a collaborative session, each with differnt color markers to demonstrate what objects they're currently editing in the environment." />
+<img src="../assets/studio/collaboration/Collaborative-Session.jpg" alt="Three creators working together in a collaborative session, each with different color markers to demonstrate what objects they're currently editing in the environment." />
 
 ## Manage collaborators
 
@@ -106,24 +106,24 @@ Those who have permission to edit an experience can join a collaborative session
    <Tabs>
    <TabItem label="Group-Owned Experience">
 
-	 1. Select the group from the upper‑left selector menu.
-	 2. Make sure **Creations** is selected on the left and **My Experiences** in the main panel.
+   1. Select the group from the upper‑left selector menu.
+   2. Make sure **Creations** is selected on the left and **My Experiences** in the main panel.
 
-     <Grid container spacing={1} alignItems="center">
-	   <Grid item><Chip label="My Experiences" color="primary" size="medium" /></Grid>
-	   <Grid item><Chip label="Shared With Me" color="secondary" size="medium" /></Grid>
-     </Grid>
+      <Grid container spacing={1} alignItems="center">
+        <Grid item><Chip label="My Experiences" color="primary" size="medium" /></Grid>
+        <Grid item><Chip label="Shared With Me" color="secondary" size="medium" /></Grid>
+      </Grid>
 
    </TabItem>
    <TabItem label="User-Owned Experience">
 
-	 1. Select your personal account from the upper‑left selector menu.
-	 2. Make sure **Creations** is selected on the left and **Shared With Me** in the main panel.
+   1. Select your personal account from the upper‑left selector menu.
+   2. Make sure **Creations** is selected on the left and **Shared With Me** in the main panel.
 
-     <Grid container spacing={1} alignItems="center">
-	   <Grid item><Chip label="My Experiences" color="secondary" size="medium" /></Grid>
-	   <Grid item><Chip label="Shared With Me" color="primary" size="medium" /></Grid>
-     </Grid>
+      <Grid container spacing={1} alignItems="center">
+        <Grid item><Chip label="My Experiences" color="secondary" size="medium" /></Grid>
+        <Grid item><Chip label="Shared With Me" color="primary" size="medium" /></Grid>
+      </Grid>
 
    </TabItem>
    </Tabs>
@@ -290,12 +290,12 @@ All script changes, whether saved by a collaborator, auto-saved, or committed by
    To compare any version (except the oldest) with its previous version, select it and click **Compare With Previous Version**. In the **(Diff)** tab that opens in the [Script Editor](../studio/script-editor.md), code from the newer version appears in green while code from the older version appears in red.
    </TabItem>
    <TabItem label="Compare Selected">
-	 To compare any **two** versions, hold <kbd>Ctrl</kbd> or <kbd>⌘</kbd> and select both, then click **Compare Selected Versions**. In the **(Diff)** tab that opens in the [Script Editor](../studio/script-editor.md), code from the newer version appears in green while code from the older version appears in red.
+   To compare any **two** versions, hold <kbd>Ctrl</kbd> or <kbd>⌘</kbd> and select both, then click **Compare Selected Versions**. In the **(Diff)** tab that opens in the [Script Editor](../studio/script-editor.md), code from the newer version appears in green while code from the older version appears in red.
    </TabItem>
-	 <TabItem label="Open">
-	 If the version **Comment** indicates just one script was committed, select it and click **Open Script** to open it in the [Script Editor](../studio/script-editor.md).
+   <TabItem label="Open">
+   If the version **Comment** indicates just one script was committed, select it and click **Open Script** to open it in the [Script Editor](../studio/script-editor.md).
 
-	 If the version **Comment** indicates more than one script was committed (commonly the result of an auto‑save on multiple unsaved scripts), you can click **Show** within the version's row to open a popup displaying the script(s) and their respective version. Then, from the version history window, click **Open All Scripts From Batch** to open them in the [Script Editor](../studio/script-editor.md).
+   If the version **Comment** indicates more than one script was committed (commonly the result of an auto‑save on multiple unsaved scripts), you can click **Show** within the version's row to open a popup displaying the script(s) and their respective version. Then, from the version history window, click **Open All Scripts From Batch** to open them in the [Script Editor](../studio/script-editor.md).
    </TabItem>
    </Tabs>
 
