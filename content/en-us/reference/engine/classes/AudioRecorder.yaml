@@ -180,7 +180,8 @@ methods:
   - name: AudioRecorder:GetUnrecordableInstancesAsync
     summary: ''
     description: |
-      A method that traverses the audio graph to find unrecordable instances.
+      Traverses the audio graph, starting from this recorder's inputs, to find unrecordable instances.
+      Currently, `Class.AudioDeviceInput` is not recordable.
     code_samples: []
     parameters: []
     returns:
