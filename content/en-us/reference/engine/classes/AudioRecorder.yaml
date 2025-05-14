@@ -130,6 +130,7 @@ methods:
     summary: ''
     description: |
       Returns recorded content that can be played back with `Class.AudioPlayer|AudioPlayer`.
+      The content retrieved from this method is only valid in the current session.
     code_samples: []
     parameters: []
     returns:
