@@ -701,8 +701,8 @@ methods:
       relativity of the motion are determined by the
       `Class.UIDragDetector.DragSpace|DragSpace` and
       `Class.UIDragDetector.DragRelativity|DragRelativity` properties, unless
-      overriden by returning a specified `Enum.UIDragDetectorDragRelativity` and
-      `Enum.UIDragDetectorDragSpace` as the third and fourth return values.
+      overridden by returning a specified `Enum.UIDragDetectorDragRelativity`
+      and `Enum.UIDragDetectorDragSpace` as the third and fourth return values.
 
       If the function returns `nil`, the object will not be moved. This is
       useful if the script has not yet collected all the information it needs to
@@ -716,7 +716,7 @@ methods:
         summary: |
           Function for monitoring
           `Class.UIDragDetector.DragContinue|DragContinue` signals. This
-          function receives the singal's screen space input position and returns
+          function receives the signal's screen space input position and returns
           a `Datatype.UDim2` and float containing the desired motion of the drag
           in the desired space and relativity. If this function returns `nil`,
           the object will not be moved.

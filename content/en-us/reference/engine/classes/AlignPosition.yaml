@@ -5,11 +5,10 @@ summary: |
   Constraint which applies force to move two attachments together, or to move
   one attachment to a goal position.
 description: |
-  The **AlignPosition** constraint applies force to move two attachments
-  together, or to move one attachment to a goal position. As indicated by the
-  name, it only affects the **position** of the attachments, not their
-  orientation (to align attachments by **orientation**, see
-  `Class.AlignOrientation`).
+  The `AlignPosition` constraint applies force to move two attachments together,
+  or to move one attachment to a goal position. As indicated by the name, it
+  only affects the **position** of the attachments, not their orientation (to
+  align attachments by **orientation**, see `Class.AlignOrientation`).
 
   When configuring this constraint, it may be helpful to study
   [Roblox Units](../../../physics/units.md) to understand how Roblox units
@@ -36,8 +35,8 @@ description: |
 
   You can configure this constraint to apply the maximum force that constraints
   allow through the `Class.AlignPosition.RigidityEnabled|RigidityEnabled`
-  property. When true, the physics solver reacts as quickly as possible to
-  complete the alignment. When false, the force applied by the constraint is
+  property. When `true`, the physics solver reacts as quickly as possible to
+  complete the alignment. When `false`, the force applied by the constraint is
   limited based on `Class.AlignPosition.ForceLimitMode|ForceLimitMode`,
   `Class.AlignPosition.MaxVelocity|MaxVelocity`, and
   `Class.AlignPosition.Responsiveness|Responsiveness`. See
@@ -59,11 +58,11 @@ properties:
       `Class.Constraint.Attachment0|Attachment0` at that attachment's location,
       or at the parents' center of mass.
     description: |
-      When false (default), force is applied to the parent of
+      When `false` (default), force is applied to the parent of
       `Class.Constraint.Attachment0|Attachment0` at that attachment's location,
       meaning that if the parent's center of mass is not aligned with the
       direction of the force, torque will be applied as well as force. When
-      true, force is applied at the parents' center of mass.
+      `true`, force is applied at the parents' center of mass.
     code_samples: []
     type: boolean
     tags: []
@@ -82,10 +81,10 @@ properties:
   - name: AlignPosition.ForceLimitMode
     summary: |
       Determines how the constraint force will be limited. Only used if
-      `Class.AlignPosition.RigidityEnabled|RigidityEnabled` is false.
+      `Class.AlignPosition.RigidityEnabled|RigidityEnabled` is `false`.
     description: |
       Determines how the constraint force will be limited when
-      `Class.AlignPosition.RigidityEnabled|RigidityEnabled` is false. When set
+      `Class.AlignPosition.RigidityEnabled|RigidityEnabled` is `false`. When set
       to `Enum.ForceLimitMode|Magnitude`, the constraint force will be limited
       such that the magnitude is less than
       `Class.AlignPosition.MaxForce|MaxForce`. When set to
@@ -112,12 +111,12 @@ properties:
     summary: |
       Determines the axes that the constraint uses to limit the force. Only
       applies when `Class.AlignPosition.RigidityEnabled|RigidityEnabled` is
-      false and `Class.AlignPosition.ForceLimitMode` is
+      `false` and `Class.AlignPosition.ForceLimitMode` is
       `Enum.ForceLimitMode|PerAxis`. .
     description: |
       Determines the axes that the constraint uses to limit the force. Only
       applies when `Class.AlignPosition.RigidityEnabled|RigidityEnabled` is
-      false and `Class.AlignPosition.ForceLimitMode` is
+      `false` and `Class.AlignPosition.ForceLimitMode` is
       `Enum.ForceLimitMode|PerAxis`. When set to
       `Enum.ActuatorRelativeTo|World`, the constraint force is computed in the
       world reference frame and the force limits specified in
@@ -148,7 +147,7 @@ properties:
     description: |
       Maximum force along each axis that the constraint can apply to achieve its
       goal. Only used if `Class.AlignPosition.RigidityEnabled|RigidityEnabled`
-      is false and `Class.AlignPosition.ForceLimitMode|ForceLimitMode` is
+      is `false` and `Class.AlignPosition.ForceLimitMode|ForceLimitMode` is
       `Enum.ForceLimitMode|PerAxis`. The axes used to apply to the limit are
       specified using the `Class.AlignPosition.ForceRelativeTo|ForceRelativeTo`
       property.
@@ -172,8 +171,8 @@ properties:
       Maximum force magnitude the constraint can apply to achieve its goal.
     description: |
       Maximum force magnitude the constraint can apply to achieve its goal. Only
-      used if `Class.AlignPosition.RigidityEnabled|RigidityEnabled` is false and
-      `Class.AlignPosition.ForceLimitMode|ForceLimitMode` is
+      used if `Class.AlignPosition.RigidityEnabled|RigidityEnabled` is `false`
+      and `Class.AlignPosition.ForceLimitMode|ForceLimitMode` is
       `Enum.ForceLimitMode|Magnitude`.
 
       Note that `Class.AlignPosition.MaxForce|MaxForce`, as well as
@@ -200,7 +199,7 @@ properties:
       Maximum speed the attachments can move when converging.
     description: |
       Maximum speed the attachments can move when converging. Only used if
-      `Class.AlignPosition.RigidityEnabled|RigidityEnabled` is false.
+      `Class.AlignPosition.RigidityEnabled|RigidityEnabled` is `false`.
 
       Note that `Class.AlignPosition.MaxVelocity|MaxVelocity`, as well as
       `Class.AlignPosition.MaxForce|MaxForce`, are **caps** to the velocity and
@@ -283,9 +282,9 @@ properties:
       `Class.Constraint.Attachment0|Attachment0`, or to both attachments in
       equal and opposite directions.
     description: |
-      If false (default), the constraint only applies force to
+      If `false` (default), the constraint only applies force to
       `Class.Constraint.Attachment0|Attachment0` while
-      `Class.Constraint.Attachment1|Attachment1` remains unaffected. If true,
+      `Class.Constraint.Attachment1|Attachment1` remains unaffected. If `true`,
       the constraint applies force to both attachments in **equal and opposite
       directions**.
     code_samples: []
@@ -331,12 +330,12 @@ properties:
       reacts as quickly as possible to complete the alignment.
     description: |
       Whether force is dependent on other properties, or if the physics solver
-      reacts as quickly as possible to complete the alignment. If false
+      reacts as quickly as possible to complete the alignment. If `false`
       (default), the force is determined by
       `Class.AlignPosition.MaxForce|MaxForce`,
       `Class.AlignPosition.MaxVelocity|MaxVelocity`, and
-      `Class.AlignPosition.Responsiveness|Responsiveness`. If true, the physics
-      solver reacts as quickly as possible to complete the alignment.
+      `Class.AlignPosition.Responsiveness|Responsiveness`. If `true`, the
+      physics solver reacts as quickly as possible to complete the alignment.
     code_samples: []
     type: boolean
     tags: []

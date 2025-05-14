@@ -36,9 +36,9 @@ description: |
 
   For security purposes, using `EditableImage` fails by default for published
   experiences. To enable usage, you must be 13+ age verified and ID verified.
-  After you are verified, open Studio's [Game
-  Settings](../../../studio/game-settings.md), select **Security**, and enable
-  the **Allow Mesh&nbsp;&#47; Image APIs** toggle.
+  After you are verified, open Studio's
+  [Game Settings](../../../studio/game-settings.md), select **Security**, and
+  enable the **Allow Mesh&nbsp;&#47; Image APIs** toggle.
 
   #### Permissions
 
@@ -117,8 +117,7 @@ methods:
         default: ''
         summary: |
           Center of the circle, relative to the top-left corner of the
-          `EditableImage`. Positions outside the canvas bounds are
-          allowed.
+          `EditableImage`. Positions outside the canvas bounds are allowed.
       - name: radius
         type: int
         default: ''
@@ -152,12 +151,12 @@ methods:
     writeCapabilities: []
   - name: EditableImage:DrawImage
     summary: |
-      Draws another `EditableImage` into this `EditableImage` at the
-      given position.
+      Draws another `EditableImage` into this `EditableImage` at the given
+      position.
     description: |
-      Draws another `EditableImage` into this `EditableImage` at the
-      given position. Positions outside the canvas bounds are allowed such that
-      only part of the new image is drawn.
+      Draws another `EditableImage` into this `EditableImage` at the given
+      position. Positions outside the canvas bounds are allowed such that only
+      part of the new image is drawn.
     code_samples: []
     parameters:
       - name: position
@@ -188,12 +187,12 @@ methods:
     writeCapabilities: []
   - name: EditableImage:DrawImageProjected
     summary: |
-      Projects another `EditableImage` into an `Class.EditableMesh` and
-      stores the result on this `EditableImage`.
+      Projects another `EditableImage` into an `Class.EditableMesh` and stores
+      the result on this `EditableImage`.
     description: |
-      Projects another `EditableImage` into an `Class.EditableMesh` and
-      stores the result on this `EditableImage` by using the specified
-      projection and brush configuration.
+      Projects another `EditableImage` into an `Class.EditableMesh` and stores
+      the result on this `EditableImage` by using the specified projection and
+      brush configuration.
     code_samples: []
     parameters:
       - name: mesh
@@ -242,8 +241,8 @@ methods:
     writeCapabilities: []
   - name: EditableImage:DrawImageTransformed
     summary: |
-      Draws an image into this `EditableImage` with transformations
-      including scaling and rotation, placing it at the specified position.
+      Draws an image into this `EditableImage` with transformations including
+      scaling and rotation, placing it at the specified position.
     description: |
       This method lets you draw an `EditableImage` into this `EditableImage`
       with transformations applied, such as scaling and rotation. The position
@@ -304,8 +303,8 @@ methods:
     summary: |
       Draws a line between two provided points.
     description: |
-      Draws an anti-aliased line on the `EditableImage` one pixel thick
-      between the two provided points.
+      Draws an anti-aliased line on the `EditableImage` one pixel thick between
+      the two provided points.
     code_samples: []
     parameters:
       - name: p1
@@ -347,8 +346,8 @@ methods:
     summary: |
       Draws a rectangle of the given size at the given top-left position.
     description: |
-      Draws a rectangle on the `EditableImage` of the given size at the
-      given top-left position.
+      Draws a rectangle on the `EditableImage` of the given size at the given
+      top-left position.
     code_samples: []
     parameters:
       - name: position
@@ -392,9 +391,9 @@ methods:
     summary: |
       Reads a rectangular region of pixels into a buffer.
     description: |
-      Reads a rectangular region of pixels from an `EditableImage` and
-      returns it as a buffer. Each number in the buffer is a single byte, with
-      pixels stored in a sequence of four bytes (red, green, blue, and alpha).
+      Reads a rectangular region of pixels from an `EditableImage` and returns
+      it as a buffer. Each number in the buffer is a single byte, with pixels
+      stored in a sequence of four bytes (red, green, blue, and alpha).
 
       Note that this method uses alpha instead of transparency, unlike the
       `EditableImage` drawing methods.
@@ -428,9 +427,9 @@ methods:
     summary: |
       Writes a rectangular region of pixels into the image.
     description: |
-      Writes a rectangular region of pixels to an `EditableImage` from a
-      buffer. Each number in the buffer is a single byte, with pixels stored in
-      a sequence of four bytes (red, green, blue, and alpha).
+      Writes a rectangular region of pixels to an `EditableImage` from a buffer.
+      Each number in the buffer is a single byte, with pixels stored in a
+      sequence of four bytes (red, green, blue, and alpha).
 
       Note that this method uses alpha instead of transparency, unlike the
       `EditableImage` drawing methods.

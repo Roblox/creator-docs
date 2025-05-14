@@ -1008,6 +1008,26 @@ methods:
     code_samples: []
     tags: []
     deprecation_message: ''
+  - name: CFrame:AngleBetween
+    summary: |
+      Returns the angle, in radians, between the orientation of one
+      `Datatype.CFrame` and another.
+    description: |
+      Returns the angle, in radians, between the orientation of one
+      `Datatype.CFrame` and another. This function does not take the position of
+      either `Datatype.CFrame` into account and only looks at the relative
+      orientation.
+    parameters:
+      - name: other
+        type: CFrame
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
 functions:
 math_operations:
   - operation: '*'

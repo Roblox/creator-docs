@@ -4,13 +4,14 @@ memory_category: Instances
 summary: |
   Applies a force to maintain a constant position.
 description: |
-  The **BodyPosition** object applies a force on a `Class.BasePart` such that it
-  will maintain a constant position in the world. The
+  The `BodyPosition` object applies a force on an assembly such that it will
+  maintain a constant position in the world. The
   `Class.BodyPosition.Position|Position` property, not to be confused with
   `Class.BasePart.Position`, controls the target world position. This is the
-  translational counterpart to a `Class.BodyGyro`. If you need further control
-  on a force applied to an object, consider using a `Class.BodyForce` or
-  `Class.BodyThrust` instead.
+  translational counterpart to a `Class.BodyGyro`.
+
+  If you need further control on a force applied to an object, consider using a
+  `Class.BodyForce` or `Class.BodyThrust` instead.
 
   The strength of the force applied by this object is controlled by several
   factors, namely the distance to the goal position: the force is stronger when
@@ -18,7 +19,7 @@ description: |
   (power). The present velocity will also dampen the force applied by this
   object, and this is amplified by `Class.BodyPosition.D|D` (dampening). The
   resulting force is then capped by `Class.BodyPosition.MaxForce|MaxForce`. Note
-  the force applied on the part to achieve the goal position may vary on a
+  the force applied on the assembly to achieve the goal position may vary on a
   per-axis basis.
 code_samples: []
 inherits:
@@ -27,22 +28,22 @@ tags:
   - Deprecated
 deprecation_message: |
   This object is deprecated and should not be used for new work. Use
-  `Class.AlignPosition` instead.
+  `Class.AlignPosition` instead, and see the
+  [legacy conversion notes](../../../physics/mover-constraints.md#legacy-mover-conversion).
 properties:
   - name: BodyPosition.D
     summary: |
       Determines the amount of dampening to use in reaching the goal
       `Class.BodyPosition.Position|Position`.
     description: |
-      The D property determines how much **dampening** will be applied to the
-      force used toward reaching the goal
-      `Class.BodyPosition.Position|Position`. When the part approaches the goal
-      position it needs to decelerate, otherwise it will move past the goal and
-      have to stop and re-accelerate back toward the goal. This is often creates
-      undesirable **rubber-banding** effect, so applying dampening using this
-      property is how that effect is avoided. The higher this value is set, the
-      greater the dampening curve becomes, or the slower the part will approach
-      the goal position.
+      This property determines how much dampening will be applied to the force
+      used toward reaching the goal `Class.BodyPosition.Position|Position`. When
+      the assembly approaches the goal position it needs to decelerate,
+      otherwise it will move past the goal and have to stop and re-accelerate
+      back toward the goal. This is often creates an undesirable
+      "rubber‑banding" effect, avoided by applying dampening. The higher this
+      value is set, the greater the dampening curve becomes, or the slower the
+      assembly will approach the goal position.
     code_samples: []
     type: float
     tags: []
@@ -62,11 +63,11 @@ properties:
     summary: |
       Determines the limit on how much force that may be applied to each axis.
     description: |
-      The MaxForce property determines the limit on the amount of force that may
-      be applied on each axis in reaching the goal
-      `Class.BodyPosition.Position|Position`. If a part isn't moving, consider
-      increasing this value (also check that it is not
-      `Class.BasePart.Anchored|Anchored` or attached to any anchored parts).
+      This property determines the limit on the amount of force that may be
+      applied on each axis in reaching the goal
+      `Class.BodyPosition.Position|Position`. If an assembly isn't moving,
+      consider increasing this value and also check that it is not
+      `Class.BasePart.Anchored|Anchored` or attached to any anchored assemblies.
     code_samples: []
     type: Vector3
     tags: []
@@ -87,14 +88,13 @@ properties:
       Determines how aggressive of a force is applied in reaching the goal
       position.
     description: |
-      The P property determines how much
-      [power](<https://en.wikipedia.org/wiki/Power_(physics)>) is used while
-      applying force in order to reach the goal
-      `Class.BodyPosition.Position|Position`. The higher this value, the more
-      power will be used and the faster it will be used. The force the
-      `Class.BodyPosition` exerts increases as the difference between the part's
-      current position and the goal position increases. This property is
-      multiplied to this force to either amplify or diminish it.
+      This property determines how much power is used while applying force in
+      order to reach the goal `Class.BodyPosition.Position|Position`. The higher
+      this value, the more power will be used and the faster it will be used.
+      The force the `Class.BodyPosition` exerts increases as the difference
+      between the assembly's current position and the goal position increases.
+      This property is multiplied to this force to either amplify or diminish
+      it.
     code_samples: []
     type: float
     tags: []
@@ -114,7 +114,7 @@ properties:
     summary: |
       Determines the goal position towards which force will be applied.
     description: |
-      The Position property determines the goal position towards which the
+      This property determines the goal position towards which the
       `Class.BodyPosition` will apply force.
     code_samples: []
     type: Vector3

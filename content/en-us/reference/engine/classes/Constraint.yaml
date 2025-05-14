@@ -5,8 +5,8 @@ summary: |
   The base class for constraint-based objects.
 description: |
   The base class for constraint-based objects. See
-  [Mover Constraints](../../../physics/mover-constraints.md) and
-  [Mechanical Constraints](../../../physics/mechanical-constraints.md) for more
+  [mover constraints](../../../physics/mover-constraints.md) and
+  [mechanical constraints](../../../physics/mechanical-constraints.md) for more
   details.
 code_samples: []
 inherits:
@@ -19,10 +19,9 @@ properties:
     summary: |
       Indicates if the constraint is currently active in the world.
     description: |
-      True if the constraint is currently active in the world.
-
-      True if the constraint and both of its parts are in the `Class.Workspace`
-      and the constraint's `Class.Constraint.Enabled` property is true.
+      This property is `true` if the constraint and both of its parts are in the
+      `Class.Workspace` and the constraint's `Class.Constraint.Enabled` property
+      is `true`.
     code_samples: []
     type: boolean
     tags:

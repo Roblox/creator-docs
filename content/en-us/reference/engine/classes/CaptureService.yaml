@@ -133,6 +133,20 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: CaptureService:StopVideoCapture
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: CaptureService:TakeCapture
     summary: ''
     description: ''
@@ -150,6 +164,29 @@ methods:
       - type: ()
         summary: ''
     tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: CaptureService:StartVideoCaptureAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: onCaptureReady
+        type: Function
+        default: ''
+        summary: ''
+      - name: captureParams
+        type: Dictionary
+        default: nil
+        summary: ''
+    returns:
+      - type: VideoCaptureResult
+        summary: ''
+    tags:
+      - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

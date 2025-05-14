@@ -4,12 +4,12 @@ memory_category: PhysicsParts
 summary: |
   Applies constant torque to an assembly from its center of mass.
 description: |
-  A **Torque** constraint applies constant torque to an assembly from its center
+  A `Torque` constraint applies constant torque to an assembly from its center
   of mass. Alternatively:
 
-  - Because the `Class.Torque` constraint applies **constant** torque and
-    angular acceleration, very high speeds may result if no other forces are
-    involved. If you want to maintain a more steady velocity over time, use an
+  - Because the `Torque` constraint applies **constant** torque and angular
+    acceleration, very high speeds may result if no other forces are involved.
+    If you want to maintain a more steady velocity over time, use an
     `Class.AngularVelocity` constraint.
   - If you only need **initial** velocity, set the
     `Class.BasePart.AssemblyAngularVelocity|AssemblyAngularVelocity` property

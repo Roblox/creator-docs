@@ -79,3 +79,8 @@ items:
     value: 8
     tags: []
     deprecation_message: ''
+  - name: PreWrapDeformerCage
+    summary: ''
+    value: 9
+    tags: []
+    deprecation_message: ''

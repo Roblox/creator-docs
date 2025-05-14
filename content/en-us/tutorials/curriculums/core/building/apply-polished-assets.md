@@ -126,11 +126,11 @@ To apply the asset library to your platforms:
 1. In the **Platforms** folder, paste **PlatformA** into the **Level_1** model.
 1. From the toolbar, use the **Move** and **Scale** tools to position and scale the model to the size of your first placeholder sea stack platform.
 
-   <img src="../../../../assets/tutorials/core-building-and-scripting/First-Platform.jpg" alt="A view of the sample laser tag experience with only the first platform visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+   <img src="../../../../assets/tutorials/core-building-and-scripting/First-Platform.jpg" alt="A view of the sample laser tag experience with only the first platform visible with the polished assets. Other greybox sea stacks are translucent in the distance." width="80%" />
 
 1. Repeat this process, adding and configuring either a **PlatformA** or **PlatformB** asset to the top of each placeholder sea stack platform.
 
-   <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/Platforms-5.jpg" alt="A view of the sample laser tag experience with all of the platforms visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+   <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/Platforms-5.jpg" alt="A view of the sample laser tag experience with all of the platforms visible with the polished assets. Other greybox sea stacks are translucent in the distance." width="80%" />
 
   </TabItem>
   <TabItem key = "2" label="Recreate the sample">
@@ -146,7 +146,7 @@ To exactly recreate the sea stack platforms within the sample [Island Jump - Fin
    1. Set **Origin.Position** to `-30, 3, 9`.
    1. Set **Scale** to `2.2`.
 
-   <img src="../../../../assets/tutorials/core-building-and-scripting/First-Platform.jpg" alt="A view of the sample laser tag experience with only the first platform visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+   <img src="../../../../assets/tutorials/core-building-and-scripting/First-Platform.jpg" alt="A view of the sample laser tag experience with only the first platform visible with the polished assets. Other greybox sea stacks are translucent in the distance." width="80%" />
 
 4. Repeat this process, adding and configuring the following **PlatformA** assets into their respective sea stack platform models:
 
@@ -182,7 +182,7 @@ To exactly recreate the sea stack platforms within the sample [Island Jump - Fin
    </tbody>
    </table>
 
-   <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/Platforms-4.jpg" alt="A view of the sample laser tag experience with all Platform A platforms visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+   <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/Platforms-4.jpg" alt="A view of the sample laser tag experience with all Platform A platforms visible with the polished assets. Other greybox sea stacks are translucent in the distance." width="80%" />
 
 5. Add and configure the following **PlatformB** assets into their respective sea stack platform models:
 
@@ -268,7 +268,7 @@ To exactly recreate the sea stack platforms within the sample [Island Jump - Fin
    </tbody>
    </table>
 
-   <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/Platforms-5.jpg" alt="A view of the sample laser tag experience with all of the platforms visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+   <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/Platforms-5.jpg" alt="A view of the sample laser tag experience with all of the platforms visible with the polished assets. Other greybox sea stacks are translucent in the distance." width="80%" />
 
   </TabItem>
 </Tabs>
@@ -300,7 +300,7 @@ To apply the asset library to your sea stacks:
 1. In the **Platforms** folder, paste **SeaStackMesh** into one of your level models.
 1. From the toolbar, use the **Move**, **Scale**, and **Rotate** tools to position, scale, and rotate the mesh until it is the length of your placeholder sea stack. If necessary, use more than one instance of the **SeaStackMesh** mesh.
 
-   <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-3.jpg" alt="A view of the sample laser tag experience with all of the platforms visible with the polished assets, as well as the first sea stack. Other greybox sea stacks are transluscent in the distance." width="80%" />
+   <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-3.jpg" alt="A view of the sample laser tag experience with all of the platforms visible with the polished assets, as well as the first sea stack. Other greybox sea stacks are translucent in the distance." width="80%" />
 
 1. Repeat this process, adding and configuring more **SeaStackMesh** and **SeaStackCaveMesh** meshes for each respective sea stack and tunnel in your experience.
 
@@ -344,7 +344,7 @@ To exactly recreate the sea stacks within the sample [Island Jump - Final](https
    </tbody>
    </table>
 
-   <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-3.jpg" alt="A view of the sample laser tag experience with all of the platforms and level 1 sea stacks visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+   <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-3.jpg" alt="A view of the sample laser tag experience with all of the platforms and level 1 sea stacks visible with the polished assets. Other greybox sea stacks are translucent in the distance." width="80%" />
 
 4. Repeat this process, adding and configuring the following **SeaStackMesh** asset into the **Level_3b** model:
 
@@ -365,7 +365,7 @@ To exactly recreate the sea stacks within the sample [Island Jump - Final](https
    </tbody>
    </table>
 
-   <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-4.jpg" alt="A view of the sample laser tag experience with all of the platforms and level 1-2 sea stacks visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+   <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-4.jpg" alt="A view of the sample laser tag experience with all of the platforms and level 1-2 sea stacks visible with the polished assets. Other greybox sea stacks are translucent in the distance." width="80%" />
 
 5. Add and configure the following **SeaStackMesh** asset into the **Level_3c** model:
 
@@ -386,7 +386,7 @@ To exactly recreate the sea stacks within the sample [Island Jump - Final](https
    </tbody>
    </table>
 
-   <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-5.jpg" alt="A view of the sample laser tag experience with all of the platforms and level 1-3 sea stacks visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+   <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-5.jpg" alt="A view of the sample laser tag experience with all of the platforms and level 1-3 sea stacks visible with the polished assets. Other greybox sea stacks are translucent in the distance." width="80%" />
 
 6. Add and configure the following **SeaStackMesh** assets into the **Level_4a** model:
 
@@ -412,7 +412,7 @@ To exactly recreate the sea stacks within the sample [Island Jump - Final](https
    </tbody>
    </table>
 
-   <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-6.jpg" alt="A view of the sample laser tag experience with all of the platforms and level 1-4a sea stacks visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+   <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-6.jpg" alt="A view of the sample laser tag experience with all of the platforms and level 1-4a sea stacks visible with the polished assets. Other greybox sea stacks are translucent in the distance." width="80%" />
 
 7. Add and configure the following assets into the **Level_4b** model:
 
@@ -447,7 +447,7 @@ To exactly recreate the sea stacks within the sample [Island Jump - Final](https
    </tbody>
    </table>
 
-   <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-7.jpg" alt="A view of the sample laser tag experience with all of the platforms and level 1-4a and 4b sea stacks visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+   <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-7.jpg" alt="A view of the sample laser tag experience with all of the platforms and level 1-4a and 4b sea stacks visible with the polished assets. Other greybox sea stacks are translucent in the distance." width="80%" />
 
 8. Add and configure the following **SeaStackMesh** asset into the **Level_4c** model:
 
@@ -602,7 +602,7 @@ To exactly recreate the sea stacks within the sample [Island Jump - Final](https
       </tbody>
       </table>
 
-      <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-12.png" alt="A view of the sample laser tag experience with all of the platforms and level 1-5b sea stacks visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+      <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-12.png" alt="A view of the sample laser tag experience with all of the platforms and level 1-5b sea stacks visible with the polished assets. Other greybox sea stacks are translucent in the distance." width="80%" />
 
 13. Add and configure the following **SeaStackMesh** assets into the **Level_5c** model:
 
@@ -648,7 +648,7 @@ To exactly recreate the sea stacks within the sample [Island Jump - Final](https
       </tbody>
       </table>
 
-      <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-13.jpg" alt="A view of the sample laser tag experience with all of the platforms and level 1-5c sea stacks visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+      <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-13.jpg" alt="A view of the sample laser tag experience with all of the platforms and level 1-5c sea stacks visible with the polished assets. Other greybox sea stacks are translucent in the distance." width="80%" />
 
 14. Add and configure the following **SeaStackMesh** assets into the **Level_5d** model:
 
@@ -679,7 +679,7 @@ To exactly recreate the sea stacks within the sample [Island Jump - Final](https
       </tbody>
       </table>
 
-      <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-14.jpg" alt="A view of the sample laser tag experience with all of the platforms and level 1-5d sea stacks visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+      <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-14.jpg" alt="A view of the sample laser tag experience with all of the platforms and level 1-5d sea stacks visible with the polished assets. Other greybox sea stacks are translucent in the distance." width="80%" />
 
 15. Add and configure the following **SeaStackMesh** assets into the **Level_6a** model:
 
@@ -710,7 +710,7 @@ To exactly recreate the sea stacks within the sample [Island Jump - Final](https
       </tbody>
       </table>
 
-      <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-15.jpg" alt="A view of the sample laser tag experience with all of the platforms and level 1-6a sea stacks visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+      <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-15.jpg" alt="A view of the sample laser tag experience with all of the platforms and level 1-6a sea stacks visible with the polished assets. Other greybox sea stacks are translucent in the distance." width="80%" />
 
 16. Add and configure the following **SeaStackMesh** assets into the **Level_6b** model:
 
@@ -761,7 +761,7 @@ To exactly recreate the sea stacks within the sample [Island Jump - Final](https
       </tbody>
       </table>
 
-      <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-16.jpg" alt="A view of the sample laser tag experience with all of the platforms and level 1-6b sea stacks visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+      <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-16.jpg" alt="A view of the sample laser tag experience with all of the platforms and level 1-6b sea stacks visible with the polished assets. Other greybox sea stacks are translucent in the distance." width="80%" />
 
 17. Add and configure the following **SeaStackMesh** assets into the **Level_6c** model:
 
@@ -807,7 +807,7 @@ To exactly recreate the sea stacks within the sample [Island Jump - Final](https
       </tbody>
       </table>
 
-      <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-17.jpg" alt="A view of the sample laser tag experience with all of the platforms and level 1-6c sea stacks visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+      <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-17.jpg" alt="A view of the sample laser tag experience with all of the platforms and level 1-6c sea stacks visible with the polished assets. Other greybox sea stacks are translucent in the distance." width="80%" />
 
 18. Add and configure the following **SeaStackMesh** assets into the **Level_7a** model:
 
@@ -848,7 +848,7 @@ To exactly recreate the sea stacks within the sample [Island Jump - Final](https
       </tbody>
       </table>
 
-      <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-18.jpg" alt="A view of the sample laser tag experience with all of the platforms and level 1-7a sea stacks visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+      <img src="../../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-18.jpg" alt="A view of the sample laser tag experience with all of the platforms and level 1-7a sea stacks visible with the polished assets. Other greybox sea stacks are translucent in the distance." width="80%" />
 
 19. Delete your placeholder greybox sea stack platforms.
 
@@ -1170,7 +1170,7 @@ To playtest your experience:
 
 1. Click the **Play** button from the playtesting options.
 
-	 <img src="../../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Play button highlighted in Studio's playtesting options." width="228" />
+   <img src="../../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Play button highlighted in Studio's playtesting options." width="228" />
 
 1. Play your experience and try to reach the flare at the top of the stacks.
 1. When you're done, click the **Stop** button. Studio exits playtest mode.

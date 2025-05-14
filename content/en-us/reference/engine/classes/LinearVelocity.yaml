@@ -2,9 +2,9 @@ name: LinearVelocity
 type: class
 memory_category: PhysicsParts
 summary: |
-  Applies force on an assembly to maintain a **constant** linear velocity.
+  Applies force on an assembly to maintain a constant linear velocity.
 description: |
-  The **LinearVelocity** constraint applies force on an assembly to maintain a
+  The `LinearVelocity` constraint applies force on an assembly to maintain a
   **constant** linear velocity. It can be set to apply force along a
   `Datatype.Vector3`, line, or 2D&nbsp;plane. Alternatively:
 
@@ -49,7 +49,7 @@ properties:
       `Class.LinearVelocity.MaxPlanarAxesForce|MaxPlanarAxesForce` when
       `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` is
       `Enum.VelocityConstraintMode|Plane`. Only used when
-      `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled` is true.
+      `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled` is `true`.
     code_samples: []
     type: ForceLimitMode
     tags: []
@@ -143,7 +143,7 @@ properties:
     summary: |
       Maximum force along each axis that the constraint can apply to achieve the
       vector velocity. Only used if
-      `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled` is true,
+      `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled` is `true`,
       `Class.LinearVelocity.ForceLimitMode|ForceLimitMode` is
       `Enum.ForceLimitMode|PerAxis`, and
       `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` is
@@ -151,7 +151,7 @@ properties:
     description: |
       Maximum force along each axis that the constraint can apply to achieve the
       target velocity. Only used if
-      `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled` is true,
+      `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled` is `true`,
       `Class.LinearVelocity.ForceLimitMode|ForceLimitMode` is
       `Enum.ForceLimitMode|PerAxis`, and
       `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` is
@@ -177,7 +177,7 @@ properties:
       Maximum magnitude of the force vector the constraint can apply.
     description: |
       Maximum magnitude of the force vector the constraint can apply. Only used
-      if `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled` is true
+      if `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled` is `true`
       and `Class.LinearVelocity.ForceLimitMode|ForceLimitMode` is
       `Enum.ForceLimitMode|Magnitude`.
     code_samples: []
@@ -199,7 +199,7 @@ properties:
     summary: |
       Maximum force along each axis that the constraint can apply to achieve the
       plane velocity. Only used if
-      `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled` is true,
+      `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled` is `true`,
       `Class.LinearVelocity.ForceLimitMode|ForceLimitMode` is
       `Enum.ForceLimitMode|PerAxis`, and
       `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` is
@@ -207,7 +207,7 @@ properties:
     description: |
       Maximum force along each axis that the constraint can apply to achieve the
       plane velocity. Only used if
-      `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled` is true,
+      `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled` is `true`,
       `Class.LinearVelocity.ForceLimitMode|ForceLimitMode` is
       `Enum.ForceLimitMode|PerAxis`, and
       `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` is
@@ -309,11 +309,9 @@ properties:
     writeCapabilities: []
   - name: LinearVelocity.RelativeTo
     summary: |
-      Sets the `Enum.ActuatorRelativeTo` property for the `Class.LinearVelocity`
-      constraint.
+      Sets the `Enum.ActuatorRelativeTo` property for the constraint.
     description: |
-      Sets the `Enum.ActuatorRelativeTo` property for the `Class.LinearVelocity`
-      constraint.
+      Sets the `Enum.ActuatorRelativeTo` property for the constraint.
     code_samples: []
     type: ActuatorRelativeTo
     tags: []
@@ -392,11 +390,11 @@ properties:
     writeCapabilities: []
   - name: LinearVelocity.VelocityConstraintMode
     summary: |
-      The mode of the `Class.LinearVelocity` constraint.
+      The mode of the constraint.
     description: |
-      The mode of the `Class.LinearVelocity` constraint:
-      `Enum.VelocityConstraintMode|Line`, `Enum.VelocityConstraintMode|Plane`,
-      or `Enum.VelocityConstraintMode|Vector`. Default is
+      The mode of the constraint: `Enum.VelocityConstraintMode|Line`,
+      `Enum.VelocityConstraintMode|Plane`, or
+      `Enum.VelocityConstraintMode|Vector`. Default is
       `Enum.VelocityConstraintMode|Vector`.
     code_samples: []
     type: VelocityConstraintMode

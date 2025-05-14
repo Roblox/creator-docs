@@ -136,24 +136,24 @@ To change package permissions for a collaborator, such as a friend or group:
 1. In the **Asset Configuration** window, select **Permissions**.
 1. Using the search bar, input and select a collaborator that you want to grant permission to use your package, then choose a permission level.
 
-     <table>
-     <thead>
-     	<tr>
-     	<th>Permission</th>
-     	<th>Description</th>
-     	</tr>
-     </thead>
-     <tbody>
-     	<tr>
-     	<td>**Use & View**</td>
-     	<td>The collaborator can use and view (but not edit) the current and previous package versions. Once you provide a collaborator with this ability, you cannot revoke access to a copy they already inserted into their experience; revoking access prevents reinsertion or package updates, but package copies in their data model remain intact.</td>
-     	</tr>
-     	<tr>
-     	<td>**Edit**</td>
-     	<td>The collaborator can use, view, and edit the current and previous package versions, including publishing changes to it.</td>
-     	</tr>
-     </tbody>
-     </table>
+   <table>
+   <thead>
+   <tr>
+   <th>Permission</th>
+   <th>Description</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>**Use & View**</td>
+   <td>The collaborator can use and view (but not edit) the current and previous package versions. Once you provide a collaborator with this ability, you cannot revoke access to a copy they already inserted into their experience; revoking access prevents reinsertion or package updates, but package copies in their data model remain intact.</td>
+   </tr>
+   <tr>
+   <td>**Edit**</td>
+   <td>The collaborator can use, view, and edit the current and previous package versions, including publishing changes to it.</td>
+   </tr>
+   </tbody>
+   </table>
 
   </TabItem>
   <TabItem key = "2" label="To experiences">
@@ -225,7 +225,7 @@ If you modify a nested package, both the nested package **and** the parent packa
 
 Each script within an **unmodified** package is read-only and shows a notification on the top with a hyperlink to unlock the script.
 
-<img src="../../assets/studio/packages/Script-Unlock-Link.png" alt="A script tab with a yellow notification that you can click to modifiy the script that's within an unmodified package." width="800" />
+<img src="../../assets/studio/packages/Script-Unlock-Link.png" alt="A script tab with a yellow notification that you can click to modify the script that's within an unmodified package." width="800" />
 
 Clicking the hyperlink:
 

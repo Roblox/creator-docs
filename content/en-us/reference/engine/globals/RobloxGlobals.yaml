@@ -247,9 +247,16 @@ functions:
       Returns the amount of time in seconds since the Unix epoch according to
       this device's time.
     description: |
-      Returns how much time has elapsed, in seconds, since the UNIX epoch, on
-      the current local session's computer. The UNIX epoch is represented by the
-      date January 1st, 1970.
+      Returns how much time has elapsed, in seconds, since the Unix epoch, on
+      the current local session's computer. The Unix epoch is represented by
+      00:00:00 on 1 January 1970.
+
+      `tick()` isn't officially deprecated, but has a variety of issues. It can
+      be off by up to one second and returns inconsistent results across time
+      zones and operating systems. Use `Library.os.time()`,
+      `Library.os.clock()`, or `Global.RobloxGlobals.time()` instead. Also
+      consider `Datatype.DateTime.UnixTimestamp` and
+      `Datatype.DateTime.UnixTimestampMillis`.
     parameters:
     returns:
       - type: number
