@@ -20,7 +20,7 @@ properties:
   - name: AudioRecorder.IsRecording
     summary: ''
     description: |
-      Returns whether the `Class.AudioRecorder|AudioRecorder` is currently recording.
+      Returns whether the `AudioRecorder` is currently recording.
     code_samples: []
     type: boolean
     tags: []
