@@ -1,3 +1,4 @@
+// npm run jest -- tools/checks/utils/unified.test.ts
 import { VFileMessage } from 'vfile-message';
 import {
   RETEXT_INAPPROPRIATE,
@@ -9,6 +10,7 @@ import {
   replaceProfanityPatterns,
   isIComponentDetails,
   isVFileMessage,
+  validateVoidTagsAreEmpty,
 } from './unified.js';
 import {
   RETEXT_EQUALITY_ALLOW_LIST,
@@ -684,5 +686,93 @@ describe('isVFileMessage', () => {
   it('should return false for strings', () => {
     const details = 'Hello World';
     expect(isVFileMessage(details)).toBe(false);
+  });
+});
+
+describe('validateVoidTagsAreEmpty', () => {
+  it('should throw an error if an <img> tag has children', () => {
+    const text =
+      'Hello <img src="https://example.com/image.jpg" width="100" alt="Image">Invalid content</img> World';
+    const result = validateVoidTagsAreEmpty(text);
+    expect(result).toBeDefined();
+    expect(result?.message).toBe(
+      'line 1, column 7, <img> tag must not have children'
+    );
+  });
+  it('should not throw an error if an <img> opening and closing tag has no children', () => {
+    const text =
+      'Hello <img src="https://example.com/image.jpg" width="100" alt="Image"></img> World';
+    const result = validateVoidTagsAreEmpty(text);
+    expect(result).toBeUndefined();
+  });
+  it('should not throw an error if an <img> opening and closing tag has whitespace children', () => {
+    const text =
+      'Hello <img src="https://example.com/image.jpg" width="100" alt="Image"> </img> World';
+    const result = validateVoidTagsAreEmpty(text);
+    expect(result).toBeUndefined();
+  });
+  it('should not throw an error if an <img> opening and closing tag are on new lines', () => {
+    const text = `Hello 
+
+<img src="https://example.com/image.jpg" width="100" alt="Image">
+</img>
+
+World`;
+    const result = validateVoidTagsAreEmpty(text);
+    expect(result).toBeUndefined();
+  });
+
+  it('should throw an error if an <img> tag has invalid content', () => {
+    const text = `Paragraph 1
+
+<img src="../../assets/path/to/image.png">
+  \>
+</img>
+
+Paragraph 2`;
+    const result = validateVoidTagsAreEmpty(text);
+    expect(result).toBeDefined();
+    expect(result?.message).toBe(
+      'line 3, column 1, <img> tag must not have children'
+    );
+  });
+
+  it('should not throw an error if an <img> opening and closing tag have multiple new lines between them', () => {
+    const text = `Hello 
+
+<img src="https://example.com/image.jpg" width="100" alt="Image">
+
+
+
+</img>
+
+World`;
+    const result = validateVoidTagsAreEmpty(text);
+    expect(result).toBeUndefined();
+  });
+  it('should not throw an error if an <img> self-closing tag has no children', () => {
+    const text =
+      'Hello <img src="https://example.com/image.jpg" width="100" alt="Image" /> World';
+    const result = validateVoidTagsAreEmpty(text);
+    expect(result).toBeUndefined();
+  });
+  it('should throw an error if a <br> tag has children', () => {
+    const text = `Hello 
+
+<br>
+  Invalid content
+</br> 
+
+World`;
+    const result = validateVoidTagsAreEmpty(text);
+    expect(result).toBeDefined();
+    expect(result?.message).toBe(
+      'line 3, column 1, <br> tag must not have children'
+    );
+  });
+  it('should not throw an error if a <br> tag has no children', () => {
+    const text = 'Hello <br /> World';
+    const result = validateVoidTagsAreEmpty(text);
+    expect(result).toBeUndefined();
   });
 });

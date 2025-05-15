@@ -1,11 +1,15 @@
 import * as fs from 'fs';
-import { addToSummaryOfRequirements } from './console.js';
+import {
+  addToSummaryOfRequirements,
+  addToSummaryOfSuggestions,
+} from './console.js';
 import { Emoji } from './utils.js';
 import {
   areEqualComponentDetails,
   getMdxComponents,
   isIComponentDetails,
   isVFileMessage,
+  validateVoidTagsAreEmpty,
 } from './unified.js';
 import { getNonEditableFilesList } from './files.js';
 import { areEqualFileImports, FileImports, getFileImports } from './imports.js';
@@ -82,6 +86,22 @@ export const checkEnglishVersionExists = (filePath: string) => {
     addToSummaryOfRequirements(
       `${Emoji.NoEntry} Requirement: English version does not exist for ${filePath}`
     );
+  }
+};
+
+/**
+ * Check that all void tags have no children
+ * Avoids React runtime errors like "Error: img is a self-closing tag and must neither have `children` nor use `dangerouslySetInnerHTML`."
+ * @param filePath - The path to the file to check
+ */
+export const checkVoidTagsHaveNoChildren = (filePath: string) => {
+  const fileContent = getCachedContentForFilePath(filePath);
+  const result = validateVoidTagsAreEmpty(fileContent);
+  if (result) {
+    console.log(result);
+    const message = `${Emoji.NoEntry} Requirement: In ${filePath}, ${result.message}`;
+    console.log(message);
+    addToSummaryOfRequirements(message);
   }
 };
 
@@ -173,10 +193,10 @@ export const checkMdxEquality = async (
         `${Emoji.WhiteCheckMark} MDX components match ${comparisonMessage}`
       );
     } else {
-      const errorMessage = `${Emoji.NoEntry} MDX components do not match ${comparisonMessage}`;
+      const errorMessage = `${Emoji.Warning}  Warning: MDX components do not match ${comparisonMessage}`;
       console.log(errorMessage);
       outdatedTranslationFiles.push(filePath);
-      addToSummaryOfRequirements(errorMessage);
+      addToSummaryOfSuggestions(errorMessage);
     }
   }
 };
