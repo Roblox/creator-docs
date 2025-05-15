@@ -11,7 +11,8 @@ description: |
   `Class.HttpService:PostAsync()|PostAsync`. This service allows games to be
   integrated with off-Roblox web services such as analytics, data storage,
   remote server configuration, error reporting, advanced calculations or
-  real-time communication.
+  real-time communication. Additionally, a few Roblox web APIs can also be
+  accessed via HttpService (see below).
 
   `HttpService` also houses the `Class.HttpService:JSONEncode()|JSONEncode` and
   `Class.HttpService:JSONDecode()|JSONDecode` methods which are useful for
@@ -46,15 +47,89 @@ description: |
   system. Beware that such software must be distributed separately from the
   plugin itself and can pose security hazards if you aren't careful.
 
+  ##### Calling Roblox domains
+
+  `HttpService` can currently only call a subset of the Open Cloud endpoints. We
+  plan to extend this set over time so please use the Feedback button if you
+  have specific endpoints you'd like to see:
+
+  ###### Groups
+
+  - [GetGroup](/cloud/reference/Group#Get-Group)
+  - [ListGroupJoinRequests](/cloud/reference/GroupJoinRequest#List-Group-Join-Requests)
+  - [AcceptGroupJoinRequest](/cloud/reference/GroupJoinRequest#Accept-Group-Join-Request)
+  - [DeclineGroupJoinRequest](/cloud/reference/GroupJoinRequest#Decline-Group-Join-Request)
+  - [ListGroupMemberships](/cloud/reference/GroupMembership#List-Group-Memberships)
+  - [UpdateGroupMembership](/cloud/reference/GroupMembership#Update-Group-Membership)
+  - [GetGroupRole](/cloud/reference/GroupRole#Get-Group-Role)
+  - [ListGroupRoles](/cloud/reference/GroupRole#List-Group-Roles)
+  - [GetGroupShout](/cloud/reference/GroupShout#Get-Group-Shout)
+
+  ###### Data Stores
+
+  Due to current restrictions on HttpService, only alphanumeric
+  characters and the `-` character are allowed in URL path parameters to Roblox
+  domains. This means Data Stores/entries with other special characters are
+  currently inaccessible from `HttpService`.
+
+  - [ListDataStores](/cloud/reference/DataStore#Cloud_ListDataStores)
+  - [ListDataStoreEntries](/cloud/reference/DataStoreEntry#Cloud_ListDataStoreEntries__Using_Universes)
+  - [CreateDataStoreEntry](/cloud/reference/DataStoreEntry#Cloud_CreateDataStoreEntry__Using_Universes)
+  - [GetDataStoreEntry](/cloud/reference/DataStoreEntry#Cloud_GetDataStoreEntry__Using_Universes_DataStores)
+  - [DeleteDataStoreEntry](/cloud/reference/DataStoreEntry#Cloud_DeleteDataStoreEntry__Using_Universes_DataStores)
+  - [UpdateDataStoreEntry](/cloud/reference/DataStoreEntry#Cloud_UpdateDataStoreEntry__Using_Universes_DataStores)
+  - [IncrementDataStoreEntry](/cloud/reference/DataStoreEntry#Cloud_IncrementDataStoreEntry__Using_Universes_DataStores)
+
+  ###### Inventory Items
+
+  - [ListInventoryItems](/cloud/reference/InventoryItem#List-Inventory-Items)
+
+  ###### Creator Store
+
+  - [CreatorStoreAssetsSearch](/cloud/features/creator-store#/default/get_toolbox_service_v2_assets_search)
+
+  You can call these endpoints the same way that you'd call any other endpoint
+  via HttpService. The only difference is that you must include an Open Cloud
+  API key in the request:
+
+  1. [Create an Open Cloud API key](/cloud/auth/api-keys#create-api-keys).
+  2. [Save the API key to your secrets store](/cloud-services/secrets#add-secrets).
+  3. Make the request (code example below).
+
+  Limitations include the following:
+
+  - Only the `x-api-key` and `content-type` headers are allowed.
+  - The `x-api-key` header must be a `Datatype.Secret`.
+  - Only alphanumeric characters and the `-` character are allowed in URL path parameters.
+  - Only the `https://` protocol is supported.
+
+  ##### Rate Limiting
+
+  For each Roblox game server, there is a limit of 500 HTTP requests per minute.
+  Exceeding this can cause request-sending methods to stall entirely for around
+  30 seconds. Your `Global.LuaGlobals.pcall()` may also fail with a message of
+  "Number of requests exceeded limit."
+
+  - Open Cloud requests consume the same overall limit of 500 HTTP requests per
+    minute enforced on all other requests.
+  - Each Open Cloud endpoint has its own limit per API key owner (can be a user
+    or a group) that is enforced no matter where the calls come from (HttpService,
+    the web, etc.). The following headers are returned with every response and
+    allow you to view the limits and your remaining quota:
+
+    - `x-ratelimit-limit` - The total number of requests allowed to be made per
+      API key owner (usually per minute).
+    - `x-ratelimit-remaining` - The number of requests the API key used is still
+      allowed to make. If this number is 0 and you receive a HTTP 429 response
+      status code, then you have reached the rate limit for this endpoint.
+    - `x-ratelimit-reset` - The number of seconds left before the rate limit
+      resets (i.e before `x-ratelimit-remaining` resets to `x-ratelimit-limit`).
+
   ##### Additional considerations
 
   - There are port restrictions. You cannot use port `1194` or any port below
     `1024`, except `80` and `443`. If you try to use a blocked port, you will
     receive either a `403 Forbidden` or `ERR_ACCESS_DENIED` error.
-  - For each Roblox game server, there is a limit of 500 HTTP requests per
-    minute. Exceeding this may cause request-sending methods to stall entirely
-    for about 30 seconds.
-  - Requests cannot be made to any Roblox website, such as www.roblox.com.
   - Web requests can fail for many reasons, so it is important to "code
     defensively" (use `Global.LuaGlobals.pcall()`) and have a plan for when
     requests fail.
@@ -69,6 +144,7 @@ code_samples:
   - Astronauts-in-Space
   - International-Space-Station
   - HttpService-Pastebin
+  - OpenCloud-via-HttpService
 inherits:
   - Instance
 tags:
@@ -581,11 +657,10 @@ methods:
       ##### Limitations
 
       The current limitation for sending and receiving HTTP requests is 500
-      requests per minute. Requests over this threshold will fail. Additionally,
-      Roblox domains are excluded. This means that HTTP requests cannot be sent
-      to any Roblox-owned site such as [www.roblox.com](https://www.roblox.com).
+      requests per minute. Requests over this threshold will fail.
     code_samples:
       - sending-an-http-request
+      - OpenCloud-via-HttpService
     parameters:
       - name: requestOptions
         type: Dictionary
