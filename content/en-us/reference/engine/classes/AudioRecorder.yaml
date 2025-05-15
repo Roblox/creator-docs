@@ -2,17 +2,14 @@ name: AudioRecorder
 type: class
 memory_category: Internal
 summary: |
-  Record audio streams in-experience.
+  Records audio streams in-experience.
 description: |
-  The **AudioRecorder** can be used to record audio streams in-experience.
-  The results can be loaded back into an `Class.AudioPlayer|AudioPlayer` for playback.
+  `AudioRecorder` records audio streams in-experience with a fixed time limit of 60 seconds. The
+  results can be loaded into an `Class.AudioPlayer` for playback.
 
-  There's a fixed time limit on how long a recording can be, which is **`60` seconds**.
-
-
-  At the moment `Class.AudioDeviceInput|AudioDeviceInput` can not be recorded.
-  The method `Class.AudioRecorder.GetUnrecordableInstancesAsync()|GetUnrecordableInstancesAsync()` can be used
-  to check specifically which instances aren't recordable.
+  At this time, `Class.AudioDeviceInput` cannot be recorded. The
+  `Class.AudioRecorder.GetUnrecordableInstancesAsync()|GetUnrecordableInstancesAsync()` method
+  can be used to check specifically which instances aren't recordable.
 code_samples: []
 inherits:
   - Instance
@@ -64,7 +61,7 @@ methods:
   - name: AudioRecorder:Clear
     summary: ''
     description: |
-      Clears out the recording from the `Class.AudioRecorder|AudioRecorder`.
+      Clears out the recording from the `AudioRecorder`.
     code_samples: []
     parameters: []
     returns:
@@ -129,7 +126,7 @@ methods:
   - name: AudioRecorder:GetTemporaryContent
     summary: ''
     description: |
-      Returns recorded content that can be played back with `Class.AudioPlayer|AudioPlayer`.
+      Returns recorded content that can be played back with `Class.AudioPlayer`.
       The content retrieved from this method is only valid in the current session.
     code_samples: []
     parameters: []
@@ -162,8 +159,9 @@ methods:
   - name: AudioRecorder:CanRecordAsync
     summary: ''
     description: |
-      Returns whether the `Class.AudioRecorder|AudioRecorder` can currently record. For instance, this will return `false`
-      if the current recording data has reached the recording time limit. To clear the recording use `Class.AudioRecorder:Clear()|:Clear()`
+      Returns whether the `AudioRecorder` can currently record. For instance, this will return `false`
+      if the current recording data has reached the recording time limit. To clear the recording, use
+      `Class.AudioRecorder:Clear()|Clear()`.
     code_samples: []
     parameters: []
     returns:
@@ -198,7 +196,8 @@ methods:
   - name: AudioRecorder:RecordAsync
     summary: ''
     description: |
-      If `Class.AudioRecorder:CanRecordAsync` returns true, begins recording. If recording cannot begin, this method produces an error.
+      If `Class.AudioRecorder:CanRecordAsync()|CanRecordAsync()` returns `true`, recording begins.
+      If recording cannot begin, this method produces an error.
     code_samples: []
     parameters: []
     returns:
