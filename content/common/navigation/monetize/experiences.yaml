@@ -16,6 +16,8 @@ navigation:
     path: /production/monetization/game-passes
   - title: Developer products
     path: /production/monetization/developer-products
+  - title: Commerce products
+    path: /production/monetization/commerce-products
   - title: Paid access in Robux
     path: /production/monetization/paid-access-robux
   - title: Paid access in local currency

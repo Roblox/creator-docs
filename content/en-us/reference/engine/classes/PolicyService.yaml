@@ -101,6 +101,12 @@ methods:
       <td>When <code>true</code>, the player is allowed to share content using APIs which open external sharing flows such as <code>Class.CaptureService:PromptShareCapture()|PromptShareCapture()</code>.</td>
       </tr>
       <tr>
+      <td><code>IsEligibleToPurchaseCommerceProduct</code></td>
+      <td>Boolean</td>
+      <td>Any experience that wants to sell <a href="../../../production/monetization/commerce-products.md">commerce products</a>.</td>
+      <td>When <code>true</code>, the player is eligible to purchase commerce products within an experience.</td>
+      </tr>
+      <tr>
       <td><code>IsEligibleToPurchaseSubscription</code></td>
       <td>Boolean</td>
       <td>Any experience that wants to sell subscriptions.</td>
@@ -159,6 +165,7 @@ methods:
       client IP geolocation.
     code_samples:
       - getting-policy-information-for-a-player
+      - getting-policy-for-a-player-for-commerce-products
     parameters:
       - name: player
         type: Instance

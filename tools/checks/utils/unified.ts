@@ -294,6 +294,71 @@ export const compileMdx = async (text: string) => {
   }
 };
 
+type Node = {
+  type: string;
+  tagName?: string;
+  children?: Node[];
+  [key: string]: any;
+};
+
+// Tags that should not have children
+// HTML void elements that must not have children
+// Reference: https://developer.mozilla.org/en-US/docs/Glossary/Void_element
+const VOID_TAGS_SET = new Set([
+  'area',
+  'base',
+  'br',
+  'col',
+  'embed',
+  'hr',
+  'img',
+  'input',
+  'link',
+  'meta',
+  'param',
+  'source',
+  'track',
+  'wbr',
+  // SVG void elements
+  'circle',
+  'ellipse',
+  'line',
+  'path',
+  'polygon',
+  'polyline',
+  'rect',
+]);
+
+const assertVoidTagsHaveNoChildren = (node: Node): void => {
+  if (
+    node.name &&
+    VOID_TAGS_SET.has(node.name) &&
+    node.children &&
+    node.children.length > 0
+  ) {
+    const hasOnlyWhitespaceChildren = node.children.every(
+      (child) => child.type === 'text' && child.value.trim() === ''
+    );
+    if (hasOnlyWhitespaceChildren) {
+      return;
+    }
+    throw new Error(
+      `line ${node.position?.start?.line}, column ${node.position?.start?.column}, <${node.name}> tag must not have children`
+    );
+  }
+  node.children?.forEach(assertVoidTagsHaveNoChildren);
+};
+
+export const validateVoidTagsAreEmpty = (text: string): VFileMessage | void => {
+  try {
+    const processor = unified().use(remarkParse).use(remarkMdx);
+    const tree = processor.parse(text);
+    visit(tree, assertVoidTagsHaveNoChildren);
+  } catch (e) {
+    return e as VFileMessage;
+  }
+};
+
 interface IComponentDetails {
   count: number;
   components: string[];
