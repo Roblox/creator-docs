@@ -58,7 +58,7 @@ Certain creators may qualify to be able to bundle a digital benefit, such as an 
   - Maintains more than 100,000 daily active users on average for the last 90 days.
   - Maintains more than 1,000,000 Robux average monthly earnings in the last 90 days.
   - Sell at least one bundle within three months of receiving approval to bundle.
-- Enter into a written agreement with Roblox for an ad spend amount of at least $50,000 USD in one year.
+- Or enter into a written agreement with Roblox for an ad spend amount of at least $50,000 USD in one year.
 
 #### Bundled digital benefits
 
