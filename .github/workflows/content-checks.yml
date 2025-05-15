@@ -1,5 +1,10 @@
 name: Content Checks
 on:
+  # Use `pull_request_target` to run the workflow on the PR base branch (e.g. `origin/main`)
+  # Avoid using `pull_request` because it runs the workflow on the PR head branch (e.g. `origin/pr-branch`)
+  # Don't run any code from the PR head branch because it's untrusted and could be malicious.
+  # See: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#pull_request_target
+  # See: https://securitylab.github.com/resources/github-actions-preventing-pwn-requests/
   pull_request_target:
     types:
       - opened
@@ -28,6 +33,7 @@ jobs:
         with:
           fetch-depth: 2
 
+      # Avoid checking out any code outside of content/
       - name: Sparse checkout of content directory from fork to temp directory
         if: ${{ github.event_name == 'pull_request_target' }}
         uses: actions/checkout@v3
@@ -61,14 +67,18 @@ jobs:
           echo "Event name: ${{ github.event_name }}"
           echo "Pull request number: ${{ github.event.pull_request.number }}"
           echo "Pull request user login: ${{ github.event.pull_request.user.login }}"
-          echo "Base ref: ${{ github.event.pull_request.base.ref }}"
-          echo "Head sha: ${{ github.event.pull_request.head.sha }}"
+          echo "Base (target) ref: ${{ github.event.pull_request.base.ref }}"
+          echo "Base (target) sha: ${{ github.event.pull_request.base.sha }}"
+          echo "Head (source) ref: ${{ github.event.pull_request.head.ref }}"
+          echo "Head (source) sha: ${{ github.event.pull_request.head.sha }}"
           git status
           git remote -v
           git log --oneline -n 10
 
       - name: Run quality checks
-        # Don't run local code for security reasons
+        # The local code is untrusted and could be malicious. Don't run it.
+        # See: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#pull_request_target
+        # See: https://securitylab.github.com/resources/github-actions-preventing-pwn-requests/
         uses: Roblox/creator-docs/.github/actions/quality-checks@main
         with:
           GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
