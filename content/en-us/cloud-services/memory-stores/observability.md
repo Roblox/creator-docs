@@ -1,5 +1,5 @@
 ---
-title: Memory store observability
+title: Memory Stores observability
 description: Explains how to use the observability dashboard for memory stores.
 ---
 
