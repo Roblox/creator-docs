@@ -1,3 +1,4 @@
+Lasers
 ---
 title: Collaboration
 description: Studio's built-in collaboration tools let creators contribute independently, or work together with a team.
