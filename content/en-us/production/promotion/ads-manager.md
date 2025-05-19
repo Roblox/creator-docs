@@ -84,14 +84,18 @@ To create an ad campaign with the new Ads Manager:
 
 1. Go to **Manage Ads** and click **Create Campaign**.
 2. Under **Experience**, select the experience you want players to join when they click on your ad.
-3. Under **Goal & Name**, enter a name for the campaign. Currently, the only goal available is **Maximize plays**, which gets you the most plays at the lowest cost.
+3. Under **Goal & Name**, enter a campaign name and select one of the following goals for the campaign:
+    - **Maximize Plays** to get the most plays at the lowest cost.
+    - **Drive Retention** to turn visitors into regulars by re-engaging recent new players.
+    - **Reactivate Users** to reach players who have played your experience in the last 180 days but who haven't played in the last 30 days.
 4. Under **Budget & Schedule**:
     1. Choose between a **Daily Budget** and a **Lifetime Budget**.
     2. Select a **Payment Method**. If you're using ad credits, make sure the campaign budget does not exceed the available ad credits in your account.
     3. Set a **Duration** for your campaign.
     4. Set a **Start Date** and a **Start Time** for your campaign.
 5. Under **Creative**, choose up to 5 thumbnails to show on players' Home page.
-6. Click **Publish** and confirm submission. Your ad campaign will go live after it's approved by the moderation team.
+6. (Optional) Under **Audience Targeting**, customize the campaign's reach by only showing ads to players in specific locations and using specific devices.
+7. Click **Publish** and confirm submission. Your ad campaign will go live after it's approved by the moderation team.
 
 <Alert severity="info">
    Roblox tries to complete moderation within 24 hours for each ad submitted. Ads that do not pass moderation show the status of rejected.

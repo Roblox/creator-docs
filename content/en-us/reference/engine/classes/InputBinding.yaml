@@ -1,8 +1,13 @@
 name: InputBinding
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Defines which hardware binding should trigger the parent `Class.InputAction`.
+description: |
+  An `InputBinding` defines which hardware binding should trigger the parent
+  `Class.InputAction`, for example a key press, gamepad button, or tap on a
+  touch‑enabled device. There can be multiple `InputBinding` instances parented
+  to an `Class.InputAction`.
 code_samples: []
 inherits:
   - Instance
@@ -11,8 +16,19 @@ tags:
 deprecation_message: ''
 properties:
   - name: InputBinding.Down
-    summary: ''
-    description: ''
+    summary: |
+      Specifies an alternate `Enum.KeyCode` for dispatching directionally "down"
+      inputs to the parent `Class.InputAction`.
+    description: |
+      Specifies an alternate `Enum.KeyCode` for dispatching directionally "down"
+      inputs to `Class.InputAction:GetState()|GetState()` and the
+      `Class.InputAction.StateChanged|StateChanged` event of the parent
+      `Class.InputAction`. When the parent action's
+      `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction1D`, the
+      dispatched value will be between `0` and `-1`. When the parent action's
+      `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction2D`, the
+      dispatched value will be a `Datatype.Vector2` between `(0, 0)` and `(0,
+      -1)`.
     code_samples: []
     type: KeyCode
     tags: []
@@ -28,8 +44,18 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: InputBinding.KeyCode
-    summary: ''
-    description: ''
+    summary: |
+      Specifies the `Enum.KeyCode` which triggers the parent
+      `Class.InputAction`.
+    description: |
+      Specifies the `Enum.KeyCode` which triggers the parent
+      `Class.InputAction`. The code type should match the input action's
+      `Class.InputAction.Type|Type`, for example `Enum.KeyCode.E` for an action
+      type of `Enum.InputActionType|Bool` or `Enum.KeyCode.Thumbstick1` for an
+      action type of `Enum.InputActionType|Direction2D`. Type mismatches will
+      either not fire the `Class.InputAction` or the
+      `Class.InputAction.StateChanged|StateChanged` event will receive a
+      converted value.
     code_samples: []
     type: KeyCode
     tags: []
@@ -45,8 +71,17 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: InputBinding.Left
-    summary: ''
-    description: ''
+    summary: |
+      Specifies an alternate `Enum.KeyCode` for dispatching directionally "left"
+      inputs to the parent `Class.InputAction`.
+    description: |
+      Specifies an alternate `Enum.KeyCode` for dispatching directionally "left"
+      inputs to `Class.InputAction:GetState()|GetState()` and the
+      `Class.InputAction.StateChanged|StateChanged` event of the parent
+      `Class.InputAction`. Only applies when the parent action's
+      `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction2D`, in
+      which case the dispatched value will be a `Datatype.Vector2` between `(0,
+      0)` and `(-1, 0)`.
     code_samples: []
     type: KeyCode
     tags: []
@@ -62,8 +97,18 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: InputBinding.PressedThreshold
-    summary: ''
-    description: ''
+    summary: |
+      Numerical value above which to fire an `Class.InputAction` with a
+      `Class.InputAction.Type|Type` of `Enum.InputActionType|Bool`.
+    description: |
+      Numerical value above which to fire an `Class.InputAction` with a
+      `Class.InputAction.Type|Type` of `Enum.InputActionType|Bool`, for
+      example when a gamepad trigger such as `Enum.KeyCode.ButtonL2` exceeds
+      `0.5` (halfway pressed). Default is `0.5`.
+
+      This property must be greater than or equal to
+      `Class.InputBinding.ReleasedThreshold|ReleasedThreshold` or else it will
+      be clamped to `Class.InputBinding.ReleasedThreshold|ReleasedThreshold`.
     code_samples: []
     type: float
     tags: []
@@ -79,8 +124,18 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: InputBinding.ReleasedThreshold
-    summary: ''
-    description: ''
+    summary: |
+      Numerical value below which to fire an `Class.InputAction` with a
+      `Class.InputAction.Type|Type` of `Enum.InputActionType|Bool`.
+    description: |
+      Numerical value below which to fire an `Class.InputAction` with a
+      `Class.InputAction.Type|Type` of `Enum.InputActionType|Bool`, for
+      example when a gamepad trigger such as `Enum.KeyCode.ButtonL2` falls below
+      `0.5` (less than halfway pressed). Default is `0.2`.
+
+      This property must be less than or equal to
+      `Class.InputBinding.PressedThreshold|PressedThreshold` or else it will be
+      clamped to `Class.InputBinding.PressedThreshold|PressedThreshold`.
     code_samples: []
     type: float
     tags: []
@@ -96,8 +151,17 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: InputBinding.Right
-    summary: ''
-    description: ''
+    summary: |
+      Specifies an alternate `Enum.KeyCode` for dispatching directionally
+      "right" inputs to the parent `Class.InputAction`.
+    description: |
+      Specifies an alternate `Enum.KeyCode` for dispatching directionally
+      "right" inputs to `Class.InputAction:GetState()|GetState()` and the
+      `Class.InputAction.StateChanged|StateChanged` event of the parent
+      `Class.InputAction`. Only applies when the parent action's
+      `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction2D`, in
+      which case the dispatched value will be a `Datatype.Vector2` between `(0,
+      0)` and `(1, 0)`.
     code_samples: []
     type: KeyCode
     tags: []
@@ -113,8 +177,13 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: InputBinding.Scale
-    summary: ''
-    description: ''
+    summary: |
+      Amount by which to linearly scale the values of a directional
+      `Class.InputAction`.
+    description: |
+      Amount by which to linearly scale the values of an `Class.InputAction`
+      with `Class.InputAction.Type|Type` of `Enum.InputActionType|Direction1D`
+      or `Enum.InputActionType|Direction2D`.
     code_samples: []
     type: float
     tags: []
@@ -130,8 +199,10 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: InputBinding.UIButton
-    summary: ''
-    description: ''
+    summary: |
+      Connects a `Class.GuiButton` to a boolean action.
+    description: |
+      `Class.GuiButton` to connect to a boolean action.
     code_samples: []
     type: GuiButton
     tags: []
@@ -147,8 +218,19 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: InputBinding.Up
-    summary: ''
-    description: ''
+    summary: |
+      Specifies an alternate `Enum.KeyCode` for dispatching directionally "up"
+      inputs to the parent `Class.InputAction`.
+    description: |
+      Specifies an alternate `Enum.KeyCode` for dispatching directionally "up"
+      inputs to `Class.InputAction:GetState()|GetState()` and the
+      `Class.InputAction.StateChanged|StateChanged` event of the parent
+      `Class.InputAction`. When the parent action's
+      `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction1D`, the
+      dispatched value will be between `0` and `1`. When the parent action's
+      `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction2D`, the
+      dispatched value will be a `Datatype.Vector2` between `(0, 0)` and `(0,
+      1)`.
     code_samples: []
     type: KeyCode
     tags: []
@@ -164,8 +246,12 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: InputBinding.Vector2Scale
-    summary: ''
-    description: ''
+    summary: |
+      Amount by which to linearly scale the values of a two-directional
+      `Class.InputAction`.
+    description: |
+      Amount by which to linearly scale the values of an `Class.InputAction`
+      with `Class.InputAction.Type|Type` of `Enum.InputActionType|Direction2D`.
     code_samples: []
     type: Vector2
     tags: []
