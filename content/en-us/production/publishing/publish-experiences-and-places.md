@@ -3,9 +3,9 @@ title: Experiences and places
 description: Explains how to publish the places in your experience.
 ---
 
+<figure>
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/_RxK6l2y7Ac" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br />
+</figure><br />
 
 **Experiences** on Roblox are made up of individual **places**, comparable to scenes in Unity or maps in Unreal Engine. Each place contains all components for that portion of the experience, including its specific environment, parts, meshes, scripts, and user interface.
 
@@ -15,7 +15,11 @@ description: Explains how to publish the places in your experience.
 
 ## Publish experiences
 
-By default, publishing a new place creates a new experience. New experiences begin as **private** and are only accessible to you and members of your [group](../../projects/groups.md) with the correct permissions.
+By default, publishing a new place creates a new experience. New experiences begin as **private** and are only accessible to you and members of your [group](../../projects/groups.md) with the correct [permissions](../../projects/groups.md#roles-and-permissions).
+
+<Alert severity="info">
+When creating and collaborating on experiences as part of a [group](../../projects/groups.md), the ability for group members to play/edit/publish experiences is, by default, dependent on their [role permissions](../../projects/groups.md#roles-and-permissions). However, group owners or members with sufficient permissions can adjust access on a per‑experience level. See [configure experiences](#configure-experiences) for details.
+</Alert>
 
 When you're ready to release an experience to a wider audience, you
 can [release it to the public](#release-to-the-public), although beta testing should still be an essential part of your development cycle. Because you're not able to determine which countries have access to an experience, which limits the ability to run beta tests in smaller markets, consider these strategies:
@@ -89,26 +93,51 @@ The [start place](#start-place) of an experience cannot be instantly swapped wit
 
    <img src="../../assets/publishing/experiences-places-assets/Publish-Window-Select-Start-Place.png" width="720" />
 
-1. **(Optional)** If the experience is live, it's recommended that you restart its servers as outlined in [update experiences](#update-experiences).
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> If the experience is live, it's recommended that you [restart its servers](#update-experiences).
 
 ## Configure experiences
 
-You can customize your experience's settings from the [Creator Dashboard][creatordashboard] or within Studio's **File**&nbsp;⟩ **Game Settings** window. Some settings are only configurable within Studio while others are only configurable on the dashboard.
+Most experience settings are configurable from the [Creator Dashboard][creatordashboard], including [localization](../localization/index.md), access settings, [analytics](../analytics/index.md), and [monetization products](../monetization/index.md). To configure an experience:
 
-Most experience settings are configurable from the [Creator Dashboard][creatordashboard], including [localization](../localization/index.md), access settings, [analytics](../analytics/index.md), and [monetization products](../monetization/index.md). You can also fill out the [Maturity & Compliance questionnaire](../promotion/content-maturity.md) required for generating a content maturity label and content descriptors that players use to make informed decisions about what content they interact with. To configure an experience:
+1. Select the experience you want to configure from your [list of creations][creatordashboard] on the dashboard.
+2. Click on the category you wish to configure from the left-hand navigation. Some notable sections include:
 
-1. Select the experience you want to configure from your [list of creations](https://create.roblox.com/dashboard/creations) on the dashboard.
-1. Click on the category you wish to configure from the left-hand navigation.
+   <BaseAccordion>
+   <AccordionSummary>
+   <Typography variant="subtitle2">Configure &nbsp;⟩&nbsp; Permissions</Typography>
+   </AccordionSummary>
+   <AccordionDetails>
+   When creating and collaborating on experiences as part of a [group](../../projects/groups.md), abilities granted to group members are, by default, dependent on their [role permissions](../../projects/groups.md#roles-and-permissions). Through the **Permissions** panel, owners or members with sufficient permissions can adjust play/edit/publish access and more on a per‑experience level, such as allowing a limited group role the ability to edit a specific experience even if that role cannot edit all experiences.
+	 
+	 If a per‑experience permission is greyed out, you either do not have access to manage that permission or the selected role has the permission granted globally. Hovering over the information icon will tell you why something is non‑configurable and how to resolve it.
+   </AccordionDetails>
+   </BaseAccordion>
 
-The **Communication Settings** category allows you to enable **strong language** if your experience receives a **Restricted** maturity label. You can find this under the **Audience** section of the left-hand navigation. Enable the toggle to relax the text chat filter for some strong language in your experience. This also adds a tag above your experience page to warn other users that your experience may include strong language.
+   <BaseAccordion>
+   <AccordionSummary>
+   <Typography variant="subtitle2">Audience &nbsp;⟩&nbsp; Maturity & Compliance</Typography>
+   </AccordionSummary>
+   <AccordionDetails>
+   This section allows you to fill out the questionnaire required for generating a [content maturity](../promotion/content-maturity.md) label and content descriptors that players use to make informed decisions about what content they interact with.
+   </AccordionDetails>
+   </BaseAccordion>
 
-<img src="../../assets/publishing/experiences-places-assets/Maturity-Label-Strong-Language.jpg" width="780" alt="Label indicating the experience contains strong language" />
+   <BaseAccordion>
+   <AccordionSummary>
+   <Typography variant="subtitle2">Audience &nbsp;⟩&nbsp; Communication Settings</Typography>
+   </AccordionSummary>
+   <AccordionDetails>
+   This section allows you to enable strong language and relax the text chat filter in your experience. Doing so also adds a tag above your experience page to warn other users that your experience may include strong language:
 
-Regardless of whether or not you activate the toggle, players do not face moderation consequences just for using strong language in chat or voice in 17+ games, but they cannot violate [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410#safety) and [Terms of Use](https://www.roblox.com/info/terms). For example, players can type an expletive if they are scared by a monster, but they cannot abuse another player using strong language or otherwise.
+	 <img src="../../assets/publishing/experiences-places-assets/Maturity-Label-Strong-Language.jpg" width="780" alt="Label indicating the experience contains strong language" />
 
-<Alert severity="warning">
-In-experience assets and experience metadata cannot contain strong language, even if the toggle is on and your experience is rated 17+. If you include strong language in your assets or experience page, your experience will be moderated.
-</Alert>
+	 Regardless of whether or not you activate the toggle, players do not face moderation consequences just for using strong language in chat or voice in 17+ games, but they cannot violate [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410#safety) and [Terms of Use](https://www.roblox.com/info/terms). For example, players can type an expletive if they are scared by a monster, but they cannot abuse another player using strong language or otherwise.
+
+	 <Alert severity="warning">
+   In-experience assets and experience metadata cannot contain strong language, even if the toggle is on and your experience is rated 17+. If you include strong language in your assets or experience page, your experience will be moderated.
+   </Alert>
+   </AccordionDetails>
+   </BaseAccordion>
 
 ## Release to the public
 
@@ -119,7 +148,7 @@ New experiences begin as **private** and are only accessible to you and members 
 
    <img src="../../assets/creator-dashboard/Options-Button-Experience-Private.png" width="200" />
 
-1. **(Recommended)** Explore how to provide [Content maturity labels and content descriptors](#content-maturity) for the experience.
+1. <Chip label="RECOMMENDED" size="small" variant="outlined" color="success" /> Explore how to provide [Content maturity labels and content descriptors](#content-maturity) for the experience.
 
 ### Link to experiences
 

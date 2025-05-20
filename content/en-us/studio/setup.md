@@ -11,8 +11,8 @@ Create immersive 3D experiences on Roblox with **Roblox Studio**, a free applica
 <thead>
 <tr>
 <th></th>
-<th><Chip label="Minimum" size="medium" color="warning" variant="outlined" /></th>
-<th><Chip label="Recommended" size="medium" color="success" variant="outlined" /></th>
+<th><Chip label="MINIMUM" size="medium" color="warning" variant="outlined" /></th>
+<th><Chip label="RECOMMENDED" size="medium" color="success" variant="outlined" /></th>
 </tr>
 </thead>
 <tbody>

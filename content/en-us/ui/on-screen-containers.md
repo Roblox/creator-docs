@@ -89,15 +89,15 @@ The `Class.ScreenGui.ResetOnSpawn|ResetOnSpawn` boolean property determines if t
 <tbody>
   <tr>
     <td>`Class.ScreenGui.ResetOnSpawn|ResetOnSpawn` is `true` (default).</td>
-    <td><Chip label="yes" size="small" variant="outlined" color="success" /></td>
+    <td><Chip label="YES" size="small" variant="outlined" color="success" /></td>
   </tr>
 	<tr>
     <td>The `Class.ScreenGui` is an **indirect** descendant of `Class.StarterGui`; for example it's placed inside a `Class.Folder` located within `Class.StarterGui`.</td>
-    <td><Chip label="yes" size="small" variant="outlined" color="success" /></td>
+    <td><Chip label="YES" size="small" variant="outlined" color="success" /></td>
   </tr>
 	<tr>
     <td>`Class.ScreenGui.ResetOnSpawn|ResetOnSpawn` is `false` **and** the `Class.ScreenGui` is a **direct** descendant of `Class.StarterGui`.</td>
-    <td><Chip label="no" size="small" variant="outlined" color="warning" /></td>
+    <td><Chip label="NO" size="small" variant="outlined" color="warning" /></td>
   </tr>
 </tbody>
 </table>
