@@ -174,7 +174,7 @@ Assuming the asset is in your [inventory](../projects/assets/toolbox.md#inventor
 <TabItem label="Explorer">
 To upload an asset from the [Explorer](../studio/explorer.md) and distribute it in the Creator Store:
 
-1. In the [Explorer](../studio/explorer.md) hierarchy, right-click the asset you'd like to distribute and select **Save to Roblox...** from the context menu.
+1. In the **Explorer** window, right-click the asset you'd like to distribute and select **Save to Roblox...** from the contextual menu.
 2. In the **Asset Configuration** window that opens, confirm and/or update asset details such as **Title** and **Description**. Additionally:
 
    - For **Content Type**, make sure **Development Item** is selected.

@@ -219,6 +219,18 @@
             }
           },
           {
+            "name": "includedInstanceTypes",
+            "in": "query",
+            "description": "When searching for models, this filters that the following [Instance](https://create.roblox.com/docs/reference/engine/classes/Instance) types are included in the model.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ModelInstanceType"
+              },
+              "nullable": true
+            }
+          },
+          {
             "name": "includeOnlyVerifiedCreators",
             "in": "query",
             "description": "Whether the results should only include assets created by verified creators.",
@@ -814,6 +826,10 @@
             "type": "boolean",
             "nullable": true
           },
+          "includeOnlyValidCreators": {
+            "type": "boolean",
+            "nullable": true
+          },
           "filterForVisibleAssets": {
             "type": "boolean",
             "nullable": true
@@ -946,6 +962,35 @@
         "additionalProperties": false,
         "description": "Representation of a model asset.",
         "nullable": true
+      },
+      "ModelInstanceType": {
+        "enum": ["Script", "MeshPart", "Decal", "Animation", "Audio", "Tool"],
+        "type": "string",
+        "description": "A list of model instance types. See Toolbox.Service.Models.Internal.InstanceCounts and [Instance](https://create.roblox.com/docs/reference/engine/classes/Instance) for more details.",
+        "x-enumNames": [
+          "Script",
+          "MeshPart",
+          "Decal",
+          "Animation",
+          "Audio",
+          "Tool"
+        ],
+        "x-enum-varnames": [
+          "Script",
+          "MeshPart",
+          "Decal",
+          "Animation",
+          "Audio",
+          "Tool"
+        ],
+        "x-enum-descriptions": [
+          "Script",
+          "MeshPart",
+          "Decal",
+          "Animation",
+          "Audio",
+          "Tool"
+        ]
       },
       "ModelSubType": {
         "enum": ["Ad", "MaterialPack", "Package"],

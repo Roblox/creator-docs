@@ -17,9 +17,15 @@ The most efficient workflow is to [create a package](#create-packages), [share i
 
 ## Create Packages
 
-You can create a package from any single object or any single parent and children branch of objects. If you want to create a package for a single object, we recommend adding it to a `Class.Model` grouping first so that you can add, remove, or scale instance within the package later without breaking the package.
+You can create a package from any single object or any single parent and children branch of objects. If you want to create a package for a single object, add it to a `Class.Model` grouping first so that you can add, remove, or scale child objects within the package later without breaking the package.
 
-1. In the **Explorer** window or 3D viewport, right-click the desired object and select **Convert to Package**.
+<Alert severity="info">
+There is a limit of 15,000 unique assetIds that can be referenced in a single package, and you must have permission to use all included assets. For more information, see [Asset privacy](privacy.md).
+</Alert>
+
+To create a package:
+
+1. In the **Explorer** window or 3D viewport, right-click the object you want to turn into a package, then in contextual menu, select **Convert to Package**.
 1. In the new window, fill in the package details. In particular, if you're working in a [group](../../projects/groups.md), set **Ownership** to the appropriate group in which you have permission to create/edit group experiences.
 
    <Alert severity="warning">
@@ -27,16 +33,16 @@ You can create a package from any single object or any single parent and childre
    </Alert>
 
 1. Click **Submit**.
-1. After the conversion completes, the object receives a "chain link" symbol in the Explorer window to identify it as a package. Additionally, you can see a new **PackageLink** object parented to the object.
+1. After the conversion completes, the object receives a "chain link" symbol in the **Explorer** window to identify it as a package. Additionally, you can see a new **PackageLink** object parented to the object.
 
    <img src="../../assets/studio/packages/PackageLink-Explorer.png" alt="A maple tree model in the Explorer window with the package icon next to it." width="215" />
 
-1. (Optional) Select the **PackageLink** object and enable `AutoUpdate` in the **Properties** window. Note how the icon changes to indicate that the package is set to automatically update.
+1. **(Optional)** Select the **PackageLink** object and enable `AutoUpdate` in the **Properties** window. Note how the icon changes to indicate that the package is set to automatically update.
 
    <img src="../../assets/studio/packages/PackageLink-Explorer-Auto.png" alt="A maple tree model in the Explorer window with the auto-update package icon next to it." width="215" />
 
 <Alert severity="error">
-Don't delete or move the **PackageLink** instance! Doing so for any package copy converts the copy back into a normal object and loses package capabilities such as ability to update when there's a new version.
+Don't delete or move the **PackageLink** object! Doing so for any package copy converts the copy back into a normal object and loses package capabilities, such as ability to update itself when there's a new version.
 </Alert>
 
 ## Insert packages
@@ -65,21 +71,21 @@ Be careful when inserting assets that you didn't create into your experiences, a
 
 ## Publish package changes
 
-You can publish any changes you make to a package as a new version to make them available to other copies of the package throughout the place and across all experiences. Note that it's **not** required to publish a modified package before publishing a place (the modified version is saved along with the place for future iteration).
+You can publish any change to your package as a new version, making your updates available to other package copies throughout the place and across all experiences. It's **not** required to publish a modified package before publishing a place because the modified version is saved along with the place for future iteration.
 
 To publish changes to a package:
 
 1. In the **Explorer** window or 3D viewport, right-click the modified copy and select **Publish to Package**.
-1. If a package copy has [auto-update](#automatic-updates) turned on, it immediately pulls in the updated version when you open the place that contains them. Other copies get a white dot on the package icon that indicates an update is available. You can [individually update](#update-outdated-copies) or [mass-update](#mass-updates) them as needed.
+1. If a package copy has [auto-update](#automatic-updates) turned on, it immediately pulls in the updated version when you open the place that contains them. Other copies get a white dot on the package icon that indicates an update is available. You can [individually update](#update-outdated-copies) or [mass-update](#mass-updates) all copies.
 
    <img src="../../assets/studio/packages/Package-Update-Available.png" alt="Two packages in the Explorer set to auto-update, and one with an update available." width="215" />
 
 1. **(Optional)** Add a description of your changes:
 
    1. Right-click the package and select **Package Details**.
-   1. In the Asset Configuration window, select **Versions**.
+   1. In the **Asset Configuration** window, select **Versions**.
    1. Under your most-recent change, select **Add**.
-   1. Describe your changes and click **Submit**.
+   1. Describe your changes, then click the **Submit** button.
 
 ## Update outdated copies
 
@@ -97,7 +103,7 @@ To update one or more package copies to the latest version:
 
 Extensive use of packages may result in many package copies across multiple places in an experience. In addition to [individual syncing](#update-outdated-copies) and [automatic updates](#automatic-updates), you can update all copies of a package through **mass updating**.
 
-1. (Recommended) Close other Studio instances with any of the experience's places open; this prevents another unsaved instance of a place from potentially overwriting your updates.
+1. **(Recommended)** Close other Studio instances with any of the experience's places open; this prevents another unsaved instance of a place from potentially overwriting your updates.
 1. In the **Explorer** window or 3D viewport, right-click the desired package and select **Update All**.
 1. Choose all places in the experience or some subset of places and click **Update**.
 
@@ -113,6 +119,8 @@ Mass updating packages automatically **saves** the selected places but does not 
 
 To make syncing easier, you can set a package copy to update automatically whenever a newer version is published. Auto-update of the package copies will take place when a place is opened in Studio.
 
+To automatically update package copies:
+
 1. In the **Explorer** window, expand the package's hierarchy tree and select its **PackageLink** object.
 
    <img src="../../assets/studio/packages/PackageLink-Explorer.png" alt="A close up view of a packaged chandelier model in the Explorer window. The PackageLink object is highlighted." width="215" />
@@ -125,10 +133,12 @@ Automatic updating does not apply to [modified](#modifying-packages) package cop
 
 ## Share and access levels
 
-You can grant permission to friends, experiences, groups, or specific group user roles so that they can freely use your packages in their creations. For more information on asset access, see [Asset privacy](privacy.md).
+You can grant permission to friends, experiences, groups, or specific group user roles so that they can freely use your packages in their creations. Once you share a package, all future versions of that package have the same restrictions even if you later revoke package sharing. For more information on asset access, see [Asset privacy](privacy.md).
 
 <Tabs>
   <TabItem key = "1" label="To collaborators">
+
+In order to share packages with other collaborators, the package must only contain references to assetIDs that you created or have explicit permission to use.
 
 To change package permissions for a collaborator, such as a friend or group:
 
