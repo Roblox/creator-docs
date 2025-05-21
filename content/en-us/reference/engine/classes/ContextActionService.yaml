@@ -149,23 +149,23 @@ methods:
       <tr>
         <td>1</td>
         <td><code>string</code></td>
-        <td>The same string that was originally passed to BindAction. This allows
-        one function to handle multiple actions at once, if necessary.</td>
+        <td>The same string that was originally passed to <code>Class.ContextActionService:BindAction()|BindAction()</code>.
+        This allows one function to handle multiple actions at once, if necessary.</td>
       </tr>
       <tr>
         <td>2</td>
         <td><code>Enum.UserInputState</code></td>
-        <td>The state of the input (Begin, Change, End or Cancel). Cancel is sent
-        if some input was in-progress and another action bound over the in-progress
-        input, or if the in-progress bound action was `Class.ContextActionService:UnbindAction()|unbound`.</td>
+        <td>The state of the input. <code>Enum.UserInputState|Cancel</code> is sent
+        if some input was in progress and another action bound over that in-progress
+        input, or if the in-progress bound action was unbound through <code>Class.ContextActionService:UnbindAction()|UnbindAction()</code>.</td>
       </tr>
       <tr>
         <td>3</td>
         <td><code>InputObject</code></td>
         <td>An object that contains information about the input (varies based on
-        UserInputType). The InputObject sometimes won't match the inputs the action
-        was bound to: when the Cancel state is sent, this object will have KeyCode
-        `Enum.KeyCode.Unknown|Unknown` and UserInputType `Enum.UserInputType.None|None`.</td>
+        <code>Enum.UserInputType</code>). The <code>Class.InputObject</code> sometimes won't match the inputs the action
+        was bound to: when the <code>Enum.UserInputState|Cancel</code> state is sent, this object will be
+        <code>Enum.KeyCode.Unknown</code> and <code>Enum.UserInputType.None</code>.</td>
       </tr>
       </table>
 
