@@ -149,24 +149,25 @@ methods:
       <tr>
         <td>1</td>
         <td><code>string</code></td>
-        <td>The same string that was originally passed to BindAction†</td>
+        <td>The same string that was originally passed to BindAction. This allows
+        one function to handle multiple actions at once, if necessary.</td>
       </tr>
       <tr>
         <td>2</td>
         <td><code>Enum.UserInputState</code></td>
-        <td>The state of the input (Begin, Change, End or Cancel)*</td>
+        <td>The state of the input (Begin, Change, End or Cancel). Cancel is sent
+        if some input was in-progress and another action bound over the in-progress
+        input, or if the in-progress bound action was `Class.ContextActionService:UnbindAction()|unbound`.</td>
       </tr>
       <tr>
         <td>3</td>
         <td><code>InputObject</code></td>
-        <td>An object that contains information about the input (varies based on UserInputType)</td>
+        <td>An object that contains information about the input (varies based on
+        UserInputType). The InputObject sometimes won't match the inputs the action
+        was bound to: when the Cancel state is sent, this object will have KeyCode
+        `Enum.KeyCode.Unknown|Unknown` and UserInputType `Enum.UserInputType.None|None`.</td>
       </tr>
       </table>
-
-      † This allows one function to handle multiple actions at once, if
-      necessary. \*Cancel is sent if some input was in-progress and another
-      action bound over the in-progress input, or if the in-progress bound
-      action was `Class.ContextActionService:UnbindAction()|unbound`.
 
       #### Action Bindings Stack
 
