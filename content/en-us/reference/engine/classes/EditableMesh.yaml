@@ -8,29 +8,7 @@ description: |
   `Class.MeshPart`, allowing for querying and modification of the mesh both in
   Studio and in experience.
 
-  An `EditableMesh` can be created from an existing `Datatype.Content` of a
-  `Class.MeshPart` or a mesh ID using
-  `Class.AssetService:CreateEditableMeshAsync()`, or a blank `EditableMesh` can
-  be created with `Class.AssetService:CreateEditableMesh()`. It can then be
-  displayed, modified, and its collision model updated. Not all of the steps are
-  necessary; for example, you might want to create an `EditableMesh` just to
-  raycast without ever displaying it.
-
-  An `EditableMesh` is displayed when it's linked to a new `Class.MeshPart`,
-  through `Class.AssetService:CreateMeshPartAsync()`. You can create more
-  `Class.MeshPart` instances that reference the same `EditableMesh`
-  `Datatype.Content`, or link to an existing `Class.MeshPart` through
-  `Class.MeshPart:ApplyMesh()`.
-
-  To recalculate collision and fluid geometry after editing, you can again call
-  `Class.AssetService:CreateMeshPartAsync()` and `Class.MeshPart:ApplyMesh()` to
-  update an existing `Class.MeshPart`. It's generally recommended to do this at
-  the end of a conceptual edit, not after individual calls to methods that
-  manipulate geometry. Visual changes to the mesh will always be immediately
-  reflected by the engine, without the need to call
-  `Class.AssetService:CreateMeshPartAsync()`.
-
-  ##### Enabling EditableMesh for Published Experiences
+  #### Enabling in Published Experiences
 
   For security purposes, using `EditableMesh` fails by default for published
   experiences. To enable usage, you must be 13+ age verified and ID verified.
@@ -38,7 +16,7 @@ description: |
   [Game Settings](../../../studio/game-settings.md), select **Security**, and
   enable the **Allow Mesh&nbsp;&#47; Image APIs** toggle.
 
-  ##### Permissions
+  #### Permissions
 
   To prevent misuse, `Class.AssetService:CreateEditableMeshAsync()` will only
   allow you to load and edit mesh assets:
@@ -49,10 +27,77 @@ description: |
   - That are owned by the logged in Studio user (if the place file has not yet
     been saved or published to Roblox).
 
-  The APIs throw an error if they are used to load an asset that does not meet
-  the criteria above.
+  #### Creation and Display
 
-  ##### Fixed-Size Meshes
+  An `EditableMesh` can be created from an existing `Datatype.Content` of a
+  `Class.MeshPart` or a mesh ID using
+  `Class.AssetService:CreateEditableMeshAsync()`, or a blank `EditableMesh` can
+  be created with `Class.AssetService:CreateEditableMesh()`. It can then be
+  displayed, modified, and its collision model updated. Not all of the steps are
+  necessary; for example, you might want to create an `EditableMesh` just to
+  raycast without ever displaying it.
+
+  ```lua
+  local AssetService = game:GetService("AssetService")
+
+  -- Create empty EditableMesh
+  local editableMesh = AssetService:CreateEditableMesh()
+
+  -- Create EditableMesh from asset ID
+  local editableMeshFromAsset = nil
+  local success, errorMessage = pcall(function()
+  	editableMeshFromAsset = AssetService:CreateEditableMeshAsync(Content.fromAssetId(ASSET_ID))
+  end)
+
+  -- Create EditableMesh from another EditableMesh
+  local editableMeshFromAnother = nil
+  local success, errorMessage = pcall(function()
+  	editableMeshFromAnother = AssetService:CreateEditableMeshAsync(Content.fromObject(OTHER_EDITABLE_MESH))
+  end)
+
+  -- Create EditableMesh from MeshPart
+  local editableMeshFromMeshPart = nil
+  local success, errorMessage = pcall(function()
+  	editableMeshFromMeshPart = AssetService:CreateEditableMeshAsync(MESH_PART.MeshContent)
+  end)
+  ```
+
+  An `EditableMesh` is displayed when it's linked to a new `Class.MeshPart`,
+  through `Class.AssetService:CreateMeshPartAsync()`. You can create more
+  `Class.MeshPart` instances that reference the same `EditableMesh`
+  `Datatype.Content`, or link to an existing `Class.MeshPart` through
+  `Class.MeshPart:ApplyMesh()`.
+
+  ```lua
+  local AssetService = game:GetService("AssetService")
+  local Workspace = game:GetService("Workspace")
+
+  -- Create EditableMesh from asset ID
+  local editableMeshFromAsset = nil
+  local success, errorMessage = pcall(function()
+  	editableMeshFromAsset = AssetService:CreateEditableMeshAsync(Content.fromAssetId(ASSET_ID))
+  end)
+
+  -- Create new MeshPart linked to the EditableMesh
+  local newMeshPart = nil
+  local success, errorMessage = pcall(function()
+  	newMeshPart = AssetService:CreateMeshPartAsync(Content.fromObject(editableMeshFromAsset))
+  end)
+
+  -- Alternatively, link the new MeshPart created above to an existing MeshPart
+  local existingMeshPart = Workspace:FindFirstChild("EXISTING_MESH_PART")
+  existingMeshPart:ApplyMesh(newMeshPart)
+  ```
+
+  To recalculate collision and fluid geometry after editing, you can again call
+  `Class.AssetService:CreateMeshPartAsync()` and `Class.MeshPart:ApplyMesh()` to
+  update an existing `Class.MeshPart`. It's generally recommended to do this at
+  the end of a conceptual edit, not after individual calls to methods that
+  manipulate geometry. Visual changes to the mesh will always be immediately
+  reflected by the engine, without the need to call
+  `Class.AssetService:CreateMeshPartAsync()`.
+
+  #### Fixed-Size Meshes
 
   When creating an `EditableMesh` from an existing mesh asset (via
   `Class.AssetService:CreateEditableMeshAsync()`), the resulting editable mesh
@@ -60,7 +105,17 @@ description: |
   memory but you cannot change the number of vertices, faces, or attributes.
   Only the values of vertex attributes and positions can be edited.
 
-  ##### Stable Vertex/Face IDs
+  ```lua
+  local AssetService = game:GetService("AssetService")
+
+  -- Create EditableMesh without fixed-size default
+  local editableMeshFromAsset = nil
+  local success, errorMessage = pcall(function()
+  	editableMeshFromAsset = AssetService:CreateEditableMeshAsync(Content.fromAssetId(ASSET_ID), {FixedSize = false})
+  end)
+  ```
+
+  #### Stable Vertex/Face IDs
 
   Many `EditableMesh` methods take **vertex**, **normal**, **UV**, **color** and
   **face** IDs. These are represented as integers in Luau but they require some
@@ -74,7 +129,7 @@ description: |
   through the table returned by `Class.EditableMesh:GetVertices()|GetVertices()`
   or `Class.EditableMesh:GetFaces()|GetFaces()`.
 
-  ##### Split Vertex Attributes
+  #### Split Vertex Attributes
 
   A **vertex** is a corner of a face, and topologically connects faces together.
   Vertices can have several attributes: position, normal, UV coordinate, color,
@@ -96,42 +151,42 @@ description: |
   local AssetService = game:GetService("AssetService")
 
   -- Given 4 vertex IDs, adds a new normal and 2 triangles, making a sharp quad
-  local function addSharpQuad(eMesh, vid0, vid1, vid2, vid3)
-  	local nid = eMesh:AddNormal()  -- This creates a normal ID which is automatically computed
+  local function addSharpQuad(editableMesh, vid0, vid1, vid2, vid3)
+  	local nid = editableMesh:AddNormal()  -- This creates a normal ID which is automatically computed
 
-  	local fid1 = eMesh:AddTriangle(vid0, vid1, vid2)
-  	eMesh:SetFaceNormals(fid1, {nid, nid, nid})
+  	local fid1 = editableMesh:AddTriangle(vid0, vid1, vid2)
+  	editableMesh:SetFaceNormals(fid1, {nid, nid, nid})
 
-  	local fid2 = eMesh:AddTriangle(vid0, vid2, vid3)
-  	eMesh:SetFaceNormals(fid2, {nid, nid, nid})
+  	local fid2 = editableMesh:AddTriangle(vid0, vid2, vid3)
+  	editableMesh:SetFaceNormals(fid2, {nid, nid, nid})
   end
 
   -- Makes a cube with creased edges between the 6 sides
   local function makeSharpCube()
-  	local eMesh = AssetService:CreateEditableMesh()
+  	local editableMesh = AssetService:CreateEditableMesh()
 
-  	local v1 = eMesh:AddVertex(Vector3.new(0, 0, 0))
-  	local v2 = eMesh:AddVertex(Vector3.new(1, 0, 0))
-  	local v3 = eMesh:AddVertex(Vector3.new(0, 1, 0))
-  	local v4 = eMesh:AddVertex(Vector3.new(1, 1, 0))
-  	local v5 = eMesh:AddVertex(Vector3.new(0, 0, 1))
-  	local v6 = eMesh:AddVertex(Vector3.new(1, 0, 1))
-  	local v7 = eMesh:AddVertex(Vector3.new(0, 1, 1))
-  	local v8 = eMesh:AddVertex(Vector3.new(1, 1, 1))
+  	local v1 = editableMesh:AddVertex(Vector3.new(0, 0, 0))
+  	local v2 = editableMesh:AddVertex(Vector3.new(1, 0, 0))
+  	local v3 = editableMesh:AddVertex(Vector3.new(0, 1, 0))
+  	local v4 = editableMesh:AddVertex(Vector3.new(1, 1, 0))
+  	local v5 = editableMesh:AddVertex(Vector3.new(0, 0, 1))
+  	local v6 = editableMesh:AddVertex(Vector3.new(1, 0, 1))
+  	local v7 = editableMesh:AddVertex(Vector3.new(0, 1, 1))
+  	local v8 = editableMesh:AddVertex(Vector3.new(1, 1, 1))
 
-  	addSharpQuad(eMesh, v5, v6, v8, v7)  -- Front
-  	addSharpQuad(eMesh, v1, v3, v4, v2)  -- Back
-  	addSharpQuad(eMesh, v1, v5, v7, v3)  -- Left
-  	addSharpQuad(eMesh, v2, v4, v8, v6)  -- Right
-  	addSharpQuad(eMesh, v1, v2, v6, v5)  -- Bottom
-  	addSharpQuad(eMesh, v3, v7, v8, v4)  -- Top
+  	addSharpQuad(editableMesh, v5, v6, v8, v7)  -- Front
+  	addSharpQuad(editableMesh, v1, v3, v4, v2)  -- Back
+  	addSharpQuad(editableMesh, v1, v5, v7, v3)  -- Left
+  	addSharpQuad(editableMesh, v2, v4, v8, v6)  -- Right
+  	addSharpQuad(editableMesh, v1, v2, v6, v5)  -- Bottom
+  	addSharpQuad(editableMesh, v3, v7, v8, v4)  -- Top
 
-  	eMesh:RemoveUnused()
-  	return eMesh
+  	editableMesh:RemoveUnused()
+  	return editableMesh
   end
   ```
 
-  ##### Winding
+  #### Winding
 
   Mesh faces have a front side and a back side. When drawing meshes, only the
   front of the faces are drawn by default, although you can change this by
@@ -143,7 +198,7 @@ description: |
 
   <img src="../../../assets/engine-api/classes/EditableMesh/Winding.png" alt="Order of the vertices around the face" width="550" />
 
-  ##### FACS Poses
+  #### FACS Poses
 
   Animatable heads use the Facial Action Coding System (FACS). See the
   [FACS poses reference](../../../art/characters/facial-animation/facs-poses-reference.md)
@@ -166,7 +221,7 @@ description: |
   initial `Datatype.CFrame` in the bind pose of the mesh into the
   `Datatype.CFrame` for that FACS corrective.
 
-  ##### Limitations
+  #### Limitations
 
   `EditableMesh` currently has a limit of 60,000 vertices and 20,000 triangles.
   Attempting to add too many vertices or triangles will cause an error.
