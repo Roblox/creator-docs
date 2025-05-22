@@ -102,10 +102,8 @@ methods:
       within the following: `Enum.KeyCode`, `Enum.UserInputType` or
       `Enum.PlayerActions` . Call this function when a player **enters the
       context** in which an action can be performed. When the player leaves the
-      context, call `Class.ContextActionService:UnbindAction()|UnbindAction`
-      with the same `actionName`. You can manually call the action handling
-      function of an action by using
-      `Class.ContextActionService:CallFunction()|CallFunction`.
+      context, call `Class.ContextActionService:UnbindAction()|UnbindAction()`
+      with the same `actionName`.
 
       The code sample below shows how a `Class.Sound` can be
       `Class.Sound:Play()|played` while a key (<kbd>H</kbd>), game pad button,
