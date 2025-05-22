@@ -8,7 +8,7 @@ The **MerchBooth** [developer module](../../resources/modules/index.md) lets you
 <video src="../../assets/developer-modules/merch-booth/Showcase.mp4" controls width="100%"></video>
 
 <Alert severity="warning">
-To offer assets created by third parties in the merch booth, make sure **Allow Third Party Sales** is enabled from the **Security** section of the [Game Settings](../../studio/game-settings.md) window. If this setting is disabled, you will not be able to sell UGC assets created by other users.
+To offer assets created by third parties in the merch booth, make sure **Allow Third Party Sales** is enabled from the **Security** section of Studio's **File**&nbsp;⟩ **Game Settings** window. If this setting is disabled, you will not be able to sell UGC assets created by other users.
 </Alert>
 
 ## Module usage

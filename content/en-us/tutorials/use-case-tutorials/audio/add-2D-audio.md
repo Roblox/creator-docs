@@ -3,7 +3,7 @@ title: Add 2D audio
 description: Explains how to add non-directional audio to your experiences.
 ---
 
-**2D audio** is non-directional that doesn't emit from any particular location, remaining the same regardless of a listener's position or orientation in the 3D space. This means that as players move their listeners around the environment, they can consistently hear 2D audio from anywhere they turn.
+**2D audio** is non-directional sound that doesn't emit from any particular location, remaining the same regardless of a listener's position or orientation in the 3D space. This means that as players move their listeners around the environment, they can consistently hear 2D audio from anywhere they turn.
 
 Using the [Gingerbread House - Start](https://www.roblox.com/games/134812596370919/Gingerbread-House-Start) `.rbxl` file as a starting place and [Gingerbread House - Complete Audio](https://www.roblox.com/games/94670255584609/Gingerbread-House-Complete-Audio) as a reference, this tutorial shows you how to add both looping and one shot 2D audio to your experiences, including guidance on:
 

@@ -133,7 +133,7 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: CaptureService:StartVideoCaptureInternal
+  - name: CaptureService:StopVideoCapture
     summary: ''
     description: ''
     code_samples: []
@@ -143,35 +143,7 @@ methods:
         summary: ''
     tags: []
     deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: CaptureService:StopCapture
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: CaptureService:StopVideoCaptureInternal
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
+    security: None
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
@@ -197,6 +169,29 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: CaptureService:StartVideoCaptureAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: onCaptureReady
+        type: Function
+        default: ''
+        summary: ''
+      - name: captureParams
+        type: Dictionary
+        default: nil
+        summary: ''
+    returns:
+      - type: VideoCaptureResult
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: CaptureService.CaptureBegan
     summary: |
@@ -206,11 +201,14 @@ events:
       used to customize the capture experience, for example by hiding certain
       GUI elements.
     code_samples: []
-    parameters: []
+    parameters:
+      - name: captureType
+        type: CaptureType
+        default: ''
+        summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: CaptureService.CaptureEnded
@@ -221,11 +219,14 @@ events:
       to restore any changes made when the
       `Class.CaptureService.CaptureBegan|CaptureBegan` event fired.
     code_samples: []
-    parameters: []
+    parameters:
+      - name: captureType
+        type: CaptureType
+        default: ''
+        summary: ''
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: CaptureService.CaptureSaved
@@ -243,7 +244,6 @@ events:
       This event has been superseded by the
       `Class.CaptureService.UserCaptureSaved|UserCaptureSaved` event.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: CaptureService.UserCaptureSaved
@@ -263,7 +263,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

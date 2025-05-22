@@ -7,7 +7,7 @@ Creating a high-quality experience demands many skills such as modeling, scripti
 
 With Studio's **built-in** **collaboration tools**, creators can contribute to experiences independently on their own time, or work together with their team all at the same time.
 
-<img src="../assets/studio/collaboration/Collaborative-Session.jpg" alt="Three creators working together in a collaborative session, each with differnt color markers to demonstrate what objects they're currently editing in the environment." />
+<img src="../assets/studio/collaboration/Collaborative-Session.jpg" alt="Three creators working together in a collaborative session, each with different color markers to demonstrate what objects they're currently editing in the environment." />
 
 ## Manage collaborators
 
@@ -55,7 +55,7 @@ If you're the group owner or a member with sufficient permissions, you can confi
 
 In Studio's **Manage Collaborators** window for any group-owned experience, eligible roles display **Edit** permission but are muted to indicate that you can't change the permission level from Studio.
 
-   <img src="../assets/studio/general/Toolbar-Collaborate-Button-From-Off.png" width="754" alt="Studio's menu bar with the Collaborate button highlighted." />
+   <img src="../assets/studio/general/Toolbar-Collaborate-Button-From-Off.png" width="754" alt="Studio's mezzanine bar with the Collaborate button highlighted." />
 
    <img src="../assets/studio/collaboration/Edit-Permission-All-Group-Experiences.png" width="780" alt="Manage Collaborators window showing permission level selection for each group role." />
 
@@ -63,9 +63,9 @@ In Studio's **Manage Collaborators** window for any group-owned experience, elig
 <TabItem label="Per-experience">
 If you're the group's owner, you can grant **Edit** permission on a per-experience basis to roles that do **not** have permission to edit all group experiences. For example, you can temporarily grant **Edit** permission to an "FX&nbsp;Artist" group role so they can fine-tune visual effects before an experience's public release.
 
-1. With the experience open in Studio, click the **Collaborate** button in the upper-right corner.
+1. With the experience open in Studio, click the **Collaborate** button on the right side of the mezzanine bar.
 
-   <img src="../assets/studio/general/Toolbar-Collaborate-Button-From-Off.png" width="754" alt="Studio's menu bar with the Collaborate button highlighted." />
+   <img src="../assets/studio/general/Toolbar-Collaborate-Button-From-Off.png" width="754" alt="Studio's mezzanine bar with the Collaborate button highlighted." />
 
 1. Select **Edit** from the permissions dropdown for the desired roles. Remember that you can only modify roles that do **not** already have edit permission across all group experiences.
 
@@ -82,9 +82,9 @@ For user-owned experiences, you can grant **Play** access to any user or [group]
 
 To give **Edit** permission to a friend for an experience that you own:
 
-1. With the experience open in Studio, click the **Collaborate** button in the upper-right corner.
+1. With the experience open in Studio, click the **Collaborate** button on the right side of the mezzanine bar.
 
-   <img src="../assets/studio/general/Toolbar-Collaborate-Button-From-Off.png" width="754" alt="Studio's menu bar with the Collaborate button highlighted." />
+   <img src="../assets/studio/general/Toolbar-Collaborate-Button-From-Off.png" width="754" alt="Studio's mezzanine bar with the Collaborate button highlighted." />
 
 1. Type into the search bar at the top to search for a collaborator to add. A dropdown appears listing matching collaborators, with friends indicated by the **Friend** label below their name. Select the collaborator to add.
 
@@ -106,24 +106,24 @@ Those who have permission to edit an experience can join a collaborative session
    <Tabs>
    <TabItem label="Group-Owned Experience">
 
-	 1. Select the group from the upper‑left selector menu.
-	 2. Make sure **Creations** is selected on the left and **My Experiences** in the main panel.
+   1. Select the group from the upper‑left selector menu.
+   2. Make sure **Creations** is selected on the left and **My Experiences** in the main panel.
 
-     <Grid container spacing={1} alignItems="center">
-	   <Grid item><Chip label="My Experiences" color="primary" size="medium" /></Grid>
-	   <Grid item><Chip label="Shared With Me" color="secondary" size="medium" /></Grid>
-     </Grid>
+      <Grid container spacing={1} alignItems="center">
+        <Grid item><Chip label="My Experiences" color="primary" size="medium" /></Grid>
+        <Grid item><Chip label="Shared With Me" color="secondary" size="medium" /></Grid>
+      </Grid>
 
    </TabItem>
    <TabItem label="User-Owned Experience">
 
-	 1. Select your personal account from the upper‑left selector menu.
-	 2. Make sure **Creations** is selected on the left and **Shared With Me** in the main panel.
+   1. Select your personal account from the upper‑left selector menu.
+   2. Make sure **Creations** is selected on the left and **Shared With Me** in the main panel.
 
-     <Grid container spacing={1} alignItems="center">
-	   <Grid item><Chip label="My Experiences" color="secondary" size="medium" /></Grid>
-	   <Grid item><Chip label="Shared With Me" color="primary" size="medium" /></Grid>
-     </Grid>
+      <Grid container spacing={1} alignItems="center">
+        <Grid item><Chip label="My Experiences" color="secondary" size="medium" /></Grid>
+        <Grid item><Chip label="Shared With Me" color="primary" size="medium" /></Grid>
+      </Grid>
 
    </TabItem>
    </Tabs>
@@ -165,6 +165,44 @@ To quickly jump to a location in the workspace or to the exact line in a script 
 
 <img src="../assets/studio/collaboration/Live-Collaborators-Join.png" width="280" />
 
+## Comments
+
+<Alert severity="success">
+The comments feature is rolling out gradually over the next month. All Studio users will have access by 30 May 2025.
+</Alert>
+
+Roblox Studio has a comments feature that let you pinpoint an object in the 3D viewport and start a conversation with your collaborators, leave to-do notes, and more. Comments update in real-time, which lets you and your team receive and respond to feedback without disrupting your workflow in Studio.
+
+To use this feature, you must have [added collaborators](#manage-collaborators) to your experience.
+
+### Create comments
+
+To create a comment, click the **Comment** button in the upper-right corner of Studio (keyboard shortcut <kbd>C</kbd>).
+
+<img src="../assets/studio/comments/annotations-button.png" alt="Button for comments in the upper-right." width="400" />
+
+In the viewport, note how your cursor turns blue. Click on any object that inherits from `Class.BasePart` (most do, including terrain), type your comment, and click **Submit**.
+
+<img src="../assets/studio/comments/annotations-blue.png" alt="Blue cursor in the viewport." width="300" />
+
+To tag a collaborator in your comment, use the `@username` syntax. Collaborators can then check the [Comments window](#manage-comments) and filter for comments that mention them.
+
+<img src="../assets/studio/comments/annotations-tag.png" alt="Creating a comment in the viewport." width="700" />
+
+- In a user-owned experience, any user with play or edit permissions is available in the tagging dropdown.
+- In a group-owned experience, any user within the group is available in the tagging dropdown.
+
+### Manage comments
+
+The **Comments** window shows a list of all comments, with the most-recent at the top. To open the window, switch to the **View** tab and click the **Comments** button.
+
+<img src="../assets/studio/comments/annotations-window.png" alt="List of comments in the window." width="400" />
+
+- Single-click on a comment to show the full conversation.
+- Double-click on a comment to zoom in on it in the viewport.
+- Use the **&ctdot;** menu in the upper-right corner to show resolved comments, filter for only the comments that you've been tagged in, or hide comments in the viewport.
+- Resolve comments as you and your team address them. After you resolve a comment, it disappears from both the viewport and the main list, but it isn't completely gone; you can always unresolve it later.
+
 ## Collaborative scripting
 
 In a collaborative session, you can code together in real-time through [live scripting](#live-scripting), or you can [draft](#drafts-mode) scripts in a more focused environment before committing them to a collaborator‑shared repository.
@@ -193,7 +231,7 @@ Live Scripting is **enabled** by default. If you and your team prefer to collabo
 Through **Drafts** mode, you can independently edit and test scripts without affecting the experience for others. After you finish drafting a script, you can [commit](#commit-drafts) it to the shared repository and [Team Test](../studio/home-tab.md#team-test) the committed version with collaborators.
 
 <Alert severity="warning">
-Drafts Mode is **disabled** by default. To enable it, open the [Game Settings](../studio/game-settings.md) window, select the **Other** tab, and turn on **Enable Drafts Mode**.
+Drafts Mode is **disabled** by default. To enable it, open Studio's **File**&nbsp;⟩ **Game Settings** window, select the **Other** tab, and turn on **Enable Drafts Mode**.
 
 Note that all collaborators will need to exit the session for the change to take effect. Alternatively, you can [disable collaboration](#disable-collaboration) and then reenable it to restart the session.
 </Alert>
@@ -252,12 +290,12 @@ All script changes, whether saved by a collaborator, auto-saved, or committed by
    To compare any version (except the oldest) with its previous version, select it and click **Compare With Previous Version**. In the **(Diff)** tab that opens in the [Script Editor](../studio/script-editor.md), code from the newer version appears in green while code from the older version appears in red.
    </TabItem>
    <TabItem label="Compare Selected">
-	 To compare any **two** versions, hold <kbd>Ctrl</kbd> or <kbd>⌘</kbd> and select both, then click **Compare Selected Versions**. In the **(Diff)** tab that opens in the [Script Editor](../studio/script-editor.md), code from the newer version appears in green while code from the older version appears in red.
+   To compare any **two** versions, hold <kbd>Ctrl</kbd> or <kbd>⌘</kbd> and select both, then click **Compare Selected Versions**. In the **(Diff)** tab that opens in the [Script Editor](../studio/script-editor.md), code from the newer version appears in green while code from the older version appears in red.
    </TabItem>
-	 <TabItem label="Open">
-	 If the version **Comment** indicates just one script was committed, select it and click **Open Script** to open it in the [Script Editor](../studio/script-editor.md).
+   <TabItem label="Open">
+   If the version **Comment** indicates just one script was committed, select it and click **Open Script** to open it in the [Script Editor](../studio/script-editor.md).
 
-	 If the version **Comment** indicates more than one script was committed (commonly the result of an auto‑save on multiple unsaved scripts), you can click **Show** within the version's row to open a popup displaying the script(s) and their respective version. Then, from the version history window, click **Open All Scripts From Batch** to open them in the [Script Editor](../studio/script-editor.md).
+   If the version **Comment** indicates more than one script was committed (commonly the result of an auto‑save on multiple unsaved scripts), you can click **Show** within the version's row to open a popup displaying the script(s) and their respective version. Then, from the version history window, click **Open All Scripts From Batch** to open them in the [Script Editor](../studio/script-editor.md).
    </TabItem>
    </Tabs>
 

@@ -196,7 +196,6 @@ events:
       ancient achievement system since removed and deprecated. It should not be
       used in new work.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

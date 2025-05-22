@@ -1,0 +1,23 @@
+name: AvatarSettingsAppearanceMode
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: PlayerChoice
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: CustomParts
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: CustomBody
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''

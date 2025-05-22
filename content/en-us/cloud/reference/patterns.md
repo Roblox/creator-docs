@@ -7,7 +7,7 @@ This page covers common patterns with the Open Cloud APIs, particularly around m
 
 ## Paths
 
-To make a request to the Open Cloud APIs, you must first form a URL. This URL is a combination of the base URL (`https://apis.roblox.com/cloud/v2`), the Open Cloud API path (for example, `/universes/{universe_id}/places/{place_id}/user-restrictions`), and any query parameters (for example, `?maxPageSize=25`). A full request URL might look like this:
+To make a request to the Open Cloud APIs, you must first form a URL. This URL is a combination of the base URL (e.g. `https://apis.roblox.com`), the Open Cloud API path (for example, `/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions`), and any query parameters (for example, `?maxPageSize=25`). A full request URL might look like this:
 
 ```json
 https://apis.roblox.com/cloud/v2/users/4687549151/inventory-items?maxPageSize=100
@@ -15,18 +15,9 @@ https://apis.roblox.com/cloud/v2/users/4687549151/inventory-items?maxPageSize=10
 
 Many paths, including the example above, have **path parameters**, designated by curly brackets in the API reference. Path parameters are just variables that you insert before making the request and are almost always IDs: user IDs, group IDs, place IDs, etc. IDs are often numeric, but not necessarily; for example, data store and memory store IDs support a wider character set.
 
-Some resources have multiple path patterns, visible under the **Resource Paths** header in the API reference. For example, the URL for [List User Restrictions](/cloud/reference/UserRestriction#List-User-Restrictions) can be either of the following:
-
-- `https://apis.roblox.com/cloud/cloud/v2/universes/{universe_id}/user-restrictions`
-- `https://apis.roblox.com/cloud/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions`
-
-You can probably infer the difference between the two: some user restrictions apply to an entire universe (experience), whereas others apply to specific places within a universe. Aside from the small addition to the path and extra path parameter, the calls are identical.
-
-Many APIs return a path as part of their response, which you can use to make further requests. If an API needs more than a few seconds to fulfill a request, it often returns an [operation](#long-running-operations) rather than the resource or response itself.
-
 ## Content length and type
 
-Many API calls, particularly those that create or update resources, require a JSON request body. If your request has a body, be sure to include the `Content-Length` and `Content-Type` headers. Most HTTP clients add these headers automatically.
+Many API calls, particularly those that create or update, require a JSON request body. If your request has a body, be sure to include the `Content-Length` and `Content-Type` headers. Most HTTP clients add these headers automatically.
 
 ## Pagination
 
@@ -83,7 +74,20 @@ GET /cloud/v2/universes/{universe_id}/data-stores?maxPageSize=25&pageToken=datas
 Aside from the `pageToken`, you must use the same query for pagination to work
 properly. Altering any filter parameter results in a 400 error.
 
-## Long running operations
+## Open Cloud v2
+
+### Multiple paths
+
+Some resources have multiple path patterns, visible under the **Resource Paths** header in the API reference. For example, the URL for [List User Restrictions](/cloud/reference/UserRestriction#Cloud_ListUserRestrictions__Using_Universes) can be either of the following:
+
+- `https://apis.roblox.com/cloud/cloud/v2/universes/{universe_id}/user-restrictions`
+- `https://apis.roblox.com/cloud/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions`
+
+You can probably infer the difference between the two: some user restrictions apply to an entire universe (experience), whereas others apply to specific places within a universe. Aside from the small addition to the path and extra path parameter, the calls are identical.
+
+Many endpoints return a path as part of their response, which you can use to make further requests. If an API needs more than a few seconds to fulfill a request, it often returns an [operation](#long-running-operations) rather than the resource or response itself.
+
+### Long running operations
 
 Some methods return an `Operation` object that represents a long-running request
 that returns an asynchronous response later. The object contains the following
@@ -138,13 +142,13 @@ def PollForResults(operationPath):
 
 For a more complete code sample that uses a fixed retry interval rather than exponential backoff, see [Poll for results](../guides/instance.md#poll-for-results).
 
-## Filtering
+### Filtering
 
 Some methods let you filter the response by including a `filter` parameter in
 the request. The following sections describe filter syntax and guidelines for
 the specified endpoints.
 
-### List group memberships
+#### List group memberships
 
 The wildcard character `-` can be used in place of group ID in order to list
 memberships across all groups: `groups/-/memberships`.
@@ -166,7 +170,7 @@ memberships by user (up to 50) in the following format:
 
 - **User filter**: `filter="user in ['users/1', 'users/156', 'users/9876543210', ...]"`
 
-### List inventory items
+#### List inventory items
 
 You can filter by collectible status, inventory item type, and inventory
 item ID. If you don't provide a filter, the user's entire inventory is returned.
@@ -184,7 +188,7 @@ The filter format is a semicolon-separated list:
 You can't combine type and ID fields in the same filter.
 </Alert>
 
-#### Type fields
+**Type fields**
 
 | Filter                    | Type                                                    | Description                                                                                                                                                                                        |
 | :------------------------ | :------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -194,7 +198,7 @@ You can't combine type and ID fields in the same filter.
 | `onlyCollectibles`        | boolean                                                 | Include **only** collectibles in the response. Default is false. This field must be used with the `inventoryItemAssetTypes` field in order to return items and only returns non-UGC limited items. |
 | `privateServers`          | boolean                                                 | Include private servers in the response. Default is false. Must have Inventory read scope to filter by this field.                                                                                 |
 
-#### ID fields
+**ID Fields**
 
 | Filter             | Type   | Description                                                                                                            |
 | :----------------- | :----- | :--------------------------------------------------------------------------------------------------------------------- |
@@ -203,7 +207,7 @@ You can't combine type and ID fields in the same filter.
 | `gamePassIds`      | string | Comma-separated list of numeric game pass IDs to include.                                                              |
 | `privateServerIds` | string | Comma-separated list of numeric private server IDs to include. Must have Inventory read scope to filter by this field. |
 
-#### Examples
+**Examples**
 
 - Returns all collectible items that the user owns:
 

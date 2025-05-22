@@ -1,0 +1,33 @@
+name: VideoCaptureResult
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Success
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: OtherError
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: CapturingAlready
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: NoDeviceSupport
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: NoSpaceOnDevice
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''

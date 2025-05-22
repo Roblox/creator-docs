@@ -41,7 +41,7 @@ To create an API key:
 1. From the **Experience Operations** dropdown, select the operations that you
    want to enable for the API key.
 
-   Many operations in the [API reference](../index.md) include the required permission scopes. For example, the [flush memory store](/cloud/reference/MemoryStore#Flush-Memory-Store) operation requires the `universe.memory-store:flush` permission.
+   Many operations in the [API reference](../index.md) include the required permission scopes. For example, the [flush memory store](/cloud/reference/MemoryStore#Cloud_FlushMemoryStore) operation requires the `universe.memory-store:flush` permission.
 
    <Alert severity="warning">
    For security reasons, give each API key the minimum number of required permissions. If an API key leaks, this principle of least privilege ensures that only a subset of your resources are compromised.

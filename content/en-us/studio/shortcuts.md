@@ -277,7 +277,7 @@ Studio has many default shortcuts and key commands that make development quicker
       <td>**Toggle Snapping**</td>
 			<td><kbd>Shift</kbd></td>
 			<td><kbd>Shift</kbd></td>
-      <td>While transforming, hold to temporarily toggle [snapping](../studio/model-tab.md#transform-snapping) either on or off.</td>
+      <td>While transforming, hold to temporarily toggle transform **snapping** either on or off.</td>
     </tr>
     <tr>
       <td>**Anchor**</td>

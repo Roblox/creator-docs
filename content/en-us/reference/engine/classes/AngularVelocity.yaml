@@ -2,9 +2,9 @@ name: AngularVelocity
 type: class
 memory_category: PhysicsParts
 summary: |
-  Applies torque on an assembly to maintain a **constant** angular velocity.
+  Applies torque on an assembly to maintain a constant angular velocity.
 description: |
-  The **AngularVelocity** constraint applies torque on an assembly to maintain a
+  The `AngularVelocity` constraint applies torque on an assembly to maintain a
   **constant** angular velocity. Alternatively:
 
   - If you want to control the amount of torque applied, use a `Class.Torque`
@@ -108,10 +108,10 @@ properties:
   - name: AngularVelocity.RelativeTo
     summary: ''
     description: |
-      The `Datatype.CFrame` in which the `Class.AngularVelocity` force is
-      specified. If set to `Enum.ActuatorRelativeTo|World`, the angular velocity
-      vector is used as is. If set to `Enum.ActuatorRelativeTo|Attachment1`, the
-      angular velocity is transformed by the `Datatype.CFrame` of the assigned
+      The `Datatype.CFrame` in which the `AngularVelocity` force is specified.
+      If set to `Enum.ActuatorRelativeTo|World`, the angular velocity vector is
+      used as is. If set to `Enum.ActuatorRelativeTo|Attachment1`, the angular
+      velocity is transformed by the `Datatype.CFrame` of the assigned
       attachment.
 
       `Class.AngularVelocity.RelativeTo|RelativeTo` can also be set to

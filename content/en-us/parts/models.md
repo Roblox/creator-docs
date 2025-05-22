@@ -9,21 +9,23 @@ Characters, such as avatars or NPCs, are a single `Class.Model` containing the a
 
 <GridContainer numColumns="2">
 	<figure>
-		<img src="../assets/modeling/model-objects/Model-Example-3D.jpg" alt="An example character model of a humanoid monster girl in a dark purple dress." />
+		<img src="../assets/modeling/model-objects/Model-Example-3D.jpg" width="80%" alt="An example character model of a humanoid monster girl in a dark purple dress." />
 		<figcaption>A model named Octavia</figcaption>
 	</figure>
 	<figure>
-    	<img src="../assets/modeling/model-objects/Model-Example-Hierarchy.png" width="320" alt="The groupings which comprise the Octavia model in Studio's Explorer window." />
+    	<img src="../assets/modeling/model-objects/Model-Example-Hierarchy.png" width="68%" alt="The groupings which comprise the Octavia model in Studio's Explorer window." />
     	<figcaption>The groupings that comprise the model</figcaption>
     </figure>
 </GridContainer>
 
 ## Create models
 
-When you **group** objects together, they automatically become a `Class.Model` object.
+When you **group** objects together, they automatically become a `Class.Model` object. However, you can also insert an empty `Class.Model` object into the Workspace, then manually add child objects to the model.
 
-1. In the 3D viewport or the **Explorer** window, select every object that you want to group into a model.
-1. Right-click on one of the objects and select **Group**, or press <kbd>Ctrl</kbd><kbd>G</kbd> on Windows or <kbd>⌘</kbd><kbd>G</kbd> on Mac. A new `Class.Model` object displays with all of the objects that make up the model nested underneath.
+To create a model using the grouping method:
+
+1. In the **Explorer** window or 3D viewport, select every object that you want to group into a model.
+1. Right-click on one of the objects and select **Group**, or press <kbd>Ctrl</kbd> + <kbd>G</kbd> on Windows or <kbd>⌘</kbd> + <kbd>G</kbd> on Mac. A new `Class.Model` object displays with all of the objects that make up the model nested underneath.
 
    <img src="../assets/modeling/model-objects/Model-Group-Simple.png" width="320" alt="A close up view of the Explorer window. A Model object is highlighted with three nested children." />
 
@@ -105,23 +107,51 @@ Because 3D content that exists on the client changes dynamically in a streaming-
 
 See [Model Streaming Controls](../workspace/streaming.md#model-streaming-controls) for more on model-level streaming controls.
 
-## Upload and distribute models
+## Upload models
 
-You can distribute models to the [Creator Store](../production/creator-store.md) for other creators to use within their own experiences. As with any asset, all models must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), the [DMCA Guidelines](../production/publishing/dmca-guidelines.md) regarding copyright and Creator Store [asset moderation](../production/creator-store.md#asset-moderation) rules.
+When you upload or import a `.gltf`, `.fbx` and `.obj` model file to the cloud using the [3D Importer](../art/accessories/creating-rigid/importing.md), Roblox represents it as a cloud-based asset with a unique corresponding ID. This cloud-based asset system allows you to store models through Roblox and reuse them across the platform in various contexts without maintaining local copies as part of each saved Studio experience.
 
 <Alert severity="info">
-You will soon be able to sell models on the Creator Store for **United States Dollars** (USD). For more information and to start onboarding, see [Selling on the Creator Store](../production/sell-on-creator-store.md).
+There is a limit of 15,000 unique assetIds that can be referenced in a single model.
 </Alert>
 
-### 3D model files
+To upload a model you made in Studio:
 
-You can import `.gltf`, `.fbx` and `.obj` model files into Roblox Studio. See [Using Studio's 3D Importer](../art/accessories/creating-rigid/importing.md). To create content for the Creator Store, we recommend:
+1. In the **Explorer** window, right-click your model. A contextual menu displays.
+2. Select **Save to Roblox**. The **Asset Configuration** window displays.
+3. In the **Asset Configuration** window,
+   1. Set **Content Type** to **Development Item**.
+   1. Set **Asset Category** to **Model**.
+   1. Complete the following fields:
+
+      - **Title** - The name of your model.
+      - **Description** - A short description of your model.
+      - **Creator** - Use the dropdown to select if you'd like to publish this asset as an individual or as part of an associated group.
+      - **Genre** - The genre of your model.
+
+   1. Click the **Save** button. After a moment, the **Asset Configuration** window displays your model's assetID that you can use in your projects or share with other creators, groups, or experiences. For more information on granting permission to collaborators and experiences so that they can use your models, see [Asset privacy](../projects/assets/privacy.md)
+
+## Distribute models
+
+You can distribute models to the [Creator Store](../production/creator-store.md) for other creators to use within their own experiences as long as each model only references:
+
+- Open use assets.
+- Restricted assets that you created, excluding audio and video.
+- Free assets from the Creator Store, including audio and video.
+
+Once you distribute a model, all newer versions include the same restrictions even if you later unlist it from the Creator Store.
+
+<Alert severity="info">
+If you want to distribute a model with a child audio or video asset that you created, you must distribute the audio or video asset on the Creator Store before making them a child of the model for the audio or video to be audible and visible at runtime.
+</Alert>
+
+As with any asset, all models must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), the [DMCA Guidelines](../production/publishing/dmca-guidelines.md) regarding copyright and Creator Store [asset moderation](../production/creator-store.md#asset-moderation) rules. When creating models for the Creator Store:
 
 - Read about Roblox [texture specifications and limits](../art/modeling/texture-specifications.md).
 - Limit each mesh to a maximum of 20,000 triangles.
 - Read and address any warnings shown during the import process.
 - Scale and orient your model appropriately during import so that it's usable out of the box when inserted from the Creator Store.
 
-### Existing Roblox instances
-
-You can upload existing `Class.Model` instances created in Studio from the **Explorer** window. For more infromation, see [Distribute and sell assets through Studio](../production/creator-store.md#through-studio).
+<Alert severity="info">
+You will soon be able to sell models on the Creator Store for **United States Dollars** (USD). For more information and to start onboarding, see [Selling on the Creator Store](../production/sell-on-creator-store.md).
+</Alert>

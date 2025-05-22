@@ -169,25 +169,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: AvatarCreationService:GenerateAvatar2DPreviewAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: avatarGeneration2dPreviewParams
-        type: Dictionary
-        default: ''
-        summary: ''
-    returns:
-      - type: string
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: AvatarCreationService:GetBatchTokenDetailsAsync
     summary: |
       Gets the avatar creation token details for a list of avatar creation
@@ -225,44 +206,6 @@ methods:
       - type: Array
         summary: |
           Array of avatar creation token details as outlined above.
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: AvatarCreationService:LoadAvatar2DPreviewAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: previewId
-        type: string
-        default: ''
-        summary: ''
-    returns:
-      - type: EditableImage
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: AvatarCreationService:LoadGeneratedAvatarAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: generationId
-        type: string
-        default: ''
-        summary: ''
-    returns:
-      - type: HumanoidDescription
-        summary: ''
     tags:
       - Yields
     deprecation_message: ''
@@ -538,7 +481,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

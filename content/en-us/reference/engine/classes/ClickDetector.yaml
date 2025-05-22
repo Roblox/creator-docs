@@ -135,7 +135,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: ClickDetector.MouseHoverEnter
@@ -165,7 +164,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: ClickDetector.MouseHoverLeave
@@ -196,7 +194,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: ClickDetector.RightMouseClick
@@ -221,7 +218,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: ClickDetector.mouseClick
@@ -239,7 +235,6 @@ events:
       This deprecated event is a variant of `Class.ClickDetector.MouseClick`,
       which should be used instead.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

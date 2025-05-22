@@ -72,24 +72,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: AssetService:CreateSurfaceAppearance
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: content
-        type: Dictionary
-        default: ''
-        summary: ''
-    returns:
-      - type: SurfaceAppearance
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: AssetService:CreateAssetAsync
     summary: |
       Uploads a new asset to Roblox from the given object.
@@ -656,9 +638,18 @@ methods:
     summary: |
       Saves the state of the current place.
     description: |
-      Saves the state of the current place. Only works for places that are
-      created with `Class.AssetService:CreatePlaceAsync()` or which have the API
-      enabled through place settings.
+      Saves the current state of the place. Keep in mind the following
+      guidelines and restrictions:
+
+      - This method only works for places that are created with
+        `Class.AssetService:CreatePlaceAsync()` or that have the API enabled
+        through the place's settings.
+      - This method overwrites the previous state of the place. To revert a
+        save, publish an older version of the place.
+      - There are cases when saves can occur simultaneously in Studio and in
+        multiple experience servers. The order of the saves happen in the order
+        they are called.
+      - An active Team Create session in Studio blocks all saves from occurring.
     code_samples: []
     parameters: []
     returns:

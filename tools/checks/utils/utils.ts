@@ -10,6 +10,7 @@ export enum Emoji {
   Mailbox = '📫',
   OpenFileFolder = '📂',
   RobotFace = '🤖',
+  Warning = '⚠️',
   WasteBasket = '🗑️',
   WhiteCheckMark = '✅',
 }

@@ -3,7 +3,7 @@ title: Messaging usage guide
 description: Explains how to use Open Cloud Messaging Service API to support cross-server messaging.
 ---
 
-The [Messaging Service API](/cloud/reference/Universe#Publish-Universe-Message) is the Open Cloud equivalent of the Engine `Class.MessagingService`, which lets you communicate across your experience's servers and clients. The Engine API only allows you to write and update scripts manually in Studio for publishing messages, but the Open Cloud API lets you send messages to live servers from external tools to automate and improve your operations workflows.
+The [Messaging Service API](/cloud/reference/Universe#Cloud_PublishUniverseMessage) is the Open Cloud equivalent of the Engine `Class.MessagingService`, which lets you communicate across your experience's servers and clients. The Engine API only allows you to write and update scripts manually in Studio for publishing messages, but the Open Cloud API lets you send messages to live servers from external tools to automate and improve your operations workflows.
 
 ## Usage
 

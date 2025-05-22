@@ -1978,7 +1978,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities:
       - Avatar
     writeCapabilities: []
@@ -2036,7 +2035,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities:
       - Avatar
     writeCapabilities: []

@@ -589,6 +589,51 @@ properties:
     capabilities: []
     writeCapabilities: []
 methods:
+  - name: Stats:GetHarmonyQualityLevel
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: int
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - InternalTest
+    writeCapabilities: []
+  - name: Stats:GetMemoryCategoryNames
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - InternalTest
+    writeCapabilities: []
+  - name: Stats:GetMemoryUsageMbAllCategories
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - InternalTest
+    writeCapabilities: []
   - name: Stats:GetMemoryUsageMbForTag
     summary: |
       Returns the number of megabytes that are being consumed in the specified
@@ -628,6 +673,40 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+    writeCapabilities: []
+  - name: Stats:ResetHarmonyMemoryTarget
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - InternalTest
+    writeCapabilities: []
+  - name: Stats:SetHarmonyMemoryTarget
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: targetMB
+        type: int
+        default: ''
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - InternalTest
     writeCapabilities: []
 events: []
 callbacks: []

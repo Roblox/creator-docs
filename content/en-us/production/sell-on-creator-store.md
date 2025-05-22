@@ -6,7 +6,7 @@ description: An explanation of Creator Store seller accounts, their prerequisite
 You can sell [plugins](../studio/plugins.md) on the Creator Store for **United States Dollars** (USD). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted.
 
 <Alert severity="info">
-You will soon be able to sell [models](../parts/models.md#upload-and-distribute-models) on the Creator Store for **United States Dollars** (USD). You can create a seller account and start uploading models now.
+You will soon be able to sell [models](../parts/models.md#distribute-models) on the Creator Store for **United States Dollars** (USD). You can create a seller account and start uploading models now.
 </Alert>
 
 In order to set any USD prices and sell your assets, you must have a **seller account**. Roblox administers seller accounts through **Stripe**, a third-party payments provider. If you meet Roblox's eligibility [requirements](#for-sellers), you can fill out Stripe's [application form](#complete-the-application-form) to create a seller account.
@@ -44,7 +44,7 @@ If you violate any of these requirements after you create your seller account, y
 
 Only **individual** user accounts may purchase assets for USD on the Creator Store. Groups are ineligible to purchase plugins.
 
-Transactions between any individual customer and seller are **capped** per month for safey purposes. If you're buying a lot of assets from one seller in a single month, any purchase over the limit will be prohibited until the following month. This includes any purchases between alternate accounts for either the customer or seller.
+Transactions between any individual customer and seller are **capped** per month for safety purposes. If you're buying a lot of assets from one seller in a single month, any purchase over the limit will be prohibited until the following month. This includes any purchases between alternate accounts for either the customer or seller.
 
 ### For assets
 

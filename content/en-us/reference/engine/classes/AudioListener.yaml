@@ -103,8 +103,17 @@ properties:
       - Audio
     writeCapabilities: []
   - name: AudioListener.SimulationFidelity
-    summary: ''
-    description: ''
+    summary: |
+      Controls how detailed the audio simulation should be for this
+      `Class.AudioListener`.
+    description: |
+      Controls how detailed the audio simulation should be for this
+      `Class.AudioListener`, similar to `Class.MeshPart.CollisionFidelity` or
+      `Class.MeshPart.RenderFidelity`.
+
+      `Class.AudioListener|AudioListeners` and
+      `Class.AudioEmitter|AudioEmitters` which disagree on the necessary level
+      of detail will use the less-detailed option.
     code_samples: []
     type: AudioSimulationFidelity
     tags: []
@@ -382,7 +391,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities:
       - Audio
     writeCapabilities: []

@@ -21,12 +21,9 @@ Adding your asset to the Marketplace involves 2 steps:
 
 To upload your accessory:
 
-1. In the Explorer, right-click your accessory object and **Save to Roblox**.
-
-   <img src="../../../assets/art/accessories/creating-rigid/Outliner-Save-To-Roblox.png" />
-
-2. In the Asset Configuration Window, set the **Content Type** to **Avatar Item**.
-3. Complete the following fields - you can adjust these later:
+1. In the **Explorer**, right-click your accessory object and select **Save to Roblox…** from the contextual menu.
+2. In the **Asset Configuration** window, set the **Content Type** to **Avatar Item**.
+3. Complete the following fields (you can adjust these later):
 
    1. **Title**: The name of your accessory.
    2. **Description**: A short description of your asset.

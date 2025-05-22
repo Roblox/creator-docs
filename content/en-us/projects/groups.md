@@ -76,23 +76,27 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
    <tbody>
      <tr>
       <td>**Play all group experiences**</td>
-      <td>Members with this role can play all experiences owned by the group, whether they're private or public.</td>
+      <td>Members with this role can play all experiences owned by the group, whether they're private or public. Optionally available as a [per‑experience permission][per_experience_permission].</td>
      </tr>
      <tr>
        <td>**Edit all group experiences**</td>
-       <td>Members with this role can edit all experiences and [assets](../projects/assets/index.md) owned by the group. Does not include editing an experience outside of a [collaborative](../projects/collaboration.md) session or saving a place from one experience into another experience.</td>
+       <td>Members with this role can edit all experiences and [assets](../projects/assets/index.md) owned by the group. Does not include editing an experience outside of a [collaborative](../projects/collaboration.md) session or saving a place from one experience into another experience. Optionally available as a [per‑experience permission][per_experience_permission].</td>
      </tr>
      <tr>
        <td>**Edit & publish all group experiences**</td>
-       <td>Members with this role can both edit experiences, as above, and also publish experiences to Roblox.</td>
+       <td>Members with this role can both edit experiences, as above, and also publish experiences to Roblox. Optionally available as a [per‑experience permission][per_experience_permission].</td>
      </tr>
      <tr>
        <td>**View all analytics for group experiences**</td>
-       <td>Members with this role can access the [analytics](../production/analytics/index.md) of all experiences owned by the group, even if they don't have edit access.</td>
+       <td>Members with this role can access the [analytics](../production/analytics/index.md) of all experiences owned by the group, even if they don't have edit access. Optionally available as a [per‑experience permission][per_experience_permission].</td>
      </tr>
      <tr>
        <td>**Create and configure share links**</td>
        <td>Members with this role can create/configure [share links](../production/promotion/share-links.md).</td>
+     </tr>
+     <tr>
+       <td>**View Data Stores Manager**</td>
+       <td>Members with this role can access the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md).</td>
      </tr>
      <tr>
        <td>**Configure bans for all group experiences**</td>
@@ -169,8 +173,8 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
    </tbody>
    </table>
 
-3. <Chip label="important" size="medium" variant="outlined" color="warning" /> Click the **Save Changes** button to apply the permission settings.
-4. <Chip label="optional" size="medium" variant="outlined" /> Click the **Settings** tab and choose a color for the role, then click **Save Changes**.
+3. <Chip label="IMPORTANT" size="small" variant="outlined" color="warning" /> Click the **Save Changes** button to apply the permission settings.
+4. <Chip label="OPTIONAL" size="small" variant="outlined" /> Click the **Settings** tab and choose a color for the role, then click **Save Changes**.
 
    <img src="../assets/creator-dashboard/Group-Roles-Settings-Tab.png" width="780" alt="Settings tab indicated for a group role on the Creator Dashboard." />
 
@@ -277,3 +281,5 @@ Group members with permission to edit all group experiences can enable the [Plac
 - Confirm that each member is [assigned the appropriate role](#assign-roles).
 - Check that each group role has the correct [permissions](#roles-and-permissions).
 - Confirm that the [Place Copying](../production/publishing/publish-experiences-and-places.md#allow-copying) setting is disabled before private assets are added.
+
+[per_experience_permission]: ../production/publishing/publish-experiences-and-places.md#configure-experiences

@@ -148,7 +148,7 @@ export const sections = [
   },
   {
     title: "Extensive scale and monetization",
-    description: "Reach a massive, global audience of hundreds of millions of users across 190 countries with efficient discovery and user acquisition.",
+    description: "Reach a massive, global audience of hundreds of millions of users across 180 countries with efficient discovery and user acquisition.",
     buttons: [
       { text: "Learn how to scale", href: "./scale" },
       { text: "Learn how to monetize", href: "./monetize" }

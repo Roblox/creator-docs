@@ -218,7 +218,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities:
       - RemoteEvent
     writeCapabilities: []
@@ -259,7 +258,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities:
       - RemoteEvent
     writeCapabilities: []

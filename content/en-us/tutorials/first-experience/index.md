@@ -219,7 +219,7 @@ To organize folders into their correct container services for the catapult to wo
 
 1. Delete the **ReplicatedStorage** and **ServerScriptService** folders.
    1. Select both folders.
-   1. Press `Delete`.
+   1. Press <kbd>Delete</kbd>.
 
 1. Playtest to verify that the catapult now works properly.
    1. In the toolbar, click the **Play** button. Studio enters playtest mode.
@@ -265,7 +265,7 @@ To customize the third projectile:
 
 1. Create a third floating platform of targets.
    1. In the **Explorer** window, select a **TargetPlatform** object.
-   1. Press `CMD` + `D` to duplicate the platform and targets.
+   1. Press <kbd>Ctrl</kbd><kbd>D</kbd> (<kbd>⌘</kbd><kbd>D</kbd>) to duplicate the platform and targets.
    1. Use the **Move** tool to move the new platform to a new position.
 
    <img width="80%" img src="../../assets/getting-started/Projectiles-1.jpg" />
@@ -316,17 +316,14 @@ To publish your experience for the first time:
 1. Make the experience public to all players.
    1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations). The **Creations** landing page displays your first experience.
 
-      <img width="80%" img src="../../assets/getting-started/Publish-2A.png" />
+      <img width="200" img src="../../assets/getting-started/Publish-2A.png" />
 
-   1. Hover over the experience's tile, click the ⋯ button, and select **Make Public** from the contextual menu.
+   1. Hover over the experience's tile, click the **&ctdot;** button, and select **Make Public** from the contextual menu.
 
-      <img width="45%" img src="../../assets/getting-started/Publish-2B.png" />
+      <img width="200" img src="../../assets/getting-started/Publish-2B.png" />
 
 1. **(Optional)** Share your experience with others.
-   1. From the **Creator Dashboard**, hover over your experience's tile, click the ⋯ button, and select **Copy URL** from the contextual menu.
-
-      <img width="45%" img src="../../assets/getting-started/Publish-3A.png" />
-
+   1. Hover over the experience's tile, click the **&ctdot;** button, and select **Copy URL** from the contextual menu.
    1. Share the URL with others as a direct link to your experience's landing page.
 
 <Alert severity="success">

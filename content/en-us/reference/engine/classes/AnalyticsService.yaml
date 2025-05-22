@@ -283,7 +283,7 @@ methods:
               ["levelDesc"] = "level2",
               ["mapDesc"] = "LeftChamberMap",
               ["storeName"] = "DarkSmith",
-              ["userDefindKey"] = "0005"
+              ["userDefinedKey"] = "0005"
           }
           ```
       - name: customData
@@ -503,7 +503,7 @@ methods:
               ["levelDesc"] = "level2",
               ["mapDesc"] = "LeftChamberMap",
               ["ProgresionType"] = "LevelUp",
-              ["userDefindKey5"] = "0005"
+              ["userDefinedKey5"] = "0005"
           }
           ```
       - name: statistics
@@ -519,9 +519,9 @@ methods:
           local statistics = {
               ["numberOfKills"] = 111,
               ["numberOfExp"] = 222,
-              ["userDefindKey3"] = number,
-              ["userDefindKey4"] = number,
-              ["userDefindKey5"] = number
+              ["userDefinedKey3"] = number,
+              ["userDefinedKey4"] = number,
+              ["userDefinedKey5"] = number
           }
           ```
       - name: customData

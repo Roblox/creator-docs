@@ -207,7 +207,7 @@ Teach how to code and create games for the Roblox platform - perfect for educato
     <ul>
     <li><b>Property</b> - Something that controls how an object looks or behaves, like color or if players can walk through it.</li>
     <li><b>Loop</b> - A set of code that repeats until told otherwise.</li>
-    <li><b>Function</b> - A set of instructions can be e re-used in different parts of a script.</li>
+    <li><b>Function</b> - A set of instructions that can be re-used in different parts of a script.</li>
     </ul>
     </td>
    </tr>

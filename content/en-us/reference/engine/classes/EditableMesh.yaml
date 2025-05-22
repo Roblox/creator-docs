@@ -4,45 +4,19 @@ memory_category: Instances
 summary: |
   Instance which allows for the runtime creation and manipulation of meshes.
 description: |
-  `Class.EditableMesh` changes the applied visual mesh when linked to a
+  `EditableMesh` changes the applied visual mesh when linked to a
   `Class.MeshPart`, allowing for querying and modification of the mesh both in
   Studio and in experience.
 
-  An `Class.EditableMesh` can be created from an existing `Datatype.Content` of
-  a `Class.MeshPart` or a mesh ID using
-  `Class.AssetService:CreateEditableMeshAsync()`, or a blank
-  `Class.EditableMesh` can be created with
-  `Class.AssetService:CreateEditableMesh()`. It can then be displayed, modified,
-  and its collision model updated. Not all of the steps are necessary; for
-  example, you might want to create an `Class.EditableMesh` just to raycast
-  without ever displaying it.
+  #### Enabling in Published Experiences
 
-  An `Class.EditableMesh` is displayed when it's linked to a new
-  `Class.MeshPart`, through `Class.AssetService:CreateMeshPartAsync()`. You can
-  create more `Class.MeshPart` instances that reference the same
-  `Class.EditableMesh` `Datatype.Content`, or link to an existing
-  `Class.MeshPart` through `Class.MeshPart:ApplyMesh()`.
-
-  To recalculate collision and fluid geometry after editing, you can again call
-  `Class.AssetService:CreateMeshPartAsync()` and `Class.MeshPart:ApplyMesh()` to
-  update an existing `Class.MeshPart`. It's generally recommended to do this at
-  the end of a conceptual edit, not after individual calls to methods that
-  manipulate geometry. Visual changes to the mesh will always be immediately
-  reflected by the engine, without the need to call
-  `Class.AssetService:CreateMeshPartAsync()`.
-
-  ##### Enabling EditableMesh for Published Experiences
-
-  For security purposes, using `Class.EditableMesh` fails by default for
-  published experiences. To enable usage, `Class.EditableMesh`, you must be 13+
-  age verified and ID verified. After you are verified, open Studio's
+  For security purposes, using `EditableMesh` fails by default for published
+  experiences. To enable usage, you must be 13+ age verified and ID verified.
+  After you are verified, open Studio's
   [Game Settings](../../../studio/game-settings.md), select **Security**, and
-  enable the **Allow&nbsp;Mesh&nbsp;&&nbsp;Image&nbsp;APIs** toggle. Remember to
-  review the
-  [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use#creators-restrictions-on-use)
-  before enabling the toggle.
+  enable the **Allow Mesh&nbsp;&#47; Image APIs** toggle.
 
-  ##### Permissions
+  #### Permissions
 
   To prevent misuse, `Class.AssetService:CreateEditableMeshAsync()` will only
   allow you to load and edit mesh assets:
@@ -53,32 +27,109 @@ description: |
   - That are owned by the logged in Studio user (if the place file has not yet
     been saved or published to Roblox).
 
-  The APIs throw an error if they are used to load an asset that does not meet
-  the criteria above.
+  #### Creation and Display
 
-  ##### Fixed-Size Meshes
+  An `EditableMesh` can be created from an existing `Datatype.Content` of a
+  `Class.MeshPart` or a mesh ID using
+  `Class.AssetService:CreateEditableMeshAsync()`, or a blank `EditableMesh` can
+  be created with `Class.AssetService:CreateEditableMesh()`. It can then be
+  displayed, modified, and its collision model updated. Not all of the steps are
+  necessary; for example, you might want to create an `EditableMesh` just to
+  raycast without ever displaying it.
 
-  When creating an `Class.EditableMesh` from an existing mesh asset (via
+  ```lua
+  local AssetService = game:GetService("AssetService")
+
+  -- Create empty EditableMesh
+  local editableMesh = AssetService:CreateEditableMesh()
+
+  -- Create EditableMesh from asset ID
+  local editableMeshFromAsset = nil
+  local success, errorMessage = pcall(function()
+  	editableMeshFromAsset = AssetService:CreateEditableMeshAsync(Content.fromAssetId(ASSET_ID))
+  end)
+
+  -- Create EditableMesh from another EditableMesh
+  local editableMeshFromAnother = nil
+  local success, errorMessage = pcall(function()
+  	editableMeshFromAnother = AssetService:CreateEditableMeshAsync(Content.fromObject(OTHER_EDITABLE_MESH))
+  end)
+
+  -- Create EditableMesh from MeshPart
+  local editableMeshFromMeshPart = nil
+  local success, errorMessage = pcall(function()
+  	editableMeshFromMeshPart = AssetService:CreateEditableMeshAsync(MESH_PART.MeshContent)
+  end)
+  ```
+
+  An `EditableMesh` is displayed when it's linked to a new `Class.MeshPart`,
+  through `Class.AssetService:CreateMeshPartAsync()`. You can create more
+  `Class.MeshPart` instances that reference the same `EditableMesh`
+  `Datatype.Content`, or link to an existing `Class.MeshPart` through
+  `Class.MeshPart:ApplyMesh()`.
+
+  ```lua
+  local AssetService = game:GetService("AssetService")
+  local Workspace = game:GetService("Workspace")
+
+  -- Create EditableMesh from asset ID
+  local editableMeshFromAsset = nil
+  local success, errorMessage = pcall(function()
+  	editableMeshFromAsset = AssetService:CreateEditableMeshAsync(Content.fromAssetId(ASSET_ID))
+  end)
+
+  -- Create new MeshPart linked to the EditableMesh
+  local newMeshPart = nil
+  local success, errorMessage = pcall(function()
+  	newMeshPart = AssetService:CreateMeshPartAsync(Content.fromObject(editableMeshFromAsset))
+  end)
+
+  -- Alternatively, link the new MeshPart created above to an existing MeshPart
+  local existingMeshPart = Workspace:FindFirstChild("EXISTING_MESH_PART")
+  existingMeshPart:ApplyMesh(newMeshPart)
+  ```
+
+  To recalculate collision and fluid geometry after editing, you can again call
+  `Class.AssetService:CreateMeshPartAsync()` and `Class.MeshPart:ApplyMesh()` to
+  update an existing `Class.MeshPart`. It's generally recommended to do this at
+  the end of a conceptual edit, not after individual calls to methods that
+  manipulate geometry. Visual changes to the mesh will always be immediately
+  reflected by the engine, without the need to call
+  `Class.AssetService:CreateMeshPartAsync()`.
+
+  #### Fixed-Size Meshes
+
+  When creating an `EditableMesh` from an existing mesh asset (via
   `Class.AssetService:CreateEditableMeshAsync()`), the resulting editable mesh
   is fixed-size by default. Fixed-size meshes are more efficient in terms of
   memory but you cannot change the number of vertices, faces, or attributes.
   Only the values of vertex attributes and positions can be edited.
 
-  ##### Stable Vertex/Face IDs
+  ```lua
+  local AssetService = game:GetService("AssetService")
 
-  Many `Class.EditableMesh` methods take **vertex**, **normal**, **UV**,
-  **color** and **face** IDs. These are represented as integers in Luau but they
-  require some special handling. The main difference is that IDs are stable and
-  they remain the same even if other parts of the mesh change. For example, if
-  an `Class.EditableMesh` has five vertices `{1, 2, 3, 4, 5}` and you remove
-  vertex `4`, the new vertices will be `{1, 2, 3, 5}`.
+  -- Create EditableMesh without fixed-size default
+  local editableMeshFromAsset = nil
+  local success, errorMessage = pcall(function()
+  	editableMeshFromAsset = AssetService:CreateEditableMeshAsync(Content.fromAssetId(ASSET_ID), {FixedSize = false})
+  end)
+  ```
+
+  #### Stable Vertex/Face IDs
+
+  Many `EditableMesh` methods take **vertex**, **normal**, **UV**, **color** and
+  **face** IDs. These are represented as integers in Luau but they require some
+  special handling. The main difference is that IDs are stable and they remain
+  the same even if other parts of the mesh change. For example, if an
+  `EditableMesh` has five vertices `{1, 2, 3, 4, 5}` and you remove vertex `4`,
+  the new vertices will be `{1, 2, 3, 5}`.
 
   Note that the IDs are not guaranteed to be in order and there may be holes in
   the numbering, so when iterating through vertices or faces, you should iterate
   through the table returned by `Class.EditableMesh:GetVertices()|GetVertices()`
   or `Class.EditableMesh:GetFaces()|GetFaces()`.
 
-  ##### Split Vertex Attributes
+  #### Split Vertex Attributes
 
   A **vertex** is a corner of a face, and topologically connects faces together.
   Vertices can have several attributes: position, normal, UV coordinate, color,
@@ -100,42 +151,42 @@ description: |
   local AssetService = game:GetService("AssetService")
 
   -- Given 4 vertex IDs, adds a new normal and 2 triangles, making a sharp quad
-  local function addSharpQuad(eMesh, vid0, vid1, vid2, vid3)
-  	local nid = eMesh:AddNormal()  -- This creates a normal ID which is automatically computed
+  local function addSharpQuad(editableMesh, vid0, vid1, vid2, vid3)
+  	local nid = editableMesh:AddNormal()  -- This creates a normal ID which is automatically computed
 
-  	local fid1 = eMesh:AddTriangle(vid0, vid1, vid2)
-  	eMesh:SetFaceNormals(fid1, {nid, nid, nid})
+  	local fid1 = editableMesh:AddTriangle(vid0, vid1, vid2)
+  	editableMesh:SetFaceNormals(fid1, {nid, nid, nid})
 
-  	local fid2 = eMesh:AddTriangle(vid0, vid2, vid3)
-  	eMesh:SetFaceNormals(fid2, {nid, nid, nid})
+  	local fid2 = editableMesh:AddTriangle(vid0, vid2, vid3)
+  	editableMesh:SetFaceNormals(fid2, {nid, nid, nid})
   end
 
   -- Makes a cube with creased edges between the 6 sides
   local function makeSharpCube()
-  	local eMesh = AssetService:CreateEditableMesh()
+  	local editableMesh = AssetService:CreateEditableMesh()
 
-  	local v1 = eMesh:AddVertex(Vector3.new(0, 0, 0))
-  	local v2 = eMesh:AddVertex(Vector3.new(1, 0, 0))
-  	local v3 = eMesh:AddVertex(Vector3.new(0, 1, 0))
-  	local v4 = eMesh:AddVertex(Vector3.new(1, 1, 0))
-  	local v5 = eMesh:AddVertex(Vector3.new(0, 0, 1))
-  	local v6 = eMesh:AddVertex(Vector3.new(1, 0, 1))
-  	local v7 = eMesh:AddVertex(Vector3.new(0, 1, 1))
-  	local v8 = eMesh:AddVertex(Vector3.new(1, 1, 1))
+  	local v1 = editableMesh:AddVertex(Vector3.new(0, 0, 0))
+  	local v2 = editableMesh:AddVertex(Vector3.new(1, 0, 0))
+  	local v3 = editableMesh:AddVertex(Vector3.new(0, 1, 0))
+  	local v4 = editableMesh:AddVertex(Vector3.new(1, 1, 0))
+  	local v5 = editableMesh:AddVertex(Vector3.new(0, 0, 1))
+  	local v6 = editableMesh:AddVertex(Vector3.new(1, 0, 1))
+  	local v7 = editableMesh:AddVertex(Vector3.new(0, 1, 1))
+  	local v8 = editableMesh:AddVertex(Vector3.new(1, 1, 1))
 
-  	addSharpQuad(eMesh, v5, v6, v8, v7)  -- Front
-  	addSharpQuad(eMesh, v1, v3, v4, v2)  -- Back
-  	addSharpQuad(eMesh, v1, v5, v7, v3)  -- Left
-  	addSharpQuad(eMesh, v2, v4, v8, v6)  -- Right
-  	addSharpQuad(eMesh, v1, v2, v6, v5)  -- Bottom
-  	addSharpQuad(eMesh, v3, v7, v8, v4)  -- Top
+  	addSharpQuad(editableMesh, v5, v6, v8, v7)  -- Front
+  	addSharpQuad(editableMesh, v1, v3, v4, v2)  -- Back
+  	addSharpQuad(editableMesh, v1, v5, v7, v3)  -- Left
+  	addSharpQuad(editableMesh, v2, v4, v8, v6)  -- Right
+  	addSharpQuad(editableMesh, v1, v2, v6, v5)  -- Bottom
+  	addSharpQuad(editableMesh, v3, v7, v8, v4)  -- Top
 
-  	eMesh:RemoveUnused()
-  	return eMesh
+  	editableMesh:RemoveUnused()
+  	return editableMesh
   end
   ```
 
-  ##### Winding
+  #### Winding
 
   Mesh faces have a front side and a back side. When drawing meshes, only the
   front of the faces are drawn by default, although you can change this by
@@ -147,11 +198,33 @@ description: |
 
   <img src="../../../assets/engine-api/classes/EditableMesh/Winding.png" alt="Order of the vertices around the face" width="550" />
 
-  ##### Limitations
+  #### FACS Poses
 
-  `Class.EditableMesh` currently has a limit of 60,000 vertices and 20,000
-  triangles. Attempting to add too many vertices or triangles will cause an
-  error.
+  Animatable heads use the Facial Action Coding System (FACS). See the
+  [FACS poses reference](../../../art/characters/facial-animation/facs-poses-reference.md)
+  for helpful information when using
+  `Class.EditableMesh:GetFacsPoses()|GetFacsPoses()` and similar methods.
+
+  Each FACS pose is specified by an `Enum.FacsActionUnit` value. For the FACS
+  pose, virtual bones can each have a `Datatype.CFrame` that transforms the
+  bones' initial `Datatype.CFrame` in the bind pose of the mesh into the
+  `Datatype.CFrame` for that FACS action unit's pose. All bone
+  `Datatype.CFrame|CFrames` are in the mesh's local space.
+
+  These FACS poses are blended together during animation. Sometimes, the
+  blending of the base poses produces poor results. In those cases, you can
+  override the blending of specific combinations of base poses with a
+  [corrective pose](../../../art/characters/facial-animation/create-basic-heads.md#combination-poses)
+  that is more pleasing. A corrective pose is specified by 2 or 3
+  `Enum.FacsActionUnit` values. Like a base FACS pose, for a corrective pose,
+  virtual bones can each have a `Datatype.CFrame` that transforms the bones'
+  initial `Datatype.CFrame` in the bind pose of the mesh into the
+  `Datatype.CFrame` for that FACS corrective.
+
+  #### Limitations
+
+  `EditableMesh` currently has a limit of 60,000 vertices and 20,000 triangles.
+  Attempting to add too many vertices or triangles will cause an error.
 code_samples: []
 inherits:
   - Object
@@ -186,7 +259,8 @@ properties:
     description: ''
     code_samples: []
     type: boolean
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security:
       read: None
@@ -199,24 +273,6 @@ properties:
     capabilities: []
     writeCapabilities: []
 methods:
-  - name: EditableMesh:AddBone
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: boneProperties
-        type: Dictionary
-        default: ''
-        summary: ''
-    returns:
-      - type: int64
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: EditableMesh:AddColor
     summary: |
       Adds a new color to the geometry and returns a stable color ID.
@@ -485,110 +541,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: EditableMesh:GetBoneByName
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: boneName
-        type: string
-        default: ''
-        summary: ''
-    returns:
-      - type: int64
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetBoneCFrame
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: boneId
-        type: int64
-        default: ''
-        summary: ''
-    returns:
-      - type: CFrame
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetBoneIsVirtual
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: boneId
-        type: int64
-        default: ''
-        summary: ''
-    returns:
-      - type: boolean
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetBoneName
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: boneId
-        type: int64
-        default: ''
-        summary: ''
-    returns:
-      - type: string
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetBoneParent
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: boneId
-        type: int64
-        default: ''
-        summary: ''
-    returns:
-      - type: int64
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetBones
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: Array
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: EditableMesh:GetCenter
     summary: ''
     description: ''
@@ -799,127 +751,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: EditableMesh:GetFacesWithColor
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: colorId
-        type: int64
-        default: ''
-        summary: ''
-    returns:
-      - type: Array
-        summary: ''
-    tags:
-      - CustomLuaState
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetFacesWithNormal
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: normalId
-        type: int64
-        default: ''
-        summary: ''
-    returns:
-      - type: Array
-        summary: ''
-    tags:
-      - CustomLuaState
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetFacesWithUV
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: uvId
-        type: int64
-        default: ''
-        summary: ''
-    returns:
-      - type: Array
-        summary: ''
-    tags:
-      - CustomLuaState
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetFacsCorrectivePose
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: actions
-        type: Array
-        default: ''
-        summary: ''
-    returns:
-      - type: Tuple
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetFacsCorrectivePoses
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: Array
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetFacsPose
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: action
-        type: FacsActionUnit
-        default: ''
-        summary: ''
-    returns:
-      - type: Tuple
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetFacsPoses
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: Array
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: EditableMesh:GetNormal
     summary: |
       Returns the normal vector for the given normal ID.
@@ -1037,184 +868,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: EditableMesh:GetVertexBoneWeights
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default: ''
-        summary: ''
-    returns:
-      - type: Array
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetVertexBones
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default: ''
-        summary: ''
-    returns:
-      - type: Array
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetVertexColors
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default: ''
-        summary: ''
-    returns:
-      - type: Array
-        summary: ''
-    tags:
-      - CustomLuaState
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetVertexFaceColor
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default: ''
-        summary: ''
-      - name: faceId
-        type: int64
-        default: ''
-        summary: ''
-    returns:
-      - type: int64
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetVertexFaceNormal
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default: ''
-        summary: ''
-      - name: faceId
-        type: int64
-        default: ''
-        summary: ''
-    returns:
-      - type: int64
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetVertexFaceUV
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default: ''
-        summary: ''
-      - name: faceId
-        type: int64
-        default: ''
-        summary: ''
-    returns:
-      - type: int64
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetVertexFaces
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default: ''
-        summary: ''
-    returns:
-      - type: Array
-        summary: ''
-    tags:
-      - CustomLuaState
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetVertexNormals
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default: ''
-        summary: ''
-    returns:
-      - type: Array
-        summary: ''
-    tags:
-      - CustomLuaState
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetVertexUVs
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default: ''
-        summary: ''
-    returns:
-      - type: Array
-        summary: ''
-    tags:
-      - CustomLuaState
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: EditableMesh:GetVertices
     summary: |
       Returns all vertices as a list of stable vertex IDs.
@@ -1251,63 +904,6 @@ methods:
           List of vertex IDs which use the given attribute ID.
     tags:
       - Deprecated
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetVerticesWithColor
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: colorId
-        type: int64
-        default: ''
-        summary: ''
-    returns:
-      - type: Array
-        summary: ''
-    tags:
-      - CustomLuaState
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetVerticesWithNormal
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: normalId
-        type: int64
-        default: ''
-        summary: ''
-    returns:
-      - type: Array
-        summary: ''
-    tags:
-      - CustomLuaState
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetVerticesWithUV
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: uvId
-        type: int64
-        default: ''
-        summary: ''
-    returns:
-      - type: Array
-        summary: ''
-    tags:
-      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -1395,24 +991,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: EditableMesh:RemoveBone
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: boneId
-        type: int64
-        default: ''
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: EditableMesh:RemoveFace
     summary: |
       Removes a face using its stable face ID.
@@ -1465,94 +1043,6 @@ methods:
         default: ''
         summary: |
           Stable normal ID to reset.
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:SetBoneCFrame
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: boneId
-        type: int64
-        default: ''
-        summary: ''
-      - name: cframe
-        type: CFrame
-        default: ''
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:SetBoneIsVirtual
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: boneId
-        type: int64
-        default: ''
-        summary: ''
-      - name: virtual
-        type: boolean
-        default: ''
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:SetBoneName
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: boneId
-        type: int64
-        default: ''
-        summary: ''
-      - name: name
-        type: string
-        default: ''
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:SetBoneParent
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: boneId
-        type: int64
-        default: ''
-        summary: ''
-      - name: parentBoneId
-        type: int64
-        default: ''
-        summary: ''
     returns:
       - type: ()
         summary: ''
@@ -1722,84 +1212,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: EditableMesh:SetFacsBonePose
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: action
-        type: FacsActionUnit
-        default: ''
-        summary: ''
-      - name: boneId
-        type: int64
-        default: ''
-        summary: ''
-      - name: cframe
-        type: CFrame
-        default: ''
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:SetFacsCorrectivePose
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: actions
-        type: Array
-        default: ''
-        summary: ''
-      - name: boneIds
-        type: Array
-        default: ''
-        summary: ''
-      - name: cframes
-        type: Array
-        default: ''
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:SetFacsPose
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: action
-        type: FacsActionUnit
-        default: ''
-        summary: ''
-      - name: boneIds
-        type: Array
-        default: ''
-        summary: ''
-      - name: cframes
-        type: Array
-        default: ''
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: EditableMesh:SetNormal
     summary: |
       Set the normal for a normal ID.
@@ -1870,128 +1282,6 @@ methods:
         default: ''
         summary: |
           UV coordinates.
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:SetVertexBoneWeights
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default: ''
-        summary: ''
-      - name: boneWeights
-        type: Array
-        default: ''
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:SetVertexBones
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default: ''
-        summary: ''
-      - name: boneIDs
-        type: Array
-        default: ''
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:SetVertexFaceColor
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default: ''
-        summary: ''
-      - name: faceId
-        type: int64
-        default: ''
-        summary: ''
-      - name: colorId
-        type: int64
-        default: ''
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:SetVertexFaceNormal
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default: ''
-        summary: ''
-      - name: faceId
-        type: int64
-        default: ''
-        summary: ''
-      - name: normalId
-        type: int64
-        default: ''
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:SetVertexFaceUV
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default: ''
-        summary: ''
-      - name: faceId
-        type: int64
-        default: ''
-        summary: ''
-      - name: uvId
-        type: int64
-        default: ''
-        summary: ''
     returns:
       - type: ()
         summary: ''

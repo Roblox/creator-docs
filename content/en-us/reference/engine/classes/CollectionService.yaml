@@ -376,7 +376,6 @@ events:
       This item has been superseded by a `Class.CollectionService` tagging
       method. There is currently no means of checking when a tag is added.
     security: None
-    thread_safety: Unsafe
     capabilities:
       - Basic
     writeCapabilities: []
@@ -402,7 +401,6 @@ events:
       This item has been superseded by a `Class.CollectionService` tagging
       method. There is currently no means of checking when a tag is removed.
     security: None
-    thread_safety: Unsafe
     capabilities:
       - Basic
     writeCapabilities: []
@@ -422,7 +420,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities:
       - Basic
     writeCapabilities: []
@@ -442,7 +439,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities:
       - Basic
     writeCapabilities: []

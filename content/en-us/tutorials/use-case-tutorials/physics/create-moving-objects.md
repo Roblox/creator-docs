@@ -93,6 +93,7 @@ The following subsections use assemblies of different shapes and sizes to teach 
 `Class.LinearVelocity` objects are a type of [mover constraint](../../../physics/mechanical-constraints.md) that apply force on an entire assembly to maintain a constant linear velocity. By not locking the assembly's position to an axis during its motion, the assembly is free to rotate as it collides with other objects in the 3D space. This type of movement leads to surprising gameplay scenarios that are more difficult for players to predict.
 
 <video controls src="../../../assets/tutorials/creating-moving-objects/LV-Intro.mp4" width="90%" alt="An angled side view of lily pads colliding with one another as they flow down a river." ></video>
+
 <figcaption>As the lily pads collide with one another, they change orientation but continue to flow down the river at a constant linear velocity.</figcaption>
 
 <br />
@@ -113,12 +114,13 @@ You can specify the point to apply force by adding an `Class.Attachment` object 
 
 Attachments include visual aids to help you visualize their axes of motion. The yellow arrow denotes the attachment's primary axis, and the orange arrow denotes the attachment's secondary axis. While neither axis of motion influences the lily pad's movement in the steps of this technique, it's important to understand these visual aids for future reference because they can assist you in determining ideal behavior for different types of constraints, such as the `Class.PrismaticConstraint` in the next technique.
 
-<img src="../../../assets/tutorials/creating-spinning-objects/Attachment-Visual-Aids.png" width="90%" alt="A attachment's visual aid arrows. The yellow arrow that signfies the attachment's primary axis points up, and the orange arrow that signfies the attachment's secondary axis points to the right." />
+<img src="../../../assets/tutorials/creating-spinning-objects/Attachment-Visual-Aids.png" width="90%" alt="A attachment's visual aid arrows. The yellow arrow that signifies the attachment's primary axis points up, and the orange arrow that signifies the attachment's secondary axis points to the right." />
 
 To add an attachment:
 
 1. In the **Explorer** window, expand the **LinearVelocityExample** folder, then expand its child **LilyPad_DIY** model.
 1. Insert an attachment into the **Pad** mesh.
+
    1. Hover over the mesh and click the ⊕ button. A contextual menu displays.
    1. From the menu, insert an **Attachment**. The attachment displays in the center of the part.
    1. Rename the attachment to **MoveAttachment**.
@@ -134,6 +136,7 @@ The sample [Moving Objects](https://www.roblox.com/games/17560154079/UCT-Linear-
 To configure a `Class.LinearVelocity` constraint:
 
 1. **(Optional)** Make the constraint visible in the 3D space so that you can reference its linear direction.
+
    1. Navigate to the toolbar's **Model** tab, then the **Constraints** section.
    1. If it's not currently enabled, click **Constraint Details** to display constraint visual aids.
 
@@ -143,6 +146,7 @@ To configure a `Class.LinearVelocity` constraint:
    1. In the **Explorer** window, hover over the mesh, then click the ⊕ icon. A contextual menu displays.
    1. From the contextual menu, insert **LinearVelocity**.
 1. Assign the mesh's attachment to the new constraint.
+
    1. In the **Explorer** window, select the constraint.
    1. In the **Properties** window,
       1. Set **Attachment0** to **MoveAttachment**.
@@ -199,6 +203,7 @@ To configure attachments for the prismatic constraint:
 
 1. In the **Explorer** window, expand the **PrismaticConstraintExample** folder, then expand its child **Log_DIY** model.
 1. Insert an attachment into the **Log** mesh.
+
    1. Hover over the mesh and click the ⊕ button. A contextual menu displays.
    1. From the menu, insert an **Attachment**. The attachment displays in the center of the part.
    1. Rename the attachment to **LogAttachment**.
@@ -219,7 +224,7 @@ To configure attachments for the prismatic constraint:
 
 #### Configure constraint
 
-Now that your attachments are aligned on the same axis and face the same direction you want the log to move, you can configure the properties of a  `Class.PrismaticConstraint` constraint to specify whether to apply the target constant linear velocity in the positive or negative direction of each attachment's' primary axis, the amount of studs you want the attachments to move per second, and the maximum amount of force the engine can apply for the log to reach a constant linear velocity.
+Now that your attachments are aligned on the same axis and face the same direction you want the log to move, you can configure the properties of a `Class.PrismaticConstraint` constraint to specify whether to apply the target constant linear velocity in the positive or negative direction of each attachment's' primary axis, the amount of studs you want the attachments to move per second, and the maximum amount of force the engine can apply for the log to reach a constant linear velocity.
 
 While you can choose different values for your own use cases, the sample [Moving Objects](https://www.roblox.com/games/17560154079/UCT-Linear-Movement) experience applies up to 50000 Rowtons of constant force to move the attachments 40 radians per second along the world's negative X axis at a constant linear velocity. However, because the anchor attachment is in an anchored object, only the log's attachment can move.
 
@@ -229,6 +234,7 @@ To configure a prismatic constraint:
    1. In the **Explorer** window, hover over the mesh, then click the ⊕ icon. A contextual menu displays.
    1. From the contextual menu, insert a **PrismaticConstraint**.
 1. Assign the log's attachments to the new constraint so that the log moves in **relation to** the anchored block part.
+
    1. In the **Explorer** window, select the constraint.
    1. In the **Properties** window,
       1. Set **Attachment0** to **AnchorAttachment**.
@@ -237,6 +243,7 @@ To configure a prismatic constraint:
    <img width="80%" img src="../../../assets/tutorials/creating-moving-objects/PC-2.jpg" alt="A close up view of a log and its constraint visual aid. It doesn't have a arrow visual aid because it doesn't yet have a set velocity." />
 
 1. In the **Explorer** window, select the constraint, then in the Properties window,
+
    1. Set **ActuatorType** to **Motor**. New property fields display.
    1. Set **MotorMaxForce** to `50000` to apply up to 50000 Rowtons of constant force to achieve the target linear velocity.
    1. Set **Velocity** to `40` to move the log 40 studs per second.
@@ -277,21 +284,19 @@ To move an assembly using `Class.BasePart.ApplyImpulse|ApplyImpulse`:
    1. Rename the script to **JumpScript**.
 1. Replace the default code with the following code:
 
-``` lua
+   ```lua
+   local volume = script.Parent
 
-local volume = script.Parent
+   local function onTouched(other)
+     local impulse = Vector3.new(0, 2500, 0)
+     local character = other.Parent
+     local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+     if humanoid and other.Name == "LeftFoot" then
+       other:ApplyImpulse(impulse)
+     end
+   end
 
-local function onTouched(other)
-	local impulse = Vector3.new(0, 2500, 0)
-	local character = other.Parent
-	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
-	if humanoid and other.Name == "LeftFoot" then
-		other:ApplyImpulse(impulse)
-	end
-end
-
-volume.Touched:Connect(onTouched)
-
-```
+   volume.Touched:Connect(onTouched)
+   ```
 
    <video controls src="../../../assets/tutorials/creating-moving-objects/Impulse-3.mp4" width="90%" alt="A bee character runs up to the jump pad. When the bee touches the jump pad, they are launched up into the air."></video>

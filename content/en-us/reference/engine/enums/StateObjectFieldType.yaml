@@ -9,45 +9,54 @@ items:
   - name: Boolean
     summary: ''
     value: 0
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
   - name: CFrame
     summary: ''
     value: 1
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
   - name: Color3
     summary: ''
     value: 2
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
   - name: Float
     summary: ''
     value: 3
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
   - name: Instance
     summary: ''
     value: 4
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
   - name: Random
     summary: ''
     value: 5
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
   - name: Vector2
     summary: ''
     value: 6
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
   - name: Vector3
     summary: ''
     value: 7
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
   - name: INVALID
     summary: ''
     value: 8
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''

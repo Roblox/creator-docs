@@ -132,7 +132,6 @@ events:
       The IntConstrainedValue object has been deprecated as developers can now
       use the `Library.math.clamp()` function to constrain values.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: IntConstrainedValue.changed
@@ -150,7 +149,6 @@ events:
       This deprecated event is a variant of `Class.IntConstrainedValue.Changed`
       which has also been deprecated. Neither event should be used in new work.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

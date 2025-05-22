@@ -42,7 +42,6 @@ events:
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
     capabilities:
       - Input
     writeCapabilities: []

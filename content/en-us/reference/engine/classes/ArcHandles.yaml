@@ -53,7 +53,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities:
       - UI
     writeCapabilities: []
@@ -71,7 +70,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities:
       - UI
     writeCapabilities: []
@@ -99,7 +97,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities:
       - UI
     writeCapabilities: []
@@ -117,7 +114,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities:
       - UI
     writeCapabilities: []
@@ -135,7 +131,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities:
       - UI
     writeCapabilities: []

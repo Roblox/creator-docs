@@ -84,7 +84,7 @@ To fit and generate your accessory:
 5. Using both the AFT preview window and the workspace, adjust the position, scale, and rotation of the accessory.
 
    1. Use the AFT preview window and your mannequin as an accurate preview of how your asset fits on the character. The clothing mannequin in the workspace does not accurately portray how rigid accessories attach.
-   2. In the workspace, use the **Move**, **Scale**, and **Rotate** tools in the workspace to adjust the positioning of your rigid accessory.
+   2. In the workspace, use the **Move**, **Scale**, and **Rotate** tools to adjust the positioning of your rigid accessory.
    3. If you accidentally select something else, click back into the AFT panel to reselect the accessory and resume your adjustments using the transformation tools.
 
       <video controls src="../../assets/art/accessories/creating-rigid/Fitting-Mask.mp4" width="100%"></video>

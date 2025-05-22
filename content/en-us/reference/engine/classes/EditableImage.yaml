@@ -4,19 +4,18 @@ memory_category: Instances
 summary: |
   Instance which allows for the runtime creation and manipulation of images.
 description: |
-  `Class.EditableImage` allows for the runtime creation and manipulation of
-  images.
+  `EditableImage` allows for the runtime creation and manipulation of images.
 
-  To create a blank `Class.EditableImage`, use
-  `Class.AssetService:CreateEditableImage()`. To create an `Class.EditableImage`
-  from an existing image, use `Class.AssetService:CreateEditableImageAsync()`.
+  To create a blank `EditableImage`, use
+  `Class.AssetService:CreateEditableImage()`. To create an `EditableImage` from
+  an existing image, use `Class.AssetService:CreateEditableImageAsync()`.
 
-  `Class.EditableImage` can be used in any `Datatype.Content` property which
-  takes an image, such as `Class.ImageLabel.ImageContent` or
+  `EditableImage` can be used in any `Datatype.Content` property which takes an
+  image, such as `Class.ImageLabel.ImageContent` or
   `Class.MeshPart.TextureContent`. This is done by setting the content property
   to `Datatype.Content.fromObject(editableImage)`.
 
-  The `Class.EditableImage` coordinate system is relative to the top left of the
+  The `EditableImage` coordinate system is relative to the top left of the
   image:
 
   - Top-left: `(0, 0)`
@@ -24,23 +23,22 @@ description: |
 
   When you use `Class.AssetService:PromptCreateAssetAsync()` to publish an
   object that has a `Datatype.Content` property which references an
-  `Class.EditableImage`, the editable image is published as an image and the
-  property is set to a new asset ID.
+  `EditableImage`, the editable image is published as an image and the property
+  is set to a new asset ID.
 
   #### Update Limitations
 
-  Only a single `Class.EditableImage` can be updated per frame on the display
-  side. For example, if you update three `Class.EditableImage` objects which are
-  currently being displayed, it will take three frames for all of them to be
-  updated.
+  Only a single `EditableImage` can be updated per frame on the display side.
+  For example, if you update three `EditableImage` objects which are currently
+  being displayed, it will take three frames for all of them to be updated.
 
   #### Enabling EditableImage for Published Experiences
 
-  For security purposes, using `Class.EditableImage` fails by default for
-  published experiences. To enable the use of `Class.EditableImage`, you must be
-  13+ age verified and ID verified. After you are verified, open **Studio**.
-  Select **File > Game Settings > Security** and enable the **Allow Mesh & Image
-  APIs** toggle. Remember to review the Terms of Use before enabling the toggle.
+  For security purposes, using `EditableImage` fails by default for published
+  experiences. To enable usage, you must be 13+ age verified and ID verified.
+  After you are verified, open Studio's
+  [Game Settings](../../../studio/game-settings.md), select **Security**, and
+  enable the **Allow Mesh&nbsp;&#47; Image APIs** toggle.
 
   #### Permissions
 
@@ -64,12 +62,12 @@ deprecation_message: ''
 properties:
   - name: EditableImage.Size
     summary: |
-      Size of the `Class.EditableImage` in pixels.
+      Size of the `EditableImage` in pixels.
     description: |
-      Size of the `Class.EditableImage` in pixels. The maximum size is
-      1024&times;1024. An `Class.EditableImage` cannot be resized; this property
-      is read-only. In order to resize or crop an image, create a new
-      `Class.EditableImage` and use
+      Size of the `EditableImage` in pixels. The maximum size is
+      1024&times;1024. An `EditableImage` cannot be resized; this property is
+      read-only. In order to resize or crop an image, create a new
+      `EditableImage` and use
       `Class.EditableImage:DrawImageTransformed()|DrawImageTransformed()` to
       transfer the contents; then call
       `Class.EditableImage:Destroy()|Destroy()`.
@@ -109,7 +107,7 @@ methods:
     summary: |
       Draws a circle at the specified point.
     description: |
-      Draws a circle at the specified point on the `Class.EditableImage`. If the
+      Draws a circle at the specified point on the `EditableImage`. If the
       circle is semi-transparent, it will be blended with the pixels behind it
       using source over blending.
     code_samples: []
@@ -119,8 +117,7 @@ methods:
         default: ''
         summary: |
           Center of the circle, relative to the top-left corner of the
-          `Class.EditableImage`. Positions outside the canvas bounds are
-          allowed.
+          `EditableImage`. Positions outside the canvas bounds are allowed.
       - name: radius
         type: int
         default: ''
@@ -154,12 +151,12 @@ methods:
     writeCapabilities: []
   - name: EditableImage:DrawImage
     summary: |
-      Draws another `Class.EditableImage` into this `Class.EditableImage` at the
-      given position.
+      Draws another `EditableImage` into this `EditableImage` at the given
+      position.
     description: |
-      Draws another `Class.EditableImage` into this `Class.EditableImage` at the
-      given position. Positions outside the canvas bounds are allowed such that
-      only part of the new image is drawn.
+      Draws another `EditableImage` into this `EditableImage` at the given
+      position. Positions outside the canvas bounds are allowed such that only
+      part of the new image is drawn.
     code_samples: []
     parameters:
       - name: position
@@ -172,7 +169,7 @@ methods:
         type: EditableImage
         default: ''
         summary: |
-          The `Class.EditableImage` to draw into this `Class.EditableImage`.
+          The `EditableImage` to draw into this `EditableImage`.
       - name: combineType
         type: ImageCombineType
         default: ''
@@ -190,12 +187,12 @@ methods:
     writeCapabilities: []
   - name: EditableImage:DrawImageProjected
     summary: |
-      Projects another `Class.EditableImage` into an `Class.EditableMesh` and
-      stores the result on this `Class.EditableImage`.
+      Projects another `EditableImage` into an `Class.EditableMesh` and stores
+      the result on this `EditableImage`.
     description: |
-      Projects another `Class.EditableImage` into an `Class.EditableMesh` and
-      stores the result on this `Class.EditableImage` by using the specified
-      projection and brush configuration.
+      Projects another `EditableImage` into an `Class.EditableMesh` and stores
+      the result on this `EditableImage` by using the specified projection and
+      brush configuration.
     code_samples: []
     parameters:
       - name: mesh
@@ -227,7 +224,7 @@ methods:
             projection will blend alpha values.
           - `ColorBlendType` (`Enum.ImageCombineType`) which determines how this
             projection will blend color values.
-          - `Decal` (`Class.EditableImage`) as the image used for projection.
+          - `Decal` (`EditableImage`) as the image used for projection.
           - `FadeAngle` (number) as the angle in degrees for the projection
             edges to fall off.
           - `BlendIntensity` (number) as the value between `0` and `1` which
@@ -244,8 +241,8 @@ methods:
     writeCapabilities: []
   - name: EditableImage:DrawImageTransformed
     summary: |
-      Draws an image into this `Class.EditableImage` with transformations
-      including scaling and rotation, placing it at the specified position.
+      Draws an image into this `EditableImage` with transformations including
+      scaling and rotation, placing it at the specified position.
     description: |
       This method lets you draw an `EditableImage` into this `EditableImage`
       with transformations applied, such as scaling and rotation. The position
@@ -277,7 +274,7 @@ methods:
         type: EditableImage
         default: ''
         summary: |
-          The source `Class.EditableImage` to be drawn into this image.
+          The source `EditableImage` to be drawn into this image.
       - name: options
         type: Dictionary?
         default: ''
@@ -306,8 +303,8 @@ methods:
     summary: |
       Draws a line between two provided points.
     description: |
-      Draws an anti-aliased line on the `Class.EditableImage` one pixel thick
-      between the two provided points.
+      Draws an anti-aliased line on the `EditableImage` one pixel thick between
+      the two provided points.
     code_samples: []
     parameters:
       - name: p1
@@ -349,8 +346,8 @@ methods:
     summary: |
       Draws a rectangle of the given size at the given top-left position.
     description: |
-      Draws a rectangle on the `Class.EditableImage` of the given size at the
-      given top-left position.
+      Draws a rectangle on the `EditableImage` of the given size at the given
+      top-left position.
     code_samples: []
     parameters:
       - name: position
@@ -359,7 +356,7 @@ methods:
         summary: |
           Position of the top-left of the rectangle. Unlike other drawing
           methods, this cannot be outside the canvas bounds of the
-          `Class.EditableImage`.
+          `EditableImage`.
       - name: size
         type: Vector2
         default: ''
@@ -394,12 +391,12 @@ methods:
     summary: |
       Reads a rectangular region of pixels into a buffer.
     description: |
-      Reads a rectangular region of pixels from an `Class.EditableImage` and
-      returns it as a buffer. Each number in the buffer is a single byte, with
-      pixels stored in a sequence of four bytes (red, green, blue, and alpha).
+      Reads a rectangular region of pixels from an `EditableImage` and returns
+      it as a buffer. Each number in the buffer is a single byte, with pixels
+      stored in a sequence of four bytes (red, green, blue, and alpha).
 
       Note that this method uses alpha instead of transparency, unlike the
-      `Class.EditableImage` drawing methods.
+      `EditableImage` drawing methods.
     code_samples:
       - EditableImage-ReadPixels1
     parameters:
@@ -430,12 +427,12 @@ methods:
     summary: |
       Writes a rectangular region of pixels into the image.
     description: |
-      Writes a rectangular region of pixels to an `Class.EditableImage` from a
-      buffer. Each number in the buffer is a single byte, with pixels stored in
-      a sequence of four bytes (red, green, blue, and alpha).
+      Writes a rectangular region of pixels to an `EditableImage` from a buffer.
+      Each number in the buffer is a single byte, with pixels stored in a
+      sequence of four bytes (red, green, blue, and alpha).
 
       Note that this method uses alpha instead of transparency, unlike the
-      `Class.EditableImage` drawing methods.
+      `EditableImage` drawing methods.
     code_samples:
       - EditableImage-ReadPixelsWritePixels1
     parameters:

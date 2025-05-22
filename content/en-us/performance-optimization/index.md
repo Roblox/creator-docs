@@ -5,13 +5,13 @@ description: Introduces the performance optimization process.
 
 Performance optimization is the process of building and iterating on an experience to improve frame rate, memory usage, and load times. Players expect games to perform well, so taking the time to understand and improve your experience's performance can be critical to its success.
 
-The first step in performance optimization is to [Design for Performance](design.md), which means following a set of best practices **as you build** a new experience. After you publish an experience, the optimization process follows a common cycle:
+The first step in performance optimization is to [design for performance](design.md), which means following a set of best practices **as you build** a new experience. After you publish an experience, the optimization process follows a common cycle:
 
 <GridContainer numColumns="2">
 <figure>
-1. [Identifying Performance Issues](identify.md) - Use Roblox's built-in tools to find performance problems and identify root causes.
-1. [Improving Performance](improve.md) - After you find an issue, see if it's a common one and how you might mitigate it. You might also want to take proactive action.
-1. [Monitoring Performance](monitor.md) - Use analytics tools to monitor the impact of your changes and watch for indicators of any performance issues.
+1. [Identify performance Issues](identify.md) - Use Roblox's built-in tools to find performance problems and identify root causes.
+1. [Improve performance](improve.md) - After you find an issue, see if it's a common one and how you might mitigate it. You might also want to take proactive action.
+1. [Monitor performance](monitor.md) - Use analytics tools to monitor the impact of your changes and watch for indicators of any performance issues.
 </figure>
 <figure>
   <img alt="A diagram showing the flow from designing, identifying, improving, and monitoring performance." src="../assets/optimization/Perf-Flow.png" width="70%" />

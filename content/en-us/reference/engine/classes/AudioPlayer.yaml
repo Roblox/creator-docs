@@ -469,7 +469,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities:
       - Audio
     writeCapabilities: []
@@ -489,7 +488,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities:
       - Audio
     writeCapabilities: []
@@ -527,7 +525,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities:
       - Audio
     writeCapabilities: []

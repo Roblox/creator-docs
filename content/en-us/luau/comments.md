@@ -1,9 +1,13 @@
 ---
-title: Comments
+title: Luau comments
 description: Comments are text that the Luau parser ignores at runtime.
 ---
 
 A **comment** is text that the Luau parser ignores at runtime.
+
+<Alert severity="info">
+Roblox Studio has a similarly-named [comments](../projects/collaboration.md#studio-comments) feature that is unrelated to code comments in Luau.
+</Alert>
 
 ## Single-line comments
 

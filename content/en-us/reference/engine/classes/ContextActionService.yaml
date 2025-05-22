@@ -102,10 +102,8 @@ methods:
       within the following: `Enum.KeyCode`, `Enum.UserInputType` or
       `Enum.PlayerActions` . Call this function when a player **enters the
       context** in which an action can be performed. When the player leaves the
-      context, call `Class.ContextActionService:UnbindAction()|UnbindAction`
-      with the same `actionName`. You can manually call the action handling
-      function of an action by using
-      `Class.ContextActionService:CallFunction()|CallFunction`.
+      context, call `Class.ContextActionService:UnbindAction()|UnbindAction()`
+      with the same `actionName`.
 
       The code sample below shows how a `Class.Sound` can be
       `Class.Sound:Play()|played` while a key (<kbd>H</kbd>), game pad button,
@@ -149,24 +147,25 @@ methods:
       <tr>
         <td>1</td>
         <td><code>string</code></td>
-        <td>The same string that was originally passed to BindAction†</td>
+        <td>The same string that was originally passed to <code>Class.ContextActionService:BindAction()|BindAction()</code>.
+        This allows one function to handle multiple actions at once, if necessary.</td>
       </tr>
       <tr>
         <td>2</td>
         <td><code>Enum.UserInputState</code></td>
-        <td>The state of the input (Begin, Change, End or Cancel)*</td>
+        <td>The state of the input. <code>Enum.UserInputState|Cancel</code> is sent
+        if some input was in progress and another action bound over that in-progress
+        input, or if the in-progress bound action was unbound through <code>Class.ContextActionService:UnbindAction()|UnbindAction()</code>.</td>
       </tr>
       <tr>
         <td>3</td>
         <td><code>InputObject</code></td>
-        <td>An object that contains information about the input (varies based on UserInputType)</td>
+        <td>An object that contains information about the input (varies based on
+        <code>Enum.UserInputType</code>). The <code>Class.InputObject</code> sometimes won't match the inputs the action
+        was bound to: when the <code>Enum.UserInputState|Cancel</code> state is sent, this object will be
+        <code>Enum.KeyCode.Unknown</code> and <code>Enum.UserInputType.None</code>.</td>
       </tr>
       </table>
-
-      † This allows one function to handle multiple actions at once, if
-      necessary. \*Cancel is sent if some input was in-progress and another
-      action bound over the in-progress input, or if the in-progress bound
-      action was `Class.ContextActionService:UnbindAction()|unbound`.
 
       #### Action Bindings Stack
 
@@ -848,7 +847,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities:
       - Input
     writeCapabilities: []
@@ -866,7 +864,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities:
       - Input
     writeCapabilities: []

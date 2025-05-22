@@ -54,7 +54,7 @@ To create a mood:
 1. **(Optional)** To assign an asset ID to your mood animation and save it to the [Toolbox](../../../projects/assets/toolbox.md) to use across your experiences,
 
    1. In the **Explorer** window, right-click on your new mood animation. A contextual menu displays.
-   1. Select **Save to Roblox**. The **Asset Configuration dialog** displays.
+   1. Select **Save to Roblox**. The **Asset Configuration** window displays.
    1. Fill in the following fields:
 
       - **Title**: A name for your plugin.

@@ -255,8 +255,17 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: BasePart.AudioCanCollide
-    summary: ''
-    description: ''
+    summary: |
+      Determines whether the part will physically interact with audio
+      simulation, similar to `Class.BasePart.CastShadow|CastShadow` for
+      lighting.
+    description: |
+      `AudioCanCollide` determines whether the part will physically interact
+      with audio simulation, similar to `Class.BasePart.CastShadow|CastShadow`
+      for lighting.
+
+      When disabled, audio passes through the part; it is not occluded or
+      reflected.
     code_samples: []
     type: boolean
     tags: []
@@ -659,12 +668,14 @@ properties:
     summary: |
       Determines whether or not a part casts a shadow.
     description: |
-      Determines whether or not a part casts a shadow.
+      Determines whether or not a part casts a shadow. Disabling this property
+      for a given part can cause visual artifacts on the shadows cast upon that
+      part.
 
-      Note that this feature is **not** designed for performance enhancement. It
-      should only be disabled on parts where you want to hide the shadows the
-      part casts. Disabling this property for a given part may cause visual
-      artifacts on the shadows cast upon that part.
+      This property is not designed for performance enhancement, but in complex
+      scenes, strategically disabling it on certain parts can improve
+      performance. Due to the possibility of visual artifacts, we recommend
+      leaving it enabled on all parts in most situations.
     code_samples: []
     type: boolean
     tags: []
@@ -3126,7 +3137,6 @@ events:
     deprecation_message: |
       This event is deprecated in favor of `Class.BasePart.Touched`.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: BasePart.OutfitChanged
@@ -3140,7 +3150,6 @@ events:
     deprecation_message: |
       This event is deprecated. Do not use it for new work.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: BasePart.StoppedTouching
@@ -3158,7 +3167,6 @@ events:
       This event is deprecated in favor of `Class.BasePart.TouchEnded`, which
       should be used instead.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: BasePart.TouchEnded
@@ -3183,7 +3191,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: BasePart.Touched
@@ -3217,7 +3224,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

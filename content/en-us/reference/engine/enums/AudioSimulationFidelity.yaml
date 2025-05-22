@@ -1,18 +1,27 @@
 name: AudioSimulationFidelity
 type: enum
-summary: ''
-description: ''
-code_samples: []
+summary: |
+  Enum which determines how detailed audio simulation should be for
+  `Class.AudioEmitter|AudioEmitters` and `Class.AudioListener|AudioListeners`.
+description: |
+  This enum, used with `Class.AudioEmitter.SimulationFidelity` and
+  `Class.AudioListener.SimulationFidelity`, determines how detailed audio
+  simulation should be.
+code_samples:
 tags: []
 deprecation_message: ''
 items:
   - name: None
-    summary: ''
+    summary: |
+      No acoustic simulation occurs; only direction and distance are taken into
+      account.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Automatic
-    summary: ''
+    summary: |
+      The audio engine simulates transmission, diffraction, and reflections at a
+      level of detail suitable to most devices.
     value: 1
     tags: []
     deprecation_message: ''

@@ -24,9 +24,9 @@ properties:
       Describes the ID of the user or group that owns the place.
     description: |
       This property describes the ID of the user or group that owns the place.
-      If the `Class.DataModel.CreatorType` property is _'User'_ then CreatorId
+      If the `Class.DataModel.CreatorType` property is `User` then `CreatorId`
       will be the `Class.Player.UserId` of the place's owner. If the
-      `Class.DataModel.CreatorType` is _'Group'_ then CreatorId will be the ID
+      `Class.DataModel.CreatorType` is `Group` then `CreatorId` will be the ID
       of the group that owns the place.
     code_samples:
       - detect-when-the-place-owner-joins-the-game
@@ -51,12 +51,10 @@ properties:
       by a user or a group.
     description: |
       This property describes the `Enum.CreatorType` of the place, whether the
-      place is owned by a user or a group.
-
-      If the `Enum.CreatorType` is _'User'_, then the
+      place is owned by a user or a group. If `User`, then the
       `Class.DataModel.CreatorId` property will describe the
-      `Class.Player.UserId|UserId` of the account that owns the game. If the
-      CreatorType is _'Group'_, then it will describe the group ID.
+      `Class.Player.UserId|UserId` of the account that owns the game. If
+      `Group`, then it will describe the group ID.
     code_samples:
       - detect-when-the-place-owner-joins-the-game
     type: CreatorType
@@ -383,7 +381,7 @@ properties:
       the server is private.
 
       If the server is a standard or reserved server then this property will be
-      set to _0_.
+      set to `0`.
 
       This property could be used to identify if a `Class.Player` is the owner
       of the private server, for example:
@@ -826,27 +824,10 @@ methods:
     writeCapabilities: []
   - name: DataModel:SetPlaceId
     summary: |
-      Sets the `Class.DataModel.PlaceId` of the current game instance to the
-      given _placeId_.
+      Sets the `Class.DataModel.PlaceId` of the current game instance.
     description: |
       This function sets the `Class.DataModel.PlaceId` of the game instance to
-      the given _placeId_.
-
-      Setting both `Class.DataModel.PlaceId` and `Class.DataModel.GameId` are
-      required to access `Class.DataStoreService` when the place is unpublished,
-      for example a local `.rbxl` file. See below for an example. Note that
-      gaining `Class.DataStoreService` access from Studio requires the **Enable
-      Studio Access to API Services** setting from the **Security** panel in
-      [Game Settings](../../../studio/game-settings.md).
-
-      ```lua
-      local DataStoreService = game:GetService("DataStoreService")
-
-      -- access DataStore 'Data' by setting PlaceId to placeId and GameId to universeId.
-      game:SetPlaceId(placeId)
-      game:SetUniverseId(universeId)
-      local dataStore = DataStoreService:GetDataStore("Data")
-      ```
+      the given `placeId`.
     code_samples: []
     parameters:
       - name: placeId
@@ -866,10 +847,10 @@ methods:
   - name: DataModel:SetUniverseId
     summary: |
       Sets the `Class.DataModel.GameId` of the current game instance to the
-      given _universeId_.
+      given `universeId`.
     description: |
       This function sets the `Class.DataModel.GameId` of the current game
-      instance to the given _universeId_. This is useful when testing local
+      instance to the given `universeId`. This is useful when testing local
       .rbxl files that have not been published to Roblox.
 
       To access the `Class.DataStoreService` in an unpublished place, both
@@ -924,10 +905,10 @@ events:
   - name: DataModel.AllowedGearTypeChanged
     summary: |
       Fires when SetGearSettings is called with a different value for
-      _allowedGenres_.
+      `allowedGenres`.
     description: |
       This event fires when SetGearSettings is called with a different value for
-      _allowedGenres_.
+      `allowedGenres`.
     code_samples: []
     parameters: []
     tags:
@@ -935,7 +916,6 @@ events:
     deprecation_message: |
       This item is deprecated . Do not use it for new work.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: DataModel.GraphicsQualityChangeRequest
@@ -981,7 +961,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: DataModel.ItemChanged
@@ -1007,7 +986,6 @@ events:
       This function has been superseded by `Class.Object.Changed`, which should
       be used in new work instead.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: DataModel.Loaded
@@ -1041,7 +1019,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks:

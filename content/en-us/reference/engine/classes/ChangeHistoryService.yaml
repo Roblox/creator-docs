@@ -303,7 +303,6 @@ events:
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: ChangeHistoryService.OnRecordingStarted
@@ -327,7 +326,6 @@ events:
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: ChangeHistoryService.OnRedo
@@ -346,7 +344,6 @@ events:
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: ChangeHistoryService.OnUndo
@@ -365,7 +362,6 @@ events:
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

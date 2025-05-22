@@ -11,8 +11,8 @@ Create immersive 3D experiences on Roblox with **Roblox Studio**, a free applica
 <thead>
 <tr>
 <th></th>
-<th><Chip label="Minimum" size="medium" color="warning" variant="outlined" /></th>
-<th><Chip label="Recommended" size="medium" color="success" variant="outlined" /></th>
+<th><Chip label="MINIMUM" size="medium" color="warning" variant="outlined" /></th>
+<th><Chip label="RECOMMENDED" size="medium" color="success" variant="outlined" /></th>
 </tr>
 </thead>
 <tbody>
@@ -52,7 +52,7 @@ Create immersive 3D experiences on Roblox with **Roblox Studio**, a free applica
 
 ## Customization
 
-Many customization options are accessible via **File**&nbsp;&rang; **Studio Settings** (<kbd>Alt</kbd><kbd>S</kbd> on Windows; <kbd>⌥</kbd><kbd>S</kbd> on Mac). You can quickly locate known settings by typing keywords into the search field at the top of the window. For example, search for `theme` to explicitly set Studio to dark theme or light theme.
+Many customization options are accessible via **Studio Settings** (<kbd>Alt</kbd><kbd>S</kbd> on Windows; <kbd>⌥</kbd><kbd>S</kbd> on Mac). You can quickly locate known settings by typing keywords into the search field at the top of the window. For example, search for `theme` to explicitly set Studio to dark theme or light theme.
 
 <img src="../assets/studio/general/Studio-Settings-Layout.png" width="750" alt="A close up view of the Studio Settings window." />
 

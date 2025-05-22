@@ -135,7 +135,6 @@ events:
       developers can now use the `Library.math.clamp()` function to constrain
       values.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: DoubleConstrainedValue.changed
@@ -154,7 +153,6 @@ events:
       `Class.DoubleConstrainedValue.Changed` which has also been deprecated.
       Neither event should be used in new work.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

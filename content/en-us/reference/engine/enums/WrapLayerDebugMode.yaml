@@ -101,3 +101,8 @@ items:
     summary: ''
     tags: []
     deprecation_message: ''
+  - name: PreWrapDeformerOuterCage
+    summary: ''
+    value: 14
+    tags: []
+    deprecation_message: ''

@@ -38,7 +38,7 @@ deprecation_message: ''
 constructors:
   - name: PhysicalProperties.new
     summary: Returns a `Datatype.PhysicalProperties` with the default properties for the given material.
-    description: Returns a `Datatype.PhysicalProperties` container, with the density, friction, and elasticity specified for this Material.
+    description: Returns a `Datatype.PhysicalProperties` container, with the density, friction, and elasticity specified for this material.
     parameters:
       - name: material
         type: Material
@@ -103,6 +103,23 @@ constructors:
     deprecation_message: ''
 constants: []
 properties:
+  - name: PhysicalProperties.AcousticAbsorption
+    type: number
+    summary: |
+      A value between `0` and `1` denoting how absorbent the material is to
+      `Class.AudioEmitter|AudioEmitters`.
+    description: |
+      A value between `0` and `1` denoting how absorbent the material is to
+      `Class.AudioEmitter|AudioEmitters`. When using acoustic simulation,
+      surfaces with higher absorption will result in less reverb than surfaces
+      with lower absorption.
+
+      Note that this does not affect the degree to which audio transmits
+      **through** surfaces; for that, see
+      `Datatype.PhysicalProperties.Density|Density`.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
   - name: PhysicalProperties.Density
     type: number
     summary: |
@@ -110,7 +127,10 @@ properties:
     description: |
       Density is defined as the amount of mass per unit volume. The more dense a
       part is, the more force it takes to accelerate it. Acceptable range is
-      0.01 to 100.0 and values outside this range will be clamped.
+      `0.01` to `100.0` and values outside this range will be clamped.
+
+      When using acoustic simulation, parts with higher density will muffle
+      occluded `Class.AudioEmitter|AudioEmitters` more.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -122,7 +142,7 @@ properties:
       Friction is defined as the force that opposes the relative lateral motion
       of two solid surfaces in contact. The greater the friction on a part, the
       quicker it will decelerate when it rubs against another part with
-      friction. Acceptable range is 0.0 to 2.0 and values outside this range
+      friction. Acceptable range is `0.0` to `2.0` and values outside this range
       will be clamped.
     code_samples: []
     tags: []
@@ -135,8 +155,8 @@ properties:
       Elasticity refers to a part's tendency to retain energy when colliding
       with another part. An `Datatype.PhysicalProperties.Elasticity|Elasticity`
       of 1 indicates that the part bounces with the same energy it had before a
-      collision. Acceptable range is 0.0 to 1.0 and values outside this range
-      will be clamped.
+      collision. Acceptable range is `0.0` to `1.0` and values outside this
+      range will be clamped.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -151,7 +171,7 @@ properties:
       calculate the actual friction between the two parts. The higher a part's
       `Datatype.PhysicalProperties.FrictionWeight|FrictionWeight`, the more its
       `Datatype.PhysicalProperties.Friction|Friction` is used. Acceptable range
-      is 0.0 to 100.0 and values outside this range will be clamped.
+      is `0.0` to `100.0` and values outside this range will be clamped.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -166,7 +186,7 @@ properties:
       calculate the actual elasticity between the two parts. The higher a part's
       `Datatype.PhysicalProperties.ElasticityWeight|ElasticityWeight`, the more
       its `Datatype.PhysicalProperties.Elasticity|Elasticity` is used.
-      Acceptable range is 0.0 to 100.0 and values outside this range will be
+      Acceptable range is `0.0` to `100.0` and values outside this range will be
       clamped.
     code_samples: []
     tags: []

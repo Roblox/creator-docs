@@ -104,6 +104,7 @@ https://en.wikipedia.org/wiki/Percent-encoding
 https://en.wikipedia.org/wiki/Photogrammetry
 https://en.wikipedia.org/wiki/Quaternion
 https://en.wikipedia.org/wiki/Radian
+https://en.wikipedia.org/wiki/REST
 https://en.wikipedia.org/wiki/Shard_(database_architecture)
 https://en.wikipedia.org/wiki/Shard_(database_architecture
 https://en.wikipedia.org/wiki/Type_introspection
@@ -422,7 +423,7 @@ https://www.whitehatjr.com/
 https://www.wizkidlearning.com/
 https://www.wowschool.pl/
 https://www.youthtechinc.com/
-https://www.youtube.com/@RobloxLearnOfficial
+https://www.youtube.com/@RobloxLearn
 https://www.youtube-nocookie.com/embed/V1uFFUUCLpo
 https://www.youtube-nocookie.com/embed/2My8jE47clI
 https://www.youtube-nocookie.com/embed/0fAhhoXK12o
@@ -615,6 +616,10 @@ https://developer.mozilla.org/docs/Web/HTTP/Methods/TRACE
 https://developer.mozilla.org/docs/Web/HTTP/Methods/PATCH
 https://docs.google.com/forms/d/e/1FAIpQLSfGTRQwATB2wUg0P4HUSTtyXrhptFahJifo1ew84SyqtfSBfg/viewform
 https://www.youtube.com/playlist?list=PLuEQ5BB-Z1PJi8RJ7Kuc0JhcT0ubgaL43
+https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
+https://developer.mozilla.org/en-US/docs/Web/CSS/--*
+https://sass-lang.com/guide/
 https://survey.roblox.com/jfe/form/SV_3QnTMZaFmYe2FTM
 https://www.youtube-nocookie.com/embed/rVFmc8gxu4s
 https://docs.blender.org/manual/en/2.81/interface/window_system/workspaces.html
@@ -648,3 +653,7 @@ https://uuid7.com/
 https://uuid7.com/https://survey.roblox.com/jfe/form/SV_2bj5xe6elkuRl8W
 https://www.youtube-nocookie.com/embed/fUMlnldI53A
 https://docs.blender.org/manual/en/latest/sculpt_paint/vertex_paint/index.html
+https://www.youtube-nocookie.com/embed/3Q0R1-Xkw9U
+https://www.youtube-nocookie.com/embed/FzmFAm00A8g
+https://www.youtube-nocookie.com/embed/_RxK6l2y7Ac
+https://www.youtube-nocookie.com/embed/_k1ea0OIKaU?si=A9mdnnG95qdaZbB_

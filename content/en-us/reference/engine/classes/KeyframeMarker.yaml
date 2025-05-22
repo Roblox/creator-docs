@@ -26,9 +26,10 @@ description: |
 
   It inherits the `Class.Instance.Name|Keyframe.Name` property from
   `Class.Instance` and behaves identically. Names are used for identification
-  and no not need to be unique. When multiple KeyFrameMarkers with the same name
-  are attached to a KeyFrame, events such as the one returned by
-  `Class.AnimationTrack:GetMarkerReachedSignal()` will fire for every marker.
+  and do not need to be unique. When multiple `KeyframeMarker` instances with
+  the same name are attached to a `Class.Keyframe`, events such as the one
+  returned by `Class.AnimationTrack:GetMarkerReachedSignal()` will fire for
+  every marker.
 
   See also:
 

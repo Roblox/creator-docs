@@ -4,12 +4,12 @@ memory_category: PhysicsParts
 summary: |
   Applies constant force to an assembly.
 description: |
-  The **VectorForce** constraint applies constant force to an assembly. The
+  The `VectorForce` constraint applies constant force to an assembly. The
   direction and strength of the force is determined by a `Datatype.Vector3` and
   can be relative to an attachment on the part, another attachment, or the world
   coordinate system. Alternatively:
 
-  - Because the `Class.VectorForce` constraint applies **constant** force and
+  - Because the `VectorForce` constraint applies **constant** force and
     acceleration, very high speeds may result if no other forces are involved.
     If you want to maintain a more steady velocity over time, use a
     `Class.LinearVelocity` constraint.
@@ -56,8 +56,8 @@ properties:
     summary: |
       Whether force is applied at the center of mass of the parent assembly.
     description: |
-      When true, force is applied at the center of mass of the parent assembly
-      of `Class.VectorForce.Attachment0|Attachment0`. When false, force is
+      When `true`, force is applied at the center of mass of the parent assembly
+      of `Class.VectorForce.Attachment0|Attachment0`. When `false`, force is
       applied at `Class.VectorForce.Attachment0|Attachment0`.
     code_samples: []
     type: boolean

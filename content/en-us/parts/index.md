@@ -96,7 +96,7 @@ The following are commonly utilized properties:
 
 The **Part** button inserts a new part into the workspace. Clicking the small dropdown arrow on the button lets you select either **Block**, **Sphere**, **Wedge**, **Corner&nbsp;Wedge**, or **Cylinder**.
 
-<img src="../assets/studio/general/Model-Tab-Part-Tools.png" width="660" alt="Studio's Model tab with the Insert Part tool and its Part Type Picker highlighted." />
+<img src="../assets/studio/general/Insert-Part-Tool.png" width="300" alt="Part tool and its part type picker highlighted." />
 
 <Alert severity="info">
 To insert a `Class.TrussPart` (not available on the insertion menu), use the [Explorer](../studio/explorer.md) as outlined [here](../studio/explorer.md#insert-and-parent).
@@ -122,11 +122,15 @@ the arrow axis indicators change to a part's local orientation, and an **L** ind
   <TabItem label="Local">
     <img src="../assets/modeling/parts/Move-Local-Orientation.png" width="720" height="405" alt="An angled block part with draggers in Local orientation mode." />
   </TabItem>
-</Tabs>
+</Tabs><br />
+
+Tool transform **snapping** increments are based on **studs** for moving/scaling or **degrees** for rotating, each adjustable in the toolbar. While transforming, you can temporarily toggle snapping by holding the <kbd>Shift</kbd> key.
+
+<img src="../assets/studio/general/Transform-Snapping.png" width="563" alt="Transform snapping tools indicated in Studio's toolbar." />
 
 ### Move
 
-You can move a selected part to a new position using the **Move** tool (default shortcut <kbd>2</kbd>) or by **cursor&nbsp;dragging**. While moving a part, you can temporarily toggle [snapping](../studio/model-tab.md#transform-snapping) by holding <kbd>Shift</kbd>.
+You can move a selected part to a new position using the **Move** tool (default shortcut <kbd>2</kbd>) or by **cursor&nbsp;dragging**. While moving a part, you can temporarily toggle snapping by holding <kbd>Shift</kbd>.
 
 <Tabs>
 <TabItem label="Move Tool">
@@ -149,11 +153,11 @@ If you drag a part by its [pivot](../studio/pivot-tools.md) point while the **Mo
 </TabItem>
 <TabItem label="Cursor Drag">
 <figure>
-To move a part by cursor dragging, click anywhere on the part to grab it. If [transform snapping](../studio/model-tab.md#transform-snapping) is **enabled**, a ruler will appear as you hover, showing what point you'll grab the part by. As you drag the part around, another ruler will appear on the surface/edge of nearby parts, indicating alignment of the grab point.
+To move a part by cursor dragging, click anywhere on the part to grab it. If snapping is **enabled**, a ruler will appear as you hover, showing what point you'll grab the part by. As you drag the part around, another ruler will appear on the surface/edge of nearby parts, indicating alignment of the grab point.
 
 <img src="../assets/modeling/parts/Transform-Move-Ruler-Snap.png" width="720" alt="A block part showing the grab point and snapping ruler on a neighboring part." />
 
-If [transform snapping](../studio/model-tab.md#transform-snapping) is **disabled**, the part will "soft&nbsp;snap" to surfaces and edges of nearby parts.
+If snapping is **disabled**, the part will "soft&nbsp;snap" to surfaces and edges of nearby parts.
 
 <img src="../assets/modeling/parts/Transform-Move-Cursor-Drag-Snap.png" width="720" alt="A block part soft-snapping to the corner edges of a neighboring part." />
 
@@ -166,7 +170,7 @@ While cursor dragging, <kbd>T</kbd> and <kbd>R</kbd> can be used to quickly rota
 
 ### Scale
 
-To scale (resize) a selected part along the **X**, **Y**, or **Z** axis, use the **Scale** tool (default shortcut <kbd>3</kbd>) and click/drag a handle. While dragging, you can temporarily toggle [snapping](../studio/model-tab.md#transform-snapping) by holding <kbd>Shift</kbd>.
+To scale (resize) a selected part along the **X**, **Y**, or **Z** axis, use the **Scale** tool (default shortcut <kbd>3</kbd>) and click/drag a handle. While dragging, you can temporarily toggle snapping by holding <kbd>Shift</kbd>.
 
 <img src="../assets/studio/general/Transform-Tool-Scale.png" width="562" alt="Studio toolbar with the Scale tool highlighted." />
 
@@ -174,7 +178,7 @@ To scale (resize) a selected part along the **X**, **Y**, or **Z** axis, use the
 
 ### Rotate
 
-To rotate a selected part around the **X**, **Y**, or **Z** axis, use the **Rotate** tool (default shortcut <kbd>4</kbd>) and click/drag a rotation ring. While dragging, you can temporarily toggle [snapping](../studio/model-tab.md#transform-snapping) by holding <kbd>Shift</kbd>.
+To rotate a selected part around the **X**, **Y**, or **Z** axis, use the **Rotate** tool (default shortcut <kbd>4</kbd>) and click/drag a rotation ring. While dragging, you can temporarily toggle snapping by holding <kbd>Shift</kbd>.
 
 <img src="../assets/studio/general/Transform-Tool-Rotate.png" width="562" alt="Studio toolbar with the Rotate tool highlighted." />
 
@@ -188,7 +192,7 @@ While a part is gray by default, you can change it to any color through the foll
 
 Clicking the small dropdown arrow on the **Color** widget reveals a hexagonal color picker.
 
-<img src="../assets/studio/general/Model-Tab-Color-Picker.png" width="704" alt="Studio's Model tab with the Color widget's hexagonal picker." />
+<img src="../assets/studio/general/Color-Picker.png" width="373" alt="Color widget's hexagonal picker." />
 
 By default, clicking the overall **Color** button applies the chosen color to any **selected** parts. If you prefer a fill/paint workflow instead, toggle on **Color&nbsp;Action&nbsp;as&nbsp;Tool** and then click parts in the 3D viewport to apply the chosen color.
 

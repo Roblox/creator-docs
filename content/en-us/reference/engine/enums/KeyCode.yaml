@@ -1546,24 +1546,18 @@ items:
   - name: MouseLeftButton
     summary: ''
     value: 1018
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This enum is deprecated and flagged for removal.
+    tags: []
+    deprecation_message: ''
   - name: MouseRightButton
     summary: ''
     value: 1019
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This enum is deprecated and flagged for removal.
+    tags: []
+    deprecation_message: ''
   - name: MouseMiddleButton
     summary: ''
     value: 1020
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This enum is deprecated and flagged for removal.
+    tags: []
+    deprecation_message: ''
   - name: MouseBackButton
     summary: ''
     value: 1021

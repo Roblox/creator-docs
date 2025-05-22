@@ -160,7 +160,7 @@ If you have a place with shoreline terrain (water meeting land), it's recommende
 </Alert>
 
 <Alert severity="info">
-Some water properties are only visible while playtesting. To preview all properties while editing, open **Studio&nbsp;Settings**, search for **Editor&nbsp;Quality&nbsp;Level**, and set it to the highest level.
+Some water properties are only visible while playtesting. To preview all properties while editing, open [Studio Settings](../studio/setup.md#customization), search for **Editor Quality Level**, and set it to the highest level.
 </Alert>
 
 ### Grass animation

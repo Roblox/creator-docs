@@ -73,7 +73,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: NumberValue.changed
@@ -91,7 +90,6 @@ events:
       This event is a deprecated variant of `Class.NumberValue.Changed` which
       should be used instead.
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks: []

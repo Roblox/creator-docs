@@ -513,7 +513,7 @@ methods:
         </tbody>
       </table>
 
-      #### Collectibles Information
+      ##### Collectibles Information
 
       <table size="small">
         <thead>
@@ -1170,7 +1170,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: MarketplaceService.PromptBundlePurchaseFinished
@@ -1193,7 +1192,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: MarketplaceService.PromptGamePassPurchaseFinished
@@ -1242,7 +1240,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: MarketplaceService.PromptPremiumPurchaseFinished
@@ -1265,7 +1262,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: MarketplaceService.PromptProductPurchaseFinished
@@ -1333,7 +1329,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: MarketplaceService.PromptPurchaseFinished
@@ -1384,7 +1379,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: MarketplaceService.PromptSubscriptionPurchaseFinished
@@ -1423,7 +1417,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
 callbacks:

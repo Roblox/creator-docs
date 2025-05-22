@@ -91,7 +91,7 @@ also contain scripts that act on the individual objects of the model.
 
 Within a script, you can access a place's `Class.Workspace` in three different ways, all of which are valid.
 
-- `game:GetService("Workspace")` <Chip label="recommended" size="small" variant="outlined" color="success" />
+- `game:GetService("Workspace")`
 - `workspace`
 - `game.Workspace`
 

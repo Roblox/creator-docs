@@ -16,7 +16,8 @@ code_samples:
   - audio-wiring---splitting-mixing
 inherits:
   - Instance
-tags: []
+tags:
+  - NotBrowsable
 deprecation_message: ''
 properties:
   - name: AudioChannelMixer.Layout
@@ -167,7 +168,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
     capabilities:
       - Audio
     writeCapabilities: []

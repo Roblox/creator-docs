@@ -61,7 +61,7 @@ By experimenting with the following properties, you can customize a beam's visua
 </video>
 
 <Alert severity="info">
-The visual quality of your beams can change depending on the graphics settings on the player's device. To review your beam across quality levels, it's recommended to open **Studio Settings**, search for **Editor Quality Level**, and set it to the both the lowest and highest level after you finish customizing your beam.
+The visual quality of your beams can change depending on the graphics settings on the player's device. To review your beam across quality levels, it's recommended to open [Studio Settings](../studio/setup.md#customization), search for **Editor Quality Level**, and set it to the both the lowest and highest level after you finish customizing your beam.
 </Alert>
 
 ### Texture

@@ -519,7 +519,7 @@ To publish your animation:
 
 1. From the contextual menu, select **Publish to Roblox**. The **Asset Configuration** window displays.
 1. Fill out all applicable fields, then click the **Save** button.
-1. **(Optional)** You can copy the animation's assetID to use within scripts by clicking the copy icon.
+1. **(Optional)** You can copy the animation's asset ID to use within scripts by clicking the copy icon.
 
    <img src="../../../assets/tutorials/creating-character-animations/Publish-4.png" alt="" width="60%" />
 

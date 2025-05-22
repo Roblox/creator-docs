@@ -258,6 +258,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/AudioPlayer.yaml
         ignoreTranslation: true
+      - title: AudioRecorder
+        path: /reference/engine/classes/AudioRecorder
+        type: engineapi
+        source: /reference/engine/classes/AudioRecorder.yaml
+        ignoreTranslation: true
       - title: AudioReverb
         path: /reference/engine/classes/AudioReverb
         type: engineapi
@@ -718,6 +723,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/CustomEventReceiver.yaml
         ignoreTranslation: true
+      - title: CustomLog
+        path: /reference/engine/classes/CustomLog
+        type: engineapi
+        source: /reference/engine/classes/CustomLog.yaml
+        ignoreTranslation: true
       - title: CylinderHandleAdornment
         path: /reference/engine/classes/CylinderHandleAdornment
         type: engineapi
@@ -943,11 +953,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/FaceInstance.yaml
         ignoreTranslation: true
-      - title: FacialAgeEstimationService
-        path: /reference/engine/classes/FacialAgeEstimationService
-        type: engineapi
-        source: /reference/engine/classes/FacialAgeEstimationService.yaml
-        ignoreTranslation: true
       - title: Feature
         path: /reference/engine/classes/Feature
         type: engineapi
@@ -957,16 +962,6 @@ navigation:
         path: /reference/engine/classes/FeatureRestrictionManager
         type: engineapi
         source: /reference/engine/classes/FeatureRestrictionManager.yaml
-        ignoreTranslation: true
-      - title: FeedPages
-        path: /reference/engine/classes/FeedPages
-        type: engineapi
-        source: /reference/engine/classes/FeedPages.yaml
-        ignoreTranslation: true
-      - title: FeedService
-        path: /reference/engine/classes/FeedService
-        type: engineapi
-        source: /reference/engine/classes/FeedService.yaml
         ignoreTranslation: true
       - title: File
         path: /reference/engine/classes/File
@@ -1113,11 +1108,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/Glue.yaml
         ignoreTranslation: true
-      - title: GoogleAnalyticsConfiguration
-        path: /reference/engine/classes/GoogleAnalyticsConfiguration
-        type: engineapi
-        source: /reference/engine/classes/GoogleAnalyticsConfiguration.yaml
-        ignoreTranslation: true
       - title: GroundController
         path: /reference/engine/classes/GroundController
         type: engineapi
@@ -1187,6 +1177,11 @@ navigation:
         path: /reference/engine/classes/HandlesBase
         type: engineapi
         source: /reference/engine/classes/HandlesBase.yaml
+        ignoreTranslation: true
+      - title: HandRigDescription
+        path: /reference/engine/classes/HandRigDescription
+        type: engineapi
+        source: /reference/engine/classes/HandRigDescription.yaml
         ignoreTranslation: true
       - title: HapticEffect
         path: /reference/engine/classes/HapticEffect
@@ -1402,11 +1397,6 @@ navigation:
         path: /reference/engine/classes/KeyframeSequenceProvider
         type: engineapi
         source: /reference/engine/classes/KeyframeSequenceProvider.yaml
-        ignoreTranslation: true
-      - title: LanguageService
-        path: /reference/engine/classes/LanguageService
-        type: engineapi
-        source: /reference/engine/classes/LanguageService.yaml
         ignoreTranslation: true
       - title: LayerCollector
         path: /reference/engine/classes/LayerCollector
@@ -1798,11 +1788,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/PitchShiftSoundEffect.yaml
         ignoreTranslation: true
-      - title: PlaceAssetIdsService
-        path: /reference/engine/classes/PlaceAssetIdsService
-        type: engineapi
-        source: /reference/engine/classes/PlaceAssetIdsService.yaml
-        ignoreTranslation: true
       - title: PlacesService
         path: /reference/engine/classes/PlacesService
         type: engineapi
@@ -2062,6 +2047,11 @@ navigation:
         path: /reference/engine/classes/ReflectionMetadataYieldFunctions
         type: engineapi
         source: /reference/engine/classes/ReflectionMetadataYieldFunctions.yaml
+        ignoreTranslation: true
+      - title: ReflectionService
+        path: /reference/engine/classes/ReflectionService
+        type: engineapi
+        source: /reference/engine/classes/ReflectionService.yaml
         ignoreTranslation: true
       - title: RemoteDebuggerServer
         path: /reference/engine/classes/RemoteDebuggerServer
@@ -2563,11 +2553,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/SyncScriptBuilder.yaml
         ignoreTranslation: true
-      - title: SystemThemeService
-        path: /reference/engine/classes/SystemThemeService
-        type: engineapi
-        source: /reference/engine/classes/SystemThemeService.yaml
-        ignoreTranslation: true
       - title: TaskScheduler
         path: /reference/engine/classes/TaskScheduler
         type: engineapi
@@ -2947,6 +2932,11 @@ navigation:
         path: /reference/engine/classes/VelocityMotor
         type: engineapi
         source: /reference/engine/classes/VelocityMotor.yaml
+        ignoreTranslation: true
+      - title: VideoCapture
+        path: /reference/engine/classes/VideoCapture
+        type: engineapi
+        source: /reference/engine/classes/VideoCapture.yaml
         ignoreTranslation: true
       - title: VideoCaptureService
         path: /reference/engine/classes/VideoCaptureService
@@ -3521,6 +3511,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AudioApiRollout.yaml
         ignoreTranslation: true
+      - title: AudioCaptureMode
+        path: /reference/engine/enums/AudioCaptureMode
+        type: engineapi
+        source: /reference/engine/enums/AudioCaptureMode.yaml
+        ignoreTranslation: true
       - title: AudioChannelLayout
         path: /reference/engine/enums/AudioChannelLayout
         type: engineapi
@@ -3580,6 +3575,81 @@ navigation:
         path: /reference/engine/enums/AvatarPromptResult
         type: engineapi
         source: /reference/engine/enums/AvatarPromptResult.yaml
+        ignoreTranslation: true
+      - title: AvatarSettingsAccessoryLimitMethod
+        path: /reference/engine/enums/AvatarSettingsAccessoryLimitMethod
+        type: engineapi
+        source: /reference/engine/enums/AvatarSettingsAccessoryLimitMethod.yaml
+        ignoreTranslation: true
+      - title: AvatarSettingsAccessoryMode
+        path: /reference/engine/enums/AvatarSettingsAccessoryMode
+        type: engineapi
+        source: /reference/engine/enums/AvatarSettingsAccessoryMode.yaml
+        ignoreTranslation: true
+      - title: AvatarSettingsAnimationClipsMode
+        path: /reference/engine/enums/AvatarSettingsAnimationClipsMode
+        type: engineapi
+        source: /reference/engine/enums/AvatarSettingsAnimationClipsMode.yaml
+        ignoreTranslation: true
+      - title: AvatarSettingsAnimationPacksMode
+        path: /reference/engine/enums/AvatarSettingsAnimationPacksMode
+        type: engineapi
+        source: /reference/engine/enums/AvatarSettingsAnimationPacksMode.yaml
+        ignoreTranslation: true
+      - title: AvatarSettingsAppearanceMode
+        path: /reference/engine/enums/AvatarSettingsAppearanceMode
+        type: engineapi
+        source: /reference/engine/enums/AvatarSettingsAppearanceMode.yaml
+        ignoreTranslation: true
+      - title: AvatarSettingsBuildMode
+        path: /reference/engine/enums/AvatarSettingsBuildMode
+        type: engineapi
+        source: /reference/engine/enums/AvatarSettingsBuildMode.yaml
+        ignoreTranslation: true
+      - title: AvatarSettingsClothingMode
+        path: /reference/engine/enums/AvatarSettingsClothingMode
+        type: engineapi
+        source: /reference/engine/enums/AvatarSettingsClothingMode.yaml
+        ignoreTranslation: true
+      - title: AvatarSettingsCollisionMode
+        path: /reference/engine/enums/AvatarSettingsCollisionMode
+        type: engineapi
+        source: /reference/engine/enums/AvatarSettingsCollisionMode.yaml
+        ignoreTranslation: true
+      - title: AvatarSettingsCustomAccessoryMode
+        path: /reference/engine/enums/AvatarSettingsCustomAccessoryMode
+        type: engineapi
+        source: /reference/engine/enums/AvatarSettingsCustomAccessoryMode.yaml
+        ignoreTranslation: true
+      - title: AvatarSettingsCustomBodyType
+        path: /reference/engine/enums/AvatarSettingsCustomBodyType
+        type: engineapi
+        source: /reference/engine/enums/AvatarSettingsCustomBodyType.yaml
+        ignoreTranslation: true
+      - title: AvatarSettingsCustomClothingMode
+        path: /reference/engine/enums/AvatarSettingsCustomClothingMode
+        type: engineapi
+        source: /reference/engine/enums/AvatarSettingsCustomClothingMode.yaml
+        ignoreTranslation: true
+      - title: AvatarSettingsHitAndTouchDetectionMode
+        path: /reference/engine/enums/AvatarSettingsHitAndTouchDetectionMode
+        type: engineapi
+        source: /reference/engine/enums/AvatarSettingsHitAndTouchDetectionMode.yaml
+        ignoreTranslation: true
+      - title: AvatarSettingsJumpMode
+        path: /reference/engine/enums/AvatarSettingsJumpMode
+        type: engineapi
+        source: /reference/engine/enums/AvatarSettingsJumpMode.yaml
+        ignoreTranslation: true
+      - title: AvatarSettingsLegacyCollisionMode
+        path: /reference/engine/enums/AvatarSettingsLegacyCollisionMode
+        type: engineapi
+        source: /reference/engine/enums/AvatarSettingsLegacyCollisionMode.yaml
+        ignoreTranslation: true
+      - title: AvatarSettingsScaleMode
+        path: /reference/engine/enums/AvatarSettingsScaleMode
+        type: engineapi
+        source: /reference/engine/enums/AvatarSettingsScaleMode.yaml
         ignoreTranslation: true
       - title: AvatarThumbnailCustomizationType
         path: /reference/engine/enums/AvatarThumbnailCustomizationType
@@ -3675,6 +3745,11 @@ navigation:
         path: /reference/engine/enums/CameraType
         type: engineapi
         source: /reference/engine/enums/CameraType.yaml
+        ignoreTranslation: true
+      - title: CaptureType
+        path: /reference/engine/enums/CaptureType
+        type: engineapi
+        source: /reference/engine/enums/CaptureType.yaml
         ignoreTranslation: true
       - title: CatalogCategoryFilter
         path: /reference/engine/enums/CatalogCategoryFilter
@@ -4211,6 +4286,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/HandlesStyle.yaml
         ignoreTranslation: true
+      - title: HandRigDescriptionSide
+        path: /reference/engine/enums/HandRigDescriptionSide
+        type: engineapi
+        source: /reference/engine/enums/HandRigDescriptionSide.yaml
+        ignoreTranslation: true
       - title: HapticEffectType
         path: /reference/engine/enums/HapticEffectType
         type: engineapi
@@ -4565,6 +4645,11 @@ navigation:
         path: /reference/engine/enums/NameOcclusion
         type: engineapi
         source: /reference/engine/enums/NameOcclusion.yaml
+        ignoreTranslation: true
+      - title: NegateOperationHiddenHistory
+        path: /reference/engine/enums/NegateOperationHiddenHistory
+        type: engineapi
+        source: /reference/engine/enums/NegateOperationHiddenHistory.yaml
         ignoreTranslation: true
       - title: NetworkOwnership
         path: /reference/engine/enums/NetworkOwnership
@@ -5485,6 +5570,11 @@ navigation:
         path: /reference/engine/enums/VibrationMotor
         type: engineapi
         source: /reference/engine/enums/VibrationMotor.yaml
+        ignoreTranslation: true
+      - title: VideoCaptureResult
+        path: /reference/engine/enums/VideoCaptureResult
+        type: engineapi
+        source: /reference/engine/enums/VideoCaptureResult.yaml
         ignoreTranslation: true
       - title: VideoDeviceCaptureQuality
         path: /reference/engine/enums/VideoDeviceCaptureQuality

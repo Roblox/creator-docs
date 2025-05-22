@@ -1,17 +1,56 @@
 name: StyleDerive
 type: class
 memory_category: Gui
-summary: ''
-description: ''
+summary: |
+  When parented to a `Class.StyleSheet`, references another `Class.StyleSheet`
+  from which the parent inherits `Class.StyleRule|StyleRules` and token
+  definitions.
+description: |
+  When parented to a `Class.StyleSheet`, references another `Class.StyleSheet`
+  from which the parent inherits `Class.StyleRule|StyleRules` and token
+  definitions. Multiple `StyleDerive` instances can exist under a
+  `Class.StyleSheet` and you can order them by
+  `Class.StyleDerive.Priority|Priority`.
 code_samples: []
 inherits:
   - Instance
 tags: []
 deprecation_message: ''
 properties:
+  - name: StyleDerive.Priority
+    summary: |
+      A number that determines how style properties inherited through this
+      `StyleDerive` apply relative to the same properties inherited through
+      other `StyleDerives`.
+    description: |
+      A number that determines how style properties inherited through this
+      `StyleDerive` apply relative to the same properties inherited through
+      other `StyleDerives`. Higher priority takes precedence over lower; for
+      example, if a `StyleDerive` with a priority of `10` points to a sheet
+      `StyleSheetA`, its `Class.StyleRule|StyleRules` and tokens will take
+      precedence over the same `Class.StyleRule|StyleRules` and tokens inherited
+      through lower-priority `StyleDerives`.
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: StyleDerive.StyleSheet
-    summary: ''
-    description: ''
+    summary: |
+      The `Class.StyleSheet` from which the parent `Class.StyleSheet` inherits
+      `Class.StyleRule|StyleRules` and token definitions.
+    description: |
+      The `Class.StyleSheet` from which the parent `Class.StyleSheet` inherits
+      `Class.StyleRule|StyleRules` and token definitions.
     code_samples: []
     type: StyleSheet
     tags: []

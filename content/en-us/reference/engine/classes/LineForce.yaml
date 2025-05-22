@@ -5,7 +5,7 @@ summary: |
   Applies a force along the theoretical line connecting its two
   `Class.Attachment|Attachments`.
 description: |
-  The **LineForce** constraint applies a force along the theoretical line
+  The `LineForce` constraint applies a force along the theoretical line
   connecting its two `Class.Attachment|Attachments`. As the end points
   (attachments) move, the direction of force will change accordingly.
 
@@ -21,7 +21,7 @@ description: |
 
   #### Inverse Square Law
 
-  When `Class.LineForce.InverseSquareLaw|InverseSquareLaw` is true, the force
+  When `Class.LineForce.InverseSquareLaw|InverseSquareLaw` is `true`, the force
   magnitude is multiplied by the inverse square of the distance, meaning the
   force will increase exponentially as the two attachments get closer together,
   like magnets. When using this setting, it's recommended that you set a
@@ -45,11 +45,11 @@ properties:
     summary: |
       Whether force is applied at the center of mass of the parent assembly.
     description: |
-      When true, force is applied at the center of mass of the parent assembly
+      When `true`, force is applied at the center of mass of the parent assembly
       of `Class.LineForce.Attachment0|Attachment0`, and the line determining the
-      direction of the force will start at the said center of mass. When false,
-      force is applied at `Class.LineForce.Attachment0|Attachment0` and the line
-      determining the direction will also start at
+      direction of the force will start at the said center of mass. When
+      `false`, force is applied at `Class.LineForce.Attachment0|Attachment0` and
+      the line determining the direction will also start at
       `Class.LineForce.Attachment0|Attachment0`.
     code_samples: []
     type: boolean
@@ -68,11 +68,11 @@ properties:
     writeCapabilities: []
   - name: LineForce.InverseSquareLaw
     summary: |
-      When true, the force magnitude is multiplied by the inverse square of the
-      distance.
+      When `true`, the force magnitude is multiplied by the inverse square of
+      the distance.
     description: |
-      When true, the force magnitude is multiplied by the inverse square of the
-      distance.
+      When `true`, the force magnitude is multiplied by the inverse square of
+      the distance.
     code_samples: []
     type: boolean
     tags: []

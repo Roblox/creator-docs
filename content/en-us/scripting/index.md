@@ -127,7 +127,7 @@ end
 
 A big part of adapting to a new development environment is configuring it to meet your needs and understanding the tools at your disposal:
 
-- The **Script Editor** section of **Studio Settings** lets you adjust quality of life features like font, colors, indentation, autocomplete, brackets, and tooltips. You might also want to enable dark mode in the **Studio** section.
+- The **Script Editor** section of [Studio Settings](../studio/setup.md#customization) lets you adjust quality of life features like font, colors, indentation, autocomplete, brackets, and tooltips. You might also want to enable dark mode in the **Studio** section.
 - Holding <kbd>Ctrl</kbd> or <kbd>Command</kbd> and clicking on a function or variable takes you to its declaration in your codebase (or its online documentation). Using [Find and Find All](../studio/script-editor.md#find-and-replace) can help you navigate larger projects.
 - The [Output](../studio/output.md) window is the most basic tool for understanding the behavior of your scripts. Use the **&#x22EF;** menu to enable **Show Context** and **Show Source**.
 - The **Script Analysis** window shows a summary of errors and warnings, but you might find its utility limited; the Script Editor already highlights these issues as you type.

@@ -59,6 +59,26 @@ methods:
     capabilities:
       - DataStore
     writeCapabilities: []
+  - name: MemoryStoreQueue:GetSizeAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: excludeInvisible
+        type: boolean
+        default: false
+        summary: ''
+    returns:
+      - type: int
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - DataStore
+    writeCapabilities: []
   - name: MemoryStoreQueue:ReadAsync
     summary: |
       Reads one or more items from the queue.
