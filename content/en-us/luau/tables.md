@@ -347,7 +347,7 @@ local function deepFreeze(target)
 	for _, value in target do
 		-- Make sure the value isn't frozen; if it already is, an error will occur
 		if type(value) == "table" and table.isfrozen(value) == false then
-			deepFreeze(v)
+			deepFreeze(value)
 		end
 	end
 end
