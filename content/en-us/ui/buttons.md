@@ -11,8 +11,6 @@ There are two types of buttons which you can place [on‑screen](../ui/on-screen
 
 - An `Class.ImageButton` is a rectangle with an image that triggers the `Class.GuiButton.Activated|Activated` event on click/tap. It features additional states for swapping the image on user hover or press.
 
-<img src="../assets/ui/button-text-input/ImageButton-Examples.jpg" width="800" />
-
 ## Create buttons on the screen
 
 Buttons on a screen are useful to quickly guide users to various menus or pages.

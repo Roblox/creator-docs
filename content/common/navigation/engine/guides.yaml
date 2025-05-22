@@ -396,6 +396,16 @@ navigation:
         path: /ui/size-modifiers
       - title: UI animation/tweens
         path: /ui/animation
+      - title: UI styling
+        section:
+          - title: Overview
+            path: /ui/styling/
+          - title: Style Editor
+            path: /ui/styling/editor
+          - title: Compatibility
+            path: /ui/styling/compatibility
+          - title: CSS comparisons
+            path: /ui/styling/css-comparisons
       - title: 9-slice design
         path: /ui/9-slice
       - title: Rich text markup

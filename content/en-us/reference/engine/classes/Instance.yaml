@@ -338,6 +338,25 @@ methods:
     description: |
       This function destroys all of an instance's children and descendants.
 
+      ```
+      local part = Instance.new("Part")
+
+      -- Add some sparkles
+      for i = 1, 3 do
+      	local sparkles = Instance.new("Sparkles")
+      	sparkles.Parent = part
+
+        local sc = Instance.new("Sparkles")
+        sc.Parent = sparkles
+      end
+
+      print("Children:", #part:GetChildren())  --> Children: 3
+
+      part:ClearAllChildren()
+
+      print("Children:", #part:GetChildren())  --> Children: 0
+      ```
+
       If you do not wish to destroy **all** children and descendants, use either
       `Class.Instance:GetChildren()` or `Class.Instance:GetDescendants()` to
       loop through those children/descendants and select what to destroy. For
@@ -356,7 +375,6 @@ methods:
       end
       ```
     code_samples:
-      - Instance-ClearAllChildren1
     parameters: []
     returns:
       - type: ()
@@ -425,7 +443,7 @@ methods:
       part.Name = "Hello, world"
       part:Destroy()
       -- Don't do this:
-      print(part.Name) --> "Hello, world"
+      print(part.Name)  --> "Hello, world"
       -- Do this to prevent the above line from working:
       part = nil
       ```
@@ -606,8 +624,8 @@ methods:
       Workspace.Part.Transparency = 0.5
       ```
 
-      Use `FindFirstChild()` to first check for `Part`, then use an `if`
-      statement to run code that needs it.
+      A better approach is to use `FindFirstChild()` to first check for `Part`,
+      then use an `if` statement to run code that needs it.
 
       ```lua
       local Workspace = game:GetService("Workspace")
@@ -624,22 +642,21 @@ methods:
       of a property of its `Class.Instance.Parent|Parent`. When using the dot
       operator, properties take precedence over children if they share a name.
 
-      In the following example, a `Class.Folder` called "Color" is added to a
-      `Class.Part`, which also has the `Class.Part.Color` property.
-      `Class.Part.Color` refers to the `Datatype.Color3`, not the Folder.
+      In the following example, a `Class.Folder` called `Color` is added to a
+      `Class.Part`, which also has the `Class.Part.Color` property. Notice that
+      `part.Color` refers to the `Datatype.Color3` property value, not the child
+      `Class.Folder` instance. A benefit of using
+      `Class.Instance:FindFirstChild()|FindFirstChild()` is that the
+      introduction of new properties does not impose a risk on your code.
 
       ```lua
       local part = Instance.new("Part")
       local folder = Instance.new("Folder")
       folder.Name = "Color"
       folder.Parent = part
-      local c = part.Color --> A Color3
-      local c2 = part:FindFirstChild("Color") --> The Folder
+      local c1 = part.Color  -- The property
+      local c2 = part:FindFirstChild("Color")  -- The child folder
       ```
-
-      A benefit of using `Class.Instance:FindFirstChild()|FindFirstChild()` in
-      this way is that the introduction of new properties does not impose a risk
-      on your code.
 
       ##### Performance Notes
 
@@ -1073,17 +1090,58 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: Instance:GetStyled
-    summary: ''
-    description: ''
+    summary: |
+      Returns the styled or explicitly modified value of the specified property,
+      or else the default property value if it hasn't been styled/modified.
+    description: |
+      This method returns the styled or explicitly modified value of the
+      specified property, or else the default property value if it hasn't been
+      styled/modified. This differs slightly from accessing the property value
+      directly, such as `[GuiObject].Rotation`, which returns the default or
+      modified value of the property.
+
+      ```lua
+      local Players = game:GetService("Players")
+      local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+      local player = Players.LocalPlayer
+      local playerGui = player.PlayerGui
+      local HUDContainer = playerGui:WaitForChild("HUDContainer")
+
+      local coreSheet = ReplicatedStorage:FindFirstChild("CoreSheet")
+      local rule = coreSheet:FindFirstChildWhichIsA("StyleRule")
+      rule.Selector = "TextButton"
+
+      -- Reference to a button
+      local button = HUDContainer:FindFirstChildWhichIsA("TextButton")
+
+      print(button:GetStyled("Rotation")) --> 0 (default value)
+      print(button.Rotation) --> 0 (default value)
+
+      -- Apply rotation through style rule property
+      rule:SetProperty("Rotation", 30)
+
+      print(button:GetStyled("Rotation")) --> 30 (styled value based on rule)
+      print(button.Rotation) --> 0 (default value)
+
+      -- Explicitly modify/override styled property
+      button.Rotation = 45
+
+      print(button:GetStyled("Rotation")) --> 45 (modified value)
+      print(button.Rotation) --> 45 (modified value)
+      ```
     code_samples: []
     parameters:
       - name: name
         type: string
-        default: ''
-        summary: ''
+        default:
+        summary: |
+          Name of the property to query.
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          The styled or explicitly modified value of the specified property, or
+          else the default property value if it hasn't been styled/modified.
     tags: []
     deprecation_message: ''
     security: None
@@ -1092,16 +1150,42 @@ methods:
     writeCapabilities: []
   - name: Instance:GetStyledPropertyChangedSignal
     summary: ''
-    description: ''
+    description: |
+      This method returns an event that behaves exactly like the
+      `Class.Instance.StyledPropertiesChanged|StyledPropertiesChanged` event,
+      except that it only fires when the given style property changes. It's
+      generally a good idea to use this method instead of a connection to
+      `Class.Instance.StyledPropertiesChanged|StyledPropertiesChanged` with a
+      function that checks the property name. Subsequent calls to this method on
+      the same object with the same property name return the same event.
+
+      Note that this event will not pass any arguments to a connected function, so the value of the changed property must be read directly within a script.
+
+      ```lua
+      local Players = game:GetService("Players")
+
+      local player = Players.LocalPlayer
+      local playerGui = player.PlayerGui
+      local HUDContainer = playerGui:WaitForChild("HUDContainer")
+      local meterBar = HUDContainer.MeterBar
+
+      local function stylePropertyChanged()
+      	print("Style property changed!")
+      end
+
+      meterBar:GetStyledPropertyChangedSignal("AnchorPoint"):Connect(stylePropertyChanged)
+      ```
     code_samples: []
     parameters:
       - name: property
         type: string
-        default: ''
-        summary: ''
+        default:
+        summary: |
+          Name of the style property for which to listen for changes.
     returns:
       - type: RBXScriptSignal
-        summary: ''
+        summary: |
+          Event that fires when the given style property changes.
     tags: []
     deprecation_message: ''
     security: None
@@ -1218,21 +1302,28 @@ methods:
     writeCapabilities: []
   - name: Instance:IsPropertyModified
     summary: |
-      Returns `true` if the value stored in the specified property is
-      non-default.
+      Returns `true` if the value stored in the specified property is equal to
+      the code-instantiated default.
     description: |
-      Returns `true` if the value stored in the specified property is
-      non‑default. For example, if outputting the
-      `Class.TextLabel.Rotation|Rotation` property of a `Class.TextLabel`
-      indicates `0`, then calling `IsPropertyModified("Rotation")` on the label
-      will return `false` because `0` is the default value for
-      `Class.TextLabel.Rotation`.
+      Returns `true` if the value stored in the specified property is equal to
+      the code‑instantiated default. For example, if outputting the
+      `Class.TextLabel.TextSize|TextSize` property of a `Class.TextLabel`
+      indicates `8`, then calling `IsPropertyModified("TextSize")` on the label
+      will return `false` because `8` is the default value for
+      `Class.TextLabel.TextSize` when the label is created via
+      `Instance.new("TextLabel")`  rather than inserted through the Studio
+      insertion workflows.
+
+      Note that if this method returns `true`, styling will **not** affect the
+      property because explicitly modifying a property takes precedence over
+      styling it.
     code_samples: []
     parameters:
       - name: property
         type: string
-        default: ''
-        summary: ''
+        default:
+        summary: |
+          Name of the property to query.
     returns:
       - type: boolean
         summary: |
@@ -1299,18 +1390,19 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: Instance:ResetPropertyToDefault
-    summary: ''
+    summary: |
+      Resets a property to its default value.
     description: |
       Resets a property to its default value. For example, calling
       `ResetPropertyToDefault("Rotation")` on a `Class.TextLabel` is equivalent
-      to setting its `Class.TextLabel.Rotation|Rotation` to `0` (the property's
-      default value).
+      to setting its `Class.TextLabel.Rotation|Rotation` to `0` (the property's default value). This method can be used to ensure styling will override this property's default value.
     code_samples: []
     parameters:
       - name: property
         type: string
-        default: ''
-        summary: ''
+        default:
+        summary: |
+          Name of the property to reset.
     returns:
       - type: ()
         summary: ''
@@ -1829,8 +1921,27 @@ events:
     capabilities: []
     writeCapabilities: []
   - name: Instance.StyledPropertiesChanged
-    summary: ''
-    description: ''
+    summary: |
+      Fires whenever any style property is changed on the instance, including
+      when a property is set to `nil`.
+    description: |
+      This event fires whenever any style property is changed on the instance,
+      including when a property is set to `nil`.
+
+      ```lua
+      local Players = game:GetService("Players")
+
+      local player = Players.LocalPlayer
+      local playerGui = player.PlayerGui
+      local HUDContainer = playerGui:WaitForChild("HUDContainer")
+      local meterBar = HUDContainer.MeterBar
+
+      local function stylePropertyChanged()
+      	print("Styled properties changed")
+      end
+
+      meterBar:StyledPropertiesChanged():Connect(stylePropertyChanged)
+      ```
     code_samples: []
     parameters: []
     tags: []

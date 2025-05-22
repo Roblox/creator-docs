@@ -1,8 +1,12 @@
 name: StyleBase
 type: class
 memory_category: Gui
-summary: ''
-description: ''
+summary: |
+  The base class for `Class.StyleSheet` and `Class.StyleRule`.
+description: |
+  The base class for `Class.StyleSheet` and `Class.StyleRule`. Holds a list of
+  child `Class.StyleRule|StyleRules`, as well as token definitions which are
+  stored as [attributes](../../../studio/properties.md#instance-attributes).
 code_samples: []
 inherits:
   - Instance
@@ -12,13 +16,16 @@ deprecation_message: ''
 properties: []
 methods:
   - name: StyleBase:GetStyleRules
-    summary: ''
-    description: ''
+    summary: |
+      Returns an array of associated `Class.StyleRule|StyleRules`.
+    description: |
+      Returns an array of associated `Class.StyleRule|StyleRules`.
     code_samples: []
     parameters: []
     returns:
       - type: Instances
-        summary: ''
+        summary: |
+          Array of `Class.StyleRule|StyleRules`.
     tags: []
     deprecation_message: ''
     security: None
@@ -26,18 +33,25 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: StyleBase:InsertStyleRule
-    summary: ''
-    description: ''
+    summary: |
+      Inserts a new `Class.StyleRule` into the array of rules.
+    description: |
+      Inserts a new `Class.StyleRule` into the array of rules so that its
+      `Class.StyleRule.Priority|Priority` is greater than all previous
+      `Class.StyleRule|StyleRules`. If `priority` is specified, sets the new
+      rule's `Class.StyleRule.Priority|Priority` to the specified value.
     code_samples: []
     parameters:
       - name: rule
         type: StyleRule
-        default: ''
-        summary: ''
+        default:
+        summary: |
+          The `Class.StyleRule` to insert.
       - name: priority
         type: int?
-        default: ''
-        summary: ''
+        default:
+        summary: |
+          The number to set the rule's `Class.StyleRule.Priority|Priority` to.
     returns:
       - type: ()
         summary: ''
@@ -48,14 +62,37 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: StyleBase:SetStyleRules
-    summary: ''
-    description: ''
+    summary: |
+      Similar to `Class.StyleBase:InsertStyleRule()|InsertStyleRule()` but lets
+      you declare and set multiple `Class.StyleRule|StyleRules` at once.
+    description: |
+      Similar to `Class.StyleBase:InsertStyleRule()|InsertStyleRule()` but lets
+      you declare and set multiple `Class.StyleRule|StyleRules` at once.
+
+      ```lua
+      local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+      local coreSheet = Instance.new("StyleSheet")
+      coreSheet.Name = "CoreSheet"
+      coreSheet.Parent = ReplicatedStorage
+
+      local styleRuleA = Instance.new("StyleRule")
+      styleRuleA.Selector = "Frame"
+      styleRuleA:SetProperty("BackgroundColor3", Color3.new(1, 0, 0))
+
+      local styleRuleB = Instance.new("StyleRule")
+      styleRuleB.Selector = "Frame"
+      styleRuleB:SetProperty("BackgroundColor3", Color3.new(0, 1, 0))
+
+      coreSheet:SetStyleRules({ styleRuleA, styleRuleB })
+      ```
     code_samples: []
     parameters:
       - name: rules
         type: Instances
-        default: ''
-        summary: ''
+        default:
+        summary: |
+          Array of `Class.StyleRule|StyleRules` to set.
     returns:
       - type: ()
         summary: ''
@@ -67,8 +104,13 @@ methods:
     writeCapabilities: []
 events:
   - name: StyleBase.StyleRulesChanged
-    summary: ''
-    description: ''
+    summary: |
+      Fires when one or more `Class.StyleRule|StyleRules` is explicitly changed
+      on the connected `Class.StyleSheet` or `Class.StyleRule`.
+    description: |
+      Fires when one or more `Class.StyleRule|StyleRules` is explicitly changed
+      on the connected `Class.StyleSheet` or `Class.StyleRule`, for example when
+      `Class.StyleBase:InsertStyleRule()|InsertStyleRule()` is called.
     code_samples: []
     parameters: []
     tags: []

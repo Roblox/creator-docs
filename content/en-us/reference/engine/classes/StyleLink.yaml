@@ -1,8 +1,17 @@
 name: StyleLink
 type: class
 memory_category: Gui
-summary: ''
-description: ''
+summary: |
+  Links a `Class.StyleSheet` to the instance tree whose root is the parent of
+  the `StyleLink`.
+description: |
+  Links a `Class.StyleSheet` to the instance tree whose root is the parent of
+  the `StyleLink`. For example, placing a `StyleLink` under a `Class.ScreenGui`
+  applies the referenced `Class.StyleSheet` to both the `Class.ScreenGui` and
+  all of the `Class.GuiObject|GuiObjects` within it. Only one `Class.StyleSheet`
+  can apply to a given tree.
+
+  <img src="/assets/studio/explorer/StyleLink-Propagation.png" width="320" />
 code_samples: []
 inherits:
   - Instance
@@ -10,8 +19,12 @@ tags: []
 deprecation_message: ''
 properties:
   - name: StyleLink.StyleSheet
-    summary: ''
-    description: ''
+    summary: |
+      The `Class.StyleSheet` to link to the parent such that the parent's
+      descendants are styled accordingly.
+    description: |
+      The `Class.StyleSheet` to link to the parent such that the parent's
+      descendants are styled accordingly.
     code_samples: []
     type: StyleSheet
     tags: []

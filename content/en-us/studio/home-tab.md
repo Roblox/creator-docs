@@ -117,9 +117,9 @@ The **Part** button inserts a new part into the workspace. Clicking the small dr
 
 <img src="../assets/studio/general/Insert-Part-Tool.png" width="300" alt="Part tool and its part type picker highlighted." />
 
-## UI designer
+## UI tools
 
-The **UI** button opens a tab which lets you quickly insert, resize, and reposition common on-screen UI objects, such as [labels](../ui/labels.md), [frames](../ui/frames.md), and [buttons](../ui/buttons.md).
+The **UI** button opens a separate tab which lets you quickly insert, resize, and reposition common on‑screen UI objects, such as [labels](../ui/labels.md), [frames](../ui/frames.md), and [buttons](../ui/buttons.md). It also lets you access the built‑in [Style Editor](../ui/styling/editor.md) that allows you to create, manage, and apply UI styles for Roblox experiences.
 
 <img src="../assets/studio/general/Home-Tab-UI.png" width="780" alt="UI button indicated in Home tab" />
 
