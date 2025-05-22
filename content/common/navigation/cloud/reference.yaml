@@ -32,117 +32,98 @@ navigation:
         path: /cloud/auth/oauth2-sample
       - title: Reference
         path: /cloud/auth/oauth2-reference
-  - heading: Features
-  - title: Accounts
-    path: /cloud/features/accounts
+  - heading: Use Case Reference
+  - title: All features
+    section:
+      - title: Accounts
+        path: /cloud/features/accounts
+      - title: Assets
+        path: /cloud/features/assets
+      - title: Avatars
+        path: /cloud/features/avatars
+      - title: Badges
+        path: /cloud/features/badges
+      - title: Bans and blocks
+        path: /cloud/features/bans-and-blocks
+      - title: Chats
+        path: /cloud/features/chats
+      - title: Creator Store
+        path: /cloud/features/creator-store
+      - title: Developer products
+        path: /cloud/features/developer-products
+      - title: Friends
+        path: /cloud/features/friends
+      - title: Game passes
+        path: /cloud/features/game-passes
+      - title: Groups
+        path: /cloud/features/groups
+      - title: Interactions
+        path: /cloud/features/interactions
+      - title: Inventories
+        path: /cloud/features/inventories
+      - title: Localization
+        path: /cloud/features/localization
+      - title: Luau execution
+        path: /cloud/features/luau-execution
+      - title: Metadata
+        path: /cloud/features/metadata
+      - title: Notifications
+        path: /cloud/features/notifications
+      - title: Places
+        path: /cloud/features/places
+      - title: Private servers
+        path: /cloud/features/private-servers
+      - title: Sponsored campaigns
+        path: /cloud/features/sponsored-campaigns
+      - title: Storage
+        path: /cloud/features/storage
+      - title: Team Create
+        path: /cloud/features/team-create
+      - title: Thumbnails
+        path: /cloud/features/thumbnails
+      - title: Trades
+        path: /cloud/features/trades
+      - title: Universes
+        path: /cloud/features/universes
+      - title: User profiles
+        path: /cloud/features/user-profiles
+      - title: Users
+        path: /cloud/features/users
+  - heading: Open Cloud v2
+  - title: All Cloud API # doesn't show anywhere
+    path: /cloud/reference/
+    type: cloudapi2
+    source: /reference/cloud/cloud.docs.json
+  - heading: Open Cloud v1
   - title: Assets
-    path: /cloud/features/assets
-  - title: Avatars
-    path: /cloud/features/avatars
-  - title: Badges
-    path: /cloud/features/badges
-  - title: Bans and blocks
-    path: /cloud/features/bans-and-blocks
-  - title: Chats
-    path: /cloud/features/chats
-  - title: Creator Store
-    path: /cloud/features/creator-store
-  - title: Developer products
-    path: /cloud/features/developer-products
-  - title: Friends
-    path: /cloud/features/friends
-  - title: Game passes
-    path: /cloud/features/game-passes
-  - title: Groups
-    path: /cloud/features/groups
-  - title: Interactions
-    path: /cloud/features/interactions
-  - title: Inventories
-    path: /cloud/features/inventories
-  - title: Localization
-    path: /cloud/features/localization
-  - title: Luau execution
-    path: /cloud/features/luau-execution
-  - title: Metadata
-    path: /cloud/features/metadata
-  - title: Notifications
-    path: /cloud/features/notifications
-  - title: Places
-    path: /cloud/features/places
-  - title: Private servers
-    path: /cloud/features/private-servers
-  - title: Sponsored campaigns
-    path: /cloud/features/sponsored-campaigns
-  - title: Storage
-    path: /cloud/features/storage
-  - title: Team Create
-    path: /cloud/features/team-create
-  - title: Thumbnails
-    path: /cloud/features/thumbnails
-  - title: Trades
-    path: /cloud/features/trades
-  - title: Universes
-    path: /cloud/features/universes
-  - title: User profiles
-    path: /cloud/features/user-profiles
-  - title: Users
-    path: /cloud/features/users
-  - heading: Open Cloud API Reference
-  - title: Cloud
-    section:
-    - title: Toolbox service
-      path: /cloud/api/toolbox-service
-    - title: Asset delivery
-      path: /cloud/api/asset-delivery
-    - title: Badges
-      path: /cloud/api/badges
-    - title: Develop
-      path: /cloud/api/develop
-    - title: Followings
-      path: /cloud/api/followings
-    - title: Game internationalization
-      path: /cloud/api/game-internationalization
-    - title: Groups
-      path: /cloud/api/groups
-    - title: Localization tables
-      path: /cloud/api/localization
-    - title: Publish
-      path: /cloud/api/publish
-  - title: Open Cloud v2
-    section:
-    - title: All Cloud API # doesn't show anywhere
-      path: /cloud/reference/
-      type: cloudapi2
-      source: /reference/cloud/cloud.docs.json
-  - title: Open Cloud v1
-    section:
-    - title: Assets
-      type: cloudapi
-      versions:
-        - name: v1
-          path: /reference/cloud/assets/v1
-    - title: Standard data stores
-      type: cloudapi
-      versions:
-        - name: v1
-          path: /reference/cloud/datastores-api/v1
-    - title: Ordered data stores
-      type: cloudapi
-      versions:
-        - name: v1
-          path: /reference/cloud/datastores-api/ordered-v1
-    - title: Messaging
-      type: cloudapi
-      versions:
-        - name: v1
-          path: /reference/cloud/messaging-service/v1
-    - title: Place publishing
-      type: cloudapi
-      versions:
-        - name: v1
-          path: /reference/cloud/universes-api/v1
-  - heading: Cookie-based API Reference
-  - title: Legacy APIs
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /reference/cloud/assets/v1
+  - title: Standard data stores
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /reference/cloud/datastores-api/v1
+  - title: Ordered data stores
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /reference/cloud/datastores-api/ordered-v1
+  - title: Messaging
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /reference/cloud/messaging-service/v1
+  - title: Place publishing
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /reference/cloud/universes-api/v1
+  - heading: Legacy
+  - title: Overview
+    path: /cloud/legacy
+  - title: All legacy APIs
     section:
     - title: Account information
       type: cloudlegacy

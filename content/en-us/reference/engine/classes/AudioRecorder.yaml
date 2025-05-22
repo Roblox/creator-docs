@@ -12,7 +12,7 @@ description: |
   `Class.AudioRecorder:GetUnrecordableInstancesAsync()|GetUnrecordableInstancesAsync()`
   method can be used to check specifically which instances aren't recordable.
 code_samples:
-  - audiorecorder-example
+  - audio-recorder
 inherits:
   - Instance
 tags:
