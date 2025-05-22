@@ -3,11 +3,12 @@ title: Errors
 description: Defines the errors that are returned by Open Cloud APIs
 ---
 
-The following sections describe the error model for Open Cloud APIs.
+The following sections describe the error model for v2 and v1 resource methods,
+respectively.
 
-## Open Cloud v2
+## v2 resource error model
 
-By default, endpoints respond with a 200 OK status. When requests are
+By default, resource methods respond with a 200 OK status. When requests are
 unsuccessful, Open Cloud returns standard error codes. All error responses have
 the same format, which include:
 
@@ -88,9 +89,9 @@ The following table describes possible values for `code`.
   </tbody>
 </table>
 
-## Open Cloud v1
+## v1 resource error model
 
-Open Cloud v1 APIs share a standard format:
+All error responses have the same, standard format, which includes:
 
 - An `error` field, which is a high-level cause that is applicable to all Open Cloud endpoints.
 - An explanatory error `message`, which further explains the error.

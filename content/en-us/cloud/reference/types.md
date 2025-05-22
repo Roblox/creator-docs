@@ -49,9 +49,9 @@ supported.
 
 A FieldMask is a string that describes the fields to act on when making a
 request. To construct a field mask, you specify comma delimited JSON field names
-in a string. For example, given the following:
+in a string. For example, given the following resource:
 
-```json title="Example JSON"
+```json title="Example JSON resource"
 {
   "foo": {
     "a": "c",
