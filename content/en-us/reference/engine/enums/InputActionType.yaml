@@ -1,23 +1,36 @@
 name: InputActionType
 type: enum
-summary: ''
-description: ''
+summary: |
+  This enum is used by `Class.InputAction.Type` to determine which input data
+  type the `Class.InputAction` will receive.
+description: |
+  This enum is used by `Class.InputAction.Type` to determine which input data
+  type the `Class.InputAction` will receive.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Bool
-    summary: ''
+    summary: |
+      The `Class.InputAction` will receive boolean values from button inputs,
+      for example `true`/`false` on press/release from inputs such as
+      `Enum.KeyCode.ButtonA` or `Enum.KeyCode.E`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Direction1D
-    summary: ''
+    summary: |
+      The `Class.InputAction` will receive numerical values, generally from
+      analog gamepad triggers such as `Enum.KeyCode.ButtonL2` or
+      `Enum.KeyCode.ButtonR2`.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Direction2D
-    summary: ''
+    summary: |
+      The `Class.InputAction` will receive `Datatype.Vector2` values, generally
+      from thumbstick inputs such as `Enum.KeyCode.Thumbstick1` and
+      `Enum.KeyCode.Thumbstick2`.
     value: 2
     tags: []
     deprecation_message: ''

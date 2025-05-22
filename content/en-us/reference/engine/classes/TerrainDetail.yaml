@@ -44,6 +44,23 @@ properties:
       can_save: true
     capabilities: []
     writeCapabilities: []
+  - name: TerrainDetail.ColorMapContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: TerrainDetail.Face
     summary: |
       The face this TerrainDetail overrides.
@@ -118,6 +135,23 @@ properties:
       can_save: true
     capabilities: []
     writeCapabilities: []
+  - name: TerrainDetail.MetalnessMapContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: TerrainDetail.NormalMap
     summary: |
       Modifies the lighting of the surface by adding bumps, dents, cracks, and
@@ -171,6 +205,23 @@ properties:
       can_save: true
     capabilities: []
     writeCapabilities: []
+  - name: TerrainDetail.NormalMapContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: TerrainDetail.RoughnessMap
     summary: |
       Determines the apparent roughness across the surface.
@@ -185,6 +236,23 @@ properties:
       Reflections on rough surfaces are more blurry and dispersed.
     code_samples: []
     type: ContentId
+    tags: []
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: TerrainDetail.RoughnessMapContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
     tags: []
     deprecation_message: ''
     security:

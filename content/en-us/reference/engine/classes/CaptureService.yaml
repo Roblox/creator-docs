@@ -201,7 +201,11 @@ events:
       used to customize the capture experience, for example by hiding certain
       GUI elements.
     code_samples: []
-    parameters: []
+    parameters:
+      - name: captureType
+        type: CaptureType
+        default: ''
+        summary: ''
     tags: []
     deprecation_message: ''
     security: None
@@ -215,7 +219,11 @@ events:
       to restore any changes made when the
       `Class.CaptureService.CaptureBegan|CaptureBegan` event fired.
     code_samples: []
-    parameters: []
+    parameters:
+      - name: captureType
+        type: CaptureType
+        default: ''
+        summary: ''
     tags: []
     deprecation_message: ''
     security: None

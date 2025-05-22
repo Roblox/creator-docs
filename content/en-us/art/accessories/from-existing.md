@@ -288,7 +288,7 @@ The publishing process involves three major steps:
 
 If you intend to sell the asset on the Marketplace, use the following steps to begin the validation and upload process:
 
-1. In the **Explorer**, right-click your accessory object and select **Save to Roblox…** from the context menu.
+1. In the **Explorer** window, right-click your accessory object and select **Save to Roblox…** from the contextual menu.
 2. In the **Asset Configuration** window, set the **Content Type** to **Avatar Item**.
 3. Complete the following fields (you can adjust them later):
 

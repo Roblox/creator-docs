@@ -4,12 +4,13 @@ memory_category: Internal
 summary: |
   Records audio streams in-experience.
 description: |
-  `AudioRecorder` records audio streams in-experience with a fixed time limit of 60 seconds. The
-  results can be loaded into an `Class.AudioPlayer` for playback.
+  `AudioRecorder` records audio streams in-experience with a fixed time limit of
+  60 seconds. The results can be loaded into an `Class.AudioPlayer` for
+  playback.
 
   At this time, `Class.AudioDeviceInput` cannot be recorded. The
-  `Class.AudioRecorder.GetUnrecordableInstancesAsync()|GetUnrecordableInstancesAsync()` method
-  can be used to check specifically which instances aren't recordable.
+  `Class.AudioRecorder.GetUnrecordableInstancesAsync()|GetUnrecordableInstancesAsync()`
+  method can be used to check specifically which instances aren't recordable.
 code_samples: []
 inherits:
   - Instance
@@ -127,7 +128,8 @@ methods:
     summary: ''
     description: |
       Returns recorded content that can be played back with `Class.AudioPlayer`.
-      The content retrieved from this method is only valid in the current session.
+      The content retrieved from this method is only valid in the current
+      session.
     code_samples: []
     parameters: []
     returns:
@@ -159,8 +161,9 @@ methods:
   - name: AudioRecorder:CanRecordAsync
     summary: ''
     description: |
-      Returns whether the `AudioRecorder` can currently record. For instance, this will return `false`
-      if the current recording data has reached the recording time limit. To clear the recording, use
+      Returns whether the `AudioRecorder` can currently record. For instance,
+      this will return `false` if the current recording data has reached the
+      recording time limit. To clear the recording, use
       `Class.AudioRecorder:Clear()|Clear()`.
     code_samples: []
     parameters: []
@@ -178,8 +181,9 @@ methods:
   - name: AudioRecorder:GetUnrecordableInstancesAsync
     summary: ''
     description: |
-      Traverses the audio graph, starting from this recorder's inputs, to find unrecordable instances.
-      Currently, `Class.AudioDeviceInput` is not recordable.
+      Traverses the audio graph, starting from this recorder's inputs, to find
+      unrecordable instances. Currently, `Class.AudioDeviceInput` is not
+      recordable.
     code_samples: []
     parameters: []
     returns:
@@ -196,8 +200,9 @@ methods:
   - name: AudioRecorder:RecordAsync
     summary: ''
     description: |
-      If `Class.AudioRecorder:CanRecordAsync()|CanRecordAsync()` returns `true`, recording begins.
-      If recording cannot begin, this method produces an error.
+      If `Class.AudioRecorder:CanRecordAsync()|CanRecordAsync()` returns `true`,
+      recording begins. If recording cannot begin, this method produces an
+      error.
     code_samples: []
     parameters: []
     returns:

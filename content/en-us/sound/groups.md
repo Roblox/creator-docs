@@ -1,10 +1,10 @@
 ---
 title: Sound groups
-description: Sound Groups are audio mixers that group multiple audio objects so you can control the properties of multiple audio signals at once.
+description: Legacy audio mixers that group multiple Sound objects so you can control the properties of multiple audio signals at once.
 ---
 
 <Alert severity = 'warning'>
-`Class.SoundGroup` objects are now deprecated in favor of the more robust functionality of audio objects. For more information, see [Audio objects](../audio/objects.md).
+`Class.SoundGroup` objects are now discouraged in favor of the more robust functionality of audio objects. For more information, see [Audio objects](../audio/objects.md).
 </Alert>
 
 A `Class.SoundGroup` is an **audio mixer** that groups multiple audio objects, such as `Class.Sound` objects or additional `Class.SoundGroup|SoundGroups`, allowing you to control the volume and dynamic effects properties of multiple audio signals at once. Useful applications include:

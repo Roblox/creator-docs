@@ -1108,11 +1108,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/Glue.yaml
         ignoreTranslation: true
-      - title: GoogleAnalyticsConfiguration
-        path: /reference/engine/classes/GoogleAnalyticsConfiguration
-        type: engineapi
-        source: /reference/engine/classes/GoogleAnalyticsConfiguration.yaml
-        ignoreTranslation: true
       - title: GroundController
         path: /reference/engine/classes/GroundController
         type: engineapi
@@ -3750,6 +3745,11 @@ navigation:
         path: /reference/engine/enums/CameraType
         type: engineapi
         source: /reference/engine/enums/CameraType.yaml
+        ignoreTranslation: true
+      - title: CaptureType
+        path: /reference/engine/enums/CaptureType
+        type: engineapi
+        source: /reference/engine/enums/CaptureType.yaml
         ignoreTranslation: true
       - title: CatalogCategoryFilter
         path: /reference/engine/enums/CatalogCategoryFilter

@@ -2388,8 +2388,8 @@ events:
       keyboard button down, etc).
 
       To ignore events that are automatically handled by Roblox, like scrolling
-      in a `Class.ScrollingFrame`, check the _gameProcessedEvent_ argument is
-      false. This event can be used along with
+      in a `Class.ScrollingFrame`, check that the `gameProcessedEvent` argument
+      is false. This event can be used along with
       `Class.UserInputService.InputBegan` and
       `Class.UserInputService.InputEnded` to track when user input begins,
       changes, and ends.

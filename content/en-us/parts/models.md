@@ -20,10 +20,12 @@ Characters, such as avatars or NPCs, are a single `Class.Model` containing the a
 
 ## Create models
 
-When you **group** objects together, they automatically become a `Class.Model` object.
+When you **group** objects together, they automatically become a `Class.Model` object. However, you can also insert an empty `Class.Model` object into the Workspace, then manually add child objects to the model.
 
-1. In the 3D viewport or the **Explorer** window, select every object that you want to group into a model.
-1. Right-click on one of the objects and select **Group**, or press <kbd>Ctrl</kbd><kbd>G</kbd> on Windows or <kbd>⌘</kbd><kbd>G</kbd> on Mac. A new `Class.Model` object displays with all of the objects that make up the model nested underneath.
+To create a model using the grouping method:
+
+1. In the **Explorer** window or 3D viewport, select every object that you want to group into a model.
+1. Right-click on one of the objects and select **Group**, or press <kbd>Ctrl</kbd> + <kbd>G</kbd> on Windows or <kbd>⌘</kbd> + <kbd>G</kbd> on Mac. A new `Class.Model` object displays with all of the objects that make up the model nested underneath.
 
    <img src="../assets/modeling/model-objects/Model-Group-Simple.png" width="320" alt="A close up view of the Explorer window. A Model object is highlighted with three nested children." />
 
@@ -109,6 +111,10 @@ See [Model Streaming Controls](../workspace/streaming.md#model-streaming-control
 
 When you upload or import a `.gltf`, `.fbx` and `.obj` model file to the cloud using the [3D Importer](../art/accessories/creating-rigid/importing.md), Roblox represents it as a cloud-based asset with a unique corresponding ID. This cloud-based asset system allows you to store models through Roblox and reuse them across the platform in various contexts without maintaining local copies as part of each saved Studio experience.
 
+<Alert severity="info">
+There is a limit of 15,000 unique assetIds that can be referenced in a single model.
+</Alert>
+
 To upload a model you made in Studio:
 
 1. In the **Explorer** window, right-click your model. A contextual menu displays.
@@ -127,10 +133,16 @@ To upload a model you made in Studio:
 
 ## Distribute models
 
-You can distribute models to the [Creator Store](../production/creator-store.md) for other creators to use within their own experiences as long as each model only references open use assets or restricted assets that you have created. Once you distribute a model, all newer versions include the same restictions even if you later unlist it from the Creator Store.
+You can distribute models to the [Creator Store](../production/creator-store.md) for other creators to use within their own experiences as long as each model only references:
+
+- Open use assets.
+- Restricted assets that you created, excluding audio and video.
+- Free assets from the Creator Store, including audio and video.
+
+Once you distribute a model, all newer versions include the same restrictions even if you later unlist it from the Creator Store.
 
 <Alert severity="info">
-If you want to distribute a model with a child audio or video asset, you must distribute the audio or video asset on the Creator Store before making them a child of the model for the audio or video to be audible and visible at runtime.
+If you want to distribute a model with a child audio or video asset that you created, you must distribute the audio or video asset on the Creator Store before making them a child of the model for the audio or video to be audible and visible at runtime.
 </Alert>
 
 As with any asset, all models must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), the [DMCA Guidelines](../production/publishing/dmca-guidelines.md) regarding copyright and Creator Store [asset moderation](../production/creator-store.md#asset-moderation) rules. When creating models for the Creator Store:

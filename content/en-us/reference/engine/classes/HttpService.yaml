@@ -67,10 +67,10 @@ description: |
 
   ###### Data Stores
 
-  Due to current restrictions on `HttpService`, only alphanumeric
-  characters and the `-` character are allowed in URL path parameters to Roblox
-  domains. This means Data Stores/entries with other special characters are
-  currently inaccessible from `HttpService`.
+  Due to current restrictions on `HttpService`, only alphanumeric characters and
+  the `-` character are allowed in URL path parameters to Roblox domains. This
+  means Data Stores/entries with other special characters are currently
+  inaccessible from `HttpService`.
 
   - [ListDataStores](/cloud/reference/DataStore#Cloud_ListDataStores)
   - [ListDataStoreEntries](/cloud/reference/DataStoreEntry#Cloud_ListDataStoreEntries__Using_Universes)
@@ -100,7 +100,8 @@ description: |
 
   - Only the `x-api-key` and `content-type` headers are allowed.
   - The `x-api-key` header must be a `Datatype.Secret`.
-  - Only alphanumeric characters and the `-` character are allowed in URL path parameters.
+  - Only alphanumeric characters and the `-` character are allowed in URL path
+    parameters.
   - Only the `https://` protocol is supported.
 
   ##### Rate Limiting
@@ -113,9 +114,9 @@ description: |
   - Open Cloud requests consume the same overall limit of 500 HTTP requests per
     minute enforced on all other requests.
   - Each Open Cloud endpoint has its own limit per API key owner (can be a user
-    or a group) that is enforced no matter where the calls come from (`HttpService`,
-    the web, etc.). The following headers are returned with every response and
-    allow you to view the limits and your remaining quota:
+    or a group) that is enforced no matter where the calls come from
+    (`HttpService`, the web, etc.). The following headers are returned with
+    every response and allow you to view the limits and your remaining quota:
 
     - `x-ratelimit-limit` - The total number of requests allowed to be made per
       API key owner (usually per minute).

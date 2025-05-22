@@ -27,7 +27,7 @@ The asset privacy system controls which creators and experiences can use the ass
 In order for a collaborator, such as an individual creator or group, or an experience to use one of your restricted assets, you must explicitly grant permission before it's visible or audible at runtime. Once a collaborator or experience has **explicit** permission to use a restricted asset, they also receive **implicit** permission to use the asset in a variety of additional scenarios. For more information, see the following subsections.
 
 <Alert severity="warning">
-If a restricted asset is a child of an open use model or package from the [Creator Store](../../production/creator-store.md), creators and experiences must have explicit permission to use the restricted asset in order for the asset to be visible or audible during runtime. For example, if a model includes a `Class.Sound` object with a restricted assetID, the open use model remains visible, but the restricted audio cannot play.
+If you receive a model or package from the [Creator Store](../../production/creator-store.md) that was **created** _after_ late May 2025, all of its underlying restricted assets are visible or audible during runtime. For any assets created prior to this date, you must receive explicit permission to use each restricted asset in order for them to be visible or audible during runtime.
 </Alert>
 
 ### To collaborators

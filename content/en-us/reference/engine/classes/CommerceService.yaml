@@ -1,8 +1,13 @@
 name: CommerceService
 type: class
 memory_category: Instances
-summary: 'Supports real-world purchases that you can bundle with digital benefits.'
-description: '`Class.CommerceService` is a service that supports real-world purchases that you can bundle with virtual items. For information on eligibility and implementation, see [Commerce products](../../../production/monetization/commerce-products.md).'
+summary: |
+  Supports real-world purchases that you can bundle with digital benefits.
+description: |
+  `Class.CommerceService` is a service that supports real-world purchases that
+  you can bundle with virtual items. For information on eligibility and
+  implementation, see
+  [Commerce products](../../../production/monetization/commerce-products.md).
 code_samples: []
 inherits:
   - Instance
@@ -13,8 +18,14 @@ deprecation_message: ''
 properties: []
 methods:
   - name: CommerceService:PromptCommerceProductPurchase
-    summary: 'Prompts a user to purchase a commerce product using the provided `commerceProductId`. Opens a webview that guides the user through the purchasing flow.'
-    description: 'Prompts a user to purchase a commerce product using the provided `commerceProductId`. Opens a webview that guides the user through the purchasing flow.'
+    summary: |
+      Prompts a user to purchase a commerce product using the provided
+      `commerceProductId`. Opens a webview that guides the user through the
+      purchasing flow.
+    description: |
+      Prompts a user to purchase a commerce product using the provided
+      `commerceProductId`. Opens a webview that guides the user through the
+      purchasing flow.
     code_samples: []
     parameters:
       - name: user
@@ -36,7 +47,12 @@ methods:
     writeCapabilities: []
   - name: CommerceService:PromptRealWorldCommerceBrowser
     summary: ''
-    description: 'This is a legacy endpoint that is not meant for use. To open the webview to the purchasing flow for real world commerce, see `Class.CommerceService:PromptCommerceProductPurchase`. For more information, see [Commerce products](../../../production/monetization/commerce-products.md)'
+    description: |
+      This is a legacy endpoint that is not meant for use. To open the webview
+      to the purchasing flow for real world commerce, see
+      `Class.CommerceService:PromptCommerceProductPurchase`. For more
+      information, see
+      [Commerce products](../../../production/monetization/commerce-products.md)
     code_samples: []
     parameters:
       - name: player
@@ -57,9 +73,13 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: CommerceService:GetCommerceProductInfoAsync
-    summary: 'Retrieves information about the commerce products you are selling in experience.'
+    summary: |
+      Retrieves information about the commerce products you are selling in
+      experience.
     description: |
-      Retrieves information about the products that you are selling and surface them within your experience. How you surface products to your users is entirely up to you.
+      Retrieves information about the products that you are selling and surface
+      them within your experience. How you surface products to your users is
+      entirely up to you.
 
       <table><thead>
         <tr>
@@ -90,7 +110,6 @@ methods:
         </tr>
       </tbody>
       </table>
-
     code_samples: []
     parameters:
       - name: commerceProductId
@@ -109,7 +128,12 @@ methods:
     writeCapabilities: []
   - name: CommerceService:UserEligibleForRealWorldCommerceAsync
     summary: ''
-    description: 'This is a legacy endpoint that is not meant for use. To check if a user is eligible for real world commerce, see `Class.PolicyService.IsEligibleToPurchaseCommerceProduct`. For more information, see [Commerce products](../../../production/monetization/commerce-products.md)'
+    description: |
+      This is a legacy endpoint that is not meant for use. To check if a user is
+      eligible for real world commerce, see
+      `Class.PolicyService.IsEligibleToPurchaseCommerceProduct`. For more
+      information, see
+      [Commerce products](../../../production/monetization/commerce-products.md)
     code_samples: []
     parameters: []
     returns:
@@ -124,12 +148,18 @@ methods:
     writeCapabilities: []
 events:
   - name: CommerceService.PromptCommerceProductPurchaseFinished
-    summary: 'Fires when commerce purchase webview has closed - not an indicator that a purchase was successful.'
+    summary: |
+      Fires when commerce purchase webview has closed - not an indicator that a
+      purchase was successful.
     description: |
-      Use this signal to detect when a user has completed the purchasing flow and the webview has closed to resume gameplay within the experience. **This signal does not indicate a successful purchase**, so do not grant virtual items solely from this signal.
+      Use this signal to detect when a user has completed the purchasing flow
+      and the webview has closed to resume gameplay within the experience.
+      **This signal does not indicate a successful purchase**, so do not grant
+      virtual items solely from this signal.
 
-      While optional, it is recommended to use this signal to reorient your users on Android, as the commerce purchasing flow will have forced them into portrait mode.
-
+      While optional, it is recommended to use this signal to reorient your
+      users on Android, as the commerce purchasing flow will have forced them
+      into portrait mode.
     code_samples: []
     parameters:
       - name: user

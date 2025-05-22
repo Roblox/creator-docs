@@ -1,6 +1,6 @@
 ---
 title: Audio objects
-description: An overview of audio object on Roblox.
+description: An overview of modular audio objects on Roblox.
 ---
 
 Roblox's modular audio objects allow you to have dynamic control over sound and voice chat in your experiences. Almost every audio object corresponds to a real-world audio device, and they all function together to capture and play audio like their physical counterparts.
@@ -15,7 +15,7 @@ For example, every audio object conceptually falls into the following categories
 As you read through this guide and learn about how all of these audio objects work together to emit sound, you will learn how to accurately capture and feed music, sound effects, and the human voice from the experience to the player and vice-versa.
 
 <Alert severity = 'info'>
-`Class.Sound`, `Class.SoundGroup`, and `Class.SoundEffect` objects are now deprecated in favor of the more robust functionality of audio objects.
+`Class.Sound`, `Class.SoundGroup`, and `Class.SoundEffect` objects are now discouraged in favor of the more robust functionality of audio objects.
 </Alert>
 
 ## Play audio

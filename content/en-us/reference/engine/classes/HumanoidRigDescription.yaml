@@ -100,7 +100,7 @@ properties:
     capabilities:
       - Animation
     writeCapabilities: []
-  - name: HumanoidRigDescription.Head
+  - name: HumanoidRigDescription.HeadBase
     summary: ''
     description: ''
     code_samples: []
@@ -118,7 +118,7 @@ properties:
     capabilities:
       - Animation
     writeCapabilities: []
-  - name: HumanoidRigDescription.HeadRangeMax
+  - name: HumanoidRigDescription.HeadBaseRangeMax
     summary: ''
     description: ''
     code_samples: []
@@ -136,7 +136,7 @@ properties:
     capabilities:
       - Animation
     writeCapabilities: []
-  - name: HumanoidRigDescription.HeadRangeMin
+  - name: HumanoidRigDescription.HeadBaseRangeMin
     summary: ''
     description: ''
     code_samples: []
@@ -154,7 +154,7 @@ properties:
     capabilities:
       - Animation
     writeCapabilities: []
-  - name: HumanoidRigDescription.HeadSize
+  - name: HumanoidRigDescription.HeadBaseSize
     summary: ''
     description: ''
     code_samples: []
@@ -172,7 +172,7 @@ properties:
     capabilities:
       - Animation
     writeCapabilities: []
-  - name: HumanoidRigDescription.HeadTposeAdjustment
+  - name: HumanoidRigDescription.HeadBaseTposeAdjustment
     summary: ''
     description: ''
     code_samples: []
@@ -2002,6 +2002,25 @@ methods:
         summary: ''
     returns:
       - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription:GetJointFromName
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: name
+        type: string
+        default: ''
+        summary: ''
+    returns:
+      - type: Instance
         summary: ''
     tags: []
     deprecation_message: ''

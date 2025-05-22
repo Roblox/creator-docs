@@ -337,6 +337,16 @@ navigation:
         path: /audio/objects
       - title: Effects
         path: /audio/effects
+      - title: Legacy
+        section:
+          - title: Sound
+            path: /sound/index
+          - title: Objects
+            path: /sound/objects
+          - title: Groups
+            path: /sound/groups
+          - title: Dynamic Effects
+            path: /sound/dynamic-effects
   - title: User interface
     path: /ui/
     section:

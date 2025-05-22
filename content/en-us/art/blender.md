@@ -602,7 +602,7 @@ The "UV" in UV editing stands for the axes on the 2D image map that you use duri
 
 Because 3D objects use the X, Y, and Z axes in the 3D space, 3D creation applications typically use U and V to avoid confusion when referring to coordinates in 2D image space. That being said, many Blender UI workflows still use X and Y, so it's helpful to know the 2D space equivalent axis.
 
-When you unwrap a 3D object, all active faces flatten into the 2D space in the UV Editor to make up the **UV map**, and different sections of the model split into separate groupings, commonly referred to as **UV islands**. For example, if you were to unwrap a standard Blender cube, each face becomes its own UV island in the UV map.
+When you unwrap a 3D object, all active faces flatten into the 2D space in the UV Editor to make up the **UV map**, and different sections of the model split into separate groupings, commonly referred to as **UV islands**. For example, if you were to unwrap a standard Blender cube, each face would become its own UV island in the UV map.
 
 <GridContainer numColumns="2">
   <figure>
