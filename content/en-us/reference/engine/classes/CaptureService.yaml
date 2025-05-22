@@ -2,12 +2,12 @@ name: CaptureService
 type: class
 memory_category: Instances
 summary: |
-  A service which provides control over screenshot and video capture features.
+  A service which provides control over screenshot capture features.
 description: |
-  `CaptureService` is a client-side service that allows developers to control
-  how the screenshot and video capture feature integrates with their experiences.
-  It can be used to include preset moments where a capture is automatically
-  taken for a user, and that user can then save, share, or delete the capture.
+  **CaptureService** is a client-side service that allows developers to control
+  how the screenshot capture feature integrates with their experiences. It can
+  be used to include preset moments where a screenshot is automatically taken
+  for a user, and that user can then save, share, or delete the screenshot.
 code_samples: []
 inherits:
   - Instance
@@ -61,7 +61,7 @@ methods:
     summary: |
       Prompts the user to save specified captures to their gallery.
     description: |
-      This method prompts the user to save the captures identified by the
+      This method prompts the user to save the screenshots identified by the
       provided `contentIds` to their **Captures** gallery within the
       experience's main menu.
     code_samples: []
@@ -88,14 +88,14 @@ methods:
     writeCapabilities: []
   - name: CaptureService:PromptShareCapture
     summary: |
-      Prompts the user to share a specified capture.
+      Prompts the user to share a specified screenshot capture.
     description: |
-      This method prompts the user to share the capture identified by the
+      This method prompts the user to share the screenshot identified by the
       provided `contentId` using the native share sheet on their device.
 
-      The capture is shared along with an invite link to the experience
-      when supported. Not all devices support including both a screenshot or video
-      and an invite link.
+      The capture image is shared along with an invite link to the experience
+      when supported. Not all devices support including both a screenshot and
+      invite link.
 
       The `launchData` will be available in the `launchData` field for users who
       join through the invite link.
@@ -134,13 +134,8 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: CaptureService:StopVideoCapture
-    summary: |
-      Ends a video capture initiated by
-      `Class.CaptureService:StartVideoCaptureAsync()|StartVideoCaptureAsync()`.
-    description: |
-      This method ends a video capture that was started by the
-      `Class.CaptureService:StartVideoCaptureAsync()|StartVideoCaptureAsync()`
-      method.
+    summary: ''
+    description: ''
     code_samples: []
     parameters: []
     returns:
@@ -175,51 +170,20 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: CaptureService:StartVideoCaptureAsync
-    summary: |
-      Initiates a video capture recording.
-    description: |
-      This method initiates a video capture recording. The recording will
-      continue until the `Class.CaptureService:StopVideoCapture()|StopVideoCapture()`
-      method is called, or when 30 seconds have passed, whichever comes first.
-
-      During the video recording, all user voices are muted.
-
-      The `onCaptureReady` callback can be used to prompt the user to save or
-      share the video capture.
-
-      ```lua
-      local CaptureService = game:GetService("CaptureService")
-
-      local onCaptureReady = function(videoCapture, result)
-      	if result ~= Enum.VideoCaptureResult.Success or not videoCapture then
-      		print("Video recording failed to complete for reason: " .. tostring(result))
-      	else
-      		-- Prompt the user to save the video capture to their gallery
-      		CaptureService:PromptSaveCapturesToGallery({ Content.fromObject(videoCapture) })
-      	end
-      end
-
-      local videoRecordingAllowedResult: Enum.VideoCaptureStartedResult = CaptureService:StartVideoCaptureAsync(onCaptureReady, {})
-
-      if videoRecordingAllowedResult ~= Enum.VideoCaptureStartedResult.Success then
-      	print("Video recording failed to start for reason: " .. tostring(videoRecordingAllowedResult))
-      end
-      ```
+    summary: ''
+    description: ''
     code_samples: []
     parameters:
       - name: onCaptureReady
         type: Function
         default: ''
-        summary: |
-          A callback function that is called with the `Class.VideoCapture`
-          object and the result of type `Enum.VideoCaptureResult` of the video capture
-          once it is ready.
+        summary: ''
       - name: captureParams
         type: Dictionary
         default: nil
         summary: ''
     returns:
-      - type: VideoCaptureStartedResult
+      - type: VideoCaptureResult
         summary: ''
     tags:
       - Yields
@@ -233,9 +197,9 @@ events:
     summary: |
       Fires immediately before a capture begins.
     description: |
-      This event fires right before a new capture is taken. It can be
-      used to customize the capture experience, for example by hiding
-      certain GUI elements.
+      This event fires right before a new screenshot capture is taken. It can be
+      used to customize the capture experience, for example by hiding certain
+      GUI elements.
     code_samples: []
     parameters:
       - name: captureType
@@ -251,7 +215,7 @@ events:
     summary: |
       Fires after a capture finishes.
     description: |
-      This event fires after a new capture completes. It can be used
+      This event fires after a new screenshot capture completes. It can be used
       to restore any changes made when the
       `Class.CaptureService.CaptureBegan|CaptureBegan` event fired.
     code_samples: []

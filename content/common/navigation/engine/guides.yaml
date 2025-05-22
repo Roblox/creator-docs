@@ -345,7 +345,7 @@ navigation:
             path: /sound/objects
           - title: Groups
             path: /sound/groups
-          - title: Dynamic Effects
+          - title: Dynamic effects
             path: /sound/dynamic-effects
   - title: User interface
     path: /ui/
