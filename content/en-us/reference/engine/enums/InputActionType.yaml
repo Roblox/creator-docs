@@ -1,10 +1,10 @@
 name: InputActionType
 type: enum
 summary: |
-  This enum is used by `Class.InputAction.Type` to determine which input data 
-  type the `Class.InputAction` will receive. 
+  This enum is used by `Class.InputAction.Type` to determine which input data
+  type the `Class.InputAction` will receive.
 description: |
-  This enum is used by `Class.InputAction.Type` to determine which input data 
+  This enum is used by `Class.InputAction.Type` to determine which input data
   type the `Class.InputAction` will receive.
 code_samples: []
 tags: []

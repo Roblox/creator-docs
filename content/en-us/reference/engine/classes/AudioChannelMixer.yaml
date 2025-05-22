@@ -16,7 +16,8 @@ code_samples:
   - audio-wiring---splitting-mixing
 inherits:
   - Instance
-tags: []
+tags:
+  - NotBrowsable
 deprecation_message: ''
 properties:
   - name: AudioChannelMixer.Layout

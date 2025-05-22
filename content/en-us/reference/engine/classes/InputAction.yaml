@@ -69,7 +69,7 @@ methods:
       `Class.InputAction.Pressed|Pressed` or
       `Class.InputAction.StateChanged|StateChanged` regardless of whether the
       player triggered that state through normal inputs.
-      
+
       This method will only accept a `state` parameter that matches the
       `Class.InputAction.Type|Type` and attempting to call it with a mismatched
       type will cause an error, for example passing a state of `0.5` when the
@@ -84,11 +84,10 @@ methods:
       state change and the subsequent calls to `Fire()` will do nothing.
     code_samples: []
     parameters:
-      - name: value
+      - name: state
         type: Variant
         default: ''
-        summary: |
-          Value to which to update the `InputAction`.
+        summary: ''
     returns:
       - type: ()
         summary: ''

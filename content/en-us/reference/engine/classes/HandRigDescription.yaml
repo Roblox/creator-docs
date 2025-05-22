@@ -6,7 +6,8 @@ description: ''
 code_samples: []
 inherits:
   - Instance
-tags: []
+tags:
+  - NotBrowsable
 deprecation_message: ''
 properties:
   - name: HandRigDescription.Index1
@@ -747,6 +748,90 @@ properties:
     capabilities:
       - Animation
     writeCapabilities: []
-methods: []
+methods:
+  - name: HandRigDescription:GetFingerControl
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: fingerIndex
+        type: int
+        default: ''
+        summary: ''
+    returns:
+      - type: Vector3
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HandRigDescription:GetFingerTip
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: fingerIndex
+        type: int
+        default: ''
+        summary: ''
+    returns:
+      - type: Vector3
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HandRigDescription:SetFingerControl
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: fingerIndex
+        type: int
+        default: ''
+        summary: ''
+      - name: control
+        type: Vector3
+        default: ''
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HandRigDescription:SetFingerTip
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: fingerIndex
+        type: int
+        default: ''
+        summary: ''
+      - name: point
+        type: Vector3
+        default: ''
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Animation
+    writeCapabilities: []
 events: []
 callbacks: []

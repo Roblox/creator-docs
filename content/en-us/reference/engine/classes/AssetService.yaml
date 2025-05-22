@@ -72,24 +72,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: AssetService:CreateSurfaceAppearance
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: content
-        type: Dictionary
-        default: ''
-        summary: ''
-    returns:
-      - type: SurfaceAppearance
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: AssetService:CreateAssetAsync
     summary: |
       Uploads a new asset to Roblox from the given object.

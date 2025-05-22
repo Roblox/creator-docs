@@ -1546,20 +1546,17 @@ items:
   - name: MouseLeftButton
     summary: ''
     value: 1018
-    tags:
-      - Deprecated
+    tags: []
     deprecation_message: ''
   - name: MouseRightButton
     summary: ''
     value: 1019
-    tags:
-      - Deprecated
+    tags: []
     deprecation_message: ''
   - name: MouseMiddleButton
     summary: ''
     value: 1020
-    tags:
-      - Deprecated
+    tags: []
     deprecation_message: ''
   - name: MouseBackButton
     summary: ''

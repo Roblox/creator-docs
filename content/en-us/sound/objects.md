@@ -1,13 +1,13 @@
 ---
 title: Sound objects
-description: Sound objects are instances that emit audio within an experience.
+description: Sound objects are legacy instances that emit sound within an experience.
 ---
 
 <Alert severity = 'warning'>
-`Class.Sound`, `Class.SoundGroup`, and `Class.SoundEffect` objects are now deprecated in favor of the more robust functionality of audio objects. For more information, see [Audio objects](../audio/objects.md).
+There is a newer set of [Audio objects](../audio/objects.md) that offer more control and address robust use cases. For more information, see [Audio](../audio/index.md).
 </Alert>
 
-Audio playback occurs through `Class.Sound` objects which emit audio within an experience. Roblox assigns each [audio asset](../sound/assets.md) a unique ID that you can assign to `Class.Sound` objects to play a specific sound effect or music track. You can either set this audio to play automatically at runtime, or trigger it to [play from scripts](#script-sound-objects).
+Audio playback occurs through `Class.Sound` objects which emit audio within an experience. Roblox assigns each [audio asset](../audio/assets.md) a unique ID that you can assign to `Class.Sound` objects to play a specific sound effect or music track. You can either set this audio to play automatically at runtime, or trigger it to [play from scripts](#script-sound-objects).
 
 To modify playback of multiple `Class.Sound` objects, you can assign them to a [sound group](../sound/groups.md) and control the entire group's volume, as well as apply [dynamic effects](../sound/dynamic-effects.md).
 
@@ -64,7 +64,7 @@ To create a `Class.Sound` object for volumetric audio:
 2. In the **Properties** window, navigate to the **VolumetricAudio** property, then set it to **Enabled**.
 3. In the **Explorer** window, hover over a `Class.BasePart`, then click the ⊕ button. A contextual menu displays.
 4. From the menu, insert a **Sound**.
-5. In the **Properties** window, navigate to the **SoundId** property and input a valid [audio asset ID](../sound/assets.md).
+5. In the **Properties** window, navigate to the **SoundId** property and input a valid [audio asset ID](../audio/assets.md).
 
    <img src="../assets/studio/properties/Sound-SoundId.png" width="320" />
 
@@ -80,7 +80,7 @@ To create a `Class.Sound` object for point source audio:
 
 1. In the **Explorer** window, hover over an attachment, truss, wedge, or corner wedge, then click the ⊕ button. A contextual menu displays.
 2. From the menu, insert a **Sound**.
-3. In the **Properties** window, navigate to the **SoundId** property and input a valid [audio asset ID](../sound/assets.md).
+3. In the **Properties** window, navigate to the **SoundId** property and input a valid [audio asset ID](../audio/assets.md).
 4. **(Optional)** If you want the audio to start playing when the experience begins, enable the **Playing** property.
 
 ### Background audio
@@ -93,7 +93,7 @@ To create a `Class.Sound` object for background audio:
 
 1. In the **Explorer** window, hover over **SoundService**, then click the ⊕ button. A contextual menu displays.
 2. From the menu, insert a **Sound**.
-3. In the **Properties** window, navigate to the **SoundId** property and input a valid [audio asset ID](../sound/assets.md).
+3. In the **Properties** window, navigate to the **SoundId** property and input a valid [audio asset ID](../audio/assets.md).
 4. **(Optional)** If you want the audio to start playing when the experience begins, enable the **Playing** property.
 5. **(Optional)** If this `Class.Sound` object is the only track you want to play in the place, enable its **Looped** property.
 

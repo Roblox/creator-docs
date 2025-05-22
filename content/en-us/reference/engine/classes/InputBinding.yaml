@@ -27,8 +27,8 @@ properties:
       `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction1D`, the
       dispatched value will be between `0` and `-1`. When the parent action's
       `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction2D`, the
-      dispatched value will be a `Datatype.Vector2` between `(0, 0)` and `(0,
-      -1)`.
+      dispatched value will be a `Datatype.Vector2` between `(0, 0)` and
+      `(0, -1)`.
     code_samples: []
     type: KeyCode
     tags: []
@@ -80,8 +80,8 @@ properties:
       `Class.InputAction.StateChanged|StateChanged` event of the parent
       `Class.InputAction`. Only applies when the parent action's
       `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction2D`, in
-      which case the dispatched value will be a `Datatype.Vector2` between `(0,
-      0)` and `(-1, 0)`.
+      which case the dispatched value will be a `Datatype.Vector2` between
+      `(0, 0)` and `(-1, 0)`.
     code_samples: []
     type: KeyCode
     tags: []
@@ -102,9 +102,9 @@ properties:
       `Class.InputAction.Type|Type` of `Enum.InputActionType|Bool`.
     description: |
       Numerical value above which to fire an `Class.InputAction` with a
-      `Class.InputAction.Type|Type` of `Enum.InputActionType|Bool`, for
-      example when a gamepad trigger such as `Enum.KeyCode.ButtonL2` exceeds
-      `0.5` (halfway pressed). Default is `0.5`.
+      `Class.InputAction.Type|Type` of `Enum.InputActionType|Bool`, for example
+      when a gamepad trigger such as `Enum.KeyCode.ButtonL2` exceeds `0.5`
+      (halfway pressed). Default is `0.5`.
 
       This property must be greater than or equal to
       `Class.InputBinding.ReleasedThreshold|ReleasedThreshold` or else it will
@@ -129,9 +129,9 @@ properties:
       `Class.InputAction.Type|Type` of `Enum.InputActionType|Bool`.
     description: |
       Numerical value below which to fire an `Class.InputAction` with a
-      `Class.InputAction.Type|Type` of `Enum.InputActionType|Bool`, for
-      example when a gamepad trigger such as `Enum.KeyCode.ButtonL2` falls below
-      `0.5` (less than halfway pressed). Default is `0.2`.
+      `Class.InputAction.Type|Type` of `Enum.InputActionType|Bool`, for example
+      when a gamepad trigger such as `Enum.KeyCode.ButtonL2` falls below `0.5`
+      (less than halfway pressed). Default is `0.2`.
 
       This property must be less than or equal to
       `Class.InputBinding.PressedThreshold|PressedThreshold` or else it will be
@@ -160,8 +160,8 @@ properties:
       `Class.InputAction.StateChanged|StateChanged` event of the parent
       `Class.InputAction`. Only applies when the parent action's
       `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction2D`, in
-      which case the dispatched value will be a `Datatype.Vector2` between `(0,
-      0)` and `(1, 0)`.
+      which case the dispatched value will be a `Datatype.Vector2` between
+      `(0, 0)` and `(1, 0)`.
     code_samples: []
     type: KeyCode
     tags: []
@@ -229,8 +229,8 @@ properties:
       `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction1D`, the
       dispatched value will be between `0` and `1`. When the parent action's
       `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction2D`, the
-      dispatched value will be a `Datatype.Vector2` between `(0, 0)` and `(0,
-      1)`.
+      dispatched value will be a `Datatype.Vector2` between `(0, 0)` and
+      `(0, 1)`.
     code_samples: []
     type: KeyCode
     tags: []
