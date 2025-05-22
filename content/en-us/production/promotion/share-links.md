@@ -20,7 +20,7 @@ To create a share link:
 1. In the [Creator Dashboard](https://create.roblox.com/dashboard/creations), go to **Creations** and select the **Share Links** tab.
 2. Click **Create link**.
 3. Enter a unique campaign name and select the experience you want to create a share link for.
-4. <Chip label="optional" size="medium" variant="outlined" /> To enable custom `Class.Player:GetJoinData()|LaunchData`, toggle on **Use custom LaunchData** and enter a `LaunchData` parameter.
+4. <Chip label="OPTIONAL" size="small" variant="outlined" /> To enable custom `Class.Player:GetJoinData()|LaunchData`, toggle on **Use custom LaunchData** and enter a `LaunchData` parameter.
 5. Click **Generate link**.
 
 The new share link generates instantly and is ready to be shared.

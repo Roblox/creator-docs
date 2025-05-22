@@ -14,26 +14,25 @@ description: |
 
   #### Structure
 
-  `CurveAnimation` stores curves in a hierarchical manner, matching the hierarchy
-  of the structure of `Class.Motor6D|Motor6Ds` or `Class.Bone|Bones` in the
-  animated model. Under each `CurveAnimation` instance lies a hierarchy of
-  `Class.Folder` instances representing animated joints in the model. Under each
-  such folder instance, several possible instances may exist. An instance named
-  `Position` of type `Class.Vector3Curve` can drive the local translation of the
-  `Class.Motor6D` or `Class.Bone` on the animated model, while an instance
-  named `Rotation` of type `Class.EulerRotationCurve` or
+  `CurveAnimation` stores curves in a hierarchical manner, matching the
+  hierarchy of the structure of `Class.Motor6D|Motor6Ds` or `Class.Bone|Bones`
+  in the animated model. Under each `CurveAnimation` instance lies a hierarchy
+  of `Class.Folder` instances representing animated joints in the model. Under
+  each such folder instance, several possible instances may exist. An instance
+  named `Position` of type `Class.Vector3Curve` can drive the local translation
+  of the `Class.Motor6D` or `Class.Bone` on the animated model, while an
+  instance named `Rotation` of type `Class.EulerRotationCurve` or
   `Class.RotationCurve` can drive the local rotation of the `Class.Motor6D` or
   `Class.Bone` on the animated model.
 
   #### Partial matching of hierarchy
 
-  You can match partial hierarchies to a model when playing a `CurveAnimation` in
-  Roblox's animation system. This means that not all joints need to be present
-  in the hierarchy for the existing joints to apply properly.
+  You can match partial hierarchies to a model when playing a `CurveAnimation`
+  in Roblox's animation system. This means that not all joints need to be
+  present in the hierarchy for the existing joints to apply properly.
   Furthermore, you can match hierarchies in a "relative" manner. For example,
-  the first child `Class.Folder` instance root can be `UpperTorso` and
-  the animation system matches that to any existing sub-hierarchies in the
-  model.
+  the first child `Class.Folder` instance root can be `UpperTorso` and the
+  animation system matches that to any existing sub-hierarchies in the model.
 
   #### Animating miscellaneous channels
 
@@ -47,9 +46,9 @@ description: |
   #### Usage when making animations
 
   As with other `Class.AnimationClip` types such as `Class.KeyframeSequence`,
-  you must first upload `CurveAnimation` instances to Roblox before playing them.
-  If you want to preview an animation before uploading it to Roblox,
-  you can generate a temporary ID using
+  you must first upload `CurveAnimation` instances to Roblox before playing
+  them. If you want to preview an animation before uploading it to Roblox, you
+  can generate a temporary ID using
   `Class.AnimationClipProvider:RegisterAnimationClip()`; this generates a hash
   ID that you can use for localized animation testing.
 

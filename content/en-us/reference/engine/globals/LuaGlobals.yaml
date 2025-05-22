@@ -499,9 +499,9 @@ functions:
         implicitly wait for a `Class.ModuleScript` to be created.
 
       To illustrate this, each pair of `Global.LuaGlobals.require()` expressions
-      in the example below contains two functionally equivalent calls.
-      Redundant parentheses have been added to clarify exactly how each path
-      component maps onto an instance.
+      in the example below contains two functionally equivalent calls. Redundant
+      parentheses have been added to clarify exactly how each path component
+      maps onto an instance.
 
       ```lua
       -- "./" prefix is equivalent to script.Parent
