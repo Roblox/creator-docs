@@ -284,6 +284,7 @@ try {
       processRetextVFileMessages({ retextVFile, filePathFromRepoRoot });
     }
     if (isMarkdownFile) {
+      checkVoidTagsHaveNoChildren(filePathFromRepoRoot);
       const mdxVFileMessage = (await compileMdx(fileContent)) as VFileMessage;
       if (mdxVFileMessage) {
         processRetextVFileMessage({
