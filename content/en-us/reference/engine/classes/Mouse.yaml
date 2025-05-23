@@ -121,7 +121,7 @@ properties:
     capabilities:
       - Input
     writeCapabilities: []
-  - name: Mouse.Icon
+  - name: Mouse.
     summary: |
       The content ID of the image used as the `Class.Mouse` icon.
     description: |
@@ -142,6 +142,7 @@ properties:
       cursors:
 
       - The dimensions of the image used determines the size of the cursor.
+      - The dimensions of the image should not exceed 256 pixels on any axis.
       - The **center** of the image is where mouse inputs are issued.
       - The default mouse image is 64x64 pixels, with the mouse taking up 17x24
         pixels of space.
