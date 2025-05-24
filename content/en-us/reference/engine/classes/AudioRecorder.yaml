@@ -9,9 +9,10 @@ description: |
   playback.
 
   At this time, `Class.AudioDeviceInput` cannot be recorded. The
-  `Class.AudioRecorder.GetUnrecordableInstancesAsync()|GetUnrecordableInstancesAsync()`
+  `Class.AudioRecorder:GetUnrecordableInstancesAsync()|GetUnrecordableInstancesAsync()`
   method can be used to check specifically which instances aren't recordable.
-code_samples: []
+code_samples:
+  - audio-recorder
 inherits:
   - Instance
 tags:
