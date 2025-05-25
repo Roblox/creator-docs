@@ -346,6 +346,15 @@ functions:
       errors. In such case, `pcall()` also returns all results from the call,
       after this first result. In case of any error, `pcall()` returns false
       plus the error message.
+
+      ```lua
+      local function divideByFive(n: number)
+        return n / 5
+      end
+      
+      local success, response = pcall(divideByFive, "ten")
+      print(success, response)
+      ```
     parameters:
       - name: func
         type: function
