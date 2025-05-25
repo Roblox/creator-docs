@@ -348,7 +348,7 @@ functions:
       plus the error message.
 
       ```lua
-      local function divideByFive(n: number)
+      local function divideByFive(n)
         return n / 5
       end
       
