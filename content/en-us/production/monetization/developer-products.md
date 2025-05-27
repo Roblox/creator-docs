@@ -46,13 +46,6 @@ To use scripting, you need a developer product ID. To get the product ID:
 If you're using [price optimization](./price-optimization.md), make sure to place the script inside a `Class.LocalScript` so that users see personalized product prices.
 </Alert>
 
-Before selling developer products, make sure you are properly processing sales receipts and granting users their purchased products. To do so, you must:
-
-- Use the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` API to check purchase receipts. `ProcessReceipt` automatically reads and acknowledges that a user has purchased a product outside of the experience.
-- Validate each receipt for `User ID`, `Developer Product ID`, and the receipt status.
-- If the receipt has a status of **Open**, grant the user the developer items they have purchased.
-- Respond to the `ProcessReceipt` API with a message acknowledging the receipt and validating that the purchased items were granted.
-
 You can sell developer products in two ways:
 
 - [Inside your experience](#inside-your-experience)
@@ -158,7 +151,14 @@ end)
 
 ### Outside your experience
 
-To enable developer product purchases outside your experience, you must work with the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` API. After a user makes a purchase in the **Store** tab of your experience details page, you must use `ProcessReceipt` to confirm their purchase and grant them their items once they enter your experience.
+To enable developer product purchases outside of your experience, you must work with the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` API. 
+
+After a user purchases a developer item in the **Store** tab of your experience page, you must:
+
+- Use the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` API to check purchase receipts. `ProcessReceipt` automatically reads and acknowledges that a user has purchased a product outside of the experience.
+- Validate each receipt for `User ID`, `Developer Product ID`, and the receipt status.
+- If the receipt has a status of **Open**, grant the user the developer items they have purchased.
+- Respond to the `ProcessReceipt` API with a message acknowledging the receipt and validating that the purchased items were granted.
 
 <Alert severity="warning">
 Do **not** use the `Class.MarketplaceService:PromptProductPurchaseFinished|PromptProductPurchaseFinished` event to process purchases. You must use the `ProcessReceipt` callback instead.
