@@ -348,12 +348,17 @@ functions:
       plus the error message.
 
       ```lua
-      local function divideByFive(n)
+      local function divideByFive(n: number): number
         return n / 5
       end
       
-      local success, response = pcall(divideByFive, "ten")
-      print(success, response)
+      local success, response = pcall(divideByFive, "notANumber") -- results in error
+      
+      if success then
+        -- handle successful response ...
+      else
+        warn("Error message: " .. response)
+      end
       ```
     parameters:
       - name: func
