@@ -2439,8 +2439,8 @@ methods:
 
       #### Character Loading Event order
 
-      Calling the `Class.Player:LoadCharacter()` with an R15 Avatar fires events
-      in the following order (Note: R6 ordering is different):
+      Calling the `Class.Player:LoadCharacter()` on any Player fires events
+      in the following order:
 
       1. Character appearance initializes
       2. The Character rig builds, and the Character scales
@@ -2450,16 +2450,6 @@ methods:
       6. Character.Parent sets to the DataModel
       7. Player.CharacterAdded fires
       8. Player.CharacterAppearanceLoaded fires
-      9. LoadCharacter returns
-
-      1. Player.Character sets
-      2. Player.CharacterAdded fires
-      3. Player.Changed fires with a value of "Character"
-      4. Character appearance initializes
-      5. Player.CharacterAppearanceLoaded fires
-      6. Character.Parent sets to the DataModel
-      7. The Character rig builds, and the Character scales
-      8. Character moves to the spawn location
       9. LoadCharacter returns
     code_samples:
       - Player-LoadCharacter1
