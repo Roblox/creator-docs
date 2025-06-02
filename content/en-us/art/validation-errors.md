@@ -19,7 +19,7 @@ The following is a table of all possible validation error codes, as well as any 
   </tr></thead>
 <tbody>
   <tr>
-    <td rowspan="3">Bounding size out of range</td>
+    <td rowspan="4">Bounding size out of range</td>
     <td>`%s` asset size is larger than the max allowed bounding size of `%s`. You need to scale down or remodel the asset.<br/><br/>Full body size is larger than the max allowed bounding size of `%s`. You need to scale down or remodel the asset</td>
     <td>Try rescaling your asset to keep the original aspect ratio. If that doesn't resolve the issue, try to scale along the axis that is failing validation.</td>
   </tr>
@@ -29,6 +29,10 @@ The following is a table of all possible validation error codes, as well as any 
   </tr>
   <tr>
     <td>`%s` has size larger than max allowed bounding size. The max size for type `%s` is [`%f`, `%f`, `%f`]</td>
+    <td>Your model has one or more small pieces of geometry disconnected from your main mesh that contribute to the overall size. This issue is usually associated with small pieces or particles. You need to either remove these small pieces from your model or scale them to become visible.</td>
+  </tr>
+  <tr>
+    <td>`%s` mesh is too small or made of disconnected pieces that are too small. <br /><br />Detected `%s` centered around `%s` that increases `%s` bounding box. Remove the geometry or increase its size so that it is more visible.</td>
     <td>The model mesh is too large. You need to scale it down.</td>
   </tr>
   <tr>
@@ -108,7 +112,7 @@ The following is a table of all possible validation error codes, as well as any 
   </tr>
   <tr>
     <td rowspan="6">Invalid body setup</td>
-    <td>`%s` is not opaque enough. Opacity is `%f` but needs to be above `%f`.<br/><br/>Mesh for `%s` is completely invisible</td>
+    <td>`%s` is not visible enough from the `%s`. The most visible region found scored `%.2f` but needs to be above `%.2f`.<br/><br/>Mesh for `%s` is completely invisible from the `%s`.</td>
     <td>Your accessory or body part is too thin along one dimension (`X`, `Y`, or `Z`) and can become invisible (or hardly visible) during gameplay. You need to scale up your asset along the axis failing validation.</td>
   </tr>
   <tr>
