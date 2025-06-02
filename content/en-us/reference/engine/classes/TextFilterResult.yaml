@@ -55,10 +55,9 @@ methods:
       - Yields
       - Deprecated
     deprecation_message: |
-      Calling this function from the client is deprecated and will return an
-      empty string. Text filtering pertaining to chat should be done through
-      `Class.TextChatService` and experiences that do not properly filter
-      player-generated chat text might be subject to moderation.
+      This method is deprecated and returns an empty string. Text
+      filtering pertaining to chat should be done through `Class.TextChatService`, and experiences that do
+      not properly filter player-generated chat text may be subject to moderation.
     security: None
     thread_safety: Unsafe
     capabilities:

@@ -67,9 +67,8 @@ methods:
 
       #### Studio Limitation
 
-      This service does not work during playtesting in Roblox Studio &mdash; To
-      test aspects of your game using it, you must publish the game and play it
-      in the Roblox application.
+      Note that this service does not work during playtesting in Roblox Studio; to test aspects of your
+      experience using it, you must publish the experience and play it in the Roblox application.
     code_samples:
       - handling-a-teleport-loading-gui
     parameters: []
@@ -164,11 +163,10 @@ methods:
       manipulated by malicious users. This risk can be mitigated by employing
       server side validation.
 
-      #### Studio limitation
+      #### Studio Limitation
 
-      This service does not work during playtesting in Roblox Studio &mdash; To
-      test aspects of your game using it, you must publish the game and play it
-      in the Roblox application.
+      Note that this service does not work during playtesting in Roblox Studio; to test aspects of your
+      experience using it, you must publish the experience and play it in the Roblox application.
     code_samples: []
     parameters:
       - name: setting
@@ -223,9 +221,8 @@ methods:
 
       #### Studio Limitation
 
-      This service does not work during playtesting in Roblox Studio &mdash; To
-      test aspects of your game using it, you must publish the game and play it
-      in the Roblox application.
+      Note that this service does not work during playtesting in Roblox Studio; to test aspects of your
+      experience using it, you must publish the experience and play it in the Roblox application.
     code_samples:
       - teleporting-the-local-player
     parameters:
@@ -305,11 +302,10 @@ methods:
       manipulated by malicious users. This risk can be mitigated by employing
       server side validation.
 
-      #### Studio limitation
+      #### Studio Limitation
 
-      This service does not work during playtesting in Roblox Studio &mdash; To
-      test aspects of your game using it, you must publish the game and play it
-      in the Roblox application.
+      Note that this service does not work during playtesting in Roblox Studio; to test aspects of your
+      experience using it, you must publish the experience and play it in the Roblox application.
     code_samples: []
     parameters:
       - name: setting
@@ -613,9 +609,8 @@ methods:
 
       #### Studio Limitation
 
-      This service does not work during playtesting in Roblox Studio &mdash; To
-      test aspects of your game using it, you must publish the game and play it
-      in the Roblox application.
+      Note that this service does not work during playtesting in Roblox Studio; to test aspects of your
+      experience using it, you must publish the experience and play it in the Roblox application.
     code_samples:
       - following-a-player-in-a-universe
     parameters:
@@ -670,9 +665,8 @@ methods:
 
       #### Studio Limitation
 
-      This service does not work during playtesting in Roblox Studio; to test
-      aspects of your game using it, you must publish the game and play it in
-      the Roblox application.
+      Note that this service does not work during playtesting in Roblox Studio; to test aspects of your
+      experience using it, you must publish the experience and play it in the Roblox application.
 
       #### Cross-Platform Play
 
@@ -906,9 +900,8 @@ events:
 
       #### Studio Limitation
 
-      This service does not work during playtesting in Roblox Studio &mdash; To
-      test aspects of your game using it, you must publish the game and play it
-      in the Roblox application.
+      Note that this service does not work during playtesting in Roblox Studio; to test aspects of your
+      experience using it, you must publish the experience and play it in the Roblox application.
     code_samples: []
     parameters:
       - name: loadingGui
