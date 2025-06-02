@@ -1,5 +1,5 @@
 ---
-title: 3D drag detectors
+title: 3D Drag Detectors
 description: 3D drag detectors facilitate and encourage interaction with 3D objects in an experience, such as opening doors and drawers, sliding a part around, and much more.
 ---
 
