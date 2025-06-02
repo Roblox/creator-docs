@@ -349,15 +349,15 @@ functions:
 
       ```lua
       local function divideByFive(n: number): number
-        return n / 5
+      	return n / 5
       end
       
-      local success, response = pcall(divideByFive, "notANumber") -- results in error
+      local success, errorMessage = pcall(divideByFive, "notANumber")  -- Results in error...
       
       if success then
-        -- handle successful response ...
+      	-- Handle successful response...
       else
-        warn("Error message: " .. response)
+      	warn("Error message:", errorMessage)
       end
       ```
     parameters:
