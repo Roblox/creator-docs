@@ -121,7 +121,7 @@ properties:
     capabilities:
       - Input
     writeCapabilities: []
-  - name: Mouse.
+  - name: Mouse.Icon
     summary: |
       The content ID of the image used as the `Class.Mouse` icon.
     description: |
