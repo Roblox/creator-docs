@@ -2323,6 +2323,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/SlidingBallConstraint.yaml
         ignoreTranslation: true
+      - title: SlimContentProvider
+        path: /reference/engine/classes/SlimContentProvider
+        type: engineapi
+        source: /reference/engine/classes/SlimContentProvider.yaml
+        ignoreTranslation: true
       - title: Smoke
         path: /reference/engine/classes/Smoke
         type: engineapi
@@ -2603,10 +2608,30 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/TerrainDetail.yaml
         ignoreTranslation: true
+      - title: TerrainIterateOperation
+        path: /reference/engine/classes/TerrainIterateOperation
+        type: engineapi
+        source: /reference/engine/classes/TerrainIterateOperation.yaml
+        ignoreTranslation: true
+      - title: TerrainModifyOperation
+        path: /reference/engine/classes/TerrainModifyOperation
+        type: engineapi
+        source: /reference/engine/classes/TerrainModifyOperation.yaml
+        ignoreTranslation: true
+      - title: TerrainReadOperation
+        path: /reference/engine/classes/TerrainReadOperation
+        type: engineapi
+        source: /reference/engine/classes/TerrainReadOperation.yaml
+        ignoreTranslation: true
       - title: TerrainRegion
         path: /reference/engine/classes/TerrainRegion
         type: engineapi
         source: /reference/engine/classes/TerrainRegion.yaml
+        ignoreTranslation: true
+      - title: TerrainWriteOperation
+        path: /reference/engine/classes/TerrainWriteOperation
+        type: engineapi
+        source: /reference/engine/classes/TerrainWriteOperation.yaml
         ignoreTranslation: true
       - title: TestService
         path: /reference/engine/classes/TestService
@@ -4830,6 +4855,11 @@ navigation:
         path: /reference/engine/enums/PositionAlignmentMode
         type: engineapi
         source: /reference/engine/enums/PositionAlignmentMode.yaml
+        ignoreTranslation: true
+      - title: PreferredInput
+        path: /reference/engine/enums/PreferredInput
+        type: engineapi
+        source: /reference/engine/enums/PreferredInput.yaml
         ignoreTranslation: true
       - title: PreferredTextSize
         path: /reference/engine/enums/PreferredTextSize

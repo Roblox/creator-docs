@@ -167,7 +167,8 @@ methods:
       Returns a dictionary of key-value pairs describing the properties of the
       `StyleRule`.
     description: |
-      Returns a dictionary of key-value pairs describing the properties of the `StyleRule`, for example:
+      Returns a dictionary of key-value pairs describing the properties of the
+      `StyleRule`, for example:
 
       ```lua
       local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -191,7 +192,8 @@ methods:
     returns:
       - type: Dictionary
         summary: |
-          Dictionary of key-value pairs describing the properties of the `StyleRule`.
+          Dictionary of key-value pairs describing the properties of the
+          `StyleRule`.
     tags: []
     deprecation_message: ''
     security: None
@@ -219,9 +221,10 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
-          String name of the property, for example `"AnchorPoint"` or `"BackgroundColor3"`.
+          String name of the property, for example `"AnchorPoint"` or
+          `"BackgroundColor3"`.
     returns:
       - type: Variant
         summary: |
@@ -234,8 +237,7 @@ methods:
     writeCapabilities: []
   - name: StyleRule:SetProperties
     summary: |
-      Lets you declare and set multiple properties of the `StyleRule` at
-      once.
+      Lets you declare and set multiple properties of the `StyleRule` at once.
     description: |
       Similar to `Class.StyleRule:SetProperty()|SetProperty()` but lets you
       declare and set multiple properties of the `StyleRule` at once. Each
@@ -251,7 +253,8 @@ methods:
       `Class.GuiObject.BackgroundColor3|BackgroundColor3` will also fail and an
       error will appear in the [Output](../../../studio/output.md) window.
 
-      To set/update just one property of a `StyleRule`, see `Class.StyleRule:SetProperty()|SetProperty()`.
+      To set/update just one property of a `StyleRule`, see
+      `Class.StyleRule:SetProperty()|SetProperty()`.
 
       ```lua
       local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -294,7 +297,7 @@ methods:
     parameters:
       - name: styleProperties
         type: Dictionary
-        default:
+        default: ''
         summary: |
           Dictionary of key-value pairs defining the properties to set.
     returns:
@@ -359,12 +362,12 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           Property name to set, for example `"BackgroundColor3"`.
       - name: value
         type: Variant
-        default:
+        default: ''
         summary: |
           Property value to set, for example `Datatype.Color3.new(1, 0, 0.25)`.
     returns:

@@ -53,6 +53,7 @@ methods:
           Filtered text string.
     tags:
       - Yields
+      - Deprecated
     deprecation_message: |
       Calling this function from the client is deprecated and will return an
       empty string. Text filtering pertaining to chat should be done through

@@ -544,6 +544,26 @@ properties:
     capabilities:
       - Input
     writeCapabilities: []
+  - name: UserInputService.PreferredInput
+    summary: ''
+    description: ''
+    code_samples: []
+    type: PreferredInput
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities:
+      - Input
+    writeCapabilities: []
   - name: UserInputService.TouchEnabled
     summary: |
       Describes whether the user's current device has a touch-screen available.
