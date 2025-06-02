@@ -28,6 +28,8 @@ navigation:
         path: /art/overview-dcc
       - title: Blender
         path: /art/blender
+      - title: Reaper
+        path: /art/reaper        
   - title: In-experience
     path: /projects/assets/in-experience-asset-creation
   - heading: 3D Art

@@ -17,7 +17,6 @@ As part of this program, you are:
 
 - A member of the Community Feedback Group
 - One of the first to receive sign-ups for beta products, focus groups, 1:1 connections, and office hours
-- Promoted to the Regular trust level on the Developer Forum
 - Given access to the Community Feedback Program private Developer Forum category
 - Given access to the Community Feedback Program Guilded Server. The Guilded provides direct access to select teams.
 

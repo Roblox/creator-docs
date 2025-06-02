@@ -374,7 +374,7 @@ methods:
       	end
       end
       ```
-    code_samples:
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -1134,7 +1134,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default:
+        default: ''
         summary: |
           Name of the property to query.
     returns:
@@ -1159,7 +1159,9 @@ methods:
       function that checks the property name. Subsequent calls to this method on
       the same object with the same property name return the same event.
 
-      Note that this event will not pass any arguments to a connected function, so the value of the changed property must be read directly within a script.
+      Note that this event will not pass any arguments to a connected function,
+      so the value of the changed property must be read directly within a
+      script.
 
       ```lua
       local Players = game:GetService("Players")
@@ -1179,7 +1181,7 @@ methods:
     parameters:
       - name: property
         type: string
-        default:
+        default: ''
         summary: |
           Name of the style property for which to listen for changes.
     returns:
@@ -1311,7 +1313,7 @@ methods:
       indicates `8`, then calling `IsPropertyModified("TextSize")` on the label
       will return `false` because `8` is the default value for
       `Class.TextLabel.TextSize` when the label is created via
-      `Instance.new("TextLabel")`  rather than inserted through the Studio
+      `Instance.new("TextLabel")` rather than inserted through the Studio
       insertion workflows.
 
       Note that if this method returns `true`, styling will **not** affect the
@@ -1321,7 +1323,7 @@ methods:
     parameters:
       - name: property
         type: string
-        default:
+        default: ''
         summary: |
           Name of the property to query.
     returns:
@@ -1395,12 +1397,14 @@ methods:
     description: |
       Resets a property to its default value. For example, calling
       `ResetPropertyToDefault("Rotation")` on a `Class.TextLabel` is equivalent
-      to setting its `Class.TextLabel.Rotation|Rotation` to `0` (the property's default value). This method can be used to ensure styling will override this property's default value.
+      to setting its `Class.TextLabel.Rotation|Rotation` to `0` (the property's
+      default value). This method can be used to ensure styling will override
+      this property's default value.
     code_samples: []
     parameters:
       - name: property
         type: string
-        default:
+        default: ''
         summary: |
           Name of the property to reset.
     returns:
