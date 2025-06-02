@@ -93,7 +93,7 @@ The following is a table of all possible validation error codes, as well as any 
     <td>Failed to execute similarity mesh vertex check for `%s`. Make sure mesh exists and try again.</td>
     <td></td>
   </tr>
-  <tr>
+  <tr id = "cageDensity">
     <td>`%s` has `%d` % of vertices too close to each other. Please edit the vertices to have at most `%d` % coincident or close to one another.</td>
     <td>Your accessory cage has too many vertices close together. This may cause the system to treat them as repeated vertices, or zero area triangles. You need to [edit and move](../art/accessories/caging-best-practices.md) the vertices away from each other in the region(s) they are almost coincident.</td>
   </tr>
@@ -136,7 +136,7 @@ The following is a table of all possible validation error codes, as well as any 
     <td>WrapTarget `%s` found under `%s` has a CageOrigin position greater than %. You need to set `CageOrigin.Position` to `0`,`0`,`0`.</td>
     <td>Cage origin must be zero to properly align with its corresponding body or accessory.</td>
   </tr>
-  <tr>
+  <tr id = "cageMeshDistance">
     <td>Average distance between outer cage to mesh is too high. Mesh seems to be outside of the outer cage.<br/><br/>Average distance between outer cage to mesh is too high %. Make adjustment to cage to fit the mesh better.</td>
     <td>The outer cage is too far away from its corresponding body or accessory model mesh. You need to [remodel the outer cage](../art/accessories/caging-best-practices.md) and bring its vertices closer to the model mesh.</td>
   </tr>
@@ -192,7 +192,7 @@ The following is a table of all possible validation error codes, as well as any 
     <td>Failed to execute cage relevancy detection for `%s`. Make sure the cage mesh exists and try again.</td>
     <td></td>
   </tr>
-  <tr>
+  <tr id = "cageRelevancy">
     <td>Validation detected `%d` % of the outer cage edits do not cover the accessory. Make sure you are moving the outer cage only where needed.</td>
     <td>This validation has detected that you moved out many vertices of your outer cage that weren't in the same region as your model geometry. <br/><br/>You need to verify your outer cage is modified only enough to envelop the accessory model mesh, and stays consistent with the inner cage everywhere else.</td>
   </tr>
@@ -204,7 +204,7 @@ The following is a table of all possible validation error codes, as well as any 
     <td>Failed to load UVs for Inner cage of `%s`. Make sure the UV map exists and try again.</td>
     <td></td>
   </tr>
-  <tr>
+  <tr id = "cageExtraUvs">
     <td>There are `%d` UV values in `%s` cage that do not belong to the template. Please correct the cage UV.</td>
     <td>The cage has an invalid UV map, possibly from using an old or third-party cage. Use the UV map and model mesh templates provided in the [official documentation resources](../avatar/resources.md#project-files).</td>
   </tr>
@@ -407,7 +407,7 @@ The following is a table of all possible validation error codes, as well as any 
     <td>Failed to execute render mesh inside outer mesh check for `%s` and `%s`. Make sure the meshes exists and try again.</td>
     <td></td>
   </tr>
-  <tr>
+  <tr id ="cageInsideMesh">
     <td>Validation detected `%d`% of the accessory is outside its outer cage. Make adjustments to have more of the accessory placed between the cages.</td>
     <td>The outer cage needs to envelop the model mesh of its corresponding accessory. This check has detected a large portion of the model mesh is outside its outer cage. You need to edit the model and/or the cage to fix this issue.</td>
   </tr>

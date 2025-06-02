@@ -3,7 +3,6 @@ title: Rich text markup
 description: Rich Text Markup are simple markup tags to style sections of a string.
 comments: |
   1. Replace numbered footnotes with dedicated style.
-machineTranslated: true
 ---
 
 UI **rich text** utilizes simple markup tags to style sections of a string in bold, italics, underline, fill color, stroke variations, and more. You can apply styling tags to `Class.TextLabel`, `Class.TextButton`, and `Class.TextBox` objects.
