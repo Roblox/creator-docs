@@ -1,7 +1,6 @@
 ---
 title: Solid modeling
 description: Solid modeling is the process of joining parts together to form complex shapes.
-machineTranslated: true
 ---
 
 **Solid modeling** is the process of joining [parts](../parts/index.md)

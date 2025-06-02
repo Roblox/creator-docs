@@ -1,7 +1,6 @@
 ---
 title: Collisions
 description: Explains methods to detect physical collisions, handle collision events, and fine-tune which objects collide with others.
-machineTranslated: true
 ---
 
 A collision occurs when two 3D objects come into contact within the 3D world. For customized collision handling, `Class.BasePart` has a set of [collision events](#collision-events) and [collision filtering](#collision-filtering) techniques, so you can control which physical assemblies collide with others.
