@@ -121,7 +121,7 @@
       "get": {
         "tags": ["Entries"],
         "summary": "List entries",
-        "description": "Returns a list of entry keys within a data store.",
+        "description": "Returns a list of entry keys within a data store.\n\n Entries marked deleted with a tombstone version are still included in the response if they have yet to be permanently deleted.",
         "operationId": "Entries_ListKeysAsync",
         "x-roblox-cloud-api-operation-name": "List Entries",
         "x-roblox-stability": "BETA",
@@ -257,7 +257,7 @@
       "get": {
         "tags": ["Entries"],
         "summary": "Get entry.",
-        "description": "Returns the value and metadata associated with an entry.\n\nMetadata can be found in the response headers like the following:\n```text\ncontent-md5: zuYxEhwuySMv0i8CitXImw==\nroblox-entry-version: 08D9E6A3F2188CFF.0000000001.08D9E6A3F2188CFF.01\nroblox-entry-created-time: 2022-02-02T23:30:06.5388799+00:00\nroblox-entry-version-created-time: 2022-02-02T23:30:06.5388799+00:00\nroblox-entry-attributes: { \"myAttribute\": \"myValue\" }\nroblox-entry-userids: [1, 2, 3]\n```\n\n| Header | Description |\n|---|---| \n| `content-md5` | The base-64 encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/guides/data-store-api-handling.md#content-md5). |\n| `roblox-entry-version` | The version of the returned entry. |\n| `roblox-entry-created-time` | The time at which the entry was created. |\n| `roblox-entry-version-created-time` | The time at which this particular version was created. |\n| `roblox-entry-attributes` | Attributes tagged with the entry. Serialized JSON map object. |\n| `roblox-entry-userids` | Comma-separated list of Roblox user IDs tagged with the entry. |\n",
+        "description": "Returns the value and metadata associated with an entry.\n\nEntries marked deleted with a tombstone version will return 404 Not Found.\n\nMetadata can be found in the response headers like the following:\n```text\ncontent-md5: zuYxEhwuySMv0i8CitXImw==\nroblox-entry-version: 08D9E6A3F2188CFF.0000000001.08D9E6A3F2188CFF.01\nroblox-entry-created-time: 2022-02-02T23:30:06.5388799+00:00\nroblox-entry-version-created-time: 2022-02-02T23:30:06.5388799+00:00\nroblox-entry-attributes: { \"myAttribute\": \"myValue\" }\nroblox-entry-userids: [1, 2, 3]\n```\n\n| Header | Description |\n|---|---| \n| `content-md5` | The base-64 encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/guides/data-store-api-handling.md#content-md5). |\n| `roblox-entry-version` | The version of the returned entry. |\n| `roblox-entry-created-time` | The time at which the entry was created. |\n| `roblox-entry-version-created-time` | The time at which this particular version was created. |\n| `roblox-entry-attributes` | Attributes tagged with the entry. Serialized JSON map object. |\n| `roblox-entry-userids` | Comma-separated list of Roblox user IDs tagged with the entry. |\n",
         "operationId": "Entries_GetEntryAsync",
         "x-roblox-cloud-api-operation-name": "Get Entry",
         "x-roblox-stability": "BETA",

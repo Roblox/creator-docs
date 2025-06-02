@@ -43,12 +43,12 @@ This difference is important to keep in mind as you import your 3D art into Blen
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../assets/art/3p-software/blender/NavigationGizmo.jpg" width = "50%" />
+    <img src="../assets/art/3p-software/blender/NavigationGizmo.jpg" width = "35%" />
     <figcaption>Blender's Navigation Gizmo</figcaption>
 
   </figure>
   <figure>
-    <img src="../assets/art/3p-software/blender/ViewSelector.jpg" width = "50%" />
+    <img src="../assets/art/3p-software/blender/ViewSelector.jpg" width = "35%" />
     <figcaption>Studio's View Selector</figcaption>
   </figure>
 </GridContainer>
