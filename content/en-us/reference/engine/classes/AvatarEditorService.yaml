@@ -506,7 +506,7 @@ methods:
     description: |
       This function returns the item details for the given item. It accepts two
       parameters - the first indicating the ID of the item being retrieved and
-      the second indicating its `Enum.ItemType`.
+      the second indicating its `Enum.AvatarItemType`.
 
       Data returned in the format:
 
