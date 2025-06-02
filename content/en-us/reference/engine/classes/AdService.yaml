@@ -88,6 +88,10 @@ methods:
         type: AdReward
         default: ''
         summary: ''
+      - name: placementId
+        type: int64?
+        default: ''
+        summary: ''
     returns:
       - type: ShowAdResult
         summary: ''

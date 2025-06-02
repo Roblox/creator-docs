@@ -1,7 +1,6 @@
 ---
 title: Mouse and keyboard input
 description: Explains Roblox support for computer mice and keyboards.
-machineTranslated: true
 ---
 
 A large percentage of Roblox sessions are played on devices with a mouse and keyboard, so it's important to properly support these inputs when designing an experience for a wide audience. Once you're comfortable with mouse and keyboard inputs, make your experience compatible across multiple platforms by setting up [mobile](../input/mobile.md) and [gamepad](./gamepad.md) inputs.

@@ -86,9 +86,9 @@ methods:
       end
       ```
 
-      Note that if you've created a design using the [Style
-      Editor](../../../ui/styling/editor.md), the **StyleSheet** sheet in the
-      **Design** folder of `Class.ReplicatedStorage` will contain a
+      Note that if you've created a design using the
+      [Style Editor](../../../ui/styling/editor.md), the **StyleSheet** sheet in
+      the **Design** folder of `Class.ReplicatedStorage` will contain a
       `Class.StyleDerive` to the **BaseStyleSheet** also in the **Design**
       folder. When setting derives with `SetDerives()`, be sure to include the
       base style sheet in the spot of least priority in relation to other
@@ -97,7 +97,7 @@ methods:
     parameters:
       - name: derives
         type: Instances
-        default:
+        default: ''
         summary: |
           Array of other `StyleSheets` to derive `Class.StyleRule|StyleRules`
           and token definitions from.

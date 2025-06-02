@@ -1,0 +1,23 @@
+name: PreferredInput
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: KeyboardAndMouse
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Gamepad
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Touch
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''

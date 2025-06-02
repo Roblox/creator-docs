@@ -148,3 +148,8 @@ items:
     summary: ''
     tags: []
     deprecation_message: ''
+  - name: GraphicsSlimModels
+    summary: ''
+    value: 25
+    tags: []
+    deprecation_message: ''
