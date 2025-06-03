@@ -2439,17 +2439,17 @@ methods:
 
       #### Character Loading Event order
 
-      Calling the `Class.Player:LoadCharacter()` on any Player fires events
+      Calling the `Class.Player:LoadCharacter()` method on any `Class.Player` fires events
       in the following order:
-
-      1. Character appearance initializes
-      2. The Character rig builds, and the Character scales
-      3. Character moves to the spawn location
-      4. Player.Character sets
+      
+      1. The character appearance initializes.
+      2. The character rig builds and scales.
+      3. The character moves to the spawn location.
+      4. `Class.Player.Character` sets.
       5. Player.Changed fires with a value of "Character"
       6. Character.Parent sets to the DataModel
-      7. Player.CharacterAdded fires
-      8. Player.CharacterAppearanceLoaded fires
+      7. `Class.Player.CharacterAdded` fires.
+      8. `Class.Player.CharacterAppearanceLoaded` fires.
       9. LoadCharacter returns
     code_samples:
       - Player-LoadCharacter1
