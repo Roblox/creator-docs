@@ -1,4 +1,91 @@
-name: ServerScriptService
+name: -- Double Jump Script
+-- Place in a LocalScript in StarterPlayerScripts
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+
+local userInputService = game:GetService("UserInputService")
+
+-- Double jump variables
+local hasDoubleJumped = false
+local canDoubleJump = false
+local doubleJumpForce = 60
+
+-- Function to perform double jump
+local function doubleJump()
+    if canDoubleJump and not hasDoubleJumped then
+        hasDoubleJumped = true
+        
+        -- Apply upward force
+        local rootPart = character:FindFirstChild("HumanoidRootPart")
+        if rootPart then
+            -- Stop any downward velocity first
+            rootPart.Velocity = Vector3.new(rootPart.Velocity.X, 0, rootPart.Velocity.Z)
+            -- Then apply upward force
+            rootPart.Velocity = Vector3.new(rootPart.Velocity.X, doubleJumpForce, rootPart.Velocity.Z)
+            
+            -- Optional: Add a particle effect for the double jump
+            local jumpEffect = Instance.new("ParticleEmitter")
+            jumpEffect.Texture = "rbxassetid://6101261295" -- Cloud particle
+            jumpEffect.Size = NumberSequence.new(1.5)
+            jumpEffect.Transparency = NumberSequence.new({
+                NumberSequenceKeypoint.new(0, 0.5),
+                NumberSequenceKeypoint.new(1, 1)
+            })
+            jumpEffect.Lifetime = NumberRange.new(0.3, 0.5)
+            jumpEffect.Speed = NumberRange.new(5, 10)
+            jumpEffect.Acceleration = Vector3.new(0, -10, 0)
+            jumpEffect.SpreadAngle = Vector2.new(50, 50)
+            jumpEffect.Rate = 50
+            jumpEffect.Parent = rootPart
+            
+            -- Remove the effect after a short time
+            game:GetService("Debris"):AddItem(jumpEffect, 0.3)
+            
+            print("Double jumped!")
+        end
+    end
+end
+
+-- Track jumping and landing states
+humanoid.StateChanged:Connect(function(oldState, newState)
+    if newState == Enum.HumanoidStateType.Jumping then
+        canDoubleJump = true
+    elseif newState == Enum.HumanoidStateType.Landed then
+        canDoubleJump = false
+        hasDoubleJumped = false
+    end
+end)
+
+-- Listen for jump input (Space key)
+userInputService.JumpRequest:Connect(function()
+    if canDoubleJump and not hasDoubleJumped then
+        -- The player is already in the air (first jump has occurred)
+        -- Wait a tiny delay so this doesn't trigger immediately with the regular jump
+        task.delay(0.1, doubleJump)
+    end
+end)
+
+-- Handle character respawning
+player.CharacterAdded:Connect(function(newCharacter)
+    character = newCharacter
+    humanoid = character:WaitForChild("Humanoid")
+    hasDoubleJumped = false
+    canDoubleJump = false
+    
+    -- Re-connect the state change event
+    humanoid.StateChanged:Connect(function(oldState, newState)
+        if newState == Enum.HumanoidStateType.Jumping then
+            canDoubleJump = true
+        elseif newState == Enum.HumanoidStateType.Landed then
+            canDoubleJump = false
+            hasDoubleJumped = false
+        end
+    end)
+end)
+
+print("Double jump script loaded! Jump twice to use.")
 type: class
 memory_category: Instances
 summary: |
