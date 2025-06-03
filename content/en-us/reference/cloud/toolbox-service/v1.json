@@ -303,6 +303,16 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SearchFilteredErrorModel"
+                }
+              }
+            }
           }
         },
         "x-roblox-engine-usability": {
@@ -1294,6 +1304,48 @@
         "description": "The response for the SearchCreatorStoreAssets endpoint.",
         "nullable": true
       },
+      "SearchFilteredErrorModel": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ToolboxError"
+              }
+            ],
+            "description": "The error code indicating the type of error.",
+            "x-enumNames": [
+              "Unknown",
+              "ComplianceSystemError",
+              "LuobuSearchEmergencyShutoff",
+              "UnsupportedAssetType",
+              "SearchQueryFiltered"
+            ],
+            "x-enum-varnames": [
+              "Unknown",
+              "ComplianceSystemError",
+              "LuobuSearchEmergencyShutoff",
+              "UnsupportedAssetType",
+              "SearchQueryFiltered"
+            ],
+            "x-enum-descriptions": [
+              "Unknown",
+              "ComplianceSystemError",
+              "LuobuSearchEmergencyShutoff",
+              "UnsupportedAssetType",
+              "SearchQueryFiltered"
+            ]
+          },
+          "filteredKeyword": {
+            "type": "string",
+            "description": "The filtered version of the search query.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Error model for filtered search queries.",
+        "nullable": true
+      },
       "SearchView": {
         "enum": ["IDs", "Core", "Full"],
         "type": "string",
@@ -1782,6 +1834,38 @@
         },
         "additionalProperties": false,
         "nullable": true
+      },
+      "ToolboxError": {
+        "enum": [
+          "Unknown",
+          "ComplianceSystemError",
+          "LuobuSearchEmergencyShutoff",
+          "UnsupportedAssetType",
+          "SearchQueryFiltered"
+        ],
+        "type": "string",
+        "description": "Errors for Toolbox.Service.ToolboxServiceController.",
+        "x-enumNames": [
+          "Unknown",
+          "ComplianceSystemError",
+          "LuobuSearchEmergencyShutoff",
+          "UnsupportedAssetType",
+          "SearchQueryFiltered"
+        ],
+        "x-enum-varnames": [
+          "Unknown",
+          "ComplianceSystemError",
+          "LuobuSearchEmergencyShutoff",
+          "UnsupportedAssetType",
+          "SearchQueryFiltered"
+        ],
+        "x-enum-descriptions": [
+          "Unknown",
+          "ComplianceSystemError",
+          "LuobuSearchEmergencyShutoff",
+          "UnsupportedAssetType",
+          "SearchQueryFiltered"
+        ]
       },
       "ToolboxItem": {
         "type": "object",

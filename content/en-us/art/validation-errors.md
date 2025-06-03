@@ -363,7 +363,7 @@ See the following for more information and resources:
     <td></td>
   </tr>
   <tr>
-    <td>Cage mesh verts referenced in `%s`.`%s`.`CageMeshId` were found that are `%.2f` studs outside the %s render mesh. %s studs is the maximum. Please reduce the size of your cage mesh.</td>
+    <td>Cage mesh verts referenced in `%s`.`%s`.`CageMeshId` were found that are `%.2f` studs outside the %s render mesh. `%s` studs is the maximum. Please reduce the size of your cage mesh.</td>
     <td></td>
   </tr>
 

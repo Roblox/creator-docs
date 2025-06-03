@@ -651,11 +651,7 @@ methods:
         they are called.
       - An active Team Create session in Studio blocks all saves from occurring.
     code_samples: []
-    parameters:
-      - name: requestParameters
-        type: Dictionary?
-        default: ''
-        summary: ''
+    parameters: []
     returns:
       - type: ()
         summary: ''

@@ -43,7 +43,7 @@ You can specify the amount of ad credit you want to purchase. When converting Ro
 - 1 ad credit is equivalent to 285 Robux.
 - 10 ad credits is the minimum conversion requirement.
 
-This minimum conversation requirement streamlines the conversion process, prevents inaccuracies, and makes sure that you have enough ad credits to support meaningful advertising campaigns.
+This minimum conversion requirement streamlines the conversion process, prevents inaccuracies, and makes sure that you have enough ad credits to support meaningful advertising campaigns.
 
 <img src="../../assets/promotion/ads-manager/Ad-Credits.png" width="780" />
 
