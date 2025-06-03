@@ -32,14 +32,14 @@ description: |
   For example, if you update three `EditableImage` objects which are currently
   being displayed, it will take three frames for all of them to be updated.
 
-  #### Enabling EditableImage for Published Experiences
+  #### Enabling for Published Experiences
 
   For security purposes, using `EditableImage` fails by default for published
   experiences. To enable usage, you must be 13+ age verified and ID verified.
   After you are verified, open Studio's
   [Game Settings](../../../studio/game-settings.md), select **Security**, and
   enable the **Allow Mesh&nbsp;&#47; Image APIs** toggle.
-
+  
   #### Permissions
 
   To prevent misuse, `Class.AssetService:CreateEditableImageAsync()` only allows
@@ -53,6 +53,14 @@ description: |
 
   The APIs throw an error if they are used to load an asset that does not meet
   the criteria above.
+
+  #### Memory Limits
+  
+  Editable assets are currently expensive for memory usage. To minimize its impact
+  on client performance, `EditableImage` has strict client-side memory budgets,
+  although the server, Studio, and plugins operate with unlimited memory. Linking
+  one `Class.EditableImage` to multiple image-related `Datatype.Content` data
+  types (multi-referencing) can help with memory optimization.
 code_samples: []
 inherits:
   - Object

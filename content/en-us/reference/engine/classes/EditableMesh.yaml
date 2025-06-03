@@ -8,7 +8,7 @@ description: |
   `Class.MeshPart`, allowing for querying and modification of the mesh both in
   Studio and in experience.
 
-  #### Enabling in Published Experiences
+  #### Enabling for Published Experiences
 
   For security purposes, using `EditableMesh` fails by default for published
   experiences. To enable usage, you must be 13+ age verified and ID verified.
@@ -27,6 +27,15 @@ description: |
   - That are owned by the logged in Studio user (if the place file has not yet
     been saved or published to Roblox).
 
+  #### Memory Limits
+  
+  Editable assets are currently expensive for memory usage. To minimize its impact
+  on client performance, `EditableMesh` has strict client-side memory budgets,
+  although the server, Studio, and plugins operate with unlimited memory. Using
+  `Class.EditableMesh.FixedSize|FixedSize` may help you stay within the memory
+  budget and, in some scenarios, linking one `EditableMesh` to multiple
+  `Class.MeshPart|MeshParts` (multi-referencing) can help with memory optimization.
+    
   #### Creation and Display
 
   An `EditableMesh` can be created from an existing `Datatype.Content` of a
