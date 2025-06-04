@@ -43,6 +43,8 @@ navigation:
         path: /production/publishing/rights-manager
       - title: Account verification
         path: /production/publishing/account-verification
+      - title: Group guidelines
+        path: /projects/group-guidelines
   - title: Marketplace
     section:
       - title: Marketplace policy

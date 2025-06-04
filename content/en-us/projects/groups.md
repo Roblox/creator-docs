@@ -5,13 +5,17 @@ description: Explains Roblox groups and how to collaborate with multiple creator
 
 A Roblox **group** allows multiple creators to work on the same experience, use the same assets, share profits, and give credit to all contributors.
 
-<Alert severity="warning">
+<Alert severity="error">
 Group ownership of experiences helps creators collaborate and operate as independent studios. If a conflict arises within a group, Roblox cannot help arbitrate or resolve disagreements.
 </Alert>
 
 ## Group creation
 
 Creating a group costs 100 Robux. New groups maintain certain capabilities on the legacy [Groups](https://www.roblox.com/groups) pages, but improved workflows and options for [configuring roles/permissions](#roles-and-permissions) and [inviting members](#invite-members) are only available on the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+
+<Alert severity="warning">
+Before creating a group, carefully read through the [rules and expectations](./group-guidelines.md) for group management.
+</Alert>
 
 To create a new group:
 
@@ -65,7 +69,7 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
      </tr>
      <tr>
        <td>**View group activity history**</td>
-       <td>Members with this role can view group [activity history](https://create.roblox.com/dashboard/group/activity-history).</td>
+       <td>Members with this role can view [group activity history](#group-activity-history).</td>
      </tr>
    </tbody>
    <thead>
@@ -274,7 +278,11 @@ Consider the following scenario where a group experience **Laser Maze** is split
 Note that revenue from [private server](../production/monetization/private-servers.md) subscriptions does not change if you adjust split percentages at a later time, meaning that if a player buys a private server subscription, the split percentages at time of purchase will apply to that particular subscription forever (until it is canceled). This policy may be changed in the future.
 </Alert>
 
-## Intellectual property protection in groups
+## Group activity history
+
+Group members with the **View group activity history** permission can view detailed activity such as role changes and publishing actions from the **Activity&nbsp;History** section under **Collaboration** on the Creator Dashboard. This is also a useful way for group owners to moderate activity that may violate [group guidelines](./group-guidelines.md).
+
+## Intellectual property protection
 
 Group members with permission to edit all group experiences can enable the [Place Copying](../production/publishing/publish-experiences-and-places.md#allow-copying) setting for a creation, potentially allowing the entire Roblox community to copy it and use assets within it. To help protect intellectual property in a group, the owner or members with sufficient permissions should:
 
