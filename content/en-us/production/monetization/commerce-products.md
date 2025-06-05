@@ -100,7 +100,7 @@ When you delete an item, all commerce products that contain the item will automa
 
 When you change the price of a catalog item on Shopify, all associated commerce product bundles will be taken off sale and resubmitted for bundling fee processing.
 
-When you update the content of your Shopify item, such as the name, description, or display image, all associated products will not be taken off sale, but they will be resubmitted for moderation. The product listing on Roblox for each product will continue to show the previously approved content until the new content is approved by moderation.
+When you update the content of your Shopify item, such as the name, description, or display image, all associated products will not be taken off sale, but they will be resubmitted for moderation. The product listing on Roblox for each product will continue to show the previously approved content until the new content is approved by moderation. See [Product detail page](#product-detail-page) for more information on how these Shopify attributes are displayed and managed.
 
 ## Manage commerce products
 
@@ -136,6 +136,7 @@ To create a commerce product:
     5. **Developer Product**: To be part of a bundle, the developer product must be owned by the experience, cannot have been on sale before, and must not have a price.
     6. Select an existing **Developer Product** or create a new one to use in a bundle by clicking **Create New**, filling out the developer product information, and clicking **Create**. Click **Save**.
         1. Developer product names within the same experience must be unique.
+        2. Developer products are created when you submit the product for review. In order to reuse a developer product in multiple bundles, submit one product (which creates the developer product), then select that benefit on subsequent bundles.
     <img src="../../assets/monetization/commerce-products/Commerce-Product-Virtual-Benefits.png" width="60%" />
     7. Enter the **Inventory Type** of the catalog item.
         1. **Fixed Quantity**: There is a fixed quantity of the commerce item. Enter the quantity under **Qty**
@@ -144,7 +145,7 @@ To create a commerce product:
 
   </AccordionDetails>
   </BaseAccordion>
-4. Double-check the details of your products and click **Preview** to preview the product listing for each product. Click **Submit for review**.
+4. Double-check the details of your products and click **Preview** to preview the product listing for each product. For details on what this page contains and how it's populated, see [Customizing the Product Detail Page](#customizing-the-product-detail-page). Click **Submit for review**.
 5. The status of your newly created commerce products is **Pending** as the product awaits moderation and potential bundling fee processing. You can hover over the information icon to see which tasks are pending.
    1. **Moderation**
        1. If your commerce product is found to violate Roblox community standards, you will see the **Status** of the commerce product change to **Moderated**.
@@ -218,7 +219,7 @@ In the event of a refund or cancellation of the physical item, you may want to r
 
 Roblox provides webhook integration for commerce events. When an order is paid, canceled, or refunded, Roblox will send a webhook message with the latest order status and order details. Developers can use this information to revoke in-game items or benefits as needed.
 
-For more information on webhook notifications, see the [documentation](../../cloud/webhooks/webhook-notifications.md).
+For more information on webhook notifications, see the [documentation](../../cloud/webhooks/webhook-notifications.md#commerce).
 
 Use `CommerceProductOrderPaid` and `CommerceProductOrderRefunded` events to track the status of the product order. The EventPayload will contain the relevant `CommerceProductOrder` which has the following schema:
 
@@ -307,3 +308,131 @@ Use `CommerceProductOrderPaid` and `CommerceProductOrderRefunded` events to trac
   "description": "A commerce product order represents a purchase of a CommerceProduct by a\n Roblox user. It includes the user who made the purchase and merchant order\n details.",
 }
 ```
+
+## Product detail page
+
+The **Product detail page (PDP)** showcases your commerce product to users within the Roblox experience, for example, when prompted via [`Class.CommerceService:PromptCommerceProductPurchase()`](#implement-purchases). You can customize several elements of this page to provide a unique and informative shopping experience.
+
+<Alert severity = 'info'>
+When viewing the product detail page for a product that is not yet on sale, a "Preview Mode" banner is displayed at the top (as seen in the example PDP image). Only creators with sufficient permissions in the experience can see this preview.
+</Alert>
+
+   <img src="../../assets/monetization/commerce-products/Commerce-Product-PDP-Diagram.png" width="100%" />
+
+<Grid container spacing={2}>
+  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../../assets/misc/Box-Label-A.png" width="40" style={{float:"right"}} /></Grid>
+  <Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
+  [Product Images](#product-images) showcases product images provided in your Shopify store.
+  </Grid>
+</Grid>
+<Grid container spacing={2}>
+  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../../assets/misc/Box-Label-B.png" width="40" style={{float:"right"}} /></Grid>
+  <Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
+  [Product title, price, and seller information](#product-title-price-and-seller-information) contains product and seller details.
+  </Grid>
+</Grid>
+<Grid container spacing={2}>
+  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../../assets/misc/Box-Label-C.png" width="40" style={{float:"right"}} /></Grid>
+  <Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
+  [Variants and quantity](#variants-and-quantity) shows different available options and quantities.
+  </Grid>
+</Grid>
+<Grid container spacing={2}>
+  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../../assets/misc/Box-Label-D.png" width="40" style={{float:"right"}} /></Grid>
+  <Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
+  [Product details](#product-details) displays the Shopify product description.
+  </Grid>
+</Grid>
+<Grid container spacing={2}>
+  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../../assets/misc/Box-Label-E.png" width="40" style={{float:"right"}} /></Grid>
+  <Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
+  [Additional information](#additional-information) includes supplementary details, such as "Materials", "Care instructions", or "Size chart".
+  </Grid>
+</Grid>
+<Grid container spacing={2}>
+  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../../assets/misc/Box-Label-F.png" width="40" style={{float:"right"}} /></Grid>
+  <Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
+  [Virtual benefit with purchase](#virtual-benefit-with-purchase) details the virtual item users will receive with their purchase.
+  </Grid>
+</Grid>
+<Grid container spacing={2}>
+  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../../assets/misc/Box-Label-G.png" width="40" style={{float:"right"}} /></Grid>
+  <Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
+  [More from this experience](#more-from-this-experience) suggests other commerce products offered within the same experience.
+  </Grid>
+</Grid>
+
+### Product images
+
+The product images section displays all product images from your Shopify store. The order of the images directly mirrors the order set in Shopify.
+
+The first image, known as the **featured** image in Shopify, serves as the primary thumbnail for your product. This thumbnail is used in various places, such as within the shopping cart and in the [More from](#more-from-this-experience) section.
+
+When you update product images in Shopify, these changes are subject to the [moderation process for catalog items](#modify-catalog-items). The product listing on Roblox will continue to show the previously approved images until the new images are approved.
+
+### Product title, price, and seller information
+
+The product title is taken directly from the product title set in the Shopify store.
+
+The displayed price dynamically updates if the user selects differently priced product [variants and quantity](#variants-and-quantity). The seller information displayed is your Shopify store name.
+
+Similar to other product attributes, if you update the product title in Shopify, these changes are subject to the [moderation process for catalog items](#modify-catalog-items). The product listing on Roblox will continue to show the previously approved title until the new title is approved.
+
+### Variants and quantity
+
+Product variants and their options, such as different colors or sizes, are synchronized from your Shopify store. The order in which these variants and options appear matches the order in Shopify, displayed from top to bottom.
+
+When a user selects a specific variant, the main product image updates to display the image associated with that particular variant in Shopify.
+
+At this time, the quantity selector on the PDP does not offer customization options. If the selected product variant is not available, the "Buy now" and "Add to cart" buttons are disabled. Ensure your variants are correctly configured in Shopify to allow purchases.
+
+Any updates made to product variants or their images in Shopify are subject to the [moderation process for catalog items](#modify-catalog-items). The product detail page will continue to display the previously approved variant information and images until the new versions are approved.
+
+### Product details
+
+The **Product details** section displays the content directly from your Shopify product description.
+
+This section supports the use of HTML for styling and formatting your product information. For security and consistency, Roblox automatically removes certain HTML elements, including links, images, scripts, and other similar tags and attributes. You can otherwise use HTML to style and structure the text content, such as using headings, bold text, lists, and paragraphs.
+
+As with other product information synced from Shopify, any updates to the product description are subject to the [moderation process for catalog items](#modify-catalog-items). The product details will continue to show the previously approved description until the new content is approved by moderation.
+
+### Additional information
+
+The **Additional information** section displays supplementary details about your product using collapsible accordions. You can add **up to five** accordion sections for different topics, such as "Materials," "Care Instructions," or "Size Chart."
+
+This is an optional feature and is populated using Shopify product metafields. To create a metafield accordion in Shopify:
+
+- Define a product metafield in your Shopify store with a specific namespace: `Roblox.pdp_info_`.
+  - You can append a unique identifier to this namespace, such as `Roblox.pdp_info_materials` or `Roblox.pdp_info_care_instructions`.
+- Set the following fields:
+
+  - **Name** — The value in this field displays as the header for that accordion.
+  - **Value** — The user-facing content within the expanded accordion.
+
+     <img src="../../assets/monetization/commerce-products/Commerce-Product-Metafield-Example.png" width="60%" />
+
+Like other product content synced from Shopify, any new or updated information in these metafields is subject to the [moderation process for catalog items](#modify-catalog-items). This page will display previously approved content until the new information is approved.
+
+### Virtual benefit with purchase
+
+If you have bundled a [digital benefit](#digital-benefits) to your product, this section showcases the virtual item that users receive with their purchase. This section provides a clear visual and informational cue to users about the added digital value they receive, enhancing the appeal of your commerce product.
+
+The content in this section depends on the type of virtual item offered:
+
+- Avatar item
+
+  - This section displays the thumbnail and name of the avatar item.
+  - Users can click on this section to view a 3D preview of the avatar item.
+  - The description of the avatar item displays when the user clicks into this section.
+
+- Developer product
+  - This section displays the image and name of the developer product.
+  - The description of the developer product displays when the user clicks into this section.
+
+The specific avatar item or developer product, including its name, description, and image, is configured when you [create the commerce product bundle](#create). As these benefits are part of the overall product offering, they are subject to Roblox's content policies and moderation.
+
+### More from this experience
+
+This section displays other commerce products you offer that are currently on-sale within the same Roblox experience. This feed encourages further exploration of your product catalog and can help increase visibility for your experience's full range of product offerings.
+
+In this section, users can view the product's feature image, name, and price.

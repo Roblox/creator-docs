@@ -60,16 +60,19 @@ methods:
       - DataStore
     writeCapabilities: []
   - name: MemoryStoreQueue:GetSizeAsync
-    summary: ''
-    description: ''
+    summary: |
+      Gets the size of the queue.
+    description: |
+      Gets the size of the queue.
     code_samples: []
-    parameters:
+    parameters: 
       - name: excludeInvisible
         type: boolean
         default: false
-        summary: ''
+        summary: |
+          Determines whether to exclude invisible items from the size count.
     returns:
-      - type: int
+      - type: number
         summary: ''
     tags:
       - Yields

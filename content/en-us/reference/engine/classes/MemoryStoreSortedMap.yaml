@@ -96,12 +96,14 @@ methods:
       - DataStore
     writeCapabilities: []
   - name: MemoryStoreSortedMap:GetSizeAsync
-    summary: ''
-    description: ''
+    summary: |
+      Gets the size of the sorted map.
+    description: |
+      Gets the size of the sorted map.
     code_samples: []
     parameters: []
     returns:
-      - type: int
+      - type: number
         summary: ''
     tags:
       - Yields
