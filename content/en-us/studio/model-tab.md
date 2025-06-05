@@ -1,4 +1,4 @@
----
+----generator.md
 title: Model tab
 description: The Model tab contains tools for manipulating 3D objects and models, working with physical constraints, and more.
 ---
