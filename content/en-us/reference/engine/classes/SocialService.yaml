@@ -24,16 +24,17 @@ properties: []
 methods:
   - name: SocialService:GetPlayersByPartyId
     summary: |
-      Returns a table of all presently connected `Class.Player` objects whose `Class.Player.PartyId`
-      property matches the passed `partyId`.
+      Returns a table of all presently connected `Class.Player` objects whose
+      `Class.Player.PartyId` property matches the passed `partyId`.
     description: |
-      Returns a table of all presently connected `Class.Player` objects whose `Class.Player.PartyId`
-      property matches the provided `partyId`. This method behaves similarly to
-      `Class.Players:GetPlayers()` but filters the results to include only those players belonging to
-      the specified party.
+      Returns a table of all presently connected `Class.Player` objects whose
+      `Class.Player.PartyId` property matches the provided `partyId`. This
+      method behaves similarly to `Class.Players:GetPlayers()` but filters the
+      results to include only those players belonging to the specified party.
 
-      Note that this service does not work during playtesting in Roblox Studio; to test aspects of your
-      experience using it, you must publish the experience and play it in the Roblox application.
+      Note that this service does not work during playtesting in Roblox Studio;
+      to test aspects of your experience using it, you must publish the
+      experience and play it in the Roblox application.
     code_samples:
       - SocialService-GetPlayersByPartyId
       - Party-Team-Integration
@@ -45,8 +46,8 @@ methods:
     returns:
       - type: Instances
         summary: |
-          A table of `Class.Player` objects whose `Class.Player.PartyId` property
-          matches the passed `partyId`.
+          A table of `Class.Player` objects whose `Class.Player.PartyId`
+          property matches the passed `partyId`.
     tags: []
     deprecation_message: ''
     security: None
@@ -247,18 +248,20 @@ methods:
     writeCapabilities: []
   - name: SocialService:GetPartyAsync
     summary: |
-      Returns an array of dictionaries containing data for all members of the specified party who are
-      currently in the experience.
+      Returns an array of dictionaries containing data for all members of the
+      specified party who are currently in the experience.
     description: |
-      Returns an array of dictionaries containing data for all members associated with the given
-      `partyId`. The returned array reflects the current state of the party across all active server
-      instances within the experience and it is ordered by the time each party member accepted
-      the party invite. This means the first element in the array is the earliest to accept and the last
-      is the most recent.
+      Returns an array of dictionaries containing data for all members
+      associated with the given `partyId`. The returned array reflects the
+      current state of the party across all active server instances within the
+      experience and it is ordered by the time each party member accepted the
+      party invite. This means the first element in the array is the earliest to
+      accept and the last is the most recent.
 
-      This method is useful for retrieving up-to-date information about all party members currently
-      in the experience and across different servers, enabling coordinated group behavior such as
-      teleportation, matchmaking, or party-based gameplay logic.
+      This method is useful for retrieving up-to-date information about all
+      party members currently in the experience and across different servers,
+      enabling coordinated group behavior such as teleportation, matchmaking, or
+      party-based gameplay logic.
 
       Each dictionary in the returned array contains the following fields:
 
@@ -299,8 +302,9 @@ methods:
       </tbody>
       </table>
 
-      Note that this service does not work during playtesting in Roblox Studio; to test aspects of your
-      experience using it, you must publish the experience and play it in the Roblox application.
+      Note that this service does not work during playtesting in Roblox Studio;
+      to test aspects of your experience using it, you must publish the
+      experience and play it in the Roblox application.
     code_samples:
       - SocialService-GetPartyAsync
     parameters:
@@ -311,8 +315,8 @@ methods:
     returns:
       - type: Array
         summary: |
-          An array of dictionaries representing the members of the specified party who are currently in the
-          experience.
+          An array of dictionaries representing the members of the specified
+          party who are currently in the experience.
     tags:
       - Yields
     deprecation_message: ''

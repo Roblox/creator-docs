@@ -9,7 +9,7 @@ description: |
   [skybox](../../../environment/skybox.md) is composed of six sides, like a
   cube. Rotation of the skybox can be changed through
   `Class.Sky.SkyboxOrientation|SkyboxOrientation`.
-  
+
   The skybox sun, moon, and other celestial objects remain visible unless you
   turn off the `Class.Sky.CelestialBodiesShown|CelestialBodiesShown` property.
   By adjusting the `Class.Sky.StarCount|StarCount` property, you can change how
@@ -17,8 +17,8 @@ description: |
 
   This object can also be used as a cubemap for reflections in
   `Class.ViewportFrame|ViewportFrames`, in which case only the `Class.Sky`
-  object's six‑side `Skybox[…]` properties are used. For details, see [viewport
-  frames](../../../ui/viewport-frames.md).
+  object's six‑side `Skybox[…]` properties are used. For details, see
+  [viewport frames](../../../ui/viewport-frames.md).
 code_samples: []
 inherits:
   - Instance

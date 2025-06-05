@@ -183,7 +183,7 @@ methods:
         default: nil
         summary: ''
     returns:
-      - type: VideoCaptureResult
+      - type: VideoCaptureStartedResult
         summary: ''
     tags:
       - Yields

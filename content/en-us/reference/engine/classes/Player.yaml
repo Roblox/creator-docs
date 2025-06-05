@@ -925,15 +925,18 @@ properties:
     summary: |
       A unique identifier of the party a `Class.Player` belongs to.
     description: |
-      A read-only string identifying the party the player currently belongs to within the experience. If the
-      player is not in a party, this value is an empty string.
+      A read-only string identifying the party the player currently belongs to
+      within the experience. If the player is not in a party, this value is an
+      empty string.
 
-      This property is essential for integrating with the Roblox Party feature. Use it in combination with
-      `Class.SocialService:GetPlayersByPartyId()` and `Class.SocialService:GetPartyAsync()` to access
-      information about a player's party and its members.
+      This property is essential for integrating with the Roblox Party feature.
+      Use it in combination with `Class.SocialService:GetPlayersByPartyId()` and
+      `Class.SocialService:GetPartyAsync()` to access information about a
+      player's party and its members.
 
-      Note that this service does not work during playtesting in Roblox Studio; to test aspects of your
-      experience using it, you must publish the experience and play it in the Roblox application.
+      Note that this service does not work during playtesting in Roblox Studio;
+      to test aspects of your experience using it, you must publish the
+      experience and play it in the Roblox application.
     code_samples:
       - Player-PartyId
     type: string

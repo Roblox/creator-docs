@@ -1563,6 +1563,16 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/MessagingService.yaml
         ignoreTranslation: true
+      - title: MLService
+        path: /reference/engine/classes/MLService
+        type: engineapi
+        source: /reference/engine/classes/MLService.yaml
+        ignoreTranslation: true
+      - title: MLSession
+        path: /reference/engine/classes/MLSession
+        type: engineapi
+        source: /reference/engine/classes/MLSession.yaml
+        ignoreTranslation: true
       - title: Model
         path: /reference/engine/classes/Model
         type: engineapi
@@ -5605,6 +5615,11 @@ navigation:
         path: /reference/engine/enums/VideoCaptureResult
         type: engineapi
         source: /reference/engine/enums/VideoCaptureResult.yaml
+        ignoreTranslation: true
+      - title: VideoCaptureStartedResult
+        path: /reference/engine/enums/VideoCaptureStartedResult
+        type: engineapi
+        source: /reference/engine/enums/VideoCaptureStartedResult.yaml
         ignoreTranslation: true
       - title: VideoDeviceCaptureQuality
         path: /reference/engine/enums/VideoDeviceCaptureQuality

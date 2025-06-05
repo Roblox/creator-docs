@@ -1,4 +1,4 @@
-name: VideoCaptureResult
+name: VideoCaptureStartedResult
 type: enum
 summary: ''
 description: ''
@@ -16,13 +16,18 @@ items:
     value: 1
     tags: []
     deprecation_message: ''
-  - name: ScreenSizeChanged
+  - name: CapturingAlready
     summary: ''
     value: 2
     tags: []
     deprecation_message: ''
-  - name: TimeLimitReached
+  - name: NoDeviceSupport
     summary: ''
     value: 3
+    tags: []
+    deprecation_message: ''
+  - name: NoSpaceOnDevice
+    summary: ''
+    value: 4
     tags: []
     deprecation_message: ''

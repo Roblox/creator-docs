@@ -28,14 +28,15 @@ description: |
     been saved or published to Roblox).
 
   #### Memory Limits
-  
-  Editable assets are currently expensive for memory usage. To minimize its impact
-  on client performance, `EditableMesh` has strict client-side memory budgets,
-  although the server, Studio, and plugins operate with unlimited memory. Using
-  `Class.EditableMesh.FixedSize|FixedSize` may help you stay within the memory
-  budget and, in some scenarios, linking one `EditableMesh` to multiple
-  `Class.MeshPart|MeshParts` (multi-referencing) can help with memory optimization.
-    
+
+  Editable assets are currently expensive for memory usage. To minimize its
+  impact on client performance, `EditableMesh` has strict client-side memory
+  budgets, although the server, Studio, and plugins operate with unlimited
+  memory. Using `Class.EditableMesh.FixedSize|FixedSize` may help you stay
+  within the memory budget and, in some scenarios, linking one `EditableMesh` to
+  multiple `Class.MeshPart|MeshParts` (multi-referencing) can help with memory
+  optimization.
+
   #### Creation and Display
 
   An `EditableMesh` can be created from an existing `Datatype.Content` of a

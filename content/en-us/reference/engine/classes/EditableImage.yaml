@@ -39,7 +39,7 @@ description: |
   After you are verified, open Studio's
   [Game Settings](../../../studio/game-settings.md), select **Security**, and
   enable the **Allow Mesh&nbsp;&#47; Image APIs** toggle.
-  
+
   #### Permissions
 
   To prevent misuse, `Class.AssetService:CreateEditableImageAsync()` only allows
@@ -55,12 +55,13 @@ description: |
   the criteria above.
 
   #### Memory Limits
-  
-  Editable assets are currently expensive for memory usage. To minimize its impact
-  on client performance, `EditableImage` has strict client-side memory budgets,
-  although the server, Studio, and plugins operate with unlimited memory. Linking
-  one `Class.EditableImage` to multiple image-related `Datatype.Content` data
-  types (multi-referencing) can help with memory optimization.
+
+  Editable assets are currently expensive for memory usage. To minimize its
+  impact on client performance, `EditableImage` has strict client-side memory
+  budgets, although the server, Studio, and plugins operate with unlimited
+  memory. Linking one `Class.EditableImage` to multiple image-related
+  `Datatype.Content` data types (multi-referencing) can help with memory
+  optimization.
 code_samples: []
 inherits:
   - Object
