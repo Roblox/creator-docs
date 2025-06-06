@@ -64,6 +64,7 @@ To create a script that will reference the default animation assetIDs:
 	   local humanoid = character:WaitForChild("Humanoid")
 	   local animator = humanoid:WaitForChild("Animator")
 	   print("Animator found!")
+   end
 
    local function onPlayerAdded(player)
 	   player.CharacterAdded:Connect(onCharacterAdded)
