@@ -154,6 +154,7 @@ To replace the default walk animation assetID:
 
 	   local animateScript = character:WaitForChild("Animate")
 	   animateScript.walk.WalkAnim.AnimationId = "rbxassetid://122652394532816"
+   end
 
    local function onPlayerAdded(player)
 	   player.CharacterAdded:Connect(onCharacterAdded)
