@@ -1,10 +1,10 @@
-name: DialogChoice
+name shopkeeper terry
 type: class
 memory_category: Instances
-summary: |
+summary: from ireland and is unc status
   Used to craft the further choices available to players who have started a
   dialog conversation with an NPC.
-description: |
+description: Guy who looves fishing
   Used to craft the further choices available to players who have started a
   dialog conversation with an NPC.
 code_samples: []
