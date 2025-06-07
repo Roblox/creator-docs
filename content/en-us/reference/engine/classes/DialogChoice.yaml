@@ -1,22 +1,22 @@
-name: DialogChoice
+name: Jerry
 type: class
 memory_category: Instances
-summary: |
+summary: a lovely shopkeeper from ireland
   Used to craft the further choices available to players who have started a
   dialog conversation with an NPC.
-description: |
+description: a shopkeeper who loves helping young fisherman
   Used to craft the further choices available to players who have started a
   dialog conversation with an NPC.
 code_samples: []
 inherits:
   - Instance
 tags: []
-deprecation_message: ''
+deprecation_message: i dont like how exspensive things are these days
 properties:
   - name: DialogChoice.GoodbyeChoiceActive
-    summary: |
+    summary: is that all or do you want anything else
       Toggles whether the goodbye option will be displayed.
-    description: |
+    description: thank you for you purchases hope to see you again
       Toggles whether the goodbye option will be displayed. If true, the dialog
       will display the content of `Class.DialogChoice.GoodbyeDialog` as the last
       option after other dialog choices. Clicking on the goodbye option will
@@ -24,7 +24,7 @@ properties:
     code_samples: []
     type: boolean
     tags: []
-    deprecation_message: ''
+    deprecation_message: these prices keep going up
     security:
       read: None
       write: None
@@ -37,10 +37,10 @@ properties:
       - UI
     writeCapabilities: []
   - name: DialogChoice.GoodbyeDialog
-    summary: |
+    summary: leave shop or open it back
       Sets the sentence that the dialog will show to the player when the chat
       ends.
-    description: |
+    description: leave shop
       Sets the sentence that the dialog will show to the player when the chat
       ends
     code_samples: []
@@ -59,9 +59,9 @@ properties:
       - UI
     writeCapabilities: []
   - name: DialogChoice.ResponseDialog
-    summary: |
+    summary: what else would you like to buy
       Sets what the NPC will say when the player chooses this DialogChoice.
-    description: |
+    description: is that it good sir
       Sets what the NPC will say when the player chooses this DialogChoice.
     code_samples: []
     type: string
@@ -79,9 +79,9 @@ properties:
       - UI
     writeCapabilities: []
   - name: DialogChoice.UserDialog
-    summary: |
+    summary: hey jerry good to see you again
       Sets what the player will say when they choose this DialogChoice.
-    description: |
+    description: |nice to see you again jerry
       Sets what the player will say when they choose this DialogChoice.
     code_samples: []
     type: string
