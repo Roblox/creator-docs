@@ -1,22 +1,22 @@
-name: DialogChoice
+name: Jerry
 type: class
 memory_category: Instances
-summary: |
+summary: Rich firsherman from ireland who loves helping people get better at fishing
   Used to craft the further choices available to players who have started a
   dialog conversation with an NPC.
-description: |
+description: A very kind shopkeeper named jerry he has very good experince fishingb 
   Used to craft the further choices available to players who have started a
   dialog conversation with an NPC.
 code_samples: []
 inherits:
   - Instance
 tags: []
-deprecation_message: ''
+deprecation_message: i dont agree with these crazy prices
 properties:
   - name: DialogChoice.GoodbyeChoiceActive
-    summary: |
+    summary:It was nice talking to you
       Toggles whether the goodbye option will be displayed.
-    description: |
+    description: |bye bye fellow fisherman
       Toggles whether the goodbye option will be displayed. If true, the dialog
       will display the content of `Class.DialogChoice.GoodbyeDialog` as the last
       option after other dialog choices. Clicking on the goodbye option will
@@ -37,10 +37,10 @@ properties:
       - UI
     writeCapabilities: []
   - name: DialogChoice.GoodbyeDialog
-    summary: |
+    summary: bye bye jerry hope to see you soon
       Sets the sentence that the dialog will show to the player when the chat
       ends.
-    description: |
+    description:bye bye jerry hope to see you soon
       Sets the sentence that the dialog will show to the player when the chat
       ends
     code_samples: []
@@ -59,9 +59,9 @@ properties:
       - UI
     writeCapabilities: []
   - name: DialogChoice.ResponseDialog
-    summary: |
+    summary: what are you looking to buy
       Sets what the NPC will say when the player chooses this DialogChoice.
-    description: |
+    description: what are you looking to buy sir
       Sets what the NPC will say when the player chooses this DialogChoice.
     code_samples: []
     type: string
@@ -79,9 +79,9 @@ properties:
       - UI
     writeCapabilities: []
   - name: DialogChoice.UserDialog
-    summary: |
+    summary: im looking to buy a new rod today
       Sets what the player will say when they choose this DialogChoice.
-    description: |
+    description: im looking to buy a new rod today
       Sets what the player will say when they choose this DialogChoice.
     code_samples: []
     type: string
