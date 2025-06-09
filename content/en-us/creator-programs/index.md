@@ -257,8 +257,8 @@ Roblox offers various programs for creators on the platform to provide additiona
     <h4>Roblox Developers Conference</h4>
         <figure>
     <Chip
-        color="error"
-        label="Status: Closed"
+        color="success"
+        label="Status: Open"
         size="medium"
         variant="filled"/>
     </figure>
@@ -282,8 +282,8 @@ Roblox offers various programs for creators on the platform to provide additiona
     <h4>Roblox Innovation Awards</h4>
         <figure>
     <Chip
-        color="error"
-        label="Status: Closed"
+        color="success"
+        label="Status: Open"
         size="medium"
         variant="filled"/>
     </figure>

@@ -20,6 +20,8 @@ navigation:
     section:
       - title: Overview
         path: /projects/
+      - title: Experiences and places
+        path: /production/publishing/publish-experiences-and-places
       - title: Architecture
         path: /projects/data-model
         section:
@@ -32,10 +34,10 @@ navigation:
       - title: Manage
         path: /production/publishing/publish-experiences-and-places
         section:
-          - title: Experiences and places
-            path: /production/publishing/publish-experiences-and-places
           - title: Experience ownership transfer
             path: /projects/experience-ownership-transfer
+          - title: Place files
+            path: /projects/place-files
           - title: Transfer animations
             path: /projects/transfer-animations
       - title: Work in teams
@@ -45,12 +47,10 @@ navigation:
             path: /projects/groups
           - title: Collaboration
             path: /projects/collaboration
-      - title: Activity history
-        path: /projects/activity-history
+          - title: Activity history
+            path: /projects/activity-history
       - title: External tools
         path: /projects/external-tools
-      - title: Place files
-        path: /projects/place-files
   - title: 3D workspace
     path: /workspace/
     section:
