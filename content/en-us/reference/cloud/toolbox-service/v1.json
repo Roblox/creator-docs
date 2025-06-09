@@ -1298,6 +1298,11 @@
             },
             "description": "The list of creator store assets returned by the search query.",
             "nullable": true
+          },
+          "totalResults": {
+            "type": "integer",
+            "description": "The total number of results for the given search query.",
+            "format": "int64"
           }
         },
         "additionalProperties": false,

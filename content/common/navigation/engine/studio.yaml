@@ -8,11 +8,9 @@ navigation:
     path: /studio/
   - title: Setup
     path: /studio/setup
-  - title: Assistant
+  - title: Assistant for Studio
     path: /assistant/guide
     section:
-      - title: Overview
-        path: /assistant/guide
       - title: Prompt guide and examples
         path: /assistant/prompt-engineering
   - title: Interface

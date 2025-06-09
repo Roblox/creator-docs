@@ -2,6 +2,8 @@ navigation:
   - heading: Overview
   - title: Get started
     path: /production/analytics/
+  - title: Assistant for analytics
+    path: /assistant/analytics-assistant
     
   - heading: Monitor
   - title: Performance

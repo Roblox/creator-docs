@@ -119,13 +119,15 @@ The **Share Links** tab provides information about the **Link Visits** metric, w
 
 ## Analytics insights
 
-In each experience's overview page, there are insights that highlight major weekly changes in key metrics and areas of improvement.
+In each experience's overview page, there are insights that highlight major changes in key metrics and areas of improvement.
 
-For example, the insight below shows that your revenue declined 21%, but similar experiences' revenue increased by 15%. This is a sign that you'll want to take action and look deeper into your monetization to diagnose potential issues. You can click "Explore this metric" to slice and dice your revenue by platform, country, and more. These insights are updated daily and are available for experiences with 100+ DAU.
+For example, the insight below shows that your revenue declined 21%, but the revenue of similar experiences increased by 15%. This is a sign that you might want to take action and look deeper into your monetization to diagnose potential issues. You can click **Explore this metric** to slice and dice your revenue by platform, country, and more. These insights are updated daily and are available for experiences with 100+ DAU.
 
 <figure>
     <img src="../../assets/analytics/overview/Insights.png" width="80%"/>
 </figure>
+
+You can also use Assistant, Roblox's AI helper, to dive deeper into your experience's analytics insights. For more information, see [Assistant for analytics](../../assistant/analytics-assistant.md).
 
 ### Achievement panel
 
