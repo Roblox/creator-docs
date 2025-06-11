@@ -17,6 +17,20 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: CaptureService:CanCaptureVideo
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: boolean
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: CaptureService:CaptureScreenshot
     summary: |
       Takes a screenshot and provides a temporary `contentId` to identify it.

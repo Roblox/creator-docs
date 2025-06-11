@@ -11,6 +11,25 @@ tags:
   - NotReplicated
 deprecation_message: ''
 properties:
+  - name: VideoCapture.FilePath
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: VideoCapture.TimeLength
     summary: ''
     description: ''

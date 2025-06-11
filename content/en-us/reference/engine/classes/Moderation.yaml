@@ -1,0 +1,76 @@
+name: Moderation
+type: class
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: Moderation:InternalCreateReviewableContentAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: config
+        type: Dictionary
+        default: ''
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - InternalTest
+    writeCapabilities: []
+  - name: Moderation:InternalRequestReviewableContentReviewAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: config
+        type: Dictionary
+        default: ''
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - InternalTest
+    writeCapabilities: []
+events: []
+callbacks:
+  - name: Moderation.InternalProcessReviewableContentEvent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: event
+        type: Dictionary
+        default: ''
+        summary: ''
+    returns:
+      - type: boolean
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - InternalTest
+    writeCapabilities: []

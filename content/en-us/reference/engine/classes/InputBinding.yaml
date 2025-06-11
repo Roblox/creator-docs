@@ -15,6 +15,23 @@ tags:
   - NotBrowsable
 deprecation_message: ''
 properties:
+  - name: InputBinding.Backward
+    summary: ''
+    description: ''
+    code_samples: []
+    type: KeyCode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Composite Directions
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: InputBinding.Down
     summary: |
       Specifies an alternate `Enum.KeyCode` for dispatching directionally "down"
@@ -29,6 +46,23 @@ properties:
       `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction2D`, the
       dispatched value will be a `Datatype.Vector2` between `(0, 0)` and
       `(0, -1)`.
+    code_samples: []
+    type: KeyCode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Composite Directions
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: InputBinding.Forward
+    summary: ''
+    description: ''
     code_samples: []
     type: KeyCode
     tags: []

@@ -103,7 +103,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: number
+      - type: int
         summary: ''
     tags:
       - Yields

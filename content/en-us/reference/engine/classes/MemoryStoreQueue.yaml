@@ -65,14 +65,14 @@ methods:
     description: |
       Gets the size of the queue.
     code_samples: []
-    parameters: 
+    parameters:
       - name: excludeInvisible
         type: boolean
         default: false
         summary: |
           Determines whether to exclude invisible items from the size count.
     returns:
-      - type: number
+      - type: int
         summary: ''
     tags:
       - Yields

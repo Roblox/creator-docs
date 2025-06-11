@@ -453,6 +453,24 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: GuiService:GetClosestVisibleDialogToPosition
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: position
+        type: Vector3
+        default: ''
+        summary: ''
+    returns:
+      - type: Dialog
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService:GetEmotesMenuOpen
     summary: |
       Checks if the player Emotes menu is open.

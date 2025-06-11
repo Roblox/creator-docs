@@ -34,3 +34,8 @@ items:
     value: 2
     tags: []
     deprecation_message: ''
+  - name: Direction3D
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''

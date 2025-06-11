@@ -14,4 +14,5 @@ content/en-us/monetize.md
 content/en-us/platform.md
 content/en-us/scale.md
 content/en-us/studio/index.md
+content/en-us/assistant/index.md
 content/en-us/education/resources/roblox-educators.md

@@ -283,6 +283,25 @@ methods:
     capabilities:
       - UI
     writeCapabilities: []
+  - name: Dialog:SetGuiObject
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: gui
+        type: BillboardGui
+        default: ''
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities:
+      - UI
+    writeCapabilities: []
 events:
   - name: Dialog.DialogChoiceSelected
     summary: |

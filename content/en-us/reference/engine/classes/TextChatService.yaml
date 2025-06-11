@@ -249,6 +249,26 @@ properties:
     capabilities:
       - Chat
     writeCapabilities: []
+  - name: TextChatService.IsLegacyChatDisabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
 methods:
   - name: TextChatService:DisplayBubble
     summary: |

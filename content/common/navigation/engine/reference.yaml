@@ -273,6 +273,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/AudioSearchParams.yaml
         ignoreTranslation: true
+      - title: AudioSpeechToText
+        path: /reference/engine/classes/AudioSpeechToText
+        type: engineapi
+        source: /reference/engine/classes/AudioSpeechToText.yaml
+        ignoreTranslation: true
       - title: AudioTextToSpeech
         path: /reference/engine/classes/AudioTextToSpeech
         type: engineapi
@@ -1577,6 +1582,11 @@ navigation:
         path: /reference/engine/classes/Model
         type: engineapi
         source: /reference/engine/classes/Model.yaml
+        ignoreTranslation: true
+      - title: Moderation
+        path: /reference/engine/classes/Moderation
+        type: engineapi
+        source: /reference/engine/classes/Moderation.yaml
         ignoreTranslation: true
       - title: ModuleScript
         path: /reference/engine/classes/ModuleScript
@@ -5045,6 +5055,11 @@ navigation:
         path: /reference/engine/enums/RotationType
         type: engineapi
         source: /reference/engine/enums/RotationType.yaml
+        ignoreTranslation: true
+      - title: RsvpStatus
+        path: /reference/engine/enums/RsvpStatus
+        type: engineapi
+        source: /reference/engine/enums/RsvpStatus.yaml
         ignoreTranslation: true
       - title: RtlTextSupport
         path: /reference/engine/enums/RtlTextSupport

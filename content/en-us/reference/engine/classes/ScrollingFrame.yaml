@@ -118,6 +118,24 @@ properties:
     capabilities:
       - UI
     writeCapabilities: []
+  - name: ScrollingFrame.BottomImageContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Scrolling
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: ScrollingFrame.CanvasPosition
     summary: |
       Reflects the **current** positional offset of the canvas within the frame,
@@ -226,6 +244,24 @@ properties:
       <img src="/assets/ui/ui-objects/ScrollingFrame-Scroll-Bar-Elements.png" width="600" alt="Diagram showing the three image asset elements which construct a scrolling frame's scroll bar." />
     code_samples: []
     type: ContentId
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Scrolling
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
+  - name: ScrollingFrame.MidImageContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
     tags: []
     deprecation_message: ''
     security:
@@ -368,6 +404,24 @@ properties:
       <img src="/assets/ui/ui-objects/ScrollingFrame-Scroll-Bar-Elements.png" width="600" alt="Diagram showing the three image asset elements which construct a scrolling frame's scroll bar." />
     code_samples: []
     type: ContentId
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Scrolling
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
+  - name: ScrollingFrame.TopImageContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
     tags: []
     deprecation_message: ''
     security:

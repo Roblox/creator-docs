@@ -77,6 +77,26 @@ properties:
       can_save: false
     capabilities: []
     writeCapabilities: []
+  - name: InputAction.Direction3DState
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags:
+      - ReadOnly
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: InputAction.Enabled
     summary: |
       Determines if the `InputAction` is enabled or not.

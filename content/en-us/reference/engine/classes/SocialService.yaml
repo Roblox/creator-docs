@@ -151,6 +151,32 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: SocialService:PromptRsvpToEventCompleted
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: eventId
+        type: string
+        default: ''
+        summary: ''
+      - name: success
+        type: boolean
+        default: ''
+        summary: ''
+      - name: rsvpStatus
+        type: RsvpStatus
+        default: ''
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: SocialService:ShowSelfView
     summary: |
       Shows the calling player's self view.
@@ -246,6 +272,25 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: SocialService:GetEventRsvpStatusAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: eventId
+        type: string
+        default: ''
+        summary: ''
+    returns:
+      - type: RsvpStatus
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: SocialService:GetPartyAsync
     summary: |
       Returns an array of dictionaries containing data for all members of the
@@ -324,6 +369,25 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: SocialService:PromptRsvpToEventAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: eventId
+        type: string
+        default: ''
+        summary: ''
+    returns:
+      - type: RsvpStatus
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: SocialService.CallInviteStateChanged
     summary: |
@@ -386,6 +450,20 @@ events:
     tags: []
     deprecation_message: ''
     security: None
+    capabilities: []
+    writeCapabilities: []
+  - name: SocialService.ShowPromptRsvpToEvent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: eventId
+        type: string
+        default: ''
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
     capabilities: []
     writeCapabilities: []
 callbacks:
