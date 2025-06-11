@@ -8,7 +8,7 @@ description: |
   commands when parented to `Class.TextChatService`.
 
   Custom commands can have up to two aliases, and the Triggered event fires when
-  a user types "/{PrimaryAlias}" or "/{SecondaryAlias}" into the chat. For an
+  a user's message matches the value of either the `Class.TextChatCommand.PrimaryAlias|PrimaryAlias` or `Class.TextChatCommand.SecondaryAlias|SecondaryAlias`. For an
   example of custom commands, see
   [Custom text chat commands](../../../chat/examples/custom-text-chat-commands.md).
 
@@ -44,8 +44,8 @@ properties:
     description: |
       Determines whether the `Class.TextChatCommand` is enabled.
 
-      When disabled, messages that match "/{PrimaryAlias}" or
-      "/{SecondaryAlias}" is not sunk and is sent to other users.
+      When disabled, messages that match the value of `Class.TextChatCommand.PrimaryAlias|PrimaryAlias` or
+      `Class.TextChatCommand.SecondaryAlias|SecondaryAlias` are not sunk and is sent to other users.
 
       Use this to disable default commands on a case-by-case basis.
     code_samples: []
@@ -70,7 +70,7 @@ properties:
       A primary alias used to trigger the `Class.TextChatCommand`.
 
       If a user sends a message with `Class.TextChannel:SendAsync()` that
-      matches "/{`Class.TextChatCommand.PrimaryAlias`}", then the message is not
+      matches the `Class.TextChatCommand.PrimaryAlias|PrimaryAlias`, the message is not
       sent and instead `Class.TextChatCommand.Triggered` is fired.
     code_samples: []
     type: string
@@ -118,8 +118,8 @@ events:
       When a user sends a message to the server via
       `Class.TextChannel:SendAsync()`, the message is intercepted by the
       `Class.TextChatCommand` and not replicated to other users if the content
-      of the message matches "/{`Class.TextChatCommand.PrimaryAlias`}" or
-      "/{`Class.TextChatCommand.SecondaryAlias`}".
+      of the message matches the `Class.TextChatCommand.PrimaryAlias|PrimaryAlias` or
+      `Class.TextChatCommand.SecondaryAlias|SecondaryAlias`.
 
       For example, for a `Class.TextChatCommand` with
       `Class.TextChatCommand.PrimaryAlias` as "mute", if a user sends "/mute

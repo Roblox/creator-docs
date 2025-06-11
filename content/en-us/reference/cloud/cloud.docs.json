@@ -5008,7 +5008,7 @@
       "get": {
         "tags": ["Cloud"],
         "summary": "Get Subscription",
-        "description": "Get the subscription.\n\nThe `universe.subscription-product.subscription:read` scope only allows\nyou to get your own subscriptions—or rather, the subscription ID must\nmatch the user ID that makes the request—so its best use case is with\nOAuth 2.0 authentication rather than an API key. To read all\nsubscriptions for a universe, use the `universe:write` scope.",
+        "description": "Get the subscription.\n\nThe `universe.subscription-product.subscription:read` scope only allows\nyou to get your own subscriptions. To read all subscriptions for a\nuniverse, use the `universe:write` scope.\n\nThe subscription ID must match the user ID of the user that makes the\nrequest.\n\nWe recommend using this API with OAuth 2.0 authentication instead of an API\nkey.",
         "operationId": "Cloud_GetSubscription",
         "parameters": [
           {
@@ -5032,7 +5032,7 @@
           {
             "name": "subscription_id",
             "in": "path",
-            "description": "The subscription ID.",
+            "description": "The subscription ID. This is the same as the user ID of the user making the request.",
             "required": true,
             "schema": {
               "type": "string"
