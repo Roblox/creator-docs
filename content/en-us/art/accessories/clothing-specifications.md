@@ -7,16 +7,16 @@ When creating clothing for Roblox, it's important to meet specific technical req
 
 Although [rigid accessories](../../art/accessories/specifications.md) and layerable accessories share many technical requirements, layerable clothing accessories must include additional components to ensure the accessories deform and stretch appropriately on different body scales.
 
-If you are intending to publish and sell these assets on the Marketplace, there are additional [Marketplace Policy](../../marketplace/marketplace-policy.md) standards that you must follow for any accessory or clothing item.
+If you are intending to publish and sell these assets on the Marketplace, there are additional [Marketplace policy](../../marketplace/marketplace-policy.md) standards that you must follow for any accessory or clothing item.
 
-When ready to export, see [Export Requirements](../../art/accessories/export-settings.md) for mesh export settings for Blender and Maya.
+When ready to export, see [export requirements](../../art/accessories/clothing-export-settings.md) for mesh export settings for Blender and Maya.
 
 <Alert severity = 'warning'>
 <AlertTitle>If creating other types of 3D models:</AlertTitle>
 <ul>
-<li>When creating a generic mesh, your model must meet [General Mesh Specifications](../modeling/specifications.md).</li> <br />
-<li>When creating a rigid accessory model, see [Accessory Specifications](../../art/accessories/specifications.md).</li> <br />
-<li>When creating avatar characters, see [Avatar Specifications](../../art/characters/specifications.md).</li>
+<li>For generic meshes, see [general mesh specifications](../modeling/specifications.md) and [general export settings](../modeling/export-requirements.md).</li> <br />
+<li>For rigid accessories, see [accessory specifications](../accessories/specifications.md) and [accessory export settings](../accessories/export-settings.md).</li> <br />
+<li>For avatar characters, see [avatar specifications](../characters/specifications.md) and [avatar export settings](../characters/export-settings.md).</li>
 </ul>
 </Alert>
 

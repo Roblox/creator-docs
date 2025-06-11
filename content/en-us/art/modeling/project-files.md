@@ -83,7 +83,7 @@ The following include examples and templates utilizing Roblox's required [avatar
 <center> <img src="../../assets/art/resources/Fish-Person-Resource.png" width="100%" alt="A blue-green scaly creature with a bulb-ish head ornament."/> </center>
 </figure>
 <figure>
-A rigged and skinned humanoid character model with a full body cage, facial animation rig, and associated PBR texture maps.
+A rigged and skinned humanoid character model with a full body cage, facial animation rig, and associated PBR texture maps. <br /><br /> If this asset were to be uploaded to the Marketplace, the bulb antenna must be a separate head accessory and not part of the character's head geometry.
 </figure>
 </CardContent>
 

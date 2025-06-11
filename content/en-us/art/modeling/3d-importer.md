@@ -6,12 +6,43 @@ description: 3D Importer imports third-party .fbx, .gltf, and .obj 3D model asse
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/4RonlfpKzHA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br />
 
-The 3D Importer allows you to import `.fbx`, `.gltf`, or `.obj` 3D models into Studio as a custom `Class.Model`. This tool supports a wide variety of 3D models, including:
+The 3D Importer allows you to import `.fbx`, `.gltf`, or `.obj` 3D models into Studio as a custom `Class.Model`.
 
 - Meshes with basic or PBR ([surface appearance](../../art/modeling/surface-appearance.md)) textures.
 - Meshes with [rigging and skinning data](../../art/modeling/rigging.md).
 - Meshes with animation data.
 - Specialized meshes, such as [accessories](../../art/accessories/index.md), or characters with [facial animation data](../../art/characters/facial-animation/index.md).
+
+<BaseAccordion>
+<AccordionSummary>
+<Typography variant="subtitle2">Supported file type features</Typography>
+</AccordionSummary>
+<AccordionDetails>
+<table><thead>
+  <tr>
+    <th style={{width:"20%"}}>**File type**</th>
+    <th style={{width:"40%"}}>**Studio compatibility**</th>
+    <th>**Best for**</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>OBJ (`.obj`)</td>
+    <td>Supports:<br/><br/>— Basic single mesh objects</td>
+    <td>Simple mesh geometry use-cases.</td>
+  </tr>
+  <tr>
+    <td>FBX (`.fbx`)</td>
+    <td>Supports:<br/><br/>— Multiple mesh objects and hierarchies<br/>—  Textures, including basic and [PBR textures](../../art/modeling/surface-appearance.md).<br/>— Cage mesh objects<br/>— [Rigging and armature data](../../art/modeling/rigging.md)<br/>— Additional components for [avatar](../../avatar/index.md) items.<br/>— Animation data<br/>— [Vertex colors](../blender.md#vertex-painting)</td>
+    <td>Any type of 3D import, including but not limited to [game assets](../../assets.md) or [avatar items](../../avatar).</td>
+  </tr>
+  <tr>
+    <td>gLTF (`.gltf`)</td>
+    <td>Supports:<br/><br/>— Multiple mesh objects and hierarchies<br/>— Textures, including basic and [PBR textures](../../art/modeling/surface-appearance.md).<br/>— Cage mesh objects<br/>— [Rigging and armature data](../../art/modeling/rigging.md)<br/>— Additional components for [avatar](../../avatar/index.md) items.<br/>— Animation data<br/>— [Vertex colors](../blender.md#vertex-painting)</td>
+    <td>Any type of 3D import, including but not limited to [game assets](../../assets.md) or [avatar items](../../avatar).</td>
+  </tr>
+</tbody></table>
+</AccordionDetails>
+</BaseAccordion>
 
 <Alert severity ='info'>
 To directly import 3D assets using HTTP requests, see the [Open Cloud usage guide for assets](../../cloud/guides/usage-assets.md).

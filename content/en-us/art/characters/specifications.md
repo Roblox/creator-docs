@@ -10,9 +10,9 @@ When ready to export, see the [export requirements](../../art/characters/export-
 <Alert severity = 'warning'>
 <AlertTitle>If creating other types of 3D models:</AlertTitle>
 <ul>
-<li>When creating a generic mesh, your model must meet [general mesh specifications](../modeling/specifications.md).</li> <br />
-<li>When creating a rigid accessory model, see the [accessory specifications](../../art/accessories/specifications.md).</li> <br />
-<li>When creating a clothing accessory model, see the [clothing specifications](../../art/accessories/clothing-specifications.md).</li>
+<li>For generic meshes, see [general mesh specifications](../modeling/specifications.md) and [general export settings](../modeling/export-requirements.md).</li> <br />
+<li>For rigid accessories, see [accessory specifications](../accessories/specifications.md) and [accessory export settings](../accessories/export-settings.md).</li> <br />
+<li>For layered accessories, see [layered accessory specifications](../accessories/clothing-specifications.md) and [layered export settings](../accessories/clothing-export-settings.md).</li> <br />
 </ul>
 </Alert>
 

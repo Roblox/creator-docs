@@ -61,6 +61,7 @@ To set Blender import settings for 3D objects from Studio:
 1. Navigate to **File** > **Import** > **Wavefront (.obj)**, **FBX (.fbx)**, or **glTF 2.0 (.glb/.gltf)**. The **Blender File View** window displays.
 1. Select one or multiple `.obj`, `.fbx`, or `.gltf` files that you want to import.
 1. In the right-hand panel, navigate to the **General** section:
+
    1. Set **Scale** to **1** to keep the same scale from Studio.
    1. Set **Forward Axis** to **Z** to keep the same "forward" axis as Studio.
    1. Set **Up Axis** to **Y** to keep the same "up" axis as Studio.
@@ -76,6 +77,7 @@ To set Studio import settings for 3D objects from Blender:
 1. Navigate to **File** > **Import 3D**. Your local file browser displays.
 1. Select and then confirm the 3D object's `.obj`, `.fbx`, or `.gltf` file(s) you want to import from your local system. The 3D Importer's **Import Preview** window displays.
 1. In the right-hand panel, navigate to the **File General** section, then:
+
    1. Enable **Import Only as a Model** if you have multiple objects that you want to group into a `Class.Model` object.
    1. Enable **Upload to Roblox** if you want to create an asset with an assetID that you can reference across projects.
    1. Set **Creator** to **Me** if you are the only one who needs to access the object, or to the group that owns the project you're working on. This latter setting ensures all eligible group members have permission to use the 3D object within the project.
@@ -93,20 +95,70 @@ To set Studio import settings for 3D objects from Blender:
 
 Similar to the previous file setup section, it's important to consider Blender and Studio's different coordinate systems when you are ready to export your 3D art from Blender. By taking a little extra time in configuring your export settings, you can ensure your 3D objects maintain the correct orientation, scale, and position when you import them into Studio.
 
+<Alert severity = 'warning'>
+Avatar items, or other assets using specialized components, require unique export settings. See the following links for additional information:
+
+<ul>
+<li>For rigid accessories, see [accessory specifications](../art/accessories/specifications.md) and [accessory export settings](../art/accessories/export-settings.md).</li> <br />
+<li>For layered accessories, see [layered accessory specifications](../art/accessories/clothing-specifications.md) and [layered export settings](../art/accessories/clothing-export-settings.md).</li> <br />
+<li>For avatar characters, see [avatar specifications](../art/characters/specifications.md) and [avatar export settings](../art/characters/export-settings.md).</li>
+</ul>
+</Alert>
+
 To set Blender settings for exporting 3D objects for Studio:
 
 1. In the top left-hand corner, click the hamburger menu. A popup menu displays.
 1. Navigate to **File** > **Export** > **Wavefront (.obj)**, **FBX (.fbx)**, or **glTF 2.0 (.glb/.gltf)**. The **Blender File View** window displays.
-1. Select the `.obj`, `.fbx`, or `.gltf` file that you want to export.
 1. In the right-hand panel, navigate to the **Include** section, then enable **Limit to Selected Objects** to only export your selected objects.
 
    <img src="../assets/art/3p-software/blender/BlenderFileView-Export.png" width = "80%" alt="The Blender File View window with the General section highlighted."/>
 
 1. In the **Transform** section
-   1. Set **Scale** to **0.01** so that your object(s) keep the same scale in Studio.
+   1. If exporting `.fbx`, set **Apply Scalings** to **FBX Unit Scale** so that your object(s) keep the same scale in Studio. For more scaling information, see Adjust scale
    1. Set **Forward** to **Z Forward** to keep the same "forward" axis as Blender.
    1. Set **Up** to **Y Up** to keep the same "up" axis as Blender.
 1. In the bottom right-hand corner, click the **Export** button. Your 3D object is now ready to [import into Studio](#blender-to-studio).
+
+### Adjust scale (FBX)
+
+The FBX (`.fbx`) file format is widely used in 3D workflows due to its broad support across modeling tools and game engines. However, when exporting from Blender using its default `.fbx` settings, models often import at an unexpectedly large scale in Roblox Studio.
+
+<Alert severity = 'info'>Roblox Studio also supports GLTF (`.gltf`) formats which do not require these additional scaling configurations.</Alert>
+
+<img src="../assets/modeling/meshes/Blender-Scale-Examples.png" width="65%" alt="Two default Blender cubes imported in Studio with different scales."/>
+
+If you rely on `.fbx` in your workflow, proper export settings or project settings are essential to ensure that your models appear at the correct size and maintain their intended proportions across platforms.
+
+There are many ways to configure your model so your `.fbx` model scales as expected in Studio. See the following popular settings to manage scaling:
+
+<table>
+<thead>
+  <tr>
+    <th>Blender setting</th>
+    <th style={{width:"30%"}}>UI</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+<tbody>
+  <tr>
+    <td>During export, set **Transform** > **Apply Scaling** to **FBX Unit Scale**.</td>
+    <td><img src="../assets/modeling/skinned-meshes/Blender-Export-Settings-5.png" width="90%" alt="Two default Blender cubes imported in Studio with different scales."/></td>
+    <td>Models exported with this setting import into Studio or back into Blender at the same scale. <br/><br/>Make sure all other scaling values in project or export settings are set to default (`1.0`).<br/><br/>
+    This is the recommended way to export `.fbx` files at the same scale.</td>
+  </tr>
+  <tr>
+    <td>During export, set **Transform** > **Scale** to **.01**.</td>
+    <td><img src="../assets/modeling/skinned-meshes/Blender-Export-Settings-2.png" width="90%" alt="Two default Blender cubes imported in Studio with different scales."/></td>
+    <td>This scales down your export so that the model imports into Studio at the expected scale. <br /><br />If you intend on importing this model back in Blender or any non-Studio tool, you might need to scale up the model on import, otherwise the model will import unexpectedly small.</td>
+  </tr>
+  <tr>
+    <td>In the **Scene Properties** panel, set **Units** > **Unit Scale** to .**01**. </td>
+    <td><img src="../assets/modeling/skinned-meshes/Blender-Scene-Units-Settings.png" width="90%" alt="Two default Blender cubes imported in Studio with different scales."/></td>
+    <td>This scales down your entire scene so that the model imports into Studio at the expected scale. If you adjusted your scene units, you can export models using default settings into Studio.<br /><br />Working on models at `.01` scale can cause unexpected Blender issues, such as camera difficulties, issues with modifiers, or other complications. <br /><br />If you intend on importing this model back in Blender, you might need to scale up the model on import, otherwise the model will import unexpectedly small.</td>
+  </tr>
+</tbody></table>
+
+<Alert severity = 'warning'> <AlertTitle>Note on existing resources</AlertTitle> <br /> Many reference files, demo projects, and downloadable assets may use older or inconsistent scale settings. Likewise, tutorials and guides might recommend different approaches for handling scale between Blender and Studio. <br/><br/>Always test and validate any external resources to ensure they work correctly with your current export workflow.</Alert>
 
 ## Fundamentals
 
@@ -148,7 +200,7 @@ The default layout of this workspace includes the following UI for modeling your
 - [3D Viewport](https://docs.blender.org/manual/en/latest/editors/3dview/introduction.html) - Displays the entire scene.
 - [Outliner](https://docs.blender.org/manual/en/latest/editors/outliner/introduction.html) - Displays all objects in the scene, comparable to Studio's Explorer window.
 - [Properties Editor](https://docs.blender.org/manual/en/latest/editors/properties_editor.html) - Displays editable data for the active object, comparable to Studio's Properties window.
-  
+
 The most common Roblox creator use case for this workspace is to create the geometrical shape of the 3D art before texturing or animating the geometry.
 
 </TabItem>
@@ -364,7 +416,7 @@ To use the Snap tool:
 
 1. In **Object** or **Edit** mode, navigate to the header, then click the **Snapping** button. A contextual menu displays.
 
-	<img src="../assets/art/3p-software/blender/Snapping.png" width = "40%" alt="Blender's header with the Snapping button highlighted."/>
+<img src="../assets/art/3p-software/blender/Snapping.png" width = "40%" alt="Blender's header with the Snapping button highlighted."/>
 
 1. In the contextual menu,
    1. Set **Snap Base** to one of the following:
@@ -380,7 +432,7 @@ To use the Snap tool:
       - **Face** - Snaps to the face that's closest to the mouse cursor.
       - **Volume** - Snaps the selection to a depth that's centered inside the object under the cursor.
       - **Edge Center** - Snaps to the centerpoint of the edge that's closest to the mouse cursor.
-      - **Edge Perpendicular** -  Snaps to a specific point on the edge so that the line from the selection's original location to its new location is perpendicular to that edge.
+      - **Edge Perpendicular** - Snaps to a specific point on the edge so that the line from the selection's original location to its new location is perpendicular to that edge.
    1. Set **Affect** to one of the following:
       - **Move** - Snaps while moving the selection.
       - **Rotate** - Snaps while rotating the selection.
@@ -774,6 +826,7 @@ Vertex painting is useful for adding color variation to your assets in a lightwe
 To vertex paint:
 
 1. Add a color attribute to store color information to your object's vertices.
+
    1. In the **3D Viewport**, select your 3D object.
    1. Navigate to the **Properties editor**, then in the left-hand navigation, select the **Data** tab.
 
@@ -781,7 +834,9 @@ To vertex paint:
 
    1. Click the **Color Attributes** dropdown menu to expand the container, then click the **+** button. The **Add Color Attribute** contextual menu displays.
    1. Set **Domain** to **Vertex**, **Data Type** to **Color**, then click the **Add** button. Your object now has a color attribute.
+
 1. Configure the 3D Viewport to display your color attribute.
+
    1. In the **3D Viewport**, navigate to the top right-hand corner **Viewport Shading** options, then click the button for the **Solid** shading mode.
 
       <img src="../assets/art/blender-ui/ViewportShading-Solid.png" width = "40%" alt="Blender's Viewport Shading options with the Solid shading mode highlighted."/>
@@ -791,6 +846,7 @@ To vertex paint:
       <img src="../assets/art/3p-software/blender/ColorAttribute.png" alt="Blender's Viewport Shading dropdown menu with the dropdown arrow and Color settings highlighted." width="40%"/>
 
 1. Select a color for your brush.
+
    1. In **Vertex Paint** mode, navigate to the top left-hand corner, then click on the active color swatch. A contextual menu displays.
    1. Select your color on the color wheel, or with a RGB, HSV, or Hex code.
 
