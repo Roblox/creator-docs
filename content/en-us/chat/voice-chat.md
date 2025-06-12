@@ -35,7 +35,7 @@ If you previously set the maximum number of players in a place to more than 50, 
 
 When you update the maximum number of players in a place to fewer than 50, there may be servers already configured to a different, higher number. Since those servers won't support voice chat, it's recommended to [restart servers](../production/publishing/publish-experiences-and-places.md#update-experiences).
 
-### Customize voice transmission
+### Customize voice behavior
 
 Voice chat is **proximity-based** by default, adjusting the volume of participants based on how close they are to each other. However, you can set `Class.VoiceChatService.UseAudioApi|UseAudioApi` to `Enum.AudioApiRollout|Enabled` to take control over how voices are set up and used in your experience:
 
