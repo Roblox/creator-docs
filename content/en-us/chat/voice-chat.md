@@ -97,7 +97,7 @@ end)
 
 If you [disable default voice chat](#disable-per-place), you can then implement flat/nonspatial voice chat through the following `Class.Script` within `Class.ServerScriptService`:
 
-```lua title="Script"
+```lua title="Non-Proximity Chat"
 local Players = game:GetService("Players")
 local Workspace = game:GetService("Workspace")
 
