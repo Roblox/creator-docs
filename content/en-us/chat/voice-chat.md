@@ -96,7 +96,7 @@ end)
 
 By setting `Class.VoiceChatService.EnableDefaultVoice|EnableDefaultVoice` to **false**, no default voice chat setup will be provided – this can be used to implement "flat"/nonspatial voice chat (instead of the standard proximity chat)
 
-```
+```lua
 -- Ensure VoiceChatService.EnableDefaultVoice is **false**
 -- since this script will be doing something custom instead
 
