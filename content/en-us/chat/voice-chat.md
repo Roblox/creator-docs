@@ -128,7 +128,7 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
 You may not want players to hear themselves; in that case, the above script should be combined with a local script along the lines of
-```
+```lua
 local me = game:GetService("Players").LocalPlayer
 
 local function onDescendantAdded(descendant : Instance)
