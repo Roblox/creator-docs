@@ -55,7 +55,8 @@ local Teams = game:GetService("Teams")
 
 local function findAudioInput(forPlayer : Player) : AudioDeviceInput?
 	-- Assumes there is only one AudioDeviceInput per player, parented to the Player object
-	-- May need to be reworked for generality if your place does not match this
+	-- This is provided for you if VoiceChatService.EnableDefaultVoice is true
+	-- May need to be reworked for generality if your place puts AudioDeviceInput objects elsewhere
 	return forPlayer:FindFirstChildWhichIsA("AudioDeviceInput")
 end
 
