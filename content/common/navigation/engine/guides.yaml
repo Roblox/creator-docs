@@ -23,7 +23,7 @@ navigation:
       - title: Experiences and places
         path: /production/publishing/publish-experiences-and-places
       - title: Architecture
-        path: /projects/data-model
+        path: /projects/data-models
         section:
           - title: Data model
             path: /projects/data-model
