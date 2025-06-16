@@ -9,7 +9,156 @@ When [uploading avatar items](../marketplace/publish-to-marketplace.md#upload-an
 Assets that aren't intended for the Marketplace, such as those used only in-experience, do not need to pass this validation process. However, you may find this validation check useful to troubleshoot issues with any custom accessories or bodies.
 </Alert>
 
-## Invalid skinning setup
+## Mesh
+
+Mesh validation errors refer to generic issues with your `Class.MeshPart`. This can range between geometry budget issues, size, missing IDs, unexpected data models, and more.
+
+See the following specifications for mesh requirements:
+
+- [Generic mesh specifications](./modeling/specifications.md)
+- [Rigid accessory mesh specifications](./accessories/specifications.md#geometry-and-budgets)
+- [Clothing mesh specifications](./accessories/clothing-specifications.md#geometry-and-budgets)
+- [Body mesh specifications](./characters/specifications.md#triangle-budgets)
+
+<table>
+  <thead>
+    <tr>
+    <th style={{width:"50%"}}>Error Message</th>
+    <th>Additional notes</th>
+    </tr>
+  </thead>
+<tbody>
+  <tr>
+    <td>`%s` asset size is larger than the max allowed bounding size of `%s`. You need to scale down or remodel the asset.<br/><br/>Full body size is larger than the max allowed bounding size of `%s`. You need to scale down or remodel the asset</td>
+    <td>Try rescaling your asset to keep the original aspect ratio. If that doesn't resolve the issue, try to scale along the axis that is failing validation.</td>
+  </tr>
+  <tr>
+    <td>`%s` asset size is smaller than the min allowed bounding size of `%s`. You need to scale up or remodel the asset.<br/><br/>Full body size is smaller than the min allowed bounding size of `%s`. You need to scale up or remodel the asset</td>
+    <td>Try rescaling your asset to keep the original aspect ratio. If that doesn't resolve the issue, try to scale along the axis that is failing validation.</td>
+  </tr>
+  <tr>
+    <td>`%s` has size larger than max allowed bounding size. The max size for type `%s` is [`%f`, `%f`, `%f`]</td>
+    <td>Your model has one or more small pieces of geometry disconnected from your main mesh that contribute to the overall size. This issue is usually associated with small pieces or particles. You need to either remove these small pieces from your model or scale them to become visible.</td>
+  </tr>
+
+  <tr>
+    <td>Mesh resolution of `%d` for model `%s` is higher than max supported number of triangles `%d`. You need to retopologize your model to reduce the triangle count. </td>
+    <td>The resolution of your model mesh is too high. You need to retopologize the model to bring the resolution down below the [allowed limits](../art/modeling/specifications.md#geometry).</td>
+  </tr>
+  <tr>
+    <td>Model mesh `%s` resolution of `%d` is higher than max supported value of `%d`. You need to retopologize your model and try again.<br/><br/>Your mesh exceeds the max triangle limit for UGC upload requirements.</td>
+    <td>The resolution of your model (number of triangles) is higher than the maximum [allowed limit](../art/modeling/specifications.md#geometry). You need to retopologize and remove enough triangles to bring the total count below this limit.</td>
+  </tr>
+  <tr>
+    <td>`%s` is not visible enough from the `%s`. The most visible region found scored `%.2f` but needs to be above `%.2f`.<br/><br/>Mesh for `%s` is completely invisible from the `%s`.</td>
+    <td>Your accessory or body part is too thin along one dimension (`X`, `Y`, or `Z`) and can become invisible (or hardly visible) during gameplay. You need to scale up your asset along the axis failing validation.</td>
+  </tr>
+    <tr>
+    <td>Model meshId mismatch between `MeshPart.MeshId` and `SpecialMesh.MeshId` for `%s`. You need to match the meshIds and try again.</td>
+    <td>Verify `Class.Model` includes a `Class.MeshPart` or `Class.SpecialMesh` with the correct IDs.</td>
+  </tr>
+    <tr>
+    <td>The total surface area of model mesh `%s` is `%f`, it cannot be greater than `%d`. You must reduce the number and/or size of all triangles.<br/><br/>The total surface area of model mesh `%s` is greater than `%d`. You must reduce the number and/or size of all triangles.</td>
+    <td>Your model mesh has too many triangles on screen that cannot be culled. This will cause performance problems during gameplay when using lower powered mobile devices. You need to reduce the triangle count of your model.</td>
+  </tr>
+    <tr>
+    <td>Detected zero-area triangle in model mesh `%s`. You need to edit the mesh to remove zero-area triangles.</td>
+    <td>Your model mesh has some vertices too close to each other that they create zero area triangles. You need to move these vertices apart to resolve this issue.</td>
+  </tr>
+    <tr>
+    <td>Detected two or more vertices in model mesh `%s` sharing near identical positions. You need to position vertices by at least `%s` apart from each other.</td>
+    <td>Make sure there are no coincident vertices in your model mesh.</td>
+  </tr>
+    <tr>
+    <td>Bounds for the mesh `%s` are not centered at the origin. The max allowed distance is `%f`</td>
+    <td>The asset model mesh is too far away from the origin. Usually the center of the model and the origin of the coordinate system should coincide. </td>
+  </tr>
+  <tr>
+    <td>`%s` mesh is too small or made of disconnected pieces that are too small. <br /><br />Detected `%s` centered around `%s` that increases `%s` bounding box. Remove the geometry or increase its size so that it is more visible.</td>
+    <td>The model mesh is too large. You need to scale it down.</td>
+  </tr>
+  <tr>
+    <td>`%s` is more than max difference `%f` in size compared to the other mesh `%s`. You need to edit the model to adjust its size.</td>
+    <td>The model mesh is too big. You need to scale it down.</td>
+  </tr>
+</tbody>
+</table>
+
+## Texture
+
+Texture errors refer to generic issues with your `Class.MeshPart.TextureID` or `Class.SurfaceAppearance`. Depending on the type of asset and texture you are creating, you may need to use a third-party software to fix and re-export.
+
+See the following resources:
+
+- [General texture requirements](./modeling/texture-specifications.md)
+- [PBR texture overview](./modeling/surface-appearance.md)
+- [Clothing texture requirements](./accessories/clothing-specifications.md#textures)
+- [Body texture requirements](./characters/specifications.md#textures)
+
+<table>
+  <thead>
+    <tr>
+    <th style={{width:"50%"}}>Error Message</th>
+    <th>Additional notes</th>
+    </tr>
+  </thead>  
+  <tbody>
+  <tr>
+    <td>Failed to execute UV check for `%s`. Make sure the UV map exists and try again.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Failed to execute texture size check for `%s`. Make sure the textureId is valid and try again.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Model textureId mismatch between `MeshPart.TextureID` and `SpecialMesh.TextureId` for `%s`. You need to match the textureIds and try again.</td>
+    <td>Verify textures are properly set up.</td>
+  </tr>
+  <tr>
+    <td>Invalid material setup for `%s`. Accepted values are: `%s`</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Invalid vertex color found in mesh model `%s`. You need to edit the color map to be all white and try again.<br/><br/>Invalid vertex color found in mesh model `%s`. You need to edit the color map to be all white with no transparency and try again.</td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>TextureID and Surface Appearance are both defined for MeshPart `%s`. Publishing will only use Surface Appearance</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>`%s` has an empty TextureID and no child surface appearance instance. You need to define at least one of them. </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Invalid textureID used in mesh `%s`. Make sure the texture exists and try again.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Your textures exceeds the max texture size limit for UGC upload requirements.<br/><br/>Texture resolution `%d`x`%d` px found in `%s` is higher than max size supported value of `%d`x`%d` px. You need to reduce the texture resolution.</td>
+    <td>You need to change the [resolution of your textures](../art/modeling/specifications.md#textures) to be within the allowed limits.</td>
+  </tr>
+    <tr>
+    <td>Model textureId mismatch with rigid accessory `SpecialMesh.TextureId` for `%s`. You need to match the textureIds and try again.</td>
+    <td>Verify textures are properly set up.</td>
+  </tr>
+  <tr>
+    <td>Failed to execute UV mismatch check for `%s`. Make sure UV map exists and try again.</td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
+
+## Rigging and skinning
+
+Rigging and skinning errors refer to issues with your rigging and skinning data. Depending on the type of error, you may need to use a third-party software to fix and re-export.
+
+See the following specifications for rigging and skinning requirements:
+
+- [Generic mesh specifications](./modeling/specifications.md#rigging-and-skinning)
+- [Clothing rigging specifications](./accessories/clothing-specifications.md#rigging-and-skinning)
+- [Body rigging specifications](./characters/specifications.md#rigging)
 
 Skinning is the assignment of vertices of your rendered mesh to the underlying rig. For additional resources, see the rigging and skinning requirements for [clothing](./accessories/clothing-specifications.md#rigging-and-skinning) and [bodies](./characters/specifications.md#rigging).
 
@@ -33,250 +182,11 @@ Skinning is the assignment of vertices of your rendered mesh to the underlying r
 </tbody>
 </table>
 
-## Invalid texture setup
+## Cage mesh
 
-Depending on the type of asset and texture you are creating, you may need to use a third-party software to modify your model or texture.
+Cage errors refer to generic issues with your `Class.WrapLayer` or `Class.WrapTarget`. Depending on the type of error, you may need to use a third-party software to fix and re-export.
 
-See the following resources:
-
-- [General texture requirements](./modeling/texture-specifications.md)
-- [PBR texture overview](./modeling/surface-appearance.md)
-- [Clothing texture requirements](./accessories/clothing-specifications.md#textures)
-- [Body texture requirements](./characters/specifications.md#textures)
-
-<table>
-  <thead>
-    <tr>
-    <th style={{width:"50%"}}>Error Message</th>
-    <th>Additional notes</th>
-    </tr>
-  </thead>
-<tbody>
-<tr>
-    <td>Model textureId mismatch between `MeshPart.TextureID` and `SpecialMesh.TextureId` for `%s`. You need to match the textureIds and try again.</td>
-    <td>Verify textures are properly set up.</td>
-  </tr>
-  <tr>
-    <td>Model textureId mismatch with rigid accessory `SpecialMesh.TextureId` for `%s`. You need to match the textureIds and try again.</td>
-    <td>Verify textures are properly set up.</td>
-  </tr>
-  <tr>
-    <td>Invalid material setup for `%s`. Accepted values are: `%s`</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Invalid vertex color found in mesh model `%s`. You need to edit the color map to be all white and try again.<br/><br/>Invalid vertex color found in mesh model `%s`. You need to edit the color map to be all white with no transparency and try again.</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>TextureID and Surface Appearance are both defined for MeshPart `%s`. Publishing will only use Surface Appearance</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>`%s` has an empty TextureID and no child surface appearance instance. You need to define at least one of them. </td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Invalid textureID used in mesh `%s`. Make sure the texture exists and try again.</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Your textures exceeds the max texture size limit for UGC upload requirements.<br/><br/>Texture resolution `%d`x`%d` px found in `%s` is higher than max size supported value of `%d`x`%d` px. You need to reduce the texture resolution.</td>
-    <td>You need to change the [resolution of your textures](../art/modeling/specifications.md#textures) to be within the allowed limits.</td>
-  </tr>
-</tbody>
-</table>
-
-## Bounding size out of range
-
-The following issues are related to the size of your asset and the expected bounding box.
-
-See the following for more information on acceptable sizes and scale:
-
-- [Rigid accessory scale specifications](./accessories/specifications.md#body-scale)
-- [Clothing scale specifications](./accessories/clothing-specifications.md#size-requirements)
-- [Body scale specifications](./characters/specifications.md#body-scale)
-
-<table>
-  <thead>
-    <tr>
-    <th style={{width:"50%"}}>Error Message</th>
-    <th>Additional notes</th>
-    </tr>
-  </thead>
-<tbody>
-  <tr>
-    <td>`%s` asset size is larger than the max allowed bounding size of `%s`. You need to scale down or remodel the asset.<br/><br/>Full body size is larger than the max allowed bounding size of `%s`. You need to scale down or remodel the asset</td>
-    <td>Try rescaling your asset to keep the original aspect ratio. If that doesn't resolve the issue, try to scale along the axis that is failing validation.</td>
-  </tr>
-  <tr>
-    <td>`%s` asset size is smaller than the min allowed bounding size of `%s`. You need to scale up or remodel the asset.<br/><br/>Full body size is smaller than the min allowed bounding size of `%s`. You need to scale up or remodel the asset</td>
-    <td>Try rescaling your asset to keep the original aspect ratio. If that doesn't resolve the issue, try to scale along the axis that is failing validation.</td>
-  </tr>
-  <tr>
-    <td>`%s` has size larger than max allowed bounding size. The max size for type `%s` is [`%f`, `%f`, `%f`]</td>
-    <td>Your model has one or more small pieces of geometry disconnected from your main mesh that contribute to the overall size. This issue is usually associated with small pieces or particles. You need to either remove these small pieces from your model or scale them to become visible.</td>
-  </tr>
-  <tr>
-    <td>`%s` mesh is too small or made of disconnected pieces that are too small. <br /><br />Detected `%s` centered around `%s` that increases `%s` bounding box. Remove the geometry or increase its size so that it is more visible.</td>
-    <td>The model mesh is too large. You need to scale it down.</td>
-  </tr>
-</tbody>
-</table>
-
-## High-resolution model(s)
-
-The following errors relate to the mesh resolution of your model. Depending on your asset type, the model must be within specific bounds.
-
-See the following for more information on acceptable mesh budgets:
-
-- [Rigid accessory resolution specifications](./accessories/specifications.md#geometry-and-budgets)
-- [Clothing resolution specifications](./accessories/clothing-specifications.md#geometry-and-budgets)
-- [Body resolution specifications](./characters/specifications.md#triangle-budgets)
-
-<table>
-  <thead>
-    <tr>
-    <th style={{width:"50%"}}>Error Message</th>
-    <th>Additional notes</th>
-    </tr>
-  </thead>
-<tbody>
- <tr>
-    <td>Mesh resolution of `%d` for model `%s` is higher than max supported number of triangles `%d`. You need to retopologize your model to reduce the triangle count. </td>
-    <td>The resolution of your model mesh is too high. You need to retopologize the model to bring the resolution down below the [allowed limits](../art/modeling/specifications.md#geometry).</td>
-  </tr>
-  <tr>
-    <td>Model mesh `%s` resolution of `%d` is higher than max supported value of `%d`. You need to retopologize your model and try again.<br/><br/>Your mesh exceeds the max triangle limit for UGC upload requirements.</td>
-    <td>The resolution of your model (number of triangles) is higher than the maximum [allowed limit](../art/modeling/specifications.md#geometry). You need to retopologize and remove enough triangles to bring the total count below this limit.</td>
-  </tr>
-</tbody>
-</table>
-
-## Invalid accessory setup
-
-The following errors relate to the rigid or layered accessory components of your asset.
-
-See the following for more information on acceptable mesh budgets:
-
-- [Rigid accessory specifications](./accessories/specifications.md)
-- [Clothing specifications](./accessories/clothing-specifications.md)
-
-<table>
-  <thead>
-    <tr>
-    <th style={{width:"50%"}}>Error Message</th>
-    <th>Additional notes</th>
-    </tr>
-  </thead>
-<tbody>
-  <tr>
-    <td>All MeshParts must have the same value in their `AvatarPartScaleType` child. Please verify the values match.</td>
-    <td>The `AvatarPartScaleType` property is used to scale the MeshPart. Possible values are: `Classic`, `ProportionsNormal`, `ProportionsSlender`. <br/><br/>Combining MeshParts with different scales (equipping an accessory to an avatar body) results in a visual mismatch that makes them look too large or too small compared to each another.</td>
-  </tr>
-  <tr>
-    <td>`%s`.`%s` ( `%s` ) being used is not owned by the experience creator or player. You can only publish assets that you own.</td>
-    <td>You need to own the assets being validated.</td>
-  </tr>
-  <tr>
-    <td>Upload of model has too many children assets (Meshes, Textures, etc.) and cannot be processed as is. You need to rearrange the model.</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Model meshId mismatch between `MeshPart.MeshId` and `SpecialMesh.MeshId` for `%s`. You need to match the meshIds and try again.</td>
-    <td>Verify `Class.Model` includes a `Class.MeshPart` or `Class.SpecialMesh` with the correct IDs.</td>
-  </tr>
-  <tr>
-    <td>Asset type `%s` is not a rigid accessory category. It can only be used with layered clothing.</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Model meshId mismatch with rigid accessory SpecialMesh.MeshId for `%s`. You need to match the meshIds and try again.</td>
-    <td>Verify `Class.Model` includes a `Class.MeshPart` or `Class.SpecialMesh` with the correct IDs.</td>
-  </tr>
-  <tr>
-    <td>Failed to execute vertex density check for `%s`. Make sure mesh exists and try again.</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>The maximum vertex density has been exceeded. Reduce the number of vertices that are very close to each other.</td>
-    <td>Your accessory cage has too many vertices close together. This may cause the system to treat them as repeated vertices, or zero area triangles. You need to [edit and move the vertices away](../art/accessories/caging-best-practices.md) from each other in the region(s) they are almost coincident.</td>
-  </tr>
-  <tr>
-    <td>Accessory MeshPart `%s` must contain a valid meshId. Make sure the mesh referred to by the meshId exists and try again.</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Body part `%s` does not follow R15 schema. The specific issues are: `%s`</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Failed to execute max total surface area check for `%s`. Make sure mesh exists and try again.</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>The total surface area of model mesh `%s` is `%f`, it cannot be greater than `%d`. You must reduce the number and/or size of all triangles.<br/><br/>The total surface area of model mesh `%s` is greater than `%d`. You must reduce the number and/or size of all triangles.</td>
-    <td>Your model mesh has too many triangles on screen that cannot be culled. This will cause performance problems during gameplay when using lower powered mobile devices. You need to reduce the triangle count of your model.</td>
-  </tr>
-  <tr>
-    <td>Failed to execute similarity mesh vertex check for `%s`. Make sure mesh exists and try again.</td>
-    <td></td>
-  </tr>
-  <tr id = "cageDensity">
-    <td>`%s` has `%d` % of vertices too close to each other. Please edit the vertices to have at most `%d` % coincident or close to one another.</td>
-    <td>Your accessory cage has too many vertices close together. This may cause the system to treat them as repeated vertices, or zero area triangles. You need to [edit and move](../art/accessories/caging-best-practices.md) the vertices away from each other in the region(s) they are almost coincident.</td>
-  </tr>
-</tbody>
-</table>
-
-## Invalid body setup
-
-The following errors relate to character body configurations.
-
-See the following for more information on various character body components:
-
-- [Body specifications](./characters/specifications.md)
-
-<table>
-  <thead>
-    <tr>
-    <th style={{width:"50%"}}>Error Message</th>
-    <th>Additional notes</th>
-    </tr>
-  </thead>
-<tbody>
-<tr>
-    <td>`%s` is not visible enough from the `%s`. The most visible region found scored `%.2f` but needs to be above `%.2f`.<br/><br/>Mesh for `%s` is completely invisible from the `%s`.</td>
-    <td>Your accessory or body part is too thin along one dimension (`X`, `Y`, or `Z`) and can become invisible (or hardly visible) during gameplay. You need to scale up your asset along the axis failing validation.</td>
-  </tr>
-  <tr>
-    <td>Expected `%s` CollisionFidelity to be `%s`.</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Unable to run full body validation due to previous errors detected while processing individual body parts.</td>
-    <td>Too many validation errors already detected and reported. You need to fix the reported ones first to have visibility on the additional ones remaining.</td>
-  </tr>
-  <tr>
-    <td>Full body check did not receive the correct set of body part Asset Types (i.e. Head, Torso, LeftArm, RightArm, LeftLeg, RightLeg). Make sure the body model is valid and try again.</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Unable to run full body validation due to previous errors detected while processing individual body parts.</td>
-    <td>Too many validation errors already detected and reported. You need to fix the reported ones first to have visibility on the additional ones remaining.</td>
-  </tr>
-  <tr>
-    <td>The `AvatarPartScaleType` value in `%s` is invalid. Verify the value you are using is either `Classic`, `ProportionsSlender`, or `ProportionsNormal`.</td>
-    <td></td>
-  </tr>
-</tbody>
-</table>
-
-## Invalid cage mesh setup
-
-The following errors relate to cage mesh issues for layered accessories.
-
-See the following for more information and resources:
+See the following resources for caging:
 
 - [Caging best practices and video](./accessories/caging-best-practices.md)
 - [Clothing caging specifications](./accessories/clothing-specifications.md#cage-meshes)
@@ -297,6 +207,11 @@ See the following for more information and resources:
   <tr id = "cageMeshDistance">
     <td>Average distance between outer cage to mesh is too high. Mesh seems to be outside of the outer cage.<br/><br/>Average distance between outer cage to mesh is too high %. Make adjustment to cage to fit the mesh better.</td>
     <td>The outer cage is too far away from its corresponding body or accessory model mesh. You need to [remodel the outer cage](../art/accessories/caging-best-practices.md) and bring its vertices closer to the model mesh.</td>
+  </tr>
+
+  <tr id ="cageInsideMesh">
+    <td>Validation detected `%d`% of the accessory is outside its outer cage. Make adjustments to have more of the accessory placed between the cages.</td>
+    <td>The outer cage needs to envelop the model mesh of its corresponding accessory. This check has detected a large portion of the model mesh is outside its outer cage. You need to edit the model and/or the cage to fix this issue.</td>
   </tr>
   <tr>
     <td>The average distance between the layered accessory `%s` and its outer cage is too large. You need to edit the cage to be within `%s` from the accessory.</td>
@@ -331,7 +246,7 @@ See the following for more information and resources:
     <td>There are edges in your cage model mesh that are connected to more than two faces, possibly caused by stacked or very closely positioned vertices. You need to remodel your cage to fix these issues.</td>
   </tr>
   <tr>
-    <td>Failed to load model mesh `%s`. Make sure the mesh exists and try again.</td>
+    <td>Failed to execute cage detection for `%s`. Make sure the cage mesh exists and try again.</td>
     <td></td>
   </tr>
   <tr>
@@ -358,10 +273,7 @@ See the following for more information and resources:
     <td>WrapLayer `%s` found under `%s`.`%s` has a CageOrigin position greater than `%f`. You need to set `CageOrigin.Position` to `0`,`0`,`0`.</td>
     <td>Cage origin position needs to be set to (`0`,`0`,`0`). Otherwise your cage will be moved out and may no longer envelop the accessory being deformed.</td>
   </tr>
-  <tr>
-    <td>Failed to execute body part max cage distance check. Make sure `meshHandle.Name`'s render mesh and its WrapTarget's cage mesh exist, and try again.</td>
-    <td></td>
-  </tr>
+
   <tr>
     <td>Cage mesh verts referenced in `%s`.`%s`.`CageMeshId` were found that are `%.2f` studs outside the %s render mesh. `%s` studs is the maximum. Please reduce the size of your cage mesh.</td>
     <td></td>
@@ -375,12 +287,16 @@ See the following for more information and resources:
     <td>Only `%d%%` of the render mesh verts are situated in the modified %s area of the WrapLayer CageMesh (outer mesh). `%d%%` is required. Move the render mesh to be within the modified `%s` area of the WrapLayer CageMesh (outer mesh).</td>
     <td></td>
   </tr>
+  <tr>
+    <td>Missing HSR data for `%s`. Please, try again.</td>
+    <td>The HSR (Hidden Surface Removal) data is calculated in the cloud server and may take a few minutes to be updated for your assets. Wait some time and try again.</td>
+  </tr>
 </tbody>
 </table>
 
-## Invalid cage UV setup
+## Cage UV
 
-The following errors relate to cage mesh UV issues for layered accessories. Roblox recommends never altering or manipulating the UVs of your cage objects, although this may occur accidentally when modeling.
+Cage UV errors relate to cage mesh UV issues for layered accessories and bodies. Roblox recommends never altering or manipulating the UVs of your cage objects, although this may occur accidentally when modeling or within Studio.
 
 See the following for more information and resources:
 
@@ -448,9 +364,14 @@ See the following for more information and resources:
 </tbody>
 </table>
 
-## Invalid HSR setup
+## Accessory
 
-Roblox uses Hidden surface removal (HSR) to calculate the correct rendering of layered assets.
+Accessory errors relate to the rigid or layered accessory components of your asset.
+
+See the following for more information:
+
+- [Rigid accessory specifications](./accessories/specifications.md)
+- [Clothing specifications](./accessories/clothing-specifications.md)
 
 <table>
   <thead>
@@ -460,22 +381,83 @@ Roblox uses Hidden surface removal (HSR) to calculate the correct rendering of l
     </tr>
   </thead>
 <tbody>
+
   <tr>
-    <td>Missing HSR data for `%s`. Please, try again.</td>
-    <td>The HSR (Hidden Surface Removal) data is calculated in the cloud server and may take a few minutes to be updated for your assets. Wait some time and try again.</td>
+    <td>Upload of model has too many children assets (Meshes, Textures, etc.) and cannot be processed as is. You need to rearrange the model.</td>
+    <td></td>
+  </tr>
+  
+  <tr>
+    <td>Asset type `%s` is not a rigid accessory category. It can only be used with layered clothing.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Model meshId mismatch with rigid accessory SpecialMesh.MeshId for `%s`. You need to match the meshIds and try again.</td>
+    <td>Verify `Class.Model` includes a `Class.MeshPart` or `Class.SpecialMesh` with the correct IDs.</td>
+  </tr>
+  <tr>
+    <td>Accessory MeshPart `%s` must contain a valid meshId. Make sure the mesh referred to by the meshId exists and try again.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Accessory name must match "Accessory (Name)" format style (i.e. "Accessory (MyAccessory)" if you want to name your accessory ).</td>
+    <td></td>
   </tr>
 </tbody>
 </table>
 
-## Invalid attachment setup
+## Layered clothing
 
-The following errors relate to attachment issues for accessories and bodies.
+Layered clothing errors refer to the layered accessory components of your asset.
 
-See the following for more information and resources:
+See the following for more information on layered accessories:
 
-- [Rigid accessory attachment specifications](./accessories/specifications.md#attachment-points)
-- [Clothing attachment specifications](./accessories/clothing-specifications.md#attachment-points)
-- [Body attachment specifications](./characters/specifications.md#attachments)
+- [Clothing overview](./accessories/layered-clothing.md)
+- [Clothing specifications](./accessories/clothing-specifications.md)
+
+<table>
+  <thead>
+    <tr>
+    <th style={{width:"50%"}}>Error Message</th>
+    <th>Additional notes</th>
+    </tr>
+  </thead>
+<tbody>
+   <tr id = "cageDensity">
+    <td>`%s` has `%d` % of vertices too close to each other. Please edit the vertices to have at most `%d` % coincident or close to one another.</td>
+    <td>Your accessory cage has too many vertices close together. This may cause the system to treat them as repeated vertices, or zero area triangles. You need to [edit and move](../art/accessories/caging-best-practices.md) the vertices away from each other in the region(s) they are almost coincident.</td>
+  </tr>
+  <tr>
+    <td>Failed to load layered clothing accessory `%s`. Make sure mesh exists and try again.<br/><br/>Failed to load texture for layered clothing accessory `%s`. Make sure texture exists and try again.<br/><br/>Failed to load children assets (Meshes, Textures, etc.) for `%s`. Make sure the assets exist and try again.</td>
+    <td></td>
+  </tr>
+  <tr>
+   <td>Asset type `%s` is not a layered clothing category. It can only be used with rigid accessories.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Missing meshId on layered clothing accessory `%s`. Make sure you are using a valid meshId and try again.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Missing WrapLayer on layered clothing accessory `%s`. You need to create a child WrapLayer and try again.</td>
+    <td>Make sure you converted your model into a layered accessory (you might have [converted to a rigid accessory](../art/accessories/accessory-fitting-tool.md#generate-legacy-accessory) instead or selected the wrong asset type).</td>
+  </tr>
+  <tr>
+    <td>The maximum vertex density has been exceeded. Reduce the number of vertices that are very close to each other.</td>
+    <td>Your accessory cage has too many vertices close together. This may cause the system to treat them as repeated vertices, or zero area triangles. You need to [edit and move the vertices away](../art/accessories/caging-best-practices.md) from each other in the region(s) they are almost coincident.</td>
+  </tr>
+
+</tbody>
+</table>
+
+## Body
+
+Body errors refer to issues related to body-specific components of your asset.
+
+See the following for more information on various character body components:
+
+- [Body specifications](./characters/specifications.md)
 
 <table>
   <thead>
@@ -495,12 +477,56 @@ See the following for more information and resources:
     <td>Attachment `%s` in `%s` is placed at a position `%s` that is outside the valid range. You need to adjust the attachment position.<br/><br/>Attachment `%s` in `%s` is placed at a position `%s` that is outside the valid range of (`%s` to `%s`). You need to adjust the attachment position.</td>
     <td>Body attachments need to be within reasonable distance from the body][should not have an applied rotation](../art/characters/specifications.md#attachments) to avoid introducing unrealistic gaps when equipping accessories to those attachments.</td>
   </tr>
+  <tr>
+    <td>Body part `%s` does not follow R15 schema. The specific issues are: `%s`</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Failed to load body part mesh `%s`. Make sure body part exists and try again.</td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>Expected `%s` CollisionFidelity to be `%s`.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Unable to run full body validation due to previous errors detected while processing individual body parts.</td>
+    <td>Too many validation errors already detected and reported. You need to fix the reported ones first to have visibility on the additional ones remaining.</td>
+  </tr>
+  <tr>
+    <td>Full body check did not receive the correct set of body part Asset Types (i.e. Head, Torso, LeftArm, RightArm, LeftLeg, RightLeg). Make sure the body model is valid and try again.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Unable to run full body validation due to previous errors detected while processing individual body parts.</td>
+    <td>Too many validation errors already detected and reported. You need to fix the reported ones first to have visibility on the additional ones remaining.</td>
+  </tr>
+  <tr>
+    <td>`%s` is at a `%d` degree angle from the X,Y plane, it must be within `%d` degrees. Make sure the character is in I pose, A pose, or T pose.</td>
+    <td>Validation detects that the body is not one of the following supported poses:<br/><br/><ul><li>T-pose (arms are parallel to the floor and perpendicular to the torso)</li><li>A-pose (arms are about 45 degrees with respect to the floor)</li><li>I-pose (arms are perpendicular to the floor and parallel to the torso)</li></ul></td>
+  </tr>
+  <tr>
+    <td>The `AvatarPartScaleType` value in `%s` is invalid. Verify the value you are using is either `Classic`, `ProportionsSlender`, or `ProportionsNormal`.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Attribute `%s` has different values in different children folders. You need to use the same value in all folders.</td>
+    <td>Verify extra attributes are initialized the same way on all children folders.</td>
+  </tr>
+  <tr>
+    <td>All MeshParts must have the same value in their `AvatarPartScaleType` child. Please verify the values match.</td>
+    <td>The `AvatarPartScaleType` property is used to scale the MeshPart. Possible values are: `Classic`, `ProportionsNormal`, `ProportionsSlender`. <br/><br/>Combining MeshParts with different scales (equipping an accessory to an avatar body) results in a visual mismatch that makes them look too large or too small compared to each another.</td>
+  </tr>
 </tbody>
 </table>
 
-## Failed to load or execute
+## Head
 
-The following errors relate to issues with the data model and configurations. Many of these may be caused by incorrect export from modeling software, or incorrect modifications made in Studio.
+Head errors relate to issues with the head geometry or FACS animation data associated with your head geometry.
+
+See the following for more information on various character head components:
+
+- [Head specifications](./characters/specifications.md#facial-animations)
 
 <table>
   <thead>
@@ -510,6 +536,56 @@ The following errors relate to issues with the data model and configurations. Ma
     </tr>
   </thead>
 <tbody>
+  <tr>
+    <td>Failed to load model for dynamic head `%s`. Make sure model exists and try again.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Failed validation for dynamic head `%s` due to missing FACS information. You need to provide FACS controls for at least 17 poses (see documentation).</td>
+    <td>The face controls for dynamic heads need to have [at least 17 poses](../art/characters/specifications.md#facial-animations) connected to the rig. This is necessary to enforce a minimum level of face expressions for avatars during gameplay. You need to setup additional face controls that are missing.</td>
+  </tr>
+  <tr>
+    <td>`%s` is missing FACS controls: `%s`<br/>`%s` has inactive FACS controls: `%s`</td>
+    <td>Face controls need to be connected to the face rig. You need to reconnect the inactive controls.</td>
+  </tr>
+  <tr>
+    <td>Unable to capture snapshot of DynamicHead `%s`<br/><br/>Failed to read data from snapshot of DynamicHead `%s`<br/><br/>DynamicHead `%s` when emoting surpasses the expected bounding box</td>
+    <td>An animation pose is invalid or may extend past the expected bounding box. You need to recalibrate the face controls connected to the face rig.</td>
+  </tr>
+
+</tbody>
+</table>
+
+## Data model / runtime
+
+Data model or runtime errors refer to issues with loading parts of the data model or running checks.
+
+These errors can occur from modeling issues, exporting issues, studio importing issues, accidental changes to data model, or generic issues loading and processing parts of the asset.
+
+<table>
+  <thead>
+    <tr>
+    <th style={{width:"50%"}}>Error Message</th>
+    <th>Additional notes</th>
+    </tr>
+  </thead>
+<tbody>
+  <tr>
+    <td>Asset could not be loaded</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Failed to execute max total surface area check for `%s`. Make sure mesh exists and try again.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Failed to execute similarity mesh vertex check for `%s`. Make sure mesh exists and try again.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Failed to load `meshHandle.Name`'s render mesh data.</td>
+    <td></td>
+  </tr>
 <tr>
     <td>Failed to load detailed information for model assets. Make sure all model assets exist and try again.</td>
     <td></td>
@@ -523,35 +599,11 @@ The following errors relate to issues with the data model and configurations. Ma
     <td></td>
   </tr>
   <tr>
-    <td>Failed to load UVs for `%s`. Make sure the UV map exists and try again.</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Asset could not be loaded</td>
+    <td>Failed to load model mesh `%s`. Make sure the mesh exists and try again.</td>
     <td></td>
   </tr>
   <tr>
     <td>Failed to retrieve mesh data to validate skinned mesh.<br/><br/>Failed to load mesh for `%s`. Make sure mesh exists and try again.</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Failed to load model for dynamic head `%s`. Make sure model exists and try again.</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Failed to execute cage detection for `%s`. Make sure the cage mesh exists and try again.</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Failed to load layered clothing accessory `%s`. Make sure mesh exists and try again.<br/><br/>Failed to load texture for layered clothing accessory `%s`. Make sure texture exists and try again.<br/><br/>Failed to load children assets (Meshes, Textures, etc.) for `%s`. Make sure the assets exist and try again.</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Failed to execute validateMeshBounds check.</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Failed to load body part mesh `%s`. Make sure body part exists and try again.</td>
     <td></td>
   </tr>
   <tr>
@@ -563,19 +615,15 @@ The following errors relate to issues with the data model and configurations. Ma
     <td></td>
   </tr>
   <tr>
-    <td>Failed to execute triangle count check for `%s`. Make sure mesh exists and try again.</td>
-    <td></td>
-  </tr>
-  <tr>
     <td>Failed to load model mesh `%s`. Make sure the mesh exists and try again.</td>
     <td></td>
   </tr>
   <tr>
-    <td>Failed to load vertex color map for model mesh `%s`. Make sure it exists and try again.</td>
+    <td>Failed to execute triangle count check for `%s`. Make sure mesh exists and try again.</td>
     <td></td>
   </tr>
   <tr>
-    <td>Failed to execute UV mismatch check for `%s`. Make sure UV map exists and try again.</td>
+    <td>Failed to load vertex color map for model mesh `%s`. Make sure it exists and try again.</td>
     <td></td>
   </tr>
   <tr>
@@ -594,38 +642,11 @@ The following errors relate to issues with the data model and configurations. Ma
     <td>Failed to execute validateUVSpace check on `%s`. Make sure the UV maps exists and try again.</td>
     <td></td>
   </tr>
-</tbody>
-</table>
-
-## Runtime dependencies
-
-The following errors relate to runtime errors related to your asset. This can range between moderation, rendering, permissions, data model, and more.
-
-<table>
-  <thead>
-    <tr>
-    <th style={{width:"50%"}}>Error Message</th>
-    <th>Additional notes</th>
-    </tr>
-  </thead>
-<tbody>
-<tr>
-    <td>Asset `%s` is not owned by the current user. You can only validate assets that you or a group you belong to owns.</td>
-    <td>You need to own the assets being validated.</td>
-  </tr>
   <tr>
-    <td>Asset `%s` is not owned by the current user. You can only validate assets that you or a group you belong to owns.</td>
-    <td>You need to own the assets being validated.</td>
-  </tr>
-  <tr>
-    <td>Failed to load asset `%s` that is still going through the review process. Please, wait for a notification of completion from the review process and try again.</td>
-    <td>Your asset is currently in moderation queue. Roblox can only validate assets that have already passed moderation.</td>
-  </tr>
-  <tr>
-    <td>Failed to parse feedback from model review for `%s`. Make sure the review process is complete and try again.</td>
+    <td>Failed to load layered clothing accessory `%s`. Make sure mesh exists and try again.<br/><br/>Failed to load texture for layered clothing accessory `%s`. Make sure texture exists and try again.<br/><br/>Failed to load children assets (Meshes, Textures, etc.) for `%s`. Make sure the assets exist and try again.</td>
     <td></td>
   </tr>
-  <tr>
+<tr>
     <td>`%s` contains attributes in its properties that are not allowed. You need to remove the following attributes: `%s`</td>
     <td></td>
   </tr>
@@ -633,22 +654,7 @@ The following errors relate to runtime errors related to your asset. This can ra
     <td>Failed to get triangle face information from model mesh `%s`. Make sure model exists and try again.</td>
     <td></td>
   </tr>
-  <tr>
-    <td>Bounds for the mesh `%s` are not centered at the origin. The max allowed distance is `%f`</td>
-    <td>The asset model mesh is too far away from the origin. Usually the center of the model and the origin of the coordinate system should coincide. </td>
-  </tr>
-  <tr>
-    <td>Failed validation for dynamic head `%s` due to missing FACS information. You need to provide FACS controls for at least 17 poses (see documentation).</td>
-    <td>The face controls for dynamic heads need to have [at least 17 poses](../art/characters/specifications.md#facial-animations) connected to the rig. This is necessary to enforce a minimum level of face expressions for avatars during gameplay. You need to setup additional face controls that are missing.</td>
-  </tr>
-  <tr>
-    <td>`%s` is missing FACS controls: `%s`<br/>`%s` has inactive FACS controls: `%s`</td>
-    <td>Face controls need to be connected to the face rig. You need to reconnect the inactive controls.</td>
-  </tr>
-  <tr>
-    <td>Unable to capture snapshot of DynamicHead `%s`<br/><br/>Failed to read data from snapshot of DynamicHead `%s`<br/><br/>DynamicHead `%s` when emoting surpasses the expected bounding box</td>
-    <td>An animation pose is invalid or may extend past the expected bounding box. You need to recalibrate the face controls connected to the face rig.</td>
-  </tr>
+
   <tr>
     <td>Detected the following error(s): `%s`<br/>`%s` has an invalid name<br/>`%s` is of type `%s` which is not allowed</td>
     <td></td>
@@ -663,48 +669,20 @@ The following errors relate to runtime errors related to your asset. This can ra
     <td></td>
   </tr>
   <tr>
-    <td>`%s` is more than max difference `%f` in size compared to the other mesh `%s`. You need to edit the model to adjust its size.</td>
-    <td>The model mesh is too big. You need to scale it down.</td>
-  </tr>
-  <tr>
-    <td>Asset(s) failed to pass moderation: `%s`.</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Failed to fetch moderation results for `%s`. Make sure all assets are owned by the current user.</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Failed to parse moderation results for `%s`. Make sure moderation process is completed and try again.</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Failed to validate current user during moderation. Make sure you own the assets being validated and try again.</td>
-    <td>You need to own the assets being validated.</td>
-  </tr>
-  <tr>
     <td>Failed to parse package data for model `%s`. Make sure the packageId is valid and try again.</td>
     <td></td>
-  </tr>
-  <tr>
-    <td>`%s` is at a `%d` degree angle from the X,Y plane, it must be within `%d` degrees. Make sure the character is in I pose, A pose, or T pose.</td>
-    <td>Validation detects that the body is not one of the following supported poses:<br/><br/><ul><li>T-pose (arms are parallel to the floor and perpendicular to the torso)</li><li>A-pose (arms are about 45 degrees with respect to the floor)</li><li>I-pose (arms are perpendicular to the floor and parallel to the torso)</li></ul></td>
   </tr>
   <tr>
     <td>Property `%s` does not exist on type `%s`. Delete the property and try again.</td>
     <td></td>
   </tr>
   <tr>
-    <td>Tying to access property `%s`.`%s` using the incorrect type for it. Expected `%s` to be `%s`.</td>
+    <td>Trying to access property `%s`.`%s` using the incorrect type for it. Expected `%s` to be `%s`.</td>
     <td></td>
   </tr>
   <tr>
     <td>Failed to execute render mesh inside outer mesh check for `%s` and `%s`. Make sure the meshes exists and try again.</td>
     <td></td>
-  </tr>
-  <tr id ="cageInsideMesh">
-    <td>Validation detected `%d`% of the accessory is outside its outer cage. Make adjustments to have more of the accessory placed between the cages.</td>
-    <td>The outer cage needs to envelop the model mesh of its corresponding accessory. This check has detected a large portion of the model mesh is outside its outer cage. You need to edit the model and/or the cage to fix this issue.</td>
   </tr>
   <tr>
     <td>Selected more than one instance of type `%s`. Please, select a single instance of this type and try again.</td>
@@ -726,12 +704,22 @@ The following errors relate to runtime errors related to your asset. This can ra
     <td>Asset `%s` is positioned outside the thumbnail's camera view. You need to reposition the asset at the center of the camera view and try again.</td>
     <td>You need to move your asset to the origin of the coordinate system.</td>
   </tr>
+  <tr>
+    <td>Failed to execute vertex density check for `%s`. Make sure mesh exists and try again.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Failed to execute body part max cage distance check. Make sure `meshHandle.Name`'s render mesh and its WrapTarget's cage mesh exist, and try again.</td>
+    <td></td>
+  </tr>
 </tbody>
 </table>
 
-## Runtime validation
+## Permission / moderation
 
-The following errors relate to runtime errors related to your asset. This can range between moderation, rendering, permissions, data model, and more.
+Permission and moderation errors relate to issues with the asset's ownership or moderation review. Many moderation issues resolve after a period of time.
+
+Ensure that you or your group has permission to use all parts of your asset, including the model and texture assets.
 
 <table>
   <thead>
@@ -741,91 +729,43 @@ The following errors relate to runtime errors related to your asset. This can ra
     </tr>
   </thead>
 <tbody>
-  <tr>
-    <td>Attribute `%s` has different values in different children folders. You need to use the same value in all folders.</td>
-    <td>Verify extra attributes are initialized the same way on all children folders.</td>
+
+<tr>
+    <td>Asset `%s` is not owned by the current user. You can only validate assets that you or a group you belong to owns.</td>
+    <td>You need to own the assets being validated.</td>
   </tr>
-</tbody>
-</table>
-
-## Invalid layered clothing setup
-
-The following errors relate to issues with layered clothing.
-
-See the following for more information on layered accessories:
-
-- [Clothing overview](./accessories/layered-clothing.md)
-- [Clothing specifications](./accessories/clothing-specifications.md)
-
-<table>
-  <thead>
-    <tr>
-    <th style={{width:"50%"}}>Error Message</th>
-    <th>Additional notes</th>
-    </tr>
-  </thead>
-<tbody>
   <tr>
-   <td>Asset type `%s` is not a layered clothing category. It can only be used with rigid accessories.</td>
+    <td>`%s`.`%s` ( `%s` ) being used is not owned by the experience creator or player. You can only publish assets that you own.</td>
+    <td>You need to own the assets being validated.</td>
+  </tr>
+  <tr>
+    <td>Asset `%s` is not owned by the current user. You can only validate assets that you or a group you belong to owns.</td>
+    <td>You need to own the assets being validated.</td>
+  </tr>
+  <tr>
+    <td>Failed to load asset `%s` that is still going through the review process. Please, wait for a notification of completion from the review process and try again.</td>
+    <td>Your asset is currently in moderation queue. Roblox can only validate assets that have already passed moderation.</td>
+  </tr>
+  <tr>
+    <td>Failed to parse feedback from model review for `%s`. Make sure the review process is complete and try again.</td>
+    <td></td>
+  </tr>
+  
+  <tr>
+    <td>Asset(s) failed to pass moderation: `%s`.</td>
     <td></td>
   </tr>
   <tr>
-    <td>Missing meshId on layered clothing accessory `%s`. Make sure you are using a valid meshId and try again.</td>
+    <td>Failed to fetch moderation results for `%s`. Make sure all assets are owned by the current user.</td>
     <td></td>
   </tr>
   <tr>
-    <td>Missing WrapLayer on layered clothing accessory `%s`. You need to create a child WrapLayer and try again.</td>
-    <td>Make sure you converted your model into a layered accessory (you might have [converted to a rigid accessory](../art/accessories/accessory-fitting-tool.md#generate-legacy-accessory) instead or selected the wrong asset type).</td>
-  </tr>
-  <tr>
-    <td>Detected zero-area triangle in model mesh `%s`. You need to edit the mesh to remove zero-area triangles.</td>
-    <td>Your model mesh has some vertices too close to each other that they create zero area triangles. You need to move these vertices apart to resolve this issue.</td>
-  </tr>
-</tbody>
-</table>
-
-## Invalid mesh setup
-
-The following errors relate to general mesh setup issues.
-
-See the following for more information on Roblox's mesh requirements:
-
-- [Generic mesh specifications](./modeling/specifications.md)
-
-<table>
-  <thead>
-    <tr>
-    <th style={{width:"50%"}}>Error Message</th>
-    <th>Additional notes</th>
-    </tr>
-  </thead>
-<tbody>
-  <tr>
-    <td>Failed to load `meshHandle.Name`'s render mesh data.</td>
+    <td>Failed to parse moderation results for `%s`. Make sure moderation process is completed and try again.</td>
     <td></td>
   </tr>
   <tr>
-    <td>Detected two or more vertices in model mesh `%s` sharing near identical positions. You need to position vertices by at least `%s` apart from each other.</td>
-    <td>Make sure there are no coincident vertices in your model mesh.</td>
-  </tr>
-</tbody>
-</table>
-
-## Invalid naming
-
-The following errors relate to the naming of your asset.
-
-<table>
-  <thead>
-    <tr>
-    <th style={{width:"50%"}}>Error Message</th>
-    <th>Additional notes</th>
-    </tr>
-  </thead>
-<tbody>
-  <tr>
-    <td>Accessory name must match "Accessory (Name)" format style (i.e. "Accessory (MyAccessory)" if you want to name your accessory ).</td>
-    <td></td>
+    <td>Failed to validate current user during moderation. Make sure you own the assets being validated and try again.</td>
+    <td>You need to own the assets being validated.</td>
   </tr>
 </tbody>
 </table>

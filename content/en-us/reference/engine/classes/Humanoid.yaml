@@ -316,8 +316,24 @@ properties:
       - Avatar
     writeCapabilities: []
   - name: Humanoid.EvaluateStateMachine
-    summary: ''
-    description: ''
+    summary: |
+      Used to disable the internal physics and state machine of the Humanoid.
+    description: |
+      Used to disable the internal physics and state machine of the `Humanoid`.
+
+      #### What does turning this off do?
+
+      - **No forces** - The humanoid will not apply forces to any of its parts. The humanoid will not move the character in any way.
+      - **No sensors** - The humanoid will not run any spatial queries to detect floors, ladders, or other obstacles (such as auto-jump).
+      - **No collision changes** - The humanoid will not alter the collision state of any of the character parts. By default, only the torso and head have `Class.Part.CanCollide` enabled.
+      - **No state transitions or replication** - The humanoid will not automatically update its state. You can still set humanoid state with a script, but it will not automatically replicate.
+
+      #### What does turning this off **not** do?
+
+      - **State events** - If manually setting humanoid states, the events for each of the humanoid's states and `Class.Humanoid.StateChanged|StateChanged` will still fire, which means the Animate script will still receive them and animate the character based on its current humanoid state.
+      - **Appearance** - `Class.HumanoidDescription`, clothes, accessories and other humanoid rendering behavior.
+      - **Camera and player scripts** - The humanoid is still linked to `Class.Players` and camera scripts, which ensures the camera will continue to follow the `Class.Humanoid.RootPart`.
+      - **Player input handling** - The `Class.Humanoid.MoveDirection` property will still be updated via the `Class.Humanoid:Move()` function and `Class.PlayerScripts` for input.
     code_samples: []
     type: boolean
     tags: []
