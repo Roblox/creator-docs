@@ -28,7 +28,7 @@ Eligible creators can add commerce products to their experience. To be eligible,
   - Alternatively, you must have written permission to link the Shopify store from its registered account holder.
 - Have submitted **Business Information**. You can access this submission form in the following ways:
   - **Commerce Eligibility page** — When visiting the commerce page for the first time, an eligibility form appears.
-  - **Creator Dashboard** — In [Account Information](https://create.roblox.com/dashboard/account-information), you must completely fill out the **Core Account** and **Legal** tabs.
+  - **Creator Dashboard** — In [Account Information](https://create.roblox.com/dashboard/account-information), you must fill out the **Core Account** and **Legal** tabs. You can skip the Extended Services section under Core Account if it appears.
   - To submit business information on behalf of a group, creator must have **Configure and spend group revenue** enabled.
 - If accessing commerce settings on behalf of a group, your role must have **Create and edit community experiences** enabled.
 - Be in good standing with respect to Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) on an on-going basis.

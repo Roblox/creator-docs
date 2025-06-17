@@ -38,8 +38,13 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: InputAction.Direction1DState
-    summary: ''
-    description: ''
+    summary: |
+      Non-scriptable read-only property useful for debugging
+      `Enum.InputActionType|Direction1D` input actions.
+    description: |
+      A non-scriptable read-only property only visible in Studio, primarily
+      useful for debugging while testing an `InputAction` with
+      `Class.InputAction.Type|Type` of `Enum.InputActionType|Direction1D`.
     code_samples: []
     type: float
     tags:
@@ -58,8 +63,13 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: InputAction.Direction2DState
-    summary: ''
-    description: ''
+    summary: |
+      Non-scriptable read-only property useful for debugging
+      `Enum.InputActionType|Direction2D` input actions.
+    description: |
+      A non-scriptable read-only property only visible in Studio, primarily
+      useful for debugging while testing an `InputAction` with
+      `Class.InputAction.Type|Type` of `Enum.InputActionType|Direction2D`.
     code_samples: []
     type: Vector2
     tags:
@@ -78,8 +88,13 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: InputAction.Direction3DState
-    summary: ''
-    description: ''
+    summary: |
+      Non-scriptable read-only property useful for debugging
+      `Enum.InputActionType|Direction3D` input actions.
+    description: |
+      A non-scriptable read-only property only visible in Studio, primarily
+      useful for debugging while testing an `InputAction` with
+      `Class.InputAction.Type|Type` of `Enum.InputActionType|Direction3D`.
     code_samples: []
     type: Vector3
     tags:

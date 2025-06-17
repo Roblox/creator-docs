@@ -2,35 +2,19 @@ name: UserInputService
 type: class
 memory_category: Instances
 summary: |
-  `Class.UserInputService` is a service used to detect the type of input
-  available on a user's device via the use of a `Class.LocalScript`. The service
-  is also used to detect input events.
+  `UserInputService` is primarily used to detect the input types available on a
+  user's device, as well as detect input events.
 description: |
-  `Class.UserInputService` is a service used to detect and capture the different
-  types of input available on a user's device.
+  `UserInputService` is primarily used to detect the input types available on a
+  user's device, as well as detect input events. It allows you to perform
+  different actions depending on the device and, in turn, provide the best
+  experience for the end user.
 
-  The primary purpose of this service is to allow for experiences to cooperate
-  with multiple forms of available input, such as gamepads, touch screens, and
-  keyboards. It allows a `Class.LocalScript` to perform different actions
-  depending on the device and, in turn, provide the best experience for the end
-  user.
-
-  Some usages of this service include detecting user input when they interact
-  with GUIs, tools, and other game instances. In order to detect user input, the
-  service must look for a service event. For example, the service can detect
-  events such as when the user touches the screen of a mobile device using
-  `Class.UserInputService.TouchStarted`, or connects a gamepad such as an Xbox
-  controller to their device using `Class.UserInputService.GamepadConnected`.
-
-  Since this service is client-side only, it will only work when used in a
-  `Class.LocalScript` or a `Class.ModuleScript` required by a
-  `Class.LocalScript`. As UserInputService is client-side only, users in the
-  game can only detect their own input - and not the input of others.
-
-  See also `Class.ContextActionService`, a service which allows you to bind
-  functions to multiple user inputs.
-code_samples:
-  - UserInputService
+  As this service is intended for client-side usage only, its properties,
+  methods, and events can only be used in a `Class.LocalScript`, a
+  `Class.ModuleScript` required by a `Class.LocalScript`, or a `Class.Script`
+  with `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client`.
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -43,35 +27,18 @@ properties:
     summary: |
       Describes whether the user's device has an accelerometer.
     description: |
-      This property describes whether the user's device has an accelerometer
-
-      An accelerometer is a component found in most mobile devices that measures
-      acceleration (change in speed).
-
-      For example, the following code snippet demonstrates how to check if the
-      user's device has an accelerometer.
-
-      ```lua
-      local UserInputService = game:GetService("UserInputService")
-
-      local accelerometerEnabled = UserInputService.AccelerometerEnabled
-      if accelerometerEnabled then
-      	print("Accelerometer enabled!")
-      else
-      	print("Accelerometer not enabled!")
-      end
-      ```
+      This property describes whether the user's device has an accelerometer, a
+      component found in most mobile devices that measures acceleration (change
+      in speed).
 
       If the device has an enabled accelerometer, you can get its current
-      acceleration by using the `Class.UserInputService:GetDeviceAcceleration()`
-      function or track when the device's acceleration changes by using the
-      `Class.UserInputService.DeviceAccelerationChanged` event.
-
-      As `Class.UserInputService` is client-side only, this property can only be
-      used in a `Class.LocalScript`.
+      acceleration by using the
+      `Class.UserInputService:GetDeviceAcceleration()|GetDeviceAcceleration()`
+      method or track when the device's acceleration changes through the
+      `Class.UserInputService.DeviceAccelerationChanged|DeviceAccelerationChanged`
+      event.
     code_samples:
       - UserInputService-DeviceGravityChanged
-      - UserInputService-DeviceRotationChanged
     type: boolean
     tags:
       - ReadOnly
@@ -90,29 +57,17 @@ properties:
     writeCapabilities: []
   - name: UserInputService.GamepadEnabled
     summary: |
-      Describes whether the device being used by a user has an available
-      gamepad.
+      Describes whether the user's device has an available gamepad.
     description: |
-      This property describes whether the device being used by a user has an
-      available gamepad. If gamepads are available, you can use
-      `Class.UserInputService:GetConnectedGamepads()` to retrieve a list of
-      connected gamepads.
+      This property describes whether the user's device has an available
+      gamepad. If `true`, you can use gamepad‑related methods such as
+      `Class.UserInputService:GetConnectedGamepads()|GetConnectedGamepads()`.
 
-      As `Class.UserInputService` is client-side only, this property can only be
-      used in a `Class.LocalScript`.
-
-      See also:
-
-      - `Class.UserInputService.GamepadConnected`
-      - `Class.UserInputService.GamepadDisconnected`
-      - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:IsGamepadButtonDown()`
-      - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
-      - `Class.UserInputService:GetGamepadState()`
-      - `Class.UserInputService:GetGamepadConnected()`
-      - `Class.UserInputService:GamepadSupports()`
-    code_samples:
-      - UserInputService-GetActiveGamepad
+      For seamless cross-platform compatibility on mixed-input devices, see
+      `Class.UserInputService.PreferredInput|PreferredInput` which more
+      accurately reflects which input (mouse/keyboard, touch, gamepad, etc.) the
+      player is likely using as the **primary** input.
+    code_samples: []
     type: boolean
     tags:
       - ReadOnly
@@ -133,30 +88,16 @@ properties:
     summary: |
       Describes whether the user's device has a gyroscope.
     description: |
-      This property describes whether the user's device has a gyroscope.
+      This property describes whether the user's device has a gyroscope, a
+      component found in most mobile devices that detects orientation and
+      rotational speed.
 
-      A gyroscope is a component found in most mobile devices that detects
-      orientation and rotational speed.
-
-      If a user's device has a gyroscope, you can use incorporate it into your
-      game using the `Class.UserInputService:GetDeviceRotation()` function and
-      `Class.UserInputService.DeviceRotationChanged` event.
-
-      ```lua
-      local UserInputService = game:GetService("UserInputService")
-
-      local gyroIsEnabled = UserInputService.GyroscopeEnabled
-      if gyroIsEnabled then
-      	print("Gyroscope is enabled!")
-      else
-      	print("Gyroscope is not enabled!")
-      end
-      ```
-
-      As `Class.UserInputService` is client-side only, this property can only be
-      used in a `Class.LocalScript`.
-    code_samples:
-      - UserInputService-DeviceRotationChanged
+      If the device has a gyroscope, you can incorporate it into your experience
+      using the `Class.UserInputService:GetDeviceRotation()|GetDeviceRotation()`
+      method or track when the device's rotation changes through the
+      `Class.UserInputService.DeviceRotationChanged|DeviceRotationChanged`
+      event.
+    code_samples: []
     type: boolean
     tags:
       - ReadOnly
@@ -178,18 +119,15 @@ properties:
       Describes whether the user's device has a keyboard available.
     description: |
       This property describes whether the user's device has a keyboard
-      available. This property is `true` when the user's device has an available
-      keyboard, and `false` when it does not.
+      available. If `true`, you can use key‑related methods such as
+      `Class.UserInputService:IsKeyDown()|IsKeyDown()` or
+      `Class.UserInputService:GetKeysPressed()|GetKeysPressed()`.
 
-      It can be used to determine whether the user has an available keyboard -
-      which can be important if you want to check if you can use
-      `Class.UserInputService:IsKeyDown()` or
-      `Class.UserInputService:GetKeysPressed()` to check for keyboard input.
-
-      As `Class.UserInputService` is client-side only, this property can only be
-      used in a `Class.LocalScript`.
-    code_samples:
-      - UserInputService-KeyboardEnabled
+      For seamless cross-platform compatibility on mixed-input devices, see
+      `Class.UserInputService.PreferredInput|PreferredInput` which more
+      accurately reflects which input (mouse/keyboard, touch, gamepad, etc.) the
+      player is likely using as the **primary** input.
+    code_samples: []
     type: boolean
     tags:
       - ReadOnly
@@ -264,19 +202,15 @@ properties:
       by this property.
 
       This property is overridden if a `Class.GuiButton` with
-      `Class.GuiButton.Modal|Modal` enabled is `Class.GuiButton.Visible` unless
-      the player's right mouse button is down.
+      `Class.GuiButton.Modal|Modal` enabled is `Class.GuiButton.Visible|Visible`
+      unless the player's right mouse button is down.
 
-      Note that, if the mouse is locked, `Class.UserInputService.InputChanged`
-      will still fire when the player moves the mouse and will pass in the Delta
-      that the mouse attempted to move by. Additionally, if the player is kicked
-      from the game, the mouse will be forcefully unlocked.
-
-      As `Class.UserInputService` is client-side only, this property can only be
-      used in a `Class.LocalScript`.
-    code_samples:
-      - UserInputService-MouseDeltaSensitivity
-      - UserInputService-TouchPinch
+      Note that if the mouse is locked,
+      `Class.UserInputService.InputChanged|InputChanged` will still fire when
+      the player moves the mouse and will pass in the delta that the mouse
+      attempted to move by. Additionally, if the player is kicked from the
+      experience, the mouse will be forcefully unlocked.
+    code_samples: []
     type: MouseBehavior
     tags: []
     deprecation_message: ''
@@ -295,31 +229,18 @@ properties:
     summary: |
       Scales the delta (change) output of the user's `Class.Mouse`.
     description: |
-      This property determines the sensitivity of the user's `Class.Mouse`.
+      This property determines the sensitivity of the user's `Class.Mouse`. It
+      can be used to adjust the sensitivity of events tracking mouse movement,
+      such as `Class.UserInputService:GetMouseDelta()|GetMouseDelta()`.
 
-      The sensitivity determines the extent to which a movement of the physical
-      mouse translates to a movement of the mouse in-game. This can be used to
-      adjusted how sensitive events tracking mouse movement, like
-      `Class.UserInputService:GetMouseDelta()|GetMouseDelta`, are to mouse
-      movement.
+      This property does not affect the movement of the mouse icon, nor the
+      camera sensitivity that the user has selected for their client.
 
-      This property does not affect the movement of the mouse icon. Nor does it
-      affect the **Camera Sensitivity** setting found in the **Settings** tab of
-      the client's **Settings** menu, which also adjusts the sensitivity of
-      events tracking mouse movement.
-
-      This property has a maximum value of 10 and a minimum value of 0. A lower
-      value corresponds to lower sensitivity, and a higher value to higher
-      sensitivity.
-
-      When sensitivity is 0, events that track the mouse's movement will still
+      This property has a maximum value of `10` and a minimum value of `0`. When
+      sensitivity is `0`, events that track the mouse's movement will still
       fire but all parameters and properties indicating the change in mouse
-      position will return `Datatype.Vector2|Vector2.new()`, or
-      `Datatype.Vector3|Vector3.new()` in the case of `Class.InputObject.Delta`.
-      For example, `Class.UserInputService:GetMouseDelta()|GetMouseDelta` will
-      always return (0, 0).
-    code_samples:
-      - UserInputService-MouseDeltaSensitivity
+      position will return `0`.
+    code_samples: []
     type: float
     tags:
       - NotReplicated
@@ -340,35 +261,14 @@ properties:
       Describes whether the user's device has a mouse available.
     description: |
       This property describes whether the user's device has a mouse available.
-      This property is `true` when the user's device has an available mouse, and
-      `false` when it does not.
+      If `true`, you can use mouse‑related methods such as
+      `Class.UserInputService:GetMouseLocation()|GetMouseLocation()`.
 
-      ```lua
-      local UserInputService = game:GetService("UserInputService")
-
-      if UserInputService.MouseEnabled then
-      	print("The user's device has an available mouse!")
-      else
-      	print("The user's device does not have an available mouse!")
-      end
-      ```
-
-      It is important to check this before using `Class.UserInputService` mouse
-      functions such as `Class.UserInputService:GetMouseLocation()`.
-
-      As `Class.UserInputService` is client-side only, this property can only be
-      used in a `Class.LocalScript`.
-
-      See also:
-
-      - `Class.UserInputService.MouseBehavior`
-      - `Class.UserInputService.MouseDeltaSensitivity`
-      - `Class.UserInputService.MouseIconEnabled`
-      - `Class.UserInputService:GetMouseLocation()`
-      - `Class.UserInputService:GetMouseDelta()`
-      - `Class.UserInputService:GetMouseButtonsPressed()`
-    code_samples:
-      - UserInputService-MouseDeltaSensitivity
+      For seamless cross-platform compatibility on mixed-input devices, see
+      `Class.UserInputService.PreferredInput|PreferredInput` which more
+      accurately reflects which input (mouse/keyboard, touch, gamepad, etc.) the
+      player is likely using as the **primary** input.
+    code_samples: []
     type: boolean
     tags:
       - ReadOnly
@@ -387,16 +287,16 @@ properties:
     writeCapabilities: []
   - name: UserInputService.MouseIcon
     summary: |
-      The content ID of the image used as the user mouse icon.
+      The content ID of the image for the user's mouse icon.
     description: |
-      The `MouseIcon` property determines the image used as the pointer. If
-      blank, a default arrow is used. While the cursor hovers over certain UI
-      objects such as an `Class.ImageButton`, `Class.TextButton`,
-      `Class.TextBox`, or `Class.ProximityPrompt`, this image will be overridden
-      and temporarily ignored.
+      This property determines the content ID of the image for the user's mouse
+      icon. If blank, a default arrow pointer is used. While the cursor hovers
+      over certain UI objects such as an `Class.ImageButton`,
+      `Class.TextButton`, `Class.TextBox`, or `Class.ProximityPrompt`, this
+      image will be overridden and temporarily ignored.
 
-      To hide the cursor entirely, do **not** use a transparent image. Instead,
-      set `Class.UserInputService.MouseIconEnabled` to false.
+      To hide the cursor entirely, do **not** use a transparent image; instead,
+      set `Class.UserInputService.MouseIconEnabled|MouseIconEnabled` to `false`.
     code_samples:
       - UserInputService-MouseIcon
     type: ContentId
@@ -415,23 +315,10 @@ properties:
     writeCapabilities: []
   - name: UserInputService.MouseIconEnabled
     summary: |
-      Determines whether the `Class.Mouse` icon is visible.
+      Determines whether the mouse icon is visible.
     description: |
-      This property determines whether the `Class.Mouse` icon is visible When
-      `true` the mouse's icon is visible, when `false` it is not.
-
-      For example, the code snippet below hides the mouse's icon.
-
-      ```lua
-      local UserInputService = game:GetService("UserInputService")
-
-      UserInputService.MouseIconEnabled = false
-      ```
-
-      As `Class.UserInputService` is client-side only, this property can only be
-      used in a `Class.LocalScript`.
-    code_samples:
-      - UserInputService-LastInputTypeChanged
+      This property determines whether the mouse icon is visible.
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -454,15 +341,10 @@ properties:
       The keyboard's position is `Datatype.Vector2|Vector2.new(0, 0)` when it is
       not visible.
 
-      As `Class.UserInputService` is client-side only, this property can only be
-      used in a `Class.LocalScript`, or a `Class.Script` with
-      `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client`.
-
       See also
       `Class.UserInputService.OnScreenKeyboardVisible|OnScreenKeyboardVisible`
       and `Class.UserInputService.OnScreenKeyboardSize|OnScreenKeyboardSize`.
-    code_samples:
-      - UserInputService-OnScreenKeyboardPosition
+    code_samples: []
     type: Vector2
     tags:
       - ReadOnly
@@ -486,10 +368,6 @@ properties:
       This property describes the size of the on-screen keyboard in pixels. The
       keyboard's size is `Datatype.Vector2|Vector2.new(0, 0)` when it is not
       visible.
-
-      As `Class.UserInputService` is client-side only, this property can only be
-      used in a `Class.LocalScript`, or a `Class.Script` with
-      `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client`.
 
       See also
       `Class.UserInputService.OnScreenKeyboardVisible|OnScreenKeyboardVisible`
@@ -520,10 +398,6 @@ properties:
       This property describes whether an on-screen keyboard is currently visible
       on the user's screen.
 
-      As `Class.UserInputService` is client-side only, this property can only be
-      used in a `Class.LocalScript`, or a `Class.Script` with
-      `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client`.
-
       See also
       `Class.UserInputService.OnScreenKeyboardSize|OnScreenKeyboardSize` and
       `Class.UserInputService.OnScreenKeyboardPosition|OnScreenKeyboardPosition`.
@@ -545,9 +419,78 @@ properties:
       - Input
     writeCapabilities: []
   - name: UserInputService.PreferredInput
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Queries the primary input type a player is using, based on anticipated
+      user behavior.
+    description: |
+      This read-only property lets you query the **primary** input type a player
+      is likely using, based on anticipated user behavior, to ensure UI elements
+      like on‑screen buttons and menus work elegantly across devices. For
+      example, a touch‑enabled device assumes touch is the default input and
+      that touch buttons may appear for actions, but if a player connects an
+      additional bluetooth keyboard/mouse or gamepad, you can assume they want
+      to switch to that as the primary input type and possibly use touch as a
+      backup input for on‑screen UI.
+
+      The behavior of `PreferredInput` is summarized in the following table. Its
+      value changes based on the value of legacy `Class.UserInputService`
+      properties such as
+      `Class.UserInputService.KeyboardEnabled|KeyboardEnabled`,
+      `Class.UserInputService.GamepadEnabled|GamepadEnabled`, and
+      `Class.UserInputService.TouchEnabled|TouchEnabled`, as well as the
+      player's most recent interaction with a connected gamepad or
+      keyboard/mouse.
+
+      <table>
+      <thead>
+      <tr>
+        <th><code>Class.UserInputService.KeyboardEnabled|KeyboardEnabled</code>;<br /><code>Class.UserInputService.GamepadEnabled|GamepadEnabled</code>;<br /><code>Class.UserInputService.TouchEnabled|TouchEnabled</code></th>
+        <th>Most Recent Interaction</th>
+        <th><code>PreferredInput</code></th>
+        <th>Example</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><code>false</code>;&nbsp; <code>false</code>;&nbsp; <code>true</code></td>
+        <td>(don't&nbsp;care)</td>
+        <td><code>Enum.PreferredInput|Touch</code></td>
+        <td>⒜</td>
+      </tr>
+      <tr>
+        <td><code>true</code>;&nbsp; <code>false</code>;&nbsp; (don't&nbsp;care)</td>
+        <td>(don't&nbsp;care)</td>
+        <td><code>Enum.PreferredInput|KeyboardAndMouse</code></td>
+        <td>⒝</td>
+      </tr>
+      <tr>
+        <td><code>false</code>;&nbsp; <code>true</code>;&nbsp; (don't&nbsp;care)</td>
+        <td>(don't&nbsp;care)</td>
+        <td><code>Enum.PreferredInput|Gamepad</code></td>
+        <td>⒞</td>
+      </tr>
+      <tr>
+        <td><code>true</code>;&nbsp; <code>true</code>;&nbsp; (don't&nbsp;care)</td>
+        <td>Keyboard or Mouse</td>
+        <td><code>Enum.PreferredInput|KeyboardAndMouse</code></td>
+        <td>⒟</td>
+      </tr>
+      <tr>
+        <td><code>true</code>;&nbsp; <code>true</code>;&nbsp; (don't&nbsp;care)</td>
+        <td>Gamepad</td>
+        <td><code>Enum.PreferredInput|Gamepad</code></td>
+        <td>⒠</td>
+      </tr>
+      </tbody>
+      </table>
+
+      <figcaption>⒜ Phone with no other connected input devices; no possibility of an input type change</figcaption>
+      <figcaption>⒝ Mobile device with bluetooth keyboard and mouse connected, but no connected gamepad</figcaption>
+      <figcaption>⒞ Tablet with a gamepad connected, but no connected mouse/keyboard</figcaption>
+      <figcaption>⒟ Xbox or PlayStation with a bluetooth keyboard/mouse connected, and keyboard or mouse most recently interacted with</figcaption>
+      <figcaption>⒠ Windows or Mac with a gamepad connected, and gamepad most recently interacted with</figcaption>
+    code_samples:
+      - UserInputService-PreferredInput
     type: PreferredInput
     tags:
       - ReadOnly
@@ -566,43 +509,18 @@ properties:
     writeCapabilities: []
   - name: UserInputService.TouchEnabled
     summary: |
-      Describes whether the user's current device has a touch-screen available.
+      Describes whether the user's device has a touch screen available.
     description: |
-      This property describes whether the user's current device has a touch
-      screen available.
+      This property describes whether the user's device has a touch screen
+      available. If `true`, you can use touch‑related events such as
+      `Class.UserInputService.TouchStarted|TouchStarted` and
+      `Class.UserInputService.TouchMoved|TouchMoved`.
 
-      The property is used to determine if the user's device has a touch screen,
-      and therefore if touch events will fire. If TouchEnabled is true, you can
-      use UserInputService events such as `Class.UserInputService.TouchStarted`
-      and `Class.UserInputService.TouchEnded` to track when a user starts and
-      stops touching the screen of their device.
-
-      The code snippet below prints whether the user's device has a touch
-      screen.
-
-      ```lua
-      local UserInputService = game:GetService("UserInputService")
-
-      if UserInputService.TouchEnabled then
-      	print("The user's device has a touchscreen!")
-      else
-      	print("The user's device does not have a touchscreen!")
-      end
-      ```
-
-      See also:
-
-      - `Class.UserInputService.TouchTap`
-      - `Class.UserInputService.TouchLongPress`
-      - `Class.UserInputService.TouchMoved`
-      - `Class.UserInputService.TouchPan`
-      - `Class.UserInputService.TouchPinch`
-      - `Class.UserInputService.TouchRotate`
-      - `Class.UserInputService.TouchSwipe`
-      - `Class.UserInputService.TouchStarted`
-      - `Class.UserInputService.TouchEnded`
-    code_samples:
-      - UserInputService-TouchPinch
+      For seamless cross-platform compatibility on mixed-input devices, see
+      `Class.UserInputService.PreferredInput|PreferredInput` which more
+      accurately reflects which input (mouse/keyboard, touch, gamepad, etc.) the
+      player is likely using as the **primary** input.
+    code_samples: []
     type: boolean
     tags:
       - ReadOnly
@@ -651,35 +569,9 @@ properties:
       Indicates whether the user is using a virtual reality headset.
     description: |
       This property describes whether the user is using a virtual reality (VR)
-      device.
-
-      If a VR device is enabled, you can interact with its location and movement
-      through functions such as `Class.UserInputService:GetUserCFrame()`. You
-      can also react to VR device movement using the
-      `Class.UserInputService.UserCFrameChanged` event.
-
-      ```lua
-      local UserInputService = game:GetService("UserInputService")
-
-      local isUsingVR = UserInputService.VREnabled
-      if isUsingVR then
-      	print("User is using a VR headset!")
-      else
-      	print("User is not using a VR headset!")
-      end
-      ```
-
-      As `Class.UserInputService` is client-side only, this property can only be
-      used in a `Class.LocalScript`.
-
-      See also:
-
-      - `Class.VRService`
-      - `Class.Camera.HeadLocked`
-      - `Class.UserInputService:GetUserCFrame()`
-      - `Class.UserInputService.UserCFrameChanged`
-    code_samples:
-      - UserInputService-UserCFrameChanged
+      device. If `true`, you can use VR‑related properties, methods, and events
+      in `Class.VRService`.
+    code_samples: []
     type: boolean
     tags:
       - ReadOnly
@@ -702,28 +594,9 @@ methods:
       Returns whether the given `Enum.UserInputType` gamepad supports a button
       corresponding with the given `Enum.KeyCode`.
     description: |
-      This function returns whether the given `Enum.UserInputType` gamepad
-      supports a button corresponding with the given `Enum.KeyCode`. This
-      function is used to determine valid gamepad inputs.
-
-      To determine which `Enum.UserInputType` gamepads are connected, use
-      `Class.UserInputService:GetConnectedGamepads()`.
-
-      As `Class.UserInputService` is client-side only, this function can only be
-      used in a `Class.LocalScript`.
-
-      See also:
-
-      - `Class.UserInputService.GamepadConnected`
-      - `Class.UserInputService.GamepadDisconnected`
-      - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:IsGamepadButtonDown()`
-      - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
-      - `Class.UserInputService:GetGamepadState()`
-      - `Class.UserInputService:GetGamepadConnected()`
-      - `Class.UserInputService.GamepadEnabled`
-    code_samples:
-      - UserInputService-GamepadSupports
+      This method returns whether the given `Enum.UserInputType` gamepad
+      supports a button corresponding with the given `Enum.KeyCode`.
+    code_samples: []
     parameters:
       - name: gamepadNum
         type: UserInputType
@@ -751,39 +624,14 @@ methods:
     summary: |
       Returns an array of `Enum.UserInputType` gamepads currently connected.
     description: |
-      This function returns an array of `Enum.UserInputType` gamepads currently
-      connected. If no gamepads are connected, this array will be empty.
-      Additionally, it only returns UserInputType objects that are gamepads. For
-      instance, this event will return a connected Gamepad1 object but not a
-      Keyboard object.
+      This method returns an array of `Enum.UserInputType` gamepads currently
+      connected. If no gamepads are connected, the array will be empty.
 
-      For example, the following code snippet retrieves the connected gamepads
-      and stores them in a variable named _connectedGamepads_.
-
-      ```lua
-      local UserInputService = game:GetService("UserInputService")
-      local connectedGamepads = UserInputService:GetConnectedGamepads()
-      ```
-
-      To check if a specific gamepad is connected, use
-      `Class.UserInputService:GetGamepadConnected()`.
-
-      As `Class.UserInputService` is client-side only, this function can only be
-      used in a `Class.LocalScript`.
-
-      See also:
-
-      - `Class.UserInputService.GamepadConnected`
-      - `Class.UserInputService.GamepadDisconnected`
-      - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:IsGamepadButtonDown()`
-      - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
-      - `Class.UserInputService:GetGamepadState()`
-      - `Class.UserInputService:GetGamepadConnected()`
-      - `Class.UserInputService:GamepadSupports()`
-      - `Class.UserInputService.GamepadEnabled`
-    code_samples:
-      - UserInputService-GetActiveGamepad
+      Alternatively to detecting all gamepads, the
+      `Class.UserInputService.PreferredInput|PreferredInput` property can be
+      used to more accurately reflect which input (mouse/keyboard, touch,
+      gamepad, etc.) the player is likely using as the **primary** input.
+    code_samples: []
     parameters: []
     returns:
       - type: Array
@@ -802,19 +650,15 @@ methods:
       Returns an `Class.InputObject` that describes the device's current
       acceleration.
     description: |
-      The GetDeviceAcceleration function determines the current acceleration of
-      the user's device. It returns an `Class.InputObject` that describes the
-      device's current acceleration.
+      This method returns an `Class.InputObject` that describes the device's
+      current acceleration. For this to function, the user's device must have an
+      enabled accelerometer as queried through the
+      `Class.UserInputService.AccelerometerEnabled|AccelerometerEnabled`
+      property.
 
-      In order for this to work, the user's device must have an enabled
-      accelerometer. To check if a user's device has an enabled accelerometer,
-      you can check the `Class.UserInputService.AccelerometerEnabled` property.
-
-      If you want to track when the user's device's acceleration changes
-      instead, you can use the
-      `Class.UserInputService.DeviceAccelerationChanged` event.
-
-      Since it only fires locally, it can only be used in a `Class.LocalScript`.
+      To track when the device's acceleration changes, use the
+      `Class.UserInputService.DeviceAccelerationChanged|DeviceAccelerationChanged`
+      event.
     code_samples:
       - UserInputService-GetDeviceAcceleration
     parameters: []
@@ -833,31 +677,21 @@ methods:
       Returns an `Class.InputObject` describing the device's current gravity
       vector.
     description: |
-      This function returns an `Class.InputObject` describing the device's
-      current gravity vector.
+      This method returns an `Class.InputObject` describing the device's current
+      gravity vector. The vector is determined by the device's orientation
+      relative to the real-world force of gravity. For example:
+      
+      - `Datatype.Vector3|Vector3.new(0, 0, -9.18)` if the device is
+      perfectly upright (portrait)
+      - `Datatype.Vector3|Vector3.new(9.81, 0, 0)` if the left side of the
+      device is pointing down
+      - `Datatype.Vector3|Vector3.new(0, -9.81, 0)` if the back of the device is pointing down
 
-      The gravity vector is determined by the device's orientation relative to
-      the real-world force of gravity. For instance, if a device is perfectly
-      upright (portrait), the gravity vector is
-      `Datatype.Vector3|Vector3.new(0, 0, -9.18)`. If the left side of the
-      device is pointing down, the vector is Vector3.new(9.81, 0, 0). Finally,
-      if the back of the device is pointing down, the vector is Vector3.new(0,
-      -9.81, 0).
+      Gravity is only tracked for devices with an enabled gyroscope as queried
+      through `Class.UserInputService.GyroscopeEnabled|GyroscopeEnabled`.
 
-      This function might be used to enable the user's device to impact or
-      control gravity within the game or move in-game objects such as a ball.
-
-      Gravity is only tracked for players using a device with an enabled
-      gyroscope - such as a mobile device.
-
-      To check if a user's device has an enabled gyroscope, check the value of
-      `Class.UserInputService.GyroscopeEnabled`. If the device has an enabled
-      gyroscope, you can also use the
-      `Class.UserInputService.DeviceGravityChanged` event to track when force of
-      gravity on the user's device changes.
-
-      As `Class.UserInputService` is client-side only, this function can only be
-      used in a `Class.LocalScript`.
+      To track when the device's gravity changes, use the
+      `Class.UserInputService.DeviceGravityChanged|DeviceGravityChanged` event.
     code_samples:
       - UserInputService-GetDeviceGravity
     parameters: []
@@ -873,33 +707,24 @@ methods:
     writeCapabilities: []
   - name: UserInputService:GetDeviceRotation
     summary: |
-      Returns an `Class.InputObject` and a `Datatype.CFrame`,describing the
+      Returns an `Class.InputObject` and a `Datatype.CFrame` describing the
       device's current rotation vector.
     description: |
-      This function returns an `Class.InputObject` and a `Datatype.CFrame`
+      This method returns an `Class.InputObject` and a `Datatype.CFrame`
       describing the device's current rotation vector.
 
-      This is fired with an InputObject. The _Position_ property of the input
-      object is a `Enum.InputType|Enum.InputType.Gyroscope` that tracks the
-      total rotation in each local device axis.
-
-      Device rotation can only be tracked on devices with a
-      `Class.UserInputService.GyroscopeEnabled|gyroscope`.
-
-      As this function fires locally, it can only be used in a
-      `Class.LocalScript`.
+      Device rotation is only tracked for devices with an enabled gyroscope as
+      queried through
+      `Class.UserInputService.GyroscopeEnabled|GyroscopeEnabled`.
     code_samples:
       - UserInputService-GetDeviceRotation
     parameters: []
     returns:
       - type: Tuple
         summary: |
-          A tuple containing two properties:
-
-          1. The delta property describes the amount of rotation that last
-             happened
-          2. The CFrame is the device's current rotation relative to its default
-             reference frame.
+          A tuple containing two properties: The delta describing the amount of
+          rotation that last happened, and the `Datatype.CFrame` of the device's
+          current rotation relative to its default reference frame.
     tags: []
     deprecation_message: ''
     security: None
@@ -911,21 +736,10 @@ methods:
     summary: |
       Returns the currently `Class.TextBox` the client is currently focused on.
     description: |
-      This function returns the `Class.TextBox` the client is currently focused
+      This method returns the `Class.TextBox` the client is currently focused
       on. A `Class.TextBox` can be manually selected by the user, or selection
-      can be forced using the `Class.TextBox:CaptureFocus()` function. If no
-      `Class.TextBox` is selected, this function will return `nil`.
-
-      As `Class.UserInputService` is client-side only, this function can only be
-      used in a `Class.LocalScript`.
-
-      ##### See Also
-
-      - `Class.UserInputService.TextBoxFocused`
-      - `Class.UserInputService.TextBoxFocusReleased`
-      - `Class.TextBox:CaptureFocus()`
-      - `Class.TextBox:IsFocused()`
-      - `Class.TextBox:ReleaseFocus()`
+      can be forced using the `Class.TextBox:CaptureFocus()` method. If no
+      `Class.TextBox` is selected, this method will return `nil`.
     code_samples: []
     parameters: []
     returns:
@@ -940,33 +754,17 @@ methods:
     writeCapabilities: []
   - name: UserInputService:GetGamepadConnected
     summary: |
-      Returns whether a gamepad with the given
-      `Enum.UserInputType`''gamepadNum'' is connected.
+      Returns whether a gamepad with the given `Enum.UserInputType` is
+      connected.
     description: |
-      This function returns whether a gamepad with the given
-      `Enum.UserInputType` is connected to the client.
+      This method returns whether a gamepad with the given `Enum.UserInputType`
+      is connected.
 
-      This can be used to check if a specific gamepad, such as _'Gamepad1'_ is
-      connected to the client's device.
-
-      To retrieve a list of all connected gamepads, use
-      `Class.UserInputService:GetConnectedGamepads()`.
-
-      As `Class.UserInputService` is client-side only, this function can only be
-      used in a `Class.LocalScript`.
-
-      See also:
-
-      - `Class.UserInputService.GamepadConnected`
-      - `Class.UserInputService.GamepadDisconnected`
-      - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:IsGamepadButtonDown()`
-      - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
-      - `Class.UserInputService:GetGamepadState()`
-      - `Class.UserInputService:GamepadSupports()`
-      - `Class.UserInputService.GamepadEnabled`
-    code_samples:
-      - UserInputService-GetGamepadConnected
+      Alternatively to detecting a specific gamepad by `Enum.UserInputType`, the
+      `Class.UserInputService.PreferredInput|PreferredInput` property can be
+      used to more accurately reflect which input (mouse/keyboard, touch,
+      gamepad, etc.) the player is likely using as the **primary** input.
+    code_samples: []
     parameters:
       - name: gamepadNum
         type: UserInputType
@@ -989,26 +787,9 @@ methods:
       Returns an array of `Class.InputObject|InputObjects` for all available
       inputs on the given gamepad, representing each input's last input state.
     description: |
-      This function returns an array of `Class.InputObject|InputObjects` for all
+      This method returns an array of `Class.InputObject|InputObjects` for all
       available inputs on the given `Enum.UserInputType` gamepad, representing
       each input's last input state.
-
-      To find the `Enum.UserInputType|UserInputTypes` of connected gamepads, use
-      `Class.UserInputService:GetConnectedGamepads()`.
-
-      As this function only fires locally, it can only be used in a
-      `Class.LocalScript`.
-
-      See also:
-
-      - `Class.UserInputService.GamepadConnected`
-      - `Class.UserInputService.GamepadDisconnected`
-      - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:IsGamepadButtonDown()`
-      - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
-      - `Class.UserInputService:GetGamepadConnected()`
-      - `Class.UserInputService:GamepadSupports()`
-      - `Class.UserInputService.GamepadEnabled`
     code_samples: []
     parameters:
       - name: gamepadNum
@@ -1034,7 +815,7 @@ methods:
     description: |
       This method takes the requested `Enum.KeyCode` and returns the associated
       image for the currently connected gamepad device (limited to Xbox,
-      PlayStation and Windows). This means that if the connected controller is
+      PlayStation, and Windows). This means that if the connected controller is
       an Xbox&nbsp;One controller, the user sees Xbox assets. Similarly, if the
       connected device is a PlayStation controller, the user sees PlayStation
       assets. If you want to use custom assets, see
@@ -1063,19 +844,14 @@ methods:
       Returns an array of `Class.InputObject|InputObjects` associated with the
       `Enum.KeyCode|keys` currently being pressed down.
     description: |
-      This function returns an array of `Class.InputObject|InputObjects`
-      associated with the keys currently being pressed down.
-
-      This array can be iterated through to determine which keys are currently
-      being pressed, using the `Class.InputObject.KeyCode` values.
+      This method returns an array of `Class.InputObject|InputObjects`
+      associated with the keys currently being pressed down. The array can be
+      iterated through to determine which keys are currently being pressed,
+      using the `Class.InputObject.KeyCode` names or values.
 
       To check if a specific key is being pressed, use
-      `Class.UserInputService:IsKeyDown()`.
-
-      As `Class.UserInputService` is client-side only, this function can only be
-      used in a `Class.LocalScript`.
-    code_samples:
-      - UserInputService-GetKeysPressed
+      `Class.UserInputService:IsKeyDown()|IsKeyDown()`.
+    code_samples: []
     parameters: []
     returns:
       - type: Array
@@ -1094,17 +870,17 @@ methods:
       Returns the `Enum.UserInputType` associated with the user's most recent
       input.
     description: |
-      This function returns 'Enum.UserInputType` associated with the user's most
-      recent input.
+      This method returns the `Enum.UserInputType` associated with the user's
+      most recent input. For example, if the user's previous input had been
+      pressing the <kbd>A</kbd> key, the returned `Enum.UserInputType` value
+      would be `Enum.UserInputType|Keyboard`.
 
-      For example, if the user's previous input had been pressing the spacebar,
-      the `Enum.UserInputType` returned would be _'Keyboard'_.
-
-      The `Class.UserInputService.LastInputTypeChanged` event can be used to
-      track when the last `Enum.UserInputType` used by the user changes.
-
-      As `Class.UserInputService` is client-side only, this function can only be
-      used in a `Class.LocalScript`.
+      For seamless cross-platform compatibility on mixed-input devices, see
+      `Class.UserInputService.PreferredInput|PreferredInput` which more
+      accurately reflects which input (mouse/keyboard, touch, gamepad, etc.) the
+      player is likely using as the **primary** input. `GetLastInputType()`
+      remains for advanced workflows or control schemes that rely on detecting
+      and responding to the player's specific most recent `Enum.UserInputType`.
     code_samples:
       - UserInputService-GetLastInputType
     parameters: []
@@ -1121,40 +897,19 @@ methods:
     writeCapabilities: []
   - name: UserInputService:GetMouseButtonsPressed
     summary: |
-      Returns an array of `Class.InputObject|InputObjects` corresponding with
-      the mouse buttons currently being held down.
+      Returns an array of `Class.InputObject|InputObjects` associated with the
+      mouse buttons currently being held down.
     description: |
-      This function returns an array of `Class.InputObject|InputObjects`
-      corresponding to the mouse buttons currently being pressed down.
+      This method returns an array of `Class.InputObject|InputObjects`
+      associated with the mouse buttons currently being held down. The array can
+      be iterated through to determine which buttons are currently being held,
+      using the `Class.InputObject.KeyCode` names or values.
 
-      Mouse buttons that are tracked by this function include:
+      Mouse buttons that are tracked by this method include `MouseButton1`
+      (left), `MouseButton2` (right), and `MouseButton3` (middle).
 
-      <table>
-      	<thead>
-      	<tr>
-      		<td>Name </td>
-      		<td>Description</td>
-      	</tr>
-      	</thead>
-      	<tr>
-      		<td>MouseButton1</td>
-      		<td>The left mouse button.</td>
-      	</tr>
-      	<tr>
-      		<td>MouseButton2</td>
-      		<td>The right mouse button.</td>
-      	</tr>
-      	<tr>
-      		<td>MouseButton3</td>
-      		<td>The middle mouse button.</td>
-      	</tr>
-      </table>
-
-      If the user is not pressing any mouse button down when the function is
+      If the user is not pressing any mouse button down when the method is
       called, it will return an empty array.
-
-      As `Class.UserInputService` is client-side only, this function can only be
-      used in a `Class.LocalScript`.
     code_samples:
       - UserInputService-GetMouseButtonsPressed
     parameters: []
@@ -1176,20 +931,16 @@ methods:
       `Class.Mouse` in the last rendered frame. Only works if the mouse is
       locked.
     description: |
-      This function returns the change, in pixels, of the position of the
-      player's `Class.Mouse` in the last rendered frame as a `Datatype.Vector2`.
-      This function only works if the mouse has been locked using the
-      `Class.UserInputService.MouseBehavior` property. If the mouse has not been
-      locked, the returned `Datatype.Vector2` values will be zero.
+      This method returns the change, in pixels, of the position of the player's
+      `Class.Mouse` in the last rendered frame, only if the mouse has been
+      locked using the `Class.UserInputService.MouseBehavior|MouseBehavior`
+      property; otherwise the returned `Datatype.Vector2` values will be `0`.
 
       The sensitivity of the mouse, determined in the client's settings and
-      `Class.UserInputService.MouseDeltaSensitivity`, will influence the result.
-
-      As `Class.UserInputService` is client-side only, this function can only be
-      used in a `Class.LocalScript`.
+      `Class.UserInputService.MouseDeltaSensitivity|MouseDeltaSensitivity`, will
+      influence the result.
     code_samples:
       - UserInputService-GetMouseDelta
-      - UserInputService-TouchPinch
     parameters: []
     returns:
       - type: Vector2
@@ -1205,20 +956,16 @@ methods:
   - name: UserInputService:GetMouseLocation
     summary: |
       Returns the current screen location of the player's `Class.Mouse` relative
-      to the top left corner of the screen.
+      to the top-left corner of the screen.
     description: |
-      This function returns a `Datatype.Vector2` representing the current screen
+      This method returns a `Datatype.Vector2` representing the current screen
       location of the player's `Class.Mouse` in pixels relative to the top‑left
       corner. This does not account for the `Enum.ScreenInsets`; to get the
       top‑left and bottom‑right insets, call `Class.GuiService:GetGuiInset()`.
 
       If the location of the mouse pointer is offscreen or the player's device
       does not have a mouse, the returned value will be undetermined.
-
-      As `Class.UserInputService` is client-side only, this function can only be
-      used in a `Class.LocalScript`.
-    code_samples:
-      - UserInputService-GetMouseLocation
+    code_samples: []
     parameters: []
     returns:
       - type: Vector2
@@ -1234,37 +981,25 @@ methods:
     writeCapabilities: []
   - name: UserInputService:GetNavigationGamepads
     summary: |
-      Returns an array of `Enum.UserInputType|gamepads` connected and enabled
-      for GUI navigation in descending order of priority.
+      Returns an array of gamepads connected and enabled for `Class.GuiObject`
+      navigation in descending order of priority.
     description: |
-      This function returns an array of gamepad
-      `Enum.UserInputType|UserInputTypes` that are connected and enabled for GUI
-      navigation. This list is in descending order of priority, meaning it can
-      be iterated over to determine which gamepad should have navigation
-      control.
+      This method returns an array of gamepads that are connected and enabled
+      for `Class.GuiObject` navigation, but does not influence navigation
+      controls. This list is in descending order of priority, meaning it can be
+      iterated over to determine which gamepad should have navigation control.
 
-      Whether a connected gamepad is a navigation gamepad only determines which
-      gamepad(s) control the navigation GUIs. This does not influence navigation
-      controls.
-
-      Since `Class.UserInputService` is client-side only, this function can only
-      be used in a `Class.LocalScript`.
-
-      See also:
-
-      - `Class.UserInputService:SetNavigationGamepad()`, to enable or disable a
-        gamepad for GUI navigation
-      - `Class.UserInputService:IsNavigationGamepad()`, to verify if a gamepad
-        is enabled for GUI navigation
-      - `Class.UserInputService:GetConnectedGamepads()`, to return all gamepads
-        connected regardless of GUI navigational control
+      See also
+      `Class.UserInputService:SetNavigationGamepad()|SetNavigationGamepad()`,
+      `Class.UserInputService:IsNavigationGamepad()|IsNavigationGamepad()`, and
+      `Class.UserInputService:GetConnectedGamepads()|GetConnectedGamepads()`.
     code_samples: []
     parameters: []
     returns:
       - type: Array
         summary: |
           An array of `Enum.UserInputType|UserInputTypes` that can be used for
-          GUI navigation, in descending order of priority.
+          navigation, in descending order of priority.
     tags: []
     deprecation_message: ''
     security: None
@@ -1277,94 +1012,57 @@ methods:
       Returns a string representing a key the user should press in order to
       input a given `Enum.KeyCode`.
     description: |
-      **GetStringForKeyCode** returns a string representing a key the user
-      should press in order to input a given `Enum.KeyCode`, keeping in mind
-      their keyboard layout. For key codes that require some modifier to be
-      held, this function returns the key to be pressed in addition to the
-      modifier. See the examples below for further explanation.
+      This method returns a string representing a key the user should press in
+      order to input a given `Enum.KeyCode`, keeping in mind their keyboard
+      layout. For key codes that require some modifier to be held, this method
+      returns the key to be pressed in addition to the modifier. See the
+      examples below for further explanation.
 
       When using Roblox with a non‑QWERTY keyboard layout, key codes are mapped
       to equivalent QWERTY positions. For example, pressing <kbd>A</kbd> on an
-      AZERTY keyboard results in `Enum.KeyCode.Q`. This mapping can lead to
-      mismatched information on experience UI elements. For example, "Press
-      <kbd>M</kbd> to open the map" is inaccurate on an AZERTY keyboard; it
-      would need to be "Press <kbd>?</kbd> to open the map" which is in the same
-      position as <kbd>M</kbd> on QWERTY. This function solves this issue by
-      providing the actual key to be pressed while using non‑QWERTY keyboard
-      layouts.
-
-      ```
-      local UserInputService = game:GetService("UserInputService")
-
-      local textLabel = script.Parent
-      local mapKey = Enum.KeyCode.M
-      textLabel.Text = "Press " .. UserInputService:GetStringForKeyCode(mapKey) .. " to open the map"
-      ```
-
-      ##### Examples on QWERTY Keyboard
+      AZERTY keyboard results in `Enum.KeyCode.Q`, potentially leading to
+      mismatched information on experience UI elements. This method solves the
+      issue by providing the actual key to be pressed while using non‑QWERTY
+      keyboard layouts.
 
       <table size="small">
         <thead>
           <tr>
             <th>KeyCode</th>
-            <th>Return Value</th>
+            <th>QWERTY Return</th>
+            <th>AZERTY Return</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><code>Enum.KeyCode.Q</code></td>
             <td><code>Q</code></td>
-          </tr>
-          <tr>
-            <td><code>Enum.KeyCode.W</code></td>
-            <td><code>W</code></td>
-          </tr>
-          <tr>
-            <td><code>Enum.KeyCode.Equals</code></td>
-            <td><code>=</code></td>
-          </tr>
-          <tr>
-            <td><code>Enum.KeyCode.At</code></td>
-            <td><code>2</code> because <code>@</code> is typed with <kbd>Shift</kbd><kbd>2</kbd></td>
-          </tr>
-        </tbody>
-      </table>
-
-      ##### Examples on AZERTY Keyboard
-
-      <table size="small">
-        <thead>
-          <tr>
-            <th>KeyCode</th>
-            <th>Return Value</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>Enum.KeyCode.Q</code></td>
             <td><code>A</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.W</code></td>
+            <td><code>W</code></td>
             <td><code>Z</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Equals</code></td>
             <td><code>=</code></td>
+            <td><code>=</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.At</code></td>
+            <td><code>2</code> because <code>@</code> is typed with <kbd>Shift</kbd><kbd>2</kbd></td>
             <td><code>É</code></td>
           </tr>
         </tbody>
       </table>
 
-      ##### Gamepad Usage
+      #### Gamepad Usage
 
-      `Class.UserInputService:GetStringForKeyCode()|GetStringForKeyCode()`
-      returns the string mapping for the `Enum.KeyCode` for the most recently
-      connected gamepad. If the connected controller is not supported, the
-      function returns the default string conversion for the requested key code.
+      `GetStringForKeyCode()` returns the string mapping
+      for the `Enum.KeyCode` for the most recently connected gamepad. If the
+      connected controller is not supported, the method returns the default
+      string conversion for the requested key code.
 
       The following example shows how you can map custom assets for
       `Enum.KeyCode.ButtonA|ButtonA`:
@@ -1376,8 +1074,8 @@ methods:
       local key = Enum.KeyCode.ButtonA
 
       local mappings = {
-        ButtonA = "rbxasset://BUTTON_A_ASSET", -- Replace with the desired ButtonA asset
-        ButtonCross = "rbxasset://BUTTON_CROSS_ASSET"  -- Replace with the desired ButtonCross asset
+      	ButtonA = "rbxasset://BUTTON_A_ASSET", -- Replace with the desired ButtonA asset
+      	ButtonCross = "rbxasset://BUTTON_CROSS_ASSET"  -- Replace with the desired ButtonCross asset
       }
 
       local mappedKey = UserInputService:GetStringForKeyCode(key)
@@ -1386,7 +1084,7 @@ methods:
       imageLabel.Image = image
       ```
 
-      ##### Gamepad Mappings
+      #### Gamepad Mappings
 
       The directional pad key codes do not have any differences based on device.
       `Enum.KeyCode.ButtonSelect` has slightly different behavior in some cases.
@@ -1464,7 +1162,7 @@ methods:
         </tbody>
       </table>
 
-      ##### System Images for KeyCodes
+      #### Legacy System Images
 
       When using a `Enum.KeyCode` that may be better represented as an image,
       such as for an `Class.ImageLabel` in a user interface, you can use the
@@ -1477,149 +1175,120 @@ methods:
         <thead>
           <tr>
             <th>KeyCode</th>
-            <th>Image</th>
             <th>Asset ID</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><code>Enum.KeyCode.ButtonX</code></td>
-            <td><img src="../../../assets/scripting/controls/xboxX.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxX.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonY</code></td>
-            <td><img src="../../../assets/scripting/controls/xboxY.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxY.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonA</code></td>
-            <td><img src="../../../assets/scripting/controls/xboxA.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxA.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonB</code></td>
-            <td><img src="../../../assets/scripting/controls/xboxB.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxB.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.DPadLeft</code></td>
-            <td><img src="../../../assets/scripting/controls/dpadLeft.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/dpadLeft.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.DPadRight</code></td>
-            <td><img src="../../../assets/scripting/controls/dpadRight.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/dpadRight.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.DPadUp</code></td>
-            <td><img src="../../../assets/scripting/controls/dpadUp.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/dpadUp.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.DPadDown</code></td>
-            <td><img src="../../../assets/scripting/controls/dpadDown.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/dpadDown.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonSelect</code></td>
-            <td><img src="../../../assets/scripting/controls/xboxView.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxView.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonStart</code></td>
-            <td><img src="../../../assets/scripting/controls/xboxmenu.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxmenu.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonL1</code></td>
-            <td><img src="../../../assets/scripting/controls/xboxLB.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxLB.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonR1</code></td>
-            <td><img src="../../../assets/scripting/controls/xboxRB.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxRB.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonL2</code></td>
-            <td><img src="../../../assets/scripting/controls/xboxLT.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxLT.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonR2</code></td>
-            <td><img src="../../../assets/scripting/controls/xboxRT.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxRT.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonL3</code></td>
-            <td><img src="../../../assets/scripting/controls/xboxLS.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxLS.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonR3</code></td>
-            <td><img src="../../../assets/scripting/controls/xboxRS.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxRS.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Thumbstick1</code></td>
-            <td><img src="../../../assets/scripting/controls/xboxLSDirectional.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxLSDirectional.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Thumbstick2</code></td>
-            <td><img src="../../../assets/scripting/controls/xboxRSDirectional.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxRSDirectional.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Backspace</code></td>
-            <td><img src="../../../assets/scripting/controls/backspace.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/backspace.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Return</code></td>
-            <td><img src="../../../assets/scripting/controls/return.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/return.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.LeftShift</code></td>
-            <td><img src="../../../assets/scripting/controls/shift.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/shift.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.RightShift</code></td>
-            <td><img src="../../../assets/scripting/controls/shift.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/shift.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Tab</code></td>
-            <td><img src="../../../assets/scripting/controls/tab.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/tab.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Quote</code></td>
-            <td><img src="../../../assets/scripting/controls/apostrophe.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/apostrophe.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Comma</code></td>
-            <td><img src="../../../assets/scripting/controls/comma.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/comma.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Backquote</code></td>
-            <td><img src="../../../assets/scripting/controls/graveaccent.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/graveaccent.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Period</code></td>
-            <td><img src="../../../assets/scripting/controls/period.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/period.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Space</code></td>
-            <td><img src="../../../assets/scripting/controls/spacebar.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/spacebar.png</code></td>
           </tr>
         </tbody>
@@ -1645,31 +1314,13 @@ methods:
       Returns an array of `Enum.KeyCode|KeyCodes` that the gamepad associated
       with the given `Enum.UserInputType` supports.
     description: |
-      This function returns an array of `Enum.KeyCode|KeyCodes` that the gamepad
-      associated with the given `Enum.UserInputType` supports.
+      This method returns an array of `Enum.KeyCode|KeyCodes` that the gamepad
+      associated with the given `Enum.UserInputType` supports. If called on a
+      non‑connected gamepad, returns an empty array.
 
-      This function can be used to determine which KeyCodes are supported and
-      not supported by a connected gamepad. To determine if a specific KeyCode
-      is supported, use `Class.UserInputService:GamepadSupports()`.
-
-      If called on a non existent, or non connected, gamepad, this function will
-      return an empty array.
-
-      As `Class.UserInputService` is client-side only, this function can only be
-      used in a `Class.LocalScript`.
-
-      See also:
-
-      - `Class.UserInputService.GamepadConnected`
-      - `Class.UserInputService.GamepadDisconnected`
-      - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:IsGamepadButtonDown()`
-      - `Class.UserInputService:GetGamepadState()`
-      - `Class.UserInputService:GetGamepadConnected()`
-      - `Class.UserInputService:GamepadSupports()`
-      - `Class.UserInputService.GamepadEnabled`
-    code_samples:
-      - UserInputService-GetSupportedGamepadKeyCodes
+      To determine if a specific `Enum.KeyCode` is supported, use
+      `Class.UserInputService:GamepadSupports()|GamepadSupports()`.
+    code_samples: []
     parameters:
       - name: gamepadNum
         type: UserInputType
@@ -1692,10 +1343,10 @@ methods:
       Returns a `Datatype.CFrame` describing the position and orientation of a
       specified virtual reality device.
     description: |
-      The `Class.UserInputService:GetUserCFrame()` function returns a
+      The `Class.UserInputService:GetUserCFrame()` method returns a
       `Datatype.CFrame` describing the position and orientation of a specified
       `Enum.UserCFrame` virtual reality (VR) device. If the specified device is
-      not connected, the function returns `Datatype.CFrame|CFrame.new()`.
+      not connected, the method returns `Datatype.CFrame|CFrame.new()`.
 
       For example, the code snippet below prints the CFrame of the user's VR
       headset.
@@ -1707,7 +1358,7 @@ methods:
       print(cframe)
       ```
 
-      By using the function, players can implement features such as
+      By using the method, players can implement features such as
       re-positioning the user's in-game character corresponding to the location
       of a connected VR device. This can be done by changing the _CFrame_ of the
       user's in-game body parts to match the _CFrame_ of the specified VR device
@@ -1745,118 +1396,14 @@ methods:
     writeCapabilities: []
   - name: UserInputService:IsGamepadButtonDown
     summary: |
-      Determines whether a particular button is pressed on a particular gamepad.
+      Determines whether a particular button is pressed on a gamepad.
     description: |
-      This function checks if a particular button is pressed on a particular
-      gamepad. It returns `true` if the `Enum.UserInputType|gamepad` has the
-      specified `Enum.KeyCode|button` pressed down, otherwise it returns false.
+      This method returns `true` if a particular button is pressed on a gamepad,
+      otherwise returns `false`.
 
-      ##### Valid UserInputTypes
-
-      The specified gamepad should be one of the following UserInputType enum
-      values:
-
-      <table>
-      	<thead>
-      		<tr>
-      			<th>Name</th>
-      		</tr>
-      	</thead>
-      	<tr>
-        <td>Enum.UserInputType.Gamepad1-8</td>
-        </tr>
-      </table>
-
-      ##### Valid KeyCodes
-
-      The specified button should be one of the following KeyCodes enum values:
-
-      <table>
-      	<thead>
-      		<tr>
-      			<th>Name</th>
-      		</tr>
-      	</thead>
-      	<tr>
-        <td>Enum.KeyCode.ButtonX</td>
-        </tr>
-        <tr>
-        <td>Enum.KeyCode.ButtonY</td>
-        </tr>
-      	<tr>
-        <td>Enum.KeyCode.ButtonA</td>
-        </tr>
-      	<tr>
-        <td>Enum.KeyCode.ButtonB</td>
-        </tr>
-      	<tr>
-        <td>Enum.KeyCode.ButtonR1</td>
-        </tr>
-      	<tr>
-        <td>Enum.KeyCode.ButtonL1</td>
-        </tr>
-        <tr>
-        <td>Enum.KeyCode.ButtonR2</td>
-        </tr>
-      	<tr>
-        <td>Enum.KeyCode.ButtonL2</td>
-        </tr>
-      	<tr>
-        <td>Enum.KeyCode.ButtonR3</td>
-        </tr>
-      	<tr>
-        <td>Enum.KeyCode.ButtonL3</td>
-        </tr>
-      	<tr>
-        <td>Enum.KeyCode.ButtonStart</td>
-        </tr>
-      	<tr>
-        <td>Enum.KeyCode.ButtonSelect</td>
-        </tr>
-      	<tr>
-        <td>Enum.KeyCode.DPadLeft</td>
-        </tr>
-      	<tr>
-        <td>Enum.KeyCode.DPadRight</td>
-        </tr>
-      	<tr>
-        <td>Enum.KeyCode.DPadUp</td>
-        </tr>
-      	<tr>
-        <td>Enum.KeyCode.DPadDown</td>
-        </tr>
-      </table>
-
-      This can be used to check whether a specific button, such as A, is being
-      held down. For example:
-
-      ```lua
-      local UserInputService = game:GetService("UserInputService")
-
-      local button = Enum.KeyCode.ButtonA
-      local gamepad = Enum.UserInputType.Gamepad1
-
-      local isButtonHeld = UserInputService:IsGamepadButtonDown(gamepad, button)
-      ```
-
-      Since `Class.UserInputService` is client-side only, this function can only
-      be used in a `Class.LocalScript`.
-
-      See also:
-
-      - `Class.UserInputService.GamepadConnected`
-      - `Class.UserInputService.GamepadDisconnected`
-      - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
-      - `Class.UserInputService:GetGamepadState()`
-      - `Class.UserInputService:GetGamepadConnected()`
-      - `Class.UserInputService:GamepadSupports()`
-      - `Class.UserInputService.GamepadEnabled`
-      - `Class.UserInputService:IsKeyDown()` - A similar method with a different
-        use: To check if a given `Enum.KeyCode|key` on a
-        `Enum.UserInputType|keyboard` is pressed.
-    code_samples:
-      - UserInputService-IsGamepadButtonDown
+      See also `Class.InputBinding` as a way to hook gamepad and other input
+      interactions to `Class.InputAction|InputActions`.
+    code_samples: []
     parameters:
       - name: gamepadNum
         type: UserInputType
@@ -1867,12 +1414,12 @@ methods:
         type: KeyCode
         default: ''
         summary: |
-          The `Enum.KeyCode` of the specified button.
+          The `Enum.KeyCode` of the specified gamepad button.
     returns:
       - type: boolean
         summary: |
-          Whether the specified gamepad button on the given gamepad is pressed
-          is pressed.
+          Whether the specified button on the given gamepad is pressed is
+          pressed.
     tags: []
     deprecation_message: ''
     security: None
@@ -1884,32 +1431,12 @@ methods:
     summary: |
       Returns whether the given `Enum.KeyCode|key` is currently held down.
     description: |
-      This function returns whether the user is holding down the key associated
-      with the given `Enum.KeyCode`. It returns `true` if the specified key is
-      pressed or `false` if it is not pressed.
+      This method returns `true` if a particular key is pressed on a keyboard,
+      otherwise returns `false`.
 
-      This can be used to check if a specific key, such as the space bar, is
-      being pressed. For example:
-
-      ```lua
-      local UserInputService = game:GetService("UserInputService")
-
-      local spaceHeld = UserInputService:IsKeyDown(Enum.KeyCode.Space)
-      ```
-
-      To retrieve a list of all keys pressed by the user, use the
-      `Class.UserInputService:GetKeysPressed()` function.
-
-      Since `Class.UserInputService` is client-side only, this function can only
-      be used in a `Class.LocalScript`.
-
-      See also:
-
-      - `Enum.UserInputType.IsGamepadButtonDown` - A similar event with a
-        different use: To check if a given `Enum.KeyCode|button` on a
-        `Enum.UserInputType|gamepad` is pressed.
-    code_samples:
-      - UserInputService-IsKeyDown
+      See also `Class.InputBinding` as a way to hook key and other input
+      interactions to `Class.InputAction|InputActions`.
+    code_samples: []
     parameters:
       - name: keyCode
         type: KeyCode
@@ -1929,25 +1456,14 @@ methods:
     writeCapabilities: []
   - name: UserInputService:IsMouseButtonPressed
     summary: |
-      Returns whether the given `Enum.UserInputType|mouse button` is currently
-      held down.
+      Returns whether the given mouse button is currently held down.
     description: |
-      This function takes a mouse button `Enum.UserInputType` and returns a bool
-      that indicates whether it is currently pressed.
+      This method returns `true` if a particular mouse button is pressed,
+      otherwise returns `false`.
 
-      The mouse button checked depends on the `Enum.UserInputType` value passed
-      to the function as an argument. For example:
-
-      ```lua
-      local UserInputService = game:GetService("UserInputService")
-
-      local pressed = UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1)
-      ```
-
-      Since `Class.UserInputService` is client-side only, this function can only
-      be used in a `Class.LocalScript`."
-    code_samples:
-      - UserInputService-TouchPinch
+      See also `Class.InputBinding` as a way to hook mouse button and other
+      input interactions to `Class.InputAction|InputActions`.
+    code_samples: []
     parameters:
       - name: mouseButton
         type: UserInputType
@@ -1967,48 +1483,16 @@ methods:
     writeCapabilities: []
   - name: UserInputService:IsNavigationGamepad
     summary: |
-      Returns true if the specified `Enum.UserInputType` gamepad is allowed to
-      control the navigation `Class.GuiObject|GuiObjects`.
+      Returns `true` if the specified gamepad is allowed to control navigation
+      and selection `Class.GuiObject|GuiObjects`.
     description: |
-      This function returns `true` if the specified `Enum.UserInputType` gamepad
-      is allowed to control Navigation and Selection
-      `Class.GuiObject|GuiObjects`.
+      This method returns `true` if the specified gamepad is allowed to control
+      navigation and selection `Class.GuiObject|GuiObjects`.
 
-      If you want to set a navigation gamepad, you can use
-      `Class.UserInputService:SetNavigationGamepad()`. You can also use
-      `Class.UserInputService:GetNavigationGamepads()` to get a list of all
-      navigation gamepads.
-
-      For example, the code below checks if the gamepad1 is as a navigation
-      gamepad:
-
-      ```lua
-      local UserInputService = game:GetService("UserInputService")
-
-      if UserInputService:IsNavigationGamepad(UserInputType.Gamepad1) then
-      	print("Gamepad is a navigation gamepad!")
-      else
-      	print("Gamepad is not a navigation gamepad!")
-      end
-      ```
-
-      A list of all connected gamepads, regardless of navigation can be
-      retrieved using`UserInput/GetConnectedGamepads.
-
-      Since `Class.UserInputService` is client-side only, this function can only
-      be used in a `Class.LocalScript`.
-
-      See also:
-
-      - `Class.UserInputService.GamepadConnected`
-      - `Class.UserInputService.GamepadDisconnected`
-      - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:IsGamepadButtonDown()`
-      - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
-      - `Class.UserInputService:GetGamepadState()`
-      - `Class.UserInputService:GetGamepadConnected()`
-      - `Class.UserInputService:GamepadSupports()`
-      - `Class.UserInputService.GamepadEnabled`
+      Use `Class.UserInputService:SetNavigationGamepad()|SetNavigationGamepad()`
+      to set a navigation gamepad, or
+      `Class.UserInputService:GetNavigationGamepads()|GetNavigationGamepads()`
+      to get a list of all navigation gamepads.
     code_samples: []
     parameters:
       - name: gamepadEnum
@@ -2032,20 +1516,13 @@ methods:
       Recenters the `Datatype.CFrame` of the VR headset to the current
       orientation of the headset worn by the user.
     description: |
-      This function recenters the `Datatype.CFrame` of the VR headset to the
+      This method recenters the `Datatype.CFrame` of the VR headset to the
       current orientation of the headset worn by the user. This means that the
       headset's current orientation is set to `Datatype.CFrame.new()`.
 
-      Use this function to move the headset CFrame to the center of the play
-      area if it seems to be at a weird offset.
-
-      This behaves identically to the `Class.VRService` function,
-      `Class.VRService:RecenterUserHeadCFrame()`.
-
-      Since `Class.UserInputService` is client-side only, this function can only
-      be used in a `Class.LocalScript`.
-    code_samples:
-      - UserInputService-RecenterUserHeadCFrame
+      This method behaves identically to the `Class.VRService` method
+      `Class.VRService:RecenterUserHeadCFrame()|RecenterUserHeadCFrame()`.
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -2059,39 +1536,17 @@ methods:
     writeCapabilities: []
   - name: UserInputService:SetNavigationGamepad
     summary: |
-      Sets whether or not the specified `Enum.UserInputType|Gamepad` can move
-      the `Class.GuiObject` navigator.
+      Sets whether or not the specified gamepad can move the `Class.GuiObject`
+      navigator.
     description: |
-      The SetNavigationGamepad function sets whether the specified
-      `Enum.UserInputType` gamepad can move the GUI navigator. A gamepad that is
-      allowed to move the GUI navigator is considered a _navigation gamepad_.
+      This method sets whether the specified gamepad can move the
+      `Class.GuiObject` navigator.
 
-      If the _enabled_ argument is passed as `true`, the Gamepad can move the
-      GUI navigator. If the argument is `false`, the Gamepad can not move the
-      GUI navigator.
-
-      If you want to check if a specified Gamepad is a set to be a navigation
-      gamepad, you can use the `Class.UserInputService:IsNavigationGamepad()`
-      function. You can also use the
-      `Class.UserInputService:GetNavigationGamepads()` to retrieve a list of all
-      navigation gamepads.
-
-      Since `Class.UserInputService` is client-side only, this function can only
-      be used in a `Class.LocalScript`.
-
-      See also:
-
-      - `Class.UserInputService.GamepadConnected`
-      - `Class.UserInputService.GamepadDisconnected`
-      - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:IsGamepadButtonDown()`
-      - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
-      - `Class.UserInputService:GetGamepadState()`
-      - `Class.UserInputService:GetGamepadConnected()`
-      - `Class.UserInputService:GamepadSupports()`
-      - `Class.UserInputService.GamepadEnabled`
-    code_samples:
-      - UserInputService-SetNavigationGamepad
+      Use `Class.UserInputService:IsNavigationGamepad()|IsNavigationGamepad()`
+      to check if a specified gamepad is a set to be a navigation gamepad, or
+      `Class.UserInputService:GetNavigationGamepads()|GetNavigationGamepads()`
+      to retrieve a list of all navigation gamepads.
+    code_samples: []
     parameters:
       - name: gamepadEnum
         type: UserInputType
@@ -2116,29 +1571,17 @@ methods:
 events:
   - name: UserInputService.DeviceAccelerationChanged
     summary: |
-      Fired when a user moves a device that has an accelerometer. Used to track
-      real-world device movement within a Roblox game.
+      Fires when a user moves a device that has an accelerometer.
     description: |
-      The DeviceAccelerationChanged event fires when a user moves a device that
-      has an accelerometer.
+      This event fires when a user moves a device that has an accelerometer, a
+      component found in most mobile devices that measures acceleration (change
+      in speed). To determine whether a user's device has an accelerometer
+      enabled, use
+      `Class.UserInputService.AccelerometerEnabled|AccelerometerEnabled`.
 
-      An accelerometer is a component found in most mobile devices that measures
-      acceleration (change in speed).
-
-      To determine whether a user's device has an accelerometer enabled,
-      see`Class.UserInputService.AccelerometerEnabled`.
-
-      This event can be used to track the movement of a device that has an
-      accelerometer. A sample usage includes moving the player character when a
-      mobile device accelerates.
-
-      Additionally, this event can be used along with
-      `Class.UserInputService:GetDeviceAcceleration()` to determine the current
-      movement of a user's device if the device has an accelerometer.
-
-      This event only fires locally - which means that only the player whose
-      device moves can use the event and it will only work in a
-      `Class.LocalScript`.
+      This event can be used along with
+      `Class.UserInputService:GetDeviceAcceleration()|GetDeviceAcceleration()`
+      to determine the current movement of a user's device.
     code_samples:
       - UserInputService-DeviceAccelerationChanged
     parameters:
@@ -2147,9 +1590,10 @@ events:
         default: ''
         summary: |
           An `Class.InputObject`, with a
-          `Class.InputObject.UserInputType|UserInputType` of _'Accelerometer'_,
-          and `Class.InputObject.Position|Position` that shows the force of
-          gravity on each local device axis.
+          `Class.InputObject.UserInputType|UserInputType` of
+          `Enum.UserInputType.Accelerometer|Accelerometer` and
+          `Class.InputObject.Position|Position` that shows the force of gravity
+          on each local device axis.
     tags: []
     deprecation_message: ''
     security: None
@@ -2158,43 +1602,33 @@ events:
     writeCapabilities: []
   - name: UserInputService.DeviceGravityChanged
     summary: |
-      Fired when the force of gravity changes on a device that has an enabled
-      accelerometer - such as a mobile device.
-    description: |
-      The `Class.UserInputService.DeviceGravityChanged` event fires when the
-      device's gravity `Datatype.Vector3` changes on a device that has an
+      Fires when the force of gravity changes on a device that has an enabled
       accelerometer.
+    description: |
+      This event fires when the device's gravity `Datatype.Vector3` changes on a
+      device that has an accelerometer. To determine whether a user's device has
+      an accelerometer enabled, use
+      `Class.UserInputService.AccelerometerEnabled|AccelerometerEnabled`.
 
       A device's gravity vector represent the force of gravity on each of the
-      device's X, Y, and Z axes. While gravity never changes, the force it
-      exerts on each axis changes when the device rotates and changes
+      device's **X**, **Y**, and **Z** axes. While gravity never changes, the
+      force it exerts on each axis changes when the device rotates and changes
       orientation. The force value exerted on each axis is a unit vector ranging
-      from -1 to 1.
+      from `-1` to `1`.
 
-      An accelerometer is a component found in most mobile devices that measures
-      acceleration (change in speed).
-
-      This event can be used to determine the real-world direction of the force
-      of gravity on a user's device. This even can then be used to simulate the
-      force of gravity on a user's device within the game, such as on in-game
-      objects (see example below).
-
-      To check if a user's device has an enabled accelerometer, see
-      `Class.UserInputService.AccelerometerEnabled`. If the device has an
-      enabled accelerometer, you can use the
-      `Class.UserInputService:GetDeviceGravity()` function to get the current
-      force of gravity on the user's device.
+      If the device has an enabled accelerometer, you can use the
+      `Class.UserInputService:GetDeviceGravity()|GetDeviceGravity()` method to
+      get the current force of gravity on the user's device.
     code_samples:
       - UserInputService-DeviceGravityChanged
-      - UserInputService-DeviceRotationChanged
     parameters:
       - name: gravity
         type: InputObject
         default: ''
         summary: |
-          An `Class.InputObject`, with a `Class.InputObject.Position` property
-          that shows the force of gravity on each local device axis. This
-          position can be used as a direction to determine the direction of
+          An `Class.InputObject` with a `Class.InputObject.Position|Position`
+          property that shows the force of gravity on each local device axis.
+          This position can be used as a direction to determine the direction of
           gravity relative to the device.
     tags: []
     deprecation_message: ''
@@ -2204,37 +1638,28 @@ events:
     writeCapabilities: []
   - name: UserInputService.DeviceRotationChanged
     summary: |
-      Fired when a user rotates a device that has a gyroscope.
+      Fires when a user rotates a device that has a gyroscope.
     description: |
-      The DeviceRotationChanged event fires when a user rotates a device that
-      has a gyroscope.
+      This event fires when a user rotates a device that has a gyroscope, a
+      component found in most mobile devices that detects orientation and
+      rotational speed. To check if a user's device has an enabled gyroscope, use `Class.UserInputService.GyroscopeEnabled|GyroscopeEnabled`.
 
-      A gyroscope is a component found in most mobile devices that detects
-      orientation and rotational speed.
+      To query the current device rotation, use the
+      `Class.UserInputService:GetDeviceRotation()|GetDeviceRotation()` method.
 
-      The event is useful when tracking the orientation of the device and how
-      changes as the user rotates their device. To determine the current device
-      rotation, you can use the `Class.UserInputService:GetDeviceRotation()`
-      function.
-
-      To check if a user's device has an enabled gyroscope, and that this event
-      will fire, see `Class.UserInputService.GyroscopeEnabled`.
-
-      This event only fires when the Roblox client window is in focus. For
-      example, inputs will not be captured when the window is minimized.
-    code_samples:
-      - UserInputService-DeviceRotationChanged
-      - UserInputService-DeviceGravityChanged
+      Note that this event only fires when the Roblox client window is in focus.
+      Inputs will not be captured when the window is minimized.
+    code_samples: []
     parameters:
       - name: rotation
         type: InputObject
         default: ''
         summary: |
           An `Class.InputObject` providing info about the device's rotation.
-          `Class.InputObject.Position` represents the new rotation a
-          `Datatype.Vector3` positional value and `Class.InputObject.Delta`
-          represents the change in rotation in a `Datatype.Vector3` positional
-          value.
+          `Class.InputObject.Position|Position` represents the new rotation a
+          `Datatype.Vector3` positional value and
+          `Class.InputObject.Delta|Delta` represents the change in rotation in a
+          `Datatype.Vector3` positional value.
       - name: cframe
         type: CFrame
         default: ''
@@ -2248,46 +1673,18 @@ events:
     writeCapabilities: []
   - name: UserInputService.GamepadConnected
     summary: |
-      Fires when a gamepad is connected to the client. Passes the ''gamepadNum''
-      of the gamepad that was connected.
+      Fires when a gamepad is connected to the client.
     description: |
-      The GamepadConnected event fires when a gamepad is connected to the
-      client.
+      This event fires when a gamepad is connected to the client. You can also
+      use `Class.UserInputService:GetConnectedGamepads()|GetConnectedGamepads()`
+      to find the correct gamepad to use.
 
-      Since a Roblox game supports multiple controllers, this event is useful
-      when paired with the `Class.UserInputService.GamepadDisconnected` event to
-      track which controllers/gamepads are active. You can also use
-      `Class.UserInputService:GetConnectedGamepads()` to find the correct
-      gamepad to use.
+      Alternatively, you can detect value changes to the
+      `Class.UserInputService.PreferredInput|PreferredInput` property which more
+      accurately reflects which input (mouse/keyboard, touch, gamepad, etc.) the
+      player is likely using as the **primary** input.
 
-      The following example demonstrates a usage example of a tracking when a
-      gamepad is connected to the client.
-
-      ```lua
-      local UserInputService = game:GetService("UserInputService")
-
-      local function GamepadConnected(gamepad)
-      	print("Player has plugged controller: " .. tostring(gamepad))
-      end)
-
-      UserInputService.GamepadConnected:Connect(GamepadConnected)
-      ```
-
-      If you want to see which devices are connected, you can use the
-      `Class.UserInputService:GetConnectedGamepads()` function.
-
-      As this event fires locally, it can only be used in a `Class.LocalScript`.
-
-      See also:
-
-      - `Class.UserInputService.GamepadDisconnected`
-      - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:IsGamepadButtonDown()`
-      - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
-      - `Class.UserInputService:GetGamepadState()`
-      - `Class.UserInputService:GetGamepadConnected()`
-      - `Class.UserInputService:GamepadSupports()`
-      - `Class.UserInputService.GamepadEnabled`
+      See also `Class.UserInputService.GamepadDisconnected|GamepadDisconnected`.
     code_samples: []
     parameters:
       - name: gamepadNum
@@ -2303,42 +1700,16 @@ events:
     writeCapabilities: []
   - name: UserInputService.GamepadDisconnected
     summary: |
-      Fires when a gamepad is disconnected from the client. Passes the
-      `Enum.UserInputType` of the gamepad that was disconnected.
+      Fires when a gamepad is disconnected from the client.
     description: |
-      The GamepadDisconnected event fires when a gamepad is disconnected.
+      This event fires when a gamepad is disconnected from the client.
 
-      Since a Roblox game supports multiple controllers, this event is useful
-      when paired with the `Class.UserInputService.GamepadConnected` event to
-      track which controllers/gamepads are active. You can also use
-      `Class.UserInputService:GetConnectedGamepads()` to find the correct
-      gamepad to use.
+      Alternatively, you can detect value changes to the
+      `Class.UserInputService.PreferredInput|PreferredInput` property which more
+      accurately reflects which input (mouse/keyboard, touch, gamepad, etc.) the
+      player is likely using as the **primary** input.
 
-      The following example demonstrates a usage example of a tracking when a
-      gamepad is disconnected from the client.
-
-      ```lua
-      local UserInputService = game:GetService("UserInputService")
-
-      local function GamepadDisconnected(gamepad)
-      	print("Player has unplugged controller: " .. tostring(gamepad))
-      end)
-
-      UserInputService.GamepadDisconnected:Connect(GamepadDisconnected)
-      ```
-
-      As this event fires locally, it can only be used in a `Class.LocalScript`.
-
-      See also:
-
-      - `Class.UserInputService.GamepadConnected`
-      - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:IsGamepadButtonDown()`
-      - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
-      - `Class.UserInputService:GetGamepadState()`
-      - `Class.UserInputService:GetGamepadConnected()`
-      - `Class.UserInputService:GamepadSupports()`
-      - `Class.UserInputService.GamepadEnabled`
+      See also `Class.UserInputService.GamepadConnected|GamepadConnected`.
     code_samples: []
     parameters:
       - name: gamepadNum
@@ -2354,44 +1725,37 @@ events:
     writeCapabilities: []
   - name: UserInputService.InputBegan
     summary: |
-      Fired when a user begins interacting via a Human-Computer Interface
-      device - such as a mouse or gamepad.
+      Fires when a user begins interacting with an input device such as a mouse
+      or gamepad.
     description: |
-      The InputBegan event fires when a user begins interacting via a
-      Human-Computer Interface device (mouse button down, touch begin, keyboard
-      button down, etc.).
+      This event fires when a user begins interacting with an input device such
+      as a mouse or gamepad, such as when they first interact with a gamepad
+      button, although it does not capture mouse wheel movements. Can be used
+      along with `Class.UserInputService.InputChanged|InputChanged` and
+      `Class.UserInputService.InputEnded|InputEnded` to track when user input
+      begins, changes, and ends.
 
-      It can be used to track the beginning of user interaction, such as when a
-      user first interacts with a GUI element, a gamepad, etc. It does not
-      capture mouse wheel movements.
+      See also `Class.InputBinding` as a way to hook input device interactions
+      to `Class.InputAction|InputActions`.
 
-      This event can be used along with `Class.UserInputService.InputChanged`
-      and `Class.UserInputService.InputEnded` to track when user input begins,
-      changes, and ends.
-
-      This event only fires when the Roblox client window is in focus. For
-      example, inputs will not be captured when the window is minimized.
-
-      As this event only fires locally, it can only be used in a
-      `Class.LocalScript`.
-    code_samples:
-      - UserInputService-InputBegan
+      Note that this event only fires when the Roblox client window is in focus.
+      It will not fire when the window is minimized.
+    code_samples: []
     parameters:
       - name: input
         type: InputObject
         default: ''
         summary: |
-          An `Class.InputObject` instance, which contains information about the
+          An `Class.InputObject` instance containing information about the
           user's input.
       - name: gameProcessedEvent
         type: boolean
         default: ''
         summary: |
-          Indicates whether the game engine internally observed this input and
-          acted on it. Generally this refers to UI processing, so if a button
-          was touched or clicked from this input, `gameProcessedEvent` would be
-          `true`. This is also true for input events connected via
-          `Class.ContextActionService`.
+          Indicates whether the engine internally observed this input and acted
+          on it. Generally this refers to UI processing, so if a button was
+          touched or clicked from this input, `gameProcessedEvent` will be
+          `true`.
     tags: []
     deprecation_message: ''
     security: None
@@ -2400,43 +1764,38 @@ events:
     writeCapabilities: []
   - name: UserInputService.InputChanged
     summary: |
-      Fired when a user changes how they're interacting via a Human-Computer
-      Interface device.
+      Fires when a user changes how they're interacting with an input device
+      such as a mouse or gamepad.
     description: |
-      The InputChanged event fires when a user changes how they're interacting
-      via a Human-Computer Interface device (mouse button down, touch begin,
-      keyboard button down, etc).
+      This event fires when a user changes how they're interacting with an input
+      device such as a mouse or gamepad. Can be used along with
+      `Class.UserInputService.InputBegan|InputBegan` and
+      `Class.UserInputService.InputEnded|InputEnded` to track when user input
+      begins, changes, and ends.
 
-      To ignore events that are automatically handled by Roblox, like scrolling
-      in a `Class.ScrollingFrame`, check that the `gameProcessedEvent` argument
-      is false. This event can be used along with
-      `Class.UserInputService.InputBegan` and
-      `Class.UserInputService.InputEnded` to track when user input begins,
-      changes, and ends.
+      See also `Class.InputBinding` as a way to hook input device interactions
+      to `Class.InputAction|InputActions`.
 
-      This event only fires when the Roblox client window is in focus. For
-      example, inputs will not be captured when the window is minimized.
-
-      As this event only fires locally, it can only be used in a
-      `Class.LocalScript`.
-    code_samples:
-      - UserInputService-InputChanged
+      Note that this event only fires when the Roblox client window is in focus.
+      It will not fire when the window is minimized.
+    code_samples: []
     parameters:
       - name: input
         type: InputObject
         default: ''
         summary: |
-          An `Class.InputObject` instance, which contains information about the
+          An `Class.InputObject` instance containing information about the
           user's input.
       - name: gameProcessedEvent
         type: boolean
         default: ''
         summary: |
-          Indicates whether the game engine internally observed this input and
-          acted on it. Generally this refers to UI processing, so if a button
-          was touched or clicked from this input, `gameProcessedEvent` would be
-          `true`. This is also true for input events connected via
-          `Class.ContextActionService`.
+          Indicates whether the engine internally observed this input and acted
+          on it. Generally this refers to UI processing, so if a button was
+          touched or clicked from this input, `gameProcessedEvent` will be
+          `true`. To ignore events that are automatically handled by Roblox
+          like scrolling in a `Class.ScrollingFrame`, check that
+          `gameProcessedEvent` is `false`.
     tags: []
     deprecation_message: ''
     security: None
@@ -2445,40 +1804,36 @@ events:
     writeCapabilities: []
   - name: UserInputService.InputEnded
     summary: |
-      Fires when a user stops interacting via a Human-Computer Interface device.
+      Fires when a user stops interacting with an input device such as a mouse
+      or gamepad.
     description: |
-      The InputEnded event fires when a user stops interacting via a
-      Human-Computer Interface device (mouse button down, touch begin, keyboard
-      button down, etc). This is useful when tracking when a user releases a
-      keyboard key, mouse button, touchscreen input, etc.
+      This event fires when a user stops interacting with an input device such
+      as a mouse or gamepad, such as when they release a gamepad button. Can be
+      used along with `Class.UserInputService.InputBegan|InputBegan` and
+      `Class.UserInputService.InputChanged|InputChanged` to track when user
+      input begins, changes, and ends.
 
-      This event can be used along with `Class.UserInputService.InputBegan` and
-      `Class.UserInputService.InputChanged` to track when user input begins,
-      changes, and ends.
+      See also `Class.InputBinding` as a way to hook input device interactions
+      to `Class.InputAction|InputActions`.
 
-      This event only fires when the Roblox client window is in focus. For
-      example, inputs will not be captured when the window is minimized.
-
-      As this event only fires locally, it can only be used in a
-      `Class.LocalScript`.
-    code_samples:
-      - UserInputService-InputEnded
+      Note that this event only fires when the Roblox client window is in focus.
+      It will not fire when the window is minimized.
+    code_samples: []
     parameters:
       - name: input
         type: InputObject
         default: ''
         summary: |
-          An `Class.InputObject` instance, which contains information about the
-          user input.
+          An `Class.InputObject` instance containing information about the user
+          input.
       - name: gameProcessedEvent
         type: boolean
         default: ''
         summary: |
-          Indicates whether the game engine internally observed this input and
-          acted on it. Generally this refers to UI processing, so if a button
-          was touched or clicked from this input, `gameProcessedEvent` would be
-          `true`. This is also true for input events connected via
-          `Class.ContextActionService`.
+          Indicates whether the engine internally observed this input and acted
+          on it. Generally this refers to UI processing, so if a button was
+          touched or clicked from this input, `gameProcessedEvent` will be
+          `true`.
     tags: []
     deprecation_message: ''
     security: None
@@ -2489,41 +1844,13 @@ events:
     summary: |
       Fires whenever the client makes a request for their character to jump.
     description: |
-      The `Class.UserInputService` JumpRequest event fires when there is a jump
-      request from the client, for example when the client presses the spacebar
-      or jump button on mobile.
-
-      This event fires whenever the user tries to make their
-      `Class.Player.Character` jump. Default behavior responds to a jump request
-      by setting the player's `Class.Humanoid.Jump` property to true, which
-      makes the player's character jump.
-
-      The event can be used to track every time a player wants to jump. Instead
-      of using it to make a player jump, this should be used to change default
-      jump behavior - such as disabling jumping.
-
-      For example, the code below prints "Jump" every time the player sends a
-      jump request.
-
-      ```lua
-      local UserInputService = game:GetService("UserInputService")
-
-      function onJumpRequest()
-      	print("Jump!")
-      end
-
-      UserInputService.JumpRequest:Connect(onJumpRequest)
-      ```
+      This event fires when there is a jump request from the client, for example
+      when the client presses the spacebar or jump button on mobile. Default
+      behavior is to set the player's `Class.Humanoid.Jump` property to `true`
+      which makes the player's character jump.
 
       Since this event fires multiple times for a single jump request, using a
-      [debounce](../../../scripting/debounce.md) is suggested.
-
-      If you would like to connect keys or buttons to other actions, consider
-      using events such as `Class.UserInputService:GetKeysPressed()` and
-      `Class.UserInputService.InputBegan` or the `Class.ContextActionService`.
-
-      As this event only fires locally, it can only be used in a
-      `Class.LocalScript`.
+      [debounce](../../../scripting/debounce.md) is recommended.
     code_samples:
       - UserInputService-JumpRequest
     parameters: []
@@ -2535,21 +1862,14 @@ events:
     writeCapabilities: []
   - name: UserInputService.LastInputTypeChanged
     summary: |
-      Fires when the client's `Enum.UserInputType` is changed.
+      Fires whenever the client's `Enum.UserInputType` is changed.
     description: |
-      The `Class.UserInputService.LastInputTypeChanged` event fires whenever the
-      client changes how they are interacting via a Human-Computer Interface
-      device. (i.e. from MouseMovement to MouseWheel or from Thumbstick1 to
-      Thumbstick2).
+      This event fires whenever the client's `Enum.UserInputType` is changed.
 
       To get the value of the last input type, regardless of whether it has
-      changed, you can use the `Class.UserInputService:GetLastInputType()`
-      function.
-
-      As this event only fires locally, it can only be used in a
-      `Class.LocalScript`.
-    code_samples:
-      - UserInputService-LastInputTypeChanged
+      changed, use the
+      `Class.UserInputService:GetLastInputType()|GetLastInputType()` method.
+    code_samples: []
     parameters:
       - name: lastInputType
         type: UserInputType
@@ -2564,11 +1884,10 @@ events:
     writeCapabilities: []
   - name: UserInputService.PointerAction
     summary: |
-      Fires when the user performs a specific pointer action (wheel, pinch,
-      pan).
+      Fires when the user performs a specific pointer action.
     description: |
-      **PointerAction** fires when the user performs a specific pointer action.
-      In particular, scrolling the mouse wheel.
+      This event fires when the user performs a specific pointer action
+      (`wheel`, `pan`, `pitch`).
     code_samples: []
     parameters:
       - name: wheel
@@ -2586,7 +1905,9 @@ events:
       - name: gameProcessedEvent
         type: boolean
         default: ''
-        summary: ''
+        summary: |
+          Indicates whether the engine internally observed this input and acted
+          on it.
     tags: []
     deprecation_message: ''
     security: None
@@ -2595,37 +1916,18 @@ events:
     writeCapabilities: []
   - name: UserInputService.TextBoxFocusReleased
     summary: |
-      Fired when the client loses focus on a `Class.TextBox`.
+      Fires when the client loses focus on a `Class.TextBox`.
     description: |
-      The `TextBoxFocusReleased` event fires when a client loses focus on a
-      `Class.TextBox`, typically when a client stops text entry by pressing
-      return or clicking/touching elsewhere on the screen.
+      This event fires when the client loses focus on a `Class.TextBox`,
+      typically when a user stops text entry by pressing <kbd>Enter</kbd> or
+      clicking/touching elsewhere on the screen. Can be used alongside
+      `Class.UserInputService.TextBoxFocused|TextBoxFocused` to track when a
+      `Class.TextBox` gains focus.
 
-      For example, the code below prints the name of the `Class.TextBox` losing
-      focus when the event fires.
-
-      ```lua
-      local UserInputService = game:GetService("UserInputService")
-
-      function TextBoxFocusReleased(textbox)
-      	print(textbox.Name)
-      end
-
-      UserInputService.TextBoxFocusReleased:Connect(TextBoxFocusReleased)
-      ```
-
-      It can be used alongside `Class.UserInputService.TextBoxFocused` to track
-      when a `Class.TextBox` gains and loses focus.
-
-      As this event only fires locally, it can only be used in a
-      `Class.LocalScript`.
-
-      ##### See Also
-
-      - `Class.UserInputService:GetFocusedTextBox()`
-      - `Class.TextBox.Focused`
-      - `Class.TextBox.FocusLost`
-    code_samples: []
+      See also `Class.UserInputService:GetFocusedTextBox()|GetFocusedTextBox()`,
+      `Class.TextBox.Focused`, and `Class.TextBox.FocusLost`.
+    code_samples:
+      - UserInputService-TextBoxFocused
     parameters:
       - name: textboxReleased
         type: TextBox
@@ -2640,37 +1942,19 @@ events:
     writeCapabilities: []
   - name: UserInputService.TextBoxFocused
     summary: |
-      Fired when the client focuses on a `Class.TextBox`.
+      Fires when the client focuses on a `Class.TextBox`.
     description: |
-      This event fires when a gains focus on a `Class.TextBox`, typically when a
-      client clicks/taps on a text box to begin inputting text. This also fires
-      if a text box focus is focused using `Class.TextBox:CaptureFocus()`.
+      This event fires when the client gains focus on a `Class.TextBox`,
+      typically when a user clicks/taps it to begin inputting text. Also fires
+      if the `Class.TextBox` is focused using `Class.TextBox:CaptureFocus()`.
+      Can be used alongside
+      `Class.UserInputService.TextBoxFocusReleased|TextBoxFocusReleased` to
+      track when a `Class.TextBox` loses focus.
 
-      For example, the code below prints the name of the `Class.TextBox` focused
-      when the event fires.
-
-      ```lua
-      local UserInputService = game:GetService("UserInputService")
-
-      function TextBoxFocused(textbox)
-      	print(textbox.Name)
-      end)
-
-      UserInputService.TextBoxFocused:Connect(TextBoxFocused)
-      ```
-
-      It can be used alongside `Class.UserInputService.FocusReleased` to track
-      when a text box gains and loses focus.
-
-      As this event only fires locally, it can only be used in a
-      `Class.LocalScript`.
-
-      ##### See Also
-
-      - `Class.UserInputService:GetFocusedTextBox()`
-      - `Class.TextBox.Focused`
-      - `Class.TextBox.FocusLost`
-    code_samples: []
+      See also `Class.UserInputService:GetFocusedTextBox()|GetFocusedTextBox()`,
+      `Class.TextBox.Focused`, and `Class.TextBox.FocusLost`.
+    code_samples:
+      - UserInputService-TextBoxFocused
     parameters:
       - name: textboxFocused
         type: TextBox
@@ -2684,22 +1968,37 @@ events:
       - Input
     writeCapabilities: []
   - name: UserInputService.TouchDrag
-    summary: ''
-    description: ''
+    summary: |
+      Fires when the user drags on the screen of a
+      `Class.UserInputService.TouchEnabled|TouchEnabled` device.
+    description: |
+      This event fires when the user drags on the screen of a
+      `Class.UserInputService.TouchEnabled|TouchEnabled` device.
+
+      Note that this event only fires when the Roblox client window is in focus.
+      It will not fire when the window is minimized.
     code_samples: []
     parameters:
       - name: dragDirection
         type: SwipeDirection
         default: ''
-        summary: ''
+        summary: |
+          The predominant drag direction for the event
+          (`Enum.SwipeDirection|Up`, `Enum.SwipeDirection|Down`,
+          `Enum.SwipeDirection|Left`, or `Enum.SwipeDirection|Right`).
       - name: numberOfTouches
         type: int
         default: ''
-        summary: ''
+        summary: |
+          Currently only supports one touch for a value of `1`.
       - name: gameProcessedEvent
         type: boolean
         default: ''
-        summary: ''
+        summary: |
+          Indicates whether the engine internally observed this input and acted
+          on it. Generally this refers to UI processing, so if a button was
+          touched or clicked from this input, `gameProcessedEvent` will be
+          `true`.
     tags: []
     deprecation_message: ''
     security: None
@@ -2708,73 +2007,34 @@ events:
     writeCapabilities: []
   - name: UserInputService.TouchEnded
     summary: |
-      Fired when a user releases their finger from the screen on a TouchEnabled
-      device - such as the screen of a mobile device.
+      Fires when a user releases their finger from the screen of a
+      `Class.UserInputService.TouchEnabled|TouchEnabled` device.
     description: |
-      The TouchEnded event fires when a user released their finger from the
-      screen of a TouchEnabled device, ending touch input with the device.
+      This event fires when a user releases their finger from the screen of a
+      `Class.UserInputService.TouchEnabled|TouchEnabled` device. Can be paired
+      with `Class.UserInputService.TouchStarted|TouchStarted` to determine when
+      a user starts and stops touching the screen.
 
-      This event can be used to determine when a user stops touching the screen
-      of their device. It can be paired with
-      `Class.UserInputService.TouchStarted` to determine when a user starts and
-      stops touching the screen.
-
-      For example, the code below prints the screen position where the user
-      stops touching the screen.
-
-      ```lua
-      local UserInputService = game:GetService("UserInputService")
-
-      function TouchEnded(touch, gameProcessedEvent)
-      	print("Touch ended at " .. tostring(touch.Position))
-      end
-
-      UserInputService.TouchEnded:Connect(TouchEnded)
-      ```
-
-      The touch input object is the same input object throughout the lifetime of
-      the touch. So comparing `Class.InputObject|InputObjects` when they are
-      touch objects is valid to determine if it is the same finger.
-
-      To check if a user's device is TouchEnabled, and that touch events will
-      fire, see `Class.UserInputService.TouchEnabled`.
-
-      This event only fires when the Roblox client window is in focus. For
-      example, inputs will not be captured when the window is minimized.
-
-      As this event only fires locally, it can only be used in a
-      `Class.LocalScript`.
-
-      See also:
-
-      - `Class.UserInputService.TouchTap`
-      - `Class.UserInputService.TouchTapInWorld`
-      - `Class.UserInputService.TouchLongPress`
-      - `Class.UserInputService.TouchMoved`
-      - `Class.UserInputService.TouchPan`
-      - `Class.UserInputService.TouchPinch`
-      - `Class.UserInputService.TouchRotate`
-      - `Class.UserInputService.TouchSwipe`
-      - `Class.UserInputService.TouchDrag`
-      - `Class.UserInputService.TouchStarted`
-    code_samples:
-      - UserInputService-TouchTap
+      Note that this event only fires when the Roblox client window is in focus.
+      It will not fire when the window is minimized.
+    code_samples: []
     parameters:
       - name: touch
         type: InputObject
         default: ''
         summary: |
-          An `Class.InputObject` instance, which contains information about the
-          user's input.
+          An `Class.InputObject` instance containing information about the
+          user's input. This is the same object throughout the lifetime of the
+          touch, so comparing `Class.InputObject|InputObjects` when they are
+          touch objects is valid to determine if it's the same finger.
       - name: gameProcessedEvent
         type: boolean
         default: ''
         summary: |
-          Indicates whether the game engine internally observed this input and
-          acted on it. Generally this refers to UI processing, so if a button
-          was touched or clicked from this input, `gameProcessedEvent` would be
-          `true`. This is also true for input events connected via
-          `Class.ContextActionService`.
+          Indicates whether the engine internally observed this input and acted
+          on it. Generally this refers to UI processing, so if a button was
+          touched or clicked from this input, `gameProcessedEvent` will be
+          `true`.
     tags: []
     deprecation_message: ''
     security: None
@@ -2783,64 +2043,22 @@ events:
     writeCapabilities: []
   - name: UserInputService.TouchLongPress
     summary: |
-      Fired when a user holds at least one finger for a short amount of time on
-      the same screen position on a TouchEnabled device - such as the screen of
-      a mobile device.
+      Fires when a user holds at least one finger for a short amount of time on
+      the screen of a `Class.UserInputService.TouchEnabled|TouchEnabled` device.
     description: |
-      Fired when a user holds at least one finger for a short amount of time on
-      the same screen position of a TouchEnabled device.
+      This event fires when a user holds at least one finger for a short amount
+      of time on the screen of a
+      `Class.UserInputService.TouchEnabled|TouchEnabled` device.
 
-      This event can be used to determine when a user holds their finger down on
-      an in-game `Class.GuiObject` or element.
-
-      The example below prints the `Enum.UserInputState|state` of the long press
-      when the user holds at least one finger for a short amount of time on the
-      same screen position. Possible states include: _Begin_, _Change_, _End_,
-      _Cancel_, and _None_.
-
-      ```lua
-      local UserInputService = game:GetService("UserInputService")
-
-      function TouchLongPress(TouchPositions, state, gameProcessedEvent)
-      	print("Long press event fired. State of press: " .. tostring(state))
-      end
-
-      UserInputService.TouchLongPress:Connect(TouchLongPress)
-      ```
-
-      To check if a user's device is TouchEnabled, and that touch events will
-      fire, see`Class.UserInputService.TouchEnabled`.
-
-      It can be paired with `Class.UserInputService.TouchStarted` and
-      `Class.UserInputService.TouchEnded` to determine when a user starts and
-      stops touching the screen.
-
-      This event only fires when the Roblox client window is in focus. For
-      example, inputs will not be captured when the window is minimized.
-
-      As this event only fires locally, it can only be used in a
-      `Class.LocalScript`.
-
-      See also:
-
-      - `Class.UserInputService.TouchTap`
-      - `Class.UserInputService.TouchTapInWorld`
-      - `Class.UserInputService.TouchMoved`
-      - `Class.UserInputService.TouchPan`
-      - `Class.UserInputService.TouchPinch`
-      - `Class.UserInputService.TouchRotate`
-      - `Class.UserInputService.TouchSwipe`
-      - `Class.UserInputService.TouchDrag`
-      - `Class.UserInputService.TouchStarted`
-      - `Class.UserInputService.TouchEnded`
-    code_samples:
-      - UserInputService-TouchTap
+      Note that this event only fires when the Roblox client window is in focus.
+      It will not fire when the window is minimized.
+    code_samples: []
     parameters:
       - name: touchPositions
         type: Array
         default: ''
         summary: |
-          An array of `Datatype.Vector2` objects, indicating the position of the
+          An array of `Datatype.Vector2` objects indicating the position of the
           fingers involved in the gesture.
       - name: state
         type: UserInputState
@@ -2851,11 +2069,10 @@ events:
         type: boolean
         default: ''
         summary: |
-          Indicates whether the game engine internally observed this input and
-          acted on it. Generally this refers to UI processing, so if a button
-          was touched or clicked from this input, `gameProcessedEvent` would be
-          `true`. This is also true for input events connected via
-          `Class.ContextActionService`.
+          Indicates whether the engine internally observed this input and acted
+          on it. Generally this refers to UI processing, so if a button was
+          touched or clicked from this input, `gameProcessedEvent` will be
+          `true`.
     tags: []
     deprecation_message: ''
     security: None
@@ -2864,77 +2081,37 @@ events:
     writeCapabilities: []
   - name: UserInputService.TouchMoved
     summary: |
-      Fires when a user moves their finger on a `TouchEnabled` device, such as a
-      tablet or smartphone.
+      Fires when a user moves their finger on the screen of a
+      `Class.UserInputService.TouchEnabled|TouchEnabled` device.
     description: |
-      Fires when a user moves their finger on a
-      `Class.UserInputService.TouchEnabled|TouchEnabled` device, such as a
-      tablet or smartphone.
+      This event fires when a user moves their finger on the screen of a
+      `Class.UserInputService.TouchEnabled|TouchEnabled` device, useful for
+      tracking whether a user is moving their finger on the screen and where
+      they're moving it. Can be paired with
+      `Class.UserInputService.TouchStarted|TouchStarted` and
+      `Class.UserInputService.TouchEnded|TouchEnded` to determine when a user
+      starts touching the screen, how their finger moves while touching it, and
+      when the they stop touching the screen.
 
-      This event is useful for tracking whether a user is moving their finger on
-      the screen, as well as where the user is moving their finger.
-
-      The code below shows the touch moving from its previous position to a new
-      position on a `Class.UserInputService.TouchEnabled|TouchEnabled` device.
-      Note that the `Class.InputObject.Position` on the passed `touch` parameter
-      is a `Datatype.Vector3`, but only includes X and Y coordinates; Z is
-      always 0.
-
-      ```lua
-      local UserInputService = game:GetService("UserInputService")
-
-      function onTouchMoved(touch, gameProcessedEvent)
-      	local oldPosition = touch.Position - touch.Delta
-      	print("Touch moved from " .. tostring(oldPosition) .. " to " .. tostring(touch.Position))
-      end
-
-      UserInputService.TouchMoved:Connect(onTouchMoved)
-      ```
-
-      Pair this event with `Class.UserInputService.TouchStarted` and
-      `Class.UserInputService.TouchEnded` to determine when a user starts
-      touching the screen, how their finger moves while touching it, and when
-      the they stop touching the screen.
-
-      To check if a user's device supports touch and that touch events will
-      fire, see `Class.UserInputService.TouchEnabled`.
-
-      This event only fires when the Roblox client window is in focus. For
-      example, inputs will not be captured when the window is minimized.
-
-      As this event only fires locally, it can only be used in a
-      `Class.LocalScript`.
-
-      See also:
-
-      - `Class.UserInputService.TouchTap`
-      - `Class.UserInputService.TouchTapInWorld`
-      - `Class.UserInputService.TouchLongPress`
-      - `Class.UserInputService.TouchPan`
-      - `Class.UserInputService.TouchPinch`
-      - `Class.UserInputService.TouchRotate`
-      - `Class.UserInputService.TouchSwipe`
-      - `Class.UserInputService.TouchDrag`
-      - `Class.UserInputService.TouchStarted`
-      - `Class.UserInputService.TouchEnded`
-    code_samples:
-      - UserInputService-TouchTap
+      Note that this event only fires when the Roblox client window is in focus.
+      It will not fire when the window is minimized.
+    code_samples: []
     parameters:
       - name: touch
         type: InputObject
         default: ''
         summary: |
-          An `Class.InputObject` instance, which contains information about the
-          user's input.
+          An `Class.InputObject` instance containing information about the
+          user's input. Note that its `Class.InputObject.Position|Position` is a
+          `Datatype.Vector3` but only includes **X** and **Y** coordinates (**Z** is always `0`).
       - name: gameProcessedEvent
         type: boolean
         default: ''
         summary: |
-          Indicates whether the game engine internally observed this input and
-          acted on it. Generally this refers to UI processing, so if a button
-          was touched or clicked from this input, `gameProcessedEvent` would be
-          `true`. This is also true for input events connected via
-          `Class.ContextActionService`.
+          Indicates whether the engine internally observed this input and acted
+          on it. Generally this refers to UI processing, so if a button was
+          touched or clicked from this input, `gameProcessedEvent` will be
+          `true`.
     tags: []
     deprecation_message: ''
     security: None
@@ -2943,68 +2120,32 @@ events:
     writeCapabilities: []
   - name: UserInputService.TouchPan
     summary: |
-      Fired when a user drags at least one finger on a
-      `Class.UserInputService.TouchEnabled|TouchEnabled` device - such as the
-      screen of a mobile device.
-    description: |
-      The TouchPan event fires when a user drags at least one finger on a
+      Fires when the user drags at least one finger on the screen of a
       `Class.UserInputService.TouchEnabled|TouchEnabled` device.
+    description: |
+      This event fires when the user drags at least one finger on the screen of
+      a `Class.UserInputService.TouchEnabled|TouchEnabled` device.
 
-      This event can be used to determine when a user pans their finger along
-      screen of a TouchEnabled device - such as to rotate the `Class.Camera` in
-      a custom camera script.
-
-      The snippet below prints "Speed of touch drag" followed by the velocity of
-      the user's touch when the user drags their finger on the screen.
-
-      ```lua
-      local UserInputService = game:GetService("UserInputService")
-
-      UserInputService.TouchPan:Connect(function(touchPositions, totalTranslation, velocity, state, gameProcessedEvent)
-      	print("Speed of touch drag: " .. tostring(velocity))
-      end)
-      ```
-
-      Take a look at another useful `Class.UserInputService` function here
-      `Class.UserInputService.TouchRotate`.
-
-      This event only fires when the Roblox client window is in focus. For
-      example, inputs will not be captured when the window is minimized.
-
-      As this event only fires locally, it can only be used in a
-      `Class.LocalScript`.
-
-      See also:
-
-      - `Class.UserInputService.TouchTap`
-      - `Class.UserInputService.TouchTapInWorld`
-      - `Class.UserInputService.TouchLongPress`
-      - `Class.UserInputService.TouchMoved`
-      - `Class.UserInputService.TouchPinch`
-      - `Class.UserInputService.TouchRotate`
-      - `Class.UserInputService.TouchSwipe`
-      - `Class.UserInputService.TouchDrag`
-      - `Class.UserInputService.TouchStarted`
-      - `Class.UserInputService.TouchEnded`
-    code_samples:
-      - UserInputService-TouchPinch
+      Note that this event only fires when the Roblox client window is in focus.
+      It will not fire when the window is minimized.
+    code_samples: []
     parameters:
       - name: touchPositions
         type: Array
         default: ''
         summary: |
-          An array of `Datatype.Vector2` objects, indicating the positions of
-          the touches (e.g. fingers) involved in the gesture.
+          An array of `Datatype.Vector2|Vector2s` indicating the positions of
+          the touches involved in the gesture.
       - name: totalTranslation
         type: Vector2
         default: ''
         summary: |
-          The size of the pan gesture from start to end (in pixels).
+          The size of the pan gesture from start to end, in pixels.
       - name: velocity
         type: Vector2
         default: ''
         summary: |
-          The speed of the pan gesture (in pixels) per second.
+          The speed of the pan gesture in pixels per second.
       - name: state
         type: UserInputState
         default: ''
@@ -3014,11 +2155,10 @@ events:
         type: boolean
         default: ''
         summary: |
-          Indicates whether the game engine internally observed this input and
-          acted on it. Generally this refers to UI processing, so if a button
-          was touched or clicked from this input, `gameProcessedEvent` would be
-          `true`. This is also true for input events connected via
-          `Class.ContextActionService`.
+          Indicates whether the engine internally observed this input and acted
+          on it. Generally this refers to UI processing, so if a button was
+          touched or clicked from this input, `gameProcessedEvent` will be
+          `true`.
     tags: []
     deprecation_message: ''
     security: None
@@ -3027,51 +2167,21 @@ events:
     writeCapabilities: []
   - name: UserInputService.TouchPinch
     summary: |
-      Fired when a user pinches their fingers on a
-      `Class.UserInputService.TouchEnabled|TouchEnabled` device - such as the
-      screen of a mobile device.
+      Fires when a user performs a pinch gesture on the screen of a
+      `Class.UserInputService.TouchEnabled|TouchEnabled` device.
     description: |
-      Fired when a user places and moves two fingers on the screen of a
+      This event fires when a user performs a pinch gesture on the screen of a
       `Class.UserInputService.TouchEnabled|TouchEnabled` device.
 
-      For instance, the snippet below prints how much the camera zoom scale has
-      changed since the beginning of the touch pinch.
-
-      ```lua
-      local UserInputService = game:GetService("UserInputService")
-
-      UserInputService.TouchPinch:Connect(function(touchPositions, scale, velocity, state, gameProcessedEvent)
-      	print("Scale difference since beginning of pinch: " .. tostring(scale))
-      end)
-      ```
-
-      To check if a user's device is TouchEnabled, and that touch events will
-      fire, see `Class.UserInputService.TouchEnabled`.
-
-      This event only fires when the Roblox client window is in focus. For
-      example, inputs will not be captured when the window is minimized. As this
-      event only fires locally, it can only be used in a `Class.LocalScript`.
-
-      See also:
-
-      - `Class.UserInputService.TouchTap`
-      - `Class.UserInputService.TouchTapInWorld`
-      - `Class.UserInputService.TouchMoved`
-      - `Class.UserInputService.TouchLongPress`
-      - `Class.UserInputService.TouchPan`
-      - `Class.UserInputService.TouchRotate`
-      - `Class.UserInputService.TouchSwipe`
-      - `Class.UserInputService.TouchDrag`
-      - `Class.UserInputService.TouchStarted`
-      - `Class.UserInputService.TouchEnded`
-    code_samples:
-      - UserInputService-TouchPinch
+      Note that this event only fires when the Roblox client window is in focus.
+      It will not fire when the window is minimized.
+    code_samples: []
     parameters:
       - name: touchPositions
         type: Array
         default: ''
         summary: |
-          An array of `Datatype.Vector2|Vector2s`, indicating the screen
+          An array of `Datatype.Vector2|Vector2s` indicating the screen
           position, in pixels, of the fingers involved in the pinch gesture.
       - name: scale
         type: float
@@ -3083,7 +2193,7 @@ events:
         type: float
         default: ''
         summary: |
-          The speed of the pinch gesture (in pixels) per second.
+          The speed of the pinch gesture in pixels per second.
       - name: state
         type: UserInputState
         default: ''
@@ -3093,11 +2203,10 @@ events:
         type: boolean
         default: ''
         summary: |
-          Indicates whether the game engine internally observed this input and
-          acted on it. Generally this refers to UI processing, so if a button
-          was touched or clicked from this input, `gameProcessedEvent` would be
-          `true`. This is also true for input events connected via
-          `Class.ContextActionService`.
+          Indicates whether the engine internally observed this input and acted
+          on it. Generally this refers to UI processing, so if a button was
+          touched or clicked from this input, `gameProcessedEvent` will be
+          `true`.
     tags: []
     deprecation_message: ''
     security: None
@@ -3106,58 +2215,21 @@ events:
     writeCapabilities: []
   - name: UserInputService.TouchRotate
     summary: |
-      Fires when a user rotates two fingers on a
-      `Class.UserInputService.TouchEnabled|TouchEnabled` device - such as the
-      screen of a mobile device.
+      Fires when a user rotates two fingers on the screen of a
+      `Class.UserInputService.TouchEnabled|TouchEnabled` device.
     description: |
-      The TouchRotate event fires when a user rotates two fingers on a
+      This event fires when a user rotates two fingers on the screen of a
       `Class.UserInputService.TouchEnabled|TouchEnabled` device.
 
-      For example, the following code prints how much the camera has rotated
-      since the beginning of the touch rotation.
-
-      ```lua
-      local UserInputService = game:GetService("UserInputService")
-
-      UserInputService.TouchRotate:Connect(function(touchPositions, rotation, velocity, state, gameProcessedEvent)
-      	print("Camera has rotated " .. tostring(rotation) .. " degrees!")
-      end)
-      ```
-
-      To check if a user's device is TouchEnabled, and that touch events will
-      fire, see `Class.UserInputService.TouchEnabled`.
-
-      This event only fires when the Roblox client window is in focus. For
-      example, inputs will not be captured when the window is minimized.
-
-      As this event only fires locally, it can only be used in a
-      `Class.LocalScript`.
-
-      The core scripts that control the user's camera on a mobile device use
-      code that functions similarly to this event. Best practice for this event
-      is to use it when creating a mobile camera system to override the default
-      core scripts.
-
-      See also:
-
-      - `Class.UserInputService.TouchTap`
-      - `Class.UserInputService.TouchTapInWorld`
-      - `Class.UserInputService.TouchMoved`
-      - `Class.UserInputService.TouchLongPress`
-      - `Class.UserInputService.TouchPan`
-      - `Class.UserInputService.TouchPinch`
-      - `Class.UserInputService.TouchSwipe`
-      - `Class.UserInputService.TouchDrag`
-      - `Class.UserInputService.TouchStarted`
-      - `Class.UserInputService.TouchEnded`
-    code_samples:
-      - UserInputService-TouchPinch
+      Note that this event only fires when the Roblox client window is in focus.
+      It will not fire when the window is minimized.
+    code_samples: []
     parameters:
       - name: touchPositions
         type: Array
         default: ''
         summary: |
-          An array of `Datatype.Vector2|Vector2s`, indicating the positions of
+          An array of `Datatype.Vector2|Vector2s` indicating the positions of
           the fingers involved in the gesture.
       - name: rotation
         type: float
@@ -3180,11 +2252,10 @@ events:
         type: boolean
         default: ''
         summary: |
-          Indicates whether the game engine internally observed this input and
-          acted on it. Generally this refers to UI processing, so if a button
-          was touched or clicked from this input, `gameProcessedEvent` would be
-          `true`. This is also true for input events connected via
-          `Class.ContextActionService`.
+          Indicates whether the engine internally observed this input and acted
+          on it. Generally this refers to UI processing, so if a button was
+          touched or clicked from this input, `gameProcessedEvent` will be
+          `true`.
     tags: []
     deprecation_message: ''
     security: None
@@ -3193,60 +2264,33 @@ events:
     writeCapabilities: []
   - name: UserInputService.TouchStarted
     summary: |
-      Fired when a user places their finger on a TouchEnabled device - such as
-      the screen of an Apple iPad or iPhone or a Google Android phone.
+      Fires when a user places their finger on the screen of a `Class.UserInputService.TouchEnabled|TouchEnabled` device.
     description: |
-      The TouchStarted event fires when a user places their finger on a
-      `Class.UserInputService.TouchEnabled|TouchEnabled` device, beginning touch
-      input with the device.
+      This event fires when a user places their finger on the screen of a
+      `Class.UserInputService.TouchEnabled|TouchEnabled` device. Can be paired
+      with `Class.UserInputService.TouchEnded|TouchEnded` to determine when a
+      user starts and stops touching the screen.
 
-      This event can be used to determine when a user starts touching the screen
-      of their device. It can be paired with `Class.UserInputService.TouchEnded`
-      to determine when a user starts and stops touching the screen.
-
-      The touch input object is the same input object throughout the lifetime of
-      the touch. So comparing `Class.InputObject|InputObjects` when they are
-      touch objects is valid to determine if it is the same finger.
-
-      To check if a user's device is TouchEnabled, and that touch events will
-      fire, see `Class.UserInputService.TouchEnabled`.
-
-      This event only fires when the Roblox client window is in focus. For
-      example, inputs will not be captured when the window is minimized.
-
-      As this event only fires locally, it can only be used in a
-      `Class.LocalScript`.
-
-      See also:
-
-      - `Class.UserInputService.TouchTap`
-      - `Class.UserInputService.TouchTapInWorld`
-      - `Class.UserInputService.TouchLongPress`
-      - `Class.UserInputService.TouchMoved`
-      - `Class.UserInputService.TouchPan`
-      - `Class.UserInputService.TouchPinch`
-      - `Class.UserInputService.TouchRotate`
-      - `Class.UserInputService.TouchSwipe`
-      - `Class.UserInputService.TouchDrag`
-      - `Class.UserInputService.TouchEnded`
-    code_samples:
-      - UserInputService-TouchStarted
+      Note that this event only fires when the Roblox client window is in focus.
+      It will not fire when the window is minimized.
+    code_samples: []
     parameters:
       - name: touch
         type: InputObject
         default: ''
         summary: |
           An `Class.InputObject` instance, which contains information about the
-          user's input.
+          user's input. This is the same object throughout the lifetime of the
+          touch, so comparing `Class.InputObject|InputObjects` when they are
+          touch objects is valid to determine if it's the same finger.
       - name: gameProcessedEvent
         type: boolean
         default: ''
         summary: |
-          Indicates whether the game engine internally observed this input and
-          acted on it. Generally this refers to UI processing, so if a button
-          was touched or clicked from this input, `gameProcessedEvent` would be
-          `true`. This is also true for input events connected via
-          `Class.ContextActionService`.
+          Indicates whether the engine internally observed this input and acted
+          on it. Generally this refers to UI processing, so if a button was
+          touched or clicked from this input, `gameProcessedEvent` will be
+          `true`.
     tags: []
     deprecation_message: ''
     security: None
@@ -3257,60 +2301,38 @@ events:
     summary: |
       Fires on a `Class.UserInputService.TouchEnabled|TouchEnabled` device when
       a user places their finger(s) down on the screen, pans across the screen,
-      and lifts their finger off with a certain speed of movement.
+      and lifts their finger(s) off with a certain speed of movement.
     description: |
-      The `TouchSwipe` event fires when a user swipes their fingers on a
-      `Class.UserInputService.TouchEnabled|TouchEnabled` device.
+      This event fires on a `Class.UserInputService.TouchEnabled|TouchEnabled`
+      device when a user places their finger(s) down on the screen, pans across
+      the screen, and lifts their finger(s) off with a certain speed of
+      movement.
 
-      This event can be used to determine when a user swipes their fingers on
-      the screen of their device and the direction that the user swiped.
+      For more precise tracking of touch input movement, use
+      `Class.UserInputService.TouchMoved|TouchMoved`.
 
-      For more precise tracking of touch input movement, use using
-      `Class.UserInputService.TouchMoved`
-
-      To check if a user's device is TouchEnabled, and that touch events will
-      fire, see `Class.UserInputService.TouchEnabled`.
-
-      This event only fires when the Roblox client window is in focus. For
-      example, inputs will not be captured when the window is minimized.
-
-      As this event only fires locally, it can only be used in a
-      `Class.LocalScript`.
-
-      See also:
-
-      - `Class.UserInputService.TouchTap`
-      - `Class.UserInputService.TouchTapInWorld`
-      - `Class.UserInputService.TouchLongPress`
-      - `Class.UserInputService.TouchMoved`
-      - `Class.UserInputService.TouchPan`
-      - `Class.UserInputService.TouchPinch`
-      - `Class.UserInputService.TouchRotate`
-      - `Class.UserInputService.TouchDrag`
-      - `Class.UserInputService.TouchStarted`
-      - `Class.UserInputService.TouchEnded`
-    code_samples:
-      - UserInputService-TouchSwipe
+      Note that this event only fires when the Roblox client window is in focus.
+      It will not fire when the window is minimized.
+    code_samples: []
     parameters:
       - name: swipeDirection
         type: SwipeDirection
         default: ''
         summary: |
-          An `Enum.SwipeDirection`, indicating the direction the user swiped.
+          An `Enum.SwipeDirection` indicating the direction the user swiped.
       - name: numberOfTouches
         type: int
         default: ''
         summary: |
-          Number of touches (e.g. fingers) involved in the gesture.
+          Number of touches involved in the swipe gesture.
       - name: gameProcessedEvent
         type: boolean
         default: ''
         summary: |
-          Indicates whether the game engine internally observed this input and
-          acted on it. Generally this refers to UI processing, so if a button
-          was touched or clicked from this input, `gameProcessedEvent` would be
-          `true`. This is also true for input events connected via
-          `Class.ContextActionService`.
+          Indicates whether the engine internally observed this input and acted
+          on it. Generally this refers to UI processing, so if a button was
+          touched or clicked from this input, `gameProcessedEvent` will be
+          `true`.
     tags: []
     deprecation_message: ''
     security: None
@@ -3319,44 +2341,33 @@ events:
     writeCapabilities: []
   - name: UserInputService.TouchTap
     summary: |
-      Fired when a user taps their finger on a
-      `Class.UserInputService.TouchEnabled|TouchEnabled` device - such as the
-      screen of a mobile device.
+      Fires when a user taps their finger on the screen of a
+      `Class.UserInputService.TouchEnabled|TouchEnabled` device.
     description: |
-      The TouchTap event fires when the user touches/taps their finger on the
-      screen on a `Class.UserInputService.TouchEnabled|TouchEnabled` device.
+      This event fires when a user taps their finger on the screen of a
+      `Class.UserInputService.TouchEnabled|TouchEnabled` device, regardless of
+      whether the user taps in the 3D world or on a `Class.GuiObject` element.
+      If you're looking for an event that only fires when the user taps in the
+      3D world, use `Class.UserInputService.TouchTapInWorld|TouchTapInWorld`.
 
-      This event will fire regardless of whether the user touches/taps the game
-      world or a `Class.GuiObject` element. If you are looking for an event that
-      only fires when the user touches/taps the game world, use
-      `Class.UserInputService.TouchTapInWorld`.
-
-      To check if a user's device is TouchEnabled, and that touch events will
-      fire, see `Class.UserInputService.TouchEnabled`.
-
-      This event only fires when the Roblox client window is in focus. For
-      example, inputs will not be captured when the window is minimized.
-
-      As this event only fires locally, it can only be used in a
-      `Class.LocalScript`.
-    code_samples:
-      - UserInputService-TouchTap
+      Note that this event only fires when the Roblox client window is in focus.
+      It will not fire when the window is minimized.
+    code_samples: []
     parameters:
       - name: touchPositions
         type: Array
         default: ''
         summary: |
-          An array of `Datatype.Vector2` objects, indicating the position of the
+          An array of `Datatype.Vector2` objects indicating the position of the
           fingers involved in the tap gesture.
       - name: gameProcessedEvent
         type: boolean
         default: ''
         summary: |
-          Indicates whether the game engine internally observed this input and
-          acted on it. Generally this refers to UI processing, so if a button
-          was touched or clicked from this input, `gameProcessedEvent` would be
-          `true`. This is also true for input events connected via
-          `Class.ContextActionService`.
+          Indicates whether the engine internally observed this input and acted
+          on it. Generally this refers to UI processing, so if a button was
+          touched or clicked from this input, `gameProcessedEvent` will be
+          `true`.
     tags: []
     deprecation_message: ''
     security: None
@@ -3365,51 +2376,28 @@ events:
     writeCapabilities: []
   - name: UserInputService.TouchTapInWorld
     summary: |
-      Fires when a user taps the game world on a
-      `Class.UserInputService.TouchEnabled|TouchEnabled` device - such as the
-      screen of a mobile device.
+      Fires when a user taps their finger on the screen of a
+      `Class.UserInputService.TouchEnabled|TouchEnabled` device and the tap
+      location is in the 3D world.
     description: |
-      The TouchTapInWorld event fires when the user touches/taps their finger on
-      the screen on a `Class.UserInputService.TouchEnabled|TouchEnabled` device.
-      It is fired when the user taps in the game world.
+      This event fires when a user taps their finger on the screen of a
+      `Class.UserInputService.TouchEnabled|TouchEnabled` device and the tap
+      location is in the 3D world rather than on a `Class.GuiObject` element.
 
-      This event can be used to determine when a user taps the screen and does
-      not tap a `Class.GuiObject` element. If the user taps a GUI element,
-      `Class.UserInputService.TouchTap` will fire instead of TouchTapInWorld.
-
-      To check if a user's device is TouchEnabled, and that touch events will
-      fire, see `Class.UserInputService.TouchEnabled`.
-
-      This event only fires when the Roblox client window is in focus. For
-      example, inputs will not be captured when the window is minimized.
-
-      As it only fires locally, it can only be used in a `Class.LocalScript`.
-
-      See also:
-
-      - `Class.UserInputService.TouchTap`
-      - `Class.UserInputService.TouchLongPress`
-      - `Class.UserInputService.TouchMoved`
-      - `Class.UserInputService.TouchPan`
-      - `Class.UserInputService.TouchPinch`
-      - `Class.UserInputService.TouchRotate`
-      - `Class.UserInputService.TouchSwipe`
-      - `Class.UserInputService.TouchDrag`
-      - `Class.UserInputService.TouchStarted`
-      - `Class.UserInputService.TouchEnded`
-    code_samples:
-      - UserInputService-TouchTapInWorld
+      Note that this event only fires when the Roblox client window is in focus.
+      It will not fire when the window is minimized.
+    code_samples: []
     parameters:
       - name: position
         type: Vector2
         default: ''
         summary: |
-          A `Datatype.Vector2` indicating the position of the touch.
+          A `Datatype.Vector2` indicating the position of the tap.
       - name: processedByUI
         type: boolean
         default: ''
         summary: |
-          Whether the user tapped a GUI element.
+          Whether the user tapped a UI element.
     tags: []
     deprecation_message: ''
     security: None
@@ -3444,7 +2432,7 @@ events:
       - `Class.Camera.HeadLocked`, when this property is `true` the
         `Class.Camera` will automatically track the head motion of a player
         using a VR device
-      - `Class.Camera:GetRenderCFrame()`, a function which retrieves the
+      - `Class.Camera:GetRenderCFrame()`, a method which retrieves the
         `Datatype.CFrame` the `Class.Camera` is being orientated at, including
         the impact of VR devices
     code_samples:
@@ -3473,28 +2461,13 @@ events:
       Fires when the window of the Roblox client loses focus on the user's
       screen.
     description: |
-      The `Class.UserInputService` WindowFocusReleased event fires when the
-      window of the Roblox client loses focus - typically when the Roblox client
-      is minimized by the user.
-
-      For example, the code below prints _"Window focus released"_ whenever the
-      Roblox client loses focus.
-
-      ```lua
-      local UserInputService = game:GetService("UserInputService")
-
-      UserInputService.WindowFocusReleased:Connect(function()
-      	print("Window focus released")
-      end)
-      ```
-
-      This event can be used alongside `Class.UserInputService.WindowFocused` to
-      track whether the Roblox client is actively focused on a user's screen.
-
-      Since it only fires locally, it can only be used in a `Class.LocalScript`.
+      This event fires when the window of the Roblox client loses focus,
+      typically when it is minimized by the user. Can be used alongside
+      `Class.UserInputService.WindowFocused|WindowFocused` to track when the
+      client gains focus on a user's screen.
     code_samples:
-      - UserInputService-WindowFocused-script
-      - UserInputService-WindowFocused-localscript
+      - UserInputService-Window-Focus-Client
+      - UserInputService-Window-Focus-Server
     parameters: []
     tags: []
     deprecation_message: ''
@@ -3507,30 +2480,11 @@ events:
       Fires when the window of the Roblox client gains focus on the user's
       screen.
     description: |
-      The `Class.UserInputService` WindowFocused event fires when the window of
-      the Roblox client gains focus - typically when the Roblox client is
-      maximized/actively open on the user's screen.
-
-      For example, the code below prints _"Window focused"_ whenever the Roblox
-      client gains focus.
-
-      ```lua
-      local UserInputService = game:GetService("UserInputService")
-
-      UserInputService.WindowFocused:Connect(function()
-      	print("Window focused")
-      end)
-      ```
-
-      This event can be used alongside
-      `Class.UserInputService.WindowFocusReleased` to track whether the Roblox
-      client is actively focused on a user's screen.
-
-      As this event only fires locally, it can only be used in a
-      `Class.LocalScript`.
-    code_samples:
-      - UserInputService-WindowFocused-script
-      - UserInputService-WindowFocused-localscript
+      This event fires when the window of the Roblox client gains focus,
+      typically when it is maximized or actively opened by the user. Can be used
+      alongside `Class.UserInputService.WindowFocusReleased|WindowFocusReleased`
+      to track when the client loses focus on a user's screen.
+    code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''

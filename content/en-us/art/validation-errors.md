@@ -291,6 +291,15 @@ See the following resources for caging:
     <td>Missing HSR data for `%s`. Please, try again.</td>
     <td>The HSR (Hidden Surface Removal) data is calculated in the cloud server and may take a few minutes to be updated for your assets. Wait some time and try again.</td>
   </tr>
+  <tr>
+    <td>Failed to execute body max cage distance check. Make sure all render meshes and their WrapTarget cage meshes exist, and try again.</td>
+    <td></td>
+  </tr>
+  <tr id = "bodyCageMaxSize">
+    <td>A vertex was found on the `%s`'s cage mesh that is `%.2f` studs away from the closest render mesh. `%s` studs is the maximum. Make the cage mesh more closely match the shape and size of the render mesh.</td>
+    <td></td>
+  </tr>
+
 </tbody>
 </table>
 
@@ -475,7 +484,7 @@ See the following for more information on various character body components:
   </tr>
   <tr>
     <td>Attachment `%s` in `%s` is placed at a position `%s` that is outside the valid range. You need to adjust the attachment position.<br/><br/>Attachment `%s` in `%s` is placed at a position `%s` that is outside the valid range of (`%s` to `%s`). You need to adjust the attachment position.</td>
-    <td>Body attachments need to be within reasonable distance from the body][should not have an applied rotation](../art/characters/specifications.md#attachments) to avoid introducing unrealistic gaps when equipping accessories to those attachments.</td>
+    <td>Body attachments need to be within reasonable distance from the body[should not have an applied rotation](../art/characters/specifications.md#attachments) to avoid introducing unrealistic gaps when equipping accessories to those attachments.</td>
   </tr>
   <tr>
     <td>Body part `%s` does not follow R15 schema. The specific issues are: `%s`</td>
