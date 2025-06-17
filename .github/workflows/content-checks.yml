@@ -63,14 +63,22 @@ jobs:
         run: npm ci
 
       - name: Print workflow information
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_USER_LOGIN: ${{ github.event.pull_request.user.login }}
+          BASE_REF: ${{ github.event.pull_request.base.ref }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_REF: ${{ github.event.pull_request.head.ref }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
-          echo "Event name: ${{ github.event_name }}"
-          echo "Pull request number: ${{ github.event.pull_request.number }}"
-          echo "Pull request user login: ${{ github.event.pull_request.user.login }}"
-          echo "Base (target) ref: ${{ github.event.pull_request.base.ref }}"
-          echo "Base (target) sha: ${{ github.event.pull_request.base.sha }}"
-          echo "Head (source) ref: ${{ github.event.pull_request.head.ref }}"
-          echo "Head (source) sha: ${{ github.event.pull_request.head.sha }}"
+          echo "Event name: $EVENT_NAME"
+          echo "Pull request number: $PR_NUMBER"
+          echo "Pull request user login: $PR_USER_LOGIN"
+          echo "Base (target) ref: $BASE_REF"
+          echo "Base (target) sha: $BASE_SHA"
+          echo "Head (source) ref: $HEAD_REF"
+          echo "Head (source) sha: $HEAD_SHA"
           git status
           git remote -v
           git log --oneline -n 10
