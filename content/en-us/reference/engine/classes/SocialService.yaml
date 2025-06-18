@@ -247,17 +247,27 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: SocialService:GetEventRsvpStatusAsync
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Returns the local player's RSVP status for the given event.
+    description: |
+      Returns the local player's RSVP status for the given event. Events must be in the current experience and
+      must not have already started. If the event has already started, this method will return an error.
+
+      Note that you can use `Class.SocialService:PromptRsvpToEventAsync()|PromptRsvpToEventAsync()` to
+      prompt the player to change their RSVP status for the event.
+    code_samples:
+      - SocialService-PromptRsvpToEventAsync
     parameters:
       - name: eventId
         type: string
         default: ''
-        summary: ''
+        summary: |
+          The event ID of the event to prompt the player to change their RSVP status for. This must be a valid
+          event ID that exists in the current experience, represented as a string (not a number).
     returns:
       - type: RsvpStatus
-        summary: ''
+        summary: |
+          Returns an `Enum.RsvpStatus` indicating the player's current RSVP status for the event. If the player has not RSVP'd to the event, this will return `Enum.RsvpStatus.None`.
     tags:
       - Yields
     deprecation_message: ''
@@ -344,17 +354,32 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: SocialService:PromptRsvpToEventAsync
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Prompts the local `Class.Player` with a prompt to change their RSVP status to the given event.
+    description: |
+      `PromptRsvpToEventAsync()` displays a prompt to the local player through which they may change
+      their RSVP status to the given event. 
+
+      Events must be in the current experience and must not have already started. If the event has already
+      started, this method will return an error.
+
+      Note that you can use `Class.SocialService:GetEventRsvpStatusAsync()|GetEventRsvpStatusAsync()`
+      to check the player's current RSVP status before calling this method.
+    code_samples:
+      - SocialService-PromptRsvpToEventAsync
     parameters:
       - name: eventId
         type: string
         default: ''
-        summary: ''
+        summary: |
+          The event ID of the event to prompt the player to change their RSVP status for. This must be a valid
+          event ID that exists in the current experience, represented as a string (not a number). 
     returns:
       - type: RsvpStatus
-        summary: ''
+        summary: |
+          Returns a `Enum.RsvpStatus` indicating the player's new RSVP status after the prompt is closed. If the
+          player closes the prompt without changing their RSVP status, this will return `Enum.RsvpStatus.None`
+          or their old `Enum.RsvpStatus` if they had already selected a status.
     tags:
       - Yields
     deprecation_message: ''
