@@ -1,8 +1,7 @@
----
-title: The social 3D creation platform
-description: Explains the things you can create on Roblox.
-hideInPageNavigation: true
----
+Stitch chase
+title: Stitch chase 
+description:if you wake Stitch up he'll go after you
+hideInPageNavigation🉑
 
 export const statsByline = "* Figures are as of Q4 2024";
 
