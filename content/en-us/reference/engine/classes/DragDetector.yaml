@@ -60,7 +60,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.ApplyAtCenterOfMass
     summary: |
@@ -83,7 +85,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.Axis
     summary: |
@@ -109,7 +113,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.DragFrame
     summary: |
@@ -132,7 +138,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.DragStyle
     summary: |
@@ -152,7 +160,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.Enabled
     summary: |
@@ -172,7 +182,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.GamepadModeSwitchKeyCode
     summary: |
@@ -195,7 +207,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.KeyboardModeSwitchKeyCode
     summary: |
@@ -218,7 +232,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.MaxDragAngle
     summary: |
@@ -247,7 +263,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.MaxDragTranslation
     summary: |
@@ -274,7 +292,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.MaxForce
     summary: |
@@ -296,7 +316,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.MaxTorque
     summary: |
@@ -318,7 +340,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.MinDragAngle
     summary: |
@@ -347,7 +371,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.MinDragTranslation
     summary: |
@@ -374,7 +400,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.Orientation
     summary: |
@@ -398,7 +426,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.PermissionPolicy
     summary: |
@@ -420,7 +450,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.ReferenceInstance
     summary: |
@@ -448,7 +480,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.ResponseStyle
     summary: |
@@ -471,7 +505,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.Responsiveness
     summary: |
@@ -493,7 +529,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.RunLocally
     summary: |
@@ -523,7 +561,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.SecondaryAxis
     summary: |
@@ -544,7 +584,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.TrackballRadialPullFactor
     summary: |
@@ -570,7 +612,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.TrackballRollFactor
     summary: |
@@ -596,7 +640,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.VRSwitchKeyCode
     summary: |
@@ -619,7 +665,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.WorldAxis
     summary: |
@@ -640,7 +688,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.WorldSecondaryAxis
     summary: |
@@ -663,7 +713,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
 methods:
   - name: DragDetector:AddConstraintFunction
@@ -704,7 +756,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector:GetReferenceFrame
     summary: |
@@ -723,7 +777,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector:RestartDrag
     summary: |
@@ -742,7 +798,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector:SetDragStyleFunction
     summary: |
@@ -780,7 +838,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector:SetPermissionPolicyFunction
     summary: |
@@ -833,7 +893,9 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
 events:
   - name: DragDetector.DragContinue
@@ -881,7 +943,9 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.DragEnd
     summary: |
@@ -900,7 +964,9 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
   - name: DragDetector.DragStart
     summary: |
@@ -953,6 +1019,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Physics
+      - Input
     writeCapabilities: []
 callbacks: []

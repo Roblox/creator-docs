@@ -24,7 +24,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: SwimController.PitchMaxTorque
     summary: |
@@ -45,7 +46,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: SwimController.PitchSpeedFactor
     summary: |
@@ -67,7 +69,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: SwimController.RollMaxTorque
     summary: |
@@ -88,7 +91,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: SwimController.RollSpeedFactor
     summary: |
@@ -110,7 +114,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 methods: []
 events: []

@@ -323,17 +323,32 @@ properties:
 
       #### What does turning this off do?
 
-      - **No forces** - The humanoid will not apply forces to any of its parts. The humanoid will not move the character in any way.
-      - **No sensors** - The humanoid will not run any spatial queries to detect floors, ladders, or other obstacles (such as auto-jump).
-      - **No collision changes** - The humanoid will not alter the collision state of any of the character parts. By default, only the torso and head have `Class.Part.CanCollide` enabled.
-      - **No state transitions or replication** - The humanoid will not automatically update its state. You can still set humanoid state with a script, but it will not automatically replicate.
+      - **No forces** - The humanoid will not apply forces to any of its parts.
+        The humanoid will not move the character in any way.
+      - **No sensors** - The humanoid will not run any spatial queries to detect
+        floors, ladders, or other obstacles (such as auto-jump).
+      - **No collision changes** - The humanoid will not alter the collision
+        state of any of the character parts. By default, only the torso and head
+        have `Class.Part.CanCollide` enabled.
+      - **No state transitions or replication** - The humanoid will not
+        automatically update its state. You can still set humanoid state with a
+        script, but it will not automatically replicate.
 
       #### What does turning this off **not** do?
 
-      - **State events** - If manually setting humanoid states, the events for each of the humanoid's states and `Class.Humanoid.StateChanged|StateChanged` will still fire, which means the Animate script will still receive them and animate the character based on its current humanoid state.
-      - **Appearance** - `Class.HumanoidDescription`, clothes, accessories and other humanoid rendering behavior.
-      - **Camera and player scripts** - The humanoid is still linked to `Class.Players` and camera scripts, which ensures the camera will continue to follow the `Class.Humanoid.RootPart`.
-      - **Player input handling** - The `Class.Humanoid.MoveDirection` property will still be updated via the `Class.Humanoid:Move()` function and `Class.PlayerScripts` for input.
+      - **State events** - If manually setting humanoid states, the events for
+        each of the humanoid's states and
+        `Class.Humanoid.StateChanged|StateChanged` will still fire, which means
+        the Animate script will still receive them and animate the character
+        based on its current humanoid state.
+      - **Appearance** - `Class.HumanoidDescription`, clothes, accessories and
+        other humanoid rendering behavior.
+      - **Camera and player scripts** - The humanoid is still linked to
+        `Class.Players` and camera scripts, which ensures the camera will
+        continue to follow the `Class.Humanoid.RootPart`.
+      - **Player input handling** - The `Class.Humanoid.MoveDirection` property
+        will still be updated via the `Class.Humanoid:Move()` function and
+        `Class.PlayerScripts` for input.
     code_samples: []
     type: boolean
     tags: []
@@ -1458,35 +1473,14 @@ methods:
     description: |
       This method makes the `Class.Humanoid` equip the given `Class.Tool`.
 
-      The below example would cause a `Class.Player` to equip a tool in
-      `Class.Workspace` named _'Tool'_.
-
-      ```lua
-      local Players = game:GetService("Players")
-      local Workspace = game:GetService("Workspace")
-
-      local player = Players:FindFirstChildOfClass("Player")
-      if player and player.Character then
-      	local humanoid = player.Character:FindFirstChildWhichIsA("Humanoid")
-      	if humanoid then
-      		local tool = Workspace:FindFirstChild("Tool")
-      		if tool then
-      			humanoid:EquipTool(tool)
-      		end
-      	end
-      end
-      ```
-
       When this method is called, the `Class.Humanoid` will first automatically
       unequip all `Class.Tool|Tools` that it currently has equipped.
 
       Although they will be equipped, `Class.Tool|Tools` for which
-      `Class.Tool.RequiresHandle` is _true_ will not function if they have no
+      `Class.Tool.RequiresHandle` is `true` will not function if they have no
       handle, regardless if this method is used to equip them or not.
 
-      See also:
-
-      - To unequip tools, use `Class.Humanoid:UnequipTools()`
+      See also `Class.Humanoid:UnequipTools()`.
     code_samples: []
     parameters:
       - name: tool
@@ -2182,23 +2176,19 @@ methods:
       Unequips any `Class.Tool` currently equipped by the `Class.Humanoid`.
     description: |
       This method unequips any `Class.Tool` currently equipped by the
-      `Class.Humanoid`
-
-      The unequipped `Class.Tool` will be parented to the `Class.Backpack` of
-      the `Class.Player` associated with the `Class.Humanoid`.
+      `Class.Humanoid`. The unequipped `Class.Tool` will be parented to the
+      `Class.Backpack` of the `Class.Player` associated with the
+      `Class.Humanoid`.
 
       If no `Class.Tool` is equipped, this method will do nothing.
 
-      Although `Class.Tool|Tools` can be equipped by NPCs (Non Player
-      Characters), this method only works on `Class.Humanoid|Humanoids` with a
-      corresponding `Class.Player`. This is because a `Class.Backpack` object is
-      required to parent the unequipped `Class.Tool` to.
+      Although `Class.Tool|Tools` can be equipped by NPCs, this method only
+      works on `Class.Humanoid|Humanoids` with a corresponding `Class.Player`,
+      as a `Class.Backpack` object is required to parent the unequipped
+      `Class.Tool` to.
 
-      See also:
-
-      - To instead equip a `Class.Tool`, use `Class.Humanoid:EquipTool()`
-    code_samples:
-      - unequip-tool-keybind
+      See also `Class.Humanoid:EquipTool()`.
+    code_samples: []
     parameters: []
     returns:
       - type: ()

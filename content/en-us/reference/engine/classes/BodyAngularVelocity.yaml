@@ -46,7 +46,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: BodyAngularVelocity.MaxTorque
     summary: |
@@ -69,7 +70,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: BodyAngularVelocity.P
     summary: |
@@ -92,7 +94,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: BodyAngularVelocity.angularvelocity
     summary: ''
@@ -113,7 +116,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: BodyAngularVelocity.maxTorque
     summary: |
@@ -138,7 +142,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
 methods: []
 events: []

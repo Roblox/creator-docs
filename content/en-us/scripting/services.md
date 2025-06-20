@@ -78,8 +78,7 @@ call within scripts. The following table includes some common scripting services
 Service | Description
 :--- | :---
 `Class.TweenService` | Used to interpolate numeric properties of other instances from a start to end value, with options for easing direction and style, repeat, and delay.
-`Class.MarketplaceService` | The service responsible for in-experience transactions, such as prompting the player to purchase a developer product, subscription, or game pass, upgrade to Roblox Premium, etc.
-`Class.ContextActionService` | Allows you to bind user input, such as a key press, screen tap, or controller button press to contextual actions, such as modifying controls when the user enters and exits a car.
+`Class.MarketplaceService` | The service responsible for in-experience transactions, such as prompting the player to purchase a developer product, subscription, pass, Roblox Premium, etc.
 `Class.RunService` | Contains methods and events for frame-by-frame time management, as well as for checking the context (server, client, Studio mode) in which the experience is running. Useful for running any process or update on every runtime frame.
 `Class.SoundService` | Controls various global aspects of how audio plays in an experience, such as the doppler scale and volumetric audio. Can also contain sound groups to control the volume and dynamic effects properties of multiple audio signals at once.
 `Class.CollectionService` | Manages groups (collections) of instances with tags that replicate from the server to the client, letting you more easily assign and work with groups of related instances.

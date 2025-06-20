@@ -2696,10 +2696,11 @@ events:
       objects have been inserted into the `Class.Player.Character`.
 
       This event only fires on the server.
-      
-      For custom character implementations, such as using a character model named `StarterCharacter`
-      inside `Class.StarterPlayer`, use `Class.Player.CharacterAdded|CharacterAdded` and handle your
-      own accessories.
+
+      For custom character implementations, such as using a character model
+      named `StarterCharacter` inside `Class.StarterPlayer`, use
+      `Class.Player.CharacterAdded|CharacterAdded` and handle your own
+      accessories.
 
       One use for this event is to ensure all accessories have loaded before
       destroying them. See below for an example of this.

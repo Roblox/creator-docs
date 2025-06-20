@@ -12,15 +12,6 @@ description: |
   special effects on the client when certain conditions are met, you can place a
   `Class.LocalScript` within this container to do that.
 
-  This object is also a good place for `Class.LocalScript|LocalScripts` that
-  define additional inputs with `Class.ContextActionService`. For inputs that
-  are only relevant when a player has spawned in, you can use
-  `Class.ContextActionService:BindAction()` when the `Class.Players.LocalPlayer`
-  character spawns, then use `Class.ContextActionService:UnbindAction()` when
-  they die or despawn.
-
-  #### Modifying control scripts
-
   When an experience is run, this object will also house the default
   multi-platform Roblox control scripts for the camera and character. If
   `Class.LocalScript|LocalScripts` named `CameraScript` or `ControlScript` are

@@ -2003,6 +2003,16 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/RayValue.yaml
         ignoreTranslation: true
+      - title: RecommendationPages
+        path: /reference/engine/classes/RecommendationPages
+        type: engineapi
+        source: /reference/engine/classes/RecommendationPages.yaml
+        ignoreTranslation: true
+      - title: RecommendationService
+        path: /reference/engine/classes/RecommendationService
+        type: engineapi
+        source: /reference/engine/classes/RecommendationService.yaml
+        ignoreTranslation: true
       - title: ReflectionMetadata
         path: /reference/engine/classes/ReflectionMetadata
         type: engineapi
@@ -3586,6 +3596,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AudioWindowSize.yaml
         ignoreTranslation: true
+      - title: AuthorityMode
+        path: /reference/engine/enums/AuthorityMode
+        type: engineapi
+        source: /reference/engine/enums/AuthorityMode.yaml
+        ignoreTranslation: true
       - title: AutoIndentRule
         path: /reference/engine/enums/AutoIndentRule
         type: engineapi
@@ -4186,11 +4201,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/FACSDataLod.yaml
         ignoreTranslation: true
-      - title: FeedRankingScoreType
-        path: /reference/engine/enums/FeedRankingScoreType
-        type: engineapi
-        source: /reference/engine/enums/FeedRankingScoreType.yaml
-        ignoreTranslation: true
       - title: FieldOfViewMode
         path: /reference/engine/enums/FieldOfViewMode
         type: engineapi
@@ -4575,6 +4585,11 @@ navigation:
         path: /reference/engine/enums/LocationType
         type: engineapi
         source: /reference/engine/enums/LocationType.yaml
+        ignoreTranslation: true
+      - title: LuauTypeCheckMode
+        path: /reference/engine/enums/LuauTypeCheckMode
+        type: engineapi
+        source: /reference/engine/enums/LuauTypeCheckMode.yaml
         ignoreTranslation: true
       - title: MarketplaceBulkPurchasePromptStatus
         path: /reference/engine/enums/MarketplaceBulkPurchasePromptStatus
@@ -4965,6 +4980,21 @@ navigation:
         path: /reference/engine/enums/RaycastFilterType
         type: engineapi
         source: /reference/engine/enums/RaycastFilterType.yaml
+        ignoreTranslation: true
+      - title: RecommendationActionType
+        path: /reference/engine/enums/RecommendationActionType
+        type: engineapi
+        source: /reference/engine/enums/RecommendationActionType.yaml
+        ignoreTranslation: true
+      - title: RecommendationImpressionType
+        path: /reference/engine/enums/RecommendationImpressionType
+        type: engineapi
+        source: /reference/engine/enums/RecommendationImpressionType.yaml
+        ignoreTranslation: true
+      - title: RecommendationItemVisibility
+        path: /reference/engine/enums/RecommendationItemVisibility
+        type: engineapi
+        source: /reference/engine/enums/RecommendationItemVisibility.yaml
         ignoreTranslation: true
       - title: RejectCharacterDeletions
         path: /reference/engine/enums/RejectCharacterDeletions

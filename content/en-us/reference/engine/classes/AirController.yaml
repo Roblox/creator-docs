@@ -32,7 +32,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: AirController.BalanceSpeed
     summary: |
@@ -53,7 +54,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: AirController.LinearImpulse
     summary: ''
@@ -72,7 +74,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: AirController.MaintainAngularMomentum
     summary: |
@@ -94,7 +97,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: AirController.MaintainLinearMomentum
     summary: |
@@ -116,7 +120,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: AirController.MoveMaxForce
     summary: |
@@ -143,7 +148,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: AirController.TurnMaxTorque
     summary: |
@@ -170,7 +176,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: AirController.TurnSpeedFactor
     summary: |
@@ -192,7 +199,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 methods: []
 events: []

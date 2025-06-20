@@ -35,7 +35,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputAction.Direction1DState
     summary: |
@@ -60,7 +61,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputAction.Direction2DState
     summary: |
@@ -85,7 +87,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputAction.Direction3DState
     summary: |
@@ -110,7 +113,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputAction.Enabled
     summary: |
@@ -130,7 +134,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputAction.Type
     summary: |
@@ -150,7 +155,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 methods:
   - name: InputAction:Fire
@@ -190,7 +196,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputAction:GetState
     summary: |
@@ -209,7 +216,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 events:
   - name: InputAction.Pressed
@@ -225,7 +233,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputAction.Released
     summary: |
@@ -240,7 +249,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputAction.StateChanged
     summary: |
@@ -259,6 +269,7 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 callbacks: []

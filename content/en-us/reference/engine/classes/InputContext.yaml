@@ -38,7 +38,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputContext.Priority
     summary: |
@@ -58,7 +59,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputContext.Sink
     summary: |
@@ -85,7 +87,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 methods: []
 events: []

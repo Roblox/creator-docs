@@ -31,6 +31,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
+      - Basic
       - UI
     writeCapabilities: []
   - name: HandleAdornment.AlwaysOnTop
@@ -56,6 +57,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
+      - Basic
       - UI
     writeCapabilities: []
   - name: HandleAdornment.CFrame
@@ -81,6 +83,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
+      - Basic
       - UI
     writeCapabilities: []
   - name: HandleAdornment.SizeRelativeOffset
@@ -114,6 +117,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
+      - Basic
       - UI
     writeCapabilities: []
   - name: HandleAdornment.ZIndex
@@ -145,6 +149,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
+      - Basic
       - UI
     writeCapabilities: []
 methods: []
@@ -162,6 +167,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
+      - Basic
       - UI
     writeCapabilities: []
   - name: HandleAdornment.MouseButton1Up
@@ -177,6 +183,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
+      - Basic
       - UI
     writeCapabilities: []
   - name: HandleAdornment.MouseEnter
@@ -190,6 +197,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
+      - Basic
       - UI
     writeCapabilities: []
   - name: HandleAdornment.MouseLeave
@@ -203,6 +211,7 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
+      - Basic
       - UI
     writeCapabilities: []
 callbacks: []

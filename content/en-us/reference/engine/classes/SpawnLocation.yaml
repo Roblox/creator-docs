@@ -89,6 +89,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
+      - Players
     writeCapabilities: []
   - name: SpawnLocation.Duration
     summary: |
@@ -127,6 +128,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
+      - Players
     writeCapabilities: []
   - name: SpawnLocation.Enabled
     summary: |
@@ -160,6 +162,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
+      - Players
     writeCapabilities: []
   - name: SpawnLocation.Neutral
     summary: |
@@ -193,6 +196,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
+      - Players
     writeCapabilities: []
   - name: SpawnLocation.TeamColor
     summary: |
@@ -224,6 +228,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
+      - Players
     writeCapabilities: []
 methods: []
 events: []

@@ -39,7 +39,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputBinding.Down
     summary: |
@@ -50,11 +51,11 @@ properties:
       inputs to `Class.InputAction:GetState()|GetState()` and the
       `Class.InputAction.StateChanged|StateChanged` event of the parent
       `Class.InputAction`.
-      
+
       When the parent action's `Class.InputAction.Type|Type` is
       `Enum.InputActionType|Direction1D`, the dispatched value will be a number
       between `0` and `-1`.
-      
+
       When the parent action's `Class.InputAction.Type|Type` is
       `Enum.InputActionType|Direction2D`, the dispatched value will be a
       `Datatype.Vector2` with its `Datatype.Vector2.Y|Y` component between `0`
@@ -66,7 +67,7 @@ properties:
       and `-1`.
 
       Not applicable when the parent action's `Class.InputAction.Type|Type` is
-      `Enum.InputActionType|Bool`. 
+      `Enum.InputActionType|Bool`.
     code_samples: []
     type: KeyCode
     tags: []
@@ -79,7 +80,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputBinding.Forward
     summary: |
@@ -105,7 +107,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputBinding.KeyCode
     summary: |
@@ -132,7 +135,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputBinding.Left
     summary: |
@@ -143,7 +147,7 @@ properties:
       inputs to `Class.InputAction:GetState()|GetState()` and the
       `Class.InputAction.StateChanged|StateChanged` event of the parent
       `Class.InputAction`.
-      
+
       When the parent action's `Class.InputAction.Type|Type` is
       `Enum.InputActionType|Direction2D`, the dispatched value will be a
       `Datatype.Vector2` with its `Datatype.Vector2.X|X` component between `0`
@@ -168,7 +172,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputBinding.PressedThreshold
     summary: |
@@ -195,7 +200,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputBinding.ReleasedThreshold
     summary: |
@@ -222,7 +228,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputBinding.Right
     summary: |
@@ -258,7 +265,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputBinding.Scale
     summary: |
@@ -280,7 +288,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputBinding.UIButton
     summary: |
@@ -299,7 +308,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputBinding.Up
     summary: |
@@ -310,11 +320,11 @@ properties:
       inputs to `Class.InputAction:GetState()|GetState()` and the
       `Class.InputAction.StateChanged|StateChanged` event of the parent
       `Class.InputAction`.
-      
+
       When the parent action's `Class.InputAction.Type|Type` is
       `Enum.InputActionType|Direction1D`, the dispatched value will be a number
       between `0` and `1`.
-      
+
       When the parent action's `Class.InputAction.Type|Type` is
       `Enum.InputActionType|Direction2D`, the dispatched value will be a
       `Datatype.Vector2` with its `Datatype.Vector2.Y|Y` component between `0`
@@ -339,7 +349,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputBinding.Vector2Scale
     summary: |
@@ -360,7 +371,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 methods: []
 events: []

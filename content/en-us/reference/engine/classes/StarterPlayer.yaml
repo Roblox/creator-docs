@@ -412,7 +412,7 @@ properties:
       experience's settings. Otherwise, the mode will be set based on this
       property.
 
-       This property does not affect players who are not on a computer.
+      This property does not affect players who are not on a computer.
     code_samples: []
     type: DevComputerCameraMovementMode
     tags: []
@@ -490,9 +490,9 @@ properties:
       This property lets you overwrite the player's movement mode on a
       touch-enabled device.
 
-      If set to `Enum.DevTouchMovementMode|UserChoice`, the player's
-      movement mode will be determined by whatever they set in the experience's
-      settings. Otherwise, the mode will be set based on this property.
+      If set to `Enum.DevTouchMovementMode|UserChoice`, the player's movement
+      mode will be determined by whatever they set in the experience's settings.
+      Otherwise, the mode will be set based on this property.
 
       This property does not affect players who are not on a touch-enabled
       device.

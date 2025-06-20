@@ -159,8 +159,7 @@ properties:
       other events such as `Class.UserInputService.InputBegan|InputBegan` and
       `Class.UserInputService.TouchSwipe|TouchSwipe` can still be used to
       process other forms of input.
-    code_samples:
-      - UserInputService-ModalEnabled
+    code_samples: []
     type: boolean
     tags:
       - Deprecated
@@ -237,9 +236,9 @@ properties:
       camera sensitivity that the user has selected for their client.
 
       This property has a maximum value of `10` and a minimum value of `0`. When
-      sensitivity is `0`, events that track the mouse's movement will still
-      fire but all parameters and properties indicating the change in mouse
-      position will return `0`.
+      sensitivity is `0`, events that track the mouse's movement will still fire
+      but all parameters and properties indicating the change in mouse position
+      will return `0`.
     code_samples: []
     type: float
     tags:
@@ -680,12 +679,13 @@ methods:
       This method returns an `Class.InputObject` describing the device's current
       gravity vector. The vector is determined by the device's orientation
       relative to the real-world force of gravity. For example:
-      
-      - `Datatype.Vector3|Vector3.new(0, 0, -9.18)` if the device is
-      perfectly upright (portrait)
+
+      - `Datatype.Vector3|Vector3.new(0, 0, -9.18)` if the device is perfectly
+        upright (portrait)
       - `Datatype.Vector3|Vector3.new(9.81, 0, 0)` if the left side of the
-      device is pointing down
-      - `Datatype.Vector3|Vector3.new(0, -9.81, 0)` if the back of the device is pointing down
+        device is pointing down
+      - `Datatype.Vector3|Vector3.new(0, -9.81, 0)` if the back of the device is
+        pointing down
 
       Gravity is only tracked for devices with an enabled gyroscope as queried
       through `Class.UserInputService.GyroscopeEnabled|GyroscopeEnabled`.
@@ -1059,10 +1059,10 @@ methods:
 
       #### Gamepad Usage
 
-      `GetStringForKeyCode()` returns the string mapping
-      for the `Enum.KeyCode` for the most recently connected gamepad. If the
-      connected controller is not supported, the method returns the default
-      string conversion for the requested key code.
+      `GetStringForKeyCode()` returns the string mapping for the `Enum.KeyCode`
+      for the most recently connected gamepad. If the connected controller is
+      not supported, the method returns the default string conversion for the
+      requested key code.
 
       The following example shows how you can map custom assets for
       `Enum.KeyCode.ButtonA|ButtonA`:
@@ -1358,12 +1358,12 @@ methods:
       print(cframe)
       ```
 
-      By using the method, players can implement features such as
-      re-positioning the user's in-game character corresponding to the location
-      of a connected VR device. This can be done by changing the _CFrame_ of the
-      user's in-game body parts to match the _CFrame_ of the specified VR device
-      using `Enum.UserCFrame` and `Datatype.CFrame` value arguments passed by
-      the event.
+      By using the method, players can implement features such as re-positioning
+      the user's in-game character corresponding to the location of a connected
+      VR device. This can be done by changing the _CFrame_ of the user's in-game
+      body parts to match the _CFrame_ of the specified VR device using
+      `Enum.UserCFrame` and `Datatype.CFrame` value arguments passed by the
+      event.
 
       See also:
 
@@ -1642,7 +1642,8 @@ events:
     description: |
       This event fires when a user rotates a device that has a gyroscope, a
       component found in most mobile devices that detects orientation and
-      rotational speed. To check if a user's device has an enabled gyroscope, use `Class.UserInputService.GyroscopeEnabled|GyroscopeEnabled`.
+      rotational speed. To check if a user's device has an enabled gyroscope,
+      use `Class.UserInputService.GyroscopeEnabled|GyroscopeEnabled`.
 
       To query the current device rotation, use the
       `Class.UserInputService:GetDeviceRotation()|GetDeviceRotation()` method.
@@ -1793,9 +1794,9 @@ events:
           Indicates whether the engine internally observed this input and acted
           on it. Generally this refers to UI processing, so if a button was
           touched or clicked from this input, `gameProcessedEvent` will be
-          `true`. To ignore events that are automatically handled by Roblox
-          like scrolling in a `Class.ScrollingFrame`, check that
-          `gameProcessedEvent` is `false`.
+          `true`. To ignore events that are automatically handled by Roblox like
+          scrolling in a `Class.ScrollingFrame`, check that `gameProcessedEvent`
+          is `false`.
     tags: []
     deprecation_message: ''
     security: None
@@ -2103,7 +2104,8 @@ events:
         summary: |
           An `Class.InputObject` instance containing information about the
           user's input. Note that its `Class.InputObject.Position|Position` is a
-          `Datatype.Vector3` but only includes **X** and **Y** coordinates (**Z** is always `0`).
+          `Datatype.Vector3` but only includes **X** and **Y** coordinates
+          (**Z** is always `0`).
       - name: gameProcessedEvent
         type: boolean
         default: ''
@@ -2264,7 +2266,8 @@ events:
     writeCapabilities: []
   - name: UserInputService.TouchStarted
     summary: |
-      Fires when a user places their finger on the screen of a `Class.UserInputService.TouchEnabled|TouchEnabled` device.
+      Fires when a user places their finger on the screen of a
+      `Class.UserInputService.TouchEnabled|TouchEnabled` device.
     description: |
       This event fires when a user places their finger on the screen of a
       `Class.UserInputService.TouchEnabled|TouchEnabled` device. Can be paired
