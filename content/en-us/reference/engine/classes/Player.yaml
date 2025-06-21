@@ -2,32 +2,31 @@ name: Player
 type: class
 memory_category: Instances
 summary: |
-  An object that represents a presently connected client to the game.
+  An object that represents a presently connected client to the experience.
 description: |
-  A **Player** object is a client that is currently connected. These objects are
+  A `Player` object is a client that is currently connected. These objects are
   added to the `Class.Players` service when a new player connects, then removed
   when they eventually disconnect from the server.
 
   The `Class.Instance.Name` property reflects the player's username. When saving
-  information about a player, you should use their `Class.Player.UserId` since
-  it is possible that a player can change their username.
+  information about a player, you should use their `Class.Player.UserId|UserId`
+  since it is possible that a player can change their username.
 
   There are several similar methods in the `Class.Players` service for working
   with Player objects. Use these over their respective `Class.Instance` methods:
 
-  - You can get a table of current Player objects using
+  - You can get a table of current `Player` objects using
     `Class.Players:GetPlayers()`; again, use this instead of
     `Class.Instance:GetChildren()`.
-  - To detect the addition of Player objects, it is recommended to use the
+  - To detect the addition of `Player` objects, it is recommended to use the
     `Class.Players.PlayerAdded` event (instead of `Class.Instance.ChildAdded` on
     the `Class.Players` service).
-  - Similarly, you can detect the removal of Player objects using
-    `Class.Players.PlayerRemoving`, which fires just **before** the Player is
+  - Similarly, you can detect the removal of `Player` objects using
+    `Class.Players.PlayerRemoving`, which fires just **before** the `Player` is
     removed (instead of `Class.Instance.ChildRemoved` which fires after). This
     is important if you are saving information about the player that might be
-    removed or cleaned up on-removal.
-code_samples:
-  - Leaderstats
+    removed or cleaned up on removal.
+code_samples: []
 inherits:
   - Instance
 tags: []
@@ -37,15 +36,10 @@ properties:
     summary: |
       Describes the player's account age in days.
     description: |
-      The AccountAge is a `Class.Player` property that describes how long ago a
-      player's account was registered in days. It is set using the
-      `Class.Player:SetAccountAge()` function, which cannot be accessed by
-      scripts.
-
-      This property is useful for conditionally showing new Roblox players
-      content such as tutorials.
-    code_samples:
-      - Account-Age-Mark
+      This property describes how long ago a player's account was registered in
+      days. It is set using the `Class.Player:SetAccountAge()|SetAccountAge()`
+      method, which cannot be accessed by scripts.
+    code_samples: []
     type: int
     tags:
       - ReadOnly
@@ -67,17 +61,18 @@ properties:
       Determines whether the character of a player using a mobile device will
       automatically jump upon hitting an obstacle.
     description: |
-      The AutoJumpEnabled property determines whether the
-      `Class.Player.Character` of a `Class.Player` using a mobile device will
-      automatically jump when they hit an obstacle. This can make levels more
-      navigable while on a mobile device.
+      This property determines whether the `Class.Player.Character|Character` of
+      a `Class.Player` using a mobile device will automatically jump when they
+      hit an obstacle. This can make levels more navigable while on a mobile
+      device.
 
-      When the player joins the game, the `Class.StarterPlayer.AutoJumpEnabled`
-      value determines the initial state of this property. Then, this property
-      determines the value of the `Class.Humanoid.AutoJumpEnabled` property of
-      the `Class.Player.Character` on spawn. In other words, it is possible to
-      set the auto-jump behavior on a per-character, per-player and per-game
-      basis using these three properties.
+      When the player joins the experience, the
+      `Class.StarterPlayer.AutoJumpEnabled` value determines the initial state
+      of this property. Then, this property determines the value of the
+      `Class.Humanoid.AutoJumpEnabled` property of the
+      `Class.Player.Character|Character` on spawn. In other words, it is
+      possible to set the auto-jump behavior on a per-character, per-player, and
+      per-experience basis using these three properties.
     code_samples:
       - Auto-Jump-Toggle
     type: boolean
@@ -98,19 +93,15 @@ properties:
     summary: |
       The maximum distance the player's camera is allowed to zoom out.
     description: |
-      The CameraMaxZoomDistance `Class.Player` property sets the maximum
-      distance in studs the camera can be from the character with the default
-      cameras.
-
-      In other words, it controls the maximum distance the player's camera is
-      allowed to zoom out.
+      This property sets the maximum distance the player's camera is allowed to
+      zoom out, in studs.
 
       The default value of this property is set by
       `Class.StarterPlayer.CameraMaxZoomDistance`. If this value is set to a
-      lower value than `Class.Player.CameraMinZoomDistance`, it will be
-      increased to CameraMinZoomDistance.
-    code_samples:
-      - setting-camera-zoom-distance
+      lower value than
+      `Class.Player.CameraMinZoomDistance|CameraMinZoomDistance`, it will be
+      increased to `Class.Player.CameraMinZoomDistance|CameraMinZoomDistance`.
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -129,19 +120,15 @@ properties:
     summary: |
       The minimum distance the player's camera is allowed to zoom in.
     description: |
-      The CameraMinZoonDistance `Class.Player` property sets the minimum
-      distance in studs the camera can be from the character with the default
-      cameras.
-
-      In other words, it controls the minimum distance the player's camera is
-      allowed to zoom in.
+      This property sets the minimum distance the player's camera is allowed to
+      zoom in, in studs.
 
       The default value of this property is set by
       `Class.StarterPlayer.CameraMinZoomDistance`. If this value is set to a
-      higher value than `Class.Player.CameraMaxZoomDistance` it will be
-      decreased to CameraMaxZoomDistance.
-    code_samples:
-      - setting-camera-zoom-distance
+      higher value than
+      `Class.Player.CameraMaxZoomDistance|CameraMaxZoomDistance`, it will be
+      decreased to `Class.Player.CameraMaxZoomDistance|CameraMaxZoomDistance`.
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -160,8 +147,7 @@ properties:
     summary: |
       Changes the camera's mode to either first or third person.
     description: |
-      The **CameraMode** property sets the player's camera mode, defaulting to
-      third person.
+      This property sets the player's camera mode, defaulting to third person.
 
       #### Third Person
 
@@ -203,24 +189,23 @@ properties:
   - name: Player.CanLoadCharacterAppearance
     summary: |
       Determines whether the character's appearance will be loaded when the
-      player spawns. If false, the player will spawn with a default appearance.
+      player spawns. If `false`, the player will spawn with a default
+      appearance.
     description: |
-      The CanLoadCharacterAppearance `Class.Player` property determines whether
-      the character's appearance will be loaded when the player spawns. The
-      default value of this property is set by
+      This property determines whether the character's appearance will be loaded
+      when the player spawns. The default value of this property is set by
       `Class.StarterPlayer.LoadPlayerAppearance`.
 
-      If _true_, the character will load the appearance of the player
-      corresponding to the player's `Class.Player.CharacterAppearanceId`.
+      - If `true`, the character will load the appearance of the player
+      corresponding to the player's
+      `Class.Player.CharacterAppearanceId|CharacterAppearanceId`.
 
-      If _false_, the player will spawn with a default appearance - a grey
-      character model without any hats, shirts, pants, etc.
+      - If `false`, the player will spawn with a default appearance.
 
       Attempting to set the property after the character has spawned will not
-      change the character, you must call `Class.Player:LoadCharacter()` to load
-      the new appearance.
-    code_samples:
-      - disabling-a-player-s-appearance
+      change the character; you must call
+      `Class.Player:LoadCharacter()|LoadCharacter()` to load the new appearance.
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -240,19 +225,19 @@ properties:
       A `Class.Model` controlled by the player that contains a `Class.Humanoid`,
       body parts, scripts, and other objects.
     description: |
-      The **Character** property contains a reference to a `Class.Model`
-      containing a `Class.Humanoid`, body parts, scripts, and other objects
-      required for simulating the player's avatar in-experience. The model is
-      parented to the `Class.Workspace` but it may be moved. It is automatically
-      loaded when `Class.Players.CharacterAutoLoads` is `true` and it can be
-      manually loaded otherwise using `Class.Player:LoadCharacter()`.
+      This property contains a reference to a `Class.Model` containing a
+      `Class.Humanoid`, body parts, scripts, and other objects required for
+      simulating the player's avatar in-experience. The model is parented to the
+      `Class.Workspace` but it may be moved. It is automatically loaded when
+      `Class.Players.CharacterAutoLoads` is `true` and it can be manually loaded
+      otherwise using `Class.Player:LoadCharacter()|LoadCharacter()`.
 
       Initially this property is `nil` and it is set when the player's character
-      first spawns. Use the `Class.Player.CharacterAdded` event to detect when a
-      player's character properly loads, and the
-      `Class.Player.CharacterRemoving` event to detect when the character is
-      about to despawn. Avoid using `Class.Object:GetPropertyChangedSignal()` on
-      this property.
+      first spawns. Use the `Class.Player.CharacterAdded|CharacterAdded` event
+      to detect when a player's character properly loads, and the
+      `Class.Player.CharacterRemoving|CharacterRemoving` event to detect when
+      the character is about to despawn. Avoid using
+      `Class.Object:GetPropertyChangedSignal()` on this property.
 
       Note that `Class.LocalScript|LocalScripts` that are cloned from
       `Class.StarterGui` or `Class.StarterPack` into a player's
@@ -261,7 +246,7 @@ properties:
       to the old model whose `Class.Instance.Parent|Parent` property is `nil`.
       Therefore, in a `Class.LocalScript` under `Class.StarterGui` or
       `Class.StarterPack`, it is advisable to make sure the parent of
-      **Character** is not `nil` before using it, for example:
+      `Character` is not `nil` before using it, for example:
 
       ```lua
       local Players = game:GetService("Players")
@@ -292,15 +277,13 @@ properties:
       The URL of the asset containing the character's appearance, clothing, and
       gear.
     description: |
-      The CharacterAppearance property indicates the URL of the asset containing
-      the character's appearance, clothing, and gear.
-
-      It is automatically set by Roblox to load your avatar's appearance when
-      you join a game.
+      This property indicates the URL of the asset containing the character's
+      appearance, clothing, and gear. It is automatically set by Roblox to load
+      your avatar's appearance when you join an experience.
 
       Attempting to set the property after the character has spawned will not
-      change the character, you must call `Class.Player:LoadCharacter()` to load
-      the new appearance.
+      change the character, you must call
+      `Class.Player:LoadCharacter()|LoadCharacter()` to load the new appearance.
     code_samples: []
     type: string
     tags:
@@ -322,21 +305,20 @@ properties:
   - name: Player.CharacterAppearanceId
     summary: |
       Determines the user ID of the account whose character appearance is used
-      for a player's `Class.Player.Character|character`.
+      for a player's `Class.Player.Character|Character`.
     description: |
       This property determines the user ID of the account whose character
-      appearance is used for a player's `Class.Player.Character|character`. By
-      default, this property is the `Class.Player.UserId`, which uses the
-      player's avatar as they have created it on the Roblox website.
+      appearance is used for a player's `Class.Player.Character|Character`. By
+      default, this property is the `Class.Player.UserId|UserId`, which uses the
+      player's avatar as they have created it on Roblox.
 
       Changing this property to the user ID of another account will cause the
-      player to spawn with that account's appearance (hats, shirt, pants, etc).
+      player to spawn with that account's appearance.
 
-      Games can also toggle whether or not a player's character appearance is
-      loaded in game by changing the
+      You can also toggle whether or not a player's character appearance is
+      loaded in experience by changing the
       `Class.StarterPlayer.LoadCharacterAppearance` property.
-    code_samples:
-      - Disguise-Command
+    code_samples: []
     type: int64
     tags: []
     deprecation_message: ''
@@ -434,7 +416,7 @@ properties:
       `Class.StarterPlayer.DevCameraOcclusionMode` and can't be changed for
       individual players.
 
-      The default value is `Enum.DevCameraOcclusionMode|Zoom` (0). See
+      The default value is `Enum.DevCameraOcclusionMode|Zoom`. See
       `Enum.DevCameraOcclusionMode` for a list of available modes.
     code_samples: []
     type: DevCameraOcclusionMode
@@ -453,34 +435,20 @@ properties:
     writeCapabilities: []
   - name: Player.DevComputerCameraMode
     summary: |
-      Determines player's camera movement mode when using a desktop version of
-      Roblox.
+      Determines player's camera movement mode when using a device with a mouse and keyboard.
     description: |
-      The DevComputerCameraMode property determines the manner in which a player
-      moves their camera when using a device with a mouse and keyboard. See
-      `Enum.DevComputerCameraMovementMode` for a description of each camera
-      control mode available. This property cannot be set using a
-      `Class.LocalScript` (it must be set on the server using a `Class.Script`).
+      This property determines the manner in which a player moves their camera
+      when using a device with a mouse and keyboard. This property cannot be set
+      using a `Class.LocalScript` (it must be set on the server using a
+      `Class.Script`).
 
       The default value of this property is determined by
       `Class.StarterPlayer.DevComputerCameraMovementMode`.
 
-      The word "Computer" in this property name refers to
-      non-`Class.UserInputService.TouchEnabled|TouchEnabled`,
-      non-`Class.UserInputService.GamepadEnabled|GamepadEnabled` devices.
-
-      When set to **UserChoice**, a player can choose between any control mode
-      (except **Scriptable**) in the experience's settings during play. In
-      general, it's a good idea to allow players to choose their control mode to
-      maximize accessibility.
-
-      It's possible to create a custom control scheme by setting this property
-      to **Scriptable**.
-
-      This property doesn't affect players using a touch enabled device. See
-      `Class.Player.DevTouchCameraMode` instead.
-    code_samples:
-      - setting-a-player-s-camera-movement-mode-desktop-
+      This property doesn't affect players using a
+      `Class.UserInputService.TouchEnabled|TouchEnabled` device. See
+      `Class.Player.DevTouchCameraMode|DevTouchCameraMode` instead.
+    code_samples: []
     type: DevComputerCameraMovementMode
     tags: []
     deprecation_message: ''
@@ -497,33 +465,21 @@ properties:
     writeCapabilities: []
   - name: Player.DevComputerMovementMode
     summary: |
-      Determines player's character movement mode when using a desktop version
-      of Roblox.
+      Determines player's character movement mode when using a device with a
+      mouse and keyboard.
     description: |
-      The DevComputerMovementMode property determines the manner in which a
-      player moves their character when using a device with a mouse and
-      keyboard. See `Enum.DevComputerMovementMode` for a description of each
-      movement control mode available. This property cannot be set using a
-      `Class.LocalScript` (it must be set on the server using a `Class.Script`).
+      This property determines the manner in which a player moves their
+      character when using a device with a mouse and keyboard. This property
+      cannot be set using a `Class.LocalScript` (it must be set on the server
+      using a `Class.Script`).
 
       The default value of this property is determined by
       `Class.StarterPlayer.DevComputerMovementMode`.
 
-      The word "Computer" in this property name refers to
-      non-`Class.UserInputService.TouchEnabled|TouchEnabled` devices.
-
-      When set to **UserChoice**, a player can choose between any control mode
-      (except **Scriptable**) in the experience's settings during play. In
-      general, it is a good idea to allow players to choose their control mode
-      to maximize accessibility.
-
-      It's possible to create a custom control scheme by setting this property
-      to **Scriptable**.
-
-      This property doesn't affect players using a touch-enabled device. See
-      `Class.Player.DevTouchMovementMode` instead.
-    code_samples:
-      - setting-a-player-s-movement-mode-desktop-
+      This property doesn't affect players using a
+      `Class.UserInputService.TouchEnabled|TouchEnabled` device. See
+      `Class.Player.DevTouchMovementMode|DevTouchMovementMode` instead.
+    code_samples: []
     type: DevComputerMovementMode
     tags: []
     deprecation_message: ''
@@ -542,24 +498,19 @@ properties:
     summary: |
       Determines if the player can toggle mouse lock.
     description: |
-      This property determines if a player is able to toggle `Class.Mouse` lock
-      by pressing <kbd>Shift</kbd>. A player can disable the mouse lock switch
-      in the experience's settings during play. By default, this property is set
-      to the value of `Class.StarterPlayer.EnableMouseLockOption`. This can be
-      set server-side during run-time by using a `Class.Script`. It can not be
-      set client-side.
+      This property determines if a player is able to toggle mouse lock by
+      pressing <kbd>Shift</kbd>. A player can disable the mouse lock switch in
+      the experience's settings during play. By default, this property is set to
+      the value of `Class.StarterPlayer.EnableMouseLockOption`. This can be set
+      server-side during runtime by using a `Class.Script`. It can not be set
+      client-side.
 
       When mouse lock is enabled, the player's cursor is locked to the center of
       the screen. Moving the mouse will orbit the camera around the player's
-      `Class.Player.Character|character`, and the character will face the same
-      direction as the `Class.Camera|camera`. It also offsets the camera view
+      `Class.Player.Character|Character`, and the character will face the same
+      direction as the `Class.Camera`. It also offsets the camera view
       just over the right shoulder of the player's character.
-
-      Note that shift-lock related APIs are in the process of being deprecated,
-      so it's recommended to use `Class.UserInputService.MouseBehavior` instead
-      to lock the mouse.
-    code_samples:
-      - toggling-mouse-lock-ability
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -576,30 +527,20 @@ properties:
     writeCapabilities: []
   - name: Player.DevTouchCameraMode
     summary: |
-      Determines player's camera movement mode when using a touch device.
+      Determines player's camera movement mode when using a touch-enabled device.
     description: |
-      The DevTouchCameraMode property determines the manner in which a player
-      moves their camera when using a
-      `Class.UserInputService.TouchEnabled|TouchEnabled` device. See
-      `Enum.DevTouchCameraMovementMode` for a description of each camera control
-      mode available. This property cannot be set using a `Class.LocalScript`
-      (it must be set on the server using a `Class.Script`).
+      This property determines the manner in which a player moves their camera
+      when using a `Class.UserInputService.TouchEnabled|TouchEnabled` device.
+      This property cannot be set using a `Class.LocalScript` (it must be set on
+      the server using a `Class.Script`).
 
       The default value of this property is determined by
       `Class.StarterPlayer.DevTouchCameraMovementMode`.
 
-      When set to **UserChoice**, a player can choose between any control mode
-      (except **Scriptable**) in the experience's settings during play. In
-      general, it is a good idea to allow players to choose their control mode
-      to maximize accessibility.
-
-      It's possible to create a custom control scheme by setting this property
-      to **Scriptable**.
-
-      This property doesn't affect players who aren't using a touch-enabled
-      device. See `Class.Player.DevComputerCameraMovementMode` instead.
-    code_samples:
-      - setting-a-player-s-camera-movement-mode
+      This property doesn't affect players who aren't using a
+      `Class.UserInputService.TouchEnabled|TouchEnabled` device. See
+      `Class.Player.DevComputerCameraMode|DevComputerCameraMode` instead.
+    code_samples: []
     type: DevTouchCameraMovementMode
     tags: []
     deprecation_message: ''
@@ -616,30 +557,20 @@ properties:
     writeCapabilities: []
   - name: Player.DevTouchMovementMode
     summary: |
-      Determines player's character movement mode when using a touch device.
+      Determines player's character movement mode when using a touch-enabled device.
     description: |
-      The DevTouchMovementMode property determines the manner in which a player
-      moves their character when using a
-      `Class.UserInputService.TouchEnabled|TouchEnabled` device. See
-      `Enum.DevTouchMovementMode` for a description of each movement control
-      mode available. This property cannot be set using a `Class.LocalScript`
-      (it must be set on the server using a `Class.Script`).
+      This property determines the manner in which a player moves their
+      character when using a `Class.UserInputService.TouchEnabled|TouchEnabled`
+      device. This property cannot be set using a
+      `Class.LocalScript` (it must be set on the server using a `Class.Script`).
 
       The default value of this property is determined by
       `Class.StarterPlayer.DevTouchMovementMode`.
 
-      When set to **UserChoice**, a player can choose between any control mode
-      (except **Scriptable**) in the experience's settings during play. In
-      general, it's a good idea to allow players to choose their control mode to
-      maximize accessibility.
-
-      It's possible to create a custom control scheme by setting this property
-      to **Scriptable**.
-
-      This property doesn't affect players who aren't using a touch-enabled
-      device. See `Class.Player.DevComputerMovementMode` instead.
-    code_samples:
-      - overriding-a-player-s-movement-mode
+      This property doesn't affect players who aren't using a
+      `Class.UserInputService.TouchEnabled|TouchEnabled` device. See
+      `Class.Player.DevComputerMovementMode|DevComputerMovementMode` instead.
+    code_samples: []
     type: DevTouchMovementMode
     tags: []
     deprecation_message: ''
@@ -656,26 +587,27 @@ properties:
     writeCapabilities: []
   - name: Player.DisplayName
     summary: |
-      The DisplayName of the UserId associated with the Player.
+      The display name of the authenticated user associated with the
+      `Class.Player`.
     description: |
-      The `DisplayName` is a `Class.Player` property that contains the display
-      name of the authenticated user associated with the `Class.Player` object.
-      Unlike usernames, display names are non-unique names a player displays to
-      others. If the Roblox user has not chosen one, the property will read the
-      same as the `Name` property.
+      This property contains the display name of the authenticated user
+      associated with the `Class.Player` object. Unlike
+      `Class.Player.UserId|UserId`, display names are non-unique names a player
+      displays to others.
 
-      Note:
+      #### Usage Notes
 
       - Since display names are non-unique, it's possible for two players in a
-        single instance to have identical names. If you need a globally unique
-        identifier for a player, use `Class.Player.UserId` (which is static) or
-        `Class.Player.Name` (which is the current Username) instead.
-      - Characters generated with `Class.Player.LoadCharacter` or by the Roblox
-        engine will have their `Class.Humanoid.DisplayName` property assigned to
-        the `Class.Player.DisplayName` property.
+      single instance to have identical names. If you need a globally unique
+      identifier for a player, use `Class.Player.UserId|UserId` instead.
+
+      - Characters generated with `Class.Player:LoadCharacter()|LoadCharacter()`
+      or by the Roblox engine will have their `Class.Humanoid.DisplayName`
+      property assigned to the `Class.Player.DisplayName` property.
+
       - Display names may have unicode characters in the string. See
-        `Library.utf8|UTF-8` for more information on how to work with strings
-        with unicode characters.
+      `Library.utf8|UTF-8` for more information on how to work with strings with
+      unicode characters.
     code_samples: []
     type: string
     tags: []
@@ -693,17 +625,16 @@ properties:
     writeCapabilities: []
   - name: Player.FollowUserId
     summary: |
-      Describes the user ID of the player who was followed into a game by a
-      player.
+      Describes the user ID of the player who was followed into an experience by
+      a player.
     description: |
-      The FollowUserId is a `Class.Player` property that contains the
-      `Class.Player.UserId` of the user that a player followed into the game. If
-      the player did not follow anyone into the game, this property will be 0.
-      This property is useful for alerting players who have been followed by
-      another player into the game.
+      This property contains the `Class.Player.UserId|UserId` of the user that a
+      player followed into the experience, or `0` if the player did not follow
+      anyone in. This property is useful for alerting players who have been
+      followed by another player into the experience.
 
       You can get the name of the player followed using this user ID and the
-      `Class.Players:GetNameFromUserIdAsync()` function.
+      `Class.Players:GetNameFromUserIdAsync()` method.
     code_samples:
       - Followed-Alert
     type: int64
@@ -726,13 +657,12 @@ properties:
     summary: |
       Whether player client-side gameplay is currently paused.
     description: |
-      The **GameplayPaused** property indicates if the player is currently in a
+      This property indicates if the player is currently in a
       pause state in a place with
       `Class.Workspace.StreamingEnabled|StreamingEnabled` activated. It is set
-      on the client but replicated to the server. To determine the pause status,
-      you can utilize this property.
+      on the client but replicated to the server.
 
-      See also:
+      #### See Also
 
       - `Class.Workspace.StreamingEnabled` which controls whether content
         streaming is enabled
@@ -756,10 +686,9 @@ properties:
     writeCapabilities: []
   - name: Player.HasVerifiedBadge
     summary: |
-      Indicates if a player has a Verified Badge.
+      Indicates if a player has a **Verified** badge.
     description: |
-      The HasVerifiedBadge `Class.Player` property indicates if the player has a
-      Verified Badge.
+      This property indicates if the player has a **Verified** badge.
     code_samples: []
     type: boolean
     tags: []
@@ -777,18 +706,17 @@ properties:
     writeCapabilities: []
   - name: Player.HealthDisplayDistance
     summary: |
-      Sets the distance at which this player will see other Humanoid's health
-      bars. If set to 0, the health bars will not be displayed.
+      Sets the distance at which this player will see other players' health
+      bars.
     description: |
-      The HealthDisplayDistance `Class.Player` property sets the distance in
-      studs at which this player will see other `Class.Humanoid` health bars. If
-      set to 0, the health bars will not be displayed. This property is set to
+      This property sets the distance in studs at which this player will see
+      other `Class.Humanoid` health bars. If set to `0`, the health bars will
+      not be displayed. This property is set to
       `Class.StarterPlayer.HealthDisplayDistance` by default.
 
-      If a Humanoid's health bar is visible, you can set the display type using
+      If a humanoid's health bar is visible, you can set the display type using
       `Class.Humanoid.DisplayDistanceType`.
-    code_samples:
-      - hiding-player-health-and-names
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -805,24 +733,17 @@ properties:
     writeCapabilities: []
   - name: Player.LocaleId
     summary: |
-      This property shows the locale id that the local player has set for their
+      This property shows the locale ID that the local player has set for their
       Roblox account.
     description: |
-      The LocaleId `Class.Player` property shows the locale id that the local
-      player has set for their Roblox account. It holds a string with the two
-      letter code (for example, "en-us") for the locale.
-
-      This can be used to determine the geographic demographic of your game's
-      player base, and is also the locale that will be used for automatic
-      localization (see `Class.GuiBase2d.AutoLocalize`) of in-experience
-      content. This property allows access to the player's locale from the
-      server.
+      This property shows the locale ID that the local player has set for their
+      Roblox account. It holds a string with the two letter code, for example
+      `en-us`.
 
       See also `Class.LocalizationService.RobloxLocaleId`, the locale ID used
       for localizing internal content. This will be a different value when
       Roblox does not yet internally support the local player's set locale.
-    code_samples:
-      - checking-a-player-s-locale
+    code_samples: []
     type: string
     tags:
       - Hidden
@@ -867,18 +788,16 @@ properties:
     writeCapabilities: []
   - name: Player.NameDisplayDistance
     summary: |
-      Sets the distance at which this player will see other Humanoid's names. If
-      set to 0, names are hidden.
+      Sets the distance at which this player will see other players' names.
     description: |
-      The NameDisplayDistance `Class.StarterPlayer` property sets the distance
-      in studs at which this player will see other `Class.Humanoid` names. If
-      the property is set to 0, names are hidden. This property is set to
-      `Class.StarterPlayer.NameDisplayDistance` by default.
+      This property sets the distance in studs at which this player will see
+      other `Class.Humanoid` names. If the property is set to `0`, names are
+      hidden. This property is set to `Class.StarterPlayer.NameDisplayDistance`
+      by default.
 
-      If a Humanoid's health bar is visible, you can set the display type using
+      If a humanoid's name is visible, you can set the display type using
       `Class.Humanoid.DisplayDistanceType`.
-    code_samples:
-      - hiding-player-health-and-names
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -897,16 +816,16 @@ properties:
     summary: |
       Determines whether the player is on a specific team.
     description: |
-      The Neutral property determines whether the player is on a specific team.
+      This property determines whether the player is on a specific team.
 
-      - When _true_, the player is not on a specific team. This also means that
-        the `Class.Player.Team` property will be `nil` and the
-        `Class.Player.TeamColor` will be white.
-      - When _false_, the player is on a specific team. The `Class.Player.Team`
-        property will correspond to the `Class.Team` that the player is on, as
-        will the `Class.Player.TeamColor`.
-    code_samples:
-      - checking-if-a-player-is-neutral
+      - When `true`, the player is not on a specific team. This also means that
+      the `Class.Player.Team|Team` property will be `nil` and the
+      `Class.Player.TeamColor|TeamColor` will be white.
+
+      - When `false`, the player is on a specific team. The
+      `Class.Player.Team|Team` property will correspond to the `Class.Team` that
+      the player is on, as will the `Class.Player.TeamColor|TeamColor`.
+    code_samples: []
     type: boolean
     tags: []
     deprecation_message: ''
@@ -959,10 +878,10 @@ properties:
     summary: |
       Sets the part to focus replication around.
     description: |
-      The ReplicationFocus `Class.Player` property sets the part to focus
-      replication around a Player. Different Roblox systems that communicate
-      over the network (such as physics, streaming, etc) replicate at different
-      rates depending on how close objects are to the replication focus.
+      This property sets the part to focus replication around a player.
+      Different Roblox systems that communicate over the network (such as
+      physics, streaming, etc.) replicate at different rates depending on how
+      close objects are to the replication focus.
 
       When this property is `nil`, it reverts to its default behavior which is
       to treat the local player's character's
@@ -971,8 +890,7 @@ properties:
       This property should only be set on the server with a `Class.Script`, not
       a `Class.LocalScript`. Note that this property does not change or update
       network ownership of parts.
-    code_samples:
-      - setting-a-player-s-replication-focus
+    code_samples: []
     type: Instance
     tags: []
     deprecation_message: ''
@@ -991,25 +909,22 @@ properties:
     summary: |
       If set, the player will respawn at the given `Class.SpawnLocation`.
     description: |
-      If set, the player will respawn at the given `Class.SpawnLocation`. This
-      property can only be set through Luau and must contain a reference to a
-      valid `Class.SpawnLocation`, which must meet the following criteria:
+      If set, the player will respawn at the given `Class.SpawnLocation` which
+      must meet the following criteria:
 
-      - Descendant of `Class.Workspace`
-      - `Class.SpawnLocation.TeamColor` is set to the `Class.Player.TeamColor`
-        or `Class.SpawnLocation.Neutral` is set to true
+      - Descendant of `Class.Workspace`.
 
-      If RespawnLocation is not set to a valid `Class.SpawnLocation` then the
-      default spawning logic will apply. For more information on this see the
-      page for `Class.SpawnLocation`.
+      - The `Class.SpawnLocation.TeamColor` property is set to the player's
+      `Class.Player.TeamColor|TeamColor` or the `Class.SpawnLocation.Neutral`
+      property is set to `true`.
 
-      ##### Alternatives to RespawnLocation
+      #### Alternatives
 
       - A `Class.Player` will spawn from `Class.SpawnLocation|SpawnLocations`
         belonging to their team. In some cases it may be simpler to change the
-        player's `Class.Player.Team` instead.
+        player's `Class.Player.Team|Team` instead.
       - Implement your own custom spawn logic using `Class.PVInstance:PivotTo()`
-        to manually move the `Class.Player.Character`.
+        to manually move the `Class.Player.Character|Character`.
     code_samples:
       - change-spawn-on-touch
     type: SpawnLocation
@@ -1046,18 +961,16 @@ properties:
     writeCapabilities: []
   - name: Player.Team
     summary: |
-      Determines the Team with which a Player is associated.
+      Determines the `Class.Team` with which the player is associated.
     description: |
-      The Team property is a reference to a `Class.Team` object within the
-      `Class.Teams` service. It determines the team the player is on; if the
-      `Class.Player` isn't on a team or has an invalid `Class.Player.TeamColor`,
-      this property is `nil`. When this property is set, the player has joined
-      the `Class.Team` and the `Class.Team.PlayerAdded` event fires on the
-      associated team. Similarly, `Class.Team.PlayerRemoved` fires when the
-      property is unset from a certain `Class.Team`.
-    code_samples:
-      - Playing-Spectating-Teams
-      - Join-Team-Command
+      This property is a reference to a `Class.Team` object within the
+      `Class.Teams` service. If the player isn't on a team or has an invalid
+      `Class.Player.TeamColor|TeamColor`, this property is `nil`. When this
+      property is set, the player has joined the `Class.Team` and the
+      `Class.Team.PlayerAdded` event fires on the associated team. Similarly,
+      `Class.Team.PlayerRemoved` fires when the property is unset from a certain
+      `Class.Team`.
+    code_samples: []
     type: Team
     tags:
       - NotReplicated
@@ -1075,22 +988,19 @@ properties:
     writeCapabilities: []
   - name: Player.TeamColor
     summary: |
-      Determines the Team with which a Player is associated.
+      Determines the `Class.Team` with which the player is associated with
+      according to that team's `Class.Team.TeamColor`.
     description: |
-      The TeamColor property determines which team a Player is associated with
-      according to that Team's `Class.Team.TeamColor`. Changing this property
-      will change `Class.Player.Team` according to whichever team has the same
-      `Datatype.BrickColor` for their `Class.Team.TeamColor`. If no Team object
-      has the associated TeamColor, the player will not be associated with a
-      team.
+      This property determines which `Class.Team` a player is associated with
+      according to that team's `Class.Team.TeamColor`. If no `Class.Team` object
+      has the associated `Datatype.BrickColor`, the player will not be
+      associated with a team.
 
       It's often a better idea to set `Class.Player.Team` to the respective
       `Class.Team` instead of using this property. Setting this property often
-      leads to repetition of the same BrickColor value for a certain team across
-      many scripts; this is something you want to avoid when adhering to the
-      "Don't Repeat Yourself" (DRY) principle.
-    code_samples:
-      - Playing-Spectating-Teams
+      leads to repetition of the same `Datatype.BrickColor` value for a certain
+      team across many scripts.
+    code_samples: []
     type: BrickColor
     tags: []
     deprecation_message: ''
@@ -1129,19 +1039,15 @@ properties:
     summary: |
       A unique identifying integer assigned to all user accounts.
     description: |
-      The UserId is a `Class.Player` property that contains a read-only integer
-      that **uniquely and consistently** identifies every user account on
-      Roblox. Unlike the `Class.Instance.Name` of a Player, which may change
-      according the user's present username, this value will never change for
-      the same account.
+      This property contains a read-only integer that **uniquely and
+      consistently** identifies the user's account on Roblox. Unlike the
+      player's `Class.Player.DisplayName|DisplayName` which may change, this
+      value will never change for the same account.
 
       This property is essential when saving/loading player data using
-      `Class.GlobalDataStore|GlobalDataStores`. Use a player's UserId as the
-      data store key so that each player has a unique key.
+      `Class.GlobalDataStore|GlobalDataStores`.
     code_samples:
       - Player-UserId1
-      - Players-GetPlayerByUserId1
-      - Met-the-creator-badge
       - GlobalDataStore-GetAsync1
     type: int64
     tags: []
@@ -1201,16 +1107,14 @@ methods:
   - name: Player:ClearCharacterAppearance
     summary: |
       Removes all accessories and other character appearance objects from a
-      player's Character.
+      player's `Class.Player.Character|Character`.
     description: |
-      The ClearCharacterAppearance function removes all `Class.Accessory`,
-      `Class.Shirt`, `Class.Pants`, `Class.CharacterMesh`, and
-      `Class.BodyColors` from the given player's `Class.Player.Character`. In
-      addition, it also removes the T-Shirt `Class.Decal` on the player's torso.
-      The character's body part colors and face will remain unchanged. This
-      method does nothing if the player does not have a Character.
-
-      It does not remove `Class.ShirtGraphic|t-shirts`, head meshes, or faces.
+      This method removes all `Class.Accessory`, `Class.Shirt`, `Class.Pants`,
+      `Class.CharacterMesh`, and `Class.BodyColors` from the given player's
+      `Class.Player.Character|Character`. In addition, it also removes the
+      T-Shirt `Class.Decal` on the player's torso. The character's body part
+      colors and face will remain unchanged. This method does nothing if the
+      player does not have a `Class.Player.Character|Character`.
     code_samples:
       - Player-ClearCharacterAppearance1
     parameters: []
@@ -1226,15 +1130,15 @@ methods:
     writeCapabilities: []
   - name: Player:DistanceFromCharacter
     summary: |
-      Returns the distance between the character's head and the given Vector3
-      point. Returns 0 if the player has no character.
+      Returns the distance between the character's head and the given
+      `Datatype.Vector3`, or `0` if the player has no character.
     description: |
-      The DistanceFromCharacter `Class.Player` function returns the distance
-      between the character's head and the given `Datatype.Vector3` point. It
-      returns 0 if the player has no `Class.Player.Character`.
+      This method returns the distance between the character's head and the
+      given `Datatype.Vector3` point, or `0` if the player has no
+      `Class.Player.Character|Character`.
 
       This is useful when determining the distance between a player and another
-      object or location in game.
+      object or location in experience.
 
       If you would like to determine the distance between two non-player
       instances or positions, you can use the following:
@@ -1263,57 +1167,57 @@ methods:
     writeCapabilities: []
   - name: Player:GetJoinData
     summary: |
-      Returns a dictionary containing information describing how the
-      `Class.Player` joins the experience.
+      Returns a dictionary containing information describing how the player
+      joins the experience.
     description: |
-      Returns a dictionary containing information describing how the Player
+      Returns a dictionary containing information describing how the player
       joins the experience. The dictionary contains any of the following fields:
 
       <table>
         <thead>
           <tr>
-            <th> Key </th>
-            <th> Value Type </th>
-            <th> Description </th>
+            <th>Key</th>
+            <th>Value Type</th>
+            <th>Description</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th> SourceGameId </th>
-            <td> number </td>
-            <td> The <code>Class.DataModel.GameId</code> of the experience the <code>Player</code> teleported from. Only present if the player teleports to the current experience and if a server calls the teleport function. </td>
+            <th><code>SourceGameId</code></th>
+            <td>number</td>
+            <td>The <code>Class.DataModel.GameId</code> of the experience the <code>Player</code> teleported from. Only present if the player teleports to the current experience and if a server calls the teleport function.</td>
           </tr>
           <tr>
-            <th> SourcePlaceId </th>
-            <td> number </td>
-            <td> The <code>Class.DataModel.PlaceId</code> of the place the <code>Player</code> teleported from. Only present if the player teleports to the current place and a server calls the teleport function. </td>
+            <th><code>SourcePlaceId</code></th>
+            <td>number</td>
+            <td>The <code>Class.DataModel.PlaceId</code> of the place the <code>Player</code> teleported from. Only present if the player teleports to the current place and a server calls the teleport function.</td>
           </tr>
           <tr>
-            <th> ReferredByPlayerId </th>
-            <td> number </td>
-            <td> The <code>Class.Player.UserId</code> of the player who invited the current player to the experience. Use this data to identify the referrer and trigger reward logic. </td>
+            <th><code>ReferredByPlayerId</code></th>
+            <td>number</td>
+            <td>The <code>Class.Player.UserId|UserId</code> of the player who invited the current player to the experience. Use this data to identify the referrer and trigger reward logic.</td>
           </tr>
           <tr>
-            <th> Members </th>
-            <td> array </td>
-            <td> An array containing the <code>Class.Player.UserId</code> numbers of the users teleported alongside the <code>Player</code>. Only present if the player teleported as part of a group. </td>
+            <th><code>Members</code></th>
+            <td>array</td>
+            <td>An array containing the <code>Class.Player.UserId|UserId</code> numbers of the users teleported alongside the player. Only present if the player teleported as part of a group.</td>
           </tr>
           <tr>
-            <th> TeleportData </th>
-            <td> variant </td>
-            <td> Reflects the <code>teleportData</code> specified in the original teleport. Useful for sharing information between servers the player teleports to. Only present if <code>teleportData</code> was specified and a server calls the teleport function. </td>
+            <th><code>TeleportData</code></th>
+            <td>variant</td>
+            <td>Reflects the <code>teleportData</code> specified in the original teleport. Useful for sharing information between servers the player teleports to. Only present if <code>teleportData</code> was specified and a server calls the teleport function.</td>
           </tr>
           <tr>
-            <th> LaunchData </th>
-            <td> string </td>
+            <th><code>LaunchData</code></th>
+            <td>string</td>
             <td>A plain or JSON encoded string that contains launch data specified in a <a href="../../../production/promotion/deeplinks.md">deep link</a> URL or
             <code>Class.ExperienceInviteOptions.LaunchData</code>.</td>
           </tr>
           <tr>
-            <th> GameJoinContext </th>
-            <td> dictionary </td>
+            <th><code>GameJoinContext</code></th>
+            <td>dictionary</td>
             <td>
-              A dictionary that includes relevant information based on the context of the game join. It contains the following keys:
+              A dictionary that includes relevant information based on the context of the join. It contains the following keys:<br /><br />
               <ul>
                 <li><code>JoinSource</code>: <code>Enum.JoinSource</code></li>
                 <li><code>ItemType</code>: optional <code>Enum.AvatarItemType</code></li>
@@ -1326,17 +1230,15 @@ methods:
         </tbody>
       </table>
 
-      #### GetJoinData and TeleportData
-
-      If a server initiates the Player's teleport, the dictionary that this
+      If a server initiates the player's teleport, the dictionary that this
       method returns includes the player's teleport data. The
-      `Class.Player:GetJoinData()` method can only be used to fetch teleport
-      data on the server. To fetch the data on the client, use
+      `Class.Player:GetJoinData()|GetJoinData()` method can only be used to
+      fetch teleport data on the server. To fetch the data on the client, use
       `Class.TeleportService:GetLocalPlayerTeleportData()`.
 
       Unlike `Class.TeleportService:GetLocalPlayerTeleportData()`,
-      `Class.Player:GetJoinData()` only provides teleport data that meets the
-      following security criteria:
+      `Class.Player:GetJoinData()|GetJoinData()` only provides teleport data
+      that meets the following security criteria:
 
       - It's guaranteed to have been sent by a Roblox server in the past 48
         hours.
@@ -1373,23 +1275,14 @@ methods:
     summary: |
       Returns the mouse being used by the client.
     description: |
-      The GetMouse `Class.Player` function returns the `Class.Mouse` being used
-      by the client. The player's mouse instance can be used to track user mouse
-      input including left and right mouse button clicks and movement and
-      location.
+      This method returns the `Class.Mouse` being used by the client. The
+      player's mouse instance can be used to track user mouse input including
+      left and right mouse button clicks and movement and location.
 
-      The `Class.UserInputService` service provides additional functions and
-      events to track user input - especially for devices that do not use a
-      mouse.
-
-      Note:
-
-      - This item **must** be used in a `Class.LocalScript` to work as expected
-        online.
-      - Following an update in July 2014, the mouse's icon can now be set with
-        this method.
-    code_samples:
-      - Player-GetMouse1
+      Note that `Class.UserInputService` provides additional methods,
+      properties, and events to track user input, especially for devices that do
+      not use a mouse.
+    code_samples: []
     parameters: []
     returns:
       - type: Mouse
@@ -1406,10 +1299,10 @@ methods:
     summary: |
       Returns the isolated network latency in seconds.
     description: |
-      **GetNetworkPing** returns the isolated network latency of the
-      `Class.Player` in seconds. "Ping" is a measurement of the time taken for
-      data to be sent from the client to the server, then back again. It doesn't
-      involve data deserialization or processing.
+      Returns the isolated network latency of the player in seconds. "Ping" is a
+      measurement of the time taken for data to be sent from the client to the
+      server, then back again. It doesn't involve data deserialization or
+      processing.
 
       For client-side `Class.LocalScript|LocalScripts`, this function can only
       be called on the `Class.Players.LocalPlayer`. This function is useful in
@@ -1433,14 +1326,13 @@ methods:
       Returns whether or not the appearance of the player's character has
       loaded.
     description: |
-      The HasAppearanceLoaded `Class.Player` function returns whether or not the
-      appearance of the player's `Class.Player.Character` has loaded.
-
-      A player's appearance includes items such as the player's `Class.Shirt`,
-      `Class.Pants`, and `Class.Accessory|Accessories`.
+      This method returns whether or not the appearance of the player's
+      `Class.Player.Character|Character` has loaded. Appearance includes items
+      such as the player's `Class.Shirt`, `Class.Pants`, and
+      `Class.Accessory|Accessories`.
 
       This is useful when determining whether a player's appearance has loaded
-      after they first join the game, which can be tracked using the
+      after they first join the experience, which can be tracked using the
       `Class.Players.PlayerAdded` event.
     code_samples:
       - check-if-a-player-s-appearance-has-loaded
@@ -1462,8 +1354,8 @@ methods:
       Returns whether the player is verified with concrete, real-world signals.
     description: |
       Returns a boolean value indicating that player's verification status. When
-      true, the player is verified. Verification includes, but isn't limited to,
-      non-VOIP phone number or government ID verification.
+      `true`, the player is verified. Verification includes, but isn't limited
+      to, non-VOIP phone number or government ID verification.
 
       When implementing `IsVerified`, exercise caution to ensure that the
       implementation does not inadvertently block all unverified users.
@@ -1487,10 +1379,10 @@ methods:
     writeCapabilities: []
   - name: Player:Kick
     summary: |
-      Forcibly disconnect a player from the game, optionally providing a
+      Forcibly disconnect a player from the experience, optionally providing a
       message.
     description: |
-      The `Class.Player.Kick|Kick()` method allows an experience to gracefully
+      This method allows an experience to gracefully
       disconnect a client and optionally provide a message to the disconnected
       user. This is useful for moderating abusive users. You should only allow
       specific users whom you trust to trigger this method on other users.
@@ -1684,16 +1576,15 @@ methods:
       Causes the player's character to walk in the given direction until
       stopped, or interrupted by the player (by using their controls).
     description: |
-      The Move `Class.Player` function causes the player's character to walk in
-      the given direction until stopped, or interrupted by the player (by using
-      their controls).
+      This method causes the player's character to walk in the given direction
+      until stopped, or interrupted by the player (by using their controls).
 
       This is useful when scripting NPC `Class.Humanoid|Humanoids` that move
-      around a map - but are not controlled by an actual player's input.
+      around a map but are not controlled by an actual player's input.
 
       Note that the function's second argument indicates whether the provided
       `Datatype.Vector3` should move the player relative to world coordinates
-      (_false_) or the player's `Class.Camera` (_true_).
+      (`false`) or the player's `Class.Camera` (`true`).
     code_samples:
       - Player-Move1
     parameters:
@@ -1867,19 +1758,12 @@ methods:
     writeCapabilities: []
   - name: Player:SetAccountAge
     summary: |
-      Sets the AccountAge of the player.
+      Sets the `Class.Player.AccountAge|AccountAge` of the player.
     description: |
-      The SetAccountAge function sets the `Class.Player.AccountAge` of the
-      player in days.
-
-      It is used to set the `Class.Player` property that describes how long ago
-      a player's account was registered in days.
-
-      This does not set the age of the player on the account, but the age of the
-      account itself relative to when it was first created.
-    code_samples:
-      - setting-the-player-s-account-age
-      - Account-Age-Mark
+      This method sets the `Class.Player.AccountAge|AccountAge` of the player in
+      days, meaning the age of the account itself relative to when it was first
+      created.
+    code_samples: []
     parameters:
       - name: accountAge
         type: int
@@ -2133,12 +2017,10 @@ methods:
     summary: |
       Returns a dictionary of online friends.
     description: |
-      This function returns a dictionary array of online friends, limited by the
-      `maxFriends` value. The function uses a 30 second cache.
-
-      In the returned array, some fields are only present for certain location
-      types. For example, **PlaceId** won't be present when **LocationType** is
-      0 (Mobile Website).
+      This function returns a dictionary array of online friends, using a 30
+      second cache. In the returned array, some fields are only present for
+      certain location types; for example, `PlaceId` won't be present when
+      `LocationType` is `0` (mobile website).
 
       <table>
           <thead>
@@ -2150,83 +2032,49 @@ methods:
           </thead>
           <tbody>
               <tr>
-                  <td><b>VisitorId</b></td>
+                  <td><code>VisitorId</code></td>
                   <td>number</td>
-                  <td>The <code>Class.Player.UserId</code> of the friend.</td>
+                  <td>The <code>Class.Player.UserId|UserId</code> of the friend.</td>
               </tr>
               <tr>
-                  <td><b>UserName</b></td>
+                  <td><code>UserName</code></td>
                   <td>string</td>
                   <td>The username of the friend.</td>
               </tr>
               <tr>
-                  <td><b>DisplayName</b></td>
+                  <td><code>DisplayName</code></td>
                   <td>string</td>
-                  <td>The <code>Class.Player.DisplayName</code> of the friend.</td>
+                  <td>The <code>Class.Player.DisplayName|DisplayName</code> of the friend.</td>
               </tr>
               <tr>
-                  <td><b>LastOnline</b></td>
+                  <td><code>LastOnline</code></td>
                   <td>string</td>
                   <td>When the friend was last online.</td>
               </tr>
               <tr>
-                  <td><b>IsOnline</b></td>
+                  <td><code>IsOnline</code></td>
                   <td>boolean</td>
                   <td>If the friend is currently online.</td>
               </tr>
               <tr>
-                  <td><b>LastLocation</b></td>
+                  <td><code>LastLocation</code></td>
                   <td>string</td>
                   <td>The name of the friend's current location.</td>
               </tr>
               <tr>
-                  <td><b>PlaceId</b></td>
+                  <td><code>PlaceId</code></td>
                   <td>number</td>
                   <td>The place ID of the friend's last location.</td>
               </tr>
               <tr>
-                  <td><b>GameId</b></td>
+                  <td><code>GameId</code></td>
                   <td>string</td>
-                  <td>The <code>DataModel/JobId</code> of the friend's last location.</td>
+                  <td>The <code>Class.DataModel.JobId</code> of the friend's last location.</td>
               </tr>
               <tr>
-                  <td><b>LocationType</b></td>
+                  <td><code>LocationType</code></td>
                   <td>number</td>
-      <td>
-      The location type of the friend's last location:
-      <table>
-          <tbody>
-              <tr>
-                  <td width="20%"><b>0</b></td>
-                  <td>Mobile Website</td>
-              </tr>
-              <tr>
-                  <td><b>1</b></td>
-                  <td>Mobile InGame</td>
-              </tr>
-              <tr>
-                  <td><b>2</b></td>
-                  <td>Webpage</td>
-              </tr>
-              <tr>
-                  <td><b>3</b></td>
-                  <td>Studio</td>
-              </tr>
-              <tr>
-                  <td><b>4</b></td>
-                  <td>InGame</td>
-              </tr>
-              <tr>
-                  <td><b>5</b></td>
-                  <td>Xbox</td>
-              </tr>
-              <tr>
-                  <td><b>6</b></td>
-                  <td>Team Create</td>
-              </tr>
-          </tbody>
-      </table>
-      </td>
+                  <td>The location type of the friend's last location.</td>
               </tr>
           </tbody>
       </table>
@@ -2252,24 +2100,20 @@ methods:
     writeCapabilities: []
   - name: Player:GetRankInGroup
     summary: |
-      Returns the player's rank in the group as an integer between 0 and 255,
-      where 0 is a non-member and 255 is the group's owner.
+      Returns the player's rank in the group as an integer.
     description: |
-      The GetRankInGroup `Class.Player` function returns the player's rank in
-      the group as an integer between 0 and 255, where 0 is a non-member and 255
-      is the group's owner.
+      This method returns the player's rank in the group as an integer between
+      `0` and `255`, where `0` is a non-member and `255` is the group's owner.
 
       Using this in a `Class.Script`, as opposed to a `Class.LocalScript`, will
       not get you the most up-to-date information. If a player leaves a group
-      while they are in the game, GetRankInGroup will still think they're in
-      that group until they leave. However, this does not happen when used with
-      a LocalScript.
-
-      This is because the method caches results, so multiple calls of
-      GetRankInGroup on the same player with the same group ID will yield the
-      same result as when the method was first called with the given group ID.
-      The caching behavior is on a per-peer basis: a server does not share the
-      same cache as a client.
+      while they are in the experience, `GetRankInGroup()` will still think
+      they're in that group until they leave. However, this does not happen when
+      used with a `Class.LocalScript` because the method caches results, so
+      multiple calls of `GetRankInGroup()` on the same player with the same
+      group ID will yield the same result as when the method was first called
+      with the given group ID. The caching behavior is on a per-peer basis: a
+      server does not share the same cache as a client.
     code_samples:
       - Player-GetRankInGroup1
     parameters:
@@ -2292,23 +2136,21 @@ methods:
     writeCapabilities: []
   - name: Player:GetRoleInGroup
     summary: |
-      Returns the player's role in the group as a string, or "Guest" if the
+      Returns the player's role in the group as a string, or `Guest` if the
       player isn't part of the group.
     description: |
-      The GetRoleInGroup `Class.Player` function returns the player's role in
-      the group as a string, or _Guest_ if the player isn't part of the group.
+      This method returns the player's role in the group as a string, or `Guest`
+      if the player isn't part of the group.
 
       Using this in a `Class.Script`, as opposed to a `Class.LocalScript`, will
       not get you the most up-to-date information. If a player leaves a group
-      while they are in the game, GetRoleInGroup will still think they're in
-      that group until they leave. However, this does not happen when used with
-      a LocalScript.
-
-      This is because the method caches results, so multiple calls of
-      GetRoleInGroup on the same player with the same group ID will yield the
-      same result as when the method was first called with the given group ID.
-      The caching behavior is on a per-peer basis: a server does not share the
-      same cache as a client.
+      while they are in the experience, `GetRoleInGroup()` will still think
+      they're in that group until they leave. However, this does not happen when
+      used with a `Class.LocalScript` because the method caches results, so
+      multiple calls of `GetRoleInGroup()` on the same player with the same
+      group ID will yield the same result as when the method was first called
+      with the given group ID. The caching behavior is on a per-peer basis: a
+      server does not share the same cache as a client.
     code_samples:
       - Player-GetRoleInGroup1
     parameters:
@@ -2316,11 +2158,11 @@ methods:
         type: int64
         default: ''
         summary: |
-          The _groupId_ of the specified group.
+          The group ID of the specified group.
     returns:
       - type: string
         summary: |
-          The player's role in the specified group, or _Guest_ if the player is
+          The player's role in the specified group, or `Guest` if the player is
           not a member.
     tags:
       - Yields
@@ -2362,12 +2204,10 @@ methods:
       Checks whether a player is a friend of the user with the given
       `Class.Player.UserId`.
     description: |
-      This function sends a request to the Roblox website asking whether a
-      player is a friend of another user, given the `Class.Player.UserId` of
-      that user. This function caches results so multiple calls of the function
-      on the same player with the same `Class.Player.UserId` may not yield the
-      most up-to-date result. This does not happen when used in a
-      `Class.LocalScript`.
+      This method sends a request to Roblox asking whether a player is a friend
+      of another user, given the `Class.Player.UserId|UserId` of that user. This
+      method caches results so multiple calls on the same player with the same
+      `userId` may not yield the most up-to-date result.
     code_samples:
       - Player-IsFriendsWith1
     parameters:
@@ -2393,29 +2233,25 @@ methods:
     summary: |
       Checks whether a player is a member of a group with the given ID.
     description: |
-      The IsInGroup `Class.Player` function sends a request to the Roblox
-      website asking whether a player is a member of a group, given the ID of
-      that group.
+      This method sends a request to Roblox asking whether a player is a member
+      of a group, given the ID of that group.
 
       Using this in a `Class.Script`, as opposed to a `Class.LocalScript`, will
       not get you the most up-to-date information. If a player leaves a group
-      while they are in the game, IsInGroup will still think they're in that
-      group until they leave. However, this does not happen when used with a
-      LocalScript.
-
-      This is because the method caches results, so multiple calls of IsInGroup
-      on the same player with the same group ID will yield the same result as
-      when the method was first called with the given group ID. The caching
-      behavior is on a per-peer basis: a server does not share the same cache as
-      a client.
-    code_samples:
-      - Player-IsInGroup1
+      while they are in the experience, `IsInGroup()` will still think they're
+      in that group until they leave. However, this does not happen when used
+      with a `Class.LocalScript` because the method caches results, so multiple
+      calls of `IsInGroup()` on the same player with the same group ID will
+      yield the same result as when the method was first called with the given
+      group ID. The caching behavior is on a per-peer basis: a server does not
+      share the same cache as a client.
+    code_samples: []
     parameters:
       - name: groupId
         type: int64
         default: ''
         summary: |
-          The _groupId_ of the specified group.
+          The group ID of the specified group.
     returns:
       - type: boolean
         summary: |
@@ -2433,38 +2269,31 @@ methods:
       Creates a new character for the player, removing the old one. Also clears
       the player's `Class.Backpack` and `Class.PlayerGui`.
     description: |
-      The LoadCharacter `Class.Player` function creates a new character for the
-      player, removing the old one. It also clears the player's `Class.Backpack`
-      and `Class.PlayerGui`.
+      This method creates a new character for the player, removing the old one.
+      It also clears the player's `Class.Backpack` and `Class.PlayerGui`. This
+      is useful in cases where you want to reload the character without killing
+      the player, such as when you want to load a new character appearance after
+      changing the player's
+      `Class.Player.CharacterAppearance|CharacterAppearance`.
 
-      This is useful in cases where you want to reload the character without
-      killing the player, such as when you want to load a new character
-      appearance after changing the player's `Class.Player.CharacterAppearance`.
-
-      Note: The function is similar to `Class.Player:LoadCharacterBlocking()`,
-      but the request is processed asynchronously instead of synchronously. This
-      means other tasks will be able to continue while the character is being
-      loaded, including the rendering of the game and any other tasks. Also,
-      this function can be used in a script, while LoadCharacterBlocking cannot.
-
-      After calling LoadCharacter for an individual player, it is not
+      After calling `LoadCharacter()` for an individual player, it is not
       recommended to call it again for the same player until after that player's
-      `Class.Player.CharacterAppearanceLoaded` event has fired.
+      `Class.Player.CharacterAppearanceLoaded|CharacterAppearanceLoaded` event
+      has fired.
 
-      #### Character Loading Event order
+      #### Character Loading Event Order
 
-      Calling the `Class.Player:LoadCharacter()` with an R15 Avatar fires events
-      in the following order (Note: R6 ordering is different):
-
-      1. Player.Character sets
-      2. Player.CharacterAdded fires
-      3. Player.Changed fires with a value of "Character"
-      4. Character appearance initializes
-      5. Player.CharacterAppearanceLoaded fires
-      6. Character.Parent sets to the DataModel
-      7. The Character rig builds, and the Character scales
-      8. Character moves to the spawn location
-      9. LoadCharacter returns
+      Calling the `LoadCharacter()` method on any `Player` fires events in the
+      following order:
+      
+      1. The character appearance initializes.
+      2. The character rig builds and scales.
+      3. The character moves to the spawn location.
+      4. `Class.Player.Character` sets.
+      5. `Class.Object.Changed` fires on the `Class.Player` with a value of `Character`.
+      6. The character's `Class.Instance.Parent|Parent` sets to the `Class.DataModel`.
+      7. `Class.Player.CharacterAdded` fires.
+      8. `Class.Player.CharacterAppearanceLoaded` fires.
     code_samples:
       - Player-LoadCharacter1
     parameters: []
@@ -2481,22 +2310,21 @@ methods:
     writeCapabilities: []
   - name: Player:LoadCharacterWithHumanoidDescription
     summary: |
-      Spawns an avatar so it has everything equipped in the passed in
+      Spawns a player character with everything equipped in the passed in
       `Class.HumanoidDescription`.
     description: |
-      This function spawns an avatar so it has everything equipped in the passed
-      in `Class.HumanoidDescription`.
+      This method spawns a player character with everything equipped in the
+      passed in `Class.HumanoidDescription`.
 
-      After calling LoadCharacterWithHumanoidDescription for an individual
-      player, it is not recommended to call the function again for the same
-      player until after that player's `Class.Player.CharacterAppearanceLoaded`
-      event has fired.
+      After calling this method for an individual player, it is not recommended
+      to call it again for the same player until after that player's
+      `Class.Player.CharacterAppearanceLoaded|CharacterAppearanceLoaded` event
+      has fired.
 
-      See also:
-
-      - [HumanoidDescription System](../../../characters/appearance.md#humanoiddescription),
-        an article which explains the humanoid description system in greater
-        detail and provides several scripting examples
+      See also [HumanoidDescription
+      System](../../../characters/appearance.md#humanoiddescription), an article
+      which explains the humanoid description system in greater detail and
+      provides several scripting examples.
     code_samples:
       - spawn-characters-with-humanoiddescription
     parameters:
@@ -2523,8 +2351,8 @@ methods:
       Requests that the server stream to the player around the specified
       location.
     description: |
-      For experiences where instance
-      [streaming](../../../workspace/streaming.md) is enabled, requests that the
+      For experiences where [instance
+      streaming](../../../workspace/streaming.md) is enabled, requests that the
       server stream to the player regions (parts and terrain) around the
       specified **X**, **Y**, **Z** location in the 3D world. It is useful if
       the experience knows that the player's `Datatype.CFrame` will be set to
@@ -2643,31 +2471,32 @@ methods:
 events:
   - name: Player.CharacterAdded
     summary: |
-      Fired when a player's character spawns or respawns.
+      Fires when a player's character spawns or respawns.
     description: |
-      The **CharacterAdded** event fires when a player's character spawns (or
-      respawns). This event fires soon after setting `Class.Player.Character` to
-      a non-`nil` value or calling `Class.Player:LoadCharacter()`, which is
-      before the character is parented to the `Class.Workspace`.
+      This event fires when a player's character spawns or respawns. It fires
+      soon after setting `Class.Player.Character|Character` to a non-`nil` value
+      or calling `Class.Player:LoadCharacter()|LoadCharacter()`, which is before
+      the character is parented to the `Class.Workspace`.
 
-      This can be used alongside the `Class.Player.CharacterRemoving` event,
-      which fires right before a player's character is about to be removed,
-      typically after death. As such, both of these events can potentially fire
-      many times as players die then respawn in a place. If you want to detect
-      when a player joins or leaves the game, use the
-      `Class.Players.PlayerAdded` and `Class.Players.PlayerRemoving` events
-      instead.
+      This can be used alongside the
+      `Class.Player.CharacterRemoving|CharacterRemoving` event which fires right
+      before a player's character is about to be removed, typically after death.
+      As such, both of these events can potentially fire many times as players
+      die then respawn in a place.
 
       Note that the `Class.Humanoid` and its default body parts (head, torso,
       and limbs) will exist when this event fires, but clothing items like
       `Class.Hat|Hats`, `Class.Shirt|Shirts`, and `Class.Pants` may take a few
       seconds to be added to the character. Connect `Class.Instance.ChildAdded`
       on the added character to detect these, or wait for the
-      `Class.Player.CharacterAppearanceLoaded` event to be sure the character
-      has everything equipped.
+      `Class.Player.CharacterAppearanceLoaded|CharacterAppearanceLoaded` event
+      to be sure the character has everything equipped.
+
+      If you instead need to track when a player joins/leaves the experience,
+      use the events `Class.Players.PlayerAdded` and
+      `Class.Players.PlayerRemoving`.
     code_samples:
       - spawns-and-despawns
-      - respawn-at-same-spot
       - accessory-remover
     parameters:
       - name: character
@@ -2683,24 +2512,22 @@ events:
     writeCapabilities: []
   - name: Player.CharacterAppearanceLoaded
     summary: |
-      Fires when the full appearance of a `Class.Player.Character` has been
+      Fires when the full appearance of a `Class.Player.Character|Character` has been
       inserted.
     description: |
-      This event fires when the full appearance of a `Class.Player.Character`
-      has been inserted.
+      This event fires when the full appearance of a
+      `Class.Player.Character|Character` has been inserted. It only fires on the
+      server.
 
-      A `Class.Player.Character` generally has a range of objects modifying its
-      appearance, including `Class.Accoutrement|Accoutrements`,
+      A `Class.Player.Character|Character` generally has a range of objects
+      modifying its appearance, including `Class.Accoutrement|Accoutrements`,
       `Class.Shirt|Shirts`, `Class.Pants` and
       `Class.CharacterMesh|CharacterMeshes`. This event will fire when all such
-      objects have been inserted into the `Class.Player.Character`.
-
-      This event only fires on the server.
-
-      For custom character implementations, such as using a character model
-      named `StarterCharacter` inside `Class.StarterPlayer`, use
-      `Class.Player.CharacterAdded|CharacterAdded` and handle your own
-      accessories.
+      objects have been inserted into the character.
+      
+      For custom character implementations, such as using a character model named `StarterCharacter`
+      inside `Class.StarterPlayer`, use `Class.Player.CharacterAdded|CharacterAdded` and handle your
+      own accessories.
 
       One use for this event is to ensure all accessories have loaded before
       destroying them. See below for an example of this.
@@ -2720,44 +2547,19 @@ events:
     writeCapabilities: []
   - name: Player.CharacterRemoving
     summary: |
-      Fired right before a player's character is removed.
+      Fires right before a player's character is removed.
     description: |
-      The CharacterRemoving event fires right before a player's character is
-      removed, such as when the player is respawning.
+      This event fires right before a player's
+      `Class.Player.Character|Character` is removed, such as when the player is
+      respawning. This can be used alongside the
+      `Class.Player.CharacterAdded|CharacterAdded` event which fires when a
+      player's character spawns or respawns.
 
-      This event can be used alongside the `Class.Player.CharacterAdded` event,
-      which fires when a player's character spawns or respawns. For instance, if
-      you would like to print a message every time a player spawns and dies:
-
-      ```lua
-      local Players = game:GetService("Players")
-
-      local function onCharacterSpawned(player)
-      	print(player.Name .. " is spawning")
-      end
-
-      local function onCharacterDespawned(player)
-      	print(player.Name .. " is despawning")
-      end
-
-      local function onPlayerAdded(player)
-      	player.CharacterAdded:Connect(function()
-      		onCharacterSpawned(player)
-      	end)
-      	player.CharacterRemoving:Connect(function()
-      		onCharacterDespawned(player)
-      	end)
-      end
-
-      Players.PlayerAdded:Connect(onPlayerAdded)
-      ```
-
-      This event is only concerned with the `Class.Player.Character|Character`
-      of a `Class.Player`. If you instead need to track when a player
-      joins/leaves the game, use the events `Class.Players.PlayerAdded` and
+      If you instead need to track when a player joins/leaves the experience,
+      use the events `Class.Players.PlayerAdded` and
       `Class.Players.PlayerRemoving`.
     code_samples:
-      - Player-CharacterRemoving1
+      - spawns-and-despawns
     parameters:
       - name: character
         type: Model
@@ -2772,39 +2574,14 @@ events:
     writeCapabilities: []
   - name: Player.Chatted
     summary: |
-      Fires when a player chats in-game using Roblox's provided chat bar.
+      Fires when a player chats in experience using Roblox's provided chat bar.
     description: |
-      The Chatted event fires when a `Class.Player` types a message and presses
-      enter in Roblox's provided chat bar. This is done using some Luau bindings
-      by the default chat script. You can prevent players from chatting by using
-      `Class.StarterGui:SetCoreGuiEnabled()` and disabling the Chat
-      `Enum.CoreGuiType`.
-
-      #### Chat Commands
-
-      Using this event and some string manipulation functions like
-      `Library.string.sub()` and `Library.string.lower()`, it is possible to
-      create chat commands, even with arguments like player names. Usually,
-      commands are prefixed such as `heal PlayerName`. To check for a prefix in
-      a string, use `Library.string.sub()` on the message to check a substring
-      of the message: `string.sub(message, 1, 6) == "/heal "` (note the
-      inclusion of the space). Then, extract the rest of the command using
-      `Library.string.sub()` again: `string.sub(message, 7)` will be equal to
-      the player name. Check if that player exists, and if so, perform the
-      command's action (in this example, healing them). Check the code samples
-      for examples of chat commands.
-
-      #### Filtering
-
-      The message text fired with this event is **unfiltered**. If you are
-      displaying player input like chat to other players in any form, it must be
-      filtered using `Class.Chat:FilterStringAsync()`. Keep this in mind when
-      creating your own chat systems; if your game does not properly filter chat
-      it may have moderation action taken against it.
-    code_samples:
-      - Player-Chatted1
-      - Playing-Spectating-Teams
-      - Join-Team-Command
+      This event fires when a `Class.Player` types a message and presses
+      <kbd>Enter</kbd> in Roblox's provided chat bar. This is done using some
+      Luau bindings by the default chat script. You can prevent players from
+      chatting by using `Class.StarterGui:SetCoreGuiEnabled()` and setting
+      `Enum.CoreGuiType.Chat` to `false`.
+    code_samples: []
     parameters:
       - name: message
         type: string
@@ -2826,14 +2603,14 @@ events:
     writeCapabilities: []
   - name: Player.Idled
     summary: |
-      This event fires approximately two minutes after the game engine
-      classifies the `Class.Player|player` as idle. Time is the number of
-      seconds that have elapsed since that point.
+      This event fires approximately two minutes after the engine classifies the
+      player as idle. Time is the number of seconds that have elapsed since that
+      point.
     description: |
-      This event fires approximately two minutes after the game engine
-      classifies the `Class.Player|player` as idle. Time is the number of
-      seconds that have elapsed since that point. The event continues to fire
-      every 30 seconds for as long as the player remains idle.
+      This event fires approximately two minutes after the engine classifies the
+      player as idle. Time is the number of seconds that have elapsed since that
+      point. The event continues to fire every 30 seconds for as long as the
+      player remains idle.
 
       This event only fires in client scripts, not server scripts; use a
       `Class.RemoteEvent` to notify the server of idle players.
@@ -2845,8 +2622,7 @@ events:
 
       To track how often automatic disconnects occur, try correlating this event
       with occurrences of `Class.Players.PlayerRemoving`.
-    code_samples:
-      - Player-Idled1
+    code_samples: []
     parameters:
       - name: time
         type: double
@@ -2861,17 +2637,10 @@ events:
     writeCapabilities: []
   - name: Player.OnTeleport
     summary: |
-      Fired when the TeleportState of a player changes.
+      Fires when the teleport state of a player changes.
     description: |
-      Fired when the TeleportState of a player changes. This event is useful for
-      detecting whether a teleportation was successful.
-
-      #### What is the TeleportState?
-
-      When a teleportation request is made using `Class.TeleportService`, there
-      are a series of stages before the `Class.Player` is teleported. The
-      current stage is represented by the `Enum.TeleportState` value which is
-      given by OnTeleport. See below for a practical example of this.
+      This event fires when the `Enum.TeleportState` of a player changes. This
+      event is useful for detecting whether a teleportation was successful.
     code_samples:
       - Player-OnTeleport1
     parameters:

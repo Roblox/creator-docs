@@ -111,10 +111,6 @@ See [Model Streaming Controls](../workspace/streaming.md#model-streaming-control
 
 When you upload or import a `.gltf`, `.fbx` and `.obj` model file to the cloud using the [3D Importer](../art/accessories/creating-rigid/importing.md), Roblox represents it as a cloud-based asset with a unique corresponding ID. This cloud-based asset system allows you to store models through Roblox and reuse them across the platform in various contexts without maintaining local copies as part of each saved Studio experience.
 
-<Alert severity="info">
-There is a limit of 15,000 unique assetIds that can be referenced in a single model.
-</Alert>
-
 To upload a model you made in Studio:
 
 1. In the **Explorer** window, right-click your model. A contextual menu displays.
@@ -139,11 +135,7 @@ You can distribute models to the [Creator Store](../production/creator-store.md)
 - Restricted assets that you created, excluding audio and video.
 - Free assets from the Creator Store, including audio and video.
 
-Once you distribute a model, all newer versions include the same restrictions even if you later unlist it from the Creator Store.
-
-<Alert severity="info">
-If you want to distribute a model with a child audio or video asset that you created, you must distribute the audio or video asset on the Creator Store before making them a child of the model for the audio or video to be audible and visible at runtime.
-</Alert>
+If you want to distribute a model with a child audio or video asset that you created, you must distribute the audio or video asset on the Creator Store **_before_** making them a child of the model in order for the audio or video to be audible and visible at runtime.
 
 As with any asset, all models must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), the [DMCA Guidelines](../production/publishing/dmca-guidelines.md) regarding copyright and Creator Store [asset moderation](../production/creator-store.md#asset-moderation) rules. When creating models for the Creator Store:
 

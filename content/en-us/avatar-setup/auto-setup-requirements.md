@@ -3,18 +3,57 @@ title: Auto-setup model requirements
 description: The Avatar setup tool previews animations, clothing, accessories, and body constructs on avatar rigs, directly in Studio.
 ---
 
-Avatar auto-setup uses machine learning models and geometry-based solutions that handles the detection and implementation of rigging, skinning, caging, body partitioning and attachment point generation.
+<Alert severity = 'warning'>
+Auto-setup is currently in [active development](https://devforum.roblox.com/t/avatar-auto-setup-now-supports-clothing-and-accessories/3709128) with many improvements on the roadmap. Note that some inputs might work better than others and your results can vary over time as additional training and improvements are made.
+</Alert>
 
-Due to the automated nature of this process, some inputs work better than others and your results may vary over time as additional training and improvements are made to the tool.
+Avatar Setup's **auto-setup** feature is an automatic process to convert 3D models into avatar characters, accessories, or layered clothing. Auto-setup analyzes your model, checks for components, and converts it to the correct avatar item object for publishing on the Marketplace or for use in experiences.
 
-To prevent errors and achieve the best auto-setup results, make sure your asset is a [valid input](#valid-inputs) and the base mesh follows the [body model requirements](#body-model-requirements).
+<Alert severity = 'info'>
+If the selected model already contains all the required components for a Roblox avatar, the Avatar Setup tool skips auto-setup and immediately opens the selected model in the [test interface](./index.md#test-and-edit).
+</Alert>
 
-## Valid inputs
+To prevent errors and achieve the best auto-setup results, make sure your asset is a [supported input](#supported-asset-types) and the base mesh follow the appropriate auto-setup requirements for the intended asset type.
 
-The Avatar Setup tool automatically detects the input of the selected mesh and performs different actions depending on the detected input.
+## Supported asset types
 
-- If the selected model contains all the required components for a Roblox avatar, the Avatar Setup tool immediately opens the selected model in the [test interface](./index.md#test-and-edit).
-- If the selected model does not contain all the required components for a Roblox avatar, the Avatar Setup tool begins the auto-setup functionality depending on the input detected.
+Auto-setup supports the conversion of following asset types from a base `Class.Model`:
+
+<figure>
+<table><thead>
+  <tr>
+    <th>Asset type</th>
+    <th>Input object</th>
+    <th>Output object</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>Avatar body</td>
+    <td>`Class.Model` containing one or more `Class.MeshPart` objects that meets auto-setup's supported [body inputs](#body).</td>
+    <td>`Class.Model` parenting associated 15 `Class.MeshPart` objects and other expected [avatar components](../art/characters/index.md#components-of-an-avatar).</td>
+  </tr>
+  <tr>
+    <td>Accessory</td>
+    <td>`Class.Model` containing one or more `Class.MeshPart` objects that meet's auto-setup's supported [accessory inputs](#accessories-and-clothing). <br /> <br />Must [bundle](#bundle-multiple-assets) with an avatar body `Class.Model` for auto-setup.</td>
+    <td>`Class.Accessory` that includes all expected [rigid accessory components](../art/accessories/index.md#components-of-a-rigid-accessory).</td>
+  </tr>
+  <tr>
+    <td>Layered clothing</td>
+    <td>`Class.Model` containing one or more `Class.MeshPart` objects that meet's auto-setup's supported [accessory inputs](#accessories-and-clothing). <br /> <br />Must [bundle](#bundle-multiple-assets) with an avatar body `Class.Model` for auto-setup.</td>
+    <td>`Class.Accessory` that includes all expected [layered accessory components](../art/accessories/layered-clothing.md#components-of-a-layered-clothing-accessory).</td>
+  </tr>
+  <tr>
+    <td>Multiple accessories and clothing with single body</td>
+    <td>`Class.Folder` containing one or more `Class.Model` that meet supported inputs for accessories, clothing, or body. <br /> <br />Must [bundle](#bundle-multiple-assets) with an avatar body `Class.Model` for auto-setup.</td>
+    <td>`Class.Model` character body and any `Class.Accessory` equipable items. <br /> <br />All generated assets include expected avatar item components.</td>
+  </tr>
+</tbody>
+</table>
+</figure>
+
+### Body
+
+At this time, every auto-setup submission must include a base body. If converting accessories or clothing, you must [bundle](#bundle-multiple-assets) them with a base body for fitting.
 
 Auto-setup detects the following partial avatar body inputs:
 
@@ -42,12 +81,14 @@ Auto-setup detects the following partial avatar body inputs:
   </tr>
 </tbody></table>
 
-## Body model requirements
+#### Mesh requirements
 
-For best results, auto-setup expects the input body model to follow a specific set of requirements. If you are using a pre-made custom asset, these requirements may require using a third-party modeling tool to adjust your character model. These requirements are different from the traditional [avatar character requirements](../art/characters/specifications.md). As the auto-setup tool improves, some of these requirements may lift.
+To achieve the best results when converting a model to a Roblox-ready avatar character, it's important to configure your base model so the tool can properly generate avatar components with.
+
+Note that Roblox is actively adding improvements to this tool and these requirements may lift in the future.
 
 <Alert severity = 'error'>
-Many existing [downloadable resources](../avatar/resources.md) for avatar bodies do not follow the auto-setup requirements below. Existing avatar references may need modification to ensure the asset follows the auto-setup models. See the specific [auto-setup references](../avatar/resources.md#auto-setup-references) for assets that were created for auto-setup requirements.
+Many existing [downloadable resources](../avatar/resources.md) for avatar bodies do not follow the auto-setup requirements below. Existing avatar references may need modification to ensure the asset follows the auto-setup models. <br /> <br />See the specific [auto-setup references](../avatar/resources.md#auto-setup-references) for assets that were created for auto-setup requirements.
 </Alert>
 
 The full requirements for the input body model are as follows:
@@ -133,25 +174,32 @@ The full requirements for the input body model are as follows:
 12. **Includes texture** — Models should include one or more texture maps. If the input body includes multiple textures, the tool bakes the textures to a single map. This applies to [PBR textures](../art/modeling/surface-appearance.md) where the four textures are baked — one for each albedo, normal, metalness and roughness.
 13. **Follows Marketplace and Community Policy** — The model must conform to Roblox's [Marketplace Policy](../marketplace/marketplace-policy.md) and [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
 
-### Optional rig requirements
+#### Rig requirements (Optional)
 
-You can use your own custom body and face rig for your character model input. If auto-setup detects a [Roblox supported R15 rig](../art/characters/specifications.md#rigging), the original rigging data is preserved when generating avatar components.
+You can use your own custom body and face rig for your character model input instead of allowing auto-setup to generate a new one.
 
-If your body mesh includes custom facial animation data, adhere to the following:
+To ensure that auto-setup uses your **own custom body rig**:
 
-1. A supported R15 body rig is required when submitting custom facial rigs and facial animation data.
-   1. This [specific input type](#valid-inputs) requires a single mesh body and does not support a multiple mesh body.
-2. Facial rig must include a `RootFaceJoint` bone (usually [mapped](../art/characters/facial-animation/create-basic-heads.md#map) as `DynamicHead`) whose parent is the `Head` joint of the R15 rig.
-3. All the other facial animation joints are descendants of the `RootFaceJoint`, and not direct children of the `Head` joint.
-4. Animations need to be provided for the [17 required poses](../art/characters/specifications.md#facial-animations), at minimum.
-5. Neutral animation must map to frame `0`.
-6. Since the head is part of the single mesh with the body, the facial animation mappings must be included with the single body mesh:
-   1. The mapping between animation frames and facial poses are stored in the extra attributes / custom properties of the provided single mesh.
-   2. The name of the root face joint is stored in the extra attributes / custom properties of the single mesh, mapping `RootFaceJoint` to the corresponding name (usually `DynamicHead`).
+- Ensure that your bones (Blender) or joints (Maya) meet [Roblox's avatar rigging requirements](../art/characters/specifications.md#rigging).
+  - Double-check naming conventions and hierarchy.
+- Body rigs should not include additional bones beyond the standard 15, and facial rigs (no bone limit) should be correctly parented to a RootFaceJoint.
 
-### Examples of non-supported models
+To ensure that auto-setup uses your **own custom face rig and FACs data**:
 
-The following are common examples of models that may not yield expected results with auto-setup:
+- A supported R15 body rig is required when submitting custom facial rigs and facial animation data.
+  - Review [supported body inputs](#body) to ensure you are submitting a supported body input and facial rig combination.
+- Facial rig must include a `RootFaceJoint` bone (usually [mapped](../art/characters/facial-animation/create-basic-heads.md#map) as `DynamicHead`) whose parent is the `Head` joint of the R15 rig.
+- All the other facial animation joints are descendants of the `RootFaceJoint`, and not direct children of the `Head` joint.
+- Animations need to be provided for the [17 required poses](../art/characters/specifications.md#facial-animations), at minimum.
+- Neutral animation must map to frame `0`.
+- Since the head is part of the single mesh with the body, the facial animation mappings must be included with the single body mesh:
+
+  - The mapping between animation frames and facial poses are stored in the extra attributes / custom properties of the provided single mesh.
+  - The name of the root face joint is stored in the extra attributes / custom properties of the single mesh, mapping `RootFaceJoint` to the corresponding name (usually `DynamicHead`).
+
+#### Examples of non-supported bodies
+
+The following are common examples of bodies that may not yield expected results with auto-setup:
 
 <BaseAccordion>
 <AccordionSummary>
@@ -196,7 +244,62 @@ The following are common examples of models that may not yield expected results 
 </AccordionDetails>
 </BaseAccordion>
 
-## Reference Models
+### Accessories
+
+<Alert severity = 'warning'>
+At this time, you must [bundle](#bundle-multiple-assets) your accessory and clothing models with a base body to utilize auto-setup.
+</Alert>
+
+Auto-setup can convert models into rigid accessories, configuring the scale type and attachment components required for rigid accessories.
+
+To convert a mesh model into an accessory using auto-setup:
+
+1. Fit the model onto a base body in Studio or your 3D modeling software.
+2. [Bundle](#bundle-multiple-assets) the assets together in a single `Class.Folder`.
+3. Use Avatar Setup to use auto-setup on your assets.
+
+During this process, you will be able to designate individual meshes or models as rigid accessories, layered accessories, or body parts. After conversion, a prompt displays allowing you to select the specific **Asset Type**.
+
+For best results, ensure your models adhere to Roblox's [accessory geometry specifications](../art/accessories/specifications.md#geometry-and-budgets).
+
+### Layered clothing
+
+<Alert severity = 'warning'>
+At this time, you must [bundle](#bundle) your accessory and clothing models with a base body to utilize auto-setup.
+</Alert>
+
+Auto-setup can convert models into clothing accessories, adding in rigging and caging data that normally requires manual configuration.
+
+To convert a mesh model into an accessory using auto-setup:
+
+1. Fit the model onto a base body in Studio or your 3D modeling software.
+2. [Bundle](#bundle-multiple-assets) the assets together in a single `Class.Folder`.
+3. Use Avatar Setup to use auto-setup on your assets.
+
+During this process, you will be able to designate individual meshes or models as rigid accessories, layered accessories, or body parts. After conversion, a prompt displays allowing you to select the specific **Asset Type**.
+
+For best results, ensure your models adhere to Roblox's [layered clothing geometry specifications](../art/accessories/clothing-specifications.md#geometry-and-budgets).
+
+## Bundle multiple assets
+
+Auto-setup can process multiple accessory or clothing models with a single body model. To submit multiple models in the Avatar Setup tool, parent your models within a single folder.
+
+<figure>
+<center><img src="../assets/avatar/avatar-setup/Folder-Hierarchy.png"/></center>
+<center><figcaption>A `Folder` containing the various `Model` objects ready to be processed by auto-setup into body, accessory, and clothing assets.</figcaption></center>
+</figure>
+
+To quickly parent your objects to folder:
+
+1. In the Explorer, hold <kbd>Shift</kbd> and select the `Class.Model` objects you intend to process with auto-setup. Ensure you are selecting a [supported base body](#body) as one of the `Class.Model` objects.
+2. Right-click and select **Group as Folder**.
+3. Select the `Class.Folder` and then select the Avatar Setup tool to begin processing.
+
+<Alert severity = 'warning'>
+At this time, you must bundle your accessory and clothing models with a base body to utilize auto-setup.
+</Alert>
+
+## Reference models
 
 Studio supports `.gltf`, `.fbx`, and `.obj` models using the 3D Importer. If you are exporting your model from a third-party tool, see [Export Settings](../art/characters/export-settings.md) for export configurations.
 
