@@ -24,7 +24,7 @@ Create immersive 3D experiences on Roblox with **Roblox Studio**, a free applica
 <tr>
 <td>**Memory (RAM)**</td>
 <td>3 GB</td>
-<td>8 GB</td>
+<td>20 GB</td>
 </tr>
 <tr>
 <td>**Resolution**</td>
