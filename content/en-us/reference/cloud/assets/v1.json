@@ -116,8 +116,8 @@
         "x-roblox-cloud-api-operation": true,
         "x-roblox-cloud-api-operation-name": "Get Asset",
         "x-roblox-stability": "BETA",
-        "summary": "Retrieve specific asset content. Include the `readMask` parameter for additional asset metadata.",
-        "description": "Retrieve specific asset content and metadata.",
+        "summary": "Retrieve specific asset metadata. Include the `readMask` parameter for additional asset metadata.",
+        "description": "Retrieve specific asset metadata.",
         "operationId": "Assets_GetAsset",
         "parameters": [
           {
