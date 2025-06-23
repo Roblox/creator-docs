@@ -21,17 +21,19 @@ To use Extended Services, your Roblox account must:
 
 ## Unlock Extended Services
 
-If you meet all of the [eligibility requirements](#eligibility-requirements), you can finish setting up Extended Services by entering your account details and payment information.
+If you meet all of the [eligibility requirements](#eligibility-requirements), you can finish setting up Extended Services by entering your account details and payment information. For group-owned experiences, only the group owner can unlock Extended Services and onboard the experience onto it.
 
 To unlock and use Extended Services:
 
 1. In the Creator Dashboard, go to Creations and select an experience.
 2. Go to **Extended Services**.
 3. If you haven't entered your account details and payment information yet, click **Add missing information** on the top banner.
-    1. Enter your account information. The **Account type**, **Tax ID type**, and **Tax ID** fields are optional. You can also go to **Finances** > **Account Information** > **Extended Services** to manage your account information.
-    2. Click **Next**.
-    3. Enter a payment method. You can enter a new payment method or select from the available payment options already associated with your Roblox account.
-    4. Click **Save**.
+    1. Enter your account information. The **Account type**, **Tax ID type**, and **Tax ID** fields are optional.
+        - You can also go to **Finances** > **Account Information** under the **Extended Services** section to manage your account information. You don't need to update anything else on this page.
+    3. Click **Next**.
+    4. Enter a payment method. You can enter a new payment method or select from the available payment options already associated with your Roblox account.
+        - You can also go to **Finances** > **Payments** to add new payment methods, or go to **Finances** > **Billing** to set a new default payment method.
+    5. Click **Save**.
 
 <h5>Account status</h5>
 
@@ -51,7 +53,7 @@ Your Extended Services account can be in one of the following statuses:
   </tr>
   <tr>
     <td>**Overdue**</td>
-    <td>Your account is overdue because your automatic payment method failed. Roblox offers a grace period of **one day** before suspending your Extended Services account.</td>
+    <td>Your account is overdue because your automatic payment method failed. Roblox offers a grace period of **seven days** before suspending your Extended Services account.</td>
     <td>Change your payment method and retry a manual payment, or wait until Roblox attempts to charge your payment method again after the grace period has ended.</td>
   </tr>
   <tr>
@@ -72,9 +74,9 @@ To enable a service:
 
 1. Go to **Extended Services**.
 2. Toggle on the service you want to enable.
-3. Enter a monthly budget for each applicable resource under the service. The minimum monthly budget you can set is $1 USD.
+3. Enter a monthly budget for each applicable resource under the service. The minimum monthly budget you can set is $0.50 USD.
 
-Your payment method is charged either at the end of the month when a bill is generated, or when your usage reaches $5 USD, whichever comes first.
+Your payment method is charged either at the end of the month when a bill is generated, or when your usage reaches $10 USD, whichever comes first.
 
 You can increase or decrease a service's monthly budget any time. Your service is automatically throttled if you decrease your budget to an amount below your current month-to-date usage, or if you exceed the budget you have set.
 
