@@ -26,22 +26,6 @@ methods:
       with their respective parents. Iterating over this table lets you decide
       whether to reparent recommended constraints and attachments to their
       respective parents.
-
-      Note that the `options` dictionary can contain the following:
-
-      - `tolerance` — The distance tolerance, in regards to `Class.Attachment`
-        preservation, between the attachment and the closest point on the
-        original part's surface versus the closest point on the resulting part's
-        surface. If the resulting distance following the solid modeling
-        operation is greater than this value, the `Class.Instance.Parent|Parent`
-        of attachments and their associated constraints will be `nil` in the
-        returned recommendation table.
-      - `weldConstraintPreserve` — A `Enum.WeldConstraintPreserve` enum value
-        describing how `Class.WeldConstraint|WeldConstraints` are preserved in
-        the resulting recommendation table.
-      - `dropAttachmentsWithoutConstraints` — Boolean with default of `true`. If
-        set to `false`, `Class.Attachment|Attachments` that have no
-        `Class.Constraint|Constraints` will be preserved.
     code_samples:
       - GeometryService-CalculateConstraintsToPreserve
     parameters:
@@ -233,7 +217,7 @@ methods:
         - When the `SplitApart` option is set to `true` (default), each distinct
           body will be returned in its own `Class.PartOperation`.
         - Each of the returned parts are in the coordinate space of the main
-          part. This means that the (0,&nbsp;0,&nbsp;0) of any returned part is
+          part. This means that the `(0, 0, 0)` of any returned part is
           not necessarily at the center of its body.
         - It's possible to call this method on the client, but with some
           limitations. First, it currently must be done with objects **created**
@@ -366,7 +350,7 @@ methods:
         - When the `SplitApart` option is set to `true` (default), each distinct
           body will be returned in its own `Class.PartOperation`.
         - Each of the returned parts are in the coordinate space of the main
-          part. This means that the (0,&nbsp;0,&nbsp;0) of any returned part is
+          part. This means that the `(0, 0, 0)` of any returned part is
           not necessarily at the center of its body.
         - It's possible to call this method on the client, but with some
           limitations. First, it currently must be done with objects **created**
@@ -499,7 +483,7 @@ methods:
         - When the `SplitApart` option is set to `true` (default), each distinct
           body will be returned in its own `Class.PartOperation`.
         - Each of the returned parts are in the coordinate space of the main
-          part. This means that the (0,&nbsp;0,&nbsp;0) of any returned part is
+          part. This means that the `(0, 0, 0)` of any returned part is
           not necessarily at the center of its body.
         - It's possible to call this method on the client, but with some
           limitations. First, it currently must be done with objects **created**
