@@ -534,6 +534,8 @@ navigation:
             path: /cloud-services/memory-stores/best-practices
       - title: Secrets stores
         path: /cloud-services/secrets
+      - title: Extended Services
+        path: /cloud-services/extended-services
       - title: Cross-server communication
         path: /cloud-services/cross-server-messaging
   - title: Roblox for Unity developers
