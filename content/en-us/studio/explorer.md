@@ -9,19 +9,17 @@ The **Explorer** window shows a hierarchical list of every instance inside an ex
 
 ## Parent-child hierarchy
 
-All children of a parent object appear under its branch when expanded. Click the arrow next to a parent branch (or press <kbd>&rarr;</kbd>/<kbd>&larr;</kbd> when a parent is selected) to expand/collapse only that branch.
+All children of a parent object appear under its branch when expanded. Click the arrow next to a parent branch&nbsp;— or press the <kbd>&rarr;</kbd>/<kbd>&larr;</kbd> arrow keys when a parent is selected&nbsp;— to expand/collapse only that branch.
 
 <Grid container spacing={3}>
 <Grid item>
 <figure>
 <img src="../assets/studio/explorer/Parent-Child-Hierarchy.png" width="320" alt="Explorer hierarchy showing Camera, Terrain, and SignModel as children of Workspace; Board and Post as children of SignModel" />
-<figcaption>Hierarchy of nested objects</figcaption>
 </figure>
 </Grid>
 <Grid item>
 <figure>
 <img src="../assets/studio/explorer/Branch-Expanded.png" width="320" alt="Only the topmost parent expanded with click" />
-<figcaption>Arrow or <kbd>&rarr;</kbd>/<kbd>&larr;</kbd> expands/collapses a branch</figcaption>
 </figure>
 </Grid>
 </Grid>
@@ -105,6 +103,23 @@ Objects can be quickly duplicated into the same branch, while items copied to th
 <Alert severity="info">
 When pasting 3D objects copied to the clipboard, you can maintain their original `Datatype.CFrame` position by right‑clicking the target parent instance in the hierarchy and selecting **Paste&nbsp;Options**&nbsp;&rang; **Paste&nbsp;Into&nbsp;At&nbsp;Original&nbsp;Location**.
 </Alert>
+
+## Contextual options
+
+Right-clicking on an instance opens the options menu, contextually adjusted for the object type. For example, right‑clicking a `Class.Model` reveals standard options like **Copy** and **Duplicate**, and also options specific to `Class.Model|Models` like **Ungroup**. In contrast, right‑clicking a service like `Class.Lighting` reveals a more concise menu of actions valid for services.
+
+<Grid container spacing={3}>
+<Grid item>
+<figure>
+<img src="../assets/studio/explorer/Context-Menu-Model.png" width="320" />
+</figure>
+</Grid>
+<Grid item>
+<figure>
+<img src="../assets/studio/explorer/Context-Menu-Service.png" width="320" />
+</figure>
+</Grid>
+</Grid>
 
 ## Folder organization
 
@@ -350,23 +365,45 @@ Within a [searched](#search-methods) hierarchy, certain key shortcuts and mouse 
 
 ### Select all
 
-Within a non‑searched hierarchy, pressing <kbd>Ctrl</kbd><kbd>A</kbd> on Windows or <kbd>⌘</kbd><kbd>A</kbd> on macOS selects all instances. Within a [searched](#search-methods) hierarchy, the same shortcut or the **select&nbsp;all** button selects only the query‑matching objects.
+Within a non‑searched hierarchy, pressing <kbd>Ctrl</kbd><kbd>A</kbd> on Windows or <kbd>⌘</kbd><kbd>A</kbd> on macOS selects all instances. Within a [searched](#search-methods) hierarchy, the same shortcut or the **select&nbsp;all** button selects only the query‑matching objects, for example all objects matching **Board** in a hierarchy searched for `board`.
 
-<figure>
 <img src="../assets/studio/explorer/Select-All-Searched.png" width="320" alt="Image showing how only matching objects are selected in a searched hierarchy using the Select All shortcut" />
-</figure>
 
 ### Shift-select
 
-Within a non-searched hierarchy, clicking an object and <kbd>Shift</kbd>-clicking another object selects every parent in the range. Within a [searched](#search-methods) hierarchy, if both the initially‑clicked object **and** the <kbd>Shift</kbd>‑clicked object match the query, only query‑matching objects between are selected.
+Clicking an object and <kbd>Shift</kbd>-clicking another object behaves differently within a non‑searched hierarchy versus a [searched](#search-methods) hierarchy.
 
+<Tabs>
+<TabItem label="Non-Searched Hierarchy">
+Within a non-searched hierarchy, <kbd>Shift</kbd>-clicking two objects at the same hierarchy level selects both of them and every object between which is also at the same hierarchy level, as shown in image **🅰** where **LeftFoot** is initially clicked, **LeftLowerArm** is <kbd>Shift</kbd>‑clicked, and **LeftHand** at same hierarchy level is also selected. Duplicating, copying, or pasting the selected objects will result in a deep copy of those objects **and** all children.
+
+If the first <kbd>Shift</kbd>-clicked object and the second <kbd>Shift</kbd>-clicked object are at **different** hierarchy levels, all objects in between them will be selected, as shown in image **🅱** where **LeftFoot** is initially clicked, **LeftHand** is <kbd>Shift</kbd>‑clicked, and everything between is also selected.
+
+<Grid container spacing={3}>
+<Grid item>
 <figure>
-<img src="../assets/studio/explorer/Shift-Click-Searched.png" width="320" alt="Image showing how only matching objects in range are selected within a searched hierarchy" />
+<img src="../assets/studio/explorer/Shift-Click-Non-Searched-A.png" width="320" />
+<figcaption><kbd>Shift</kbd>-click at same hierarchy level</figcaption>
 </figure>
+</Grid>
+<Grid item>
+<figure>
+<img src="../assets/studio/explorer/Shift-Click-Non-Searched-B.png" width="320" />
+<figcaption><kbd>Shift</kbd>-click at different hierarchy level</figcaption>
+</figure>
+</Grid>
+</Grid>
+</TabItem>
+<TabItem label="Searched Hierarchy">
+Within a searched hierarchy, if both the initially‑clicked object and the <kbd>Shift</kbd>‑clicked object match the query, only query‑matching objects between are selected. For example, in the following image with a hierarchy searched for `anim`, **FallAnim** is initially clicked, **RunAnim** is <kbd>Shift</kbd>‑clicked, and every object matching `anim` between is also selected.
+
+<img src="../assets/studio/explorer/Shift-Click-Searched.png" width="320" alt="Image showing how only matching objects in range are selected within a searched hierarchy" />
+</TabItem>
+</Tabs>
 
 ### Drag select
 
-Clicking and dragging from the right side of the window initiates a selection box. Within a non‑searched hierarchy, everything inside the box is selected. Within a [searched](#search-methods) hierarchy, only query‑matching objects inside the box are selected.
+Clicking and dragging from an empty region of the window initiates a selection box. Within a non‑searched hierarchy, everything inside the box is selected. Within a [searched](#search-methods) hierarchy, only query‑matching objects inside the box are selected.
 
 <figure>
 <img src="../assets/studio/explorer/Drag-Select-Searched.png" width="320" alt="Image showing how only matching objects inside the selection box are selected within a searched hierarchy" />
