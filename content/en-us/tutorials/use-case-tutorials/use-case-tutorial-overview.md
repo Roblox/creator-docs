@@ -670,7 +670,7 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  </div>
    <Typography variant='body1' >Save data</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="../../tutorials/use-case-tutorials/scripting/intermediate-scripting/save-data.md">
+       <a underline="none" href="../../tutorials/use-case-tutorials/data-storage/save-player-data.md">
        <Button variant="contained" color="secondary" size='large'
        style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
