@@ -388,7 +388,7 @@ methods:
           The weight the animation is to be changed to.
       - name: fadeTime
         type: float
-        default: 0.1
+        default: 0.100000001
         summary: |
           The duration of time that the animation will fade between the old
           weight and the new weight for.
