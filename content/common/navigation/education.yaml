@@ -69,6 +69,8 @@ navigation:
             path: /education/lesson-plans/digital-citizenship/intro-to-roblox
           - title: Be a digital citizen
             path: /education/lesson-plans/digital-citizenship/being-a-digital-citizen
+          - title: Develop civil and safe games
+            path: /education/lesson-plans/digital-citizenship/civil-and-safe-game
           - title: Lights and polish
             path: /education/lesson-plans/digital-citizenship/lights-and-polish
           - title: Coding fundamentals

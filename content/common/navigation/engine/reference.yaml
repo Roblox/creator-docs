@@ -1710,6 +1710,11 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/MessagingService.yaml
                 ignoreTranslation: true
+              - title: MicroProfilerService
+                path: /reference/engine/classes/MicroProfilerService
+                type: engineapi
+                source: /reference/engine/classes/MicroProfilerService.yaml
+                ignoreTranslation: true
               - title: ModerationService
                 path: /reference/engine/classes/ModerationService
                 type: engineapi
@@ -2522,6 +2527,11 @@ navigation:
                 path: /reference/engine/classes/ServiceVisibilityService
                 type: engineapi
                 source: /reference/engine/classes/ServiceVisibilityService.yaml
+                ignoreTranslation: true
+              - title: SessionCheckService
+                path: /reference/engine/classes/SessionCheckService
+                type: engineapi
+                source: /reference/engine/classes/SessionCheckService.yaml
                 ignoreTranslation: true
               - title: SharedTableRegistry
                 path: /reference/engine/classes/SharedTableRegistry
