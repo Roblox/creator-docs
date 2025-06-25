@@ -49,7 +49,7 @@ After you update your experience, visit analytics to understand how the update i
 3. [Monetization](../../production/analytics/monetization.md): Payer conversion, ARPPU, and revenue.
 4. [Acquisition](../../production/analytics/acquisition.md): New users and qualified play through rate.
 
-You can monitor major weekly changes and benchmark movement on your experience overview page. [Insights](#analytics-insights) highlights large movements in key metrics such as DAU, new users, and revenue.
+You can monitor major weekly changes and benchmark movement on your experience overview page. [Insights](./insights.md) highlights large movements in key metrics such as DAU, new users, and revenue.
 
 <figure>
     <img src="../../assets/analytics/overview/step3.png" width="80%"/>
@@ -98,7 +98,7 @@ Watchlists are applied on the account level, are private, and persist when toggl
     <figcaption>Experience watchlist on Analytics Home.</figcaption>
 </figure>
 
-Clicking on an experience you're monitoring takes you to the experience overview page. If applicable, [analytics insights](#analytics-insights) offer direction on next steps and redirect you to applicable documentation and relevant analytics.
+Clicking on an experience you're monitoring takes you to the experience overview page. If applicable, [analytics insights](./insights.md) offer direction on next steps and redirect you to applicable documentation and relevant analytics.
 
 ### Track avatar sales and revenue
 

@@ -57,6 +57,7 @@ local success, errorMessage = pcall(request)
 if not success then
 	print("The HTTP request failed to send:", errorMessage)
 end
+```
 
 ### Supported Open Cloud endpoints
 

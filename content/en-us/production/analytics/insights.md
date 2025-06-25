@@ -39,7 +39,7 @@ To access the insights reports:
 2. In the experience's **Overview** page, click **See full report**.
 
 <figure>
-    <img src="../assets/analytics/overview/AnalyticsInsights.png" width="80%"/>
+    <img src="../../assets/analytics/overview/AnalyticsInsights.png" width="80%"/>
     <figcaption>Click *See full report* to see your weekly and monthly reports</figcaption>
 </figure>
 
@@ -52,7 +52,7 @@ The report focuses on the following key metrics:
 You can also review personalized charts and recommendations in the generated report.
 
 <figure>
-    <img src="../assets/analytics/overview/AnalyticsAssistantReport.png" width="100%"/>
+    <img src="../../assets/analytics/overview/AnalyticsAssistantReport.png" width="100%"/>
     <figcaption>Click each section to see relevant charts</figcaption>
 </figure>
 
@@ -64,15 +64,15 @@ You can also review personalized charts and recommendations in the generated rep
 
 To get more specific insights about player feedback, including what users like about your experience, suggestions for improvements, and feature requests, click **See feedback report** in the analytics report.
 
-You can also access the player feedback report by clicking **See full report** on the AI summary insight in the [Feedback dashboard](../production/analytics/feedback.md).
+You can also access the player feedback report by clicking **See full report** on the AI summary insight in the [Feedback dashboard](./feedback.md).
 
 <figure>
-    <img src="../assets/analytics/feedback/AnalyticsFeedbackAssistant.png" width="100%"/>
+    <img src="../../assets/analytics/feedback/AnalyticsFeedbackAssistant.png" width="100%"/>
     <figcaption>Click *See full report* to see your player feedback report</figcaption>
 </figure>
 
 <figure>
-    <img src="../assets/analytics/feedback/AnalyticsAssistantFeedbackReport.png" width="100%"/>
+    <img src="../../assets/analytics/feedback/AnalyticsAssistantFeedbackReport.png" width="100%"/>
 </figure>
 
 <Alert severity="warning">

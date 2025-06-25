@@ -1710,10 +1710,10 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/MessagingService.yaml
                 ignoreTranslation: true
-              - title: Moderation
-                path: /reference/engine/classes/Moderation
+              - title: ModerationService
+                path: /reference/engine/classes/ModerationService
                 type: engineapi
-                source: /reference/engine/classes/Moderation.yaml
+                source: /reference/engine/classes/ModerationService.yaml
                 ignoreTranslation: true
               - title: Mouse
                 path: /reference/engine/classes/Mouse
