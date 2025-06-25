@@ -9,138 +9,22 @@ description: |
   `Class.HttpService:RequestAsync()|RequestAsync`,
   `Class.HttpService:GetAsync()|GetAsync` and
   `Class.HttpService:PostAsync()|PostAsync`. This service allows games to be
-  integrated with off-Roblox web services such as analytics, data storage,
-  remote server configuration, error reporting, advanced calculations or
-  real-time communication. Additionally, a few Roblox web APIs can also be
-  accessed via `HttpService` (see below).
+  integrated with third-party web services such as analytics, data storage,
+  remote server configuration, error reporting, advanced calculations, or
+  real-time communication. Additionally, it can call a subset of the Open Cloud
+  APIs.
+
+  For more information about these use cases, see [In-experience HTTP requests](../../../cloud-services/http-service.md).
 
   `HttpService` also houses the `Class.HttpService:JSONEncode()|JSONEncode` and
-  `Class.HttpService:JSONDecode()|JSONDecode` methods which are useful for
+  `Class.HttpService:JSONDecode()|JSONDecode` methods, which are useful for
   communicating with services that use the [JSON](https://json.org) format. In
   addition, the `Class.HttpService:GenerateGUID()|GenerateGUID` method provides
   random 128‑bit labels which can be treated as probabilistically unique in a
   variety of scenarios.
 
-  You should only send HTTP requests to trusted third-party platforms to avoid
-  making your experience vulnerable to security risks.
-
-  This property cannot be interacted with at runtime.
-
-  ##### Enable HTTP requests
-
-  Request-sending methods aren't enabled by default. To send requests, you must
-  [enable HTTP requests](#HttpEnabled) for your experience.
-
-  ##### Use in plugins
-
-  `HttpService` can be used by Studio plugins. They may do this to check for
-  updates, send usage data, download content, or other business logic. The first
-  time a plugin attempts to do this, the user may be prompted to give the plugin
-  permission to communicate with the particular web address. A user may accept,
-  deny, and revoke such permissions at any time through the **Plugin
-  Management** window.
-
-  Plugins may also communicate with other software running on the same computer
-  through the `localhost` and `127.0.0.1` hosts. By running programs compatible
-  with such plugins, you can extend the functionality of your plugin beyond the
-  normal capabilities of Studio, such as interacting with your computer's file
-  system. Beware that such software must be distributed separately from the
-  plugin itself and can pose security hazards if you aren't careful.
-
-  ##### Calling Roblox domains
-
-  `HttpService` can currently only call a subset of the Open Cloud endpoints. We
-  plan to extend this set over time so please use the Feedback button if you
-  have specific endpoints you'd like to see:
-
-  ###### Groups
-
-  - [GetGroup](/cloud/reference/Group#Cloud_GetGroup)
-  - [ListGroupJoinRequests](/cloud/reference/GroupJoinRequest#Cloud_ListGroupJoinRequests)
-  - [AcceptGroupJoinRequest](/cloud/reference/GroupJoinRequest#Cloud_AcceptGroupJoinRequest)
-  - [DeclineGroupJoinRequest](/cloud/reference/GroupJoinRequest#Cloud_DeclineGroupJoinRequest)
-  - [ListGroupMemberships](/cloud/reference/GroupMembership#Cloud_ListGroupMemberships)
-  - [UpdateGroupMembership](/cloud/reference/GroupMembership#Cloud_UpdateGroupMembership)
-  - [ListGroupRoles](/cloud/reference/GroupRole#Cloud_ListGroupRoles)
-  - [GetGroupRole](/cloud/reference/GroupRole#Cloud_GetGroupRole)
-  - [GetGroupShout](/cloud/reference/GroupShout#Cloud_GetGroupShout)
-
-  ###### Data Stores
-
-  Due to current restrictions on `HttpService`, only alphanumeric characters and
-  the `-` character are allowed in URL path parameters to Roblox domains. This
-  means Data Stores/entries with other special characters are currently
-  inaccessible from `HttpService`.
-
-  - [ListDataStores](/cloud/reference/DataStore#Cloud_ListDataStores)
-  - [ListDataStoreEntries](/cloud/reference/DataStoreEntry#Cloud_ListDataStoreEntries__Using_Universes)
-  - [CreateDataStoreEntry](/cloud/reference/DataStoreEntry#Cloud_CreateDataStoreEntry__Using_Universes)
-  - [GetDataStoreEntry](/cloud/reference/DataStoreEntry#Cloud_GetDataStoreEntry__Using_Universes_DataStores)
-  - [DeleteDataStoreEntry](/cloud/reference/DataStoreEntry#Cloud_DeleteDataStoreEntry__Using_Universes_DataStores)
-  - [UpdateDataStoreEntry](/cloud/reference/DataStoreEntry#Cloud_UpdateDataStoreEntry__Using_Universes_DataStores)
-  - [IncrementDataStoreEntry](/cloud/reference/DataStoreEntry#Cloud_IncrementDataStoreEntry__Using_Universes_DataStores)
-
-  ###### Inventory Items
-
-  - [ListInventoryItems](/cloud/reference/InventoryItem#Cloud_ListInventoryItems)
-
-  ###### Creator Store
-
-  - [CreatorStoreAssetsSearch](/cloud/features/creator-store#toolbox-service)
-
-  You can call these endpoints the same way that you'd call any other endpoint
-  via `HttpService`. The only difference is that you must include an Open Cloud
-  API key in the request:
-
-  1. [Create an Open Cloud API key](/cloud/auth/api-keys#create-api-keys).
-  2. [Save the API key to your secrets store](/cloud-services/secrets#add-secrets).
-  3. Make the request (code example below).
-
-  Limitations include the following:
-
-  - Only the `x-api-key` and `content-type` headers are allowed.
-  - The `x-api-key` header must be a `Datatype.Secret`.
-  - Only alphanumeric characters and the `-` character are allowed in URL path
-    parameters.
-  - Only the `https://` protocol is supported.
-
-  ##### Rate Limiting
-
-  For each Roblox game server, there is a limit of 500 HTTP requests per minute.
-  Exceeding this can cause request-sending methods to stall entirely for around
-  30 seconds. Your `Global.LuaGlobals.pcall()` may also fail with a message of
-  "Number of requests exceeded limit."
-
-  - Open Cloud requests consume the same overall limit of 500 HTTP requests per
-    minute enforced on all other requests.
-  - Each Open Cloud endpoint has its own limit per API key owner (can be a user
-    or a group) that is enforced no matter where the calls come from
-    (`HttpService`, the web, etc.). The following headers are returned with
-    every response and allow you to view the limits and your remaining quota:
-
-    - `x-ratelimit-limit` - The total number of requests allowed to be made per
-      API key owner (usually per minute).
-    - `x-ratelimit-remaining` - The number of requests the API key used is still
-      allowed to make. If this number is 0 and you receive a HTTP 429 response
-      status code, then you have reached the rate limit for this endpoint.
-    - `x-ratelimit-reset` - The number of seconds left before the rate limit
-      resets (i.e before `x-ratelimit-remaining` resets to `x-ratelimit-limit`).
-
-  ##### Additional considerations
-
-  - There are port restrictions. You cannot use port `1194` or any port below
-    `1024`, except `80` and `443`. If you try to use a blocked port, you will
-    receive either a `403 Forbidden` or `ERR_ACCESS_DENIED` error.
-  - Web requests can fail for many reasons, so it is important to "code
-    defensively" (use `Global.LuaGlobals.pcall()`) and have a plan for when
-    requests fail.
-  - Although the `http://` protocol is supported, you should use `https://`
-    wherever possible.
-  - Requests sent should provide a secure form of authentication, such as a
-    pre-shared secret key, so that bad actors cannot pose as one of your Roblox
-    game servers.
-  - Be aware of the general capacity and rate-limiting policies of the web
-    servers to which requests are being sent.
+  Only send HTTP requests to trusted third-party platforms to avoid introducing
+  unnecessary security risks to your experience.
 code_samples:
   - Astronauts-in-Space
   - International-Space-Station

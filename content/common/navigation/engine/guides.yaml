@@ -534,6 +534,8 @@ navigation:
             path: /cloud-services/memory-stores/best-practices
       - title: Secrets stores
         path: /cloud-services/secrets
+      - title: In-experience HTTP requests
+        path: /cloud-services/http-service
       - title: Extended Services
         path: /cloud-services/extended-services
       - title: Cross-server communication
