@@ -39,13 +39,15 @@ kickAnimation.AnimationId = "rbxassetid://2515090838"
 -- Load the animation onto the animator
 local kickAnimationTrack = animator:LoadAnimation(kickAnimation)
 
--- Play the animation track
-kickAnimationTrack:Play()
-
 -- If a named event was defined for the animation, connect it to "GetMarkerReachedSignal()"
 kickAnimationTrack:GetMarkerReachedSignal("KickEnd"):Connect(function(paramString)
 	print(paramString)
 end)
+
+task.wait(4)
+
+-- Play the animation track
+kickAnimationTrack:Play()
 ```
 
 ### Non-humanoids
@@ -69,13 +71,15 @@ animator.Parent = animationController
 -- Load the animation onto the animator
 local kickAnimationTrack = animator:LoadAnimation(kickAnimation)
 
--- Play the animation track
-kickAnimationTrack:Play()
-
 -- If a named event was defined for the animation, connect it to "GetMarkerReachedSignal()"
 kickAnimationTrack:GetMarkerReachedSignal("KickEnd"):Connect(function(paramString)
 	print(paramString)
 end)
+
+task.wait(4)
+
+-- Play the animation track
+kickAnimationTrack:Play()
 ```
 
 ## Replace default animations
