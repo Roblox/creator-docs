@@ -1,0 +1,88 @@
+name: UIContainerQuery
+type: class
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - UIComponent
+tags:
+  - NotReplicated
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: UIContainerQuery.Active
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
+  - name: UIContainerQuery.AspectRatioRange
+    summary: ''
+    description: ''
+    code_samples: []
+    type: NumberRange
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
+  - name: UIContainerQuery.MaxSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
+  - name: UIContainerQuery.MinSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
+methods: []
+events: []
+callbacks: []

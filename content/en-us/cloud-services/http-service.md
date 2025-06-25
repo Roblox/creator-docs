@@ -74,7 +74,7 @@ end
 
 #### Data stores
 
-Due to current limitations on `Class.HttpService`, only alphanumeric characters and the `-` character are allowed in URL path parameters to Roblox domains. This means data stores and entries with other special characters are currently
+Due to current limitations on `Class.HttpService`, the `..` string is not allowed in URL path parameters to Roblox domains. This means data stores and entries containing this string are currently
 inaccessible from `Class.HttpService`.
 
 - [ListDataStores](/cloud/reference/DataStore#Cloud_ListDataStores)
@@ -97,7 +97,7 @@ inaccessible from `Class.HttpService`.
 
 - Only the `x-api-key` and `content-type` headers are allowed.
 - The `x-api-key` header must be a `Datatype.Secret`. See [Secrets stores](./secrets.md).
-- Only alphanumeric characters and the `-` character are allowed in URL path parameters.
+- The `".."` string is not allowed in URL path parameters.
 - Only the HTTPS protocol is supported.
 - You cannot use port `1194` or any port below `1024`, except `80` and `443`. If you try to use a blocked port, you receive either a `403 Forbidden` or `ERR_ACCESS_DENIED` error.
 

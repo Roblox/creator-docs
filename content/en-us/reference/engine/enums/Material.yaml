@@ -211,7 +211,9 @@ items:
     deprecation_message: ''
   - name: Glass
     summary: |
-      Applies to `Class.BasePart` only. Note that refraction of light through this material is not supported on mobile devices due to computational limitations.
+      Applies to `Class.BasePart` only. Note that refraction of light through
+      this material is not supported on mobile devices due to computational
+      limitations.
     value: 1568
     tags: []
     deprecation_message: ''

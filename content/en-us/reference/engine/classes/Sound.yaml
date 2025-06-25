@@ -115,6 +115,24 @@ properties:
     capabilities:
       - LegacySound
     writeCapabilities: []
+  - name: Sound.IsMutedForCapture
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - LegacySound
+    writeCapabilities: []
   - name: Sound.IsPaused
     summary: |
       Read-only property which returns `true` when the `Class.Sound` is not

@@ -197,8 +197,8 @@ properties:
       `Class.StarterPlayer.LoadPlayerAppearance`.
 
       - If `true`, the character will load the appearance of the player
-      corresponding to the player's
-      `Class.Player.CharacterAppearanceId|CharacterAppearanceId`.
+        corresponding to the player's
+        `Class.Player.CharacterAppearanceId|CharacterAppearanceId`.
 
       - If `false`, the player will spawn with a default appearance.
 
@@ -435,7 +435,8 @@ properties:
     writeCapabilities: []
   - name: Player.DevComputerCameraMode
     summary: |
-      Determines player's camera movement mode when using a device with a mouse and keyboard.
+      Determines player's camera movement mode when using a device with a mouse
+      and keyboard.
     description: |
       This property determines the manner in which a player moves their camera
       when using a device with a mouse and keyboard. This property cannot be set
@@ -508,8 +509,8 @@ properties:
       When mouse lock is enabled, the player's cursor is locked to the center of
       the screen. Moving the mouse will orbit the camera around the player's
       `Class.Player.Character|Character`, and the character will face the same
-      direction as the `Class.Camera`. It also offsets the camera view
-      just over the right shoulder of the player's character.
+      direction as the `Class.Camera`. It also offsets the camera view just over
+      the right shoulder of the player's character.
     code_samples: []
     type: boolean
     tags: []
@@ -527,7 +528,8 @@ properties:
     writeCapabilities: []
   - name: Player.DevTouchCameraMode
     summary: |
-      Determines player's camera movement mode when using a touch-enabled device.
+      Determines player's camera movement mode when using a touch-enabled
+      device.
     description: |
       This property determines the manner in which a player moves their camera
       when using a `Class.UserInputService.TouchEnabled|TouchEnabled` device.
@@ -557,12 +559,13 @@ properties:
     writeCapabilities: []
   - name: Player.DevTouchMovementMode
     summary: |
-      Determines player's character movement mode when using a touch-enabled device.
+      Determines player's character movement mode when using a touch-enabled
+      device.
     description: |
       This property determines the manner in which a player moves their
       character when using a `Class.UserInputService.TouchEnabled|TouchEnabled`
-      device. This property cannot be set using a
-      `Class.LocalScript` (it must be set on the server using a `Class.Script`).
+      device. This property cannot be set using a `Class.LocalScript` (it must
+      be set on the server using a `Class.Script`).
 
       The default value of this property is determined by
       `Class.StarterPlayer.DevTouchMovementMode`.
@@ -598,16 +601,16 @@ properties:
       #### Usage Notes
 
       - Since display names are non-unique, it's possible for two players in a
-      single instance to have identical names. If you need a globally unique
-      identifier for a player, use `Class.Player.UserId|UserId` instead.
+        single instance to have identical names. If you need a globally unique
+        identifier for a player, use `Class.Player.UserId|UserId` instead.
 
       - Characters generated with `Class.Player:LoadCharacter()|LoadCharacter()`
-      or by the Roblox engine will have their `Class.Humanoid.DisplayName`
-      property assigned to the `Class.Player.DisplayName` property.
+        or by the Roblox engine will have their `Class.Humanoid.DisplayName`
+        property assigned to the `Class.Player.DisplayName` property.
 
       - Display names may have unicode characters in the string. See
-      `Library.utf8|UTF-8` for more information on how to work with strings with
-      unicode characters.
+        `Library.utf8|UTF-8` for more information on how to work with strings
+        with unicode characters.
     code_samples: []
     type: string
     tags: []
@@ -657,10 +660,9 @@ properties:
     summary: |
       Whether player client-side gameplay is currently paused.
     description: |
-      This property indicates if the player is currently in a
-      pause state in a place with
-      `Class.Workspace.StreamingEnabled|StreamingEnabled` activated. It is set
-      on the client but replicated to the server.
+      This property indicates if the player is currently in a pause state in a
+      place with `Class.Workspace.StreamingEnabled|StreamingEnabled` activated.
+      It is set on the client but replicated to the server.
 
       #### See Also
 
@@ -819,12 +821,12 @@ properties:
       This property determines whether the player is on a specific team.
 
       - When `true`, the player is not on a specific team. This also means that
-      the `Class.Player.Team|Team` property will be `nil` and the
-      `Class.Player.TeamColor|TeamColor` will be white.
+        the `Class.Player.Team|Team` property will be `nil` and the
+        `Class.Player.TeamColor|TeamColor` will be white.
 
       - When `false`, the player is on a specific team. The
-      `Class.Player.Team|Team` property will correspond to the `Class.Team` that
-      the player is on, as will the `Class.Player.TeamColor|TeamColor`.
+        `Class.Player.Team|Team` property will correspond to the `Class.Team`
+        that the player is on, as will the `Class.Player.TeamColor|TeamColor`.
     code_samples: []
     type: boolean
     tags: []
@@ -915,8 +917,8 @@ properties:
       - Descendant of `Class.Workspace`.
 
       - The `Class.SpawnLocation.TeamColor` property is set to the player's
-      `Class.Player.TeamColor|TeamColor` or the `Class.SpawnLocation.Neutral`
-      property is set to `true`.
+        `Class.Player.TeamColor|TeamColor` or the `Class.SpawnLocation.Neutral`
+        property is set to `true`.
 
       #### Alternatives
 
@@ -1382,10 +1384,10 @@ methods:
       Forcibly disconnect a player from the experience, optionally providing a
       message.
     description: |
-      This method allows an experience to gracefully
-      disconnect a client and optionally provide a message to the disconnected
-      user. This is useful for moderating abusive users. You should only allow
-      specific users whom you trust to trigger this method on other users.
+      This method allows an experience to gracefully disconnect a client and
+      optionally provide a message to the disconnected user. This is useful for
+      moderating abusive users. You should only allow specific users whom you
+      trust to trigger this method on other users.
 
       Calling this method on a `Class.Player` with no arguments disconnects the
       user from the server and provides a default notice message. Calling this
@@ -2285,13 +2287,15 @@ methods:
 
       Calling the `LoadCharacter()` method on any `Player` fires events in the
       following order:
-      
+
       1. The character appearance initializes.
       2. The character rig builds and scales.
       3. The character moves to the spawn location.
       4. `Class.Player.Character` sets.
-      5. `Class.Object.Changed` fires on the `Class.Player` with a value of `Character`.
-      6. The character's `Class.Instance.Parent|Parent` sets to the `Class.DataModel`.
+      5. `Class.Object.Changed` fires on the `Class.Player` with a value of
+         `Character`.
+      6. The character's `Class.Instance.Parent|Parent` sets to the
+         `Class.DataModel`.
       7. `Class.Player.CharacterAdded` fires.
       8. `Class.Player.CharacterAppearanceLoaded` fires.
     code_samples:
@@ -2321,10 +2325,10 @@ methods:
       `Class.Player.CharacterAppearanceLoaded|CharacterAppearanceLoaded` event
       has fired.
 
-      See also [HumanoidDescription
-      System](../../../characters/appearance.md#humanoiddescription), an article
-      which explains the humanoid description system in greater detail and
-      provides several scripting examples.
+      See also
+      [HumanoidDescription System](../../../characters/appearance.md#humanoiddescription),
+      an article which explains the humanoid description system in greater
+      detail and provides several scripting examples.
     code_samples:
       - spawn-characters-with-humanoiddescription
     parameters:
@@ -2351,11 +2355,11 @@ methods:
       Requests that the server stream to the player around the specified
       location.
     description: |
-      For experiences where [instance
-      streaming](../../../workspace/streaming.md) is enabled, requests that the
-      server stream to the player regions (parts and terrain) around the
-      specified **X**, **Y**, **Z** location in the 3D world. It is useful if
-      the experience knows that the player's `Datatype.CFrame` will be set to
+      For experiences where
+      [instance streaming](../../../workspace/streaming.md) is enabled, requests
+      that the server stream to the player regions (parts and terrain) around
+      the specified **X**, **Y**, **Z** location in the 3D world. It is useful
+      if the experience knows that the player's `Datatype.CFrame` will be set to
       the specified location in the near future. Without providing the location
       with this call, the player may not have streamed in content for the
       destination, resulting in a streaming pause or other undesirable behavior.
@@ -2512,8 +2516,8 @@ events:
     writeCapabilities: []
   - name: Player.CharacterAppearanceLoaded
     summary: |
-      Fires when the full appearance of a `Class.Player.Character|Character` has been
-      inserted.
+      Fires when the full appearance of a `Class.Player.Character|Character` has
+      been inserted.
     description: |
       This event fires when the full appearance of a
       `Class.Player.Character|Character` has been inserted. It only fires on the
@@ -2524,10 +2528,11 @@ events:
       `Class.Shirt|Shirts`, `Class.Pants` and
       `Class.CharacterMesh|CharacterMeshes`. This event will fire when all such
       objects have been inserted into the character.
-      
-      For custom character implementations, such as using a character model named `StarterCharacter`
-      inside `Class.StarterPlayer`, use `Class.Player.CharacterAdded|CharacterAdded` and handle your
-      own accessories.
+
+      For custom character implementations, such as using a character model
+      named `StarterCharacter` inside `Class.StarterPlayer`, use
+      `Class.Player.CharacterAdded|CharacterAdded` and handle your own
+      accessories.
 
       One use for this event is to ensure all accessories have loaded before
       destroying them. See below for an example of this.

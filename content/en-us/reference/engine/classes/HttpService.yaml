@@ -14,7 +14,8 @@ description: |
   real-time communication. Additionally, it can call a subset of the Open Cloud
   APIs.
 
-  For more information about these use cases, see [In-experience HTTP requests](../../../cloud-services/http-service.md).
+  For more information about these use cases, see
+  [In-experience HTTP requests](../../../cloud-services/http-service.md).
 
   `HttpService` also houses the `Class.HttpService:JSONEncode()|JSONEncode` and
   `Class.HttpService:JSONDecode()|JSONDecode` methods, which are useful for

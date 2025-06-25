@@ -441,6 +441,26 @@ properties:
     capabilities:
       - UI
     writeCapabilities: []
+  - name: TextBox.ShouldEmitTabEvents
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.ShowNativeInput
     summary: |
       If set to true, input native to the platform is used instead of Roblox's

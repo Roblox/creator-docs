@@ -703,6 +703,25 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: TestService:TakeSnapshot
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: snapshotname
+        type: string
+        default: ''
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - InternalTest
+    writeCapabilities: []
   - name: TestService:Warn
     summary: |
       Prints if a condition is true, otherwise prints a warning.

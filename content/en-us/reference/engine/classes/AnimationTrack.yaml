@@ -112,12 +112,12 @@ properties:
       it is changed while playing the result will take effect after the
       animation finishes.
 
-      This property defaults to how it was set in the [Animation
-      Editor](../../../animation/editor.md). However, this property can be
-      changed, allowing control over the `Class.AnimationTrack` while it is
-      running. This property also correctly handles animations played in reverse
-      (negative `Class.AnimationTrack.Speed`). After the first keyframe is
-      reached, it will restart at the last keyframe.
+      This property defaults to how it was set in the
+      [Animation Editor](../../../animation/editor.md). However, this property
+      can be changed, allowing control over the `Class.AnimationTrack` while it
+      is running. This property also correctly handles animations played in
+      reverse (negative `Class.AnimationTrack.Speed`). After the first keyframe
+      is reached, it will restart at the last keyframe.
     code_samples:
       - Animation-Looping
       - AnimationTrack-DidLoop
@@ -155,13 +155,13 @@ properties:
       6. `Enum.AnimationPriority|Idle`
       7. `Enum.AnimationPriority|Core` (lowest priority)
 
-      Properly set animation priorities, either through the [Animation
-      Editor](../../../animation/editor.md) or through this property, allow
-      multiple animations to be played without them clashing. Where two playing
-      animations direct the target to move the same limb in different ways, the
-      `Class.AnimationTrack` with the highest priority will show. If both
-      animations have the same priority, the weights of the tracks will be used
-      to combine the animations.
+      Properly set animation priorities, either through the
+      [Animation Editor](../../../animation/editor.md) or through this property,
+      allow multiple animations to be played without them clashing. Where two
+      playing animations direct the target to move the same limb in different
+      ways, the `Class.AnimationTrack` with the highest priority will show. If
+      both animations have the same priority, the weights of the tracks will be
+      used to combine the animations.
     code_samples: []
     type: AnimationPriority
     tags: []
@@ -327,8 +327,8 @@ methods:
       A track's initial speed is set as a parameter in
       `Class.AnimationTrack:Play()`. However a track's
       `Class.AnimationTrack.Speed` can be changed during playback using this
-      method. When speed is equal to `1`, the amount of time an animation
-      takes to complete is equal to `Class.AnimationTrack.Length` (in seconds).
+      method. When speed is equal to `1`, the amount of time an animation takes
+      to complete is equal to `Class.AnimationTrack.Length` (in seconds).
 
       When is adjusted, then the actual time it will take a track to play can be
       computed by dividing the length by the speed. `Class.AnimationTrack.Speed`
@@ -526,12 +526,12 @@ methods:
       will play with the specified `fadeTime`, weight and speed.
     description: |
       When `Class.AnimationTrack:Play()` is called the track's animation will
-      begin playing and the weight of the animation will increase from `0` to the
-      specified `weight` (defaults to `1`) over the specified `fadeTime`.
+      begin playing and the weight of the animation will increase from `0` to
+      the specified `weight` (defaults to `1`) over the specified `fadeTime`.
 
       The speed the `Class.AnimationTrack` will play at is determined by the
-      speed parameter (defaults to `1`). When the speed is equal to `1` the number
-      of seconds the track will take to complete is equal to the track's
+      speed parameter (defaults to `1`). When the speed is equal to `1` the
+      number of seconds the track will take to complete is equal to the track's
       `Class.AnimationTrack.Length` property. For example, a speed of `2` will
       cause the track to play twice as fast.
 
@@ -689,10 +689,10 @@ events:
       animation has three keyframes named `Particles`, this event will fire each
       time one of these keyframes is reached.
 
-      `Class.Keyframe` names can be set in the [Animation
-      Editor](../../../animation/editor.md) when creating or editing an
-      animation. They cannot however be set by a `Class.Script` on an existing
-      animation prior to playing it.
+      `Class.Keyframe` names can be set in the
+      [Animation Editor](../../../animation/editor.md) when creating or editing
+      an animation. They cannot however be set by a `Class.Script` on an
+      existing animation prior to playing it.
     code_samples: []
     parameters:
       - name: keyframeName

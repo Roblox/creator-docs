@@ -12,6 +12,25 @@ tags:
   - NotReplicated
 deprecation_message: ''
 properties: []
-methods: []
+methods:
+  - name: UGCValidationService:IsDeformedLayeredClothingOutOfRenderBounds
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: accessory
+        type: Accessory
+        default: ''
+        summary: ''
+    returns:
+      - type: boolean
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []
