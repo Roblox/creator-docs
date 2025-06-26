@@ -44,9 +44,7 @@ There are also functionalities on each dashboard to help you further analyze you
 
 ### Filter by date
 
-You can apply a date filter to view the chart for a date range by separately selecting any specific time frame between the first date that the data was available and the present day as the start and the end date.
-
-You can click and drag on a chart to "zoom in" to a shorter time range across the page.
+You can apply a date filter to view the chart for a date range by separately selecting any specific time frame between the first date that the data was available and the present day as the start and the end date. You can also click and drag on a chart to "zoom&nbsp;in" to a shorter time range across the page.
 
 ### Filter by metrics
 
