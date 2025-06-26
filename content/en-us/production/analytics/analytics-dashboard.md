@@ -46,6 +46,8 @@ There are also functionalities on each dashboard to help you further analyze you
 
 You can apply a date filter to view the chart for a date range by separately selecting any specific time frame between the first date that the data was available and the present day as the start and the end date.
 
+You can click and drag on a chart to "zoom in" to a shorter time range across the page.
+
 ### Filter by metrics
 
 You can apply various filters to better understand your cohorts by clicking the **Filter By** button. Filters apply to all charts across all analytics pages until they are turned off.
@@ -206,6 +208,8 @@ You can apply a breakdown to analyze each chart in a more specific category by c
   </tr>
 </tbody>
 </table>
+
+When viewing a breakdown on a chart, you can click on the value in the legend to toggle the line on and off, or double click on one value in the chart's legend to view only that line.
 
 ## Sales data
 
