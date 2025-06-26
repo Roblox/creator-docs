@@ -1,19 +1,19 @@
 ---
-title: Voice chat
-description: Explains how to use the voice chat feature.
+title: Voice Chat
+description: Explains how to use the Voice Chat feature.
 ---
 
 <Alert severity="success">
-Voice chat is currently available to all 13+ [phone number verified](../production/publishing/account-verification.md#verify-through-phone-number) users in these countries: US, CA, GB, IE, AU, NZ, ES, MX, CL, CR, PR, FR, IT, AT, CHE, DE, JP, KR, CH, AR, COL, PE, DO, GT, UY, SV, HN, PY, NI, EC, BO, VE, PA, PT, and BR. Users **not** in these countries should use [ID verification](https://en.help.roblox.com/hc/en-us/articles/4407282410644) to enable chat with voice. Once verified, eligible 13+ phone verified users can opt‑in to use this feature by visiting their account **Settings** page or from within a voice enabled experience, allowing them to chat with voice in any Roblox experience that supports it. Experiences with voice often see an uplift in engagement, DAU, and spending.
+Voice Chat is currently available to all 13+ [phone number verified](../production/publishing/account-verification.md#verify-through-phone-number) users in these countries: US, CA, GB, IE, AU, NZ, ES, MX, CL, CR, PR, FR, IT, AT, CHE, DE, JP, KR, CH, AR, COL, PE, DO, GT, UY, SV, HN, PY, NI, EC, BO, VE, PA, PT, and BR. Users **not** in these countries should use [ID verification](https://en.help.roblox.com/hc/en-us/articles/4407282410644) to enable chat with voice. Once verified, eligible 13+ phone verified users can opt‑in to use this feature by visiting their account **Settings** page or from within a voice enabled experience, allowing them to chat with voice in any Roblox experience that supports it. Experiences with voice often see an uplift in engagement, DAU, and spending.
 </Alert>
 
-**Voice chat** is a feature enabling real-time, spoken communication between yourself and other player characters. It is only available for places that support a maximum of 50 players.
+**Voice Chat** is a feature enabling real-time, spoken communication between yourself and other player characters. It is only available for places that support a maximum of 50 players.
 
 <img src="../assets/players/voice-chat/In-Experience-Example.jpg" width="800" alt="Two users chatting with voice inside an experience" />
 
-## Enable voice chat
+## Enable Voice Chat
 
-Before you can enable voice chat in an experience, you must first [publish](../production/publishing/publish-experiences-and-places.md) it, then:
+Before you can enable Voice Chat in an experience, you must first [publish](../production/publishing/publish-experiences-and-places.md) it, then:
 
 1. Open your experience in Studio.
 1. Open **File**&nbsp;⟩ **Game Settings**.
@@ -26,18 +26,18 @@ Voice Chat will now be available to verified 13+ users who opt‑in to the featu
 
 ### Set maximum players
 
-If you previously set the maximum number of players in a place to more than 50, you'll need to reduce it to support Voice Chat.
+If you previously set the maximum number of players in a place to more than 50, you'll need to reduce it to support .
 
 1. In the left-hand navigation of the **Game Settings** window, select **Places**. Every place within your experience displays.
 1. Click the **&ctdot;** button next to the place with more than 50 players, then select **Configure Place**.
 1. In the **Max Players** field, enter any number less than or equal to 50.
 1. Click the **Save** button and then [publish](../production/publishing/publish-experiences-and-places.md) to save the changes.
 
-When you update the maximum number of players in a place to fewer than 50, there may be servers already configured to a different, higher number. Since those servers won't support voice chat, it's recommended to [restart servers](../production/publishing/publish-experiences-and-places.md#update-experiences).
+When you update the maximum number of players in a place to fewer than 50, there may be servers already configured to a different, higher number. Since those servers won't support Voice Chat, it's recommended to [restart servers](../production/publishing/publish-experiences-and-places.md#update-experiences).
 
 ### Customize voice behavior
 
-Voice chat is **proximity-based** by default, adjusting the volume of participants based on how close they are to each other. However, you can set `Class.VoiceChatService.UseAudioApi|UseAudioApi` to `Enum.AudioApiRollout|Enabled` to take control over how voices are set up and used in your experience:
+Voice Chat is **proximity-based** by default, adjusting the volume of participants based on how close they are to each other. However, you can set `Class.VoiceChatService.UseAudioApi|UseAudioApi` to `Enum.AudioApiRollout|Enabled` to take control over how voices are set up and used in your experience:
 
 1. Right‑click over any visible service in the **Explorer** window and select **Show&nbsp;Services…** from the context menu.
 2. Select `Class.VoiceChatService` in the popup window and click **Insert**. The service appears in the **Explorer** hierarchy.
@@ -95,7 +95,7 @@ end)
 
 #### Non-spatial
 
-If you [disable default voice chat](#disable-per-place), you can then implement flat/nonspatial voice chat through the following `Class.Script` within `Class.ServerScriptService`:
+If you [disable default Voice Chat](#disable-per-place), you can then implement flat/nonspatial Voice Chat through the following `Class.Script` within `Class.ServerScriptService`:
 
 ```lua title="Non-Proximity Chat"
 local Players = game:GetService("Players")
@@ -126,7 +126,7 @@ end
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
-Disabling default voice chat also removes the standard behavior where players cannot hear their own characters talk. To re‑mute players' own voices, use the following `Class.LocalScript` in `Class.StarterPlayerScripts`:
+Disabling default Voice Chat also removes the standard behavior where players cannot hear their own characters talk. To re‑mute players' own voices, use the following `Class.LocalScript` in `Class.StarterPlayerScripts`:
 
 ```lua title="LocalScript"
 local Players = game:GetService("Players")
@@ -147,13 +147,13 @@ player.DescendantAdded:Connect(onDescendantAdded)
 
 ### Disable per place
 
-If you don't want to enable voice chat for every place within your experience, you can disable it within specific places that would otherwise be voice‑eligible.
+If you don't want to enable Voice Chat for every place within your experience, you can disable it within specific places that would otherwise be voice‑eligible.
 
 <Alert severity="info">
-If you're currently setting a place's **Max Players** to a value over 50 in order to disable voice chat, it's recommended to use this workflow instead.
+If you're currently setting a place's **Max Players** to a value over 50 in order to disable Voice Chat, it's recommended to use this workflow instead.
 </Alert>
 
-To disable voice chat for a specific place within an experience:
+To disable Voice Chat for a specific place within an experience:
 
 1. Right‑click over any visible service in the **Explorer** window and select **Show&nbsp;Services…** from the context menu.
 2. Select `Class.VoiceChatService` in the popup window and click **Insert**. The service appears in the **Explorer** hierarchy.
@@ -163,9 +163,9 @@ To disable voice chat for a specific place within an experience:
 3. With `Class.VoiceChatService` selected, disable `Class.VoiceChatService.EnableDefaultVoice|EnableDefaultVoice` in the **Properties** window.
 4. Publish the place to save the changes and [restart servers](../production/publishing/publish-experiences-and-places.md#update-experiences) to ensure the change takes effect for all servers currently running your experience.
 
-## Check voice chat status
+## Check status
 
-You can check if a player has enabled voice chat by calling `Class.VoiceChatService:IsVoiceEnabledForUserIdAsync()|IsVoiceEnabledForUserIdAsync()` in a `Class.LocalScript`, or in a `Class.Script` with `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client`.
+You can check if a player has enabled Voice Chat by calling `Class.VoiceChatService:IsVoiceEnabledForUserIdAsync()|IsVoiceEnabledForUserIdAsync()` in a `Class.LocalScript`, or in a `Class.Script` with `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client`.
 
 ```lua title="Client Script - Check Voice Chat Status"
 local Players = game:GetService("Players")
@@ -177,6 +177,6 @@ local success, enabled = pcall(function()
 	return VoiceChatService:IsVoiceEnabledForUserIdAsync(localPlayer.UserId)
 end)
 if success and enabled then
-	print("Voice chat enabled!")
+	print("Voice Chat enabled!")
 end
 ```
