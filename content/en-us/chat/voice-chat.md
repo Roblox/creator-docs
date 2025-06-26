@@ -48,7 +48,7 @@ Voice chat is **proximity-based** by default, adjusting the volume of participan
 
 #### Team-based
 
-To implement team-based chat where only teammates can hear one another, you can use the following `Class.Script` within `Class.ServerScriptService`:
+To implement `Class.Team`-based chat where only teammates can hear one another, you can use the following `Class.Script` within `Class.ServerScriptService`:
 
 ```lua title="Team Chat"
 local Teams = game:GetService("Teams")
