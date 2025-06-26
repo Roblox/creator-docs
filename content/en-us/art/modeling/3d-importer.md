@@ -3,21 +3,69 @@ title: 3D Importer
 description: 3D Importer imports third-party .fbx, .gltf, and .obj 3D model assets into Studio.
 ---
 
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/4RonlfpKzHA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<br />
+The 3D Importer allows you to import `.fbx`, `.gltf`, or `.obj` 3D models into Studio as a custom `Class.Model`. This includes meshes with PBR textures, meshes with rigging, skinning, and animation data, and meshes designed as avatar items.
 
-The 3D Importer allows you to import `.fbx`, `.gltf`, or `.obj` 3D models into Studio as a custom `Class.Model`.
+<Grid container spacing={2} style={{ marginBottom: 24, width: '100%' }}>
+<Grid item xs={6} style={{ padding: 16 }}>
+<Grid item container wrap="nowrap" direction="column" style={{ gap: 8, flex: 1 }}>
 
-- Meshes with basic or PBR ([surface appearance](../../art/modeling/surface-appearance.md)) textures.
-- Meshes with [rigging and skinning data](../../art/modeling/rigging.md).
-- Meshes with animation data.
-- Specialized meshes, such as [accessories](../../art/accessories/index.md), or characters with [facial animation data](../../art/characters/facial-animation/index.md).
+<div
+className="container"
+style={{ position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12 }} >
+<iframe
+src="https://www.youtube-nocookie.com/embed/ikYZloBgqtE"
+title="YouTube video player"
+frameBorder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowFullScreen
+style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} ></iframe>
+</div>
+<Typography variant="body1">
+Import general 3D custom models into Studio.
+</Typography>
 
-<BaseAccordion>
-<AccordionSummary>
-<Typography variant="subtitle2">Supported file type features</Typography>
-</AccordionSummary>
-<AccordionDetails>
+</Grid>
+</Grid>
+
+<Grid item xs={6} style={{ padding: 16 }}>
+<Grid item container wrap="nowrap" direction="column" style={{ gap: 8, flex: 1 }}>
+
+<div
+className="container"
+style={{ position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12 }} >
+<iframe
+src="https://www.youtube-nocookie.com/embed/RCsYZe3LoDM"
+title="YouTube video player"
+frameBorder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowFullScreen
+style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} ></iframe>
+</div>
+<Typography variant="body1">
+Use the 3D importer to import assets with avatar item components.
+</Typography>
+</Grid>
+</Grid>
+</Grid>
+
+To import a 3D object:
+
+1. In the toolbar's **Home** or **Avatar** tab, click **Import 3D**.
+   1. Alternatively, use **File** > **Import 3D** to open up the Import 3D tool.
+2. In the file browser, select the supported `.fbx`, `.gltf` or `.obj` files you intend to import.
+   1. If selecting one object, the [import preview](#import-preview) window screen appears for that object.
+   2. If selecting multiple objects, the files are added to the [import queue](#import-queue).
+3. Configure your import settings and verify any [warning or error messages](#warnings-and-errors).
+4. Click **Import**.
+
+<Alert severity ='info'>
+To directly import 3D assets using HTTP requests, see the [Open Cloud usage guide for assets](../../cloud/guides/usage-assets.md).
+</Alert>
+
+## Supported file types
+
+Before importing a 3D object, ensure that the `.fbx`, `.gltf` or `.obj` meets Studio's [mesh requirements](../../art/characters/specifications.md) to reduce errors or unexpected behavior.
+
 <table><thead>
   <tr>
     <th style={{width:"20%"}}>**File type**</th>
@@ -27,54 +75,106 @@ The 3D Importer allows you to import `.fbx`, `.gltf`, or `.obj` 3D models into S
 <tbody>
   <tr>
     <td>OBJ (`.obj`)</td>
-    <td>Supports:<br/><br/>— Basic single mesh objects</td>
+    <td>— Basic single mesh objects</td>
     <td>Simple mesh geometry use-cases.</td>
   </tr>
   <tr>
     <td>FBX (`.fbx`)</td>
-    <td>Supports:<br/><br/>— Multiple mesh objects and hierarchies<br/>—  Textures, including basic and [PBR textures](../../art/modeling/surface-appearance.md).<br/>— Cage mesh objects<br/>— [Rigging and armature data](../../art/modeling/rigging.md)<br/>— Additional components for [avatar](../../avatar/index.md) items.<br/>— Animation data<br/>— [Vertex colors](../blender.md#vertex-painting)</td>
+    <td>— Multiple mesh objects and hierarchies<br/>—  Textures, including basic and [PBR textures](../../art/modeling/surface-appearance.md).<br/>— Cage mesh objects<br/>— [Rigging and armature data](../../art/modeling/rigging.md)<br/>— Additional components for [avatar](../../avatar/index.md) items<br/>— Animation data<br/>— [Vertex colors](../blender.md#vertex-painting)</td>
     <td>Any type of 3D import, including but not limited to [game assets](../../assets.md) or [avatar items](../../avatar).</td>
   </tr>
   <tr>
     <td>gLTF (`.gltf`)</td>
-    <td>Supports:<br/><br/>— Multiple mesh objects and hierarchies<br/>— Textures, including basic and [PBR textures](../../art/modeling/surface-appearance.md).<br/>— Cage mesh objects<br/>— [Rigging and armature data](../../art/modeling/rigging.md)<br/>— Additional components for [avatar](../../avatar/index.md) items.<br/>— Animation data<br/>— [Vertex colors](../blender.md#vertex-painting)</td>
+    <td>— Multiple mesh objects and hierarchies<br/>— Textures, including basic and [PBR textures](../../art/modeling/surface-appearance.md).<br/>— Cage mesh objects<br/>— [Rigging and armature data](../../art/modeling/rigging.md)<br/>— Additional components for [avatar](../../avatar/index.md) items<br/>— Animation data<br/>— [Vertex colors](../blender.md#vertex-painting)</td>
     <td>Any type of 3D import, including but not limited to [game assets](../../assets.md) or [avatar items](../../avatar).</td>
   </tr>
 </tbody></table>
-</AccordionDetails>
-</BaseAccordion>
 
-<Alert severity ='info'>
-To directly import 3D assets using HTTP requests, see the [Open Cloud usage guide for assets](../../cloud/guides/usage-assets.md).
-</Alert>
+## Import queue
 
-The 3D Importer is divided into three sections:
+If you selected multiple files with the 3D Importer, you can use the import queue to bulk manage your various imports.
+
+<img src="../../assets/modeling/meshes/3d-Import-Queue.png" width="80%" alt="The 3D importer interface, showing a preview of the mesh in the top left, a list of 3D objects on the bottom left, and a list of toggle-able properties on the right side."/>
+
+<Grid container spacing={2}>
+  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../../assets/misc/Box-Label-A.png" width="40" style={{float:"right"}} /></Grid>
+  <Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
+  The **top bar** allows you to add new files, clear the queue, search and filter, and import all enabled models.
+  </Grid>
+</Grid>
+<Grid container spacing={2}>
+  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../../assets/misc/Box-Label-B.png" width="40" style={{float:"right"}} /></Grid>
+  <Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
+  The **import queue** lists all added files, with quick access dropdowns to change creator, presets, and file paths.
+  </Grid>
+</Grid>
+
+### Add files to queue
+
+To open a file browser and add additional files to the import queue, you can:
+
+- Click the **Add file** button in the top bar of the Import queue window.
+- In the Studio's **Home** or **Avatar** tab, click **Import 3D**.
+- Navigate to **File** > **Import 3D**.
+
+### Remove files from queue
+
+To remove all files from the queue, click the **Clear queue** button with the broom icon. To remove an individual file from the queue, right-click an item in the queue and select **Delete from queue**.
+
+### Apply preset settings
+
+Use the **Import Preset** column to select a preset configuration to apply to your model. For more information, see [Presets](#presets).
+
+You can also apply the settings of one item to all items by right-clicking an item with the desired settings and selecting **Apply settings to all**.
+
+### Access individual preview and settings
+
+Click the individual **Asset** name of an unimported model to access the import preview for that item. Use the import preview to view and check your model, as well as set any individual [import settings](#import-settings).
+
+### Import files
+
+Ensure that each item you want to import has a checkbox enabled in the first column. By default, all items are selected if they are importable.
+
+Press the **Import** button to start the import process.
+
+## Import preview
+
+The import preview window appears if you are importing a single file, or if you selected an individual item from the import queue. This preview window provides individual controls for the various objects in your model.
+
+The preview window is divided into multiple sections:
 
 <img src="../../assets/modeling/meshes/3d-Importer-Panels.png" width="80%" alt="The 3D importer interface, showing a preview of the mesh in the top left, a list of 3D objects on the bottom left, and a list of toggle-able properties on the right side."/>
 
-A. The **preview panel**, located in the top left, allows you to rotate and examine 3D objects before importing into your workspace or Toolbox.
-
-B. The **hierarchy panel**, located in the bottom left, allows you to select specific parts of your model to import or apply specific settings to, including textures, child objects, animations, or rig data.
-
-C. The **inspector panel**, located on the right, allows you to apply various settings to the imported object.
-
-## Import 3D objects
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ikYZloBgqtE" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<br />
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/RCsYZe3LoDM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<br />
-
-Before importing a 3D object, ensure that the `.fbx`, `.gltf` or `.obj` meets Studio's [mesh requirements](../../art/characters/specifications.md) to reduce errors or unexpected behavior.
-
-To import a 3D object:
-
-1. In the toolbar's **Home** or **Avatar** tab, click **Import 3D**. A file browser displays.
-2. Select the `.fbx`, `.gltf` or `.obj` you intend to import. The Importer window displays.
-3. Verify the object preview and check that the [import settings](#import-settings) are correct for your object.
-4. Verify any [warning or error messages](#warnings-and-errors).
-5. Click **Import**.
+<Grid container spacing={2}>
+  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../../assets/misc/Box-Label-A.png" width="40" style={{float:"right"}} /></Grid>
+  <Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
+  The **file path** of your model file. Click **Browse** to edit.
+  </Grid>
+</Grid>
+<Grid container spacing={2}>
+  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../../assets/misc/Box-Label-B.png" width="40" style={{float:"right"}} /></Grid>
+  <Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
+  The **preset** applied to your import. Use the dropdown to select multiple presets, or the hamburger menu to set a new preset.
+  </Grid>
+</Grid>
+<Grid container spacing={2}>
+  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../../assets/misc/Box-Label-C.png" width="40" style={{float:"right"}} /></Grid>
+  <Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
+  The **3D preview** of your model. Use mouse buttons and top-right icons for various camera options and views.
+  </Grid>
+</Grid>
+<Grid container spacing={2}>
+  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../../assets/misc/Box-Label-D.png" width="40" style={{float:"right"}} /></Grid>
+  <Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
+  The **object hierarchy** of the imported object. Includes mesh objects and other supported components.
+  </Grid>
+</Grid>
+<Grid container spacing={2}>
+  <Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../../assets/misc/Box-Label-E.png" width="40" style={{float:"right"}} /></Grid>
+  <Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
+  The **import settings** for your import. For a complete list of settings, see [Import settings](#import-settings).
+  </Grid>
+</Grid>
 
 ### Import settings
 
@@ -261,7 +361,25 @@ Object Geometry includes information on the dimensions and polycount of the sele
 </tbody>
 </table>
 
-### Warnings and errors
+## Presets
+
+You can save presets of various import settings to quickly apply later within the [import preview](#import-preview) or [import queue](#import-queue).
+
+By default, you can select between two presets:
+
+- **Studio Default**: The default import behavior.
+- **Last Imported**: Uses the settings applied to the most recent import.
+
+You can use the **. . .** menu next to the Presets dropdown for additional options:
+
+- **Reset all**: Removes any changes to the current configuration, putting settings back in the default state for the current preset.
+- **Save selection**: Allows you to save any new changes to the importer settings into the currently selected preset.
+- **Save as new**: Sets the current settings as a new preset. A dialogue box displays allowing you to set a name.
+- **Set as default**: Sets the current preset as the default for all imports moving forward.
+- **Rename**: Renames the current preset.
+- **Delete**: Deletes the current preset. Resets to `Studio Default` preset.
+
+## Warnings and errors
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/UEHEsmCslBU" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br />
