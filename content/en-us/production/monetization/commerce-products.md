@@ -398,7 +398,7 @@ As with other product information synced from Shopify, any updates to the produc
 
 ### Additional information
 
-The **Additional information** section displays supplementary details about your product using collapsible accordions. You can add **up to five** accordion sections for different topics, such as "Materials," "Care Instructions," or "Size Chart."
+The **Additional information** section displays supplementary details about your product using collapsible accordions. You can add **up to five** accordion sections for different topics, such as "Materials," "Care Instructions," or "Sizing".
 
 This is an optional feature and is populated using Shopify product metafields. To create a metafield accordion in Shopify:
 
@@ -407,9 +407,11 @@ This is an optional feature and is populated using Shopify product metafields. T
 - Set the following fields:
 
   - **Name** — The value in this field displays as the header for that accordion.
-  - **Value** — The user-facing content within the expanded accordion.
+  - **Type** — Only "Multi-line text" is supported.
 
      <img src="../../assets/monetization/commerce-products/Commerce-Product-Metafield-Example.png" width="60%" />
+
+- Then set the **Value** of the metafield for each desired product. This value displays as the content for that accordion.
 
 Like other product content synced from Shopify, any new or updated information in these metafields is subject to the [moderation process for catalog items](#modify-catalog-items). This page will display previously approved content until the new information is approved.
 
