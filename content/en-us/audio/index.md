@@ -18,9 +18,10 @@ Roblox offers many different types of audio objects that you can use to play and
 - The `Class.AudioListener` object is a **virtual microphone** that picks up audio from the 3D environment.
 - The `Class.AudioDeviceOutput` object is a **physical hardware device** within the real world, such as a speaker or headphones.
 - The `Class.AudioDeviceInput` object is a **physical microphone** within the real world.
+- The `Class.AudioTextToSpeech` object converts **text to audio** using an artificial voice.
 - `Class.Wire|Wires` carry audio streams from one object to another.
 
-Using these objects, you can either set audio to play automatically at runtime, or trigger it to play from scripts. For practical applications of these audio objects, see the [Add 2D audio](../tutorials/use-case-tutorials/audio/add-2D-audio.md), [Add 3D audio](../tutorials/use-case-tutorials/audio/add-3D-audio.md), and [Add voice chat](../tutorials/use-case-tutorials/audio/add-voice-chat.md) tutorials.
+Using these objects, you can either set audio to play automatically at runtime, or trigger it to play from scripts. For practical applications of these audio objects, see the [Add 2D audio](../tutorials/use-case-tutorials/audio/add-2D-audio.md), [Add 3D audio](../tutorials/use-case-tutorials/audio/add-3D-audio.md), [Add text-to-speech](../tutorials/use-case-tutorials/audio/add-text-to-speech.md), and [Add voice chat](../tutorials/use-case-tutorials/audio/add-voice-chat.md) tutorials.
 
 ## Audio effects
 
