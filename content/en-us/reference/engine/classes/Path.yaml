@@ -53,7 +53,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 methods:
   - name: Path:GetPointCoordinates
@@ -73,7 +74,8 @@ methods:
       be used in all new work instead.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: Path:GetWaypoints
     summary: |
@@ -101,7 +103,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: Path:CheckOcclusionAsync
     summary: |
@@ -131,7 +134,8 @@ methods:
       existence.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: Path:ComputeAsync
     summary: |
@@ -165,7 +169,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 events:
   - name: Path.Blocked
@@ -187,7 +192,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: Path.Unblocked
     summary: |
@@ -208,6 +214,7 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 callbacks: []

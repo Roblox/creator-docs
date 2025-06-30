@@ -262,567 +262,601 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 <br /><h3>General</h3>
 
 <table size="small">
-  <thead>
-    <tr>
-      <th width="20%">Action/Tool</th>
+	<thead>
+		<tr>
+			<th width="20%">Action/Tool</th>
 			<th width="40%">Legacy Workflow(s)</th>
 			<th width="40%">New Workflow(s)</th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr>
-      <td>[Collaborate](../projects/collaboration.md)</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Notifications</td>
 			<td>Right side of mezzanine bar</td>
 			<td><Chip label="no change" size="small" color="success" variant="outlined" /></td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Creator Notifications</td>
-			<td>Right side of mezzanine bar</td>
-			<td><Chip label="no change" size="small" color="success" variant="outlined" /></td>
-    </tr>
-		<tr>
-      <td>[Assistant](../assistant/guide.md)</td>
-      <td>Right side of mezzanine bar or **View** tab</td>
-			<td>Right side of mezzanine bar</td>
-    </tr>
-		<tr>
-      <td>Online Help</td>
-      <td>Right side of mezzanine bar or **File** menu</td>
+			<td>Online Help</td>
+			<td>Right side of mezzanine bar or **File** menu</td>
 			<td>Application's **Help** menu</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Share</td>
-      <td>Right side of mezzanine bar</td>
+			<td>Share</td>
+			<td>Right side of mezzanine bar</td>
 			<td><Chip label="no change" size="small" color="success" variant="outlined" /></td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Account Menu</td>
-      <td>Right side of mezzanine bar</td>
+			<td>[Assistant](../assistant/guide.md)</td>
+			<td>Right side of mezzanine bar or **View** tab</td>
+			<td>Right side of mezzanine bar</td>
+		</tr>
+		<tr>
+			<td>Account Menu</td>
+			<td>Right side of mezzanine bar</td>
 			<td><Chip label="no change" size="small" color="success" variant="outlined" /></td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Studio Settings](./setup.md#customization)</td>
-      <td>**File** menu</td>
+			<td>[Studio Settings](./setup.md#customization)</td>
+			<td>**File** menu</td>
 			<td>Windows: **File** menu&nbsp;⟩ **Studio Settings**<br />macOS: Application's main menu&nbsp;⟩ **Studio Settings**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Beta Features</td>
-      <td>**File** menu</td>
+			<td>Beta Features</td>
+			<td>**File** menu</td>
 			<td>Application's **File** menu&nbsp;⟩ **Beta&nbsp;Features**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Save to Roblox&nbsp;/&nbsp;As…</td>
-      <td>**File** menu</td>
+			<td>Save to Roblox&nbsp;/&nbsp;As…</td>
+			<td>**File** menu</td>
 			<td>Application's **File** menu&nbsp;⟩ **Save&nbsp;to&nbsp;Roblox**&nbsp;/&nbsp;**As…**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Publish to Roblox&nbsp;/&nbsp;As…</td>
-      <td>**File** menu</td>
+			<td>Publish to Roblox&nbsp;/&nbsp;As…</td>
+			<td>**File** menu</td>
 			<td>Application's **File** menu&nbsp;⟩ **Publish&nbsp;to&nbsp;Roblox**&nbsp;/&nbsp;**As…**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Game Settings](./game-settings.md)</td>
-      <td>**File** menu or **Home** tab</td>
+			<td>[Game Settings](./game-settings.md)</td>
+			<td>**File** menu or **Home** tab</td>
 			<td>Application's **File** menu&nbsp;⟩ **Game&nbsp;Settings**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Manage Plugins](./plugins-tab.md#manage-plugins)</td>
-      <td>**Plugins** tab</td>
+			<td>[Manage Plugins](./plugins-tab.md#manage-plugins)</td>
+			<td>**Plugins** tab</td>
 			<td>Application's **Plugins** menu&nbsp;⟩ **Manage&nbsp;Plugins**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Plugins Folder</td>
-      <td>**Plugins** tab</td>
+			<td>Plugins Folder</td>
+			<td>**Plugins** tab</td>
 			<td>Application's **Plugins** menu&nbsp;⟩ **Plugins&nbsp;Folder**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Tools (Localization)</td>
-      <td>**Plugins** tab</td>
+			<td>Tools (Localization)</td>
+			<td>**Plugins** tab</td>
 			<td>Application's **Window** menu&nbsp;⟩ **Localization**&nbsp;⟩ **Localization&nbsp;Tool**</td>
-    </tr>
+		</tr>
 	</tbody>
 </table>
 
 <br /><h3>Common windows</h3>
 
 <table size="small">
-  <thead>
-    <tr>
-      <th width="20%">Action/Tool</th>
+	<thead>
+		<tr>
+			<th width="20%">Action/Tool</th>
 			<th width="40%">Legacy Workflow(s)</th>
 			<th width="40%">New Workflow(s)</th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr>
-      <td>[Explorer](./explorer.md)</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>[Explorer](./explorer.md)</td>
 			<td>**View** tab</td>
 			<td>🄐 **Home** tab&nbsp;⟩ **Explorer**<br />🄑 Application's **Window** menu&nbsp;⟩ **Explorer**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Properties](./properties.md)</td>
+			<td>[Properties](./properties.md)</td>
 			<td>**View** tab</td>
 			<td>🄐 **Home** tab&nbsp;⟩ **Properties**<br />🄑 Application's **Window** menu&nbsp;⟩ **Properties**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Asset Manager](../projects/assets/manager.md)</td>
+			<td>[Asset Manager](../projects/assets/manager.md)</td>
 			<td>**View** tab</td>
 			<td>Application's **Window** menu&nbsp;⟩ **Asset&nbsp;Manager**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Toolbox](../projects/assets/toolbox.md)</td>
+			<td>[Toolbox](../projects/assets/toolbox.md)</td>
 			<td>**View** tab</td>
 			<td>🄐 **Home** tab&nbsp;⟩ **Toolbox**<br />🄑 Application's **Window** menu&nbsp;⟩ **Toolbox**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Output](./output.md)</td>
+			<td>[Output](./output.md)</td>
 			<td>**View** tab</td>
 			<td>🄐 Application's **Window** menu&nbsp;⟩ **Output**<br />🄑 **Script** tab&nbsp;⟩ **Output**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Command Bar](#command-bar)</td>
+			<td>[Command Bar](#command-bar)</td>
 			<td>**View** tab</td>
-			<td>🄐 Application's **Window** menu&nbsp;⟩ **Command&nbsp;Bar**<br />🄑 **Script** tab&nbsp;⟩ **Command**</td>
-    </tr>
+			<td>🄐 Application's **Window** menu&nbsp;⟩ **Script**&nbsp;⟩ **Command&nbsp;Bar**<br />🄑 **Script** tab&nbsp;⟩ **Command**</td>
+		</tr>
 		<tr>
-      <td>[Terrain Editor](./terrain-editor.md)</td>
+			<td>[Terrain Editor](./terrain-editor.md)</td>
 			<td>**Home** or **View** tab</td>
 			<td>Application's **Window** menu&nbsp;⟩ **3D**&nbsp;⟩ **Terrain**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Object Browser</td>
+			<td>Object Browser</td>
 			<td>**View** tab</td>
 			<td>Application's **Window** menu&nbsp;⟩ **Script**&nbsp;⟩ **Object&nbsp;Browser**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Tag Editor</td>
+			<td>Tag Editor</td>
 			<td>**View** tab</td>
 			<td>Application's **Window** menu&nbsp;⟩ **Script**&nbsp;⟩ **Tag&nbsp;Editor**</td>
-    </tr>
+		</tr>
 	</tbody>
 </table>
 
 <br /><h3>Editing and modeling</h3>
 
 <table size="small">
-  <thead>
-    <tr>
-      <th width="20%">Action/Tool</th>
+	<thead>
+		<tr>
+			<th width="20%">Action/Tool</th>
 			<th width="40%">Legacy Workflow(s)</th>
 			<th width="40%">New Workflow(s)</th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr>
-      <td>Copy, Cut, Paste, Duplicate</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Copy, Cut, Paste, Duplicate</td>
 			<td>**Home** tab</td>
 			<td>Application's **Edit** menu</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Select, Move, Scale, Rotate, Transform</td>
+			<td>Select, Move, Scale, Rotate, Transform</td>
 			<td>**Home**, **Model**, or **Avatar** tab</td>
 			<td><Chip label="no change" size="small" color="success" variant="outlined" /></td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Mode picker (geometric vs. physical)</td>
+			<td>Mode picker (geometric vs. physical)</td>
 			<td>**Home**, **Model**, or **Avatar** tab</td>
 			<td><Chip label="no change" size="small" color="success" variant="outlined" /></td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Collisions & Join Surfaces toggles</td>
+			<td>Collisions & Join Surfaces toggles</td>
 			<td>**Home**, **Model**, or **Avatar** tab</td>
-			<td>Mode picker&nbsp;⟩ Options in popup menu</td>
-    </tr>
+			<td>**Home**, **Model**, or **Avatar** tab&nbsp;⟩ Mode picker&nbsp;⟩ Options in popup menu</td>
+		</tr>
 		<tr>
-      <td>Rotate/Move snapping and increments</td>
+			<td>Rotate/Move snapping and increments</td>
 			<td>**Model** or **Avatar** tab</td>
 			<td>**Home**, **Model**, or **Avatar** tab</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Part pick/insert](../parts/index.md#insert-parts)</td>
+			<td>[Part pick/insert](../parts/index.md#insert-parts)</td>
 			<td>**Home** or **Model** tab</td>
 			<td><Chip label="no change" size="small" color="success" variant="outlined" /></td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Color pick/apply](../parts/index.md#hexagon-map)</td>
+			<td>[Color pick/apply](../parts/index.md#hexagon-map)</td>
 			<td>**Home** or **Model** tab</td>
 			<td><Chip label="no change" size="small" color="success" variant="outlined" /></td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Material pick/apply](../parts/materials.md#material-widget)</td>
+			<td>[Material pick/apply](../parts/materials.md#material-widget)</td>
 			<td>**Home** or **Model** tab</td>
 			<td><Chip label="no change" size="small" color="success" variant="outlined" /></td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Material Manager](../parts/materials.md#material-manager)</td>
+			<td>[Material Manager](../parts/materials.md#material-manager)</td>
 			<td>**Home** or **Model** tab&nbsp;⟩ Material picker dropdown&nbsp;⟩ **Material&nbsp;Manager**</td>
 			<td>Application's **Window** menu&nbsp;⟩ **3D**&nbsp;⟩ **Material**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Group</td>
+			<td>Group</td>
 			<td>**Home** or **Model** tab</td>
 			<td>🄐 **Home** or **Model** tab&nbsp;⟩ **Group**<br />🄑 Application's **Edit** menu&nbsp;⟩ **Group**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Lock</td>
+			<td>Lock</td>
 			<td>**Home** or **Model** tab</td>
 			<td>🄐 **Home** or **Model** tab&nbsp;⟩ **Lock**<br />🄑 Application's **Edit** menu&nbsp;⟩ **Lock**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Anchor</td>
+			<td>Anchor</td>
 			<td>**Home** or **Model** tab</td>
 			<td>🄐 **Home** or **Model** tab&nbsp;⟩ **Anchor**<br />🄑 Application's **Edit** menu&nbsp;⟩ **Anchor**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Show UI tools</td>
+			<td>Show UI tools</td>
 			<td>**Home** tab</td>
 			<td>**UI** tab always present by default</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Pivot tools](./pivot-tools.md)</td>
+			<td>[Pivot tools](./pivot-tools.md)</td>
 			<td>**Model** tab</td>
 			<td><Chip label="no change" size="small" color="success" variant="outlined" /></td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Align tool](./align-tool.md)</td>
+			<td>[Align tool](./align-tool.md)</td>
 			<td>**Model** tab</td>
 			<td>Application's **Window** menu&nbsp;⟩ **3D**&nbsp;⟩ **Align**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Material Generator](./material-generator.md)</td>
+			<td>[Material Generator](./material-generator.md)</td>
 			<td>**Home** or **Model** tab&nbsp;⟩ Material picker dropdown&nbsp;⟩ **Generate**</td>
 			<td>Application's **Window** menu&nbsp;⟩ **3D**&nbsp;⟩ **Material&nbsp;Generator**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Solid modeling tools](../parts/solid-modeling.md)</td>
+			<td>[Solid modeling tools](../parts/solid-modeling.md)</td>
 			<td>**Model** tab</td>
 			<td><Chip label="no change" size="small" color="success" variant="outlined" /></td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Constraint pick/insert](../physics/index.md#constraints)</td>
+			<td>[Constraint pick/insert](../physics/index.md#constraints)</td>
 			<td>**Model** tab</td>
 			<td><Chip label="no change" size="small" color="success" variant="outlined" /></td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Show Welds toggle</td>
+			<td>Show Welds toggle</td>
 			<td>**Model** tab</td>
 			<td>Application's **View** menu&nbsp;⟩ **Show&nbsp;Welds**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Show Constraint Details toggle</td>
+			<td>Show Constraint Details toggle</td>
 			<td>**Model** tab</td>
 			<td>Application's **View** menu&nbsp;⟩ **Show&nbsp;Constraint&nbsp;Details**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Effect pick/insert](../effects/index.md)</td>
+			<td>[Effect pick/insert](../effects/index.md)</td>
 			<td>**Model** tab</td>
 			<td><Chip label="no change" size="small" color="success" variant="outlined" /></td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Spawn inserter</td>
+			<td>Spawn inserter</td>
 			<td>**Model** tab</td>
 			<td><Chip label="removed" size="small" color="error" variant="outlined" /> — Use standard insertion methods to insert a `Class.SpawnLocation`</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Advanced&nbsp;⟩ Insert Object</td>
+			<td>Advanced&nbsp;⟩ Insert Object</td>
 			<td>**Model** tab</td>
 			<td>Application's **Window** menu&nbsp;⟩ **Insert Object**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Advanced&nbsp;⟩ Model</td>
+			<td>Advanced&nbsp;⟩ Model</td>
 			<td>**Model** tab</td>
 			<td><Chip label="removed" size="small" color="error" variant="outlined" /> — Use **File** menu&nbsp;⟩ **Import&nbsp;3D**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Advanced&nbsp;⟩ Service</td>
+			<td>Advanced&nbsp;⟩ Service</td>
 			<td>**Model** tab</td>
 			<td>Right‑click over any visible service in the [Explorer](./explorer.md) and select **Show&nbsp;Services…** from the context menu</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Advanced&nbsp;⟩ Collision Groups</td>
+			<td>Advanced&nbsp;⟩ Collision Groups</td>
 			<td>**Model** tab</td>
 			<td>Application's **Window** menu&nbsp;⟩ **3D**&nbsp;⟩ **Collision&nbsp;Groups**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Advanced&nbsp;⟩ Run Script</td>
+			<td>Advanced&nbsp;⟩ Run Script</td>
 			<td>**Model** tab</td>
 			<td>Application's **Window** menu&nbsp;⟩ **Script**&nbsp;⟩ **Run&nbsp;Script**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Advanced&nbsp;⟩ Script, Local&nbsp;Script, Module&nbsp;Script</td>
+			<td>Advanced&nbsp;⟩ Script, Local&nbsp;Script, Module&nbsp;Script</td>
 			<td>**Model** tab</td>
 			<td>**Home** or **Script** tab&nbsp;⟩ **Script** pick/insert</td>
-    </tr>
+		</tr>
+	</tbody>
+</table>
+
+<br /><h3>Collaboration</h3>
+
+<table size="small">
+	<thead>
+		<tr>
+			<th width="20%">Action/Tool</th>
+			<th width="40%">Legacy Workflow(s)</th>
+			<th width="40%">New Workflow(s)</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>[Collaborate](../projects/collaboration.md) button</td>
+			<td>Right side of mezzanine bar</td>
+			<td><Chip label="no change" size="small" color="success" variant="outlined" /></td>
+		</tr>
+		<tr>
+		<td>[Manage Collaborators](../projects/collaboration.md#manage-collaborators)</td>
+			<td>Right side of mezzanine bar</td>
+			<td>🄐 Right side of mezzanine bar<br />🄑 Application's **Window** menu&nbsp;⟩ **Collaboration**&nbsp;⟩ **Manage&nbsp;Collaborators**</td>
+		</tr>
+		<tr>
+			<td>[Live Collaborators](../projects/collaboration.md#view-collaborators) window</td>
+			<td>Right side of mezzanine bar</td>
+			<td>🄐 Right side of mezzanine bar<br />🄑 Application's **Window** menu&nbsp;⟩ **Collaboration**&nbsp;⟩ **Live&nbsp;Collaborators**</td>
+		</tr>
+		<tr>
+			<td>[Comments](../projects/collaboration.md#comments) window</td>
+			<td>**View** tab</td>
+			<td>Application's **Window** menu&nbsp;⟩ **Collaboration**&nbsp;⟩ **Comments**</td>
+		</tr>
+		<tr>
+			<td>Create [comment](../projects/collaboration.md#create-comments)</td>
+			<td>Right side of mezzanine bar</td>
+			<td><Chip label="no change" size="small" color="success" variant="outlined" /></td>
+		</tr>
+		<tr>
+			<td>[Activity History](../projects/activity-history.md)</td>
+			<td>**View** tab</td>
+			<td>Application's **Window** menu&nbsp;⟩ **Activity&nbsp;History**</td>
+		</tr>
+		<tr>
+			<td>Team Create</td>
+			<td>**View** tab</td>
+			<td>Application's **Window** menu&nbsp;⟩ **Collaboration**&nbsp;⟩ **Team&nbsp;Create**</td>
+		</tr>
 	</tbody>
 </table>
 
 <br /><h3>Avatar and animation</h3>
 
 <table size="small">
-  <thead>
-    <tr>
-      <th width="20%">Action/Tool</th>
+	<thead>
+		<tr>
+			<th width="20%">Action/Tool</th>
 			<th width="40%">Legacy Workflow(s)</th>
 			<th width="40%">New Workflow(s)</th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr>
-      <td>[Import 3D](../art/modeling/3d-importer.md)</td>
-			<td>**Home** or **Avatar** tab</td>
-			<td>Application's **File** menu&nbsp;⟩ **Import&nbsp;3D**</td>
-    </tr>
+		</tr>
+	</thead>
+	<tbody>
 		<tr>
-      <td>[Animation Editor](../animation/editor.md)</td>
+			<td>[Import 3D](../art/modeling/3d-importer.md)</td>
+			<td>**Home** or **Avatar** tab</td>
+			<td>🄐 **Home** tab&nbsp;⟩ **Import&nbsp;3D**<br />🄑 Application's **File** menu&nbsp;⟩ **Import&nbsp;3D**</td>
+		</tr>
+		<tr>
+			<td>[Animation Editor](../animation/editor.md)</td>
 			<td>**Avatar** or **View** tab</td>
 			<td>🄐 **Avatar** tab&nbsp;⟩ **Animation**<br />🄑 Application's **Window** menu&nbsp;⟩ **Avatar**&nbsp;⟩ **Animation**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Accessory Fitting Tool](../art/accessories/accessory-fitting-tool.md)</td>
+			<td>[Accessory Fitting Tool](../art/accessories/accessory-fitting-tool.md)</td>
 			<td>**Avatar** tab</td>
 			<td>🄐 **Avatar** tab&nbsp;⟩ **Accessory**<br />🄑 Application's **Window** menu&nbsp;⟩ **Avatar**&nbsp;⟩ **Accessory**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Rig Builder](./rig-builder.md)</td>
+			<td>[Rig Builder](./rig-builder.md)</td>
 			<td>**Avatar** tab</td>
 			<td>**Home** or **Avatar** tab&nbsp;⟩ **Character**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Avatar Setup](../avatar-setup/index.md)</td>
+			<td>[Avatar Setup](../avatar-setup/index.md)</td>
 			<td>**Avatar** tab</td>
 			<td>🄐 **Avatar** tab&nbsp;⟩ **Setup**<br />🄑 Application's **Window** menu&nbsp;⟩ **Avatar**&nbsp;⟩ **Setup**</td>
-    </tr>
+		</tr>
 	</tbody>
 </table>
 
 <br /><h3>Testing and visualization</h3>
 
 <table size="small">
-  <thead>
-    <tr>
-      <th width="20%">Action/Tool</th>
+		<thead>
+		<tr>
+			<th width="20%">Action/Tool</th>
 			<th width="40%">Legacy Workflow(s)</th>
 			<th width="40%">New Workflow(s)</th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr>
-      <td>Playtest mode</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Playtest mode</td>
 			<td>**Home** or **Test** tab</td>
 			<td>Left side of mezzanine bar&nbsp;⟩ Mode picker</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Playtest buttons</td>
+			<td>Playtest buttons</td>
 			<td>**Home** or **Test** tab, or left side of mezzanine bar</td>
 			<td>Left side of mezzanine bar</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Client/server toggle](./testing-modes.md#toggle-clientserver)</td>
+			<td>[Client/server toggle](./testing-modes.md#toggle-clientserver)</td>
 			<td>**Home** or **Test** tab</td>
 			<td>Left side of mezzanine bar</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Pause/resume physics](./testing-modes.md#pause-and-resume-physics)</td>
+			<td>[Pause/resume physics](./testing-modes.md#pause-and-resume-physics)</td>
 			<td>**Test** tab</td>
 			<td>Options appear contextually on the left side of mezzanine bar while playtesting</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Multi-client simulation](./testing-modes.md#multi-client-simulation)</td>
+			<td>[Multi-client simulation](./testing-modes.md#multi-client-simulation)</td>
 			<td>**Test** tab</td>
 			<td>Left side of mezzanine bar&nbsp;⟩ Mode picker&nbsp;⟩ **Server&nbsp;&&nbsp;Clients**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Device Emulator](./testing-modes.md#device-emulation)</td>
+			<td>[Device Emulator](./testing-modes.md#device-emulation)</td>
 			<td>**Test** tab</td>
 			<td>Application's **View** menu&nbsp;⟩ **Device&nbsp;Emulator**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Controller Emulator](./testing-modes.md#controller-emulation)</td>
+			<td>[Controller Emulator](./testing-modes.md#controller-emulation)</td>
 			<td>**Test** tab</td>
 			<td><Chip label="removed by default" size="small" color="warning" variant="outlined" /> — Can be re‑added to a custom tab through **Add&nbsp;Tools**&nbsp;⟩ **Controller**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Player Emulator](./testing-modes.md#player-emulation)</td>
+			<td>[Player Emulator](./testing-modes.md#player-emulation)</td>
 			<td>**Test** tab</td>
 			<td>Application's **View** menu&nbsp;⟩ **Player&nbsp;Emulator**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>View Selector</td>
+			<td>View Selector</td>
 			<td>**View** tab</td>
 			<td>Application's **View** menu&nbsp;⟩ **Show&nbsp;View&nbsp;Selector**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Grid visualization</td>
+			<td>Grid visualization</td>
 			<td>**View** tab</td>
 			<td>Application's **View** menu&nbsp;⟩ **Show&nbsp;Grid** & **Show&nbsp;Grid&nbsp;Material**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Wireframe Rendering</td>
+			<td>Wireframe Rendering</td>
 			<td>**View** tab</td>
 			<td>Application's **View** menu&nbsp;⟩ **Show&nbsp;Wireframe&nbsp;Rendering**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>UI Visibility</td>
+			<td>UI Visibility</td>
 			<td>**View** tab</td>
 			<td>Application's **View** menu&nbsp;⟩ **Show&nbsp;UI**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Wind Direction](../environment/global-wind.md#wind-direction-widget)</td>
+			<td>[Wind Direction](../environment/global-wind.md#wind-direction-widget)</td>
 			<td>**View** tab</td>
 			<td>Application's **View** menu&nbsp;⟩ **Show&nbsp;Wind&nbsp;Direction**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>[Selection Style](./ui-overview.md#object-selection)</td>
+			<td>[Selection Style](./ui-overview.md#object-selection)</td>
 			<td>**View** tab</td>
 			<td>Studio Settings&nbsp;⟩ **Selection**&nbsp;⟩ Options in **Selection Visualization**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Team Test</td>
+			<td>Team Test</td>
 			<td>**Home** tab</td>
 			<td><Chip label="removed by default" size="small" color="warning" variant="outlined" /> — Can be re‑added to a custom tab through **Add&nbsp;Tools**&nbsp;⟩ **Team&nbsp;Test**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Mute</td>
+			<td>Mute</td>
 			<td>**Test** tab</td>
 			<td>Application's **View** menu&nbsp;⟩ **Mute**</td>
-    </tr>
+		</tr>
 	</tbody>
 </table>
 
 <br /><h3>Scripting and debugging</h3>
 
 <table size="small">
-  <thead>
-    <tr>
-      <th width="20%">Action/Tool</th>
+	<thead>
+		<tr>
+			<th width="20%">Action/Tool</th>
 			<th width="40%">Legacy Workflow(s)</th>
 			<th width="40%">New Workflow(s)</th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr>
-      <td>Back, Fwd</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Back, Fwd</td>
 			<td>**Script** tab</td>
 			<td><Chip label="no change" size="small" color="success" variant="outlined" /></td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Find/Replace (basic)</td>
+		<td>Find/Replace (basic)</td>
 			<td>**Script** tab</td>
 			<td>**Script** tab&nbsp;⟩ **Find** button popup&nbsp;⟩ **Find…**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Find/Replace (advanced)</td>
+			<td>Find/Replace (advanced)</td>
 			<td>**Script** tab</td>
 			<td>🄐 **Script** tab&nbsp;⟩ **Find** button popup&nbsp;⟩ **Find&nbsp;All**<br />🄑 Application's **Window** menu&nbsp;⟩ **Script**&nbsp;⟩ **Find&nbsp;All&nbsp;/&nbsp;Replace&nbsp;All**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Go to Line</td>
+		<td>Go to Line</td>
 			<td>**Script** tab</td>
 			<td><Chip label="no change" size="small" color="success" variant="outlined" /></td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Replace</td>
+			<td>Replace</td>
 			<td>**Script** tab</td>
 			<td><Chip label="removed by default" size="small" color="warning" variant="outlined" /> — Can be re‑added to a custom tab through **Add&nbsp;Tools**&nbsp;⟩ **Replace**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Select</td>
+			<td>Select</td>
 			<td>**Script** tab</td>
 			<td><Chip label="removed" size="small" color="error" variant="outlined" /> — Tasks can be achieved through right‑click&nbsp;⟩ **Select&nbsp;All** <Typography noWrap>(<kbd>Ctrl</kbd><kbd>A</kbd>/<kbd>⌘</kbd><kbd>A</kbd>)</Typography></td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Format Selection</td>
+			<td>Format Selection</td>
 			<td>**Script** tab</td>
 			<td>**Script** tab&nbsp;⟩ **Format**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Step Into, Step&nbsp;Over, Step&nbsp;Out</td>
+			<td>Step Into, Step&nbsp;Over, Step&nbsp;Out</td>
 			<td>**Script** tab</td>
 			<td>Buttons appear contextually on the left side of mezzanine bar when a breakpoint is hit</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Error handling and other scripting actions</td>
+			<td>Error handling and other scripting actions</td>
 			<td>**Script** tab</td>
-			<td>Application's **View** menu</td>
-    </tr>
+			<td>Application's **View** menu&nbsp;⟩ **Debug&nbsp;Error**</td>
+		</tr>
 		<tr>
-      <td>Script Analysis</td>
+			<td>Script Analysis</td>
 			<td>**View** tab</td>
 			<td>🄐 Application's **Window** menu&nbsp;⟩ **Script**&nbsp;⟩ **Analysis**<br />🄑 **Script** tab&nbsp;⟩ **Analysis**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Performance</td>
+			<td>Performance</td>
 			<td>**View** tab</td>
 			<td>Application's **Window** menu&nbsp;⟩ **Performance**&nbsp;⟩ **Performance**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Task Scheduler</td>
+			<td>Task Scheduler</td>
 			<td>**View** tab</td>
 			<td>Application's **Window** menu&nbsp;⟩ **Script**&nbsp;⟩ **Task&nbsp;Scheduler**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Script Performance</td>
+			<td>Script Performance</td>
 			<td>**View** tab</td>
 			<td>🄐 Application's **Window** menu&nbsp;⟩ **Script**&nbsp;⟩ **Performance**<br />🄑 **Script** tab&nbsp;⟩ **Performance**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Call Stack</td>
+			<td>Call Stack</td>
 			<td>**View** tab</td>
 			<td>🄐 Application's **Window** menu&nbsp;⟩ **Debug**&nbsp;⟩ **Call&nbsp;Stack**<br />🄑 **Script** tab&nbsp;⟩ **Call&nbsp;Stack**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Breakpoints</td>
+			<td>Breakpoints</td>
 			<td>**View** tab</td>
 			<td>🄐 Application's **Window** menu&nbsp;⟩ **Debug**&nbsp;⟩ **Breakpoints**<br />🄑 **Script** tab&nbsp;⟩ **Breakpoints**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Watch</td>
+			<td>Watch</td>
 			<td>**View** tab</td>
 			<td>🄐 Application's **Window** menu&nbsp;⟩ **Debug**&nbsp;⟩ **Watch**<br />🄑 **Script** tab&nbsp;⟩ **Watch**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Stats, Render, Physics, Network, Summary</td>
+			<td>Stats, Render, Physics, Network, Summary</td>
 			<td>**View** tab</td>
 			<td>Application's **Window** menu&nbsp;⟩ **Performance**</td>
-    </tr>
+		</tr>
 	</tbody>
 </table>
 
 <br /><h3>Other</h3>
 
 <table size="small">
-  <thead>
-    <tr>
-      <th width="20%">Action/Tool</th>
+	<thead>
+	<tr>
+			<th width="20%">Action/Tool</th>
 			<th width="40%">Legacy Workflow(s)</th>
 			<th width="40%">New Workflow(s)</th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr>
-      <td>[Activity History](../projects/activity-history.md)</td>
-			<td>**View** tab</td>
-			<td>Application's **Window** menu&nbsp;⟩ **Activity&nbsp;History**</td>
-    </tr>
+		</tr>
+	</thead>
+	<tbody>
 		<tr>
-      <td>Team Create</td>
-			<td>**View** tab</td>
-			<td>Application's **Window** menu&nbsp;⟩ **Collaboration**&nbsp;⟩ **Team&nbsp;Create**</td>
-    </tr>
-		<tr>
-      <td>Screen Shot</td>
+			<td>Screen Shot</td>
 			<td>**View** tab</td>
 			<td>Application's **View** menu&nbsp;⟩ **Screenshot**</td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Video Record</td>
+			<td>Video Record</td>
 			<td>**View** tab</td>
 			<td><Chip label="removed" size="small" color="error" variant="outlined" /></td>
-    </tr>
+		</tr>
 		<tr>
-      <td>Switch Windows</td>
+			<td>Switch Windows</td>
 			<td>**View** tab</td>
 			<td><Chip label="removed" size="small" color="error" variant="outlined" /></td>
-    </tr>
+		</tr>
 	</tbody>
 </table>

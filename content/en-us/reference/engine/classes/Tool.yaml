@@ -4,34 +4,16 @@ memory_category: PhysicsParts
 summary: |
   An object, such as a weapon, that can be equipped by a `Class.Humanoid`.
 description: |
-  Tools are objects that a `Class.Humanoid` object can equip. For players, they
-  are stored in a `Class.Backpack` object parented to a `Class.Player` object.
-  In-game, players may have multiple tools which appear as icons at the bottom
-  of the screen. Equipping a tool moves it from the Backpack and into a
-  `Class.Player.Character` model in the `Class.Workspace`. By default, tools are
-  held in the right hand and have a handle in them, which is a
-  `Class.BasePart|Part` named "Handle" inside (though one isn't required if
-  `Class.Tool.RequiresHandle` is off). Tools that are to be provided to
-  (re)spawning players ought to be stored in the `Class.StarterPack`.
-
-  On desktop, pressing a number key (1, 2, 3...) will equip a tool. Equipped
-  tools can be dropped into the Workspace by pressing Backspace. It's
-  recommended that you turn `Class.Tool.CanBeDropped` off so it isn't possible
-  to drop a tool, die, respawn and drop again to duplicate tools. On gamepads,
-  LB and RB buttons will equip tools. You can disable activation via left click
-  (or right trigger on gamepad) by setting `Class.Tool.ManualActivationOnly` on.
-  Doing so requires that you call Activate yourself through some sort of other
-  user input.
-
-  Tools aren't the only way to capture user input. You can also use
-  `Class.ContextActionService`, `Class.UserInputService` or
-  `Class.Player:GetMouse()`. If you need a Tool to have multiple actions, such
-  as pressing a key while the Tool is equipped, you should use
-  ContextActionService's `Class.ContextActionService:BindAction()|BindAction`
-  and `Class.ContextActionService:UnbindAction()|UnbindAction` in the
-  `Class.Tool.Equipped|Equipped` and `Class.Tool.Unequipped|Unequipped` events,
-  respectively. Use a `Class.LocalScript` send these actions to the server via a
-  `Class.RemoteFunction` inside the Tool.
+  A `Tool` is an object that a `Class.Humanoid` object can equip. For players,
+  they are stored in a `Class.Backpack` object parented to a `Class.Player`
+  object. In-experience, players may have multiple tools which appear as icons
+  at the bottom of the screen. Equipping a tool moves it from the
+  `Class.Backpack` and into a `Class.Player.Character` model in the
+  `Class.Workspace`. By default, tools are held in the right hand and have a
+  handle in them, which is a `Class.BasePart` named `Handle` inside (although
+  one isn't required if `Class.Tool.RequiresHandle` is `false`). Tools that are
+  to be provided to (re)spawning players should be stored in the
+  `Class.StarterPack`.
 code_samples:
   - Explode-Tool-Example
   - Sword-Tool-Example
@@ -63,7 +45,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Tool.Enabled
     summary: |
@@ -91,7 +74,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Tool.Grip
     summary: |
@@ -114,7 +98,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Tool.GripForward
     summary: |
@@ -144,7 +129,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Tool.GripPos
     summary: |
@@ -173,7 +159,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Tool.GripRight
     summary: |
@@ -203,7 +190,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Tool.GripUp
     summary: |
@@ -233,23 +221,23 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Tool.ManualActivationOnly
     summary: |
-      The ManualActivationOnly property controls whether the `Class.Tool` can be
-      activated without executing `Class.Tool:Activate()`.
+      Controls whether the `Class.Tool` can be activated without executing
+      `Class.Tool:Activate()`.
     description: |
-      The ManualActivationOnly property controls whether the `Class.Tool` can be
-      activated without explicitly executing `Class.Tool:Activate()` in a
-      script.
+      This property controls whether the `Class.Tool` can be activated without
+      explicitly executing `Class.Tool:Activate()` in a script.
 
-      When set to true, the tool will only fire `Class.Tool.Activated` when
+      When set to `true`, the tool will only fire `Class.Tool.Activated` when
       `Class.Tool:Activate()` is called. This also suppresses the
       `Class.ContextActionService:BindActivate()` function.
 
-      When set to false, mouse clicks (when the tool is equipped) will also fire
-      `Class.Tool.Activated`.
+      When set to `false`, mouse clicks (when the tool is equipped) will also
+      fire `Class.Tool.Activated`.
     code_samples:
       - sprint-tool
     type: boolean
@@ -263,7 +251,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Tool.RequiresHandle
     summary: |
@@ -292,7 +281,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Tool.ToolTip
     summary: |
@@ -334,7 +324,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 methods:
   - name: Tool:Activate
@@ -353,7 +344,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Tool:Deactivate
     summary: |
@@ -371,7 +363,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 events:
   - name: Tool.Activated
@@ -407,7 +400,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Tool.Deactivated
     summary: |
@@ -440,7 +434,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Tool.Equipped
     summary: |
@@ -466,7 +461,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: Tool.Unequipped
     summary: |
@@ -486,6 +482,7 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 callbacks: []

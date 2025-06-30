@@ -17,14 +17,6 @@ export const sections = [
         ]
       },
       {
-        title: "Assistant for analytics",
-        description: "Assistant integrates with your analytics insights to help you dive deeper into player feedback and your experience's weekly and monthly performance.",
-        image: "/assets/analytics/feedback/AnalyticsAssistantFeedbackReport.png",
-        links: [
-          { text: "Docs", href: "assistant/analytics-assistant" }
-        ]
-      },
-      {
         title: "Assistant in the documentation",
         description: "Assistant is available directly from the documentation, in the upper navigation bar.",
         image: "/assets/assistant/AssistantDocumentationSite.png"

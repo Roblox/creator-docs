@@ -16,8 +16,17 @@ tags:
 deprecation_message: ''
 properties:
   - name: InputBinding.Backward
-    summary: ''
-    description: ''
+    summary: |
+      Specifies an alternate `Enum.KeyCode` for dispatching directionally
+      "backward" inputs to the parent `Class.InputAction`.
+    description: |
+      Specifies an alternate `Enum.KeyCode` for dispatching directionally
+      "backward" inputs to `Class.InputAction:GetState()|GetState()` and the
+      `Class.InputAction.StateChanged|StateChanged` event of the parent
+      `Class.InputAction`. Only applies when the parent action's
+      `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction3D`, in
+      which case the dispatched value will be a `Datatype.Vector3` with its
+      `Datatype.Vector3.Z|Z` component between `0` and `-1`.
     code_samples: []
     type: KeyCode
     tags: []
@@ -30,7 +39,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputBinding.Down
     summary: |
@@ -40,12 +50,24 @@ properties:
       Specifies an alternate `Enum.KeyCode` for dispatching directionally "down"
       inputs to `Class.InputAction:GetState()|GetState()` and the
       `Class.InputAction.StateChanged|StateChanged` event of the parent
-      `Class.InputAction`. When the parent action's
-      `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction1D`, the
-      dispatched value will be between `0` and `-1`. When the parent action's
-      `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction2D`, the
-      dispatched value will be a `Datatype.Vector2` between `(0, 0)` and
-      `(0, -1)`.
+      `Class.InputAction`.
+
+      When the parent action's `Class.InputAction.Type|Type` is
+      `Enum.InputActionType|Direction1D`, the dispatched value will be a number
+      between `0` and `-1`.
+
+      When the parent action's `Class.InputAction.Type|Type` is
+      `Enum.InputActionType|Direction2D`, the dispatched value will be a
+      `Datatype.Vector2` with its `Datatype.Vector2.Y|Y` component between `0`
+      and `-1`.
+
+      When the parent action's `Class.InputAction.Type|Type` is
+      `Enum.InputActionType|Direction3D`, the dispatched value will be a
+      `Datatype.Vector3` with its `Datatype.Vector3.Y|Y` component between `0`
+      and `-1`.
+
+      Not applicable when the parent action's `Class.InputAction.Type|Type` is
+      `Enum.InputActionType|Bool`.
     code_samples: []
     type: KeyCode
     tags: []
@@ -58,11 +80,21 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputBinding.Forward
-    summary: ''
-    description: ''
+    summary: |
+      Specifies an alternate `Enum.KeyCode` for dispatching directionally
+      "forward" inputs to the parent `Class.InputAction`.
+    description: |
+      Specifies an alternate `Enum.KeyCode` for dispatching directionally
+      "forward" inputs to `Class.InputAction:GetState()|GetState()` and the
+      `Class.InputAction.StateChanged|StateChanged` event of the parent
+      `Class.InputAction`. Only applies when the parent action's
+      `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction3D`, in
+      which case the dispatched value will be a `Datatype.Vector3` with its
+      `Datatype.Vector3.Z|Z` component between `0` and `1`.
     code_samples: []
     type: KeyCode
     tags: []
@@ -75,7 +107,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputBinding.KeyCode
     summary: |
@@ -102,7 +135,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputBinding.Left
     summary: |
@@ -112,10 +146,20 @@ properties:
       Specifies an alternate `Enum.KeyCode` for dispatching directionally "left"
       inputs to `Class.InputAction:GetState()|GetState()` and the
       `Class.InputAction.StateChanged|StateChanged` event of the parent
-      `Class.InputAction`. Only applies when the parent action's
-      `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction2D`, in
-      which case the dispatched value will be a `Datatype.Vector2` between
-      `(0, 0)` and `(-1, 0)`.
+      `Class.InputAction`.
+
+      When the parent action's `Class.InputAction.Type|Type` is
+      `Enum.InputActionType|Direction2D`, the dispatched value will be a
+      `Datatype.Vector2` with its `Datatype.Vector2.X|X` component between `0`
+      and `-1`.
+
+      When the parent action's `Class.InputAction.Type|Type` is
+      `Enum.InputActionType|Direction3D`, the dispatched value will be a
+      `Datatype.Vector3` with its `Datatype.Vector3.X|X` component between `0`
+      and `-1`.
+
+      Not applicable when the parent action's `Class.InputAction.Type|Type` is
+      `Enum.InputActionType|Direction1D` or `Enum.InputActionType|Bool`.
     code_samples: []
     type: KeyCode
     tags: []
@@ -128,7 +172,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputBinding.PressedThreshold
     summary: |
@@ -155,7 +200,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputBinding.ReleasedThreshold
     summary: |
@@ -182,7 +228,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputBinding.Right
     summary: |
@@ -192,10 +239,20 @@ properties:
       Specifies an alternate `Enum.KeyCode` for dispatching directionally
       "right" inputs to `Class.InputAction:GetState()|GetState()` and the
       `Class.InputAction.StateChanged|StateChanged` event of the parent
-      `Class.InputAction`. Only applies when the parent action's
-      `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction2D`, in
-      which case the dispatched value will be a `Datatype.Vector2` between
-      `(0, 0)` and `(1, 0)`.
+      `Class.InputAction`.
+
+      When the parent action's `Class.InputAction.Type|Type` is
+      `Enum.InputActionType|Direction2D`, the dispatched value will be a
+      `Datatype.Vector2` with its `Datatype.Vector2.X|X` component between `0`
+      and `1`.
+
+      When the parent action's `Class.InputAction.Type|Type` is
+      `Enum.InputActionType|Direction3D`, the dispatched value will be a
+      `Datatype.Vector3` with its `Datatype.Vector3.X|X` component between `0`
+      and `1`.
+
+      Not applicable when the parent action's `Class.InputAction.Type|Type` is
+      `Enum.InputActionType|Direction1D` or `Enum.InputActionType|Bool`.
     code_samples: []
     type: KeyCode
     tags: []
@@ -208,7 +265,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputBinding.Scale
     summary: |
@@ -216,8 +274,8 @@ properties:
       `Class.InputAction`.
     description: |
       Amount by which to linearly scale the values of an `Class.InputAction`
-      with `Class.InputAction.Type|Type` of `Enum.InputActionType|Direction1D`
-      or `Enum.InputActionType|Direction2D`.
+      with `Class.InputAction.Type|Type` of `Enum.InputActionType|Direction1D`,
+      `Enum.InputActionType|Direction2D`, or `Enum.InputActionType|Direction3D`.
     code_samples: []
     type: float
     tags: []
@@ -230,7 +288,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputBinding.UIButton
     summary: |
@@ -249,7 +308,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputBinding.Up
     summary: |
@@ -259,12 +319,24 @@ properties:
       Specifies an alternate `Enum.KeyCode` for dispatching directionally "up"
       inputs to `Class.InputAction:GetState()|GetState()` and the
       `Class.InputAction.StateChanged|StateChanged` event of the parent
-      `Class.InputAction`. When the parent action's
-      `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction1D`, the
-      dispatched value will be between `0` and `1`. When the parent action's
-      `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction2D`, the
-      dispatched value will be a `Datatype.Vector2` between `(0, 0)` and
-      `(0, 1)`.
+      `Class.InputAction`.
+
+      When the parent action's `Class.InputAction.Type|Type` is
+      `Enum.InputActionType|Direction1D`, the dispatched value will be a number
+      between `0` and `1`.
+
+      When the parent action's `Class.InputAction.Type|Type` is
+      `Enum.InputActionType|Direction2D`, the dispatched value will be a
+      `Datatype.Vector2` with its `Datatype.Vector2.Y|Y` component between `0`
+      and `1`.
+
+      When the parent action's `Class.InputAction.Type|Type` is
+      `Enum.InputActionType|Direction3D`, the dispatched value will be a
+      `Datatype.Vector3` with its `Datatype.Vector3.Y|Y` component between `0`
+      and `1`.
+
+      Not applicable when the parent action's `Class.InputAction.Type|Type` is
+      `Enum.InputActionType|Bool`.
     code_samples: []
     type: KeyCode
     tags: []
@@ -277,7 +349,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputBinding.Vector2Scale
     summary: |
@@ -298,7 +371,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 methods: []
 events: []

@@ -38,6 +38,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
+      - Basic
       - UI
     writeCapabilities: []
   - name: SelectionBox.SurfaceColor
@@ -67,6 +68,7 @@ properties:
       can_load: true
       can_save: false
     capabilities:
+      - Basic
       - UI
     writeCapabilities: []
   - name: SelectionBox.SurfaceColor3
@@ -91,6 +93,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
+      - Basic
       - UI
     writeCapabilities: []
   - name: SelectionBox.SurfaceTransparency
@@ -117,6 +120,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
+      - Basic
       - UI
     writeCapabilities: []
 methods: []

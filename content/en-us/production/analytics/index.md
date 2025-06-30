@@ -49,7 +49,7 @@ After you update your experience, visit analytics to understand how the update i
 3. [Monetization](../../production/analytics/monetization.md): Payer conversion, ARPPU, and revenue.
 4. [Acquisition](../../production/analytics/acquisition.md): New users and qualified play through rate.
 
-You can monitor major weekly changes and benchmark movement on your experience overview page. [Insights](#analytics-insights) highlights large movements in key metrics such as DAU, new users, and revenue.
+You can monitor major weekly changes and benchmark movement on your experience overview page. [Insights](./insights.md) highlights large movements in key metrics such as DAU, new users, and revenue.
 
 <figure>
     <img src="../../assets/analytics/overview/step3.png" width="80%"/>
@@ -98,7 +98,7 @@ Watchlists are applied on the account level, are private, and persist when toggl
     <figcaption>Experience watchlist on Analytics Home.</figcaption>
 </figure>
 
-Clicking on an experience you're monitoring takes you to the experience overview page. If applicable, [analytics insights](#analytics-insights) offer direction on next steps and redirect you to applicable documentation and relevant analytics.
+Clicking on an experience you're monitoring takes you to the experience overview page. If applicable, [analytics insights](./insights.md) offer direction on next steps and redirect you to applicable documentation and relevant analytics.
 
 ### Track avatar sales and revenue
 
@@ -116,25 +116,3 @@ Avatar items you've sold automatically appear within the **Avatar Items** tab. H
 ### Track user acquisition
 
 The **Share Links** tab provides information about the **Link Visits** metric, which tracks how many users have arrived on your experience details page by clicking on the share link you created.
-
-## Analytics insights
-
-In each experience's overview page, there are insights that highlight major changes in key metrics and areas of improvement.
-
-For example, the insight below shows that your revenue declined 21%, but the revenue of similar experiences increased by 15%. This is a sign that you might want to take action and look deeper into your monetization to diagnose potential issues. You can click **Explore this metric** to slice and dice your revenue by platform, country, and more. These insights are updated daily and are available for experiences with 100+ DAU.
-
-<figure>
-    <img src="../../assets/analytics/overview/Insights.png" width="80%"/>
-</figure>
-
-You can also use Assistant, Roblox's AI helper, to dive deeper into your experience's analytics insights. For more information, see [Assistant for analytics](../../assistant/analytics-assistant.md).
-
-### Achievement panel
-
-Your achievement panel highlights key metric milestones that you've reached over the past 6 months. This insight is meant to help you celebrate progress when a metric has reached a six month high. Note that if a metric is at a six month high but below benchmark comparisons, you should still continue to improve it.
-
-<figure>
-    <img src="../../assets/analytics/overview/Achievements.png" width="50%"/>
-</figure>
-
-For more information on how analytics works, see [Analytics dashboard](../../production/analytics/analytics-dashboard.md). For more information on how to use analytics to optimize your experience's design, see [Analytics essentials](../../production/game-design/analytics-essentials.md).

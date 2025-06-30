@@ -3,10 +3,6 @@ title: Asset privacy
 description: Explore how the asset privacy system lets you control which Roblox creators can use your assets in their experiences.
 ---
 
-<Alert severity="success">
-If you opt into the Asset Privacy beta, decals, images, and meshes are automatically restricted when you upload them to the cloud unless you manually set them as open use on the asset's configuration page.
-</Alert>
-
 The **asset privacy system** lets you control how creators and experiences can use and distribute your models, meshes, images, decals, audio, and video assets on Roblox. Assets can have one of two access privacy types:
 
 - **Open Use** — Any creator can use the asset within their experiences.
@@ -25,10 +21,6 @@ The asset privacy system controls which creators and experiences can use the ass
 ## Grant permission
 
 In order for a collaborator, such as an individual creator or group, or an experience to use one of your restricted assets, you must explicitly grant permission before it's visible or audible at runtime. Once a collaborator or experience has **explicit** permission to use a restricted asset, they also receive **implicit** permission to use the asset in a variety of additional scenarios. For more information, see the following subsections.
-
-<Alert severity="warning">
-If you receive a model or package from the [Creator Store](../../production/creator-store.md) that was **created** _after_ late May 2025, all of its underlying restricted assets are visible or audible during runtime. For any assets created prior to this date, you must receive explicit permission to use each restricted asset in order for them to be visible or audible during runtime.
-</Alert>
 
 ### To collaborators
 

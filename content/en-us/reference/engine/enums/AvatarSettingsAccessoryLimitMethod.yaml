@@ -16,3 +16,13 @@ items:
     value: 1
     tags: []
     deprecation_message: ''
+  - name: PreviewScale
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: PreviewRemove
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''

@@ -88,10 +88,34 @@
           {
             "name": "creator",
             "in": "query",
-            "description": "The creator type and ID. E.g. \"user/123\" or \"group/456\"",
+            "description": "Deprecated: Please refer to the 'userId' and 'groupId' properties instead. The creator type and ID. E.g. \"user/123\" or \"group/456\"",
             "schema": {
               "pattern": "^(user|group)/\\d+$",
               "type": "string"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "query",
+            "description": "The User ID of the creator. Only one of 'userId' and 'groupId' can be present in a query.",
+            "schema": {
+              "maximum": 2147483647,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "groupId",
+            "in": "query",
+            "description": "The Group ID of the creator. Only one of 'userId' and 'groupId' can be present in a query.",
+            "schema": {
+              "maximum": 2147483647,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int64",
+              "nullable": true
             }
           },
           {
@@ -148,21 +172,27 @@
                 "Trending",
                 "Top",
                 "AudioDuration",
-                "CreateTime"
+                "CreateTime",
+                "UpdatedTime",
+                "Ratings"
               ],
               "x-enum-varnames": [
                 "Relevance",
                 "Trending",
                 "Top",
                 "AudioDuration",
-                "CreateTime"
+                "CreateTime",
+                "UpdatedTime",
+                "Ratings"
               ],
               "x-enum-descriptions": [
                 "Relevance",
                 "Trending",
                 "Top",
                 "AudioDuration",
-                "CreateTime"
+                "CreateTime",
+                "UpdatedTime",
+                "Ratings"
               ]
             }
           },
@@ -332,6 +362,9 @@
         ],
         "security": [
           {
+            "roblox-legacy-cookie": []
+          },
+          {
             "roblox-api-key": []
           }
         ]
@@ -474,7 +507,20 @@
         "properties": {
           "creator": {
             "type": "string",
-            "description": "The creator type and ID. E.g. user/123 or group/456.",
+            "description": "Deprecated: Please refer to the 'userId' and 'groupId' properties instead.\r\nThe creator type and ID. E.g. user/123 or group/456.",
+            "nullable": true,
+            "deprecated": true
+          },
+          "userId": {
+            "type": "integer",
+            "description": "The User ID of the creator. Required if the asset is individual-user-owned.",
+            "format": "int64",
+            "nullable": true
+          },
+          "groupId": {
+            "type": "integer",
+            "description": "The Group ID. Required if the asset is group-owned.",
+            "format": "int64",
             "nullable": true
           },
           "name": {
@@ -1566,7 +1612,15 @@
         "nullable": true
       },
       "SortCategory": {
-        "enum": ["Relevance", "Trending", "Top", "AudioDuration", "CreateTime"],
+        "enum": [
+          "Relevance",
+          "Trending",
+          "Top",
+          "AudioDuration",
+          "CreateTime",
+          "UpdatedTime",
+          "Ratings"
+        ],
         "type": "string",
         "description": "The category to sort the search results by.",
         "x-enumNames": [
@@ -1574,21 +1628,27 @@
           "Trending",
           "Top",
           "AudioDuration",
-          "CreateTime"
+          "CreateTime",
+          "UpdatedTime",
+          "Ratings"
         ],
         "x-enum-varnames": [
           "Relevance",
           "Trending",
           "Top",
           "AudioDuration",
-          "CreateTime"
+          "CreateTime",
+          "UpdatedTime",
+          "Ratings"
         ],
         "x-enum-descriptions": [
           "Relevance",
           "Trending",
           "Top",
           "AudioDuration",
-          "CreateTime"
+          "CreateTime",
+          "UpdatedTime",
+          "Ratings"
         ]
       },
       "SortDirection": {
@@ -2098,6 +2158,12 @@
       }
     },
     "securitySchemes": {
+      "roblox-legacy-cookie": {
+        "type": "apiKey",
+        "description": "A browser cookie that represents the identity of a Roblox user. DO NOT SHARE THIS. Sharing this will allow someone to log in as you and to steal your Robux and items. When possible, use API keys with the x-api-key header or OAuth 2.0 instead for authentication.",
+        "in": "cookie",
+        "name": ".ROBLOSECURITY"
+      },
       "roblox-api-key": {
         "type": "apiKey",
         "description": "A configurable key that allows granular access to Roblox resources. See https://create.roblox.com/docs/cloud/auth/api-keys for more information.",

@@ -1,0 +1,158 @@
+name: RecommendationService
+type: class
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties: []
+methods:
+  - name: RecommendationService:LogActionEvent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: actionType
+        type: RecommendationActionType
+        default: ''
+        summary: ''
+      - name: itemId
+        type: string
+        default: ''
+        summary: ''
+      - name: tracingId
+        type: string
+        default: ''
+        summary: ''
+      - name: actionEventDetails
+        type: Dictionary
+        default: nil
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - InternalTest
+    writeCapabilities: []
+  - name: RecommendationService:LogImpressionEvent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: impressionType
+        type: RecommendationImpressionType
+        default: ''
+        summary: ''
+      - name: itemId
+        type: string
+        default: ''
+        summary: ''
+      - name: tracingId
+        type: string
+        default: ''
+        summary: ''
+      - name: impressionEventDetails
+        type: Dictionary
+        default: nil
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - InternalTest
+    writeCapabilities: []
+  - name: RecommendationService:GenerateItemListAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: generateRecommendationItemListRequest
+        type: Dictionary
+        default: ''
+        summary: ''
+    returns:
+      - type: RecommendationPages
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - InternalTest
+    writeCapabilities: []
+  - name: RecommendationService:RegisterItemAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: registerRecommendationItemsRequest
+        type: Dictionary
+        default: ''
+        summary: ''
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - InternalTest
+    writeCapabilities: []
+  - name: RecommendationService:RemoveItemAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: itemId
+        type: string
+        default: ''
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - InternalTest
+    writeCapabilities: []
+  - name: RecommendationService:UpdateItemAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: updateRecommendationItemRequest
+        type: Dictionary
+        default: ''
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - InternalTest
+    writeCapabilities: []
+events: []
+callbacks: []

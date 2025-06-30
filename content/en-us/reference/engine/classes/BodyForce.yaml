@@ -41,7 +41,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: BodyForce.force
     summary: |
@@ -65,7 +66,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
 methods: []
 events: []

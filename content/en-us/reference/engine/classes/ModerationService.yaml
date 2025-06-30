@@ -1,4 +1,4 @@
-name: Moderation
+name: ModerationService
 type: class
 memory_category: Instances
 summary: ''
@@ -13,7 +13,7 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
-  - name: Moderation:InternalCreateReviewableContentAsync
+  - name: ModerationService:InternalCreateReviewableContentAsync
     summary: ''
     description: ''
     code_samples: []
@@ -33,7 +33,7 @@ methods:
     capabilities:
       - InternalTest
     writeCapabilities: []
-  - name: Moderation:InternalRequestReviewableContentReviewAsync
+  - name: ModerationService:InternalRequestReviewableContentReviewAsync
     summary: ''
     description: ''
     code_samples: []
@@ -55,7 +55,7 @@ methods:
     writeCapabilities: []
 events: []
 callbacks:
-  - name: Moderation.InternalProcessReviewableContentEvent
+  - name: ModerationService.InternalProcessReviewableContentEvent
     summary: ''
     description: ''
     code_samples: []

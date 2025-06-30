@@ -32,6 +32,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
+      - Basic
       - UI
     writeCapabilities: []
 methods: []

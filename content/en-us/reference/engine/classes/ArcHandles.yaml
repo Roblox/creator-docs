@@ -35,7 +35,9 @@ properties:
       can_load: true
       can_save: true
     capabilities:
+      - Basic
       - UI
+      - Input
     writeCapabilities: []
 methods: []
 events:
@@ -54,7 +56,9 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
+      - Basic
       - UI
+      - Input
     writeCapabilities: []
   - name: ArcHandles.MouseButton1Up
     summary: |
@@ -71,7 +75,9 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
+      - Basic
       - UI
+      - Input
     writeCapabilities: []
   - name: ArcHandles.MouseDrag
     summary: |
@@ -98,7 +104,9 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
+      - Basic
       - UI
+      - Input
     writeCapabilities: []
   - name: ArcHandles.MouseEnter
     summary: |
@@ -115,7 +123,9 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
+      - Basic
       - UI
+      - Input
     writeCapabilities: []
   - name: ArcHandles.MouseLeave
     summary: |
@@ -132,6 +142,8 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
+      - Basic
       - UI
+      - Input
     writeCapabilities: []
 callbacks: []

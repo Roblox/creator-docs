@@ -105,8 +105,6 @@ navigation:
         section:
           - title: Health pickups
             path: /tutorials/use-case-tutorials/scripting/intermediate-scripting/create-a-health-pickup
-          - title: Save data
-            path: /tutorials/use-case-tutorials/scripting/intermediate-scripting/save-data
           - title: Player tools
             path: /tutorials/use-case-tutorials/scripting/intermediate-scripting/create-player-tools
           - title: Hit detection with lasers
@@ -117,3 +115,7 @@ navigation:
         path: /tutorials/use-case-tutorials/input-and-camera/control-the-users-camera
       - title: Detect user input
         path: /tutorials/use-case-tutorials/input-and-camera/detect-user-input
+  - title: Data storage
+    section:
+      - title: Save player data
+        path: /tutorials/use-case-tutorials/data-storage/save-player-data

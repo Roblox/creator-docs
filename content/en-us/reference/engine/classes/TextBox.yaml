@@ -4,38 +4,34 @@ memory_category: Gui
 summary: |
   A 2D user interface element that displays player-editable text.
 description: |
-  A **TextBox** allows the player to provide text input. It behaves similarly to
-  a `Class.TextButton`, except that a single TextBox can be put in focus by
-  clicking, tapping or gamepad selection. While in focus, the player can use a
+  A `TextBox` allows the player to provide text input. It behaves similarly to a
+  `Class.TextButton`, except that a single `TextBox` can be put in focus by
+  clicking, tapping, or gamepad selection. While in focus, the player can use a
   keyboard to change the `Class.TextBox.Text|Text` property.
 
   - If there is no text, the `Class.TextBox.PlaceholderText|PlaceholderText`
     will be visible. This is useful prompting players of the kind or format of
     data they should input.
   - By default, the `Class.TextBox.ClearTextOnFocus|ClearTextOnFocus` property
-    is enabled and ensures there is no existing text when a TextBox is focused.
-    This may not be desirable for text that should be editable by the player.
+    is enabled and ensures there is no existing text when a `TextBox` is
+    focused. This may not be desirable for text that should be editable by the
+    player.
   - The `Class.TextBox.MultiLine|MultiLine` property allows players to enter
     multiple lines of text with newline characters (`\n`).
 
-  The `Class.ContextActionService` honors TextBox keybinds and will
-  automatically prevent key press events from being passed to actions bound with
-  `Class.ContextActionService:BindAction()`. `Class.UserInputService.InputBegan`
-  and related events will still fire while a TextBox is in focus.
-
   #### Focus State
 
-  It is possible to detect and change the focus state of a TextBox:
+  It is possible to detect and change the focus state of a `TextBox`:
 
   - You can use `Class.TextBox:CaptureFocus()|CaptureFocus` when a dialogue
-    appears so that the player doesn't have to click on a TextBox when it
+    appears so that the player doesn't have to click on a `TextBox` when it
     becomes available; you can use `Class.ContextActionService:BindAction()` to
-    bind a certain key to focus a TextBox using this function. When a TextBox
-    comes into focus, the `Class.TextBox.Focused|Focused` event fires.
-  - You can detect if a certain TextBox is in focus by using
+    bind a certain key to focus a `TextBox` using this function. When a
+    `TextBox` comes into focus, the `Class.TextBox.Focused|Focused` event fires.
+  - You can detect if a certain `TextBox` is in focus by using
     `Class.TextBox:IsFocused()|IsFocused`. Alternatively,
     `Class.UserInputService:GetFocusedTextBox()` can be used to check if any
-    TextBox is in focus.
+    `TextBox` is in focus.
   - When the player is done inputting text, the
     `Class.TextBox.FocusLost|FocusLost` event fires, indicating if the user
     pressed <kbd>Enter</kbd> to submit text along with the `Class.InputObject`
@@ -44,12 +40,12 @@ description: |
     `Class.TextBox.ReturnPressedFromOnScreenKeyboard|ReturnPressedFromOnScreenKeyboard`
     may also fire.
   - If some more important matter comes up during gameplay, you can
-    `Class.TextBox:ReleaseFocus()|ReleaseFocus` of the TextBox so that a
+    `Class.TextBox:ReleaseFocus()|ReleaseFocus` of the `TextBox` so that a
     player's keyboard input returns to your game.
 
   #### Text Editing
 
-  A TextBox supports text selection through its
+  A `TextBox` supports text selection through its
   `Class.TextBox.CursorPosition|CursorPosition` and
   `Class.TextBox.SelectionStart|SelectionStart` properties. Using
   `Class.Object:GetPropertyChangedSignal()|GetPropertyChangedSignal`, you can
@@ -70,10 +66,10 @@ deprecation_message: ''
 properties:
   - name: TextBox.ClearTextOnFocus
     summary: |
-      Determines whether clicking on the TextBox will clear its
+      Determines whether clicking on the `TextBox` will clear its
       `Class.TextBox.Text` property.
     description: |
-      Determines whether clicking on the TextBox will clear its
+      Determines whether clicking on the `TextBox` will clear its
       `Class.TextBox.Text` property
     code_samples: []
     type: boolean
@@ -281,11 +277,11 @@ properties:
     writeCapabilities: []
   - name: TextBox.MultiLine
     summary: |
-      When set to true, text inside a TextBox is able to move onto multiple
+      When set to `true`, text inside a `TextBox` is able to move onto multiple
       lines. This also enables players to use the enter key to move onto a new
       line.
     description: |
-      When set to true, text inside a TextBox is able to move onto multiple
+      When set to `true`, text inside a `TextBox` is able to move onto multiple
       lines. This also enables players to use the enter key to move onto a new
       line.
     code_samples: []
@@ -344,10 +340,10 @@ properties:
   - name: TextBox.PlaceholderColor3
     summary: |
       Sets the text color that gets used when no text has been entered into the
-      TextBox yet.
+      `TextBox` yet.
     description: |
       Sets the text color that gets used when no text has been entered into the
-      TextBox yet.
+      `TextBox` yet.
     code_samples: []
     type: Color3
     tags: []
@@ -366,10 +362,10 @@ properties:
   - name: TextBox.PlaceholderText
     summary: |
       Sets the text that gets displayed when no text has been entered into the
-      TextBox yet.
+      `TextBox` yet.
     description: |
       Sets the text that gets displayed when no text has been entered into the
-      TextBox yet.
+      `TextBox` yet.
     code_samples: []
     type: string
     tags: []
@@ -387,7 +383,7 @@ properties:
     writeCapabilities: []
   - name: TextBox.RichText
     summary: |
-      Determines whether the TextBox renders the `Class.TextBox.Text` string
+      Determines whether the `TextBox` renders the `Class.TextBox.Text` string
       using rich text formatting.
     description: |
       This property determines whether the `Class.TextBox` renders the
@@ -1006,9 +1002,9 @@ methods:
     writeCapabilities: []
   - name: TextBox:IsFocused
     summary: |
-      Returns true if the textbox is focused, or false if it is not.
+      Returns `true` if the `TextBox` is focused or `false` if it is not.
     description: |
-      Returns true if the textbox is focused, or false if it is not.
+      Returns `true` if the `TextBox` is focused or `false` if it is not.
     code_samples: []
     parameters: []
     returns:
@@ -1067,11 +1063,11 @@ events:
     summary: |
       Fires when the client lets their focus leave the `Class.TextBox`.
     description: |
-      Fires when the client lets their focus leave the TextBox - typically when
-      a client clicks/taps outside of the TextBox. This also fires if a TextBox
-      forces focus on the user.
+      Fires when the client lets their focus leave the `TextBox`, typically when
+      a client clicks/taps outside of it. This also fires if a `TextBox` forces
+      focus on the user.
 
-      It can be used alongside `Class.TextBox.Focused` to track when a TextBox
+      It can be used alongside `Class.TextBox.Focused` to track when a `TextBox`
       gains and loses focus.
 
       See also the `Class.UserInputService.TextBoxFocused` and
@@ -1088,13 +1084,13 @@ events:
         default: ''
         summary: |
           A boolean indicating whether the client pressed Enter to lose focus
-          (_true_) or not (_false_).
+          (`true`) or not (`false`).
       - name: inputThatCausedFocusLoss
         type: InputObject
         default: ''
         summary: |
           An `Class.InputObject` instance indicating the type of input that
-          caused the TextBox to lose focus.
+          caused the `TextBox` to lose focus.
     tags: []
     deprecation_message: ''
     security: None
@@ -1106,8 +1102,8 @@ events:
       Fires when the `Class.TextBox` gains focus.
     description: |
       Fires when the `Class.TextBox` gains focus - typically when a client
-      clicks/taps on a TextBox to begin text entry. This also fires if a TextBox
-      forces focus on the user.
+      clicks/taps on a `TextBox` to begin text entry. This also fires if a
+      `TextBox` forces focus on the user.
 
       It can be used alongside `Class.TextBox.FocusLost` to track when a TextBox
       gains and loses focus.

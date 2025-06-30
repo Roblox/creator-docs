@@ -94,7 +94,7 @@ Consider the following scene where a ringing phone is signalled only by sound, a
 
 ## Volume controls
 
-Different sounds playing at the same time can be overwhelming, distracting, or difficult to distinguish. Providing users with volume controls for different [groups](../../sound/groups.md) of audio such as sound effects, music, and speech lets them customize their experience and focus on what they need to.
+Different sounds playing at the same time can be overwhelming, distracting, or difficult to distinguish. Providing users with volume controls for different "groups" of audio such as sound effects, music, and speech lets them customize their experience and focus on what they need to.
 
 Consider the following example of a very noisy game where the user is able to modify music and sound effect volumes separately.
 

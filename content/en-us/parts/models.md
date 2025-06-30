@@ -3,9 +3,9 @@ title: Models
 description: Models are container objects for geometric groupings like parts, Motor6D objects, and other models.
 ---
 
-**Models** are containers for physical objects, such as parts, welds, and joints that you can use to organize your workspace and group your assets. While models can often contain connected parts, known as an [assembly](../physics/assemblies.md), models can contain any number of individual parts and other objects, such as scripts, and attachments.
+**Models** are containers for physical objects that you can use to organize your workspace and group your assets, such as parts, welds, or joints. While models often contain connected parts known as an [assembly](../physics/assemblies.md), they can also contain any number of individual parts or objects, such as scripts, attachments, or other models.
 
-Characters, such as avatars or NPCs, are a single `Class.Model` containing the appropriate humanoid parts, joints, and additional components:
+To demonstrate, avatar characters are a single `Class.Model` containing the appropriate humanoid parts, joints, and scripts necessary for runtime behavior:
 
 <GridContainer numColumns="2">
 	<figure>
@@ -20,7 +20,14 @@ Characters, such as avatars or NPCs, are a single `Class.Model` containing the a
 
 ## Create models
 
-When you **group** objects together, they automatically become a `Class.Model` object. However, you can also insert an empty `Class.Model` object into the Workspace, then manually add child objects to the model.
+<Alert severity="warning">
+You can create models using any open use or restricted asset, but any restricted assets that you don't have [explicit permission](../projects/assets/privacy.md#view-permissions) to use are **not** visible or audible at runtime unless the experience itself has permission to use those assets.
+</Alert>
+
+There are two ways to create models:
+
+- Group objects together to automatically form a `Class.Model` object.
+- Insert an empty `Class.Model` object into the Workspace, then manually add child objects to the model.
 
 To create a model using the grouping method:
 
@@ -111,10 +118,6 @@ See [Model Streaming Controls](../workspace/streaming.md#model-streaming-control
 
 When you upload or import a `.gltf`, `.fbx` and `.obj` model file to the cloud using the [3D Importer](../art/accessories/creating-rigid/importing.md), Roblox represents it as a cloud-based asset with a unique corresponding ID. This cloud-based asset system allows you to store models through Roblox and reuse them across the platform in various contexts without maintaining local copies as part of each saved Studio experience.
 
-<Alert severity="info">
-There is a limit of 15,000 unique assetIds that can be referenced in a single model.
-</Alert>
-
 To upload a model you made in Studio:
 
 1. In the **Explorer** window, right-click your model. A contextual menu displays.
@@ -133,16 +136,14 @@ To upload a model you made in Studio:
 
 ## Distribute models
 
-You can distribute models to the [Creator Store](../production/creator-store.md) for other creators to use within their own experiences as long as each model only references:
+You can distribute models with less than 15,000 descendants to the [Creator Store](../production/creator-store.md) for other creators to use within their own experiences as long as each model only references:
 
 - Open use assets.
 - Restricted assets that you created, excluding audio and video.
-- Free assets from the Creator Store, including audio and video.
+- Audio and video assets from the Creator Store.
 
-Once you distribute a model, all newer versions include the same restrictions even if you later unlist it from the Creator Store.
-
-<Alert severity="info">
-If you want to distribute a model with a child audio or video asset that you created, you must distribute the audio or video asset on the Creator Store before making them a child of the model for the audio or video to be audible and visible at runtime.
+<Alert severity="warning">
+If you want to distribute a model with a child audio asset that you created, you must distribute the audio asset on the Creator Store **_before_** making it a child of the model in order for the audio to be audible at runtime.
 </Alert>
 
 As with any asset, all models must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), the [DMCA Guidelines](../production/publishing/dmca-guidelines.md) regarding copyright and Creator Store [asset moderation](../production/creator-store.md#asset-moderation) rules. When creating models for the Creator Store:

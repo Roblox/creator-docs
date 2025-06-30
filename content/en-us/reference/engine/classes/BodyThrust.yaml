@@ -43,7 +43,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: BodyThrust.Location
     summary: |
@@ -65,7 +66,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: BodyThrust.force
     summary: ''
@@ -86,7 +88,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: BodyThrust.location
     summary: ''
@@ -107,7 +110,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
 methods: []
 events: []

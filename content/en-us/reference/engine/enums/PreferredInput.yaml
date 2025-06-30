@@ -1,23 +1,32 @@
 name: PreferredInput
 type: enum
-summary: ''
-description: ''
+summary: |
+  This enum is used with `Class.UserInputService.PreferredInput` to indicate the
+  primary input type a player is likely using.
+description: |
+  This enum is used with `Class.UserInputService.PreferredInput` to indicate the
+  primary input type a player is likely using.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: KeyboardAndMouse
-    summary: ''
+    summary: |
+      The player has connected or most recently interacted with a keyboard or
+      mouse.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Gamepad
-    summary: ''
+    summary: |
+      The player has connected or most recently interacted with a gamepad.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Touch
-    summary: ''
+    summary: |
+      The player's device has touch capability and no other input method is
+      available or connected.
     value: 2
     tags: []
     deprecation_message: ''

@@ -356,6 +356,8 @@ navigation:
         path: /ui/on-screen-containers
       - title: In-experience UI
         path: /ui/in-experience-containers
+      - title: Accessibility guidelines
+        path: /production/publishing/accessibility
       - title: UI objects
         section:
           - title: Labels
@@ -532,6 +534,10 @@ navigation:
             path: /cloud-services/memory-stores/best-practices
       - title: Secrets stores
         path: /cloud-services/secrets
+      - title: In-experience HTTP requests
+        path: /cloud-services/http-service
+      - title: Extended Services
+        path: /cloud-services/extended-services
       - title: Cross-server communication
         path: /cloud-services/cross-server-messaging
   - title: Roblox for Unity developers

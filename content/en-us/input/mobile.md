@@ -3,19 +3,13 @@ title: Mobile input
 description: Explains Roblox support for mobile devices.
 ---
 
-Over half of all Roblox sessions are played on mobile devices, so it's important to consider cross-platform accessibility when designing an experience for a wide audience. You should aim to support a variety of input devices, including [mouse and keyboard inputs](../input/mouse-and-keyboard.md) and [gamepad](../input/gamepad.md).
-
-When designing a mobile experience, consider the [device orientation](#device-orientation) that you intend user's to use in your experience, then implement your inputs with `Class.ContextActionService` to perform the following mobile-related input tasks:
-
-- [Create on-screen buttons](#custom-mobile-buttons) visible only on mobile devices.
-- [Setup context dependent inputs](#context-dependent-inputs) that allows the same button or input to perform a different action depending on the situation.
-- [Detect other input devices](#detect-other-devices), such as a mouse or keyboard connected to a mobile tablet, to provide the correct on-screen prompts to the user.
+Over half of all Roblox sessions are played on mobile devices, so it's important to consider cross-platform accessibility when designing an experience for a wide audience. For mobile inputs, design around the [device orientation](#device-orientation) that you intend players to use in your experience, and consider that the player may have other input devices connected such as a bluetooth [mouse/keyboard](../input/mouse-and-keyboard.md) or [gamepad](../input/gamepad.md).
 
 ## Device orientation
 
-On phones and tablets, the device orientation majorly affects the user experience and interaction. For example, landscape mode is best operated with two thumbs while portrait mode may lend itself to one-finger interface.
+On phones and tablets, the device orientation considerably affects the player experience and interaction. For example, landscape mode is best operated with two thumbs while portrait mode may lend itself to one-finger interface.
 
-By default, Roblox experiences run in landscape mode, allowing the experience to switch between landscape "left" and landscape "right" as the user's device rotates. However, experiences can be locked to a particular orientation if desired.
+By default, Roblox experiences run in landscape mode, allowing the experience to switch between landscape "left" and landscape "right" as the player's device rotates. However, experiences can be locked to a particular orientation if desired.
 
 ### Orientation modes
 
@@ -79,11 +73,11 @@ When setting an orientation, you can set the [starting orientation](#starting-or
 - `Enum.ScreenOrientation|ScreenOrientation.LandscapeRight`
 - `Enum.ScreenOrientation|ScreenOrientation.Portrait`
 
-Because this property affects all new users who join the experience, you can set its value in `Class.StarterGui` → `Enum.ScreenOrientation` within Studio.
+Because this property affects all new players who join the experience, you can set its value in `Class.StarterGui.ScreenOrientation` within Studio.
 
 #### In-experience orientation
 
-`Class.PlayerGui.ScreenOrientation` explicitly changes the experience's orientation for a user. When this property is set to one of the `Enum.ScreenOrientation` enums in a `Class.LocalScript`, the experience will immediately orient itself to match the setting. This can be useful when an experience needs to provide a particular experience like locking the view to portrait for a minigame.
+`Class.PlayerGui.ScreenOrientation` explicitly changes the experience's orientation for a player. When this property is set to one of the `Enum.ScreenOrientation` enums in a `Class.LocalScript`, the experience will immediately orient itself to match the setting. This can be useful when an experience needs to provide a particular experience like locking the view to portrait for a minigame.
 
 The following code sample in a `Class.LocalScript` sets the screen orientation to portrait:
 
@@ -104,7 +98,7 @@ playerGUI.ScreenOrientation = Enum.ScreenOrientation.Portrait
 - `Enum.ScreenOrientation|ScreenOrientation.LandscapeRight`
 - `Enum.ScreenOrientation|ScreenOrientation.Portrait`
 
-The following code prints the user's current screen orientation:
+The following code prints the player's current screen orientation:
 
 ```lua
 local Players = game:GetService("Players")
@@ -115,7 +109,7 @@ print(playerGUI.CurrentScreenOrientation)
 
 ## Character movement modes
 
-Roblox offers several `Class.StarterPlayer` properties you can set to change how users on mobile devices can move through your experience.
+Roblox offers several `Class.StarterPlayer` properties you can set to change how players on mobile devices can move through your experience.
 
 You can set mobile movement control schemes for Roblox experiences by changing the values of `Class.StarterPlayer.DevTouchMovementMode` to one of the following:
 
@@ -128,147 +122,46 @@ You can set mobile movement control schemes for Roblox experiences by changing t
 </thead>
 <tbody>
   <tr>
-    <td>`ClickToMove`</td>
-    <td>Users can only move through the experience by tapping a target location. This mode includes a jump button in the lower-right region of the screen. [Automatic jumping](#automatic-jumping) is always active in this movement mode.</td>
+    <td>`Enum.DevTouchMovementMode|UserChoice`</td>
+    <td>Allows players to choose their desired control scheme from the in-experience menu. This is the default movement mode.</td>
   </tr>
   <tr>
-    <td>`DPad`</td>
+    <td>`Enum.DevTouchMovementMode|DynamicThumbstick`</td>
+    <td>A dynamic thumbstick appears where the player initially presses down. This mode includes a jump button in the lower-right region of the screen. This is the default setting for players on mobile if `Enum.DevTouchMovementMode|UserChoice` is set.</td>
+  </tr>
+  <tr>
+    <td>`Enum.DevTouchMovementMode|Thumbstick`</td>
+    <td>A mobile thumbstick located in the lower-left region of the screen. Unlike `Enum.DevTouchMovementMode|DynamicThumbstick`, the thumbstick position is static and doesn't change position when the player touches on the screen.</td>
+  </tr>
+  <tr>
+    <td>`Enum.DevTouchMovementMode|ClickToMove`</td>
+    <td>Players can only move through the experience by tapping a target location. This mode includes a jump button in the lower-right region of the screen, and the player's character will automatically jump when hitting a surmountable obstacle/gap while moving to the click destination.</td>
+  </tr>
+  <tr>
+    <td>`Enum.DevTouchMovementMode|Scriptable`</td>
+    <td>Disables all default controls and allows you to script your own control scheme.</td>
+  </tr>
+  <tr>
+    <td>`Enum.DevTouchMovementMode|DPad`</td>
     <td><Alert severity="error">This option has been removed from the Roblox mobile app and should not be used for production-ready experiences. </Alert></td>
   </tr>
   <tr>
-    <td>`DynamicThumbstick`</td>
-    <td>A dynamic thumbstick appears where the user initially presses down. This mode includes a jump button in the lower-right region of the screen. This is the default user setting for mobile users if `UserChoice` is set.</td>
-  </tr>
-  <tr>
-    <td>`Scriptable`</td>
-    <td>Disables all default controls and allows you to [script your own control scheme](#adding-mobile-buttons).</td>
-  </tr>
-  <tr>
-    <td>`Thumbpad`</td>
+    <td>`Enum.DevTouchMovementMode|Thumbpad`</td>
     <td><Alert severity="error">This option has been removed from the Roblox mobile app and should not be used for production-ready experiences. </Alert></td>
   </tr>
-  <tr>
-    <td>`Thumbstick`</td>
-    <td>A mobile thumbstick located in the lower-left region of the screen. Unlike `DynamicThumbstick`, the thumbstick position is static and doesn't change position when the user touches on the screen.</td>
-  </tr>
-  <tr>
-    <td>`UserChoice`</td>
-    <td>Allows users to choose their desired control scheme from the in-experience Settings menu. This is the default movement mode for experiences.</td>
-  </tr>
+
 </tbody>
 </table>
-
-### Automatic jumping
-
-When `Class.StarterPlayer.AutoJumpEnabled` is enabled, the user's character automatically jumps across gaps when approaching the edge of a platform. `Class.StarterPlayer.AutoJumpEnabled` is enabled by default for mobile devices.
-
-Disable `Class.StarterPlayer.AutoJumpEnabled` to disable this feature and force users to jump only using their key bindings.
-
-## Custom Mobile Buttons
-
-To add custom mobile buttons, use the `Class.ContextActionService:BindAction()` method which takes the following parameters:
-
-<table>
-<thead>
-  <tr>
-    <th>Parameter</th>
-    <th>Type</th>
-    <th>Description</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>`actionName`</td>
-    <td>string</td>
-    <td>An identifier string for the action you are binding. You can use the actionName with other functions in `Class.ContextActionService` to edit the binding.</td>
-  </tr>
-  <tr>
-    <td>`functionToBind`</td>
-    <td>function</td>
-    <td>The function to call when the specified input is triggered. This function receives three arguments:
-    <ul><li> A string equal to the actionName.</li>
-    <li> A `Enum.UserInputState` which defines the input state when it called the function.</li>
-    <li> The `Class.InputObject` used in the function call.</li></ul></td>
-  </tr>
-  <tr>
-    <td>`createTouchButton`</td>
-    <td>boolean</td>
-    <td>When true, creates an on-screen button when the game is running on a mobile device.</td>
-  </tr>
-  <tr>
-    <td>`inputTypes`</td>
-    <td>tuple</td>
-    <td>The inputs you intend to bind to the function, such as enum values from a `Enum.KeyCode`.</td>
-  </tr>
-</tbody>
-</table>
-
-You can use the following code sample to create an Interact action that creates an on-screen button and also accepts a [keyboard](./mouse-and-keyboard.md#keyboard-input) and [gamepad](./gamepad.md) input:
-
-```lua
-local ContextActionService = game:GetService("ContextActionService")
-
-local function handleAction(actionName, inputState, inputObject)
-	if inputState == Enum.UserInputState.Begin then
-		print(actionName, inputObject)
-	end
-end
-
--- Bind action to function
-ContextActionService:BindAction("Interact", handleAction, true, Enum.KeyCode.T, Enum.KeyCode.ButtonR1)
-```
 
 <Alert severity="info">
-To remove a mobile button from the screen, call `Class.ContextActionService:UnbindAction()|UnbindAction()` using the `actionName` string you passed to `Class.ContextActionService:BindAction()|BindAction()`.
+By default, `Class.StarterPlayer.AutoJumpEnabled` is set to `true` on mobile devices, meaning the player's character will automatically jump when hitting a surmountable obstacle/gap while moving. Disable this property to force players to jump using only the assigned input bindings.
 </Alert>
-
-Once a custom button is added, you can use one of the several functions from `Class.ContextActionService` to customize the on-screen buttons that are created by `Class.ContextActionService:BindAction()|BindAction()`.
-
-- To change the text label for a mobile button, call `Class.ContextActionService:SetTitle()|SetTitle()` with the `actionName` string and a title string.
-- To use a custom image just like other GUI buttons, call `Class.ContextActionService:SetImage()|SetImage()` method, replacing the example asset ID below with an image of your choice.
-- To set a button's position, call `Class.ContextActionService:SetPosition()|SetPosition()` with a `Datatype.UDim2` position value.
-
-```lua
--- Set button label to "Talk"
-ContextActionService:SetTitle("Interact", "Talk")
--- Set button image
-ContextActionService:SetImage("Interact", "rbxassetid://104919049969988")
--- Set button position
-ContextActionService:SetPosition("Interact", UDim2.new(1, -70, 0, 10))
-```
-
-### Context-Dependent Inputs
-
-When developing for mobile devices you may often want to change what a single button does based on the context. Since screen space on mobile devices is limited, use contextual buttons that perform different actions based on what the character is able to do.
-
-For example, you can display an active "Collect" button when the user is standing near a chest of gold, bound to the function `collectTreasure()`:
-
-```lua
-local ContextActionService = game:GetService("ContextActionService")
-
-local function collectTreasure(actionName, inputState, inputObject)
-	if inputState == Enum.UserInputState.Begin then
-		print("Collect treasure")
-	end
-end
-
-ContextActionService:BindAction("Interact", collectTreasure, true, Enum.KeyCode.T, Enum.KeyCode.ButtonR1)
-ContextActionService:SetTitle("Interact", "Collect")
-ContextActionService:SetPosition("Interact", UDim2.new(1, -70, 0, 10))
-```
-
-At another point during gameplay, you can change the button to "Talk" when the user is standing near an NPC. Instead of removing the existing button to place another, you can simply call `Class.ContextActionService:BindAction()|BindAction()` on the existing `"Interact"` action, changing the target function and button title:
-
-```lua
-ContextActionService:BindAction("Interact", talkToNPC, true, Enum.KeyCode.T, Enum.KeyCode.ButtonR1)
-ContextActionService:SetTitle("Interact", "Talk")
-```
 
 ## Detect other devices
 
-In cross-platform experiences, it's important to reference the user's preferred input options by displaying input options for the actively used device. For example, a mobile device can have a [mouse and keyboard](./mouse-and-keyboard.md) or [gamepad](./gamepad.md) connected, or it's possible that a desktop has a touchscreen enabled. If multiple input sources are enabled, you can use `Class.UserInputService:GetLastInputType()|GetLastInputType()` to get the user's last used input device.
+In cross-platform experiences, it's important to reference the player's preferred input options by displaying input options for the actively used device. For example, a mobile device can have a [mouse and keyboard](./mouse-and-keyboard.md) or [gamepad](./gamepad.md) connected, or it's possible that a desktop has a touchscreen enabled. If multiple input sources are enabled, you can use `Class.UserInputService:GetLastInputType()|GetLastInputType()` to get the player's last used input device.
 
-As a foundation, you can use the following `Class.ModuleScript`, placed within `Class.ReplicatedStorage` and renamed to **UserInputModule**, to fetch the user's input type, after which you can adapt the UI layout or context to your experience's specific needs.
+As a foundation, you can use the following `Class.ModuleScript`, placed within `Class.ReplicatedStorage` and renamed to **UserInputModule**, to fetch the player's input type, after which you can adapt the UI layout or context to your experience's specific needs.
 
 ```lua
 local UserInputService = game:GetService("UserInputService")

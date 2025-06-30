@@ -35,11 +35,17 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputAction.Direction1DState
-    summary: ''
-    description: ''
+    summary: |
+      Non-scriptable read-only property useful for debugging
+      `Enum.InputActionType|Direction1D` input actions.
+    description: |
+      A non-scriptable read-only property only visible in Studio, primarily
+      useful for debugging while testing an `InputAction` with
+      `Class.InputAction.Type|Type` of `Enum.InputActionType|Direction1D`.
     code_samples: []
     type: float
     tags:
@@ -55,11 +61,17 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputAction.Direction2DState
-    summary: ''
-    description: ''
+    summary: |
+      Non-scriptable read-only property useful for debugging
+      `Enum.InputActionType|Direction2D` input actions.
+    description: |
+      A non-scriptable read-only property only visible in Studio, primarily
+      useful for debugging while testing an `InputAction` with
+      `Class.InputAction.Type|Type` of `Enum.InputActionType|Direction2D`.
     code_samples: []
     type: Vector2
     tags:
@@ -75,11 +87,17 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputAction.Direction3DState
-    summary: ''
-    description: ''
+    summary: |
+      Non-scriptable read-only property useful for debugging
+      `Enum.InputActionType|Direction3D` input actions.
+    description: |
+      A non-scriptable read-only property only visible in Studio, primarily
+      useful for debugging while testing an `InputAction` with
+      `Class.InputAction.Type|Type` of `Enum.InputActionType|Direction3D`.
     code_samples: []
     type: Vector3
     tags:
@@ -95,7 +113,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputAction.Enabled
     summary: |
@@ -115,7 +134,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputAction.Type
     summary: |
@@ -135,7 +155,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 methods:
   - name: InputAction:Fire
@@ -175,7 +196,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputAction:GetState
     summary: |
@@ -194,7 +216,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 events:
   - name: InputAction.Pressed
@@ -210,7 +233,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputAction.Released
     summary: |
@@ -225,7 +249,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: InputAction.StateChanged
     summary: |
@@ -244,6 +269,7 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 callbacks: []

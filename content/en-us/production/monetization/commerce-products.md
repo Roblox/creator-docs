@@ -28,7 +28,7 @@ Eligible creators can add commerce products to their experience. To be eligible,
   - Alternatively, you must have written permission to link the Shopify store from its registered account holder.
 - Have submitted **Business Information**. You can access this submission form in the following ways:
   - **Commerce Eligibility page** — When visiting the commerce page for the first time, an eligibility form appears.
-  - **Creator Dashboard** — In [Account Information](https://create.roblox.com/dashboard/account-information), you must completely fill out the **Core Account** and **Legal** tabs.
+  - **Creator Dashboard** — In [Account Information](https://create.roblox.com/dashboard/account-information), you must fill out the **Core Account** and **Legal** tabs. You can skip the Extended Services section under Core Account if it appears.
   - To submit business information on behalf of a group, creator must have **Configure and spend group revenue** enabled.
 - If accessing commerce settings on behalf of a group, your role must have **Create and edit community experiences** enabled.
 - Be in good standing with respect to Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) on an on-going basis.
@@ -398,7 +398,7 @@ As with other product information synced from Shopify, any updates to the produc
 
 ### Additional information
 
-The **Additional information** section displays supplementary details about your product using collapsible accordions. You can add **up to five** accordion sections for different topics, such as "Materials," "Care Instructions," or "Size Chart."
+The **Additional information** section displays supplementary details about your product using collapsible accordions. You can add **up to five** accordion sections for different topics, such as "Materials," "Care Instructions," or "Sizing".
 
 This is an optional feature and is populated using Shopify product metafields. To create a metafield accordion in Shopify:
 
@@ -407,9 +407,11 @@ This is an optional feature and is populated using Shopify product metafields. T
 - Set the following fields:
 
   - **Name** — The value in this field displays as the header for that accordion.
-  - **Value** — The user-facing content within the expanded accordion.
+  - **Type** — Only "Multi-line text" is supported.
 
      <img src="../../assets/monetization/commerce-products/Commerce-Product-Metafield-Example.png" width="60%" />
+
+- Then set the **Value** of the metafield for each desired product. This value displays as the content for that accordion.
 
 Like other product content synced from Shopify, any new or updated information in these metafields is subject to the [moderation process for catalog items](#modify-catalog-items). This page will display previously approved content until the new information is approved.
 

@@ -989,6 +989,25 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: MarketplaceService:GetUsersPriceLevelsAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: userIds
+        type: Array
+        default: ''
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: MarketplaceService:PlayerOwnsAsset
     summary: |
       Returns whether the given user has the given asset.

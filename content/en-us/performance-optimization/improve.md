@@ -402,14 +402,11 @@ same `MeshId` are handled in a single draw call when:
 - **Culling** - Culling describes the process of eliminating draw calls for
   objects that don't factor into the final rendered frame. By default, the
   engine skips draw calls for objects outside the camera's field of view
-  (frustum culling), but doesn't skip draw calls for objects occluded from view
-  by other objects (occlusion culling). If your scene has a large number of draw
-  calls, consider implementing your own additional culling at runtime
-  dynamically for every frame, such as applying the following common strategies:
-  - Hide `Class.MeshPart` and `Class.BasePart` that are far away from the camera
-    or setting.
-  - For indoor environments, implement a room or portal system that hides
-    objects not currently occupied by any users.
+  (frustum culling) and parts, meshes, and terrain occluded from view by other
+  objects (occlusion culling). In certain scenarios, such as indoor
+  environments, you might be able to implement a room or portal system and
+  manually cull objects to further reduce draw calls or overall computational
+  load.
 - **Reducing render fidelity** - Set render fidelity to **Automatic** or
   **Performance**. This allows meshes to fall back to less complex
   alternatives, which can reduce the number of polygons that need to be drawn.

@@ -403,27 +403,17 @@ properties:
     writeCapabilities: []
   - name: StarterPlayer.DevComputerCameraMovementMode
     summary: |
-      Lets developer overwrite the default camera mode for each player if the
-      player is on a computer.
+      Lets you overwrite the player's camera mode on a computer.
     description: |
-      This property lets the developer overwrite the player's camera mode if the
-      player is on a computer.
+      This property lets you overwrite the player's camera mode on a computer.
 
-      This is the default property for players joining the game. It can be
-      changed for individual players by settings the
-      `Class.Player.DevComputerCameraMode`.
+      If set to `Enum.DevComputerCameraMovementMode|UserChoice`, the player's
+      camera movement mode will be determined by whatever they set in the
+      experience's settings. Otherwise, the mode will be set based on this
+      property.
 
-      If set to `Enum.DevComputerCameraMovementMode|UserChoice` then the
-      player's camera movement mode will be determined by whatever the player
-      set in the experience's settings. Otherwise, the mode will be set based on
-      this property.
-
-      See `Enum.DevComputerCameraMovementMode` for the different camera modes
-      available.
-
-      This property has no affect on players not on a computer.
-    code_samples:
-      - setting-a-player-s-camera-movement-mode-desktop-
+      This property does not affect players who are not on a computer.
+    code_samples: []
     type: DevComputerCameraMovementMode
     tags: []
     deprecation_message: ''
@@ -440,27 +430,16 @@ properties:
     writeCapabilities: []
   - name: StarterPlayer.DevComputerMovementMode
     summary: |
-      Lets developer overwrite the player's movement mode if the player is on a
-      computer.
+      Lets you overwrite the player's movement mode on a computer.
     description: |
-      This property lets the developer overwrite the player's movement mode if
-      the player is on a computer.
+      This property lets you overwrite the player's movement mode on a computer.
 
-      This is the default property for players joining the game. It can be
-      changed for individual players by settings the
-      `Class.Player.DevComputerMovementMode`.
+      If set to `Enum.DevComputerMovementMode|UserChoice`, the player's movement
+      mode will be determined by whatever they set in the experience's settings.
+      Otherwise, the mode will be set based on this property.
 
-      If set to `Enum.DevComputerMovementMode|UserChoice` then the player's
-      movement mode will be determined by whatever the player set in the game
-      settings. Otherwise, the mode will be set based on this property.
-
-      See `Enum.DevComputerMovementMode` for the different movement modes
-      available. Lets developer overwrite the player's movement mode if the
-      player is on a computer.
-
-      This property has no affect on players not on a computer.
-    code_samples:
-      - setting-a-player-s-movement-mode-desktop-
+      This property does not affect players who are not on a computer.
+    code_samples: []
     type: DevComputerMovementMode
     tags: []
     deprecation_message: ''
@@ -477,27 +456,19 @@ properties:
     writeCapabilities: []
   - name: StarterPlayer.DevTouchCameraMovementMode
     summary: |
-      Lets developer overwrite the default camera movement mode for each player
-      if the player is on a mobile device.
+      Lets you overwrite the player's camera mode on a touch-enabled device.
     description: |
-      This property lets the developer overwrite the player's camera mode if the
-      player is on a touch device.
+      This property lets you overwrite the player's camera mode on a
+      touch-enabled device.
 
-      This is the default property for players joining the game. It can be
-      changed for individual players by settings the
-      `Class.Player.DevTouchCameraMode`.
-
-      If set to `Enum.DevTouchCameraMovementMode|UserChoice` then the player's
-      camera movement mode will be determined by whatever the player set in the
+      If set to `Enum.DevTouchCameraMovementMode|UserChoice`, the player's
+      camera movement mode will be determined by whatever they set in the
       experience's settings. Otherwise, the mode will be set based on this
       property.
 
-      See `Enum.DevTouchCameraMovementMode` for the different camera modes
-      available.
-
-      This property has no affect players not on a mobile device.
-    code_samples:
-      - setting-a-player-s-camera-movement-mode
+      This property does not affect players who are not on a touch-enabled
+      device.
+    code_samples: []
     type: DevTouchCameraMovementMode
     tags: []
     deprecation_message: ''
@@ -514,27 +485,18 @@ properties:
     writeCapabilities: []
   - name: StarterPlayer.DevTouchMovementMode
     summary: |
-      Lets developer overwrite the player's movement mode if the player is on a
-      touch device.
+      Lets you overwrite the player's movement mode on a touch-enabled device.
     description: |
-      This property lets the developer overwrite the player's movement mode if
-      the player is on a touch device.
+      This property lets you overwrite the player's movement mode on a
+      touch-enabled device.
 
-      This is the default property for players joining the game. It can be
-      changed for individual players by settings the
-      `Class.Player.DevTouchMovementMode`.
+      If set to `Enum.DevTouchMovementMode|UserChoice`, the player's movement
+      mode will be determined by whatever they set in the experience's settings.
+      Otherwise, the mode will be set based on this property.
 
-      If set to `Enum.DevTouchMovementMode|UserChoice` then the player's
-      movement mode will be determined by whatever the player set in the game
-      settings. Otherwise, the mode will be set based on this property.
-
-      See `Enum.DevTouchMovementMode` for the different movement modes
-      available. Lets developer overwrite the player's movement mode if the
-      player is on a touch device.
-
-      This property has no affect on players not on a touch-enabled device.
-    code_samples:
-      - overriding-a-player-s-movement-mode
+      This property does not affect players who are not on a touch-enabled
+      device.
+    code_samples: []
     type: DevTouchMovementMode
     tags: []
     deprecation_message: ''

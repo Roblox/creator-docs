@@ -17,15 +17,15 @@ The most efficient workflow is to [create a package](#create-packages), [share i
 
 ## Create Packages
 
-You can create a package from any single object or any single parent and children branch of objects. If you want to create a package for a single object, add it to a `Class.Model` grouping first so that you can add, remove, or scale child objects within the package later without breaking the package.
-
-<Alert severity="info">
-There is a limit of 15,000 unique assetIds that can be referenced in a single package, and you must have permission to use all included assets. For more information, see [Asset privacy](privacy.md).
+<Alert severity="warning">
+If you want to create a package with restricted assets that you don't have [explicit permission](../../projects/assets/privacy.md#view-permissions) to use, you can still create the package but those specific restricted assets will **not** be visible or audible at runtime unless the experience itself has permission to use those assets.
 </Alert>
+
+You can create a package from any single object or any single parent and children branch of objects. If you want to create a package for a single object, add it to a `Class.Model` grouping first so that you can add, remove, or scale child objects within the package later without breaking the package.
 
 To create a package:
 
-1. In the **Explorer** window or 3D viewport, right-click the object you want to turn into a package, then in contextual menu, select **Convert to Package**.
+1. In the **Explorer** window or 3D viewport, right-click the object(s) you want to turn into a package, then in contextual menu, select **Convert to Package**.
 1. In the new window, fill in the package details. In particular, if you're working in a [group](../../projects/groups.md), set **Ownership** to the appropriate group in which you have permission to create/edit group experiences.
 
    <Alert severity="warning">
@@ -133,12 +133,14 @@ Automatic updating does not apply to [modified](#modifying-packages) package cop
 
 ## Share and access levels
 
-You can grant permission to friends, experiences, groups, or specific group user roles so that they can freely use your packages in their creations. Once you share a package, all future versions of that package have the same restrictions even if you later revoke package sharing. For more information on asset access, see [Asset privacy](privacy.md).
+You can grant permission to friends, experiences, groups, or specific group user roles so that they can freely use your packages in their creations. For more information on asset access, see [Asset privacy](privacy.md).
+
+<Alert severity="warning">
+If you share a package with restricted assets that you don't have [explicit permission](../../projects/assets/privacy.md#view-permissions) to use, you can still share the package but those specific restricted assets will **not** be visible or audible at runtime unless the friend, experience, or group has permission to use those assets.
+</Alert>
 
 <Tabs>
   <TabItem key = "1" label="To collaborators">
-
-In order to share packages with other collaborators, the package must only contain references to assetIDs that you created or have explicit permission to use.
 
 To change package permissions for a collaborator, such as a friend or group:
 

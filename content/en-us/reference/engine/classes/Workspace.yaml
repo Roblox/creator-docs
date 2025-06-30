@@ -126,6 +126,24 @@ properties:
       can_save: true
     capabilities: []
     writeCapabilities: []
+  - name: Workspace.AuthorityMode
+    summary: ''
+    description: ''
+    code_samples: []
+    type: AuthorityMode
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Server Authority
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.AvatarUnificationMode
     summary: ''
     description: ''
@@ -459,6 +477,23 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
+  - name: Workspace.LuauTypeCheckMode
+    summary: ''
+    description: ''
+    code_samples: []
+    type: LuauTypeCheckMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
     capabilities: []
     writeCapabilities: []
   - name: Workspace.MeshPartHeadsAndAccessories
@@ -1007,6 +1042,24 @@ properties:
       information on the behavior of CanTouch, please visit its property page.
     code_samples: []
     type: boolean
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: Workspace.UseImprovedModelLod
+    summary: ''
+    description: ''
+    code_samples: []
+    type: RolloutState
     tags:
       - NotScriptable
     deprecation_message: ''

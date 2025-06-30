@@ -46,7 +46,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: RocketPropulsion.MaxSpeed
     summary: |
@@ -67,7 +68,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: RocketPropulsion.MaxThrust
     summary: |
@@ -90,7 +92,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: RocketPropulsion.MaxTorque
     summary: |
@@ -113,7 +116,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: RocketPropulsion.Target
     summary: |
@@ -134,7 +138,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: RocketPropulsion.TargetOffset
     summary: |
@@ -158,7 +163,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: RocketPropulsion.TargetRadius
     summary: |
@@ -183,7 +189,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: RocketPropulsion.ThrustD
     summary: |
@@ -206,7 +213,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: RocketPropulsion.ThrustP
     summary: |
@@ -229,7 +237,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: RocketPropulsion.TurnD
     summary: |
@@ -256,7 +265,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: RocketPropulsion.TurnP
     summary: |
@@ -278,7 +288,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
 methods:
   - name: RocketPropulsion:Abort
@@ -297,7 +308,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: RocketPropulsion:Fire
     summary: |
@@ -315,7 +327,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: RocketPropulsion:fire
     summary: ''
@@ -332,7 +345,8 @@ methods:
       which should be used instead.
     security: None
     thread_safety: Unsafe
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
 events:
   - name: RocketPropulsion.ReachedTarget
@@ -349,6 +363,7 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
 callbacks: []

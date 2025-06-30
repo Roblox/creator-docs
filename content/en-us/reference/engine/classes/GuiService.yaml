@@ -326,6 +326,25 @@ properties:
       can_save: false
     capabilities: []
     writeCapabilities: []
+  - name: GuiService.ViewportSizeInMM
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector2
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: GuiService:AddSelectionParent
     summary: |
@@ -450,24 +469,6 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: GuiService:GetClosestVisibleDialogToPosition
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: position
-        type: Vector3
-        default: ''
-        summary: ''
-    returns:
-      - type: Dialog
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []

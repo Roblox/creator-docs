@@ -25,6 +25,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
+      - Basic
       - UI
     writeCapabilities: []
   - name: WireframeHandleAdornment.Thickness
@@ -43,6 +44,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
+      - Basic
       - UI
     writeCapabilities: []
 methods:
@@ -67,6 +69,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
+      - Basic
       - UI
     writeCapabilities: []
   - name: WireframeHandleAdornment:AddLines
@@ -86,6 +89,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
+      - Basic
       - UI
     writeCapabilities: []
   - name: WireframeHandleAdornment:AddPath
@@ -109,6 +113,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
+      - Basic
       - UI
     writeCapabilities: []
   - name: WireframeHandleAdornment:AddText
@@ -136,6 +141,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
+      - Basic
       - UI
     writeCapabilities: []
   - name: WireframeHandleAdornment:Clear
@@ -151,6 +157,7 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
+      - Basic
       - UI
     writeCapabilities: []
 events: []
