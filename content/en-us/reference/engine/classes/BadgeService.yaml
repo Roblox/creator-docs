@@ -184,7 +184,7 @@ methods:
     summary: |
       Returns whether a given badge is disabled.
     description: |
-      This function returns whether the badge with the given id is marked
+      This function returns whether the badge with the given ID is marked
       **disabled** on the Roblox website. A badge can be disabled by its owner
       on its page on the Roblox website, in the settings sub-menu. When a badge
       is disabled, this function returns true and the badge can no longer be

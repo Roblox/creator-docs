@@ -47,9 +47,9 @@ properties:
     writeCapabilities: []
   - name: LocalizationService.SystemLocaleId
     summary: |
-      The locale id that the local player has set for their operating system.
+      The locale ID that the local player has set for their operating system.
     description: |
-      This property shows the locale id that the local player has set for their
+      This property shows the locale ID that the local player has set for their
       operating system.
 
       This will return a string with the two letter code (for example, "en-us")

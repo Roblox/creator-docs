@@ -41,7 +41,7 @@ items:
   - name: FileMesh
     value: 5
     summary: |
-      The mesh is determined by the Roblox mesh asset id provided.
+      The mesh is determined by the Roblox mesh asset ID provided.
     tags: []
     deprecation_message: ''
   - name: Brick

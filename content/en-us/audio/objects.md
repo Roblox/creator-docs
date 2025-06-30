@@ -22,7 +22,7 @@ As you read through this guide and learn about how all of these audio objects wo
 
 To play audio within your experience, it's important to understand the role of each available audio object:
 
-- An `Class.AudioPlayer` loads and plays the **audio file** using a set audio assetID.
+- An `Class.AudioPlayer` loads and plays the **audio file** using a set audio asset ID.
 - An `Class.AudioEmitter` is a **virtual speaker** that emits audio into the 3D environment.
 - An `Class.AudioListener` is a **virtual microphone** that picks up audio from the 3D environment.
 - An `Class.AudioDeviceOutput` is a **physical hardware device** within the real world, such as a speaker or headphones.

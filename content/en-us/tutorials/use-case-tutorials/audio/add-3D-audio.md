@@ -31,7 +31,7 @@ To create directional audio, it's important to understand the audio objects that
 
 All of these audio objects work together to emit sound just like their real-world counterparts. Let's take a look at how this works in practice using an example of a player wearing a headset while playing an experience with their laptop:
 
-- The `Class.AudioPlayer` loads the `1516791621` audio assetID into the experience for a rain track.
+- The `Class.AudioPlayer` loads the `1516791621` audio asset ID into the experience for a rain track.
 - The `Class.AudioEmitter` emits a stream of the rain track audio into the 3D environment.
 - A `Class.Wire` carries the stream from the `Class.AudioPlayer` to the `Class.AudioEmitter` so that the stream comes out of the 3D speaker.
 - The character's child `Class.AudioListener` object listens to that sound within the 3D environment and feeds it back to their headset.

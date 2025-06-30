@@ -53,7 +53,7 @@ To create `Class.MaterialVariant` objects for your tileable textures:
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section3/CustomMaterials-5.jpg" alt="The Texture Maps section of the Inspector view with the Import button highlighted." width="40%"/>
 
-6. In the file browser, select the **Albedo** texture map `.png` file for the corresponding tileable texture, then the **Open** button. The file browser closes, and the new color map displays with its assetID.
+6. In the file browser, select the **Albedo** texture map `.png` file for the corresponding tileable texture, then the **Open** button. The file browser closes, and the new color map displays with its asset ID.
 7. Repeat this process for the **Metalness**, **Normal**, and **Roughness** texture maps. The custom material updates to reflect the texture maps.
 
    <GridContainer numColumns="2">
@@ -101,7 +101,7 @@ To create `Class.SurfaceAppearance` packages that you can child to your modular 
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section3/SAPackages-3.jpg" alt="The ColorMap pop-up with the Add Image button highlighted." width="30%"/>
 
-4. Select the **Albedo** texture map for the corresponding tileable texture, then the **Open** button. The file browser closes, and the **ColorMap** property updates with a new assetID.
+4. Select the **Albedo** texture map for the corresponding tileable texture, then the **Open** button. The file browser closes, and the **ColorMap** property updates with a new asset ID.
 5. Repeat this process for the **MetalnessMap**, **NormalMap**, and **RoughnessMap** properties, selecting their respective texture maps from the file browser.
 6. In the **Explorer** window, right-click the **SurfaceAppearance** object, then select **Convert to Packag**e from the contextual menu. The **Convert to Package** dialog displays.
 7. Fill out the **Title** and **Description** fields, set the ownership to yourself or a group, then click the **Submit** button. Once complete, a chain link symbol displays over the SurfaceAppearance object's icon to identify it as a package.

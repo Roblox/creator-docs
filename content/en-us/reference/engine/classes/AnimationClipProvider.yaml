@@ -17,7 +17,7 @@ description: |
   - Download the `Class.AnimationClip` associated with an animation content ID
     from the Roblox website, regardless of the underlying type of
     `Class.AnimationClip` (`Class.KeyframeSequence` or `Class.CurveAnimation`).
-  - Generate a temporary id to locally preview an animation.
+  - Generate a temporary ID to locally preview an animation.
   - Fetch the content IDs of animations owned by a particular user.
 code_samples: []
 inherits:

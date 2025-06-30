@@ -27,7 +27,7 @@ To create non-directional audio, it's important to understand the audio objects 
 
 All of these audio objects work together to carry sound from file playback to each player's hardware. Let's take a look at how this works in practice using an example of a player wearing a headset while playing an experience with their laptop:
 
-- The `Class.AudioPlayer` loads the `127645268874265` audio assetID into the experience for a currency purchase sound.
+- The `Class.AudioPlayer` loads the `127645268874265` audio asset ID into the experience for a currency purchase sound.
 - A `Class.Wire` carries the stream from the `Class.AudioPlayer` to the `Class.AudioDeviceOutput` so that the stream comes out of the player's headset.
 - The `Class.AudioDeviceOutput` object carries the sound to the player's physical speaker, or in this case, their headphones.
 

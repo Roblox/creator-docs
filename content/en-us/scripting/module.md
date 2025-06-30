@@ -213,7 +213,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local remoteEvent = ReplicatedStorage:WaitForChild("RemoteEvent")
 remoteEvent.OnServerEvent:Connect(function(player, id, ...)
-	-- Finding every bindable event that matches the id of the received remote event
+	-- Finding every bindable event that matches the ID of the received remote event
 	for _, signal in networkSignalList do
 		if signal.id == id then
 			signal.bindableEvent:Fire(player, ...)

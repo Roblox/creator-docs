@@ -11,7 +11,7 @@ You can apply audio effects to your audio streams by wiring up the effect within
 
 <img src="../assets/audio/audio-objects/2D-Audio-Diagram.png" width="100%" />
 
-If you keep this setup the way it is, the audio stream from the assetID plays as it was originally recorded. However, if you want to apply an audio effect to this audio stream, you must introduce the audio effect in the middle of the configuration so that the audio stream transmits through the effect before it transmits to the output device.
+If you keep this setup the way it is, the audio stream from the asset ID plays as it was originally recorded. However, if you want to apply an audio effect to this audio stream, you must introduce the audio effect in the middle of the configuration so that the audio stream transmits through the effect before it transmits to the output device.
 
 <img src="../assets/audio/effects/AudioEffect-Single.png" width="100%" />
 

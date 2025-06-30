@@ -132,7 +132,7 @@ Parameters allowed us to refer to objects that do not even exist in the beginnin
 
 ### Run events, event instances, and connect to triggers
 
-To run an event, we would either use a remote event from clients, or a function from the server. In the following example, we passed a couple of parameters to the `RootObject` and `isEnabled` events. Internally, an instance of the event description was created, params resolved to actual objects, and the function returned an id for the event instance.
+To run an event, we would either use a remote event from clients, or a function from the server. In the following example, we passed a couple of parameters to the `RootObject` and `isEnabled` events. Internally, an instance of the event description was created, params resolved to actual objects, and the function returned an ID for the event instance.
 
 ```lua
 local params = {

@@ -96,7 +96,7 @@ methods:
         <tr>
           <td>IconImageAssetId</td>
           <td>number</td>
-          <td>The image asset id of main default image of the physical item</td>
+          <td>The image asset ID of main default image of the physical item</td>
         </tr>
         <tr>
           <td>DisplayPrice</td>

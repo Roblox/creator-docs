@@ -7,7 +7,7 @@ description: The process for changing default character animations and triggerin
 
 Using the [Hazardous Space Station](https://www.roblox.com/games/134383324873456/Walking-Character-Animation) `.rbxl` file as a reference, this tutorial shows you how to play character animations using two different techniques, including guidance on:
 
-- Swapping default character animation assetIDs with your own custom animations.
+- Swapping default character animation asset IDs with your own custom animations.
 - Triggering animations in response to character actions within the 3D space.
 
 After you complete this tutorial, you will have the skills to customize animations for a wide variety of gameplay situations.
@@ -33,7 +33,7 @@ Every character with a default `Class.Humanoid` object, whether it's a player-co
 
 However, if these default animations don't meet the design requirements for your world's environment, aesthetic, or overall narrative, you can swap them out with custom animations that apply to every player that joins your experience. This game design technique can help your characters and experiences feel more personal, engaging, and immersive.
 
-To demonstrate, the following section teaches you how to swap out the default walk animation with a custom walk cycle animation from [Create Character Animations](create-an-animation.md). Using this same process, you can swap out any of the default animations with your own animation assetIDs.
+To demonstrate, the following section teaches you how to swap out the default walk animation with a custom walk cycle animation from [Create Character Animations](create-an-animation.md). Using this same process, you can swap out any of the default animations with your own animation asset IDs.
 
 <GridContainer numColumns="2">
   <figure>
@@ -48,9 +48,9 @@ To demonstrate, the following section teaches you how to swap out the default wa
 
 ### Create script
 
-Every character's `Class.Humanoid` object includes a child `Class.Animator` object that stores all of the character's default animations. In order to set any of these default animations to new assetIDs, you must create a script in the `Class.ServiceScriptService` so that it can reference and override the `Class.Animator` object's default values as soon as players load into the experience.
+Every character's `Class.Humanoid` object includes a child `Class.Animator` object that stores all of the character's default animations. In order to set any of these default animations to new asset IDs, you must create a script in the `Class.ServiceScriptService` so that it can reference and override the `Class.Animator` object's default values as soon as players load into the experience.
 
-To create a script that will reference the default animation assetIDs:
+To create a script that will reference the default animation asset IDs:
 
 1. In the **Explorer** window, add a new script to **ServerScriptService**.
    1. Hover over **ServerScriptService** and click the ⊕ button.
@@ -86,9 +86,9 @@ When it detects an `Class.Animator` object for the first time, the script then p
 </AccordionDetails>
 </BaseAccordion>
 
-### Replace assetID
+### Replace asset ID
 
-Now that you know your script is able to detect when players load and connect to the server, you can modify your script to specifically reference the animation id(s) you want to swap with your own custom animations.
+Now that you know your script is able to detect when players load and connect to the server, you can modify your script to specifically reference the animation ID(s) you want to swap with your own custom animations.
 
 The following table contains all of the default character animations that you can call and replace within the `Class.Animator` object. Note that Idle has two variations that you can program to play more or less frequently.
 
@@ -140,9 +140,9 @@ The following table contains all of the default character animations that you ca
   </tbody>
 </table>
 
-To replace the default walk animation assetID:
+To replace the default walk animation asset ID:
 
-1. Call the default walk animate script reference, then replace the assetID with your own custom animation assetID. For example, the following code sample references the walk cycle animation from [Create Character Animations](create-an-animation.md).
+1. Call the default walk animate script reference, then replace the asset ID with your own custom animation asset ID. For example, the following code sample references the walk cycle animation from [Create Character Animations](create-an-animation.md).
 
    ```lua
    local Players = game:GetService("Players")
@@ -272,14 +272,14 @@ Setting debounce from `false` to `true` to `false` again after the animation fin
 
 ### Add animation
 
-If you were to playtest your experience right now, your `TriggerAnimation` script still wouldn't be able to play an animation in response to the local player-volume collision. This is because it's waiting for a child `Class.Animation` object with an animation assetID it can reference, and that `Class.Animation` object doesn't currently exist.
+If you were to playtest your experience right now, your `TriggerAnimation` script still wouldn't be able to play an animation in response to the local player-volume collision. This is because it's waiting for a child `Class.Animation` object with an animation asset ID it can reference, and that `Class.Animation` object doesn't currently exist.
 
 To add an animation for the local script to reference as players collide with the volume:
 
 1. In the **Explorer** window, add a new animation to **TriggerAnimation**.
    1. Hover over **TriggerAnimation** and click the ⊕ button.
    1. From the contextual menu, insert an **Animation**.
-1. Select the new animation object, then in the **Properties** window, set **AnimationID** to the animation assetID you want to trigger when players touch the volume. For example, the [Hazardous Space Station](https://www.roblox.com/games/134383324873456/Walking-Character-Animation) sample references `rbxassetid://3716468774` to play an animation of a character falling backwards.
+1. Select the new animation object, then in the **Properties** window, set **AnimationID** to the animation asset ID you want to trigger when players touch the volume. For example, the [Hazardous Space Station](https://www.roblox.com/games/134383324873456/Walking-Character-Animation) sample references `rbxassetid://3716468774` to play an animation of a character falling backwards.
 1. Playtest your experience to ensure your animation plays when players are near the first steam leak.
 
    <video controls src="../../../assets/tutorials/playing-character-animations/Add-Animation-3.mp4" width="90%"></video>

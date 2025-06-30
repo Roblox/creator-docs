@@ -444,7 +444,7 @@ methods:
         type: int64
         default: ''
         summary: |
-          The id of the specified asset or bundle.
+          The ID of the specified asset or bundle.
       - name: itemType
         type: AvatarItemType
         default: ''
@@ -726,10 +726,10 @@ methods:
   - name: AvatarEditorService:GetRecommendedAssets
     summary: |
       Returns a list of recommended assets based on a given `Enum.AssetType` and
-      asset id.
+      asset ID.
     description: |
       Returns a list of recommended assets based on a given `Enum.AssetType` and
-      asset id. Use this to gather a list of similar assets to the asset
+      asset ID. Use this to gather a list of similar assets to the asset
       provided. Take a look at the code sample below for more information on
       possible usages for this function.
 
@@ -777,7 +777,7 @@ methods:
         type: int64
         default: 0
         summary: |
-          The id of an asset with a type matching the provided assetType used
+          The ID of an asset with a type matching the provided assetType used
           for context when retrieving recommendations.
     returns:
       - type: Array
