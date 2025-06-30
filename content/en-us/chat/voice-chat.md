@@ -44,7 +44,7 @@ Voice Chat is **proximity-based** by default, adjusting the volume of participan
 
    <img src="../assets/studio/explorer/VoiceChatService.png" width="320" alt="VoiceChatService in Explorer hierarchy" />
 
-3. With `Class.VoiceChatService` selected, set `Class.VoiceChatService.UseAudioApi|UseAudioApi` to `Enum.AudioApiRollout|Enabled` in the **Properties** window.
+3. With `Class.VoiceChatService` selected, ensure that `Class.VoiceChatService.UseAudioApi|UseAudioApi` to `Enum.AudioApiRollout|Enabled` in the **Properties** window. This may already be done for you.
 
 #### Team-based
 
