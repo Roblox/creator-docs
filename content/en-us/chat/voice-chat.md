@@ -97,9 +97,7 @@ end)
 
 #### Non-spatial
 
-You might not want to use the default, proximity-chat behavior. Depending on your experience's needs, it might make more sense to hear others with equal volume, regardless of their geographic location.
-
-If you [disable default Voice Chat](#disable-per-place), you can then implement flat/nonspatial Voice Chat through the following `Class.Script` within `Class.ServerScriptService`:
+Depending on your experience's needs, it might make more sense to hear others with equal volume, regardless of their geographic location. If you [disable default Voice Chat](#disable-per-place), you can then implement non‑spatial Voice Chat through the following `Class.Script` within `Class.ServerScriptService`:
 
 ```lua title="Non-Proximity Chat"
 local Players = game:GetService("Players")
