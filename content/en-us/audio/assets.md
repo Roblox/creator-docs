@@ -19,7 +19,7 @@ To find audio assets on the Creator Store:
 
    <img src="../assets/studio/toolbox/Creator-Store-Audio-Discovery.png" width="580" alt="Audio discovery options in Studio's Toolbox" />
 
-3. Right-click any audio asset, then select **Copy Asset ID** to copy the assetID to your clipboard. You can now paste this assetID into a `Class.AudioPlayer` object to [play the audio](../audio/objects.md).
+3. Right-click any audio asset, then select **Copy Asset ID** to copy the asset ID to your clipboard. You can now paste this asset ID into a `Class.AudioPlayer` object to [play the audio](../audio/objects.md).
 
 <Alert severity="warning">
   If you click any audio asset, Studio inserts it as a new `Class.Sound` instance into the **Explorer** window. However, `Class.Sound` objects don't have the same dynamic functionality as `Class.AudioPlayer` objects.

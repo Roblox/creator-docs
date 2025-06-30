@@ -79,7 +79,7 @@ methods:
     returns:
       - type: ContentId
         summary: |
-          The temporary asset id.
+          The temporary asset ID.
     tags: []
     deprecation_message: ''
     security: PluginSecurity

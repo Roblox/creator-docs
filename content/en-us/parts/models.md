@@ -132,7 +132,7 @@ To upload a model you made in Studio:
       - **Creator** - Use the dropdown to select if you'd like to publish this asset as an individual or as part of an associated group.
       - **Genre** - The genre of your model.
 
-   1. Click the **Save** button. After a moment, the **Asset Configuration** window displays your model's assetID that you can use in your projects or share with other creators, groups, or experiences. For more information on granting permission to collaborators and experiences so that they can use your models, see [Asset privacy](../projects/assets/privacy.md)
+   1. Click the **Save** button. After a moment, the **Asset Configuration** window displays your model's asset ID that you can use in your projects or share with other creators, groups, or experiences. For more information on granting permission to collaborators and experiences so that they can use your models, see [Asset privacy](../projects/assets/privacy.md)
 
 ## Distribute models
 

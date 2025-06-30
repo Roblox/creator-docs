@@ -234,7 +234,7 @@ Both task types share the following fields:
    <tr>
    <td>`counter`</td>
    <td>`object`</td>
-   <td>(Optional) The counter this task tracks. Counters are player-specific persistent storage for a number or a timer. Multiple tasks can track a single counter; for example, if more than one task tracks how many coins a player has collected, then they all can share the same “coins” counter. These tasks can independently track new coins collected, starting from zero, or continue counting from the counter value (all coins already collected).<br></br><ul><li>`counterId` (`string`) - The ID of the counter to be tracked. Use this id to get or set the value of the counter.</li><li>`continueFromCounter` (Optional `bool`) - If set to true, the task progress will directly match the value of the counter rather than the amount it has increased.</li></ul></td>
+   <td>(Optional) The counter this task tracks. Counters are player-specific persistent storage for a number or a timer. Multiple tasks can track a single counter; for example, if more than one task tracks how many coins a player has collected, then they all can share the same “coins” counter. These tasks can independently track new coins collected, starting from zero, or continue counting from the counter value (all coins already collected).<br></br><ul><li>`counterId` (`string`) - The ID of the counter to be tracked. Use this ID to get or set the value of the counter.</li><li>`continueFromCounter` (Optional `bool`) - If set to true, the task progress will directly match the value of the counter rather than the amount it has increased.</li></ul></td>
    </tr>
    <tr>
    <td>`metadata`</td>

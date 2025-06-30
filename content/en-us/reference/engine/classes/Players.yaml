@@ -1086,7 +1086,7 @@ methods:
         type: int64
         default: ''
         summary: |
-          The id of the outfit for which the HumanoidDescription is sought.
+          The ID of the outfit for which the HumanoidDescription is sought.
     returns:
       - type: HumanoidDescription
         summary: |

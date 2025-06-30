@@ -238,7 +238,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local remoteEvent = ReplicatedStorage:WaitForChild("RemoteEvent")
 remoteEvent.OnServerEvent:Connect(function(player, id, ...)
-	-- Finding every bindable event that matches the id of the received remote event
+	-- Finding every bindable event that matches the ID of the received remote event
 	for _, signal in networkSignalList do
 		if signal.id == id then
 			signal.bindableEvent:Fire(player, ...)
@@ -249,7 +249,7 @@ end)
 return NetworkManagerServer
 ```
 
-The following `Class.LocalScript` sends a message with the id "RequestA" with an optional "Hello" argument.
+The following `Class.LocalScript` sends a message with the ID "RequestA" with an optional "Hello" argument.
 
 ```lua
 -- LocalScript in ReplicatedFirst
@@ -259,7 +259,7 @@ local NetworkManagerClient = require(ReplicatedFirst:WaitForChild("NetworkManage
 NetworkManagerClient.FireServer("RequestA", "Hello")
 ```
 
-The following `Class.Script` connects to the network message id "RequestA" and prints out a statement with any additional parameters when it receives the request.
+The following `Class.Script` connects to the network message ID "RequestA" and prints out a statement with any additional parameters when it receives the request.
 
 ```lua
 -- Script in ServerScriptService

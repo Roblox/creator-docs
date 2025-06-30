@@ -34,7 +34,7 @@ If you meet these conditions and explicitly grant the collaborator permission,
 - The creator gains implicit permission to use the asset in any of their individual or group-owned experiences, and the ability to grant other experiences permission to use the restricted asset.
 - All group members with edit access gain permission to use the asset in experiences owned by that group.
 
-Once a collaborator has permission to use one of your restricted assets, they can insert the asset from the **Inventory** and/or **Creation** tab of the [Toolbox](../../projects/assets/toolbox.md), or by using the restricted assetID in the [Properties](../../studio/properties.md) window.
+Once a collaborator has permission to use one of your restricted assets, they can insert the asset from the **Inventory** and/or **Creation** tab of the [Toolbox](../../projects/assets/toolbox.md), or by using the restricted asset ID in the [Properties](../../studio/properties.md) window.
 
 <GridContainer numColumns="2">
   <figure>
@@ -91,7 +91,7 @@ To grant an experience permission to use one of your restricted assets, the expe
 After you or a collaborator with permission grants an experience access to use a restricted asset, anyone who has **Edit** access to that experience gains implicit permission to:
 
 - Copy and paste the asset into another place file within that experience.
-- Use its assetID in the Properties window or in scripts within any place file within the experience.
+- Use its asset ID in the Properties window or in scripts within any place file within the experience.
 
 <Alert severity="info">
 When you grant permission to an experience by inserting it into a collaborator’s experience, the asset is also automatically shared with the experience's owner.
@@ -139,7 +139,7 @@ To grant an experience permission to use many restricted assets in the previous 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. Select one of your or your group's experiences. The experience's overview page displays.
 1. In the experience's left-hand navigation, navigate to the **Configure** section, then select **Permissions**. The asset's **Permissions** page displays.
-1. In the **Enter asset IDs** input, type every assetID you want the experience to have access to separated by commas, then click the **Add** button. All restricted assets the experience has access to display beneath the input with the asset's name, assetID, owner, and asset type.
+1. In the **Enter asset IDs** input, type every asset ID you want the experience to have access to separated by commas, then click the **Add** button. All restricted assets the experience has access to display beneath the input with the asset's name, asset ID, owner, and asset type.
 1. At the bottom of the page, click the **Save Changes** button.
 
   </TabItem>

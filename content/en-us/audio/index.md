@@ -13,7 +13,7 @@ You can import [audio assets](../audio/assets.md) that you're certain you have p
 
 Roblox offers many different types of audio objects that you can use to play and modify your audio until it meets your experience's design requirements:
 
-- The `Class.AudioPlayer` object loads and plays the **audio file** using a set [audio assetID](../audio/assets.md).
+- The `Class.AudioPlayer` object loads and plays the **audio file** using a set [audio asset ID](../audio/assets.md).
 - The `Class.AudioEmitter` object is a **virtual speaker** that emits audio into the 3D environment.
 - The `Class.AudioListener` object is a **virtual microphone** that picks up audio from the 3D environment.
 - The `Class.AudioDeviceOutput` object is a **physical hardware device** within the real world, such as a speaker or headphones.

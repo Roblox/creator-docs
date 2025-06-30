@@ -66,9 +66,9 @@ description: |
   an animation.
 
   In some cases, you may want to preview an Animation before uploading it to the
-  Roblox site. You can generate a temporary id using
+  Roblox site. You can generate a temporary ID using
   `Class.KeyframeSequenceProvider:RegisterKeyframeSequence()`. This will
-  generate a hash id that can be used for localized animation testing.
+  generate a hash ID that can be used for localized animation testing.
 
   ## Obtaining KeyframeSequences
 

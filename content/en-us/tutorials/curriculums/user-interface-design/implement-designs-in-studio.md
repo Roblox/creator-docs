@@ -1271,7 +1271,7 @@ To exactly recreate the player indicator component within the sample [Laser Tag]
    1. Insert an **ImageLabel** into **PlayerDisplay**.
    1. Select the new label, then in the **Properties** window,
 
-      1. Remove the placeholder assetID within the **Image** property. The scripts in step 7 programmatically insert the player's portrait into the image label.
+      1. Remove the placeholder asset ID within the **Image** property. The scripts in step 7 programmatically insert the player's portrait into the image label.
       1. Set **AnchorPoint** to `0, 1` to set the label's origin point in the bottom-left of itself (0% from the left to the right of the label, and 100% from the top to the bottom of the label).
       1. Set **BackgroundColor3** to `0, 0, 0` to set the label's background color to black.
       1. Set **BackgroundTransparency** to `0.3` to reduce the opacity of the label by 30%, and match all black UI elements in the experience.

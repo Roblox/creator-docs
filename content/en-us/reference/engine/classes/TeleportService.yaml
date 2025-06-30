@@ -608,7 +608,7 @@ methods:
       - It is possible for this function to throw an error, hence developers
         should wrap it in a `Global.LuaGlobals.pcall()` (see example below)
       - As this function returns the JobId of the server and not the access code
-        returned by `Class.TeleportService:ReserveServer()`, the id returned is
+        returned by `Class.TeleportService:ReserveServer()`, the ID returned is
         not appropriate for use with reserved servers.
 
       #### Studio Limitation

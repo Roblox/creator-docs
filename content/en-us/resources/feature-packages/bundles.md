@@ -396,7 +396,7 @@ Constants for the **Core** feature package live in two spots:
 
 The main things you might want to adjust to meet the design requirements of your experience:
 
-- Sound assetIDs
+- Sound asset IDs
 - Purchase effect duration and particle colors
 - Heads up display collapsibility
 

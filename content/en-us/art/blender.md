@@ -79,7 +79,7 @@ To set Studio import settings for 3D objects from Blender:
 1. In the right-hand panel, navigate to the **File General** section, then:
 
    1. Enable **Import Only as a Model** if you have multiple objects that you want to group into a `Class.Model` object.
-   1. Enable **Upload to Roblox** if you want to create an asset with an assetID that you can reference across projects.
+   1. Enable **Upload to Roblox** if you want to create an asset with an asset ID that you can reference across projects.
    1. Set **Creator** to **Me** if you are the only one who needs to access the object, or to the group that owns the project you're working on. This latter setting ensures all eligible group members have permission to use the 3D object within the project.
    1. Enable **Insert Using Scene Position** so that the object retains the position you set in Blender.
 
@@ -114,7 +114,7 @@ To set Blender settings for exporting 3D objects for Studio:
    <img src="../assets/art/3p-software/blender/BlenderFileView-Export.png" width = "80%" alt="The Blender File View window with the General section highlighted."/>
 
 1. In the **Transform** section
-   1. If exporting `.fbx`, set **Apply Scalings** to **FBX Unit Scale** so that your object(s) keep the same scale in Studio. For more scaling information, see Adjust scale
+   1. If exporting `.fbx`, set **Apply Scalings** to **FBX Unit Scale** so that your object(s) keep the same scale in Studio. For more scaling information, see [Adjust scale](#adjust-scale-fbx).
    1. Set **Forward** to **Z Forward** to keep the same "forward" axis as Blender.
    1. Set **Up** to **Y Up** to keep the same "up" axis as Blender.
 1. In the bottom right-hand corner, click the **Export** button. Your 3D object is now ready to [import into Studio](#blender-to-studio).

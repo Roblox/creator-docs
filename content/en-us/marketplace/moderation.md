@@ -23,7 +23,7 @@ If you archive an avatar item:
 
 - Your item will no longer be discoverable in Marketplace and additional users will not be able to acquire it.
 - Existing owners of your item will continue owning the item in the inventory and can equip it on their avatar.
-- The underlying development assets for the avatar item will continue to exist, and you can still insert the archived avatar item into Studio if the assetID is known.
+- The underlying development assets for the avatar item will continue to exist, and you can still insert the archived avatar item into Studio if the asset ID is known.
 - An archived item may still be the subject of an IP takedown report, but your decision to archive the item will be considered when applying any account penalties related to the IP report.
 
 To archive items:

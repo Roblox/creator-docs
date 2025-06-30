@@ -201,7 +201,7 @@ properties:
 
       **The numbers in curly braces are substituted, and can be described as:**
 
-      - `{1}` – The id of the client instance quota.
+      - `{1}` – The ID of the client instance quota.
       - `{2}` – The current number of incoming packets that have been queued.
       - `{3}` – A prediction for how long it will take to update the quota.
       - `{4}` – The current average time it takes to read the stream data.
@@ -215,7 +215,7 @@ properties:
 
       **The numbers in curly braces are substituted, and can be described as:**
 
-      - `{1}` – The id of the client instance quota.
+      - `{1}` – The ID of the client instance quota.
       - `{2}` – The maximum radius of space around the client's
         `Class.Player.ReplicationFocus` that can have physical instances
         streamed in.
