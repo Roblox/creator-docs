@@ -130,9 +130,9 @@ end
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
-The above script runs on the server; it creates an `Class.AudioDeviceInput|AudioDeviceInput` per-player, and connects them all to a shared `Class.AudioFader|AudioFader`.
-
-Taking this behavior as-is allows each player to hear everybody – including themselves! Hearing yourself can be quite distracting: you can place this `Class.LocalScript` in `Class.StarterPlayerScripts` to remove the `Class.Wire|Wires` that would otherwise ferry your own voice back to your own speakers:
+<Alert severity="warning">
+The above script runs on the server, creating an `Class.AudioDeviceInput` per‑player and connecting them all to a shared `Class.AudioFader`. Taking this behavior as‑is allows players to hear all other players **and** themselves. Since hearing yourself can be quite distracting, you can place the following `Class.LocalScript` in `Class.StarterPlayerScripts` to remove the `Class.Wire|Wires` that would otherwise ferry your own voice back to your own speakers.
+</Alert>
 
 ```lua title="LocalScript"
 local Players = game:GetService("Players")
