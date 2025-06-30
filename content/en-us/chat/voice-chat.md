@@ -130,7 +130,9 @@ end
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
-Disabling default Voice Chat also removes the standard behavior where players cannot hear their own characters talk. To re‑mute players' own voices, use the following `Class.LocalScript` in `Class.StarterPlayerScripts`:
+The above script runs on the server; it creates an `Class.AudioDeviceInput|AudioDeviceInput` per-player, and connects them all to a shared `Class.AudioFader|AudioFader`.
+
+Taking this behavior as-is allows each player to hear everybody – including themselves! Hearing yourself can be quite distracting: you can place this `Class.LocalScript` in `Class.StarterPlayerScripts` to remove the `Class.Wire|Wires` that would otherwise ferry your own voice back to your own speakers:
 
 ```lua title="LocalScript"
 local Players = game:GetService("Players")
