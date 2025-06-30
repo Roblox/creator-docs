@@ -257,6 +257,22 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
+ <img src="../../assets/tutorials/UCT-Overview/Positional-Audio.png" />
+ </div>
+   <Typography variant='body1' >Add text-to-speech</Typography>
+     <div style={{marginTop:16}}>
+       <a underline="none" href="./audio/add-text-to-speech.md">
+       <Button variant="contained" color="secondary" size='large'
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
+       </a>
+     </div>
+ </Grid>
+ </Grid>
+
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+ <div class="container"
+ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Voice-Chat.png" />
  </div>
    <Typography variant='body1' >Add voice chat</Typography>

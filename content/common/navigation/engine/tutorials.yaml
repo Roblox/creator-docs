@@ -49,6 +49,8 @@ navigation:
         path: /tutorials/use-case-tutorials/audio/add-3D-audio
       - title: Voice chat
         path: /tutorials/use-case-tutorials/audio/add-voice-chat
+      - title: Text-to-speech
+        path: /tutorials/use-case-tutorials/audio/add-text-to-speech
   - title: Lighting
     section:
       - title: Indoor environments
