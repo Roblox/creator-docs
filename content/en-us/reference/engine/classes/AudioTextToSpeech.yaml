@@ -408,7 +408,7 @@ events:
       `Class.AudioTextToSpeech:GetPropertyChangedSignal()` on the
       `Class.AudioTextToSpeech.IsPlaying|IsPlaying` property.
 
-      This event is may be used to destroy an `Class.AudioTextToSpeech` object
+      This event may be used to destroy an `Class.AudioTextToSpeech` object
       when it has completed playback.
     code_samples: []
     parameters: []

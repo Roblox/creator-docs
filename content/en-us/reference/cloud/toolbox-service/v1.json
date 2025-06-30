@@ -352,7 +352,61 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 1000
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "creator-store-product:read"
+          }
+        ],
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/toolbox-service/v2/assets/{id}": {
+      "get": {
+        "tags": ["ToolboxService"],
+        "summary": "Get Creator Store Asset Details",
+        "description": "Get details for a single Creator Store asset.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The asset ID to retrieve details for.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreatorStoreAsset"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": true
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
           }
         },
         "x-roblox-scopes": [
@@ -608,6 +662,10 @@
             ],
             "description": "The price of the asset, including the currency code.",
             "nullable": true
+          },
+          "purchasable": {
+            "type": "boolean",
+            "description": "Whether or not the asset can be purchased in the Creator Store."
           }
         },
         "additionalProperties": false,

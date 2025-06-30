@@ -154,7 +154,7 @@ To play 2D text-to-speech audio:
    1. Insert an **AudioDeviceOutput** object to create a speaker that plays throughout the experience.
    1. Insert a **Wire** object to connect the stream from the audio speech generator to the speaker.
 1. Select the **AudioTextToSpeech** object, then in the **Properties** window,
-   1. Set **Text** to anything you want the voice to say.
+   1. Set **Text** to anything you want the voice to say. There is a limit of 300 characters per request.
    1. Set **VoiceId** to a number between `1` and `10`, depending on which artificial voice you want to use in the following table.
 
       <BaseAccordion>
@@ -269,7 +269,7 @@ To play 3D text-to-speech audio:
    1. Insert an **AudioEmitter** object to emit a positional stream from the 3D object.
    1. Insert a **Wire** object to connect the stream from the audio speech generator to the audio emitter.
 1. Select the **AudioTextToSpeech** object, then in the **Properties** window,
-   1. Set **Text** to anything you want the voice to say.
+   1. Set **Text** to anything you want the voice to say. There is a limit of 300 characters per request.
    1. Set **VoiceId** to a number between `1` and `10`, depending on which artificial voice you want to use in the following table.
 
       <BaseAccordion>
