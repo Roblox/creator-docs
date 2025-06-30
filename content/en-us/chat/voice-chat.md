@@ -4,7 +4,7 @@ description: Explains how to use the Voice Chat feature.
 ---
 
 <Alert severity="success">
-Voice Chat is currently available to all 13+ [phone number verified](../production/publishing/account-verification.md#verify-through-phone-number) users in these countries: US, CA, GB, IE, AU, NZ, ES, MX, CL, CR, PR, FR, IT, AT, CHE, DE, JP, KR, CH, AR, COL, PE, DO, GT, UY, SV, HN, PY, NI, EC, BO, VE, PA, PT, and BR. Users **not** in these countries should use [ID verification](https://en.help.roblox.com/hc/en-us/articles/4407282410644) to enable chat with voice. Once verified, eligible 13+ phone verified users can opt‑in to use this feature by visiting their account **Settings** page or from within a voice enabled experience, allowing them to chat with voice in any Roblox experience that supports it. Experiences with voice often see an uplift in engagement, DAU, and spending.
+Voice Chat is currently available to all 13+ phone number verified users in a specific set of countries. Review the [Voice Chat FAQ](https://en.help.roblox.com/hc/en-us/articles/4405807645972-Voice-Chat-FAQs) to learn more. Users **not** in these countries should use [ID verification](https://en.help.roblox.com/hc/en-us/articles/4407282410644) to enable chat with voice. Once verified, eligible 13+ phone verified users can opt‑in to use this feature by visiting their account **Settings** page or from within a voice enabled experience, allowing them to chat with voice in any Roblox experience that supports it. Experiences with voice often see an uplift in engagement, DAU, and spending.
 </Alert>
 
 **Voice Chat** is a feature enabling real-time, spoken communication between yourself and other player characters. It is only available for places that support a maximum of 50 players.
