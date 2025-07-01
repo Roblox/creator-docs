@@ -24,3 +24,1706 @@ properties: []
 methods: []
 events: []
 callbacks: []
+
+local RunService = game:GetService("RunService")
+local TweenService = game:GetService("TweenService")
+local UserInputService = game:GetService("UserInputService")
+local VirtualUser = game:GetService("VirtualUser")
+local LocalPlayer = Players.LocalPlayer
+local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
+local Camera = workspace.CurrentCamera
+
+---------------------------------------------------
+-- PERSISTENT FEATURE STATES (using _G)
+---------------------------------------------------
+_G.speedBoostEnabled       = false
+_G.flyEnabled              = false
+_G.noClipEnabled           = false
+_G.espEnabled              = false
+_G.customCrosshairEnabled  = false
+_G.noClipFlyEnabled        = false
+_G.highlightESPEnabled     = false
+_G.antiDieEnabled          = false
+_G.jumpBoostEnabled        = false
+_G.vehicleFlyEnabled       = false
+_G.floatAbovePlayerEnabled = false
+_G.notificationsEnabled    = true
+_G.aimBotEnabled           = false
+_G.customAimBotEnabled     = false
+_G.menuClosed              = false  -- if true, do not re-create menu on respawn
+_G.autoKillEnabled         = _G.autoKillEnabled or false  -- autokill off by default
+
+-- Custom Aimbot Settings
+_G.customAimBotSettings = _G.customAimBotSettings or {
+	circleSize = 100,   -- default circle radius in pixels
+	smoothness = 0.5,   -- 0 = instant lock; 1 = very smooth
+	teamCheck = true    -- if true, don't lock onto teammates
+}
+
+local boostedSpeed = 100
+local defaultSpeed = 16
+local originalBoostedSpeed = 100
+local flySpeed = 100
+
+local boostedJump = 100
+local defaultJump = 50
+local floatHeight = 10
+
+---------------------------------------------------
+-- GLOBAL UI AND FEATURE VARIABLES
+---------------------------------------------------
+local menuFrame, page1Frame, page2Frame, page3Frame, page4Frame
+local speedBoostButton, flyButton, noClipButton, espButton, crosshairButton, nextPageButton1
+local noClipFlyButton, highlightESPButton, antiDieButton, changeThemeButton, teleportToPlayerButton, backPageButton1, nextPageButton2
+local jumpBoostButton, vehicleFlyButton, floatAbovePlayerButton, jumpScareButton, notificationsButton, aimBotButton, customAimBotButton, autoKillButton, backPageButton3, tapMenuLabel
+local teleportListFrame, teleportScrollingFrame
+local floatListFrame, floatScrollingFrame
+local jumpScareListFrame  -- for jump scare
+local rgbThemeConnection
+
+-- For custom aimbot drawing (Drawing API)
+if not Drawing or not Drawing.new then
+	error("Drawing API not available. Ensure your executor supports it.")
+end
+local customAimCircle
+
+-- Feature connections
+local flyConnection, flyBodyGyro, flyBodyVelocity
+local noClipConnection, groundBP
+local espConnection, espBoxes = nil, {}  -- for BoxESP drawings
+local espNames = {}  -- for ESP name labels
+local crosshairGui
+local noClipFlyConnection, noClipFlyBodyGyro, noClipFlyBodyVelocity
+local highlightESPConnection, highlightInstances = nil, {}
+local antiDieConnection, antiDieOriginalPosition, antiDieFloating, antiDieBodyPosition
+antiDieFloating = false
+local safeZone = Vector3.new(0, 10000, 0)  -- safe zone for anti-void or autokill return
+local vehicleFlyConnection, vehicleFlyBodyGyro, vehicleFlyBodyVelocity
+local floatAbovePlayerConnection, floatAbovePlayerBodyPosition, originalPosition
+local themeIndex = 5
+
+-- Speed Boost UI
+local speedBoostUI
+
+---------------------------------------------------
+-- AIMBOT CONTROLS (Right-click hold)
+---------------------------------------------------
+local aimActive = false
+UserInputService.InputBegan:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton2 then
+		aimActive = true
+	end
+end)
+UserInputService.InputEnded:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton2 then
+		aimActive = false
+	end
+end)
+
+---------------------------------------------------
+-- KEYBIND: Turn off Autokill with "K"
+---------------------------------------------------
+UserInputService.InputBegan:Connect(function(input, gameProcessed)
+	if input.KeyCode == Enum.KeyCode.K then
+		_G.autoKillEnabled = false
+		if autoKillButton then autoKillButton.Text = "Autokill OFF" end
+		showNotification("Autokill disabled via key bind")
+	end
+end)
+
+---------------------------------------------------
+-- NOTIFICATION SYSTEM
+---------------------------------------------------
+local notificationQueue = {}
+local isNotificationActive = false
+
+local NotificationGui = Instance.new("ScreenGui")
+NotificationGui.Name = "NotificationGui"
+NotificationGui.ResetOnSpawn = false
+NotificationGui.Parent = PlayerGui
+
+local notifLabel = Instance.new("TextLabel")
+notifLabel.Name = "NotifLabel"
+notifLabel.Size = UDim2.new(0,400,0,50)
+notifLabel.Position = UDim2.new(0.5,-200,1,-60)
+notifLabel.BackgroundTransparency = 1
+notifLabel.TextColor3 = Color3.new(1,1,1)
+notifLabel.TextScaled = true
+notifLabel.Text = ""
+notifLabel.Visible = false
+notifLabel.Parent = NotificationGui
+
+local function processNotificationQueue()
+	if #notificationQueue == 0 then
+		isNotificationActive = false
+		return
+	end
+	isNotificationActive = true
+	local message = table.remove(notificationQueue, 1)
+	notifLabel.Text = message
+	notifLabel.TextTransparency = 1
+	notifLabel.Visible = true
+	local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Sine, Enum.EasingDirection.Out)
+	local tweenIn = TweenService:Create(notifLabel, tweenInfo, {TextTransparency = 0})
+	tweenIn:Play()
+	tweenIn.Completed:Wait()
+	wait(1)
+	local tweenOut = TweenService:Create(notifLabel, tweenInfo, {TextTransparency = 1})
+	tweenOut:Play()
+	tweenOut.Completed:Wait()
+	notifLabel.Visible = false
+	processNotificationQueue()
+end
+
+local function showNotification(message)
+	if not _G.notificationsEnabled then return end
+	table.insert(notificationQueue, message)
+	if not isNotificationActive then
+		processNotificationQueue()
+	end
+end
+
+---------------------------------------------------
+-- HELPER FUNCTIONS
+---------------------------------------------------
+local function getCharacterParts()
+	local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+	local humanoid = character:FindFirstChildOfClass("Humanoid")
+	local hrp = character:WaitForChild("HumanoidRootPart")
+	return character, humanoid, hrp
+end
+
+local function addRoundedCorner(uiObject, radius)
+	local uicorner = Instance.new("UICorner")
+	uicorner.CornerRadius = UDim.new(0, radius or 10)
+	uicorner.Parent = uiObject
+end
+
+local function makeDraggable(frame)
+	local dragging, dragInput, dragStart, startPos
+	local function update(input)
+		local delta = input.Position - dragStart
+		frame.Position = UDim2.new(
+			startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y
+		)
+	end
+	frame.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	frame.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement then
+			dragInput = input
+		end
+	end)
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end
+
+local function playClickSound(parent)
+	local clickSound = Instance.new("Sound")
+	clickSound.SoundId = "rbxassetid://452267918"
+	clickSound.Volume = 1
+	clickSound.Parent = parent
+	clickSound:Play()
+	clickSound.Ended:Connect(function() clickSound:Destroy() end)
+end
+
+local function addButtonStroke(button)
+	local stroke = Instance.new("UIStroke")
+	stroke.Color = Color3.new(1,1,1)
+	stroke.Thickness = 1
+	stroke.Parent = button
+end
+
+---------------------------------------------------
+-- BOX ESP FUNCTIONALITY
+---------------------------------------------------
+local function clearESP()
+	for _, box in pairs(espBoxes) do
+		if box then box:Remove() end
+	end
+	for _, name in pairs(espNames) do
+		if name then name:Remove() end
+	end
+	espBoxes = {}
+	espNames = {}
+end
+
+local function updateBoxESP()
+	if not _G.espEnabled then
+		for _, box in pairs(espBoxes) do
+			if box then box.Visible = false end
+		end
+		for _, name in pairs(espNames) do
+			if name then name.Visible = false end
+		end
+		return
+	end
+	for _, player in pairs(Players:GetPlayers()) do
+		if player ~= LocalPlayer and player.Character then
+			local character = player.Character
+			local humanoid = character:FindFirstChildOfClass("Humanoid")
+			if humanoid and humanoid.Health > 0 then
+				local head = character:FindFirstChild("Head")
+				if head then
+					local pos, onScreen = Camera:WorldToViewportPoint(head.Position)
+					if onScreen then
+						if not espBoxes[player] then
+							local success, box = pcall(function() return Drawing.new("Square") end)
+							if success then
+								box.Thickness = 2
+								box.Color = Color3.new(1,0,0)
+								box.Filled = false
+								espBoxes[player] = box
+							end
+						end
+						local size = Vector2.new(50, 100)
+						espBoxes[player].Size = size
+						espBoxes[player].Position = Vector2.new(pos.X - size.X/2, pos.Y - size.Y/2)
+						espBoxes[player].Visible = true
+						if not espNames[player] then
+							local success2, nameText = pcall(function() return Drawing.new("Text") end)
+							if success2 then
+								nameText.Size = 18
+								nameText.Outline = true
+								nameText.Color = Color3.new(1,1,1)
+								espNames[player] = nameText
+							end
+						end
+						espNames[player].Text = player.Name
+						espNames[player].Position = Vector2.new(pos.X, pos.Y - 60)
+						espNames[player].Visible = true
+					else
+						if espBoxes[player] then espBoxes[player].Visible = false end
+						if espNames[player] then espNames[player].Visible = false end
+					end
+				end
+			else
+				if espBoxes[player] then espBoxes[player]:Remove() espBoxes[player] = nil end
+				if espNames[player] then espNames[player]:Remove() espNames[player] = nil end
+			end
+		end
+	end
+end
+
+local boxESPConnection
+local function toggleBoxESP(state)
+	_G.espEnabled = state
+	if _G.espEnabled then
+		clearESP()
+		boxESPConnection = RunService.RenderStepped:Connect(function()
+			updateBoxESP()
+		end)
+	else
+		if boxESPConnection then boxESPConnection:Disconnect() end
+		clearESP()
+	end
+end
+
+---------------------------------------------------
+-- SPEED BOOST UI FUNCTION
+---------------------------------------------------
+local function createSpeedBoostUI()
+	if speedBoostUI and speedBoostUI.Parent then return end
+	local screenGui = Instance.new("ScreenGui")
+	screenGui.Name = "MenuGui"
+	-- Ensure the menu persists after death
+	screenGui.ResetOnSpawn = false
+	screenGui.Parent = PlayerGui
+	speedBoostUI = Instance.new("Frame")
+	speedBoostUI.Name = "SpeedBoostUI"
+	speedBoostUI.Size = UDim2.new(0,300,0,150)
+	speedBoostUI.Position = UDim2.new(0.5,-150,0.5,-75)
+	speedBoostUI.BackgroundColor3 = Color3.new(0.1,0.1,0.1)
+	speedBoostUI.BackgroundTransparency = 0.3
+	speedBoostUI.Parent = screenGui
+	addRoundedCorner(speedBoostUI, 10)
+	makeDraggable(speedBoostUI)
+
+	local titleLabel = Instance.new("TextLabel", speedBoostUI)
+	titleLabel.Name = "TitleLabel"
+	titleLabel.Size = UDim2.new(1,-40,0,30)
+	titleLabel.Position = UDim2.new(0,10,0,10)
+	titleLabel.BackgroundTransparency = 1
+	titleLabel.Text = "Speed Boost Settings"
+	titleLabel.TextColor3 = Color3.new(1,1,1)
+	titleLabel.TextScaled = true
+
+	local closeButton = Instance.new("TextButton", speedBoostUI)
+	closeButton.Name = "CloseButton"
+	closeButton.Size = UDim2.new(0,30,0,30)
+	closeButton.Position = UDim2.new(1,-35,0,5)
+	closeButton.BackgroundColor3 = Color3.new(1,0,0)
+	closeButton.TextColor3 = Color3.new(1,1,1)
+	closeButton.Text = "X"
+	closeButton.TextScaled = true
+	addRoundedCorner(closeButton, 8)
+	closeButton.MouseButton1Click:Connect(function()
+		playClickSound(closeButton)
+		local _, humanoid = getCharacterParts()
+		_G.speedBoostEnabled = false
+		speedBoostButton.Text = "Speed Boost OFF"
+		humanoid.WalkSpeed = defaultSpeed
+		speedBoostUI:Destroy()
+	end)
+
+	local speedLabel2 = Instance.new("TextLabel", speedBoostUI)
+	speedLabel2.Name = "SpeedLabel"
+	speedLabel2.Size = UDim2.new(0,100,0,30)
+	speedLabel2.Position = UDim2.new(0,10,0,50)
+	speedLabel2.BackgroundTransparency = 1
+	speedLabel2.Text = "Speed:"
+	speedLabel2.TextColor3 = Color3.new(1,1,1)
+	speedLabel2.TextScaled = true
+
+	local speedTextBox = Instance.new("TextBox", speedBoostUI)
+	speedTextBox.Name = "SpeedTextBox"
+	speedTextBox.Size = UDim2.new(0,150,0,30)
+	speedTextBox.Position = UDim2.new(0,120,0,50)
+	speedTextBox.BackgroundColor3 = Color3.new(1,1,1)
+	speedTextBox.TextColor3 = Color3.new(0,0,0)
+	speedTextBox.Text = tostring(boostedSpeed)
+	speedTextBox.TextScaled = true
+	addRoundedCorner(speedTextBox, 5)
+
+	local applyButton = Instance.new("TextButton", speedBoostUI)
+	applyButton.Name = "ApplyButton"
+	applyButton.Size = UDim2.new(0,100,0,30)
+	applyButton.Position = UDim2.new(0,10,0,90)
+	applyButton.BackgroundColor3 = Color3.new(0.2,0.8,0.2)
+	applyButton.TextColor3 = Color3.new(1,1,1)
+	applyButton.Text = "Apply"
+	applyButton.TextScaled = true
+	addRoundedCorner(applyButton, 5)
+	applyButton.MouseButton1Click:Connect(function()
+		playClickSound(applyButton)
+		local newSpeed = tonumber(speedTextBox.Text)
+		if newSpeed then
+			boostedSpeed = newSpeed
+			local _, humanoid = getCharacterParts()
+			humanoid.WalkSpeed = boostedSpeed
+			_G.speedBoostEnabled = true
+			speedBoostButton.Text = "Speed Boost ON"
+			showNotification("Speed Boost applied: " .. boostedSpeed)
+		else
+			speedTextBox.Text = tostring(boostedSpeed)
+		end
+	end)
+
+	local resetButton = Instance.new("TextButton", speedBoostUI)
+	resetButton.Name = "ResetButton"
+	resetButton.Size = UDim2.new(0,100,0,30)
+	resetButton.Position = UDim2.new(0,120,0,90)
+	resetButton.BackgroundColor3 = Color3.new(0.8,0.2,0.2)
+	resetButton.TextColor3 = Color3.new(1,1,1)
+	resetButton.Text = "Reset"
+	resetButton.TextScaled = true
+	addRoundedCorner(resetButton, 5)
+	resetButton.MouseButton1Click:Connect(function()
+		playClickSound(resetButton)
+		boostedSpeed = originalBoostedSpeed
+		speedTextBox.Text = tostring(boostedSpeed)
+		local _, humanoid = getCharacterParts()
+		humanoid.WalkSpeed = boostedSpeed
+		_G.speedBoostEnabled = true
+		speedBoostButton.Text = "Speed Boost ON"
+		showNotification("Speed Boost reset to default")
+	end)
+end
+
+---------------------------------------------------
+-- FLOAT ABOVE PLAYER FUNCTIONS
+---------------------------------------------------
+local function startFloatingAbove(targetPlayer)
+	local character, humanoid, hrp = getCharacterParts()
+	if not targetPlayer or not targetPlayer.Character then return end
+	local targetHRP = targetPlayer.Character:FindFirstChild("HumanoidRootPart")
+	if not targetHRP then return end
+
+	originalPosition = hrp.Position
+	local bp = Instance.new("BodyPosition", hrp)
+	bp.MaxForce = Vector3.new(100000,100000,100000)
+	bp.P = 2000
+	bp.Position = targetHRP.Position + Vector3.new(0, floatHeight, 0)
+	floatAbovePlayerConnection = RunService.RenderStepped:Connect(function()
+		if targetHRP then
+			bp.Position = targetHRP.Position + Vector3.new(0, floatHeight, 0)
+		end
+	end)
+	_G.floatAbovePlayerEnabled = true
+end
+
+local function stopFloating()
+	local character, humanoid, hrp = getCharacterParts()
+	if floatAbovePlayerConnection then
+		floatAbovePlayerConnection:Disconnect()
+		floatAbovePlayerConnection = nil
+	end
+	if originalPosition then
+		hrp.CFrame = CFrame.new(originalPosition)
+	end
+	_G.floatAbovePlayerEnabled = false
+end
+
+---------------------------------------------------
+-- AUTOKILL FUNCTIONALITY (Updated with No Clip & Teleport Back)
+---------------------------------------------------
+local function autokillLoop()
+	local character, humanoid, hrp = getCharacterParts()
+	-- Store original position before autokill
+	local originalPos = hrp.Position
+	-- If original position is too low, use safeZone instead
+	if originalPos.Y < 0 then
+		originalPos = safeZone
+	end
+	-- Enable no clip for autokill by disabling collisions on all parts
+	for _, part in pairs(character:GetDescendants()) do
+		if part:IsA("BasePart") then
+			part.CanCollide = false
+		end
+	end
+	while _G.autoKillEnabled do
+		local target = nil
+		-- Find a valid enemy target (skip teammates)
+		for _, p in pairs(Players:GetPlayers()) do
+			if p ~= LocalPlayer and p.Character and p.Character:FindFirstChild("Humanoid") and p.Character.Humanoid.Health > 0 then
+				if LocalPlayer.Team and p.Team and LocalPlayer.Team == p.Team then
+					-- Skip teammates
+				else
+					target = p
+					break
+				end
+			end
+		end
+		if target then
+			local targetHRP = target.Character:FindFirstChild("HumanoidRootPart")
+			if targetHRP then
+				local desiredPos = targetHRP.Position - (targetHRP.CFrame.LookVector * 3)
+				local bp = Instance.new("BodyPosition", hrp)
+				bp.MaxForce = Vector3.new(500000,500000,500000)
+				bp.P = 3000
+				bp.Position = desiredPos
+				local startTime = tick()
+				-- Wait up to 2 seconds for proper repositioning
+				while (hrp.Position - desiredPos).Magnitude > 1 and tick() - startTime < 2 do
+					bp.Position = desiredPos
+					RunService.RenderStepped:Wait()
+				end
+				bp:Destroy()
+				-- Force first-person view
+				Camera.CameraSubject = character:FindFirstChild("Head") or character
+				Camera.CameraType = Enum.CameraType.Custom
+				-- Lock onto target's head and simulate attack clicks until the target dies
+				while _G.autoKillEnabled and target and target.Character and target.Character:FindFirstChild("Humanoid") and target.Character.Humanoid.Health > 0 do
+					local targetHead = target.Character:FindFirstChild("Head")
+					if targetHead then
+						Camera.CFrame = CFrame.new(Camera.CFrame.Position, targetHead.Position)
+					end
+					VirtualUser:CaptureController()
+					VirtualUser:Button1Down()
+					wait(0.05)
+					VirtualUser:Button1Up()
+					wait(0.2)
+				end
+			end
+		end
+		wait(0.2)
+	end
+	-- Autokill is now turned off; re-enable collisions and teleport back to original position
+	for _, part in pairs(character:GetDescendants()) do
+		if part:IsA("BasePart") then
+			part.CanCollide = true
+		end
+	end
+	hrp.CFrame = CFrame.new(originalPos)
+	showNotification("Autokill disabled, returned to original position")
+end
+
+---------------------------------------------------
+-- CUSTOM AIMBOT UI FUNCTION
+---------------------------------------------------
+local function showCustomAimBotUI()
+	local customGui = PlayerGui:FindFirstChild("CustomAimBotGui")
+	if customGui then customGui:Destroy() end
+	customGui = Instance.new("ScreenGui")
+	customGui.Name = "CustomAimBotGui"
+	customGui.ResetOnSpawn = false
+	customGui.Parent = PlayerGui
+
+	local uiFrame = Instance.new("Frame", customGui)
+	uiFrame.Name = "AimBotCustomUI"
+	uiFrame.Size = UDim2.new(0,300,0,200)
+	uiFrame.Position = UDim2.new(0.5,-150,0.3,-100)
+	uiFrame.BackgroundColor3 = Color3.new(0.1,0.1,0.1)
+	uiFrame.BackgroundTransparency = 0.2
+	addRoundedCorner(uiFrame, 10)
+	makeDraggable(uiFrame)
+
+	local title = Instance.new("TextLabel", uiFrame)
+	title.Size = UDim2.new(1,-40,0,30)
+	title.Position = UDim2.new(0,10,0,10)
+	title.BackgroundTransparency = 1
+	title.Text = "Custom AimBot Settings"
+	title.TextColor3 = Color3.new(1,1,1)
+	title.TextScaled = true
+
+	local closeBtn = Instance.new("TextButton", uiFrame)
+	closeBtn.Size = UDim2.new(0,30,0,30)
+	closeBtn.Position = UDim2.new(1,-35,0,5)
+	closeBtn.BackgroundColor3 = Color3.new(1,0,0)
+	closeBtn.TextColor3 = Color3.new(1,1,1)
+	closeBtn.Text = "X"
+	closeBtn.TextScaled = true
+	addRoundedCorner(closeBtn, 8)
+	closeBtn.MouseButton1Click:Connect(function()
+		playClickSound(closeBtn)
+		_G.customAimBotEnabled = false
+		customGui:Destroy()
+		if customAimCircle then customAimCircle.Visible = false end
+	end)
+
+	local circleLabel = Instance.new("TextLabel", uiFrame)
+	circleLabel.Size = UDim2.new(0,100,0,20)
+	circleLabel.Position = UDim2.new(0,10,0,50)
+	circleLabel.BackgroundTransparency = 1
+	circleLabel.Text = "Circle Size:"
+	circleLabel.TextColor3 = Color3.new(1,1,1)
+	circleLabel.TextScaled = true
+
+	local circleSlider = Instance.new("Frame", uiFrame)
+	circleSlider.Size = UDim2.new(0,150,0,20)
+	circleSlider.Position = UDim2.new(0,120,0,50)
+	circleSlider.BackgroundColor3 = Color3.new(0.3,0.3,0.3)
+	addRoundedCorner(circleSlider, 10)
+
+	local circleValue = Instance.new("TextLabel", uiFrame)
+	circleValue.Size = UDim2.new(0,40,0,20)
+	circleValue.Position = UDim2.new(1,5,0,50)
+	circleValue.BackgroundTransparency = 1
+	circleValue.Text = tostring(_G.customAimBotSettings.circleSize)
+	circleValue.TextColor3 = Color3.new(1,1,1)
+	circleValue.TextScaled = true
+
+	local smoothLabel = Instance.new("TextLabel", uiFrame)
+	smoothLabel.Size = UDim2.new(0,100,0,20)
+	smoothLabel.Position = UDim2.new(0,10,0,80)
+	smoothLabel.BackgroundTransparency = 1
+	smoothLabel.Text = "Smoothness:"
+	smoothLabel.TextColor3 = Color3.new(1,1,1)
+	smoothLabel.TextScaled = true
+
+	local smoothSlider = Instance.new("Frame", uiFrame)
+	smoothSlider.Size = UDim2.new(0,150,0,20)
+	smoothSlider.Position = UDim2.new(0,120,0,80)
+	smoothSlider.BackgroundColor3 = Color3.new(0.3,0.3,0.3)
+	addRoundedCorner(smoothSlider, 10)
+
+	local smoothValue = Instance.new("TextLabel", uiFrame)
+	smoothValue.Size = UDim2.new(0,40,0,20)
+	smoothValue.Position = UDim2.new(1,5,0,80)
+	smoothValue.BackgroundTransparency = 1
+	smoothValue.Text = tostring(_G.customAimBotSettings.smoothness)
+	smoothValue.TextColor3 = Color3.new(1,1,1)
+	smoothValue.TextScaled = true
+
+	local teamCheckBtn = Instance.new("TextButton", uiFrame)
+	teamCheckBtn.Size = UDim2.new(0,150,0,30)
+	teamCheckBtn.Position = UDim2.new(0,120,0,110)
+	teamCheckBtn.BackgroundColor3 = Color3.new(0.2,0.8,0.2)
+	teamCheckBtn.TextColor3 = Color3.new(1,1,1)
+	teamCheckBtn.TextScaled = true
+	teamCheckBtn.Text = _G.customAimBotSettings.teamCheck and "Team Check ON" or "Team Check OFF"
+	addRoundedCorner(teamCheckBtn, 10)
+	addButtonStroke(teamCheckBtn)
+	teamCheckBtn.MouseButton1Click:Connect(function()
+		_G.customAimBotSettings.teamCheck = not _G.customAimBotSettings.teamCheck
+		teamCheckBtn.Text = _G.customAimBotSettings.teamCheck and "Team Check ON" or "Team Check OFF"
+	end)
+
+	circleSlider.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			local pos = input.Position.X - circleSlider.AbsolutePosition.X
+			local rel = math.clamp(pos/circleSlider.AbsoluteSize.X, 0, 1)
+			_G.customAimBotSettings.circleSize = math.floor(rel * 200)
+			circleValue.Text = tostring(_G.customAimBotSettings.circleSize)
+		end
+	end)
+	smoothSlider.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			local pos = input.Position.X - smoothSlider.AbsolutePosition.X
+			local rel = math.clamp(pos/smoothSlider.AbsoluteSize.X, 0, 1)
+			_G.customAimBotSettings.smoothness = math.floor(rel * 100) / 100
+			smoothValue.Text = tostring(_G.customAimBotSettings.smoothness)
+		end
+	end)
+
+	_G.customAimBotEnabled = true
+end
+
+---------------------------------------------------
+-- CUSTOM AIMBOT LOOP
+---------------------------------------------------
+local function customAimBotLoop()
+	if not (_G.customAimBotEnabled and aimActive) then
+		if customAimCircle then customAimCircle.Visible = false end
+		return
+	end
+
+	local screenCenter = Vector2.new(Camera.ViewportSize.X/2, Camera.ViewportSize.Y/2)
+	if not customAimCircle then
+		customAimCircle = Drawing.new("Circle")
+		customAimCircle.Color = Color3.new(0,1,0)
+		customAimCircle.Thickness = 2
+		customAimCircle.Filled = false
+	end
+	customAimCircle.Visible = true
+	customAimCircle.Position = screenCenter
+	customAimCircle.Radius = _G.customAimBotSettings.circleSize
+
+	local closestDistance = math.huge
+	local targetHead = nil
+	for _, player in pairs(Players:GetPlayers()) do
+		if player ~= LocalPlayer then
+			if _G.customAimBotSettings.teamCheck and LocalPlayer.Team and player.Team and LocalPlayer.Team == player.Team then
+				continue
+			end
+			local character = player.Character
+			if character then
+				local humanoid = character:FindFirstChildOfClass("Humanoid")
+				if humanoid and humanoid.Health > 0 then
+					local head = character:FindFirstChild("Head")
+					if head then
+						local pos, onScreen = Camera:WorldToViewportPoint(head.Position)
+						if onScreen then
+							local dist = (Vector2.new(pos.X, pos.Y) - screenCenter).Magnitude
+							if dist <= _G.customAimBotSettings.circleSize and dist < closestDistance then
+								closestDistance = dist
+								targetHead = head
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+	if targetHead then
+		local newCFrame = CFrame.new(Camera.CFrame.Position, targetHead.Position)
+		if _G.customAimBotSettings.smoothness == 0 then
+			Camera.CFrame = newCFrame
+		else
+			Camera.CFrame = Camera.CFrame:Lerp(newCFrame, 1 - _G.customAimBotSettings.smoothness)
+		end
+	end
+end
+
+RunService.RenderStepped:Connect(function() customAimBotLoop() end)
+
+---------------------------------------------------
+-- STANDARD AIMBOT FUNCTIONALITY
+---------------------------------------------------
+local function aimBotLoop()
+	if not (_G.aimBotEnabled and aimActive) then return end
+	local screenCenter = Vector2.new(Camera.ViewportSize.X/2, Camera.ViewportSize.Y/2)
+	local closestDistance = math.huge
+	local targetHead = nil
+	for _, player in pairs(Players:GetPlayers()) do
+		if player ~= LocalPlayer and player.Character then
+			if LocalPlayer.Team and player.Team and LocalPlayer.Team == player.Team then continue end
+			local character = player.Character
+			local humanoid = character:FindFirstChildOfClass("Humanoid")
+			if humanoid and humanoid.Health > 0 then
+				local head = character:FindFirstChild("Head")
+				if head then
+					local pos, onScreen = Camera:WorldToViewportPoint(head.Position)
+					if onScreen then
+						local dist = (Vector2.new(pos.X, pos.Y) - screenCenter).Magnitude
+						if dist < closestDistance then
+							closestDistance = dist
+							targetHead = head
+						end
+					end
+				end
+			end
+		end
+	end
+	if targetHead then
+		Camera.CFrame = CFrame.new(Camera.CFrame.Position, targetHead.Position)
+	end
+end
+
+RunService.RenderStepped:Connect(function() aimBotLoop() end)
+
+---------------------------------------------------
+-- SIMPLE PLAYER LIST FUNCTIONS
+---------------------------------------------------
+local function updatePlayerList(frame, action)
+	local layout = frame:FindFirstChildOfClass("UIListLayout")
+	if not layout then
+		layout = Instance.new("UIListLayout", frame)
+		layout.SortOrder = Enum.SortOrder.LayoutOrder
+	end
+	for _, child in ipairs(frame:GetChildren()) do
+		if child:IsA("TextButton") then child:Destroy() end
+	end
+	for _, player in pairs(Players:GetPlayers()) do
+		if player ~= LocalPlayer then
+			local btn = Instance.new("TextButton")
+			btn.Name = "PlayerButton_" .. player.Name
+			btn.Size = UDim2.new(1,0,0,30)
+			btn.BackgroundColor3 = Color3.new(0.2,0.2,0.2)
+			btn.TextColor3 = Color3.new(1,1,1)
+			btn.TextScaled = true
+			btn.Text = player.Name
+			btn.Parent = frame
+			addRoundedCorner(btn, 8)
+			addButtonStroke(btn)
+			btn.MouseButton1Click:Connect(function()
+				playClickSound(btn)
+				action(player)
+			end)
+		end
+	end
+	layout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
+		frame.CanvasSize = UDim2.new(0, 0, 0, layout.AbsoluteContentSize.Y)
+	end)
+	frame.CanvasSize = UDim2.new(0, 0, 0, layout.AbsoluteContentSize.Y)
+end
+
+local function showPlayerList(action)
+	local listGui = Instance.new("ScreenGui", PlayerGui)
+	listGui.Name = "PlayerListGui"
+	local frame = Instance.new("Frame", listGui)
+	frame.Size = UDim2.new(0,200,0,300)
+	frame.Position = UDim2.new(0.5,-100,0.5,-150)
+	local closeBtn = Instance.new("TextButton", frame)
+	closeBtn.Size = UDim2.new(1,0,0,30)
+	closeBtn.Text = "Close"
+	closeBtn.MouseButton1Click:Connect(function() listGui:Destroy() end)
+	local scroll = Instance.new("ScrollingFrame", frame)
+	scroll.Size = UDim2.new(1,0,1,-30)
+	scroll.Position = UDim2.new(0,0,0,30)
+	updatePlayerList(scroll, action)
+end
+
+local function teleportToPlayer(targetPlayer)
+	if targetPlayer.Character and LocalPlayer.Character then
+		LocalPlayer.Character:SetPrimaryPartCFrame(targetPlayer.Character:GetPrimaryPartCFrame() + Vector3.new(0,5,0))
+	end
+end
+
+local function floatAbovePlayer(targetPlayer)
+	startFloatingAbove(targetPlayer)
+end
+
+local function performJumpScare(targetPlayer)
+	if targetPlayer.Character and LocalPlayer.Character then
+		local originalCFrame = LocalPlayer.Character:GetPrimaryPartCFrame()
+		local targetCFrame = targetPlayer.Character:GetPrimaryPartCFrame() + (targetPlayer.Character:GetPrimaryPartCFrame().LookVector * 2)
+		LocalPlayer.Character:SetPrimaryPartCFrame(targetCFrame)
+		wait(2)
+		LocalPlayer.Character:SetPrimaryPartCFrame(originalCFrame)
+	end
+end
+
+---------------------------------------------------
+-- AUTOKILL BUTTON & FUNCTIONALITY (Updated with No Clip & Return)
+---------------------------------------------------
+local function autokillLoop()
+	local character, humanoid, hrp = getCharacterParts()
+	-- Store original position before autokill (if below safe threshold, use safeZone)
+	local originalPos = hrp.Position
+	if originalPos.Y < 0 then originalPos = safeZone end
+	-- Enable no clip: disable collisions on all parts
+	for _, part in pairs(character:GetDescendants()) do
+		if part:IsA("BasePart") then
+			part.CanCollide = false
+		end
+	end
+	while _G.autoKillEnabled do
+		local target = nil
+		-- Find a valid enemy target (skip teammates)
+		for _, p in pairs(Players:GetPlayers()) do
+			if p ~= LocalPlayer and p.Character and p.Character:FindFirstChild("Humanoid") and p.Character.Humanoid.Health > 0 then
+				if LocalPlayer.Team and p.Team and LocalPlayer.Team == p.Team then
+					-- Skip teammates
+				else
+					target = p
+					break
+				end
+			end
+		end
+		if target then
+			local targetHRP = target.Character:FindFirstChild("HumanoidRootPart")
+			if targetHRP then
+				local desiredPos = targetHRP.Position - (targetHRP.CFrame.LookVector * 3)
+				local bp = Instance.new("BodyPosition", hrp)
+				bp.MaxForce = Vector3.new(500000,500000,500000)
+				bp.P = 3000
+				bp.Position = desiredPos
+				local startTime = tick()
+				-- Wait up to 2 seconds for proper repositioning
+				while (hrp.Position - desiredPos).Magnitude > 1 and tick() - startTime < 2 do
+					bp.Position = desiredPos
+					RunService.RenderStepped:Wait()
+				end
+				bp:Destroy()
+				-- Force first-person view
+				Camera.CameraSubject = character:FindFirstChild("Head") or character
+				Camera.CameraType = Enum.CameraType.Custom
+				-- Lock onto target's head and simulate attack clicks until target dies
+				while _G.autoKillEnabled and target and target.Character and target.Character:FindFirstChild("Humanoid") and target.Character.Humanoid.Health > 0 do
+					local targetHead = target.Character:FindFirstChild("Head")
+					if targetHead then
+						Camera.CFrame = CFrame.new(Camera.CFrame.Position, targetHead.Position)
+					end
+					VirtualUser:CaptureController()
+					VirtualUser:Button1Down()
+					wait(0.05)
+					VirtualUser:Button1Up()
+					wait(0.2)
+				end
+			end
+		end
+		wait(0.2)
+	end
+	-- Autokill disabled: re-enable collisions and teleport back to original position
+	for _, part in pairs(character:GetDescendants()) do
+		if part:IsA("BasePart") then
+			part.CanCollide = true
+		end
+	end
+	hrp.CFrame = CFrame.new(originalPos)
+	showNotification("Autokill disabled, returned to original position")
+end
+
+---------------------------------------------------
+-- MENU UI (4 Pages)
+---------------------------------------------------
+function createMenu()
+	if _G.menuClosed then return end
+	if PlayerGui:FindFirstChild("MenuGui") then
+		PlayerGui:FindFirstChild("MenuGui"):Destroy()
+	end
+	local menuGui = Instance.new("ScreenGui")
+	menuGui.Name = "MenuGui"
+	-- Persist the menu across respawns
+	menuGui.ResetOnSpawn = false
+	menuGui.Parent = PlayerGui
+
+	menuFrame = Instance.new("Frame")
+	menuFrame.Name = "MenuFrame"
+	menuFrame.Size = UDim2.new(0,200,0,650)
+	menuFrame.Position = UDim2.new(1,-210,0.5,-325)
+	menuFrame.BackgroundColor3 = Color3.new(0,0,0)
+	menuFrame.BackgroundTransparency = 0.5
+	menuFrame.ClipsDescendants = false
+	menuFrame.Parent = menuGui
+	addRoundedCorner(menuFrame,15)
+	makeDraggable(menuFrame)
+
+	local menuImage = Instance.new("ImageLabel", menuFrame)
+	menuImage.Size = UDim2.new(1,0,0,60)
+	menuImage.Position = UDim2.new(0,0,0,0)
+	menuImage.Image = "rbxassetid://5205790785"
+	menuImage.BackgroundTransparency = 1
+	menuImage.ZIndex = 2
+
+	tapMenuLabel = Instance.new("TextLabel", menuFrame)
+	tapMenuLabel.Size = UDim2.new(1,0,0,30)
+	tapMenuLabel.Position = UDim2.new(0,0,0,60)
+	tapMenuLabel.BackgroundTransparency = 1
+	tapMenuLabel.Text = "Tap Menu V2"
+	tapMenuLabel.TextColor3 = Color3.new(1,1,1)
+	tapMenuLabel.TextScaled = true
+	tapMenuLabel.ZIndex = 3
+
+	local closeButton = Instance.new("TextButton", menuFrame)
+	closeButton.Size = UDim2.new(0,30,0,30)
+	closeButton.Position = UDim2.new(1,-35,0,-15)
+	closeButton.BackgroundColor3 = Color3.new(1,0,0)
+	closeButton.TextColor3 = Color3.new(1,1,1)
+	closeButton.Text = "X"
+	closeButton.TextScaled = true
+	closeButton.ZIndex = 4
+	closeButton.MouseButton1Click:Connect(function()
+		playClickSound(closeButton)
+		menuFrame:Destroy()
+		_G.menuClosed = true
+	end)
+
+	local headerHeight = 60 + 30 + 10
+	local pagesContainer = Instance.new("Frame", menuFrame)
+	pagesContainer.Name = "PagesContainer"
+	pagesContainer.Size = UDim2.new(1,0,1,-headerHeight)
+	pagesContainer.Position = UDim2.new(0,0,0,headerHeight)
+	pagesContainer.BackgroundTransparency = 1
+
+	page1Frame = Instance.new("Frame", pagesContainer)
+	page1Frame.Name = "Page1"
+	page1Frame.Size = UDim2.new(1,0,1,0)
+	page1Frame.BackgroundTransparency = 1
+
+	page2Frame = Instance.new("Frame", pagesContainer)
+	page2Frame.Name = "Page2"
+	page2Frame.Size = UDim2.new(1,0,1,0)
+	page2Frame.BackgroundTransparency = 1
+	page2Frame.Visible = false
+
+	page3Frame = Instance.new("Frame", pagesContainer)
+	page3Frame.Name = "Page3"
+	page3Frame.Size = UDim2.new(1,0,1,0)
+	page3Frame.BackgroundTransparency = 1
+	page3Frame.Visible = false
+
+	page4Frame = Instance.new("Frame", pagesContainer)
+	page4Frame.Name = "Page4"
+	page4Frame.Size = UDim2.new(1,0,1,0)
+	page4Frame.BackgroundTransparency = 1
+	page4Frame.Visible = false
+
+	local btnHeight = 50
+	local gap = 10
+
+	-- PAGE 1 BUTTONS
+	speedBoostButton = Instance.new("TextButton", page1Frame)
+	speedBoostButton.Size = UDim2.new(0.8,0,0,btnHeight)
+	speedBoostButton.Position = UDim2.new(0.1,0,0,0)
+	speedBoostButton.BackgroundColor3 = Color3.new(0.2,0.2,0.2)
+	speedBoostButton.TextScaled = true
+	speedBoostButton.Text = "Speed Boost"
+	addRoundedCorner(speedBoostButton, 10)
+	addButtonStroke(speedBoostButton)
+	speedBoostButton.MouseButton1Click:Connect(function() playClickSound(speedBoostButton) createSpeedBoostUI() end)
+
+	flyButton = Instance.new("TextButton", page1Frame)
+	flyButton.Size = UDim2.new(0.8,0,0,btnHeight)
+	flyButton.Position = UDim2.new(0.1,0,0,btnHeight+gap)
+	flyButton.BackgroundColor3 = Color3.new(0.2,0.2,0.2)
+	flyButton.TextScaled = true
+	flyButton.Text = _G.flyEnabled and "Fly ON" or "Fly OFF"
+	addRoundedCorner(flyButton, 10)
+	addButtonStroke(flyButton)
+	flyButton.MouseButton1Click:Connect(function()
+		playClickSound(flyButton)
+		local character, humanoid, hrp = getCharacterParts()
+		_G.flyEnabled = not _G.flyEnabled
+		if _G.flyEnabled then
+			flyButton.Text = "Fly ON"
+			humanoid.PlatformStand = true
+			flyBodyGyro = Instance.new("BodyGyro", hrp)
+			flyBodyGyro.MaxTorque = Vector3.new(400000,400000,400000)
+			flyBodyGyro.P = 10000
+			flyBodyVelocity = Instance.new("BodyVelocity", hrp)
+			flyBodyVelocity.MaxForce = Vector3.new(400000,400000,400000)
+			flyBodyVelocity.P = 1250
+			flyConnection = RunService.RenderStepped:Connect(function()
+				local cam = Camera
+				flyBodyGyro.CFrame = cam.CFrame
+				flyBodyVelocity.Velocity = cam.CFrame.LookVector * flySpeed
+			end)
+			showNotification("Fly turned ON")
+		else
+			flyButton.Text = "Fly OFF"
+			if flyConnection then flyConnection:Disconnect() end
+			if flyBodyGyro then flyBodyGyro:Destroy() end
+			if flyBodyVelocity then flyBodyVelocity:Destroy() end
+			humanoid.PlatformStand = false
+			showNotification("Fly turned OFF")
+		end
+	end)
+
+	noClipButton = Instance.new("TextButton", page1Frame)
+	noClipButton.Size = UDim2.new(0.8,0,0,btnHeight)
+	noClipButton.Position = UDim2.new(0.1,0,0,2*(btnHeight+gap))
+	noClipButton.BackgroundColor3 = Color3.new(0.2,0.2,0.2)
+	noClipButton.TextScaled = true
+	noClipButton.Text = _G.noClipEnabled and "No clip ON" or "No clip OFF"
+	addRoundedCorner(noClipButton, 10)
+	addButtonStroke(noClipButton)
+	noClipButton.MouseButton1Click:Connect(function()
+		playClickSound(noClipButton)
+		local character, humanoid, hrp = getCharacterParts()
+		_G.noClipEnabled = not _G.noClipEnabled
+		if _G.noClipEnabled then
+			noClipButton.Text = "No clip ON"
+			for _, part in pairs(character:GetDescendants()) do
+				if part:IsA("BasePart") then
+					part.CanCollide = false
+				end
+			end
+			groundBP = Instance.new("BodyPosition", hrp)
+			groundBP.MaxForce = Vector3.new(0,0,0)
+			groundBP.P = 1000
+			RunService.RenderStepped:Connect(function()
+				local pos = hrp.Position
+				local ray = workspace:Raycast(pos, Vector3.new(0,-100,0), {character})
+				if ray then
+					local groundY = ray.Position.Y + 3
+					if pos.Y < groundY then
+						groundBP.MaxForce = Vector3.new(0, math.huge, 0)
+						groundBP.Position = Vector3.new(pos.X, groundY, pos.Z)
+					else
+						groundBP.MaxForce = Vector3.new(0,0,0)
+					end
+				end
+			end)
+		else
+			noClipButton.Text = "No clip OFF"
+			if groundBP then groundBP:Destroy() end
+			for _, part in pairs(character:GetDescendants()) do
+				if part:IsA("BasePart") then
+					part.CanCollide = true
+				end
+			end
+		end
+	end)
+
+	espButton = Instance.new("TextButton", page1Frame)
+	espButton.Size = UDim2.new(0.8,0,0,btnHeight)
+	espButton.Position = UDim2.new(0.1,0,0,3*(btnHeight+gap))
+	espButton.BackgroundColor3 = Color3.new(0.2,0.2,0.2)
+	espButton.TextScaled = true
+	espButton.Text = _G.espEnabled and "Box ESP ON" or "Box ESP OFF"
+	addRoundedCorner(espButton, 10)
+	addButtonStroke(espButton)
+	espButton.MouseButton1Click:Connect(function()
+		playClickSound(espButton)
+		toggleBoxESP(not _G.espEnabled)
+		espButton.Text = _G.espEnabled and "Box ESP ON" or "Box ESP OFF"
+	end)
+
+	crosshairButton = Instance.new("TextButton", page1Frame)
+	crosshairButton.Size = UDim2.new(0.8,0,0,btnHeight)
+	crosshairButton.Position = UDim2.new(0.1,0,0,4*(btnHeight+gap))
+	crosshairButton.BackgroundColor3 = Color3.new(0.2,0.2,0.2)
+	crosshairButton.TextScaled = true
+	crosshairButton.Text = _G.customCrosshairEnabled and "Custom Crosshair ON" or "Custom Crosshair OFF"
+	addRoundedCorner(crosshairButton, 10)
+	addButtonStroke(crosshairButton)
+	crosshairButton.MouseButton1Click:Connect(function()
+		playClickSound(crosshairButton)
+		_G.customCrosshairEnabled = not _G.customCrosshairEnabled
+		if _G.customCrosshairEnabled then
+			crosshairButton.Text = "Custom Crosshair ON"
+			local chGui = Instance.new("ScreenGui")
+			chGui.Name = "CustomCrosshairGui"
+			chGui.ResetOnSpawn = false
+			chGui.Parent = PlayerGui
+			local vert = Instance.new("Frame", chGui)
+			vert.Name = "VerticalLine"
+			vert.AnchorPoint = Vector2.new(0.5,0.5)
+			vert.Position = UDim2.new(0.5,0,0.48,0)
+			vert.Size = UDim2.new(0,2,0,20)
+			vert.BackgroundColor3 = Color3.new(1,0,0)
+			vert.BorderSizePixel = 0
+			local horz = Instance.new("Frame", chGui)
+			horz.Name = "HorizontalLine"
+			horz.AnchorPoint = Vector2.new(0.5,0.5)
+			horz.Position = UDim2.new(0.5,0,0.49,0)
+			horz.Size = UDim2.new(0,20,0,2)
+			horz.BackgroundColor3 = Color3.new(1,0,0)
+			horz.BorderSizePixel = 0
+		else
+			crosshairButton.Text = "Custom Crosshair OFF"
+			if PlayerGui:FindFirstChild("CustomCrosshairGui") then
+				PlayerGui:FindFirstChild("CustomCrosshairGui"):Destroy()
+			end
+		end
+	end)
+
+	nextPageButton1 = Instance.new("TextButton", page1Frame)
+	nextPageButton1.Size = UDim2.new(0.8,0,0,btnHeight)
+	nextPageButton1.Position = UDim2.new(0.1,0,1,-btnHeight)
+	nextPageButton1.BackgroundColor3 = Color3.new(0.2,0.2,0.2)
+	nextPageButton1.TextScaled = true
+	nextPageButton1.Text = "Next Page"
+	addRoundedCorner(nextPageButton1, 10)
+	addButtonStroke(nextPageButton1)
+	nextPageButton1.MouseButton1Click:Connect(function() playClickSound(nextPageButton1) page1Frame.Visible = false; page2Frame.Visible = true end)
+
+	-- PAGE 2 BUTTONS
+	noClipFlyButton = Instance.new("TextButton", page2Frame)
+	noClipFlyButton.Size = UDim2.new(0.8,0,0,btnHeight)
+	noClipFlyButton.Position = UDim2.new(0.1,0,0,0)
+	noClipFlyButton.BackgroundColor3 = Color3.new(0.2,0.2,0.2)
+	noClipFlyButton.TextScaled = true
+	noClipFlyButton.Text = _G.noClipFlyEnabled and "No clip Fly ON" or "No clip Fly OFF"
+	addRoundedCorner(noClipFlyButton, 10)
+	addButtonStroke(noClipFlyButton)
+	noClipFlyButton.MouseButton1Click:Connect(function()
+		playClickSound(noClipFlyButton)
+		local character, humanoid, hrp = getCharacterParts()
+		_G.noClipFlyEnabled = not _G.noClipFlyEnabled
+		if _G.noClipFlyEnabled then
+			noClipFlyButton.Text = "No clip Fly ON"
+			humanoid.PlatformStand = true
+			for _, part in pairs(character:GetDescendants()) do
+				if part:IsA("BasePart") then part.CanCollide = false end
+			end
+			noClipFlyBodyGyro = Instance.new("BodyGyro", hrp)
+			noClipFlyBodyGyro.MaxTorque = Vector3.new(400000,400000,400000)
+			noClipFlyBodyGyro.P = 10000
+			noClipFlyBodyVelocity = Instance.new("BodyVelocity", hrp)
+			noClipFlyBodyVelocity.MaxForce = Vector3.new(400000,400000,400000)
+			noClipFlyBodyVelocity.P = 1250
+			noClipFlyConnection = RunService.RenderStepped:Connect(function()
+				local cam = Camera
+				noClipFlyBodyGyro.CFrame = cam.CFrame
+				noClipFlyBodyVelocity.Velocity = cam.CFrame.LookVector * flySpeed
+				for _, part in pairs(character:GetDescendants()) do
+					if part:IsA("BasePart") then part.CanCollide = false end
+				end
+			end)
+		else
+			noClipFlyButton.Text = "No clip Fly OFF"
+			if noClipFlyConnection then noClipFlyConnection:Disconnect() end
+			if noClipFlyBodyGyro then noClipFlyBodyGyro:Destroy() end
+			if noClipFlyBodyVelocity then noClipFlyBodyVelocity:Destroy() end
+			humanoid.PlatformStand = false
+		end
+	end)
+
+	highlightESPButton = Instance.new("TextButton", page2Frame)
+	highlightESPButton.Size = UDim2.new(0.8,0,0,btnHeight)
+	highlightESPButton.Position = UDim2.new(0.1,0,0,btnHeight+gap)
+	highlightESPButton.BackgroundColor3 = Color3.new(0.2,0.2,0.2)
+	highlightESPButton.TextScaled = true
+	highlightESPButton.Text = _G.highlightESPEnabled and "Highlight ESP ON" or "Highlight ESP OFF"
+	addRoundedCorner(highlightESPButton, 10)
+	addButtonStroke(highlightESPButton)
+	highlightESPButton.MouseButton1Click:Connect(function()
+		playClickSound(highlightESPButton)
+		_G.highlightESPEnabled = not _G.highlightESPEnabled
+		if _G.highlightESPEnabled then
+			highlightESPButton.Text = "Highlight ESP ON"
+			highlightESPConnection = RunService.RenderStepped:Connect(function()
+				for _, player in pairs(Players:GetPlayers()) do
+					if player ~= LocalPlayer then
+						local character = player.Character
+						if character then
+							if not highlightInstances[player] or not highlightInstances[player].Parent then
+								local hl = Instance.new("Highlight")
+								hl.Name = "ESPHighlight"
+								hl.Adornee = character
+								hl.FillColor = Color3.new(1,0,0)
+								hl.FillTransparency = 0.5
+								hl.OutlineColor = Color3.new(1,1,1)
+								hl.Parent = character
+								highlightInstances[player] = hl
+							else
+								highlightInstances[player].Adornee = character
+							end
+						else
+							if highlightInstances[player] then highlightInstances[player]:Destroy() highlightInstances[player] = nil end
+						end
+					end
+				end
+			end)
+		else
+			highlightESPButton.Text = "Highlight ESP OFF"
+			if highlightESPConnection then
+				highlightESPConnection:Disconnect()
+				highlightESPConnection = nil
+			end
+			for player, hl in pairs(highlightInstances) do
+				if hl and hl.Parent then hl:Destroy() end
+			end
+			highlightInstances = {}
+		end
+	end)
+
+	antiDieButton = Instance.new("TextButton", page2Frame)
+	antiDieButton.Size = UDim2.new(0.8,0,0,btnHeight)
+	antiDieButton.Position = UDim2.new(0.1,0,0,2*(btnHeight+gap))
+	antiDieButton.BackgroundColor3 = Color3.new(0.2,0.2,0.2)
+	antiDieButton.TextScaled = true
+	antiDieButton.Text = _G.antiDieEnabled and "Anti Die ON" or "Anti Die OFF"
+	addRoundedCorner(antiDieButton, 10)
+	addButtonStroke(antiDieButton)
+	antiDieButton.MouseButton1Click:Connect(function()
+		playClickSound(antiDieButton)
+		_G.antiDieEnabled = not _G.antiDieEnabled
+		local character, humanoid, hrp = getCharacterParts()
+		if _G.antiDieEnabled then
+			antiDieButton.Text = "Anti Die ON"
+			antiDieOriginalPosition = hrp.Position
+			antiDieConnection = humanoid.HealthChanged:Connect(function(health)
+				if _G.antiDieEnabled then
+					if not antiDieFloating and health < (humanoid.MaxHealth * 0.2) then
+						antiDieOriginalPosition = hrp.Position
+						hrp.CFrame = CFrame.new(safeZone)
+						antiDieBodyPosition = Instance.new("BodyPosition", hrp)
+						antiDieBodyPosition.MaxForce = Vector3.new(100000,100000,100000)
+						antiDieBodyPosition.P = 10000
+						antiDieBodyPosition.Position = safeZone
+						antiDieFloating = true
+					elseif antiDieFloating and health >= humanoid.MaxHealth then
+						hrp.CFrame = CFrame.new(antiDieOriginalPosition)
+						if antiDieBodyPosition then antiDieBodyPosition:Destroy() end
+						antiDieFloating = false
+					end
+				end
+			end)
+		else
+			antiDieButton.Text = "Anti Die OFF"
+			if antiDieFloating then
+				hrp.CFrame = CFrame.new(antiDieOriginalPosition)
+				if antiDieBodyPosition then antiDieBodyPosition:Destroy() end
+				antiDieFloating = false
+			end
+			if antiDieConnection then antiDieConnection:Disconnect() end
+		end
+	end)
+
+	changeThemeButton = Instance.new("TextButton", page2Frame)
+	changeThemeButton.Size = UDim2.new(0,200,0,btnHeight)
+	changeThemeButton.Position = UDim2.new(0.1,0,0,3*(btnHeight+gap))
+	changeThemeButton.BackgroundColor3 = Color3.new(0.2,0.2,0.2)
+	changeThemeButton.TextScaled = true
+	changeThemeButton.Text = "Change Menu Theme"
+	addRoundedCorner(changeThemeButton, 10)
+	addButtonStroke(changeThemeButton)
+	changeThemeButton.MouseButton1Click:Connect(function()
+		playClickSound(changeThemeButton)
+		themeIndex = themeIndex + 1
+		if themeIndex > 5 then themeIndex = 1 end
+		local btnList = {speedBoostButton, flyButton, noClipButton, espButton, crosshairButton, noClipFlyButton, highlightESPButton, antiDieButton, changeThemeButton, teleportToPlayerButton, jumpBoostButton, vehicleFlyButton, floatAbovePlayerButton}
+		if themeIndex == 1 then
+			local blue = Color3.new(0,0,1)
+			tapMenuLabel.TextColor3 = blue
+			menuFrame.BackgroundColor3 = blue
+			for _, btn in pairs(btnList) do btn.TextColor3 = blue end
+			if rgbThemeConnection then rgbThemeConnection:Disconnect() end
+		elseif themeIndex == 2 then
+			local purple = Color3.fromRGB(128,0,128)
+			tapMenuLabel.TextColor3 = purple
+			menuFrame.BackgroundColor3 = purple
+			for _, btn in pairs(btnList) do btn.TextColor3 = purple end
+			if rgbThemeConnection then rgbThemeConnection:Disconnect() end
+		elseif themeIndex == 3 then
+			local yellow = Color3.new(1,1,0)
+			local darkYellow = Color3.fromRGB(204,204,0)
+			tapMenuLabel.TextColor3 = darkYellow
+			menuFrame.BackgroundColor3 = darkYellow
+			for _, btn in pairs(btnList) do btn.TextColor3 = yellow end
+			if rgbThemeConnection then rgbThemeConnection:Disconnect() end
+		elseif themeIndex == 4 then
+			for _, btn in pairs(btnList) do btn.TextColor3 = Color3.new(1,0,0) end
+			if rgbThemeConnection then rgbThemeConnection:Disconnect() end
+			rgbThemeConnection = RunService.RenderStepped:Connect(function()
+				local hue = (tick() % 10)/10
+				local rgbColor = Color3.fromHSV(hue,1,1)
+				tapMenuLabel.TextColor3 = rgbColor
+				menuFrame.BackgroundColor3 = rgbColor
+			end)
+		elseif themeIndex == 5 then
+			tapMenuLabel.TextColor3 = Color3.new(1,1,1)
+			menuFrame.BackgroundColor3 = Color3.new(0,0,0)
+			for _, btn in pairs(btnList) do btn.TextColor3 = Color3.new(1,0,0) end
+			if rgbThemeConnection then rgbThemeConnection:Disconnect() end
+		end
+	end)
+
+	teleportToPlayerButton = Instance.new("TextButton", page2Frame)
+	teleportToPlayerButton.Size = UDim2.new(0.8,0,0,btnHeight)
+	teleportToPlayerButton.Position = UDim2.new(0.1,0,0,4*(btnHeight+gap))
+	teleportToPlayerButton.BackgroundColor3 = Color3.new(0.2,0.2,0.2)
+	teleportToPlayerButton.TextScaled = true
+	teleportToPlayerButton.Text = "Teleport To Player"
+	addRoundedCorner(teleportToPlayerButton, 10)
+	addButtonStroke(teleportToPlayerButton)
+	teleportToPlayerButton.MouseButton1Click:Connect(function()
+		playClickSound(teleportToPlayerButton)
+		updatePlayerList(teleportScrollingFrame, teleportToPlayer)
+		if teleportListFrame then teleportListFrame.Visible = true end
+	end)
+
+	nextPageButton2 = Instance.new("TextButton", page2Frame)
+	nextPageButton2.Size = UDim2.new(0.8,0,0,btnHeight)
+	nextPageButton2.Position = UDim2.new(0.1,0,1,-(btnHeight*2+gap))
+	nextPageButton2.BackgroundColor3 = Color3.new(0.2,0.2,0.2)
+	nextPageButton2.TextScaled = true
+	nextPageButton2.Text = "Next Page"
+	addRoundedCorner(nextPageButton2, 10)
+	addButtonStroke(nextPageButton2)
+	nextPageButton2.MouseButton1Click:Connect(function() playClickSound(nextPageButton2) page2Frame.Visible = false; page3Frame.Visible = true end)
+
+	backPageButton1 = Instance.new("TextButton", page2Frame)
+	backPageButton1.Size = UDim2.new(0.8,0,0,btnHeight)
+	backPageButton1.Position = UDim2.new(0.1,0,1,-btnHeight)
+	backPageButton1.BackgroundColor3 = Color3.new(0.2,0.2,0.2)
+	backPageButton1.TextScaled = true
+	backPageButton1.Text = "Back Page"
+	addRoundedCorner(backPageButton1, 10)
+	addButtonStroke(backPageButton1)
+	backPageButton1.MouseButton1Click:Connect(function() playClickSound(backPageButton1) page2Frame.Visible = false; page1Frame.Visible = true end)
+
+	-- PAGE 3 BUTTONS
+	jumpBoostButton = Instance.new("TextButton", page3Frame)
+	jumpBoostButton.Size = UDim2.new(0.8,0,0,btnHeight)
+	jumpBoostButton.Position = UDim2.new(0.1,0,0,0)
+	jumpBoostButton.BackgroundColor3 = Color3.new(0.2,0.2,0.2)
+	jumpBoostButton.TextScaled = true
+	jumpBoostButton.Text = _G.jumpBoostEnabled and "Jump Boost ON" or "Jump Boost OFF"
+	addRoundedCorner(jumpBoostButton, 10)
+	addButtonStroke(jumpBoostButton)
+	jumpBoostButton.MouseButton1Click:Connect(function()
+		playClickSound(jumpBoostButton)
+		local _, humanoid = getCharacterParts()
+		_G.jumpBoostEnabled = not _G.jumpBoostEnabled
+		if _G.jumpBoostEnabled then
+			jumpBoostButton.Text = "Jump Boost ON"
+			defaultJump = humanoid.JumpPower
+			humanoid.JumpPower = boostedJump
+			showNotification("Jump Boost turned ON")
+		else
+			jumpBoostButton.Text = "Jump Boost OFF"
+			humanoid.JumpPower = defaultJump
+			showNotification("Jump Boost turned OFF")
+		end
+	end)
+
+	vehicleFlyButton = Instance.new("TextButton", page3Frame)
+	vehicleFlyButton.Size = UDim2.new(0.8,0,0,btnHeight)
+	vehicleFlyButton.Position = UDim2.new(0.1,0,0,btnHeight+gap)
+	vehicleFlyButton.BackgroundColor3 = Color3.new(0.2,0.2,0.2)
+	vehicleFlyButton.TextScaled = true
+	vehicleFlyButton.Text = _G.vehicleFlyEnabled and "Fly for Vehicles ON" or "Fly for Vehicles OFF"
+	addRoundedCorner(vehicleFlyButton, 10)
+	addButtonStroke(vehicleFlyButton)
+	vehicleFlyButton.MouseButton1Click:Connect(function()
+		playClickSound(vehicleFlyButton)
+		local character, humanoid, hrp = getCharacterParts()
+		_G.vehicleFlyEnabled = not _G.vehicleFlyEnabled
+		if _G.vehicleFlyEnabled then
+			vehicleFlyButton.Text = "Fly for Vehicles ON"
+			vehicleFlyBodyGyro = Instance.new("BodyGyro", hrp)
+			vehicleFlyBodyGyro.MaxTorque = Vector3.new(400000,400000,400000)
+			vehicleFlyBodyGyro.P = 10000
+			vehicleFlyBodyVelocity = Instance.new("BodyVelocity", hrp)
+			vehicleFlyBodyVelocity.MaxForce = Vector3.new(400000,400000,400000)
+			vehicleFlyBodyVelocity.P = 1250
+			vehicleFlyConnection = RunService.RenderStepped:Connect(function()
+				local cam = Camera
+				vehicleFlyBodyGyro.CFrame = cam.CFrame
+				vehicleFlyBodyVelocity.Velocity = cam.CFrame.LookVector * flySpeed
+			end)
+			showNotification("Vehicle Fly turned ON")
+		else
+			vehicleFlyButton.Text = "Fly for Vehicles OFF"
+			if vehicleFlyConnection then vehicleFlyConnection:Disconnect() end
+			if vehicleFlyBodyGyro then vehicleFlyBodyGyro:Destroy() end
+			if vehicleFlyBodyVelocity then vehicleFlyBodyVelocity:Destroy() end
+			showNotification("Vehicle Fly turned OFF")
+		end
+	end)
+
+	floatAbovePlayerButton = Instance.new("TextButton", page3Frame)
+	floatAbovePlayerButton.Size = UDim2.new(0.8,0,0,btnHeight)
+	floatAbovePlayerButton.Position = UDim2.new(0.1,0,0,2*(btnHeight+gap))
+	floatAbovePlayerButton.BackgroundColor3 = Color3.new(0.2,0.2,0.2)
+	floatAbovePlayerButton.TextScaled = true
+	floatAbovePlayerButton.Text = _G.floatAbovePlayerEnabled and "Floating Above Player" or "Float Above Player"
+	addRoundedCorner(floatAbovePlayerButton, 10)
+	addButtonStroke(floatAbovePlayerButton)
+	floatAbovePlayerButton.MouseButton1Click:Connect(function()
+		playClickSound(floatAbovePlayerButton)
+		if _G.floatAbovePlayerEnabled then
+			stopFloating()
+			floatAbovePlayerButton.Text = "Float Above Player"
+			showNotification("Stopped floating above player")
+		else
+			showPlayerList(startFloatingAbove)
+		end
+	end)
+
+	jumpScareButton = Instance.new("TextButton", page3Frame)
+	jumpScareButton.Size = UDim2.new(0.8,0,0,btnHeight)
+	jumpScareButton.Position = UDim2.new(0.1,0,0,3*(btnHeight+gap))
+	jumpScareButton.BackgroundColor3 = Color3.new(0.2,0.2,0.2)
+	jumpScareButton.TextScaled = true
+	jumpScareButton.Text = "Jump Scare"
+	addRoundedCorner(jumpScareButton, 10)
+	addButtonStroke(jumpScareButton)
+	jumpScareButton.MouseButton1Click:Connect(function()
+		playClickSound(jumpScareButton)
+		showPlayerList(performJumpScare)
+	end)
+
+	notificationsButton = Instance.new("TextButton", page3Frame)
+	notificationsButton.Size = UDim2.new(0.8,0,0,btnHeight)
+	notificationsButton.Position = UDim2.new(0.1,0,0,4*(btnHeight+gap))
+	notificationsButton.BackgroundColor3 = Color3.new(0.2,0.2,0.2)
+	notificationsButton.TextScaled = true
+	notificationsButton.Text = _G.notificationsEnabled and "Notifications ON" or "Notifications OFF"
+	addRoundedCorner(notificationsButton, 10)
+	addButtonStroke(notificationsButton)
+	notificationsButton.MouseButton1Click:Connect(function()
+		playClickSound(notificationsButton)
+		_G.notificationsEnabled = not _G.notificationsEnabled
+		notificationsButton.Text = _G.notificationsEnabled and "Notifications ON" or "Notifications OFF"
+		showNotification("Notifications toggled")
+	end)
+
+	nextPageButton2 = Instance.new("TextButton", page3Frame)
+	nextPageButton2.Size = UDim2.new(0.8,0,0,btnHeight)
+	nextPageButton2.Position = UDim2.new(0.1,0,1,-(btnHeight*2+gap))
+	nextPageButton2.BackgroundColor3 = Color3.new(0.2,0.2,0.2)
+	nextPageButton2.TextScaled = true
+	nextPageButton2.Text = "Next Page"
+	addRoundedCorner(nextPageButton2, 10)
+	addButtonStroke(nextPageButton2)
+	nextPageButton2.MouseButton1Click:Connect(function() playClickSound(nextPageButton2) page3Frame.Visible = false; page4Frame.Visible = true end)
+
+	backPageButton3 = Instance.new("TextButton", page3Frame)
+	backPageButton3.Size = UDim2.new(0.8,0,0,btnHeight)
+	backPageButton3.Position = UDim2.new(0.1,0,1,-btnHeight)
+	backPageButton3.BackgroundColor3 = Color3.new(0.2,0.2,0.2)
+	backPageButton3.TextScaled = true
+	backPageButton3.Text = "Back Page"
+	addRoundedCorner(backPageButton3, 10)
+	addButtonStroke(backPageButton3)
+	backPageButton3.MouseButton1Click:Connect(function() playClickSound(backPageButton3) page3Frame.Visible = false; page2Frame.Visible = true end)
+
+	-- PAGE 4 (AimBot Page)
+	aimBotButton = Instance.new("TextButton", page4Frame)
+	aimBotButton.Size = UDim2.new(0.8,0,0,btnHeight)
+	aimBotButton.Position = UDim2.new(0.1,0,0,0)
+	aimBotButton.BackgroundColor3 = Color3.new(0.2,0.2,0.2)
+	aimBotButton.TextScaled = true
+	aimBotButton.Text = _G.aimBotEnabled and "AimBot ON" or "AimBot OFF"
+	addRoundedCorner(aimBotButton, 10)
+	addButtonStroke(aimBotButton)
+	aimBotButton.MouseButton1Click:Connect(function()
+		playClickSound(aimBotButton)
+		_G.aimBotEnabled = not _G.aimBotEnabled
+		if _G.aimBotEnabled then
+			aimBotButton.Text = "AimBot ON"
+			showNotification("AimBot turned ON")
+		else
+			aimBotButton.Text = "AimBot OFF"
+			showNotification("AimBot turned OFF")
+		end
+	end)
+
+	customAimBotButton = Instance.new("TextButton", page4Frame)
+	customAimBotButton.Size = UDim2.new(0.8,0,0,btnHeight)
+	customAimBotButton.Position = UDim2.new(0.1,0,0,btnHeight+gap)
+	customAimBotButton.BackgroundColor3 = Color3.new(0.2,0.2,0.2)
+	customAimBotButton.TextScaled = true
+	customAimBotButton.Text = _G.customAimBotEnabled and "Custom AimBot ON" or "Custom AimBot OFF"
+	addRoundedCorner(customAimBotButton, 10)
+	addButtonStroke(customAimBotButton)
+	customAimBotButton.MouseButton1Click:Connect(function()
+		playClickSound(customAimBotButton)
+		if not _G.customAimBotEnabled then
+			showCustomAimBotUI()
+			_G.customAimBotEnabled = true
+			customAimBotButton.Text = "Custom AimBot ON"
+			showNotification("Custom AimBot turned ON")
+		else
+			_G.customAimBotEnabled = false
+			customAimBotButton.Text = "Custom AimBot OFF"
+			if PlayerGui:FindFirstChild("CustomAimBotGui") then
+				PlayerGui:FindFirstChild("CustomAimBotGui"):Destroy()
+			end
+			if customAimCircle then customAimCircle.Visible = false end
+			showNotification("Custom AimBot turned OFF")
+		end
+	end)
+
+	-- NEW: AUTOKILL BUTTON (Placed under Custom AimBot on Page 4)
+	autoKillButton = Instance.new("TextButton", page4Frame)
+	autoKillButton.Size = UDim2.new(0.8,0,0,btnHeight)
+	autoKillButton.Position = UDim2.new(0.1,0,0,2*(btnHeight+gap))
+	autoKillButton.BackgroundColor3 = Color3.new(0.2,0.2,0.2)
+	autoKillButton.TextScaled = true
+	autoKillButton.Text = _G.autoKillEnabled and "Autokill beta ON" or "Autokill beta OFF"
+	addRoundedCorner(autoKillButton, 10)
+	addButtonStroke(autoKillButton)
+	autoKillButton.MouseButton1Click:Connect(function()
+		playClickSound(autoKillButton)
+		_G.autoKillEnabled = not _G.autoKillEnabled
+		if _G.autoKillEnabled then
+			autoKillButton.Text = "Autokill beta ON"
+			showNotification("Autokill beta enabled")
+			spawn(autokillLoop)
+		else
+			autoKillButton.Text = "Autokill OFF"
+			showNotification("Autokill beta disabled")
+		end
+	end)
+
+	local backPageButton4 = Instance.new("TextButton", page4Frame)
+	backPageButton4.Size = UDim2.new(0.8,0,0,btnHeight)
+	backPageButton4.Position = UDim2.new(0.1,0,1,-btnHeight)
+	backPageButton4.BackgroundColor3 = Color3.new(0.2,0.2,0.2)
+	backPageButton4.TextScaled = true
+	backPageButton4.Text = "Back Page"
+	addRoundedCorner(backPageButton4, 10)
+	addButtonStroke(backPageButton4)
+	backPageButton4.MouseButton1Click:Connect(function() playClickSound(backPageButton4) page4Frame.Visible = false; page3Frame.Visible = true end)
+
+	-- TELEPORT LIST UI CREATION
+	teleportListFrame = Instance.new("Frame", menuGui)
+	teleportListFrame.Name = "TeleportListFrame"
+	teleportListFrame.Size = UDim2.new(0,250,0,400)
+	teleportListFrame.Position = UDim2.new(0.5,-125,0.5,-200)
+	teleportListFrame.BackgroundColor3 = Color3.new(0,0,0)
+	teleportListFrame.BackgroundTransparency = 0.5
+	teleportListFrame.Visible = false
+	addRoundedCorner(teleportListFrame, 10)
+
+	local teleportListCloseButton = Instance.new("TextButton", teleportListFrame)
+	teleportListCloseButton.Name = "TeleportListCloseButton"
+	teleportListCloseButton.Size = UDim2.new(0,30,0,30)
+	teleportListCloseButton.Position = UDim2.new(1,-35,0,5)
+	teleportListCloseButton.BackgroundColor3 = Color3.new(1,0,0)
+	teleportListCloseButton.TextColor3 = Color3.new(1,1,1)
+	teleportListCloseButton.Text = "X"
+	teleportListCloseButton.TextScaled = true
+	addRoundedCorner(teleportListCloseButton, 8)
+	teleportListCloseButton.MouseButton1Click:Connect(function() playClickSound(teleportListCloseButton) teleportListFrame.Visible = false end)
+
+	teleportScrollingFrame = Instance.new("ScrollingFrame", teleportListFrame)
+	teleportScrollingFrame.Name = "TeleportScrollingFrame"
+	teleportScrollingFrame.Size = UDim2.new(1,0,1,-40)
+	teleportScrollingFrame.Position = UDim2.new(0,0,0,40)
+	teleportScrollingFrame.BackgroundTransparency = 1
+
+	local teleportListLayout = Instance.new("UIListLayout", teleportScrollingFrame)
+	teleportListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+	-- FLOAT ABOVE PLAYER LIST UI CREATION
+	floatListFrame = Instance.new("Frame", menuGui)
+	floatListFrame.Name = "FloatListFrame"
+	floatListFrame.Size = UDim2.new(0,250,0,400)
+	floatListFrame.Position = UDim2.new(0.5,-125,0.5,-200)
+	floatListFrame.BackgroundColor3 = Color3.new(0,0,0)
+	floatListFrame.BackgroundTransparency = 0.5
+	floatListFrame.Visible = false
+	addRoundedCorner(floatListFrame, 10)
+
+	local floatListCloseButton = Instance.new("TextButton", floatListFrame)
+	floatListCloseButton.Name = "FloatListCloseButton"
+	floatListCloseButton.Size = UDim2.new(0,30,0,30)
+	floatListCloseButton.Position = UDim2.new(1,-35,0,5)
+	floatListCloseButton.BackgroundColor3 = Color3.new(1,0,0)
+	floatListCloseButton.TextColor3 = Color3.new(1,1,1)
+	floatListCloseButton.Text = "X"
+	floatListCloseButton.TextScaled = true
+	addRoundedCorner(floatListCloseButton, 8)
+	floatListCloseButton.MouseButton1Click:Connect(function() playClickSound(floatListCloseButton) floatListFrame.Visible = false end)
+
+	floatScrollingFrame = Instance.new("ScrollingFrame", floatListFrame)
+	floatScrollingFrame.Name = "FloatScrollingFrame"
+	floatScrollingFrame.Size = UDim2.new(1,0,1,-40)
+	floatScrollingFrame.Position = UDim2.new(0,0,0,40)
+	floatScrollingFrame.BackgroundTransparency = 1
+
+	local floatListLayout = Instance.new("UIListLayout", floatScrollingFrame)
+	floatListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+	-- JUMPSCARE LIST UI CREATION
+	jumpScareListFrame = Instance.new("Frame", menuGui)
+	jumpScareListFrame.Name = "JumpScareListFrame"
+	jumpScareListFrame.Size = UDim2.new(0,250,0,400)
+	jumpScareListFrame.Position = UDim2.new(0.5,-125,0.5,-200)
+	jumpScareListFrame.BackgroundColor3 = Color3.new(0,0,0)
+	jumpScareListFrame.BackgroundTransparency = 0.5
+	jumpScareListFrame.Visible = false
+	addRoundedCorner(jumpScareListFrame, 10)
+
+	local jumpScareListCloseButton = Instance.new("TextButton", jumpScareListFrame)
+	jumpScareListCloseButton.Name = "JumpScareListCloseButton"
+	jumpScareListCloseButton.Size = UDim2.new(0,30,0,30)
+	jumpScareListCloseButton.Position = UDim2.new(1,-35,0,5)
+	jumpScareListCloseButton.BackgroundColor3 = Color3.new(1,0,0)
+	jumpScareListCloseButton.TextColor3 = Color3.new(1,1,1)
+	jumpScareListCloseButton.Text = "X"
+	jumpScareListCloseButton.TextScaled = true
+	addRoundedCorner(jumpScareListCloseButton, 8)
+	jumpScareListCloseButton.MouseButton1Click:Connect(function() playClickSound(jumpScareListCloseButton) jumpScareListFrame.Visible = false end)
+
+	local jumpScareScrollingFrame = Instance.new("ScrollingFrame", jumpScareListFrame)
+	jumpScareScrollingFrame.Name = "JumpScareScrollingFrame"
+	jumpScareScrollingFrame.Size = UDim2.new(1,0,1,-40)
+	jumpScareScrollingFrame.Position = UDim2.new(0,0,0,40)
+	jumpScareScrollingFrame.BackgroundTransparency = 1
+
+	local jumpScareListLayout = Instance.new("UIListLayout", jumpScareScrollingFrame)
+	jumpScareListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+end
+
+---------------------------------------------------
+-- INITIALIZE UI AND REAPPLY FEATURES ON RESPAWN
+---------------------------------------------------
+createMenu()
+
+LocalPlayer.CharacterAdded:Connect(function(character)
+	wait(1)
+	if not _G.menuClosed then
+		createMenu()
+	end
+	local character, humanoid, hrp = getCharacterParts()
+	if _G.speedBoostEnabled then
+		speedBoostButton.Text = "Speed Boost ON"
+		humanoid.WalkSpeed = boostedSpeed
+	else
+		speedBoostButton.Text = "Speed Boost OFF"
+		humanoid.WalkSpeed = defaultSpeed
+	end
+	if _G.flyEnabled then
+		flyButton.Text = "Fly ON"
+		humanoid.PlatformStand = true
+		flyBodyGyro = Instance.new("BodyGyro", hrp)
+		flyBodyGyro.MaxTorque = Vector3.new(400000,400000,400000)
+		flyBodyGyro.P = 10000
+		flyBodyVelocity = Instance.new("BodyVelocity", hrp)
+		flyBodyVelocity.MaxForce = Vector3.new(400000,400000,400000)
+		flyBodyVelocity.P = 1250
+		flyConnection = RunService.RenderStepped:Connect(function()
+			local cam = Camera
+			flyBodyGyro.CFrame = cam.CFrame
+			flyBodyVelocity.Velocity = cam.CFrame.LookVector * flySpeed
+		end)
+	end
+end)
+
+---------------------------------------------------
+-- CLEANUP ESP DRAWINGS WHEN A PLAYER LEAVES
+---------------------------------------------------
+Players.PlayerRemoving:Connect(function(player)
+	if espBoxes[player] then
+		espBoxes[player]:Remove()
+		espBoxes[player] = nil
+	end
+	if espNames[player] then
+		espNames[player]:Remove()
+		espNames[player] = nil
+	end
+end)
+
+---------------------------------------------------
+-- UPDATE NOTIFICATIONS WHEN PLAYERS JOIN/LEAVE
+---------------------------------------------------
+Players.PlayerAdded:Connect(function(player)
+	showNotification(player.Name .. " joined")
+end)
+Players.PlayerRemoving:Connect(function(player)
+	showNotification(player.Name .. " left")
+	clearESP()
+end)
