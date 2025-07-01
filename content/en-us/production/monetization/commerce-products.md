@@ -394,6 +394,8 @@ The **Product details** section displays the content directly from your Shopify 
 
 This section supports the use of HTML for styling and formatting your product information. For security and consistency, Roblox automatically removes certain HTML elements, including links, images, scripts, and other similar tags and attributes. You can otherwise use HTML to style and structure the text content, such as using headings, bold text, lists, and paragraphs.
 
+Product descriptions must include accurate descriptions of the merchandise, covering details such as functionality, specifications, features, return or exchange policies, and origin. Please ensure that all your commerce products have complete descriptions in Shopify in order to be approved for sale. See [Commerce Standards](https://en.help.roblox.com/hc/articles/36495190721172) for more information.
+
 As with other product information synced from Shopify, any updates to the product description are subject to the [moderation process for catalog items](#modify-catalog-items). The product details will continue to show the previously approved description until the new content is approved by moderation.
 
 ### Additional information
