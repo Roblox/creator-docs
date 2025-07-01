@@ -5,7 +5,7 @@ description: Explains how to add text-to-speech audio to your experiences.
 
 **Text-to-speech** is a form of assistive technology that converts text strings into speech sounds using an artificial voice. In addition to improving the accessibility of your experiences for players with vision, mobility, or cognitive disabilities, TTS allows you to generate speech dynamically so that you don't have to pre-record audio for all possible narrative scenarios.
 
-Using the [Gingerbread House - Start](https://www.roblox.com/games/134812596370919/Gingerbread-House-Start) `.rbxl` file as a starting place and Gingerbread House - Text-to-Speech as a reference, this tutorial shows you how to add both basic and context-aware TTS audio to your experiences, including guidance on:
+Using the [Gingerbread House - Start](https://www.roblox.com/games/134812596370919/Gingerbread-House-Start) `.rbxl` file as a starting place and [Gingerbread House - Text-to-Speech](https://www.roblox.com/games/129041658365712/Gingerbread-House-Text-to-Speech) as a reference, this tutorial shows you how to add both basic and context-aware TTS audio to your experiences, including guidance on:
 
 - Triggering TTS for common gameplay scenarios that will never change, such as UI interactions and tutorials.
 - Configuring TTS so that it adapts to player actions, environmental status, or flexible objectives.
@@ -100,7 +100,7 @@ This form of TTS is useful in most gameplay scenarios, such as players interacti
    </tbody>
    </table>
 
-To recreate the basic 3D TTS audio in the sample Gingerbread House - Text-to-Speech place file:
+To recreate the basic 3D TTS audio in the sample [Gingerbread House - Text-to-Speech](https://www.roblox.com/games/129041658365712/Gingerbread-House-Text-to-Speech) place file:
 
 1. Enable a default listener that's attached to your player character.
    1. In the **Explorer** window, select the **SoundService**.
@@ -235,7 +235,7 @@ While there are many ways to accomplish this task, the sample uses custom attrib
   </figure>
 </GridContainer>
 
-To recreate the context-aware 3D TTS audio in the sample Gingerbread House - Text-to-Speech place file:
+To recreate the context-aware 3D TTS audio in the sample [Gingerbread House - Text-to-Speech](https://www.roblox.com/games/129041658365712/Gingerbread-House-Text-to-Speech) place file:
 
 1. In the **Explorer** window, navigate to **Workspace** > **GumDrops**.
 1. Configure three custom attributes to track the yellow gumdrop.

@@ -257,7 +257,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
- <img src="../../assets/tutorials/UCT-Overview/Positional-Audio.png" />
+ <img src="../../assets/tutorials/UCT-Overview/Text-to-Speech.png" />
  </div>
    <Typography variant='body1' >Add text-to-speech</Typography>
      <div style={{marginTop:16}}>
