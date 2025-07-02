@@ -6,6 +6,8 @@ navigation:
   - title: Overview
     path: /cloud/guides/
   - heading: Open Cloud v2 Guides
+  - title: Data stores
+    path: /cloud/guides/data-stores
   - title: User inventories
     path: /cloud/guides/inventory
   - title: Engine instances

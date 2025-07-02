@@ -47,6 +47,8 @@ navigation:
     path: /cloud/features/chats
   - title: Creator Store
     path: /cloud/features/creator-store
+  - title: Data and memory stores
+    path: /cloud/features/storage
   - title: Developer products
     path: /cloud/features/developer-products
   - title: Friends
@@ -73,8 +75,6 @@ navigation:
     path: /cloud/features/private-servers
   - title: Sponsored campaigns
     path: /cloud/features/sponsored-campaigns
-  - title: Storage
-    path: /cloud/features/storage
   - title: Team Create
     path: /cloud/features/team-create
   - title: Thumbnails
