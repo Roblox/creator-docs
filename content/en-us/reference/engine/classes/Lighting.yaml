@@ -23,6 +23,11 @@ description: |
   contain
   [post‑processing effects](../../../environment/post-processing-effects.md)
   such as `Class.SunRaysEffect` and `Class.BlurEffect`.
+
+  <Alert severity="info">
+  Be aware, when the character is reset, the children under `Lighting` are destroyed.
+  </Alert>
+  
 code_samples: []
 inherits:
   - Instance
