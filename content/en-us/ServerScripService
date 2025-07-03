@@ -1,0 +1,65 @@
+-- Türk Güvenlik Güçleri Harita Scripti
+local Teams = game:GetService("Teams")
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+-- TAKIMLAR
+local teamList = {
+    {Name = "Jandarma", Color = BrickColor.new("Bright blue")},
+    {Name = "Trafik Polisi", Color = BrickColor.new("New Yeller")},
+    {Name = "Otoyol Trafik Polisi", Color = BrickColor.new("Bright orange")},
+    {Name = "Polis", Color = BrickColor.new("Really black")},
+    {Name = "Asker", Color = BrickColor.new("Army green")}
+}
+
+for _, data in ipairs(teamList) do
+    local team = Instance.new("Team")
+    team.Name = data.Name
+    team.TeamColor = data.Color
+    team.AutoAssignable = false
+    team.Parent = Teams
+end
+
+print("Takımlar oluşturuldu.")
+
+-- XP SİSTEMİ
+Players.PlayerAdded:Connect(function(player)
+    local leaderstats = Instance.new("Folder")
+    leaderstats.Name = "leaderstats"
+    leaderstats.Parent = player
+
+    local XP = Instance.new("IntValue")
+    XP.Name = "XP"
+    XP.Value = 0
+    XP.Parent = leaderstats
+
+    print(player.Name.." oyuna katıldı, XP başlatıldı.")
+
+    -- Basit Görev Bildirimi
+    local task = Instance.new("StringValue")
+    task.Name = "CurrentTask"
+    task.Value = "Devriyeye çık!"
+    task.Parent = player
+end)
+
+-- ÖLDÜRÜNCE XP KAZANMA (örnek)
+Players.PlayerAdded:Connect(function(player)
+    player.CharacterAdded:Connect(function(character)
+        local humanoid = character:WaitForChild("Humanoid")
+        humanoid.Died:Connect(function()
+            local tag = humanoid:FindFirstChild("creator")
+            if tag and tag.Value and tag.Value:IsA("Player") then
+                local killer = tag.Value
+                local xp = killer:FindFirstChild("leaderstats"):FindFirstChild("XP")
+                if xp then
+                    xp.Value = xp.Value + 10
+                    print(killer.Name.." birini öldürdü +10 XP aldı.")
+                end
+            end
+        end)
+    end)
+end)
+
+-- BİTİŞ
+print("Oyun scripti başarıyla yüklendi.")
+
