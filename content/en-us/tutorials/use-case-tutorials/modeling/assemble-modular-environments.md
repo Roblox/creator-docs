@@ -69,14 +69,11 @@ For information on how to configure pivot locations for parts and models you cre
 
 Studio's default settings allow you to freely move and rotate objects to any fraction of a stud or degree, respectively. However, because modular building kits rely on assets snapping together at exact increments, you must change these default settings **according to the requirements of each modular building kit**. For example, the Modern City sample [modular building kit](https://create.roblox.com/store/asset/13168370735/Modular-Building-Kit-Modern-City) requires each mesh to rotate in 7.5 stud and 45 degree increments with collisions off. This ensures that as you move and rotate meshes around the 3D environment, they can connect and maintain clear alignment to one another as the building grows.
 
-To configure Studio settings for ideal snapping behavior for the sample modular building kit:
+To configure Studio settings for ideal snapping behavior for the sample modular building kit, look in the toolbar and:
 
-1. In the toolbar, select the **Model** tab.
 1. Disable **Collisions**.
-1. Enable **Rotate** and set it to `45`.
-1. Enable **Move** and set it to `7.5`.
-
-   <img src="../../../assets/tutorials/assembling-modular-environments/Snapping-Behavior-Values.jpg" width="50%"/>
+1. Enable **Rotate** snapping and set it to `45`.
+1. Enable **Move** snapping and set it to `7.5`.
 
 ## Combine modular assets
 

@@ -26,8 +26,8 @@ properties:
       Specifies which tone mapper preset to use.
     description: |
       Specifies which `Enum.TonemapperPreset` to use.
-      `Enum.TonemapperPreset.Retro` is meant to immitate the look of the
-      pre‑2019 Roblox lighting system.
+      `Enum.TonemapperPreset.Retro` is meant to imitate the look of the pre‑2019
+      Roblox lighting system.
     code_samples: []
     type: TonemapperPreset
     tags: []

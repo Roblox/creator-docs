@@ -59,6 +59,29 @@ methods:
     capabilities:
       - DataStore
     writeCapabilities: []
+  - name: MemoryStoreQueue:GetSizeAsync
+    summary: |
+      Gets the size of the queue.
+    description: |
+      Gets the size of the queue.
+    code_samples: []
+    parameters:
+      - name: excludeInvisible
+        type: boolean
+        default: false
+        summary: |
+          Determines whether to exclude invisible items from the size count.
+    returns:
+      - type: int
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - DataStore
+    writeCapabilities: []
   - name: MemoryStoreQueue:ReadAsync
     summary: |
       Reads one or more items from the queue.

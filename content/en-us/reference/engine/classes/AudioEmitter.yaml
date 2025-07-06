@@ -156,8 +156,14 @@ methods:
       - Audio
     writeCapabilities: []
   - name: AudioEmitter:GetAudibilityFor
-    summary: ''
-    description: ''
+    summary: |
+      Calculates how audible this emitter is for a particular
+      `Class.AudioListener`.
+    description: |
+      Calculates how audible this emitter is for a particular
+      `Class.AudioListener`. The resulting volume, ranging from `0` to `1`,
+      accounts for distance and angle attenuation on both the emitter and
+      listener.
     code_samples: []
     parameters:
       - name: listener
@@ -235,8 +241,13 @@ methods:
       - Audio
     writeCapabilities: []
   - name: AudioEmitter:GetInteractingListeners
-    summary: ''
-    description: ''
+    summary: |
+      Lists all `Class.AudioListener|AudioListeners` that are capable of hearing
+      this emitter.
+    description: |
+      Returns an array of `Class.AudioListener|AudioListeners` that share an
+      `Class.AudioEmitter.AudioInteractionGroup|AudioInteractionGroup` with the
+      emitter.
     code_samples: []
     parameters: []
     returns:

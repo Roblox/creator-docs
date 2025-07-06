@@ -4,15 +4,15 @@ memory_category: Instances
 summary: |
   Applies a constant force to an object.
 description: |
-  The BodyForce object applies (or exerts) a force on the part to which it is
-  parented. If the magnitude of such a force is great enough, parts can begin to
-  accelerate. The force is determined by the `Class.BodyForce.Force` property,
-  and is defined on the three world axes.
+  The `BodyForce` object applies (or exerts) a force on the assembly to which it
+  is parented. If the magnitude of such a force is great enough, assemblies can
+  begin to accelerate. The force is determined by the
+  `Class.BodyForce.Force|Force` property, and is defined on the three world
+  axes.
 
-  A BodyForce alone cannot apply a torque (it cannot cause the parent to rotate
-  on its own). To apply a force at a specific point (e.g. to apply torque for
-  angular acceleration) or apply forces relative to the orientation of the part,
-  use a `Class.BodyThrust` instead.
+  A `BodyForce` alone cannot apply a torque (it cannot cause the parent to
+  rotate on its own). To apply a force at a specific point or apply forces
+  relative to the orientation of the assembly, use a `Class.BodyThrust` instead.
 code_samples: []
 inherits:
   - BodyMover
@@ -20,13 +20,14 @@ tags:
   - Deprecated
 deprecation_message: |
   This object is deprecated and should not be used for new work. Use
-  `Class.VectorForce` instead.
+  `Class.VectorForce` instead, and see the
+  [legacy conversion notes](../../../physics/mover-constraints.md#legacy-mover-conversion).
 properties:
   - name: BodyForce.Force
     summary: |
       Determines the force exerted on each axis.
     description: |
-      The Force property determines the magnitude of force exerted on each axis,
+      This property determines the magnitude of force exerted on each axis,
       relative to the world.
     code_samples: []
     type: Vector3
@@ -40,7 +41,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: BodyForce.force
     summary: |
@@ -64,7 +66,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
 methods: []
 events: []

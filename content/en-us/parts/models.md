@@ -3,9 +3,9 @@ title: Models
 description: Models are container objects for geometric groupings like parts, Motor6D objects, and other models.
 ---
 
-**Models** are containers for physical objects, such as parts, welds, and joints that you can use to organize your workspace and group your assets. While models can often contain connected parts, known as an [assembly](../physics/assemblies.md), models can contain any number of individual parts and other objects, such as scripts, and attachments.
+**Models** are containers for physical objects that you can use to organize your workspace and group your assets, such as parts, welds, or joints. While models often contain connected parts known as an [assembly](../physics/assemblies.md), they can also contain any number of individual parts or objects, such as scripts, attachments, or other models.
 
-Characters, such as avatars or NPCs, are a single `Class.Model` containing the appropriate humanoid parts, joints, and additional components:
+To demonstrate, avatar characters are a single `Class.Model` containing the appropriate humanoid parts, joints, and scripts necessary for runtime behavior:
 
 <GridContainer numColumns="2">
 	<figure>
@@ -20,10 +20,19 @@ Characters, such as avatars or NPCs, are a single `Class.Model` containing the a
 
 ## Create models
 
-When you **group** objects together, they automatically become a `Class.Model` object.
+<Alert severity="warning">
+You can create models using any open use or restricted asset, but any restricted assets that you don't have [explicit permission](../projects/assets/privacy.md#view-permissions) to use are **not** visible or audible at runtime unless the experience itself has permission to use those assets.
+</Alert>
 
-1. In the 3D viewport or the **Explorer** window, select every object that you want to group into a model.
-1. Right-click on one of the objects and select **Group**, or press <kbd>Ctrl</kbd><kbd>G</kbd> on Windows or <kbd>⌘</kbd><kbd>G</kbd> on Mac. A new `Class.Model` object displays with all of the objects that make up the model nested underneath.
+There are two ways to create models:
+
+- Group objects together to automatically form a `Class.Model` object.
+- Insert an empty `Class.Model` object into the Workspace, then manually add child objects to the model.
+
+To create a model using the grouping method:
+
+1. In the **Explorer** window or 3D viewport, select every object that you want to group into a model.
+1. Right-click on one of the objects and select **Group**, or press <kbd>Ctrl</kbd> + <kbd>G</kbd> on Windows or <kbd>⌘</kbd> + <kbd>G</kbd> on Mac. A new `Class.Model` object displays with all of the objects that make up the model nested underneath.
 
    <img src="../assets/modeling/model-objects/Model-Group-Simple.png" width="320" alt="A close up view of the Explorer window. A Model object is highlighted with three nested children." />
 
@@ -123,14 +132,18 @@ To upload a model you made in Studio:
       - **Creator** - Use the dropdown to select if you'd like to publish this asset as an individual or as part of an associated group.
       - **Genre** - The genre of your model.
 
-   1. Click the **Save** button. After a moment, the **Asset Configuration** window displays your model's assetID that you can use in your projects or share with other creators, groups, or experiences. For more information on granting permission to collaborators and experiences so that they can use your models, see [Asset privacy](../projects/assets/privacy.md)
+   1. Click the **Save** button. After a moment, the **Asset Configuration** window displays your model's asset ID that you can use in your projects or share with other creators, groups, or experiences. For more information on granting permission to collaborators and experiences so that they can use your models, see [Asset privacy](../projects/assets/privacy.md)
 
 ## Distribute models
 
-You can distribute models to the [Creator Store](../production/creator-store.md) for other creators to use within their own experiences as long as each model only references open use assets or restricted assets that you have created. Once you distribute a model, all newer versions include the same restictions even if you later unlist it from the Creator Store.
+You can distribute models with less than 15,000 descendants to the [Creator Store](../production/creator-store.md) for other creators to use within their own experiences as long as each model only references:
 
-<Alert severity="info">
-If you want to distribute a model with a child audio or video asset, you must distribute the audio or video asset on the Creator Store before making them a child of the model for the audio or video to be audible and visible at runtime.
+- Open use assets.
+- Restricted assets that you created, excluding audio and video.
+- Audio and video assets from the Creator Store.
+
+<Alert severity="warning">
+If you want to distribute a model with a child audio asset that you created, you must distribute the audio asset on the Creator Store **_before_** making it a child of the model in order for the audio to be audible at runtime.
 </Alert>
 
 As with any asset, all models must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), the [DMCA Guidelines](../production/publishing/dmca-guidelines.md) regarding copyright and Creator Store [asset moderation](../production/creator-store.md#asset-moderation) rules. When creating models for the Creator Store:

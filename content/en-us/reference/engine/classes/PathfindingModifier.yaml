@@ -51,7 +51,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: PathfindingModifier.PassThrough
     summary: |
@@ -73,7 +74,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 methods: []
 events: []

@@ -35,7 +35,10 @@ For communication shared by users that can be seen by other users, even if it do
 ## Requirements
 
 - All experiences that offer in-experience text chat for users must integrate `Class.TextChatService`, per the [Misusing Roblox Systems Community Standard](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards). For information on migrating from the legacy chat system, see the [Roblox Developer Forum](https://devforum.roblox.com/t/migrate-to-textchatservice-removing-support-for-legacy-chat-and-custom-chat-systems/3237100) and [Migrate from legacy chat](in-experience-text-chat.md#migrate-from-legacy-chat).
-- All incoming text that originates from another user must first use [Text Filtering](../ui/text-filtering.md) before your experience displays it.
+- All incoming text that originates from another user must first use [Text filtering](../ui/text-filtering.md) before your experience displays it.
+
+  If users repeatedly send messages that violate community standards, Roblox warns and then temporarily prevents them from sending messages. To learn more, see [Text Chat Nudge FAQ](https://en.help.roblox.com/hc/en-us/articles/37541811348884-Text-Chat-Nudge-FAQ-s).
+
 - Communication between users must respect user privacy settings.
   - `Class.TextChannel:SendAsync()` handles basic privacy and parental settings automatically.
   - `Class.TextChannel:SetDirectChatRequester()` must be used to mark `Class.TextChannel|TextChannels` created for direct chat.

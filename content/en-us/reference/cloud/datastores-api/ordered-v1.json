@@ -324,7 +324,7 @@
       },
       "delete": {
         "tags": ["OrderedDataStores"],
-        "description": "Deletes the specified entry.",
+        "description": "Deletes the specified entry. Unlike standard data stores, which mark entries for deletion, ordered data store entries are deleted immediately.",
         "operationId": "OrderedDataStores_DeleteEntry",
         "x-roblox-cloud-api-operation-name": "Delete",
         "x-roblox-stability": "BETA",

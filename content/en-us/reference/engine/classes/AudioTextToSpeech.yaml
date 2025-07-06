@@ -6,8 +6,14 @@ summary: |
 description: |
   `Class.AudioTextToSpeech` is used to play text as speech audio. It provides a
   single **Output** pin which can be connected to other pins via
-  `Class.Wire|Wires`. This API is still in development and is not yet publicly
-  available.
+  `Class.Wire|Wires`.
+
+  Roblox uses the following formula to throttle requests for this API based on the number of players in your experience:
+  `max requests per second per experience = 1 + (0.05 * per_thousand_concurrent_users)`
+
+  For a more in-depth look, see
+  [Text-to-speech](../../../audio/objects.md#text-to-speech).
+
 code_samples:
   - audio-wiring---text-to-speech
 inherits:
@@ -159,7 +165,8 @@ properties:
     summary: |
       The text to be converted into speech audio by `Class.AudioTextToSpeech`.
     description: |
-      The text to be converted into speech audio by `Class.AudioTextToSpeech`.
+      The text to be converted into speech audio by `Class.AudioTextToSpeech`. The text has a
+      maximum length of 300 characters.
     code_samples: []
     type: string
     tags: []
@@ -224,6 +231,8 @@ properties:
       The voice style to be used by `Class.AudioTextToSpeech`.
     description: |
       The voice style to be used by`Class.AudioTextToSpeech`.
+      A list of available voices and their corresponding VoiceIds
+      can be found in the [text-to-speech guide](../../../audio/objects.md#text-to-speech).
     code_samples: []
     type: string
     tags: []
@@ -399,7 +408,7 @@ events:
       `Class.AudioTextToSpeech:GetPropertyChangedSignal()` on the
       `Class.AudioTextToSpeech.IsPlaying|IsPlaying` property.
 
-      This event is may be used to destroy an `Class.AudioTextToSpeech` object
+      This event may be used to destroy an `Class.AudioTextToSpeech` object
       when it has completed playback.
     code_samples: []
     parameters: []

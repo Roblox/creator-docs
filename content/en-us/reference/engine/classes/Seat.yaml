@@ -75,6 +75,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
+      - Avatar
     writeCapabilities: []
   - name: Seat.Occupant
     summary: |
@@ -97,6 +98,7 @@ properties:
       can_save: false
     capabilities:
       - Basic
+      - Avatar
     writeCapabilities: []
 methods:
   - name: Seat:Sit
@@ -121,6 +123,7 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
+      - Avatar
     writeCapabilities: []
 events: []
 callbacks: []

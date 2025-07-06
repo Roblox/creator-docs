@@ -3,8 +3,7 @@ type: enum
 summary: |
   Used to represent the type of game.
 description: |
-  Used to represent the type of game. This can be changed in the "Basic
-  Settings" tab when configuring a place on the website.
+  Used to represent the type of game.
 code_samples:
 tags:
   - Deprecated

@@ -88,10 +88,34 @@
           {
             "name": "creator",
             "in": "query",
-            "description": "The creator type and ID. E.g. \"user/123\" or \"group/456\"",
+            "description": "Deprecated: Please refer to the 'userId' and 'groupId' properties instead. The creator type and ID. E.g. \"user/123\" or \"group/456\"",
             "schema": {
               "pattern": "^(user|group)/\\d+$",
               "type": "string"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "query",
+            "description": "The User ID of the creator. Only one of 'userId' and 'groupId' can be present in a query.",
+            "schema": {
+              "maximum": 2147483647,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "groupId",
+            "in": "query",
+            "description": "The Group ID of the creator. Only one of 'userId' and 'groupId' can be present in a query.",
+            "schema": {
+              "maximum": 2147483647,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int64",
+              "nullable": true
             }
           },
           {
@@ -148,21 +172,27 @@
                 "Trending",
                 "Top",
                 "AudioDuration",
-                "CreateTime"
+                "CreateTime",
+                "UpdatedTime",
+                "Ratings"
               ],
               "x-enum-varnames": [
                 "Relevance",
                 "Trending",
                 "Top",
                 "AudioDuration",
-                "CreateTime"
+                "CreateTime",
+                "UpdatedTime",
+                "Ratings"
               ],
               "x-enum-descriptions": [
                 "Relevance",
                 "Trending",
                 "Top",
                 "AudioDuration",
-                "CreateTime"
+                "CreateTime",
+                "UpdatedTime",
+                "Ratings"
               ]
             }
           },
@@ -214,6 +244,18 @@
               "type": "array",
               "items": {
                 "$ref": "#/components/schemas/SearchAudioTypeModel"
+              },
+              "nullable": true
+            }
+          },
+          {
+            "name": "includedInstanceTypes",
+            "in": "query",
+            "description": "When searching for models, this filters that the following [Instance](https://create.roblox.com/docs/reference/engine/classes/Instance) types are included in the model.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ModelInstanceType"
               },
               "nullable": true
             }
@@ -291,6 +333,16 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SearchFilteredErrorModel"
+                }
+              }
+            }
           }
         },
         "x-roblox-engine-usability": {
@@ -300,7 +352,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 1000
+            "maxInPeriod": 1000
           }
         },
         "x-roblox-scopes": [
@@ -309,6 +361,63 @@
           }
         ],
         "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/toolbox-service/v2/assets/{id}": {
+      "get": {
+        "tags": ["ToolboxService"],
+        "summary": "Get Creator Store Asset Details",
+        "description": "Get details for a single Creator Store asset.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The asset ID to retrieve details for.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreatorStoreAsset"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": true
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "creator-store-product:read"
+          }
+        ],
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
           {
             "roblox-api-key": []
           }
@@ -452,7 +561,20 @@
         "properties": {
           "creator": {
             "type": "string",
-            "description": "The creator type and ID. E.g. user/123 or group/456.",
+            "description": "Deprecated: Please refer to the 'userId' and 'groupId' properties instead.\r\nThe creator type and ID. E.g. user/123 or group/456.",
+            "nullable": true,
+            "deprecated": true
+          },
+          "userId": {
+            "type": "integer",
+            "description": "The User ID of the creator. Required if the asset is individual-user-owned.",
+            "format": "int64",
+            "nullable": true
+          },
+          "groupId": {
+            "type": "integer",
+            "description": "The Group ID. Required if the asset is group-owned.",
+            "format": "int64",
             "nullable": true
           },
           "name": {
@@ -540,6 +662,10 @@
             ],
             "description": "The price of the asset, including the currency code.",
             "nullable": true
+          },
+          "purchasable": {
+            "type": "boolean",
+            "description": "Whether or not the asset can be purchased in the Creator Store."
           }
         },
         "additionalProperties": false,
@@ -774,7 +900,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Represents the count of various instance types within an asset.\r\nSee: https://create.roblox.com/docs/reference/engine/classes/Instance",
+        "description": "Represents the count of various instance types within an asset.\r\nSee [Instance](https://create.roblox.com/docs/reference/engine/classes/Instance).",
         "nullable": true
       },
       "LibraryQueryOptions": {
@@ -814,6 +940,10 @@
             "type": "boolean",
             "nullable": true
           },
+          "includeOnlyValidCreators": {
+            "type": "boolean",
+            "nullable": true
+          },
           "filterForVisibleAssets": {
             "type": "boolean",
             "nullable": true
@@ -836,7 +966,7 @@
         "nullable": true
       },
       "LinkType": {
-        "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+        "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
         "type": "integer",
         "format": "int32",
         "x-enumNames": [
@@ -849,7 +979,8 @@
           "Github",
           "Guilded",
           "Roblox",
-          "Devforum"
+          "Devforum",
+          "TryInExperience"
         ],
         "x-enum-varnames": [
           "Invalid",
@@ -861,7 +992,8 @@
           "Github",
           "Guilded",
           "Roblox",
-          "Devforum"
+          "Devforum",
+          "TryInExperience"
         ],
         "x-enum-descriptions": [
           "Invalid",
@@ -873,7 +1005,8 @@
           "Github",
           "Guilded",
           "Roblox",
-          "Devforum"
+          "Devforum",
+          "TryInExperience"
         ]
       },
       "MeshPart": {
@@ -939,13 +1072,42 @@
                 "$ref": "#/components/schemas/InstanceCounts"
               }
             ],
-            "description": "The number of studio Instance types in the model.\r\nSee: https://create.roblox.com/docs/reference/engine/classes/Instance\r\nThese are broken down into specific types, such as MeshPart, Part, Script,\r\nTool, Animation, etc.",
+            "description": "The number of studio Instance types in the model.\r\nSee [Instance](https://create.roblox.com/docs/reference/engine/classes/Instance).\r\nThese are broken down into specific types, such as MeshPart, Part, Script,\r\nTool, Animation, etc.",
             "nullable": true
           }
         },
         "additionalProperties": false,
         "description": "Representation of a model asset.",
         "nullable": true
+      },
+      "ModelInstanceType": {
+        "enum": ["Script", "MeshPart", "Decal", "Animation", "Audio", "Tool"],
+        "type": "string",
+        "description": "A list of model instance types. See Toolbox.Service.Models.Internal.InstanceCounts and [Instance](https://create.roblox.com/docs/reference/engine/classes/Instance) for more details.",
+        "x-enumNames": [
+          "Script",
+          "MeshPart",
+          "Decal",
+          "Animation",
+          "Audio",
+          "Tool"
+        ],
+        "x-enum-varnames": [
+          "Script",
+          "MeshPart",
+          "Decal",
+          "Animation",
+          "Audio",
+          "Tool"
+        ],
+        "x-enum-descriptions": [
+          "Script",
+          "MeshPart",
+          "Decal",
+          "Animation",
+          "Audio",
+          "Tool"
+        ]
       },
       "ModelSubType": {
         "enum": ["Ad", "MaterialPack", "Package"],
@@ -1240,10 +1402,57 @@
             },
             "description": "The list of creator store assets returned by the search query.",
             "nullable": true
+          },
+          "totalResults": {
+            "type": "integer",
+            "description": "The total number of results for the given search query.",
+            "format": "int64"
           }
         },
         "additionalProperties": false,
         "description": "The response for the SearchCreatorStoreAssets endpoint.",
+        "nullable": true
+      },
+      "SearchFilteredErrorModel": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ToolboxError"
+              }
+            ],
+            "description": "The error code indicating the type of error.",
+            "x-enumNames": [
+              "Unknown",
+              "ComplianceSystemError",
+              "LuobuSearchEmergencyShutoff",
+              "UnsupportedAssetType",
+              "SearchQueryFiltered"
+            ],
+            "x-enum-varnames": [
+              "Unknown",
+              "ComplianceSystemError",
+              "LuobuSearchEmergencyShutoff",
+              "UnsupportedAssetType",
+              "SearchQueryFiltered"
+            ],
+            "x-enum-descriptions": [
+              "Unknown",
+              "ComplianceSystemError",
+              "LuobuSearchEmergencyShutoff",
+              "UnsupportedAssetType",
+              "SearchQueryFiltered"
+            ]
+          },
+          "filteredKeyword": {
+            "type": "string",
+            "description": "The filtered version of the search query.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Error model for filtered search queries.",
         "nullable": true
       },
       "SearchView": {
@@ -1274,7 +1483,8 @@
               "Github",
               "Guilded",
               "Roblox",
-              "Devforum"
+              "Devforum",
+              "TryInExperience"
             ],
             "x-enum-varnames": [
               "Invalid",
@@ -1286,7 +1496,8 @@
               "Github",
               "Guilded",
               "Roblox",
-              "Devforum"
+              "Devforum",
+              "TryInExperience"
             ],
             "x-enum-descriptions": [
               "Invalid",
@@ -1298,7 +1509,8 @@
               "Github",
               "Guilded",
               "Roblox",
-              "Devforum"
+              "Devforum",
+              "TryInExperience"
             ]
           },
           "url": {
@@ -1458,7 +1670,15 @@
         "nullable": true
       },
       "SortCategory": {
-        "enum": ["Relevance", "Trending", "Top", "AudioDuration", "CreateTime"],
+        "enum": [
+          "Relevance",
+          "Trending",
+          "Top",
+          "AudioDuration",
+          "CreateTime",
+          "UpdatedTime",
+          "Ratings"
+        ],
         "type": "string",
         "description": "The category to sort the search results by.",
         "x-enumNames": [
@@ -1466,21 +1686,27 @@
           "Trending",
           "Top",
           "AudioDuration",
-          "CreateTime"
+          "CreateTime",
+          "UpdatedTime",
+          "Ratings"
         ],
         "x-enum-varnames": [
           "Relevance",
           "Trending",
           "Top",
           "AudioDuration",
-          "CreateTime"
+          "CreateTime",
+          "UpdatedTime",
+          "Ratings"
         ],
         "x-enum-descriptions": [
           "Relevance",
           "Trending",
           "Top",
           "AudioDuration",
-          "CreateTime"
+          "CreateTime",
+          "UpdatedTime",
+          "Ratings"
         ]
       },
       "SortDirection": {
@@ -1732,6 +1958,38 @@
         "additionalProperties": false,
         "nullable": true
       },
+      "ToolboxError": {
+        "enum": [
+          "Unknown",
+          "ComplianceSystemError",
+          "LuobuSearchEmergencyShutoff",
+          "UnsupportedAssetType",
+          "SearchQueryFiltered"
+        ],
+        "type": "string",
+        "description": "Errors for Toolbox.Service.ToolboxServiceController.",
+        "x-enumNames": [
+          "Unknown",
+          "ComplianceSystemError",
+          "LuobuSearchEmergencyShutoff",
+          "UnsupportedAssetType",
+          "SearchQueryFiltered"
+        ],
+        "x-enum-varnames": [
+          "Unknown",
+          "ComplianceSystemError",
+          "LuobuSearchEmergencyShutoff",
+          "UnsupportedAssetType",
+          "SearchQueryFiltered"
+        ],
+        "x-enum-descriptions": [
+          "Unknown",
+          "ComplianceSystemError",
+          "LuobuSearchEmergencyShutoff",
+          "UnsupportedAssetType",
+          "SearchQueryFiltered"
+        ]
+      },
       "ToolboxItem": {
         "type": "object",
         "properties": {
@@ -1958,6 +2216,12 @@
       }
     },
     "securitySchemes": {
+      "roblox-legacy-cookie": {
+        "type": "apiKey",
+        "description": "A browser cookie that represents the identity of a Roblox user. DO NOT SHARE THIS. Sharing this will allow someone to log in as you and to steal your Robux and items. When possible, use API keys with the x-api-key header or OAuth 2.0 instead for authentication.",
+        "in": "cookie",
+        "name": ".ROBLOSECURITY"
+      },
       "roblox-api-key": {
         "type": "apiKey",
         "description": "A configurable key that allows granular access to Roblox resources. See https://create.roblox.com/docs/cloud/auth/api-keys for more information.",

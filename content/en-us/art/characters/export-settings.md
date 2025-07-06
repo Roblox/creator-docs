@@ -11,9 +11,14 @@ Export your model as a `.fbx` or `.gltf` to take advantage of all of Studio's 3D
 
 Check that your model meets Roblox's [avatar character specifications](../../art/characters/specifications.md) before exporting to ensure Studio compatibility.
 
-- If you are creating a layered clothing accessory, ensure that your model follows [layered clothing specifications](../../art/accessories/clothing-specifications.md) and use the [layered clothing export settings](../../art/accessories/clothing-export-settings.md).
-- If you are creating a rigid accessory, ensure that your model follows [rigid accessory specifications](../../art/accessories/specifications.md) and use the [rigid export settings](../../art/accessories/export-settings.md).
-- If you are creating a generic mesh, ensure that your model follows Roblox's [general specifications](../../art/modeling/specifications.md) and use the [general export settings](../../art/modeling/export-requirements.md).
+<Alert severity = 'warning'>
+<AlertTitle>If creating other types of 3D models:</AlertTitle>
+<ul>
+<li>For generic meshes, see [general mesh specifications](../modeling/specifications.md) and [general export settings](../modeling/export-requirements.md).</li> <br />
+<li>For rigid accessories, see [accessory specifications](../accessories/specifications.md) and [accessory export settings](../accessories/export-settings.md).</li> <br />
+<li>For layered accessories, see [layered accessory specifications](../accessories/clothing-specifications.md) and [layered export settings](../accessories/clothing-export-settings.md).</li> <br />
+</ul>
+</Alert>
 
 <Alert severity = 'error'>
 If you are using Roblox's avatar template files, you must perform the [cleanup steps](../../art/characters/creating/combine-head-geometry.md) in order for the assets to properly validate.
@@ -41,33 +46,31 @@ Use the following guidance before exporting:
 For more information on supported modeling objects and proper configuration, see [Character specifications](../characters/specifications.md).
 </Alert>
 
-## Software specific export settings
-
-Whether you are exporting your character for testing, or are performing a final export out of Blender, you must apply the appropriate export settings to ensure that Blender exports the proper character data.
-
-<Tabs>
-  <TabItem label="Blender">
-
-Before exporting a mesh from Blender, make sure either your **Scene Properties** > **Unit Scale** to `.01` or your export settings **Transform** > **Scale** is set to `.01` to ensure similar `.fbx` scaling within Studio.
-
-When exporting characters with animation or FACS animation, ensure that your animation timeline **Start** and **End** include the entire range of your animations.
+- When exporting characters with animation or FACS animation, ensure that your animation timeline **Start** and **End** include the entire range of your animations.
 
 <img src="../../assets/art/avatar/basic-creation/Blender-Animation-Start-End.png" width = "60%" alt="Zoom-in of Blender animation track indicating a Start value of 0 and End value of 308." />
+
+## Blender
+
+Blender allows you to export in `.fbx` or `.gltf` as well as other formats. If you are using `.fbx` export, familiarize yourself with [Blender's FBX scaling](../blender.md#adjust-scale-fbx) to ensure that you successfully import the model into Studio at the correct scale.
+
+### Export settings
 
 1. In the topbar, click **File** > **Export** > **FBX (.fbx)**. The Blender file browser window displays.
 2. Set **Path Mode** to **Copy** and enable the **Embed Textures** icon.
 3. In the Include section, enable **Custom Properties**.
-4. Expand the Armature section and uncheck **Add Leaf Bones**.
-5. Enable **Bake Animation**.
-6. Expand Bake Animation and **uncheck NLA Strips**, **All Actions**, and **Force Start/End Keyframes**.
+4. If your project doesn't already have `.01` scene unit scaling, set the **Transform** > **Apply Scalings** to `FBX Unit Scale`. For more details, see [Blender FBX scaling](../blender.md#adjust-scale-fbx).
+5. Expand the Armature section and uncheck **Add Leaf Bones**.
+6. Enable **Bake Animation**.
+7. Expand Bake Animation and **uncheck NLA Strips**, **All Actions**, and **Force Start/End Keyframes**.
    1. Ensure your project animation timeline has the correct **Start** and **End** range of all your keyframes.
-7. In Bake Animation, set **Simplify** to **0.0**.
-8. Click the **Export FBX** button. Save the `.fbx` to the directory of your choice.
+8. In Bake Animation, set **Simplify** to **0.0**.
+9. Click the **Export FBX** button. Save the `.fbx` to the directory of your choice.
 
-<img src="../../assets/art/avatar/basic-creation/Export-Settings.png" width = "60%" alt="Screenshot of Blender export settings" />
+<img src="../../assets/art/avatar/basic-creation/Export-Settings.png" width = "50%" alt="Screenshot of Blender export settings" />
 
-</TabItem>
-<TabItem label="Maya">
+## Maya export settings
+
 To export a mesh in Maya as a `.fbx` file:
 
 1. In the topbar, click **File**. A pop-up menu displays.
@@ -86,9 +89,6 @@ To export a mesh in Maya as a `.fbx` file:
     <img src="../../assets/accessories/lc-requirements-maya-settings-with-animation.png" alt = "Screenshot of Maya export settings for exports with animation."/>
 
 11. After exporting, use Studio's [3D importer](../../art/modeling/3d-importer.md) to import your model. See [Test characters in Studio](../../art/characters/testing/studio.md) for additional importing and testing information.
-
-</TabItem>
-</Tabs>
 
 <Alert severity = 'success'>
 After importing the `Class.Model` character to Studio, you can now perform the following with this asset:

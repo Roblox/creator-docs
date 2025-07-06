@@ -163,7 +163,7 @@ To apply materials to the island:
 1. In the viewport, drag along the edges of the island to apply blades of grass, leaving space in the middle of the island for
    the spawn location and the initial platforms.
 1. In the **Explorer** window, select the **SpawnLocation** object.
-1. In the toolbar's **Home** tab, select the **Move** tool.
+1. From the toolbar, select the **Move** tool.
 1. In the viewport, move the spawn location toward the edge of the island to make space for the first platform. The sample [Island Jump - Building](https://www.roblox.com/games/14239096301/Island-Jump-Building) `.rbxl` file uses a position of `-127, -3, 9`.
 
    <video controls loop muted>

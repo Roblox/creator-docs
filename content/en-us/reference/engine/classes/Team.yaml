@@ -51,6 +51,7 @@ code_samples:
   - Team-Rebalance
   - Team-Kill-Check
   - Team-Only-Door
+  - Party-Team-Integration
 inherits:
   - Instance
 tags: []

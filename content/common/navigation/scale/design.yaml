@@ -22,14 +22,10 @@ navigation:
     path: /production/game-design/introduction-to-quest-design
   - title: UI and UX
     path: /production/game-design/ui-ux-design
-  - title: Device guidelines
-    section:
-    - title: Accessibility
-      path: /production/publishing/accessibility
-    - title: Console
-      path: /production/publishing/console-guidelines
-    - title: VR
-      path: /production/publishing/vr-guidelines
+  - title: Console guidelines
+    path: /production/publishing/console-guidelines
+  - title: VR guidelines
+    path: /production/publishing/vr-guidelines
   - heading: Monetize your experience
   - title: Monetization
     path: /production/game-design/monetization-foundations

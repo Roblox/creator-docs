@@ -76,6 +76,16 @@ All published events also appear in a dedicated **Events** section on the experi
 
 <img src="../../assets/promotion/experience-events/Experience-Page-Promotion.png" width="840" alt="Event promoted on experience's detail page" />
 
+### Roblox charts
+
+The **Trending Events in Experiences** sort in Roblox's [charts](https://www.roblox.com/charts), available globally and across all platforms, can help increase player discovery and participation in your events. This sort shows active events based on the experience's daily active users (DAU), filterable by location and platform.
+
+To be featured in **Trending Events in Experiences**, your event must meet the following criteria:
+
+- An active event that started within the last 7 days.
+- Minimum of 1,000 RSVPs.
+- Visible to all players (not private).
+
 ### Group page
 
 If you create events as an admin for a [group](../../projects/groups.md), the group's events will appear under the **Events** tab on the group page.

@@ -23,9 +23,21 @@ deprecation_message: ''
 properties: []
 methods:
   - name: SocialService:GetPlayersByPartyId
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Returns a table of all presently connected `Class.Player` objects whose
+      `Class.Player.PartyId` property matches the passed `partyId`.
+    description: |
+      Returns a table of all presently connected `Class.Player` objects whose
+      `Class.Player.PartyId` property matches the provided `partyId`. This
+      method behaves similarly to `Class.Players:GetPlayers()` but filters the
+      results to include only those players belonging to the specified party.
+
+      Note that this service does not work during playtesting in Roblox Studio;
+      to test aspects of your experience using it, you must publish the
+      experience and play it in the Roblox application.
+    code_samples:
+      - SocialService-GetPlayersByPartyId
+      - Party-Team-Integration
     parameters:
       - name: partyId
         type: string
@@ -33,7 +45,9 @@ methods:
         summary: ''
     returns:
       - type: Instances
-        summary: ''
+        summary: |
+          A table of `Class.Player` objects whose `Class.Player.PartyId`
+          property matches the passed `partyId`.
     tags: []
     deprecation_message: ''
     security: None
@@ -232,10 +246,101 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: SocialService:GetEventRsvpStatusAsync
+    summary: |
+      Returns the local player's RSVP status for the given event.
+    description: |
+      Returns the local player's RSVP status for the given event. Events must be
+      in the current experience and must not have already started. If the event
+      has already started, this method will return an error.
+
+      Note that you can use
+      `Class.SocialService:PromptRsvpToEventAsync()|PromptRsvpToEventAsync()` to
+      prompt the player to change their RSVP status for the event.
+    code_samples:
+      - SocialService-PromptRsvpToEventAsync
+    parameters:
+      - name: eventId
+        type: string
+        default: ''
+        summary: |
+          The event ID of the event to prompt the player to change their RSVP
+          status for. This must be a valid event ID that exists in the current
+          experience, represented as a string (not a number).
+    returns:
+      - type: RsvpStatus
+        summary: |
+          Returns an `Enum.RsvpStatus` indicating the player's current RSVP
+          status for the event. If the player has not RSVP'd to the event, this
+          will return `Enum.RsvpStatus.None`.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: SocialService:GetPartyAsync
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Returns an array of dictionaries containing data for all members of the
+      specified party who are currently in the experience.
+    description: |
+      Returns an array of dictionaries containing data for all members
+      associated with the given `partyId`. The returned array reflects the
+      current state of the party across all active server instances within the
+      experience and it is ordered by the time each party member accepted the
+      party invite. This means the first element in the array is the earliest to
+      accept and the last is the most recent.
+
+      This method is useful for retrieving up-to-date information about all
+      party members currently in the experience and across different servers,
+      enabling coordinated group behavior such as teleportation, matchmaking, or
+      party-based gameplay logic.
+
+      Each dictionary in the returned array contains the following fields:
+
+      <table>
+      <thead>
+        <tr>
+          <th>Key</th>
+          <th>Value Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th><code>UserId</code></th>
+          <td>number</td>
+          <td>The player's <code>Class.Player.UserId</code> property.</td>
+        </tr>
+        <tr>
+          <th><code>PlaceId</code></th>
+          <td>number</td>
+          <td>The <code>Class.DataModel.PlaceId</code> of the place the party member is currently in.</td>
+        </tr>
+        <tr>
+          <th><code>JobId</code></th>
+          <td>string</td>
+          <td>The <code>Class.DataModel.JobId</code> of the server instance the user currently resides in.</td>
+        </tr>
+        <tr>
+          <th><code>PrivateServerId</code></th>
+          <td>string</td>
+          <td>If applicable, the <code>Class.DataModel.PrivateServerId</code> when the party member is in a private or reserved server.</td>
+        </tr>
+        <tr>
+          <th><code>ReservedServerAccessCode</code></th>
+          <td>string</td>
+          <td>If applicable, the access code for the reserved server that the user currently resides in. Useful for teleporting party members to each other using <code>Class.TeleportService:TeleportAsync()</code>.</td>
+        </tr>
+      </tbody>
+      </table>
+
+      Note that this service does not work during playtesting in Roblox Studio;
+      to test aspects of your experience using it, you must publish the
+      experience and play it in the Roblox application.
+    code_samples:
+      - SocialService-GetPartyAsync
     parameters:
       - name: partyId
         type: string
@@ -243,7 +348,48 @@ methods:
         summary: ''
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of dictionaries representing the members of the specified
+          party who are currently in the experience.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: SocialService:PromptRsvpToEventAsync
+    summary: |
+      Prompts the local `Class.Player` with a prompt to change their RSVP status
+      to the given event.
+    description: |
+      `PromptRsvpToEventAsync()` displays a prompt to the local player through
+      which they may change their RSVP status to the given event.
+
+      Events must be in the current experience and must not have already
+      started. If the event has already started, this method will return an
+      error.
+
+      Note that you can use
+      `Class.SocialService:GetEventRsvpStatusAsync()|GetEventRsvpStatusAsync()`
+      to check the player's current RSVP status before calling this method.
+    code_samples:
+      - SocialService-PromptRsvpToEventAsync
+    parameters:
+      - name: eventId
+        type: string
+        default: ''
+        summary: |
+          The event ID of the event to prompt the player to change their RSVP
+          status for. This must be a valid event ID that exists in the current
+          experience, represented as a string (not a number).
+    returns:
+      - type: RsvpStatus
+        summary: |
+          Returns a `Enum.RsvpStatus` indicating the player's new RSVP status
+          after the prompt is closed. If the player closes the prompt without
+          changing their RSVP status, this will return `Enum.RsvpStatus.None` or
+          their old `Enum.RsvpStatus` if they had already selected a status.
     tags:
       - Yields
     deprecation_message: ''

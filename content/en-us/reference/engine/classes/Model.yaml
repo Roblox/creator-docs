@@ -248,15 +248,24 @@ methods:
   - name: Model:AddPersistentPlayer
     summary: |
       Sets this model to be persistent for the specified player.
-      `Class.Model.ModelStreamingMode` must be set to **PersistentPerPlayer**
-      for behavior to be changed as a result of addition.
-    description: ''
+      `Class.Model.ModelStreamingMode|ModelStreamingMode` must be set to
+      `Enum.ModelStreamingMode|PersistentPerPlayer` for behavior to be changed
+      as a result of addition.
+    description: |
+      Sets this model to be persistent for the specified player. Persistent
+      models stay present for the player regardless of streaming settings or
+      conditions.
+
+      `Class.Model.ModelStreamingMode|ModelStreamingMode` must be set to
+      `Enum.ModelStreamingMode|PersistentPerPlayer` for behavior to be changed
+      as a result of addition.
     code_samples: []
     parameters:
       - name: playerInstance
         type: Player
         default: nil
-        summary: ''
+        summary: |
+          The `Class.Player` to make this model persistent for.
     returns:
       - type: ()
         summary: ''
@@ -591,16 +600,27 @@ methods:
     writeCapabilities: []
   - name: Model:RemovePersistentPlayer
     summary: |
-      Makes this model no longer persistent for specified player.
-      `Class.Model.ModelStreamingMode` must be set to **PersistentPerPlayer**
-      for behavior to be changed as a result of removal.
-    description: ''
+      Makes this model no longer persistent for the specified player.
+      `Class.Model.ModelStreamingMode|ModelStreamingMode` must be set to
+      `Enum.ModelStreamingMode|PersistentPerPlayer` for behavior to be changed
+      as a result of removal.
+    description: |
+      Makes this model no longer persistent for the specified player. This does
+      not guarantee the model will immediately be removed for the player; after
+      calling this method, the model will be treated as
+      `Enum.ModelStreamingMode|Atomic` for that player and will remain present
+      as long as it is within the target streaming radius.
+
+      `Class.Model.ModelStreamingMode|ModelStreamingMode` must be set to
+      `Enum.ModelStreamingMode|PersistentPerPlayer` for behavior to be changed
+      as a result of removal.
     code_samples: []
     parameters:
       - name: playerInstance
         type: Player
         default: nil
-        summary: ''
+        summary: |
+          The `Class.Player` to make this model no longer persistent for.
     returns:
       - type: ()
         summary: ''

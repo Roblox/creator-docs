@@ -1,16 +1,19 @@
 name: DevTouchMovementMode
 type: enum
 summary: |
-  Overrides the movement mode of players who are playing on touch devices.
+  Overrides the movement mode of players who are playing on touch-enabled
+  devices.
 description: |
-  Overrides the movement mode of players who are playing on touch devices.
+  Overrides the movement mode of players who are playing on touch-enabled
+  devices.
 code_samples:
 tags: []
 deprecation_message: ''
 items:
   - name: UserChoice
     summary: |
-      The player's character will moved based on the user's settings.
+      Allows players to choose their desired control scheme from the
+      in-experience menu. This is the default movement mode.
     value: 0
     tags: []
     deprecation_message: ''
@@ -19,19 +22,19 @@ items:
     value: 1
     tags: []
     deprecation_message: |
-      Use **DynamicThumbstick** for virtual thumbstick applications.
+      Use `DynamicThumbstick` instead.
   - name: DPad
     summary: ''
     value: 2
     tags: []
     deprecation_message: |
-      Use **DynamicThumbstick** for virtual DPad applications.
+      Use `DynamicThumbstick` instead.
   - name: Thumbpad
     summary: ''
     value: 3
     tags: []
     deprecation_message: |
-      Use **DynamicThumbstick** for virtual thumbpad applications.
+      Use `DynamicThumbstick` instead.
   - name: ClickToMove
     summary: |
       The player's character will attempt to move to a location in the world
@@ -41,8 +44,8 @@ items:
     deprecation_message: ''
   - name: Scriptable
     summary: |
-      The player will not respond to default controls; any character movement
-      must be defined in custom scripts.
+      The player's character will not respond to default controls; any character
+      movement must be defined in custom scripts.
     value: 5
     tags: []
     deprecation_message: ''
@@ -50,8 +53,7 @@ items:
     summary: |
       The player's character is controlled with a virtual thumbstick that
       appears when they touch the lower portion of the screen. Jumping is
-      controlled with a separate button. Good for portrait mode and one handed
-      play.
+      controlled with a separate button.
     value: 6
     tags: []
     deprecation_message: ''

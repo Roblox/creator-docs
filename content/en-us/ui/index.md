@@ -7,9 +7,11 @@ You can quickly create high-quality graphical user interfaces with minimal scrip
 
 ## On-screen UI
 
-[On-screen containers](../ui/on-screen-containers.md) hold UI objects that you want to display on a user's screen. All on-screen UI objects and code are stored and changed on the client.
+[On-screen containers](../ui/on-screen-containers.md) hold UI objects that you want to display on a player's screen, including [frames](../ui/frames.md), [labels](../ui/labels.md), [buttons](../ui/buttons.md), and more. All on-screen UI objects and code are stored and changed on the client.
 
-<img src="../assets/ui/button-text-input/ImageButton-Examples.jpg" width="800" />
+<figure>
+<img src="../assets/ui/ui-objects/ScreenGui-Example.jpg" width="840" alt="Example ScreenGui with various GuiObject children, including a Frame, TextLabel, TextBox, and ImageButton." />
+</figure>
 
 ## In-experience UI
 
@@ -71,6 +73,10 @@ Beyond basic properties for adjusting position and size, Roblox also provides la
     <figcaption>`Class.UIStroke` with `Class.UIGradient`</figcaption>
   </figure>
 </GridContainer>
+
+## Universal styling
+
+[Universal styling](./styling/index.md) is a Roblox solution to stylesheets, similar to CSS, that lets you declare and globally apply overrides to UI instance properties. This engine‑level support is the foundation for the [Style&nbsp;Editor](./styling/editor.md) and the end‑to‑end token pipeline.
 
 ## Interactive frameworks
 

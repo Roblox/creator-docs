@@ -1,7 +1,6 @@
 ---
 title: CFrames
 description: CFrames, or Coordinate Frames, are a data type that you can use to rotate and position objects in the 3D space.
-machineTranslated: true
 ---
 
 A `Datatype.CFrame`, short for **Coordinate Frame**, is a data type used to rotate and position 3D objects. As either an object property or a standalone unit, a `Datatype.CFrame` contains global x-, y-, and z-coordinates as well as rotation data for each axis. In addition, `Datatype.CFrame|CFrames` contain helpful functions for working with objects in the 3D space.

@@ -102,7 +102,7 @@ export const sections = [
     content: [
       {
         title: "Real-time team creation",
-        description: "Team Create in Studio lets you build and script collaboratively. Watch your teammates' creations come to life before your eyes.",
+        description: "Build and script collaboratively in Studio. Watch your teammates' creations come to life before your eyes.",
         image: "/assets/studio/collaboration/Collaborative-Session.jpg",
         links: [{ text: "Studio collaboration", href: "./projects/collaboration" }]
       },

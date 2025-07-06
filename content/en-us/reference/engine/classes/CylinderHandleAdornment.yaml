@@ -36,6 +36,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
+      - Basic
       - UI
     writeCapabilities: []
   - name: CylinderHandleAdornment.Height
@@ -56,6 +57,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
+      - Basic
       - UI
     writeCapabilities: []
   - name: CylinderHandleAdornment.InnerRadius
@@ -78,6 +80,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
+      - Basic
       - UI
     writeCapabilities: []
   - name: CylinderHandleAdornment.Radius
@@ -98,6 +101,7 @@ properties:
       can_load: true
       can_save: true
     capabilities:
+      - Basic
       - UI
     writeCapabilities: []
 methods: []

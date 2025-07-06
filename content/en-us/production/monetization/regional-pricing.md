@@ -1,21 +1,23 @@
 ---
 title: Regional Pricing
-description: Regional pricing adjusts the price of your passes based on a user's region.
+description: Regional pricing adjusts the price of your items based on a user's region.
 ---
 
-With Regional Pricing, you can offer region-specific prices for your passes and build a more inclusive and accessible global economy. After you determine a default global price for a pass, Roblox uses a variety of signals like the region's purchasing power, currency exchange rates, and local spending behavior to set the most appropriate price for that pass region by region.
+With Regional Pricing, you can offer region-specific prices for your items and build a more inclusive and accessible global economy. After you determine a default global price for an item, Roblox uses a variety of signals like the region's purchasing power, currency exchange rates, and local spending behavior to set the most appropriate price for that item region by region.
 
-You can choose which of your passes you want to price regionally. When you enable Regional Pricing for a pass in your experience, Roblox automatically adjusts the price of that pass for users based on their economic location. Economic location is not always the same as account location. To determine a user's economic location, Roblox looks at signals, including VPN usage, billing history, and account history. If their economic location can't be determined, users see the default global price for the pass instead.
+You can choose which of your items you want to price regionally. When you enable Regional Pricing for an item in your experience, Roblox automatically adjusts the price of that item for users based on their economic location. Economic location is not always the same as account location. To determine a user's economic location, Roblox looks at signals, including VPN usage, billing history, and account history. If their economic location can't be determined, users see the default global price for the item instead.
 
 ## Enable Regional Pricing
 
 <Alert severity="warning">
-  Regional prices will never be below 30% of the default price of your pass.
-  
-  For example, if your default price is 100 Robux, the lowest it can be offered is 30 Robux.
+  Regional prices will never be below 30% of the default price of your pass or developer product.
+
+  For example, if your item has a default price of 100 Robux, the lowest the item can be priced at is 30 Robux, regardless of a user's region.
 </Alert>
 
-To enable Regional Pricing:
+### For passes
+
+To enable Regional Pricing for a pass:
 
 1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select an experience.
 2. Go to **Monetization** > **Passes**.
@@ -25,6 +27,10 @@ To enable Regional Pricing:
 6. Click **Save Changes**.
 
 Regional prices update periodically to reflect changes in global economy trends.
+
+### For Avatar items
+
+To enable Regional Pricing for an Avatar item, see [Pricing](../../marketplace/publish-to-marketplace.md#pricing) in the Publish to Marketplace page.
 
 ## Check for dynamic pricing
 

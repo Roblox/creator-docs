@@ -21,7 +21,7 @@ The **Engagement Rewards** feature package is a customizable framework for offer
 
 	<Grid item container xs={12} sm={6} direction='row'>
 	<Grid item container direction='column'>
-	<BrowseSampleCard href='https://create.roblox.com/store/asset/80053655757903' description='The Engagement Rewards feature package helps you offer rewards for daily logins, login streaks, and time played.' title='Engagement Rewards' assetId={101878088080064}  />
+	<BrowseSampleCard href='https://create.roblox.com/store/asset/80053655757903' description='The Engagement Rewards feature package helps you offer rewards for daily logins, login streaks, and time played.' title='Engagement Rewards' assetId={80053655757903}  />
 	</Grid>
 	</Grid>
 

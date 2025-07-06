@@ -7,8 +7,14 @@ Export your mesh or model as a `.fbx` to take advantage of all of Studio's 3D im
 
 Check that your model meets Roblox's [modeling specifications](../../art/modeling/specifications.md) before exporting to ensure Studio compatibility. Specific types of assets, like characters and accessories, have additional specifications:
 
-- If you are creating an avatar character model, ensure that your model follows the [character specifications](../../art/characters/specifications.md).
-- If you are creating an accessory model, ensure that your model follows the [accessory specifications](../../art/accessories/specifications.md).
+<Alert severity = 'warning'>
+<AlertTitle>If creating other types of 3D models:</AlertTitle>
+<ul>
+<li>For rigid accessories, see [accessory specifications](../../art/accessories/specifications.md) and [accessory export settings](../accessories/export-settings.md).</li> <br />
+<li>For layered accessories, see [layered accessory specifications](../accessories/clothing-specifications.md) and [layered export settings](../accessories/clothing-export-settings.md).</li> <br />
+<li>For avatar characters, see [avatar specifications](../../art/characters/specifications.md) and [avatar export settings](../characters/export-settings.md).</li>
+</ul>
+</Alert>
 
 <Tabs>
   <TabItem label="Blender">

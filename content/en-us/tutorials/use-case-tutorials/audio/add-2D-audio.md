@@ -27,11 +27,11 @@ To create non-directional audio, it's important to understand the audio objects 
 
 All of these audio objects work together to carry sound from file playback to each player's hardware. Let's take a look at how this works in practice using an example of a player wearing a headset while playing an experience with their laptop:
 
-- The `Class.AudioPlayer` loads the `127645268874265` audio assetID into the experience for a currency purchase sound.
+- The `Class.AudioPlayer` loads the `127645268874265` audio asset ID into the experience for a currency purchase sound.
 - A `Class.Wire` carries the stream from the `Class.AudioPlayer` to the `Class.AudioDeviceOutput` so that the stream comes out of the player's headset.
 - The `Class.AudioDeviceOutput` object carries the sound to the player's physical speaker, or in this case, their headphones.
 
-The following sections dive deeper and reference these objects as you learn how to play both looping and one shot 2D audio. As you review these objects with the upcoming techniques, you can more accurately predict how to capture and feed sound from the experience to the player and vice-versa.
+The following sections dive deeper and reference these objects as you learn how to play both looping and one shot 2D audio. As you review these objects with the upcoming techniques, you can more accurately predict how to capture and feed sound from the experience to the player.
 
 ## Looping audio
 
@@ -80,8 +80,8 @@ To recreate the looping 2D audio in the sample [Gingerbread House - Complete Aud
 1. Back in the **Explorer** window, insert a **Script** into **AudioPlayer**, rename it **LoopBackgroundMusic**, set its **RunContext** property to **Client**, then paste the following code into the script:
 
    ``` lua
-      local audioPlayer = script.Parent
-      audioPlayer:Play()
+   local audioPlayer = script.Parent
+   audioPlayer:Play()
    ```
 
    <BaseAccordion>
@@ -140,73 +140,71 @@ To recreate the one shot game state feedback audio in the sample [Gingerbread Ho
 1. Back in the **Explorer** window, navigate to **ServerScriptService**, then insert a **Script**, rename it **GumdropService**, set its **RunContext** property to **Server**, then paste the following code into the script:
 
    ``` lua
-      -- Initializing services
-      local Workspace = game:GetService("Workspace")
-      local Players = game:GetService("Players")
-      local ServerStorage = game:GetService("ServerStorage")
-      local TweenService = game:GetService("TweenService")
+   -- Initializing services
+   local Workspace = game:GetService("Workspace")
+   local Players = game:GetService("Players")
+   local ServerStorage = game:GetService("ServerStorage")
+   local TweenService = game:GetService("TweenService")
 
-      -- Modules
-      local Leaderboard = require(ServerStorage.Leaderboard)
-      local PlayerData = require(ServerStorage.PlayerData)
+   -- Modules
+   local Leaderboard = require(ServerStorage.Leaderboard)
+   local PlayerData = require(ServerStorage.PlayerData)
 
-      -- Variables
-      local gumdropsFolder = Workspace.Gumdrops
-      local gumdrops = gumdropsFolder:GetChildren()
+   -- Variables
+   local gumdropsFolder = Workspace.Gumdrops
+   local gumdrops = gumdropsFolder:GetChildren()
 
-      local GUMDROP_KEY_NAME = PlayerData.GUMDROP_KEY_NAME
-      local GUMDROP_AMOUNT_TO_ADD = 1
+   local GUMDROP_KEY_NAME = PlayerData.GUMDROP_KEY_NAME
+   local GUMDROP_AMOUNT_TO_ADD = 1
 
+   local function updatePlayerGumdrops(player, updateFunction)
+      -- Update the gumdrop table
+      local newGumdropAmount = PlayerData.updateValue(player, GUMDROP_KEY_NAME, updateFunction)
 
-      local function updatePlayerGumdrops(player, updateFunction)
-	      -- Update the gumdrop table
-	      local newGumdropAmount = PlayerData.updateValue(player, GUMDROP_KEY_NAME, updateFunction)
-
-	      -- Update the gumdrop leaderboard
-	      Leaderboard.setStat(player, GUMDROP_KEY_NAME, newGumdropAmount)
+      -- Update the gumdrop leaderboard
+      Leaderboard.setStat(player, GUMDROP_KEY_NAME, newGumdropAmount)
 	
-	      -- Check if the player has collected three gumdrops
-	      if newGumdropAmount >= 3 then
-		      -- Play the door event audio when the player collects three gumdrops
-		      local audioPlayer = Workspace.Door.AudioPlayer
-		      audioPlayer:Play()
+      -- Check if the player has collected three gumdrops
+      if newGumdropAmount >= 3 then
+         -- Play the door event audio when the player collects three gumdrops
+         local audioPlayer = Workspace.Door.AudioPlayer
+         audioPlayer:Play()
 		
-		      -- Animate the door to move downward
-		      local doorPart = Workspace.Door
-		      local tweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
-		      local tween = TweenService:Create(doorPart, tweenInfo, {Position = doorPart.Position + Vector3.new(0, -15, 0)})
-		      tween:Play()
-	      end
+         -- Animate the door to move downward
+         local doorPart = Workspace.Door
+         local tweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
+         local tween = TweenService:Create(doorPart, tweenInfo, {Position = doorPart.Position + Vector3.new(0, -15, 0)})
+         tween:Play()
       end
+   end
 
-      -- Defining the event handler
-      local function onGumdropTouched(otherPart, gumdrop)
-	      if gumdrop:GetAttribute("Active") then
-		      local character = otherPart.Parent
-		      local player = Players:GetPlayerFromCharacter(character)
-		      if player then
-			      -- Player touched a gumdrop
+   -- Defining the event handler
+   local function onGumdropTouched(otherPart, gumdrop)
+      if gumdrop:GetAttribute("Active") then
+         local character = otherPart.Parent
+         local player = Players:GetPlayerFromCharacter(character)
+         if player then
+            -- Player touched a gumdrop
+            local audioPlayer = gumdrop.AudioPlayer
+            audioPlayer:Play()
 			
-			      local audioPlayer = gumdrop.AudioPlayer
-			      audioPlayer:Play()
-			
-			      gumdrop.Transparency = 1
-			      gumdrop:SetAttribute("Active", false)
-			      updatePlayerGumdrops(player, function(oldGumdropAmount)
-				      oldGumdropAmount = oldGumdropAmount or 0
-				      return oldGumdropAmount + GUMDROP_AMOUNT_TO_ADD
-			      end)
-		      end
-	      end
+            gumdrop.Transparency = 1
+            gumdrop:SetAttribute("Active", false)
+            updatePlayerGumdrops(player, function(oldGumdropAmount)
+            oldGumdropAmount = oldGumdropAmount or 0
+            return oldGumdropAmount + GUMDROP_AMOUNT_TO_ADD
+            end)
+         end
       end
+   end
 
-      -- Setting up event listeners
-      for _, gumdrop in gumdrops do
-	      gumdrop:SetAttribute("Active", true)
-	      gumdrop.Touched:Connect(function(otherPart)
-		      onGumdropTouched(otherPart, gumdrop)
-	      end)
-      end
+   -- Setting up event listeners
+   for _, gumdrop in gumdrops do
+      gumdrop:SetAttribute("Active", true)
+      gumdrop.Touched:Connect(function(otherPart)
+      onGumdropTouched(otherPart, gumdrop)
+      end)
+   end
    ```
 
    <BaseAccordion>
@@ -309,40 +307,41 @@ To recreate the one shot UI interaction audio in the sample [Gingerbread House -
 1. Back in the **Explorer** window, insert a **LocalScript** into **2DAudioButton**, rename it **PlayAudioWhenPressed**, then paste the following code into the script:
 
    ``` lua
-      local TweenService = game:GetService("TweenService")
+   local TweenService = game:GetService("TweenService")
 
-      local buttonGui = script.Parent
-      local buttonImageButton = buttonGui.ButtonFrame.ButtonImageButton
-      local buttonAudioPlayer = buttonGui.AudioPlayer
+   local buttonGui = script.Parent
+   local buttonImageButton = buttonGui.ButtonFrame.ButtonImageButton
+   local buttonAudioPlayer = buttonGui.AudioPlayer
 
-      local tweenInfo = TweenInfo.new(.2, Enum.EasingStyle.Exponential)
+   local tweenInfo = TweenInfo.new(.2, Enum.EasingStyle.Exponential)
 
-      local buttonTweenByIsPressed = {
-          -- Pressed
-          [true] = TweenService:Create(buttonImageButton, tweenInfo, {
-              Position = buttonImageButton.Position + UDim2.fromScale(0, .1),
-              ImageColor3 = Color3.fromRGB(117, 255, 255),
-          }),
+   local buttonTweenByIsPressed = {
+      -- Pressed
+      [true] = TweenService:Create(buttonImageButton, tweenInfo, {
+         Position = buttonImageButton.Position + UDim2.fromScale(0, .1),
+         ImageColor3 = Color3.fromRGB(117, 255, 255),
+      }),
 
-          -- Default
-          [false] = TweenService:Create(buttonImageButton, tweenInfo, {
-              Position = buttonImageButton.Position,
-              ImageColor3 = Color3.fromRGB(255, 255, 255),
-          }),
-      }
+      -- Default
+      [false] = TweenService:Create(buttonImageButton, tweenInfo, {
+         Position = buttonImageButton.Position,
+         ImageColor3 = Color3.fromRGB(255, 255, 255),
+      }),
+   }
 
-      local function onIsPlayingChanged()
-          local isPlaying = buttonAudioPlayer.IsPlaying
-          local tween = buttonTweenByIsPressed[isPlaying]
-          tween:Play()
-      end
-      onIsPlayingChanged()
-      buttonAudioPlayer:GetPropertyChangedSignal("IsPlaying"):Connect(onIsPlayingChanged)
-      buttonAudioPlayer.Ended:Connect(onIsPlayingChanged)
+   local function onIsPlayingChanged()
+      local isPlaying = buttonAudioPlayer.IsPlaying
+      local tween = buttonTweenByIsPressed[isPlaying]
+      tween:Play()
+   end
+      
+   onIsPlayingChanged()
+   buttonAudioPlayer:GetPropertyChangedSignal("IsPlaying"):Connect(onIsPlayingChanged)
+   buttonAudioPlayer.Ended:Connect(onIsPlayingChanged)
 
-      buttonImageButton.Activated:Connect(function(_hit)
-          buttonAudioPlayer:Play()
-      end)
+   buttonImageButton.Activated:Connect(function(_hit)
+      buttonAudioPlayer:Play()
+   end)
    ```
 
    <BaseAccordion>

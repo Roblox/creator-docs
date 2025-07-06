@@ -19,6 +19,8 @@ description: |
 
   - `Class.AudioAnalyzer`
   - `Class.AudioCompressor`
+  - `Class.AudioChannelMixer`
+  - `Class.AudioChannelSplitter`
   - `Class.AudioDeviceInput`
   - `Class.AudioDeviceOutput`
   - `Class.AudioDistortion`
@@ -32,6 +34,7 @@ description: |
   - `Class.AudioLimiter`
   - `Class.AudioPitchShifter`
   - `Class.AudioPlayer`
+  - `Class.AudioRecorder`
   - `Class.AudioReverb`
   - `Class.AudioTextToSpeech`
 code_samples: []

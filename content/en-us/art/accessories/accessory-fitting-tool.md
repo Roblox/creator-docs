@@ -232,7 +232,7 @@ Use the following cage editing tools to help visualize and edit any cage vertice
 
 To make changes to the vertices of the currently selected cage:
 
-1. In the toolbar's **Avatar** tab, disable **Move** snapping. This enables you to make detailed changes to a vertex's position.
+1. In the Studio toolbar, disable **Move** snapping. This enables you to make detailed changes to a vertex's position.
 2. Select a vertex and use the **Move** tool to reposition. Changes to the cage apply immediately and display in the preview panel.
    1. Use the opacity sliders to better visualize the changes to your cage.
    2. Set the **Falloff Distance** depending on the number of vertices being adjusted at once.

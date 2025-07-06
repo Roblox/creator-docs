@@ -16,7 +16,7 @@ The `Class.Lighting.Technology|Technology` property, modifiable only in the [Pro
 </Alert>
 
 <Alert severity="success">
-To view **light guides** that indicate the color and field of effect from light sources, such as the angle of light emission from the cone's apex of a `Class.SpotLight`, open **File**&nbsp;&rang; **Studio&nbsp;Settings** and toggle on **Show&nbsp;Light&nbsp;Guides**.
+To view **light guides** that indicate the color and field of effect from light sources, such as the angle of light emission from the cone's apex of a `Class.SpotLight`, open [Studio Settings](../studio/setup.md#customization) and toggle on **Show Light Guides**.
 </Alert>
 
 ## Light types

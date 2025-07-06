@@ -1,224 +1,281 @@
 ---
-title: Roblox avatars
+title: Create avatar items
 description: Create and upload avatar characters, clothing, and accessories to the Roblox Marketplace.
-hideBreadcrumbs: true
+
+hideInPageNavigation: true
 ---
 
-<Grid container spacing={2} style={{ marginBottom: 24, width: '100%' }}>
-<Grid item xs={6} style={{ padding: 16 }}>
-<Grid item container wrap="nowrap" direction="column" style={{ gap: 8, flex: 1 }}>
+export const sections = [
 
-<div
-className="container"
-style={{ position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12 }} >
-<iframe
-src="https://www.youtube-nocookie.com/embed/EUDSIUmLjxA"
-title="YouTube video player"
-frameBorder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowFullScreen
-style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} ></iframe>
+{
+title: "Turn your creativity into virtual assets",
+description: "Roblox streamlines the creation process, letting you focus more on building and bringing your ideas to life with powerful, state-of-the-art tools.",
+content: [
+{
+title: "Design a 2D classic shirt",
+description: "Use an image editor of your choice and create your first basic 2D cosmetic.",
+video: "https://www.youtube-nocookie.com/embed/r_unfGZT5Ps",
+links: [
+{ text: "Learn more", href: "../art/classic-clothing.md" }
+]
+},
+{
+title: "Create a 3D accessory",
+description: "Use a 3D modeling tool and Roblox Studio to make a 3D cosmetic.",
+video: "https://www.youtube-nocookie.com/embed/Eed29gV0hLA",
+links: [
+{ text: "Guides and tutorials", href: "../art/accessories.md" },
+{ text: "Get Blender", href: "https://www.blender.org" },
+{ text: "Get Studio", href: "../studio/setup" }
+]
+},
+{
+title: "Make 3D layered clothing",
+description: "Use your 3D modeling skills and Roblox Studio to create clothing that stretches, fits, and layers.",
+video:"https://www.youtube-nocookie.com/embed/C-DwGRBHvmE",
+links: [
+{ text: "Guides and tutorials", href: "../art/accessories/layered-clothing.md" },
+{ text: "Get Blender", href: "https://www.blender.org" },
+{ text: "Get Studio", href: "../studio/setup" }
+]
+},
+]
+},
+
+{
+title: "What's new?",
+description: "Check out our latest videos and guides designed to help you create faster — whether you're a complete newbie or a seasoned industry pro!",
+buttons: [
+{ text: "See all videos", href: "https://www.youtube.com/playlist?list=PLMneGxZNs3ZYZ5cJ1IPeaO1Eyd4ejY1Lz" },
+],
+content: [
+{
+title: "Make your own shoes",
+description: "Create your first shoes — an advanced type of layered clothing.",
+video: "https://www.youtube-nocookie.com/embed/NHgYM78afqc",
+},
+{
+title: "Convert body cages and clothing cages",
+description: "Convert a body cage to a clothing cage and back again! Useful for advanced clothing or body creators.",
+video: "https://www.youtube-nocookie.com/embed/vATGE-2xhcw",
+},
+{
+title: "Intro to UGC",
+description: "Join @ducksareyellow as he asks seasoned professionals how to start creating UGC in a 3-part series",
+video: "https://www.youtube-nocookie.com/embed/Zb1BJow0NV4",
+links: [
+{ text: "Part 2 - Modeling", href: "https://www.youtube-nocookie.com/embed/Zb1BJow0NV4"},
+{ text: "Part 3 - Texturing", href: "https://www.youtube-nocookie.com/embed/MlyJD_ix9CE"}]
+}
+]
+},
+
+{
+title: "All the tools you need, for free",
+description: "Roblox offers the tools and infrastructure to upload your creations to a global marketplace, handling everything from moderation and localization to payment processing.",
+content: [
+{
+title: "Blender",
+description: "Check out in-depth guides and tutorials for creating 3D items in Blender, a free and open-sourced modeling program.",
+links: [
+{ text: "Get Blender", href: "https://www.blender.org" },
+{ text: "Learn more", href: "../art/blender" }
+]
+},
+{
+title: "Roblox Studio",
+description: "Use native tools in Roblox Studio to quickly convert your custom models into Roblox-ready accessories. Studio is your portal to getting your 3D assets into the Roblox ecosystem.",
+links: [
+{ text: "Get Studio", href: "../studio/setup" },
+{ text: "Accessory Fitting Tool", href: "../art/accessories/accessory-fitting-tool" },
+{ text: "Avatar Setup", href: "./avatar-setup" }
+]
+},
+{
+title: "Creator Hub",
+description: "Manage all your uploaded avatar items, set them on sale, review policy, and view analytics in the Creator Hub.",
+links: [
+{ text: "Go to Creator Hub", href: "https://create.roblox.com/" },
+{ text: "Upload and publishing guides", href: "../marketplace/publish-to-marketplace" }
+]
+},
+{
+title: "Marketplace and beyond",
+description: "Create your own home store and a higher share of your commission! Or build experiences that allow others to customize and create avatar items in-game.",
+links: [
+{ text: "Marketplace policy", href: "../marketplace/marketplace-policy" },
+{ text: "Create your own home store", href: "../marketplace/homestore" },
+{ text: "In-experience creation", href: "../avatar/in-experience-creation" }
+]
+}
+]
+},
+
+{
+title: "Dive deeper into avatars",
+description: "Learn how to create advanced avatar items, explore how the Marketplace operates, and see how Roblox's community policies protect both creators and players.",
+buttons: [
+],
+content: [
+{
+title: "Fees, commissions, and more",
+description: "Understand the fees and commission structure and how to optimize your avatar item revenue.",
+image: "../assets/accessories/Layered-Clothing-Banner.jpg",
+links: [
+{ text: "Fees and Commissions", href: "../marketplace/marketplace-fees-and-commissions" },
+{ text: "Upload and publish guides", href: "../marketplace/publish-to-marketplace" },
+{ text: "Marketplace FAQs", href: "../marketplace/frequently-asked-questions" }
+]
+},
+{
+title: "Marketplace and community policies",
+description: "Learn about the policies that help protect you, your creations, and the community.",
+image: "../../assets/landing/device-family.png",
+links: [
+{ text: "Marketplace Policy", href: "../marketplace/marketplace-policy" },
+{ text: "Intellectual Property", href: "../marketplace/intellectual-property" },
+{ text: "Moderation", href: "../marketplace/moderation" }
+]
+},
+{
+title: "Create more complex items",
+description: "Create even more advanced avatar items, like advanced clothing, bodies, heads, and more.",
+video: "https://www.youtube-nocookie.com/embed/NHgYM78afqc",
+links: [
+{ text: "Clothing guides", href: "../art/accessories/layered-clothing" },
+{ text: "Character bodies", href: "../art/characters/"},
+{ text: "Animateable heads", href: "../art/characters/facial-animation" }
+]
+},
+]
+},
+{
+content: [
+{
+title: "Build your own homestore",
+description: "Create and design your own store and benefit from a higher commission split from sales.",
+video: "https://www.youtube-nocookie.com/embed/6MPWLQmIKLk",
+links: [{ text: "Learn more", href: "../marketplace/homestore" }]
+},
+{
+title: "In-experience creation",
+description: "Create an experience where players can build their own avatar items. Recommended for advanced developers.",
+image: "../../assets/landing/scripting.png",
+links: [
+{ text: "Learn more", href: "./avatar/in-experience-creation" }
+]
+},
+{
+
+}
+]
+}
+];
+
+<Grid container direction="row" spacing={4} style={{ marginBottom: 48 }}>
+<Grid item xs={12} md={5}>
+
+<p>Every Roblox user is represented by an **avatar** — a fully customizable character with cosmetics and accessories that persist across experiences.</p>
+<p>Create avatar bodies, items, and clothing using our robust tools and upload them to the [Marketplace](https://www.roblox.com/catalog) where millions of users browse and shop every day.</p>
+<Button
+style={{ marginTop: 8, marginRight: 24 }}
+variant="contained"
+color="secondary"
+size="large"
+href="https://www.youtube.com/watch?v=vIiVbFiDbBE" >
+Watch overview
+</Button>
+<Button
+style={{ marginTop: 8, marginRight: 24 }}
+variant="contained"
+color="secondary"
+size="large"
+href="https://www.roblox.com/catalog" >
+Visit Marketplace
+</Button>
+</Grid>
+<Grid item xs={12} md={7}>
+<img
+style={{ width: '100%', aspectRatio: 16/9, height: 'auto', objectFit: 'cover' }}
+src="../assets/avatar/AvatarSample.png"
+alt=""
+/>
+</Grid>
+</Grid>
+
+{sections.map((section, index) => (
+<Grid style={{ marginBottom: 48 }} item xs={12} key={index}>
+{section.title && (
+<Typography variant='h1'>{section.title}</Typography>
+)}
+
+<div style={{ marginTop: 16, marginBottom: 48 }}>
+{section.description && (
+<p>{section.description}</p>
+)}
+{section.buttons && section.buttons.map((button, btnIndex) => (
+<Button
+key={btnIndex}
+style={{ marginTop: 8, marginRight: 24 }}
+variant="contained"
+color="secondary"
+size="large"
+href={button.href} >
+{button.text}
+</Button>
+))}
 </div>
-<Typography variant="body1">
-A high-level overview of avatar items on Roblox.
-</Typography>
+{section.content && (
+<Grid container spacing={4}>
+{section.content.map((content, contentIndex) => {
+const mdValue = 12 / section.content.length;
+return (
+<Grid item xs={12} sm={6} md={mdValue} key={contentIndex}>
+<div style={{ marginBottom: 48 }}>
 
-</Grid>
-</Grid>
+{content.image && (
+<img
+style={{ width: '100%', aspectRatio: 16/9, height: 'auto', objectFit: 'cover' }}
+src={content.image}
+alt=""
+/>
+)}
 
-<Grid item xs={6} style={{ padding: 16 }}>
-<Grid item container wrap="nowrap" direction="column" style={{ gap: 8, flex: 1 }}>
+{content.video && (
 
-<div
-className="container"
-style={{ position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12 }} >
 <iframe
-src="https://www.youtube-nocookie.com/embed/Eed29gV0hLA"
+style={{ width: '100%', aspectRatio: 16/9, height: 'auto', marginBottom: '16px' }}
+src={content.video}
 title="YouTube video player"
-frameBorder="0"
+frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowFullScreen
-style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} ></iframe>
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen ></iframe>
+)}
+
+<h3>{content.title}</h3>
+<p>{content.description}</p>
+{content.links && content.links.map((link, linkIndex) => (
+<a href={link.href} key={linkIndex}>
+<Typography variant='buttonLarge'>{link.text}</Typography><br />
+</a>
+))}
+{content.buttons && content.buttons.map((button, btnIndex) => (
+<Button
+key={btnIndex}
+style={{ marginTop: 16, marginRight: 24 }}
+variant="contained"
+color="secondary"
+size="large"
+href={button.href} >
+{button.text}
+</Button>
+))}
 </div>
-<Typography variant="body1">
-Create and sell your first 3D avatar item.
-</Typography>
 </Grid>
+);
+})}
 </Grid>
+)}
 </Grid>
-
-Every Roblox user is represented by a customizable character called an **avatar**. Avatars are character models with many specialized features that allow users to interact with [experiences](../platform.md) and customize themselves with a wide range of clothing and accessories from the [Marketplace](https://www.roblox.com/catalog).
-
-Whether you're creating and selling a basic accessory, clothes, or an avatar character body, your general workflow involves the following:
-<br />
-<img src="../assets/accessories/Avatar-Item-Creation.png" alt="Modeling is performed with third party software, importing and uploading performed with Studio, and publishing and Marketplace management performed with Creator Hub" width="100%" />
-
-1.  **Modeling and creation** &mdash; Create the asset in a third-party software such as Blender or Maya.
-
-    - Roblox supports many types of third-party models, but assets intended for the Marketplace require their own specifications for [rigid accessories](../art/accessories/specifications.md), [clothing accessories](../art/accessories/clothing-specifications.md), and [bodies](../art/characters/specifications.md).
-
-2.  **Importing and uploading** &mdash; Add your creation to the Roblox servers through Studio.
-
-    - Initial validation and moderation of the asset occurs during this stage. See each item category section for specific instructions.
-
-3.  **Publishing and selling** &mdash; Manage your asset on your [Creator Dashboard](https://create.roblox.com/dashboard/creations) where you can set your item price and other Marketplace configurations before you enable the item for sale.
-
-    - See [Marketplace](../marketplace/index.md) for an overview of this process.
-
-## Creating
-
-Create avatar items for Roblox, ranging from clothing, accessories, bodies, and heads. Learn about the various components that power the feature-rich technology unique to Roblox avatars and cosmetics.
-
-<GridContainer numColumns='2'>
-
-<Card style={{height: '100%'}}>
-<CardMedia component='img' height='165' image='../../assets/art/avatar/Rigid-Thumbnail.png' alt="rigid accessory thumbnail example"/>
-<CardContent style={{marginBottom:"66px"}}>
-<Typography variant="h5" component="div">Rigid accessories</Typography>
-<br />
-Understand the various components that make up rigid accessories, the most basic form of 3D avatar cosmetics.
-</CardContent>
-<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
-<Button href="../art/accessories/index.md" size='large' color='primary' variant='text'>Learn more</Button>
-</CardActions>
-</Card>
-
-<Card style={{height: '100%'}}>
-<CardMedia component='img' height='165' image='../../assets/art/avatar/Clothing-Thumbnail.png' alt="clothing thumbnail example"/>
-<CardContent style={{marginBottom:"66px"}}>
-<Typography variant="h5" component="div">Layered clothing</Typography>
-<br />
-Understand the advanced components of layered clothing, accessories that stretch and fit over a target.
-</CardContent>
-<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
-<Button href="../art/accessories/layered-clothing.md" size='large' color='primary' variant='text'>Learn more</Button>
-</CardActions>
-</Card>
-
-</GridContainer> <br />
-
-<GridContainer numColumns='2'>
-<Card style={{height: '100%'}}>
-  <CardMedia component='img' height='165' image='../../assets/art/avatar/Bodies-Thumbnail.png' alt="bodies thumbnail example"/>
-  <CardContent style={{marginBottom:"66px"}}>
-    <Typography variant="h5" component="div">Characters</Typography>
-    <br />
-    Learn the various components that make up the unique Roblox avatar, including using mesh geometry, rigs, facial animation, and other important components.
-  </CardContent>
-  <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
-    <Button href="../art/characters/index.md" size='large' color='primary' variant='text'>Learn more</Button>
-  </CardActions>
-</Card>
-
-<Card style={{height: '100%'}}>
-<CardMedia component='img' height='165' image='../../assets/art/avatar/Tutorial-Thumbnail.png' alt="tutorial thumbnail example"/>
-<CardContent style={{marginBottom:"66px"}}>
-<Typography variant="h5" component="div">Tutorials</Typography>
-<br />
-Follow step-by-step guides to create accessories, clothing, and characters to start creating your own unique 3D avatar asset.
-</CardContent>
-<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
-<Button href="../avatar/tutorials.md" size='large' color='primary' variant='text'>Learn more</Button>
-</CardActions>
-</Card>
-
-</GridContainer> <br />
-
-<Alert severity='info'>
-If you're looking to integrate avatars, accessories, and clothes into experiences, see the [Characters](../characters/index.md) section in the Engine documentation.
-</Alert>
-
-## Selling
-
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/swQW2VS9ZMA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br /><br />
-After creating your items, you can begin the process of selling your assets on the Marketplace. Learn more about the policies, processes, and payment structures that enable you to manage and sell your creations safely and efficiently.
-
-<GridContainer numColumns='2'>
-<Card style={{height: '100%'}}>
-  <CardContent style={{marginBottom:"66px"}}>
-    <Typography variant="h5" component="div">Marketplace policy</Typography>
-    <br />
-    Learn about the user requirements for selling, as well as the technical and community-related specifications required for the Marketplace.
-  </CardContent>
-  <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
-    <Button href="../marketplace/marketplace-policy.md" size='large' color='primary' variant='text'>Learn more</Button>
-  </CardActions>
-</Card>
-
-<Card style={{height: '100%'}}>
-<CardContent style={{marginBottom:"66px"}}>
-<Typography variant="h5" component="div">Intellectual property</Typography>
-<br />
-Understand how IP works on the Roblox ecosystem to protect yourself and the community.
-</CardContent>
-<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
-<Button href="../marketplace/intellectual-property.md" size='large' color='primary' variant='text'>Learn more</Button>
-</CardActions>
-</Card>
-</GridContainer> <br />
-
-<GridContainer numColumns='2'>
-<Card style={{height: '100%'}}>
-  <CardContent style={{marginBottom:"66px"}}>
-    <Typography variant="h5" component="div">Publishing steps</Typography>
-    <br />
-    Upload your catalog-ready asset to the Marketplace and set the item on sale using various creator controls.
-  </CardContent>
-  <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
-    <Button href="../marketplace/publish-to-marketplace.md" size='large' color='primary' variant='text'>Learn more</Button>
-  </CardActions>
-</Card>
-<Card style={{height: '100%'}}>
-  <CardContent style={{marginBottom:"66px"}}>
-    <Typography variant="h5" component="div">Fees and commissions</Typography>
-    <br />
-    Understand how fees, payments, commissions, and other monetary and purchasing details work for your various asset types.
-  </CardContent>
-  <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
-    <Button href="../marketplace/marketplace-fees-and-commissions.md" size='large' color='primary' variant='text'>Learn more</Button>
-  </CardActions>
-</Card>
-</GridContainer>
-
-## Resources and tools
-
-Roblox provides additional resources and tools to enable creation. Check out the various Studio and third-party tools designed to expedite and ease the process of creation.
-
-<GridContainer numColumns='2'>
-<Card style={{height: '100%'}}>
-  <CardContent style={{marginBottom:"66px"}}>
-    <Typography variant="h5" component="div">Downloadable resources</Typography>
-    <br />
-    View various downloadable resources ranging from sample model files, template files, project boilerplates, and more.
-  </CardContent>
-  <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
-    <Button href="../avatar/resources.md" size='large' color='primary' variant='text'>Learn More</Button>
-  </CardActions>
-</Card>
-<Card style={{height: '100%'}}>
-  <CardContent style={{marginBottom:"66px"}}>
-    <Typography variant="h5" component="div">Studio tools</Typography>
-    <br />
-    Studio provides several tools designed to make the creation process more straightforward and efficient.
-  </CardContent>
-  <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
-    <Button href="../avatar/resources.md#add-ons-and-tools" size='large' color='primary' variant='text'>Learn more</Button>
-  </CardActions>
-</Card>
-</GridContainer> <br />
-
-<GridContainer numColumns='2'>
-<Card style={{height: '100%'}}>
-  <CardContent style={{marginBottom:"66px"}}>
-    <Typography variant="h5" component="div">Third-party add-ons</Typography>
-    <br />
-    Third-party add-ons and tools are available to help expedite the creation process in your third-party applications.
-  </CardContent>
-  <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
-    <Button href="../avatar/resources.md#add-ons-and-tools" size='large' color='primary' variant='text'>Learn more</Button>
-  </CardActions>
-</Card>
-<Card />
-</GridContainer>
+))}

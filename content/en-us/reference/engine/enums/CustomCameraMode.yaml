@@ -1,9 +1,9 @@
 name: CustomCameraMode
 type: enum
 summary: |
-  Changes the player's camera mode in Roblox's Game settings.
+  Changes the player's camera mode.
 description: |
-  Changes the player's camera mode in Roblox's Game settings.
+  Changes the player's camera mode.
 code_samples:
 tags: []
 deprecation_message: ''

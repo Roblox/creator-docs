@@ -55,7 +55,7 @@ To get the packages from your inventory into your experience:
 5. Click the **Feature Package Core** tile, then the **Bundle Feature Package** tile. Both package folders display in the **Explorer** window.
 6. Drag the package folders into **ReplicatedStorage**.
 7. Allow data store calls to track player purchases with the packages.
-   1. In the toolbar's **Home** tab, select **Game Settings**.
+   1. Open Studio's **File**&nbsp;⟩ **Game Settings** window.
    1. Navigate to the **Security** tab, then enable **Enable Studio Access to API Services**.
 
 ## Define currencies
@@ -396,7 +396,7 @@ Constants for the **Core** feature package live in two spots:
 
 The main things you might want to adjust to meet the design requirements of your experience:
 
-- Sound assetIDs
+- Sound asset IDs
 - Purchase effect duration and particle colors
 - Heads up display collapsibility
 

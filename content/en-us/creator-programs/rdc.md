@@ -3,12 +3,14 @@ title: Roblox Developers Conference
 description: RDC is an invite-only, hybrid (in-person and online) event that brings together Roblox developers, brands, and creators worldwide.
 ---
 
-Roblox Developers Conference (RDC) is coming back as a virtual and in-person event to San Jose on September 5-6, 2025! RDC is an invite-only event that brings together Roblox developers, brands, and creators worldwide. There will be networking opportunities, in-depth breakout sessions, product demonstrations, and office hours—all designed to empower your success and showcase the future of Roblox.
+Roblox Developers Conference (RDC) is coming back as a virtual and in-person event to San Jose on September 5-6, 2025!
+
+RDC is an invite-only event that brings together Roblox developers, brands, and creators worldwide. There will be networking opportunities, in-depth breakout sessions, product demonstrations, and office hours—all designed to empower your success and showcase the future of Roblox.
 
 <figure>
 <Chip
-    color="error"
-    label="Status: Closed"
+    color="success"
+    label="Status: Open"
     size="medium"
     variant="filled"/>
 </figure><br />

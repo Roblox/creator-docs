@@ -188,8 +188,8 @@ To remove source content through the localization table on Creator Dashboard:
 To remove source content through a `.csv` upload:
 
 1. In Roblox Studio, navigate to the toolbar's **Plugins** tab.
-2. In the Localization section, select **Tools**.
-3. In the Cloud Localization Table section, select **Download** to save the .csv.
+2. In the **Localization** section, select **Tools**.
+3. In the **Cloud Localization Table** section, select **Download** to save the `.csv`.
 4. Open the `.csv` in your preferred spreadsheet editor.
 5. Delete the entire row for any entries you would like to remove, and save.
 6. In Studio, in the **Cloud Localization Table** section, select **Update** and upload the new `.csv` file.
@@ -332,7 +332,7 @@ To translate text using the `.csv` in Creator Hub:
 To translate text using the `.csv` through Studio:
 
 1. In Studio, navigate to the toolbar's **Plugins** tab and select **Tools**.
-2. In the **Cloud Localization Table** section, select **Download** to save the .csv.
+2. In the **Cloud Localization Table** section, select **Download** to save the `.csv`.
 3. Open the `.csv` in your preferred spreadsheet editor.
 4. Add translations on the same row as the source text, under the column with the specific country code you are localizing to. **Save** when finished.
 5. In the **Cloud Localization Table** section, select **Update** and upload the updated `.csv`.

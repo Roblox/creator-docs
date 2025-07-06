@@ -18,6 +18,7 @@ The data stores dashboard is available for any experience that uses `Class.DataS
 
 ## Available charts
 
+- **Storage Usage Bytes** on amount of data store storage and limit currently available for the selected universe.
 - **Request Count by API** on API request count per minute by API method, such as `Class.DataStore:SetAsync()` or `Class.OrderedDataStore:GetSortedAsync()`.
 - **Request Count by Status** on API request count by [response status](#response-status-codes).
 - **Request by API x Status** on response statuses returned by all or a specific API method.
@@ -26,11 +27,15 @@ The data stores dashboard is available for any experience that uses `Class.DataS
 - **List Request Type Quota Usage** on number of list API method calls against future list category limits.
 - **Remove Request Type Quota Usage** on number of remove API method calls against future remove category limits.
 
-Use the selector at the top of the page to filter by standard or ordered data stores. The default view includes both.
+Use the selector at the top of the page to filter by standard or ordered data stores. The default view includes standard data store only.
+
+Use the **Explore** button next to each chart to deep dive into that metric, compare the current period against past periods, or break down that metric by its available categories.
 
 Each chart contains data for the past 30 days, and you can select to view a custom time range with the selector at the top of the page. If you select a time range earlier than 30 days, the system returns a **Request Failed** error.
 
 Data from the most recent three minutes might be incomplete, so it's normal to see a drop at the end of the charts.
+
+Storage usage and limit are displayed in bytes, where 1 kilobyte is 1024 bytes.
 
 ## Response status codes
 

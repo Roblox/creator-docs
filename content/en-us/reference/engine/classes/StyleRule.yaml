@@ -1,8 +1,12 @@
 name: StyleRule
 type: class
 memory_category: Gui
-summary: ''
-description: ''
+summary: |
+  Defines style properties which override properties on the instances affected
+  by the `Class.StyleRule.Selector|Selector` property.
+description: |
+  Defines style properties which override properties on the instances affected
+  by the `Class.StyleRule.Selector|Selector` property.
 code_samples: []
 inherits:
   - StyleBase
@@ -10,8 +14,17 @@ tags: []
 deprecation_message: ''
 properties:
   - name: StyleRule.Priority
-    summary: ''
-    description: ''
+    summary: |
+      A number that determines how properties of the `StyleRule` apply relative
+      to the same properties in other `StyleRules`. Higher priority values take
+      precedence over lower.
+    description: |
+      A number that determines how properties of the `StyleRule` apply relative
+      to the same properties in other `Class.StyleRule|StyleRules`. Higher
+      priority values take precedence over lower. For example, if a `StyleRule`
+      with a priority of `10` has an `AnchorPoint` property of <Typography
+      noWrap>`1, 0`</Typography>, it will take precedence over lower-priority
+      `Class.StyleRule|StyleRules` with `AnchorPoint` properties.
     code_samples: []
     type: int
     tags: []
@@ -27,9 +40,90 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: StyleRule.Selector
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      A string specifying which instances the `StyleRule` should affect.
+    description: |
+      A string specifying which instances the `StyleRule` should affect. This
+      can be a mix of selectors and combinators to match characteristics such as
+      the class name, instance name, and hierarchy relationships.
+
+      For example, `".Container > ImageLabel.BlueOnHover:Hover"` effectively
+      means the style rule overrides every `Class.ImageLabel` that's a child of
+      an instance tagged with `Container` (`.Container > ImageLabel`) **and** is
+      tagged with `BlueOnHover` (`.BlueOnHover`) **and** is in the
+      `Enum.GuiState.Hover` state (`:Hover`).
+
+      ##### Selectors
+
+      <table>
+      <thead>
+        <tr>
+          <th>Selector</th>
+          <th>Description</th>
+          <th>Examples</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>[class]</code></td>
+          <td>Matches instances of a <code>Class.GuiObject</code> or <code>Class.UIComponent</code> class.</td>
+          <td><code>"Frame"</code><br /><code>"ImageButton"</code><br /><code>"UICorner"</code></td>
+        </tr>
+        <tr>
+          <td><code>.[tag]</code></td>
+          <td>Matches instances <a href="../../../studio/properties.md#instance-tags">tagged</a> with a <code>Class.CollectionService</code> tag.</td>
+          <td><code>".Container"</code><br /><code>".BlueOnHover"</code></td>
+        </tr>
+        <tr>
+          <td><code>#[name]</code></td>
+          <td>Matches instances of a specific <code>Class.Instance.Name</code>.</td>
+          <td><code>"#ModalFrame"</code><br /><code>"#CloseButton"</code></td>
+        </tr>
+        <tr>
+          <td><code>:[state]</code></td>
+          <td>Matches instances currently in a <code>Enum.GuiState</code>.</td>
+          <td><code>":Hover"</code></td>
+        </tr>
+      </tbody>
+      </table>
+
+      ##### Combinators
+
+      <table>
+      <thead>
+        <tr>
+          <th>Combinator</th>
+          <th>Description</th>
+          <th>Examples</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>&gt;</code></td>
+          <td>Matches instances that are <b>direct children</b> of the previous filter matches.</td>
+          <td width="40%"><code>"Frame &gt; .Inventory"</code></td>
+        </tr>
+        <tr>
+          <td><code>&gt;&gt;</code></td>
+          <td>Matches instances that are <b>descendants</b> of the previous filter matches.</td>
+          <td><code>"ImageButton &gt;&gt; .BlueOnHover"</code></td>
+        </tr>
+        <tr>
+          <td><code>,</code></td>
+          <td>Specifies a list of multiple independent selectors for the style rule.</td>
+          <td><code>"Frame.TagA, TextLabel.TagA"</code></td>
+        </tr>
+        <tr>
+          <td><code>::</code></td>
+          <td>Creates a phantom <code>Class.UIComponent</code> instance under the previous filter matches and applies the style rule's properties to it.</td>
+          <td><code>"Frame::UICorner"</code></td>
+        </tr>
+      </tbody>
+      </table>
+    code_samples:
+      - UI-Styling-Class
+      - UI-Styling-Tag
+      - UI-Styling-Modifier
     type: string
     tags: []
     deprecation_message: ''
@@ -44,8 +138,13 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: StyleRule.SelectorError
-    summary: ''
-    description: ''
+    summary: |
+      A read-only string that displays errors from the
+      `Class.StyleRule.Selector|Selector` property.
+    description: |
+      A read-only string that displays errors from the
+      `Class.StyleRule.Selector|Selector` property such as syntax errors,
+      unsupported class types, etc.
     code_samples: []
     type: string
     tags:
@@ -64,13 +163,37 @@ properties:
     writeCapabilities: []
 methods:
   - name: StyleRule:GetProperties
-    summary: ''
-    description: ''
+    summary: |
+      Returns a dictionary of key-value pairs describing the properties of the
+      `StyleRule`.
+    description: |
+      Returns a dictionary of key-value pairs describing the properties of the
+      `StyleRule`, for example:
+
+      ```lua
+      local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+      local coreSheet = ReplicatedStorage:FindFirstChild("CoreSheet")
+
+      -- Get reference to style rule
+      local frameRule = coreSheet.Frame
+
+      local props = frameRule:GetProperties()
+      print(props)
+      --[[
+      {
+      	["AnchorPoint"] = 0.5, 0,
+      	["BackgroundColor3"] = 1, 0, 0.25
+      }
+      ]]
+      ```
     code_samples: []
     parameters: []
     returns:
       - type: Dictionary
-        summary: ''
+        summary: |
+          Dictionary of key-value pairs describing the properties of the
+          `StyleRule`.
     tags: []
     deprecation_message: ''
     security: None
@@ -78,17 +201,34 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: StyleRule:GetProperty
-    summary: ''
-    description: ''
+    summary: |
+      Returns the value of a specific property in the `StyleRule`.
+    description: |
+      Returns the value of a specific property in the `StyleRule`.
+
+      ```lua
+      local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+      local coreSheet = ReplicatedStorage:FindFirstChild("CoreSheet")
+
+      -- Get reference to style rule
+      local frameRule = coreSheet.Frame
+
+      local prop = frameRule:GetProperty("AnchorPoint")
+      print(prop) --> 0.5, 0
+      ```
     code_samples: []
     parameters:
       - name: name
         type: string
         default: ''
-        summary: ''
+        summary: |
+          String name of the property, for example `"AnchorPoint"` or
+          `"BackgroundColor3"`.
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          Value of the property.
     tags: []
     deprecation_message: ''
     security: None
@@ -96,14 +236,70 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: StyleRule:SetProperties
-    summary: ''
-    description: ''
+    summary: |
+      Lets you declare and set multiple properties of the `StyleRule` at once.
+    description: |
+      Similar to `Class.StyleRule:SetProperty()|SetProperty()` but lets you
+      declare and set multiple properties of the `StyleRule` at once. Each
+      assignment should be a valid property of the affected `Class.GuiObject` or
+      `Class.UIComponent` (`Class.UICorner`, `Class.UIGradient`, etc.), and each
+      assigned value should match its property's value type, for example
+      `Datatype.Vector2` for `Class.GuiObject.AnchorPoint|AnchorPoint` or
+      `Datatype.Color3` for `Class.GuiObject.BackgroundColor3|BackgroundColor3`.
+
+      Attempts to assign invalid property names such as `"AnchorPt"` or
+      `"BkColor"` will silently fail. Type mismatches such as `Datatype.CFrame`
+      for `Class.GuiObject.AnchorPoint|AnchorPoint` or `Datatype.UDim2` for
+      `Class.GuiObject.BackgroundColor3|BackgroundColor3` will also fail and an
+      error will appear in the [Output](../../../studio/output.md) window.
+
+      To set/update just one property of a `StyleRule`, see
+      `Class.StyleRule:SetProperty()|SetProperty()`.
+
+      ```lua
+      local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+      local coreSheet = ReplicatedStorage:FindFirstChild("CoreSheet")
+
+      -- Get reference to style rule
+      local frameRule = coreSheet.Frame
+
+      -- Set rule properties
+      frameRule:SetProperties({
+      	["AnchorPoint"] = Vector2.new(0.5, 0),
+      	["BackgroundColor3"] = Color3.new(1, 0, 0.25)
+      })
+      ```
+
+      Note that you can assign **tokens** as property values through the `$`
+      prefix:
+
+      ```lua
+      local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+      local coreSheet = ReplicatedStorage:FindFirstChild("CoreSheet")
+      local tokensSheet = ReplicatedStorage:FindFirstChild("Tokens")
+
+      -- Set tokens (attributes) on tokens sheet
+      tokensSheet:SetAttribute("TopCenterAnchor", Vector2.new(0.5, 0))
+      tokensSheet:SetAttribute("MainBackgroundColor", Color3.new(0.2, 0.2, 0.3))
+
+      -- Get reference to style rule
+      local frameRule = coreSheet.Frame
+
+      -- Set rule properties
+      frameRule:SetProperties({
+      	["AnchorPoint"] = "$TopCenterAnchor",
+      	["BackgroundColor3"] = "$MainBackgroundColor"
+      })
+      ```
     code_samples: []
     parameters:
       - name: styleProperties
         type: Dictionary
         default: ''
-        summary: ''
+        summary: |
+          Dictionary of key-value pairs defining the properties to set.
     returns:
       - type: ()
         summary: ''
@@ -115,17 +311,65 @@ methods:
     writeCapabilities: []
   - name: StyleRule:SetProperty
     summary: ''
-    description: ''
+    description: |
+      Sets a new property (or modifies an existing property) for the
+      `StyleRule`. The `name` parameter should be a valid property of the
+      affected `Class.GuiObject` or `Class.UIComponent` (`Class.UICorner`,
+      `Class.UIGradient`, etc.), and the assigned value should match the
+      property's value type, for example `Datatype.Vector2` for
+      `Class.GuiObject.AnchorPoint|AnchorPoint` or `Datatype.Color3` for
+      `Class.GuiObject.BackgroundColor3|BackgroundColor3`.
+
+      Attempts to assign invalid property names such as `"AnchorPt"` or
+      `"BkColor"` will silently fail. Type mismatches such as `Datatype.CFrame`
+      for `Class.GuiObject.AnchorPoint|AnchorPoint` or `Datatype.UDim2` for
+      `Class.GuiObject.BackgroundColor3|BackgroundColor3` will also fail and an
+      error will appear in the [Output](../../../studio/output.md) window.
+
+      To set multiple properties for a `StyleRule` at once, see
+      `Class.StyleRule:SetProperties()|SetProperties()`.
+
+      ```lua
+      local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+      local coreSheet = ReplicatedStorage:FindFirstChild("CoreSheet")
+
+      -- Get reference to style rule
+      local frameRule = coreSheet.Frame
+
+      -- Set rule property
+      frameRule:SetProperty("BackgroundColor3", Color3.new(1, 0, 0.25))
+      ```
+
+      Note that you can assign **tokens** as property values through the `$`
+      prefix:
+
+      ```lua
+      local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+      local coreSheet = ReplicatedStorage:FindFirstChild("CoreSheet")
+      local tokensSheet = ReplicatedStorage:FindFirstChild("Tokens")
+
+      -- Set new token (attribute) on tokens sheet
+      tokensSheet:SetAttribute("MainBackgroundColor", Color3.new(0.2, 0.2, 0.3))
+
+      -- Get reference to style rule
+      local frameRule = coreSheet.Frame
+      -- Set rule property to use the token as its value
+      frameRule:SetProperty("BackgroundColor3, "$MainBackgroundColor")
+      ```
     code_samples: []
     parameters:
       - name: name
         type: string
         default: ''
-        summary: ''
+        summary: |
+          Property name to set, for example `"BackgroundColor3"`.
       - name: value
         type: Variant
         default: ''
-        summary: ''
+        summary: |
+          Property value to set, for example `Datatype.Color3.new(1, 0, 0.25)`.
     returns:
       - type: ()
         summary: ''

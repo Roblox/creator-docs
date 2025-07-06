@@ -34,7 +34,7 @@ To create a particle emitter on a part or attachment:
 By experimenting with the following properties, you can customize a particle's visual appearance to make unique gameplay elements like bursting volcanos, magical dust, and dust motes.
 
 <Alert severity="info">
-The visual quality of your particles can change depending on the graphic settings on the player's device. To review your particles across quality levels, it's recommended to open **Studio Settings**, search for **Editor Quality Level**, and set it to the both the lowest and highest level after you finish customizing your particles.
+The visual quality of your particles can change depending on the graphic settings on the player's device. To review your particles across quality levels, it's recommended to open [Studio Settings](../studio/setup.md#customization), search for **Editor Quality Level**, and set it to the both the lowest and highest level after you finish customizing your particles.
 </Alert>
 
 ### Texture

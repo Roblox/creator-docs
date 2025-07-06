@@ -29,8 +29,12 @@ Dynamically scripted prices update through `Class.MarketplaceService|Marketplace
 
 The dynamic price check tool updates all products for sale with a fake Robux price or a fake economic location to identify which of your product prices are hard-coded and which are scripted with `Class.MarketplaceService|MarketplaceService` inside your experience. If a product price updates to new price, the price is scripted. If it remains the same, the price is hard-coded.
 
+<Alert severity="info">
+  The `InfoType` parameter in `GetProductInfo()` fetches an asset by default. To fetch a developer product, use `Enum.InfoType.Product`. To fetch a pass, use `Enum.InfoType.GamePasses`.
+</Alert>
+
 ```lua title="Client Script for a Dynamically Scripted Product Price"
-local productInfo = MarketplaceService:GetProductInfo(PRODUCT_ID)
+local productInfo = MarketplaceService:GetProductInfo(PRODUCT_ID, Enum.InfoType.Product)
 local price = productInfo.PriceInRobux
 ```
 

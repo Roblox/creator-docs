@@ -1,9 +1,9 @@
 ---
-title: Work with secrets
+title: Secrets stores
 description: Securely manage API keys, passwords, and assess tokens for third-party services with your experience's secrets store.
 ---
 
-Roblox offers a secrets store for each experience. Secrets are sensitive information like API keys, passwords, and access tokens that you use to authenticate with external services. For example, if you want to connect to a third-party analytics or music service, you likely need to use an API key to authenticate with it.
+Roblox offers a **secrets** store for each experience. Secrets are sensitive information like API keys, passwords, and access tokens that you use to authenticate with external services. For example, if you want to connect to a third-party analytics or music service, you likely need to use an API key to authenticate with it.
 
 You could copy and paste the API key into a script or add it to a data store, but those approaches carry unnecessary security risks. The better solution is to use the secrets store and access the key using a small set of secure methods.
 
@@ -13,7 +13,7 @@ To view, create, or edit secrets, you must be the experience owner or group owne
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 
-1. Select your experience, and then choose **Secrets** > **Create Secret**.
+1. Select your experience, and then choose **Secrets** ⟩ **Create Secret**.
 
 1. Provide a name, the secret, and the applicable domain.
 
@@ -23,11 +23,11 @@ To view, create, or edit secrets, you must be the experience owner or group owne
 
 {/* Note the ability to manage these using Open Cloud when that arrives. */}
 
-### Local secrets
+## Local secrets
 
 For security reasons, the secrets store for each experience is only available to live game servers or [Team Test](../studio/testing-modes.md#collaborative-testing) environments. If you try to access a secret from a local test server, such as after pressing the **Play** button in Studio, you receive a `Can't find secret with given key` error.
 
-To specify secrets for local testing, add valid JSON objects with base64-encoded secrets in [Game Settings](../studio/game-settings.md#security). The JSON can contain spaces, but must be on a single line.
+To specify secrets for local testing, add valid JSON objects with base64-encoded secrets in Studio's **File**&nbsp;⟩ **Game Settings** window. The JSON can contain spaces, but must be on a single line.
 
 <img alt="Local secret in the Game Settings window." src="../assets/data/secrets-store/local-secrets.png" width="700" />
 
@@ -45,7 +45,7 @@ To add multiple secrets, separate the values with commas:
 
 ## Use secrets
 
-Before using secrets within your experience, you must enable **Allow HTTP Requests** in the [Game Settings](../studio/game-settings.md#security) **Security** tab. Then call `Class.HttpService:GetSecret()` within a script:
+Before using secrets within your experience, you must enable **Allow HTTP Requests** in the **Security** section of Studio's **File**&nbsp;⟩ **Game Settings** window. Then call `Class.HttpService:GetSecret()` within a script:
 
 ```lua
 local HttpService = game:GetService("HttpService")

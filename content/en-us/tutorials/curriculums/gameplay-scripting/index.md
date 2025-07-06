@@ -1,6 +1,6 @@
 ---
 title: Gameplay scripting curriculum
-description: //
+description: Learn how to implement and organize a complex scripting project.
 next: /tutorials/curriculums/gameplay-scripting/create-teams
 hideInPageNavigation: true
 hideBreadcrumbs: true

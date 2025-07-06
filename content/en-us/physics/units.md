@@ -5,7 +5,7 @@ description: Explore the physical units used in Roblox and how they convert to m
 
 This article outlines Roblox physical units and how they convert to metric units. Understanding units is useful whenever you work with physics, as in the following examples:
 
-- Customizing your experience's gravity, jump height/power, and walk speed in the **World** tab of [Game&nbsp;Settings](../studio/game-settings.md).
+- Customizing your experience's gravity, jump height/power, and walk speed in the **World** tab of Studio's **File**&nbsp;⟩ **Game Settings** window.
 - Tuning linear/angular velocities, forces, torques, stiffness, and damping of [mechanical constraints](../physics/mechanical-constraints.md) and [mover constraints](../physics/mover-constraints.md).
 - Adjusting the density of [custom materials](../parts/materials.md#custom-materials).
 
@@ -13,6 +13,7 @@ This article outlines Roblox physical units and how they convert to metric units
 
 <Tabs>
 <TabItem label="Primary Units">
+
 In general, you can use the conversions in the following table to relate Roblox's primary units for time, length, and mass to their metric counterparts.
 <table size="small">
 <thead>
@@ -43,6 +44,7 @@ In general, you can use the conversions in the following table to relate Roblox'
 <figcaption>\* RMU = Roblox Mass Unit</figcaption>
 </TabItem>
 <TabItem label="Derived units">
+
 The primary units are used to generate conversions for **derived** units such as water density and air pressure at standard conditions. The following physical properties are expressed in metric units and Roblox units, with primary unit equivalents provided in brackets. All conversions have been rounded to three significant figures.
 
 <table size="small">
@@ -98,7 +100,8 @@ The primary units are used to generate conversions for **derived** units such as
 </table>
 </TabItem>
 <TabItem label="Gravity">
-The following table illustrates gravitational acceleration in Roblox units and metric units for presets in the **World** tab of [Game Settings](../studio/game-settings.md).
+
+The following table illustrates gravitational acceleration in Roblox units and metric units for presets in the **World** tab of Studio's **File**&nbsp;⟩ **Game Settings** window.
 
 <table size="small">
 <thead>
@@ -128,6 +131,7 @@ The following table illustrates gravitational acceleration in Roblox units and m
 </table>
 </TabItem>
 <TabItem label="Physical limits">
+
 Roblox places limits on certain physical properties, as outlined in the following table. Details on these properties is located in the `Datatype.PhysicalProperties` documentation.
 
 <table size="small">

@@ -112,9 +112,9 @@ properties:
     writeCapabilities: []
   - name: PackageLink.PackageId
     summary: |
-      The id of the asset this package corresponds to.
+      The ID of the asset this package corresponds to.
     description: |
-      The id of the asset this package corresponds to.
+      The ID of the asset this package corresponds to.
     code_samples: []
     type: ContentId
     tags:

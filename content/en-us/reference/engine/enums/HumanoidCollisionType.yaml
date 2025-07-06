@@ -1,14 +1,9 @@
 name: HumanoidCollisionType
 type: enum
 summary: |
-  The collision `Class.Humanoid` uses. A large bounding box, or more fitted
-  collision geometry.
+  The collision `Class.Humanoid` uses.
 description: |
-  Enum to select the `Class.Humanoid.CollisionType` for non-player
-  `Class.Humanoid|Humanoids`.
-
-  For player `Class.Player.Character|Characters` the CollisionType property will
-  be decided by the Avatar Collision Option in Game Settings.
+  Enum to select the `Class.Humanoid.CollisionType`.
 code_samples:
 tags: []
 deprecation_message: ''

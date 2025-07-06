@@ -5,7 +5,7 @@ description: The Creator Store is where you can find all assets for public use i
 
 The **Creator Store** features assets made by Roblox and the Roblox community for the community to use within their experiences, including models, images, meshes, audio, fonts, videos, and plugins.
 
-You can create and distribute models, images, meshes, plugins, and audio sound effects under 10 seconds to the Creator Store for others to use as long as you are the original creator, and it adheres to Roblox's [Community Rules][CommunityRulesURL] and [Terms&nbsp;of&nbsp;Use][TermsUseURL]. If you have a [seller account](./sell-on-creator-store.md), you can also sell your plugins to other creators.
+You can create and distribute models, images, meshes, plugins, and audio sound effects under 10 seconds to the Creator Store for others to use as long as you are the original creator, and it adheres to Roblox's [Community Rules][CommunityRulesURL] and [Terms of Use][TermsUseURL]. If you have a [seller account](./sell-on-creator-store.md), you can also sell your plugins to other creators.
 
 <Alert severity="warning">
 To maintain community safety, Roblox may terminate accounts that publish spam or assets with malicious or obfuscated code.
@@ -13,7 +13,7 @@ To maintain community safety, Roblox may terminate accounts that publish spam or
 
 ## Asset moderation
 
-Roblox performs both human and automated asset moderation on a proactive and reactive basis to ensure assets adhere to the [Community Rules][CommunityRulesURL], [Terms&nbsp;of&nbsp;Use][TermsUseURL], and [Digital Millennium Copyright Act](../production/publishing/dmca-guidelines.md) (DMCA). If any asset violates these moderation policies, such as including discriminatory or adult content, the moderation team flags and removes the asset to protect users from harmful or non-compliant content. This process generally happens within a few hours after you upload the asset.
+Roblox performs both human and automated asset moderation on a proactive and reactive basis to ensure assets adhere to the [Community Rules][CommunityRulesURL], [Terms of Use][TermsUseURL], and [Digital Millennium Copyright Act](../production/publishing/dmca-guidelines.md) (DMCA). If any asset violates these moderation policies, such as including discriminatory or adult content, the moderation team flags and removes the asset to protect users from harmful or non-compliant content. This process generally happens within a few hours after you upload the asset.
 
 In addition, the Creator Store **restricts** use of the following practices to ensure asset safety:
 
@@ -102,7 +102,7 @@ For information on how to verify your account either through a government-issued
 
 ## Distribute and sell assets
 
-Distributing to the Creator Store is the only way to make your assets publicly available to all users to use within their own experiences in Studio. You can distribute any mesh or image that you have imported through the [Asset Manager](../projects/assets/manager.md), or any [model](../parts/models.md), [plugin](../studio/plugins.md), or [audio asset](../sound/assets.md) sound effect under 10 seconds that you have uploaded to your inventory.
+Distributing to the Creator Store is the only way to make your assets publicly available to all users to use within their own experiences in Studio. You can distribute any mesh or image that you have imported through the [Asset Manager](../projects/assets/manager.md), or any [model](../parts/models.md), [plugin](../studio/plugins.md), or [audio asset](../audio/assets.md) sound effect under 10 seconds that you have uploaded to your inventory.
 
 Every asset that you import must adhere to the [Community Rules][CommunityRulesURL] and [Terms&nbsp;of&nbsp;Use][TermsUseURL], and respect the [DMCA Guidelines](../production/publishing/dmca-guidelines.md) regarding copyright. In addition, there are limits on the number of assets you can distribute per 30 days, depending on whether you've [verified your account](../production/publishing/account-verification.md):
 
@@ -174,7 +174,7 @@ Assuming the asset is in your [inventory](../projects/assets/toolbox.md#inventor
 <TabItem label="Explorer">
 To upload an asset from the [Explorer](../studio/explorer.md) and distribute it in the Creator Store:
 
-1. In the [Explorer](../studio/explorer.md) hierarchy, right-click the asset you'd like to distribute and select **Save to Roblox...** from the context menu.
+1. In the **Explorer** window, right-click the asset you'd like to distribute and select **Save to Roblox...** from the contextual menu.
 2. In the **Asset Configuration** window that opens, confirm and/or update asset details such as **Title** and **Description**. Additionally:
 
    - For **Content Type**, make sure **Development Item** is selected.

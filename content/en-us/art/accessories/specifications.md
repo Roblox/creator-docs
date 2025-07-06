@@ -14,9 +14,9 @@ When ready to export, see [Export requirements](../../art/accessories/export-set
 <Alert severity = 'warning'>
 <AlertTitle>If creating other types of 3D models:</AlertTitle>
 <ul>
-<li>When creating a generic mesh, your model must meet [General Mesh Specifications](../modeling/specifications.md).</li> <br />
-<li>When creating a clothing accessory model, see [Clothing Specifications](../../art/accessories/clothing-specifications.md).</li> <br />
-<li>When creating avatar characters, see [Avatar Specifications](../../art/characters/specifications.md).</li>
+<li>For generic meshes, see [general mesh specifications](../modeling/specifications.md) and [general export settings](../modeling/export-requirements.md).</li> <br />
+<li>For layered accessories, see [layered accessory specifications](../accessories/clothing-specifications.md) and [layered export settings](../accessories/clothing-export-settings.md).</li> <br />
+<li>For avatar characters, see [avatar specifications](../characters/specifications.md) and [avatar export settings](../characters/export-settings.md).</li>
 </ul>
 </Alert>
 

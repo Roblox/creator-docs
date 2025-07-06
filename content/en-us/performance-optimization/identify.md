@@ -115,10 +115,11 @@ High memory usage is not necessarily indicative of a problem, but some indicatio
 - A significant percentage of client crashes showing in the **Performance Dashboard**, particularly a sudden uptick that coincides with an update. Some number of crashes are expected, but you should investigate if your crash rates increase above 2-3%.
 - A crash occurs while testing on a device that you want your experience to support.
 
-A significant portion of an experience's memory consumption on the client are from assets, such as images and meshes, loaded into graphics memory so they can be rendered. In the **Developer Console**, check the following labels:
+A significant portion of an experience's memory consumption on the client are from assets, such as images, meshes, and audio files, loaded into memory. In the **Developer Console**, check the following labels under **PlaceMemory**:
 
 - **GraphicsMeshParts** - Graphics memory consumed by meshes.
 - **GraphicsTexture** - Graphics memory consumed by textures.
+- **Sounds** - Memory consumed by audio files.
 
 ## Load times
 
@@ -135,4 +136,4 @@ game.Loaded:Connect(function()
 end)
 ```
 
-For additional insight, enable **Studio Settings** > **Network** > **Print Join Size Breakdown**, which prints the top 20 instances by size and a percentage breakdown by instance type when you start the experience in Studio.
+For additional insight, enable **Print Join Size Breakdown** from the **Network** tab of [Studio Settings](../studio/setup.md#customization) to print the top 20 instances by size and a percentage breakdown by instance type when you start the experience in Studio.

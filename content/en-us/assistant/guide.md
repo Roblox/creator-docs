@@ -1,6 +1,6 @@
 ---
-title: Assistant
-description: How to use Assistant to help build, grow, and monetize your creations.
+title: Assistant for Studio
+description: How to use Assistant to help build, grow, and monetize your creations in Studio.
 ---
 
 import BetaAlert from '../includes/beta-features/beta-alert.md'
@@ -14,19 +14,17 @@ import BetaAlert from '../includes/beta-features/beta-alert.md'
 - Create materials to restyle your objects
 - Generate 3D objects to populate your scene
 
-<Alert severity="info">
-[Built with Meta Llama 3](https://llama.meta.com/llama3/license/)
+<Alert severity="info" style={{marginBottom: '36px'}}>
+   Assistant is built with [Meta Llama 3](https://llama.meta.com/llama3/license/).
 </Alert>
 
 ## Studio features
 
-You can access Assistant from [Studio](../studio/index.md) and the documentation, but Studio has the larger set of features. In Studio, Assistant consists of a large language model (LLM) that generates code and a run-command module (similar to the existing [command bar](../studio/ui-overview.md#command-bar)) that runs code.
-
-As a result, Assistant can act directly on your data model, such as inserting and modifying objects, writing and inserting scripts, and automating repetitive tasks like modifying properties in bulk.
+In Studio, Assistant consists of a large language model (LLM) that generates code and a run-command module (similar to the existing [command bar](../studio/ui-overview.md#command-bar)) that runs code. As a result, Assistant can act directly on your data model, such as inserting and modifying objects, writing and inserting scripts, and automating repetitive tasks like modifying properties in bulk.
 
 For a more in-depth look at what Assistant can do and how to use it, see the [Prompt guide and examples](prompt-engineering.md) and the following Roblox Staff livestream for tips, tricks, and inspiration.
 
-<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/vMaOGgeuR4Y?si=fuX-80mMMzhQB6sn&amp;start=240" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="640" height="360" style={{marginTop: '36px'}} src="https://www.youtube-nocookie.com/embed/vMaOGgeuR4Y?si=fuX-80mMMzhQB6sn&amp;start=240" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Insert and modify scripts
 
@@ -69,15 +67,11 @@ The `/generate` command enables [mesh generation](https://corp.roblox.com/newsro
 
 <img src="../assets/assistant/Studio-Generated-Green-Dragon.jpg" width="360" alt="A generated green dragon provided by Assistant in Studio." />
 
-## Access Assistant
-
-Assistant is available in two locations: Studio and the documentation.
-
-### In Studio
+## Access Assistant from Studio
 
 To access Assistant from Studio:
 
-1. Click the **Assistant** button in the top-right corner.
+1. Click **Assistant** on the right side of the mezzanine bar.
 
    <img src="../assets/studio/general/Toolbar-Assistant.png" width="754" alt="Assistant button indicated in top-right area of toolbar." />
 
@@ -87,20 +81,3 @@ To access Assistant from Studio:
    - Click the redo icon to process a new result.
 
      <img src="../assets/assistant/Studio-General-UI.png" width="360" alt="General user interface for Assistant in Studio." />
-
-### From the documentation
-
-To access Assistant from the documentation:
-
-1. In the upper navigation bar, click the **Assistant** button.
-
-   <img src="../assets/assistant/Documentation-Button.png" width="650" />
-
-1. Select a premade question or type your own. See the [prompt guide](prompt-engineering.md) for guidance on generating improved responses.
-
-   <img src="../assets/assistant/Documentation-Prompts.png" width="790" />
-
-   - Click thumbs up or thumbs down to rate the result and improve future results.
-   - Click the redo icon to process a new result.
-
-     <img src="../assets/assistant/Documentation-Options.png" width="790" />

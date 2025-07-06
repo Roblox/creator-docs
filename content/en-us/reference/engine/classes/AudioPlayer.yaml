@@ -85,6 +85,24 @@ properties:
     capabilities:
       - Audio
     writeCapabilities: []
+  - name: AudioPlayer.IsMutedForCapture
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPlayer.IsPlaying
     summary: |
       Denotes whether this `Class.AudioPlayer` is currently playing.

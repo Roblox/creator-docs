@@ -4,18 +4,20 @@ memory_category: Instances
 summary: |
   Changes the default appearance of the experience's sky.
 description: |
-  The **Sky** object, when placed inside `Class.Lighting`, changes the default
+  The `Sky` object, when placed inside `Class.Lighting`, changes the default
   appearance of the experience's sky. This object's
   [skybox](../../../environment/skybox.md) is composed of six sides, like a
-  cube. If you customize the skybox, the sun, moon, and other celestial objects
-  remain visible unless you turn off the
-  `Class.Sky.CelestialBodiesShown|CelestialBodiesShown` property. By adjusting
-  the `Class.Sky.StarCount|StarCount` property, you can change how many stars
-  appear in the sky at night.
+  cube. Rotation of the skybox can be changed through
+  `Class.Sky.SkyboxOrientation|SkyboxOrientation`.
+
+  The skybox sun, moon, and other celestial objects remain visible unless you
+  turn off the `Class.Sky.CelestialBodiesShown|CelestialBodiesShown` property.
+  By adjusting the `Class.Sky.StarCount|StarCount` property, you can change how
+  many stars appear in the sky at night.
 
   This object can also be used as a cubemap for reflections in
   `Class.ViewportFrame|ViewportFrames`, in which case only the `Class.Sky`
-  object's six **Skybox[…]** properties are used. For details, see
+  object's six‑side `Skybox[…]` properties are used. For details, see
   [viewport frames](../../../ui/viewport-frames.md).
 code_samples: []
 inherits:
@@ -166,9 +168,40 @@ properties:
       - Environment
     writeCapabilities: []
   - name: Sky.SkyboxOrientation
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Angle of the skybox, in degrees, with rotation order of **Y**, **X**,
+      **Z**.
+    description: |
+      Changes the orientation of the skybox surfaces. This property takes a
+      `Datatype.Vector3` of degree values in the typical **XYZ** order, but
+      rotation is **applied** first around the **Y** axis, then **X**, and then
+      **Z** to allow for predictable control over complex movements.
+
+      An easy way to script an orientation animation is to spin around the **Y**
+      axis (keeping the horizon level), then tilt this axis by setting **X** and
+      **Z** to a fixed value:
+
+      ```lua
+      local Lighting = game:GetService("Lighting")
+      local RunService = game:GetService("RunService")
+
+      local sky = Lighting:FindFirstChild("Sky")
+
+      local ROTATION_SPEED = 5  -- In degrees per second
+
+      RunService.Heartbeat:Connect(function(deltaTime)
+      	sky.SkyboxOrientation = Vector3.new(
+      		30,
+      		(sky.SkyboxOrientation.Y + ROTATION_SPEED * deltaTime) % 360,
+      		0
+      	)
+      end)
+      ```
+
+      See [here](../../../environment/skybox.md#orientation) for further info
+      and limitations.
+    code_samples:
+      - Skybox-Orientation
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -228,7 +261,7 @@ properties:
       How many stars are shown in the skybox.
     description: |
       How many stars are shown in the skybox. Only works if
-      `Class.Sky.CelestialBodiesShown|CelestialBodiesShown` is true.
+      `Class.Sky.CelestialBodiesShown|CelestialBodiesShown` is `true`.
     code_samples: []
     type: int
     tags: []

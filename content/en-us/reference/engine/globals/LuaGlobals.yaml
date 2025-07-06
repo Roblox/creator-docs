@@ -346,6 +346,20 @@ functions:
       errors. In such case, `pcall()` also returns all results from the call,
       after this first result. In case of any error, `pcall()` returns false
       plus the error message.
+
+      ```lua
+      local function divideByFive(n: number): number
+      	return n / 5
+      end
+
+      local success, errorMessage = pcall(divideByFive, "notANumber")  -- Results in error...
+
+      if success then
+      	-- Handle successful response...
+      else
+      	warn("Error message:", errorMessage)
+      end
+      ```
     parameters:
       - name: func
         type: function
@@ -483,33 +497,43 @@ functions:
       If a string path is provided instead, it is first resolved to a
       `Class.ModuleScript` relative to the script that called
       `Global.LuaGlobals.require()`, mimicking the Unix-like semantics of Luau's
-      `require()` expression. For example, each pair of
-      `Global.LuaGlobals.require()` expressions in the example below contains
-      two functionally equivalent calls.
-
-      ```lua
-      -- "./" is equivalent to script.Parent
-      require(script.Parent.ModuleScript)
-      require("./ModuleScript")
-
-      -- "../" is equivalent to script.Parent.Parent
-      require(script.Parent.Parent.ModuleScript)
-      require("../ModuleScript")
-      ```
+      `require()` expression.
 
       Specifically, require-by-string's resolution semantics are as follows:
 
-      - String paths must begin with either `./` or `../`, where `./` is
-        equivalent to `script.Parent` and `../` is equivalent to
-        `script.Parent.Parent`.
-      - If the resolved path points to an `Class.Instance` that is not a
-        `Class.ModuleScript`, `Global.LuaGlobals.require()` will attempt to find
-        a `Class.ModuleScript` named `Init` or `init` parented to that
-        `Class.Instance` and use it instead, if it exists.
+      - Paths with the `./` prefix begin resolution at `script.Parent`.
+      - Paths with the `../` prefix begin resolution at `script.Parent.Parent`.
+      - Paths with the `@self/` prefix begin resolution at `script`.
+      - Each non-prefix component in a given path corresponds to a child
+        instance of the previous component. The exception to this is the `..`
+        component, which corresponds to the parent of the previous component.
       - If the desired `Class.ModuleScript` is not present at the time that
         `Global.LuaGlobals.require()` is called, the call will fail and throw an
         error. In other words, require-by-string is non-blocking: it does not
         implicitly wait for a `Class.ModuleScript` to be created.
+
+      To illustrate this, each pair of `Global.LuaGlobals.require()` expressions
+      in the example below contains two functionally equivalent calls. Redundant
+      parentheses have been added to clarify exactly how each path component
+      maps onto an instance.
+
+      ```lua
+      -- "./" prefix is equivalent to script.Parent
+      require("./MySibling")
+      require((script.Parent).(MySibling))
+
+      -- "../" prefix is equivalent to script.Parent.Parent
+      require("../SiblingOfMyParent")
+      require((script.Parent.Parent).(SiblingOfMyParent))
+
+      -- "../" can be chained to go up multiple levels
+      require("../../SiblingOfMyGrandparent")
+      require((script.Parent.Parent).(Parent).(SiblingOfMyGrandparent))
+
+      -- "@self" prefix corresponds to the script itself
+      require("@self/MyChild")
+      require((script).(MyChild))
+      ```
 
       Once the return object is created by an **initial**
       `Global.LuaGlobals.require()` call of a `Class.ModuleScript`, future

@@ -15,7 +15,7 @@ To link to social media:
 3. In the left-hand navigation, under **Engagement**, click **Social Links**.
 4. In the **Link Type** field, select the social media type you want to link to.
 5. In the **URL** and **Title** fields, enter the URL to your social media and the descriptive text you want to display to users to tell them what you want to do.
-6. <Chip label="optional" size="small" variant="outlined" color="primary" /> Click the **Add Link** button to add a second or third social link.
+6. <Chip label="OPTIONAL" size="small" variant="outlined" /> Click the **Add Link** button to add a second or third social link.
 7. When ready, click the **Save** button. The social media links immediately display on your experience's main page.
 
    <img src="../../assets/promotion/misc/Social-Links-Example.png" width="540" />

@@ -53,7 +53,7 @@ Trails require attachments to function properly. If you remove either `Class.Att
 By experimenting with the following properties, you can customize a trail's visual appearance to make unique gameplay elements like wind gusts, sword slashes, and tire marks from fast cars.
 
 <Alert severity="info">
-The visual quality of your trails can change depending on the graphics settings on the player's device. To review your trail across quality levels, it's recommended to open **Studio Settings**, search for **Editor Quality Level**, and set it to the both the lowest and highest level after you finish customizing your trail.
+The visual quality of your trails can change depending on the graphics settings on the player's device. To review your trail across quality levels, it's recommended to open [Studio Settings](../studio/setup.md#customization), search for **Editor Quality Level**, and set it to the both the lowest and highest level after you finish customizing your trail.
 </Alert>
 
 ### Texture

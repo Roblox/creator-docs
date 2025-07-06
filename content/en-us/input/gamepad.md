@@ -8,7 +8,7 @@ import BetaAlert from '../includes/beta-features/beta-alert.md'
 
 Roblox accepts input from USB gamepads such as Xbox and PlayStation controllers. Since gamepads come in different varieties, you need to follow additional setup to verify that a player's gamepad inputs are usable in your experience.
 
-To set up gamepad inputs, you can use `Class.ContextActionService` or `Class.UserInputService` to [detect connected gamepads](#detect-gamepads) for a player's device, [verify supported inputs](#verify-supported-inputs) that are compatible with Roblox, [receive input](#receive-input), and more.
+To set up gamepad inputs, you can use `Class.UserInputService` to [detect connected gamepads](#detect-gamepads) for a player's device, [verify supported inputs](#verify-supported-inputs) that are compatible with Roblox, [receive input](#receive-input), and more.
 
 When binding gamepad inputs, see [common control schemas](#common-control-schemas) to create a consistent gamepad experience for players. After inputs are set, you can enhance the player's experience by including [haptic feedback](#haptic-feedback) on supported controllers.
 
@@ -67,25 +67,7 @@ end
 
 ## Receive input
 
-`Class.ContextActionService` is useful for binding controls to both gamepads and other input sources such as [mouse and keyboard](./mouse-and-keyboard.md) inputs or [mobile](../input/mobile.md) touchscreen buttons, or for binding multiple functions to a single button input on any device. For example, the following code sample binds an `OpenSpellBook` action to the gamepad's `Enum.KeyCode.ButtonR2|ButtonR2` button and the keyboard's `Enum.KeyCode.B|B` key.
-
-```lua title="ContextActionService Bind Action"
-local ContextActionService = game:GetService("ContextActionService")
-
-local function openSpellBook(actionName, inputState, inputObject)
-	if inputState == Enum.UserInputState.Begin then
-		-- Open spell book
-	end
-end
-
-ContextActionService:BindAction("OpenSpellBook", openSpellBook, false, Enum.KeyCode.ButtonR2, Enum.KeyCode.B)
-```
-
-<Alert severity="info">
-Functions bound to `Class.ContextActionService` will fire on all input states (`Enum.UserInputState|Begin`, `Enum.UserInputState|Change`, and `Enum.UserInputState|End`), so it's recommended that you check the `Class.InputObject.UserInputState|UserInputState` as seen on line 4 to ensure the desired action only happens on the gamepad input state you intend it to.
-</Alert>
-
-Alternatively, you can use `Class.UserInputService` to bind controls directly from a gamepad. When detecting gamepad events through this service, use the `Class.UserInputService.InputBegan|InputBegan` event to detect when the button was initially pressed and `Class.UserInputService.InputEnded|InputEnded` to detect when the button is released. In the handling function, the `Class.InputObject.UserInputType` property indicates which gamepad fired the event and `Class.InputObject.KeyCode` indicates the specific button or stick that fired it.
+You can use `Class.UserInputService` to bind controls directly from a gamepad. When detecting gamepad events through this service, use the `Class.UserInputService.InputBegan|InputBegan` event to detect when the button was initially pressed and `Class.UserInputService.InputEnded|InputEnded` to detect when the button is released. In the handling function, the `Class.InputObject.UserInputType` property indicates which gamepad fired the event and `Class.InputObject.KeyCode` indicates the specific button or stick that fired it.
 
 ```lua title="UserInputService Button Press Detection"
 local UserInputService = game:GetService("UserInputService")
@@ -194,88 +176,29 @@ The following are common input binds that will help players immediately feel fam
 
 ## Haptic feedback
 
-Many gamepad controllers have motors built in to provide haptic feedback. Adding rumbles and vibrations can greatly enhance a player's experience and provide subtle feedback beyond visuals or audio. You can use the `Class.HapticService` to [verify vibration support](#vibration-support) before [turning on the motors](#activate-motors).
+Many gamepad controllers have motors built in to provide haptic feedback. Adding rumbles and vibrations can greatly enhance a player's experience and provide subtle feedback beyond visuals or audio.
 
-### Vibration support
+Roblox supports haptics for the following devices:
 
-Not all controllers have motors so it is important to check for support before attempting to use the haptic motors. To query if a given controller has vibration support, call `Class.HapticService:IsVibrationSupported()`.
+- Android and iOS phones supporting haptics including most iPhone, Pixel, and
+	Samsung Galaxy devices
+- PlayStation gamepads
+- Xbox gamepads
+- Quest Touch controller
 
-```lua title="Check Vibration Support"
-local HapticService = game:GetService("HapticService")
+Haptic feedback is managed through `Class.HapticEffect` instances which can be set to a specific `Class.HapticEffect.Type|Type` such as `Enum.HapticEffectType|GameplayCollision` or `Enum.HapticEffectType|UIClick`.
 
-local gamepad = Enum.UserInputType.Gamepad1
-local isVibrationSupported = HapticService:IsVibrationSupported(gamepad)
-```
+Once a `Class.HapticEffect` is in place, you can initiate it through the `Class.HapticEffect:Play()|Play()` method, for instance:
 
-Some controllers have multiple motors for various scales of vibration. Once you've checked if a gamepad supports vibration, you should also check if it supports the motors you intend to use through `Class.HapticService:IsMotorSupported()`.
+```lua
+local Workspace = game:GetService("Workspace")
 
-```lua title="Check Motors Supported"
-local HapticService = game:GetService("HapticService")
+local effect = Instance.new("HapticEffect")
+effect.Type = Enum.HapticEffectType.GameplayExplosion
+effect.Parent = Workspace
 
-local gamepad = Enum.UserInputType.Gamepad1
-local isVibrationSupported = HapticService:IsVibrationSupported(gamepad)
-
-if isVibrationSupported then
-	local largeMotor = HapticService:IsMotorSupported(gamepad, Enum.VibrationMotor.Large)
-	local smallMotor = HapticService:IsMotorSupported(gamepad, Enum.VibrationMotor.Small)
-	local leftTriggerMotor = HapticService:IsMotorSupported(gamepad, Enum.VibrationMotor.LeftTrigger)
-	local rightTriggerMotor = HapticService:IsMotorSupported(gamepad, Enum.VibrationMotor.RightTrigger)
-	local leftHandMotor = HapticService:IsMotorSupported(gamepad, Enum.VibrationMotor.LeftHand)
-	local rightHandMotor = HapticService:IsMotorSupported(gamepad, Enum.VibrationMotor.RightHand)
-end
-```
-
-<table size="small">
-  <thead>
-    <tr>
-      <th>Size or Location</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>`Enum.VibrationMotor.Large|Large`</td>
-      <td>Larger motor, useful for generic rumble.</td>
-    </tr>
-		<tr>
-      <td>`Enum.VibrationMotor.Small|Small`</td>
-      <td>Smaller motor, useful for more subtle rumbles like tires slipping, electric shock, etc.</td>
-    </tr>
-		<tr>
-      <td>`Enum.VibrationMotor.LeftTrigger|LeftTrigger`</td>
-      <td>Underneath the left trigger.</td>
-    </tr>
-		<tr>
-      <td>`Enum.VibrationMotor.RightTrigger|RightTrigger`</td>
-      <td>Underneath the right trigger.</td>
-    </tr>
-		<tr>
-      <td>`Enum.VibrationMotor.LeftHand|LeftHand`</td>
-      <td>On the left side of the controller.</td>
-    </tr>
-		<tr>
-      <td>`Enum.VibrationMotor.RightHand|RightHand`</td>
-      <td>On the right side of the controller.</td>
-    </tr>
-	</tbody>
-</table>
-
-### Activate motors
-
-Once you've confirmed that a player's gamepad [supports vibration](#vibration-support), you can turn on a specific motor with `Class.HapticService:SetMotor()`. This method takes the gamepad and the amplitude of the vibration as arguments. Amplitude can be any value between 0 and 1.
-
-```lua title="Activating Motor"
-local HapticService = game:GetService("HapticService")
-
-local gamepad = Enum.UserInputType.Gamepad1
-local isVibrationSupported = HapticService:IsVibrationSupported(gamepad)
-
-if isVibrationSupported then
-	local largeMotor = HapticService:IsMotorSupported(gamepad, Enum.VibrationMotor.Large)
-	if largeMotor then
-		HapticService:SetMotor(gamepad, Enum.VibrationMotor.Large, 0.5)
-	end
-end
+-- Play the haptic effect
+effect:Play()
 ```
 
 ## Controller emulation

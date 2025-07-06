@@ -58,11 +58,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 150
+            "maxInPeriod": 150
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "max_in_period": 30
+            "maxInPeriod": 30
           }
         },
         "security": [
@@ -122,11 +122,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 150
+            "maxInPeriod": 150
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "max_in_period": 30
+            "maxInPeriod": 30
           }
         },
         "security": [
@@ -212,11 +212,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 150
+            "maxInPeriod": 150
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "max_in_period": 30
+            "maxInPeriod": 30
           }
         },
         "security": [
@@ -276,11 +276,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 150
+            "maxInPeriod": 150
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "max_in_period": 30
+            "maxInPeriod": 30
           }
         },
         "security": [
@@ -371,11 +371,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 300
+            "maxInPeriod": 300
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "max_in_period": 90
+            "maxInPeriod": 90
           }
         },
         "security": [
@@ -448,11 +448,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 100
+            "maxInPeriod": 100
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "max_in_period": 90
+            "maxInPeriod": 90
           }
         },
         "security": [
@@ -525,11 +525,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 100
+            "maxInPeriod": 100
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "max_in_period": 90
+            "maxInPeriod": 90
           }
         },
         "security": [
@@ -620,11 +620,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 300
+            "maxInPeriod": 300
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "max_in_period": 90
+            "maxInPeriod": 90
           }
         },
         "security": [
@@ -703,11 +703,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 300
+            "maxInPeriod": 300
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "max_in_period": 90
+            "maxInPeriod": 90
           }
         },
         "security": [
@@ -790,11 +790,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 300
+            "maxInPeriod": 300
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "max_in_period": 90
+            "maxInPeriod": 90
           }
         },
         "security": [
@@ -863,11 +863,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 300
+            "maxInPeriod": 300
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "max_in_period": 90
+            "maxInPeriod": 90
           }
         },
         "security": [
@@ -927,11 +927,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 150
+            "maxInPeriod": 150
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "max_in_period": 30
+            "maxInPeriod": 30
           }
         },
         "security": [
@@ -991,11 +991,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 100
+            "maxInPeriod": 100
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "max_in_period": 100
+            "maxInPeriod": 100
           }
         },
         "security": [
@@ -1072,11 +1072,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 100
+            "maxInPeriod": 100
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "max_in_period": 100
+            "maxInPeriod": 100
           }
         },
         "security": [
@@ -1167,7 +1167,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 5000
+            "maxInPeriod": 5000
           }
         },
         "security": [
@@ -1273,7 +1273,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 5000
+            "maxInPeriod": 5000
           }
         },
         "security": [
@@ -1361,7 +1361,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 5000
+            "maxInPeriod": 5000
           }
         },
         "security": [
@@ -1375,7 +1375,7 @@
       "get": {
         "tags": ["Cloud"],
         "summary": "Get Data Store Entry",
-        "description": "Gets the specified entry.\n\nTo get the entry at a specific revision, add `@<revisionId>` to the end of\nthe path.\n\nFor example, to get `my-entry` at the revision ID\n`08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`, use the path\n`/v2/universes/1234/data-stores/5678/entries/my-entry@08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`.\n\nIf your entry ID contains one or more `@` characters, and you want to get\nthe latest version rather than at any specific revision, append the special\nrevision ID `@latest` to the end of the path. Otherwise, the segment of the\nentry ID after the last `@` will be interpreted as a revision ID.\n\nFor example, to get the latest revision of `my-entry`, use the path\n`/v2/universes/1234/data-stores/5678/entries/my@entry@latest`.\n\nTo get the entry that was current at a specific time, add\n`@latest:<timestamp>` to the end of the path, where `<timestamp>` is\nRFC-3339 formatted. The given timestamp must be after\nthe Unix epoch (1/1/1970) and not more than ten minutes in the future.\n\nFor example, to get the revision of `my-entry` that was current on\n12/2/2024 at 06:00 UTC, use the path\n`/v2/universes/1234/data-stores/5678/entries/my-entry@latest:2024-12-02T06:00:00Z`.",
+        "description": "Gets the specified entry.\n\nTo get the entry at a specific revision, add `@<revisionId>` to the end of\nthe path.\n\nFor example, to get `my-entry` at the revision ID\n`08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`, use the path\n`/cloud/v2/universes/1234/data-stores/5678/entries/my-entry@08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`.\n\nIf your entry ID contains one or more `@` characters, and you want to get\nthe latest version rather than at any specific revision, append the special\nrevision ID `@latest` to the end of the path. Otherwise, the segment of the\nentry ID after the last `@` will be interpreted as a revision ID.\n\nFor example, to get the latest revision of `my-entry`, use the path\n`/cloud/v2/universes/1234/data-stores/5678/entries/my@entry@latest`.\n\nTo get the entry that was current at a specific time, add\n`@latest:<timestamp>` to the end of the path, where `<timestamp>` is\nRFC-3339 formatted. The given timestamp must be after\nthe Unix epoch (1/1/1970) and not more than ten minutes in the future.\n\nFor example, to get the revision of `my-entry` that was current on\n12/2/2024 at 06:00 UTC, use the path\n`/cloud/v2/universes/1234/data-stores/5678/entries/my-entry@latest:2024-12-02T06:00:00Z`.",
         "operationId": "Cloud_GetDataStoreEntry__Using_Universes_DataStores",
         "parameters": [
           {
@@ -1436,7 +1436,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 1000
+            "maxInPeriod": 1000
           }
         },
         "security": [
@@ -1503,7 +1503,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 1000
+            "maxInPeriod": 1000
           }
         },
         "security": [
@@ -1595,7 +1595,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 1000
+            "maxInPeriod": 1000
           }
         },
         "security": [
@@ -1683,7 +1683,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 5000
+            "maxInPeriod": 5000
           }
         },
         "security": [
@@ -1697,7 +1697,7 @@
       "get": {
         "tags": ["Cloud"],
         "summary": "List Data Store Entry Revisions",
-        "description": "List revisions of the data store entry.\n\nThis method returns partial data store entries.\n\nIn particular, only the `path`, `id`, `createTime`, `revisionCreateTime`,\n`revisionId`, `etag`, and `state` fields are populated. Both the `path` and\n`id` fields will have an `@<version>` suffix.\n\nIn order to get the full entry at a revision, you can use the provided\n`path` field with the `GetDataStoreEntry` method, i.e. `GET\n/v1/universes/1234/data-stores/5678/entries/my-entry@<version>`.",
+        "description": "List revisions of the data store entry.\n\nThis method returns partial data store entries.\n\nIn particular, only the `path`, `id`, `createTime`, `revisionCreateTime`,\n`revisionId`, `etag`, and `state` fields are populated. Both the `path` and\n`id` fields will have an `@<version>` suffix.\n\nIn order to get the full entry at a revision, you can use the provided\n`path` field with the `GetDataStoreEntry` method, i.e. `GET\n/cloud/v2/universes/1234/data-stores/5678/entries/my-entry@<version>`.",
         "operationId": "Cloud_ListDataStoreEntryRevisions__Using_Universes_DataStores",
         "parameters": [
           {
@@ -1789,7 +1789,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 1000
+            "maxInPeriod": 1000
           }
         },
         "security": [
@@ -1904,7 +1904,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 5000
+            "maxInPeriod": 5000
           }
         },
         "security": [
@@ -2001,7 +2001,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 5000
+            "maxInPeriod": 5000
           }
         },
         "security": [
@@ -2015,7 +2015,7 @@
       "get": {
         "tags": ["Cloud"],
         "summary": "Get Data Store Entry",
-        "description": "Gets the specified entry.\n\nTo get the entry at a specific revision, add `@<revisionId>` to the end of\nthe path.\n\nFor example, to get `my-entry` at the revision ID\n`08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`, use the path\n`/v2/universes/1234/data-stores/5678/entries/my-entry@08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`.\n\nIf your entry ID contains one or more `@` characters, and you want to get\nthe latest version rather than at any specific revision, append the special\nrevision ID `@latest` to the end of the path. Otherwise, the segment of the\nentry ID after the last `@` will be interpreted as a revision ID.\n\nFor example, to get the latest revision of `my-entry`, use the path\n`/v2/universes/1234/data-stores/5678/entries/my@entry@latest`.\n\nTo get the entry that was current at a specific time, add\n`@latest:<timestamp>` to the end of the path, where `<timestamp>` is\nRFC-3339 formatted. The given timestamp must be after\nthe Unix epoch (1/1/1970) and not more than ten minutes in the future.\n\nFor example, to get the revision of `my-entry` that was current on\n12/2/2024 at 06:00 UTC, use the path\n`/v2/universes/1234/data-stores/5678/entries/my-entry@latest:2024-12-02T06:00:00Z`.",
+        "description": "Gets the specified entry.\n\nTo get the entry at a specific revision, add `@<revisionId>` to the end of\nthe path.\n\nFor example, to get `my-entry` at the revision ID\n`08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`, use the path\n`/cloud/v2/universes/1234/data-stores/5678/entries/my-entry@08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`.\n\nIf your entry ID contains one or more `@` characters, and you want to get\nthe latest version rather than at any specific revision, append the special\nrevision ID `@latest` to the end of the path. Otherwise, the segment of the\nentry ID after the last `@` will be interpreted as a revision ID.\n\nFor example, to get the latest revision of `my-entry`, use the path\n`/cloud/v2/universes/1234/data-stores/5678/entries/my@entry@latest`.\n\nTo get the entry that was current at a specific time, add\n`@latest:<timestamp>` to the end of the path, where `<timestamp>` is\nRFC-3339 formatted. The given timestamp must be after\nthe Unix epoch (1/1/1970) and not more than ten minutes in the future.\n\nFor example, to get the revision of `my-entry` that was current on\n12/2/2024 at 06:00 UTC, use the path\n`/cloud/v2/universes/1234/data-stores/5678/entries/my-entry@latest:2024-12-02T06:00:00Z`.",
         "operationId": "Cloud_GetDataStoreEntry__Using_Universes_DataStores_Scopes",
         "parameters": [
           {
@@ -2085,7 +2085,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 1000
+            "maxInPeriod": 1000
           }
         },
         "security": [
@@ -2161,7 +2161,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 1000
+            "maxInPeriod": 1000
           }
         },
         "security": [
@@ -2262,7 +2262,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 1000
+            "maxInPeriod": 1000
           }
         },
         "security": [
@@ -2359,7 +2359,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 5000
+            "maxInPeriod": 5000
           }
         },
         "security": [
@@ -2373,7 +2373,7 @@
       "get": {
         "tags": ["Cloud"],
         "summary": "List Data Store Entry Revisions",
-        "description": "List revisions of the data store entry.\n\nThis method returns partial data store entries.\n\nIn particular, only the `path`, `id`, `createTime`, `revisionCreateTime`,\n`revisionId`, `etag`, and `state` fields are populated. Both the `path` and\n`id` fields will have an `@<version>` suffix.\n\nIn order to get the full entry at a revision, you can use the provided\n`path` field with the `GetDataStoreEntry` method, i.e. `GET\n/v1/universes/1234/data-stores/5678/entries/my-entry@<version>`.",
+        "description": "List revisions of the data store entry.\n\nThis method returns partial data store entries.\n\nIn particular, only the `path`, `id`, `createTime`, `revisionCreateTime`,\n`revisionId`, `etag`, and `state` fields are populated. Both the `path` and\n`id` fields will have an `@<version>` suffix.\n\nIn order to get the full entry at a revision, you can use the provided\n`path` field with the `GetDataStoreEntry` method, i.e. `GET\n/cloud/v2/universes/1234/data-stores/5678/entries/my-entry@<version>`.",
         "operationId": "Cloud_ListDataStoreEntryRevisions__Using_Universes_DataStores_Scopes",
         "parameters": [
           {
@@ -2474,7 +2474,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 5000
+            "maxInPeriod": 5000
           }
         },
         "security": [
@@ -2541,7 +2541,74 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 60
+            "maxInPeriod": 60
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/cloud/v2/universes/{universe_id}/luau-execution-session-task-binary-inputs": {
+      "post": {
+        "tags": ["Cloud"],
+        "summary": "Create Luau Execution Session Task Binary Input",
+        "description": "Create a new `LuauExecutionSessionTaskBinaryInput`.",
+        "operationId": "Cloud_CreateLuauExecutionSessionTaskBinaryInput",
+        "parameters": [
+          {
+            "name": "universe_id",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LuauExecutionSessionTaskBinaryInput"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LuauExecutionSessionTaskBinaryInput"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "x-roblox-docs": {
+          "category": "Luau execution",
+          "methodProperties": {
+            "scopes": ["universe.place.luau-execution-session:write"]
+          },
+          "resource": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTaskBinaryInput",
+            "name": "LuauExecutionSessionTaskBinaryInput"
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 5
           }
         },
         "security": [
@@ -2617,7 +2684,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 1000
+            "maxInPeriod": 1000
           }
         },
         "security": [
@@ -2687,7 +2754,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 1000
+            "maxInPeriod": 1000
           }
         },
         "security": [
@@ -2781,7 +2848,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 1000
+            "maxInPeriod": 1000
           }
         },
         "security": [
@@ -2886,7 +2953,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 1000
+            "maxInPeriod": 1000
           }
         },
         "security": [
@@ -2974,7 +3041,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 1000
+            "maxInPeriod": 1000
           }
         },
         "security": [
@@ -3049,7 +3116,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 1000
+            "maxInPeriod": 1000
           }
         },
         "security": [
@@ -3116,7 +3183,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 1000
+            "maxInPeriod": 1000
           }
         },
         "security": [
@@ -3208,7 +3275,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 1000
+            "maxInPeriod": 1000
           }
         },
         "security": [
@@ -3283,7 +3350,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 1000
+            "maxInPeriod": 1000
           }
         },
         "security": [
@@ -3397,7 +3464,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 100
+            "maxInPeriod": 100
           }
         },
         "security": [
@@ -3494,7 +3561,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 500
+            "maxInPeriod": 500
           }
         },
         "security": [
@@ -3578,7 +3645,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 100
+            "maxInPeriod": 100
           }
         },
         "security": [
@@ -3654,7 +3721,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 500
+            "maxInPeriod": 500
           }
         },
         "security": [
@@ -3755,7 +3822,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 500
+            "maxInPeriod": 500
           }
         },
         "security": [
@@ -3849,7 +3916,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 500
+            "maxInPeriod": 500
           }
         },
         "security": [
@@ -3915,11 +3982,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 100
+            "maxInPeriod": 100
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "max_in_period": 100
+            "maxInPeriod": 100
           }
         },
         "security": [
@@ -4005,11 +4072,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 100
+            "maxInPeriod": 100
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "max_in_period": 100
+            "maxInPeriod": 100
           }
         },
         "security": [
@@ -4095,7 +4162,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 45
+            "maxInPeriod": 45
           }
         },
         "security": [
@@ -4195,7 +4262,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 45
+            "maxInPeriod": 45
           }
         },
         "security": [
@@ -4301,7 +4368,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 45
+            "maxInPeriod": 45
           }
         },
         "security": [
@@ -4377,7 +4444,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 5
+            "maxInPeriod": 5
           }
         },
         "security": [
@@ -4466,11 +4533,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "SECOND",
-            "max_in_period": 150
+            "maxInPeriod": 150
           },
           "perOauth2Authorization": {
             "period": "SECOND",
-            "max_in_period": 30
+            "maxInPeriod": 30
           }
         },
         "security": [
@@ -4548,11 +4615,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "SECOND",
-            "max_in_period": 150
+            "maxInPeriod": 150
           },
           "perOauth2Authorization": {
             "period": "SECOND",
-            "max_in_period": 30
+            "maxInPeriod": 30
           }
         },
         "security": [
@@ -4665,11 +4732,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "SECOND",
-            "max_in_period": 150
+            "maxInPeriod": 150
           },
           "perOauth2Authorization": {
             "period": "SECOND",
-            "max_in_period": 30
+            "maxInPeriod": 30
           }
         },
         "security": [
@@ -4757,7 +4824,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 5
+            "maxInPeriod": 5
           }
         },
         "security": [
@@ -4864,7 +4931,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 45
+            "maxInPeriod": 45
           }
         },
         "security": [
@@ -4994,7 +5061,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 45
+            "maxInPeriod": 45
           }
         },
         "security": [
@@ -5008,7 +5075,7 @@
       "get": {
         "tags": ["Cloud"],
         "summary": "Get Subscription",
-        "description": "Get the subscription.\n\nThe `universe.subscription-product.subscription:read` scope only allows\nyou to get your own subscriptions—or rather, the subscription ID must\nmatch the user ID that makes the request—so its best use case is with\nOAuth 2.0 authentication rather than an API key. To read all\nsubscriptions for a universe, use the `universe:write` scope.",
+        "description": "Get the subscription.\n\nThe `universe.subscription-product.subscription:read` scope only allows\nreading subscriptions of the user making the request. Because of this, the\nsubscription ID must match the user ID of the user making the request. Note\nthat this scope might be more relevant for OAuth 2.0 apps.\n\nTo read all subscriptions made by users for a particular universe, use the\n`universe:write` scope instead.",
         "operationId": "Cloud_GetSubscription",
         "parameters": [
           {
@@ -5083,11 +5150,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 500
+            "maxInPeriod": 500
           },
           "perOauth2Authorization": {
             "period": "SECOND",
-            "max_in_period": 3
+            "maxInPeriod": 3
           }
         },
         "security": [
@@ -5170,11 +5237,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "SECOND",
-            "max_in_period": 150
+            "maxInPeriod": 150
           },
           "perOauth2Authorization": {
             "period": "SECOND",
-            "max_in_period": 30
+            "maxInPeriod": 30
           }
         },
         "security": [
@@ -5243,11 +5310,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "SECOND",
-            "max_in_period": 150
+            "maxInPeriod": 150
           },
           "perOauth2Authorization": {
             "period": "SECOND",
-            "max_in_period": 30
+            "maxInPeriod": 30
           }
         },
         "security": [
@@ -5351,11 +5418,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "SECOND",
-            "max_in_period": 150
+            "maxInPeriod": 150
           },
           "perOauth2Authorization": {
             "period": "SECOND",
-            "max_in_period": 30
+            "maxInPeriod": 30
           }
         },
         "security": [
@@ -5446,11 +5513,167 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "SECOND",
-            "max_in_period": 150
+            "maxInPeriod": 150
           },
           "perOauth2Authorization": {
             "period": "SECOND",
-            "max_in_period": 30
+            "maxInPeriod": 30
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
+      }
+    },
+    "/cloud/v2/universes/{universe_id}:generateSpeech": {
+      "post": {
+        "tags": ["Cloud"],
+        "summary": "Generate Speech",
+        "description": "Generates English speech audio from the specified text.",
+        "operationId": "Cloud_GenerateSpeech",
+        "parameters": [
+          {
+            "name": "universe_id",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GenerateSpeechRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenerateSpeechResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "x-roblox-docs": {
+          "category": "Universes and places",
+          "methodProperties": {
+            "scopes": ["universe:write"]
+          },
+          "resource": {
+            "$ref": "#/components/schemas/Universe",
+            "name": "Universe"
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 4
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "maxInPeriod": 4
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
+      }
+    },
+    "/cloud/v2/universes/{universe_id}:generateSpeechAsset": {
+      "post": {
+        "tags": ["Cloud"],
+        "summary": "Generate Speech Asset",
+        "description": "Generates an English speech audio asset from the specified text.",
+        "operationId": "Cloud_GenerateSpeechAsset",
+        "parameters": [
+          {
+            "name": "universe_id",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GenerateSpeechAssetRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            }
+          }
+        },
+        "x-long-running-operation-parameters": {
+          "metadata": {
+            "$ref": "#/components/schemas/GenerateSpeechAssetMetadata"
+          },
+          "response": {
+            "$ref": "#/components/schemas/GenerateSpeechAssetResponse"
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "x-roblox-docs": {
+          "category": "Universes and places",
+          "methodProperties": {
+            "scopes": ["universe:write"]
+          },
+          "resource": {
+            "$ref": "#/components/schemas/Universe",
+            "name": "Universe"
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 4
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "maxInPeriod": 4
           }
         },
         "security": [
@@ -5514,11 +5737,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 5000
+            "maxInPeriod": 5000
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "max_in_period": 5000
+            "maxInPeriod": 5000
           }
         },
         "security": [
@@ -5588,11 +5811,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 30
+            "maxInPeriod": 30
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "max_in_period": 30
+            "maxInPeriod": 30
           }
         },
         "security": [
@@ -5652,11 +5875,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 1000
+            "maxInPeriod": 1000
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "max_in_period": 10
+            "maxInPeriod": 10
           }
         },
         "security": [
@@ -5747,11 +5970,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 60
+            "maxInPeriod": 60
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "max_in_period": 60
+            "maxInPeriod": 60
           }
         },
         "security": [
@@ -5842,11 +6065,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 100
+            "maxInPeriod": 100
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "max_in_period": 20
+            "maxInPeriod": 20
           }
         },
         "security": [
@@ -5916,11 +6139,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "SECOND",
-            "max_in_period": 4000
+            "maxInPeriod": 4000
           },
           "perOauth2Authorization": {
             "period": "SECOND",
-            "max_in_period": 4000
+            "maxInPeriod": 4000
           }
         },
         "security": [
@@ -6019,11 +6242,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "max_in_period": 1000
+            "maxInPeriod": 1000
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "max_in_period": 10
+            "maxInPeriod": 10
           }
         },
         "security": [
@@ -6426,6 +6649,73 @@
         "properties": {},
         "description": "Returns a FlushMemoryStoreResponse object."
       },
+      "GenerateSpeechAssetMetadata": {
+        "type": "object",
+        "properties": {},
+        "description": "Represents metadata about the long-running operation corresponding to a\nGenerateSpeechAsset request.\n\nThis is the type of the `Operation.metadata` field in the response to\n`GetOperation` requests for GenerateSpeechAsset operations."
+      },
+      "GenerateSpeechAssetRequest": {
+        "required": ["text"],
+        "type": "object",
+        "properties": {
+          "text": {
+            "example": "Hello",
+            "type": "string",
+            "description": "The text to be translated."
+          },
+          "speechStyle": {
+            "$ref": "#/components/schemas/GeneratedSpeechStyle",
+            "description": "The style of the generated speech."
+          }
+        },
+        "description": "Specifies the text from which to generate speech and the voice style."
+      },
+      "GenerateSpeechAssetResponse": {
+        "type": "object",
+        "properties": {
+          "assetId": {
+            "type": "string",
+            "description": "The generated audio asset ID."
+          },
+          "remainingQuota": {
+            "type": "integer",
+            "description": "The remaining quota (the remaining number of requests available\nto the user this calendar month).",
+            "format": "int32"
+          }
+        },
+        "description": "Contains a generated audio asset in MPEG-2 Audio Layer III (MP3) format."
+      },
+      "GenerateSpeechRequest": {
+        "required": ["text"],
+        "type": "object",
+        "properties": {
+          "text": {
+            "example": "Hello",
+            "type": "string",
+            "description": "The text to be translated."
+          },
+          "speechStyle": {
+            "$ref": "#/components/schemas/GeneratedSpeechStyle",
+            "description": "The style of generated speech."
+          }
+        },
+        "description": "Specifies the text from which to generate speech and the voice style."
+      },
+      "GenerateSpeechResponse": {
+        "type": "object",
+        "properties": {
+          "audio": {
+            "type": "string",
+            "description": "The generated audio."
+          },
+          "remainingQuota": {
+            "type": "integer",
+            "description": "The remaining quota (remaining number of requests available\nto the user this calendar month).",
+            "format": "int32"
+          }
+        },
+        "description": "Contains the generated audio bytes in RFC 6716 (Opus) format."
+      },
       "GenerateUserThumbnailMetadata": {
         "type": "object",
         "properties": {},
@@ -6440,6 +6730,27 @@
           }
         },
         "description": "Returns the URL for the user's avatar thumbnail."
+      },
+      "GeneratedSpeechStyle": {
+        "type": "object",
+        "properties": {
+          "voiceId": {
+            "example": "1",
+            "type": "string",
+            "description": "An ID corresponding to the voice type specified. A mapping of voice type to\nID number is available in the documentation."
+          },
+          "pitch": {
+            "type": "number",
+            "description": "The pitch of the generated speech.",
+            "format": "double"
+          },
+          "speed": {
+            "type": "number",
+            "description": "The speed of the generated speech.",
+            "format": "double"
+          }
+        },
+        "description": "Information about the style of generated speech."
       },
       "GetInstanceMetadata": {
         "type": "object",
@@ -7444,6 +7755,21 @@
           "output": {
             "$ref": "#/components/schemas/LuauExecutionSessionTask_Output",
             "description": "Present when the task execution succeeds. Contains the output of the\nexecution."
+          },
+          "binaryInput": {
+            "type": "string",
+            "description": "Resource path of the binary input to this task. See the documentation for\nthe\n`LuauExecutionSessionTaskBinaryInput` resource for usage details."
+          },
+          "enableBinaryOutput": {
+            "example": true,
+            "type": "boolean",
+            "description": "If set to true, allows the task to output a large binary object in addition\nto standard return values.\n\nIf `enable_binary_output` is set to true, the task script must return a\n`LuauExecutionTaskOutput` (or equivalent table) and no other return values.\n\nBelow is example code for doing so:\n\n```luau\nlocal buf: buffer = buffer.create(10)\nlocal result: LuauExecutionTaskOutput = {\n  BinaryOutput = buf,\n  ReturnValues = { \"hello world\", 123 }\n}\nreturn result\n```\n\nThe `BinaryOutput` buffer must be no larger than 256 MiB in size.\n\nThe `ReturnValues` array, if given, will be serialized to JSON and made\navailable in the `output` field of the `LuauExecutionSessionTask` resource,\nsimilar to regular return values when not using `enable_binary_output`.\n\nThe binary output can be fetched from the URI in the `binaryOutputUri`\nfield after the task completes. The `binaryOutputUri` is valid for 15\nminutes after task completion.",
+            "x-immutable": true
+          },
+          "binaryOutputUri": {
+            "readOnly": true,
+            "type": "string",
+            "description": "URI for the binary output of this task. See the `enableBinaryOutput` field\nfor usage details."
           }
         },
         "description": "A `LuauExecutionSessionTask` (\"task\" for short) executes a given Luau script\nin the context of a specific version of a place.\n\nIn a task, physics simulation does not run. Server and local scripts within\nthe place also do not automatically run.\n\nThe script may access and update the data model of the place, including\ninvoking any module scripts. However, data model changes are local to the\ntask and cannot be persisted.\n\nThe script can also invoke engine APIs that read and/or modify data stored in\nthe cloud, such as those for DataStores. Exercise caution when using these\nAPIs.\n\nScripts can be up to 4 MB in size and run for up to 5 minutes. Scripts that\nrun for longer than the time limit terminate with an error.\n\nScripts are executed as-is and do not need to be wrapped in a function.\n\nScripts can return values (using the Luau `return` keyword). Return values\nare serialized to JSON and can be retrieved with the `Get\nLuauExecutionSessionTask` API after the task completes. The total size of the\nreturn values after JSON serialization must not exceed 4 MB. If the limit is\nexceeded, the task terminates with an error.\n\nIf the script raises an unhandled error, the task terminates. The error\ninformation can be retrieved with the `GetLuauExecutionSessionTask` API.\n\nStandard output (generated by the Luau `print` function) can be retrieved\nwith the `ListLuauExecutionSessionTaskLogs` method after the task completes.\nA maximum of 450 KB of logs are retained. If the amount of logs exceeds the\nlimit, older logs are discarded.\n\nInformation about a task is retained for 24 hours after task completion.\n\nAt most ten incomplete tasks are allowed per place. Attempting to create more\ntasks while the first ten are incomplete results in a HTTP 429 response.",
@@ -7461,6 +7787,36 @@
         "x-oneOf": {
           "result": ["error", "output"]
         }
+      },
+      "LuauExecutionSessionTaskBinaryInput": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "example": "universes/123/luau-execution-session-task-binary-inputs/123e4567-e89b-12d3-a456-426655440000",
+            "type": "string",
+            "description": "The resource path of the luau execution session task binary input.\n\nFormat:\n`universes/{universe_id}/luau-execution-session-task-binary-inputs/{luau_execution_session_task_binary_input_id}`"
+          },
+          "size": {
+            "type": "integer",
+            "description": "The size of the binary input object to be uploaded.\n\nThe maximum allowed size is 100 MiB.",
+            "format": "int64",
+            "x-immutable": true
+          },
+          "uploadUri": {
+            "readOnly": true,
+            "type": "string",
+            "description": "Upload the binary input object using this URI."
+          }
+        },
+        "description": "Represents a large binary input that can be given to a\n`LuauExecutionSessionTask`.\n\nEach `LuauExecutionSessionTaskBinaryInput` is associated with a presigned URL\nwhich can be used to upload an arbitrary object. After uploading the object,\nthe path of the `LuauExecutionSessionTaskBinaryInput` can be passed when\ncreating a `LuauExecutionSessionTask` to make the object available to the\ntask.\n\nWithin the task, the contents of the object are made available within a table\npassed as the first agument to the script, with the key `BinaryInput`. The\nfollowing example demonstrates how to retrieve the data:\n\n```\nlocal taskInput: LuauExecutionTaskInput = ({...})[1]\nlocal buf: buffer = taskInput.BinaryInput\n```\n\nEach `LuauExecutionSessionTaskBinaryInput` is valid for 15 minutes from the\ntime of creation. Within that time, in desired, you can use it to create\nmultiple tasks for the same universe.\n\nThe uploaded binary object must be no larger than 100 MiB.",
+        "x-aep-resource": {
+          "patterns": [
+            "universes/{universe_id}/luau-execution-session-task-binary-inputs/{luau_execution_session_task_binary_input_id}"
+          ],
+          "plural": "luau-execution-session-task-binary-inputs",
+          "singular": "luau-execution-session-task-binary-input"
+        },
+        "x-resource": true
       },
       "LuauExecutionSessionTaskLog": {
         "type": "object",

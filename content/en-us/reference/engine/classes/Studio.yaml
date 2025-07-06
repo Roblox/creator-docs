@@ -663,6 +663,23 @@ properties:
       can_save: true
     capabilities: []
     writeCapabilities: []
+  - name: Studio.CameraSpeedLockDefault
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.CameraTweenFocus
     summary: ''
     description: ''

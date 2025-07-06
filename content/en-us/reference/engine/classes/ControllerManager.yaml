@@ -37,7 +37,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: ControllerManager.BaseMoveSpeed
     summary: |
@@ -58,7 +59,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: ControllerManager.BaseTurnSpeed
     summary: |
@@ -78,7 +80,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: ControllerManager.ClimbSensor
     summary: |
@@ -105,7 +108,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: ControllerManager.FacingDirection
     summary: |
@@ -127,7 +131,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: ControllerManager.GroundSensor
     summary: |
@@ -154,7 +159,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: ControllerManager.MovingDirection
     summary: |
@@ -178,7 +184,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: ControllerManager.RootPart
     summary: |
@@ -201,7 +208,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
   - name: ControllerManager.UpDirection
     summary: ''
@@ -218,7 +226,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Avatar
     writeCapabilities: []
 methods: []
 events: []

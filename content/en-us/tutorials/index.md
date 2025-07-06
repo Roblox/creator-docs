@@ -32,8 +32,9 @@ While many creators focus on a single area, the following tutorials walk you thr
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
    <div class="container"
    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
    <img src="../assets/art/avatar/templates/Round-Concepts.png" />
@@ -49,14 +50,15 @@ While many creators focus on a single area, the following tutorials walk you thr
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
   <img src="../assets/art/accessories/creating-rigid/Studio-Mask-Preview-Cropped.png" />
  </div>
    <Typography variant='h4'>Create your first avatar item</Typography>
-   <Typography variant='body1' >Learn how to convert a mesh object in Blender to either a publishable accessory item or an equipable and layable clothing item for avatars.</Typography>
+   <Typography variant='body1' >Learn how to convert a mesh object in Blender to either a publishable accessory item or an equipable and layerable clothing item for avatars.</Typography>
    <div style={{marginTop:16}}>
      <a underline="none" href="../art/accessories/creating-rigid/index.md">
      <Button variant="contained" color="secondary" size='large'
@@ -73,11 +75,12 @@ While many creators focus on a single area, the following tutorials walk you thr
 
 <h2 style={{marginBottom: 24}}>Curriculum paths</h2>
 
-**Curriculum paths** provide a comprehensive overview of the various skills you need for different  development areas after you familiarize yourself with Studio's core functionality. In addition to demonstrating how to use Studio features for each creative discipline, this long-form type of structured learning shows you how to examine and solve common design problems within your own experiences.
+**Curriculum paths** provide a comprehensive overview of the various skills you need for different development areas after you familiarize yourself with Studio's core functionality. In addition to demonstrating how to use Studio features for each creative discipline, this long-form type of structured learning shows you how to examine and solve common design problems within your own experiences.
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <iframe src="https://www.youtube-nocookie.com/embed/zi0hIuPDyWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
@@ -90,11 +93,12 @@ While many creators focus on a single area, the following tutorials walk you thr
        style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
- </Grid>
- </Grid>
+</Grid>
+</Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <iframe src="https://www.youtube-nocookie.com/embed/nwShvDmFHWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
@@ -107,11 +111,12 @@ While many creators focus on a single area, the following tutorials walk you thr
        style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
- </Grid>
- </Grid>
+</Grid>
+</Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <iframe src="https://www.youtube-nocookie.com/embed/7iJKUUiKc0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
@@ -124,8 +129,8 @@ While many creators focus on a single area, the following tutorials walk you thr
        style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
- </Grid>
- </Grid>
+</Grid>
+</Grid>
 </Grid>
 
 <h2 style={{marginBottom: 24, marginTop: 96}}>Use case tutorials</h2>
@@ -133,8 +138,9 @@ While many creators focus on a single area, the following tutorials walk you thr
 **Use case tutorials** focus on a specific task that you can complete in order to learn about various aspects of developing in Studio. In addition to teaching you how to use collections of related features to recreate common components for experiences, this short-form type of structured learning highlights techniques you can use to achieve effects for a variety of design requirements.
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
    <div class="container"
    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
    <img src="../assets/modeling/solid-modeling/Negated-Part-To-Union.jpg" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} />
@@ -151,8 +157,9 @@ While many creators focus on a single area, the following tutorials walk you thr
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
    <div class="container"
    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
    <img src="../assets/lighting-and-effects/atmosphere/Showcase.jpg" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} />
@@ -162,6 +169,7 @@ While many creators focus on a single area, the following tutorials walk you thr
      <ul>
      <li>Learn how to set global and local lighting properties to enhance <a href="./use-case-tutorials/lighting/enhance-indoor-environments.md">indoor</a> and <a href="./use-case-tutorials/lighting/enhance-outdoor-environments-with-future-lighting.md">outdoor</a> environments</li>
      <li>Learn how to play <a href="./use-case-tutorials/audio/add-3D-audio.md">positional</a> and <a href="./use-case-tutorials/audio/add-2D-audio.md">non-positional</a> audio for player immersion</li>
+     <li>Learn how to generate <a href="./use-case-tutorials/audio/add-text-to-speech.md">audio from text</a> using an artificial voice</li>
      <li>Learn how to integrate different <a href="./use-case-tutorials/audio/add-voice-chat.md">voice chat</a> configurations into your gameplay</li>
      <li>Learn how to <a href="./use-case-tutorials/modeling/assemble-modular-environments.md">assemble modular assets</a> that snap together in numerous configurations</li>
      </ul></Typography>
@@ -170,8 +178,9 @@ While many creators focus on a single area, the following tutorials walk you thr
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
    <div class="container"
    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
    <img src="../assets/tutorials/landing/Effects.png" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} />
@@ -188,8 +197,9 @@ While many creators focus on a single area, the following tutorials walk you thr
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
    <div class="container"
    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
    <img src="../assets/tutorials/landing/UI.png" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} />
@@ -206,8 +216,9 @@ While many creators focus on a single area, the following tutorials walk you thr
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
    <div class="container"
    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
    <img src="../assets/tutorials/landing/Physics.png" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} />
@@ -224,8 +235,9 @@ While many creators focus on a single area, the following tutorials walk you thr
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
    <div class="container"
    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
    <img src="../assets/tutorials/landing/Animation.png" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} />
@@ -242,8 +254,9 @@ While many creators focus on a single area, the following tutorials walk you thr
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
    <div class="container"
    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
    <img src="../assets/tutorials/landing/Scripting.jpg" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} />
@@ -259,8 +272,9 @@ While many creators focus on a single area, the following tutorials walk you thr
  </Grid>
  </Grid>
 
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
    <div class="container"
    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
    <img src="../assets/tutorials/controlling-the-players-camera/SidescrollingCameraExample.jpg" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} />

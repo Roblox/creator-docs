@@ -10,7 +10,7 @@ The **Plugins** tab contains tools for managing [plugins](../studio/plugins.md),
 ## Manage Plugins
 
 The **Manage Plugins** button lets you enable/disable, update, or uninstall plugins you've [installed](../production/creator-store.md#find-assets) from the Creator Store, while the
-**Plugins&nbsp;Folder** button opens the local system folder containing plugins you've [created](../studio/plugins.md) or manually installed.
+**Plugins Folder** button opens the local system folder containing plugins you've [created](../studio/plugins.md) or manually installed.
 
 ## Localization
 

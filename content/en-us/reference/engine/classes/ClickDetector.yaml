@@ -5,7 +5,7 @@ summary: |
   An object that provides user input on in-experience `Class.BasePart|BaseParts`
   and `Class.Model|Models`.
 description: |
-  **ClickDetector** allows `Class.Script|Scripts` and
+  `ClickDetector` allows `Class.Script|Scripts` and
   `Class.LocalScript|LocalScripts` to receive pointer input on 3D objects
   through their `Class.ClickDetector.MouseClick|MouseClick` event. They work
   when parented to `Class.BasePart`, `Class.Model`, or `Class.Folder` objects.
@@ -76,7 +76,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: ClickDetector.MaxActivationDistance
     summary: |
@@ -101,7 +102,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 methods: []
 events:
@@ -135,7 +137,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: ClickDetector.MouseHoverEnter
     summary: |
@@ -164,7 +167,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: ClickDetector.MouseHoverLeave
     summary: |
@@ -194,7 +198,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: ClickDetector.RightMouseClick
     summary: |
@@ -218,7 +223,8 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: ClickDetector.mouseClick
     summary: ''
@@ -235,6 +241,7 @@ events:
       This deprecated event is a variant of `Class.ClickDetector.MouseClick`,
       which should be used instead.
     security: None
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 callbacks: []

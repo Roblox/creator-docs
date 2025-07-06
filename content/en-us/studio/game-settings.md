@@ -5,9 +5,7 @@ description: The Game Settings window contains all Studio-level settings and cus
 
 The **Game Settings** window contains all Studio-level settings and
 customization options for Roblox experiences, including settings for
-[permissions](#permissions), [monetization](#monetization), [security](#security), and [localization](#localization). You can access it from the toolbar's [Home](./home-tab.md) tab.
-
-<img src="../assets/studio/general/Home-Tab-Game-Settings.png" width="760" alt="Game Settings button indicated in Home tab" />
+[permissions](#permissions), [monetization](#monetization), [security](#security), and [localization](#localization). You can access it from the Studio application's **File** menu.
 
 <Alert severity="warning">
 The **Game Settings** window is only available for experiences saved or [published](../production/publishing/publish-experiences-and-places.md) to Roblox.
@@ -158,6 +156,10 @@ You should only enable the following settings if you trust all assets from other
   <tr>
     <td>**Allow Third Party Teleports**</td>
     <td>Lets players [teleport](../projects/teleport.md) to other experiences.</td>
+  </tr>
+  <tr>
+    <td>**Allow Mesh / Image APIs**</td>
+    <td>Lets you use `Class.EditableImage` and `Class.EditableMesh` in published experiences. To enable usage, you must be 13+ age verified and ID verified.</td>
   </tr>
 </tbody>
 </table>

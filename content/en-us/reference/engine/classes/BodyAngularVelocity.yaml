@@ -4,13 +4,12 @@ memory_category: Instances
 summary: |
   Applies a torque to maintain a constant angular velocity.
 description: |
-  The BodyAngularVelocity object applies a [torque][1] (or **rotational force**)
-  on a `Class.BasePart` such that it maintains a constant [angular velocity][3]
-  as determined by its
-  `Class.BodyAngularVelocity.AngularVelocity|AngularVelocity` property. This
-  allows for the creation of parts that continually rotate. It is the rotational
-  counterpart to a `Class.BodyVelocity`. If you would like to maintain a
-  constant [angular displacement][2], use a `Class.BodyGyro` instead.
+  The `BodyAngularVelocity` object applies a torque (rotational force) on an
+  assembly such that it maintains a constant angular velocity as determined by
+  its `Class.BodyAngularVelocity.AngularVelocity|AngularVelocity` property. This
+  allows for the creation of assemblies that continually rotate. It is the
+  rotational counterpart to a `Class.BodyVelocity`. If you would like to
+  maintain a constant angular displacement, use a `Class.BodyGyro` instead.
 code_samples: []
 inherits:
   - BodyMover
@@ -18,26 +17,23 @@ tags:
   - Deprecated
 deprecation_message: |
   This object is deprecated and should not be used for new work. Use
-  `Class.AngularVelocity` instead.
+  `Class.AngularVelocity` instead, and see the
+  [legacy conversion notes](../../../physics/mover-constraints.md#legacy-mover-conversion).
 properties:
   - name: BodyAngularVelocity.AngularVelocity
     summary: |
       Determines the axis of rotation (direction) and the rotational velocity
       (magnitude) in radians/s.
     description: |
-      The AngularVelocity property is a `Datatype.Vector3` which determines the
-      goal angular velocity a `Class.BodyAngularVelocity` should maintain
-      through the exertion of torque. For this property, the direction of the
-      vector is the axis of rotation. The magnitude is the angular velocity in
-      **radians per second**. By default, this property is `(0, 2, 0)`.
+      This property is a `Datatype.Vector3` which determines the goal angular
+      velocity a `Class.BodyAngularVelocity` should maintain through the
+      exertion of torque. For this property, the direction of the vector is the
+      axis of rotation. The magnitude is the angular velocity in **radians per
+      second**.
 
-      **Tip:** You can multiply a `Datatype.Vector3` by `Library.math.rad(360)`,
-      or **2π**, in order to convert [angular frequency][5] (rotations per
-      second) into the desired [angular velocity][3] (radians per second). For
-      example: Setting
-      `Class.BodyAngularVelocity.AngularVelocity|AngularVelocity` to
-      `Vector3.new(0, 1, 0) * math.rad(360)` ≈ `Vector3.new(0, 6.283, 0)` will
-      cause a part to spin around the Y axis once per second.
+      You can multiply a `Datatype.Vector3` by `Library.math.rad(360)`, or `2π`,
+      in order to convert angular frequency (rotations per second) into the
+      desired angular velocity (radians per second).
     code_samples: []
     type: Vector3
     tags: []
@@ -50,16 +46,17 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: BodyAngularVelocity.MaxTorque
     summary: |
       Determines the limit of torque that may be exerted on each world axis.
     description: |
-      The MaxTorque property determines the limit of the torque that may be
-      exerted on each world axis. If a part isn't moving, consider raising this
-      value (and also check that it is not `Class.BasePart.Anchored|Anchored` or
-      attached to another anchored part). See also
+      This property determines the limit of the torque that may be exerted on
+      each world axis. If an assembly isn't moving, consider raising this value
+      and also check that it is not `Class.BasePart.Anchored|Anchored` or
+      attached to another anchored assembly). See also
       `Class.BodyAngularVelocity.P|P` (power).
     code_samples: []
     type: Vector3
@@ -73,16 +70,16 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: BodyAngularVelocity.P
     summary: |
       Determines how aggressive of a torque is applied in reaching the goal
       angular velocity.
     description: |
-      The P property determines how much
-      [power](<https://en.wikipedia.org/wiki/Power_(physics)>) is used while
-      applying torque in order to reach the goal
+      This property determines how much power is used while applying torque in
+      order to reach the goal
       `Class.BodyAngularVelocity.AngularVelocity|AngularVelocity`. The higher
       this value, the more power will be used and the faster it will be used.
     code_samples: []
@@ -97,7 +94,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: BodyAngularVelocity.angularvelocity
     summary: ''
@@ -118,7 +116,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
   - name: BodyAngularVelocity.maxTorque
     summary: |
@@ -143,7 +142,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities: []
+    capabilities:
+      - Physics
     writeCapabilities: []
 methods: []
 events: []

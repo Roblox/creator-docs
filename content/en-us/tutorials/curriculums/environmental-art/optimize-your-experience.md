@@ -38,15 +38,15 @@ When you modify physics and rendering parameters, it's useful near the end of th
 
 ## Cull nonessential content
 
-After you review your physics and rendering parameters, you can review the assets themselves to see where you can cull any nonessential content from the experience that doesn't affect your gameplay, such as identical textures with different assetIDs, complex geometry with a high vertice count, or transparencies that layer on top of each other depending on the camera view. The following sections detail what you can do to review this content, and why it helps optimization efforts.
+After you review your physics and rendering parameters, you can review the assets themselves to see where you can cull any nonessential content from the experience that doesn't affect your gameplay, such as identical textures with different asset IDs, complex geometry with many vertices, or transparencies that layer on top of each other depending on the camera view. The following sections detail what you can do to review this content, and why it helps optimization efforts.
 
 ### Remove duplicate textures
 
-As you transition between developing your assets and constructing your environment, it's common to iterate over meshes or textures as you find what's necessary for your aesthetic goals or gameplay requirements. If you don't convert your assets into [packages](../../../projects/assets/packages.md), when you import these iterations into Studio, you're making unique assetIDs that the Roblox Engine needs to reference as it renders your assets within the environment.
+As you transition between developing your assets and constructing your environment, it's common to iterate over meshes or textures as you find what's necessary for your aesthetic goals or gameplay requirements. If you don't convert your assets into [packages](../../../projects/assets/packages.md), when you import these iterations into Studio, you're making unique asset IDs that the Roblox Engine needs to reference as it renders your assets within the environment.
 
-For example, if you were to import the following two fire hydrant meshes into Studio separately, even if they are exactly the same in appearance, the Roblox Engine treats them as two objects with unique assetIDs. The more unique calls the engine needs to make, the more of an impact on memory and performance. For this reason, it's important to confirm when you're reusing an asset multiple times, each instance of that asset uses the same assetID so that the engine only needs to make a single call to render it repeatedly.
+For example, if you were to import the following two fire hydrant meshes into Studio separately, even if they are exactly the same in appearance, the Roblox Engine treats them as two objects with unique asset IDs. The more unique calls the engine needs to make, the more of an impact on memory and performance. For this reason, it's important to confirm when you're reusing an asset multiple times, each instance of that asset uses the same asset ID so that the engine only needs to make a single call to render it repeatedly.
 
-<img src="../../../assets/tutorials/environmental-art-curriculum/Section5/RemovingTextures-Firehydrants.jpg" alt="Two of the exact same fire hydrant with unique assetIDs. There is no visual difference but the duplicate assetIDs negatively impacts performance." width="100%"/>
+<img src="../../../assets/tutorials/environmental-art-curriculum/Section5/RemovingTextures-Firehydrants.jpg" alt="Two of the exact same fire hydrant with unique asset IDs. There is no visual difference but the duplicate asset IDs negatively impacts performance." width="100%"/>
 
 ### Optimize geometry
 
@@ -57,7 +57,7 @@ If you find that you need to make more adjustments to increase frame rate across
 
 Expanding on this first technique, every unique asset in your experience represents a draw call on the GPU in which it sends a signal to the GPU to call information in order for the Roblox Engine to render the asset correctly. The more unique assets you have, the more draw calls the system needs to make. For this reason, if you have a group of meshes that make up a larger component in your experience, you can group them together in third-party modeling tools to reduce the need for multiple draw calls.
 
-To illustrate this point, the final sample laser tag environment parents multiple parts and meshes together to create the large towers outside of the building. If you were to combine all of these individual components together, you could make it a single asset with only one assetID, and reduce the number of draw calls from 8 to 1. However, it's important to note that this technique removes your ability to freely change the visual and physical characteristics of each component, such as its position or material.
+To illustrate this point, the final sample laser tag environment parents multiple parts and meshes together to create the large towers outside of the building. If you were to combine all of these individual components together, you could make it a single asset with only one asset ID, and reduce the number of draw calls from 8 to 1. However, it's important to note that this technique removes your ability to freely change the visual and physical characteristics of each component, such as its position or material.
 
 For example, in the following image, the left tower remains multiple assets under a `Class.Model` object, and the right tower is a single asset. You can modify each component of the left tower individually, but when you modify the right tower, such as changing its color to black, it affects the entirety of the object. This is why it's important to only consider this technique near the end of your environment's development when you know where you can improve performance without affecting your aesthetic goals.
 
@@ -66,7 +66,7 @@ For example, in the following image, the left tower remains multiple assets unde
 Expanding on the second technique, assets with geometric complexity have more polygons, meaning they have more vertices that the engine needs to calculate as it renders their visual appearance. This means that assets with less complexity and fidelity are less costly to render, leading to an improvement in both performance and memory.
 
 <Alert severity="warning">
-If you choose to utilize this second technique, after you simplify your geometry in third-party tooling, it's important to remember to update your packages with the new import instead of creating a new assetID, otherwise the Roblox Engine needs to make two separate calls for each assetID.
+If you choose to utilize this second technique, after you simplify your geometry in third-party tooling, it's important to remember to update your packages with the new import instead of creating a new asset ID, otherwise the Roblox Engine needs to make two separate calls for each asset ID.
 </Alert>
 
 ### Delete layered transparencies

@@ -9,13 +9,6 @@ description: |
   Historically, only HopperBins worked without a 'Handle' `Class.Part`, but this
   is no longer the case thanks to the `Class.Tool.RequiresHandle` property of
   Tools.
-
-  For capturing user input (from the Mouse for example), it is no longer
-  necessary to use HopperBins or Tools. Instead, please use these alternatives:
-
-  - `Class.ContextActionService`
-  - `Class.UserInputService`
-  - `Class.Player:GetMouse()`
 code_samples: []
 inherits:
   - BackpackItem
@@ -42,7 +35,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: HopperBin.BinType
     summary: ''
@@ -61,7 +55,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 methods: []
 events:
@@ -75,7 +70,8 @@ events:
       The `Class.HopperBin` object has been superseded by the `Class.Tool`
       object which should be used for all new work.
     security: None
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
   - name: HopperBin.Selected
     summary: ''
@@ -91,6 +87,7 @@ events:
       The `Class.HopperBin` object has been superseded by the `Class.Tool`
       object which should be used for all new work.
     security: None
-    capabilities: []
+    capabilities:
+      - Input
     writeCapabilities: []
 callbacks: []

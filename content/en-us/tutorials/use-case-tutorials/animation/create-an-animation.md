@@ -12,7 +12,7 @@ Using the [Walking Character Animations](https://www.roblox.com/games/1343833248
 - Looping the animation to test how it looks at different speeds, angles, and easing styles.
 - Publishing the animation so that you can use it across projects in different scripts and contexts.
 
-After you complete this tutorial, you will have an assetID for your animation, and skills to create additional types of animations that meet the needs for your own characters and experiences.
+After you complete this tutorial, you will have an asset ID for your animation, and skills to create additional types of animations that meet the needs for your own characters and experiences.
 
 <img src="../../../assets/tutorials/creating-character-animations/Ref-All.jpg" alt="" width="100%" />
 
@@ -509,7 +509,7 @@ To test your poses:
 
 ## Publish animation
 
-In order to play your animation in your open experience, as well as store it for reuse in other projects, you must publish the animation to the cloud. This process creates a unique assetID for your animation that you can reference in scripts, which is especially important if you want to replace any of Roblox's default character animations.
+In order to play your animation in your open experience, as well as store it for reuse in other projects, you must publish the animation to the cloud. This process creates a unique asset ID for your animation that you can reference in scripts, which is especially important if you want to replace any of Roblox's default character animations.
 
 To publish your animation:
 
@@ -519,7 +519,7 @@ To publish your animation:
 
 1. From the contextual menu, select **Publish to Roblox**. The **Asset Configuration** window displays.
 1. Fill out all applicable fields, then click the **Save** button.
-1. **(Optional)** You can copy the animation's assetID to use within scripts by clicking the copy icon.
+1. **(Optional)** You can copy the animation's asset ID to use within scripts by clicking the copy icon.
 
    <img src="../../../assets/tutorials/creating-character-animations/Publish-4.png" alt="" width="60%" />
 

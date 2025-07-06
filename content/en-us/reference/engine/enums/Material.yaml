@@ -211,7 +211,9 @@ items:
     deprecation_message: ''
   - name: Glass
     summary: |
-      Applies to `Class.BasePart` only.
+      Applies to `Class.BasePart` only. Note that refraction of light through
+      this material is not supported on mobile devices due to computational
+      limitations.
     value: 1568
     tags: []
     deprecation_message: ''
@@ -223,7 +225,7 @@ items:
       that texture image must have a wide value range since the material
       displays the range from dark/black to light/white values. Obtain
       [this model](https://create.roblox.com/store/asset/15507769146/ForceFieldMesh)
-      for a functional example of the **ForceField** material.
+      for a functional example.
     value: 1584
     tags: []
     deprecation_message: ''

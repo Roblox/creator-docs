@@ -3,10 +3,6 @@ title: Asset privacy
 description: Explore how the asset privacy system lets you control which Roblox creators can use your assets in their experiences.
 ---
 
-<Alert severity="success">
-If you opt into the Asset Privacy beta, decals, images, and meshes are automatically restricted when you upload them to the cloud unless you manually set them as open use on the asset's configuration page.
-</Alert>
-
 The **asset privacy system** lets you control how creators and experiences can use and distribute your models, meshes, images, decals, audio, and video assets on Roblox. Assets can have one of two access privacy types:
 
 - **Open Use** — Any creator can use the asset within their experiences.
@@ -26,10 +22,6 @@ The asset privacy system controls which creators and experiences can use the ass
 
 In order for a collaborator, such as an individual creator or group, or an experience to use one of your restricted assets, you must explicitly grant permission before it's visible or audible at runtime. Once a collaborator or experience has **explicit** permission to use a restricted asset, they also receive **implicit** permission to use the asset in a variety of additional scenarios. For more information, see the following subsections.
 
-<Alert severity="warning">
-If a restricted asset is a child of an open use model or package from the [Creator Store](../../production/creator-store.md), creators and experiences must have explicit permission to use the restricted asset in order for the asset to be visible or audible during runtime. For example, if a model includes a `Class.Sound` object with a restricted assetID, the open use model remains visible, but the restricted audio cannot play.
-</Alert>
-
 ### To collaborators
 
 To grant a collaborator permission to use one of your restricted assets, the following must be true depending on if you are granting permission to another creator or a group:
@@ -42,7 +34,7 @@ If you meet these conditions and explicitly grant the collaborator permission,
 - The creator gains implicit permission to use the asset in any of their individual or group-owned experiences, and the ability to grant other experiences permission to use the restricted asset.
 - All group members with edit access gain permission to use the asset in experiences owned by that group.
 
-Once a collaborator has permission to use one of your restricted assets, they can insert the asset from the **Inventory** and/or **Creation** tab of the [Toolbox](../../projects/assets/toolbox.md), or by using the restricted assetID in the [Properties](../../studio/properties.md) window.
+Once a collaborator has permission to use one of your restricted assets, they can insert the asset from the **Inventory** and/or **Creation** tab of the [Toolbox](../../projects/assets/toolbox.md), or by using the restricted asset ID in the [Properties](../../studio/properties.md) window.
 
 <GridContainer numColumns="2">
   <figure>
@@ -99,7 +91,7 @@ To grant an experience permission to use one of your restricted assets, the expe
 After you or a collaborator with permission grants an experience access to use a restricted asset, anyone who has **Edit** access to that experience gains implicit permission to:
 
 - Copy and paste the asset into another place file within that experience.
-- Use its assetID in the Properties window or in scripts within any place file within the experience.
+- Use its asset ID in the Properties window or in scripts within any place file within the experience.
 
 <Alert severity="info">
 When you grant permission to an experience by inserting it into a collaborator’s experience, the asset is also automatically shared with the experience's owner.
@@ -147,7 +139,7 @@ To grant an experience permission to use many restricted assets in the previous 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. Select one of your or your group's experiences. The experience's overview page displays.
 1. In the experience's left-hand navigation, navigate to the **Configure** section, then select **Permissions**. The asset's **Permissions** page displays.
-1. In the **Enter asset IDs** input, type every assetID you want the experience to have access to separated by commas, then click the **Add** button. All restricted assets the experience has access to display beneath the input with the asset's name, assetID, owner, and asset type.
+1. In the **Enter asset IDs** input, type every asset ID you want the experience to have access to separated by commas, then click the **Add** button. All restricted assets the experience has access to display beneath the input with the asset's name, asset ID, owner, and asset type.
 1. At the bottom of the page, click the **Save Changes** button.
 
   </TabItem>

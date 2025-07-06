@@ -1,6 +1,6 @@
 ---
 title: Environmental art curriculum
-description: //
+description: Learn how to build 3D environments that enhance your experience's gameplay.
 next: /tutorials/curriculums/environmental-art/greybox-your-environment
 hideInPageNavigation: true
 hideBreadcrumbs: true

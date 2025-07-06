@@ -11,7 +11,7 @@ description: Explains the process for exporting avatar animations from Maya.
     <figcaption>R15 mannequin reference</figcaption>
   </figure>
   <figure>
-    <video controls src="../../assets/animation/exporting-avatar-animations-from-maya/Moving-Rig.mp4" alt="An angled side view of the same humnoid mannequin walking in place." width="40%"></video>
+    <video controls src="../../assets/animation/exporting-avatar-animations-from-maya/Moving-Rig.mp4" alt="An angled side view of the same humanoid mannequin walking in place." width="40%"></video>
     <figcaption>Example walking animation</figcaption>
   </figure>
 </GridContainer>
@@ -89,7 +89,7 @@ To export your avatar animation from Maya:
    1. In the menu bar, click **Windows**. A contextual menu displays.
    1. Hover over **Settings/Preferences**, then click **Plug-in Manager**. The **Plug-in Manager** window displays.
 
-      <img width="80%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Plugin-Manager.jpg" alt="A close up view of the Windows dropdown menu in Maya. The Settings/Preferences menu item is highlighted, as well as the Plguin-in Manager submenu." />
+      <img width="80%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Plugin-Manager.jpg" alt="A close up view of the Windows dropdown menu in Maya. The Settings/Preferences menu item is highlighted, as well as the Plug-in Manager submenu." />
 
    1. In the search field, input **fbxmaya**. The **fbxmaya.mll** plugin displays.
    1. Enable the **Loaded** and **Auto load** options.

@@ -30,7 +30,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: PathfindingLink.Attachment1
     summary: |
@@ -49,7 +50,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: PathfindingLink.IsBidirectional
     summary: |
@@ -70,7 +72,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: PathfindingLink.Label
     summary: |
@@ -91,7 +94,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 methods: []
 events: []

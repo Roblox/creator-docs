@@ -18,10 +18,10 @@ Very few places, even the most complex ones, reach this limit, and when they do,
 
 ### Auto-recovery files
 
-If saving to Roblox fails due to the file size limit, Studio automatically generates a backup of your place called a **recovery file**. The frequency of auto-recovery backups depends on whether your experience has [Team Create](collaboration.md) enabled:
+If saving to Roblox fails due to the file size limit, Studio automatically generates a backup of your place called a **recovery file**. The frequency of auto-recovery backups depends on whether your experience has [collaboration](collaboration.md) enabled:
 
-- If you have Team Create enabled and saving to Roblox fails, Studio backs up the last three save attempts as recovery files on your system.
-- If Team Create is disabled, Studio uses **Auto-Recovery** settings from **File** &rang; **Studio Settings**.
+- If you have collaboration enabled and saving to Roblox fails, Studio backs up the last three save attempts as recovery files on your system.
+- If collaboration is disabled, Studio uses **Auto-Recovery** settings from [Studio Settings](../studio/setup.md#customization).
 
 On Windows, recovery files are located in `C:\Users\Admin\AppData\Local\Roblox\RobloxStudio\AutoSaves`.
 

@@ -513,7 +513,7 @@ methods:
         </tbody>
       </table>
 
-      #### Collectibles Information
+      ##### Collectibles Information
 
       <table size="small">
         <thead>
@@ -981,6 +981,25 @@ methods:
           The ID of the subscription to check for.
     returns:
       - type: Dictionary
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: MarketplaceService:GetUsersPriceLevelsAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: userIds
+        type: Array
+        default: ''
+        summary: ''
+    returns:
+      - type: Array
         summary: ''
     tags:
       - Yields

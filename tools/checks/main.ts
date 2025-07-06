@@ -44,6 +44,7 @@ import {
   checkMdxEquality,
   isLocaleFile,
   outdatedTranslationFiles,
+  checkVoidTagsHaveNoChildren,
 } from './utils/localization.js';
 import { Emoji } from './utils/utils.js';
 import { deduplicate } from './utils/utils.js';
@@ -267,6 +268,7 @@ try {
       config.checkLocalizedContent &&
       !isLocaleFile(filePathFromRepoRoot, Locale.EN_US) // skip for English
     ) {
+      checkVoidTagsHaveNoChildren(filePathFromRepoRoot);
       checkEnglishVersionExists(filePathFromRepoRoot);
       await checkMdxEquality(filePathFromRepoRoot, fileContent);
       checkFileImportEquality(filePathFromRepoRoot, fileContent);
@@ -282,6 +284,7 @@ try {
       processRetextVFileMessages({ retextVFile, filePathFromRepoRoot });
     }
     if (isMarkdownFile) {
+      checkVoidTagsHaveNoChildren(filePathFromRepoRoot);
       const mdxVFileMessage = (await compileMdx(fileContent)) as VFileMessage;
       if (mdxVFileMessage) {
         processRetextVFileMessage({

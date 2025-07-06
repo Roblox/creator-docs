@@ -1,36 +1,40 @@
 ---
 title: Text chat overview
-description: The TextChatService system allows players to communicate with each other using text-based messages in live sessions.
+description: TextChatService lets players communicate with each other using text-based messages in live sessions.
 ---
 
 Roblox offers text-based messaging between players in live sessions through `Class.TextChatService`. This service has its standard functionality, but also provides a set of methods and events for extending and customizing chat, such as delivering messages based on [customized requirements](#conditionally-deliver-messages), adding special permissions or moderation to specific players, and creating [custom commands](./examples/custom-text-chat-commands.md) to execute specific actions.
 
-The following sections summarize the primary classes and instances that you can use to customize the chat system.
-
 ## Top-level configuration
 
-The `Class.TextChatService` singleton class is responsible for managing the overall chat system, including handling chat message filtering, moderation, and user permissions. Use properties like `Class.TextChatService.CreateDefaultTextChannels|CreateDefaultTextChannels` and `Class.TextChatService.CreateDefaultCommands|CreateDefaultCommands` to enable or disable default chat channels and commands.
+`Class.TextChatService` is a singleton class is responsible for managing the overall chat system, including handling chat message filtering, moderation, and user permissions. Use properties like `Class.TextChatService.CreateDefaultTextChannels|CreateDefaultTextChannels` and `Class.TextChatService.CreateDefaultCommands|CreateDefaultCommands` to enable or disable default chat channels and commands, which `Class.TextChatService` creates at runtime.
 
-## Default UI configuration
+![Default chat channels and commands at runtime.](../assets/players/in-experience-text-chat/chat-channel-command.png)
 
-`Class.TextChatService` provides a default UI that can be customized to fit your experience's needs. Each of these configurations can be disabled to hide the associated UI element and can be replaced with custom interfaces if desired.
+## UI configuration
 
-- `Class.ChatWindowConfiguration` — Represents the default chat window UI, including its appearance and behavior. Disable it to hide the chat window.
-- `Class.ChatInputBarConfiguration` — Represents the default chat input bar UI, including its appearance and behavior.
-- `Class.BubbleChatConfiguration` — Represents the default [bubble chat](./bubble-chat.md) UI, including its appearance and behavior.
+`Class.TextChatService` provides a default UI that can be customized to fit your experience's needs. Disable any of these configurations to hide its associated UI element. If desired, you can also replace these UI elements with custom interfaces:
+
+- `Class.ChatWindowConfiguration`
+- `Class.ChatInputBarConfiguration`
+- `Class.ChannelTabsConfiguration`
+- `Class.BubbleChatConfiguration`
+
+For more information, see [Chat window](./chat-window.md) and [Bubble chat](./bubble-chat.md).
 
 ## Channels, messages, and commands
 
-- `Class.TextChannel` — Represents a text chat channel that passes user-sent chat messages from the client to the server, which then displays them to other users based on permissions. These instances must be parented to `Class.TextChatService` in order to function.
+- `Class.TextChannel` — Text channels pass user-sent messages from the client to the server, which then displays them to other users based on permissions. Text channels must be parented to `Class.TextChatService` in order to function.
 
   <Alert severity="info">
 	If `Class.TextChatService.CreateDefaultTextChannels` is set to `true`, the service automatically creates two text channels, `RBXGeneral` and `RBXSystem`. You can manually create additional `Class.TextChannel` instances and parent them to `Class.TextChatService`, as well.
 	</Alert>
 
-- `Class.TextSource` — Represents a user in a `Class.TextChannel`. These instances are directly parented to the `Class.TextChannel` when `Class.TextChannel:AddUserAsync()|AddUserAsync()` is called. Text sources contains detailed permissions of a user in the channel, such as their ability to send messages. A single user can be associated with multiple text sources if they have been added to multiple text channels.
+- `Class.TextSource` — A user in a `Class.TextChannel`. Text sources are directly parented to the `Class.TextChannel` when `Class.TextChannel:AddUserAsync()|AddUserAsync()` is called. Text sources contains detailed permissions of a user in the channel, such as their ability to send messages. If a single user is in multiple text channels, they are associated with multiple text sources.
 
-- `Class.TextChatMessage` — Represents a single chat message in a text channel, with basic information such as the sender of the message, the original message, the filtered message, and the creation timestamp.
-- `Class.TextChatCommand` — Allows users to invoke specific actions or behaviors by sending messages that match `Class.TextChatCommand.PrimaryAlias|PrimaryAlias` or `Class.TextChatCommand.SecondaryAlias|SecondaryAlias`. These instances must be parented to `Class.TextChatService` in order to function.
+- `Class.TextChatMessage` — A message in a text channel. Chat messages contain basic information such as the sender of the message, the original message, the filtered message, and the creation timestamp.
+
+- `Class.TextChatCommand` — Lets users invoke specific actions or behaviors by sending messages that match the `Class.TextChatCommand.PrimaryAlias|PrimaryAlias` or `Class.TextChatCommand.SecondaryAlias|SecondaryAlias` properties. Chat commands must be parented to `Class.TextChatService` in order to function.
 
   <Alert severity="info">
 	If `Class.TextChatService.CreateDefaultCommands` is set to `true`, default chat commands will be created automatically. You can manually create additional `Class.TextChatCommand` instances and parent them to `Class.TextChatService`, as well.

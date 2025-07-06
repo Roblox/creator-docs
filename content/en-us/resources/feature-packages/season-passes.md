@@ -51,7 +51,7 @@ To get the packages from your inventory into your experience:
 5. Click the **Feature Package Core** tile, **Missions Feature Package** tile, then the **Season Passes Feature Package** tile. All three package folders display in the **Explorer** window.
 6. Drag the package folders into **ReplicatedStorage**.
 7. Allow data store calls to track player purchases with the packages.
-   1. In the toolbar's **Home** tab, select **Game Settings**.
+   1. Open Studio's **File**&nbsp;⟩ **Game Settings** window.
    1. Navigate to the **Security** tab, then enable **Enable Studio Access to API Services**.
 
 ## Configure mission dependencies
@@ -92,7 +92,7 @@ end
 
 ### Add season tier reward icons
 
-In addition to granting players XP when they complete missions, the **Season Passes** feature package uses the **Missions** feature package to define unique reward tiers within a season. If you want to add an on-screen icon for a tier reward that players can earn if they enough XP, add an assetID in the `Missions` config for each season tier reward.
+In addition to granting players XP when they complete missions, the **Season Passes** feature package uses the **Missions** feature package to define unique reward tiers within a season. If you want to add an on-screen icon for a tier reward that players can earn if they enough XP, add an asset ID in the `Missions` config for each season tier reward.
 
 ``` lua
 	Tier3Mission = {
@@ -122,8 +122,8 @@ After you have set up every mission you want to include in a season, it's time t
 
 ### Define passes
 
-[Passes](../../production/monetization/game-passes.md) allow you to charge players a one-time Robux fee in order to access a season pass's missions and potential rewards. After you create a pass with a unique assetID, you can set the details of the pass in the `premiumTrack` field of your season.
-For example, the following code sample defines a pass with an example assetID of `928192647` to represent a season pass, then it gives the season pass a track name of "Premium Track".
+[Passes](../../production/monetization/game-passes.md) allow you to charge players a one-time Robux fee in order to access a season pass's missions and potential rewards. After you create a pass with a unique asset ID, you can set the details of the pass in the `premiumTrack` field of your season.
+For example, the following code sample defines a pass with an example asset ID of `928192647` to represent a season pass, then it gives the season pass a track name of "Premium Track".
 
 ``` lua
     premiumTrack = {
@@ -148,7 +148,7 @@ Tiers have an `upperBoundXP` property that sets the threshold of XP necessary to
 - **Free** - A reward that players can earn without purchasing the season pass.
 - **Premium** - A reward that players can only earn by purchasing the season pass.
 
-To demonstrate, review the following code sample for a season with one tier that requires 100 XP to earn a free ice lance reward and a premium blast shield reward. The `icon` is the assetID of the UI image to display for a reward, and the  `displayName` displays a name for the reward. Note that the `displayName` displays in the UI, but the `rewardId` is hidden from the player and is mainly used for [data store](../../cloud-services/data-stores/index.md) purposes.
+To demonstrate, review the following code sample for a season with one tier that requires 100 XP to earn a free ice lance reward and a premium blast shield reward. The `icon` is the asset ID of the UI image to display for a reward, and the  `displayName` displays a name for the reward. Note that the `displayName` displays in the UI, but the `rewardId` is hidden from the player and is mainly used for [data store](../../cloud-services/data-stores/index.md) purposes.
 
 ``` lua
 tiers = {
@@ -225,7 +225,7 @@ Constants for the **Core** feature package live in two spots:
 - Shared constants live in `ReplicatedStorage.FeaturePackagesCore.Configs.SharedConstants`.
 - Package-specific constants, in this case the **Season Passes** feature package, live in `ReplicatedStorage.SeasonPasses.Configs.Constants`.
 The main things you might want to adjust to meet the design requirements of your experience:
-- Sound assetIDs
+- Sound asset IDs
 - Purchase effect duration and particle colors
 Additionally, you can find strings for translation broken out into one location: `ReplicatedStorage.FeaturePackagesCore.Configs.TranslationStrings`.
 

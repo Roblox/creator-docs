@@ -62,7 +62,7 @@ properties:
     writeCapabilities: []
   - name: CompressorSoundEffect.GainMakeup
     summary: |
-      The overall amplification applied to the effectâ€™s Sound or SoundGroup
+      The overall amplification applied to the effect's Sound or SoundGroup
       after attenuation of sounds above the threshold.
     description: |
       Range: 0 to 30 (default 0) The overall amplification applied to the

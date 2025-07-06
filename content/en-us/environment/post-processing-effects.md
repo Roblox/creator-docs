@@ -38,8 +38,8 @@ To add post-processing effects to either the `Class.Lighting` service or `Class.
 1. Depending on your Studio settings, some effects may not appear. To increase
    your rendering quality level:
 
-   1. Navigate to **File** &rarr; **Studio Settings**. A pop-up window displays.
-   2. In the left-side navigation, select **Rendering**, then the **Editor&nbsp;Quality&nbsp;Level** dropdown menu.
+   1. Open [Studio Settings](../studio/setup.md#customization).
+   2. In the left-side navigation, select **Rendering**, then the **Editor Quality Level** dropdown menu.
    3. Set it to the highest level.
 
 ## Bloom

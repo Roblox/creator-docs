@@ -95,6 +95,24 @@ methods:
     capabilities:
       - DataStore
     writeCapabilities: []
+  - name: MemoryStoreSortedMap:GetSizeAsync
+    summary: |
+      Gets the size of the sorted map.
+    description: |
+      Gets the size of the sorted map.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: int
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - DataStore
+    writeCapabilities: []
   - name: MemoryStoreSortedMap:RemoveAsync
     summary: |
       Removes the provided key from the sorted map.

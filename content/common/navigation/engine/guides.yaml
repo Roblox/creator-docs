@@ -20,6 +20,8 @@ navigation:
     section:
       - title: Overview
         path: /projects/
+      - title: Experiences and places
+        path: /production/publishing/publish-experiences-and-places
       - title: Architecture
         path: /projects/data-model
         section:
@@ -32,10 +34,10 @@ navigation:
       - title: Manage
         path: /production/publishing/publish-experiences-and-places
         section:
-          - title: Experiences and places
-            path: /production/publishing/publish-experiences-and-places
           - title: Experience ownership transfer
             path: /projects/experience-ownership-transfer
+          - title: Place files
+            path: /projects/place-files
           - title: Transfer animations
             path: /projects/transfer-animations
       - title: Work in teams
@@ -45,12 +47,10 @@ navigation:
             path: /projects/groups
           - title: Collaboration
             path: /projects/collaboration
-      - title: Activity history
-        path: /projects/activity-history
+          - title: Activity history
+            path: /projects/activity-history
       - title: External tools
         path: /projects/external-tools
-      - title: Place files
-        path: /projects/place-files
   - title: 3D workspace
     path: /workspace/
     section:
@@ -337,6 +337,16 @@ navigation:
         path: /audio/objects
       - title: Effects
         path: /audio/effects
+      - title: Legacy
+        section:
+          - title: Sound
+            path: /sound/index
+          - title: Objects
+            path: /sound/objects
+          - title: Groups
+            path: /sound/groups
+          - title: Dynamic effects
+            path: /sound/dynamic-effects
   - title: User interface
     path: /ui/
     section:
@@ -346,6 +356,8 @@ navigation:
         path: /ui/on-screen-containers
       - title: In-experience UI
         path: /ui/in-experience-containers
+      - title: Accessibility guidelines
+        path: /production/publishing/accessibility
       - title: UI objects
         section:
           - title: Labels
@@ -386,6 +398,16 @@ navigation:
         path: /ui/size-modifiers
       - title: UI animation/tweens
         path: /ui/animation
+      - title: UI styling
+        section:
+          - title: Overview
+            path: /ui/styling/
+          - title: Style Editor
+            path: /ui/styling/editor
+          - title: Compatibility
+            path: /ui/styling/compatibility
+          - title: CSS comparisons
+            path: /ui/styling/css-comparisons
       - title: 9-slice design
         path: /ui/9-slice
       - title: Rich text markup
@@ -512,6 +534,10 @@ navigation:
             path: /cloud-services/memory-stores/best-practices
       - title: Secrets stores
         path: /cloud-services/secrets
+      - title: In-experience HTTP requests
+        path: /cloud-services/http-service
+      - title: Extended Services
+        path: /cloud-services/extended-services
       - title: Cross-server communication
         path: /cloud-services/cross-server-messaging
   - title: Roblox for Unity developers

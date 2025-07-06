@@ -56,7 +56,7 @@ constructors:
         type: UDim2
         default:
         summary: |
-          The `Datatype.UDim2` right tanget of the control point.
+          The `Datatype.UDim2` right tangent of the control point.
     code_samples: []
     tags: []
     deprecation_message: ''

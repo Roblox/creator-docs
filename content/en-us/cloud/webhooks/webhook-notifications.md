@@ -35,8 +35,8 @@ For more information on subscription events and their fields, see the [Subscript
 
 ### Commerce
 
-- **Commerce Product Order Refunded** - When a user has received a refund for their commerce product order.
-- **Commerce Product Order Paid** - When a user has paid for their commerce product order.
+- **Commerce Product Order Refunded** - When a user has received a refund for their commerce product order, or the order was cancelled.
+- **Commerce Product Order Paid** - When a user has paid for their commerce product order. Please note that duplicate webhook events are possible, so you should deduplicate events using the unique commerce order ID.
 
 ## Configure webhooks on Creator Dashboard
 

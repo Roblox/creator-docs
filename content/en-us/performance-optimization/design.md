@@ -7,7 +7,7 @@ Designing for performance means following a handful of best practices **as you b
 
 ## Low-end devices
 
-Lower-end devices, particularly mobile devices, have severe memory limitations and are succeptible to crashes due to out of memory (OOM) errors:
+Lower-end devices, particularly mobile devices, have severe memory limitations and are susceptible to crashes due to out of memory (OOM) errors:
 
 - If you want to support lower-end devices, choose at least one "baseline" device, test your experience on it throughout the development process, and pay close attention to frame rate and memory usage. As you find problem areas in your experience, use those areas to identify the limits of your device.
 

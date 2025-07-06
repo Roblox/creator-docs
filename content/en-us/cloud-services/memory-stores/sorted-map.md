@@ -21,7 +21,7 @@ local MemoryStoreService = game:GetService("MemoryStoreService")
 local sortedMap = MemoryStoreService:GetSortedMap("SortedMap1")
 ```
 
-After you get a sorted map, call any of the following functions to read or write data in it:
+After you get a sorted map, call any of the following functions:
 
 <table>
 <thead>
@@ -51,6 +51,10 @@ After you get a sorted map, call any of the following functions to read or write
     <td>`Class.MemoryStoreSortedMap:RemoveAsync()`</td>
     <td>[Remove](#remove-data) a key from the sorted map.</td>
   </tr>
+	<tr>
+		<td>`Class.MemoryStoreSortedMap:GetSizeAsync()`</td>
+		<td>[Get](#get-size) the number of items in the sorted map.</td>
+	</tr>
 </tbody>
 </table>
 
@@ -262,5 +266,35 @@ while true do
 			exclusiveLowerBound["sortKey"] = items[#items].sortKey
 		end
 	end
+end
+```
+
+## Get size
+
+To get the number of items in the sorted map, call
+`Class.MemoryStoreSortedMap:GetSizeAsync()`.
+
+```lua title="Getting the Size of a Sorted Map"
+local MemoryStoreService = game:GetService("MemoryStoreService")
+
+local sortedMap = MemoryStoreService:GetSortedMap("SortedMap1")
+
+local setSuccess, _ = pcall(function()
+	return sortedMap:SetAsync("User_1234", 1000, 30, 3.14152)
+end)
+
+if setSuccess then
+	print("Set succeeded.")
+end
+
+local size
+local success, sizError = pcall(function()
+	size = sortedMap:GetSizeAsync()
+end)
+
+if success then
+	print(size)
+else
+	warn(sizeError)
 end
 ```

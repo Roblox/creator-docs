@@ -171,7 +171,7 @@ Following the visual hierarchy best practices from [Wireframe Your Layouts](wire
     <img width="90%" img src="../../../assets/tutorials/user-interface-design/Section3/ObjectiveUI-Intro.png" />
 </figure>
 
-For example, the sample provides an objective UI component that players reference to know what they need to do to be successful in a round. As players tag out enemy team members and earn points, this component keeps track of each team's score against the overall goal within the header's prompt. For a high-level review of all of the client and server scripts that work together to track points, see  [Track points](../gameplay-scripting/add-rounds.md#track-points) in the Gameplay Scripting Curriculum.
+For example, the sample provides an objective UI component that players reference to know what they need to do to be successful in a round. As players tag out enemy team members and earn points, this component keeps track of each team's score against the overall goal within the header's prompt. For a high-level review of all of the client and server scripts that work together to track points, see [Track points](../gameplay-scripting/add-rounds.md#track-points) in the Gameplay Scripting Curriculum.
 
 <figure>
     <img width="90%" img src="../../../assets/tutorials/user-interface-design/Section3/Objective-Intro.jpg" />
@@ -180,7 +180,9 @@ For example, the sample provides an objective UI component that players referenc
 To exactly recreate the objective UI within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) experience:
 
 1. Create a container for the entire component.
+
    1. Insert a **Frame** into the **HUDGui** `Class.ScreenGui` object.
+
       1. In the **Explorer** window, navigate to the **StarterGui** service.
       1. Hover over its child **HUDGui** object, then click the ⊕ icon. A contextual menu displays.
       1. From the contextual menu, insert a **Frame**.
@@ -188,10 +190,11 @@ To exactly recreate the objective UI within the sample [Laser Tag](https://www.r
       <img src="../../../assets/tutorials/user-interface-design/Section3/Objective-1.jpg" width="80%" />
 
    1. Select the new **Frame**, then in the **Properties** window,
+
       1. Set **AnchorPoint** to `0.5, 0` to set the frame's origin point in the top-middle of itself (50% from the left to the right of the frame, and 0% from the top to the bottom of the frame).
       1. Set **BackgroundTransparency** to `1` to make the frame's background completely transparent.
       1. Set **Position** to `{0.5, 0},{0.03, 0}` to set the frame near the top-middle of the screen (50% from the left to the right of the screen, and 3% from the top to the bottom of the screen so there is a little buffer).
-      1. Set **Size** to `{0.5, 0},{0.13, 0}` so the frame's elements take up a large portion of the top of the  screen to grab players' attention (50% horizontally, and 13% vertically).
+      1. Set **Size** to `{0.5, 0},{0.13, 0}` so the frame's elements take up a large portion of the top of the screen to grab players' attention (50% horizontally, and 13% vertically).
       1. Set **Name** to **Objective**.
 
       <img src="../../../assets/tutorials/user-interface-design/Section3/Objective-1.jpg" width="80%" />
@@ -199,8 +202,10 @@ To exactly recreate the objective UI within the sample [Laser Tag](https://www.r
    1. **(Optional)** Insert a **UIAspectRatioConstraint** into **Objective** to ensure the label's aspect ratio remains the same no matter the player's screen size. The sample sets its `Class.UIAspectRatioConstraint.AspectRatio` property to `7`.
 
 1. Create a container for the objective's prompt objects.
+
    1. Insert a **Frame** into **Objective**.
    1. Select the new **Frame**, then in the **Properties** window,
+
       1. Set **AnchorPoint** to `0.5, 0` to set the frame's origin point in the top-middle of itself (50% from the left to the right of the frame, and 0% from the top to the bottom of the frame).
       1. Set **BackgroundTransparency** to `1` to make the frame's background completely transparent.
       1. Set **Position** to `{0.5, 0},{0, 0}` to set the frame in the middle of the container (50% from the left to the right of the parent frame, and 0% from the top to the bottom of the parent frame).
@@ -210,8 +215,10 @@ To exactly recreate the objective UI within the sample [Laser Tag](https://www.r
       <img src="../../../assets/tutorials/user-interface-design/Section3/Objective-2.jpg" width="80%" />
 
 1. Create the title elements.
+
    1. Insert an **ImageLabel** into **ObjectiveDisplay**.
    1. Select the **ImageLabel**, then in the **Properties** window,
+
       1. Set **AnchorPoint** to `0.5, 1` to set the label's origin point in the bottom-middle of itself (50% from the left to the right of the label, and 100% from the top to the bottom of the label).
       1. Set **BackgroundTransparency** to `1` to make the label's background completely transparent.
       1. Set **LayoutOrder** to `-1`.
@@ -226,6 +233,7 @@ To exactly recreate the objective UI within the sample [Laser Tag](https://www.r
    1. **(Optional)** Insert a **UIAspectRatioConstraint** into the **ImageLabel** to ensure the label's aspect ratio remains the same no matter the player's screen size. The sample sets its `Class.UIAspectRatioConstraint.AspectRatio` property to **13.781**.
    1. Insert a **TextLabel** into **Header** to display a title.
    1. Select the new label, then in the **Properties** window,
+
       1. Set **AnchorPoint** to `0.5, 0.5` to set the new label's origin point in the middle of itself (50% from the left to the right of the label, and 50% from the top to the bottom of the label).
       1. Set **BackgroundTransparency** to `1` to make the label's background completely transparent.
       1. Set **Position** to `{0.5, 0},{0.5, 0}` to move the label to the middle of its parent label (50% from the left to the right of the parent label, and 50% from the top to the bottom of the parent label).
@@ -239,8 +247,10 @@ To exactly recreate the objective UI within the sample [Laser Tag](https://www.r
       <img src="../../../assets/tutorials/user-interface-design/Section3/Objective-3E.jpg" width="80%" />
 
 1. Create the prompt elements.
+
    1. Insert an **ImageLabel** into **ObjectiveDisplay**.
    1. Select the **ImageLabel**, then in the **Properties** window,
+
       1. Set **AnchorPoint** to `0.5, 1` to set the label's origin point in the bottom-middle of itself (50% from the left to the right of the label, and 100% from the top to the bottom of the label).
       1. Set **BackgroundTransparency** to `1` to make the label's background completely transparent.
       1. Set **Position** to `{0.5, 0},{1, 0}` to move the label to the bottom-middle of its parent frame (50% from the left to the right of the parent frame, and 100% from the top to the bottom of the parent frame).
@@ -255,6 +265,7 @@ To exactly recreate the objective UI within the sample [Laser Tag](https://www.r
    1. **(Optional)** Insert a **UIAspectRatioConstraint** into the **ImageLabel** to ensure the label's aspect ratio remains the same no matter the player's screen size. The sample sets its `Class.UIAspectRatioConstraint.AspectRatio` property to `13.781`.
    1. Insert a **TextLabel** into **Body** to display a prompt.
    1. Select the new label, then in the **Properties** window,
+
       1. Set **AnchorPoint** to `0.5, 0.5` to set the new label's origin point in the middle of itself (50% from the left to the right of the label, and 50% from the top to the bottom of the label).
       1. Set **BackgroundTransparency** to `1` to make the label's background completely transparent.
       1. Set **Position** to `{0.5, 0},{0.5, 0}` to move the label to the middle of its parent label (50% from the left to the right of the parent label, and 50% from the top to the bottom of the parent label).
@@ -269,12 +280,14 @@ To exactly recreate the objective UI within the sample [Laser Tag](https://www.r
       <img src="../../../assets/tutorials/user-interface-design/Section3/Objective-4E.jpg" width="80%" />
 
 1. Create a container for the objective's team counters.
+
    1. Insert a **Frame** into **Objective**.
    1. Select the new **Frame**, then in the **Properties** window,
+
       1. Set **AnchorPoint** to `0.5, 1` to set the label's origin point in the bottom-middle of itself (50% from the left to the right of the frame, and 100% from the top to the bottom of the frame).
       1. Set **BackgroundTransparency** to `1` to make the frame's background completely transparent.
       1. Set **Position** to `{0.5, 0},{1, 0}` to set the frame in the bottom-middle of the container (50% from the left to the right of the parent frame, and 100% from the top to the bottom of the parent frame).
-      1. Set **Size** to `{0.44, 0},{0.27, 0}`  so the selection UI components take up about less than half of the container from left to right (44% horizontally and 27% vertically of the parent frame).
+      1. Set **Size** to `{0.44, 0},{0.27, 0}` so the selection UI components take up about less than half of the container from left to right (44% horizontally and 27% vertically of the parent frame).
       1. Set **Name** to **TeamPointCounter**.
 
       <img src="../../../assets/tutorials/user-interface-design/Section3/Objective-5.jpg" width="80%" />
@@ -286,8 +299,10 @@ To exactly recreate the objective UI within the sample [Laser Tag](https://www.r
       1. Set **FillDirection** to **Horizontal** so each team counter displays next to each other.
       1. Set **HorizontalAlignment** to **Center** so each team counter aligns to the middle of one another.
 1. Create the green team counter elements.
+
    1. Insert an **ImageLabel** into **TeamPointCounter**.
    1. Select the **ImageLabel**, then in the **Properties** window,
+
       1. Set **BackgroundTransparency** to `1` to make the label's background completely transparent.
       1. Set **Position** to `{0.5, 0},{1, 0}` to move the label to the bottom-middle of its parent frame (50% from the left to the right of the parent frame, and 100% from the top to the bottom of the parent frame).
       1. Set **Size** to `{0.5, 0},{1, 0}` to widen the label to half width of the parent frame (50% horizontally and 100% vertically of the parent frame).
@@ -305,6 +320,7 @@ To exactly recreate the objective UI within the sample [Laser Tag](https://www.r
       1. Set the new **teamColor** attribute to **Mint**.
    1. Insert a **TextLabel** into **TeamACounter** to display a prompt.
    1. Select the new label, then in the **Properties** window,
+
       1. Set **AnchorPoint** to `1, 0.5` to set the new label's origin point in the right-middle of itself (100% from the left to the right of the label, and 50% from the top to the bottom of the label).
       1. Set **BackgroundTransparency** to `1` to make the label's background completely transparent.
       1. Set **Position** to `{0.95, 0},{0.5, 0}` to move the label to the right of its parent label (95% from the left to the right of the parent label, and 50% from the top to the bottom of the parent label).
@@ -323,6 +339,7 @@ To exactly recreate the objective UI within the sample [Laser Tag](https://www.r
       <img src="../../../assets/tutorials/user-interface-design/Section3/Objective-7F.jpg" width="80%" />
 
 1. Create the pink team counter elements.
+
    1. Duplicate **TeamAICounter** and its children.
    1. Select the duplicate **TeamACounter**, then in the **Properties** window,
       1. Set **Name** to **TeamBCounter**.
@@ -344,7 +361,7 @@ To exactly recreate the objective UI within the sample [Laser Tag](https://www.r
 
 The following script requires a set of module scripts that work together to set up the main Heads Up Display (HUD), including `setObjective` and `startSyncingTeamPoints`. After a player joins a round and selects their blaster, this script ensures all HUD UI elements display appropriately for the player's state, device, and team status.
 
-``` lua
+```lua
 local Players = game:GetService("Players")
 
 local setPlayerPortrait = require(script.setPlayerPortrait)
@@ -372,9 +389,9 @@ setupTouchButtonAsync(gui)
   </TabItem>
   <TabItem key = "2" label="setObjective">
 
-After a player selects their blaster, the following `ReplicatedStorage.HUDGuiSetup.setObjective` script requires the **TEAM_SCORE_LIMIT** module script so that it can swap the placeholder string "%d"  in the UI objective's `Class.TextLabel` object. To learn more about this placeholder string, see [Set Objective](../gameplay-scripting/add-rounds.md#set-objective) in the Gameplay Scripting curriculum.
+After a player selects their blaster, the following `ReplicatedStorage.HUDGuiSetup.setObjective` script requires the **TEAM_SCORE_LIMIT** module script so that it can swap the placeholder string "%d" in the UI objective's `Class.TextLabel` object. To learn more about this placeholder string, see [Set Objective](../gameplay-scripting/add-rounds.md#set-objective) in the Gameplay Scripting curriculum.
 
-``` lua
+```lua
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local TEAM_SCORE_LIMIT = require(ReplicatedStorage.TEAM_SCORE_LIMIT)
@@ -400,7 +417,7 @@ When this occurs, `startSyncingTeamPoints` sets both team counters' `Class.TextL
 
 To learn more about how the server knows when a team meets the objective goal and wins the round, see [Track Points](../gameplay-scripting/add-rounds.md#track-points) in the Gameplay Scripting Curriculum.
 
-``` lua
+```lua
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Teams = game:GetService("Teams")
 
@@ -469,6 +486,7 @@ Like most other experiences in the first-person shooter genre, the sample laser 
 To exactly recreate the crosshair within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) experience:
 
 1. Insert an **ImageLabel** into the **HUDGui** `Class.ScreenGui` object.
+
    1. In the **Explorer** window, navigate to the **StarterGui** service.
    1. Hover over its child **HUDGui** object, then click the **⊕** icon. A contextual menu displays.
    1. From the contextual menu, insert an **ImageLabel**.
@@ -476,6 +494,7 @@ To exactly recreate the crosshair within the sample [Laser Tag](https://www.robl
       <img src="../../../assets/tutorials/user-interface-design/Section3/Crosshair-1C.png" />
 
 1. Select the new **ImageLabel**, then in the **Properties** window,
+
    1. Set **Image** to `rbxassetid://14400935446`.
    1. Set **AnchorPoint** to `0.5, 0.5` to set the label's origin point in the middle of the label (50% from the left to the right of the label, and 50% from the top to the bottom of the label).
    1. Set **BackgroundTransparency** to `1` to make the label's background completely transparent.
@@ -496,6 +515,7 @@ A hit marker is a UI element that only displays when a blast makes impact with a
 To exactly recreate the hit marker within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) experience:
 
 1. Insert an **ImageLabel** into the **Crosshair** `Class.ImageLabel` object.
+
    1. In the **Explorer** window, navigate to the **StarterGui** service.
    1. Hover over its child **Crosshair** object, then click the **⊕** icon. A contextual menu displays.
    1. From the contextual menu, insert an **ImageLabel**.
@@ -503,6 +523,7 @@ To exactly recreate the hit marker within the sample [Laser Tag](https://www.rob
       <img src="../../../assets/tutorials/user-interface-design/Section3/Hitmarker-1C.png" />
 
 1. Select the new **ImageLabel**, then in the **Properties** window,
+
    1. Set **Image** to `rbxassetid://14401148736` to display the rectangular hit marker icon.
    1. Set **AnchorPoint** to `0.5, 0.5` to set the label's origin point in the middle of the label.
    1. Set **BackgroundTransparency** to `1` to make the label's background completely transparent.
@@ -518,7 +539,7 @@ To exactly recreate the hit marker within the sample [Laser Tag](https://www.rob
 
 The following script requires a set of module scripts that work together to set up the main Heads Up Display (HUD), including `setupHitmarker`. After a player joins a round and selects their blaster, this script ensures all HUD UI elements display appropriately for the player's state, device, and team status.
 
-``` lua
+```lua
 local Players = game:GetService("Players")
 
 local setPlayerPortrait = require(script.setPlayerPortrait)
@@ -548,7 +569,7 @@ setupTouchButtonAsync(gui)
 
 The following `HUDGuiSetup.setupHitmarker` module script starts by listening for `playerTaggedBindableEvent`, which fires within `renderBlast` if a player is tagged. When it detects that another player is tagged, it creates a `Class.Tween` that eases the hit marker's `Class.ImageLabel.ImageTransparency` property from `1` to `0`. After 0.4 seconds, the module script resets the hit marker's transparency back to `0`, then the process starts again.
 
-``` lua
+```lua
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local TweenService = game:GetService("TweenService")
 
@@ -581,7 +602,7 @@ return setupHitmarker
 </Tabs>
 
 <Alert severity = 'success'>
-Now, whenever a player blasts their blaster and the blast makes impact with another player, the hit marker momentarilly displays.
+Now, whenever a player blasts their blaster and the blast makes impact with another player, the hit marker momentarily displays.
 </Alert>
 
 #### Blaster selector
@@ -599,7 +620,9 @@ This setup allows you to create additional `Class.Configuration` instances for m
 To exactly recreate the blaster selector within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) experience:
 
 1. Create a container for the entire component.
+
    1. Insert a **Frame** into the **PickABlaster** `Class.ScreenGui` object.
+
       1. In the **Explorer** window, navigate to the **StarterGui** service.
       1. Hover over its child **PickABlaster** object, then click the **⊕** icon. A contextual menu displays.
       1. From the contextual menu, insert a **Frame**.
@@ -607,6 +630,7 @@ To exactly recreate the blaster selector within the sample [Laser Tag](https://w
       <img src="../../../assets/tutorials/user-interface-design/Section3/BS-1A.png" />
 
    1. Select the new frame, then in the **Properties** window,
+
       1. Set **AnchorPoint** to `0.5, 1` to set the frame's origin point in the bottom-middle of itself (50% from the left to the right of the frame, and 100% from the top to the bottom of the frame).
       1. Set **BackgroundTransparency** to `1` to make the frame's background completely transparent.
       1. Set **Position** to `{0.5, 0},{0.9, 0}` to set the frame near the bottom-middle of the screen (50% from the left to the right of the screen, and 92.4% from the top to the bottom of the screen).
@@ -618,8 +642,10 @@ To exactly recreate the blaster selector within the sample [Laser Tag](https://w
    1. **(Optional)** Insert a **UIAspectRatioConstraint** into **Component** to ensure the frame and its children UI elements' aspect ratio remains the same no matter the player's screen size. The sample sets its `Class.UIAspectRatioConstraint.AspectRatio` property to **5**.
 
 1. Create a container to hold UI element groupings.
+
    1. Insert a **Frame** into **Component**.
    1. Select the new frame, then in the **Properties** window,
+
       1. Set **AnchorPoint** to `0.5, 0.5` to set the frames's origin point in the middle of itself (50% from the left to the right of the frame, and 50% from the top to the bottom of the frame).
       1. Set **BackgroundTransparency** to `1` to make the frame's background completely transparent.
       1. Set **Position** to `{0.5, 0},{0.375, 0}` to set the frame near the top-middle of the container (50% from the left to the right of the parent frame, and 37.5% from the top to the bottom of the parent frame).
@@ -629,8 +655,10 @@ To exactly recreate the blaster selector within the sample [Laser Tag](https://w
       <img src="../../../assets/tutorials/user-interface-design/Section3/BS-2B.png" width="80%" />
 
 1. Create a prompt for the blaster selector.
+
    1. Insert an **ImageLabel** into **SelectionFrame**.
    1. Select the new label, then in the **Properties** window,
+
       1. Set **AnchorPoint** to `0.5, 1` to set the label's origin point in the bottom-middle of itself (50% from the left to the right of the label, and 100% from the top to the bottom of the label).
       1. Set **BackgroundTransparency** to `1` to make the label's background completely transparent.
       1. Set **LayoutOrder** to `-1`.
@@ -645,6 +673,7 @@ To exactly recreate the blaster selector within the sample [Laser Tag](https://w
    1. **(Optional)** Insert a **UIAspectRatioConstraint** into the label to ensure the label's aspect ratio remains the same no matter the player's screen size. The sample sets its `Class.UIAspectRatioConstraint.AspectRatio` property to `13.78`.
    1. Insert a **TextLabel** into **Header** to display a prompt.
    1. Select the new label, then in the **Properties** window,
+
       1. Set **AnchorPoint** to `0.5, 0.5` to set the new label's origin point in the middle of itself (50% from the left to the right of the label, and 50% from the top to the bottom of the label).
       1. Set **BackgroundTransparency** to `1` to make the label's background completely transparent.
       1. Set **Position** to `{0.5, 0},{0.5, 0}` to move the label to the middle of its parent label (50% from the left to the right of the parent label, and 50% from the top to the bottom of the parent label).
@@ -658,8 +687,10 @@ To exactly recreate the blaster selector within the sample [Laser Tag](https://w
       <img src="../../../assets/tutorials/user-interface-design/Section3/BS-3E.png" width="80%" />
 
 1. Create the container for your blaster button container and selection arrows.
+
    1. Insert an **ImageLabel** into **SelectionFrame**.
    1. Select the new label, then in the **Properties** window,
+
       1. Remove the default **Image** value.
       1. Set **AnchorPoint** to `0.5, 1` to set the label's origin point in the bottom-middle of itself (50% from the left to the right of the label, and 100% from the top to the bottom of the label).
       1. Set **BackgroundColor** to `0, 0, 0` to make the label black.
@@ -670,14 +701,17 @@ To exactly recreate the blaster selector within the sample [Laser Tag](https://w
       <img src="../../../assets/tutorials/user-interface-design/Section3/BS-4B.png" width="80%" />
 
    1. Round the corners of the container.
+
       1. Insert a **UICorner** object into the label.
       1. Select the new corner object, then in the **Properties** window, set **CornerRadius** to `0.075, 0` to round the corners.
 
       <img src="../../../assets/tutorials/user-interface-design/Section3/BS-4C.png" width="80%" />
 
 1. Create the container for your blaster buttons.
+
    1. Insert a **Frame** into the label from step 4.
    1. Select the new frame, then in the **Properties** window,
+
       1. Set **AnchorPoint** to `0.5, 0.5` to set the new frame's origin point in the middle of itself (50% from the left to the right of the frame, and 50% from the top to the bottom of the frame).
       1. Set **BackgroundTransparency** to `1` to make the frame's background completely transparent.
       1. Set **Position** to `{0.5, 0},{0.5, 0}` to set the frame in the middle of its parent label (50% from the left to the right of the parent frame, and 50% from the top to the bottom of the parent frame).
@@ -687,6 +721,7 @@ To exactly recreate the blaster selector within the sample [Laser Tag](https://w
       <img src="../../../assets/tutorials/user-interface-design/Section3/BS-5E.png" width="80%" />
 
 1. Create padding for all future blaster buttons.
+
    1. Insert a **UIListLayout** object into the frame from step 5.
    1. Select the new layout object, then in the **Properties** window,
       1. Set **Padding** to `0.035, 0` to provide space between all future buttons.
@@ -694,8 +729,10 @@ To exactly recreate the blaster selector within the sample [Laser Tag](https://w
       1. Set both **HorizontalAlignment** and **VerticalAlignment** to **Center** so each button aligns to the middle of one another.
 
 1. Create the left navigation button.
+
    1. Insert an **ImageButton** object into the **ImageLabel** from step 4.
    1. Select the new button, then in the **Properties** window,
+
       1. Remove the default **Image** value.
       1. Set **AnchorPoint** to `0, 0.5` to set the new button's origin point in the left-middle of itself (0% from the left to the right of the button, and 50% from the top to the bottom of the button).
       1. Set **BackgroundTransparency** to `0.15` to provide visual feedback on hover that the button is selectable.
@@ -706,6 +743,7 @@ To exactly recreate the blaster selector within the sample [Laser Tag](https://w
       <img src="../../../assets/tutorials/user-interface-design/Section3/BS-7B.png" width="80%" />
 
    1. Round the corners of the button.
+
       1. Insert a **UICorner** object into the button.
       1. Select the new corner object, then in the **Properties** window, set **CornerRadius** to `0.1, 0` to round the corners.
 
@@ -713,9 +751,10 @@ To exactly recreate the blaster selector within the sample [Laser Tag](https://w
 
    1. Insert an **ImageLabel** object into the button.
    1. Select the new label, then in the **Properties** window,
+
       1. Set **AnchorPoint** to `0.5, 0.5` to set the new label's origin point in the middle of itself (50% from the left to the right of the label, and 50% from the top to the bottom of the label).
       1. Set **Position** to `{0.45, 0},{0.5, 0}` to set the label near the middle of its parent button (45% from the left to the right of the parent button, and 50% from the top to the bottom of the parent button). This value isn't in the middle because an arrow doesn't _visually_ look like it's in the middle of the button at `{0.5, 0},{0.5, 0}`.
-      1. Set **Size** to `{0.8, 0},{0.8, 0}` to widen the label area to space below the prompt  (80% horizontally and 80% vertically of the parent frame).
+      1. Set **Size** to `{0.8, 0},{0.8, 0}` to widen the label area to space below the prompt (80% horizontally and 80% vertically of the parent frame).
       1. Set **BackgroundTransparency** to `1` to make the image's background completely transparent.
       1. Set **Image** to `rbxassetid://14309187238`.
       1. Set **ScaleType** to **Fit**.
@@ -723,20 +762,24 @@ To exactly recreate the blaster selector within the sample [Laser Tag](https://w
       <img src="../../../assets/tutorials/user-interface-design/Section3/BS-7E.png" width="80%" />
 
 1. Create the right navigation button.
+
    1. Duplicate **NavigationButtonLeft**.
    1. Select the duplicate button, then in the **Properties** window,
       1. Set **AnchorPoint** to `1, 0.5` to set the new button's origin point in the right-middle of itself (100% from the left to the right of the button, and 50% from the top to the bottom of the button).
       1. Set **Position** to `{0.98, 0},{0.5, 0}` to provide padding to the right of the button from its parent container (98% from the left to the right of the parent label, and 50% from the top to the bottom of the parent label).
       1. Set **Name** to **NavigationButtonRight**.
    1. Select its **ImageLabel** child object.
+
       1. Set **Rotation** to `180` to flip the image.
       1. Set **Position** to `{0.55, 0},{0.5, 0}` to set the label near the middle of its parent button (55% from the left to the right of the parent button, and 50% from the top to the bottom of the parent button). This value isn't in the middle because an arrow doesn't _visually_ look like it's in the middle of the button at `{0.5, 0},{0.5, 0}`.
 
       <img src="../../../assets/tutorials/user-interface-design/Section3/BS-8C.png" width="80%" />
 
 1. Create the **SELECT** button.
+
    1. Insert an **ImageButton** into **Component**. Notice how this process keeps the select button separate from **SelectionFrame** so that you can add padding between the main part of the component from the select button.
    1. Select the new button, then in the **Properties** window,
+
       1. Remove the default **Image** value.
       1. Set **AnchorPoint** to `0.5, 1` to set the new button's origin point in the bottom-middle of itself (50% from the left to the right of the button, and 100% from the top to the bottom of the button).
       1. Set **BackgroundTransparency** to `0.15` to provide visual feedback on hover that the button is selectable.
@@ -747,6 +790,7 @@ To exactly recreate the blaster selector within the sample [Laser Tag](https://w
       <img src="../../../assets/tutorials/user-interface-design/Section3/BS-9B.png" width="80%" />
 
    1. Round the corners of the button.
+
       1. Insert a **UICorner** object into the button.
       1. Select the new corner object, then in the **Properties** window, set **CornerRadius** to `0.2, 0` to round the corners.
 
@@ -754,6 +798,7 @@ To exactly recreate the blaster selector within the sample [Laser Tag](https://w
 
    1. Insert a **TextLabel** object into the button so you can display a call to action.
    1. Select the new label, then in the **Properties** window,
+
       1. Set **AnchorPoint** to `0.5, 0.5` to set the new label's origin point in the middle of itself (50% from the left to the right of the label, and 50% from the top to the bottom of the label).
       1. Set **BackgroundTransparency** to `1` to make the label's background completely transparent.
       1. Set **Position** to `{0.5, 0},{0.5, 0}` to move the label to the middle of the button (50% from the left to the right of the parent button, and 50% from the top to the bottom of the parent button).
@@ -767,6 +812,7 @@ To exactly recreate the blaster selector within the sample [Laser Tag](https://w
       <img src="../../../assets/tutorials/user-interface-design/Section3/BS-9E.png" width="80%" />
 
 1. Create a blaster button prefab.
+
    1. In the **ReplicatedStorage** service, create a folder structure to organize your UI objects. The sample uses an **Instances** folder with a child **Guis** folder.
    1. Insert an **ImageButton** object into the **Guis** folder.
    1. Select the new button, then in the **Properties** window,
@@ -797,7 +843,7 @@ To exactly recreate the blaster selector within the sample [Laser Tag](https://w
 
 The following script requires a set of scripts that work together to create the blaster selector. When a player joins the experience or respawns back into a round after their health reaches zero, this script activates all of the blaster selector's UI elements until the player makes their selection.
 
-``` lua
+```lua
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
@@ -821,7 +867,7 @@ The following `PickABlasterGuiController.setupBlasterButtons` module script requ
 - **SingleBlaster** - Produces a single beam that inflicts 10 points of damage.
 - **MultiBlaster** - Produces several beams with a wide, horizontal spread that each inflict 15 points of damage.
 
-Each  `Class.Configuration` instance includes properties and attributes that determine the blaster's behavior within a round, and its visual representation within the blaster selector.
+Each `Class.Configuration` instance includes properties and attributes that determine the blaster's behavior within a round, and its visual representation within the blaster selector.
 
 <GridContainer numColumns="2">
   <figure>
@@ -842,7 +888,7 @@ For example, the module script uses the following information to populate an ind
 
 When a player is in the process of selecting a blaster, `guid:GetAttributeChangedSignal()` listens for when the `selectedIndex` attribute changes. When this attribute changes, the blaster buttons update according to the new `selectedIndex` value. You can learn more about the `selectedIndex` attribute in the `ReplicatedStorage.UpdateSelectedIndex`.
 
-``` lua
+```lua
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local setupSelectButton = require(script.setupSelectButton)
@@ -901,7 +947,7 @@ When a player selects a blaster button with a different `selectedIndex` value fr
 
 To start, it defines a value for both selected and unselected buttons. When a player selects another button from the one that is currently in focus, the new selection becomes larger and more opaque than others within the blaster selector, and the previously selected button becomes the size of the button prefab and more translucent. The module script then updates the `newIndex` value, which also updates the `selectedIndex` attribute on the `PickABlasterGui`.
 
-``` lua
+```lua
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local blasterButtonPrefab = ReplicatedStorage.Instances.Guis.BlasterButtonPrefab
@@ -946,7 +992,7 @@ The following `PickABlasterGuiController.setupBlasterButtons.setupSelectButton` 
 
 For more information on what the server does with this information to equip the correct blaster type to the player, see [Add New Players](../gameplay-scripting/spawn-respawn.md#add-new-players) from the Gameplay Scripting curriculum.
 
-``` lua
+```lua
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local GuiAttribute = require(ReplicatedStorage.GuiAttribute)
@@ -968,7 +1014,7 @@ return setupSelectButton
 
 The following `PickABlasterGuiController.setupBlasterButtons.setupNavButtons` module script listens for activations of the left and right navigation buttons. When a player presses the left navigation button, it subtracts `1` from the `selectedIndex` attribute, meaning that the new `selectedIndex` value becomes the blaster button to the left of the previous `selectedIndex` value. Similarly, when a player presses the right navigation button, it adds `1` to the `selectedIndex` attribute, meaning that the new `selectedIndex` value becomes the blaster button to the right of the previous `selectedIndex` value.
 
-``` lua
+```lua
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local GuiAttribute = require(ReplicatedStorage.GuiAttribute)
@@ -1012,6 +1058,7 @@ A blast button is a UI component that players use to blast their blaster if they
 To exactly recreate the blast button within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) experience:
 
 1. Insert an **ImageButton** into the **HUDGui** `Class.ScreenGui` object.
+
    1. In the **Explorer** window, navigate to the **StarterGui** service.
    1. Hover over its child **HUDGui** object, then click the **⊕** icon. A contextual menu displays.
    1. From the contextual menu, insert an **ImageButton**.
@@ -1033,7 +1080,7 @@ To exactly recreate the blast button within the sample [Laser Tag](https://www.r
 
 The following script requires a set of module scripts that work together to set up the main Heads Up Display (HUD), including `setupTouchButtonAsync`. After a player joins a round and selects their blaster, this script ensures all HUD UI elements display appropriately for the player's state, device, and team status.
 
-``` lua
+```lua
 local Players = game:GetService("Players")
 
 local setPlayerPortrait = require(script.setPlayerPortrait)
@@ -1069,7 +1116,7 @@ This technique is useful because the engine dynamically changes the size and pos
 
 To finish, the script checks the player's last input type to verify if they are using a device that supports touch controls but **aren't** using touch input, such as using a gamepad alongside a tablet. If so, the button becomes invisible.
 
-``` lua
+```lua
 local Players = game:GetService("Players")
 local UserInputService = game:GetService("UserInputService")
 
@@ -1124,7 +1171,7 @@ return setupTouchButtonAsync
 
 The following `ReplicatedStorage.UserInputHandler` client script connects the blast functionality with user input. If the player is using touch controls and the blaster button is enabled on their device, the script listens for touch activation on the blaster button, then activates `attemptBlastClient`. For more information on `attemptBlastClient`and blaster behavior, see [Check Whether the Player Can Blast](../gameplay-scripting/implement-blasters.md#check-whether-the-player-can-blast) from the Gameplay Scripting curriculum.
 
-``` lua
+```lua
 local ContextActionService = game:GetService("ContextActionService")
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -1190,6 +1237,7 @@ To exactly recreate the player indicator component within the sample [Laser Tag]
    1. Hover over its child **HUDGui** object, then click the ⊕ icon. A contextual menu displays.
    1. From the contextual menu, insert a **Frame**.
 1. Select the new **Frame**, then in the **Properties** window,
+
    1. Set **AnchorPoint** to `0, 1` to set the frame's origin point in the bottom-middle of itself (0% from the left to the right of the frame, and 100% from the top to the bottom of the frame).
    1. Set **BackgroundTransparency** to `1` to make the label's background completely transparent.
    1. Set **Name** to **PlayerDisplay**.
@@ -1200,8 +1248,10 @@ To exactly recreate the player indicator component within the sample [Laser Tag]
       <img src="../../../assets/tutorials/user-interface-design/Section3/PI-2.jpg" width="80%" />
 
 1. Create the polygonal shape.
+
    1. Insert an **ImageLabel** into **PlayerDisplay**.
    1. Select the new label, then in the **Properties** window,
+
       1. Set **Image** to `rbxassetid://14304828123` to display the trapezoid icon.
       1. Set **AnchorPoint** to `1, 1` to set the label's origin point in the bottom-right of itself (100% from the left to the right of the label, and 100% from the top to the bottom of the label).
       1. Set **BackgroundTransparency** to `1` to make the label's background completely transparent.
@@ -1215,10 +1265,13 @@ To exactly recreate the player indicator component within the sample [Laser Tag]
 
       1. Insert a **UIAspectRatioConstraint** into **Block** to ensure the label and its children UI elements' aspect ratio remains the same no matter the player's screen size.
       1. Select the new constraint, then in the **Properties** window, set **AspectRatio** to `13.78`.
+
 1. Create the box for the player's portrait.
+
    1. Insert an **ImageLabel** into **PlayerDisplay**.
    1. Select the new label, then in the **Properties** window,
-      1. Remove the placeholder assetID within the **Image** property. The scripts in step 7 programmatically insert the player's portrait into the image label.
+
+      1. Remove the placeholder asset ID within the **Image** property. The scripts in step 7 programmatically insert the player's portrait into the image label.
       1. Set **AnchorPoint** to `0, 1` to set the label's origin point in the bottom-left of itself (0% from the left to the right of the label, and 100% from the top to the bottom of the label).
       1. Set **BackgroundColor3** to `0, 0, 0` to set the label's background color to black.
       1. Set **BackgroundTransparency** to `0.3` to reduce the opacity of the label by 30%, and match all black UI elements in the experience.
@@ -1236,8 +1289,10 @@ To exactly recreate the player indicator component within the sample [Laser Tag]
       <img src="../../../assets/tutorials/user-interface-design/Section3/PI-4D.jpg" width="80%" />
 
 1. Create the text label for the player's name.
+
    1. Insert a **TextLabel** object into **PlayerDisplay**.
    1. Select the new label, then in the **Properties** window,
+
       1. Set **AnchorPoint** to `0, 0.5` to set the new button's origin point in the left-middle of itself (0% from the left to the right of the button, and 50% from the top to the bottom of the button).
       1. Set **BackgroundTransparency** to `1` to make the label's background completely transparent.
       1. Set **Name** to **PlayerNameTextLabel**.
@@ -1252,8 +1307,10 @@ To exactly recreate the player indicator component within the sample [Laser Tag]
       <img src="../../../assets/tutorials/user-interface-design/Section3/PI-5.jpg" width="80%" />
 
 1. Create the team icons and colors that display to the left of the player's portrait.
+
    1. Insert a **Folder** into **PlayerDisplay**, then rename it **TeamIcons**.
    1. Create the **green** team icon and color.
+
       1. Insert an **ImageLabel** into **TeamIcons**.
       1. Select the new label, then in the **Properties** window,
          1. Set **AnchorPoint** to `0, 1` to set the label's origin point in the bottom-left of itself (0% from the left to the right of the label, and 100% from the top to the bottom of the label).
@@ -1286,6 +1343,7 @@ To exactly recreate the player indicator component within the sample [Laser Tag]
       <img src="../../../assets/tutorials/user-interface-design/Section3/PI-6B2.jpg" width="80%" />
 
    1. Create the **pink** team icon and color.
+
       1. Duplicate **TeamAIcon** and its children.
       1. Select the duplicate **TeamAIcon**, then in the **Properties** window,
          1. Set **BackgroundColor3** to `255, 170, 255` to set the label's background color to carnation pink.
@@ -1334,7 +1392,7 @@ After a player selects their blaster, the following `ReplicatedStorage.HUDGuiSet
 
 For more information on how players sort into a team with a unique team color, see [Creating Teams](../gameplay-scripting/create-teams.md) in the Gameplay Scripting curriculum.
 
-``` lua
+```lua
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
@@ -1417,6 +1475,7 @@ A force field screen is a UI element that overlays the viewport to inform player
 To exactly recreate the force field screen within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) experience:
 
 1. Insert an **ImageLabel** into the **ForceFieldGui** `Class.ScreenGui` object.
+
    1. In the **Explorer** window, navigate to the **StarterGui** service.
    1. Hover over its child **ForceFieldGui** object, then click the **⊕** icon. A contextual menu displays.
    1. From the contextual menu, insert an **ImageLabel**.
@@ -1424,6 +1483,7 @@ To exactly recreate the force field screen within the sample [Laser Tag](https:/
       <img src="../../../assets/tutorials/user-interface-design/Section3/Join-1C.png" />
 
 1. Select the new label, then in the **Properties** window,
+
    1. Set **Image** to `rbxassetid://14462567888`.
    1. Set **BackgroundTransparency** to `0.8` to make the force field translucent.
    1. Set **Size** to `{1, 0},{1, 0}` to make the image fill the entire screen (100% horizontally and 100% vertically of the parent ScreenGui).
@@ -1434,7 +1494,9 @@ To exactly recreate the force field screen within the sample [Laser Tag](https:/
 
 1. Insert a **UIGradient** object into the label.
 1. Select the new gradient object, then in the **Properties** window,
+
    1. Set **Color** to a color sequence that starts blue, turns white, then turns blue again.
+
       1. Set **Color** to `120, 192, 250` to apply a light blue hue to all of the hexagons.
       1. Click the **Color** property, then click the **⋯** button. A color sequence pop-up displays.
 
@@ -1450,12 +1512,14 @@ To exactly recreate the force field screen within the sample [Laser Tag](https:/
 
    1. Set **Rotation** to `225` to make the blue part of your color sequence display in the top-left and bottom-right corners.
 
-          <img src="../../../assets/tutorials/user-interface-design/Section3/Join-4Av2.png" width="80%" />
+      <img src="../../../assets/tutorials/user-interface-design/Section3/Join-4Av2.png" width="80%" />
 
    1. Set **Transparency** to a number sequence that makes the force field look like it's shimmering.
+
       1. Click the **Transparency** property, then click the **⋯** button. A number sequence pop-up displays. Each square at the start and end of the number sequence is a keypoint that determines the transparency value of the property at that point of the image from left to right.
 
       1. Set the following time and value properties throughout the number sequence:
+
       - **Time** = `0`, **Value** = `0.25`
       - **Time** = `.101`, **Value** = `0.875`
       - **Time** = `.183`, **Value** = `0`
@@ -1469,11 +1533,13 @@ To exactly recreate the force field screen within the sample [Laser Tag](https:/
 
 1. Duplicate the **ImageLabel** from step 2.
 1. Select the **UIGradient** object within the duplicate label, then in the **Properties** window,
+
    1. Set **Rotation** to `-45` to flip the image so that it nearly mirrors each other along the Y axis.
 
       <img src="../../../assets/tutorials/user-interface-design/Section3/Join-6A.png" width="80%" />
 
    1. Modify **Transparency** to make the shimmer look more organic.
+
       1. Click the **Transparency** property, then click the **⋯** button. A number sequence pop-up displays.
       1. Select the third keyframe, then click the **Delete** button.
 
@@ -1499,7 +1565,7 @@ This script starts by listening to when the `Class.ForceField` is added to a cha
   </figure>
 </GridContainer>
 
-``` lua
+```lua
 local Players = game:GetService("Players")
 
 local localPlayer = Players.LocalPlayer
@@ -1535,7 +1601,7 @@ After a player selects their blaster, the following `ReplicatedStorage.scheduleD
 
 Once the player meets one of these three conditions, they can receive damage from the enemy team. For more information on these conditions, see [Customize Force Fields](../gameplay-scripting/spawn-respawn.md#customize-force-fields) from the Gameplay Scripting curriculum.
 
-``` lua
+```lua
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
@@ -1616,7 +1682,9 @@ For more information on custom respawning behavior in the sample laser tag exper
 To exactly recreate the respawn screen within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) experience:
 
 1. Create the center information banner.
+
    1. Insert an **ImageLabel** into the **OutStateGui** `Class.ScreenGui` object.
+
       1. In the **Explorer** window, navigate to the **StarterGui** service.
       1. Hover over its child **OutStateGui** object, then click the **⊕** icon. A contextual menu displays.
       1. From the contextual menu, insert an **ImageLabel**.
@@ -1624,6 +1692,7 @@ To exactly recreate the respawn screen within the sample [Laser Tag](https://www
          <img src="../../../assets/tutorials/user-interface-design/Section3/Respawn-1A.png" />
 
    1. Select the new label, then in the **Properties** window,
+
       1. Set **AnchorPoint** to `0.5, 0.5` to set the new button's origin point in the middle of itself (50% from the left to the right of the label, and 50% from the top to the bottom of the label).
       1. Set **BackgroundTransparency** to `1` to make the label's background completely transparent.
       1. Set **Position** to `{0.5, 0},{0.5, 0}` to set the label in the middle of its container (50% from the left to the right of the parent ScreenGui, and 50% from the top to the bottom of the parent ScreenGui).
@@ -1639,6 +1708,7 @@ To exactly recreate the respawn screen within the sample [Laser Tag](https://www
    1. Select the new constraint, then in the **Properties** window, set **AspectRatio** to `13.78`.
    1. Insert a **TextLabel** into **Block** for the informational text.
    1. Select the new label, then in the **Properties** window,
+
       1. Set **AnchorPoint** to `0.5, 0.5` to set the label's origin point in the middle of itself (50% from the left to the right of the label, and 50% from the top to the bottom of the label).
       1. Set **BackgroundTransparency** to `1` to make the label's background completely transparent.
       1. Set **Position** to `{0.5, 0},{0.5, 0}` to set the label in the middle of its parent label (50% from the left to the right of the parent label, and 50% from the top to the bottom of the parent label).
@@ -1653,8 +1723,10 @@ To exactly recreate the respawn screen within the sample [Laser Tag](https://www
          <img src="../../../assets/tutorials/user-interface-design/Section3/Respawn-1F.png" width="80%" />
 
 1. Create the header.
+
    1. Insert an **ImageLabel** into **Block**.
    1. Select the new label, then in the **Properties** window,
+
       1. Set **AnchorPoint** to `0.5, 1` to set the label's origin point in the bottom-middle of itself (50% from the left to the right of the label, and 100% from the top to the bottom of the label).
       1. Set **BackgroundTransparency** to `1` to make the label's background completely transparent.
       1. Set **Position** to `{0.5, 0},{0, 0}` to set the label at the top-middle of its parent label (50% from the left to the right of the parent label, and 0% from the top to the bottom of the parent label).
@@ -1667,6 +1739,7 @@ To exactly recreate the respawn screen within the sample [Laser Tag](https://www
 
    1. Insert a **TextLabel** into **Header** for the informational text.
    1. Select the new label, then in the **Properties** window,
+
       1. Set **AnchorPoint** to `0.5, 0.5` to set the label's origin point in the middle of itself (50% from the left to the right of the label, and 50% from the top to the bottom of the label).
       1. Set **BackgroundTransparency** to `1` to make the label's background completely transparent.
       1. Set **Position** to `{0.5, 0},{0.5, 0}` to set the label in the middle of its parent label (50% from the left to the right of the parent label, and 50% from the top to the bottom of the parent label).
@@ -1681,6 +1754,7 @@ To exactly recreate the respawn screen within the sample [Laser Tag](https://www
          <img src="../../../assets/tutorials/user-interface-design/Section3/Respawn-2D.png" width="80%" />
 
 1. Create the fade around the borders of the screen.
+
    1. Insert an **ImageLabel** into **OutStateGui**.
    1. Select the new label, then in the **Properties** window,
       1. Set **AnchorPoint** to `0.5, 0.5` to set the label's origin point in the middle of itself (50% from the left to the right of the label, and 50% from the top to the bottom of the label).
@@ -1713,7 +1787,7 @@ When a player's health reaches zero, their `playerState` becomes `TaggedOut`, wh
 
 When the player respawns, their `playerState` becomes `SelectingBlaster`, which triggers the `onSelectingBlaster()` function. `onSelectingBlaster()` then exclusively enables the `StarterGui.PickABlasterGui`, which automatically disables the respawn screen. For more information on these conditions, see [Handle Client State](../gameplay-scripting/spawn-respawn.md#handle-client-state) from the Gameplay Scripting curriculum.
 
-``` lua
+```lua
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
 
@@ -1842,7 +1916,7 @@ To create a `Class.SurfaceGui` object:
 1. Rename the **SurfaceGui** according to the context of its child UI elements.
 1. Repeat this process for every UI element you need to display on a part's surface in the 3D space.
 
-    <img src="../../../assets/tutorials/user-interface-design/Section3/SurfaceGuiContainers.png" width="320" />
+<img src="../../../assets/tutorials/user-interface-design/Section3/SurfaceGuiContainers.png" width="320" />
 
 ### Cooldown meter
 
@@ -1853,10 +1927,12 @@ A cooldown meter is a UI component that informs players how long they have to wa
 To exactly recreate the cooldown meter within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) experience:
 
 1. Create a part to hold your `Class.SurfaceGui` object.
+
    1. In the **Explorer** window, hover over the **Workspace**, then click the ⊕ icon. A contextual menu displays.
    1. From the contextual menu, insert a **block** part. This is a temporary location for the part so that you can visualize the changes in each step of the process.
 
 1. Position and orient the part around the position of where a player's character would hold their blaster, then in the **Properties** window,
+
    1. Set **Transparency** to 1 to make the part completely transparent.
    1. Set **Name** to **CooldownBarPrefab**.
    1. Set **Size** to `0.169, 0.027, 2.537` to scale the part to a size about the length of the blaster.
@@ -1866,6 +1942,7 @@ To exactly recreate the cooldown meter within the sample [Laser Tag](https://www
 
 1. Insert a **SurfaceGui** into **CooldownBarPrefab**.
 1. Select the new **SurfaceGui**, then in the **Properties** window,
+
    1. Set **Face** to **Top** so the UI displays facing upward.
    1. Set **LightInfluence** and **MaxDistance** to `0`.
    1. Set **PixelsPerStud** to `200`.
@@ -1873,8 +1950,10 @@ To exactly recreate the cooldown meter within the sample [Laser Tag](https://www
       <img src="../../../assets/tutorials/user-interface-design/Section3/CooldownMeter-3C.png" width="80%" />
 
 1. Create the black bar.
+
    1. Insert an **ImageLabel** into the **SurfaceGui**.
    1. Select the new label, then in the **Properties** window,
+
       1. Remove the default **Image** value.
       1. Set **AnchorPoint** to `0.5, 0.5` to set the label's origin point in the middle of itself (50% from the left to the right of the label, and 50% from the top to the bottom of the label).
       1. Set **BackgroundColor3** to `0,0,0` to set the label's background color to black.
@@ -1886,6 +1965,7 @@ To exactly recreate the cooldown meter within the sample [Laser Tag](https://www
       <img src="../../../assets/tutorials/user-interface-design/Section3/CooldownMeter-4B.png" width="80%" width="80%" />
 
 1. Round the corners of the container.
+
    1. Insert a **UICorner** object into **Container**.
    1. Select the **UICorner**, then in the **Properties** window, set **CornerRadius** to `0.15, 0` to slightly round the corners.
 
@@ -1905,11 +1985,13 @@ To exactly recreate the cooldown meter within the sample [Laser Tag](https://www
    1. Insert a **UICorner** object into **Bar**.
    1. Select the **UICorner**, then in the **Properties** window, set **CornerRadius** to `0.15, 0` to slightly round the corners.
 1. Move **CooldownBarPrefab** to **ReplicatedStorage**.
+
    1. Create a folder structure to organize your UI objects. The sample uses an **Instances** folder with a child **Guis** folder.
 
       <img src="../../../assets/tutorials/user-interface-design/Section3/CooldownMeter-9A.png" />
 
    1. Move **CooldownBarPrefab** into **Guis**.
+
 1. Reference the following `Class.ReplicatedStorage` scripts within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) place file that programmatically attach the cooldown meter to the player's blaster, then animate the red bar after a player blasts their blaster.
 
 <Tabs>
@@ -1917,7 +1999,7 @@ To exactly recreate the cooldown meter within the sample [Laser Tag](https://www
 
 The following `ReplicatedStorage.FirstPersonBlasterVisuals` client script handles all visual logic for the player's first-person blaster. It requires a set of module scripts that work together to set up blaster visuals that feel more realistic for laser tag gameplay, including `FirstPersonBlasterVisuals.addCooldownBar` and `FirstPersonBlasterVisuals.runCooldownBarEffect`.
 
-``` lua
+```lua
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Workspace = game:GetService("Workspace")
@@ -2011,7 +2093,7 @@ end)
 
 The following `FirstPersonBlasterVisuals.addCooldownBar` module script attaches a new instance of the cooldown meter to the player's blaster. When a player selects a blaster, the script moves and welds the cooldown meter part to the blaster in a location that tilts the cooldown meter toward the camera.
 
-``` lua
+```lua
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local cooldownBarPrefab = ReplicatedStorage.Instances.Guis.CooldownBarPrefab
@@ -2043,7 +2125,7 @@ The following `FirstPersonBlasterVisuals.runCooldownBarEffect` module script han
 
 For more information on blaster behavior, see [Implement Blasters](../gameplay-scripting/implement-blasters.md) from the Gameplay Scripting curriculum.
 
-``` lua
+```lua
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local TweenService = game:GetService("TweenService")
 
@@ -2117,6 +2199,7 @@ To exactly recreate the team indicator within the sample [Laser Tag](https://www
       <img src="../../../assets/tutorials/user-interface-design/Section3/TI-1.jpg" width="80%" />
 
 1. Select the new **BillboardGui**, then in the **Properties** window,
+
    1. Set **LightInfluence** to `0` to prevent environmental light from affecting the color of the indicator.
    1. Set **Name** to **OtherPlayerIndicatorPrefab**.
    1. Set **Size** to `{0, 10},{0, 10}` to make the label significantly smaller.
@@ -2126,6 +2209,7 @@ To exactly recreate the team indicator within the sample [Laser Tag](https://www
 
 1. Insert a **Frame** object into **OtherPlayerIndicatorPrefab**.
 1. Select the new frame, then in the **Properties** window,
+
    1. Set **AnchorPoint** to `0.5, 0.5` to set the frame's origin point in the middle of itself (50% from the left to the right of the label, and 50% from the top to the bottom of the label).
    1. Set **BackgroundColor3** to `255, 3, 0` to set the frame's background color to red as a placeholder color.
    1. Set **Position** to `{0.5, 0},{0.5, 0}` to set the frame to the middle of its container (50% from the left to the right of the parent BillboardGui, and 50% from the top to the bottom of the parent BillboardGui).
@@ -2135,11 +2219,11 @@ To exactly recreate the team indicator within the sample [Laser Tag](https://www
 
 1. Insert a **UICorner** object into **Frame** to completely round the corners.
 
-      <img src="../../../assets/tutorials/user-interface-design/Section3/TI-5.jpg" width="80%" />
+   <img src="../../../assets/tutorials/user-interface-design/Section3/TI-5.jpg" width="80%" />
 
 1. Insert a **UIStroke** object into **Frame** to outline the circle of the indicator.
 
-      <img src="../../../assets/tutorials/user-interface-design/Section3/TI-6.jpg" width="80%" />
+   <img src="../../../assets/tutorials/user-interface-design/Section3/TI-6.jpg" width="80%" />
 
 1. Move **OtherPlayerIndicatorPrefab** to **ReplicatedStorage**.
 1. Reference the following `Class.ReplicatedStorage` script within the sample [Laser Tag 1A](https://www.roblox.com/games/14817965191/Laser-Tag-1A) place file that programmatically displays the team indicator for every player in an active round unless they are on the enemy team and occluded.
@@ -2151,7 +2235,7 @@ The following `ReplicatedStorage.OtherPlayerIndicatorGuiSetup` script runs when 
 
 If other players are on the same team, the team indicator always displays, even if they hide behind objects in the 3D space; if other players are on the enemy team, the team indicator only displays if there isn't an object in the 3D space to occlude them.
 
-``` lua
+```lua
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
@@ -2286,6 +2370,7 @@ A tagged out indicator is a UI element that informs players when other players a
 To exactly recreate the tagged out indicator within the sample [Laser Tag](https://www.roblox.com/games/14817965191/Laser-Tag-1A) experience:
 
 1. Insert a **BillboardGui** object into a temporary rig so that you can visualize the changes in each step of the process.
+
    1. From the toolbar's **Avatar** tab, click **Rig Builder**.
    1. ​Select from the available options. The sample uses a **R15** rig type, a **masculine** body shape, and a **Rthro** avatar. The rig displays both in the 3D viewport and in the **Explorer** window under the name **Rig**.
    1. In the **Explorer** window, navigate to the rig's child **Head** mesh, then click the **⊕** icon. A contextual menu displays.
@@ -2294,6 +2379,7 @@ To exactly recreate the tagged out indicator within the sample [Laser Tag](https
       <img src="../../../assets/tutorials/user-interface-design/Section3/TOI-1.png" width="80%" />
 
 1. Select the new **BillboardGui**, then in the **Properties** window,
+
    1. Set **LightInfluence** to `0` to prevent environmental light from affecting the color of the indicator.
    1. Set **Name** to **TaggedOutIndicatorGuiPrefab**.
    1. Set **Size** to `{3, 0},{0.5, 0}` to widen the space for a label.
@@ -2303,6 +2389,7 @@ To exactly recreate the tagged out indicator within the sample [Laser Tag](https
 
 1. Insert an **ImageLabel** object into **TaggedOutIndicatorGuiPrefab**.
 1. Select the new label, then in the **Properties** window,
+
    1. Set **AnchorPoint** to `0.5, 0.5` to set the label's origin point in the middle of itself (50% from the left to the right of the label, and 50% from the top to the bottom of the label).
    1. Set **BackgroundTransparency** to `1` to make the label's background completely transparent.
    1. Set **Name** to **Frame**.
@@ -2319,6 +2406,7 @@ To exactly recreate the tagged out indicator within the sample [Laser Tag](https
 
 1. Insert a **TextLabel** object into **Frame**.
 1. Select the new label, then in the **Properties** window,
+
    1. Set **AnchorPoint** to `0.5, 0.5` to set the label's origin point in the middle of itself (50% from the left to the right of the label, and 50% from the top to the bottom of the label).
    1. Set **BackgroundTransparency** to `1` to make the label's background completely transparent.
    1. Set **Name** to **BodyTextLabel**.
@@ -2340,7 +2428,7 @@ To exactly recreate the tagged out indicator within the sample [Laser Tag](https
 
 The following `ServerScriptService.SetupHumanoid` server script runs as soon as a player loads the experience. It ensures that whenever a player's character is added to the data model, `setupHumanoidAsync` is called with their `Class.Humanoid`.
 
-``` lua
+```lua
 local Players = game:GetService("Players")
 
 local setupHumanoidAsync = require(script.setupHumanoidAsync)
@@ -2404,13 +2492,13 @@ return setupHumanoidAsync
   </TabItem>
   <TabItem key = "3" label="onHumanoidDied">
 
-The following `setupHumanoidAsync.onHumanoidDied` module script handles all of the logic when a player character's `Class.Humanoid` is tagged out from a round. The script starts by changing the  `playerState` to`TaggedOut`, which allows other scripts to trigger behavior for the player whose health reached zero, such as displaying the first-person respawn screen.
+The following `setupHumanoidAsync.onHumanoidDied` module script handles all of the logic when a player character's `Class.Humanoid` is tagged out from a round. The script starts by changing the `playerState` to`TaggedOut`, which allows other scripts to trigger behavior for the player whose health reached zero, such as displaying the first-person respawn screen.
 
 The script then clones and adds the tagged out indicator to the character's `Head` so other players know they are in the process of respawning back to their team's spawn zone. In addition, it adds an `AlignOrientation` instance to the character so that it doesn't fall over due to gravity or other players colliding with the character.
 
 When the player respawns, their `playerState` becomes `SelectingBlaster`, automatically disabling the tagged out indicator. `SetupHumanoid`handles calling `setupHumanoidAsync`, then the process starts again.
 
-``` lua
+```lua
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local PlayerState = require(ReplicatedStorage.PlayerState)

@@ -36,7 +36,9 @@ properties:
       can_load: true
       can_save: true
     capabilities:
+      - Basic
       - UI
+      - Input
     writeCapabilities: []
   - name: Handles.Style
     summary: |
@@ -57,7 +59,9 @@ properties:
       can_load: true
       can_save: true
     capabilities:
+      - Basic
       - UI
+      - Input
     writeCapabilities: []
 methods: []
 events:
@@ -76,7 +80,9 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
+      - Basic
       - UI
+      - Input
     writeCapabilities: []
   - name: Handles.MouseButton1Up
     summary: |
@@ -93,7 +99,9 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
+      - Basic
       - UI
+      - Input
     writeCapabilities: []
   - name: Handles.MouseDrag
     summary: |
@@ -116,7 +124,9 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
+      - Basic
       - UI
+      - Input
     writeCapabilities: []
   - name: Handles.MouseEnter
     summary: |
@@ -133,7 +143,9 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
+      - Basic
       - UI
+      - Input
     writeCapabilities: []
   - name: Handles.MouseLeave
     summary: |
@@ -150,6 +162,8 @@ events:
     deprecation_message: ''
     security: None
     capabilities:
+      - Basic
       - UI
+      - Input
     writeCapabilities: []
 callbacks: []

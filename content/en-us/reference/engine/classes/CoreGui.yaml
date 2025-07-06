@@ -46,10 +46,10 @@ properties:
     writeCapabilities: []
   - name: CoreGui.Version
     summary: |
-      The current version of the CoreGui. Everytime the CoreGui is majorly
+      The current version of the CoreGui. Every time the CoreGui is majorly
       changed, this number is increased.
     description: |
-      The current version of the CoreGui. Everytime the CoreGui is majorly
+      The current version of the CoreGui. Every time the CoreGui is majorly
       changed, this number is increased.
     code_samples: []
     type: int

@@ -34,7 +34,7 @@ In the context of `Class.TextBox` input, the following example gathers input on 
 Do not filter text in real-time "per character entered" into a `Class.TextBox`, as doing so yields for text that's only visible to the user typing it. Instead, filter the entered text **after** the user submits it.
 </Alert>
 
-```lua title="Filtering text input - client script"
+```lua title="Filtering Text Input - Client Script"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local textBox = script.Parent

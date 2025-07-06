@@ -3,7 +3,7 @@ title: Avatar Setup
 description: The Avatar Setup tool previews animations, clothing, accessories, and body constructs on avatar rigs, directly in Studio.
 ---
 
-The **Avatar Setup tool** helps accelerate the avatar creation process by automatically processing custom models into avatar assets:
+The **Avatar Setup tool** helps accelerate the avatar character, clothing, and accessory creation process by automatically processing custom models into avatar assets:
 
 1. **Input a model** you intend to convert to an avatar model. If the model doesn't include [properly configured avatar components](../art/characters/index.md#components-of-an-avatar), the tool **automatically** adds them.
 2. **Preview the avatar character model** with different animation, clothes, skin, facial poses, and more.

@@ -19,7 +19,7 @@ local queue = MemoryStoreService:GetQueue("Queue1")
 
 When a queue is processing an item in it, the invisibility timeout applies to the item, turning it invisible from being processed by other servers, as multiple servers can update the queue concurrently. Though it's expected to complete both read and removal operations for an item during the invisibility timeout duration, if an error occurs that causes the item to remain in the queue after the timeout elapses, the items become visible for processing again. In doing this, the invisibility timeout guarantees that all items in a queue can still be processed even if unexpected issues occur.
 
-After you get a queue, call any of the following functions to read or write data in it:
+After you get a queue, call any of the following functions:
 
 <table>
 <thead>
@@ -40,6 +40,10 @@ After you get a queue, call any of the following functions to read or write data
   <tr>
     <td>`Class.MemoryStoreQueue:RemoveAsync()`</td>
     <td>[Remove](#read-and-remove-data) one or more items previously read from the queue.</td>
+  </tr>
+  <tr>
+    <td>`Class.MemoryStoreQueue:GetSizeAsync()`</td>
+    <td>[Get](#get-size) the number of items in the queue.</td>
   </tr>
 </tbody>
 </table>
@@ -97,5 +101,37 @@ while true do
 			warn(removeError)
 		end
 	end
+end
+```
+
+## Get size
+
+To get the number of items in the queue, call
+`Class.MemoryStoreQueue:GetSizeAsync()`. This method takes an optional boolean `excludeInvisible`.
+When it is `true`, invisible items are excluded from the returned count.
+This boolean defaults to `false`.
+
+```lua title="Getting the Size of a Queue"
+local MemoryStoreService = game:GetService("MemoryStoreService")
+
+local queue = MemoryStoreService:GetQueue("Queue1")
+
+local addSuccess, addError = pcall(function()
+	return queue:AddAsync("User_1234", 30, 1)
+end)
+
+if not addSuccess then
+	warn(addError)
+end
+
+local size
+local success, sizError = pcall(function()
+	size = queue:GetSizeAsync(true)
+end)
+
+if success then
+	print(size)
+else
+	warn(sizeError)
 end
 ```

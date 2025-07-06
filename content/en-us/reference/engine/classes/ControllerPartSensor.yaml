@@ -35,7 +35,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: ControllerPartSensor.HitNormal
     summary: |
@@ -55,7 +56,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: ControllerPartSensor.SearchDistance
     summary: |
@@ -76,7 +78,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: ControllerPartSensor.SensedPart
     summary: |
@@ -95,7 +98,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
   - name: ControllerPartSensor.SensorMode
     summary: |
@@ -124,7 +128,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
     writeCapabilities: []
 methods: []
 events: []

@@ -61,7 +61,7 @@ funnelSessionId = HttpService:GenerateGUID()
 AnalyticsService:LogFunnelStepEvent(
     player,
     "ArmoryCheckout", -- Funnel name used to group steps together
-    funnelSessionId, -- Funnel session id for this unique checkout session
+    funnelSessionId, -- Funnel session ID for this unique checkout session
     1, -- Step number
     "Opened Store" -- Step name
 )
@@ -70,7 +70,7 @@ AnalyticsService:LogFunnelStepEvent(
 AnalyticsService:LogFunnelStepEvent(
     player,
     "ArmoryCheckout", -- Funnel name used to group steps together
-    funnelSessionId, -- Funnel session id for this unique checkout session
+    funnelSessionId, -- Funnel session ID for this unique checkout session
     2, -- Step number
     "Viewed Item" -- Step name
 )
@@ -79,7 +79,7 @@ AnalyticsService:LogFunnelStepEvent(
 AnalyticsService:LogFunnelStepEvent(
     player,
     "ArmoryCheckout", -- Funnel name used to group steps together
-    funnelSessionId, -- Funnel session id for this unique checkout session
+    funnelSessionId, -- Funnel session ID for this unique checkout session
     3, -- Step number
     "Added to Cart" -- Step name
 )

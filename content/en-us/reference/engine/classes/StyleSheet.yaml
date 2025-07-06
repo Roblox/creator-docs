@@ -1,8 +1,14 @@
 name: StyleSheet
 type: class
 memory_category: Gui
-summary: ''
-description: ''
+summary: |
+  Aggregates `Class.StyleRule|StyleRules` and can be linked to `Class.DataModel`
+  trees to apply style properties to instances.
+description: |
+  Aggregates `Class.StyleRule|StyleRules` and can be linked to `Class.DataModel`
+  trees to apply style properties to instances. Note that a `StyleSheet` may
+  exist outside the `Class.DataModel`, but it cannot be derived or linked to a
+  `Class.DataModel` tree in such a case.
 code_samples: []
 inherits:
   - StyleBase
@@ -11,13 +17,18 @@ deprecation_message: ''
 properties: []
 methods:
   - name: StyleSheet:GetDerives
-    summary: ''
-    description: ''
+    summary: |
+      Returns an array of other `StyleSheets` from which the `StyleSheet` is
+      deriving `Class.StyleRule|StyleRules` and token definitions.
+    description: |
+      Returns an array of other `StyleSheets` from which the `StyleSheet` is
+      deriving `Class.StyleRule|StyleRules` and token definitions.
     code_samples: []
     parameters: []
     returns:
       - type: Instances
-        summary: ''
+        summary: |
+          Array of other `StyleSheets`.
     tags: []
     deprecation_message: ''
     security: None
@@ -25,14 +36,71 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: StyleSheet:SetDerives
-    summary: ''
-    description: ''
+    summary: |
+      Sets the `StyleSheet` to derive `Class.StyleRule|StyleRules` and token
+      definitions from one or more other `StyleSheets`.
+    description: |
+      Sets the `StyleSheet` to derive `Class.StyleRule|StyleRules` and token
+      definitions from one or more other `StyleSheets` in the order they are
+      listed. This method spawns the appropriate `Class.StyleDerive` instances
+      and sets their priorities to establish the specified derivations.
+
+      ```lua
+      local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+      local coreSheet = ReplicatedStorage:FindFirstChild("CoreSheet")
+
+      -- Create a tokens style sheet
+      local tokensSheet = Instance.new("StyleSheet")
+      tokensSheet.Name = "Tokens"
+      tokensSheet.Parent = ReplicatedStorage
+      -- Set tokens (attributes) on tokens sheet
+      tokensSheet:SetAttribute("LightGray", Color3.new(0.9, 0.9, 0.9))
+      tokensSheet:SetAttribute("DarkGray", Color3.new(0.2, 0.2, 0.2))
+
+      -- Create theme style sheets
+      local lightThemeSheet = Instance.new("StyleSheet")
+      lightThemeSheet.Name = "LightTheme"
+      lightThemeSheet:SetAttribute("Background", "$LightGray")
+      lightThemeSheet.Parent = ReplicatedStorage
+      local darkThemeSheet = Instance.new("StyleSheet")
+      darkThemeSheet.Name = "DarkTheme"
+      darkThemeSheet:SetAttribute("Background", "$DarkGray")
+      darkThemeSheet.Parent = ReplicatedStorage
+
+      -- Set theme sheets to derive from tokens sheet
+      lightThemeSheet:SetDerives({ tokensSheet })
+      darkThemeSheet:SetDerives({ tokensSheet })
+
+      local themeDerive = Instance.new("StyleDerive")
+      themeDerive.Parent = coreSheet
+      themeDerive.StyleSheet = lightThemeSheet
+
+      -- Function to dynamically change the derived theme for the core sheet
+      local function changeTheme()
+      	if themeDerive.StyleSheet == lightThemeSheet then
+      		themeDerive.StyleSheet = darkThemeSheet
+      	elseif themeDerive.StyleSheet == darkThemeSheet then
+      		themeDerive.StyleSheet = lightThemeSheet
+      	end
+      end
+      ```
+
+      Note that if you've created a design using the
+      [Style Editor](../../../ui/styling/editor.md), the **StyleSheet** sheet in
+      the **Design** folder of `Class.ReplicatedStorage` will contain a
+      `Class.StyleDerive` to the **BaseStyleSheet** also in the **Design**
+      folder. When setting derives with `SetDerives()`, be sure to include the
+      base style sheet in the spot of least priority in relation to other
+      `StyleSheets` in the `derives` array.
     code_samples: []
     parameters:
       - name: derives
         type: Instances
         default: ''
-        summary: ''
+        summary: |
+          Array of other `StyleSheets` to derive `Class.StyleRule|StyleRules`
+          and token definitions from.
     returns:
       - type: ()
         summary: ''

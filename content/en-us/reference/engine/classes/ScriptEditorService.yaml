@@ -367,6 +367,10 @@ methods:
         type: LuaSourceContainer
         default: ''
         summary: ''
+      - name: options
+        type: Dictionary
+        default: nil
+        summary: ''
     returns:
       - type: Tuple
         summary: ''

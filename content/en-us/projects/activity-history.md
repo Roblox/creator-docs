@@ -18,8 +18,6 @@ description: Activity history is a log of key configuration, publish, and edit a
 	</Grid>
 </Grid>
 
-## Work with Activity History
-
 To open the Activity History view in Studio, your experience must be saved to Roblox.
 
 1. In the [View](../studio/view-tab.md) tab, select **Activity History**. Events are displayed in chronological order, with the most recent appearing first.

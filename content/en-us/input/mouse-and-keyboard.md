@@ -1,7 +1,6 @@
 ---
 title: Mouse and keyboard input
 description: Explains Roblox support for computer mice and keyboards.
-machineTranslated: true
 ---
 
 A large percentage of Roblox sessions are played on devices with a mouse and keyboard, so it's important to properly support these inputs when designing an experience for a wide audience. Once you're comfortable with mouse and keyboard inputs, make your experience compatible across multiple platforms by setting up [mobile](../input/mobile.md) and [gamepad](./gamepad.md) inputs.
@@ -11,8 +10,6 @@ For convenience, Roblox sets the most common mouse and keyboard inputs as [defau
 ## Generic mouse input
 
 Like all device inputs, you can capture mouse inputs using `Class.UserInputService`. This service provides a scalable way to capture input changes and device input states for multiple devices at once. Roblox also supports legacy mouse input detection with `Class.PlayerMouse` and `Class.ClickDetector|ClickDetectors`.
-
-Additionally, you can use `Class.ContextActionService` to handle multiple actions on a single input depending on context, such as using a tool when near a rock, or opening a door when inside a building. See [Context Dependent Inputs](../input/mobile.md#context-dependent-inputs) for information on setting context specific input actions.
 
 The following `Class.LocalScript`, when placed in `Class.StarterPlayerScripts`, captures mouse clicks and prints the mouse position to the [Output](../studio/output.md) window:
 
@@ -58,12 +55,6 @@ end
 UserInputService.InputEnded:Connect(onInputEnded)
 ```
 
-## UI input
-
-Mouse and keyboard input automatically works with interactive UI elements such as `Class.TextButton|TextButtons` and `Class.ImageButton|ImageButtons`, as well as `Class.TextBox|TextBoxes` which capture text input like a field in a form.
-
-For more information on creating buttons and text input objects, see [Buttons](../ui/buttons.md) and [Text Input](../ui/text-input.md).
-
 ## Character movement modes
 
 You can set mouse and keyboard movement controls schemes for Roblox experiences by changing the values of `Class.StarterPlayer.DevComputerMovementMode` to one of the following:
@@ -77,31 +68,31 @@ You can set mouse and keyboard movement controls schemes for Roblox experiences 
 </thead>
 <tbody>
 	<tr>
-    <td>**UserChoice**</td>
-    <td>Allows users to choose their desired control scheme from the in-experience menu. This option is enabled by default.</td>
+    <td>`Enum.DevComputerMovementMode|UserChoice`</td>
+    <td>Allows players to choose their desired control scheme from the in-experience menu. This is the default movement mode.</td>
   </tr>
 	<tr>
-    <td>**KeyboardMouse**</td>
-    <td>Users can press <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> to move and <kbd>Space</kbd> to jump. This is the default setting for keyboard and mouse users for the **UserChoice** setting.</td>
+    <td>`Enum.DevComputerMovementMode|KeyboardMouse`</td>
+    <td>Player's control their character with the keyboard and mouse using the [default bindings](#roblox-default-bindings).</td>
   </tr>
   <tr>
-    <td>**ClickToMove**</td>
-    <td>Users can only move through the experience by right-clicking a target location.</td>
+    <td>`Enum.DevComputerMovementMode|ClickToMove`</td>
+    <td>Players can only move through the experience by clicking a target location. The player's character will automatically jump when hitting a surmountable obstacle/gap while moving to the click destination.</td>
   </tr>
   <tr>
-    <td>**Scriptable**</td>
-    <td>Disables all default controls and allows you to [bind your own controls](#binding-and-unbinding-actions).</td>
+    <td>`Enum.DevComputerMovementMode|Scriptable`</td>
+    <td>Disables all default controls and allows you to script your own control scheme.</td>
   </tr>
 </tbody>
 </table>
 
 ## Mouse icons
 
-You can customize the appearance and behavior of a user's mouse icon within your experience to create a cohesive style across all of your UI elements. This includes temporarily changing the user's mouse icon in specific circumstances, such as hovering over a button.
+You can customize the appearance and behavior of a player's mouse icon within your experience to create a cohesive style across all of your UI elements. This includes temporarily changing the player's mouse icon in specific circumstances, such as hovering over a button.
 
 ### Change the icon
 
-You can change the user's mouse icon in a `Class.LocalScript` by setting the `Class.UserInputService.MouseIcon|MouseIcon` property in `Class.UserInputService` to a custom Roblox asset ID. For example, the following `Class.LocalScript` changes the user's default mouse icon to a circle with a blue dot in the middle:
+You can change the player's mouse icon in a `Class.LocalScript` by setting the `Class.UserInputService.MouseIcon|MouseIcon` property in `Class.UserInputService` to a custom Roblox asset ID. For example, the following `Class.LocalScript` changes the player's default mouse icon to a circle with a blue dot in the middle:
 
 ```lua highlight="3"
 local UserInputService = game:GetService("UserInputService")
@@ -111,7 +102,7 @@ UserInputService.MouseIcon = "rbxassetid://3400146391"
 
 ### Hide the icon
 
-You can hide the user's mouse icon by setting the `Class.UserInputService.MouseIconEnabled` to `false` in a `Class.LocalScript`. For example, the following code switches the mouse icon from visible to invisible and back every two seconds:
+You can hide the player's mouse icon by setting the `Class.UserInputService.MouseIconEnabled` to `false` in a `Class.LocalScript`. For example, the following code switches the mouse icon from visible to invisible and back every two seconds:
 
 ```lua highlight="5,7"
 local UserInputService = game:GetService("UserInputService")
@@ -128,7 +119,7 @@ end
 
 You can lock the mouse icon's position to the screen using `Class.UserInputService.MouseBehavior` with a `Enum.MouseBehavior` value of `Enum.MouseBehavior|LockCurrentPosition` or `Enum.MouseBehavior|LockCenter`, then unlock it again with a value of `Enum.MouseBehavior|Default`.
 
-If a user's mouse icon is locked in a position, `Class.UserInputService.InputChanged` still fires when the user moves the mouse, passing in the distance the mouse has moved. For example, the following code sample locks the user's mouse icon after one second, then Studio prints the mouse delta whenever the user moves their mouse:
+If a player's mouse icon is locked in a position, `Class.UserInputService.InputChanged` still fires when the player moves the mouse, passing in the distance the mouse has moved. For example, the following code sample locks the player's mouse icon after one second, then Studio prints the mouse delta whenever the player moves their mouse:
 
 ```lua highlight="5"
 local UserInputService = game:GetService("UserInputService")
@@ -146,13 +137,13 @@ end)
 
 ## Roblox default bindings
 
-Roblox provides default key bindings for all experiences. These are the most common inputs used for movement, camera control, and basic environment interaction. Excluding the reserved bindings, you can use `Class.ContextActionService` to create cross‑platform binds that prioritize multiple bindings to a single action, as described in [context-dependent inputs](../input/mobile.md#context-dependent-inputs).
+Roblox provides default key bindings for all experiences. These are the most common inputs used for movement, camera control, and basic environment interaction.
 
 `Enum.CoreGuiType` features, such as the **Backpack** or **Chat**, have a list of additional default inputs. You can't overwrite reserved inputs such as <kbd>Esc</kbd> (Roblox menu) or <kbd>F9</kbd> (Developer Console).
 
 <Tabs>
 <TabItem label="Global">
-These bindings are Roblox defaults, but you can override them with custom scripts. Most Roblox users are familiar with these controls, so you should only override them in specific cases.
+These bindings are Roblox defaults, but you can override them with custom scripts. Most Roblox players are familiar with these controls, so you should only override them in specific cases.
 
 <table size="small">
 <thead>

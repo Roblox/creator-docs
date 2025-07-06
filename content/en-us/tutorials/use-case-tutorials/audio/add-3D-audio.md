@@ -20,7 +20,7 @@ If you want to add non-positional audio to your experience, such as background m
 
 ## Audio objects
 
-To create directional audio, it's important to understand the audio objects that you will be working with throughout this tutorial. There are six main types of audio objects:
+To create directional audio, it's important to understand the audio objects that you will be working with throughout this tutorial. There are six main types of audio objects for 3D audio:
 
 - The `Class.AudioPlayer` object loads and plays the **audio file**.
 - The `Class.AudioEmitter` object is a **virtual speaker** that emits audio into the 3D environment.
@@ -31,7 +31,7 @@ To create directional audio, it's important to understand the audio objects that
 
 All of these audio objects work together to emit sound just like their real-world counterparts. Let's take a look at how this works in practice using an example of a player wearing a headset while playing an experience with their laptop:
 
-- The `Class.AudioPlayer` loads the `1516791621` audio assetID into the experience for a rain track.
+- The `Class.AudioPlayer` loads the `1516791621` audio asset ID into the experience for a rain track.
 - The `Class.AudioEmitter` emits a stream of the rain track audio into the 3D environment.
 - A `Class.Wire` carries the stream from the `Class.AudioPlayer` to the `Class.AudioEmitter` so that the stream comes out of the 3D speaker.
 - The character's child `Class.AudioListener` object listens to that sound within the 3D environment and feeds it back to their headset.
@@ -89,8 +89,8 @@ To recreate the looping 3D audio in the sample [Gingerbread House - Complete Aud
 1. Back in the **Explorer** window, insert a **Script** into **WaterfallAudioObject**, rename it **LoopWaterfallMusic**, set its **RunContext** property to **Client**, then paste the following code into the script:
 
    ``` lua
-      local audioPlayer = script.Parent
-      audioPlayer:Play()
+   local audioPlayer = script.Parent
+   audioPlayer:Play()
    ```
 
    <BaseAccordion>
@@ -145,75 +145,74 @@ To recreate the one shot event feedback 3D audio in the sample [Gingerbread Hous
 1. Back in the **Explorer** window, navigate to **ServerScriptService**, then insert a **Script**, rename it **GumdropService**, set its **RunContext** property to **Server**, then paste the following code into the script:
 
    ``` lua
-      -- Initializing variables
-      local Workspace = game:GetService("Workspace")
-      local Players = game:GetService("Players")
-      local ServerStorage = game:GetService("ServerStorage")
-      local TweenService = game:GetService("TweenService")
+   -- Initializing variables
+   local Workspace = game:GetService("Workspace")
+   local Players = game:GetService("Players")
+   local ServerStorage = game:GetService("ServerStorage")
+   local TweenService = game:GetService("TweenService")
 
-      -- Modules
-      local Leaderboard = require(ServerStorage.Leaderboard)
-      local PlayerData = require(ServerStorage.PlayerData)
+   -- Modules
+   local Leaderboard = require(ServerStorage.Leaderboard)
+   local PlayerData = require(ServerStorage.PlayerData)
 
-      -- Variables
-      local gumdropsFolder = Workspace.Gumdrops
-      local gumdrops = gumdropsFolder:GetChildren()
+   -- Variables
+   local gumdropsFolder = Workspace.Gumdrops
+   local gumdrops = gumdropsFolder:GetChildren()
 
-      local GUMDROP_KEY_NAME = PlayerData.GUMDROP_KEY_NAME
-      local GUMDROP_AMOUNT_TO_ADD = 1
+   local GUMDROP_KEY_NAME = PlayerData.GUMDROP_KEY_NAME
+   local GUMDROP_AMOUNT_TO_ADD = 1
 
+   local function updatePlayerGumdrops(player, updateFunction)
+      -- Update the gumdrop table
+      local newGumdropAmount = PlayerData.updateValue(player, GUMDROP_KEY_NAME, updateFunction)
 
-      local function updatePlayerGumdrops(player, updateFunction)
-	      -- Update the gumdrop table
-	      local newGumdropAmount = PlayerData.updateValue(player, GUMDROP_KEY_NAME, updateFunction)
-
-	      -- Update the gumdrop leaderboard
-	      Leaderboard.setStat(player, GUMDROP_KEY_NAME, newGumdropAmount)
+      -- Update the gumdrop leaderboard
+      Leaderboard.setStat(player, GUMDROP_KEY_NAME, newGumdropAmount)
 	
-	      -- Check if the player has collected three gumdrops
-	      if newGumdropAmount >= 3 then
+      -- Check if the player has collected three gumdrops
+      if newGumdropAmount >= 3 then
 		
-		      -- Play the door event audio when the player collects three gumdrops
-		      local audioPlayer = Workspace.Door.AudioPlayer
-		      audioPlayer:Play()
+         -- Play the door event audio when the player collects three gumdrops
+         local audioPlayer = Workspace.Door.AudioPlayer
+         audioPlayer:Play()
 		
-		      -- Animate the door to move downward
-		      local doorPart = Workspace.Door
-		      local tweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
-		      local tween = TweenService:Create(doorPart, tweenInfo, {Position = doorPart.Position + Vector3.new(0, -15, 0)})
-		      tween:Play()
-	      end
+         -- Animate the door to move downward
+         local doorPart = Workspace.Door
+         local tweenInfo = TweenInfo.new(2, Enum.EasingStyle.Linear)
+         local tween = TweenService:Create(doorPart, tweenInfo, {Position = doorPart.Position + Vector3.new(0, -15, 0)})
+         tween:Play()
       end
+   end
 
-      -- Defining the event handler
-      local function onGumdropTouched(otherPart, gumdrop)
-	      if gumdrop:GetAttribute("Enabled") then
-		      local character = otherPart.Parent
-		      local player = Players:GetPlayerFromCharacter(character)
-		      if player then
-			      -- Player touched a gumdrop
+   -- Defining the event handler
+   local function onGumdropTouched(otherPart, gumdrop)
+      if gumdrop:GetAttribute("Enabled") then
+         local character = otherPart.Parent
+         local player = Players:GetPlayerFromCharacter(character)
+         if player then
+            -- Player touched a gumdrop
 			
-			      local audioPlayer = gumdrop.AudioPlayer
-			      audioPlayer:Play()
+            local audioPlayer = gumdrop.AudioPlayer
+            audioPlayer:Play()
 			
-			      gumdrop.Transparency = 1
-			      gumdrop:SetAttribute("Enabled", false)
-			      updatePlayerGumdrops(player, function(oldGumdropAmount)
-				      oldGumdropAmount = oldGumdropAmount or 0
-				      return oldGumdropAmount + GUMDROP_AMOUNT_TO_ADD
-			      end)
-			      print("Player collected gumdrop")
-		      end
-	      end
+            gumdrop.Transparency = 1
+            gumdrop:SetAttribute("Enabled", false)
+            updatePlayerGumdrops(player, function(oldGumdropAmount)
+               oldGumdropAmount = oldGumdropAmount or 0
+               return oldGumdropAmount + GUMDROP_AMOUNT_TO_ADD
+            end)
+            print("Player collected gumdrop")
+         end
       end
+   end
 
-      -- Setting up event listeners
-      for _, gumdrop in gumdrops do
-	      gumdrop:SetAttribute("Enabled", true)
-	      gumdrop.Touched:Connect(function(otherPart)
-		      onGumdropTouched(otherPart, gumdrop)
-	      end)
-      end
+   -- Setting up event listeners
+   for _, gumdrop in gumdrops do
+      gumdrop:SetAttribute("Enabled", true)
+      gumdrop.Touched:Connect(function(otherPart)
+         onGumdropTouched(otherPart, gumdrop)
+      end)
+   end
    ```
 
    <BaseAccordion>
@@ -301,40 +300,41 @@ To recreate the one shot object interaction 3D audio in the sample [Gingerbread 
 1. Back in the **Explorer** window, insert a **Script** into **3DAudioButton**, rename it **PlayAudioWhenPressed**, then paste the following code into the script:
 
    ``` lua
-      local TweenService = game:GetService("TweenService")
+   local TweenService = game:GetService("TweenService")
 
-      local buttonModel = script.Parent.Parent
-      local buttonPart = buttonModel.ButtonPart
-      local buttonPressedAudioPlayer = buttonModel.ButtonPressedAudioPlayer
+   local buttonModel = script.Parent.Parent
+   local buttonPart = buttonModel.ButtonPart
+   local buttonPressedAudioPlayer = buttonModel.ButtonPressedAudioPlayer
 
-      local tweenInfo = TweenInfo.new(.2, Enum.EasingStyle.Exponential)
+   local tweenInfo = TweenInfo.new(.2, Enum.EasingStyle.Exponential)
 
-      local buttonTweenByIsPressed = {
-      	-- Pressed
-      	[true] = TweenService:Create(buttonPart, tweenInfo, {
-      		Size = buttonPart.Size / Vector3.new(2, 1, 1),
-      		Color = Color3.fromRGB(75, 151, 75),
-      	}),
+   local buttonTweenByIsPressed = {
+      -- Pressed
+      [true] = TweenService:Create(buttonPart, tweenInfo, {
+         Size = buttonPart.Size / Vector3.new(2, 1, 1),
+         Color = Color3.fromRGB(75, 151, 75),
+      }),
 	
-      	-- Default
-      	[false] = TweenService:Create(buttonPart, tweenInfo, {
-      		Size = buttonPart.Size,
-      		Color = Color3.fromRGB(196, 40, 28),
-      	}),
-      }
+      -- Default
+      [false] = TweenService:Create(buttonPart, tweenInfo, {
+         Size = buttonPart.Size,
+         Color = Color3.fromRGB(196, 40, 28),
+      }),
+   }
 
-      local function onIsPlayingChanged()
-      	local isPlaying = buttonPressedAudioPlayer.IsPlaying
-      	local tween = buttonTweenByIsPressed[isPlaying]
-      	tween:Play()
+   local function onIsPlayingChanged()
+      local isPlaying = buttonPressedAudioPlayer.IsPlaying
+      local tween = buttonTweenByIsPressed[isPlaying]
+      tween:Play()
       end
-      onIsPlayingChanged()
-      buttonPressedAudioPlayer:GetPropertyChangedSignal("IsPlaying"):Connect(onIsPlayingChanged)
-      buttonPressedAudioPlayer.Ended:Connect(onIsPlayingChanged)
+      
+   onIsPlayingChanged()
+   buttonPressedAudioPlayer:GetPropertyChangedSignal("IsPlaying"):Connect(onIsPlayingChanged)
+   buttonPressedAudioPlayer.Ended:Connect(onIsPlayingChanged)
 
-      buttonPart.Touched:Connect(function(_hit)
-      	buttonPressedAudioPlayer:Play()
-      end)
+   buttonPart.Touched:Connect(function(_hit)
+   buttonPressedAudioPlayer:Play()
+   end)
    ```
 
    <BaseAccordion>
@@ -423,35 +423,35 @@ To recreate the one shot character dialogue 3D audio in the sample [Gingerbread 
 1. Back in the **Explorer** window, navigate to **StarterPlayer** > **StarterCharacterScripts**, insert a **LocalScript**, rename it **PlayAudioWhenInVolume**, and paste the following code into the local script:
 
    ``` lua
-      local Workspace = game:GetService("Workspace")
-      local Players = game:GetService("Players")
+   local Workspace = game:GetService("Workspace")
+   local Players = game:GetService("Players")
 
-      local humanoid = script.Parent:WaitForChild("Humanoid")
-      local volumeDetector = Workspace.DialogueVolume
-      local trigger = humanoid:WaitForChild("Animator")
-      local debounce = false
-      local localPlayer = Players.LocalPlayer
+   local humanoid = script.Parent:WaitForChild("Humanoid")
+   local volumeDetector = Workspace.DialogueVolume
+   local trigger = humanoid:WaitForChild("Animator")
+   local debounce = false
+   local localPlayer = Players.LocalPlayer
 
-      volumeDetector.Touched:Connect(function(hit)
-	      if debounce then 
-		      return
-	      end
+   volumeDetector.Touched:Connect(function(hit)
+      if debounce then 
+         return
+      end
 
-	      local hitCharacter = hit:FindFirstAncestorWhichIsA("Model")
-	      local hitPlayer = Players:GetPlayerFromCharacter(hitCharacter)
+      local hitCharacter = hit:FindFirstAncestorWhichIsA("Model")
+      local hitPlayer = Players:GetPlayerFromCharacter(hitCharacter)
 	
-	      if hitPlayer ~= localPlayer then
-		      return
-	      end
+      if hitPlayer ~= localPlayer then
+         return
+      end
 
-	      debounce = true
+      debounce = true
 	
-	      local audioPlayer = Workspace.DialogueVolume.AudioPlayer
-	      audioPlayer:Play()
-	      audioPlayer.Ended:Wait()
+      local audioPlayer = Workspace.DialogueVolume.AudioPlayer
+      audioPlayer:Play()
+      audioPlayer.Ended:Wait()
 
-	      debounce = false
-      end)
+      debounce = false
+   end)
    ```
 
    <BaseAccordion>
@@ -470,7 +470,7 @@ To recreate the one shot character dialogue 3D audio in the sample [Gingerbread 
       - Plays and waits for the audio to end.
       - Sets debounce back to `false`.
 
-      Setting debounce from `false` to `true` to `false` again after the audio finishes playing is a debounce pattern that prevents the audio from repeatedly triggering as players continuously collide with the volume. For more information on this debounce pattern, see [Detect collisions](../../../scripting/debounce.md#detect-collisions).
+      Setting debounce from `false` to `true` to `false` again after the audio finishes playing is a debounce pattern that prevents the audio from repeatedly triggering as players continuously collide with the volume. For more information on this debounce pattern, see [Debounce - Detect collisions](../../../scripting/debounce.md#detect-collisions).
 
    </AccordionDetails>
    </BaseAccordion>

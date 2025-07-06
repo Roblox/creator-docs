@@ -81,3 +81,8 @@ items:
     value: 14
     tags: []
     deprecation_message: ''
+  - name: CreatorEnvironmentsNotSupportedByService
+    summary: ''
+    value: 15
+    tags: []
+    deprecation_message: ''

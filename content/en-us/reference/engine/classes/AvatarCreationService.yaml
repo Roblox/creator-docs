@@ -169,25 +169,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: AvatarCreationService:GenerateAvatar2DPreviewAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: avatarGeneration2dPreviewParams
-        type: Dictionary
-        default: ''
-        summary: ''
-    returns:
-      - type: string
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: AvatarCreationService:GetBatchTokenDetailsAsync
     summary: |
       Gets the avatar creation token details for a list of avatar creation
@@ -232,53 +213,31 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: AvatarCreationService:LoadAvatar2DPreviewAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: previewId
-        type: string
-        default: ''
-        summary: ''
-    returns:
-      - type: EditableImage
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: AvatarCreationService:LoadGeneratedAvatarAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: generationId
-        type: string
-        default: ''
-        summary: ''
-    returns:
-      - type: HumanoidDescription
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: AvatarCreationService:PrepareAvatarForPreviewAsync
-    summary: ''
-    description: ''
+    summary: |
+      Prepares in-experience avatar for preview.
+    description: |
+      Triggers HSR generation and attachment point updating for in-experience
+      avatar previews. This allows for previewing of avatars created in
+      experience with layered clothing and accessories in the same way they will
+      appear when published through
+      `Class.AvatarCreationService:PromptCreateAvatarAsync()|PromptCreateAvatarAsync()`.
+
+      When developers use `Class.EditableMesh` and `Class.WrapDeformer` to
+      modify avatars before publishing, the original HSR data may not accurately
+      account for the new deformations. This method generates updated HSR data
+      and corrects attachment points based on the `Class.WrapDeformer`
+      modifications, ensuring consistent preview and published avatar
+      appearance.
     code_samples: []
     parameters:
       - name: humanoidModel
         type: Model
         default: ''
-        summary: ''
+        summary: |
+          The `Class.Model` containing `Class.MeshPart` children with
+          `Class.WrapDeformer` instances that require HSR data updating for
+          preview.
     returns:
       - type: ()
         summary: ''
@@ -523,18 +482,34 @@ methods:
     writeCapabilities: []
 events:
   - name: AvatarCreationService.AvatarModerationCompleted
-    summary: ''
-    description: ''
+    summary: |
+      Fires when an in-experience-created avatar's moderation status has been
+      updated from pending.
+    description: |
+      Fires when an in-experience-created avatar's moderation status has been
+      updated from pending. This event provides a streamlined way to know when
+      an avatar created through
+      `Class.AvatarCreationService:PromptCreateAvatarAsync()|PromptCreateAvatarAsync()`
+      has completed the moderation process and is ready for use in-experience.
+
+      Note that this event only fires for avatars created within the current
+      experience and will trigger when the `Enum.ModerationStatus` changes from
+      `Enum.ModerationStatus.NotReviewed|NotReviewed` to any other status. The
+      event fires on the client only.
+      `Class.AvatarEditorService:GetOutfitDetails|GetOutfitDetails` can be used
+      on the server to verify the current moderation status if needed.
     code_samples: []
     parameters:
       - name: outfitId
         type: int64
         default: ''
-        summary: ''
+        summary: |
+          The outfit ID of the avatar that has completed moderation.
       - name: moderationStatus
         type: ModerationStatus
         default: ''
-        summary: ''
+        summary: |
+          The final `Enum.ModerationStatus` result after moderation completion.
     tags: []
     deprecation_message: ''
     security: None

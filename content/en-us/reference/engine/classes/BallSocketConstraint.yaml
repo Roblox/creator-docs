@@ -6,10 +6,10 @@ summary: |
   rotate about all three axes, with optional limits to restrict both tilt and
   twist.
 description: |
-  A **BallSocketConstraint** constrains its `Class.Attachment|Attachments` so
-  that they occupy the same position. By default it allows both attachments to
-  freely rotate about all of their axes, but if
-  `Class.BallSocketConstraint.LimitsEnabled|LimitsEnabled` is true, the
+  A `BallSocketConstraint` constrains its `Class.Attachment|Attachments` so that
+  they occupy the same position. By default it allows both attachments to freely
+  rotate about all of their axes, but if
+  `Class.BallSocketConstraint.LimitsEnabled|LimitsEnabled` is `true`, the
   attachments can only rotate in a limited cone.
 
   Note that if this constraint attaches one part (**A**) to another part (**B**)
@@ -39,11 +39,11 @@ deprecation_message: ''
 properties:
   - name: BallSocketConstraint.LimitsEnabled
     summary: |
-      Sets whether the `Class.BallSocketConstraint` sets a limit on rotation
-      based on `Class.BallSocketConstraint.UpperAngle|UpperAngle`.
+      Sets whether the `BallSocketConstraint` sets a limit on rotation based on
+      `Class.BallSocketConstraint.UpperAngle|UpperAngle`.
     description: |
-      Sets whether the `Class.BallSocketConstraint` has a limit on rotation
-      based on `Class.BallSocketConstraint.UpperAngle|UpperAngle`. When true, it
+      Sets whether the `BallSocketConstraint` has a limit on rotation based on
+      `Class.BallSocketConstraint.UpperAngle|UpperAngle`. When `true`, it
       enforces that its `Class.Constraint.Attachment1|Attachment1` isn't rotated
       more than a set angle from its `Class.Constraint.Attachment0|Attachment0`.
     code_samples: []
@@ -69,9 +69,8 @@ properties:
       Sets the maximum frictional torque applied to keep its
       `Class.Attachment|Attachments` aligned.
 
-      `MaxFrictionTorque` specifies the stiffness of the
-      `Class.BallSocketConstraint` (how much it resists rotation around its
-      `Class.Attachment|Attachments`).
+      `MaxFrictionTorque` specifies the stiffness of the `BallSocketConstraint`
+      (how much it resists rotation around its `Class.Attachment|Attachments`).
     code_samples: []
     type: float
     tags: []
@@ -89,9 +88,9 @@ properties:
     writeCapabilities: []
   - name: BallSocketConstraint.Radius
     summary: |
-      The visualized radius of the `Class.BallSocketConstraint`.
+      The visualized radius of the `BallSocketConstraint`.
     description: |
-      The visualized radius of the `Class.BallSocketConstraint`.
+      The visualized radius of the `BallSocketConstraint`.
     code_samples: []
     type: float
     tags: []
@@ -110,14 +109,14 @@ properties:
   - name: BallSocketConstraint.Restitution
     summary: |
       How elastic `Class.Attachment|Attachments` connected by a
-      `Class.BallSocketConstraint` will be when they reach the end of the range
+      `BallSocketConstraint` will be when they reach the end of the range
       specified by `Class.BallSocketConstraint.UpperAngle|UpperAngle` when
-      `Class.BallSocketConstraint.LimitsEnabled|LimitsEnabled` is true.
+      `Class.BallSocketConstraint.LimitsEnabled|LimitsEnabled` is `true`.
     description: |
       How elastic `Class.Attachment|Attachments` connected by a
-      `Class.BallSocketConstraint` will be when they reach the end of the range
+      `BallSocketConstraint` will be when they reach the end of the range
       specified by `Class.BallSocketConstraint.UpperAngle|UpperAngle` when
-      `Class.BallSocketConstraint.LimitsEnabled|LimitsEnabled` is true.
+      `Class.BallSocketConstraint.LimitsEnabled|LimitsEnabled` is `true`.
       Constrained between 0 and 1.
     code_samples: []
     type: float
@@ -136,14 +135,12 @@ properties:
     writeCapabilities: []
   - name: BallSocketConstraint.TwistLimitsEnabled
     summary: |
-      Sets whether the `Class.BallSocketConstraint` sets a limit on twist
-      rotation based on
-      `Class.BallSocketConstraint.TwistUpperAngle|TwistUpperAngle` and
+      Sets whether the `BallSocketConstraint` sets a limit on twist rotation
+      based on `Class.BallSocketConstraint.TwistUpperAngle|TwistUpperAngle` and
       `Class.BallSocketConstraint.TwistLowerAngle|TwistLowerAngle`.
     description: |
-      Sets whether the `Class.BallSocketConstraint` sets a limit on twist
-      rotation based on
-      `Class.BallSocketConstraint.TwistUpperAngle|TwistUpperAngle` and
+      Sets whether the `BallSocketConstraint` sets a limit on twist rotation
+      based on `Class.BallSocketConstraint.TwistUpperAngle|TwistUpperAngle` and
       `Class.BallSocketConstraint.TwistLowerAngle|TwistLowerAngle`. The twist
       angle is defined as the angle between the **Y** axis of
       `Class.Constraint.Attachment1|Attachment1` and the **Y** axis of
@@ -165,15 +162,13 @@ properties:
     writeCapabilities: []
   - name: BallSocketConstraint.TwistLowerAngle
     summary: |
-      Sets the lower twist rotation limit of the `Class.BallSocketConstraint`,
-      as long as
-      `Class.BallSocketConstraint.TwistLimitsEnabled|TwistLimitsEnabled` is
-      true.
+      Sets the lower twist rotation limit of the `BallSocketConstraint`, as long
+      as `Class.BallSocketConstraint.TwistLimitsEnabled|TwistLimitsEnabled` is
+      `true`.
     description: |
-      Sets the lower twist rotation limit of the `Class.BallSocketConstraint`,
-      as long as
-      `Class.BallSocketConstraint.TwistLimitsEnabled|TwistLimitsEnabled` is
-      true.
+      Sets the lower twist rotation limit of the `BallSocketConstraint`, as long
+      as `Class.BallSocketConstraint.TwistLimitsEnabled|TwistLimitsEnabled` is
+      `true`.
     code_samples: []
     type: float
     tags: []
@@ -191,15 +186,13 @@ properties:
     writeCapabilities: []
   - name: BallSocketConstraint.TwistUpperAngle
     summary: |
-      Sets the upper twist rotation limit of the `Class.BallSocketConstraint`,
-      as long as
-      `Class.BallSocketConstraint.TwistLimitsEnabled|TwistLimitsEnabled` is
-      true.
+      Sets the upper twist rotation limit of the `BallSocketConstraint`, as long
+      as `Class.BallSocketConstraint.TwistLimitsEnabled|TwistLimitsEnabled` is
+      `true`.
     description: |
-      Sets the upper twist rotation limit of the `Class.BallSocketConstraint`,
-      as long as
-      `Class.BallSocketConstraint.TwistLimitsEnabled|TwistLimitsEnabled` is
-      true.
+      Sets the upper twist rotation limit of the `BallSocketConstraint`, as long
+      as `Class.BallSocketConstraint.TwistLimitsEnabled|TwistLimitsEnabled` is
+      `true`.
     code_samples: []
     type: float
     tags: []
@@ -217,11 +210,11 @@ properties:
     writeCapabilities: []
   - name: BallSocketConstraint.UpperAngle
     summary: |
-      Sets the upper rotation limit of the `Class.BallSocketConstraint`, as long
-      as `Class.BallSocketConstraint.LimitsEnabled|LimitsEnabled` is true.
+      Sets the upper rotation limit of the `BallSocketConstraint`, as long as
+      `Class.BallSocketConstraint.LimitsEnabled|LimitsEnabled` is `true`.
     description: |
-      Sets the upper rotation limit of the `Class.BallSocketConstraint`, as long
-      as `Class.BallSocketConstraint.LimitsEnabled|LimitsEnabled` is true.
+      Sets the upper rotation limit of the `BallSocketConstraint`, as long as
+      `Class.BallSocketConstraint.LimitsEnabled|LimitsEnabled` is `true`.
     code_samples: []
     type: float
     tags: []
