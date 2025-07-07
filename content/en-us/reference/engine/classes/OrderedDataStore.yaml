@@ -5,7 +5,7 @@ summary: |
   A GlobalDataStore that also allows for ordered data store entries.
 description: |
   A **OrderedDataStore** is essentially a `Class.GlobalDataStore` with the
-  exception that stored values must be **non-negative integers**. It exposes a
+  exception that stored values must be **integers**. It exposes a
   method `Class.OrderedDataStore:GetSortedAsync()|GetSortedAsync()` which allows
   inspection of the entries in sorted order using a `Class.DataStorePages`
   object.
