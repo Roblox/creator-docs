@@ -5608,7 +5608,7 @@
       "post": {
         "tags": ["Cloud"],
         "summary": "Generate Speech Asset",
-        "description": "Generates an English speech audio asset from the specified text.",
+        "description": "Generates an English speech audio asset from the specified text.\n\nThis endpoint requires the `asset:read` and `asset:write` scopes in\naddition to the `universe:write` scope.\n\nThe response returns an `Operation` object that must be prefixed with\n`/assets/v1`. For example, the URL to discover the result of the operation\ncould be\n`https://apis.roblox.com/assets/v1/operations/8b42ef30-9c17-4526-b8cf-2ff0136ca94d`.",
         "operationId": "Cloud_GenerateSpeechAsset",
         "parameters": [
           {

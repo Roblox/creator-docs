@@ -127,7 +127,7 @@ properties:
     description: |
       Density is defined as the amount of mass per unit volume. The more dense a
       part is, the more force it takes to accelerate it. Acceptable range is
-      `0.01` to `100.0` and values outside this range will be clamped.
+      `0.0001` to `100.0` and values outside this range will be clamped.
 
       When using acoustic simulation, parts with higher density will muffle
       occluded `Class.AudioEmitter|AudioEmitters` more.

@@ -503,6 +503,7 @@
               }
             ],
             "description": "The type of audio (Music or SoundEffect).",
+            "deprecated": true,
             "x-enumNames": ["Music", "SoundEffect"],
             "x-enum-varnames": ["Music", "SoundEffect"],
             "x-enum-descriptions": ["Music", "SoundEffect"]
@@ -515,11 +516,6 @@
           "title": {
             "type": "string",
             "description": "The audio title.",
-            "nullable": true
-          },
-          "album": {
-            "type": "string",
-            "description": "The audio album. Only relevant for Music audio.",
             "nullable": true
           }
         },
@@ -640,7 +636,13 @@
                 "$ref": "#/components/schemas/Model"
               },
               {
+                "$ref": "#/components/schemas/Music"
+              },
+              {
                 "$ref": "#/components/schemas/Plugin"
+              },
+              {
+                "$ref": "#/components/schemas/SoundEffect"
               }
             ],
             "description": "The asset information.",
@@ -1134,6 +1136,29 @@
           }
         },
         "additionalProperties": false,
+        "nullable": true
+      },
+      "Music": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Audio"
+          }
+        ],
+        "properties": {
+          "album": {
+            "type": "string",
+            "description": "The album the music belongs to.",
+            "nullable": true
+          },
+          "genre": {
+            "type": "string",
+            "description": "The genre of the music.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Representation of a music asset.",
         "nullable": true
       },
       "ObjectMeshSummary": {
@@ -1724,6 +1749,29 @@
         "x-enumNames": ["VALUE", "DEVELOPER_SEGMENT"],
         "x-enum-varnames": ["VALUE", "DEVELOPER_SEGMENT"],
         "x-enum-descriptions": ["VALUE", "DEVELOPER_SEGMENT"]
+      },
+      "SoundEffect": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Audio"
+          }
+        ],
+        "properties": {
+          "category": {
+            "type": "string",
+            "description": "The sound effect category.",
+            "nullable": true
+          },
+          "subcategory": {
+            "type": "string",
+            "description": "The sound effect subcategory.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Representation of a sound effect asset.",
+        "nullable": true
       },
       "SpellCheckerResult": {
         "type": "object",

@@ -61,6 +61,73 @@ end
 
 ### Supported Open Cloud endpoints
 
+The following endpoints are supported. Due to current limitations on `Class.HttpService`, the `..` string is not allowed in URL path parameters to Roblox domains. This means, for example, that data stores and entries containing this string are currently inaccessible from `Class.HttpService`.
+
+#### Assets
+
+- [GetAsset](/cloud/features/assets#/default/Assets_GetAsset)
+- [ListAssetVersions](/cloud/features/assets#/default/listAssetVersions)
+- [GetAssetVersion](/cloud/features/assets#/default/Assets_GetAssetVersion)
+
+#### Bans and blocks
+
+- [ListUserRestrictions (Place)](/cloud/features/bans-and-blocks#/UserRestriction/Cloud_ListUserRestrictions__Using_Universes)
+- [GetUserRestriction (Place)](/cloud/features/bans-and-blocks#/UserRestriction/Cloud_GetUserRestriction__Using_Universes_Places)
+- [UpdateUserRestriction (Place)](/cloud/features/bans-and-blocks#/UserRestriction/Cloud_UpdateUserRestriction__Using_Universes_Places)
+- [ListUserRestrictions (Universe)](/cloud/features/bans-and-blocks#/UserRestriction/Cloud_ListUserRestrictions)
+- [GetUserRestriction (Universe)](/docs/cloud/features/bans-and-blocks#/UserRestriction/Cloud_GetUserRestriction__Using_Universes)
+- [UpdateUserRestriction (Universe)](/cloud/features/bans-and-blocks#/UserRestriction/Cloud_UpdateUserRestriction__Using_Universes)
+- [ListUserRestrictionLogs (Universe)](https://create.roblox.com/docs/cloud/features/bans-and-blocks#/UserRestriction/Cloud_ListUserRestrictionLogs)
+
+#### Creator Store
+
+- [CreateCreatorStoreProduct](/cloud/features/creator-store#/CreatorStoreProduct/Cloud_CreateCreatorStoreProduct)
+- [GetCreatorStoreProduct](/cloud/features/creator-store#/CreatorStoreProduct/Cloud_GetCreatorStoreProduct)
+- [UpdateCreatorStoreProduct](/cloud/features/creator-store#/CreatorStoreProduct/Cloud_UpdateCreatorStoreProduct)
+- [CreatorStoreAssetsSearch](/cloud/features/creator-store#toolbox-service)
+
+#### Data and memory stores
+
+Data stores:
+
+- [ListDataStores](/cloud/reference/DataStore#Cloud_ListDataStores)
+- [SnapshotDataStores](/cloud/features/storage#/DataStore/Cloud_SnapshotDataStores)
+- [ListDataStoreEntries](/cloud/reference/DataStoreEntry#Cloud_ListDataStoreEntries__Using_Universes)
+- [CreateDataStoreEntry](/cloud/reference/DataStoreEntry#Cloud_CreateDataStoreEntry__Using_Universes)
+- [GetDataStoreEntry](/cloud/reference/DataStoreEntry#Cloud_GetDataStoreEntry__Using_Universes_DataStores)
+- [DeleteDataStoreEntry](/cloud/reference/DataStoreEntry#Cloud_DeleteDataStoreEntry__Using_Universes_DataStores)
+- [UpdateDataStoreEntry](/cloud/reference/DataStoreEntry#Cloud_UpdateDataStoreEntry__Using_Universes_DataStores)
+- [IncrementDataStoreEntry](/cloud/reference/DataStoreEntry#Cloud_IncrementDataStoreEntry__Using_Universes_DataStores)
+- [ListDataStoreEntryRevisions](/cloud/features/storage#/DataStoreEntry/Cloud_ListDataStoreEntryRevisions__Using_Universes_DataStores)
+- [ListDataStoreEntries (With Scope)](/cloud/features/storage#/DataStoreEntry/Cloud_ListDataStoreEntries__Using_Universes_DataStores)
+- [CreateDataStoreEntry (With Scope)](/cloud/features/storage#/DataStoreEntry/Cloud_CreateDataStoreEntry__Using_Universes_DataStores)
+- [GetDataStoreEntry (With Scope)](/cloud/features/storage#/DataStoreEntry/Cloud_GetDataStoreEntry__Using_Universes_DataStores_Scopes)
+- [DeleteDataStoreEntry (With Scope)](/cloud/features/storage#/DataStoreEntry/Cloud_DeleteDataStoreEntry__Using_Universes_DataStores_Scopes)
+- [UpdateDataStoreEntry (With Scope)](/cloud/features/storage#/DataStoreEntry/Cloud_UpdateDataStoreEntry__Using_Universes_DataStores_Scopes)
+- [IncrementDataStoreEntry (With Scope)](/cloud/features/storage#/DataStoreEntry/Cloud_IncrementDataStoreEntry__Using_Universes_DataStores_Scopes)
+- [ListDataStoreEntryRevisions (With Scope)](/cloud/features/storage#/DataStoreEntry/Cloud_ListDataStoreEntryRevisions__Using_Universes_DataStores_Scopes)
+
+Memory stores:
+
+- [CreateMemoryStoreQueueItem](/cloud/features/storage#/MemoryStoreQueueItem/Cloud_CreateMemoryStoreQueueItem)
+- [DiscardMemoryStoreQueueItems](/cloud/features/storage#/MemoryStoreQueueItem/Cloud_DiscardMemoryStoreQueueItems)
+- [ReadMemoryStoreQueueItems](/cloud/features/storage#/MemoryStoreQueueItem/Cloud_ReadMemoryStoreQueueItems)
+- [ListMemoryStoreSortedMapItems](/cloud/features/storage#/MemoryStoreSortedMapItem/Cloud_ListMemoryStoreSortedMapItems)
+- [CreateMemoryStoreSortedMapItem](/cloud/features/storage#/MemoryStoreSortedMapItem/Cloud_CreateMemoryStoreSortedMapItem)
+- [GetMemoryStoreSortedMapItem](/cloud/features/storage#/MemoryStoreSortedMapItem/Cloud_GetMemoryStoreSortedMapItem)
+- [DeleteMemoryStoreSortedMapItem](/cloud/features/storage#/MemoryStoreSortedMapItem/Cloud_DeleteMemoryStoreSortedMapItem)
+- [UpdateMemoryStoreSortedMapItem](/cloud/features/storage#/MemoryStoreSortedMapItem/Cloud_UpdateMemoryStoreSortedMapItem)
+- [FlushMemoryStore](/cloud/features/storage#/MemoryStore/Cloud_FlushMemoryStore)
+
+Ordered data stores:
+
+- [ListOrderedDataStoreEntries](/cloud/features/storage#/OrderedDataStoreEntry/Cloud_ListOrderedDataStoreEntries)
+- [CreateOrderedDataStoreEntry](/cloud/features/storage#/OrderedDataStoreEntry/Cloud_CreateOrderedDataStoreEntry)
+- [GetOrderedDataStoreEntry](/cloud/features/storage#/OrderedDataStoreEntry/Cloud_GetOrderedDataStoreEntry)
+- [DeleteOrderedDataStoreEntry](/cloud/features/storage#/OrderedDataStoreEntry/Cloud_DeleteOrderedDataStoreEntry)
+- [UpdateOrderedDataStoreEntry](/cloud/features/storage#/OrderedDataStoreEntry/Cloud_UpdateOrderedDataStoreEntry)
+- [IncrementOrderedDataStoreEntry](/cloud/features/storage#/OrderedDataStoreEntry/Cloud_IncrementOrderedDataStoreEntry)
+
 #### Groups
 
 - [GetGroup](/cloud/reference/Group#Cloud_GetGroup)
@@ -73,26 +140,40 @@ end
 - [GetGroupRole](/cloud/reference/GroupRole#Cloud_GetGroupRole)
 - [GetGroupShout](/cloud/reference/GroupShout#Cloud_GetGroupShout)
 
-#### Data stores
-
-Due to current limitations on `Class.HttpService`, the `..` string is not allowed in URL path parameters to Roblox domains. This means data stores and entries containing this string are currently
-inaccessible from `Class.HttpService`.
-
-- [ListDataStores](/cloud/reference/DataStore#Cloud_ListDataStores)
-- [ListDataStoreEntries](/cloud/reference/DataStoreEntry#Cloud_ListDataStoreEntries__Using_Universes)
-- [CreateDataStoreEntry](/cloud/reference/DataStoreEntry#Cloud_CreateDataStoreEntry__Using_Universes)
-- [GetDataStoreEntry](/cloud/reference/DataStoreEntry#Cloud_GetDataStoreEntry__Using_Universes_DataStores)
-- [DeleteDataStoreEntry](/cloud/reference/DataStoreEntry#Cloud_DeleteDataStoreEntry__Using_Universes_DataStores)
-- [UpdateDataStoreEntry](/cloud/reference/DataStoreEntry#Cloud_UpdateDataStoreEntry__Using_Universes_DataStores)
-- [IncrementDataStoreEntry](/cloud/reference/DataStoreEntry#Cloud_IncrementDataStoreEntry__Using_Universes_DataStores)
-
-#### Inventory items
+#### Inventories
 
 - [ListInventoryItems](/cloud/reference/InventoryItem#Cloud_ListInventoryItems)
 
-#### Creator Store
+#### Luau execution
 
-- [CreatorStoreAssetsSearch](/cloud/features/creator-store#toolbox-service)
+- [CreateLuauExecutionSessionTaskBinaryInput](/cloud/features/luau-execution#/LuauExecutionSessionTaskBinaryInput/Cloud_CreateLuauExecutionSessionTaskBinaryInput)
+- [CreateLuauExecutionSessionTask](/cloud/features/luau-execution#/LuauExecutionSessionTask/Cloud_CreateLuauExecutionSessionTask__Using_Universes)
+- [CreateLuauExecutionSessionTask (with version)](/cloud/features/luau-execution#/LuauExecutionSessionTask/Cloud_CreateLuauExecutionSessionTask__Using_Universes_Places)
+- [GetLuauExecutionSessionTask](/cloud/features/luau-execution#/LuauExecutionSessionTask/Cloud_GetLuauExecutionSessionTask)
+- [ListLuauExecutionSessionTaskLogs](/cloud/features/luau-execution#/LuauExecutionSessionTaskLog/Cloud_ListLuauExecutionSessionTaskLogs)
+
+#### Notifications
+
+- [CreateUserNotification](/cloud/features/notifications#/UserNotification/Cloud_CreateUserNotification)
+
+#### Places
+
+- [GetPlace](/cloud/features/places#/Place/Cloud_GetPlace)
+- [UpdatePlace](/cloud/features/places#/Place/Cloud_UpdatePlace)
+- [GetInstance](/cloud/features/places#/Instance/Cloud_GetInstance)
+- [UpdateInstance](/cloud/features/places#/Instance/Cloud_UpdateInstance)
+
+#### Universes
+
+- [UpdateUniverse](/cloud/features/universes#/Universe/Cloud_UpdateUniverse)
+- [GetUniverse](/cloud/features/universes#/Universe/Cloud_GetUniverse)
+- [PublishUniverseMessage](/cloud/features/universes#/Universe/Cloud_PublishUniverseMessage)
+- [RestartUniverseServers](/cloud/features/universes#/Universe/Cloud_RestartUniverseServers)
+
+#### Users
+
+- [GetUser](/cloud/features/users#/User/Cloud_GetUser)
+- [GenerateUserThumbnail](/cloud/features/users#/User/Cloud_GenerateUserThumbnail)
 
 ### Limitations
 
@@ -107,15 +188,13 @@ inaccessible from `Class.HttpService`.
 For each Roblox game server, there is a limit of 500 HTTP requests per minute. Exceeding this can cause request-sending methods to stall for around 30 seconds. Your `Global.LuaGlobals.pcall()` may also fail with a message of `Number of requests exceeded limit`.
 
 - Open Cloud requests consume the same overall limit of 500 HTTP requests per minute enforced on all other requests.
-- Each Open Cloud endpoint has its own limit per API key owner (can be a user or a group) that is enforced no matter where the calls come from (`Class.HttpService`, the web, etc.). The following headers are returned with every response and allow you to view the limits and your remaining quota:
+- Each endpoint has its own limit per API key owner (can be a user or a group) that is enforced no matter where the calls come from (`Class.HttpService`, the web, etc.).
 
-  - `x-ratelimit-limit` - The total number of requests allowed to be made per API key owner (usually per minute).
-  - `x-ratelimit-remaining` - The number of requests the API key used is still allowed to make. If this number is 0 and you receive a HTTP 429 response status code, then you have reached the rate limit for this endpoint.
-  - `x-ratelimit-reset` - The number of seconds left before `x-ratelimit-remaining` resets to `x-ratelimit-limit`.
+For detailed information about Open Cloud rate limits, authentication-based rate limiting, and best practices, see [Rate Limits](/cloud/reference/rate-limits).
 
 ### Additional considerations
 
 - Web requests can fail for many reasons. Use `Global.LuaGlobals.pcall()` and have a plan for when
-requests fail.
+  requests fail.
 - Requests should provide a secure form of authentication, such as a pre-shared secret key, so that bad actors cannot pose as one of your Roblox game servers.
 - Be aware of the general capacity and rate-limiting policies of the web servers to which requests are being sent.
