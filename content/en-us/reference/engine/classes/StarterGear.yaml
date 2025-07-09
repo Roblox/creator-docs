@@ -41,19 +41,6 @@ description: |
   Players.PlayerAdded:Connect(onPlayerAdded)
   ```
 
-  ## Allowing Gear
-
-  Whether or not gear can be permitted is determined in a place's settings page
-  under 'Permissions'. On the permissions page gear can be disabled and enabled
-  by genre and type. To disable gear, ensure all the gear types are not
-  selected.
-
-  Individual gear can also be added to a game using the 'Add to game' feature in
-  the Roblox catalog. This option can be found on the page of any gear that is
-  on sale. When gear is added to a game in this manner it will appear under the
-  'Store' heading on the game's page. The owner of the game (group or user)
-  receives a commission when gear is sold in this manner.
-
   ## Gameplay Considerations
 
   Before adding any gear to a game, consider the implication of doing so. Gear

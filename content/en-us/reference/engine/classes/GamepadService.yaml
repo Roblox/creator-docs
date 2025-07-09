@@ -24,7 +24,7 @@ properties:
       The state of the gamepad virtual cursor.
     description: |
       This boolean is a read only variable that maintains the state of the
-      gamepad virtual cursor.
+      gamepad virtual cursor. You can read this property but not write to it.
     code_samples:
       - GamepadService-GamepadCursorEnabled
     type: boolean
