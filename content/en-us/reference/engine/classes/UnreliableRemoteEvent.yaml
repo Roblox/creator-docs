@@ -33,7 +33,7 @@ description: |
   you should carefully explore the
   [limitations](../../../scripting/events/remote.md#argument-limitations).
 
-  There is a 900 byte limit to the payload of an `Class.UnreliableRemoteEvent`.
+  There is a 1000 byte limit to the payload of an `Class.UnreliableRemoteEvent`.
   Larger payloads are dropped. Like all events, the
   `Class.UnreliableRemoteEvent` methods encode and compress certain object
   types, such as buffers, which shrinks the payload size and can make it
@@ -51,7 +51,7 @@ methods:
     summary: |
       Fires the `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` event
       for each client connected to the same `Class.UnreliableRemoteEvent`. Has a
-      900 byte limit to the payload of the event, otherwise event is dropped.
+      1000 byte limit to the payload of the event. Otherwise, the event is dropped.
     description: |
       Fires the `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` event
       for each client connected to the same `Class.UnreliableRemoteEvent`.
@@ -67,7 +67,7 @@ methods:
       carefully explore the
       [limitations](../../../scripting/events/remote.md#argument-limitations).
 
-      Events with payloads larger than 900 bytes will be dropped. When this
+      Events with payloads larger than 1000 bytes will be dropped. When this
       happens in Studio, a log message in the
       [Output](../../../studio/output.md) window will indicate by how many bytes
       the event has gone over.
@@ -94,7 +94,7 @@ methods:
     summary: |
       Fires the `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` event
       for a specific client connected to the same `Class.UnreliableRemoteEvent`.
-      Has a 900 byte limit to the payload of the event, otherwise event is
+      Has a 1000 byte limit to the payload of the event. Otherwise, the event is
       dropped.
     description: |
       Fires the `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` event
@@ -109,7 +109,7 @@ methods:
       carefully explore the
       [limitations](../../../scripting/events/remote.md#argument-limitations).
 
-      Events with payloads larger than 900 bytes will be dropped. When this
+      Events with payloads larger than 1000 bytes will be dropped. When this
       happens in Studio, a log message in the
       [Output](../../../studio/output.md) window will indicate by how many bytes
       the event has gone over.
@@ -145,7 +145,7 @@ methods:
     summary: |
       Fires the `Class.UnreliableRemoteEvent.OnServerEvent|OnServerEvent` event
       on the server from one client connected to the same
-      `Class.UnreliableRemoteEvent`. Has a 900 byte limit to the payload of the
+      `Class.UnreliableRemoteEvent`. Has a 1000 byte limit to the payload of the
       event, otherwise event is dropped.
     description: |
       Fires the `Class.UnreliableRemoteEvent.OnServerEvent|OnServerEvent` event
@@ -161,7 +161,7 @@ methods:
       carefully explore the
       [limitations](../../../scripting/events/remote.md#argument-limitations).
 
-      Events with payloads larger than 900 bytes will be dropped. When this
+      Events with payloads larger than 1000 bytes will be dropped. When this
       happens in Studio, a log message in the
       [Output](../../../studio/output.md) window will indicate by how many bytes
       the event has gone over.
