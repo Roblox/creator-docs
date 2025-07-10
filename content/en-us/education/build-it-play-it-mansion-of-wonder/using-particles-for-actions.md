@@ -21,17 +21,17 @@ When creating a particle, it needs to be inserted into a part or attachment. In 
 
 1. In **TestPlayer**, create a **ParticleEmitter** named **Burst**. Default particles will start emitting from the TestPlayer object. You'll customize the emitter to create a burst effect.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/using-particles-for-actions/create-particle-emitter.png" />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/using-particles-for-actions/create-particle-emitter.png" width="40%" />
 
    An example is shown below.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/using-particles-for-actions/default-particle-stream.jpeg" width="50%" />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/using-particles-for-actions/default-particle-stream.jpg" width="50%" />
 
    <Alert severity="warning">
    Particles must be named exactly since a script will be looking for the name later.
    </Alert>
 
-2. In the **Burst** particle's properties, find **Texture**. Copy and paste one of the texture IDs supplied below, or use your own, into the texture field and press <kbd>Enter</kbd>.
+2. With **Burst** selected, go to the **Properties** window and find the **Texture** property. Copy and paste one of the texture IDs supplied below, or use your own, into the texture field and press <kbd>Enter</kbd>.
    <GridContainer numColumns="3">
      <figure>
        <img src="../../assets/education/build-it-play-it-mansion-of-wonder/using-particles-for-actions/potion.png" />
@@ -69,19 +69,18 @@ When creating a particle, it needs to be inserted into a part or attachment. In 
 
    If using the ticket texture, it will look like below.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/using-particles-for-actions/show-particle-texture.jpeg" />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/using-particles-for-actions/show-particle-texture.jpg" width="50%" />
 
     <Alert severity="info">
     Custom textures can be any image that you have. Learn to upload them in the [Asset Manager](../../projects/assets/manager.md) article.
     </Alert>
 
-3. In the properties of TestPlayer, find and change the **Color** and **Size** properties to something appropriate for your experience.
+3. In the **Explorer** window, select **TestPlayer**, then in the **Properties** window, find and change the **Color** and **Size** properties to something appropriate for your experience. For example, the following image includes particles with the following settings:
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/using-particles-for-actions/color-size-properties.jpeg" />
+   - **Color** = `255, 178, 44`
+   - **Size** = `0.6`
 
-   An example is shown below.
-
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/using-particles-for-actions/show-texture-color-size.jpeg" width="50%" />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/using-particles-for-actions/show-texture-color-size.jpg" width="50%" />
 
 ## Create a burst effect
 
@@ -144,7 +143,7 @@ After adding the recommended values under the video, the particles will look lik
 
 2. Lastly, the particle should only play when the script (which you'll see in the next lesson) tells it to. Find the **Enabled** property and toggle it **off**.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/using-particles-for-actions/set-enabled-off.png" />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/using-particles-for-actions/set-enabled-off.png" width="40%" />
 
    <Alert severity="info">
    This page only covered a few properties. For more, see the [Particle Emitters](../../effects/particle-emitters.md) reference article.

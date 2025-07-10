@@ -30,15 +30,15 @@ This course will walk through designing a guided tutorial using a starter templa
 
 The starter place for this series includes parts of an amusement park themed game where players collect tickets for a prize. New players will be directed to booths to collect their tickets.
 
-### Import the template
+### Open the template
 
-1. Open the [Build It Play It - Boardwalk](https://www.roblox.com/games/6763393969) starter place. On the new webpage, click on the **...** button and select **Edit**. If prompted, allow your browser to Open Roblox.
+Time to open Roblox Studio! Click the following button to open the **Boardwalk** template.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-engaging-experiences/edit-place.png" />
+<UseStudioButton variant="" buttonTextTranslationKey="Action.EditInStudio" placeId="6763393969" universeId="2563173896" />
 
-2. A new instance of Studio will open with the map. The first thing you'll see is a TestPlayer object that will simulate a player.
+A new instance of Studio will open with the map. The first thing you'll see is a TestPlayer object that will simulate a player.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-engaging-experiences/open-template.jpeg" />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-engaging-experiences/open-template.jpg" />
 
 ### Use your own project
 
@@ -58,20 +58,20 @@ The place includes two interactive booths with `Class.ProximityPrompt|ProximityP
 
 To guide players to booths for tickets, you'll create a path using beams like in the video below.
 
-<video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-engaging-experiences/beam-example.mp4" width="100%"></video>
+<video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-engaging-experiences/beam-example.mp4" width="100%" ></video>
 
 **Beams** are objects also used for effects like lasers or force fields. This object draws a texture between two points with customizable properties like speed, width, and curve size.
 
 To display the beam, **attachments** are needed to set the beam's start and end points. You'll insert one attachment into the player and the other attachment into the goal object.
 
-1. In the Explorer, find **TestPlayer** and add an **attachment** named **PlayerAttachment**.
+1. In the **Explorer** window, find **TestPlayer** and add an **attachment** named **PlayerAttachment**.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-engaging-experiences/create-player-attachment.png"  />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-engaging-experiences/create-player-attachment.png" width="40%" />
 
 2. Under **TestPlayer**, add a **Beam** named **TutorialBeam**. Keep in mind, the beam won't be visible until its start and end points are set later on.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-engaging-experiences/create-beam.png" width="100%" />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-engaging-experiences/create-beam.png" width="40%" />
 
-3. Find the **TutorialGoals** folder and **expand** it. Under both InteractionPart objects, add an attachment named **GoalAttachment**.
+3. Find the **TutorialGoals** folder and **expand** it. Under both **InteractionPart** objects, add an attachment named **GoalAttachment**.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-engaging-experiences/create-goal-attachments.png"  />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-engaging-experiences/create-goal-attachments.png" width="40%" />

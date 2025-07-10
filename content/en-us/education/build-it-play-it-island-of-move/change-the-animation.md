@@ -11,39 +11,40 @@ The template has a pre-built setting for what animation to use when players run.
 
 Now that you have the animation ID, you can enter it in your game. Then, Studio will know what animation to play.
 
-1. Make sure on the right of Studio, you see two windows: the **Explorer** and **Properties**.
+1. Make sure the **Explorer** and **Properties** windows are open.
 
    <img src="../../assets/education/build-it-play-it-island-of-move/change-the-animation/show-explorer-properties.png" width="100%" />
 
    <Alert severity="warning">
-   <AlertTitle>Don't See the Explorer or Properties?</AlertTitle>
-   If you don't see either one, go to the **View** Tab. Then, click both **Explorer** and **Properties**.
+   If you don't see the windows on the right, enable them by going to the **Home** tab and clicking the **Explorer** and **Properties** buttons.
+
+   <img src="../../assets/education/general/OpenExplorerandProperties.png" />
+
    </Alert>
 
-2. On the right side of the screen, find the **Explorer** which lists all of the objects in the game.
+1. To find the walk setting,
+   1. Go to the **Explorer** window, then in the **search bar**, type "walk".
+   1. Click on **WalkAnimationID**.
 
-3. To find the walk setting, in the **search bar**, type "walk".
+   <img src="../../assets/education/build-it-play-it-island-of-move/change-the-animation/search-walk-select.png" width="40%" />
 
-   <img src="../../assets/education/build-it-play-it-island-of-move/change-the-animation/search-walk.png" width="50%" />
+1. In the **Properties** window, click the **Value** field and paste the animation ID by pressing <kbd>Ctrl</kbd> + <kbd>V</kbd> or <kbd>⌘</kbd> + <kbd>V</kbd>.
 
-4. Click on **_WalkAnimationID_**.
-
-   <img src="../../assets/education/build-it-play-it-island-of-move/change-the-animation/search-walk-select.png" width="50%" />
-
-5. Under the Explorer, find the **Properties** window.
-
-6. Click the **Value** field and paste the animation ID by pressing <kbd>Ctrl</kbd> + <kbd>V</kbd> or <kbd>⌘</kbd> + <kbd>V</kbd>.
-
-   <img src="../../assets/education/build-it-play-it-island-of-move/change-the-animation/set-animation-value.png" width="50%" />
+   <img src="../../assets/education/build-it-play-it-island-of-move/change-the-animation/set-animation-value.png" width="40%" />
 
    <Alert severity="warning">
    <AlertTitle>Need to Get the Animation ID?</AlertTitle>
    If nothing was pasted, or another line of text was used, you'll need to get the animation ID again.
 
-   1. Open the [Animations](https://www.roblox.com/develop?View=24) section of the **Create** page.
-   2. Locate and click an exported animation.
-   3. **Copy** its **ID** from the URL in your browser.
-      <img src="../../assets/education/build-it-play-it-island-of-move/change-the-animation/exported-animation-web.png" width="100%" />
+   1. Go to the [Creator Dashboard](https://create.roblox.com/dashboard/creations)/
+   1. In the horizontal navigation, select **Development Items**, then click the **Animations** button. All animations you have ever published display here.
+
+      <img src="../../assets/education/build-it-play-it-island-of-move/change-the-animation/Animations-Button.png" width="100%" />
+
+   1. Select your animation. The animation's **Configure** page displays.
+   1. In the left-hand navigation, click the vertical three dots icon, then select ** Copy Asset ID** from the contextual menu.
+
+      <img src="../../assets/education/build-it-play-it-island-of-move/change-the-animation/CopyAssetID.png" width="50%" />
 
    </Alert>
 
@@ -53,12 +54,12 @@ After swapping the animation, play the game to see your creation.
 
 1. Press the **Play** Button.
 
-2. In the game, tap the **Move** button to see the animation play.
+2. Use the <kbd>WASD</kbd> keys to walk around and see the animation play.
 
-   <video controls src="../../assets/education/build-it-play-it-island-of-move/change-the-animation/finished-animation.mp4" width="100%"></video>
+   <video controls src="../../assets/education/build-it-play-it-island-of-move/change-the-animation/finished-animation.mp4" width="80%"></video>
 
    <Alert severity="warning">
-   If you make updates to the animation, remember to **Export** it.
+   If you make updates to the animation, remember to **Save** it in the **Animation Editor**.
    </Alert>
 
 ## Troubleshooting tips

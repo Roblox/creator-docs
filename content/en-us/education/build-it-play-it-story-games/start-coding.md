@@ -10,16 +10,10 @@ In Roblox, code is typed inside of **scripts** using the coding language [Luau](
 ## Find the StoryManager
 
 1. In the **Explorer** window, click the arrow next to **StarterGUI** to see everything beneath it.
-
-   <img src="../../assets/education/story-games/StarterGUIArrow_900x500.png" width="100%" />
-
 2. Click the arrow next to **GameGUI** to expand that section.
-
-   <img src="../../assets/education/story-games/GameGUIArrow.png" width="100%" />
-
 3. Double-click the **StoryManager** script to open it.
 
-   <img src="../../assets/education/story-games/StoryManager_900x500.png" width="100%" />
+   <img src="../../assets/education/story-games/StoryManager.png" width="40%" />
 
 ## Script contents
 

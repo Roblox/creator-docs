@@ -9,7 +9,7 @@ This is a good point at which to check your code and make sure it runs. Testing 
 
 1. Test your by code by clicking the **Play** button.
 
-   <img src="../../assets/education/story-games/wcc2018_playGame.png" />
+   <img src="../../assets/education/general/play-button.png" width="30%" />
 
 2. Walk up to the pedestal using <kbd>W A S D</kbd> on your keyboard and press <kbd>E</kbd>.
 
@@ -50,24 +50,22 @@ This is a good point at which to check your code and make sure it runs. Testing 
 
 3. Check to see if your question is displayed. **Don't** try to answer the question or click the "Submit" button. The code for that isn't made yet.
 
-   <img src="../../assets/education/story-games/WCC2018_storyExample.png" width="100%" />
+   <img src="../../assets/education/story-games/StoryExample.png" width="80%" />
 
 4. **Stop** the playtest.
 
-   <img src="../../assets/education/story-games/wcc2018_stopGame.png" />
+   <img src="../../assets/education/general/stop-button.png" width="30%" />
 
 ## Save your code
 
 It's important to save the whole project by **publishing** it to Roblox. It's a good idea to publish every ten minutes while you're working or after making a big change.
 
-1. Select File → Publish to Roblox to open the publishing window.
+1. Select **File → Publish to Roblox** to open the publishing window.
 
-   <img src="../../assets/education/story-games/ccw2019_publishToRoblox.png" />
+   <img src="../../assets/education/story-games/PublishToRoblox.png" />
 
 2. Enter a place name and an optional description.
 
-   <img src="../../assets/education/story-games/wcc2018_stopGame.png" />
+   <img src="../../assets/education/general/name-description.png" />
 
-3. **If desired**, check Phone and Tablet. When ready, click the **Create** button. Once published, games can be edited from any computer since they're connected to your account.
-
-   <img src="../../assets/education/story-games/ccs2020_1_saveDesktopMobile.png" />
+3. When ready, click the **Create** button. Once published, games can be edited from any computer since they're connected to your account.

@@ -1,0 +1,17 @@
+backTo:
+  title: Back to tutorials
+  path: /tutorials/
+navigation:
+  - heading: Learn to code
+  - title: Overview
+    path: /tutorials/curriculums/coding/
+  - title: Get started
+    path: /tutorials/curriculums/coding/get-started
+  - title: Work with variables
+    path: /tutorials/curriculums/coding/work-with-variables
+  - title: Test and save
+    path: /tutorials/curriculums/coding/test-and-save
+  - title: Customize strings
+    path: /tutorials/curriculums/coding/customize-strings
+  - title: Next steps
+    path: /tutorials/curriculums/coding/next-steps

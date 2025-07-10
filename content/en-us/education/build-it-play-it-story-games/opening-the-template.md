@@ -26,7 +26,7 @@ A template has been created that has everything needed for the experience to wor
 
 2. In Roblox Studio, in the top left, click **File** > **Open from File** and select the downloaded file.
 
-   <img src="../../assets/education/story-games/openFromFile.png" />
+   <img src="../../assets/education/story-games/openFromFile.png" width="40%" />
 
 ## Close extra windows
 
@@ -36,6 +36,13 @@ The first time you launch Roblox Studio, extra windows might open up that you do
 
    <img src="../../assets/education/story-games/CloseToolbox.png" />
 
-2. Leave the **Explorer** window on the right side open. Make Studio look like the image below. If you don't see the Explorer, click on the View tab and click the Explorer icon.
+2. Leave the **Explorer** window on the right side open. Studio should look like the image below:
 
    <img src="../../assets/education/story-games/studio-setup.jpg" />
+
+   <Alert severity="warning">
+   If you don't see the windows on the right, enable them by going to the **Home** tab and clicking the **Explorer** and **Properties** buttons.
+
+   <img src="../../assets/education/general/OpenExplorerandProperties.png" />
+
+   </Alert>

@@ -25,7 +25,7 @@ ModuleScripts are commonly placed in **ServerScriptService** when used by server
 
 1. Create a **ModuleScript** in **ServerScriptService**.
 
-<img src="../../../assets/education/coding-6/intro-to-module-scripts/create-module-script.png" width="50%" />
+<img src="../../../assets/education/coding-6/intro-to-module-scripts/create-module-script.png" width="35%" />
 
 ### Structure of module scripts
 

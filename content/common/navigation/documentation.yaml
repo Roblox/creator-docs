@@ -61,3 +61,12 @@ columns:
           navigation: /monetize/affiliates.yaml
           path: /affiliates
       # MONETIZE NAV REWORK
+
+    # EDUCATION NAV REWORK
+    - title: Education
+      path:  /education/educator-onboarding/landing
+      items:
+        - title: Overview
+          navigation: /education.yaml
+          path:  /education/educator-onboarding/landing
+      # EDUCATION NAV REWORK

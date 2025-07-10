@@ -1,0 +1,17 @@
+backTo:
+  title: Back to tutorials
+  path: /tutorials/
+navigation:
+  - heading: Learn to animate
+  - title: Overview
+    path: /tutorials/curriculums/animator/
+  - title: Get started
+    path: /tutorials/curriculums/animator/get-started
+  - title: Work with the Animation Editor
+    path: /tutorials/curriculums/animator/work-with-the-animation-editor
+  - title: Play your animation
+    path: /tutorials/curriculums/animator/play-your-animation
+  - title: Test and save
+    path: /tutorials/curriculums/animator/test-and-save
+  - title: Next steps
+    path: /tutorials/curriculums/animator/next-steps

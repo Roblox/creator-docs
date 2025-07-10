@@ -28,7 +28,7 @@ Posing figures is done by rotating individual parts and joints, like the head or
 
 1. To rotate, click on a body part. A set of handles will appear.
 
-   <video controls src="../../assets/education/build-it-play-it-island-of-move/create-the-first-pose/click-upper-arm.mp4" width="100%"></video>
+   <video controls src="../../assets/education/build-it-play-it-island-of-move/create-the-first-pose/click-upper-arm.mp4" width="80%"></video>
 
    <Alert severity="warning">
    **Troubleshooting Rotation**
@@ -43,8 +43,8 @@ Posing figures is done by rotating individual parts and joints, like the head or
 
 2. Rotate by **dragging** the handles. Each handle rotates in a different direction. **Undo** any change with (<kbd>Ctrl</kbd> + <kbd>Z</kbd> or <kbd>⌘</kbd> + <kbd>Z</kbd>).
 
-   <video controls src="../../assets/education/build-it-play-it-island-of-move/create-the-first-pose/rotate-upper-arm.mp4" width="100%"></video>
+   <video controls src="../../assets/education/build-it-play-it-island-of-move/create-the-first-pose/rotate-upper-arm.mp4" width="80%"></video>
 
 3. Continue to rotate different parts until the first pose is complete. While working, change the camera to see the pose from multiple angles.
 
-   <video controls src="../../assets/education/build-it-play-it-island-of-move/create-the-first-pose/timelapse-first-pose.mp4" width="100%"></video>
+   <video controls src="../../assets/education/build-it-play-it-island-of-move/create-the-first-pose/timelapse-first-pose.mp4" width="80%"></video>

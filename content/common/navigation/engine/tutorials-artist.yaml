@@ -1,0 +1,15 @@
+backTo:
+  title: Back to tutorials
+  path: /tutorials/
+navigation:
+  - heading: Learn to create VFX art
+  - title: Overview
+    path: /tutorials/curriculums/artist/
+  - title: Get started
+    path: /tutorials/curriculums/artist/get-started
+  - title: Work with particle emitters
+    path: /tutorials/curriculums/artist/work-with-particle-emitters
+  - title: Test and save
+    path: /tutorials/curriculums/artist/test-and-save
+  - title: Next steps
+    path: /tutorials/curriculums/artist/next-steps

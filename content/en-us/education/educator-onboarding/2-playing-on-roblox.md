@@ -21,7 +21,7 @@ To play and create on Roblox, you need a **free** account.
 
 1. Create an account by signing up on the <a href="https://www.roblox.com" target="_blank" rel="noopener">Roblox Home Page</a>. Follow the prompts to create your account.
 
-   <img src="../../assets/education/legacy/module3-signinScreen.jpg" width="100%" />
+   <img src="../../assets/education/legacy/module3-signinScreen.jpg" width="80%" />
 
 2. To create an account, you may be asked to complete a **CAPTCHA**. These are timed challenges used to discourage people creating fake accounts. Challenges vary, but often ask you to find a specific object in an image.
 
@@ -55,7 +55,7 @@ To play and create on Roblox, you need a **free** account.
 
 Once you've logged in, you'll see the Roblox home page. This includes recommended games and navigation options. Additionally, you'll see your username and a headshot of your **avatar**, your virtual representation in Roblox.
 
-<img src="../../assets/education/legacy/module2-homepage.jpg" />
+<img src="../../assets/education/legacy/module2-homepage.jpg" width="80%" />
 
 <Alert severity="info">
   <AlertTitle>Customize avatars</AlertTitle>
@@ -68,16 +68,14 @@ target="_blank" rel="noopener">Marketplace</a>.
 
 Before moving onto the training experience, it's recommended you add an email to your account. This adds extra security to your account and ensures you don't get locked out if a password is forgotten.
 
-1. On the Roblox home page, in the top right, click the <img
-   src="../../assets/education/legacy/roblox-web-SettingsButton.png"
-   width="22" /> and select **Settings**.
+1. On the Roblox home page, in the top right, click the gear icon and select **Settings**.
 
-   <img src="../../assets/education/legacy/module2-settings.png" />
+      <img src="../../assets/education/legacy/module2-settings.png" />
 
 2. On your account screen, click **Add Email**. Type in your school or
    organization email. Follow prompts as needed to verify the email.
 
-   <img src="../../assets/education/legacy/module2-addEmail.png" />
+   <img src="../../assets/education/legacy/module2-addEmail.png" width="80%" />
 
    <Alert severity="info">
    While Roblox does its best to ensure accounts are safe, you're one of the best defenses against bad actors. Learn additional tips in <a
@@ -97,33 +95,28 @@ All Roblox experiences have their own page. This page includes a description and
 
 A sample page is below.
 
-<img src="../../assets/education/legacy/module2-gamePage.png" />
+<img src="../../assets/education/legacy/module2-gamePage.png" width="80%" />
 
 ### Launch the experience
 
-1. To start, go to the [What is Roblox? Training Experience](https://www.roblox.com/games/7086173721).
+1. To start, go to the [Learn to Play Roblox](https://www.roblox.com/games/16279707695/Learn-to-Play-Roblox-Tutorial) experience.
 
 2. On that page, click the **Play** button. If you already have Roblox installed, it'll open the experience. If not, permit Roblox to be installed onto your device.
 
-   <img src="../../assets/education/legacy/module2-clickPlay.jpg" />
+   <img src="../../assets/education/legacy/module2-clickPlay.jpg" width="80%" />
 
-3. With Roblox Client open, go through the experience as instructed. This should take about 5 - 10 minutes. Come back to your web browser when you see a sign reading "You Finished the Training!"
+3. With Roblox Client open, go through the experience as instructed. This should take about 5 - 10 minutes. Come back to your web browser when you see a sign reading "Find new games!"
 
-   <Grid container>
-   <Grid item XSmall={4}>
-   <figure>
-   <img src="../../assets/education/legacy/module2-trainingExample.jpg" width="100%" />
-   <figcaption>Example in-experience</figcaption>
-   </figure>
-   </Grid>
-
-   <Grid item XSmall={4}>
-   <figure>
-   <img src="../../assets/education/legacy/module2-finishedTraining.jpg" width="100%" />
-   <figcaption>Finish screen</figcaption>
-   </figure>
-   </Grid>
-   </Grid>
+   <GridContainer numColumns="2">
+     <figure>
+       <img width="100%" img src="../../assets/education/legacy/module2-trainingExample.jpg" alt="" />
+       <figcaption>Example in-experience</figcaption>
+     </figure>
+     <figure>
+       <img width="71%" img src="../../assets/education/legacy/module2-finishedTraining.jpg" alt="" />
+       <figcaption>Finish screen</figcaption>
+     </figure>
+   </GridContainer>
 
 ### Desktop controls
 

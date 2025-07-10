@@ -1,0 +1,15 @@
+backTo:
+  title: Back to tutorials
+  path: /tutorials/
+navigation:
+  - heading: Learn about Studio
+  - title: Overview
+    path: /tutorials/curriculums/studio/
+  - title: Create Roblox account
+    path: /tutorials/curriculums/studio/create-account
+  - title: Install Roblox Studio
+    path: /tutorials/curriculums/studio/install-studio
+  - title: Explore UI
+    path: /tutorials/curriculums/studio/explore-ui
+  - title: Next steps
+    path: /tutorials/curriculums/studio/next-steps

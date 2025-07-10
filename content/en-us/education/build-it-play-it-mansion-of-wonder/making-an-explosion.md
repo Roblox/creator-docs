@@ -13,13 +13,13 @@ Now for the explosions! The same skills you learned in making the magic blast al
 
 Start by changing basic properties of the explosion, such as the color and texture.
 
-1. In the Explorer search bar, clear the previous search (if there is one). Then type **ExplosionParticles** and click the found object.
+1. In the **Explorer** window's search bar, clear the previous search, then type **ExplosionParticles** and click the found object.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/making-an-explosion/search-explosion.png" />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/making-an-explosion/search-explosion.png" width="40%" />
 
-2. In the Properties window, change the **color** of the explosion. Think of a color that will go well with the blast, such as a similar or contrasting color.
+2. In the **Properties** window, change the **color** of the explosion. Think of a color that will go well with the blast, such as a similar or contrasting color.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/making-an-explosion/explode-color.png" />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/making-an-explosion/explode-color.png" width="40%" />
 
    <Alert severity="warning">
    Keep in mind, you can only see what your explosion looks like by testing your experience.
@@ -78,9 +78,9 @@ Start by changing basic properties of the explosion, such as the color and textu
      </figure>
    </GridContainer>
 
-4. Find **Texture** and paste the copied number ID in the previous step. The example in the picture is using the star texture.
+4. Find the **Texture** property, then paste the copied number ID in the previous step. The example in the following picture uses the star texture.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/making-an-explosion/explode-texture.png" />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/making-an-explosion/explode-texture.png" width="40%" />
 
 5. To see the new colored texture, press **Play**. Then, walk up to the Play It section and start a new game.
 

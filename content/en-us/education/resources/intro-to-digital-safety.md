@@ -29,12 +29,14 @@ To protect yourself, always learn about a platform's privacy practices and setti
 
 When a negative situation happens, like seeing an abusive player or being the victim of a scam, you can take action with a report. Creating a report lets a platform, like Roblox, know that something needs to be investigated. By providing specific and clear information, you can solve personal account problems and help others in the community.
 
-To file a Roblox report, do the following:
+To file a Roblox report within an experience:
 
-1. In-game on the top left, click the Roblox button.
-   <img src="../../assets/education/intro-to-digital-safety/digitalSafety_reportClick.jpg" />
+1. In the top-left corner, click the Roblox button. A contextual menu displays.
 
-2. In the Report tab, follow the prompts to create the report. When finished, click Submit.
+   <img src="../../assets/education/intro-to-digital-safety/digitalSafety_reportClick.jpg" width="80%" />
+
+2. Go to the **Report** tab, then follow the prompts to create the report. When finished, click the **Submit** button.
+
    <img src="../../assets/education/intro-to-digital-safety/digitalSafety_showReport.jpg" />
 
    <Alert severity="info">

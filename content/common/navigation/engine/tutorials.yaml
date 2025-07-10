@@ -5,24 +5,29 @@ navigation:
   - heading: Get started
   - title: Overview
     path: /tutorials/
+  - title: Brand new to Studio?
+    section:
+      - title: Studio lesson
+        path: /tutorials/curriculums/studio
+        navigation: /engine/tutorials-studio.yaml
+      - title: Building lesson
+        path: /tutorials/curriculums/building
+        navigation: /engine/tutorials-building.yaml
+      - title: Coding lesson
+        path: /tutorials/curriculums/coding
+        navigation: /engine/tutorials-coding.yaml
+      - title: VFX lesson
+        path: /tutorials/curriculums/artist
+        navigation: /engine/tutorials-artist.yaml
+      - title: Animation lesson
+        path: /tutorials/curriculums/animator
+        navigation: /engine/tutorials-animator.yaml
   - title: Create your first experience
-    path: /tutorials/first-experience/
-  - heading: Curriculum paths
-  - title: Overview
-    path: /tutorials/curriculums/curriculum-overview
-  - title: Core
     path: /tutorials/curriculums/core/
     navigation: /engine/tutorials-core.yaml
-  - title: Environmental art
-    path: /tutorials/curriculums/environmental-art/
-    navigation: /engine/tutorials-ea.yaml
-  - title: Gameplay scripting
-    path: /tutorials/curriculums/gameplay-scripting/
-    navigation: /engine/tutorials-gs.yaml
-  - title: User interface design
-    path: /tutorials/curriculums/user-interface-design/
-    navigation: /engine/tutorials-ui.yaml
-  - heading: Use case tutorials
+  - title: Luau basics
+    path: /tutorials/fundamentals/coding-1/coding-fundamentals
+  - heading: Intermediate tutorials
   - title: Overview
     path: /tutorials/use-case-tutorials/use-case-tutorial-overview
   - title: Modeling
@@ -121,3 +126,15 @@ navigation:
     section:
       - title: Save player data
         path: /tutorials/use-case-tutorials/data-storage/save-player-data
+  - heading: Advanced paths
+  - title: Overview
+    path: /tutorials/curriculums/curriculum-overview
+  - title: Environmental art
+    path: /tutorials/curriculums/environmental-art/
+    navigation: /engine/tutorials-ea.yaml
+  - title: Gameplay scripting
+    path: /tutorials/curriculums/gameplay-scripting/
+    navigation: /engine/tutorials-gs.yaml
+  - title: User interface design
+    path: /tutorials/curriculums/user-interface-design/
+    navigation: /engine/tutorials-ui.yaml

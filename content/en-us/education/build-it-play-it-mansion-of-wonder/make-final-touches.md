@@ -13,7 +13,7 @@ Start by changing these two properties to achieve your vision.
 
 1. In the explosion properties, change **Size** to a number between `1` and `10` for best results. Different particle textures may work better with different sizes.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/make-final-touches/change-explode-size.png" />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/make-final-touches/change-explode-size.png" width="40%" />
 
    Some example sizes can be seen in the video below.
 
@@ -21,7 +21,7 @@ Start by changing these two properties to achieve your vision.
 
 2. Particles can burst out quickly, or creep out slowly. To experiment with this speed, scroll down to the **Emission** section and find **Speed**. We recommend trying a number between `10` (slow) and `100` (fast).
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/make-final-touches/change-speed.png" />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/make-final-touches/change-speed.png" width="40%" />
 
 3. When finished, run the project to test the particle. Make changes to the design until it looks right to you.
 
@@ -68,8 +68,8 @@ Randomizing properties can make particles feel less repetitive. You can add rand
 
 1. To use a randomized property, click the small arrow next to the property name. Once the property expands, you can enter a min and max value.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/make-final-touches/show-random-options.png" />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/make-final-touches/show-random-options.png" width="40%" />
 
    <Alert severity="info">
-   Using your new knowledge with explosions, take some time to also **improve the blast particle**. Experiment with properties like Lifetime. Remember, the blast emitter can be found by searching for BlastParticles in the Explorer.
+   Using your new knowledge with explosions, take some time to also **improve the blast particle**. Experiment with properties like Lifetime. Remember, the blast emitter can be found by searching for `BlastParticles` in the **Explorer** window.
    </Alert>

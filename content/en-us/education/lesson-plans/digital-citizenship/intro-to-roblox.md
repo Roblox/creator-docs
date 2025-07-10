@@ -108,7 +108,7 @@ prev: /education/lesson-plans/digital-citizenship/landing
 
 ### Digital safety scavenger hunt
 
-1. Have students open the<a href="https://www.roblox.com/games/5450795073/Digital-Safety-Scavenger-Hunt" target="_blank" rel="noopener">Beat the Scammers</a> Roblox experience. Make sure to send students to a private server created for that game.
+1. Have students open the <a href="https://www.roblox.com/games/5450795073/Digital-Safety-Scavenger-Hunt" target="_blank" rel="noopener">Beat the Scammers</a> Roblox experience. Make sure to send students to a private server created for that game.
 
    - Provide students Handout: Digital Safety Scavenger Hunt.
    - Give students about five minutes to explore and collect information on their handouts.

@@ -11,16 +11,12 @@ Adventuring is always more fun with friends, so let's set up your experience for
 
 1. **Publish** your experience so your friends will get your latest changes. Remember you can publish by going to the File menu in the top left.
 
-2. In the **Home** tab, click **Game Settings**.
+2. Select **File** (top left of Studio) and click **Game Settings**.
 
    <img src="../../assets/education/build-it-play-it-mansion-of-wonder/invite-friends/game-settings.png"  />
 
-3. On the left bar, select **Permissions**.
+3. On the left bar, select **Permissions**, then choose **Public**.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/invite-friends/permissions.png"  />
+   <img src="../../assets/education/general/make-public.png" width="80%" />
 
-4. Choose **Public**.
-
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/invite-friends/make-public.png"  />
-
-5. Click **Save**.
+4. Click the **Save** button.
