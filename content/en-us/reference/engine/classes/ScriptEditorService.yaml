@@ -210,7 +210,7 @@ methods:
         is. Primarily this controls the icon given to the item in the editor.
         Not all kinds have a unique icon. If not specified, the editor uses the
         "Text" icon. Unsupported kinds default to displaying the "Property"
-        icon.
+        icon. See `Enum.CompletionItemKind` for possible values.
       - `Response.items[n].tags` specifies an array of tags describing this
         completion item. See the `Enum.CompletionItemTag` for details on their
         function.

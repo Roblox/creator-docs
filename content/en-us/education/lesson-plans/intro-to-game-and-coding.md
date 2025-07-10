@@ -108,7 +108,7 @@ description: Learn how to build an obstacle course and code color changing block
 
 ### Guided tutorial - Intro to Studio
 
-1. Lead students through the following tutorial: <a href="../../tutorials/first-experience/index.md" target="_blank" rel="noopener">Introduction to Roblox Studio</a>.
+1. Lead students through the following tutorial: <a href="../../tutorials/curriculums/building/index.md" target="_blank" rel="noopener">Building lesson</a>.
 
 2. As you teach, keep in mind the following:
    - Remind students to rotate their camera view to get an accurate view of their project.

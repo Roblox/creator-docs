@@ -4444,7 +4444,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 5
+            "maxInPeriod": 40
           }
         },
         "security": [
@@ -4931,7 +4931,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 45
+            "maxInPeriod": 200
           }
         },
         "security": [

@@ -29,7 +29,7 @@ To customize the workspace for your coding task:
 
 1. Close any open window on the **left side** of Studio by clicking the **X** button on the top-right corner of the window. If you don't see anything to close, go to the next step.
 
-   <img src="../../../assets/education/story-games/CloseToolbox.png" width="60%" />
+   <img src="../../../assets/tutorials/building-lesson/CloseToolbox.png" width="60%" />
 
 2. Leave the **Explorer** and **Properties** window open on the right side of Studio. If you have done each step correctly, Studio looks like the following image.
 

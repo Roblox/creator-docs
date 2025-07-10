@@ -35,19 +35,6 @@ navigation:
     section:
       - title: Game design and coding
         path: /education/lesson-plans/intro-to-game-and-coding
-      - title: Roblox developer 101
-        path: /education/lesson-plans/roblox-developer/landing
-        section:
-          - title: Roblox Studio basics
-            path: /education/lesson-plans/roblox-developer/roblox-developer-1
-          - title: Coding fundamentals
-            path: /education/lesson-plans/roblox-developer/roblox-developer-2
-          - title: Adventure game 1
-            path: /education/lesson-plans/roblox-developer/roblox-developer-3
-          - title: Adventure game 2
-            path: /education/lesson-plans/roblox-developer/roblox-developer-4
-          - title: Adventure game 3
-            path: /education/lesson-plans/roblox-developer/roblox-developer-5
       - title: Digital citizenship
         path: /education/lesson-plans/digital-citizenship/landing
         section:
@@ -67,14 +54,10 @@ navigation:
             path: /education/lesson-plans/digital-citizenship/finishing-projects
   - title: Activity lessons
     section:
-      - title: Galactic Speedway
-        path: /education/lesson-plans/galactic-speedway-lesson
       - title: Roblox animations
         path: /education/lesson-plans/animate-in-roblox-lesson
       - title: Story games
         path: /education/lesson-plans/story-games-lesson
-      - title: Create and Destroy
-        path: /education/lesson-plans/create-and-destroy-lesson
   - title: Resources
     path: /education/resources/resources-landing
     section:

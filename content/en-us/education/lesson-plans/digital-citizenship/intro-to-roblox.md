@@ -124,7 +124,7 @@ prev: /education/lesson-plans/digital-citizenship/landing
 
 1. Inform student they'll be learning how to create their own experiences using Roblox Studio.
 
-2. Lead students through the following tutorial: <a href="../../../tutorials/first-experience/index.md" target="_blank" rel="noopener">Introduction to Roblox Studio</a>
+2. Lead students through the following tutorial: <a href="../../../tutorials/curriculums/building/index.md" target="_blank" rel="noopener">Building lesson</a>.
 
 3. As you teach, keep in mind the following:
 

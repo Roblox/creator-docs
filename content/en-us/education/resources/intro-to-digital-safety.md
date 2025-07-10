@@ -33,7 +33,7 @@ To file a Roblox report within an experience:
 
 1. In the top-left corner, click the Roblox button. A contextual menu displays.
 
-   <img src="../../assets/education/intro-to-digital-safety/digitalSafety_reportClick.jpg" width="80%" />
+   <img src="../../assets/education/intro-to-digital-safety/digitalSafety_reportClick.jpg" width="60%" />
 
 2. Go to the **Report** tab, then follow the prompts to create the report. When finished, click the **Submit** button.
 
