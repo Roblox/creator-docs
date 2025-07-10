@@ -8,18 +8,17 @@ description: |
   single **Output** pin which can be connected to other pins via
   `Class.Wire|Wires`.
 
-  Roblox uses the following formula to throttle requests for this API based on the number of players in your experience:
+  Roblox uses the following formula to throttle requests for this API based on
+  the number of players in your experience:
   `max requests per second per experience = 1 + (0.05 * per_thousand_concurrent_users)`
 
   For a more in-depth look, see
   [Text-to-speech](../../../audio/objects.md#text-to-speech).
-
 code_samples:
   - audio-wiring---text-to-speech
 inherits:
   - Instance
-tags:
-  - NotBrowsable
+tags: []
 deprecation_message: ''
 properties:
   - name: AudioTextToSpeech.IsLoaded
@@ -165,8 +164,8 @@ properties:
     summary: |
       The text to be converted into speech audio by `Class.AudioTextToSpeech`.
     description: |
-      The text to be converted into speech audio by `Class.AudioTextToSpeech`. The text has a
-      maximum length of 300 characters.
+      The text to be converted into speech audio by `Class.AudioTextToSpeech`.
+      The text has a maximum length of 300 characters.
     code_samples: []
     type: string
     tags: []
@@ -230,9 +229,9 @@ properties:
     summary: |
       The voice style to be used by `Class.AudioTextToSpeech`.
     description: |
-      The voice style to be used by`Class.AudioTextToSpeech`.
-      A list of available voices and their corresponding VoiceIds
-      can be found in the [text-to-speech guide](../../../audio/objects.md#text-to-speech).
+      The voice style to be used by`Class.AudioTextToSpeech`. A list of
+      available voices and their corresponding VoiceIds can be found in the
+      [text-to-speech guide](../../../audio/objects.md#text-to-speech).
     code_samples: []
     type: string
     tags: []
@@ -408,8 +407,8 @@ events:
       `Class.AudioTextToSpeech:GetPropertyChangedSignal()` on the
       `Class.AudioTextToSpeech.IsPlaying|IsPlaying` property.
 
-      This event may be used to destroy an `Class.AudioTextToSpeech` object
-      when it has completed playback.
+      This event may be used to destroy an `Class.AudioTextToSpeech` object when
+      it has completed playback.
     code_samples: []
     parameters: []
     tags: []

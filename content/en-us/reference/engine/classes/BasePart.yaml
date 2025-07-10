@@ -2591,7 +2591,8 @@ methods:
         summary: |
           The base part of an assembly (a collection of parts connected
           together).
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Safe

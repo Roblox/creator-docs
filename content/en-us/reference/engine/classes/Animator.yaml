@@ -26,7 +26,6 @@ properties:
     tags:
       - ReadOnly
       - NotReplicated
-      - NotBrowsable
     deprecation_message: ''
     security:
       read: None

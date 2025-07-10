@@ -56,6 +56,24 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: AdService:UnregisterAdOpportunity
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: instance
+        type: Instance
+        default: ''
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AdService:GetAdAvailabilityNowAsync
     summary: ''
     description: ''
@@ -67,6 +85,29 @@ methods:
         summary: ''
     returns:
       - type: Variant
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AdService:RegisterAdOpportunityAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: instance
+        type: Instance
+        default: ''
+        summary: ''
+      - name: placementId
+        type: int64?
+        default: ''
+        summary: ''
+    returns:
+      - type: ()
         summary: ''
     tags:
       - Yields

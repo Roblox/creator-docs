@@ -1,0 +1,163 @@
+name: AudioGate
+type: class
+memory_category: Internal
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: AudioGate.Attack
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
+  - name: AudioGate.Bypass
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
+  - name: AudioGate.Release
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
+  - name: AudioGate.Threshold
+    summary: ''
+    description: ''
+    code_samples: []
+    type: NumberRange
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
+methods:
+  - name: AudioGate:GetConnectedWires
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: pin
+        type: string
+        default: ''
+        summary: ''
+    returns:
+      - type: Instances
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Audio
+    writeCapabilities: []
+  - name: AudioGate:GetInputPins
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Audio
+    writeCapabilities: []
+  - name: AudioGate:GetOutputPins
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Audio
+    writeCapabilities: []
+events:
+  - name: AudioGate.WiringChanged
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: connected
+        type: boolean
+        default: ''
+        summary: ''
+      - name: pin
+        type: string
+        default: ''
+        summary: ''
+      - name: wire
+        type: Wire
+        default: ''
+        summary: ''
+      - name: instance
+        type: Instance
+        default: ''
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities:
+      - Audio
+    writeCapabilities: []
+callbacks: []

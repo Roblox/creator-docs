@@ -490,7 +490,7 @@ properties:
       read: PluginSecurity
       write: PluginSecurity
     thread_safety: ReadSafe
-    category: Behavior
+    category: Scripting
     serialization:
       can_load: true
       can_save: true
@@ -1085,7 +1085,7 @@ properties:
       read: None
       write: None
     thread_safety: ReadSafe
-    category: Behavior
+    category: Scripting
     serialization:
       can_load: true
       can_save: true

@@ -169,6 +169,29 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: AvatarCreationService:AutoSetupAvatarAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default: ''
+        summary: ''
+      - name: model
+        type: Model
+        default: ''
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AvatarCreationService:GetBatchTokenDetailsAsync
     summary: |
       Gets the avatar creation token details for a list of avatar creation
@@ -206,6 +229,25 @@ methods:
       - type: Array
         summary: |
           Array of avatar creation token details as outlined above.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AvatarCreationService:LoadGeneratedAvatarAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: generationId
+        type: string
+        default: ''
+        summary: ''
+    returns:
+      - type: HumanoidDescription
+        summary: ''
     tags:
       - Yields
     deprecation_message: ''

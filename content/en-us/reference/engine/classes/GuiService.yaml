@@ -326,6 +326,25 @@ properties:
       can_save: false
     capabilities: []
     writeCapabilities: []
+  - name: GuiService.ViewportDisplaySize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: DisplaySize
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService.ViewportSizeInMM
     summary: ''
     description: ''

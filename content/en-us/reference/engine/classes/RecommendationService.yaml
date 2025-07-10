@@ -40,8 +40,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities:
-      - InternalTest
+    capabilities: []
     writeCapabilities: []
   - name: RecommendationService:LogImpressionEvent
     summary: ''
@@ -71,8 +70,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities:
-      - InternalTest
+    capabilities: []
     writeCapabilities: []
   - name: RecommendationService:GenerateItemListAsync
     summary: ''
@@ -91,8 +89,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities:
-      - InternalTest
+    capabilities: []
     writeCapabilities: []
   - name: RecommendationService:RegisterItemAsync
     summary: ''
@@ -111,8 +108,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities:
-      - InternalTest
+    capabilities: []
     writeCapabilities: []
   - name: RecommendationService:RemoveItemAsync
     summary: ''
@@ -131,8 +127,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities:
-      - InternalTest
+    capabilities: []
     writeCapabilities: []
   - name: RecommendationService:UpdateItemAsync
     summary: ''
@@ -151,8 +146,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities:
-      - InternalTest
+    capabilities: []
     writeCapabilities: []
 events: []
 callbacks: []

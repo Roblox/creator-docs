@@ -270,6 +270,25 @@ properties:
     capabilities:
       - Environment
     writeCapabilities: []
+  - name: Lighting.ExtendLightRangeTo120
+    summary: ''
+    description: ''
+    code_samples: []
+    type: RolloutState
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: Lighting.FogColor
     summary: |
       A `Datatype.Color3` value giving the hue of `Lighting` fog.

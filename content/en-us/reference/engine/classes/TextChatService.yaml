@@ -63,7 +63,10 @@ properties:
     code_samples: []
     type: ChatVersion
     tags: []
-    deprecation_message: 'This property has been deprecated in newly created Studio experiences. `TextChatService` is the only allowed chat system and is automatically enabled.'
+    deprecation_message: |
+      This property has been deprecated in newly created Studio experiences.
+      `TextChatService` is the only allowed chat system and is automatically
+      enabled.
     security:
       read: None
       write: RobloxScriptSecurity

@@ -17,8 +17,7 @@ items:
     deprecation_message: ''
   - name: LockCenter
     summary: |
-      The mouse is locked and cannot move from the center of the user's
-      screen.
+      The mouse is locked and cannot move from the center of the user's screen.
     value: 1
     tags: []
     deprecation_message: ''

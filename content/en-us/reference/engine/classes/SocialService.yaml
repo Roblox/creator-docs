@@ -358,6 +358,29 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: SocialService:PromptLinkSharing
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default: ''
+        summary: ''
+      - name: options
+        type: Dictionary
+        default: nil
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: SocialService:PromptRsvpToEventAsync
     summary: |
       Prompts the local `Class.Player` with a prompt to change their RSVP status
@@ -456,6 +479,20 @@ events:
         default: ''
         summary: |
           The `Class.Player` instance of the player who closed the phone book.
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities: []
+    writeCapabilities: []
+  - name: SocialService.ShareSheetClosed
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default: ''
+        summary: ''
     tags: []
     deprecation_message: ''
     security: None
