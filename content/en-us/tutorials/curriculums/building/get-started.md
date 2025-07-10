@@ -11,7 +11,7 @@ Welcome to your first beginner building lesson in Studio! To get started, let's 
 
 Templates are pre-made 3D worlds that you can use as the base for your own experiences. To introduce you to building in Studio, Roblox has created the **Classic Obby** template with everything necessary for the experience to work properly, such as the code to run the gameplay and a simple skybox that you can customize at a later time.
 
-<img src="../../../assets/education/story-games/wcc_lessonThumbnail_1.png" width="70%" />
+<img src="../../../assets/tutorials/building-lesson/ObbyThumbnail.png" width="70%" />
 
 <Alert severity="info">
 For a full list of Roblox-provided templates, see [Templates](../../../resources/templates.md).
@@ -33,7 +33,7 @@ To customize the workspace for your coding task:
 
 2. Leave the **Explorer** and **Properties** window open on the right side of Studio. If you have done each step correctly, Studio looks like the following image.
 
-   <img src="../../../assets/education/story-games/studio-setup.jpg" width="100%" />
+   <img src="../../../assets/tutorials/building-lesson/StudioSetup.png" width="100%" />
 
    <Alert severity="warning">
    If you don't see the Explorer and Properties windows, you can open them by going to the **Home** tab and clicking the **Explorer** and **Properties** buttons.
