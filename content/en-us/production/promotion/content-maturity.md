@@ -1,5 +1,5 @@
 ---
-title: Content maturity
+title: Content maturity and compliance
 description: Explains how to accurately disclose content in experiences to receive appropriate maturity labels and content descriptors.
 ---
 

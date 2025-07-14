@@ -27,6 +27,7 @@ navigation:
     navigation: /engine/tutorials-core.yaml
   - title: Luau basics
     path: /tutorials/fundamentals/coding-1/coding-fundamentals
+    navigation: /engine/tutorials-fundamentals.yaml
   - heading: Intermediate tutorials
   - title: Overview
     path: /tutorials/use-case-tutorials/use-case-tutorial-overview

@@ -34,7 +34,7 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
   </thead>
   <tbody>
     <tr>
-      <td><a href="../../sound/assets.md">Audio</a></td>
+      <td><a href="../../audio/assets.md">Audio</a></td>
       <td>
         <ul>
           <li>`.mp3`</li>
@@ -115,9 +115,9 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
       </td>
       <td>
         <ul>
-          <li>Up to 60 seconds of duration.</li>
+          <li>Up to 5 minutes of duration.</li>
           <li>Up to 4096x2160 resolution.</li>
-          <li>Up to 750 MB.</li>
+          <li>Up to 3.75 GB.</li>
           <li>Currently, only English, Spanish, Portuguese, Indonesian, Chinese (simplified and traditional), Japanese, and/or Korean audio and text are allowed.</li>
           <li>Up to 10 uploads per month if you're 13+ and ID-verified.</li>
         </ul>
