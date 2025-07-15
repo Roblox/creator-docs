@@ -13,10 +13,55 @@ description: Explains how to improve retention metrics for your experience.
 
 To view your experience's retention analytics:
 
-1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
-1. In the **Analytics** menu on the left, select **Retention**.
+1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select an experience.
+2. In the **Analytics** menu on the left, select **Retention**.
 
-You can view analytics for individual or group owned experience. To view the latter, you need to have [group permissions for analytics](../../production/analytics/analytics-dashboard.md).
+To view analytics for group-owned experiences, you need to have [group permissions for analytics](../../production/analytics/analytics-dashboard.md).
+
+The x-axis of your [retention cohorts](#understand-your-new-user-cohorts) is based on a new user's first play date. This provides a more accurate view of how the changes you make on a specific day affect that new user cohort's retention over time.
+
+For example, the date 06/20 on all three charts shows you the same cohort:
+
+- **D1 retention**: Users who first played the experience on 06/20 and returned to the experience the next day.
+- **D7 retention**: Users who first played the experience on 06/20 and returned to the experience after 1 week.
+- **D30 retention**: Users who first played the experience on 06/20 and returned to the experience after 1 month.
+
+<Alert severity="info">
+   The data for the most recent dates on your D7 and D30 charts might be empty. For a user cohort that first played the experience on 06/20, their D7 retention data appears on 06/27 (after 7 days have passed), while their D30 retention data appears on 07/20 (after 30 days have passed).
+</Alert>
+
+In the following example, there is a dip around 05/13 on all retention charts. This indicates that users acquired on 05/13 had lower D1, D7, and D30 retention. This is a typical and temporary outcome following a large influx of new users.
+
+<figure>
+    <img src="../../assets/analytics/retention/AnalyticsRetentionChart.png" />
+    <figcaption>In this example, there is a dip around 05/13 on all retention charts. This indicates that users acquired on 05/13 had lower D1, D7, and D30 retention. This is a typical and temporary outcome following a large influx of new users.</figcaption>
+</figure>
+
+## Understand your new user cohorts
+
+You can find the new user retention cohort table at the bottom of your retention dashboard. You can view both daily and weekly cohorts:
+
+- **Daily cohorts** let you see how many new users were retained over their first 10 days.
+- **Weekly cohorts** let you track retention over a 10-week period by grouping users by the week they joined (Monday - Sunday).
+
+Cohorts are useful for tracking the impact of major updates, events, or any marketing campaigns you run. For example, you can measure if new users who started playing your experience during a big event are sticking around longer than users who started playing before the event.
+
+<figure>
+    <img src="../../assets/analytics/retention/CohortAnalysis.png" />
+</figure>
+
+For each cohort, you can also analyze key down-funnel metrics, including:
+
+- 7D playtime per user (cumulative)
+- 7D player conversion rate (cumulative)
+- 7D revenue per user (cumulative)
+- 30D revenue per user (cumulative)
+
+These metrics allow you to see if the new users who started playing your experience during a big event are monetizing better than other user cohorts.
+
+<figure>
+    <img src="../../assets/analytics/retention/CohortAnalysis2.png" />
+</figure>
 
 ## Improve day 1 retention
 

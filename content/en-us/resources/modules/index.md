@@ -17,7 +17,7 @@ description: Developer modules let you easily add powerful social features to yo
     <figcaption>Sell avatar assets and more in an experience</figcaption>
   </figure>
   <figure>
-    <Button href="../../resources/modules/connections-locator.md" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Friends locator</Button>
+    <Button href="../../resources/modules/connections-locator.md" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Connections locator</Button>
 	  <video controls src="../../assets/developer-modules/friends-locator/Showcase-SM.mp4" width="100%"></video>
     <figcaption>Easily spot your connections and teleport to them</figcaption>
   </figure>
