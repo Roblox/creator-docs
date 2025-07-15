@@ -53,18 +53,18 @@ Roblox offers various programs for creators on the platform to provide additiona
   <Grid item container wrap="nowrap" direction="column">
     <Card variant="filled" style={{height: "100%"}}>
     <CardContent>
-    <h4>Creator Affiliate Pilot Program</h4>
+    <h4>Creator Rewards</h4>
         <figure>
     <Chip
-        color="success"
-        label="Status: Open"
+        color="warning"
+        label="Status: Coming soon"
         size="medium"
         variant="filled"/>
     </figure>
     <Typography variant='body1'>Rewards creators for bringing new users to Roblox</Typography>
     </CardContent>
     <CardActions>
-        <Button href="/creator-programs/creator-affiliate" variant="contained" color="secondary" size='large'>Learn More</Button>
+        <Button href="https://devforum.roblox.com/t/introducing-creator-rewards-earn-more-by-growing-the-community/3777628" variant="contained" color="secondary" size='large'>Learn More</Button>
     </CardActions>
     </Card>
   </Grid>
