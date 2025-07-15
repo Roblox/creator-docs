@@ -38,11 +38,11 @@ The following table details promotional methods for experiences on the platform.
 	</tr>
 	<tr>
 		<td>**Player invite prompts**</td>
-		<td>[Player invite prompts](../../production/promotion/invite-prompts.md), implemented directly inside your experience, encourage players to invite their friends and increase co‑experience gameplay.</td>
+		<td>[Player invite prompts](../../production/promotion/invite-prompts.md), implemented directly inside your experience, encourage players to invite their connections and increase co‑experience gameplay.</td>
 	</tr>
 	<tr>
-		<td>**Friend invite reward system**</td>
-		<td>The [friend reward invite system](../../production/promotion/referral-system.md) rewards existing users for bringing in new users to your experiences.</td>
+		<td>**Connection invite reward system**</td>
+		<td>The [connection reward invite system](../../production/promotion/referral-system.md) rewards existing users for bringing in new users to your experiences.</td>
 	</tr>
 	<tr>
 		<td>**Experience notifications**</td>

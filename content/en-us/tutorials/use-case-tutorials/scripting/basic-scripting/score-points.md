@@ -318,7 +318,7 @@ while true do
 end
 ```
 
-Test your experience out now and you should find the user earns points every second they are alive, and stays at 0 when not alive. Have your friends play with you and see who can get the highest score.
+Test your experience out now and you should find the user earns points every second they are alive, and stays at 0 when not alive. Have your connections play with you and see who can get the highest score.
 
 This is just the start: you can continue improving your experience for your users. Here are some tips:
 

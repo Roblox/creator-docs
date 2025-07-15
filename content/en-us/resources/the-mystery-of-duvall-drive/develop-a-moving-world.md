@@ -526,7 +526,7 @@ Why did we use constraints here? Because `Class.TweenService` or other methods w
 
 <figure>
   <img src="../../assets/resources/mystery-of-duvall-drive/developing-a-moving-world/friends-spinning.png" width="80%" />
-  <figcaption>You could watch your friends spinning around while trying to navigate the obstacle course too.</figcaption>
+  <figcaption>You could watch your connections spinning around while trying to navigate the obstacle course too.</figcaption>
 </figure>
 
 To do this, we needed to first use assets from our current kit and add any new content for a visual effect. We made a few incomplete walls and platforms with holes in them to tell the story of the grandmother building the treehouse. Because we didn't want to create a bunch of unique platforms, we made 4 different base pieces and railing pieces separately. This allowed us to mix and match individual base and railing pieces to have plenty of variety.

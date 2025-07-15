@@ -414,7 +414,7 @@ There are nine genres available for targeting:
 - **Obby**: Navigate a series of challenging obstacles to reach a goal or complete a task.
 - **Roleplaying**: Assume the roles of characters in a fictional setting and have freedom to influence the story.
 - **Simulation**: Experiences that closely simulate real world or fictional realities.
-- **Social**: An environment where characters can meet friends, hangout, and socialize.
+- **Social**: An environment where characters can meet connections, hangout, and socialize.
 - **Sports**: Play traditional or fictional physical sports.
 - **Strategy**: Focus on skillful thinking and planning to achieve success.
 - **Tycoon**: Take on the role of a business owner and manage various aspects of the business to achieve success and profitability.

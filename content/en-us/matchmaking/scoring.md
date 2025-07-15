@@ -122,7 +122,7 @@ The following table calculates weighted Occupancy signal scores for a place with
 
 <h5 style={{marginTop: '36px'}}>Example: Two configurations with different weights</h5>
 
-Different weights can also make matchmaking choose different servers. The following table calculates the server scores of two servers with different matchmaking configurations. Configuration 2 has a higher weight for its Occupancy signal, and Server A has a friend of the joining player in it.
+Different weights can also make matchmaking choose different servers. The following table calculates the server scores of two servers with different matchmaking configurations. Configuration 2 has a higher weight for its Occupancy signal, and Server A has a connection of the joining player in it.
 
 <table>
 <thead>
@@ -240,7 +240,7 @@ The Robox default configuration includes the following signals and weights:
 </tbody>
 </table>
 
-In the default Roblox configuration, the Friends signal's weight is greater than the sum of the weights of every other signal. This means that, if available, the joining player is always matched to servers with friends (or players on the same IP address) in them.
+In the default Roblox configuration, the Friends signal's weight is greater than the sum of the weights of every other signal. This means that, if available, the joining player is always matched to servers with connections (or players on the same IP address) in them.
 
 The Device Type signal exists in the default configuration but has a weight of 0, so it doesn't affect matchmaking decisions. You can adjust this weight when you [customize matchmaking](./customize-matchmaking.md).
 
@@ -315,7 +315,7 @@ A weight indicates the importance of a signal relative to other signals in a con
 
 <h5 style={{marginTop: '36px'}}>Example: Relative vs absolute magnitude</h5>
 
-The table below calculates the server scores of two servers with two different matchmaking configurations. Configuration 5 and Configuration 6 have Occupancy weights higher than their respective Friends weights. Server A has a friend of the joining player in it.
+The table below calculates the server scores of two servers with two different matchmaking configurations. Configuration 5 and Configuration 6 have Occupancy weights higher than their respective Friends weights. Server A has a connection of the joining player in it.
 
 <table>
 <thead>

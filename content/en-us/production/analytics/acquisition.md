@@ -51,8 +51,8 @@ Here's a list of all the available acquisition sources:
     <td>**Favorites** and all other traffic on **Home**</td>
   </tr>
   <tr>
-    <td>Friends</td>
-    <td>**Friend Activity** section on **Home**</td>
+    <td>Connections</td>
+    <td>**Connection Activity** section on **Home**</td>
   </tr>
   <tr>
     <td>Search</td>

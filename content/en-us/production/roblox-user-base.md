@@ -11,7 +11,7 @@ Roblox users value three fundamental strengths of the platform:
 
 - **Low friction** &ndash; users can launch a new experience and start playing in seconds on almost any device. This ease of entry contributes to strong organic traffic and low UA costs.
 
-- **Social connection** &ndash; Roblox is in part a social network where users often play with their friends. A strong social component can massively accelerate growth and engagement for many experiences.
+- **Social connection** &ndash; Roblox is in part a social network where users often play with their connections. A strong social component can massively accelerate growth and engagement for many experiences.
 
 Always bear in mind how your experience plays to these strengths when designing for the Roblox audience.
 
@@ -45,9 +45,9 @@ Understanding your audience means understanding the other experiences your users
 
 ### Social factors
 
-Roblox allows users to add **Friends**, join them in their experience, and invite them to yours. Chat is built directly into every experience, so news spreads fast from user to user. In addition to socializing in various user made Groups on-platform, users are often active on platforms like Discord and X (Twitter).
+Roblox allows users to add **Connections**, join them in their experience, and invite them to yours. Chat is built directly into every experience, so news spreads fast from user to user. In addition to socializing in various user made Groups on-platform, users are often active on platforms like Discord and X (Twitter).
 
-Engaging experiences will generate a lot of **organic traffic** through word of mouth. Users find an experience they like, invite their friends, and then those friends invite more friends. YouTube can also attract a lot of attention, as users want to try out whatever their favorite YouTuber is playing. For more on generating traffic and building a community, see [Promote on Roblox](../production/promotion/index.md).
+Engaging experiences will generate a lot of **organic traffic** through word of mouth. Users find an experience they like, invite their connections, and then those connections invite more connections. YouTube can also attract a lot of attention, as users want to try out whatever their favorite YouTuber is playing. For more on generating traffic and building a community, see [Promote on Roblox](../production/promotion/index.md).
 
 ## Roblox culture
 
@@ -127,7 +127,7 @@ The sharing of **community-generated content** is the foundation of Roblox cultu
   </tr>
   <tr>
     <td><b>Private server</b></td>
-    <td>Some Roblox experiences offer users the ability to create private servers in which only they and their invited friends can play. Developers may offer private servers for free, or charge users a subscription fee to create them.</td>
+    <td>Some Roblox experiences offer users the ability to create private servers in which only they and their invited connections can play. Developers may offer private servers for free, or charge users a subscription fee to create them.</td>
   </tr>
   <tr>
     <td><b>Showcase</b></td>

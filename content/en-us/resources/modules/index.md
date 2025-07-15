@@ -17,14 +17,14 @@ description: Developer modules let you easily add powerful social features to yo
     <figcaption>Sell avatar assets and more in an experience</figcaption>
   </figure>
   <figure>
-    <Button href="../../resources/modules/friends-locator.md" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Friends locator</Button>
+    <Button href="../../resources/modules/connections-locator.md" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Friends locator</Button>
 	  <video controls src="../../assets/developer-modules/friends-locator/Showcase-SM.mp4" width="100%"></video>
-    <figcaption>Easily spot your friends and teleport to them</figcaption>
+    <figcaption>Easily spot your connections and teleport to them</figcaption>
   </figure>
   <figure>
-    <Button href="../../resources/modules/spawn-with-friends.md" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Spawn with friends</Button>
+    <Button href="../../resources/modules/spawn-with-connections.md" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Spawn with connections</Button>
 	  <video controls src="../../assets/developer-modules/spawn-with-friends/Showcase-SM.mp4" width="100%"></video>
-    <figcaption>Join an experience right next to your friends</figcaption>
+    <figcaption>Join an experience right next to your connections</figcaption>
   </figure>
   <figure>
     <Button href="../../resources/modules/emote-bar.md" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Emote bar</Button>

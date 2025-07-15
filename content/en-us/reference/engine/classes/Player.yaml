@@ -2017,9 +2017,9 @@ methods:
     writeCapabilities: []
   - name: Player:GetFriendsOnline
     summary: |
-      Returns a dictionary of online friends.
+      Returns a dictionary of online connections.
     description: |
-      This function returns a dictionary array of online friends, using a 30
+      This function returns a dictionary array of online connections, using a 30
       second cache. In the returned array, some fields are only present for
       certain location types; for example, `PlaceId` won't be present when
       `LocationType` is `0` (mobile website).
@@ -2036,47 +2036,47 @@ methods:
               <tr>
                   <td><code>VisitorId</code></td>
                   <td>number</td>
-                  <td>The <code>Class.Player.UserId|UserId</code> of the friend.</td>
+                  <td>The <code>Class.Player.UserId|UserId</code> of the connection.</td>
               </tr>
               <tr>
                   <td><code>UserName</code></td>
                   <td>string</td>
-                  <td>The username of the friend.</td>
+                  <td>The username of the connection.</td>
               </tr>
               <tr>
                   <td><code>DisplayName</code></td>
                   <td>string</td>
-                  <td>The <code>Class.Player.DisplayName|DisplayName</code> of the friend.</td>
+                  <td>The <code>Class.Player.DisplayName|DisplayName</code> of the connection.</td>
               </tr>
               <tr>
                   <td><code>LastOnline</code></td>
                   <td>string</td>
-                  <td>When the friend was last online.</td>
+                  <td>When the connection was last online.</td>
               </tr>
               <tr>
                   <td><code>IsOnline</code></td>
                   <td>boolean</td>
-                  <td>If the friend is currently online.</td>
+                  <td>If the connection is currently online.</td>
               </tr>
               <tr>
                   <td><code>LastLocation</code></td>
                   <td>string</td>
-                  <td>The name of the friend's current location.</td>
+                  <td>The name of the connection's current location.</td>
               </tr>
               <tr>
                   <td><code>PlaceId</code></td>
                   <td>number</td>
-                  <td>The place ID of the friend's last location.</td>
+                  <td>The place ID of the connection's last location.</td>
               </tr>
               <tr>
                   <td><code>GameId</code></td>
                   <td>string</td>
-                  <td>The <code>Class.DataModel.JobId</code> of the friend's last location.</td>
+                  <td>The <code>Class.DataModel.JobId</code> of the connection's last location.</td>
               </tr>
               <tr>
                   <td><code>LocationType</code></td>
                   <td>number</td>
-                  <td>The location type of the friend's last location.</td>
+                  <td>The location type of the connection's last location.</td>
               </tr>
           </tbody>
       </table>
@@ -2087,11 +2087,11 @@ methods:
         type: int
         default: 200
         summary: |
-          The maximum number of online friends to return.
+          The maximum number of online connections to return.
     returns:
       - type: Array
         summary: |
-          A dictionary of online friends (see the table above).
+          A dictionary of online connections (see the table above).
     tags:
       - Yields
     deprecation_message: ''
@@ -2176,10 +2176,10 @@ methods:
     writeCapabilities: []
   - name: Player:IsBestFriendsWith
     summary: |
-      Returns whether a player is friends with the specified user.
+      Returns whether a player is connections with the specified user.
     description: |
-      This function was once used to return whether a player is best friends
-      with the specified user, but the best friend feature has since been
+      This function was once used to return whether a player is best connections
+      with the specified user, but the best connection feature has since been
       removed.
     code_samples: []
     parameters:
@@ -2203,10 +2203,10 @@ methods:
     writeCapabilities: []
   - name: Player:IsFriendsWith
     summary: |
-      Checks whether a player is a friend of the user with the given
+      Checks whether a player is a connection of the user with the given
       `Class.Player.UserId`.
     description: |
-      This method sends a request to Roblox asking whether a player is a friend
+      This method sends a request to Roblox asking whether a player is a connection
       of another user, given the `Class.Player.UserId|UserId` of that user. This
       method caches results so multiple calls on the same player with the same
       `userId` may not yield the most up-to-date result.
@@ -2221,7 +2221,7 @@ methods:
     returns:
       - type: boolean
         summary: |
-          A boolean indicating whether a player is a friend of the specified
+          A boolean indicating whether a player is a connection of the specified
           user.
     tags:
       - Yields

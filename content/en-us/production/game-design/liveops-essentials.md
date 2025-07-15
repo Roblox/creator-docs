@@ -52,7 +52,7 @@ Unlike content cadences, which involve artists creating content to support exist
 
 Major updates aim to introduce new, permanent systems that evolve gameplay and both retain existing players while attracting new ones. Given their scope, major updates demand significant investment and may necessitate many months of development between releases. Types of major updates include:
 
-- Social: Systems like guilds, groups, trading, and parties promote player interaction and collaboration. By participating in these systems, players provide content for each other, introduce variety into gameplay sessions, and form friendships, all of which encourage repeat visits to the game.
+- Social: Systems like guilds, groups, trading, and parties promote player interaction and collaboration. By participating in these systems, players provide content for each other, introduce variety into gameplay sessions, and form connections, all of which encourage repeat visits to the game.
 
 - Competitive: Systems such as player versus player (PVP), leaderboards, and tournaments give players ways to measure themselves against other players.
 

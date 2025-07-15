@@ -128,7 +128,7 @@ properties:
         </tr>
         <tr>
           <td><code>Roblox.Notification.Friend.Joined</code></td>
-          <td>Displayed when one of the player's friends join the experience.</td>
+          <td>Displayed when one of the player's connections join the experience.</td>
         </tr>
         <tr>
           <td><code>Roblox.MessageStatus.Warning.Floodchecked</code></td>

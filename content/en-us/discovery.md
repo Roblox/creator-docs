@@ -14,7 +14,7 @@ On Home, our **Recommended for You** algorithm decides what experiences to show 
 
 Recommended for You is designed to personalize content, connecting users with experiences that foster deep engagement, social interaction, and repeat play.
 
-**Retrieval (stage 1)**: Roblox selects a subset of experiences that each user might enjoy playing based on signals like engagement, retention, monetization, friend plays, similar experiences, and variety.
+**Retrieval (stage 1)**: Roblox selects a subset of experiences that each user might enjoy playing based on signals like engagement, retention, monetization, connection plays, similar experiences, and variety.
 
 **Ranking (stage 2)**: Roblox ranks the selected experiences based on 6 key signals:
 
@@ -48,7 +48,7 @@ Recommended for You is designed to personalize content, connecting users with ex
   </tr>
   <tr>
     <td>**7 day intentional co-play days per user**</td>
-    <td>Frequency of users intentionally playing with friends over the last 7 days (through join, invite, or private server rather than through matchmaking).</td>
+    <td>Frequency of users intentionally playing with connections over the last 7 days (through join, invite, or private server rather than through matchmaking).</td>
   </tr>
 </tbody>
 </table>
@@ -149,7 +149,7 @@ Home's **Recommended For You** is not the only discovery surface that Roblox off
 
 ## Other Home sorts
 
-Home is a user's personalized view of Roblox. Outside of Recommended for You, Home also includes **Continue Playing**, **Friends List**, **Sponsored**, **Curated Sorts**, and more. For a deeper dive on some of these sections:
+Home is a user's personalized view of Roblox. Outside of Recommended for You, Home also includes **Continue Playing**, **Connections List**, **Sponsored**, **Curated Sorts**, and more. For a deeper dive on some of these sections:
 
 - **Curated** (e.g., Today's Picks) has experiences that are hand curated by Roblox and include up-and-coming creations, updated experiences, new genres, and more. Learn more in this [post](https://devforum.roblox.com/t/introducing-today%E2%80%99s-picks-a-new-curated-sort-on-home-pilot/2910867).
 - **Live Events** has experiences that are part of a limited time event that you can complete quests for to unlock rewards. You can see past events from Roblox [here](https://www.roblox.com/groups/4111519/Roblox-Presents#!/about).
@@ -183,6 +183,6 @@ Roblox is [committed](https://devforum.roblox.com/t/discovery-on-roblox-past-pre
 
 ### Notifications
 
-**Notifications** elevate timely and actionable information to users. Historically, we have focused on building and scaling social notifications, such as friend requests and invitations. This system allows for creators to engage with users directly while they are away. Milestones, high scores, [friend activity](https://devforum.roblox.com/t/user-mentions-in-experience-notifications/2980675), and other key moments can be delivered to users as personalized notifications to the notification stream. For additional information and implementation instructions, see [experience notifications](./cloud/guides/experience-notifications.md).
+**Notifications** elevate timely and actionable information to users. Historically, we have focused on building and scaling social notifications, such as connection requests and invitations. This system allows for creators to engage with users directly while they are away. Milestones, high scores, [connection activity](https://devforum.roblox.com/t/user-mentions-in-experience-notifications/2980675), and other key moments can be delivered to users as personalized notifications to the notification stream. For additional information and implementation instructions, see [experience notifications](./cloud/guides/experience-notifications.md).
 
 You can also use our [in-experience notification permission prompts](https://devforum.roblox.com/t/introducing-in-experience-notification-permission-prompts/2909125) to upsell notification opt-in within experiences. Notifications can help resurrect lapsed users or remind users when they need to take an action.

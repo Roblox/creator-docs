@@ -30,7 +30,7 @@ Usually, the friction of joining and leaving an experience is very low on Roblox
 
 2. **Get users into the action as soon as possible and avoid long tutorials**: If you lock all the fun of your game behind a lengthy tutorial, users might get bored and move on to something else. Make learning contextual and action based, such as short, unobtrusive pop-up instructions when a user encounters a new feature and tooltips about the purpose of items in the shop. Also consider giving users some starter items and currency to help them enjoy the core loop as soon as possible.
 
-3. **Remove unnecessary barriers to social interaction**: Many successful experiences on Roblox highlight socializing with friends and other users a core part of their design. Try to design your experience to support group play and social interaction where possible.
+3. **Remove unnecessary barriers to social interaction**: Many successful experiences on Roblox highlight socializing with connections and other users a core part of their design. Try to design your experience to support group play and social interaction where possible.
 
 <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/BkQL2_DY9Mc" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

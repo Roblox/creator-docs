@@ -1,12 +1,12 @@
 ---
 title: Roblox Connect project
-description: Explore Roblox Connect, an experience where you can call a friend and have a conversation as your avatars, together in a shared immersive space.
+description: Explore Roblox Connect, an experience where you can call a connection and have a conversation as your avatars, together in a shared immersive space.
 ---
 
-[Roblox Connect][robloxconnecturl] is an experience where you can call a friend and have a conversation as your avatars, together in a shared immersive space. From a developer's perspective, it is a non-copylocked experience that demonstrates one way of consuming the call-related methods and events of `Class.SocialService` and `Class.PlayerViewService`. The possible use cases are limitless and this guide provides examples of how they're used in [Roblox Connect][robloxconnecturl].
+[Roblox Connect][robloxconnecturl] is an experience where you can call a connection and have a conversation as your avatars, together in a shared immersive space. From a developer's perspective, it is a non-copylocked experience that demonstrates one way of consuming the call-related methods and events of `Class.SocialService` and `Class.PlayerViewService`. The possible use cases are limitless and this guide provides examples of how they're used in [Roblox Connect][robloxconnecturl].
 
 <Alert severity="info">
-To run [Roblox Connect][robloxconnecturl], you and your friends need to be on client version 602 or higher. Additionally, to implement the current [methods and events](#api-implementation) in one of your own experiences, it must have been published to Roblox for at least one week.
+To run [Roblox Connect][robloxconnecturl], you and your connections need to be on client version 602 or higher. Additionally, to implement the current [methods and events](#api-implementation) in one of your own experiences, it must have been published to Roblox for at least one week.
 </Alert>
 
 ## Project overview
@@ -67,7 +67,7 @@ If someone who is not in the call is added to the reserved server, or is already
 
   <video src="../assets/resources/roblox-connect/CanSendCallingInviteAsync.mp4" controls width="538" alt="Demo video of the CanSendCallingInviteAsync method" />
 
-- The `Class.SocialService.CallInviteStateChanged` event is connected to a listener that hides the call button, freeing up screen space while the player waits for their friend to answer the call request. This event can be used to show a "connecting" state if desired.
+- The `Class.SocialService.CallInviteStateChanged` event is connected to a listener that hides the call button, freeing up screen space while the player waits for their connection to answer the call request. This event can be used to show a "connecting" state if desired.
 
 - `Class.SocialService:ShowSelfView()` and `Class.SocialService:HideSelfView()` are hooked up to various camera modes. Specifically, the caller's self view is shown in [Picture‑in‑Picture](#picture-in-picture) or [Cinematic](#cinematic) mode, and hidden in [Freeplay](#freeplay) mode.
 

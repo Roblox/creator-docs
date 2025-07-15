@@ -25,14 +25,14 @@ navigation:
     path: /resources/modules/selfie-mode
   - title: Merch Booth
     path: /resources/modules/merch-booth
-  - title: Friends Locator
-    path: /resources/modules/friends-locator
+  - title: Connections Locator
+    path: /resources/modules/connections-locator
   - title: Profile Card
     path: /resources/modules/profile-card
   - title: Emote Bar
     path: /resources/modules/emote-bar
-  - title: Spawn With Friends
-    path: /resources/modules/spawn-with-friends
+  - title: Spawn With Connections
+    path: /resources/modules/spawn-with-connections
   - title: Photo Booth
     path: /resources/modules/photo-booth
   - title: Surface Art

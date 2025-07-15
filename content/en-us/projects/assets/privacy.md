@@ -26,7 +26,7 @@ In order for a collaborator, such as an individual creator or group, or an exper
 
 To grant a collaborator permission to use one of your restricted assets, the following must be true depending on if you are granting permission to another creator or a group:
 
-- The creator must be your [friend](https://en.help.roblox.com/hc/en-us/articles/203313580-How-to-Make-Friends) on the platform, or
+- The creator must be your [connection](https://en.help.roblox.com/hc/en-us/articles/203313580-How-to-Make-Friends) on the platform, or
 - You must have [Edit all group experiences](../../projects/groups.md#roles-and-permissions) permission in that group.
 
 If you meet these conditions and explicitly grant the collaborator permission,
@@ -70,7 +70,7 @@ To grant a collaborator permission to use a restricted asset in any of these sce
 
    <img src="../../assets/creator-dashboard/Permissions-Collaborators.png" alt="The landing page for asset permissions with the Collaborators tab selected." width="80%" />
 
-1. Using the search bar, input and select a friend or group that you want to grant permission to use your restricted asset. The creator or group displays beneath the search bar with their access type.
+1. Using the search bar, input and select a connection or group that you want to grant permission to use your restricted asset. The creator or group displays beneath the search bar with their access type.
 
    <img src="../../assets/creator-dashboard/Add-Collaborators.png" alt="The Add Collaborators pop-up menu." width="60%" />
 
@@ -169,10 +169,10 @@ You can view every restricted asset that your or your group's experiences have p
 ## Revoke permissions
 
 <Alert severity="warning">
-Unfriending a creator does not automatically revoke permissions to use a restricted asset.
+Unconnecting a creator does not automatically revoke permissions to use a restricted asset.
 </Alert>
 
-If you revoke restricted asset permission for a friend, they can no longer use the asset in any **additional** experiences. However, if they have used the restricted asset in their experiences, the experiences continue to have access to the restrictued asset.
+If you revoke restricted asset permission for a connection, they can no longer use the asset in any **additional** experiences. However, if they have used the restricted asset in their experiences, the experiences continue to have access to the restrictued asset.
 
 To revoke permission for a creator to use a restricted asset in any additional experience that isn't currently using the asset:
 

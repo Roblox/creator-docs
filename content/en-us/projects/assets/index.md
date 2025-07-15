@@ -69,7 +69,7 @@ For more information on both types of these assets for places, such as where and
 		</tr>
 		<tr>
 			<td>**Audio**</td>
-			<td>A `Class.Sound` object is an object that emits audio when you apply an audio asset ID within its `Class.Sound.SoundId|SoundId` property. Where you place the `Class.Sound` object in the data model changes how and where the sound emits within the experience. For more information, see [Audio Assets](../../sound/assets.md) and [Sound Objects](../../sound/objects.md).</td>
+			<td>A `Class.Sound` object is an object that emits audio when you apply an audio asset ID within its `Class.Sound.SoundId|SoundId` property. Where you place the `Class.Sound` object in the data model changes how and where the sound emits within the experience. For more information, see [Audio Assets](../../audio/assets.md) and [Sound Objects](../../sound/objects.md).</td>
 		</tr>
 		<tr>
 			<td>**Image**</td>
@@ -296,7 +296,7 @@ In the above example, `Images` is the category/folder that appears in the [Asset
 An asset's privacy status determines who has permission to use the asset within their experiences. By default, all assets are **private** when you or your [group](../../projects/groups.md) members import them into Studio. If you want to grant everyone access to the asset ID, you must distribute the asset to the [Creator Store][CreatorMarketplaceURL].
 
 <Alert severity="warning">
-Special privacy rules and workflows apply to **audio** and **video** assets. See [Asset Privacy](../../projects/assets/privacy.md) for details on sharing these asset types among friends and experiences.
+Special privacy rules and workflows apply to **audio** and **video** assets. See [Asset Privacy](../../projects/assets/privacy.md) for details on sharing these asset types among connections and experiences.
 </Alert>
 
 ## Asset moderation
@@ -323,7 +323,7 @@ Roblox offers several tools to import, store, and publish your assets:
     <tbody>
         <tr>
             <td>[Asset Manager](../../projects/assets/manager.md)</td>
-            <td>Imports and stores [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [audio](../../sound/assets.md), and more. Only displays assets that you've imported into the currently opened experience.</td>
+            <td>Imports and stores [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [audio](../../audio/assets.md), and more. Only displays assets that you've imported into the currently opened experience.</td>
         </tr>
 				<tr>
             <td>[Toolbox](../../projects/assets/toolbox.md)</td>

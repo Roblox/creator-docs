@@ -76,7 +76,7 @@ After users create and save an asset from your experience, they can find it in t
 - The **Development Items** tab under their Creator Dashboard [Creations](https://create.roblox.com/dashboard/creations?activeTab=Model) page.
 - The **Inventory** tab of their [Toolbox](../../projects/assets/toolbox.md) in Studio.
 
-When users see in-experience creations on their friends' profiles or inventories, they see attribution to the original experience in which the asset was created. Users can click on the attribution link to redirect to the experience page, so they can join the experience and create their own.
+When users see in-experience creations on their connections' profiles or inventories, they see attribution to the original experience in which the asset was created. Users can click on the attribution link to redirect to the experience page, so they can join the experience and create their own.
 
 <Alert severity="warning">
 Attribution is currently tied to a specific version of the created asset. If a user saves a package from an experience and further edits in Studio to create a new version, attribution no longer displays for the new version.

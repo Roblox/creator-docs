@@ -540,7 +540,7 @@ methods:
 
       ##### PromptSendFriendRequest
 
-      Prompts the current player to send a friend request to the given
+      Prompts the current player to send a connection request to the given
       `Class.Player`.
 
       <table size="small">
@@ -557,7 +557,7 @@ methods:
           <td><code>player</code></td>
           <td><code>Class.Player</code></td>
           <td>(required)</td>
-          <td>The player to which the friend request should be sent.</td>
+          <td>The player to which the connection request should be sent.</td>
         </tr>
       </tbody>
       </table>
@@ -565,7 +565,7 @@ methods:
       ##### PromptUnfriend
 
       Prompts the current player to remove a given `Class.Player` from their
-      friends list.
+      connections list.
 
       <table size="small">
       	<thead>
@@ -581,7 +581,7 @@ methods:
           <td><code>player</code></td>
           <td><code>Class.Player</code></td>
           <td>(required)</td>
-          <td>The player who should be unfriended.</td>
+          <td>The player who should be unconnected.</td>
         </tr>
       </tbody>
       </table>
@@ -881,12 +881,12 @@ methods:
       ##### PlayerFriendedEvent
 
       Returns a `Class.BindableEvent` that is fired whenever a player is
-      friended by the local player.
+      connected by the local player.
 
       ##### PlayerUnfriendedEvent
 
       Returns a `Class.BindableEvent` that is fired whenever a player is
-      unfriended by the local player.
+      unconnected by the local player.
 
       ##### DevConsoleVisible \*
 

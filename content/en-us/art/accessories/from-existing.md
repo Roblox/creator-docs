@@ -314,7 +314,7 @@ After moderation completes, your item's publishing details become available to e
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/swQW2VS9ZMA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br />
 
-You now have your accessory added to the Marketplace catalog! Use the item's Marketplace link to view your listing at any time, or to send to your friends and followers for additional engagement.
+You now have your accessory added to the Marketplace catalog! Use the item's Marketplace link to view your listing at any time, or to send to your connections and followers for additional engagement.
 
 <img src="../../assets/art/accessories/creating-rigid/Marketplace-Listing.png" />
 

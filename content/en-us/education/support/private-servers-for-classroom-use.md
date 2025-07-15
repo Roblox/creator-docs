@@ -52,7 +52,7 @@ Below are some ways our educators have used private servers in the classroom.
 
 The [Learn & Explore](https://www.roblox.com/discover#/sortName/Curated_67) sort, features experience that offer exploration of new places and subjects like history, safety, physics, and natural sciences. Many were created by educators and students.
 
-The [Play Together](https://www.roblox.com/discover#/sortName/Curated_71) sort is a curated list of experiences that are designed to be played with friends and are currently offering free private servers. This is a great place to start looking for experiences to bring your students together.
+The [Play Together](https://www.roblox.com/discover#/sortName/Curated_71) sort is a curated list of experiences that are designed to be played with connections and are currently offering free private servers. This is a great place to start looking for experiences to bring your students together.
 
 ### Popular games offering servers
 

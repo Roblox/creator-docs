@@ -1,9 +1,9 @@
 ---
-title: Friends Locator
-description: The Friends Locator module lets players easily find and teleport to their friends inside a place.
+title: Connections Locator
+description: The Connections Locator module lets players easily find and teleport to their connections inside a place.
 ---
 
-It can be challenging to locate friends in-experience. The **FriendsLocator** [developer module](../../resources/modules/index.md) lets players easily find and teleport to their friends inside a place.
+It can be challenging to locate connections in-experience. The **FriendsLocator** [developer module](../../resources/modules/index.md) lets players easily find and teleport to their connections inside a place.
 
 <video src="../../assets/developer-modules/friends-locator/Showcase.mp4" controls width="100%"></video>
 
@@ -13,7 +13,7 @@ It can be challenging to locate friends in-experience. The **FriendsLocator** [d
 
 To use the **FriendsLocator** module in an experience:
 
-1. From the [View](../../studio/view-tab.md) tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
+1. From the **View** tab, open the **Toolbox** and select the **Creator Store** tab.
 
    <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
 
@@ -37,7 +37,7 @@ To use the **FriendsLocator** module in an experience:
 
 ### Test in Studio
 
-To test the module in Studio, the **FriendsLocator** module must be run in a multi-client simulation, since no friends will be present in a solo playtest.
+To test the module in Studio, the **FriendsLocator** module must be run in a multi-client simulation, since no connections will be present in a solo playtest.
 
 1. In **StarterPlayerScripts**, create a new `Class.LocalScript` and rename it **ConfigureFriendsLocator**.
 
@@ -69,7 +69,7 @@ To test the module in Studio, the **FriendsLocator** module must be run in a mul
    </Alert>
 
    <Alert severity="warning">
-   By default, clicking/tapping a friend's icon will teleport your character to that character's location. If you keep this default behavior and you find that streaming pause is occurring under the [instance streaming](../../workspace/streaming.md) architecture, you may want to [request area streaming](../../workspace/streaming.md#request-area-streaming) around the teleport location as shown in the [clicked](#clicked) event code sample.
+   By default, clicking/tapping a connection's icon will teleport your character to that character's location. If you keep this default behavior and you find that streaming pause is occurring under the [instance streaming](../../workspace/streaming.md) architecture, you may want to [request area streaming](../../workspace/streaming.md#request-area-streaming) around the teleport location as shown in the [clicked](#clicked) event code sample.
    </Alert>
 
 ### Connect to events
@@ -117,14 +117,14 @@ To replace the default UI:
 
    <img src="../../assets/developer-modules/friends-locator/Custom-UI-ScreenGui-Disabled.png" width="320" />
 
-1. **(Optional)** If you want the friend's avatar portrait and `Class.Player.DisplayName|DisplayName` to show up somewhere in the custom UI, you can place the following instances inside the **FriendLocator** frame.
+1. **(Optional)** If you want the connection's avatar portrait and `Class.Player.DisplayName|DisplayName` to show up somewhere in the custom UI, you can place the following instances inside the **FriendLocator** frame.
 
    - An `Class.ImageLabel` of the name **Portrait**.
    - A `Class.TextLabel` of the name **DisplayName**.
 
    <img src="../../assets/developer-modules/friends-locator/Custom-UI-Portrait-DisplayName.png" width="320" />
 
-   The module will look for these items and display the friend's avatar portrait and/or display name respectively.
+   The module will look for these items and display the connection's avatar portrait and/or display name respectively.
 
 ## API reference
 
@@ -154,17 +154,17 @@ Overrides default configuration options through the following keys/values in the
 	</tr>
 	<tr>
 		<td>`showAllPlayers`</td>
-		<td>If `true`, shows locations for all players, not just friends; this can help verify the module's functionality in Studio.</td>
+		<td>If `true`, shows locations for all players, not just connections; this can help verify the module's functionality in Studio.</td>
 		<td>false</td>
 	</tr>
 	<tr>
 		<td>`teleportToFriend`</td>
-		<td>Teleports player character to the friend's location when their locator icon is clicked or tapped.</td>
+		<td>Teleports player character to the connection's location when their locator icon is clicked or tapped.</td>
 		<td>true</td>
 	</tr>
 	<tr>
 		<td>`thresholdDistance`</td>
-		<td>Camera distance threshold at which locator icons appear; friends closer than this distance will not display icons.</td>
+		<td>Camera distance threshold at which locator icons appear; connections closer than this distance will not display icons.</td>
 		<td>100</td>
 	</tr>
 	<tr>

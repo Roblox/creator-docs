@@ -7,7 +7,7 @@ description: |
   The `Class.Players` service contains `Class.Player` objects for presently
   connected clients to a Roblox server. It also contains information about a
   place's configuration. It can fetch information about players not connected to
-  the server, such as character appearances, friends, and avatar thumbnail.
+  the server, such as character appearances, connections, and avatar thumbnail.
 code_samples: []
 inherits:
   - Instance
@@ -1017,10 +1017,10 @@ methods:
   - name: Players:GetFriendsAsync
     summary: |
       Returns a `Class.FriendPages` object which contains information for all of
-      the given player's friends.
+      the given player's connections.
     description: |
       The GetFriends `Class.Players` function returns a `Class.FriendPages`
-      object which contains information for all of the given user's friends. The
+      object which contains information for all of the given user's connections. The
       items within the `Class.FriendPages` object are tables with the following
       fields:
 
@@ -1035,22 +1035,22 @@ methods:
       	<tr>
       		<td>Id</td>
       		<td>int64</td>
-      		<td>The friend's UserId</td>
+      		<td>The connection's UserId</td>
       	</tr>
       	<tr>
       		<td>Username</td>
       		<td>string</td>
-      		<td>The friend's username</td>
+      		<td>The connection's username</td>
       	</tr>
           <tr>
             <td>DisplayName</td>
             <td>string</td>
-            <td>The <code>Class.Player.DisplayName|display name</code> of the friend.</td>
+            <td>The <code>Class.Player.DisplayName|display name</code> of the connection.</td>
           </tr>
       </table>
 
       See the code samples for an easy way to iterate over all a player's
-      friends.
+      connections.
     code_samples:
       - print-roblox-friends
     parameters:

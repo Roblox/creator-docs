@@ -1,9 +1,9 @@
 ---
-title: Spawn With Friends
-description: The Spawn With Friends module automatically moves spawning players near one of their friends.
+title: Spawn With Connections
+description: The Spawn With Connections module automatically moves spawning players near one of their connections.
 ---
 
-It can be challenging to locate friends in-experience. The **SpawnWithFriends** [developer module](../../resources/modules/index.md) automatically moves spawning players near one of their friends present in the experience. This module can also be configured to teleport a player on command instead of automatically.
+It can be challenging to locate connections in-experience. The **SpawnWithFriends** [developer module](../../resources/modules/index.md) automatically moves spawning players near one of their connections present in the experience. This module can also be configured to teleport a player on command instead of automatically.
 
 <video src="../../assets/developer-modules/spawn-with-friends/Showcase.mp4" controls width="100%"></video>
 
@@ -17,7 +17,7 @@ It can be challenging to locate friends in-experience. The **SpawnWithFriends** 
 
 To use the **SpawnWithFriends** module in an experience:
 
-1. From the [View](../../studio/view-tab.md) tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
+1. From the **View** tab, open the **Toolbox** and select the **Creator Store** tab.
 
    <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
 
@@ -100,7 +100,7 @@ Overrides default configuration options through the following keys/values in the
 <tbody>
 	<tr>
 		<td>`teleportToFriendOnRespawn`</td>
-		<td>If set to `false`, teleportation to a friend will only happen manually via [teleportToRandomFriend](#teleporttorandomfriend).</td>
+		<td>If set to `false`, teleportation to a connection will only happen manually via [teleportToRandomFriend](#teleporttorandomfriend).</td>
 		<td>true</td>
 	</tr>
 	<tr>
@@ -115,7 +115,7 @@ Overrides default configuration options through the following keys/values in the
 	</tr>
 	<tr>
 		<td>`bypassFriendshipCheck`</td>
-		<td>If set to true, **all** players will be candidates for teleportation, not just friends.</td>
+		<td>If set to true, **all** players will be candidates for teleportation, not just connections.</td>
 		<td>false</td>
 	</tr>
 	<tr>
@@ -146,7 +146,7 @@ SpawnWithFriends.configure({
 teleportToRandomFriend(playerToTeleport: `Class.Player`): `boolean`
 </figcaption>
 
-Manually triggers teleportation of a player to one of their friends in the experience. Returns a boolean indicating whether or not teleportation succeeded; failure to teleport can be caused by the absence of friends in the server or the inability to find an unobstructed teleportation point. This function can only be called from a `Class.Script`.
+Manually triggers teleportation of a player to one of their connections in the experience. Returns a boolean indicating whether or not teleportation succeeded; failure to teleport can be caused by the absence of connections in the server or the inability to find an unobstructed teleportation point. This function can only be called from a `Class.Script`.
 
 #### setTeleportationValidator
 

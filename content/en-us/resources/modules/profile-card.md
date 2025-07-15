@@ -70,7 +70,7 @@ When viewing your own card, it appears as it would to another player, except pla
 
 </TabItem>
 <TabItem label="Other Player's Card">
-Icons do not appear over other characters, but clicking on a character will open their profile card. The button in the upper-right corner of the card lets you quickly request that player as a friend.
+Icons do not appear over other characters, but clicking on a character will open their profile card. The button in the upper-right corner of the card lets you quickly request that player as a connection.
 
 Note that players under the age of 13 will only see the status message if it's appropriate for their age group.
 
