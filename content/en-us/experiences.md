@@ -28,16 +28,16 @@ start creating Roblox experiences.
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <div class="container"
     style={{position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12}}>
-    <img src="/assets/landing/get-started/first-experience.png" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} />
+    <img src="/assets/landing/core-experience.png" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} />
     </div>
     <Typography variant='h4'>Create your first experience</Typography>
-    <Typography variant='body1'>Create a catapult that launches spheres into blocks while learning important Roblox concepts.</Typography>
+    <Typography variant='body1'>Create a simple 3D platformer while learning important Roblox building and scripting concepts.</Typography>
     <div style={{marginTop:16}}>
-      <a underline="none" href="./tutorials/first-experience/">
+      <a underline="none" href="./tutorials/curriculums/core/">
       <Button variant="contained" color="secondary" size='large'
       style={{marginRight:16, alignSelf: 'flex-start'}}>Create</Button>
       </a>
-      <UseStudioButton variant="link" buttonTextTranslationKey="Action.EditInStudio" placeId="16792353237" universeId="5771098000" />
+      <UseStudioButton variant="link" buttonTextTranslationKey="Action.EditInStudio" placeId="14238807008" universeId="4925394319" />
     </div>
   </Grid>
   </Grid>
@@ -128,24 +128,6 @@ that teaches you the skills you need to create and monetize your experiences.
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
   <div class="container"
   style={{position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12}}>
-  <iframe src="https://www.youtube-nocookie.com/embed/zi0hIuPDyWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
-  </div>
-    <Typography variant='h4'>Core</Typography>
-    <Typography variant='body1' >Core teaches you how to build a simple 3D platformer where players collect coins to trade for jump power.</Typography>
-      <div style={{marginTop:16}}>
-        <a underline="none" href="./tutorials/curriculums/core">
-        <Button variant="contained" color="secondary" size='large'
-        style={{marginRight:16, alignSelf: 'flex-start'}}>Create</Button>
-        </a>
-        <UseStudioButton variant="link" buttonTextTranslationKey="Action.EditInStudio" placeId="14238807008" universeId="4925394319" />
-      </div>
-  </Grid>
-  </Grid>
-
-  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
-  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
-  <div class="container"
-  style={{position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12}}>
   <iframe src="https://www.youtube-nocookie.com/embed/nwShvDmFHWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
   </div>
     <Typography variant='h4'>Environmental art</Typography>
@@ -170,6 +152,24 @@ that teaches you the skills you need to create and monetize your experiences.
     <Typography variant='body1' >Gameplay Scripting teaches you how to organize and implement the scripting logic for large, complex project.</Typography>
       <div style={{marginTop:16}}>
         <a underline="none" href="./tutorials/curriculums/gameplay-scripting/">
+        <Button variant="contained" color="secondary" size='large'
+        style={{marginRight:16, alignSelf: 'flex-start'}}>Create</Button>
+        </a>
+        <UseStudioButton variant="link" buttonTextTranslationKey="Action.EditInStudio" placeId="14817965191" universeId="5106332772" />
+      </div>
+  </Grid>
+  </Grid>
+
+  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+  <div class="container"
+  style={{position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12}}>
+  <iframe src="https://www.youtube-nocookie.com/embed/eqW9SINYeWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
+  </div>
+    <Typography variant='h4'>UI Design</Typography>
+    <Typography variant='body1' >UI Design teaches you how to plan and implement UI components for unique user flows.</Typography>
+      <div style={{marginTop:16}}>
+        <a underline="none" href="./tutorials/curriculums/user-interface-design/">
         <Button variant="contained" color="secondary" size='large'
         style={{marginRight:16, alignSelf: 'flex-start'}}>Create</Button>
         </a>

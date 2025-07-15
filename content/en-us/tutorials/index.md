@@ -19,10 +19,10 @@ While many creators focus on a single area, the following tutorials walk you thr
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
    <div class="container"
    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-   <img src="../assets/landing/get-started/first-experience.png" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} />
+   <img src="../assets/landing/core-experience.png" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} />
    </div>
    <Typography variant='h4'>Create your first experience</Typography>
-   <Typography variant='body1'>Learn about important concepts for developing on Roblox by recreating an experience that launches projectiles at floating platforms.</Typography>
+   <Typography variant='body1'>Learn about important concepts for developing on Roblox by recreating a simple 3D platformer experience where players collect coins to trade for jump power.</Typography>
    <div style={{marginTop:16}}>
      <a underline="none" href="./first-experience/index.md">
      <Button variant="contained" color="secondary" size='large'
@@ -71,66 +71,6 @@ While many creators focus on a single area, the following tutorials walk you thr
    </div>
  </Grid>
  </Grid>
-</Grid>
-
-<h2 style={{marginBottom: 24}}>Curriculum paths</h2>
-
-**Curriculum paths** provide a comprehensive overview of the various skills you need for different development areas after you familiarize yourself with Studio's core functionality. In addition to demonstrating how to use Studio features for each creative discipline, this long-form type of structured learning shows you how to examine and solve common design problems within your own experiences.
-
-<Grid container spacing={2} style={{marginBottom: 24}}>
-<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
-<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
-
- <div class="container"
- style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
- <iframe src="https://www.youtube-nocookie.com/embed/zi0hIuPDyWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
- </div>
-   <Typography variant='h4'>Core</Typography>
-   <Typography variant='body1' >Learn how to build a simple 3D platformer where players collect coins to trade for jump power.</Typography>
-     <div style={{marginTop:16}}>
-       <a underline="none" href="./curriculums/core/index.md">
-       <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
-       </a>
-     </div>
-</Grid>
-</Grid>
-
-<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
-<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
-
- <div class="container"
- style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
- <iframe src="https://www.youtube-nocookie.com/embed/nwShvDmFHWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
- </div>
-   <Typography variant='h4'>Environmental art</Typography>
-   <Typography variant='body1' >Learn how to recreate a high-quality environment for a first-person laser tag experience.</Typography>
-     <div style={{marginTop:16}}>
-       <a underline="none" href="./curriculums/environmental-art/index.md">
-       <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
-       </a>
-     </div>
-</Grid>
-</Grid>
-
-<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
-<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
-
- <div class="container"
- style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
- <iframe src="https://www.youtube-nocookie.com/embed/7iJKUUiKc0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
- </div>
-   <Typography variant='h4'>Gameplay scripting</Typography>
-   <Typography variant='body1' >Learn how to organize and implement the gameplay logic for a large, complex project.</Typography>
-     <div style={{marginTop:16}}>
-       <a underline="none" href="./curriculums/gameplay-scripting/index.md">
-       <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
-       </a>
-     </div>
-</Grid>
-</Grid>
 </Grid>
 
 <h2 style={{marginBottom: 24, marginTop: 96}}>Use case tutorials</h2>
@@ -289,4 +229,64 @@ While many creators focus on a single area, the following tutorials walk you thr
      </div>
  </Grid>
  </Grid>
+</Grid>
+
+<h2 style={{marginBottom: 24}}>Curriculum paths</h2>
+
+**Curriculum paths** provide a comprehensive overview of the various skills you need for different development areas after you familiarize yourself with Studio's core functionality. In addition to demonstrating how to use Studio features for each creative discipline, this long-form type of structured learning shows you how to examine and solve common design problems within your own experiences.
+
+<Grid container spacing={2} style={{marginBottom: 24}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
+ <div class="container"
+ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
+ <iframe src="https://www.youtube-nocookie.com/embed/nwShvDmFHWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
+ </div>
+   <Typography variant='h4'>Environmental art</Typography>
+   <Typography variant='body1' >Learn how to recreate a high-quality environment for a first-person laser tag experience.</Typography>
+     <div style={{marginTop:16}}>
+       <a underline="none" href="./curriculums/environmental-art/index.md">
+       <Button variant="contained" color="secondary" size='large'
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
+       </a>
+     </div>
+</Grid>
+</Grid>
+
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
+ <div class="container"
+ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
+ <iframe src="https://www.youtube-nocookie.com/embed/7iJKUUiKc0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
+ </div>
+   <Typography variant='h4'>Gameplay scripting</Typography>
+   <Typography variant='body1' >Learn how to organize and implement the gameplay logic for a large, complex project.</Typography>
+     <div style={{marginTop:16}}>
+       <a underline="none" href="./curriculums/gameplay-scripting/index.md">
+       <Button variant="contained" color="secondary" size='large'
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
+       </a>
+     </div>
+</Grid>
+</Grid>
+
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+
+ <div class="container"
+ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
+ <iframe src="https://www.youtube-nocookie.com/embed/eqW9SINYeWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
+ </div>
+   <Typography variant='h4'>UI design</Typography>
+   <Typography variant='body1' >Learn how to design and implement UI components for unique user flows.</Typography>
+     <div style={{marginTop:16}}>
+       <a underline="none" href="./curriculums/user-interface-design/index.md">
+       <Button variant="contained" color="secondary" size='large'
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
+       </a>
+     </div>
+</Grid>
+</Grid>
 </Grid>

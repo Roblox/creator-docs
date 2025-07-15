@@ -149,8 +149,6 @@ You can also implement a reward mechanism inside your experience to incentivize 
 
 Eligible users can see two types of video ads within Roblox experiences, depending on how the advertiser bids:
 
-
-
 <h5 style={{marginTop: '36px'}}>Image ads</h5>
 
 An image ad is a non-clickable static image that serves ads through an `Class.AdGui` instance that you can place on block `Class.Part` instances anywhere within the 3D space of an experience as long as nothing obstructs the view of the ad from users. The aspect ratio of the image scales with the face of the block you choose to display the ad content.
