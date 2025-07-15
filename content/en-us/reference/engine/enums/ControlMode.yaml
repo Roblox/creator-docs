@@ -8,7 +8,7 @@ description: |
   Note that shift-lock related APIs are in the process of being deprecated, so
   it's recommended to use `Class.UserInputService.MouseBehavior` instead to lock
   the mouse.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

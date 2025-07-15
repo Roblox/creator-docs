@@ -8,7 +8,7 @@ description: |
   This enum is used as an argument in
   `Class.AnalyticsService:FirePlayerProgressionEvent()` to describe the status
   of progression.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

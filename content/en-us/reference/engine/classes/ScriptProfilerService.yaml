@@ -19,7 +19,7 @@ methods:
     parameters:
       - name: player
         type: Player
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -37,11 +37,11 @@ methods:
     parameters:
       - name: player
         type: Player
-        default: ''
+        default:
         summary: ''
       - name: frequency
         type: int?
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -59,7 +59,7 @@ methods:
     parameters:
       - name: player
         type: Player
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -77,7 +77,7 @@ methods:
     parameters:
       - name: jsonString
         type: string?
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Dictionary
@@ -110,7 +110,7 @@ methods:
     parameters:
       - name: frequency
         type: int?
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -143,11 +143,11 @@ events:
     parameters:
       - name: player
         type: Player
-        default: ''
+        default:
         summary: ''
       - name: jsonString
         type: string
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''

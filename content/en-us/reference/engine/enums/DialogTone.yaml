@@ -6,7 +6,7 @@ summary: |
 description: |
   Sets the `Class.Dialog.Tone` of a `Class.Dialog` object, which influences how
   the dialog appears.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

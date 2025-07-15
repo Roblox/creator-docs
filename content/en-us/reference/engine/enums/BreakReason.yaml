@@ -4,7 +4,7 @@ summary: |
   Reason for the breakpoint hit.
 description: |
   Value for the reason the `Class.ScriptDebugger.EncounteredBreak` signal fired.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

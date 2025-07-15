@@ -24,29 +24,29 @@ tags: []
 deprecation_message: ''
 items:
   - name: Default
-    value: 0
     summary: |
       Default behavior (currently equivalent to **Disabled**).
+    value: 0
     tags: []
     deprecation_message: ''
   - name: Disabled
-    value: 1
     summary: |
       Simulation of the replication focus is never paused, regardless of the
       amount of content streamed in on the client.
+    value: 1
     tags: []
     deprecation_message: ''
   - name: MinimumRadiusPause
-    value: 2
     summary: |
       All client-side simulation is paused when content is not streamed in up to
       the minimum radius.
+    value: 2
     tags: []
     deprecation_message: ''
   - name: PauseOutsideLoadedArea
-    value: 3
     summary: |
       Simulation of the replication focus is paused when any part of its
       bounding box is not in a streamed-in area.
+    value: 3
     tags: []
     deprecation_message: ''

@@ -297,7 +297,7 @@ methods:
     parameters:
       - name: humanoid
         type: Instance
-        default: ''
+        default:
         summary: |
           The humanoid being forced to sit in the VehicleSeat.
     returns:

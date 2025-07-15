@@ -4,7 +4,7 @@ summary: |
   One of the buttons used by `Class.Controller`.
 description: |
   Used for accessing buttons for use by the `Class.Controller`.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

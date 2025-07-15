@@ -4,7 +4,7 @@ summary: |
   Controls the `Class.Part.Shape` of an object.
 description: |
   The **PartType** enum controls the `Class.Part.Shape|Shape` of a `Class.Part`.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

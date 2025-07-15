@@ -8,7 +8,7 @@ description: |
 
   Attach, Watch, Track, and Follow all require a valid
   `Class.Camera.CameraSubject` to work properly.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

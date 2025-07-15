@@ -27,6 +27,20 @@ navigation:
   - title: Regional Pricing
     path: /production/monetization/regional-pricing
 
+  - title: Intellectual property
+    path: /ip-licensing/
+    section:
+      - title: Overview
+        path: /ip-licensing/
+      - title: Rights Manager
+        path: /production/publishing/rights-manager    
+      - title: IP licensing for creators
+        path: /ip-licensing/creators
+      - title: Creator FAQs
+        path: /ip-licensing/faq
+      - title: Glossary
+        path: /ip-licensing/glossary
+
   - heading: Advertise
   - title: Ads Manager
     path: /production/promotion/ads-manager

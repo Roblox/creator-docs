@@ -6,57 +6,50 @@ summary: |
 description: |
   The **Path2DControlPoint** data type represents a single control point used
   with the `Class.Path2D` instance.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 constructors:
   - name: Path2DControlPoint.new
-    summary: |
-      Returns an empty `Datatype.Path2DControlPoint`.
-    description: |
-      Returns an empty `Datatype.Path2DControlPoint`.
-    parameters:
+    summary: Returns an empty `Datatype.Path2DControlPoint`.
+    description: Returns an empty `Datatype.Path2DControlPoint`.
+    parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: Path2DControlPoint.new
-    summary: |
-      Returns a `Datatype.Path2DControlPoint` with only the position set.
-    description: |
+    summary: Returns a `Datatype.Path2DControlPoint` with only the position set.
+    description: |-
       Returns a `Datatype.Path2DControlPoint` with the position set. This 
       constructor will set the tangents to default `Datatype.UDim2` values.
     parameters:
       - name: Position
         type: UDim2
         default:
-        summary: |
-          The `Datatype.UDim2` position of the control point.
+        summary: The `Datatype.UDim2` position of the control point.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: Path2DControlPoint.new
-    summary: |
+    summary: |-
       Returns a `Datatype.Path2DControlPoint` with the position, left
       tangent, and right tangent set.
-    description: |
+    description: |-
       Returns a `Datatype.Path2DControlPoint` with the position, left
       tangent, and right tangent set.
     parameters:
       - name: Position
         type: UDim2
         default:
-        summary: |
-          The `Datatype.UDim2` position of the control point.
+        summary: The `Datatype.UDim2` position of the control point.
       - name: Left Tangent
         type: UDim2
         default:
-        summary: |
-          The `Datatype.UDim2` left tangent of the control point.
+        summary: The `Datatype.UDim2` left tangent of the control point.
       - name: Right Tangent
         type: UDim2
         default:
-        summary: |
-          The `Datatype.UDim2` right tangent of the control point.
+        summary: The `Datatype.UDim2` right tangent of the control point.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -68,6 +61,7 @@ properties:
       The position of the `Datatype.Path2DControlPoint`.
     description: |
       The position of the `Datatype.Path2DControlPoint`.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -77,6 +71,7 @@ properties:
       The left tangent of the `Datatype.Path2DControlPoint`.
     description: |
       The left tangent of the `Datatype.Path2DControlPoint`.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -86,9 +81,10 @@ properties:
       The right tangent of the `Datatype.Path2DControlPoint`.
     description: |
       The right tangent of the `Datatype.Path2DControlPoint`.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
-methods:
-functions:
-math_operations:
+methods: []
+functions: []
+math_operations: []

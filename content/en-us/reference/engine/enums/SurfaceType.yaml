@@ -6,7 +6,7 @@ summary: |
 description: |
   Used to determine how a surface should be displayed on a part and how
   automatic surface joints should behave.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: |
   **SurfaceType** joining is deprecated, leaving only visual changes on the

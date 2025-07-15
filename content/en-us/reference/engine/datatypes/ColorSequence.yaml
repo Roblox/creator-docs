@@ -56,7 +56,7 @@ description: |
 
   print(evalColorSequence(colorSequence, 0.75))  --> 0.372549, 0.372549, 0.892157
   ```
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 constructors:
@@ -149,9 +149,10 @@ properties:
     description: |
       An array containing `Datatype.ColorSequenceKeypoint` values for the
       `Datatype.ColorSequence`.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
-methods:
-functions:
-math_operations:
+methods: []
+functions: []
+math_operations: []

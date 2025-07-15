@@ -4,7 +4,7 @@ summary: ''
 description: |
   The ExplosionType Enum is used to set the `Class.Explosion.ExplosionType`
   property.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

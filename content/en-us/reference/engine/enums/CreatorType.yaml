@@ -3,7 +3,7 @@ type: enum
 summary: ''
 description: |
   The ownership type of the open place.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

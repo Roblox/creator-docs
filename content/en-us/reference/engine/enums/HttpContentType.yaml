@@ -6,7 +6,7 @@ summary: |
 description: |
   Specifies the value of the HTTP Content-Type header which describes the HTTP
   request data type.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

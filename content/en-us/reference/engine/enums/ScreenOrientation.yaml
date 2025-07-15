@@ -4,7 +4,7 @@ summary: |
   The preference of in-game screen orientation on hand-held devices.
 description: |
   Indicates what orientation the game prefers to be played on mobile devices.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

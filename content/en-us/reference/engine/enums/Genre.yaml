@@ -4,7 +4,7 @@ summary: |
   Used to represent the type of game.
 description: |
   Used to represent the type of game.
-code_samples:
+code_samples: []
 tags:
   - Deprecated
 deprecation_message: ''

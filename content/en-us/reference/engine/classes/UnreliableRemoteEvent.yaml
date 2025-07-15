@@ -76,7 +76,7 @@ methods:
     parameters:
       - name: arguments
         type: Tuple
-        default: ''
+        default:
         summary: |
           Values to pass to all
           `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` events
@@ -122,12 +122,12 @@ methods:
     parameters:
       - name: player
         type: Player
-        default: ''
+        default:
         summary: |
           The client of the `Class.Player` to fire the event to.
       - name: arguments
         type: Tuple
-        default: ''
+        default:
         summary: |
           Values to pass to
           `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` events
@@ -170,7 +170,7 @@ methods:
     parameters:
       - name: arguments
         type: Tuple
-        default: ''
+        default:
         summary: |
           Values to pass to
           `Class.UnreliableRemoteEvent.OnServerEvent|OnServerEvent` events
@@ -211,7 +211,7 @@ events:
     parameters:
       - name: arguments
         type: Tuple
-        default: ''
+        default:
         summary: |
           The parameters sent through
           `Class.UnreliableRemoteEvent:FireClient()|FireClient()` or
@@ -245,14 +245,14 @@ events:
     parameters:
       - name: player
         type: Player
-        default: ''
+        default:
         summary: |
           The `Class.Player` associated with the client that the
           `Class.UnreliableRemoteEvent:FireServer()|FireServer()` call
           originates from.
       - name: arguments
         type: Tuple
-        default: ''
+        default:
         summary: |
           The parameters sent through
           `Class.UnreliableRemoteEvent:FireServer()|FireServer()`.

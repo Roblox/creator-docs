@@ -2194,7 +2194,7 @@ methods:
     parameters:
       - name: angAcceleration
         type: Vector3
-        default: ''
+        default:
         summary: ''
       - name: angVelocity
         type: Vector3
@@ -2233,7 +2233,7 @@ methods:
     parameters:
       - name: impulse
         type: Vector3
-        default: ''
+        default:
         summary: |
           An angular impulse vector to be applied to the assembly.
     returns:
@@ -2273,7 +2273,7 @@ methods:
     parameters:
       - name: impulse
         type: Vector3
-        default: ''
+        default:
         summary: |
           A linear impulse vector to be applied to the assembly.
     returns:
@@ -2314,12 +2314,12 @@ methods:
     parameters:
       - name: impulse
         type: Vector3
-        default: ''
+        default:
         summary: |
           An impulse vector to be applied to the assembly.
       - name: position
         type: Vector3
-        default: ''
+        default:
         summary: |
           The position, in world space, to apply the impulse.
     returns:
@@ -2361,7 +2361,7 @@ methods:
     parameters:
       - name: part
         type: BasePart
-        default: ''
+        default:
         summary: |
           The specified part being checked for collidability.
     returns:
@@ -2406,7 +2406,7 @@ methods:
     parameters:
       - name: position
         type: Vector3
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Vector3
@@ -2638,7 +2638,7 @@ methods:
     parameters:
       - name: position
         type: Vector3
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Vector3
@@ -2728,7 +2728,7 @@ methods:
     parameters:
       - name: normalId
         type: NormalId
-        default: ''
+        default:
         summary: |
           The side to resize.
       - name: deltaAmount
@@ -2794,7 +2794,7 @@ methods:
     parameters:
       - name: torque
         type: Vector3
-        default: ''
+        default:
         summary: ''
       - name: angVelocity
         type: Vector3
@@ -2867,7 +2867,7 @@ methods:
     parameters:
       - name: normalId
         type: NormalId
-        default: ''
+        default:
         summary: ''
       - name: deltaAmount
         type: int
@@ -2944,7 +2944,7 @@ methods:
     parameters:
       - name: parts
         type: Instances
-        default: ''
+        default:
         summary: |
           The objects taking part in the intersection.
       - name: collisionfidelity
@@ -3006,7 +3006,7 @@ methods:
     parameters:
       - name: parts
         type: Instances
-        default: ''
+        default:
         summary: |
           The objects taking part in the subtraction.
       - name: collisionfidelity
@@ -3092,7 +3092,7 @@ methods:
     parameters:
       - name: parts
         type: Instances
-        default: ''
+        default:
         summary: |
           The objects taking part in the union with the calling part.
       - name: collisionfidelity
@@ -3131,7 +3131,7 @@ events:
     parameters:
       - name: part
         type: BasePart
-        default: ''
+        default:
         summary: ''
     tags:
       - Deprecated
@@ -3160,7 +3160,7 @@ events:
     parameters:
       - name: otherPart
         type: BasePart
-        default: ''
+        default:
         summary: ''
     tags:
       - Deprecated
@@ -3187,7 +3187,7 @@ events:
     parameters:
       - name: otherPart
         type: BasePart
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''
@@ -3219,7 +3219,7 @@ events:
     parameters:
       - name: otherPart
         type: BasePart
-        default: ''
+        default:
         summary: |
           The other part that came in contact with the given part.
     tags: []

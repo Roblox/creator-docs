@@ -63,7 +63,7 @@ methods:
     parameters:
       - name: append
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()

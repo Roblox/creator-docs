@@ -6,7 +6,7 @@ summary: |
 description: |
   These enum values are passed to `Datatype.TweenInfo.new()` to control the
   direction `Class.Tween|Tweens` play in.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

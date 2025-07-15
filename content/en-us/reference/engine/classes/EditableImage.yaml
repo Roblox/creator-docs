@@ -123,29 +123,29 @@ methods:
     parameters:
       - name: center
         type: Vector2
-        default: ''
+        default:
         summary: |
           Center of the circle, relative to the top-left corner of the
           `EditableImage`. Positions outside the canvas bounds are allowed.
       - name: radius
         type: int
-        default: ''
+        default:
         summary: |
           Radius of the circle in pixels.
       - name: color
         type: Color3
-        default: ''
+        default:
         summary: |
           Color of the circle.
       - name: transparency
         type: float
-        default: ''
+        default:
         summary: |
           Transparency of the circle with 0 being fully opaque and 1 being fully
           transparent.
       - name: combineType
         type: ImageCombineType
-        default: ''
+        default:
         summary: |
           How the pixels of the source image are blended with the pixels of the
           added image.
@@ -170,18 +170,18 @@ methods:
     parameters:
       - name: position
         type: Vector2
-        default: ''
+        default:
         summary: |
           Position at which the top-left corner of the added image will be
           drawn.
       - name: image
         type: EditableImage
-        default: ''
+        default:
         summary: |
           The `EditableImage` to draw into this `EditableImage`.
       - name: combineType
         type: ImageCombineType
-        default: ''
+        default:
         summary: |
           How the pixels of the source image should be blended with the pixels
           of the added image.
@@ -206,12 +206,12 @@ methods:
     parameters:
       - name: mesh
         type: EditableMesh
-        default: ''
+        default:
         summary: |
           The `Class.EditableMesh` used to project into.
       - name: projection
         type: Dictionary
-        default: ''
+        default:
         summary: |
           Projection configuration dictionary including the following key-value
           pairs:
@@ -224,7 +224,7 @@ methods:
             space with respect to the mesh.
       - name: brushConfig
         type: Dictionary
-        default: ''
+        default:
         summary: |
           Brush configuration dictionary including the following key-value
           pairs:
@@ -264,29 +264,29 @@ methods:
     parameters:
       - name: position
         type: Vector2
-        default: ''
+        default:
         summary: |
           Position in pixels where the pivot point of the source image will be
           placed on this image.
       - name: scale
         type: Vector2
-        default: ''
+        default:
         summary: |
           Scaling factors for the source image along the X and Y axes.
       - name: rotation
         type: float
-        default: ''
+        default:
         summary: |
           The rotation angle in degrees, applied around the pivot point of the
           source image.
       - name: image
         type: EditableImage
-        default: ''
+        default:
         summary: |
           The source `EditableImage` to be drawn into this image.
       - name: options
         type: Dictionary?
-        default: ''
+        default:
         summary: |
           Optional dictionary for additional configuration:
 
@@ -318,27 +318,27 @@ methods:
     parameters:
       - name: p1
         type: Vector2
-        default: ''
+        default:
         summary: |
           Start point of the line.
       - name: p2
         type: Vector2
-        default: ''
+        default:
         summary: |
           End point of the line.
       - name: color
         type: Color3
-        default: ''
+        default:
         summary: |
           Color of the line.
       - name: transparency
         type: float
-        default: ''
+        default:
         summary: |
           Transparency of the line.
       - name: combineType
         type: ImageCombineType
-        default: ''
+        default:
         summary: |
           How the pixels of the source image are blended with the pixels of the
           added image.
@@ -361,29 +361,29 @@ methods:
     parameters:
       - name: position
         type: Vector2
-        default: ''
+        default:
         summary: |
           Position of the top-left of the rectangle. Unlike other drawing
           methods, this cannot be outside the canvas bounds of the
           `EditableImage`.
       - name: size
         type: Vector2
-        default: ''
+        default:
         summary: |
           Size of the rectangle to draw, in pixels.
       - name: color
         type: Color3
-        default: ''
+        default:
         summary: |
           Color of the rectangle.
       - name: transparency
         type: float
-        default: ''
+        default:
         summary: |
           Transparency of the rectangle.
       - name: combineType
         type: ImageCombineType
-        default: ''
+        default:
         summary: |
           How the pixels of the source image are blended with the pixels of the
           added image.
@@ -411,12 +411,12 @@ methods:
     parameters:
       - name: position
         type: Vector2
-        default: ''
+        default:
         summary: |
           Top-left corner of the rectangular region of pixels to read.
       - name: size
         type: Vector2
-        default: ''
+        default:
         summary: |
           Size of the rectangular region of pixels to read.
     returns:
@@ -447,17 +447,17 @@ methods:
     parameters:
       - name: position
         type: Vector2
-        default: ''
+        default:
         summary: |
           Top-left corner of the rectangular region to draw the pixels into.
       - name: size
         type: Vector2
-        default: ''
+        default:
         summary: |
           Size of the rectangular region of pixels to write.
       - name: buffer
         type: buffer
-        default: ''
+        default:
         summary: |
           A buffer where each pixel is represented by four bytes (red, green,
           blue, and alpha respectively). The length of the buffer should be

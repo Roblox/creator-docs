@@ -961,7 +961,7 @@ methods:
     parameters:
       - name: endPosition
         type: UDim2
-        default: ''
+        default:
         summary: |
           Where the GUI should move to.
       - name: easingDirection
@@ -1030,7 +1030,7 @@ methods:
     parameters:
       - name: endSize
         type: UDim2
-        default: ''
+        default:
         summary: |
           The size that the GUI should resize.
       - name: easingDirection
@@ -1099,12 +1099,12 @@ methods:
     parameters:
       - name: endSize
         type: UDim2
-        default: ''
+        default:
         summary: |
           The size that the GUI should resize.
       - name: endPosition
         type: UDim2
-        default: ''
+        default:
         summary: |
           Where the GUI should move to.
       - name: easingDirection
@@ -1168,7 +1168,7 @@ events:
     parameters:
       - name: initialPosition
         type: UDim2
-        default: ''
+        default:
         summary: |
           A `Datatype.UDim2` value of the position of the `Class.GuiObject`
           before any drag operation began.
@@ -1193,13 +1193,13 @@ events:
     parameters:
       - name: x
         type: int
-        default: ''
+        default:
         summary: |
           The mouse's **X** screen location in pixels, relative to the top left
           corner of the screen.
       - name: 'y'
         type: int
-        default: ''
+        default:
         summary: |
           The mouse's **Y** screen location in pixels, relative to the top left
           corner of the screen.
@@ -1232,7 +1232,7 @@ events:
     parameters:
       - name: input
         type: InputObject
-        default: ''
+        default:
         summary: |
           An `Class.InputObject`, which contains useful data for querying user
           input such as the`Enum.UserInputType|type of input`,
@@ -1266,7 +1266,7 @@ events:
     parameters:
       - name: input
         type: InputObject
-        default: ''
+        default:
         summary: |
           An `Class.InputObject`, which contains useful data for querying user
           input such as the`Enum.UserInputType|type of input`,
@@ -1298,7 +1298,7 @@ events:
     parameters:
       - name: input
         type: InputObject
-        default: ''
+        default:
         summary: |
           An `Class.InputObject`, which contains useful data for querying user
           input such as the`Enum.UserInputType`, `Enum.UserInputState`, and
@@ -1340,13 +1340,13 @@ events:
     parameters:
       - name: x
         type: int
-        default: ''
+        default:
         summary: |
           The mouse's **X** screen coordinate in pixels, relative to the top
           left corner of the screen.
       - name: 'y'
         type: int
-        default: ''
+        default:
         summary: |
           The mouse's **Y** screen coordinate in pixels, relative to the top
           left corner of the screen.
@@ -1383,13 +1383,13 @@ events:
     parameters:
       - name: x
         type: int
-        default: ''
+        default:
         summary: |
           The mouse's **X** screen coordinate in pixels, relative to the top
           left corner of the screen.
       - name: 'y'
         type: int
-        default: ''
+        default:
         summary: |
           The mouse's **Y** screen coordinate in pixels, relative to the top
           left corner of the screen.
@@ -1452,13 +1452,13 @@ events:
     parameters:
       - name: x
         type: int
-        default: ''
+        default:
         summary: |
           The mouse's **X** screen coordinate in pixels, relative to the top
           left corner of the screen.
       - name: 'y'
         type: int
-        default: ''
+        default:
         summary: |
           The mouse's **Y** screen coordinate in pixels, relative to the top
           left corner of the screen.
@@ -1493,13 +1493,13 @@ events:
     parameters:
       - name: x
         type: int
-        default: ''
+        default:
         summary: |
           The mouse's **X** screen coordinate in pixels, relative to the top
           left corner of the screen.
       - name: 'y'
         type: int
-        default: ''
+        default:
         summary: |
           The mouse's **Y** screen coordinate in pixels, relative to the top
           left corner of the screen.
@@ -1535,13 +1535,13 @@ events:
     parameters:
       - name: x
         type: int
-        default: ''
+        default:
         summary: |
           The mouse's **X** screen coordinate in pixels, relative to the top
           left corner of the screen.
       - name: 'y'
         type: int
-        default: ''
+        default:
         summary: |
           The **Y** coordinate of the user's mouse.
     tags: []
@@ -1618,13 +1618,13 @@ events:
     parameters:
       - name: touchPositions
         type: Array
-        default: ''
+        default:
         summary: |
           An array of `Datatype.Vector2` that describe the **relative**
           positions of the fingers involved in the gesture.
       - name: state
         type: UserInputState
-        default: ''
+        default:
         summary: |
           A `Enum.UserInputState` that describes the state of the gesture:
 
@@ -1662,24 +1662,24 @@ events:
     parameters:
       - name: touchPositions
         type: Array
-        default: ''
+        default:
         summary: |
           A Luau array of `Datatype.Vector2` objects, each indicating the
           position of all the fingers involved in the gesture.
       - name: totalTranslation
         type: Vector2
-        default: ''
+        default:
         summary: |
           Indicates how far the pan gesture has gone from its starting point.
       - name: velocity
         type: Vector2
-        default: ''
+        default:
         summary: |
           Indicates how quickly the gesture is being performed in each
           dimension.
       - name: state
         type: UserInputState
-        default: ''
+        default:
         summary: |
           Indicates the `Enum.UserInputState` of the gesture.
     tags: []
@@ -1716,24 +1716,24 @@ events:
     parameters:
       - name: touchPositions
         type: Array
-        default: ''
+        default:
         summary: |
           A Luau array of `Datatype.Vector2` objects, each indicating the
           position of all the fingers involved in the pinch gesture.
       - name: scale
         type: float
-        default: ''
+        default:
         summary: |
           A float that indicates the difference from the beginning of the pinch
           gesture.
       - name: velocity
         type: float
-        default: ''
+        default:
         summary: |
           A float indicating how quickly the pinch gesture is happening.
       - name: state
         type: UserInputState
-        default: ''
+        default:
         summary: |
           Indicates the `Enum.UserInputState` of the gesture.
     tags: []
@@ -1768,24 +1768,24 @@ events:
     parameters:
       - name: touchPositions
         type: Array
-        default: ''
+        default:
         summary: |
           A Luau array of `Datatype.Vector2` objects, each indicating the
           position of all the fingers involved in the gesture.
       - name: rotation
         type: float
-        default: ''
+        default:
         summary: |
           A float indicating how much the rotation has gone from the start of
           the gesture.
       - name: velocity
         type: float
-        default: ''
+        default:
         summary: |
           A float that indicates how quickly the gesture is being performed.
       - name: state
         type: UserInputState
-        default: ''
+        default:
         summary: |
           Indicates the `Enum.UserInputState` of the gesture.
     tags: []
@@ -1811,13 +1811,13 @@ events:
     parameters:
       - name: swipeDirection
         type: SwipeDirection
-        default: ''
+        default:
         summary: |
           A `Enum.SwipeDirection` indicating the direction of the swipe gesture
           (Up, Down, Left or Right).
       - name: numberOfTouches
         type: int
-        default: ''
+        default:
         summary: |
           The number of touch points involved in the gesture (usually 1).
     tags: []
@@ -1845,7 +1845,7 @@ events:
     parameters:
       - name: touchPositions
         type: Array
-        default: ''
+        default:
         summary: |
           An array of `Datatype.Vector2` that describe the **relative**
           positions of the fingers involved in the gesture.

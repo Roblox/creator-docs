@@ -11,7 +11,7 @@ description: |
 
   Not to be confused for `Enum.PlaybackState` which is used with
   `Class.TweenService`.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

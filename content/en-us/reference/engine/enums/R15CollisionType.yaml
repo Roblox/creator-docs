@@ -4,7 +4,7 @@ summary: |
   Collision behavior type for a R15 character.
 description: |
   Internal enum used to save the collision behavior setting for R15 characters.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

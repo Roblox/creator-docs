@@ -4,7 +4,7 @@ summary: ''
 description: |
   The FontSize Enum controls the font size of text in `Class.TextBox`,
   `Class.TextLabel`, and `Class.TextButton` objects.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

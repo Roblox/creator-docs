@@ -4,7 +4,7 @@ summary: |
   Generates pseudorandom numbers and directions.
 description: |
   The `Datatype.Random` data type generates pseudorandom numbers and directions.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 constructors:
@@ -29,7 +29,7 @@ constructors:
     tags: []
     deprecation_message: ''
 constants: []
-properties:
+properties: []
 methods:
   - name: Random:NextInteger
     summary: |
@@ -57,7 +57,7 @@ methods:
     description: |
       Returns a uniform pseudorandom real number in the range of 0 to 1,
       inclusive.
-    parameters:
+    parameters: []
     returns:
       - type: number
         summary: ''
@@ -115,7 +115,7 @@ methods:
     description: |
       Returns a unit vector with a pseudorandom direction. Vectors returned from
       this function are uniformly distributed over the unit sphere.
-    parameters:
+    parameters: []
     returns:
       - type: Vector3
         summary: |
@@ -128,12 +128,12 @@ methods:
       Returns a new Random object with the same state as the original.
     description: |
       Returns a new Random object with the same state as the original.
-    parameters:
+    parameters: []
     returns:
       - type: Random
         summary: ''
     code_samples: []
     tags: []
     deprecation_message: ''
-functions:
-math_operations:
+functions: []
+math_operations: []

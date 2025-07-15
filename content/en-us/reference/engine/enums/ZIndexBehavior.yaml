@@ -6,7 +6,7 @@ summary: |
 description: |
   Used by `Class.LayerCollector.ZIndexBehavior` to control how the
   `Class.GuiObject.ZIndex` property behaves for descendants.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

@@ -1094,7 +1094,7 @@ methods:
     parameters:
       - name: part
         type: BasePart
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -1153,7 +1153,7 @@ methods:
     parameters:
       - name: point
         type: Vector3
-        default: ''
+        default:
         summary: |
           The location from which player's distance to is being measured.
     returns:
@@ -1425,7 +1425,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: boolean
@@ -1471,7 +1471,7 @@ methods:
     parameters:
       - name: assetInstance
         type: Instance
-        default: ''
+        default:
         summary: |
           An instance of the asset being loaded, which can be obtained using the
           `Class.InsertService:LoadAsset()` function.
@@ -1500,7 +1500,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Instance
@@ -1529,7 +1529,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: double
@@ -1557,7 +1557,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: string
@@ -1592,7 +1592,7 @@ methods:
     parameters:
       - name: walkDirection
         type: Vector3
-        default: ''
+        default:
         summary: |
           The Vector3 direction that the player should move.
       - name: relativeToCamera
@@ -1618,7 +1618,7 @@ methods:
     parameters:
       - name: part
         type: BasePart
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -1642,11 +1642,11 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
       - name: value
         type: boolean
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -1674,11 +1674,11 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
       - name: value
         type: Instance
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -1706,7 +1706,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
       - name: value
         type: double
@@ -1738,11 +1738,11 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
       - name: value
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -1806,7 +1806,7 @@ methods:
     parameters:
       - name: value
         type: boolean
-        default: ''
+        default:
         summary: |
           A boolean indicating whether or not the player sees filtered chat.
     returns:
@@ -1826,7 +1826,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: boolean
@@ -1849,7 +1849,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Instance
@@ -1872,7 +1872,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: double
@@ -1894,7 +1894,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: string
@@ -1916,11 +1916,11 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
       - name: value
         type: boolean
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -1943,11 +1943,11 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
       - name: value
         type: Instance
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -1970,7 +1970,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
       - name: value
         type: double
@@ -1996,11 +1996,11 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
       - name: value
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -2334,7 +2334,7 @@ methods:
     parameters:
       - name: humanoidDescription
         type: HumanoidDescription
-        default: ''
+        default:
         summary: |
           A `Class.HumanoidDescription` containing traits like body
           parts/colors, body scaling, accessories, clothing, and animations that
@@ -2379,7 +2379,7 @@ methods:
     parameters:
       - name: position
         type: Vector3
-        default: ''
+        default:
         summary: |
           World location where streaming is requested.
       - name: timeOut
@@ -2505,7 +2505,7 @@ events:
     parameters:
       - name: character
         type: Model
-        default: ''
+        default:
         summary: |
           An instance of the character that spawned/respawned.
     tags: []
@@ -2541,7 +2541,7 @@ events:
     parameters:
       - name: character
         type: Model
-        default: ''
+        default:
         summary: |
           The `Class.Player.Character` `Class.Model`.
     tags: []
@@ -2568,7 +2568,7 @@ events:
     parameters:
       - name: character
         type: Model
-        default: ''
+        default:
         summary: |
           An instance of the character that is being removed.
     tags: []
@@ -2590,12 +2590,12 @@ events:
     parameters:
       - name: message
         type: string
-        default: ''
+        default:
         summary: |
           The content of the message the player typed in chat.
       - name: recipient
         type: Player
-        default: ''
+        default:
         summary: |
           **Deprecated.** For whisper messages, this was the Player who was the
           intended target of the chat message.
@@ -2651,7 +2651,7 @@ events:
     parameters:
       - name: teleportState
         type: TeleportState
-        default: ''
+        default:
         summary: |
           The new `Enum.TeleportState` of the `Class.Player`.
       - name: placeId
@@ -2661,7 +2661,7 @@ events:
           The ID of the place the `Class.Player` is being teleported to.
       - name: spawnName
         type: string
-        default: ''
+        default:
         summary: |
           The name of the spawn to teleport to, if
           `Class.TeleportService:TeleportToSpawnByName()` has been used.

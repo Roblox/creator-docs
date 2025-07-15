@@ -245,7 +245,7 @@ events:
     parameters:
       - name: player
         type: Player
-        default: ''
+        default:
         summary: |
           The `Class.Player` that was added.
     tags: []
@@ -277,7 +277,7 @@ events:
     parameters:
       - name: player
         type: Player
-        default: ''
+        default:
         summary: |
           The `Class.Player` removed.
     tags: []

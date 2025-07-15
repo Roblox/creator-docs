@@ -20,7 +20,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -38,11 +38,11 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
       - name: value
         type: Variant
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -75,7 +75,7 @@ methods:
     parameters:
       - name: player
         type: Player
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ConfigSnapshot

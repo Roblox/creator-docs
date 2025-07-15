@@ -7,7 +7,7 @@ description: |
   gives the option of controlling whether or not a bound action should sink or
   pass the input event, meaning other things (including other bound actions) can
   process it.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

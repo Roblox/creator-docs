@@ -19,7 +19,7 @@ methods:
     parameters:
       - name: block
         type: Dictionary
-        default: ''
+        default:
         summary: ''
     returns:
       - type: RBXScriptSignal

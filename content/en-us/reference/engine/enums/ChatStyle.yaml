@@ -6,7 +6,7 @@ summary: |
 description: |
   The ChatStyle Enum is used to set the style of `Class.Chat` used in a game via
   the `Class.Players:SetChatStyle()` method.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

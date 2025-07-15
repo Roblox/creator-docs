@@ -9,34 +9,34 @@ description: |
 
   For more information, see
   [Deferred Events](../../../scripting/events/deferred.md).
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    value: 0
     summary: |
       The default behavior; currently equivalent to `Immediate` but this will
       eventually change to `Deferred`.
+    value: 0
     tags: []
     deprecation_message: ''
   - name: Immediate
-    value: 1
     summary: |
       Event handlers are resumed immediately when the event occurs.
+    value: 1
     tags: []
     deprecation_message: ''
   - name: Deferred
-    value: 2
     summary: |
       All events are deferred and their handlers resumed at specific resumptions
       points each frame.
+    value: 2
     tags: []
     deprecation_message: ''
   - name: AncestryDeferred
-    value: 3
     summary: |
       Equivalent to `Deferred` but only for events triggered by changes in
       ancestry.
+    value: 3
     tags: []
     deprecation_message: ''

@@ -7,21 +7,21 @@ tags: []
 deprecation_message: ''
 items:
   - name: Cancel
-    value: 0
     summary: |
       Cancels the recording, automatically undoing any work in progress.
+    value: 0
     tags: []
     deprecation_message: ''
   - name: Commit
-    value: 1
     summary: |
       Commits the recorded work.
+    value: 1
     tags: []
     deprecation_message: ''
   - name: Append
-    value: 2
     summary: |
       Commits the recorded work and merges with the previous recording if
       possible.
+    value: 2
     tags: []
     deprecation_message: ''

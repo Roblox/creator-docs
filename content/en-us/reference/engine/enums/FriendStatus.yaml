@@ -4,7 +4,7 @@ summary: ''
 description: |
   Determines the friendship status between two players. This is used by the
   in-game friend request system.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

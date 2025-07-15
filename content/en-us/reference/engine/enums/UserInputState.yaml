@@ -21,7 +21,7 @@ description: |
     same `Class.InputObject` is used for the same touch point.
   - Gamepad thumbstick controls will cause `Change` to occur each frame the
     position changes.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

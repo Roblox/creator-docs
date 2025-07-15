@@ -2,7 +2,7 @@ name: BinType
 type: enum
 summary: ''
 description: ''
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: |
   This deprecated Enum is used by `Class.HopperBin` which has also been

@@ -6,7 +6,7 @@ summary: |
 description: |
   The `Axes` data type is for the `Class.ArcHandles` class to control which
   rotation axes are currently enabled.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 constructors:
@@ -33,6 +33,7 @@ properties:
       Whether the X axis is enabled.
     description: |
       Whether the X axis is enabled.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -42,6 +43,7 @@ properties:
       Whether the Y axis is enabled.
     description: |
       Whether the Y axis is enabled.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -51,6 +53,7 @@ properties:
       Whether the Z axis is enabled.
     description: |
       Whether the Z axis is enabled.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -60,6 +63,7 @@ properties:
       Whether the top face is included.
     description: |
       Whether the top face is included.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -69,6 +73,7 @@ properties:
       Whether the bottom face is included.
     description: |
       Whether the bottom face is included.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -78,6 +83,7 @@ properties:
       Whether the left face is included.
     description: |
       Whether the left face is included.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -87,6 +93,7 @@ properties:
       Whether the right face is included.
     description: |
       Whether the right face is included.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -96,6 +103,7 @@ properties:
       Whether the back face is included.
     description: |
       Whether the back face is included.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -105,9 +113,10 @@ properties:
       Whether the front face is included.
     description: |
       Whether the front face is included.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
-methods:
-functions:
-math_operations:
+methods: []
+functions: []
+math_operations: []

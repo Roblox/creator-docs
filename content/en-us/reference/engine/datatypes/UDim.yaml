@@ -6,7 +6,7 @@ summary: |
 description: |
   The `Datatype.UDim` data type represents a one-dimensional value with two
   components, a relative scale and an absolute offset in pixels.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 constructors:
@@ -33,6 +33,7 @@ properties:
       The relative scale component of the `Datatype.UDim`.
     description: |
       The relative scale component of the `Datatype.UDim`.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -42,13 +43,15 @@ properties:
       The absolute offset component of the `Datatype.UDim`.
     description: |
       The absolute offset component of the `Datatype.UDim` in pixels.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
-methods:
-functions:
+methods: []
+functions: []
 math_operations:
-  - operation: +
+  - name: +
+    operation: +
     summary: |
       Produces a `Datatype.UDim` representing the sum of the two `Datatype.UDim`
       values.
@@ -61,7 +64,8 @@ math_operations:
     code_samples: []
     tags: []
     deprecation_message: ''
-  - operation: '-'
+  - name: '-'
+    operation: '-'
     summary: |
       Produces a `Datatype.UDim` representing the difference between the two
       `Datatype.UDim` values.

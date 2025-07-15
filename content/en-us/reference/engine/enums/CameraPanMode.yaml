@@ -6,7 +6,7 @@ summary: |
 description: |
   The CameraPanMode Enum represents the available pan modes for
   `Class.Camera:SetCameraPanMode()`.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

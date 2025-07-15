@@ -4,7 +4,7 @@ summary: |
   Host operating system of the client.
 description: |
   The **Platform** enum is used to determine the operating system of the client.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

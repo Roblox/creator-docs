@@ -7,7 +7,7 @@ description: |
   Describes which limb a particular Instance belongs to (assuming the Instance
   is part of a Humanoid). Passing an Instance to the Humanoid:GetLimb() function
   will return the Limb for the Instance.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

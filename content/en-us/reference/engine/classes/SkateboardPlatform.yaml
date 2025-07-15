@@ -164,7 +164,7 @@ methods:
     parameters:
       - name: impulseWorld
         type: Vector3
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -190,13 +190,13 @@ events:
     parameters:
       - name: humanoid
         type: Instance
-        default: ''
+        default:
         summary: |
           The `Class.Humanoid` associated with the character equipping the
           skateboard.
       - name: skateboardController
         type: Instance
-        default: ''
+        default:
         summary: |
           The `Class.SkateboardController`.
     tags: []
@@ -222,12 +222,12 @@ events:
     parameters:
       - name: newState
         type: MoveState
-        default: ''
+        default:
         summary: |
           The new `Enum.MoveState`.
       - name: oldState
         type: MoveState
-        default: ''
+        default:
         summary: |
           The old `Enum.MoveState`.
     tags: []
@@ -249,7 +249,7 @@ events:
     parameters:
       - name: humanoid
         type: Instance
-        default: ''
+        default:
         summary: |
           The `Class.Humanoid` associated with the character that unequipped the
           skateboard.
@@ -270,11 +270,11 @@ events:
     parameters:
       - name: humanoid
         type: Instance
-        default: ''
+        default:
         summary: ''
       - name: skateboardController
         type: Instance
-        default: ''
+        default:
         summary: ''
     tags:
       - Deprecated
@@ -292,7 +292,7 @@ events:
     parameters:
       - name: humanoid
         type: Instance
-        default: ''
+        default:
         summary: ''
     tags:
       - Deprecated

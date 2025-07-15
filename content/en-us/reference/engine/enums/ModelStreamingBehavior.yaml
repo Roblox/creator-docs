@@ -13,21 +13,20 @@ tags: []
 deprecation_message: ''
 items:
   - name: Default
-    value: 0
     summary: |
       Engine determines best behavior. Currently equivalent to **Legacy**.
+    value: 0
     tags: []
     deprecation_message: ''
   - name: Legacy
-    value: 1
     summary: |
       Models are sent when their parent is sent, typically during player join.
       Models are never streamed out unless an ancestor of the model is streamed
       out.
+    value: 1
     tags: []
     deprecation_message: ''
   - name: Improved
-    value: 2
     summary: |
       Models are never sent during player join. Models that are "non-spatial"
       (containing no `Class.BasePart` descendants) are sent soon after join, but
@@ -36,5 +35,6 @@ items:
       `Class.BasePart` descendant needs to be streamed to a client, and may
       stream out when all `Class.BasePart` descendants are eligible to stream
       out.
+    value: 2
     tags: []
     deprecation_message: ''

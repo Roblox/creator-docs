@@ -44,7 +44,7 @@ methods:
     parameters:
       - name: onCaptureReady
         type: Function
-        default: ''
+        default:
         summary: |
           A callback function that is called with the `contentId` of the new
           capture once it is ready.
@@ -68,11 +68,11 @@ methods:
     parameters:
       - name: captures
         type: Array
-        default: ''
+        default:
         summary: ''
       - name: resultCallback
         type: Function
-        default: ''
+        default:
         summary: |
           A callback function that will be invoked with a dictionary mapping
           each `contentId` to a boolean indicating if the user accepted saving
@@ -107,21 +107,21 @@ methods:
     parameters:
       - name: captureContent
         type: Content
-        default: ''
+        default:
         summary: ''
       - name: launchData
         type: string
-        default: ''
+        default:
         summary: |
           An optional string to include as launch data in the invite link.
       - name: onAcceptedCallback
         type: Function
-        default: ''
+        default:
         summary: |
           An optional callback function invoked if the user accepts sharing.
       - name: onDeniedCallback
         type: Function
-        default: ''
+        default:
         summary: |
           An optional callback function invoked if the user denies sharing.
     returns:
@@ -154,7 +154,7 @@ methods:
     parameters:
       - name: onCaptureReady
         type: Function
-        default: ''
+        default:
         summary: ''
       - name: captureParams
         type: Dictionary
@@ -176,7 +176,7 @@ methods:
     parameters:
       - name: onCaptureReady
         type: Function
-        default: ''
+        default:
         summary: ''
       - name: captureParams
         type: Dictionary
@@ -204,7 +204,7 @@ events:
     parameters:
       - name: captureType
         type: CaptureType
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''
@@ -222,7 +222,7 @@ events:
     parameters:
       - name: captureType
         type: CaptureType
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''
@@ -236,7 +236,7 @@ events:
     parameters:
       - name: captureInfo
         type: Dictionary
-        default: ''
+        default:
         summary: ''
     tags:
       - Deprecated
@@ -257,7 +257,7 @@ events:
     parameters:
       - name: captureContentId
         type: ContentId
-        default: ''
+        default:
         summary: |
           The `contentId` identifying the screenshot that the user saved.
     tags: []

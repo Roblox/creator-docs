@@ -361,7 +361,7 @@ methods:
     parameters:
       - name: meshPart
         type: Instance
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()

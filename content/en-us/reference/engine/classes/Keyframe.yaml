@@ -103,7 +103,7 @@ methods:
     parameters:
       - name: marker
         type: Instance
-        default: ''
+        default:
         summary: |
           The `Class.KeyframeMarker` being parented to the `Class.Keyframe`.
     returns:
@@ -134,7 +134,7 @@ methods:
     parameters:
       - name: pose
         type: Instance
-        default: ''
+        default:
         summary: |
           The `Class.Pose` to be added.
     returns:
@@ -245,7 +245,7 @@ methods:
     parameters:
       - name: marker
         type: Instance
-        default: ''
+        default:
         summary: |
           The marker being removed from the `Class.Keyframe`.
     returns:
@@ -274,7 +274,7 @@ methods:
     parameters:
       - name: pose
         type: Instance
-        default: ''
+        default:
         summary: |
           The `Class.Pose` to be removed.
     returns:

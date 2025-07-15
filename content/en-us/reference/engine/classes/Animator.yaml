@@ -126,7 +126,7 @@ methods:
     parameters:
       - name: motors
         type: Variant
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -203,7 +203,7 @@ methods:
     parameters:
       - name: animation
         type: Animation
-        default: ''
+        default:
         summary: |
           The `Class.Animation` to be used.
     returns:
@@ -223,7 +223,7 @@ methods:
     parameters:
       - name: callback
         type: Function
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -269,7 +269,7 @@ methods:
     parameters:
       - name: deltaTime
         type: float
-        default: ''
+        default:
         summary: |
           The amount of time in seconds animation playback is to be incremented
           by.
@@ -294,7 +294,7 @@ events:
     parameters:
       - name: animationTrack
         type: AnimationTrack
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''

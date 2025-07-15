@@ -8,13 +8,12 @@ description: |
   which describes named colors, `Datatype.Color3` is used for precise coloring
   of objects on screen through properties like `Class.BasePart.Color` and
   `Class.GuiObject.BackgroundColor3`.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 constructors:
   - name: Color3.new
-    summary: |
-      Returns a `Datatype.Color3` with the given red, green, and blue values.
+    summary: Returns a `Datatype.Color3` with the given red, green, and blue values.
     description: |-
       Returns a `Datatype.Color3` with the given red, green, and blue values.
       The parameters should be within the range of 0 to 1.
@@ -41,7 +40,7 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: Color3.fromRGB
-    summary: |
+    summary: |-
       Returns a `Datatype.Color3` from given components within the range of 0 to
       255.
     description: |-
@@ -71,7 +70,7 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: Color3.fromHSV
-    summary: |
+    summary: |-
       Returns a `Datatype.Color3` from the given hue, saturation, and value
       components.
     description: |-
@@ -130,6 +129,7 @@ properties:
       The red value of the color.
     description: |
       The red value of the color.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -139,6 +139,7 @@ properties:
       The green value of the color.
     description: |
       The green value of the color.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -148,6 +149,7 @@ properties:
       The blue value of the color.
     description: |
       The blue value of the color.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -205,7 +207,7 @@ methods:
       local greenH, greenS, greenV = green:ToHSV()
       print(greenH, greenS, greenV)  --> 0.3333333 1 1
       ```
-    parameters:
+    parameters: []
     returns:
       - type: number
         summary: ''
@@ -236,7 +238,7 @@ methods:
       local magentaHex = magenta:ToHex()
       print(magentaHex)  --> ec008c
       ```
-    parameters:
+    parameters: []
     returns:
       - type: string
         summary: ''
@@ -264,8 +266,7 @@ functions:
       - type: number
         summary: ''
     code_samples: []
-    tags:
-      - Deprecated
+    tags: []
     deprecation_message: |
       This function is functionally equivalent to `Datatype.Color3:ToHSV()`.
-math_operations:
+math_operations: []

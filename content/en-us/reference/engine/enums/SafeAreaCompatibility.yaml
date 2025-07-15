@@ -12,14 +12,13 @@ tags: []
 deprecation_message: ''
 items:
   - name: None
-    value: 0
     summary: |
       Do not apply compatibility transformations to any descendants of the
       `Class.ScreenGui`.
+    value: 0
     tags: []
     deprecation_message: ''
   - name: FullscreenExtension
-    value: 1
     summary: |
       If the total area of any descendant `Class.GuiObject` within the
       `Class.ScreenGui` (including any applied border or `Class.UIStroke`)
@@ -36,5 +35,6 @@ items:
       use the `Class.ScreenGui.ScreenInsets|ScreenInsets` property to specify
       which insets should be respected for different
       `Class.ScreenGui|ScreenGuis`.
+    value: 1
     tags: []
     deprecation_message: ''

@@ -3,7 +3,7 @@ type: enum
 summary: ''
 description: |
   Controls the methods of communication available to a player.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

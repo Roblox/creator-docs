@@ -131,8 +131,9 @@ description: |
   print(f())         -- HelloHello
   print(f())         -- HelloHelloHello
   ```
-code_samples:
-properties:
+tags: []
+code_samples: []
+properties: []
 functions:
   - name: coroutine.close
     summary: |
@@ -155,8 +156,9 @@ functions:
       - type: Variant<string, void>
         summary: |
           The error message, if any.
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: coroutine.create
     summary: |
       Creates a new coroutine, with body f. f must be a Luau function.
@@ -170,8 +172,9 @@ functions:
     returns:
       - type: thread
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: coroutine.isyieldable
     summary: |
       Returns `true` if the coroutine this function is called within can safely
@@ -180,13 +183,14 @@ functions:
       Returns `true` if the coroutine this function is called within can safely
       yield. Yielding a coroutine inside metamethods or C functions is
       prohibited, with the exception of `pcall` and `xpcall`.
-    parameters:
+    parameters: []
     returns:
       - type: bool
         summary: |
           Whether or not the coroutine can safely yield at this point.
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: coroutine.resume
     summary: |
       Starts or continues the execution of coroutine `co`.
@@ -213,19 +217,21 @@ functions:
         summary: ''
       - type: Variant<Tuple, string>
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: coroutine.running
     summary: |
       Returns the running coroutine.
     description: |
       Returns the running coroutine.
-    parameters:
+    parameters: []
     returns:
       - type: thread
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: coroutine.status
     summary: |
       Returns the status of coroutine co as a string.
@@ -244,8 +250,9 @@ functions:
     returns:
       - type: string
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: coroutine.wrap
     summary: |
       Creates a new coroutine and returns a function that, when called, resumes
@@ -264,8 +271,9 @@ functions:
     returns:
       - type: function
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: coroutine.yield
     summary: |
       Suspends execution of the coroutine.
@@ -282,5 +290,6 @@ functions:
     returns:
       - type: Tuple<Variant>
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''

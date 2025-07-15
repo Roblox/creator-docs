@@ -7,7 +7,7 @@ description: |
   BodyPartR15 is an Enum used with both `Class.Humanoid:GetBodyPartR15()` and
   `Class.Humanoid:ReplaceBodyPartR15()` to find and replace specific body parts
   of R15 characters.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

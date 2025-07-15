@@ -25,11 +25,11 @@ methods:
     parameters:
       - name: button
         type: Button
-        default: ''
+        default:
         summary: ''
       - name: caption
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -49,7 +49,7 @@ methods:
     parameters:
       - name: button
         type: Button
-        default: ''
+        default:
         summary: ''
     returns:
       - type: boolean
@@ -69,7 +69,7 @@ methods:
     parameters:
       - name: button
         type: Button
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -87,11 +87,11 @@ methods:
     parameters:
       - name: button
         type: Button
-        default: ''
+        default:
         summary: ''
       - name: caption
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -112,7 +112,7 @@ methods:
     parameters:
       - name: button
         type: Button
-        default: ''
+        default:
         summary: ''
     returns:
       - type: boolean
@@ -140,7 +140,7 @@ events:
     parameters:
       - name: button
         type: Button
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''

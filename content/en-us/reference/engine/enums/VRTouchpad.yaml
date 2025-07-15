@@ -6,7 +6,7 @@ summary: |
 description: |
   Used to universally identify a VR touchpad that is used by either the left, or
   right hand.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

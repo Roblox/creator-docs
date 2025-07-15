@@ -6,7 +6,7 @@ summary: |
 description: |
   Controls the level of detail for `Class.Model|Models` in experiences with
   instance [streaming](../../../workspace/streaming.md) enabled.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

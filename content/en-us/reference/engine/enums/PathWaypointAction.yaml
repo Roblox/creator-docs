@@ -4,7 +4,7 @@ summary: |
   Describes the action to take when a `Datatype.PathWaypoint` is reached.
 description: |
   Describes the action to take when a `Datatype.PathWaypoint` is reached.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

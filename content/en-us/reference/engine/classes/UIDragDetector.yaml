@@ -611,13 +611,13 @@ methods:
     parameters:
       - name: priority
         type: int
-        default: ''
+        default:
         summary: |
           The order of priority for functions added via this method. Higher
           values take precedence over lower values.
       - name: function
         type: Function
-        default: ''
+        default:
         summary: |
           Function for modifying or constraining proposed motion. This function
           takes in input `Datatype.UDim2` and float of **proposed** motion and
@@ -712,7 +712,7 @@ methods:
     parameters:
       - name: function
         type: Function
-        default: ''
+        default:
         summary: |
           Function for monitoring
           `Class.UIDragDetector.DragContinue|DragContinue` signals. This
@@ -742,7 +742,7 @@ events:
     parameters:
       - name: inputPosition
         type: Vector2
-        default: ''
+        default:
         summary: |
           `Datatype.Vector2` representing the current input position.
     tags: []
@@ -760,7 +760,7 @@ events:
     parameters:
       - name: inputPosition
         type: Vector2
-        default: ''
+        default:
         summary: |
           `Datatype.Vector2` representing the current input position.
     tags: []
@@ -778,7 +778,7 @@ events:
     parameters:
       - name: inputPosition
         type: Vector2
-        default: ''
+        default:
         summary: |
           `Datatype.Vector2` representing the current input position.
     tags: []

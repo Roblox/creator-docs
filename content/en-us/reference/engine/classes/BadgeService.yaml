@@ -51,12 +51,12 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default: ''
+        default:
         summary: |
           The `Class.Player.UserId` of the user the badge is to be awarded to.
       - name: badgeId
         type: int64
-        default: ''
+        default:
         summary: |
           The ID of the badge to be awarded.
     returns:
@@ -93,13 +93,13 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default: ''
+        default:
         summary: |
           The `Class.Player.UserId|UserId` of the player to check for ownership
           of the specified badges.
       - name: badgeIds
         type: Array
-        default: ''
+        default:
         summary: |
           The list of IDs of the badges to check ownership of. Maximum length
           of 10.
@@ -166,7 +166,7 @@ methods:
     parameters:
       - name: badgeId
         type: int64
-        default: ''
+        default:
         summary: |
           The badge ID of the badge whose information should be fetched.
     returns:
@@ -210,7 +210,7 @@ methods:
     parameters:
       - name: badgeId
         type: int64
-        default: ''
+        default:
         summary: |
           The ID of the badge.
     returns:
@@ -247,7 +247,7 @@ methods:
     parameters:
       - name: badgeId
         type: int64
-        default: ''
+        default:
         summary: |
           The badge ID of the badge.
     returns:
@@ -284,12 +284,12 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default: ''
+        default:
         summary: |
           The user ID of the user.
       - name: badgeId
         type: int64
-        default: ''
+        default:
         summary: |
           The badge ID of the badge.
     returns:
@@ -334,13 +334,13 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default: ''
+        default:
         summary: |
           The `Class.Player.UserId` of the player to check for ownership of the
           specified badge.
       - name: badgeId
         type: int64
-        default: ''
+        default:
         summary: |
           The badge ID of the badge whose ownership will be checked.
     returns:

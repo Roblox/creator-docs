@@ -26,7 +26,7 @@ description: |
   `Class.GuiButton.Modal` property set to `true`, moving the mouse, tap-dragging
   on mobile, or using the secondary thumbstick on a gamepad will rotate the
   camera around the character.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

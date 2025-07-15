@@ -11,7 +11,7 @@ description: |
   property has no effect. For legacy compatibility reasons, the use of In and
   Out are backwards from how these terms are used by most other animation tools
   and by TweenService.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

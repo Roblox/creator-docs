@@ -6,7 +6,7 @@ summary: |
 description: |
   This enum is used by `Class.ScrollingFrame.ElasticBehavior` to control when
   elastic scrolling is active on touch‑enabled devices.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

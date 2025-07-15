@@ -59,7 +59,7 @@ events:
     parameters:
       - name: player
         type: Instance
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: |

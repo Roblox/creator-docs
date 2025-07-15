@@ -7,22 +7,22 @@ tags: []
 deprecation_message: ''
 items:
   - name: Error
-    value: 1
     summary: ''
+    value: 1
     tags: []
     deprecation_message: ''
   - name: Warning
-    value: 2
     summary: ''
+    value: 2
     tags: []
     deprecation_message: ''
   - name: Information
-    value: 3
     summary: ''
+    value: 3
     tags: []
     deprecation_message: ''
   - name: Hint
-    value: 4
     summary: ''
+    value: 4
     tags: []
     deprecation_message: ''

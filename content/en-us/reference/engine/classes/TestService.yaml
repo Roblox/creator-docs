@@ -492,11 +492,11 @@ methods:
     parameters:
       - name: condition
         type: boolean
-        default: ''
+        default:
         summary: ''
       - name: description
         type: string
-        default: ''
+        default:
         summary: ''
       - name: source
         type: Instance
@@ -526,7 +526,7 @@ methods:
     parameters:
       - name: text
         type: string
-        default: ''
+        default:
         summary: ''
       - name: source
         type: Instance
@@ -572,7 +572,7 @@ methods:
     parameters:
       - name: description
         type: string
-        default: ''
+        default:
         summary: ''
       - name: source
         type: Instance
@@ -604,7 +604,7 @@ methods:
     parameters:
       - name: description
         type: string
-        default: ''
+        default:
         summary: ''
       - name: source
         type: Instance
@@ -634,7 +634,7 @@ methods:
     parameters:
       - name: text
         type: string
-        default: ''
+        default:
         summary: ''
       - name: source
         type: Instance
@@ -666,11 +666,11 @@ methods:
     parameters:
       - name: condition
         type: boolean
-        default: ''
+        default:
         summary: ''
       - name: description
         type: string
-        default: ''
+        default:
         summary: ''
       - name: source
         type: Instance
@@ -710,7 +710,7 @@ methods:
     parameters:
       - name: snapshotname
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -735,11 +735,11 @@ methods:
     parameters:
       - name: condition
         type: boolean
-        default: ''
+        default:
         summary: ''
       - name: description
         type: string
-        default: ''
+        default:
         summary: ''
       - name: source
         type: Instance
@@ -765,7 +765,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: boolean
@@ -803,15 +803,15 @@ events:
     parameters:
       - name: condition
         type: boolean
-        default: ''
+        default:
         summary: ''
       - name: text
         type: string
-        default: ''
+        default:
         summary: ''
       - name: script
         type: Instance
-        default: ''
+        default:
         summary: ''
       - name: line
         type: int
@@ -831,11 +831,11 @@ events:
     parameters:
       - name: text
         type: string
-        default: ''
+        default:
         summary: ''
       - name: script
         type: Instance
-        default: ''
+        default:
         summary: ''
       - name: line
         type: int

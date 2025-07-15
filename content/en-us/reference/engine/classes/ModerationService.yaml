@@ -20,7 +20,7 @@ methods:
     parameters:
       - name: config
         type: Dictionary
-        default: ''
+        default:
         summary: ''
     returns:
       - type: string
@@ -40,7 +40,7 @@ methods:
     parameters:
       - name: config
         type: Dictionary
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -62,7 +62,7 @@ callbacks:
     parameters:
       - name: event
         type: Dictionary
-        default: ''
+        default:
         summary: ''
     returns:
       - type: boolean

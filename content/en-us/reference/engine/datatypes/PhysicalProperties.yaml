@@ -32,7 +32,7 @@ description: |
   weight of **A** is much greater than that of **B**, the actual value will be
   closer to **A**. If the weights are similar, the actual value will be close to
   the midpoint between their individual values.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 constructors:
@@ -117,6 +117,7 @@ properties:
       Note that this does not affect the degree to which audio transmits
       **through** surfaces; for that, see
       `Datatype.PhysicalProperties.Density|Density`.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -131,6 +132,7 @@ properties:
 
       When using acoustic simulation, parts with higher density will muffle
       occluded `Class.AudioEmitter|AudioEmitters` more.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -144,6 +146,7 @@ properties:
       quicker it will decelerate when it rubs against another part with
       friction. Acceptable range is `0.0` to `2.0` and values outside this range
       will be clamped.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -157,6 +160,7 @@ properties:
       of 1 indicates that the part bounces with the same energy it had before a
       collision. Acceptable range is `0.0` to `1.0` and values outside this
       range will be clamped.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -172,6 +176,7 @@ properties:
       `Datatype.PhysicalProperties.FrictionWeight|FrictionWeight`, the more its
       `Datatype.PhysicalProperties.Friction|Friction` is used. Acceptable range
       is `0.0` to `100.0` and values outside this range will be clamped.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -188,9 +193,10 @@ properties:
       its `Datatype.PhysicalProperties.Elasticity|Elasticity` is used.
       Acceptable range is `0.0` to `100.0` and values outside this range will be
       clamped.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
-methods:
-functions:
-math_operations:
+methods: []
+functions: []
+math_operations: []

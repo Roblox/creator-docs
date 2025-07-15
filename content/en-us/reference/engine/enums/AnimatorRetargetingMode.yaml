@@ -6,7 +6,7 @@ description: |
   The AnimatorRetargetingMode Enum describes the setting for Animation
   Retargeting. Retargeting adapts animations to various character rigs based on
   their proportions.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

@@ -73,14 +73,14 @@ description: |
   useful because many <code>Class.Instance|Instances</code> such as the
   <code>Class.Camera|Camera</code> and <code>Class.Attachment|Attachments</code>
   treat that vector as the direction the instance is pointing.</figcaption>
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 constructors:
   - name: CFrame.new
     summary: Returns a blank identity `Datatype.CFrame`.
     description: Creates a blank identity `Datatype.CFrame`.
-    parameters:
+    parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -310,13 +310,11 @@ constructors:
       - name: from
         type: Vector3
         default:
-        summary: |
-          Vector representing the "from" direction.
+        summary: Vector representing the "from" direction.
       - name: to
         type: Vector3
         default:
-        summary: |
-          Vector representing the "to" direction.
+        summary: Vector representing the "to" direction.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -495,9 +493,8 @@ constructors:
 constants:
   - name: CFrame.identity
     type: CFrame
-    summary: |
-      An identity `Datatype.CFrame` with no translation or rotation.
-    description: |
+    summary: An identity `Datatype.CFrame` with no translation or rotation.
+    description: |-
       An identity `Datatype.CFrame` with no translation or rotation. This
       property is a **constant** and must be accessed globally as opposed to
       through an individual `Datatype.CFrame` object.
@@ -513,6 +510,7 @@ properties:
       An identity `Datatype.CFrame` with no translation or rotation. This
       property is a **constant** and must be accessed globally as opposed to
       through an individual `Datatype.CFrame` object.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -522,6 +520,7 @@ properties:
       The 3D position of the `Datatype.CFrame`.
     description: |
       The 3D position of the `Datatype.CFrame`.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -531,6 +530,7 @@ properties:
       A copy of the `Datatype.CFrame` with no translation.
     description: |
       A copy of the `Datatype.CFrame` with no translation.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -540,6 +540,7 @@ properties:
       The X coordinate of the position.
     description: |
       The X coordinate of the position.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -549,6 +550,7 @@ properties:
       The Y coordinate of the position.
     description: |
       The Y coordinate of the position.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -558,6 +560,7 @@ properties:
       The Z coordinate of the position.
     description: |
       The Z coordinate of the position.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -585,6 +588,7 @@ properties:
       `Datatype.CFrame.LookVector|LookVector` to itself produces a
       `Datatype.CFrame` moved forward in whichever direction it's facing by 1
       unit.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -606,6 +610,7 @@ properties:
       print(cf.XVector)      --> (1, 0, 0)
       print(R00, R10, R20)   --> (1 0 0)
       ```
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -626,6 +631,7 @@ properties:
       print(cf.YVector)     --> (0, 1, 0)
       print(R01, R11, R21)  --> (0 1 0)
       ```
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -646,6 +652,7 @@ properties:
       print(cf.RightVector)  --> (1, 0, 0)
       print(R00, R10, R20)   --> (1 0 0)
       ```
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -666,6 +673,7 @@ properties:
       print(cf.UpVector)    --> (0, 1, 0)
       print(R01, R11, R21)  --> (0 1 0)
       ```
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -687,6 +695,7 @@ properties:
       print(-cf.LookVector)  --> (0, 0, 1)
       print(R02, R12, R22)   --> (0 0 1)
       ```
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -696,7 +705,7 @@ methods:
       Returns the inverse of the `Datatype.CFrame`.
     description: |
       Returns the inverse of the `Datatype.CFrame`.
-    parameters:
+    parameters: []
     returns:
       - type: CFrame
         summary: ''
@@ -734,7 +743,7 @@ methods:
       but other APIs which take `Datatype.CFrame|CFrames` do not, so this method
       is occasionally necessary when incrementally updating a `Datatype.CFrame`
       and using it with them.
-    parameters:
+    parameters: []
     returns:
       - type: CFrame
         summary: ''
@@ -872,7 +881,7 @@ methods:
       `R12`, `R20`, `R21`, and `R22`, where `x` `y` `z` represent the position
       of the `Datatype.CFrame` and `R00`‑`R22` represent its 3&times;3 rotation
       matrix.
-    parameters:
+    parameters: []
     returns:
       - type: Tuple
         summary: ''
@@ -909,7 +918,7 @@ methods:
     description: |
       Returns approximate angles that could be used to generate the
       `Datatype.CFrame` using `Enum.RotationOrder.XYZ`.
-    parameters:
+    parameters: []
     returns:
       - type: number
         summary: ''
@@ -927,7 +936,7 @@ methods:
     description: |
       Returns approximate angles that could be used to generate the
       `Datatype.CFrame` using `Enum.RotationOrder.YXZ`.
-    parameters:
+    parameters: []
     returns:
       - type: number
         summary: ''
@@ -943,7 +952,7 @@ methods:
       Equivalent to `Datatype.CFrame:ToEulerAnglesYXZ()`.
     description: |
       Equivalent to `Datatype.CFrame:ToEulerAnglesYXZ()`.
-    parameters:
+    parameters: []
     returns:
       - type: number
         summary: ''
@@ -961,7 +970,7 @@ methods:
     description: |
       Returns a tuple of a `Datatype.Vector3` and a number which represent the
       rotation of the `Datatype.CFrame` in the axis-angle representation.
-    parameters:
+    parameters: []
     returns:
       - type: Vector3
         summary: ''
@@ -975,7 +984,7 @@ methods:
       Equivalent to `Datatype.CFrame:GetComponents()`.
     description: |
       Equivalent to `Datatype.CFrame:GetComponents()`.
-    parameters:
+    parameters: []
     returns:
       - type: Tuple
         summary: ''
@@ -1028,9 +1037,10 @@ methods:
     code_samples: []
     tags: []
     deprecation_message: ''
-functions:
+functions: []
 math_operations:
-  - operation: '*'
+  - name: '*'
+    operation: '*'
     summary: |
       Produces a new `Datatype.CFrame` representing the composition of the two
       `Datatype.CFrame|CFrames`.
@@ -1043,7 +1053,8 @@ math_operations:
     code_samples: []
     tags: []
     deprecation_message: ''
-  - operation: '*'
+  - name: '*'
+    operation: '*'
     summary: |
       Produces a `Datatype.Vector3` transformed from object to world
       coordinates.
@@ -1056,7 +1067,8 @@ math_operations:
     code_samples: []
     tags: []
     deprecation_message: ''
-  - operation: +
+  - name: +
+    operation: +
     summary: |
       Produces a `Datatype.CFrame` translated in world space by the
       `Datatype.Vector3`.
@@ -1069,7 +1081,8 @@ math_operations:
     code_samples: []
     tags: []
     deprecation_message: ''
-  - operation: '-'
+  - name: '-'
+    operation: '-'
     summary: |
       Produces a `Datatype.CFrame` translated in world space by the negative
       `Datatype.Vector3`.

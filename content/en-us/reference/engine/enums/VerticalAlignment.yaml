@@ -6,7 +6,7 @@ summary: |
 description: |
   Used by `Class.UIGridStyleLayout.VerticalAlignment` to align the layout
   vertically within its parent.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

@@ -4,7 +4,7 @@ summary: |
   Status of a single functional test run.
 description: |
   Represents the outcome of a single functional test run.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

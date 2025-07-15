@@ -80,7 +80,7 @@ events:
     parameters:
       - name: mouse
         type: Instance
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: |

@@ -6,7 +6,7 @@ summary: |
 description: |
   Controls whether multiple people can use this dialog, or only one person at a
   time can use it.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

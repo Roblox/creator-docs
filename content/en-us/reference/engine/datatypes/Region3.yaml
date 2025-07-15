@@ -19,7 +19,7 @@ description: |
   See also:
 
   - `Datatype.Region3int16`
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 constructors:
@@ -52,6 +52,7 @@ properties:
       The center location and rotation of the `Datatype.Region3`.
     description: |
       The center location and rotation of the `Datatype.Region3`.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -61,6 +62,7 @@ properties:
       The 3D size of the `Datatype.Region3`.
     description: |
       The 3D size of the `Datatype.Region3`.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -84,5 +86,5 @@ methods:
     code_samples: []
     tags: []
     deprecation_message: ''
-functions:
-math_operations:
+functions: []
+math_operations: []

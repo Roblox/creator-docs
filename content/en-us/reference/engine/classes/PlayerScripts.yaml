@@ -107,7 +107,7 @@ methods:
     parameters:
       - name: cameraMovementMode
         type: ComputerCameraMovementMode
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -129,7 +129,7 @@ methods:
     parameters:
       - name: movementMode
         type: ComputerMovementMode
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -151,7 +151,7 @@ methods:
     parameters:
       - name: cameraMovementMode
         type: TouchCameraMovementMode
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -173,7 +173,7 @@ methods:
     parameters:
       - name: movementMode
         type: TouchMovementMode
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()

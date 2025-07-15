@@ -17,7 +17,7 @@ description: |
   Unlike most data types in Luau, you can change all of the members of
   `Datatype.OverlapParams` without creating a new object, allowing you to reuse
   the same object repeatedly.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 constructors:
@@ -27,7 +27,7 @@ constructors:
       Returns a blank `Datatype.OverlapParams` object. Unlike other data type
       constructors, this constructor does not have any parameters, so you should
       set its properties appropriately.
-    parameters:
+    parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -39,6 +39,7 @@ properties:
       An array of objects whose descendants is used in filtering candidates.
     description: |
       An array of objects whose descendants is used in filtering candidates.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -51,6 +52,7 @@ properties:
       Determines how the `Datatype.OverlapParams.FilterDescendantsInstances`
       array is used, depending on the `Enum.RaycastFilterType` provided. Default
       is `Enum.RaycastFilterType.Exclude`.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -61,6 +63,7 @@ properties:
     description: |
       The maximum amount of parts to be returned by the query. The default value
       of zero (`0`) represents no limit.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -73,6 +76,7 @@ properties:
       that are set to **not** collide with this group are ignored. If this
       property is omitted, the operation assumes the **Default** collision
       group.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -87,6 +91,7 @@ properties:
       intersected part's `Class.BasePart.CanCollide` value in favor of its
       `Class.BasePart.CanQuery` value when determining whether that part is
       included in the array of spatial query results.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -99,6 +104,7 @@ properties:
       When enabled, the query will ignore all part collision properties and
       perform a brute-force check on every part. This will negatively impact
       performance and should not be used in live experiences.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -124,6 +130,5 @@ methods:
     code_samples: []
     tags: []
     deprecation_message: ''
-    thread_safety: Safe
-functions:
-math_operations:
+functions: []
+math_operations: []

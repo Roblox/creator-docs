@@ -336,7 +336,7 @@ methods:
     parameters:
       - name: newText
         type: string
-        default: ''
+        default:
         summary: ''
       - name: startLine
         type: int
@@ -414,7 +414,7 @@ methods:
     parameters:
       - name: edits
         type: Array
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Tuple

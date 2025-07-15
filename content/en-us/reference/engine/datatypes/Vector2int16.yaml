@@ -84,7 +84,7 @@ description: |
       </tr>
     </tbody>
   </table>
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 constructors:
@@ -121,6 +121,7 @@ properties:
     description: |
       The x-coordinate of the `Datatype.Vector2int16`, also accessible in its
       lower-case variant.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -131,13 +132,15 @@ properties:
     description: |
       The y-coordinate of the `Datatype.Vector2int16`, also accessible in its
       lower-case variant.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
-methods:
-functions:
+methods: []
+functions: []
 math_operations:
-  - operation: +
+  - name: +
+    operation: +
     summary: |
       Produces a `Datatype.Vector2int16` whose components are the sum of the
       operands' respective components.
@@ -151,7 +154,8 @@ math_operations:
     code_samples: []
     tags: []
     deprecation_message: ''
-  - operation: '-'
+  - name: '-'
+    operation: '-'
     summary: |
       Produces a `Datatype.Vector2int16` whose components are the difference of
       the operands' respective components.
@@ -165,7 +169,8 @@ math_operations:
     code_samples: []
     tags: []
     deprecation_message: ''
-  - operation: '*'
+  - name: '*'
+    operation: '*'
     summary: |
       Produces a `Datatype.Vector2int16` whose components are the product of the
       operands' respective components.
@@ -179,7 +184,8 @@ math_operations:
     code_samples: []
     tags: []
     deprecation_message: ''
-  - operation: /
+  - name: /
+    operation: /
     summary: |
       Produces a `Datatype.Vector2int16` whose components are the quotient of
       the operands' respective components.
@@ -194,7 +200,8 @@ math_operations:
     code_samples: []
     tags: []
     deprecation_message: ''
-  - operation: '*'
+  - name: '*'
+    operation: '*'
     summary: |
       Produces a `Datatype.Vector2int16` whose components are the product of the
       respective `Datatype.Vector2int16` components and the number (factor).
@@ -209,7 +216,8 @@ math_operations:
     code_samples: []
     tags: []
     deprecation_message: ''
-  - operation: /
+  - name: /
+    operation: /
     summary: |
       Produces a `Datatype.Vector2int16` whose components are the quotient of
       the respective `Datatype.Vector2int16` components and the number

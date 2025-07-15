@@ -64,17 +64,17 @@ methods:
     parameters:
       - name: instance
         type: Instance
-        default: ''
+        default:
         summary: |
           The `Class.Instance` whose properties are to be tweened.
       - name: tweenInfo
         type: TweenInfo
-        default: ''
+        default:
         summary: |
           The `Datatype.TweenInfo` to be used.
       - name: propertyTable
         type: Dictionary
-        default: ''
+        default:
         summary: |
           A dictionary of properties, and their target values, to be tweened.
     returns:
@@ -99,17 +99,17 @@ methods:
     parameters:
       - name: alpha
         type: float
-        default: ''
+        default:
         summary: |
           An interpolation value between `0` and `1`.
       - name: easingStyle
         type: EasingStyle
-        default: ''
+        default:
         summary: |
           The easing style to use.
       - name: easingDirection
         type: EasingDirection
-        default: ''
+        default:
         summary: |
           The easing direction to use.
     returns:
@@ -134,34 +134,34 @@ methods:
     parameters:
       - name: current
         type: Variant
-        default: ''
+        default:
         summary: |
           The current position.
       - name: target
         type: Variant
-        default: ''
+        default:
         summary: |
           The target position.
       - name: velocity
         type: Variant
-        default: ''
+        default:
         summary: |
           The initial velocity at which the current position should approach the
           target position.
       - name: smoothTime
         type: float
-        default: ''
+        default:
         summary: |
           The duration in which the total smoothing operation should take place.
       - name: maxSpeed
         type: float?
-        default: ''
+        default:
         summary: |
           The maximum speed at which the current position should approach the
           target position.
       - name: dt
         type: float?
-        default: ''
+        default:
         summary: |
           The rate at which the smoothing operation should be applied.
     returns:

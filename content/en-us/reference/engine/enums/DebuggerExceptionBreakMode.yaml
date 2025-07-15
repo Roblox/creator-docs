@@ -7,17 +7,17 @@ tags: []
 deprecation_message: ''
 items:
   - name: Never
-    value: 0
     summary: ''
+    value: 0
     tags: []
     deprecation_message: ''
   - name: Always
-    value: 1
     summary: ''
+    value: 1
     tags: []
     deprecation_message: ''
   - name: Unhandled
-    value: 2
     summary: ''
+    value: 2
     tags: []
     deprecation_message: ''

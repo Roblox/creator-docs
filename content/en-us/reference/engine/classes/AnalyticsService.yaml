@@ -97,18 +97,18 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default: ''
+        default:
         summary: |
           The player who triggered the custom event. `nil` if not player
           related.
       - name: eventCategory
         type: string
-        default: ''
+        default:
         summary: |
           User defined category. This should be the name of the event.
       - name: customData
         type: Variant
-        default: ''
+        default:
         summary: |
           Optional. User defined data, could be a string, a number or a table.
     returns:
@@ -155,13 +155,13 @@ methods:
     parameters:
       - name: category
         type: string
-        default: ''
+        default:
         summary: |
           'The category of event to report. Cannot contain the following
           characters: comma `,`, double quote `"` or newline characters `\r\n`'.
       - name: value
         type: Variant
-        default: ''
+        default:
         summary: |
           A value to be serialized and reported. Serialized length must not
           exceed 1 KB, or 1024 bytes.
@@ -238,37 +238,37 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default: ''
+        default:
         summary: |
           The player who triggered the economy event.
       - name: itemName
         type: string
-        default: ''
+        default:
         summary: |
           The name of the item.
       - name: economyAction
         type: AnalyticsEconomyAction
-        default: ''
+        default:
         summary: |
           Indicates the acquisition or spending of an in game resource.
       - name: itemCategory
         type: string
-        default: ''
+        default:
         summary: |
           A user defined category for items such as "Vehicle," "Weapon.".
       - name: amount
         type: int
-        default: ''
+        default:
         summary: |
           The amount of the currency.
       - name: currency
         type: string
-        default: ''
+        default:
         summary: |
           The currency used. Examples: 'gold', 'gems', 'life.'.
       - name: location
         type: Variant
-        default: ''
+        default:
         summary: |
           The event location. A dictionary that each key-value represents an
           entry of location data. The key-value is a string-string pair. With
@@ -288,7 +288,7 @@ methods:
           ```
       - name: customData
         type: Variant
-        default: ''
+        default:
         summary: |
           Optional. User defined data, could be a string, a number or a table.
     returns:
@@ -366,22 +366,22 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default: ''
+        default:
         summary: |
           The player who triggered the error event, `nil` if not player related.
       - name: logLevel
         type: AnalyticsLogLevel
-        default: ''
+        default:
         summary: |
           The specified log level (e.g. Debug, Error).
       - name: message
         type: string
-        default: ''
+        default:
         summary: |
           User defined message.
       - name: debugInfo
         type: Variant
-        default: ''
+        default:
         summary: |
           Optional. A dictionary which contains predefined keys including
           "errorCode" and "stackTrace". Both keys values are strings. stackTrace
@@ -395,7 +395,7 @@ methods:
           ```
       - name: customData
         type: Variant
-        default: ''
+        default:
         summary: |
           Optional. User defined data, could be a string, a number or a table.
     returns:
@@ -474,22 +474,22 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default: ''
+        default:
         summary: |
           The player who triggered the event.
       - name: category
         type: string
-        default: ''
+        default:
         summary: |
           A user defined category for progression.
       - name: progressionStatus
         type: AnalyticsProgressionStatus
-        default: ''
+        default:
         summary: |
           Indicates the status of the progression.
       - name: location
         type: Variant
-        default: ''
+        default:
         summary: |
           The event location. A dictionary that each key-value represents an
           entry of location data. The key-value is a string-string pair. With
@@ -508,7 +508,7 @@ methods:
           ```
       - name: statistics
         type: Variant
-        default: ''
+        default:
         summary: |
           Optional. A dictionary that each key-value represents an entry of
           statistics data that allows developers to track any specific data that
@@ -526,7 +526,7 @@ methods:
           ```
       - name: customData
         type: Variant
-        default: ''
+        default:
         summary: |
           Optional. User defined data, could be a string, a number or a table.
     returns:
@@ -552,12 +552,12 @@ methods:
     parameters:
       - name: player
         type: Player
-        default: ''
+        default:
         summary: |
           The user who triggered the event.
       - name: eventName
         type: string
-        default: ''
+        default:
         summary: |
           The name of the custom event.
       - name: value
@@ -593,37 +593,37 @@ methods:
     parameters:
       - name: player
         type: Player
-        default: ''
+        default:
         summary: |
           The user who triggered the event.
       - name: flowType
         type: AnalyticsEconomyFlowType
-        default: ''
+        default:
         summary: |
           Should specify the direction that currency is flowing using
           `Enum.AnalyticsEconomyFlowType`.
       - name: currencyType
         type: string
-        default: ''
+        default:
         summary: |
           The name of the currency being added or removed, for example `"gold"`,
           `"gems"`, or `"energy"`. Limited to 5 unique currency types per
           experience.
       - name: amount
         type: float
-        default: ''
+        default:
         summary: |
           The amount of currency being added or removed. This value should
           always be positive.
       - name: endingBalance
         type: float
-        default: ''
+        default:
         summary: |
           The user's balance after the currency has been added or removed. This
           value should always be greater than or equal to 0.
       - name: transactionType
         type: string
-        default: ''
+        default:
         summary: |
           The type of transaction that occurred. While you're free to use any
           transaction type, it's recommended to use the provided types from
@@ -638,7 +638,7 @@ methods:
           Limited to 20 unique types per experience.
       - name: itemSku
         type: string
-        default: ''
+        default:
         summary: |
           Optional SKU of the item or bundle being purchased. This is a unique
           identifier for the item being purchased. Limited to 100 unique SKUs
@@ -674,18 +674,18 @@ methods:
     parameters:
       - name: player
         type: Player
-        default: ''
+        default:
         summary: |
           The user who triggered the event.
       - name: funnelName
         type: string
-        default: ''
+        default:
         summary: |
           The name of the funnel. This should be the same for all steps in the
           funnel. Limited to 10 unique funnels per experience.
       - name: funnelSessionId
         type: string
-        default: ''
+        default:
         summary: |
           Optional unique identifier for the funnel session. This should be the
           same for all steps in the funnel.
@@ -708,7 +708,7 @@ methods:
           considered completed.
       - name: stepName
         type: string
-        default: ''
+        default:
         summary: |
           Optional name of the step in the funnel. This field is only used for
           display purposes in Roblox-provided charts.
@@ -743,12 +743,12 @@ methods:
     parameters:
       - name: player
         type: Player
-        default: ''
+        default:
         summary: |
           The user who triggered the event.
       - name: step
         type: int
-        default: ''
+        default:
         summary: |
           The step number in the funnel. This should be unique for each step in
           the funnel. All funnels start at step 1. Limited to steps 1-100.
@@ -757,7 +757,7 @@ methods:
           considered completed.
       - name: stepName
         type: string
-        default: ''
+        default:
         summary: |
           Optional name of the step in the funnel. This field is only used for
           display purposes in Roblox-provided charts.
@@ -789,20 +789,20 @@ methods:
     parameters:
       - name: player
         type: Player
-        default: ''
+        default:
         summary: |
           The player who triggered the event.
       - name: progressionPathName
         type: string
-        default: ''
+        default:
         summary: ''
       - name: level
         type: int
-        default: ''
+        default:
         summary: ''
       - name: levelName
         type: string
-        default: ''
+        default:
         summary: ''
       - name: customFields
         type: Dictionary
@@ -829,24 +829,24 @@ methods:
     parameters:
       - name: player
         type: Player
-        default: ''
+        default:
         summary: |
           The player who triggered the event.
       - name: progressionPathName
         type: string
-        default: ''
+        default:
         summary: ''
       - name: status
         type: AnalyticsProgressionType
-        default: ''
+        default:
         summary: ''
       - name: level
         type: int
-        default: ''
+        default:
         summary: ''
       - name: levelName
         type: string
-        default: ''
+        default:
         summary: ''
       - name: customFields
         type: Dictionary
@@ -871,20 +871,20 @@ methods:
     parameters:
       - name: player
         type: Player
-        default: ''
+        default:
         summary: |
           The user who triggered the event.
       - name: progressionPathName
         type: string
-        default: ''
+        default:
         summary: ''
       - name: level
         type: int
-        default: ''
+        default:
         summary: ''
       - name: levelName
         type: string
-        default: ''
+        default:
         summary: ''
       - name: customFields
         type: Dictionary
@@ -909,20 +909,20 @@ methods:
     parameters:
       - name: player
         type: Player
-        default: ''
+        default:
         summary: |
           The player who triggered the event.
       - name: progressionPathName
         type: string
-        default: ''
+        default:
         summary: ''
       - name: level
         type: int
-        default: ''
+        default:
         summary: ''
       - name: levelName
         type: string
-        default: ''
+        default:
         summary: ''
       - name: customFields
         type: Dictionary

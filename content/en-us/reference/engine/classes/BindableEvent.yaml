@@ -63,7 +63,7 @@ methods:
     parameters:
       - name: arguments
         type: Tuple
-        default: ''
+        default:
         summary: |
           Values to pass to `Class.BindableEvent.Event|Event` events connected
           to the same `Class.BindableEvent`.
@@ -92,7 +92,7 @@ events:
     parameters:
       - name: arguments
         type: Tuple
-        default: ''
+        default:
         summary: |
           The parameters sent through `Class.BindableEvent:Fire()|Fire()`.
     tags: []

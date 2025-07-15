@@ -6,7 +6,7 @@ summary: |
 description: |
   This enum is used for `Class.ScrollingFrame.VerticalScrollBarPosition` to
   indicate vertical scroll bar positioning.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

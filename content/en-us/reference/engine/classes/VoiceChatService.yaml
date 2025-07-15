@@ -140,7 +140,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default: ''
+        default:
         summary: |
           The `Class.Player.UserId` to check.
     returns:

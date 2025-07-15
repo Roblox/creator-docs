@@ -4,7 +4,7 @@ summary: |
   References a movement action taken by a player.
 description: |
   References a movement action taken by a player.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: |
   This enum has been deprecated in favor of `Enum.KeyCode` which is more

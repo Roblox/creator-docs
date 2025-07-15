@@ -46,7 +46,7 @@ methods:
     parameters:
       - name: index
         type: int
-        default: ''
+        default:
         summary: ''
     returns:
       - type: RotationCurveKey
@@ -71,7 +71,7 @@ methods:
     parameters:
       - name: time
         type: float
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Array
@@ -115,7 +115,7 @@ methods:
     parameters:
       - name: time
         type: float
-        default: ''
+        default:
         summary: |
           Time at which to sample the curve.
     returns:
@@ -142,7 +142,7 @@ methods:
     parameters:
       - name: key
         type: RotationCurveKey
-        default: ''
+        default:
         summary: |
           `Datatype.RotationCurveKey` to insert.
     returns:
@@ -166,7 +166,7 @@ methods:
     parameters:
       - name: startingIndex
         type: int
-        default: ''
+        default:
         summary: |
           Starting index from which to remove keys.
       - name: count
@@ -201,7 +201,7 @@ methods:
     parameters:
       - name: keys
         type: Array
-        default: ''
+        default:
         summary: |
           Array of `Datatype.RotationCurveKey|RotationCurveKeys`.
     returns:

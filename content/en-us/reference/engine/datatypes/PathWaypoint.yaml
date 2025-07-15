@@ -59,7 +59,7 @@ description: |
   		</tr>
   	</tbody>
   </table>
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 constructors:
@@ -90,6 +90,7 @@ properties:
       The action to perform at this waypoint.
     description: |
       The action to perform at this waypoint.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -99,6 +100,7 @@ properties:
       The 3D position of this waypoint.
     description: |
       The 3D position of this waypoint.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -111,9 +113,10 @@ properties:
       PathwayPoint.Label to decide the custom action to take to reach the
       waypoint. PathfindingModifier and Material each have a Label. Automatic
       jump links have "Jump" as their Label.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
-methods:
-functions:
-math_operations:
+methods: []
+functions: []
+math_operations: []

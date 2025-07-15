@@ -7,28 +7,28 @@ tags: []
 deprecation_message: ''
 items:
   - name: BadThumbnailType
-    value: 1
     summary: ''
+    value: 1
     tags: []
     deprecation_message: ''
   - name: BadYRotDeg
-    value: 2
     summary: ''
+    value: 2
     tags: []
     deprecation_message: ''
   - name: BadFieldOfViewDeg
-    value: 3
     summary: ''
+    value: 3
     tags: []
     deprecation_message: ''
   - name: BadDistanceScale
-    value: 4
     summary: ''
+    value: 4
     tags: []
     deprecation_message: ''
   - name: Other
-    value: 5
     summary: ''
+    value: 5
     tags: []
     deprecation_message: ''
   - name: Throttled

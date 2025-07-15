@@ -341,12 +341,12 @@ events:
     parameters:
       - name: part
         type: BasePart
-        default: ''
+        default:
         summary: |
           The `Class.BasePart` hit by the `Class.Explosion`.
       - name: distance
         type: float
-        default: ''
+        default:
         summary: |
           The distance of the hit from `Class.Explosion.Position`.
     tags: []

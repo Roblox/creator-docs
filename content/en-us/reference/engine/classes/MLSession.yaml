@@ -19,7 +19,7 @@ methods:
     parameters:
       - name: data
         type: Dictionary
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Dictionary

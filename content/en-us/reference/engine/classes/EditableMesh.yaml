@@ -295,7 +295,7 @@ methods:
     parameters:
       - name: boneProperties
         type: Dictionary
-        default: ''
+        default:
         summary: |
           Options table containing bone parameters:
 
@@ -325,7 +325,7 @@ methods:
     parameters:
       - name: color
         type: Color3
-        default: ''
+        default:
         summary: |
           The new color.
       - name: alpha
@@ -353,7 +353,7 @@ methods:
     parameters:
       - name: normal
         type: Vector3?
-        default: ''
+        default:
         summary: |
           The normal vector. If the normal value isn't specified, the normal
           will be automatically calculated.
@@ -408,7 +408,7 @@ methods:
     parameters:
       - name: uv
         type: Vector2
-        default: ''
+        default:
         summary: |
           The new UV coordinate.
     returns:
@@ -430,7 +430,7 @@ methods:
     parameters:
       - name: p
         type: Vector3
-        default: ''
+        default:
         summary: |
           Position in the mesh's local object space.
     returns:
@@ -472,7 +472,7 @@ methods:
     parameters:
       - name: point
         type: Vector3
-        default: ''
+        default:
         summary: |
           Point position in the mesh's local object space.
     returns:
@@ -496,7 +496,7 @@ methods:
     parameters:
       - name: toThisPoint
         type: Vector3
-        default: ''
+        default:
         summary: |
           Point position in the mesh's local object space.
     returns:
@@ -519,7 +519,7 @@ methods:
     parameters:
       - name: center
         type: Vector3
-        default: ''
+        default:
         summary: |
           Center of the sphere in the mesh's local object space.
       - name: radius
@@ -594,7 +594,7 @@ methods:
     parameters:
       - name: boneName
         type: string
-        default: ''
+        default:
         summary: |
           Bone name to search for.
     returns:
@@ -942,7 +942,7 @@ methods:
     parameters:
       - name: actions
         type: Array
-        default: ''
+        default:
         summary: |
           Array or 2 or 3 `Enum.FacsActionUnit` values that specify a corrective
           pose.
@@ -990,7 +990,7 @@ methods:
     parameters:
       - name: action
         type: FacsActionUnit
-        default: ''
+        default:
         summary: |
           FACS action unit for which to get the pose.
     returns:
@@ -1289,12 +1289,12 @@ methods:
     parameters:
       - name: origin
         type: Vector3
-        default: ''
+        default:
         summary: |
           Origin of the ray in the mesh's local object space.
       - name: direction
         type: Vector3
-        default: ''
+        default:
         summary: |
           Direction of the ray.
     returns:
@@ -1404,7 +1404,7 @@ methods:
           Bone ID for which to set the initial `Datatype.CFrame`.
       - name: cframe
         type: CFrame
-        default: ''
+        default:
         summary: |
           Initial `Datatype.CFrame` for the bone in the mesh's bind pose, in the
           mesh's local space.
@@ -1432,7 +1432,7 @@ methods:
           Bone ID for which to set whether the bone is virtual.
       - name: virtual
         type: boolean
-        default: ''
+        default:
         summary: |
           Whether the bone should be virtual.
     returns:
@@ -1459,7 +1459,7 @@ methods:
           Bone ID for which to set the name.
       - name: name
         type: string
-        default: ''
+        default:
         summary: |
           Bone name to set.
     returns:
@@ -1511,7 +1511,7 @@ methods:
           Stable color ID for which to set the color.
       - name: color
         type: Color3
-        default: ''
+        default:
         summary: |
           Color to set.
     returns:
@@ -1563,7 +1563,7 @@ methods:
           Face ID for which to update the vertex colors.
       - name: ids
         type: Array
-        default: ''
+        default:
         summary: |
           List of new stable color IDs to use for the given face's vertices.
     returns:
@@ -1590,7 +1590,7 @@ methods:
           Face ID for which to update the vertex normals.
       - name: ids
         type: Array
-        default: ''
+        default:
         summary: |
           List of new stable normal IDs to use for the given face's vertices.
     returns:
@@ -1617,7 +1617,7 @@ methods:
           Face ID for which to update the vertex UVs.
       - name: ids
         type: Array
-        default: ''
+        default:
         summary: |
           List of new stable UV IDs to use for the given face's vertices.
     returns:
@@ -1644,7 +1644,7 @@ methods:
           Face ID for which to update the vertices.
       - name: ids
         type: Array
-        default: ''
+        default:
         summary: |
           List of new stable vertex IDs to use for the given face.
     returns:
@@ -1668,7 +1668,7 @@ methods:
     parameters:
       - name: action
         type: FacsActionUnit
-        default: ''
+        default:
         summary: |
           FACS action unit for which to set the pose.
       - name: boneId
@@ -1678,7 +1678,7 @@ methods:
           Bone to set a `Datatype.CFrame` for this pose.
       - name: cframe
         type: CFrame
-        default: ''
+        default:
         summary: |
           `Datatype.CFrame` which transforms the bone from the initial bone
           `Datatype.CFrame` in the bind pose of the mesh to the combined bone
@@ -1702,18 +1702,18 @@ methods:
     parameters:
       - name: actions
         type: Array
-        default: ''
+        default:
         summary: |
           Array or 2 or 3 `Enum.FacsActionUnit` values to apply as a corrective
           pose.
       - name: boneIds
         type: Array
-        default: ''
+        default:
         summary: |
           Bones to set a `Datatype.CFrame` for this pose.
       - name: cframes
         type: Array
-        default: ''
+        default:
         summary: |
           `Datatype.CFrame` transforms for the bones in this corrective pose.
 
@@ -1739,17 +1739,17 @@ methods:
     parameters:
       - name: action
         type: FacsActionUnit
-        default: ''
+        default:
         summary: |
           FACS action unit to set the pose for.
       - name: boneIds
         type: Array
-        default: ''
+        default:
         summary: |
           Bones for which to set a `Datatype.CFrame` for this pose.
       - name: cframes
         type: Array
-        default: ''
+        default:
         summary: |
           `Datatype.CFrame` transforms for the bones in this pose.
 
@@ -1781,7 +1781,7 @@ methods:
           Stable normal ID for which to set the normal vector.
       - name: normal
         type: Vector3
-        default: ''
+        default:
         summary: |
           Normal vector to set.
     returns:
@@ -1807,7 +1807,7 @@ methods:
           Stable vertex ID of the vertex to position.
       - name: p
         type: Vector3
-        default: ''
+        default:
         summary: |
           Position in the mesh's local object space.
     returns:
@@ -1833,7 +1833,7 @@ methods:
           UV ID for which to set the UV coordinates.
       - name: uv
         type: Vector2
-        default: ''
+        default:
         summary: |
           UV coordinates.
     returns:
@@ -1868,7 +1868,7 @@ methods:
           Vertex ID on which to set skinning blend weights.
       - name: boneWeights
         type: Array
-        default: ''
+        default:
         summary: |
           Skinning blend weights to set on the vertex.
     returns:
@@ -1904,7 +1904,7 @@ methods:
           Vertex ID to set vertex skinning bones.
       - name: boneIDs
         type: Array
-        default: ''
+        default:
         summary: |
           Bone IDs to use with this vertex for skinning.
     returns:

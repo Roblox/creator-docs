@@ -4,7 +4,7 @@ summary: |
   The collision `Class.Humanoid` uses.
 description: |
   Enum to select the `Class.Humanoid.CollisionType`.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

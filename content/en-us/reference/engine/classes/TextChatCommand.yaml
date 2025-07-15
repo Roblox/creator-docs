@@ -135,13 +135,13 @@ events:
     parameters:
       - name: originTextSource
         type: TextSource
-        default: ''
+        default:
         summary: |
           A reference to the `Class.TextSource` responsible for triggering the
           command via `Class.TextChannel:SendAsync()`.
       - name: unfilteredText
         type: string
-        default: ''
+        default:
         summary: |
           The full, unfiltered text used to trigger the command that can be used
           to dissect parameters from the command message.

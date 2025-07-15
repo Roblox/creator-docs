@@ -6,7 +6,7 @@ description: |
   Determines in what matter the border of a `Class.GuiObject` is laid out
   relative to its actual dimensions. It is used by the property of the same
   name, `Class.GuiObject.BorderMode`.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

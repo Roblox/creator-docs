@@ -6,7 +6,7 @@ summary: |
 description: |
   Overrides the behavior of the mouse icon to either force that it is always
   shown or force that it is always hidden.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

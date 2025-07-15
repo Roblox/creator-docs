@@ -6,7 +6,7 @@ summary: |
 description: |
   This enum is used by `Class.ScrollingFrame.ScrollingDirection` to specify the
   direction(s) in which scrolling is allowed.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

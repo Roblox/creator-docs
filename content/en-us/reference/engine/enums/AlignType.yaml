@@ -8,20 +8,20 @@ description: |
   associated with the constraint and attachment. Depending on the configuration,
   it can be used to align specific axes to be parallel, perpendicular, or to
   look at a specific point.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Parallel
-    value: 0
     summary: ''
+    value: 0
     tags:
       - Deprecated
     deprecation_message: |
       Use **PrimaryAxisParallel** instead.
   - name: Perpendicular
-    value: 1
     summary: ''
+    value: 1
     tags:
       - Deprecated
     deprecation_message: |

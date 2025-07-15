@@ -4,7 +4,7 @@ summary: |
   Controls the precision of a timer.
 description: |
   Compute time using a faster, but less precise method.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

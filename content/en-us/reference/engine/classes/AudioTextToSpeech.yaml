@@ -280,7 +280,7 @@ methods:
     parameters:
       - name: pin
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Instances
@@ -356,7 +356,7 @@ methods:
     parameters:
       - name: timeRange
         type: NumberRange
-        default: ''
+        default:
         summary: ''
       - name: samples
         type: int
@@ -447,24 +447,24 @@ events:
     parameters:
       - name: connected
         type: boolean
-        default: ''
+        default:
         summary: |
           Whether the instance got connected or disconnected.
       - name: pin
         type: string
-        default: ''
+        default:
         summary: |
           The pin on the `Class.AudioTextToSpeech` that the `Class.Wire`
           targets.
       - name: wire
         type: Wire
-        default: ''
+        default:
         summary: |
           The `Class.Wire` between the `Class.AudioTextToSpeech` and the other
           instance.
       - name: instance
         type: Instance
-        default: ''
+        default:
         summary: |
           The other instance that is or was connected through the `Class.Wire`.
     tags: []

@@ -7,7 +7,7 @@ description: |
   The velocity constraint mode sets how the attachment velocity is constrained.
   The velocity can be constrained to a line, a plane or a vector. See each mode
   for more details.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

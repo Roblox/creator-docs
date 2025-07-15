@@ -199,26 +199,26 @@ methods:
     parameters:
       - name: actionName
         type: string
-        default: ''
+        default:
         summary: |
           A string representing the action being performed (e.g. "HonkHorn" or
           "OpenDoor").
       - name: functionToBind
         type: Function
-        default: ''
+        default:
         summary: |
           The action-handling function, called with the following parameters
           when the bound inputs are triggered: string (actionName),
           `Enum.UserInputState` and an InputObject.
       - name: createTouchButton
         type: boolean
-        default: ''
+        default:
         summary: |
           Whether a GUI button should be created for the action on touch input
           devices.
       - name: inputTypes
         type: Tuple
-        default: ''
+        default:
         summary: |
           Any number of `Enum.KeyCode` or `Enum.UserInputType` representing the
           inputs to bind to the action.
@@ -249,20 +249,20 @@ methods:
     parameters:
       - name: actionName
         type: string
-        default: ''
+        default:
         summary: |
           A string representing the action being performed (e.g. "HonkHorn" or
           "OpenDoor").
       - name: functionToBind
         type: Function
-        default: ''
+        default:
         summary: |
           The action-handling function, called with the following parameters
           when the bound inputs are triggered: string (actionName),
           `Enum.UserInputState` and an InputObject.
       - name: createTouchButton
         type: boolean
-        default: ''
+        default:
         summary: |
           Whether a GUI button should be created for the action on touch input
           devices.
@@ -274,7 +274,7 @@ methods:
           considered before lower).
       - name: inputTypes
         type: Tuple
-        default: ''
+        default:
         summary: |
           Any number of Enum.KeyCode or Enum.UserInputType representing the
           inputs to bind to the action.
@@ -329,19 +329,19 @@ methods:
     parameters:
       - name: actionName
         type: string
-        default: ''
+        default:
         summary: ''
       - name: functionToBind
         type: Function
-        default: ''
+        default:
         summary: ''
       - name: createTouchButton
         type: boolean
-        default: ''
+        default:
         summary: ''
       - name: inputTypes
         type: Tuple
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -376,12 +376,12 @@ methods:
     parameters:
       - name: userInputTypeForActivation
         type: UserInputType
-        default: ''
+        default:
         summary: |
           Must be Keyboard or Gamepad1 through Gamepad8.
       - name: keyCodesForActivation
         type: Tuple
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -518,7 +518,7 @@ methods:
     parameters:
       - name: actionName
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Dictionary
@@ -574,12 +574,12 @@ methods:
     parameters:
       - name: actionName
         type: string
-        default: ''
+        default:
         summary: |
           The name of the action originally passed to BindAction.
       - name: description
         type: string
-        default: ''
+        default:
         summary: |
           A text description of the action, such as "Honk the car's horn" or
           "Open the inventory".
@@ -615,12 +615,12 @@ methods:
     parameters:
       - name: actionName
         type: string
-        default: ''
+        default:
         summary: |
           The name of the action originally passed to BindAction.
       - name: image
         type: string
-        default: ''
+        default:
         summary: |
           The value to which the Image property should be set.
     returns:
@@ -655,12 +655,12 @@ methods:
     parameters:
       - name: actionName
         type: string
-        default: ''
+        default:
         summary: |
           The name of the action originally passed to BindAction.
       - name: position
         type: UDim2
-        default: ''
+        default:
         summary: |
           The position within the ContextButtonFrame.
     returns:
@@ -695,12 +695,12 @@ methods:
     parameters:
       - name: actionName
         type: string
-        default: ''
+        default:
         summary: |
           The name of the action originally passed to BindAction.
       - name: title
         type: string
-        default: ''
+        default:
         summary: |
           The text to display on the button.
     returns:
@@ -734,7 +734,7 @@ methods:
     parameters:
       - name: actionName
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -760,7 +760,7 @@ methods:
     parameters:
       - name: userInputTypeForActivation
         type: UserInputType
-        default: ''
+        default:
         summary: |
           The same UserInputType originally sent to BindActivate.
       - name: keyCodeForActivation
@@ -817,7 +817,7 @@ methods:
     parameters:
       - name: actionName
         type: string
-        default: ''
+        default:
         summary: |
           The name of the action originally passed to BindAction.
     returns:
@@ -842,7 +842,7 @@ events:
     parameters:
       - name: toolEquipped
         type: Instance
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''
@@ -859,7 +859,7 @@ events:
     parameters:
       - name: toolUnequipped
         type: Instance
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''

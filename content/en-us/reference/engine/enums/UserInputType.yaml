@@ -7,7 +7,7 @@ description: |
   keyboard, gamepad, touch, etc). This enum is used by the
   `Class.InputObject.UserInputType` property of the same name, as well as
   various `Class.UserInputService` and `Class.GuiObject` events.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

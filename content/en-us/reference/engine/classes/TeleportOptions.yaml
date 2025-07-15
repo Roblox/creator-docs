@@ -178,7 +178,7 @@ methods:
     parameters:
       - name: teleportData
         type: Variant
-        default: ''
+        default:
         summary: |
           Data to be passed to the destination place.
     returns:

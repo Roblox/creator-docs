@@ -5,7 +5,7 @@ summary: |
 description: |
   The **DeviceType** enum is used to determine the category of devices that a
   client belongs to.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

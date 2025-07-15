@@ -62,7 +62,7 @@ methods:
     parameters:
       - name: systemMessage
         type: string
-        default: ''
+        default:
         summary: |
           The system message sent to the `Class.TextChannel`.
       - name: metadata
@@ -117,7 +117,7 @@ methods:
     parameters:
       - name: requester
         type: Player
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -184,7 +184,7 @@ methods:
     parameters:
       - name: message
         type: string
-        default: ''
+        default:
         summary: |
           The message to send to the `Class.TextChannel`.
       - name: metadata
@@ -231,7 +231,7 @@ events:
     parameters:
       - name: incomingMessage
         type: TextChatMessage
-        default: ''
+        default:
         summary: |
           The received `Class.TextChatMessage`.
     tags: []
@@ -273,7 +273,7 @@ callbacks:
     parameters:
       - name: message
         type: TextChatMessage
-        default: ''
+        default:
         summary: |
           The incoming `Class.TextChatMessage`.
     returns:
@@ -312,12 +312,12 @@ callbacks:
     parameters:
       - name: message
         type: TextChatMessage
-        default: ''
+        default:
         summary: |
           The message being sent, which also contains the sender of the message.
       - name: textSource
         type: TextSource
-        default: ''
+        default:
         summary: |
           The `Class.TextSource` of the user who will be receiving the message.
     returns:

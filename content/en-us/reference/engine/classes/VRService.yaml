@@ -232,7 +232,7 @@ methods:
     parameters:
       - name: pad
         type: VRTouchpad
-        default: ''
+        default:
         summary: |
           The specified `Enum.VRTouchpad|VRTouchpad`.
     returns:
@@ -274,7 +274,7 @@ methods:
     parameters:
       - name: type
         type: UserCFrame
-        default: ''
+        default:
         summary: |
           The specified `Enum.UserCFrame|UserCFrame`.
     returns:
@@ -305,7 +305,7 @@ methods:
     parameters:
       - name: type
         type: UserCFrame
-        default: ''
+        default:
         summary: |
           The specified type of VR device.
     returns:
@@ -367,12 +367,12 @@ methods:
     parameters:
       - name: cframe
         type: CFrame
-        default: ''
+        default:
         summary: |
           The specified `Datatype.CFrame` coordinates.
       - name: inputUserCFrame
         type: UserCFrame
-        default: ''
+        default:
         summary: |
           The VR device for which the navigation is requested.
     returns:
@@ -403,13 +403,13 @@ methods:
     parameters:
       - name: pad
         type: VRTouchpad
-        default: ''
+        default:
         summary: |
           The specified `Enum.VRTouchpad|VRTouchpad` you want to set the mode
           of.
       - name: mode
         type: VRTouchpadMode
-        default: ''
+        default:
         summary: |
           The mode you want to set the specified `Enum.VRTouchpad|VRTouchpad`
           to.
@@ -442,12 +442,12 @@ events:
     parameters:
       - name: cframe
         type: CFrame
-        default: ''
+        default:
         summary: |
           The requested `Datatype.CFrame` coordinates.
       - name: inputUserCFrame
         type: UserCFrame
-        default: ''
+        default:
         summary: |
           Indicates the VR device for which navigation is requested.
     tags: []
@@ -473,12 +473,12 @@ events:
     parameters:
       - name: pad
         type: VRTouchpad
-        default: ''
+        default:
         summary: |
           The touchpad that changed mode.
       - name: mode
         type: VRTouchpadMode
-        default: ''
+        default:
         summary: |
           The new mode.
     tags: []
@@ -504,12 +504,12 @@ events:
     parameters:
       - name: type
         type: UserCFrame
-        default: ''
+        default:
         summary: |
           The type of VR device that changed.
       - name: value
         type: CFrame
-        default: ''
+        default:
         summary: |
           The updated `Datatype.CFrame` coordinates of the VR device after the
           change.
@@ -536,12 +536,12 @@ events:
     parameters:
       - name: type
         type: UserCFrame
-        default: ''
+        default:
         summary: |
           The `Enum.UserCFrame|UserCFrame` getting enabled or disabled.
       - name: enabled
         type: boolean
-        default: ''
+        default:
         summary: |
           A boolean indicating whether the `Enum.UserCFrame|UserCFrame` is
           enabled (`true`) or disabled (`false`).

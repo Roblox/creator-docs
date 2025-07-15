@@ -121,7 +121,7 @@ methods:
     parameters:
       - name: instance
         type: Instance
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -149,17 +149,17 @@ methods:
     parameters:
       - name: meshId
         type: ContentId
-        default: ''
+        default:
         summary: |
           Mesh asset ID.
       - name: collisionFidelity
         type: CollisionFidelity
-        default: ''
+        default:
         summary: |
           Set `Class.MeshPart.CollisionFidelity`.
       - name: renderFidelity
         type: RenderFidelity
-        default: ''
+        default:
         summary: |
           Set `Class.MeshPart.RenderFidelity`.
     returns:
@@ -276,7 +276,7 @@ methods:
     parameters:
       - name: searchText
         type: string
-        default: ''
+        default:
         summary: |
           String used to search for free decals in the Catalog.
       - name: pageNum
@@ -332,7 +332,7 @@ methods:
     parameters:
       - name: searchText
         type: string
-        default: ''
+        default:
         summary: |
           String used to search for free decals in the Catalog.
       - name: pageNum

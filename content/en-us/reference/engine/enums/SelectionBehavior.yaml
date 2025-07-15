@@ -11,16 +11,16 @@ tags: []
 deprecation_message: ''
 items:
   - name: Escape
-    value: 0
     summary: |
       Prioritizes GuiObjects within the same SelectionGroup but allows the
       selection to move to other outside GuiObjects if no suitable button is
       found.
+    value: 0
     tags: []
     deprecation_message: ''
   - name: Stop
-    value: 1
     summary: |
       Constrains gamepad selection to the SelectionGroup.
+    value: 1
     tags: []
     deprecation_message: ''

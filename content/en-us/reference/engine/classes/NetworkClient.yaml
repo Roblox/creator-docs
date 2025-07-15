@@ -28,11 +28,11 @@ events:
     parameters:
       - name: peer
         type: string
-        default: ''
+        default:
         summary: ''
       - name: replicator
         type: Instance
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''
@@ -48,15 +48,15 @@ events:
     parameters:
       - name: peer
         type: string
-        default: ''
+        default:
         summary: ''
       - name: code
         type: int
-        default: ''
+        default:
         summary: ''
       - name: reason
         type: string
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''

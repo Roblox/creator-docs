@@ -44,7 +44,7 @@ methods:
     parameters:
       - name: toUserId
         type: int64
-        default: ''
+        default:
         summary: |
           `Class.Player.UserId` of the user being chatted.
     returns:
@@ -99,7 +99,7 @@ methods:
     parameters:
       - name: toUserId
         type: int64
-        default: ''
+        default:
         summary: |
           `Class.Player.UserId` of the user intended to see/receive the text.
     returns:

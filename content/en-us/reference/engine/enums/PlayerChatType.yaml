@@ -5,7 +5,7 @@ summary: |
 description: |
   Used by Roblox's Chat to determine the style of a chat message. If you want to
   check for this kind of stuff, see `Class.Player.Chatted`.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

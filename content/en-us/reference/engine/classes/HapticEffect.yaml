@@ -236,7 +236,7 @@ methods:
     parameters:
       - name: keys
         type: Array
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()

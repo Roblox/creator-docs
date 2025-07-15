@@ -8,7 +8,7 @@ description: |
   Used by `Class.TextLabel.TextYAlignment|TextLabel`,
   `Class.TextButton.TextYAlignment|TextButton`, and
   `Class.TextBox.TextYAlignment|TextBox`.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

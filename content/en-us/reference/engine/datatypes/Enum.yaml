@@ -6,12 +6,12 @@ description: |
   The `Datatype.Enum` data type represents an individual enum in Roblox. An
   individual enum can be indexed through the `Datatype.Enums` type, via the name
   of the enum itself.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
-constructors:
+constructors: []
 constants: []
-properties:
+properties: []
 methods:
   - name: Enum:GetEnumItems
     summary: |
@@ -20,7 +20,7 @@ methods:
     description: |
       Returns an array of all the `Datatype.EnumItem` options available for this
       enum.
-    parameters:
+    parameters: []
     returns:
       - type: Array
         summary: ''
@@ -32,7 +32,7 @@ methods:
       Converts an enum name to an `Datatype.Enum`.
     description: |
       Returns either the converted `Datatype.Enum` or `nil`.
-    parameters:
+    parameters: []
     returns:
       - type: Enum | nil
         summary: ''
@@ -44,12 +44,12 @@ methods:
       Converts an enum value to an `Datatype.Enum`.
     description: |
       Returns either the converted `Datatype.Enum` or `nil`.
-    parameters:
+    parameters: []
     returns:
       - type: Enum | nil
         summary: ''
     code_samples: []
     tags: []
     deprecation_message: ''
-functions:
-math_operations:
+functions: []
+math_operations: []

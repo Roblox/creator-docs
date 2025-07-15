@@ -2,7 +2,7 @@ name: CellBlock
 type: enum
 summary: ''
 description: ''
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: |
   This enum is deprecated. It used to work with `Class.Terrain:SetCell()` - a

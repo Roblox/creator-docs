@@ -38,7 +38,7 @@ methods:
     parameters:
       - name: buffer
         type: buffer
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Instances
@@ -76,7 +76,7 @@ methods:
     parameters:
       - name: inputInstances
         type: Instances
-        default: ''
+        default:
         summary: ''
     returns:
       - type: buffer

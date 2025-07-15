@@ -586,7 +586,7 @@ methods:
     parameters:
       - name: position
         type: Vector3
-        default: ''
+        default:
         summary: |
           The `Datatype.Vector3` the `Class.Model` is moved to.
     returns:
@@ -682,7 +682,7 @@ methods:
     parameters:
       - name: newScaleFactor
         type: float
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -738,7 +738,7 @@ methods:
     parameters:
       - name: cframe
         type: CFrame
-        default: ''
+        default:
         summary: |
           The `Datatype.CFrame` to be set.
     returns:
@@ -771,7 +771,7 @@ methods:
     parameters:
       - name: delta
         type: Vector3
-        default: ''
+        default:
         summary: |
           The `Datatype.Vector3` to translate the `Class.Model` by.
     returns:
@@ -824,7 +824,7 @@ methods:
     parameters:
       - name: location
         type: Vector3
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -845,7 +845,7 @@ methods:
     parameters:
       - name: location
         type: Vector3
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()

@@ -116,7 +116,7 @@ methods:
     parameters:
       - name: item
         type: Instance
-        default: ''
+        default:
         summary: |
           The `Class.Instance` to add to `Class.Debris`.
       - name: lifetime
@@ -141,7 +141,7 @@ methods:
     parameters:
       - name: item
         type: Instance
-        default: ''
+        default:
         summary: ''
       - name: lifetime
         type: double

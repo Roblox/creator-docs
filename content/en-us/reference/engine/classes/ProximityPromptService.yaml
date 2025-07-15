@@ -90,12 +90,12 @@ events:
     parameters:
       - name: prompt
         type: ProximityPrompt
-        default: ''
+        default:
         summary: |
           The prompt that the player begins interacting with.
       - name: playerWhoTriggered
         type: Player
-        default: ''
+        default:
         summary: |
           The player who holds the key/button.
     tags: []
@@ -116,12 +116,12 @@ events:
     parameters:
       - name: prompt
         type: ProximityPrompt
-        default: ''
+        default:
         summary: |
           The prompt that the player stops interacting with.
       - name: playerWhoTriggered
         type: Player
-        default: ''
+        default:
         summary: |
           The player who releases the held key/button.
     tags: []
@@ -139,7 +139,7 @@ events:
     parameters:
       - name: prompt
         type: ProximityPrompt
-        default: ''
+        default:
         summary: |
           The prompt instance that becomes hidden.
     tags: []
@@ -157,12 +157,12 @@ events:
     parameters:
       - name: prompt
         type: ProximityPrompt
-        default: ''
+        default:
         summary: |
           The prompt instance that becomes visible.
       - name: inputType
         type: ProximityPromptInputType
-        default: ''
+        default:
         summary: |
           The input that triggered the event.
     tags: []
@@ -184,12 +184,12 @@ events:
     parameters:
       - name: prompt
         type: ProximityPrompt
-        default: ''
+        default:
         summary: |
           The prompt that the player stops interacting with.
       - name: playerWhoTriggered
         type: Player
-        default: ''
+        default:
         summary: |
           The player that releases the key/button.
     tags: []
@@ -210,12 +210,12 @@ events:
     parameters:
       - name: prompt
         type: ProximityPrompt
-        default: ''
+        default:
         summary: |
           The prompt that the player interacts with.
       - name: playerWhoTriggered
         type: Player
-        default: ''
+        default:
         summary: |
           The interacting player.
     tags: []

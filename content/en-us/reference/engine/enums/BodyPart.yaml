@@ -5,7 +5,7 @@ summary: |
 description: |
   The BodyPart Enum determines which BodyPart a `Class.CharacterMesh` affects.
   (the `Class.CharacterMesh` is used with R6 characters)
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

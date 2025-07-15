@@ -13,7 +13,7 @@ description: |
   When altering the Humanoid of a player, this should be done from a
   `Class.LocalScript` ran by that player on their local client. Certain states
   only work when set by the owner process (client or server). (Dead for example)
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

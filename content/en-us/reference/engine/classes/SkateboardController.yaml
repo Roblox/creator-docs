@@ -75,7 +75,7 @@ events:
     parameters:
       - name: axis
         type: string
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''

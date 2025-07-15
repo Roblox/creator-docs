@@ -6,7 +6,7 @@ description: |
   A message can be a simple diagnostic or a sign of a system instability or
   failure. The channel that the message appears in indicates its severity. The
   MessageType indicates which channel the message displays in.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

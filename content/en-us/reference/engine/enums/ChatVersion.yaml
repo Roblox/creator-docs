@@ -14,15 +14,15 @@ tags: []
 deprecation_message: ''
 items:
   - name: LegacyChatService
-    value: 0
     summary: |
       Enables the legacy chat system.
+    value: 0
     tags: []
     deprecation_message: ''
   - name: TextChatService
-    value: 1
     summary: |
       Enables `Class.TextChatService` chat and prevents legacy chat system
       behavior.
+    value: 1
     tags: []
     deprecation_message: ''

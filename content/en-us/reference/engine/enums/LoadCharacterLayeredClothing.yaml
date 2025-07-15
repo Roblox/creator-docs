@@ -8,7 +8,7 @@ description: |
   clothing accessories equipped on them (Although
   `Enum.MeshPartHeadsAndAccessories` also need to be enabled). This is set in
   `Class.StarterPlayer.LoadCharacterLayeredClothing`.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

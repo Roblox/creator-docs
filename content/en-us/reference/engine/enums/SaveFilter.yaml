@@ -5,7 +5,7 @@ summary: |
   This enum determines which aspects of the current place are saved, based on
   the following options.
 description: ''
-code_samples:
+code_samples: []
 tags:
   - Deprecated
 deprecation_message: |

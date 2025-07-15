@@ -1081,13 +1081,13 @@ events:
     parameters:
       - name: enterPressed
         type: boolean
-        default: ''
+        default:
         summary: |
           A boolean indicating whether the client pressed Enter to lose focus
           (`true`) or not (`false`).
       - name: inputThatCausedFocusLoss
         type: InputObject
-        default: ''
+        default:
         summary: |
           An `Class.InputObject` instance indicating the type of input that
           caused the `TextBox` to lose focus.

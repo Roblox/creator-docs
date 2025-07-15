@@ -6,7 +6,7 @@ summary: |
 description: |
   Used by `Class.UIGridStyleLayout.HorizontalAlignment` to align the layout
   horizontally within its parent.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

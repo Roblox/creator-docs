@@ -97,7 +97,7 @@ callbacks:
     parameters:
       - name: eventInfo
         type: Dictionary
-        default: ''
+        default:
         summary: |
           Options table for the method:
 

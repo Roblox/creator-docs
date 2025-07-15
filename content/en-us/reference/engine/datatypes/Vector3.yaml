@@ -29,7 +29,7 @@ description: |
   data types such as `Datatype.CFrame`. Many of these data types' methods will
   use a `Datatype.Vector3` within their parameters, such as
   `Datatype.CFrame:PointToObjectSpace()`.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 constructors:
@@ -87,7 +87,7 @@ constants:
       ```lua
       print(Vector3.zero)  --> 0, 0, 0
       ```
-    code_samples:
+    code_samples: []
     tags: []
     deprecation_message: ''
   - name: Vector3.one
@@ -102,7 +102,7 @@ constants:
       ```lua
       print(Vector3.one)  --> 1, 1, 1
       ```
-    code_samples:
+    code_samples: []
     tags: []
     deprecation_message: ''
   - name: Vector3.xAxis
@@ -117,7 +117,7 @@ constants:
       ```lua
       print(Vector3.xAxis)  --> 1, 0, 0
       ```
-    code_samples:
+    code_samples: []
     tags: []
     deprecation_message: ''
   - name: Vector3.yAxis
@@ -132,7 +132,7 @@ constants:
       ```lua
       print(Vector3.yAxis)  --> 0, 1, 0
       ```
-    code_samples:
+    code_samples: []
     tags: []
     deprecation_message: ''
   - name: Vector3.zAxis
@@ -147,7 +147,7 @@ constants:
       ```lua
       print(Vector3.zAxis)  --> 0, 0, 1
       ```
-    code_samples:
+    code_samples: []
     tags: []
     deprecation_message: ''
 properties:
@@ -165,6 +165,7 @@ properties:
       ```lua
       print(Vector3.zero) --> 0, 0, 0
       ```
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -182,6 +183,7 @@ properties:
       ```lua
       print(Vector3.one)  --> 1, 1, 1
       ```
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -199,6 +201,7 @@ properties:
       ```lua
       print(Vector3.xAxis)  --> 1, 0, 0
       ```
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -216,6 +219,7 @@ properties:
       ```lua
       print(Vector3.yAxis)  --> 0, 1, 0
       ```
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -233,6 +237,7 @@ properties:
       ```lua
       print(Vector3.zAxis)  --> 0, 0, 1
       ```
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -242,6 +247,7 @@ properties:
       The x-coordinate of the Vector3.
     description: |
       The x-coordinate of the Vector3.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -251,6 +257,7 @@ properties:
       The y-coordinate of the Vector3.
     description: |
       The y-coordinate of the Vector3.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -260,6 +267,7 @@ properties:
       The z-coordinate of the Vector3.
     description: |
       The z-coordinate of the Vector3.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -269,6 +277,7 @@ properties:
       The length of the Vector3.
     description: |
       The length of the Vector3.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -280,6 +289,7 @@ properties:
     description: |
       A normalized copy of the `Datatype.Vector3` - one that has the same
       direction as the original but a magnitude of 1.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -292,7 +302,7 @@ methods:
       Returns a new vector from the absolute values of the original's
       components. For example, a vector of `(-2, 4, -6)` returns a vector of
       `(2, 4, 6)`.
-    parameters:
+    parameters: []
     returns:
       - type: Vector3
         summary: ''
@@ -305,7 +315,7 @@ methods:
     description: |
       Returns a new vector from the ceiling of the original's components. For
       example, a vector of `(-2.6, 5.1, 8.8)` returns a vector of `(-2, 6, 9)`.
-    parameters:
+    parameters: []
     returns:
       - type: Vector3
         summary: ''
@@ -318,7 +328,7 @@ methods:
     description: |
       Returns a new vector from the floor of the original's components. For
       example, a vector of `(-2.6, 5.1, 8.8)` returns a vector of `(-3, 5, 8)`.
-    parameters:
+    parameters: []
     returns:
       - type: Vector3
         summary: ''
@@ -333,7 +343,7 @@ methods:
       Returns a new vector from the sign (-1, 0, or 1) of the original's
       components. For example, a vector of `(-2.6, 5.1, 0)` returns a vector of
       `(-1, 1, 0)`.
-    parameters:
+    parameters: []
     returns:
       - type: Vector3
         summary: ''
@@ -493,9 +503,10 @@ methods:
     code_samples: []
     tags: []
     deprecation_message: ''
-functions:
+functions: []
 math_operations:
-  - operation: +
+  - name: +
+    operation: +
     summary: |
       Produces a `Datatype.Vector3` by adding each component of the first vector
       to the corresponding component of the second.
@@ -508,7 +519,8 @@ math_operations:
     code_samples: []
     tags: []
     deprecation_message: ''
-  - operation: '-'
+  - name: '-'
+    operation: '-'
     summary: |
       Produces a `Datatype.Vector3` by subtracting each component of the second
       vector from the corresponding component of the first.
@@ -521,7 +533,8 @@ math_operations:
     code_samples: []
     tags: []
     deprecation_message: ''
-  - operation: '*'
+  - name: '*'
+    operation: '*'
     summary: |
       Produces a `Datatype.Vector3` by multiplying each component of the first
       vector by the corresponding component of the second.
@@ -534,7 +547,8 @@ math_operations:
     code_samples: []
     tags: []
     deprecation_message: ''
-  - operation: /
+  - name: /
+    operation: /
     summary: |
       Produces a `Datatype.Vector3` by dividing each component of the first
       vector by the corresponding component of the second.
@@ -547,7 +561,8 @@ math_operations:
     code_samples: []
     tags: []
     deprecation_message: ''
-  - operation: //
+  - name: //
+    operation: //
     summary: |
       Produces a `Datatype.Vector3` by **floor dividing** each component of the
       first vector by the corresponding component of the second.
@@ -560,7 +575,8 @@ math_operations:
     code_samples: []
     tags: []
     deprecation_message: ''
-  - operation: '*'
+  - name: '*'
+    operation: '*'
     summary: |
       Produces a `Datatype.Vector3` by multiplying each component of the
       provided vector by the number.
@@ -573,7 +589,8 @@ math_operations:
     code_samples: []
     tags: []
     deprecation_message: ''
-  - operation: /
+  - name: /
+    operation: /
     summary: |
       Produces a `Datatype.Vector3` by dividing each component of the provided
       vector by the number.
@@ -586,7 +603,8 @@ math_operations:
     code_samples: []
     tags: []
     deprecation_message: ''
-  - operation: //
+  - name: //
+    operation: //
     summary: |
       Produces a `Datatype.Vector3` by **floor dividing** each component of the
       provided vector by the number.

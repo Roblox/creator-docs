@@ -5,7 +5,7 @@ summary: |
 description: |
   This enum was used with the unfinished `Class.Status` library which would have
   allowed you to add conditions to a `Class.Humanoid`.
-code_samples:
+code_samples: []
 tags:
   - Deprecated
 deprecation_message: |
@@ -13,15 +13,15 @@ deprecation_message: |
   It should not be used in new work.
 items:
   - name: Poison
-    value: 0
     summary: ''
+    value: 0
     tags:
       - Deprecated
     deprecation_message: |
       This option is deprecated.
   - name: Confusion
-    value: 1
     summary: ''
+    value: 1
     tags:
       - Deprecated
     deprecation_message: |

@@ -2,41 +2,41 @@ name: AssetFetchStatus
 type: enum
 summary: ''
 description: ''
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Success
-    value: 0
     summary: |
       The asset loaded successfully.
+    value: 0
     tags: []
     deprecation_message: ''
   - name: Failure
-    value: 1
     summary: |
       The asset failed to load successfully. Subsequent attempts are likely to
       fail; there may be something wrong with the `Datatype.Content|Content`
       string.
+    value: 1
     tags: []
     deprecation_message: ''
   - name: None
-    value: 2
     summary: |
       The engine has no information about this asset. The engine never tried to
       load it.
+    value: 2
     tags: []
     deprecation_message: ''
   - name: Loading
-    value: 3
     summary: |
       The engine is in the middle of trying to load this asset.
+    value: 3
     tags: []
     deprecation_message: ''
   - name: TimedOut
-    value: 4
     summary: |
       The engine tried to load this asset but timed out. Future attempts to load
       may succeed.
+    value: 4
     tags: []
     deprecation_message: ''

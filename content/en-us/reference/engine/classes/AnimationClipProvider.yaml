@@ -38,7 +38,7 @@ methods:
     parameters:
       - name: assetId
         type: ContentId
-        default: ''
+        default:
         summary: |
           The content ID of the animation.
     returns:
@@ -71,7 +71,7 @@ methods:
           The content ID of the animation.
       - name: useCache
         type: boolean
-        default: ''
+        default:
         summary: |
           True if a cached version can be returned.
     returns:
@@ -109,7 +109,7 @@ methods:
     parameters:
       - name: animationClip
         type: AnimationClip
-        default: ''
+        default:
         summary: |
           The `Class.AnimationClip` to be used.
     returns:
@@ -145,7 +145,7 @@ methods:
     parameters:
       - name: animationClip
         type: AnimationClip
-        default: ''
+        default:
         summary: |
           The `Class.AnimationClip` to be used.
     returns:
@@ -172,7 +172,7 @@ methods:
     parameters:
       - name: assetId
         type: ContentId
-        default: ''
+        default:
         summary: |
           The content ID of the animation.
     returns:
@@ -223,7 +223,7 @@ methods:
     parameters:
       - name: assetId
         type: ContentId
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ClipEvaluator

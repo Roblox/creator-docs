@@ -7,27 +7,27 @@ tags: []
 deprecation_message: ''
 items:
   - name: Legacy
-    value: 0
     summary: |
       Runs in legacy script containers dependent on the type of script uses such
       as `Class.LocalScript` or `Class.Script`.
+    value: 0
     tags: []
     deprecation_message: ''
   - name: Server
-    value: 1
     summary: |
       Runs on the server.
+    value: 1
     tags: []
     deprecation_message: ''
   - name: Client
-    value: 2
     summary: |
       Runs on the client.
+    value: 2
     tags: []
     deprecation_message: ''
   - name: Plugin
-    value: 3
     summary: |
       Runs as a descendant of `Class.Plugin` instances.
+    value: 3
     tags: []
     deprecation_message: ''

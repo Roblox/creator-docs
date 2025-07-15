@@ -6,7 +6,7 @@ description: |
   The value of this Enum indicates which type of avatar an experience uses. Some
   experiences may specify explicitly R6/R15, while some will allow the player's
   choice of avatar to be used.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

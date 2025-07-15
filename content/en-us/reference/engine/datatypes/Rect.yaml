@@ -13,23 +13,20 @@ description: |
 
   This data type is used in the `Class.ImageLabel.SliceCenter` property which
   determines the center area of a scaled image.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 constructors:
   - name: Rect.new
-    summary: |
-      Returns a new **Rect** with zero `Datatype.Vector2` positions.
-    description: |
-      Constructs a new **Rect** with two zero `Datatype.Vector2` positions.
-    parameters:
+    summary: Returns a new **Rect** with zero `Datatype.Vector2` positions.
+    description: Constructs a new **Rect** with two zero `Datatype.Vector2` positions.
+    parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: Rect.new
-    summary: |
-      Returns a new **Rect** from the given `Datatype.Vector2` positions.
-    description: |
+    summary: Returns a new **Rect** from the given `Datatype.Vector2` positions.
+    description: |-
       Constructs a new **Rect** given two `Datatype.Vector2` positions: `min` as
       the top-left corner and `max` as the bottom-right corner.
     parameters:
@@ -45,10 +42,10 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: Rect.new
-    summary: |
+    summary: |-
       Returns a new **Rect** using the first and last two arguments as
       coordinates for corners.
-    description: |
+    description: |-
       Constructs a new **Rect** using `minX` and `minY` as coordinates for the
       top-left corner, and `maxX` and `maxY` as coordinates for the bottom-right
       corner.
@@ -80,6 +77,7 @@ properties:
       The width of the **Rect**.
     description: |
       The width of the **Rect** in pixels.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -89,6 +87,7 @@ properties:
       The height of the **Rect**.
     description: |
       The height of the **Rect** in pixels.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -98,6 +97,7 @@ properties:
       The coordinates of the top-left corner.
     description: |
       The top-left corner.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -107,9 +107,10 @@ properties:
       The coordinates of the bottom-right corner.
     description: |
       The bottom-right corner.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
-methods:
-functions:
-math_operations:
+methods: []
+functions: []
+math_operations: []

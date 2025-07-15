@@ -9,12 +9,12 @@ description: |
   `Datatype.RBXScriptSignal` fires and calls any listeners that are connected to
   it. An `Datatype.RBXScriptSignal` may also pass arguments to each listener to
   provide extra information about the event.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
-constructors:
+constructors: []
 constants: []
-properties:
+properties: []
 methods:
   - name: RBXScriptSignal:Connect
     summary: |
@@ -88,12 +88,12 @@ methods:
     description: |
       Yields the current thread until the signal fires and returns the arguments
       provided by the signal.
-    parameters:
+    parameters: []
     returns:
       - type: Variant
         summary: ''
     code_samples: []
     tags: []
     deprecation_message: ''
-functions:
-math_operations:
+functions: []
+math_operations: []

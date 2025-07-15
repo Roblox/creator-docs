@@ -4,7 +4,7 @@ summary: |
   This item is deprecated and is replaced by the `Enum.SurfaceType` enum.
 description: |
   This item is deprecated and is replaced by the `Enum.SurfaceType` enum.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: |
   This item is deprecated and is replaced by the `Enum.SurfaceType` enum.

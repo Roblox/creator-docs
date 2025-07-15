@@ -78,12 +78,12 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: |
           The **Key** value to look up and translate.
       - name: args
         type: Variant
-        default: ''
+        default:
         summary: |
           To be provided if the **Source** text and translations contain format
           strings. Will be a Luau table of values **or** key-value pairs,
@@ -226,14 +226,14 @@ methods:
     parameters:
       - name: context
         type: Instance
-        default: ''
+        default:
         summary: |
           A valid in-game `Class.Instance` to use for context override as
           outlined above. Note that this argument can be arbitrary, for example
           `game`, if you don't require a context override.
       - name: text
         type: string
-        default: ''
+        default:
         summary: |
           The **Source** text to look up and translate.
     returns:

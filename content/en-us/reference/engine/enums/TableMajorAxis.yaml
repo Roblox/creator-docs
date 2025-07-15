@@ -7,7 +7,7 @@ description: |
   Used to indicate whether the direct siblings of a `Class.UITableLayout` are
   considered the rows or the columns. The children of the direct siblings are
   the columns or rows, respectively.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

@@ -111,7 +111,7 @@ methods:
     parameters:
       - name: pose
         type: Instance
-        default: ''
+        default:
         summary: |
           The `Class.Pose` to be added.
     returns:
@@ -165,7 +165,7 @@ methods:
     parameters:
       - name: pose
         type: Instance
-        default: ''
+        default:
         summary: |
           The `Class.Pose` to be removed.
     returns:

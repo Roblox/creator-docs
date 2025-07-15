@@ -1491,7 +1491,7 @@ description: |
   </tr>
   </tbody>
   </table>
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 constructors:
@@ -1567,63 +1567,63 @@ constructors:
   - name: BrickColor.random
     summary: Returns a random `Datatype.BrickColor`.
     description: Returns a random `Datatype.BrickColor`.
-    parameters:
+    parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: BrickColor.White
     summary: Returns the "White" `Datatype.BrickColor`.
     description: Returns the "White" `Datatype.BrickColor`.
-    parameters:
+    parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: BrickColor.Gray
     summary: Returns the "Medium stone grey" `Datatype.BrickColor`.
     description: Returns the "Medium stone grey" `Datatype.BrickColor`.
-    parameters:
+    parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: BrickColor.DarkGray
     summary: Returns the "Dark stone grey" `Datatype.BrickColor`.
     description: Returns the "Dark stone grey" `Datatype.BrickColor`.
-    parameters:
+    parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: BrickColor.Black
     summary: Returns the "Black" `Datatype.BrickColor`.
     description: Returns the "Black" `Datatype.BrickColor`.
-    parameters:
+    parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: BrickColor.Red
     summary: Returns the "Bright Red" `Datatype.BrickColor`.
     description: Returns the "Bright Red" `Datatype.BrickColor`.
-    parameters:
+    parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: BrickColor.Yellow
     summary: Returns the "Bright Yellow" `Datatype.BrickColor`.
     description: Returns the "Bright Yellow" `Datatype.BrickColor`.
-    parameters:
+    parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: BrickColor.Green
     summary: Returns the "Dark Green" `Datatype.BrickColor`.
     description: Returns the "Dark Green" `Datatype.BrickColor`.
-    parameters:
+    parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: BrickColor.Blue
     summary: Returns the "Bright Blue" `Datatype.BrickColor`.
     description: Returns the "Bright Blue" `Datatype.BrickColor`.
-    parameters:
+    parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -1635,6 +1635,7 @@ properties:
       The unique number that identifies the `Datatype.BrickColor`.
     description: |
       The unique number that identifies the `Datatype.BrickColor`.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -1644,6 +1645,7 @@ properties:
       The red component of the `Datatype.BrickColor` (between 0 and 1).
     description: |
       The red component of the `Datatype.BrickColor` (between 0 and 1).
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -1653,6 +1655,7 @@ properties:
       The green component of the `Datatype.BrickColor` (between 0 and 1).
     description: |
       The green component of the `Datatype.BrickColor` (between 0 and 1).
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -1662,6 +1665,7 @@ properties:
       The blue component of the `Datatype.BrickColor` (between 0 and 1).
     description: |
       The blue component of the `Datatype.BrickColor` (between 0 and 1).
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -1671,6 +1675,7 @@ properties:
       The name associated with the `Datatype.BrickColor`.
     description: |
       The name associated with the `Datatype.BrickColor`.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -1680,9 +1685,10 @@ properties:
       The `Datatype.Color3` associated with the `Datatype.BrickColor`.
     description: |
       The `Datatype.Color3` associated with the `Datatype.BrickColor`.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
-methods:
-functions:
-math_operations:
+methods: []
+functions: []
+math_operations: []

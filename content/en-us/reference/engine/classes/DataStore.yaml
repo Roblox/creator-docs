@@ -25,7 +25,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: |
           Key name for which the version info is requested. If
           `Class.DataStoreOptions.AllScopes` was set to true when accessing the
@@ -33,7 +33,7 @@ methods:
           name must be prepended with the original scope as in "scope/key".
       - name: version
         type: string
-        default: ''
+        default:
         summary: |
           Version number of the key for which the version info is requested.
     returns:
@@ -62,7 +62,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: |
           Key name for which the version info is requested. If
           `Class.DataStoreOptions.AllScopes` was set to true when accessing the
@@ -70,7 +70,7 @@ methods:
           name must be prepended with the original scope as in "scope/key".
       - name: timestamp
         type: int64
-        default: ''
+        default:
         summary: |
           Unix timestamp in milliseconds for which the requested version was
           current. Must be greater than zero. Must not be more than ten minutes
@@ -107,7 +107,7 @@ methods:
     parameters:
       - name: prefix
         type: string
-        default: ''
+        default:
         summary: |
           **(Optional)** Prefix to use for locating keys.
       - name: pageSize
@@ -119,7 +119,7 @@ methods:
           store web service, which in turn defaults to 50 items per page.
       - name: cursor
         type: string
-        default: ''
+        default:
         summary: |
           **(Optional)** Cursor to continue iteration.
       - name: excludeDeleted
@@ -156,7 +156,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: |
           Key name for the versions to list. If
           `Class.DataStoreOptions.AllScopes` was set to true when accessing the
@@ -213,7 +213,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: |
           Key name for which a version is to be removed. If
           `Class.DataStoreOptions.AllScopes` was set to true when accessing the
@@ -221,7 +221,7 @@ methods:
           name must be prepended with the original scope as in "scope/key".
       - name: version
         type: string
-        default: ''
+        default:
         summary: |
           Version number of the key to remove.
     returns:

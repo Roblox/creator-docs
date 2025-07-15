@@ -6,7 +6,7 @@ summary: |
 description: |
   Used by `Class.SurfaceGui.SizingMode` to control the sizing behavior of a
   `Class.SurfaceGui`.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

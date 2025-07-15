@@ -217,7 +217,7 @@ methods:
     parameters:
       - name: pin
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Instances
@@ -341,7 +341,7 @@ events:
     parameters:
       - name: error
         type: AssetFetchStatus
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''
@@ -355,19 +355,19 @@ events:
     parameters:
       - name: connected
         type: boolean
-        default: ''
+        default:
         summary: ''
       - name: pin
         type: string
-        default: ''
+        default:
         summary: ''
       - name: wire
         type: Wire
-        default: ''
+        default:
         summary: ''
       - name: instance
         type: Instance
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''

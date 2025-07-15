@@ -85,7 +85,7 @@ methods:
     parameters:
       - name: value
         type: float
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()

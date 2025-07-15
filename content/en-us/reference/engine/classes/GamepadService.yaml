@@ -132,7 +132,7 @@ methods:
     parameters:
       - name: guiObject
         type: Instance
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()

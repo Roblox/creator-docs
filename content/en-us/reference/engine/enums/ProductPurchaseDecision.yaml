@@ -6,7 +6,7 @@ summary: |
 description: |
   The `ProductPurchaseDecisionEnum` is used to work with
   `Class.MarketplaceService`, and the sale of developer products.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

@@ -4,7 +4,7 @@ summary: ''
 description: |
   Describes the type of user thumbnail that should be returned by
   GetUserThumbnailAsync.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

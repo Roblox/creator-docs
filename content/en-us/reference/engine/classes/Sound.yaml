@@ -936,12 +936,12 @@ events:
     parameters:
       - name: soundId
         type: string
-        default: ''
+        default:
         summary: |
           The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that looped.
       - name: numOfTimesLooped
         type: int
-        default: ''
+        default:
         summary: |
           The number of times the `Class.Sound` has looped.
     tags: []
@@ -972,7 +972,7 @@ events:
     parameters:
       - name: soundId
         type: string
-        default: ''
+        default:
         summary: |
           The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that has ended.
     tags: []
@@ -995,7 +995,7 @@ events:
     parameters:
       - name: soundId
         type: string
-        default: ''
+        default:
         summary: |
           The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that loaded.
     tags: []
@@ -1016,7 +1016,7 @@ events:
     parameters:
       - name: soundId
         type: string
-        default: ''
+        default:
         summary: |
           The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that was
           paused.
@@ -1040,7 +1040,7 @@ events:
     parameters:
       - name: soundId
         type: string
-        default: ''
+        default:
         summary: |
           The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that was
           played.
@@ -1062,7 +1062,7 @@ events:
     parameters:
       - name: soundId
         type: string
-        default: ''
+        default:
         summary: |
           The `Class.Sound.SoundId|SoundId` of the `Class.Sound` being resumed.
     tags: []
@@ -1084,7 +1084,7 @@ events:
     parameters:
       - name: soundId
         type: string
-        default: ''
+        default:
         summary: |
           The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that stopped.
     tags: []

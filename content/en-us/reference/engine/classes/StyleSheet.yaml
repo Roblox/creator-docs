@@ -97,7 +97,7 @@ methods:
     parameters:
       - name: derives
         type: Instances
-        default: ''
+        default:
         summary: |
           Array of other `StyleSheets` to derive `Class.StyleRule|StyleRules`
           and token definitions from.

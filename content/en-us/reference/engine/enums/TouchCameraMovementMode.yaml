@@ -6,7 +6,7 @@ summary: |
 description: |
   Changes the touch camera movement mode currently in-use by the client using a
   TouchEnabled device.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

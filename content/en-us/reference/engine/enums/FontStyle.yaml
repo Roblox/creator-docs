@@ -10,14 +10,14 @@ tags: []
 deprecation_message: ''
 items:
   - name: Normal
-    value: 0
     summary: |
       The text renders normally with this font.
+    value: 0
     tags: []
     deprecation_message: ''
   - name: Italic
-    value: 1
     summary: |
       The text renders italic with this font.
+    value: 1
     tags: []
     deprecation_message: ''

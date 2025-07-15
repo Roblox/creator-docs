@@ -6,7 +6,7 @@ summary: |
 description: |
   Determines how an image (of a `Class.ImageLabel` or `Class.ImageButton`) is
   scaled.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

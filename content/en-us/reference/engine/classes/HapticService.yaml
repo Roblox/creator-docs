@@ -30,12 +30,12 @@ methods:
     parameters:
       - name: inputType
         type: UserInputType
-        default: ''
+        default:
         summary: |
           The specified `Enum.UserInputType`.
       - name: vibrationMotor
         type: VibrationMotor
-        default: ''
+        default:
         summary: |
           The specified `Enum.VibrationMotor`.
     returns:
@@ -61,13 +61,13 @@ methods:
     parameters:
       - name: inputType
         type: UserInputType
-        default: ''
+        default:
         summary: |
           The specific `Enum.UserInputType` being checked for
           `Enum.VibrationMotor` support.
       - name: vibrationMotor
         type: VibrationMotor
-        default: ''
+        default:
         summary: |
           The specified `Enum.VibrationMotor` checked to see if it supports the
           specified `Enum.UserInputType`.
@@ -93,7 +93,7 @@ methods:
     parameters:
       - name: inputType
         type: UserInputType
-        default: ''
+        default:
         summary: |
           The specified `Enum.UserInputType` checked to see if it supports
           haptic feedback.
@@ -122,17 +122,17 @@ methods:
     parameters:
       - name: inputType
         type: UserInputType
-        default: ''
+        default:
         summary: |
           The specified `Enum.UserInputType`.
       - name: vibrationMotor
         type: VibrationMotor
-        default: ''
+        default:
         summary: |
           The specified `Enum.VibrationMotor`.
       - name: vibrationValues
         type: Tuple
-        default: ''
+        default:
         summary: |
           How intensely the motor should vibrate. Only uses the first value in
           the tuple, which should be a number.

@@ -30,7 +30,7 @@ methods:
     parameters:
       - name: editableImageOptions
         type: Dictionary?
-        default: ''
+        default:
         summary: |
           Options table containing controls for the method:
 
@@ -57,7 +57,7 @@ methods:
     parameters:
       - name: editableMeshOptions
         type: Dictionary?
-        default: ''
+        default:
         summary: |
           Table containing options for the created `Class.EditableMesh`.
           Currently no options are available since
@@ -79,7 +79,7 @@ methods:
     parameters:
       - name: content
         type: Dictionary
-        default: ''
+        default:
         summary: ''
     returns:
       - type: SurfaceAppearance
@@ -103,12 +103,12 @@ methods:
     parameters:
       - name: object
         type: Object
-        default: ''
+        default:
         summary: |
           The object to be created as an asset.
       - name: assetType
         type: AssetType
-        default: ''
+        default:
         summary: |
           Currently supported types are:
 
@@ -161,12 +161,12 @@ methods:
     parameters:
       - name: object
         type: Object
-        default: ''
+        default:
         summary: |
           The object to be created as an asset.
       - name: assetType
         type: AssetType
-        default: ''
+        default:
         summary: |
           Currently supported types are:
 
@@ -229,14 +229,14 @@ methods:
     parameters:
       - name: content
         type: Content
-        default: ''
+        default:
         summary: |
           Reference to asset content stored externally or as an object within
           the place, wrapping a single value of one of the supported
           `Enum.ContentSourceType` values.
       - name: editableImageOptions
         type: Dictionary?
-        default: ''
+        default:
         summary: |
           Table containing options for the created `Class.EditableImage`.
           Currently no options are available since resizing via
@@ -274,14 +274,14 @@ methods:
     parameters:
       - name: content
         type: Content
-        default: ''
+        default:
         summary: |
           Reference to asset content stored externally or as an object within
           the place, wrapping a single value of one of the supported
           `Enum.ContentSourceType` values.
       - name: editableMeshOptions
         type: Dictionary?
-        default: ''
+        default:
         summary: |
           Options table containing controls for the method:
 
@@ -316,7 +316,7 @@ methods:
     parameters:
       - name: meshContent
         type: Content
-        default: ''
+        default:
         summary: |
           Reference to asset content stored externally or as an object within
           the place, wrapping a single value of one of the supported
@@ -371,7 +371,7 @@ methods:
     parameters:
       - name: placeName
         type: string
-        default: ''
+        default:
         summary: |
           Name of the new place.
       - name: templatePlaceID
@@ -404,11 +404,11 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default: ''
+        default:
         summary: ''
       - name: placeName
         type: string
-        default: ''
+        default:
         summary: ''
       - name: templatePlaceID
         type: int64
@@ -462,7 +462,7 @@ methods:
     parameters:
       - name: idList
         type: Array
-        default: ''
+        default:
         summary: |
           Array of asset or content IDs for which to retrieve metadata. Max
           batch size is 30.
@@ -604,18 +604,18 @@ methods:
     parameters:
       - name: player
         type: Player
-        default: ''
+        default:
         summary: |
           The user who submits an asset creation.
       - name: instance
         type: Instance
-        default: ''
+        default:
         summary: |
           The asset to be created. Currently can't contain scripts or nest
           non-public assets.
       - name: assetType
         type: AssetType
-        default: ''
+        default:
         summary: |
           The asset type. Currently can only be `Enum.AssetType.Model`.
     returns:
@@ -636,11 +636,11 @@ methods:
     parameters:
       - name: player
         type: Player
-        default: ''
+        default:
         summary: ''
       - name: progressCallback
         type: Function
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Tuple
@@ -714,7 +714,7 @@ methods:
     parameters:
       - name: searchParameters
         type: AudioSearchParams
-        default: ''
+        default:
         summary: ''
     returns:
       - type: AudioPages

@@ -221,7 +221,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default: ''
+        default:
         summary: |
           String name of the property, for example `"AnchorPoint"` or
           `"BackgroundColor3"`.
@@ -297,7 +297,7 @@ methods:
     parameters:
       - name: styleProperties
         type: Dictionary
-        default: ''
+        default:
         summary: |
           Dictionary of key-value pairs defining the properties to set.
     returns:
@@ -362,12 +362,12 @@ methods:
     parameters:
       - name: name
         type: string
-        default: ''
+        default:
         summary: |
           Property name to set, for example `"BackgroundColor3"`.
       - name: value
         type: Variant
-        default: ''
+        default:
         summary: |
           Property value to set, for example `Datatype.Color3.new(1, 0, 0.25)`.
     returns:

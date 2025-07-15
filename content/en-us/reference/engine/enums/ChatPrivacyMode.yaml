@@ -3,7 +3,7 @@ type: enum
 summary: ''
 description: |
   Internally controls the user's chat privacy settings.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

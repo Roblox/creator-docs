@@ -35,11 +35,11 @@ methods:
     parameters:
       - name: content
         type: Content
-        default: ''
+        default:
         summary: ''
       - name: cageOrigin
         type: CoordinateFrame?
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -89,7 +89,7 @@ methods:
     parameters:
       - name: originalCFrame
         type: CFrame
-        default: ''
+        default:
         summary: ''
     returns:
       - type: CFrame

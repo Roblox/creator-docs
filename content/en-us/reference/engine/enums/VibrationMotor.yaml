@@ -6,7 +6,7 @@ description: |
   Describes various types of haptic motor sizes and locations. Most devices have
   two motors, one that's small and another that's large. For devices with a
   single motor, such as mobile devices, only the large motor is implemented.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

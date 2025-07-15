@@ -9,7 +9,7 @@ description: |
   `Class.Part.BottomSurfaceInput`, `Class.Part.FrontSurfaceInput`,
   `Class.Part.LeftSurfaceInput`, `Class.Part.RightSurfaceInput`,
   `Class.Part.TopSurfaceInput`.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: |
   This enum is deprecated as it is used by deprecated methods. It should not be

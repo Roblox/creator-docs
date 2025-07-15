@@ -9,7 +9,7 @@ description: |
   it's possible for malicious users to trick your game into loading unexpected
   models that you own which may include malicious scripts. You should set this
   to Always unless you want to load non-catalog assets.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

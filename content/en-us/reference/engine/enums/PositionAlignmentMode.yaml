@@ -6,7 +6,7 @@ summary: |
 description: |
   The PositionAlignmentMode Enum is used to select the number of
   `Class.Attachment|Attachments` used in an alignment.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

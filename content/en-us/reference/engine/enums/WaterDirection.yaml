@@ -4,7 +4,7 @@ summary: |
   This Enum was once used to set the direction of `Class.Terrain` water.
 description: |
   This Enum was once used to set the direction of `Class.Terrain` water.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: |
   This item is deprecated. Do not use it for new work. Please see

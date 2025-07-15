@@ -173,7 +173,7 @@ methods:
     parameters:
       - name: setting
         type: string
-        default: ''
+        default:
         summary: |
           The key the value was stored under using
           `Class.TeleportService:SetTeleportSetting()`.
@@ -231,7 +231,7 @@ methods:
     parameters:
       - name: gui
         type: Instance
-        default: ''
+        default:
         summary: |
           The loading `Class.ScreenGui` that is to be displayed during
           teleportation.
@@ -314,13 +314,13 @@ methods:
     parameters:
       - name: setting
         type: string
-        default: ''
+        default:
         summary: |
           The key to store the _value_ under. This key can be used to retrieve
           the value using `Class.TeleportService:GetTeleportSetting()`.
       - name: value
         type: Variant
-        default: ''
+        default:
         summary: |
           The value to store.
     returns:
@@ -358,7 +358,7 @@ methods:
           the client this defaults to the `Class.Players.LocalPlayer`.
       - name: teleportData
         type: Variant
-        default: ''
+        default:
         summary: |
           Optional data to be passed to the destination place. Can be retrieved
           using `Class.TeleportService:GetLocalPlayerTeleportData()`.
@@ -397,7 +397,7 @@ methods:
           The ID of the place to teleport to.
       - name: instanceId
         type: string
-        default: ''
+        default:
         summary: |
           The `Class.DataModel.JobId` of the server instance to teleport to.
       - name: player
@@ -413,7 +413,7 @@ methods:
           Optional name of the `Class.SpawnLocation` to spawn at.
       - name: teleportData
         type: Variant
-        default: ''
+        default:
         summary: |
           Optional data to be passed to the destination place. Can be retrieved
           using `Class.TeleportService:GetLocalPlayerTeleportData()`.
@@ -453,13 +453,13 @@ methods:
           The ID of the place to teleport to.
       - name: reservedServerAccessCode
         type: string
-        default: ''
+        default:
         summary: |
           The reserved server access code returned by
           `Class.TeleportService:ReserveServer()`.
       - name: players
         type: Instances
-        default: ''
+        default:
         summary: |
           An array of `Class.Player|Players` to teleport.
       - name: spawnName
@@ -469,7 +469,7 @@ methods:
           Optional name of the `Class.SpawnLocation` to spawn at.
       - name: teleportData
         type: Variant
-        default: ''
+        default:
         summary: |
           Optional data to be passed to the destination place. Can be retrieved
           using `Class.TeleportService:GetLocalPlayerTeleportData()`.
@@ -509,7 +509,7 @@ methods:
           The ID of the place to teleport to.
       - name: spawnName
         type: string
-        default: ''
+        default:
         summary: |
           The name of the `Class.SpawnLocation` to spawn at.
       - name: player
@@ -520,7 +520,7 @@ methods:
           the client this defaults to the `Class.Players.LocalPlayer`.
       - name: teleportData
         type: Variant
-        default: ''
+        default:
         summary: |
           Optional data to be passed to the destination place. Can be retrieved
           using `Class.TeleportService:GetLocalPlayerTeleportData()`.
@@ -780,7 +780,7 @@ methods:
           The place ID the player(s) should be teleported to.
       - name: players
         type: Instances
-        default: ''
+        default:
         summary: |
           An array of the player(s) to teleport.
       - name: teleportOptions
@@ -824,12 +824,12 @@ methods:
           The ID of the place to teleport to.
       - name: players
         type: Instances
-        default: ''
+        default:
         summary: |
           An array containing the `Class.Player|Players` to teleport.
       - name: teleportData
         type: Variant
-        default: ''
+        default:
         summary: |
           Optional data to be passed to the destination place. Can be retrieved
           using `Class.TeleportService:GetLocalPlayerTeleportData()`.
@@ -913,13 +913,13 @@ events:
     parameters:
       - name: loadingGui
         type: Instance
-        default: ''
+        default:
         summary: |
           The _customLoadingScreen_ the `Class.Players.LocalPlayer|LocalPlayer`
           arrived into the place with.
       - name: dataTable
         type: Variant
-        default: ''
+        default:
         summary: |
           The _teleportData_ the `Class.Players.LocalPlayer|LocalPlayer` arrived
           into the place with.
@@ -996,17 +996,17 @@ events:
     parameters:
       - name: player
         type: Instance
-        default: ''
+        default:
         summary: |
           The `Class.Player` instance that failed to teleport.
       - name: teleportResult
         type: TeleportResult
-        default: ''
+        default:
         summary: |
           The reason for the teleport failure.
       - name: errorMessage
         type: string
-        default: ''
+        default:
         summary: |
           The message provided to the player explaining the teleport failure.
       - name: placeId
@@ -1016,7 +1016,7 @@ events:
           The original target place ID of the teleport.
       - name: teleportOptions
         type: Instance
-        default: ''
+        default:
         summary: |
           A `Class.TeleportOptions` object that can be passed back to
           `Class.TeleportService:TeleportAsync()` to retry the failed teleport.

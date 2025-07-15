@@ -50,7 +50,7 @@ methods:
     parameters:
       - name: attributes
         type: Dictionary
-        default: ''
+        default:
         summary: |
           Metadata values to set for the key.
     returns:

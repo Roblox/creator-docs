@@ -71,7 +71,7 @@ events:
     parameters:
       - name: value
         type: Instance
-        default: ''
+        default:
         summary: |
           The value after the change.
     tags: []
@@ -86,7 +86,7 @@ events:
     parameters:
       - name: value
         type: Instance
-        default: ''
+        default:
         summary: ''
     tags:
       - Deprecated

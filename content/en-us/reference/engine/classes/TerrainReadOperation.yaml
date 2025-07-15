@@ -20,7 +20,7 @@ events:
     parameters:
       - name: block
         type: Dictionary
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''

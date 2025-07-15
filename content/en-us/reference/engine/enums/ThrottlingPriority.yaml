@@ -4,7 +4,7 @@ summary: |
   Amount of throttling to apply.
 description: |
   Controls the amount of throttling under the `Class.HttpRbxApiService`.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

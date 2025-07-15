@@ -31,7 +31,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: |
           Key whose value and sort key to retrieve.
     returns:
@@ -60,25 +60,25 @@ methods:
     parameters:
       - name: direction
         type: SortDirection
-        default: ''
+        default:
         summary: |
           Sort direction, ascending or descending.
       - name: count
         type: int
-        default: ''
+        default:
         summary: |
           The number of items to retrieve; the maximum allowed value for this
           parameter is 200.
       - name: exclusiveLowerBound
         type: Variant
-        default: ''
+        default:
         summary: |
           **(Optional)** Lower bound, exclusive, for the returned keys. This is
           provided as a table where one or both of key and sort key can be
           specified: { key: string, sortKey: Variant } .
       - name: exclusiveUpperBound
         type: Variant
-        default: ''
+        default:
         summary: |
           **(Optional)** Upper bound, exclusive, for the returned keys. This is
           provided as a table where one or both of key and sort key can be
@@ -122,7 +122,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: |
           Key to remove.
     returns:
@@ -146,24 +146,24 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: |
           Key whose value to set.
       - name: value
         type: Variant
-        default: ''
+        default:
         summary: |
           Key value to set.
       - name: expiration
         type: int64
-        default: ''
+        default:
         summary: |
           Item expiration, in seconds. The item is automatically removed from
           the sorted map once the expiration duration is reached. The maximum
           expiration time is 45 days (3,888,000 seconds).
       - name: sortKey
         type: Variant
-        default: ''
+        default:
         summary: |
           **(Optional)** Sort key to set for this key. Accepted types are a
           number (integer or decimal) or a string.
@@ -207,19 +207,19 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: |
           Key whose value to update.
       - name: transformFunction
         type: Function
-        default: ''
+        default:
         summary: |
           A function which you need to provide. The function takes the key's old
           value and old sort key as input and returns the new value and new sort
           key.
       - name: expiration
         type: int64
-        default: ''
+        default:
         summary: |
           Item expiration time, in seconds, after which the item will be
           automatically removed from the sorted map. The maximum expiration time

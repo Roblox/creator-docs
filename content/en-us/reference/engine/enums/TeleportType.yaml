@@ -6,7 +6,7 @@ summary: |
 description: |
   Determines the type of teleport destination for a `Class.TeleportService`
   teleport call.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

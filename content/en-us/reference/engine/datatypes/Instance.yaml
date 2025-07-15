@@ -5,7 +5,7 @@ summary: |
 description: |
   The `Class.Instance` data type holds constructors for `Class.Instance`
   objects.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 constructors:
@@ -38,21 +38,19 @@ constructors:
       - name: className
         type: string
         default:
-        summary: |
-          Class name of the new instance to create.
+        summary: Class name of the new instance to create.
       - name: parent
         type: Instance?
         default:
-        summary: |
-          Optional object to parent the new instance to. Not recommended for performance reasons (see description above).
+        summary: Optional object to parent the new instance to. Not recommended for performance reasons (see description above).
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: Instance.fromExisting
-    summary: |
+    summary: |-
       Returns an `Class.Instance` which is a copy of an existing
       `Class.Instance`.
-    description: |
+    description: |-
       Creates a new object with the same type and property values as an existing
       object. In most cases using `Class.Instance:Clone()` is more appropriate,
       but this constructor is useful when implementing low‑level libraries or
@@ -68,13 +66,12 @@ constructors:
       - name: existingInstance
         type: Instance
         default:
-        summary: |
-          The existing `Class.Instance` to copy property values from.
+        summary: The existing `Class.Instance` to copy property values from.
     code_samples: []
     tags: []
     deprecation_message: ''
 constants: []
-properties:
-methods:
-functions:
-math_operations:
+properties: []
+methods: []
+functions: []
+math_operations: []

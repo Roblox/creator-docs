@@ -65,7 +65,7 @@ methods:
     parameters:
       - name: string
         type: string
-        default: ''
+        default:
         summary: |
           The string for which the text size is to be calculated.
       - name: fontSize
@@ -75,12 +75,12 @@ methods:
           The integer representing the font size used.
       - name: font
         type: Font
-        default: ''
+        default:
         summary: |
           The font used.
       - name: frameSize
         type: Vector2
-        default: ''
+        default:
         summary: |
           The `Class.TextLabel.AbsoluteSize` of the text object to be used.
           Required to compute how the text will wrap.
@@ -108,7 +108,7 @@ methods:
     parameters:
       - name: stringToFilter
         type: string
-        default: ''
+        default:
         summary: ''
       - name: fromUserId
         type: int64
@@ -116,7 +116,7 @@ methods:
         summary: ''
       - name: targetLocales
         type: Array
-        default: ''
+        default:
         summary: ''
       - name: textContext
         type: TextFilterContext
@@ -187,7 +187,7 @@ methods:
     parameters:
       - name: stringToFilter
         type: string
-        default: ''
+        default:
         summary: |
           The text to be filtered.
       - name: fromUserId
@@ -252,7 +252,7 @@ methods:
     parameters:
       - name: assetId
         type: ContentId
-        default: ''
+        default:
         summary: |
           Asset ID of the font family to look up.
     returns:
@@ -298,7 +298,7 @@ methods:
     parameters:
       - name: params
         type: GetTextBoundsParams
-        default: ''
+        default:
         summary: |
           A reference to a `Class.GetTextBoundsParams` object.
     returns:
@@ -324,7 +324,7 @@ methods:
         summary: ''
       - name: font
         type: Font
-        default: ''
+        default:
         summary: ''
     returns:
       - type: float

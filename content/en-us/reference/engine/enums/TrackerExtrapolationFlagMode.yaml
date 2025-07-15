@@ -7,22 +7,22 @@ tags: []
 deprecation_message: ''
 items:
   - name: ForceDisabled
-    value: 0
     summary: ''
+    value: 0
     tags: []
     deprecation_message: ''
   - name: ExtrapolateFacsAndPose
-    value: 1
     summary: ''
+    value: 1
     tags: []
     deprecation_message: ''
   - name: ExtrapolateFacsOnly
-    value: 2
     summary: ''
+    value: 2
     tags: []
     deprecation_message: ''
   - name: Auto
-    value: 3
     summary: ''
+    value: 3
     tags: []
     deprecation_message: ''

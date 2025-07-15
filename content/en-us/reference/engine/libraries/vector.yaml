@@ -10,7 +10,8 @@ description: |
   Individual vector components can be accessed using the fields `x` or `X`, `y`
   or `Y`, `z` or `Z`. Since vector values are immutable, writing to individual
   components is not supported.
-code_samples:
+tags: []
+code_samples: []
 properties:
   - name: vector.zero
     type: vector
@@ -18,16 +19,18 @@ properties:
       Constant vector with all components set to `0`.
     description: |
       Constant vector with all components set to `0`.
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: vector.one
     type: vector
     summary: |
       Constant vector with all components set to `1`.
     description: |
       Constant vector with all components set to `1`.
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
 functions:
   - name: vector.create
     summary: |
@@ -50,8 +53,9 @@ functions:
     returns:
       - type: vector
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: vector.magnitude
     summary: |
       Calculates the magnitude of a given vector.
@@ -65,8 +69,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: vector.normalize
     summary: |
       Computes the normalized version (unit vector) of a given vector.
@@ -80,8 +85,9 @@ functions:
     returns:
       - type: vector
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: vector.cross
     summary: |
       Computes the cross product of two vectors.
@@ -99,8 +105,9 @@ functions:
     returns:
       - type: vector
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: vector.dot
     summary: |
       Computes the dot product of two vectors.
@@ -118,8 +125,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: vector.angle
     summary: |
       Computes the angle between two vectors in radians.
@@ -142,8 +150,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: vector.floor
     summary: |
       Applies `Library.math.floor()` to every component of the input vector.
@@ -157,8 +166,9 @@ functions:
     returns:
       - type: vector
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: vector.ceil
     summary: |
       Applies `Library.math.ceil()` to every component of the input vector.
@@ -172,8 +182,9 @@ functions:
     returns:
       - type: vector
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: vector.abs
     summary: |
       Applies `Library.math.abs()` to every component of the input vector.
@@ -187,8 +198,9 @@ functions:
     returns:
       - type: vector
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: vector.sign
     summary: |
       Applies `Library.math.sign()` to every component of the input vector.
@@ -202,8 +214,9 @@ functions:
     returns:
       - type: vector
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: vector.clamp
     summary: |
       Applies `Library.math.clamp()` to every component of the input vector.
@@ -225,8 +238,9 @@ functions:
     returns:
       - type: vector
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: vector.max
     summary: |
       Applies `Library.math.max()` to the corresponding components of the input
@@ -242,8 +256,9 @@ functions:
     returns:
       - type: vector
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: vector.min
     summary: |
       Applies `Library.math.min()` to the corresponding components of the input
@@ -259,5 +274,6 @@ functions:
     returns:
       - type: vector
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''

@@ -77,11 +77,11 @@ events:
     parameters:
       - name: message
         type: string
-        default: ''
+        default:
         summary: ''
       - name: messageType
         type: MessageType
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''

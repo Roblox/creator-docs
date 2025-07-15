@@ -25,29 +25,29 @@ description: |
     be streamed to players with high priority
   - `Class.Workspace.StreamingTargetRadius`, the maximum distance that parts
     will be streamed to players
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: |
   Please use `Class.Workspace.StreamingIntegrityMode` instead.
 items:
   - name: Default
-    value: 0
     summary: |
       Default behavior (currently no change to gameplay).
+    value: 0
     tags:
       - Deprecated
     deprecation_message: ''
   - name: Disabled
-    value: 1
     summary: |
       No change to gameplay due to streaming region availability.
+    value: 1
     tags:
       - Deprecated
     deprecation_message: ''
   - name: ClientPhysicsPause
-    value: 2
     summary: |
       Client owned physics is paused.
+    value: 2
     tags:
       - Deprecated
     deprecation_message: ''

@@ -7,17 +7,17 @@ tags: []
 deprecation_message: ''
 items:
   - name: Invoked
-    value: 1
     summary: ''
+    value: 1
     tags: []
     deprecation_message: ''
   - name: TriggerCharacter
-    value: 2
     summary: ''
+    value: 2
     tags: []
     deprecation_message: ''
   - name: TriggerForIncompleteCompletions
-    value: 3
     summary: ''
+    value: 3
     tags: []
     deprecation_message: ''

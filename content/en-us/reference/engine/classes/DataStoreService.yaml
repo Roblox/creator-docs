@@ -42,7 +42,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default: ''
+        default:
         summary: |
           Name of the data store.
       - name: scope
@@ -104,7 +104,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default: ''
+        default:
         summary: ''
       - name: scope
         type: string
@@ -134,7 +134,7 @@ methods:
     parameters:
       - name: requestType
         type: DataStoreRequestType
-        default: ''
+        default:
         summary: ''
     returns:
       - type: int

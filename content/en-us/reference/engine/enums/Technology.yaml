@@ -8,7 +8,7 @@ description: |
   for rendering the 3D world. It is used by the `Class.Lighting.Technology`
   property. See [here](../../../environment/lighting.md#technology) for detailed
   descriptions and visual effects of each option.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

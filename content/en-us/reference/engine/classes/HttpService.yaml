@@ -133,7 +133,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Secret
@@ -167,7 +167,7 @@ methods:
     parameters:
       - name: input
         type: string
-        default: ''
+        default:
         summary: |
           The JSON object being decoded.
     returns:
@@ -207,7 +207,7 @@ methods:
     parameters:
       - name: input
         type: Variant
-        default: ''
+        default:
         summary: |
           The input Luau table.
     returns:
@@ -243,7 +243,7 @@ methods:
     parameters:
       - name: input
         type: string
-        default: ''
+        default:
         summary: |
           The string (URL) to encode.
     returns:
@@ -277,7 +277,7 @@ methods:
     parameters:
       - name: url
         type: Variant
-        default: ''
+        default:
         summary: |
           The web address you are requesting data from.
       - name: nocache
@@ -287,7 +287,7 @@ methods:
           Whether the request stores (caches) the response.
       - name: headers
         type: Variant
-        default: ''
+        default:
         summary: |
           Used to specify some HTTP request headers.
     returns:
@@ -321,12 +321,12 @@ methods:
     parameters:
       - name: url
         type: Variant
-        default: ''
+        default:
         summary: |
           The destination address for the data.
       - name: data
         type: string
-        default: ''
+        default:
         summary: |
           The data being sent.
       - name: content_type
@@ -341,7 +341,7 @@ methods:
           Determines whether the data is compressed (**gzipped**) when sent.
       - name: headers
         type: Variant
-        default: ''
+        default:
         summary: |
           Used to specify some HTTP request headers.
     returns:
@@ -550,7 +550,7 @@ methods:
     parameters:
       - name: requestOptions
         type: Dictionary
-        default: ''
+        default:
         summary: |
           A dictionary containing information to be requested from the server
           specified.

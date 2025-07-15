@@ -7,7 +7,7 @@ description: |
 
   See `Class.RunService:BindToRenderStep()` for the proper usage, as the enum
   itself isn't used.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

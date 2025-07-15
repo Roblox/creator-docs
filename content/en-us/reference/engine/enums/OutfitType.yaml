@@ -7,17 +7,17 @@ tags: []
 deprecation_message: ''
 items:
   - name: All
-    value: 1
     summary: ''
+    value: 1
     tags: []
     deprecation_message: ''
   - name: Avatar
-    value: 2
     summary: ''
+    value: 2
     tags: []
     deprecation_message: ''
   - name: DynamicHead
-    value: 3
     summary: ''
+    value: 3
     tags: []
     deprecation_message: ''

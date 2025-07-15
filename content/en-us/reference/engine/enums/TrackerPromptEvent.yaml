@@ -7,7 +7,7 @@ tags: []
 deprecation_message: ''
 items:
   - name: LODCameraRecommendDisable
-    value: 0
     summary: ''
+    value: 0
     tags: []
     deprecation_message: ''

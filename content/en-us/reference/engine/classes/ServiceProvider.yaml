@@ -30,7 +30,7 @@ methods:
     parameters:
       - name: className
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Instance
@@ -65,7 +65,7 @@ methods:
     parameters:
       - name: className
         type: string
-        default: ''
+        default:
         summary: |
           The class name of the requested service.
     returns:
@@ -85,7 +85,7 @@ methods:
     parameters:
       - name: className
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Instance
@@ -106,7 +106,7 @@ methods:
     parameters:
       - name: className
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Instance
@@ -143,7 +143,7 @@ events:
     parameters:
       - name: service
         type: Instance
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''
@@ -159,7 +159,7 @@ events:
     parameters:
       - name: service
         type: Instance
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''

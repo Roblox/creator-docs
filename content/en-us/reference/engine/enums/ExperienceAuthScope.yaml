@@ -7,12 +7,12 @@ tags: []
 deprecation_message: ''
 items:
   - name: DefaultScope
-    value: 0
     summary: ''
+    value: 0
     tags: []
     deprecation_message: ''
   - name: CreatorAssetsCreate
-    value: 1
     summary: ''
+    value: 1
     tags: []
     deprecation_message: ''

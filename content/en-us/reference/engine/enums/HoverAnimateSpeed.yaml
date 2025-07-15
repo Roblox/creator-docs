@@ -3,7 +3,7 @@ type: enum
 summary: ''
 description: |
   Specifies how frequently the hover animation flashes.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

@@ -8,7 +8,7 @@ description: |
 
   The `Class.GuiObject.TouchSwipe` and `Class.UserInputService.TouchSwipe`
   events pass this enum as an argument.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

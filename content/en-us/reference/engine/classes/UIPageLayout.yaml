@@ -238,7 +238,7 @@ methods:
     parameters:
       - name: page
         type: Instance
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -265,7 +265,7 @@ methods:
     parameters:
       - name: index
         type: int
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -325,7 +325,7 @@ events:
     parameters:
       - name: page
         type: Instance
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''
@@ -342,7 +342,7 @@ events:
     parameters:
       - name: page
         type: Instance
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''
@@ -361,7 +361,7 @@ events:
     parameters:
       - name: currentPage
         type: Instance
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''

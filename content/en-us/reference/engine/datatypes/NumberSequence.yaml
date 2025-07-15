@@ -52,7 +52,7 @@ description: |
 
   print(evalNumberSequence(numberSequence, 0.65))  --> 0.7
   ```
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 constructors:
@@ -143,9 +143,10 @@ properties:
     description: |
       An array containing `Datatype.NumberSequenceKeypoint` values for the
       `Datatype.NumberSequence`.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
-methods:
-functions:
-math_operations:
+methods: []
+functions: []
+math_operations: []

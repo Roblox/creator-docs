@@ -183,7 +183,7 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default: ''
+        default:
         summary: |
           The `Class.Player` that you are getting the `Class.Translator` for.
     returns:
@@ -998,7 +998,7 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default: ''
+        default:
         summary: |
           The player that you are getting country/region information for.
     returns:
@@ -1043,7 +1043,7 @@ methods:
     parameters:
       - name: locale
         type: string
-        default: ''
+        default:
         summary: |
           A Roblox supported language or locale code.
     returns:
@@ -1087,7 +1087,7 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default: ''
+        default:
         summary: |
           The `Class.Player` that you are getting the `Class.Translator` for.
     returns:

@@ -20,7 +20,7 @@ methods:
     parameters:
       - name: className
         type: string
-        default: ''
+        default:
         summary: ''
       - name: filter
         type: Dictionary
@@ -60,7 +60,7 @@ methods:
     parameters:
       - name: className
         type: string
-        default: ''
+        default:
         summary: ''
       - name: filter
         type: Dictionary

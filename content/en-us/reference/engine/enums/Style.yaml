@@ -6,7 +6,7 @@ summary: |
 description: |
   The Style Enum is used to set what style of supports the `Class.TrussPart`
   has.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

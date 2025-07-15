@@ -12,7 +12,7 @@ description: |
   should be inset by
   `Class.ScrollingFrame.ScrollBarThickness|ScrollBarThickness` for the
   respective scroll bar.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

@@ -40,13 +40,13 @@ methods:
     parameters:
       - name: x
         type: int
-        default: ''
+        default:
         summary: |
           The x position on the screen relative to the top left corner after the
           `Class.GuiService:GetGuiInset()|GuiInset` is applied.
       - name: 'y'
         type: int
-        default: ''
+        default:
         summary: |
           The y position on the screen relative to the top left corner after the
           `Class.GuiService:GetGuiInset()|GuiInset` is applied.

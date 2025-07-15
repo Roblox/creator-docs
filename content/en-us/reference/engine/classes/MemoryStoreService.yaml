@@ -32,7 +32,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default: ''
+        default:
         summary: |
           The name of the hash map.
     returns:
@@ -57,7 +57,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default: ''
+        default:
         summary: |
           Name of the queue.
       - name: invisibilityTimeout
@@ -88,7 +88,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default: ''
+        default:
         summary: |
           Name of the sorted map.
     returns:

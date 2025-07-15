@@ -211,6 +211,7 @@ properties:
     description: |
       The asset ID for the font family. These start with either `rbxasset://` or
       `rbxassetid://`.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -223,6 +224,7 @@ properties:
 
       When set, `Datatype.Font.Bold` is updated. Bold is true if the weight is
       `Enum.FontWeight.SemiBold` or thicker.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -233,6 +235,7 @@ properties:
     description: |
       Whether the font is italic. The default value is `Enum.FontStyle.Normal`.
       The font can be made italic (_like this_) using `Enum.FontStyle.Italic`.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -243,6 +246,7 @@ properties:
     description: |
       Whether the font is bold. Sets `Datatype.Font.Weight` to
       `Enum.FontWeight.Bold` when true, and `Enum.FontWeight.Regular` otherwise.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''

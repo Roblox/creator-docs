@@ -406,7 +406,7 @@ methods:
     parameters:
       - name: axis
         type: Vector3
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -431,7 +431,7 @@ methods:
     parameters:
       - name: axis
         type: Vector3
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()

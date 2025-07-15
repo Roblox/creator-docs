@@ -12,7 +12,7 @@ description: |
   [UI&nbsp;Animations](../../../ui/animation.md#style).
 
   <img src="/assets/engine-api/enums/EasingStyle/Easing-Styles-In.png" width="800" alt="Graphs of EasingStyle variations with an 'In' EasingDirection." />
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

@@ -8,7 +8,7 @@ description: |
   enablement of aerodynamic forces on parts and assemblies in the workspace.
   Note that this enum is not applicable in scripting and
   `Class.Workspace.FluidForces` must be toggled in Studio.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

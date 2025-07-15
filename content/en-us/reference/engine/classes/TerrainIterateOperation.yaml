@@ -19,7 +19,7 @@ methods:
     parameters:
       - name: block
         type: Dictionary
-        default: ''
+        default:
         summary: ''
     returns:
       - type: RBXScriptSignal
@@ -38,7 +38,7 @@ events:
     parameters:
       - name: block
         type: Dictionary
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''

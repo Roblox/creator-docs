@@ -6,7 +6,7 @@ summary: |
 description: |
   Controls how the `Class.Highlight` effect displays with respect to other
   objects in the world.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

@@ -7,17 +7,17 @@ tags: []
 deprecation_message: ''
 items:
   - name: ForceFalse
-    value: 0
     summary: ''
+    value: 0
     tags: []
     deprecation_message: ''
   - name: ForceTrue
-    value: 1
     summary: ''
+    value: 1
     tags: []
     deprecation_message: ''
   - name: Auto
-    value: 2
     summary: ''
+    value: 2
     tags: []
     deprecation_message: ''

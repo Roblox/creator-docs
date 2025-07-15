@@ -112,7 +112,7 @@ methods:
     parameters:
       - name: humanoid
         type: Instance
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()

@@ -432,7 +432,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default: ''
+        default:
         summary: |
           The name of the `Class.KeyframeMarker` the signal is being created
           for. Not to be confused with the name of the `Class.Keyframe`.
@@ -456,7 +456,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Instance
@@ -505,7 +505,7 @@ methods:
     parameters:
       - name: keyframeName
         type: string
-        default: ''
+        default:
         summary: |
           The name associated with the `Class.Keyframe` to be found.
     returns:
@@ -581,11 +581,11 @@ methods:
     parameters:
       - name: name
         type: string
-        default: ''
+        default:
         summary: ''
       - name: target
         type: Instance
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -697,7 +697,7 @@ events:
     parameters:
       - name: keyframeName
         type: string
-        default: ''
+        default:
         summary: |
           The name of the `Class.Keyframe` reached.
     tags: []

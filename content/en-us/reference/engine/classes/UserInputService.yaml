@@ -599,12 +599,12 @@ methods:
     parameters:
       - name: gamepadNum
         type: UserInputType
-        default: ''
+        default:
         summary: |
           The `Enum.UserInputType` of the gamepad.
       - name: gamepadKeyCode
         type: KeyCode
-        default: ''
+        default:
         summary: |
           The `Enum.KeyCode` of the button in question.
     returns:
@@ -768,7 +768,7 @@ methods:
     parameters:
       - name: gamepadNum
         type: UserInputType
-        default: ''
+        default:
         summary: |
           The `Enum.UserInputType` of the gamepad in question.
     returns:
@@ -794,7 +794,7 @@ methods:
     parameters:
       - name: gamepadNum
         type: UserInputType
-        default: ''
+        default:
         summary: |
           The `Enum.UserInputType` corresponding with the gamepad in question.
     returns:
@@ -825,7 +825,7 @@ methods:
     parameters:
       - name: keyCode
         type: KeyCode
-        default: ''
+        default:
         summary: |
           The `Enum.KeyCode` for which to fetch the associated image.
     returns:
@@ -1297,7 +1297,7 @@ methods:
     parameters:
       - name: keyCode
         type: KeyCode
-        default: ''
+        default:
         summary: ''
     returns:
       - type: string
@@ -1324,7 +1324,7 @@ methods:
     parameters:
       - name: gamepadNum
         type: UserInputType
-        default: ''
+        default:
         summary: |
           The `Enum.UserInputType` of the gamepad.
     returns:
@@ -1378,7 +1378,7 @@ methods:
     parameters:
       - name: type
         type: UserCFrame
-        default: ''
+        default:
         summary: |
           The `Enum.UserCFrame` corresponding to the VR device.
     returns:
@@ -1407,12 +1407,12 @@ methods:
     parameters:
       - name: gamepadNum
         type: UserInputType
-        default: ''
+        default:
         summary: |
           The `Enum.UserInputType` of the given gamepad.
       - name: gamepadKeyCode
         type: KeyCode
-        default: ''
+        default:
         summary: |
           The `Enum.KeyCode` of the specified gamepad button.
     returns:
@@ -1440,7 +1440,7 @@ methods:
     parameters:
       - name: keyCode
         type: KeyCode
-        default: ''
+        default:
         summary: |
           The `Enum.KeyCode` of the key.
     returns:
@@ -1467,7 +1467,7 @@ methods:
     parameters:
       - name: mouseButton
         type: UserInputType
-        default: ''
+        default:
         summary: |
           The `Enum.UserInputType` of the mouse button.
     returns:
@@ -1497,7 +1497,7 @@ methods:
     parameters:
       - name: gamepadEnum
         type: UserInputType
-        default: ''
+        default:
         summary: |
           The `Enum.UserInputType` of the specified gamepad.
     returns:
@@ -1550,12 +1550,12 @@ methods:
     parameters:
       - name: gamepadEnum
         type: UserInputType
-        default: ''
+        default:
         summary: |
           The `Enum.UserInputType` of the specified gamepad.
       - name: enabled
         type: boolean
-        default: ''
+        default:
         summary: |
           Whether the specified gamepad can move the GUI navigator.
     returns:
@@ -1587,7 +1587,7 @@ events:
     parameters:
       - name: acceleration
         type: InputObject
-        default: ''
+        default:
         summary: |
           An `Class.InputObject`, with a
           `Class.InputObject.UserInputType|UserInputType` of
@@ -1624,7 +1624,7 @@ events:
     parameters:
       - name: gravity
         type: InputObject
-        default: ''
+        default:
         summary: |
           An `Class.InputObject` with a `Class.InputObject.Position|Position`
           property that shows the force of gravity on each local device axis.
@@ -1654,7 +1654,7 @@ events:
     parameters:
       - name: rotation
         type: InputObject
-        default: ''
+        default:
         summary: |
           An `Class.InputObject` providing info about the device's rotation.
           `Class.InputObject.Position|Position` represents the new rotation a
@@ -1663,7 +1663,7 @@ events:
           `Datatype.Vector3` positional value.
       - name: cframe
         type: CFrame
-        default: ''
+        default:
         summary: |
           A `Datatype.CFrame` representing the device's current orientation.
     tags: []
@@ -1690,7 +1690,7 @@ events:
     parameters:
       - name: gamepadNum
         type: UserInputType
-        default: ''
+        default:
         summary: |
           The `Enum.UserInputType` of the connected gamepad.
     tags: []
@@ -1715,7 +1715,7 @@ events:
     parameters:
       - name: gamepadNum
         type: UserInputType
-        default: ''
+        default:
         summary: |
           The`Enum.UserInputType` of the disconnected gamepad.
     tags: []
@@ -1745,13 +1745,13 @@ events:
     parameters:
       - name: input
         type: InputObject
-        default: ''
+        default:
         summary: |
           An `Class.InputObject` instance containing information about the
           user's input.
       - name: gameProcessedEvent
         type: boolean
-        default: ''
+        default:
         summary: |
           Indicates whether the engine internally observed this input and acted
           on it. Generally this refers to UI processing, so if a button was
@@ -1783,13 +1783,13 @@ events:
     parameters:
       - name: input
         type: InputObject
-        default: ''
+        default:
         summary: |
           An `Class.InputObject` instance containing information about the
           user's input.
       - name: gameProcessedEvent
         type: boolean
-        default: ''
+        default:
         summary: |
           Indicates whether the engine internally observed this input and acted
           on it. Generally this refers to UI processing, so if a button was
@@ -1823,13 +1823,13 @@ events:
     parameters:
       - name: input
         type: InputObject
-        default: ''
+        default:
         summary: |
           An `Class.InputObject` instance containing information about the user
           input.
       - name: gameProcessedEvent
         type: boolean
-        default: ''
+        default:
         summary: |
           Indicates whether the engine internally observed this input and acted
           on it. Generally this refers to UI processing, so if a button was
@@ -1874,7 +1874,7 @@ events:
     parameters:
       - name: lastInputType
         type: UserInputType
-        default: ''
+        default:
         summary: |
           A `Enum.UserInputType` indicating the last input type.
     tags: []
@@ -1893,19 +1893,19 @@ events:
     parameters:
       - name: wheel
         type: float
-        default: ''
+        default:
         summary: ''
       - name: pan
         type: Vector2
-        default: ''
+        default:
         summary: ''
       - name: pinch
         type: float
-        default: ''
+        default:
         summary: ''
       - name: gameProcessedEvent
         type: boolean
-        default: ''
+        default:
         summary: |
           Indicates whether the engine internally observed this input and acted
           on it.
@@ -1932,7 +1932,7 @@ events:
     parameters:
       - name: textboxReleased
         type: TextBox
-        default: ''
+        default:
         summary: |
           The `Class.TextBox` that lost focus.
     tags: []
@@ -1959,7 +1959,7 @@ events:
     parameters:
       - name: textboxFocused
         type: TextBox
-        default: ''
+        default:
         summary: |
           The `Class.TextBox` that gained focus.
     tags: []
@@ -1982,19 +1982,19 @@ events:
     parameters:
       - name: dragDirection
         type: SwipeDirection
-        default: ''
+        default:
         summary: |
           The predominant drag direction for the event
           (`Enum.SwipeDirection|Up`, `Enum.SwipeDirection|Down`,
           `Enum.SwipeDirection|Left`, or `Enum.SwipeDirection|Right`).
       - name: numberOfTouches
         type: int
-        default: ''
+        default:
         summary: |
           Currently only supports one touch for a value of `1`.
       - name: gameProcessedEvent
         type: boolean
-        default: ''
+        default:
         summary: |
           Indicates whether the engine internally observed this input and acted
           on it. Generally this refers to UI processing, so if a button was
@@ -2022,7 +2022,7 @@ events:
     parameters:
       - name: touch
         type: InputObject
-        default: ''
+        default:
         summary: |
           An `Class.InputObject` instance containing information about the
           user's input. This is the same object throughout the lifetime of the
@@ -2030,7 +2030,7 @@ events:
           touch objects is valid to determine if it's the same finger.
       - name: gameProcessedEvent
         type: boolean
-        default: ''
+        default:
         summary: |
           Indicates whether the engine internally observed this input and acted
           on it. Generally this refers to UI processing, so if a button was
@@ -2057,18 +2057,18 @@ events:
     parameters:
       - name: touchPositions
         type: Array
-        default: ''
+        default:
         summary: |
           An array of `Datatype.Vector2` objects indicating the position of the
           fingers involved in the gesture.
       - name: state
         type: UserInputState
-        default: ''
+        default:
         summary: |
           The `Enum.UserInputState` of the gesture.
       - name: gameProcessedEvent
         type: boolean
-        default: ''
+        default:
         summary: |
           Indicates whether the engine internally observed this input and acted
           on it. Generally this refers to UI processing, so if a button was
@@ -2100,7 +2100,7 @@ events:
     parameters:
       - name: touch
         type: InputObject
-        default: ''
+        default:
         summary: |
           An `Class.InputObject` instance containing information about the
           user's input. Note that its `Class.InputObject.Position|Position` is a
@@ -2108,7 +2108,7 @@ events:
           (**Z** is always `0`).
       - name: gameProcessedEvent
         type: boolean
-        default: ''
+        default:
         summary: |
           Indicates whether the engine internally observed this input and acted
           on it. Generally this refers to UI processing, so if a button was
@@ -2134,28 +2134,28 @@ events:
     parameters:
       - name: touchPositions
         type: Array
-        default: ''
+        default:
         summary: |
           An array of `Datatype.Vector2|Vector2s` indicating the positions of
           the touches involved in the gesture.
       - name: totalTranslation
         type: Vector2
-        default: ''
+        default:
         summary: |
           The size of the pan gesture from start to end, in pixels.
       - name: velocity
         type: Vector2
-        default: ''
+        default:
         summary: |
           The speed of the pan gesture in pixels per second.
       - name: state
         type: UserInputState
-        default: ''
+        default:
         summary: |
           The `Enum.UserInputState` of the gesture.
       - name: gameProcessedEvent
         type: boolean
-        default: ''
+        default:
         summary: |
           Indicates whether the engine internally observed this input and acted
           on it. Generally this refers to UI processing, so if a button was
@@ -2181,29 +2181,29 @@ events:
     parameters:
       - name: touchPositions
         type: Array
-        default: ''
+        default:
         summary: |
           An array of `Datatype.Vector2|Vector2s` indicating the screen
           position, in pixels, of the fingers involved in the pinch gesture.
       - name: scale
         type: float
-        default: ''
+        default:
         summary: |
           The magnitude of the pinch from start to finish (in pixels) divided by
           the starting pinch positions.
       - name: velocity
         type: float
-        default: ''
+        default:
         summary: |
           The speed of the pinch gesture in pixels per second.
       - name: state
         type: UserInputState
-        default: ''
+        default:
         summary: |
           The `Enum.UserInputState` of the gesture.
       - name: gameProcessedEvent
         type: boolean
-        default: ''
+        default:
         summary: |
           Indicates whether the engine internally observed this input and acted
           on it. Generally this refers to UI processing, so if a button was
@@ -2229,30 +2229,30 @@ events:
     parameters:
       - name: touchPositions
         type: Array
-        default: ''
+        default:
         summary: |
           An array of `Datatype.Vector2|Vector2s` indicating the positions of
           the fingers involved in the gesture.
       - name: rotation
         type: float
-        default: ''
+        default:
         summary: |
           The number of degree the gesture has rotated since the start of the
           gesture.
       - name: velocity
         type: float
-        default: ''
+        default:
         summary: |
           The change in rotation (in degrees) divided by the duration of the
           change (in seconds).
       - name: state
         type: UserInputState
-        default: ''
+        default:
         summary: |
           The `Enum.UserInputState` of the gesture.
       - name: gameProcessedEvent
         type: boolean
-        default: ''
+        default:
         summary: |
           Indicates whether the engine internally observed this input and acted
           on it. Generally this refers to UI processing, so if a button was
@@ -2280,7 +2280,7 @@ events:
     parameters:
       - name: touch
         type: InputObject
-        default: ''
+        default:
         summary: |
           An `Class.InputObject` instance, which contains information about the
           user's input. This is the same object throughout the lifetime of the
@@ -2288,7 +2288,7 @@ events:
           touch objects is valid to determine if it's the same finger.
       - name: gameProcessedEvent
         type: boolean
-        default: ''
+        default:
         summary: |
           Indicates whether the engine internally observed this input and acted
           on it. Generally this refers to UI processing, so if a button was
@@ -2320,17 +2320,17 @@ events:
     parameters:
       - name: swipeDirection
         type: SwipeDirection
-        default: ''
+        default:
         summary: |
           An `Enum.SwipeDirection` indicating the direction the user swiped.
       - name: numberOfTouches
         type: int
-        default: ''
+        default:
         summary: |
           Number of touches involved in the swipe gesture.
       - name: gameProcessedEvent
         type: boolean
-        default: ''
+        default:
         summary: |
           Indicates whether the engine internally observed this input and acted
           on it. Generally this refers to UI processing, so if a button was
@@ -2359,13 +2359,13 @@ events:
     parameters:
       - name: touchPositions
         type: Array
-        default: ''
+        default:
         summary: |
           An array of `Datatype.Vector2` objects indicating the position of the
           fingers involved in the tap gesture.
       - name: gameProcessedEvent
         type: boolean
-        default: ''
+        default:
         summary: |
           Indicates whether the engine internally observed this input and acted
           on it. Generally this refers to UI processing, so if a button was
@@ -2393,12 +2393,12 @@ events:
     parameters:
       - name: position
         type: Vector2
-        default: ''
+        default:
         summary: |
           A `Datatype.Vector2` indicating the position of the tap.
       - name: processedByUI
         type: boolean
-        default: ''
+        default:
         summary: |
           Whether the user tapped a UI element.
     tags: []
@@ -2443,12 +2443,12 @@ events:
     parameters:
       - name: type
         type: UserCFrame
-        default: ''
+        default:
         summary: |
           A `Enum.UserCFrame` value indicating which body part moved.
       - name: value
         type: CFrame
-        default: ''
+        default:
         summary: |
           A `Datatype.CFrame` value indicating the updated CFrame of the body
           part that moved.

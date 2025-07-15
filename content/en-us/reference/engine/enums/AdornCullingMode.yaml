@@ -4,7 +4,7 @@ summary: |
   Culling method used for Adorns.
 description: |
   Used by `Class.HandleAdornment` to determine how it is culled.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

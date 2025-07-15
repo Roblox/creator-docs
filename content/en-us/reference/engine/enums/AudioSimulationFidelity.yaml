@@ -7,7 +7,7 @@ description: |
   This enum, used with `Class.AudioEmitter.SimulationFidelity` and
   `Class.AudioListener.SimulationFidelity`, determines how detailed audio
   simulation should be.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

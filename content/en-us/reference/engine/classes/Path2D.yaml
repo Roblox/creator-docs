@@ -183,7 +183,7 @@ methods:
     parameters:
       - name: index
         type: int
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Path2DControlPoint
@@ -267,7 +267,7 @@ methods:
     parameters:
       - name: t
         type: float
-        default: ''
+        default:
         summary: |
           The value to query the `Class.Path2D` at.
     returns:
@@ -296,7 +296,7 @@ methods:
     parameters:
       - name: t
         type: float
-        default: ''
+        default:
         summary: |
           The value to query the Path2D at.
     returns:
@@ -321,7 +321,7 @@ methods:
     parameters:
       - name: t
         type: float
-        default: ''
+        default:
         summary: |
           The value to query the `Class.Path2D` at.
     returns:
@@ -345,7 +345,7 @@ methods:
     parameters:
       - name: t
         type: float
-        default: ''
+        default:
         summary: |
           The value to query the `Class.Path2D` at.
     returns:
@@ -370,12 +370,12 @@ methods:
     parameters:
       - name: index
         type: int
-        default: ''
+        default:
         summary: |
           The index to insert at.
       - name: point
         type: Path2DControlPoint
-        default: ''
+        default:
         summary: |
           The control point to insert.
     returns:
@@ -398,7 +398,7 @@ methods:
     parameters:
       - name: index
         type: int
-        default: ''
+        default:
         summary: |
           The index to remove at.
     returns:
@@ -423,7 +423,7 @@ methods:
     parameters:
       - name: controlPoints
         type: Array
-        default: ''
+        default:
         summary: |
           The new list of control points to set.
     returns:
@@ -446,12 +446,12 @@ methods:
     parameters:
       - name: index
         type: int
-        default: ''
+        default:
         summary: |
           The control point index to update.
       - name: point
         type: Path2DControlPoint
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()

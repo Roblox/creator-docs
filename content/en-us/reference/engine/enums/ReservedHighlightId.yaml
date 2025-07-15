@@ -7,22 +7,22 @@ tags: []
 deprecation_message: ''
 items:
   - name: Standard
-    value: 0
     summary: ''
+    value: 0
     tags: []
     deprecation_message: ''
   - name: Active
-    value: 131072
     summary: ''
+    value: 131072
     tags: []
     deprecation_message: ''
   - name: Hover
-    value: 262144
     summary: ''
+    value: 262144
     tags: []
     deprecation_message: ''
   - name: Selection
-    value: 524288
     summary: ''
+    value: 524288
     tags: []
     deprecation_message: ''

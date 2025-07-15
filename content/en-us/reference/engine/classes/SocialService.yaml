@@ -41,7 +41,7 @@ methods:
     parameters:
       - name: partyId
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Instances
@@ -92,7 +92,7 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default: ''
+        default:
         summary: |
           The `Class.Player` to prompt with the invite popup.
       - name: experienceInviteOptions
@@ -132,12 +132,12 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default: ''
+        default:
         summary: |
           The player to prompt with the phone book.
       - name: tag
         type: string
-        default: ''
+        default:
         summary: |
           String to help differentiate between various phone book "entry points"
           or similar. For example, you can pass a string defining what region of
@@ -190,7 +190,7 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default: ''
+        default:
         summary: |
           The `Class.Player` instance of the player potentially sending a call
           invite.
@@ -225,7 +225,7 @@ methods:
     parameters:
       - name: player
         type: Instance
-        default: ''
+        default:
         summary: |
           The `Class.Player` instance of the player potentially sending an
           invite.
@@ -262,7 +262,7 @@ methods:
     parameters:
       - name: eventId
         type: string
-        default: ''
+        default:
         summary: |
           The event ID of the event to prompt the player to change their RSVP
           status for. This must be a valid event ID that exists in the current
@@ -344,7 +344,7 @@ methods:
     parameters:
       - name: partyId
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Array
@@ -365,7 +365,7 @@ methods:
     parameters:
       - name: player
         type: Player
-        default: ''
+        default:
         summary: ''
       - name: options
         type: Dictionary
@@ -401,7 +401,7 @@ methods:
     parameters:
       - name: eventId
         type: string
-        default: ''
+        default:
         summary: |
           The event ID of the event to prompt the player to change their RSVP
           status for. This must be a valid event ID that exists in the current
@@ -431,13 +431,13 @@ events:
     parameters:
       - name: player
         type: Instance
-        default: ''
+        default:
         summary: |
           The `Class.Player` instance of the player who had a call invite state
           change.
       - name: inviteState
         type: InviteState
-        default: ''
+        default:
         summary: |
           The new call invite state.
     tags: []
@@ -454,12 +454,12 @@ events:
     parameters:
       - name: player
         type: Instance
-        default: ''
+        default:
         summary: |
           The `Class.Player` instance of the player who closed the prompt.
       - name: recipientIds
         type: Array
-        default: ''
+        default:
         summary: |
           No longer populated; an empty array.
     tags: []
@@ -476,7 +476,7 @@ events:
     parameters:
       - name: player
         type: Instance
-        default: ''
+        default:
         summary: |
           The `Class.Player` instance of the player who closed the phone book.
     tags: []
@@ -491,7 +491,7 @@ events:
     parameters:
       - name: player
         type: Player
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''
@@ -513,12 +513,12 @@ callbacks:
     parameters:
       - name: tag
         type: string
-        default: ''
+        default:
         summary: |
           String to help differentiate between various phone book entry points.
       - name: callParticipantIds
         type: Array
-        default: ''
+        default:
         summary: |
           Array containing all of the players involved in the call. The caller
           will always be the first player in the array.

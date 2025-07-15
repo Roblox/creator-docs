@@ -44,7 +44,7 @@ methods:
     parameters:
       - name: experimentalFeatures
         type: Dictionary
-        default: ''
+        default:
         summary: |
           Luau table in `key = value` format where the key is the experimental
           feature name and the value is a boolean which specifies whether to

@@ -7,17 +7,17 @@ tags: []
 deprecation_message: ''
 items:
   - name: User
-    value: 0
     summary: ''
+    value: 0
     tags: []
     deprecation_message: ''
   - name: Group
-    value: 1
     summary: ''
+    value: 1
     tags: []
     deprecation_message: ''
   - name: All
-    value: 2
     summary: ''
+    value: 2
     tags: []
     deprecation_message: ''

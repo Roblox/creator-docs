@@ -44,12 +44,12 @@ methods:
     parameters:
       - name: rule
         type: StyleRule
-        default: ''
+        default:
         summary: |
           The `Class.StyleRule` to insert.
       - name: priority
         type: int?
-        default: ''
+        default:
         summary: |
           The number to set the rule's `Class.StyleRule.Priority|Priority` to.
     returns:
@@ -90,7 +90,7 @@ methods:
     parameters:
       - name: rules
         type: Instances
-        default: ''
+        default:
         summary: |
           Array of `Class.StyleRule|StyleRules` to set.
     returns:

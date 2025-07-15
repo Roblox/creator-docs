@@ -4,7 +4,7 @@ summary: ''
 description: |
   This enum is used as an argument in `Class.AnalyticsService.LogEvent` to
   describe the error severity level.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

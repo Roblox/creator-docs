@@ -367,7 +367,7 @@ methods:
     parameters:
       - name: message
         type: string
-        default: ''
+        default:
         summary: |
           The message chatted.
     returns:
@@ -442,7 +442,7 @@ methods:
     parameters:
       - name: character
         type: Model
-        default: ''
+        default:
         summary: |
           A character instance that you want to get the player from.
     returns:
@@ -551,7 +551,7 @@ methods:
     parameters:
       - name: message
         type: string
-        default: ''
+        default:
         summary: |
           The message being chatted.
     returns:
@@ -589,7 +589,7 @@ methods:
     parameters:
       - name: character
         type: Model
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Player
@@ -716,7 +716,7 @@ methods:
     parameters:
       - name: config
         type: Dictionary
-        default: ''
+        default:
         summary: |
           - `UserIds` (required; array) — Array of `Class.Player.UserId|UserIds`
             of players to be banned. Max size is `50`.
@@ -761,12 +761,12 @@ methods:
     parameters:
       - name: description
         type: HumanoidDescription
-        default: ''
+        default:
         summary: |
           Specifies the appearance of the returned character.
       - name: rigType
         type: HumanoidRigType
-        default: ''
+        default:
         summary: |
           Specifies whether the returned character will be R6 or R15.
       - name: assetTypeVerification
@@ -1187,7 +1187,7 @@ methods:
     parameters:
       - name: userName
         type: string
-        default: ''
+        default:
         summary: |
           The username of the player being specified.
     returns:
@@ -1224,12 +1224,12 @@ methods:
           The `Class.Player.UserId` of the player being specified.
       - name: thumbnailType
         type: ThumbnailType
-        default: ''
+        default:
         summary: |
           A `Enum.ThumbnailType` describing the type of thumbnail.
       - name: thumbnailSize
         type: ThumbnailSize
-        default: ''
+        default:
         summary: |
           A `Enum.ThumbnailSize` specifying the size of the thumbnail.
     returns:
@@ -1296,7 +1296,7 @@ methods:
     parameters:
       - name: config
         type: Dictionary
-        default: ''
+        default:
         summary: |
           <table><thead>
           <tr>
@@ -1369,7 +1369,7 @@ events:
     parameters:
       - name: player
         type: Player
-        default: ''
+        default:
         summary: |
           An instance of the player that joined the game.
     tags: []
@@ -1407,7 +1407,7 @@ events:
     parameters:
       - name: player
         type: Player
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''
@@ -1451,7 +1451,7 @@ events:
     parameters:
       - name: player
         type: Player
-        default: ''
+        default:
         summary: |
           An instance of the player that is leaving the game.
     tags: []
@@ -1479,12 +1479,12 @@ events:
     parameters:
       - name: user
         type: Player
-        default: ''
+        default:
         summary: |
           User whose subscription status has changed.
       - name: subscriptionId
         type: string
-        default: ''
+        default:
         summary: |
           The ID of the subscription with a status change.
     tags: []

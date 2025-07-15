@@ -6,7 +6,7 @@ summary: |
 description: |
   Used by `Class.UIAspectRatioConstraint.DominantAxis` to specify which axis is
   used when setting the new size of the GUI element.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

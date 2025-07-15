@@ -195,7 +195,7 @@ methods:
     parameters:
       - name: modifierKey
         type: ModifierKey
-        default: ''
+        default:
         summary: ''
     returns:
       - type: boolean

@@ -6,7 +6,7 @@ description: |
   Determines how content is streamed out from Player clients. This is a
   temporary rollout API. In the future, streaming will always run on
   Opportunistic mode.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

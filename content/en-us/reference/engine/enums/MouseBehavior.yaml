@@ -5,7 +5,7 @@ summary: |
 description: |
   Used with the `Class.UserInputService.MouseBehavior` property of
   `Class.UserInputService` to set how the user's mouse behaves.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

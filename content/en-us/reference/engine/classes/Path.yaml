@@ -153,12 +153,12 @@ methods:
     parameters:
       - name: start
         type: Vector3
-        default: ''
+        default:
         summary: |
           The world position where the computed path begins.
       - name: finish
         type: Vector3
-        default: ''
+        default:
         summary: |
           The world position where the computed path finishes.
     returns:

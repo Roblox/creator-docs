@@ -59,7 +59,7 @@ methods:
     parameters:
       - name: locale
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: TextFilterResult

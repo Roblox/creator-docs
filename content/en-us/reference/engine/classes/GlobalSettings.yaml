@@ -34,7 +34,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: boolean
@@ -54,7 +54,7 @@ methods:
     parameters:
       - name: name
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: string

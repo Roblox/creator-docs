@@ -113,7 +113,7 @@ methods:
     parameters:
       - name: targetCFrame
         type: CFrame
-        default: ''
+        default:
         summary: |
           The `Datatype.CFrame` that the `Class.PVInstance` pivot should equal
           after moving it.

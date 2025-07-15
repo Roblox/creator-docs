@@ -79,7 +79,7 @@ methods:
     parameters:
       - name: animation
         type: Animation
-        default: ''
+        default:
         summary: |
           The `Class.Animation` to be used.
     returns:
@@ -115,7 +115,7 @@ events:
     parameters:
       - name: animationTrack
         type: AnimationTrack
-        default: ''
+        default:
         summary: |
           The `Class.AnimationTrack` that was played.
     tags:

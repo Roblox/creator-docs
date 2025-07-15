@@ -4,7 +4,7 @@ summary: |
   The DialogPurpose enum is used to set the icon of a `Class.Dialog`.
 description: |
   The DialogPurpose enum is used to set the icon of a `Class.Dialog`.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

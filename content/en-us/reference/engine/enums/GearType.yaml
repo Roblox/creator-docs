@@ -5,7 +5,7 @@ description: |
   The GearType Enum is used as an argument in
   `Class.DataModel:IsGearTypeAllowed()`. Gear may have more than one
   type/attribute.
-code_samples:
+code_samples: []
 tags:
   - Deprecated
 deprecation_message: |
@@ -13,65 +13,65 @@ deprecation_message: |
   it.
 items:
   - name: MeleeWeapons
-    value: 0
     summary: |
       Gear with the 'Melee' attribute.
+    value: 0
     tags:
       - Deprecated
     deprecation_message: ''
   - name: RangedWeapons
-    value: 1
     summary: |
       Gear with the 'Ranged' attribute.
+    value: 1
     tags:
       - Deprecated
     deprecation_message: ''
   - name: Explosives
-    value: 2
     summary: |
       Gear with the 'Explosive' attribute.
+    value: 2
     tags:
       - Deprecated
     deprecation_message: ''
   - name: PowerUps
-    value: 3
     summary: |
       Gear with the 'Power Up' attribute.
+    value: 3
     tags:
       - Deprecated
     deprecation_message: ''
   - name: NavigationEnhancers
-    value: 4
     summary: |
       Gear with the 'Navigation' attribute.
+    value: 4
     tags:
       - Deprecated
     deprecation_message: ''
   - name: MusicalInstruments
-    value: 5
     summary: |
       Gear with the 'Musical' attribute.
+    value: 5
     tags:
       - Deprecated
     deprecation_message: ''
   - name: SocialItems
-    value: 6
     summary: |
       Gear with the 'Social' attribute.
+    value: 6
     tags:
       - Deprecated
     deprecation_message: ''
   - name: BuildingTools
-    value: 7
     summary: |
       Gear with the 'Building' attribute.
+    value: 7
     tags:
       - Deprecated
     deprecation_message: ''
   - name: Transport
-    value: 8
     summary: |
       Gear with the 'Transport' attribute.
+    value: 8
     tags:
       - Deprecated
     deprecation_message: ''

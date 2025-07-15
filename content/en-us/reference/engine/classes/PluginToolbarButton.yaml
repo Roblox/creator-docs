@@ -139,7 +139,7 @@ methods:
     parameters:
       - name: active
         type: boolean
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()

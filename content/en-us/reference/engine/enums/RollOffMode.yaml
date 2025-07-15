@@ -8,7 +8,7 @@ description: |
   Enum which determines how `Class.Sound|Sounds` parented to a `Class.BasePart`
   or `Class.Attachment` attenuate (fade out) as the distance between the
   listener and the parent increases.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

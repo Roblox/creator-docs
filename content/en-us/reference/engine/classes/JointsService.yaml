@@ -69,7 +69,7 @@ methods:
     parameters:
       - name: joinInstance
         type: Instance
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -91,7 +91,7 @@ methods:
     parameters:
       - name: joinTarget
         type: Instance
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()

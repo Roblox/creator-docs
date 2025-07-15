@@ -31,14 +31,14 @@ methods:
     parameters:
       - name: source
         type: Instance
-        default: ''
+        default:
         summary: |
           An original object that the solid modeling operation was performed on,
           for example `part` in
           `Class.GeometryService:UnionAsync()|UnionAsync()`.
       - name: destination
         type: Array
-        default: ''
+        default:
         summary: ''
       - name: options
         type: Dictionary
@@ -259,12 +259,12 @@ methods:
     parameters:
       - name: part
         type: Instance
-        default: ''
+        default:
         summary: |
           Main `Class.Part` or `Class.PartOperation` to operate on.
       - name: parts
         type: Array
-        default: ''
+        default:
         summary: |
           Array of parts to intersect with the main part.
       - name: options
@@ -392,12 +392,12 @@ methods:
     parameters:
       - name: part
         type: Instance
-        default: ''
+        default:
         summary: |
           Main `Class.Part` or `Class.PartOperation` to operate on.
       - name: parts
         type: Array
-        default: ''
+        default:
         summary: |
           Array of parts to subtract from the main part.
       - name: options
@@ -525,12 +525,12 @@ methods:
     parameters:
       - name: part
         type: Instance
-        default: ''
+        default:
         summary: |
           Main `Class.Part` or `Class.PartOperation` to operate on.
       - name: parts
         type: Array
-        default: ''
+        default:
         summary: |
           Array of parts to union with the main part.
       - name: options

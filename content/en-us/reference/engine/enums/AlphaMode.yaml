@@ -8,7 +8,7 @@ description: |
   Used by `Class.SurfaceAppearance.AlphaMode` to determine how the alpha channel
   of the `Class.SurfaceAppearance.ColorMap` of a `Class.SurfaceAppearance` is
   used.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

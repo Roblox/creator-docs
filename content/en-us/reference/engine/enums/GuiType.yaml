@@ -7,23 +7,23 @@ tags: []
 deprecation_message: ''
 items:
   - name: Core
-    value: 0
     summary: ''
+    value: 0
     tags: []
     deprecation_message: ''
   - name: Custom
-    value: 1
     summary: ''
+    value: 1
     tags: []
     deprecation_message: ''
   - name: PlayerNameplates
-    value: 2
     summary: ''
+    value: 2
     tags: []
     deprecation_message: ''
   - name: CustomBillboards
-    value: 3
     summary: ''
+    value: 3
     tags: []
     deprecation_message: ''
   - name: CoreBillboards

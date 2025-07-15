@@ -7,7 +7,7 @@ description: |
   `Class.DockWidgetPluginGui`. This data type is used when constructing a
   `Class.PluginGui` via the plugin's `Class.Plugin:CreateDockWidgetPluginGui()`
   method.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 constructors:
@@ -59,6 +59,7 @@ properties:
       ''pluginGuiId'' has previously been created in an earlier session of
       Roblox Studio, then it will reload that saved enabled state (unless
       `InitialEnabledShouldOverrideRestore` is true).
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -73,6 +74,7 @@ properties:
       `Datatype.DockWidgetPluginGuiInfo`. The previously saved enabled state is
       loaded based on the `pluginGuiId` argument of
       `Class.Plugin:CreateDockWidgetPluginGui()`.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -84,6 +86,7 @@ properties:
       The initial pixel width of a `Class.PluginGui` created using this
       `Datatype.DockWidgetPluginGuiInfo`, when the `Enum.InitialDockState` is
       set to `Float`.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -95,6 +98,7 @@ properties:
       The initial pixel height of a `Class.PluginGui` created using this
       `Datatype.DockWidgetPluginGuiInfo`, when the `Enum.InitialDockState` is
       set to `Float`.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -111,6 +115,7 @@ properties:
       varies by platform) when the widget is floating. For example, on a Mac,
       the width can never be less than ~80 pixels to accommodate the
       close/minimize/maximize buttons.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -121,9 +126,10 @@ properties:
     description: |
       The minimum height of a `Class.PluginGui` created using this
       `Datatype.DockWidgetPluginGuiInfo`, in pixels.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
-methods:
-functions:
-math_operations:
+methods: []
+functions: []
+math_operations: []

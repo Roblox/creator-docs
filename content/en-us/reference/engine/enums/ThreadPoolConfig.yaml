@@ -6,7 +6,7 @@ description: |
   Controls the thread pooling scheme of the underlying 'TaskScheduler'.
 
   See TaskScheduler for details.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

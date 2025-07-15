@@ -55,11 +55,11 @@ methods:
     parameters:
       - name: from
         type: Vector3
-        default: ''
+        default:
         summary: ''
       - name: to
         type: Vector3
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -79,7 +79,7 @@ methods:
     parameters:
       - name: points
         type: Array
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -99,11 +99,11 @@ methods:
     parameters:
       - name: points
         type: Array
-        default: ''
+        default:
         summary: ''
       - name: loop
         type: boolean
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -123,11 +123,11 @@ methods:
     parameters:
       - name: point
         type: Vector3
-        default: ''
+        default:
         summary: ''
       - name: text
         type: string
-        default: ''
+        default:
         summary: ''
       - name: size
         type: int

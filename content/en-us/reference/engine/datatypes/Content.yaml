@@ -22,14 +22,13 @@ description: |
   now, do not use `Class.EditableImage` or `Class.EditableMesh` as
   `Datatype.Content` on the server on an `Class.Instance` that can replicate to
   clients.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 constructors:
   - name: Content.fromUri
-    summary: |
-      Returns a new `Content` with an [asset URI](../../../projects/assets/index.md#asset-uris) `string` value referencing content external to the place.
-    description: |
+    summary: Returns a new `Content` with an [asset URI](../../../projects/assets/index.md#asset-uris) `string` value referencing content external to the place.
+    description: |-
       Returns a new `Content` with an [asset URI](../../../projects/assets/index.md#asset-uris) `string` value referencing content external to the place.
 
       `Datatype.Content.SourceType` will be `Enum.ContentSourceType|Uri`, and `Datatype.Content.Uri` will contain a non‑`nil` `string` value.
@@ -39,15 +38,13 @@ constructors:
       - name: uri
         type: string
         default:
-        summary: |
-          The [asset URI](../../../projects/assets/index.md#asset-uris) string.
+        summary: The [asset URI](../../../projects/assets/index.md#asset-uris) string.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: Content.fromObject
-    summary: |
-      Returns a new `Content` with a strong reference to an `Class.Object`.
-    description: |
+    summary: Returns a new `Content` with a strong reference to an `Class.Object`.
+    description: |-
       Returns a new `Content` with a strong reference to an `Class.Object`.
 
       `Datatype.Content.SourceType` will be `Enum.ContentSourceType|Object`, and `Datatype.Content.Object` will contain a non‑`nil` `Class.Object` reference.
@@ -59,18 +56,15 @@ constructors:
       - name: object
         type: Object
         default:
-        summary: |
-          The `Class.Object` to reference.
+        summary: The `Class.Object` to reference.
     code_samples: []
     tags: []
     deprecation_message: ''
 constants:
   - name: Content.none
     type: Content
-    summary: |
-      An empty `Content` value with `Datatype.Content.SourceType` of `Enum.ContentSourceType|None`.
-    description: |
-      An empty `Content` value with `Datatype.Content.SourceType` of `Enum.ContentSourceType|None`.
+    summary: An empty `Content` value with `Datatype.Content.SourceType` of `Enum.ContentSourceType|None`.
+    description: An empty `Content` value with `Datatype.Content.SourceType` of `Enum.ContentSourceType|None`.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -83,6 +77,7 @@ properties:
     description: |
       An empty `Content` value with `Datatype.Content.SourceType` of
       `Enum.ContentSourceType|None`.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -93,6 +88,7 @@ properties:
     description: |
       The source type of the contained value. Indicates which property contains
       a non‑`nil` value.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -104,6 +100,7 @@ properties:
     description: |
       A URI `string` if `Datatype.Content.SourceType` is
       `Enum.ContentSourceType|Uri`, otherwise `nil`.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -115,9 +112,10 @@ properties:
     description: |
       A reference to a non-`nil` `Class.Object` if `Datatype.Content.SourceType`
       is `Enum.ContentSourceType|Object`, otherwise `nil`.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
-methods:
-functions:
-math_operations:
+methods: []
+functions: []
+math_operations: []

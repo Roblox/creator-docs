@@ -6,7 +6,7 @@ summary: |
 description: |
   Used to set the highest permission level that APIs have to have in order to be
   shown in the Object Browser.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

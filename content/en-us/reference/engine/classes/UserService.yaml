@@ -92,7 +92,7 @@ methods:
     parameters:
       - name: userIds
         type: Array
-        default: ''
+        default:
         summary: |
           An array of `Class.Player.UserId|UserIds` requested.
     returns:

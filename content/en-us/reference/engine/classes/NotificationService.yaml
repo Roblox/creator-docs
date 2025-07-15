@@ -60,15 +60,15 @@ events:
     parameters:
       - name: connectionName
         type: string
-        default: ''
+        default:
         summary: ''
       - name: connectionState
         type: ConnectionState
-        default: ''
+        default:
         summary: ''
       - name: namespaceSequenceNumbers
         type: string
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''
@@ -82,7 +82,7 @@ events:
     parameters:
       - name: eventData
         type: Map
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''

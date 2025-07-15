@@ -27,8 +27,9 @@ description: |
 
   The `read` and `write` methods that work with integers and floats use
   [little-endian](https://en.wikipedia.org/wiki/Endianness) encoding.
-code_samples:
-properties:
+tags: []
+code_samples: []
+properties: []
 functions:
   - name: buffer.create
     summary: |
@@ -46,8 +47,9 @@ functions:
     returns:
       - type: buffer
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.fromstring
     summary: |
       Creates a buffer from a string.
@@ -62,8 +64,9 @@ functions:
     returns:
       - type: buffer
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.tostring
     summary: |
       Converts a buffer to a string.
@@ -77,8 +80,9 @@ functions:
     returns:
       - type: string
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.len
     summary: |
       Returns the size of the buffer in bytes.
@@ -92,8 +96,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.readbits
     summary: |
       Reads a range of bits into an unsigned integer from the buffer based on a
@@ -134,8 +139,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.readi8
     summary: |
       Reads an 8-bit signed integer from the buffer.
@@ -155,8 +161,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.readu8
     summary: |
       Reads an 8-bit unsigned integer from the buffer.
@@ -176,8 +183,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.readi16
     summary: |
       Reads a 16-bit signed integer from the buffer.
@@ -197,8 +205,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.readu16
     summary: |
       Reads a 16-bit unsigned integer from the buffer.
@@ -218,8 +227,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.readi32
     summary: |
       Reads a 32-bit signed integer from the buffer.
@@ -239,8 +249,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.readu32
     summary: |
       Reads a 32-bit unsigned integer from the buffer.
@@ -260,8 +271,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.readf32
     summary: |
       Reads a 32-bit floating-point value from the buffer.
@@ -284,8 +296,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.readf64
     summary: |
       Reads a 64-bit floating-point value from the buffer.
@@ -308,8 +321,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.writebits
     summary: |
       Writes data to the buffer based on a specific `bitCount` integer from `0`
@@ -349,8 +363,9 @@ functions:
     returns:
       - type: ()
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.writei8
     summary: |
       Writes an 8-bit signed integer to the buffer.
@@ -375,8 +390,9 @@ functions:
     returns:
       - type: ()
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.writeu8
     summary: |
       Writes an 8-bit unsigned integer to the buffer.
@@ -401,8 +417,9 @@ functions:
     returns:
       - type: ()
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.writei16
     summary: |
       Writes a 16-bit signed integer to the buffer.
@@ -427,8 +444,9 @@ functions:
     returns:
       - type: ()
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.writeu16
     summary: |
       Writes a 16-bit unsigned integer to the buffer.
@@ -453,8 +471,9 @@ functions:
     returns:
       - type: ()
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.writei32
     summary: |
       Writes a 32-bit signed integer to the buffer.
@@ -479,8 +498,9 @@ functions:
     returns:
       - type: ()
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.writeu32
     summary: |
       Writes a 32-bit unsigned integer to the buffer.
@@ -505,8 +525,9 @@ functions:
     returns:
       - type: ()
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.writef32
     summary: |
       Writes a 32-bit floating-point value to the buffer.
@@ -531,8 +552,9 @@ functions:
     returns:
       - type: ()
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.writef64
     summary: |
       Writes a 64-bit floating-point value to the buffer.
@@ -557,8 +579,9 @@ functions:
     returns:
       - type: ()
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.readstring
     summary: |
       Reads a string from the buffer.
@@ -583,8 +606,9 @@ functions:
     returns:
       - type: string
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.writestring
     summary: |
       Writes a string to the buffer.
@@ -616,8 +640,9 @@ functions:
     returns:
       - type: ()
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.copy
     summary: |
       Copies bytes between buffers.
@@ -659,8 +684,9 @@ functions:
     returns:
       - type: ()
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.fill
     summary: |
       Sets a region of the buffer memory to some 8-bit unsigned integer value.
@@ -692,5 +718,6 @@ functions:
     returns:
       - type: ()
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''

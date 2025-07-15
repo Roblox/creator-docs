@@ -4,7 +4,7 @@ summary: ''
 description: |
   Describes the event when a player sends or responds to a friend request. This
   is used by the in-game friend request system.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

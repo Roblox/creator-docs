@@ -4,7 +4,7 @@ summary: |
   Controls the truncation of text when using the `TextTruncate` property.
 description: |
   Controls the truncation of text when using the `TextTruncate` property.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

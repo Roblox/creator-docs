@@ -5,7 +5,7 @@ summary: |
 description: |
   The `Enum.PackagePermission` indicates the current user's or group roleset's
   permission to the package.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

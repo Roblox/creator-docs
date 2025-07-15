@@ -226,12 +226,12 @@ methods:
     parameters:
       - name: targetLocaleId
         type: string
-        default: ''
+        default:
         summary: |
           Specified language.
       - name: key
         type: string
-        default: ''
+        default:
         summary: |
           An optional unique key for fast hash lookups in code. If it is
           non-empty it must be unique in the table.
@@ -260,7 +260,7 @@ methods:
     parameters:
       - name: localeId
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Instance
@@ -282,15 +282,15 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
       - name: source
         type: string
-        default: ''
+        default:
         summary: ''
       - name: context
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -314,19 +314,19 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
       - name: source
         type: string
-        default: ''
+        default:
         summary: ''
       - name: context
         type: string
-        default: ''
+        default:
         summary: ''
       - name: localeId
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -351,7 +351,7 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -376,7 +376,7 @@ methods:
     parameters:
       - name: localeId
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -397,7 +397,7 @@ methods:
     parameters:
       - name: contents
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -424,7 +424,7 @@ methods:
     parameters:
       - name: entries
         type: Variant
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -442,15 +442,15 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
       - name: targetLocaleId
         type: string
-        default: ''
+        default:
         summary: ''
       - name: text
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -477,19 +477,19 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
       - name: source
         type: string
-        default: ''
+        default:
         summary: ''
       - name: context
         type: string
-        default: ''
+        default:
         summary: ''
       - name: newContext
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -513,19 +513,19 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
       - name: source
         type: string
-        default: ''
+        default:
         summary: ''
       - name: context
         type: string
-        default: ''
+        default:
         summary: ''
       - name: example
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -549,19 +549,19 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
       - name: source
         type: string
-        default: ''
+        default:
         summary: ''
       - name: context
         type: string
-        default: ''
+        default:
         summary: ''
       - name: newKey
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -585,19 +585,19 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
       - name: source
         type: string
-        default: ''
+        default:
         summary: ''
       - name: context
         type: string
-        default: ''
+        default:
         summary: ''
       - name: newSource
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -621,23 +621,23 @@ methods:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
       - name: source
         type: string
-        default: ''
+        default:
         summary: ''
       - name: context
         type: string
-        default: ''
+        default:
         summary: ''
       - name: localeId
         type: string
-        default: ''
+        default:
         summary: ''
       - name: text
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()

@@ -128,7 +128,7 @@ methods:
     parameters:
       - name: keyframe
         type: Instance
-        default: ''
+        default:
         summary: |
           The `Class.Keyframe` to be added.
     returns:
@@ -183,7 +183,7 @@ methods:
     parameters:
       - name: keyframe
         type: Instance
-        default: ''
+        default:
         summary: |
           The `Class.Keyframe` to be removed.
     returns:

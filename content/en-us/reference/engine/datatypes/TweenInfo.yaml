@@ -6,7 +6,7 @@ description: |
   The `Datatype.TweenInfo` data type stores parameters for
   `Class.TweenService:Create()` to specify the behavior of the tween. The
   properties of a `Datatype.TweenInfo` cannot be written to after its creation.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 constructors:
@@ -17,34 +17,29 @@ constructors:
       - name: time
         type: number
         default: 1
-        summary: |
-          Duration for the tween, in seconds.
+        summary: Duration for the tween, in seconds.
       - name: easingStyle
         type: EasingStyle
         default: Enum.EasingStyle.Quad
-        summary: |
-          Easing style for the tween.
+        summary: Easing style for the tween.
       - name: easingDirection
         type: EasingDirection
         default: Enum.EasingDirection.Out
-        summary: |
-          The direction in which the tween executes.
+        summary: The direction in which the tween executes.
       - name: repeatCount
         type: number
         default: 0
-        summary: |
-          Number of times the tween should repeat. `-1` repeats indefinitely.
+        summary: Number of times the tween should repeat. `-1` repeats indefinitely.
       - name: reverses
         type: bool
         default: false
-        summary: |
+        summary: |-
           Whether the tween should reverse to the starting values once it
           reaches its targets.
       - name: delayTime
         type: number
         default: 0
-        summary: |
-          Time of delay until the tween begins, in seconds.
+        summary: Time of delay until the tween begins, in seconds.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -56,6 +51,7 @@ properties:
       The direction in which the tween executes.
     description: |
       The direction in which the tween executes.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -65,6 +61,7 @@ properties:
       Duration of the tween, in seconds.
     description: |
       Duration of the tween, in seconds.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -74,6 +71,7 @@ properties:
       Time of delay until the tween begins, in seconds.
     description: |
       Time of delay until the tween begins, in seconds.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -83,6 +81,7 @@ properties:
       Number of times the tween repeats.
     description: |
       Number of times the tween repeats. `-1` indicates indefinite repetition.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -92,6 +91,7 @@ properties:
       The style in which the tween executes.
     description: |
       The style in which the tween executes.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -103,9 +103,10 @@ properties:
     description: |
       Whether or not the tween interpolates in reverse tween once the initial
       tween completes.
+    default:
     code_samples: []
     tags: []
     deprecation_message: ''
-methods:
-functions:
-math_operations:
+methods: []
+functions: []
+math_operations: []

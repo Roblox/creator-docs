@@ -19,15 +19,15 @@ methods:
     parameters:
       - name: actionType
         type: RecommendationActionType
-        default: ''
+        default:
         summary: ''
       - name: itemId
         type: string
-        default: ''
+        default:
         summary: ''
       - name: tracingId
         type: string
-        default: ''
+        default:
         summary: ''
       - name: actionEventDetails
         type: Dictionary
@@ -49,15 +49,15 @@ methods:
     parameters:
       - name: impressionType
         type: RecommendationImpressionType
-        default: ''
+        default:
         summary: ''
       - name: itemId
         type: string
-        default: ''
+        default:
         summary: ''
       - name: tracingId
         type: string
-        default: ''
+        default:
         summary: ''
       - name: impressionEventDetails
         type: Dictionary
@@ -79,7 +79,7 @@ methods:
     parameters:
       - name: generateRecommendationItemListRequest
         type: Dictionary
-        default: ''
+        default:
         summary: ''
     returns:
       - type: RecommendationPages
@@ -98,7 +98,7 @@ methods:
     parameters:
       - name: registerRecommendationItemsRequest
         type: Dictionary
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Dictionary
@@ -117,7 +117,7 @@ methods:
     parameters:
       - name: itemId
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -136,7 +136,7 @@ methods:
     parameters:
       - name: updateRecommendationItemRequest
         type: Dictionary
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()

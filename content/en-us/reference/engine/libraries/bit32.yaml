@@ -12,8 +12,9 @@ description: |
   numbers are rounded to the nearest whole number.
 
   <img src="../../../assets/engine-api/libraries/bit32/32-Bit-Restriction.png" width="500" alt="32-bit integer conversion (in hexadecimal)" />
-code_samples:
-properties:
+tags: []
+code_samples: []
+properties: []
 functions:
   - name: bit32.arshift
     summary: |
@@ -43,8 +44,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: bit32.band
     summary: |
       Returns the bitwise AND of all provided numbers.
@@ -94,8 +96,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: bit32.bnot
     summary: |
       Returns the bitwise negation of a given number.
@@ -117,8 +120,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: bit32.bor
     summary: |
       Returns the bitwise OR of all provided numbers.
@@ -168,8 +172,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: bit32.btest
     summary: |
       Returns a boolean describing whether the bitwise and of its operands is
@@ -185,8 +190,9 @@ functions:
     returns:
       - type: bool
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: bit32.bxor
     summary: |
       Returns the bitwise XOR of all provided numbers.
@@ -236,8 +242,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: bit32.byteswap
     summary: |
       Returns the given number with the order of the bytes swapped.
@@ -251,8 +258,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: bit32.countlz
     summary: |
       Returns the number of consecutive zero bits in the 32-bit representation
@@ -269,8 +277,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: bit32.countrz
     summary: |
       Returns the number of consecutive zero bits in the 32-bit representation
@@ -288,8 +297,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: bit32.extract
     summary: |
       Extract a range of bits from a number and return them as an unsigned
@@ -315,8 +325,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: bit32.replace
     summary: |
       Return a copy of a number with a range of bits replaced by a given value.
@@ -344,8 +355,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: bit32.lrotate
     summary: |
       Returns a number after its bits have been rotated to the left by a given
@@ -372,8 +384,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: bit32.lshift
     summary: |
       Returns a number whose bits have been logically shifted to the left by a
@@ -404,8 +417,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: bit32.rrotate
     summary: |
       Returns a number after its bits have been rotated to the right by a given
@@ -433,8 +447,9 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: bit32.rshift
     summary: |
       Returns a number whose bits have been logically shifted to the right by a
@@ -467,5 +482,6 @@ functions:
     returns:
       - type: number
         summary: ''
-    tags:
-    code_samples:
+    tags: []
+    code_samples: []
+    deprecation_message: ''

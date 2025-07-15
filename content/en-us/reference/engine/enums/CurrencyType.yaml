@@ -8,7 +8,7 @@ description: |
   currency used. As tickets no longer exist on the Roblox platform, this enum is
   **ignored** in most API that previously used it, such as
   `Class.MarketplaceService:PromptPurchase()|PromptPurchase`.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: |
   Tickets have been removed, so this Enum shouldn't need to be used.

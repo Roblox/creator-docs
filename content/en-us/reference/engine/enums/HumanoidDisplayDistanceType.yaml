@@ -10,7 +10,7 @@ description: |
   `Class.Humanoid.HealthDisplayDistance`, and
   `Class.Humanoid.NameDisplayDistance` are used in determining whether a
   players's name and health are visible to other players.
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

@@ -159,7 +159,7 @@ events:
     parameters:
       - name: dragData
         type: Dictionary
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''
@@ -191,7 +191,7 @@ events:
     parameters:
       - name: dragData
         type: Dictionary
-        default: ''
+        default:
         summary: |
           A copy of the data originally passed to `Class.Plugin:StartDrag()`.
     tags: []
@@ -223,7 +223,7 @@ events:
     parameters:
       - name: dragData
         type: Dictionary
-        default: ''
+        default:
         summary: |
           A copy of the data originally passed to `Class.Plugin:StartDrag()`.
     tags: []
@@ -250,7 +250,7 @@ events:
     parameters:
       - name: dragData
         type: Dictionary
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''

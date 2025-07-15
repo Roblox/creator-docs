@@ -6,7 +6,7 @@ summary: |
 description: |
   Defines how to determine which client has ownership of a part for a server
   (network).
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:

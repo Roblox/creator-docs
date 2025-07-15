@@ -2,168 +2,168 @@ name: StudioScriptEditorColorCategories
 type: enum
 summary: ''
 description: ''
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    value: 0
     summary: ''
+    value: 0
     tags: []
     deprecation_message: ''
   - name: Operator
-    value: 1
     summary: ''
+    value: 1
     tags: []
     deprecation_message: ''
   - name: Number
-    value: 2
     summary: ''
+    value: 2
     tags: []
     deprecation_message: ''
   - name: String
-    value: 3
     summary: ''
+    value: 3
     tags: []
     deprecation_message: ''
   - name: Comment
-    value: 4
     summary: ''
+    value: 4
     tags: []
     deprecation_message: ''
   - name: Keyword
-    value: 5
     summary: ''
+    value: 5
     tags: []
     deprecation_message: ''
   - name: Builtin
-    value: 6
     summary: ''
+    value: 6
     tags: []
     deprecation_message: ''
   - name: Method
-    value: 7
     summary: ''
+    value: 7
     tags: []
     deprecation_message: ''
   - name: Property
-    value: 8
     summary: ''
+    value: 8
     tags: []
     deprecation_message: ''
   - name: Nil
-    value: 9
     summary: ''
+    value: 9
     tags: []
     deprecation_message: ''
   - name: Bool
-    value: 10
     summary: ''
+    value: 10
     tags: []
     deprecation_message: ''
   - name: Function
-    value: 11
     summary: ''
+    value: 11
     tags: []
     deprecation_message: ''
   - name: Local
-    value: 12
     summary: ''
+    value: 12
     tags: []
     deprecation_message: ''
   - name: Self
-    value: 13
     summary: ''
+    value: 13
     tags: []
     deprecation_message: ''
   - name: LuauKeyword
-    value: 14
     summary: ''
+    value: 14
     tags: []
     deprecation_message: ''
   - name: FunctionName
-    value: 15
     summary: ''
+    value: 15
     tags: []
     deprecation_message: ''
   - name: TODO
-    value: 16
     summary: ''
+    value: 16
     tags: []
     deprecation_message: ''
   - name: Background
-    value: 17
     summary: ''
+    value: 17
     tags: []
     deprecation_message: ''
   - name: SelectionText
-    value: 18
     summary: ''
+    value: 18
     tags: []
     deprecation_message: ''
   - name: SelectionBackground
-    value: 19
     summary: ''
+    value: 19
     tags: []
     deprecation_message: ''
   - name: FindSelectionBackground
-    value: 20
     summary: ''
+    value: 20
     tags: []
     deprecation_message: ''
   - name: MatchingWordBackground
-    value: 21
     summary: ''
+    value: 21
     tags: []
     deprecation_message: ''
   - name: Warning
-    value: 22
     summary: ''
+    value: 22
     tags: []
     deprecation_message: ''
   - name: Error
-    value: 23
     summary: ''
+    value: 23
     tags: []
     deprecation_message: ''
   - name: Info
-    value: 24
     summary: ''
+    value: 24
     tags: []
     deprecation_message: ''
   - name: Hint
-    value: 25
     summary: ''
+    value: 25
     tags: []
     deprecation_message: ''
   - name: Whitespace
-    value: 26
     summary: ''
+    value: 26
     tags: []
     deprecation_message: ''
   - name: ActiveLine
-    value: 27
     summary: ''
+    value: 27
     tags: []
     deprecation_message: ''
   - name: DebuggerCurrentLine
-    value: 28
     summary: ''
+    value: 28
     tags: []
     deprecation_message: ''
   - name: DebuggerErrorLine
-    value: 29
     summary: ''
+    value: 29
     tags: []
     deprecation_message: ''
   - name: Ruler
-    value: 30
     summary: ''
+    value: 30
     tags: []
     deprecation_message: ''
   - name: Bracket
-    value: 31
     summary: ''
+    value: 31
     tags: []
     deprecation_message: ''
   - name: Type
@@ -172,72 +172,72 @@ items:
     tags: []
     deprecation_message: ''
   - name: MenuPrimaryText
-    value: 33
     summary: ''
+    value: 33
     tags: []
     deprecation_message: ''
   - name: MenuSecondaryText
-    value: 34
     summary: ''
+    value: 34
     tags: []
     deprecation_message: ''
   - name: MenuSelectedText
-    value: 35
     summary: ''
+    value: 35
     tags: []
     deprecation_message: ''
   - name: MenuBackground
-    value: 36
     summary: ''
+    value: 36
     tags: []
     deprecation_message: ''
   - name: MenuSelectedBackground
-    value: 37
     summary: ''
+    value: 37
     tags: []
     deprecation_message: ''
   - name: MenuScrollbarBackground
-    value: 38
     summary: ''
+    value: 38
     tags: []
     deprecation_message: ''
   - name: MenuScrollbarHandle
-    value: 39
     summary: ''
+    value: 39
     tags: []
     deprecation_message: ''
   - name: MenuBorder
-    value: 40
     summary: ''
+    value: 40
     tags: []
     deprecation_message: ''
   - name: DocViewCodeBackground
-    value: 41
     summary: ''
+    value: 41
     tags: []
     deprecation_message: ''
   - name: AICOOverlayText
-    value: 42
     summary: ''
+    value: 42
     tags: []
     deprecation_message: ''
   - name: AICOOverlayButtonBackground
-    value: 43
     summary: ''
+    value: 43
     tags: []
     deprecation_message: ''
   - name: AICOOverlayButtonBackgroundHover
-    value: 44
     summary: ''
+    value: 44
     tags: []
     deprecation_message: ''
   - name: AICOOverlayButtonBackgroundPressed
-    value: 45
     summary: ''
+    value: 45
     tags: []
     deprecation_message: ''
   - name: IndentationRuler
-    value: 46
     summary: ''
+    value: 46
     tags: []
     deprecation_message: ''

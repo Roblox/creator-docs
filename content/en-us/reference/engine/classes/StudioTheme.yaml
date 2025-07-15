@@ -31,7 +31,7 @@ methods:
     parameters:
       - name: styleguideitem
         type: StudioStyleGuideColor
-        default: ''
+        default:
         summary: |
           The element you want to get the theme color for.
       - name: modifier

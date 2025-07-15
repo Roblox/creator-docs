@@ -2,7 +2,7 @@ name: PrivilegeType
 type: enum
 summary: ''
 description: ''
-code_samples:
+code_samples: []
 tags:
   - Deprecated
 deprecation_message: |

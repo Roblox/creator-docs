@@ -814,7 +814,7 @@ events:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
     tags:
       - Deprecated
@@ -845,7 +845,7 @@ events:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
     tags:
       - Deprecated
@@ -948,7 +948,7 @@ events:
     parameters:
       - name: key
         type: string
-        default: ''
+        default:
         summary: ''
     tags:
       - Deprecated

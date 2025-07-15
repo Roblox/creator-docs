@@ -1316,7 +1316,7 @@ methods:
     parameters:
       - name: accessory
         type: Instance
-        default: ''
+        default:
         summary: |
           The `Class.Accessory` to be attached.
     returns:
@@ -1340,7 +1340,7 @@ methods:
     parameters:
       - name: status
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: boolean
@@ -1485,7 +1485,7 @@ methods:
     parameters:
       - name: tool
         type: Instance
-        default: ''
+        default:
         summary: |
           The `Class.Tool` to equip.
     returns:
@@ -1584,7 +1584,7 @@ methods:
     parameters:
       - name: part
         type: Instance
-        default: ''
+        default:
         summary: |
           The specified part being checked to see if it is an R15 body part.
     returns:
@@ -1624,7 +1624,7 @@ methods:
     parameters:
       - name: part
         type: Instance
-        default: ''
+        default:
         summary: |
           The `Class.Part` for which the `Enum.Limb|Enum.Limb` is to be
           retrieved.
@@ -1733,7 +1733,7 @@ methods:
     parameters:
       - name: state
         type: HumanoidStateType
-        default: ''
+        default:
         summary: |
           The given `Enum.HumanoidStateType`.
     returns:
@@ -1779,7 +1779,7 @@ methods:
     parameters:
       - name: status
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: boolean
@@ -1831,7 +1831,7 @@ methods:
     parameters:
       - name: animation
         type: Animation
-        default: ''
+        default:
         summary: |
           The `Class.Animation` to load.
     returns:
@@ -1884,7 +1884,7 @@ methods:
     parameters:
       - name: moveDirection
         type: Vector3
-        default: ''
+        default:
         summary: |
           The direction to walk in.
       - name: relativeToCamera
@@ -1950,7 +1950,7 @@ methods:
     parameters:
       - name: location
         type: Vector3
-        default: ''
+        default:
         summary: |
           The position to set `Class.Humanoid.WalkToPoint` to.
       - name: part
@@ -2007,7 +2007,7 @@ methods:
     parameters:
       - name: status
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: boolean
@@ -2067,12 +2067,12 @@ methods:
     parameters:
       - name: bodyPart
         type: BodyPartR15
-        default: ''
+        default:
         summary: |
           The body part to replace. `Enum.BodyPartR15.Unknown` will fail.
       - name: part
         type: BasePart
-        default: ''
+        default:
         summary: |
           The `Class.Part` `Class.Instance` which will be parented to the
           character.
@@ -2104,12 +2104,12 @@ methods:
     parameters:
       - name: state
         type: HumanoidStateType
-        default: ''
+        default:
         summary: |
           The `Enum.HumanoidStateType` to be enabled or disabled.
       - name: enabled
         type: boolean
-        default: ''
+        default:
         summary: |
           `true` if `state` is to be enabled, `false` if `state` is to be
           disabled.
@@ -2207,7 +2207,7 @@ methods:
     parameters:
       - name: animation
         type: Animation
-        default: ''
+        default:
         summary: ''
     returns:
       - type: AnimationTrack
@@ -2279,7 +2279,7 @@ methods:
     parameters:
       - name: humanoidDescription
         type: HumanoidDescription
-        default: ''
+        default:
         summary: |
           The `Class.HumanoidDescription` Instance which you want to set the
           character to match.
@@ -2321,7 +2321,7 @@ methods:
     parameters:
       - name: humanoidDescription
         type: HumanoidDescription
-        default: ''
+        default:
         summary: |
           The `Class.HumanoidDescription` instance which you want to set the
           character to match.
@@ -2351,7 +2351,7 @@ methods:
     parameters:
       - name: emoteName
         type: string
-        default: ''
+        default:
         summary: |
           name of the emote to play.
     returns:
@@ -2393,7 +2393,7 @@ events:
     parameters:
       - name: animationTrack
         type: AnimationTrack
-        default: ''
+        default:
         summary: |
           The `Class.AnimationTrack` that has begun playing.
     tags:
@@ -2410,7 +2410,7 @@ events:
     parameters:
       - name: description
         type: HumanoidDescription
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''
@@ -2465,7 +2465,7 @@ events:
     parameters:
       - name: status
         type: string
-        default: ''
+        default:
         summary: ''
     tags:
       - Deprecated
@@ -2487,7 +2487,7 @@ events:
     parameters:
       - name: status
         type: string
-        default: ''
+        default:
         summary: ''
     tags:
       - Deprecated
@@ -2536,7 +2536,7 @@ events:
     parameters:
       - name: active
         type: boolean
-        default: ''
+        default:
         summary: |
           Describes whether the `Class.Humanoid` is entering or leaving the
           `FallingDown` `Enum.HumanoidStateType`.
@@ -2566,7 +2566,7 @@ events:
     parameters:
       - name: active
         type: boolean
-        default: ''
+        default:
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the `Freefall`
           `Enum.HumanoidStateType`.
@@ -2598,7 +2598,7 @@ events:
     parameters:
       - name: active
         type: boolean
-        default: ''
+        default:
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the `GettingUp`
           `Enum.HumanoidStateType`.
@@ -2655,7 +2655,7 @@ events:
     parameters:
       - name: active
         type: boolean
-        default: ''
+        default:
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the `Jumping`
           `Enum.HumanoidStateType`.
@@ -2688,7 +2688,7 @@ events:
     parameters:
       - name: reached
         type: boolean
-        default: ''
+        default:
         summary: |
           A boolean indicating whether the `Class.Humanoid` reached is goal.
           _True_ if the `Class.Humanoid` is reached its goal, _false_ if the
@@ -2721,7 +2721,7 @@ events:
     parameters:
       - name: active
         type: boolean
-        default: ''
+        default:
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the
           `PlatformStanding` `Enum.HumanoidStateType`.
@@ -2753,7 +2753,7 @@ events:
     parameters:
       - name: active
         type: boolean
-        default: ''
+        default:
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the `Ragdoll`
           `Enum.HumanoidStateType`.
@@ -2824,12 +2824,12 @@ events:
     parameters:
       - name: active
         type: boolean
-        default: ''
+        default:
         summary: |
           True if the `Class.Humanoid` is sitting down.
       - name: currentSeatPart
         type: BasePart
-        default: ''
+        default:
         summary: |
           The seat the `Class.Humanoid` is sat in if it is sitting down.
     tags: []
@@ -2862,12 +2862,12 @@ events:
     parameters:
       - name: old
         type: HumanoidStateType
-        default: ''
+        default:
         summary: |
           The humanoid's previous state type.
       - name: new
         type: HumanoidStateType
-        default: ''
+        default:
         summary: |
           The humanoid's current state type.
     tags: []
@@ -2898,13 +2898,13 @@ events:
     parameters:
       - name: state
         type: HumanoidStateType
-        default: ''
+        default:
         summary: |
           The `Enum.HumanoidStateType` for which the enabled state has been
           changed.
       - name: isEnabled
         type: boolean
-        default: ''
+        default:
         summary: |
           True if the state is now enabled.
     tags: []
@@ -2923,7 +2923,7 @@ events:
     parameters:
       - name: status
         type: Status
-        default: ''
+        default:
         summary: ''
     tags:
       - Deprecated
@@ -2945,7 +2945,7 @@ events:
     parameters:
       - name: status
         type: Status
-        default: ''
+        default:
         summary: ''
     tags:
       - Deprecated
@@ -2982,7 +2982,7 @@ events:
     parameters:
       - name: active
         type: boolean
-        default: ''
+        default:
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the
           `StrafingNoPhysics` `Enum.HumanoidStateType`.
@@ -3066,12 +3066,12 @@ events:
     parameters:
       - name: touchingPart
         type: BasePart
-        default: ''
+        default:
         summary: |
           The `Class.BasePart` the `Class.Humanoid` has come in contact with.
       - name: humanoidPart
         type: BasePart
-        default: ''
+        default:
         summary: |
           The limb of the `Class.Humanoid` that has been touched.
     tags: []
