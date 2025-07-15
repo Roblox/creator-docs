@@ -450,7 +450,7 @@ See the following for more information on layered accessories:
   </tr>
   <tr>
     <td>Missing WrapLayer on layered clothing accessory `%s`. You need to create a child WrapLayer and try again.</td>
-    <td>Make sure you converted your model into a layered accessory (you might have [converted to a rigid accessory](../art/accessories/accessory-fitting-tool.md#rigid-accessories) instead or selected the wrong asset type).</td>
+    <td>Make sure you converted your model into a layered accessory (you might have [converted to a rigid accessory](../art/accessories/accessory-fitting-tool.md#generate-legacy-accessory) instead or selected the wrong asset type).</td>
   </tr>
   <tr>
     <td>The maximum vertex density has been exceeded. Reduce the number of vertices that are very close to each other.</td>

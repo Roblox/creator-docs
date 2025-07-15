@@ -1,7 +1,11 @@
 ---
-title: Reporting and billing
+title: Ads Manager reporting and billing
 description: The reporting and billing tools in the Ads Manager help you effectively manage your ad campaigns.
 ---
+
+<Alert severity="info">
+This feature is in beta.
+</Alert>
 
 Use the reporting and billing tools in the Ads Manager to effectively manage your ad campaigns.
 

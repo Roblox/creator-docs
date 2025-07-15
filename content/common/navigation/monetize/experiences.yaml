@@ -50,6 +50,8 @@ navigation:
     path: /production/promotion/advertise-on-roblox
   - title: Immersive ads
     path: /production/monetization/immersive-ads
+  - title: Rewarded video ads
+    path: /production/promotion/rewarded-video-ads
   - title: Search ads
     path: /production/promotion/search-ads
   - title: Advertising standards

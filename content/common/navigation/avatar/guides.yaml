@@ -95,7 +95,7 @@ navigation:
         path: /art/accessories/automatic-skinning-transfer
       - title: Thumbnails
         path: /marketplace/custom-thumbnails
-  - title: Validation errors
+  - title: Validation Errors
     path: /art/validation-errors
   - title: 3rd party add-ons
     section:

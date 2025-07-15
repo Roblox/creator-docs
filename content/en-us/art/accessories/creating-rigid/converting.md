@@ -22,7 +22,11 @@ To fit and generate your accessory:
    2. In the workspace, use the **Move**, **Scale**, and **Rotate** tools to adjust the positioning of your rigid accessory.
    3. If you accidentally select something else, click back into the AFT panel to reselect the accessory and resume your adjustments using the transformation tools.
 
-5. After previewing and fitting your asset, select the **dropdown** next to **Generate** button to select **Generate MeshPart Accessory**. The accessory object populates in your viewport and in the Explorer.
+5. After previewing and fitting your asset, select the **dropdown** next to **Generate** button to select **Generate Legacy Accessory**. The accessory object populates in your viewport and in the Explorer.
+
+   - For rigid accessories that you intend to sell on the Marketplace you must use the [generate legacy accessory](../accessory-fitting-tool.md#generate-legacy-accessory) option when creating your Marketplace accessories.
+
+     <img src="../../../assets/accessories/accessory-fitting-tool/Generate-Legacy-Accessory.png" width ="60%" alt="A dropdown appears above the GenerateMeshPartAccessory when expanded, displaying a Generate Legacy Accessory option."/>
 
 6. Test your accessory by equipping it to a character and using the **Avatar Setup Tool**.
 

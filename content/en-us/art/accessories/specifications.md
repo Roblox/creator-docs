@@ -275,10 +275,6 @@ You can use tools like the [Accessory fitting tool](../../art/accessories/access
 </tbody>
 </table>
 
-## Textures
-
-Textures created for accessories must meet Roblox's [texture specifications](../../art/modeling/texture-specifications.md). Note that non-albedo maps (RGH, MTL, NOR) for rigid accessories cannot exceed 256x256.
-
 ### Attachment points
 
 `Class.Attachment` objects indicate where an accessory model attaches to a point on a character body. Whether you are creating rigid or [layered](./layered-clothing.md) accessories, Studio's [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) automatically adds and configures the appropriate `Class.Attachment` with the following specifications:
@@ -338,7 +334,7 @@ If setting or configuring attachments manually in Studio, use the following name
 - **Shoulders and Collars** - Even though they are in similar locations, Shoulder and Collar attachment points interact with character rigs differently for rigid accessories.
   - Items using `RightShoulderAttachment` or `LeftShoulderAttachment` move with the character's arm.
   - Items using `RightCollarAttachment` or `LeftCollarAttachment` do not move with the character's arm.
-  
+
 ## Layered properties
 
 Accessories, such as clothing items, which stretch and fit around any character body type, must include additional configurations to achieve the layering effect. See [Clothing specifications](../../art/accessories/clothing-specifications.md) for specifications required to create layerable accessories.
@@ -347,6 +343,8 @@ Accessories, such as clothing items, which stretch and fit around any character 
 
 Your items must meet the following requirements before you upload them to the Marketplace to sell:
 
+- Rigid accessories that you intend to sell on the Marketplace require a `Class.SpecialMesh` and don't support [SurfaceAppearance](../../art/modeling/surface-appearance.md).
+  - Use the [generate legacy accessory](./accessory-fitting-tool.md#generate-legacy-accessory) option when creating your accessory.
 - Ensure that your items adhere to the [Marketplace program guidelines](../../marketplace/marketplace-policy.md).
 - Whenever applicable, ensure that your items adhere to Roblox's [custom mesh specifications](../../art/modeling/specifications.md).
 - Object `Class.MeshPart.Material|Material` is set to `Plastic`.

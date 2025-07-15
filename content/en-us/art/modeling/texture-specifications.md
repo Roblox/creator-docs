@@ -85,7 +85,7 @@ See the following requirements for `Class.SurfaceAppearance` assets:
     <tr>
       <td>256×256</td>
       <td>2×2×2</td>
-      <td>Hair, shoes, tank tops, t-shirts, shorts, short skirts. This is the maximum budget for non-albedo maps (RGH, MTL, NOR) for rigid accessories. </td>
+      <td>Hair, shoes, tank tops, t-shirts, shorts, short skirts.</td>
     </tr>
     <tr>
       <td>512×512</td>

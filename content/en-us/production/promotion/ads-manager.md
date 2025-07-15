@@ -1,10 +1,10 @@
 ---
-title: Ad campaigns
+title: Ads Manager
 description: The Ads Manager is where you can manage ad campaigns, ads reporting, and ads billings and payments in one place.
 ---
 
-<Alert severity="warning">
-The Ads Manager feature is in beta.
+<Alert severity="info">
+This feature is in beta.
 </Alert>
 
 The **Ads Manager** offers you control over your ad campaigns, empowering you to create, optimize, and measure ads effectively while reaching your campaign objectives. You can use this tool to manage your ad campaigns, ads reporting, and ads billings in one place.
