@@ -18,13 +18,16 @@ To explore available licenses in the Licenses catalog:
 
 ## Apply to use a license
 
+<Alert severity="info">
+  Before applying to use an IP license, make sure your experience is public.
+</Alert>
+
 To apply to use an IP license in your experience:
 
 1. In the **Explore** dropdown in the Creator Hub, click **Licenses**.
 2. Select an IP from the available licenses.
 3. Click **Request license**.
 4. Select the experience you want to apply to the license with and click **Next**.
-  <img src="../assets/ip-licensing/ExploreLicenses.png" alt="Screenshot of license application." width="700" />
 5. Select how ready your experience is to use the license and click **Next**. You can still apply to use a license even if your experience isn't fully ready to incorporate the IP.
 6. Download the content standards file, review and agree to the content standards, and click **Next**.
 7. Click **Submit** to submit your application. The IP holder then reviews and either approves or rejects your application.
