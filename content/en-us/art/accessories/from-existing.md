@@ -7,7 +7,7 @@ In many cases, you may want to convert a premade model from your modeling
 software into an accessory on Roblox. If you are looking to create your
 accessory from scratch, see [Create accessories](./creating-rigid/index.md).
 
-Using a provided 3D reference file, this tutorial covers each step in the workflow to properly configure and export a 3D model with PBR textures from Blender and generate your own rigid accessory in Studio. After you create the accessory, you can upload it to the Marketplace, save it to your toolbox, and use it in your own experiences.
+Using a provided 3D reference file, this tutorial covers each step in the workflow to properly configure and export a 3D model with PBR textures from Blender and generate your own **rigid accessory** in Studio. After you create the accessory, you can upload it to the Marketplace, save it to your toolbox, and use it in your own experiences.
 
 <Alert severity = 'info'>
 This tutorial only covers rigid accessories, and does not cover the process of converting more advanced clothing or character body models.
@@ -72,7 +72,7 @@ You've completed the modeling section of this tutorial. If desired, download a [
 There are many tools and workflows to create your own unique asset. For additional suggestions, try creating different asset types, such as shoulder pads or belts, or importing a reference model into Blender as a mannequin to sculpt and shape your cosmetics from scratch.
 </Alert>
 
-## Texturing
+## Apply texture
 
 **Texturing** is the process of applying a surface appearance to a 3D object. Blender provides various tools and features to create and connect your own texture maps to your asset, allowing you to preview your model's final appearance and link the texture images to your exported file.
 
@@ -159,113 +159,27 @@ To freeze your transforms:
 
    <img src="../../assets/art/accessories/creating-rigid/Blender-Apply-Transforms.png" />
 
-## Export
+## Export from modeling tool
 
-After modeling and texturing your asset, you can begin the process of **exporting** your Blender project as a `.fbx`. The start of this process includes cleaning up your project, which can involve deleting or removing any extra objects, such as lights, cameras, or mannequins, to ensure you only export the accessory mesh, and applying any modifiers to your mesh object.
+After modeling and texturing your asset, you can begin the process of **exporting** your Blender project as a `.fbx`. The start of this process includes cleaning up your project, such as applying modifiers, to ensure you only export the accessory mesh.
 
-Along with deleting your extra objects and mannequins, an often forgotten cleanup step involves **applying your transformations**, also known as **freezing your transforms**, by setting your orientation, rotation, and scale deltas to zero. Failure to apply any transformations can result in unexpected behavior and orientation when importing the mesh in Studio.
-
-To freeze your transforms:
-
-1. In Object mode, select your mesh object.
-2. Navigate to **Object** > **Apply** > **All Transforms**.
-
-   <img src="../../assets/art/accessories/creating-rigid/Blender-Apply-Transforms.png" />
-
-To export your model as a `.fbx`:
-
-1. In the topbar, click **File**.
-2. Select **Export**, then **FBX (.fbx)**.
-3. On the right-hand side of the file view window, change the **Path Mode** property to **Copy**, then toggle the **Embed Textures** button.
-
-   <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-1.png" width="320" />
-
-4. Set the **Transform** > **Scale** to `.01`. This is required to maintain scale size for `.fbx` exports.
-
-   <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-2.png" width="320" />
-
-5. Click the **Export FBX** button.
+For the latest export settings for Blender, see [rigid accessory export settings](./export-settings.md).
 
 <Alert severity = 'success'>
 You've completed the exporting section of this tutorial. If desired, download a [reference sample](../../assets/art/accessories/creating-rigid/Rigid_Mask_Export.fbx) of this exported file for comparison. You can use this reference in the next importing step.
 </Alert>
 
-## Import
+## Import to Studio
 
 Studio's 3D Importer provides a quick and easy way to import third-party 3D assets into your projects. The importer provides object previews and error-checking to ensure that your asset meets Studio's general 3D requirements.
 
-To import your asset:
-
-1. In Studio, navigate to the toolbar's **Avatar** tab and select the **3D Importer**.
-2. In the file browser, select the `.fbx` file saved locally. The 3D Importer loads a preview of the object.
-
-      <img src="../../assets/art/accessories/creating-rigid/3D-Importer.png" />
-
-   1. If textures don't load for your asset, you can manually import your textures in Step 4.
-
-3. Select **Import**. The asset populates in your workspace as a `Class.Model` with the appropriate textures applied as a `Class.SurfaceAppearance`.
-
-   1. If textures didn't load correctly, add them manually. You may need to save and publish your experience in order to access the [Asset Manager](../../projects/assets/manager.md).
-
-      1. In the **Asset Manager**, click the **Import** button.
-      2. Upload your image files.
-      3. After moderation clears for your image, select the `Class.MeshPart` parented within your imported `Class.Model`.
-      4. Add a `Class.SurfaceAppearance` child to your `Class.MeshPart`.
-
-         <img src="../../assets/art/accessories/creating-rigid/Adding-Surface-Appearance.png" />
-
-      5. In the `Class.SurfaceAppearance` properties, click each property value and assign the appropriate texture image from the asset dropdown:
-
-         1. Set the **ColorMap** to the **\_ALB** texture image.
-         2. Set the **MetalnessMap** to the **\_MTL** texture image.
-         3. Set the **NormalMap** to the **\_NOR** texture image.
-         4. Set the **RoughnessMap** to the **\_RGH** texture image.
-
-            <img src="../../assets/art/accessories/creating-rigid/Surface-Appearance-Asset-Dropdown.png" />
-
-<Alert severity = 'success'>
-After successful import, your model object should populate in your project as a `Class.Model` with the appropriate textures applied. See [3D Importer](../../art/modeling/3d-importer.md) for additional information on import settings and troubleshooting.
-</Alert>
+To import your asset, check out the latest information on [importing rigid accessories](./importing.md).
 
 ## Convert
 
 After importing your asset into Studio, you can begin **fitting** your imported object to a mannequin and **converting** the `Class.Model` object into a `Class.Accessory`. When fitting and converting your accessory it's important to use the **Accessory Fitting Tool (AFT)** to correctly preview the placement and apply the correct configurations to your accessory.
 
-To fit and generate your accessory:
-
-1. In the toolbar's **Avatar** tab, open the **Accessory Fitting Tool** (AFT).
-2. In the new AFT panel, select the **Part** field and, in the workspace, select the accessory `Class.MeshPart` object in the workspace and press **Next**.
-
-   <img src="../../assets/art/accessories/creating-rigid/AFT-Select-Mesh.png" />
-
-3. On the Asset Type page, select the **type** of asset and the expected **body scale**. Press **Next** when complete.
-
-   1. This tutorial uses a **Hat** asset with an **Proportions Normal** scale.
-   2. Body scale is typically set based on the original sculpting and sizing of the asset. See [Body Scale](../../art/accessories/body-scale.md) for additional information on rigid accessory scaling.
-
-      <img src="../../assets/art/accessories/creating-rigid/AFT-Select-Type.png" />
-
-4. On the preview screen, select one of the humanoid characters as a mannequin:
-
-   1. In the Avatars section, select a humanoid base body character.
-   2. In the preview panel, deselect the previous selection. Only the humanoid body displays in the preview window.
-
-      <img src="../../assets/art/accessories/creating-rigid/AFT-Add-Avatar-Panel.png" />
-
-5. Using both the AFT preview window and the workspace, adjust the position, scale, and rotation of the accessory.
-
-   1. Use the AFT preview window and your mannequin as an accurate preview of how your asset fits on the character. The clothing mannequin in the workspace does not accurately portray how rigid accessories attach.
-   2. In the workspace, use the **Move**, **Scale**, and **Rotate** tools to adjust the positioning of your rigid accessory.
-   3. If you accidentally select something else, click back into the AFT panel to reselect the accessory and resume your adjustments using the transformation tools.
-
-      <video controls src="../../assets/art/accessories/creating-rigid/Fitting-Mask.mp4" width="100%"></video>
-
-6. After previewing and fitting your asset, select the **dropdown** next to **Generate** button to select **Generate Legacy Accessory** to create the Accessory and add it to your explorer.
-
-   - For rigid accessories that you intend to sell on the Marketplace you must use the [Generate Legacy Accessory](./accessory-fitting-tool.md#generate-legacy-accessory) option when creating your Marketplace accessories.
-   - PBR textures automatically convert to basic textures for these legacy accessories.
-
-   <img src="../../assets/accessories/accessory-fitting-tool/Generate-Legacy-Accessory.png" width = "30%" alt="A dropdown appears above the GenerateMeshPartAccessory when expanded, displaying a Generate Legacy Accessory option."/>
+To convert your asset into a `Class.Accessory`, check out the latest information on [converting rigid accessories](./importing.md#convert-rigid-accessories).
 
 <Alert severity = 'success'>
 After successful fitting and converting, your 3D model should populate in your project as a `Class.Accessory`. With this `Class.Accessory` you can perform any of the following:
@@ -276,40 +190,17 @@ After successful fitting and converting, your 3D model should populate in your p
 
 </Alert>
 
-## Validation
+## Upload and publish
 
 After generating your `Class.Accessory` item, you can now begin the process of **publishing** the asset to the Marketplace. This step is optional and only applicable for creators who intend to sell their asset.
 
 The publishing process involves three major steps:
 
-1. **Validation** - Validation occurs locally at the start of the upload process. This ensures that the accessory meets all of the technical requirements before uploading.
+1. **Upload and validation** - Validation occurs locally at the start of the upload process. This ensures that the accessory meets all of the technical requirements before uploading.
 2. **Moderation** - After uploading, Studio sends the asset to the Moderation queue. Moderation typically completes within 24 hours.
 3. **Ready-for-sale** - Once the asset clears moderation, you can set your marketplace settings and enable the asset for sale.
 
-If you intend to sell the asset on the Marketplace, use the following steps to begin the validation and upload process:
-
-1. In the **Explorer** window, right-click your accessory object and select **Save to Roblox…** from the contextual menu.
-2. In the **Asset Configuration** window, set the **Content Type** to **Avatar Item**.
-3. Complete the following fields (you can adjust them later):
-
-   1. **Title**: The name of your accessory.
-   2. **Description**: A short description of your asset.
-   3. **Asset Category**: The type of accessory. This should match the Accessory Type selected during the [Fitting and conversion](../../art/accessories/creating-rigid/converting.md) process.
-   4. **Creator**: Use the dropdown to select if you'd like to publish this asset as an individual or as part of an associated group.
-
-      <img src="../../assets/art/accessories/creating-rigid/Validation-Successful.png" />
-
-4. After you select the **Asset Category**, Studio begins validating the asset to ensure that it matches Roblox's accessory technical requirements.
-   1. If set up correctly, the window displays a green Validation Successful confirmation.
-   2. If you see an error `Could not find a Part called Handle...`, you may have published your accessory as a MeshPart instead of a legacy accessory. See [Use the Accessory Fitting tool](#convert) step 6 for more information.
-   3. If other errors appear, see the error messages for specific details. Some errors may require going back to the modeling software and adjusting the asset.
-5. If the validation is successful, you can submit the asset to the upload and moderation queue for a fee. See [Fees and commissions](../../marketplace/marketplace-fees-and-commissions.md) for current fee information.
-
-## Publish
-
-After uploading your asset for moderation, you can check your asset's current moderation status in the **Avatar Items** tab of your [Creator Dashboard](https://create.roblox.com/dashboard/creations). Moderation can take up to 24 hours during which a placeholder icon is used on the creation page.
-
-After moderation completes, your item's publishing details become available to edit and enable for sale. See the following for an overview on the various sale options available:
+For additional information and instructions on this process, see [uploading and publishing instructions](../../marketplace/publish-to-marketplace.md).
 
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/swQW2VS9ZMA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br />
