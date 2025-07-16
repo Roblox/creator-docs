@@ -350,7 +350,8 @@ methods:
       - Audio
     writeCapabilities: []
   - name: AudioTextToSpeech:GetWaveformAsync
-    summary: 'Returns a list of samples across a time range for the given audio.'
+    summary: |
+      Returns a list of samples across a time range for the given audio.
     description: |
       Returns a list of samples across a time range for the given audio. Each call can return up to 8192
       samples.
