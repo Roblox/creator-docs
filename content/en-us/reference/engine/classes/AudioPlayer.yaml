@@ -448,7 +448,7 @@ methods:
     description: |
       Returns a list of samples across a time range for the given audio.
 
-      Each call can return up to 8000 samples.
+      Each call can return up to 8192 samples.
     code_samples: []
     parameters:
       - name: timeRange
