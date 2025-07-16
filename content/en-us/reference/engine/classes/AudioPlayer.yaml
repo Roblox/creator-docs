@@ -444,11 +444,11 @@ methods:
       - Audio
     writeCapabilities: []
   - name: AudioPlayer:GetWaveformAsync
-    summary: 'Returns a list of samples across a time range for the given audio.'
-    description: |
+    summary: |
       Returns a list of samples across a time range for the given audio.
-
-      Each call can return up to 8192 samples.
+    description: |
+      Returns a list of samples across a time range for the given audio. Each call can return up to 8192
+      samples.
     code_samples: []
     parameters:
       - name: timeRange
@@ -460,7 +460,8 @@ methods:
       - name: samples
         type: int
         default: 
-        summary: 'The number of samples to return.'
+        summary: |
+          The number of samples to return.
     returns:
       - type: Array
         summary: ''
