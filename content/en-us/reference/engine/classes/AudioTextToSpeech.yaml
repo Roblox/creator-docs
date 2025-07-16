@@ -359,13 +359,13 @@ methods:
     parameters:
       - name: timeRange
         type: NumberRange
-        default: ''
+        default: 
         summary: |
           A `DataType.NumberRange` which represents the start and end point of where
           to sample the audio.
       - name: samples
         type: int
-        default: ''
+        default: 
         summary: 'The number of samples to return.'
     returns:
       - type: Array
