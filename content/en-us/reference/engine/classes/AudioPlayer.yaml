@@ -444,18 +444,24 @@ methods:
       - Audio
     writeCapabilities: []
   - name: AudioPlayer:GetWaveformAsync
-    summary: ''
-    description: ''
+    summary: |
+      Returns a list of samples across a time range for the given audio.
+    description: |
+      Returns a list of samples across a time range for the given audio. Each call can return up to 8192
+      samples.
     code_samples: []
     parameters:
       - name: timeRange
         type: NumberRange
-        default:
-        summary: ''
+        default: 
+        summary: |
+          A `DataType.NumberRange` which represents the start and end point of where
+          to sample the audio.
       - name: samples
         type: int
-        default: ''
-        summary: ''
+        default: 
+        summary: |
+          The number of samples to return.
     returns:
       - type: Array
         summary: ''
