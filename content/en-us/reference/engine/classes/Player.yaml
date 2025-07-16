@@ -2206,10 +2206,10 @@ methods:
       Checks whether a player is a connection of the user with the given
       `Class.Player.UserId`.
     description: |
-      This method sends a request to Roblox asking whether a player is a connection
-      of another user, given the `Class.Player.UserId|UserId` of that user. This
-      method caches results so multiple calls on the same player with the same
-      `userId` may not yield the most up-to-date result.
+      This method sends a request to Roblox asking whether a player is a
+      connection of another user, given the `Class.Player.UserId|UserId` of that
+      user. This method caches results so multiple calls on the same player with
+      the same `userId` may not yield the most up-to-date result.
     code_samples:
       - Player-IsFriendsWith1
     parameters:

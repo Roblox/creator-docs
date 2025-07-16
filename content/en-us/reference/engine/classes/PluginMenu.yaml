@@ -150,7 +150,7 @@ methods:
           The text to be displayed.
       - name: icon
         type: string
-        default:
+        default: ''
         summary: |
           The icon to be displayed.
     returns:

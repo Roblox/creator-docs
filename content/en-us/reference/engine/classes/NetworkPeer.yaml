@@ -24,7 +24,7 @@ methods:
     parameters:
       - name: limit
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()

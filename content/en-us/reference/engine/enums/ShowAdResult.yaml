@@ -7,27 +7,36 @@ tags: []
 deprecation_message: ''
 items:
   - name: ShowCompleted
-    summary: 'The ad was successfully shown to completion.'
+    summary: |
+      The ad was successfully shown to completion.
     value: 1
     tags: []
     deprecation_message: ''
   - name: AdNotReady
-    summary: 'You are trying to show a full-screen ad before the ad has fully loaded. You might have failed to properly fetch the ad, or the ad might have expired.'
+    summary: |
+      You are trying to show a full-screen ad before the ad has fully loaded.
+      You might have failed to properly fetch the ad, or the ad might have
+      expired.
     value: 2
     tags: []
     deprecation_message: ''
   - name: AdAlreadyShowing
-    summary: 'You are trying to show a full-screen ad while another full-screen ad is already playing.'
+    summary: |
+      You are trying to show a full-screen ad while another full-screen ad is
+      already playing.
     value: 3
     tags: []
     deprecation_message: ''
   - name: InternalError
-    summary: 'An unspecified internal error occurred. Try showing the ad again.'
+    summary: |
+      An unspecified internal error occurred. Try showing the ad again.
     value: 4
     tags: []
     deprecation_message: ''
   - name: ShowInterrupted
-    summary: 'The ad view of the user has been interrupted. The user might have clicked X or left the experience, and should not receive a reward.'
+    summary: |
+      The ad view of the user has been interrupted. The user might have closed
+      the ad view or left the experience, and should not receive a reward.
     value: 5
     tags: []
     deprecation_message: ''

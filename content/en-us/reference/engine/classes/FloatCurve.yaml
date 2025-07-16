@@ -47,7 +47,7 @@ methods:
     parameters:
       - name: index
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: FloatCurveKey
@@ -72,7 +72,7 @@ methods:
     parameters:
       - name: time
         type: float
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -113,7 +113,7 @@ methods:
     parameters:
       - name: time
         type: float
-        default:
+        default: ''
         summary: |
           Time at which to sample the curve.
     returns:
@@ -164,7 +164,7 @@ methods:
     parameters:
       - name: startingIndex
         type: int
-        default:
+        default: ''
         summary: |
           Starting index from which to remove keys.
       - name: count

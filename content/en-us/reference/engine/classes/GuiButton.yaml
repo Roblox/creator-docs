@@ -189,7 +189,7 @@ events:
         summary: ''
       - name: clickCount
         type: int
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
@@ -236,12 +236,12 @@ events:
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **X** screen coordinate in pixels.
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **Y** screen coordinate in pixels.
     tags: []
@@ -265,12 +265,12 @@ events:
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **X** screen coordinate in pixels.
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **Y** screen coordinate in pixels.
     tags: []
@@ -318,12 +318,12 @@ events:
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **X** screen coordinate in pixels.
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **Y** screen coordinate in pixels.
     tags: []
@@ -347,12 +347,12 @@ events:
     parameters:
       - name: x
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **X** screen coordinate in pixels.
       - name: 'y'
         type: int
-        default:
+        default: ''
         summary: |
           The mouse's **Y** screen coordinate in pixels.
     tags: []

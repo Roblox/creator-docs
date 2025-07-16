@@ -41,7 +41,7 @@ methods:
     parameters:
       - name: message
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -63,7 +63,7 @@ methods:
     parameters:
       - name: message
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -83,7 +83,7 @@ methods:
     parameters:
       - name: message
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -103,7 +103,7 @@ methods:
     parameters:
       - name: message
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -126,7 +126,7 @@ methods:
     parameters:
       - name: message
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()

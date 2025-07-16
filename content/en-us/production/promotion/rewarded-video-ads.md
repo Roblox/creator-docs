@@ -143,8 +143,6 @@ requestShowAdEvent.OnServerEvent:Connect(function(player)
 end)
 ```
 
-For more information, see the [`AdService` API reference documentation](../../reference/engine/classes/AdService.yaml).
-
 ## Placements
 
 Use placements to track the performance of individual rewarded video ads inside your experience.

@@ -94,11 +94,11 @@ events:
         summary: ''
       - name: relativeAngle
         type: float
-        default:
+        default: ''
         summary: ''
       - name: deltaRadius
         type: float
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''

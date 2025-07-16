@@ -1514,7 +1514,7 @@ methods:
           The `Class.Instance.Name` to be looked for.
       - name: timeOut
         type: double
-        default:
+        default: ''
         summary: |
           An optional time out parameter.
     returns:

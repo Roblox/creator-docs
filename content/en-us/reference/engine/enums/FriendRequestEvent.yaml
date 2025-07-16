@@ -2,7 +2,8 @@ name: FriendRequestEvent
 type: enum
 summary: ''
 description: |
-  Describes the event when a player sends or responds to a connection request. This is used by the in-game connection request system.
+  Describes the event when a player sends or responds to a connection request.
+  This is used by the in-game connection request system.
 code_samples: []
 tags: []
 deprecation_message: ''

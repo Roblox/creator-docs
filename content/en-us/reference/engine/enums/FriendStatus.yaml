@@ -28,7 +28,8 @@ items:
     deprecation_message: ''
   - name: FriendRequestSent
     summary: |
-      At least one of two players has sent a connection request to the other player.
+      At least one of two players has sent a connection request to the other
+      player.
     value: 3
     tags: []
     deprecation_message: ''

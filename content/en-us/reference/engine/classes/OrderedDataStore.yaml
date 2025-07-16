@@ -52,7 +52,7 @@ methods:
           order.
       - name: pagesize
         type: int
-        default:
+        default: ''
         summary: |
           The length of each page. By default is 50. The max allowed value
           is 100.

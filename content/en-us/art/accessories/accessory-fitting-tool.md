@@ -23,7 +23,7 @@ The AFT automatically handles the conversion of the custom `Class.Model` or `Cla
 If you are intending to sell your accessory on the Marketplace, make sure your accessory model design adheres to the [Marketplace Requirements](../../marketplace/marketplace-policy.md).
 </Alert>
 
-## Setting up Accessories
+## Set up accessories
 
 The first stage of the Accessory Fitting Tool allows you to configure the type of accessory to correctly populate the correct fitting tools and generate the appropriate accessory object. When selecting the type of accessory, the following options are available:
 
@@ -59,7 +59,7 @@ To setup your accessories:
 
    <img src="../../assets/accessories/accessory-fitting-tool/Preview-Display.png" />
 
-## Testing Accessories
+## Test accessories
 
 After you provide the initial accessory details, the tool displays a preview panel. With the preview panel, you can test how your accessory looks on different combinations of character bodies, clothing items, animations, or even custom assets in your experience.
 
@@ -67,9 +67,9 @@ After you provide the initial accessory details, the tool displays a preview pan
 At any point of the testing process, you can start a [Play test](../../studio/testing-modes.md#playtest-options) to launch an instance of your experience where your avatar is replaced with the currently selected character body and accessories from the AFT.
 </Alert>
 
-If you notice any fitting issues with your accessory, you can use the [Editing](#editing-accessory-fit) tools to make minor adjustments to your accessory.
+If you notice any fitting issues with your accessory, you can use the [edit](#edit-accessory-fit) tools to make minor adjustments to your accessory.
 
-### With Different Bodies
+### With different bodies
 
 You can select different bodies to test the fit and wear of your accessories. The AFT supplies several default character models you can use to ensure your accessories fit as expected.
 
@@ -91,7 +91,7 @@ To test your accessory with a different body:
    1. If two character tiles are selected, click a selected tile to deselect it.
    2. In the character preview, **click** and **drag** to rotate and **right-click** to pan to inspect your character.
 
-### With Different Clothing
+### With different clothing
 
 You can select different clothing accessories to test the fit and layering of your caged accessories. The AFT supplies several default character models you can use to ensure your accessories fit as expected.
 
@@ -114,7 +114,7 @@ To test your accessory with a different accessory:
    2. In the character preview, **drag** and **drop** the accessory boxes to change the layer order.
    3. In the character preview, **click** and **drag** to rotate and **right-click** to pan to inspect your character.
 
-### With Animations
+### With animations
 
 You can select different animations to test the movement of your accessory asset. The AFT supplies several default animation assets you can use to ensure your accessories fit as expected when a model is performing various movements.
 
@@ -136,7 +136,7 @@ To test your accessory with different animations:
    1. In the catalog, press the play and pause icon to control the playback.
    2. In the character preview, **click** and **drag** to rotate and **right-click** to pan to inspect your character.
 
-### With Custom Assets
+### With custom assets
 
 You can add custom character models, clothing accessories, and animations that are part of your workspace to the AFT preview catalog. Use this functionality to verify that your accessory works with any other custom models or accessories they may interact with in your experience.
 
@@ -152,11 +152,11 @@ To add custom assets:
 
    <img src="../../assets/accessories/accessory-fitting-tool/Custom-Asset.png" />
 
-## Editing Accessory Fit
+## Edit accessory fit
 
 The Accessory Fitting Tool populates different fitting tools depending on the type of accessory being created.
 
-### Layered Clothing
+### Layered clothing
 
 When editing clothing items, the following tools populate in the viewport:
 
@@ -188,7 +188,7 @@ When editing clothing items, the following tools populate in the viewport:
 </tbody>
 </table>
 
-#### Cage Editing
+#### Cage editing
 
 When the Cage Editing interface is enabled, additional tools display in the viewport. The viewport also displays the vertices of the selected cage over the mannequin, allowing you to make positional edits to the cage and change how a clothing item can fit on a body.
 
@@ -238,7 +238,7 @@ To make changes to the vertices of the currently selected cage:
    2. Set the **Falloff Distance** depending on the number of vertices being adjusted at once.
       <img src="../../assets/accessories/accessory-fitting-tool/Edit-Vertex-Example.png" />
 
-### Rigid Accessories
+### Rigid accessories
 
 When fitting rigid accessories, a bounding box appears around the mannequin indicating the possible placement of that specific type of accessory. You can **position**, **rotate**, and **scale** objects within this bounding box to ensure your accessory fits on different character models.
 
@@ -253,13 +253,13 @@ When fitting rigid accessories, a bounding box appears around the mannequin indi
   </figure>
 </GridContainer>
 
-#### Generate Legacy Accessory
+#### Generate legacy accessory
 
 At this time, if you intend to sell your rigid accessory on the Marketplace, you must select **Generate Legacy Accessory** instead of **Generate MeshPart Accessory**. PBR textures are not yet supported for legacy accessories and the tool automatically applies your colormap to your mesh's textureID.
 
 <img src="../../assets/accessories/accessory-fitting-tool/Generate-Legacy-Accessory.png" alt="A dropdown appears above the GenerateMeshPartAccessory when expanded, displaying a Generate Legacy Accessory option."/>
 
-## Creating Accessory
+## Creating accessory
 
 You can create the accessory at any time. The tool applies any fit changes and generates the appropriate Accessory instance in the workspace depending on the type of accessory selected and any configurations applied.
 

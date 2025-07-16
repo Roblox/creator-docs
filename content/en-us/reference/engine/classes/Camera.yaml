@@ -945,7 +945,7 @@ methods:
           tween to.
       - name: duration
         type: float
-        default:
+        default: ''
         summary: |
           The duration, in seconds, of the tween.
     returns:
@@ -987,7 +987,7 @@ methods:
     parameters:
       - name: units
         type: int
-        default:
+        default: ''
         summary: |
           The number of 45 degree increments by which to pan the `Class.Camera`.
     returns:
@@ -1041,14 +1041,14 @@ methods:
     parameters:
       - name: x
         type: float
-        default:
+        default: ''
         summary: |
           The position on the **X** axis, in pixels, of the screen point at
           which to originate the `Datatype.Ray`. This position accounts for the
           GUI inset.
       - name: 'y'
         type: float
-        default:
+        default: ''
         summary: |
           The position on the **Y** axis, in pixels, of the screen point at
           which to originate the `Datatype.Ray`. This position accounts for the
@@ -1152,7 +1152,7 @@ methods:
     parameters:
       - name: rollAngle
         type: float
-        default:
+        default: ''
         summary: |
           The roll angle, in radians, to be applied to the `Class.Camera`.
     returns:
@@ -1181,7 +1181,7 @@ methods:
     parameters:
       - name: units
         type: int
-        default:
+        default: ''
         summary: |
           The number of 10 degree units by which to tilt the `Class.Camera`.
     returns:
@@ -1260,14 +1260,14 @@ methods:
     parameters:
       - name: x
         type: float
-        default:
+        default: ''
         summary: |
           The position on the **X** axis, in pixels, of the viewport point at
           which to originate the `Datatype.Ray`, in device safe area
           coordinates.
       - name: 'y'
         type: float
-        default:
+        default: ''
         summary: |
           The position on the **Y** axis, in pixels, of the viewport point at
           which to originate the `Datatype.Ray`, in device safe area

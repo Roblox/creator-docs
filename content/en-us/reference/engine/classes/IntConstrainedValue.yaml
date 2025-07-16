@@ -125,7 +125,7 @@ events:
     parameters:
       - name: value
         type: int64
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: |
@@ -141,7 +141,7 @@ events:
     parameters:
       - name: value
         type: int64
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated

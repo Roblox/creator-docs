@@ -24,7 +24,7 @@ methods:
     parameters:
       - name: seconds
         type: double
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()

@@ -92,12 +92,11 @@ methods:
         summary: |
           A dictionary for additional generation options to influence the
           result. The following key is supported:
-          
-          - `SuggestedSize` — Optional
-          `Datatype.Vector3` representing a size guide for the generated asset.
-          The service will attempt to create a model with a size and proportion
-          similar to the provided `Datatype.Vector3`. This does not guarantee
-          the final output size.
+
+          - `SuggestedSize` — Optional `Datatype.Vector3` representing a size
+            guide for the generated asset. The service will attempt to create a
+            model with a size and proportion similar to the provided
+            `Datatype.Vector3`. This does not guarantee the final output size.
       - name: intermediateResultCallback
         type: Function?
         default:

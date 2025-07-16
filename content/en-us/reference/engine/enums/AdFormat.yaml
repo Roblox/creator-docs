@@ -7,7 +7,8 @@ tags: []
 deprecation_message: ''
 items:
   - name: RewardedVideo
-    summary: 'The format of the rewarded video ad.'
+    summary: |
+      The format of the rewarded video ad.
     value: 0
     tags: []
     deprecation_message: ''

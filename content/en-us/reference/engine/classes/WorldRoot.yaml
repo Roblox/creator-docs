@@ -566,7 +566,7 @@ methods:
           The location of the center of the given sphere volume to be queried.
       - name: radius
         type: float
-        default:
+        default: ''
         summary: |
           The radius of the given sphere volume to be queried.
       - name: overlapParams
@@ -942,7 +942,7 @@ methods:
           The initial position of the cast spherical shape.
       - name: radius
         type: float
-        default:
+        default: ''
         summary: |
           The radius of the cast spherical shape in studs. The maximum radius is
           256 studs.
@@ -992,7 +992,7 @@ methods:
     parameters:
       - name: dt
         type: float
-        default:
+        default: ''
         summary: |
           The amount of time that will be simulated. This argument must be a
           positive number. Larger values will increase the runtime of this

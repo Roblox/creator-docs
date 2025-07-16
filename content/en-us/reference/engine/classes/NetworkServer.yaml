@@ -27,7 +27,7 @@ methods:
         summary: ''
       - name: playerId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: string

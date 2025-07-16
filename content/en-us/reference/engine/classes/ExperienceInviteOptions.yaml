@@ -20,8 +20,8 @@ properties:
       Asset ID that maps to a **Notification** asset type.
     description: |
       Asset ID that maps to a **Notification** asset type. This asset is used to
-      store/localize a custom string for the invite notification that connections
-      receive. See
+      store/localize a custom string for the invite notification that
+      connections receive. See
       [Setting Notification Options](../../../production/promotion/invite-prompts.md#setting-notification-options)
       for details.
     code_samples: []
@@ -42,8 +42,9 @@ properties:
     summary: |
       Roblox `Class.Player.UserId|UserId` of the specific connection to invite.
     description: |
-      Roblox `Class.Player.UserId|UserId` of the specific connection to invite; if
-      not provided, the player will be prompted to pick from a list of connections.
+      Roblox `Class.Player.UserId|UserId` of the specific connection to invite;
+      if not provided, the player will be prompted to pick from a list of
+      connections.
     code_samples: []
     type: int64
     tags: []
@@ -86,9 +87,9 @@ properties:
       Custom text shown on the invite prompt for the sending player.
     description: |
       Custom text shown on the invite prompt for the sending player, for example
-      "Ask your connections to join the adventure!" for a multi-connection invite
-      prompt, or "Invite this connection to join the adventure!" for a specific
-      connection invite prompt.
+      "Ask your connections to join the adventure!" for a multi-connection
+      invite prompt, or "Invite this connection to join the adventure!" for a
+      specific connection invite prompt.
     code_samples: []
     type: string
     tags: []

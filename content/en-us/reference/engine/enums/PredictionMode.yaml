@@ -1,0 +1,24 @@
+name: PredictionMode
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Auto
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: None
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Forced
+    summary: ''
+    value: 2
+    tags:
+      - Deprecated
+    deprecation_message: ''

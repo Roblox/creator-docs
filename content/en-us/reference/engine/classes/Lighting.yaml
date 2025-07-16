@@ -768,7 +768,7 @@ methods:
     parameters:
       - name: minutes
         type: double
-        default:
+        default: ''
         summary: |
           The number of minutes after midnight.
     returns:
@@ -806,7 +806,7 @@ methods:
     parameters:
       - name: minutes
         type: double
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()

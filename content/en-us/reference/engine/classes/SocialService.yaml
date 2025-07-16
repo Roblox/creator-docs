@@ -9,9 +9,10 @@ description: |
   on the Roblox platform. Its primary usage is to show
   [invite prompts](../../../production/promotion/invite-prompts.md) and the
   phone book to players, allowing them to send invitation requests to their
-  connections through `Class.SocialService:PromptGameInvite()|PromptGameInvite()`
-  and `Class.SocialService:PromptPhoneBook()|PromptPhoneBook()` respectively.
-  You may leverage signals when such requests are made.
+  connections through
+  `Class.SocialService:PromptGameInvite()|PromptGameInvite()` and
+  `Class.SocialService:PromptPhoneBook()|PromptPhoneBook()` respectively. You
+  may leverage signals when such requests are made.
 code_samples: []
 inherits:
   - Instance
@@ -77,8 +78,8 @@ methods:
     description: |
       `Class.SocialService:PromptGameInvite()|PromptGameInvite()` displays an
       invite prompt to the local player through which they may invite their
-      connections to the current experience. Before calling this method, you should
-      use
+      connections to the current experience. Before calling this method, you
+      should use
       `Class.SocialService:CanSendGameInviteAsync()|CanSendGameInviteAsync()` to
       determine whether the player can send an invite, as this ability may vary
       depending on the platform or player.

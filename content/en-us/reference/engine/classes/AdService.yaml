@@ -4,8 +4,8 @@ memory_category: Instances
 summary: |
   A class that allows the display of mobile video ads.
 description: |
-  A service for displaying mobile video ads as a form
-  of monetization. Use it to implement rewarded video ads in your experience.
+  A service for displaying mobile video ads as a form of monetization. Use it to
+  implement rewarded video ads in your experience.
 code_samples: []
 inherits:
   - Instance
@@ -16,14 +16,17 @@ deprecation_message: ''
 properties: []
 methods:
   - name: AdService:CreateAdRewardFromDevProductId
-    summary: 'Creates a reward to give users who watch an entire video ad.'
-    description: 'Creates a reward to give users who watch an entire video ad.'
+    summary: |
+      Creates a reward to give users who watch an entire video ad.
+    description: |
+      Creates a reward to give users who watch an entire video ad.
     code_samples: []
     parameters:
       - name: devProductId
         type: int64
-        default:
-        summary: 'The ID of the developer product you want to grant as a reward.'
+        default: ''
+        summary: |
+          The ID of the developer product you want to grant as a reward.
     returns:
       - type: AdReward
         summary: ''
@@ -46,7 +49,8 @@ methods:
     tags:
       - Deprecated
     deprecation_message: |
-      `Class.AdService.ShowVideoAd|ShowVideoAd` has been decommissioned and is no longer operational.
+      `Class.AdService.ShowVideoAd|ShowVideoAd` has been decommissioned and is
+      no longer operational.
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -70,17 +74,22 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: AdService:GetAdAvailabilityNowAsync
-    summary: 'Checks if a video ad is available to be played to the current user inside the experience.'
-    description: 'Checks if a video ad is available to be played to the current user inside the experience.'
+    summary: |
+      Checks if a video ad is available to be played to the current user inside
+      the experience.
+    description: |
+      Checks if a video ad is available to be played to the current user inside
+      the experience.
     code_samples:
       - AdService-GetAdAvailabilityNowAsync
     parameters:
       - name: adFormat
         type: AdFormat
         default:
-        summary: 'The format of the requested ad. For example, `RewardedOnDemandVideo`.'
+        summary: |
+          The format of the requested ad. For example, `RewardedOnDemandVideo`.
     returns:
-      - type: AdAvailabilityResult
+      - type: Variant
         summary: ''
     tags:
       - Yields
@@ -113,23 +122,31 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: AdService:ShowRewardedVideoAdAsync
-    summary: 'Plays the video ad to the current user inside the experience.'
-    description: 'Plays the video ad to the current user inside the experience.'
+    summary: |
+      Plays the video ad to the current user inside the experience.
+    description: |
+      Plays the video ad to the current user inside the experience.
     code_samples:
       - AdService-ShowRewardedVideoAdAsync
     parameters:
       - name: player
         type: Player
         default:
-        summary: 'The `Player` object for whom you are fetching the ad for.'
+        summary: |
+          The `Player` object for whom you are fetching the ad for.
       - name: reward
         type: AdReward
         default:
-        summary: 'The reward object for the reward you want to grant the user who watches an ad to completion.'
+        summary: |
+          The reward object for the reward you want to grant the user who
+          watches an ad to completion.
       - name: placementId
         type: int64?
         default:
-        summary: 'The ID of the placement of the rewarded video ad inside the experience. Allows for reporting on the performance of individual ad placements.'
+        summary: |
+          The ID of the placement of the rewarded video ad inside the
+          experience. Allows for reporting on the performance of individual ad
+          placements.
     returns:
       - type: ShowAdResult
         summary: ''
@@ -155,7 +172,8 @@ events:
     tags:
       - Deprecated
     deprecation_message: |
-      `Class.AdService.VideoAdClosed|VideoAdClosed` has been decommissioned and is no longer operational.
+      `Class.AdService.VideoAdClosed|VideoAdClosed` has been decommissioned and
+      is no longer operational.
     security: None
     capabilities: []
     writeCapabilities: []

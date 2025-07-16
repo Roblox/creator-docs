@@ -2,12 +2,12 @@ name: FriendService
 type: class
 memory_category: Instances
 summary: |
-  An internal service which is used to send, cancel, accept and decline connection
-  requests in-game.
+  An internal service which is used to send, cancel, accept and decline
+  connection requests in-game.
 description: |
-  A service which is used to send, cancel, accept and decline connection requests
-  in-game. It is primarily used by the PlayerListScript to send connection requests
-  with the leaderboard.
+  A service which is used to send, cancel, accept and decline connection
+  requests in-game. It is primarily used by the PlayerListScript to send
+  connection requests with the leaderboard.
 code_samples: []
 inherits:
   - Instance

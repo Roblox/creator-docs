@@ -41,7 +41,7 @@ Using a provided reference 3D asset, this tutorial covers the following rigid ac
 While this content covers the Blender workflow with a provided reference example, you can apply the same concepts to other third-party modeling applications and custom assets.
 </Alert>
 
-## Modeling setup
+## Setup model
 
 Whether you are using an existing shape or creating your own 3D object, it's important to consider [technical requirements](../../art/accessories/specifications.md), such as keeping your geometry within a polycount budget, and [policy requirements](../../marketplace/marketplace-policy.md), such as ensuring your design does not infringe on other creator's IP both within and outside of the Roblox ecosystem.
 
@@ -72,7 +72,7 @@ You've completed the modeling section of this tutorial. If desired, download a [
 There are many tools and workflows to create your own unique asset. For additional suggestions, try creating different asset types, such as shoulder pads or belts, or importing a reference model into Blender as a mannequin to sculpt and shape your cosmetics from scratch.
 </Alert>
 
-## Texturing
+## Apply texture
 
 **Texturing** is the process of applying a surface appearance to a 3D object. Blender provides various tools and features to create and connect your own texture maps to your asset, allowing you to preview your model's final appearance and link the texture images to your exported file.
 
@@ -159,38 +159,17 @@ To freeze your transforms:
 
    <img src="../../assets/art/accessories/creating-rigid/Blender-Apply-Transforms.png" />
 
-## Export
+## Export from modeling tool
 
 After modeling and texturing your asset, you can begin the process of **exporting** your Blender project as a `.fbx`. The start of this process includes cleaning up your project, which can involve deleting or removing any extra objects, such as lights, cameras, or mannequins, to ensure you only export the accessory mesh, and applying any modifiers to your mesh object.
 
-Along with deleting your extra objects and mannequins, an often forgotten cleanup step involves **applying your transformations**, also known as **freezing your transforms**, by setting your orientation, rotation, and scale deltas to zero. Failure to apply any transformations can result in unexpected behavior and orientation when importing the mesh in Studio.
-
-To freeze your transforms:
-
-1. In Object mode, select your mesh object.
-2. Navigate to **Object** > **Apply** > **All Transforms**.
-
-   <img src="../../assets/art/accessories/creating-rigid/Blender-Apply-Transforms.png" />
-
-To export your model as a `.fbx`:
-
-1. In the topbar, click **File**.
-2. Select **Export**, then **FBX (.fbx)**.
-3. On the right-hand side of the file view window, change the **Path Mode** property to **Copy**, then toggle the **Embed Textures** button.
-
-   <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-1.png" width="320" />
-
-4. Set the **Transform** > **Scale** to `.01`. This is required to maintain scale size for `.fbx` exports.
-
-   <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-2.png" width="320" />
-
-5. Click the **Export FBX** button.
+For the latest export settings for Blender, see [rigid accessory export settings](./export-settings.md).
 
 <Alert severity = 'success'>
 You've completed the exporting section of this tutorial. If desired, download a [reference sample](../../assets/art/accessories/creating-rigid/Rigid_Mask_Export.fbx) of this exported file for comparison. You can use this reference in the next importing step.
 </Alert>
 
-## Import
+## Import to Studio
 
 Studio's 3D Importer provides a quick and easy way to import third-party 3D assets into your projects. The importer provides object previews and error-checking to ensure that your asset meets Studio's general 3D requirements.
 
@@ -276,41 +255,11 @@ After successful fitting and converting, your 3D model should populate in your p
 
 </Alert>
 
-## Validation
+## Upload and publish
 
 After generating your `Class.Accessory` item, you can now begin the process of **publishing** the asset to the Marketplace. This step is optional and only applicable for creators who intend to sell their asset.
 
-The publishing process involves three major steps:
-
-1. **Validation** - Validation occurs locally at the start of the upload process. This ensures that the accessory meets all of the technical requirements before uploading.
-2. **Moderation** - After uploading, Studio sends the asset to the Moderation queue. Moderation typically completes within 24 hours.
-3. **Ready-for-sale** - Once the asset clears moderation, you can set your marketplace settings and enable the asset for sale.
-
-If you intend to sell the asset on the Marketplace, use the following steps to begin the validation and upload process:
-
-1. In the **Explorer** window, right-click your accessory object and select **Save to Roblox…** from the contextual menu.
-2. In the **Asset Configuration** window, set the **Content Type** to **Avatar Item**.
-3. Complete the following fields (you can adjust them later):
-
-   1. **Title**: The name of your accessory.
-   2. **Description**: A short description of your asset.
-   3. **Asset Category**: The type of accessory. This should match the Accessory Type selected during the [Fitting and conversion](../../art/accessories/creating-rigid/converting.md) process.
-   4. **Creator**: Use the dropdown to select if you'd like to publish this asset as an individual or as part of an associated group.
-
-      <img src="../../assets/art/accessories/creating-rigid/Validation-Successful.png" />
-
-4. After you select the **Asset Category**, Studio begins validating the asset to ensure that it matches Roblox's accessory technical requirements.
-   1. If set up correctly, the window displays a green Validation Successful confirmation.
-   2. If you see an error `Could not find a Part called Handle...`, you may have published your accessory as a MeshPart instead of a legacy accessory. See [Use the Accessory Fitting tool](#convert) step 6 for more information.
-   3. If other errors appear, see the error messages for specific details. Some errors may require going back to the modeling software and adjusting the asset.
-5. If the validation is successful, you can submit the asset to the upload and moderation queue for a fee. See [Fees and commissions](../../marketplace/marketplace-fees-and-commissions.md) for current fee information.
-
-## Publish
-
-After uploading your asset for moderation, you can check your asset's current moderation status in the **Avatar Items** tab of your [Creator Dashboard](https://create.roblox.com/dashboard/creations). Moderation can take up to 24 hours during which a placeholder icon is used on the creation page.
-
-After moderation completes, your item's publishing details become available to edit and enable for sale. See the following for an overview on the various sale options available:
-
+For additional information and instructions on this process, see [uploading and publishing instructions](../../marketplace/publish-to-marketplace.md).
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/swQW2VS9ZMA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br />
 

@@ -7,37 +7,48 @@ tags: []
 deprecation_message: ''
 items:
   - name: IsAvailable
-    summary: 'An ad is available to show the user.'
+    summary: |
+      An ad is available to show the user.
     value: 1
     tags: []
     deprecation_message: ''
   - name: DeviceIneligible
-    summary: 'The device is ineligible to receive ads.'
+    summary: |
+      The device is ineligible to receive ads.
     value: 2
     tags: []
     deprecation_message: ''
   - name: ExperienceIneligible
-    summary: 'The experience is ineligible to receive ads. Check if its eligibility has been revoked.'
+    summary: |
+      The experience is ineligible to receive ads. Check if its eligibility has
+      been revoked.
     value: 3
     tags: []
     deprecation_message: ''
   - name: InternalError
-    summary: 'An unspecified internal error occurred. Try fetching the ad again.'
+    summary: |
+      An unspecified internal error occurred. Try fetching the ad again.
     value: 4
     tags: []
     deprecation_message: ''
   - name: NoFill
-    summary: 'There are no ads available to fill your ad request. You might have hit the ad frequency limit.'
+    summary: |
+      There are no ads available to fill your ad request. You might have hit the
+      ad frequency limit.
     value: 5
     tags: []
     deprecation_message: ''
   - name: PlayerIneligible
-    summary: 'The user is ineligible to receive ads during this session. The user might be under 13 or located in a blocked region.'
+    summary: |
+      The user is ineligible to receive ads during this session. The user might
+      be under 13 or located in a blocked region.
     value: 6
     tags: []
     deprecation_message: ''
   - name: PublisherIneligible
-    summary: 'The publisher is ineligible to receive ads because they have not met the publisher eligibility requirements.'
+    summary: |
+      The publisher is ineligible to receive ads because they have not met the
+      publisher eligibility requirements.
     value: 7
     tags: []
     deprecation_message: ''

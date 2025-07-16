@@ -736,7 +736,7 @@ methods:
     parameters:
       - name: priority
         type: int
-        default:
+        default: ''
         summary: |
           The order of priority for functions added via this method. Higher
           values take precedence over lower values.
