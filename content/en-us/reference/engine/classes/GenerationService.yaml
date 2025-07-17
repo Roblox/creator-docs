@@ -4,8 +4,17 @@ memory_category: Instances
 summary: |
   Service that allows developers to generate 3D objects from text prompts.
 description: |
-  `GenerationService` allows developers to generate 3D objects from text
-  prompts. Mesh generation is a two step process:
+  `GenerationService` enables you to generate 3D objects from text prompts using
+  Roblox's Cube 3D foundation model. This enables the generation of objects like
+  environmental props in-experience.
+
+  You can control the output by providing an optional `Datatype.Vector3` to the
+  `SuggestedSize` parameter. Rather than simply rescaling the result, this
+  parameter guides the model during the creation process, influencing it to
+  create a mesh that attempts to match the proportions and size of your
+  specified bounding box.
+
+  Mesh generation is a two step process:
 
   1. `Class.GenerationService:GenerateMeshAsync()|GenerateMeshAsync()` starts
      the mesh generation process using a text prompt and other required
@@ -31,10 +40,10 @@ description: |
   `Class.EditableMesh` content and only on the client, it is not replicated to
   any other clients.
 
-  The following code samples illustrate this design pattern. See
-  [this demo experience](https://www.roblox.com/games/86571743597273/Mesh-Generation-Template)
-  for a more detailed example (click the **&ctdot;** button and **Edit in
-  Studio**).
+  See
+  [this demo experience](https://www.roblox.com/games/108838517877898/SuggestedSize-Generation-Template)
+  for a more detailed example including usage of the `SuggestedSize` option
+  (click the **&ctdot;** button and **Edit in Studio**).
 code_samples:
   - GenerationService-ServerSideMeshGeneration
   - GenerationService-ClientSideMeshGeneration
@@ -64,14 +73,14 @@ methods:
 
       **Error Codes**
 
-      | Error                                  | Description                                                              | Recommended developer action                                                         |
-      | -------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-      | Rate limit exceeded                    | The maximum number of mesh generations has been exceeded for the minute. | Wait until the rate limit resets.                                                    |
-      | Moderation failed                      | The mesh generation was flagged for moderation.                          | Review and modify the prompt to ensure it adheres to Roblox's moderation guidelines. |
-      | Internal server error                  | An unexpected issue occurred on the server.                              | Retry the request later or check server status for issues.                           |
-      | Character limit exceeded               | The input prompt length for this generation request exceeded the limit.  | Reduce the number of characters in the `Prompt` string of the `input` dictionary.    |
-      | Service overloaded                     | The service is overloaded.                                               | Retry the request later.                                                             |
-      | Size dimensions must be greater than 0 | Invalid size provided.                                                   | Change the size to above `0`.                                                        |
+      | Error                                      | Description                                                              | Recommended developer action                                                         |
+      | ------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+      | Rate limit exceeded                        | The maximum number of mesh generations has been exceeded for the minute. | Wait until the rate limit resets.                                                    |
+      | Moderation failed                          | The mesh generation was flagged for moderation.                          | Review and modify the prompt to ensure it adheres to Roblox's moderation guidelines. |
+      | Internal server error                      | An unexpected issue occurred on the server.                              | Retry the request later or check server status for issues.                           |
+      | Character limit exceeded                   | The input prompt length for this generation request exceeded the limit.  | Reduce the number of characters in the `Prompt` string of the `input` dictionary.    |
+      | Service overloaded                         | The service is overloaded.                                               | Retry the request later.                                                             |
+      | Size dimensions must all be greater than 0 | Invalid size provided.                                                   | Change the size to above `0`.                                                        |
     code_samples: []
     parameters:
       - name: inputs
@@ -92,11 +101,12 @@ methods:
         summary: |
           A dictionary for additional generation options to influence the
           result. The following key is supported:
-
-          - `SuggestedSize` — Optional `Datatype.Vector3` representing a size
-            guide for the generated asset. The service will attempt to create a
-            model with a size and proportion similar to the provided
-            `Datatype.Vector3`. This does not guarantee the final output size.
+          
+          - `SuggestedSize` — Optional
+          `Datatype.Vector3` representing a size guide for the generated asset.
+          The service will attempt to create a model with a size and proportion
+          similar to the provided `Datatype.Vector3`. This does not guarantee
+          the final output size.
       - name: intermediateResultCallback
         type: Function?
         default:
