@@ -79,7 +79,7 @@ methods:
           The `Class.Player` for which to check ownership.
       - name: gamePassId
         type: int64
-        default: ''
+        default:
         summary: |
           The _Asset ID_ of the game pass. This is **not** the _Game Pass ID_
           (see above).

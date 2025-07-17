@@ -45,7 +45,7 @@ methods:
     parameters:
       - name: index
         type: int
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Dictionary
@@ -89,7 +89,7 @@ methods:
     parameters:
       - name: time
         type: float
-        default: ''
+        default:
         summary: |
           Time at which the marker should be added.
       - name: marker
@@ -120,7 +120,7 @@ methods:
     parameters:
       - name: startingIndex
         type: int
-        default: ''
+        default:
         summary: |
           Index of the first marker to be removed in the MarkerCurve.
       - name: count

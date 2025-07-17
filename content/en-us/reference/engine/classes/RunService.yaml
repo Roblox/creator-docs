@@ -252,7 +252,7 @@ methods:
           `Class.RunService.Unbind|Unbind` if the binding is no longer needed.
       - name: priority
         type: int
-        default: ''
+        default:
         summary: |
           Priority of the binding as an integer; it determines when during the
           render step to call the custom function. The lower this number, the
@@ -564,7 +564,7 @@ events:
     parameters:
       - name: deltaTime
         type: double
-        default: ''
+        default:
         summary: |
           The time (in seconds) that has elapsed since the previous frame.
     tags: []
@@ -589,7 +589,7 @@ events:
     parameters:
       - name: deltaTimeSim
         type: double
-        default: ''
+        default:
         summary: |
           The time (in seconds) that the current frame has stepped the physics
           simulation, not accounting for physics throttling.
@@ -618,7 +618,7 @@ events:
     parameters:
       - name: deltaTimeSim
         type: double
-        default: ''
+        default:
         summary: |
           The time (in seconds) that the current frame has stepped animations.
     tags: []
@@ -653,7 +653,7 @@ events:
     parameters:
       - name: deltaTimeRender
         type: double
-        default: ''
+        default:
         summary: |
           The time (in seconds) that has elapsed since the previous frame.
     tags: []
@@ -681,7 +681,7 @@ events:
     parameters:
       - name: deltaTimeSim
         type: double
-        default: ''
+        default:
         summary: |
           The time (in seconds) that the current frame will step the physics
           simulation, not accounting for physics throttling.
@@ -705,7 +705,7 @@ events:
     parameters:
       - name: deltaTime
         type: double
-        default: ''
+        default:
         summary: |
           The time (in seconds) that has elapsed since the previous frame.
     tags: []
@@ -729,13 +729,13 @@ events:
     parameters:
       - name: time
         type: double
-        default: ''
+        default:
         summary: |
           The duration (in seconds) that `Class.RunService` has been running
           for.
       - name: deltaTime
         type: double
-        default: ''
+        default:
         summary: |
           The time (in seconds) that has elapsed since the previous frame.
     tags: []

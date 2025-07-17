@@ -22,35 +22,6 @@ tags: []
 deprecation_message: ''
 properties: []
 methods:
-  - name: WrapDeformer:SetCageMeshContent
-    summary: |
-      Sets the cage mesh used to deform against a sibling `Class.WrapTarget`
-      cage mesh.
-    description: |
-      Sets the cage mesh used to deform the parent `Class.MeshPart` in
-      conjunction with a sibling `Class.WrapTarget` cage mesh. The `content`
-      parameter should represent a Roblox mesh asset ID or an
-      `Class.EditableMesh` reference in your `Class.DataModel`.
-    code_samples: []
-    parameters:
-      - name: content
-        type: Content
-        default:
-        summary: ''
-      - name: cageOrigin
-        type: CoordinateFrame?
-        default:
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Avatar
-    writeCapabilities: []
   - name: WrapDeformer:CreateEditableMeshAsync
     summary: |
       Returns an `Class.EditableMesh` (currently unskinned) equivalent to the
@@ -96,6 +67,35 @@ methods:
         summary: ''
     tags:
       - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Avatar
+    writeCapabilities: []
+  - name: WrapDeformer:SetCageMeshContent
+    summary: |
+      Sets the cage mesh used to deform against a sibling `Class.WrapTarget`
+      cage mesh.
+    description: |
+      Sets the cage mesh used to deform the parent `Class.MeshPart` in
+      conjunction with a sibling `Class.WrapTarget` cage mesh. The `content`
+      parameter should represent a Roblox mesh asset ID or an
+      `Class.EditableMesh` reference in your `Class.DataModel`.
+    code_samples: []
+    parameters:
+      - name: content
+        type: Content
+        default:
+        summary: ''
+      - name: cageOrigin
+        type: CoordinateFrame?
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

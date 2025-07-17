@@ -188,7 +188,7 @@ methods:
     parameters:
       - name: frequency
         type: float
-        default: ''
+        default:
         summary: |
           The frequency, in hertz, to sample.
     returns:

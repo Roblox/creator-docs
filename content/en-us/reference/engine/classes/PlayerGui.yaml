@@ -143,7 +143,7 @@ methods:
     parameters:
       - name: transparency
         type: float
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -167,7 +167,7 @@ events:
     parameters:
       - name: transparency
         type: float
-        default: ''
+        default:
         summary: ''
     tags:
       - Deprecated

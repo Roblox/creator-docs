@@ -56,7 +56,7 @@ methods:
           the button.
       - name: text
         type: string
-        default: ''
+        default:
         summary: |
           Text displayed under the button icon. Optional. If this field is not
           provided, the **ID** will be used instead.

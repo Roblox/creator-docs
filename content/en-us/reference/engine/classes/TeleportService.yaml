@@ -109,6 +109,101 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: TeleportService:GetPlayerPlaceInstanceAsync
+    summary: |
+      Returns the `Class.DataModel.PlaceId|PlaceId` and
+      `Class.DataModel.JobId|JobId` of the server the user with the given
+      `Class.Player.UserId|UserId` is in provided it is in the same game as the
+      current place.
+    description: |
+      This function returns the `Class.DataModel.PlaceId|PlaceId` and
+      `Class.DataModel.JobId|JobId` of the server the user with the given
+      `Class.Player.UserId|UserId` is in, provided it is in the same game as the
+      current place.
+
+      Then, `Class.TeleportService:TeleportToPlaceInstance()` can be called with
+      this information to allow a user to join the target user's server.
+
+      Upon a successful lookup, the function returns the following values:
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>#</th>
+      			<th>Name</th>
+      			<th>Type</th>
+      			<th>Description</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+      		<tr>
+      			<td><b>1</b></td>
+         			<td> currentInstance</td>
+      			<td>bool</td>
+      			<td>A bool indicating if the user was found in the current instance</td>
+      		</tr>
+      		<tr>
+      			<td><b>2</b></td>
+         			<td>error</td>
+      			<td>string</td>
+      			<td>An error message in the event of the lookup failing</td>
+      		</tr>
+      		<tr>
+      			<td><b>3</b></td>
+         			<td>placeId</td>
+      			<td>int64</td>
+      			<td>The PlaceId of the server the user is in</td>
+      		</tr>
+      		<tr>
+      			<td><b>4</b></td>
+         			<td>instanceId</td>
+      			<td>string</td>
+      			<td>The JobId of the server the user is in</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+      If there is a problem during lookup, such as the user being offline, an
+      error is thrown. It is recommended that you wrap calls to this function in
+      `pcall`.
+
+      #### Limitations
+
+      You should be aware of the following limitations when using this function:
+
+      - This function can only be called by the server.
+      - This function may fail to return the correct information if the user is
+        teleporting.
+      - It is possible for this function to throw an error, hence developers
+        should wrap it in a `Global.LuaGlobals.pcall()` (see example below)
+      - As this function returns the JobId of the server and not the access code
+        returned by `Class.TeleportService:ReserveServer()`, the ID returned is
+        not appropriate for use with reserved servers.
+
+      #### Studio Limitation
+
+      Note that this service does not work during playtesting in Roblox Studio;
+      to test aspects of your experience using it, you must publish the
+      experience and play it in the Roblox application.
+    code_samples:
+      - following-a-player-in-a-universe
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: |
+          The `Class.Player.UserId` of the `Class.Player`.
+    returns:
+      - type: Tuple
+        summary: |
+          See the table above.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: TeleportService:GetTeleportSetting
     summary: |
       Retrieves a teleport setting saved using
@@ -182,6 +277,75 @@ methods:
         summary: |
           The value stored under the given key.
     tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: TeleportService:ReserveServer
+    summary: |
+      Returns an access code that can be used to teleport players to a reserved
+      server, along with the `Class.DataModel.PrivateServerId` for it.
+    description: |
+      This function returns an access code that can be used to teleport players
+      to a reserved server, along with the server's
+      `Class.DataModel.PrivateServerId`. It can only be called on the server.
+
+      #### Reserved Servers
+
+      You can access reserved servers using:
+
+      - `Class.TeleportService:TeleportAsync()` with the
+        `Class.TeleportOptions.ReservedServerAccessCode` parameter.
+      - `Class.TeleportService:TeleportToPrivateServer()`, with the access code
+        `ReserveServer` returns.
+        - A server is started when the access code is first used.
+        - Access codes remain valid indefinitely, meaning reserved servers can
+          still be joined if no game server is running (in this case a new
+          server will be started).
+
+      You can see if the current server is a reserved server by using the
+      following code:
+
+      ```lua
+      local isReserved = game.PrivateServerId ~= "" and game.PrivateServerOwnerId == 0
+      ```
+
+      The `Class.DataModel.PrivateServerId` is constant across all server
+      instances associated with the server access code, the
+      `Class.DataModel.JobId` is not.
+
+      #### Studio Limitation
+
+      Note that this service does not work during playtesting in Roblox Studio;
+      to test aspects of your experience using it, you must publish the
+      experience and play it in the Roblox application.
+
+      #### Cross-Platform Play
+
+      Players on Xbox and PlayStation with cross‑play disabled will arrive in a
+      different server than players with cross‑play enabled. This can cause
+      multiple game servers with the same
+      `Class.DataModel.PrivateServerId|PrivateServerId` to exist. You can use
+      `Class.DataModel.MatchmakingType` to differentiate these game servers.
+    code_samples:
+      - TeleportService-ReserveServer1
+      - teleportservice-teleport-to-a-reserved-server-via-chat
+    parameters:
+      - name: placeId
+        type: int64
+        default:
+        summary: |
+          The `Class.DataModel.PlaceId` of the place the reserved server is
+          being created for.
+    returns:
+      - type: Tuple
+        summary: |
+          The server access code required by
+          `Class.TeleportService:TeleportToPrivateServer()` and the
+          `Class.DataModel.PrivateServerId` for the reserved server.
+    tags:
+      - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -347,7 +511,7 @@ methods:
     parameters:
       - name: placeId
         type: int64
-        default: ''
+        default:
         summary: |
           The ID of the place to teleport to.
       - name: player
@@ -373,332 +537,6 @@ methods:
       - type: ()
         summary: ''
     tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: TeleportService:TeleportToPlaceInstance
-    summary: |
-      Teleports a `Class.Player` to the server instance associated with the
-      given _placeId_ and _instanceId_.
-    description: |
-      This method should not be used for new work; the numerous teleport
-      functions have been combined into a single method,
-      `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which should be
-      used instead.
-    code_samples:
-      - following-a-player-in-a-universe
-    parameters:
-      - name: placeId
-        type: int64
-        default: ''
-        summary: |
-          The ID of the place to teleport to.
-      - name: instanceId
-        type: string
-        default:
-        summary: |
-          The `Class.DataModel.JobId` of the server instance to teleport to.
-      - name: player
-        type: Instance
-        default: nil
-        summary: |
-          The `Class.Player` to teleport, if this function is being called from
-          the client this defaults to the `Class.Players.LocalPlayer`.
-      - name: spawnName
-        type: string
-        default: ''
-        summary: |
-          Optional name of the `Class.SpawnLocation` to spawn at.
-      - name: teleportData
-        type: Variant
-        default:
-        summary: |
-          Optional data to be passed to the destination place. Can be retrieved
-          using `Class.TeleportService:GetLocalPlayerTeleportData()`.
-      - name: customLoadingScreen
-        type: Instance
-        default: nil
-        summary: |
-          Optional custom loading screen to be placed in the `Class.CoreGui` at
-          the destination place. Can be retrieved using
-          `Class.TeleportService:GetArrivingTeleportGui()`.
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: TeleportService:TeleportToPrivateServer
-    summary: |
-      Teleport a group of `Class.Player|Players` to a reserved server created
-      using `Class.TeleportService:ReserveServer()`.
-    description: |
-      This method should not be used for new work; the numerous teleport
-      functions have been combined into a single method,
-      `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which should be
-      used instead.
-    code_samples:
-      - teleportservice-teleport-to-a-reserved-server-via-chat
-      - TeleportService-ReserveServer1
-    parameters:
-      - name: placeId
-        type: int64
-        default: ''
-        summary: |
-          The ID of the place to teleport to.
-      - name: reservedServerAccessCode
-        type: string
-        default:
-        summary: |
-          The reserved server access code returned by
-          `Class.TeleportService:ReserveServer()`.
-      - name: players
-        type: Instances
-        default:
-        summary: |
-          An array of `Class.Player|Players` to teleport.
-      - name: spawnName
-        type: string
-        default: ''
-        summary: |
-          Optional name of the `Class.SpawnLocation` to spawn at.
-      - name: teleportData
-        type: Variant
-        default:
-        summary: |
-          Optional data to be passed to the destination place. Can be retrieved
-          using `Class.TeleportService:GetLocalPlayerTeleportData()`.
-      - name: customLoadingScreen
-        type: Instance
-        default: nil
-        summary: |
-          Optional custom loading screen to be placed in the `Class.CoreGui` at
-          the destination place. Can be retrieved using
-          `Class.TeleportService:GetArrivingTeleportGui()`.
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: TeleportService:TeleportToSpawnByName
-    summary: |
-      A variant of `Class.TeleportService:Teleport()` that causes the
-      `Class.Player` to spawn at a `Class.SpawnLocation` of the given name at
-      the destination place.
-    description: |
-      This method should not be used for new work; the numerous teleport
-      functions have been combined into a single method,
-      `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which should be
-      used instead.
-    code_samples:
-      - TeleportService-TeleportToSpawnByName1
-    parameters:
-      - name: placeId
-        type: int64
-        default: ''
-        summary: |
-          The ID of the place to teleport to.
-      - name: spawnName
-        type: string
-        default:
-        summary: |
-          The name of the `Class.SpawnLocation` to spawn at.
-      - name: player
-        type: Instance
-        default: nil
-        summary: |
-          The `Class.Player` to teleport, if this function is being called from
-          the client this defaults to the `Class.Players.LocalPlayer`.
-      - name: teleportData
-        type: Variant
-        default:
-        summary: |
-          Optional data to be passed to the destination place. Can be retrieved
-          using `Class.TeleportService:GetLocalPlayerTeleportData()`.
-      - name: customLoadingScreen
-        type: Instance
-        default: nil
-        summary: |
-          Optional custom loading screen to be placed in the `Class.CoreGui` at
-          the destination place. Can be retrieved using
-          `Class.TeleportService:GetArrivingTeleportGui()`.
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: TeleportService:GetPlayerPlaceInstanceAsync
-    summary: |
-      Returns the `Class.DataModel.PlaceId|PlaceId` and
-      `Class.DataModel.JobId|JobId` of the server the user with the given
-      `Class.Player.UserId|UserId` is in provided it is in the same game as the
-      current place.
-    description: |
-      This function returns the `Class.DataModel.PlaceId|PlaceId` and
-      `Class.DataModel.JobId|JobId` of the server the user with the given
-      `Class.Player.UserId|UserId` is in, provided it is in the same game as the
-      current place.
-
-      Then, `Class.TeleportService:TeleportToPlaceInstance()` can be called with
-      this information to allow a user to join the target user's server.
-
-      Upon a successful lookup, the function returns the following values:
-
-      <table>
-      	<thead>
-      		<tr>
-      			<th>#</th>
-      			<th>Name</th>
-      			<th>Type</th>
-      			<th>Description</th>
-      		</tr>
-      	</thead>
-      	<tbody>
-      		<tr>
-      			<td><b>1</b></td>
-         			<td> currentInstance</td>
-      			<td>bool</td>
-      			<td>A bool indicating if the user was found in the current instance</td>
-      		</tr>
-      		<tr>
-      			<td><b>2</b></td>
-         			<td>error</td>
-      			<td>string</td>
-      			<td>An error message in the event of the lookup failing</td>
-      		</tr>
-      		<tr>
-      			<td><b>3</b></td>
-         			<td>placeId</td>
-      			<td>int64</td>
-      			<td>The PlaceId of the server the user is in</td>
-      		</tr>
-      		<tr>
-      			<td><b>4</b></td>
-         			<td>instanceId</td>
-      			<td>string</td>
-      			<td>The JobId of the server the user is in</td>
-      		</tr>
-      	</tbody>
-      </table>
-
-      If there is a problem during lookup, such as the user being offline, an
-      error is thrown. It is recommended that you wrap calls to this function in
-      `pcall`.
-
-      #### Limitations
-
-      You should be aware of the following limitations when using this function:
-
-      - This function can only be called by the server.
-      - This function may fail to return the correct information if the user is
-        teleporting.
-      - It is possible for this function to throw an error, hence developers
-        should wrap it in a `Global.LuaGlobals.pcall()` (see example below)
-      - As this function returns the JobId of the server and not the access code
-        returned by `Class.TeleportService:ReserveServer()`, the ID returned is
-        not appropriate for use with reserved servers.
-
-      #### Studio Limitation
-
-      Note that this service does not work during playtesting in Roblox Studio;
-      to test aspects of your experience using it, you must publish the
-      experience and play it in the Roblox application.
-    code_samples:
-      - following-a-player-in-a-universe
-    parameters:
-      - name: userId
-        type: int64
-        default: ''
-        summary: |
-          The `Class.Player.UserId` of the `Class.Player`.
-    returns:
-      - type: Tuple
-        summary: |
-          See the table above.
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: TeleportService:ReserveServer
-    summary: |
-      Returns an access code that can be used to teleport players to a reserved
-      server, along with the `Class.DataModel.PrivateServerId` for it.
-    description: |
-      This function returns an access code that can be used to teleport players
-      to a reserved server, along with the server's
-      `Class.DataModel.PrivateServerId`. It can only be called on the server.
-
-      #### Reserved Servers
-
-      You can access reserved servers using:
-
-      - `Class.TeleportService:TeleportAsync()` with the
-        `Class.TeleportOptions.ReservedServerAccessCode` parameter.
-      - `Class.TeleportService:TeleportToPrivateServer()`, with the access code
-        `ReserveServer` returns.
-        - A server is started when the access code is first used.
-        - Access codes remain valid indefinitely, meaning reserved servers can
-          still be joined if no game server is running (in this case a new
-          server will be started).
-
-      You can see if the current server is a reserved server by using the
-      following code:
-
-      ```lua
-      local isReserved = game.PrivateServerId ~= "" and game.PrivateServerOwnerId == 0
-      ```
-
-      The `Class.DataModel.PrivateServerId` is constant across all server
-      instances associated with the server access code, the
-      `Class.DataModel.JobId` is not.
-
-      #### Studio Limitation
-
-      Note that this service does not work during playtesting in Roblox Studio;
-      to test aspects of your experience using it, you must publish the
-      experience and play it in the Roblox application.
-
-      #### Cross-Platform Play
-
-      Players on Xbox and PlayStation with cross‑play disabled will arrive in a
-      different server than players with cross‑play enabled. This can cause
-      multiple game servers with the same
-      `Class.DataModel.PrivateServerId|PrivateServerId` to exist. You can use
-      `Class.DataModel.MatchmakingType` to differentiate these game servers.
-    code_samples:
-      - TeleportService-ReserveServer1
-      - teleportservice-teleport-to-a-reserved-server-via-chat
-    parameters:
-      - name: placeId
-        type: int64
-        default: ''
-        summary: |
-          The `Class.DataModel.PlaceId` of the place the reserved server is
-          being created for.
-    returns:
-      - type: Tuple
-        summary: |
-          The server access code required by
-          `Class.TeleportService:TeleportToPrivateServer()` and the
-          `Class.DataModel.PrivateServerId` for the reserved server.
-    tags:
-      - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -775,7 +613,7 @@ methods:
     parameters:
       - name: placeId
         type: int64
-        default: ''
+        default:
         summary: |
           The place ID the player(s) should be teleported to.
       - name: players
@@ -819,7 +657,7 @@ methods:
     parameters:
       - name: placeId
         type: int64
-        default: ''
+        default:
         summary: |
           The ID of the place to teleport to.
       - name: players
@@ -847,6 +685,168 @@ methods:
           `Class.Player|Players` were teleported to.
     tags:
       - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: TeleportService:TeleportToPlaceInstance
+    summary: |
+      Teleports a `Class.Player` to the server instance associated with the
+      given _placeId_ and _instanceId_.
+    description: |
+      This method should not be used for new work; the numerous teleport
+      functions have been combined into a single method,
+      `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which should be
+      used instead.
+    code_samples:
+      - following-a-player-in-a-universe
+    parameters:
+      - name: placeId
+        type: int64
+        default:
+        summary: |
+          The ID of the place to teleport to.
+      - name: instanceId
+        type: string
+        default:
+        summary: |
+          The `Class.DataModel.JobId` of the server instance to teleport to.
+      - name: player
+        type: Instance
+        default: nil
+        summary: |
+          The `Class.Player` to teleport, if this function is being called from
+          the client this defaults to the `Class.Players.LocalPlayer`.
+      - name: spawnName
+        type: string
+        default:
+        summary: |
+          Optional name of the `Class.SpawnLocation` to spawn at.
+      - name: teleportData
+        type: Variant
+        default:
+        summary: |
+          Optional data to be passed to the destination place. Can be retrieved
+          using `Class.TeleportService:GetLocalPlayerTeleportData()`.
+      - name: customLoadingScreen
+        type: Instance
+        default: nil
+        summary: |
+          Optional custom loading screen to be placed in the `Class.CoreGui` at
+          the destination place. Can be retrieved using
+          `Class.TeleportService:GetArrivingTeleportGui()`.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: TeleportService:TeleportToPrivateServer
+    summary: |
+      Teleport a group of `Class.Player|Players` to a reserved server created
+      using `Class.TeleportService:ReserveServer()`.
+    description: |
+      This method should not be used for new work; the numerous teleport
+      functions have been combined into a single method,
+      `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which should be
+      used instead.
+    code_samples:
+      - teleportservice-teleport-to-a-reserved-server-via-chat
+      - TeleportService-ReserveServer1
+    parameters:
+      - name: placeId
+        type: int64
+        default:
+        summary: |
+          The ID of the place to teleport to.
+      - name: reservedServerAccessCode
+        type: string
+        default:
+        summary: |
+          The reserved server access code returned by
+          `Class.TeleportService:ReserveServer()`.
+      - name: players
+        type: Instances
+        default:
+        summary: |
+          An array of `Class.Player|Players` to teleport.
+      - name: spawnName
+        type: string
+        default:
+        summary: |
+          Optional name of the `Class.SpawnLocation` to spawn at.
+      - name: teleportData
+        type: Variant
+        default:
+        summary: |
+          Optional data to be passed to the destination place. Can be retrieved
+          using `Class.TeleportService:GetLocalPlayerTeleportData()`.
+      - name: customLoadingScreen
+        type: Instance
+        default: nil
+        summary: |
+          Optional custom loading screen to be placed in the `Class.CoreGui` at
+          the destination place. Can be retrieved using
+          `Class.TeleportService:GetArrivingTeleportGui()`.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: TeleportService:TeleportToSpawnByName
+    summary: |
+      A variant of `Class.TeleportService:Teleport()` that causes the
+      `Class.Player` to spawn at a `Class.SpawnLocation` of the given name at
+      the destination place.
+    description: |
+      This method should not be used for new work; the numerous teleport
+      functions have been combined into a single method,
+      `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which should be
+      used instead.
+    code_samples:
+      - TeleportService-TeleportToSpawnByName1
+    parameters:
+      - name: placeId
+        type: int64
+        default:
+        summary: |
+          The ID of the place to teleport to.
+      - name: spawnName
+        type: string
+        default:
+        summary: |
+          The name of the `Class.SpawnLocation` to spawn at.
+      - name: player
+        type: Instance
+        default: nil
+        summary: |
+          The `Class.Player` to teleport, if this function is being called from
+          the client this defaults to the `Class.Players.LocalPlayer`.
+      - name: teleportData
+        type: Variant
+        default:
+        summary: |
+          Optional data to be passed to the destination place. Can be retrieved
+          using `Class.TeleportService:GetLocalPlayerTeleportData()`.
+      - name: customLoadingScreen
+        type: Instance
+        default: nil
+        summary: |
+          Optional custom loading screen to be placed in the `Class.CoreGui` at
+          the destination place. Can be retrieved using
+          `Class.TeleportService:GetArrivingTeleportGui()`.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -1011,7 +1011,7 @@ events:
           The message provided to the player explaining the teleport failure.
       - name: placeId
         type: int64
-        default: ''
+        default:
         summary: |
           The original target place ID of the teleport.
       - name: teleportOptions

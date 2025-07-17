@@ -12,6 +12,25 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: RecommendationService:GenerateItemListAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: generateRecommendationItemListRequest
+        type: Dictionary
+        default:
+        summary: ''
+    returns:
+      - type: RecommendationPages
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: RecommendationService:LogActionEvent
     summary: ''
     description: ''
@@ -72,30 +91,15 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: RecommendationService:GenerateItemListAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: generateRecommendationItemListRequest
-        type: Dictionary
-        default:
-        summary: ''
-    returns:
-      - type: RecommendationPages
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: RecommendationService:RegisterItemAsync
     summary: ''
     description: ''
     code_samples: []
     parameters:
+      - name: player
+        type: Player
+        default:
+        summary: ''
       - name: registerRecommendationItemsRequest
         type: Dictionary
         default:

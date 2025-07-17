@@ -185,6 +185,111 @@ properties:
       - UI
     writeCapabilities: []
 methods:
+  - name: StarterGui:GetCore
+    summary: |
+      Returns a variable that has been specified by a Roblox core script.
+    description: |
+      This method returns data set or made available by Roblox's core scripts.
+      The first and only parameter is a string that selects the information to
+      be fetched. The following sections describe the strings and the data they
+      return by this function.
+
+      Calling this method may yield. Many of these also register an equivalent
+      `Class.StarterGui:SetCore()|SetCore()` function (these are marked with an
+      asterisk).
+
+      ##### PointsNotificationsActive \*
+
+      Returns `true` if player point notifications are enabled.
+
+      ##### BadgesNotificationsActive \*
+
+      Returns `true` if badge notifications are enabled.
+
+      ##### AvatarContextMenuEnabled \*
+
+      Returns `true` if the
+      [Avatar Context Menu](../../../players/avatar-context-menu.md) is enabled.
+
+      ##### ChatActive \*
+
+      Returns whether the chat is active or not. This is indicated by the
+      selection state of the top bar's chat icon.
+
+      ##### ChatWindowSize \*
+
+      Returns the size of the chat window as a `Datatype.UDim2`.
+
+      ##### ChatWindowPosition \*
+
+      Returns the size of the chat window as a `Datatype.UDim2`.
+
+      ##### ChatBarDisabled \*
+
+      Returns `true` if the chat bar is disabled.
+
+      ##### GetBlockedUserIds
+
+      Returns a list of `Class.Player.UserId|UserIds` associated with users that
+      have been blocked by the local player.
+
+      ##### PlayerBlockedEvent
+
+      Returns a `Class.BindableEvent` that is fired whenever a player is blocked
+      by the local player.
+
+      ##### PlayerUnblockedEvent
+
+      Returns a `Class.BindableEvent` that is fired whenever a player is
+      unblocked by the local player.
+
+      ##### PlayerMutedEvent
+
+      Returns a `Class.BindableEvent` that is fired whenever a player is muted
+      by the local player.
+
+      ##### PlayerUnmutedEvent
+
+      Returns a `Class.BindableEvent` that is fired whenever a player is unmuted
+      by the local player.
+
+      ##### PlayerFriendedEvent
+
+      Returns a `Class.BindableEvent` that is fired whenever a player is
+      connected by the local player.
+
+      ##### PlayerUnfriendedEvent
+
+      Returns a `Class.BindableEvent` that is fired whenever a player is
+      unconnected by the local player.
+
+      ##### DevConsoleVisible \*
+
+      Returns `true` if the
+      [Developer Console](../../../studio/developer-console.md) is visible.
+
+      ##### VRRotationIntensity
+
+      Returns a string describing the camera rotation sensitivity in VR: `Low`,
+      `High` and `Smooth`. This will not be available unless
+      `Class.VRService.VREnabled` is `true`.
+    code_samples: []
+    parameters:
+      - name: parameterName
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Variant
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: StarterGui:GetCoreGuiEnabled
     summary: |
       Returns whether the given `Enum.CoreGuiType`is enabled, or if it has been
@@ -804,111 +909,6 @@ methods:
       - type: ()
         summary: ''
     tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - UI
-    writeCapabilities: []
-  - name: StarterGui:GetCore
-    summary: |
-      Returns a variable that has been specified by a Roblox core script.
-    description: |
-      This method returns data set or made available by Roblox's core scripts.
-      The first and only parameter is a string that selects the information to
-      be fetched. The following sections describe the strings and the data they
-      return by this function.
-
-      Calling this method may yield. Many of these also register an equivalent
-      `Class.StarterGui:SetCore()|SetCore()` function (these are marked with an
-      asterisk).
-
-      ##### PointsNotificationsActive \*
-
-      Returns `true` if player point notifications are enabled.
-
-      ##### BadgesNotificationsActive \*
-
-      Returns `true` if badge notifications are enabled.
-
-      ##### AvatarContextMenuEnabled \*
-
-      Returns `true` if the
-      [Avatar Context Menu](../../../players/avatar-context-menu.md) is enabled.
-
-      ##### ChatActive \*
-
-      Returns whether the chat is active or not. This is indicated by the
-      selection state of the top bar's chat icon.
-
-      ##### ChatWindowSize \*
-
-      Returns the size of the chat window as a `Datatype.UDim2`.
-
-      ##### ChatWindowPosition \*
-
-      Returns the size of the chat window as a `Datatype.UDim2`.
-
-      ##### ChatBarDisabled \*
-
-      Returns `true` if the chat bar is disabled.
-
-      ##### GetBlockedUserIds
-
-      Returns a list of `Class.Player.UserId|UserIds` associated with users that
-      have been blocked by the local player.
-
-      ##### PlayerBlockedEvent
-
-      Returns a `Class.BindableEvent` that is fired whenever a player is blocked
-      by the local player.
-
-      ##### PlayerUnblockedEvent
-
-      Returns a `Class.BindableEvent` that is fired whenever a player is
-      unblocked by the local player.
-
-      ##### PlayerMutedEvent
-
-      Returns a `Class.BindableEvent` that is fired whenever a player is muted
-      by the local player.
-
-      ##### PlayerUnmutedEvent
-
-      Returns a `Class.BindableEvent` that is fired whenever a player is unmuted
-      by the local player.
-
-      ##### PlayerFriendedEvent
-
-      Returns a `Class.BindableEvent` that is fired whenever a player is
-      connected by the local player.
-
-      ##### PlayerUnfriendedEvent
-
-      Returns a `Class.BindableEvent` that is fired whenever a player is
-      unconnected by the local player.
-
-      ##### DevConsoleVisible \*
-
-      Returns `true` if the
-      [Developer Console](../../../studio/developer-console.md) is visible.
-
-      ##### VRRotationIntensity
-
-      Returns a string describing the camera rotation sensitivity in VR: `Low`,
-      `High` and `Smooth`. This will not be available unless
-      `Class.VRService.VREnabled` is `true`.
-    code_samples: []
-    parameters:
-      - name: parameterName
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: Variant
-        summary: ''
-    tags:
-      - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

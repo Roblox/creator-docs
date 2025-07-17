@@ -269,7 +269,7 @@ methods:
     parameters:
       - name: deltaTime
         type: float
-        default: ''
+        default:
         summary: |
           The amount of time in seconds animation playback is to be incremented
           by.

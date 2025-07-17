@@ -149,7 +149,7 @@ methods:
     parameters:
       - name: bodyId
         type: int
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Vector3
@@ -170,7 +170,7 @@ methods:
     parameters:
       - name: bodyId
         type: int
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Vector3

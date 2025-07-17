@@ -1133,6 +1133,20 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: Workspace:ExperimentalSolverIsEnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: boolean
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: LocalUserSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace:GetNumAwakeParts
     summary: |
       Returns the number of `Class.BasePart|BaseParts` that are deemed

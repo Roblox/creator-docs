@@ -31,28 +31,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: ConfigService:SetTestingValue
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: key
-        type: string
-        default:
-        summary: ''
-      - name: value
-        type: Variant
-        default:
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: ConfigService:GetConfigAsync
     summary: ''
     description: ''
@@ -82,6 +60,28 @@ methods:
         summary: ''
     tags:
       - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: ConfigService:SetTestingValue
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+      - name: value
+        type: Variant
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

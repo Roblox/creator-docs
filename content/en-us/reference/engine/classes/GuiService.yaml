@@ -345,6 +345,25 @@ properties:
       can_save: false
     capabilities: []
     writeCapabilities: []
+  - name: GuiService.ViewportSizeInMM
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector2
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: GuiService:AddSelectionParent
     summary: |
@@ -661,7 +680,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default: ''
+        default:
         summary: |
           The `Class.Player.UserId|UserId` of the player to inspect.
     returns:

@@ -756,7 +756,7 @@ methods:
     parameters:
       - name: fingerIndex
         type: int
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Vector3
@@ -775,7 +775,7 @@ methods:
     parameters:
       - name: fingerIndex
         type: int
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Vector3
@@ -794,7 +794,7 @@ methods:
     parameters:
       - name: fingerIndex
         type: int
-        default: ''
+        default:
         summary: ''
       - name: control
         type: Vector3
@@ -817,7 +817,7 @@ methods:
     parameters:
       - name: fingerIndex
         type: int
-        default: ''
+        default:
         summary: ''
       - name: point
         type: Vector3

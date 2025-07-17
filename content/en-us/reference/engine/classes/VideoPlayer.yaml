@@ -256,6 +256,21 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: VideoPlayer:LoadAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: AssetFetchStatus
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: VideoPlayer:Pause
     summary: ''
     description: ''
@@ -293,21 +308,6 @@ methods:
       - type: ()
         summary: ''
     tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: VideoPlayer:LoadAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: AssetFetchStatus
-        summary: ''
-    tags:
-      - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

@@ -57,55 +57,6 @@ properties:
       - Basic
     writeCapabilities: []
 methods:
-  - name: Path:GetPointCoordinates
-    summary: |
-      Returns a table of `Class.Path` instances.
-    description: |
-      This function returns a table of `Class.Path` instances.
-    code_samples: []
-    parameters: []
-    returns:
-      - type: Array
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This item has been superseded by `Class.Path:GetWaypoints()` which should
-      be used in all new work instead.
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Basic
-    writeCapabilities: []
-  - name: Path:GetWaypoints
-    summary: |
-      Returns an array of points in the path.
-    description: |
-      This function returns an array of all the
-      `Datatype.PathWaypoint|PathWaypoints` in a `Class.Path`, as computed by
-      `Class.Path:ComputeAsync()`.
-
-      Each waypoint in the array specifies a `Datatype.Vector3` position and
-      `Enum.PathWaypointAction|action` to take when this PathWaypoint is
-      reached. The array is arranged in the order of waypoints from the path
-      start to path end.
-
-      If a path could not be computed, this function will return an empty array.
-    code_samples:
-      - Path-GetWaypoints1
-    parameters: []
-    returns:
-      - type: Array
-        summary: |
-          An array of `Datatype.PathWaypoint|PathWaypoints` ordered from path
-          start to path end.
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Basic
-    writeCapabilities: []
   - name: Path:CheckOcclusionAsync
     summary: |
       Checks if a path is blocked starting at a specific waypoint.
@@ -120,7 +71,7 @@ methods:
     parameters:
       - name: start
         type: int
-        default: ''
+        default:
         summary: ''
     returns:
       - type: int
@@ -172,6 +123,55 @@ methods:
     capabilities:
       - Basic
     writeCapabilities: []
+  - name: Path:GetPointCoordinates
+    summary: |
+      Returns a table of `Class.Path` instances.
+    description: |
+      This function returns a table of `Class.Path` instances.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by `Class.Path:GetWaypoints()` which should
+      be used in all new work instead.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Basic
+    writeCapabilities: []
+  - name: Path:GetWaypoints
+    summary: |
+      Returns an array of points in the path.
+    description: |
+      This function returns an array of all the
+      `Datatype.PathWaypoint|PathWaypoints` in a `Class.Path`, as computed by
+      `Class.Path:ComputeAsync()`.
+
+      Each waypoint in the array specifies a `Datatype.Vector3` position and
+      `Enum.PathWaypointAction|action` to take when this PathWaypoint is
+      reached. The array is arranged in the order of waypoints from the path
+      start to path end.
+
+      If a path could not be computed, this function will return an empty array.
+    code_samples:
+      - Path-GetWaypoints1
+    parameters: []
+    returns:
+      - type: Array
+        summary: |
+          An array of `Datatype.PathWaypoint|PathWaypoints` ordered from path
+          start to path end.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Basic
+    writeCapabilities: []
 events:
   - name: Path.Blocked
     summary: |
@@ -187,7 +187,7 @@ events:
     parameters:
       - name: blockedWaypointIdx
         type: int
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''
@@ -209,7 +209,7 @@ events:
     parameters:
       - name: unblockedWaypointIdx
         type: int
-        default: ''
+        default:
         summary: ''
     tags: []
     deprecation_message: ''

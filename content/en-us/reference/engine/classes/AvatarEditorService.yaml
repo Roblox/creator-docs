@@ -42,221 +42,6 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
-  - name: AvatarEditorService:GetAccessoryType
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: avatarAssetType
-        type: AvatarAssetType
-        default:
-        summary: ''
-    returns:
-      - type: AccessoryType
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: AvatarEditorService:PromptAllowInventoryReadAccess
-    summary: |
-      Prompts the `Class.Players.LocalPlayer` to allow the developer to read
-      what items the user has in their inventory and other avatar editor related
-      information.
-    description: |
-      Prompts the `Class.Players.LocalPlayer` to allow the developer to read
-      what items the user has in their inventory and other avatar editor related
-      information. The prompt needs to be confirmed by the user for the
-      developer to use `Class.AvatarEditorService:GetInventory()`,
-      `Class.AvatarEditorService:GetOutfits()` and
-      `Class.AvatarEditorService:GetFavorite()`. Permission does not persist
-      between sessions.
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: AvatarEditorService:PromptCreateOutfit
-    summary: |
-      Prompts the `Class.Players.LocalPlayer` to save the given
-      `Class.HumanoidDescription` as an outfit.
-    description: |
-      Prompts the `Class.Players.LocalPlayer` to save the given
-      `Class.HumanoidDescription` as an outfit. Does not yield. The result can
-      be retrieved by listening to the
-      `Class.AvatarEditorService.PromptCreateOutfitCompleted` event.
-    code_samples: []
-    parameters:
-      - name: outfit
-        type: HumanoidDescription
-        default:
-        summary: |
-          The `Outfit` that the player will be prompted to created.
-      - name: rigType
-        type: HumanoidRigType
-        default:
-        summary: |
-          The `Enum.RigType` that the outfit will be created for if the player
-          confirms the prompt.
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: AvatarEditorService:PromptDeleteOutfit
-    summary: |
-      Prompts the `Class.Players.LocalPlayer` to delete the given outfit.
-    description: |
-      Prompts the `Class.Players.LocalPlayer` to delete the given outfit. Does
-      not yield. The result can be retrieved by listening to the
-      `Class.AvatarEditorService.PromptDeleteOutfitCompleted` event.
-    code_samples: []
-    parameters:
-      - name: outfitId
-        type: int64
-        default: ''
-        summary: |
-          The outfitId of the outfit to delete.
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: AvatarEditorService:PromptRenameOutfit
-    summary: |
-      Prompts the `Class.Players.LocalPlayer` to rename the given outfit.
-    description: |
-      Prompts the `Class.Players.LocalPlayer` to rename the given outfit. Does
-      not yield. The result can be retrieved by listening to the
-      `Class.AvatarEditorService.PromptRenameOutfitCompleted` event.
-    code_samples: []
-    parameters:
-      - name: outfitId
-        type: int64
-        default: ''
-        summary: |
-          The outfitId of the outfit to rename.
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: AvatarEditorService:PromptSaveAvatar
-    summary: |
-      Prompts the `Class.Players.LocalPlayer` to update their avatar based on
-      the given `Class.HumanoidDescription` and `Enum.RigType` of R6 or R15.
-    description: |
-      This function prompts the `Class.Players.LocalPlayer` to update their
-      avatar based on the given `Class.HumanoidDescription` and `Enum.RigType`
-      (R6 or R15). Does not yield and can get the result by listening to the
-      PromptSaveAvatarCompleted event. This is similar to how other prompts such
-      as PromptPurchase work.
-    code_samples: []
-    parameters:
-      - name: humanoidDescription
-        type: HumanoidDescription
-        default:
-        summary: |
-          The given `Class.HumanoidDescription` being prompted to save.
-      - name: rigType
-        type: HumanoidRigType
-        default:
-        summary: |
-          The `Enum.RigType` that the avatar will be saved for if the player
-          confirms the prompt.
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: AvatarEditorService:PromptSetFavorite
-    summary: |
-      Prompts the `Class.Players.LocalPlayer` to favorite or unfavorite the
-      given asset or bundle.
-    description: |
-      This function prompts the `Class.Players.LocalPlayer` to favorite or
-      unfavorite the given asset or bundle.
-    code_samples: []
-    parameters:
-      - name: itemId
-        type: int64
-        default: ''
-        summary: |
-          The ItemId of the item being prompted to favorite.
-      - name: itemType
-        type: AvatarItemType
-        default:
-        summary: |
-          The type of item being prompted to favorite.
-      - name: shouldFavorite
-        type: boolean
-        default:
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: AvatarEditorService:PromptUpdateOutfit
-    summary: |
-      Prompts the `Class.Players.LocalPlayer` to update the given outfit.
-    description: |
-      Prompts the `Class.Players.LocalPlayer` to update the given outfit with
-      the given HumanoidDescription.
-    code_samples: []
-    parameters:
-      - name: outfitId
-        type: int64
-        default: ''
-        summary: |
-          The outfitId of the outfit to update.
-      - name: updatedOutfit
-        type: HumanoidDescription
-        default:
-        summary: |
-          A HumanoidDescription that represents the new outfit data.
-      - name: rigType
-        type: HumanoidRigType
-        default:
-        summary: |
-          The HumanoidRigType to update the outfit to.
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService:CheckApplyDefaultClothing
     summary: |
       Used to apply default clothing to the `Class.HumanoidDescription` if
@@ -302,6 +87,24 @@ methods:
         summary: ''
     tags:
       - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AvatarEditorService:GetAccessoryType
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: avatarAssetType
+        type: AvatarAssetType
+        default:
+        summary: ''
+    returns:
+      - type: AccessoryType
+        summary: ''
+    tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -442,7 +245,7 @@ methods:
     parameters:
       - name: itemId
         type: int64
-        default: ''
+        default:
         summary: |
           The ID of the specified asset or bundle.
       - name: itemType
@@ -569,7 +372,7 @@ methods:
     parameters:
       - name: itemId
         type: int64
-        default: ''
+        default:
         summary: |
           The ID of the item whose details are being retrieved.
       - name: itemType
@@ -639,7 +442,7 @@ methods:
     parameters:
       - name: outfitId
         type: int64
-        default: ''
+        default:
         summary: |
           The ID of the outfit whose details are being retrieved.
     returns:
@@ -836,7 +639,7 @@ methods:
     parameters:
       - name: bundleId
         type: int64
-        default: ''
+        default:
         summary: |
           A list of recommended bundles.
     returns:
@@ -845,6 +648,203 @@ methods:
           The bundle ID that the recommended bundles will be returned for.
     tags:
       - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AvatarEditorService:PromptAllowInventoryReadAccess
+    summary: |
+      Prompts the `Class.Players.LocalPlayer` to allow the developer to read
+      what items the user has in their inventory and other avatar editor related
+      information.
+    description: |
+      Prompts the `Class.Players.LocalPlayer` to allow the developer to read
+      what items the user has in their inventory and other avatar editor related
+      information. The prompt needs to be confirmed by the user for the
+      developer to use `Class.AvatarEditorService:GetInventory()`,
+      `Class.AvatarEditorService:GetOutfits()` and
+      `Class.AvatarEditorService:GetFavorite()`. Permission does not persist
+      between sessions.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AvatarEditorService:PromptCreateOutfit
+    summary: |
+      Prompts the `Class.Players.LocalPlayer` to save the given
+      `Class.HumanoidDescription` as an outfit.
+    description: |
+      Prompts the `Class.Players.LocalPlayer` to save the given
+      `Class.HumanoidDescription` as an outfit. Does not yield. The result can
+      be retrieved by listening to the
+      `Class.AvatarEditorService.PromptCreateOutfitCompleted` event.
+    code_samples: []
+    parameters:
+      - name: outfit
+        type: HumanoidDescription
+        default:
+        summary: |
+          The `Outfit` that the player will be prompted to created.
+      - name: rigType
+        type: HumanoidRigType
+        default:
+        summary: |
+          The `Enum.RigType` that the outfit will be created for if the player
+          confirms the prompt.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AvatarEditorService:PromptDeleteOutfit
+    summary: |
+      Prompts the `Class.Players.LocalPlayer` to delete the given outfit.
+    description: |
+      Prompts the `Class.Players.LocalPlayer` to delete the given outfit. Does
+      not yield. The result can be retrieved by listening to the
+      `Class.AvatarEditorService.PromptDeleteOutfitCompleted` event.
+    code_samples: []
+    parameters:
+      - name: outfitId
+        type: int64
+        default:
+        summary: |
+          The outfitId of the outfit to delete.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AvatarEditorService:PromptRenameOutfit
+    summary: |
+      Prompts the `Class.Players.LocalPlayer` to rename the given outfit.
+    description: |
+      Prompts the `Class.Players.LocalPlayer` to rename the given outfit. Does
+      not yield. The result can be retrieved by listening to the
+      `Class.AvatarEditorService.PromptRenameOutfitCompleted` event.
+    code_samples: []
+    parameters:
+      - name: outfitId
+        type: int64
+        default:
+        summary: |
+          The outfitId of the outfit to rename.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AvatarEditorService:PromptSaveAvatar
+    summary: |
+      Prompts the `Class.Players.LocalPlayer` to update their avatar based on
+      the given `Class.HumanoidDescription` and `Enum.RigType` of R6 or R15.
+    description: |
+      This function prompts the `Class.Players.LocalPlayer` to update their
+      avatar based on the given `Class.HumanoidDescription` and `Enum.RigType`
+      (R6 or R15). Does not yield and can get the result by listening to the
+      PromptSaveAvatarCompleted event. This is similar to how other prompts such
+      as PromptPurchase work.
+    code_samples: []
+    parameters:
+      - name: humanoidDescription
+        type: HumanoidDescription
+        default:
+        summary: |
+          The given `Class.HumanoidDescription` being prompted to save.
+      - name: rigType
+        type: HumanoidRigType
+        default:
+        summary: |
+          The `Enum.RigType` that the avatar will be saved for if the player
+          confirms the prompt.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AvatarEditorService:PromptSetFavorite
+    summary: |
+      Prompts the `Class.Players.LocalPlayer` to favorite or unfavorite the
+      given asset or bundle.
+    description: |
+      This function prompts the `Class.Players.LocalPlayer` to favorite or
+      unfavorite the given asset or bundle.
+    code_samples: []
+    parameters:
+      - name: itemId
+        type: int64
+        default:
+        summary: |
+          The ItemId of the item being prompted to favorite.
+      - name: itemType
+        type: AvatarItemType
+        default:
+        summary: |
+          The type of item being prompted to favorite.
+      - name: shouldFavorite
+        type: boolean
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AvatarEditorService:PromptUpdateOutfit
+    summary: |
+      Prompts the `Class.Players.LocalPlayer` to update the given outfit.
+    description: |
+      Prompts the `Class.Players.LocalPlayer` to update the given outfit with
+      the given HumanoidDescription.
+    code_samples: []
+    parameters:
+      - name: outfitId
+        type: int64
+        default:
+        summary: |
+          The outfitId of the outfit to update.
+      - name: updatedOutfit
+        type: HumanoidDescription
+        default:
+        summary: |
+          A HumanoidDescription that represents the new outfit data.
+      - name: rigType
+        type: HumanoidRigType
+        default:
+        summary: |
+          The HumanoidRigType to update the outfit to.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

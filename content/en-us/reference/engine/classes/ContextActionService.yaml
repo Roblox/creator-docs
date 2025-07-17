@@ -268,7 +268,7 @@ methods:
           devices.
       - name: priorityLevel
         type: int
-        default: ''
+        default:
         summary: |
           The priority level at which the action should be bound (higher
           considered before lower).
@@ -524,6 +524,40 @@ methods:
       - type: Dictionary
         summary: ''
     tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Input
+    writeCapabilities: []
+  - name: ContextActionService:GetButton
+    summary: |
+      Retrieves a `Class.ImageButton` of a
+      `Class.ContextActionService:BindAction()|bound` action that had a touch
+      input button created.
+    description: |
+      GetButton returns the `Class.ImageButton` created by
+      `Class.ContextActionService:BindAction()|BindAction` if its third
+      parameter was true and the device is
+      `Class.UserInputService.TouchEnabled|TouchEnabled`. The only parameter to
+      this function must match exactly the name of the action originally sent to
+      BindAction.
+
+      If no such action was bound or if a button was not created, this function
+      returns `nil`.
+    code_samples: []
+    parameters:
+      - name: actionName
+        type: string
+        default:
+        summary: |
+          The name of the action originally passed to BindAction.
+    returns:
+      - type: Instance
+        summary: |
+          An ImageButton created by BindAction.
+    tags:
+      - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -792,40 +826,6 @@ methods:
       - type: ()
         summary: ''
     tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Input
-    writeCapabilities: []
-  - name: ContextActionService:GetButton
-    summary: |
-      Retrieves a `Class.ImageButton` of a
-      `Class.ContextActionService:BindAction()|bound` action that had a touch
-      input button created.
-    description: |
-      GetButton returns the `Class.ImageButton` created by
-      `Class.ContextActionService:BindAction()|BindAction` if its third
-      parameter was true and the device is
-      `Class.UserInputService.TouchEnabled|TouchEnabled`. The only parameter to
-      this function must match exactly the name of the action originally sent to
-      BindAction.
-
-      If no such action was bound or if a button was not created, this function
-      returns `nil`.
-    code_samples: []
-    parameters:
-      - name: actionName
-        type: string
-        default:
-        summary: |
-          The name of the action originally passed to BindAction.
-    returns:
-      - type: Instance
-        summary: |
-          An ImageButton created by BindAction.
-    tags:
-      - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

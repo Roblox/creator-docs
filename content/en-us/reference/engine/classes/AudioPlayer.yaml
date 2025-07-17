@@ -403,6 +403,30 @@ methods:
     capabilities:
       - Audio
     writeCapabilities: []
+  - name: AudioPlayer:GetWaveformAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: timeRange
+        type: NumberRange
+        default:
+        summary: ''
+      - name: samples
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPlayer:Play
     summary: |
       Plays the `Class.AudioPlayer` from wherever its
@@ -437,36 +461,6 @@ methods:
       - type: ()
         summary: ''
     tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Audio
-    writeCapabilities: []
-  - name: AudioPlayer:GetWaveformAsync
-    summary: |
-      Returns a list of samples across a time range for the given audio.
-    description: |
-      Returns a list of samples across a time range for the given audio. Each call can return up to 8192
-      samples.
-    code_samples: []
-    parameters:
-      - name: timeRange
-        type: NumberRange
-        default: 
-        summary: |
-          A `DataType.NumberRange` which represents the start and end point of where
-          to sample the audio.
-      - name: samples
-        type: int
-        default: 
-        summary: |
-          The number of samples to return.
-    returns:
-      - type: Array
-        summary: ''
-    tags:
-      - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

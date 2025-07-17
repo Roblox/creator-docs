@@ -29,7 +29,7 @@ methods:
     parameters:
       - name: time
         type: float
-        default: ''
+        default:
         summary: |
           Time at which to get the value.
     returns:

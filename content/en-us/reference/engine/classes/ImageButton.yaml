@@ -35,8 +35,13 @@ properties:
       - UI
     writeCapabilities: []
   - name: ImageButton.HoverImageContent
-    summary: ''
-    description: ''
+    summary: |
+      The image content that will be used when the `Class.ImageButton` is being
+      hovered. Only supports asset URIs.
+    description: |
+      An image-type Content that can be set as an `Class.ImageButton` property.
+      When the button is hovered, it will render this image. Only asset URIs are
+      supported for this property.
     code_samples: []
     type: Content
     tags: []
@@ -259,8 +264,13 @@ properties:
       - UI
     writeCapabilities: []
   - name: ImageButton.PressedImageContent
-    summary: ''
-    description: ''
+    summary: |
+      The image content that will be used when an `Class.ImageButton` is being
+      pressed. Only supports asset URIs.
+    description: |
+      An image-type Content that can be set as an `Class.ImageButton` property.
+      When the button is pressed, it will render this image. Only asset URIs are
+      supported for this property.
     code_samples: []
     type: Content
     tags: []

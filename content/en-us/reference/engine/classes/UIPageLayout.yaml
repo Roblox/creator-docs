@@ -265,7 +265,7 @@ methods:
     parameters:
       - name: index
         type: int
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()

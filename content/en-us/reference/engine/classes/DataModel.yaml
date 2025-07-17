@@ -822,6 +822,35 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: DataModel:SavePlace
+    summary: |
+      Saves the current place.
+    description: |
+      This function was used by an ancient data persistence method to save the
+      current place.
+
+      Note:
+
+      - In order for this method to work the save place API has to be enabled
+        for the current place.
+    code_samples: []
+    parameters:
+      - name: saveFilter
+        type: SaveFilter
+        default: SaveAll
+        summary: ''
+    returns:
+      - type: boolean
+        summary: ''
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated. Do not use it for new work.
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: DataModel:SetPlaceId
     summary: |
       Sets the `Class.DataModel.PlaceId` of the current game instance.
@@ -832,7 +861,7 @@ methods:
     parameters:
       - name: placeId
         type: int64
-        default: ''
+        default:
         summary: |
           The ID to set the `Class.DataModel.PlaceId` to.
     returns:
@@ -860,7 +889,7 @@ methods:
     parameters:
       - name: universeId
         type: int64
-        default: ''
+        default:
         summary: |
           The ID to set the `Class.DataModel.GameId` to.
     returns:
@@ -869,35 +898,6 @@ methods:
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: DataModel:SavePlace
-    summary: |
-      Saves the current place.
-    description: |
-      This function was used by an ancient data persistence method to save the
-      current place.
-
-      Note:
-
-      - In order for this method to work the save place API has to be enabled
-        for the current place.
-    code_samples: []
-    parameters:
-      - name: saveFilter
-        type: SaveFilter
-        default: SaveAll
-        summary: ''
-    returns:
-      - type: boolean
-        summary: ''
-    tags:
-      - Yields
-      - Deprecated
-    deprecation_message: |
-      This item is deprecated. Do not use it for new work.
-    security: None
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []

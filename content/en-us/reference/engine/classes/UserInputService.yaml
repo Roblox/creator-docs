@@ -1893,7 +1893,7 @@ events:
     parameters:
       - name: wheel
         type: float
-        default: ''
+        default:
         summary: ''
       - name: pan
         type: Vector2
@@ -1901,7 +1901,7 @@ events:
         summary: ''
       - name: pinch
         type: float
-        default: ''
+        default:
         summary: ''
       - name: gameProcessedEvent
         type: boolean
@@ -1989,7 +1989,7 @@ events:
           `Enum.SwipeDirection|Left`, or `Enum.SwipeDirection|Right`).
       - name: numberOfTouches
         type: int
-        default: ''
+        default:
         summary: |
           Currently only supports one touch for a value of `1`.
       - name: gameProcessedEvent
@@ -2187,13 +2187,13 @@ events:
           position, in pixels, of the fingers involved in the pinch gesture.
       - name: scale
         type: float
-        default: ''
+        default:
         summary: |
           The magnitude of the pinch from start to finish (in pixels) divided by
           the starting pinch positions.
       - name: velocity
         type: float
-        default: ''
+        default:
         summary: |
           The speed of the pinch gesture in pixels per second.
       - name: state
@@ -2235,13 +2235,13 @@ events:
           the fingers involved in the gesture.
       - name: rotation
         type: float
-        default: ''
+        default:
         summary: |
           The number of degree the gesture has rotated since the start of the
           gesture.
       - name: velocity
         type: float
-        default: ''
+        default:
         summary: |
           The change in rotation (in degrees) divided by the duration of the
           change (in seconds).
@@ -2325,7 +2325,7 @@ events:
           An `Enum.SwipeDirection` indicating the direction the user swiped.
       - name: numberOfTouches
         type: int
-        default: ''
+        default:
         summary: |
           Number of touches involved in the swipe gesture.
       - name: gameProcessedEvent

@@ -1580,7 +1580,7 @@ methods:
           `"Salute"`.
       - name: assetId
         type: int64
-        default: ''
+        default:
         summary: |
           An emote asset ID.
     returns:

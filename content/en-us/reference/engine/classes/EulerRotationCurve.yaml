@@ -55,7 +55,7 @@ methods:
     parameters:
       - name: time
         type: float
-        default: ''
+        default:
         summary: ''
     returns:
       - type: Array
@@ -79,7 +79,7 @@ methods:
     parameters:
       - name: time
         type: float
-        default: ''
+        default:
         summary: ''
     returns:
       - type: CFrame

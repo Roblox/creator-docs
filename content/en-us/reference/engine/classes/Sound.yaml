@@ -941,7 +941,7 @@ events:
           The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that looped.
       - name: numOfTimesLooped
         type: int
-        default: ''
+        default:
         summary: |
           The number of times the `Class.Sound` has looped.
     tags: []

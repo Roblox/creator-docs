@@ -94,112 +94,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: LocalizationService:GetTableEntries
-    summary: |
-      Gets all entries used for automated localization.
-    description: |
-      Returns an `Array`, where each element of the returned `Array` is itself
-      an `Array` of entries in the same format as described in
-      `Class.LocalizationTable:GetEntries()`. The order of the elements in the
-      returned `Array` is the same order that the
-      `Class.LocalizationTable|LocalizationTables` will be searched through to
-      attempt automated localization for the provided `Class.Instance`. The
-      entry elements within a particular `Class.LocalizationTable` are returned
-      in an unspecified order.
-
-      This function returns entries regardless of whether the object is a
-      `Class.GuiBase2d` with `Class.GuiBase2d.AutoLocalize` enabled. An object
-      that is a `Class.GuiBase2d` will not actually be automatically localized
-      unless `Class.GuiBase2d.AutoLocalize` is enabled.
-
-      The ordering of the tables is as follows:
-
-      - First, it looks for the earliest `Class.GuiBase2d` ancestor of the
-        object (including the provided object) that has a
-        `Class.GuiBase2d.RootLocalizationTable`. Tables then append in the same
-        order as described in `Class.GuiBase2d.RootLocalizationTable` by going
-        up through the `Class.LocalizationTable` ancestors of that
-        `Class.GuiBase2d.RootLocalizationTable`. If no such
-        `Class.GuiBase2d.RootLocalizationTable` is found, no tables append in
-        this step. If `instance` is `nil`, no tables append in this step.
-      - Next, tables from the `Class.LocalizationTable` hierarchy under
-        `Class.LocalizationService` append. For each child
-        `Class.LocalizationTable` of `Class.LocalizationService`, it appends
-        tables going up from the lowest descendant `Class.LocalizationTable` of
-        the tables parented to the service, all the way up to the children of
-        the service. If there are no children of `Class.LocalizationService`
-        that are `Class.LocalizationTable|LocalizationTables`, then no tables
-        append in this step.
-      - Finally, the cloud `Class.LocalizationTable` appends to the array. If
-        there is no cloud `Class.LocalizationTable`, or the cloud
-        `Class.LocalizationTable` has not yet loaded, then no table appends in
-        this step.
-
-      This function does not yield. It will not wait until the cloud
-      `Class.LocalizationTable` has loaded.
-    code_samples: []
-    parameters:
-      - name: instance
-        type: Instance
-        default: nil
-        summary: ''
-    returns:
-      - type: Array
-        summary: |
-          An array of arrays, where each array is in the same format as
-          described in `Class.LocalizationTable:GetEntries()`.
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: LocalizationService:GetTranslatorForPlayer
-    summary: |
-      Returns a `Class.Translator` to be used for translations using the locale
-      data loaded.
-    description: |
-      This function takes a player as an argument and returns a
-      `Class.Translator` instance which can be used to perform translations for
-      that locale if any are available. The entries used for localization are
-      the entries provided by the `Class.LocalizationTable` hierarchy under
-      `Class.LocalizationService` as well as the cloud
-      `Class.LocalizationTable`, if it is available and already loaded. This
-      will be the same set of entries returned by
-      `Class.LocalizationService:GetTableEntries(nil)`.
-
-      This function does not yield. It will not wait until the cloud
-      `Class.LocalizationTable` has loaded.
-
-      See also:
-
-      - `Class.LocalizationService:GetTranslatorForPlayerAsync()` has the same
-        functionality as this function, except that it yields until the cloud
-        `Class.LocalizationTable` has been loaded.
-      - `Class.LocalizationService:GetTranslatorForLocaleAsync()`, returns a
-        Translator to be used for translations using the provided locale.
-    code_samples:
-      - getting-and-using-a-translator-for-a-player
-    parameters:
-      - name: player
-        type: Instance
-        default:
-        summary: |
-          The `Class.Player` that you are getting the `Class.Translator` for.
-    returns:
-      - type: Instance
-        summary: |
-          The `Class.Translator` instance for the specified locale.
-    tags: []
-    deprecation_message: |
-      This function has been deprecated by
-      `Class.LocalizationService:GetTranslatorForPlayerAsync()`, which functions
-      similarly except that it yields until the cloud table has loaded. Please
-      use it in new work instead.
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: LocalizationService:GetCountryRegionForPlayerAsync
     summary: |
       Returns country/region code string according to player's client IP
@@ -1012,6 +906,66 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: LocalizationService:GetTableEntries
+    summary: |
+      Gets all entries used for automated localization.
+    description: |
+      Returns an `Array`, where each element of the returned `Array` is itself
+      an `Array` of entries in the same format as described in
+      `Class.LocalizationTable:GetEntries()`. The order of the elements in the
+      returned `Array` is the same order that the
+      `Class.LocalizationTable|LocalizationTables` will be searched through to
+      attempt automated localization for the provided `Class.Instance`. The
+      entry elements within a particular `Class.LocalizationTable` are returned
+      in an unspecified order.
+
+      This function returns entries regardless of whether the object is a
+      `Class.GuiBase2d` with `Class.GuiBase2d.AutoLocalize` enabled. An object
+      that is a `Class.GuiBase2d` will not actually be automatically localized
+      unless `Class.GuiBase2d.AutoLocalize` is enabled.
+
+      The ordering of the tables is as follows:
+
+      - First, it looks for the earliest `Class.GuiBase2d` ancestor of the
+        object (including the provided object) that has a
+        `Class.GuiBase2d.RootLocalizationTable`. Tables then append in the same
+        order as described in `Class.GuiBase2d.RootLocalizationTable` by going
+        up through the `Class.LocalizationTable` ancestors of that
+        `Class.GuiBase2d.RootLocalizationTable`. If no such
+        `Class.GuiBase2d.RootLocalizationTable` is found, no tables append in
+        this step. If `instance` is `nil`, no tables append in this step.
+      - Next, tables from the `Class.LocalizationTable` hierarchy under
+        `Class.LocalizationService` append. For each child
+        `Class.LocalizationTable` of `Class.LocalizationService`, it appends
+        tables going up from the lowest descendant `Class.LocalizationTable` of
+        the tables parented to the service, all the way up to the children of
+        the service. If there are no children of `Class.LocalizationService`
+        that are `Class.LocalizationTable|LocalizationTables`, then no tables
+        append in this step.
+      - Finally, the cloud `Class.LocalizationTable` appends to the array. If
+        there is no cloud `Class.LocalizationTable`, or the cloud
+        `Class.LocalizationTable` has not yet loaded, then no table appends in
+        this step.
+
+      This function does not yield. It will not wait until the cloud
+      `Class.LocalizationTable` has loaded.
+    code_samples: []
+    parameters:
+      - name: instance
+        type: Instance
+        default: nil
+        summary: ''
+    returns:
+      - type: Array
+        summary: |
+          An array of arrays, where each array is in the same format as
+          described in `Class.LocalizationTable:GetEntries()`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: LocalizationService:GetTranslatorForLocaleAsync
     summary: |
       Yields until the cloud `Class.LocalizationTable` for the argument locale
@@ -1053,6 +1007,52 @@ methods:
     tags:
       - Yields
     deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: LocalizationService:GetTranslatorForPlayer
+    summary: |
+      Returns a `Class.Translator` to be used for translations using the locale
+      data loaded.
+    description: |
+      This function takes a player as an argument and returns a
+      `Class.Translator` instance which can be used to perform translations for
+      that locale if any are available. The entries used for localization are
+      the entries provided by the `Class.LocalizationTable` hierarchy under
+      `Class.LocalizationService` as well as the cloud
+      `Class.LocalizationTable`, if it is available and already loaded. This
+      will be the same set of entries returned by
+      `Class.LocalizationService:GetTableEntries(nil)`.
+
+      This function does not yield. It will not wait until the cloud
+      `Class.LocalizationTable` has loaded.
+
+      See also:
+
+      - `Class.LocalizationService:GetTranslatorForPlayerAsync()` has the same
+        functionality as this function, except that it yields until the cloud
+        `Class.LocalizationTable` has been loaded.
+      - `Class.LocalizationService:GetTranslatorForLocaleAsync()`, returns a
+        Translator to be used for translations using the provided locale.
+    code_samples:
+      - getting-and-using-a-translator-for-a-player
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: |
+          The `Class.Player` that you are getting the `Class.Translator` for.
+    returns:
+      - type: Instance
+        summary: |
+          The `Class.Translator` instance for the specified locale.
+    tags: []
+    deprecation_message: |
+      This function has been deprecated by
+      `Class.LocalizationService:GetTranslatorForPlayerAsync()`, which functions
+      similarly except that it yields until the cloud table has loaded. Please
+      use it in new work instead.
     security: None
     thread_safety: Unsafe
     capabilities: []

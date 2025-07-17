@@ -127,6 +127,39 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: ScriptEditorService:OpenScriptDocumentAsync
+    summary: |
+      Requests that a Script Editor open the specified script. Returns (true,
+      nil) if the request succeeds. Returns (false, string) if the request
+      fails, with a string that describes the problem.
+    description: |
+      Requests that a Script Editor open the specified script. Returns (true,
+      nil) if the request succeeds. Returns (false, string) if the request
+      fails, with a string that describes the problem.
+
+      If the script is already open, this function succeeds and switches tabs to
+      the associated editor.
+    code_samples:
+      - ScriptEditorService-OpenScriptDocumentAsync
+    parameters:
+      - name: script
+        type: LuaSourceContainer
+        default:
+        summary: ''
+      - name: options
+        type: Dictionary
+        default: nil
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ScriptEditorService:RegisterAutocompleteCallback
     summary: |
       Registers an autocomplete callback `callbackFunction` named `name` with
@@ -210,7 +243,7 @@ methods:
         is. Primarily this controls the icon given to the item in the editor.
         Not all kinds have a unique icon. If not specified, the editor uses the
         "Text" icon. Unsupported kinds default to displaying the "Property"
-        icon. See `Enum.CompletionItemKind` for possible values.
+        icon.
       - `Response.items[n].tags` specifies an array of tags describing this
         completion item. See the `Enum.CompletionItemTag` for details on their
         function.
@@ -249,7 +282,7 @@ methods:
         summary: ''
       - name: priority
         type: int
-        default: ''
+        default:
         summary: ''
       - name: callbackFunction
         type: Function
@@ -333,7 +366,7 @@ methods:
         summary: ''
       - name: priority
         type: int
-        default: ''
+        default:
         summary: ''
       - name: callbackFunction
         type: Function
@@ -343,39 +376,6 @@ methods:
       - type: ()
         summary: ''
     tags: []
-    deprecation_message: ''
-    security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: ScriptEditorService:OpenScriptDocumentAsync
-    summary: |
-      Requests that a Script Editor open the specified script. Returns (true,
-      nil) if the request succeeds. Returns (false, string) if the request
-      fails, with a string that describes the problem.
-    description: |
-      Requests that a Script Editor open the specified script. Returns (true,
-      nil) if the request succeeds. Returns (false, string) if the request
-      fails, with a string that describes the problem.
-
-      If the script is already open, this function succeeds and switches tabs to
-      the associated editor.
-    code_samples:
-      - ScriptEditorService-OpenScriptDocumentAsync
-    parameters:
-      - name: script
-        type: LuaSourceContainer
-        default:
-        summary: ''
-      - name: options
-        type: Dictionary
-        default: nil
-        summary: ''
-    returns:
-      - type: Tuple
-        summary: ''
-    tags:
-      - Yields
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe

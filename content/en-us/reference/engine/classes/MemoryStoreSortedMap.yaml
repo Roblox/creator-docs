@@ -65,7 +65,7 @@ methods:
           Sort direction, ascending or descending.
       - name: count
         type: int
-        default: ''
+        default:
         summary: |
           The number of items to retrieve; the maximum allowed value for this
           parameter is 200.
@@ -156,7 +156,7 @@ methods:
           Key value to set.
       - name: expiration
         type: int64
-        default: ''
+        default:
         summary: |
           Item expiration, in seconds. The item is automatically removed from
           the sorted map once the expiration duration is reached. The maximum
@@ -219,7 +219,7 @@ methods:
           key.
       - name: expiration
         type: int64
-        default: ''
+        default:
         summary: |
           Item expiration time, in seconds, after which the item will be
           automatically removed from the sorted map. The maximum expiration time

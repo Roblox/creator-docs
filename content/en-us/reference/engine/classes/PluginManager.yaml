@@ -48,7 +48,7 @@ methods:
     parameters:
       - name: filePath
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()
@@ -74,7 +74,7 @@ methods:
     parameters:
       - name: filePath
         type: string
-        default: ''
+        default:
         summary: ''
     returns:
       - type: ()

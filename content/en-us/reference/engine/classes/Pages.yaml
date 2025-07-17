@@ -37,24 +37,6 @@ properties:
     capabilities: []
     writeCapabilities: []
 methods:
-  - name: Pages:GetCurrentPage
-    summary: |
-      Returns the items on the current page. The keys in the item are determined
-      by the source of this object.
-    description: |
-      Returns the items on the current page. The keys in the item are determined
-      by the source of this object.
-    code_samples: []
-    parameters: []
-    returns:
-      - type: Array
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: Pages:AdvanceToNextPageAsync
     summary: |
       Iterates to the next page in the pages object, if possible.
@@ -68,6 +50,24 @@ methods:
         summary: ''
     tags:
       - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: Pages:GetCurrentPage
+    summary: |
+      Returns the items on the current page. The keys in the item are determined
+      by the source of this object.
+    description: |
+      Returns the items on the current page. The keys in the item are determined
+      by the source of this object.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

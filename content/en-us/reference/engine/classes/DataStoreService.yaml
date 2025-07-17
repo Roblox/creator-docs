@@ -21,7 +21,26 @@ tags:
   - Service
   - NotReplicated
 deprecation_message: ''
-properties: []
+properties:
+  - name: DataStoreService.AutomaticRetry
+    summary: ''
+    description: ''
+    code_samples: []
+    type: boolean
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: LocalUserSecurity
+      write: LocalUserSecurity
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - DataStore
+    writeCapabilities: []
 methods:
   - name: DataStoreService:GetDataStore
     summary: |
@@ -161,7 +180,7 @@ methods:
     parameters:
       - name: prefix
         type: string
-        default: ''
+        default:
         summary: |
           **(Optional)** Prefix to enumerate data stores that start with the
           given prefix.
@@ -174,7 +193,7 @@ methods:
           store web service, which in turn defaults to 32 items per page.
       - name: cursor
         type: string
-        default: ''
+        default:
         summary: |
           **(Optional)** Cursor to continue iteration.
     returns:

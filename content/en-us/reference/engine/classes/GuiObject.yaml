@@ -1193,13 +1193,13 @@ events:
     parameters:
       - name: x
         type: int
-        default: ''
+        default:
         summary: |
           The mouse's **X** screen location in pixels, relative to the top left
           corner of the screen.
       - name: 'y'
         type: int
-        default: ''
+        default:
         summary: |
           The mouse's **Y** screen location in pixels, relative to the top left
           corner of the screen.
@@ -1340,13 +1340,13 @@ events:
     parameters:
       - name: x
         type: int
-        default: ''
+        default:
         summary: |
           The mouse's **X** screen coordinate in pixels, relative to the top
           left corner of the screen.
       - name: 'y'
         type: int
-        default: ''
+        default:
         summary: |
           The mouse's **Y** screen coordinate in pixels, relative to the top
           left corner of the screen.
@@ -1383,13 +1383,13 @@ events:
     parameters:
       - name: x
         type: int
-        default: ''
+        default:
         summary: |
           The mouse's **X** screen coordinate in pixels, relative to the top
           left corner of the screen.
       - name: 'y'
         type: int
-        default: ''
+        default:
         summary: |
           The mouse's **Y** screen coordinate in pixels, relative to the top
           left corner of the screen.
@@ -1452,13 +1452,13 @@ events:
     parameters:
       - name: x
         type: int
-        default: ''
+        default:
         summary: |
           The mouse's **X** screen coordinate in pixels, relative to the top
           left corner of the screen.
       - name: 'y'
         type: int
-        default: ''
+        default:
         summary: |
           The mouse's **Y** screen coordinate in pixels, relative to the top
           left corner of the screen.
@@ -1493,13 +1493,13 @@ events:
     parameters:
       - name: x
         type: int
-        default: ''
+        default:
         summary: |
           The mouse's **X** screen coordinate in pixels, relative to the top
           left corner of the screen.
       - name: 'y'
         type: int
-        default: ''
+        default:
         summary: |
           The mouse's **Y** screen coordinate in pixels, relative to the top
           left corner of the screen.
@@ -1535,13 +1535,13 @@ events:
     parameters:
       - name: x
         type: int
-        default: ''
+        default:
         summary: |
           The mouse's **X** screen coordinate in pixels, relative to the top
           left corner of the screen.
       - name: 'y'
         type: int
-        default: ''
+        default:
         summary: |
           The **Y** coordinate of the user's mouse.
     tags: []
@@ -1722,13 +1722,13 @@ events:
           position of all the fingers involved in the pinch gesture.
       - name: scale
         type: float
-        default: ''
+        default:
         summary: |
           A float that indicates the difference from the beginning of the pinch
           gesture.
       - name: velocity
         type: float
-        default: ''
+        default:
         summary: |
           A float indicating how quickly the pinch gesture is happening.
       - name: state
@@ -1774,13 +1774,13 @@ events:
           position of all the fingers involved in the gesture.
       - name: rotation
         type: float
-        default: ''
+        default:
         summary: |
           A float indicating how much the rotation has gone from the start of
           the gesture.
       - name: velocity
         type: float
-        default: ''
+        default:
         summary: |
           A float that indicates how quickly the gesture is being performed.
       - name: state
@@ -1817,7 +1817,7 @@ events:
           (Up, Down, Left or Right).
       - name: numberOfTouches
         type: int
-        default: ''
+        default:
         summary: |
           The number of touch points involved in the gesture (usually 1).
     tags: []
