@@ -23,17 +23,13 @@ To use the **PhotoBooth** module in an experience:
 
    <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
-1. Locate and click the **Dev Modules** tile.
-
-   <img src="../../assets/studio/toolbox/Creator-Store-Categories-Dev-Modules.png" width="200" />
+1. Locate and click the **Packages** tile.
 
 1. Locate the **Photo Booth** module and click it, or drag-and-drop it into the 3D view.
 
    <img src="../../assets/developer-modules/photo-booth/Toolbox-Icon.png" width="143" />
 
-1. In the [Explorer](../../studio/explorer.md) window, move the entire **PhotoBooth** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
-
-   <img src="../../assets/developer-modules/photo-booth/Move-Package.png" width="320" />
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **PhotoBooth** model into `Class.ReplicatedStorage`. Upon running the experience the module will begin running.
 
 ### Position the booth
 
@@ -64,7 +60,7 @@ The module is preconfigured to work for most use cases, but it can be easily cus
    ```lua title="LocalScript - ConfigurePhotoBooth"
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-   local PhotoBooth = require(ReplicatedStorage:WaitForChild("PhotoBooth"))
+   local PhotoBooth = require(ReplicatedStorage.PhotoBooth)
 
    PhotoBooth.configure({
    	frameMessage = "First Photo Booth Capture!",
@@ -80,7 +76,7 @@ Every time the photo booth displays a new screen to a local client, a correspond
 ```lua title="LocalScript"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local PhotoBooth = require(ReplicatedStorage:WaitForChild("PhotoBooth"))
+local PhotoBooth = require(ReplicatedStorage.PhotoBooth)
 
 PhotoBooth.countdownStarted:Connect(function()
 	print("The countdown has started")
@@ -104,7 +100,7 @@ local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local StarterGui = game:GetService("StarterGui")
 
-local PhotoBooth = require(ReplicatedStorage:WaitForChild("PhotoBooth"))
+local PhotoBooth = require(ReplicatedStorage.PhotoBooth)
 
 local player = Players.LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
@@ -282,7 +278,7 @@ Overrides default configuration options through the following keys/values in the
 ```lua title="LocalScript - ConfigurePhotoBooth"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local PhotoBooth = require(ReplicatedStorage:WaitForChild("PhotoBooth"))
+local PhotoBooth = require(ReplicatedStorage.PhotoBooth)
 
 PhotoBooth.configure({
 	frameMessage = "What a cool pose!",
@@ -303,7 +299,7 @@ Overrides the default backgrounds provided by the photo booth. Background images
 ```lua title="LocalScript"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local PhotoBooth = require(ReplicatedStorage:WaitForChild("PhotoBooth"))
+local PhotoBooth = require(ReplicatedStorage.PhotoBooth)
 
 PhotoBooth.setBackgrounds({
     "rbxassetid://7018713114",
@@ -320,7 +316,7 @@ Fires when the countdown starts. This event can only be connected in a `Class.Lo
 ```lua title="LocalScript"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local PhotoBooth = require(ReplicatedStorage:WaitForChild("PhotoBooth"))
+local PhotoBooth = require(ReplicatedStorage.PhotoBooth)
 
 PhotoBooth.countdownStarted:Connect(function()
 	print("The countdown has started")
@@ -334,7 +330,7 @@ Fires when the printout is shown to the user. This event can only be connected i
 ```lua title="LocalScript"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local PhotoBooth = require(ReplicatedStorage:WaitForChild("PhotoBooth"))
+local PhotoBooth = require(ReplicatedStorage.PhotoBooth)
 
 PhotoBooth.printoutShown:Connect(function()
 	print("The printout is showing")
@@ -348,7 +344,7 @@ Fires when the printout is closed and the camera button is showing again. This e
 ```lua title="LocalScript"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local PhotoBooth = require(ReplicatedStorage:WaitForChild("PhotoBooth"))
+local PhotoBooth = require(ReplicatedStorage.PhotoBooth)
 
 PhotoBooth.promptShown:Connect(function()
 	print("The camera prompt is showing")

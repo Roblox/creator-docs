@@ -1,9 +1,9 @@
 ---
-title: Connections Locator
-description: The Connections Locator module lets players easily find and teleport to their connections inside a place.
+title: Friends Locator
+description: The Friends Locator module lets players easily find and teleport to their friends inside a place.
 ---
 
-It can be challenging to locate connections in-experience. The **FriendsLocator** [developer module](../../resources/modules/index.md) lets players easily find and teleport to their connections inside a place.
+It can be challenging to locate friends in-experience. The **FriendsLocator** [developer module](../../resources/modules/index.md) lets players easily find and teleport to their friends inside a place.
 
 <video src="../../assets/developer-modules/friends-locator/Showcase.mp4" controls width="100%"></video>
 
@@ -23,21 +23,17 @@ To use the **FriendsLocator** module in an experience:
 
    <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
-1. Locate and click the **Dev Modules** tile.
-
-   <img src="../../assets/studio/toolbox/Creator-Store-Categories-Dev-Modules.png" width="200" />
+1. Locate and click the **Packages** tile.
 
 1. Locate the **Friends Locator** module and click it, or drag-and-drop it into the 3D view.
 
    <img src="../../assets/developer-modules/friends-locator/Toolbox-Icon.png" width="143" />
 
-1. In the [Explorer](../../studio/explorer.md) window, move the entire **FriendsLocator** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
-
-   <img src="../../assets/developer-modules/friends-locator/Move-Package.png" width="320" />
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **FriendsLocator** model into `Class.ReplicatedStorage`. Upon running the experience the module will begin running.
 
 ### Test in Studio
 
-To test the module in Studio, the **FriendsLocator** module must be run in a multi-client simulation, since no connections will be present in a solo playtest.
+To test the module in Studio, the **FriendsLocator** module must be run in a multi-client simulation, since no friends will be present in a solo playtest.
 
 1. In **StarterPlayerScripts**, create a new `Class.LocalScript` and rename it **ConfigureFriendsLocator**.
 
@@ -49,7 +45,7 @@ To test the module in Studio, the **FriendsLocator** module must be run in a mul
    local RunService = game:GetService("RunService")
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-   local FriendsLocator = require(ReplicatedStorage:WaitForChild("FriendsLocator"))
+   local FriendsLocator = require(ReplicatedStorage.FriendsLocator)
 
    FriendsLocator.configure({
    	showAllPlayers = RunService:IsStudio(), -- Allows for debugging in Studio
@@ -69,7 +65,7 @@ To test the module in Studio, the **FriendsLocator** module must be run in a mul
    </Alert>
 
    <Alert severity="warning">
-   By default, clicking/tapping a connection's icon will teleport your character to that character's location. If you keep this default behavior and you find that streaming pause is occurring under the [instance streaming](../../workspace/streaming.md) architecture, you may want to [request area streaming](../../workspace/streaming.md#request-area-streaming) around the teleport location as shown in the [clicked](#clicked) event code sample.
+   By default, clicking/tapping a friends's icon will teleport your character to that character's location. If you keep this default behavior and you find that streaming pause is occurring under the [instance streaming](../../workspace/streaming.md) architecture, you may want to [request area streaming](../../workspace/streaming.md#request-area-streaming) around the teleport location as shown in the [clicked](#clicked) event code sample.
    </Alert>
 
 ### Connect to events
@@ -83,7 +79,7 @@ The **FriendsLocator** module exposes [events](#events) so that you can introduc
    local RunService = game:GetService("RunService")
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-   local FriendsLocator = require(ReplicatedStorage:WaitForChild("FriendsLocator"))
+   local FriendsLocator = require(ReplicatedStorage.FriendsLocator)
 
    FriendsLocator.configure({
    	showAllPlayers = RunService:IsStudio(), -- Allows for debugging in Studio
@@ -117,14 +113,14 @@ To replace the default UI:
 
    <img src="../../assets/developer-modules/friends-locator/Custom-UI-ScreenGui-Disabled.png" width="320" />
 
-1. **(Optional)** If you want the connection's avatar portrait and `Class.Player.DisplayName|DisplayName` to show up somewhere in the custom UI, you can place the following instances inside the **FriendLocator** frame.
+1. **(Optional)** If you want the friend's avatar portrait and `Class.Player.DisplayName|DisplayName` to show up somewhere in the custom UI, you can place the following instances inside the **FriendLocator** frame.
 
    - An `Class.ImageLabel` of the name **Portrait**.
    - A `Class.TextLabel` of the name **DisplayName**.
 
    <img src="../../assets/developer-modules/friends-locator/Custom-UI-Portrait-DisplayName.png" width="320" />
 
-   The module will look for these items and display the connection's avatar portrait and/or display name respectively.
+   The module will look for these items and display the friend's avatar portrait and/or display name respectively.
 
 ## API reference
 
@@ -154,17 +150,17 @@ Overrides default configuration options through the following keys/values in the
 	</tr>
 	<tr>
 		<td>`showAllPlayers`</td>
-		<td>If `true`, shows locations for all players, not just connections; this can help verify the module's functionality in Studio.</td>
+		<td>If `true`, shows locations for all players, not just friends; this can help verify the module's functionality in Studio.</td>
 		<td>false</td>
 	</tr>
 	<tr>
 		<td>`teleportToFriend`</td>
-		<td>Teleports player character to the connection's location when their locator icon is clicked or tapped.</td>
+		<td>Teleports player character to the friend's location when their locator icon is clicked or tapped.</td>
 		<td>true</td>
 	</tr>
 	<tr>
 		<td>`thresholdDistance`</td>
-		<td>Camera distance threshold at which locator icons appear; connections closer than this distance will not display icons.</td>
+		<td>Camera distance threshold at which locator icons appear; friends closer than this distance will not display icons.</td>
 		<td>100</td>
 	</tr>
 	<tr>
@@ -178,7 +174,7 @@ Overrides default configuration options through the following keys/values in the
 ```lua title="LocalScript - ConfigureFriendsLocator" highlight="5-11"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local FriendsLocator = require(ReplicatedStorage:WaitForChild("FriendsLocator"))
+local FriendsLocator = require(ReplicatedStorage.FriendsLocator)
 
 FriendsLocator.configure({
 	alwaysOnTop = true,
@@ -218,7 +214,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
 local Workspace = game:GetService("Workspace")
 
-local FriendsLocator = require(ReplicatedStorage:WaitForChild("FriendsLocator"))
+local FriendsLocator = require(ReplicatedStorage.FriendsLocator)
 
 local localPlayer = Players.LocalPlayer
 
@@ -266,7 +262,7 @@ Fires when a locator icon is shown/hidden on the local player's screen. This eve
 ```lua title="LocalScript" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local FriendsLocator = require(ReplicatedStorage:WaitForChild("FriendsLocator"))
+local FriendsLocator = require(ReplicatedStorage.FriendsLocator)
 
 FriendsLocator.visibilityChanged:Connect(function(player, playerCFrame, isVisible)
 	print("Visibility of locator icon for", player.DisplayName, ":", isVisible)

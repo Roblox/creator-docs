@@ -129,10 +129,6 @@ On mobile devices, the default controls occupy a portion of the bottom-left and 
 
 <img src="../assets/ui/misc/Touch-Reserved-Zones.png" width="840" />
 
-<Alert severity="warning">
-If your experience uses the default control setting of `Enum.DevTouchMovementMode|DevTouchMovementMode.UserChoice`, players on mobile devices will be able to choose their input from **Dynamic&nbsp;Thumbstick**, **Classic&nbsp;Thumbstick**, or **Tap&nbsp;to&nbsp;Move**, causing the on-screen controls and reserved zones to vary slightly. Remember to design your UI around this possibility.
-</Alert>
-
 ### Thumb zones
 
 Most mobile players use two thumbs &mdash; one on the virtual thumbstick and one on the jump button. Depending on the physical size of the device and the player's hands, reaching too far from the bottom corners becomes uncomfortable or impossible, so you should avoid placing frequently‑used buttons outside of easy‑to‑reach zones.

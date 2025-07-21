@@ -27,17 +27,13 @@ To use the **SurfaceArt** module in an experience:
 
    <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
-1. Locate and click the **Dev Modules** tile.
-
-   <img src="../../assets/studio/toolbox/Creator-Store-Categories-Dev-Modules.png" width="200" />
+1. Locate and click the **Packages** tile.
 
 1. Locate the **Surface Art** module and click it, or drag-and-drop it into the 3D view.
 
    <img src="../../assets/developer-modules/surface-art/Toolbox-Icon.png" width="143" />
 
-1. In the [Explorer](../../studio/explorer.md) window, move the entire **SurfaceArt** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
-
-   <img src="../../assets/developer-modules/surface-art/Move-Package.png" width="320" />
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **SurfaceArt** model into `Class.ReplicatedStorage`. Upon running the experience the module will begin running.
 
 ### Positioning the Canvas
 
@@ -116,7 +112,7 @@ To better fit the theme of your experience, you may use your own set of custom a
 ```lua title="Script" highlight="5-14, 16-18"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local SurfaceArt = require(ReplicatedStorage:WaitForChild("SurfaceArt"))
+local SurfaceArt = require(ReplicatedStorage.SurfaceArt)
 
 local customAssets = {
 	CustomAsset1 = {
@@ -141,7 +137,7 @@ To remove all existing art from all canvases in the world, call the [removeAllAr
 ```lua title="Script" highlight="5"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local SurfaceArt = require(ReplicatedStorage:WaitForChild("SurfaceArt"))
+local SurfaceArt = require(ReplicatedStorage.SurfaceArt)
 
 SurfaceArt.removeAllArt()
 ```
@@ -153,7 +149,7 @@ There may be cases where you'd like to include additional visual effects when an
 ```lua title="LocalScript" highlight="22"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local SurfaceArt = require(ReplicatedStorage:WaitForChild("SurfaceArt"))
+local SurfaceArt = require(ReplicatedStorage.SurfaceArt)
 
 local function createParticleEmitter(canvas, position)
 	local attachment = Instance.new("Attachment")
@@ -392,7 +388,7 @@ Overrides default configuration options through the following keys/values in the
 ```lua title="Script" highlight="5-9"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local SurfaceArt = require(ReplicatedStorage:WaitForChild("SurfaceArt"))
+local SurfaceArt = require(ReplicatedStorage.SurfaceArt)
 
 SurfaceArt.configure({
 	quotaPerPlayer = 4,
@@ -412,7 +408,7 @@ Returns all of the canvases tagged with the `SurfaceCanvas` tag.
 ```lua title="Script" highlight="5"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local SurfaceArt = require(ReplicatedStorage:WaitForChild("SurfaceArt"))
+local SurfaceArt = require(ReplicatedStorage.SurfaceArt)
 
 local canvases = SurfaceArt.getCanvases()
 ```
@@ -428,7 +424,7 @@ Places an art piece programmatically on behalf of a player. Note that the `canva
 ```lua title="Script" highlight="9-10"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local SurfaceArt = require(ReplicatedStorage:WaitForChild("SurfaceArt"))
+local SurfaceArt = require(ReplicatedStorage.SurfaceArt)
 
 local remoteEvent = ReplicatedStorage:WaitForChild("SurfaceArtRemoteEvent")
 
@@ -450,7 +446,7 @@ Removes all artwork from all surfaces.
 ```lua title="Script" highlight="5"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local SurfaceArt = require(ReplicatedStorage:WaitForChild("SurfaceArt"))
+local SurfaceArt = require(ReplicatedStorage.SurfaceArt)
 
 SurfaceArt.removeAllArt()
 ```
@@ -494,7 +490,7 @@ Fires when an artwork is changed at a particular location on a canvas. When an a
 ```lua title="LocalScript" highlight="5-9"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local SurfaceArt = require(ReplicatedStorage:WaitForChild("SurfaceArt"))
+local SurfaceArt = require(ReplicatedStorage.SurfaceArt)
 
 SurfaceArt.artChanged:Connect(function(canvas, spot, spotPosition, artId, ownerId)
 	print("Art placed at:", spotPosition)
@@ -525,7 +521,7 @@ Fires when a canvas interaction prompt is shown to a player. The connected funct
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
 
-local SurfaceArt = require(ReplicatedStorage:WaitForChild("SurfaceArt"))
+local SurfaceArt = require(ReplicatedStorage.SurfaceArt)
 
 SurfaceArt.promptShown:Connect(function(canvas)
 	print(Players.LocalPlayer, canvas)
@@ -554,7 +550,7 @@ Fires when a canvas interaction prompt is hidden. The connected function receive
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
 
-local SurfaceArt = require(ReplicatedStorage:WaitForChild("SurfaceArt"))
+local SurfaceArt = require(ReplicatedStorage.SurfaceArt)
 
 SurfaceArt.promptClosed:Connect(function(canvas)
 	print(Players.LocalPlayer, canvas)
@@ -569,7 +565,7 @@ Fires when the surface art selector UI is shown to a player. This event can only
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
 
-local SurfaceArt = require(ReplicatedStorage:WaitForChild("SurfaceArt"))
+local SurfaceArt = require(ReplicatedStorage.SurfaceArt)
 
 SurfaceArt.selectorShown:Connect(function()
 	print(Players.LocalPlayer, "opened surface art selector")
@@ -584,7 +580,7 @@ Fires when the surface art selector UI is hidden for a player. This event can on
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
 
-local SurfaceArt = require(ReplicatedStorage:WaitForChild("SurfaceArt"))
+local SurfaceArt = require(ReplicatedStorage.SurfaceArt)
 
 SurfaceArt.selectorHidden:Connect(function()
 	print(Players.LocalPlayer, "closed surface art selector")

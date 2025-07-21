@@ -42,17 +42,13 @@ To use the **SocialInteractions** module in an experience:
 
    <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
-1. Locate and click the **Dev Modules** tile.
-
-   <img src="../../assets/studio/toolbox/Creator-Store-Categories-Dev-Modules.png" width="200" />
+1. Locate and click the **Packages** tile.
 
 1. Locate the **Social Interactions** module and click it, or drag-and-drop it into the 3D view.
 
    <img src="../../assets/developer-modules/social-interactions/Toolbox-Icon.png" width="143" />
 
-1. In the [Explorer](../../studio/explorer.md) window, move the entire **SocialInteractions** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
-
-   <img src="../../assets/developer-modules/social-interactions/Move-Package.png" width="320" />
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **SocialInteractions** model into `Class.ReplicatedStorage`. Upon running the experience the module will begin running.
 
 ### Configuration
 
@@ -67,7 +63,7 @@ Simply inserting the **SocialInteractions** module will enable both the **body o
    ```lua title="LocalScript" highlight="6-9"
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-   local SocialInteractions = require(ReplicatedStorage:WaitForChild("SocialInteractions"))
+   local SocialInteractions = require(ReplicatedStorage.SocialInteractions)
 
    -- Make waist rotation more pronounced and disable the chat animations feature
    SocialInteractions.configure({
@@ -180,7 +176,7 @@ The list of trigger words that activate each animation is configurable, and addi
 ```lua title="LocalScript" highlight="6, 9"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local SocialInteractions = require(ReplicatedStorage:WaitForChild("SocialInteractions"))
+local SocialInteractions = require(ReplicatedStorage.SocialInteractions)
 
 -- Register string pattern for the "Tilt" animation
 SocialInteractions.setTriggerWordsForChatAnimation("rbxassetid://3334538554", {"cra+zy"})
@@ -236,7 +232,7 @@ Overrides default configuration options through the following keys/values in the
 ```lua title="LocalScript" highlight="6-9"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local SocialInteractions = require(ReplicatedStorage:WaitForChild("SocialInteractions"))
+local SocialInteractions = require(ReplicatedStorage.SocialInteractions)
 
 -- Make waist rotation more pronounced and disable the chat animations feature
 SocialInteractions.configure({
@@ -258,7 +254,7 @@ Note that trigger words are **case-insensitive** to players, so a pattern of `wo
 ```lua title="LocalScript" highlight="6-9"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local SocialInteractions = require(ReplicatedStorage:WaitForChild("SocialInteractions"))
+local SocialInteractions = require(ReplicatedStorage.SocialInteractions)
 
 -- Register new string pattern for a custom animation
 SocialInteractions.setTriggerWordsForChatAnimation(
@@ -294,7 +290,7 @@ Fires when a chat animation plays. The connected function receives the animation
 ```lua title="LocalScript" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local SocialInteractions = require(ReplicatedStorage:WaitForChild("SocialInteractions"))
+local SocialInteractions = require(ReplicatedStorage.SocialInteractions)
 
 SocialInteractions.onChatAnimationPlayed:Connect(function(animationId, triggerWord)
 	print(animationId, triggerWord)

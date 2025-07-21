@@ -27,17 +27,13 @@ To use the **ScavengerHunt** module in an experience:
 
    <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
-1. Locate and click the **Dev Modules** tile.
-
-   <img src="../../assets/studio/toolbox/Creator-Store-Categories-Dev-Modules.png" width="200" />
+1. Locate and click the **Packages** tile.
 
 1. Locate the **Scavenger Hunt** module and click it, or drag-and-drop it into the 3D view.
 
    <img src="../../assets/developer-modules/scavenger-hunt/Toolbox-Icon.png" width="143" />
 
-1. In the [Explorer](../../studio/explorer.md) window, move the entire **ScavengerHunt** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
-
-   <img src="../../assets/developer-modules/scavenger-hunt/Move-Package.png" width="320" />
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **ScavengerHunt** model into `Class.ReplicatedStorage`. Upon running the experience the module will begin running.
 
 ### Use tokens
 
@@ -104,7 +100,7 @@ The module is preconfigured to work for most use cases, but it can be easily cus
    ```lua title="LocalScript - ConfigureScavengerHunt" highlight="5-9"
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-   local ScavengerHunt = require(ReplicatedStorage:WaitForChild("ScavengerHunt"))
+   local ScavengerHunt = require(ReplicatedStorage.ScavengerHunt)
 
    ScavengerHunt.configureClient({
    	infoModalText = "Welcome to my Scavenger Hunt!",
@@ -122,7 +118,7 @@ Similarly, when a player collects **all** tokens or enters **all** tagged region
 ```lua title="Script" highlight="5-7, 9-11"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local ScavengerHunt = require(ReplicatedStorage:WaitForChild("ScavengerHunt"))
+local ScavengerHunt = require(ReplicatedStorage.ScavengerHunt)
 
 ScavengerHunt.collected:Connect(function(player, itemName)
 	print(player.DisplayName, itemName)
@@ -143,7 +139,7 @@ When `useCustomModals` is set to `true` in the [configureClient](#configureclien
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local ScavengerHunt = require(ReplicatedStorage:WaitForChild("ScavengerHunt"))
+local ScavengerHunt = require(ReplicatedStorage.ScavengerHunt)
 
 ScavengerHunt.showInfoModal:Connect(function()
 	-- Show a custom info modal
@@ -171,7 +167,7 @@ local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local StarterGui = game:GetService("StarterGui")
 
-local ScavengerHunt = require(ReplicatedStorage:WaitForChild("ScavengerHunt"))
+local ScavengerHunt = require(ReplicatedStorage.ScavengerHunt)
 
 local player = Players.LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
@@ -462,7 +458,7 @@ Overrides default client-side configuration options through the following keys/v
 ```lua title="LocalScript"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local ScavengerHunt = require(ReplicatedStorage:WaitForChild("ScavengerHunt"))
+local ScavengerHunt = require(ReplicatedStorage.ScavengerHunt)
 
 ScavengerHunt.configureClient({
 	infoModalText = "Welcome to my Scavenger Hunt!",
@@ -515,7 +511,7 @@ Overrides default server-side configuration options through the following keys/v
 ```lua title="Script" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local ScavengerHunt = require(ReplicatedStorage:WaitForChild("ScavengerHunt"))
+local ScavengerHunt = require(ReplicatedStorage.ScavengerHunt)
 
 ScavengerHunt.configureServer({
 	tokenTag = "GreenGem",
@@ -533,7 +529,7 @@ Hides all UI for the scavenger hunt, disconnects all input event listeners, and 
 ```lua title="Script" highlight="5"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local ScavengerHunt = require(ReplicatedStorage:WaitForChild("ScavengerHunt"))
+local ScavengerHunt = require(ReplicatedStorage.ScavengerHunt)
 
 ScavengerHunt.disable()
 ```
@@ -549,7 +545,7 @@ Shows all UI for the scavenger hunt, connects all input event listeners, and all
 ```lua title="Script" highlight="5"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local ScavengerHunt = require(ReplicatedStorage:WaitForChild("ScavengerHunt"))
+local ScavengerHunt = require(ReplicatedStorage.ScavengerHunt)
 
 ScavengerHunt.enable()
 ```
@@ -585,7 +581,7 @@ Fires when a player collides with a token or enters a region. The connected func
 ```lua title="Script" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local ScavengerHunt = require(ReplicatedStorage:WaitForChild("ScavengerHunt"))
+local ScavengerHunt = require(ReplicatedStorage.ScavengerHunt)
 
 ScavengerHunt.collected:Connect(function(player, itemName, totalCollected)
 	print(player.DisplayName, itemName, totalCollected)
@@ -613,7 +609,7 @@ Fires when a player collects all tokens or enters all regions in the scavenger h
 ```lua title="Script" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local ScavengerHunt = require(ReplicatedStorage:WaitForChild("ScavengerHunt"))
+local ScavengerHunt = require(ReplicatedStorage.ScavengerHunt)
 
 ScavengerHunt.allCollected:Connect(function(player)
 	print(player.DisplayName .. " completed the hunt!")
@@ -628,7 +624,7 @@ Fires when the player clicks on the token tracker when the `useCustomModals` [co
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local ScavengerHunt = require(ReplicatedStorage:WaitForChild("ScavengerHunt"))
+local ScavengerHunt = require(ReplicatedStorage.ScavengerHunt)
 
 ScavengerHunt.showInfoModal:Connect(function()
 	local infoModal = Players.LocalPlayer.PlayerGui.InfoModal
@@ -644,7 +640,7 @@ Fires when the player clicks on the token tracker when the `useCustomModals` [co
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local ScavengerHunt = require(ReplicatedStorage:WaitForChild("ScavengerHunt"))
+local ScavengerHunt = require(ReplicatedStorage.ScavengerHunt)
 
 ScavengerHunt.showCompleteModal:Connect(function()
 	local completeModal = Players.LocalPlayer.PlayerGui.CompleteModal

@@ -23,17 +23,13 @@ To use the **ProfileCard** module in an experience:
 
    <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
-1. Locate and click the **Dev Modules** tile.
-
-   <img src="../../assets/studio/toolbox/Creator-Store-Categories-Dev-Modules.png" width="200" />
+1. Locate and click the **Packages** tile.
 
 1. Locate the **Profile Card** module and click it, or drag-and-drop it into the 3D view.
 
    <img src="../../assets/developer-modules/profile-card/Toolbox-Icon.png" width="143" />
 
-1. In the [Explorer](../../studio/explorer.md) window, move the entire **ProfileCard** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
-
-   <img src="../../assets/developer-modules/profile-card/Move-Package.png" width="320" />
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **ProfileCard** model into `Class.ReplicatedStorage`. Upon running the experience the module will begin running.
 
 ### Views
 
@@ -210,7 +206,7 @@ Overrides default configuration options through the following keys/values in the
 ```lua title="LocalScript" highlight="5-10"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local ProfileCard = require(ReplicatedStorage:WaitForChild("ProfileCard"))
+local ProfileCard = require(ReplicatedStorage.ProfileCard)
 
 ProfileCard.configure({
 	alwaysOnTop = true,

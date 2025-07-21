@@ -26,7 +26,7 @@ video: "https://www.youtube-nocookie.com/embed/Eed29gV0hLA",
 links: [
 { text: "Guides and tutorials", href: "../art/accessories.md" },
 { text: "Get Blender", href: "https://www.blender.org" },
-{ text: "Get Studio", href: "../studio/setup" }
+{ text: "Get Studio", href: "./studio/setup/" }
 ]
 },
 {
@@ -36,7 +36,7 @@ video:"https://www.youtube-nocookie.com/embed/C-DwGRBHvmE",
 links: [
 { text: "Guides and tutorials", href: "../art/accessories/layered-clothing.md" },
 { text: "Get Blender", href: "https://www.blender.org" },
-{ text: "Get Studio", href: "../studio/setup" }
+{ text: "Get Studio", href: "./studio/setup/" }
 ]
 },
 ]
@@ -79,16 +79,16 @@ title: "Blender",
 description: "Check out in-depth guides and tutorials for creating 3D items in Blender, a free and open-sourced modeling program.",
 links: [
 { text: "Get Blender", href: "https://www.blender.org" },
-{ text: "Learn more", href: "../art/blender" }
+{ text: "Learn more", href: "../art/blender.md" }
 ]
 },
 {
 title: "Roblox Studio",
 description: "Use native tools in Roblox Studio to quickly convert your custom models into Roblox-ready accessories. Studio is your portal to getting your 3D assets into the Roblox ecosystem.",
 links: [
-{ text: "Get Studio", href: "../studio/setup" },
-{ text: "Accessory Fitting Tool", href: "../art/accessories/accessory-fitting-tool" },
-{ text: "Avatar Setup", href: "./avatar-setup" }
+{ text: "Get Studio", href: "./studio/setup/" },
+{ text: "Accessory Fitting Tool", href: "../art/accessories/accessory-fitting-tool.md" },
+{ text: "Avatar Setup", href: "./avatar-setup/" }
 ]
 },
 {
@@ -96,16 +96,16 @@ title: "Creator Hub",
 description: "Manage all your uploaded avatar items, set them on sale, review policy, and view analytics in the Creator Hub.",
 links: [
 { text: "Go to Creator Hub", href: "https://create.roblox.com/" },
-{ text: "Upload and publishing guides", href: "../marketplace/publish-to-marketplace" }
+{ text: "Upload and publishing guides", href: "../marketplace/publish-to-marketplace.md" }
 ]
 },
 {
 title: "Marketplace and beyond",
 description: "Create your own home store and a higher share of your commission! Or build experiences that allow others to customize and create avatar items in-game.",
 links: [
-{ text: "Marketplace policy", href: "../marketplace/marketplace-policy" },
-{ text: "Create your own home store", href: "../marketplace/homestore" },
-{ text: "In-experience creation", href: "../avatar/in-experience-creation" }
+{ text: "Marketplace policy", href: "../marketplace/marketplace-policy.md" },
+{ text: "Create your own home store", href: "../marketplace/homestore.md" },
+{ text: "In-experience creation", href: "./in-experience-creation.md" }
 ]
 }
 ]
@@ -122,19 +122,19 @@ title: "Fees, commissions, and more",
 description: "Understand the fees and commission structure and how to optimize your avatar item revenue.",
 image: "../assets/accessories/Layered-Clothing-Banner.jpg",
 links: [
-{ text: "Fees and Commissions", href: "../marketplace/marketplace-fees-and-commissions" },
-{ text: "Upload and publish guides", href: "../marketplace/publish-to-marketplace" },
-{ text: "Marketplace FAQs", href: "../marketplace/frequently-asked-questions" }
+{ text: "Fees and Commissions", href: "../marketplace/marketplace-fees-and-commissions.md" },
+{ text: "Upload and publish guides", href: "../marketplace/publish-to-marketplace.md" },
+{ text: "Marketplace FAQs", href: "../marketplace/frequently-asked-questions.md" }
 ]
 },
 {
 title: "Marketplace and community policies",
 description: "Learn about the policies that help protect you, your creations, and the community.",
-image: "../../assets/landing/device-family.png",
+image: "../assets/landing/device-family.png",
 links: [
-{ text: "Marketplace Policy", href: "../marketplace/marketplace-policy" },
-{ text: "Intellectual Property", href: "../marketplace/intellectual-property" },
-{ text: "Moderation", href: "../marketplace/moderation" }
+{ text: "Marketplace Policy", href: "../marketplace/marketplace-policy.md" },
+{ text: "Intellectual Property", href: "../marketplace/intellectual-property.md" },
+{ text: "Moderation", href: "../marketplace/moderation.md" }
 ]
 },
 {
@@ -142,9 +142,9 @@ title: "Create more complex items",
 description: "Create even more advanced avatar items, like advanced clothing, bodies, heads, and more.",
 video: "https://www.youtube-nocookie.com/embed/NHgYM78afqc",
 links: [
-{ text: "Clothing guides", href: "../art/accessories/layered-clothing" },
-{ text: "Character bodies", href: "../art/characters/"},
-{ text: "Animateable heads", href: "../art/characters/facial-animation" }
+{ text: "Clothing guides", href: "../art/accessories/layered-clothing.md" },
+{ text: "Character bodies", href: "./art/characters/"},
+{ text: "Animateable heads", href: "../art/characters/facial-animation.md" }
 ]
 },
 ]
@@ -155,14 +155,14 @@ content: [
 title: "Build your own homestore",
 description: "Create and design your own store and benefit from a higher commission split from sales.",
 video: "https://www.youtube-nocookie.com/embed/6MPWLQmIKLk",
-links: [{ text: "Learn more", href: "../marketplace/homestore" }]
+links: [{ text: "Learn more", href: "../marketplace/homestore.md" }]
 },
 {
 title: "In-experience creation",
 description: "Create an experience where players can build their own avatar items. Recommended for advanced developers.",
-image: "../../assets/landing/scripting.png",
+image: "../assets/landing/scripting.png",
 links: [
-{ text: "Learn more", href: "./avatar/in-experience-creation" }
+{ text: "Learn more", href: "./in-experience-creation.md" }
 ]
 },
 {

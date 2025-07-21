@@ -57,17 +57,13 @@ To implement experience notifications, you must obtain the Luau package from the
 
    <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
-1. Locate and click the **Dev Modules** tile.
-
-   <img src="../../assets/studio/toolbox/Creator-Store-Categories-Dev-Modules.png" width="200" />
+1. Locate and click the **Packages** tile.
 
 1. Locate the **Open Cloud** module and click it, or drag‑and‑drop it into the 3D view.
 
    <img src="../../assets/open-cloud/experience-notifications/Toolbox-Package.png" width="143" />
 
 1. In the [Explorer](../../studio/explorer.md) window, move the entire **OpenCloud** model into **ServerScriptService**.
-
-   <img src="../../assets/open-cloud/experience-notifications/Move-Package.png" width="320" />
 
 ### Send an experience notification
 
