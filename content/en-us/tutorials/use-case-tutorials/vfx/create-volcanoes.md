@@ -34,7 +34,7 @@ To create credible volcanoes, it's important to reference real-world volcanic er
 
 <img src="../../../assets/tutorials/creating-volcanoes/Volcano-NoComponents.jpg" alt="A far out view of an Iceland volcanic eruption."  width="80%" />
 
-It's useful to break down a volcano that's erupting into individual components so that you can plan how to utilize different VFX objects to mimic their real-world counterparts. To demonstrate, this tutorial breaks the sample volcano into six unique components:
+It's useful to break down a volcano that's erupting into individual components so that you can plan how to utilize different VFX objects to mimic their real-world counterparts. To demonstrate, this tutorial breaks the sample volcano into five unique components:
 
 - **Surface Ripples** – The small waves of lava on the surface of the caldera.
 - **Embers** – The small, light pieces of molten rock that rise to the sky from the caldera.
