@@ -8,7 +8,7 @@ customization options for Roblox experiences, including settings for
 [permissions](#permissions), [monetization](#monetization), [security](#security), and [localization](#localization). You can access it from the Studio application's **File** menu.
 
 <Alert severity="warning">
-The **Game Settings** window is only available for experiences saved or [published](../production/publishing/publish-experiences-and-places.md) to Roblox.
+Many settings in this window modify underlying properties in your place file that aren’t visible in Studio or accessible with scripts. This can lead to unexpected or difficult-to-debug behavior, especially when working across teams or reverting changes. Make sure you fully understand the impact of each setting before applying changes.
 </Alert>
 
 ## Basic Info
@@ -214,50 +214,6 @@ The **Localization** tab contains language settings related to [localization](..
   <tr>
     <td>**Automatic Translation**</td>
     <td>The languages for which you'd like to enable [automatic translation](../production/localization/automatic-translations.md).</td>
-  </tr>
-</tbody>
-</table>
-
-## Avatar
-
-The **Avatar** tab includes global settings for all users'
-[avatars](../characters/index.md) while they are in the experience.
-
-<table>
-<thead>
-  <tr>
-    <th>Setting</th>
-    <th>Description</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>**Presets**</td>
-    <td>Sets the options lower in the tab to presets for **Default**, **Classic&nbsp;Scale**, **Full&nbsp;Classic**, **Rthro**, or **Player&nbsp;Choice**.</td>
-  </tr>
-  <tr>
-    <td>**Avatar&nbsp;Type**</td>
-    <td>Sets the default [avatar type](../characters/appearance.md#avatar-types) to either **R6**, **R15**, or **Player&nbsp;Choice**.</td>
-  </tr>
-  <tr>
-    <td>**Animation**</td>
-    <td>Sets the default animation to either **Standard** or **Player&nbsp;Choice**.</td>
-  </tr>
-  <tr>
-    <td>**Collision**</td>
-    <td>Sets the collision type to either the **Outer&nbsp;Box** or **Inner&nbsp;Box**.</td>
-  </tr>
-  <tr>
-    <td>**Scale**</td>
-    <td>For **R15** avatars, options to customize body type, height, width, head size, and proportions.</td>
-  </tr>
-  <tr>
-    <td>**Body&nbsp;Parts**</td>
-    <td>Lets you override a user's default body part type to a custom ID.</td>
-  </tr>
-  <tr>
-    <td>**Clothing**</td>
-    <td>Lets you override a user's default classic clothing ID to a custom ID.</td>
   </tr>
 </tbody>
 </table>

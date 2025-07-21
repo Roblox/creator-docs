@@ -83,6 +83,8 @@ navigation:
     path: /studio/properties
   - title: Game Settings
     path: /studio/game-settings
+  - title: Avatar Settings
+    path: /studio/avatar-settings
   - title: Shortcuts
     path: /studio/shortcuts
   - heading: Plugins
