@@ -20,64 +20,102 @@ With rewarded video ads, you can implement a reward mechanism inside your experi
 </Alert>
 
 <Alert severity="warning">
-  The video ad must not impact the user's character inside the experience. For example, you can prevent the user's character from taking damage while the user is watching the ad, or only show the ad in safe zones like the experience lobby.
+  Video ads shouldn't negatively impact the user's character during gameplay. To make sure their character isn't harmed, you can pause damage while an ad plays or only show ads in safe zones like the experience lobby.
 </Alert>
 
-To implement a rewarded video ad, you must set up the video ad inside your experience, create a client-side script that checks if a video ad is available to be played to the user, and then create a server-side script that turns a developer product into a reward, shows the user the video ad, and grants the user their reward.
+To implement a rewarded video ad, you must set up the video ad inside your experience and then create client-side and server-side scripts. The client-side script checks if a video ad is available to be played to the user, while the server-side script turns a developer product into a reward, shows the user the video ad, and grants the user their reward.
+
+<Alert severity="info">
+  Earnings from rewarded video ads come from impressions. Your total earnings are calculated by multiplying EPM (earnings per 1000 impressions) by the total number of impressions.
+</Alert>
 
 ### Video ad setup
 
 To set up a rewarded video ad inside your experience:
 
-1. Open the experience in Studio and select the location where you want to trigger the video ad.
-2. [Insert a click-to-play video ad unit in that location](../monetization/immersive-ads.md#billboards).
-3. Go to the **Game Settings** menu and check the **Enable Rewarded Video Ads** checkbox.
-4. Select the reward you want to grant the user. If the reward doesn't already exist, [create a new developer product in the Creator Hub](../monetization/developer-products.md#create-a-developer-product).
-5. Insert a button that the user must press before the video ad starts playing.
+1. In Studio, go to **Game Settings** > **Monetization**.
+2. Check the **Enable Rewarded Video Ads** checkbox.
+  <img src="../../assets/promotion/ads-manager/EnableRewardedVideoAdsToggle.png" width="750" alt="The default Roblox matchmaking flow." />
+3. Select the reward you want to grant the user. If the reward doesn't already exist, [create a new developer product in the Creator Hub](../monetization/developer-products.md#create-a-developer-product). This developer product must have been created for the specific universe the place is in.
+4. Insert a button that the user must press before the video ad starts playing.
 
 ### Client-side implementation
 
 To implement the rewarded video ad on the client-side:
 
-1. Add a new `Class.LocalScript` to the button you just implemented.
+1. Add a new `Class.LocalScript` to the button you just inserted into your experience.
 2. Use the `Class.AdService.GetAdAvailabilityNowAsync|GetAdAvailabilityNowAsync` method to make sure the button is only visible to the user if an ad is available.
 
 ```lua title="Code example for rewarded video ad (Client)"
--- Client (LocalScript in a UI button)
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
+-- Services
 local AdService = game:GetService("AdService")
-local requestShowAdEvent = ReplicatedStorage:WaitForChild("RequestShowAdEvent")
-local recheckAdAvailabilityEvent = ReplicatedStorage:WaitForChild("RecheckAdAvailabilityEvent")
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
--- Assume the script is a child of the button
-local adButton = script.Parent
+-- StarterGui > ScreenGui > ShopFrame > RewardedAdButton
+local PlayerGui = Players.LocalPlayer:WaitForChild("PlayerGui")
+local ScreenGui = PlayerGui:WaitForChild("ScreenGui")
+local ShopFrame = ScreenGui:WaitForChild("ShopFrame")
+local RewardedAdButton = ShopFrame:WaitForChild("RewardedAdButton")
 
--- Hide the UI button until the video ad availability is confirmed
-adButton.Visible = false
-local function checkAdAvailability()
-   local adAvailability = AdService:GetAdAvailabilityNowAsync(Enum.AdFormat.RewardedVideo)
-   if adAvailability.AdAvailabilityResult == Enum.AdAvailabilityResult.IsAvailable then
+-- StarterGui > ScreenGui > OpenShopButton
+local OpenShopButton = ScreenGui:WaitForChild("OpenShopButton")
 
-      -- If the video ad is available, show the UI button
-      adButton.Visible = true
-   else
-      -- If the video ad is not available, hide the UI button
-      adButton.Visible = false
-      -- Recheck ad availability after 60 seconds
-      task.delay(60, checkAdAvailability)
-   end
+-- Event to communicate between clients & server
+local RewardedAdEvent = ReplicatedStorage:WaitForChild("RewardedAdEvent")
+
+local INELIGIBLE_RESULTS = {
+	Enum.AdAvailabilityResult.PlayerIneligible,
+	Enum.AdAvailabilityResult.DeviceIneligible,
+	Enum.AdAvailabilityResult.PublisherIneligible,
+	Enum.AdAvailabilityResult.ExperienceIneligible,
+}
+
+local function isIneligible(result: Enum.AdAvailabilityResult)
+	for _, inEligibleResult in ipairs(INELIGIBLE_RESULTS) do
+		if result == inEligibleResult then
+			return true
+		end
+	end
+
+	return false
 end
 
--- Check if the video ad is available
-checkAdAvailability()
+function checkForAds()
+	local isSuccess, result = pcall(function()
+		return AdService:GetAdAvailabilityNowAsync(Enum.AdFormat.RewardedVideo)
+	end)
 
--- Use Activated event
-adButton.Activated:Connect(function()
-   requestShowAdEvent:FireServer()
+
+	if isSuccess and result.AdAvailabilityResult == Enum.AdAvailabilityResult.IsAvailable then
+		RewardedAdButton.Visible = true
+		return
+	end
+
+	if isIneligible(result.AdAvailabilityResult) then
+		return
+	end
+end
+
+RewardedAdEvent.OnClientEvent:Connect(function(isSuccess : boolean, result : Enum.ShowAdResult)
+	if result == Enum.ShowAdResult.ShowCompleted then
+		checkForAds()	
+	end
 end)
 
-recheckAdAvailabilityEvent.OnClientEvent:Connect(function()
-	checkAdAvailability()
+OpenShopButton.MouseButton1Click:Connect(function()
+	if ShopFrame.Visible then
+		ShopFrame.Visible = false
+		return
+	end
+
+	ShopFrame.Visible = true
+	checkForAds()
+end)
+
+RewardedAdButton.MouseButton1Click:Connect(function()
+	RewardedAdButton.Visible = false
+	RewardedAdEvent:FireServer()
 end)
 ```
 
@@ -92,55 +130,42 @@ To implement the rewarded video ad on the server-side:
 4. Use the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` method to grant the user their reward if they have watched the entire video ad.
 
 ```lua title="Code example for rewarded video ad (Server)"
--- Server (Script in ServerScriptService)
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
+-- Services
 local AdService = game:GetService("AdService")
 local MarketplaceService = game:GetService("MarketplaceService")
 local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
--- Confirm that the EnableRewardedVideoAds setting is enabled in the experience settings
-local requestShowAdEvent = Instance.new("RemoteEvent")
-requestShowAdEvent.Name = "RequestShowAdEvent"
-requestShowAdEvent.Parent = ReplicatedStorage
-local recheckAdAvailabilityEvent = Instance.new("RemoteEvent")
-recheckAdAvailabilityEvent.Name = "RecheckAdAvailabilityEvent"
-recheckAdAvailabilityEvent.Parent = ReplicatedStorage
+local RewardedAdEvent = ReplicatedStorage:WaitForChild("RewardedAdEvent")
 
 -- Provide a developer product ID for the video ad reward
-local rewardDevProductId = 12345
-local function processReceipt(receiptInfo)
+-- This developer product must be created for the specific universe that this place is in
+local DEV_PRODUCT_ID = 1919753834
+
+RewardedAdEvent.OnServerEvent:Connect(function(player)
+	local isSuccess, result = pcall(function()
+		local reward = AdService:CreateAdRewardFromDevProductId(DEV_PRODUCT_ID)
+		return AdService:ShowRewardedVideoAdAsync(player, reward)
+	end)
+	
+	RewardedAdEvent:FireClient(player, isSuccess, result)
+end)
+
+MarketplaceService.ProcessReceipt = function(receiptInfo)
 	local player = Players:GetPlayerByUserId(receiptInfo.PlayerId)
-		if not player then
-     		return Enum.ProductPurchaseDecision.NotProcessedYet
- 	end
- 		if receiptInfo.ProductId == rewardDevProductId then
-     		print(player.Name .. " earned the reward!")
-
-     		-- Include the logic for granting rewards here
-
-     		return Enum.ProductPurchaseDecision.PurchaseGranted
- 	end
- 	return Enum.ProductPurchaseDecision.NotProcessedYet
-end
-
-MarketplaceService.ProcessReceipt = processReceipt
-requestShowAdEvent.OnServerEvent:Connect(function(player)
-	local reward = AdService:CreateAdRewardFromDevProductId(rewardDevProductId)
-	local result = AdService:ShowRewardedVideoAdAsync(player, reward, placementId)
-
-	-- Handle specific ad result cases
-	if result == Enum.ShowAdResult.AdNotReady then
-		warn("Ad not ready for player: " .. player.Name)
-	elseif result == Enum.ShowAdResult.InternalError then
-		warn("Internal error showing ad for player: " .. player.Name)
-
-	-- Add more cases as needed (for example, ShowInterrupted, AdAlreadyShowing, etc)
-	...
+	if not player then
+		return Enum.ProductPurchaseDecision.NotProcessedYet
 	end
 
-	-- Signal the Client to recheck if video ad is available
-	recheckAdAvailabilityEvent:FireClient(player)
-end)
+	if receiptInfo.ProductId == DEV_PRODUCT_ID then
+		
+    -- Include the logic for granting rewards here
+
+		return Enum.ProductPurchaseDecision.PurchaseGranted
+	end
+
+	return Enum.ProductPurchaseDecision.NotProcessedYet
+end
 ```
 
 ## Placements
@@ -240,6 +265,8 @@ Any violation of the eligilibity requirements can result in account suspension, 
 
 To get the most out of your rewarded video ad, make sure to:
 
+- Call `Class.AdService.GetAdAvailabilityNowAsync|GetAdAvailabilityNowAsync` as close as possible to the moment you plan to show the ad. For example, if you have a "Watch video ad to get a reward" button in a shop menu, you should only call `GetAdAvailabilityNowAsync` when the user opens the shop menu. This approach improves performance by preventing ads from unnecessarily being held in memory, and benefits CPM (cost-per-thousand impressions) and earnings by optimizing the ad fill rate.
+- Call `Class.AdService.GetAdAvailabilityNowAsync|GetAdAvailabilityNowAsync` when the user finishes watching the ad to determine if another ad is available for the user to watch.
 - Scale rewards so that they remain valuable to your users as they advance through the experience.
 - Adjust the frequency of rewards based on user engagement and feedback.
 - Use analytics to identify the best placement for video ads to encourage user engagement without disrupting gameplay.

@@ -52,7 +52,6 @@ The following best practices may help you reach 72 frames per second with a high
 - Mobile VR is sensitive to a high number of draw calls. Build your environments efficiently, adding high detail where it really matters and lower detail elsewhere while being conservative with the number of objects used in the scene.
 - When creating custom 3D meshes, always strive to use as little geometry as possible for maximum runtime efficiency.
 - Minimize the number of semi-transparent objects and textures with partial transparency such as `Class.Decal|Decals` or the `Enum.Material|Glass` material.
-- Use **Voxel** or **ShadowMap** lighting `Class.Lighting.Technology|Technology`, as **Future** lighting can be costly to generate and may produce inconsistent results on VR when the automatic quality drops.
 - Numerous and complex `Class.SurfaceGui|SurfaceGuis` can be costly, both on the rendering and CPU side.
 - Avoid writing platform-dependent code such as actions that rely on keyboard presses. Instead, use objects like `Class.InputAction` which supports input bindings from multiple sources.
 - Test and iterate often to make sure you're getting the anticipated performance and visual quality. If possible, invest in a Quest&nbsp;2 headset.
