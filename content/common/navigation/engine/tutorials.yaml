@@ -62,7 +62,7 @@ navigation:
       - title: Indoor environments
         path: /tutorials/use-case-tutorials/lighting/enhance-indoor-environments
       - title: Outdoor environments
-        path: /tutorials/use-case-tutorials/lighting/enhance-outdoor-environments-with-future-lighting
+        path: /tutorials/use-case-tutorials/lighting/enhance-outdoor-environments
   - title: VFX
     section:
       - title: Laser beams

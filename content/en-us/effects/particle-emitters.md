@@ -261,7 +261,7 @@ The `Class.ParticleEmitter.SpreadAngle|SpreadAngle` property has an **X** and a 
 
 ### WindAffectsDrag
 
-If you've enabled [global&nbsp;wind](../environment/global-wind.md) in an experience, particles will follow the global wind vector as long as the emitter's `Class.ParticleEmitter.WindAffectsDrag|WindAffectsDrag` property is enabled and its `Class.ParticleEmitter.Drag|Drag` property is greater than 0.
+If you've enabled [global wind](../environment/global-wind.md) in an experience, particles will follow the global wind vector as long as the emitter's `Class.ParticleEmitter.WindAffectsDrag|WindAffectsDrag` property is enabled and its `Class.ParticleEmitter.Drag|Drag` property is greater than 0.
 
 <img src="../assets/studio/properties/ParticleEmitter-WindAffectsDrag.png" width="320" alt="Drag and WindAffectsDrag properties shown in Properties window of Studio" />
 

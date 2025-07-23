@@ -1,11 +1,11 @@
 ---
-title: Enhance outdoor environments with Future lighting
-description: Explains how to leverage Future Lighting to enhance outdoor environments.
+title: Enhance outdoor environments with realistic lighting
+description: Explains how to leverage realistic lighting to enhance outdoor environments.
 ---
 
-**Future lighting** is the most advanced and powerful `Class.Lighting.Technology` system you can use for rendering the 3D environment within your experiences. Unlike the other available lighting systems, Future lighting offers pixel perfect light emission, detailed shadows, and specular highlights that mimic real-world lighting for both indoor and outdoor spaces.
+`Enum.LightingStyle|Realistic` lighting is the most advanced and powerful `Class.Lighting.LightingStyle|LightingStyle` you can use for rendering the 3D environment within your experiences. It offers pixel perfect light emission, detailed shadows, and specular highlights that mimic real-world lighting for both indoor and outdoor spaces.
 
-Using the [Lighting Outdoors - Start](https://www.roblox.com/games/17835285085/Lighting-Outdoors-Start) `.rbxl` file as a starting place and [Lighting Outdoors - Complete](https://www.roblox.com/games/17835194683/Lighting-Outdoors-Complete) as a reference, this tutorial shows you how to utilize Future lighting with strategic global and local light source configurations to produce realistic, immersive outdoor lighting behavior for an evening campfire scene, including guidance on:
+Using the [Lighting Outdoors - Start](https://www.roblox.com/games/17835285085/Lighting-Outdoors-Start) `.rbxl` file as a starting place and [Lighting Outdoors - Complete](https://www.roblox.com/games/17835194683/Lighting-Outdoors-Complete) as a reference, this tutorial shows you how to utilize realistic lighting with strategic global and local light source configurations to produce realistic, immersive outdoor lighting behavior for an evening campfire scene, including guidance on:
 
 - Ensuring metallic surfaces produce accurate reflections as light sources continuously shift in the environment, such as dynamic movement from the roaring campfire.
 - Moving the sun to a new position that's realistic for the real world's time of day.
@@ -29,33 +29,31 @@ If at any point you become stuck in the process, you can use **Lighting Outdoors
 
 Global lighting is the luminescence from either the sun or moon in an experience. By adjusting a couple of key default properties in the `Class.Lighting` service, you can dramatically change how that light appears to players, as well as how it interacts with any other object you place in the experience.
 
-### Enable the Future lighting system
+### Enable realistic lighting
 
-The `Class.Lighting.Technology` property determines the behavior of both global and local lighting in your experience. Studio begins every experience with the `Enum.Technology.ShadowMap` lighting system, ensuring that the global lighting has precise shadows and illumination. However, to enhance the environment and equip your local light sources to also produce precise shadows and illumination, such as the light from the campfire, you must enable the `Enum.Technology.Future` lighting system technology directly in Studio. This allows both your global and local lighting to work together and provide more realistic and immersive visuals.
+The `Class.Lighting.LightingStyle|LightingStyle` property determines the behavior of both global and local lighting in your experience. Studio begins every experience with `Enum.LightingStyle|Soft` lighting which renders a flatter look with softer lights and shadows. However, to enhance the environment and equip your local light sources to also produce precise shadows and illumination, such as the light from the campfire, you must enable `Enum.LightingStyle|Realistic` lighting.
 
-To demonstrate this concept, see the following two images of the same campfire with different lighting system technologies. The local lighting from the campfire with the `Enum.Technology.ShadowMap` lighting systems doesn't produce shadows in the same way that the global lighting from the sun does, making this area of the environment unevenly lit with unrealistic shadows. By contrast, the local lighting from the campfire with the `Enum.Technology.Future` lighting system technology interacts with the kindling, rocks, and brush around the environment, producing crisp and realistic shadows for evening time.
+To demonstrate this concept, see the following two images of the same campfire with different lighting styles. The local lighting from the campfire with `Enum.LightingStyle|Soft` lighting doesn't produce shadows in the same way that the global lighting from the sun does, making this area of the environment unevenly lit with unrealistic shadows. By contrast, the local lighting from the campfire with `Enum.LightingStyle|Realistic` lighting interacts with the kindling, rocks, and brush around the environment, producing crisp and realistic shadows for evening time.
 
 <GridContainer numColumns="2">
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/enhancing-outdoor-environments/ShadowMap.jpg" />
-    <figcaption>`Enum.Technology.ShadowMap` Lighting System</figcaption>
+    <img width="100%" img src="../../../assets/tutorials/enhancing-outdoor-environments/LightingStyle-Soft.jpg" />
+    <figcaption>`Enum.LightingStyle|Soft` lighting style</figcaption>
   </figure>
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/enhancing-outdoor-environments/Future.jpg" />
-    <figcaption>`Enum.Technology.Future` Lighting System</figcaption>
+    <img width="100%" img src="../../../assets/tutorials/enhancing-outdoor-environments/LightingStyle-Realistic.jpg" />
+    <figcaption>`Enum.LightingStyle|Realistic` lighting style</figcaption>
   </figure>
 </GridContainer>
 
-To enable the `Enum.Technology.Future` lighting system:
+To enable realistic lighting:
 
 1. In the **Explorer** window, select **Lighting**.
-1. In the **Properties** window, click the **Technology** dropdown, then select **Future**.
-
-   <img width="320" img src="../../../assets/studio/properties/Lighting-Technology-Future.png" alt="A close up view of the Properties window with the Future technology property highlighted." />
+1. In the **Properties** window, click the **LightingStyle** dropdown, then select **Realistic**.
 
 ### Elevate metal reflections
 
-By default, all materials use physically-based rendering (PBR) textures that allow you to display realistic surfaces in various lighting scenarios by using multiple image files on a single object. This means that when you use Studio's built-in materials, the metalness and roughness of a particular surface is already defined for you, and the objects with those materials naturally react more accurately to the lighting in your environment with realistic reflections. You can enhance this effect by setting the `Class.Lighting.EnvironmentDiffuseScale` and `Class.Lighting.EnvironmentSpecularScale` properties to `1` to truly take advantage of metal reflections from the `Enum.Technology.Future` lighting system.
+By default, all materials use physically-based rendering (PBR) textures that allow you to display realistic surfaces in various lighting scenarios by using multiple image files on a single object. This means that when you use Studio's built-in materials, the metalness and roughness of a particular surface is already defined for you, and the objects with those materials naturally react more accurately to the lighting in your environment with realistic reflections. You can enhance this effect by setting the `Class.Lighting.EnvironmentDiffuseScale` and `Class.Lighting.EnvironmentSpecularScale` properties to `1` to truly take advantage of metal reflections from `Enum.LightingStyle.Realistic` lighting.
 
 This step is important because it ensures that any PBR textures in your experience, including those from `Class.MaterialVariant|MaterialVariants` or `Class.SurfaceAppearance` objects, look their best and reflect their surroundings better. For example, examine the following two images of the same pan and utensils near the campfire with different `Class.Lighting.EnvironmentDiffuseScale` and `Class.Lighting.EnvironmentSpecularScale` property values. When you adjust these values, the metal becomes more apparent and reflects the lighting from both the global and local light sources significantly more than before.
 
@@ -77,7 +75,7 @@ To elevate metal reflections:
 
 ### Change the time of day
 
-Now that your experience is using the `Enum.Technology.Future` lighting system and materials are reacting realistically to the light sources in your experience, it's time to move the sun to a different position according to where it would be in the real world for the time of day. The sun's default position is high in the sky, emulating around midday in the real world, so it's best to move it nearer to the skyline, right above the mountains. This step also allows the light to move down the path onto the campfire and achieve a nice golden sun.
+Now that your experience is using the `Enum.LightingStyle.Realistic` lighting style and materials are reacting realistically to the light sources in your experience, it's time to move the sun to a different position according to where it would be in the real world for the time of day. The sun's default position is high in the sky, emulating around midday in the real world, so it's best to move it nearer to the skyline, right above the mountains. This step also allows the light to move down the path onto the campfire and achieve a nice golden sun.
 
 <GridContainer numColumns="2">
   <figure>
@@ -248,4 +246,4 @@ To enable shadows from the campfire's local lighting:
 
    <img width="60%" img src="../../../assets/tutorials/enhancing-outdoor-environments/Adjusting-Brightness-Color.png" />
 
-You now have a campfire scene that is complete and welcoming for players to relax. Using the skills in this tutorial, you can combine the Future lighting system with the PBR materials available to create rich and immersive experiences. It only takes setting up the correct properties and making decisions about these features that suit your environment.
+You now have a campfire scene that is complete and welcoming for players to relax. Using the skills in this tutorial, you can combine the realistic lighting style with the PBR materials available to create rich and immersive experiences. It only takes setting up the correct properties and making decisions about these features that suit your environment.

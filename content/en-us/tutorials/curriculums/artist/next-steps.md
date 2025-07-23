@@ -63,7 +63,7 @@ If you want to continue learning through step-by-step lessons, check out the fol
 - [Create waterfalls](../../use-case-tutorials/vfx/create-waterfalls.md)
 - [Create volcanoes](../../use-case-tutorials/vfx/create-volcanoes.md)
 - [Enhance indoor lighting](../../use-case-tutorials/lighting/enhance-indoor-environments.md)
-- [Enhance outdoor lighting](../../use-case-tutorials/lighting/enhance-outdoor-environments-with-future-lighting.md)
+- [Enhance outdoor lighting](../../use-case-tutorials/lighting/enhance-outdoor-environments.md)
 
 <Alert severity = 'success'>
 Happy creating, we can't wait to see what you make!

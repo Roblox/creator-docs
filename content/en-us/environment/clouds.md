@@ -3,7 +3,7 @@ title: Dynamic clouds
 description: Dynamic Clouds render realistic, customizable clouds that drift slowly across the sky.
 ---
 
-Roblox's **dynamic clouds** are realistic clouds that drift slowly across the sky. You can adjust their appearance through the `Class.Clouds` object to create unique atmospheres such as stormy skies, stunning sunsets, and alien worlds. You can also customize their direction and speed through [global&nbsp;wind](../environment/global-wind.md).
+Roblox's **dynamic clouds** are realistic clouds that drift slowly across the sky. You can adjust their appearance through the `Class.Clouds` object to create unique atmospheres such as stormy skies, stunning sunsets, and alien worlds. You can also customize their direction and speed through [global wind](../environment/global-wind.md).
 
 <video src="../assets/lighting-and-effects/clouds/Showcase.mp4" controls width="100%" alt="Video of wind blowing dynamic clouds across the sky"></video>
 
@@ -19,7 +19,7 @@ To enable dynamic clouds:
    <img src="../assets/studio/explorer/Terrain-Clouds.png" width="320" alt="Clouds object shown in Explorer window of Studio" />
 
 1. Adjust the appearance of clouds through the new object's properties.
-1. Set the clouds in motion through [global&nbsp;wind](../environment/global-wind.md).
+1. Set the clouds in motion through [global wind](../environment/global-wind.md).
 
 ## Cloud properties
 

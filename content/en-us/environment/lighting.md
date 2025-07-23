@@ -7,11 +7,11 @@ The `Class.Lighting` service contains properties that you can adjust to update
 and customize the global lighting in an experience. There are five categories of
 lighting properties:
 
-- **Color** &mdash; Configures hue within the experience.
-- **Intensity** &mdash; Configures the intensity or amount of light hitting the camera.
-- **Shadows** &mdash; Configures how a user experiences shadows within the experience.
-- **Environment** &mdash; Configures the conditions of the experience's world, such as the time of day and geographic latitude.
-- **Technology** &mdash; Configures the lighting technology Studio uses to render lighting and shadows.
+- [Color](#color) &mdash; Configures hue within the experience.
+- [Intensity](#intensity) &mdash; Configures the intensity or amount of light hitting the camera.
+- [Shadows](#shadows) &mdash; Configures how a user experiences shadows within the experience.
+- [Appearance](#appearance) &mdash; Properties that determine the lighting style and lighting/shading quality or view distance prioritization.
+- [Environment](#environment) &mdash; Configures the conditions of the experience's world, such as the time of day and geographic latitude.
 
 ## Color
 
@@ -21,13 +21,13 @@ The `Class.Lighting.Ambient|Ambient` property sets a hue for the **entirety** of
 
 <Tabs>
 <TabItem label="[0, 0, 0]">
-<img src="../assets/lighting-and-effects/lighting-properties/Ambient-0-0-0.jpg" width="800" height="450" alt="Lighting with Ambient property of [0, 0, 0]" />
+<img src="../assets/lighting-and-effects/lighting-properties/Ambient-0-0-0.jpg" width="800" height="450" alt="Lighting.Ambient property of [0, 0, 0]" />
 </TabItem>
 <TabItem label="[160, 80, 0]">
-<img src="../assets/lighting-and-effects/lighting-properties/Ambient-160-80-0.jpg" width="800" height="450" alt="Lighting with Ambient property of [160, 80, 0]" />
+<img src="../assets/lighting-and-effects/lighting-properties/Ambient-160-80-0.jpg" width="800" height="450" alt="Lighting.Ambient property of [160, 80, 0]" />
 </TabItem>
 <TabItem label="[25, 0, 125]">
-<img src="../assets/lighting-and-effects/lighting-properties/Ambient-25-0-125.jpg" width="800" height="450" alt="Lighting with Ambient property of [25, 0, 125]" />
+<img src="../assets/lighting-and-effects/lighting-properties/Ambient-25-0-125.jpg" width="800" height="450" alt="Lighting.Ambient property of [25, 0, 125]" />
 </TabItem>
 </Tabs>
 
@@ -44,13 +44,13 @@ In the following images, note that the lighting inside the garage and cafe doesn
 
 <Tabs>
 <TabItem label="[255, 150, 50]">
-<img src="../assets/lighting-and-effects/lighting-properties/OutdoorAmbient-255-150-50.jpg" width="800" height="450" alt="Lighting with OutdoorAmbient property of [255, 150, 50]" />
+<img src="../assets/lighting-and-effects/lighting-properties/OutdoorAmbient-255-150-50.jpg" width="800" height="450" alt="Lighting.OutdoorAmbient property of [255, 150, 50]" />
 </TabItem>
 <TabItem label="[200, 150, 240]">
-<img src="../assets/lighting-and-effects/lighting-properties/OutdoorAmbient-200-150-240.jpg" width="800" height="450" alt="Lighting with OutdoorAmbient property of [200, 150, 240]" />
+<img src="../assets/lighting-and-effects/lighting-properties/OutdoorAmbient-200-150-240.jpg" width="800" height="450" alt="Lighting.OutdoorAmbient property of [200, 150, 240]" />
 </TabItem>
 <TabItem label="[0, 175, 255]">
-<img src="../assets/lighting-and-effects/lighting-properties/OutdoorAmbient-0-175-255.jpg" width="800" height="450" alt="Lighting with OutdoorAmbient property of [0, 175, 255]" />
+<img src="../assets/lighting-and-effects/lighting-properties/OutdoorAmbient-0-175-255.jpg" width="800" height="450" alt="Lighting.OutdoorAmbient property of [0, 175, 255]" />
 </TabItem>
 </Tabs>
 
@@ -60,10 +60,10 @@ The `Class.Lighting.ColorShift_Top|ColorShift_Top` property sets a hue that refl
 
 <Tabs>
 <TabItem label="[0, 100, 255]">
-<img src="../assets/lighting-and-effects/lighting-properties/ColorShift-Top-0-100-255.jpg" width="800" height="450" alt="Lighting with ColorShift_Top property of [0, 100, 255]" />
+<img src="../assets/lighting-and-effects/lighting-properties/ColorShift-Top-0-100-255.jpg" width="800" height="450" alt="Lighting.ColorShift_Top property of [0, 100, 255]" />
 </TabItem>
 <TabItem label="[255, 60, 0]">
-<img src="../assets/lighting-and-effects/lighting-properties/ColorShift-Top-255-60-0.jpg" width="800" height="450" alt="Lighting with ColorShift_Top property of [255, 60, 0]" />
+<img src="../assets/lighting-and-effects/lighting-properties/ColorShift-Top-255-60-0.jpg" width="800" height="450" alt="Lighting.ColorShift_Top property of [255, 60, 0]" />
 </TabItem>
 </Tabs>
 
@@ -75,16 +75,12 @@ In the following images, note the hue change on the sandstone wall facing away f
 
 <Tabs>
 <TabItem label="[255, 0, 220]">
-<img src="../assets/lighting-and-effects/lighting-properties/ColorShift-Bottom-255-0-220.jpg" width="800" height="450" alt="Lighting with ColorShift_Bottom property of [255, 0, 220]" />
+<img src="../assets/lighting-and-effects/lighting-properties/ColorShift-Bottom-255-0-220.jpg" width="800" height="450" alt="Lighting.ColorShift_Bottom property of [255, 0, 220]" />
 </TabItem>
 <TabItem label="[0, 255, 190]">
-<img src="../assets/lighting-and-effects/lighting-properties/ColorShift-Bottom-0-255-190.jpg" width="800" height="450" alt="Lighting with ColorShift_Bottom property of [0, 255, 190]" />
+<img src="../assets/lighting-and-effects/lighting-properties/ColorShift-Bottom-0-255-190.jpg" width="800" height="450" alt="Lighting.ColorShift_Bottom property of [0, 255, 190]" />
 </TabItem>
 </Tabs>
-
-<Alert severity="warning">
-This property is particularly subtle. If you cannot see a change in your experience, change the [Technology](#technology) property to **Compatibility** and/or increase the [Brightness](#brightness) value.
-</Alert>
 
 ## Intensity
 
@@ -94,13 +90,13 @@ The `Class.Lighting.Brightness|Brightness` property sets the intensity of illumi
 
 <Tabs>
 <TabItem label="0.5">
-<img src="../assets/lighting-and-effects/lighting-properties/Brightness-0.5.jpg" width="800" height="450" alt="Lighting with Brightness property of 0.5" />
+<img src="../assets/lighting-and-effects/lighting-properties/Brightness-0.5.jpg" width="800" height="450" alt="Lighting.Brightness property of 0.5" />
 </TabItem>
 <TabItem label="1.5">
-<img src="../assets/lighting-and-effects/lighting-properties/Brightness-1.5.jpg" width="800" height="450" alt="Lighting with Brightness property of 1.5" />
+<img src="../assets/lighting-and-effects/lighting-properties/Brightness-1.5.jpg" width="800" height="450" alt="Lighting.Brightness property of 1.5" />
 </TabItem>
 <TabItem label="3.75">
-<img src="../assets/lighting-and-effects/lighting-properties/Brightness-3.75.jpg" width="800" height="450" alt="Lighting with Brightness property of 3.75" />
+<img src="../assets/lighting-and-effects/lighting-properties/Brightness-3.75.jpg" width="800" height="450" alt="Lighting.Brightness property of 3.75" />
 </TabItem>
 </Tabs>
 
@@ -112,13 +108,13 @@ A lower value is similar to under-exposure in photography, while a higher value 
 
 <Tabs>
 <TabItem label="0">
-<img src="../assets/lighting-and-effects/lighting-properties/ExposureCompensation-0.jpg" width="800" height="450" alt="Lighting with ExposureCompensation property of 0" />
+<img src="../assets/lighting-and-effects/lighting-properties/ExposureCompensation-0.jpg" width="800" height="450" alt="Lighting.ExposureCompensation property of 0" />
 </TabItem>
 <TabItem label="-1">
-<img src="../assets/lighting-and-effects/lighting-properties/ExposureCompensation--1.jpg" width="800" height="450" alt="Lighting with ExposureCompensation property of -1" />
+<img src="../assets/lighting-and-effects/lighting-properties/ExposureCompensation--1.jpg" width="800" height="450" alt="Lighting.ExposureCompensation property of -1" />
 </TabItem>
 <TabItem label="1.25">
-<img src="../assets/lighting-and-effects/lighting-properties/ExposureCompensation-1.25.jpg" width="800" height="450" alt="Lighting with ExposureCompensation property of 1.25" />
+<img src="../assets/lighting-and-effects/lighting-properties/ExposureCompensation-1.25.jpg" width="800" height="450" alt="Lighting.ExposureCompensation property of 1.25" />
 </TabItem>
 </Tabs>
 
@@ -130,25 +126,44 @@ When enabled, the `Class.Lighting.GlobalShadows|GlobalShadows` property renders 
 
 <Tabs>
 <TabItem label="Enabled">
-<img src="../assets/lighting-and-effects/lighting-properties/GlobalShadows-True.jpg" width="800" height="450" alt="Lighting with GlobalShadows property enabled" />
+<img src="../assets/lighting-and-effects/lighting-properties/GlobalShadows-True.jpg" width="800" height="450" alt="Lighting.GlobalShadows property enabled" />
 </TabItem>
 <TabItem label="Disabled">
-<img src="../assets/lighting-and-effects/lighting-properties/GlobalShadows-False.jpg" width="800" height="450" alt="Lighting with GlobalShadows property disabled" />
+<img src="../assets/lighting-and-effects/lighting-properties/GlobalShadows-False.jpg" width="800" height="450" alt="Lighting.GlobalShadows property disabled" />
 </TabItem>
 </Tabs>
 
 ### ShadowSoftness
 
-The `Class.Lighting.ShadowSoftness|ShadowSoftness` property adjusts how blurry shadows are from a value of 0 (hard edges) to 1 (soft edges).
+The `Class.Lighting.ShadowSoftness|ShadowSoftness` property adjusts how blurry shadows are from a value of `0` (hard edges) to `1` (soft edges). This property is only valid when `Class.Lighting.LightingStyle|LightingStyle` is set to `Enum.LightingStyle|Realistic`.
 
 <Tabs>
 <TabItem label="0">
-<img src="../assets/lighting-and-effects/lighting-properties/ShadowSoftness-0.jpg" width="800" height="450" alt="Lighting with ShadowSoftness property of 0" />
+<img src="../assets/lighting-and-effects/lighting-properties/ShadowSoftness-0.jpg" width="800" height="450" alt="Lighting.ShadowSoftness property of 0" />
 </TabItem>
 <TabItem label="1">
-<img src="../assets/lighting-and-effects/lighting-properties/ShadowSoftness-1.jpg" width="800" height="450" alt="Lighting with ShadowSoftness property of 1" />
+<img src="../assets/lighting-and-effects/lighting-properties/ShadowSoftness-1.jpg" width="800" height="450" alt="Lighting.ShadowSoftness property of 1" />
 </TabItem>
 </Tabs>
+
+## Appearance
+
+### LightingStyle
+
+`Class.Lighting.LightingStyle|LightingStyle` indicates the artistic intent behind lighting in the experience, as an `Enum.LightingStyle` option. `Enum.LightingStyle|Realistic` provides the most advanced and realistic lighting and shadows Roblox can deliver, while `Enum.LightingStyle|Soft` produces a flat, retro‑Roblox look with softer lights and shadows.
+
+<Tabs>
+<TabItem label="Realistic">
+<img src="../assets/lighting-and-effects/lighting-properties/LightingStyle-Realistic.jpg" width="800" height="450" alt="Lighting.LightingStyle setting of Realistic" />
+</TabItem>
+<TabItem label="Soft">
+<img src="../assets/lighting-and-effects/lighting-properties/LightingStyle-Soft.jpg" width="800" height="450" alt="Lighting.LightingStyle setting of Soft" />
+</TabItem>
+</Tabs>
+
+### PrioritizeLightingQuality
+
+The `Class.Lighting.PrioritizeLightingQuality|PrioritizeLightingQuality` property indicates whether you prefer lighting/shading quality or view distance to scale down first. As the rendering quality level reduces, a setting of `true` prioritizes features such as advanced shadows and high‑quality shaders at closer distances, while a setting of `false` prioritizes view distance. If lighting and shadows are very important to the artistic feel of your experience, set this to `true`.
 
 ## Environment
 
@@ -156,18 +171,18 @@ The `Class.Lighting.ShadowSoftness|ShadowSoftness` property adjusts how blurry s
 
 The `Class.Lighting.ClockTime|ClockTime` and `Class.Lighting.TimeOfDay|TimeOfDay` property both represent the current time of day in hours, and they are directly related; if you change one property, the other also changes.
 
-The only difference between these properties is their numeric value; `Class.Lighting.ClockTime|ClockTime` represents time from hour 0 through 24 while
+The only difference between these properties is their numeric value; `Class.Lighting.ClockTime|ClockTime` represents time from hour `0` through `24` while
 `Class.Lighting.TimeOfDay|TimeOfDay` represents time through a 24 hour string.
 
 <Tabs>
 <TabItem label="0 = 00:00:00">
-<img src="../assets/lighting-and-effects/lighting-properties/TimeOfDay-0.jpg" width="800" height="450" alt="Lighting with ClockTime of 0 (TimeOfDay of 00:00:00)" />
+<img src="../assets/lighting-and-effects/lighting-properties/TimeOfDay-0.jpg" width="800" height="450" alt="Lighting.ClockTime of 0 (TimeOfDay of 00:00:00)" />
 </TabItem>
 <TabItem label="6.3 = 06:18:00">
-<img src="../assets/lighting-and-effects/lighting-properties/TimeOfDay-6.3.jpg" width="800" height="450" alt="Lighting with ClockTime of 6.3 (TimeOfDay of 06:18:00)" />
+<img src="../assets/lighting-and-effects/lighting-properties/TimeOfDay-6.3.jpg" width="800" height="450" alt="Lighting.ClockTime of 6.3 (TimeOfDay of 06:18:00)" />
 </TabItem>
 <TabItem label="17 = 17:00:00">
-<img src="../assets/lighting-and-effects/lighting-properties/TimeOfDay-17.jpg" width="800" height="450" alt="Lighting with ClockTime of 17 (TimeOfDay of 17:00:00)" />
+<img src="../assets/lighting-and-effects/lighting-properties/TimeOfDay-17.jpg" width="800" height="450" alt="Lighting.ClockTime of 17 (TimeOfDay of 17:00:00)" />
 </TabItem>
 </Tabs>
 
@@ -189,10 +204,10 @@ In the following images, note how the ambient light changes, particularly inside
 
 <Tabs>
 <TabItem label="0">
-<img src="../assets/lighting-and-effects/lighting-properties/EnvironmentDiffuseScale-0.jpg" width="800" height="450" alt="Lighting with EnvironmentDiffuseScale property of 0" />
+<img src="../assets/lighting-and-effects/lighting-properties/EnvironmentDiffuseScale-0.jpg" width="800" height="450" alt="Lighting.EnvironmentDiffuseScale property of 0" />
 </TabItem>
 <TabItem label="1">
-<img src="../assets/lighting-and-effects/lighting-properties/EnvironmentDiffuseScale-1.jpg" width="800" height="450" alt="Lighting with EnvironmentDiffuseScale property of 1" />
+<img src="../assets/lighting-and-effects/lighting-properties/EnvironmentDiffuseScale-1.jpg" width="800" height="450" alt="Lighting.EnvironmentDiffuseScale property of 1" />
 </TabItem>
 </Tabs>
 
@@ -205,38 +220,9 @@ the environment and metal appears more realistic.
 
 <Tabs>
 <TabItem label="0">
-<img src="../assets/lighting-and-effects/lighting-properties/EnvironmentSpecularScale-0.jpg" width="800" height="450" alt="Lighting with EnvironmentSpecularScale property of 0" />
+<img src="../assets/lighting-and-effects/lighting-properties/EnvironmentSpecularScale-0.jpg" width="800" height="450" alt="Lighting.EnvironmentSpecularScale property of 0" />
 </TabItem>
 <TabItem label="1">
-<img src="../assets/lighting-and-effects/lighting-properties/EnvironmentSpecularScale-1.jpg" width="800" height="450" alt="Lighting with EnvironmentSpecularScale property of 1" />
-</TabItem>
-</Tabs>
-
-## Technology
-
-The `Class.Lighting.Technology|Technology`
-property determines the lighting system for rendering the 3D
-environment. There are three lighting systems, in order of fidelity and performance impact from highest to lowest:
-
-- **Future** &mdash; Features the most advanced technology for high-fidelity lighting and shadows.
-  - Extends detailed shadow support to all types of lights, with complex shadow technology for sun shadows and a more realistic lighting and shadow technology for point lights.
-  - This is the most realistic lighting mode, but its high fidelity might result in a negative performance impact, especially on low-end devices.
-
-- **ShadowMap** &mdash; Features shadow mapping that produces more realistic and sharper shadows from sunlight or directional light sources. For any other types of light, such as `Class.PointLight|PointLights`, it uses voxel grids with less precision and performance impact.
-
-- **Voxel** &mdash; Divides the 3D world into a 4&times;4&times;4 voxel grid for light and shadow calculation.
-  - Each voxel represents a small cubic volume of space. The grid contains information on light presence in each voxel and helps determine how light interacts with your 3D environment and objects.
-  - Provides less precise lighting and softer shadows compared to more advanced shadow mapping techniques like **ShadowMap**.
-  - Only recommended for low-end devices.
-
-<Tabs>
-<TabItem label="Future">
-<img src="../assets/lighting-and-effects/lighting-properties/Technology-Future.jpg" width="800" height="450" alt="Lighting with Technology setting of Future" />
-</TabItem>
-<TabItem label="ShadowMap">
-<img src="../assets/lighting-and-effects/lighting-properties/Technology-ShadowMap.jpg" width="800" height="450" alt="Lighting with Technology setting of ShadowMap" />
-</TabItem>
-<TabItem label="Voxel">
-<img src="../assets/lighting-and-effects/lighting-properties/Technology-Voxel.jpg" width="800" height="450" alt="Lighting with Technology setting of Voxel" />
+<img src="../assets/lighting-and-effects/lighting-properties/EnvironmentSpecularScale-1.jpg" width="800" height="450" alt="Lighting.EnvironmentSpecularScale property of 1" />
 </TabItem>
 </Tabs>

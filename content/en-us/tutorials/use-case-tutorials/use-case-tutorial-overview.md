@@ -332,7 +332,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  </div>
    <Typography variant='body1' >Enhance outdoor environments</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="./lighting/enhance-outdoor-environments-with-future-lighting.md">
+       <a underline="none" href="./lighting/enhance-outdoor-environments.md">
        <Button variant="contained" color="secondary" size='large'
        style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
@@ -348,8 +348,8 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 </AccordionSummary>
 <AccordionDetails>
 
-- [Local light sources](../../effects/light-sources.md)
-- [Global lighting overview](../../environment/lighting.md)
+- [Light sources](../../effects/light-sources.md)
+- [Global lighting](../../environment/lighting.md)
 - [Atmospheric effects](../../environment/atmosphere.md)
 - [Post-processing effects](../../environment/post-processing-effects.md)
 - [Skyboxes](../../environment/skybox.md)

@@ -1,11 +1,11 @@
 ---
-title: Enhance indoor environments with Future lighting
-description: Explains how to leverage Future Lighting to enhance indoor environments.
+title: Enhance indoor environments with realistic lighting
+description: Explains how to leverage realistic lighting to enhance indoor environments.
 ---
 
-**Future lighting** is the most advanced and powerful `Class.Lighting.Technology` system you can use for rendering the 3D environment within your experiences. Unlike the other available lighting systems, Future lighting offers pixel perfect light emission, detailed shadows, and specular highlights that mimic real-world lighting for both indoor and outdoor spaces.
+`Enum.LightingStyle|Realistic` lighting is the most advanced and powerful `Class.Lighting.LightingStyle|LightingStyle` you can use for rendering the 3D environment within your experiences. It offers pixel perfect light emission, detailed shadows, and specular highlights that mimic real-world lighting for both indoor and outdoor spaces.
 
-Using the [Lighting Indoors - Start](https://www.roblox.com/games/17561948176/UCT-Lighting-Indoors) `.rbxl` file as a starting place and [Lighting Indoors - Complete](https://www.roblox.com/games/17562253150/UCT-Lighting-Indoors-After) as a reference, this tutorial shows you how to utilize Future lighting with strategic global and local light source configurations to produce realistic, immersive indoor lighting behavior that navigates players toward the exit of the cabin, including guidance on:
+Using the [Lighting Indoors - Start](https://www.roblox.com/games/17561948176/UCT-Lighting-Indoors) `.rbxl` file as a starting place and [Lighting Indoors - Complete](https://www.roblox.com/games/17562253150/UCT-Lighting-Indoors-After) as a reference, this tutorial shows you how to utilize realistic lighting with strategic global and local light source configurations to produce realistic, immersive indoor lighting behavior that navigates players toward the exit of the cabin, including guidance on:
 
 - Ensuring shiny surfaces have accurate reflections that update periodically as the environment dynamically changes.
 - Moving the sun and earth to new positions to angle sunlight from windows onto specific surfaces.
@@ -32,24 +32,24 @@ Global lighting is the luminescence from either the sun or moon in an experience
 
 By adjusting a couple of key default properties in the `Class.Lighting` service and its child `Class.Atmosphere` object, you can dramatically change how both the atmosphere and sunlight coming through the window appears to players, as well as how this lighting interacts with any other object you place in the experience.
 
-### Enable the Future lighting system
+### Enable realistic lighting
 
-The `Class.Lighting.Technology` property determines the behavior of both global and local lighting in your experience. Studio begins every experience with the `Enum.Technology.ShadowMap` lighting system, ensuring that the global lighting has precise shadows and illumination. However, to enhance the environment and enable your local light sources to also produce precise shadows, illumination, and specular highlights, you must enable the `Enum.Technology.Future` lighting system technology.
+The `Class.Lighting.LightingStyle|LightingStyle` property determines the behavior of both global and local lighting in your experience. Studio begins every experience with `Enum.LightingStyle|Soft` lighting which renders a flatter look with softer lights and shadows. However, to enhance the environment and enable your local light sources to also produce precise shadows, illumination, and specular highlights, you must enable `Enum.LightingStyle|Realistic` lighting.
 
-This lighting configuration allows both your global and local lighting to work together and provide more realistic and immersive visuals. To demonstrate, review how the lighting behavior for the radio changes when **Lighting Indoors - Complete** uses different lighting technology systems. The local lighting from the candlelight and radio with the ShadowMap lighting system doesn't produce shadows like the global lighting from the sun, and the details from the radio's leather and wood materials vanish.
+This lighting configuration allows both your global and local lighting to work together and provide more realistic and immersive visuals. To demonstrate, review how the lighting behavior for the radio changes when **Lighting Indoors - Complete** uses different lighting styles. The local lighting from the candlelight and radio with the `Enum.LightingStyle|Soft` lighting style doesn't produce shadows like the global lighting from the sun, and the details from the radio's leather and wood materials vanish.
 
 <GridContainer numColumns="2">
   <figure>
-    <img width="80%" img src="../../../assets/tutorials/enhancing-indoor-environments/Radio-ShadowMap.jpg" alt="A closeup view of the radio illuminated with ShadowMap technology." />
-    <figcaption>ShadowMap Technology</figcaption>
+    <img width="80%" img src="../../../assets/tutorials/enhancing-indoor-environments/Radio-Soft.jpg" alt="A closeup view of the radio illuminated with Soft lighting style." />
+    <figcaption>`Enum.LightingStyle|Soft` lighting style</figcaption>
   </figure>
   <figure>
-    <img width="80%" img src="../../../assets/tutorials/enhancing-indoor-environments/Radio-Future.jpg" alt="A closeup view of the radio illuminated with Future technology." />
-    <figcaption>Future Technology</figcaption>
+    <img width="80%" img src="../../../assets/tutorials/enhancing-indoor-environments/Radio-Realistic.jpg" alt="A closeup view of the radio illuminated with Realistic lighting style." />
+    <figcaption>`Enum.LightingStyle|Realistic` lighting style</figcaption>
   </figure>
 </GridContainer>
 
-It's important to note that because of the method in which the Future lighting system detects indoor spaces to calculate and render applicable shadows, it's best to surround indoor spaces with `Class.Part` objects with a thickness of at least 1 stud to prevent undesirable outdoor light from leaking into the cabin. For example, to avert the indoor and outdoor lighting from blending, the sample **Lighting Indoors - Start** uses parts with a minimum thickness of 2.5 studs to surround all MeshPart walls and ceiling objects without obstructing the window so that the sunlight can still shine into the room.
+It's important to note that because of the method in which the `Enum.LightingStyle|Realistic` lighting system detects indoor spaces to calculate and render applicable shadows, it's best to surround indoor spaces with `Class.Part` objects with a thickness of at least 1 stud to prevent undesirable outdoor light from leaking into the cabin. For example, to avert the indoor and outdoor lighting from blending, the sample **Lighting Indoors - Start** uses parts with a minimum thickness of 2.5 studs to surround all `Class.MeshPart` walls and ceiling objects without obstructing the window so that the sunlight can still shine into the room.
 
 <GridContainer numColumns="2">
   <figure>
@@ -62,25 +62,23 @@ It's important to note that because of the method in which the Future lighting s
   </figure>
 </GridContainer>
 
-To enable **Future** lighting technology:
+To enable **Realistic** lighting:
 
 1. In the **Explorer** window, select **Lighting**.
-1. In the **Properties** window, click the **Technology** dropdown, then select **Future**.
+1. In the **Properties** window, click the **LightingStyle** dropdown, then select **Realistic**.
 
-   <img width="320" img src="../../../assets/studio/properties/Lighting-Technology-Future.png" alt="A close up view of the Properties window with the Future technology property highlighted." />
-
-   <img width="80%" img src="../../../assets/tutorials/enhancing-indoor-environments/Future-1.jpg" alt="A full view of the starting cabin with Future lighting." />
+   <img width="80%" img src="../../../assets/tutorials/enhancing-indoor-environments/LightingStyle-Realistic.jpg" alt="A full view of the starting cabin with realistic lighting." />
 
 ### Elevate metal reflections
 
-A core advantage of using the Future lighting system is its ability to produce specular highlights on shiny, metallic surfaces. This increases the realism of indoor environments because it emulates real-world lighting behavior, and it provides a sense of depth to objects in the 3D space.
+A core advantage of using realistic lighting is its ability to produce specular highlights on shiny, metallic surfaces. This increases the realism of indoor environments because it emulates real-world lighting behavior, and it provides a sense of depth to objects in the 3D space.
 
 By default, all materials use [physically-based rendering](../../../art/modeling/surface-appearance.md) (PBR) textures that allow you to display realistic surfaces in various lighting scenarios by using multiple texture maps on a single object. This means that when you use Studio's built-in materials:
 
 - The metalness and roughness of a particular surface is already defined for you without any additional steps.
 - Objects with Studio's built-in materials naturally react more accurately to the lighting in your environment with realistic reflections.
 
-You can enhance this effect with the Future lighting system by increasing the global lighting's `Class.Lighting.EnvironmentDiffuseScale` and `Class.Lighting.EnvironmentSpecularScale` properties, especially when you set each property to `1`. This step is particularly important in this tutorial because it ensures that any PBR textures in the experience, including those from `Class.MaterialVariant|MaterialVariants` or `Class.SurfaceAppearance` objects, look their best and reflect their surroundings accurately.
+You can enhance this effect with the realistic lighting style by increasing the global lighting's `Class.Lighting.EnvironmentDiffuseScale` and `Class.Lighting.EnvironmentSpecularScale` properties, especially when you set each property to `1`. This step is particularly important in this tutorial because it ensures that any PBR textures in the experience, including those from `Class.MaterialVariant|MaterialVariants` or `Class.SurfaceAppearance` objects, look their best and reflect their surroundings accurately.
 
 To demonstrate this concept, examine the candle's metal bases with different `Class.Lighting.EnvironmentDiffuseScale` and `Class.Lighting.EnvironmentSpecularScale` property values. When you increase these values, the metal becomes more accurately reflects the lighting from both the global and local light sources, which allows the material to be more tangible to players as they explore the environment.
 
