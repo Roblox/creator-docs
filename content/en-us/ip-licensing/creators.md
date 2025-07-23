@@ -99,9 +99,9 @@ To dispute a license offer:
 6. Review and accept the legal agreements.
 7. Click **Dispute**. The IP holder can then accept or reject your offer dispute.
 
-If the IP holder accepts your dispute, you will not enter an agreement with them. However, if the IP holder rejects your dispute, you will receive their license offer again. After you receive their offer a second time, you can either wait 7 days for the offer to automatically become active or dispute the offer one more time.
+If the IP holder accepts your dispute, you will not enter into an agreement with them. However, if the IP holder rejects your dispute, you will receive their license offer again. After you receive their offer a second time, you can either wait 7 days for the offer to automatically become active or dispute the offer one final time.
 
-If the IP holder accepts your second dispute, you will not enter an agreement with them. If they reject your dispute a second time, the offer will be archived and the IP holder might choose to pursue a [DMCA claim](../production/publishing/dmca-guidelines.md).
+If you submit a second and final dispute, you will not enter into an agreement with the IP holder. Instead, the offer will be archived, and the IP holder might choose to pursue a [DMCA claim](../production/publishing/dmca-guidelines.md) separately.
 
 ## Transactions
 

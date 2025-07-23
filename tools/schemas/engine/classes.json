@@ -1,68 +1,362 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$comment": "Schema for classes. The definitions are arranged in alphabetical order.",
-  "definitions": {
-    "parameters": {
-      "type": ["array", "null"],
-      "description": "Parameters of this item. Each entry has the same keys. Table list. Automated.",
+  "$comment": "Schema for classes.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "$comment": "The name of the class.",
+      "description": "The name of the class. Determines the name of the page. Used for automatic cross-linking. String. Automated.",
+      "type": "string"
+    },
+    "type": {
+      "description": "the type of the API (class, datatype, enum, global, library). Automated.",
+      "enum": ["class"]
+    },
+    "memory_category": {
+      "description": "Defines where the class appears in the Memory tab of the Developer Console. Automated.",
+      "type": "string"
+    },
+    "summary": {
+      "$comment": "Summary of the class to appear in Script Editor Autocomplete.",
+      "description": "A single sentence overview of this class. Used in hover menus and suggestions. String.",
+      "type": "string"
+    },
+    "description": {
+      "$comment": "Full description of the class to appear on the website.",
+      "description": "A long description of how the class operates. Markdown.",
+      "type": "string"
+    },
+    "code_samples": {
+      "description": "A list of code samples for the class. String list.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "inherits": {
+      "description": "Defines which classes this class inherits from. String list.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tags": {
+      "$ref": "#/definitions/__schema0"
+    },
+    "deprecation_message": {
+      "description": "Description of why the class is deprecated and what to use instead.",
+      "type": "string"
+    },
+    "properties": {
+      "description": "A list of properties. Each entry has the same keys. Table list. Automated.",
+      "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "name": {
-            "type": "string",
-            "description": "Name of the parameter. String. Automated."
-          },
-          "type": {
-            "type": "string",
-            "description": "The datatype of the parameter. String. Automated."
-          },
-          "default": {
-            "type": ["boolean", "number", "null", "object", "string"],
-            "description": "The default value of the parameter. Any. Automated."
+            "description": "The name of the property. String. Automated.",
+            "type": "string"
           },
           "summary": {
-            "type": "string",
-            "description": "A single sentence definition of the parameter. String."
+            "description": "A single sentence overview of the property. String.",
+            "type": "string"
+          },
+          "description": {
+            "description": "A long description of the property. String.",
+            "type": "string"
+          },
+          "code_samples": {
+            "description": "A list of code samples for the property. String list.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "type": {
+            "description": "The data type of the property. string. Automated.",
+            "type": "string"
+          },
+          "tags": {
+            "$ref": "#/definitions/__schema0"
+          },
+          "deprecation_message": {
+            "description": "Description of why the property is deprecated and what to use instead. String.",
+            "type": "string"
+          },
+          "security": {
+            "description": "Security tags for this property. Automated.",
+            "type": "object",
+            "properties": {
+              "read": {
+                "$ref": "#/definitions/__schema1"
+              },
+              "write": {
+                "$ref": "#/definitions/__schema1"
+              }
+            },
+            "required": ["read", "write"]
+          },
+          "thread_safety": {
+            "$ref": "#/definitions/__schema2"
+          },
+          "category": {
+            "description": "The name of the category that this property appears under in the Properties window in Studio. Automated.",
+            "type": "string"
+          },
+          "serialization": {
+            "description": "Serialization for this property. Object. Automated.",
+            "type": "object",
+            "properties": {
+              "can_load": {
+                "description": "The read security tag for this property. String. Automated.",
+                "type": "boolean"
+              },
+              "can_save": {
+                "description": "The write security tag for this property. String. Automated.",
+                "type": "boolean"
+              }
+            },
+            "required": ["can_load", "can_save"]
+          },
+          "capabilities": {
+            "$ref": "#/definitions/__schema3"
+          },
+          "writeCapabilities": {
+            "$ref": "#/definitions/__schema4"
           }
         },
-        "required": ["name", "type", "default", "summary"]
+        "required": [
+          "name",
+          "summary",
+          "description",
+          "code_samples",
+          "type",
+          "tags",
+          "deprecation_message",
+          "security",
+          "thread_safety",
+          "category",
+          "serialization",
+          "capabilities",
+          "writeCapabilities"
+        ]
       }
     },
-    "returns": {
-      "type": ["array", "null"],
-      "description": "Returns of this item. Each entry has the same keys. Table list. Automated.",
+    "methods": {
+      "description": "A list of methods. Each entry has the same keys. Table list. Automated.",
+      "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "type": {
-            "type": ["string", "null"],
-            "description": "The datatype of the return. String. Automated."
+          "name": {
+            "description": "The name of the method. String. Automated.",
+            "type": "string"
           },
           "summary": {
-            "type": "string",
-            "description": "A single sentence definition of the return. String."
+            "description": "A single sentence overview of the method. String.",
+            "type": "string"
+          },
+          "description": {
+            "description": "A long description of the method. String.",
+            "type": "string"
+          },
+          "code_samples": {
+            "description": "A list of code samples for the method. String list.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "parameters": {
+            "$ref": "#/definitions/__schema5"
+          },
+          "returns": {
+            "$ref": "#/definitions/__schema6"
+          },
+          "tags": {
+            "$ref": "#/definitions/__schema0"
+          },
+          "deprecation_message": {
+            "description": "Description of why the method is deprecated and what to use instead. String.",
+            "type": "string"
+          },
+          "security": {
+            "$ref": "#/definitions/__schema1"
+          },
+          "thread_safety": {
+            "$ref": "#/definitions/__schema2"
+          },
+          "capabilities": {
+            "$ref": "#/definitions/__schema3"
+          },
+          "writeCapabilities": {
+            "$ref": "#/definitions/__schema4"
           }
         },
-        "required": ["type", "summary"]
+        "required": [
+          "name",
+          "summary",
+          "description",
+          "code_samples",
+          "parameters",
+          "returns",
+          "tags",
+          "deprecation_message",
+          "security",
+          "thread_safety",
+          "capabilities",
+          "writeCapabilities"
+        ]
       }
     },
-    "security_tags": {
-      "description": "Security tag for this item. Enum. Automated.",
-      "enum": [
-        "None",
-        "PluginSecurity",
-        "LocalUserSecurity",
-        "RobloxScriptSecurity",
-        "RobloxEngineSecurity",
-        "NotAccessibleSecurity",
-        "WritePlayerSecurity"
-      ]
-    },
-    "tags": {
-      "type": ["array", "null"],
-      "description": "Tags for this item, such as Deprecated. String list. Automated.",
+    "events": {
+      "description": "A list of events. Each entry has the same keys. Table list. Automated.",
+      "type": "array",
       "items": {
-        "type": "string",
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "The name of the event. String. Automated.",
+            "type": "string"
+          },
+          "summary": {
+            "description": "A single sentence overview of the event. String.",
+            "type": "string"
+          },
+          "description": {
+            "description": "A long description of the event. String.",
+            "type": "string"
+          },
+          "code_samples": {
+            "description": "A list of code samples for the event. String list.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "parameters": {
+            "$ref": "#/definitions/__schema5"
+          },
+          "tags": {
+            "$ref": "#/definitions/__schema0"
+          },
+          "deprecation_message": {
+            "description": "Description of why the event is deprecated and what to use instead. String.",
+            "type": "string"
+          },
+          "security": {
+            "$ref": "#/definitions/__schema1"
+          },
+          "capabilities": {
+            "$ref": "#/definitions/__schema3"
+          },
+          "writeCapabilities": {
+            "$ref": "#/definitions/__schema4"
+          }
+        },
+        "required": [
+          "name",
+          "summary",
+          "description",
+          "code_samples",
+          "parameters",
+          "tags",
+          "deprecation_message",
+          "security",
+          "capabilities",
+          "writeCapabilities"
+        ]
+      }
+    },
+    "callbacks": {
+      "description": "A list of callbacks. Each entry has the same keys. Table list. Automated.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "The name of the callback. String. Automated.",
+            "type": "string"
+          },
+          "summary": {
+            "description": "A single sentence overview of the callback. String.",
+            "type": "string"
+          },
+          "description": {
+            "description": "A long description of the callback. String.",
+            "type": "string"
+          },
+          "code_samples": {
+            "description": "A list of code samples for the callback. String list.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "parameters": {
+            "$ref": "#/definitions/__schema5"
+          },
+          "returns": {
+            "$ref": "#/definitions/__schema6"
+          },
+          "tags": {
+            "$ref": "#/definitions/__schema0"
+          },
+          "deprecation_message": {
+            "description": "Description of why the callback is deprecated and what to use instead. String.",
+            "type": "string"
+          },
+          "security": {
+            "$ref": "#/definitions/__schema1"
+          },
+          "thread_safety": {
+            "$ref": "#/definitions/__schema2"
+          },
+          "capabilities": {
+            "$ref": "#/definitions/__schema3"
+          },
+          "writeCapabilities": {
+            "$ref": "#/definitions/__schema4"
+          }
+        },
+        "required": [
+          "name",
+          "summary",
+          "description",
+          "code_samples",
+          "parameters",
+          "returns",
+          "tags",
+          "deprecation_message",
+          "security",
+          "thread_safety",
+          "capabilities",
+          "writeCapabilities"
+        ]
+      }
+    }
+  },
+  "required": [
+    "name",
+    "type",
+    "memory_category",
+    "summary",
+    "description",
+    "code_samples",
+    "inherits",
+    "tags",
+    "deprecation_message",
+    "properties",
+    "methods",
+    "events",
+    "callbacks"
+  ],
+  "definitions": {
+    "__schema0": {
+      "$id": "tags",
+      "description": "Tags for this item, such as Deprecated. String list. Automated.",
+      "type": "array",
+      "items": {
         "enum": [
           "NotCreatable",
           "NotBrowsable",
@@ -82,365 +376,105 @@
         ]
       }
     },
-    "thread_safety": {
+    "__schema1": {
+      "$id": "security_tag",
+      "description": "Security tag for this item. Enum. Automated.",
+      "enum": [
+        "None",
+        "Plugin",
+        "PluginSecurity",
+        "LocalUser",
+        "LocalUserSecurity",
+        "RobloxScript",
+        "RobloxScriptSecurity",
+        "RobloxEngine",
+        "RobloxEngineSecurity",
+        "NotAccessible",
+        "NotAccessibleSecurity",
+        "WritePlayer",
+        "WritePlayerSecurity"
+      ]
+    },
+    "__schema2": {
+      "$id": "thread_safety",
       "description": "Thread safety of this item. Enum. Automated.",
       "enum": ["Unsafe", "ReadSafe", "Safe", "ReadOnly"]
     },
-    "capabilities": {
+    "__schema3": {
+      "$id": "capabilities",
       "description": "Features that have read capabilities to this item. Array of strings. Automated.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
-    "writeCapabilities": {
+    "__schema4": {
+      "$id": "writeCapabilities",
       "description": "Features that have write capabilities to this item. Array of strings. Automated.",
+      "default": [],
       "type": "array",
       "items": {
         "type": "string"
       }
-    }
-  },
-  "properties": {
-    "name": {
-      "$comment": "The name of the class.",
-      "type": "string",
-      "description": "The name of the class. Determines the name of the page. Used for automatic cross-linking. String. Automated."
     },
-    "type": {
-      "type": "string",
-      "description": "the type of the API (class, datatype, enum, global, library). Automated.",
-      "enum": ["class"]
-    },
-    "memory_category": {
-      "type": ["string", "null"],
-      "description": "Defines where the class appears in the Memory tab of the Developer Console. Automated."
-    },
-    "summary": {
-      "$comment": "Summary of the class to appear in Script Editor Autocomplete.",
-      "type": "string",
-      "description": "A single sentence overview of this class. Used in hover menus and suggestions. String."
-    },
-    "description": {
-      "$comment": "Full description of the class to appear on the website.",
-      "type": "string",
-      "description": "A long description of how the class operates. Markdown."
-    },
-    "code_samples": {
-      "type": ["array", "null"],
-      "description": "A list of code samples for the class. String list.",
-      "items": {
-        "type": "string"
-      }
-    },
-    "inherits": {
-      "type": ["array", "null"],
-      "description": "Defines which classes this class inherits from. String list.",
-      "items": {
-        "type": "string"
-      }
-    },
-    "tags": { "$ref": "#/definitions/tags" },
-    "deprecation_message": {
-      "type": "string",
-      "description": "Description of why the class is deprecated and what to use instead."
-    },
-    "properties": {
-      "type": ["array", "null"],
-      "description": "A list of properties. Each entry has the same keys. Table list. Automated.",
+    "__schema5": {
+      "$id": "parameters",
+      "description": "Parameters of this item. Each entry has the same keys. Table list. Automated.",
+      "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "name": {
-            "type": "string",
-            "description": "The name of the property. String. Automated."
-          },
-          "summary": {
-            "type": "string",
-            "description": "A single sentence overview of the property. String."
-          },
-          "description": {
-            "type": "string",
-            "description": "A long description of the property. String."
-          },
-          "code_samples": {
-            "type": ["array", "null"],
-            "description": "A list of code samples for the property. String list.",
-            "items": {
-              "type": "string"
-            }
+            "description": "Name of the parameter. String. Automated.",
+            "type": "string"
           },
           "type": {
-            "type": "string",
-            "description": "The data type of the property. string. Automated."
+            "description": "The datatype of the parameter. String. Automated.",
+            "type": "string"
           },
-          "tags": {
-            "$ref": "#/definitions/tags"
-          },
-          "deprecation_message": {
-            "type": "string",
-            "description": "Description of why the property is deprecated and what to use instead. String."
-          },
-          "security": {
-            "type": ["object"],
-            "description": "Security tags for this property. Automated.",
-            "properties": {
-              "read": {
-                "type": "string",
-                "description": "The read security tag for this property. String. Automated.",
-                "$ref": "#/definitions/security_tags"
+          "default": {
+            "description": "The default value of the parameter. String, boolean, or number. Automated.",
+            "anyOf": [
+              {
+                "type": "string"
               },
-              "write": {
-                "type": "string",
-                "description": "The write security tag for this property. String. Automated.",
-                "$ref": "#/definitions/security_tags"
-              }
-            },
-            "required": ["read", "write"]
-          },
-          "thread_safety": { "$ref": "#/definitions/thread_safety" },
-          "category": {
-            "type": "string",
-            "description": "The name of the category that this property appears under in the Properties window in Studio. Automated."
-          },
-          "serialization": {
-            "type": ["object"],
-            "description": "Serialization for this property. Object. Automated.",
-            "properties": {
-              "can_load": {
-                "type": "boolean",
-                "description": "The read security tag for this property. String. Automated."
+              {
+                "type": "boolean"
               },
-              "can_save": {
-                "type": "boolean",
-                "description": "The write security tag for this property. String. Automated."
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
               }
-            },
-            "required": ["can_load", "can_save"]
+            ]
           },
-          "capabilities": {
-            "$ref": "#/definitions/capabilities"
-          },
-          "writeCapabilities": {
-            "$ref": "#/definitions/writeCapabilities"
+          "summary": {
+            "description": "A single sentence definition of the parameter. String.",
+            "type": "string"
           }
         },
-        "required": [
-          "name",
-          "summary",
-          "description",
-          "code_samples",
-          "type",
-          "tags",
-          "deprecation_message",
-          "security",
-          "thread_safety",
-          "category",
-          "serialization",
-          "capabilities"
-        ]
+        "required": ["name", "type", "summary"]
       }
     },
-    "methods": {
-      "type": ["array", "null"],
-      "description": "A list of methods. Each entry has the same keys. Table list. Automated.",
+    "__schema6": {
+      "$id": "returns",
+      "description": "Returns of this item. Each entry has the same keys. Table list. Automated.",
+      "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the method. String. Automated."
+          "type": {
+            "description": "The datatype of the return. String. Automated.",
+            "type": "string"
           },
           "summary": {
-            "type": "string",
-            "description": "A single sentence overview of the method. String."
-          },
-          "description": {
-            "type": "string",
-            "description": "A long description of the method. String."
-          },
-          "code_samples": {
-            "type": ["array", "null"],
-            "description": "A list of code samples for the method. String list.",
-            "items": {
-              "type": "string"
-            }
-          },
-          "parameters": {
-            "$ref": "#/definitions/parameters"
-          },
-          "returns": {
-            "$ref": "#/definitions/returns"
-          },
-          "tags": { "$ref": "#/definitions/tags" },
-          "deprecation_message": {
-            "type": "string",
-            "description": "Description of why the method is deprecated and what to use instead. String."
-          },
-          "security": {
-            "type": ["string"],
-            "description": "Security tag for this method. String. Automated.",
-            "$ref": "#/definitions/security_tags"
-          },
-          "thread_safety": { "$ref": "#/definitions/thread_safety" },
-          "capabilities": {
-            "$ref": "#/definitions/capabilities"
-          },
-          "writeCapabilities": {
-            "$ref": "#/definitions/writeCapabilities"
+            "description": "A single sentence definition of the return. String.",
+            "type": "string"
           }
         },
-        "required": [
-          "name",
-          "summary",
-          "description",
-          "code_samples",
-          "parameters",
-          "returns",
-          "tags",
-          "deprecation_message",
-          "security",
-          "thread_safety",
-          "capabilities"
-        ]
-      }
-    },
-    "events": {
-      "type": ["array", "null"],
-      "description": "A list of events. Each entry has the same keys. Table list. Automated.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the event. String. Automated."
-          },
-          "summary": {
-            "type": "string",
-            "description": "A single sentence overview of the event. String."
-          },
-          "description": {
-            "type": "string",
-            "description": "A long description of the event. String."
-          },
-          "code_samples": {
-            "type": ["array", "null"],
-            "description": "A list of code samples for the event. String list.",
-            "items": {
-              "type": "string"
-            }
-          },
-          "parameters": {
-            "$ref": "#/definitions/parameters"
-          },
-          "tags": { "$ref": "#/definitions/tags" },
-          "deprecation_message": {
-            "type": "string",
-            "description": "Description of why the event is deprecated and what to use instead. String."
-          },
-          "security": {
-            "type": ["string"],
-            "description": "Security tag for this event. String. Automated.",
-            "$ref": "#/definitions/security_tags"
-          },
-          "capabilities": {
-            "$ref": "#/definitions/capabilities"
-          },
-          "writeCapabilities": {
-            "$ref": "#/definitions/writeCapabilities"
-          }
-        },
-        "required": [
-          "name",
-          "summary",
-          "description",
-          "code_samples",
-          "parameters",
-          "tags",
-          "deprecation_message",
-          "security",
-          "capabilities"
-        ]
-      }
-    },
-    "callbacks": {
-      "type": ["array", "null"],
-      "description": "A list of callbacks. Each entry has the same keys. Table list. Automated.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the callback. String. Automated."
-          },
-          "summary": {
-            "type": "string",
-            "description": "A single sentence overview of the callback. String."
-          },
-          "description": {
-            "type": "string",
-            "description": "A long description of the callback. String."
-          },
-          "code_samples": {
-            "type": ["array", "null"],
-            "description": "A list of code samples for the callback. String list.",
-            "items": {
-              "type": "string"
-            }
-          },
-          "parameters": {
-            "$ref": "#/definitions/parameters"
-          },
-          "returns": {
-            "$ref": "#/definitions/returns"
-          },
-          "tags": { "$ref": "#/definitions/tags" },
-          "deprecation_message": {
-            "type": "string",
-            "description": "Description of why the callback is deprecated and what to use instead. String."
-          },
-          "security": {
-            "type": ["string"],
-            "description": "Security tag for this callback. String. Automated.",
-            "$ref": "#/definitions/security_tags"
-          },
-          "thread_safety": { "$ref": "#/definitions/thread_safety" },
-          "capabilities": {
-            "$ref": "#/definitions/capabilities"
-          },
-          "writeCapabilities": {
-            "$ref": "#/definitions/writeCapabilities"
-          }
-        },
-        "required": [
-          "name",
-          "summary",
-          "description",
-          "code_samples",
-          "parameters",
-          "returns",
-          "tags",
-          "deprecation_message",
-          "security",
-          "thread_safety",
-          "capabilities"
-        ]
+        "required": ["type", "summary"]
       }
     }
-  },
-  "required": [
-    "name",
-    "type",
-    "memory_category",
-    "summary",
-    "description",
-    "code_samples",
-    "inherits",
-    "tags",
-    "deprecation_message",
-    "properties",
-    "methods",
-    "events",
-    "callbacks"
-  ]
+  }
 }

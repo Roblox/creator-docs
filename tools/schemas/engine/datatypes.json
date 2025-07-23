@@ -1,306 +1,300 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
   "$comment": "Schema for data types.",
-  "definitions": {
-    "code_samples": {
-      "type": ["array", "null"],
-      "description": "A list of code samples for the item. String list.",
-      "items": {
-        "type": "string"
-      }
-    },
-    "parameters": {
-      "type": ["array", "null"],
-      "description": "Parameters of this item. Each entry has the same keys. Table list.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the parameter. String."
-          },
-          "type": {
-            "type": "string",
-            "description": "The data type of the parameter. String."
-          },
-          "default": {
-            "type": ["boolean", "number", "null", "object", "string"],
-            "description": "The default value of the parameter. Any."
-          },
-          "summary": {
-            "type": "string",
-            "description": "A single sentence definition of the parameter. String."
-          }
-        },
-        "required": ["name", "type", "default", "summary"]
-      }
-    },
-    "returns": {
-      "type": ["array", "null"],
-      "description": "The returns of this item. Each entry has the same keys. Table list.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "The data type of the return. String."
-          },
-          "summary": {
-            "type": "string",
-            "description": "A single sentence definition of the return. String."
-          }
-        },
-        "required": ["type", "summary"]
-      }
-    },
-    "tags": {
-      "type": ["array", "null"],
-      "description": "Tags for this item, such as Deprecated. String list.",
-      "items": {
-        "type": "string",
-        "enum": [
-          "Hidden",
-          "NotReplicated",
-          "Deprecated",
-          "ReadOnly",
-          "NotScriptable",
-          "NotBrowsable",
-          "NotCreatable",
-          "CanYield",
-          "NoYield",
-          "Yields",
-          "Service",
-          "Settings",
-          "UserSettings",
-          "CustomLuaState",
-          "PlayerReplicated"
-        ]
-      }
-    },
-    "deprecation_message": {
-      "type": "string",
-      "description": "Description of why this is deprecated and what to use instead. String."
-    }
-  },
+  "type": "object",
   "properties": {
     "name": {
       "$comment": "The name of the data type.",
-      "type": "string",
-      "description": "The name of the data type. Determines the name of the page. Used automatic cross-linking. String."
+      "description": "The name of the data type. Determines the name of the page. Used for automatic cross-linking. String. Automated.",
+      "type": "string"
     },
     "type": {
-      "type": "string",
-      "description": "the type of the API (class, data type, enum, global, library).",
+      "description": "the type of the API (class, datatype, enum, global, library). Automated.",
       "enum": ["datatype"]
     },
     "summary": {
-      "$comment": "A single sentence overview of the data type to appear in Script Editor Autocomplete.",
-      "type": "string",
-      "description": "A single sentence overview of the data type. Used in hover menus and suggestions. String."
+      "$comment": "Summary of the data type to appear in Script Editor Autocomplete.",
+      "description": "A single sentence overview of this data type. Used in hover menus and suggestions. String.",
+      "type": "string"
     },
     "description": {
       "$comment": "Full description of the data type to appear on the website.",
-      "type": "string",
-      "description": "A long description of the data type. String."
+      "description": "A long description of how the data type operates. Markdown.",
+      "type": "string"
     },
     "code_samples": {
-      "type": ["array", "null"],
-      "description": "List of code samples for the data type. String list.",
+      "description": "A list of code samples for the data type. String list.",
+      "type": "array",
       "items": {
         "type": "string"
-      },
-      "tags": { "$ref": "#/definitions/tags" },
-      "deprecation_message": { "$ref": "#/definitions/deprecation_message" }
+      }
+    },
+    "tags": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/__schema0"
+        }
+      ]
+    },
+    "deprecation_message": {
+      "description": "Description of why the data type is deprecated and what to use instead.",
+      "type": "string"
     },
     "constructors": {
-      "type": ["array", "null"],
-      "description": "Constructors for the data type. String.",
+      "description": "A list of constructors. Table list.",
+      "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "name": {
-            "type": "string",
-            "description": "The name of the constructor. String."
+            "description": "The name of the constructor. String.",
+            "type": "string"
           },
           "summary": {
-            "type": "string",
-            "description": "A single sentence overview of the constructor."
+            "description": "A single sentence overview of the constructor. String.",
+            "type": "string"
           },
           "description": {
-            "type": "string",
-            "description": "A long description of the constructor."
+            "description": "A long description of the constructor. String.",
+            "type": "string"
           },
           "parameters": {
-            "$ref": "#/definitions/parameters"
+            "$ref": "#/definitions/__schema1"
           },
           "code_samples": {
-            "$ref": "#/definitions/code_samples"
+            "description": "A list of code samples for the constructor. String list.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
-          "tags": { "$ref": "#/definitions/tags" },
-          "deprecation_message": { "$ref": "#/definitions/deprecation_message" }
+          "tags": {
+            "allOf": [
+              {
+                "$ref": "#/definitions/__schema0"
+              }
+            ]
+          },
+          "deprecation_message": {
+            "description": "Description of why the constructor is deprecated. String.",
+            "type": "string"
+          }
         },
         "required": [
           "name",
           "summary",
           "description",
           "parameters",
-          "code_samples",
-          "tags",
-          "deprecation_message"
+          "code_samples"
         ]
       }
     },
     "constants": {
-      "$comment": "",
-      "description": "Constants of the data type. Table list.",
-      "type": ["array"],
+      "description": "A list of constants. Table list.",
+      "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "name": {
-            "type": "string",
-            "description": "The name of the constant. String."
+            "description": "The name of the constant. String.",
+            "type": "string"
           },
           "type": {
-            "type": "string",
-            "description": "The data type of the constant. String."
+            "description": "The data type of the constant. String.",
+            "type": "string"
           },
           "summary": {
-            "type": "string",
-            "description": "A single sentence overview of the constant. String."
+            "description": "A single sentence overview of the constant. String.",
+            "type": "string"
           },
           "description": {
-            "type": "string",
-            "description": "A long description of the constant. String."
+            "description": "A long description of the constant. String.",
+            "type": "string"
           },
           "code_samples": {
-            "$ref": "#/definitions/code_samples"
+            "description": "A list of code samples for the constant. String list.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
-          "tags": { "$ref": "#/definitions/tags" },
-          "deprecation_message": { "$ref": "#/definitions/deprecation_message" }
+          "tags": {
+            "allOf": [
+              {
+                "$ref": "#/definitions/__schema0"
+              }
+            ]
+          },
+          "deprecation_message": {
+            "description": "Description of why the constant is deprecated. String.",
+            "type": "string"
+          }
         },
-        "required": [
-          "name",
-          "type",
-          "summary",
-          "description",
-          "code_samples",
-          "tags",
-          "deprecation_message"
-        ]
+        "required": ["name", "summary", "description", "code_samples"]
       }
     },
     "properties": {
-      "$comment": "",
-      "description": "Properties of the data type. Table list.",
-      "type": ["array", "null"],
+      "description": "A list of properties. Table list.",
+      "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "name": {
-            "type": "string",
-            "description": "The name of the property. String."
+            "description": "The name of the property. String. Automated.",
+            "type": "string"
           },
           "type": {
-            "type": "string",
-            "description": "The data type of the property. String."
+            "description": "The data type of the property. string. Automated.",
+            "type": "string"
           },
           "summary": {
-            "type": "string",
-            "description": "A single sentence overview of the property. String."
+            "description": "A single sentence overview of the property. String.",
+            "type": "string"
           },
           "description": {
-            "type": "string",
-            "description": "A long description of the property. String."
+            "description": "A long description of the property. String.",
+            "type": "string"
           },
           "code_samples": {
-            "$ref": "#/definitions/code_samples"
+            "description": "A list of code samples for the property. String list.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
-          "tags": { "$ref": "#/definitions/tags" },
-          "deprecation_message": { "$ref": "#/definitions/deprecation_message" }
+          "tags": {
+            "allOf": [
+              {
+                "$ref": "#/definitions/__schema0"
+              }
+            ]
+          },
+          "deprecation_message": {
+            "description": "Description of why the property is deprecated and what to use instead. String.",
+            "type": "string"
+          },
+          "default": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
         },
         "required": [
           "name",
-          "type",
           "summary",
           "description",
           "code_samples",
-          "tags",
           "deprecation_message"
         ]
       }
     },
     "methods": {
-      "type": ["array", "null"],
-      "description": "The functions of the data type. Table list.",
+      "description": "A list of methods. Table list.",
+      "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "name": {
-            "type": "string",
-            "description": "The name of the method. String."
+            "description": "The name of the method. String. Automated.",
+            "type": "string"
           },
           "summary": {
-            "type": "string",
-            "description": "A single sentence overview of the method. String."
+            "description": "A single sentence overview of the method. String.",
+            "type": "string"
           },
           "description": {
-            "type": "string",
-            "description": "A long description of the method."
-          },
-          "parameters": {
-            "$ref": "#/definitions/parameters"
-          },
-          "returns": {
-            "$ref": "#/definitions/returns"
+            "description": "A long description of the method. String.",
+            "type": "string"
           },
           "code_samples": {
-            "$ref": "#/definitions/code_samples"
+            "description": "A list of code samples for the method. String list.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
-          "tags": { "$ref": "#/definitions/tags" },
-          "deprecation_message": { "$ref": "#/definitions/deprecation_message" }
+          "parameters": {
+            "$ref": "#/definitions/__schema1"
+          },
+          "returns": {
+            "$ref": "#/definitions/__schema2"
+          },
+          "tags": {
+            "allOf": [
+              {
+                "$ref": "#/definitions/__schema0"
+              }
+            ]
+          },
+          "deprecation_message": {
+            "description": "Description of why the method is deprecated and what to use instead. String.",
+            "type": "string"
+          }
         },
         "required": [
           "name",
           "summary",
           "description",
+          "code_samples",
           "parameters",
           "returns",
-          "code_samples",
-          "tags",
           "deprecation_message"
         ]
       }
     },
     "functions": {
-      "type": ["array", "null"],
-      "description": "The functions of the data type. Table list.",
+      "description": "A list of functions. Table list.",
+      "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "name": {
-            "type": "string",
-            "description": "The name of the function. String."
+            "description": "The name of the function. String.",
+            "type": "string"
           },
           "summary": {
-            "type": "string",
-            "description": "A single sentence overview of the function. String."
+            "description": "A single sentence overview of the function. String.",
+            "type": "string"
           },
           "description": {
-            "type": "string",
-            "description": "A long description of the function."
+            "description": "A long description of the function. String.",
+            "type": "string"
           },
           "parameters": {
-            "$ref": "#/definitions/parameters"
+            "$ref": "#/definitions/__schema1"
           },
           "returns": {
-            "$ref": "#/definitions/returns"
+            "$ref": "#/definitions/__schema2"
           },
           "code_samples": {
-            "$ref": "#/definitions/code_samples"
+            "description": "A list of code samples for the function. String list.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
-          "tags": { "$ref": "#/definitions/tags" },
-          "deprecation_message": { "$ref": "#/definitions/deprecation_message" }
+          "tags": {
+            "allOf": [
+              {
+                "$ref": "#/definitions/__schema0"
+              }
+            ]
+          },
+          "deprecation_message": {
+            "description": "Description of why the function is deprecated. String.",
+            "type": "string"
+          }
         },
         "required": [
           "name",
@@ -308,75 +302,156 @@
           "description",
           "parameters",
           "returns",
-          "code_samples",
-          "tags",
-          "deprecation_message"
+          "code_samples"
         ]
       }
     },
     "math_operations": {
-      "type": ["array", "null"],
-      "description": "Math operations for the data type. Table list.",
+      "description": "A list of math operations. Table list.",
+      "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "operation": {
-            "type": "string",
-            "description": "The name of the operation."
+          "name": {
+            "description": "The math operation symbol. String.",
+            "type": "string"
           },
           "summary": {
-            "type": "string",
-            "description": "A single sentence overview of the operation."
+            "description": "A single sentence overview of the math operation. String.",
+            "type": "string"
           },
           "description": {
-            "type": "string",
-            "description": "A long description of the operation."
+            "description": "A long description of the math operation. String.",
+            "type": "string"
           },
           "type_a": {
-            "type": "string",
-            "description": "The data type of the first parameter in the operation"
+            "description": "The first operand type. String.",
+            "type": "string"
           },
           "type_b": {
-            "type": "string",
-            "description": "The data type of the second parameter in the operation"
+            "description": "The second operand type. String.",
+            "type": "string"
           },
           "return_type": {
-            "type": "string",
-            "description": "The return type of the operation"
+            "description": "The return type. String.",
+            "type": "string"
           },
           "code_samples": {
-            "$ref": "#/definitions/code_samples"
+            "description": "A list of code samples for the math operation. String list.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
-          "tags": { "$ref": "#/definitions/tags" },
-          "deprecation_message": { "$ref": "#/definitions/deprecation_message" }
+          "tags": {
+            "allOf": [
+              {
+                "$ref": "#/definitions/__schema0"
+              }
+            ]
+          },
+          "deprecation_message": {
+            "description": "Description of why the math operation is deprecated. String.",
+            "type": "string"
+          }
         },
         "required": [
-          "operation",
+          "name",
           "summary",
           "description",
           "type_a",
           "type_b",
           "return_type",
-          "code_samples",
-          "tags",
-          "deprecation_message"
+          "code_samples"
         ]
       }
     }
   },
-  "required": [
-    "name",
-    "type",
-    "summary",
-    "description",
-    "code_samples",
-    "tags",
-    "deprecation_message",
-    "constructors",
-    "constants",
-    "properties",
-    "methods",
-    "functions",
-    "math_operations"
-  ]
+  "required": ["summary", "description", "code_samples"],
+  "additionalProperties": {},
+  "definitions": {
+    "__schema0": {
+      "$id": "tags",
+      "description": "Tags for this item, such as Deprecated. String list. Automated.",
+      "type": "array",
+      "items": {
+        "enum": [
+          "NotCreatable",
+          "NotBrowsable",
+          "ReadOnly",
+          "NotReplicated",
+          "Hidden",
+          "Deprecated",
+          "CustomLuaState",
+          "CanYield",
+          "Service",
+          "Yields",
+          "PlayerReplicated",
+          "NotScriptable",
+          "Settings",
+          "NoYield",
+          "UserSettings"
+        ]
+      }
+    },
+    "__schema1": {
+      "$id": "parameters",
+      "description": "Parameters of this item. Each entry has the same keys. Table list. Automated.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "Name of the parameter. String. Automated.",
+            "type": "string"
+          },
+          "type": {
+            "description": "The datatype of the parameter. String. Automated.",
+            "type": "string"
+          },
+          "default": {
+            "description": "The default value of the parameter. String, boolean, or number. Automated.",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "summary": {
+            "description": "A single sentence definition of the parameter. String.",
+            "type": "string"
+          }
+        },
+        "required": ["name", "type", "summary"]
+      }
+    },
+    "__schema2": {
+      "$id": "returns",
+      "description": "Returns of this item. Each entry has the same keys. Table list. Automated.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "description": "The datatype of the return. String. Automated.",
+            "type": "string"
+          },
+          "summary": {
+            "description": "A single sentence definition of the return. String.",
+            "type": "string"
+          }
+        },
+        "required": ["type", "summary"]
+      }
+    }
+  }
 }
