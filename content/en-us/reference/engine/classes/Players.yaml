@@ -892,8 +892,8 @@ methods:
     summary: |
       Returns information about the character appearance of a given user.
     description: |
-      This function returns information about a player's avatar (ignoring gear)
-      on the Roblox website in the form of a dictionary. It is not to be
+      This function returns information about a player's avatar on
+      the Roblox website in the form of a dictionary. It is not to be
       confused with
       `Class.Players:GetCharacterAppearanceAsync()|GetCharacterAppearanceAsync`,
       which actually loads the assets described by this method. You can use
