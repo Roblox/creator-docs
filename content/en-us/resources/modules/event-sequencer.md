@@ -240,9 +240,6 @@ To install the plugin:
    <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
 
 2. With the **Creator Store** tab selected, select **Plugins** from the dropdown menu.
-
-   <img src="../../assets/studio/toolbox/Creator-Store-Plugins.png" width="360" />
-
 3. In the search field, type **Scene Manager** and press <kbd>Enter</kbd> to locate the plugin.
 
    <img src="../../assets/studio/toolbox/Creator-Store-Scene-Manager-Plugin.png" width="360" />

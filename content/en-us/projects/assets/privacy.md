@@ -38,11 +38,12 @@ Once a collaborator has permission to use one of your restricted assets, they ca
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../../assets/studio/toolbox/Inventory-and-Creations.png" width="100%" alt="A close up view of the Toolbox with the Inventory and Creations tabs highlighted." />
+    <img src="../../assets/studio/toolbox/Inventory-Tab.png" width="360" alt="A close up view of the Toolbox with the Inventory tab highlighted." />
+		<img src="../../assets/studio/toolbox/Creations-Tab.png" width="360" alt="A close up view of the Toolbox with the Creations tab highlighted." />
     <figcaption>Inserting a restricted asset through the Toolbox</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/studio/properties/Enter-Private-Asset-ID.png" width="90%" alt="A close up view of the Properties windo with a SoundID property highlighted." />
+    <img src="../../assets/studio/properties/Enter-Private-Asset-ID.png" width="320" alt="A close up view of the Properties window with the Asset property highlighted." />
     <figcaption>Inserting a restricted asset in the Properties window</figcaption>
   </figure>
 </GridContainer>

@@ -5,7 +5,7 @@ description: The Asset Manager lets you manage places and bulk import assets int
 
 import BetaAlert from '../../includes/beta-features/beta-alert.md'
 
-The **Asset Manager** lets you manage [places](../../production/publishing/publish-experiences-and-places.md) and bulk import assets into your experience, including [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [packages](../../projects/assets/packages.md), [audio](../../sound/assets.md), and [models](../../parts/models.md).
+The **Asset Manager**, accessible from the [View](../../studio/view-tab.md) tab, lets you manage [places](../../production/publishing/publish-experiences-and-places.md) and bulk import assets into your experience, including [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [packages](../../projects/assets/packages.md), [audio](../../audio/assets.md), and [models](../../parts/models.md).
 
 <img src="../../assets/studio/general/View-Tab-Asset-Manager.png" width="776" alt="Studio's View tab with the Asset Manager button highlighted." />
 
@@ -45,7 +45,7 @@ The **bulk import** tool is ideal for importing up to 50 files in one batch. Imp
   </tr>
   <tr>
     <td>**Audio**</td>
-    <td>You can import audio assets that you are certain you have permission to use in `.ogg`, `.mp3`, `.flac`, or `.wav` format. If you're uncertain whether you have permission to use an audio file, the [Creator Store](../../production/creator-store.md) has a variety of free-to-use audio, including more than 100,000 professionally-produced sound effects. See [Audio Assets](../../sound/assets.md) for details.</td>
+    <td>You can import audio assets that you are certain you have permission to use in `.ogg`, `.mp3`, `.flac`, or `.wav` format. If you're uncertain whether you have permission to use an audio file, the [Creator Store](../../production/creator-store.md) has a variety of free-to-use audio, including more than 100,000 professionally-produced sound effects. See [Audio Assets](../../audio/assets.md) for details.</td>
   </tr>
 </tbody>
 </table>
@@ -403,7 +403,7 @@ The **import** button lets you import up to 50 files in one batch. Imported asse
   </tr>
   <tr>
     <td>**Audio**</td>
-    <td>You can import audio assets in either `.ogg`, `.mp3`, `.flac`, or `.wav` format. See [Audio Assets](../../sound/assets.md#import-audio) for details.</td>
+    <td>You can import audio assets in either `.ogg`, `.mp3`, `.flac`, or `.wav` format. See [Audio Assets](../../audio/assets.md#import-audio) for details.</td>
   </tr>
 	<tr>
     <td>**Video**</td>
