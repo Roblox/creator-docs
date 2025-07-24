@@ -31,3 +31,8 @@ items:
     value: 4
     tags: []
     deprecation_message: ''
+  - name: Handheld
+    summary: ''
+    value: 5
+    tags: []
+    deprecation_message: ''

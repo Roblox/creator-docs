@@ -69,7 +69,7 @@ events:
     parameters:
       - name: value
         type: int64
-        default:
+        default: ''
         summary: |
           The new value after the change.
     tags: []
@@ -84,7 +84,7 @@ events:
     parameters:
       - name: value
         type: int64
-        default:
+        default: ''
         summary: ''
     tags:
       - Deprecated

@@ -58,6 +58,21 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: CaptureService:GetDeviceInfo
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - InternalTest
+    writeCapabilities: []
   - name: CaptureService:PromptSaveCapturesToGallery
     summary: |
       Prompts the user to save specified captures to their gallery.
@@ -134,6 +149,47 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: CaptureService:StopVideoCapture
+    summary: |
+      Ends a video capture initiated by
+      `Class.CaptureService:StartVideoCaptureAsync()|StartVideoCaptureAsync()`.
+    description: |
+      This method ends a video capture that was started by the
+      `Class.CaptureService:StartVideoCaptureAsync()|StartVideoCaptureAsync()`
+      method.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: CaptureService:TakeCapture
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: onCaptureReady
+        type: Function
+        default:
+        summary: ''
+      - name: captureParams
+        type: Dictionary
+        default: nil
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: CaptureService:StartVideoCaptureAsync
     summary: |
       Initiates a video capture recording.
@@ -185,47 +241,6 @@ methods:
         summary: ''
     tags:
       - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: CaptureService:StopVideoCapture
-    summary: |
-      Ends a video capture initiated by
-      `Class.CaptureService:StartVideoCaptureAsync()|StartVideoCaptureAsync()`.
-    description: |
-      This method ends a video capture that was started by the
-      `Class.CaptureService:StartVideoCaptureAsync()|StartVideoCaptureAsync()`
-      method.
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: CaptureService:TakeCapture
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: onCaptureReady
-        type: Function
-        default:
-        summary: ''
-      - name: captureParams
-        type: Dictionary
-        default: nil
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

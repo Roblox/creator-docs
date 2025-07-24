@@ -183,7 +183,7 @@ methods:
     parameters:
       - name: index
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Path2DControlPoint
@@ -267,7 +267,7 @@ methods:
     parameters:
       - name: t
         type: float
-        default:
+        default: ''
         summary: |
           The value to query the `Class.Path2D` at.
     returns:
@@ -296,7 +296,7 @@ methods:
     parameters:
       - name: t
         type: float
-        default:
+        default: ''
         summary: |
           The value to query the Path2D at.
     returns:
@@ -321,7 +321,7 @@ methods:
     parameters:
       - name: t
         type: float
-        default:
+        default: ''
         summary: |
           The value to query the `Class.Path2D` at.
     returns:
@@ -345,7 +345,7 @@ methods:
     parameters:
       - name: t
         type: float
-        default:
+        default: ''
         summary: |
           The value to query the `Class.Path2D` at.
     returns:
@@ -370,7 +370,7 @@ methods:
     parameters:
       - name: index
         type: int
-        default:
+        default: ''
         summary: |
           The index to insert at.
       - name: point
@@ -398,7 +398,7 @@ methods:
     parameters:
       - name: index
         type: int
-        default:
+        default: ''
         summary: |
           The index to remove at.
     returns:
@@ -446,7 +446,7 @@ methods:
     parameters:
       - name: index
         type: int
-        default:
+        default: ''
         summary: |
           The control point index to update.
       - name: point

@@ -1,18 +1,24 @@
 name: LightingStyle
 type: enum
-summary: Enum used by `Class.Lighting.LightingStyle` to indicate the artistic intent behind lighting in the experience.
-description: This enum indicates the artistic intent behind lighting in the experience. It is used by the `Class.Lighting.LightingStyle` property.
+summary: |
+  Enum used by `Class.Lighting.LightingStyle` to indicate the artistic intent
+  behind lighting in the experience.
+description: |
+  This enum indicates the artistic intent behind lighting in the experience. It
+  is used by the `Class.Lighting.LightingStyle` property.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Realistic
-    summary: The most advanced and realistic lighting and shadows Roblox can deliver.
+    summary: |
+      The most advanced and realistic lighting and shadows Roblox can deliver.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Soft
-    summary: A flat, retro-Roblox look with softer lights and shadows.
+    summary: |
+      A flat, retro-Roblox look with softer lights and shadows.
     value: 1
     tags: []
     deprecation_message: ''

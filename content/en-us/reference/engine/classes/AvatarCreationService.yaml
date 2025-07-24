@@ -16,132 +16,6 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
-  - name: AvatarCreationService:AutoSetupAvatarAsync
-    summary: |
-      Automatically sets up a custom `Class.Model` as an avatar asset.
-    description: |
-      Automatically sets up a custom `Class.Model` as an avatar asset. This
-      method returns a `string` generation ID which can be passed to
-      `Class.AvatarCreationService:LoadGeneratedAvatarAsync()|LoadGeneratedAvatarAsync()`
-      to load the generated avatar and return a `Class.HumanoidDescription` with
-      all the generated instances and properties. The load method can be called
-      on both the server and client, allowing the generated avatar to be loaded
-      in both places (on the client for previewing, and on the server for saving
-      the generated avatar to the player's inventory using
-      `Class.AvatarCreationService:PromptCreateAvatarAsync()|PromptCreateAvatarAsync()`).
-
-      Auto-setup has specific model requirements and accepts certain
-      configurations of models. For more information, see
-      [Auto-setup requirements](../../../avatar-setup/auto-setup-requirements.md).
-      In addition to the above requirements, the input model must use
-      `Class.EditableMesh` and `Class.EditableImage` objects for all mesh and
-      texture assets.
-    code_samples:
-      - AvatarCreationService-AutoSetupAvatarAsync
-    parameters:
-      - name: player
-        type: Player
-        default:
-        summary: |
-          The `Class.Player` that the avatar is being set up for.
-      - name: model
-        type: Model
-        default:
-        summary: |
-          The humanoid `Class.Model` that will be set up as an avatar.
-    returns:
-      - type: string
-        summary: |
-          A unique identifier for the generated avatar.
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: AvatarCreationService:GenerateAvatar2DPreviewAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: avatarGeneration2dPreviewParams
-        type: Dictionary
-        default:
-        summary: ''
-    returns:
-      - type: string
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: AvatarCreationService:GenerateAvatarAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: avatarGenerationParams
-        type: Dictionary
-        default:
-        summary: ''
-    returns:
-      - type: string
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: AvatarCreationService:GetBatchTokenDetailsAsync
-    summary: |
-      Gets the avatar creation token details for a list of avatar creation
-      tokens at once.
-    description: |
-      Gets the avatar creation token details for a list of avatar creation
-      tokens at once (tokens are generated through the
-      [token creation](../../../production/monetization/avatar-creation-token.md)
-      process). Returns an array of avatar creation token details; each token
-      detail is a dictionary with the fields indicated in the example result
-      below:
-
-      ```lua
-      {
-      	["Name"] = "string",
-      	["Description"] = "string",
-      	["UniverseId"] = 0,
-      	["CreatorId"] = 0,
-      	["CreatorType"] = Enum.CreatorType.User,
-      	["OnSale"] = true,
-      	["Price"] = 0,
-      	["OffSaleReasons"] = {
-      		"string",
-      	}
-      }
-      ```
-    code_samples: []
-    parameters:
-      - name: tokenIds
-        type: Array
-        default:
-        summary: |
-          The list of avatar creation token IDs to get details of.
-    returns:
-      - type: Array
-        summary: |
-          Array of avatar creation token details as outlined above.
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: AvatarCreationService:GetValidationRules
     summary: |
       Gets data regarding rules that assets must abide by to pass UGC
@@ -295,18 +169,87 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: AvatarCreationService:LoadAvatar2DPreviewAsync
-    summary: ''
-    description: ''
+  - name: AvatarCreationService:AutoSetupAvatarAsync
+    summary: |
+      Automatically sets up a custom `Class.Model` as an avatar asset.
+    description: |
+      Automatically sets up a custom `Class.Model` as an avatar asset. This
+      method returns a `string` generation ID which can be passed to
+      `Class.AvatarCreationService:LoadGeneratedAvatarAsync()|LoadGeneratedAvatarAsync()`
+      to load the generated avatar and return a `Class.HumanoidDescription` with
+      all the generated instances and properties. The load method can be called
+      on both the server and client, allowing the generated avatar to be loaded
+      in both places (on the client for previewing, and on the server for saving
+      the generated avatar to the player's inventory using
+      `Class.AvatarCreationService:PromptCreateAvatarAsync()|PromptCreateAvatarAsync()`).
+
+      Auto-setup has specific model requirements and accepts certain
+      configurations of models. For more information, see
+      [Auto-setup requirements](../../../avatar-setup/auto-setup-requirements.md).
+      In addition to the above requirements, the input model must use
+      `Class.EditableMesh` and `Class.EditableImage` objects for all mesh and
+      texture assets.
+    code_samples:
+      - AvatarCreationService-AutoSetupAvatarAsync
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` that the avatar is being set up for.
+      - name: model
+        type: Model
+        default:
+        summary: |
+          The humanoid `Class.Model` that will be set up as an avatar.
+    returns:
+      - type: string
+        summary: |
+          A unique identifier for the generated avatar.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AvatarCreationService:GetBatchTokenDetailsAsync
+    summary: |
+      Gets the avatar creation token details for a list of avatar creation
+      tokens at once.
+    description: |
+      Gets the avatar creation token details for a list of avatar creation
+      tokens at once (tokens are generated through the
+      [token creation](../../../production/monetization/avatar-creation-token.md)
+      process). Returns an array of avatar creation token details; each token
+      detail is a dictionary with the fields indicated in the example result
+      below:
+
+      ```lua
+      {
+      	["Name"] = "string",
+      	["Description"] = "string",
+      	["UniverseId"] = 0,
+      	["CreatorId"] = 0,
+      	["CreatorType"] = Enum.CreatorType.User,
+      	["OnSale"] = true,
+      	["Price"] = 0,
+      	["OffSaleReasons"] = {
+      		"string",
+      	}
+      }
+      ```
     code_samples: []
     parameters:
-      - name: previewId
-        type: string
+      - name: tokenIds
+        type: Array
         default:
-        summary: ''
+        summary: |
+          The list of avatar creation token IDs to get details of.
     returns:
-      - type: EditableImage
-        summary: ''
+      - type: Array
+        summary: |
+          Array of avatar creation token details as outlined above.
     tags:
       - Yields
     deprecation_message: ''
@@ -488,48 +431,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: AvatarCreationService:PromptSelectAvatarGenerationImageAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: player
-        type: Player
-        default:
-        summary: ''
-    returns:
-      - type: string
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: AvatarCreationService:RequestAvatarGenerationSessionAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: player
-        type: Player
-        default:
-        summary: ''
-      - name: callback
-        type: Function
-        default:
-        summary: ''
-    returns:
-      - type: Tuple
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: AvatarCreationService:ValidateUGCAccessoryAsync
     summary: |
       Studio only. Runs UGC validation for an `Enum.AccessoryType`.
@@ -685,7 +586,7 @@ events:
     parameters:
       - name: outfitId
         type: int64
-        default:
+        default: ''
         summary: |
           The outfit ID of the avatar that has completed moderation.
       - name: moderationStatus

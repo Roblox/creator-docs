@@ -689,23 +689,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: TestService:Run
-    summary: |
-      Runs scripts which are parented to TestService.
-    description: |
-      Runs scripts which are parented to TestService.
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: TestService:ScopeTime
     summary: ''
     description: ''
@@ -793,6 +776,23 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: TestService:Run
+    summary: |
+      Runs scripts which are parented to TestService.
+    description: |
+      Runs scripts which are parented to TestService.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: TestService.ServerCollectConditionalResult
     summary: |
@@ -815,7 +815,7 @@ events:
         summary: ''
       - name: line
         type: int
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''
@@ -839,7 +839,7 @@ events:
         summary: ''
       - name: line
         type: int
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''

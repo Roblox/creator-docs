@@ -181,7 +181,7 @@ methods:
     parameters:
       - name: name
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: string

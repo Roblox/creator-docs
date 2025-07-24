@@ -37,24 +37,6 @@ properties:
     capabilities: []
     writeCapabilities: []
 methods:
-  - name: Pages:AdvanceToNextPageAsync
-    summary: |
-      Iterates to the next page in the pages object, if possible.
-    description: |
-      Iterates to the next page in the pages object, if possible. The request
-      limit is the same of the endpoint originally called.
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: Pages:GetCurrentPage
     summary: |
       Returns the items on the current page. The keys in the item are determined
@@ -68,6 +50,24 @@ methods:
       - type: Array
         summary: ''
     tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: Pages:AdvanceToNextPageAsync
+    summary: |
+      Iterates to the next page in the pages object, if possible.
+    description: |
+      Iterates to the next page in the pages object, if possible. The request
+      limit is the same of the endpoint originally called.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

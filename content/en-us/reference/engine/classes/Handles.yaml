@@ -118,7 +118,7 @@ events:
         summary: ''
       - name: distance
         type: float
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''

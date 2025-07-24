@@ -253,6 +253,41 @@ properties:
       - Chat
     writeCapabilities: []
 methods:
+  - name: TextChatService:DisplayBubble
+    summary: |
+      Displays a chat bubble above the provided part or player character.
+    description: |
+      Displays a chat bubble above the provided part or player character, and
+      fires the `Class.TextChatService.BubbleDisplayed|BubbleDisplayed` event
+      with the parameters specified in this method. Can display bubbles for
+      non-player characters (NPCs) if you specify a part within the character,
+      such as its head.
+
+      Note that this method is only available for use in `Class.LocalScript`, or
+      in a `Class.Script` with `Class.Script.RunContext|RunContext` of
+      `Enum.RunContext.Client`.
+    code_samples: []
+    parameters:
+      - name: partOrCharacter
+        type: Instance
+        default:
+        summary: |
+          The part or character that the bubble to be displayed above.
+      - name: message
+        type: string
+        default:
+        summary: |
+          The text to be displayed in the chat bubble.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: TextChatService:CanUserChatAsync
     summary: |
       Determines whether a user has permission to chat in experiences.
@@ -270,7 +305,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: boolean
@@ -300,11 +335,11 @@ methods:
     parameters:
       - name: userIdFrom
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: userIdTo
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: boolean
@@ -359,7 +394,7 @@ methods:
     parameters:
       - name: requesterUserId
         type: int64
-        default:
+        default: ''
         summary: |
           The user who would have initiated the direct chat request. If the
           requesterUserId is not in the current server, this method will error.
@@ -377,41 +412,6 @@ methods:
           is an empty array.
     tags:
       - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Chat
-    writeCapabilities: []
-  - name: TextChatService:DisplayBubble
-    summary: |
-      Displays a chat bubble above the provided part or player character.
-    description: |
-      Displays a chat bubble above the provided part or player character, and
-      fires the `Class.TextChatService.BubbleDisplayed|BubbleDisplayed` event
-      with the parameters specified in this method. Can display bubbles for
-      non-player characters (NPCs) if you specify a part within the character,
-      such as its head.
-
-      Note that this method is only available for use in `Class.LocalScript`, or
-      in a `Class.Script` with `Class.Script.RunContext|RunContext` of
-      `Enum.RunContext.Client`.
-    code_samples: []
-    parameters:
-      - name: partOrCharacter
-        type: Instance
-        default:
-        summary: |
-          The part or character that the bubble to be displayed above.
-      - name: message
-        type: string
-        default:
-        summary: |
-          The text to be displayed in the chat bubble.
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

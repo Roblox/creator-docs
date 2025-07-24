@@ -682,7 +682,7 @@ methods:
     parameters:
       - name: newScaleFactor
         type: float
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()

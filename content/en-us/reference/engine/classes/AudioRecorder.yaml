@@ -60,26 +60,6 @@ properties:
       - Audio
     writeCapabilities: []
 methods:
-  - name: AudioRecorder:CanRecordAsync
-    summary: ''
-    description: |
-      Returns whether the `AudioRecorder` can currently record. For instance,
-      this will return `false` if the current recording data has reached the
-      recording time limit. To clear the recording, use
-      `Class.AudioRecorder:Clear()|Clear()`.
-    code_samples: []
-    parameters: []
-    returns:
-      - type: boolean
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Audio
-    writeCapabilities: []
   - name: AudioRecorder:Clear
     summary: ''
     description: |
@@ -163,6 +143,42 @@ methods:
     capabilities:
       - Audio
     writeCapabilities: []
+  - name: AudioRecorder:Stop
+    summary: ''
+    description: |
+      Stops recording.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Audio
+    writeCapabilities: []
+  - name: AudioRecorder:CanRecordAsync
+    summary: ''
+    description: |
+      Returns whether the `AudioRecorder` can currently record. For instance,
+      this will return `false` if the current recording data has reached the
+      recording time limit. To clear the recording, use
+      `Class.AudioRecorder:Clear()|Clear()`.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: boolean
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioRecorder:GetUnrecordableInstancesAsync
     summary: ''
     description: |
@@ -195,22 +211,6 @@ methods:
         summary: ''
     tags:
       - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Audio
-    writeCapabilities: []
-  - name: AudioRecorder:Stop
-    summary: ''
-    description: |
-      Stops recording.
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

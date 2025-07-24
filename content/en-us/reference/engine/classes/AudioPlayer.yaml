@@ -403,30 +403,6 @@ methods:
     capabilities:
       - Audio
     writeCapabilities: []
-  - name: AudioPlayer:GetWaveformAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: timeRange
-        type: NumberRange
-        default:
-        summary: ''
-      - name: samples
-        type: int
-        default:
-        summary: ''
-    returns:
-      - type: Array
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Audio
-    writeCapabilities: []
   - name: AudioPlayer:Play
     summary: |
       Plays the `Class.AudioPlayer` from wherever its
@@ -461,6 +437,30 @@ methods:
       - type: ()
         summary: ''
     tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Audio
+    writeCapabilities: []
+  - name: AudioPlayer:GetWaveformAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: timeRange
+        type: NumberRange
+        default:
+        summary: ''
+      - name: samples
+        type: int
+        default: ''
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

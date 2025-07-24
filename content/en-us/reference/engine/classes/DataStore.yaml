@@ -70,7 +70,7 @@ methods:
           name must be prepended with the original scope as in "scope/key".
       - name: timestamp
         type: int64
-        default:
+        default: ''
         summary: |
           Unix timestamp in milliseconds for which the requested version was
           current. Must be greater than zero. Must not be more than ten minutes
@@ -107,7 +107,7 @@ methods:
     parameters:
       - name: prefix
         type: string
-        default:
+        default: ''
         summary: |
           **(Optional)** Prefix to use for locating keys.
       - name: pageSize
@@ -119,7 +119,7 @@ methods:
           store web service, which in turn defaults to 50 items per page.
       - name: cursor
         type: string
-        default:
+        default: ''
         summary: |
           **(Optional)** Cursor to continue iteration.
       - name: excludeDeleted

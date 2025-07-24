@@ -12,6 +12,115 @@ tags:
   - NotReplicated
 deprecation_message: ''
 properties: []
-methods: []
+methods:
+  - name: UGCValidationService:GetFacsDrivenJointNamesFromEditableMesh
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: editableMesh
+        type: EditableMesh
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: UGCValidationService:GetSkinnedJointNamesFromEditableMesh
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: editableMesh
+        type: EditableMesh
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: UGCValidationService:GetFacsDrivenJointNamesFromMeshId
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: meshId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: UGCValidationService:GetSkinnedJointNamesFromMeshId
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: meshId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: UGCValidationService:ValidatePartBBoxAfterFullFacsFromMeshIds
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: headMeshId
+        type: string
+        default:
+        summary: ''
+      - name: partMeshId
+        type: string
+        default:
+        summary: ''
+      - name: headScale
+        type: Vector3
+        default:
+        summary: ''
+      - name: partScale
+        type: Vector3
+        default:
+        summary: ''
+      - name: boundsMaxMultiplier
+        type: float
+        default: ''
+        summary: ''
+    returns:
+      - type: boolean
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

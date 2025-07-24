@@ -110,6 +110,117 @@ properties:
     capabilities:
       - Basic
     writeCapabilities: []
+  - name: Decal.MetalnessMap
+    summary: ''
+    description: ''
+    code_samples: []
+    type: ContentId
+    tags:
+      - Hidden
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
+  - name: Decal.MetalnessMapContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
+  - name: Decal.NormalMap
+    summary: ''
+    description: ''
+    code_samples: []
+    type: ContentId
+    tags:
+      - Hidden
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
+  - name: Decal.NormalMapContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
+  - name: Decal.RoughnessMap
+    summary: ''
+    description: ''
+    code_samples: []
+    type: ContentId
+    tags:
+      - Hidden
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
+  - name: Decal.RoughnessMapContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Decal.Shiny
     summary: ''
     description: |
@@ -243,6 +354,42 @@ properties:
     code_samples:
       - Fading-Decal
     type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
+  - name: Decal.UVOffset
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
+  - name: Decal.UVScale
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector2
     tags: []
     deprecation_message: ''
     security:

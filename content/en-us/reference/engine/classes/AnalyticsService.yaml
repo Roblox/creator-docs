@@ -258,7 +258,7 @@ methods:
           A user defined category for items such as "Vehicle," "Weapon.".
       - name: amount
         type: int
-        default:
+        default: ''
         summary: |
           The amount of the currency.
       - name: currency
@@ -611,13 +611,13 @@ methods:
           experience.
       - name: amount
         type: float
-        default:
+        default: ''
         summary: |
           The amount of currency being added or removed. This value should
           always be positive.
       - name: endingBalance
         type: float
-        default:
+        default: ''
         summary: |
           The user's balance after the currency has been added or removed. This
           value should always be greater than or equal to 0.
@@ -638,7 +638,7 @@ methods:
           Limited to 20 unique types per experience.
       - name: itemSku
         type: string
-        default:
+        default: ''
         summary: |
           Optional SKU of the item or bundle being purchased. This is a unique
           identifier for the item being purchased. Limited to 100 unique SKUs
@@ -685,7 +685,7 @@ methods:
           funnel. Limited to 10 unique funnels per experience.
       - name: funnelSessionId
         type: string
-        default:
+        default: ''
         summary: |
           Optional unique identifier for the funnel session. This should be the
           same for all steps in the funnel.
@@ -708,7 +708,7 @@ methods:
           considered completed.
       - name: stepName
         type: string
-        default:
+        default: ''
         summary: |
           Optional name of the step in the funnel. This field is only used for
           display purposes in Roblox-provided charts.
@@ -748,7 +748,7 @@ methods:
           The user who triggered the event.
       - name: step
         type: int
-        default:
+        default: ''
         summary: |
           The step number in the funnel. This should be unique for each step in
           the funnel. All funnels start at step 1. Limited to steps 1-100.
@@ -757,7 +757,7 @@ methods:
           considered completed.
       - name: stepName
         type: string
-        default:
+        default: ''
         summary: |
           Optional name of the step in the funnel. This field is only used for
           display purposes in Roblox-provided charts.
@@ -798,11 +798,11 @@ methods:
         summary: ''
       - name: level
         type: int
-        default:
+        default: ''
         summary: ''
       - name: levelName
         type: string
-        default:
+        default: ''
         summary: ''
       - name: customFields
         type: Dictionary
@@ -842,11 +842,11 @@ methods:
         summary: ''
       - name: level
         type: int
-        default:
+        default: ''
         summary: ''
       - name: levelName
         type: string
-        default:
+        default: ''
         summary: ''
       - name: customFields
         type: Dictionary
@@ -880,11 +880,11 @@ methods:
         summary: ''
       - name: level
         type: int
-        default:
+        default: ''
         summary: ''
       - name: levelName
         type: string
-        default:
+        default: ''
         summary: ''
       - name: customFields
         type: Dictionary
@@ -918,11 +918,11 @@ methods:
         summary: ''
       - name: level
         type: int
-        default:
+        default: ''
         summary: ''
       - name: levelName
         type: string
-        default:
+        default: ''
         summary: ''
       - name: customFields
         type: Dictionary

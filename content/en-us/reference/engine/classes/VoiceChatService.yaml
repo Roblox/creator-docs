@@ -113,6 +113,20 @@ properties:
     capabilities: []
     writeCapabilities: []
 methods:
+  - name: VoiceChatService:lastVoiceChatStats
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: VoiceChatService:IsVoiceEnabledForUserIdAsync
     summary: |
       Returns whether or not the given user has voice enabled.
@@ -140,7 +154,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The `Class.Player.UserId` to check.
     returns:
@@ -154,5 +168,15 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-events: []
+events:
+  - name: VoiceChatService.VoiceChatStatsCollected
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

@@ -330,7 +330,7 @@ methods:
           The new color.
       - name: alpha
         type: float
-        default:
+        default: ''
         summary: |
           The color alpha (transparency).
     returns:
@@ -376,17 +376,17 @@ methods:
     parameters:
       - name: vertexId0
         type: int64
-        default:
+        default: ''
         summary: |
           ID of the first vertex of the triangle.
       - name: vertexId1
         type: int64
-        default:
+        default: ''
         summary: |
           ID of the second vertex of the triangle.
       - name: vertexId2
         type: int64
-        default:
+        default: ''
         summary: |
           ID of the third vertex of the triangle.
     returns:
@@ -524,7 +524,7 @@ methods:
           Center of the sphere in the mesh's local object space.
       - name: radius
         type: float
-        default:
+        default: ''
         summary: |
           Radius of the sphere.
     returns:
@@ -548,7 +548,7 @@ methods:
     parameters:
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -571,7 +571,7 @@ methods:
     parameters:
       - name: vertexId
         type: int64
-        default:
+        default: ''
         summary: |
           Vertex ID around which to get adjacent vertices.
     returns:
@@ -618,7 +618,7 @@ methods:
     parameters:
       - name: boneId
         type: int64
-        default:
+        default: ''
         summary: |
           Bone ID for which to get the `Datatype.CFrame`.
     returns:
@@ -642,7 +642,7 @@ methods:
     parameters:
       - name: boneId
         type: int64
-        default:
+        default: ''
         summary: |
           Bone ID for which to get whether the bone is virtual.
     returns:
@@ -665,7 +665,7 @@ methods:
     parameters:
       - name: boneId
         type: int64
-        default:
+        default: ''
         summary: |
           Bone ID for which to get the name.
     returns:
@@ -687,7 +687,7 @@ methods:
     parameters:
       - name: boneId
         type: int64
-        default:
+        default: ''
         summary: |
           Bone ID for which to get the parent.
     returns:
@@ -742,7 +742,7 @@ methods:
     parameters:
       - name: colorId
         type: int64
-        default:
+        default: ''
         summary: |
           Color ID for which to get the color.
     returns:
@@ -764,7 +764,7 @@ methods:
     parameters:
       - name: colorId
         type: int64
-        default:
+        default: ''
         summary: |
           Color ID for which to get the alpha.
     returns:
@@ -804,7 +804,7 @@ methods:
     parameters:
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: |
           Face ID for which to get the color IDs.
     returns:
@@ -827,7 +827,7 @@ methods:
     parameters:
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: |
           Face ID for which to get the normal IDs.
     returns:
@@ -850,7 +850,7 @@ methods:
     parameters:
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: |
           Face ID for which to get the UV IDs.
     returns:
@@ -873,7 +873,7 @@ methods:
     parameters:
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -914,7 +914,7 @@ methods:
     parameters:
       - name: id
         type: int64
-        default:
+        default: ''
         summary: |
           Attribute ID for which to find faces that use it.
     returns:
@@ -923,63 +923,6 @@ methods:
           List of face IDs which use the given attribute ID.
     tags:
       - Deprecated
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetFacesWithColor
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: colorId
-        type: int64
-        default:
-        summary: ''
-    returns:
-      - type: Array
-        summary: ''
-    tags:
-      - CustomLuaState
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetFacesWithNormal
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: normalId
-        type: int64
-        default:
-        summary: ''
-    returns:
-      - type: Array
-        summary: ''
-    tags:
-      - CustomLuaState
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetFacesWithUV
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: uvId
-        type: int64
-        default:
-        summary: ''
-    returns:
-      - type: Array
-        summary: ''
-    tags:
-      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -1087,7 +1030,7 @@ methods:
     parameters:
       - name: normalId
         type: int64
-        default:
+        default: ''
         summary: |
           Normal ID for which to get the normal vector.
     returns:
@@ -1127,7 +1070,7 @@ methods:
     parameters:
       - name: vertexId
         type: int64
-        default:
+        default: ''
         summary: |
           Stable vertex ID for which to get the position.
     returns:
@@ -1164,7 +1107,7 @@ methods:
     parameters:
       - name: uvId
         type: int64
-        default:
+        default: ''
         summary: |
           UV ID for which to get the UV coordinate.
     returns:
@@ -1206,7 +1149,7 @@ methods:
     parameters:
       - name: vertexId
         type: int64
-        default:
+        default: ''
         summary: |
           Vertex ID for which to get the associated bone weights.
     returns:
@@ -1229,7 +1172,7 @@ methods:
     parameters:
       - name: vertexId
         type: int64
-        default:
+        default: ''
         summary: |
           Vertex ID for which to get the associated bones.
     returns:
@@ -1237,148 +1180,6 @@ methods:
         summary: |
           Bone IDs associated with the vertex for skinning.
     tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetVertexColors
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default:
-        summary: ''
-    returns:
-      - type: Array
-        summary: ''
-    tags:
-      - CustomLuaState
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetVertexFaceColor
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default:
-        summary: ''
-      - name: faceId
-        type: int64
-        default:
-        summary: ''
-    returns:
-      - type: int64
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetVertexFaceNormal
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default:
-        summary: ''
-      - name: faceId
-        type: int64
-        default:
-        summary: ''
-    returns:
-      - type: int64
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetVertexFaceUV
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default:
-        summary: ''
-      - name: faceId
-        type: int64
-        default:
-        summary: ''
-    returns:
-      - type: int64
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetVertexFaces
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default:
-        summary: ''
-    returns:
-      - type: Array
-        summary: ''
-    tags:
-      - CustomLuaState
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetVertexNormals
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default:
-        summary: ''
-    returns:
-      - type: Array
-        summary: ''
-    tags:
-      - CustomLuaState
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetVertexUVs
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default:
-        summary: ''
-    returns:
-      - type: Array
-        summary: ''
-    tags:
-      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -1411,7 +1212,7 @@ methods:
     parameters:
       - name: id
         type: int64
-        default:
+        default: ''
         summary: |
           Attribute ID for which to find vertices that use it.
     returns:
@@ -1420,63 +1221,6 @@ methods:
           List of vertex IDs which use the given attribute ID.
     tags:
       - Deprecated
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetVerticesWithColor
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: colorId
-        type: int64
-        default:
-        summary: ''
-    returns:
-      - type: Array
-        summary: ''
-    tags:
-      - CustomLuaState
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetVerticesWithNormal
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: normalId
-        type: int64
-        default:
-        summary: ''
-    returns:
-      - type: Array
-        summary: ''
-    tags:
-      - CustomLuaState
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:GetVerticesWithUV
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: uvId
-        type: int64
-        default:
-        summary: ''
-    returns:
-      - type: Array
-        summary: ''
-    tags:
-      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -1492,7 +1236,7 @@ methods:
     parameters:
       - name: id
         type: int64
-        default:
+        default: ''
         summary: |
           ID for which to return a debugging information string.
     returns:
@@ -1515,7 +1259,7 @@ methods:
     parameters:
       - name: mergeTolerance
         type: float
-        default:
+        default: ''
         summary: |
           The distance at which the vertices are considered to touch each other.
     returns:
@@ -1573,7 +1317,7 @@ methods:
     parameters:
       - name: boneId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -1593,7 +1337,7 @@ methods:
     parameters:
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()
@@ -1633,7 +1377,7 @@ methods:
     parameters:
       - name: normalId
         type: int64
-        default:
+        default: ''
         summary: |
           Stable normal ID to reset.
     returns:
@@ -1655,7 +1399,7 @@ methods:
     parameters:
       - name: boneId
         type: int64
-        default:
+        default: ''
         summary: |
           Bone ID for which to set the initial `Datatype.CFrame`.
       - name: cframe
@@ -1683,7 +1427,7 @@ methods:
     parameters:
       - name: boneId
         type: int64
-        default:
+        default: ''
         summary: |
           Bone ID for which to set whether the bone is virtual.
       - name: virtual
@@ -1710,7 +1454,7 @@ methods:
     parameters:
       - name: boneId
         type: int64
-        default:
+        default: ''
         summary: |
           Bone ID for which to set the name.
       - name: name
@@ -1736,12 +1480,12 @@ methods:
     parameters:
       - name: boneId
         type: int64
-        default:
+        default: ''
         summary: |
           Bone ID for which to set the parent.
       - name: parentBoneId
         type: int64
-        default:
+        default: ''
         summary: |
           Parent bone ID.
     returns:
@@ -1762,7 +1506,7 @@ methods:
     parameters:
       - name: colorId
         type: int64
-        default:
+        default: ''
         summary: |
           Stable color ID for which to set the color.
       - name: color
@@ -1788,12 +1532,12 @@ methods:
     parameters:
       - name: colorId
         type: int64
-        default:
+        default: ''
         summary: |
           Stable color ID for which to set the color alpha.
       - name: alpha
         type: float
-        default:
+        default: ''
         summary: |
           Alpha to set.
     returns:
@@ -1814,7 +1558,7 @@ methods:
     parameters:
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: |
           Face ID for which to update the vertex colors.
       - name: ids
@@ -1841,7 +1585,7 @@ methods:
     parameters:
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: |
           Face ID for which to update the vertex normals.
       - name: ids
@@ -1868,7 +1612,7 @@ methods:
     parameters:
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: |
           Face ID for which to update the vertex UVs.
       - name: ids
@@ -1895,7 +1639,7 @@ methods:
     parameters:
       - name: faceId
         type: int64
-        default:
+        default: ''
         summary: |
           Face ID for which to update the vertices.
       - name: ids
@@ -1929,7 +1673,7 @@ methods:
           FACS action unit for which to set the pose.
       - name: boneId
         type: int64
-        default:
+        default: ''
         summary: |
           Bone to set a `Datatype.CFrame` for this pose.
       - name: cframe
@@ -2032,7 +1776,7 @@ methods:
     parameters:
       - name: normalId
         type: int64
-        default:
+        default: ''
         summary: |
           Stable normal ID for which to set the normal vector.
       - name: normal
@@ -2058,7 +1802,7 @@ methods:
     parameters:
       - name: vertexId
         type: int64
-        default:
+        default: ''
         summary: |
           Stable vertex ID of the vertex to position.
       - name: p
@@ -2084,7 +1828,7 @@ methods:
     parameters:
       - name: uvId
         type: int64
-        default:
+        default: ''
         summary: |
           UV ID for which to set the UV coordinates.
       - name: uv
@@ -2119,7 +1863,7 @@ methods:
     parameters:
       - name: vertexId
         type: int64
-        default:
+        default: ''
         summary: |
           Vertex ID on which to set skinning blend weights.
       - name: boneWeights
@@ -2155,7 +1899,7 @@ methods:
     parameters:
       - name: vertexId
         type: int64
-        default:
+        default: ''
         summary: |
           Vertex ID to set vertex skinning bones.
       - name: boneIDs
@@ -2163,84 +1907,6 @@ methods:
         default:
         summary: |
           Bone IDs to use with this vertex for skinning.
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:SetVertexFaceColor
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default:
-        summary: ''
-      - name: faceId
-        type: int64
-        default:
-        summary: ''
-      - name: colorId
-        type: int64
-        default:
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:SetVertexFaceNormal
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default:
-        summary: ''
-      - name: faceId
-        type: int64
-        default:
-        summary: ''
-      - name: normalId
-        type: int64
-        default:
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableMesh:SetVertexFaceUV
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default:
-        summary: ''
-      - name: faceId
-        type: int64
-        default:
-        summary: ''
-      - name: uvId
-        type: int64
-        default:
-        summary: ''
     returns:
       - type: ()
         summary: ''

@@ -9,6 +9,7 @@ content/en-us/production/promotion/sponsor-items.md
 content/en-us/production/earn-on-roblox.md
 content/en-us/assets.md
 content/en-us/creator-hub.md
+content/en-us/creator-rewards.md
 content/en-us/get-started.md
 content/en-us/monetize.md
 content/en-us/platform.md

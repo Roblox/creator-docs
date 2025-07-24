@@ -109,7 +109,7 @@ events:
     parameters:
       - name: newValue
         type: float
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: |

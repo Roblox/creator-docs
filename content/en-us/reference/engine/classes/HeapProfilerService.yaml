@@ -62,15 +62,15 @@ events:
         summary: ''
       - name: id
         type: int
-        default:
+        default: ''
         summary: ''
       - name: compressedLength
         type: int
-        default:
+        default: ''
         summary: ''
       - name: uncompressedLength
         type: int
-        default:
+        default: ''
         summary: ''
     tags: []
     deprecation_message: ''

@@ -17,60 +17,6 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
-  - name: CommerceService:GetCommerceProductInfoAsync
-    summary: |
-      Retrieves information about the commerce products you are selling in
-      experience.
-    description: |
-      Retrieves information about the products that you are selling and surface
-      them within your experience. How you surface products to your users is
-      entirely up to you.
-
-      <table><thead>
-        <tr>
-          <th>Name</th>
-          <th>string</th>
-          <th>Localized name of of the physical item</th>
-        </tr></thead>
-      <tbody>
-        <tr>
-          <td>Description</td>
-          <td>string</td>
-          <td>Localized description of the physical item</td>
-        </tr>
-        <tr>
-          <td>IconImageAssetId</td>
-          <td>number</td>
-          <td>The image asset ID of main default image of the physical item</td>
-        </tr>
-        <tr>
-          <td>DisplayPrice</td>
-          <td>string</td>
-          <td>Localized price string with currency symbol of the physical item. e.g. “$4.99“</td>
-        </tr>
-        <tr>
-          <td>IsPurchasable</td>
-          <td>bool</td>
-          <td>If the item can be added to a merchant checkout session, i.e. item is in stock, or can be backordered</td>
-        </tr>
-      </tbody>
-      </table>
-    code_samples: []
-    parameters:
-      - name: commerceProductId
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: Dictionary
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: CommerceService:PromptCommerceProductPurchase
     summary: |
       Prompts a user to purchase a commerce product using the provided
@@ -121,6 +67,60 @@ methods:
       - type: ()
         summary: ''
     tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: CommerceService:GetCommerceProductInfoAsync
+    summary: |
+      Retrieves information about the commerce products you are selling in
+      experience.
+    description: |
+      Retrieves information about the products that you are selling and surface
+      them within your experience. How you surface products to your users is
+      entirely up to you.
+
+      <table><thead>
+        <tr>
+          <th>Name</th>
+          <th>string</th>
+          <th>Localized name of of the physical item</th>
+        </tr></thead>
+      <tbody>
+        <tr>
+          <td>Description</td>
+          <td>string</td>
+          <td>Localized description of the physical item</td>
+        </tr>
+        <tr>
+          <td>IconImageAssetId</td>
+          <td>number</td>
+          <td>The image asset ID of main default image of the physical item</td>
+        </tr>
+        <tr>
+          <td>DisplayPrice</td>
+          <td>string</td>
+          <td>Localized price string with currency symbol of the physical item. e.g. “$4.99“</td>
+        </tr>
+        <tr>
+          <td>IsPurchasable</td>
+          <td>bool</td>
+          <td>If the item can be added to a merchant checkout session, i.e. item is in stock, or can be backordered</td>
+        </tr>
+      </tbody>
+      </table>
+    code_samples: []
+    parameters:
+      - name: commerceProductId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags:
+      - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

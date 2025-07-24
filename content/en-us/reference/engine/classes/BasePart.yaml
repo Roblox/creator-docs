@@ -2649,6 +2649,242 @@ methods:
     thread_safety: Safe
     capabilities: []
     writeCapabilities: []
+  - name: BasePart:IsGrounded
+    summary: |
+      Returns true if the object is connected to a part that will hold it in
+      place (eg an `Class.BasePart.Anchored|Anchored` part), otherwise returns
+      false.
+    description: |
+      Returns true if the object is connected to a part that will hold it in
+      place (eg an `Class.BasePart.Anchored|Anchored` part), otherwise returns
+      false. In an assembly that has an `Class.BasePart.Anchored|Anchored` part,
+      every other part is grounded.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: boolean
+        summary: |
+          Whether the object is connected to a part that will hold it in place.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
+  - name: BasePart:MakeJoints
+    summary: |
+      Creates a joint on any side of the object that has a surface ID that can
+      make a joint.
+    description: |
+      Creates a joint on any side of the `Class.BasePart|Part` that has a
+      `Enum.SurfaceType` that can make a joint it will create a joint with any
+      adjacent parts.
+
+      Joints will be created between the sides and any planar touching surfaces,
+      depending on the sides' surfaces.
+
+      - Smooth surfaces will not create joints
+      - Glue surfaces will create a `Class.Glue` joint
+      - Weld will create a `Class.Weld` joint with any surface except for
+        Unjoinable
+      - Studs, Inlet, or Universal will each create a `Class.Snap` joint with
+        either of other the other two surfaces (e.g. Studs with Inlet and
+        Universal)
+      - Hinge and Motor surfaces create `Class.Rotate` and `Class.RotateV` joint
+        instances
+
+      Unlike `Class.Model:MakeJoints()`, this function requires an array of
+      parts as a parameter. This array is given as follows:
+
+      ```
+      part:MakeJoints({part1, part2, part3})
+      ```
+
+      Joints are broken if enough force is applied to them due to an
+      `Class.Explosion`, unless a `Class.ForceField` object is parented to the
+      `Class.BasePart` or ancestor `Class.Model`. For this reason, they are
+      often used to make simple destructible buildings and other models.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      SurfaceType based joining is deprecated, do not use MakeJoints for new
+      projects. `Class.WeldConstraint|WeldConstraints` and
+      `Class.HingeConstraint|HingeConstraints` should be used instead.
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: BasePart:Resize
+    summary: |
+      Changes the size of an object just like using the Studio resize tool.
+    description: |
+      Changes the size of an object just like using the Studio resize tool.
+    code_samples: []
+    parameters:
+      - name: normalId
+        type: NormalId
+        default:
+        summary: |
+          The side to resize.
+      - name: deltaAmount
+        type: int
+        default: ''
+        summary: |
+          How much to grow/shrink on the specified side.
+    returns:
+      - type: boolean
+        summary: |
+          Whether the part is resized.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: BasePart:SetNetworkOwner
+    summary: |
+      Sets the given player as network owner for this and all connected parts.
+    description: |
+      Sets the given player as network owner for this and all connected parts.
+      When playerInstance is `nil`, the server will be the owner instead of a
+      player.
+    code_samples: []
+    parameters:
+      - name: playerInstance
+        type: Player
+        default: nil
+        summary: |
+          The player being given network ownership of the part.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: BasePart:SetNetworkOwnershipAuto
+    summary: |
+      Lets the game engine dynamically decide who will handle the part's physics
+      (one of the clients or the server).
+    description: |
+      Lets the game engine dynamically decide who will handle the part's physics
+      (one of the clients or the server).
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: BasePart:TorqueToAngularAcceleration
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: torque
+        type: Vector3
+        default:
+        summary: ''
+      - name: angVelocity
+        type: Vector3
+        default: 0, 0, 0
+        summary: ''
+    returns:
+      - type: Vector3
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: BasePart:breakJoints
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.BasePart:BreakJoints()`
+      which should be used instead.
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: BasePart:getMass
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: float
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This Camel Case property has been deprecated in favor of its Pascal Case
+      variant, `Class.BasePart:GetMass()`.
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: BasePart:makeJoints
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.BasePart:MakeJoints()`
+      which should be used instead.
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: BasePart:resize
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: normalId
+        type: NormalId
+        default:
+        summary: ''
+      - name: deltaAmount
+        type: int
+        default: ''
+        summary: ''
+    returns:
+      - type: boolean
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.BasePart:Resize()` which
+      should be used instead.
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:IntersectAsync
     summary: |
       Creates a new `Class.IntersectOperation` from the overlapping geometry of
@@ -2735,144 +2971,6 @@ methods:
     capabilities:
       - CSG
     writeCapabilities: []
-  - name: BasePart:IsGrounded
-    summary: |
-      Returns true if the object is connected to a part that will hold it in
-      place (eg an `Class.BasePart.Anchored|Anchored` part), otherwise returns
-      false.
-    description: |
-      Returns true if the object is connected to a part that will hold it in
-      place (eg an `Class.BasePart.Anchored|Anchored` part), otherwise returns
-      false. In an assembly that has an `Class.BasePart.Anchored|Anchored` part,
-      every other part is grounded.
-    code_samples: []
-    parameters: []
-    returns:
-      - type: boolean
-        summary: |
-          Whether the object is connected to a part that will hold it in place.
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Safe
-    capabilities: []
-    writeCapabilities: []
-  - name: BasePart:MakeJoints
-    summary: |
-      Creates a joint on any side of the object that has a surface ID that can
-      make a joint.
-    description: |
-      Creates a joint on any side of the `Class.BasePart|Part` that has a
-      `Enum.SurfaceType` that can make a joint it will create a joint with any
-      adjacent parts.
-
-      Joints will be created between the sides and any planar touching surfaces,
-      depending on the sides' surfaces.
-
-      - Smooth surfaces will not create joints
-      - Glue surfaces will create a `Class.Glue` joint
-      - Weld will create a `Class.Weld` joint with any surface except for
-        Unjoinable
-      - Studs, Inlet, or Universal will each create a `Class.Snap` joint with
-        either of other the other two surfaces (e.g. Studs with Inlet and
-        Universal)
-      - Hinge and Motor surfaces create `Class.Rotate` and `Class.RotateV` joint
-        instances
-
-      Unlike `Class.Model:MakeJoints()`, this function requires an array of
-      parts as a parameter. This array is given as follows:
-
-      ```
-      part:MakeJoints({part1, part2, part3})
-      ```
-
-      Joints are broken if enough force is applied to them due to an
-      `Class.Explosion`, unless a `Class.ForceField` object is parented to the
-      `Class.BasePart` or ancestor `Class.Model`. For this reason, they are
-      often used to make simple destructible buildings and other models.
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      SurfaceType based joining is deprecated, do not use MakeJoints for new
-      projects. `Class.WeldConstraint|WeldConstraints` and
-      `Class.HingeConstraint|HingeConstraints` should be used instead.
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: BasePart:Resize
-    summary: |
-      Changes the size of an object just like using the Studio resize tool.
-    description: |
-      Changes the size of an object just like using the Studio resize tool.
-    code_samples: []
-    parameters:
-      - name: normalId
-        type: NormalId
-        default:
-        summary: |
-          The side to resize.
-      - name: deltaAmount
-        type: int
-        default:
-        summary: |
-          How much to grow/shrink on the specified side.
-    returns:
-      - type: boolean
-        summary: |
-          Whether the part is resized.
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: BasePart:SetNetworkOwner
-    summary: |
-      Sets the given player as network owner for this and all connected parts.
-    description: |
-      Sets the given player as network owner for this and all connected parts.
-      When playerInstance is `nil`, the server will be the owner instead of a
-      player.
-    code_samples: []
-    parameters:
-      - name: playerInstance
-        type: Player
-        default: nil
-        summary: |
-          The player being given network ownership of the part.
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: BasePart:SetNetworkOwnershipAuto
-    summary: |
-      Lets the game engine dynamically decide who will handle the part's physics
-      (one of the clients or the server).
-    description: |
-      Lets the game engine dynamically decide who will handle the part's physics
-      (one of the clients or the server).
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: BasePart:SubtractAsync
     summary: |
       Creates a new `Class.UnionOperation` from the part, minus the geometry
@@ -2934,28 +3032,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - CSG
-    writeCapabilities: []
-  - name: BasePart:TorqueToAngularAcceleration
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: torque
-        type: Vector3
-        default:
-        summary: ''
-      - name: angVelocity
-        type: Vector3
-        default: 0, 0, 0
-        summary: ''
-    returns:
-      - type: Vector3
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
     writeCapabilities: []
   - name: BasePart:UnionAsync
     summary: |
@@ -3042,82 +3118,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - CSG
-    writeCapabilities: []
-  - name: BasePart:breakJoints
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated function is a variant of `Class.BasePart:BreakJoints()`
-      which should be used instead.
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: BasePart:getMass
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: float
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This Camel Case property has been deprecated in favor of its Pascal Case
-      variant, `Class.BasePart:GetMass()`.
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: BasePart:makeJoints
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated function is a variant of `Class.BasePart:MakeJoints()`
-      which should be used instead.
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: BasePart:resize
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: normalId
-        type: NormalId
-        default:
-        summary: ''
-      - name: deltaAmount
-        type: int
-        default:
-        summary: ''
-    returns:
-      - type: boolean
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This deprecated function is a variant of `Class.BasePart:Resize()` which
-      should be used instead.
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
     writeCapabilities: []
 events:
   - name: BasePart.LocalSimulationTouched

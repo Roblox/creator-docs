@@ -34,7 +34,6 @@ properties:
     code_samples: []
     type: boolean
     tags:
-      - NotReplicated
       - NotScriptable
     deprecation_message: ''
     security:
@@ -351,6 +350,280 @@ properties:
       - Players
     writeCapabilities: []
 methods:
+  - name: Players:Chat
+    summary: |
+      Makes the local player chat the given message.
+    description: |
+      This function makes the local player chat the given message. Since this
+      item is protected, attempting to use it in a `Class.Script` or
+      `Class.LocalScript` will cause an error.
+
+      Instead, when creating a custom chat system, or a system that needs access
+      to the chat, you can use the `Class.Chat` service's `Class.Chat:Chat()`
+      function instead.
+    code_samples:
+      - Players-Chat1
+    parameters:
+      - name: message
+        type: string
+        default:
+        summary: |
+          The message chatted.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities:
+      - Players
+    writeCapabilities: []
+  - name: Players:GetPlayerByUserId
+    summary: |
+      Returns the `Class.Player` with the given `Class.Player.UserId|UserId` if
+      they are in-game.
+    description: |
+      This function searches each `Class.Player` in `Class.Players` for one
+      whose `Class.Player.UserId` matches the given `userId`. If such a player
+      does not exist, it returns `nil`.
+
+      This method is useful in finding the purchaser of a developer product
+      using `Class.MarketplaceService.ProcessReceipt` which provides a table
+      that includes the purchaser's `Class.Player.UserId|UserId` and not a
+      reference to the `Class.Player` object itself. Most experiences will
+      require a reference to the player in order to grant products.
+    code_samples:
+      - Players-GetPlayerByUserId1
+    parameters:
+      - name: userId
+        type: int64
+        default: ''
+        summary: |
+          The `Class.Player.UserId` of the player being specified.
+    returns:
+      - type: Player
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+    capabilities:
+      - Players
+    writeCapabilities: []
+  - name: Players:GetPlayerFromCharacter
+    summary: |
+      Returns the `Class.Player` whose `Class.Player.Character` matches the
+      given instance, or `nil` if one cannot be found.
+    description: |
+      This function returns the `Class.Player` associated with the given
+      `Class.Player.Character`, or `nil` if one cannot be found. It is
+      equivalent to the following function:
+
+      ```lua
+      local function getPlayerFromCharacter(character)
+      	for _, player in game:GetService("Players"):GetPlayers() do
+      		if player.Character == character then
+      			return player
+      		end
+      	end
+      end
+      ```
+
+      This method is often used when some event in player's character fires
+      (such as their `Class.Humanoid` `Class.Humanoid.Died|dying`). Such an
+      event might not directly reference the Player object, but this method
+      provides easy access. The inverse of this function can be described as
+      getting the Character of a Player. To do this, simply access the Character
+      property.
+    code_samples:
+      - Players-GetPlayerFromCharacter1
+    parameters:
+      - name: character
+        type: Model
+        default:
+        summary: |
+          A character instance that you want to get the player from.
+    returns:
+      - type: Player
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Players
+    writeCapabilities: []
+  - name: Players:GetPlayers
+    summary: |
+      Returns a table of all presently connected `Class.Player` objects.
+    description: |
+      This method returns a table of all presently connected `Class.Player`
+      objects. It functions the same way `Class.Instance:GetChildren()` would
+      except that it only returns `Class.Player` objects found under
+      `Class.Players`. When used with a `for` loop, it is useful for iterating
+      over all players in a game.
+
+      ```lua
+      local Players = game:GetService("Players")
+
+      for _, player in Players:GetPlayers() do
+      	print(player.Name)
+      end
+      ```
+
+      Scripts that connect to `Class.Players.PlayerAdded` are often trying to
+      process every Player that connects to the game. This method is useful for
+      iterating over already-connected players that wouldn't fire
+      `Class.Players.PlayerAdded|PlayerAdded`. Using this method ensures that no
+      player is missed!
+
+      ```lua
+      local Players = game:GetService("Players")
+
+      local function onPlayerAdded(player)
+      	print("Player: " .. player.Name)
+      end
+
+      for _, player in Players:GetPlayers() do
+      	onPlayerAdded(player)
+      end
+      Players.PlayerAdded:Connect(onPlayerAdded)
+      ```
+    code_samples:
+      - Give-Sparkles-to-Everyone
+    parameters: []
+    returns:
+      - type: Instances
+        summary: |
+          A table containing all the players in the server.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+    capabilities:
+      - Players
+    writeCapabilities: []
+  - name: Players:SetChatStyle
+    summary: |
+      Sets whether BubbleChat and ClassicChat are being used, and tells TeamChat
+      and `Class.Chat` what to do.
+    description: |
+      This function sets whether BubbleChat and ClassicChat are being used, and
+      tells TeamChat and Chat what to do using the `Enum.ChatStyle` enum. Since
+      this item is protected, attempting to use it in a `Class.Script` or
+      `Class.LocalScript` will cause an error.
+
+      This function is used internally when the chat mode is set by the game.
+    code_samples:
+      - setting-a-player-s-chat-style
+    parameters:
+      - name: style
+        type: ChatStyle
+        default: Classic
+        summary: |
+          The specified chat style being set.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities:
+      - Players
+    writeCapabilities: []
+  - name: Players:TeamChat
+    summary: |
+      Makes the local player chat the given message, which will only be viewable
+      by users on the same team.
+    description: |
+      This function makes the `Class.Players.LocalPlayer` chat the given
+      message, which will only be viewable by users on the same team. Since this
+      item is protected, attempting to use it in a `Class.Script` or
+      `Class.LocalScript` will cause an error.
+
+      This function is used internally when the `Class.Players.LocalPlayer`
+      sends a message to their team.
+    code_samples:
+      - sending-team-chat
+    parameters:
+      - name: message
+        type: string
+        default:
+        summary: |
+          The message being chatted.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities:
+      - Players
+    writeCapabilities: []
+  - name: Players:getPlayers
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Instances
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function is a deprecated variant of `Class.Players:GetPlayers()`
+      which should be used instead.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Players
+    writeCapabilities: []
+  - name: Players:playerFromCharacter
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: character
+        type: Model
+        default:
+        summary: ''
+    returns:
+      - type: Player
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function is a deprecated variant of
+      `Class.Players:GetPlayerFromCharacter()` which should be used in new work.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Players
+    writeCapabilities: []
+  - name: Players:players
+    summary: |
+      Returns a list of players in a game.
+    description: |
+      This function was once used to return a list of players in a game, but has
+      since been deprecated in favor of `Class.Players:GetPlayers()`
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Instances
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by `Class.Players:GetPlayers()` which should
+      be used in all new work.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Players
+    writeCapabilities: []
   - name: Players:BanAsync
     summary: |
       Bans users from your experience, with options to specify duration, reason,
@@ -475,35 +748,6 @@ methods:
     capabilities:
       - Players
     writeCapabilities: []
-  - name: Players:Chat
-    summary: |
-      Makes the local player chat the given message.
-    description: |
-      This function makes the local player chat the given message. Since this
-      item is protected, attempting to use it in a `Class.Script` or
-      `Class.LocalScript` will cause an error.
-
-      Instead, when creating a custom chat system, or a system that needs access
-      to the chat, you can use the `Class.Chat` service's `Class.Chat:Chat()`
-      function instead.
-    code_samples:
-      - Players-Chat1
-    parameters:
-      - name: message
-        type: string
-        default:
-        summary: |
-          The message chatted.
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities:
-      - Players
-    writeCapabilities: []
   - name: Players:CreateHumanoidModelFromDescription
     summary: |
       Returns a character Model equipped with everything specified in the passed
@@ -557,7 +801,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The userId for a Roblox user. (The UserId is the number in the profile
           of the user e.g www.roblox.com/users/1/profile).
@@ -595,7 +839,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: BanHistoryPages
@@ -629,7 +873,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The `Class.Player.UserId` of the specified player.
     returns:
@@ -753,7 +997,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The \*_userId_ of the specified player.
     returns:
@@ -811,7 +1055,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The user ID of the player being specified.
     returns:
@@ -839,7 +1083,7 @@ methods:
     parameters:
       - name: outfitId
         type: int64
-        default:
+        default: ''
         summary: |
           The ID of the outfit for which the HumanoidDescription is sought.
     returns:
@@ -869,7 +1113,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The userId for a Roblox user. (The UserId is the number in the profile
           of the user e.g www.roblox.com/users/1/profile).
@@ -907,7 +1151,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The `Class.Player.UserId` of the player being specified.
     returns:
@@ -919,131 +1163,6 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities:
-      - Players
-    writeCapabilities: []
-  - name: Players:GetPlayerByUserId
-    summary: |
-      Returns the `Class.Player` with the given `Class.Player.UserId|UserId` if
-      they are in-game.
-    description: |
-      This function searches each `Class.Player` in `Class.Players` for one
-      whose `Class.Player.UserId` matches the given `userId`. If such a player
-      does not exist, it returns `nil`.
-
-      This method is useful in finding the purchaser of a developer product
-      using `Class.MarketplaceService.ProcessReceipt` which provides a table
-      that includes the purchaser's `Class.Player.UserId|UserId` and not a
-      reference to the `Class.Player` object itself. Most experiences will
-      require a reference to the player in order to grant products.
-    code_samples:
-      - Players-GetPlayerByUserId1
-    parameters:
-      - name: userId
-        type: int64
-        default:
-        summary: |
-          The `Class.Player.UserId` of the player being specified.
-    returns:
-      - type: Player
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Safe
-    capabilities:
-      - Players
-    writeCapabilities: []
-  - name: Players:GetPlayerFromCharacter
-    summary: |
-      Returns the `Class.Player` whose `Class.Player.Character` matches the
-      given instance, or `nil` if one cannot be found.
-    description: |
-      This function returns the `Class.Player` associated with the given
-      `Class.Player.Character`, or `nil` if one cannot be found. It is
-      equivalent to the following function:
-
-      ```lua
-      local function getPlayerFromCharacter(character)
-      	for _, player in game:GetService("Players"):GetPlayers() do
-      		if player.Character == character then
-      			return player
-      		end
-      	end
-      end
-      ```
-
-      This method is often used when some event in player's character fires
-      (such as their `Class.Humanoid` `Class.Humanoid.Died|dying`). Such an
-      event might not directly reference the Player object, but this method
-      provides easy access. The inverse of this function can be described as
-      getting the Character of a Player. To do this, simply access the Character
-      property.
-    code_samples:
-      - Players-GetPlayerFromCharacter1
-    parameters:
-      - name: character
-        type: Model
-        default:
-        summary: |
-          A character instance that you want to get the player from.
-    returns:
-      - type: Player
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Players
-    writeCapabilities: []
-  - name: Players:GetPlayers
-    summary: |
-      Returns a table of all presently connected `Class.Player` objects.
-    description: |
-      This method returns a table of all presently connected `Class.Player`
-      objects. It functions the same way `Class.Instance:GetChildren()` would
-      except that it only returns `Class.Player` objects found under
-      `Class.Players`. When used with a `for` loop, it is useful for iterating
-      over all players in a game.
-
-      ```lua
-      local Players = game:GetService("Players")
-
-      for _, player in Players:GetPlayers() do
-      	print(player.Name)
-      end
-      ```
-
-      Scripts that connect to `Class.Players.PlayerAdded` are often trying to
-      process every Player that connects to the game. This method is useful for
-      iterating over already-connected players that wouldn't fire
-      `Class.Players.PlayerAdded|PlayerAdded`. Using this method ensures that no
-      player is missed!
-
-      ```lua
-      local Players = game:GetService("Players")
-
-      local function onPlayerAdded(player)
-      	print("Player: " .. player.Name)
-      end
-
-      for _, player in Players:GetPlayers() do
-      	onPlayerAdded(player)
-      end
-      Players.PlayerAdded:Connect(onPlayerAdded)
-      ```
-    code_samples:
-      - Give-Sparkles-to-Everyone
-    parameters: []
-    returns:
-      - type: Instances
-        summary: |
-          A table containing all the players in the server.
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Safe
     capabilities:
       - Players
     writeCapabilities: []
@@ -1099,7 +1218,7 @@ methods:
     parameters:
       - name: userId
         type: int64
-        default:
+        default: ''
         summary: |
           The `Class.Player.UserId` of the player being specified.
       - name: thumbnailType
@@ -1122,65 +1241,6 @@ methods:
       - Yields
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Players
-    writeCapabilities: []
-  - name: Players:SetChatStyle
-    summary: |
-      Sets whether BubbleChat and ClassicChat are being used, and tells TeamChat
-      and `Class.Chat` what to do.
-    description: |
-      This function sets whether BubbleChat and ClassicChat are being used, and
-      tells TeamChat and Chat what to do using the `Enum.ChatStyle` enum. Since
-      this item is protected, attempting to use it in a `Class.Script` or
-      `Class.LocalScript` will cause an error.
-
-      This function is used internally when the chat mode is set by the game.
-    code_samples:
-      - setting-a-player-s-chat-style
-    parameters:
-      - name: style
-        type: ChatStyle
-        default: Classic
-        summary: |
-          The specified chat style being set.
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities:
-      - Players
-    writeCapabilities: []
-  - name: Players:TeamChat
-    summary: |
-      Makes the local player chat the given message, which will only be viewable
-      by users on the same team.
-    description: |
-      This function makes the `Class.Players.LocalPlayer` chat the given
-      message, which will only be viewable by users on the same team. Since this
-      item is protected, attempting to use it in a `Class.Script` or
-      `Class.LocalScript` will cause an error.
-
-      This function is used internally when the `Class.Players.LocalPlayer`
-      sends a message to their team.
-    code_samples:
-      - sending-team-chat
-    parameters:
-      - name: message
-        type: string
-        default:
-        summary: |
-          The message being chatted.
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: PluginSecurity
     thread_safety: Unsafe
     capabilities:
       - Players
@@ -1262,67 +1322,6 @@ methods:
     tags:
       - Yields
     deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Players
-    writeCapabilities: []
-  - name: Players:getPlayers
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: Instances
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This function is a deprecated variant of `Class.Players:GetPlayers()`
-      which should be used instead.
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Players
-    writeCapabilities: []
-  - name: Players:playerFromCharacter
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: character
-        type: Model
-        default:
-        summary: ''
-    returns:
-      - type: Player
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This function is a deprecated variant of
-      `Class.Players:GetPlayerFromCharacter()` which should be used in new work.
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Players
-    writeCapabilities: []
-  - name: Players:players
-    summary: |
-      Returns a list of players in a game.
-    description: |
-      This function was once used to return a list of players in a game, but has
-      since been deprecated in favor of `Class.Players:GetPlayers()`
-    code_samples: []
-    parameters: []
-    returns:
-      - type: Instances
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: |
-      This item has been superseded by `Class.Players:GetPlayers()` which should
-      be used in all new work.
     security: None
     thread_safety: Unsafe
     capabilities:

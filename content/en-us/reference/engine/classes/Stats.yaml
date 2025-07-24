@@ -696,7 +696,7 @@ methods:
     parameters:
       - name: targetMB
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: ()

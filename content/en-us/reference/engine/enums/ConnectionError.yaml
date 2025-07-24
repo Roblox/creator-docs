@@ -256,6 +256,11 @@ items:
     value: 305
     tags: []
     deprecation_message: ''
+  - name: AndroidRootedKick
+    summary: ''
+    value: 306
+    tags: []
+    deprecation_message: ''
   - name: PlacelaunchErrors
     summary: ''
     value: 512

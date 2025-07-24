@@ -432,7 +432,7 @@ methods:
     parameters:
       - name: index
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: CFrame
@@ -451,7 +451,7 @@ methods:
     parameters:
       - name: index
         type: int
-        default:
+        default: ''
         summary: ''
     returns:
       - type: CFrame

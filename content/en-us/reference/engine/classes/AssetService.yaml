@@ -16,6 +16,80 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: AssetService:CreateEditableImage
+    summary: |
+      Creates a new `Class.EditableImage`.
+    description: |
+      Creates a new `Class.EditableImage`. By default, the resolution is set at
+      512&times;512, but you can specify a different size using the method's
+      option table.
+
+      If the device‑specific editable memory budget is exhausted, creation fails
+      and this method returns `nil`.
+    code_samples: []
+    parameters:
+      - name: editableImageOptions
+        type: Dictionary?
+        default:
+        summary: |
+          Options table containing controls for the method:
+
+          - `Size` – A `Datatype.Vector2` that specifies the image's desired
+            width and height.
+    returns:
+      - type: EditableImage
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AssetService:CreateEditableMesh
+    summary: |
+      Creates a new, empty `Class.EditableMesh`.
+    description: |
+      Creates a new, empty `Class.EditableMesh`. Vertices, triangles, and their
+      attributes can be added dynamically to it. If the device‑specific editable
+      memory budget is exhausted, creation will fail and this method will return
+      `nil`.
+    code_samples: []
+    parameters:
+      - name: editableMeshOptions
+        type: Dictionary?
+        default:
+        summary: |
+          Table containing options for the created `Class.EditableMesh`.
+          Currently no options are available since
+          `Class.EditableMesh.FixedSize|FixedSize` will always be `false` for
+          empty editable meshes.
+    returns:
+      - type: EditableMesh
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AssetService:CreateSurfaceAppearance
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: content
+        type: Dictionary
+        default:
+        summary: ''
+    returns:
+      - type: SurfaceAppearance
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AssetService:CreateAssetAsync
     summary: |
       Uploads a new asset to Roblox from the given object.
@@ -106,7 +180,7 @@ methods:
             `Class.EditableImage` root.
       - name: assetId
         type: int64
-        default:
+        default: ''
         summary: |
           The ID of the asset for the new version.
       - name: requestParameters
@@ -133,35 +207,6 @@ methods:
           successful.
     tags:
       - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: AssetService:CreateEditableImage
-    summary: |
-      Creates a new `Class.EditableImage`.
-    description: |
-      Creates a new `Class.EditableImage`. By default, the resolution is set at
-      512&times;512, but you can specify a different size using the method's
-      option table.
-
-      If the device‑specific editable memory budget is exhausted, creation fails
-      and this method returns `nil`.
-    code_samples: []
-    parameters:
-      - name: editableImageOptions
-        type: Dictionary?
-        default:
-        summary: |
-          Options table containing controls for the method:
-
-          - `Size` – A `Datatype.Vector2` that specifies the image's desired
-            width and height.
-    returns:
-      - type: EditableImage
-        summary: ''
-    tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -202,33 +247,6 @@ methods:
           A new `Class.EditableImage` containing the provided image.
     tags:
       - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: AssetService:CreateEditableMesh
-    summary: |
-      Creates a new, empty `Class.EditableMesh`.
-    description: |
-      Creates a new, empty `Class.EditableMesh`. Vertices, triangles, and their
-      attributes can be added dynamically to it. If the device‑specific editable
-      memory budget is exhausted, creation will fail and this method will return
-      `nil`.
-    code_samples: []
-    parameters:
-      - name: editableMeshOptions
-        type: Dictionary?
-        default:
-        summary: |
-          Table containing options for the created `Class.EditableMesh`.
-          Currently no options are available since
-          `Class.EditableMesh.FixedSize|FixedSize` will always be `false` for
-          empty editable meshes.
-    returns:
-      - type: EditableMesh
-        summary: ''
-    tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -358,12 +376,12 @@ methods:
           Name of the new place.
       - name: templatePlaceID
         type: int64
-        default:
+        default: ''
         summary: |
           `Class.DataModel.PlaceId|PlaceId` of the place to clone.
       - name: description
         type: string
-        default:
+        default: ''
         summary: |
           Description of the new place.
     returns:
@@ -394,11 +412,11 @@ methods:
         summary: ''
       - name: templatePlaceID
         type: int64
-        default:
+        default: ''
         summary: ''
       - name: description
         type: string
-        default:
+        default: ''
         summary: ''
     returns:
       - type: int64
@@ -407,24 +425,6 @@ methods:
       - Yields
     deprecation_message: |
       This method has been removed and is no longer functional.
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: AssetService:CreateSurfaceAppearance
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: content
-        type: Dictionary
-        default:
-        summary: ''
-    returns:
-      - type: SurfaceAppearance
-        summary: ''
-    tags: []
-    deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -438,7 +438,7 @@ methods:
     parameters:
       - name: packageAssetId
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: Array
@@ -510,7 +510,7 @@ methods:
     parameters:
       - name: bundleId
         type: int64
-        default:
+        default: ''
         summary: |
           The ID of the specified bundle.
     returns:
@@ -555,7 +555,7 @@ methods:
     parameters:
       - name: creationID
         type: int64
-        default:
+        default: ''
         summary: ''
     returns:
       - type: int64
