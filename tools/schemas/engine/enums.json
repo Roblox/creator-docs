@@ -10,7 +10,9 @@
     },
     "type": {
       "description": "the type of the API (class, datatype, enum, global, library). Automated.",
-      "enum": ["enum"]
+      "enum": [
+        "enum"
+      ]
     },
     "summary": {
       "$comment": "Summary of the enum to appear in Script Editor Autocomplete.",
@@ -79,7 +81,11 @@
             "type": "boolean"
           }
         },
-        "required": ["name", "summary", "value"]
+        "required": [
+          "name",
+          "summary",
+          "value"
+        ]
       }
     }
   },

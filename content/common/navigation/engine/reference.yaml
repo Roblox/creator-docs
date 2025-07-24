@@ -4994,11 +4994,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/PositionAlignmentMode.yaml
         ignoreTranslation: true
-      - title: PredictionMode
-        path: /reference/engine/enums/PredictionMode
-        type: engineapi
-        source: /reference/engine/enums/PredictionMode.yaml
-        ignoreTranslation: true
       - title: PreferredInput
         path: /reference/engine/enums/PreferredInput
         type: engineapi
@@ -5048,11 +5043,6 @@ navigation:
         path: /reference/engine/enums/PromptCreateAvatarResult
         type: engineapi
         source: /reference/engine/enums/PromptCreateAvatarResult.yaml
-        ignoreTranslation: true
-      - title: PromptLinkSharingResult
-        path: /reference/engine/enums/PromptLinkSharingResult
-        type: engineapi
-        source: /reference/engine/enums/PromptLinkSharingResult.yaml
         ignoreTranslation: true
       - title: PromptPublishAssetResult
         path: /reference/engine/enums/PromptPublishAssetResult
