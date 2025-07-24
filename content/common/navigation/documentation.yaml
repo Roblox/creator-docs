@@ -57,9 +57,6 @@ columns:
         - title: Assets
           navigation: /monetize/assets.yaml
           path: /production/sell-on-creator-store
-        - title: Affiliates
-          navigation: /monetize/affiliates.yaml
-          path: /affiliates
       # MONETIZE NAV REWORK
 
     # EDUCATION NAV REWORK

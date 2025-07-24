@@ -4,7 +4,7 @@ description: Learn how to earn Robux by driving users to experiences.
 ---
 
 <Alert severity="info">
-To join the Creator Affiliate Program, you must be 13+ and reside in a country supported by the [Developer Exchange](https://create.roblox.com/dashboard/devex) program.
+Effective July 24, 2025, the Creator Affiliate program is deprecated and has been replaced by the [Creator Rewards](./creator-rewards.md) program.
 </Alert>
 
 The [Creator Affiliate Program](https://create.roblox.com/affiliate) is a pilot program that lets you earn Robux using affiliate links. With it, you can:

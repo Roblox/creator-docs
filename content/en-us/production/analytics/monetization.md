@@ -37,7 +37,7 @@ From there, you can explore data for each monetization product:
 - [Avatar items](../monetization/avatar-items.md#avatar-items-analytics)
 - [Subscriptions](../monetization/subscriptions.md#subscription-analytics)
 - [Immersive ads](../monetization/immersive-ads.md#view-immersive-ad-metrics)
-- [Engagement payouts](../monetization/engagement-based-payouts.md#access-payout-data)
+- [Creator rewards](../../creator-rewards.md#access-payout-data)
 
 ## Improve revenue
 

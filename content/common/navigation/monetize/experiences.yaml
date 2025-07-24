@@ -6,8 +6,8 @@ navigation:
   - heading: Earn
   - title: Overview
     path: /production/monetization/
-  - title: Engagement-based payouts
-    path: /production/monetization/engagement-based-payouts
+  - title: Creator Rewards
+    path: /creator-rewards
   - title: Private servers
     path: /production/monetization/private-servers
   - title: Subscriptions

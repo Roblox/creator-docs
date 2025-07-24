@@ -3,15 +3,17 @@ title: Earn on Roblox
 description: Explains how Roblox's economy and virtual currency works.
 ---
 
-Roblox's goal is to enable the creation of anything, anywhere, by anyone, and we are constantly investing in new tools and services to empower our creator community. We give our creators, from an individual to a large studio, diverse ways to earn on Roblox by creating content and experiences, specifically:
+Roblox's goal is to enable the creation of anything, anywhere, by anyone, and we are constantly
+investing in new tools and services to empower our creator community. We give our creators, from an
+individual to a large studio, diverse ways to earn on Roblox by creating content and experiences,
+specifically:
 
-- [Developing an experience](#develop-an-experience)
+- [Develop an experience](#develop-an-experience)
   - [In-experience purchases](#in-experience-purchases)
-  - [Engagement-based payouts](#engagement-based-payouts)
   - [Immersive ads](#immersive-ads)
-- [Creating, selling, and reselling avatar items](#create-sell-and-resell-certain-avatar-items)
-- [Creating and selling Studio plugins](#create-and-sell-studio-plugins)
-- [Joining the Creator Affiliate Program](#join-the-creator-affiliate-program)
+- [Creator Rewards](#creator-rewards)
+- [Create, sell, and resell certain avatar items](#create-sell-and-resell-certain-avatar-items)
+- [Create and sell Studio plugins](#create-and-sell-studio-plugins)
 
 This page provides information about different ways to earn on Roblox and how to [convert earned Robux to cash](#convert-earned-robux-to-cash) through the [Developer Exchange][Link_Developer_Exchange] program.
 
@@ -103,12 +105,12 @@ This chart illustrates the estimated utilization of each dollar spent in an expe
 <Chip label="3%" size="large" style={{backgroundColor:"#00a2ff",color:"white",fontSize:"120%",width:"100%"}} />
 </Grid>
 <Grid item XSmall={10}>
-<Chip label="Developer share – engagement-based payouts (EBP)" size="large" color="primary" variant="outlined" style={{fontSize:"105%"}}/>
+<Chip label="Developer share – Creator rewards" size="large" color="primary" variant="outlined" style={{fontSize:"105%"}}/>
 </Grid>
 </Grid>
 <figure>
-<p>Developers also get extra Robux for simply building an engaging experience through the [engagement-based payouts](../production/monetization/engagement-based-payouts.md) program. Roblox calculates payout based on the share of time a [Premium][Link_Premium_Membership] subscriber spends in your experience as a way to reward engaging experiences.</p>
-<p>This percentage reflects our platform average, though the actual percent of earnings from EBP varies from experience to experience based on the engagement level in the experience.</p>
+<p>Developers also get extra Robux for simply building an engaging experience through the [Creator Rewards](../creator-rewards.md) program. </p>
+<p>This percentage reflects our platform average, though the actual percent of earnings from Creator Rewards varies from experience to experience based on the engagement level in the experience.</p>
 <p>We are a platform and therefore we do not make experiences that compete with our creators for these payouts.</p>
 </figure>
 
@@ -177,9 +179,11 @@ Once you've developed an experience, you can earn through the following methods:
 - [Passes](../production/monetization/game-passes.md) for access to special privileges within an experience, such as entry to a restricted area or a permanent power‑up. When you sell your own passes in your experience, you earn 70% of the Robux spent. You can also sell passes within your experience that were made by other creators; in this case, you earn a 10% affiliate fee on the Robux spent within your experience, and the original creator of the pass earns 60%.
 - [Private servers](../production/monetization/private-servers.md) for users to play with just connections (subscription-based access fees).
 
-#### Engagement-based payouts
+#### Creator Rewards
 
-Developers earn extra Robux for simply building an engaging experience. Roblox calculates an [engagement-based payout](../production/monetization/engagement-based-payouts.md) (EBP) based on the share of time a [Roblox Premium](https://www.roblox.com/premium/membership) subscriber spends in your experience, and these payouts happen automatically as a way to reward engaging experiences.
+Developers earn extra Robux for simply building an engaging experience. Roblox calculates
+[payouts](../creator-rewards.md) based on how Active Spenders use your experience on a daily basis, and these payouts happen
+automatically as a way to reward engaging experiences.
 
 #### Immersive ads
 
@@ -285,7 +289,7 @@ Users, unlike creators, cannot convert in-experience virtual currency for real-w
 Every platform reports their creator share a bit differently. When you compare creator shares across platforms, you should consider:
 
 - **The breadth of business models** &mdash; While some platforms may have a high creator share, the opportunities to earn and the ways to earn may be limited, making the absolute earning potential on the platform smaller.
-- **The platform may also be competing for engagement and payouts** &mdash; Some platforms are actually also creators on their platform and therefore compete with their creators for engagement-based payouts. Roblox does not.
+- **The platform may also be competing for engagement and payouts** &mdash; Some platforms are actually also creators on their platform and therefore compete with their creators for engagement. Roblox does not.
 - **Other platform benefits** &mdash; Creator shares can be high but consider other benefits that the platform provides such as costs that they are paying on your behalf, the scale and diversity of their audience, the devices/platforms they are available on, the types of creators that are earning, and more.
 - **The total size of the payout pool** &mdash; Understand the total size of the platform's payout pool. Other platforms may invest less in growing their user base and making their products accessible in new markets across the globe. This may allow them to pay developers a higher share, but at the expense of slower growth and less total earnings being put in creators' pockets.
 </AccordionDetails>
