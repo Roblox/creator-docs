@@ -138,7 +138,7 @@ The only way to distribute and set a price for a plugin is through the Creator D
 
 To distribute a plugin:
 
-1. In the **Explorer** window, right-click a plugin script, then select **Publish as Plugin** from the contextual menu.
+1. In the [Explorer](../studio/explorer.md) window, right-click a plugin script, then select **Publish as Plugin** from the contextual menu.
 1. **(Optional)** In the upper-left corner of the asset configuration window, click the image to upload a 512&times;512 image.
 1. Fill in the following fields:
 
