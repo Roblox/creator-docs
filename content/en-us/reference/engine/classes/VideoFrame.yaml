@@ -248,9 +248,8 @@ methods:
       Sets `Class.VideoFrame.Playing` to true, playing the
       `Class.VideoFrame.Video` from the current `Class.VideoFrame.TimePosition`.
     description: |
-      Sets `Class.VideoFrame.Playing` to true, This plays the
-      `Class.VideoFrame.Video`, continuing from the current
-      `Class.VideoFrame.TimePosition`.
+      Sets `Class.VideoFrame.Playing` to true, playing the
+      `Class.VideoFrame.Video` from the current `Class.VideoFrame.TimePosition`.
     code_samples:
       - creating-and-playing-a-video
     parameters: []
