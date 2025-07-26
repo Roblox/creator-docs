@@ -14,8 +14,8 @@ description: |
   their environment.
 
   For example, you can make a character place its hand on a door handle exactly,
-  and the character will do so independently of its position. IKControls provide
-  the advantage of needing to create much fewer animations for your game while
+  and the character will do so independently of its position. `Class.IKControl|IKControls`
+  provide the advantage of needing to create much fewer animations for your game while
   giving your experience a more realistic and polished feel.
 
   `Class.IKControl|IKControls` must be a child of a `Class.Humanoid` or
@@ -23,12 +23,12 @@ description: |
   required properties set properly, otherwise they don't have any effect. The
   required properties are `Class.IKControl.Type|Type`,
   `Class.IKControl.EndEffector|EndEffector`, `Class.IKControl.Target|Target`,
-  `Class.IKControl.ChainRoot|ChainRoot`. As soon as those are set, the IkControl
+  `Class.IKControl.ChainRoot|ChainRoot`. As soon as those are set, the `Class.IKControl`
   modifies the pose of your character as you specify. The following code sample
   demonstrates how to set up your first `Class.IKControl` and get started with
   creating more realistic animations for your game.
 
-  You can use IKControls to make a character:
+  You can use `Class.IKControl|IKControls` to make a character:
 
   - Rotate its head and torso to look at a point of interest in the world.
   - Modify its feet positions to respond to dynamic terrain. Adjust its legs and
