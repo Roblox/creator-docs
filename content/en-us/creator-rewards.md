@@ -56,8 +56,7 @@ Expansion rewards.
 
 ### Daily Engagement Rewards
 
-Creators earn 5 Robux each day if their experience is one of the first three an Active Spender plays
-for 10+ minutes.
+Creators earn 5 Robux each day if their experience is one of the first three an Active Spender plays for 10+ minutes.
 
 <table>
   <thead>
@@ -75,6 +74,40 @@ for 10+ minutes.
     </tr>
   </tbody>
 </table>
+
+Daily Engagement Rewards pays Creators 5 Robux for each user who spends at least 10 minutes in their experience over the course of the day. To qualify, the experience must be one of the first three experiences that the user visits that day, and the user must spend at least 10 minutes in it. Users must be Active Spenders (meaning they must have spent at least $9.99 in the past 60 days) for their sessions to be eligible.
+
+<h6 style={{marginTop: '36px'}}>Example 1</h6>
+
+An Active Spender visits 5 experiences during the day in the following order:
+
+1. Experience A for 2 minutes
+2. Experience B for 5 minutes
+3. Experience C for 10 minutes
+4. Experience D for 5 minutes
+5. Experience A for 10 minutes
+6. Experience E for 15 minutes
+
+Experience A (where the user spent a total of 12 minutes), Experience C (where the user spent 10 minutes), and Experience E (where the user spent 15 minutes) each earn 5 Robux that day.
+
+Experience B and Experience D do not earn 5 Robux because the user didn't spend 10 or more minutes in them that day.
+
+<h6 style={{marginTop: '36px'}}>Example 2</h6>
+
+An Active Spender visits 5 experiences during the day in the following order:
+
+1. Experience A for 2 minutes
+2. Experience B for 10 minutes
+3. Experience C for 15 minutes
+4. Experience D for 5 minutes
+5. Experience E for 15 minutes
+6. Experience A for 15 minutes
+
+Experience A (where the user spent a total of 17 minutes), Experience B (where the user spent 10 minutes), and Experience C (where the user spent 15 minutes) each earn 5 Robux because they were the first three experiences the user visited and spent at least 10 minutes in that day.
+
+Experience D does not earn 5 Robux because the user only spent 5 minutes in it.
+
+Experience E also does not earn 5 Robux because it was the fourth experience the user visited that day, even though they spent over 10 minutes in it.
 
 ### Audience Expansion Rewards
 
