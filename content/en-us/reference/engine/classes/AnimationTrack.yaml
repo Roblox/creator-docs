@@ -444,8 +444,7 @@ methods:
       - type: RBXScriptSignal
         summary: |
           The signal created and fired when the animation reaches the created
-          `KeyframeMarker`. Not to be confused with the name of the
-          `Class.Keyframe`.
+          `Class.KeyframeMarker`.
     tags: []
     deprecation_message: ''
     security: None
