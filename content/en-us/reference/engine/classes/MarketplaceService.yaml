@@ -1258,7 +1258,7 @@ events:
 
           This might not accurately reflect if the purchase itself has been
           successfully processed. Use
-          `MarketplaceService.UserOwnsGamePassAsync|UserOwnsGamePassAsync` as
+          `Class.MarketplaceService:UserOwnsGamePassAsync()|UserOwnsGamePassAsync` as
           ownership confirmation.
     tags: []
     deprecation_message: ''
@@ -1292,11 +1292,12 @@ events:
       Fires when a purchase prompt for a developer product is closed. Do not use
       this event to process purchases.
     description: |
-      **IMPORTANT:** Do **not** use the `PromptProductPurchaseFinished` event to
-      process purchases; instead, use the
-      `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` callback. The
-      firing of `PromptProductPurchaseFinished` does **not** mean that a user
-      has successfully purchased an item.
+      **IMPORTANT:** Do **not** use the
+      `Class.MarketplaceService.PromptProductPurchaseFinished|PromptProductPurchaseFinished`
+      event to process purchases; instead, use the
+      `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` callback. The firing of
+      `Class.MarketplaceService.PromptProductPurchaseFinished|PromptProductPurchaseFinished`
+      does **not** mean that a user has successfully purchased an item.
 
       This event fires when a purchase prompt for a
       [developer product](../../../production/monetization/developer-products.md)
@@ -1305,18 +1306,19 @@ events:
       **OK**. The firing of this event does **not** mean that a user has
       successfully purchased an item.
 
-      While you can use the `PromptProductPurchaseFinished` event to detect when
-      a user closes a purchase prompt, you should **not** use it to process
-      purchases because those purchases might still fail in the backend for
+      While you can use the
+      `Class.MarketplaceService.PromptProductPurchaseFinished|PromptProductPurchaseFinished`
+      event to detect when a user closes a purchase prompt, you should **not** use it
+      to process purchases because those purchases might still fail in the backend for
       several reasons. For example, if a Roblox system is offline, or if the
       product price has changed and the user now doesn't have enough Robux to
       make the purchase. To process purchases, you must use
       `Class.MarketplaceService.ProcessReceipt()|ProcessReceipt`. Using
-      `ProcessReceipt` allows you to confirm that the purchase has succeeded
-      before you grant the user the item they have purchased.
+      `Class.MarketplaceService.ProcessReceipt()|ProcessReceipt` allows you to confirm
+      that the purchase has succeeded before you grant the user the item they have purchased.
 
-      The `PromptProductPurchaseFinished` event fires with a `Player.UserId`
-      instead of a reference to the `Player` object.
+      The `Class.MarketplaceService.PromptProductPurchaseFinished|PromptProductPurchaseFinished`
+      event fires with a `Class.Player.UserId` instead of a reference to the `Class.Player` object.
 
       ##### See also
 
