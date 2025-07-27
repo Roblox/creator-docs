@@ -33,7 +33,7 @@ items:
       This option should not be used for new work.
   - name: RewardedAdLoaded
     summary: |
-      The event is fired when a click-to-play video ads is being served. This
+      The event is fired when a click-to-play video ad is being served. This
       can be used to communicate and promote the reward to users through the UI
       or signage.
     value: 3
@@ -41,8 +41,8 @@ items:
     deprecation_message: ''
   - name: RewardedAdGrant
     summary: |
-      The event is fired when a user has watched the click-to-play video for a
-      certain time. This can be used to grant the player a reward such as an
+      The event is fired when a user has watched the click-to-play video ad for
+      a certain time. This can be used to grant the player a reward such as an
       in-game item or in-game currency. The RewardedAdGrant enum will only be
       triggered once per ad rotation.
     value: 4
@@ -50,7 +50,7 @@ items:
     deprecation_message: ''
   - name: RewardedAdUnloaded
     summary: |
-      The event is fired when a click-to-play video ads is rotated out. This can
+      The event is fired when a click-to-play video ad is rotated out. This can
       be used to remove any UI or signage that is promoting the reward.
     value: 5
     tags: []
