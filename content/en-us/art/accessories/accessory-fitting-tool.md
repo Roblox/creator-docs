@@ -253,20 +253,11 @@ When fitting rigid accessories, a bounding box appears around the mannequin indi
   </figure>
 </GridContainer>
 
-#### Generate legacy accessory
-
-At this time, if you intend to sell your rigid accessory on the Marketplace, you must select **Generate Legacy Accessory** instead of **Generate MeshPart Accessory**. PBR textures are not yet supported for legacy accessories and the tool automatically applies your colormap to your mesh's textureID.
-
-<img src="../../assets/accessories/accessory-fitting-tool/Generate-Legacy-Accessory.png" alt="A dropdown appears above the GenerateMeshPartAccessory when expanded, displaying a Generate Legacy Accessory option."/>
-
-## Creating accessory
+### Create accessory
 
 You can create the accessory at any time. The tool applies any fit changes and generates the appropriate Accessory instance in the workspace depending on the type of accessory selected and any configurations applied.
 
-When you are ready to generate your accessory:
-
-1. If you are creating a **rigid accessory**, use the dropdown and select **Generate Legacy Accessory**.
-2. If you are creating a **layered accessory**, select **Generate MeshPart Accessory**.
+When you are ready to generate your accessory, select **Generate MeshPart Accessory**.
 
 <GridContainer numColumns="2">
   <figure>
@@ -278,10 +269,6 @@ When you are ready to generate your accessory:
     <figcaption>Hierarchy generated for rigid accessories.</figcaption>
   </figure>
 </GridContainer>
-
-<Alert severity = 'warning'>
-Rigid accessories that you intend to sell on the Marketplace require a `Class.SpecialMesh` and don't support [SurfaceAppearance](../../art/modeling/surface-appearance.md). Use the [Generate Legacy Accessory](#generate-legacy-accessory) option when creating your accessory.
-</Alert>
 
 With an accessory successfully created, you can now try the following:
 
