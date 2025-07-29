@@ -275,7 +275,13 @@ You can use tools like the [Accessory fitting tool](../../art/accessories/access
 </tbody>
 </table>
 
-### Attachment points
+## Textures
+
+Textures created for accessories must meet Roblox's [texture specifications](../../art/modeling/texture-specifications.md).
+
+- Non-albedo maps (RGH, MTL, NOR) for rigid accessories cannot exceed 256x256.
+
+## Attachment points
 
 `Class.Attachment` objects indicate where an accessory model attaches to a point on a character body. Whether you are creating rigid or [layered](./layered-clothing.md) accessories, Studio's [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) automatically adds and configures the appropriate `Class.Attachment` with the following specifications:
 
@@ -343,8 +349,6 @@ Accessories, such as clothing items, which stretch and fit around any character 
 
 Your items must meet the following requirements before you upload them to the Marketplace to sell:
 
-- Rigid accessories that you intend to sell on the Marketplace require a `Class.SpecialMesh` and don't support [SurfaceAppearance](../../art/modeling/surface-appearance.md).
-  - Use the [generate legacy accessory](./accessory-fitting-tool.md#generate-legacy-accessory) option when creating your accessory.
 - Ensure that your items adhere to the [Marketplace program guidelines](../../marketplace/marketplace-policy.md).
 - Whenever applicable, ensure that your items adhere to Roblox's [custom mesh specifications](../../art/modeling/specifications.md).
 - Object `Class.MeshPart.Material|Material` is set to `Plastic`.
