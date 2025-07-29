@@ -67,17 +67,18 @@ You can apply PBR textures using one of the following objects:
 
 To add PBR textures to a mesh:
 
-**Surface Appearance**
-
-1. In the [Explorer](../studio/explorer.md) window, hover over the **MeshPart** object. Click the **⊕** button and select **SurfaceAppearance**.
-2. In the **Properties** window, edit the properties corresponding to the PBR texture maps.
-
-**Material Variant**
-
-1. In the [Explorer](../studio/explorer.md) window, hover over the [MaterialService](../reference/engine/classes/MaterialService.yaml). Click the **⊕** button and select **MaterialVariant**.
-2. In the **Properties** window, edit the properties corresponding to the PBR texture maps.
-3. Name the **MaterialVariant** to a name of your choice.
-4. Select the **MeshPart**, in the mesh's **Properties** window, set the **MaterialVariant** to the one you just created.
+<Tabs>
+<TabItem label="SurfaceAppearance">
+1. In the [Explorer](../studio/explorer.md) window, hover over the `Class.MeshPart` object. Click the **⊕** button and select `Class.SurfaceAppearance`.
+2. In the [Properties](../studio/properties.md) window, edit the properties corresponding to the PBR texture maps.
+</TabItem>
+<TabItem label="MaterialVariant">
+1. In the [Explorer](../studio/explorer.md) window, hover over the `Class.MaterialService`. Click the **⊕** button and select `Class.MaterialVariant`.
+2. In the [Properties](../studio/properties.md) window, edit the properties corresponding to the PBR texture maps.
+3. Name the new `Class.MaterialVariant` to a name of your choice.
+4. Select the `Class.MeshPart` and, in the [Properties](../studio/properties.md) window, set the `Class.MaterialVariant` to the one you just created.
+</TabItem>
+</Tabs>
 
 <Alert severity="info">
 If you both add `Class.SurfaceAppearance` as a child object and set the `Class.MaterialVariant` in the mesh's properties, Studio only applies the texture map settings of the `Class.SurfaceAppearance` object to the mesh. The mesh still has all other settings of the `Class.MaterialVariant` object, such as custom physical properties.
