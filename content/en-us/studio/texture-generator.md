@@ -12,15 +12,15 @@ The **Texture Generator** tool is designed to quickly create custom textures for
 <GridContainer numColumns="3">
   <figure>
     <img src="../assets/studio/texture-generator/Generation-Rusted-Metal-Charred.jpg" />
-    <figcaption>"Rusted Charred Metal Castle"</figcaption>
+    <figcaption>"rusted metal castle"</figcaption>
   </figure>
 	<figure>
     <img src="../assets/studio/texture-generator/Generation-Mossy-Stone.jpg" />
-    <figcaption>"Mossy Stone Fortress"</figcaption>
+    <figcaption>"mossy stone fortress"</figcaption>
   </figure>
 	<figure>
     <img src="../assets/studio/texture-generator/Generation-Snow-Covered-Ice.jpg" />
-    <figcaption>"Snow Covered Ice Sculpture"</figcaption>
+    <figcaption>"ice covered sculpture"</figcaption>
   </figure>
 </GridContainer>
 
@@ -39,60 +39,70 @@ To begin generating textures, navigate to the [Model](../studio/model-tab.md) ta
 With the tool's window open:
 
 1. Select a `Class.MeshPart` or a `Class.Model` comprised of `Class.MeshPart|MeshParts` in your scene.
-1. In the tool's preview pane, click and drag to set a [generation angle](#generation-angle) that highlights the significant features or surfaces for texturing.
+2. In the tool's preview pane, click/drag or enter **X**/**Y**/**Z** values to set the **generation angle** which highlights the significant features or surfaces for texturing. See [best practices](#best-practices) for tips on choosing a generation angle.
 
    <Grid container spacing={3}>
 	 <Grid item>
 	 <figure>
-   <img src="../assets/studio/texture-generator/Generation-Angle-Good.png" width="280" alt="Good generation angle focusing on primary faces of a tower mesh" />
+   <img src="../assets/studio/texture-generator/Generation-Angle-Good.png" width="360" alt="Good generation angle focusing on primary faces of a tower mesh" />
    <figcaption>
-   <Alert severity="success" style={{maxWidth:"280px"}}>Focus on the primary faces of a tower mesh, visible to players</Alert>
+   <Alert severity="success" style={{maxWidth:"360px"}}>Focus on the primary faces of a tower mesh, visible to players</Alert>
    </figcaption>
    </figure>
 	 </Grid>
 	 <Grid item>
 	 <figure>
-   <img src="../assets/studio/texture-generator/Generation-Angle-Bad.png" width="280" alt="Bad generation angle focusing on bottom of tower mesh" />
+   <img src="../assets/studio/texture-generator/Generation-Angle-Bad.png" width="360" alt="Bad generation angle focusing on bottom of tower mesh" />
    <figcaption>
-   <Alert severity="error" style={{maxWidth:"280px"}}>Bottom of tower mesh will not likely be visible to players</Alert>
+   <Alert severity="warning" style={{maxWidth:"360px"}}>Bottom of tower mesh will not likely be visible to players</Alert>
    </figcaption>
    </figure>
 	 </Grid>
 	 </Grid>
 
-1. Enter a prompt describing your desired texture, for example:
+3. <Chip label="OPTIONAL" size="small" variant="outlined" /> Below the preview pane and prompt input text box, expand the **Art&nbsp;Style** section to upload an image or use an existing [image asset](../projects/assets/index.md) to influence the overall style, color palette, and mood of your generated texture.
 
-   - "Rusted Charred Metal Castle"
-   - "Mossy Stone Fortress"
-   - "Snow Covered Ice Sculpture"
+   <img src="../assets/studio/texture-generator/Art-Style.png" width="360" alt="Art Style options in the Texture Generator window" />
 
-   <Alert severity="info">
-   Using more descriptors in your prompt and iterating can help you find a texture that suits your needs. For more information, see [Best Practices](#best-practices).
+   1. Expand the **Art Style** section of the tool's window.
+   2. Specify an image asset that you've already [imported](../projects/assets/manager.md#importing-assets) to Roblox, or upload an image using the built‑in asset picker.
+   3. Adjust the **Strength** value. A lower value blends the image more subtly while a higher value makes it the dominant style.
+
+4. In the prompt text box input below the preview pane, enter a prompt describing your desired texture, for instance:
+
+   - `rusted metal castle`
+   - `mossy stone fortress`
+   - `snow covered ice sculpture`
+
+   Including `+`, `-`, or a number after keywords increases, decreases, or specifies the emphasis of that keyword, respectively. For example:
+
+	 - `futuristic pirate++ backpack` puts stronger emphasis on `pirate`
+	 - `futuristic-- backpack` puts less emphasis on `futuristic` if the original result was too futuristic
+	 - `(robotic)1.5 pirate backpack` puts a precise emphasis on `robotic`
+	 
+	 <Alert severity="info">
+   Using more descriptors in your prompt and iterating can help you find a texture that suits your needs. For more information, see [best practices](#best-practices).
 	 </Alert>
 
-1. Click **Preview** to create a texture preview in real time. This process typically takes about 20 seconds but may take longer during peak periods.
+5. Click **Preview** to create a texture preview. When the preview is ready:
 
-   When you've found a texture that looks suitable, use the "rotate" buttons to rotate the view 90&deg; around the mesh. To return to the prompt input to iterate and/or create a new preview, click the "back" button.
+   - Use the "rotate" buttons to rotate the view 90&deg; around the mesh.
+   - Use the **Reroll** button to generate a new texture using the same parameters.
+   - Click the "back" button to return to the prompt input text box.
 
-   <img src="../assets/studio/texture-generator/Generation-Post-Preview.png" width="280" alt="Texture preview showing in tool window" />
+   <img src="../assets/studio/texture-generator/Generation-Post-Preview.png" width="360" alt="Texture preview showing in tool window" />
 
    <Alert severity="info">
-   At this point, the texture may not appear visually consistent from all four views. However, the model will create a texture that's more consistent during the texture generation process.
+   In the preview stage, the texture may not appear visually consistent from all four views. However, the model will create a texture that's more consistent during the texture generation process.
 	 </Alert>
 
-1. When you're satisfied with the texture, click **Save&nbsp;&&nbsp;Apply** to create a full texture for your mesh. This process typically takes a few minutes but may be longer during peak periods. When complete, the new texture will be applied to the mesh through a `Class.SurfaceAppearance` instance.
+6. When you're satisfied with the texture, click **Save&nbsp;&&nbsp;Apply** to create a full texture for your mesh. When complete, the new texture will be applied to the mesh through a `Class.SurfaceAppearance` instance.
 
    <img src="../assets/studio/texture-generator/Texture-Applied.jpg" width="720" alt="Texture applied to mesh in 3D world" />
 
-	 <Alert severity="warning">
-   Final generated textures will be a close match to what you observe in the preview pane, but may not be an exact match. You can continue to iterate on a style prompt and compare previous versions as outlined in [Managing Textures](#managing-textures).
-	 </Alert>
-
-## Manage textures
-
 Generated textures appear in the **Saved Textures** section of the tool's window. For each texture, you can click the **&ctdot;** to access various options.
 
-<img src="../assets/studio/texture-generator/Saved-Textures-List.png" width="280" alt="Saved Textures list in tool window" />
+<img src="../assets/studio/texture-generator/Saved-Textures-List.png" width="360" alt="Saved Textures list in tool window" />
 
 <table>
   <thead>
@@ -125,33 +135,23 @@ Generated textures appear in the **Saved Textures** section of the tool's window
 
 Expanding the **Advanced Options** section in the tool's window allows you to configure the following aspects.
 
-<img src="../assets/studio/texture-generator/Advanced-Options.png" width="280" alt="Advanced Options panel in tool window" />
-
-### Seed control
-
+<Tabs>
+<TabItem label="Seed Control">
 You can choose to either randomize the seed or set a specific seed for texture generation. Setting a specific seed before generating a texture ensures you get consistent results each time you use a specific prompt.
-
-### Generation angle
-
-Allows you to set a primary generation angle to prioritize during the preview generation phase to ensure the most important areas of your mesh are visible and able to be textured. This angle is also controlled by clicking and dragging the mesh in the preview window.
-
-See [Best Practices](#best-practices) for detailed recommendations on choosing a generation angle.
-
-### Smart UV unwrap
-
+</TabItem>
+<TabItem label="Smart UV Unwrap">
 In 3D modeling, a **UV map** is a 2D representation of the surface of a 3D model, allowing 2D textures to be accurately applied to the 3D model. UV coordinates **U** and **V** refer to the horizontal and vertical axes of this 2D space, similar to the **X** and **Y** axes in a 2D graph.
 
 For the texture generator tool to create well-formed textures, your mesh's underlying UV maps need to fit a few guidelines. First, all UV coordinates must be **within the unit square**, as UV maps outside of the unit square will wrap around to the other side of the UV map and create artifacts or seams in the final texture. Second, all UVs must be **non‑overlapping**, as overlapping UVs will result in inconsistent textures and color placements.
 
 Selecting the **Smart UV Unwrap** option will take a mesh with no UVs (or incompatible UVs) and apply the necessary UV coordinates for texturing. If your UVs are compatible, they won't be affected and you can use your mesh as‑is.
-
-### Specify front view
-
-When this setting is enabled, the [generation angle](#generation-angle) selected during the preview stage is specified as the "front" of your mesh. This allows the tool to better texture meshes with a clear front and back by identifying each side, resulting in more consistent and coherent textures. This is particularly helpful for objects with a clear front and back, like avatars, animals, and clothing.
+</TabItem>
+<TabItem label="Specify Front View">
+When this setting is enabled, the **generation angle** selected during the preview stage is specified as the "front" of your mesh. This allows the tool to better texture meshes with a clear front and back by identifying each side, resulting in more consistent and coherent textures. This is particularly helpful for objects with a clear front and back, like avatars, animals, and clothing.
 
 <GridContainer numColumns="2">
 <figure>
-<Grid container spacing={1}>
+<Grid container spacing={2}>
 <Grid item XSmall={6} XLarge={6}>
 <img src="../assets/studio/texture-generator/Specify-Front-View-Bad-Front.jpg" alt="Front view of character's lab coat with Specify Front View disabled" />
 </Grid>
@@ -166,7 +166,7 @@ When this setting is enabled, the [generation angle](#generation-angle) selected
 </figcaption>
 </figure>
 <figure>
-<Grid container spacing={1}>
+<Grid container spacing={2}>
 <Grid item XSmall={6} XLarge={6}>
 <img src="../assets/studio/texture-generator/Specify-Front-View-Good-Front.jpg" alt="Front view of character's lab coat with Specify Front View enabled" />
 </Grid>
@@ -181,6 +181,8 @@ Same prompt with **Specify Front View** enabled, yielding correct "front" and "b
 </figcaption>
 </figure>
 </GridContainer>
+</TabItem>
+</Tabs>
 
 ## Best practices
 
@@ -194,7 +196,7 @@ The following prompting tips enable the tool to provide better and more consiste
 - Add styling cues like "cinematic," "photorealistic," "cartoon," or "low&nbsp;poly" to influence the overall look.
 </TabItem>
 <TabItem label="Generation angle">
-The [generation angle](#generation-angle) sets the most important view of your mesh which will be prioritized during generation. Changing this angle can often help eliminate inconsistencies in textures.
+The generation angle sets the most important view of your mesh which will be prioritized during generation. Changing this angle when [generating textures](#generate-textures) can often help eliminate inconsistencies in textures.
 
 - Setting the generation angle to highlight the meaningful faces of your mesh will result in better generations.
 - For flat objects like plates, swords, and fences, make sure the generation angle displays a view with a high surface area.
@@ -205,6 +207,6 @@ Generating the most suitable textures is an iterative process. It helps to previ
 
 - If a texture doesn't meet your expectations, identify what to change instead of starting over. For example, tweak the color or pattern description.
 - Change the prompt word order. Words at the beginning of the prompt can have more weight when generating.
-- Generate several previews to compare different prompts, or try the same prompts with different [seeds](#seed-control) to get a preview that fits your vision.
+- Generate several previews to compare different prompts, or try the same prompts with different [seeds](#advanced-options) to get a preview that fits your vision.
 </TabItem>
 </Tabs>

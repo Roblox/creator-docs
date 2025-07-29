@@ -21,7 +21,7 @@ Once enabled, it's recommended that you adhere to the following practices:
 - Because clients will not typically have the entire `Class.Workspace` available locally, use the appropriate tool/API to ensure that instances exist before attempting to access them in a `Class.LocalScript`. For example, utilize [per‑model streaming controls](#per-model-streaming-controls), [detect instance streaming](#detect-instance-streaming), or use `Class.Instance:WaitForChild()|WaitForChild()` on objects that may not exist.
 - Minimize placement of 3D content outside of `Class.Workspace`. Content in containers such as `Class.ReplicatedStorage` or `Class.ReplicatedFirst` is ineligible for streaming and may negatively impact join time and memory usage.
 - If you move a player's character by setting its `Datatype.CFrame`, do so from a server-side `Class.Script` and use [streaming requests](#request-area-streaming) to more quickly load data around the character's new location.
-- Manually set the player's `Class.Player.ReplicationFocus|ReplicationFocus` only in unique situations such as in experiences that don't use a `Class.Player.Character`. In these cases, make sure the focus is near the object(s) that the player controls to ensure content continues to stream in around the player's interaction point.
+- Manually set [replication foci](#replication-focus) only in unique situations such as experiences that don't use a `Class.Player.Character` or where streaming should occur in multiple areas of the experience. In these cases, make sure the foci are near objects that the player controls or those that should continue simulating physically on the client, and try to minimize the overall number of foci used.
 
 ## Technical behavior
 
@@ -42,7 +42,7 @@ Then, during gameplay, the server may stream necessary instances to the client, 
 
 <h4>Model behavior</h4>
 
-Models set to non-default behavior like [Atomic](#atomic) stream in under special rules as outlined in [Per‑model streaming controls](#per-model-streaming-controls). However, default (nonatomic) models are sent differently based on whether [ModelStreamingBehavior](#modelstreamingbehavior) is set to **Default** (**Legacy**) or **Improved**.
+Models set to non-default behavior like [Atomic](#atomic) stream in under special rules as outlined in [per‑model streaming controls](#per-model-streaming-controls). However, default (nonatomic) models are sent differently based on whether [ModelStreamingBehavior](#modelstreamingbehavior) is set to **Default** (**Legacy**) or **Improved**.
 
 <Tabs>
 <TabItem label="Default / Legacy">
@@ -77,7 +77,7 @@ When [ModelStreamingBehavior](#modelstreamingbehavior) is set to **Improved**, m
 
 ### Stream out
 
-During gameplay, a client may stream out (remove from the player's `Class.Workspace`) regions and the `Class.BasePart|BaseParts` contained within them, based on the behavior set by [StreamOutBehavior](#streamoutbehavior). The process begins with regions furthest away from the player's character (or `Class.Player.ReplicationFocus|ReplicationFocus`) and moves in closer as needed. Regions inside the [StreamingMinRadius](#streamingminradius) range never stream out.
+During gameplay, a client may stream out (remove from the player's `Class.Workspace`) regions and the `Class.BasePart|BaseParts` contained within them, based on the behavior set by [StreamOutBehavior](#streamoutbehavior). The process begins with regions furthest away from the [replication foci](#replication-focus) and moves in closer as needed. Regions inside the [StreamingMinRadius](#streamingminradius) range never stream out.
 
 When an instance streams out, it is parented to `nil` so that any existing Luau state will reconnect if the instance streams back in. As a result, removal signals such as `Class.Instance.ChildRemoved|ChildRemoved` or `Class.Instance.DescendantRemoving|DescendantRemoving` fire on its **parent** or **ancestor**, but the instance itself is not destroyed in the same sense as an `Class.Instance:Destroy()` call.
 
@@ -197,11 +197,11 @@ Your experience may behave in unintended ways if a player moves into a region of
 
 ### StreamingMinRadius
 
-The **StreamingMinRadius** property indicates the radius around the player's character (or `Class.Player.ReplicationFocus|ReplicationFocus`) in which instances stream in at the highest priority. Care should be taken when increasing the default, as doing so will require more memory and more server bandwidth at the expense of other components.
+The **StreamingMinRadius** property indicates the radius around the [replication foci](#replication-focus) in which instances stream in at the highest priority. Care should be taken when increasing the default, as doing so will require more memory and more server bandwidth at the expense of other components.
 
 ### StreamingTargetRadius
 
-The **StreamingTargetRadius** property controls the maximum distance away from the player's character (or `Class.Player.ReplicationFocus|ReplicationFocus`) in which instances stream in. Note that the engine is allowed to retain previously loaded instances beyond the target radius, memory permitting.
+The **StreamingTargetRadius** property controls the maximum distance away from the [replication foci](#replication-focus) in which instances stream in. Note that the engine is allowed to retain previously loaded instances beyond the target radius, memory permitting.
 
 A smaller **StreamingTargetRadius** reduces server workload, as the server will not stream in additional instances beyond the set value. However, the target radius is also the maximum distance players will be able to see the full detail of your experience, so you should pick a value that creates a nice balance between these.
 
@@ -236,13 +236,31 @@ The **StreamOutBehavior** property sets the [streaming out](#stream-out) behavio
   </tbody>
 </table>
 
+## Replication focus
+
+By default, streaming occurs around the local player's character's `Class.Model.PrimaryPart|PrimaryPart`, although you can specify a different replication focus point through `Class.Player.ReplicationFocus`.
+
+You can also add and remove additional replication foci through `Class.Player:AddReplicationFocus()` and `Class.Player:RemoveReplicationFocus()` to dynamically enable streaming in multiple areas of the experience. Example use cases include:
+
+<Tabs>
+<TabItem label="Physics Simulation">
+Client-side physics simulation only occurs in streamed areas, even for locally created instances and for [persistent](#persistent) instances. If you have instances that you'd like to keep simulating even when they're far away from the character, create an additional replication focus near those instances.
+</TabItem>
+<TabItem label="Movement Between Zones">
+In many experiences, it's common for players to move back and forth between the same areas frequently, for example between their "home&nbsp;base" and a "trading&nbsp;hub." In such cases, you can create a replication focus point in each area to ensure those areas are readily present on client devices.
+</TabItem>
+<TabItem label="Distant Viewpoints">
+Multiple replication points are useful when players can view specific, important regions through a scope, such as enemy bases scattered across a barren landscape. In such cases, you can create a replication focus point in each base to ensure players see details and simulated physics from afar.
+</TabItem>
+</Tabs>
+
 ## Per-model streaming controls
 
 Globally, the [ModelStreamingBehavior](#modelstreamingbehavior) property lets you control how models are streamed in on join. Additionally, to avoid issues with streaming on a per-model basis and minimize use of `Class.Instance:WaitForChild()|WaitForChild()`, you can customize how `Class.Model|Models` and their descendants stream through their `Class.Model.ModelStreamingMode|ModelStreamingMode` property.
 
 <img src="../assets/studio/properties/Model-ModelStreamingMode.png" width="320" alt="The Properties window with the ModelStreamingMode property set to Default. The property is also highlighted." />
 
-### Default / nonatomic
+### Default / Nonatomic
 
 When a `Class.Model` is set to **Default** or **Nonatomic**, streaming behavior varies based on whether [ModelStreamingBehavior](#modelstreamingbehavior) is set to **Default** (**Legacy**) or **Improved**.
 
