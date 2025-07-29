@@ -49,7 +49,7 @@ Unlike basic parts, meshes have more customization options that you can adjust f
 
 ### Texture
 
-**Textures** contribute to the visual appearance of meshes by adding 2D details such as color and patterns. Studio allows you to either apply one texture using the `Class.MeshPart.TextureID` property, or apply up to four physically-based rendering (PBR) textures within a `Class.SurfaceAppearance` child object of the mesh or made with a `Class.MaterialVariant` and set in the meshes `Class.MeshPart.MaterialVariant` property. PBR textures allow you to represent realistic shading and lighting by using multiple types of texture images, or maps, on a single object.
+**Textures** contribute to the visual appearance of meshes by adding 2D details such as color and patterns. Studio allows you to either apply one texture using the `Class.MeshPart.TextureID` property, or apply up to four physically-based rendering (PBR) textures within a `Class.SurfaceAppearance` child object of the mesh or made with a `Class.MaterialVariant` and set in the mesh's `Class.MeshPart.MaterialVariant` property. PBR textures allow you to represent realistic shading and lighting by using multiple types of texture images, or maps, on a single object.
 
 <Tabs>
 <TabItem label="PBR Textures">
