@@ -10,7 +10,7 @@ Share animations with friends and fellow developers by exporting and importing t
 
 <Alert severity="info">
 <AlertTitle>Rules in Sharing Animations</AlertTitle>
-Animations are restricted and follow [Asset Privacy](../../projects/assets/privacy.md) rules.
+Animations are Restricted, see [Asset Privacy](../../projects/assets/privacy.md) for more information.
 </Alert>
 
 **Exporting Animations**
