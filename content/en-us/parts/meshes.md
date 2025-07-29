@@ -49,15 +49,15 @@ Unlike basic parts, meshes have more customization options that you can adjust f
 
 ### Texture
 
-**Textures** determine the visual appearance of meshes. Studio allows you to either apply one texture using the `Class.MeshPart.TextureID` property, or apply up to four physically-based rendering (PBR) textures within a `Class.SurfaceAppearance` or `Class.MaterialVariant` child object of the mesh. PBR textures allow you to represent realistic shading and lighting by using multiple types of texture images, or maps, on a single object.
+**Textures** contribute to the visual appearance of meshes by adding 2D details such as color and patterns. Studio allows you to either apply one texture using the `Class.MeshPart.TextureID` property, or apply up to four physically-based rendering (PBR) textures within a `Class.SurfaceAppearance` child object of the mesh or made with a `Class.MaterialVariant` and set in the mesh's `Class.MeshPart.MaterialVariant` property. PBR textures allow you to represent realistic shading and lighting by using multiple types of texture images, or maps, on a single object.
 
 <Tabs>
 <TabItem label="PBR Textures">
 Studio supports four PBR texture maps, each corresponding to a visual characteristic of an object's surface appearance. Combining multiple texture maps can more accurately simulate color, roughness, and reflectivity in any lighting environment, and enhance the visual elements of your assets and environment. For more information on PBR textures and the texture maps, see [PBR Textures](../art/modeling/surface-appearance.md).
 
 <GridContainer numColumns="2">
-  <img src="../assets/modeling/surface-appearance/SurfaceAppearance-Example-1.jpg" alt="" />
-  <img src="../assets/modeling/surface-appearance/SurfaceAppearance-Example-3.jpg" alt="" />
+  <img src="../assets/modeling/surface-appearance/SurfaceAppearance-Example-1.jpg" alt="Example of SurfaceAppearance applied to a Bush Mesh" />
+  <img src="../assets/modeling/surface-appearance/SurfaceAppearance-Example-3.jpg" alt="Example of SurfaceApperance applied to a Rock Mesh" />
 </GridContainer>
 
 You can apply PBR textures using one of the following objects:
@@ -67,11 +67,21 @@ You can apply PBR textures using one of the following objects:
 
 To add PBR textures to a mesh:
 
-1. In the **Explorer** window, hover over the MeshPart object. Click the **⊕** button and select **SurfaceAppearance** or **MaterialVariant**.
-2. In the **Properties** window, edit the properties corresponding to the PBR texture maps.
+<Tabs>
+<TabItem label="SurfaceAppearance">
+1. In the [Explorer](../studio/explorer.md) window, hover over the `Class.MeshPart` object. Click the **⊕** button and select `Class.SurfaceAppearance`.
+2. In the [Properties](../studio/properties.md) window, edit the properties corresponding to the PBR texture maps.
+</TabItem>
+<TabItem label="MaterialVariant">
+1. In the [Explorer](../studio/explorer.md) window, hover over the `Class.MaterialService`. Click the **⊕** button and select `Class.MaterialVariant`.
+2. In the [Properties](../studio/properties.md) window, edit the properties corresponding to the PBR texture maps.
+3. Name the new `Class.MaterialVariant` to a name of your choice.
+4. Select the `Class.MeshPart` and, in the [Properties](../studio/properties.md) window, set the `Class.MaterialVariant` to the one you just created.
+</TabItem>
+</Tabs>
 
 <Alert severity="info">
-If you add both `Class.SurfaceAppearance` and `Class.MaterialVariant` as child objects of a mesh, Studio only applies the texture map settings of the `Class.SurfaceAppearance` object to the mesh. The mesh still has all other settings of the `Class.MaterialVariant` object, such as custom physical properties.
+If you both add `Class.SurfaceAppearance` as a child object and set the `Class.MaterialVariant` in the mesh's properties, Studio only applies the texture map settings of the `Class.SurfaceAppearance` object to the mesh. The mesh still has all other settings of the `Class.MaterialVariant` object, such as custom physical properties.
 </Alert>
 
 </TabItem>
