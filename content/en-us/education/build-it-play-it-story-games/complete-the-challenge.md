@@ -8,11 +8,11 @@ prev: /education/build-it-play-it-story-games/third-challenge
 
 **Congratulations**, you just finished the latest Roblox Creator Challenge!
 
-Now that you've completed the game, here are a few ideas to take your game further and keep learning.
+Now that you've completed the experience, here are a few ideas to take your experience further and keep learning.
 
 ## Share your experience
 
-One of the most exciting features of Roblox is that it's really easy to share your game with friends. Currently your game is probably private, meaning only you can play it. For your friends to see the game, you need to make it public.
+One of the most exciting features of Roblox is that it's really easy to share your experience with connections. Currently your experience is probably private, meaning only you can play it. For your connections to see the game, you need to make it public.
 
 1. Select **File** (top left of Studio) and click **Game Settings**.
 
@@ -28,7 +28,7 @@ One of the most exciting features of Roblox is that it's really easy to share yo
 
    <img src="../../assets/education/general/Share-Links.png" width="40%" />
 
-1. Click the **Copy Link** button, then share the link with your friends.
+1. Click the **Copy Link** button, then share the link with your connections.
 
 ## Add more to the story
 
