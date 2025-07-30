@@ -1,6 +1,6 @@
 ---
 title: Scripting
-description: An introduction to scripting in Robox with the Luau programming language.
+description: An introduction to scripting in Roblox with the Luau programming language.
 ---
 
 Scripts are plain text files that let you add custom, dynamic behavior to your experiences. You can use scripts to trigger in-game events, respond to player input, save player data, create leaderboards, spawn enemies, control NPC behavior, and much, much more.
