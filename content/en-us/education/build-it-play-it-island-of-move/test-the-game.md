@@ -9,20 +9,16 @@ Before animating, test out the template to see how the game works. In-game, play
 
 1. Click **Play** to test.
 
-   <img src="../../assets/education/build-it-play-it-island-of-move/test-the-game/play-button.png" width="50%" />
+   <img src="../../assets/education/general/play-button.png" width="30%" />
 
-2. In the game, walk up and click on **_Freddie_**, the golem, or press <kbd>E</kbd>.
+2. In the experience, walk up to the golem character on the stage and press <kbd>E</kbd> to open up a menu. On that screen, click **Play Game**.
 
-   <img src="../../assets/education/build-it-play-it-island-of-move/test-the-game/click-npc.jpeg" width="50%" />
+   <img src="../../assets/education/build-it-play-it-island-of-move/test-the-game/click-npc.png" width="50%" />
 
-3. To enter the game, click **Play Game**.
-
-   <img src="../../assets/education/build-it-play-it-island-of-move/test-the-game/click-play-game.jpeg" width="50%" />
-
-4. Once in-game, go forward by repeatedly clicking the **Move** button. Your character will automatically follow the track as you click.
+3. Once in-game, go forward by repeatedly clicking the **Move** button. Your character will automatically follow the track as you click.
 
    <video controls src="../../assets/education/build-it-play-it-island-of-move/test-the-game/click-game-button.mp4" width="100%"></video>
 
-5. **Stop** playing by clicking the red square.
+4. **Stop** playing by clicking the red square.
 
-   <img src="../../assets/education/build-it-play-it-island-of-move/test-the-game/stop-button.png" width="50%" />
+   <img src="../../assets/education/general/stop-button.png" width="30%" />

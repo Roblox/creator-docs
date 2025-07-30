@@ -3,7 +3,7 @@ title: Users and players
 description: The Player instance contains information on the individual users within your experience.
 ---
 
-When a user joins an experience, Roblox represents them as a **Player** in the data model. The `Class.Player` object contains information about the user that's universal across experiences, such as their username, friend list, saved [avatar character](../characters/index.md#avatar-characters), and Roblox membership type, as well as properties, methods, and events that affects the user's lifecycle between joining and leaving your experience.
+When a user joins an experience, Roblox represents them as a **Player** in the data model. The `Class.Player` object contains information about the user that's universal across experiences, such as their username, connection list, saved [avatar character](../characters/index.md#avatar-characters), and Roblox membership type, as well as properties, methods, and events that affects the user's lifecycle between joining and leaving your experience.
 
 The `Class.Players` service contains all the `Class.Player` instances in an experience. Each `Class.Player` object represents a user in the experience, and it parents four important containers that you can use to customize a user's experience: `Class.Backpack`, `Class.StarterGear`, `Class.PlayerGui`, and `Class.PlayerScripts`.
 
@@ -107,9 +107,11 @@ end)
 
 ## Ban users
 
-To ensure civility and fair play in your experiences, you can ban users who violate your experience rules and community guidelines. You can modify ban durations, ban messages, and even extend bans to potential alternate accounts. When using this feature, you must also follow guidelines for [banning](#ban-guidelines) and [messaging](#message-guidelines).
+To ensure civility and fair play in your experiences, you can ban users who violate your experience rules and community guidelines. You can modify ban durations, ban messages, and even extend bans to potential alternate accounts. When using this feature, you must also follow guidelines for [banning](#ban-guidelines) and [messaging](#message-guidelines). You have several options for working with bans:
 
-For implementation and usage instructions, see `Class.Players.BanAsync`.
+- Each experience page on the [Creator Hub](https://create.roblox.com/) has a [Bans dashboard](../production/bans.md).
+- For programmatic usage with the Engine API, see `Class.Players:BanAsync()`.
+- For Open Cloud, see [Bans and blocks](/cloud/features/bans-and-blocks).
 
 ### Ban guidelines
 

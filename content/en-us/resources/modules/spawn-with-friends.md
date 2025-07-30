@@ -17,7 +17,7 @@ It can be challenging to locate friends in-experience. The **SpawnWithFriends** 
 
 To use the **SpawnWithFriends** module in an experience:
 
-1. From the [View](../../studio/view-tab.md) tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
+1. From the **View** tab, open the **Toolbox** and select the **Creator Store** tab.
 
    <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
 
@@ -27,17 +27,13 @@ To use the **SpawnWithFriends** module in an experience:
 
    <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
-1. Locate and click the **Dev Modules** tile.
-
-   <img src="../../assets/studio/toolbox/Creator-Store-Categories-Dev-Modules.png" width="200" />
+1. Locate and click the **Packages** tile.
 
 1. Locate the **Spawn With Friends** module and click it, or drag-and-drop it into the 3D view.
 
    <img src="../../assets/developer-modules/spawn-with-friends/Toolbox-Icon.png" width="143" />
 
-1. In the [Explorer](../../studio/explorer.md) window, move the entire **SpawnWithFriends** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
-
-   <img src="../../assets/developer-modules/spawn-with-friends/Move-Package.png" width="320" />
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **SpawnWithFriends** model into `Class.ReplicatedStorage`. Upon running the experience the module will begin running.
 
 ### Restricted Spawn Areas
 
@@ -58,7 +54,7 @@ This module may result in players spawning in restricted areas like VIP rooms, a
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
    local CollectionService = game:GetService("CollectionService")
 
-   local SpawnWithFriends = require(ReplicatedStorage:WaitForChild("SpawnWithFriends"))
+   local SpawnWithFriends = require(ReplicatedStorage.SpawnWithFriends)
 
    local function validator(playerToTeleport, destinationPlayer, teleportationPoint)
    	-- Iterate through all tagged parts
@@ -129,7 +125,7 @@ Overrides default configuration options through the following keys/values in the
 ```lua title="Script" highlight="5-11"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local SpawnWithFriends = require(ReplicatedStorage:WaitForChild("SpawnWithFriends"))
+local SpawnWithFriends = require(ReplicatedStorage.SpawnWithFriends)
 
 SpawnWithFriends.configure({
 	teleportToFriendOnRespawn = true,
@@ -184,7 +180,7 @@ This function and its callback can only be used in a `Class.Script` and the call
 ```lua title="Script" highlight="6-8, 10"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local SpawnWithFriends = require(ReplicatedStorage:WaitForChild("SpawnWithFriends"))
+local SpawnWithFriends = require(ReplicatedStorage.SpawnWithFriends)
 
 -- Teleports players only if they are on the same team
 local function validator(playerToTeleport, destinationPlayer, teleportationPoint)

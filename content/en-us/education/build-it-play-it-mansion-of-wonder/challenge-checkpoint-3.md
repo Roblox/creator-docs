@@ -9,14 +9,14 @@ description: Earn the third set of rewards in Roblox's Build It Play It Mansion 
 
 You got your animation ready! Celebrate your new skills by getting the **Tomes of the Magus** and **Master of the Mansion** badge.
 
-1. **Copy** the **code** below to start.
+1. **Copy** the following code: `ParticleWizard`
 
-   `ParticleWizard`
-
-2. Click **Enter World** below to open a Roblox game. In the game, interact with Freddie, the in-game character and click **REDEEM CODE**. Use the code on this page to get your item.
-
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/challenge-checkpoint-3/prize-avatar.jpeg" width="100%" />
+2. Click the **Enter World** button below to open the **Mansion of Wonder** experience.
 
    <a href="https://www.roblox.com/games/6901029464/">
    <Button variant="contained">Enter World</Button>
    </a>
+
+3. When you are playing game, interact with Freddie the fox character, then click **REDEEM CODE**. Use the code from step 1 to get your item.
+
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/challenge-checkpoint/prize-avatar.png" width="60%" />

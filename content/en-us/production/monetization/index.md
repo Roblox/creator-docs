@@ -3,7 +3,7 @@ title: Monetization
 description: Monetization is a part of Roblox's overall structure to provide value to creators.
 ---
 
-Monetization is a part of Roblox's overall structure to provide value to creators. There are several different approaches to monetize your content, including utilizing [subscriptions](#subscriptions), charging an access fee in [Robux](#paid-access-in-robux) or [local currency](#paid-access-in-local-currency), providing [items or abilities that users can purchase](#developer-products), offering [private servers](#private-servers) for users to play just with friends, and [selling plugins](../sell-on-creator-store.md) to other creators on the Creator Store.
+Monetization is a part of Roblox's overall structure to provide value to creators. There are several different approaches to monetize your content, including utilizing [subscriptions](#subscriptions), charging an access fee in [Robux](#paid-access-in-robux) or [local currency](#paid-access-in-local-currency), providing [items or abilities that users can purchase](#developer-products), offering [private servers](#private-servers) for users to play just with connections, and [selling plugins](../sell-on-creator-store.md) to other creators on the Creator Store.
 
 If you choose to offer purchasable content, Roblox doesn't automatically record product or purchase information. To prevent data loss, you must carefully store this data using `Class.DataStoreService` or another data storage service hosted outside of Roblox.
 
@@ -15,7 +15,7 @@ For an in-depth look at designing optimal monetization strategies for your exper
 
 ## Monetization strategies
 
-Be mindful of the monetization methods you introduce into your experience as our users are likely to **downvote** your experience if they do not approve of your strategies. Also, all developers need to be transparent with any [chance-based monetization](../../production/monetization/randomized-virtual-items-policy.md) and use these mechanics responsibly.
+Be mindful of the monetization methods you introduce into your experience as our users are likely to **downvote** your experience if they do not approve of your strategies. Also, all developers need to be transparent with any [chance-based monetization](virtual-items.md#randomized-virtual-items) and use these mechanics responsibly.
 
 Some popular monetization strategies for free-to-play experiences on other platforms are not recommended for Roblox. For instance, appointment mechanics and timers which can be removed or brought forward may work well on other platforms, but these mechanics are unpopular with Roblox users who take issue with their fun coming to a premature end.
 
@@ -112,7 +112,7 @@ A [developer product](../../production/monetization/developer-products.md) is an
 
 A [private server](../../production/monetization/private-servers.md) is a subscription-based feature that allows a user to decide who can play an experience with them. While private servers can be free, you can also use private servers as a method of monetization by charging users who want to access private servers a **monthly Robux fee**. Private servers are often purchased for:
 
-- Playing experiences just with friends.
+- Playing experiences just with connections.
 
 - Holding gatherings such as classes, meetings, or parties.
 

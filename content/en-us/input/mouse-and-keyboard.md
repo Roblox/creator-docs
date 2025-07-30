@@ -55,37 +55,6 @@ end
 UserInputService.InputEnded:Connect(onInputEnded)
 ```
 
-## Character movement modes
-
-You can set mouse and keyboard movement controls schemes for Roblox experiences by changing the values of `Class.StarterPlayer.DevComputerMovementMode` to one of the following:
-
-<table>
-<thead>
-  <tr>
-    <th>Option</th>
-    <th>Description</th>
-  </tr>
-</thead>
-<tbody>
-	<tr>
-    <td>`Enum.DevComputerMovementMode|UserChoice`</td>
-    <td>Allows players to choose their desired control scheme from the in-experience menu. This is the default movement mode.</td>
-  </tr>
-	<tr>
-    <td>`Enum.DevComputerMovementMode|KeyboardMouse`</td>
-    <td>Player's control their character with the keyboard and mouse using the [default bindings](#roblox-default-bindings).</td>
-  </tr>
-  <tr>
-    <td>`Enum.DevComputerMovementMode|ClickToMove`</td>
-    <td>Players can only move through the experience by clicking a target location. The player's character will automatically jump when hitting a surmountable obstacle/gap while moving to the click destination.</td>
-  </tr>
-  <tr>
-    <td>`Enum.DevComputerMovementMode|Scriptable`</td>
-    <td>Disables all default controls and allows you to script your own control scheme.</td>
-  </tr>
-</tbody>
-</table>
-
 ## Mouse icons
 
 You can customize the appearance and behavior of a player's mouse icon within your experience to create a cohesive style across all of your UI elements. This includes temporarily changing the player's mouse icon in specific circumstances, such as hovering over a button.

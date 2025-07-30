@@ -5,19 +5,19 @@ next: /education/build-it-play-it-mansion-of-wonder/save-by-publishing
 description: Learn Roblox Studio camera controls and the basics of editing particle emitters in the Build It Play It Mansion of Wonders.
 ---
 
-While testing, you may have noticed that the magic blasts are a bit bland. The white sparks you see right now are just a starting point; you'll make them much cooler by changing a `Class.ParticleEmitter`.
+While testing, you may have noticed that the magic blasts are a bit bland. The white sparks you see right now are just a starting point; you'll make them much cooler by customizing a `Class.ParticleEmitter` object.
 
-These objects are used to make special effects in Roblox Studio. If you've seen effects like smoke, fire, or even magic portals in other Roblox experiences, you've seen `Class.ParticleEmitter|ParticleEmitters`.
+Particle emitters make special effects in Roblox Studio. If you've seen effects like smoke, fire, or even magic portals in other Roblox experiences, you've definitely seen `Class.ParticleEmitter|ParticleEmitters`.
 
 <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/particle-example.mp4" width="100%"></video>
 
 ## Find the blast
 
-The template has two customizable ParticleEmitters: one for the **magic blast** that flies through the air and another for the **explosion** when it hits an enemy. Start first with the blast, and in a later tutorial, you'll work on the explosion.
+The template has two customizable particle emitters: one for the **magic blast** that flies through the air and another for the **explosion** when it hits an enemy. Start first with the blast, and in a later tutorial, you'll work on the explosion.
 
 1. Using the camera controls (see below for instructions), move the camera to get a good view of the magic blast, a ball with white sparkles.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/particle-holder.jpeg"  width="100%" />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/particle-holder.png"  width="100%" />
 
    Below are **controls** on using the camera in Studio.
 
@@ -50,40 +50,36 @@ The template has two customizable ParticleEmitters: one for the **magic blast** 
    </tbody>
    </table>
 
-2. In the top right box in Roblox Studio, find the **Explorer** window. This has all of the pieces of the project, such as code, decorations, and the blast you'll personalize.
+2. In the top-right box in Roblox Studio, find the **Explorer** window. This has all of the pieces of the project, such as code, decorations, and the blast you'll personalize.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/highlight-explorer.jpeg" />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/highlight-explorer.png" />
 
    <Alert severity="info">
-   If you closed the Explorer, or don't see it, enable it by going to the **View** tab and clicking **Explorer**.
+   If you don't see it the **Explorer** window, enable it by going to the **Home** tab and clicking the **Explorer** button.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/reopen-explorer.png" />
+   <img src="../../assets/education/general/Explorer-Window.png" />
    </Alert>
 
-3. You'll need to find the magic blast's particles in the Explorer to work with it. In the Explorer **search bar**, type **BlastParticles**, then select the object found.
+3. You'll need to find the magic blast's particles in the **Explorer** window to work with it. In the **Explorer** window's **search bar**, type **BlastParticles**, then select the object found.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/select-blaster-shot.gif" />
+   <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/select-blaster-shot.mp4" width="40%"></video>
 
 ## Change the color
 
 Start personalizing the magical blast by giving it a new color.
 
-1. Changes to ParticleEmitters are made in the **Properties** window. Find it on the bottom right of Studio, under the Explorer window.
+1. You can make changes to particle emitters in the **Properties** window. Find it on the bottom right of Studio, under the **Explorer** window.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/highlight-properties.jpeg" />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/highlight-properties.png" />
 
    <Alert severity="info">
    If you don't see the Properties window, click the **View** tab and then click the **Properties** button.
    </Alert>
 
-2. In the Properties, find the Color property and double click the light grey box to its right.
+2. In the **Properties** window, find the **Color** property, then double-click the light grey box to its right. A pop-up **Colors** window displays.
 
    <img src="../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/select-color.png" />
 
-3. In the popup window, select a color and then click **OK**.
+3. In the **Colors** window, select a color and then click the **OK** button. For example, if you set the **Color** property to `202, 210, 20`, you will then have a particle that looks like the example below.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/set-color.png" />
-
-   You will then have a particle that looks like the example below.
-
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/show-color-change.jpeg" width="50%" />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/show-color-change.png" width="40%" />

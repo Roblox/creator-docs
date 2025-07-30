@@ -60,7 +60,7 @@ Player XP-based leveling systems allow players to earn experience points based o
 
 <h4>Social motivators</h4>
 
-For many Roblox players, playing with others is part of the fun, whether they are joined in an experience by friends or interacting with strangers. These social players often prefer onboarding experiences that provide opportunities for collaboration and competition.
+For many Roblox players, playing with others is part of the fun, whether they are joined in an experience by connections or interacting with strangers. These social players often prefer onboarding experiences that provide opportunities for collaboration and competition.
 
 <h4>Starter items and currency</h4>
 

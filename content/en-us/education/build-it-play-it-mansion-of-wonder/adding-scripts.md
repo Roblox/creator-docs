@@ -24,30 +24,29 @@ If you're using your own project, you may need to replace the values within some
 
 1. In **ReplicatedStorage**, create a new folder named **PlayerTutorial**. Move TutorialBeam out of TestPlayer, and into the new folder.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/adding-scripts/move-tutorial-beam.png"  />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/adding-scripts/move-tutorial-beam.png" width="40%" />
 
 2. In **ServerStorage**, create a folder named **TutorialParticles**. Move the **Burst** particle out of TestPlayer into that folder.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/adding-scripts/create-particles-folder.png"  />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/adding-scripts/create-particles-folder.png" width="40%" />
 
-3. Once the beam and particle emitter are moved, you no longer need the TestPlayer. **Delete** TestPlayer since the script will work with real players when finished.
-
-   <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/adding-scripts/delete-test-player.mp4" ></video>
+3. Once the beam and particle emitter are moved, you no longer need **TestPlayer** since the script will work with real players when finished. Delete **TestPlayer**.
 
 ## Create events
 
 Each time players interact with a goal, the tutorial script will need to know so it can update that player's progress and emit the particle effect. To inform scripts, signals can be sent using **events**.
 
-1. In ReplicatedStorage > PlayerTutorial, create two **RemoteEvent** objects. Name them **NextGoal** and **TutorialEnd**.
+1. In **ReplicatedStorage** > **PlayerTutorial**, create two **RemoteEvent** objects. Name them **NextGoal** and **TutorialEnd**.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/adding-scripts/create-events.png"  />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/adding-scripts/create-events.png" width="40%" />
 
 ## Add the scripts
 
 The three scripts below will look for the particle emitter and beam objects created earlier and manage the tutorial system.
 
-1. In ReplicatedStorage > PlayerTutorial > create a new **ModuleScript** named **TutorialManager**.
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/adding-scripts/create-tutorial-manager.png"  />
+1. In **ReplicatedStorage** > **PlayerTutorial** > create a new **ModuleScript** named **TutorialManager**.
+
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/adding-scripts/create-tutorial-manager.png" width="40%" />
 
    Replace the default code by copying and pasting the entire code below.
 
@@ -113,7 +112,8 @@ The three scripts below will look for the particle emitter and beam objects crea
    This script runs code for managing a player's progress in the tutorial. This includes tasks like running code for interacting with goals, or what happens when the tutorial is over.
 
 2. In **ServerScriptService**, create a new **Script** named **TutorialParticles**.
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/adding-scripts/create-tutorial-particles.png"  />
+
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/adding-scripts/create-tutorial-particles.png" width="40%" />
 
    Paste the code below.
 
@@ -160,9 +160,9 @@ The three scripts below will look for the particle emitter and beam objects crea
 
    This script plays the burst particle whenever players interact with goals. There's also a variable named `EMIT_RATE` that determines how many particles spawn during an interaction.
 
-3. In StarterPlayer > StarterPlayerScripts, create a new **LocalScript** named **TutorialScript**.
+3. In **StarterPlayer** > **StarterPlayerScripts**, create a new **LocalScript** named **TutorialScript**.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/adding-scripts/create-tutorial-script.png"  />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/adding-scripts/create-tutorial-script.png" width="40%" />
 
    Then, paste the script below. This script creates and manages the beam used to guide players.
 

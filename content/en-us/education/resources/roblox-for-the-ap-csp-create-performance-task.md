@@ -27,7 +27,7 @@ Before starting a classroom using Roblox, we do have some recommendations.
 
 As students have only limited time to create their program, it's recommended that students have used Roblox Studio throughout the semester, or have previous experience with Luau or Lua.
 
-For Luau coding principles that you can adapt to the classroom, check our <a href="../../tutorials/fundamentals/coding-1/landing.md">Coding Fundamentals</a> series. Students can then practice coding by going through our guided projects such as the<a href="../adventure-game-series/landing.md">Adventure Game</a>.
+For Luau coding principles that you can adapt to the classroom, check our <a href="../../tutorials/fundamentals/coding-1/landing.md">Coding Fundamentals</a> series. Students can then practice coding by going through our guided projects such as the <a href="../adventure-game-series/landing.md">Adventure Game</a>.
 
 ### Collaboration
 

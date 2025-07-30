@@ -3,7 +3,7 @@ title: Avatar Context Menu
 description: The Avatar Context Menu (ACM) allows users to interact and customize actions with others in their experience.
 ---
 
-The **Avatar Context Menu** (ACM) makes it easier for users to interact with each other. When the ACM is enabled in your experience, a user can walk up to another user's character and click on them to open a small menu with several default options. The player can send a friend request, begin a private chat, view the user's profile, or wave.
+The **Avatar Context Menu** (ACM) makes it easier for users to interact with each other. When the ACM is enabled in your experience, a user can walk up to another user's character and click on them to open a small menu with several default options. The player can send a connection request, begin a private chat, view the user's profile, or wave.
 
 After [enabling](#enable-the-avatar-context-menu) the ACM in your experience, you can customize the ACM in the following ways:
 
@@ -60,8 +60,8 @@ You can [add](#add-menu-options) and [remove](#remove-menu-options) actions thro
 </thead>
 <tbody>
   <tr>
-    <td>Friend</td>
-    <td>Sends a friend request to the selected user.</td>
+    <td>Connection</td>
+    <td>Sends a connection request to the selected user.</td>
   </tr>
   <tr>
     <td>Chat</td>

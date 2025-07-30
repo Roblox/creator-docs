@@ -9,7 +9,7 @@ In addition to building and creating, playing is a proven way to learn and impro
 
 To see if an experience offers private servers, look for the Private Servers section beneath the game's description. If private servers are offered, there will be a button saying "Create Private Server"
 
-<img src="../../assets/education/legacy/VIPGamePage.png" />
+<img src="../../assets/education/legacy/VIPGamePage.png" width="80%" />
 
 A server's costs, and the number of players it can host is set by the developer of the experience. To learn, go to the [Private Servers](https://en.help.roblox.com/hc/en-us/articles/205345050-How-do-I-Purchase-and-Configure-VIP-Server) page on Roblox Support.
 
@@ -17,23 +17,19 @@ A server's costs, and the number of players it can host is set by the developer 
 
 Once you have your server set up, it can be found on the servers tab.
 
-  <img src="../../assets/education/legacy/ServersTab.png" width="70%" />
+  <img src="../../assets/education/legacy/ServersTab.png" width="80%" />
 
 To invite students, click options button in the top right and select **Configure**. From there, you can either provide your class the link to the server. Alternatively, add their Roblox usernames to the server.
 
-  <img src="../../assets/education/legacy/ConfigureServer.png" width="70%" />
+  <img src="../../assets/education/legacy/ConfigureServer.png" width="50%" />
 
 There, you can change the name of the server to help organize groups of students.
 
 Example: _JordanHS-Afternoon, HillsdaleMS-2pm_
 
-  <img src="../../assets/education/legacy/NameServer.png" width="50%" />
+  <img src="../../assets/education/legacy/NameServer.png" width="80%" />
 
 A link can be generated to make sharing with students on PC or Mac easier. Players on mobile devices must be invited directly to the server rather than using the sharing link provided.
-
-For example, the below images shows what to expect on mobile devices.
-
-<img src="../../assets/education/stock-ui/Private-Servers-Invite-Friends.png" width="50%" />
 
 ## Examples in the classroom
 
@@ -56,7 +52,7 @@ Below are some ways our educators have used private servers in the classroom.
 
 The [Learn & Explore](https://www.roblox.com/discover#/sortName/Curated_67) sort, features experience that offer exploration of new places and subjects like history, safety, physics, and natural sciences. Many were created by educators and students.
 
-The [Play Together](https://www.roblox.com/discover#/sortName/Curated_71) sort is a curated list of experiences that are designed to be played with friends and are currently offering free private servers. This is a great place to start looking for experiences to bring your students together.
+The [Play Together](https://www.roblox.com/discover#/sortName/Curated_71) sort is a curated list of experiences that are designed to be played with connections and are currently offering free private servers. This is a great place to start looking for experiences to bring your students together.
 
 ### Popular games offering servers
 

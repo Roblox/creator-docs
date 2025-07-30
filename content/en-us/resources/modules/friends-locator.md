@@ -13,7 +13,7 @@ It can be challenging to locate friends in-experience. The **FriendsLocator** [d
 
 To use the **FriendsLocator** module in an experience:
 
-1. From the [View](../../studio/view-tab.md) tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
+1. From the **View** tab, open the **Toolbox** and select the **Creator Store** tab.
 
    <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
 
@@ -23,17 +23,13 @@ To use the **FriendsLocator** module in an experience:
 
    <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
-1. Locate and click the **Dev Modules** tile.
-
-   <img src="../../assets/studio/toolbox/Creator-Store-Categories-Dev-Modules.png" width="200" />
+1. Locate and click the **Packages** tile.
 
 1. Locate the **Friends Locator** module and click it, or drag-and-drop it into the 3D view.
 
    <img src="../../assets/developer-modules/friends-locator/Toolbox-Icon.png" width="143" />
 
-1. In the [Explorer](../../studio/explorer.md) window, move the entire **FriendsLocator** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
-
-   <img src="../../assets/developer-modules/friends-locator/Move-Package.png" width="320" />
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **FriendsLocator** model into `Class.ReplicatedStorage`. Upon running the experience the module will begin running.
 
 ### Test in Studio
 
@@ -49,7 +45,7 @@ To test the module in Studio, the **FriendsLocator** module must be run in a mul
    local RunService = game:GetService("RunService")
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-   local FriendsLocator = require(ReplicatedStorage:WaitForChild("FriendsLocator"))
+   local FriendsLocator = require(ReplicatedStorage.FriendsLocator)
 
    FriendsLocator.configure({
    	showAllPlayers = RunService:IsStudio(), -- Allows for debugging in Studio
@@ -69,7 +65,7 @@ To test the module in Studio, the **FriendsLocator** module must be run in a mul
    </Alert>
 
    <Alert severity="warning">
-   By default, clicking/tapping a friend's icon will teleport your character to that character's location. If you keep this default behavior and you find that streaming pause is occurring under the [instance streaming](../../workspace/streaming.md) architecture, you may want to [request area streaming](../../workspace/streaming.md#request-area-streaming) around the teleport location as shown in the [clicked](#clicked) event code sample.
+   By default, clicking/tapping a friends's icon will teleport your character to that character's location. If you keep this default behavior and you find that streaming pause is occurring under the [instance streaming](../../workspace/streaming.md) architecture, you may want to [request area streaming](../../workspace/streaming.md#request-area-streaming) around the teleport location as shown in the [clicked](#clicked) event code sample.
    </Alert>
 
 ### Connect to events
@@ -83,7 +79,7 @@ The **FriendsLocator** module exposes [events](#events) so that you can introduc
    local RunService = game:GetService("RunService")
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-   local FriendsLocator = require(ReplicatedStorage:WaitForChild("FriendsLocator"))
+   local FriendsLocator = require(ReplicatedStorage.FriendsLocator)
 
    FriendsLocator.configure({
    	showAllPlayers = RunService:IsStudio(), -- Allows for debugging in Studio
@@ -178,7 +174,7 @@ Overrides default configuration options through the following keys/values in the
 ```lua title="LocalScript - ConfigureFriendsLocator" highlight="5-11"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local FriendsLocator = require(ReplicatedStorage:WaitForChild("FriendsLocator"))
+local FriendsLocator = require(ReplicatedStorage.FriendsLocator)
 
 FriendsLocator.configure({
 	alwaysOnTop = true,
@@ -218,7 +214,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
 local Workspace = game:GetService("Workspace")
 
-local FriendsLocator = require(ReplicatedStorage:WaitForChild("FriendsLocator"))
+local FriendsLocator = require(ReplicatedStorage.FriendsLocator)
 
 local localPlayer = Players.LocalPlayer
 
@@ -266,7 +262,7 @@ Fires when a locator icon is shown/hidden on the local player's screen. This eve
 ```lua title="LocalScript" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local FriendsLocator = require(ReplicatedStorage:WaitForChild("FriendsLocator"))
+local FriendsLocator = require(ReplicatedStorage.FriendsLocator)
 
 FriendsLocator.visibilityChanged:Connect(function(player, playerCFrame, isVisible)
 	print("Visibility of locator icon for", player.DisplayName, ":", isVisible)

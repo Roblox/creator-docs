@@ -14,24 +14,21 @@ Now that you've completed the game, here are a few ideas to take your game furth
 
 One of the most exciting features of Roblox is that it's really easy to share your game with friends. Currently your game is probably private, meaning only you can play it. For your friends to see the game, you need to make it public.
 
-1. In the **Home** tab, click **Game Settings**.
+1. Select **File** (top left of Studio) and click **Game Settings**.
 
-   <img src="../../assets/education/story-games/ccs2020_3_gameSettings.png" />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/invite-friends/game-settings.png"  />
 
-2. On the left bar, select **Permissions**.
+1. On the left bar, select **Permissions**, then choose **Public**.
 
-   <img src="../../assets/education/story-games/cc2020_3_gameSettingsPermissions.png" />
+   <img src="../../assets/education/general/make-public.png" width="80%" />
 
-3. Choose **Public**. Click **Save**.
+1. Click the **Save** button.
 
-   <img src="../../assets/education/story-games/ccs2020_3_makePublic.png" />
+1. In the top right of Studio, click on the **Share** button. A pop-up menu displays.
 
-4. In the top right of Studio, click on the **Share** button. This will give you links to share the experience.
+   <img src="../../assets/education/general/Share-Links.png" width="40%" />
 
-   <img src="../../assets/education/story-games/click-share-icon.png" />
-
-5. In the pop-up, click the desired way you'd like to share.
-   <img src="../../assets/education/story-games/shareGameFriends.png" width="75%" />
+1. Click the **Copy Link** button, then share the link with your friends.
 
 ## Add more to the story
 

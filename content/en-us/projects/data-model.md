@@ -175,7 +175,7 @@ can add parts that emit light and sound. For more information, see
 place, such as `Class.Atmosphere` for simulating atmospheric effects or
 `Class.Sky` to alter the sun, moon, and stars in your environments.
 
-For more information, see [Lighting](../environment/lighting.md).
+For more information, see [Global lighting](../environment/lighting.md).
 
 <h4>Sound</h4>
 

@@ -1,5 +1,5 @@
 ---
-title: Curriculum paths
+title: Advanced curriculum paths
 description: An overview of creation curriculum paths covering topics like modeling, scripting, and gameplay logic.
 hideInPageNavigation: true
 hideBreadcrumbs: true
@@ -17,88 +17,16 @@ hideBreadcrumbs: true
 <AccordionDetails>
 
 <Typography variant="body2" color="textSecondary" component="p">
-If you've never used Roblox Studio or coded before, start here before following any of the curriculum paths.
+If you've never used Roblox Studio or coded before, start here before following any of the advanced curriculum paths:
 </Typography>
 
-- [Setting up Roblox Studio](../../studio/setup.md) - Install
+- [Studio lesson](building/index.md) - Install
   and configure Roblox Studio.
-- [Create your first experience](../first-experience/index.md) - Build a simple experience.
-- [Coding fundamentals](../../tutorials/fundamentals/coding-1/coding-fundamentals.md) - Learn the basics of programming with Luau.
+- [Create your first experience](core/index.md) - Build a simple experience.
+- [Luau basics](../../tutorials/fundamentals/coding-1/coding-fundamentals.md) - Learn the fundamentals of programming with Luau.
 
 </AccordionDetails>
 </BaseAccordion>
-
-<Card>
-
-<CardContent>
-
-<h2 style={{marginBottom: 12}}>Core</h2>
-
-<Typography variant="body2" color="textSecondary" component="p">
-Start here for a comprehensive introduction to creating in Studio! It covers
-everything you need to know about creating a simple, but polished experience from scratch.
-</Typography>
-
-<>
-<Grid
-    alignItems="stretch"
-    container
-    direction="row">
-
-<Grid item Large={6} XSmall={12} direction="column">
-
-<div class="container"
-style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-<iframe src="https://www.youtube-nocookie.com/embed/zi0hIuPDyWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "90%", height: "90%"}}></iframe>
-</div>
-
-</Grid>
-
-<Grid item Large={6} XSmall={12} direction="column">
-
-<>
-<Stepper activeStep={3} orientation="vertical">
-
-<Step style={{marginTop: -36}}>
-<StepLabel optional="Create the basic structure of the world with in-Studio assets.">
-
-<h5 style={{marginTop: 36}}>Build</h5>
-</StepLabel>
-
-</Step>
-
-<Step style={{marginTop: -36}}>
-<StepLabel
- optional="Create the gameplay for the experience using Luau scripts.">
-
-<h5 style={{marginTop: 36}}>Script</h5>
-</StepLabel>
-</Step>
-<Step style={{marginTop: -36}}>
-<StepLabel optional="Add lighting, visual effects, and high-quality 3D assets." >
-<h5 style={{marginTop: 36}}>Polish</h5>
-</StepLabel>
-</Step>
-</Stepper>
-</>
-
-</Grid>
-
-</Grid>
-</>
-
-<a href="../curriculums/core/index.md">
-  <Button
-    variant="contained"
-    size="large">
-  Start creating
-  </Button>
-</a>
-</CardContent>
-
-</Card>
-
-<br /> <br />
 
 <Card>
 

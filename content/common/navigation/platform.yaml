@@ -28,7 +28,6 @@ navigation:
 
   - title: For educators
     path: /education/educator-onboarding/landing
-    navigation: /education.yaml
 
   - heading: Guidelines and policies
   - title: General
@@ -41,8 +40,6 @@ navigation:
         path: /production/publishing/dmca-guidelines
       - title: AI data sharing
         path: /ai-data-sharing
-      - title: Rights Manager
-        path: /production/publishing/rights-manager
       - title: Account verification
         path: /production/publishing/account-verification
       - title: Group guidelines

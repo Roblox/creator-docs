@@ -23,17 +23,13 @@ To use the **EmoteBar** module in an experience:
 
    <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
-1. Locate and click the **Dev Modules** tile.
-
-   <img src="../../assets/studio/toolbox/Creator-Store-Categories-Dev-Modules.png" width="200" />
+1. Locate and click the **Packages** tile.
 
 1. Locate the **Emote Bar** module and click it, or drag-and-drop it into the 3D view.
 
    <img src="../../assets/developer-modules/emote-bar/Toolbox-Icon.png" width="143" />
 
-1. In the [Explorer](../../studio/explorer.md) window, move the entire **EmoteBar** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
-
-   <img src="../../assets/developer-modules/emote-bar/Move-Package.png" width="320" />
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **EmoteBar** model into `Class.ReplicatedStorage`. Upon running the experience the module will begin running.
 
 ### Configuration
 
@@ -48,7 +44,7 @@ The module is preconfigured with 7 emotes and it can be easily customized with y
    ```lua title="Script - ConfigureEmotes" highlight="6,9"
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-   local EmoteBar = require(ReplicatedStorage:WaitForChild("EmoteBar"))
+   local EmoteBar = require(ReplicatedStorage.EmoteBar)
 
    EmoteBar.configureServer({
    	useDefaultEmotes = false,
@@ -156,7 +152,7 @@ Each emote is represented by a dictionary with the following key-value pairs:
 ```lua title="LocalScript" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local EmoteBar = require(ReplicatedStorage:WaitForChild("EmoteBar"))
+local EmoteBar = require(ReplicatedStorage.EmoteBar)
 
 EmoteBar.configureClient({
 	guiType = EmoteBar.GuiType.EmoteWheel,
@@ -218,7 +214,7 @@ Overrides default server-side configuration options through the following keys/v
 ```lua title="Script" highlight="5-8"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local EmoteBar = require(ReplicatedStorage:WaitForChild("EmoteBar"))
+local EmoteBar = require(ReplicatedStorage.EmoteBar)
 
 EmoteBar.configureServer({
 	emoteMinPlayers = 2,
@@ -367,7 +363,7 @@ If the value of `guiType` is [EmoteWheel](#emotebarguitype), the following optio
 ```lua title="LocalScript - Emote Bar" highlight="5-10"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local EmoteBar = require(ReplicatedStorage:WaitForChild("EmoteBar"))
+local EmoteBar = require(ReplicatedStorage.EmoteBar)
 
 EmoteBar.configureClient({
 	guiType = EmoteBar.GuiType.EmoteBar,
@@ -380,7 +376,7 @@ EmoteBar.configureClient({
 ```lua title="LocalScript - Emote Wheel" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local EmoteBar = require(ReplicatedStorage:WaitForChild("EmoteBar"))
+local EmoteBar = require(ReplicatedStorage.EmoteBar)
 
 EmoteBar.configureClient({
 	guiType = EmoteBar.GuiType.EmoteWheel,
@@ -404,7 +400,7 @@ The order of custom emotes in the array determines how each emote is ordered in 
 ```lua title="Script - ConfigureEmotes" highlight="5,9"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local EmoteBar = require(ReplicatedStorage:WaitForChild("EmoteBar"))
+local EmoteBar = require(ReplicatedStorage.EmoteBar)
 
 EmoteBar.configureServer({
 	useDefaultEmotes = false,
@@ -437,7 +433,7 @@ Shows or hides the emotes GUI. This function can only be called from a `Class.Lo
 ```lua title="LocalScript" highlight="5"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local EmoteBar = require(ReplicatedStorage:WaitForChild("EmoteBar"))
+local EmoteBar = require(ReplicatedStorage.EmoteBar)
 
 EmoteBar.setGuiVisibility(false)
 ```
@@ -457,7 +453,7 @@ Emotes registered on the server with [setEmotes](#setemotes) can be retrieved cl
 ```lua title="LocalScript" highlight="5"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local EmoteBar = require(ReplicatedStorage:WaitForChild("EmoteBar"))
+local EmoteBar = require(ReplicatedStorage.EmoteBar)
 
 local shrug = EmoteBar.getEmote("Shrug")
 ```
@@ -473,7 +469,7 @@ Plays the given [Emote](#emote) and fires the [emotePlayed](#emoteplayed) event 
 ```lua title="LocalScript" highlight="5-6"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local EmoteBar = require(ReplicatedStorage:WaitForChild("EmoteBar"))
+local EmoteBar = require(ReplicatedStorage.EmoteBar)
 
 local shrug = EmoteBar.getEmote("Shrug")
 EmoteBar.playEmote(shrug)
@@ -490,7 +486,7 @@ Locks the [Emote](#emote) with the given name. This function can only be called 
 ```lua title="LocalScript" highlight="5"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local EmoteBar = require(ReplicatedStorage:WaitForChild("EmoteBar"))
+local EmoteBar = require(ReplicatedStorage.EmoteBar)
 
 EmoteBar.lockEmote("Applaud")
 ```
@@ -506,7 +502,7 @@ Unlocks the [Emote](#emote) with the given name. This function can only be calle
 ```lua title="LocalScript" highlight="5"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local EmoteBar = require(ReplicatedStorage:WaitForChild("EmoteBar"))
+local EmoteBar = require(ReplicatedStorage.EmoteBar)
 
 EmoteBar.unlockEmote("Applaud")
 ```
@@ -538,7 +534,7 @@ Fires when any client plays an emote. This event can only be connected in a `Cla
 ```lua title="LocalScript" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local EmoteBar = require(ReplicatedStorage:WaitForChild("EmoteBar"))
+local EmoteBar = require(ReplicatedStorage.EmoteBar)
 
 EmoteBar.emotePlayed:Connect(function(player, emote)
 	print(player.Name, "played", emote.name)
@@ -567,7 +563,7 @@ Fires when a client clicks a locked emote. This event can only be connected in a
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
 
-local EmoteBar = require(ReplicatedStorage:WaitForChild("EmoteBar"))
+local EmoteBar = require(ReplicatedStorage.EmoteBar)
 
 EmoteBar.lockedEmoteActivated:Connect(function(emote)
 	print(Players.LocalPlayer, "clicked", emote.name)

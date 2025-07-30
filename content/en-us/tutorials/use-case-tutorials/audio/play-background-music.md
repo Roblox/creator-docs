@@ -11,7 +11,7 @@ Audio in Roblox is created with a `Class.Sound` object. Sounds can be positional
 
 ## Play music
 
-You can [upload](../../../sound/assets.md#import-custom-audio) music or [obtain it from the marketplace](../../../sound/assets.md#find-audio-assets), which contains thousands of free-to-use tracks. For this tutorial, you need the **asset ID** of a track.
+You can [upload](../../../audio/assets.md#import-audio) music or [obtain it from the marketplace](../../../audio/assets.md#find-audio), which contains thousands of free-to-use tracks. For this tutorial, you need the **asset ID** of a track.
 
 The basic steps are to copy an asset ID, create a `Class.Sound` object, and use a script to play the music.
 

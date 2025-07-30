@@ -1,99 +1,127 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
   "$comment": "Schema for enums.",
-  "definitions": {
-    "tags": {
-      "type": ["array", "null"],
-      "description": "The tags for this item, such as Deprecated. String list. Automated.",
-      "items": {
-        "type": "string",
-        "enum": [
-          "Hidden",
-          "NotReplicated",
-          "Deprecated",
-          "ReadOnly",
-          "NotScriptable",
-          "NotBrowsable",
-          "NotCreatable",
-          "CanYield",
-          "NoYield",
-          "Yields",
-          "Service",
-          "Settings",
-          "UserSettings",
-          "CustomLuaState",
-          "PlayerReplicated"
-        ]
-      }
-    },
-    "deprecation_message": {
-      "type": "string",
-      "description": "A description of why this is deprecated and what to use instead. String."
-    }
-  },
+  "type": "object",
   "properties": {
     "name": {
       "$comment": "The name of the enum.",
-      "type": "string",
-      "description": "The name of the enum. Determines the name of the page. Used for automatic cross-linking. String. Automated."
+      "description": "The name of the enum. String.",
+      "type": "string"
     },
     "type": {
-      "type": "string",
       "description": "the type of the API (class, datatype, enum, global, library). Automated.",
-      "enum": ["enum"]
+      "enum": [
+        "enum"
+      ]
     },
     "summary": {
       "$comment": "Summary of the enum to appear in Script Editor Autocomplete.",
-      "type": "string",
-      "description": "A single sentence overview of enum. Used in hover menus and suggestions. String."
+      "description": "A single sentence overview of this enum. Used in hover menus and suggestions. String.",
+      "type": "string"
     },
     "description": {
       "$comment": "Full description of the enum to appear on the website.",
-      "type": "string",
-      "description": "Longer description of how the enum operates. Markdown."
+      "description": "A long description of how the enum operates. Markdown.",
+      "type": "string"
     },
     "code_samples": {
-      "type": ["array", "null"],
-      "description": "List of code samples for the enum. String list.",
+      "description": "A list of code samples for the enum. String list.",
+      "type": "array",
       "items": {
         "type": "string"
       }
     },
-    "tags": { "$ref": "#/definitions/tags" },
-    "deprecation_message": { "$ref": "#/definitions/deprecation_message" },
+    "tags": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/__schema0"
+        }
+      ]
+    },
+    "deprecation_message": {
+      "description": "Description of why the enum is deprecated and what to use instead.",
+      "type": "string"
+    },
     "items": {
+      "description": "A list of enum items. Table list.",
       "type": "array",
-      "description": "List of enum items associated with enum. Each entry has the same keys. Table list. Automated.",
       "items": {
         "type": "object",
         "properties": {
           "name": {
-            "type": "string",
-            "description": "The name of the enum item. String. Automated."
-          },
-          "value": {
-            "type": ["integer"],
-            "description": "The value of the enum item. Integer. Automated."
+            "$comment": "The name of the enum item.",
+            "description": "The name of the enum item. String.",
+            "type": "string"
           },
           "summary": {
-            "type": "string",
-            "description": "A single sentence overview of the enum item. String."
+            "$comment": "The summary of the enum item.",
+            "description": "The summary of the enum item. Markdown.",
+            "type": "string"
           },
-          "tags": { "$ref": "#/definitions/tags" },
-          "deprecation_message": { "$ref": "#/definitions/deprecation_message" }
+          "value": {
+            "$comment": "The value of the enum item.",
+            "description": "The value of the enum item. Number.",
+            "type": "number"
+          },
+          "tags": {
+            "allOf": [
+              {
+                "$ref": "#/definitions/__schema0"
+              }
+            ]
+          },
+          "deprecation_message": {
+            "$comment": "The deprecation message of the enum item.",
+            "description": "The deprecation message of the enum item. Markdown.",
+            "type": "string"
+          },
+          "deprecated": {
+            "$comment": "Whether the enum item is deprecated.",
+            "description": "Whether the enum item is deprecated. Boolean.",
+            "type": "boolean"
+          }
         },
-        "required": ["name", "value", "summary", "tags", "deprecation_message"]
+        "required": [
+          "name",
+          "summary",
+          "value"
+        ]
       }
     }
   },
   "required": [
-    "name",
     "type",
     "summary",
     "description",
     "code_samples",
-    "tags",
     "deprecation_message",
     "items"
-  ]
+  ],
+  "additionalProperties": {},
+  "definitions": {
+    "__schema0": {
+      "$id": "tags",
+      "description": "Tags for this item, such as Deprecated. String list. Automated.",
+      "type": "array",
+      "items": {
+        "enum": [
+          "NotCreatable",
+          "NotBrowsable",
+          "ReadOnly",
+          "NotReplicated",
+          "Hidden",
+          "Deprecated",
+          "CustomLuaState",
+          "CanYield",
+          "Service",
+          "Yields",
+          "PlayerReplicated",
+          "NotScriptable",
+          "Settings",
+          "NoYield",
+          "UserSettings"
+        ]
+      }
+    }
+  }
 }

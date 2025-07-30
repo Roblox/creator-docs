@@ -23,17 +23,18 @@ This project includes a starter map with leaderboard and scripted pickup objects
    <Button variant="contained">Download</Button>
    </a>
 
-2. In Roblox Studio, open the downloaded file: _Intro to Module Scripts - Starter Project.rbxl_.
+2. In Roblox Studio, open the downloaded file: **Intro to Module Scripts - Starter Project.rbxl**.
    <img src="../../../assets/education/coding-6/creating-with-module-scripts/module-template-example.jpeg" width="50%" />
 
 ### Create a module script
 
-So players can get treasure from chests, create a module script named _TreasureManager_. Using a module script will connect the pickups and leaderboards together.
+So players can get treasure from chests, create a module script named TreasureManager. Using a module script will connect the pickups and leaderboards together.
 
-1. In **ServerStorage**, create a new **ModuleScript** and rename it _TreasureManager_.
-   <img src="../../../assets/education/coding-6/creating-with-module-scripts/create-module-script.png" width="50%" />
+1. In **ServerStorage**, create a new **ModuleScript** and rename it **TreasureManager**.
 
-2. In _TreasureManager_, rename the default module table by replacing `module` with `TreasureManager` in both places.
+   <img src="../../../assets/education/coding-6/creating-with-module-scripts/create-module-script.png" width="35%" />
+
+2. In **TreasureManager**, rename the default module table by replacing `module` with `TreasureManager` in both places.
 
    ```lua
    local TreasureManager = {}
@@ -91,7 +92,7 @@ To test how functions work in module scripts, create a new function named `getKe
 
 Now, the module function `getKey()` can be used in other scripts. To test that function, you'll open a premade script and call it.
 
-1. Open the key script in **Workspace** > _Keys_ > _KeyScript_.
+1. Open the key script in **Workspace** > **Keys** > **KeyScript**.
 
 2. In keyScript, store the module script in a variable named `treasureManager` and set it equal to:
    `require(ServerStorage:WaitForChild("TreasureManager"))`
@@ -145,11 +146,11 @@ Now, the module function `getKey()` can be used in other scripts. To test that f
 
 **Issue:** Get an error message including: `"Infinite yield possible"`.
 
-- Check the spelling of your module script in a script. If a module script, like _TreasureManager_, is spelled differently, there will be an error.
+- Check the spelling of your module script in a script. If a module script, like **TreasureManager**, is spelled differently, there will be an error.
 
 **Issue:** Get an error message including: `"attempt to index global"`.
 
-- Check the line that includes the require for the module script in _keyScript_. If the module does not include require, it can't use functions and variables from that module script.
+- Check the line that includes the require for the module script in **keyScript**. If the module does not include require, it can't use functions and variables from that module script.
 
 **Issue:** Script doesn't run or can't pick up keys.
 
@@ -161,13 +162,13 @@ Now, the module function `getKey()` can be used in other scripts. To test that f
 
 Right now, a leaderboard keeps track of a player's keys and treasure. To change the leaderboard numbers, use a local function in the module script. A local function is used because changing a player's key or treasure values will only be needed in the TreasureManager script, not anywhere else.
 
-1. In **ServerStorage**, open the _TreasureManager_ script.
+1. In **ServerStorage**, open the **TreasureManager** script.
 
 2. Create local variables to do the following:
 
    - Get the Players service so the script can work with player's leaderboard stats.
 
-   - Store the number of keys the player receives after touching _keyPart_.
+   - Store the number of keys the player receives after touching **keyPart**.
 
    ```lua
    local TreasureManager = {}
@@ -256,11 +257,11 @@ return TreasureManager
 
 ## Get information from module scripts
 
-The _TreasureManager_ module script will be used when players touch a treasure chest to check if they have at least one key before opening it and giving them gold.
+The **TreasureManager** module script will be used when players touch a treasure chest to check if they have at least one key before opening it and giving them gold.
 
 ### Check if chests can be opened
 
-1. First in **ServerStorage** > _TreasureManager_ script, set up variables for how many keys it costs to open a chest, and how much gold each chest contains.
+1. First in **ServerStorage** > **TreasureManager** script, set up variables for how many keys it costs to open a chest, and how much gold each chest contains.
 
    ```lua
    local TreasureManager = {}
@@ -308,7 +309,7 @@ The _TreasureManager_ module script will be used when players touch a treasure c
 
 ### Give players treasure
 
-So the player can open a chest, create a function in _TreasureManager_ that awards them treasure.
+So the player can open a chest, create a function in **TreasureManager** that awards them treasure.
 
 1. Add a new module function to `TreasureManager` named `openChest()`.
 
@@ -339,9 +340,9 @@ So the player can open a chest, create a function in _TreasureManager_ that awar
 
 Now that the two module functions, `canOpenChest()` and `openChest()`, have been created, they can be called by the Chest parts whenever a player touches them using the premade `partTouched()` function.
 
-1. In **Workspace** > _Chests_ open _ChestScript_.
+1. In **Workspace** > **Chests** open **ChestScript**.
 
-2. Create a new variable named `treasureManager` and require the _TreasureManager_ module script in **ServerStorage**.
+2. Create a new variable named `treasureManager` and require the **TreasureManager** module script in **ServerStorage**.
 
    ```lua
    local ServerStorage = game:GetService("ServerStorage")
@@ -399,7 +400,7 @@ Now that the two module functions, `canOpenChest()` and `openChest()`, have been
 
 ### Troubleshooting tips
 
-- In _ChestScript_, make sure that functions called from the module script like `canOpenChest()` are spelled exactly how they're found in the _TreasureManager_ script. Any difference will cause an error.
+- In **ChestScript**, make sure that functions called from the module script like `canOpenChest()` are spelled exactly how they're found in the **TreasureManager** script. Any difference will cause an error.
 
 - Check that copy and pasted functions, like `treasureManager.openChest()`, are exactly as shown in the lesson. Any differences can cause subtle errors in the script.
 

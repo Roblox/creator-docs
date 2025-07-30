@@ -26,7 +26,7 @@ To use data for matchmaking that Roblox doesn't automatically include in its def
   <tr>
     <td>**Has Friends**</td>
     <td>Categorical</td>
-    <td>Whether a server has a friend or another player of the same IP address as the joining player.</td>
+    <td>Whether a server has a connection or another player of the same IP address as the joining player.</td>
   </tr>
   <tr>
     <td>**Is Voice Chat Enabled**</td>
@@ -83,7 +83,7 @@ The following are Roblox-defined signals derived based on Roblox attributes:
   </tr>
   <tr>
     <td>[**Friends**](#friends)</td>
-    <td>The number of people in the server who are friends with the joining player or who share an IP address with the joining player. 1 if there is a preferred player, 0 otherwise.</td>
+    <td>The number of people in the server who are connections with the joining player or who share an IP address with the joining player. 1 if there is a preferred player, 0 otherwise.</td>
   </tr>
   <tr>
     <td>[**Latency**](#latency)</td>
@@ -127,7 +127,7 @@ deviceTypeSignalScore = (# players with same device as joining player) / (# play
 
 ### Friends
 
-A preferred player is a player who is either friends with the joining player or who shares the same IP address as the joining player. The Friends signal is a categorical signal with a score of 1 when there is a preferred player in the server and a score of 0 when there are no preferred players on the server.
+A preferred player is a player who is either connections with the joining player or who shares the same IP address as the joining player. The Friends signal is a categorical signal with a score of 1 when there is a preferred player in the server and a score of 0 when there are no preferred players on the server.
 
 ```lua
 friendsSignalScore = hasFriends ? 1 : 0

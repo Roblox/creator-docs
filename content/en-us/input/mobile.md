@@ -107,56 +107,6 @@ local playerGUI = Players.LocalPlayer:WaitForChild("PlayerGui")
 print(playerGUI.CurrentScreenOrientation)
 ```
 
-## Character movement modes
-
-Roblox offers several `Class.StarterPlayer` properties you can set to change how players on mobile devices can move through your experience.
-
-You can set mobile movement control schemes for Roblox experiences by changing the values of `Class.StarterPlayer.DevTouchMovementMode` to one of the following:
-
-<table>
-<thead>
-  <tr>
-    <th>Option</th>
-    <th>Description</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>`Enum.DevTouchMovementMode|UserChoice`</td>
-    <td>Allows players to choose their desired control scheme from the in-experience menu. This is the default movement mode.</td>
-  </tr>
-  <tr>
-    <td>`Enum.DevTouchMovementMode|DynamicThumbstick`</td>
-    <td>A dynamic thumbstick appears where the player initially presses down. This mode includes a jump button in the lower-right region of the screen. This is the default setting for players on mobile if `Enum.DevTouchMovementMode|UserChoice` is set.</td>
-  </tr>
-  <tr>
-    <td>`Enum.DevTouchMovementMode|Thumbstick`</td>
-    <td>A mobile thumbstick located in the lower-left region of the screen. Unlike `Enum.DevTouchMovementMode|DynamicThumbstick`, the thumbstick position is static and doesn't change position when the player touches on the screen.</td>
-  </tr>
-  <tr>
-    <td>`Enum.DevTouchMovementMode|ClickToMove`</td>
-    <td>Players can only move through the experience by tapping a target location. This mode includes a jump button in the lower-right region of the screen, and the player's character will automatically jump when hitting a surmountable obstacle/gap while moving to the click destination.</td>
-  </tr>
-  <tr>
-    <td>`Enum.DevTouchMovementMode|Scriptable`</td>
-    <td>Disables all default controls and allows you to script your own control scheme.</td>
-  </tr>
-  <tr>
-    <td>`Enum.DevTouchMovementMode|DPad`</td>
-    <td><Alert severity="error">This option has been removed from the Roblox mobile app and should not be used for production-ready experiences. </Alert></td>
-  </tr>
-  <tr>
-    <td>`Enum.DevTouchMovementMode|Thumbpad`</td>
-    <td><Alert severity="error">This option has been removed from the Roblox mobile app and should not be used for production-ready experiences. </Alert></td>
-  </tr>
-
-</tbody>
-</table>
-
-<Alert severity="info">
-By default, `Class.StarterPlayer.AutoJumpEnabled` is set to `true` on mobile devices, meaning the player's character will automatically jump when hitting a surmountable obstacle/gap while moving. Disable this property to force players to jump using only the assigned input bindings.
-</Alert>
-
 ## Detect other devices
 
 In cross-platform experiences, it's important to reference the player's preferred input options by displaying input options for the actively used device. For example, a mobile device can have a [mouse and keyboard](./mouse-and-keyboard.md) or [gamepad](./gamepad.md) connected, or it's possible that a desktop has a touchscreen enabled. If multiple input sources are enabled, you can use `Class.UserInputService:GetLastInputType()|GetLastInputType()` to get the player's last used input device.

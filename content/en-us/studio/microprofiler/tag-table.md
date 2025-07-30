@@ -225,13 +225,13 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   </tr>
   <tr>
     <td>Perform/Scene/computeLightingPerform/LightGridCPU</td>
-    <td>Updates the voxel lighting, which is used in `Enum.Technology|Voxel` and `Enum.Technology|ShadowMap` modes and at quality levels below 4 in `Enum.Technology|Future` mode.</td>
+    <td>Updates the voxel lighting, which is used at lower quality levels.</td>
     <td>If updating chunk occupancy takes too long, consider using lower resolution geometry, reducing the number of parts, or anchoring parts. If the other sub-markers take too long, consider reducing the number of lights and using non-shadow casting geometry for objects that move and invalidate the occupancy.</td>
   </tr>
   <tr>
     <td>Perform/Scene/computeLightingPerform/ShadowMapSystem</td>
-    <td>Updates shadow maps. Not performed at quality levels below 4 or when `Class.Lighting.Technology` is set to `Enum.Technology|Voxel`.</td>
-    <td>If lighting is set to `Enum.Technology|Future`, lower it to `Enum.Technology|ShadowMap` or reduce the number of lights. You can also use `Class.Light.Shadows` and `Class.BasePart.CastShadows` to disable shadow casting on less important instances. See [Improving Performance](../../performance-optimization/improve.md#mitigation-4).</td>
+    <td>Updates shadow maps. Not performed at quality levels below 4.</td>
+    <td>Reduce the number of lights. You can also use `Class.Light.Shadows` and `Class.BasePart.CastShadows` to disable shadow casting on less important instances. See [Improving Performance](../../performance-optimization/improve.md#mitigation-4).</td>
   </tr>
   <tr>
   </tr>

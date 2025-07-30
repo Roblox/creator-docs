@@ -6,8 +6,8 @@ navigation:
   - heading: Earn
   - title: Overview
     path: /production/monetization/
-  - title: Engagement-based payouts
-    path: /production/monetization/engagement-based-payouts
+  - title: Creator Rewards
+    path: /creator-rewards
   - title: Private servers
     path: /production/monetization/private-servers
   - title: Subscriptions
@@ -27,6 +27,20 @@ navigation:
   - title: Regional Pricing
     path: /production/monetization/regional-pricing
 
+  - title: Intellectual property
+    path: /ip-licensing/
+    section:
+      - title: Overview
+        path: /ip-licensing/
+      - title: Rights Manager
+        path: /production/publishing/rights-manager    
+      - title: IP licensing for creators
+        path: /ip-licensing/creators
+      - title: Creator FAQs
+        path: /ip-licensing/faq
+      - title: Glossary
+        path: /ip-licensing/glossary
+
   - heading: Advertise
   - title: Ads Manager
     path: /production/promotion/ads-manager
@@ -36,6 +50,8 @@ navigation:
     path: /production/promotion/advertise-on-roblox
   - title: Immersive ads
     path: /production/monetization/immersive-ads
+  - title: Rewarded video ads
+    path: /production/promotion/rewarded-video-ads
   - title: Search ads
     path: /production/promotion/search-ads
   - title: Advertising standards

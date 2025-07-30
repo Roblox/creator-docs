@@ -3,7 +3,7 @@ title: Code a story game
 description: Learn to code a story game as part of the Hour of Code™ initiative.
 ---
 
-<img src="../../assets/education/lesson-plans/storyGames-hero.jpg" width="100%" />
+<img src="../../assets/tutorials/coding-lesson/StoryGameThumb.png" width="80%" />
 
 **Lesson description**: Start your coding journey with Roblox while joining millions participating in the world-wide Hour of Code™ initiative.
 
@@ -106,17 +106,17 @@ description: Learn to code a story game as part of the Hour of Code™ initiativ
 ### Guided work - Create stories
 
 1. Provide students paper and pencil to write their stories.
-2. Lead students through the lessons <a href="../../education/build-it-play-it-story-games/writing-the-story.md" target="_blank" rel="noopener">Writing the Story</a>.
+2. Lead students through <a href="../../tutorials/curriculums/coding/get-started.md#brainstorm-your-story" target="_blank" rel="noopener">Brainstorm your story</a>.
    - Have students do this activity away from computers to reduce distractions.
    - Brainstorming Tip: Have students generate ideas by having one suggest a character (wizard, chef, etc), and another suggesting what that character does.
 
 ### Guided tutorial - Story games
 
-1. Lead students through the tutorials starting at <a href="../../education/build-it-play-it-story-games/opening-the-template.md" target="_blank" rel="noopener">Opening the Template.</a> and ending with <a href="../../education/build-it-play-it-story-games/finish-and-add.md" target="_blank" rel="noopener">Finish and Add</a>.
+1. Lead students through the tutorials starting at <a href="../../tutorials/curriculums/coding/get-started.md#open-template" target="_blank" rel="noopener">Open template</a> and ending with <a href="../../tutorials/curriculums/coding/customize-strings.md" target="_blank" rel="noopener">Customize strings</a>.
 
 ### Independent work - Finish student projects
 
-1. Show students the tips and tricks from <a href="../../education/build-it-play-it-story-games/finish-and-add.md#optional-additions" target="_blank" rel="noopener">Finish and Add</a>.
+1. Show students the tips and tricks from <a href="../../tutorials/curriculums/coding/customize-strings.md" target="_blank" rel="noopener">Customize strings</a>.
 2. Have students catch up on their projects. If finished, add the following challenges, have them add two or more characters (each using a different variable: name2, name3).
 
 ### Wrap up

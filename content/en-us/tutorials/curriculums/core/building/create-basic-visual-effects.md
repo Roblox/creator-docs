@@ -126,9 +126,11 @@ To ensure the flare stands out more, you can put a light into it. There are thre
 - `Class.SpotLight` emits light in the shape of a cone in a given direction.
 - `Class.SurfaceLight` emits light from one face of a `Class.BasePart`.
 
-A `Class.PointLight` is best for this to emit light spherically from the part at the position of the particle effect. To create a light source in the part:
+A `Class.PointLight` is best for this to emit light spherically from the part at the position of the particle effect.
 
-1. Add a **PointLight** to **Emitter_Flare**.
+To create a light source in the part:
+
+1. Add a **PointLight** to **VFX_Flare**.
 1. Select the **PointLight** object, then in the **Properties** window,
    1. Set **Brightness** to `2` to make the light brighter.
    1. Set **Range** to `36` to increase the light's range.

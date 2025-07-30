@@ -34,7 +34,7 @@ To create credible volcanoes, it's important to reference real-world volcanic er
 
 <img src="../../../assets/tutorials/creating-volcanoes/Volcano-NoComponents.jpg" alt="A far out view of an Iceland volcanic eruption."  width="80%" />
 
-It's useful to break down a volcano that's erupting into individual components so that you can plan how to utilize different VFX objects to mimic their real-world counterparts. To demonstrate, this tutorial breaks the sample volcano into six unique components:
+It's useful to break down a volcano that's erupting into individual components so that you can plan how to utilize different VFX objects to mimic their real-world counterparts. To demonstrate, this tutorial breaks the sample volcano into five unique components:
 
 - **Surface Ripples** – The small waves of lava on the surface of the caldera.
 - **Embers** – The small, light pieces of molten rock that rise to the sky from the caldera.
@@ -148,7 +148,7 @@ To recreate the global lighting in the sample [Volcano Island - Complete](https:
    1. Set **Ambient** to `133, 152, 176` to set a light gray hue over the entire outdoor environment.
    1. Set **Brightness** to `2` to make the global light source slightly dimmer.
    1. Set **ColorShift_Top** to `207, 178, 72` to set a yellow hue to the light that reflects from surfaces facing the global light source.
-   1. Set **Technology** to **Future** to update the lighting technology system.
+   1. Set **LightingStyle** to **Realistic** to utilize Roblox's most advanced lighting technology.
    1. Set **ClockTime** to `4.3` to set the time of day about a quarter after 4am.
    1. Set **GeographicLatitude** to `199` to modify the position of the moon.
    1. Set **ExposureCompensation** to `-1` to expose the environment to half of the exposure from the moon.

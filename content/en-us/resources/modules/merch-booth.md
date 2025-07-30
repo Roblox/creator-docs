@@ -27,17 +27,13 @@ To use the **MerchBooth** module in an experience:
 
    <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
-1. Locate and click the **Dev Modules** tile.
-
-   <img src="../../assets/studio/toolbox/Creator-Store-Categories-Dev-Modules.png" width="200" />
+1. Locate and click the **Packages** tile.
 
 1. Locate the **Merch Booth** module and click it, or drag-and-drop it into the 3D view.
 
    <img src="../../assets/developer-modules/merch-booth/Toolbox-Icon.png" width="143" />
 
-1. In the [Explorer](../../studio/explorer.md) window, move the entire **MerchBooth** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
-
-   <img src="../../assets/developer-modules/merch-booth/Move-Package.png" width="320" />
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **MerchBooth** model into `Class.ReplicatedStorage`. Upon running the experience the module will begin running.
 
 ### Configuration
 
@@ -52,7 +48,7 @@ The module is preconfigured to work for most use cases, but it can be easily cus
    ```lua title="LocalScript - ConfigureMerchBooth" highlight="6-10"
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-   local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+   local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
    MerchBooth.configure({
    	backgroundColor = Color3.fromRGB(220, 210, 200),
@@ -78,7 +74,7 @@ Items such as [clothing and accessories](../../art/accessories/index.md) must be
    ```lua title="Script - Add Avatar Assets"
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-   local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+   local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
    local items = {
 
@@ -103,7 +99,7 @@ Items such as [clothing and accessories](../../art/accessories/index.md) must be
    ```lua title="Script - Add Avatar Assets" highlight="6-10"
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-   local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+   local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
    local items = {
    	607702162, -- Roblox Baseball Cap
@@ -136,7 +132,7 @@ Adding [passes](../../production/monetization/game-passes.md) requires pass IDs 
    ```lua title="Script - Add Passes"
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-   local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+   local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
    local items = {
 
@@ -163,7 +159,7 @@ Adding [passes](../../production/monetization/game-passes.md) requires pass IDs 
    ```lua title="Script - Add Passes" highlight="6-7, 12"
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-   local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+   local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
    local items = {
    	4343758, -- ColdFyre Armor
@@ -189,7 +185,7 @@ Adding [developer products](../../production/monetization/developer-products.md)
    ```lua title="Script - Add Developer Products"
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-   local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+   local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
    local items = {
 
@@ -216,7 +212,7 @@ Adding [developer products](../../production/monetization/developer-products.md)
    ```lua title="Script - Add Developer Products" highlight="6-7, 12"
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-   local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+   local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
    local items = {
    	1236602053, -- Mana Refill
@@ -251,7 +247,7 @@ In some cases, it may be useful to [remove](#togglecatalogbutton) this button an
    ```lua title="LocalScript - Custom Catalog Button" highlight="6, 9-11"
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-   local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+   local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
    -- Remove the default catalog button
    MerchBooth.toggleCatalogButton(false)
@@ -299,7 +295,7 @@ To create a shoppable region:
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
    local CollectionService = game:GetService("CollectionService")
 
-   local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+   local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
    -- Remove the default catalog button
    MerchBooth.toggleCatalogButton(false)
@@ -345,7 +341,7 @@ By default, the merch booth shows a generic sparkle effect when a player equips 
 ```lua title="LocalScript - ConfigureMerchBooth" highlight="5-10, 13"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 local myParticleEmitter = Instance.new("ParticleEmitter")
 myParticleEmitter.SpreadAngle = Vector2.new(22, 22)
@@ -366,7 +362,7 @@ By default, the merch booth hides all `Class.ScreenGui|ScreenGuis` and `Class.Co
 ```lua title="LocalScript - ConfigureMerchBooth" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 MerchBooth.configure({
 	hideOtherUis = false
@@ -380,7 +376,7 @@ It can be advantageous to prevent a character from moving while they are in the 
 ```lua title="LocalScript - ConfigureMerchBooth" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 MerchBooth.configure({
 	disableCharacterMovement = true
@@ -487,7 +483,7 @@ Used along with [setControlKeyCodes](#setcontrolkeycodes) to customize the keys 
 ```lua title="LocalScript" highlight="5-8"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 MerchBooth.setControlKeyCodes(MerchBooth.Controls.ProximityPrompts, {
 	keyboard = Enum.KeyCode.Q,
@@ -686,7 +682,7 @@ Overrides default client-side configuration options through the following keys/v
 ```lua title="LocalScript"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 MerchBooth.configure({
 	backgroundColor = Color3.fromRGB(255, 255, 255),
@@ -714,7 +710,7 @@ See [Adding Items](#add-items) for details, as usage varies slightly for **asset
 ```lua title="Script - Add Avatar Assets" highlight="6-10, 15"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 local items = {
 	607702162, -- Roblox Baseball Cap
@@ -737,7 +733,7 @@ end
 ```lua title="Script - Add Passes" highlight="6-7, 12"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 local items = {
 	4343758, -- ColdFyre Armor
@@ -757,7 +753,7 @@ end
 ```lua title="Script - Add Developer Products" highlight="6-7, 12"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 local items = {
 	1236602053, -- Mana Refill
@@ -785,7 +781,7 @@ Returns a dictionary representing all of the currently registered items. Each ke
 ```lua title="Script" highlight="9-10"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 local success, errorMessage = pcall(function()
 	MerchBooth.addItemAsync(4819740796)
@@ -807,7 +803,7 @@ Unregisters an item previously added with [addItemAsync](#additemasync), removin
 ```lua title="Script" highlight="6, 11"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 local success, errorMessage = pcall(function()
 	MerchBooth.addItemAsync(4819740796)
@@ -837,7 +833,7 @@ When implementing proximity prompts, you may want to [remove the catalog button]
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Workspace = game:GetService("Workspace")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 local success, errorMessage = pcall(function()
 	MerchBooth.addItemAsync(4819740796)
@@ -862,7 +858,7 @@ Removes a [proximity prompt](#proximity-prompts) generated through [addProximity
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Workspace = game:GetService("Workspace")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 local success, errorMessage = pcall(function()
 	MerchBooth.addItemAsync(4819740796)
@@ -892,7 +888,7 @@ Here are some examples for sorting the catalog:
 ```lua title="Price Low-to-High" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 MerchBooth.setCatalogSort(function(a, b)
 	return a.price < b.price
@@ -902,7 +898,7 @@ end)
 ```lua title="Price High-to-Low" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 MerchBooth.setCatalogSort(function(a, b)
 	return a.price > b.price
@@ -912,7 +908,7 @@ end)
 ```lua title="Price Low-to-High & Alphabetical" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 MerchBooth.setCatalogSort(function(a, b)
 	return if a.price == b.price then a.title < b.title else a.price < b.price
@@ -961,7 +957,7 @@ Configures the key and button values for interactions with the merch booth. The 
 ```lua title="LocalScript" highlight="5-8"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 MerchBooth.setControlKeyCodes(MerchBooth.Controls.ProximityPrompts, {
 	keyboard = Enum.KeyCode.Q,
@@ -980,7 +976,7 @@ Opens the merch booth window (if closed) and navigates to the catalog view. This
 ```lua title="LocalScript" highlight="12"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 local success, errorMessage = pcall(function()
 	MerchBooth.addItemAsync(assetId)
@@ -1003,7 +999,7 @@ Navigates to the single item view of the given `itemId`, opening the merch booth
 ```lua title="LocalScript" highlight="6, 9"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 local success, errorMessage = pcall(function()
 	MerchBooth.addItemAsync(4819740796)
@@ -1024,7 +1020,7 @@ Toggles on/off the catalog button on the right side of the screen. This is usefu
 ```lua title="LocalScript" highlight="5"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 MerchBooth.toggleCatalogButton(false)
 ```
@@ -1040,7 +1036,7 @@ Returns `true` if either the catalog or the item view is open. If the item view 
 ```lua title="LocalScript" highlight="11-12"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 local success, errorMessage = pcall(function()
 	MerchBooth.addItemAsync(4819740796)
@@ -1064,7 +1060,7 @@ Closes the merch booth window. This function can only be called from a `Class.Lo
 ```lua title="LocalScript" highlight="5"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 MerchBooth.closeMerchBooth()
 ```
@@ -1088,7 +1084,7 @@ Sets whether the entire merch booth is enabled or not. When disabled, this funct
 ```lua title="LocalScript" highlight="7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 local isEnabled = MerchBooth.isMerchBoothEnabled()
 if isEnabled then
@@ -1123,7 +1119,7 @@ Fires when an item is added through [addItemAsync](#additemasync). This event ca
 ```lua title="Script" highlight="5-8"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 MerchBooth.itemAdded:Connect(function(assetId, itemInfo)
 	print("Item added with asset ID of", assetId)
@@ -1152,7 +1148,7 @@ Fires when an item is removed through [removeItem](#removeitem). This event can 
 ```lua title="Script" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 MerchBooth.itemRemoved:Connect(function(assetId)
 	print("Item removed with asset ID of", assetId)
@@ -1166,7 +1162,7 @@ Fires when either the catalog **or** item detail view are opened.
 ```lua title="LocalScript" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 MerchBooth.merchBoothOpened:Connect(function()
 	print("Booth view opened")
@@ -1180,7 +1176,7 @@ Fires when either the catalog **or** item detail view are closed.
 ```lua title="LocalScript" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 MerchBooth.merchBoothClosed:Connect(function()
 	print("Booth view closed")
@@ -1194,7 +1190,7 @@ Fires when the catalog view is opened.
 ```lua title="LocalScript" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 MerchBooth.catalogViewOpened:Connect(function()
 	print("Catalog view opened")
@@ -1208,7 +1204,7 @@ Fires when the catalog view is closed.
 ```lua title="LocalScript" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 MerchBooth.catalogViewClosed:Connect(function()
 	print("Catalog view closed")
@@ -1222,7 +1218,7 @@ Fires when the item detail view is opened.
 ```lua title="LocalScript" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 MerchBooth.itemViewOpened:Connect(function()
 	print("Item view opened")
@@ -1236,7 +1232,7 @@ Fires when the item detail view is closed.
 ```lua title="LocalScript" highlight="5-7"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+local MerchBooth = require(ReplicatedStorage.MerchBooth)
 
 MerchBooth.itemViewClosed:Connect(function()
 	print("Item view closed")

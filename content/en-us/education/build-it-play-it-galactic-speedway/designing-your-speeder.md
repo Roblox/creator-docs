@@ -28,16 +28,25 @@ The scrapyard is divided into three sections, one for each step. By combining, r
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../../assets/education/build-it-play-it-galactic-speedway/designing-your-speeder/starting-bodies.jpeg" />
-    <figcaption>1: Starting Bodies</figcaption>
+    <img src="../../assets/education/build-it-play-it-galactic-speedway/designing-your-speeder/Starting-Bodies.png" />
   </figure>
   <figure>
-    <img src="../../assets/education/build-it-play-it-galactic-speedway/designing-your-speeder/wing-sets.jpeg" />
-    <figcaption>2: Wing Sets</figcaption>
+    <img src="../../assets/education/build-it-play-it-galactic-speedway/designing-your-speeder/Wing-Sets.png" />
   </figure>
   <figure>
-    <img src="../../assets/education/build-it-play-it-galactic-speedway/designing-your-speeder/decorative-parts.jpeg" />
-    <figcaption>3: Decorative Parts</figcaption>
+    <img src="../../assets/education/build-it-play-it-galactic-speedway/designing-your-speeder/Decorative-Parts.png" />
+  </figure>
+  <figure>
+    <img src="../../assets/education/build-it-play-it-galactic-speedway/designing-your-speeder/Starting-Bodies-Parts.png" />
+    <figcaption>Body Parts</figcaption>
+  </figure>
+  <figure>
+    <img src="../../assets/education/build-it-play-it-galactic-speedway/designing-your-speeder/Wing-Sets-Parts.png" />
+    <figcaption>Wing Parts</figcaption>
+  </figure>
+  <figure>
+    <img src="../../assets/education/build-it-play-it-galactic-speedway/designing-your-speeder/Decorative-Parts-Parts.png" />
+    <figcaption>Decorative Parts</figcaption>
   </figure>
 </GridContainer>
 
@@ -45,29 +54,18 @@ The scrapyard is divided into three sections, one for each step. By combining, r
 
 To move parts where you want them, first turn off **collisions** and **move snapping**. Turning off collisions allow objects to pass through one another. Having snapping off lets you freely move objects.
 
-1. In the **Model** tab, turn off **Collisions**. When it's off, the button will no longer be highlighted in gray.
-   <GridContainer numColumns="2">
-     <figure>
-       <img src="../../assets/education/build-it-play-it-galactic-speedway/designing-your-speeder/collisions-on.png" />
-       <figcaption>Snap Off When Using Props</figcaption>
-     </figure>
-     <figure>
-       <img src="../../assets/education/build-it-play-it-galactic-speedway/designing-your-speeder/collisions-off.png" />
-       <figcaption>Snap On For Buildings and Roads</figcaption>
-     </figure>
-   </GridContainer>
+1. In the **Home** tab, click the **Geometric** button, then turn off **Collisions**.
 
-2. Close to where you find Collisions, make sure the **Move** snapping is turned **off**.
-   <img
-   src="../../assets/education/build-it-play-it-galactic-speedway/designing-your-speeder/turn-move-snap-off.png"
-   width="100%" />
+   <img src="../../assets/education/build-it-play-it-galactic-speedway/designing-your-speeder/collisions-off.png" width="70%" />
+
+1. Make sure the **Move** snapping tool is also turned **off**.
+
+   <img src="../../assets/education/build-it-play-it-galactic-speedway/designing-your-speeder/turn-move-snap-off.png" width="70%" />
 
 ## Change the camera view
 
 To work on the driftspeeder, use the camera controls below.
 
-<Alert severity="info">
-**Camera Controls**
 <table>
 <thead>
    <tr>
@@ -94,11 +92,10 @@ To work on the driftspeeder, use the camera controls below.
    </tr>
 </tbody>
 </table>
-</Alert>
 
 Move the camera so that you can better see the driftspeeder bodies and the work area at the same time.
 
-<video controls src="../../assets/education/build-it-play-it-galactic-speedway/designing-your-speeder/move-camera-to-focus.mp4" width="100%"></video>
+   <img src="../../assets/education/build-it-play-it-galactic-speedway/designing-your-speeder/move-camera-to-focus.png" width="80%" />
 
 <Alert severity="warning">
 <AlertTitle>Can't move the camera?</AlertTitle>

@@ -12,60 +12,42 @@ Swap driftspeeders with your friends by sharing it as an asset. Assets are parts
 
 To share your speeder with friends:
 
-1. Select your driftspeeder. In the **Explorer**, right-click the highlighted speeder model and select **Save to Roblox**.
-2. Give the model a **name** and **description**. This information is used so other players can search for new models and understand what they're downloading.
+1. Select your driftspeeder. In the **Explorer** window, right-click the highlighted speeder model and select **Save to Roblox** from the contextual menu. The **Asset Configuration** window displays.
+1. Give the model a **name** and **description**. This information is used so other players can search for new models and understand what they're downloading.
 
-   <img
-   src="../../assets/education/build-it-play-it-galactic-speedway/sharing-your-speeders/new-model-name-description.png"
-   width="75%" />
+   <img src="../../assets/education/build-it-play-it-galactic-speedway/sharing-your-speeders/new-model-name-description.png" width="80%" />
 
-3. Scroll down and turn on **Allow Copying**. This lets your friends and anyone on Roblox import the driftspeeder into their own game.
+1. Click the **Submit** button. The **Asset Configuration** window displays two links to see your asset on the Creator Dashboard.
 
-   <img
-    src="../../assets/education/build-it-play-it-galactic-speedway/sharing-your-speeders/allow-copy.png"
-    width="75%" />
+1. Click the link to the **Configure** page. Your default web browser opens.
 
-4. Click **Submit**.
+   <img src="../../assets/education/build-it-play-it-galactic-speedway/sharing-your-speeders/LinktoCD.png" width="60%" />
 
-   <img
-     src="../../assets/education/build-it-play-it-galactic-speedway/sharing-your-speeders/new-model-finish.png"
-     width="75%" />
+1. Under the **Distribution** section, enable the **Distribute on Creator Store** toggle. This allows your friends to copy your speeder into their inventory.
 
-5. The link shown can be used to share the asset with friends. To return to the game, click **Close**.
-
-   <img
-     src="../../assets/education/build-it-play-it-galactic-speedway/sharing-your-speeders/new-model-uploaded.png"
-     width="75%" />
+   <img src="../../assets/education/build-it-play-it-galactic-speedway/sharing-your-speeders/DistributeonCS.png" width="60%" />
 
 ## View and use models
 
 If you've added models from friends, or just want to reuse your own, find them in the **Inventory**. This stores any models you've added and lets you add them into a game.
 
-<Alert severity="info">
-**Getting Speeders from Friends**
-
 1. Ask a friend to share the link to their 3D model asset. Each link should follow a formula like this: `www.roblox.com/library/0123456789/My-Speeder`
 
-2. Open the link in your web browser.
+1. Open the link in your web browser.
 
-3. On the page for the asset, click the Get button to add it into your inventory.
-   <img
-      src="../../assets/education/build-it-play-it-galactic-speedway/sharing-your-speeders/inventory-webpage.png"
-      width="100%" />
+1. On the page for the asset, click the **Get Model** button to add it into your inventory.
 
-</Alert>
+   <img src="../../assets/education/build-it-play-it-galactic-speedway/sharing-your-speeders/GetModelButton.png" width="100%" />
 
-1. In Roblox Studio, find the Toolbox. If it's not open, go to the View tab and click the Toolbox button.
+1. In Studio, find the **Toolbox**. If it's not open, enable it by going to the **Home** tab and clicking the **Toolbox** button.
 
-   <img src="../../assets/education/build-it-play-it-galactic-speedway/sharing-your-speeders/open-toolbox.png" width="100%" />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/open-toolbox.png" />
 
-2. In the Toolbox window, click the icon for **Inventory**.
+1. In the **Toolbox** window, click the icon for **Inventory**.
 
-   <img src="../../assets/education/build-it-play-it-galactic-speedway/sharing-your-speeders/set-to-inventory.png" width="50%" />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/set-to-inventory.png" />
 
-3. Make sure the left dropdown is set to **My Models**. Click a model to add it into the game.
-
-   <img src="../../assets/education/build-it-play-it-galactic-speedway/sharing-your-speeders/show-whole-inventory.png" width="50%" />
+1. Make sure the left dropdown is set to **My Models**, then find and click on your friend's speeder. This will add the speeder into your experience.
 
 <Alert severity="warning">
 <AlertTitle>Thumbnail Blank?</AlertTitle>

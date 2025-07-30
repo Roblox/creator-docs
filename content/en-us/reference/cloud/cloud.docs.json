@@ -1153,6 +1153,13 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 5000
+          }
+        },
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -1164,12 +1171,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 5000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -1259,6 +1260,13 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 5000
+          }
+        },
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -1270,12 +1278,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 5000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -1347,6 +1349,13 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 5000
+          }
+        },
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -1358,12 +1367,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 5000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -1422,6 +1425,13 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -1433,12 +1443,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -1489,6 +1493,13 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -1500,12 +1511,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -1581,6 +1586,13 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -1592,12 +1604,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -1666,6 +1672,13 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 5000
+          }
+        },
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -1680,12 +1693,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 5000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -1775,6 +1782,13 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -1786,12 +1800,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -1890,6 +1898,13 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 5000
+          }
+        },
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -1901,12 +1916,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 5000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -1987,6 +1996,13 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 5000
+          }
+        },
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -1998,12 +2014,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 5000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -2071,6 +2081,13 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -2082,12 +2099,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -2147,6 +2158,13 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -2158,12 +2176,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -2248,6 +2260,13 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -2259,12 +2278,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 1000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -2342,6 +2355,13 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 5000
+          }
+        },
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -2356,12 +2376,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 5000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -2460,6 +2474,13 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 5000
+          }
+        },
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -2471,12 +2492,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 5000
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -2527,6 +2542,13 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          }
+        },
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -2538,12 +2560,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 60
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -3450,6 +3466,13 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -3461,12 +3484,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -3547,6 +3564,13 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 500
+          }
+        },
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -3558,12 +3582,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 500
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -3631,6 +3649,13 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -3642,12 +3667,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -3707,6 +3726,13 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 500
+          }
+        },
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -3718,12 +3744,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 500
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -3808,6 +3828,13 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 500
+          }
+        },
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -3819,12 +3846,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 500
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -3902,6 +3923,13 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 500
+          }
+        },
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -3913,12 +3941,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 500
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -4444,7 +4466,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 5
+            "maxInPeriod": 40
           }
         },
         "security": [
@@ -4931,7 +4953,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 45
+            "maxInPeriod": 200
           }
         },
         "security": [
@@ -5608,7 +5630,7 @@
       "post": {
         "tags": ["Cloud"],
         "summary": "Generate Speech Asset",
-        "description": "Generates an English speech audio asset from the specified text.",
+        "description": "Generates an English speech audio asset from the specified text.\n\nThis endpoint requires the `asset:read` and `asset:write` scopes in\naddition to the `universe:write` scope.\n\nThe response returns an `Operation` object that must be prefixed with\n`/assets/v1`. For example, the URL to discover the result of the operation\ncould be\n`https://apis.roblox.com/assets/v1/operations/8b42ef30-9c17-4526-b8cf-2ff0136ca94d`.",
         "operationId": "Cloud_GenerateSpeechAsset",
         "parameters": [
           {
@@ -7130,6 +7152,16 @@
             "example": true,
             "type": "boolean",
             "description": "Can remove forum comment"
+          },
+          "manageBlockedWords": {
+            "example": true,
+            "type": "boolean",
+            "description": "Can manage blocked words"
+          },
+          "viewBlockedWords": {
+            "example": true,
+            "type": "boolean",
+            "description": "Can view blocked words"
           }
         },
         "description": "Represents the permissions on a role."

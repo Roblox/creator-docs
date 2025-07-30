@@ -119,9 +119,8 @@ description: Learn about animation and study how the human body moves.
 ### Guided tutorial - Studio and animation basics
 
 1. Set expectations that you'll guide students through a tutorial to make their animation. Even if they're not finished, they'll have more time in the independent work time.
-2. Lead students through <a href="../../education/build-it-play-it-island-of-move/opening-the-template.md" target="_blank" rel="noopener">Opening the Template</a> to <a href="../../education/build-it-play-it-island-of-move/adding-the-second-pose.md" target="_blank" rel="noopener">Adding the Second Pose</a>.
-   - You can ignore the Challenge Checkpoint pages.
-   - At Test the Game, give students at most 2 minutes to play-test.
+2. Lead students through <a href="../../tutorials/curriculums/animator/get-started.md" target="_blank" rel="noopener">Get started</a> through <a href="../../tutorials/curriculums/animator/work-with-the-animation-editor.md" target="_blank" rel="noopener">Work with the Animation Editor</a>.
+
    - Slides are provided to help you throughout the tutorial.
 
 ### Independent work - Improve animations
@@ -130,7 +129,10 @@ description: Learn about animation and study how the human body moves.
 
 ### Guided tutorial - Add animations
 
-1. Lead students through <a href="../../education/build-it-play-it-island-of-move/exporting-animations.md" target="_blank" rel="noopener">Exporting Animations</a> to <a href="../../education/build-it-play-it-island-of-move/change-the-animation.md" target="_blank" rel="noopener">Change the Animation</a>.
+1. Lead students through <a href="../../tutorials/curriculums/animator/play-your-animation.md" target="_blank" rel="noopener">Play your animation</a> through <a href="../../tutorials/curriculums/animator/test-and-save.md" target="_blank" rel="noopener">Test and save</a>.
+
+   - At **Playtest your animation**, give students at most 2 minutes to play-test.
+
 2. Have students playtest their experience to ensure they see their animation.
 
 ### Wrap-up

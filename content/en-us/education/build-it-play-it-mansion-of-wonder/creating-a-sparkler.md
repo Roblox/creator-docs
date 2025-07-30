@@ -16,19 +16,21 @@ For this tutorial, sparklers are **tools** with attached particle effects. In Ro
 
 To start, add the pre-made sparkler set into your existing experience. You'll then choose one and customize its particle emitter.
 
-1. Start by going to the [Sparkler Set](https://www.roblox.com/library/6971223240/) webpage. On the page, click the **Get** button and follow the prompts. This adds the set into your Inventory, which is accessed in the Toolbox.
+1. Start by pressing the **Add to Inventory** button in the following component. This adds the set into your Inventory, which is accessed in the Toolbox.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/get-sparklers.png" />
+   <BrowseSampleCard href='https://create.roblox.com/store/asset/6971223240' description='Click the button to get a set of sparklers for the tutorial.' title='Sparkler Set' assetId={6971223240}  />
 
-2. In Roblox Studio, find the **Toolbox**. If it's not open, go to the View tab and click the Toolbox button.
+   <br> </br>
+
+1. In Roblox Studio, find the **Toolbox**. If it's not open, enable it by going to the **Home** tab and clicking the **Toolbox** button.
 
    <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/open-toolbox.png" />
 
-3. In the **Toolbox** window, click the icon for **Inventory**.
+1. In the **Toolbox** window, click the icon for **Inventory**.
 
    <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/set-to-inventory.png" />
 
-4. Make sure the left dropdown is set to **My Models**. Then, find and click on **Sparkler Set**. This will add the parts into your experience.
+1. Make sure the left dropdown is set to **My Models**, then find and click on **Sparkler Set**. This will add the parts into your experience.
 
    <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/show-sparklers.jpeg" />
 
@@ -36,11 +38,11 @@ To start, add the pre-made sparkler set into your existing experience. You'll th
 
 Each sparkler comes with a customizable particle emitter. Follow the steps to find the particle, change its texture, and then create the color gradient.
 
-1. Select one of the pre-made tools. In the **Explorer**, find the highlighted part. Then, click the **>** arrows to expand until you find **Attachment** and select **SparklerParticle**.
+1. Select one of the pre-made tools. In the **Explorer** window, find the highlighted part. Then, click the **>** arrows to expand until you find **Attachment** and select **SparklerParticle**.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/click-sparkler-particles.gif" />
+   <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/click-sparkler-particles.mp4" width="40%"></video>
 
-2. Change the Texture property. Some texture ID's are included below.
+2. Change the **Texture** property. Some texture ID's are included below.
 
    <GridContainer numColumns="3">
      <figure>
@@ -99,7 +101,7 @@ Each sparkler comes with a customizable particle emitter. Follow the steps to fi
 
 3. Find the **Color** property and click anywhere in the row next to its name. Then, press the **...** to open the Color Sequence editor. You'll learn how to edit the color in the next section.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/select-color-property.png" />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/select-color-property.png" width="40%" />
 
 ## Create a color gradient
 
@@ -109,7 +111,7 @@ Each **arrow** on the color sequence represents a different color. Colors can be
 
 ### Change a color
 
-Under the color sequence, select an **arrow** <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/non-selected-arrow.png" width="14px" />. Then, click the **Color** button to open the color picker and set a new color. Note that arrows are yellow when selected.
+Under the color sequence, select an **arrow**. Then, click the **Color** button to open the color picker and set a new color. Note that arrows are yellow when selected.
 
 <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/select-color.png" />
 
@@ -133,20 +135,20 @@ After creating a color gradient, use your knowledge from the previous lessons to
 
 So players can have the sparkler when the experience starts, you'll need to move it to the StarterPack. This folder holds all items a player receives when they join.
 
-1. In the **Explorer**, find the **tool** of your choice, such as Staff Sparkler or Torch Sparkler. Right click on that tool and select **Cut**. This copies the staff to your clipboard, but also deletes.
+1. In the **Explorer** window, find the **tool** of your choice, such as the **Staff Sparkler** or **Torch Sparkler**. Right-click on that tool and select **Cut**. This copies the staff to your clipboard, but also deletes it from the folder.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/cut-staff.gif" />
+   <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/cut-staff.mp4" width="40%"></video>
 
-2. Scroll down in the Explorer until you find the StarterPack. Right click on it and select Paste Into to add the tool.
+2. Scroll down in the **Explorer** window until you find the **StarterPack**. Right-click on it and select **Paste Into** to add the tool.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/paste-staff.gif" />
+   <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/paste-staff.mp4" width="40%"></video>
 
 3. Playtest project, and select the sparkler from your backpack by pressing `1` on your keyboard. Note that you can repeat this process to make more sparklers.
 
    <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/final-staff.mp4"></video>
 
    <Alert severity="info">
-   Each sparkler has a name that's shown to players in the experience. To rename a sparkler, in the Explorer, right click on it the tool and select **Rename**.
+   Each sparkler has a name that's shown to players in the experience. To rename a sparkler, in the **Explorer** window, right click on the tool and select **Rename**.
     </Alert>
 
 ## Challenge checkpoint
@@ -155,12 +157,14 @@ You got your animation ready! Celebrate your new skills by getting the **Head Sl
 
 <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/avatar-items.jpeg" />
 
-1. Copy the code below to start.
+1. **Copy** the following code: `Glimmer`
 
-   `Glimmer`
-
-2. Click **Enter World** below to open a Roblox experience. In the experience, interact the in-game character and click **REDEEM CODE**. Use the code on this page to get your item.
+2. Click the **Enter World** button below to open the **Mansion of Wonder** experience.
 
    <a href="https://www.roblox.com/games/6901029464/">
    <Button variant="contained">Enter World</Button>
    </a>
+
+3. When you are playing game, interact with Freddie the fox character, then click **REDEEM CODE**. Use the code from step 1 to get your item.
+
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/challenge-checkpoint/prize-avatar.png" width="60%" />

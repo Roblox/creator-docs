@@ -9,13 +9,14 @@ description: Earn the first rewards in Roblox's Build It Play It Mansion of Wond
 
 You got your animation ready! Celebrate your new skills by getting the **Artist Backpack** and **Conjurer of Color** badge.
 
-1. **Copy** the **code** below to start.
+1. **Copy** the following code: `FXArtist`
 
-   `FXArtist`
+2. Click the **Enter World** button below to open the **Mansion of Wonder** experience.
 
-2. Click **Enter World** below to open a Roblox game. In the game, interact with Freddie, the in-game character and click **REDEEM CODE**. Use the code on this page to get your item.
-
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/challenge-checkpoint/prize-avatar.jpeg" width="100%" />
    <a href="https://www.roblox.com/games/6901029464/">
    <Button variant="contained">Enter World</Button>
    </a>
+
+3. When you are playing game, interact with Freddie the fox character, then click **REDEEM CODE**. Use the code from step 1 to get your item.
+
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/challenge-checkpoint/prize-avatar.png" width="60%" />

@@ -1,4 +1,4 @@
-# Open Cloud Reference
+# Open Cloud reference
 
 The Open Cloud V2 reference documentation at [https://create.roblox.com/docs/cloud/reference](https://create.roblox.com/docs/cloud/reference) is rendered from `cloud.docs.json`. This file uses OpenAPI specification (OAS) version 3.0.4.
 

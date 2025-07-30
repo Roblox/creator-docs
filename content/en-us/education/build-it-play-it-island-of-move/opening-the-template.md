@@ -13,7 +13,7 @@ In your movement simulator, players will move around a track to earn stars. Afte
 
 A template has been created that includes all the parts to make a simulator-style game. This includes code and a starter world that you can customize later.
 
-<img src="../../assets/education/build-it-play-it-island-of-move/opening-the-template/template-example.jpeg" />
+<img src="../../assets/education/build-it-play-it-island-of-move/opening-the-template/template-example.png" />
 
 ## Open the template
 
@@ -25,21 +25,17 @@ Time to open Roblox Studio! If you need to, download [Studio](https://www.roblox
 
 The first time you launch Roblox Studio, extra windows might open up that aren't needed right now. Closing these windows will give you more space to work. You can always open them up again later.
 
-1. Close each window on the left of the 3D view by clicking the . If you don't see anything to close, go to the next step.
+1. Close each window on the left of the 3D view by clicking the **X** icon. If you don't see anything to close, go to the next step.
 
    <img src="../../assets/education/build-it-play-it-island-of-move/opening-the-template/close-toolbox.png" width="50%" />
 
 2. Leave the windows on the **right** open. Studio should look like the image below.
 
-   <img src="../../assets/education/build-it-play-it-island-of-move/opening-the-template/studio-interface.jpeg" />
+   <img src="../../assets/education/build-it-play-it-island-of-move/opening-the-template/studio-interface.jpg" />
+
    <Alert severity="warning">
-   <AlertTitle>Don't see the windows on the right?</AlertTitle>
-   To see the windows:
+   If you don't see the windows on the right, enable them by going to the **Home** tab and clicking the **Explorer** and **Properties** buttons.
 
-   a. Enable them by going to the **View** tab.
-
-   b. Then, click **Explorer** and **Properties**.
-
-   <img src="../../assets/education/build-it-play-it-island-of-move/opening-the-template/open-explorer-properties.png" />
+   <img src="../../assets/education/general/OpenExplorerandProperties.png" />
 
    </Alert>

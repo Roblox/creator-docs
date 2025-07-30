@@ -5,7 +5,7 @@ next: /education/build-it-play-it-mansion-of-wonder/finish-the-blast
 description: Learn how to customize and change the texture of particle emitters in Roblox Studio as part of the Build It Play It Mansion of Wonder.
 ---
 
-Everything created by the ParticleEmitter, be it white spark or fire, is actually a picture. In Roblox Studio, these pictures are called **textures**, which can be any 2D visual, like a symbol or even something you've drawn.
+Every particle created by a particle emitter, such as white sparks or fire, is actually a picture. In Roblox Studio, these pictures are called **textures**, which can be any 2D visual, like a symbol or even something you've drawn.
 
 For example, notice in the video below how a single texture is changed and repeated to create an effect.
 
@@ -70,7 +70,7 @@ For example, notice in the video below how a single texture is changed and repea
      </figure>
    </GridContainer>
 
-2. Make sure the emitter is selected and, in the Properties window, find the **Texture** property.
+2. Make sure the emitter is selected, then in the **Properties** window, find the **Texture** property.
 
    <img src="../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/show-texture-property.png" />
 
@@ -80,10 +80,10 @@ For example, notice in the video below how a single texture is changed and repea
 
    </Alert>
 
-3. Click in the **Texture** row to highlight the text. Press <kbd>Ctrl</kbd>+<kbd>V</kbd> (<kbd>⌘</kbd>+<kbd>V</kbd>) to paste in the previously copied ID and then press Enter. You should see your texture change.
+3. Click in the **Texture** row to highlight the text. Press <kbd>Ctrl</kbd>+<kbd>V</kbd> (<kbd>⌘</kbd>+<kbd>V</kbd>) to paste in the previously copied ID and then press Enter. Your particle emitter now emits particles that look like your texture.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/paste-texture.png" />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/paste-texture.png" width="38%" />
 
-   You should then have a particle like the example below.
+   For example, if you use the `5833323391` texture, your particles will look like the example below.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/texture-changed.jpeg" width="50%" />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/texture-changed.png" width="40%" />

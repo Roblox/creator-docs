@@ -49,7 +49,7 @@ Don't delete or move the **PackageLink** object! Doing so for any package copy c
 
 To insert a package that doesn't already exist in the current place, you must **initially** insert it from the [Toolbox](../../projects/assets/toolbox.md):
 
-- From **Inventory** ⟩ **My Packages** for packages that you've published to or obtained from the [Creator Store](../../production/creator-store.md), as well as packages that a friend owns and has given you [permissions](#share-and-access-levels) to use.
+- From **Inventory** ⟩ **My Packages** for packages that you've published to or obtained from the [Creator Store](../../production/creator-store.md), as well as packages that a connection owns and has given you [permissions](#share-and-access-levels) to use.
 - From **Creations** ⟩ **Group Packages** for packages published by members of your [group](../../projects/groups.md) (including yourself).
 
 <GridContainer numColumns="2">
@@ -133,16 +133,16 @@ Automatic updating does not apply to [modified](#modifying-packages) package cop
 
 ## Share and access levels
 
-You can grant permission to friends, experiences, groups, or specific group user roles so that they can freely use your packages in their creations. For more information on asset access, see [Asset privacy](privacy.md).
+You can grant permission to connections, experiences, groups, or specific group user roles so that they can freely use your packages in their creations. For more information on asset access, see [Asset privacy](privacy.md).
 
 <Alert severity="warning">
-If you share a package with restricted assets that you don't have [explicit permission](../../projects/assets/privacy.md#view-permissions) to use, you can still share the package but those specific restricted assets will **not** be visible or audible at runtime unless the friend, experience, or group has permission to use those assets.
+If you share a package with restricted assets that you don't have [explicit permission](../../projects/assets/privacy.md#view-permissions) to use, you can still share the package but those specific restricted assets will **not** be visible or audible at runtime unless the connection, experience, or group has permission to use those assets.
 </Alert>
 
 <Tabs>
   <TabItem key = "1" label="To collaborators">
 
-To change package permissions for a collaborator, such as a friend or group:
+To change package permissions for a collaborator, such as a connection or group:
 
 1. In the **Explorer** window, **Toolbox**, or **Asset Manager**, right-click the desired package and select **Package Details**.
 1. In the **Asset Configuration** window, select **Permissions**.

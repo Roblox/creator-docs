@@ -27,12 +27,17 @@ Time to open Roblox Studio! If you need, download [Studio](https://www.roblox.co
 
 The first time Roblox Studio is launched, extra windows might open up that aren't needed right now. Closing these windows will give you more space to work. You can always open them up again later.
 
-1. Close each window on the left of the 3D view by clicking the X. If you don't see anything to close on the left, go to the next step.
+1. Close each window on the left of the 3D view by clicking the **X** icon. If you don't see anything to close on the left, go to the next step.
+
    <img src="../../assets/education/build-it-play-it-mansion-of-wonder/become-an-artist/close-windows.png" />
 
 2. Leave the windows on the right open. Studio should look like the image below:
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/become-an-artist/template-interface.jpeg" />
+
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/become-an-artist/template-interface.jpg" />
 
    <Alert severity="warning">
-   If you don't see the windows on the right, click on the View tab. There, click the Explorer and Properties buttons.
+   If you don't see the windows on the right, enable them by going to the **Home** tab and clicking the **Explorer** and **Properties** buttons.
+
+   <img src="../../assets/education/general/OpenExplorerandProperties.png" />
+
    </Alert>

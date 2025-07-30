@@ -1,0 +1,47 @@
+---
+title: Next steps
+description: Explains ways to continue learning about coding in Studio.
+prev: /tutorials/curriculums/coding/customize-strings
+---
+
+Congratulations on completing your first code sample with Roblox Studio! Now that you have experience working with variables, you can share your work with friends and extend your skills by learning about Studio's additional coding features.
+
+## Share with friends
+
+When you first publish an experience, it's automatically set to **private** so that you are the only one who can play your game. However, creating on Roblox is always more fun when you can share what you make with your friends, so let's set up your experience so that others can play too.
+
+To make your experience public:
+
+1. Using the steps from the **Test and save** chapter, publish your experience so your friends can see your latest changes.
+
+1. In the top-left corner of your computer, click **File** > **Game Settings**. The **Game Settings** window displays.
+
+   <img src="../../../assets/education/build-it-play-it-mansion-of-wonder/invite-friends/game-settings.png" width="50%" />
+
+1. In the **Game Settings** window,
+   1. Go to the left bar and select the **Permissions** tab. New settings display.
+   1. Set **Playability** to **Public**.
+
+   <img src="../../../assets/education/general/make-public.png" width="80%" />
+
+1. Click the **Save** button. Now everyone on Roblox can play your experience!
+
+## Continue learning
+
+Variables are an excellent start in your coding journey, but Luau includes additional fundamentals that are important to understand to add custom behavior to your experiences, including:
+
+- [Script types and locations](../../../scripting/locations.md)
+- [Services](../../../scripting/services.md)
+- [Properties and attributes](../../../scripting/attributes.md)
+- [Events](../../../scripting/events/index.md)
+
+It's recommended to continue learning with the [Coding fundamentals](../../fundamentals/coding-1/) series, then if you want to continue learning through step-by-step lessons, check out the following use case tutorials:
+
+- [Create deadly lava](../../use-case-tutorials/scripting/basic-scripting/deadly-lava.md)
+- [Create fading traps](../../use-case-tutorials/scripting/basic-scripting/fading-trap.md)
+- [Create health pickups](../../use-case-tutorials/scripting/intermediate-scripting/create-a-health-pickup.md)
+- [Save player data](../../use-case-tutorials/scripting/intermediate-scripting/save-data.md)
+
+<Alert severity = 'success'>
+Happy creating, we can't wait to see what you make!
+</Alert>

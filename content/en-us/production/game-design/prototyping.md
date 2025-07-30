@@ -76,7 +76,7 @@ Despite its benefits, the limitations of Studio prototyping include:
 
 The difference between working on a feature and prototyping is scope. Prototyping should be fast and quick, hitting certain aspects of the feature being tested but not the entire feature itself.
 
-When prototyping, have several playtest sessions with your team to confirm your findings. Share your prototype with friends, family, and social media to garner feedback and fresh perspectives. Iterate on your experience until you're happy with it.
+When prototyping, have several playtest sessions with your team to confirm your findings. Share your prototype with connections, family, and social media to garner feedback and fresh perspectives. Iterate on your experience until you're happy with it.
 
 When prototyping, take extra care to explore the following parts of your experience:
 

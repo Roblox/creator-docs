@@ -43,15 +43,15 @@ For anyone interested in learning computer science or coding, this serves as a f
 </thead>
 <tbody>
    <tr>
-    <td><a href="../coding-1/create-a-script.md">Create a script</a></td>
+    <td><a href="create-a-script.md">Create a script</a></td>
     <td>Learn how to create new script objects and print messages to the Output window.</td>
    </tr>
    <tr>
-    <td><a href="../coding-1/object-properties.md">Object properties</a></td>
+    <td><a href="object-properties.md">Object properties</a></td>
     <td>Change the color of a part using just code</td>
    </tr>
    <tr>
-   <td><a href="../coding-1/parents-and-children.md">Parents and children</a></td>
+   <td><a href="parents-and-children.md">Parents and children</a></td>
     <td>Instead of calling out a specific part name, learn how to navigate the hierarchy to make code that will work for any part</td>
    </tr>
 </tbody>

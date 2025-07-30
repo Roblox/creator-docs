@@ -65,10 +65,10 @@ export const sections = [
     content: [
       {
         title: "Create your first experience",
-        description: "Create a catapult that launches spheres into blocks while learning important Roblox concepts.",
-        image: "./assets/landing/get-started/first-experience.png",
+        description: "Create a simple 3D platformer while learning important Roblox building and scripting concepts.",
+        image: "./assets/landing/core-experience.png",
         links: [
-          { text: "Start creating", href: "./tutorials/first-experience/" },
+          { text: "Start creating", href: "./tutorials/curriculums/core/" },
         ]
       },
       {

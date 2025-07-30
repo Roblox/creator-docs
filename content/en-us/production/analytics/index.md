@@ -38,7 +38,7 @@ You can use the following chart to track the percent of users who have a qualifi
     <figcaption>Comparing conversion rates.</figcaption>
   </figure>
 
-Roblox experiences are inherently social, and users love trying them out with their friends. Consider using features like [experience events](../../production/promotion/experience-events.md) and [player invite prompts](../../production/promotion/invite-prompts.md) to invite users to bring their friends to your experience.
+Roblox experiences are inherently social, and users love trying them out with their connections. Consider using features like [experience events](../../production/promotion/experience-events.md) and [player invite prompts](../../production/promotion/invite-prompts.md) to invite users to bring their connections to your experience.
 
 <h4>Step 3: Monitor metrics after each experience update</h4>
 

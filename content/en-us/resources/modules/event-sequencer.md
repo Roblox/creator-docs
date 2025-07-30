@@ -35,17 +35,13 @@ To use the **EventSequencer** framework in an experience:
 
    <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
-1. Locate and click the **Dev Modules** tile.
-
-   <img src="../../assets/studio/toolbox/Creator-Store-Categories-Dev-Modules.png" width="200" />
+1. Locate and click the **Packages** tile.
 
 1. Locate the **Event Sequencer** module and click it, or drag-and-drop it into the 3D view.
 
    <img src="../../assets/developer-modules/event-sequencer/Toolbox-Icon.png" width="143" />
 
-1. In the [Explorer](../../studio/explorer.md) window, move the entire **EventSequencer** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
-
-   <img src="../../assets/developer-modules/event-sequencer/Move-Package.png" width="320" />
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **EventSequencer** model into `Class.ServerScriptService`. Upon running the experience the module will begin running.
 
 ### Framework modes
 
@@ -244,9 +240,6 @@ To install the plugin:
    <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
 
 2. With the **Creator Store** tab selected, select **Plugins** from the dropdown menu.
-
-   <img src="../../assets/studio/toolbox/Creator-Store-Plugins.png" width="360" />
-
 3. In the search field, type **Scene Manager** and press <kbd>Enter</kbd> to locate the plugin.
 
    <img src="../../assets/studio/toolbox/Creator-Store-Scene-Manager-Plugin.png" width="360" />

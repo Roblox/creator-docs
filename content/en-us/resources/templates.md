@@ -109,9 +109,9 @@ The **Pirate Island** template includes a destructible ship with working cannons
 
 <UseStudioButton variant="" buttonTextTranslationKey="Action.EditInStudio" placeId="264719325" universeId="107387509" />
 
-## Obby
+## Classic Obby
 
-The **Obby** template includes common obstacle objects like checkpoints, fast pads, jump pads, and player hazards that you can reconfigure to create your own courses.
+The **Classic Obby** template includes common obstacle objects like checkpoints, fast pads, jump pads, and player hazards that you can reconfigure to create your own courses.
 
 <img src="../assets/resources/templates/Obby-Template.png" width="50%" alt="" />
 

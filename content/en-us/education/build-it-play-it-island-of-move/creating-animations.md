@@ -13,32 +13,28 @@ Creating animations is like posing an action figure. For this tutorial, you'll c
 
 The poses and the final animation will be created using the Animation Editor.
 
-1. To find the Animation Editor, select the **Avatar** tab.
+1. To find the Animation Editor, go to the **Avatar** tab, then click the **Animation** button.
 
-   <img src="../../assets/studio/general/Avatar-Tab-Animation-Editor.png" width="640" />
-
-2. Click on the **Animation Editor**.
-
-   <img src="../../assets/education/build-it-play-it-island-of-move/creating-animations/open-animation-editor.png" width="50%" />
+   <img src="../../assets/education/general/Animation-Editor.png" />
 
    The Animation Editor will open at the bottom of your screen.
 
-   <img src="../../assets/education/build-it-play-it-island-of-move/creating-animations/highlight-animation-editor.jpeg" width="100%" />
+   <img src="../../assets/education/build-it-play-it-island-of-move/creating-animations/highlight-animation-editor.jpg" width="100%" />
 
-3. Next, you need a character to animate. On the pedestal, one has already been set up for you. Select the **figure** on top.
-   <img src="../../assets/education/build-it-play-it-island-of-move/creating-animations/highlight-figure.jpeg" width="50%" />
+2. Next, you need a character to animate. On the pedestal, one has already been set up for you. Select the **figure** on top.
+   <img src="../../assets/education/build-it-play-it-island-of-move/creating-animations/highlight-figure.jpg" width="100%" />
 
-   The camera will focus on the selected figure, and the part names that make up the figure will appear in the animation editor.
+   The part names that make up the figure will appear in the animation editor.
 
-   <img src="../../assets/education/build-it-play-it-island-of-move/creating-animations/rig-selected.jpeg" width="50%" />
+   <img src="../../assets/education/build-it-play-it-island-of-move/creating-animations/rig-selected.jpg" width="100%" />
 
 ## Prepare to pose
 
 Before creating the poses, make it easier to pose figures by changing a program setting and then position the camera.
 
-1. In the **Model** tab, find the **Snap to Grid** section. Make sure **Rotate** and **Move** are not checked.
+1. Back in the **Avatar** tab, find the snapping tools and make sure **Rotate** and **Move** are not checked.
 
-   <img src="../../assets/education/build-it-play-it-island-of-move/creating-animations/turn-off-snap.png" width="50%" />
+   <img src="../../assets/education/build-it-play-it-island-of-move/creating-animations/turn-off-snap.png" width="80%" />
 
 2. Using the camera controls, move the camera to get a good view of the part you want to animate. When moving, hold <kbd>Shift</kbd> to slow down camera movements.
 

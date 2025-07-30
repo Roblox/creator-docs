@@ -138,12 +138,12 @@ Try out Roblox with these stand alone lessons. Learn something new in less than 
 <Grid item XSmall={6}>
 
   <div>
-  <img src="../../assets/education/legacy/WCCHero_312x200.png" />
-  <h4>Story games</h4>
+  <img src="../../assets/tutorials/coding-lesson/StoryGameThumb.png" />
+  <h4>Coding lesson</h4>
   <p>
   Use strings and variables to create your own story.
   </p>
-  <a href="../../education/lesson-plans/story-games-lesson.md">
+  <a href="../../tutorials/curriculums/coding/index.md">
   <Button variant="contained">View</Button>
   </a>
   </div>
@@ -152,12 +152,12 @@ Try out Roblox with these stand alone lessons. Learn something new in less than 
 
 <Grid item XSmall={6}>
   <div>
-  <img src="../../assets/education/legacy/ccw2019_thumbnail_312x200px.png" />
-  <h4>Galactic Speedway</h4>
+  <video controls src="../../assets/tutorials/playing-character-animations/Default-Swim-Animation.mp4" width="88%"></video>
+  <h4>Animation lesson</h4>
   <p>
-  Build your own spaceship and race it with friends.
+  Create your own animation using a poseable figure.
   </p>
-  <a href="../../education/lesson-plans/galactic-speedway-lesson.md">
+  <a href="../../tutorials/curriculums/animator/index.md">
   <Button variant="contained">View</Button>
   </a>
   </div>

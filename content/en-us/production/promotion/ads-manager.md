@@ -1,10 +1,10 @@
 ---
-title: Ad campaigns
+title: Ads Manager
 description: The Ads Manager is where you can manage ad campaigns, ads reporting, and ads billings and payments in one place.
 ---
 
-<Alert severity="warning">
-The Ads Manager feature is in beta.
+<Alert severity="info">
+This feature is in beta.
 </Alert>
 
 The **Ads Manager** offers you control over your ad campaigns, empowering you to create, optimize, and measure ads effectively while reaching your campaign objectives. You can use this tool to manage your ad campaigns, ads reporting, and ads billings in one place.
@@ -414,7 +414,7 @@ There are nine genres available for targeting:
 - **Obby**: Navigate a series of challenging obstacles to reach a goal or complete a task.
 - **Roleplaying**: Assume the roles of characters in a fictional setting and have freedom to influence the story.
 - **Simulation**: Experiences that closely simulate real world or fictional realities.
-- **Social**: An environment where characters can meet friends, hangout, and socialize.
+- **Social**: An environment where characters can meet connections, hangout, and socialize.
 - **Sports**: Play traditional or fictional physical sports.
 - **Strategy**: Focus on skillful thinking and planning to achieve success.
 - **Tycoon**: Take on the role of a business owner and manage various aspects of the business to achieve success and profitability.

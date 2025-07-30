@@ -24,7 +24,7 @@ Roblox has built-in tools that allow anyone to screenshots or record video. Thes
 Additionally, some virtual learning experiences may have built-in assessments, such as quizzes. Some lesson plans on Roblox Education also have reflection questions, handouts, or quizzes.
 
 <figure>
-<img src="../../assets/education/legacy/module4-luaLearningQuiz.png" />
+<img src="../../assets/education/legacy/module4-luaLearningQuiz.png" width="80%" />
 <figcaption>Quiz in <a href="https://www.roblox.com/games/1334669864/" target="_blank" rel="noopener">Lua Learning</a></figcaption>
 </figure>
 

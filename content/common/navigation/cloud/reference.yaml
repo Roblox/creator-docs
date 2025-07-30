@@ -14,6 +14,8 @@ navigation:
         path: /cloud/reference/types
       - title: Errors
         path: /cloud/reference/errors
+      - title: Rate limits
+        path: /cloud/reference/rate-limits
       - title: OpenAPI descriptions
         path: /cloud/reference/openapi
   - heading: Authentication
@@ -51,10 +53,12 @@ navigation:
     path: /cloud/features/storage
   - title: Developer products
     path: /cloud/features/developer-products
-  - title: Friends
+  - title: Connections
     path: /cloud/features/friends
   - title: Game passes
     path: /cloud/features/game-passes
+  - title: Generative AI
+    path: /cloud/features/generative-ai
   - title: Groups
     path: /cloud/features/groups
   - title: Interactions

@@ -1,5 +1,5 @@
 ---
-title: Intellectual property
+title: Intellectual property for avatar items
 description: Explains protected intellectual property, both for individual and Roblox creations.
 ---
 

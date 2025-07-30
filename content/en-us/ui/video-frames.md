@@ -15,15 +15,15 @@ If you're a 13+ [ID verified](https://en.help.roblox.com/hc/en-us/articles/44072
 
 - You have the legal rights to use the video asset.
 - It adheres to the [Roblox Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846).
-- It's 60 seconds or less in either `.mp4` or `.mov` format.
+- It's 5 minutes or less in either `.mp4` or `.mov` format.
 - Its resolution is less than or equal to 4096&times;2160.
-- It's less than 750 MB.
+- It's less than 3.75 GB.
 - It includes only English, Spanish, Portuguese, Indonesian, Chinese (simplified and traditional), Japanese, and/or Korean audio and text.
 
 Videos that don't meet these requirements are rejected. Alpha channels are not supported and will be ignored. When uploading videos, consider the following:
 
 - Each video upload costs 2,000 Robux.
-- You can upload a maximum of ten videos within any 30-day period, starting from the date of your first video upload.
+- You can upload a maximum of 10 videos a day.
 
 ## Play videos
 

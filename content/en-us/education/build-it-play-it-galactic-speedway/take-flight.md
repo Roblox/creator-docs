@@ -9,11 +9,11 @@ Before designing your own driftspeeder, try flying a test speeder that's already
 
 1. Click **Play** to test.
 
-   <img src="../../assets/education/build-it-play-it-galactic-speedway/take-flight/play-button.png" />
+   <img src="../../assets/education/general/play-button.png" width="30%" />
 
-2. Walk up to the robot, Maja-M35, and press <kbd>E</kbd>.
+1. In the experience, walk up to the robot character under the spaceship sign and press <kbd>E</kbd> to open up a menu. On that screen, click **Race**. In a race, you'll fly through rings to make the fastest time.
 
-   <img src="../../assets/education/build-it-play-it-galactic-speedway/take-flight/interact-robot.jpeg" />
+   <img src="../../assets/education/build-it-play-it-galactic-speedway/take-flight/interact-robot.png" width="50%" />
 
    Below are controls for in-game.
 
@@ -40,15 +40,11 @@ Before designing your own driftspeeder, try flying a test speeder that's already
    </tbody>
    </table>
 
-3. Select **Race** from the menu options. In a race, you'll fly through rings to make the fastest time.
+1. For now, there's only one driftspeeder in the garage to choose from. Select it and then click **Start**.
 
-   <img src="../../assets/education/build-it-play-it-galactic-speedway/take-flight/select-race.jpeg" />
+   <img src="../../assets/education/build-it-play-it-galactic-speedway/take-flight/show-selection-gui.jpg" width="80%" />
 
-4. For now, there's only one driftspeeder in the garage to choose from. Select it and then click **Start**.
-
-   <img src="../../assets/education/build-it-play-it-galactic-speedway/take-flight/show-selection-gui.jpeg" />
-
-5. Wait for the countdown to finish. While inside, take a minute to get used to flying with the controls below. Since you can't use the mouse while flying, remember to **exit** the speeder by pressing <kbd>E</kbd>.
+1. Wait for the countdown to finish. While inside, take a minute to get used to flying with the controls below. Since you can't use the mouse while flying, remember to **exit** the speeder by pressing <kbd>E</kbd>.
 
    Below are controls for the speeder.
 
@@ -75,6 +71,6 @@ Before designing your own driftspeeder, try flying a test speeder that's already
    </tbody>
    </table>
 
-6. Stop playing by pressing the red square or press <kbd>Shift</kbd> + <kbd>F5</kbd>.
+1. Stop playing by pressing the red square or press <kbd>Shift</kbd> + <kbd>F5</kbd>.
 
-   <img src="../../assets/education/build-it-play-it-galactic-speedway/take-flight/stop-button.png" />
+   <img src="../../assets/education/general/stop-button.png" width="30%" />

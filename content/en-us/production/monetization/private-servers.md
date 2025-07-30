@@ -9,7 +9,7 @@ A **private server** is a subscription-based feature that allows a user to decid
 
 Private servers offer users privacy in circumstances like:
 
-- Playing experiences with their friends.
+- Playing experiences with their connections.
 - Holding gatherings such as classes, meetings, or parties.
 - Recording and/or streaming without other users.
 - Gathering in-experience resources.

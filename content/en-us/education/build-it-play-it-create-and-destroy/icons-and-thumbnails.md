@@ -70,9 +70,9 @@ For the game thumbnail, you can use the same screenshot or take another one. Thu
 
    <img src="../../assets/education/build-it-play-it-create-and-destroy/saveGameThumbnail.png" width="100%" />
 
-## Share with friends
+## Share with connections
 
-When you first publish an experience, it's automatically set to private. Making it public in the Game Settings menu will allow friends to be able to join with a link.
+When you first publish an experience, it's automatically set to private. Making it public in the Game Settings menu will allow connections to be able to join with a link.
 
 1. In the Game Settings window, select **Permissions**.
 

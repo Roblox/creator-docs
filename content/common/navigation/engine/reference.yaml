@@ -260,6 +260,11 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/AudioFlanger.yaml
                 ignoreTranslation: true
+              - title: AudioGate
+                path: /reference/engine/classes/AudioGate
+                type: engineapi
+                source: /reference/engine/classes/AudioGate.yaml
+                ignoreTranslation: true
               - title: AudioLimiter
                 path: /reference/engine/classes/AudioLimiter
                 type: engineapi
@@ -557,11 +562,6 @@ navigation:
                 path: /reference/engine/classes/CollectionService
                 type: engineapi
                 source: /reference/engine/classes/CollectionService.yaml
-                ignoreTranslation: true
-              - title: CommandService
-                path: /reference/engine/classes/CommandService
-                type: engineapi
-                source: /reference/engine/classes/CommandService.yaml
                 ignoreTranslation: true
               - title: CommerceService
                 path: /reference/engine/classes/CommerceService
@@ -4208,6 +4208,11 @@ navigation:
         path: /reference/engine/enums/DialogTone
         type: engineapi
         source: /reference/engine/enums/DialogTone.yaml
+        ignoreTranslation: true
+      - title: DisplaySize
+        path: /reference/engine/enums/DisplaySize
+        type: engineapi
+        source: /reference/engine/enums/DisplaySize.yaml
         ignoreTranslation: true
       - title: DominantAxis
         path: /reference/engine/enums/DominantAxis

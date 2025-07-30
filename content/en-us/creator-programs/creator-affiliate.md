@@ -3,6 +3,10 @@ title: Creator Affiliate Pilot Program
 description: The Creator Affiliate Pilot Program rewards creators for bringing new users to Roblox.
 ---
 
+<Alert severity="error">
+Effective on July 24, 2025, the Creator Affiliate program will be deprecated and replaced by the [Creator Rewards](https://devforum.roblox.com/t/introducing-creator-rewards-earn-more-by-growing-the-community/3777628) program.
+</Alert>
+
 The [Creator Affiliate Pilot Program](https://create.roblox.com/affiliate) rewards creators for bringing new users to Roblox. If accepted into our program, you can earn up to 50% of spend when new users sign up via your affiliate share links and purchase Robux. Earnings are capped at $100 USD per new user and based on their first six months of purchasing Robux. You receive your revenue in Robux, which you can exchange for real-world money through the [DevEx program](https://create.roblox.com/dashboard/devex).
 
 This program is currently in pilot, and we intend to expand to all eligible creators by mid-2025.
@@ -10,7 +14,7 @@ This program is currently in pilot, and we intend to expand to all eligible crea
 <figure>
 <Chip
     color="success"
-    label="Status: Open"
+    label="Status: Closed"
     size="medium"
     variant="filled" />
 </figure>
@@ -41,11 +45,3 @@ You must also provide an FTC disclosure that mentions you might earn a commissio
 - Be at least 13 years old (if under 18 years old, you must have parental or guardian consent)
 - Meet our [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards)
 - Be based in countries supporting [DevEx](https://en.help.roblox.com/hc/en-us/articles/203314100-Developer-Exchange-DevEx-Overview-How-to-Submit-Requirements)
-
-## How to apply
-
-You can apply to the Creator Affiliate Pilot Program using the link below.
-
-<Button href="https://survey.roblox.com/jfe/form/SV_0OQ5raEV6l54pa6" size='large' variant='contained' style={{width:200}}>Apply</Button>
-
-<br />

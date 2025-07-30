@@ -42,7 +42,7 @@ Studio provides several tools to get your third-party content into Studio depend
 
 - Sounds
 
-  - Uploaded sounds must follow Roblox's [sound requirements](../sound/assets.md#requirements).
+  - Uploaded sounds must follow Roblox's [audio asset requirements](../audio/assets.md#import-audio).
   - Studio's [Asset Manager](../projects/assets/manager.md) supports `.ogg`, `.mp3`, `.flac`, and `.wav` file formats and allows for bulk file imports.
 
 - Video

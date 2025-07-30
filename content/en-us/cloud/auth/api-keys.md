@@ -37,6 +37,11 @@ To create an API key:
 1. In the **Access Permissions** section, select an API from the **Select API
    System** menu and click the **Add API System** button. Repeat this step if
    you need to add multiple APIs to the key.
+
+   <Alert severity="info">
+   Certain permissions, generally those with the `legacy` prefix, aren't available for group-owned API keys. To add those permissions and send requests to the associated endpoints, you must use a user-owned API key.
+   </Alert>
+
 1. Select the experience that you want to access with the API key.
 1. From the **Experience Operations** dropdown, select the operations that you
    want to enable for the API key.
@@ -72,7 +77,7 @@ of your development team. </Alert>
 ## Group-owned API key permissions
 
 Group owners can manage group-owned API key permissions for group members to
-have different levels of control of API keys based on the [roles and
+have different levels of control of API keys based on their [roles and
 permissions](../../projects/groups.md#roles-and-permissions) within the group.
 There are also situations that automatically revoke API key management
 permissions for group members.

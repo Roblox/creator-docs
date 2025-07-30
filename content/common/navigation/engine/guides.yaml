@@ -461,8 +461,6 @@ navigation:
                 path: /chat/examples/simple-custom-frontend-ui
               - title: Custom chat commands
                 path: /chat/examples/custom-text-chat-commands
-          - title: Legacy chat system
-            path: /chat/legacy/legacy-chat-system
 
   - title: Matchmaking
     path: /matchmaking/

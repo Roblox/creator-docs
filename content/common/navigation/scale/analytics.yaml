@@ -4,13 +4,13 @@ navigation:
     path: /production/analytics/
   - title: Insights
     path: /production/analytics/insights
-    
+
   - heading: Monitor
   - title: Performance
     path: /production/analytics/performance
   - title: Error report
     path: /production/analytics/error-report
- 
+
   - heading: Dashboards
   - title: Overview
     path: /production/analytics/analytics-dashboard
@@ -26,7 +26,9 @@ navigation:
     path: /production/analytics/feedback
   - title: Monetization
     path: /production/analytics/monetization
-  
+  - title: Bans
+    path: /production/bans
+
   - heading: Event types
   - title: Overview
     path: /production/analytics/event-types

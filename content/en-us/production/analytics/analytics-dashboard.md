@@ -105,7 +105,7 @@ You can filter by the following metrics:
   </tr>
   <tr>
     <td>Acquisition source (only applicable to acquisition metrics)</td>
-    <td>Home recommendations, home other, search, friends, teleport, sponsored ads</td>
+    <td>Home recommendations, home other, search, connections, teleport, sponsored ads</td>
     <td>Analyze how users from different acquisition sources engage with your experience.</td>
   </tr>
 </tbody></table>

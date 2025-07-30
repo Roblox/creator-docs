@@ -7,13 +7,13 @@ description: Learn how to connect a beam effect in Roblox Studio, and to configu
 
 Now that you've made the attachments, it's time to connect them to the beam so that a texture can be shown.
 
-1. Under TestPlayer, select the **TutorialBeam**. In Properties, find **Attachment0**. Click the empty box to the right of the property. Then, in Explorer, find TestPlayer and click on **PlayerAttachment**.
+1. Under **TestPlayer**, select the **TutorialBeam**. In the **Properties** window, find **Attachment0**. Click the empty box to the right of the property. Then, in the **Explorer** window, find **TestPlayer** and click on **PlayerAttachment**.
 
    <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/connect-the-beam/attachment0-to-player.mp4" ></video>
 
-2. In the TutorialBeam properties, set **Attachment1** to the attachment you created in GoalPart1, the **GoalAttachment**.
+2. In the **TutorialBeam** properties, set **Attachment1** to the attachment you created in **GoalPart1**, the **GoalAttachment**.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/connect-the-beam/set-goal-attachment.png"  />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/connect-the-beam/set-goal-attachment.png" width="35%" />
 
 ## Adjust the beam
 
@@ -32,11 +32,11 @@ By default, a beam doesn't always face the camera. This may lead to situations w
 
 1. Make the beam visible at any position by going into the beam's properties and enabling **FaceCamera**.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/connect-the-beam/set-face-camera.png"  />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/connect-the-beam/set-face-camera.png" width="35%" />
 
    Once finished, you should see a white beam between the player and goal, regardless of camera angle.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/connect-the-beam/default-beam.jpeg"  />
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/connect-the-beam/default-beam.png" width="80%" />
 
 ## Make the tutorial arrows
 
@@ -47,15 +47,12 @@ The image displayed along the beam can be customized by changing its 2D texture.
    <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/connect-the-beam/beam-texture-change.mp4" ></video>
 
    <Alert severity="info">
-   Custom textures can be any image that you have. Learn to upload them in the [Asset Manager](../../projects/assets/manager.md) article.
+   Custom textures can be any image that you have. Learn how to upload them in the [Asset Manager](../../projects/assets/manager.md) article.
    </Alert>
 
 2. Right now, the arrow's texture is stretched. Set **TextureMode** to **Static** to make the arrow repeat at its original size.
 
-   <GridContainer numColumns="2">
-     <img src="../../assets/education/build-it-play-it-mansion-of-wonder/connect-the-beam/show-static-beam.jpeg" />
-     <img src="../../assets/education/build-it-play-it-mansion-of-wonder/connect-the-beam/set-texture-mode.png" />
-   </GridContainer>
+   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/connect-the-beam/show-static-beam.png" />
 
    <Alert severity="warning">
    If the arrow doesn't point the correct direction, attachments may be swapped. Make sure that Attachment0 connects to PlayerAttachment and Attachment1 to GoalAttachment. Alternatively, if you're using a custom texture, you may need to mirror the image in a photo-editing program.

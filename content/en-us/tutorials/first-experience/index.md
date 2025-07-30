@@ -57,7 +57,7 @@ To keep things simple, this tutorial instructs you to create a project with the 
 - **Spawn location** – A `Class.SpawnLocation` object is where player characters appear in the 3D space when they join an experience, as well as where they respawn when their health reaches zero.
 - **Baseplate** – A baseplate is a floor with a 4x4 grid texture.
 
-This template is a great starting point to create your first experience because it provides a neutral world with high-fidelity lighting technology, and a floor that aligns with stud measurements that you can use to position and orient 3D objects along a grid. Studs are Studio's base unit of length, and each stud equates to about 28 cm. For more information on Studio's primary units, see [Roblox Units](../../physics/units.md).
+This template is a great starting point to create your first experience because it provides a neutral world and a floor that aligns with stud measurements that you can use to position and orient 3D objects along a grid. Studs are Studio's base unit of length, and each stud equates to about 28 cm. For more information on Studio's primary units, see [Roblox Units](../../physics/units.md).
 
 <GridContainer numColumns="2">
   <figure>
@@ -102,8 +102,6 @@ To help you become familiar with both types of 3D objects, this tutorial provide
 </GridContainer>
 
 You can find this asset pack on the **Creator Store**, a marketplace that features assets from Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. The Creator Store is accessible directly in Studio within the **Toolbox**, as well as on the [Creator Hub](https://create.roblox.com/store/models). For more information about this marketplace, see [Creator Store](../../production/creator-store.md).
-
-<img src="../../assets/studio/toolbox/Creator-Store-Tab-Extended.png" width="100%" />
 
 To insert this tutorial's asset pack from the Creator Store to your Studio inventory, click the **Add to Inventory** link in the following component. Once assets are within your inventory, you can reuse them in any project on the platform.
 

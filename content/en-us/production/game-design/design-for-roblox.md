@@ -11,7 +11,7 @@ Roblox is unique, and the expectations and behavior of its user base can be conf
 
 ## Design for behavior
 
-Each experience on Roblox exists within the **wider context** of the platform and its catalog, with users often hopping from one experience to another with friends. Always consider the way that user behavior on Roblox reflects this when designing an experience.
+Each experience on Roblox exists within the **wider context** of the platform and its catalog, with users often hopping from one experience to another with connections. Always consider the way that user behavior on Roblox reflects this when designing an experience.
 
 <h4>First time user experience (FTUE)</h4>
 
@@ -21,15 +21,15 @@ Be conscious of the norms of your genre. The closer your design patterns and use
 
 <h4>Social interaction</h4>
 
-Many users treat Roblox as a place to hang out with their friends. Creating an experience conducive to social interaction encourages this kind of engagement and helps to grow your audience as users invite their friends to play with them. You can even make invitations a feature of your gameplay through mechanics such as parties and trading.
+Many users treat Roblox as a place to hang out with their connections. Creating an experience conducive to social interaction encourages this kind of engagement and helps to grow your audience as users invite their connections to play with them. You can even make invitations a feature of your gameplay through mechanics such as parties and trading.
 
 Encouraging social gameplay can also help with **retention**, as users can act as evergreen sources of content for each other. Many popular role-playing experiences such as [Brookhaven](https://www.roblox.com/games/4924922222/) focus on providing users with the tools they need to interact with each other within the experience, and these interactions become the spontaneous content that keeps users coming back. For these reasons, single-player experiences often find it harder to build and retain an audience on Roblox.
 
-Users spend a lot of time and money on their avatars and typically want them to be seen by their friends and other users. A common identity across the platform is part of what makes Roblox special, so if you're going to change that for your experience, make sure you have a good reason.
+Users spend a lot of time and money on their avatars and typically want them to be seen by their connections and other users. A common identity across the platform is part of what makes Roblox special, so if you're going to change that for your experience, make sure you have a good reason.
 
 To learn how to implement custom avatars in your experience, see [Customize avatar appearances](../../characters/appearance.md).
 
-Ensure you don't get in the way of social interaction with your design or monetization strategies. For instance, avoid making private servers prohibitively expensive, as this may discourage groups of friends from playing together.
+Ensure you don't get in the way of social interaction with your design or monetization strategies. For instance, avoid making private servers prohibitively expensive, as this may discourage groups of connections from playing together.
 
 To learn how to implement private servers into your experience, see [Private servers](../../production/monetization/private-servers.md).
 
@@ -48,7 +48,7 @@ Understanding the sometimes surprising expectations of the Roblox audience is es
 
 <h4>Younger audiences</h4>
 
-Younger users tend to be more interested in exploration, experimentation, and socializing than they are in competition or specific goals. Younger audiences consume content differently, informed by the instant content of social media and YouTube and driven by online interaction with their friends, and Roblox reflects this.
+Younger users tend to be more interested in exploration, experimentation, and socializing than they are in competition or specific goals. Younger audiences consume content differently, informed by the instant content of social media and YouTube and driven by online interaction with their connections, and Roblox reflects this.
 
 Watch kids playing Roblox if you want to understand what makes it work. Many top experiences on the platform may seem simplistic to older audiences, but they typically tap into common childhood experiences. For instance:
 
@@ -76,7 +76,7 @@ Though older users' interests overlap more with content on other platforms, don'
 
 Many Roblox users count Roblox and YouTube as their top two content platforms. Users often follow their favorite YouTubers into new experiences, especially if it looks like a lot of fun.
 
-Consider how your experience might work in a streaming context when designing: could a streamer make great, fun content with it? Can they easily involve their friends, or other streamers? Can you make their job easier? For instance, [Brookhaven](https://www.roblox.com/games/4924922222/) has a "Creator Cam" where content creators can hide the UI when they're recording a video. For more about promoting your experience, see [Promoting on Roblox](../../production/promotion/index.md).
+Consider how your experience might work in a streaming context when designing: could a streamer make great, fun content with it? Can they easily involve their connections, or other streamers? Can you make their job easier? For instance, [Brookhaven](https://www.roblox.com/games/4924922222/) has a "Creator Cam" where content creators can hide the UI when they're recording a video. For more about promoting your experience, see [Promoting on Roblox](../../production/promotion/index.md).
 
 ## Design for the engine
 

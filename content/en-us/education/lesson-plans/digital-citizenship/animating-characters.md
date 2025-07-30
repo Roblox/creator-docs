@@ -105,7 +105,7 @@ prev: /education/lesson-plans/digital-citizenship/coding-fundamentals
 
 ### Design an animation
 
-1. Lead students through <a href="../../../education/build-it-play-it-island-of-move/creating-animations.md" target="_blank" rel="noopener">Creating Animations</a> to <a href="../../../education/build-it-play-it-island-of-move/exporting-animations.md" target="_blank" rel="noopener">Exporting Animations</a>.
+1. Lead students through the following tutorial: <a href="../../../tutorials/curriculums/animator/index.md" target="_blank" rel="noopener">Animation lesson</a>.
 
    - Note that this lesson uses a template which is not needed. Students will build this in their obstacle course experience.
    - Skip any pages referring to Challenge Checkpoints.

@@ -154,7 +154,7 @@ To recreate the team voice chat in the sample [Gingerbread Island - Voice Chat](
    </AccordionDetails>
    </BaseAccordion>
 
-1. Playtest the experience with a couple friends to verify that teammates from each team can only hear each other through voice chat.
+1. Playtest the experience with a couple connections to verify that teammates from each team can only hear each other through voice chat.
 
 ## Add push to chat
 

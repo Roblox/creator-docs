@@ -121,9 +121,21 @@
           {
             "name": "pageToken",
             "in": "query",
-            "description": "The identifier for the desired search results page.",
+            "description": "The identifier for the desired search results page. Only one of 'pageNumber' and 'pageToken' can be present in a query.",
             "schema": {
               "type": "string"
+            }
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "description": "The page number to retrieve, starting from 0. Only one of 'pageNumber' and 'pageToken' can be present in a query.",
+            "schema": {
+              "maximum": 2147483647,
+              "minimum": 0,
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
             }
           },
           {
@@ -503,6 +515,7 @@
               }
             ],
             "description": "The type of audio (Music or SoundEffect).",
+            "deprecated": true,
             "x-enumNames": ["Music", "SoundEffect"],
             "x-enum-varnames": ["Music", "SoundEffect"],
             "x-enum-descriptions": ["Music", "SoundEffect"]
@@ -515,11 +528,6 @@
           "title": {
             "type": "string",
             "description": "The audio title.",
-            "nullable": true
-          },
-          "album": {
-            "type": "string",
-            "description": "The audio album. Only relevant for Music audio.",
             "nullable": true
           }
         },
@@ -640,7 +648,13 @@
                 "$ref": "#/components/schemas/Model"
               },
               {
+                "$ref": "#/components/schemas/Music"
+              },
+              {
                 "$ref": "#/components/schemas/Plugin"
+              },
+              {
+                "$ref": "#/components/schemas/SoundEffect"
               }
             ],
             "description": "The asset information.",
@@ -1134,6 +1148,29 @@
           }
         },
         "additionalProperties": false,
+        "nullable": true
+      },
+      "Music": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Audio"
+          }
+        ],
+        "properties": {
+          "album": {
+            "type": "string",
+            "description": "The album the music belongs to.",
+            "nullable": true
+          },
+          "genre": {
+            "type": "string",
+            "description": "The genre of the music.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Representation of a music asset.",
         "nullable": true
       },
       "ObjectMeshSummary": {
@@ -1725,6 +1762,29 @@
         "x-enum-varnames": ["VALUE", "DEVELOPER_SEGMENT"],
         "x-enum-descriptions": ["VALUE", "DEVELOPER_SEGMENT"]
       },
+      "SoundEffect": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Audio"
+          }
+        ],
+        "properties": {
+          "category": {
+            "type": "string",
+            "description": "The sound effect category.",
+            "nullable": true
+          },
+          "subcategory": {
+            "type": "string",
+            "description": "The sound effect subcategory.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Representation of a sound effect asset.",
+        "nullable": true
+      },
       "SpellCheckerResult": {
         "type": "object",
         "properties": {
@@ -2119,7 +2179,7 @@
         "nullable": true
       },
       "UiSortIntent": {
-        "enum": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+        "enum": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
         "type": "integer",
         "format": "int32",
         "x-enumNames": [
@@ -2135,7 +2195,8 @@
           "DateCreated",
           "DateModified",
           "Creator",
-          "Name"
+          "Name",
+          "AssetType"
         ],
         "x-enum-varnames": [
           "Relevance",
@@ -2150,7 +2211,8 @@
           "DateCreated",
           "DateModified",
           "Creator",
-          "Name"
+          "Name",
+          "AssetType"
         ],
         "x-enum-descriptions": [
           "Relevance",
@@ -2165,7 +2227,8 @@
           "DateCreated",
           "DateModified",
           "Creator",
-          "Name"
+          "Name",
+          "AssetType"
         ]
       },
       "VotingModel": {

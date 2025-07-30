@@ -23,8 +23,8 @@ The `Class.Lighting` service contains five high-level categories of properties t
 - **Color** - Configures hue within the environment.
 - **Intensity** - Configures the amount of light that hits the camera.
 - **Shadows** - Configures how shadows render within the environment.
+- **Appearance** - Properties that determine the lighting style and lighting/shading quality or view distance prioritization.
 - **Environment** - Configures environmental conditions, such as the time of day and geographic latitude.
-- **Technology** - Configures the lighting technology Studio uses to render lighting and shadows.
 
 The following instructions show you how to adjust properties within almost all of these categories to alter the colors of ambient and reflective lighting, make the edges of shadows sharper, utilize the most advanced lighting technology, and modify the position of the sun and your world to match the sample [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) settings.
 
@@ -61,9 +61,31 @@ To adjust the color of ambient lighting in your environment:
    1. Set **ColorShift_Top** to `196, 222, 255`. The hue that reflects from surfaces facing the sun lightens.
    1. Set **OutdoorAmbient** to `134, 158, 190`. All areas except for the tunnel display with a blue-grey hue.
 
+### Enable realistic lighting
+
+The second step in matching the sample **Island Jump - Final** experience's `Class.Lighting` service properties is to enable the most advanced lighting system. Studio begins every experience with `Enum.LightingStyle|Soft` lighting which renders a flatter look with softer lights and shadows. However, to enhance the environment and equip your local light sources to produce precise shadows and illumination, you must enable `Enum.LightingStyle|Realistic` lighting.
+
+For example, the local lighting from the glowing flare with soft lighting doesn't produce a shadow at all, while the glowing flare with realistic lighting produces a subtle shadow near the circumference of the sea stack platform. This effect becomes more pronounced the more light sources you have within your environment.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img width="100%" img src="../../../../assets/tutorials/core-building-and-scripting/LightingStyle-Soft.jpg" alt="The sample Island Jump experience with Soft lighting style." />
+    <figcaption>`Enum.LightingStyle|Soft` lighting style</figcaption>
+  </figure>
+  <figure>
+    <img width="100%" img src="../../../../assets/tutorials/core-building-and-scripting/LightingStyle-Realistic.jpg" alt="The sample Island Jump experience with Realistic lighting produces more prominent lighting from the flare."/>
+    <figcaption>`Enum.LightingStyle|Realistic` lighting style</figcaption>
+  </figure>
+</GridContainer>
+
+To enable realistic lighting:
+
+1. In the **Explorer** window, select **Lighting**.
+2. In the **Properties** window, click the **LightingStyle** dropdown, then select **Realistic**. The lighting system updates.
+
 ### Harden shadows
 
-The second step in matching the sample **Island Jump - Final** experience's `Class.Lighting` service properties is to harden the shadows in your environment. This creates a more dramatic effect when players navigate between the outdoor and covered areas of your experience.
+The third step in matching the sample **Island Jump - Final** experience's `Class.Lighting` service properties is to harden the shadows in your environment. This creates a more dramatic effect when players navigate between the outdoor and covered areas of your experience.
 
 <div><b>A comparison between the sample Island Jump experience's default and custom shadows</b></div>
 <GridContainer numColumns="2">
@@ -81,29 +103,6 @@ To harden the shadows in your environment:
 
 1. In the **Explorer** window, select **Lighting**.
 2. In the **Properties** window, set **ShadowSoftness** to `0`. Shadows produce hard edges.
-
-### Enable the future lighting system
-
-The third step in matching the sample **Island Jump - Final** experience's `Class.Lighting` service properties is to enable the most advanced lighting system in Studio. Studio begins every experience with the `Enum.Technology.ShadowMap` lighting system that renders crisp shadows and illumination from global lighting. However, to enhance the environment and equip your local light sources to produce precise shadows and illumination, you must enable the `Enum.Technology.Future` lighting system technology instead.
-
-The Future lighting system allows both your global and local lighting to work together and provide more realistic and immersive visuals. For example, the local lighting from the glowing flare with the ShadowMap lighting system doesn't produce a shadow at all while the glowing flare with the Future lighting system technology produces a subtle shadow near the circumference of the sea stack platform. This effect becomes more pronounced the more light sources you have within your environment.
-
-<div><b>A comparison between the ShadowMap lighting system and the Future lighting system</b></div>
-<GridContainer numColumns="2">
-  <figure>
-    <img width="100%" img src="../../../../assets/tutorials/core-building-and-scripting/ShadowMap-System.jpg" alt="The sample Island Jump experience with the ShadowMap lighting system." />
-    <figcaption>ShadowMap lighting system</figcaption>
-  </figure>
-  <figure>
-    <img width="100%" img src="../../../../assets/tutorials/core-building-and-scripting/Future-System.jpg" alt="The sample Island Jump experience with the Future lighting system that produces more prominent lighting from the flare."/>
-    <figcaption>Future lighting system</figcaption>
-  </figure>
-</GridContainer>
-
-To enable the Future lighting system:
-
-1. In the **Explorer** window, select **Lighting**.
-2. In the **Properties** window, click the **Technology** dropdown, then select **Future**. The lighting system updates.
 
 ### Change sun position
 

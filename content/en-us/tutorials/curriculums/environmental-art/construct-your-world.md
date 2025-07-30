@@ -3985,9 +3985,9 @@ Both lighting sources are important to consider because your experience has both
 
 Global lighting is the luminescence from either the sun or moon in an experience. By adjusting a couple of key default properties in the `Class.Lighting` service, you can dramatically change how that light appears to users, as well as how it interacts with any other object you place in the experience.
 
-Studio begins every experience with the `Enum.Technology.ShadowMap` lighting system, ensuring that the global lighting has precise shadows and illumination. However, to enhance the environment and equip your local light sources to also produce precise shadows and illumination, such as the lighting in the hallways and above the signage, you must enable the `Enum.Technology.Future` lighting system directly in Studio. This allows both your global and local lighting to work together and provide more realistic and immersive visuals.
+Studio begins every experience with `Enum.LightingStyle|Soft` lighting which renders a flatter look with softer lights and shadows. However, to enhance the environment and equip your local light sources to produce precise shadows and illumination, such as the lighting in the hallways and above the signage, you must enable `Enum.LightingStyle|Realistic` lighting. This allows both your global and local lighting to work together and provide more realistic and immersive visuals.
 
-For example, the `Enum.Technology.Future` lighting system automatically detects when a user is either in an interior or exterior space, then it responds by enabling the appropriate lighting model. This means that reflections are able to reflect off the floor and ceiling within the building, providing a richer visual experience as users navigate through combat pockets.
+For example, the `Enum.LightingStyle|Realistic` lighting style automatically detects when a user is either in an interior or exterior space, then it responds by enabling the appropriate lighting model. This means that reflections are able to reflect off the floor and ceiling within the building, providing a richer visual experience as users navigate through combat pockets.
 
 <Tabs>
   <TabItem key = "1" label="Create your own">
@@ -4015,8 +4015,8 @@ To exactly recreate the global lighting configuration within the sample [Environ
 
    1. Set **Ambient** to `26, 34, 36`.
    1. Set **OutdoorAmbient** to `26, 34, 36`.
+   1. Set **LightingStyle** to **Realistic**.
    1. Set **ShadowSoftness** to `0.15`.
-   1. Set **Technology** to **Future**.
    1. Set **GeographicLatitude** to `-18`.
    1. Set **TimeOfDay** to `-15:16:23`.
 

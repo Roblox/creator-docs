@@ -11,9 +11,10 @@ prev: /education/build-it-play-it-island-of-move/create-the-first-pose
 
 With the first pose is finished, save the animation.
 
-1. In the Animation Editor, find and click on the three dots ... icon. Then select **Save**.
+1. In the **Animation Editor**, find and click on the three dots icon.
+2. From the menu, select **Save**.
 
-   <img src="../../assets/education/build-it-play-it-island-of-move/save-and-publish/save-animation.gif" width="50%" />
+   <img src="../../assets/education/build-it-play-it-island-of-move/save-and-publish/save-animation.png" width="70%" />
 
 ## Save the place
 
@@ -25,11 +26,9 @@ The animation is saved, but it's important to save the whole project by publishi
 
 2. Enter a place name and an optional description.
 
-   <img src="../../assets/education/build-it-play-it-island-of-move/save-and-publish/name-description.png" width="50%" />
+   <img src="../../assets/education/general/name-description.png" />
 
-3. If desired, check **Phone** and **Tablet**. When ready, click the **Create** button. Once published, games can be edited from any computer since they're connected to your account.
-
-   <img src="../../assets/education/build-it-play-it-island-of-move/save-and-publish/save-desktop-mobile.png" width="50%" />
+3. When ready, click the **Create** button. Once published, games can be edited from any computer since they're connected to your account.
 
    <Alert severity="info">
    <AlertTitle>This game runs on mobile</AlertTitle>

@@ -17,7 +17,7 @@ Learn techniques to customize your particles even further or take a chance to sh
 <table>
   <tr>
     <td>
-      <img src="../../assets/education/build-it-play-it-mansion-of-wonder/next-steps/extension-cards-sparkler.jpeg" width="100%" />
+      <img src="../../assets/education/build-it-play-it-mansion-of-wonder/next-steps/extension-cards-sparkler.jpeg" width="60%" />
 
       **Create a Sparkler**
 
@@ -27,17 +27,5 @@ Learn techniques to customize your particles even further or take a chance to sh
       <Button variant="contained">View</Button>
       </a>
     </td>
-    <td>
-      <img src="../../assets/education/build-it-play-it-mansion-of-wonder/next-steps/terrain.jpeg" width="100%" />
-
-      **Terrain**
-
-      Create mountains, rivers, or paint snow and grass.
-
-      <a href="../../studio/terrain-editor.md">
-      <Button variant="contained">View</Button>
-      </a>
-    </td>
-
   </tr>
 </table>

@@ -3,19 +3,43 @@ title: Errors
 description: Defines the errors that are returned by Open Cloud APIs
 ---
 
-The following sections describe the error model for Open Cloud APIs.
+The following sections describe the error handling for Open Cloud APIs. Due to implementation differences across endpoints and validation layers, error responses can vary significantly in format.
+
+## Gateway errors
+
+For authentication or routing issues, both Open Cloud v1 and v2 APIs may return errors in this format:
+
+```json title="Example gateway error"
+{
+  "errors": [
+    {
+      "code": 0,
+      "message": "Invalid API Key"
+    }
+  ]
+}
+```
 
 ## Open Cloud v2
 
-By default, endpoints respond with a 200 OK status. When requests are
-unsuccessful, Open Cloud returns standard error codes. All error responses have
-the same format, which include:
+Open Cloud v2 APIs generally follow a consistent error format when the error occurs within the API endpoint itself.
 
-- `code` - Represents the HTTP status code.
-- `message` - A message that explains the error.
-- `details` - An object that contains more information specific to the error.
+### Standard v2 error format
 
-```json title="Example Error"
+Open Cloud v2 APIs return errors in this format:
+
+- `code` - A string representing the error type (e.g. `INVALID_ARGUMENT`, `NOT_FOUND`).
+- `message` - A human-readable message explaining the error.
+- `details` - An optional array containing additional error-specific information.
+
+```json title="Example v2 error"
+{
+  "code": "INVALID_ARGUMENT",
+  "message": "Invalid User ID in the request."
+}
+```
+
+```json title="Example v2 error with details"
 {
   "code": "INVALID_ARGUMENT",
   "message": "The provided filter is invalid.",
@@ -27,9 +51,9 @@ the same format, which include:
 }
 ```
 
-### Codes
+### v2 error codes
 
-The following table describes possible values for `code`.
+The following table describes possible values for `code` in v2 API responses.
 
 <table>
   <thead>
@@ -90,15 +114,11 @@ The following table describes possible values for `code`.
 
 ## Open Cloud v1
 
-Open Cloud v1 APIs share a standard format:
+Open Cloud v1 APIs have inconsistent error response formats. The format depends on the specific endpoint, the type of error, and where the error occurs in the request processing pipeline.
 
-- An `error` field, which is a high-level cause that is applicable to all Open Cloud endpoints.
-- An explanatory error `message`, which further explains the error.
-- An `errorDetails` object, which covers more information of the error that is specific to each API.
+Most v1 endpoints return errors in one of these three formats:
 
-To analyze the root cause of an error, refer to the value of the `error` field and the `errorDetails` field. Use the `message` field as a supplementary for error handling, as sometimes it might not cover the same level of details as the `errorDetails` field.
-
-```json title="Example Standard DataStores Error Response"
+```json title="Example v1 error with error field"
 {
   "error": "INVALID_ARGUMENT",
   "message": "Invalid cursor.",
@@ -111,22 +131,30 @@ To analyze the root cause of an error, refer to the value of the `error` field a
 }
 ```
 
-The example error response shows the high-level Open Cloud `error` as `INVALID_ARGUMENT`, the error `message` as `InvalidCursor`, and the `errorDetails` specific to [data stores](../../reference/cloud/datastores-api/v1.json) with the `datastoreErrorCode` as `InvalidCursor`. From the `error` and `datastoreErrorCode` fields of the response, you can understand that you passed an invalid cursor parameter that caused the error. You can then correct your cursor parameter to resolve the issue.
-
-All ordered data stores error responses have the same format, which includes:
-
-```json title="Example Ordered DataStores Error Response"
+```json title="Example v1 error with code field"
 {
   "code": "INVALID_ARGUMENT",
   "message": "Invalid cursor."
 }
 ```
 
-The `code` will contain a string of the high-level error while the `message` will contain specific details related to the error
+```json title="Example v1 detailed validation error"
+{
+  "errors": {
+    "assetId": ["The value 'a' is not valid."]
+  },
+  "type": "https://tools.ietf.org/html/rfc9110#section-15.5.1",
+  "title": "One or more validation errors occurred.",
+  "status": 400,
+  "extensions": {
+    "traceId": "00-427917f0fc3b8375ee33e4603a7f0693-f3f6ad560ff1a122-00"
+  }
+}
+```
 
-### Codes
+### v1 error codes
 
-Reference the following table for a summary of all high-level Open Cloud errors.
+The following table describes possible values for `error` or `code` in v1 API responses:
 
 <table>
   <thead>

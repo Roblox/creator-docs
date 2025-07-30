@@ -563,7 +563,7 @@
         }
       }
     },
-    "/assets/v1/assets/{assetId}/versions": {
+    "/v1/assets/{assetId}/versions": {
       "get": {
         "tags": ["Assets"],
         "x-roblox-cloud-api-operation": true,
@@ -650,7 +650,7 @@
         }
       }
     },
-    "/assets/v1/assets/{assetId}/versions:rollback": {
+    "/v1/assets/{assetId}/versions:rollback": {
       "post": {
         "tags": ["Assets"],
         "x-roblox-cloud-api-operation": true,
