@@ -47,7 +47,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: InsertService.AllowInsertFreeModels
     summary: |
       Indicates whether ''Free Models'' can be inserted into the game.
@@ -72,7 +71,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: InsertService:ApproveAssetId
     summary: ''
@@ -93,7 +91,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: InsertService:ApproveAssetVersionId
     summary: ''
     description: ''
@@ -113,7 +110,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: InsertService:CreateMeshPartAsync
     summary: |
       Creates a new `Class.MeshPart` with specified fidelity values.
@@ -151,7 +147,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: InsertService:GetBaseCategories
     summary: ''
     description: ''
@@ -168,7 +163,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: InsertService:GetBaseSets
     summary: |
       Returns an array of dictionaries, containing information about various
@@ -190,7 +184,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: InsertService:GetCollection
     summary: |
       Returns the most recently uploaded models in the specified category.
@@ -215,7 +208,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: InsertService:GetFreeDecals
     summary: |
       Retrieves a list of free Decals from the Catalog.
@@ -273,7 +265,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: InsertService:GetFreeModels
     summary: |
       Retrieves a list of Free Models from the Catalog.
@@ -329,7 +320,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: InsertService:GetLatestAssetVersionAsync
     summary: |
       Returns the latest AssetVersionId of an asset for assets created by the
@@ -356,7 +346,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: InsertService:GetUserCategories
     summary: ''
     description: ''
@@ -377,7 +366,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: InsertService:GetUserSets
     summary: |
       Returns an array of dictionaries, containing information about sets owned
@@ -453,7 +441,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: InsertService:Insert
     summary: |
       Inserts `Class.Instance` into `Class.Workspace`.
@@ -478,7 +465,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: InsertService:LoadAsset
     summary: |
       Returns a `Class.Model` containing the asset.
@@ -546,7 +532,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: InsertService:LoadAssetVersion
     summary: |
       Returns a model inserted into `Class.InsertService` containing the asset
@@ -570,7 +555,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: InsertService:loadAsset
     summary: ''
     description: ''
@@ -592,6 +576,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

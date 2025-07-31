@@ -39,7 +39,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: Pages:AdvanceToNextPageAsync
     summary: |
@@ -58,7 +57,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Pages:GetCurrentPage
     summary: |
       Returns the items on the current page. The keys in the item are determined
@@ -76,6 +74,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

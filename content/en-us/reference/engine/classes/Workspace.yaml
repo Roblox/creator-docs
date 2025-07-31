@@ -89,7 +89,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.AllowThirdPartySales
     summary: |
       Determines whether assets created by other users can be sold in the game.
@@ -129,7 +128,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.AuthorityMode
     summary: ''
     description: ''
@@ -147,7 +145,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.AvatarUnificationMode
     summary: ''
     description: ''
@@ -165,7 +162,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.ClientAnimatorThrottling
     summary: |
       Specifies the animation throttling mode for the local client.
@@ -193,7 +189,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.CurrentCamera
     summary: |
       The `Class.Camera` object being used by the local player.
@@ -228,7 +223,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.DistributedGameTime
     summary: |
       The amount of time, in seconds, that the game has been running.
@@ -270,7 +264,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.FallHeightEnabled
     summary: ''
     description: ''
@@ -287,7 +280,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.FallenPartsDestroyHeight
     summary: |
       Determines the height at which falling `Class.BasePart|BaseParts` and
@@ -322,7 +314,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.FilteringEnabled
     summary: |
       Determines whether changes made from the client will replicate to the
@@ -345,7 +336,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.FluidForces
     summary: |
       Determines whether the physics engine computes aerodynamic forces on
@@ -372,7 +362,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.GlobalWind
     summary: |
       Specifies the global wind vector for animated terrain grass, dynamic
@@ -395,7 +384,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.Gravity
     summary: |
       Determines the acceleration due to gravity applied to falling
@@ -420,7 +408,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.IKControlConstraintSupport
     summary: |
       Enables support for constraints for IKControls. If disabled, IKControls
@@ -443,7 +430,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.InsertPoint
     summary: ''
     description: ''
@@ -461,7 +447,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.InterpolationThrottling
     summary: ''
     description: ''
@@ -482,7 +467,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.LuauTypeCheckMode
     summary: ''
     description: ''
@@ -499,7 +483,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.MeshPartHeadsAndAccessories
     summary: |
       Sets whether character Heads and Accessories should be downloaded as
@@ -523,7 +506,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.ModelStreamingBehavior
     summary: ''
     description: ''
@@ -541,7 +523,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.MoverConstraintRootBehavior
     summary: |
       Controls the logic used to select the assembly root part when using any of
@@ -583,7 +564,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.PathfindingUseImprovedSearch
     summary: ''
     description: ''
@@ -601,7 +581,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.PhysicsImprovedSleep
     summary: ''
     description: ''
@@ -619,7 +598,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.PhysicsSteppingMethod
     summary: |
       Sets how the solver will advance the physics simulation forward in time.
@@ -670,7 +648,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.PlayerCharacterDestroyBehavior
     summary: ''
     description: ''
@@ -688,7 +665,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.PrimalPhysicsSolver
     summary: ''
     description: ''
@@ -706,7 +682,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.RejectCharacterDeletions
     summary: ''
     description: ''
@@ -724,7 +699,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.RenderingCacheOptimizations
     summary: ''
     description: ''
@@ -742,7 +716,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.ReplicateInstanceDestroySetting
     summary: ''
     description: ''
@@ -760,7 +733,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.Retargeting
     summary: ''
     description: ''
@@ -777,7 +749,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.SandboxedInstanceMode
     summary: ''
     description: ''
@@ -795,7 +766,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.SignalBehavior
     summary: |
       Configures when the engine resumes event handlers.
@@ -833,7 +803,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.StreamOutBehavior
     summary: |
       Configures how the engine decides when to Stream content away from
@@ -864,7 +833,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.StreamingEnabled
     summary: |
       Whether content streaming is enabled for the place.
@@ -891,7 +859,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.StreamingIntegrityMode
     summary: |
       Determines whether StreamingIntegrityMode is active.
@@ -915,7 +882,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.StreamingMinRadius
     summary: |
       Minimum distance that content will be streamed to players with high
@@ -950,7 +916,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.StreamingTargetRadius
     summary: |
       Maximum distance that content will be streamed to players.
@@ -983,7 +948,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.Terrain
     summary: |
       A reference to the `Class.Terrain` object parented to the
@@ -1012,7 +976,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.TouchEventsUseCollisionGroups
     summary: ''
     description: ''
@@ -1030,7 +993,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.TouchesUseCollisionGroups
     summary: |
       Determines whether `Class.BasePart|parts` in different groups set to not
@@ -1058,7 +1020,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.UseImprovedModelLod
     summary: ''
     description: ''
@@ -1076,7 +1037,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Workspace.UseNewLuauTypeSolver
     summary: ''
     description: ''
@@ -1094,7 +1054,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: Workspace:BreakJoints
     summary: |
@@ -1136,21 +1095,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
-  - name: Workspace:ExperimentalSolverIsEnabled
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: boolean
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: LocalUserSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: Workspace:GetNumAwakeParts
     summary: |
       Returns the number of `Class.BasePart|BaseParts` that are deemed
@@ -1191,7 +1135,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Workspace:GetPhysicsThrottling
     summary: |
       Returns an integer, between 0 and 100, representing the percentage of
@@ -1250,7 +1193,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Workspace:GetRealPhysicsFPS
     summary: |
       Returns the number of frames per second that physics is currently being
@@ -1282,7 +1224,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Workspace:GetServerTimeNow
     summary: |
       Returns the server's Unix time in seconds.
@@ -1329,7 +1270,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Workspace:JoinToOutsiders
     summary: |
       Creates joints between the specified `Class.BasePart|Parts` and any
@@ -1408,7 +1348,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Workspace:MakeJoints
     summary: |
       Goes through all `Class.BasePart|BaseParts` given. If any part's side has
@@ -1467,7 +1406,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Workspace:PGSIsEnabled
     summary: |
       Returns `true` if the game has the PGS Physics solver enabled.
@@ -1488,7 +1426,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Workspace:UnjoinFromOutsiders
     summary: |
       Breaks all joints between the specified `Class.BasePart|BaseParts` and
@@ -1542,7 +1479,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Workspace:ZoomToExtents
     summary: |
       Positions and zooms the `Class.Workspace.CurrentCamera` to show the extent
@@ -1568,7 +1504,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: Workspace.PersistentLoaded
     summary: |
@@ -1591,5 +1526,4 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

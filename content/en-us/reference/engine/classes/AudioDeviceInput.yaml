@@ -51,7 +51,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: AudioDeviceInput.Active
     summary: |
       Controls whether the physical device is actively recording.
@@ -74,7 +73,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: AudioDeviceInput.IsReady
     summary: |
       Denotes whether this `Class.AudioDeviceInput` is ready to produce sound.
@@ -96,7 +94,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: AudioDeviceInput.Muted
     summary: |
       Controls whether this `Class.AudioDeviceInput` is muted.
@@ -122,7 +119,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: AudioDeviceInput.MutedByLocalUser
     summary: ''
     description: ''
@@ -140,7 +136,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: AudioDeviceInput.Player
     summary: |
       Determines whose device is producing sound.
@@ -162,7 +157,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: AudioDeviceInput.Volume
     summary: |
       Volume level which is multiplied onto the output audio stream.
@@ -182,7 +176,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: AudioDeviceInput:GetConnectedWires
     summary: |
@@ -205,7 +198,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AudioDeviceInput:GetInputPins
     summary: ''
     description: ''
@@ -219,7 +211,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AudioDeviceInput:GetOutputPins
     summary: ''
     description: ''
@@ -233,7 +224,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AudioDeviceInput:GetUserIdAccessList
     summary: |
       Returns a list of user IDs that are either permitted to hear or blocked
@@ -252,7 +242,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AudioDeviceInput:SetUserIdAccessList
     summary: |
       Sets a list of user IDs that are either permitted to hear or blocked from
@@ -278,7 +267,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: AudioDeviceInput.WiringChanged
     summary: |
@@ -315,5 +303,4 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

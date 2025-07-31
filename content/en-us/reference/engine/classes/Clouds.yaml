@@ -45,7 +45,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: Clouds.Cover
     summary: |
       Defines the cloud cover within the overall skyscape layer.
@@ -69,7 +68,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: Clouds.Density
     summary: |
       Controls the particulate density of clouds.
@@ -93,7 +91,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: Clouds.Enabled
     summary: |
       Toggles rendering of the `Class.Clouds` object.
@@ -115,7 +112,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

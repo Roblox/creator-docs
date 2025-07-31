@@ -53,7 +53,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: ColorCorrectionEffect.Contrast
     summary: |
       Determines the change in separation between the dark and light colors.
@@ -75,7 +74,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: ColorCorrectionEffect.Saturation
     summary: |
       Determines the change in intensity of colors.
@@ -97,7 +95,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: ColorCorrectionEffect.TintColor
     summary: |
       Determines by how much the RGB channels of pixels are scaled.
@@ -120,7 +117,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

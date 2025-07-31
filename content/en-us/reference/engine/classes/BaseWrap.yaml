@@ -35,7 +35,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: BaseWrap.CageMeshId
     summary: |
       Asset ID for cage mesh.
@@ -57,7 +56,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: BaseWrap.CageOrigin
     summary: |
       Cage mesh offset relative to parent `Class.MeshPart`.
@@ -79,7 +77,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: BaseWrap.CageOriginWorld
     summary: |
       Cage mesh offset in world space.
@@ -101,7 +98,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: BaseWrap.HSRAssetId
     summary: ''
     description: ''
@@ -120,7 +116,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: BaseWrap.ImportOrigin
     summary: |
       Describes where a global zero was while authoring the cage mesh in an
@@ -180,7 +175,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: BaseWrap.ImportOriginWorld
     summary: |
       Describes where the origin (in world space) was while authoring the cage
@@ -204,7 +198,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

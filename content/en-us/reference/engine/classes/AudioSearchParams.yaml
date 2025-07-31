@@ -37,7 +37,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: AudioSearchParams.Artist
     summary: |
       The artist that created the audio asset.
@@ -57,7 +56,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: AudioSearchParams.AudioSubType
     summary: ''
     description: ''
@@ -74,7 +72,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: AudioSearchParams.AudioSubtype
     summary: |
       The subtype of the audio asset.
@@ -96,7 +93,6 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: AudioSearchParams.MaxDuration
     summary: |
       The maximum duration of the audio asset.
@@ -115,7 +111,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: AudioSearchParams.MinDuration
     summary: |
       The minimum duration of the audio asset.
@@ -134,7 +129,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: AudioSearchParams.SearchKeyword
     summary: |
       The keyword to search for.
@@ -153,7 +147,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: AudioSearchParams.Tag
     summary: |
       The tag of the audio asset.
@@ -172,7 +165,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: AudioSearchParams.Title
     summary: |
       The title of the audio asset.
@@ -191,7 +183,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

@@ -30,7 +30,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: VideoPlayer.AutoLoadInStudio
     summary: ''
     description: ''
@@ -49,7 +48,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: VideoPlayer.AutoPlayInStudio
     summary: ''
     description: ''
@@ -68,7 +66,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: VideoPlayer.IsLoaded
     summary: ''
     description: ''
@@ -87,7 +84,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: VideoPlayer.IsPlaying
     summary: ''
     description: ''
@@ -106,7 +102,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: VideoPlayer.Looping
     summary: ''
     description: ''
@@ -123,7 +118,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: VideoPlayer.PlaybackSpeed
     summary: ''
     description: ''
@@ -140,7 +134,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: VideoPlayer.Resolution
     summary: ''
     description: ''
@@ -159,7 +152,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: VideoPlayer.TimeLength
     summary: ''
     description: ''
@@ -178,7 +170,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: VideoPlayer.TimePosition
     summary: ''
     description: ''
@@ -195,7 +186,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: VideoPlayer.Volume
     summary: ''
     description: ''
@@ -212,7 +202,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: VideoPlayer:GetConnectedWires
     summary: ''
@@ -231,7 +220,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: VideoPlayer:GetInputPins
     summary: ''
     description: ''
@@ -245,7 +233,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: VideoPlayer:GetOutputPins
     summary: ''
     description: ''
@@ -259,7 +246,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: VideoPlayer:LoadAsync
     summary: ''
     description: ''
@@ -274,7 +260,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: VideoPlayer:Pause
     summary: ''
     description: ''
@@ -288,7 +273,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: VideoPlayer:Play
     summary: ''
     description: ''
@@ -302,7 +286,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: VideoPlayer:Unload
     summary: ''
     description: ''
@@ -316,7 +299,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: VideoPlayer.DidEnd
     summary: ''
@@ -327,7 +309,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: VideoPlayer.DidLoop
     summary: ''
     description: ''
@@ -337,7 +318,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: VideoPlayer.PlayFailed
     summary: ''
     description: ''
@@ -351,7 +331,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: VideoPlayer.WiringChanged
     summary: ''
     description: ''
@@ -377,5 +356,4 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

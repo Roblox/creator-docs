@@ -46,7 +46,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
 methods: []
 events:
   - name: FlagStand.FlagCaptured
@@ -72,5 +71,4 @@ events:
     security: None
     capabilities:
       - Basic
-    writeCapabilities: []
 callbacks: []

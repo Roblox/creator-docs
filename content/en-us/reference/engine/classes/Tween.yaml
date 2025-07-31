@@ -51,7 +51,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Tween.TweenInfo
     summary: |
       Read-only property that includes information on how the interpolation of
@@ -77,7 +76,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

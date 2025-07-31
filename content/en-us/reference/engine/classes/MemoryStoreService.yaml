@@ -49,7 +49,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: MemoryStoreService:GetQueue
     summary: |
       Returns a `Class.MemoryStoreQueue` instance for the provided name.
@@ -80,7 +79,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: MemoryStoreService:GetSortedMap
     summary: |
       Returns a `Class.MemoryStoreSortedMap` instance for the provided name.
@@ -105,6 +103,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
 events: []
 callbacks: []

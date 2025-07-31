@@ -73,7 +73,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: SpringConstraint.CurrentLength
     summary: |
       The current distance between the constraint's
@@ -97,7 +96,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: SpringConstraint.Damping
     summary: |
       Damping constant for the `Class.SpringConstraint`. Multiplied to the
@@ -121,7 +119,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: SpringConstraint.FreeLength
     summary: |
       Natural resting length of the spring.
@@ -141,7 +138,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: SpringConstraint.LimitsEnabled
     summary: |
       Sets whether the `Class.SpringConstraint` enforces a minimum and maximum
@@ -168,7 +164,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: SpringConstraint.MaxForce
     summary: |
       The maximum force the `Class.SpringConstraint` can apply on its
@@ -192,7 +187,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: SpringConstraint.MaxLength
     summary: |
       The maximum separation the SpringConstraint will allow if
@@ -214,7 +208,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: SpringConstraint.MinLength
     summary: |
       The minimum separation the SpringConstraint will allow if
@@ -236,7 +229,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: SpringConstraint.Radius
     summary: |
       The visualized radius of the spring's coils.
@@ -256,7 +248,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: SpringConstraint.Stiffness
     summary: |
       The strength of the spring. The higher this value the more force will be
@@ -280,7 +271,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: SpringConstraint.Thickness
     summary: |
       The visualized thickness of the spring's coils.
@@ -300,7 +290,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

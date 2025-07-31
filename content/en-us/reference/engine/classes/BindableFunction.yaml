@@ -90,7 +90,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks:
   - name: BindableFunction.OnInvoke
@@ -124,4 +123,3 @@ callbacks:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []

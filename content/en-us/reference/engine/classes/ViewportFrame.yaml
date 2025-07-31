@@ -64,7 +64,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ViewportFrame.CurrentCamera
     summary: |
       `Class.Camera` that is used to render children objects.
@@ -92,7 +91,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ViewportFrame.ImageColor3
     summary: |
       Determines how the rendered viewport image will be colorized.
@@ -119,7 +117,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ViewportFrame.ImageTransparency
     summary: |
       Determines the transparency of the rendered viewport image.
@@ -145,7 +142,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ViewportFrame.LightColor
     summary: |
       The color of the emitted light.
@@ -167,7 +163,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ViewportFrame.LightDirection
     summary: |
       A `Datatype.Vector3` representing the direction of the light source.
@@ -189,7 +184,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

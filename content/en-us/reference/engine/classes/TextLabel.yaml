@@ -79,7 +79,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextLabel.Font
     summary: |
       Determines the font used to render text.
@@ -116,7 +115,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextLabel.FontFace
     summary: |
       Determines the font used to render text.
@@ -142,7 +140,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextLabel.FontSize
     summary: |
       Determines the font size to be used.
@@ -166,7 +163,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextLabel.LineHeight
     summary: |
       Scales the spacing between lines of text in the `Class.TextLabel`.
@@ -188,7 +184,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextLabel.LocalizedText
     summary: |
       Sets whether a `Class.TextLabel` should be `Class.GuiBase2d.Localize` or
@@ -213,7 +208,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextLabel.MaxVisibleGraphemes
     summary: |
       The maximum number of graphemes the `Class.TextLabel` can show.
@@ -243,7 +237,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextLabel.OpenTypeFeatures
     summary: ''
     description: ''
@@ -261,7 +254,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextLabel.OpenTypeFeaturesError
     summary: ''
     description: ''
@@ -281,7 +273,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextLabel.RichText
     summary: |
       Determines whether the `Class.TextLabel` renders its text using rich text
@@ -307,7 +298,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextLabel.Text
     summary: |
       Determines the string rendered by the `Class.TextLabel`.
@@ -346,7 +336,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextLabel.TextBounds
     summary: |
       Read-only property which reflects the absolute size of rendered text in
@@ -377,7 +366,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextLabel.TextColor
     summary: |
       Determines the color of text.
@@ -402,7 +390,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextLabel.TextColor3
     summary: |
       Determines the color of rendered text.
@@ -424,7 +411,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextLabel.TextDirection
     summary: |
       Direction in which the text is rendered.
@@ -444,7 +430,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextLabel.TextFits
     summary: |
       A boolean representation of whether the label's text fits within the size
@@ -468,7 +453,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextLabel.TextScaled
     summary: |
       Changes whether text is resized to fit within the `Class.TextLabel`.
@@ -520,7 +504,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextLabel.TextSize
     summary: |
       Determines the line height of text in offsets.
@@ -542,7 +525,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextLabel.TextStrokeColor3
     summary: |
       Determines the color of the text stroke (outline).
@@ -568,7 +550,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextLabel.TextStrokeTransparency
     summary: |
       Determines the transparency of the text stroke (outline).
@@ -599,7 +580,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextLabel.TextTransparency
     summary: |
       Determines the transparency of rendered text.
@@ -620,7 +600,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextLabel.TextTruncate
     summary: |
       Controls the truncation of the text displayed in the `Class.TextLabel`.
@@ -640,7 +619,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextLabel.TextWrap
     summary: |
       Determines whether or not text should wrap at the edges of the
@@ -666,7 +644,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextLabel.TextWrapped
     summary: |
       Determines if text wraps to multiple lines within the `Class.TextLabel`
@@ -700,7 +677,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextLabel.TextXAlignment
     summary: |
       Determines the horizontal alignment of rendered text.
@@ -727,7 +703,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextLabel.TextYAlignment
     summary: |
       Determines the vertical alignment of rendered text.
@@ -754,7 +729,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

@@ -39,7 +39,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: NetworkSettings.FreeMemoryMBytes
     summary: |
       Describes how much free memory is available, in MBs.
@@ -64,7 +63,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: NetworkSettings.HttpProxyEnabled
     summary: ''
     description: ''
@@ -81,7 +79,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: NetworkSettings.HttpProxyURL
     summary: ''
     description: ''
@@ -98,7 +95,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: NetworkSettings.IncomingReplicationLag
     summary: |
       Simulate additional network latency in the network receiving path.
@@ -118,7 +114,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: NetworkSettings.PrintJoinSizeBreakdown
     summary: |
       Print diagnostic information about data sent on connect.
@@ -140,7 +135,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: NetworkSettings.PrintPhysicsErrors
     summary: |
       When set to true, debug messages will be printed into the output
@@ -181,7 +175,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: NetworkSettings.PrintStreamInstanceQuota
     summary: |
       When set to true, debug information is printed to the output regarding the
@@ -236,7 +229,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: NetworkSettings.RandomizeJoinInstanceOrder
     summary: |
       Special facility to help catch bugs related to how your experience loads.
@@ -258,7 +250,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: NetworkSettings.RenderStreamedRegions
     summary: |
       When set to true, regions of space that are being streamed to the client
@@ -280,7 +271,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: NetworkSettings.ShowActiveAnimationAsset
     summary: |
       When set to true, a label will be shown above each player's head, showing
@@ -303,7 +293,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

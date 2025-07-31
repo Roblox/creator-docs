@@ -31,7 +31,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.ChestRangeMax
     summary: ''
     description: ''
@@ -49,7 +48,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.ChestRangeMin
     summary: ''
     description: ''
@@ -67,7 +65,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.ChestSize
     summary: ''
     description: ''
@@ -85,7 +82,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.ChestTposeAdjustment
     summary: ''
     description: ''
@@ -103,7 +99,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.HeadBase
     summary: ''
     description: ''
@@ -121,7 +116,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.HeadBaseRangeMax
     summary: ''
     description: ''
@@ -139,7 +133,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.HeadBaseRangeMin
     summary: ''
     description: ''
@@ -157,7 +150,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.HeadBaseSize
     summary: ''
     description: ''
@@ -175,7 +167,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.HeadBaseTposeAdjustment
     summary: ''
     description: ''
@@ -193,7 +184,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftAnkle
     summary: ''
     description: ''
@@ -211,7 +201,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftAnkleRangeMax
     summary: ''
     description: ''
@@ -229,7 +218,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftAnkleRangeMin
     summary: ''
     description: ''
@@ -247,7 +235,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftAnkleSize
     summary: ''
     description: ''
@@ -265,7 +252,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftAnkleTposeAdjustment
     summary: ''
     description: ''
@@ -283,7 +269,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftClavicle
     summary: ''
     description: ''
@@ -301,7 +286,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftClavicleRangeMax
     summary: ''
     description: ''
@@ -319,7 +303,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftClavicleRangeMin
     summary: ''
     description: ''
@@ -337,7 +320,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftClavicleSize
     summary: ''
     description: ''
@@ -355,7 +337,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftClavicleTposeAdjustment
     summary: ''
     description: ''
@@ -373,7 +354,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftElbow
     summary: ''
     description: ''
@@ -391,7 +371,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftElbowRangeMax
     summary: ''
     description: ''
@@ -409,7 +388,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftElbowRangeMin
     summary: ''
     description: ''
@@ -427,7 +405,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftElbowSize
     summary: ''
     description: ''
@@ -445,7 +422,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftElbowTposeAdjustment
     summary: ''
     description: ''
@@ -463,7 +439,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftHip
     summary: ''
     description: ''
@@ -481,7 +456,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftHipRangeMax
     summary: ''
     description: ''
@@ -499,7 +473,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftHipRangeMin
     summary: ''
     description: ''
@@ -517,7 +490,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftHipSize
     summary: ''
     description: ''
@@ -535,7 +507,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftHipTposeAdjustment
     summary: ''
     description: ''
@@ -553,7 +524,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftKnee
     summary: ''
     description: ''
@@ -571,7 +541,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftKneeRangeMax
     summary: ''
     description: ''
@@ -589,7 +558,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftKneeRangeMin
     summary: ''
     description: ''
@@ -607,7 +575,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftKneeSize
     summary: ''
     description: ''
@@ -625,7 +592,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftKneeTposeAdjustment
     summary: ''
     description: ''
@@ -643,7 +609,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftShoulder
     summary: ''
     description: ''
@@ -661,7 +626,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftShoulderRangeMax
     summary: ''
     description: ''
@@ -679,7 +643,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftShoulderRangeMin
     summary: ''
     description: ''
@@ -697,7 +660,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftShoulderSize
     summary: ''
     description: ''
@@ -715,7 +677,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftShoulderTposeAdjustment
     summary: ''
     description: ''
@@ -733,7 +694,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftToes
     summary: ''
     description: ''
@@ -751,7 +711,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftToesRangeMax
     summary: ''
     description: ''
@@ -769,7 +728,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftToesRangeMin
     summary: ''
     description: ''
@@ -787,7 +745,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftToesSize
     summary: ''
     description: ''
@@ -805,7 +762,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftToesTposeAdjustment
     summary: ''
     description: ''
@@ -823,7 +779,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftWrist
     summary: ''
     description: ''
@@ -841,7 +796,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftWristRangeMax
     summary: ''
     description: ''
@@ -859,7 +813,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftWristRangeMin
     summary: ''
     description: ''
@@ -877,7 +830,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftWristSize
     summary: ''
     description: ''
@@ -895,7 +847,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.LeftWristTposeAdjustment
     summary: ''
     description: ''
@@ -913,7 +864,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.Neck
     summary: ''
     description: ''
@@ -931,7 +881,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.NeckRangeMax
     summary: ''
     description: ''
@@ -949,7 +898,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.NeckRangeMin
     summary: ''
     description: ''
@@ -967,7 +915,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.NeckSize
     summary: ''
     description: ''
@@ -985,7 +932,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.NeckTposeAdjustment
     summary: ''
     description: ''
@@ -1003,7 +949,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.Pelvis
     summary: ''
     description: ''
@@ -1021,7 +966,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.PelvisRangeMax
     summary: ''
     description: ''
@@ -1039,7 +983,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.PelvisRangeMin
     summary: ''
     description: ''
@@ -1057,7 +1000,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.PelvisSize
     summary: ''
     description: ''
@@ -1075,7 +1017,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.PelvisTposeAdjustment
     summary: ''
     description: ''
@@ -1093,7 +1034,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightAnkle
     summary: ''
     description: ''
@@ -1111,7 +1051,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightAnkleRangeMax
     summary: ''
     description: ''
@@ -1129,7 +1068,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightAnkleRangeMin
     summary: ''
     description: ''
@@ -1147,7 +1085,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightAnkleSize
     summary: ''
     description: ''
@@ -1165,7 +1102,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightAnkleTposeAdjustment
     summary: ''
     description: ''
@@ -1183,7 +1119,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightClavicle
     summary: ''
     description: ''
@@ -1201,7 +1136,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightClavicleRangeMax
     summary: ''
     description: ''
@@ -1219,7 +1153,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightClavicleRangeMin
     summary: ''
     description: ''
@@ -1237,7 +1170,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightClavicleSize
     summary: ''
     description: ''
@@ -1255,7 +1187,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightClavicleTposeAdjustment
     summary: ''
     description: ''
@@ -1273,7 +1204,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightElbow
     summary: ''
     description: ''
@@ -1291,7 +1221,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightElbowRangeMax
     summary: ''
     description: ''
@@ -1309,7 +1238,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightElbowRangeMin
     summary: ''
     description: ''
@@ -1327,7 +1255,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightElbowSize
     summary: ''
     description: ''
@@ -1345,7 +1272,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightElbowTposeAdjustment
     summary: ''
     description: ''
@@ -1363,7 +1289,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightHip
     summary: ''
     description: ''
@@ -1381,7 +1306,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightHipRangeMax
     summary: ''
     description: ''
@@ -1399,7 +1323,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightHipRangeMin
     summary: ''
     description: ''
@@ -1417,7 +1340,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightHipSize
     summary: ''
     description: ''
@@ -1435,7 +1357,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightHipTposeAdjustment
     summary: ''
     description: ''
@@ -1453,7 +1374,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightKnee
     summary: ''
     description: ''
@@ -1471,7 +1391,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightKneeRangeMax
     summary: ''
     description: ''
@@ -1489,7 +1408,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightKneeRangeMin
     summary: ''
     description: ''
@@ -1507,7 +1425,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightKneeSize
     summary: ''
     description: ''
@@ -1525,7 +1442,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightKneeTposeAdjustment
     summary: ''
     description: ''
@@ -1543,7 +1459,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightShoulder
     summary: ''
     description: ''
@@ -1561,7 +1476,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightShoulderRangeMax
     summary: ''
     description: ''
@@ -1579,7 +1493,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightShoulderRangeMin
     summary: ''
     description: ''
@@ -1597,7 +1510,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightShoulderSize
     summary: ''
     description: ''
@@ -1615,7 +1527,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightShoulderTposeAdjustment
     summary: ''
     description: ''
@@ -1633,7 +1544,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightToes
     summary: ''
     description: ''
@@ -1651,7 +1561,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightToesRangeMax
     summary: ''
     description: ''
@@ -1669,7 +1578,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightToesRangeMin
     summary: ''
     description: ''
@@ -1687,7 +1595,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightToesSize
     summary: ''
     description: ''
@@ -1705,7 +1612,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightToesTposeAdjustment
     summary: ''
     description: ''
@@ -1723,7 +1629,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightWrist
     summary: ''
     description: ''
@@ -1741,7 +1646,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightWristRangeMax
     summary: ''
     description: ''
@@ -1759,7 +1663,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightWristRangeMin
     summary: ''
     description: ''
@@ -1777,7 +1680,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightWristSize
     summary: ''
     description: ''
@@ -1795,7 +1697,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RightWristTposeAdjustment
     summary: ''
     description: ''
@@ -1813,7 +1714,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.Root
     summary: ''
     description: ''
@@ -1831,7 +1731,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RootRangeMax
     summary: ''
     description: ''
@@ -1849,7 +1748,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RootRangeMin
     summary: ''
     description: ''
@@ -1867,7 +1765,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RootSize
     summary: ''
     description: ''
@@ -1885,7 +1782,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.RootTposeAdjustment
     summary: ''
     description: ''
@@ -1903,7 +1799,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.Waist
     summary: ''
     description: ''
@@ -1921,7 +1816,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.WaistRangeMax
     summary: ''
     description: ''
@@ -1939,7 +1833,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.WaistRangeMin
     summary: ''
     description: ''
@@ -1957,7 +1850,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.WaistSize
     summary: ''
     description: ''
@@ -1975,7 +1867,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription.WaistTposeAdjustment
     summary: ''
     description: ''
@@ -1993,7 +1884,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
 methods:
   - name: HumanoidRigDescription:Automap
     summary: ''
@@ -2013,7 +1903,6 @@ methods:
     thread_safety: Safe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription:GetJointFromName
     summary: ''
     description: ''
@@ -2032,7 +1921,6 @@ methods:
     thread_safety: Safe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription:GetJointNames
     summary: ''
     description: ''
@@ -2047,7 +1935,6 @@ methods:
     thread_safety: Safe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription:GetR15JointNames
     summary: ''
     description: ''
@@ -2062,7 +1949,6 @@ methods:
     thread_safety: Safe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HumanoidRigDescription:GetR6JointNames
     summary: ''
     description: ''
@@ -2077,6 +1963,5 @@ methods:
     thread_safety: Safe
     capabilities:
       - Animation
-    writeCapabilities: []
 events: []
 callbacks: []

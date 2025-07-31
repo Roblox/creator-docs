@@ -33,7 +33,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: PluginDragEvent.MimeType
     summary: ''
     description: ''
@@ -52,7 +51,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: PluginDragEvent.Position
     summary: ''
     description: ''
@@ -71,7 +69,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: PluginDragEvent.Sender
     summary: ''
     description: ''
@@ -90,7 +87,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

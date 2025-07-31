@@ -38,7 +38,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: StatsItem:GetValue
     summary: |
@@ -55,7 +54,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: StatsItem:GetValueString
     summary: |
       Returns the StatsItem's value as a formatted string.
@@ -71,6 +69,5 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

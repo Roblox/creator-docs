@@ -41,7 +41,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ControllerPartSensor.HitNormal
     summary: |
       The surface normal at the position where the sensor hit the
@@ -62,7 +61,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ControllerPartSensor.SearchDistance
     summary: |
       The distance from the sensor's parent `Class.BasePart` to use when sensing
@@ -84,7 +82,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ControllerPartSensor.SensedPart
     summary: |
       A reference to the `Class.BasePart` hit by the sensor.
@@ -104,7 +101,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ControllerPartSensor.SensorMode
     summary: |
       Determines what behavior this `Class.SensorBase` uses when sensing other
@@ -134,7 +130,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

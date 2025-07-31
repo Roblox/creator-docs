@@ -45,7 +45,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: PlayerScripts:ClearComputerMovementModes
     summary: |
       Unregisters all ComputerMovementMode enums from the experience's settings
@@ -63,7 +62,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: PlayerScripts:ClearTouchCameraMovementModes
     summary: |
       Unregisters all TouchCameraMovementMode enums from the experience's
@@ -81,7 +79,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: PlayerScripts:ClearTouchMovementModes
     summary: |
       Unregisters all TouchMovementMode enums from the experience's settings
@@ -99,7 +96,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: PlayerScripts:RegisterComputerCameraMovementMode
     summary: |
       Registers that a computer camera movement mode is available to be selected
@@ -121,7 +117,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: PlayerScripts:RegisterComputerMovementMode
     summary: |
       Registers that a computer movement mode is available to be selected from
@@ -143,7 +138,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: PlayerScripts:RegisterTouchCameraMovementMode
     summary: |
       Registers that a touch camera movement mode is available to be selected
@@ -165,7 +159,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: PlayerScripts:RegisterTouchMovementMode
     summary: |
       Registers that a touch movement mode is available to be selected from the
@@ -187,6 +180,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

@@ -31,7 +31,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: VideoDisplay.ScaleType
     summary: ''
     description: ''
@@ -49,7 +48,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: VideoDisplay.TileSize
     summary: ''
     description: ''
@@ -67,7 +65,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: VideoDisplay.VideoColor3
     summary: ''
     description: ''
@@ -85,7 +82,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: VideoDisplay.VideoRectOffset
     summary: ''
     description: ''
@@ -103,7 +99,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: VideoDisplay.VideoRectSize
     summary: ''
     description: ''
@@ -121,7 +116,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: VideoDisplay.VideoTransparency
     summary: ''
     description: ''
@@ -139,7 +133,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods:
   - name: VideoDisplay:GetConnectedWires
     summary: ''
@@ -159,7 +152,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: VideoDisplay:GetInputPins
     summary: ''
     description: ''
@@ -174,7 +166,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: VideoDisplay:GetOutputPins
     summary: ''
     description: ''
@@ -189,7 +180,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
 events:
   - name: VideoDisplay.WiringChanged
     summary: ''
@@ -217,5 +207,4 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
 callbacks: []

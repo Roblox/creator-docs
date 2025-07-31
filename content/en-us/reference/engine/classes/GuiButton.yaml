@@ -66,7 +66,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GuiButton.HoverHapticEffect
     summary: |
       A `Class.HapticEffect` instance that will play when the `Class.GuiButton`
@@ -88,7 +87,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GuiButton.Modal
     summary: |
       If `true` while the GUI element is visible, the mouse will not be locked
@@ -110,7 +108,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GuiButton.PressHapticEffect
     summary: |
       A `Class.HapticEffect` instance that will play when the `Class.GuiButton`
@@ -132,7 +129,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GuiButton.Selected
     summary: |
       A boolean property which indicates whether the object has been selected.
@@ -152,7 +148,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GuiButton.Style
     summary: |
       Sets the style of the `Class.GuiButton` based on a list of pre-determined
@@ -174,7 +169,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods: []
 events:
   - name: GuiButton.Activated
@@ -200,7 +194,6 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GuiButton.MouseButton1Click
     summary: |
       Fires when the user's mouse fully left clicks the `Class.GuiButton`.
@@ -224,7 +217,6 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GuiButton.MouseButton1Down
     summary: |
       Fires when the user presses their left mouse button down on the
@@ -253,7 +245,6 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GuiButton.MouseButton1Up
     summary: |
       Fires when the user releases their left mouse button off of the
@@ -282,7 +273,6 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GuiButton.MouseButton2Click
     summary: |
       Fires when the user's mouse fully right clicks the `Class.GuiButton`.
@@ -306,7 +296,6 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GuiButton.MouseButton2Down
     summary: |
       Fires when the user presses their right mouse button down on the
@@ -335,7 +324,6 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GuiButton.MouseButton2Up
     summary: |
       Fires when the user releases their right mouse button off of the
@@ -364,5 +352,4 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
 callbacks: []

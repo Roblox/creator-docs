@@ -51,7 +51,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: DepthOfFieldEffect.FocusDistance
     summary: |
       Distance away from the camera where objects are in focus.
@@ -74,7 +73,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: DepthOfFieldEffect.InFocusRadius
     summary: |
       Controls the distance away from the
@@ -100,7 +98,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: DepthOfFieldEffect.NearIntensity
     summary: |
       Intensity of the near field blur.
@@ -124,7 +121,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

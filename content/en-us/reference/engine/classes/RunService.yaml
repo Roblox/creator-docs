@@ -154,7 +154,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: RunService.RunState
     summary: ''
     description: ''
@@ -173,7 +172,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
 methods:
   - name: RunService:BindToRenderStep
     summary: |
@@ -276,7 +274,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: RunService:IsClient
     summary: |
       Returns whether the current environment is running on the client.
@@ -303,7 +300,6 @@ methods:
     thread_safety: Safe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: RunService:IsEdit
     summary: |
       Returns whether the current environment is in `Edit` mode.
@@ -326,7 +322,6 @@ methods:
     thread_safety: Safe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: RunService:IsRunMode
     summary: |
       Returns whether the **Run** button has been pressed to run the simulation
@@ -354,7 +349,6 @@ methods:
     thread_safety: Safe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: RunService:IsRunning
     summary: |
       Returns whether the experience is currently running.
@@ -377,7 +371,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: RunService:IsServer
     summary: |
       Returns whether the current environment is running on the server.
@@ -404,7 +397,6 @@ methods:
     thread_safety: Safe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: RunService:IsStudio
     summary: |
       Returns whether the current environment is running in Studio.
@@ -424,7 +416,6 @@ methods:
     thread_safety: Safe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: RunService:Pause
     summary: |
       Pauses the experience's simulation if it is running, suspending physics
@@ -446,7 +437,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: RunService:Reset
     summary: |
       Resets the current game to a waypoint set when `Class.RunService:Run()`
@@ -467,7 +457,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: RunService:Run
     summary: |
       Runs the game's simulation, running physics and scripts.
@@ -488,7 +477,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: RunService:Stop
     summary: |
       Stops the experience's simulation if it is running.
@@ -513,7 +501,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: RunService:UnbindFromRenderStep
     summary: |
       Unbinds a function that was bound to the render loop using
@@ -544,7 +531,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
 events:
   - name: RunService.Heartbeat
     summary: |
@@ -576,7 +562,6 @@ events:
     security: None
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: RunService.PostSimulation
     summary: |
       Fires every frame, after the physics simulation has completed.
@@ -602,7 +587,6 @@ events:
     security: None
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: RunService.PreAnimation
     summary: |
       Fires every frame, prior to the physics simulation but after rendering.
@@ -630,7 +614,6 @@ events:
     security: None
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: RunService.PreRender
     summary: |
       Fires every frame, prior to the frame being rendered.
@@ -665,7 +648,6 @@ events:
     security: None
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: RunService.PreSimulation
     summary: |
       Fires every frame, prior to the physics simulation.
@@ -694,7 +676,6 @@ events:
     security: None
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: RunService.RenderStepped
     summary: |
       Fires every frame, prior to the frame being rendered.
@@ -717,7 +698,6 @@ events:
     security: None
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: RunService.Stepped
     summary: |
       Fires every frame, prior to the physics simulation.
@@ -747,5 +727,4 @@ events:
     security: None
     capabilities:
       - Basic
-    writeCapabilities: []
 callbacks: []

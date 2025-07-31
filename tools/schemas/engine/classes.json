@@ -128,9 +128,6 @@
           },
           "capabilities": {
             "$ref": "#/definitions/__schema3"
-          },
-          "writeCapabilities": {
-            "$ref": "#/definitions/__schema4"
           }
         },
         "required": [
@@ -145,8 +142,7 @@
           "thread_safety",
           "category",
           "serialization",
-          "capabilities",
-          "writeCapabilities"
+          "capabilities"
         ]
       }
     },
@@ -176,10 +172,10 @@
             }
           },
           "parameters": {
-            "$ref": "#/definitions/__schema5"
+            "$ref": "#/definitions/__schema4"
           },
           "returns": {
-            "$ref": "#/definitions/__schema6"
+            "$ref": "#/definitions/__schema5"
           },
           "tags": {
             "$ref": "#/definitions/__schema0"
@@ -196,9 +192,6 @@
           },
           "capabilities": {
             "$ref": "#/definitions/__schema3"
-          },
-          "writeCapabilities": {
-            "$ref": "#/definitions/__schema4"
           }
         },
         "required": [
@@ -212,8 +205,7 @@
           "deprecation_message",
           "security",
           "thread_safety",
-          "capabilities",
-          "writeCapabilities"
+          "capabilities"
         ]
       }
     },
@@ -243,7 +235,7 @@
             }
           },
           "parameters": {
-            "$ref": "#/definitions/__schema5"
+            "$ref": "#/definitions/__schema4"
           },
           "tags": {
             "$ref": "#/definitions/__schema0"
@@ -257,9 +249,6 @@
           },
           "capabilities": {
             "$ref": "#/definitions/__schema3"
-          },
-          "writeCapabilities": {
-            "$ref": "#/definitions/__schema4"
           }
         },
         "required": [
@@ -271,8 +260,7 @@
           "tags",
           "deprecation_message",
           "security",
-          "capabilities",
-          "writeCapabilities"
+          "capabilities"
         ]
       }
     },
@@ -302,10 +290,10 @@
             }
           },
           "parameters": {
-            "$ref": "#/definitions/__schema5"
+            "$ref": "#/definitions/__schema4"
           },
           "returns": {
-            "$ref": "#/definitions/__schema6"
+            "$ref": "#/definitions/__schema5"
           },
           "tags": {
             "$ref": "#/definitions/__schema0"
@@ -324,7 +312,13 @@
             "$ref": "#/definitions/__schema3"
           },
           "writeCapabilities": {
-            "$ref": "#/definitions/__schema4"
+            "$id": "writeCapabilities",
+            "description": "Features that have write capabilities to this item. Array of strings. Automated.",
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         },
         "required": [
@@ -338,8 +332,7 @@
           "deprecation_message",
           "security",
           "thread_safety",
-          "capabilities",
-          "writeCapabilities"
+          "capabilities"
         ]
       }
     }
@@ -422,15 +415,6 @@
       }
     },
     "__schema4": {
-      "$id": "writeCapabilities",
-      "description": "Features that have write capabilities to this item. Array of strings. Automated.",
-      "default": [],
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "__schema5": {
       "$id": "parameters",
       "description": "Parameters of this item. Each entry has the same keys. Table list. Automated.",
       "type": "array",
@@ -474,7 +458,7 @@
         ]
       }
     },
-    "__schema6": {
+    "__schema5": {
       "$id": "returns",
       "description": "Returns of this item. Each entry has the same keys. Table list. Automated.",
       "type": "array",

@@ -44,7 +44,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: MatchmakingService:InitializeServerAttributesForStudio
     summary: |
       Initiates the server attribute schema and its values to test in Studio.
@@ -68,7 +67,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: MatchmakingService:SetServerAttribute
     summary: |
       Assigns a value to a specific server attribute.
@@ -99,6 +97,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

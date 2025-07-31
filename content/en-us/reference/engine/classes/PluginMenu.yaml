@@ -62,7 +62,6 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: PluginMenu.Title
     summary: |
       The text to be displayed when used as a sub menu.
@@ -85,7 +84,6 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: PluginMenu:AddAction
     summary: |
@@ -108,7 +106,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: PluginMenu:AddMenu
     summary: |
       Adds the given menu as a separator.
@@ -131,7 +128,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: PluginMenu:AddNewAction
     summary: |
       Creates a temporary action that is hidden from Studio's customize
@@ -166,7 +162,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: PluginMenu:AddSeparator
     summary: |
       Adds a separator between items in the menu.
@@ -183,7 +178,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: PluginMenu:Clear
     summary: |
       Clears the menu.
@@ -199,7 +193,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: PluginMenu:ShowAsync
     summary: |
       Shows the menu at the mouse cursor. Yields until either an item is
@@ -221,6 +214,5 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

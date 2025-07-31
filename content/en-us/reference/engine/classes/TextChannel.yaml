@@ -51,7 +51,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
 methods:
   - name: TextChannel:AddUserAsync
     summary: |
@@ -90,7 +89,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChannel:DisplaySystemMessage
     summary: |
       Displays a system message to the user.
@@ -124,7 +122,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChannel:SendAsync
     summary: |
       Sends a `Class.TextChatMessage` to the server.
@@ -162,7 +159,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChannel:SetDirectChatRequester
     summary: |
       Sets the `Class.TextChannel.DirectChatRequester|DirectChatRequester` for
@@ -208,7 +204,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Chat
-    writeCapabilities: []
 events:
   - name: TextChannel.MessageReceived
     summary: |
@@ -243,7 +238,6 @@ events:
     security: None
     capabilities:
       - Chat
-    writeCapabilities: []
 callbacks:
   - name: TextChannel.OnIncomingMessage
     summary: |
@@ -292,7 +286,6 @@ callbacks:
     thread_safety: Unsafe
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChannel.ShouldDeliverCallback
     summary: |
       Called for each client when `Class.TextChannel` is receiving an incoming
@@ -333,4 +326,3 @@ callbacks:
     thread_safety: Unsafe
     capabilities:
       - Chat
-    writeCapabilities: []

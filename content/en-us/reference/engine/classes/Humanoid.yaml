@@ -84,7 +84,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.AutoRotate
     summary: |
       AutoRotate sets whether or not the Humanoid will automatically rotate to
@@ -140,7 +139,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.AutomaticScalingEnabled
     summary: |
       When Enabled, AutomaticScalingEnabled causes the size of the character to
@@ -166,7 +164,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.BreakJointsOnDeath
     summary: |
       Determines whether the humanoid's joints break when in the
@@ -188,7 +185,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.CameraOffset
     summary: |
       An offset applied to the Camera's subject position when its CameraSubject
@@ -217,7 +213,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.CollisionType
     summary: |
       Selects the `Enum.HumanoidCollisionType` for R15 and Rthro non-player
@@ -240,7 +235,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.DisplayDistanceType
     summary: |
       Controls the distance behavior of the humanoid's name and health display.
@@ -278,7 +272,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.DisplayName
     summary: |
       Sets the text of a Humanoid, displayed above their head.
@@ -318,7 +311,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.EvaluateStateMachine
     summary: |
       Used to disable the internal physics and state machine of the Humanoid.
@@ -367,7 +359,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.FloorMaterial
     summary: |
       Describes the `Enum.Material` that the `Class.Humanoid` is currently
@@ -420,7 +411,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.Health
     summary: |
       Describes the current health of the Humanoid on the range [0,
@@ -478,7 +468,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.HealthDisplayDistance
     summary: |
       Used in conjunction with the
@@ -507,7 +496,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.HealthDisplayType
     summary: |
       Controls when the humanoid's health bar is allowed to be displayed.
@@ -548,7 +536,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.HipHeight
     summary: |
       Determines the distance off the ground the `Class.Humanoid.RootPart`
@@ -589,7 +576,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.Jump
     summary: |
       If `true`, the `Class.Humanoid` jumps with an upwards force.
@@ -613,7 +599,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.JumpHeight
     summary: |
       Provides control over the height that the `Class.Humanoid` jumps to.
@@ -645,7 +630,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.JumpPower
     summary: |
       Determines how much upwards force is applied to the `Class.Humanoid` when
@@ -681,7 +665,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.LeftLeg
     summary: |
       A reference to the humanoid's _Left Leg_ part.
@@ -707,7 +690,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.MaxHealth
     summary: |
       The maximum value of a humanoid's `Class.Humanoid.Health|Health`.
@@ -734,7 +716,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.MaxSlopeAngle
     summary: |
       The maximum slope angle that a humanoid can walk on without slipping.
@@ -764,7 +745,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.MoveDirection
     summary: |
       Describes the direction that the `Class.Humanoid` is walking in.
@@ -792,7 +772,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.NameDisplayDistance
     summary: |
       Used in conjunction with the `Class.Humanoid.DisplayDistanceType` property
@@ -820,7 +799,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.NameOcclusion
     summary: |
       Controls whether a humanoid's name and health bar can be seen behind walls
@@ -854,7 +832,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.PlatformStand
     summary: |
       Determines whether the `Class.Humanoid` is currently in the
@@ -879,7 +856,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.RequiresNeck
     summary: |
       Allows developers to disable the behavior where a player
@@ -903,7 +879,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.RigType
     summary: |
       Describes whether this `Class.Humanoid` is utilizing the legacy R6
@@ -934,7 +909,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.RightLeg
     summary: |
       A reference to the humanoid's _Right Leg_ part.
@@ -960,7 +934,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.RootPart
     summary: |
       A reference to the humanoid's **HumanoidRootPart** object.
@@ -989,7 +962,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.SeatPart
     summary: |
       A reference to the seat that a `Class.Humanoid` is currently sitting in,
@@ -1020,7 +992,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.Sit
     summary: |
       Describes whether the `Class.Humanoid` is currently sitting.
@@ -1052,7 +1023,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.TargetPoint
     summary: |
       Describes the 3D position where the `Class.Player` controlling the
@@ -1084,7 +1054,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.Torso
     summary: |
       A reference to a humanoid's root driving part.
@@ -1111,7 +1080,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.UseJumpPower
     summary: |
       Determines whether the `Class.Humanoid.JumpHeight|JumpHeight` (false) or
@@ -1138,7 +1106,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.WalkSpeed
     summary: |
       Describes the humanoid's maximum movement speed in studs per second.
@@ -1175,7 +1142,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.WalkToPart
     summary: |
       A reference to a part whose position is trying to be reached by a
@@ -1223,7 +1189,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.WalkToPoint
     summary: |
       The position that a humanoid is trying to reach, after a call to
@@ -1266,7 +1231,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.maxHealth
     summary: ''
     description: ''
@@ -1288,7 +1252,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
 methods:
   - name: Humanoid:AddAccessory
     summary: |
@@ -1332,7 +1295,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:AddCustomStatus
     summary: |
       Adds a custom status to the Humanoid.
@@ -1359,7 +1321,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:AddStatus
     summary: |
       Adds a BoolValue to the Humanoid's _Status_ object.
@@ -1386,7 +1347,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:ApplyDescription
     summary: |
       Makes the character's look match that of the passed in
@@ -1440,7 +1400,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:ApplyDescriptionReset
     summary: |
       Makes the character's look match that of the passed in
@@ -1482,7 +1441,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:BuildRigFromAttachments
     summary: |
       Assembles a tree of `Class.Motor6D` joints by attaching together
@@ -1515,7 +1473,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:ChangeState
     summary: |
       Sets the `Class.Humanoid` to enter the given `Enum.HumanoidStateType`.
@@ -1566,7 +1523,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:EquipTool
     summary: |
       Makes the `Class.Humanoid` equip the given `Class.Tool`.
@@ -1597,7 +1553,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:GetAccessories
     summary: |
       Returns an array of `Class.Accessory` objects that the humanoid's parent
@@ -1626,7 +1581,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:GetAppliedDescription
     summary: |
       Returns a copy of the humanoid's cached `Class.HumanoidDescription` which
@@ -1658,7 +1612,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:GetBodyPartR15
     summary: |
       Pass a body part to this method (the body part should be a sibling of
@@ -1698,7 +1651,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:GetLimb
     summary: |
       Returns the `Enum.Limb` enum that is associated with the given
@@ -1738,7 +1690,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:GetMoveVelocity
     summary: ''
     description: ''
@@ -1753,7 +1704,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:GetPlayingAnimationTracks
     summary: |
       Returns an array of all `Class.AnimationTrack|AnimationTracks` that are
@@ -1781,7 +1731,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:GetState
     summary: |
       Returns the humanoid's current `Enum.HumanoidStateType`.
@@ -1806,7 +1755,6 @@ methods:
     thread_safety: Safe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:GetStateEnabled
     summary: |
       Returns whether a `Enum.HumanoidStateType` is enabled for the
@@ -1846,7 +1794,6 @@ methods:
     thread_safety: Safe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:GetStatuses
     summary: |
       Returns a table of the Humanoid's statuses, and custom statuses.
@@ -1868,7 +1815,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:HasCustomStatus
     summary: |
       Returns boolean based on if custom statuses exist.
@@ -1894,7 +1840,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:HasStatus
     summary: |
       Returns a boolean based on if a status exists.
@@ -1919,7 +1864,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:LoadAnimation
     summary: |
       Loads an `Class.Animation` onto a `Class.Humanoid`, returning an
@@ -1947,7 +1891,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:Move
     summary: |
       Causes the `Class.Humanoid` to walk in the given direction.
@@ -2002,7 +1945,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:MoveTo
     summary: |
       Causes the `Class.Humanoid` to attempt to walk to the given location by
@@ -2067,7 +2009,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:PlayEmote
     summary: |
       Plays emotes and returns if was successfully ran.
@@ -2093,7 +2034,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:RemoveAccessories
     summary: |
       Removes all `Class.Accessory` objects worn by the humanoid's parent.
@@ -2122,7 +2062,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:RemoveCustomStatus
     summary: |
       Removes the defined custom status from the Status model in the Humanoid..
@@ -2148,7 +2087,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:RemoveStatus
     summary: |
       Removes the defined status from the Status model in the Humanoid.
@@ -2174,7 +2112,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:ReplaceBodyPartR15
     summary: |
       Dynamically replaces a Humanoid body part with a different part.
@@ -2211,7 +2148,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:SetStateEnabled
     summary: |
       Sets whether a given `Enum.HumanoidStateType` is enabled for the
@@ -2248,7 +2184,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:TakeDamage
     summary: |
       Lowers the `Class.Humanoid.Health` of the `Class.Humanoid` by the given
@@ -2296,7 +2231,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:UnequipTools
     summary: |
       Unequips any `Class.Tool` currently equipped by the `Class.Humanoid`.
@@ -2325,7 +2259,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:loadAnimation
     summary: ''
     description: ''
@@ -2347,7 +2280,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid:takeDamage
     summary: ''
     description: ''
@@ -2369,7 +2301,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
 events:
   - name: Humanoid.AnimationPlayed
     summary: |
@@ -2406,7 +2337,6 @@ events:
     security: None
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.ApplyDescriptionFinished
     summary: ''
     description: ''
@@ -2421,7 +2351,6 @@ events:
     security: None
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.Climbing
     summary: |
       Fires when the speed at which a `Class.Humanoid` is climbing changes.
@@ -2458,7 +2387,6 @@ events:
     security: None
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.CustomStatusAdded
     summary: |
       Fired when a status is added to the Humanoid.
@@ -2480,7 +2408,6 @@ events:
     security: None
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.CustomStatusRemoved
     summary: |
       Fired when a status is removed from the Humanoid.
@@ -2502,7 +2429,6 @@ events:
     security: None
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.Died
     summary: |
       Fires when the `Class.Humanoid` dies.
@@ -2523,7 +2449,6 @@ events:
     security: None
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.FallingDown
     summary: |
       Fires when the `Class.Humanoid` enters or leaves the `FallingDown`
@@ -2549,7 +2474,6 @@ events:
     security: None
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.FreeFalling
     summary: |
       Fires when the `Class.Humanoid` enters or leaves the `Freefall`
@@ -2579,7 +2503,6 @@ events:
     security: None
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.GettingUp
     summary: |
       Fires when the `Class.Humanoid` enters or leaves the `GettingUp`
@@ -2611,7 +2534,6 @@ events:
     security: None
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.HealthChanged
     summary: |
       Fires when the `Class.Humanoid.Health` changes (or when the
@@ -2638,7 +2560,6 @@ events:
     security: None
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.Jumping
     summary: |
       Fires when the `Class.Humanoid` enters and leaves the `Jumping`
@@ -2668,7 +2589,6 @@ events:
     security: None
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.MoveToFinished
     summary: |
       Fires when the `Class.Humanoid` finishes walking to a goal declared by
@@ -2702,7 +2622,6 @@ events:
     security: None
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.PlatformStanding
     summary: |
       Fires when the `Class.Humanoid` enters or leaves the `PlatformStanding`
@@ -2734,7 +2653,6 @@ events:
     security: None
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.Ragdoll
     summary: |
       Fires when the `Class.Humanoid` enters or leaves the `Ragdoll`
@@ -2766,7 +2684,6 @@ events:
     security: None
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.Running
     summary: |
       Fires when the speed at which a `Class.Humanoid` is running changes.
@@ -2799,7 +2716,6 @@ events:
     security: None
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.Seated
     summary: |
       Fired when a `Class.Humanoid` either sits in a `Class.Seat` or
@@ -2841,7 +2757,6 @@ events:
     security: None
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.StateChanged
     summary: |
       Fires when the state of the `Class.Humanoid` is changed.
@@ -2879,7 +2794,6 @@ events:
     security: None
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.StateEnabledChanged
     summary: |
       Fires when `Class.Humanoid:SetStateEnabled()` is called on the
@@ -2916,7 +2830,6 @@ events:
     security: None
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.StatusAdded
     summary: |
       Fired when a status is added to the Humanoid.
@@ -2938,7 +2851,6 @@ events:
     security: None
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.StatusRemoved
     summary: |
       Fired when a status is removed from the Humanoid.
@@ -2960,7 +2872,6 @@ events:
     security: None
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.Strafing
     summary: |
       Fires when the `Class.Humanoid` enters or leaves the `StrafingNoPhysics`
@@ -2995,7 +2906,6 @@ events:
     security: None
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.Swimming
     summary: |
       Fires when the speed at which a `Class.Humanoid` is swimming in
@@ -3030,7 +2940,6 @@ events:
     security: None
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: Humanoid.Touched
     summary: |
       Fires when one of the humanoid's limbs come in contact with another
@@ -3083,5 +2992,4 @@ events:
     security: None
     capabilities:
       - Avatar
-    writeCapabilities: []
 callbacks: []

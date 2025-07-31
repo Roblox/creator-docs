@@ -31,7 +31,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioSpeechToText.Text
     summary: ''
     description: ''
@@ -49,7 +48,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioSpeechToText.VoiceDetected
     summary: ''
     description: ''
@@ -69,7 +67,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
 methods:
   - name: AudioSpeechToText:GetConnectedWires
     summary: ''
@@ -89,7 +86,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
 events:
   - name: AudioSpeechToText.WiringChanged
     summary: ''
@@ -117,5 +113,4 @@ events:
     security: None
     capabilities:
       - Audio
-    writeCapabilities: []
 callbacks: []

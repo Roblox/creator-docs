@@ -75,7 +75,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: Pose.MaskWeight
     summary: ''
     description: ''
@@ -97,7 +96,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
 methods:
   - name: Pose:AddSubPose
     summary: |
@@ -127,7 +125,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: Pose:GetSubPoses
     summary: |
       Returns an array containing all sub `Class.Pose|Poses` that have been
@@ -152,7 +149,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: Pose:RemoveSubPose
     summary: |
       Removes a sub `Class.Pose` from the `Class.Pose` by parenting it to `nil`.
@@ -181,6 +177,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
 events: []
 callbacks: []

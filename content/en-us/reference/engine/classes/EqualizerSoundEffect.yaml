@@ -44,7 +44,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: EqualizerSoundEffect.LowGain
     summary: |
       The output volume of frequencies lower than 400 Hz.
@@ -65,7 +64,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: EqualizerSoundEffect.MidGain
     summary: |
       The output volume of frequencies between 400 and 4000 Hz.
@@ -86,7 +84,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

@@ -81,7 +81,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: ModuleScript.Source
     summary: |
       The code to be executed.
@@ -104,8 +103,6 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - PluginOrOpenCloud
-    writeCapabilities:
       - PluginOrOpenCloud
 methods: []
 events: []

@@ -41,7 +41,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: Animator.PreferLodEnabled
     summary: ''
     description: ''
@@ -59,7 +58,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: Animator.RootMotion
     summary: ''
     description: ''
@@ -80,7 +78,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: Animator.RootMotionWeight
     summary: ''
     description: ''
@@ -101,7 +98,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
 methods:
   - name: Animator:ApplyJointVelocities
     summary: |
@@ -141,7 +137,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: Animator:GetPlayingAnimationTracks
     summary: |
       Returns the list of currently playing
@@ -160,7 +155,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: Animator:LoadAnimation
     summary: |
       Loads an `Class.Animation` onto an `Class.Animator`, returning an
@@ -219,7 +213,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: Animator:RegisterEvaluationParallelCallback
     summary: ''
     description: ''
@@ -238,7 +231,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: Animator:StepAnimations
     summary: |
       Increments the `Class.AnimationTrack.TimePosition` of all playing
@@ -286,7 +278,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
 events:
   - name: Animator.AnimationPlayed
     summary: |
@@ -305,5 +296,4 @@ events:
     security: None
     capabilities:
       - Animation
-    writeCapabilities: []
 callbacks: []

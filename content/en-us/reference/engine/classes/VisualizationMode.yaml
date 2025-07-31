@@ -29,7 +29,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: VisualizationMode.Title
     summary: ''
     description: ''
@@ -46,7 +45,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: VisualizationMode.ToolTip
     summary: ''
     description: ''
@@ -63,7 +61,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

@@ -42,7 +42,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: StyleRule.Selector
     summary: |
       A string specifying which instances the `StyleRule` should affect.
@@ -140,7 +139,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: StyleRule.SelectorError
     summary: |
       A read-only string that displays errors from the
@@ -164,7 +162,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: StyleRule:GetProperties
     summary: |
@@ -203,7 +200,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: StyleRule:GetProperty
     summary: |
       Returns the value of a specific property in the `StyleRule`.
@@ -238,7 +234,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: StyleRule:SetProperties
     summary: |
       Lets you declare and set multiple properties of the `StyleRule` at once.
@@ -312,7 +307,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: StyleRule:SetProperty
     summary: ''
     description: |
@@ -382,6 +376,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

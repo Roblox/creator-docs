@@ -47,7 +47,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: StyleDerive.StyleSheet
     summary: |
       The `Class.StyleSheet` from which the parent `Class.StyleSheet` inherits
@@ -68,7 +67,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

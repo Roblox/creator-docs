@@ -70,7 +70,6 @@ properties:
       can_save: true
     capabilities:
       - Network
-    writeCapabilities: []
 methods:
   - name: HttpService:GenerateGUID
     summary: |
@@ -118,7 +117,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: HttpService:GetAsync
     summary: |
       Sends an HTTP `GET` request.
@@ -163,7 +161,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Network
-    writeCapabilities: []
   - name: HttpService:GetSecret
     summary: |
       Returns a `Datatype.Secret` from the secrets store.
@@ -193,7 +190,6 @@ methods:
     thread_safety: Safe
     capabilities:
       - Network
-    writeCapabilities: []
   - name: HttpService:JSONDecode
     summary: |
       Decodes a JSON string into a Luau table.
@@ -229,7 +225,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: HttpService:JSONEncode
     summary: |
       Generate a JSON string from a Luau table.
@@ -269,7 +264,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: HttpService:PostAsync
     summary: |
       Sends an HTTP `POST` request.
@@ -323,7 +317,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Network
-    writeCapabilities: []
   - name: HttpService:RequestAsync
     summary: |
       Sends an HTTP request using any HTTP method given a dictionary of
@@ -534,7 +527,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Network
-    writeCapabilities: []
   - name: HttpService:UrlEncode
     summary: |
       Replaces URL-unsafe characters with '%' and two hexadecimal characters.
@@ -570,6 +562,5 @@ methods:
     thread_safety: Safe
     capabilities:
       - Network
-    writeCapabilities: []
 events: []
 callbacks: []

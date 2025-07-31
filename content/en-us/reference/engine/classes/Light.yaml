@@ -35,7 +35,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Light.Color
     summary: |
       The color of the emitted light.
@@ -55,7 +54,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Light.Enabled
     summary: |
       If set to true, light will be emitted from the source object.
@@ -75,7 +73,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Light.Shadows
     summary: |
       If set to true, will project shadows if light is blocked by an obstacle.
@@ -95,7 +92,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

@@ -35,7 +35,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIPageLayout.Circular
     summary: |
       Whether or not the page layout wraps around at the ends.
@@ -55,7 +54,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIPageLayout.CurrentPage
     summary: |
       The page that is either currently being displayed or is the target of the
@@ -79,7 +77,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIPageLayout.EasingDirection
     summary: |
       The easing direction to use when performing an animation.
@@ -99,7 +96,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIPageLayout.EasingStyle
     summary: |
       The easing style to use when performing an animation.
@@ -119,7 +115,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIPageLayout.GamepadInputEnabled
     summary: |
       Controls the overrides of `NextSelection{Up, Down, Left, Right}`. Defaults
@@ -141,7 +136,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIPageLayout.Padding
     summary: |
       Determines the amount that pages are separated from each other by.
@@ -163,7 +157,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIPageLayout.ScrollWheelInputEnabled
     summary: |
       Controls the use of scroll wheel, in case that it is intended for
@@ -185,7 +178,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIPageLayout.TouchInputEnabled
     summary: |
       Controls touch scrolling, in case this is a non-interactive layout.
@@ -207,7 +199,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIPageLayout.TweenTime
     summary: |
       The length of the animation.
@@ -227,7 +218,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods:
   - name: UIPageLayout:JumpTo
     summary: |
@@ -253,7 +243,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIPageLayout:JumpToIndex
     summary: |
       If the index is `>= 0` and less than the size of the layout, this method
@@ -280,7 +269,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIPageLayout:Next
     summary: |
       Sets `Class.UIPageLayout.CurrentPage` to the page after the current page
@@ -299,7 +287,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIPageLayout:Previous
     summary: |
       Sets `Class.UIPageLayout.CurrentPage` to the page before the current page
@@ -318,7 +305,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
 events:
   - name: UIPageLayout.PageEnter
     summary: |
@@ -336,7 +322,6 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIPageLayout.PageLeave
     summary: |
       Fires when a page leaves view, and will not be rendered.
@@ -353,7 +338,6 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIPageLayout.Stopped
     summary: |
       Fires when an animation to `Class.UIPageLayout.CurrentPage` is completed
@@ -372,5 +356,4 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
 callbacks: []

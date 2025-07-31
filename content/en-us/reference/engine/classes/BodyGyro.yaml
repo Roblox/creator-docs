@@ -59,7 +59,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: BodyGyro.D
     summary: |
       Determines the amount of dampening to use in reaching the goal
@@ -87,7 +86,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: BodyGyro.MaxTorque
     summary: |
       Determines the limit on how much torque that may be applied to each axis.
@@ -111,7 +109,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: BodyGyro.P
     summary: |
       Determines how aggressive of a torque is applied in reaching the goal
@@ -134,7 +131,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: BodyGyro.cframe
     summary: ''
     description: ''
@@ -156,7 +152,6 @@ properties:
       can_save: false
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: BodyGyro.maxTorque
     summary: ''
     description: ''
@@ -178,7 +173,6 @@ properties:
       can_save: false
     capabilities:
       - Physics
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

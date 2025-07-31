@@ -51,7 +51,6 @@ properties:
       can_save: false
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.EmitterSize
     summary: |
       The minimum distance, in studs, at which a 3D `Class.Sound` (direct child
@@ -91,7 +90,6 @@ properties:
       can_save: false
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.IsLoaded
     summary: |
       This property is `true` when the `Class.Sound` has loaded from Roblox
@@ -118,7 +116,6 @@ properties:
       can_save: false
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.IsMutedForCapture
     summary: ''
     description: ''
@@ -136,7 +133,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.IsPaused
     summary: |
       Read-only property which returns `true` when the `Class.Sound` is not
@@ -168,7 +164,6 @@ properties:
       can_save: false
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.IsPlaying
     summary: |
       Read-only property which returns `true` when the `Class.Sound` is playing.
@@ -195,7 +190,6 @@ properties:
       can_save: false
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.LoopRegion
     summary: |
       A range denoting a desired loop start and loop end within the
@@ -237,7 +231,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.Looped
     summary: |
       Sets whether or not the `Class.Sound` repeats once it has finished
@@ -264,7 +257,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.MaxDistance
     summary: |
       The maximum distance, in studs, a client's listener can be from the
@@ -308,7 +300,6 @@ properties:
       can_save: false
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.MinDistance
     summary: |
       The minimum distance at which a 3D `Class.Sound` (direct child of a
@@ -335,7 +326,6 @@ properties:
       can_save: false
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.Pitch
     summary: |
       Sets how high pitched and fast a `Class.Sound` is when it is played. The
@@ -360,7 +350,6 @@ properties:
       can_save: false
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.PlayOnRemove
     summary: |
       When `true`, the `Class.Sound` will play when it is removed from the
@@ -388,7 +377,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.PlaybackLoudness
     summary: |
       A number between `0` and `1000` indicating how loud the `Class.Sound` is
@@ -414,7 +402,6 @@ properties:
       can_save: false
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.PlaybackRegion
     summary: |
       A range denoting a desired start and stop time within the
@@ -453,7 +440,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.PlaybackRegionsEnabled
     summary: |
       If `true`, this property gives your `Class.Sound` access to the
@@ -479,7 +465,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.PlaybackSpeed
     summary: |
       Determines the speed at which a `Class.Sound` will play, with higher
@@ -503,7 +488,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.Playing
     summary: |
       Indicates whether the `Class.Sound` is currently playing.
@@ -540,7 +524,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.RollOffMaxDistance
     summary: |
       The maximum distance, in studs, a client's listener can be from the
@@ -568,7 +551,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.RollOffMinDistance
     summary: |
       The minimum distance, in studs, at which a `Class.Sound` which is parented
@@ -596,7 +578,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.RollOffMode
     summary: |
       Controls how the volume of a `Class.Sound` which is parented to a
@@ -622,7 +603,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.SoundGroup
     summary: |
       The `Class.SoundGroup` that is linked to this `Class.Sound`.
@@ -642,7 +622,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.SoundId
     summary: |
       Content ID of the sound file to associate with the `Class.Sound`.
@@ -664,7 +643,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.TimeLength
     summary: |
       The length of the `Class.Sound` in seconds.
@@ -692,7 +670,6 @@ properties:
       can_save: false
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.TimePosition
     summary: |
       Progress of the `Class.Sound` in seconds. Can be changed to move the
@@ -736,7 +713,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.Volume
     summary: |
       The volume of the `Class.Sound`.
@@ -761,7 +737,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.isPlaying
     summary: ''
     description: ''
@@ -784,7 +759,6 @@ properties:
       can_save: false
     capabilities:
       - LegacySound
-    writeCapabilities: []
 methods:
   - name: Sound:Pause
     summary: |
@@ -807,7 +781,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound:Play
     summary: |
       Plays the `Class.Sound`.
@@ -828,7 +801,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound:Resume
     summary: |
       Resumes the `Class.Sound`.
@@ -849,7 +821,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound:Stop
     summary: |
       Stops the `Class.Sound`.
@@ -868,7 +839,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound:pause
     summary: ''
     description: ''
@@ -886,7 +856,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound:play
     summary: ''
     description: ''
@@ -904,7 +873,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound:stop
     summary: ''
     description: ''
@@ -922,7 +890,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - LegacySound
-    writeCapabilities: []
 events:
   - name: Sound.DidLoop
     summary: |
@@ -953,7 +920,6 @@ events:
     security: None
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.Ended
     summary: |
       Fires when the `Class.Sound` has completed playback and stopped.
@@ -984,7 +950,6 @@ events:
     security: None
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.Loaded
     summary: |
       Fires when the `Class.Sound` is loaded.
@@ -1007,7 +972,6 @@ events:
     security: None
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.Paused
     summary: |
       Fires whenever the `Class.Sound` is paused using
@@ -1029,7 +993,6 @@ events:
     security: None
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.Played
     summary: |
       Fires whenever the `Class.Sound` is played using
@@ -1053,7 +1016,6 @@ events:
     security: None
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.Resumed
     summary: |
       Fires when the `Class.Sound` is resumed using
@@ -1074,7 +1036,6 @@ events:
     security: None
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: Sound.Stopped
     summary: |
       Fires when the `Class.Sound` is stopped through using
@@ -1096,5 +1057,4 @@ events:
     security: None
     capabilities:
       - LegacySound
-    writeCapabilities: []
 callbacks: []

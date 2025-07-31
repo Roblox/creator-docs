@@ -37,7 +37,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: HandleAdornment.AlwaysOnTop
     summary: |
       Forces this object to render on top of all 3D objects in the workspace.
@@ -63,7 +62,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: HandleAdornment.CFrame
     summary: |
       The position and rotation of the object relative to its
@@ -89,7 +87,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: HandleAdornment.SizeRelativeOffset
     summary: |
       The positional offset of the adornment based on the adornee's
@@ -123,7 +120,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: HandleAdornment.ZIndex
     summary: |
       Determines the draw order of the `Class.HandleAdornment`.
@@ -155,7 +151,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
 methods: []
 events:
   - name: HandleAdornment.MouseButton1Down
@@ -173,7 +168,6 @@ events:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: HandleAdornment.MouseButton1Up
     summary: |
       Fires when a user releases their left mouse button while hovering over the
@@ -189,7 +183,6 @@ events:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: HandleAdornment.MouseEnter
     summary: |
       Fires when a user moves their mouse over the adornment.
@@ -203,7 +196,6 @@ events:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: HandleAdornment.MouseLeave
     summary: |
       Fires when a user moves their mouse out of the adornment.
@@ -217,5 +209,4 @@ events:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
 callbacks: []

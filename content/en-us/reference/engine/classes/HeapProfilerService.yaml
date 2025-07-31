@@ -34,7 +34,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: HeapProfilerService:ServerRequestDataAsync
     summary: ''
     description: ''
@@ -49,7 +48,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: HeapProfilerService.OnNewData
     summary: ''
@@ -80,5 +78,4 @@ events:
     deprecation_message: ''
     security: PluginSecurity
     capabilities: []
-    writeCapabilities: []
 callbacks: []

@@ -57,7 +57,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GuiBase2d.AbsoluteRotation
     summary: |
       Describes the actual screen rotation of a `Class.GuiBase2d` element, in
@@ -86,7 +85,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GuiBase2d.AbsoluteSize
     summary: |
       Describes the actual screen size of a `Class.GuiBase2d` element, in
@@ -114,7 +112,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GuiBase2d.AutoLocalize
     summary: |
       When set to `true`, localization will be applied to this `Class.GuiBase2d`
@@ -141,7 +138,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GuiBase2d.Localize
     summary: |
       Automatically set to true when a localization table's
@@ -172,7 +168,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GuiBase2d.RootLocalizationTable
     summary: |
       A reference to a `Class.LocalizationTable` to be used to apply automated
@@ -211,7 +206,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GuiBase2d.SelectionBehaviorDown
     summary: |
       Customizes gamepad selection behavior in the down direction.
@@ -231,7 +225,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GuiBase2d.SelectionBehaviorLeft
     summary: |
       Customizes gamepad selection behavior in the left direction.
@@ -251,7 +244,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GuiBase2d.SelectionBehaviorRight
     summary: |
       Customizes gamepad selection behavior in the right direction.
@@ -271,7 +263,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GuiBase2d.SelectionBehaviorUp
     summary: |
       Customizes gamepad selection behavior in the up direction.
@@ -291,7 +282,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GuiBase2d.SelectionGroup
     summary: |
       Allows customization of gamepad selection movement.
@@ -326,7 +316,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods: []
 events:
   - name: GuiBase2d.SelectionChanged
@@ -361,5 +350,4 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
 callbacks: []

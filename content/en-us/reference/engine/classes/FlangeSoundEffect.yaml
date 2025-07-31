@@ -41,7 +41,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: FlangeSoundEffect.Mix
     summary: |
       Percentage of the original sound that will be applied to the filter.
@@ -63,7 +62,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: FlangeSoundEffect.Rate
     summary: |
       The frequency that the effect oscillates at.
@@ -84,7 +82,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

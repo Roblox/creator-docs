@@ -34,7 +34,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods: []
 events:
   - name: Color3Value.Changed
@@ -67,7 +66,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: Color3Value.changed
     summary: ''
     description: ''
@@ -84,5 +82,4 @@ events:
       should be used instead.
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

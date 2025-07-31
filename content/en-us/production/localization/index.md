@@ -51,7 +51,7 @@ are translating from and which languages you are translating to.
 
 The **source language** is the primary language that the
 experience has been written in. Roblox currently only supports one source
-language at a time. The default is set to **English**.
+language at a time. The default is set to your [Roblox account language](https://www.roblox.com/my/account#!/info).
 
 To set the **source** language:
 

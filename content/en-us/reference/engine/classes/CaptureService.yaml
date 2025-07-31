@@ -61,7 +61,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: CaptureService:PromptSaveCapturesToGallery
     summary: |
       Prompts the user to save specified captures to their gallery.
@@ -90,7 +89,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: CaptureService:PromptShareCapture
     summary: |
       Prompts the user to share a specified capture.
@@ -137,7 +135,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: CaptureService:StartVideoCaptureAsync
     summary: |
       Initiates a video capture recording.
@@ -193,7 +190,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: CaptureService:StopVideoCapture
     summary: |
       Ends a video capture initiated by
@@ -212,7 +208,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: CaptureService:TakeCapture
     summary: ''
     description: ''
@@ -234,7 +229,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: CaptureService.CaptureBegan
     summary: |
@@ -253,7 +247,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: CaptureService.CaptureEnded
     summary: |
       Fires after a capture finishes.
@@ -271,7 +264,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: CaptureService.CaptureSaved
     summary: ''
     description: ''
@@ -288,7 +280,6 @@ events:
       `Class.CaptureService.UserCaptureSaved|UserCaptureSaved` event.
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: CaptureService.UserCaptureSaved
     summary: |
       Fires when the user saves a capture.
@@ -307,5 +298,4 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

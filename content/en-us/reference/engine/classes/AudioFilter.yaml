@@ -40,7 +40,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioFilter.Editor
     summary: ''
     description: ''
@@ -59,7 +58,6 @@ properties:
       can_save: false
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioFilter.FilterType
     summary: |
       The curve type of the band represented by the filter.
@@ -81,7 +79,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioFilter.Frequency
     summary: |
       The central frequency that the filter acts around.
@@ -103,7 +100,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioFilter.Gain
     summary: |
       For peaking and shelving filters, controls volume increase or reduction.
@@ -126,7 +122,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioFilter.Q
     summary: |
       For peaking, lowpass, highpass, bandpass, and notch filters, controls the
@@ -156,7 +151,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
 methods:
   - name: AudioFilter:GetConnectedWires
     summary: |
@@ -180,7 +174,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioFilter:GetGainAt
     summary: |
       Returns the magnitude response of the filter at the given frequency.
@@ -205,7 +198,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioFilter:GetInputPins
     summary: ''
     description: ''
@@ -220,7 +212,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioFilter:GetOutputPins
     summary: ''
     description: ''
@@ -235,7 +226,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
 events:
   - name: AudioFilter.WiringChanged
     summary: |
@@ -273,5 +263,4 @@ events:
     security: None
     capabilities:
       - Audio
-    writeCapabilities: []
 callbacks: []

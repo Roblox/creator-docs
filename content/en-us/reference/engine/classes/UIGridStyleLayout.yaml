@@ -47,7 +47,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIGridStyleLayout.FillDirection
     summary: |
       Determines the axis in which UI objects are laid out.
@@ -76,7 +75,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIGridStyleLayout.HorizontalAlignment
     summary: |
       Determines the horizontal alignment of UI elements within the parent
@@ -99,7 +97,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIGridStyleLayout.SortOrder
     summary: |
       Determines the order in which child UI objects are placed in a layout.
@@ -130,7 +127,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIGridStyleLayout.VerticalAlignment
     summary: |
       Determines the vertical alignment of UI elements within the parent
@@ -153,7 +149,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods:
   - name: UIGridStyleLayout:ApplyLayout
     summary: |
@@ -183,7 +178,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIGridStyleLayout:SetCustomSortFunction
     summary: |
       Sets the function used to determine the order of elements when SortOrder
@@ -215,6 +209,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
 events: []
 callbacks: []

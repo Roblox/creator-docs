@@ -69,7 +69,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextService:FilterStringAsync
     summary: |
       Filters a string being received from a user, and returns a
@@ -147,7 +146,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextService:GetFamilyInfoAsync
     summary: |
       Returns a table containing the name and faces of a font family.
@@ -203,7 +201,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextService:GetTextBoundsAsync
     summary: |
       Calculates the width and height of text given parameters.
@@ -249,7 +246,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextService:GetTextSize
     summary: |
       Computes the `Datatype.Vector2` dimensions (in pixels) that will be taken
@@ -316,7 +312,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextService:GetTextSizeOffsetAsync
     summary: ''
     description: ''
@@ -340,6 +335,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
 events: []
 callbacks: []

@@ -56,7 +56,6 @@ properties:
     capabilities:
       - Basic
       - Input
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

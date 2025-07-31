@@ -84,7 +84,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: BillboardGui.Adornee
     summary: |
       Sets the target part or attachment that the `Class.BillboardGui` is
@@ -107,7 +106,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: BillboardGui.AlwaysOnTop
     summary: |
       Determines whether the `Class.BillboardGui` will always be rendered on top
@@ -140,7 +138,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: BillboardGui.Brightness
     summary: |
       Determines the factor by which the `Class.BillboardGui` container's light
@@ -173,7 +170,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: BillboardGui.ClipsDescendants
     summary: |
       Whether portions of `Class.GuiObject|GuiObjects` that fall outside of the
@@ -199,7 +195,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: BillboardGui.CurrentDistance
     summary: |
       The current distance in studs that the `Class.BillboardGui` is from the
@@ -224,7 +219,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: BillboardGui.DistanceLowerLimit
     summary: |
       Determines the distance in studs at which the `Class.BillboardGui` will
@@ -251,7 +245,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: BillboardGui.DistanceStep
     summary: |
       Determines the size `Class.BillboardGui.CurrentDistance|CurrentDistance`
@@ -277,7 +270,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: BillboardGui.DistanceUpperLimit
     summary: |
       Determines the distance in studs at which the `Class.BillboardGui` will
@@ -306,7 +298,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: BillboardGui.ExtentsOffset
     summary: |
       Determines how the `Class.BillboardGui` is offset from its
@@ -338,7 +329,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: BillboardGui.ExtentsOffsetWorldSpace
     summary: |
       Determines how the `Class.BillboardGui` is offset from its
@@ -367,7 +357,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: BillboardGui.LightInfluence
     summary: |
       Controls how much the `Class.BillboardGui` is influenced by environmental
@@ -391,7 +380,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: BillboardGui.MaxDistance
     summary: |
       Controls how far away the `Class.BillboardGui` can be displayed before it
@@ -420,7 +408,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: BillboardGui.PlayerToHideFrom
     summary: |
       Used by scripts to hide the `Class.BillboardGui` from a specific player.
@@ -448,7 +435,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: BillboardGui.Size
     summary: |
       Controls the size that the `Class.BillboardGui` will have on screen.
@@ -471,7 +457,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: BillboardGui.SizeOffset
     summary: |
       A 2D offset in size-relative units that acts like an anchor point.
@@ -528,7 +513,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: BillboardGui.StudsOffset
     summary: |
       Determines how the `Class.BillboardGui` is offset from its
@@ -556,7 +540,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: BillboardGui.StudsOffsetWorldSpace
     summary: |
       Determines how the `Class.BillboardGui` is offset from its
@@ -583,7 +566,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

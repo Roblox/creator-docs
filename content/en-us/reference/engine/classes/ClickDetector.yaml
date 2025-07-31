@@ -82,7 +82,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: ClickDetector.MaxActivationDistance
     summary: |
       Maximum distance between a character and the `Class.ClickDetector` or
@@ -108,7 +107,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
 methods: []
 events:
   - name: ClickDetector.MouseClick
@@ -143,7 +141,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: ClickDetector.MouseHoverEnter
     summary: |
       Fires when the parent of a `Class.ClickDetector` or `Class.DragDetector`
@@ -173,7 +170,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: ClickDetector.MouseHoverLeave
     summary: |
       Fires when a player's cursor hovers off the parent of a
@@ -204,7 +200,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: ClickDetector.RightMouseClick
     summary: |
       Fires when a player right clicks their mouse cursor on a
@@ -229,7 +224,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: ClickDetector.mouseClick
     summary: ''
     description: ''
@@ -247,5 +241,4 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
 callbacks: []

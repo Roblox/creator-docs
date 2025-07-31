@@ -61,7 +61,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ExperienceNotificationService:PromptOptIn
     summary: |
       Shows an in-experience prompt for the local player to enable
@@ -96,7 +95,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: ExperienceNotificationService.OptInPromptClosed
     summary: |
@@ -119,5 +117,4 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

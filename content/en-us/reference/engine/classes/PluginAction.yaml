@@ -43,7 +43,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: PluginAction.AllowBinding
     summary: |
       Whether the `Class.PluginAction` will be hidden from Studio's shortcuts
@@ -71,7 +70,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: PluginAction.StatusTip
     summary: |
       The description of the action, when viewing it from the keyboard shortcuts
@@ -94,7 +92,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: PluginAction.Text
     summary: |
       The text that is displayed when viewing this action in Roblox Studio.
@@ -114,7 +111,6 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
-    writeCapabilities: []
 methods: []
 events:
   - name: PluginAction.Triggered
@@ -132,5 +128,4 @@ events:
     deprecation_message: ''
     security: PluginSecurity
     capabilities: []
-    writeCapabilities: []
 callbacks: []

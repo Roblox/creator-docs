@@ -39,7 +39,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatWindowConfiguration.AbsoluteSize
     summary: |
       Actual screen size of the default chat window, in pixels.
@@ -62,7 +61,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatWindowConfiguration.BackgroundColor3
     summary: |
       Background color of the default chat window.
@@ -86,7 +84,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatWindowConfiguration.BackgroundTransparency
     summary: |
       Background transparency of the default chat window.
@@ -110,7 +107,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatWindowConfiguration.Enabled
     summary: |
       Whether to show the default chat window.
@@ -130,7 +126,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatWindowConfiguration.FontFace
     summary: |
       Font used to render text in the default chat window.
@@ -151,7 +146,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatWindowConfiguration.HeightScale
     summary: |
       Factor by which the height of the default chat window should be scaled.
@@ -173,7 +167,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatWindowConfiguration.HorizontalAlignment
     summary: |
       Horizontal alignment of the chat window.
@@ -199,7 +192,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatWindowConfiguration.TextColor3
     summary: |
       Color of the text in default chat window.
@@ -220,7 +212,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatWindowConfiguration.TextSize
     summary: |
       Size of the text in default chat window.
@@ -240,7 +231,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatWindowConfiguration.TextStrokeColor3
     summary: |
       Color of the text stroke for text in default chat window.
@@ -261,7 +251,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatWindowConfiguration.TextStrokeTransparency
     summary: |
       Transparency of the text stroke for text in default chat window.
@@ -282,7 +271,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatWindowConfiguration.VerticalAlignment
     summary: |
       Vertical alignment of the chat window.
@@ -308,7 +296,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatWindowConfiguration.WidthScale
     summary: |
       Factor by which the width of the default chat window should be scaled.
@@ -330,7 +317,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
 methods:
   - name: ChatWindowConfiguration:DeriveNewMessageProperties
     summary: |
@@ -371,6 +357,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Chat
-    writeCapabilities: []
 events: []
 callbacks: []

@@ -74,7 +74,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.Brightness
     summary: |
       Scales the light emitted from the emitter when
@@ -96,7 +95,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.Color
     summary: |
       Determines the color of all active particles over their individual
@@ -132,7 +130,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.Drag
     summary: |
       Determines the rate at which particles will lose half their speed through
@@ -160,7 +157,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.EmissionDirection
     summary: |
       Determines the face of the object that particles emit from.
@@ -188,7 +184,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.Enabled
     summary: |
       Determines if particles emit from the emitter.
@@ -217,7 +212,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.FlipbookFramerate
     summary: |
       Determines how fast the flipbook texture animates in frames per second.
@@ -241,7 +235,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.FlipbookIncompatible
     summary: |
       The error message to display if the
@@ -266,7 +259,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.FlipbookLayout
     summary: |
       Determines the layout of the flipbook texture. Must be None, Grid2x2,
@@ -294,7 +286,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.FlipbookMode
     summary: |
       Determines the type of the flipbook animation. Must be Loop, OneShot,
@@ -334,7 +325,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.FlipbookStartRandom
     summary: |
       Determines whether the animation starts at a random frame chosen per
@@ -360,7 +350,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.Lifetime
     summary: |
       Defines a random range of ages for newly emitted particles.
@@ -384,7 +373,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.LightEmission
     summary: |
       Determines how much particles' colors are blended with the colors behind
@@ -416,7 +404,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.LightInfluence
     summary: |
       Determines how much particles are influenced by the environmental light.
@@ -444,7 +431,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.LocalTransparencyModifier
     summary: ''
     description: ''
@@ -464,7 +450,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.LockedToPart
     summary: |
       Determines whether the particles rigidly move with the part they're being
@@ -492,7 +477,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.Orientation
     summary: |
       Specifies how to orient particles.
@@ -540,7 +524,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.Rate
     summary: |
       Determines the number of particles emitted per second.
@@ -564,7 +547,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.RotSpeed
     summary: |
       Determines the range of angular speeds of emitted particles, measured in
@@ -595,7 +577,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.Rotation
     summary: |
       Determines the range of rotations in degrees for newly emitted particles.
@@ -623,7 +604,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.Shape
     summary: |
       Sets the shape of the emitter to either a box, sphere, cylinder, or disc.
@@ -649,7 +629,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.ShapeInOut
     summary: |
       Sets whether particles emit outward only, inward only, or in both
@@ -672,7 +651,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.ShapePartial
     summary: |
       Influences particle emission from cylinder, disc, sphere, and box shapes.
@@ -710,7 +688,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.ShapeStyle
     summary: |
       Sets particle emission to either volumetric or surface-only emission.
@@ -731,7 +708,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.Size
     summary: |
       Determines the world size over individual particles' lifetimes.
@@ -763,7 +739,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.Speed
     summary: |
       Determines a random range of velocities (minimum to maximum) at which new
@@ -795,7 +770,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.SpreadAngle
     summary: |
       Determines the angles at which particles may be randomly emit, measured in
@@ -824,7 +798,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.Squash
     summary: |
       Allows for non-uniform scaling of particles, curve-controlled over their
@@ -848,7 +821,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.Texture
     summary: |
       Determines the image rendered on particles.
@@ -873,7 +845,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.TimeScale
     summary: |
       Value between 0 and 1 that controls the speed of the particle effect.
@@ -895,7 +866,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.Transparency
     summary: |
       Determines the transparency of particles over their individual lifetimes.
@@ -927,7 +897,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.VelocityInheritance
     summary: |
       Determines how much of the parent's velocity is inherited by particles
@@ -955,7 +924,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.VelocitySpread
     summary: |
       Determines how offset a particle can be fired from the local emitter
@@ -983,7 +951,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.WindAffectsDrag
     summary: |
       Whether emitted particles follow the `Class.Workspace.GlobalWind` vector.
@@ -1005,7 +972,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter.ZOffset
     summary: |
       Determines the forward-backward render position of particles; used to
@@ -1034,7 +1000,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
 methods:
   - name: ParticleEmitter:Clear
     summary: |
@@ -1057,7 +1022,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ParticleEmitter:Emit
     summary: |
       Emits a given number of particles.
@@ -1082,6 +1046,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
 events: []
 callbacks: []

@@ -31,7 +31,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Index1TposeAdjustment
     summary: ''
     description: ''
@@ -49,7 +48,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Index2
     summary: ''
     description: ''
@@ -67,7 +65,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Index2TposeAdjustment
     summary: ''
     description: ''
@@ -85,7 +82,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Index3
     summary: ''
     description: ''
@@ -103,7 +99,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Index3TposeAdjustment
     summary: ''
     description: ''
@@ -121,7 +116,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.IndexRange
     summary: ''
     description: ''
@@ -139,7 +133,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.IndexSize
     summary: ''
     description: ''
@@ -157,7 +150,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Middle1
     summary: ''
     description: ''
@@ -175,7 +167,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Middle1TposeAdjustment
     summary: ''
     description: ''
@@ -193,7 +184,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Middle2
     summary: ''
     description: ''
@@ -211,7 +201,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Middle2TposeAdjustment
     summary: ''
     description: ''
@@ -229,7 +218,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Middle3
     summary: ''
     description: ''
@@ -247,7 +235,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Middle3TposeAdjustment
     summary: ''
     description: ''
@@ -265,7 +252,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.MiddleRange
     summary: ''
     description: ''
@@ -283,7 +269,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.MiddleSize
     summary: ''
     description: ''
@@ -301,7 +286,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Pinky1
     summary: ''
     description: ''
@@ -319,7 +303,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Pinky1TposeAdjustment
     summary: ''
     description: ''
@@ -337,7 +320,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Pinky2
     summary: ''
     description: ''
@@ -355,7 +337,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Pinky2TposeAdjustment
     summary: ''
     description: ''
@@ -373,7 +354,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Pinky3
     summary: ''
     description: ''
@@ -391,7 +371,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Pinky3TposeAdjustment
     summary: ''
     description: ''
@@ -409,7 +388,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.PinkyRange
     summary: ''
     description: ''
@@ -427,7 +405,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.PinkySize
     summary: ''
     description: ''
@@ -445,7 +422,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Ring1
     summary: ''
     description: ''
@@ -463,7 +439,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Ring1TposeAdjustment
     summary: ''
     description: ''
@@ -481,7 +456,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Ring2
     summary: ''
     description: ''
@@ -499,7 +473,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Ring2TposeAdjustment
     summary: ''
     description: ''
@@ -517,7 +490,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Ring3
     summary: ''
     description: ''
@@ -535,7 +507,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Ring3TposeAdjustment
     summary: ''
     description: ''
@@ -553,7 +524,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.RingRange
     summary: ''
     description: ''
@@ -571,7 +541,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.RingSize
     summary: ''
     description: ''
@@ -589,7 +558,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Side
     summary: ''
     description: ''
@@ -607,7 +575,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Thumb1
     summary: ''
     description: ''
@@ -625,7 +592,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Thumb1TposeAdjustment
     summary: ''
     description: ''
@@ -643,7 +609,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Thumb2
     summary: ''
     description: ''
@@ -661,7 +626,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Thumb2TposeAdjustment
     summary: ''
     description: ''
@@ -679,7 +643,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Thumb3
     summary: ''
     description: ''
@@ -697,7 +660,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.Thumb3TposeAdjustment
     summary: ''
     description: ''
@@ -715,7 +677,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.ThumbRange
     summary: ''
     description: ''
@@ -733,7 +694,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription.ThumbSize
     summary: ''
     description: ''
@@ -751,7 +711,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
 methods:
   - name: HandRigDescription:GetFingerControl
     summary: ''
@@ -771,7 +730,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription:GetFingerTip
     summary: ''
     description: ''
@@ -790,7 +748,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription:SetFingerControl
     summary: ''
     description: ''
@@ -813,7 +770,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: HandRigDescription:SetFingerTip
     summary: ''
     description: ''
@@ -836,6 +792,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
 events: []
 callbacks: []

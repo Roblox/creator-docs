@@ -235,7 +235,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: ContextActionService:BindActionAtPriority
     summary: |
       Behaves like `Class.ContextActionService:BindAction()|BindAction` but also
@@ -291,7 +290,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: ContextActionService:BindActionToInputTypes
     summary: |
       Binds _functionToBind_ to input events such as key presses, mouse
@@ -359,7 +357,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: ContextActionService:BindActivate
     summary: |
       Bind a `Enum.KeyCode` with a specific `Enum.UserInputType` to trigger
@@ -396,7 +393,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: ContextActionService:GetAllBoundActionInfo
     summary: |
       Get a table of information about all bound actions (key is the name passed
@@ -422,7 +418,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: ContextActionService:GetBoundActionInfo
     summary: |
       Get a table of information about a bound action given its name originally
@@ -533,7 +528,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: ContextActionService:GetButton
     summary: |
       Retrieves a `Class.ImageButton` of a
@@ -567,7 +561,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: ContextActionService:GetCurrentLocalToolIcon
     summary: |
       Return the `Class.BackpackItem.TextureId` of a `Class.Tool` currently
@@ -590,7 +583,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: ContextActionService:SetDescription
     summary: |
       Given the name of a bound action with a touch button, sets the description
@@ -630,7 +622,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: ContextActionService:SetImage
     summary: |
       If `actionName` key contains a bound action, then `image` is set as the
@@ -670,7 +661,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: ContextActionService:SetPosition
     summary: |
       Given the name of a bound action with a touch button, sets the position of
@@ -710,7 +700,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: ContextActionService:SetTitle
     summary: |
       Given the name of a bound action with a touch button, sets the text shown
@@ -750,7 +739,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: ContextActionService:UnbindAction
     summary: |
       Unbind an action from input given its name.
@@ -783,7 +771,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: ContextActionService:UnbindActivate
     summary: |
       Unbind a `Enum.KeyCode` with a specific `Enum.UserInputType` from
@@ -815,7 +802,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: ContextActionService:UnbindAllActions
     summary: |
       Removes all functions bound. No actionNames will remain. All touch buttons
@@ -835,7 +821,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
 events:
   - name: ContextActionService.LocalToolEquipped
     summary: |
@@ -853,7 +838,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: ContextActionService.LocalToolUnequipped
     summary: |
       Fires when the current player unequips a `Class.Tool`.
@@ -870,5 +854,4 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
 callbacks: []

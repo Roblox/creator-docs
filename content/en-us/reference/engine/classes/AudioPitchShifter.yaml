@@ -38,7 +38,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioPitchShifter.Pitch
     summary: |
       Pitch modification to be multiplied by the pitch of the input stream.
@@ -59,7 +58,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioPitchShifter.WindowSize
     summary: ''
     description: ''
@@ -77,7 +75,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
 methods:
   - name: AudioPitchShifter:GetConnectedWires
     summary: |
@@ -101,7 +98,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioPitchShifter:GetInputPins
     summary: ''
     description: ''
@@ -116,7 +112,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioPitchShifter:GetOutputPins
     summary: ''
     description: ''
@@ -131,7 +126,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
 events:
   - name: AudioPitchShifter.WiringChanged
     summary: |
@@ -170,5 +164,4 @@ events:
     security: None
     capabilities:
       - Audio
-    writeCapabilities: []
 callbacks: []

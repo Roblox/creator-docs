@@ -61,7 +61,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: PolicyService:GetPolicyInfoForPlayerAsync
     summary: |
       Returns policy information about a player based on geolocation, age group,
@@ -187,6 +186,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

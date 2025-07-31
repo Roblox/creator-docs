@@ -61,7 +61,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: KeyframeSequenceProvider:GetKeyframeSequence
     summary: |
       Returns a `Class.KeyframeSequence` from a given asset URL.
@@ -87,7 +86,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: KeyframeSequenceProvider:GetKeyframeSequenceAsync
     summary: |
       Returns a KeyframeSequence based on the specified assetId asynchronously.
@@ -114,7 +112,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: KeyframeSequenceProvider:GetKeyframeSequenceById
     summary: |
       Returns a `Class.KeyframeSequence` from the supplied assetId.
@@ -146,7 +143,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: KeyframeSequenceProvider:RegisterActiveKeyframeSequence
     summary: |
       Generates a temporary asset ID from a `Class.KeyframeSequence` that can be
@@ -182,7 +178,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: KeyframeSequenceProvider:RegisterKeyframeSequence
     summary: |
       Generates a temporary asset ID from a `Class.KeyframeSequence` that can be
@@ -218,6 +213,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

@@ -46,7 +46,6 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: IntConstrainedValue.MaxValue
     summary: |
       The highest number that the `Class.IntConstrainedValue.Value` property can
@@ -69,7 +68,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: IntConstrainedValue.MinValue
     summary: |
       The lowest number that the `Class.IntConstrainedValue.Value` property can
@@ -92,7 +90,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: IntConstrainedValue.Value
     summary: |
       Used to hold an integer value between `Class.IntConstrainedValue.MinValue`
@@ -116,7 +113,6 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
-    writeCapabilities: []
 methods: []
 events:
   - name: IntConstrainedValue.Changed
@@ -137,7 +133,6 @@ events:
       use the `Library.math.clamp()` function to constrain values.
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: IntConstrainedValue.changed
     summary: ''
     description: ''
@@ -154,5 +149,4 @@ events:
       which has also been deprecated. Neither event should be used in new work.
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

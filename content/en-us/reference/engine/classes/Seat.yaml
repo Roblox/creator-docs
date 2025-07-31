@@ -80,7 +80,6 @@ properties:
     capabilities:
       - Basic
       - Avatar
-    writeCapabilities: []
   - name: Seat.Occupant
     summary: |
       The humanoid that is sitting in the seat.
@@ -103,7 +102,6 @@ properties:
     capabilities:
       - Basic
       - Avatar
-    writeCapabilities: []
 methods:
   - name: Seat:Sit
     summary: |
@@ -128,6 +126,5 @@ methods:
     capabilities:
       - Basic
       - Avatar
-    writeCapabilities: []
 events: []
 callbacks: []

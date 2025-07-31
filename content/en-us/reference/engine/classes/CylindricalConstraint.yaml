@@ -125,7 +125,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: CylindricalConstraint.AngularLimitsEnabled
     summary: |
       Enables the angular limits around the rotation axis.
@@ -145,7 +144,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: CylindricalConstraint.AngularResponsiveness
     summary: |
       Specifies the sharpness of the angular servo motor in reaching the
@@ -170,7 +168,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: CylindricalConstraint.AngularRestitution
     summary: |
       Restitution of the two limits, or how elastic they are.
@@ -191,7 +188,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: CylindricalConstraint.AngularSpeed
     summary: |
       Target angular speed. This value is unsigned as the servo will always move
@@ -213,7 +209,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: CylindricalConstraint.AngularVelocity
     summary: |
       The target angular velocity of the motor in radians per second around the
@@ -235,7 +230,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: CylindricalConstraint.CurrentAngle
     summary: |
       Signed angle (in degrees) between the reference axis and the secondary
@@ -261,7 +255,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: CylindricalConstraint.InclinationAngle
     summary: |
       Direction of the rotation axis as an angle from the **X** axis in the
@@ -284,7 +277,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: CylindricalConstraint.LowerAngle
     summary: |
       Lower limit for the angle (in degrees) between the reference axis and the
@@ -308,7 +300,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: CylindricalConstraint.MotorMaxAngularAcceleration
     summary: |
       The maximum angular acceleration of the motor in radians per second
@@ -330,7 +321,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: CylindricalConstraint.MotorMaxTorque
     summary: |
       The maximum torque the motor can apply to achieve the target angular
@@ -352,7 +342,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: CylindricalConstraint.RotationAxisVisible
     summary: |
       Enable the visibility of the rotation axis.
@@ -372,7 +361,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: CylindricalConstraint.ServoMaxTorque
     summary: |
       Maximum torque the servo motor can apply.
@@ -393,7 +381,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: CylindricalConstraint.SoftlockAngularServoUponReachingTarget
     summary: ''
     description: ''
@@ -413,7 +400,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: CylindricalConstraint.TargetAngle
     summary: |
       Target angle (in degrees) between the reference axis and the secondary
@@ -437,7 +423,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: CylindricalConstraint.UpperAngle
     summary: |
       Upper limit for the angle (in degrees) between the reference axis and the
@@ -461,7 +446,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: CylindricalConstraint.WorldRotationAxis
     summary: |
       The unit vector direction of the rotation axis in world coordinates.
@@ -483,7 +467,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

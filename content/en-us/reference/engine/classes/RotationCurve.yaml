@@ -39,7 +39,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
 methods:
   - name: RotationCurve:GetKeyAtIndex
     summary: |
@@ -61,7 +60,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: RotationCurve:GetKeyIndicesAtTime
     summary: |
       Returns the index of the last and first key of a period of time.
@@ -86,7 +84,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: RotationCurve:GetKeys
     summary: |
       Returns a copy of all the keys in the rotation curve as a Luau array of
@@ -106,7 +103,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: RotationCurve:GetValueAtTime
     summary: |
       Samples the rotation curve at a given time and returns the corresponding
@@ -132,7 +128,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: RotationCurve:InsertKey
     summary: |
       Adds the key passed as an argument to this curve. If a key at the same
@@ -159,7 +154,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: RotationCurve:RemoveKeyAtIndex
     summary: |
       Removes a given number of keys starting from a given index.
@@ -188,7 +182,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: RotationCurve:SetKeys
     summary: |
       Resets this curve's keys using the `Datatype.RotationCurveKey` array
@@ -218,6 +211,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
 events: []
 callbacks: []

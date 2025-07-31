@@ -34,7 +34,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods: []
 events:
   - name: BoolValue.Changed
@@ -66,7 +65,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: BoolValue.changed
     summary: ''
     description: ''
@@ -83,5 +81,4 @@ events:
       should be used instead.
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

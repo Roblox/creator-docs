@@ -63,8 +63,6 @@ properties:
       can_save: true
     capabilities:
       - PluginOrOpenCloud
-    writeCapabilities:
-      - PluginOrOpenCloud
 methods: []
 events: []
 callbacks: []

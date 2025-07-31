@@ -41,7 +41,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
 methods:
   - name: AudioDeviceOutput:GetConnectedWires
     summary: |
@@ -65,7 +64,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioDeviceOutput:GetInputPins
     summary: ''
     description: ''
@@ -80,7 +78,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioDeviceOutput:GetOutputPins
     summary: ''
     description: ''
@@ -95,7 +92,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
 events:
   - name: AudioDeviceOutput.WiringChanged
     summary: |
@@ -134,5 +130,4 @@ events:
     security: None
     capabilities:
       - Audio
-    writeCapabilities: []
 callbacks: []

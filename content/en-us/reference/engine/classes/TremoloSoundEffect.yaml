@@ -42,7 +42,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: TremoloSoundEffect.Duty
     summary: |
       Controls how long during one volume oscillation the effect will be active.
@@ -64,7 +63,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: TremoloSoundEffect.Frequency
     summary: |
       Sets how often the effect will oscillate the volume.
@@ -85,7 +83,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

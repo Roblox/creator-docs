@@ -43,7 +43,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: MeshPart.HasJointOffset
     summary: ''
     description: ''
@@ -62,7 +61,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: MeshPart.HasSkinnedMesh
     summary: ''
     description: ''
@@ -81,7 +79,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: MeshPart.JointOffset
     summary: ''
     description: ''
@@ -100,7 +97,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: MeshPart.MeshContent
     summary: |
       The mesh that is displayed on the `Class.MeshPart`. Supports
@@ -134,7 +130,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: MeshPart.MeshId
     summary: |
       The [asset URIs](../../../projects/assets/index.md#asset-uris) of the mesh
@@ -168,7 +163,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: MeshPart.RenderFidelity
     summary: |
       The level of detail used to render the `Class.MeshPart`.
@@ -222,7 +216,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: MeshPart.TextureContent
     summary: |
       The texture applied to the `Class.MeshPart`. Supports
@@ -297,7 +290,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: MeshPart.TextureID
     summary: |
       The texture applied to the `Class.MeshPart`. Reads and writes to
@@ -333,7 +325,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
 methods:
   - name: MeshPart:ApplyMesh
     summary: |
@@ -376,6 +367,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
 events: []
 callbacks: []

@@ -43,7 +43,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Plugin.DisableUIDragDetectorDrags
     summary: ''
     description: ''
@@ -60,7 +59,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Plugin.GridSize
     summary: |
       Returns the grid snapping size the user has set in Studio.
@@ -84,7 +82,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Plugin.IsDebuggable
     summary: ''
     description: ''
@@ -101,7 +98,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: Plugin:Activate
     summary: |
@@ -139,7 +135,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:CreateDockWidgetPluginGui
     summary: |
       Creates a `Class.DockWidgetPluginGui` given a
@@ -173,7 +168,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:CreatePluginAction
     summary: |
       Creates a `Class.PluginAction` which is an object that represents a
@@ -235,7 +229,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:CreatePluginMenu
     summary: |
       Creates a new plugin menu.
@@ -293,7 +286,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:CreateToolbar
     summary: |
       Creates a new `Class.PluginToolbar` with the given name.
@@ -317,7 +309,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:Deactivate
     summary: |
       Deactivates the plugin.
@@ -342,7 +333,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:GetJoinMode
     summary: |
       Returns the `Enum.JointCreationMode` the user has set in Studio under the
@@ -360,7 +350,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:GetMouse
     summary: |
       Returns a `Class.Mouse` that can be used while the plugin is active.
@@ -378,7 +367,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:GetSelectedRibbonTool
     summary: |
       Returns the currently selected `Enum.RibbonTool`.
@@ -398,7 +386,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:GetSetting
     summary: |
       Retrieves a previously stored value with the given key, or `nil` if the
@@ -432,7 +419,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:GetStudioUserId
     summary: |
       Returns the Studio user's userId if they're logged in, otherwise
@@ -451,7 +437,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:ImportFbxAnimation
     summary: |
       Prompts the user to open a .fbx animation file that can be loaded onto the
@@ -480,7 +465,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:ImportFbxRig
     summary: |
       Prompts the user to open a .fbx file, uploads the individual components of
@@ -505,7 +489,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:Intersect
     summary: ''
     description: ''
@@ -523,7 +506,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:IsActivated
     summary: |
       Returns true if this plugin is currently active, after having been
@@ -542,7 +524,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:IsActivatedWithExclusiveMouse
     summary: |
       Returns true if this plugin is currently active with an exclusive mouse,
@@ -569,7 +550,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:Negate
     summary: |
       Negates the given parts and returns the resulting NegateOperations.
@@ -589,7 +569,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:OpenScript
     summary: |
       Used to open the given script instance in an editor window, in Roblox
@@ -618,7 +597,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:OpenWikiPage
     summary: |
       Opens the context help window to the wiki page that `url` links to.
@@ -639,7 +617,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:PromptForExistingAssetId
     summary: |
       Opens a window in Roblox Studio, which prompts the user to select an asset
@@ -664,7 +641,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:PromptSaveSelection
     summary: |
       Prompts the user to save their current selection with the specified file
@@ -687,7 +663,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:SaveSelectedToRoblox
     summary: |
       Opens an upload window for the user's current selection.
@@ -703,7 +678,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:SelectRibbonTool
     summary: |
       Activates the specified Roblox Studio tool.
@@ -734,7 +708,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:Separate
     summary: |
       Separates the given UnionOperations and returns the resulting parts.
@@ -754,7 +727,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:SetSetting
     summary: |
       Stores a given value for later use under the given key. The value will
@@ -797,7 +769,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:StartDrag
     summary: |
       Starts a drag action given a dictionary of parameters.
@@ -887,7 +858,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Plugin:Union
     summary: |
       Unions the given parts and returns the resulting UnionOperation.
@@ -907,7 +877,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: Plugin.Deactivation
     summary: |
@@ -928,7 +897,6 @@ events:
     deprecation_message: ''
     security: PluginSecurity
     capabilities: []
-    writeCapabilities: []
   - name: Plugin.Unloading
     summary: |
       Fires immediately before the `Class.Plugin` stops running.
@@ -954,5 +922,4 @@ events:
     deprecation_message: ''
     security: PluginSecurity
     capabilities: []
-    writeCapabilities: []
 callbacks: []

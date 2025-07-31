@@ -42,7 +42,6 @@ properties:
       can_save: false
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: Constraint.Attachment0
     summary: |
       The `Class.Attachment` that is connected to
@@ -63,7 +62,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: Constraint.Attachment1
     summary: |
       The `Class.Attachment` that is connected to
@@ -84,7 +82,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: Constraint.Color
     summary: |
       The color of the constraint.
@@ -104,7 +101,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: Constraint.Enabled
     summary: |
       Toggles whether or not the constraint is enabled.
@@ -124,7 +120,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: Constraint.Visible
     summary: |
       Toggles the constraint's visibility.
@@ -144,7 +139,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
 methods:
   - name: Constraint:GetDebugAppliedForce
     summary: ''
@@ -166,7 +160,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: Constraint:GetDebugAppliedTorque
     summary: ''
     description: ''
@@ -187,6 +180,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Physics
-    writeCapabilities: []
 events: []
 callbacks: []

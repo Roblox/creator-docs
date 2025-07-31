@@ -64,7 +64,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: PlayerGui.ScreenOrientation
     summary: |
       Sets the preferred screen orientation mode for this player, if on a mobile
@@ -86,7 +85,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: PlayerGui.SelectionImageObject
     summary: |
       Overrides the default selection adornment used for gamepads.
@@ -107,7 +105,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods:
   - name: PlayerGui:GetTopbarTransparency
     summary: |
@@ -127,7 +124,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: PlayerGui:SetTopbarTransparency
     summary: |
       Sets the transparency of the top bar.
@@ -159,7 +155,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
 events:
   - name: PlayerGui.TopbarTransparencyChangedSignal
     summary: |
@@ -179,5 +174,4 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
 callbacks: []
