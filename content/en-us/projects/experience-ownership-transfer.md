@@ -10,54 +10,7 @@ With **experience ownership transfer**, you can transfer your experiences to [gr
 Before making a transfer or accepting a transfer, you must first:
 
 - Verify your email address.
-- Upload your private `Class.ModuleScript|ModuleScripts` to the group you're transferring the experience to. If the experience uses packages where the package owner is a user and not a group, you might have to recreate those packages or replace them with packages that are already owned by a group.
-- Publish your animation assets to the group you're transferring the experience to.
-
-  - If you have a large number of animations to upload, you can use a community-supported third-party tool like [Roblox Animation Transfer](https://github.com/evaera/roblox-animation-transfer). See [Transfer animations](./transfer-animations.md) for more details.
-  - If you have a small number of animations to upload, you can manually re-upload them and then update your animation asset references to support old and new IDs based on the `CreatorID` and `CreatorType`. See the following code for an example:
-
-  ```lua
-  -- Maps animation IDs that belong to the original creator to animation IDs
-  -- that belong to the new creator.
-  local transferAnimationMap = {
-  	["6406676108"] = 14292200298,
-  	["6438293322"] = 14292082312,
-  	["6464978998"] = 14292224322,
-  	["6465240715"] = 14292226967,
-  	["6465244287"] = 14292229476,
-  	["6382318344"] = 14292213468,
-  	["6382564692"] = 14292207171,
-  	["6460651769"] = 14292098870,
-  	["6415507655"] = 14292218236,
-  	["6415509331"] = 14292221034
-  }
-
-  function mapTransferAnimationId(id)
-
-  	-- If experience has been transferred, maps old animation IDs to new
-  	if game:GetService("RunService"):IsStudio() or
-  	(game.CreatorType == Enum.CreatorType.Group and
-  		game.CreatorId == 32626384) then
-  			local animationId = string.match(id, "%d+$")
-  			local mappedId = transferAnimationMap[animationId]
-
-  			if mappedId then
-  				return "rbxassetid://" .. mappedId
-  			end
-  	end
-
-  	return id
-  end
-
-  -- Creates an animation instance associated with the
-  -- specified rbxassetid://<animation_id>
-  function createAnimation(id)
-  	local animation = Instance.new("Animation")
-  	animation.AnimationId = mapTransferAnimationId(id)
-
-  	return animation
-  end
-  ```
+- Upload your private `Class.ModuleScript|ModuleScripts` and `Class.InsertService|InsertService` asset usages to the group you're transferring the experience to. If the experience uses packages where the package owner is a user and not a group, you might have to recreate those packages or replace them with packages that are already owned by a group.
 
 <Alert severity="info">
 As a best practice, if you're using Open Cloud API keys for the experience, create an API key as the new owner with the name `RobloxTransferApiKey`. During the transfer, the relevant scopes are added to this new key and removed from the original key. You can then use a feature flag to allow your backend services to start using the new key after the transfer is complete.
