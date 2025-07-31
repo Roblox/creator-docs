@@ -9,7 +9,7 @@ summary: |
   A GlobalDataStore that also allows for ordered data store entries.
 description: |
   A **OrderedDataStore** is essentially a `Class.GlobalDataStore` with the
-  exception that stored values must be **positive integers**. It exposes a
+  exception that stored values must be **integers**. It exposes a
   method `Class.OrderedDataStore:GetSortedAsync()|GetSortedAsync()` which allows
   inspection of the entries in sorted order using a `Class.DataStorePages`
   object.
@@ -44,7 +44,7 @@ methods:
       **minValue**/**maxValue** are optional parameters which filter the
       results.
 
-      See [Data Stores](../../../cloud-services/data-stores/index.md) for
+      See [Error codes and limits](../../../cloud-services/data-stores/error-codes-and-limits.md) for
       request limits and descriptions of the error codes.
     code_samples: []
     parameters:

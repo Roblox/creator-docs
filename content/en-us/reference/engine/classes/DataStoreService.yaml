@@ -79,7 +79,8 @@ methods:
       `Class.DataStoreService:GetDataStore()|GetDataStore()` function.
 
       Note that the `Class.DataStore` returned by this function always uses the
-      scope `u`. See [Data stores](../../../cloud-services/data-stores/index.md)
+      scope `u`. See
+      [Versioning, listing, and caching](../../../cloud-services/data-stores/versioning-listing-and-caching.md#scopes)
       for details on scope.
     code_samples:
       - get-a-globaldatastore-instance
