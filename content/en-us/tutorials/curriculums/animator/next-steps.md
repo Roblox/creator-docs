@@ -4,15 +4,15 @@ description: Explains ways to continue learning about creating animations in Stu
 prev: /tutorials/curriculums/animator/test-and-save
 ---
 
-Congratulations on completing your first animation with Roblox Studio! Now that you have experience working with keyframes and posing characters, you can share your work with friends and extend your skills by learning about Studio's additional animation features.
+Congratulations on completing your first animation with Roblox Studio! Now that you have experience working with keyframes and posing characters, you can share your work with connections and extend your skills by learning about Studio's additional animation features.
 
-## Share with friends
+## Share with connections
 
-When you first publish an experience, it's automatically set to **private** so that you are the only one who can play your game. However, creating on Roblox is always more fun when you can share what you make with your friends, so let's set up your experience so that others can play too.
+When you first publish an experience, it's automatically set to **private** so that you are the only one who can play your game. However, creating on Roblox is always more fun when you can share what you make with your connections, so let's set up your experience so that others can play too.
 
 To make your experience public:
 
-1. Using the steps from the last chapter, publish your experience so your friends can see your latest changes.
+1. Using the steps from the last chapter, publish your experience so your connections can see your latest changes.
 
 1. In the top-left corner of your computer, click **File** > **Game Settings**. The **Game Settings** window displays.
 
