@@ -22,7 +22,7 @@ description: |
   `Class.Player.GameplayPaused` property when their respective pause logic is
   triggered, and a default message is displayed on the client. The default pause
   UI can be overridden as outlined in
-  [Instance Streaming](../../../workspace/streaming.md).
+  [Instance Streaming](../../../workspace/streaming.md#customize-the-pause-screen).
 code_samples: []
 tags: []
 deprecation_message: ''
