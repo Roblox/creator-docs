@@ -91,7 +91,7 @@ The **Server** tab includes the following charts:
     <tbody>
         <tr>
             <td>Server CPU time</td>
-            <td>Stacked area chart showing milliseconds (ms) of processing time per frame. Values over 16.67 ms are highly undesirable; they can cause server frame rates to drop below 60. See [Server Compute](../../performance-optimization/identify.md#server-compute)</td>
+            <td>Stacked area chart showing milliseconds (ms) of processing time per frame. Values over 16.67 ms are highly undesirable; they can cause server frame rates to drop below 60. See [Server Compute](../../performance-optimization/identify.md#server-compute).</td>
         </tr>
         <tr>
             <td>Server frame rate</td>
