@@ -1,0 +1,42 @@
+-- Create Grass Floor
+local grass = Instance.new("Part")
+grass.Size = Vector3.new(500, 1, 500)
+grass.Position = Vector3.new(0, 0, 0)
+grass.Anchored = true
+grass.Material = Enum.Material.Grass
+grass.Name = "GrassFloor"
+grass.Parent = workspace
+
+-- Add Trees
+for i = 1, 10 do
+    local tree = Instance.new("Model")
+    tree.Name = "Tree"
+
+    local trunk = Instance.new("Part")
+    trunk.Size = Vector3.new(2, 10, 2)
+    trunk.Position = Vector3.new(math.random(-200, 200), 5, math.random(-200, 200))
+    trunk.Anchored = true
+    trunk.Material = Enum.Material.Wood
+    trunk.Parent = tree
+
+    local leaves = Instance.new("Part")
+    leaves.Size = Vector3.new(10, 6, 10)
+    leaves.Position = trunk.Position + Vector3.new(0, 8, 0)
+    leaves.Anchored = true
+    leaves.Material = Enum.Material.Grass
+    leaves.Color = Color3.fromRGB(34, 139, 34)
+    leaves.Parent = tree
+
+    tree.Parent = workspace
+end
+
+-- Add Houses
+for i = 1, 5 do
+    local house = Instance.new("Part")
+    house.Size = Vector3.new(20, 15, 20)
+    house.Position = Vector3.new(math.random(-200, 200), 7.5, math.random(-200, 200))
+    house.Anchored = true
+    house.Color = Color3.fromRGB(200, 150, 120)
+    house.Name = "House"
+    house.Parent = workspace
+end
