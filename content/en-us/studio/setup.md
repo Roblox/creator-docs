@@ -1,4 +1,5 @@
----
+---//cussallowed![IMG_20250802_000231](https://github.com/user-attachments/assets/5e0a0c6c-051f-4148-a8cb-a9526f30d925)
+
 title: Roblox Studio setup
 description: Explains how to install Roblox Studio on your system.
 ---
