@@ -46,7 +46,7 @@ By default, each player's `Class.PlayerScripts` contains a `Class.ModuleScript` 
 To determine when to move to the next obstacle, you should use the `IsCurrentWaypointReached` function provided by the **ClickToMoveController** module under `Class.PlayerScripts`.
 
 An example of using this method can be found under the [Pathfinding Tutorial Experience](https://www.roblox.com/games/138975162426147/Pathfinding-Tutorial-Experience), or as a [model](https://create.roblox.com/store/asset/95888831676289/Player-Path-Following-Script).
- 
+
 ## Create paths
 
 Pathfinding is initiated through `Class.PathfindingService` and its `Class.PathfindingService:CreatePath()|CreatePath()` function.
