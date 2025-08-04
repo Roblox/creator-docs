@@ -39,7 +39,7 @@ The direct line-of-sight distance for pathfinding from the start to the finish p
 
 ### MoveToFinished limitation
 
-Whilst using the `Class.Humanoid.MoveToFinished|MoveToFinished` event to detect when the character reaches each waypoint will work in most use cases, in larger games or games with numerous NPCs find less optimal perfomances and stuttering due to a delay in this event. 
+Whilst using the `Class.Humanoid.MoveToFinished|MoveToFinished` event to detect when the character reaches each waypoint will work in most use cases, in larger games or games with numerous NPCs you may find less optimal perfomances and stuttering. 
 
 By default, each player's `Class.PlayerScripts` contains a `Class.ModuleScript` named **PlayerModule**. Within `PlayerModule`, you will find another `Class.ModuleScript` called **ClickToMoveController**. 
 
