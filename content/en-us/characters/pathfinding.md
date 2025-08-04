@@ -37,6 +37,17 @@ Pathfinding calculations consider only parts within certain vertical boundaries:
 
 The direct line-of-sight distance for pathfinding from the start to the finish point must not exceed 3,000 studs. Exceeding this distance will result in a `Enum.PathStatus|NoPath` status.
 
+### MoveToFinished limitation
+
+Whilst using the `Class.Humanoid.MoveToFinished|MoveToFinished` event to detect when the character reaches each waypoint will work in most use cases, in larger games or games with numerous NPCs find less optimal perfomances and stuttering due to a delay in this event. 
+
+By default, each player's `Class.PlayerScripts` contains a `Class.ModuleScript` named **PlayerModule**. Within `PlayerModule`, you will find another `Class.ModuleScript` called **ClickToMoveController**. 
+
+To determine when to move to the next obstacle, you should use the `IsCurrentWaypointReached` function provided by the **ClickToMoveController** module under `Class.PlayerScripts`.
+
+An example of using this method can be found under the [Pathfinding Tutorial Experience](https://www.roblox.com/games/138975162426147/Pathfinding-Tutorial-Experience), or as a [model](https://create.roblox.com/store/asset/95888831676289/Player-Path-Following-Script). 
+ 
+
 ## Create paths
 
 Pathfinding is initiated through `Class.PathfindingService` and its `Class.PathfindingService:CreatePath()|CreatePath()` function.
