@@ -62,7 +62,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: MemoryStoreQueue:GetSizeAsync
     summary: |
       Gets the size of the queue.
@@ -85,7 +84,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: MemoryStoreQueue:ReadAsync
     summary: |
       Reads one or more items from the queue.
@@ -138,7 +136,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: MemoryStoreQueue:RemoveAsync
     summary: |
       Removes an item or items previously read from the queue.
@@ -166,6 +163,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
 events: []
 callbacks: []

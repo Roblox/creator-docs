@@ -62,7 +62,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageLabel.ImageColor3
     summary: |
       Determines how a rendered image will be colorized.
@@ -85,7 +84,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageLabel.ImageContent
     summary: |
       The image content displayed by the UI element. Supports
@@ -118,7 +116,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageLabel.ImageRectOffset
     summary: |
       The offset in pixels of the sub-area of an image to be displayed.
@@ -140,7 +137,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageLabel.ImageRectSize
     summary: |
       Determines the size in pixels of the sub-area of an image to be displayed.
@@ -163,7 +159,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageLabel.ImageTransparency
     summary: |
       Determines the transparency of the rendered image.
@@ -186,7 +181,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageLabel.IsLoaded
     summary: |
       Indicates whether the image has finished loading from Roblox.
@@ -211,7 +205,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageLabel.ResampleMode
     summary: |
       Selects the image resampling mode for the label.
@@ -235,7 +228,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageLabel.ScaleType
     summary: |
       Determines how an image will scale if displayed in a UI element whose size
@@ -277,7 +269,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageLabel.SliceCenter
     summary: |
       Sets the slice boundaries of a 9-sliced image.
@@ -304,7 +295,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageLabel.SliceScale
     summary: |
       Scales the 9-slice edges by the specified ratio.
@@ -330,7 +320,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageLabel.TileSize
     summary: |
       Sets the tiling size of the `Class.ImageLabel`.
@@ -356,7 +345,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

@@ -36,7 +36,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods: []
 events:
   - name: Vector3Value.Changed
@@ -69,7 +68,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: Vector3Value.changed
     summary: ''
     description: ''
@@ -86,5 +84,4 @@ events:
       should be used instead.
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

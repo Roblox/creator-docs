@@ -58,7 +58,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: SocialService:CanSendGameInviteAsync
     summary: |
       Indicates whether the given `Class.Player` can invite other players.
@@ -99,7 +98,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: SocialService:GetEventRsvpStatusAsync
     summary: |
       Returns the local player's RSVP status for the given event.
@@ -133,7 +131,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: SocialService:GetPartyAsync
     summary: |
       Returns an array of dictionaries containing data for all members of the
@@ -211,7 +208,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: SocialService:GetPlayersByPartyId
     summary: |
       Returns a table of all presently connected `Class.Player` objects whose
@@ -243,7 +239,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: SocialService:HideSelfView
     summary: |
       Hides the calling player's self view.
@@ -260,7 +255,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: SocialService:PromptGameInvite
     summary: |
       Prompts the given `Class.Player` with the invite screen.
@@ -299,7 +293,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: SocialService:PromptLinkSharing
     summary: ''
     description: ''
@@ -322,7 +315,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: SocialService:PromptPhoneBook
     summary: |
       Prompts the given `Class.Player` with the phone book.
@@ -363,7 +355,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: SocialService:PromptRsvpToEventAsync
     summary: |
       Prompts the local `Class.Player` with a prompt to change their RSVP status
@@ -402,7 +393,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: SocialService:ShowSelfView
     summary: |
       Shows the calling player's self view.
@@ -424,7 +414,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: SocialService.CallInviteStateChanged
     summary: |
@@ -449,7 +438,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: SocialService.GameInvitePromptClosed
     summary: |
       Fires when a player closes an invite prompt.
@@ -471,7 +459,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: SocialService.PhoneBookPromptClosed
     summary: |
       Fires when a player closes the phone book prompt.
@@ -488,7 +475,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: SocialService.ShareSheetClosed
     summary: ''
     description: ''
@@ -502,7 +488,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks:
   - name: SocialService.OnCallInviteInvoked
     summary: |
@@ -539,4 +524,3 @@ callbacks:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []

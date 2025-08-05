@@ -42,7 +42,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: CylinderHandleAdornment.Height
     summary: |
       The height of the cylinder adornment.
@@ -63,7 +62,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: CylinderHandleAdornment.InnerRadius
     summary: |
       Inner radius of a hollow cylinder.
@@ -86,7 +84,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: CylinderHandleAdornment.Radius
     summary: |
       The radius of the cylinder adornment.
@@ -107,7 +104,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

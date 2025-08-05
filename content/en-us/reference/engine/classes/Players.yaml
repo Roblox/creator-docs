@@ -38,7 +38,6 @@ properties:
     code_samples: []
     type: boolean
     tags:
-      - NotReplicated
       - NotScriptable
     deprecation_message: ''
     security:
@@ -51,7 +50,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players.BubbleChat
     summary: |
       Indicates whether or not bubble chat is enabled. It is set with the
@@ -83,8 +81,6 @@ properties:
     capabilities:
       - Chat
       - Players
-    writeCapabilities:
-      - Chat
   - name: Players.CharacterAutoLoads
     summary: |
       Indicates whether `Class.Player.Character|characters` will respawn
@@ -116,7 +112,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players.ClassicChat
     summary: |
       Indicates whether or not classic chat is enabled; set by the
@@ -147,8 +142,6 @@ properties:
     capabilities:
       - Chat
       - Players
-    writeCapabilities:
-      - Chat
   - name: Players.LocalPlayer
     summary: |
       The `Class.Player` that the `Class.LocalScript` is running for.
@@ -176,7 +169,6 @@ properties:
       can_save: false
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players.MaxPlayers
     summary: |
       The maximum number of players that can be in a server.
@@ -201,7 +193,6 @@ properties:
       can_save: false
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players.NumPlayers
     summary: |
       Returns the number of people in the server at the current time.
@@ -227,7 +218,6 @@ properties:
       can_save: false
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players.PreferredPlayers
     summary: |
       The preferred number of players for a server.
@@ -251,7 +241,6 @@ properties:
       can_save: false
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players.RespawnTime
     summary: |
       Controls the amount of time taken for a players character to respawn.
@@ -281,7 +270,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players.UseStrafingAnimations
     summary: ''
     description: ''
@@ -300,7 +288,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players.localPlayer
     summary: ''
     description: ''
@@ -324,7 +311,6 @@ properties:
       can_save: false
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players.numPlayers
     summary: |
       Returns the number of people in the server at the current time.
@@ -353,7 +339,6 @@ properties:
       can_save: false
     capabilities:
       - Players
-    writeCapabilities: []
 methods:
   - name: Players:BanAsync
     summary: |
@@ -478,7 +463,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players:Chat
     summary: |
       Makes the local player chat the given message.
@@ -507,7 +491,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players:CreateHumanoidModelFromDescription
     summary: |
       Returns a character Model equipped with everything specified in the passed
@@ -547,7 +530,6 @@ methods:
     capabilities:
       - Avatar
       - Players
-    writeCapabilities: []
   - name: Players:CreateHumanoidModelFromUserId
     summary: |
       Returns a character Model set-up with everything equipped to match the
@@ -576,7 +558,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players:GetBanHistoryAsync
     summary: |
       Retrieves the ban and unban history of any user within the experience's
@@ -612,7 +593,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players:GetCharacterAppearanceAsync
     summary: |
       Returns a `Class.Model` containing the assets which the player is wearing,
@@ -647,13 +627,12 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players:GetCharacterAppearanceInfoAsync
     summary: |
       Returns information about the character appearance of a given user.
     description: |
-      This function returns information about a player's avatar (ignoring gear)
-      on the Roblox website in the form of a dictionary. It is not to be
+      This function returns information about a player's avatar on
+      the Roblox website in the form of a dictionary. It is not to be
       confused with
       `Class.Players:GetCharacterAppearanceAsync()|GetCharacterAppearanceAsync`,
       which actually loads the assets described by this method. You can use
@@ -772,7 +751,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players:GetFriendsAsync
     summary: |
       Returns a `Class.FriendPages` object which contains information for all of
@@ -828,7 +806,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players:GetHumanoidDescriptionFromOutfitId
     summary: |
       Returns the HumanoidDescription for a specified outfit, which will be set
@@ -859,7 +836,6 @@ methods:
     capabilities:
       - Avatar
       - Players
-    writeCapabilities: []
   - name: Players:GetHumanoidDescriptionFromUserId
     summary: |
       Returns a HumanoidDescription which specifies everything equipped for the
@@ -890,7 +866,6 @@ methods:
     capabilities:
       - Avatar
       - Players
-    writeCapabilities: []
   - name: Players:GetNameFromUserIdAsync
     summary: |
       Sends a query to the Roblox website for the username of an account with a
@@ -925,7 +900,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players:GetPlayerByUserId
     summary: |
       Returns the `Class.Player` with the given `Class.Player.UserId|UserId` if
@@ -957,7 +931,6 @@ methods:
     thread_safety: Safe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players:GetPlayerFromCharacter
     summary: |
       Returns the `Class.Player` whose `Class.Player.Character` matches the
@@ -1000,7 +973,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players:GetPlayers
     summary: |
       Returns a table of all presently connected `Class.Player` objects.
@@ -1050,7 +1022,6 @@ methods:
     thread_safety: Safe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players:GetUserIdFromNameAsync
     summary: |
       Sends a query to the Roblox website for the `Class.Player.UserId|userId`
@@ -1085,7 +1056,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players:GetUserThumbnailAsync
     summary: |
       Returns the content URL of a player thumbnail given the size and type, as
@@ -1129,7 +1099,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players:SetChatStyle
     summary: |
       Sets whether BubbleChat and ClassicChat are being used, and tells TeamChat
@@ -1158,7 +1127,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players:TeamChat
     summary: |
       Makes the local player chat the given message, which will only be viewable
@@ -1188,7 +1156,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players:UnbanAsync
     summary: |
       Unbans players banned from `Class.Players:BanAsync()` or the User
@@ -1270,7 +1237,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players:getPlayers
     summary: ''
     description: ''
@@ -1288,7 +1254,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players:playerFromCharacter
     summary: ''
     description: ''
@@ -1310,7 +1275,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players:players
     summary: |
       Returns a list of players in a game.
@@ -1331,7 +1295,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
 events:
   - name: Players.PlayerAdded
     summary: |
@@ -1381,7 +1344,6 @@ events:
     security: None
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players.PlayerMembershipChanged
     summary: |
       Fires when the game server recognizes that a player's membership has
@@ -1418,7 +1380,6 @@ events:
     security: None
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players.PlayerRemoving
     summary: |
       Fires when a player is about to leave the game.
@@ -1463,7 +1424,6 @@ events:
     security: None
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Players.UserSubscriptionStatusChanged
     summary: |
       Fires when the game server recognizes that the user's status for a certain
@@ -1496,5 +1456,4 @@ events:
     security: None
     capabilities:
       - Players
-    writeCapabilities: []
 callbacks: []

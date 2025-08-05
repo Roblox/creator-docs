@@ -102,7 +102,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.ChinRaiserUpperLip
     summary: |
       Moves the upper lip when ChinRaiser is engaged and touching the upper lip.
@@ -123,7 +122,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.Corrugator
     summary: |
       Brings the left and right brows inward together.
@@ -144,7 +142,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.EyesLookDown
     summary: |
       Moves gaze down. This is a required pose for avatars.
@@ -165,7 +162,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.EyesLookLeft
     summary: |
       Moves gaze left. This is a required pose for avatars.
@@ -186,7 +182,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.EyesLookRight
     summary: |
       Moves gaze right. This is a required pose for avatars.
@@ -207,7 +202,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.EyesLookUp
     summary: |
       Moves gaze up. This is a required pose for avatars.
@@ -228,7 +222,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.FlatPucker
     summary: |
       Also known as lip tightener; brings the corners of the mouth inward and
@@ -251,7 +244,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.Funneler
     summary: |
       Makes a 'O' shape with the mouth.
@@ -272,7 +264,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.JawDrop
     summary: |
       Lowers the jaw downward opening the mouth. This is a required pose for
@@ -295,7 +286,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.JawLeft
     summary: |
       Moves mouth and jaw to the left (character left).
@@ -315,7 +305,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.JawRight
     summary: |
       Moves mouth and jaw to the right (character right).
@@ -336,7 +325,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.LeftBrowLowerer
     summary: |
       Lowers the left brow down.
@@ -357,7 +345,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.LeftCheekPuff
     summary: |
       Puffs up the left cheek.
@@ -378,7 +365,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.LeftCheekRaiser
     summary: |
       Squints the left eye.
@@ -399,7 +385,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.LeftDimpler
     summary: |
       Moves the corners of the mouth back in Z.
@@ -420,7 +405,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.LeftEyeClosed
     summary: |
       Closes the left eyelid. This is a required pose for avatars.
@@ -441,7 +425,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.LeftEyeUpperLidRaiser
     summary: |
       Raises the left eyelid upwards to reveal more of the eye white above the
@@ -464,7 +447,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.LeftInnerBrowRaiser
     summary: |
       Raises the interior half of the left brow upwards.
@@ -485,7 +467,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.LeftLipCornerDown
     summary: |
       Lowers the corners of the mouth downwards in a frown.
@@ -506,7 +487,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.LeftLipCornerPuller
     summary: |
       Raises the corners of the mouth upwards in a smile. This is a required
@@ -529,7 +509,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.LeftLipStretcher
     summary: |
       Stretches the corners of the mouth apart. This is a required pose for
@@ -552,7 +531,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.LeftLowerLipDepressor
     summary: |
       Lowers the lower lip down away from the upper lip revealing the lower
@@ -575,7 +553,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.LeftNoseWrinkler
     summary: |
       Raise the left nostril, pulls the brow down slightly, and wrinkles on the
@@ -598,7 +575,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.LeftOuterBrowRaiser
     summary: |
       Raises the outer part of the left brow upwards.
@@ -619,7 +595,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.LeftUpperLipRaiser
     summary: |
       Raises the left upper lip away from the lower lip revealing the upper
@@ -642,7 +617,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.LipPresser
     summary: |
       Presses the lips together.
@@ -663,7 +637,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.LipsTogether
     summary: |
       Brings the lips together relative to JawDrop. This is a required pose for
@@ -686,7 +659,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.LowerLipSuck
     summary: |
       Rolls the lower lip up over the teeth.
@@ -707,7 +679,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.MouthLeft
     summary: |
       Moves the mouth left.
@@ -728,7 +699,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.MouthRight
     summary: |
       Moves the mouth right.
@@ -749,7 +719,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.Pucker
     summary: |
       Makes a kiss-like shape with the mouth. This is a required pose for
@@ -772,7 +741,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.RightBrowLowerer
     summary: |
       Lowers the right brow down.
@@ -793,7 +761,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.RightCheekPuff
     summary: |
       Puffs up the right cheek.
@@ -814,7 +781,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.RightCheekRaiser
     summary: |
       Squints the right eye.
@@ -835,7 +801,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.RightDimpler
     summary: |
       Moves the corners of the mouth back in Z.
@@ -856,7 +821,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.RightEyeClosed
     summary: |
       Closes the right eyelid. This is a required pose for avatars.
@@ -877,7 +841,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.RightEyeUpperLidRaiser
     summary: |
       Raises the right eyelid upwards to reveal more of the eye white above the
@@ -900,7 +863,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.RightInnerBrowRaiser
     summary: |
       Raises the interior half of the right brow upwards.
@@ -921,7 +883,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.RightLipCornerDown
     summary: |
       Lowers the corners of the mouth downwards in a frown.
@@ -942,7 +903,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.RightLipCornerPuller
     summary: |
       Raises the corners of the mouth upwards in a smile. This is a required
@@ -965,7 +925,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.RightLipStretcher
     summary: |
       Stretches the corners of the mouth apart. This is a required pose for
@@ -988,7 +947,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.RightLowerLipDepressor
     summary: |
       Lowers the lower lip down away from the upper lip revealing the lower
@@ -1011,7 +969,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.RightNoseWrinkler
     summary: |
       Raises the right nostril, pulls the brow down slightly, and wrinkles on
@@ -1034,7 +991,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.RightOuterBrowRaiser
     summary: |
       Raises the outer part of the right brow upwards.
@@ -1055,7 +1011,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.RightUpperLipRaiser
     summary: |
       Raises the right upper lip away from the lower lip revealing the upper
@@ -1078,7 +1033,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.TongueDown
     summary: |
       Bends the tongue down.
@@ -1099,7 +1053,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.TongueOut
     summary: |
       Extends the tip of the tongue out of the mouth.
@@ -1120,7 +1073,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.TongueUp
     summary: |
       Bends the tongue up.
@@ -1141,7 +1093,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: FaceControls.UpperLipSuck
     summary: |
       Rolls the upper lip around the teeth.
@@ -1162,7 +1113,6 @@ properties:
       can_save: false
     capabilities:
       - Animation
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

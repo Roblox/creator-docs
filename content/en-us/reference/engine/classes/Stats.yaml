@@ -45,7 +45,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Stats.DataReceiveKbps
     summary: |
       In a networked game, this describes roughly how many kilobytes of data are
@@ -72,7 +71,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Stats.DataSendKbps
     summary: |
       In a networked game, this describes roughly how many kilobytes of data are
@@ -98,7 +96,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Stats.FrameTime
     summary: |
       A measurement of how long it takes for the engine to process all tasks
@@ -124,7 +121,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Stats.HeartbeatTime
     summary: |
       A measurement of the total amount of time it takes for the server to
@@ -149,7 +145,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Stats.HeartbeatTimeMs
     summary: |
       A measurement of the total amount of time it takes long it takes for
@@ -175,7 +170,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Stats.InstanceCount
     summary: |
       A measurement of how many `Class.Instance` are currently in memory.
@@ -199,7 +193,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Stats.MovingPrimitivesCount
     summary: |
       A measurement of how many physically simulated components are currently
@@ -222,7 +215,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Stats.PhysicsReceiveKbps
     summary: |
       In a networked game, this describes roughly how many kilobytes of physics
@@ -249,7 +241,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Stats.PhysicsSendKbps
     summary: |
       In a networked game, this describes roughly how many kilobytes of physics
@@ -275,7 +266,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Stats.PhysicsStepTime
     summary: |
       A measurement of how long it takes for the physics engine to update its
@@ -299,7 +289,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Stats.PhysicsStepTimeMs
     summary: |
       A measurement of how long it takes for the physics engine to update its
@@ -325,7 +314,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Stats.PrimitivesCount
     summary: |
       A measurement of how many physically simulated components currently exist
@@ -348,7 +336,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Stats.RenderCPUFrameTime
     summary: |
       A measurement of how long it takes for the CPU to process all of its
@@ -371,7 +358,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Stats.RenderGPUFrameTime
     summary: |
       A measurement of how long it takes for the GPU to process all of its tasks
@@ -394,7 +380,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Stats.SceneDrawcallCount
     summary: |
       A measurement of the number of draw calls made by the game's current
@@ -419,7 +404,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Stats.SceneTriangleCount
     summary: |
       A measurement of the number of triangles rendered by the game's current
@@ -443,7 +427,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Stats.ShadowsDrawcallCount
     summary: |
       A measurement of the number of draw calls being made for shadows by the
@@ -467,7 +450,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Stats.ShadowsTriangleCount
     summary: |
       A measurement of the number of triangles rendered as shadows in the game's
@@ -491,7 +473,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Stats.UI2DDrawcallCount
     summary: |
       A measurement of the number of 2D draw calls made for UI elements in the
@@ -515,7 +496,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Stats.UI2DTriangleCount
     summary: |
       A measurement of the number of triangles that are being rendered for 2D UI
@@ -540,7 +520,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Stats.UI3DDrawcallCount
     summary: |
       A measurement of the number of 3D draw calls made for UI elements in the
@@ -566,7 +545,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Stats.UI3DTriangleCount
     summary: |
       A measurement of the number of triangles being rendered for 3D UI elements
@@ -591,7 +569,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: Stats:GetHarmonyQualityLevel
     summary: ''
@@ -607,7 +584,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - InternalTest
-    writeCapabilities: []
   - name: Stats:GetMemoryCategoryNames
     summary: ''
     description: ''
@@ -622,7 +598,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - InternalTest
-    writeCapabilities: []
   - name: Stats:GetMemoryUsageMbAllCategories
     summary: ''
     description: ''
@@ -637,7 +612,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - InternalTest
-    writeCapabilities: []
   - name: Stats:GetMemoryUsageMbForTag
     summary: |
       Returns the number of megabytes that are being consumed in the specified
@@ -659,7 +633,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Stats:GetTotalMemoryUsageMb
     summary: |
       Returns the total amount of memory being consumed by the current game
@@ -677,7 +650,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Stats:ResetHarmonyMemoryTarget
     summary: ''
     description: ''
@@ -692,7 +664,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - InternalTest
-    writeCapabilities: []
   - name: Stats:SetHarmonyMemoryTarget
     summary: ''
     description: ''
@@ -711,6 +682,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - InternalTest
-    writeCapabilities: []
 events: []
 callbacks: []

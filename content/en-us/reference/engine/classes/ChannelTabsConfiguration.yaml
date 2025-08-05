@@ -42,7 +42,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChannelTabsConfiguration.AbsoluteSize
     summary: |
       Actual screen size of the channel tab bar, in pixels.
@@ -65,7 +64,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChannelTabsConfiguration.BackgroundColor3
     summary: |
       Background color of the channel tabs.
@@ -89,7 +87,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChannelTabsConfiguration.BackgroundTransparency
     summary: |
       Background transparency of the channel tabs.
@@ -113,7 +110,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChannelTabsConfiguration.Enabled
     summary: |
       Whether to show the channel tabs.
@@ -133,7 +129,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChannelTabsConfiguration.FontFace
     summary: |
       Font used to render text in the channel tabs.
@@ -154,7 +149,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChannelTabsConfiguration.HoverBackgroundColor3
     summary: |
       Background color of a channel tab when hovering over it.
@@ -175,7 +169,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChannelTabsConfiguration.SelectedTabTextColor3
     summary: |
       Color of text in a selected tab.
@@ -196,7 +189,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChannelTabsConfiguration.TextColor3
     summary: |
       Color of text in an unselected tab.
@@ -217,7 +209,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChannelTabsConfiguration.TextSize
     summary: |
       Size of the text in channel tabs.
@@ -237,7 +228,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChannelTabsConfiguration.TextStrokeColor3
     summary: |
       Color of the text stroke for text in channel tabs.
@@ -258,7 +248,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChannelTabsConfiguration.TextStrokeTransparency
     summary: |
       Transparency of the text stroke for text in channel tabs.
@@ -279,7 +268,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

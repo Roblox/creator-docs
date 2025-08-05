@@ -35,7 +35,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

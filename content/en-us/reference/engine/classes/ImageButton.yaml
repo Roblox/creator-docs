@@ -37,7 +37,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageButton.HoverImageContent
     summary: |
       The image content that will be used when the `Class.ImageButton` is being
@@ -60,7 +59,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageButton.Image
     summary: |
       The image content displayed by the `Class.ImageButton` element. Reads and
@@ -90,7 +88,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageButton.ImageColor3
     summary: |
       Determines how a rendered image will be colorized.
@@ -114,7 +111,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageButton.ImageContent
     summary: |
       The image content displayed by the UI element. Supports asset URIs and
@@ -144,7 +140,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageButton.ImageRectOffset
     summary: |
       The offset in pixels of the sub-area of an image to be displayed.
@@ -167,7 +162,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageButton.ImageRectSize
     summary: |
       Determines the size in pixels of the sub-area of an image to be displayed.
@@ -191,7 +185,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageButton.ImageTransparency
     summary: |
       Determines the transparency of the rendered image.
@@ -219,7 +212,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageButton.IsLoaded
     summary: |
       Indicates whether the Image has finished loading from the Roblox website.
@@ -244,7 +236,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageButton.PressedImage
     summary: |
       A texture ID that will be used when an `Class.ImageButton` is being
@@ -266,7 +257,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageButton.PressedImageContent
     summary: |
       The image content that will be used when an `Class.ImageButton` is being
@@ -289,7 +279,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageButton.ResampleMode
     summary: |
       Selects the image resampling mode for the button.
@@ -313,7 +302,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageButton.ScaleType
     summary: |
       Determines how an image will scale if displayed in a UI element whose size
@@ -352,7 +340,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageButton.SliceCenter
     summary: |
       Sets the slice boundaries of a 9-sliced image.
@@ -377,7 +364,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageButton.SliceScale
     summary: |
       Scales the 9-slice edges by the specified ratio.
@@ -406,7 +392,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ImageButton.TileSize
     summary: |
       Sets the tiling scale of the ImageButton.
@@ -436,7 +421,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

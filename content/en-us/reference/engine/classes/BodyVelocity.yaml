@@ -57,7 +57,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: BodyVelocity.P
     summary: |
       Determines how aggressive of a force is applied in reaching the goal
@@ -84,7 +83,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: BodyVelocity.Velocity
     summary: |
       Determines the goal velocity.
@@ -106,7 +104,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: BodyVelocity.maxForce
     summary: ''
     description: ''
@@ -128,7 +125,6 @@ properties:
       can_save: false
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: BodyVelocity.velocity
     summary: ''
     description: ''
@@ -150,7 +146,6 @@ properties:
       can_save: false
     capabilities:
       - Physics
-    writeCapabilities: []
 methods:
   - name: BodyVelocity:GetLastForce
     summary: |
@@ -169,7 +164,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: BodyVelocity:lastForce
     summary: |
       Returns the last force in the object.
@@ -186,6 +180,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Physics
-    writeCapabilities: []
 events: []
 callbacks: []

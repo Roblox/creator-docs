@@ -56,7 +56,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: SpotLight.Face
     summary: |
       Sets the side of the parent that the SpotLight comes from.
@@ -76,7 +75,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: SpotLight.Range
     summary: |
       The size of the area that the SpotLight will illuminate.
@@ -96,7 +94,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

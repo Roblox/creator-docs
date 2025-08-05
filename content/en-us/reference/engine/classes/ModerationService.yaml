@@ -36,7 +36,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - InternalTest
-    writeCapabilities: []
   - name: ModerationService:InternalRequestReviewableContentReviewAsync
     summary: ''
     description: ''
@@ -56,7 +55,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - InternalTest
-    writeCapabilities: []
 events: []
 callbacks:
   - name: ModerationService.InternalProcessReviewableContentEvent
@@ -77,4 +75,3 @@ callbacks:
     thread_safety: Unsafe
     capabilities:
       - InternalTest
-    writeCapabilities: []

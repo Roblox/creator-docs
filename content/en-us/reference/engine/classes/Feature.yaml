@@ -34,7 +34,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Feature.InOut
     summary: |
       Controls how the Feature is positioned on it's parent's surface, in
@@ -57,7 +56,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Feature.LeftRight
     summary: |
       Controls whether the feature is shifted to the left, center, or right on
@@ -78,7 +76,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Feature.TopBottom
     summary: |
       Controls whether the feature is shifted to the top, center, or bottom on
@@ -99,7 +96,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

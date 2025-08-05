@@ -41,7 +41,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GuiBase3d.Color3
     summary: |
       Sets the color of a GUI object.
@@ -61,7 +60,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GuiBase3d.Transparency
     summary: |
       Sets the transparency of a GUI object, where 1 is invisible and 0 is
@@ -83,7 +81,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GuiBase3d.Visible
     summary: |
       Determines whether the object and its descendants will be displayed.
@@ -103,7 +100,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

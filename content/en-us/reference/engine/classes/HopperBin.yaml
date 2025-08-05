@@ -41,7 +41,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: HopperBin.BinType
     summary: ''
     description: ''
@@ -61,7 +60,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
 methods: []
 events:
   - name: HopperBin.Deselected
@@ -76,7 +74,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: HopperBin.Selected
     summary: ''
     description: ''
@@ -93,5 +90,4 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
 callbacks: []

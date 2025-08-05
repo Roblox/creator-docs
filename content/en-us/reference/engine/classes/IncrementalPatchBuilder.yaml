@@ -32,7 +32,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: IncrementalPatchBuilder.BuildDebouncePeriod
     summary: ''
     description: ''
@@ -49,7 +48,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: IncrementalPatchBuilder.HighCompression
     summary: ''
     description: ''
@@ -66,7 +64,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: IncrementalPatchBuilder.SerializePatch
     summary: ''
     description: ''
@@ -83,7 +80,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: IncrementalPatchBuilder.ZstdCompression
     summary: ''
     description: ''
@@ -100,7 +96,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

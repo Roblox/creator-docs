@@ -29,7 +29,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - InternalTest
-    writeCapabilities: []
   - name: CustomLog:GetLogPath
     summary: ''
     description: ''
@@ -44,7 +43,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - InternalTest
-    writeCapabilities: []
   - name: CustomLog:Open
     summary: ''
     description: ''
@@ -59,7 +57,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - InternalTest
-    writeCapabilities: []
   - name: CustomLog:WriteAppend
     summary: ''
     description: ''
@@ -78,6 +75,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - InternalTest
-    writeCapabilities: []
 events: []
 callbacks: []

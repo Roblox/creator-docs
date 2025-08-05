@@ -77,7 +77,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIFlexItem.GrowRatio
     summary: |
       Determines the amount the parent `Class.GuiObject` grows relative to other
@@ -102,7 +101,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIFlexItem.ItemLineAlignment
     summary: |
       Cross-axis alignment of the specific parent `Class.GuiObject` within the
@@ -124,7 +122,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIFlexItem.ShrinkRatio
     summary: |
       Determines the amount the parent `Class.GuiObject` shrinks relative to
@@ -149,7 +146,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

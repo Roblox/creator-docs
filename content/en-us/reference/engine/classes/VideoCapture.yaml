@@ -33,7 +33,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: VideoCapture.TimeLength
     summary: ''
     description: ''
@@ -52,8 +51,6 @@ properties:
       can_load: false
       can_save: true
     capabilities:
-      - InternalTest
-    writeCapabilities:
       - InternalTest
 methods: []
 events: []

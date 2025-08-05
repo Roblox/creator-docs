@@ -195,7 +195,7 @@ ServerScore
 
 A matchmaking configuration is the set of signals and weights used to score servers of a place. By default, all servers of all places are scored by the Roblox default configuration, meaning you don't need to customize or enable any settings in order to use it.
 
-The Robox default configuration includes the following signals and weights:
+The Roblox default configuration includes the following signals and weights:
 
 <table>
 <thead>

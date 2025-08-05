@@ -43,7 +43,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: TweenBase:Cancel
     summary: |
@@ -70,7 +69,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: TweenBase:Pause
     summary: |
       Halts playback of the tween. Doesn't reset its progress variables, meaning
@@ -103,7 +101,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: TweenBase:Play
     summary: |
       Starts playback of a tween. Note that if playback has already started,
@@ -130,7 +127,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: TweenBase.Completed
     summary: |
@@ -157,5 +153,4 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

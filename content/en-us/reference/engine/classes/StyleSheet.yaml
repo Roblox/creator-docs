@@ -38,7 +38,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: StyleSheet:SetDerives
     summary: |
       Sets the `StyleSheet` to derive `Class.StyleRule|StyleRules` and token
@@ -113,6 +112,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

@@ -58,7 +58,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: StarterGui.ResetPlayerGuiOnSpawn
     summary: |
       Determines whether each child parented to the StarterGui will be cloned
@@ -88,7 +87,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: StarterGui.RtlTextSupport
     summary: ''
     description: ''
@@ -107,7 +105,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: StarterGui.ScreenOrientation
     summary: |
       Sets the default screen orientation mode for users with mobile devices.
@@ -146,7 +143,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: StarterGui.ShowDevelopmentGui
     summary: |
       Determines whether the contents of `Class.StarterGui` is visible in
@@ -168,7 +164,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: StarterGui.VirtualCursorMode
     summary: ''
     description: ''
@@ -187,7 +182,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods:
   - name: StarterGui:GetCore
     summary: |
@@ -293,7 +287,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: StarterGui:GetCoreGuiEnabled
     summary: |
       Returns whether the given `Enum.CoreGuiType`is enabled, or if it has been
@@ -325,7 +318,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: StarterGui:SetCore
     summary: |
       Allows you to perform certain interactions with Roblox's core scripts.
@@ -886,7 +878,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: StarterGui:SetCoreGuiEnabled
     summary: |
       Sets whether the `Class.CoreGui` element associated with the given
@@ -918,6 +909,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
 events: []
 callbacks: []

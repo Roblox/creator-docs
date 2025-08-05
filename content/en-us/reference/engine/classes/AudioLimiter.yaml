@@ -37,7 +37,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioLimiter.Editor
     summary: ''
     description: ''
@@ -56,7 +55,6 @@ properties:
       can_save: false
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioLimiter.MaxLevel
     summary: |
       The maximum volume tolerated.
@@ -79,7 +77,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioLimiter.Release
     summary: |
       The amount of time it takes for previously limited streams to return to
@@ -102,7 +99,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
 methods:
   - name: AudioLimiter:GetConnectedWires
     summary: |
@@ -126,7 +122,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioLimiter:GetInputPins
     summary: ''
     description: ''
@@ -141,7 +136,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioLimiter:GetOutputPins
     summary: ''
     description: ''
@@ -156,7 +150,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
 events:
   - name: AudioLimiter.WiringChanged
     summary: |
@@ -194,5 +187,4 @@ events:
     security: None
     capabilities:
       - Audio
-    writeCapabilities: []
 callbacks: []

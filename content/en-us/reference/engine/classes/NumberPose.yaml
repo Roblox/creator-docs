@@ -61,7 +61,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

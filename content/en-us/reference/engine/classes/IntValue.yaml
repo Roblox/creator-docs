@@ -54,7 +54,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods: []
 events:
   - name: IntValue.Changed
@@ -80,7 +79,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: IntValue.changed
     summary: ''
     description: ''
@@ -97,5 +95,4 @@ events:
       should be used instead.
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

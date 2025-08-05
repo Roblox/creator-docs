@@ -64,7 +64,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: BallSocketConstraint.MaxFrictionTorque
     summary: |
       Sets the maximum frictional torque applied to keep its
@@ -89,7 +88,6 @@ properties:
       can_save: false
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: BallSocketConstraint.Radius
     summary: |
       The visualized radius of the `BallSocketConstraint`.
@@ -109,7 +107,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: BallSocketConstraint.Restitution
     summary: |
       How elastic `Class.Attachment|Attachments` connected by a
@@ -136,7 +133,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: BallSocketConstraint.TwistLimitsEnabled
     summary: |
       Sets whether the `BallSocketConstraint` sets a limit on twist rotation
@@ -163,7 +159,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: BallSocketConstraint.TwistLowerAngle
     summary: |
       Sets the lower twist rotation limit of the `BallSocketConstraint`, as long
@@ -187,7 +182,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: BallSocketConstraint.TwistUpperAngle
     summary: |
       Sets the upper twist rotation limit of the `BallSocketConstraint`, as long
@@ -211,7 +205,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: BallSocketConstraint.UpperAngle
     summary: |
       Sets the upper rotation limit of the `BallSocketConstraint`, as long as
@@ -233,7 +226,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

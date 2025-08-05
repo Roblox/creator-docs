@@ -80,7 +80,6 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: LocalizationTable.Root
     summary: |
       The object that is being targeted for localization by this table.
@@ -105,7 +104,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: LocalizationTable.SourceLocaleId
     summary: |
       The locale of source strings.
@@ -127,7 +125,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: LocalizationTable:GetContents
     summary: ''
@@ -145,7 +142,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: LocalizationTable:GetEntries
     summary: |
       Returns an array of dictionaries, where each dictionary represents an
@@ -219,7 +215,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: LocalizationTable:GetString
     summary: |
       Returns a translation based on the specified language and key.
@@ -251,7 +246,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: LocalizationTable:GetTranslator
     summary: |
       Returns a `Class.Translator` for entries in this LocalizationTable, in the
@@ -274,7 +268,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: LocalizationTable:RemoveEntry
     summary: |
       Removes an entry from the LocalizationTable, using the specified `key`,
@@ -304,7 +297,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: LocalizationTable:RemoveEntryValue
     summary: |
       Removes a single language translation from the LocalizationTable, using
@@ -340,7 +332,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: LocalizationTable:RemoveKey
     summary: |
       Deprecated in favor of `Class.LocalizationTable:RemoveEntry()`.
@@ -368,7 +359,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: LocalizationTable:RemoveTargetLocale
     summary: |
       Removes all translations from the LocalizationTable with the specified
@@ -390,7 +380,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: LocalizationTable:SetContents
     summary: |
       Sets the contents of the LocalizationTable, via the legacy JSON format.
@@ -414,7 +403,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: LocalizationTable:SetEntries
     summary: |
       Sets the contents of the LocalizationTable.
@@ -438,7 +426,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: LocalizationTable:SetEntry
     summary: ''
     description: ''
@@ -467,7 +454,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: LocalizationTable:SetEntryContext
     summary: |
       Sets the **Context** field of a LocalizationTable entry to `newContext`,
@@ -503,7 +489,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: LocalizationTable:SetEntryExample
     summary: |
       Sets the **Example** field of a LocalizationTable entry to `example`,
@@ -539,7 +524,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: LocalizationTable:SetEntryKey
     summary: |
       Sets the **Key** field of a LocalizationTable entry to `newKey`, using the
@@ -575,7 +559,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: LocalizationTable:SetEntrySource
     summary: |
       Sets the **Source** field of a LocalizationTable entry to `newSource`,
@@ -611,7 +594,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: LocalizationTable:SetEntryValue
     summary: |
       Sets the text of the specified localeId in a LocalizationTable entry,
@@ -651,6 +633,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

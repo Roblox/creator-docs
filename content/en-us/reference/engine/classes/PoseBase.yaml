@@ -35,7 +35,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: PoseBase.EasingStyle
     summary: |
       The easing style to use to reach the next Pose's value.
@@ -55,7 +54,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: PoseBase.Weight
     summary: ''
     description: ''
@@ -75,7 +73,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

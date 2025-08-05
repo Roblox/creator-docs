@@ -59,7 +59,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: AngularVelocity.MaxTorque
     summary: |
       Magnitude of the maximum torque the constraint can apply.
@@ -79,7 +78,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: AngularVelocity.ReactionTorqueEnabled
     summary: |
       Causes the constraint to apply equal and opposite reaction forces.
@@ -108,7 +106,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: AngularVelocity.RelativeTo
     summary: ''
     description: |
@@ -135,7 +132,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

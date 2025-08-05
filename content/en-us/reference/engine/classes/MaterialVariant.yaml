@@ -38,7 +38,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: MaterialVariant.ColorMap
     summary: |
       Determines the color of the surface.
@@ -58,7 +57,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: MaterialVariant.ColorMapContent
     summary: |
       Determines the color of the surface. Only supports asset URIs as textures.
@@ -78,7 +76,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: MaterialVariant.CustomPhysicalProperties
     summary: ''
     description: ''
@@ -95,7 +92,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: MaterialVariant.MaterialPattern
     summary: |
       Determines texture tiling method.
@@ -114,7 +110,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: MaterialVariant.MetalnessMap
     summary: |
       Determines which parts of the surface are metal and are non-metal.
@@ -148,7 +143,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: MaterialVariant.MetalnessMapContent
     summary: |
       Determines which parts of the surface are metal and are non-metal. Only
@@ -183,7 +177,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: MaterialVariant.NormalMap
     summary: |
       Modifies the lighting of the surface by adding bumps, dents, cracks, and
@@ -236,7 +229,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: MaterialVariant.NormalMapContent
     summary: |
       Modifies the lighting of the surface by adding bumps, dents, cracks, and
@@ -289,7 +281,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: MaterialVariant.RoughnessMap
     summary: |
       Determines the apparent roughness across the surface.
@@ -315,7 +306,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: MaterialVariant.RoughnessMapContent
     summary: |
       Determines the apparent roughness across the surface. Only supports asset
@@ -342,7 +332,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: MaterialVariant.StudsPerTile
     summary: |
       Determines the scale of textures.
@@ -362,7 +351,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

@@ -42,7 +42,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: WrapTarget.DebugMode
     summary: |
       Allows switching between different debugging visualization modes for cage
@@ -66,7 +65,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: WrapTarget.Stiffness
     summary: |
       Defines how much the body mesh can be compressed by clothing.
@@ -97,7 +95,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

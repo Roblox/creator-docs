@@ -48,7 +48,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: GlobalSettings:GetFVariable
     summary: |
       Returns the value of an FVariable, if it exists.
@@ -68,6 +67,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

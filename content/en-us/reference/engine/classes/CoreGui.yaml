@@ -47,7 +47,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: CoreGui.Version
     summary: |
       The current version of the CoreGui. Every time the CoreGui is majorly
@@ -71,7 +70,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

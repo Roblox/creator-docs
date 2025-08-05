@@ -44,7 +44,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ScrollingFrame.AbsoluteWindowSize
     summary: |
       The size of the frame, in offsets, without the scroll bars.
@@ -66,7 +65,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ScrollingFrame.AutomaticCanvasSize
     summary: |
       Determines whether `Class.ScrollingFrame.CanvasSize` is resized based on
@@ -95,7 +93,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ScrollingFrame.BottomImage
     summary: |
       Image that displays on the bottom of a vertical scroll bar, or the right
@@ -121,7 +118,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ScrollingFrame.BottomImageContent
     summary: |
       Image that displays on the bottom of a vertical scroll bar, or the right
@@ -147,7 +143,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ScrollingFrame.CanvasPosition
     summary: |
       Reflects the **current** positional offset of the canvas within the frame,
@@ -170,7 +165,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ScrollingFrame.CanvasSize
     summary: |
       Determines the size of the scrollable area.
@@ -193,7 +187,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ScrollingFrame.ElasticBehavior
     summary: |
       Determines if and when elastic scrolling is allowed on touch‑enabled
@@ -215,7 +208,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ScrollingFrame.HorizontalScrollBarInset
     summary: |
       Indicates whether `Class.ScrollingFrame.CanvasSize|CanvasSize` is inset by
@@ -239,7 +231,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ScrollingFrame.MidImage
     summary: |
       Image which spans the area between
@@ -268,7 +259,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ScrollingFrame.MidImageContent
     summary: |
       Image which spans the area between
@@ -298,7 +288,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ScrollingFrame.ScrollBarImageColor3
     summary: |
       Determines how the rendered scroll bar images are colorized.
@@ -324,7 +313,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ScrollingFrame.ScrollBarImageTransparency
     summary: |
       Determines the opacity of the scroll bar images.
@@ -349,7 +337,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ScrollingFrame.ScrollBarThickness
     summary: |
       Thickness of the scroll bar in pixels; applies to both horizontal and
@@ -371,7 +358,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ScrollingFrame.ScrollingDirection
     summary: |
       Determines the direction(s) in which scrolling is allowed.
@@ -393,7 +379,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ScrollingFrame.ScrollingEnabled
     summary: |
       Determines whether scrolling is allowed on the frame.
@@ -414,7 +399,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ScrollingFrame.TopImage
     summary: |
       Image which displays on the top of a vertical scroll bar, or the left of a
@@ -440,7 +424,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ScrollingFrame.TopImageContent
     summary: ''
     description: ''
@@ -458,7 +441,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ScrollingFrame.VerticalScrollBarInset
     summary: |
       Indicates whether `Class.ScrollingFrame.CanvasSize|CanvasSize` is inset by
@@ -482,7 +464,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ScrollingFrame.VerticalScrollBarPosition
     summary: |
       Indicates whether the vertical scroll bar is positioned to the left or
@@ -504,7 +485,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

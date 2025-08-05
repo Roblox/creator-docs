@@ -46,7 +46,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: VoiceChatService.EnableDefaultVoice
     summary: |
       Controls whether each voice-eligible player can be heard as though they
@@ -75,7 +74,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: VoiceChatService.UseAudioApi
     summary: |
       Controls whether voice chat is represented and controlled by
@@ -115,7 +113,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: VoiceChatService:IsVoiceEnabledForUserIdAsync
     summary: |
@@ -157,6 +154,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

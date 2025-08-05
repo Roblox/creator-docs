@@ -62,7 +62,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Smoke.Enabled
     summary: |
       Determines whether smoke particles emit.
@@ -100,7 +99,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Smoke.LocalTransparencyModifier
     summary: ''
     description: ''
@@ -120,7 +118,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Smoke.Opacity
     summary: |
       Determines how opaque smoke particles render.
@@ -150,7 +147,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Smoke.RiseVelocity
     summary: |
       Determines the velocity of the smoke particles.
@@ -180,7 +176,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Smoke.Size
     summary: |
       Determines the size of newly emit smoke particles.
@@ -209,7 +204,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Smoke.TimeScale
     summary: |
       Value between 0-1 that controls the speed of the particle effect.
@@ -231,7 +225,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

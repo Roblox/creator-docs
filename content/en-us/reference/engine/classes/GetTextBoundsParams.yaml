@@ -41,7 +41,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GetTextBoundsParams.RichText
     summary: ''
     description: ''
@@ -59,7 +58,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GetTextBoundsParams.Size
     summary: |
       The size of the text being measured.
@@ -80,7 +78,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GetTextBoundsParams.Text
     summary: |
       The text being measured.
@@ -100,7 +97,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: GetTextBoundsParams.Width
     summary: |
       The width of the container for line breaking.
@@ -122,7 +118,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

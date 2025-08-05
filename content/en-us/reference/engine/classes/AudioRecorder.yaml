@@ -41,7 +41,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioRecorder.TimeLength
     summary: ''
     description: |
@@ -62,7 +61,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
 methods:
   - name: AudioRecorder:CanRecordAsync
     summary: ''
@@ -83,7 +81,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioRecorder:Clear
     summary: ''
     description: |
@@ -99,7 +96,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioRecorder:GetConnectedWires
     summary: ''
     description: ''
@@ -118,7 +114,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioRecorder:GetInputPins
     summary: ''
     description: ''
@@ -133,7 +128,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioRecorder:GetOutputPins
     summary: ''
     description: ''
@@ -148,7 +142,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioRecorder:GetTemporaryContent
     summary: ''
     description: |
@@ -166,7 +159,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioRecorder:GetUnrecordableInstancesAsync
     summary: ''
     description: |
@@ -185,7 +177,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioRecorder:RecordAsync
     summary: ''
     description: |
@@ -204,7 +195,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioRecorder:Stop
     summary: ''
     description: |
@@ -220,7 +210,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
 events:
   - name: AudioRecorder.WiringChanged
     summary: ''
@@ -248,5 +237,4 @@ events:
     security: None
     capabilities:
       - Audio
-    writeCapabilities: []
 callbacks: []

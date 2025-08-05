@@ -58,7 +58,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.GamepadEnabled
     summary: |
       Describes whether the user's device has an available gamepad.
@@ -87,7 +86,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.GyroscopeEnabled
     summary: |
       Describes whether the user's device has a gyroscope.
@@ -117,7 +115,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.KeyboardEnabled
     summary: |
       Describes whether the user's device has a keyboard available.
@@ -147,7 +144,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.ModalEnabled
     summary: |
       Toggles whether Roblox's mobile controls are hidden on mobile devices.
@@ -180,7 +176,6 @@ properties:
       can_save: false
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.MouseBehavior
     summary: |
       Determines whether the user's mouse can be moved freely or is locked.
@@ -227,7 +222,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.MouseDeltaSensitivity
     summary: |
       Scales the delta (change) output of the user's `Class.Mouse`.
@@ -258,7 +252,6 @@ properties:
       can_save: false
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.MouseEnabled
     summary: |
       Describes whether the user's device has a mouse available.
@@ -287,7 +280,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.MouseIcon
     summary: |
       The content ID of the image for the user's mouse icon.
@@ -315,7 +307,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.MouseIconEnabled
     summary: |
       Determines whether the mouse icon is visible.
@@ -335,7 +326,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.OnScreenKeyboardPosition
     summary: |
       Determines the position of the on-screen keyboard.
@@ -363,7 +353,6 @@ properties:
       can_save: false
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.OnScreenKeyboardSize
     summary: |
       Determines the size of the on-screen keyboard.
@@ -392,7 +381,6 @@ properties:
       can_save: false
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.OnScreenKeyboardVisible
     summary: |
       Describes whether an on-screen keyboard is currently visible on the user's
@@ -420,7 +408,6 @@ properties:
       can_save: false
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.PreferredInput
     summary: |
       Queries the primary input type a player is using, based on anticipated
@@ -509,7 +496,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.TouchEnabled
     summary: |
       Describes whether the user's device has a touch screen available.
@@ -539,7 +525,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.UserHeadCFrame
     summary: |
       Describes the orientation and position of a user's head, if they are
@@ -566,7 +551,6 @@ properties:
       can_save: false
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.VREnabled
     summary: |
       Indicates whether the user is using a virtual reality headset.
@@ -590,7 +574,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
 methods:
   - name: UserInputService:GamepadSupports
     summary: |
@@ -622,7 +605,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService:GetConnectedGamepads
     summary: |
       Returns an array of `Enum.UserInputType` gamepads currently connected.
@@ -647,7 +629,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService:GetDeviceAcceleration
     summary: |
       Returns an `Class.InputObject` that describes the device's current
@@ -674,7 +655,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService:GetDeviceGravity
     summary: |
       Returns an `Class.InputObject` describing the device's current gravity
@@ -708,7 +688,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService:GetDeviceRotation
     summary: |
       Returns an `Class.InputObject` and a `Datatype.CFrame` describing the
@@ -735,7 +714,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService:GetFocusedTextBox
     summary: |
       Returns the currently `Class.TextBox` the client is currently focused on.
@@ -755,7 +733,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService:GetGamepadConnected
     summary: |
       Returns whether a gamepad with the given `Enum.UserInputType` is
@@ -785,7 +762,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService:GetGamepadState
     summary: |
       Returns an array of `Class.InputObject|InputObjects` for all available
@@ -812,7 +788,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService:GetImageForKeyCode
     summary: |
       Returns an image for the requested `Enum.KeyCode`.
@@ -842,7 +817,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService:GetKeysPressed
     summary: |
       Returns an array of `Class.InputObject|InputObjects` associated with the
@@ -868,7 +842,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService:GetLastInputType
     summary: |
       Returns the `Enum.UserInputType` associated with the user's most recent
@@ -898,7 +871,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService:GetMouseButtonsPressed
     summary: |
       Returns an array of `Class.InputObject|InputObjects` associated with the
@@ -928,7 +900,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService:GetMouseDelta
     summary: |
       Returns the change, in pixels, of the position of the player's
@@ -956,7 +927,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService:GetMouseLocation
     summary: |
       Returns the current screen location of the player's `Class.Mouse` relative
@@ -982,7 +952,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService:GetNavigationGamepads
     summary: |
       Returns an array of gamepads connected and enabled for `Class.GuiObject`
@@ -1010,7 +979,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService:GetStringForKeyCode
     summary: |
       Returns a string representing a key the user should press in order to
@@ -1312,7 +1280,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService:GetSupportedGamepadKeyCodes
     summary: |
       Returns an array of `Enum.KeyCode|KeyCodes` that the gamepad associated
@@ -1341,7 +1308,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService:GetUserCFrame
     summary: |
       Returns a `Datatype.CFrame` describing the position and orientation of a
@@ -1397,7 +1363,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService:IsGamepadButtonDown
     summary: |
       Determines whether a particular button is pressed on a gamepad.
@@ -1430,7 +1395,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService:IsKeyDown
     summary: |
       Returns whether the given `Enum.KeyCode|key` is currently held down.
@@ -1457,7 +1421,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService:IsMouseButtonPressed
     summary: |
       Returns whether the given mouse button is currently held down.
@@ -1484,7 +1447,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService:IsNavigationGamepad
     summary: |
       Returns `true` if the specified gamepad is allowed to control navigation
@@ -1514,7 +1476,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService:RecenterUserHeadCFrame
     summary: |
       Recenters the `Datatype.CFrame` of the VR headset to the current
@@ -1537,7 +1498,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService:SetNavigationGamepad
     summary: |
       Sets whether or not the specified gamepad can move the `Class.GuiObject`
@@ -1571,7 +1531,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
 events:
   - name: UserInputService.DeviceAccelerationChanged
     summary: |
@@ -1603,7 +1562,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.DeviceGravityChanged
     summary: |
       Fires when the force of gravity changes on a device that has an enabled
@@ -1639,7 +1597,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.DeviceRotationChanged
     summary: |
       Fires when a user rotates a device that has a gyroscope.
@@ -1675,7 +1632,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.GamepadConnected
     summary: |
       Fires when a gamepad is connected to the client.
@@ -1702,7 +1658,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.GamepadDisconnected
     summary: |
       Fires when a gamepad is disconnected from the client.
@@ -1727,7 +1682,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.InputBegan
     summary: |
       Fires when a user begins interacting with an input device such as a mouse
@@ -1766,7 +1720,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.InputChanged
     summary: |
       Fires when a user changes how they're interacting with an input device
@@ -1806,7 +1759,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.InputEnded
     summary: |
       Fires when a user stops interacting with an input device such as a mouse
@@ -1844,7 +1796,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.JumpRequest
     summary: |
       Fires whenever the client makes a request for their character to jump.
@@ -1864,7 +1815,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.LastInputTypeChanged
     summary: |
       Fires whenever the client's `Enum.UserInputType` is changed.
@@ -1886,7 +1836,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.PointerAction
     summary: |
       Fires when the user performs a specific pointer action.
@@ -1918,7 +1867,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.TextBoxFocusReleased
     summary: |
       Fires when the client loses focus on a `Class.TextBox`.
@@ -1944,7 +1892,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.TextBoxFocused
     summary: |
       Fires when the client focuses on a `Class.TextBox`.
@@ -1971,7 +1918,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.TouchDrag
     summary: |
       Fires when the user drags on the screen of a
@@ -2009,7 +1955,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.TouchEnded
     summary: |
       Fires when a user releases their finger from the screen of a
@@ -2045,7 +1990,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.TouchLongPress
     summary: |
       Fires when a user holds at least one finger for a short amount of time on
@@ -2083,7 +2027,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.TouchMoved
     summary: |
       Fires when a user moves their finger on the screen of a
@@ -2123,7 +2066,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.TouchPan
     summary: |
       Fires when the user drags at least one finger on the screen of a
@@ -2170,7 +2112,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.TouchPinch
     summary: |
       Fires when a user performs a pinch gesture on the screen of a
@@ -2218,7 +2159,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.TouchRotate
     summary: |
       Fires when a user rotates two fingers on the screen of a
@@ -2267,7 +2207,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.TouchStarted
     summary: |
       Fires when a user places their finger on the screen of a
@@ -2303,7 +2242,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.TouchSwipe
     summary: |
       Fires on a `Class.UserInputService.TouchEnabled|TouchEnabled` device when
@@ -2345,7 +2283,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.TouchTap
     summary: |
       Fires when a user taps their finger on the screen of a
@@ -2380,7 +2317,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.TouchTapInWorld
     summary: |
       Fires when a user taps their finger on the screen of a
@@ -2410,7 +2346,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.UserCFrameChanged
     summary: |
       Fires when the `Datatype.CFrame` of a specified Virtual Reality device
@@ -2462,7 +2397,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.WindowFocusReleased
     summary: |
       Fires when the window of the Roblox client loses focus on the user's
@@ -2481,7 +2415,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: UserInputService.WindowFocused
     summary: |
       Fires when the window of the Roblox client gains focus on the user's
@@ -2498,5 +2431,4 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
 callbacks: []

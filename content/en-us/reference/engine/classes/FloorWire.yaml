@@ -48,7 +48,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: FloorWire.From
     summary: |
       The object that the FloorWire travels from.
@@ -71,7 +70,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: FloorWire.StudsBetweenTextures
     summary: |
       The number of studs between each FloorWire segment.
@@ -94,7 +92,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: FloorWire.Texture
     summary: |
       Sets the texture to be displayed on the FloorWire.
@@ -117,7 +114,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: FloorWire.TextureSize
     summary: |
       Sets the size of the texture used with the FloorWire.
@@ -140,7 +136,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: FloorWire.To
     summary: |
       The object that the FloorWire travels to.
@@ -163,7 +158,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: FloorWire.Velocity
     summary: |
       The speed that the textures flow along the wire.
@@ -186,7 +180,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: FloorWire.WireRadius
     summary: |
       The radius of the wire.
@@ -209,7 +202,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

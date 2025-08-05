@@ -71,7 +71,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: DataModelMesh.Scale
     summary: |
       The Scale of a mesh determines the size of the mesh relative to its
@@ -139,7 +138,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: DataModelMesh.VertexColor
     summary: |
       Changes the hue of a mesh's texture, used with `Class.FileMesh.TextureId`.
@@ -166,7 +164,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

@@ -54,7 +54,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Attachment.CFrame
     summary: |
       `Datatype.CFrame` offset of the attachment.
@@ -77,7 +76,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Attachment.Orientation
     summary: |
       Orientation of the attachment relative to the orientation of its parent.
@@ -100,7 +98,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Attachment.Position
     summary: |
       Positional offset of the attachment, relative to the position and
@@ -124,7 +121,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Attachment.Rotation
     summary: |
       Rotation of the attachment relative to the rotation of its parent.
@@ -150,7 +146,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Attachment.SecondaryAxis
     summary: |
       Direction of the **Y** axis of the attachment, represented as a unit
@@ -173,7 +168,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Attachment.Visible
     summary: |
       Toggles the in-experience visibility of the attachment.
@@ -193,7 +187,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Attachment.WorldAxis
     summary: |
       Direction of the **X** axis of the attachment relative to the world,
@@ -216,7 +209,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Attachment.WorldCFrame
     summary: |
       The exact `Datatype.CFrame` of the attachment in world space coordinates.
@@ -240,7 +232,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Attachment.WorldOrientation
     summary: |
       Orientation of the attachment relative to the world rather than its own
@@ -264,7 +255,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Attachment.WorldPosition
     summary: |
       Position of the attachment relative to the world rather than its own
@@ -288,7 +278,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Attachment.WorldRotation
     summary: |
       Rotation of the attachment relative to the world rather than its own
@@ -317,7 +306,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Attachment.WorldSecondaryAxis
     summary: |
       Direction of the **Y** axis of the attachment relative to the world,
@@ -340,7 +328,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
 methods:
   - name: Attachment:GetAxis
     summary: |
@@ -360,7 +347,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Attachment:GetConstraints
     summary: |
       Returns a list of `Class.Constraint|Constraints` connected to the
@@ -379,7 +365,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Attachment:GetSecondaryAxis
     summary: |
       Returns the value of the attachment's
@@ -400,7 +385,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Attachment:SetAxis
     summary: |
       Sets the value of the attachment's `Class.Attachment.Axis|Axis`.
@@ -423,7 +407,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Attachment:SetSecondaryAxis
     summary: |
       Sets the value of the attachment's
@@ -448,6 +431,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
 events: []
 callbacks: []

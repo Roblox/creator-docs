@@ -83,7 +83,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Teams:RebalanceTeams
     summary: |
       Evens the number of people on each team. This function does not work
@@ -106,6 +105,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
 events: []
 callbacks: []

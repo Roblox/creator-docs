@@ -40,7 +40,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
 methods:
   - name: FloatCurve:GetKeyAtIndex
     summary: |
@@ -62,7 +61,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: FloatCurve:GetKeyIndicesAtTime
     summary: |
       Returns the index of the last and first key of a period of time.
@@ -87,7 +85,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: FloatCurve:GetKeys
     summary: |
       Returns a copy of all the keys in the FloatCurve as a Luau array of
@@ -107,7 +104,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: FloatCurve:GetValueAtTime
     summary: |
       Samples the float curve at a given time passed as argument.
@@ -130,7 +126,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: FloatCurve:InsertKey
     summary: |
       Adds the key passed as an argument to this curve. If a key at the same
@@ -157,7 +152,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: FloatCurve:RemoveKeyAtIndex
     summary: |
       Removes a given number of keys starting from a given index.
@@ -186,7 +180,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: FloatCurve:SetKeys
     summary: |
       Resets this curve's keys using the `Datatype.FloatCurveKey` array passed
@@ -216,6 +209,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
 events: []
 callbacks: []

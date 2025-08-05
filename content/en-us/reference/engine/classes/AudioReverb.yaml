@@ -36,7 +36,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioReverb.DecayRatio
     summary: |
       Controls how quickly high frequency sound decays compared to the overall
@@ -60,7 +59,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioReverb.DecayTime
     summary: |
       Controls how long it takes for the reverb to dissipate.
@@ -81,7 +79,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioReverb.Density
     summary: |
       Controls how many reflections are generated.
@@ -102,7 +99,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioReverb.Diffusion
     summary: |
       Controls how smooth and reflective the simulated surfaces are.
@@ -123,7 +119,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioReverb.DryLevel
     summary: |
       Gain level determining how loud the original, unaltered audio stream will
@@ -145,7 +140,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioReverb.EarlyDelayTime
     summary: |
       Controls the amount of time before reverberation begins .
@@ -165,7 +159,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioReverb.HighCutFrequency
     summary: |
       Frequency above which sound is filtered out of the reverb.
@@ -187,7 +180,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioReverb.LateDelayTime
     summary: |
       Time, following early delays, before diffuse reverberations begin.
@@ -208,7 +200,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioReverb.LowShelfFrequency
     summary: |
       Frequency below which audio can be boosted or reduced in the reverb.
@@ -230,7 +221,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioReverb.LowShelfGain
     summary: |
       Controls the presence of low frequency content in the reverb.
@@ -251,7 +241,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioReverb.ReferenceFrequency
     summary: |
       Frequency that separates low frequency decay speeds from high frequency
@@ -275,7 +264,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioReverb.WetLevel
     summary: |
       Gain level determining how loud the reverberated stream will be.
@@ -296,7 +284,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
 methods:
   - name: AudioReverb:GetConnectedWires
     summary: |
@@ -320,7 +307,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioReverb:GetInputPins
     summary: ''
     description: ''
@@ -335,7 +321,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioReverb:GetOutputPins
     summary: ''
     description: ''
@@ -350,7 +335,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
 events:
   - name: AudioReverb.WiringChanged
     summary: |
@@ -388,5 +372,4 @@ events:
     security: None
     capabilities:
       - Audio
-    writeCapabilities: []
 callbacks: []

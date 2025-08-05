@@ -67,7 +67,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.BackAccessory
     summary: |
       A comma-separated list of asset IDs that will be added as
@@ -110,7 +109,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.BodyTypeScale
     summary: |
       Determines the factor by which the shape of a `Class.Humanoid` is
@@ -154,7 +152,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.ClimbAnimation
     summary: |
       When this description is `Class.Humanoid:ApplyDescription()|applied` to a
@@ -190,7 +187,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.DepthScale
     summary: |
       Determines by what factor the depth (back-to-front distance) of a
@@ -225,7 +221,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.Face
     summary: |
       Determines the asset ID of the Face to be applied to the `Class.Humanoid`.
@@ -264,7 +259,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.FaceAccessory
     summary: |
       A comma-separated list of asset IDs that will be added as
@@ -309,7 +303,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.FallAnimation
     summary: |
       When this description is `Class.Humanoid:ApplyDescription()|applied` to a
@@ -347,7 +340,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.FrontAccessory
     summary: |
       A comma-separated list of asset IDs that will be added as
@@ -391,7 +383,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.GraphicTShirt
     summary: |
       Determines the `Class.ShirtGraphic.Graphic|Graphic` used by a
@@ -425,7 +416,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.HairAccessory
     summary: |
       A comma-separated list of asset IDs that will be added as
@@ -468,7 +458,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.HatAccessory
     summary: |
       A comma-separated list of asset IDs that will be added as
@@ -511,7 +500,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.Head
     summary: |
       Determines the asset ID of the Head to be applied to the `Class.Humanoid`.
@@ -550,7 +538,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.HeadColor
     summary: |
       Determines the `Class.BodyColors.HeadColor3` and
@@ -590,7 +577,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.HeadScale
     summary: |
       Determines by what factor the **Head** object of a `Class.Humanoid` is
@@ -630,7 +616,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.HeightScale
     summary: |
       Determines by what factor the height (top-to-bottom distance) of a
@@ -666,7 +651,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.IdleAnimation
     summary: |
       When this description is `Class.Humanoid:ApplyDescription()|applied` to a
@@ -705,7 +689,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.JumpAnimation
     summary: |
       When this description is `Class.Humanoid:ApplyDescription()|applied` to a
@@ -743,7 +726,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.LeftArm
     summary: |
       Determines the asset ID of the LeftArm to be applied to the
@@ -779,7 +761,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.LeftArmColor
     summary: |
       Determines the `Class.BodyColors.LeftArmColor3` and
@@ -820,7 +801,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.LeftLeg
     summary: |
       Determines the asset ID of the LeftLeg to be applied to the
@@ -856,7 +836,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.LeftLegColor
     summary: |
       Determines the `Class.BodyColors.LeftLegColor3` and
@@ -897,7 +876,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.MoodAnimation
     summary: ''
     description: ''
@@ -915,7 +893,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.NeckAccessory
     summary: |
       A comma-separated list of asset IDs that will be added as
@@ -962,7 +939,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.Pants
     summary: |
       Determines the `Class.Pants.PantsTemplate|PantsTemplate` used by a
@@ -997,7 +973,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.ProportionScale
     summary: |
       Determines how wide (0) or narrow (1) a `Class.Humanoid` rig is.
@@ -1038,7 +1013,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.RightArm
     summary: |
       Determines the asset ID of the RightArm to be applied to the
@@ -1074,7 +1048,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.RightArmColor
     summary: |
       Determines the `Class.BodyColors.RightArmColor3` and
@@ -1115,7 +1088,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.RightLeg
     summary: |
       Determines the asset ID of the RightLeg to be applied to the
@@ -1151,7 +1123,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.RightLegColor
     summary: |
       Determines the `Class.BodyColors.RightLegColor3` and
@@ -1192,7 +1163,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.RunAnimation
     summary: |
       When this description is `Class.Humanoid:ApplyDescription()|applied` to a
@@ -1231,7 +1201,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.Shirt
     summary: |
       Determines the `Class.Shirt.ShirtTemplate|ShirtTemplate` used by a
@@ -1268,7 +1237,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.ShouldersAccessory
     summary: |
       A comma-separated list of asset IDs that will be added as
@@ -1312,7 +1280,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.SwimAnimation
     summary: |
       When this description is `Class.Humanoid:ApplyDescription()|applied` to a
@@ -1350,7 +1317,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.Torso
     summary: |
       Determines the asset ID of the Torso to be applied to the
@@ -1386,7 +1352,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.TorsoColor
     summary: |
       Determines the `Class.BodyColors.TorsoColor3` and
@@ -1428,7 +1393,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.WaistAccessory
     summary: |
       A comma-separated list of asset IDs that will be added as
@@ -1471,7 +1435,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.WalkAnimation
     summary: |
       When this description is `Class.Humanoid:ApplyDescription()|applied` to a
@@ -1510,7 +1473,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.WidthScale
     summary: |
       Determines by what factor the width (left-to-right distance) of a
@@ -1546,7 +1508,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
 methods:
   - name: HumanoidDescription:AddEmote
     summary: |
@@ -1596,7 +1557,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription:GetAccessories
     summary: |
       Returns a table of an avatar's current accessories.
@@ -1626,7 +1586,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription:GetEmotes
     summary: |
       Returns a dictionary of emotes that have been
@@ -1685,7 +1644,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription:GetEquippedEmotes
     summary: |
       Returns an array of tables describing the equipped emotes that have been
@@ -1739,7 +1697,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription:RemoveEmote
     summary: |
       Removes any emotes that have been added under the given name.
@@ -1777,7 +1734,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription:SetAccessories
     summary: |
       Accepts a table that sets the accessories and related properties for an
@@ -1813,7 +1769,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription:SetEmotes
     summary: |
       Sets all of the emotes on this description.
@@ -1871,7 +1826,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription:SetEquippedEmotes
     summary: |
       Sets the currently equipped emotes given an array of emote names.
@@ -1937,7 +1891,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
 events:
   - name: HumanoidDescription.EmotesChanged
     summary: |
@@ -1984,7 +1937,6 @@ events:
     security: None
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: HumanoidDescription.EquippedEmotesChanged
     summary: |
       Fires when the equipped emotes are
@@ -2041,5 +1993,4 @@ events:
     security: None
     capabilities:
       - Avatar
-    writeCapabilities: []
 callbacks: []

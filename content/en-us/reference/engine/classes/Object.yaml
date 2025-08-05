@@ -58,7 +58,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Object.className
     summary: ''
     description: ''
@@ -80,7 +79,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: Object:GetPropertyChangedSignal
     summary: |
@@ -136,7 +134,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Object:IsA
     summary: |
       Returns true if an object's class matches or inherits from a given class.
@@ -195,7 +192,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Object:isA
     summary: ''
     description: ''
@@ -217,7 +213,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: Object.Changed
     summary: |
@@ -274,5 +269,4 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

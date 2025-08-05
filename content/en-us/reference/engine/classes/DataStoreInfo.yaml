@@ -46,7 +46,6 @@ properties:
       can_save: true
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: DataStoreInfo.DataStoreName
     summary: |
       The name of the data store.
@@ -70,7 +69,6 @@ properties:
       can_save: true
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: DataStoreInfo.UpdatedTime
     summary: |
       Indicates the last time the data store was updated in milliseconds since
@@ -94,7 +92,6 @@ properties:
       can_save: true
     capabilities:
       - DataStore
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

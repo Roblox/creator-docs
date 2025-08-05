@@ -33,7 +33,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ClimbController.BalanceMaxTorque
     summary: |
       The maximum torque used to keep the `Class.ControllerManager.RootPart`
@@ -61,7 +60,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ClimbController.BalanceSpeed
     summary: |
       The maximum angular speed used to align the
@@ -86,7 +84,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: ClimbController.MoveMaxForce
     summary: |
       The maximum force used by the climbing "motor" to move the
@@ -108,7 +105,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

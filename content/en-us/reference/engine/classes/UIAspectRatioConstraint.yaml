@@ -53,7 +53,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIAspectRatioConstraint.AspectType
     summary: |
       Determines how the maximum size of the object is limited.
@@ -81,7 +80,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIAspectRatioConstraint.DominantAxis
     summary: |
       Determines the axis to use when setting the new size of the object.
@@ -102,7 +100,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

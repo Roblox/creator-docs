@@ -94,7 +94,6 @@ properties:
     capabilities:
       - Basic
       - Players
-    writeCapabilities: []
   - name: SpawnLocation.Duration
     summary: |
       The length of time, in seconds, that a `Class.ForceField` will be applied
@@ -133,7 +132,6 @@ properties:
     capabilities:
       - Basic
       - Players
-    writeCapabilities: []
   - name: SpawnLocation.Enabled
     summary: |
       Sets whether or not the `Class.SpawnLocation` is enabled. When disabled
@@ -167,7 +165,6 @@ properties:
     capabilities:
       - Basic
       - Players
-    writeCapabilities: []
   - name: SpawnLocation.Neutral
     summary: |
       Whether or not a `Class.SpawnLocation` is affiliated with a specific team.
@@ -201,7 +198,6 @@ properties:
     capabilities:
       - Basic
       - Players
-    writeCapabilities: []
   - name: SpawnLocation.TeamColor
     summary: |
       Sets what team the `Class.SpawnLocation` is affiliated to. If
@@ -233,7 +229,6 @@ properties:
     capabilities:
       - Basic
       - Players
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

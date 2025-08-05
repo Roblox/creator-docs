@@ -75,7 +75,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Wire.SourceInstance
     summary: |
       The `Class.Instance` producing a stream to be carried over the wire.
@@ -96,7 +95,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Wire.SourceName
     summary: |
       The name of the pin on `Class.Wire.SourceInstance|SourceInstance` that is
@@ -120,7 +118,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Wire.TargetInstance
     summary: |
       The `Class.Instance` to receive a stream from
@@ -143,7 +140,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Wire.TargetName
     summary: |
       The name of the pin on `Class.Wire.TargetInstance|TargetInstance` that is
@@ -167,7 +163,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

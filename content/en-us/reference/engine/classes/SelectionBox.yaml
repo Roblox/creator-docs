@@ -44,7 +44,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: SelectionBox.SurfaceColor
     summary: |
       A `Datatype.BrickColor` version of
@@ -74,7 +73,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: SelectionBox.SurfaceColor3
     summary: |
       Determines the color of the box's surfaces.
@@ -99,7 +97,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: SelectionBox.SurfaceTransparency
     summary: |
       Determines the transparency of the box's surfaces.
@@ -126,7 +123,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

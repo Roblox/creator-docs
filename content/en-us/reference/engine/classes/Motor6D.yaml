@@ -42,7 +42,6 @@ properties:
       can_save: false
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: Motor6D.ParentName
     summary: ''
     description: ''
@@ -63,7 +62,6 @@ properties:
       can_save: false
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: Motor6D.Transform
     summary: |
       Describes the current animation offset of the `Class.Motor6D` joint.
@@ -102,7 +100,6 @@ properties:
       can_save: false
     capabilities:
       - Physics
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

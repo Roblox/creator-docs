@@ -83,7 +83,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Fire.Enabled
     summary: |
       Determines whether flame particles are emit.
@@ -120,7 +119,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Fire.Heat
     summary: |
       Determines the velocity at which particles are emit.
@@ -147,7 +145,6 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Fire.LocalTransparencyModifier
     summary: ''
     description: ''
@@ -166,7 +163,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Fire.SecondaryColor
     summary: |
       Determines the color of the of the secondary (inner) flame particles.
@@ -193,7 +189,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Fire.Size
     summary: |
       Determines the size of the flame particles.
@@ -222,7 +217,6 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Fire.TimeScale
     summary: |
       Value between 0-1 that controls the speed of the particle effect.
@@ -243,7 +237,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Fire.size
     summary: ''
     description: ''
@@ -264,7 +257,6 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

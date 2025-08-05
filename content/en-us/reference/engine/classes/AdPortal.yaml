@@ -32,7 +32,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: AdPortal.Status
     summary: ''
     description: ''
@@ -51,7 +50,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

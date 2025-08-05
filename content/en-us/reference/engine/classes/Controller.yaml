@@ -43,7 +43,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Controller:GetButton
     summary: |
       Returns whether or not Button is being pressed.
@@ -63,7 +62,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Controller:UnbindButton
     summary: |
       Removes the bind on button.
@@ -83,7 +81,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Controller:bindButton
     summary: ''
     description: ''
@@ -108,7 +105,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Controller:getButton
     summary: ''
     description: ''
@@ -129,7 +125,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: Controller.ButtonChanged
     summary: |
@@ -150,5 +145,4 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

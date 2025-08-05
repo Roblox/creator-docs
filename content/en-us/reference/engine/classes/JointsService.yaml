@@ -41,7 +41,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: JointsService:CreateJoinAfterMoveJoints
     summary: |
       Updates all visible joints for the parts assigned by the
@@ -61,7 +60,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: JointsService:SetJoinAfterMoveInstance
     summary: |
       Sets the PVInstance that will be connected with the target PVInstance
@@ -83,7 +81,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: JointsService:SetJoinAfterMoveTarget
     summary: |
       Sets the PVInstance that will be connected with the PVInstance specified
@@ -105,7 +102,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: JointsService:ShowPermissibleJoints
     summary: |
       When used it will visibly display a potential surface connection between
@@ -127,6 +123,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

@@ -47,7 +47,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: WrapDeformer:GetDeformedCFrameAsync
     summary: |
       Returns a `Datatype.CFrame` deformed comparably to the `Class.MeshPart`.
@@ -76,7 +75,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: WrapDeformer:SetCageMeshContent
     summary: |
       Sets the cage mesh used to deform against a sibling `Class.WrapTarget`
@@ -105,6 +103,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Avatar
-    writeCapabilities: []
 events: []
 callbacks: []

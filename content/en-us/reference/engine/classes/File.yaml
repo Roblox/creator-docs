@@ -47,7 +47,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: File:GetBinaryContents
     summary: |
@@ -67,7 +66,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: File:GetTemporaryId
     summary: |
       Gets a `rbxtemp://` asset ID for this `Class.File`.
@@ -89,6 +87,5 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

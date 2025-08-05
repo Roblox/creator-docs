@@ -54,7 +54,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - PluginOrOpenCloud
-    writeCapabilities: []
   - name: SerializationService:SerializeInstancesAsync
     summary: |
       Serializes a list of `Class.Instance|instances` to the `.rbxm` format,
@@ -92,6 +91,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - PluginOrOpenCloud
-    writeCapabilities: []
 events: []
 callbacks: []

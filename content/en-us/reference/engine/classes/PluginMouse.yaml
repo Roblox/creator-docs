@@ -48,5 +48,4 @@ events:
     security: PluginSecurity
     capabilities:
       - Input
-    writeCapabilities: []
 callbacks: []

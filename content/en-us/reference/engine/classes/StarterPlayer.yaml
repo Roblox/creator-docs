@@ -60,7 +60,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: StarterPlayer.AutoJumpEnabled
     summary: |
       Sets whether the character will automatically jump when hitting an
@@ -90,7 +89,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: StarterPlayer.AvatarJointUpgrade
     summary: ''
     description: ''
@@ -111,7 +109,6 @@ properties:
       can_save: false
     capabilities:
       - Players
-    writeCapabilities: []
   - name: StarterPlayer.CameraMaxZoomDistance
     summary: |
       The maximum distance the player's default camera is allowed to zoom out in
@@ -140,7 +137,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: StarterPlayer.CameraMinZoomDistance
     summary: |
       The minimum distance in studs the player's default camera is allowed to
@@ -169,7 +165,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: StarterPlayer.CameraMode
     summary: |
       Changes the default camera's mode to either first or third person.
@@ -211,7 +206,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: StarterPlayer.CharacterJumpHeight
     summary: |
       Determines the starting value of `Class.Humanoid.JumpHeight` for
@@ -242,7 +236,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: StarterPlayer.CharacterJumpPower
     summary: |
       Determines the starting value of `Class.Humanoid.JumpPower` for
@@ -274,7 +267,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: StarterPlayer.CharacterMaxSlopeAngle
     summary: |
       Determines the starting value of `Class.Humanoid.MaxSlopeAngle` for
@@ -303,7 +295,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: StarterPlayer.CharacterUseJumpPower
     summary: |
       Determines the starting state of `Class.Humanoid.UseJumpPower` for
@@ -333,7 +324,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: StarterPlayer.CharacterWalkSpeed
     summary: |
       Determines the starting value of `Class.Humanoid.WalkSpeed` for
@@ -359,7 +349,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: StarterPlayer.ClassicDeath
     summary: ''
     description: ''
@@ -378,7 +367,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: StarterPlayer.DevCameraOcclusionMode
     summary: |
       Sets how the default camera handles objects between the camera and the
@@ -404,7 +392,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: StarterPlayer.DevComputerCameraMovementMode
     summary: |
       Lets you overwrite the player's camera mode on a computer.
@@ -431,7 +418,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: StarterPlayer.DevComputerMovementMode
     summary: |
       Lets you overwrite the player's movement mode on a computer.
@@ -457,7 +443,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: StarterPlayer.DevTouchCameraMovementMode
     summary: |
       Lets you overwrite the player's camera mode on a touch-enabled device.
@@ -486,7 +471,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: StarterPlayer.DevTouchMovementMode
     summary: |
       Lets you overwrite the player's movement mode on a touch-enabled device.
@@ -514,7 +498,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: StarterPlayer.EnableDynamicHeads
     summary: ''
     description: ''
@@ -533,7 +516,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: StarterPlayer.EnableMouseLockOption
     summary: |
       Determines if a player can toggle mouse lock by default.
@@ -564,7 +546,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: StarterPlayer.HealthDisplayDistance
     summary: |
       Sets the distance at which this player will see other `Class.Humanoid`
@@ -594,7 +575,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: StarterPlayer.LoadCharacterAppearance
     summary: |
       Whether or not the appearance of a player's character should be loaded.
@@ -629,7 +609,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: 'StarterPlayer.LoadCharacterLayeredClothing '
     summary: |
       Indicates whether characters spawning into an experience will have layered
@@ -655,7 +634,6 @@ properties:
       can_save: false
     capabilities:
       - Players
-    writeCapabilities: []
   - name: StarterPlayer.LuaCharacterController
     summary: ''
     description: ''
@@ -674,7 +652,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: StarterPlayer.NameDisplayDistance
     summary: |
       Sets the distance at which this player will see other `Class.Humanoid`
@@ -704,7 +681,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: StarterPlayer.RagdollDeath
     summary: ''
     description: ''
@@ -723,7 +699,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: StarterPlayer.UserEmotesEnabled
     summary: |
       Determines if user-owned emotes are loaded when loading avatars.
@@ -752,7 +727,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

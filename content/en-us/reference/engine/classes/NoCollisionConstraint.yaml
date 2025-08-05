@@ -73,7 +73,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: NoCollisionConstraint.Part0
     summary: |
       The second `Class.BasePart` that the constraint connects.
@@ -93,7 +92,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: NoCollisionConstraint.Part1
     summary: |
       The first `Class.BasePart` that the constraint connects.
@@ -113,7 +111,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

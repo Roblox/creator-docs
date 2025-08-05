@@ -178,15 +178,7 @@ The following are common input binds that will help players immediately feel fam
 
 Many gamepad controllers have motors built in to provide haptic feedback. Adding rumbles and vibrations can greatly enhance a player's experience and provide subtle feedback beyond visuals or audio.
 
-Roblox supports haptics for the following devices:
-
-- Android and iOS phones supporting haptics including most iPhone, Pixel, and
-	Samsung Galaxy devices
-- PlayStation gamepads
-- Xbox gamepads
-- Quest Touch controller
-
-Haptic feedback is managed through `Class.HapticEffect` instances which can be set to a specific `Class.HapticEffect.Type|Type` such as `Enum.HapticEffectType|GameplayCollision` or `Enum.HapticEffectType|UIClick`.
+Roblox supports haptics for PlayStation gamepads, Xbox gamepads, and the Quest Touch controller. Haptic feedback is managed through `Class.HapticEffect` instances which can be set to a specific `Class.HapticEffect.Type|Type` such as `Enum.HapticEffectType|GameplayCollision` or `Enum.HapticEffectType|UIClick`.
 
 Once a `Class.HapticEffect` is in place, you can initiate it through the `Class.HapticEffect:Play()|Play()` method, for instance:
 

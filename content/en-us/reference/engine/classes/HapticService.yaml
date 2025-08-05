@@ -53,7 +53,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: HapticService:IsMotorSupported
     summary: |
       Returns `true` if the specified motor is available to be used with the
@@ -85,7 +84,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: HapticService:IsVibrationSupported
     summary: |
       Returns `true` if the specified `Enum.UserInputType` supports haptic
@@ -111,7 +109,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: HapticService:SetMotor
     summary: |
       Sets the vibration intensity of the specified
@@ -148,6 +145,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

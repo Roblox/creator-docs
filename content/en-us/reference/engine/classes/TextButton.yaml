@@ -70,7 +70,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextButton.Font
     summary: |
       Determines the font used to render text.
@@ -107,7 +106,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextButton.FontFace
     summary: |
       Determines the font used to render text.
@@ -133,7 +131,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextButton.FontSize
     summary: |
       Determines the font size to be used.
@@ -157,7 +154,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextButton.LineHeight
     summary: |
       Scales the spacing between lines of text in the `Class.TextButton`.
@@ -179,7 +175,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextButton.LocalizedText
     summary: |
       Sets whether a `Class.TextButton` should be `Class.GuiBase2d.Localize` or
@@ -204,7 +199,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextButton.MaxVisibleGraphemes
     summary: |
       The maximum number of graphemes the `Class.TextButton` can show.
@@ -234,7 +228,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextButton.OpenTypeFeatures
     summary: ''
     description: ''
@@ -252,7 +245,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextButton.OpenTypeFeaturesError
     summary: ''
     description: ''
@@ -272,7 +264,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextButton.RichText
     summary: |
       Determines whether the `Class.TextButton` renders its text using rich text
@@ -298,7 +289,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextButton.Text
     summary: |
       Determines the string rendered by the `Class.TextButton`.
@@ -337,7 +327,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextButton.TextBounds
     summary: |
       Read-only property which reflects the absolute size of rendered text in
@@ -368,7 +357,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextButton.TextColor
     summary: |
       Determines the color of text.
@@ -393,7 +381,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextButton.TextColor3
     summary: |
       Determines the color of rendered text.
@@ -415,7 +402,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextButton.TextDirection
     summary: |
       Direction in which the text is rendered.
@@ -435,7 +421,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextButton.TextFits
     summary: |
       A boolean representation of whether the button's text fits within the size
@@ -459,7 +444,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextButton.TextScaled
     summary: |
       Changes whether text is resized to fit within the `Class.TextButton`.
@@ -512,7 +496,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextButton.TextSize
     summary: |
       Determines the line height of text in offsets.
@@ -534,7 +517,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextButton.TextStrokeColor3
     summary: |
       Determines the color of the text stroke (outline).
@@ -560,7 +542,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextButton.TextStrokeTransparency
     summary: |
       Determines the transparency of the text stroke (outline).
@@ -591,7 +572,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextButton.TextTransparency
     summary: |
       Determines the transparency of rendered text.
@@ -612,7 +592,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextButton.TextTruncate
     summary: |
       Controls the truncation of the text displayed in the `Class.TextButton`.
@@ -632,7 +611,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextButton.TextWrap
     summary: |
       Determines whether or not text should wrap at the edges of the
@@ -658,7 +636,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextButton.TextWrapped
     summary: |
       Determines if text wraps to multiple lines within the `Class.TextButton`
@@ -692,7 +669,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextButton.TextXAlignment
     summary: |
       Determines the horizontal alignment of rendered text.
@@ -719,7 +695,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextButton.TextYAlignment
     summary: |
       Determines the vertical alignment of rendered text.
@@ -746,7 +721,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

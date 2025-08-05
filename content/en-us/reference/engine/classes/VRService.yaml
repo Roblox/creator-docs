@@ -45,7 +45,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: VRService.AvatarGestures
     summary: |
       When true, a VR player will be able to animate their hands and head using
@@ -68,7 +67,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: VRService.ControllerModels
     summary: ''
     description: ''
@@ -85,7 +83,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: VRService.FadeOutViewOnCollision
     summary: |
       When true, a VR player's view will fade to black when their head collides
@@ -107,7 +104,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: VRService.GuiInputUserCFrame
     summary: |
       Describes what `Enum.UserCFrame` is responsible for input in VR.
@@ -134,7 +130,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: VRService.LaserPointer
     summary: ''
     description: ''
@@ -151,7 +146,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: VRService.ThirdPersonFollowCamEnabled
     summary: ''
     description: ''
@@ -170,7 +164,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: VRService.VREnabled
     summary: |
       Describes whether the user is using a virtual reality device.
@@ -217,7 +210,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: VRService:GetTouchpadMode
     summary: |
@@ -248,7 +240,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: VRService:GetUserCFrame
     summary: |
       Returns a CFrame describing the position &amp; orientation of a specified
@@ -289,7 +280,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: VRService:GetUserCFrameEnabled
     summary: |
       Returns true if the specified `Enum.UserCFrame` is available to be
@@ -322,7 +312,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: VRService:RecenterUserHeadCFrame
     summary: |
       Re-centers the `Datatype.CFrame` to the current location of the VR headset
@@ -348,7 +337,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: VRService:RequestNavigation
     summary: |
       Requests navigation to the specified `Datatype.CFrame` using the specified
@@ -387,7 +375,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: VRService:SetTouchpadMode
     summary: |
       Sets the mode of the specified `Enum.VRTouchpad` to the specified
@@ -425,7 +412,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: VRService.NavigationRequested
     summary: |
@@ -458,7 +444,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: VRService.TouchpadModeChanged
     summary: |
       Fires if the `Enum.VRTouchpadMode` of a `Enum.VRTouchpad` is changed.
@@ -489,7 +474,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: VRService.UserCFrameChanged
     summary: |
       Fires when a `Enum.UserCFrame` is changed.
@@ -521,7 +505,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: VRService.UserCFrameEnabled
     summary: |
       Fires when a `Enum.UserCFrame` is enabled or disabled.
@@ -553,5 +536,4 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []
