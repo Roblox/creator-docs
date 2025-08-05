@@ -8,22 +8,20 @@ memory_category: Instances
 summary: |
   A GlobalDataStore that also allows for ordered data store entries.
 description: |
-  A **OrderedDataStore** is essentially a `Class.GlobalDataStore` with the
-  exception that stored values must be **positive integers**. It exposes a
-  method `Class.OrderedDataStore:GetSortedAsync()|GetSortedAsync()` which allows
-  inspection of the entries in sorted order using a `Class.DataStorePages`
-  object.
+  An **OrderedDataStore** is essentially a `Class.GlobalDataStore` with stored values that are **integers**. 
+  It exposes the `Class.OrderedDataStore:GetSortedAsync()|GetSortedAsync()` method, which allows for the 
+  inspection of entries in sorted order using a `Class.DataStorePages` object.
 
   Ordered data stores do not support versioning and metadata, so
   `Class.DataStoreKeyInfo` is always `nil` for keys in an
   `Class.OrderedDataStore`. If you need versioning and metadata support, use a
   `Class.DataStore`.
 
-  Ordered data stores do not support the optional `userIds` parameter for
+  Ordered data stores also do not support the optional `userIds` parameter for
   `Class.OrderedDataStore:SetAsync()|SetAsync()` or
   `Class.OrderedDataStore:IncrementAsync()|IncrementAsync()`.
 
-  See [Data Stores](../../../cloud-services/data-stores/index.md) for an
+  See [Data stores](../../../cloud-services/data-stores/index.md) for an
   overview on using ordered data stores.
 code_samples:
   - OrderedDataStore-Basics
@@ -44,7 +42,7 @@ methods:
       **minValue**/**maxValue** are optional parameters which filter the
       results.
 
-      See [Data Stores](../../../cloud-services/data-stores/index.md) for
+      See [Error codes and limits](../../../cloud-services/data-stores/error-codes-and-limits.md) for
       request limits and descriptions of the error codes.
     code_samples: []
     parameters:
