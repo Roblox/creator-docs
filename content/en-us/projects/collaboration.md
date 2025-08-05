@@ -167,10 +167,6 @@ To quickly jump to a location in the workspace or to the exact line in a script 
 
 ## Comments
 
-<Alert severity="success">
-The comments feature is rolling out gradually over the next month. All Studio users will have access by 30 May 2025.
-</Alert>
-
 Roblox Studio has a comments feature that let you pinpoint an object in the 3D viewport and start a conversation with your collaborators, leave to-do notes, and more. Comments update in real-time, which lets you and your team receive and respond to feedback without disrupting your workflow in Studio.
 
 To use this feature, you must have [added collaborators](#manage-collaborators) to your experience.
