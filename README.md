@@ -2,7 +2,7 @@
 
 This repository holds source code for the creator documentation at [create.roblox.com/docs](https://create.roblox.com/docs).
 
-**Note**: Currently, the repository has guides, tutorials, educational content, and the Engine API reference. Code samples are coming soon.
+**Note**: Currently, the repository has guides, tutorials, educational content, and a read-only version of the Engine API reference.
 
 If you're unfamiliar with the GitHub contribution process, see [About pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) and the following video.
 
@@ -77,13 +77,13 @@ The Roblox documentation has three main document types:
 
   Guides benefit massively from practical, real-world use cases, images, code snippets, and diagrams. Most task-based content should include a numbered list.
 
-- API reference docs in `.yaml` files in [content/en-us/reference](./content/en-us/reference)
-
-  APIs are entirely reference content and should use functional descriptions, linking to guides where appropriate. More than other content types, reference content should be terse and direct; summaries for properties, methods, events, and callbacks don't need to be full sentences.
-
 - Tutorials in `.md` files in [content/en-us/tutorials](./content/en-us/tutorials)
 
   Compared to task-based guides, tutorials are more self-contained and take you from _nothing_ to _something_. This focus on creating something specific means they're typically much more prescriptive than guides. Tutorials often touch multiple features and concepts at the same time, demonstrating the connections between tools and strategies.
+
+- API reference docs in `.yaml` files in [content/en-us/reference](./content/en-us/reference)
+
+  We provide these files so that you can view the source and use them in your own projects, but we **no longer** accept pull requests on the reference `.yaml` files.
 
 If your contribution doesn't fit within these categories or covers a particularly narrow subject, it might not be a good fit for the documentation. Consider posting it to the [Roblox developer forum](https://devforum.roblox.com/c/resources/71).
 

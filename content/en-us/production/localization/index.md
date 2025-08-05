@@ -5,7 +5,7 @@ description: An overview of localization tools you can use to make sure all user
 
 Roblox users come from a variety of cultures around the world and speak
 different languages. Using **localization** tools effectively makes sure all
-users can understand and enjoy your experience as intended. Any experience can immediately take advantage of Roblox's automatic localization tools instantly expand your potential audience. As your experience grows, use Roblox's various localization API tools, manual translator portals, and analytics, to ensure that users from around the world can fully participate and socialize in your experience.
+users can understand and enjoy your experience as intended. Any experience can immediately take advantage of Roblox's automatic localization tools to instantly expand your potential audience. As your experience grows, use Roblox's various localization API tools, manual translator portals, and analytics, to ensure that users from around the world can fully participate and socialize in your experience.
 
 <img src="../../assets/localization/Concept-Banner.jpg" width="80%" />
 
