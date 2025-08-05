@@ -167,7 +167,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - CSG
-    writeCapabilities: []
   - name: GeometryService:IntersectAsync
     summary: |
       Creates one or more `Class.PartOperation|PartOperations` from the
@@ -300,7 +299,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - CSG
-    writeCapabilities: []
   - name: GeometryService:SubtractAsync
     summary: |
       Creates one or more `Class.PartOperation|PartOperations` from one part
@@ -433,7 +431,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - CSG
-    writeCapabilities: []
   - name: GeometryService:UnionAsync
     summary: |
       Creates one or more `Class.PartOperation|PartOperations` from one part
@@ -566,6 +563,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - CSG
-    writeCapabilities: []
 events: []
 callbacks: []

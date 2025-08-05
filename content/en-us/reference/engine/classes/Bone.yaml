@@ -79,7 +79,6 @@ properties:
     capabilities:
       - Basic
       - Animation
-    writeCapabilities: []
   - name: Bone.TransformedCFrame
     summary: |
       Describes the combined `Class.Attachment.CFrame|CFrame` offset of the bone
@@ -114,7 +113,6 @@ properties:
     capabilities:
       - Basic
       - Animation
-    writeCapabilities: []
   - name: Bone.TransformedWorldCFrame
     summary: |
       Describes the combined `Class.Attachment.CFrame|CFrame` offset of the bone
@@ -146,7 +144,6 @@ properties:
     capabilities:
       - Basic
       - Animation
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

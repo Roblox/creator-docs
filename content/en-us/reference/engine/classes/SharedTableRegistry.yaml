@@ -48,7 +48,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: SharedTableRegistry:SetSharedTable
     summary: |
       Registers the provided `Datatype.SharedTable` with the specified name.
@@ -88,6 +87,5 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

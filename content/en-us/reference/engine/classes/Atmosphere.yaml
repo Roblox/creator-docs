@@ -55,7 +55,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: Atmosphere.Decay
     summary: |
       When used with increased `Class.Atmosphere.Haze` and
@@ -81,7 +80,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: Atmosphere.Density
     summary: |
       Defines the amount of particles in the `Class.Atmosphere` and essentially
@@ -106,7 +104,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: Atmosphere.Glare
     summary: |
       When used with increased `Class.Atmosphere.Haze`, specifies the glow/glare
@@ -131,7 +128,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: Atmosphere.Haze
     summary: |
       Defines the haziness of the `Class.Atmosphere` with a visible effect both
@@ -155,7 +151,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: Atmosphere.Offset
     summary: |
       Controls how light transmits between the camera and the sky background.
@@ -185,7 +180,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

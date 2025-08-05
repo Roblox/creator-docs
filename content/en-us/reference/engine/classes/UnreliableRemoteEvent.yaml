@@ -94,7 +94,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - RemoteEvent
-    writeCapabilities: []
   - name: UnreliableRemoteEvent:FireClient
     summary: |
       Fires the `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` event
@@ -145,7 +144,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - RemoteEvent
-    writeCapabilities: []
   - name: UnreliableRemoteEvent:FireServer
     summary: |
       Fires the `Class.UnreliableRemoteEvent.OnServerEvent|OnServerEvent` event
@@ -188,7 +186,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - RemoteEvent
-    writeCapabilities: []
 events:
   - name: UnreliableRemoteEvent.OnClientEvent
     summary: |
@@ -225,7 +222,6 @@ events:
     security: None
     capabilities:
       - RemoteEvent
-    writeCapabilities: []
   - name: UnreliableRemoteEvent.OnServerEvent
     summary: |
       Fires from a `Class.Script` when
@@ -265,5 +261,4 @@ events:
     security: None
     capabilities:
       - RemoteEvent
-    writeCapabilities: []
 callbacks: []

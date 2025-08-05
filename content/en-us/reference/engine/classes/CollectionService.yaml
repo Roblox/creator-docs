@@ -89,7 +89,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: CollectionService:GetAllTags
     summary: |
       Returns an array of all tags in the experience.
@@ -106,7 +105,6 @@ methods:
     thread_safety: Safe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: CollectionService:GetCollection
     summary: |
       Returns all instances of a given class which are in the `Class.DataModel`.
@@ -135,7 +133,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: CollectionService:GetInstanceAddedSignal
     summary: |
       Returns a signal that fires when a given tag is added to an instance.
@@ -177,7 +174,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: CollectionService:GetInstanceRemovedSignal
     summary: |
       Returns a signal that fires when a given tag is removed from an instance.
@@ -217,7 +213,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: CollectionService:GetTagged
     summary: |
       Returns an array of instances in the game with a given tag.
@@ -254,7 +249,6 @@ methods:
     thread_safety: Safe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: CollectionService:GetTags
     summary: |
       Gets an array of all tags applied to a given instance.
@@ -285,7 +279,6 @@ methods:
     thread_safety: Safe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: CollectionService:HasTag
     summary: |
       Check whether an instance has a given tag.
@@ -319,7 +312,6 @@ methods:
     thread_safety: Safe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: CollectionService:RemoveTag
     summary: |
       Removes a tag from an instance.
@@ -356,7 +348,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
 events:
   - name: CollectionService.ItemAdded
     summary: |
@@ -382,7 +373,6 @@ events:
     security: None
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: CollectionService.ItemRemoved
     summary: |
       Fires when a `Class.Configuration`, `Class.CustomEvent`,
@@ -407,7 +397,6 @@ events:
     security: None
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: CollectionService.TagAdded
     summary: |
       Fires when a tag is added to an instance and the added tag is the only
@@ -426,7 +415,6 @@ events:
     security: None
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: CollectionService.TagRemoved
     summary: |
       Fires when a tag is removed from an instance and the removed tag is no
@@ -445,5 +433,4 @@ events:
     security: None
     capabilities:
       - Basic
-    writeCapabilities: []
 callbacks: []

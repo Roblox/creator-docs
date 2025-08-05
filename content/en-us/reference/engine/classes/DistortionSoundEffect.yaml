@@ -40,7 +40,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

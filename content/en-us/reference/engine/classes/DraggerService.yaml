@@ -22,7 +22,6 @@ properties:
     code_samples: []
     type: boolean
     tags:
-      - ReadOnly
       - NotReplicated
     deprecation_message: ''
     security:
@@ -34,14 +33,12 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DraggerService.AngleSnapEnabled
     summary: ''
     description: ''
     code_samples: []
     type: boolean
     tags:
-      - ReadOnly
       - NotReplicated
     deprecation_message: ''
     security:
@@ -53,14 +50,12 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DraggerService.AngleSnapIncrement
     summary: ''
     description: ''
     code_samples: []
     type: float
     tags:
-      - ReadOnly
       - NotReplicated
     deprecation_message: ''
     security:
@@ -72,14 +67,12 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DraggerService.AnimateHover
     summary: ''
     description: ''
     code_samples: []
     type: boolean
     tags:
-      - ReadOnly
       - NotReplicated
     deprecation_message: ''
     security:
@@ -91,14 +84,12 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DraggerService.CollisionsEnabled
     summary: ''
     description: ''
     code_samples: []
     type: boolean
     tags:
-      - ReadOnly
       - NotReplicated
     deprecation_message: ''
     security:
@@ -110,14 +101,12 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DraggerService.DraggerCoordinateSpace
     summary: ''
     description: ''
     code_samples: []
     type: DraggerCoordinateSpace
     tags:
-      - ReadOnly
       - NotReplicated
     deprecation_message: ''
     security:
@@ -129,14 +118,12 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DraggerService.DraggerMovementMode
     summary: ''
     description: ''
     code_samples: []
     type: DraggerMovementMode
     tags:
-      - ReadOnly
       - NotReplicated
     deprecation_message: ''
     security:
@@ -148,14 +135,12 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DraggerService.GeometrySnapColor
     summary: ''
     description: ''
     code_samples: []
     type: Color3
     tags:
-      - ReadOnly
       - NotReplicated
     deprecation_message: ''
     security:
@@ -167,14 +152,12 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DraggerService.HoverAnimateFrequency
     summary: ''
     description: ''
     code_samples: []
     type: float
     tags:
-      - ReadOnly
       - NotReplicated
     deprecation_message: ''
     security:
@@ -186,14 +169,12 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DraggerService.HoverThickness
     summary: ''
     description: ''
     code_samples: []
     type: float
     tags:
-      - ReadOnly
       - NotReplicated
     deprecation_message: ''
     security:
@@ -205,14 +186,12 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DraggerService.JointsEnabled
     summary: ''
     description: ''
     code_samples: []
     type: boolean
     tags:
-      - ReadOnly
       - NotReplicated
     deprecation_message: ''
     security:
@@ -224,14 +203,12 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DraggerService.LinearSnapEnabled
     summary: ''
     description: ''
     code_samples: []
     type: boolean
     tags:
-      - ReadOnly
       - NotReplicated
     deprecation_message: ''
     security:
@@ -243,14 +220,12 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DraggerService.LinearSnapIncrement
     summary: ''
     description: ''
     code_samples: []
     type: float
     tags:
-      - ReadOnly
       - NotReplicated
     deprecation_message: ''
     security:
@@ -262,14 +237,12 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DraggerService.PartSnapEnabled
     summary: ''
     description: ''
     code_samples: []
     type: boolean
     tags:
-      - ReadOnly
       - NotReplicated
     deprecation_message: ''
     security:
@@ -281,14 +254,12 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DraggerService.PivotSnapToGeometry
     summary: ''
     description: ''
     code_samples: []
     type: boolean
     tags:
-      - ReadOnly
       - NotReplicated
     deprecation_message: ''
     security:
@@ -300,14 +271,12 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DraggerService.ShowHover
     summary: ''
     description: ''
     code_samples: []
     type: boolean
     tags:
-      - ReadOnly
       - NotReplicated
     deprecation_message: ''
     security:
@@ -319,7 +288,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DraggerService.ShowPivotIndicator
     summary: ''
     description: ''
@@ -337,7 +305,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

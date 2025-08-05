@@ -59,7 +59,6 @@ properties:
       can_save: false
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.AutoJumpEnabled
     summary: |
       Determines whether the character of a player using a mobile device will
@@ -92,7 +91,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.CameraMaxZoomDistance
     summary: |
       The maximum distance the player's camera is allowed to zoom out.
@@ -119,7 +117,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.CameraMinZoomDistance
     summary: |
       The minimum distance the player's camera is allowed to zoom in.
@@ -146,7 +143,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.CameraMode
     summary: |
       Changes the camera's mode to either first or third person.
@@ -189,7 +185,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.CanLoadCharacterAppearance
     summary: |
       Determines whether the character's appearance will be loaded when the
@@ -223,7 +218,6 @@ properties:
       can_save: false
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.Character
     summary: |
       A `Class.Model` controlled by the player that contains a `Class.Humanoid`,
@@ -275,7 +269,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.CharacterAppearance
     summary: |
       The URL of the asset containing the character's appearance, clothing, and
@@ -305,7 +298,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.CharacterAppearanceId
     summary: |
       Determines the user ID of the account whose character appearance is used
@@ -336,7 +328,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.DataComplexity
     summary: |
       The total amount of data currently being stored in the player's cache on
@@ -380,7 +371,6 @@ properties:
       can_save: false
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.DataReady
     summary: |
       Indicates when the player's data is available to load.
@@ -409,7 +399,6 @@ properties:
       can_save: false
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.DevCameraOcclusionMode
     summary: |
       Sets how the default camera handles objects between the camera and the
@@ -436,7 +425,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.DevComputerCameraMode
     summary: |
       Determines player's camera movement mode when using a device with a mouse
@@ -467,7 +455,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.DevComputerMovementMode
     summary: |
       Determines player's character movement mode when using a device with a
@@ -498,7 +485,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.DevEnableMouseLock
     summary: |
       Determines if the player can toggle mouse lock.
@@ -529,7 +515,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.DevTouchCameraMode
     summary: |
       Determines player's camera movement mode when using a touch-enabled
@@ -560,7 +545,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.DevTouchMovementMode
     summary: |
       Determines player's character movement mode when using a touch-enabled
@@ -591,7 +575,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.DisplayName
     summary: |
       The display name of the authenticated user associated with the
@@ -629,7 +612,6 @@ properties:
       can_save: false
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.FollowUserId
     summary: |
       Describes the user ID of the player who was followed into an experience by
@@ -659,7 +641,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.GameplayPaused
     summary: |
       Whether player client-side gameplay is currently paused.
@@ -689,7 +670,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.HasVerifiedBadge
     summary: |
       Indicates if a player has a **Verified** badge.
@@ -709,7 +689,6 @@ properties:
       can_save: false
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.HealthDisplayDistance
     summary: |
       Sets the distance at which this player will see other players' health
@@ -736,7 +715,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.LocaleId
     summary: |
       This property shows the locale ID that the local player has set for their
@@ -766,27 +744,6 @@ properties:
       can_save: false
     capabilities:
       - Players
-    writeCapabilities: []
-  - name: Player.MaximumSimulationRadius
-    summary: ''
-    description: ''
-    code_samples: []
-    type: float
-    tags:
-      - Hidden
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: LocalUserSecurity
-      write: LocalUserSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities:
-      - Players
-    writeCapabilities: []
   - name: Player.MembershipType
     summary: |
       Describes the account's membership type.
@@ -811,7 +768,6 @@ properties:
       can_save: false
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.NameDisplayDistance
     summary: |
       Sets the distance at which this player will see other players' names.
@@ -837,7 +793,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.Neutral
     summary: |
       Determines whether the player is on a specific team.
@@ -865,7 +820,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.PartyId
     summary: |
       A unique identifier of the party a `Class.Player` belongs to.
@@ -899,7 +853,6 @@ properties:
       can_save: false
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.ReplicationFocus
     summary: |
       Sets the part to focus replication around.
@@ -930,7 +883,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.RespawnLocation
     summary: |
       If set, the player will respawn at the given `Class.SpawnLocation`.
@@ -966,26 +918,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
-  - name: Player.SimulationRadius
-    summary: ''
-    description: ''
-    code_samples: []
-    type: float
-    tags:
-      - Hidden
-    deprecation_message: ''
-    security:
-      read: LocalUserSecurity
-      write: LocalUserSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities:
-      - Players
-    writeCapabilities: []
   - name: Player.StepIdOffset
     summary: ''
     description: ''
@@ -1003,7 +935,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.Team
     summary: |
       Determines the `Class.Team` with which the player is associated.
@@ -1030,7 +961,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.TeamColor
     summary: |
       Determines the `Class.Team` with which the player is associated with
@@ -1059,7 +989,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.ThirdPartyTextChatRestrictionStatus
     summary: ''
     description: ''
@@ -1079,7 +1008,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.UserId
     summary: |
       A unique identifying integer assigned to all user accounts.
@@ -1107,7 +1035,6 @@ properties:
       can_save: false
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.userId
     summary: ''
     description: ''
@@ -1128,7 +1055,6 @@ properties:
       can_save: false
     capabilities:
       - Players
-    writeCapabilities: []
 methods:
   - name: Player:AddReplicationFocus
     summary: ''
@@ -1148,7 +1074,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:ClearCharacterAppearance
     summary: |
       Removes all accessories and other character appearance objects from a
@@ -1172,7 +1097,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:DistanceFromCharacter
     summary: |
       Returns the distance between the character's head and the given
@@ -1209,7 +1133,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:GetFriendsOnline
     summary: |
       Returns a dictionary of online connections.
@@ -1294,7 +1217,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:GetJoinData
     summary: |
       Returns a dictionary containing information describing how the player
@@ -1400,7 +1322,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:GetMouse
     summary: |
       Returns the mouse being used by the client.
@@ -1424,7 +1345,6 @@ methods:
     capabilities:
       - Input
       - Players
-    writeCapabilities: []
   - name: Player:GetNetworkPing
     summary: |
       Returns the isolated network latency in seconds.
@@ -1450,7 +1370,6 @@ methods:
     thread_safety: Safe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:GetRankInGroup
     summary: |
       Returns the player's rank in the group as an integer.
@@ -1486,7 +1405,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:GetRoleInGroup
     summary: |
       Returns the player's role in the group as a string, or `Guest` if the
@@ -1524,7 +1442,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:HasAppearanceLoaded
     summary: |
       Returns whether or not the appearance of the player's character has
@@ -1552,7 +1469,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:IsBestFriendsWith
     summary: |
       Returns whether a player is connections with the specified user.
@@ -1579,7 +1495,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:IsFriendsWith
     summary: |
       Checks whether a player is a connection of the user with the given
@@ -1609,7 +1524,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:IsInGroup
     summary: |
       Checks whether a player is a member of a group with the given ID.
@@ -1644,7 +1558,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:IsVerified
     summary: |
       Returns whether the player is verified with concrete, real-world signals.
@@ -1672,7 +1585,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:Kick
     summary: |
       Forcibly disconnect a player from the experience, optionally providing a
@@ -1706,7 +1618,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:LoadBoolean
     summary: |
       Returns a boolean value that was previously saved to the player with
@@ -1734,7 +1645,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:LoadCharacter
     summary: |
       Creates a new character for the player, removing the old one. Also clears
@@ -1780,7 +1690,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:LoadCharacterAppearance
     summary: |
       Places the given instance either in the player's character, head, or
@@ -1826,7 +1735,6 @@ methods:
     capabilities:
       - Avatar
       - Players
-    writeCapabilities: []
   - name: Player:LoadCharacterWithHumanoidDescription
     summary: |
       Spawns a player character with everything equipped in the passed in
@@ -1864,7 +1772,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:LoadInstance
     summary: |
       Returns an instance that was previously saved to the player with
@@ -1893,7 +1800,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:LoadNumber
     summary: |
       Returns a number value that was previously saved to the player.
@@ -1922,7 +1828,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:LoadString
     summary: |
       Returns a string value that was previously saved to the player.
@@ -1950,7 +1855,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:Move
     summary: |
       Causes the player's character to walk in the given direction until
@@ -1988,7 +1892,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:RemoveReplicationFocus
     summary: ''
     description: ''
@@ -2007,7 +1910,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:RequestStreamAroundAsync
     summary: |
       Requests that the server stream to the player around the specified
@@ -2060,7 +1962,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:SaveBoolean
     summary: |
       Used to save a boolean value that can be loaded again at a later time
@@ -2092,7 +1993,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:SaveInstance
     summary: |
       Saves an instance which can be loaded again at a later time.
@@ -2124,7 +2024,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:SaveNumber
     summary: |
       Saves a number value that can be loaded again at a later time using.
@@ -2156,7 +2055,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:SaveString
     summary: |
       Saves a string value that can be loaded again at a later time.
@@ -2188,7 +2086,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:SetAccountAge
     summary: |
       Sets the `Class.Player.AccountAge|AccountAge` of the player.
@@ -2212,7 +2109,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:SetSuperSafeChat
     summary: |
       Sets whether or not the player sees filtered chats, rather than normal
@@ -2249,7 +2145,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:WaitForDataReady
     summary: |
       Used to pause the script until the player's data is available to
@@ -2275,7 +2170,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:isFriendsWith
     summary: ''
     description: ''
@@ -2298,7 +2192,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:loadBoolean
     summary: ''
     description: ''
@@ -2321,7 +2214,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:loadInstance
     summary: ''
     description: ''
@@ -2344,7 +2236,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:loadNumber
     summary: ''
     description: ''
@@ -2366,7 +2257,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:loadString
     summary: ''
     description: ''
@@ -2388,7 +2278,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:saveBoolean
     summary: ''
     description: ''
@@ -2415,7 +2304,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:saveInstance
     summary: ''
     description: ''
@@ -2442,7 +2330,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:saveNumber
     summary: ''
     description: ''
@@ -2468,7 +2355,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:saveString
     summary: ''
     description: ''
@@ -2494,7 +2380,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player:waitForDataReady
     summary: ''
     description: ''
@@ -2514,7 +2399,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Players
-    writeCapabilities: []
 events:
   - name: Player.CharacterAdded
     summary: |
@@ -2556,7 +2440,6 @@ events:
     security: None
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.CharacterAppearanceLoaded
     summary: |
       Fires when the full appearance of a `Class.Player.Character|Character` has
@@ -2592,7 +2475,6 @@ events:
     security: None
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.CharacterRemoving
     summary: |
       Fires right before a player's character is removed.
@@ -2619,7 +2501,6 @@ events:
     security: None
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.Chatted
     summary: |
       Fires when a player chats in experience using Roblox's provided chat bar.
@@ -2648,7 +2529,6 @@ events:
     capabilities:
       - Chat
       - Players
-    writeCapabilities: []
   - name: Player.Idled
     summary: |
       This event fires approximately two minutes after the engine classifies the
@@ -2682,7 +2562,6 @@ events:
     security: None
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Player.OnTeleport
     summary: |
       Fires when the teleport state of a player changes.
@@ -2713,5 +2592,4 @@ events:
     security: None
     capabilities:
       - Players
-    writeCapabilities: []
 callbacks: []

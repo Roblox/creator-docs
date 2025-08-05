@@ -124,7 +124,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Mouse.Icon
     summary: |
       The content ID of the image used as the `Class.Mouse` icon.
@@ -271,7 +270,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Mouse.Origin
     summary: |
       A `Datatype.CFrame` positioned at the `Class.Workspace.CurrentCamera` and
@@ -310,7 +308,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Mouse.Target
     summary: |
       The object in 3D space the `Class.Mouse|mouse` is pointing to.
@@ -342,7 +339,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Mouse.TargetFilter
     summary: |
       Determines an object (and its descendants) to be ignored when determining
@@ -383,7 +379,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Mouse.TargetSurface
     summary: |
       Indicates the `Enum.NormalId` of the `Class.BasePart` surface at which the
@@ -427,7 +422,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Mouse.UnitRay
     summary: |
       A `Datatype.Ray` directed towards the mouse's world position, originating
@@ -460,7 +454,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Mouse.ViewSizeX
     summary: |
       Describes the width of the game window in pixels.
@@ -484,7 +477,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Mouse.ViewSizeY
     summary: |
       Describes the height of the game window in pixels.
@@ -509,7 +501,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Mouse.X
     summary: |
       Describes the X (horizontal) component of the mouse's position on the
@@ -554,7 +545,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Mouse.Y
     summary: |
       Describes the Y (vertical) component of the mouse's screen position.
@@ -598,7 +588,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Mouse.hit
     summary: ''
     description: ''
@@ -622,7 +611,6 @@ properties:
       can_save: false
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Mouse.target
     summary: ''
     description: ''
@@ -645,7 +633,6 @@ properties:
       can_save: false
     capabilities:
       - Input
-    writeCapabilities: []
 methods: []
 events:
   - name: Mouse.Button1Down
@@ -677,7 +664,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Mouse.Button1Up
     summary: |
       Fires when the left mouse button is released.
@@ -707,7 +693,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Mouse.Button2Down
     summary: |
       Fires when the right mouse button is pressed.
@@ -737,7 +722,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Mouse.Button2Up
     summary: |
       Fired when the right mouse button is released.
@@ -767,7 +751,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Mouse.Idle
     summary: |
       Fired during every heartbeat that the mouse isn't being passed to another
@@ -797,7 +780,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Mouse.KeyDown
     summary: |
       Fires when a Key is pressed.
@@ -828,7 +810,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Mouse.KeyUp
     summary: |
       Fires when a Key is released.
@@ -859,7 +840,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Mouse.Move
     summary: |
       Fired when the mouse is moved.
@@ -894,7 +874,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Mouse.WheelBackward
     summary: |
       Fires when the mouse wheel is scrolled backwards.
@@ -919,7 +898,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Mouse.WheelForward
     summary: |
       Fires when the mouse wheel is scrolled forwards.
@@ -944,7 +922,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Mouse.keyDown
     summary: ''
     description: ''
@@ -962,5 +939,4 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
 callbacks: []

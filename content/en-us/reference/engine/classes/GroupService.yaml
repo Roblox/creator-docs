@@ -102,7 +102,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: GroupService:GetEnemiesAsync
     summary: |
       Returns a `Class.StandardPages` object including information on all of the
@@ -169,7 +168,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: GroupService:GetGroupInfoAsync
     summary: |
       Returns a table containing information about the given group.
@@ -230,7 +228,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: GroupService:GetGroupsAsync
     summary: |
       Returns a list of tables containing information on all of the groups a
@@ -311,6 +308,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

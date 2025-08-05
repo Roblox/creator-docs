@@ -34,7 +34,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: OpenCloudApiV1:CreateUserNotificationAsync
     summary: ''
     description: ''
@@ -57,6 +56,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

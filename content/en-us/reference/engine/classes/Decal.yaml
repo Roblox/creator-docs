@@ -69,7 +69,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Decal.LocalTransparencyModifier
     summary: |
       Acts as a multiplier for the decal's `Class.Decal.Transparency` property.
@@ -113,7 +112,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Decal.Shiny
     summary: ''
     description: |
@@ -137,7 +135,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Decal.Specular
     summary: ''
     description: |
@@ -164,7 +161,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Decal.Texture
     summary: |
       The ContentId of the image to be applied by the `Class.Decal`.
@@ -206,7 +202,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Decal.TextureContent
     summary: ''
     description: ''
@@ -224,7 +219,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Decal.Transparency
     summary: |
       Determines the transparency of the `Class.Decal` with 0 being completely
@@ -259,7 +253,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Decal.ZIndex
     summary: |
       Determines the rendering order when multiple Decals are assigned the same
@@ -295,7 +288,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

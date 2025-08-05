@@ -41,7 +41,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: BodyColors.HeadColor3
     summary: |
       Sets the color of the head, as a `Datatype.Color3`.
@@ -63,7 +62,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: BodyColors.LeftArmColor
     summary: |
       Sets the color of the left arm, as a `Datatype.BrickColor`.
@@ -85,7 +83,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: BodyColors.LeftArmColor3
     summary: |
       Sets the color of the left arm, as a `Datatype.Color3`.
@@ -108,7 +105,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: BodyColors.LeftLegColor
     summary: |
       Sets the color of the left leg, as a `Datatype.BrickColor`.
@@ -130,7 +126,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: BodyColors.LeftLegColor3
     summary: |
       Sets the color of the left leg, as a `Datatype.Color3`.
@@ -153,7 +148,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: BodyColors.RightArmColor
     summary: |
       Sets the color of the right arm, as a `Datatype.BrickColor`.
@@ -175,7 +169,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: BodyColors.RightArmColor3
     summary: |
       Sets the color of the right arm, as a `Datatype.Color3`.
@@ -198,7 +191,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: BodyColors.RightLegColor
     summary: |
       Sets the color of the right leg, as a `Datatype.BrickColor`.
@@ -220,7 +212,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: BodyColors.RightLegColor3
     summary: |
       Sets the color of the right leg, as a `Datatype.Color3`.
@@ -243,7 +234,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: BodyColors.TorsoColor
     summary: |
       Sets the color of the torso, as a `Datatype.BrickColor`.
@@ -265,7 +255,6 @@ properties:
       can_save: false
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: BodyColors.TorsoColor3
     summary: |
       Sets the color of the torso, as a `Datatype.Color3`.
@@ -288,7 +277,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

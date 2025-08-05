@@ -37,7 +37,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: GameSettings.VideoRecording
     summary: ''
     description: ''
@@ -55,7 +54,6 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

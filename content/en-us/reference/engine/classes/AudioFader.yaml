@@ -36,7 +36,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioFader.Volume
     summary: |
       Volume level which is multiplied onto the input stream.
@@ -57,7 +56,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
 methods:
   - name: AudioFader:GetConnectedWires
     summary: |
@@ -81,7 +79,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioFader:GetInputPins
     summary: ''
     description: ''
@@ -96,7 +93,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioFader:GetOutputPins
     summary: ''
     description: ''
@@ -111,7 +107,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
 events:
   - name: AudioFader.WiringChanged
     summary: |
@@ -149,5 +144,4 @@ events:
     security: None
     capabilities:
       - Audio
-    writeCapabilities: []
 callbacks: []

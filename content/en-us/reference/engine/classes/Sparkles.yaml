@@ -70,7 +70,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Sparkles.Enabled
     summary: |
       Determines whether sparkles are emit.
@@ -108,7 +107,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Sparkles.LocalTransparencyModifier
     summary: ''
     description: ''
@@ -128,7 +126,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Sparkles.SparkleColor
     summary: |
       Determines the color of the sparkle particles.
@@ -160,7 +157,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Sparkles.TimeScale
     summary: ''
     description: ''
@@ -178,7 +174,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

@@ -138,7 +138,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Camera.CameraSubject
     summary: |
       The `Class.Humanoid` or `Class.BasePart` that is the `Class.Camera`
@@ -189,7 +188,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Camera.CameraType
     summary: |
       Specifies the `Enum.CameraType` to be read by the camera scripts.
@@ -220,7 +218,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Camera.CoordinateFrame
     summary: ''
     description: |
@@ -247,7 +244,6 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Camera.DiagonalFieldOfView
     summary: |
       Sets the angle of the camera's diagonal field of view.
@@ -275,7 +271,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Camera.FieldOfView
     summary: |
       Sets the angle of the camera's vertical field of view.
@@ -312,7 +307,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Camera.FieldOfViewMode
     summary: |
       Determines the FOV value of the `Class.Camera` that's invariant under
@@ -340,7 +334,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Camera.Focus
     summary: |
       Sets the area in 3D space that is prioritized by Roblox's graphical
@@ -377,7 +370,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Camera.HeadLocked
     summary: |
       Toggles whether the camera will automatically track the head motion of a
@@ -432,7 +424,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Camera.HeadScale
     summary: |
       Sets the scale of the user's perspective of the world when using VR.
@@ -467,7 +458,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Camera.MaxAxisFieldOfView
     summary: |
       Sets the angle of the camera's field of view along the longest viewport
@@ -496,7 +486,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Camera.NearPlaneZ
     summary: |
       Describes the negative **Z** offset, in studs, of the camera's near
@@ -526,7 +515,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Camera.VRTiltAndRollEnabled
     summary: |
       Toggles whether to apply tilt and roll from the
@@ -562,7 +550,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Camera.ViewportSize
     summary: |
       The dimensions of the device safe area on a Roblox client.
@@ -611,7 +598,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Camera.focus
     summary: ''
     description: ''
@@ -632,7 +618,6 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: Camera:GetLargestCutoffDistance
     summary: |
@@ -676,7 +661,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Camera:GetPanSpeed
     summary: |
       Returns the current 'pan' speed of the `Class.Camera`.
@@ -703,7 +687,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Camera:GetPartsObscuringTarget
     summary: |
       Returns an array of `Class.BasePart|BaseParts` that are obscuring the
@@ -763,7 +746,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Camera:GetRenderCFrame
     summary: |
       Returns the actual `Datatype.CFrame`where the `Class.Camera` is being
@@ -802,7 +784,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Camera:GetRoll
     summary: |
       Returns in radians the current roll, or rotation around the camera's
@@ -845,7 +826,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Camera:GetTiltSpeed
     summary: |
       Returns the current tilt speed of the `Class.Camera`.
@@ -871,7 +851,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Camera:Interpolate
     summary: |
       Tweens the `Class.Camera` in a linear fashion towards a new
@@ -964,7 +943,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Camera:PanUnits
     summary: |
       Pans the `Class.Camera` around the `Class.Camera.Focus|Focus` in 45 degree
@@ -1005,7 +983,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Camera:ScreenPointToRay
     summary: |
       Creates a unit `Datatype.Ray` from a position on the screen (in pixels),
@@ -1075,7 +1052,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Camera:SetCameraPanMode
     summary: |
       Sets the `Enum.CameraPanMode` to be used by the `Class.Camera` on mobile
@@ -1105,7 +1081,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Camera:SetRoll
     summary: |
       Sets the current rotation applied around the camera's Z-axis.
@@ -1169,7 +1144,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Camera:TiltUnits
     summary: |
       Tilts the `Class.Camera` around its `Class.Camera.Focus|Focus` in 10
@@ -1200,7 +1174,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Camera:ViewportPointToRay
     summary: |
       Creates a unit `Datatype.Ray` from a position on the viewport (in pixels),
@@ -1294,7 +1267,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Camera:WorldToScreenPoint
     summary: |
       Returns the screen location and depth of a `Datatype.Vector3` `worldPoint`
@@ -1350,7 +1322,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Camera:WorldToViewportPoint
     summary: |
       Returns the screen location and depth of a `Datatype.Vector3` `worldPoint`
@@ -1409,7 +1380,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Camera:ZoomToExtents
     summary: ''
     description: ''
@@ -1431,7 +1401,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: Camera.InterpolationFinished
     summary: |
@@ -1453,5 +1422,4 @@ events:
       smoothly animate the `Class.Camera`.
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

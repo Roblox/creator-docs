@@ -37,7 +37,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioFlanger.Depth
     summary: |
       Controls how strong the pitch modulation of the flanger is.
@@ -60,7 +59,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioFlanger.Mix
     summary: |
       Controls the balance of plain input stream to modified output stream.
@@ -81,7 +79,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioFlanger.Rate
     summary: |
       Controls the rate of pitch modulations.
@@ -102,7 +99,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
 methods:
   - name: AudioFlanger:GetConnectedWires
     summary: |
@@ -126,7 +122,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioFlanger:GetInputPins
     summary: ''
     description: ''
@@ -141,7 +136,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioFlanger:GetOutputPins
     summary: ''
     description: ''
@@ -156,7 +150,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
 events:
   - name: AudioFlanger.WiringChanged
     summary: |
@@ -194,5 +187,4 @@ events:
     security: None
     capabilities:
       - Audio
-    writeCapabilities: []
 callbacks: []

@@ -48,7 +48,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: LocalizationService.SystemLocaleId
     summary: |
       The locale ID that the local player has set for their operating system.
@@ -78,7 +77,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: LocalizationService:GetCorescriptLocalizations
     summary: |
@@ -97,7 +95,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: LocalizationService:GetCountryRegionForPlayerAsync
     summary: |
       Returns country/region code string according to player's client IP
@@ -909,7 +906,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: LocalizationService:GetTableEntries
     summary: |
       Gets all entries used for automated localization.
@@ -969,7 +965,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: LocalizationService:GetTranslatorForLocaleAsync
     summary: |
       Yields until the cloud `Class.LocalizationTable` for the argument locale
@@ -1014,7 +1009,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: LocalizationService:GetTranslatorForPlayer
     summary: |
       Returns a `Class.Translator` to be used for translations using the locale
@@ -1060,7 +1054,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: LocalizationService:GetTranslatorForPlayerAsync
     summary: |
       Yields until the cloud `Class.LocalizationTable` for the player's locale
@@ -1104,6 +1097,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

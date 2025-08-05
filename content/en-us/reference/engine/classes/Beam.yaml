@@ -73,7 +73,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Beam.Attachment1
     summary: |
       The `Class.Attachment` the beam ends at.
@@ -100,7 +99,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Beam.Brightness
     summary: |
       Scales the light emitted from the beam when
@@ -125,7 +123,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Beam.Color
     summary: |
       Determines the color of the beam across its
@@ -174,7 +171,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Beam.CurveSize0
     summary: |
       Determines, along with `Class.Beam.Attachment0|Attachment0`, the position
@@ -203,7 +199,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Beam.CurveSize1
     summary: |
       Determines, along with `Class.Beam.Attachment1|Attachment1`, the position
@@ -232,7 +227,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Beam.Enabled
     summary: |
       Determines whether the beam is visible or not.
@@ -255,7 +249,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Beam.FaceCamera
     summary: |
       Determines whether the `Class.Beam.Segments|Segments` of the beam will
@@ -280,7 +273,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Beam.LightEmission
     summary: |
       Determines to what degree the colors of the beam are blended with the
@@ -309,7 +301,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Beam.LightInfluence
     summary: |
       Determines the degree to which the beam is influenced by the environment's
@@ -336,7 +327,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Beam.LocalTransparencyModifier
     summary: ''
     description: ''
@@ -356,7 +346,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Beam.Segments
     summary: |
       Sets how many straight segments the beam is made up of.
@@ -387,7 +376,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Beam.Texture
     summary: |
       The content ID of the texture to be displayed on the beam.
@@ -419,7 +407,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Beam.TextureLength
     summary: |
       Sets the length of the beam's texture, dependent on
@@ -441,7 +428,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Beam.TextureMode
     summary: |
       Determines the manner in which the `Class.Beam.Texture|Texture` scales and
@@ -475,7 +461,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Beam.TextureSpeed
     summary: |
       Determines the speed at which the `Class.Beam.Texture|Texture` image moves
@@ -500,7 +485,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Beam.Transparency
     summary: |
       Determines the transparency of the beam across its segments.
@@ -543,7 +527,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Beam.Width0
     summary: |
       The width of the beam at its origin
@@ -567,7 +550,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Beam.Width1
     summary: |
       The width of the beam at its end (`Class.Beam.Attachment1|Attachment1`),
@@ -591,7 +573,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Beam.ZOffset
     summary: |
       The distance, in studs, the beam display is offset relative to the
@@ -622,7 +603,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
 methods:
   - name: Beam:SetTextureOffset
     summary: |
@@ -661,6 +641,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
 events: []
 callbacks: []

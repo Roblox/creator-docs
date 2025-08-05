@@ -78,7 +78,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: SurfaceGui.Brightness
     summary: |
       Determines the factor by which the `Class.SurfaceGui` container's light is
@@ -111,7 +110,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: SurfaceGui.CanvasSize
     summary: |
       The size of a "virtual screen" in "virtual pixels" which makes
@@ -135,7 +133,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: SurfaceGui.ClipsDescendants
     summary: |
       Whether portions of `Class.GuiObject|GuiObjects` that fall outside of the
@@ -161,7 +158,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: SurfaceGui.LightInfluence
     summary: |
       Controls how much the `Class.SurfaceGui` is influenced by environmental
@@ -185,7 +181,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: SurfaceGui.MaxDistance
     summary: |
       Controls how far away the `Class.SurfaceGui` can be displayed before it
@@ -214,7 +209,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: SurfaceGui.PixelsPerStud
     summary: |
       Determines the density of pixels used for each world-space stud to render
@@ -247,7 +241,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: SurfaceGui.SizingMode
     summary: |
       Determines whether the `Class.SurfaceGui` will render at a fixed size or
@@ -275,7 +268,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: SurfaceGui.ToolPunchThroughDistance
     summary: |
       Sets the distance in which left clicking starts acting on the
@@ -299,7 +291,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: SurfaceGui.ZOffset
     summary: |
       Layers this `Class.SurfaceGui` in relation to other
@@ -322,7 +313,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

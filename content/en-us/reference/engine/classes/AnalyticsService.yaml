@@ -48,7 +48,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: AnalyticsService:FireCustomEvent
     summary: |
@@ -124,7 +123,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AnalyticsService:FireEvent
     summary: |
       Report a custom event to PlayFab.
@@ -185,7 +183,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AnalyticsService:FireInGameEconomyEvent
     summary: |
       Fire an event used to track player actions pertaining to the in-game
@@ -305,7 +302,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AnalyticsService:FireLogEvent
     summary: |
       Fire a log event used to track errors and warnings experienced by players.
@@ -412,7 +408,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AnalyticsService:FirePlayerProgressionEvent
     summary: |
       Fire an event used to track player progression through the game.
@@ -543,7 +538,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AnalyticsService:LogCustomEvent
     summary: |
       Logs an event used to track custom metrics of a user in experience.
@@ -586,7 +580,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AnalyticsService:LogEconomyEvent
     summary: |
       Logs an event used to track player actions related in experience.
@@ -664,7 +657,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AnalyticsService:LogFunnelStepEvent
     summary: |
       Logs an event used to track user actions stepping through a pre-planned
@@ -733,7 +725,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AnalyticsService:LogOnboardingFunnelStepEvent
     summary: |
       Logs an event used to track user actions stepping through an onboarding
@@ -782,7 +773,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AnalyticsService:LogProgressionCompleteEvent
     summary: |
       Logs an event for when a user has completed a level attempt.
@@ -820,7 +810,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AnalyticsService:LogProgressionEvent
     summary: |
       Logs an event for when a user has started, completed, or failed a level
@@ -864,7 +853,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AnalyticsService:LogProgressionFailEvent
     summary: |
       Logs an event for when a user has failed a level attempt.
@@ -902,7 +890,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AnalyticsService:LogProgressionStartEvent
     summary: |
       Logs an event for when a user has started a level attempt.
@@ -940,6 +927,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

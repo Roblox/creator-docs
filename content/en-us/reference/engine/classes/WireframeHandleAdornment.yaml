@@ -31,7 +31,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: WireframeHandleAdornment.Thickness
     summary: ''
     description: ''
@@ -50,7 +49,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
 methods:
   - name: WireframeHandleAdornment:AddLine
     summary: ''
@@ -75,7 +73,6 @@ methods:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: WireframeHandleAdornment:AddLines
     summary: ''
     description: ''
@@ -95,7 +92,6 @@ methods:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: WireframeHandleAdornment:AddPath
     summary: ''
     description: ''
@@ -119,7 +115,6 @@ methods:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: WireframeHandleAdornment:AddText
     summary: ''
     description: ''
@@ -147,7 +142,6 @@ methods:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: WireframeHandleAdornment:Clear
     summary: ''
     description: ''
@@ -163,6 +157,5 @@ methods:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
 events: []
 callbacks: []

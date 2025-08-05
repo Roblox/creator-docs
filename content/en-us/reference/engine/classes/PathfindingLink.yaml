@@ -36,7 +36,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: PathfindingLink.Attachment1
     summary: |
       The landing attachment of the link.
@@ -56,7 +55,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: PathfindingLink.IsBidirectional
     summary: |
       Enables a path to traverse a link in both directions. The default value is
@@ -78,7 +76,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: PathfindingLink.Label
     summary: |
       A classifying string to add additional information about the link. This
@@ -100,7 +97,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

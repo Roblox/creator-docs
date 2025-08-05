@@ -52,7 +52,6 @@ properties:
       can_save: true
     capabilities:
       - DataStore
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

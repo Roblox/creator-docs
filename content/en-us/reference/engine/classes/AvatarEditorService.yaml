@@ -76,7 +76,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService:ConformToAvatarRules
     summary: ''
     description: ''
@@ -95,7 +94,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService:GetAccessoryType
     summary: ''
     description: ''
@@ -113,7 +111,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService:GetAvatarRules
     summary: |
       Returns the platform Avatar rules for things such as scaling, default
@@ -179,7 +176,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService:GetBatchItemDetails
     summary: |
       Gets the item details for a list of items at once.
@@ -237,7 +233,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService:GetFavorite
     summary: |
       Returns if the `Class.Players.LocalPlayer` has favorited the given bundle
@@ -267,7 +262,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService:GetInventory
     summary: |
       Returns an `Class.InventoryPages` object with information about owned
@@ -306,7 +300,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService:GetItemDetails
     summary: |
       Returns the item details for the given item.
@@ -396,7 +389,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService:GetOutfitDetails
     summary: |
       Returns the outfit details for the given outfit.
@@ -460,7 +452,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService:GetOutfits
     summary: |
       Returns outfit data for the `Class.Players.LocalPlayer`.
@@ -529,7 +520,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService:GetRecommendedAssets
     summary: |
       Returns a list of recommended assets based on a given `Enum.AssetType` and
@@ -596,7 +586,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService:GetRecommendedBundles
     summary: |
       Returns a list of recommended bundles for a given bundle id.
@@ -656,7 +645,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService:PromptAllowInventoryReadAccess
     summary: |
       Prompts the `Class.Players.LocalPlayer` to allow the developer to read
@@ -680,7 +668,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService:PromptCreateOutfit
     summary: |
       Prompts the `Class.Players.LocalPlayer` to save the given
@@ -711,7 +698,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService:PromptDeleteOutfit
     summary: |
       Prompts the `Class.Players.LocalPlayer` to delete the given outfit.
@@ -734,7 +720,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService:PromptRenameOutfit
     summary: |
       Prompts the `Class.Players.LocalPlayer` to rename the given outfit.
@@ -757,7 +742,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService:PromptSaveAvatar
     summary: |
       Prompts the `Class.Players.LocalPlayer` to update their avatar based on
@@ -789,7 +773,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService:PromptSetFavorite
     summary: |
       Prompts the `Class.Players.LocalPlayer` to favorite or unfavorite the
@@ -821,7 +804,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService:PromptUpdateOutfit
     summary: |
       Prompts the `Class.Players.LocalPlayer` to update the given outfit.
@@ -853,7 +835,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService:SearchCatalog
     summary: |
       Returns a `Class.CatalogPages` object containing the result of the given
@@ -923,7 +904,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: AvatarEditorService.PromptAllowInventoryReadAccessCompleted
     summary: |
@@ -947,7 +927,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService.PromptCreateOutfitCompleted
     summary: |
       Fires when the PromptSaveOutfit operation is completed.
@@ -970,7 +949,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService.PromptDeleteOutfitCompleted
     summary: |
       Fires when the PromptDeleteOutfit operation is completed.
@@ -989,7 +967,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService.PromptRenameOutfitCompleted
     summary: |
       Fires when the PromptRenameOutfit operation is completed.
@@ -1008,7 +985,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService.PromptSaveAvatarCompleted
     summary: |
       Fires when the `Class.AvatarEditorService:PromptSaveAvatar()` operation is
@@ -1033,7 +1009,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService.PromptSetFavoriteCompleted
     summary: |
       Fires when the `Class.AvatarEditorService:PromptSetFavorite()` operation
@@ -1054,7 +1029,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService.PromptUpdateOutfitCompleted
     summary: |
       Fires when the `Class.AvatarEditorService:PromptUpdateOutfit()` operation
@@ -1075,5 +1049,4 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

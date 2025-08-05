@@ -34,7 +34,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatWindowMessageProperties.PrefixTextProperties
     summary: |
       Determines the properties of the
@@ -56,7 +55,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatWindowMessageProperties.TextColor3
     summary: |
       Color of the text in the chat window.
@@ -77,7 +75,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatWindowMessageProperties.TextSize
     summary: |
       Size of the text in the chat window.
@@ -97,7 +94,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatWindowMessageProperties.TextStrokeColor3
     summary: |
       Stroke color applied to text in the chat window.
@@ -118,7 +114,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatWindowMessageProperties.TextStrokeTransparency
     summary: |
       Transparency of the stroke applied to text in the chat window.
@@ -139,7 +134,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

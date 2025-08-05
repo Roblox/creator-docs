@@ -36,7 +36,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: FunctionalTest:Error
     summary: ''
@@ -57,7 +56,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: FunctionalTest:Failed
     summary: |
       Prints a red message to the output, prefixed by _"TestService: "_.
@@ -79,7 +77,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: FunctionalTest:Pass
     summary: ''
     description: ''
@@ -99,7 +96,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: FunctionalTest:Passed
     summary: ''
     description: ''
@@ -119,7 +115,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: FunctionalTest:Warn
     summary: |
       Prints if a condition is true, otherwise prints a warning.
@@ -142,6 +137,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

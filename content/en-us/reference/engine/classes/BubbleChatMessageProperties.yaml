@@ -32,7 +32,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: BubbleChatMessageProperties.BackgroundTransparency
     summary: |
       Background transparency of bubbles.
@@ -52,7 +51,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: BubbleChatMessageProperties.FontFace
     summary: |
       Font of the bubble text.
@@ -72,7 +70,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: BubbleChatMessageProperties.TailVisible
     summary: ''
     description: ''
@@ -90,7 +87,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: BubbleChatMessageProperties.TextColor3
     summary: |
       Color of bubble text.
@@ -110,7 +106,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: BubbleChatMessageProperties.TextSize
     summary: |
       Size of bubble text.
@@ -130,7 +125,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

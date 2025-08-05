@@ -54,7 +54,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChatService.ChatVersion
     summary: |
       Determines whether to fully enable `Class.TextChatService` or revert to
@@ -81,7 +80,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChatService.CreateDefaultCommands
     summary: |
       Determines whether `Class.TextChatService` should create default
@@ -190,7 +188,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChatService.CreateDefaultTextChannels
     summary: |
       Determines whether `Class.TextChatService` should create default
@@ -255,7 +252,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
 methods:
   - name: TextChatService:CanUserChatAsync
     summary: |
@@ -286,7 +282,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChatService:CanUsersChatAsync
     summary: |
       Determines whether or not two users would receive messages between each
@@ -320,7 +315,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChatService:CanUsersDirectChatAsync
     summary: |
       Determines whether a user has permission to chat directly with other users
@@ -386,7 +380,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChatService:DisplayBubble
     summary: |
       Displays a chat bubble above the provided part or player character.
@@ -421,7 +414,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Chat
-    writeCapabilities: []
 events:
   - name: TextChatService.BubbleDisplayed
     summary: |
@@ -443,7 +435,6 @@ events:
     security: None
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChatService.MessageReceived
     summary: |
       Fires when `Class.TextChannel:DisplaySystemMessage()` is invoked on the
@@ -477,7 +468,6 @@ events:
     security: None
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChatService.SendingMessage
     summary: |
       Fires when `Class.TextChannel:SendAsync()` is called by the sending
@@ -499,7 +489,6 @@ events:
     security: None
     capabilities:
       - Chat
-    writeCapabilities: []
 callbacks:
   - name: TextChatService.OnBubbleAdded
     summary: |
@@ -550,7 +539,6 @@ callbacks:
     thread_safety: Unsafe
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChatService.OnChatWindowAdded
     summary: |
       Called when a new message is about to be displayed in the chat window.
@@ -589,7 +577,6 @@ callbacks:
     thread_safety: Unsafe
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChatService.OnIncomingMessage
     summary: |
       Called when `Class.TextChatService` is receiving an incoming message.
@@ -632,4 +619,3 @@ callbacks:
     thread_safety: Unsafe
     capabilities:
       - Chat
-    writeCapabilities: []

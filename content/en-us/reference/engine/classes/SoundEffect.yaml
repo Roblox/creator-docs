@@ -41,7 +41,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: SoundEffect.Priority
     summary: |
       Determines the order the effect will be applied in relation to other
@@ -66,7 +65,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

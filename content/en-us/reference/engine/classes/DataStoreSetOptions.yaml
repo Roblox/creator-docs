@@ -42,7 +42,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: DataStoreSetOptions:SetMetadata
     summary: |
       Sets custom metadata to be associated with the key.
@@ -66,6 +65,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
 events: []
 callbacks: []

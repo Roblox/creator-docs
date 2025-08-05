@@ -39,7 +39,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioEqualizer.Editor
     summary: ''
     description: ''
@@ -58,7 +57,6 @@ properties:
       can_save: false
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioEqualizer.HighGain
     summary: |
       Gain value to be applied to the frequency content of the highest band in
@@ -80,7 +78,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioEqualizer.LowGain
     summary: |
       Gain value to be applied to the frequency content of the lowest band in
@@ -102,7 +99,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioEqualizer.MidGain
     summary: |
       Gain value to be applied to the frequency content of the middle band in
@@ -124,7 +120,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioEqualizer.MidRange
     summary: |
       The frequency range of the band influenced by
@@ -149,7 +144,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
 methods:
   - name: AudioEqualizer:GetConnectedWires
     summary: |
@@ -173,7 +167,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioEqualizer:GetInputPins
     summary: ''
     description: ''
@@ -188,7 +181,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioEqualizer:GetOutputPins
     summary: ''
     description: ''
@@ -203,7 +195,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
 events:
   - name: AudioEqualizer.WiringChanged
     summary: |
@@ -241,5 +232,4 @@ events:
     security: None
     capabilities:
       - Audio
-    writeCapabilities: []
 callbacks: []

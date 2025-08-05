@@ -34,7 +34,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ConfigService:GetConfigAsync
     summary: ''
     description: ''
@@ -49,7 +48,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ConfigService:GetConfigForPlayerAsync
     summary: ''
     description: ''
@@ -68,7 +66,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ConfigService:SetTestingValue
     summary: ''
     description: ''
@@ -90,6 +87,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

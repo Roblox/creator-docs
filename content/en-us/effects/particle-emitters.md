@@ -204,7 +204,7 @@ Note that changing `Class.ParticleEmitter.Speed|Speed` does not affect active pa
 
 ### Rate
 
-The `Class.ParticleEmitter.Rate|Rate` property sets the number of particles that emit per second. A single particle emitter can create up to 500 particles per second. For best performance, keep the particle rate as low as possible and experiment with [size](#size) and [other properties](#other-properties) to achieve the desired visual effect.
+The `Class.ParticleEmitter.Rate|Rate` property sets the number of particles that emit per second. A single particle emitter can create up to 400 particles per second (100 per second on mobile). For best performance, keep the particle rate as low as possible and experiment with [size](#size) and [other properties](#other-properties) to achieve the desired visual effect.
 
 <Alert severity="warning">
 Particle count can impact performance due to overdraw, especially when particles are overlapping. The more layers of transparent effects on screen, the more costly it is on the GPU.

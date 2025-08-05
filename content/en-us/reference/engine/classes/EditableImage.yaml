@@ -99,7 +99,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: EditableImage:Destroy
     summary: ''
@@ -115,7 +114,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: EditableImage:DrawCircle
     summary: |
       Draws a circle at the specified point.
@@ -161,7 +159,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: EditableImage:DrawImage
     summary: |
       Draws another `EditableImage` into this `EditableImage` at the given
@@ -197,7 +194,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: EditableImage:DrawImageProjected
     summary: |
       Projects another `EditableImage` into an `Class.EditableMesh` and stores
@@ -251,7 +247,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: EditableImage:DrawImageTransformed
     summary: |
       Draws an image into this `EditableImage` with transformations including
@@ -311,7 +306,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: EditableImage:DrawLine
     summary: |
       Draws a line between two provided points.
@@ -354,7 +348,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: EditableImage:DrawRectangle
     summary: |
       Draws a rectangle of the given size at the given top-left position.
@@ -399,7 +392,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: EditableImage:ReadPixelsBuffer
     summary: |
       Reads a rectangular region of pixels into a buffer.
@@ -435,7 +427,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: EditableImage:WritePixelsBuffer
     summary: |
       Writes a rectangular region of pixels into the image.
@@ -475,6 +466,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

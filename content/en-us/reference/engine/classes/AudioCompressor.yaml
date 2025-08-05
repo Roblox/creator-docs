@@ -44,7 +44,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioCompressor.Bypass
     summary: |
       Whether audio streams are passed-through unaffected by this effect.
@@ -64,7 +63,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioCompressor.Editor
     summary: ''
     description: ''
@@ -83,7 +81,6 @@ properties:
       can_save: false
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioCompressor.MakeupGain
     summary: |
       A gain value to be applied after compression.
@@ -105,7 +102,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioCompressor.Ratio
     summary: |
       Ratio of input volume to output volume, to be applied when surpassing
@@ -129,7 +125,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioCompressor.Release
     summary: |
       Controls how quickly the compressor will unclamp after the stream volume
@@ -152,7 +147,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioCompressor.Threshold
     summary: |
       Gain value at which the compressor will start to modify the input stream.
@@ -183,7 +177,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
 methods:
   - name: AudioCompressor:GetConnectedWires
     summary: |
@@ -208,7 +201,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioCompressor:GetInputPins
     summary: ''
     description: ''
@@ -223,7 +215,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioCompressor:GetOutputPins
     summary: ''
     description: ''
@@ -238,7 +229,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
 events:
   - name: AudioCompressor.WiringChanged
     summary: |
@@ -276,5 +266,4 @@ events:
     security: None
     capabilities:
       - Audio
-    writeCapabilities: []
 callbacks: []

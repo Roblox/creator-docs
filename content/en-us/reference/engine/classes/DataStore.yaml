@@ -54,7 +54,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: DataStore:GetVersionAtTimeAsync
     summary: |
       Retrieves the key version that was current at a given time.
@@ -94,7 +93,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: DataStore:ListKeysAsync
     summary: |
       Returns a `Class.DataStoreKeyPages` object for enumerating through keys of
@@ -147,7 +145,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: DataStore:ListVersionsAsync
     summary: |
       Enumerates all versions of a key.
@@ -202,7 +199,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: DataStore:RemoveVersionAsync
     summary: |
       Permanently deletes the specified version of a key.
@@ -238,6 +234,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
 events: []
 callbacks: []

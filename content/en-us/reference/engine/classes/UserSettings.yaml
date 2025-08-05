@@ -52,7 +52,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: UserSettings:Reset
     summary: |
       Erases the saved state of the UserSettings, and restores its default
@@ -72,6 +71,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

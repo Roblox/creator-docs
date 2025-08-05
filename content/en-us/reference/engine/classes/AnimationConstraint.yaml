@@ -45,7 +45,6 @@ properties:
     capabilities:
       - Physics
       - Animation
-    writeCapabilities: []
   - name: AnimationConstraint.C1
     summary: ''
     description: |
@@ -71,7 +70,6 @@ properties:
     capabilities:
       - Physics
       - Animation
-    writeCapabilities: []
   - name: AnimationConstraint.IsKinematic
     summary: |
       Toggles whether the `Class.AnimationConstraint` is kinematic or physically
@@ -98,7 +96,6 @@ properties:
     capabilities:
       - Physics
       - Animation
-    writeCapabilities: []
   - name: AnimationConstraint.MaxForce
     summary: |
       Maximum force magnitude the constraint can apply to achieve its goal.
@@ -120,7 +117,6 @@ properties:
     capabilities:
       - Physics
       - Animation
-    writeCapabilities: []
   - name: AnimationConstraint.MaxTorque
     summary: |
       Maximum torque the constraint can apply to reach its goal.
@@ -142,7 +138,6 @@ properties:
     capabilities:
       - Physics
       - Animation
-    writeCapabilities: []
   - name: AnimationConstraint.Part0
     summary: ''
     description: |
@@ -168,7 +163,6 @@ properties:
     capabilities:
       - Physics
       - Animation
-    writeCapabilities: []
   - name: AnimationConstraint.Part1
     summary: ''
     description: |
@@ -194,7 +188,6 @@ properties:
     capabilities:
       - Physics
       - Animation
-    writeCapabilities: []
   - name: AnimationConstraint.Transform
     summary: |
       Describes the current animation offset of the `Class.AnimationConstraint`
@@ -230,7 +223,6 @@ properties:
     capabilities:
       - Physics
       - Animation
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

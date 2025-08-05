@@ -53,7 +53,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextSource.UserId
     summary: |
       UserId of the user represented by the `Class.TextSource`.
@@ -78,7 +77,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

@@ -52,7 +52,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: SelectionSphere.SurfaceColor3
     summary: |
       Determines the color of the sphere's surface.
@@ -77,7 +76,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: SelectionSphere.SurfaceTransparency
     summary: |
       Determines the transparency of the sphere's surface.
@@ -104,7 +102,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

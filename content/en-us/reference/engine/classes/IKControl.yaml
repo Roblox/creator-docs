@@ -86,7 +86,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: IKControl.Enabled
     summary: |
       Toggles the control on and off. True by default.
@@ -108,7 +107,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: IKControl.EndEffector
     summary: |
       The part that you are interested in moving to reach the
@@ -140,7 +138,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: IKControl.EndEffectorOffset
     summary: |
       An additional offset applied on top of the
@@ -180,7 +177,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: IKControl.Offset
     summary: |
       An additional offset applied on top of the `Class.IKControl.Target|Target`
@@ -211,7 +207,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: IKControl.Pole
     summary: |
       An optional instance that determines which way the chain bends. You can
@@ -246,7 +241,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: IKControl.Priority
     summary: |
       Specifies the order in which controls are solved. Higher values have
@@ -275,7 +269,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: IKControl.SmoothTime
     summary: |
       Specifies the average number of seconds that it takes for the
@@ -305,7 +298,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: IKControl.Target
     summary: |
       The object that the `Class.IKControl.EndEffector|EndEffector` reaches for
@@ -334,7 +326,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: IKControl.Type
     summary: |
       Specifies how the solver satisfies this control.
@@ -366,7 +357,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: IKControl.Weight
     summary: |
       Specifies the weight of the IK control target. Should be in the [0, 1]
@@ -397,7 +387,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
 methods:
   - name: IKControl:GetChainCount
     summary: ''
@@ -413,7 +402,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: IKControl:GetChainLength
     summary: ''
     description: ''
@@ -428,7 +416,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: IKControl:GetNodeLocalCFrame
     summary: ''
     description: ''
@@ -447,7 +434,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: IKControl:GetNodeWorldCFrame
     summary: ''
     description: ''
@@ -466,7 +452,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: IKControl:GetRawFinalTarget
     summary: ''
     description: ''
@@ -481,7 +466,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: IKControl:GetSmoothedFinalTarget
     summary: ''
     description: ''
@@ -496,6 +480,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
 events: []
 callbacks: []

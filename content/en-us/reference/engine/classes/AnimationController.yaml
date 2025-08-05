@@ -69,7 +69,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: AnimationController:LoadAnimation
     summary: |
       Loads an `Class.Animation` onto an `Class.AnimationController`, returning
@@ -99,7 +98,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
 events:
   - name: AnimationController.AnimationPlayed
     summary: |
@@ -128,5 +126,4 @@ events:
     security: None
     capabilities:
       - Animation
-    writeCapabilities: []
 callbacks: []

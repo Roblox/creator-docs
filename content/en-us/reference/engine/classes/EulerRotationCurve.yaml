@@ -44,7 +44,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
 methods:
   - name: EulerRotationCurve:GetAnglesAtTime
     summary: |
@@ -70,7 +69,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: EulerRotationCurve:GetRotationAtTime
     summary: |
       Samples the `Class.EulerRotationCurve` at a given `time` and returns the
@@ -94,7 +92,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: EulerRotationCurve:X
     summary: |
       Returns the `Class.FloatCurve` controlling the `X` Euler angle channel.
@@ -113,7 +110,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: EulerRotationCurve:Y
     summary: |
       Returns the `Class.FloatCurve` controlling the `Y` Euler angle channel.
@@ -132,7 +128,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: EulerRotationCurve:Z
     summary: |
       Returns the `Class.FloatCurve` controlling the `Z` Euler angle channel.
@@ -151,6 +146,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
 events: []
 callbacks: []

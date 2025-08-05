@@ -85,7 +85,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Model.ModelStreamingMode
     summary: |
       Controls the model streaming behavior on `Class.Model|Models` when
@@ -113,7 +112,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Model.PrimaryPart
     summary: |
       The primary part of the `Class.Model`, or `nil` if not explicitly set.
@@ -162,7 +160,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Model.Scale
     summary: |
       Editor-only property used to scale the model around its pivot. Setting
@@ -193,7 +190,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Model.WorldPivot
     summary: |
       Determines where the pivot of a `Class.Model` which does **not** have a
@@ -247,7 +243,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: Model:AddPersistentPlayer
     summary: |
@@ -278,7 +273,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Model:BreakJoints
     summary: |
       Breaks connections between `BaseParts`, including surface connections with
@@ -310,7 +304,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Model:GetBoundingBox
     summary: |
       Returns a description of a volume that contains all parts of a Model.
@@ -349,7 +342,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Model:GetExtentsSize
     summary: |
       Returns the size of the smallest bounding box that contains all of the
@@ -379,7 +371,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Model:GetModelCFrame
     summary: |
       This value historically returned the CFrame of a central position in the
@@ -401,7 +392,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Model:GetModelSize
     summary: |
       Returns the Vector3 size of the Model.
@@ -422,7 +412,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Model:GetPersistentPlayers
     summary: |
       Returns all the `Class.Player` objects that this model object is
@@ -445,7 +434,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Model:GetPrimaryPartCFrame
     summary: |
       Returns the `Datatype.CFrame` of the model's `Class.Model.PrimaryPart`.
@@ -480,7 +468,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Model:GetScale
     summary: |
       Returns the canonical scale of the model, which defaults to 1 for newly
@@ -519,7 +506,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Model:MakeJoints
     summary: |
       Goes through all `Class.BasePart|BaseParts` in the `Class.Model`. If any
@@ -563,7 +549,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Model:MoveTo
     summary: |
       Moves the `Class.Model.PrimaryPart|PrimaryPart` to the given position. If
@@ -601,7 +586,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Model:RemovePersistentPlayer
     summary: |
       Makes this model no longer persistent for the specified player.
@@ -633,7 +617,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Model:ResetOrientationToIdentity
     summary: |
       Resets the rotation of the model's parts to the previously set identity
@@ -656,7 +639,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Model:ScaleTo
     summary: |
       Sets the scale factor of the model, adjusting the sizing and location of
@@ -696,7 +678,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Model:SetIdentityOrientation
     summary: |
       Sets the identity rotation of the given model, allowing you to reset the
@@ -719,7 +700,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Model:SetPrimaryPartCFrame
     summary: |
       Sets the `Class.BasePart.CFrame` of the model's `Class.Model.PrimaryPart`.
@@ -754,7 +734,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Model:TranslateBy
     summary: |
       Shifts a `Class.Model` by the given `Datatype.Vector3` offset, preserving
@@ -786,7 +765,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Model:breakJoints
     summary: ''
     description: ''
@@ -803,7 +781,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Model:makeJoints
     summary: ''
     description: ''
@@ -820,7 +797,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Model:move
     summary: ''
     description: ''
@@ -841,7 +817,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Model:moveTo
     summary: ''
     description: ''
@@ -862,6 +837,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

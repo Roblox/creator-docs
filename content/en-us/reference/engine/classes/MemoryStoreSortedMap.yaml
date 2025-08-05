@@ -53,7 +53,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: MemoryStoreSortedMap:GetRangeAsync
     summary: |
       Retrieves items within a sorted range of keys and sort keys.
@@ -98,7 +97,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: MemoryStoreSortedMap:GetSizeAsync
     summary: |
       Gets the size of the sorted map.
@@ -116,7 +114,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: MemoryStoreSortedMap:RemoveAsync
     summary: |
       Removes the provided key from the sorted map.
@@ -139,7 +136,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: MemoryStoreSortedMap:SetAsync
     summary: |
       Sets the value of a key.
@@ -181,7 +177,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: MemoryStoreSortedMap:UpdateAsync
     summary: |
       Retrieves the value and sort key of a key from a sorted map and updates it
@@ -240,6 +235,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
 events: []
 callbacks: []

@@ -45,7 +45,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: InputBinding.Down
     summary: |
       Specifies an alternate `Enum.KeyCode` for dispatching directionally "down"
@@ -86,7 +85,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: InputBinding.Forward
     summary: |
       Specifies an alternate `Enum.KeyCode` for dispatching directionally
@@ -113,7 +111,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: InputBinding.KeyCode
     summary: |
       Specifies the `Enum.KeyCode` which triggers the parent
@@ -141,7 +138,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: InputBinding.Left
     summary: |
       Specifies an alternate `Enum.KeyCode` for dispatching directionally "left"
@@ -178,7 +174,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: InputBinding.PressedThreshold
     summary: |
       Numerical value above which to fire an `Class.InputAction` with a
@@ -206,7 +201,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: InputBinding.ReleasedThreshold
     summary: |
       Numerical value below which to fire an `Class.InputAction` with a
@@ -234,7 +228,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: InputBinding.Right
     summary: |
       Specifies an alternate `Enum.KeyCode` for dispatching directionally
@@ -271,7 +264,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: InputBinding.Scale
     summary: |
       Amount by which to linearly scale the values of a directional
@@ -294,7 +286,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: InputBinding.UIButton
     summary: |
       Connects a `Class.GuiButton` to a boolean action.
@@ -314,7 +305,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: InputBinding.Up
     summary: |
       Specifies an alternate `Enum.KeyCode` for dispatching directionally "up"
@@ -355,7 +345,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: InputBinding.Vector2Scale
     summary: |
       Amount by which to linearly scale the values of a two-directional
@@ -377,7 +366,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

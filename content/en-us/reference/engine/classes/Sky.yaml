@@ -48,7 +48,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: Sky.MoonAngularSize
     summary: |
       The perceived angular size of the moon while using this skybox, in
@@ -70,7 +69,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: Sky.MoonTextureId
     summary: |
       The texture of the moon while using this skybox.
@@ -90,7 +88,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: Sky.SkyboxBk
     summary: |
       The URL link to a picture for the back surface of the sky.
@@ -110,7 +107,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: Sky.SkyboxDn
     summary: |
       Asset ID for the bottom surface of the skybox.
@@ -130,7 +126,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: Sky.SkyboxFt
     summary: |
       Asset ID for the front surface of the skybox.
@@ -150,7 +145,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: Sky.SkyboxLf
     summary: |
       Asset ID for the left surface of the skybox.
@@ -170,7 +164,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: Sky.SkyboxOrientation
     summary: |
       Angle of the skybox, in degrees, with rotation order of **Y**, **X**,
@@ -219,7 +212,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: Sky.SkyboxRt
     summary: |
       Asset ID for the right surface of the skybox.
@@ -239,7 +231,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: Sky.SkyboxUp
     summary: |
       Asset ID for the top surface of the skybox.
@@ -259,7 +250,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: Sky.StarCount
     summary: |
       How many stars are shown in the skybox.
@@ -280,7 +270,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: Sky.SunAngularSize
     summary: |
       The perceived angular size of the sun while using this skybox, in degrees.
@@ -300,7 +289,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
   - name: Sky.SunTextureId
     summary: |
       The texture of the sun while using this skybox.
@@ -320,7 +308,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

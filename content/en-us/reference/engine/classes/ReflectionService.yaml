@@ -38,7 +38,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ReflectionService:GetClasses
     summary: ''
     description: ''
@@ -56,7 +55,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ReflectionService:GetPropertiesOfClass
     summary: ''
     description: ''
@@ -78,6 +76,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

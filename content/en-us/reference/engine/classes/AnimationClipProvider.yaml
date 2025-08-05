@@ -59,7 +59,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: AnimationClipProvider:GetAnimationClipAsync
     summary: |
       Returns a `Class.AnimationClip` based on the specified assetId
@@ -87,7 +86,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: AnimationClipProvider:GetAnimationClipById
     summary: |
       Returns a `Class.AnimationClip` from the supplied assetId.
@@ -120,7 +118,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: AnimationClipProvider:GetAnimations
     summary: |
       This function returns an `Class.InventoryPages` object which can be used
@@ -149,7 +146,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: AnimationClipProvider:GetClipEvaluatorAsync
     summary: ''
     description: ''
@@ -169,7 +165,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: AnimationClipProvider:RegisterActiveAnimationClip
     summary: |
       Generates a temporary asset ID from a `Class.AnimationClip` that can be
@@ -203,7 +198,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: AnimationClipProvider:RegisterAnimationClip
     summary: |
       Generates a temporary asset ID from a `Class.AnimationClip` that can be
@@ -239,6 +233,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
 events: []
 callbacks: []

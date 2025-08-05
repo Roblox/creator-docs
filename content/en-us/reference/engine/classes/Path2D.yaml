@@ -32,7 +32,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Path2D.Color3
     summary: |
       Determines the Color of the `Class.Path2D`.
@@ -52,7 +51,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Path2D.SelectedControlPoint
     summary: ''
     description: ''
@@ -71,7 +69,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Path2D.SelectedControlPointData
     summary: ''
     description: ''
@@ -90,7 +87,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Path2D.Thickness
     summary: |
       Determines how thick the `Class.Path2D` path is.
@@ -110,7 +106,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Path2D.Visible
     summary: |
       Determines if the `Class.Path2D` path is rendered or not.
@@ -133,7 +128,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Path2D.ZIndex
     summary: |
       Determines the order in which a `Class.Path2D` path renders relative to
@@ -156,7 +150,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods:
   - name: Path2D:GetBoundingRect
     summary: |
@@ -176,7 +169,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Path2D:GetControlPoint
     summary: |
       Returns the `Datatype.Path2DControlPoint` for a given index.
@@ -199,7 +191,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Path2D:GetControlPoints
     summary: |
       Returns all the `Datatype.Path2DControlPoint|Path2DControlPoints` for the
@@ -219,7 +210,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Path2D:GetLength
     summary: |
       Returns the length of the `Class.Path2D`.
@@ -237,7 +227,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Path2D:GetMaxControlPoints
     summary: |
       Returns the maximum allowed number of control points.
@@ -254,7 +243,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Path2D:GetPositionOnCurve
     summary: |
       Returns the position at a given value in parameter space.
@@ -284,7 +272,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Path2D:GetPositionOnCurveArcLength
     summary: |
       Returns the position at a given value in arc length space.
@@ -313,7 +300,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Path2D:GetTangentOnCurve
     summary: |
       Returns the tangent at a given value in parameter space.
@@ -337,7 +323,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Path2D:GetTangentOnCurveArcLength
     summary: |
       Returns the tangent at a given value in arc length space.
@@ -362,7 +347,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Path2D:InsertControlPoint
     summary: |
       Inserts a new control point at a given index.
@@ -391,7 +375,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Path2D:RemoveControlPoint
     summary: |
       Removes a control at the given index.
@@ -414,7 +397,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Path2D:SetControlPoints
     summary: |
       Sets all the control points to the specified array, replacing all existing
@@ -439,7 +421,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Path2D:UpdateControlPoint
     summary: |
       Updates a control point at the given index.
@@ -466,7 +447,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
 events:
   - name: Path2D.ControlPointChanged
     summary: |
@@ -480,5 +460,4 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
 callbacks: []

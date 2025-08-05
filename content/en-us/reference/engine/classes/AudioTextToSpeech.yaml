@@ -51,7 +51,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioTextToSpeech.IsPlaying
     summary: |
       Denotes whether the `Class.AudioTextToSpeech` object is currently playing.
@@ -75,7 +74,6 @@ properties:
       can_save: false
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioTextToSpeech.Looping
     summary: |
       Controls whether the `Class.AudioTextToSpeech` object loops.
@@ -96,7 +94,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioTextToSpeech.Pitch
     summary: |
       Controls the pitch of the generated speech audio, which will be
@@ -119,7 +116,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioTextToSpeech.PlaybackSpeed
     summary: |
       Controls how quickly the speech audio will be played, which controls its
@@ -141,7 +137,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioTextToSpeech.Speed
     summary: |
       Controls the speed of the generated speech audio, which will be
@@ -163,7 +158,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioTextToSpeech.Text
     summary: |
       The text to be converted into speech audio by `Class.AudioTextToSpeech`.
@@ -184,7 +178,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioTextToSpeech.TimeLength
     summary: |
       Denotes the length of the generated speech audio.
@@ -206,7 +199,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioTextToSpeech.TimePosition
     summary: |
       Tracks the current position of the playhead within the generated speech
@@ -228,7 +220,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioTextToSpeech.VoiceId
     summary: |
       The voice style to be used by `Class.AudioTextToSpeech`.
@@ -250,7 +241,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioTextToSpeech.Volume
     summary: |
       Controls how loudly the generated speech audio will be played.
@@ -271,7 +261,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
 methods:
   - name: AudioTextToSpeech:GetConnectedWires
     summary: |
@@ -295,7 +284,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioTextToSpeech:GetWaveformAsync
     summary: ''
     description: ''
@@ -319,7 +307,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioTextToSpeech:LoadAsync
     summary: |
       Generates speech audio.
@@ -339,7 +326,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioTextToSpeech:Pause
     summary: |
       Pauses the `Class.AudioTextToSpeech` object wherever its
@@ -359,7 +345,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioTextToSpeech:Play
     summary: |
       Plays the `Class.AudioTextToSpeech` from wherever its
@@ -379,7 +364,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioTextToSpeech:Unload
     summary: |
       Unload the generated speech audio.
@@ -396,7 +380,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
 events:
   - name: AudioTextToSpeech.Ended
     summary: |
@@ -420,7 +403,6 @@ events:
     security: None
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioTextToSpeech.Looped
     summary: |
       Fires when the `Class.AudioTextToSpeech` object loops.
@@ -438,7 +420,6 @@ events:
     security: None
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioTextToSpeech.WiringChanged
     summary: |
       Fires when another instance is connected to or disconnected from the
@@ -476,5 +457,4 @@ events:
     security: None
     capabilities:
       - Audio
-    writeCapabilities: []
 callbacks: []

@@ -76,7 +76,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Dialog.ConversationDistance
     summary: |
       The furthest distance that a player can be from the Dialog's parent to
@@ -98,7 +97,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Dialog.GoodbyeChoiceActive
     summary: |
       Toggles whether the goodbye option will be displayed.
@@ -121,7 +119,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Dialog.GoodbyeDialog
     summary: |
       Sets the sentence that the dialog will show to the player when the chat
@@ -143,7 +140,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Dialog.InUse
     summary: |
       If true, this dialog is being used by at least one player.
@@ -163,7 +159,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Dialog.InitialPrompt
     summary: |
       Sets the first sentence that the dialog will show to the player, once a
@@ -185,7 +180,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Dialog.Purpose
     summary: |
       Sets the icon that the initial dialog displays.
@@ -205,7 +199,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Dialog.Tone
     summary: |
       Sets the color of the NPC's speech bubble.
@@ -225,7 +218,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Dialog.TriggerDistance
     summary: |
       Sets the maximum distance that a dialog can be triggered from.
@@ -245,7 +237,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: Dialog.TriggerOffset
     summary: |
       Sets the offset of the dialog relative to the dialog's parent.
@@ -265,7 +256,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods:
   - name: Dialog:GetCurrentPlayers
     summary: |
@@ -286,7 +276,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
 events:
   - name: Dialog.DialogChoiceSelected
     summary: |
@@ -314,5 +303,4 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
 callbacks: []

@@ -38,8 +38,6 @@ navigation:
             path: /projects/experience-ownership-transfer
           - title: Place files
             path: /projects/place-files
-          - title: Transfer animations
-            path: /projects/transfer-animations
       - title: Work in teams
         path: /projects/groups
         section:

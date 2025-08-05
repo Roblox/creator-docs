@@ -49,7 +49,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: BodyThrust.Location
     summary: |
       Determines the relative position where the `Class.BodyThrust.Force|Force`
@@ -72,7 +71,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: BodyThrust.force
     summary: ''
     description: ''
@@ -94,7 +92,6 @@ properties:
       can_save: false
     capabilities:
       - Physics
-    writeCapabilities: []
   - name: BodyThrust.location
     summary: ''
     description: ''
@@ -116,7 +113,6 @@ properties:
       can_save: false
     capabilities:
       - Physics
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

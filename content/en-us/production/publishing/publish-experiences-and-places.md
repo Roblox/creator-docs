@@ -1,6 +1,6 @@
 ---
 title: Experiences and places
-description: Explains how to publish the places in your experience.
+description: Explains how to create, publish, and configure experiences.
 ---
 
 <figure>
@@ -225,6 +225,19 @@ To release your experience to the public:
 
 1. <Chip label="RECOMMENDED" size="small" variant="outlined" color="success" /> Generate [Content maturity and compliance](#generate-content-descriptors) information so the experience is available to the appropriate audience. If you do not do this step, Roblox does not show your experience to players under 13 years old.
 
+### Set age and geography restrictions
+
+You can set restrictions so that only players over a certain age or from specific regions can play and discover your experiences. This is particularly helpful when you want to age up your audience without including mature content to age gate through content maturity labels.
+
+To set age and geography restrictions:
+
+1. Navigate to the [Creator Dashboard][creatordashboard].
+1. Click on the thumbnail of the experience for which you want to set age and geography restriction. The experience's **Overview** page displays.
+1. In the left-hand navigation, navigate to **Audience** > **Access Settings**.
+1. In the **Age** section, set **Minimum age** to the youngest age a player can have to access your experience.
+1. In the **Region** section, enable every region that can access your experience.
+1. At the bottom of the page, click the **Save Changes** button.
+
 ### Copy landing page link
 
 After you publish your experience, Roblox generates a landing page for the experience referred to as the experience's **main details page**. You can access and copy this link from either the [Creator Dashboard][creatordashboard] or the Roblox app, then share it with others so they can play your experience.
@@ -265,7 +278,7 @@ For step-by-step instructions on how to edit collaborator permissions, see [Role
 Roblox automatically retains saved versions of each place for version control and backup purposes. To access and revert to a previously saved version of any place within an experience:
 
 1. Navigate to the [Creator Dashboard][creatordashboard] and click on the thumbnail of the experience. The experience's **Overview** page displays.
-1. In the left-hand navigation, under **Configure**, select **Places**.
+1. In the left-hand navigation, navigate to **Configure** > **Places**.
 1. On the **Places** page, click the thumbnail of the place you'd like to revert to a previous version.
 1. In the left-hand navigation, click **Version History**.
 1. Locate and select the version to revert to, then click the **Restore** button. Confirm the action to restore to that version.
@@ -281,15 +294,15 @@ By default, all private and public experiences are locked so that you or your [g
 To allow the community to access an editable copy of your experience:
 
 1. Navigate to the [Creator Dashboard][creatordashboard].
-2. Click on the thumbnail of the experience you want to allow players to copy. The experience's **Overview** page displays.
-3. In the left-hand navigation, navigate to **Configure** > **Places**.
-4. Click the **start place** marked with a star icon. The place's **Basic Settings** page displays.
+1. Click on the thumbnail of the experience you want to allow players to copy. The experience's **Overview** page displays.
+1. In the left-hand navigation, navigate to **Configure** > **Places**.
+1. Click the **start place** marked with a star icon. The place's **Basic Settings** page displays.
 
    <img src="../../assets/creator-dashboard/Places-Start-Place-Icon.png" width="200" alt="Start place tile indicated in Places display on the Creator Dashboard" />
 
-5. In the place's left-hand navigation menu, select **Permissions**.
-6. Enable **Allow users to download a copy of this Place**.
-7. Click the **Save Changes** button. Your experience is now uncopylocked and creators can access an editable copy of it from the experience's main page by clicking the **&ctdot;** button and selecting **Edit in Studio**.
+1. In the place's left-hand navigation menu, select **Permissions**.
+1. Enable **Allow users to download a copy of this Place**.
+1. Click the **Save Changes** button. Your experience is now uncopylocked and creators can access an editable copy of it from the experience's main page by clicking the **&ctdot;** button and selecting **Edit in Studio**.
 
    <img src="../../assets/publishing/experiences-places-assets/Edit-Place-In-Studio.jpg" width="780" />
 

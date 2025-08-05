@@ -77,7 +77,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AssetService:CreateAssetVersionAsync
     summary: |
       Uploads a new version for an existing asset from the given object.
@@ -141,7 +140,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AssetService:CreateEditableImage
     summary: |
       Creates a new `Class.EditableImage`.
@@ -170,7 +168,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AssetService:CreateEditableImageAsync
     summary: |
       Creates a new `Class.EditableImage` object populated with the given image.
@@ -210,7 +207,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AssetService:CreateEditableMesh
     summary: |
       Creates a new, empty `Class.EditableMesh`.
@@ -237,7 +233,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AssetService:CreateEditableMeshAsync
     summary: |
       Returns a new `Class.EditableMesh` object created from an existing mesh
@@ -285,7 +280,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AssetService:CreateMeshPartAsync
     summary: |
       Creates a new `Class.MeshPart` with a specified mesh ID and an optional
@@ -334,7 +328,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AssetService:CreatePlaceAsync
     summary: |
       Clones a place through the given `templatePlaceID`.
@@ -380,7 +373,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AssetService:CreatePlaceInPlayerInventoryAsync
     summary: |
       Clones a place through the given `templatePlaceID` and puts it into the
@@ -414,7 +406,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AssetService:CreateSurfaceAppearanceAsync
     summary: ''
     description: ''
@@ -427,12 +418,12 @@ methods:
     returns:
       - type: SurfaceAppearance
         summary: ''
-    tags: []
+    tags:
+      - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AssetService:GetAssetIdsForPackage
     summary: |
       Returns an array of asset IDs that are contained in a specified package.
@@ -454,7 +445,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AssetService:GetAudioMetadataAsync
     summary: |
       Provides relevant metadata about a specific audio source.
@@ -499,7 +489,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AssetService:GetBundleDetailsAsync
     summary: |
       Returns details of the contents of specified bundle.
@@ -546,7 +535,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AssetService:GetCreatorAssetID
     summary: |
       Returns the UserId of the account who created the creationID asset.
@@ -573,7 +561,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AssetService:GetGamePlacesAsync
     summary: |
       Returns a `Class.StandardPages` object which contains the name and
@@ -593,7 +580,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AssetService:PromptCreateAssetAsync
     summary: |
       Allows in-experience asset creation for users by prompting a publish
@@ -632,7 +618,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AssetService:PromptImportAnimationClipFromVideoAsync
     summary: ''
     description: ''
@@ -655,7 +640,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AssetService:SavePlaceAsync
     summary: |
       Saves the state of the current place.
@@ -683,7 +667,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AssetService:SearchAudio
     summary: |
       Finds audio assets matching a variety of search criteria.
@@ -729,6 +712,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

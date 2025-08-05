@@ -107,6 +107,25 @@ local playerGUI = Players.LocalPlayer:WaitForChild("PlayerGui")
 print(playerGUI.CurrentScreenOrientation)
 ```
 
+## Haptic feedback
+
+Most mobile devices have motors built in to provide haptic feedback. Adding rumbles and vibrations can greatly enhance a player's experience and provide subtle feedback beyond visuals or audio.
+
+Roblox supports haptics for haptic-capable devices including most iPhone, Pixel, and Samsung Galaxy devices. Haptic feedback is managed through `Class.HapticEffect` instances which can be set to a specific `Class.HapticEffect.Type|Type` such as `Enum.HapticEffectType|GameplayCollision` or `Enum.HapticEffectType|UIClick`.
+
+Once a `Class.HapticEffect` is in place, you can initiate it through the `Class.HapticEffect:Play()|Play()` method, for instance:
+
+```lua
+local Workspace = game:GetService("Workspace")
+
+local effect = Instance.new("HapticEffect")
+effect.Type = Enum.HapticEffectType.GameplayExplosion
+effect.Parent = Workspace
+
+-- Play the haptic effect
+effect:Play()
+```
+
 ## Detect other devices
 
 In cross-platform experiences, it's important to reference the player's preferred input options by displaying input options for the actively used device. For example, a mobile device can have a [mouse and keyboard](./mouse-and-keyboard.md) or [gamepad](./gamepad.md) connected, or it's possible that a desktop has a touchscreen enabled. If multiple input sources are enabled, you can use `Class.UserInputService:GetLastInputType()|GetLastInputType()` to get the player's last used input device.

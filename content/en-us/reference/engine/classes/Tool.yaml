@@ -51,7 +51,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Tool.Enabled
     summary: |
       Relates to whether or not the tool can be used.
@@ -80,7 +79,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Tool.Grip
     summary: |
       Stores the tool's "grip" properties as one `Datatype.CFrame`.
@@ -104,7 +102,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Tool.GripForward
     summary: |
       Represents the `R02`, `R12`, and `R22` values of the grip
@@ -135,7 +132,6 @@ properties:
       can_save: false
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Tool.GripPos
     summary: |
       The positional offset of the tool's weld matrix.
@@ -165,7 +161,6 @@ properties:
       can_save: false
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Tool.GripRight
     summary: |
       Represents the `R00`, `R10`, and `R20` values of the grip
@@ -196,7 +191,6 @@ properties:
       can_save: false
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Tool.GripUp
     summary: |
       Represents the `R01`, `R11`, and `R21` values of the grip
@@ -227,7 +221,6 @@ properties:
       can_save: false
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Tool.ManualActivationOnly
     summary: |
       Controls whether the `Class.Tool` can be activated without executing
@@ -257,7 +250,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Tool.RequiresHandle
     summary: |
       Determines whether a `Class.Tool` functions without a handle.
@@ -287,7 +279,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Tool.ToolTip
     summary: |
       Controls the message displayed when the player's mouse hovers over the
@@ -330,7 +321,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
 methods:
   - name: Tool:Activate
     summary: |
@@ -350,7 +340,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Tool:Deactivate
     summary: |
       Simulates deactivation of the `Class.Tool`.
@@ -369,7 +358,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
 events:
   - name: Tool.Activated
     summary: |
@@ -406,7 +394,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Tool.Deactivated
     summary: |
       Fires when the player releases their click while the tool is equipped and
@@ -440,7 +427,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Tool.Equipped
     summary: |
       Fires when the tool is equipped.
@@ -467,7 +453,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: Tool.Unequipped
     summary: |
       Fires when the tool is unequipped.
@@ -488,5 +473,4 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
 callbacks: []

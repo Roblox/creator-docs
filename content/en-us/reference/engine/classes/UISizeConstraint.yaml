@@ -49,7 +49,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UISizeConstraint.MinSize
     summary: |
       The smallest size, in pixels, the object is allowed to be.
@@ -71,7 +70,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

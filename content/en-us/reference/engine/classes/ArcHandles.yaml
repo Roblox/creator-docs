@@ -42,7 +42,6 @@ properties:
       - Basic
       - UI
       - Input
-    writeCapabilities: []
 methods: []
 events:
   - name: ArcHandles.MouseButton1Down
@@ -63,7 +62,6 @@ events:
       - Basic
       - UI
       - Input
-    writeCapabilities: []
   - name: ArcHandles.MouseButton1Up
     summary: |
       Fired when the left mouse button is released on one of the GUI handles.
@@ -82,7 +80,6 @@ events:
       - Basic
       - UI
       - Input
-    writeCapabilities: []
   - name: ArcHandles.MouseDrag
     summary: |
       Fired when the mouse moves while the MouseButton1Down event has fired, but
@@ -111,7 +108,6 @@ events:
       - Basic
       - UI
       - Input
-    writeCapabilities: []
   - name: ArcHandles.MouseEnter
     summary: |
       Fired when a mouse "enters" the GUI handle.
@@ -130,7 +126,6 @@ events:
       - Basic
       - UI
       - Input
-    writeCapabilities: []
   - name: ArcHandles.MouseLeave
     summary: |
       Fired when the mouse leaves the GUI handle.
@@ -149,5 +144,4 @@ events:
       - Basic
       - UI
       - Input
-    writeCapabilities: []
 callbacks: []

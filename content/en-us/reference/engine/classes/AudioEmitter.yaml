@@ -55,7 +55,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioEmitter.AudioInteractionGroup
     summary: |
       Controls which `Class.AudioListener|AudioListeners` are capable of hearing
@@ -77,7 +76,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioEmitter.DistanceAttenuation
     summary: |
       Represents how the perceived volume of the emitted sound changes as the
@@ -106,7 +104,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioEmitter.SimulationFidelity
     summary: |
       Controls how detailed the audio simulation should be for this
@@ -133,7 +130,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
 methods:
   - name: AudioEmitter:GetAngleAttenuation
     summary: |
@@ -158,7 +154,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioEmitter:GetAudibilityFor
     summary: |
       Calculates how audible this emitter is for a particular
@@ -183,7 +178,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioEmitter:GetConnectedWires
     summary: |
       Returns an array of `Class.Wire|Wires` that are connected to the specified
@@ -206,7 +200,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioEmitter:GetDistanceAttenuation
     summary: |
       Gets the distance attenuation curve that the `Class.AudioEmitter` is
@@ -228,7 +221,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioEmitter:GetInputPins
     summary: ''
     description: ''
@@ -243,7 +235,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioEmitter:GetInteractingListeners
     summary: |
       Lists all `Class.AudioListener|AudioListeners` that are capable of hearing
@@ -263,7 +254,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioEmitter:GetOutputPins
     summary: ''
     description: ''
@@ -278,7 +268,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioEmitter:SetAngleAttenuation
     summary: |
       Sets the angle attenuation curve that the `Class.AudioEmitter` should use,
@@ -325,7 +314,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioEmitter:SetDistanceAttenuation
     summary: |
       Sets the distance attenuation curve that the `Class.AudioEmitter` should
@@ -372,7 +360,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
 events:
   - name: AudioEmitter.WiringChanged
     summary: |
@@ -410,5 +397,4 @@ events:
     security: None
     capabilities:
       - Audio
-    writeCapabilities: []
 callbacks: []

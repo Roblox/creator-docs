@@ -58,7 +58,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: HapticEffect.Position
     summary: |
       Along with `Class.HapticEffect.Radius|Radius`, specifies the impact
@@ -98,7 +97,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: HapticEffect.Radius
     summary: |
       Along with `Class.HapticEffect.Position|Position`, specifies the impact
@@ -139,7 +137,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: HapticEffect.Type
     summary: |
       `Enum.HapticEffectType` describing the haptic type.
@@ -162,7 +159,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: HapticEffect.Waveform
     summary: ''
     description: ''
@@ -179,7 +175,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: HapticEffect:Play
     summary: |
@@ -207,7 +202,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: HapticEffect:SetWaveformKeys
     summary: |
       Method used to define a custom waveform as a table and apply it to the
@@ -250,7 +244,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: HapticEffect:Stop
     summary: |
       Stops the haptic effect.
@@ -281,6 +274,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

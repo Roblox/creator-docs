@@ -51,7 +51,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: SkateboardPlatform.ControllingHumanoid
     summary: |
       The `Class.Humanoid` that is controlling the SkateboardPlatform.
@@ -77,7 +76,6 @@ properties:
       can_save: false
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: SkateboardPlatform.Steer
     summary: |
       The direction of movement, tied to the keys A and D. Must be 1 (right), 0
@@ -103,7 +101,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: SkateboardPlatform.StickyWheels
     summary: |
       If true, wheels won't roll without user input.
@@ -127,7 +124,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: SkateboardPlatform.Throttle
     summary: |
       The direction of movement, tied to the keys W and S. Must be an integer 1
@@ -155,7 +151,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
 methods:
   - name: SkateboardPlatform:ApplySpecificImpulse
     summary: |
@@ -183,7 +178,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
 events:
   - name: SkateboardPlatform.Equipped
     summary: |
@@ -212,7 +206,6 @@ events:
     security: None
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: SkateboardPlatform.MoveStateChanged
     summary: |
       Fired when the SkateboardPlatform's
@@ -243,7 +236,6 @@ events:
     security: None
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: SkateboardPlatform.Unequipped
     summary: |
       Fired whenever the skateboard is unequipped.
@@ -266,7 +258,6 @@ events:
     security: None
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: SkateboardPlatform.equipped
     summary: ''
     description: ''
@@ -288,7 +279,6 @@ events:
     security: None
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: SkateboardPlatform.unequipped
     summary: ''
     description: ''
@@ -307,5 +297,4 @@ events:
     security: None
     capabilities:
       - Basic
-    writeCapabilities: []
 callbacks: []

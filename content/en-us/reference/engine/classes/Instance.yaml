@@ -58,7 +58,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Instance.Capabilities
     summary: |
       The set of capabilities allowed to be used for scripts inside this
@@ -84,8 +83,6 @@ properties:
       can_load: true
       can_save: true
     capabilities:
-      - CapabilityControl
-    writeCapabilities:
       - CapabilityControl
   - name: Instance.Name
     summary: |
@@ -136,7 +133,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Instance.Parent
     summary: |
       Determines the hierarchical parent of the `Class.Instance`.
@@ -205,7 +201,6 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Instance.RobloxLocked
     summary: |
       A deprecated property that used to protect `Class.CoreGui` objects.
@@ -228,7 +223,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: Instance.Sandboxed
     summary: |
       Turns the instance to be a sandboxed container.
@@ -253,8 +247,6 @@ properties:
       can_save: false
     capabilities:
       - CapabilityControl
-    writeCapabilities:
-      - CapabilityControl
   - name: Instance.UniqueId
     summary: |
       A unique identifier for the instance.
@@ -275,7 +267,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: Instance.archivable
     summary: ''
     description: ''
@@ -297,7 +288,6 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: Instance:AddTag
     summary: |
@@ -334,7 +324,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:ClearAllChildren
     summary: |
       This function destroys all of an instance's children.
@@ -387,7 +376,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:Clone
     summary: |
       Create a copy of an instance and all its descendants, ignoring instances
@@ -421,7 +409,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - CreateInstances
-    writeCapabilities: []
   - name: Instance:Destroy
     summary: |
       Sets the `Class.Instance.Parent` property to `nil`, locks the
@@ -477,7 +464,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:FindFirstAncestor
     summary: |
       Returns the first ancestor of the `Class.Instance` whose
@@ -516,7 +502,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:FindFirstAncestorOfClass
     summary: |
       Returns the first ancestor of the `Class.Instance` whose
@@ -557,7 +542,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:FindFirstAncestorWhichIsA
     summary: |
       Returns the first ancestor of the `Class.Instance` for whom
@@ -604,7 +588,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:FindFirstChild
     summary: |
       Returns the first child of the `Class.Instance` found with the given name.
@@ -694,7 +677,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:FindFirstChildOfClass
     summary: |
       Returns the first child of the `Class.Instance` whose
@@ -722,7 +704,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:FindFirstChildWhichIsA
     summary: |
       Returns the first child of the `Class.Instance` for whom
@@ -776,7 +757,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:FindFirstDescendant
     summary: |
       Returns the first descendant found with the given `Class.Instance.Name`.
@@ -802,7 +782,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:GetActor
     summary: |
       Returns the `Class.Actor` associated with the Instance, if any.
@@ -821,7 +800,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:GetAttribute
     summary: |
       Returns the value which has been assigned to the given attribute name.
@@ -865,7 +843,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:GetAttributeChangedSignal
     summary: |
       Returns an event that fires when the given attribute changes.
@@ -916,7 +893,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:GetAttributes
     summary: |
       Returns a dictionary of the instance's attributes.
@@ -955,7 +931,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:GetChildren
     summary: |
       Returns an array containing all of the instance's children.
@@ -1002,7 +977,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:GetDebugId
     summary: |
       Returns a coded string of the debug ID used internally by Roblox.
@@ -1036,7 +1010,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:GetDescendants
     summary: |
       Returns an array containing all of the descendants of the instance.
@@ -1058,7 +1031,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:GetFullName
     summary: |
       Returns a string describing the instance's ancestry.
@@ -1091,7 +1063,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:GetStyled
     summary: |
       Returns the styled or explicitly modified value of the specified property,
@@ -1150,7 +1121,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:GetStyledPropertyChangedSignal
     summary: ''
     description: |
@@ -1196,7 +1166,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:GetTags
     summary: |
       Gets an array of all tags applied to the instance.
@@ -1220,7 +1189,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:HasTag
     summary: |
       Check whether the instance has a given tag.
@@ -1243,7 +1211,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:IsAncestorOf
     summary: |
       Returns true if an `Class.Instance` is an ancestor of the given
@@ -1274,7 +1241,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:IsDescendantOf
     summary: |
       Returns `true` if an `Class.Instance` is a descendant of the given
@@ -1304,7 +1270,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:IsPropertyModified
     summary: |
       Returns `true` if the value stored in the specified property is equal to
@@ -1338,7 +1303,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:Remove
     summary: |
       Sets the object's `Parent` to `nil`, and does the same for all its
@@ -1365,7 +1329,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:RemoveTag
     summary: |
       Removes a tag from the instance.
@@ -1393,7 +1356,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:ResetPropertyToDefault
     summary: |
       Resets a property to its default value.
@@ -1418,7 +1380,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:SetAttribute
     summary: |
       Sets the attribute with the given name to the given value.
@@ -1476,7 +1437,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:WaitForChild
     summary: |
       Returns the child of the `Class.Instance` with the given name. If the
@@ -1532,7 +1492,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:children
     summary: |
       Returns an array of the object's children.
@@ -1552,7 +1511,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:clone
     summary: ''
     description: ''
@@ -1570,7 +1528,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - CreateInstances
-    writeCapabilities: []
   - name: Instance:destroy
     summary: ''
     description: ''
@@ -1587,7 +1544,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:findFirstChild
     summary: ''
     description: ''
@@ -1612,7 +1568,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:getChildren
     summary: ''
     description: ''
@@ -1629,7 +1584,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:isDescendantOf
     summary: ''
     description: ''
@@ -1650,7 +1604,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Instance:remove
     summary: ''
     description: ''
@@ -1667,7 +1620,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: Instance.AncestryChanged
     summary: |
@@ -1703,7 +1655,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: Instance.AttributeChanged
     summary: |
       Fires whenever an attribute is changed on the `Class.Instance`.
@@ -1740,7 +1691,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: Instance.ChildAdded
     summary: |
       Fires after an object is parented to this `Class.Instance`.
@@ -1779,7 +1729,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: Instance.ChildRemoved
     summary: |
       Fires after a child is removed from this `Class.Instance`.
@@ -1809,7 +1758,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: Instance.DescendantAdded
     summary: |
       Fires after a descendant is added to the `Class.Instance`.
@@ -1836,7 +1784,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: Instance.DescendantRemoving
     summary: |
       Fires immediately before a descendant of the `Class.Instance` is removed.
@@ -1889,7 +1836,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: Instance.Destroying
     summary: |
       Fires immediately before (or is deferred until after) the instance is
@@ -1926,7 +1872,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: Instance.StyledPropertiesChanged
     summary: |
       Fires whenever any style property is changed on the instance, including
@@ -1955,7 +1900,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: Instance.childAdded
     summary: ''
     description: ''
@@ -1972,5 +1916,4 @@ events:
       should be used instead.
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

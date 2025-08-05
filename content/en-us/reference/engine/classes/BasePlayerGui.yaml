@@ -65,6 +65,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
 events: []
 callbacks: []

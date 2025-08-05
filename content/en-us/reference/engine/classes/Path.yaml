@@ -59,7 +59,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
 methods:
   - name: Path:CheckOcclusionAsync
     summary: |
@@ -91,7 +90,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Path:ComputeAsync
     summary: |
       Computes a `Class.Path` from a start position to an end position.
@@ -126,7 +124,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Path:GetPointCoordinates
     summary: |
       Returns a table of `Class.Path` instances.
@@ -146,7 +143,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Path:GetWaypoints
     summary: |
       Returns an array of points in the path.
@@ -175,7 +171,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
 events:
   - name: Path.Blocked
     summary: |
@@ -198,7 +193,6 @@ events:
     security: None
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Path.Unblocked
     summary: |
       Fires when a computed path that was blocked becomes unblocked.
@@ -220,5 +214,4 @@ events:
     security: None
     capabilities:
       - Basic
-    writeCapabilities: []
 callbacks: []
