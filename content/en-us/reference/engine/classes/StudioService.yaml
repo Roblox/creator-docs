@@ -77,7 +77,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: StudioService.DraggerSolveConstraints
     summary: ''
     description: ''
@@ -96,7 +95,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: StudioService.DrawConstraintsOnTop
     summary: ''
     description: ''
@@ -118,7 +116,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: StudioService.GridSize
     summary: |
       Determines the distance in studs by which Studio's drag and move tools
@@ -142,7 +139,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: StudioService.RotateIncrement
     summary: |
       Determines the degrees by which Studio's rotation tool will rotate
@@ -166,7 +162,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: StudioService.Secrets
     summary: ''
     description: ''
@@ -183,7 +178,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: StudioService.ShowConstraintDetails
     summary: ''
     description: ''
@@ -202,7 +196,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: StudioService.ShowWeldDetails
     summary: ''
     description: ''
@@ -221,7 +214,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: StudioService.StudioLocaleId
     summary: |
       The locale currently in-use by Studio, e.g. `en_US`.
@@ -259,7 +251,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: StudioService.UseLocalSpace
     summary: |
       Determines whether Studio tools will use local space of an object or
@@ -284,7 +275,6 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: StudioService:GetClassIcon
     summary: |
@@ -332,7 +322,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: StudioService:GetUserId
     summary: |
       Returns the Studio user's userId if they're logged in, otherwise
@@ -351,7 +340,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: StudioService:GizmoRaycast
     summary: ''
     description: ''
@@ -377,7 +365,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: StudioService:PromptImportFile
     summary: |
       Prompts the current Studio user to select one file to add as a
@@ -412,7 +399,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: StudioService:PromptImportFiles
     summary: |
       Prompts the current Studio user to select files to add as
@@ -449,6 +435,5 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

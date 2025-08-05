@@ -42,7 +42,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: DebugSettings.InstanceCount
     summary: |
       The number of instances active in the simulation.
@@ -63,7 +62,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: DebugSettings.IsScriptStackTracingEnabled
     summary: |
       Whether or not a stacktrace is displayed in the output for an error.
@@ -82,7 +80,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: DebugSettings.JobCount
     summary: |
       Returns the number of internal DataModel jobs actively being processed.
@@ -103,7 +100,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: DebugSettings.PlayerCount
     summary: |
       The number of players currently in the active game-instance.
@@ -124,7 +120,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: DebugSettings.ReportSoundWarnings
     summary: |
       Whether or not sound warnings should be reported.
@@ -143,7 +138,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: DebugSettings.RobloxVersion
     summary: |
       The current client version of Roblox. Can also be retrieved by using the
@@ -166,7 +160,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: DebugSettings.TickCountPreciseOverride
     summary: |
       Sets the internal sampling method used to measure elapsed time with
@@ -187,7 +180,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

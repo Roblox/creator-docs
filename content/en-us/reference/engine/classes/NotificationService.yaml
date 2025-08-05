@@ -36,7 +36,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: NotificationService.SelectedTheme
     summary: ''
     description: ''
@@ -54,7 +53,6 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
-    writeCapabilities: []
 methods: []
 events:
   - name: NotificationService.Roblox17sConnectionChanged
@@ -78,7 +76,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: NotificationService.Roblox17sEventReceived
     summary: ''
     description: ''
@@ -92,5 +89,4 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

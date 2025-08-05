@@ -42,7 +42,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: LogService:GetLogHistory
     summary: |
       Returns a table of tables, each with the message string, message type, and
@@ -69,7 +68,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: LogService.MessageOut
     summary: |
@@ -91,5 +89,4 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

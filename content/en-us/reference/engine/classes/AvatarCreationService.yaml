@@ -70,7 +70,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarCreationService:GetBatchTokenDetailsAsync
     summary: |
       Gets the avatar creation token details for a list of avatar creation
@@ -114,7 +113,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarCreationService:GetValidationRules
     summary: |
       Gets data regarding rules that assets must abide by to pass UGC
@@ -267,7 +265,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarCreationService:LoadGeneratedAvatarAsync
     summary: |
       Loads a generated avatar using an avatar generation ID.
@@ -307,7 +304,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarCreationService:PrepareAvatarForPreviewAsync
     summary: |
       Prepares in-experience avatar for preview.
@@ -342,7 +338,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarCreationService:PromptCreateAvatarAsync
     summary: |
       Prompts a `Class.Player` to purchase and create an avatar from a
@@ -441,7 +436,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarCreationService:ValidateUGCAccessoryAsync
     summary: |
       Studio only. Runs UGC validation for an `Enum.AccessoryType`.
@@ -483,7 +477,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarCreationService:ValidateUGCBodyPartAsync
     summary: |
       Studio only. Runs UGC validation for an `Enum.BodyPart`.
@@ -533,7 +526,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AvatarCreationService:ValidateUGCFullBodyAsync
     summary: |
       Studio only. Runs UGC validation for a whole body.
@@ -574,7 +566,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: AvatarCreationService.AvatarModerationCompleted
     summary: |
@@ -609,5 +600,4 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

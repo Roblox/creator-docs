@@ -44,7 +44,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: ChorusSoundEffect.Mix
     summary: |
       Percentage of the original sound that will be applied to the filter.
@@ -66,7 +65,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
   - name: ChorusSoundEffect.Rate
     summary: |
       How frequently the pitch variation changes.
@@ -87,7 +85,6 @@ properties:
       can_save: true
     capabilities:
       - LegacySound
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

@@ -76,7 +76,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ScreenGui.DisplayOrder
     summary: |
       Controls the Z-index order in which multiple `Class.ScreenGui` containers
@@ -100,7 +99,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ScreenGui.IgnoreGuiInset
     summary: |
       Determines whether the `Class.ScreenGui` overflows into the range of
@@ -134,7 +132,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ScreenGui.SafeAreaCompatibility
     summary: |
       Specifies whether automatic UI compatibility transformations are applied
@@ -174,7 +171,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: ScreenGui.ScreenInsets
     summary: |
       Controls the safe area insets that are applied to the contents of the
@@ -213,7 +209,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

@@ -30,7 +30,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: SwimController.PitchMaxTorque
     summary: |
       The maximum torque used to rotate to the desired pitch.
@@ -52,7 +51,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: SwimController.PitchSpeedFactor
     summary: |
       Multiplied by `Class.ControllerManager.BaseTurnSpeed` to determine the
@@ -75,7 +73,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: SwimController.RollMaxTorque
     summary: |
       The maximum torque applied to rotate to the desired roll.
@@ -97,7 +94,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: SwimController.RollSpeedFactor
     summary: |
       Multiplied by `Class.ControllerManager.BaseTurnSpeed` to determine the
@@ -120,7 +116,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

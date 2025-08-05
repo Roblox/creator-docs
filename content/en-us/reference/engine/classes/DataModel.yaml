@@ -48,7 +48,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DataModel.CreatorType
     summary: |
       Describes the `Enum.CreatorType` of the place, whether the place is owned
@@ -75,7 +74,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DataModel.Environment
     summary: ''
     description: ''
@@ -94,7 +92,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DataModel.GameId
     summary: |
       Describes the ID of the experience that the place running on the server
@@ -126,7 +123,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DataModel.GearGenreSetting
     summary: |
       Not functional. Historically described the gear permissions of the place
@@ -152,7 +148,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DataModel.Genre
     summary: |
       Not functional. Historically described the `Enum.Genre` of the place as
@@ -184,7 +179,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DataModel.JobId
     summary: |
       A unique identifier for the running game server instance.
@@ -220,7 +214,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DataModel.MatchmakingType
     summary: |
       Represents how players in the server are handled by matchmaking.
@@ -248,7 +241,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: DataModel.PlaceId
     summary: |
       Describes the ID of the place running on the server.
@@ -281,7 +273,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DataModel.PlaceVersion
     summary: |
       Describes the version of the place the server is running on.
@@ -316,7 +307,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DataModel.PrivateServerId
     summary: |
       Describes the private server ID of the server, if the server is a private
@@ -373,7 +363,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: DataModel.PrivateServerOwnerId
     summary: |
       Describes the `Class.Player.UserId|UserId` of the `Class.Player` that owns
@@ -427,7 +416,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: DataModel.VIPServerId
     summary: |
       A string that could identify the current server as a private server.
@@ -453,7 +441,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: DataModel.VIPServerOwnerId
     summary: |
       The `Class.Player.UserId|UserId` of the account who owns the private
@@ -480,7 +467,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: DataModel.Workspace
     summary: |
       A reference to the `Class.Workspace` service.
@@ -502,7 +488,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DataModel.lighting
     summary: |
       Refers to the game's `Class.Lighting` service.
@@ -527,7 +512,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DataModel.workspace
     summary: ''
     description: ''
@@ -549,7 +533,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: DataModel:BindToClose
     summary: |
@@ -600,7 +583,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: DataModel:GetJobsInfo
     summary: |
       Returns a table containing basic information about the jobs performed by
@@ -660,7 +642,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: DataModel:GetMessage
     summary: |
       **_[OBSOLETE]:_** This function will always return a blank string.
@@ -683,7 +664,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: DataModel:GetObjects
     summary: |
       Returns an array of `Class.Instance|Instances` associated with the given
@@ -725,7 +705,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: DataModel:GetRemoteBuildMode
     summary: |
       This method is no longer useful and will always return false.
@@ -746,7 +725,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: DataModel:IsGearTypeAllowed
     summary: |
       Returns whether gear of the given `Enum.GearType` is permitted to be added
@@ -785,7 +763,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: DataModel:IsLoaded
     summary: |
       Returns true if the client has finished loading the game for the first
@@ -825,7 +802,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: DataModel:SavePlace
     summary: |
       Saves the current place.
@@ -854,7 +830,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: DataModel:SetPlaceId
     summary: |
       Sets the `Class.DataModel.PlaceId` of the current game instance.
@@ -876,7 +851,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: DataModel:SetUniverseId
     summary: |
       Sets the `Class.DataModel.GameId` of the current game instance to the
@@ -904,7 +878,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: DataModel.AllowedGearTypeChanged
     summary: |
@@ -921,7 +894,6 @@ events:
       This item is deprecated . Do not use it for new work.
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: DataModel.GraphicsQualityChangeRequest
     summary: |
       Fires when the user prompts and increase or decrease in graphics quality
@@ -966,7 +938,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: DataModel.ItemChanged
     summary: |
       Fires when a property of any object in the `Class.DataModel` is changed.
@@ -991,7 +962,6 @@ events:
       be used in new work instead.
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: DataModel.Loaded
     summary: |
       Fires on the client when the game finishes loading for the first time.
@@ -1024,7 +994,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks:
   - name: DataModel.OnClose
     summary: |
@@ -1047,4 +1016,3 @@ callbacks:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []

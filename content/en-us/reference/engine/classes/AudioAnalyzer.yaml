@@ -44,7 +44,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioAnalyzer.RmsLevel
     summary: |
       The root-mean-square average volume observed during the last audio buffer.
@@ -70,7 +69,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioAnalyzer.SpectrumEnabled
     summary: |
       Enables usage of `Class.AudioAnalyzer:GetSpectrum|GetSpectrum`.
@@ -94,7 +92,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioAnalyzer.WindowSize
     summary: ''
     description: ''
@@ -112,7 +109,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
 methods:
   - name: AudioAnalyzer:GetConnectedWires
     summary: |
@@ -136,7 +132,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioAnalyzer:GetInputPins
     summary: ''
     description: ''
@@ -151,7 +146,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioAnalyzer:GetOutputPins
     summary: ''
     description: ''
@@ -166,7 +160,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioAnalyzer:GetSpectrum
     summary: |
       Returns the frequency spectrum of the last audio buffer.
@@ -188,7 +181,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
 events:
   - name: AudioAnalyzer.WiringChanged
     summary: |
@@ -226,5 +218,4 @@ events:
     security: None
     capabilities:
       - Audio
-    writeCapabilities: []
 callbacks: []

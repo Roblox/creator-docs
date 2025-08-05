@@ -33,7 +33,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: TerrainModifyOperation.Ready
     summary: ''
@@ -48,5 +47,4 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

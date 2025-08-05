@@ -60,7 +60,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
 methods:
   - name: AudioChannelMixer:GetConnectedWires
     summary: |
@@ -84,7 +83,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioChannelMixer:GetInputPins
     summary: |
       Returns the input pins that can be selected by `Class.Wire.TargetName`.
@@ -116,7 +114,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioChannelMixer:GetOutputPins
     summary: |
       Returns the output pin available for `Class.Wire.SourceName`.
@@ -134,7 +131,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
 events:
   - name: AudioChannelMixer.WiringChanged
     summary: |
@@ -173,5 +169,4 @@ events:
     security: None
     capabilities:
       - Audio
-    writeCapabilities: []
 callbacks: []

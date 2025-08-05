@@ -56,7 +56,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChatMessageProperties.Text
     summary: |
       The `Class.TextChatMessage.Text` to override.
@@ -76,7 +75,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChatMessageProperties.Translation
     summary: |
       The `Class.TextChatMessage.Translation` to override.
@@ -98,7 +96,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

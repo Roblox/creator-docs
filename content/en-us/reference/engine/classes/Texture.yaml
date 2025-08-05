@@ -55,7 +55,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Texture.OffsetStudsV
     summary: |
       Determines the offset in studs of the rendered texture's vertical
@@ -80,7 +79,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Texture.StudsPerTileU
     summary: |
       Sets the horizontal size, in studs, of the tiled image applied by the
@@ -115,7 +113,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Texture.StudsPerTileV
     summary: |
       Sets the vertical size, in studs, of the tiled image applied by the
@@ -150,7 +147,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

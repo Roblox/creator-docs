@@ -43,7 +43,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChatCommand.Enabled
     summary: |
       Determines whether the `Class.TextChatCommand` is enabled.
@@ -70,7 +69,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChatCommand.PrimaryAlias
     summary: |
       A primary alias used to trigger the `Class.TextChatCommand`.
@@ -94,7 +92,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChatCommand.SecondaryAlias
     summary: |
       A secondary alias used to trigger the `Class.TextChatCommand`.
@@ -114,7 +111,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
 methods: []
 events:
   - name: TextChatCommand.Triggered
@@ -154,5 +150,4 @@ events:
     security: None
     capabilities:
       - Chat
-    writeCapabilities: []
 callbacks: []

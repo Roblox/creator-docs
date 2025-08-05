@@ -46,7 +46,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

@@ -33,7 +33,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods: []
 events:
   - name: BrickColorValue.Changed
@@ -65,7 +64,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: BrickColorValue.changed
     summary: ''
     description: ''
@@ -82,5 +80,4 @@ events:
       which should be used instead.
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

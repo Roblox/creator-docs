@@ -90,7 +90,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: TweenService:GetValue
     summary: |
       Calculates a new alpha given an `Enum.EasingStyle` and
@@ -126,7 +125,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: TweenService:SmoothDamp
     summary: |
       Calculates a value simulating a critically damped spring.
@@ -178,6 +176,5 @@ methods:
     thread_safety: Safe
     capabilities:
       - Basic
-    writeCapabilities: []
 events: []
 callbacks: []

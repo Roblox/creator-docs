@@ -73,7 +73,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: PointsService:GetAwardablePoints
     summary: |
       Returns the number of points the current game has available to award to
@@ -95,7 +94,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: PointsService:GetGamePointBalance
     summary: |
       Returns the total number of points a player has in the current game.
@@ -121,7 +119,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: PointsService:GetPointBalance
     summary: |
       Returns the total number of points the given player has across all games.
@@ -147,7 +144,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: PointsService.PointsAwarded
     summary: |
@@ -201,5 +197,4 @@ events:
       used in new work.
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

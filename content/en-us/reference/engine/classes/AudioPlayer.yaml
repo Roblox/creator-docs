@@ -39,7 +39,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioPlayer.AssetId
     summary: |
       The asset to be loaded into the `Class.AudioPlayer`.
@@ -66,7 +65,6 @@ properties:
       can_save: false
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioPlayer.AutoLoad
     summary: |
       Controls whether `Class.AudioPlayer.Asset|Asset` loads automatically once
@@ -88,7 +86,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioPlayer.IsMutedForCapture
     summary: ''
     description: ''
@@ -106,7 +103,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioPlayer.IsPlaying
     summary: |
       Denotes whether this `Class.AudioPlayer` is currently playing.
@@ -129,7 +125,6 @@ properties:
       can_save: false
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioPlayer.IsReady
     summary: |
       Denotes whether this `Class.AudioPlayer` is loaded, buffered, and ready to
@@ -155,7 +150,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioPlayer.LoopRegion
     summary: |
       A range, in seconds, denoting a desired loop start and loop end within the
@@ -201,7 +195,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioPlayer.Looping
     summary: |
       Controls whether this `Class.AudioPlayer` loops.
@@ -224,7 +217,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioPlayer.PlaybackRegion
     summary: |
       Range in seconds denoting a desired start time (minimum) and stop time
@@ -266,7 +258,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioPlayer.PlaybackSpeed
     summary: |
       Controls how quickly the asset will be played, which controls its pitch.
@@ -287,7 +278,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioPlayer.TimeLength
     summary: |
       Denotes the length of the loaded asset.
@@ -310,7 +300,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioPlayer.TimePosition
     summary: |
       Tracks the current position of the playhead within the asset.
@@ -331,7 +320,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioPlayer.Volume
     summary: |
       Controls how loudly the asset will be played.
@@ -352,7 +340,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
 methods:
   - name: AudioPlayer:GetConnectedWires
     summary: |
@@ -376,7 +363,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioPlayer:GetInputPins
     summary: ''
     description: ''
@@ -391,7 +377,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioPlayer:GetOutputPins
     summary: ''
     description: ''
@@ -406,7 +391,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioPlayer:GetWaveformAsync
     summary: ''
     description: ''
@@ -430,7 +414,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioPlayer:Play
     summary: |
       Plays the `Class.AudioPlayer` from wherever its
@@ -450,7 +433,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioPlayer:Stop
     summary: |
       Stops the `Class.AudioPlayer` wherever its
@@ -470,7 +452,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
 events:
   - name: AudioPlayer.Ended
     summary: |
@@ -493,7 +474,6 @@ events:
     security: None
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioPlayer.Looped
     summary: |
       Fires when the `Class.AudioPlayer` loops.
@@ -512,7 +492,6 @@ events:
     security: None
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioPlayer.WiringChanged
     summary: |
       Fires when another instance is connected to or disconnected from the
@@ -549,5 +528,4 @@ events:
     security: None
     capabilities:
       - Audio
-    writeCapabilities: []
 callbacks: []

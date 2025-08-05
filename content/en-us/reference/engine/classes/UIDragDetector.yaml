@@ -58,7 +58,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIDragDetector.BoundingBehavior
     summary: |
       Determines bounding behavior of the dragged UI object when the detector's
@@ -82,7 +81,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIDragDetector.BoundingUI
     summary: |
       Instance whose bounding area defines the drag boundaries for the parent
@@ -111,7 +109,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIDragDetector.CursorIcon
     summary: |
       Sets the cursor icon to display when the mouse is hovered over the parent
@@ -137,7 +134,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIDragDetector.DragAxis
     summary: |
       The drag axis for the `Class.UIDragDetector` instance when
@@ -164,7 +160,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIDragDetector.DragRelativity
     summary: |
       Sets the paradigm which defines the relativity of inputs/outputs from a
@@ -199,7 +194,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIDragDetector.DragRotation
     summary: |
       The rotation performed by the current drag.
@@ -226,7 +220,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIDragDetector.DragSpace
     summary: |
       Sets the paradigm which defines the space of inputs/outputs from a custom
@@ -264,7 +257,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIDragDetector.DragStyle
     summary: |
       The paradigm used to generate proposed motion.
@@ -285,7 +277,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIDragDetector.DragUDim2
     summary: |
       The translation performed by the current drag expressed in a
@@ -314,7 +305,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIDragDetector.Enabled
     summary: |
       Whether the `Class.UIDragDetector` responds to user input.
@@ -335,7 +325,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIDragDetector.MaxDragAngle
     summary: |
       Along with `Class.UIDragDetector.MinDragAngle|MinDragAngle`, impedes the
@@ -368,7 +357,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIDragDetector.MaxDragTranslation
     summary: |
       Along with `Class.UIDragDetector.MinDragTranslation|MinDragTranslation`,
@@ -403,7 +391,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIDragDetector.MinDragAngle
     summary: |
       Along with `Class.UIDragDetector.MaxDragAngle|MaxDragAngle`, impedes the
@@ -436,7 +423,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIDragDetector.MinDragTranslation
     summary: |
       Along with `Class.UIDragDetector.MaxDragTranslation|MaxDragTranslation`,
@@ -471,7 +457,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIDragDetector.ReferenceUIInstance
     summary: |
       A `Class.GuiObject` instance whose local space and absolute center
@@ -497,7 +482,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIDragDetector.ResponseStyle
     summary: |
       The paradigm used to define the response to proposed motion.
@@ -520,7 +504,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIDragDetector.SelectionModeDragSpeed
     summary: |
       Maximum drag speed for translation.
@@ -544,7 +527,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIDragDetector.SelectionModeRotateSpeed
     summary: |
       Maximum angle per second the `Class.UIDragDetector` can rotate at.
@@ -566,7 +548,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIDragDetector.UIDragSpeedAxisMapping
     summary: |
       `Enum.UIDragSpeedAxisMapping` value that determines the **X**/**Y**
@@ -588,7 +569,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods:
   - name: UIDragDetector:AddConstraintFunction
     summary: |
@@ -639,7 +619,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIDragDetector:GetReferencePosition
     summary: |
       Returns the reference `Datatype.UDim2` position of the current drag's
@@ -665,7 +644,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIDragDetector:GetReferenceRotation
     summary: |
       Returns the reference rotation of the current drag's reference element.
@@ -689,7 +667,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIDragDetector:SetDragStyleFunction
     summary: |
       Passes a function to be used if and only if
@@ -733,7 +710,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
 events:
   - name: UIDragDetector.DragContinue
     summary: |
@@ -754,7 +730,6 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIDragDetector.DragEnd
     summary: |
       Fires when a user stops dragging the UI element.
@@ -772,7 +747,6 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIDragDetector.DragStart
     summary: |
       Fires when a user starts dragging the UI element.
@@ -790,5 +764,4 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
 callbacks: []

@@ -47,7 +47,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Vector3Curve:X
     summary: |
       Returns the `Class.FloatCurve` controlling the X channel (the first child
@@ -67,7 +66,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Vector3Curve:Y
     summary: |
       Returns the `Class.FloatCurve` controlling the Y channel (the first child
@@ -87,7 +85,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Vector3Curve:Z
     summary: |
       Returns the `Class.FloatCurve` controlling the Z channel (the first child
@@ -107,6 +104,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-    writeCapabilities: []
 events: []
 callbacks: []

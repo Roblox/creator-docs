@@ -41,7 +41,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: RenderSettings.EagerBulkExecution
     summary: |
       When set to true, all scene updates will be given an unlimited budget,
@@ -65,7 +64,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: RenderSettings.EditQualityLevel
     summary: |
       Sets the graphics quality level in Roblox Studio, when
@@ -86,7 +84,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: RenderSettings.Enable VR Mode
     summary: ''
     description: ''
@@ -103,7 +100,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: RenderSettings.EnableFRM
     summary: |
       Toggles the enabled state of the framerate manager.
@@ -124,7 +120,6 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: RenderSettings.ExportMergeByMaterial
     summary: |
       Sets whether materials should be generated per part, or per unique
@@ -145,7 +140,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: RenderSettings.FrameRateManager
     summary: |
       Specifies the behavior of the framerate manager.
@@ -164,7 +158,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: RenderSettings.GraphicsMode
     summary: |
       The graphics API that Roblox will use on startup.
@@ -183,7 +176,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: RenderSettings.MeshCacheSize
     summary: |
       The size in bytes of the mesh cache. Defaults to 32 MB.
@@ -202,7 +194,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: RenderSettings.MeshPartDetailLevel
     summary: |
       Studio only. Used to visually verify the quality of
@@ -231,7 +222,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: RenderSettings.QualityLevel
     summary: |
       If `Class.RenderSettings.EnableFRM` is set to true, this property controls
@@ -252,7 +242,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: RenderSettings.ReloadAssets
     summary: |
       When set to true, Roblox Studio will automatically reload changes that are
@@ -273,7 +262,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: RenderSettings.RenderCSGTrianglesDebug
     summary: |
       When set to true, a wireframe of polygons will be shown on all
@@ -294,7 +282,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: RenderSettings.ShowBoundingBoxes
     summary: |
       If set to true, renders bounding boxes around each individual rendered
@@ -315,7 +302,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: RenderSettings.ViewMode
     summary: ''
     description: ''
@@ -332,7 +318,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: RenderSettings:GetMaxQualityLevel
     summary: |
@@ -349,6 +334,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

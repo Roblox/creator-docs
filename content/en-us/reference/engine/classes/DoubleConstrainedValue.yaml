@@ -41,7 +41,6 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: DoubleConstrainedValue.MaxValue
     summary: |
       The highest number that the `Class.DoubleConstrainedValue.Value` property
@@ -65,7 +64,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: DoubleConstrainedValue.MinValue
     summary: |
       The lowest number that the `Class.DoubleConstrainedValue.Value` property
@@ -89,7 +87,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: DoubleConstrainedValue.Value
     summary: |
       Used to hold a number value between
@@ -116,7 +113,6 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
-    writeCapabilities: []
 methods: []
 events:
   - name: DoubleConstrainedValue.Changed
@@ -140,7 +136,6 @@ events:
       values.
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: DoubleConstrainedValue.changed
     summary: ''
     description: ''
@@ -158,5 +153,4 @@ events:
       Neither event should be used in new work.
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

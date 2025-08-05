@@ -60,7 +60,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIStroke.Color
     summary: |
       Determines the stroke color.
@@ -90,7 +89,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIStroke.Enabled
     summary: |
       Determines whether the stroke in visible.
@@ -111,7 +109,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIStroke.LineJoinMode
     summary: |
       Determines how corners are interpreted.
@@ -147,7 +144,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIStroke.Thickness
     summary: |
       Determines the stroke's thickness.
@@ -182,7 +178,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIStroke.Transparency
     summary: |
       Sets the stroke opacity independently of the parent object's
@@ -216,7 +211,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

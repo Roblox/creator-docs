@@ -60,7 +60,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: VideoFrame.Looped
     summary: |
       Sets whether or not the `Class.VideoFrame.Video` repeats once it has
@@ -82,7 +81,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: VideoFrame.Playing
     summary: |
       Indicates whether the `Class.VideoFrame.Video` is currently playing. It
@@ -106,7 +104,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: VideoFrame.Resolution
     summary: |
       Gets the original source resolution of the `Class.VideoFrame.Video` file.
@@ -129,7 +126,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: VideoFrame.TimeLength
     summary: |
       Indicates the length of the `Class.VideoFrame.Video` in seconds.
@@ -152,7 +148,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: VideoFrame.TimePosition
     summary: |
       Indicates the progress in seconds of the `Class.VideoFrame.Video`.
@@ -175,7 +170,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: VideoFrame.Video
     summary: |
       The content ID of the video file a `Class.VideoFrame` object is associated
@@ -198,7 +192,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: VideoFrame.Volume
     summary: |
       Indicates how loud the `Class.VideoFrame.Video` is currently playing back.
@@ -219,7 +212,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods:
   - name: VideoFrame:Pause
     summary: |
@@ -242,7 +234,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: VideoFrame:Play
     summary: |
       Sets `Class.VideoFrame.Playing` to true, playing the
@@ -263,7 +254,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
 events:
   - name: VideoFrame.DidLoop
     summary: |
@@ -283,7 +273,6 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
   - name: VideoFrame.Ended
     summary: |
       Fires when the `Class.VideoFrame.Video` has completed playback and
@@ -303,7 +292,6 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
   - name: VideoFrame.Loaded
     summary: |
       Fires when the `Class.VideoFrame.Video` is loaded.
@@ -321,7 +309,6 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
   - name: VideoFrame.Paused
     summary: |
       This event fires whenever the `Class.VideoFrame.Video` is paused using
@@ -343,7 +330,6 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
   - name: VideoFrame.Played
     summary: |
       Fires whenever the `Class.VideoFrame.Video` is played using the
@@ -365,5 +351,4 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
 callbacks: []

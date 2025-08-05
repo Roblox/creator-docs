@@ -31,7 +31,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: PatchMapping.PatchId
     summary: ''
     description: ''
@@ -48,7 +47,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: PatchMapping.TargetPath
     summary: ''
     description: ''
@@ -65,7 +63,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

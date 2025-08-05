@@ -44,7 +44,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
 methods:
   - name: GamepadService:DisableGamepadCursor
     summary: |
@@ -63,7 +62,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: GamepadService:EnableGamepadCursor
     summary: |
       Enables the gamepad cursor or updates its position.
@@ -147,6 +145,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
 events: []
 callbacks: []

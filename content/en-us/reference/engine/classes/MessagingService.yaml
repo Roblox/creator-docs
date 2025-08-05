@@ -123,7 +123,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: MessagingService:SubscribeAsync
     summary: |
       Begins listening to the given topic.
@@ -198,6 +197,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

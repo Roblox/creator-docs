@@ -39,7 +39,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AdService:ShowVideoAd
     summary: |
       Show mobile video advertisements.
@@ -58,7 +57,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AdService:UnregisterAdOpportunity
     summary: ''
     description: ''
@@ -76,7 +74,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AdService:GetAdAvailabilityNowAsync
     summary: |
       Checks if a video ad is available to be played to the current user inside
@@ -101,7 +98,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AdService:RegisterAdOpportunityAsync
     summary: ''
     description: ''
@@ -124,7 +120,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: AdService:ShowRewardedVideoAdAsync
     summary: |
       Plays the video ad to the current user inside the experience.
@@ -160,7 +155,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: AdService.VideoAdClosed
     summary: |
@@ -180,5 +174,4 @@ events:
       is no longer operational.
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

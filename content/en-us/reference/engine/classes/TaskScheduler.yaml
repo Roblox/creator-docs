@@ -40,7 +40,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: TaskScheduler.SchedulerRate
     summary: |
       The current average rate of the task scheduler.
@@ -61,7 +60,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: TaskScheduler.ThreadPoolConfig
     summary: |
       The specified thread pooling configuration for the task scheduler.
@@ -80,7 +78,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: TaskScheduler.ThreadPoolSize
     summary: |
       The current size of the thread pool.
@@ -101,7 +98,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

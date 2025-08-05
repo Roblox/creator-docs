@@ -41,7 +41,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: LineHandleAdornment.Thickness
     summary: |
       The thickness of the line in pixels.
@@ -62,7 +61,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

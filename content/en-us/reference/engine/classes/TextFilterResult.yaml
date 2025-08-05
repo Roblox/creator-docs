@@ -67,7 +67,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextFilterResult:GetNonChatStringForBroadcastAsync
     summary: |
       Returns the text in a properly filtered manner for all users.
@@ -89,7 +88,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextFilterResult:GetNonChatStringForUserAsync
     summary: |
       Returns the text in a properly filtered manner for the specified
@@ -117,6 +115,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
 events: []
 callbacks: []

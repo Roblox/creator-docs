@@ -47,7 +47,6 @@ properties:
       can_save: true
     capabilities:
       - Environment
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

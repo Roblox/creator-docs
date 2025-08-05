@@ -36,7 +36,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChatMessage.ChatWindowMessageProperties
     summary: ''
     description: ''
@@ -54,7 +53,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChatMessage.MessageId
     summary: |
       A unique identifier for the `Class.TextChatMessage`.
@@ -74,7 +72,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChatMessage.Metadata
     summary: |
       A general purpose field for storing miscellaneous data about the
@@ -266,7 +263,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChatMessage.PrefixText
     summary: |
       A prefix to add to a user's message.
@@ -291,7 +287,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChatMessage.Status
     summary: |
       Indicates the status of the `Class.TextChatMessage`.
@@ -311,7 +306,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChatMessage.Text
     summary: |
       The filtered text message for the user.
@@ -333,7 +327,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChatMessage.TextChannel
     summary: |
       A reference to the origin `Class.TextChannel`.
@@ -353,7 +346,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChatMessage.TextSource
     summary: |
       A reference to the origin `Class.TextSource`.
@@ -373,7 +365,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChatMessage.Timestamp
     summary: |
       A timestamp of when the message was originally sent.
@@ -393,7 +384,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: TextChatMessage.Translation
     summary: |
       Translated and filtered text message.
@@ -418,7 +408,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

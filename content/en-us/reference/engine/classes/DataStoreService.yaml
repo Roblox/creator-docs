@@ -70,7 +70,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: DataStoreService:GetGlobalDataStore
     summary: |
       Returns the default data store.
@@ -95,7 +94,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: DataStoreService:GetOrderedDataStore
     summary: |
       Get an `Class.OrderedDataStore` given a name and optional scope.
@@ -124,7 +122,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: DataStoreService:GetRequestBudgetForRequestType
     summary: |
       Returns the number of requests that can be made by the given request type.
@@ -150,7 +147,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: DataStoreService:ListDataStoresAsync
     summary: |
       Returns a `Class.DataStoreListingPages` object for enumerating through all
@@ -195,6 +191,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
 events: []
 callbacks: []

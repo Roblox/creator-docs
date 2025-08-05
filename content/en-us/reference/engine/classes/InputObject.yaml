@@ -78,7 +78,6 @@ properties:
       can_save: false
     capabilities:
       - Input
-    writeCapabilities: []
   - name: InputObject.KeyCode
     summary: |
       Contains an Enum that describes the kind of input used.
@@ -100,7 +99,6 @@ properties:
       can_save: false
     capabilities:
       - Input
-    writeCapabilities: []
   - name: InputObject.Position
     summary: |
       A `Datatype.Vector3` describing the positional value of this input.
@@ -140,7 +138,6 @@ properties:
       can_save: false
     capabilities:
       - Input
-    writeCapabilities: []
   - name: InputObject.UserInputState
     summary: |
       Describes the state of an input being performed, following a specific flow
@@ -164,7 +161,6 @@ properties:
       can_save: false
     capabilities:
       - Input
-    writeCapabilities: []
   - name: InputObject.UserInputType
     summary: |
       Describes the kind of input being performed (mouse, keyboard, gamepad,
@@ -187,7 +183,6 @@ properties:
       can_save: false
     capabilities:
       - Input
-    writeCapabilities: []
 methods:
   - name: InputObject:IsModifierKeyDown
     summary: |
@@ -212,6 +207,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
 events: []
 callbacks: []

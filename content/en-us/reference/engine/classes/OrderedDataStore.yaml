@@ -84,6 +84,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
 events: []
 callbacks: []

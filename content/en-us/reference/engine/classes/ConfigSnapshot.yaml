@@ -33,7 +33,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: ConfigSnapshot.Outdated
     summary: ''
     description: ''
@@ -52,7 +51,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: ConfigSnapshot:GetValue
     summary: ''
@@ -75,7 +73,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ConfigSnapshot:GetValueChangedSignal
     summary: ''
     description: ''
@@ -93,7 +90,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ConfigSnapshot:Refresh
     summary: ''
     description: ''
@@ -107,7 +103,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: ConfigSnapshot.UpdateAvailable
     summary: ''
@@ -118,5 +113,4 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

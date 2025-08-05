@@ -41,7 +41,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: ExperienceInviteOptions.InviteUser
     summary: |
       Roblox `Class.Player.UserId|UserId` of the specific connection to invite.
@@ -62,7 +61,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: ExperienceInviteOptions.LaunchData
     summary: |
       Used to set a parameter in `Class.Player:GetJoinData()` when a connection
@@ -85,7 +83,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: ExperienceInviteOptions.PromptMessage
     summary: |
       Custom text shown on the invite prompt for the sending player.
@@ -107,7 +104,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

@@ -30,7 +30,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioGate.Bypass
     summary: ''
     description: ''
@@ -48,7 +47,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioGate.Release
     summary: ''
     description: ''
@@ -66,7 +64,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioGate.Threshold
     summary: ''
     description: ''
@@ -84,7 +81,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
 methods:
   - name: AudioGate:GetConnectedWires
     summary: ''
@@ -104,7 +100,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioGate:GetInputPins
     summary: ''
     description: ''
@@ -119,7 +114,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioGate:GetOutputPins
     summary: ''
     description: ''
@@ -134,7 +128,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
 events:
   - name: AudioGate.WiringChanged
     summary: ''
@@ -162,5 +155,4 @@ events:
     security: None
     capabilities:
       - Audio
-    writeCapabilities: []
 callbacks: []

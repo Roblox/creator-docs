@@ -222,7 +222,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: TestService.Description
     summary: |
       A description of the test being executed.
@@ -241,7 +240,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: TestService.ErrorCount
     summary: |
       Measures how many errors have been recorded in the test session.
@@ -262,7 +260,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: TestService.ExecuteWithStudioRun
     summary: |
       When set to true, the TestService will be executed when using the _Run_
@@ -292,7 +289,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: TestService.Is30FpsThrottleEnabled
     summary: |
       Sets whether or not the physics engine should be throttled to 30 FPS while
@@ -318,7 +314,6 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: TestService.IsPhysicsEnvironmentalThrottled
     summary: |
       Sets whether or not the physics environment should be throttled while
@@ -339,7 +334,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: TestService.IsSleepAllowed
     summary: |
       Sets whether or not physics objects will be allowed to fall asleep while
@@ -360,7 +354,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: TestService.NumberOfPlayers
     summary: |
       The number of players expected in this test, if any.
@@ -379,7 +372,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: TestService.SimulateSecondsLag
     summary: |
       Sets a specific amount of additional latency experienced by players during
@@ -400,7 +392,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: TestService.TestCount
     summary: |
       Measures how many test calls have been recorded in the test session.
@@ -421,7 +412,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: TestService.ThrottlePhysicsToRealtime
     summary: |
       Sets whether the test should be throttled to simulate time according to
@@ -442,7 +432,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: TestService.Timeout
     summary: |
       The maximum amount of time that tests are allowed to run for.
@@ -461,7 +450,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: TestService.WarnCount
     summary: |
       Measures how many warning calls have been recorded in the test session.
@@ -482,7 +470,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: TestService:Check
     summary: |
@@ -518,7 +505,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: TestService:Checkpoint
     summary: |
       Prints "Test checkpoint: ", followed by text, to the output, in blue text.
@@ -548,7 +534,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: TestService:Done
     summary: |
       Prints Testing Done to the output, in blue text.
@@ -565,7 +550,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: TestService:Error
     summary: |
       Prints a red message to the output, prefixed by `TestService: `.
@@ -594,7 +578,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: TestService:Fail
     summary: |
       Indicates a fatal error in a TestService run. If this is called inside of
@@ -626,7 +609,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: TestService:Message
     summary: |
       Prints Test message, followed by text to the output, in blue text.
@@ -656,7 +638,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: TestService:Require
     summary: |
       Prints whether a condition is true along with description text.
@@ -692,7 +673,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: TestService:Run
     summary: |
       Runs scripts which are parented to TestService.
@@ -709,7 +689,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: TestService:ScopeTime
     summary: ''
     description: ''
@@ -723,7 +702,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: TestService:TakeSnapshot
     summary: ''
     description: ''
@@ -742,7 +720,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - InternalTest
-    writeCapabilities: []
   - name: TestService:Warn
     summary: |
       Prints if a condition is true, otherwise prints a warning.
@@ -778,7 +755,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: TestService:isFeatureEnabled
     summary: ''
     description: ''
@@ -796,7 +772,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: TestService.ServerCollectConditionalResult
     summary: |
@@ -825,7 +800,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: TestService.ServerCollectResult
     summary: |
       Fired when the server should collect a test result.
@@ -849,5 +823,4 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

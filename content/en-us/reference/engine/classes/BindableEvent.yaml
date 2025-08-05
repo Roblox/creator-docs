@@ -79,7 +79,6 @@ methods:
     security: None
     thread_safety: Safe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: BindableEvent.Event
     summary: |
@@ -103,5 +102,4 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

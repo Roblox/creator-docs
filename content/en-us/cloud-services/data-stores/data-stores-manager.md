@@ -16,7 +16,7 @@ To access the Data Stores Manager:
 1. Go to Creations and select an experience.
 2. Go to **Configure** > **Data Stores Manager**.
 
-<img src="./../../assets/data-stores/Data-Stores-Manager-Page.png" alt="Overview of Data Stores Manager page displaying the Summary section, the Data Stores list, and the Keys list." />
+<img src="./../../assets/data/data-store/Data-Stores-Manager-Page.png" alt="Overview of Data Stores Manager page displaying the Summary section, the Data Stores list, and the Keys list." />
 
 The **Summary** section of the Data Stores Manager page includes the **Total Size** and the **Storage Limit** of your data stores. The Total Size is calculated by adding the number of bytes consumed by all existing keys in your experience, and the Storage Limit is calculated based on your experience's lifetime user count. For more information about storage limits, see [Limits](./error-codes-and-limits.md#limits).
 
@@ -36,4 +36,4 @@ To further drill down into each specific data store, you can:
 - Select a key entry to display that key's value, metadata, version history, status, and when it was last updated.
 - Select a key entry, select a version under **Version History**, and click **Compare Version** to compare the current key entry version with the version you selected.
 
-<img src="./../../assets/data-stores/Data-Stores-Manager-Compare-Versions.png" alt="Comparison of two key entries in a data store." />
+<img src="./../../assets/data/data-store/Data-Stores-Manager-Compare-Versions.png" alt="Comparison of two key entries in a data store." />

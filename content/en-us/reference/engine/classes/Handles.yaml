@@ -43,7 +43,6 @@ properties:
       - Basic
       - UI
       - Input
-    writeCapabilities: []
   - name: Handles.Style
     summary: |
       Sets the GUI style of the handles.
@@ -66,7 +65,6 @@ properties:
       - Basic
       - UI
       - Input
-    writeCapabilities: []
 methods: []
 events:
   - name: Handles.MouseButton1Down
@@ -87,7 +85,6 @@ events:
       - Basic
       - UI
       - Input
-    writeCapabilities: []
   - name: Handles.MouseButton1Up
     summary: |
       Fired when the left mouse button is released on one of the GUI handles.
@@ -106,7 +103,6 @@ events:
       - Basic
       - UI
       - Input
-    writeCapabilities: []
   - name: Handles.MouseDrag
     summary: |
       Fired when the mouse moves while the MouseButton1Down event has fired, but
@@ -131,7 +127,6 @@ events:
       - Basic
       - UI
       - Input
-    writeCapabilities: []
   - name: Handles.MouseEnter
     summary: |
       Fired when a mouse "enters" the GUI handle.
@@ -150,7 +145,6 @@ events:
       - Basic
       - UI
       - Input
-    writeCapabilities: []
   - name: Handles.MouseLeave
     summary: |
       Fired when the mouse leaves the GUI handle.
@@ -169,5 +163,4 @@ events:
       - Basic
       - UI
       - Input
-    writeCapabilities: []
 callbacks: []

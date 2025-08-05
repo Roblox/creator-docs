@@ -72,7 +72,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: ContentProvider.RequestQueueSize
     summary: |
       Gives the number of items in the `Class.ContentProvider` request queue
@@ -104,7 +103,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: ContentProvider:GetAssetFetchStatus
     summary: |
@@ -130,7 +128,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ContentProvider:GetAssetFetchStatusChangedSignal
     summary: |
       A signal that fires when the `Enum.AssetFetchStatus` of the provided
@@ -156,7 +153,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ContentProvider:ListEncryptedAssets
     summary: ''
     description: ''
@@ -170,7 +166,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ContentProvider:Preload
     summary: |
       Queues an asset to be downloaded by the `Class.ContentProvider`.
@@ -199,7 +194,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ContentProvider:PreloadAsync
     summary: |
       Yields until all of the assets associated with the given
@@ -253,7 +247,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ContentProvider:RegisterDefaultEncryptionKey
     summary: ''
     description: ''
@@ -271,7 +264,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ContentProvider:RegisterDefaultSessionKey
     summary: ''
     description: ''
@@ -289,7 +281,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ContentProvider:RegisterEncryptedAsset
     summary: ''
     description: ''
@@ -311,7 +302,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ContentProvider:RegisterSessionEncryptedAsset
     summary: ''
     description: ''
@@ -333,7 +323,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ContentProvider:UnregisterDefaultEncryptionKey
     summary: ''
     description: ''
@@ -347,7 +336,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ContentProvider:UnregisterEncryptedAsset
     summary: ''
     description: ''
@@ -365,7 +353,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: ContentProvider.AssetFetchFailed
     summary: ''
@@ -380,5 +367,4 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

@@ -38,7 +38,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
 methods:
   - name: MarkerCurve:GetMarkerAtIndex
     summary: |
@@ -62,7 +61,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: MarkerCurve:GetMarkers
     summary: |
       Returns the time and string value of all markers in the MarkerCurve.
@@ -81,7 +79,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: MarkerCurve:InsertMarkerAtTime
     summary: |
       Inserts a marker with the provided string value at the provided time.
@@ -114,7 +111,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: MarkerCurve:RemoveMarkerAtIndex
     summary: |
       Remove several markers in the MarkerCurve starting at the provided index.
@@ -143,6 +139,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
 events: []
 callbacks: []

@@ -58,7 +58,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: MarketplaceService:GetProductInfo
     summary: |
       Returns the product information of an asset using its asset ID.
@@ -347,7 +346,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: MarketplaceService:GetSubscriptionProductInfoAsync
     summary: |
       Returns the product information of a subscription for the given
@@ -431,7 +429,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: MarketplaceService:GetUserSubscriptionDetailsAsync
     summary: |
       Returns a table that contains the details of the user's subscription for a
@@ -512,7 +509,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: MarketplaceService:GetUserSubscriptionPaymentHistoryAsync
     summary: |
       Returns an `Library.table|Array` that contains up to one year of the
@@ -653,7 +649,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: MarketplaceService:GetUserSubscriptionStatusAsync
     summary: |
       Returns a `Library.table` that contains the subscription status of the
@@ -713,7 +708,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: MarketplaceService:GetUsersPriceLevelsAsync
     summary: ''
     description: ''
@@ -732,7 +726,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: MarketplaceService:PlayerOwnsAsset
     summary: |
       Returns whether the given user has the given asset.
@@ -777,7 +770,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: MarketplaceService:PlayerOwnsBundle
     summary: |
       Returns whether the given player owns the given bundle.
@@ -810,7 +802,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: MarketplaceService:PromptBulkPurchase
     summary: |
       Prompts a user to purchase multiple avatar items with the given `assetId`
@@ -867,7 +858,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: MarketplaceService:PromptBundlePurchase
     summary: |
       Prompts a user to purchase a bundle with the given `bundleId`.
@@ -891,7 +881,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: MarketplaceService:PromptCancelSubscription
     summary: |
       Prompts a user to cancel a subscription for the given `subscriptionId`.
@@ -917,7 +906,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: MarketplaceService:PromptGamePassPurchase
     summary: |
       Prompts a user to purchase a pass with the given `gamePassId`.
@@ -943,7 +931,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: MarketplaceService:PromptPremiumPurchase
     summary: |
       Prompts a user to purchase Roblox Premium.
@@ -976,7 +963,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: MarketplaceService:PromptProductPurchase
     summary: |
       Prompts a user to purchase a developer product with the given `productId`.
@@ -1011,7 +997,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: MarketplaceService:PromptPurchase
     summary: |
       Prompts a user to purchase an item with the given `assetId`. Does not work
@@ -1063,7 +1048,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: MarketplaceService:PromptSubscriptionPurchase
     summary: |
       Prompts a user to purchase a subscription for the given `subscriptionId`.
@@ -1089,7 +1073,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: MarketplaceService:UserOwnsGamePassAsync
     summary: |
       Returns true if the player with the given `Class.Player.UserId|UserId`
@@ -1137,7 +1120,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: MarketplaceService.PromptBulkPurchaseFinished
     summary: |
@@ -1194,7 +1176,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: MarketplaceService.PromptBundlePurchaseFinished
     summary: ''
     description: ''
@@ -1216,7 +1197,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: MarketplaceService.PromptGamePassPurchaseFinished
     summary: |
       Fires when a purchase prompt for a pass is closed.
@@ -1264,7 +1244,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: MarketplaceService.PromptPremiumPurchaseFinished
     summary: |
       Fires when a purchase prompt for Roblox Premium is closed.
@@ -1286,7 +1265,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: MarketplaceService.PromptProductPurchaseFinished
     summary: |
       Fires when a purchase prompt for a developer product is closed. Do not use
@@ -1353,7 +1331,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: MarketplaceService.PromptPurchaseFinished
     summary: |
       Fires when a purchase prompt for an affiliate gear sale or other asset is
@@ -1403,7 +1380,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: MarketplaceService.PromptSubscriptionPurchaseFinished
     summary: |
       Fires when a purchase prompt for a subscription is closed.
@@ -1441,7 +1417,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks:
   - name: MarketplaceService.ProcessReceipt
     summary: |
@@ -1567,4 +1542,3 @@ callbacks:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []

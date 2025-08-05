@@ -65,7 +65,6 @@ properties:
     capabilities:
       - Basic
       - CSG
-    writeCapabilities: []
   - name: PartOperation.SmoothingAngle
     summary: |
       An angle in degrees which affects the smooth shading of a solid modeled
@@ -110,7 +109,6 @@ properties:
     capabilities:
       - Basic
       - CSG
-    writeCapabilities: []
   - name: PartOperation.TriangleCount
     summary: |
       The number of polygons in this solid model.
@@ -133,7 +131,6 @@ properties:
     capabilities:
       - Basic
       - CSG
-    writeCapabilities: []
   - name: PartOperation.UsePartColor
     summary: |
       Sets whether the `Class.PartOperation` can be recolored using inherited
@@ -160,7 +157,6 @@ properties:
     capabilities:
       - Basic
       - CSG
-    writeCapabilities: []
 methods:
   - name: PartOperation:SubstituteGeometry
     summary: |
@@ -203,6 +199,5 @@ methods:
     capabilities:
       - Basic
       - CSG
-    writeCapabilities: []
 events: []
 callbacks: []

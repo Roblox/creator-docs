@@ -96,7 +96,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Team.AutoColorCharacters
     summary: |
       Deprecated and no longer functional. Historically set whether or not
@@ -127,7 +126,6 @@ properties:
       can_save: false
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Team.Score
     summary: |
       This property can be used to store an integer value associated with the
@@ -159,7 +157,6 @@ properties:
       can_save: false
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Team.TeamColor
     summary: |
       This property sets the color of the `Class.Team`. Determines the
@@ -194,7 +191,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-    writeCapabilities: []
 methods:
   - name: Team:GetPlayers
     summary: |
@@ -224,7 +220,6 @@ methods:
     thread_safety: Safe
     capabilities:
       - Players
-    writeCapabilities: []
 events:
   - name: Team.PlayerAdded
     summary: |
@@ -257,7 +252,6 @@ events:
     security: None
     capabilities:
       - Players
-    writeCapabilities: []
   - name: Team.PlayerRemoved
     summary: |
       Fires whenever a `Class.Player` is removed from a `Class.Team`. This can
@@ -289,5 +283,4 @@ events:
     security: None
     capabilities:
       - Players
-    writeCapabilities: []
 callbacks: []

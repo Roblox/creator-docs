@@ -203,7 +203,7 @@ The **Memory Categories** view shows memory sizes and counts by memory categorie
 
 #### Unique references and unparented instances
 
-The **Unique References** and **Unparented Instances** views are related. Both show memory usage of instances that don't have a parent in the data model and are only reachable by scripts, along with all paths that pin the instance object. The only difference is whether the instance is a unique reference or not. Both views show two metrics:
+The **Unique References** and **Unparented Instances** views are related. Both show memory usage of instances that don't have a parent in the data model and are only reachable by scripts, along with all paths that pin the instance object. If an instance is only referenced within Luau scripts, it appears under **Unique References**. Otherwise, it's also in use by Roblox systems and appears under **Unparented Instances**. Both views show two metrics:
 
 - **Count** — The number of instances with the same name that are reachable from the same path, such as multiple instances named `Dragon` in the same table.
 - **Total Instances** — The total number of objects inside those roots, such as all parts, scripts, and sound objects that construct a `Dragon` instance.

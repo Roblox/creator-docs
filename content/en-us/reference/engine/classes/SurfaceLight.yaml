@@ -51,7 +51,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: SurfaceLight.Face
     summary: |
       Sets the side of the parent that the SurfaceLight comes from.
@@ -71,7 +70,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: SurfaceLight.Range
     summary: |
       The distance from the SurfaceLight's face that will illuminate.
@@ -91,7 +89,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

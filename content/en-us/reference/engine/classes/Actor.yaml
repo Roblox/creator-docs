@@ -68,7 +68,6 @@ methods:
     thread_safety: Safe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Actor:BindToMessageParallel
     summary: |
       Binds a Luau callback to a message with the specified topic.
@@ -115,7 +114,6 @@ methods:
     thread_safety: Safe
     capabilities:
       - Basic
-    writeCapabilities: []
   - name: Actor:SendMessage
     summary: |
       Sends a message to an Actor.
@@ -155,6 +153,5 @@ methods:
     thread_safety: Safe
     capabilities:
       - Basic
-    writeCapabilities: []
 events: []
 callbacks: []

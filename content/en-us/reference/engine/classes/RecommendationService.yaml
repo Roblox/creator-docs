@@ -34,7 +34,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: RecommendationService:LogActionEvent
     summary: ''
     description: ''
@@ -64,7 +63,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: RecommendationService:LogImpressionEvent
     summary: ''
     description: ''
@@ -94,7 +92,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: RecommendationService:RegisterItemAsync
     summary: ''
     description: ''
@@ -117,7 +114,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: RecommendationService:RemoveItemAsync
     summary: ''
     description: ''
@@ -136,7 +132,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: RecommendationService:UpdateItemAsync
     summary: ''
     description: ''
@@ -155,6 +150,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

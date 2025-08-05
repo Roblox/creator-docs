@@ -68,7 +68,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIGridLayout.AbsoluteCellSize
     summary: |
       The absolute size of each element in the grid.
@@ -93,7 +92,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIGridLayout.CellPadding
     summary: |
       Determines how much space there is between elements in the grid.
@@ -115,7 +113,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIGridLayout.CellSize
     summary: |
       Determines the size of each element in the grid.
@@ -139,7 +136,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIGridLayout.FillDirectionMaxCells
     summary: |
       Determines the maximum number of cells that may be used in a row or column
@@ -168,7 +164,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: UIGridLayout.StartCorner
     summary: |
       Determines from which corner the grid starts laying out UI elements.
@@ -197,7 +192,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

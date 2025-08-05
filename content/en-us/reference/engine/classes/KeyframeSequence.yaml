@@ -112,7 +112,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
 methods:
   - name: KeyframeSequence:AddKeyframe
     summary: |
@@ -144,7 +143,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: KeyframeSequence:GetKeyframes
     summary: |
       Returns an array that contains all `Class.Keyframe|Keyframes` contained in
@@ -166,7 +164,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: KeyframeSequence:RemoveKeyframe
     summary: |
       This function removes a `Class.Keyframe` from the `Class.KeyframeSequence`
@@ -199,6 +196,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
 events: []
 callbacks: []

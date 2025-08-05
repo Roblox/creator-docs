@@ -36,7 +36,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioDistortion.Level
     summary: |
       Controls how distorted the input stream will become.
@@ -56,7 +55,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
 methods:
   - name: AudioDistortion:GetConnectedWires
     summary: |
@@ -80,7 +78,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioDistortion:GetInputPins
     summary: ''
     description: ''
@@ -95,7 +92,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioDistortion:GetOutputPins
     summary: ''
     description: ''
@@ -110,7 +106,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
 events:
   - name: AudioDistortion.WiringChanged
     summary: |
@@ -148,5 +143,4 @@ events:
     security: None
     capabilities:
       - Audio
-    writeCapabilities: []
 callbacks: []

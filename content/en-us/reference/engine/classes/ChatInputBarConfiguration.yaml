@@ -40,7 +40,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatInputBarConfiguration.AbsoluteSize
     summary: |
       Actual screen size of the default chat input bar in pixels.
@@ -63,7 +62,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatInputBarConfiguration.AutocompleteEnabled
     summary: |
       Whether to enable autocomplete for the chat input bar.
@@ -84,7 +82,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatInputBarConfiguration.BackgroundColor3
     summary: |
       Background color of the default chat input bar.
@@ -105,7 +102,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatInputBarConfiguration.BackgroundTransparency
     summary: |
       Background transparency of the default chat input bar.
@@ -129,7 +125,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatInputBarConfiguration.Enabled
     summary: |
       Whether to show the default chat input bar.
@@ -149,7 +144,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatInputBarConfiguration.FontFace
     summary: |
       Font used to render text in the default chat input bar.
@@ -170,7 +164,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatInputBarConfiguration.IsFocused
     summary: |
       Whether the default chat input bar is focused or not.
@@ -195,7 +188,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatInputBarConfiguration.KeyboardKeyCode
     summary: |
       Additional key users can press to trigger focusing on the default chat
@@ -218,7 +210,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatInputBarConfiguration.PlaceholderColor3
     summary: |
       Color of the text of the placeholder text in the default chat input bar.
@@ -239,7 +230,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatInputBarConfiguration.TargetTextChannel
     summary: |
       A reference to the target `Class.TextChannel`.
@@ -260,7 +250,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatInputBarConfiguration.TextBox
     summary: |
       Reference to a designated `Class.TextBox` instance that sends messages on
@@ -299,7 +288,6 @@ properties:
       can_save: false
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatInputBarConfiguration.TextColor3
     summary: |
       Color of the text in default chat input bar.
@@ -320,7 +308,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatInputBarConfiguration.TextSize
     summary: |
       Size of the text in default chat input bar.
@@ -340,7 +327,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatInputBarConfiguration.TextStrokeColor3
     summary: |
       Color of the text stroke for text in default chat input bar.
@@ -361,7 +347,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
   - name: ChatInputBarConfiguration.TextStrokeTransparency
     summary: |
       Transparency of the text stroke for text in default chat input bar.
@@ -382,7 +367,6 @@ properties:
       can_save: true
     capabilities:
       - Chat
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

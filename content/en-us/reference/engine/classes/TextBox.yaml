@@ -89,7 +89,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.ContentText
     summary: ''
     description: ''
@@ -109,7 +108,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.CursorPosition
     summary: |
       Determines the offset of the text cursor in bytes, or `-1` if there is no
@@ -141,7 +139,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.Font
     summary: |
       Determines the font used to render text.
@@ -179,7 +176,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.FontFace
     summary: |
       Determines the font used to render text.
@@ -204,7 +200,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.FontSize
     summary: |
       Determines the font size of a `Class.TextBox` object.
@@ -228,7 +223,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.LineHeight
     summary: |
       Scales the spacing between lines of text in the `Class.TextBox`.
@@ -250,7 +244,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.MaxVisibleGraphemes
     summary: |
       The maximum number of graphemes the `Class.TextBox` can show.
@@ -278,7 +271,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.MultiLine
     summary: |
       When set to `true`, text inside a `TextBox` is able to move onto multiple
@@ -302,7 +294,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.OpenTypeFeatures
     summary: ''
     description: ''
@@ -320,7 +311,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.OpenTypeFeaturesError
     summary: ''
     description: ''
@@ -340,7 +330,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.PlaceholderColor3
     summary: |
       Sets the text color that gets used when no text has been entered into the
@@ -362,7 +351,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.PlaceholderText
     summary: |
       Sets the text that gets displayed when no text has been entered into the
@@ -384,7 +372,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.RichText
     summary: |
       Determines whether the `TextBox` renders the `Class.TextBox.Text` string
@@ -416,7 +403,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.SelectionStart
     summary: |
       Determines the starting position of a text selection, or -1 if no text is
@@ -444,7 +430,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.ShowNativeInput
     summary: |
       If set to true, input native to the platform is used instead of Roblox's
@@ -466,7 +451,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.Text
     summary: |
       Determines the string rendered by the UI element.
@@ -506,7 +490,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.TextBounds
     summary: |
       The size of a UI element's text in offsets.
@@ -536,7 +519,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.TextColor
     summary: ''
     description: ''
@@ -559,7 +541,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.TextColor3
     summary: |
       Determines the color of rendered text.
@@ -595,7 +576,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.TextDirection
     summary: ''
     description: ''
@@ -613,7 +593,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.TextEditable
     summary: |
       Determines whether the user can change the `Class.TextBox.Text|Text`.
@@ -638,7 +617,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.TextFits
     summary: |
       Whether the text fits within the constraints of the TextBox.
@@ -660,7 +638,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.TextScaled
     summary: |
       Changes whether text is resized to fit the GUI object that renders it.
@@ -723,7 +700,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.TextSize
     summary: |
       Determine the line height of text in offsets.
@@ -746,7 +722,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.TextStrokeColor3
     summary: |
       Determines the color of the text stroke (outline).
@@ -774,7 +749,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.TextStrokeTransparency
     summary: |
       Determines the transparency of the text stroke (outline).
@@ -809,7 +783,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.TextTransparency
     summary: |
       Determines the transparency of rendered text.
@@ -846,7 +819,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.TextTruncate
     summary: |
       Controls the truncation of the text displayed in this TextBox.
@@ -866,7 +838,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.TextWrap
     summary: ''
     description: ''
@@ -888,7 +859,6 @@ properties:
       can_save: false
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.TextWrapped
     summary: |
       Determines if text wraps to multiple lines within the `Class.GuiObject`
@@ -921,7 +891,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.TextXAlignment
     summary: |
       Determines the horizontal alignment of rendered text.
@@ -953,7 +922,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.TextYAlignment
     summary: |
       Determines the vertical alignment of rendered text.
@@ -984,7 +952,6 @@ properties:
       can_save: true
     capabilities:
       - UI
-    writeCapabilities: []
 methods:
   - name: TextBox:CaptureFocus
     summary: |
@@ -1003,7 +970,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox:IsFocused
     summary: |
       Returns `true` if the `TextBox` is focused or `false` if it is not.
@@ -1020,7 +986,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox:ReleaseFocus
     summary: |
       Forces the client to unfocus the TextBox.
@@ -1061,7 +1026,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - UI
-    writeCapabilities: []
 events:
   - name: TextBox.FocusLost
     summary: |
@@ -1100,7 +1064,6 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.Focused
     summary: |
       Fires when the `Class.TextBox` gains focus.
@@ -1125,7 +1088,6 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
   - name: TextBox.ReturnPressedFromOnScreenKeyboard
     summary: ''
     description: ''
@@ -1136,5 +1098,4 @@ events:
     security: None
     capabilities:
       - UI
-    writeCapabilities: []
 callbacks: []

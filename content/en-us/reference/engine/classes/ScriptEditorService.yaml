@@ -39,7 +39,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ScriptEditorService:DeregisterScriptAnalysisCallback
     summary: |
       Removes a previously registered callback with the name `name`.
@@ -60,7 +59,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ScriptEditorService:FindScriptDocument
     summary: |
       Returns the open `Class.ScriptDocument` corresponding to the given
@@ -84,7 +82,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ScriptEditorService:GetEditorSource
     summary: |
       Returns the edit-time source for the given script.
@@ -111,7 +108,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ScriptEditorService:GetScriptDocuments
     summary: |
       Returns an array of the currently open script documents, including the
@@ -130,7 +126,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ScriptEditorService:OpenScriptDocumentAsync
     summary: |
       Requests that a Script Editor open the specified script. Returns (true,
@@ -163,7 +158,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ScriptEditorService:RegisterAutocompleteCallback
     summary: |
       Registers an autocomplete callback `callbackFunction` named `name` with
@@ -300,7 +294,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ScriptEditorService:RegisterScriptAnalysisCallback
     summary: |
       Registers a Script Analysis callback `callbackFunction` named `name` with
@@ -384,7 +377,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: ScriptEditorService:UpdateSourceAsync
     summary: |
       Generates new content from the old script and updates the script editor if
@@ -436,7 +428,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: ScriptEditorService.TextDocumentDidChange
     summary: |
@@ -461,7 +452,6 @@ events:
     deprecation_message: ''
     security: PluginSecurity
     capabilities: []
-    writeCapabilities: []
   - name: ScriptEditorService.TextDocumentDidClose
     summary: |
       Fires just before a `Class.ScriptDocument` object is destroyed, which
@@ -483,7 +473,6 @@ events:
     deprecation_message: ''
     security: PluginSecurity
     capabilities: []
-    writeCapabilities: []
   - name: ScriptEditorService.TextDocumentDidOpen
     summary: |
       Fires just after a `Class.ScriptDocument` object is created and parented
@@ -502,5 +491,4 @@ events:
     deprecation_message: ''
     security: PluginSecurity
     capabilities: []
-    writeCapabilities: []
 callbacks: []

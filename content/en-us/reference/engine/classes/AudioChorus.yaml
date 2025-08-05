@@ -42,7 +42,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioChorus.Depth
     summary: |
       Controls the maximum delay time of the copied streams in the chorus
@@ -65,7 +64,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioChorus.Mix
     summary: |
       Controls the balance of plain input stream to modified output stream.
@@ -86,7 +84,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioChorus.Rate
     summary: |
       Controls the rate of pitch modulations.
@@ -107,7 +104,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-    writeCapabilities: []
 methods:
   - name: AudioChorus:GetConnectedWires
     summary: |
@@ -131,7 +127,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioChorus:GetInputPins
     summary: ''
     description: ''
@@ -146,7 +141,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
   - name: AudioChorus:GetOutputPins
     summary: ''
     description: ''
@@ -161,7 +155,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Audio
-    writeCapabilities: []
 events:
   - name: AudioChorus.WiringChanged
     summary: |
@@ -199,5 +192,4 @@ events:
     security: None
     capabilities:
       - Audio
-    writeCapabilities: []
 callbacks: []

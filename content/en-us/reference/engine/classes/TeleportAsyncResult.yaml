@@ -48,7 +48,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: TeleportAsyncResult.ReservedServerAccessCode
     summary: |
       The access code of the reserved server that the players are being
@@ -76,7 +75,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

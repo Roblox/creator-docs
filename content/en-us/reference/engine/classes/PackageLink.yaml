@@ -36,7 +36,7 @@ properties:
       `Class.PackageLink` will be automatically updated to the latest version.
       By default this property will be false upon creation of a package.
 
-      This property would allows you to decide if a given package should be
+      This property would allow you to decide if a given package should be
       automatically updated to the latest version when entering a given place.
       The game will periodically check for new updates while a place is open.
     code_samples: []
@@ -52,7 +52,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: PackageLink.Creator
     summary: |
       The creator of the package asset.
@@ -74,7 +73,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: PackageLink.DefaultName
     summary: ''
     description: ''
@@ -91,7 +89,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: PackageLink.PackageAssetName
     summary: |
       The asset name of the package.
@@ -113,7 +110,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: PackageLink.PackageId
     summary: |
       The ID of the asset this package corresponds to.
@@ -134,7 +130,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: PackageLink.PermissionLevel
     summary: |
       The package permission for the current Studio user.
@@ -156,7 +151,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: PackageLink.SerializedDefaultAttributes
     summary: ''
     description: ''
@@ -173,7 +167,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-    writeCapabilities: []
   - name: PackageLink.Status
     summary: |
       The status of the package.
@@ -195,7 +188,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-    writeCapabilities: []
   - name: PackageLink.VersionNumber
     summary: |
       Refers to a revision of a specific package.
@@ -215,7 +207,6 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

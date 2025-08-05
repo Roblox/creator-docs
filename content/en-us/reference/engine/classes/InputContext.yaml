@@ -44,7 +44,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: InputContext.Priority
     summary: |
       The priority level at which the context should be run.
@@ -65,7 +64,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: InputContext.Sink
     summary: |
       Determines whether input bindings of lower priority will be processed.
@@ -93,7 +91,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

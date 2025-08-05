@@ -45,7 +45,6 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: TeleportService:GetArrivingTeleportGui
     summary: |
@@ -87,7 +86,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: TeleportService:GetLocalPlayerTeleportData
     summary: |
       Returns the _teleportData_ the `Class.Players.LocalPlayer` arrived into
@@ -112,7 +110,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: TeleportService:GetPlayerPlaceInstanceAsync
     summary: |
       Returns the `Class.DataModel.PlaceId|PlaceId` and
@@ -207,7 +204,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: TeleportService:GetTeleportSetting
     summary: |
       Retrieves a teleport setting saved using
@@ -285,7 +281,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: TeleportService:ReserveServer
     summary: |
       Returns an access code that can be used to teleport players to a reserved
@@ -354,7 +349,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: TeleportService:SetTeleportGui
     summary: |
       Sets the custom `Class.ScreenGui|teleport GUI` that will be shown to the
@@ -411,7 +405,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: TeleportService:SetTeleportSetting
     summary: |
       Stores a value under a given key that persists across all teleportations
@@ -499,7 +492,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: TeleportService:Teleport
     summary: |
       Teleports a `Class.Player` to the place associated with the given
@@ -545,7 +537,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: TeleportService:TeleportAsync
     summary: |
       The all-encompassing method to teleport a player or group of players from
@@ -644,7 +635,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: TeleportService:TeleportPartyAsync
     summary: |
       Teleports a group of `Class.Player|Players` to the same server of the
@@ -693,7 +683,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: TeleportService:TeleportToPlaceInstance
     summary: |
       Teleports a `Class.Player` to the server instance associated with the
@@ -748,7 +737,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: TeleportService:TeleportToPrivateServer
     summary: |
       Teleport a group of `Class.Player|Players` to a reserved server created
@@ -804,7 +792,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: TeleportService:TeleportToSpawnByName
     summary: |
       A variant of `Class.TeleportService:Teleport()` that causes the
@@ -855,7 +842,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events:
   - name: TeleportService.LocalPlayerArrivedFromTeleport
     summary: |
@@ -931,7 +917,6 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
   - name: TeleportService.TeleportInitFailed
     summary: |
       Fires when a teleport fails to start, leaving the player in their current
@@ -1028,5 +1013,4 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
-    writeCapabilities: []
 callbacks: []

@@ -74,7 +74,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: GlobalDataStore:IncrementAsync
     summary: |
       Increments the value of a key by the provided amount (both must be
@@ -129,7 +128,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: GlobalDataStore:OnUpdate
     summary: |
       Sets a callback function to be executed any time the value associated with
@@ -175,7 +173,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: GlobalDataStore:RemoveAsync
     summary: |
       Removes the specified key while also retaining an accessible version.
@@ -224,7 +221,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: GlobalDataStore:SetAsync
     summary: |
       Sets the value of the data store for the given key.
@@ -300,7 +296,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
   - name: GlobalDataStore:UpdateAsync
     summary: |
       Updates a key's value with a new value from the specified callback
@@ -400,6 +395,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DataStore
-    writeCapabilities: []
 events: []
 callbacks: []

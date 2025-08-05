@@ -40,7 +40,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
   - name: ConeHandleAdornment.Radius
     summary: |
       The radius of the cone adornment.
@@ -61,7 +60,6 @@ properties:
     capabilities:
       - Basic
       - UI
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

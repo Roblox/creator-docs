@@ -33,7 +33,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: PluginManagerInterface:ExportPlace
     summary: ''
     description: ''
@@ -51,7 +50,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: PluginManagerInterface:ExportSelection
     summary: ''
     description: ''
@@ -69,6 +67,5 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

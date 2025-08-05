@@ -41,7 +41,6 @@ properties:
       can_save: false
     capabilities:
       - Input
-    writeCapabilities: []
   - name: InputAction.Direction1DState
     summary: |
       Non-scriptable read-only property useful for debugging
@@ -67,7 +66,6 @@ properties:
       can_save: false
     capabilities:
       - Input
-    writeCapabilities: []
   - name: InputAction.Direction2DState
     summary: |
       Non-scriptable read-only property useful for debugging
@@ -93,7 +91,6 @@ properties:
       can_save: false
     capabilities:
       - Input
-    writeCapabilities: []
   - name: InputAction.Direction3DState
     summary: |
       Non-scriptable read-only property useful for debugging
@@ -119,7 +116,6 @@ properties:
       can_save: false
     capabilities:
       - Input
-    writeCapabilities: []
   - name: InputAction.Enabled
     summary: |
       Determines if the `InputAction` is enabled or not.
@@ -140,7 +136,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
   - name: InputAction.Type
     summary: |
       Specifies what type of input value the action is expecting.
@@ -161,7 +156,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-    writeCapabilities: []
 methods:
   - name: InputAction:Fire
     summary: |
@@ -202,7 +196,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
   - name: InputAction:GetState
     summary: |
       Returns the current state of the `Class.InputAction`.
@@ -222,7 +215,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Input
-    writeCapabilities: []
 events:
   - name: InputAction.Pressed
     summary: |
@@ -239,7 +231,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: InputAction.Released
     summary: |
       Fires only when the `Class.InputAction.Type` is set to
@@ -255,7 +246,6 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
   - name: InputAction.StateChanged
     summary: |
       Fires for all `Enum.InputActionType` types whenever the state changes,
@@ -275,5 +265,4 @@ events:
     security: None
     capabilities:
       - Input
-    writeCapabilities: []
 callbacks: []

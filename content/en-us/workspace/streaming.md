@@ -240,7 +240,13 @@ The **StreamOutBehavior** property sets the [streaming out](#stream-out) behavio
 
 By default, streaming occurs around the local player's character's `Class.Model.PrimaryPart|PrimaryPart`, although you can specify a different replication focus point through `Class.Player.ReplicationFocus`.
 
-You can also add and remove additional replication foci through `Class.Player:AddReplicationFocus()` and `Class.Player:RemoveReplicationFocus()` to dynamically enable streaming in multiple areas of the experience. Example use cases include:
+You can also add and remove additional replication foci through `Class.Player:AddReplicationFocus()` and `Class.Player:RemoveReplicationFocus()` to dynamically enable streaming in multiple areas of the experience.
+
+<Alert severity="warning">
+Use caution when adding additional replication foci as each additional focus increases the server's workload for streaming and updating regions. For example, a single player with nine dynamically moving foci could generate server networking and streaming processing comparable to ten players moving around the experience.
+
+On the client, too many foci for a player can limit the engine's ability to adjust to memory limitations and make it more likely for clients to be killed by the OS for using too much memory.
+</Alert>
 
 <Tabs>
 <TabItem label="Physics Simulation">

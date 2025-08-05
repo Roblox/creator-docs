@@ -43,7 +43,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: ControllerManager.BaseMoveSpeed
     summary: |
       The base linear movement speed used by all controllers.
@@ -65,7 +64,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: ControllerManager.BaseTurnSpeed
     summary: |
       The base angular turning speed used by all controllers.
@@ -86,7 +84,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: ControllerManager.ClimbSensor
     summary: |
       A reference to the sensor data used while a `Class.ClimbController` is
@@ -114,7 +111,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: ControllerManager.FacingDirection
     summary: |
       The unit vector describing the desired direction to face.
@@ -137,7 +133,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: ControllerManager.GroundSensor
     summary: |
       A reference to the sensor data used while a `Class.GroundController` is
@@ -165,7 +160,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: ControllerManager.MovingDirection
     summary: |
       The vector describing the desired direction to move in.
@@ -190,7 +184,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: ControllerManager.RootPart
     summary: |
       The `Class.BasePart` where the controller's forces and torques are
@@ -214,7 +207,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
   - name: ControllerManager.UpDirection
     summary: ''
     description: ''
@@ -232,7 +224,6 @@ properties:
       can_save: true
     capabilities:
       - Avatar
-    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

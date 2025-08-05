@@ -50,7 +50,6 @@ properties:
       can_load: false
       can_save: true
     capabilities: []
-    writeCapabilities: []
 methods:
   - name: Translator:FormatByKey
     summary: |
@@ -100,7 +99,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
   - name: Translator:Translate
     summary: |
       Returns the localized text string in a `Class.LocalizationTable` based on
@@ -249,6 +247,5 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-    writeCapabilities: []
 events: []
 callbacks: []

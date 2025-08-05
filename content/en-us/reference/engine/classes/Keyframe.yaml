@@ -72,7 +72,6 @@ properties:
       can_save: true
     capabilities:
       - Animation
-    writeCapabilities: []
 methods:
   - name: Keyframe:AddMarker
     summary: |
@@ -119,7 +118,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: Keyframe:AddPose
     summary: |
       Adds a `Class.Pose` to the `Class.Keyframe` by parenting it to the
@@ -150,7 +148,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: Keyframe:GetMarkers
     summary: |
       Returns an array containing all `KeyframeMarkers` that have been added to
@@ -191,7 +188,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: Keyframe:GetPoses
     summary: |
       Returns an array containing all `Class.Pose|Poses` that have been added to
@@ -212,7 +208,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: Keyframe:RemoveMarker
     summary: |
       Removes a `Class.KeyframeMarker` from the `Class.Keyframe` by settings its
@@ -261,7 +256,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
   - name: Keyframe:RemovePose
     summary: |
       Removes a `Class.Pose` from the `Class.Keyframe` by setting its
@@ -290,6 +284,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Animation
-    writeCapabilities: []
 events: []
 callbacks: []
