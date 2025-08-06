@@ -133,12 +133,11 @@ properties:
     description: ''
     code_samples: []
     type: AuthorityMode
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
     thread_safety: ReadSafe
     category: Server Authority
     serialization:

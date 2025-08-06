@@ -1057,14 +1057,28 @@ properties:
       - Players
 methods:
   - name: Player:AddReplicationFocus
-    summary: ''
-    description: ''
+    summary: |
+      Adds an additional replication focus for the player.
+    description: |
+      This method adds an additional replication focus for the player in order
+      to trigger streaming around the location of the specified `part`. In this
+      manner, streaming can occur around multiple locations, not just the
+      location of `Class.Player.ReplicationFocus`. This has no effect in
+      experiences that are not streaming enabled.
+
+      Additional foci will use the same values of
+      `Class.Workspace.StreamingMinRadius` and
+      `Class.Workspace.StreamingTargetRadius` as are used by the primary focus.
+
+      This method should only be called on the server. It has no effect when
+      called from a `Class.LocalScript`.
     code_samples: []
     parameters:
       - name: part
         type: BasePart
         default:
-        summary: ''
+        summary: |
+          The `Class.BasePart` to use as a new replication focus.
     returns:
       - type: ()
         summary: ''
@@ -1893,14 +1907,22 @@ methods:
     capabilities:
       - Players
   - name: Player:RemoveReplicationFocus
-    summary: ''
-    description: ''
+    summary: |
+      Removes a previously added replication focus.
+    description: |
+      This method removes a replication focus previously added by
+      `Class.Player:AddReplicationFocus()|AddReplicationFocus(). Has no effect
+      in experiences that are not streaming enabled.
+
+      This method should only be called on the server. It has no effect when
+      called from a `Class.LocalScript`.
     code_samples: []
     parameters:
       - name: part
         type: BasePart
         default:
-        summary: ''
+        summary: |
+          The `Class.BasePart` to remove as a replication focus.
     returns:
       - type: ()
         summary: ''

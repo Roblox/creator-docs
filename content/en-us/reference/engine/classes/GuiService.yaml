@@ -328,8 +328,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Data
     serialization:

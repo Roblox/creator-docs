@@ -103,7 +103,7 @@ Use the following parameters to query the Marketplace:
 
 The following URL will search for the first 10 "Gear" items in "Accessories" sorted by all-time ("SortAggregation") and relevance ("SortType") created by Roblox ("CreatorTargetId" and "CreatorType"):
 
-`https://catalog.roblox.com/v1/search/items/details?Category=11&Subcategory=5&CreatorTa[…]Id=1&CreatorType=User&SortType=0&SortAggregation=5&Limit=10`
+`https://catalog.roblox.com/v1/search/items/details?Category=11&Subcategory=5&CreatorTargetId=1&CreatorType=User&SortType=0&SortAggregation=5&Limit=10`
 
 ### Response fields
 

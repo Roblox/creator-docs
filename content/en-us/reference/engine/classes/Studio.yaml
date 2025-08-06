@@ -1333,22 +1333,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-  - name: Studio.FreeCameraSpeedScroll
-    summary: ''
-    description: ''
-    code_samples: []
-    type: boolean
-    tags: []
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
-    thread_safety: ReadSafe
-    category: Camera
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
   - name: Studio.Function Name Color
     summary: ''
     description: ''
