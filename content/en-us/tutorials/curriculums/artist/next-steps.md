@@ -6,15 +6,15 @@ prev: /tutorials/curriculums/artist/test-and-save
 
 <img src="../../../assets/education/build-it-play-it-mansion-of-wonder/invite-friends/hero-image.jpeg" />
 
-Congratulations on completing your first VFX art with Roblox Studio! Now that you have experience creating custom special effects with unique visuals and behavior, you can share your art with friends and extend your skills by learning about Studio's additional VFX features.
+Congratulations on completing your first VFX art with Roblox Studio! Now that you have experience creating custom special effects with unique visuals and behavior, you can share your art with others and extend your skills by learning about Studio's additional VFX features.
 
-## Share with friends
+## Share with others
 
-When you first publish an experience, it's automatically set to **private** so that you are the only one who can play your game. However, creating on Roblox is always more fun when you can share what you make with your friends, so let's set up your experience so that others can play too.
+When you first publish an experience, it's automatically set to **private** so that you are the only one who can play your game. However, creating on Roblox is always more fun when you can share what you make with others, so let's set up your experience so that they can play too.
 
 To make your experience public:
 
-1. Using the steps from the last chapter, publish your experience so your friends can see your latest changes.
+1. Using the steps from the last chapter, publish your experience so others can see your latest changes.
 
 1. In the top-left corner of your computer, click **File** > **Game Settings**. The **Game Settings** window displays.
 

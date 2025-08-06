@@ -99,7 +99,6 @@
             "in": "query",
             "description": "The User ID of the creator. Only one of 'userId' and 'groupId' can be present in a query.",
             "schema": {
-              "maximum": 2147483647,
               "minimum": 1,
               "type": "integer",
               "format": "int64",
@@ -111,7 +110,6 @@
             "in": "query",
             "description": "The Group ID of the creator. Only one of 'userId' and 'groupId' can be present in a query.",
             "schema": {
-              "maximum": 2147483647,
               "minimum": 1,
               "type": "integer",
               "format": "int64",
@@ -249,6 +247,15 @@
             }
           },
           {
+            "name": "includeTopCharts",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false,
+              "nullable": true
+            }
+          },
+          {
             "name": "audioTypes",
             "in": "query",
             "description": "When searching for audio, the type of the audio assets.",
@@ -346,12 +353,20 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "429": {
+            "description": "Too Many Requests",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SearchFilteredErrorModel"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ProblemDetails"
+                    },
+                    {
+                      "$ref": "#/components/schemas/HttpValidationProblemDetails"
+                    }
+                  ],
+                  "nullable": true
                 }
               }
             }
@@ -400,12 +415,20 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Success",
+          "429": {
+            "description": "Too Many Requests",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CreatorStoreAsset"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ProblemDetails"
+                    },
+                    {
+                      "$ref": "#/components/schemas/HttpValidationProblemDetails"
+                    }
+                  ],
+                  "nullable": true
                 }
               }
             }
@@ -808,6 +831,31 @@
         },
         "additionalProperties": false,
         "description": "Response from the HomeController's Assets endpoints",
+        "nullable": true
+      },
+      "HttpValidationProblemDetails": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ProblemDetails"
+          }
+        ],
+        "properties": {
+          "errors": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "nullable": true
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "nullable": true
+        },
         "nullable": true
       },
       "ISearchDebugInfo": {
@@ -1213,6 +1261,36 @@
         "description": "Representation of a plugin asset.",
         "nullable": true
       },
+      "ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "nullable": true
+        },
+        "nullable": true
+      },
       "QueryFacets": {
         "type": "object",
         "properties": {
@@ -1444,52 +1522,15 @@
             "type": "integer",
             "description": "The total number of results for the given search query.",
             "format": "int64"
-          }
-        },
-        "additionalProperties": false,
-        "description": "The response for the SearchCreatorStoreAssets endpoint.",
-        "nullable": true
-      },
-      "SearchFilteredErrorModel": {
-        "type": "object",
-        "properties": {
-          "error": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ToolboxError"
-              }
-            ],
-            "description": "The error code indicating the type of error.",
-            "x-enumNames": [
-              "Unknown",
-              "ComplianceSystemError",
-              "LuobuSearchEmergencyShutoff",
-              "UnsupportedAssetType",
-              "SearchQueryFiltered"
-            ],
-            "x-enum-varnames": [
-              "Unknown",
-              "ComplianceSystemError",
-              "LuobuSearchEmergencyShutoff",
-              "UnsupportedAssetType",
-              "SearchQueryFiltered"
-            ],
-            "x-enum-descriptions": [
-              "Unknown",
-              "ComplianceSystemError",
-              "LuobuSearchEmergencyShutoff",
-              "UnsupportedAssetType",
-              "SearchQueryFiltered"
-            ]
           },
           "filteredKeyword": {
             "type": "string",
-            "description": "The filtered version of the search query.",
+            "description": "The filtered keyword that was used to search for assets, if applicable.",
             "nullable": true
           }
         },
         "additionalProperties": false,
-        "description": "Error model for filtered search queries.",
+        "description": "The response for the SearchCreatorStoreAssets endpoint.",
         "nullable": true
       },
       "SearchView": {
@@ -2017,38 +2058,6 @@
         },
         "additionalProperties": false,
         "nullable": true
-      },
-      "ToolboxError": {
-        "enum": [
-          "Unknown",
-          "ComplianceSystemError",
-          "LuobuSearchEmergencyShutoff",
-          "UnsupportedAssetType",
-          "SearchQueryFiltered"
-        ],
-        "type": "string",
-        "description": "Errors for Toolbox.Service.ToolboxServiceController.",
-        "x-enumNames": [
-          "Unknown",
-          "ComplianceSystemError",
-          "LuobuSearchEmergencyShutoff",
-          "UnsupportedAssetType",
-          "SearchQueryFiltered"
-        ],
-        "x-enum-varnames": [
-          "Unknown",
-          "ComplianceSystemError",
-          "LuobuSearchEmergencyShutoff",
-          "UnsupportedAssetType",
-          "SearchQueryFiltered"
-        ],
-        "x-enum-descriptions": [
-          "Unknown",
-          "ComplianceSystemError",
-          "LuobuSearchEmergencyShutoff",
-          "UnsupportedAssetType",
-          "SearchQueryFiltered"
-        ]
       },
       "ToolboxItem": {
         "type": "object",

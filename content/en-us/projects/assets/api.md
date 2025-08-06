@@ -41,17 +41,17 @@ Use the following parameters to query the Marketplace:
   <tr>
     <td>CreatorType</td>
     <td>byte</td>
-    <td>`1` = User<br />`2` = Group</td>
+    <td>`1` = User<br />`2` = Group<br /><br />Queries using `CreatorType` also require the `CreatorTargetId` parameter.</td>
+  </tr>
+  <tr>
+    <td>CreatorTargetId</td>
+    <td>long</td>
+    <td>The user or group ID depending on the CreatorType provided.<br /><br />Queries using `CreatorTargetId` also require the `CreatorType` parameter.</td>
   </tr>
   <tr>
     <td>CreatorName</td>
     <td>string</td>
     <td>Search by creator name. If `Enum.CreatorType` is not provided, search is for users only.</td>
-  </tr>
-  <tr>
-    <td>CreatorTargetId</td>
-    <td>long</td>
-    <td>The user or group ID depending on the CreatorType provided.</td>
   </tr>
   <tr>
     <td>Cursor</td>
@@ -101,9 +101,9 @@ Use the following parameters to query the Marketplace:
 </tbody>
 </table>
 
-The following URL will search for the first 10 "Gear" items in "Accessories" sorted by all-time ("SortAggregation") and relevance ("SortType") created by Roblox ("CreatorTargetId"):
+The following URL will search for the first 10 "Gear" items in "Accessories" sorted by all-time ("SortAggregation") and relevance ("SortType") created by Roblox ("CreatorTargetId" and "CreatorType"):
 
-`https://catalog.roblox.com/v1/search/items/details?Category=11&Subcategory=5&CreatorTargetId=1&SortType=0&SortAggregation=5&Limit=10`
+`https://catalog.roblox.com/v1/search/items/details?Category=11&Subcategory=5&CreatorTa[…]Id=1&CreatorType=User&SortType=0&SortAggregation=5&Limit=10`
 
 ### Response fields
 

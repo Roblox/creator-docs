@@ -318,7 +318,9 @@ navigation:
     section:
       - title: Overview
         path: /input/
-      - title: Mouse and keyboard
+      - title: Input Action System
+        path: /input/input-action-system
+      - title: Mouse & keyboard
         path: /input/mouse-and-keyboard
       - title: Mobile
         path: /input/mobile
