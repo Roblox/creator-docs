@@ -3,7 +3,7 @@ title: Experience guidelines
 description: Explains how to provide accurate descriptions of experiences to determine accurate experience ratings.
 ---
 
-**Experience guidelines** provide information on the experience's main page about what kind of content the experience contains so that players can make informed decisions about what they interact with. Roblox uses this information to recommend experiences on the [Home](https://www.roblox.com/home) and [Discover](https://www.roblox.com/discover) pages according to each user's age group and regional content policies.
+**Experience guidelines** provide information on the experience's main page about what kind of content the experience contains so that players can make informed decisions about what they interact with. Roblox uses this information to recommend experiences on the [Home](https://www.roblox.com/home) and [Charts](https://www.roblox.com/charts#/) pages according to each user's age group and regional content policies.
 
 Experience guidelines consist of two components:
 
