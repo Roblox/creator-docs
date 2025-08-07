@@ -86,6 +86,7 @@ To create an ad campaign with the new Ads Manager:
 2. Under **Experience**, select the experience you want players to join when they click on your ad.
 3. Under **Goal & Name**, enter a campaign name and select one of the following goals for the campaign:
     - **Maximize Plays** to get the most plays at the lowest cost.
+    - **Acquire New Users** to reach players who have either never played your experience before or who haven't played it in the last 180 days.
     - **Drive Retention** to turn visitors into regulars by re-engaging recent new players.
     - **Reactivate Users** to reach players who have played your experience in the last 180 days but who haven't played in the last 30 days.
 4. Under **Budget & Schedule**:

@@ -4,15 +4,15 @@ description: Explains ways to continue learning about building in Studio.
 prev: /tutorials/curriculums/building/test-and-save
 ---
 
-Congratulations on building your first obby with Roblox Studio! Now that you have experience creating and customizing basic parts with unique visuals and behavior, you can share your creation with friends and extend your skills by learning about Studio's additional building features.
+Congratulations on building your first obby with Roblox Studio! Now that you have experience creating and customizing basic parts with unique visuals and behavior, you can share your creation with others and extend your skills by learning about Studio's additional building features.
 
-## Share with friends
+## Share with others
 
-When you first publish an experience, it's automatically set to **private** so that you are the only one who can play your game. However, creating on Roblox is always more fun when you can share what you make with your friends, so let's set up your experience so that others can play too.
+When you first publish an experience, it's automatically set to **private** so that you are the only one who can play your game. However, creating on Roblox is always more fun when you can share what you make with others, so let's set up your experience so that they can play too.
 
 To make your experience public:
 
-1. Using the steps from the last chapter, publish your experience so your friends can see your latest changes.
+1. Using the steps from the last chapter, publish your experience so others can see your latest changes.
 
 1. In the top-left corner of your computer, click **File** > **Game Settings**. The **Game Settings** window displays.
 

@@ -129,7 +129,7 @@ While all controls are introduced in the experience, here's a quick reference.
 <p><strong>Move Forward</strong></p>
 </td>
 <td>
-<p><kbd>W</kbd> or Up Arrow</p>
+<p><kbd>W</kbd> or <kbd>↑</kbd></p>
 </td>
 </tr>
 <tr>
@@ -137,7 +137,7 @@ While all controls are introduced in the experience, here's a quick reference.
 <p><strong>Move Backward</strong></p>
 </td>
 <td>
-<p><kbd>S</kbd>  or Down Arrow</p>
+<p><kbd>S</kbd> or <kbd>↓</kbd></p>
 </td>
 </tr>
 <tr>
@@ -145,7 +145,7 @@ While all controls are introduced in the experience, here's a quick reference.
 <p><strong>Move Left</strong></p>
 </td>
 <td>
-<p><kbd>A</kbd> or Left Arrow</p>
+<p><kbd>A</kbd></p>
 </td>
 </tr>
 <tr>
@@ -153,7 +153,7 @@ While all controls are introduced in the experience, here's a quick reference.
 <p><strong>Move Right</strong></p>
 </td>
 <td>
-<p><kbd>D</kbd> or Right Arrow</p>
+<p><kbd>D</kbd></p>
 </td>
 </tr>
 <tr>

@@ -132,8 +132,6 @@ When blocking in UI elements for your layouts, consider the following:
 - Interacting with UI that are far from the bottom corners of some mobile and tablet devices is either uncomfortable or impossible. **Place interactive elements in easy-to-reach zones** near the natural resting position for thumbs.
 - When players navigate through your environment, the 3D space can become distracting from your on-screen UI. **Test your layouts against a variety of possible backgrounds** to ensure your on-screen UI elements remain clear and legible.
 
-For more information on what to consider as you design and block in your UI elements for multiple devices, see [Positioning and Sizing - Cross-Platform Factors](../../../ui/position-and-size.md#cross-platform-factors).
-
 ## Develop user flows
 
 A user flow is a collection of paths that players can take in an experience to complete a task, such as to choose a weapon, purchase an item, or heal a character. User flows typically start where you expect players to begin the task, and finish with the final action or achievement players reach at the end of the task. In addition, effective user flows also account for unusual paths players may want to take on their own to achieve the same goal.

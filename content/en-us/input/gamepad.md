@@ -4,140 +4,28 @@ description: Explains how to accept input from USB gamepads, such as Xbox and Pl
 ---
 
 import ControllerEmulator from '../includes/studio/controller-emulator.md'
-import BetaAlert from '../includes/beta-features/beta-alert.md'
 
-Roblox accepts input from USB gamepads such as Xbox and PlayStation controllers. Since gamepads come in different varieties, you need to follow additional setup to verify that a player's gamepad inputs are usable in your experience.
-
-To set up gamepad inputs, you can use `Class.UserInputService` to [detect connected gamepads](#detect-gamepads) for a player's device, [verify supported inputs](#verify-supported-inputs) that are compatible with Roblox, [receive input](#receive-input), and more.
+Roblox accepts input from gamepads such as Xbox and PlayStation controllers. To simplify cross‑platform inputs, including gamepads, Roblox provides the [Input Action System](../input/input-action-system.md) to define **actions** such as "jump," "sprint," or "shoot" and set up **bindings** for multiple hardware inputs to drive those actions.
 
 When binding gamepad inputs, see [common control schemas](#common-control-schemas) to create a consistent gamepad experience for players. After inputs are set, you can enhance the player's experience by including [haptic feedback](#haptic-feedback) on supported controllers.
 
-## Detect gamepads
+As you build out support for gamepads, remember to test frequently using a connected gamepad or the [Controller&nbsp;Emulator](#controller-emulation) in Studio.
 
-You can detect whether a player's device currently has a gamepad active using the `Class.UserInputService.GamepadEnabled` property.
+## Input type detection
 
-```lua title="Detecting Gamepad"
-local UserInputService = game:GetService("UserInputService")
+In cross‑platform development, it's important that you determine and respond to the `Class.UserInputService.PreferredInput|PreferredInput` type a player is using, normally to ensure that [UI&nbsp;elements](../ui/index.md#ui-objects) like on-screen buttons and menus work elegantly and support interaction across devices.
 
-if UserInputService.GamepadEnabled then
-	print("Player has gamepad enabled...")
-end
-```
+For example, a console assumes that gamepads are the default input, but a player on PC or laptop may also choose to connect a bluetooth gamepad. In this case, mouse/keyboard remains a valid input for that player, but you can assume they want to switch to the connected gamepad as the **primary** input type.
 
-You can check for connected gamepads via `Class.UserInputService.GamepadConnected` and `Class.UserInputService.GamepadDisconnected` events. These events fire when a device is connected or disconnected respectively, and both events pass a `Enum.UserInputType` to the connected function indicating which gamepad caused the event. In most cases, the connected gamepad is `Enum.UserInputType|Gamepad1`.
+See [input type detection](./index.md#input-type-detection) for more information.
 
-```lua title="Checking Connection and Disconnection"
-local UserInputService = game:GetService("UserInputService")
-
-UserInputService.GamepadConnected:Connect(function(gamepad)
-	print("User has connected controller: " .. tostring(gamepad))
-end)
-
-UserInputService.GamepadDisconnected:Connect(function(gamepad)
-	print("User has disconnected controller: " .. tostring(gamepad))
-end)
-```
-
-You can also query whether a particular controller is connected using the `Class.UserInputService:GetGamepadConnected()` method. This takes a `Enum.UserInputType` as an argument and only accepts values of `Enum.UserInputType|Gamepad1` through `Enum.UserInputType|Gamepad8`.
-
-```lua title="Query Specific Gamepad Connection"
-local UserInputService = game:GetService("UserInputService")
-
-if UserInputService:GetGamepadConnected(Enum.UserInputType.Gamepad1) then
-	print("Gamepad1 is connected")
-elseif UserInputService:GetGamepadConnected(Enum.UserInputType.Gamepad2) then
-	print("Gamepad2 is connected")
-end
-```
-
-## Verify supported inputs
-
-Since gamepads can have different sets of inputs, you should check which inputs are supported with `Class.UserInputService:GetSupportedGamepadKeyCodes()`. This method takes a `Enum.UserInputType` as an argument and returns a table with a list of all available inputs for the specified controller.
-
-```lua title="Verifying Supported Inputs"
-local UserInputService = game:GetService("UserInputService")
-
-local availableInputs = UserInputService:GetSupportedGamepadKeyCodes(Enum.UserInputType.Gamepad2)
-
-print("This controller supports the following controls:")
-for _, control in availableInputs do
-	print(control)
-end
-```
-
-## Receive input
-
-You can use `Class.UserInputService` to bind controls directly from a gamepad. When detecting gamepad events through this service, use the `Class.UserInputService.InputBegan|InputBegan` event to detect when the button was initially pressed and `Class.UserInputService.InputEnded|InputEnded` to detect when the button is released. In the handling function, the `Class.InputObject.UserInputType` property indicates which gamepad fired the event and `Class.InputObject.KeyCode` indicates the specific button or stick that fired it.
-
-```lua title="UserInputService Button Press Detection"
-local UserInputService = game:GetService("UserInputService")
-
-UserInputService.InputBegan:Connect(function(input)
-	if input.UserInputType == Enum.UserInputType.Gamepad1 then
-		if input.KeyCode == Enum.KeyCode.ButtonA then
-			print("Button A pressed on Gamepad1")
-		end
-	end
-end)
-```
-
-### Gamepad state
-
-You can detect the current state of all buttons and sticks on a gamepad with the `Class.UserInputService:GetGamepadState()` method. This is useful if you need to check the current gamepad inputs when a distinct event occurs in your experience, such as checking if specific buttons are being pressed when a character touches an object.
-
-```lua title="Checking State of Gamepad Inputs"
-local Players = game:GetService("Players")
-local UserInputService = game:GetService("UserInputService")
-
-local player = Players.LocalPlayer
-local character = player.Character or player.CharacterAdded:Wait()
-local leftFoot = character:WaitForChild("LeftFoot")
-
--- When left foot comes into contact with something, check the gamepad input state
-leftFoot.Touched:Connect(function(hit)
-	local state = UserInputService:GetGamepadState(Enum.UserInputType.Gamepad1)
-	for _, input in state do
-
-		-- If the ButtonR2 is currently held, print out a message
-		if input.KeyCode == Enum.KeyCode.ButtonR2 and input.UserInputState == Enum.UserInputState.Begin then
-			print("Character's left foot touched something while holding right trigger")
-		end
-	end
-end)
-```
-
-### Trigger pressure
-
-You can detect how much pressure is being placed on gamepad triggers by checking the `Class.InputObject.Position|Position.Z` value of the input trigger.
-
-```lua title="Testing Trigger Pressure"
-local UserInputService = game:GetService("UserInputService")
-
-UserInputService.InputChanged:Connect(function(input)
-	if input.UserInputType == Enum.UserInputType.Gamepad1 then
-		if input.KeyCode == Enum.KeyCode.ButtonL2 then
-			print("Pressure on left trigger has changed:", input.Position.Z)
-		elseif input.KeyCode == Enum.KeyCode.ButtonR2 then
-			print("Pressure on right trigger has changed:", input.Position.Z)
-		end
-	end
-end)
-```
+<Alert severity="info">
+For alternative gamepad detection methods, see the `Class.UserInputService.GamepadEnabled` property and the `Class.UserInputService.GamepadConnected|GamepadConnected`/`Class.UserInputService.GamepadDisconnected|GamepadDisconnected` events.
+</Alert>
 
 ## Common control schemas
 
-Gamepads come in a variety of shapes and sizes. As with any method of player input, it's best to create some consistency across different games and experiences.
-
-<Tabs>
-  <TabItem label="Xbox">
-    <img src="../assets/scripting/input/Gamepad-Inputs-Xbox.png" width="860" height="510" />
-  </TabItem>
-  <TabItem label="PlayStation">
-    <img src="../assets/scripting/input/Gamepad-Inputs-PS.png" width="860" height="510" />
-  </TabItem>
-</Tabs>
-
-The following are common input binds that will help players immediately feel familiar and comfortable with the gamepad controls:
+When considering specific control bindings for the [Input Action System](../input/input-action-system.md), it's best to establish consistency across different games and experiences. The following input bindings will help players immediately feel familiar and comfortable with gamepad controls.
 
 <table>
 <thead>
@@ -173,6 +61,15 @@ The following are common input binds that will help players immediately feel fam
   </tr>
 </tbody>
 </table>
+
+<Tabs>
+  <TabItem label="Xbox">
+    <img src="../assets/scripting/input/Gamepad-Inputs-Xbox.png" width="860" height="510" />
+  </TabItem>
+  <TabItem label="PlayStation">
+    <img src="../assets/scripting/input/Gamepad-Inputs-PS.png" width="860" height="510" />
+  </TabItem>
+</Tabs>
 
 ## Haptic feedback
 

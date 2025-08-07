@@ -44,6 +44,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "creator-store-product:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Monetization",
           "methodProperties": {
@@ -108,6 +114,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "creator-store-product:read"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Monetization",
           "methodProperties": {
@@ -198,6 +210,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "creator-store-product:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Monetization",
           "methodProperties": {
@@ -357,6 +375,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": true
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "group:read"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
@@ -434,6 +458,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": true
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "group:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
@@ -511,6 +541,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": true
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "group:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
@@ -689,6 +725,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": true
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "group:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
@@ -776,6 +818,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": true
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required to view permissions in non-guest roles.",
+            "name": "group:read"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
@@ -849,6 +897,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": true
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required to view permissions in non-guest roles.",
+            "name": "group:read"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
@@ -913,6 +967,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": true
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required to view the group shout if a guest cannot view the group shout.",
+            "name": "group:read"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
@@ -1058,6 +1118,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Universes and places",
           "methodProperties": {
@@ -1160,6 +1226,12 @@
             "maxInPeriod": 5000
           }
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe-datastores.control:list"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -1267,6 +1339,12 @@
             "maxInPeriod": 5000
           }
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe-datastores.objects:list"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -1356,6 +1434,12 @@
             "maxInPeriod": 5000
           }
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe-datastores.objects:create"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -1432,6 +1516,12 @@
             "maxInPeriod": 1000
           }
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe-datastores.objects:read"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -1500,6 +1590,12 @@
             "maxInPeriod": 1000
           }
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe-datastores.objects:delete"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -1593,6 +1689,12 @@
             "maxInPeriod": 1000
           }
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe-datastores.objects:update"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -1679,6 +1781,16 @@
             "maxInPeriod": 5000
           }
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe-datastores.objects:create"
+          },
+          {
+            "description": "Required",
+            "name": "universe-datastores.objects:update"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -1789,6 +1901,12 @@
             "maxInPeriod": 1000
           }
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe-datastores.versions:list"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -1905,6 +2023,12 @@
             "maxInPeriod": 5000
           }
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe-datastores.objects:list"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -2003,6 +2127,12 @@
             "maxInPeriod": 5000
           }
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe-datastores.objects:create"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -2088,6 +2218,12 @@
             "maxInPeriod": 1000
           }
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe-datastores.objects:read"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -2165,6 +2301,12 @@
             "maxInPeriod": 1000
           }
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe-datastores.objects:delete"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -2267,6 +2409,12 @@
             "maxInPeriod": 1000
           }
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe-datastores.objects:update"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -2362,6 +2510,16 @@
             "maxInPeriod": 5000
           }
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe-datastores.objects:create"
+          },
+          {
+            "description": "Required",
+            "name": "universe-datastores.objects:update"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -2481,6 +2639,12 @@
             "maxInPeriod": 5000
           }
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe-datastores.versions:list"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -2549,6 +2713,12 @@
             "maxInPeriod": 60
           }
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe-datastores.control:snapshot"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -2610,6 +2780,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.place.luau-execution-session:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Luau execution",
           "methodProperties": {
@@ -2686,6 +2862,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.memory-store.queue:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -2756,6 +2938,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.memory-store.queue:discard"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -2850,6 +3038,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.memory-store.queue:dequeue"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -2955,6 +3149,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.memory-store.sorted-map:read"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -3043,6 +3243,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.memory-store.sorted-map:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -3118,6 +3324,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.memory-store.sorted-map:read"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -3185,6 +3397,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.memory-store.sorted-map:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -3277,6 +3495,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.memory-store.sorted-map:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -3352,6 +3576,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.memory-store:flush"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -3473,6 +3703,12 @@
             "maxInPeriod": 100
           }
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.ordered-data-store.scope.entry:read"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -3571,6 +3807,12 @@
             "maxInPeriod": 500
           }
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.ordered-data-store.scope.entry:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -3656,6 +3898,12 @@
             "maxInPeriod": 100
           }
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.ordered-data-store.scope.entry:read"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -3733,6 +3981,12 @@
             "maxInPeriod": 500
           }
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.ordered-data-store.scope.entry:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -3835,6 +4089,12 @@
             "maxInPeriod": 500
           }
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.ordered-data-store.scope.entry:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -3930,6 +4190,12 @@
             "maxInPeriod": 500
           }
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.ordered-data-store.scope.entry:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
@@ -4080,6 +4346,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.place:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Universes and places",
           "methodProperties": {
@@ -4170,6 +4442,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.place.instance:read"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Universes and places",
           "methodProperties": {
@@ -4270,6 +4548,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.place.instance:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Universes and places",
           "methodProperties": {
@@ -4376,6 +4660,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.place.instance:read"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Universes and places",
           "methodProperties": {
@@ -4452,6 +4742,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.place.luau-execution-session:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Luau execution",
           "methodProperties": {
@@ -4541,6 +4837,23 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute.",
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 150
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "maxInPeriod": 30
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.user-restriction:read"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
@@ -4552,16 +4865,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "SECOND",
-            "maxInPeriod": 150
-          },
-          "perOauth2Authorization": {
-            "period": "SECOND",
-            "maxInPeriod": 30
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -4623,6 +4926,23 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute.",
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 150
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "maxInPeriod": 30
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.user-restriction:read"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
@@ -4634,16 +4954,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "SECOND",
-            "maxInPeriod": 150
-          },
-          "perOauth2Authorization": {
-            "period": "SECOND",
-            "maxInPeriod": 30
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -4740,6 +5050,23 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute.",
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 150
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "maxInPeriod": 30
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.user-restriction:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
@@ -4751,16 +5078,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "SECOND",
-            "maxInPeriod": 150
-          },
-          "perOauth2Authorization": {
-            "period": "SECOND",
-            "maxInPeriod": 30
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -4832,6 +5149,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.place.luau-execution-session:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Luau execution",
           "methodProperties": {
@@ -4936,6 +5259,16 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.place.luau-execution-session:read"
+          },
+          {
+            "description": "Required",
+            "name": "universe.place.luau-execution-session:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Luau execution",
           "methodProperties": {
@@ -5066,6 +5399,16 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.place.luau-execution-session:read"
+          },
+          {
+            "description": "Required",
+            "name": "universe.place.luau-execution-session:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Luau execution",
           "methodProperties": {
@@ -5155,6 +5498,16 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe:write"
+          },
+          {
+            "description": "Required",
+            "name": "universe.subscription-product.subscription:read"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Monetization",
           "methodProperties": {
@@ -5245,6 +5598,23 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute.",
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 150
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "maxInPeriod": 30
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.user-restriction:read"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
@@ -5256,16 +5626,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "SECOND",
-            "maxInPeriod": 150
-          },
-          "perOauth2Authorization": {
-            "period": "SECOND",
-            "maxInPeriod": 30
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -5318,6 +5678,23 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute.",
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 150
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "maxInPeriod": 30
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.user-restriction:read"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
@@ -5329,16 +5706,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "SECOND",
-            "maxInPeriod": 150
-          },
-          "perOauth2Authorization": {
-            "period": "SECOND",
-            "maxInPeriod": 30
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -5426,6 +5793,23 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute.",
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 150
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "maxInPeriod": 30
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.user-restriction:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
@@ -5437,16 +5821,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "SECOND",
-            "maxInPeriod": 150
-          },
-          "perOauth2Authorization": {
-            "period": "SECOND",
-            "maxInPeriod": 30
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -5521,6 +5895,23 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-rate-limits": {
+          "description": "User Restrictions are subject to the additional rate limits, applied per universe\n\n* Get User Restriction: 50 req/s\n* List User Restrictions: 50 req/s\n* Update User Restrictions: 10 req/s\n* List User Restriction Logs: 50 req/s\n\nAdditionally, we impose the following rate limit for the same user within a universe:\n\n* Update User Restriction: 2 req/min\n\nFor example, Update User Restriction may not be called for user 123 more than twice every minute.",
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 150
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "maxInPeriod": 30
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe.user-restriction:read"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
@@ -5532,16 +5923,6 @@
           }
         },
         "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "SECOND",
-            "maxInPeriod": 150
-          },
-          "perOauth2Authorization": {
-            "period": "SECOND",
-            "maxInPeriod": 30
-          }
-        },
         "security": [
           {
             "roblox-api-key": []
@@ -5595,6 +5976,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Universes and places",
           "methodProperties": {
@@ -5677,6 +6064,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Universes and places",
           "methodProperties": {
@@ -5745,6 +6138,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe-messaging-service:publish"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Universes and places",
           "methodProperties": {
@@ -5819,6 +6218,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Universes and places",
           "methodProperties": {
@@ -5883,6 +6288,16 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Grants access to read a user&#x27;s verification status.",
+            "name": "user.advanced:read"
+          },
+          {
+            "description": "Grants access to read a user&#x27;s social account information.",
+            "name": "user.social:read"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
@@ -5978,6 +6393,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "asset:read"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
@@ -6073,6 +6494,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": true
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Grants access to read the target user&#x27;s private inventory.",
+            "name": "user.inventory-item:read"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
@@ -6147,6 +6574,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "user.user-notification:write"
+          }
+        ],
         "x-roblox-docs": {
           "category": "Users and groups",
           "methodProperties": {
@@ -6538,6 +6971,14 @@
             "type": "string",
             "description": "The timestamp when the data store was created.",
             "format": "date-time"
+          },
+          "state": {
+            "readOnly": true,
+            "example": "STATE_UNSPECIFIED",
+            "enum": ["STATE_UNSPECIFIED", "ACTIVE"],
+            "type": "string",
+            "description": "The state of the data store.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | STATE_UNSPECIFIED | The default value. This value is used if the state is omitted. |\n  | ACTIVE | The data store is active. |",
+            "format": "enum"
           },
           "id": {
             "readOnly": true,
@@ -9162,7 +9603,23 @@
             "authorizationUrl": "https://apis.roblox.com/oauth/v1/authorize",
             "tokenUrl": "https://apis.roblox.com/oauth/v1/token",
             "refreshUrl": "https://apis.roblox.com/oauth/v1/token",
-            "scopes": {}
+            "scopes": {
+              "creator-store-product:write": "creator-store-product:write",
+              "creator-store-product:read": "creator-store-product:read",
+              "group:read": "group:read",
+              "group:write": "group:write",
+              "universe:write": "universe:write",
+              "universe.place:write": "universe.place:write",
+              "universe.user-restriction:read": "universe.user-restriction:read",
+              "universe.user-restriction:write": "universe.user-restriction:write",
+              "universe.subscription-product.subscription:read": "universe.subscription-product.subscription:read",
+              "universe-messaging-service:publish": "universe-messaging-service:publish",
+              "user.advanced:read": "user.advanced:read",
+              "user.social:read": "user.social:read",
+              "asset:read": "asset:read",
+              "user.inventory-item:read": "user.inventory-item:read",
+              "user.user-notification:write": "user.user-notification:write"
+            }
           }
         }
       }

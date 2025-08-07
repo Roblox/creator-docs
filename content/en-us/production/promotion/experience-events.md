@@ -16,30 +16,33 @@ In addition to events, the integrated [update announcements](#announce-experienc
 To create an event, you must have the [Edit all group experiences](../../projects/groups.md#roles-and-permissions) permission in a [group‑owned](../../projects/groups.md) experience, or be the sole owner of a user‑owned experience. Currently, you can publish a maximum of 10 ongoing or upcoming events.
 
 1. Navigate to an experience's page on the [Creator Dashboard][creatordashboard].
-2. In the left column, expand the **Engagement** branch and click **Events&nbsp;&amp;&nbsp;Updates**.
-3. Click the **Create Event or Update** button.
-4. Add a **thumbnail** to promote your event. If you don't add any thumbnails for the event, the primary [experience thumbnail](../publishing/thumbnails.md) will be used instead.
+1. In the left column, expand the **Engagement** branch and click **Events&nbsp;&amp;&nbsp;Updates**.
+1. Click the **Create Event or Update** button.
+1. Add a **thumbnail** to promote your event. If you don't add any thumbnails for the event, the primary [experience thumbnail](../publishing/thumbnails.md) will be used instead.
 
    <Alert severity="success">
    Using a unique event thumbnail that is different from your experience thumbnails will help to increase player engagement with the event.
 	 </Alert>
 
-5. Select an event **category** that most accurately describes your event. The category may be shown alongside your event thumbnail in certain places on Roblox.
+1. Select an event **category** that most accurately describes your event. The category may be shown alongside your event thumbnail in certain places on Roblox.
 
-6. Enter the event title, subtitle, and description. The description is optional but it can help provide additional information about the details of your event. If you supply a description, it should follow general [best practices](../../production/publishing/publish-experiences-and-places.md#metadata-best-practices) and accurately portray the event, including:
+1. Enter the event title, subtitle, and description. The description is optional but it can help provide additional information about the details of your event. If you supply a description, it should follow general [best practices](../../production/publishing/publish-experiences-and-places.md#metadata-best-practices) and accurately portray the event, including:
 
    - A summary of the event and how it relates to the overall experience. If you're using the event to promote a major experience update, summarize the key updates.
 
    - Incentives for players to join such as exclusive event‑specific merch or [badges](../../production/publishing/badges.md) that may be earned during the event.
 
-7. Set the starting date/time, and an ending date/time.
-8. Select a privacy level; **public** events will be viewable to all players while **private** events will only be visible by you and others with elevated access.
+1. Set the starting date/time, and an ending date/time.
+
+1. Set the place for your event. If you select a place other than the experience's start place, anyone who joins the event through an event-specific surface (such as an event start notification or the event tile) will spawn in the event place rather than the start place.
+
+1. Select a privacy level; **public** events will be viewable to all players while **private** events will only be visible by you and others with elevated access.
 
    <Alert severity="info">
    If you're not yet ready to publicize the event, set it as **private**. Later, when you're ready to begin promoting the event, change it to **public**. Private events and their event pages cannot be seen by players without access, and they will not appear on its experience's detail page.
    </Alert>
 
-9. When ready, click **Create** to save your event. If you set the event to public, it will be immediately discoverable on the experience's detail page.
+1. When ready, click **Create** to save your event. If you set the event to public, it will be immediately discoverable on the experience's detail page.
 
    <img src="../../assets/creator-dashboard/Creations-Events-Example.png" width="368" alt="Example events on the Creator Dashboard" />
 
