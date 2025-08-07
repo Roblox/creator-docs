@@ -407,19 +407,47 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: AssetService:CreateSurfaceAppearanceAsync
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Creates a new `Class.SurfaceAppearance` object using the provided content
+      maps.
+    description: |
+      Creates a new `Class.SurfaceAppearance` object using the provided content
+      maps.
+
+      Currently, content only supports `Class.EditableImage` and only content
+      maps can be specified, but functionality will expand to include asset IDs
+      as input. If you need to achieve this today, you can create an
+      `Class.EditableImage` from an asset ID using the following:
+
+      `Class.AssetService:CreateEditableImageAsync(Content.fromUri(uri))`
+
+      Default values will be used for all other `Class.SurfaceAppearance`
+      properties.
+    code_samples:
+      - AssetService-CreateSurfaceAppearanceAsync
     parameters:
       - name: content
         type: Dictionary
         default:
-        summary: ''
+        summary: |
+          Dictionary containing the following key-value pairs:
+
+          - `ColorMap` — A `Datatype.Content` object that contains the color
+             map. Default is `nil`.
+          - `MetalnessMap` — A `Datatype.Content` object that contains the
+            metalness map. If more than one channel is present, only the red
+            channel is used. Default is `nil`.
+          - `NormalMap` — A `Datatype.Content` object that contains the
+            normal map. Default is `nil`.
+          - `RoughnessMap` — A `Datatype.Content` object that contains the
+            roughness map. If more than one channel is present, only the red
+            channel is used. Default is `nil`.
     returns:
       - type: SurfaceAppearance
-        summary: ''
-    tags:
-      - Yields
+        summary: |
+          A new `Class.SurfaceAppearance` instance with the given maps from the
+          `content` parameter.
+    tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
