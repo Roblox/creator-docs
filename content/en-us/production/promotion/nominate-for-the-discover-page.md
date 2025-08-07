@@ -1,12 +1,12 @@
 ---
-title: Nominate for the Discover page
-description: Explains the process of nominating your experience for specialized sort categories on the Discover page.
+title: Nominate for the Charts page
+description: Explains the process of nominating your experience for specialized sort categories on the Charts page.
 ---
 
 Sorts are collections of experiences that users see when they are
 browsing the
-[Discover](https://www.roblox.com/discover#/) page,
-such as **Most Engaging**, **Up-and-Coming**, and **Roleplay**. While most sorts generate automatically, you can nominate your experiences to the
+[Charts](https://www.roblox.com/charts#/) page,
+such as **Top Trending**, **Up-and-Coming**, and **Most Popular**. While most sorts generate automatically, you can nominate your experiences to the
 [Learn & Explore](#learn--explore-criteria) sort. Experiences you nominate
 should have a consistent and active user base, be well-liked by the community,
 and remain public to all users. Consequently, paid
