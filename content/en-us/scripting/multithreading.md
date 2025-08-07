@@ -68,7 +68,7 @@ Scripts that are part of the same actor always execute sequentially with respect
 
 ### Thread safety
 
-During the parallel execution, you can access most instances of the `DataModel` hierarchy as usual, but some API properties and functions aren't safe to read or write. If you use them in your parallel code, Roblox Engine can automatically detect and prevent these accesses from occurring.
+During the parallel execution, you can access most instances of the `Class.DataModel` hierarchy as usual, but some API properties and functions aren't safe to read or write. If you use them in your parallel code, the Roblox engine can automatically detect and prevent these accesses from occurring.
 
 API members have a thread safety level that indicates whether and how you can use them in your parallel code, as the following table shows:
 

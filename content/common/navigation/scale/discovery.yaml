@@ -2,7 +2,7 @@ navigation:
   - heading: Experiences
   - title: Overview
     path: /discovery
-  - title: Discover page
+  - title: Charts page
     section:
       - title: Genres
         path: /production/publishing/experience-genres
@@ -12,8 +12,6 @@ navigation:
         path: /production/publishing/thumbnails
       - title: Badges
         path: /production/publishing/badges
-      - title: Discover page nominations
-        path: /production/promotion/nominate-for-the-discover-page
   - title: Deep links
     path: /production/promotion/deeplinks
   - title: Events

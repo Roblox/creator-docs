@@ -111,7 +111,7 @@ In addition to documentation, Roblox Education has different programs that kicks
    </tr>
    <tr>
     <td>Learn and Explore Sort</td>
-    <td>Many Roblox users interested in education find new experiences in the curated Learn and Explore Sort. Experiences here can expect more significant traffic and visibility. Information about eligibility can be found on the <a href="../../production/promotion/nominate-for-the-discover-page.md#learn--explore-criteria" target="_blank" rel="noopener">Special Sort</a> page.</td>
+    <td>Many Roblox users interested in education find new experiences in the curated **Learn and Explore** sort. Experiences here can expect more significant traffic and visibility. <a href="https://roblox.qualtrics.com/jfe/form/SV_8313iVKrwkQUiGy" target="_blank" rel="noopener">Apply</a> for consideration.</td>
    </tr>
 </tbody>
 </table>

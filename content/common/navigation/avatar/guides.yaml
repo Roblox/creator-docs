@@ -54,20 +54,29 @@ navigation:
         path: /art/characters/export-settings
       - title: Import into Studio
         path: /art/characters/import
-  - title: Heads
+      - title: Heads
+        section:
+          - title: Overview
+            path: /art/characters/facial-animation/
+          - title: In Studio
+            path: /art/characters/facial-animation/use-heads-in-studio
+          - title: Head animation
+            path: /art/characters/facial-animation/animate-heads
+          - title: Moods
+            path: /art/characters/facial-animation/moods
+          - title: FACS poses reference
+            path: /art/characters/facial-animation/facs-poses-reference
+  - title: Emotes
     section:
       - title: Overview
-        path: /art/characters/facial-animation/
-      - title: In Studio
-        path: /art/characters/facial-animation/use-heads-in-studio
-      - title: Head animation
-        path: /art/characters/facial-animation/animate-heads
-      - title: Moods
-        path: /art/characters/facial-animation/moods
-      - title: FACS poses reference
-        path: /art/characters/facial-animation/facs-poses-reference
-  - title: In-experience creation
-    path: /avatar/in-experience-creation
+        path: /art/emotes/
+      - title: Specifications
+        path: /art/emotes/specifications
+      - title: Export settings
+        path: /art/emotes/export-settings
+      - title: Import and configure in Studio
+        path: /art/emotes/import
+
 
   - title: Publish
     section:
@@ -97,6 +106,7 @@ navigation:
         path: /marketplace/custom-thumbnails
   - title: Validation errors
     path: /art/validation-errors
+
   - title: 3rd party add-ons
     section:
       - title: Roblox Blender plugin
@@ -105,3 +115,6 @@ navigation:
         path: /art/modeling/calisthenics-tool
       - title: Clothing Validation Tool
         path: /art/accessories/validation-tool
+
+  - title: In-experience creation
+    path: /avatar/in-experience-creation

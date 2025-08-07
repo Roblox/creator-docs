@@ -48,10 +48,6 @@ The following table details promotional methods for experiences on the platform.
 		<td>**Experience notifications**</td>
 		<td>[Notifications](../../production/promotion/experience-notifications.md) are a way for 13+ users to keep up with their favorite experiences through timely, personalized notifications. As the developer, you can determine what kinds of in‑experience activities are most important to notify your users about, as well as define the notification content.</td>
 	</tr>
-  <tr>
-		<td>**Special sort categories on Roblox channels**</td>
-		<td>Apply for Roblox to feature your experiences within specific categories on the [Discover](https://www.roblox.com/discover) page or in highlights on Roblox-owned channels.<br /><br />For more information, see [Nominate for the Discover page](../../production/promotion/nominate-for-the-discover-page.md) and [Get featured on Roblox‑owned channels](../../production/promotion/get-featured-on-roblox-owned-channels.md).</td>
-	</tr>
 </tbody>
 </table>
 

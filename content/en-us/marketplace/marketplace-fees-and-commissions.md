@@ -10,7 +10,7 @@ You receive a commission every time users purchase your item. If users purchase 
 
 ## Upload fees
 
-When uploading, accessories, clothing, bodies, and heads require an upload fee of **750 Robux** per submission. In general, fees are not refunded if an item is rejected through moderation. If your asset clears the uploading process, your asset is ready to publish to the Marketplace.
+Uploading a 3D avatar item, such as accessories, bodies, and animations, requires an upload fee of **750 Robux** per submission. In general, fees are not refunded if an item is rejected through moderation. If your asset clears the uploading process, your asset is ready to publish to the Marketplace.
 
 ## Publishing advance
 
@@ -112,10 +112,15 @@ This publishing advance is dependent on the type of Marketplace item being sold:
     <td>1500</td>
     <td>10000</td>
   </tr>
-    <tr>
+  <tr>
     <td>Shoes</td>
     <td>600</td>
     <td>5000</td>
+  </tr>
+  <tr>
+    <td>Emotes</td>
+    <td>1500</td>
+    <td>10000</td>
   </tr>
 </tbody>
 </table>
