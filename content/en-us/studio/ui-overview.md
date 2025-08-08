@@ -259,8 +259,8 @@ See [Studio testing modes](../studio/testing-modes.md) for more information on e
 
 The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-preparing-for-takeoff-beta/3634123) introduces a wide array of improvements and optimizations, including cleaner appearance, customizable tabs with your own tool collections, and the ability to show/hide tabs as desired. The following tables map the previous Studio toolbar workflows to next‑gen equivalents.
 
-<br /><h3>General</h3>
-
+<Tabs>
+<TabItem label="General">
 <table size="small">
 	<thead>
 		<tr>
@@ -315,41 +315,7 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 			<td>**File** menu</td>
 			<td>Application's **File** menu&nbsp;⟩ **Publish&nbsp;to&nbsp;Roblox**&nbsp;/&nbsp;**As…**</td>
 		</tr>
-		<tr>
-			<td>[Game Settings](./game-settings.md)</td>
-			<td>**File** menu or **Home** tab</td>
-			<td>Application's **File** menu&nbsp;⟩ **Game&nbsp;Settings**</td>
-		</tr>
-		<tr>
-			<td>[Manage Plugins](./plugins-tab.md#manage-plugins)</td>
-			<td>**Plugins** tab</td>
-			<td>Application's **Plugins** menu&nbsp;⟩ **Manage&nbsp;Plugins**</td>
-		</tr>
-		<tr>
-			<td>Plugins Folder</td>
-			<td>**Plugins** tab</td>
-			<td>Application's **Plugins** menu&nbsp;⟩ **Plugins&nbsp;Folder**</td>
-		</tr>
-		<tr>
-			<td>Tools (Localization)</td>
-			<td>**Plugins** tab</td>
-			<td>Application's **Window** menu&nbsp;⟩ **Localization**&nbsp;⟩ **Localization&nbsp;Tool**</td>
-		</tr>
-	</tbody>
-</table>
-
-<br /><h3>Common windows</h3>
-
-<table size="small">
-	<thead>
-		<tr>
-			<th width="20%">Action/Tool</th>
-			<th width="40%">Legacy Workflow(s)</th>
-			<th width="40%">New Workflow(s)</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
+				<tr>
 			<td>[Explorer](./explorer.md)</td>
 			<td>**View** tab</td>
 			<td>🄐 **Home** tab&nbsp;⟩ **Explorer**<br />🄑 Application's **Window** menu&nbsp;⟩ **Explorer**</td>
@@ -370,9 +336,24 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 			<td>🄐 **Home** tab&nbsp;⟩ **Toolbox**<br />🄑 Application's **Window** menu&nbsp;⟩ **Toolbox**</td>
 		</tr>
 		<tr>
+			<td>[Terrain Editor](./terrain-editor.md)</td>
+			<td>**Home** or **View** tab</td>
+			<td>Application's **Window** menu&nbsp;⟩ **3D**&nbsp;⟩ **Terrain**</td>
+		</tr>
+		<tr>
 			<td>[Output](./output.md)</td>
 			<td>**View** tab</td>
 			<td>🄐 Application's **Window** menu&nbsp;⟩ **Output**<br />🄑 **Script** tab&nbsp;⟩ **Output**</td>
+		</tr>
+		<tr>
+			<td>[Game Settings](./game-settings.md)</td>
+			<td>**File** menu or **Home** tab</td>
+			<td>Application's **File** menu&nbsp;⟩ **Game&nbsp;Settings**</td>
+		</tr>
+		<tr>
+			<td>[Avatar Settings](./avatar-settings.md)</td>
+			<td>**File** menu or **Avatar** tab</td>
+			<td>🄐 **Avatar** tab&nbsp;⟩ **Avatar Settings**<br />🄑 Application's **File** menu&nbsp;⟩ **Avatar&nbsp;Settings**</td>
 		</tr>
 		<tr>
 			<td>[Command Bar](#command-bar)</td>
@@ -380,9 +361,19 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 			<td>🄐 Application's **Window** menu&nbsp;⟩ **Script**&nbsp;⟩ **Command&nbsp;Bar**<br />🄑 **Script** tab&nbsp;⟩ **Command**</td>
 		</tr>
 		<tr>
-			<td>[Terrain Editor](./terrain-editor.md)</td>
-			<td>**Home** or **View** tab</td>
-			<td>Application's **Window** menu&nbsp;⟩ **3D**&nbsp;⟩ **Terrain**</td>
+			<td>[Manage Plugins](./plugins-tab.md#manage-plugins)</td>
+			<td>**Plugins** tab</td>
+			<td>Application's **Plugins** menu&nbsp;⟩ **Manage&nbsp;Plugins**</td>
+		</tr>
+		<tr>
+			<td>Plugins Folder</td>
+			<td>**Plugins** tab</td>
+			<td>Application's **Plugins** menu&nbsp;⟩ **Plugins&nbsp;Folder**</td>
+		</tr>
+		<tr>
+			<td>Tools (Localization)</td>
+			<td>**Plugins** tab</td>
+			<td>Application's **Window** menu&nbsp;⟩ **Localization**&nbsp;⟩ **Localization&nbsp;Tool**</td>
 		</tr>
 		<tr>
 			<td>Object Browser</td>
@@ -397,8 +388,8 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 	</tbody>
 </table>
 
-<br /><h3>Editing and modeling</h3>
-
+</TabItem>
+<TabItem label="Editing/Modeling">
 <table size="small">
 	<thead>
 		<tr>
@@ -468,6 +459,31 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 			<td>**Home** or **Model** tab</td>
 			<td>🄐 **Home** or **Model** tab&nbsp;⟩ **Anchor**<br />🄑 Application's **Edit** menu&nbsp;⟩ **Anchor**</td>
 		</tr>
+				<tr>
+			<td>[Import 3D](../art/modeling/3d-importer.md)</td>
+			<td>**Home** or **Avatar** tab</td>
+			<td>🄐 **Home** tab&nbsp;⟩ **Import&nbsp;3D**<br />🄑 Application's **File** menu&nbsp;⟩ **Import&nbsp;3D**</td>
+		</tr>
+		<tr>
+			<td>[Animation Editor](../animation/editor.md)</td>
+			<td>**Avatar** or **View** tab</td>
+			<td>🄐 **Avatar** tab&nbsp;⟩ **Animation**<br />🄑 Application's **Window** menu&nbsp;⟩ **Avatar**&nbsp;⟩ **Animation**</td>
+		</tr>
+		<tr>
+			<td>[Accessory Fitting Tool](../art/accessories/accessory-fitting-tool.md)</td>
+			<td>**Avatar** tab</td>
+			<td>🄐 **Avatar** tab&nbsp;⟩ **Accessory**<br />🄑 Application's **Window** menu&nbsp;⟩ **Avatar**&nbsp;⟩ **Accessory**</td>
+		</tr>
+		<tr>
+			<td>[Rig Builder](./rig-builder.md)</td>
+			<td>**Avatar** tab</td>
+			<td>**Home** or **Avatar** tab&nbsp;⟩ **Character**</td>
+		</tr>
+		<tr>
+			<td>[Avatar Setup](../avatar-setup/index.md)</td>
+			<td>**Avatar** tab</td>
+			<td>🄐 **Avatar** tab&nbsp;⟩ **Setup**<br />🄑 Application's **Window** menu&nbsp;⟩ **Avatar**&nbsp;⟩ **Setup**</td>
+		</tr>
 		<tr>
 			<td>Show UI tools</td>
 			<td>**Home** tab</td>
@@ -481,7 +497,7 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 		<tr>
 			<td>[Align tool](./align-tool.md)</td>
 			<td>**Model** tab</td>
-			<td>Application's **Window** menu&nbsp;⟩ **3D**&nbsp;⟩ **Align**</td>
+			<td>🄐 **Model** tab&nbsp;⟩ **Align**<br />🄑 Application's **Window** menu&nbsp;⟩ **3D**&nbsp;⟩ **Align**</td>
 		</tr>
 		<tr>
 			<td>[Material Generator](./material-generator.md)</td>
@@ -496,7 +512,7 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 		<tr>
 			<td>[Constraint pick/insert](../physics/index.md#constraints)</td>
 			<td>**Model** tab</td>
-			<td><Chip label="no change" size="small" color="success" variant="outlined" /></td>
+			<td>Three separate buttons in the **Model** tab for inserting an `Class.Attachment`, [mechanical](../physics/mover-constraints.md) or [mover](../physics/mechanical-constraints.md) constraint, `Class.WeldConstraint`, or `Class.NoCollisionConstraint`</td>
 		</tr>
 		<tr>
 			<td>Show Welds toggle</td>
@@ -551,8 +567,8 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 	</tbody>
 </table>
 
-<br /><h3>Collaboration</h3>
-
+</TabItem>
+<TabItem label="Collaboration">
 <table size="small">
 	<thead>
 		<tr>
@@ -570,7 +586,7 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 		<tr>
 		<td>[Manage Collaborators](../projects/collaboration.md#manage-collaborators)</td>
 			<td>Right side of mezzanine bar</td>
-			<td>🄐 Right side of mezzanine bar<br />🄑 Application's **Window** menu&nbsp;⟩ **Collaboration**&nbsp;⟩ **Manage&nbsp;Collaborators**</td>
+			<td>🄐 Right side of mezzanine bar<br />🄑 Application's **Window** menu&nbsp;⟩ **Collaboration**&nbsp;⟩ **Invite**/**Manage** **Collaborators**</td>
 		</tr>
 		<tr>
 			<td>[Live Collaborators](../projects/collaboration.md#view-collaborators) window</td>
@@ -600,47 +616,8 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 	</tbody>
 </table>
 
-<br /><h3>Avatar and animation</h3>
-
-<table size="small">
-	<thead>
-		<tr>
-			<th width="20%">Action/Tool</th>
-			<th width="40%">Legacy Workflow(s)</th>
-			<th width="40%">New Workflow(s)</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>[Import 3D](../art/modeling/3d-importer.md)</td>
-			<td>**Home** or **Avatar** tab</td>
-			<td>🄐 **Home** tab&nbsp;⟩ **Import&nbsp;3D**<br />🄑 Application's **File** menu&nbsp;⟩ **Import&nbsp;3D**</td>
-		</tr>
-		<tr>
-			<td>[Animation Editor](../animation/editor.md)</td>
-			<td>**Avatar** or **View** tab</td>
-			<td>🄐 **Avatar** tab&nbsp;⟩ **Animation**<br />🄑 Application's **Window** menu&nbsp;⟩ **Avatar**&nbsp;⟩ **Animation**</td>
-		</tr>
-		<tr>
-			<td>[Accessory Fitting Tool](../art/accessories/accessory-fitting-tool.md)</td>
-			<td>**Avatar** tab</td>
-			<td>🄐 **Avatar** tab&nbsp;⟩ **Accessory**<br />🄑 Application's **Window** menu&nbsp;⟩ **Avatar**&nbsp;⟩ **Accessory**</td>
-		</tr>
-		<tr>
-			<td>[Rig Builder](./rig-builder.md)</td>
-			<td>**Avatar** tab</td>
-			<td>**Home** or **Avatar** tab&nbsp;⟩ **Character**</td>
-		</tr>
-		<tr>
-			<td>[Avatar Setup](../avatar-setup/index.md)</td>
-			<td>**Avatar** tab</td>
-			<td>🄐 **Avatar** tab&nbsp;⟩ **Setup**<br />🄑 Application's **Window** menu&nbsp;⟩ **Avatar**&nbsp;⟩ **Setup**</td>
-		</tr>
-	</tbody>
-</table>
-
-<br /><h3>Testing and visualization</h3>
-
+</TabItem>
+<TabItem label="Testing/Visualization">
 <table size="small">
 		<thead>
 		<tr>
@@ -653,42 +630,42 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 		<tr>
 			<td>Playtest mode</td>
 			<td>**Home** or **Test** tab</td>
-			<td>Left side of mezzanine bar&nbsp;⟩ Mode picker</td>
+			<td>🄐 Left side of mezzanine bar&nbsp;⟩ Mode picker<br />🄑 Options in application's **Test** menu</td>
 		</tr>
 		<tr>
 			<td>Playtest buttons</td>
 			<td>**Home** or **Test** tab, or left side of mezzanine bar</td>
-			<td>Left side of mezzanine bar</td>
+			<td>🄐 Left side of mezzanine bar<br />🄑 Options in application's **Test** menu</td>
 		</tr>
 		<tr>
 			<td>[Client/server toggle](./testing-modes.md#toggle-clientserver)</td>
 			<td>**Home** or **Test** tab</td>
-			<td>Left side of mezzanine bar</td>
+			<td>🄐 Left side of mezzanine bar<br />🄑 Application's **Test** menu&nbsp;⟩ **Client/Server**</td>
 		</tr>
 		<tr>
 			<td>[Pause/resume physics](./testing-modes.md#pause-and-resume-physics)</td>
 			<td>**Test** tab</td>
-			<td>Options appear contextually on the left side of mezzanine bar while playtesting</td>
+			<td>Options appear contextually on the left side of mezzanine bar or within application's **Test** menu while playtesting</td>
 		</tr>
 		<tr>
 			<td>[Multi-client simulation](./testing-modes.md#multi-client-simulation)</td>
 			<td>**Test** tab</td>
-			<td>Left side of mezzanine bar&nbsp;⟩ Mode picker&nbsp;⟩ **Server&nbsp;&&nbsp;Clients**</td>
+			<td>🄐 Left side of mezzanine bar&nbsp;⟩ Mode picker&nbsp;⟩ **Server&nbsp;&&nbsp;Clients**<br />🄑 Application's **Test** menu&nbsp;⟩ **Start Test Session**&nbsp;⟩ **Server and Clients**</td>
 		</tr>
 		<tr>
 			<td>[Device Emulator](./testing-modes.md#device-emulation)</td>
 			<td>**Test** tab</td>
-			<td>Application's **View** menu&nbsp;⟩ **Device&nbsp;Emulator**</td>
+			<td>Application's **Test** menu&nbsp;⟩ **Device&nbsp;Emulator**</td>
 		</tr>
 		<tr>
 			<td>[Controller Emulator](./testing-modes.md#controller-emulation)</td>
 			<td>**Test** tab</td>
-			<td><Chip label="removed by default" size="small" color="warning" variant="outlined" /> — Can be re‑added to a custom tab through **Add&nbsp;Tools**&nbsp;⟩ **Controller**</td>
+			<td>Application's **Test** menu&nbsp;⟩ **Controller&nbsp;Emulator**</td>
 		</tr>
 		<tr>
 			<td>[Player Emulator](./testing-modes.md#player-emulation)</td>
 			<td>**Test** tab</td>
-			<td>Application's **View** menu&nbsp;⟩ **Player&nbsp;Emulator**</td>
+			<td>Application's **Test** menu&nbsp;⟩ **Player&nbsp;Emulator**</td>
 		</tr>
 		<tr>
 			<td>View Selector</td>
@@ -718,23 +695,28 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 		<tr>
 			<td>[Selection Style](./ui-overview.md#object-selection)</td>
 			<td>**View** tab</td>
-			<td>Studio Settings&nbsp;⟩ **Selection**&nbsp;⟩ Options in **Selection Visualization**</td>
+			<td>Options in the **View** section of the [Visualization&nbsp;Options](#visualization-options) widget</td>
 		</tr>
 		<tr>
 			<td>Team Test</td>
 			<td>**Home** tab</td>
-			<td><Chip label="removed by default" size="small" color="warning" variant="outlined" /> — Can be re‑added to a custom tab through **Add&nbsp;Tools**&nbsp;⟩ **Team&nbsp;Test**</td>
+			<td>Application's **Test** menu&nbsp;⟩ **Start Test Session**&nbsp;⟩ **Team Test**</td>
 		</tr>
 		<tr>
 			<td>Mute</td>
 			<td>**Test** tab</td>
 			<td>Application's **View** menu&nbsp;⟩ **Mute**</td>
 		</tr>
+		<tr>
+			<td>Screen Shot</td>
+			<td>**View** tab</td>
+			<td>Application's **View** menu&nbsp;⟩ **Screenshot**</td>
+		</tr>
 	</tbody>
 </table>
 
-<br /><h3>Scripting and debugging</h3>
-
+</TabItem>
+<TabItem label="Scripting/Debugging">
 <table size="small">
 	<thead>
 		<tr>
@@ -782,12 +764,12 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 		<tr>
 			<td>Step Into, Step&nbsp;Over, Step&nbsp;Out</td>
 			<td>**Script** tab</td>
-			<td>Buttons appear contextually on the left side of mezzanine bar when a breakpoint is hit</td>
+			<td>Buttons appear contextually on the left side of mezzanine bar or the application's **Test** menu when a breakpoint is hit</td>
 		</tr>
 		<tr>
 			<td>Error handling and other scripting actions</td>
 			<td>**Script** tab</td>
-			<td>Application's **View** menu&nbsp;⟩ **Debug&nbsp;Error**</td>
+			<td>Application's **Test** menu&nbsp;⟩ **Debug&nbsp;Error**</td>
 		</tr>
 		<tr>
 			<td>Script Analysis</td>
@@ -832,31 +814,5 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 	</tbody>
 </table>
 
-<br /><h3>Other</h3>
-
-<table size="small">
-	<thead>
-	<tr>
-			<th width="20%">Action/Tool</th>
-			<th width="40%">Legacy Workflow(s)</th>
-			<th width="40%">New Workflow(s)</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Screen Shot</td>
-			<td>**View** tab</td>
-			<td>Application's **View** menu&nbsp;⟩ **Screenshot**</td>
-		</tr>
-		<tr>
-			<td>Video Record</td>
-			<td>**View** tab</td>
-			<td><Chip label="removed" size="small" color="error" variant="outlined" /></td>
-		</tr>
-		<tr>
-			<td>Switch Windows</td>
-			<td>**View** tab</td>
-			<td><Chip label="removed" size="small" color="error" variant="outlined" /></td>
-		</tr>
-	</tbody>
-</table>
+</TabItem>
+</Tabs>
