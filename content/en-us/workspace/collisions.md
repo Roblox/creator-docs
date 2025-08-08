@@ -270,27 +270,27 @@ interesting but unintended gameplay, such as characters jumping on top of each o
 local PhysicsService = game:GetService("PhysicsService")
 local Players = game:GetService("Players")
 
-local CollisionGroupName = "Characters"
-PhysicsService:RegisterCollisionGroup(CollisionGroupName)
-PhysicsService:CollisionGroupSetCollidable(CollisionGroupName, CollisionGroupName, false)
+PhysicsService:RegisterCollisionGroup("Characters")
+PhysicsService:CollisionGroupSetCollidable("Characters", "Characters", false)
 
-local function setCollisionGroup(model)
-  -- Apply collision group to all existing parts in the model
-  for _, descendant in model:GetDescendants() do
-    if descendant:IsA("BasePart") then
-      descendant.CollisionGroup = CollisionGroupName
-    end
-  end
+local function onDescendantAdded(descendant)
+	-- Set collision group for any part descendant
+	if descendant:IsA("BasePart") then
+		descendant.CollisionGroup = "Characters"
+	end
+end
+
+local function onCharacterAdded(character)
+	-- Process existing and new descendants for physics setup
+	for _, descendant in character:GetDescendants() do
+		onDescendantAdded(descendant)
+	end
+	character.DescendantAdded:Connect(onDescendantAdded)
 end
 
 Players.PlayerAdded:Connect(function(player)
-  player.CharacterAdded:Connect(function(character)
-    setCollisionGroup(character)
-  end)
-  -- If the player already has a character, apply the collision group immediately
-  if player.Character then
-    setCollisionGroup(player.Character)
-  end
+	-- Detect when the player's character is added
+	player.CharacterAdded:Connect(onCharacterAdded)
 end)
 ```
 
