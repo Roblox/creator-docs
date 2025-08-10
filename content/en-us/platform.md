@@ -7,7 +7,8 @@ hideInPageNavigation: true
 export const statsByline = "* Figures are as of Q4 2024";
 
 export const scaleStats = [
-  { header: "85.3M", description: "Daily active users" },
+  { header: "85.3M", description<img width="585" height="559" alt="MySkin_2025-08-10_16-21-03" src="https://github.com/user-attachments/assets/27c61aed-4ddf-4f4f-a681-d63a5757ff62" />
+: "Daily active users" },
   { header: "18.9M", description: "Monthly unique payers" },
   { header: "18.7B", description: "Quarterly hours engaged" },
   { header: "750M", description: "Yearly creator earnings" },
@@ -25,7 +26,7 @@ export const sections = [
         title: "Roblox Studio",
         description: "The all-in-one IDE with generative AI technology for building, scripting, testing, and publishing Roblox experiences.",
         links: [
-          { text: "Get Studio", href: "./studio/setup" },
+          { text: "Get Studio", href: ".c/studio/setup" },
           { text: "Learn more", href: "./studio" }
         ]
       },
