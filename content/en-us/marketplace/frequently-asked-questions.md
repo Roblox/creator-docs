@@ -66,7 +66,7 @@ description: Marketplace FAQ providing answers and resources for common question
 
   <dt>**Can I take down my infringing material myself?**</dt>
 
-  <dd><p />You can submit a request to archive your uploaded items. See [Archiving Assets](./moderation.md#archiving-assets) for more details. </dd><br />
+  <dd><p />You can submit a request to archive your uploaded items. See [Archiving Assets](./moderation.md#archive-assets) for more details. </dd><br />
 
   <dt>**What's the difference between a DSA request and a DMCA request? What happens after I file that request?**</dt>
 

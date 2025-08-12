@@ -340,6 +340,29 @@
               "x-enum-varnames": ["IDs", "Core", "Full"],
               "x-enum-descriptions": ["IDs", "Core", "Full"]
             }
+          },
+          {
+            "name": "musicChartType",
+            "in": "query",
+            "description": "Indicates which music charts to filter from.",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/MusicChartType"
+                }
+              ],
+              "description": "Represents which music chart to pull entries from, if any",
+              "default": "None",
+              "x-enumNames": ["None", "Current", "Week", "Month", "Year"],
+              "x-enum-varnames": ["None", "Current", "Week", "Month", "Year"],
+              "x-enum-descriptions": [
+                "None",
+                "Current",
+                "Week",
+                "Month",
+                "Year"
+              ]
+            }
           }
         ],
         "responses": {
@@ -1221,6 +1244,14 @@
         "description": "Representation of a music asset.",
         "nullable": true
       },
+      "MusicChartType": {
+        "enum": ["None", "Current", "Week", "Month", "Year"],
+        "type": "string",
+        "description": "Represents which music chart to pull entries from, if any",
+        "x-enumNames": ["None", "Current", "Week", "Month", "Year"],
+        "x-enum-varnames": ["None", "Current", "Week", "Month", "Year"],
+        "x-enum-descriptions": ["None", "Current", "Week", "Month", "Year"]
+      },
       "ObjectMeshSummary": {
         "type": "object",
         "properties": {
@@ -2003,6 +2034,15 @@
               }
             ],
             "description": "The sort direction.",
+            "nullable": true
+          },
+          "musicChartType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/MusicChartType"
+              }
+            ],
+            "description": "The music chart type.",
             "nullable": true
           }
         },

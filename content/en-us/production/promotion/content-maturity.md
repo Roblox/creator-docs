@@ -349,22 +349,6 @@ Gambling is the practice of exchanging real world money, Robux, or in-experience
 
 You do **not** need to report depictions of, and/or references to, items or activities that are typically associated with gambling, but are not games of chance/luck, such as horse racing, car racing, and poker chips.
 
-### Free-form user creation
-
-**Question 1: Does this experience include free-form user creation?**
-
-Free-form user creation are features that allow players to create anything within an experience, such as writing words or making illustrations on a chalkboard. While this applies to in-experience, free-form drawing or creation tools, it does not apply to in-experience creations that players assemble with 3D assets, such as building a house or creating an outfit, or anything that goes through Roblox moderation before it's published or replicated.
-
-If your experience includes free-form user creation features, you must disclose it within the Maturity & Compliance Questionnaire. Free-form user creation is only available to players that are at least 13 years old.
-
-### Social hangout
-
-**Question 1: Is the primary theme or activity of this experience a social hangout?**
-
-Social hangouts are experiences in which the primary theme or activity is to chat or interact with other players with voice or text either as themselves or as their avatar. While this applies to vibe games, clubs, socializing spaces, and supportive places like sad rooms, it does not apply to roleplay and/or life simulation experiences where players adopt various roles like teacher or police officer, or are provided with items to role-play with.
-
-If your experience is a social hangout, you must disclose it within the Maturity & Compliance Questionnaire. Social hangouts are only available to players that are at least 13 years old.
-
 ### Strong language
 
 **Question 1: Do you depict and/or want to allow strong language in your experience?**
@@ -388,6 +372,41 @@ Romantic themes are the non-sexual expression of love or affection. If your expe
 **Question 1: Does this experience depict, reference, or include use of alcohol?**
 
 Alcohol is an intoxicating adult beverage. If your experience includes, depicts, or references alcohol, or depicts adult business and locations that provide or sell alcohol, such as characters drinking alcohol at a bar, you must disclose it within the Maturity & Compliance Questionnaire. Experiences that depict alcohol are only available to verified players that are at least 17 years old.
+
+### Social hangout
+
+**Question 1: Is the primary theme or activity of this experience a social hangout?**
+
+Social hangouts are experiences in which the primary theme or activity is to chat or interact with other players with voice or text either as themselves or as their avatar. While this applies to vibe games, clubs, socializing spaces, and supportive places like sad rooms, it does not apply to roleplay and/or life simulation experiences where players adopt various roles like teacher or police officer, or are provided with items to role-play with.
+
+If your experience is a social hangout, you must disclose it within the Maturity & Compliance Questionnaire. Social hangouts are only available to players that are at least 13 years old.
+
+### Free-form user creation
+
+**Question 1: Does this experience include free-form user creation?**
+
+Free-form user creation are features that allow players to create anything within an experience, such as writing words or making illustrations on a chalkboard. While this applies to in-experience, free-form drawing or creation tools, it does not apply to in-experience creations that players assemble with 3D assets, such as building a house or creating an outfit, or anything that goes through Roblox moderation before it's published or replicated.
+
+If your experience includes free-form user creation features, you must disclose it within the Maturity & Compliance Questionnaire. Free-form user creation is only available to players that are at least 13 years old.
+
+### Sensitive issues
+
+**Question 1: Is the primary theme of this experience a sensitive issue?**
+
+Sensitive issues are any current social, political, and religious issue that meets the following criteria:
+
+- **Polarized Viewpoints** - The issue has a limited number of strongly opposing viewpoints, with little room for compromise or middle ground.
+- **Strong Emotional Response** - The issue evokes strong emotional reactions and/or passionate debate.
+
+Sensitive issues are frequently in the news and inspire strong opinions and debate. For example: immigration, capital punishment, gun control, marriage equality, pay equity in sports, prayer in schools, racial profiling, affirmative action, vaccination policies, and reproductive rights. What meets the criteria can differ significantly depending on your location and cultural context, so answer from your local perspective.
+
+If your experience includes content related to a sensitive issue or people implicated by them, but it isn't primarily themed on that issue, such as a religious building in a city, guns in a first-person shooter experience, or a national holiday parade in a hangout experience, you do **not** need to disclose it within the Maturity & Compliance Questionnaire.
+
+However, if the **majority of the content or gameplay of your experience** refers to a sensitive issue, you must disclose it within the Maturity & Compliance Questionnaire. Experiences with a primary theme of a social issue are only available to players that are at least 13 years old unless a parent has [manually allowed access](https://en.help.roblox.com/hc/en-us/articles/30428310121620-Parental-Controls-Overview) to these experiences.
+
+<Alert severity="info">
+Individual assets, as well as text and voice chat, do not qualify for this descriptor.
+</Alert>
 
 ### Paid random items
 

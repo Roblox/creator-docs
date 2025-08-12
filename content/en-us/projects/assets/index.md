@@ -336,16 +336,16 @@ Roblox offers several tools to import, store, and publish your assets:
     </tbody>
 </table>
 
-## Archiving assets
+## Archive assets
 
-To further help with organization, you can archive most asset types in the **Creations** &rang; **Development Items** section of the [Creator Dashboard][CreatorDashboardURL]. Simply hover over an asset's thumbnail, click the **&ctdot;** button, and select **Archive** from the context menu.
+To further help with organization, you can archive most asset types in the **Creations** &rang; **Development Items** section of the [Creator Dashboard][CreatorDashboardURL]. To archive an item, hover over an asset's thumbnail, click the **&ctdot;** button, and select **Archive** from the context menu.
 
 <img src="../../assets/creator-dashboard/Options-Button-Asset.png" width="200" alt="Options button indicated for an asset." />
 
 After you archive an asset, it disappears from the website and is no longer usable or visible in Roblox experiences, including your own.
 
 <Alert severity = 'warning'>
-You can archive avatar item assets by [submitting an archiving request](../../marketplace/moderation.md#archiving-assets).
+For more information on how archiving works with Marketplace items, see [Moderation](../../marketplace/moderation.md#archive-assets).
 </Alert>
 
 [CreatorMarketplaceURL]: https://create.roblox.com/store
