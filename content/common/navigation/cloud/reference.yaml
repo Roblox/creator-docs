@@ -18,6 +18,8 @@ navigation:
         path: /cloud/reference/rate-limits
       - title: OpenAPI descriptions
         path: /cloud/reference/openapi
+      - title: Scopes
+        path: /cloud/reference/scopes
   - heading: Authentication
   - title: API keys
     path: /cloud/auth/api-keys

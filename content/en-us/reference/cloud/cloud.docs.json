@@ -1215,7 +1215,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -1242,7 +1242,7 @@
             "name": "DataStore"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "security": [
           {
             "roblox-api-key": []
@@ -1328,7 +1328,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -1355,7 +1355,7 @@
             "name": "DataStoreEntry"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "security": [
           {
             "roblox-api-key": []
@@ -1423,7 +1423,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -1450,7 +1450,7 @@
             "name": "DataStoreEntry"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "security": [
           {
             "roblox-api-key": []
@@ -1505,7 +1505,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -1532,7 +1532,7 @@
             "name": "DataStoreEntry"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "security": [
           {
             "roblox-api-key": []
@@ -1579,7 +1579,7 @@
             "content": {}
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -1606,7 +1606,7 @@
             "name": "DataStoreEntry"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "security": [
           {
             "roblox-api-key": []
@@ -1678,7 +1678,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -1705,7 +1705,7 @@
             "name": "DataStoreEntry"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "security": [
           {
             "roblox-api-key": []
@@ -1770,7 +1770,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -1804,7 +1804,7 @@
             "name": "DataStoreEntry"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "security": [
           {
             "roblox-api-key": []
@@ -1890,7 +1890,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -1917,7 +1917,7 @@
             "name": "DataStoreEntry"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "security": [
           {
             "roblox-api-key": []
@@ -2012,7 +2012,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -2039,7 +2039,7 @@
             "name": "DataStoreEntry"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "security": [
           {
             "roblox-api-key": []
@@ -2116,7 +2116,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -2143,7 +2143,7 @@
             "name": "DataStoreEntry"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "security": [
           {
             "roblox-api-key": []
@@ -2207,7 +2207,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -2234,7 +2234,7 @@
             "name": "DataStoreEntry"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "security": [
           {
             "roblox-api-key": []
@@ -2290,7 +2290,7 @@
             "content": {}
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -2317,7 +2317,7 @@
             "name": "DataStoreEntry"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "security": [
           {
             "roblox-api-key": []
@@ -2398,7 +2398,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -2425,7 +2425,7 @@
             "name": "DataStoreEntry"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "security": [
           {
             "roblox-api-key": []
@@ -2499,7 +2499,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -2533,7 +2533,7 @@
             "name": "DataStoreEntry"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "security": [
           {
             "roblox-api-key": []
@@ -2628,7 +2628,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -2655,7 +2655,7 @@
             "name": "DataStoreEntry"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "security": [
           {
             "roblox-api-key": []
@@ -2702,7 +2702,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -2729,7 +2729,7 @@
             "name": "DataStore"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "security": [
           {
             "roblox-api-key": []
@@ -2858,27 +2858,27 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "x-roblox-scopes": [
           {
             "description": "Required",
-            "name": "universe.memory-store.queue:write"
+            "name": "memory-store.queue:write"
           }
         ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe.memory-store.queue:write"]
+            "scopes": ["memory-store.queue:write"]
           },
           "resource": {
             "$ref": "#/components/schemas/MemoryStoreQueueItem",
             "name": "MemoryStoreQueueItem"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -2934,27 +2934,27 @@
             "content": {}
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "x-roblox-scopes": [
           {
             "description": "Required",
-            "name": "universe.memory-store.queue:discard"
+            "name": "memory-store.queue:discard"
           }
         ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe.memory-store.queue:discard"]
+            "scopes": ["memory-store.queue:discard"]
           },
           "resource": {
             "$ref": "#/components/schemas/MemoryStoreQueueItem",
             "name": "MemoryStoreQueueItem"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -3034,27 +3034,27 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "x-roblox-scopes": [
           {
             "description": "Required",
-            "name": "universe.memory-store.queue:dequeue"
+            "name": "memory-store.queue:dequeue"
           }
         ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe.memory-store.queue:dequeue"]
+            "scopes": ["memory-store.queue:dequeue"]
           },
           "resource": {
             "$ref": "#/components/schemas/MemoryStoreQueueItem",
             "name": "MemoryStoreQueueItem"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -3145,27 +3145,27 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "x-roblox-scopes": [
           {
             "description": "Required",
-            "name": "universe.memory-store.sorted-map:read"
+            "name": "memory-store.sorted-map:read"
           }
         ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe.memory-store.sorted-map:read"]
+            "scopes": ["memory-store.sorted-map:read"]
           },
           "resource": {
             "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
             "name": "MemoryStoreSortedMapItem"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -3239,27 +3239,27 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "x-roblox-scopes": [
           {
             "description": "Required",
-            "name": "universe.memory-store.sorted-map:write"
+            "name": "memory-store.sorted-map:write"
           }
         ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe.memory-store.sorted-map:write"]
+            "scopes": ["memory-store.sorted-map:write"]
           },
           "resource": {
             "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
             "name": "MemoryStoreSortedMapItem"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -3320,27 +3320,27 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "x-roblox-scopes": [
           {
             "description": "Required",
-            "name": "universe.memory-store.sorted-map:read"
+            "name": "memory-store.sorted-map:read"
           }
         ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe.memory-store.sorted-map:read"]
+            "scopes": ["memory-store.sorted-map:read"]
           },
           "resource": {
             "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
             "name": "MemoryStoreSortedMapItem"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -3393,27 +3393,27 @@
             "content": {}
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "x-roblox-scopes": [
           {
             "description": "Required",
-            "name": "universe.memory-store.sorted-map:write"
+            "name": "memory-store.sorted-map:write"
           }
         ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe.memory-store.sorted-map:write"]
+            "scopes": ["memory-store.sorted-map:write"]
           },
           "resource": {
             "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
             "name": "MemoryStoreSortedMapItem"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -3491,27 +3491,27 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "x-roblox-scopes": [
           {
             "description": "Required",
-            "name": "universe.memory-store.sorted-map:write"
+            "name": "memory-store.sorted-map:write"
           }
         ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe.memory-store.sorted-map:write"]
+            "scopes": ["memory-store.sorted-map:write"]
           },
           "resource": {
             "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
             "name": "MemoryStoreSortedMapItem"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -3572,27 +3572,27 @@
             "$ref": "#/components/schemas/FlushMemoryStoreResponse"
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "x-roblox-scopes": [
           {
             "description": "Required",
-            "name": "universe.memory-store:flush"
+            "name": "memory-store:flush"
           }
         ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["universe.memory-store:flush"]
+            "scopes": ["memory-store:flush"]
           },
           "resource": {
             "$ref": "#/components/schemas/MemoryStore",
             "name": "MemoryStore"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -3692,7 +3692,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -3719,7 +3719,7 @@
             "name": "OrderedDataStoreEntry"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "security": [
           {
             "roblox-api-key": []
@@ -3796,7 +3796,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -3823,7 +3823,7 @@
             "name": "OrderedDataStoreEntry"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "security": [
           {
             "roblox-api-key": []
@@ -3887,7 +3887,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -3914,7 +3914,7 @@
             "name": "OrderedDataStoreEntry"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "security": [
           {
             "roblox-api-key": []
@@ -3970,7 +3970,7 @@
             "content": {}
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -3997,7 +3997,7 @@
             "name": "OrderedDataStoreEntry"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "security": [
           {
             "roblox-api-key": []
@@ -4078,7 +4078,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -4105,7 +4105,7 @@
             "name": "OrderedDataStoreEntry"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "security": [
           {
             "roblox-api-key": []
@@ -4179,7 +4179,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -4206,7 +4206,7 @@
             "name": "OrderedDataStoreEntry"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "security": [
           {
             "roblox-api-key": []
@@ -6134,7 +6134,7 @@
             "content": {}
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -6154,7 +6154,7 @@
             "name": "Universe"
           }
         },
-        "x-roblox-stability": "BETA",
+        "x-roblox-stability": "STABLE",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
