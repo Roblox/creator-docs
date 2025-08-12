@@ -3,10 +3,6 @@ title: Generate text
 description: Use an LLM to generate text for NPC dialog, help systems, and more.
 ---
 
-<Alert severity="warning">
-The text generation API is currently in beta. To get started with the API, fill out [this form](https://survey.roblox.com/jfe/form/SV_3QnTMZaFmYe2FTM). You must be ID verified, and your experience must have a **Moderate** or **Restricted** content maturity rating.
-</Alert>
-
 The text generation API lets you use a large language model (LLM) to generate text based on a system prompt from you and a user prompt from the player. The most common use of the API is for creating interactive non-player characters (NPCs).
 
 For example, in a survival experience, your system prompt for a talking animal might be `"You are a very busy beaver. You end all statements by mentioning how you need to get back to work on your dam."`. Users could ask the beaver about water in the area, the size of a nearby forest, predators, etc.
