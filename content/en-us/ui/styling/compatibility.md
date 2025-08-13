@@ -831,6 +831,55 @@ The following tables outline all of the classes and associated properties which 
 </tbody>
 </table>
 
+### UIPageLayout
+
+<table size="small">
+<thead>
+  <tr>
+    <th>Property</th>
+    <th width="40%">Type</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>`Class.UIPageLayout.Animated`</td>
+    <td>boolean</td>
+	</tr>
+  <tr>
+    <td>`Class.UIPageLayout.Circular`</td>
+    <td>boolean</td>
+	</tr>
+  <tr>
+    <td>`Class.UIPageLayout.EasingDirection`</td>
+    <td>`Enum.EasingDirection`</td>
+	</tr>
+  <tr>
+    <td>`Class.UIPageLayout.EasingStyle`</td>
+    <td>`Enum.EasingStyle`</td>
+	</tr>
+  <tr>
+    <td>`Class.UIPageLayout.GamepadInputEnabled`</td>
+    <td>boolean</td>
+	</tr>
+  <tr>
+    <td>`Class.UIPageLayout.Padding`</td>
+    <td>`Datatype.UDim`</td>
+	</tr>
+  <tr>
+    <td>`Class.UIPageLayout.ScrollWheelInputEnabled`</td>
+    <td>boolean</td>
+	</tr>
+  <tr>
+    <td>`Class.UIPageLayout.TouchInputEnabled`</td>
+    <td>boolean</td>
+	</tr>
+  <tr>
+    <td>`Class.UIPageLayout.TweenTime`</td>
+    <td>float</td>
+	</tr>
+</tbody>
+</table>
+
 ## Size modifiers and constraints
 
 ### UIAspectRatioConstraint

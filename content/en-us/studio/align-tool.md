@@ -60,10 +60,10 @@ The **X**, **Y**, and **Z** checkboxes let you select which axes to align on. No
 <TabItem label="Before Alignment">
 <img src="../assets/studio/align-tool/Align-In-Before.jpg" width="720" height="405" alt="An angled side view of a small red cube, large blue cube, and a small purple cube that are unaligned." />
 </TabItem>
-<TabItem label="Max | World Z">
+<TabItem label="Max / World Z">
 <img src="../assets/studio/align-tool/Align-In-World-Z.jpg" width="720" height="405" alt="An angled side view of a small red cube, large blue cube, and a small purple cube that are aligned with the Max button on the world Z axis. A translucent orange rectangle represents where the objects align in context to each other." />
 </TabItem>
-<TabItem label="Max | Local Z">
+<TabItem label="Max / Local Z">
 <img src="../assets/studio/align-tool/Align-In-Local-Z.jpg" width="720" height="405" alt="An angled side view of a small red cube, large blue cube, and a small purple cube that are aligned with the Max button on their local Z axis. A translucent orange rectangle represents where the objects align in context to each other." />
 </TabItem>
 </Tabs>
@@ -80,10 +80,10 @@ An alignment operation can be relative to either the **Selection Bounds** or the
 <TabItem label="Before Alignment">
 <img src="../assets/studio/align-tool/Relative-To-Selection-Bounds-Before.jpg" width="720" height="405" alt="An angled side view of a small red cube, large blue cube, and a small purple cube that are unaligned. A translucent red rectangle represents where the objects' collective bounding box." />
 </TabItem>
-<TabItem label="Min | World X">
+<TabItem label="Min / World X">
 <img src="../assets/studio/align-tool/Relative-To-Selection-Bounds-Min-X.jpg" width="720" height="405" alt="An angled side view of a small red cube, large blue cube, and a small purple cube that are aligned with the Min button on the world X axis relative to their collective bounding box. A translucent red rectangle represents where the objects' collective bounding box." />
 </TabItem>
-<TabItem label="Max | World X">
+<TabItem label="Max / World X">
 <img src="../assets/studio/align-tool/Relative-To-Selection-Bounds-Max-X.jpg" width="720" height="405" alt="An angled side view of a small red cube, large blue cube, and a small purple cube that are aligned with the Max button on the world X axis relative to their collective bounding box. A translucent red rectangle represents where the objects' collective bounding box." />
 </TabItem>
 </Tabs>
@@ -96,10 +96,10 @@ An alignment operation can be relative to either the **Selection Bounds** or the
 <TabItem label="Before Alignment">
 <img src="../assets/studio/align-tool/Relative-To-Active-Object-Before.jpg" width="720" height="405" alt="An angled side view of a small red cube, large blue cube, and a small purple cube that are unaligned. The large blue cube has a yellow outline to represent that it's the active object." />
 </TabItem>
-<TabItem label="Min | World X">
+<TabItem label="Min / World X">
 <img src="../assets/studio/align-tool/Relative-To-Active-Object-Min-X.jpg" width="720" height="405" alt="An angled side view of a small red cube, large blue cube, and a small purple cube that are aligned with the Min button on the world X axis relative to the active object. The large blue cube has a yellow outline to represent that it's the active object." />
 </TabItem>
-<TabItem label="Max | World X">
+<TabItem label="Max / World X">
 <img src="../assets/studio/align-tool/Relative-To-Active-Object-Max-X.jpg" width="720" height="405" alt="An angled side view of a small red cube, large blue cube, and a small purple cube that are aligned with the Max button on the world X axis relative to the active object. The large blue cube has a yellow outline to represent that it's the active object." />
 </TabItem>
 </Tabs>

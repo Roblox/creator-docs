@@ -9,7 +9,7 @@ Every experience needs to receive user input for players to interact and view th
 
 ## Cross-platform input
 
-Roblox is inherently **cross‑platform**, as players can discover and join experiences on their phone or tablet, then later continue where they left off on their PC or console. Input is especially important as part of your cross‑platform development plan.
+Roblox is inherently [cross‑platform](../projects/cross-platform.md), as players can discover and join experiences on their phone or tablet, then later continue where they left off on their PC or console. Input is especially important as part of your cross‑platform development plan.
 
 To simplify this process, Roblox provides the [Input Action System](../input/input-action-system.md) to define **actions** such as "jump," "sprint," or "shoot" and set up **bindings** for multiple hardware inputs to drive those actions. This frees you from thinking of all the technical aspects of hardware inputs and allows you to simply define which inputs perform which actions.
 

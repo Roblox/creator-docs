@@ -5,7 +5,7 @@ description: Explains Roblox support for computer mice and keyboards.
 
 A large percentage of Roblox sessions are played on devices with a mouse and keyboard, so it's important to support these inputs when designing an experience for a wide audience.
 
-To simplify cross‑platform inputs, including mouse/keyboard, Roblox provides the [Input Action System](../input/input-action-system.md) to define **actions** such as "jump," "sprint," or "shoot" and set up **bindings** for multiple hardware inputs to drive those actions.
+To simplify [cross‑platform](../projects/cross-platform.md) inputs, including mouse/keyboard, Roblox provides the [Input Action System](../input/input-action-system.md) to define **actions** such as "jump," "sprint," or "shoot" and set up **bindings** for multiple hardware inputs to drive those actions.
 
 Roblox also supports general mouse/keyboard input through `Class.UserInputService` events like `Class.UserInputService.InputBegan|InputBegan` and `Class.UserInputService.InputEnded|InputEnded` and methods like `Class.UserInputService:IsKeyDown()|IsKeyDown()` to check if a particular key is pressed on a keyboard.
 

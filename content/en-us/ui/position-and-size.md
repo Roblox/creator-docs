@@ -121,7 +121,7 @@ Layout structures let you quickly organize and display `Class.GuiObject|GuiObjec
 
 ## Cross-platform factors
 
-Roblox is inherently **cross-platform**, as players can discover and join experiences on a PC or console, then later pick up their phone and continue where they left off. You should design your Roblox experiences to be accessible and enjoyable on **all** platforms that you choose to support, instead of optimizing for one platform and neglecting others.
+Roblox is inherently [cross‑platform](../projects/cross-platform.md), as players can discover and join experiences on their phone or tablet, then later continue where they left off on their PC or console. You should design your Roblox experiences to be accessible and enjoyable on **all** platforms that you choose to support, instead of optimizing for one platform and neglecting others.
 
 ### Reserved zones
 

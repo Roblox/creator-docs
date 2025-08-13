@@ -114,11 +114,11 @@ end)
 
 If a user repeats a step in a funnel, the funnel only considers the first instance of the step. For example, if a user logs step 2 of a funnel twice, the funnel only counts the first instance of step 2.
 
+Repeated steps are ignored by the funnel but they're still logged and contribute towards the [global rate limit](./event-types.md#event-tracking-limitations).
+
 ## Skipped steps
 
-If for some reason you skip a step in funnel, the earlier steps automatically complete.
-
-For example, if you have a funnel with steps 1, 2, and 3. If you log step 3 without logging steps 1 or 2, the funnel will consider steps 1 and 2 as completed.
+If for some reason you skip a step in funnel, the earlier steps automatically complete. For example, if you have a funnel with steps 1, 2, and 3 and you log step 3 without logging steps 1 or 2, the funnel considers steps 1 and 2 as completed.
 
 ## Use funnel filters
 

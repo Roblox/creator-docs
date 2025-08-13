@@ -22,6 +22,8 @@ navigation:
         path: /projects/
       - title: Experiences and places
         path: /production/publishing/publish-experiences-and-places
+      - title: Cross-platform development
+        path: /projects/cross-platform
       - title: Architecture
         path: /projects/data-model
         section:

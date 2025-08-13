@@ -1223,7 +1223,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 5000
+            "maxInPeriod": 500
           }
         },
         "x-roblox-scopes": [
@@ -1336,7 +1336,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 5000
+            "maxInPeriod": 500
           }
         },
         "x-roblox-scopes": [
@@ -1431,7 +1431,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 5000
+            "maxInPeriod": 500
           }
         },
         "x-roblox-scopes": [
@@ -1513,7 +1513,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 500
           }
         },
         "x-roblox-scopes": [
@@ -1587,7 +1587,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 500
           }
         },
         "x-roblox-scopes": [
@@ -1686,7 +1686,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 500
           }
         },
         "x-roblox-scopes": [
@@ -1778,7 +1778,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 5000
+            "maxInPeriod": 500
           }
         },
         "x-roblox-scopes": [
@@ -1898,7 +1898,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 500
           }
         },
         "x-roblox-scopes": [
@@ -2020,7 +2020,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 5000
+            "maxInPeriod": 500
           }
         },
         "x-roblox-scopes": [
@@ -2124,7 +2124,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 5000
+            "maxInPeriod": 500
           }
         },
         "x-roblox-scopes": [
@@ -2215,7 +2215,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 500
           }
         },
         "x-roblox-scopes": [
@@ -2298,7 +2298,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 500
           }
         },
         "x-roblox-scopes": [
@@ -2406,7 +2406,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 500
           }
         },
         "x-roblox-scopes": [
@@ -2507,7 +2507,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 5000
+            "maxInPeriod": 500
           }
         },
         "x-roblox-scopes": [
@@ -2636,7 +2636,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 5000
+            "maxInPeriod": 500
           }
         },
         "x-roblox-scopes": [
@@ -3700,7 +3700,7 @@
           "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100
+            "maxInPeriod": 500
           }
         },
         "x-roblox-scopes": [
@@ -3895,7 +3895,7 @@
           "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100
+            "maxInPeriod": 500
           }
         },
         "x-roblox-scopes": [

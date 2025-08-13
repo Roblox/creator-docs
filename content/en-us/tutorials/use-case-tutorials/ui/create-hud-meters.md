@@ -19,7 +19,7 @@ Using [Hazardous Space Station](https://www.roblox.com/games/99416825187098/Haza
 
 ## Enable the Device Emulator
 
-Roblox is inherently cross-platform, as players can discover and join experiences on a PC or console, then later pick up their phone and continue where they left off. Mobile devices (phones and tablets) have the least amount of screen space, so it's important that your UI elements fit on smaller screens and that they're clearly visible to players.
+Roblox is inherently [cross‑platform](../../../projects/cross-platform.md), as players can discover and join experiences on their phone or tablet, then later continue where they left off on their PC or console. Mobile devices (phones and tablets) have the least amount of screen space, so it's important that your UI elements fit on smaller screens and that they're clearly visible to players.
 
 The best way to test UI designs across platforms is Studio's [Device Emulator](../../../studio/testing-modes.md#device-emulation). This tool provides a preset selection of devices and allows you to add your own custom presets.
 

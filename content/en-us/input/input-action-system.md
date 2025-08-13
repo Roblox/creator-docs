@@ -65,7 +65,7 @@ To test an `Class.InputAction` for simple character sprinting:
 
 ## Input bindings
 
-An `Class.InputBinding` defines which hardware binding should trigger the parent `Class.InputAction`, for example a key press, gamepad button, or tap on a touch‑enabled device. For cross‑platform compatibility, each `Class.InputAction` should have an `Class.InputBinding` for **gamepad**, **keyboard/mouse**, and **touch** as illustrated here.
+An `Class.InputBinding` defines which hardware binding should trigger the parent `Class.InputAction`, for example a key press, gamepad button, or tap on a touch‑enabled device. For [cross‑platform](../projects/cross-platform.md) compatibility, each `Class.InputAction` should have an `Class.InputBinding` for **gamepad**, **keyboard/mouse**, and **touch** as illustrated here.
 
 <img src="../assets/studio/explorer/StarterGui-InputContext-InputAction-InputBinding-All.png" width="320" />
 

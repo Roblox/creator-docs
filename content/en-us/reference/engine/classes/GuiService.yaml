@@ -319,13 +319,18 @@ properties:
       can_save: false
     capabilities: []
   - name: GuiService.ViewportDisplaySize
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Read-only property which represents the physical rendering size of the
+      viewport.
+    description: |
+      Read-only property which represents the physical rendering size of the
+      viewport. You can listen for changes to this property through the
+      `Class.Object:GetPropertyChangedSignal()|GetPropertyChangedSignal()`
+      method to adapt UI to various display sizes.
+    code_samples:
+      - GuiService-ViewportDisplaySize
     type: DisplaySize
-    tags:
-      - ReadOnly
-      - NotReplicated
+    tags: []
     deprecation_message: ''
     security:
       read: None

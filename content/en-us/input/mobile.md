@@ -3,7 +3,7 @@ title: Mobile input
 description: Explains Roblox support for mobile devices.
 ---
 
-The majority of Roblox sessions are played on mobile devices, so it's important to consider the mobile [device orientation](#device-orientation) and other cross‑platform factors when designing an experience for a wide audience.
+The majority of Roblox sessions are played on mobile devices, so it's important to consider the mobile [device orientation](#device-orientation) and other [cross‑platform](../projects/cross-platform.md) factors when designing an experience for a wide audience.
 
 To simplify cross‑platform inputs, including player interaction with virtual buttons, Roblox provides the [Input Action System](../input/input-action-system.md) to define **actions** such as "jump," "sprint," or "shoot" and set up **bindings** for multiple hardware inputs to drive those actions.
 
