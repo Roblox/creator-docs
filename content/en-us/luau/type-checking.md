@@ -3,6 +3,10 @@ title: Type checking
 description: Luau uses gradual typing through the use of type annotations and inference.
 ---
 
+<Alert severity="info">
+For the latest and most complete type checking documentation, see [here](https://luau.org/typecheck).
+</Alert>
+
 Luau supports a gradual type system through the use of type annotations and type inference. These types are used to provide better warnings, errors, and suggestions in the [Script Editor](../studio/script-editor.md).
 
 ## Define a type
