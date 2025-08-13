@@ -20,7 +20,7 @@ description: |
   (`Class.MarketplaceService:GetProductInfo()|GetProductInfo` and
   `Class.MarketplaceService:GetDeveloperProductsAsync()|GetDeveloperProductsAsync`),
   [passes](../../../production/monetization/game-passes.md)
-  (`Class.MarketplaceService:UserOwnsGamePassAsync()|UserOwnsGamePassAsync`),
+  (`Class.MarketplaceService:UserOwnsGamePassAsync()|UserOwnsGamePassAsync()`),
   and other assets
   (`Class.MarketplaceService:PlayerOwnsAsset()|PlayerOwnsAsset`,
   `Class.MarketplaceService:PlayerOwnsBundle()|PlayerOwnsBundle`).
@@ -738,7 +738,7 @@ methods:
         [passes](../../../production/monetization/game-passes.md) since they use
         a separate ID system. Legacy passes that still depend on an asset ID
         should use
-        `Class.MarketplaceService:UserOwnsGamePassAsync()|UserOwnsGamePassAsync`
+        `Class.MarketplaceService:UserOwnsGamePassAsync()|UserOwnsGamePassAsync()`
         instead of this method.
       - This method cannot be used to check for
         [developer products](../../../production/monetization/developer-products.md)
@@ -1093,7 +1093,7 @@ methods:
       If the user has purchased the pass inside an experience through
       `Class.MarketplaceService:PromptGamePassPurchase()|PromptGamePassPurchase`,
       the
-      `Class.MarketplaceService:UserOwnsGamePassAsync()|UserOwnsGamePassAsync`
+      `Class.MarketplaceService:UserOwnsGamePassAsync()|UserOwnsGamePassAsync()`
       function might return false because of caching behavior. Alternatively,
       the function might return true even after the user has deleted the pass
       from their inventory.
@@ -1238,8 +1238,8 @@ events:
 
           This might not accurately reflect if the purchase itself has been
           successfully processed. Use
-          `MarketplaceService.UserOwnsGamePassAsync|UserOwnsGamePassAsync` as
-          ownership confirmation.
+          `Class.MarketplaceService:UserOwnsGamePassAsync()|UserOwnsGamePassAsync()`
+          as ownership confirmation.
     tags: []
     deprecation_message: ''
     security: None

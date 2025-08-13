@@ -663,3 +663,8 @@ https://www.youtube-nocookie.com/embed/_k1ea0OIKaU?si=A9mdnnG95qdaZbB_
 https://www.reaper.fm/userguide.php
 https://www.reaper.fm/download.php
 https://iste.org/standards/students
+https://en.wikipedia.org/wiki/Server-sent_events
+https://en.wikipedia.org/wiki/Chunked_transfer_encoding
+https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events
+https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#event_stream_format
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Transfer-Encoding

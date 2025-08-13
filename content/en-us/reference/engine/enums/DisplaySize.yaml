@@ -4,32 +4,24 @@
 
 name: DisplaySize
 type: enum
-summary: |
-  This enum is used with `Class.GuiService.ViewportDisplaySize` to indicate the
-  internally-categorized rendering size of the viewport.
-description: |
-  This enum is used with `Class.GuiService.ViewportDisplaySize` to indicate the
-  internally-categorized rendering size of the viewport.
+summary: ''
+description: ''
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Small
-    summary: |
-      Viewport is categorized as small. Applies to most tablet/mobile/handheld
-      devices.
+    summary: ''
     value: 0
     tags: []
     deprecation_message: ''
   - name: Medium
-    summary: |
-      Viewport is categorized as medium. Applies to most laptops and monitors.
+    summary: ''
     value: 1
     tags: []
     deprecation_message: ''
   - name: Large
-    summary: |
-      Viewport is categorized as large. Applies to most TVs or larger.
+    summary: ''
     value: 2
     tags: []
     deprecation_message: ''

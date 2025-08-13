@@ -5,80 +5,21 @@ description: Customize your in-experience character appearance and properties.
 
 Most experiences let players use their own Roblox avatar, although some implement an in-experience customization system like the [UGC Homestore](/resources/templates.md#ugc-homestore) template. Other experiences make limited [modifications](../characters/appearance.md) to player avatars such as helmets, wings, or accessories that match the genre.
 
-To create a unique experience that alters the appearance of your users, you can customize the default character properties through [game settings](#game-settings) or a [HumanoidDescription](#humanoiddescription).
+To create a unique experience that alters the appearance of your users, you can customize the default character properties through [avatar settings](#avatar-settings) or a [HumanoidDescription](#humanoiddescription).
 
-## Game settings
+## Avatar settings
 
-The **Avatar** section in Studio's **File**&nbsp;⟩ **Game Settings** window allows you to quickly set several global character properties in your experience. When editing these settings, your avatar displays in the workspace as a visual preview.
+Studio's **File**&nbsp;⟩ **Avatar Settings** allows you to quickly set several global player character properties in your experience. These settings apply globally to all player character models joining your experience. To modify specific characters, such as non-player character models, see [HumanoidDescription](#humanoiddescription).
 
-<img src="../assets/avatar/character-customization/Avatar-In-Editor-Window.jpg"
-width="800" />
+In this window, you can set various presets for clothing, accessories, body parts, collision behavior, animations and more. When editing these settings, a preview of the applied settings displays in the workspace.
 
-<table>
-<thead>
-  <tr>
-    <th>Setting</th>
-    <th>Description</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Presets</td>
-    <td>Applies a common set of `Class.HumanoidDescription.BodyTypeScale|BodyTypeScale` and `Class.HumanoidDescription.ProportionScale|ProportionScale` combinations. You can further adjust these properties with `Class.HumanoidDescription` after selecting a preset.</td>
-  </tr>
-  <tr>
-    <td>Avatar Type</td>
-    <td>Sets the default <a href = "#avatar-types">avatar type</a> to either **R15** or **R6**.</td>
-  </tr>
-  <tr>
-    <td>Animation</td>
-    <td>The set of `Class.Animation|Animations` a user has access to.</td>
-  </tr>
-  <tr>
-    <td>Collision</td>
-    <td>Sets the <a href = "#collision-boundaries">collision boundaries</a> for characters in the experience.</td>
-  </tr>
-  <tr>
-    <td>Body Parts</td>
-    <td>The Asset IDs of the `Class.HumanoidDescription.Face|Face`, `Class.HumanoidDescription.Head|Head`, `Class.HumanoidDescription.Torso|Torso`, `Class.HumanoidDescription.RightArm|RightArm`, `Class.HumanoidDescription.LeftArm|LeftArm`, `Class.HumanoidDescription.RightLeg|RightLeg` and `Class.HumanoidDescription.LeftLeg|LeftLeg` parts of a character.</td>
-  </tr>
-  <tr>
-    <td>Clothing</td>
-    <td>The Asset IDs of the classic `Class.Shirt`, `Class.Pants`, and `Class.ShirtGraphic` image textures that you can apply to the character.</td>
-  </tr>
-</tbody>
-</table>
-
-### Avatar types
-
-The **Avatar Type** setting sets your experience to only load **R15** or **R6** character models.
-
-- **R15** is the default modern avatar with 15 limbs. This avatar allows for more flexible customization, accessory options, and animations.
-
-- **R6** is a classic simple avatar with 6 limbs. This avatar type provides a retro feel but is limited in animations and additional customization. Changes to the body scale property do not affect <b>R6</b> characters.
-
-<GridContainer numColumns="2">
-  <figure>
-    <img src="../assets/avatar/character-customization/R15-Example.jpg" />
-    <figcaption>R15 Character Model.</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/avatar/character-customization/R6-Example.jpg" />
-    <figcaption>R6 Character Model.</figcaption>
-  </figure>
-</GridContainer>
-
-### Collision boundaries
-
-The **Collision** setting sets the collision boundaries for characters in the experience. This doesn't impact the physical appearance of the characters in your experience.
-
-Setting this option to **Outer Box** dynamically sizes the collision boxes of characters based on their individual models. This is the default and recommended setting for most experiences.
-
-Setting this option to **Inner Box** provides fixed collision boundaries for all characters in your experience.
+For more information, see [Avatar Settings](../studio/avatar-settings.md).
 
 ## HumanoidDescription
 
-Playable character models contain a `Class.Humanoid` object that allows the model special characteristics, such as walking, jumping, equipping items, and interacting with the environment. To customize a `Class.Humanoid` character's appearance, you can apply a new `Class.HumanoidDescription` to change character properties.
+Character models contain a `Class.Humanoid` object that gives the model special characteristics, such as walking, jumping, equipping items, and interacting with the environment.
+
+You can programmatically modify a `Class.Humanoid` by updating `Class.HumanoidDescription`. This includes player character models or non-player character models in your experience.
 
 You can adjust the following character properties in your experience using `Class.HumanoidDescription`:
 

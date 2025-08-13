@@ -778,7 +778,7 @@ methods:
         summary: |
           The `Enum.UserInputType` corresponding with the gamepad in question.
     returns:
-      - type: Array
+      - type: Instances
         summary: |
           An array of `Class.InputObject|InputObjects` representing the current
           state of all available inputs for the given gamepad.
@@ -832,7 +832,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Array
+      - type: Instances
         summary: |
           An array of `Class.InputObject|InputObjects` associated with the keys
           currently being pressed.
@@ -890,7 +890,7 @@ methods:
       - UserInputService-GetMouseButtonsPressed
     parameters: []
     returns:
-      - type: Array
+      - type: Instances
         summary: |
           An array of `Class.InputObject|InputObjects` corresponding to the
           mouse buttons currently being currently held down.

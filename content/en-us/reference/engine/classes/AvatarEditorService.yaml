@@ -32,10 +32,6 @@ description: |
   second to these `AvatarEditorService` endpoints, regardless of the number of
   servers or user count. Exceeding these limits returns a
   `429 Too Many Requests` error.
-
-  If you find that your experience requires an adjustment to this throttling,
-  you can submit a
-  [feature request](https://devforum.roblox.com/t/how-to-post-a-feature-request/37232).
 code_samples: []
 inherits:
   - Instance

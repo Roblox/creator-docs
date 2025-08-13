@@ -215,10 +215,10 @@ properties:
 methods:
   - name: VideoFrame:Pause
     summary: |
-      Sets `Class.VideoFrame.Playing` to false, pausing playback if the
+      Sets `Class.VideoFrame.Playing` to `false`, pausing playback if the
       `Class.VideoFrame.Video` is playing.
     description: |
-      Sets `Class.VideoFrame.Playing` to false, pausing playback if the
+      Sets `Class.VideoFrame.Playing` to `false`, pausing playback if the
       `Class.VideoFrame.Video` is playing.
 
       As `Class.VideoFrame.TimePosition` is not reset, when the video is resumed
@@ -236,12 +236,11 @@ methods:
       - UI
   - name: VideoFrame:Play
     summary: |
-      Sets `Class.VideoFrame.Playing` to true, playing the
+      Sets `Class.VideoFrame.Playing` to `true`, playing the
       `Class.VideoFrame.Video` from the current `Class.VideoFrame.TimePosition`.
     description: |
-      Sets `Class.VideoFrame.Playing` to true, This plays the
-      `Class.VideoFrame.Video`, continuing from the current
-      `Class.VideoFrame.TimePosition`.
+      Sets `Class.VideoFrame.Playing` to `true`, playing the
+      `Class.VideoFrame.Video` from the current `Class.VideoFrame.TimePosition`.
     code_samples:
       - creating-and-playing-a-video
     parameters: []

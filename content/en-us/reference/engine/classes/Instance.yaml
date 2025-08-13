@@ -390,13 +390,13 @@ methods:
       return `nil`.
 
       If a reference property such as `Class.ObjectValue.Value` is set in a
-      cloned instance, the value of the copy's property depends on original's
-      value:
+      cloned instance, the value of the copy's property depends on the
+      original's value:
 
       - If a reference property refers to an instance that was **also** cloned,
         the copy will refer to the copy.
-      - If a reference property refers to an object that was **not** cloned, the
-        same value is maintained in the copy.
+      - If a reference property refers to an instance that was **not** cloned,
+        the same value is maintained in the copy.
     code_samples:
       - Clone-Example
     parameters: []

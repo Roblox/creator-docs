@@ -398,10 +398,10 @@ methods:
       - Animation
   - name: AnimationTrack:GetMarkerReachedSignal
     summary: |
-      Returns an `Datatype.RBXScriptSignal|event` that fires when a specified
+      Returns an `Datatype.RBXScriptSignal` (event) that fires when a specified
       `Class.KeyframeMarker` has been hit in an `Class.Animation|animation`.
     description: |
-      This method returns an `Datatype.RBXScriptSignal|event` similar to the
+      This method returns an `Datatype.RBXScriptSignal` (event) similar to the
       `Class.AnimationTrack.KeyframeReached` event, except it only fires when a
       specified `Class.KeyframeMarker` has been hit in an
       `Class.Animation|animation`. The difference allows for greater control of
@@ -433,8 +433,7 @@ methods:
       - type: RBXScriptSignal
         summary: |
           The signal created and fired when the animation reaches the created
-          `KeyframeMarker`. Not to be confused with the name of the
-          `Class.Keyframe`.
+          `Class.KeyframeMarker`.
     tags: []
     deprecation_message: ''
     security: None

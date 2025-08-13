@@ -34,11 +34,11 @@ properties:
     description: |
       When this property is set to true, the package associated with the given
       `Class.PackageLink` will be automatically updated to the latest version.
-      By default this property will be false upon creation of a package.
+      By default, this property is false upon creation of a package.
 
-      This property would allows you to decide if a given package should be
-      automatically updated to the latest version when entering a given place.
-      The game will periodically check for new updates while a place is open.
+      This property lets you decide if a given package should be automatically
+      updated to the latest version when entering a given place. The game
+      periodically checks for new updates while a place is open.
     code_samples: []
     type: boolean
     tags: []

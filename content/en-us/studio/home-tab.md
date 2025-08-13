@@ -242,7 +242,7 @@ Once a playtest is running, the following options become available:
 
 ## Game Settings
 
-The **Game Settings** button, accessible only for a [published](../production/publishing/publish-experiences-and-places.md) experience, lets you update basic information, permissions, security, avatar settings, and more. For more information, see the [Game Settings](../studio/game-settings.md) reference page.
+The **Game Settings** button, accessible only for a [published](../production/publishing/publish-experiences-and-places.md) experience, lets you update basic information, permissions, security, and more. For more information, see the [Game Settings](../studio/game-settings.md) reference page.
 
 <img src="../assets/studio/general/Home-Tab-Game-Settings.png" width="760" alt="Game Settings button indicated in Home tab" />
 

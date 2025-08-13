@@ -433,7 +433,7 @@ methods:
           Dictionary containing the following key-value pairs:
 
           - `ColorMap` — A `Datatype.Content` object that contains the color
-             map. Default is `nil`.
+            map. Default is `nil`.
           - `MetalnessMap` — A `Datatype.Content` object that contains the
             metalness map. If more than one channel is present, only the red
             channel is used. Default is `nil`.
@@ -447,7 +447,8 @@ methods:
         summary: |
           A new `Class.SurfaceAppearance` instance with the given maps from the
           `content` parameter.
-    tags: []
+    tags:
+      - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
