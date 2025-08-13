@@ -178,6 +178,7 @@ https://lordfairfax.augusoft.net.cfm/?method=ClassInfo.ClassInformation&amp;int_
 https://luau.org/
 https://luau.org/syntax
 https://luau.org/lint
+https://luau.org/typecheck
 https://luau-lang.org/
 https://maker-state.com/product/creative-coding-with-minecraft-roblox/
 https://makersplacegh.com/online-sessions/coding-games-in-roblox/
