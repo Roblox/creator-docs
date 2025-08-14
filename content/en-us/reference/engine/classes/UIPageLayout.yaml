@@ -308,9 +308,13 @@ methods:
 events:
   - name: UIPageLayout.PageEnter
     summary: |
-      Fires when a page comes into view, becomes visible, and is going to be rendered. In order to listen to changes in pageIndex, connect to `:GetPropertyChangedSignal("CurrentPage")` instead.
+      Fires when a page comes into view, has its visible property toggled on, and is going to be rendered. This will never fire if `GuiObject.ClipsDescendants` is set to false for its parent and may trigger multiple times depending on the animation used.
+      
+      In order to listen to a page index changes, connect to `:GetPropertyChangedSignal("CurrentPage")` instead.
     description: |
-      Fires when a page comes into view, becomes visible, and is going to be rendered. In order to listen to changes in pageIndex, connect to `:GetPropertyChangedSignal("CurrentPage")` instead.
+      Fires when a page comes into view, has its visible property toggled on, and is going to be rendered. This will never fire if `GuiObject.ClipsDescendants` is set to false for its parent and may trigger multiple times depending on the animation used.
+      
+      In order to listen to a page index changes, connect to `:GetPropertyChangedSignal("CurrentPage")` instead.
     code_samples: []
     parameters:
       - name: page
@@ -324,9 +328,13 @@ events:
       - UI
   - name: UIPageLayout.PageLeave
     summary: |
-      Fires when a page comes into view, becomes visible, and is going to be rendered. In order to listen to changes in pageIndex, connect to `:GetPropertyChangedSignal("CurrentPage")` instead.
+      Fires when a page leaves view, has its visible property toggled off, and is no longer going to be rendered. This will never fire if `GuiObject.ClipsDescendants` is set to false for its parent and may trigger multiple times depending on the animation used.
+      
+      In order to listen to a page index changes, connect to `:GetPropertyChangedSignal("CurrentPage")` instead.
     description: |
-      Fires when a page comes into view, becomes visible, and is going to be rendered. In order to listen to changes in pageIndex, connect to `:GetPropertyChangedSignal("CurrentPage")` instead.
+      Fires when a page leaves view, has its visible property toggled off, and is no longer going to be rendered. This will never fire if `GuiObject.ClipsDescendants` is set to false for its parent and may trigger multiple times depending on the animation used.
+      
+      In order to listen to a page index changes, connect to `:GetPropertyChangedSignal("CurrentPage")` instead.
     code_samples: []
     parameters:
       - name: page
