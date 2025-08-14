@@ -29,7 +29,7 @@ To generate the accessory object:
 <Alert severity = 'success'>
 Congratulations, you've completed your clothing tutorial. With this accessory, you can:
 
-- Equip the accessory on an avatar-ready character by drag and dropping the accessory on an existing model, or using [HumanoidDescription](../../../characters/appearance.md#humanoiddescription).
+- Equip the accessory on an avatar-ready character by drag and dropping the accessory on an existing model, or using [HumanoidDescription](../../../characters/appearance.md#manually-modify-appearance).
 - Save the accessory as an [avatar asset](../../../projects/assets/index.md#for-avatars) for use in an experience later.
 - If you meet certain account requirements, you can [upload your asset](../../../marketplace/publish-to-marketplace.md) for moderation and start selling it on the Marketplace.
 

@@ -368,7 +368,11 @@ The following tables outline all of the classes and associated properties which 
     <td>`Class.ImageButton.HoverImage`</td>
     <td>`ContentId`</td>
 	</tr>
-	<tr>
+  <tr>
+    <td>`Class.ImageButton.HoverImageContent`</td>
+    <td>`Datatype.Content`</td>
+	</tr>
+  <tr>
     <td>`Class.ImageButton.Image`</td>
     <td>`ContentId`</td>
 	</tr>
@@ -395,6 +399,10 @@ The following tables outline all of the classes and associated properties which 
 	<tr>
     <td>`Class.ImageButton.PressedImage`</td>
     <td>`ContentId`</td>
+	</tr>
+  <tr>
+    <td>`Class.ImageButton.PressedImageContent`</td>
+    <td>`Datatype.Content`</td>
 	</tr>
   <tr>
     <td>`Class.ImageButton.ResampleMode`</td>
@@ -475,6 +483,10 @@ The following tables outline all of the classes and associated properties which 
     <td>`ContentId`</td>
 	</tr>
   <tr>
+    <td>`Class.ScrollingFrame.BottomImageContent`</td>
+    <td>`Datatype.Content`</td>
+	</tr>
+  <tr>
     <td>`Class.ScrollingFrame.CanvasSize`</td>
     <td>`Datatype.UDim2`</td>
 	</tr>
@@ -489,6 +501,10 @@ The following tables outline all of the classes and associated properties which 
   <tr>
     <td>`Class.ScrollingFrame.MidImage`</td>
     <td>`ContentId`</td>
+	</tr>
+  <tr>
+    <td>`Class.ScrollingFrame.MidImageContent`</td>
+    <td>`Datatype.Content`</td>
 	</tr>
   <tr>
     <td>`Class.ScrollingFrame.ScrollBarImageColor3`</td>
@@ -513,6 +529,10 @@ The following tables outline all of the classes and associated properties which 
   <tr>
     <td>`Class.ScrollingFrame.TopImage`</td>
     <td>`ContentId`</td>
+	</tr>
+  <tr>
+    <td>`Class.ScrollingFrame.TopImageContent`</td>
+    <td>`Datatype.Content`</td>
 	</tr>
   <tr>
     <td>`Class.ScrollingFrame.VerticalScrollBarInset`</td>

@@ -5,17 +5,17 @@ description: Customize your in-experience character appearance and properties.
 
 Most experiences let players use their own Roblox avatar, although some implement an in-experience customization system like the [UGC Homestore](/resources/templates.md#ugc-homestore) template. Other experiences make limited [modifications](../characters/appearance.md) to player avatars such as helmets, wings, or accessories that match the genre.
 
-To create a unique experience that alters the appearance of your users, you can customize the default character properties through [avatar settings](#avatar-settings) or a [HumanoidDescription](#humanoiddescription).
+To create a unique experience that alters the appearance of your users, you can customize the default character properties through [avatar settings](#global-avatar-settings) or a [manually modify appearance](#manually-modify-appearance).
 
-## Avatar settings
+## Global avatar settings
 
-Studio's **File**&nbsp;⟩ **Avatar Settings** allows you to quickly set several global player character properties in your experience. These settings apply globally to all player character models joining your experience. To modify specific characters, such as non-player character models, see [HumanoidDescription](#humanoiddescription).
+Studio's **File**&nbsp;⟩ **Avatar Settings** allows you to quickly set several global player character properties in your experience. These settings apply globally to all player character models joining your experience. To modify specific characters, such as non-player character models, see [manually modify appearance](#manually-modify-appearance).
 
 In this window, you can set various presets for clothing, accessories, body parts, collision behavior, animations and more. When editing these settings, a preview of the applied settings displays in the workspace.
 
 For more information, see [Avatar Settings](../studio/avatar-settings.md).
 
-## HumanoidDescription
+## Manually modify appearance
 
 Character models contain a `Class.Humanoid` object that gives the model special characteristics, such as walking, jumping, equipping items, and interacting with the environment.
 
@@ -37,15 +37,15 @@ You can adjust the following character properties in your experience using `Clas
   </tr>
   <tr>
     <td>Accessories </td>
-    <td>The Asset IDs of  `Class.Accessory|accessories` equipped by a character. </td>
+    <td>The asset IDs of  `Class.Accessory|accessories` equipped by a character. </td>
   </tr>
   <tr>
     <td>Classic Clothing</td>
-    <td>The Asset IDs of the `Class.Shirt`, `Class.Pants`, and `Class.ShirtGraphic` image textures that you can apply to the character.</td>
+    <td>The asset IDs of the `Class.Shirt`, `Class.Pants`, and `Class.ShirtGraphic` image textures that you can apply to the character.</td>
   </tr>
   <tr>
     <td>Body Part</td>
-    <td>The Asset IDs of the `Class.HumanoidDescription.Face|Face`, `Class.HumanoidDescription.Head|Head`, `Class.HumanoidDescription.Torso|Torso`, `Class.HumanoidDescription.RightArm|RightArm`, `Class.HumanoidDescription.LeftArm|LeftArm`, `Class.HumanoidDescription.RightLeg|RightLeg` and `Class.HumanoidDescription.LeftLeg|LeftLeg` parts of a character.</td>
+    <td>The asset IDs of the `Class.HumanoidDescription.Face|Face`, `Class.HumanoidDescription.Head|Head`, `Class.HumanoidDescription.Torso|Torso`, `Class.HumanoidDescription.RightArm|RightArm`, `Class.HumanoidDescription.LeftArm|LeftArm`, `Class.HumanoidDescription.RightLeg|RightLeg` and `Class.HumanoidDescription.LeftLeg|LeftLeg` parts of a character.</td>
   </tr>
   <tr>
     <td>Body Colors</td>
@@ -53,12 +53,13 @@ You can adjust the following character properties in your experience using `Clas
   </tr>
   <tr>
     <td>Animations</td>
-    <td>The Asset IDs of `Class.Animation|Animations` you can use on a character.</td>
+    <td>The asset IDs of `Class.Animation|Animations` you can use on a character.</td>
   </tr>
 </tbody>
 </table>
+<br />
 
-You can customize a character with `Class.HumanoidDescription` using the following steps:
+Customize a character with `Class.HumanoidDescription` using the following steps:
 
 1. [Create a description](#create-humanoiddescription) from the user's character, a specific Outfit ID, or from a specific User ID.
 2. [Modify the description](#modify-humanoiddescription) to customize the properties that you want to apply to the `Class.Humanoid` character.
@@ -72,17 +73,18 @@ When updating a character's properties through `Class.HumanoidDescription`, it i
 
 You can create a new `Class.HumanoidDescription` instance directly within the Explorer hierarchy or within a `Class.Script` with the following code:
 
-```lua
+```lua title="Create new HumanoidDescription instance"
 local humanoidDescription = Instance.new("HumanoidDescription")
 ```
 
-In most cases, you should use an existing `Class.HumanoidDescription` instead of a default new `Class.HumanoidDescription` by referencing an [existing player character](#from-the-player-character), [avatar outfit](#from-an-existing-outfit), or [user ID](#from-a-specific-user).
+In most cases, you should use an existing `Class.HumanoidDescription` instead of a default new `Class.HumanoidDescription` by referencing an existing player character, avatar outfit, or user ID.
 
-#### From the player character
+<br />
+<h4> From the player character </h4>
 
 Use the following code sample to create a new `Class.HumanoidDescription` based on the player character's current properties:
 
-```lua
+```lua title="Generate a HumanoidDescription from a player character"
 local humanoid = player.Character and player.Character:FindFirstChildWhichIsA("Humanoid")
 
 local humanoidDescription = Instance.new("HumanoidDescription")
@@ -92,11 +94,11 @@ if humanoid then
 end
 ```
 
-#### From an existing outfit
+<h4> From an existing outfit </h4>
 
 Use the following sample code to create a `Class.HumanoidDescription` from an outfit ID using `Class.Players:GetHumanoidDescriptionFromOutfitId()|Players.GetHumanoidDescriptionFromOutfitID`:
 
-```lua
+```lua title="Generate a HumanoidDescription from an Outfit ID"
 local Players = game:GetService("Players")
 
 local outfitId = 480059254
@@ -104,11 +106,11 @@ local outfitId = 480059254
 local humanoidDescriptionFromOutfit = Players:GetHumanoidDescriptionFromOutfitId(outfitId)
 ```
 
-#### From a specific user
+<h4> From a specific user </h4>
 
 Use the following sample code to create a `Class.HumanoidDescription` from a user ID using `Class.Players:GetHumanoidDescriptionFromUserId()`:
 
-```lua
+```lua  title="Generate a HumanoidDescription from a user ID"
 local Players = game:GetService("Players")
 
 local userId = 491243243
@@ -122,7 +124,7 @@ To customize `Class.HumanoidDescription` properties, set them directly on the `C
 
 The following code sample provides examples of setting the different types of `Class.HumanoidDescription` properties:
 
-```lua
+```lua title="Update various HumanoidDescription properties"
 local humanoidDescription = Instance.new("HumanoidDescription")
 humanoidDescription.HatAccessory = "2551510151,2535600138"
 humanoidDescription.BodyTypeScale = 0.1
@@ -132,11 +134,11 @@ humanoidDescription.GraphicTShirt = 1711661
 humanoidDescription.HeadColor = Color3.new(0, 1, 0)
 ```
 
-#### Set multiple accessories
+<h4> Set multiple accessories </h4>
 
 For layered or bulk accessory changes, you can use `Class.HumanoidDescription:SetAccessories()` to make accessory related updates. The following code sample adds a layered sweater and jacket in that order to a `Class.HumanoidDescription`:
 
-```lua
+```lua title="Change multiple accessories at once"
 local humanoidDescription = Instance.new("HumanoidDescription")
 local accessoryTable = {
 	{
@@ -162,11 +164,11 @@ Apply `Class.HumanoidDescription` to specific `Class.Humanoid` characters in you
 Changing the assets on a character while also changing `Class.HumanoidDescription` might lead to undefined behavior.
 </Alert>
 
-#### On a single character
+<h4> On a single character </h4>
 
 `Class.Humanoid:ApplyDescription()|ApplyDescription()` can target any `Class.Humanoid`. Use the following code to add a new pair of sunglasses and a new torso to the player character:
 
-```lua
+```lua title = "Update HumanoidDescription for a specific player character"
 local humanoid = player.Character and player.Character:FindFirstChildWhichIsA("Humanoid")
 if humanoid then
 	local descriptionClone = humanoid:GetAppliedDescription()
@@ -178,11 +180,11 @@ if humanoid then
 end
 ```
 
-#### On all player characters
+<h4> On all player characters </h4>
 
 Use the following sample code to apply a `Class.HumanoidDescription` to all current players in the game:
 
-```lua
+```lua title = "Update HumanoidDescription for all current player characters"
 local Players = game:GetService("Players")
 
 for _, player in Players:GetPlayers() do
@@ -201,11 +203,11 @@ for _, player in Players:GetPlayers() do
 end
 ```
 
-#### On all spawning characters
+<h4> On all spawning characters </h4>
 
 Use the following sample code to set a specific `Class.HumanoidDescription` for all spawning player characters:
 
-```lua
+```lua title = "Update HumanoidDescription for all spawning characters"
 local Players = game:GetService("Players")
 
 -- Stop automatic spawning so it can be done in the "PlayerAdded" callback
