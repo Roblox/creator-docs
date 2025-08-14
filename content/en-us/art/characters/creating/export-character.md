@@ -31,7 +31,7 @@ After exporting your .fbx file, see [Test characters](../../../art/characters/te
 After importing the `Class.Model` character to Studio, you can now perform the following with this asset:
 
 - [Upload the character](../../../art/accessories/creating-rigid/publishing.md) to the Marketplace.
-- Use the humanoid character on an existing experience by applying a [HumanoidDescription](../../../characters/appearance.md#humanoiddescription)to the `Class.Model` object.
+- Use the humanoid character on an existing experience by applying a [HumanoidDescription](../../../characters/appearance.md#manually-modify-appearance)to the `Class.Model` object.
 - Save the asset to your [Toolbox](../../../projects/assets/toolbox.md) to share or use within any of your experiences.
 
 </Alert>

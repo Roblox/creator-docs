@@ -272,6 +272,6 @@ When you are ready to generate your accessory, select **Generate MeshPart Access
 
 With an accessory successfully created, you can now try the following:
 
-- Equip the accessory on an avatar-ready character by drag and dropping the accessory on an existing model, or using [HumanoidDescription](../../characters/appearance.md#humanoiddescription).
+- Equip the accessory on an avatar-ready character by drag and dropping the accessory on an existing model, or using [HumanoidDescription](../../characters/appearance.md#manually-modify-appearance).
 - Save the accessory as an [avatar asset](../../projects/assets/index.md#for-avatars) for use in an experience later.
 - If you meet certain account requirements, you can [upload your asset](../../marketplace/publish-to-marketplace.md) for moderation and start selling it on the Marketplace.

@@ -81,7 +81,7 @@ With this new character `Class.Model`, you can perform any of the following:
 
 - Begin the process of [uploading and publishing](../../marketplace/publish-to-marketplace.md#upload-an-asset) the character model to the Marketplace. This involves some additional validation and moderation steps.
 
-- Use the model in your current experience and modify the model's appearance with [HumanoidDescription](../../characters/appearance.md#humanoiddescription).
+- Use the model in your current experience and modify the model's appearance with [HumanoidDescription](../../characters/appearance.md#manually-modify-appearance).
 
   - Playtest as the character by renaming the `Class.Model` to `StarterCharacter` and moving the `Class.Model` to the StarterPlayer folder in your Explorer before play testing.
 

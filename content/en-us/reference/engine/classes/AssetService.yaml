@@ -437,8 +437,8 @@ methods:
           - `MetalnessMap` — A `Datatype.Content` object that contains the
             metalness map. If more than one channel is present, only the red
             channel is used. Default is `nil`.
-          - `NormalMap` — A `Datatype.Content` object that contains the
-            normal map. Default is `nil`.
+          - `NormalMap` — A `Datatype.Content` object that contains the normal
+            map. Default is `nil`.
           - `RoughnessMap` — A `Datatype.Content` object that contains the
             roughness map. If more than one channel is present, only the red
             channel is used. Default is `nil`.
