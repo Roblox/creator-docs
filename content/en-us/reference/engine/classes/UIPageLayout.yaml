@@ -308,9 +308,9 @@ methods:
 events:
   - name: UIPageLayout.PageEnter
     summary: |
-      Fires when a page comes into view, and is going to be rendered.
+      Fires when a page comes into view, becomes visible, and is going to be rendered. In order to listen to changes in pageIndex, connect to `:GetPropertyChangedSignal("CurrentPage")` instead.
     description: |
-      Fires when a page comes into view, and is going to be rendered.
+      Fires when a page comes into view, becomes visible, and is going to be rendered. In order to listen to changes in pageIndex, connect to `:GetPropertyChangedSignal("CurrentPage")` instead.
     code_samples: []
     parameters:
       - name: page
@@ -324,9 +324,9 @@ events:
       - UI
   - name: UIPageLayout.PageLeave
     summary: |
-      Fires when a page leaves view, and will not be rendered.
+      Fires when a page comes into view, becomes visible, and is going to be rendered. In order to listen to changes in pageIndex, connect to `:GetPropertyChangedSignal("CurrentPage")` instead.
     description: |
-      Fires when a page leaves view, and will not be rendered.
+      Fires when a page comes into view, becomes visible, and is going to be rendered. In order to listen to changes in pageIndex, connect to `:GetPropertyChangedSignal("CurrentPage")` instead.
     code_samples: []
     parameters:
       - name: page
