@@ -3,6 +3,8 @@ title: Input Action System
 description: The cross-platform Input Action System lets you connect actions and arrange bindings across various hardware inputs at edit time.
 ---
 
+import DefaultBindings from '../includes/default-bindings.md'
+
 The cross-platform **Input Action System** lets you connect [actions](#input-actions) and arrange [bindings](#input-bindings) across various hardware inputs at edit time. Combined with [contexts](#input-contexts), you can easily configure and edit a modular input system that works on any device in any phase of play. Use cases include:
 
 - A first-person shooter system with actions dynamically swapping in and out depending on if the player is in battle mode or spectator mode.
@@ -325,3 +327,7 @@ Once you have an [input context](#input-contexts) such as `PlayContext`, you can
 			contextEvent:Fire("PlayContext", true)
 		end)
 		```
+
+## Default bindings
+
+<DefaultBindings components={props.components} />
