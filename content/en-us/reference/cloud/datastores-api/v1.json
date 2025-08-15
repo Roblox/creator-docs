@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Standard data stores",
-    "description": "This page includes reference documentation for working with standard data stores. For more information on using the API, see [Handle API requests for data stores](../../../cloud/guides/data-store-api-handling.md) and the [usage guide](../../../cloud/guides/usage-data-stores.md).",
+    "description": "This page includes reference documentation for working with the Open Cloud v1 API for standard data stores. For information on using the v2 API, see the [usage guide](../../../cloud/guides/data-stores/index.md).",
     "version": "v1",
     "x-roblox-extensions-version": "1.0.0"
   },
@@ -25,7 +25,7 @@
             "name": "universeId",
             "in": "path",
             "required": true,
-            "description": "The identifier of the experience with data stores that you want to access. You can [copy your experience's Universe ID](../../../cloud/guides/usage-data-stores.md#getting-the-universe-id) on the **Creator Dashboard**.",
+            "description": "The identifier of the experience with data stores that you want to access. You can find your experience's universe ID on Creator Hub.",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -34,7 +34,7 @@
           {
             "name": "cursor",
             "in": "query",
-            "description": "Provide to request the next set of data. See [Cursors](../../../cloud/guides/data-store-api-handling.md#cursors).",
+            "description": "Provide to request the next set of data.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -78,7 +78,7 @@
                     "nextPageCursor": {
                       "type": "string",
                       "nullable": true,
-                      "description": "Indicates that there is more data available in the requested result set. See [Cursors](../../../cloud/guides/data-store-api-handling.md#cursors)."
+                      "description": "Indicates that there is more data available in the requested result set."
                     }
                   },
                   "example": "{\n  \"datastores\": [\n    {\n      \"name\": \"PlayerInventory\",\n      \"createdTime\": \"2022-02-18T22:38:59.9244932Z\"\n    },\n    {\n      \"name\": \"PlayerExperience\",\n      \"createdTime\": \"2022-02-18T23:00:10.4773508Z\"\n    },\n    {\n      \"name\": \"PlayerWeapons\",\n      \"createdTime\": \"2022-02-18T23:00:22.3725681Z\"\n    },\n    {\n      \"name\": \"PlayerArmor\",\n      \"createdTime\": \"2022-02-18T22:59:33.8472882Z\"\n    },\n    {\n      \"name\": \"PlayerHP\",\n      \"createdTime\": \"2022-02-18T22:58:47.6904028Z\"\n    }\n  ],\n  \"nextPageCursor\": \"...\"\n}\n"
@@ -107,7 +107,7 @@
           }
         ],
         "x-roblox-rate-limits": {
-          "description": "See [Throttling](../../../cloud/guides/data-store-api-handling#throttling)."
+          "description": "See [Throttling](../../../cloud/guides/data-stores/throttling.md)."
         },
         "x-roblox-alternatives": [
           {
@@ -130,7 +130,7 @@
             "name": "universeId",
             "in": "path",
             "required": true,
-            "description": "The identifier of the experience with data stores that you want to access. You can [copy your experience's Universe ID](../../../cloud/guides/usage-data-stores.md#getting-the-universe-id) on the **Creator Dashboard**.",
+            "description": "The identifier of the experience with data stores that you want to access. You can find your experience's universe ID on Creator Hub.",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -175,7 +175,7 @@
           {
             "name": "cursor",
             "in": "query",
-            "description": "Provide to request the next set of data. See [Cursors](../../../cloud/guides/data-store-api-handling.md#cursors).",
+            "description": "Provide to request the next set of data.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -210,7 +210,7 @@
                     "nextPageCursor": {
                       "type": "string",
                       "nullable": true,
-                      "description": "Indicates that there is more data available in the requested result set. See [Cursors](../../../cloud/guides/data-store-api-handling.md#cursors)."
+                      "description": "Indicates that there is more data available in the requested result set."
                     }
                   },
                   "example": "{\n  \"keys\": [\n    {\n      \"key\": \"269323\"\n    }\n  ],\n  \"nextPageCursor\": \"eyJ2ZXJzaW9uIjoxLCJjdXJzb3IiOiIzIyJ9\"\n}\n"
@@ -239,7 +239,7 @@
           }
         ],
         "x-roblox-rate-limits": {
-          "description": "See [Throttling](../../../cloud/guides/data-store-api-handling#throttling)."
+          "description": "See [Throttling](../../../cloud/guides/data-stores/throttling.md)."
         },
         "x-roblox-alternatives": [
           {
@@ -257,7 +257,7 @@
       "get": {
         "tags": ["Entries"],
         "summary": "Get entry.",
-        "description": "Returns the value and metadata associated with an entry.\n\nEntries marked deleted with a tombstone version will return 404 Not Found.\n\nMetadata can be found in the response headers like the following:\n```text\ncontent-md5: zuYxEhwuySMv0i8CitXImw==\nroblox-entry-version: 08D9E6A3F2188CFF.0000000001.08D9E6A3F2188CFF.01\nroblox-entry-created-time: 2022-02-02T23:30:06.5388799+00:00\nroblox-entry-version-created-time: 2022-02-02T23:30:06.5388799+00:00\nroblox-entry-attributes: { \"myAttribute\": \"myValue\" }\nroblox-entry-userids: [1, 2, 3]\n```\n\n| Header | Description |\n|---|---| \n| `content-md5` | The base-64 encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/guides/data-store-api-handling.md#content-md5). |\n| `roblox-entry-version` | The version of the returned entry. |\n| `roblox-entry-created-time` | The time at which the entry was created. |\n| `roblox-entry-version-created-time` | The time at which this particular version was created. |\n| `roblox-entry-attributes` | Attributes tagged with the entry. Serialized JSON map object. |\n| `roblox-entry-userids` | Comma-separated list of Roblox user IDs tagged with the entry. |\n",
+        "description": "Returns the value and metadata associated with an entry.\n\nEntries marked deleted with a tombstone version will return 404 Not Found.\n\nMetadata can be found in the response headers like the following:\n```text\ncontent-md5: zuYxEhwuySMv0i8CitXImw==\nroblox-entry-version: 08D9E6A3F2188CFF.0000000001.08D9E6A3F2188CFF.01\nroblox-entry-created-time: 2022-02-02T23:30:06.5388799+00:00\nroblox-entry-version-created-time: 2022-02-02T23:30:06.5388799+00:00\nroblox-entry-attributes: { \"myAttribute\": \"myValue\" }\nroblox-entry-userids: [1, 2, 3]\n```\n\n| Header | Description |\n|---|---| \n| `content-md5` | The base64-encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/guides/data-stores/request-handling.md#content-md5). |\n| `roblox-entry-version` | The version of the returned entry. |\n| `roblox-entry-created-time` | The time at which the entry was created. |\n| `roblox-entry-version-created-time` | The time at which this particular version was created. |\n| `roblox-entry-attributes` | Attributes tagged with the entry. Serialized JSON map object. |\n| `roblox-entry-userids` | Comma-separated list of Roblox user IDs tagged with the entry. |\n",
         "operationId": "Entries_GetEntryAsync",
         "x-roblox-cloud-api-operation-name": "Get Entry",
         "x-roblox-stability": "BETA",
@@ -266,7 +266,7 @@
             "name": "universeId",
             "in": "path",
             "required": true,
-            "description": "The identifier of the experience with data stores that you want to access. You can [copy your experience's Universe ID](../../../cloud/guides/usage-data-stores.md#getting-the-universe-id) on the **Creator Dashboard**.",
+            "description": "The identifier of the experience with data stores that you want to access. You can find your experience's universe ID on Creator Hub.",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -310,7 +310,7 @@
                   "type": "string",
                   "format": "byte"
                 },
-                "description": "The base-64 encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/guides/data-store-api-handling.md#content-md5)."
+                "description": "The base64-encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/guides/data-stores/request-handling.md#content-md5)."
               },
               "roblox-entry-version": {
                 "schema": {
@@ -377,7 +377,7 @@
           }
         ],
         "x-roblox-rate-limits": {
-          "description": "See [Throttling](../../../cloud/guides/data-store-api-handling#throttling)."
+          "description": "See [Throttling](../../../cloud/guides/data-stores/throttling.md)."
         },
         "x-roblox-alternatives": [
           {
@@ -402,7 +402,7 @@
             "name": "universeId",
             "in": "path",
             "required": true,
-            "description": "The identifier of the experience with data stores that you want to access. You can [copy your experience's Universe ID](../../../cloud/guides/usage-data-stores.md#getting-the-universe-id) on the **Creator Dashboard**.",
+            "description": "The identifier of the experience with data stores that you want to access. You can find your experience's universe ID on Creator Hub.",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -476,7 +476,7 @@
           {
             "name": "content-md5",
             "in": "header",
-            "description": "The base-64 encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/guides/data-store-api-handling.md#content-md5).",
+            "description": "The base64-encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/guides/data-stores/request-handling.md#content-md5).",
             "schema": {
               "type": "string",
               "nullable": true
@@ -536,7 +536,7 @@
           }
         ],
         "x-roblox-rate-limits": {
-          "description": "See [Throttling](../../../cloud/guides/data-store-api-handling#throttling)."
+          "description": "See [Throttling](../../../cloud/guides/data-stores/throttling.md)."
         },
         "x-roblox-alternatives": [
           {
@@ -569,7 +569,7 @@
             "name": "universeId",
             "in": "path",
             "required": true,
-            "description": "The identifier of the experience with data stores that you want to access. You can [copy your experience's Universe ID](../../../cloud/guides/usage-data-stores.md#getting-the-universe-id) on the **Creator Dashboard**.",
+            "description": "The identifier of the experience with data stores that you want to access. You can find your experience's universe ID on Creator Hub.",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -624,7 +624,7 @@
           }
         ],
         "x-roblox-rate-limits": {
-          "description": "See [Throttling](../../../cloud/guides/data-store-api-handling#throttling)."
+          "description": "See [Throttling](../../../cloud/guides/data-stores/throttling.md)."
         },
         "x-roblox-alternatives": [
           {
@@ -642,7 +642,7 @@
       "post": {
         "tags": ["Entries"],
         "summary": "Increment entry",
-        "description": "Increments the value for an entry by a given amount, or create a new entry with that amount. Returns the entry and metadata.\n\nMetadata can be found in the response headers like the following:\n```text\ncontent-md5: zuYxEhwuySMv0i8CitXImw==\nroblox-entry-version: 08D9E6A3F2188CFF.0000000001.08D9E6A3F2188CFF.01\nroblox-entry-created-time: 2022-02-02T23:30:06.5388799+00:00\nroblox-entry-version-created-time: 2022-02-02T23:30:06.5388799+00:00\nroblox-entry-attributes: { \"myAttribute\": \"myValue\" }\nroblox-entry-userids: [1, 2, 3]\n```\n\n| Header | Description |\n|---|---| \n| `content-md5` | The base-64 encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/guides/data-store-api-handling.md#content-md5). |\n| `roblox-entry-version` | The version of the returned entry. |\n| `roblox-entry-created-time` | The time at which the entry was created. |\n| `roblox-entry-version-created-time` | The time at which this particular version was created. |\n| `roblox-entry-attributes` | Attributes tagged with the entry. Serialized JSON map object. |\n| `roblox-entry-userids` | Comma-separated list of Roblox user IDs tagged with the entry. |\n",
+        "description": "Increments the value for an entry by a given amount, or create a new entry with that amount. Returns the entry and metadata.\n\nMetadata can be found in the response headers like the following:\n```text\ncontent-md5: zuYxEhwuySMv0i8CitXImw==\nroblox-entry-version: 08D9E6A3F2188CFF.0000000001.08D9E6A3F2188CFF.01\nroblox-entry-created-time: 2022-02-02T23:30:06.5388799+00:00\nroblox-entry-version-created-time: 2022-02-02T23:30:06.5388799+00:00\nroblox-entry-attributes: { \"myAttribute\": \"myValue\" }\nroblox-entry-userids: [1, 2, 3]\n```\n\n| Header | Description |\n|---|---| \n| `content-md5` | The base64-encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/guides/data-stores/request-handling.md#content-md5). |\n| `roblox-entry-version` | The version of the returned entry. |\n| `roblox-entry-created-time` | The time at which the entry was created. |\n| `roblox-entry-version-created-time` | The time at which this particular version was created. |\n| `roblox-entry-attributes` | Attributes tagged with the entry. Serialized JSON map object. |\n| `roblox-entry-userids` | Comma-separated list of Roblox user IDs tagged with the entry. |\n",
         "operationId": "Entries_IncrementEntryAsync",
         "x-roblox-cloud-api-operation-name": "Increment Entry",
         "x-roblox-stability": "BETA",
@@ -651,7 +651,7 @@
             "name": "universeId",
             "in": "path",
             "required": true,
-            "description": "The identifier of the experience with data stores that you want to access. You can [copy your experience's Universe ID](../../../cloud/guides/usage-data-stores.md#getting-the-universe-id) on the **Creator Dashboard**.",
+            "description": "The identifier of the experience with data stores that you want to access. You can find your experience's universe ID on Creator Hub.",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -723,7 +723,7 @@
                   "type": "string",
                   "format": "byte"
                 },
-                "description": "The base-64 encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/guides/data-store-api-handling.md#content-md5)."
+                "description": "The base64-encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/guides/data-stores/request-handling.md#content-md5)."
               },
               "roblox-entry-version": {
                 "schema": {
@@ -806,7 +806,7 @@
           }
         ],
         "x-roblox-rate-limits": {
-          "description": "See [Throttling](../../../cloud/guides/data-store-api-handling#throttling)."
+          "description": "See [Throttling](../../../cloud/guides/data-stores/throttling.md)."
         },
         "x-roblox-alternatives": [
           {
@@ -824,7 +824,7 @@
       "get": {
         "tags": ["Entries"],
         "summary": "Get entry version.",
-        "description": "Returns the value and metadata of a specific version of an entry.\n\nMetadata can be found in the response headers like the following:\n```text\ncontent-md5: zuYxEhwuySMv0i8CitXImw==\nroblox-entry-version: 08D9E6A3F2188CFF.0000000001.08D9E6A3F2188CFF.01\nroblox-entry-created-time: 2022-02-02T23:30:06.5388799+00:00\nroblox-entry-version-created-time: 2022-02-02T23:30:06.5388799+00:00\nroblox-entry-attributes: { \"myAttribute\": \"myValue\" }\nroblox-entry-userids: [1, 2, 3]\n```\n\n| Header | Description |\n|---|---| \n| `content-md5` | The base-64 encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/guides/data-store-api-handling.md#content-md5). |\n| `roblox-entry-version` | The version of the returned entry. |\n| `roblox-entry-created-time` | The time at which the entry was created. |\n| `roblox-entry-version-created-time` | The time at which this particular version was created. |\n| `roblox-entry-attributes` | Attributes tagged with the entry. Serialized JSON map object. |\n| `roblox-entry-userids` | Comma-separated list of Roblox user IDs tagged with the entry. |\n",
+        "description": "Returns the value and metadata of a specific version of an entry.\n\nMetadata can be found in the response headers like the following:\n```text\ncontent-md5: zuYxEhwuySMv0i8CitXImw==\nroblox-entry-version: 08D9E6A3F2188CFF.0000000001.08D9E6A3F2188CFF.01\nroblox-entry-created-time: 2022-02-02T23:30:06.5388799+00:00\nroblox-entry-version-created-time: 2022-02-02T23:30:06.5388799+00:00\nroblox-entry-attributes: { \"myAttribute\": \"myValue\" }\nroblox-entry-userids: [1, 2, 3]\n```\n\n| Header | Description |\n|---|---| \n| `content-md5` | The base64-encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/guides/data-stores/request-handling.md#content-md5). |\n| `roblox-entry-version` | The version of the returned entry. |\n| `roblox-entry-created-time` | The time at which the entry was created. |\n| `roblox-entry-version-created-time` | The time at which this particular version was created. |\n| `roblox-entry-attributes` | Attributes tagged with the entry. Serialized JSON map object. |\n| `roblox-entry-userids` | Comma-separated list of Roblox user IDs tagged with the entry. |\n",
         "operationId": "Entries_GetEntryVersionAsync",
         "x-roblox-cloud-api-operation-name": "Get Entry Version",
         "x-roblox-stability": "BETA",
@@ -833,7 +833,7 @@
             "name": "universeId",
             "in": "path",
             "required": true,
-            "description": "The identifier of the experience with data stores that you want to access. You can [copy your experience's Universe ID](../../../cloud/guides/usage-data-stores.md#getting-the-universe-id) on the **Creator Dashboard**.",
+            "description": "The identifier of the experience with data stores that you want to access. You can find your experience's universe ID on Creator Hub.",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -886,7 +886,7 @@
                   "type": "string",
                   "format": "byte"
                 },
-                "description": "The base-64 encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/guides/data-store-api-handling.md#content-md5)."
+                "description": "The base64-encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/guides/data-stores/request-handling.md#content-md5)."
               },
               "roblox-entry-version": {
                 "schema": {
@@ -950,7 +950,7 @@
           }
         ],
         "x-roblox-rate-limits": {
-          "description": "See [Throttling](../../../cloud/guides/data-store-api-handling#throttling)."
+          "description": "See [Throttling](../../../cloud/guides/data-stores/throttling.md)."
         },
         "x-roblox-throttling-limit": {
           "perApiKey": {
@@ -983,7 +983,7 @@
             "name": "universeId",
             "in": "path",
             "required": true,
-            "description": "The identifier of the experience with data stores that you want to access. You can [copy your experience's Universe ID](../../../cloud/guides/usage-data-stores.md#getting-the-universe-id) on the **Creator Dashboard**.",
+            "description": "The identifier of the experience with data stores that you want to access. You can find your experience's universe ID on Creator Hub.",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -1020,7 +1020,7 @@
           {
             "name": "cursor",
             "in": "query",
-            "description": "Provide to request the next set of data (see [Cursors](../../../cloud/guides/data-store-api-handling.md#cursors)).",
+            "description": "Provide to request the next set of data.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -1106,7 +1106,7 @@
           }
         ],
         "x-roblox-rate-limits": {
-          "description": "See [Throttling](../../../cloud/guides/data-store-api-handling#throttling)."
+          "description": "See [Throttling](../../../cloud/guides/data-stores/throttling.md)."
         },
         "x-roblox-alternatives": [
           {

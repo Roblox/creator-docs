@@ -133,10 +133,10 @@ bindableEvent:Fire({
 
 ### Table indexing
 
-If you pass a table of data, do not pass a mixed table of numeric and string keys. Instead, pass a table that consists **entirely** of key-value pairs (a dictionary) or **entirely** of numeric indices (an array).
+If you pass a table of data, do not pass a mixed table of numeric and string keys. Doing so can result in removed elements during the transfer. Instead, pass a table that consists **entirely** of key-value pairs (a dictionary) or **entirely** of numeric indices (an array).
 
 <Alert severity="warning">
-Whether passing a dictionary table **or** a numerically indexed table, avoid `nil` values for any index.
+In both cases, whether passing a dictionary table or a numerically indexed table, avoid `nil` values for any index.
 </Alert>
 
 ```lua title="Event Connection"

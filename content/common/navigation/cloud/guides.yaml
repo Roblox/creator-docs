@@ -2,12 +2,20 @@ backTo:
   title: Back to Open Cloud
   path: /cloud/
 navigation:
-  - heading: Guides
   - title: Overview
     path: /cloud/guides/
-  - heading: Open Cloud v2 Guides
+  - heading: Guides
   - title: Data stores
-    path: /cloud/guides/data-stores
+    path: /cloud/guides/data-stores/
+    section:
+      - title: Overview
+        path: /cloud/guides/data-stores/
+      - title: Handle requests
+        path: /cloud/guides/data-stores/request-handling
+      - title: Rate limits and throttling
+        path: /cloud/guides/data-stores/throttling
+  - title: Assets
+    path: /cloud/guides/usage-assets
   - title: User inventories
     path: /cloud/guides/inventory
   - title: Engine instances
@@ -16,16 +24,6 @@ navigation:
     path: /cloud/guides/experience-notifications
   - title: Messaging
     path: /cloud/guides/usage-messaging
-  - heading: Open Cloud v1 Guides
-  - title: Assets
-    path: /cloud/guides/usage-assets
-  - title: Data stores
-    path: /cloud/guides/usage-data-stores
-    section:
-      - title: Overview
-        path: /cloud/guides/usage-data-stores
-      - title: Handle requests
-        path: /cloud/guides/data-store-api-handling
   - title: Place publishing
     path: /cloud/guides/usage-place-publishing
   - heading: Webhooks

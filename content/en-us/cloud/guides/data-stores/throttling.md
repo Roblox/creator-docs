@@ -1,15 +1,17 @@
 ---
-title: Data stores
-description: Covers usage and rate limits for the Open Cloud v2 Data Stores API.
+title: Rate limits and throttling
+description: Covers rate limits for the Open Cloud v2 Data Stores API.
 ---
-
-## Throttling
 
 The [Data Stores API](/cloud/reference/DataStore) enforces two types of throttling: **requests per minute** and **throughput**. Each experience allows a certain number of requests per minute and a certain amount of data per minute. These limits are enforced for the universe regardless of the number of API keys used.
 
 Unlike the Engine API, these limits do **not** scale based on user count. Exceeding either one causes the endpoint to return `429 Too Many Requests`.
 
-### Standard data stores throttling limits
+<Alert severity="info">
+Data store rate limits for the [Open Cloud v1](/reference/cloud/datastores-api/v1) and [Open Cloud v2](/cloud/reference/DataStore) APIs are identical.
+</Alert>
+
+## Standard data stores throttling limits
 
 <table>
   <thead>
@@ -57,7 +59,7 @@ Unlike the Engine API, these limits do **not** scale based on user count. Exceed
   </tbody>
 </table>
 
-### Ordered data stores throttling limits
+## Ordered data stores throttling limits
 
 <table>
   <thead>
