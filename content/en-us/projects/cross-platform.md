@@ -3,6 +3,8 @@ title: Cross-platform development
 description: Consolidated overview of cross-platform recommendations to help you design a Roblox experience that's accessible and enjoyable on all platforms.
 ---
 
+import BetaAlert from '../includes/beta-features/beta-alert.md'
+
 Roblox is inherently **cross‑platform**, as players can discover and join experiences on their phone or tablet, then later continue where they left off on their PC or console. To support an expanding suite of platforms, you should build user interfaces that seamlessly adapt to the input type (touch, gamepad, mouse/keyboard), screen size, and device orientation. This guide, the [adaptive design](../production/publishing/adaptive-design.md) guide, and the linked resources can help you design a true cross‑platform experience that's compatible, accessible, and enjoyable on **all** platforms.
 
 ## Input
@@ -103,9 +105,7 @@ All UI elements should be [positioned](../ui/position-and-size.md#position) and 
 
 ### Screen size adaptation
 
-<Alert severity="success">
-Adapt UI to various display sizes by listening to the `Class.GuiService.ViewportDisplaySize|ViewportDisplaySize` property.
-</Alert>
+<BetaAlert betaName="New Display Size API" leadIn="Adapt UI to various display sizes by checking and listening for changes to the viewport display size. The following functionality is currently in beta and can be enabled through " leadOut="." components={props.components} />
 
 With a multitude of possible screen sizes accessible to the Roblox platform, attempting to predict screen size by pixels often leads to misinterpretation. To assist in determining a player's screen size to adapt the size/position of UI elements, Roblox provides the read‑only `Class.GuiService.ViewportDisplaySize|ViewportDisplaySize` property which represents the internally‑categorized rendering size of the viewport.
 
