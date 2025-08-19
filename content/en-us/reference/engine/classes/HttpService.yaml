@@ -238,9 +238,12 @@ methods:
       - The value `nil` is never generated.
       - Cyclic table references cause an error.
 
-        This method allows values such as `inf` and `nan` which are not valid
-        JSON. This may cause problems if you want to use the outputted JSON
-        elsewhere.
+      This method allows values such as `inf` and `nan` which are not valid
+      JSON. This may cause problems if you want to use the outputted JSON
+      elsewhere.
+
+      This method can also take a `Datatype.buffer`, which will compress and
+      encode the buffer to Base64, before turning it into a JSON object.
 
       To reverse the encoding process and decode a JSON object, use the
       `Class.HttpService:JSONDecode()` method.
