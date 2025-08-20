@@ -330,7 +330,9 @@ properties:
     code_samples:
       - GuiService-ViewportDisplaySize
     type: DisplaySize
-    tags: []
+    tags:
+      - ReadOnly
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None

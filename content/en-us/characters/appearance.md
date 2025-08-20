@@ -256,12 +256,13 @@ Custom implementation of layered clothing, such as a model using a unique cage U
 
 Whether you are implementing layered accessories on an avatar R15 rig, or using a custom rig, ensure that your accessories and bodies include the following:
 
-- The target model includes a `Class.Humanoid` object in their model instance.
-  - Character rigs [imported](../art/modeling/3d-importer.md#rig-general) as "Custom" instead of R15, must still include a `Class.Humanoid` object under the model instance to get clothing to fit, even if the character otherwise follows the R15 schema.
 - The target model, typically the body, has a `Class.WrapTarget` component on the meshes that additional models are intended to wrap around.
 - The layering model, typically the clothing or accessory, has a `Class.WrapLayer` component on the meshes meant to wrap the target model.
 - The **outer cage of the target model**, and the **inner and outer cage of the layering model** have matching UV maps.
   - The corresponding vertices on the target cage should have the same UVs as those vertices on the layer cage.
+- If your target model is not R15, or doesn't include a `Class.Humanoid`, you must add a `Class.Weld` object to the layering `Class.MeshPart`.
+  - The `Class.Weld` must have `Part0` and `Part1` set to link the layering MeshPart to the Part hierarchy of the Model. For example, `Part0` refers to the accessory and `Part1` refers to the parent Part.
+- If your target model is both R15 and includes a `Class.Humanoid`, this weld is created automatically.
 
 <Alert severity = 'info'>
 See the following resources for additional information on layered clothing and caging:

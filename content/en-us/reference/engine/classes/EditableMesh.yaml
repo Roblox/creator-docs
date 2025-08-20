@@ -906,6 +906,78 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: EditableMesh:GetFacesWithColor
+    summary: |
+      Returns an array of face IDs that use the given color ID.
+    description: |
+      Returns an array of face IDs that use the given color ID. Use together
+      with `Class.EditableMesh:GetVerticesWithColor()|GetVerticesWithColor()` to
+      obtain all face/vertex pairs.
+    code_samples: []
+    parameters:
+      - name: colorId
+        type: int64
+        default:
+        summary: |
+          Color ID to find faces for.
+    returns:
+      - type: Array
+        summary: |
+          List of face IDs that use the provided color ID.
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: EditableMesh:GetFacesWithNormal
+    summary: |
+      Returns an array of face IDs that use the given normal ID.
+    description: |
+      Returns an array of face IDs that use the given normal ID. Use together
+      with `Class.EditableMesh:GetVerticesWithNormal()|GetVerticesWithNormal()`
+      to obtain all face/vertex pairs.
+    code_samples: []
+    parameters:
+      - name: normalId
+        type: int64
+        default:
+        summary: |
+          Normal ID to find faces for.
+    returns:
+      - type: Array
+        summary: |
+          List of face IDs that use the provided normal ID.
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: EditableMesh:GetFacesWithUV
+    summary: |
+      Returns an array of face IDs that use the given UV ID.
+    description: |
+      Returns an array of face IDs that use the given UV ID. Use together with
+      `Class.EditableMesh:GetVerticesWithUV()|GetVerticesWithUV()` to obtain all
+      face/vertex pairs.
+    code_samples: []
+    parameters:
+      - name: uvId
+        type: int64
+        default:
+        summary: |
+          UV ID to find faces for.
+    returns:
+      - type: Array
+        summary: |
+          List of face IDs that use the provided UV ID.
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: EditableMesh:GetFacsCorrectivePose
     summary: |
       Returns bone IDs and bone `Datatype.CFrame|CFrames` for all bones in a
@@ -1151,6 +1223,172 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: EditableMesh:GetVertexColors
+    summary: |
+      Returns the color IDs of the faces attached to the given vertex.
+    description: |
+      Returns the color IDs of the faces attached to the given vertex.
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: |
+          Stable vertex ID to find color IDs.
+    returns:
+      - type: Array
+        summary: |
+          Array of color IDs of faces attached to the given vertex.
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: EditableMesh:GetVertexFaceColor
+    summary: |
+      Returns the color ID of a vertex/face pair.
+    description: |
+      Returns the color ID of a vertex/face pair.
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: |
+          Stable vertex ID.
+      - name: faceId
+        type: int64
+        default:
+        summary: |
+          Stable face ID.
+    returns:
+      - type: int64
+        summary: |
+          Stable color ID of the vertex/face pair.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: EditableMesh:GetVertexFaceNormal
+    summary: |
+      Returns the normal ID of a vertex/face pair.
+    description: |
+      Returns the normal ID of a vertex/face pair.
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: |
+          Stable vertex ID.
+      - name: faceId
+        type: int64
+        default:
+        summary: |
+          Stable face ID.
+    returns:
+      - type: int64
+        summary: |
+          Stable normal ID of the vertex/face pair.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: EditableMesh:GetVertexFaceUV
+    summary: |
+      Returns the UV ID of a vertex/face pair.
+    description: |
+      Returns the UV ID of a vertex/face pair.
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: |
+          Stable vertex ID.
+      - name: faceId
+        type: int64
+        default:
+        summary: |
+          Stable face ID.
+    returns:
+      - type: int64
+        summary: |
+          Stable UV ID of the vertex/face pair.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: EditableMesh:GetVertexFaces
+    summary: |
+      Returns the face IDs of the faces attached to the given vertex.
+    description: |
+      Returns the face IDs of the faces attached to the given vertex.
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: |
+          Stable vertex ID to find faces for.
+    returns:
+      - type: Array
+        summary: |
+          Array of face IDs attached to the given vertex.
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: EditableMesh:GetVertexNormals
+    summary: |
+      Returns the normal IDs of the faces attached to the given vertex.
+    description: |
+      Returns the normal IDs of the faces attached to the given vertex.
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: |
+          Stable vertex ID to find normal IDs.
+    returns:
+      - type: Array
+        summary: |
+          Array of normal IDs of faces attached to the given vertex.
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: EditableMesh:GetVertexUVs
+    summary: |
+      Returns the UV IDs of the faces attached to the given vertex.
+    description: |
+      Returns the UV IDs of the faces attached to the given vertex.
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: |
+          Stable vertex ID to find UV IDs.
+    returns:
+      - type: Array
+        summary: |
+          Array of UV IDs of faces attached to the given vertex.
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: EditableMesh:GetVertices
     summary: |
       Returns all vertices as a list of stable vertex IDs.
@@ -1186,6 +1424,78 @@ methods:
           List of vertex IDs which use the given attribute ID.
     tags:
       - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: EditableMesh:GetVerticesWithColor
+    summary: |
+      Returns an array of face IDs that use the given color ID.
+    description: |
+      Returns an array of face IDs that use the given color ID. Use together
+      with `Class.EditableMesh:GetVerticesWithColor()|GetVerticesWithColor()` to
+      obtain all face/vertex pairs.
+    code_samples: []
+    parameters:
+      - name: colorId
+        type: int64
+        default:
+        summary: |
+          Color ID to find faces for.
+    returns:
+      - type: Array
+        summary: |
+          List of face IDs that use the provided color ID.
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: EditableMesh:GetVerticesWithNormal
+    summary: |
+      Returns an array of vertex IDs that use the given normal ID.
+    description: |
+      Returns an array of vertex IDs that use the given normal ID. Use together
+      with `Class.EditableMesh:GetFacesWithNormal()|GetFacesWithNormal()` to
+      obtain all face/vertex pairs.
+    code_samples: []
+    parameters:
+      - name: normalId
+        type: int64
+        default:
+        summary: |
+          Normal ID to find vertices for.
+    returns:
+      - type: Array
+        summary: |
+          List of vertex IDs that use the provided normal ID.
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: EditableMesh:GetVerticesWithUV
+    summary: |
+      Returns an array of vertex IDs that use the given UV ID.
+    description: |
+      Returns an array of vertex IDs that use the given UV ID. Use together with
+      `Class.EditableMesh:GetFacesWithUV()|GetFacesWithUV()` to obtain all
+      face/vertex pairs.
+    code_samples: []
+    parameters:
+      - name: uvId
+        type: int64
+        default:
+        summary: |
+          UV ID to find vertices for.
+    returns:
+      - type: Array
+        summary: |
+          List of vertex IDs that use the provided UV ID.
+    tags:
+      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -1847,6 +2157,96 @@ methods:
         default:
         summary: |
           Bone IDs to use with this vertex for skinning.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: EditableMesh:SetVertexFaceColor
+    summary: |
+      Sets the color ID of a vertex/face pair.
+    description: |
+      Sets the color ID of a vertex/face pair.
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: |
+          Stable vertex ID.
+      - name: faceId
+        type: int64
+        default:
+        summary: |
+          Stable face ID.
+      - name: colorId
+        type: int64
+        default:
+        summary: |
+          Stable color ID to set for the vertex/face pair.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: EditableMesh:SetVertexFaceNormal
+    summary: |
+      Sets the normal ID of a vertex/face pair.
+    description: |
+      Sets the normal ID of a vertex/face pair.
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: |
+          Stable vertex ID.
+      - name: faceId
+        type: int64
+        default:
+        summary: |
+          Stable face ID.
+      - name: normalId
+        type: int64
+        default:
+        summary: |
+          Stable normal ID to set for the vertex/face pair.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: EditableMesh:SetVertexFaceUV
+    summary: |
+      Sets the UV ID of a vertex/face pair.
+    description: |
+      Sets the UV ID of a vertex/face pair.
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: |
+          Stable vertex ID.
+      - name: faceId
+        type: int64
+        default:
+        summary: |
+          Stable face ID.
+      - name: uvId
+        type: int64
+        default:
+        summary: |
+          Stable UV ID to set for the vertex/face pair.
     returns:
       - type: ()
         summary: ''

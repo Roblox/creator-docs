@@ -686,7 +686,19 @@ methods:
         they are called.
       - An active Team Create session in Studio blocks all saves from occurring.
     code_samples: []
-    parameters: []
+    parameters:
+      - name: requestParameters
+        type: Dictionary?
+        default:
+        summary: |
+          Optional dictionary that includes `SaveWithoutPublish`, a boolean
+          indicating whether to save with publish or without publish, and
+          `PlaceId`, the destination place ID to save over. An example usage
+          would be: AssetService:SavePlaceAsync({PlaceId = 1, SaveWithoutPublish
+          = true}). If PlaceId is not provided, the default behavior will save
+          over the current original place which is calling SavePlaceAsync. If
+          SaveWithoutPublish is not provided, the default behavior is
+          SaveWithoutPublish=false.
     returns:
       - type: ()
         summary: ''

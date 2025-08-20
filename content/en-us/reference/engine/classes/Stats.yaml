@@ -193,6 +193,33 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
+  - name: Stats.MemoryTrackingEnabled
+    summary: |
+      An indication of whether memory tracking is enabled. This is guaranteed to
+      be unchanged until the next time the Client is started.
+    description: |
+      If MemoryTrackingEnabled returns false, any API that returns
+      category-based memory usage e.g. `GetMemoryUsageMbForTag` or
+      `GetTotalMemoryUsageMb` will return 0 and emit a warning. Therefore, usage
+      of category-based memory usage API should be conditional on
+      MemoryTrackingEnabled returning true. The value of MemoryTrackingEnabled
+      will not change from one experience to the next. It will only potentially
+      change after restarting the Roblox client application.
+    code_samples: []
+    type: boolean
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
   - name: Stats.MovingPrimitivesCount
     summary: |
       A measurement of how many physically simulated components are currently
@@ -599,8 +626,14 @@ methods:
     capabilities:
       - InternalTest
   - name: Stats:GetMemoryUsageMbAllCategories
-    summary: ''
-    description: ''
+    summary: |
+      Returns the number of megabytes that are being consumed by all available
+      categories, or an empty array if `MemoryTrackingEnabled` is false.
+    description: |
+      Returns the number of megabytes that are being consumed by all available
+      categories. If `MemoryTrackingEnabled` is false, calling
+      GetMemoryUsageMbAllCategories will return an empty array and emit a
+      warning to the console.
     code_samples: []
     parameters: []
     returns:
@@ -615,10 +648,13 @@ methods:
   - name: Stats:GetMemoryUsageMbForTag
     summary: |
       Returns the number of megabytes that are being consumed in the specified
-      `Enum.DeveloperMemoryTag` category.
+      `Enum.DeveloperMemoryTag` category, or 0 if `MemoryTrackingEnabled` is
+      false.
     description: |
       Returns the number of megabytes that are being consumed in the specified
-      `Enum.DeveloperMemoryTag` category.
+      `Enum.DeveloperMemoryTag` category. If `MemoryTrackingEnabled` is false,
+      calling GetMemoryUsageMbForTag will return 0 and emit a warning to the
+      console.
     code_samples: []
     parameters:
       - name: tag
@@ -636,10 +672,11 @@ methods:
   - name: Stats:GetTotalMemoryUsageMb
     summary: |
       Returns the total amount of memory being consumed by the current game
-      session, in megabytes.
+      session, in megabytes, or 0 if `MemoryTrackingEnabled` is false.
     description: |
       Returns the total amount of memory being consumed by the current game
-      session, in megabytes.
+      session, in megabytes. If `MemoryTrackingEnabled` is false, calling
+      GetTotalMemoryUsageMb will return 0 and emit a warning to the console.
     code_samples: []
     parameters: []
     returns:

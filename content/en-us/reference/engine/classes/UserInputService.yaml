@@ -311,7 +311,9 @@ properties:
     summary: |
       Determines whether the mouse icon is visible.
     description: |
-      This property determines whether the mouse icon is visible.
+      This property determines whether the mouse icon is visible. To detect when
+      this property changes, you must listen to when the
+      `Class.UserInputService.MouseEnabled|MouseEnabled` property changes.
     code_samples: []
     type: boolean
     tags: []
