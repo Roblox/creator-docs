@@ -185,6 +185,10 @@ Property **equality** is searched through the operators `=` or `==`.
 </thead>
 <tbody>
 <tr>
+	<td>`ClassName = Decal`</td>
+	<td>All instances of class `Class.Decal`.</td>
+</tr>
+<tr>
 	<td>`Locked = true`</td>
 	<td>`Class.BasePart|BaseParts` with `Class.BasePart.Locked|Locked` set to `true`.</td>
 </tr>
@@ -268,7 +272,7 @@ Property types such as `Datatype.Vector3` and `Datatype.Color3` support searchin
 
 Classes, and subclasses, and tags are searched through various **bespoke** queries, including:
 
-- `classname:[Class]` and `c:[Class]` both find everything that is of **class** `[Class]`. For example, `classname:Part` finds everything that is a `Class.Part`.
+- `is:[Class]` finds everything that is of **class** `[Class]`. For example, `is:Part` finds everything that is a `Class.Part`.
 - `is:[SubClass]` finds everything that is a **subclass** of `[SubClass]`. For example, `is:BasePart` finds everything that is a subclass of `Class.BasePart`, such as `Class.Part` and `Class.MeshPart`.
 - `tag:[TagName]` finds everything with a `Class.CollectionService` tag of `[TagName]`. For example, `tag:LightSource` finds everything that is tagged `LightSource`. You can add tags using the [Tags](../studio/properties.md#instance-tags) section of an instance's properties, or Studio's [Tag&nbsp;Editor](../studio/view-tab.md#windows-and-tools), and tag names will autocomplete.
 

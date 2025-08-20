@@ -231,7 +231,7 @@ To remove a member entirely, hover over their name and click the "trash" button.
 If you're the owner of a selected group, you'll find a **Payouts** page under **Finances**. Here, you can send one‑time payouts, as well as define percentage splits with other members.
 
 <Alert severity="info">
-Some groups may not have this page unlocked initially for various reasons, such as the group having no funds to payout.
+Some groups may not have this page unlocked initially for various reasons, such as the age of the group or insufficient funds to payout.
 </Alert>
 
 <Alert severity="warning">

@@ -328,7 +328,7 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 		<tr>
 			<td>[Asset Manager](../projects/assets/manager.md)</td>
 			<td>**View** tab</td>
-			<td>Application's **Window** menu&nbsp;⟩ **Asset&nbsp;Manager**</td>
+			<td>🄐 **Home** tab&nbsp;⟩ **Asset&nbsp;Manager**<br />🄑 Application's **Window** menu&nbsp;⟩ **Asset&nbsp;Manager**</td>
 		</tr>
 		<tr>
 			<td>[Toolbox](../projects/assets/toolbox.md)</td>

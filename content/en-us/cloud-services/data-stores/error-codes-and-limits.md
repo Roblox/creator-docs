@@ -346,13 +346,18 @@ Each queue has a limit of 30 requests. When the limit of a queue is reached, req
     </tr>
     <tr>
       <td><b>Set</b></td>
-      <td>`Class.GlobalDataStore:SetAsync()|SetAsync()`<br></br>`Class.GlobalDataStore:IncrementAsync()|IncrementAsync()`<br></br>`Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`<br></br>`Class.GlobalDataStore:RemoveAsync()|RemoveAsync()`</td>
+      <td>`Class.DataStore:SetAsync()|SetAsync()`<br></br>`Class.DataStore:IncrementAsync()|IncrementAsync()`<br></br>`Class.DataStore:UpdateAsync()|UpdateAsync()`<br></br>`Class.DataStore:RemoveAsync()|RemoveAsync()`</td>
       <td>60 + numPlayers × 10</td>
     </tr>
     <tr>
       <td><b>Get Sorted</b></td>
       <td>`Class.OrderedDataStore:GetSortedAsync()|GetSortedAsync()`</td>
       <td>5 + numPlayers × 2</td>
+    </tr>
+    <tr>
+      <td><b>Ordered Set</b></td>
+      <td>`Class.OrderedDataStore:SetAsync()|SetAsync()`<br></br>`Class.OrderedDataStore:IncrementAsync()|IncrementAsync()`<br></br>`Class.OrderedDataStore:UpdateAsync()|UpdateAsync()`<br></br>`Class.OrderedDataStore:RemoveAsync()|RemoveAsync()`</td>
+      <td>30 + numPlayers × 5</td>
     </tr>
     <tr>
       <td><b>Get Version</b></td>
@@ -365,7 +370,7 @@ Each queue has a limit of 30 requests. When the limit of a queue is reached, req
       <td>5 + numPlayers × 2</td>
     </tr>
     <tr>
-      <td><b>Remove</b></td>
+      <td><b>Remove Version</b></td>
       <td>`Class.DataStore:RemoveVersionAsync()|RemoveVersionAsync()`</td>
       <td>5 + numPlayers × 2</td>
     </tr>
@@ -375,7 +380,7 @@ Each queue has a limit of 30 requests. When the limit of a queue is reached, req
 <TabItem label="Future experience limits">
   The server limits will be replaced by experience-level limits starting in 2026.
 
-  Each experience is allowed a certain number of data store requests based on the data store type, request type, and number of concurrent users. For each data store type and request type, the limit is shared among all listed functions.
+Each experience is allowed a certain number of data store requests based on the data store type, request type, and number of concurrent users. For each data store type and request type, the limit is shared among all listed functions.
 
   <h5>Standard data stores</h5>
 
@@ -390,12 +395,12 @@ Each queue has a limit of 30 requests. When the limit of a queue is reached, req
   <tbody>
     <tr>
       <td><b>Read</b></td>
-      <td>`Class.GlobalDataStore:GetAsync()|GetAsync()`<br></br>`Class.DataStore:GetVersionAsync()|GetVersionAsync()`<br></br>`Class.DataStore:GetVersionAtTimeAsync()|GetVersionAtTimeAsync()`</td>
+      <td>`Class.DataStore:GetAsync()|GetAsync()`<br></br>`Class.DataStore:GetVersionAsync()|GetVersionAsync()`<br></br>`Class.DataStore:GetVersionAtTimeAsync()|GetVersionAtTimeAsync()`</td>
       <td>250 + concurrentUsers × 40</td>
     </tr>
     <tr>
       <td><b>Write</b></td>
-      <td>`Class.GlobalDataStore:SetAsync()|SetAsync()`<br></br>`Class.GlobalDataStore:IncrementAsync()|IncrementAsync()`<br></br>`Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`</td>
+      <td>`Class.DataStore:SetAsync()|SetAsync()`<br></br>`Class.DataStore:IncrementAsync()|IncrementAsync()`<br></br>`Class.DataStore:UpdateAsync()|UpdateAsync()`</td>
       <td>250 + concurrentUsers × 20</td>
     </tr>
     <tr>
@@ -429,12 +434,12 @@ Each queue has a limit of 30 requests. When the limit of a queue is reached, req
   <tbody>
     <tr>
       <td><b>Read</b></td>
-      <td>`Class.GlobalDataStore:GetAsync()|GetAsync()`</td>
+      <td>`Class.OrderedDataStore:GetAsync()|GetAsync()`</td>
       <td>250 + concurrentUsers × 40</td>
     </tr>
     <tr>
       <td><b>Write</b></td>
-      <td>`Class.GlobalDataStore:SetAsync()|SetAsync()`<br></br>`Class.GlobalDataStore:IncrementAsync()|IncrementAsync()`<br></br>`Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`</td>
+      <td>`Class.OrderedDataStore:SetAsync()|SetAsync()`<br></br>`Class.OrderedDataStore:IncrementAsync()|IncrementAsync()`<br></br>`Class.OrderedDataStore:UpdateAsync()|UpdateAsync()`</td>
       <td>250 + concurrentUsers × 20</td>
     </tr>
     <tr>
@@ -444,7 +449,7 @@ Each queue has a limit of 30 requests. When the limit of a queue is reached, req
     </tr>
     <tr>
       <td><b>Remove</b></td>
-      <td>`Class.DataStore:RemoveAsync()|RemoveAsync()`</td>
+      <td>`Class.OrderedDataStore:RemoveAsync()|RemoveAsync()`</td>
       <td>100 + concurrentUsers × 40</td>
     </tr>
   </tbody>
@@ -556,10 +561,10 @@ Roblox examines the usage of quota associated with the key over the last 60 seco
 <TabItem label="Future storage limits">
   In the future, to provide a scalable and stable storage experience, data stores will implement an experience-level storage limit on your storage usage.
 
-  This limit will be the sum of a base limit for each of your experiences and a per-user limit based on the number of lifetime users in your experience. A lifetime user is any user who has joined your experience at least once.
+This limit will be the sum of a base limit for each of your experiences and a per-user limit based on the number of lifetime users in your experience. A lifetime user is any user who has joined your experience at least once.
 
-  The storage limit will be calculated using the formula `Total latest version storage limit = 100 MB + 1 MB * lifetime user count`.
+The storage limit will be calculated using the formula `Total latest version storage limit = 100 MB + 1 MB * lifetime user count`.
 
-  Any data that you delete or replace, even if still accessible through version APIs, will not count towards your experience's storage usage.
+Any data that you delete or replace, even if still accessible through version APIs, will not count towards your experience's storage usage.
 </TabItem>
 </Tabs>

@@ -3,7 +3,7 @@ title: Deferred engine events
 description: Deferred engine events defer event handlers until certain resumption points.
 ---
 
-The `Class.Workspace.SignalBehavior` property controls whether event handlers are fired immediately or deferred. We recommend the `Enum.SignalBehavior.Deferred` option, which helps improve the performance and correctness of the engine. The event handlers for **deferred events** are resumed at the next [resumption point](#resumption-points), along with any newly triggered event handlers.
+The `Class.Workspace.SignalBehavior` property controls whether event handlers are fired immediately or deferred. The `Enum.SignalBehavior.Deferred` option is recommended which helps improve the performance and correctness of the engine. The event handlers for **deferred events** are resumed at the next [resumption point](#resumption-points), along with any newly triggered event handlers.
 
 <Alert severity="info">
 The `Enum.SignalBehavior.Default` value of `Class.Workspace.SignalBehavior` is currently equivalent to `Enum.SignalBehavior.Immediate`, but will eventually switch to being equivalent to `Enum.SignalBehavior.Deferred`. Template places are directly set to `Enum.SignalBehavior.Deferred` by default.

@@ -35,6 +35,10 @@ You can use the following components within your `Class.Model` object to enable 
 
 With these components, the character model displays a `Class.Humanoid.DisplayName`, has health, and can move with `Class.Humanoid.Move()`. For more information on additional configurations of the display and health elements, see [Name/health display](../characters/name-health-display.md).
 
+<Alert severity = 'info'>
+For information on implementing layered clothing on a non-R15 character model, see [Character appearance](./appearance.md#layered-clothing-on-non-r15).
+</Alert>
+
 ## Avatar characters
 
 Avatar characters use a standardized set of character components that allow you to use body and facial animations, and equip clothing and accessories. By standardizing the components, all avatar character models can access these features, whether they are controlled by a player or an NPC.
