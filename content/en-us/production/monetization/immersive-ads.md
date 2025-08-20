@@ -78,7 +78,7 @@ Roblox pays out earnings on the 25th of the following month from when you insert
 
 ## Publisher eligibility
 
-While anyone can insert ad units into their experiences, Roblox only serves ads into ad units if the experience or group owner and experience is eligible to serve ads.
+While anyone can insert ad units into their experiences, Roblox only serves ads into ad units if the experience or group owner and experience is eligible to serve ads. Eligibility does not guarantee Roblox will serve ads in your experience and nothing obligates Roblox to serve ads into your experience.
 
 Experiences must meet the following criteria to be eligible to be an ad publisher:
 
