@@ -326,7 +326,7 @@ To allow strong language between players in text chat within your experience:
 
 ## Release updates
 
-When you publish an updated version of an experience to Roblox, players aren't immediately removed from the old version of the experience. Instead, you can transition players to the new version by either restarting or shutting dow all of your servers, each with advantages and disadvantages.
+When you publish an updated version of an experience to Roblox, players aren't immediately removed from the old version of the experience. Instead, you can transition players to the new version by either restarting or shutting down all of your servers, each with advantages and disadvantages.
 
 If you don't take an action, players transition to the new version of the experience as the servers running the old version eventually empty and shut down. This option is non‑disruptive, but your player base might be playing different versions of the experience for a prolonged period of time. Reserve this approach for only minor updates.
 
