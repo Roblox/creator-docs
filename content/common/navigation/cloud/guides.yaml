@@ -16,6 +16,8 @@ navigation:
         path: /cloud/guides/data-stores/throttling
   - title: Assets
     path: /cloud/guides/usage-assets
+  - title: Secrets stores
+    path: /cloud/guides/secrets-store
   - title: User inventories
     path: /cloud/guides/inventory
   - title: Engine instances

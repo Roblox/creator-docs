@@ -112,6 +112,8 @@ navigation:
         path: /cloud/api/localization
       - title: Publish
         path: /cloud/api/publish
+      - title: Secrets store service
+        path: /cloud/api/secrets-store
       - title: Toolbox service
         path: /cloud/api/toolbox-service
   - title: Open Cloud v2

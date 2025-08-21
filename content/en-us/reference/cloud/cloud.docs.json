@@ -2865,13 +2865,13 @@
         "x-roblox-scopes": [
           {
             "description": "Required",
-            "name": "memory-store.queue:write"
+            "name": "memory-store.queue:add"
           }
         ],
         "x-roblox-docs": {
           "category": "Data and memory stores",
           "methodProperties": {
-            "scopes": ["memory-store.queue:write"]
+            "scopes": ["memory-store.queue:add"]
           },
           "resource": {
             "$ref": "#/components/schemas/MemoryStoreQueueItem",
