@@ -5,6 +5,10 @@ next: /tutorials/curriculums/building/test-and-save
 prev: /tutorials/curriculums/building/work-with-parts
 ---
 
+<figure>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/PqB6DC_kxHM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure><br />
+
 **Assistant** is Roblox's artificial intelligence helper that can help you create and code your experiences. In this chapter, let's walk through how to open Assistant in Studio, write requests that change part behavior, and playtest your results to see if you need to make any changes to the Assistant's code sample.
 
 ## Open Assistant
