@@ -3,7 +3,7 @@ title: Asset privacy
 description: Explore how the asset privacy system lets you control which Roblox creators can use your assets in their experiences.
 ---
 
-The **asset privacy system** lets you control how creators and experiences can use and distribute your models, meshes, images, decals, audio, and video assets on Roblox. Assets can have one of two access privacy types:
+The **asset privacy system** lets you control how creators and experiences can use and distribute your models, meshes, images, decals, audio, video, and animation assets on Roblox. Assets can have one of two access privacy types:
 
 - **Open Use** — Any creator can use the asset within their experiences.
 - **Restricted** — Creators or experiences can only use the asset after the asset owner grants permission.
@@ -64,6 +64,7 @@ To grant a collaborator permission to use a restricted asset in any of these sce
    - **Videos**
    - **Meshes**
    - **MeshParts**
+   - **Animations**
 
 1. Select the asset you want your collaborator to have permission to use in their experiences. The asset's **Configure** page displays.
 1. In the asset's left-hand navigation, select **Permissions**. The asset's **Permissions** page displays.
@@ -115,6 +116,7 @@ To grant an experience permission to use a restricted asset:
    - **Videos**
    - **Meshes**
    - **MeshParts**
+   - **Animations**
 
 1. Select the asset you want the experience to have permission to use. The asset's **Configure** page displays.
 1. In the asset's left-hand navigation, select **Permissions**. The asset's **Permissions** page displays.
@@ -178,7 +180,17 @@ If you revoke restricted asset permission for a connection, they can no longer u
 To revoke permission for a creator to use a restricted asset in any additional experience that isn't currently using the asset:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-1. In the upper tab bar, select **Development Items**, then click either **Audio** or **Videos**. All of your audio or video assets display.
+1. In the upper tab bar, select **Development Items**, then click one of the following tabs:
+
+   - **Models & Packages**
+   - **Audio**
+   - **Decals**
+   - **Images**
+   - **Videos**
+   - **Meshes**
+   - **MeshParts**
+   - **Animations**
+
 1. Select the asset you want to revoke permission for one or more creators to use in their own experiences. The asset's **Configure** page displays.
 1. In the asset's left-hand navigation, select **Permissions**. The asset's **Permissions** page displays.
 1. From the **Collaborators** tab, locate the creator you want to revoke permission from, then click the Access dropdown next to their username. Additional options display.

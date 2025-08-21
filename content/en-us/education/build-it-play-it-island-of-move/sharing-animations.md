@@ -1,19 +1,19 @@
 ---
-title: Share animations
-description: Part of the Roblox Build It, Play It Challenge - Island of Move. Share animations with other developers.
+title: Export and Import Animations
+description: Part of the Roblox Build It, Play It Challenge - Island of Move. Export animations to share with other developers.
 prev: /education/build-it-play-it-island-of-move/go-beyond-the-challenge
 ---
 
 <img src="../../assets/education/build-it-play-it-island-of-move/sharing-animations/hero-banner.png" width="100%" />
 
-Share animations with friends and fellow developers by exporting and importing them through Studio.
+Share animations with connections and fellow developers by exporting and importing them through Studio.
 
 <Alert severity="info">
-<AlertTitle>Rules in Sharing Animations</AlertTitle>
-Animations are restricted assets. For more information, see [Asset privacy](../../projects/assets/privacy.md).
+<AlertTitle>Animation Permission Changes</AlertTitle>
+You can now share animations with connections, groups, and experiences without re-uploading them. For more information, see [Asset privacy](../../projects/assets/privacy.md).
 </Alert>
 
-**Exporting animations**
+## Export animations
 
 Make sure to save your animation before exporting it.
 
