@@ -366,7 +366,7 @@ Each queue has a limit of 30 requests. When the limit of a queue is reached, req
     </tr>
     <tr>
       <td><b>List</b></td>
-      <td>`Class.DataStoreService:ListDataStoresAsync()|ListDataStoresAsync()`<br></br>`Class.DataStore:ListKeysAsync()|ListKeysAsync()`<br></br>`Class.DataStore:ListVersionsAsync()|ListVersionAsync()`</td>
+      <td>`Class.DataStoreService:ListDataStoresAsync()|ListDataStoresAsync()`<br></br>`Class.DataStore:ListKeysAsync()|ListKeysAsync()`<br></br>`Class.DataStore:ListVersionsAsync()|ListVersionsAsync()`</td>
       <td>5 + numPlayers × 2</td>
     </tr>
     <tr>
@@ -405,7 +405,7 @@ Each experience is allowed a certain number of data store requests based on the 
     </tr>
     <tr>
       <td><b>List</b></td>
-      <td>`Class.DataStoreService:ListDataStoresAsync()|ListDataStoresAsync()`<br></br>`Class.DataStore:ListKeysAsync()|ListKeysAsync()`<br></br>`Class.DataStore:ListVersionsAsync()|ListVersionAsync()`</td>
+      <td>`Class.DataStoreService:ListDataStoresAsync()|ListDataStoresAsync()`<br></br>`Class.DataStore:ListKeysAsync()|ListKeysAsync()`<br></br>`Class.DataStore:ListVersionsAsync()|ListVersionsAsync()`</td>
       <td>10 + concurrentUsers × 2</td>
     </tr>
     <tr>

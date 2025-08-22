@@ -1,0 +1,631 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "SecretsStoreService",
+    "version": "1.0",
+    "x-roblox-extensions-version": "1.0.0"
+  },
+  "paths": {
+    "/cloud/v2/universes/{universeId}/secrets": {
+      "post": {
+        "tags": ["SecretsStoreApiService"],
+        "summary": "Create Secret",
+        "description": "Creates a new secret. A maximum of 500 secrets per universe is allowed.\n\nOnly the owner of the universe can create secrets. For group-owned universes, only the group owner can create secrets.\n\nTo encrypt the secret:\n1. Get the public key using the Get Public Key endpoint\n2. Encrypt your secret using LibSodium sealed box\n3. Base64 encode the encrypted content\n\nInclude the key_id from the public key response in the request.\n\nFor an example, see the [Secrets store guide](https://create.roblox.com/docs/cloud/guides/secrets-store).",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The secret to create with encrypted content",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Secret"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Secret"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Secret"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Secret"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Secret"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.secretwrite",
+            "description": "Required"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
+      },
+      "get": {
+        "tags": ["SecretsStoreApiService"],
+        "summary": "List Secrets",
+        "description": "Lists all secrets defined for a universe.\nSecret content is not returned for security reasons - only metadata such as ID, domain, creation and update timestamps are included.\n\nOnly the owner of the universe can list secrets. For group-owned universes, only the group owner can list secrets.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Number of secrets to return per page (1-500, default 10)",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "description": "Pagination cursor from previous response",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecretPaginatedList"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.secretread",
+            "description": "Required"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
+      }
+    },
+    "/cloud/v2/universes/{universeId}/secrets/{secretId}": {
+      "patch": {
+        "tags": ["SecretsStoreApiService"],
+        "summary": "Update Secret",
+        "description": "Updates an existing secret.\n\nOnly the owner of the universe can update secrets. For group-owned universes, only the group owner can update secrets.\n\nOnly the secret content, key_id, and domain can be updated - the secret ID cannot be changed.\n\nTo encrypt the updated secret:\n1. Get the current public key using the GetPublicKey endpoint\n2. Encrypt your new secret content using LibSodium sealed box\n3. Base64 encode the encrypted content\n\nInclude the key_id from the public key response in the request.\n\nFor an example, see the [Secrets store guide](https://create.roblox.com/docs/cloud/guides/secrets-store).",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "secretId",
+            "in": "path",
+            "description": "The ID of the secret to update",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The updated secret data with encrypted content",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Secret"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Secret"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Secret"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Secret"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Secret"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.secretwrite",
+            "description": "Required"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": ["SecretsStoreApiService"],
+        "summary": "Delete Secret",
+        "description": "Permanently deletes a secret from a universe.\n\nOnly the owner of the universe can delete secrets. For group-owned universes, only the group owner can delete secrets.\n\nThis operation is irreversible. Make sure you no longer need the secret before deleting it.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "secretId",
+            "in": "path",
+            "description": "The ID of the secret to delete",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.secretwrite",
+            "description": "Required"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
+      }
+    },
+    "/cloud/v2/universes/{universeId}/secrets/public-key": {
+      "get": {
+        "tags": ["SecretsStoreApiService"],
+        "summary": "Get Public Key",
+        "description": "Retrieves the public key for a universe. You need this key to encrypt secret content \nbefore sending it to Roblox.\n\nOnly the owner of the universe can retrieve the public key. For group-owned universes, only the group owner can retrieve the public key.\n\nThe secret id field is static and always returns \"public-key\".\n\nThe returned public key in the secret field is universe-specific and derived from a master key using the universe ID.\nUse this key with LibSodium sealed box encryption to encrypt your secret content before \ncreating or updating secrets.\n\nInclude the key_id from the public key response in the request to create or update a secret.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Secret"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.secretread",
+            "description": "Required"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {}
+      },
+      "Secret": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The user-specified secret name. Examples: \"aws\", \"gcp\", \"discord\".\n\nStatic when getting the public key for a universe.\n\nMust be alphanumeric or underscore, 1-64 characters, not starting with a number.",
+            "nullable": true
+          },
+          "secret": {
+            "type": "string",
+            "description": "The binary secret content. Examples: API key content (text), private keys.\n\nWhen created, the secret must be encrypted using LibSodium sealed box and encoded in base64 with the universe's public key.\n\nContains the public key when getting the public key for a universe.",
+            "format": "byte",
+            "nullable": true
+          },
+          "key_id": {
+            "type": "string",
+            "description": "Encryption key identifier. Identifies the key that was used to encrypt the secret content.",
+            "nullable": true
+          },
+          "domain": {
+            "type": "string",
+            "description": "The domain wildcard that restricts the purpose of the key. \n\nYou can restrict the URLs callable via HttpService to a specific domain, e.g. \"api.example.com\" or \"*.myservice.org\".\n\nAn empty or null domain means that the secret is a private key and cannot be transformed with addPrefix/addSuffix or sent as a header or URL.\n\nIn order to make the secret accessible for all domains, use \"*\"",
+            "nullable": true
+          },
+          "create_time": {
+            "type": "string",
+            "description": "Date and time when the secret was originally created.",
+            "nullable": true
+          },
+          "update_time": {
+            "type": "string",
+            "description": "Date and time when the secret was last updated",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Universe-specific secret, identified by `id`, and belonging to a specific `environment`."
+      },
+      "SecretPaginatedList": {
+        "type": "object",
+        "properties": {
+          "secrets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Secret"
+            },
+            "description": "Gets the actual list of items to return",
+            "nullable": true
+          },
+          "nextPageCursor": {
+            "type": "string",
+            "description": "Gets the cursor where the pagination stopped after fetching `data`.\n`null` if there is no more data available.",
+            "nullable": true
+          },
+          "previousPageCursor": {
+            "type": "string",
+            "description": "Gets the cursor pointing at the previous page. `null` when it's\nthe first page.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Wrapper for the paginated collection output.\nComplies with the REST conventions, containing\nnext/previous page, and a data field containing the actual list.\n            \nNeeded only to simplify JSON serialization, and can technically\nbe AutoMapper-ed from the EaaS or any other data provider."
+      }
+    },
+    "securitySchemes": {
+      "roblox-api-key": {
+        "type": "apiKey",
+        "description": "A configurable key that allows granular access to Roblox resources. See https://create.roblox.com/docs/cloud/auth/api-keys for more information.",
+        "in": "header",
+        "name": "x-api-key"
+      },
+      "roblox-oauth2": {
+        "type": "oauth2",
+        "description": "OAuth 2.0 authentication for Roblox APIs. See https://create.roblox.com/docs/cloud/auth/oauth2-overview for more information.",
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "https://apis.roblox.com/oauth/v1/authorize",
+            "tokenUrl": "https://apis.roblox.com/oauth/v1/token",
+            "refreshUrl": "https://apis.roblox.com/oauth/v1/token",
+            "scopes": {
+              "universe.secretwrite": "universe.secretwrite",
+              "universe.secretread": "universe.secretread"
+            }
+          }
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "https://apis.roblox.com"
+    }
+  ]
+}

@@ -173,6 +173,7 @@ https://llama.meta.com/llama3/license/
 https://learn.microsoft.com/en-us/style-guide/welcome/
 https://learning.ccsso.org/common-core-state-standards-initiative
 https://learnwithcat.catblountstories.com/
+https://libsodium.gitbook.io/doc/public-key_cryptography/sealed_boxes
 https://logikaschool.com/
 https://lordfairfax.augusoft.net.cfm/?method=ClassInfo.ClassInformation&amp;int_class_id=52716&amp;int_category_id=4&amp;int_sub_category_id=14
 https://luau.org/
@@ -199,6 +200,7 @@ https://pongoslearninglab.com/
 https://popfizz.io/
 https://program-school.org/
 https://projectscientist.org/
+https://pynacl.readthedocs.io/en/latest/public/
 https://quixel.com/
 https://www.reaper.fm/
 https://reg136.imperisoft.com/kellogg/ProgramDetail/3235313532/Registration.aspx
@@ -669,3 +671,4 @@ https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server
 https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#event_stream_format
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Transfer-Encoding
 https://www.youtube-nocookie.com/embed/x1JgsC8c8VQ
+https://www.youtube-nocookie.com/embed/PqB6DC_kxHM
