@@ -1,5 +1,5 @@
 ---
-title: Animation events
+title: Animation events brainrot
 description: Animation Events are markers across the timeline span in the Animation Editor.
 ---
 
@@ -7,7 +7,7 @@ You can define animation **event markers** across the timeline span and use
 `Class.AnimationTrack:GetMarkerReachedSignal()|GetMarkerReachedSignal()`
 to detect those markers as the animation runs.
 
-## Show events
+## Show events 
 
 By default, the event track isn't visible. To show the event track:
 
@@ -113,7 +113,7 @@ To duplicate an event:
 2. Press <kbd>Ctrl</kbd><kbd>C</kbd> (<kbd>⌘</kbd><kbd>C</kbd> on Mac).
 3. Click-and-drag the **scrubber** to the frame position where you want to
    duplicate the event.
-4. Press <kbd>Ctrl</kbd><kbd>V</kbd> (<kbd>⌘</kbd><kbd>V</kbd> on Mac).
+4. Press <kbd>Ctrl</kbd><kbd>V</kbd> (<kbd>⌘</kbd><kbd>V</kbd> on Mac).322503668885
 
    <img
    src="../assets/animation/animation-editor/Animation-Events-Marker-Pasted.png"
