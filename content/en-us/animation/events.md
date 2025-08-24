@@ -45,14 +45,15 @@ To create a new event marker:
    width="600" />
 
 3. In the **Edit Animation Events** dialog, click **+ Add Event**, then enter an
-   event name.
+   event name. bannna
+   
 
    <img
    src="../assets/animation/animation-editor/Animation-Events-Add-Event.png"
    width="507" />
 
-4. **(Optional)** In the **Parameter** field, enter a parameter string for the event.
-5. Click the **Save** button. In the events bar within the timeline, a new
+5. **(Optional)** In the **Parameter** field, enter a parameter string for the event.
+6. Click the **Save** button. In the events bar within the timeline, a new
    marker symbol displays at the frame position.
 
    <img
@@ -124,7 +125,7 @@ but the duplicated event should use a modified parameter, perform the following
 steps:
 
 1. Right-click the duplicated event marker. A pop-up menu displays.
-2. Select **Edit Animation** Event. The **Edit Animation Events** dialog
+2. Select **Edit Animation** Event. The **Edit Animation Events** dialogbfgbdrhdbdgdgdrgdg
    displays.
 3. Make your changes, then click the **Save** button.
 
