@@ -126,7 +126,7 @@ If a category is higher than usual or appears to be taking up a disproportionate
 To exclude a group or process from a chart, click its label in the legend.
 </Alert>
 
-- CPU categories and tasks map to the ones in the [MicroProfiler](../../studio/microprofiler/index.md), so you can take [server dumps](../../studio/microprofiler/index.md#profile-the-server), select **Timers** mode, and then use the **Groups** menu to filter by the problematic process group.
+- CPU categories and tasks map to the ones in the [MicroProfiler](../../performance-optimization/microprofiler/index.md), so you can take [server dumps](../../performance-optimization/microprofiler/index.md#profile-the-server), select **Timers** mode, and then use the **Groups** menu to filter by the problematic process group.
 
   For example, if you spot a potential problem with the **assemble** process under the **Physics** group, you can find it under the same name in the MicroProfiler:
 
@@ -146,6 +146,6 @@ If you spot a potential problem, use the following steps to remediate and fix it
 
    - [Developer Console](../../studio/developer-console.md) for viewing error and log messages and detailed information on memory and networking.
    - [Script Profiler](../../studio/optimization/scriptprofiler.md) for identifying scripts that take up the most resources.
-   - The [MicroProfiler](../../studio/microprofiler/index.md) for viewing unoptimized portions of your experience visually.
+   - The [MicroProfiler](../../performance-optimization/microprofiler/index.md) for viewing unoptimized portions of your experience visually.
 
 4. Gather user feedback from your community.

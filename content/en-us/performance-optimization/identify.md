@@ -20,14 +20,14 @@ Roblox has a number of tools for identifying performance issues, some of which a
   <tr>
     <td>[Developer Console](../studio/developer-console.md)</td>
     <td>A console with real-time log messages, errors, and detailed information on memory, networking, and script performance. It's useful for viewing memory consumption, key server health stats, script performance stats, and to launch the client or server MicroProfiler.</td>
-    <td>Studio</td>
+    <td>Studio, in-experience</td>
     <td><kbd>F9</kbd></td>
     <td>Live sessions, Studio testing</td>
   </tr>
   <tr>
-    <td>[MicroProfiler](../studio/microprofiler/index.md)</td>
+    <td>[MicroProfiler](./microprofiler/index.md)</td>
     <td>A debugging tool that breaks down how much computational time is spent on tasks each frame. It can generate dumps for analysis showing a precise breakdown of individual frames, making it helpful for identifying the specific task causing performance issues. You can run the profiler on either the client or the server, depending on which side has an issue.</td>
-    <td>In-experience</td>
+    <td>Studio, in-experience</td>
     <td><kbd><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F6</kbd> (<kbd>⌘</kbd><kbd>⌥</kbd><kbd>F6</kbd>)</kbd></td>
     <td>Live sessions, Studio testing</td>
   </tr>
@@ -41,7 +41,7 @@ Roblox has a number of tools for identifying performance issues, some of which a
   <tr>
     <td>Debug Stats</td>
     <td>Overlays with detailed information around graphics, physics, network traffic, and FPS.</td>
-    <td>In-experience</td>
+    <td>Studio, in-experience</td>
     <td><kbd>Shift</kbd><kbd>F1</kbd>, <kbd>Shift</kbd><kbd>F2</kbd>, <kbd>Shift</kbd><kbd>F3</kbd>, <kbd>Shift</kbd><kbd>F4</kbd>, <kbd>Shift</kbd><kbd>F5</kbd></td>
     <td>Live sessions, Studio testing</td>
   </tr>
@@ -60,7 +60,7 @@ Server heartbeat is capped at 60 FPS for all experiences, so lower values might 
 
 - With the [Developer Console](../studio/developer-console.md) - In the **Server Jobs** tab, expand the **Heartbeat** row and check the **Steps Per Sec** value, which represents the heartbeat of your experience.
 
-- With the server [MicroProfiler](../studio/microprofiler/index.md) - Look at the length of each frame to see if some are taking longer than 16.67 ms.
+- With the [MicroProfiler](./microprofiler/index.md), you can check the graph to see if the frame takes longer than 16.67 ms.
 
   <Alert severity="info">
   The MicroProfiler is particularly useful for identifying "spikes" in performance, where some frames take significantly longer than others to process.
@@ -83,7 +83,7 @@ To check the frame rate of your experience:
   Performance stats in Studio are skewed by the Studio application, so you should view the frame rate on the client if you have a production experience.
   </Alert>
 
-- With the [MicroProfiler](../studio/microprofiler/index.md), you can check the graph to see if the frame takes longer than 16.67 ms.
+- With the [MicroProfiler](./microprofiler/index.md), you can check the graph to see if the frame takes longer than 16.67 ms.
 
 <Alert severity="info">
 When evaluating frame rate, it can help to set the graphics quality to its maximum value to remove the effect of the frame rate manager. In the client, open the menu, click **Settings**, change  **Graphics Mode** to manual, and raise graphics quality.

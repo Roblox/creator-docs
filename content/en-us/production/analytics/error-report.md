@@ -67,5 +67,5 @@ To resolve errors and warnings, consider the following debugging steps:
 - **Use built-in testing tools to troubleshoot**
   - [Developer Console](../../studio/developer-console.md) for viewing error and log messages and detailed information on memory and networking.
   - [Script Profiler](../../studio/optimization/scriptprofiler.md) for identifying scripts that take up the most resources.
-  - [MicroProfiler](../../studio/microprofiler/index.md) for viewing unoptimized portions of your experience visually.
-    Gather user feedback from your community.
+  - [MicroProfiler](../../performance-optimization/microprofiler/index.md) for viewing unoptimized portions of your experience visually.
+- Gather user feedback from your community.

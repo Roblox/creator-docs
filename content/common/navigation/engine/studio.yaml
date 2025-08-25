@@ -38,19 +38,6 @@ navigation:
     path: /studio/testing-modes
   - title: Output
     path: /studio/output
-  - title: MicroProfiler
-    path: /studio/microprofiler/
-    section:
-      - title: Overview
-        path: /studio/microprofiler/
-      - title: Modes
-        path: /studio/microprofiler/modes
-      - title: Task scheduler
-        path: /studio/microprofiler/task-scheduler
-      - title: Tag reference
-        path: /studio/microprofiler/tag-table
-      - title: Walkthrough
-        path: /studio/microprofiler/use-microprofiler
   - title: Developer Console
     path: /studio/developer-console
     section:

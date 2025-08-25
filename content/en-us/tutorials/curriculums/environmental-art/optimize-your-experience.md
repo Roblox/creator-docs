@@ -15,7 +15,7 @@ Using the [Environment Art - Optimizing](https://www.roblox.com/games/1444784529
 - Reviewing the physics and rendering parameters of each asset to confirm they preserve memory and engine performance.
 - Culling excess texture, geometry, or transparencies that unnecessarily increase the amount of calculations the Roblox Engine must perform to render your assets.
 
-While the Roblox Engine handles most optimization work for you, you can assist in these optimization efforts by utilizing the [Microprofiler](../../../studio/microprofiler/index.md) to see where it takes more time to render specific frames. Using this information, you can make informed decisions about what assets need your attention in regards to their parameters or excess content.
+While the Roblox Engine handles most optimization work for you, you can assist in these optimization efforts by utilizing the [Microprofiler](../../../performance-optimization/microprofiler/index.md) to see where it takes more time to render specific frames. Using this information, you can make informed decisions about what assets need your attention in regards to their parameters or excess content.
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section5/Overview.jpg" alt="" width="100%"/>
 

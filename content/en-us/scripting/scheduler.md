@@ -3,7 +3,7 @@ title: Schedule code
 description: Explains how to schedule code so it executes after a specific action or cycle has completed.
 ---
 
-Scheduling code is useful in many situations, such as ensuring code executes after a specific action or cycle has completed, or delaying code for a specific duration of time. You can use the `Library.task` library to optimize Roblox's [task scheduler](../studio/microprofiler/task-scheduler.md) to manage and schedule code. You can also use a similar library called `Library.coroutine` to schedule code which has some additional functionality.
+Scheduling code is useful in many situations, such as ensuring code executes after a specific action or cycle has completed, or delaying code for a specific duration of time. You can use the `Library.task` library to optimize Roblox's [task scheduler](../performance-optimization/microprofiler/task-scheduler.md) to manage and schedule code. You can also use a similar library called `Library.coroutine` to schedule code which has some additional functionality.
 
 ### Common methods
 

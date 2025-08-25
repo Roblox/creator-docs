@@ -489,6 +489,21 @@ navigation:
         path: /performance-optimization/design
       - title: Identify issues
         path: /performance-optimization/identify
+      - title: MicroProfiler
+        path: /performance-optimization/microprofiler/
+        section:
+          - title: Overview
+            path: /performance-optimization/microprofiler/
+          - title: Modes
+            path: /performance-optimization/microprofiler/modes
+          - title: Task scheduler
+            path: /performance-optimization/microprofiler/task-scheduler
+          - title: Tag reference
+            path: /performance-optimization/microprofiler/tag-table
+          - title: Network usage
+            path: /performance-optimization/microprofiler/network
+          - title: Walkthrough
+            path: /performance-optimization/microprofiler/use-microprofiler
       - title: Improve performance
         path: /performance-optimization/improve
       - title: Monitor performance
