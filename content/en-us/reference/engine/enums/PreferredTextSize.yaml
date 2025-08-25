@@ -4,29 +4,31 @@
 
 name: PreferredTextSize
 type: enum
-summary: ''
-description: ''
+summary: This enum is used with `Class.GuiService.PreferredTextSize` to indicate the player's preferred text size.
+description: |-
+  This enum is used with `Class.GuiService.PreferredTextSize` to indicate the
+  player's preferred text size.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Medium
-    summary: ''
+    summary: The player prefers default text size.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Large
-    summary: ''
+    summary: The player prefers text size slightly increased beyond default.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Larger
-    summary: ''
+    summary: The player prefers text size moderately increased beyond default.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Largest
-    summary: ''
+    summary: The player prefers text size considerably increased beyond default.
     value: 4
     tags: []
     deprecation_message: ''

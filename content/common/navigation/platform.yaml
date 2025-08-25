@@ -8,7 +8,7 @@ navigation:
     path: /studio/
     navigation: /engine/studio.yaml
   - title: Assistant
-    path: /assistant/
+    path: /assistant/overview
   - title: Engine API reference
     path: https://create.roblox.com/docs/reference/engine
   - title: Open Cloud

@@ -92,11 +92,11 @@ Consider the following scene where a ringing phone is signalled only by sound, a
 
 ## Player preferences
 
-Various in-game accessibility settings including [preferred transparency](#preferred-transparency) and [reduced motion](#reduced-motion) are available to players. For optimal accessibility, your [user interface](../../ui/index.md) should accommodate each.
+Various visual settings are available to players from the Roblox and in‑experience **Settings** menus, including [preferred transparency](#preferred-transparency), [preferred text size](#preferred-text-size), and [reduced motion](#reduced-motion). For optimal accessibility, your [user interface](../../ui/index.md) should accommodate each.
 
 ### Preferred transparency
 
-The in-game **Settings** menu contains a **Background&nbsp;Transparency** adjuster which maps to the `Class.GuiService.PreferredTransparency` property. A value of `1` indicates the player prefers the default background transparency, while a value of `0` indicates the player prefers fully opaque (non‑transparent) background transparency for improved readability and contrast.
+The **Background&nbsp;Transparency** setting maps to the `Class.GuiService.PreferredTransparency` property. A value of `1` indicates the player prefers the default background transparency, while a value of `0` indicates the player prefers fully opaque (non‑transparent) background transparency for improved readability and contrast.
 
 Multiplying a UI element's `Class.GuiObject.BackgroundTransparency|BackgroundTransparency` with `Class.GuiService.PreferredTransparency|PreferredTransparency` is the recommended way to use this setting; backgrounds will become more opaque as `Class.GuiService.PreferredTransparency|PreferredTransparency` approaches `0`.
 
@@ -138,7 +138,7 @@ Multiplying a UI element's `Class.GuiObject.BackgroundTransparency|BackgroundTra
 		CollectionService:GetInstanceAddedSignal(TAG):Connect(onInstanceAdded)
 		CollectionService:GetInstanceRemovedSignal(TAG):Connect(onInstanceRemoved)
 
-		-- When in-game setting is changed, adjust tagged instances
+		-- When in-experience setting is changed, adjust tagged instances
 		GuiService:GetPropertyChangedSignal("PreferredTransparency"):Connect(function()
 			for object, defaultTransparency in transparentBackObjects do
 				object.BackgroundTransparency = defaultTransparency * GuiService.PreferredTransparency
@@ -146,7 +146,7 @@ Multiplying a UI element's `Class.GuiObject.BackgroundTransparency|BackgroundTra
 		end)
 		```
 
-3. Playtest the game, open the **Settings** menu, and adjust **Background Transparency**. The tagged UI elements should update between their default `Class.GuiObject.BackgroundTransparency|BackgroundTransparency` and fully opaque.
+3. Playtest the experience, open the **Settings** menu, and adjust **Background Transparency**. The tagged UI elements should update between their default `Class.GuiObject.BackgroundTransparency|BackgroundTransparency` and fully opaque.
 
    <Tabs>
    <TabItem label="Default">
@@ -160,9 +160,25 @@ Multiplying a UI element's `Class.GuiObject.BackgroundTransparency|BackgroundTra
    </TabItem>
    </Tabs>
 
+### Preferred text size
+
+The **Text Size** setting maps to the `Class.GuiService.PreferredTextSize` property which defaults to `Enum.PreferredTextSize.Medium|Medium`. Players can choose to increase text size through the engine's font rendering pipeline to `Enum.PreferredTextSize.Large|Large`, `Enum.PreferredTextSize.Larger|Larger`, or `Enum.PreferredTextSize.Largest|Largest`.
+
+When working with UI elements, note the following behaviors:
+
+- Text that is constrained to a minimum and/or maximum size through a `Class.UITextSizeConstraint` will **not** shrink below or expand above the set `Class.UITextSizeConstraint.MinTextSize|MinTextSize`/`Class.UITextSizeConstraint.MaxTextSize|MaxTextSize`, regardless of the player's text size setting.
+
+- When `Class.TextLabel.TextScaled|TextScaled` is enabled for a `Class.TextLabel.TextScaled|TextLabel` or `Class.TextButton.TextScaled|TextButton`, the element's text will **not** be scaled by the `Class.GuiService.PreferredTextSize|PreferredTextSize` value.
+
+- UI elements with `Class.GuiObject.AutomaticSize|AutomaticSize` enabled will shrink/grow as `Class.GuiService.PreferredTextSize|PreferredTextSize` decreases/increases (element bounds will resize to fit the resized text).
+
+- When `Class.TextLabel.TextWrapped|TextWrapped` is enabled for a `Class.TextLabel.TextWrapped|TextLabel` or `Class.TextButton.TextWrapped|TextButton`, the element's text will wrap to additional lines as `Class.GuiService.PreferredTextSize|PreferredTextSize` increases, within limits of the element's absolute size.
+
+- The results returned by `Class.TextService:GetTextSize()` and `Class.TextService:GetTextBoundsAsync()` honor changes related to `Class.GuiService.PreferredTextSize|PreferredTextSize`.
+
 ### Reduced motion
 
-The in-game **Settings** menu and Roblox app contains a **Reduce&nbsp;Motion** option which maps to the `Class.GuiService.ReducedMotionEnabled` property. A value of `true` indicates the player wants motion effects through [UI&nbsp;animations/tweens](../../ui/animation.md) to be reduced or completely removed.
+The **Reduce&nbsp;Motion** toggle maps to the `Class.GuiService.ReducedMotionEnabled` property. A value of `true` indicates the player wants motion effects through [UI&nbsp;animations/tweens](../../ui/animation.md) to be reduced or completely removed.
 
 A basic approach to removing motion from UI tweens is to set the `Datatype.TweenInfo.Time|Time` parameter of a `Datatype.TweenInfo` to `0` when `Class.GuiService.ReducedMotionEnabled|ReducedMotionEnabled` is `true`, effectively making the UI object snap to its target instantly.
 
@@ -227,6 +243,6 @@ tween:Play()
 
 Different sounds playing at the same time can be overwhelming, distracting, or difficult to distinguish. Providing users with volume controls for different "groups" of audio such as sound effects, music, and speech lets them customize their experience and focus on what they need to.
 
-Consider the following example of a very noisy game where the user is able to modify music and sound effect volumes separately.
+Consider the following example of a very noisy experience where the user is able to modify music and sound effect volumes separately.
 
 <video src="../../assets/publishing/accessibility/Audio-Volume.mp4" controls width="800" alt="Video showing how separate volume controls for sounds and music can help players focus on what they need to"></video>
