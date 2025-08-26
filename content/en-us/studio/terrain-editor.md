@@ -306,7 +306,7 @@ The **Fill** tool fills an entire [selected](#select) region with a specific mat
 <figcaption>Selected region filled with Salt material</figcaption>
 </figure>
 
-### Sea level
+### Sea Level
 
 The **Sea Level** tool lets you create a consistent water level or remove all water within a region.
 

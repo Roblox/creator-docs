@@ -548,6 +548,8 @@ Roblox examines the usage of quota associated with the key over the last 60 seco
 </tbody>
 </table>
 
+In addition to the above throughput limits, Roblox organizes data into partitions based on an internal schema. As a result, when the backend server receives a high volume of requests to the same data store, it can result in further throttling. Regardless of the cause, throttling manifests as either `DatastoreThrottled` or `KeyThrottled` errors, depending on whether the throughput limit was exceeded for a single data store or a key. These error messages apply to both ordered and standard data stores.
+
 <Alert severity="info">
   For every request, Roblox rounds throughput up to the next kilobyte. For example, if you write 800 bytes and 1.2 KB in two requests, Roblox counts that as 3 KB total throughput (1 KB and 2 KB, respectively).
 </Alert>

@@ -9,11 +9,11 @@ Studio's [Terrain Editor](../studio/terrain-editor.md) lets you generate and scu
 
 <img src="../assets/modeling/terrain/Showcase.jpg" width="100%" alt="Desert terrain with mountains in the distance" />
 
-Using the Terrain Editor, you can easily [generate](#generate-terrain) and edit terrain either at a [voxel](#detailed-editing) or [region](#large-scale-editing) level with the option of importing a [heightmap](#heightmaps-and-colormaps) and [colormap](#heightmaps-and-colormaps). For more precise, dynamic, or procedural terrain editing, you can also [script](#scripting) terrain creation.
+Using the editor tools, you can easily [generate](#generate-terrain) and edit terrain either at a [voxel](#detailed-editing) or [region](#large-scale-editing) level with the option of importing a [heightmap](#heightmaps-and-colormaps) and [colormap](#heightmaps-and-colormaps). For more precise, dynamic, or procedural terrain editing, you can also [script](#scripting) terrain creation.
 
 ## Terrain materials
 
-The following default materials are available for terrain, and you can also apply [custom materials](../parts/materials.md#custom-materials). Materials affect both the shape and appearance of terrain in the world; for example, [animated grass](#grass-animation) renders only on the **Grass** material and the **Water** material [ripples and shimmers](#water-appearance) with a subtle motion.
+The following default materials are available for terrain, and you can also apply [custom materials](../parts/materials.md#custom-materials). Materials affect both the shape and appearance of terrain in the world; for example, [animated grass](#grass-animation) renders only on the `Enum.Material.Grass|Grass` material and the `Enum.Material.Water|Water` material [ripples and shimmers](#water-appearance) with a subtle motion.
 
 <GridContainer numColumns="4">
   <figure>
@@ -118,7 +118,7 @@ By default, terrain water ripples, oscillates, and shimmers with a subtle motion
 
 To customize the color and motion of water:
 
-1. In the **Explorer** window, navigate to the **Workspace**, then select the **Terrain** object.
+1. In the **Explorer** window, navigate to the `Class.Workspace`, then select the `Class.Terrain` object.
 
    <img src="../assets/studio/explorer/Workspace-Terrain.png" width="320" alt="Terrain object shown in Explorer window of Studio" />
 
@@ -133,53 +133,53 @@ To customize the color and motion of water:
    </thead>
    <tbody>
      <tr>
-       <td>**WaterColor**</td>
+       <td>`Class.Terrain.WaterColor|WaterColor`</td>
        <td>Adjusts the overall hue of all terrain water in the experience.</td>
      </tr>
      <tr>
-       <td>**WaterReflectance**</td>
+       <td>`Class.Terrain.WaterReflectance|WaterReflectance`</td>
        <td>Adjusts how much water surfaces reflect the sky and surrounding objects from a value of 1 (high) to 0 (none).</td>
      </tr>
      <tr>
-       <td>**WaterTransparency**</td>
+       <td>`Class.Terrain.WaterTransparency|WaterTransparency`</td>
        <td>Adjusts how transparent water is from a value of 1 (clear) to 0 (opaque).</td>
      </tr>
      <tr>
-       <td>**WaterWaveSize**</td>
+       <td>`Class.Terrain.WaterWaveSize|WaterWaveSize`</td>
        <td>Adjusts the size of waves from a value of 1 (large) to 0 (none).</td>
      </tr>
      <tr>
-       <td>**WaterWaveSpeed**</td>
+       <td>`Class.Terrain.WaterWaveSpeed|WaterWaveSpeed`</td>
        <td>Adjusts the speed of waves from a value of 100 (turbulent) to 0 (still).</td>
      </tr>
    </tbody>
    </table>
 
-<Alert severity="success">
-If you have a place with shoreline terrain (water meeting land), it's recommended that you upgrade your shorelines to improve how water joins with land. All of Studio's templates already use upgraded tech, and you can check your previously‑saved places by opening the [Terrain Editor](../studio/terrain-editor.md) and looking for the **Upgrade** prompt.
-</Alert>
-
 <Alert severity="info">
-Some water properties are only visible while playtesting. To preview all properties while editing, open [Studio Settings](../studio/setup.md#customization), search for **Editor Quality Level**, and set it to the highest level.
+Some water properties are only visible while playtesting. To preview all properties while editing, open [Studio Settings](../studio/setup.md#customization), search for **Editor&nbsp;Quality&nbsp;Level**, and set it to the highest level.
 </Alert>
 
 ### Grass animation
 
-While most materials are static, you can add animated blades of grass to the **Grass** terrain material. By default, grass sways gently in a simulated wind, and you can adjust the direction/strength of its animation through [global wind](../environment/global-wind.md).
+While most materials are static, you can add animated blades of grass to the `Enum.Material.Grass|Grass` terrain material. By default, grass sways gently in a simulated wind, and you can adjust the direction/strength of its animation through [global wind](../environment/global-wind.md).
 
 <video src="../assets/lighting-and-effects/aero-fluid-dynamics/Global-Wind-Showcase.mp4" controls width="800" alt="Video of wind blowing clouds and grass across rolling hills in the 3D world"></video>
 
-To add animated grass to the **Grass** material:
+<Alert severity="info">
+Note that the speed of animated grass — but not its vector direction&nbsp;— will be reduced if the player has toggled on the **Reduce&nbsp;Motion** [accessibility](../production/publishing/accessibility.md#reduced-motion) setting from the Roblox or in‑experience **Settings** menu.
+</Alert>
 
-1. In the **Explorer** window, navigate to the **Workspace**, then select the **Terrain** object.
+To add animated grass to th `Enum.Material.Grass|Grass` material:
+
+1. In the **Explorer** window, navigate to the `Class.Workspace`, then select the `Class.Terrain` object.
 
    <img src="../assets/studio/explorer/Workspace-Terrain.png" width="320" alt="Terrain object shown in Explorer window of Studio" />
 
-2. In the **Properties** window, toggle on the **Decoration** property.
+2. In the **Properties** window, toggle on the `Class.Terrain.Decoration|Decoration` property.
 
    <img src="../assets/studio/properties/Terrain-Decoration.png" width="320" alt="Decoration property of Terrain object in Properties window of Studio" />
 
-3. Adjust the grass length by entering a value between `0.1` and `1` for the **GrassLength** property.
+3. Adjust the grass length by entering a value between `0.1` and `1` for the `Class.Terrain.GrassLength|GrassLength` property.
 
    <img src="../assets/studio/properties/Terrain-GrassLength.png" width="320" alt="GrassLength property of Terrain object in Properties window of Studio" />
 
@@ -205,11 +205,11 @@ Each terrain material is assigned a default color, but you can customize any mat
 
 To customize any material color other than water:
 
-1. In the **Explorer** window, navigate to the **Workspace**, then select the **Terrain** object.
+1. In the **Explorer** window, navigate to the `Class.Workspace`, then select the `Class.Terrain` object.
 
    <img src="../assets/studio/explorer/Workspace-Terrain.png" width="320" alt="Terrain object shown in Explorer window of Studio" />
 
-2. In the **Properties** window, expand **MaterialColors**. All materials display with their RGB code.
+2. In the **Properties** window, expand `Class.Terrain.MaterialColors|MaterialColors`. All materials display with their RGB code.
 
    <img src="../assets/studio/properties/Terrain-MaterialColors-Expand.png" width="320" alt="MaterialColors property shown in Properties window of Studio" />
 
@@ -218,13 +218,13 @@ To customize any material color other than water:
 ## Generate terrain
 
 Using the following tools and methods, you can generate large
-areas of terrain procedurally with the Generate tool or scripting, or automatically based on a heightmap and colormap.
+areas of terrain procedurally through tooling or scripting, or automatically based on a heightmap and colormap.
 
 ### Generate tool
 
 The **Generate** tool allows you to procedurally generate terrain in seconds. This is useful if you want to create a large map and fine-tune [terrain details](#detailed-editing).
 
-1. In the **Terrain Editor**, navigate to the **Create** tab and select the **Generate** tool.
+1. In the editor window, navigate to the **Create** tab and select the **Generate** tool.
 
    <img src="../assets/studio/terrain-editor/Create-Tab-Generate.png" width="360" alt="Generate tool indicated in Create tab of Terrain Editor" />
 
@@ -285,7 +285,7 @@ An optional **colormap**, along with a heightmap, converts colors to terrain mat
 
 To import a heightmap and optional colormap:
 
-1. In the **Terrain Editor**, navigate to the **Create** tab and select the **Import** tool.
+1. In the editor window, navigate to the **Create** tab and select the **Import** tool.
 
    <img src="../assets/studio/terrain-editor/Create-Tab-Import.png" width="360" alt="Import tool indicated in Create tab of Terrain Editor" />
 
@@ -312,141 +312,141 @@ To import a heightmap and optional colormap:
    </thead>
    <tbody>
      <tr>
-       <td>Air</td>
-       <td>[255, 255, 255]</td>
-       <td>FFFFFF</td>
+       <td>`Enum.Material.Air|Air`</td>
+       <td>`[255, 255, 255]`</td>
+       <td>`FFFFFF`</td>
        <td><ColorSwatch value="rgb(255,255,255)" /></td>
      </tr>
      <tr>
-       <td>Asphalt</td>
-       <td>[115, 123, 107]</td>
-       <td>737B6B</td>
+       <td>`Enum.Material.Asphalt|Asphalt`</td>
+       <td>`[115, 123, 107]`</td>
+       <td>`737B6B`</td>
        <td><ColorSwatch value="rgb(115,123,107)" /></td>
      </tr>
      <tr>
-       <td>Basalt</td>
-       <td>[30, 30, 37]</td>
-       <td>1E1E25</td>
+       <td>`Enum.Material.Basalt|Basalt`</td>
+       <td>`[30, 30, 37]`</td>
+       <td>`1E1E25`</td>
        <td><ColorSwatch value="rgb(30,30,37)" /></td>
      </tr>
      <tr>
-       <td>Brick</td>
-       <td>[138, 86, 62]</td>
-       <td>8A563E</td>
+       <td>`Enum.Material.Brick|Brick`</td>
+       <td>`[138, 86, 62]`</td>
+       <td>`8A563E`</td>
        <td><ColorSwatch value="rgb(138,86,62)" /></td>
      </tr>
      <tr>
-       <td>Cobblestone</td>
-       <td>[132, 123, 90]</td>
-       <td>847B5A 847b5A</td>
+       <td>`Enum.Material.Cobblestone|Cobblestone`</td>
+       <td>`[132, 123, 90]`</td>
+       <td>`847B5A`</td>
        <td><ColorSwatch value="rgb(132,123,90)" /></td>
      </tr>
      <tr>
-       <td>Concrete</td>
-       <td>[127, 102, 63]</td>
-       <td>7F663F</td>
+       <td>`Enum.Material.Concrete|Concrete`</td>
+       <td>`[127, 102, 63]`</td>
+       <td>`7F663F`</td>
        <td><ColorSwatch value="rgb(127,102,63)" /></td>
      </tr>
      <tr>
-       <td>Cracked Lava</td>
-       <td>[232, 156, 74]</td>
-       <td>E89C4A</td>
+       <td>`Enum.Material.CrackedLava|CrackedLava`</td>
+       <td>`[232, 156, 74]`</td>
+       <td>`E89C4A`</td>
        <td><ColorSwatch value="rgb(232,156,74)" /></td>
      </tr>
      <tr>
-       <td>Glacier</td>
-       <td>[101, 176, 234]</td>
-       <td>65B0EA</td>
+       <td>`Enum.Material.Glacier|Glacier`</td>
+       <td>`[101, 176, 234]`</td>
+       <td>`65B0EA`</td>
        <td><ColorSwatch value="rgb(101,176,234)" /></td>
      </tr>
      <tr>
-       <td>Grass</td>
-       <td>[106, 127, 63]</td>
-       <td>6A7F3F</td>
+       <td>`Enum.Material.Grass|Grass`</td>
+       <td>`[106, 127, 63]`</td>
+       <td>`6A7F3F`</td>
        <td><ColorSwatch value="rgb(106,127,63)" /></td>
      </tr>
      <tr>
-       <td>Ground</td>
-       <td>[102, 92, 59]</td>
-       <td>665C3B</td>
+       <td>`Enum.Material.Ground|Ground`</td>
+       <td>`[102, 92, 59]`</td>
+       <td>`665C3B`</td>
        <td><ColorSwatch value="rgb(102,92,59)" /></td>
      </tr>
      <tr>
-       <td>Ice</td>
-       <td>[129, 194, 224]</td>
-       <td>81C2E0</td>
+       <td>`Enum.Material.Ice|Ice`</td>
+       <td>`[129, 194, 224]`</td>
+       <td>`81C2E0`</td>
        <td><ColorSwatch value="rgb(129,194,224)" /></td>
      </tr>
      <tr>
-       <td>Leafy Grass</td>
-       <td>[115, 132, 74]</td>
-       <td>73844A</td>
+       <td>`Enum.Material.LeafyGrass|LeafyGrass`</td>
+       <td>`[115, 132, 74]`</td>
+       <td>`73844A`</td>
        <td><ColorSwatch value="rgb(115,132,74)" /></td>
      </tr>
      <tr>
-       <td>Limestone</td>
-       <td>[206, 173, 148]</td>
-       <td>CEAD94</td>
+       <td>`Enum.Material.Limestone|Limestone`</td>
+       <td>`[206, 173, 148]`</td>
+       <td>`CEAD94`</td>
        <td><ColorSwatch value="rgb(206,173,148)" /></td>
      </tr>
      <tr>
-       <td>Mud</td>
-       <td>[58, 46, 36]</td>
-       <td>3A2E24</td>
+       <td>`Enum.Material.Mud|Mud`</td>
+       <td>`[58, 46, 36]`</td>
+       <td>`3A2E24`</td>
        <td><ColorSwatch value="rgb(58,46,36)" /></td>
      </tr>
      <tr>
-       <td>Pavement</td>
-       <td>[148, 148, 140]</td>
-       <td>94948C</td>
+       <td>`Enum.Material.Pavement|Pavement`</td>
+       <td>`[148, 148, 140]`</td>
+       <td>`94948C`</td>
        <td><ColorSwatch value="rgb(148,148,140)" /></td>
      </tr>
      <tr>
-       <td>Rock</td>
-       <td>[102, 108, 111]</td>
-       <td>666C6F</td>
+       <td>`Enum.Material.Rock|Rock`</td>
+       <td>`[102, 108, 111]`</td>
+       <td>`666C6F`</td>
        <td><ColorSwatch value="rgb(102,108,111)" /></td>
      </tr>
      <tr>
-       <td>Salt</td>
-       <td>[198, 189, 181]</td>
-       <td>C6BDB5</td>
+       <td>`Enum.Material.Salt|Salt`</td>
+       <td>`[198, 189, 181]`</td>
+       <td>`C6BDB5`</td>
        <td><ColorSwatch value="rgb(198,189,181)" /></td>
      </tr>
      <tr>
-       <td>Sand</td>
-       <td>[143, 126, 95]</td>
-       <td>8F7E5F</td>
+       <td>`Enum.Material.Sand|Sand`</td>
+       <td>`[143, 126, 95]`</td>
+       <td>`8F7E5F`</td>
        <td><ColorSwatch value="rgb(143,126,95)" /></td>
      </tr>
      <tr>
-       <td>Sandstone</td>
-       <td>[137, 90, 71]</td>
-       <td>895A47</td>
+       <td>`Enum.Material.Sandstone|Sandstone`</td>
+       <td>`[137, 90, 71]`</td>
+       <td>`895A47`</td>
        <td><ColorSwatch value="rgb(137,90,71)" /></td>
      </tr>
      <tr>
-       <td>Slate</td>
-       <td>[63, 127, 107]</td>
-       <td>3F7F6B</td>
+       <td>`Enum.Material.Slate|Slate`</td>
+       <td>`[63, 127, 107]`</td>
+       <td>`3F7F6B`</td>
        <td><ColorSwatch value="rgb(63,127,107)" /></td>
      </tr>
      <tr>
-       <td>Snow</td>
-       <td>[195, 199, 218]</td>
-       <td>C3C7DA</td>
+       <td>`Enum.Material.Snow|Snow`</td>
+       <td>`[195, 199, 218]`</td>
+       <td>`C3C7DA`</td>
        <td><ColorSwatch value="rgb(195,199,218)" /></td>
      </tr>
      <tr>
-       <td>Wood Planks</td>
-       <td>[139, 109, 79]</td>
-       <td>8B6D4F</td>
+       <td>`Enum.Material.WoodPlanks|WoodPlanks`</td>
+       <td>`[139, 109, 79]`</td>
+       <td>`8B6D4F`</td>
        <td><ColorSwatch value="rgb(139,109,79)" /></td>
      </tr>
      <tr>
-       <td>Water</td>
-       <td>[12, 84, 92]</td>
-       <td>0C545C</td>
+       <td>`Enum.Material.Water|Water`</td>
+       <td>`[12, 84, 92]`</td>
+       <td>`0C545C`</td>
        <td><ColorSwatch value="rgb(12,84,92)" /></td>
      </tr>
    </tbody>
@@ -470,12 +470,14 @@ To import a heightmap and optional colormap:
 You can script terrain generation using the `Class.Terrain` class. For example, to create terrain with grass material that fills a volume, you can use methods such as `Class.Terrain:FillBall()|FillBall()`, `Class.Terrain:FillBlock()|FillBlock()`, `Class.Terrain:FillCylinder()|FillCylinder()`, `Class.Terrain:FillRegion()|FillRegion()`, or `Class.Terrain:FillWedge()|FillWedge()`.
 
 ```lua title="Fill Block Volume"
-workspace.Terrain:FillBlock(CFrame.new(0, 0, 0), Vector3.new(4, 4, 4), Enum.Material.Grass)
+local Workspace = game:GetService("Workspace")
+
+Workspace.Terrain:FillBlock(CFrame.new(0, 0, 0), Vector3.new(4, 4, 4), Enum.Material.Grass)
 ```
 
 ## Large-scale editing
 
-The Terrain Editor's **Edit** tab contains tools for large-scale editing.
+The editor's **Edit** tab contains tools for large-scale editing.
 
 ### Select regions
 
@@ -567,8 +569,6 @@ To transform a region:
 
 The **Fill** tool lets you fill an entire selected region with a specific material, or replace all material within the region with another material.
 
-To fill or replace terrain:
-
 1. Select a region, then activate the **Fill** tool.
 
    <img src="../assets/studio/terrain-editor/Edit-Tab-Fill.png" width="360" alt="Fill tool indicated in Edit tab of Terrain Editor" />
@@ -587,8 +587,6 @@ To fill or replace terrain:
 
 The **Sea Level** tool lets you create a consistent water level or remove all water within a region.
 
-To set the sea level:
-
 1. Activate the **Sea Level** tool.
 
    <img src="../assets/studio/terrain-editor/Edit-Tab-Sea-Level.png" width="360" alt="Sea Level tool indicated in Edit tab of Terrain Editor" />
@@ -601,7 +599,7 @@ To set the sea level:
 
 ## Detailed editing
 
-The Terrain Editor's **Edit** tab also contains tools for precision editing using a "brush" tool to draw, sculpt, smooth, flatten, or paint terrain.
+The editor's **Edit** tab also contains tools for precision editing using a "brush" tool to draw, sculpt, smooth, flatten, or paint terrain.
 
 <img src="../assets/studio/terrain-editor/Edit-Tab-Detail-Tools.png" width="360" alt="Detailed editing tools indicated in Edit tab of Terrain Editor" />
 
