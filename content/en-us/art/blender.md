@@ -808,7 +808,9 @@ Vertex painting is the process of storing color information directly on the vert
 
 Vertex painting is useful for adding color variation to your assets in a lightweight, efficient way, especially in stylized workflows or experiences where performance is a concern, as it can reduce texture memory usage and draw calls. Many Roblox creators use vertex painting in conjunction with Studio's default materials, `Class.MaterialVariant` objects, and `Class.SurfaceAppearance` objects to create visual complexity on otherwise simple 3D objects.
 
-**Note:** Applying material colors in blender will not be imported into studio.
+<Alert severity="info">
+Note that material colors applied in Blender will not be imported into Studio.
+</Alert>
 
 <GridContainer numColumns="3">
   <figure>
