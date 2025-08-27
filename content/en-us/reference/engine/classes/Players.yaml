@@ -1324,8 +1324,8 @@ events:
       `Class.Player.CharacterAdded` and `Class.Player.CharacterRemoving`
       functions.
 
-      Note that this event does not work as expected in **Play** mode because
-      the player is created before scripts run that connect to
+      Note that this event does not work as expected in a solo playtest mode
+      because the player is created before scripts run that connect to
       `Class.Players.PlayerAdded|PlayerAdded`. To handle this case, as well as
       cases in which the script is added into the game after a player enters,
       create an `onPlayerAdded()` function that you can call to handle a

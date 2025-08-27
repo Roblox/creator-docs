@@ -176,7 +176,8 @@ properties:
       with.
     description: |
       The content ID of the video file a `Class.VideoFrame` object is associated
-      with.
+      with. To save resources and improve performance, set this property to `""`
+      when the `Class.VideoFrame` is not visible or in use.
     code_samples:
       - creating-and-playing-a-video
     type: ContentId
@@ -241,6 +242,9 @@ methods:
     description: |
       Sets `Class.VideoFrame.Playing` to `true`, playing the
       `Class.VideoFrame.Video` from the current `Class.VideoFrame.TimePosition`.
+      To save resources and improve performance, set the
+      `Class.VideoFrame.Video` property to `""` when the `Class.VideoFrame` is
+      not visible or in use.
     code_samples:
       - creating-and-playing-a-video
     parameters: []

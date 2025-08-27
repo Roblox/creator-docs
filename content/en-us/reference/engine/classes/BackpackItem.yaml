@@ -18,6 +18,31 @@ tags:
   - NotCreatable
 deprecation_message: ''
 properties:
+  - name: BackpackItem.TextureContent
+    summary: |
+      The texture icon that is displayed for a tool in the player's backpack.
+      Only supports asset URIs.
+    description: |
+      The texture icon that is displayed for a tool in the player's backpack.
+
+      This property should be set to the content ID of an image uploaded to the
+      Roblox website. Only asset URIs are supported for this property.
+
+      If this property is left blank, the `Class.Backpack` GUI will display the
+      name of the tool instead.
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: BackpackItem.TextureId
     summary: |
       The texture icon that is displayed for a tool in the player's backpack.

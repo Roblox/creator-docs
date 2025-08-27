@@ -58,6 +58,32 @@ properties:
       can_save: true
     capabilities:
       - UI
+  - name: UIDragDetector.ActivatedCursorIconContent
+    summary: |
+      Sets the cursor icon to display when the mouse is activated over the
+      parent of this `Class.UIDragDetector`. Only supports asset URIs
+    description: |
+      Sets the cursor icon to display when the mouse is activated over the
+      parent of this `Class.UIDragDetector`. If this property is left blank, the
+      detector will use the default icon.
+
+      To change the activated cursor icon, set this property to the asset ID of
+      the image you'd like to use. Only asset URIs are supported for this
+      property.
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
   - name: UIDragDetector.BoundingBehavior
     summary: |
       Determines bounding behavior of the dragged UI object when the detector's
@@ -122,6 +148,31 @@ properties:
       you'd like to use.
     code_samples: []
     type: ContentId
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+  - name: UIDragDetector.CursorIconContent
+    summary: |
+      Sets the cursor icon to display when the mouse is hovered over the parent
+      of this `Class.UIDragDetector`. Only asset URIs are supported.
+    description: |
+      Sets the cursor icon to display when the mouse is hovered over the parent
+      of this `Class.UIDragDetector`. If this property is left blank, the
+      detector will use the default icon.
+
+      To change the cursor icon, set this property to the asset ID of the image
+      you'd like to use. Only asset URIs are supported for this property.
+    code_samples: []
+    type: Content
     tags: []
     deprecation_message: ''
     security:

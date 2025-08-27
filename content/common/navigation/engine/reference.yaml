@@ -3231,6 +3231,11 @@ navigation:
             type: engineapi
             source: /reference/engine/classes/TerrainWriteOperation.yaml
             ignoreTranslation: true
+          - title: WebStreamClient
+            path: /reference/engine/classes/WebStreamClient
+            type: engineapi
+            source: /reference/engine/classes/WebStreamClient.yaml
+            ignoreTranslation: true
   - title: Data Types
     path: /reference/engine/datatypes
     source: /reference/engine/datatypes.md
@@ -5873,6 +5878,16 @@ navigation:
         path: /reference/engine/enums/WebSocketState
         type: engineapi
         source: /reference/engine/enums/WebSocketState.yaml
+        ignoreTranslation: true
+      - title: WebStreamClientState
+        path: /reference/engine/enums/WebStreamClientState
+        type: engineapi
+        source: /reference/engine/enums/WebStreamClientState.yaml
+        ignoreTranslation: true
+      - title: WebStreamClientType
+        path: /reference/engine/enums/WebStreamClientType
+        type: engineapi
+        source: /reference/engine/enums/WebStreamClientType.yaml
         ignoreTranslation: true
       - title: WeldConstraintPreserve
         path: /reference/engine/enums/WeldConstraintPreserve

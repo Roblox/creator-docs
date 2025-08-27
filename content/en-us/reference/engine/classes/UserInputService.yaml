@@ -307,6 +307,35 @@ properties:
       can_save: true
     capabilities:
       - Input
+  - name: UserInputService.MouseIconContent
+    summary: |
+      The content ID of the image for the user's mouse icon. Only supports asset
+      URIs.
+    description: |
+      This property determines the content ID of the image for the user's mouse
+      icon. If blank, a default arrow pointer is used. While the cursor hovers
+      over certain UI objects such as an `Class.ImageButton`,
+      `Class.TextButton`, `Class.TextBox`, or `Class.ProximityPrompt`, this
+      image will be overridden and temporarily ignored. Only asset URIs are
+      supported for this property.
+
+      To hide the cursor entirely, do **not** use a transparent image; instead,
+      set `Class.UserInputService.MouseIconEnabled|MouseIconEnabled` to `false`.
+    code_samples:
+      - UserInputService-MouseIcon
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Input
   - name: UserInputService.MouseIconEnabled
     summary: |
       Determines whether the mouse icon is visible.

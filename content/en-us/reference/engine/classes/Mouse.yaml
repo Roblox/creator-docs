@@ -270,6 +270,154 @@ properties:
       can_save: true
     capabilities:
       - Input
+  - name: Mouse.IconContent
+    summary: |
+      The content of the image used as the `Class.Mouse` icon. Only supports
+      asset URIs.
+    description: |
+      **Icon** is a property that determines the image used as the pointer. If
+      blank, a default arrow is used. While the cursor hovers over a
+      `Class.GuiButton`, this property is temporarily ignored. This property
+      only supports asset URIs.
+
+      To hide the cursor entirely, **do not** use a transparent image &ndash;
+      instead, set `Class.UserInputService.MouseIconEnabled` to false.
+
+      For getting/setting the user mouse icon in experiences, you should use
+      `Class.UserInputService.MouseIcon`. `Class.Mouse.Icon` will be deprecated
+      after the new API for plugins to set the mouse cursor is released.
+
+      ##### Designing a Cursor
+
+      The following guidelines may prove useful when creating your own mouse
+      cursors:
+
+      - The dimensions of the image used determines the size of the cursor.
+      - The dimensions of the image should not exceed 256 pixels on any axis.
+      - The **center** of the image is where mouse inputs are issued.
+      - The default mouse image is 64x64 pixels, with the mouse taking up 17x24
+        pixels of space.
+
+      ##### System Cursors
+
+      When using a `Class.PluginMouse` retrieved from `Class.Plugin:GetMouse()`,
+      you can use the following icons similar to your system's default cursors,
+      such as hands, arrows, I-beams, etc. You can use these with GUI events
+      like `Class.GuiObject.MouseEnter|MouseEnter`,
+      `Class.GuiObject.MouseLeave|MouseLeave`, and
+      `Class.GuiButton.MouseButton1Down|MouseButton1Down` to provide a
+      consistent Studio experience when interacting with certain kinds of GUI
+      components. Note that these only work for Studio plugins; they will not
+      work for other `Class.Mouse` objects.
+
+      <table>
+          <thead>
+              <tr>
+                  <th>Look*</th>
+                  <th>Asset</th>
+                  <th>Suggested Use</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><img src="../../../assets/misc/Mouse-Icon-Pointer.png" width="30" /></td>
+                  <td><code>rbxasset://SystemCursors/Arrow</code></td>
+                  <td>Default clicking and selection.</td>
+              </tr>
+              <tr>
+                  <td><img src="../../../assets/misc/Mouse-Icon-PointingHand.png" width="30" /></td>
+                  <td><code>rbxasset://SystemCursors/PointingHand</code></td>
+                  <td>Hovering over an active link/button.</td>
+              </tr>
+              <tr>
+                  <td><img src="../../../assets/misc/Mouse-Icon-OpenHand.png" width="30" /></td>
+                  <td><code>rbxasset://SystemCursors/OpenHand</code></td>
+                  <td>Hovering over a draggable item.</td>
+              </tr>
+              <tr>
+                  <td><img src="../../../assets/misc/Mouse-Icon-GrabbingHand.png" width="30" /></td>
+                  <td><code>rbxasset://SystemCursors/ClosedHand</code></td>
+                  <td>Dragging an item.</td>
+              </tr>
+              <tr>
+                  <td><img src="../../../assets/misc/Mouse-Icon-IBeam.png" width="30" /></td>
+                  <td><code>rbxasset://SystemCursors/IBeam</code></td>
+                  <td>Hovering in a text field.</td>
+              </tr>
+              <tr>
+                  <td><img src="../../../assets/misc/Mouse-Icon-ResizeNS.png" width="30" /></td>
+                  <td><code>rbxasset://SystemCursors/SizeNS</code></td>
+                  <td>Hovering over a vertical resize handle.</td>
+              </tr>
+              <tr>
+                  <td><img src="../../../assets/misc/Mouse-Icon-ResizeEW.png" width="30" /></td>
+                  <td><code>rbxasset://SystemCursors/SizeEW</code></td>
+                  <td>Hovering over a horizontal resize handle.</td>
+              </tr>
+              <tr>
+                  <td><img src="../../../assets/misc/Mouse-Icon-ResizeNESW.png" width="30" /></td>
+                  <td><code>rbxasset://SystemCursors/SizeNESW</code></td>
+                  <td>Hovering over a corner resize handle.</td>
+              </tr>
+              <tr>
+                  <td><img src="../../../assets/misc/Mouse-Icon-ResizeNWSE.png" width="30" /></td>
+                  <td><code>rbxasset://SystemCursors/SizeNWSE</code></td>
+                  <td>Hovering over a corner resize handle.</td>
+              </tr>
+              <tr>
+                  <td><img src="../../../assets/misc/Mouse-Icon-ResizeAll.png" width="30" /></td>
+                  <td><code>rbxasset://SystemCursors/SizeAll</code></td>
+                  <td>Hovering over a multi-direction resize handle.</td>
+              </tr>
+              <tr>
+                  <td><img src="../../../assets/misc/Mouse-Icon-ResizeSplitV.png" width="30" /></td>
+                  <td><code>rbxasset://SystemCursors/SplitNS</code></td>
+                  <td>Hovering over a vertical "split" handle.</td>
+              </tr>
+              <tr>
+                  <td><img src="../../../assets/misc/Mouse-Icon-ResizeSplitH.png" width="30" /></td>
+                  <td><code>rbxasset://SystemCursors/SplitEW</code></td>
+                  <td>Hovering over a horizontal "split" handle.</td>
+              </tr>
+              <tr>
+                  <td><img src="../../../assets/misc/Mouse-Icon-Forbidden.png" width="30" /></td>
+                  <td><code>rbxasset://SystemCursors/Forbidden</code></td>
+                  <td>Hovering over a locked/forbidden item.</td>
+              </tr>
+              <tr>
+                  <td><img src="../../../assets/misc/Mouse-Icon-Wait.png" width="30" /></td>
+                  <td><code>rbxasset://SystemCursors/Wait</code></td>
+                  <td>Indicating an action is in progress.</td>
+              </tr>
+              <tr>
+                  <td><img src="../../../assets/misc/Mouse-Icon-Busy.png" width="30" /></td>
+                  <td><code>rbxasset://SystemCursors/Busy</code></td>
+                  <td>Indicating the system is busy.</td>
+              </tr>
+              <tr>
+                  <td><img src="../../../assets/misc/Mouse-Icon-Crosshair.png" width="30" /></td>
+                  <td><code>rbxasset://SystemCursors/Cross</code></td>
+                  <td>Hovering over a pinpoint selection area.</td>
+              </tr>
+          </tbody>
+      </table>
+
+      <figcaption>* These appearances are approximations &mdash; the actual look is dependent on your operating system.</figcaption>
+    code_samples:
+      - dragon-mouse-icon
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Input
   - name: Mouse.Origin
     summary: |
       A `Datatype.CFrame` positioned at the `Class.Workspace.CurrentCamera` and

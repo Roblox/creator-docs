@@ -82,6 +82,32 @@ properties:
       can_save: true
     capabilities:
       - Input
+  - name: ClickDetector.CursorIconContent
+    summary: |
+      Sets the cursor icon to display when the mouse is hovered over the parent
+      of this `Class.ClickDetector` or `Class.DragDetector`. Only supports asset
+      URIs.
+    description: |
+      Sets the cursor icon to display when the mouse is hovered over the parent
+      of this `Class.ClickDetector` or `Class.DragDetector`. If this property is
+      left blank, the detector will use the default icon.
+
+      To change the cursor icon, set this property to the asset ID of the image
+      you'd like to use. Only asset URIs are supported for this property.
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Input
   - name: ClickDetector.MaxActivationDistance
     summary: |
       Maximum distance between a character and the `Class.ClickDetector` or

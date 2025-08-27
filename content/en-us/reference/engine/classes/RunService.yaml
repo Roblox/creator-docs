@@ -324,25 +324,21 @@ methods:
       - Basic
   - name: RunService:IsRunMode
     summary: |
-      Returns whether the **Run** button has been pressed to run the simulation
-      in Studio.
+      Returns whether a **Run** playtest has been initiated in Studio.
     description: |
-      This method returns whether the **Run** button has been pressed to run the
-      simulation in Studio. It will continue to return `true` if the simulation
-      has been paused using the **Pause** button; however, once it has been
-      stopped using the **Stop** button, it will revert to returning `false`.
-
-      Note that Studio only enters "run" mode when the **Run** button is
-      pressed, not the **Play** button. Also note that this method will return
-      `false` if the simulation was started using `Class.RunService:Run()`
-      rather than the **Run** button.
+      This method returns whether a **Run** playtest has been initiated in
+      Studio. It will continue to return `true` if the simulation has been
+      paused using the **Pause** button; however, once it has been stopped using
+      the **Stop** button, it will revert to returning `false`. Note that Studio
+      only enters "run" mode when a **Run** playtest (without the user's player
+      character) is initiated. Also note that this method will return `false` if
+      the simulation was started using `Class.RunService:Run()`.
     code_samples: []
     parameters: []
     returns:
       - type: boolean
         summary: |
-          Whether the **Run** button has been pressed to run the simulation in
-          Studio.
+          Whether a **Run** playtest has been initiated in Studio.
     tags: []
     deprecation_message: ''
     security: None
@@ -353,12 +349,10 @@ methods:
     summary: |
       Returns whether the experience is currently running.
     description: |
-      Returns whether the experience is currently running, meaning the
-      simulation has been run using the **Run** or **Play** buttons.
-
-      `IsRunning()` will always return the inverse of
-      `Class.RunService:IsEdit()|IsEdit()` except when the simulation has been
-      paused, in which case both methods will return `false`.
+      Returns whether the experience is currently running. `IsRunning()` will
+      always return the inverse of `Class.RunService:IsEdit()|IsEdit()` except
+      when the simulation has been paused, in which case both methods will
+      return `false`.
     code_samples: []
     parameters: []
     returns:
@@ -422,10 +416,8 @@ methods:
       and scripts.
     description: |
       This method pauses the experience's simulation if it is running,
-      suspending physics and scripts. The simulation can be started using
-      `Class.RunService:Run()|Run()` or the **Run** button in Studio; when the
-      simulation is paused, `Class.RunService:IsRunning()|IsRunning()` will
-      return `false`.
+      suspending physics and scripts. When the simulation is paused,
+      `Class.RunService:IsRunning()|IsRunning()` will return `false`.
     code_samples: []
     parameters: []
     returns:

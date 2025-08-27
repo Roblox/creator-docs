@@ -303,8 +303,7 @@ callbacks:
       The sender can be referenced by `Class.TextChatMessage.TextSource`, while
       the receiver is the `textSource` argument. Note that the sender and
       receiver can be the same, as the callback iterates through all possible
-      receivers. In Roblox Studio, you will be the only sender and recipient of
-      a message while in solo **Play** mode.
+      receivers.
     code_samples: []
     parameters:
       - name: message

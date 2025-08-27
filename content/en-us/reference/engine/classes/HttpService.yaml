@@ -28,6 +28,15 @@ description: |
   random 128‑bit labels which can be treated as probabilistically unique in a
   variety of scenarios.
 
+  Within Studio, use
+  `Class.HttpService:CreateWebStreamClient()|CreateWebStreamClient()` to process
+  data in real-time from HTTP servers that support streaming protocols such as
+  [SSE](https://en.wikipedia.org/wiki/Server-sent_events) or
+  [chunked transfer encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding).
+  You can connect callback functions to stream events, allowing you to process
+  data immediately as it arrives instead of waiting for the entire response to
+  complete.
+
   Only send HTTP requests to trusted third-party platforms to avoid introducing
   unnecessary security risks to your experience.
 code_samples:
@@ -71,6 +80,54 @@ properties:
     capabilities:
       - Network
 methods:
+  - name: HttpService:CreateWebStreamClient
+    summary: |
+      Creates a client that opens a persistent connection to stream data.
+    description: |
+      This method creates a client that establishes a long-lived connection to
+      servers utilizing various streaming technologies, such as
+      [Server-Sent Events (SSE)](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events).
+      After the connection is established, the client fires signals that you can
+      connect callback functions to with `Datatype.RBXScriptConnection`. Use
+      these callbacks to process messages as soon as they arrive, as well as
+      respond to open, close, and error events.
+
+      There is a limit of six total `Enum.WebStreamClientType.SSE` or
+      `Enum.WebStreamClientType.RawStream` clients allowed at one time. Close
+      streams that you no longer need with `Class.WebStreamClient:Close()`. When
+      the stream is no longer needed, you should disconnect any associated
+      `Datatype.RBXScriptConnection` to avoid memory leaks.
+
+      This method is available in Studio only. If you use it inside scripts,
+      make sure to remove any references before publishing the experience. We
+      encourage you to create plugins with this feature for reusability and ease
+      of use.
+    code_samples:
+      - HttpService-CreateSSEWebStreamClient
+      - HttpService-CreateRawStreamWebStreamClient
+    parameters:
+      - name: streamClientType
+        type: WebStreamClientType
+        default:
+        summary: |
+          The type of streaming connection to intiialize the client with.
+      - name: requestOptions
+        type: Dictionary
+        default:
+        summary: |
+          A dictionary containing information to be requested from the server.
+          It is identical to `requestOptions` in
+          `Class.HttpService:RequestAsync()`.
+    returns:
+      - type: WebStreamClient
+        summary: |
+          A stateful client that emits events in the stream lifecycle.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Network
   - name: HttpService:GenerateGUID
     summary: |
       Generates a UUID/GUID random string, optionally with curly braces.

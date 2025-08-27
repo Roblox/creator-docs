@@ -22,8 +22,7 @@ description: |
   `Class.CollectionService:RemoveTag()|RemoveTag()`. They can also be managed
   directly in Studio through the
   [Tags](../../../studio/properties.md#instance-tags) section of an instance's
-  properties, or through the built‑in
-  [Tag&nbsp;Editor](../../../studio/view-tab.md#windows-and-tools) tool.
+  properties.
 
   ##### Replication
 

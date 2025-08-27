@@ -21,11 +21,11 @@ items:
     deprecation_message: ''
   - name: SetIncrementAsync
     summary: |
-      Refers to `Class.GlobalDataStore:SetAsync()|SetAsync()`,
-      `Class.GlobalDataStore:IncrementAsync()|IncrementAsync()`,
-      `Class.GlobalDataStore:RemoveAsync()|RemoveAsync()`, and the write of
-      `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()` when it returns a
-      non-`nil` value.
+      Refers to `Class.DataStore:SetAsync()|SetAsync()`,
+      `Class.DataStore:IncrementAsync()|IncrementAsync()`,
+      `Class.DataStore:RemoveAsync()|RemoveAsync()`, and the write of
+      `Class.DataStore:UpdateAsync()|UpdateAsync()` when it returns a non-`nil`
+      value.
     value: 1
     tags: []
     deprecation_message: ''
@@ -43,8 +43,10 @@ items:
     deprecation_message: ''
   - name: SetIncrementSortedAsync
     summary: |
-      Refers to `Class.GlobalDataStore:SetAsync()|SetAsync()` and
-      `Class.GlobalDataStore:IncrementAsync()|IncrementAsync()` while using an
+      Refers to `Class.OrderedDataStore:SetAsync()|SetAsync()`
+      `Class.OrderedDataStore:IncrementAsync()|IncrementAsync()`,
+      `Class.OrderedDataStore:RemoveAsync()|RemoveAsync()`, and the write of
+      `Class.OrderedDataStore:UpdateAsync()|UpdateAsync()` while using an
       `Class.OrderedDataStore`.
     value: 4
     tags: []

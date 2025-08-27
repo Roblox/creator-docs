@@ -503,12 +503,15 @@ methods:
       ```
 
       #### Security Check
-      
+
       An asset loaded by this function must meet one of the following:
 
       - The asset must be **created or owned** by the game creator.
       - The asset must be **shared** by the asset owner.
       - The asset must be owned by Roblox.
+
+      Additionally, benign asset types such as t-shirts, shirts, pants and
+      avatar accessories are loadable from any game as they are `OpenUse`.
 
       See also:
 

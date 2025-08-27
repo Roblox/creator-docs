@@ -21,8 +21,7 @@ description: |
 code_samples: []
 inherits:
   - Instance
-tags:
-  - NotBrowsable
+tags: []
 deprecation_message: ''
 properties:
   - name: HapticEffect.Looped

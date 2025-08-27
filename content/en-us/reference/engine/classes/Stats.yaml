@@ -677,6 +677,13 @@ methods:
       Returns the total amount of memory being consumed by the current game
       session, in megabytes. If `MemoryTrackingEnabled` is false, calling
       GetTotalMemoryUsageMb will return 0 and emit a warning to the console.
+
+      This method gets memory usage from the operating system, which may exclude
+      memory that has been paged out to disk. As such, the return value tends to
+      differ significantly from the sum of usage for all
+      `Enum.DeveloperMemoryTag|DeveloperMemoryTags`. The return value should be
+      very similar to memory usage for Roblox in the Windows Task Manager or
+      macOS Activity Monitor.
     code_samples: []
     parameters: []
     returns:

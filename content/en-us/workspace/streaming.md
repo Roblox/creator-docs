@@ -343,7 +343,7 @@ Models set to **PersistentPerPlayer** behave the same as [Persistent](#persisten
 
 ## Request area streaming
 
-If you set the `Datatype.CFrame` of a player character to a region which isn't currently loaded, [streaming pause](#customize-the-pause-screen) occurs, if enabled. If you know the character will be moving to a specific area, you can call `Class.Player:RequestStreamAroundAsync()` to request that the server sends regions around that location to the client.
+If you set the `Datatype.CFrame` of a player character to a region which isn't currently loaded, [streaming pause](#customize-the-pause-screen) occurs, if enabled through `Enum.StreamingIntegrityMode`. If you know the character will be moving to a specific area, you can call `Class.Player:RequestStreamAroundAsync()` to request that the server sends regions around that location to the client.
 
 The following scripts show how to fire a client-to-server [remote event](../scripting/events/remote.md) to teleport a player within a place, yielding at the streaming request before moving the character to a new `Datatype.CFrame`.
 
@@ -379,8 +379,31 @@ teleportEvent:FireServer(teleportTarget)
 ```
 
 <Alert severity="error">
- Requesting streaming around an area is **not a guarantee** that the content will be present when the request completes, as streaming is affected by the client's network bandwidth, memory limitations, and other factors.
+Requesting streaming around an area is **not a guarantee** that the content will be present when the request completes, as streaming is affected by the client's network bandwidth, memory limitations, and other factors.
 </Alert>
+
+## Customize the pause screen
+
+If players can encounter streaming pauses in your experience, you might want to customize the pause screen. The `Class.Player.GameplayPaused` property indicates the player's current pause state. This property can be used with a `Class.Instance:GetPropertyChangedSignal()|GetPropertyChangedSignal()` connection to show or hide a custom GUI.
+
+```lua title="LocalScript"
+local Players = game:GetService("Players")
+local GuiService = game:GetService("GuiService")
+local player = Players.LocalPlayer
+
+-- Disable default pause modal
+GuiService:SetGameplayPausedNotificationEnabled(false)
+
+local function onPauseStateChanged()
+  if player.GameplayPaused then
+    -- Show custom GUI
+  else
+    -- Hide custom GUI
+  end
+end
+
+player:GetPropertyChangedSignal("GameplayPaused"):Connect(onPauseStateChanged)
+```
 
 ## Detect instance streaming
 
@@ -419,29 +442,6 @@ In some cases, it's necessary to detect when an object streams in or out and rea
    	task.wait(0.05)
    end
    ```
-
-## Customize the pause screen
-
-The `Class.Player.GameplayPaused` property indicates the player's current pause state. This property can be used with a `Class.Instance:GetPropertyChangedSignal()|GetPropertyChangedSignal()` connection to show or hide a custom GUI.
-
-```lua title="LocalScript"
-local Players = game:GetService("Players")
-local GuiService = game:GetService("GuiService")
-local player = Players.LocalPlayer
-
--- Disable default pause modal
-GuiService:SetGameplayPausedNotificationEnabled(false)
-
-local function onPauseStateChanged()
-	if player.GameplayPaused then
-		-- Show custom GUI
-	else
-		-- Hide custom GUI
-	end
-end
-
-player:GetPropertyChangedSignal("GameplayPaused"):Connect(onPauseStateChanged)
-```
 
 ## Model level of detail
 

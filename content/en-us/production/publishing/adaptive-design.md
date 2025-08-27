@@ -7,6 +7,10 @@ Adaptive design ensures your Roblox experiences look and feel great across vario
 
 These guidelines will help you deliver best-in-class experiences that intelligently adapt to any device and input type to reach a wide audience. For more details on workflows and APIs to assist with implementing these guidelines, see the [cross‑platform development](../../projects/cross-platform.md) guide.
 
+<Alert severity="info">
+To explore a pre-made experience that showcases the following adaptive design concepts, check out the [Interactivity Showcase](https://www.roblox.com/games/132115384567250/).
+</Alert>
+
 ## Core principles
 
 Every game is unique, but following a few key principles will help you deliver an intuitive and polished experience to every player, on every device.

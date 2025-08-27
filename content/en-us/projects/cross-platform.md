@@ -7,6 +7,10 @@ import BetaAlert from '../includes/beta-features/beta-alert.md'
 
 Roblox is inherently **cross‑platform**, as players can discover and join experiences on their phone or tablet, then later continue where they left off on their PC or console. To support an expanding suite of platforms, you should build user interfaces that seamlessly adapt to the input type (touch, gamepad, mouse/keyboard), screen size, and device orientation. This guide, the [adaptive design](../production/publishing/adaptive-design.md) guide, and the linked resources can help you design a true cross‑platform experience that's compatible, accessible, and enjoyable on **all** platforms.
 
+<Alert severity="info">
+To explore a pre-made experience that showcases the following cross‑platform design concepts, check out the [Interactivity Showcase](https://www.roblox.com/games/132115384567250/).
+</Alert>
+
 ## Input
 
 A carefully designed experience should support all primary input types, including mouse and keyboard, touch, and gamepads.
