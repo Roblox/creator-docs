@@ -141,7 +141,7 @@ If you decide to design your own trim sheets in third-party modeling tools like 
 - You can make different design choices to include more contextual details, but once the details are on the trim sheet, you cannot easily hide them.
 - Export your trim sheet's texture maps in a location that is easy to reference when you're creating an asset library.
 
-For more information on this technique, see [Building architecture - Creating trim sheets](../../../resources/beyond-the-dark/building-architecture.md#creating-trim-sheets).
+For more information on this technique, see [Building architecture - Creating trim sheets](../../../resources/beyond-the-dark/building-architecture.md#create-trim-sheets).
 
 ## Design modular kits
 

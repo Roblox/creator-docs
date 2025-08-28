@@ -102,6 +102,8 @@ navigation:
         path: /cloud/api/badges
       - title: Develop
         path: /cloud/api/develop
+      - title: Developer products
+        path: /cloud/api/developer-products
       - title: Followings
         path: /cloud/api/followings
       - title: Game internationalization
@@ -110,6 +112,8 @@ navigation:
         path: /cloud/api/groups
       - title: Localization tables
         path: /cloud/api/localization
+      - title: Open eval
+        path: /cloud/api/open-eval
       - title: Publish
         path: /cloud/api/publish
       - title: Secrets store service
