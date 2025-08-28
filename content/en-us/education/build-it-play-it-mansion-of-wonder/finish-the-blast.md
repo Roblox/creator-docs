@@ -17,7 +17,7 @@ Make final changes to the blast by editing the size and how it moves.
 
    <img src="../../assets/education/build-it-play-it-mansion-of-wonder/finish-the-blast/change-size-example.jpeg" width="50%" />
 
-2. Press **Play** to test the project. If needed, make changes to color and size to better fit your vision. When finished, finish testing by clicking the **Stop** button or pressing <kbd>Shift</kbd> + <kbd>F5</kbd>.
+2. Press **Play** to test the project. If needed, make changes to color and size to better fit your vision. When finished, finish testing by clicking the **Stop** button or pressing <kbd>Shift</kbd><kbd>F5</kbd>.
 
    <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/finish-the-blast/show-shot-color.mp4" ></video>
 

@@ -65,7 +65,7 @@ To replace the default walking animation with your custom swimming animation:
 
    </Alert>
 
-1. In the **Properties** window, click the **Value** field and paste your animation ID by pressing <kbd>Ctrl</kbd> + <kbd>V</kbd> or <kbd>⌘</kbd> + <kbd>V</kbd>, depending on your computer.
+1. In the **Properties** window, click the **Value** field and paste your animation ID by pressing <kbd>Ctrl</kbd><kbd>V</kbd> or <kbd>⌘</kbd><kbd>V</kbd>, depending on your computer.
 
    <img src="../../../assets/education/build-it-play-it-island-of-move/change-the-animation/set-animation-value.png" width="50%" />
 

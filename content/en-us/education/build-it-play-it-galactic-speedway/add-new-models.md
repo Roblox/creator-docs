@@ -46,7 +46,7 @@ The kit will be imported wherever your camera is positioned. To make sure your k
 
    <img src="../../assets/education/build-it-play-it-galactic-speedway/add-new-models/show-assets-added.jpeg" />
 
-5. **Duplicate** (<kbd>Ctrl</kbd> + <kbd>D</kbd> or <kbd>⌘</kbd> + <kbd>D</kbd>) parts to improve your flyer or create a new one.
+5. **Duplicate** (<kbd>Ctrl</kbd><kbd>D</kbd> or <kbd>⌘</kbd><kbd>D</kbd>) parts to improve your flyer or create a new one.
 
    Below are some example designs.
 

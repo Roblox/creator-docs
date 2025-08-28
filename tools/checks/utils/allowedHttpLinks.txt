@@ -279,6 +279,7 @@ https://wikipedia.org/wiki/Double-precision_floating-point_format
 https://wikipedia.org/wiki/Hexadecimal
 https://wikipedia.org/wiki/Scientific_notation
 https://wikipedia.org/wiki/Single-precision_floating-point_format
+https://en.wikipedia.org/wiki/GlTF
 https://w3c.github.io/Mobile-A11y-TF-Note/
 https://www.931smd.com/
 https://www.acceleratekid.com/camps/

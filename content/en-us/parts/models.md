@@ -32,7 +32,7 @@ There are two ways to create models:
 To create a model using the grouping method:
 
 1. In the **Explorer** window or 3D viewport, select every object that you want to group into a model.
-1. Right-click on one of the objects and select **Group**, or press <kbd>Ctrl</kbd> + <kbd>G</kbd> on Windows or <kbd>⌘</kbd> + <kbd>G</kbd> on Mac. A new `Class.Model` object displays with all of the objects that make up the model nested underneath.
+1. Right-click on one of the objects and select **Group**, or press <kbd>Ctrl</kbd><kbd>G</kbd> on Windows or <kbd>⌘</kbd><kbd>G</kbd> on Mac. A new `Class.Model` object displays with all of the objects that make up the model nested underneath.
 
    <img src="../assets/modeling/model-objects/Model-Group-Simple.png" width="320" alt="A close up view of the Explorer window. A Model object is highlighted with three nested children." />
 

@@ -41,7 +41,7 @@ Posing figures is done by rotating individual parts and joints, like the head or
 
     </Alert>
 
-2. Rotate by **dragging** the handles. Each handle rotates in a different direction. **Undo** any change with (<kbd>Ctrl</kbd> + <kbd>Z</kbd> or <kbd>⌘</kbd> + <kbd>Z</kbd>).
+2. Rotate by **dragging** the handles. Each handle rotates in a different direction. **Undo** any change with (<kbd>Ctrl</kbd><kbd>Z</kbd> or <kbd>⌘</kbd><kbd>Z</kbd>).
 
    <video controls src="../../assets/education/build-it-play-it-island-of-move/create-the-first-pose/rotate-upper-arm.mp4" width="80%"></video>
 

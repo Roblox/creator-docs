@@ -53,7 +53,7 @@ To build the city, you'll duplicate buildings from the of objects on the right s
 
 ## Duplicate the first building
 
-1. Select a large building from the palette and **duplicate** it (<kbd>Ctrl</kbd> + <kbd>D</kbd> or <kbd>⌘</kbd> + <kbd>D</kbd>). Nothing obvious will happen. With collisions off, the new building will overlap the original.
+1. Select a large building from the palette and **duplicate** it (<kbd>Ctrl</kbd><kbd>D</kbd> or <kbd>⌘</kbd><kbd>D</kbd>). Nothing obvious will happen. With collisions off, the new building will overlap the original.
    <Alert severity="warning">
    To avoid errors in your experience, **always duplicate** buildings and props, not copy and paste. Duplicate puts the new object into the same folder, copy and paste moves the new object outside of the folder.
    </Alert>

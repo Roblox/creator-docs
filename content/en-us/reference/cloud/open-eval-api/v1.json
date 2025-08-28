@@ -1,0 +1,346 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "OpenEvalApi",
+    "version": "1.0",
+    "x-roblox-extensions-version": "1.0.0"
+  },
+  "paths": {
+    "/open-eval-api/v1/eval": {
+      "post": {
+        "tags": ["Eval"],
+        "summary": "Performs the evaluation of the Lua script.",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EvalRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EvalRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EvalRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EvalRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EvalResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "DAY",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "studio-evaluations:create"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/open-eval-api/v1/eval-records/{jobId}": {
+      "get": {
+        "tags": ["Eval"],
+        "summary": "Gets the evaluation record by job ID.",
+        "parameters": [
+          {
+            "name": "jobId",
+            "in": "path",
+            "description": "The job ID of the evaluation record.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EvalRecord"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "studio-evaluations:create"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CustomLlmInfo": {
+        "required": ["name", "url"],
+        "type": "object",
+        "properties": {
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The name of the custom LLM."
+          },
+          "url": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The custom LLM endpoint URL."
+          },
+          "api_key": {
+            "type": "string",
+            "description": "The API key to access the custom LLM.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Contains information to override the default LLM endpoint and credentials."
+      },
+      "EvalJsonRecord": {
+        "type": "object",
+        "properties": {
+          "passes": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fails": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "checks": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "warning": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "interruptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InterruptionRecord"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EvalRecord": {
+        "required": ["inputScript", "jobId", "name"],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          },
+          "useReferenceMode": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "jobId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "inputScript": {
+            "type": "string",
+            "nullable": true
+          },
+          "jobStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EvalResultRecord"
+            },
+            "nullable": true
+          },
+          "evalSucceeded": {
+            "type": "string",
+            "nullable": true
+          },
+          "createUtc": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EvalRequest": {
+        "required": ["input_script", "name"],
+        "type": "object",
+        "properties": {
+          "name": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "use_reference_mode": {
+            "type": "boolean"
+          },
+          "input_script": {
+            "minLength": 10,
+            "type": "string"
+          },
+          "custom_llm_info": {
+            "$ref": "#/components/schemas/CustomLlmInfo"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The request model for the evaluation."
+      },
+      "EvalResponse": {
+        "type": "object",
+        "properties": {
+          "job_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "status_code": {
+            "type": "integer",
+            "description": "Gets or sets the status code of the response.",
+            "format": "int32"
+          },
+          "error": {
+            "type": "string",
+            "description": "Gets or sets the error message associated with the response.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The response model for the evaluation."
+      },
+      "EvalResultRecord": {
+        "type": "object",
+        "properties": {
+          "mode": {
+            "type": "string",
+            "nullable": true
+          },
+          "result": {
+            "$ref": "#/components/schemas/EvalJsonRecord"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InterruptionRecord": {
+        "type": "object",
+        "properties": {
+          "check": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "User": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "roblox-legacy-cookie": {
+        "type": "apiKey",
+        "description": "A browser cookie that represents the identity of a Roblox user. DO NOT SHARE THIS. Sharing this will allow someone to log in as you and to steal your Robux and items. When possible, use API keys with the x-api-key header or OAuth 2.0 instead for authentication.",
+        "in": "cookie",
+        "name": ".ROBLOSECURITY"
+      },
+      "roblox-api-key": {
+        "type": "apiKey",
+        "description": "A configurable key that allows granular access to Roblox resources. See https://create.roblox.com/docs/cloud/auth/api-keys for more information.",
+        "in": "header",
+        "name": "x-api-key"
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "https://apis.roblox.com"
+    }
+  ]
+}

@@ -12,40 +12,30 @@ You could copy and paste the API key into a script or add it to a data store, bu
 To view, create, or edit secrets, you must be the experience owner or group owner. You can have up to 500 secrets per experience.
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-
-1. Select your experience, and then choose **Secrets** ⟩ **Create Secret**.
-
-1. Provide a name, the secret, and the applicable domain.
+2. Select your experience, and then select **Secrets** > **Create Secret**.
+3. Enter a name, the secret, and the applicable domain.
 
    - The name acts as a unique identifier for the secret, so we recommend something descriptive.
    - Secrets can be up to 1,024 characters in length. API keys and access tokens should come from the service provider, but if the secret is a password, you probably created it yourself.
    - You can use a limited wildcard syntax for the domain, such as `*` for any domain (not recommended) or `*.example.com` for any subdomain at `example.com`. Specific domains are even better, such as `my.example.com`.
 
-{/* Note the ability to manage these using Open Cloud when that arrives. */}
+<Alert severity="success">
+You can also use Open Cloud to manage your secrets. See the [reference documentation](../cloud/api/secrets-store.md) and [guide](../cloud/guides/secrets-store.md).
+</Alert>
 
 ## Local secrets
 
 For security reasons, the secrets store for each experience is only available to live game servers or [Team Test](../studio/testing-modes.md#collaborative-testing) environments. If you try to access a secret from a local test server, such as after pressing the **Play** button in Studio, you receive a `Can't find secret with given key` error.
 
-To specify secrets for local testing, add valid JSON objects with base64-encoded secrets in Studio's **File**&nbsp;⟩ **Game Settings** window. The JSON can contain spaces, but must be on a single line.
+To specify secrets for local testing, go to Studio and then go to **File** > **Game Settings** > **Security**. You can create new secrets and edit or delete existing secrets in the **Secrets** section.
 
-<img alt="Local secret in the Game Settings window." src="../assets/data/secrets-store/local-secrets.png" width="700" />
+<img src="../assets/data/secrets-store/LocalSecrets.png" width="750px" alt="View, create, edit secrets with the Secrets UI."/>
 
-For example, the following is the base64-encoded string `abcdefghijklmnopqrstuvwxyz` restricted to subdomains at `example.com`:
-
-```json
-{"secretName": ["YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXo=", "*.example.com"]}
-```
-
-To add multiple secrets, separate the values with commas:
-
-```json
-{"secretName1": ["dGVzdDE=", "*.example.com"],"secretName2": ["dGVzdDI=", "*.example.com"],"secretName3": ["dGVzdDM=", "*.example.com"]}
-```
+<img src="../assets/data/secrets-store/LocalSecrets_Edit.png" width="750px" alt="Add a new secret with name secretName1, value 123456, and restricted to domain *.example.com."/>
 
 ## Use secrets
 
-Before using secrets within your experience, you must enable **Allow HTTP Requests** in the **Security** section of Studio's **File**&nbsp;⟩ **Game Settings** window. Then call `Class.HttpService:GetSecret()` within a script:
+Before using secrets within your experience, you must enable **Allow HTTP Requests** in the **Security** section of Studio's **File** > **Game Settings** window. Then call `Class.HttpService:GetSecret()` within a script:
 
 ```lua
 local HttpService = game:GetService("HttpService")

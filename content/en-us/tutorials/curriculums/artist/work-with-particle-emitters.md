@@ -164,7 +164,7 @@ To set the laser blast particles to a new texture:
    If you don't see the same properties as the example image, return to the **Explorer** window and reselect the **BlastParticles** particle emitter.
    </Alert>
 
-1. Paste your texture's assetID by pressing <kbd>Ctrl</kbd>+<kbd>V</kbd> or <kbd>⌘</kbd>+<kbd>V</kbd>, depending on your computer, then press **Enter**. Your particle emitter now emits particles that look like your texture. For example, if you use the `5833323391` texture, your particles will look like the example below.
+1. Paste your texture's assetID by pressing <kbd>Ctrl</kbd><kbd>V</kbd> or <kbd>⌘</kbd><kbd>V</kbd>, depending on your computer, then press **Enter**. Your particle emitter now emits particles that look like your texture. For example, if you use the `5833323391` texture, your particles will look like the example below.
 
    <img src="../../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/texture-changed.png" width="40%" />
 

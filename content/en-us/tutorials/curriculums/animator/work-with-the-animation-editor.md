@@ -109,7 +109,7 @@ To create your first pose for a swimming animation:
 
    <video controls src="../../../assets/education/build-it-play-it-island-of-move/create-the-first-pose/click-upper-arm.mp4" width="80%"></video>
 
-1. Click and drag the handles to rotate the rig's left arm, and note how each handle rotates the arm in a different direction. You can undo any change by pressing either <kbd>Ctrl</kbd> + <kbd>Z</kbd> or <kbd>⌘</kbd> + <kbd>Z</kbd>, depending on your computer.
+1. Click and drag the handles to rotate the rig's left arm, and note how each handle rotates the arm in a different direction. You can undo any change by pressing either <kbd>Ctrl</kbd><kbd>Z</kbd> or <kbd>⌘</kbd><kbd>Z</kbd>, depending on your computer.
 
    <video controls src="../../../assets/education/build-it-play-it-island-of-move/create-the-first-pose/rotate-upper-arm.mp4" width="80%"></video>
 
@@ -153,9 +153,9 @@ To duplicate your first pose's keyframes to the end of the animation:
 
    <img src="../../../assets/education/build-it-play-it-island-of-move/looping-animations/select-first-pose-diamond.png" width="80%" />
 
-1. Copy the first pose by pressing <kbd>Ctrl</kbd> + <kbd>C</kbd> or <kbd>⌘</kbd> + <kbd>C</kbd>, depending on your computer.
+1. Copy the first pose by pressing <kbd>Ctrl</kbd><kbd>C</kbd> or <kbd>⌘</kbd><kbd>C</kbd>, depending on your computer.
 1. Click the **scrubber**, then drag it to the end of the animation at `1:00` on the timeline.
-1. Paste your first pose at this new timeline position by pressing <kbd>Ctrl</kbd> + <kbd>V</kbd> or <kbd>⌘</kbd> + <kbd>V</kbd>, depending on your computer. A new set of diamonds display at the end keyframe.
+1. Paste your first pose at this new timeline position by pressing <kbd>Ctrl</kbd><kbd>V</kbd> or <kbd>⌘</kbd><kbd>V</kbd>, depending on your computer. A new set of diamonds display at the end keyframe.
 
    <img src="../../../assets/education/build-it-play-it-island-of-move/looping-animations/added-last-pose.png" width="80%" />
 

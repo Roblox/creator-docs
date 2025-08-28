@@ -25,7 +25,7 @@ Remember how you flew a test speeder earlier? To fly your own speeder, it needs 
 
    <Alert severity="warning">
    <AlertTitle>Driftspeeder not appearing?</AlertTitle>
-   To get your speeder back, use undo (<kbd>Ctrl</kbd>+<kbd>Z</kbd> or <kbd>⌘</kbd>+<kbd>Z</kbd>) and repeat the process of **Cut** and **Paste Into**.
+   To get your speeder back, use undo (<kbd>Ctrl</kbd><kbd>Z</kbd> or <kbd>⌘</kbd><kbd>Z</kbd>) and repeat the process of **Cut** and **Paste Into**.
    </Alert>
 
 1. Name your driftspeeder something descriptive like **The Lightning**.
@@ -49,7 +49,7 @@ If you've added new parts, you'll have to move the model back to the garage:
 1. Group the parts back together.
 
    1. Select all parts of the speeder.
-   1. Right-click anywhere in the 3D viewport, then select **Group** from the contextual menu (<kbd>Ctrl</kbd>+<kbd>G</kbd> or <kbd>⌘</kbd>+<kbd>G</kbd>).
+   1. Right-click anywhere in the 3D viewport, then select **Group** from the contextual menu (<kbd>Ctrl</kbd><kbd>G</kbd> or <kbd>⌘</kbd><kbd>G</kbd>).
 
 1. Place back into the Garage folder if necessary.
 

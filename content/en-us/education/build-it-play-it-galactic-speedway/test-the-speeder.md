@@ -15,7 +15,7 @@ Before moving on, take time to check that your speeder works correctly.
 
    <img src="../../assets/education/build-it-play-it-galactic-speedway/test-the-speeder/select-speeder.png" width="80%" />
 
-3. While flying, make sure that your driftspeeder looks as you intended. Then **stop** the playtest and, if needed, fix any issues. Remember, you can stop playtesting with <kbd>Shift</kbd> + <kbd>F5</kbd>.
+3. While flying, make sure that your driftspeeder looks as you intended. Then **stop** the playtest and, if needed, fix any issues. Remember, you can stop playtesting with <kbd>Shift</kbd><kbd>F5</kbd>.
 
    <video controls src="../../assets/education/build-it-play-it-galactic-speedway/test-the-speeder/test-speeder.mp4"  width="80%"></video>
 

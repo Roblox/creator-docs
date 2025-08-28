@@ -21,6 +21,6 @@ To see how the carnival ride works, test it out. When playing, you'll ride on a 
 3. When the ride starts, left click to shoot the blaster at enemies. Watch the cart's **health** at the top of the screen and try and make it to the treasure room at the end.
    <img src="../../assets/education/build-it-play-it-mansion-of-wonder/test-and-play/game-health.png" width="100%" />
 
-4. Either finish a round, or press <kbd>1</kbd> to use the mouse. To stop testing, press the **Stop** button or press <kbd>Shift</kbd>+<kbd>F5</kbd> on the keyboard.
+4. Either finish a round, or press <kbd>1</kbd> to use the mouse. To stop testing, press the **Stop** button or press <kbd>Shift</kbd><kbd>F5</kbd> on the keyboard.
 
    <img src="../../assets/education/general/stop-button.png" width="30%" />

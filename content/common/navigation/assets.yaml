@@ -49,6 +49,8 @@ navigation:
         path: /art/modeling/export-requirements
       - title: 3D Importer
         path: /art/modeling/3d-importer
+      - title: glTF Export
+        path: /art/modeling/gltf-export
       - title: Roblox Blender plugin
         path: /art/modeling/roblox-blender-plugin
 

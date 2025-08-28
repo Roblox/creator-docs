@@ -395,7 +395,7 @@ The **Grab** tool lets you move objects, vertices, edges, and faces from the 3D 
 To use the Grab tool:
 
 1. In either **Object** or **Edit** mode, select one or multiple objects, vertices, edges, or faces.
-1. Press the <kbd>G</kbd> hotkey to activate the tool.
+1. Press <kbd>G</kbd> to activate the tool.
 1. Move the mouse to reposition your selection. For further precision:
    - Press <kbd>X</kbd>, <kbd>Y</kbd>, or <kbd>Z</kbd> after you press <kbd>G</kbd> to constrain movement to the **X**, **Y**, or **Z** axis, respectively.
    - Double-press an axis key to slide vertices or edges along their natural path.
@@ -437,7 +437,7 @@ To use the Snap tool:
       - **Move** - Snaps while moving the selection.
       - **Rotate** - Snaps while rotating the selection.
       - **Scale** - Snaps while scaling the selection.
-1. Press <kbd>Shift</kbd> + <kbd>Tab</kbd> to activate the tool.
+1. Press <kbd>Shift</kbd><kbd>Tab</kbd> to activate the tool.
 1. For further precision, hold <kbd>Shift</kbd> to snap the selection in finer increments.
 1. Move, rotate, or scale an object or mesh element according to your settings.
 
@@ -454,7 +454,7 @@ The **Inset** tool lets you create an inset with adjustable thickness and depth 
 To use the Inset tool:
 
 1. In **Edit** mode, select one or multiple faces.
-1. Press the <kbd>I</kbd> hotkey to activate the tool.
+1. Press <kbd>I</kbd> to activate the tool.
 1. Move the mouse to adjust your inset's size. For further precision:
    - Hold <kbd>Ctrl</kbd> to adjust the depth of the inset.
    - Hold <kbd>Shift</kbd> while moving your mouse to slow down movement for fine adjustments.
@@ -474,7 +474,7 @@ The **Extrude** tool lets you create new geometry by pulling out new faces, edge
 To use the Extrude tool:
 
 1. In **Edit** mode, select one or multiple vertices, edges, or faces.
-1. Press the <kbd>E</kbd> hotkey to activate the tool.
+1. Press <kbd>E</kbd> to activate the tool.
 1. Move the mouse to adjust your extrusion's length. For further precision, press <kbd>X</kbd>, <kbd>Y</kbd>, or <kbd>Z</kbd> after you press <kbd>E</kbd> to constrain movement to the **X**, **Y**, or **Z** axis, respectively.
 1. Left-click or press <kbd>Enter</kbd> to confirm your extrusion(s).
 
@@ -515,7 +515,7 @@ The **Bridge Edge Loops** tool lets you connect multiple edge loops with faces. 
 To use the Bridge Edge Loops tool:
 
 1. In **Edit** mode, select two or more edge loops that you want to connect.
-1. Press the <kbd>Ctrl</kbd> + <kbd>E</kbd> hotkey to display a contextual menu for your active edge loops, then select **Bridge Edge Loops** to activate the tool.The **Bridge Edge Loops** panel displays.
+1. Press <kbd>Ctrl</kbd><kbd>E</kbd>/<kbd>⌘</kbd><kbd>E</kbd> to display a contextual menu for your active edge loops, then select **Bridge Edge Loops** to activate the tool.The **Bridge Edge Loops** panel displays.
 1. Set **Number of Cuts** to the number of subdivisions you want for your new bridge.
 1. **(Optional)** For further precision for curved bridges, increase **Smoothness** to create a more rounded bridge.
 1. Left-click to confirm your bridge.
@@ -533,7 +533,7 @@ The **Fill** tool lets you create triangular faces between any active edges or v
 To use the Fill tool:
 
 1. In **Edit** mode, select at least three vertices or two or more edges that form at least one complete perimeter.
-1. Press <kbd>Alt</kbd> + <kbd>F</kbd> to activate the tool.
+1. Press <kbd>Alt</kbd><kbd>F</kbd>/<kbd>⌥</kbd><kbd>F</kbd> to activate the tool.
 1. **(Optional)** In the **Fill** panel, enable **Beauty** to arrange the triangles nicely.
 1. Left-click to confirm your new face.
 
@@ -550,7 +550,7 @@ The **New Faces from Edges** tool lets you either create an edge if only two ver
 To use the New Faces from Edges tool:
 
 1. In **Edit** mode, select at least three vertices, or two or more edges that form one or more complete perimeters.
-1. Press the <kbd>F</kbd> hotkey to activate the tool.
+1. Press <kbd>F</kbd> to activate the tool.
 1. Left-click to confirm your new face.
 
 <Alert severity="info">
@@ -584,7 +584,7 @@ The **Delete** tool lets you completely remove geometry from your meshes, leavin
 To use the Delete tool:
 
 1. In **Edit** mode, select the vertices, edges, or faces that you want to remove from your mesh.
-1. Press the <kbd>X</kbd> hotkey to display a contextual menu for your selection.
+1. Press <kbd>X</kbd> to display a contextual menu for your selection.
 1. Choose one of the following menu items:
    1. Select **Vertices** to delete all active vertices, removing any faces or edges they are connected to.
    1. Select **Edges** to delete all active edges, removing any faces that the edge shares with it.
@@ -698,7 +698,7 @@ To use the Mark Seam tool:
 
 1. Open the **UV Editing** workspace. The UV Editor displays on the lefthand side of the screen, and the 3D viewport displays on the righthand side of the screen in Edit mode.
 1. In the **3D Viewport**, navigate to your 3D object, then select the edges where you want to create seams.
-1. Press the <kbd>Ctrl</kbd> + <kbd>E</kbd> hotkey to open the **Edge** contextual menu.
+1. Press <kbd>Ctrl</kbd><kbd>E</kbd>/<kbd>⌘</kbd><kbd>E</kbd> to open the **Edge** contextual menu.
 1. Select **Mark Seam**. The seam turns red and is ready for the Unwrap tool.
 
 When you are ready to unwrap your object, Blender will unwrap the enclosed faces of the seam as its own island.
@@ -728,7 +728,7 @@ To use the Unwrap tool:
 
 1. Open the **UV Editing** workspace. The UV Editor displays on the lefthand side of the screen, and the 3D viewport displays on the righthand side of the screen in Edit mode.
 1. In the **3D Viewport**, navigate to your 3D object, then either use the **Mark Seam** tool to create seams, and/or select the specific faces you want to texture.
-1. Press the <kbd>U</kbd> hotkey to open the **UV Mapping** contextual menu.
+1. Press <kbd>U</kbd> to open the **UV Mapping** contextual menu.
 1. Select **Unwrap**. Your selection's UV islands display neatly in the UV Editor.
 1. In the **UV Editor**, move, scale, or rotate UV islands to the appropriate position, orientation, and scale on your texture.
 
@@ -749,11 +749,11 @@ To use the Follow Active Quads tool:
 1. Open the **UV Editing** workspace. The UV Editor displays on the lefthand side of the screen, and the 3D viewport displays on the righthand side of the screen in Edit mode.
 1. In the **3D Viewport**, navigate to your 3D object, then unwrap every face you want to texture using an active face.
 1. **(Optional)** Configure your active face.
-   1. In the **UV Editor**, select the face you want to be your active face, then press <kbd>Option</kbd> + <kbd>M</kbd> hotkey to open the **Split** contextual menu.
+   1. In the **UV Editor**, select the face you want to be your active face, then press <kbd>Alt</kbd><kbd>M</kbd>/<kbd>⌥</kbd><kbd>M</kbd>  to open the **Split** contextual menu.
    1. Select **Selection**. The active face separates from the UV island.
    1. Move, scale, or rotate your active face to the appropriate position, orientation, and scale that you want other faces in the UV map to follow.
 1. In the **UV Editor**, select all faces you want to follow the active face. Make sure to select your active face last so that Blender knows to use its layout as the guide.
-1. Press the <kbd>U</kbd> hotkey to open the **Unwrap** contextual menu, then select **Follow Active Quads**. Blender aligns your selection's UV coordinates to match the active face's shape and orientation.
+1. Press <kbd>U</kbd> to open the **Unwrap** contextual menu, then select **Follow Active Quads**. Blender aligns your selection's UV coordinates to match the active face's shape and orientation.
 
 <Alert severity="info">
 For more information on this tool, see Blender's official [UV Operators - Follow Active Quads](https://docs.blender.org/manual/en/latest/modeling/meshes/editing/uv.html#follow-active-quads) documentation.
@@ -786,7 +786,7 @@ To use a projection tool:
 
 1. Open the **UV Editing** workspace. The UV Editor displays on the lefthand side of the screen, and the 3D viewport displays on the righthand side of the screen in Edit mode.
 1. In the **3D Viewport**, navigate to your 3D object, then select every face.
-1. Press the <kbd>U</kbd> hotkey to open the **UV Mapping** contextual menu, then select one of the following options:
+1. Press <kbd>U</kbd> to open the **UV Mapping** contextual menu, then select one of the following options:
    - **Cube Projection**
    - **Sphere Projection**
    - **Cylinder Projection**
@@ -855,10 +855,10 @@ To vertex paint:
 1. Apply color to your object.
    1. To apply color to individual vertices:
       1. In the **3D Viewport**, click and drag over your object's vertices to apply your color with a smooth gradient.
-      1. For further precision, press the <kbd>[</kbd> or <kbd>]</kbd> hotkey to increase or decrease the brush size, respectively.
+      1. For further precision, press <kbd>[</kbd> or <kbd>]</kbd> to increase or decrease the brush size, respectively.
    1. To flood fill your color,
       1. In **Edit** mode, select the vertices or faces that you want to apply your color.
-      1. In **Vertex Paint** mode, press the <kbd>Ctrl</kbd> + <kbd>X</kbd> hotkey. Your selected vertices or faces display the new color.
+      1. In **Vertex Paint** mode, press <kbd>Ctrl</kbd><kbd>X</kbd>/<kbd>⌘</kbd><kbd>X</kbd>. Your selected vertices or faces display the new color.
 
 <Alert severity="info">
 For more information on this process, see Blender's official [Vertex Paint](https://docs.blender.org/manual/en/latest/sculpt_paint/vertex_paint/index.html) documentation.

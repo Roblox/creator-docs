@@ -64,5 +64,5 @@ Now that your experience is published and connected to your account, you can edi
 
 <Alert severity="info">
 <AlertTitle>Saving after publishing</AlertTitle>
-Next time you want to save your work, just go to **File → Publish to Roblox** or use the hotkey (<kbd>Alt</kbd> + <kbd>P</kbd>).
+Next time you want to save your work, just go to **File** ⟩ **Publish to Roblox** or use the hotkey combo (<kbd>Alt</kbd><kbd>P</kbd>/<kbd>⌥</kbd><kbd>P</kbd>).
 </Alert>

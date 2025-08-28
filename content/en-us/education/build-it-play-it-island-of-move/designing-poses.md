@@ -101,13 +101,13 @@ The next set of keyframes will be near the middle, showing the most extreme moti
 
 For the last pose, copy the first pose and paste it at the end. While you could customize the last neutral pose, this is a quick way of returning the animation to its starting point so it loops smoothly.
 
-1. Select the top keyframe in the timeline for the first pose. Be sure to select all keyframes at that point, then copy them (<kbd>Ctrl</kbd> + <kbd>C</kbd> or <kbd>⌘</kbd> + <kbd>C</kbd>).
+1. Select the top keyframe in the timeline for the first pose. Be sure to select all keyframes at that point, then copy them (<kbd>Ctrl</kbd><kbd>C</kbd> or <kbd>⌘</kbd><kbd>C</kbd>).
 
    <img src="../../assets/education/build-it-play-it-island-of-move-intermediate/bipi_t2_selectFirstFrame.png" />
 
 2. Move to the end of the animation (1:00 in the example) by clicking on the timeline or entering that value in the first box of the position indicator.
 
-3. Paste the keyframes (<kbd>Ctrl</kbd> + <kbd>V</kbd> or <kbd>⌘</kbd> + <kbd>V</kbd>).
+3. Paste the keyframes (<kbd>Ctrl</kbd><kbd>V</kbd> or <kbd>⌘</kbd><kbd>V</kbd>).
 
    <img src="../../assets/education/build-it-play-it-island-of-move-intermediate/bipi_t2_showLastFrames.png" />
 

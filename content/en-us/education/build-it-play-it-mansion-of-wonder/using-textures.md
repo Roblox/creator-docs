@@ -80,7 +80,7 @@ For example, notice in the video below how a single texture is changed and repea
 
    </Alert>
 
-3. Click in the **Texture** row to highlight the text. Press <kbd>Ctrl</kbd>+<kbd>V</kbd> (<kbd>⌘</kbd>+<kbd>V</kbd>) to paste in the previously copied ID and then press Enter. Your particle emitter now emits particles that look like your texture.
+3. Click in the **Texture** row to highlight the text. Press <kbd>Ctrl</kbd><kbd>V</kbd> (<kbd>⌘</kbd><kbd>V</kbd>) to paste in the previously copied ID and then press Enter. Your particle emitter now emits particles that look like your texture.
 
    <img src="../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/paste-texture.png" width="38%" />
 
