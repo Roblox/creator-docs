@@ -206,9 +206,9 @@ A portal ad is made up of two core components:
 - A static, non-clickable image.
 - A door that teleports users to an advertiser's experience.
 
-The Creator Store includes portal ads that represent these core components through a **BasePortal** package. The only changes you can make to this package is to modify its scale, position, and rotation. Any other change you make invalidates the package and makes it unable to server ads.
+The Creator Store includes portal ads that represent these core components through a **BasePortal** package. The only changes you can make to this package are to modify its scale, position, and rotation. Any other change you make invalidates the package and makes it unable to serve ads.
 
-Portal ads also include a **Decorative** folder of both static and dynamic visual elements. You can customize these elements as long as the core components remains intact.
+Portal ads also include a **Decorative** folder of both static and dynamic visual elements. You can customize these elements as long as the core components remain intact.
 
 <GridContainer numColumns="2">
   <figure>
