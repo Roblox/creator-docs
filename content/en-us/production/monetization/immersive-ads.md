@@ -64,7 +64,7 @@ How publishers earn:
 
 - For **video ads that are autoplay**, the video starts playing when a user looks at the ad and pauses when the user looks away. Advertisers bid on a video impression, so publishers earn for each video impression. A video impression is when a user looks at the ad for at least 0.5 seconds, the ad occupies 1.5% of the viewport, the ad is viewed at an angle of up to 55 degrees, and at least 50% of the video ad pixels are visible.
 
-- **Image ads** are static, non-clickable images within the 3D space. Advertisers bid on an image impression, so publishers earn for each image impression. An image impression is when a user looks at the ad for at least 1 second, the ad occupies 1.5% of the viewport, the ad is viewed at an angle of up to 55 degrees, nd at least 50% of the image ad pixels are visible.
+- **Image ads** are static, non-clickable images within the 3D space. Advertisers bid on an image impression, so publishers earn for each image impression. An image impression is when a user looks at the ad for at least 1 second, the ad occupies 1.5% of the viewport, the ad is viewed at an angle of up to 55 degrees, and at least 50% of the image ad pixels are visible.
 
 - **Portal ads** are static, non-clickable images with a door that teleports users into an advertiser's experience. Advertisers bid on a teleport, so publishers earn for each successful teleport. A teleport is when a user enters the portal and arrives at the advertiser's experience.
 
