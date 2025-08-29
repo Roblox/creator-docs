@@ -713,7 +713,7 @@ methods:
       a descendant of PlayerGui, the engine searches all available selectable,
       visible and on-screen GuiObjects that are descendants of selectionParent
       and sets the `Class.GuiService.SelectedObject` to the GuiObject with the
-      smallest `Class.GuiService.SelectionOrder`.
+      smallest `Class.GuiObject.SelectionOrder`.
     code_samples:
       - GuiService-PreferredTransparency
     parameters:
