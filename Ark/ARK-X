@@ -1,0 +1,226 @@
+StarterPlayer
+  └─ StarterPlayerScripts
+      └─ RPGMainScript (LocalScript)
+ReplicatedStorage
+  └─ Modules
+      └─ StatsModule (ModuleScript)
+      └─ CombatModule (ModuleScript)
+  └─ RemoteEvents
+      └─ AttackEvent (RemoteEvent)
+ServerScriptService
+  └─ ServerScript (Script)
+local StatsModule = {}
+
+function StatsModule.GetDefaultStats()
+    return {
+        Level = 1,
+        XP = 0,
+        MaxXP = 100,
+        HP = 100,
+        MaxHP = 100,
+        Attack = 10,
+        Defense = 5,
+    }
+end
+
+function StatsModule.LevelUp(playerStats)
+    playerStats.Level += 1
+    playerStats.XP = 0
+    playerStats.MaxXP = playerStats.MaxXP + 50
+    playerStats.MaxHP += 20
+    playerStats.Attack += 5
+    playerStats.Defense += 2
+    playerStats.HP = playerStats.MaxHP
+end
+
+function StatsModule.AddXP(playerStats, amount)
+    playerStats.XP += amount
+    if playerStats.XP >= playerStats.MaxXP then
+        StatsModule.LevelUp(playerStats)
+    end
+end
+
+return StatsModule
+local CombatModule = {}
+
+function CombatModule.CalculateDamage(attackerStats, defenderStats)
+    local baseDamage = attackerStats.Attack - (defenderStats.Defense * 0.5)
+    return math.max(1, math.floor(baseDamage))
+end
+
+return CombatModule
+local StatsModule = require(game.ReplicatedStorage.Modules.StatsModule)
+local CombatModule = require(game.ReplicatedStorage.Modules.CombatModule)
+
+local AttackEvent = game.ReplicatedStorage.RemoteEvents.AttackEvent
+local Players = game:GetService("Players")
+
+local PlayerStats = {}
+
+Players.PlayerAdded:Connect(function(player)
+    PlayerStats[player] = StatsModule.GetDefaultStats()
+
+    player.CharacterAdded:Connect(function(char)
+        local humanoid = char:WaitForChild("Humanoid")
+        humanoid.Health = PlayerStats[player].HP
+        humanoid.MaxHealth = PlayerStats[player].MaxHP
+    end)
+end)
+
+Players.PlayerRemoving:Connect(function(player)
+    PlayerStats[player] = nil
+end)
+
+AttackEvent.OnServerEvent:Connect(function(player, target)
+    if target and target:FindFirstChild("Humanoid") then
+        local attackerStats = PlayerStats[player]
+        local damage = CombatModule.CalculateDamage(attackerStats, {Defense = 2})
+        target.Humanoid:TakeDamage(damage)
+        local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local mouse = player:GetMouse()
+local AttackEvent = game.ReplicatedStorage.RemoteEvents.AttackEvent
+
+mouse.Button1Down:Connect(function()
+    local target = mouse.Target
+    if target and target.Parent:FindFirstChild("Humanoid") then
+        AttackEvent:FireServer(target.Parent)
+    end
+end)
+
+        -- Optional: reward XP if NPC is defeated
+        if target.Humanoid.Health - damage <= 0 then
+            StatsModule.AddXP(attackerStats, (1000)
+ReplicatedStorage
+├── Modules
+│   ├── StatsModule (ModuleScript)
+│   ├── CombatModule (ModuleScript)
+│   └── InventoryModule (ModuleScript)
+├── RemoteEvents
+│   ├── AttackEvent (RemoteEvent)
+│   └── PickupItemEvent (RemoteEvent)
+
+ServerScriptService
+├── GameManager (Script)
+
+StarterPlayer
+├── StarterPlayerScripts
+│   └── PlayerController (LocalScript)
+local StatsModule = {}
+
+function StatsModule.GetDefaultStats()
+	return {
+		Level = 1,
+		XP = 0,
+		MaxXP = 100,
+		HP = 100,
+		MaxHP = 100,
+		Attack = 10,
+		Defense = 5,
+	}
+end
+
+function StatsModule.LevelUp(stats)
+	stats.Level += 1
+	stats.XP = 0
+	stats.MaxXP += 50
+	stats.MaxHP += 20
+	stats.Attack += 5
+	stats.Defense += 3
+	stats.HP = stats.MaxHP
+
+function StatsModule.AddXP(stats, amount)
+	stats.XP += amount
+	if stats.XP >= stats.MaxXP then
+		StatsModule.LevelUp(stats)
+local CombatModule = {}
+
+
+function CombatModule.CalculateDamage(attacker, defender)
+	local rawDamage = attacker.Attack - (defender.Defense * 0.4)
+	return math.max(1, math.floor(rawDamage))
+
+return CombatModule
+local InventoryModule = {}
+
+function InventoryModule.CreateInventory()
+	return {
+		Items = {},
+	}
+
+function InventoryModule.AddItem(inventory, itemName)
+	table.insert(inventory.Items, itemName)
+local Players = game:GetService("Players")
+
+local StatsModule = require(game.ReplicatedStorage.Modules.StatsModule)
+local CombatModule = require(game.ReplicatedStorage.Modules.CombatModule)
+local InventoryModule = require(game.ReplicatedStorage.Modules.InventoryModule)
+
+local AttackEvent = game.ReplicatedStorage.RemoteEvents.AttackEvent
+local PickupItemEvent = game.ReplicatedStorage.RemoteEvents.PickupItemEvent
+
+local PlayerStats = {}
+local PlayerInventory = {}
+
+Players.PlayerAdded:Connect(function(player)
+	PlayerStats[player] = StatsModule.GetDefaultStats()
+	PlayerInventory[player] = InventoryModule.CreateInventory()
+end)
+
+Players.PlayerRemoving:Connect(function(player)
+	PlayerStats[player] = nil
+	PlayerInventory[player] = nil
+end)
+
+AttackEvent.OnServerEvent:Connect(function(player, target)
+	if target and target:FindFirstChild("Humanoid") then
+		local damage = CombatModule.CalculateDamage(PlayerStats[player], {Defense = 2})
+		target.Humanoid:TakeDamage(damage)
+
+		if target.Humanoid.Health - damage <= 0 then
+			StatsModule.AddXP(PlayerStats[player], 50)
+		end
+	end
+end)
+
+PickupItemEvent.OnServerEvent:Connect(function(player, itemName)
+	InventoryModule.AddItem(PlayerInventory[player], itemName)
+	print(player.Name .. " picked up " .. itemName)
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+local AttackEvent = game.ReplicatedStorage.RemoteEvents.AttackEvent
+local PickupItemEvent = game.ReplicatedStorage.RemoteEvents.PickupItemEvent
+
+mouse.Button1Down:Connect(function()
+	local target = mouse.Target
+	if target and target.Parent:FindFirstChild("Humanoid") then
+		AttackEvent:FireServer(target.Parent)
+	elseif target and target.Name == "Item" then
+		PickupItemEvent:FireServer(target.ItemName.Value)
+		target:Destroy()
+├── ArenaBattle (ModuleScript)
+├── PvPDuel (ModuleScript)
+├── SurvivalTimer (ModuleScript)
+├── BossRaid (ModuleScript)
+└── DungeonMode (ModuleScript)
+
+local ArenaBattle = {}
+
+function ArenaBattle.Start(player)
+	local waves = 5
+	local enemiesPerWave = 3
+
+	for wave = 1, waves do
+		print("Wave " .. wave)
+		for i = 1, enemiesPerWave do
+			local enemy = game.ServerStorage.Enemy:Clone()
+			enemy.Parent = workspace
+			enemy:MoveTo(player.Character.HumanoidRootPart.Position + Vector3.new(math.random(-10,10),0,math.random(-10,10)))
+		end
+		wait(10)
+	end
+
+	print(player.Name .. " has completed the arena!")
+end
+
+return ArenaBattle
