@@ -67,3 +67,12 @@ columns:
           navigation: /education.yaml
           path:  /education/educator-onboarding/landing
       # EDUCATION NAV REWORK
+
+    # COURSES NAV REWORK
+    - title: Courses
+      path: /courses
+      items:
+        - title: All Courses
+          navigation: /courses/courses.yaml
+          path: /courses
+      # COURSES NAV REWORK

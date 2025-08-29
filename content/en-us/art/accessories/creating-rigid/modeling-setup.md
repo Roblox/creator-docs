@@ -37,12 +37,12 @@ Create the rounded lid shape using segmentation:
 
 1. Near the Edit mode dropdown, select the Line selection.
 2. Holding <kbd>Shift</kbd>, click the top front and back lines of your chest.
-3. With both lines selected, press <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>B</kbd> to Bevel.
+3. With both lines selected, press <kbd>Ctrl</kbd><kbd>B</kbd>/<kbd>⌘</kbd><kbd>B</kbd> to bevel.
 4. In the context menu at the bottom right, set the number of segments to `6` and enable **Clamp Overlap**.
 
 ### Merge vertices
 
-Sometimes tools like the Bevel tool may move vertices very close to each other without merging them. Use the Merge Vertices function to ensure that your object shares vertices wherever possible.
+Sometimes tools like the **Bevel** tool may move vertices very close to each other without merging them. Use the Merge Vertices function to ensure that your object shares vertices wherever possible.
 
 1. Near the Edit mode dropdown, select the Vertices selection.
 2. Press <kbd>A</kbd> to select all vertices.
@@ -74,7 +74,7 @@ To create your vertical loop cuts:
 
 1. Near the Edit mode dropdown, select the Line selection.
 2. Press <kbd>A</kbd> to select the entire chest.
-3. Use <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>R</kbd> to create a Loop Cut.
+3. Use <kbd>Ctrl</kbd><kbd>R</kbd>/<kbd>⌘</kbd><kbd>R</kbd> to create a loop cut.
 4. Using your mouse, hover over the object until the highlighted cut is vertical. Click to confirm.
 5. In the context menu, set the number of cuts to `2`.
 6. With the new lines selected, press <kbd>S</kbd> to scale and <kbd>Y</kbd> to scale within the y-axis.
@@ -86,7 +86,7 @@ To create your vertical loop cuts:
 
 To create your horizontal loop cuts:
 
-1. Select the chest, and press <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>R</kbd> to loop cut.
+1. Select the chest, and press <kbd>Ctrl</kbd><kbd>R</kbd>/<kbd>⌘</kbd><kbd>R</kbd> to loop cut.
 2. Using the mouse, click to confirm a horizontal cut.
 3. Using the context menu, set the number of cuts to `2`.
 4. To straighten each line across your object, select the one of your new lines:
@@ -103,7 +103,7 @@ To create your horizontal loop cuts:
 Create the extrusions for the front, top, and back of the chest.
 
 1. Near the Edit mode dropdown, select the Face selection.
-2. Hold <kbd>Alt</kbd>/<kbd>Option</kbd> and click on your front faces to select the front, top, and back faces.
+2. Hold <kbd>Alt</kbd>/<kbd>⌥</kbd> and click on your front faces to select the front, top, and back faces.
 3. With the faces selected, hold <kbd>Shift</kbd> and click on the metal borders to deselect them. The front and back faces, and the top segmentations, should remain selected.
 4. Right click and select **Extrude Faces Along Normals**. Drag the mouse to extrude the faces about the same width as the metal borders.
 

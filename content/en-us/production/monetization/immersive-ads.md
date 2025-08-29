@@ -64,7 +64,7 @@ How publishers earn:
 
 - For **video ads that are autoplay**, the video starts playing when a user looks at the ad and pauses when the user looks away. Advertisers bid on a video impression, so publishers earn for each video impression. A video impression is when a user looks at the ad for at least 0.5 seconds, the ad occupies 1.5% of the viewport, the ad is viewed at an angle of up to 55 degrees, and at least 50% of the video ad pixels are visible.
 
-- **Image ads** are static, non-clickable images within the 3D space. Advertisers bid on an image impression, so publishers earn for each image impression. An image impression is when a user looks at the ad for at least 1 second, the ad occupies 1.5% of the viewport, the ad is viewed at an angle of up to 55 degrees, nd at least 50% of the image ad pixels are visible.
+- **Image ads** are static, non-clickable images within the 3D space. Advertisers bid on an image impression, so publishers earn for each image impression. An image impression is when a user looks at the ad for at least 1 second, the ad occupies 1.5% of the viewport, the ad is viewed at an angle of up to 55 degrees, and at least 50% of the image ad pixels are visible.
 
 - **Portal ads** are static, non-clickable images with a door that teleports users into an advertiser's experience. Advertisers bid on a teleport, so publishers earn for each successful teleport. A teleport is when a user enters the portal and arrives at the advertiser's experience.
 
@@ -206,9 +206,9 @@ A portal ad is made up of two core components:
 - A static, non-clickable image.
 - A door that teleports users to an advertiser's experience.
 
-The Creator Store includes portal ads that represent these core components through a **BasePortal** package. The only changes you can make to this package is to modify its scale, position, and rotation. Any other change you make invalidates the package and makes it unable to server ads.
+The Creator Store includes portal ads that represent these core components through a **BasePortal** package. The only changes you can make to this package are to modify its scale, position, and rotation. Any other change you make invalidates the package and makes it unable to serve ads.
 
-Portal ads also include a **Decorative** folder of both static and dynamic visual elements. You can customize these elements as long as the core components remains intact.
+Portal ads also include a **Decorative** folder of both static and dynamic visual elements. You can customize these elements as long as the core components remain intact.
 
 <GridContainer numColumns="2">
   <figure>

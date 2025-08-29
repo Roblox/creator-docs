@@ -17,12 +17,12 @@ The first pose is at `0:00` on the timeline.
 
    <img src="../../assets/education/build-it-play-it-island-of-move/looping-animations/select-first-pose-diamond.png" width="100%" />
 
-2. Copy the pose by pressing <kbd>Ctrl</kbd> + <kbd>C</kbd> or <kbd>⌘</kbd> + <kbd>C</kbd>.
+2. Copy the pose by pressing <kbd>Ctrl</kbd><kbd>C</kbd> or <kbd>⌘</kbd><kbd>C</kbd>.
 
 3. To move to the animation end, find the box for current time, click on it, and **clear** the text inside. In that box, type `1:00` and press <kbd>Enter</kbd>. Notice the blue line will move to the animation's end.
 
    <img src="../../assets/education/build-it-play-it-island-of-move/looping-animations/change-duration-to-end.gif" width="100%" />
 
-4. To paste the first pose at the end, press <kbd>Ctrl</kbd> + <kbd>V</kbd> or <kbd>⌘</kbd> + <kbd>V</kbd>. A new set of diamonds will appear at the end.
+4. To paste the first pose at the end, press <kbd>Ctrl</kbd><kbd>V</kbd> or <kbd>⌘</kbd><kbd>V</kbd>. A new set of diamonds will appear at the end.
 
    <img src="../../assets/education/build-it-play-it-island-of-move/looping-animations/added-last-pose.png" width="100%" />

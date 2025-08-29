@@ -128,7 +128,7 @@ If you make a request and do not get the results you want, rephrase the request 
 <Alert severity="info">
 Accidentally accept a suggestion that you didn't want? You can undo the change using one of the following methods:
 
-- For non-script changes, press <kbd>Ctrl</kbd> + <kbd>Z</kbd> or <kbd>⌘</kbd> + <kbd>Z</kbd>, depending on your computer.
+- For non-script changes, press <kbd>Ctrl</kbd><kbd>Z</kbd> or <kbd>⌘</kbd><kbd>Z</kbd>, depending on your computer.
 - If Assistant made a script, click on the script's name in the Explorer window, then press <kbd>Delete</kbd>.
 </Alert>
 

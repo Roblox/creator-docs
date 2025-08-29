@@ -71,6 +71,6 @@ Before designing your own driftspeeder, try flying a test speeder that's already
    </tbody>
    </table>
 
-1. Stop playing by pressing the red square or press <kbd>Shift</kbd> + <kbd>F5</kbd>.
+1. Stop playing by pressing the red square or press <kbd>Shift</kbd><kbd>F5</kbd>.
 
    <img src="../../assets/education/general/stop-button.png" width="30%" />

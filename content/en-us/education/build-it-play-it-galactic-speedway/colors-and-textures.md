@@ -88,9 +88,9 @@ To use textures, they must be imported into your game. Make sure your game has b
 <AlertTitle>Changing multiple textures at a time</AlertTitle>
 Select multiple parts in the Explorer and follow the same process of changing a single part's texture.
 
-- **Select Individual Parts**: <kbd>CTRL</kbd> + Click or <kbd>⌘</kbd> + Click
+- **Select Individual Parts**: <kbd>Ctrl</kbd>‑click or <kbd>⌘</kbd>‑click
 
-- **Selecting Groups**: Click on one part. Then, <kbd>SHIFT</kbd> + Click on a part below to select all parts between them.
+- **Selecting Groups**: Click on one part. Then, <kbd>Shift</kbd>‑click on a part below to select all parts between them.
 
 </Alert>
 

@@ -28,7 +28,7 @@ Now that you have the animation ID, you can enter it in your game. Then, Studio 
 
    <img src="../../assets/education/build-it-play-it-island-of-move/change-the-animation/search-walk-select.png" width="40%" />
 
-1. In the **Properties** window, click the **Value** field and paste the animation ID by pressing <kbd>Ctrl</kbd> + <kbd>V</kbd> or <kbd>⌘</kbd> + <kbd>V</kbd>.
+1. In the **Properties** window, click the **Value** field and paste the animation ID by pressing <kbd>Ctrl</kbd><kbd>V</kbd> or <kbd>⌘</kbd><kbd>V</kbd>.
 
    <img src="../../assets/education/build-it-play-it-island-of-move/change-the-animation/set-animation-value.png" width="40%" />
 

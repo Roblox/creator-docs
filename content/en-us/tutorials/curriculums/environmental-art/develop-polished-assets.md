@@ -89,7 +89,7 @@ The previous point is near impossible to remove entirely, but you can set Studio
 
 ### Trim sheets
 
-**Trim sheets** are textures that tile both on either the X **or** Y axis, and they allow you to add significantly more visual complexity to your experiences without having to import additional textures, saving you a negative impact on memory. Each row or column of a trim sheet has a unique visual appearance, giving you many different surface treatments to choose from when you're mapping UV data to a mesh. For example, the door frame and ceiling assets in the following two images use different layers of the same trim sheet to add detail work to the space.
+**Trim sheets** are textures that tile on either the X **or** Y axis, and they allow you to add significantly more visual complexity to your experiences without having to import additional textures, saving you a negative impact on memory. Each row or column of a trim sheet has a unique visual appearance, giving you many different surface treatments to choose from when you're mapping UV data to a mesh. For example, the door frame and ceiling assets in the following two images use different layers of the same trim sheet to add detail work to the space.
 
 <GridContainer numColumns="2">
   <figure>
@@ -141,7 +141,7 @@ If you decide to design your own trim sheets in third-party modeling tools like 
 - You can make different design choices to include more contextual details, but once the details are on the trim sheet, you cannot easily hide them.
 - Export your trim sheet's texture maps in a location that is easy to reference when you're creating an asset library.
 
-For more information on this technique, see [Building architecture - Creating trim sheets](../../../resources/beyond-the-dark/building-architecture.md#creating-trim-sheets).
+For more information on this technique, see [Building architecture - Creating trim sheets](../../../resources/beyond-the-dark/building-architecture.md#create-trim-sheets).
 
 ## Design modular kits
 

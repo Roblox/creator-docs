@@ -7,7 +7,7 @@ description: Learn how to duplicate parts and add decorations to spaceship in Ro
 
 As you build, parts can be used more than once by creating duplicates. This is useful for reusing a part from the scrapyard, or copying something already added to the speeder.
 
-1. Click the wing you just added and duplicate it (<kbd>Ctrl</kbd>+<kbd>D</kbd> or <kbd>⌘</kbd>+<kbd>D</kbd>). Nothing obvious will happen in the 3D viewport because with collisions off, the wing overlaps the original.
+1. Click the wing you just added and duplicate it (<kbd>Ctrl</kbd><kbd>D</kbd> or <kbd>⌘</kbd><kbd>D</kbd>). Nothing obvious will happen in the 3D viewport because with collisions off, the wing overlaps the original.
 1. Use the **Move**, **Rotate**, and **Scale** tools to position it differently than the first.
 
    <video controls src="../../assets/education/build-it-play-it-galactic-speedway/duplicate-and-design/second-wing.mp4"  width="80%"></video>

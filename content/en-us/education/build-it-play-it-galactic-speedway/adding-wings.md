@@ -36,7 +36,7 @@ Before adding wings, set **rotate snapping** to make it easier to position your 
 
    <Alert severity="info">
    <AlertTitle>Rotate quickly with a hotkey</AlertTitle>
-   To rotate an object 90 degrees, select that part and press <kbd>Ctrl</kbd>+<kbd>R</kbd> or <kbd>⌘</kbd>+<kbd>R</kbd>.
+   To rotate an object 90 degrees, select that part and press <kbd>Ctrl</kbd><kbd>R</kbd> or <kbd>⌘</kbd><kbd>R</kbd>.
    </Alert>
 
 1. Back in the **Home** tab, select the **Scale** tool and drag the handles to scale the wings to a desired size.

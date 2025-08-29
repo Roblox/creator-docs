@@ -912,6 +912,10 @@
           },
           "moderationResult": {
             "$ref": "#/components/schemas/ModerationResult"
+          },
+          "published": {
+            "type": "boolean",
+            "description": "Only applies to place asset types. Indicates if the place has been published or not."
           }
         },
         "description": "An asset version."

@@ -59,7 +59,7 @@ Switch to Texture Paint mode and use the paintbrush to track the "wood" parts of
 2. Switch to **Texture Paint** mode. A side-by-side panel displays with your 2D atlas on the left and the 3D object on the right.
 3. Expand the Tool submenu in the top-right of either window.
 4. Select your brush settings and mark the wooden areas of your chest.
-   1. Use <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>Z</kbd> to undo any accidental brushes on the metal border.
+   1. Use <kbd>Ctrl</kbd><kbd>Z</kbd>/<kbd>⌘</kbd><kbd>Z</kbd> to undo any accidental brushes on the metal border.
    2. Hold <kbd>F</kbd> and drag the mouse to adjust brush size.
 
 ### Paint 2D map
@@ -72,7 +72,7 @@ With all of the wooden areas of your chest marked, you can now quickly texture y
    1. Set the **Falloff** shape to the flattest icon to ensure the edges are sharp.
    2. Set the color or any other brush settings here.
 2. In the left window, begin coloring in each island of your texture. You can quickly preview the changes on your 3D object on the right side.
-   1. Use <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>Z</kbd> to undo any accidental brushes on the metal border.
+   1. Use <kbd>Ctrl</kbd><kbd>Z</kbd>/<kbd>⌘</kbd><kbd>Z</kbd> to undo any accidental brushes on the metal border.
    2. Hold <kbd>F</kbd> and drag the mouse to adjust brush size.
 3. After completion, navigate to **Image** > **Save** to save your image file.
 
