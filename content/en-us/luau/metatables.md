@@ -111,7 +111,7 @@ Here's the list of available metamethods:
 		</tr>
 	  <tr>
 		  <td>`__mode`</td>
-		  <td>Used in weak tables, declaring whether the keys and/or values of a table are weak. Note that references to Roblox instances are never weak. Tables that hold such references will never be garbage collected.</td>
+		  <td>A string making either all of the table's keys `"k"`, values `"v"`, or both `"kv"` weak. This means that the [garbage collector](https://www.lua.org/pil/17.html) will not count them as references, allowing them to be freed from memory when they're no longer used anywhere else. When a table entry's either key or value (as described by the string) is garbage collected, it will be removed (since one them is `nil`, or possibly both if using `"kv"`, the entry will no longer exist). Only tables, functions, [buffers](../reference/engine/libraries/buffer), and some [userdata](./userdata) are garbage collectable, other [types](./types) are not and won't be affected. Note that even if you don't explicitly hold a reference to an object in your code, the engine might still be keeping one (for example, if a Roblox `Instance` is a descendant of the `Datamodel`).</td>
 		</tr>
 	  <tr>
 		  <td>`__len(table)`</td>
