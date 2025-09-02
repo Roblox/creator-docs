@@ -205,6 +205,10 @@ Once in free camera mode, you can use the following controls:
     <td>Moves the camera down/up.</td>
   </tr>
   <tr>
+    <td><kbd>Z</kbd> <kbd>C</kbd></td>
+    <td>Tilts the camera left/right in the appropriate direction</td>
+  </tr>
+  <tr>
     <td><kbd>Shift</kbd></td>
     <td>In combination with any movement key, changes the camera speed.</td>
   </tr>
