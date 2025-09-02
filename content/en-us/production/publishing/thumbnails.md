@@ -206,7 +206,7 @@ Once in free camera mode, you can use the following controls:
   </tr>
   <tr>
     <td><kbd>Z</kbd> <kbd>C</kbd></td>
-    <td>Tilts the camera left/right in the appropriate direction</td>
+    <td>Tilts the camera left/right in the appropriate direction.</td>
   </tr>
   <tr>
     <td><kbd>Shift</kbd></td>
