@@ -18,3 +18,9 @@ content/en-us/studio/index.md
 content/en-us/assistant/index.md
 content/en-us/education/resources/roblox-educators.md
 content/en-us/reference/cloud/openapi.json
+content/en-us/cloud/legacy/friends/v1.json
+content/en-us/cloud/legacy/gameinternationalization/v1.json
+content/en-us/cloud/legacy/games/v1.json
+content/en-us/cloud/legacy/groups/v1.json
+content/en-us/cloud/legacy/twostepverification/v1.json
+content/en-us/reference/engine/datatypes/BrickColor.yaml
