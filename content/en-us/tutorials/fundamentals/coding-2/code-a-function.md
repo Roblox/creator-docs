@@ -51,7 +51,7 @@ end
 ```
 
 <Alert severity="warning">
-Type end yourself if the code doesn't autocomplete for some reason. If the function doesn't have an end, your code won't run.
+Type `end` yourself if the code doesn't autocomplete for some reason. If the function doesn't have an `end`, your code won't run.
 </Alert>
 
 ### Add code to functions
@@ -82,7 +82,7 @@ As you typed, your code should have indented automatically. This makes it easier
 
 ### Tell the function to run
 
-There's one more thing we need to do before the function will work, and that's to tell it to run, also known as **calling** a function. Functions won't run until they are called. To call a function, type the function's name including the `()` at the end.
+There's one more thing we need to do before the function will work, and that's to tell it to run, also known as **calling** a function. Functions won't run until they are called. To call a function, type the function's name including the `()`.
 
 1. Under `end`, type `printFood()`.
 
@@ -94,7 +94,7 @@ There's one more thing we need to do before the function will work, and that's t
    printFood()
    ```
 
-2. Test the code. Your favorite food should appear in the Output window.
+2. Test the code. Your favorite food should appear in the [Output](../../../studio/output.md) window.
 
    <img src="../../../assets/education/coding-2/output-function-example.png" width="70%" />
 
@@ -103,5 +103,5 @@ There's one more thing we need to do before the function will work, and that's t
 If your code doesn't run, check for errors such as the following:
 
 - Check that `print("Your Food Here")` is between `local function printFood()` and `end`.
-- Make that your food is a string, with quotations on `"each side"`.
+- Make sure that your food is a string, with quotations on `"each side"`.
 - Check that the function is called after it's been created. `printFood()` should be below `end`.

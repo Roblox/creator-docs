@@ -227,8 +227,8 @@ properties:
       A reference to the root part of the assembly.
     description: |
       This property indicates the `Class.BasePart` automatically chosen to
-      represent the assembly's root part. It is the same part that's returned
-      when developers call `Class.BasePart:GetRootPart()|GetRootPart()`.
+      represent the assembly's root part. If the part is not parented to the `Class.Workspace`,
+      this property will be `nil`.
 
       The root part can be changed by changing the
       `Class.BasePart.RootPriority|RootPriority` of the parts in the assembly.
