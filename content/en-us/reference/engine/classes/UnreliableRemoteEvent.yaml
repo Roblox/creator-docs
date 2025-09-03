@@ -22,27 +22,34 @@ description: |
   can see it, such as `Class.ReplicatedStorage`, although in some cases it's
   appropriate to store it in `Class.Workspace` or inside a `Class.Tool`.
 
-  `Class.UnreliableRemoteEvent` is best used for ephemeral events including
+  `Class.UnreliableRemoteEvent` is best used for ephemeral events, including
   effects that are only relevant for a short time, or for replicating
   continuously changing data. These events are not resent if they are lost and
   they do not wait for previously fired events to arrive before being processed,
-  potentially resulting in reduced latency and network traffic. When requiring
+  potentially resulting in reduced latency and network traffic. When you need
   ordering and reliability, use a `Class.RemoteEvent` instead.
+
+  If no connected listener exists to handle an event, you might see a
+  `Remote event invocation discarded` error in the log to indicate that the
+  event was discarded and that you need to implement either `OnClientEvent` or
+  `OnServerEvent`.
 
   #### Parameter Limitations
 
-  Any type of Roblox object such as an `Datatype.Enum`, `Class.Instance`, or
-  others can be passed as a parameter when a `Class.UnreliableRemoteEvent` is
-  fired, as well as Luau types such as numbers, strings, and booleans, although
-  you should carefully explore the
+  Any type of Roblox object (`Datatype.Enum`, `Class.Instance`, etc.) can be
+  passed as a parameter when an `Class.UnreliableRemoteEvent` is fired, as well
+  as Luau types such as numbers, strings, and booleans, although you should
+  carefully explore the
   [limitations](../../../scripting/events/remote.md#argument-limitations).
 
-  There is a 1000 byte limit to the payload of an `Class.UnreliableRemoteEvent`.
-  Larger payloads are dropped. Like all events, the
-  `Class.UnreliableRemoteEvent` methods encode and compress certain object
-  types, such as buffers, which shrinks the payload size and can make it
-  difficult to verify whether you are under the limit prior to firing the event.
-  If you frequently reach this limit, consider whether a standard
+  Events with payloads larger than 1000 bytes are dropped. When this happens in
+  Studio, a log message in the [Output](../../../studio/output.md) window
+  indicates the number of bytes the event went over.
+
+  Like all events, the `Class.UnreliableRemoteEvent` methods encode and compress
+  certain object types, such as buffers, which shrinks the payload size and can
+  make it difficult to verify whether you are under the limit prior to firing
+  the event. If you frequently reach this limit, consider whether a standard
   `Class.RemoteEvent` is the better fit for your use case.
 code_samples: []
 inherits:
@@ -54,28 +61,15 @@ methods:
   - name: UnreliableRemoteEvent:FireAllClients
     summary: |
       Fires the `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` event
-      for each client connected to the same `Class.UnreliableRemoteEvent`. Has a
-      1000 byte limit to the payload of the event. Otherwise, the event is
-      dropped.
+      for all connected clients. Has a 1000 byte limit to the payload of the
+      event. Events with larger payloads are dropped.
     description: |
       Fires the `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` event
-      for each client connected to the same `Class.UnreliableRemoteEvent`.
-      Unlike `Class.UnreliableRemoteEvent:FireClient()|FireClient()`, this event
-      does not take a target `Class.Player` as the first argument, since it
-      fires to multiple clients. Since this method is used to communicate from
-      the server to clients, it will only work when used in a `Class.Script`.
-
-      Any type of Roblox object such as an `Datatype.Enum`, `Class.Instance`, or
-      others can be passed as a parameter to
-      `Class.UnreliableRemoteEvent:FireAllClients()|FireAllClients()`, as well
-      as Luau types such as numbers, strings, and booleans, although you should
-      carefully explore the
-      [limitations](../../../scripting/events/remote.md#argument-limitations).
-
-      Events with payloads larger than 1000 bytes will be dropped. When this
-      happens in Studio, a log message in the
-      [Output](../../../studio/output.md) window will indicate by how many bytes
-      the event has gone over.
+      for all connected clients. Unlike
+      `Class.UnreliableRemoteEvent:FireClient()|FireClient()`, this event does
+      not take a target `Class.Player` as the first argument, since it fires to
+      multiple clients. Since this method is used to communicate from the server
+      to clients, it only works when used in a `Class.Script`.
     code_samples: []
     parameters:
       - name: arguments
@@ -97,30 +91,13 @@ methods:
   - name: UnreliableRemoteEvent:FireClient
     summary: |
       Fires the `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` event
-      for a specific client connected to the same `Class.UnreliableRemoteEvent`.
-      Has a 1000 byte limit to the payload of the event. Otherwise, the event is
-      dropped.
+      for a specific client. Has a 1000 byte limit to the payload of the event.
+      Events with larger payloads are dropped.
     description: |
       Fires the `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` event
-      for one connected client specified by the required `Class.Player`
-      argument. Since this method is used to communicate from the server to a
-      client, it will only work when used in a `Class.Script`.
-
-      Any type of Roblox object such as an `Datatype.Enum`, `Class.Instance`, or
-      others can be passed as a parameter to
-      `Class.UnreliableRemoteEvent:FireClient()|FireClient()`, as well as Luau
-      types such as numbers, strings, and booleans, although you should
-      carefully explore the
-      [limitations](../../../scripting/events/remote.md#argument-limitations).
-
-      Events with payloads larger than 1000 bytes will be dropped. When this
-      happens in Studio, a log message in the
-      [Output](../../../studio/output.md) window will indicate by how many bytes
-      the event has gone over.
-
-      See also `Class.UnreliableRemoteEvent:FireAllClients()|FireAllClients()`
-      which works similarly but fires the event for each client connected to the
-      same `Class.UnreliableRemoteEvent`.
+      for the specific client in the required `Class.Player` argument. Since
+      this method is used to communicate from the server to a client, it only
+      works when used in a `Class.Script`.
     code_samples: []
     parameters:
       - name: player
@@ -147,27 +124,14 @@ methods:
   - name: UnreliableRemoteEvent:FireServer
     summary: |
       Fires the `Class.UnreliableRemoteEvent.OnServerEvent|OnServerEvent` event
-      on the server from one client connected to the same
-      `Class.UnreliableRemoteEvent`. Has a 1000 byte limit to the payload of the
-      event, otherwise event is dropped.
+      on the server from one connected client. Has a 1000 byte limit to the
+      payload of the event. Events with larger payloads are dropped.
     description: |
       Fires the `Class.UnreliableRemoteEvent.OnServerEvent|OnServerEvent` event
-      on the server from one client. Connected events receive the `Class.Player`
-      argument of the firing client. Since this method is used to communicate
-      from a client to the server, it will only work when used in a
-      `Class.LocalScript`.
-
-      Any type of Roblox object such as an `Datatype.Enum`, `Class.Instance`, or
-      others can be passed as a parameter to
-      `Class.UnreliableRemoteEvent:FireServer()|FireServer()`, as well as Luau
-      types such as numbers, strings, and booleans, although you should
-      carefully explore the
-      [limitations](../../../scripting/events/remote.md#argument-limitations).
-
-      Events with payloads larger than 1000 bytes will be dropped. When this
-      happens in Studio, a log message in the
-      [Output](../../../studio/output.md) window will indicate by how many bytes
-      the event has gone over.
+      on the server from one connected client. Connected events receive the
+      `Class.Player` argument of the firing client. Since this method is used to
+      communicate from a client to the server, it only works when used in a
+      client script.
     code_samples: []
     parameters:
       - name: arguments

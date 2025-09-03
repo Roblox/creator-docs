@@ -194,8 +194,9 @@ methods:
       added to the `Class.PlayerGui`. Inside the ScreenGui is a `Class.Frame`
       called "ContextButtonFrame" is added. It is in this frame in which
       `Class.ImageButton|ImageButtons` for bound actions are parented; you can
-      use `Class.ContextActionService:GetButton()|GetButton` to retrieve such
-      buttons for customization.
+      use `Class.ContextActionService:GetButton()|GetButton()` to retrieve such
+      buttons for customization. A maximum of 7 touch buttons can be created
+      through `Class.ContextActionService:BindAction()|BindAction()`.
     code_samples:
       - ContextActionService-Tool-Reload
       - General-Action-Handler

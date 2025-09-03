@@ -163,7 +163,8 @@ properties:
     description: ''
     code_samples: []
     type: FloatCurve
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security:
       read: RobloxScriptSecurity

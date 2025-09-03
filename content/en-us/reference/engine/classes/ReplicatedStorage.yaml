@@ -14,10 +14,14 @@ description: |
   objects that are useful to both server-side `Class.Script|Scripts` and
   client-side `Class.LocalScript|LocalScripts`.
 
-  Objects parented to this service are fully replicated to clients and normal
+  Objects parented to this service are fully replicated to clients, and normal
   replication rules apply. Any changes that are made on the client persist but
-  won't be replicated to the server, and client changes may be overwritten if
-  the server does something that overwrites those changes.
+  aren't replicated to the server. Client changes may be overwritten if the
+  server does something that overwrites those changes.
+
+  Certain changes on the client, such as moving an object from the
+  `Class.Workspace` to `Class.ReplicatedStorage`, can lead to desynchronization
+  issues (for example, physics updates not being replicated to the object).
 
   `Class.LocalScript|LocalScripts` do not run when parented to this service,
   even if they are `Class.BaseScript.Enabled|Enabled`;
