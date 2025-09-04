@@ -5,14 +5,13 @@
 name: Attachment
 type: class
 memory_category: Instances
-summary: |
-  Defines a point and orientation relative to a parent `Class.BasePart`,
+summary: |-
+  Defines a point and orientation relative to an ancestor `Class.PVInstance`,
   `Class.Bone`, or another `Class.Attachment`.
-description: |
-  An `Attachment` defines a point and orientation relative to a parent
-  `Class.BasePart`, `Class.Bone`, or another `Attachment`. The offset is stored
-  in the `Class.Attachment.CFrame|CFrame` property. The offset can also be set
-  through other properties, such as `Class.Attachment.WorldCFrame|WorldCFrame`.
+description: |-
+  An `Attachment` defines a point and orientation relative to an ancestor `Class.PVInstance`, `Class.Bone`, or another `Attachment`. The offset is stored in the `Class.Attachment.CFrame|CFrame` property. The offset can also be set through other properties, such as `Class.Attachment.WorldCFrame|WorldCFrame`.
+
+  If no ancestral `Class.PVInstance` or `Class.Attachment` exists, then `Class.Attachment.CFrame|CFrame` and `Class.Attachment.WorldCFrame|WorldCFrame` are the same.
 
   Attachments are used by several kinds of `Class.Constraint|Constraints` and
   are also valid alternatives to `Class.BasePart` as a parent for objects such
@@ -21,11 +20,13 @@ description: |
   - `Class.ParticleEmitter|ParticleEmitters` which will emit particles from the
     attachment's specific position/orientation instead of the `Class.BasePart`
     bounds.
+
   - Light-emitting objects like `Class.PointLight` and `Class.SpotLight` which
     will shine from the attachment's position/orientation instead of the
     `Class.BasePart` center.
-  - `Class.Sound` which will use the attachment's position as the sound's focal
-    point, instead of the `Class.BasePart` center.
+
+  - `Class.AudioEmitter` which will use the attachment's position as the audio's
+    point of emission.
 code_samples: []
 inherits:
   - Instance
@@ -33,10 +34,10 @@ tags: []
 deprecation_message: ''
 properties:
   - name: Attachment.Axis
-    summary: |
+    summary: |-
       Direction of the **X** axis of the attachment, represented as a unit
       `Datatype.Vector3`.
-    description: |
+    description: |-
       Direction of the **X** axis of the attachment, represented as a unit
       `Datatype.Vector3`.
     code_samples: []
@@ -55,9 +56,8 @@ properties:
     capabilities:
       - Basic
   - name: Attachment.CFrame
-    summary: |
-      `Datatype.CFrame` offset of the attachment.
-    description: |
+    summary: '`Datatype.CFrame` offset of the attachment.'
+    description: |-
       The `Datatype.CFrame` offset of the attachment. Changes to this property
       will reflect onto the `Class.Attachment.Position|Position` and
       `Class.Attachment.Rotation|Rotation` properties of this object. Similarly,
@@ -77,9 +77,8 @@ properties:
     capabilities:
       - Basic
   - name: Attachment.Orientation
-    summary: |
-      Orientation of the attachment relative to the orientation of its parent.
-    description: |
+    summary: Orientation of the attachment relative to the orientation of its parent.
+    description: |-
       Orientation of the attachment relative to the orientation of its parent.
       Rotations are in **Z**,&nbsp;**X**,&nbsp;**Y** order.
     code_samples: []
@@ -99,10 +98,10 @@ properties:
     capabilities:
       - Basic
   - name: Attachment.Position
-    summary: |
+    summary: |-
       Positional offset of the attachment, relative to the position and
       orientation of its parent.
-    description: |
+    description: |-
       Positional offset of the attachment, relative to the position and
       orientation of its parent.
     code_samples: []
@@ -122,9 +121,8 @@ properties:
     capabilities:
       - Basic
   - name: Attachment.Rotation
-    summary: |
-      Rotation of the attachment relative to the rotation of its parent.
-    description: |
+    summary: Rotation of the attachment relative to the rotation of its parent.
+    description: |-
       Rotation of the attachment relative to the rotation of its parent.
       Rotations are in **Z**,&nbsp;**Y**,&nbsp;**X** order.
     code_samples: []
@@ -133,7 +131,7 @@ properties:
       - Hidden
       - NotReplicated
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This property is deprecated and should not be used in new work. See
       `Class.Attachment.Orientation|Orientation` instead.
     security:
@@ -147,10 +145,10 @@ properties:
     capabilities:
       - Basic
   - name: Attachment.SecondaryAxis
-    summary: |
+    summary: |-
       Direction of the **Y** axis of the attachment, represented as a unit
       `Datatype.Vector3`.
-    description: |
+    description: |-
       Direction of the **Y** axis of the attachment, represented as a unit
       `Datatype.Vector3`.
     code_samples: []
@@ -169,10 +167,8 @@ properties:
     capabilities:
       - Basic
   - name: Attachment.Visible
-    summary: |
-      Toggles the in-experience visibility of the attachment.
-    description: |
-      Toggles the in-experience visibility of the attachment.
+    summary: Toggles the in-experience visibility of the attachment.
+    description: Toggles the in-experience visibility of the attachment.
     code_samples: []
     type: boolean
     tags: []
@@ -188,10 +184,10 @@ properties:
     capabilities:
       - Basic
   - name: Attachment.WorldAxis
-    summary: |
+    summary: |-
       Direction of the **X** axis of the attachment relative to the world,
       represented as a unit `Datatype.Vector3` with a length of 1.
-    description: |
+    description: |-
       Direction of the **X** axis of the attachment relative to the world,
       represented as a unit `Datatype.Vector3` with a length of 1.
     code_samples: []
@@ -210,9 +206,8 @@ properties:
     capabilities:
       - Basic
   - name: Attachment.WorldCFrame
-    summary: |
-      The exact `Datatype.CFrame` of the attachment in world space coordinates.
-    description: |
+    summary: The exact `Datatype.CFrame` of the attachment in world space coordinates.
+    description: |-
       The exact `Datatype.CFrame` of the attachment in world space coordinates,
       independent of its parent. The value of this property is equivalent to
       multiplying the `Datatype.CFrame` of the attachment's parent by its own
@@ -233,10 +228,10 @@ properties:
     capabilities:
       - Basic
   - name: Attachment.WorldOrientation
-    summary: |
+    summary: |-
       Orientation of the attachment relative to the world rather than its own
       parent.
-    description: |
+    description: |-
       Orientation of the attachment relative to the world rather than its own
       parent. Rotations are in **Z**,&nbsp;**X**,&nbsp;**Y** order.
     code_samples: []
@@ -256,10 +251,10 @@ properties:
     capabilities:
       - Basic
   - name: Attachment.WorldPosition
-    summary: |
+    summary: |-
       Position of the attachment relative to the world rather than its own
       parent.
-    description: |
+    description: |-
       Position of the attachment relative to the world rather than its own
       parent.
     code_samples: []
@@ -279,10 +274,10 @@ properties:
     capabilities:
       - Basic
   - name: Attachment.WorldRotation
-    summary: |
+    summary: |-
       Rotation of the attachment relative to the world rather than its own
       parent.
-    description: |
+    description: |-
       Rotation of the attachment relative to the world rather than its own
       parent.
     code_samples: []
@@ -292,7 +287,7 @@ properties:
       - ReadOnly
       - NotReplicated
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This item has been superseded by
       `Class.Attachment.WorldOrientation|WorldOrientation` which should be used
       in new work.
@@ -307,10 +302,10 @@ properties:
     capabilities:
       - Basic
   - name: Attachment.WorldSecondaryAxis
-    summary: |
+    summary: |-
       Direction of the **Y** axis of the attachment relative to the world,
       represented as a unit `Datatype.Vector3` with a length of 1.
-    description: |
+    description: |-
       Direction of the **Y** axis of the attachment relative to the world,
       represented as a unit `Datatype.Vector3` with a length of 1.
     code_samples: []
@@ -330,10 +325,8 @@ properties:
       - Basic
 methods:
   - name: Attachment:GetAxis
-    summary: |
-      Returns the value of the attachment's `Class.Attachment.Axis|Axis`.
-    description: |
-      Returns the value of the attachment's `Class.Attachment.Axis|Axis`.
+    summary: Returns the value of the attachment's `Class.Attachment.Axis|Axis`.
+    description: Returns the value of the attachment's `Class.Attachment.Axis|Axis`.
     code_samples: []
     parameters: []
     returns:
@@ -341,17 +334,16 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
-      This method is deprecated and should not be used in new work.
+    deprecation_message: This method is deprecated and should not be used in new work.
     security: None
     thread_safety: Unsafe
     capabilities:
       - Basic
   - name: Attachment:GetConstraints
-    summary: |
+    summary: |-
       Returns a list of `Class.Constraint|Constraints` connected to the
       attachment.
-    description: |
+    description: |-
       Returns a list of `Class.Constraint|Constraints` connected to the
       attachment.
     code_samples: []
@@ -366,10 +358,10 @@ methods:
     capabilities:
       - Basic
   - name: Attachment:GetSecondaryAxis
-    summary: |
+    summary: |-
       Returns the value of the attachment's
       `Class.Attachment.SecondaryAxis|SecondaryAxis`.
-    description: |
+    description: |-
       Returns the value of the attachment's
       `Class.Attachment.SecondaryAxis|SecondaryAxis`.
     code_samples: []
@@ -379,17 +371,14 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
-      This method is deprecated and should not be used in new work.
+    deprecation_message: This method is deprecated and should not be used in new work.
     security: None
     thread_safety: Unsafe
     capabilities:
       - Basic
   - name: Attachment:SetAxis
-    summary: |
-      Sets the value of the attachment's `Class.Attachment.Axis|Axis`.
-    description: |
-      Sets the value of the attachment's `Class.Attachment.Axis|Axis`.
+    summary: Sets the value of the attachment's `Class.Attachment.Axis|Axis`.
+    description: Sets the value of the attachment's `Class.Attachment.Axis|Axis`.
     code_samples: []
     parameters:
       - name: axis
@@ -401,17 +390,16 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
-      This method is deprecated and should not be used in new work.
+    deprecation_message: This method is deprecated and should not be used in new work.
     security: None
     thread_safety: Unsafe
     capabilities:
       - Basic
   - name: Attachment:SetSecondaryAxis
-    summary: |
+    summary: |-
       Sets the value of the attachment's
       `Class.Attachment.SecondaryAxis|SecondaryAxis`.
-    description: |
+    description: |-
       Sets the value of the attachment's
       `Class.Attachment.SecondaryAxis|SecondaryAxis`.
     code_samples: []
@@ -425,8 +413,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
-      This method is deprecated and should not be used in new work.
+    deprecation_message: This method is deprecated and should not be used in new work.
     security: None
     thread_safety: Unsafe
     capabilities:

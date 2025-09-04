@@ -110,10 +110,6 @@ The **Body** tab contains settings for body proportions, parts, scale.
 
 ## Clothing
 
-<Alert severity = 'warning'>
-At this time, there is a bug impacting clothing controls. For current status, see the [DevForum announcement](https://devforum.roblox.com/t/introducing-avatar-settings-more-control-for-developers-better-expression-for-players/).
-</Alert>
-
 The **Clothing** tab contains controls for layered and classic clothing.
 
 <table>

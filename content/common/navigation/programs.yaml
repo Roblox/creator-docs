@@ -8,6 +8,8 @@ navigation:
     path: /creator-programs/brand-developer-directory
   - title: Community Feedback
     path: /creator-programs/feedback
+  - title: Community Safety Council
+    path: /creator-programs/safety-council
   - title: Creator Events
     path: /creator-programs/creator-events
   - title: Creator Fund
