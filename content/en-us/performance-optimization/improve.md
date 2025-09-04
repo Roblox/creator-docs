@@ -120,10 +120,9 @@ To clean up all used values for preventing memory leaks:
   - Destroying the instance the event belongs to with the `Destroy()` function.
   - Destroying the script object that the connection traces back to.
 
-- **Remove player objects and characters after leaving** - Implement code to
-  ensure no connections persist after a user leaves, like in the following example:
+- **Remove player objects and characters after leaving** - Enable `Class.Workspace.PlayerCharacterDestroyBehavior` to automatically destroy player objects and character models after a user leaves. If you prefer, you can instead clean them up manually:
 
-   ```lua title="Example"
+   ```lua title="Example player and character cleanup"
    Players.PlayerAdded:Connect(function(player)
      player.CharacterRemoving:Connect(function(character)
        task.defer(character.Destroy, character)

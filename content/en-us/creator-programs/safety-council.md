@@ -34,7 +34,7 @@ Yes, applications will be open twice a year. We will update the status of the pr
 
 ### How many people will be on the Council?
 
-Our plan is to start with 12 - but this is a new program, and depending on the volume and quality of applications, we may choose to expand.
+Our plan is to start with 20 - but this is a new program, and depending on the volume and quality of applications, we may choose to expand.
 
 ### Can I be on the Council more than once?
 
