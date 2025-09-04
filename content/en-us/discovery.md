@@ -14,9 +14,15 @@ On Home, our **Recommended for You** algorithm decides what experiences to show 
 
 Recommended for You is designed to personalize content, connecting users with experiences that foster deep engagement, social interaction, and repeat play.
 
-**Retrieval (stage 1)**: Roblox selects a subset of experiences that each user might enjoy playing based on signals like engagement, retention, monetization, connection plays, similar experiences, and variety.
+**Retrieval (stage 1)**: Roblox has millions of experiences, and we need a way to figure out which ones to show to a particular user, personalized to them. Our system selects a subset of experiences that each user might enjoy playing based on signals like engagement, retention, monetization, and friend plays.
 
-**Ranking (stage 2)**: Roblox ranks the selected experiences based on 6 key signals:
+Engagement signals from sponsored ads, search, charts, friends, teleport, notifications, and other social media sharing can accelerate your consideration for organic distribution. Experiences that have even a small number of people playing can signal to our system that the experience is worth distributing to more users who might find the game enjoyable through Recommended for You.
+
+**Ranking (stage 2)**: The ranking stage takes the input from the retrieval stage and selects the most relevant experiences to be ranked in a personalized way and shown to each user. There is also some exploration besides the relevancy ranking to users. How far your game goes and how much organic distribution it gets depends entirely on the engagement of users who come through Recommended for You.
+
+We do not count the engagement or monetization of users first acquired from ads, friends, or social media in the ranking stage of Recommended for You.
+
+Roblox ranks the selected experiences based on the following 6 key signals of users acquired from Recommended for You:
 
 <table>
 <thead>
@@ -57,11 +63,20 @@ When all of these signals improve together in an experience, the recommendation 
 
 Roblox's recommendation system uses **explore and expand** phases to understand the 6 key signals. For example, you might see a spike in new users from recommendations (explore) after a content update. If that new user cohort has good engagement and monetization, Roblox is more likely to continue to recommend your experience to those user cohorts (expand).
 
-[Sponsored ads](./production/promotion/ads-manager.md) can amplify the discovery of your experience. By attracting new and relevant users to your experience, ads help the Recommended for You algorithm learn which types of users are more likely to engage with and enjoy your content. To understand how your ad campaigns are influencing organic growth, review your [acquisition analytics](./production/analytics/acquisition.md) to track trends in both paid and organic traffic.
+## Understand your metrics in Creator Analytics
 
-<img src="./assets/analytics/discovery/Explore-And-Expand-Graph.png" alt="An analytic Plays Per Source graph indicating new and returning users." />
+When distribution increases, you settle into a new baseline. As a result of Home Recommendations surfacing your experience to a wider set of users, some of those users might like your experience a lot, but not all of them will be super fans from day one.
 
-For a detailed overview, see our [discovery vision post](https://devforum.roblox.com/t/discovery-on-roblox-past-present-and-future-vision/2859111) and [RDC talk](https://www.youtube-nocookie.com/embed/V1uFFUUCLpo).
+You can expect an increase in impressions and plays in the Home Recommendation tab of the Creator Analytics dashboard. As the algorithm explores which users might be best suited for your experience, you might see some fluctuations in the six signals of users acquired from Recommended for You before you settle into a new baseline. This is a result of engagement from users who discover you in the Recommended for You sort only.
+
+The behavior of users you get from ads, Home Recommendations, and other sources can vary. It's natural for your play-through rate, playtime, and retention to differ by source, and for these to change as you and other experiences on Roblox grow.
+
+For example:
+
+- Experience A is an established game, acquiring an average of 10 thousand daily players on 25 thousand impressions from Home Recommendations.
+- By running ads, Experience A acquires an additional 5 thousand daily players from Sponsored sort, from 20 thousand impressions.
+- Experience A is now acquiring an average of 15 thousand daily players to their experience. This extends the reach of the game, while also increasing earning potential.
+- As long as the behavior of the 10 thousand daily players from Home Recommendations does not change, the experience will continue to get around the same traffic from Home Recommendations (excluding external factors like seasonality or newly popular games).
 
 ## Use Home Recommendations analytics to grow your experience
 
@@ -81,7 +96,9 @@ Keep in mind that changes to your recommendation signals usually show up in impr
 
 <img src="./assets/analytics/discovery/Qualified-Play-Through-Impressions.png" alt="A graph of qualified play through rate impressions." />
 
-It's also important to identify recommendation signals that are below benchmark as areas of opportunity. Benchmarks **do not** directly impact the recommendation algorithm, but are meant to provide you with a point of comparison.
+It's also important to identify recommendation signals that are below benchmark as areas of opportunity. Benchmarks **do not** impact the recommendation algorithm, but are meant to provide you with a point of comparison.
+
+Benchmark metrics come from experiences that are shown on the dashboard below these charts. If you believe these experiences might not be the right benchmark for your experience, use the information only as a rough guideline.
 
 In the following charts, the 7 day playtime and 7 day play days are both below benchmark. In this case, you might want to consider improving your [onboarding funnel](./production/analytics/funnel-events.md) to encourage users to visit your experience more often.
 
