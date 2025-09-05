@@ -49,14 +49,14 @@ navigation:
     path: /cloud/features/bans-and-blocks
   - title: Chats
     path: /cloud/features/chats
+  - title: Connections
+    path: /cloud/features/friends
   - title: Creator Store
     path: /cloud/features/creator-store
   - title: Data and memory stores
     path: /cloud/features/storage
   - title: Developer products
     path: /cloud/features/developer-products
-  - title: Connections
-    path: /cloud/features/friends
   - title: Game passes
     path: /cloud/features/game-passes
   - title: Generative AI

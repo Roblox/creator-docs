@@ -92,7 +92,7 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "universe.secretwrite",
+            "name": "universe.secret:write",
             "description": "Required"
           }
         ],
@@ -187,7 +187,7 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "universe.secretread",
+            "name": "universe.secret:read",
             "description": "Required"
           }
         ],
@@ -310,7 +310,7 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "universe.secretwrite",
+            "name": "universe.secret:write",
             "description": "Required"
           }
         ],
@@ -399,7 +399,7 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "universe.secretwrite",
+            "name": "universe.secret:write",
             "description": "Required"
           }
         ],
@@ -478,7 +478,7 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "universe.secretread",
+            "name": "universe.secret:read",
             "description": "Required"
           }
         ],
@@ -615,8 +615,8 @@
             "tokenUrl": "https://apis.roblox.com/oauth/v1/token",
             "refreshUrl": "https://apis.roblox.com/oauth/v1/token",
             "scopes": {
-              "universe.secretwrite": "universe.secretwrite",
-              "universe.secretread": "universe.secretread"
+              "universe.secret:write": "universe.secret:write",
+              "universe.secret:read": "universe.secret:read"
             }
           }
         }

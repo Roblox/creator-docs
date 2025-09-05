@@ -115,7 +115,7 @@ If your experience contains violence, you must specify the violence's maximum le
   </tr>
   <tr>
     <td>**Moderate**</td>
-    <td>Non-graphic, realistic-looking depictions of violence and/or death that don’t violate Roblox Community Standards, such as realistic depictions of real-life injuries.</td>
+    <td>Non-graphic, realistic-looking depictions of violence and/or death that don't violate Roblox Community Standards, such as realistic depictions of real-life injuries.</td>
   </tr>
   <tr>
     <td>**Restricted**</td>
@@ -437,7 +437,7 @@ You do **not** need to report virtual items that you provide in exchange for pla
 
 If your experience contains paid random items, it's recommended to take the mandatory precautions to protect players in certain regions that don't allow paid random items so that they can still access your experience. To check when these precautions are necessary, use `Class.PolicyService.GetPolicyInfoForPlayerAsync` to return a dictionary of values that determine whether certain aspects of the experience need to change for that unique player.
 
-One entry within the policy information is `ArePaidRandomItemsRestricted`, a boolean that represents whether a player is eligible to pay for random items. Random items can remain purchaseable if `ArePaidRandomItemsRestricted` returns false, but if `ArePaidRandomItemsRestricted` returns true, include additional logic to hide, replace, or block the purchase of random items for those players so that your experience is available to the largest audience as possible.
+One entry within the policy information is `ArePaidRandomItemsRestricted`, a boolean that represents whether a player is eligible to pay for random items. Random items can remain purchasable if `ArePaidRandomItemsRestricted` returns false, but if `ArePaidRandomItemsRestricted` returns true, include additional logic to hide, replace, or block the purchase of random items for those players so that your experience is available to the largest audience as possible.
 
 ### Paid item trading
 
@@ -450,6 +450,37 @@ Paid item trading is the ability for players to purchase virtual items that they
 If your experience contains paid item trading, it's recommended to take the mandatory precautions to protect players in certain regions that don't allow paid item trading so that they can still access your experience. To check when these precautions are necessary, use `Class.PolicyService.GetPolicyInfoForPlayerAsync` to return a dictionary of values that determine whether certain aspects of the experience need to change for that unique player.
 
 One entry within the policy information is `IsPaidItemTradingAllowed`, a boolean that represents whether a player is eligible to trade paid items. Paid items can remain tradeable if `IsPaidItemTradingAllowed` returns true, but if `IsPaidItemTradingAllowed` returns false, include additional logic to hide, replace, or block the trading of paid items for those players so that your experience is available to the largest audience as possible.
+
+### Media
+
+**Question 1: Does your experience allow users to share media content (videos, images, text, audio, 3D models) from their gameplay that other users can see?**
+
+This question only applies if your experience lets users share gameplay content using tools built into the experience itself.
+
+**Question 2: Does your experience contain content feeds with continuous loading or audio/video that plays automatically?**
+
+**Continuous loading** means that content loads automatically as the user scrolls, without requiring any specific user interaction (such as a manual "load more" button or pagination).
+
+**Question 3: Does your experience allow users to view content that was captured from other experiences on Roblox?**
+
+This question applies to any in-experience viewing functionality, such as a `Class.SurfaceGui` for static images, a `Class.VideoFrame`, or an asset viewer.
+
+### AI interaction
+
+**Question 1: Does your experience allow users to interact with generative AI components?**
+
+This question includes experiences in which a user can interact with a generative AI model in any way that triggers a response from the model. These interactions can include text chat, voice chat, images, 3D generations, avatar movement, etc.
+
+Your answer to this question should **not** consider whether you used generative AI to help develop the experience, only whether users can interact with it in the experience.
+
+**Question 2: What type of interactions does your experience allow between users and a generative AI model?**
+
+**Extended interactions** meet at least one of the following criteria:
+
+- Cross-session memory is enabled. The experience saves the context of a user's prior interactions with AI and loads it on subsequent sessions.
+- The experience's main purpose is to interact with a generative AI bot or character. Users can interact with the AI continuously with no time limit.
+
+Experiences that do not meet at least one of these criteria are considered **limited interactions**.
 
 ## Content maturity moderation
 
