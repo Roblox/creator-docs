@@ -18,7 +18,7 @@ export const scaleStats = [
 export const sections = [
 
   {
-    title: "All the tools you need, for free",
+    title: "ah~",
     description: "Roblox simplifies creation by providing free tools, hosting, and infrastructure that power automatic, synchronous real-time gameplay as well as covering storage, localization, and payment processing.",
     content: [
       {
