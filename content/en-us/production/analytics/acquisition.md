@@ -43,8 +43,8 @@ Here's a list of all the available acquisition sources:
     <td>**Continue Play** on **Home**</td>
   </tr>
   <tr>
-    <td>Curation</td>
-    <td>**Today's Picks** and **Roblox Events** on **Home**</td>
+    <td>Today's Picks</td>
+    <td>**Today's Picks** on **Home**</td>
   </tr>
   <tr>
     <td>Home other</td>
