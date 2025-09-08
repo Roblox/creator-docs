@@ -9,36 +9,38 @@ Assemblies can be connected together with [mechanical constraints](../physics/me
 
 ## Sleep states
 
-Each assembly can be in one of three states: [awake](#awake), [sleep‑checking](#sleep-checking), or [sleeping](#sleeping).
+Each assembly can be in one of three states: [awake](#awake), [sleeping](#sleeping), or [sleep‑checking](#sleep-checking).
 
 ### Awake
 
-An **awake** assembly is moving or accelerating, and is therefore simulated. Assemblies enter this state from situations outlined in [sleep‑checking](#sleep-checking) and [sleeping](#sleeping), as well as [additional wake situations](#additional-wake-situations).
-
-### Sleep-checking
-
-A non-moving assembly that shares a constraint with at least one [awake](#awake) neighboring assembly is put into the **sleep-checking** state and is not simulated. On each worldstep, a sleep-checking assembly checks whether:
-
-- The **position deviation** of a neighboring assembly is greater than the [Neighbor&nbsp;Displacement](#threshold-reference) threshold.
-- The product of a neighboring assembly's **acceleration** and current timestep size is greater than the [Neighbor&nbsp;Angular&nbsp;Velocity](#threshold-reference) and/or [Neighbor&nbsp;Linear&nbsp;Velocity](#threshold-reference) threshold.
-
-If either of these conditions is true, or under any of the [additional wake situations](#additional-wake-situations), the sleep-checking assembly enters the [awake](#awake) state.
+An **awake** assembly is moving or accelerating, and is therefore simulated. Assemblies enter this state from situations outlined in [sleeping](#sleeping) and [sleep‑checking](#sleep-checking), as well as [additional wake situations](#additional-wake-situations).
 
 ### Sleeping
 
 A **sleeping** assembly is neither moving nor accelerating, and is therefore not simulated.
 
-An assembly is determined to be non-moving by checking its **position deviation**, calculated as the maximum deviation from the average position of the point furthest from its center of mass over the most recent set of worldsteps. If this deviation is greater than the [Displacement](#threshold-reference) threshold, the assembly enters the [awake](#awake) state.
+An assembly is determined to be non-moving by checking its **linear velocity** and **rotational velocity**. If its linear velocity is less than the [Linear&nbsp;Velocity](#threshold-reference) threshold and its rotational velocity is less than the [Rotational&nbsp;Velocity](#threshold-reference) threshold, the assembly is considered to be non-moving.
 
-In some cases, simply checking for non-movement would cause an assembly to incorrectly enter the sleeping state. For example, if a ball is thrown straight up, its position barely changes for a number of worldsteps as it approaches its maximum height, making it a candidate to sleep and never fall back down. To handle such cases, the engine monitors whether the product of the assembly's acceleration and current timestep size exceeds the [Linear&nbsp;Velocity](#threshold-reference) and/or [Angular&nbsp;Velocity](#threshold-reference) threshold.
+In some cases, simply checking for non-movement would cause an assembly to incorrectly enter the sleeping state. For example, if a ball is thrown straight up, its velocity approaches zero as it reaches its maximum height, making it a candidate to sleep and never fall back down. To handle such cases, the engine considers an assembly to be accelerating if its **linear acceleration** or **rotational acceleration** are greater than the [Linear&nbsp;Acceleration](#threshold-reference) and [Rotational&nbsp;Acceleration](#threshold-reference) thresholds, respectively, and will prevent the assembly from falling asleep.
 
 <Alert severity="info">
 If an assembly falls asleep when you expect it to remain awake, it's commonly because the assembly is moving too slowly. In addition to automatic checks outlined in [sleep‑checking](#sleep-checking) and [sleeping](#sleeping), you can forcibly wake up an assembly through the conditions outlined in [additional wake situations](#additional-wake-situations).
 </Alert>
 
+### Sleep-checking
+
+A non-moving assembly that shares a constraint with at least one [awake](#awake) neighboring assembly is put into the **sleep-checking** state and is not simulated. On each worldstep, a sleep-checking assembly checks whether:
+
+- Its **linear acceleration** is greater than the [Wake&nbsp;Linear&nbsp;Acceleration](#threshold-reference) threshold.
+- Its **rotational acceleration** is greater than the [Wake&nbsp;Rotational&nbsp;Acceleration](#threshold-reference) threshold.
+- A neighboring assembly's **linear velocity** is greater than the [Neighbor&nbsp;Linear&nbsp;Velocity](#threshold-reference) threshold.
+- A neighboring assembly's **rotational velocity** is greater than the [Neighbor&nbsp;Rotational&nbsp;Velocity](#threshold-reference) threshold.
+
+If any of these conditions is true, or under any of the [additional wake situations](#additional-wake-situations), the sleep-checking assembly enters the [awake](#awake) state.
+
 ## Threshold reference
 
-The following table provides the various displacement and velocity thresholds used to determine if an assembly is moving or accelerating.
+The following table provides the various velocity and acceleration thresholds used to determine if an assembly is moving or accelerating.
 
 <table>
 <thead>
@@ -50,43 +52,59 @@ The following table provides the various displacement and velocity thresholds us
 </thead>
 <tbody>
 	<tr>
-		<td>Neighbor Displacement</td>
-		<td>0.01 studs</td>
-		<td>[sleep-checking](#sleep-checking) &rang; [awake](#awake)</td>
+		<td>Linear Velocity</td>
+		<td>0.33 studs/s</td>
+		<td>[awake](#awake) &rang; [sleeping](#sleeping)</td>
+	</tr>
+	<tr>
+		<td>Rotational Velocity</td>
+		<td>0.42 studs/s</td>
+		<td>[awake](#awake) &rang; [sleeping](#sleeping)</td>
+	</tr>
+	<tr>
+		<td>Linear Acceleration</td>
+		<td>0.24 studs/s&sup2;</td>
+		<td>[awake](#awake) &rang; [sleeping](#sleeping)</td>
+	</tr>
+	<tr>
+		<td>Rotational Acceleration</td>
+		<td>0.24 studs/s&sup2;</td>
+		<td>[awake](#awake) &rang; [sleeping](#sleeping)</td>
 	</tr>
 	<tr>
 		<td>Neighbor Linear Velocity</td>
-		<td>0.2 studs/s</td>
+		<td>0.48 studs/s</td>
 		<td>[sleep-checking](#sleep-checking) &rang; [awake](#awake)</td>
 	</tr>
 	<tr>
-		<td>Neighbor Angular Velocity</td>
-		<td>0.2 radians/s</td>
+		<td>Neighbor Rotational Velocity</td>
+		<td>0.59 studs/s</td>
 		<td>[sleep-checking](#sleep-checking) &rang; [awake](#awake)</td>
 	</tr>
 	<tr>
-		<td>Displacement</td>
-		<td>0.001 studs</td>
-		<td>[sleeping](#sleeping) &rang; [awake](#awake)</td>
+		<td>Wake Linear Acceleration</td>
+		<td>16.9 studs/s&sup2;</td>
+		<td>[awake](#awake) &rang; [sleeping](#sleeping)</td>
 	</tr>
 	<tr>
-		<td>Linear Velocity</td>
-		<td>0.1 studs/s</td>
-		<td>[sleeping](#sleeping) &rang; [awake](#awake)</td>
-	</tr>
-	<tr>
-		<td>Angular Velocity</td>
-		<td>0.1 radians/s</td>
-		<td>[sleeping](#sleeping) &rang; [awake](#awake)</td>
+		<td>Wake Rotational Acceleration</td>
+		<td>16.9 studs/s&sup2;</td>
+		<td>[awake](#awake) &rang; [sleeping](#sleeping)</td>
 	</tr>
 </tbody>
 </table>
+
+Rotational velocity and acceleration thresholds reflect the velocity and acceleration of a point located on the assembly bounding sphere (a sphere that contains all of the parts in an assembly) that moves rigidly with the assembly.
+
+<Alert severity="info">
+For a given angular velocity, the rotational velocity of an assembly is proportional to the assembly bounding sphere radius. This means that larger assemblies can rotate at a lower angular velocity without falling asleep.
+</Alert>
 
 ## Additional wake situations
 
 In addition to situations outlined in [sleep‑checking](#sleep-checking) and [sleeping](#sleeping), an assembly enters the [awake](#awake) state when:
 
-- It collides with another assembly.
+- It collides with another assembly moving faster than 1 studs/s.
 - Any physics-related property of any `Class.BasePart` within the assembly changes, including:
 
   - `Class.BasePart.Anchored|Anchored`
