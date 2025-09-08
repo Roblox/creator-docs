@@ -100,8 +100,6 @@ Rotational velocity and acceleration thresholds reflect the velocity and acceler
 For a given angular velocity, the rotational velocity of an assembly is proportional to the assembly bounding sphere radius. This means that larger assemblies can rotate at a lower angular velocity without falling asleep.
 </Alert>
 
-<img src="../assets/physics/assemblies/AngularVelocityGrid.gif" width="500" alt="A grid of rotating parts with different sizes, some of which fall asleep." />
-
 ## Additional wake situations
 
 In addition to situations outlined in [sleep‑checking](#sleep-checking) and [sleeping](#sleeping), an assembly enters the [awake](#awake) state when:
