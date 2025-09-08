@@ -63,12 +63,12 @@ The following table provides the various velocity and acceleration thresholds us
 	</tr>
 	<tr>
 		<td>Linear Acceleration</td>
-		<td>0.24 studs/s<sup>2</sup></td>
+		<td>0.24 studs/s&sup2;</td>
 		<td>[awake](#awake) &rang; [sleeping](#sleeping)</td>
 	</tr>
 	<tr>
 		<td>Rotational Acceleration</td>
-		<td>0.24 studs/s<sup>2</sup></td>
+		<td>0.24 studs/s&sup2;</td>
 		<td>[awake](#awake) &rang; [sleeping](#sleeping)</td>
 	</tr>
 	<tr>
@@ -83,12 +83,12 @@ The following table provides the various velocity and acceleration thresholds us
 	</tr>
 	<tr>
 		<td>Wake Linear Acceleration</td>
-		<td>16.9 studs/s<sup>2</sup></td>
+		<td>16.9 studs/s&sup2;</td>
 		<td>[awake](#awake) &rang; [sleeping](#sleeping)</td>
 	</tr>
 	<tr>
 		<td>Wake Rotational Acceleration</td>
-		<td>16.9 studs/s<sup>2</sup></td>
+		<td>16.9 studs/s&sup2;</td>
 		<td>[awake](#awake) &rang; [sleeping](#sleeping)</td>
 	</tr>
 </tbody>
