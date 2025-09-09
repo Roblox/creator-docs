@@ -563,6 +563,15 @@
             "description": "The social links associated with the asset.",
             "nullable": true
           },
+          "previewAssets": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PreviewAssetsModel"
+              }
+            ],
+            "description": "The asset's preview asset ids grouped by asset type.",
+            "nullable": true
+          },
           "createTime": {
             "type": "string",
             "description": "The time the asset was created.",
@@ -1336,6 +1345,32 @@
         },
         "additionalProperties": false,
         "description": "Representation of a plugin asset.",
+        "nullable": true
+      },
+      "PreviewAssetsModel": {
+        "type": "object",
+        "properties": {
+          "imagePreviewAssets": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "description": "Ordered list of image preview asset ids.",
+            "nullable": true
+          },
+          "videoPreviewAssets": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "description": "Ordered list of video preview asset ids.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Grouped preview asset ids for an item, separated by media type.",
         "nullable": true
       },
       "ProblemDetails": {

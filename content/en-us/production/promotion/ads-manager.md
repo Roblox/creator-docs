@@ -40,7 +40,7 @@ Any Roblox user aged 13 and above can convert Robux to ad credit and use it for 
 
 You can specify the amount of ad credit you want to purchase. When converting Robux to ad credits, consider the following:
 
-- 1 ad credit is equivalent to 285 Robux.
+- 1 ad credit is equivalent to 263 Robux.
 - 10 ad credits is the minimum conversion requirement.
 
 This minimum conversion requirement streamlines the conversion process, prevents inaccuracies, and makes sure that you have enough ad credits to support meaningful advertising campaigns.

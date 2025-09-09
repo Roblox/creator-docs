@@ -128,15 +128,11 @@ To run a price review period:
     <td>The number of active users during the test period.</td>
   </tr>
   <tr>
-    <td>**Short-term revenue**</td>
-    <td>The amount of Robux spent on tested products during the two-week price optimization test period.</td>
-  </tr>
-  <tr>
-    <td>**Long-term revenue**</td>
+    <td>**Revenue**</td>
     <td>The amount of Robux spent on tested products during the four-week price review period.</td>
   </tr>
   <tr>
-    <td>**Approximate long-term revenue impact**</td>
+    <td>**Approximate revenue impact**</td>
     <td>The projected long-term revenue increase if the optimized prices are applied to the tested products.</td>
   </tr>
   <tr>
@@ -150,6 +146,18 @@ To run a price review period:
   <tr>
     <td>**ARPPU**</td>
     <td>The average revenue per paying user during the price review period.</td>
+  </tr>
+  <tr>
+    <td>**Recommended price increase**</td>
+    <td>The number of products for which we recommend increasing the price.</td>
+  </tr>
+  <tr>
+    <td>**Recommended price decrease**</td>
+    <td>The number of products for which we recommend lowering the price.</td>
+  </tr>
+  <tr>
+    <td>**Recommended no change**</td>
+    <td>The number of products for which we recommend keeping the current price.</td>
   </tr>
 </tbody>
 </table>

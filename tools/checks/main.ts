@@ -65,7 +65,7 @@ import { checkEngineReferenceContent } from './utils/engineReferenceChecks.js';
 import {
   containsOpenApiSchema,
   validateOpenApiSchema,
-} from './utils/openApiSchemaChecks.js';
+} from './utils/openapi/index.js';
 
 let filesToCheck: string[] = [];
 let labelPullRequestAsInappropriate = false;

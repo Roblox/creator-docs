@@ -60,9 +60,12 @@ enum DataType {
   String = 'string',
 }
 
-const getEnvVar = (key: string, type: DataType) => {
+const getEnvVar = (key: string, type: DataType, defaultValue?: unknown) => {
   const value = process.env[key];
   if (!value) {
+    if (value === undefined) {
+      return defaultValue;
+    }
     return undefined;
   }
 
@@ -189,7 +192,7 @@ export const getConfig = async (): Promise<IConfig> => {
     .option('checkMarkdownLint', {
       type: 'boolean',
       description: 'Whether to check markdownlint',
-      default: getEnvVar('CHECK_MARKDOWN_LINT', DataType.Boolean),
+      default: getEnvVar('CHECK_MARKDOWN_LINT', DataType.Boolean, true),
     })
     .option('checkProtectedFields', {
       type: 'boolean',
@@ -199,12 +202,12 @@ export const getConfig = async (): Promise<IConfig> => {
     .option('checkRelativeLinks', {
       type: 'boolean',
       description: 'Whether to check relative links',
-      default: getEnvVar('CHECK_RELATIVE_LINKS', DataType.Boolean),
+      default: getEnvVar('CHECK_RELATIVE_LINKS', DataType.Boolean, true),
     })
     .option('checkRetextAnalysis', {
       type: 'boolean',
       description: 'Whether to check retext analysis',
-      default: getEnvVar('CHECK_RETEXT_ANALYSIS', DataType.Boolean),
+      default: getEnvVar('CHECK_RETEXT_ANALYSIS', DataType.Boolean, true),
     })
     .option('checkUnusedAssets', {
       type: 'boolean',

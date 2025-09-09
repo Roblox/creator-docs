@@ -1374,7 +1374,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 500000
           }
         },
         "x-roblox-scopes": [
@@ -1471,7 +1471,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -1555,7 +1555,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -1631,7 +1631,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -1732,7 +1732,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -1826,7 +1826,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 500000
           }
         },
         "x-roblox-scopes": [
@@ -2178,7 +2178,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -2271,7 +2271,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -2356,7 +2356,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -2466,7 +2466,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -2569,7 +2569,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 500000
           }
         },
         "x-roblox-scopes": [
@@ -2952,7 +2952,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 1000000
           }
         },
         "security": [
@@ -3030,7 +3030,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 1000000
           }
         },
         "security": [
@@ -3132,7 +3132,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 1000000
           }
         },
         "security": [
@@ -3245,7 +3245,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 1000000
           }
         },
         "security": [
@@ -3341,7 +3341,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 1000000
           }
         },
         "security": [
@@ -3424,7 +3424,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 1000000
           }
         },
         "security": [
@@ -3499,7 +3499,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 1000000
           }
         },
         "security": [
@@ -3599,7 +3599,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 1000000
           }
         },
         "security": [
@@ -3682,7 +3682,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 1000000
           }
         },
         "security": [
@@ -3788,7 +3788,7 @@
           "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 500000
           }
         },
         "x-roblox-scopes": [
@@ -3894,7 +3894,7 @@
           "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 500000
           }
         },
         "x-roblox-scopes": [
@@ -3987,7 +3987,7 @@
           "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 500000
           }
         },
         "x-roblox-scopes": [
@@ -4072,7 +4072,7 @@
           "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 500000
           }
         },
         "x-roblox-scopes": [
@@ -4182,7 +4182,7 @@
           "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 500000
           }
         },
         "x-roblox-scopes": [
@@ -4285,7 +4285,7 @@
           "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 500000
           }
         },
         "x-roblox-scopes": [
@@ -18748,12 +18748,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/AvatarPublicApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/AvatarPublicApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -19369,12 +19369,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/AvatarPublicApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/AvatarPublicApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -19429,12 +19429,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/AvatarPublicApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/AvatarPublicApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -46064,7 +46064,7 @@
                 22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39,
                 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55,
                 56, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73,
-                74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86
+                74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87
               ]
             }
           },
@@ -46791,13 +46791,14 @@
             "schema": {
               "type": "array",
               "items": {
-                "description": " ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86]",
+                "description": " ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87]",
                 "enum": [
                   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 21,
                   22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38,
                   39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53,
                   54, 55, 56, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70,
-                  71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86
+                  71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85,
+                  86, 87
                 ]
               }
             }
@@ -49959,12 +49960,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/MetricsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/MetricsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -50018,12 +50019,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/MetricsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/MetricsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -57009,12 +57010,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/UsersApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/UsersApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -57182,12 +57183,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/UsersApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/UsersApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -57279,12 +57280,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/UsersApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/UsersApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -57403,12 +57404,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/UsersApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/UsersApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -57921,12 +57922,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/UsersApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/UsersApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -64315,7 +64316,8 @@
             "description": "Float that determines the absolute\r\nposition refinement in studs that this accessory\r\nis relocated in the z-direction",
             "type": "number"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.AccessoryRefinementModel": {
         "description": "A model containing details about accessory refinement data",
@@ -64330,7 +64332,8 @@
           "scale": {
             "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.AccessoryScaleModel"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.AccessoryRotationModel": {
         "description": "A model which contains accessory rotation coordinates",
@@ -64351,7 +64354,8 @@
             "description": "Float from -180 to 180 that determines the absolute\r\nrotation refinement that this accessory is rotated in the\r\nz-direction",
             "type": "number"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.AccessoryScaleModel": {
         "description": "A model which contains accessory Scale, that is the multiplier\r\nwith respect to the default size. For example, scale = 2 means\r\ntwice the default size of an asset",
@@ -64372,7 +64376,8 @@
             "description": "Float that determines the scale refinement that\r\nthis accessory is resized in the z-direction\r\nDefault size is 1",
             "type": "number"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.AssetIdListModel": {
         "description": "A model that contains a list of asset ids",
@@ -64386,7 +64391,8 @@
               "type": "integer"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.AssetMetaModelV1": {
         "description": "Exhaustive model denoting all possible metadata fields of an asset",
@@ -64416,7 +64422,8 @@
             "description": "Client-authoritative meta model format version\r\n- default is always 1",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.AssetModelV2": {
         "description": "A model containing details about an asset\r\n- V2: adds CurrentVersionId, AssetMetaModel",
@@ -64446,7 +64453,8 @@
             "description": "Asset availability status.",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.AssetPosition": {
         "description": "A model which contains accessory position coordinates.",
@@ -64467,7 +64475,8 @@
             "description": "Z coordinate of the position.",
             "type": "number"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.AssetRotation": {
         "description": "A model which contains accessory rotation coordinates.",
@@ -64488,7 +64497,8 @@
             "description": "Z degrees of the rotation.",
             "type": "number"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.AssetScale": {
         "description": "A model which contains accessory scale.",
@@ -64509,7 +64519,8 @@
             "description": "Z scale multiplier of accessory.",
             "type": "number"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.AssetTypeModel": {
         "description": "A model containing details about an asset type",
@@ -64524,7 +64535,8 @@
             "description": "The name",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.AssetTypeRulesModel": {
         "description": "A model containing details about an asset type and its business rules",
@@ -64544,7 +64556,8 @@
             "description": "The name",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.AvatarApiSuccessResponse": {
         "description": "Success response class",
@@ -64554,7 +64567,8 @@
             "description": "Gets or sets a value indicating whether the request was a success.",
             "type": "boolean"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.AvatarMetadataModel": {
         "description": "A model containing website metadata for avatars",
@@ -64633,7 +64647,8 @@
             "description": "Useful for the time between enabling Jackets for most users and\r\nall LC types for everyone, meanwhile Soothsayers need all types\r\nat all times",
             "type": "boolean"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.AvatarModelV2": {
         "description": "A model containing details about an avatar",
@@ -64673,7 +64688,8 @@
               "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.EmoteResponseModel"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.AvatarRulesModel": {
         "description": "A model containing details about avatar-related business rules",
@@ -64759,7 +64775,8 @@
             "description": "Whether or not emotes are enabled",
             "type": "boolean"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.BodyColorModel": {
         "description": "A model container BrickColor ids for each body part.",
@@ -64778,7 +64795,8 @@
             "description": "The name of the BrickColor",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.BodyColorsModel": {
         "description": "A model container BrickColor ids for each body part.",
@@ -64814,7 +64832,8 @@
             "description": "The BrickColor id for left leg color",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.DefaultClothingAssets": {
         "description": "A model containing details about avatar-related business rules",
@@ -64836,7 +64855,8 @@
               "type": "integer"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.EmoteResponseModel": {
         "description": "Response object representing a user's emote",
@@ -64856,7 +64876,8 @@
             "description": "The position the emote is equipped to.",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.GameStartInfoResponse": {
         "description": "The game start info",
@@ -64903,7 +64924,8 @@
             "description": "Moderation status",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.OutfitDetailsModel": {
         "description": "A model containing details about a user outfit",
@@ -64952,7 +64974,8 @@
             "description": "The moderation status of the outfit, not applicable when outfit is created outside experience",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.OutfitModel": {
         "description": "A slim model for user outfits.",
@@ -64975,7 +64998,8 @@
             "description": "The type of the Outfit.",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.PlayerAvatarTypeModel": {
         "description": "A model that contains a playerAvatarType",
@@ -64987,7 +65011,8 @@
             "enum": [1, 3],
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.ScaleRulesModel": {
         "description": "A model that contains information about the max/mins for each scale",
@@ -65008,7 +65033,8 @@
             "description": "The increment of the scale",
             "type": "number"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.UniverseAvatarAssetOverrideResponseModel": {
         "type": "object",
@@ -65024,7 +65050,8 @@
           "isPlayerChoice": {
             "type": "boolean"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.WearResponseModel": {
         "description": "A model for wear outfit responses",
@@ -65049,7 +65076,8 @@
             "description": "Whether or not all the outfit contents were successfully worn",
             "type": "boolean"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Web.Responses.Avatar.ScaleModel": {
         "type": "object",
@@ -65078,7 +65106,12 @@
             "format": "double",
             "type": "number"
           }
-        }
+        },
+        "additionalProperties": false
+      },
+      "AvatarPublicApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
+        "type": "object",
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.AvatarFilteredPageResponse_Roblox.Api.Avatar.Models.OutfitModel_": {
         "description": "Filtered page response",
@@ -65099,7 +65132,8 @@
             "format": "int64",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.AssetWearModel": {
         "description": "A model which contains\r\n- an asset id\r\n- AssetMetaModel",
@@ -65113,7 +65147,8 @@
           "meta": {
             "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.AssetMetaModelV1"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.AvatarModelV3": {
         "description": "A model containing details about an avatar",
@@ -65153,7 +65188,8 @@
               "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.EmoteResponseModel"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.BodyColors3Model": {
         "description": "A model containing RGB hex colors for each body part.",
@@ -65183,7 +65219,8 @@
             "description": "The RGB hex color for left leg color, e.g. #FFFFFF",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.OutfitUpdateModelV2": {
         "description": "A model containing details needed to update or create an outfit",
@@ -65216,7 +65253,8 @@
             "enum": [0, 1, 2, 4],
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.WearRequestModel": {
         "description": "A model that contains a list of AssetWear models",
@@ -65229,7 +65267,8 @@
               "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.AssetWearModel"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Platform.Avatar.BodyColorsModelV2": {
         "type": "object",
@@ -65252,7 +65291,8 @@
           "leftLegColor3": {
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.AvatarPageResponse_Roblox.Api.Avatar.Models.OutfitModel_": {
         "description": "Avatar page response.",
@@ -65269,7 +65309,8 @@
             "description": "A non empty string indicates that there is more data available than this response contains. An empty string indicates the last page.",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.OutfitDetailsModelV2": {
         "description": "A model containing details about a user outfit",
@@ -65331,7 +65372,8 @@
             "description": "Asset availability status.",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Api.Avatar.Models.OutfitUpdateModelV3": {
         "description": "A model containing details needed to update or create an outfit.",
@@ -65364,7 +65406,8 @@
             "enum": [0, 1, 2, 4],
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Badges.Api.BadgeResponse": {
         "description": "A response containing badge information.",
@@ -66853,7 +66896,17 @@
           "MD5Sum": {
             "type": "string"
           },
-          "data": {}
+          "data": {
+            "$ref": "#/components/schemas/Roblox.ClientSettings.Api.Models.Response.MobileClientVersionResponseData"
+          }
+        }
+      },
+      "Roblox.ClientSettings.Api.Models.Response.MobileClientVersionResponseData": {
+        "type": "object",
+        "properties": {
+          "UpgradeAction": {
+            "type": "string"
+          }
         }
       },
       "Roblox.Api.Develop.AssetVersion": {
@@ -67137,10 +67190,10 @@
             }
           },
           "universeAvatarMinScales": {
-            "$ref": "#/components/schemas/Roblox.Web.Responses.Avatar.ScaleModel"
+            "$ref": "#/components/schemas/DevelopApi.Roblox.Web.Responses.Avatar.ScaleModel"
           },
           "universeAvatarMaxScales": {
-            "$ref": "#/components/schemas/Roblox.Web.Responses.Avatar.ScaleModel"
+            "$ref": "#/components/schemas/DevelopApi.Roblox.Web.Responses.Avatar.ScaleModel"
           },
           "studioAccessToApisAllowed": {
             "description": "Whether Studio can access data stores of this universe.",
@@ -67299,10 +67352,10 @@
             }
           },
           "universeAvatarMinScales": {
-            "$ref": "#/components/schemas/Roblox.Web.Responses.Avatar.ScaleModel"
+            "$ref": "#/components/schemas/DevelopApi.Roblox.Web.Responses.Avatar.ScaleModel"
           },
           "universeAvatarMaxScales": {
-            "$ref": "#/components/schemas/Roblox.Web.Responses.Avatar.ScaleModel"
+            "$ref": "#/components/schemas/DevelopApi.Roblox.Web.Responses.Avatar.ScaleModel"
           },
           "studioAccessToApisAllowed": {
             "description": "Whether Studio can access data stores of this universe.",
@@ -67361,6 +67414,35 @@
           },
           "IsClientTeleportAllowed": {
             "type": "boolean"
+          }
+        }
+      },
+      "DevelopApi.Roblox.Web.Responses.Avatar.ScaleModel": {
+        "type": "object",
+        "properties": {
+          "height": {
+            "format": "double",
+            "type": "number"
+          },
+          "width": {
+            "format": "double",
+            "type": "number"
+          },
+          "head": {
+            "format": "double",
+            "type": "number"
+          },
+          "depth": {
+            "format": "double",
+            "type": "number"
+          },
+          "proportion": {
+            "format": "double",
+            "type": "number"
+          },
+          "bodyType": {
+            "format": "double",
+            "type": "number"
           }
         }
       },
@@ -70885,6 +70967,16 @@
           "PlaceVersion": {
             "format": "int32",
             "type": "integer"
+          },
+          "NetStackPort": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "NetStackConfig": {
+            "type": "string"
+          },
+          "NetStackTokenValue": {
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -74499,13 +74591,13 @@
           },
           "assetType": {
             "format": "int32",
-            "description": "The asset type id of asset with id Roblox.Inventory.Api.V2.UserAssetItemModelV2.AssetId. ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86]",
+            "description": "The asset type id of asset with id Roblox.Inventory.Api.V2.UserAssetItemModelV2.AssetId. ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87]",
             "enum": [
               1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 21, 22,
               24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39, 40,
               41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
               59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
-              75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86
+              75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87
             ],
             "type": "integer"
           },
@@ -75871,7 +75963,8 @@
             "enum": [0, 1, 2],
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Metrics.Api.RecordThumbnailLoadRequest": {
         "description": "Request to add measurement.",
@@ -75892,7 +75985,8 @@
             "description": "The type of thumbnail.",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Metrics.Api.ThumbnailLoadMetadataResponse": {
         "description": "Response for thumbnail metrics related metadata.",
@@ -75903,7 +75997,12 @@
             "description": "The probability that the metrics get logged",
             "type": "number"
           }
-        }
+        },
+        "additionalProperties": false
+      },
+      "MetricsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
+        "type": "object",
+        "additionalProperties": false
       },
       "Roblox.Api.Notifications.Models.ChromeManifestModel": {
         "description": "Chrome Manifest to link GCM project to Chrome browser",
@@ -77947,7 +78046,8 @@
             "description": "The user DisplayName.",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Users.Api.BirthdateRequest": {
         "description": "The birthdate request",
@@ -77972,7 +78072,8 @@
             "description": "Password",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Users.Api.BirthdateResponse": {
         "description": "The birthdate response",
@@ -77993,7 +78094,8 @@
             "description": "The birth year",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Users.Api.DescriptionRequest": {
         "description": "The description request",
@@ -78003,7 +78105,8 @@
             "description": "The description",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Users.Api.DescriptionResponse": {
         "description": "The description response",
@@ -78013,7 +78116,8 @@
             "description": "The description",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Users.Api.GenderRequest": {
         "description": "The gender request",
@@ -78025,7 +78129,8 @@
             "enum": [1, 2, 3],
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Users.Api.GenderResponse": {
         "description": "The gender response",
@@ -78036,7 +78141,8 @@
             "description": "The gender",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Users.Api.GetUserResponse": {
         "description": "A response model representing user information.",
@@ -78076,7 +78182,8 @@
             "description": "The user DisplayName.",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Users.Api.MultiGetByUserIdRequest": {
         "description": "Request model for getting users by ids.",
@@ -78094,7 +78201,8 @@
             "description": "Whether the response should exclude banned users",
             "type": "boolean"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Users.Api.MultiGetByUsernameRequest": {
         "description": "Request model for getting users by usernames.",
@@ -78111,7 +78219,8 @@
             "description": "Whether the response should exclude banned users",
             "type": "boolean"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Users.Api.MultiGetUserByNameResponse": {
         "description": "A response model specific to multi-get user by name.",
@@ -78138,7 +78247,8 @@
             "description": "The user DisplayName.",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Users.Api.MultiGetUserResponse": {
         "description": "<p>A response model specific to multi-get user.</p>\r\n<p>\r\n            Note: Currently the MultiGet responses don't have all the data that the single gets have, to reduce payload size!\r\n            We might want to revisit this decision in the future.\r\n            </p>",
@@ -78161,7 +78271,8 @@
             "description": "The user DisplayName.",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Users.Api.SearchGetUserResponse": {
         "description": "A user response model specific to getting a user from user search.",
@@ -78191,7 +78302,8 @@
             "description": "The user DisplayName.",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Users.Api.SetDisplayNameRequest": {
         "description": "Request model for changing a display name.",
@@ -78201,7 +78313,8 @@
             "description": "The users new display name.",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Users.Api.UserAgeBracketResponse": {
         "description": "A user age bracket response model.",
@@ -78212,7 +78325,8 @@
             "description": "The age bracket of the user.",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Users.Api.UserCountryCodeResponse": {
         "description": "A user country code response model.",
@@ -78222,7 +78336,8 @@
             "description": "The country code of the user.",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Users.Api.UserRolesResponse": {
         "description": "A user roles response model.",
@@ -78235,7 +78350,8 @@
               "type": "string"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Users.Api.UsernameHistoryResponse": {
         "type": "object",
@@ -78244,7 +78360,12 @@
             "description": "A past username belonging to a particular userId",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
+      },
+      "UsersApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
+        "type": "object",
+        "additionalProperties": false
       },
       "Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Users.Api.MultiGetUserByNameResponse_": {
         "type": "object",
@@ -78255,7 +78376,8 @@
               "$ref": "#/components/schemas/Roblox.Users.Api.MultiGetUserByNameResponse"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Users.Api.MultiGetUserResponse_": {
         "type": "object",
@@ -78266,7 +78388,8 @@
               "$ref": "#/components/schemas/Roblox.Users.Api.MultiGetUserResponse"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Users.Api.SearchGetUserResponse_": {
         "type": "object",
@@ -78283,7 +78406,8 @@
               "$ref": "#/components/schemas/Roblox.Users.Api.SearchGetUserResponse"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Users.Api.UsernameHistoryResponse_": {
         "type": "object",
@@ -78300,7 +78424,8 @@
               "$ref": "#/components/schemas/Roblox.Users.Api.UsernameHistoryResponse"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "ToolboxService.Asset": {
         "type": "object",
@@ -78332,6 +78457,15 @@
               "$ref": "#/components/schemas/SocialLinkModel"
             },
             "description": "The social links associated with the asset.",
+            "nullable": true
+          },
+          "previewAssets": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PreviewAssetsModel"
+              }
+            ],
+            "description": "The asset's preview asset ids grouped by asset type.",
             "nullable": true
           },
           "createTime": {
@@ -78777,6 +78911,32 @@
         },
         "additionalProperties": false,
         "description": "Representation of a plugin asset.",
+        "nullable": true
+      },
+      "PreviewAssetsModel": {
+        "type": "object",
+        "properties": {
+          "imagePreviewAssets": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "description": "Ordered list of image preview asset ids.",
+            "nullable": true
+          },
+          "videoPreviewAssets": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "description": "Ordered list of video preview asset ids.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Grouped preview asset ids for an item, separated by media type.",
         "nullable": true
       },
       "ProblemDetails": {

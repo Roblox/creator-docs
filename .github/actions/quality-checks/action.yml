@@ -13,6 +13,8 @@ inputs:
     description: Whether to check relative links
   CHECK_RETEXT_ANALYSIS:
     description: Whether to check retext analysis
+  CHECK_UNUSED_ASSETS:
+    description: Whether to check for unused assets
   COMMIT_HASH:
     description: Commit hash
   EVENT_NAME:
@@ -53,6 +55,7 @@ runs:
         CHECK_PROTECTED_FIELDS: ${{ inputs.CHECK_PROTECTED_FIELDS }}
         CHECK_RELATIVE_LINKS: ${{ inputs.CHECK_RELATIVE_LINKS }}
         CHECK_RETEXT_ANALYSIS: ${{ inputs.CHECK_RETEXT_ANALYSIS }}
+        CHECK_UNUSED_ASSETS: ${{ inputs.CHECK_UNUSED_ASSETS }}
         COMMIT_HASH: ${{ inputs.COMMIT_HASH }}
         POST_PULL_REQUEST_COMMENTS: ${{ inputs.POST_PULL_REQUEST_COMMENTS }}
         PULL_REQUEST_NUMBER: ${{ inputs.PULL_REQUEST_NUMBER }}
