@@ -1,0 +1,55 @@
+# Simple Spectral OpenAPI Validation Rules for Testing
+extends:
+  - spectral:oas # Built-in OpenAPI v2/v3 rules
+
+rules:
+  # @neoxu (2025-09-01): Change the severity from error to warn because the existing docs have too many of this kind of error and it doesn't impact functionality. https://meta.stoplight.io/docs/spectral/4dec24461f3af-open-api-rules#no-ref-siblings
+  no-$ref-siblings: warn
+  oas3-valid-schema-example: warn
+  path-params: warn
+  # Require servers field to be present and non-empty
+  servers-required:
+    description: "OpenAPI specification must have a 'servers' field with at least one server"
+    given: '$'
+    severity: error
+    then:
+      field: servers
+      function: truthy
+
+  servers-not-empty:
+    description: 'Servers array must contain at least one server'
+    given: '$.servers'
+    severity: error
+    then:
+      function: length
+      functionOptions:
+        min: 1
+
+  # Validate each server has required URL field
+  server-url-required:
+    description: "Each server must have a 'url' field"
+    given: '$.servers[*]'
+    severity: error
+    then:
+      field: url
+      function: truthy
+
+  # Basic URL pattern validation using built-in pattern function
+  server-url-https:
+    description: 'Server URLs should use HTTPS for security'
+    given: '$.servers[*].url'
+    severity: warn
+    then:
+      function: pattern
+      functionOptions:
+        match: '^https://'
+
+  # Validate server URLs point to roblox.com or localhost
+  server-url-domain:
+    description: 'Server URLs should point to roblox.com domains or localhost'
+    given: '$.servers[*].url'
+    severity: error
+    then:
+      function: pattern
+      functionOptions:
+        match: "^https?://(.*\\.)?roblox\\.com|https?://localhost|https?://127\\.0\\.0\\.1"

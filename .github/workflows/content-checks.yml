@@ -96,6 +96,7 @@ jobs:
           CHECK_PROTECTED_FIELDS: true
           CHECK_RELATIVE_LINKS: true
           CHECK_RETEXT_ANALYSIS: true
+          CHECK_UNUSED_ASSETS: true
           COMMIT_HASH: ${{ github.event.pull_request.head.sha }}
           EVENT_NAME: ${{ github.event_name }}
           POST_PULL_REQUEST_COMMENTS: true
