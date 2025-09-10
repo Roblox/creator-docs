@@ -81,10 +81,10 @@ methods:
       Fires the `Class.RemoteEvent.OnClientEvent|OnClientEvent` event for a
       specific client.
     description: |
-      Fires the `Class.RemoteEvent.OnClientEvent|OnClientEvent` event for
-      the specific client in the required `Class.Player` argument. Since this
-      method is used to communicate from the server to a client, it only works
-      when used in a `Class.Script`.
+      Fires the `Class.RemoteEvent.OnClientEvent|OnClientEvent` event for the
+      specific client in the required `Class.Player` argument. Since this method
+      is used to communicate from the server to a client, it only works when
+      used in a `Class.Script`.
     code_samples: []
     parameters:
       - name: player

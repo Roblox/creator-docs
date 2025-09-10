@@ -14,22 +14,6 @@ tags:
   - NotBrowsable
 deprecation_message: ''
 properties:
-  - name: VideoPlayer.Asset
-    summary: ''
-    description: ''
-    code_samples: []
-    type: ContentId
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Asset
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
   - name: VideoPlayer.AutoLoadInStudio
     summary: ''
     description: ''
@@ -43,7 +27,7 @@ properties:
       read: None
       write: RobloxScriptSecurity
     thread_safety: ReadSafe
-    category: AutoPlayInEditMode
+    category: Debug
     serialization:
       can_load: false
       can_save: false
@@ -61,7 +45,7 @@ properties:
       read: None
       write: RobloxScriptSecurity
     thread_safety: ReadSafe
-    category: AutoPlayInEditMode
+    category: Debug
     serialization:
       can_load: false
       can_save: false

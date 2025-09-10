@@ -4,8 +4,9 @@
 
 name: Vector3
 type: datatype
-summary: Represents a 3D value with a direction and magnitude.
-description: |-
+summary: |
+  Represents a 3D value with a direction and magnitude.
+description: |
   The `Datatype.Vector3` data type represents a vector in 3D space, typically
   used as a point in 3D space or the dimensions of a rectangular prism.
   `Datatype.Vector3` supports basic component-based arithmetic operations (sum,
@@ -37,14 +38,14 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: Vector3.new
-    summary: Returns a new `Datatype.Vector3` from the given `x`, `y`, and `z` components.
-    description: Returns a new `Datatype.Vector3` using the given `x`, `y`, and `z` components.
+    summary: Returns a new `Datatype.Vector3` from the given x, y, and z components.
+    description: Returns a new `Datatype.Vector3` using the given x, y, and z components.
     parameters:
       - name: x
         type: number
         default: 0
         summary: ''
-      - name: y
+      - name: 'y'
         type: number
         default: 0
         summary: ''
@@ -80,9 +81,9 @@ constructors:
 constants:
   - name: Vector3.zero
     type: Vector3
-    summary: A `Datatype.Vector3` with a magnitude of `0`.
+    summary: A `Datatype.Vector3` with a magnitude of zero.
     description: |-
-      A `Datatype.Vector3` with a magnitude of `0`.
+      A `Datatype.Vector3` with a magnitude of zero.
 
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3` object.
@@ -95,9 +96,9 @@ constants:
     deprecation_message: ''
   - name: Vector3.one
     type: Vector3
-    summary: A `Datatype.Vector3` with a value of `1` on every axis.
+    summary: A `Datatype.Vector3` with a value of 1 on every axis.
     description: |-
-      A `Datatype.Vector3` with a value of `1` on every axis.
+      A `Datatype.Vector3` with a value of 1 on every axis.
 
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3` object.
@@ -110,9 +111,9 @@ constants:
     deprecation_message: ''
   - name: Vector3.xAxis
     type: Vector3
-    summary: A `Datatype.Vector3` with a value of `1` on the **X** axis.
+    summary: A `Datatype.Vector3` with a value of 1 on the X axis.
     description: |-
-      A `Datatype.Vector3` with a value of `1` on the **X** axis.
+      A `Datatype.Vector3` with a value of 1 on the X axis.
 
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3` object.
@@ -125,9 +126,9 @@ constants:
     deprecation_message: ''
   - name: Vector3.yAxis
     type: Vector3
-    summary: A `Datatype.Vector3` with a value of `1` on the **Y** axis.
+    summary: A `Datatype.Vector3` with a value of 1 on the Y axis.
     description: |-
-      A `Datatype.Vector3` with a value of `1` on the **Y** axis.
+      A `Datatype.Vector3` with a value of 1 on the Y axis.
 
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3` object.
@@ -140,9 +141,9 @@ constants:
     deprecation_message: ''
   - name: Vector3.zAxis
     type: Vector3
-    summary: A `Datatype.Vector3` with a value of `1` on the **Z** axis.
+    summary: A `Datatype.Vector3` with a value of 1 on the Z axis.
     description: |-
-      A `Datatype.Vector3` with a value of `1` on the **Z** axis.
+      A `Datatype.Vector3` with a value of 1 on the Z axis.
 
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3` object.
@@ -156,9 +157,10 @@ constants:
 properties:
   - name: Vector3.zero
     type: Vector3
-    summary: A `Datatype.Vector3` with a magnitude of `0`.
-    description: |-
-      A `Datatype.Vector3` with a magnitude of `0`.
+    summary: |
+      A `Datatype.Vector3` with a magnitude of zero.
+    description: |
+      A `Datatype.Vector3` with a magnitude of zero.
 
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
@@ -173,9 +175,10 @@ properties:
     deprecation_message: ''
   - name: Vector3.one
     type: Vector3
-    summary: A `Datatype.Vector3` with a value of `1` on every axis.
-    description: |-
-      A `Datatype.Vector3` with a value of `1` on every axis.
+    summary: |
+      A `Datatype.Vector3` with a value of 1 on every axis.
+    description: |
+      A `Datatype.Vector3` with a value of 1 on every axis.
 
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
@@ -190,9 +193,10 @@ properties:
     deprecation_message: ''
   - name: Vector3.xAxis
     type: Vector3
-    summary: A `Datatype.Vector3` with a value of `1` on the **X** axis.
-    description: |-
-      A `Datatype.Vector3` with a value of `1` on the **X** axis.
+    summary: |
+      A `Datatype.Vector3` with a value of 1 on the X axis.
+    description: |
+      A `Datatype.Vector3` with a value of 1 on the X axis.
 
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
@@ -207,9 +211,10 @@ properties:
     deprecation_message: ''
   - name: Vector3.yAxis
     type: Vector3
-    summary: A `Datatype.Vector3` with a value of `1 `on the **Y** axis.
-    description: |-
-      A `Datatype.Vector3` with a value of `1` on the **Y** axis.
+    summary: |
+      A `Datatype.Vector3` with a value of 1 on the Y axis.
+    description: |
+      A `Datatype.Vector3` with a value of 1 on the Y axis.
 
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
@@ -224,9 +229,10 @@ properties:
     deprecation_message: ''
   - name: Vector3.zAxis
     type: Vector3
-    summary: A `Datatype.Vector3` with a value of `1` on the **Z** axis.
-    description: |-
-      A `Datatype.Vector3` with a value of `1` on the **Z** axis.
+    summary: |
+      A `Datatype.Vector3` with a value of 1 on the Z axis.
+    description: |
+      A `Datatype.Vector3` with a value of 1 on the Z axis.
 
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
@@ -241,54 +247,62 @@ properties:
     deprecation_message: ''
   - name: Vector3.X
     type: number
-    summary: The **X** coordinate of the `Datatype.Vector3`.
-    description: The **X** coordinate of the `Datatype.Vector3`.
+    summary: |
+      The x-coordinate of the Vector3.
+    description: |
+      The x-coordinate of the Vector3.
     default:
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: Vector3.Y
     type: number
-    summary: The **Y** coordinate of the `Datatype.Vector3`.
-    description: The **Y** coordinate of the `Datatype.Vector3`.
+    summary: |
+      The y-coordinate of the Vector3.
+    description: |
+      The y-coordinate of the Vector3.
     default:
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: Vector3.Z
     type: number
-    summary: The **Z** coordinate of the `Datatype.Vector3`.
-    description: The **Z** coordinate of the `Datatype.Vector3`.
+    summary: |
+      The z-coordinate of the Vector3.
+    description: |
+      The z-coordinate of the Vector3.
     default:
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: Vector3.Magnitude
     type: number
-    summary: The length of the `Datatype.Vector3`.
-    description: The length of the `Datatype.Vector3`.
+    summary: |
+      The length of the Vector3.
+    description: |
+      The length of the Vector3.
     default:
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: Vector3.Unit
     type: Vector3
-    summary: |-
+    summary: |
       A normalized copy of the `Datatype.Vector3` - one that has the same
-      direction as the original but a magnitude of `1`.
-    description: |-
+      direction as the original but a magnitude of 1.
+    description: |
       A normalized copy of the `Datatype.Vector3` - one that has the same
-      direction as the original but a magnitude of `1`.
+      direction as the original but a magnitude of 1.
     default:
     code_samples: []
     tags: []
     deprecation_message: ''
 methods:
   - name: Vector3:Abs
-    summary: |-
+    summary: |
       Returns a new vector from the absolute values of the original's
       components.
-    description: |-
+    description: |
       Returns a new vector from the absolute values of the original's
       components. For example, a vector of `(-2, 4, -6)` returns a vector of
       `(2, 4, 6)`.
@@ -300,8 +314,9 @@ methods:
     tags: []
     deprecation_message: ''
   - name: Vector3:Ceil
-    summary: Returns a new vector from the ceiling of the original's components.
-    description: |-
+    summary: |
+      Returns a new vector from the ceiling of the original's components.
+    description: |
       Returns a new vector from the ceiling of the original's components. For
       example, a vector of `(-2.6, 5.1, 8.8)` returns a vector of `(-2, 6, 9)`.
     parameters: []
@@ -312,8 +327,9 @@ methods:
     tags: []
     deprecation_message: ''
   - name: Vector3:Floor
-    summary: Returns a new vector from the floor of the original's components.
-    description: |-
+    summary: |
+      Returns a new vector from the floor of the original's components.
+    description: |
       Returns a new vector from the floor of the original's components. For
       example, a vector of `(-2.6, 5.1, 8.8)` returns a vector of `(-3, 5, 8)`.
     parameters: []
@@ -324,10 +340,10 @@ methods:
     tags: []
     deprecation_message: ''
   - name: Vector3:Sign
-    summary: |-
+    summary: |
       Returns a new vector from the sign (-1, 0, or 1) of the original's
       components.
-    description: |-
+    description: |
       Returns a new vector from the sign (-1, 0, or 1) of the original's
       components. For example, a vector of `(-2.6, 5.1, 0)` returns a vector of
       `(-1, 1, 0)`.
@@ -339,8 +355,10 @@ methods:
     tags: []
     deprecation_message: ''
   - name: Vector3:Cross
-    summary: Returns the cross product of the two vectors.
-    description: Returns the cross product of the two vectors.
+    summary: |
+      Returns the cross product of the two vectors.
+    description: |
+      Returns the cross product of the two vectors.
     parameters:
       - name: other
         type: Vector3
@@ -353,10 +371,10 @@ methods:
     tags: []
     deprecation_message: ''
   - name: Vector3:Angle
-    summary: |-
+    summary: |
       Returns the angle in radians between the two vectors. If you provide an
       axis, it determines the sign of the angle.
-    description: |-
+    description: |
       Returns the angle in radians between the two vectors. If you provide an
       axis, it determines the sign of the angle.
     parameters:
@@ -375,8 +393,10 @@ methods:
     tags: []
     deprecation_message: ''
   - name: Vector3:Dot
-    summary: Returns a scalar dot product of the two vectors.
-    description: Returns a scalar dot product of the two vectors.
+    summary: |
+      Returns a scalar dot product of the two vectors.
+    description: |
+      Returns a scalar dot product of the two vectors.
     parameters:
       - name: other
         type: Vector3
@@ -389,11 +409,11 @@ methods:
     tags: []
     deprecation_message: ''
   - name: Vector3:FuzzyEq
-    summary: |-
+    summary: |
       Returns `true` if the difference between the squared magnitude of the two
       vectors is within `epsilon`. `epsilon` is scaled relative to the
       magnitude, rather than an absolute epsilon.
-    description: |-
+    description: |
       Returns `true` if the difference between the squared magnitude of the two
       vectors is within `epsilon`. `epsilon` is scaled relative to the
       magnitude, rather than an absolute epsilon.
@@ -413,13 +433,15 @@ methods:
     tags: []
     deprecation_message: ''
   - name: Vector3:Lerp
-    summary: |-
+    summary: |
       Returns a `Datatype.Vector3` linearly interpolated between this
       `Datatype.Vector3` and the given goal by the given alpha.
-    description: |-
+    description: |
       Returns a `Datatype.Vector3` linearly interpolated between this
       `Datatype.Vector3` and the given `goal` `Datatype.Vector3` by the fraction
-      `alpha`. Note that `alpha` is **not** limited to the range `[0, 1]`.
+      `alpha`.
+
+      Note: the `alpha` value is **not** limited to the range [0, 1].
     parameters:
       - name: goal
         type: Vector3
@@ -436,10 +458,10 @@ methods:
     tags: []
     deprecation_message: ''
   - name: Vector3:Max
-    summary: |-
+    summary: |
       Returns a `Datatype.Vector3` with each component as the highest among the
       respective components of both provided `Datatype.Vector3` objects.
-    description: |-
+    description: |
       Returns a `Datatype.Vector3` with each component as the highest among the
       respective components of both provided `Datatype.Vector3` objects.
 
@@ -461,10 +483,10 @@ methods:
     tags: []
     deprecation_message: ''
   - name: Vector3:Min
-    summary: |-
+    summary: |
       Returns a `Datatype.Vector3` with each component as the lowest among the
       respective components of both provided `Datatype.Vector3` objects.
-    description: |-
+    description: |
       Returns a `Datatype.Vector3` with each component as the lowest among the
       respective components of both provided `Datatype.Vector3` objects.
 
@@ -489,10 +511,10 @@ functions: []
 math_operations:
   - name: +
     operation: +
-    summary: |-
+    summary: |
       Produces a `Datatype.Vector3` by adding each component of the first vector
       to the corresponding component of the second.
-    description: |-
+    description: |
       Produces a `Datatype.Vector3` by adding each component of the first vector
       to the corresponding component of the second.
     type_a: Vector3
@@ -503,10 +525,10 @@ math_operations:
     deprecation_message: ''
   - name: '-'
     operation: '-'
-    summary: |-
+    summary: |
       Produces a `Datatype.Vector3` by subtracting each component of the second
       vector from the corresponding component of the first.
-    description: |-
+    description: |
       Produces a `Datatype.Vector3` by subtracting each component of the second
       vector from the corresponding component of the first.
     type_a: Vector3
@@ -517,10 +539,10 @@ math_operations:
     deprecation_message: ''
   - name: '*'
     operation: '*'
-    summary: |-
+    summary: |
       Produces a `Datatype.Vector3` by multiplying each component of the first
       vector by the corresponding component of the second.
-    description: |-
+    description: |
       Produces a `Datatype.Vector3` by multiplying each component of the first
       vector by the corresponding component of the second.
     type_a: Vector3
@@ -531,10 +553,10 @@ math_operations:
     deprecation_message: ''
   - name: /
     operation: /
-    summary: |-
+    summary: |
       Produces a `Datatype.Vector3` by dividing each component of the first
       vector by the corresponding component of the second.
-    description: |-
+    description: |
       Produces a `Datatype.Vector3` by dividing each component of the first
       vector by the corresponding component of the second.
     type_a: Vector3
@@ -545,10 +567,10 @@ math_operations:
     deprecation_message: ''
   - name: //
     operation: //
-    summary: |-
+    summary: |
       Produces a `Datatype.Vector3` by **floor dividing** each component of the
       first vector by the corresponding component of the second.
-    description: |-
+    description: |
       Produces a `Datatype.Vector3` by **floor dividing** each component of the
       first vector by the corresponding component of the second.
     type_a: Vector3
@@ -559,10 +581,10 @@ math_operations:
     deprecation_message: ''
   - name: '*'
     operation: '*'
-    summary: |-
+    summary: |
       Produces a `Datatype.Vector3` by multiplying each component of the
       provided vector by the number.
-    description: |-
+    description: |
       Produces a `Datatype.Vector3` by multiplying each component of the
       provided vector by the number.
     type_a: Vector3
@@ -573,10 +595,10 @@ math_operations:
     deprecation_message: ''
   - name: /
     operation: /
-    summary: |-
+    summary: |
       Produces a `Datatype.Vector3` by dividing each component of the provided
       vector by the number.
-    description: |-
+    description: |
       Produces a `Datatype.Vector3` by dividing each component of the provided
       vector by the number.
     type_a: Vector3
@@ -587,10 +609,10 @@ math_operations:
     deprecation_message: ''
   - name: //
     operation: //
-    summary: |-
+    summary: |
       Produces a `Datatype.Vector3` by **floor dividing** each component of the
       provided vector by the number.
-    description: |-
+    description: |
       Produces a `Datatype.Vector3` by **floor dividing** each component of the
       provided vector by the number.
     type_a: Vector3

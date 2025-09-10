@@ -1402,8 +1402,9 @@ methods:
 
       Naming requirements and restrictions:
 
-      - Names must only use alphanumeric characters and underscore.
-      - No spaces or unique symbols are allowed.
+      - Names must only use alphanumeric characters.
+        - You may also include periods, hyphens, slashes, and underscores.
+      - No spaces or unique symbols (such as @, ~, !) are allowed.
       - Strings must be 100 characters or less.
       - Names are not allowed to start with **RBX** unless the caller is a
         Roblox core script (reserved for Roblox).

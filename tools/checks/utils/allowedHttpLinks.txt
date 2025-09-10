@@ -673,3 +673,9 @@ https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Transfer-Encoding
 https://www.youtube-nocookie.com/embed/x1JgsC8c8VQ
 https://www.youtube-nocookie.com/embed/PqB6DC_kxHM
+http://open-notify.org
+http://www.json.org/
+https://en.wikipedia.org/wiki/%22Hello,_World!%22_program
+https://pastebin.com/api
+http://open-notify.org/Open-Notify-API/ISS-Location-Now/
+https://www.ecma-international.org/publications-and-standards/standards/ecma-404/

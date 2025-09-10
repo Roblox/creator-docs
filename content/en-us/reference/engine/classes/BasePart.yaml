@@ -5,8 +5,9 @@
 name: BasePart
 type: class
 memory_category: Instances
-summary: The abstract base class for in-world objects that physically interact.
-description: |-
+summary: |
+  The abstract base class for in-world objects that physically interact.
+description: |
   `Class.BasePart` is an abstract base class for in-world objects that render
   and are physically simulated while in the `Class.Workspace`. There are several
   implementations of `Class.BasePart`, the most common being `Class.Part` and
@@ -53,8 +54,9 @@ tags:
 deprecation_message: ''
 properties:
   - name: BasePart.Anchored
-    summary: Determines whether a part is immovable by physics.
-    description: |-
+    summary: |
+      Determines whether a part is immovable by physics.
+    description: |
       The `Anchored` property determines whether the part will be immovable by
       physics. When enabled, a part will never change position due to gravity,
       other part collisions, overlapping other parts, or any other
@@ -90,8 +92,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.AssemblyAngularVelocity
-    summary: The angular velocity of the part's assembly.
-    description: |-
+    summary: |
+      The angular velocity of the part's assembly.
+    description: |
       The angular velocity vector of this part's assembly. It's the rate of
       change of orientation in radians per second.
 
@@ -125,8 +128,9 @@ properties:
       can_save: false
     capabilities: []
   - name: BasePart.AssemblyCenterOfMass
-    summary: The center of mass of the part's assembly in world space.
-    description: |-
+    summary: |
+      The center of mass of the part's assembly in world space.
+    description: |
       A position calculated via the `Class.BasePart.Mass|Mass` and
       `Class.BasePart.Position|Position` of all the parts in the assembly.
 
@@ -153,8 +157,9 @@ properties:
       can_save: false
     capabilities: []
   - name: BasePart.AssemblyLinearVelocity
-    summary: The linear velocity of the part's assembly.
-    description: |-
+    summary: |
+      The linear velocity of the part's assembly.
+    description: |
       The linear velocity vector of this part's assembly. It's the rate of
       change in position of
       `Class.BasePart.AssemblyCenterOfMass|AssemblyCenterOfMass` in studs per
@@ -192,8 +197,9 @@ properties:
       can_save: false
     capabilities: []
   - name: BasePart.AssemblyMass
-    summary: The total mass of the part's assembly.
-    description: |-
+    summary: |
+      The total mass of the part's assembly.
+    description: |
       The sum of the mass of all the `Class.BasePart|BaseParts` in this part's
       assembly. Parts that are `Class.BasePart.Massless|Massless` and are not
       the assembly's root part will not contribute to the `AssemblyMass`.
@@ -217,10 +223,12 @@ properties:
       can_save: false
     capabilities: []
   - name: BasePart.AssemblyRootPart
-    summary: A reference to the root part of the assembly.
-    description: |-
+    summary: |
+      A reference to the root part of the assembly.
+    description: |
       This property indicates the `Class.BasePart` automatically chosen to
-      represent the assembly's root part. If the part is not parented to the `Class.Workspace`, this property will be `nil`.
+      represent the assembly's root part. If the part is not parented to the
+      `Class.Workspace`, this property will be `nil`.
 
       The root part can be changed by changing the
       `Class.BasePart.RootPriority|RootPriority` of the parts in the assembly.
@@ -245,11 +253,11 @@ properties:
       can_save: false
     capabilities: []
   - name: BasePart.AudioCanCollide
-    summary: |-
+    summary: |
       Determines whether the part will physically interact with audio
       simulation, similar to `Class.BasePart.CastShadow|CastShadow` for
       lighting.
-    description: |-
+    description: |
       `AudioCanCollide` determines whether the part will physically interact
       with audio simulation, similar to `Class.BasePart.CastShadow|CastShadow`
       for lighting.
@@ -270,10 +278,10 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.BackParamA
-    summary: |-
+    summary: |
       Determines the first parameter for the SurfaceType on the Back face of a
       part.
-    description: |-
+    description: |
       The `BackParamA` property is relevant when a part's
       `Class.BasePart.BackSurface` is set to Motor or SteppingMotor and
       `Class.BasePart.BackSurfaceInput` is set to Sin. It determines the
@@ -295,10 +303,10 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.BackParamB
-    summary: |-
+    summary: |
       Determines the second parameter for the SurfaceType on the Back face of a
       part.
-    description: |-
+    description: |
       The `BackParamB` property is relevant when a part's
       `Class.BasePart.BackSurface` is set to Motor or SteppingMotor and
       `Class.BasePart.BackSurfaceInput` is set to Constant or Sin. For Constant,
@@ -321,8 +329,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.BackSurface
-    summary: Determines the type of surface for the back face of a part.
-    description: |-
+    summary: |
+      Determines the type of surface for the back face of a part.
+    description: |
       The `BackSurface` property determines the type of surface used for the
       positive **Z** direction of a part. When two parts' faces are placed next
       to each other, they may create a joint between them.
@@ -340,8 +349,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.BackSurfaceInput
-    summary: Determines the kind of input for the Back face of a part.
-    description: |-
+    summary: |
+      Determines the kind of input for the Back face of a part.
+    description: |
       The `BackSurfaceInput` property determines the kind of input provided to a
       part's `Class.BasePart.BackSurface`. This is only relevant for Motor or
       SteppingMotor SurfaceTypes. This property determines how
@@ -372,10 +382,10 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.BottomParamA
-    summary: |-
+    summary: |
       Determines the first parameter for the SurfaceType on the Bottom face of a
       part.
-    description: |-
+    description: |
       The `BottomParamA` property is relevant when a part's
       `Class.BasePart.BottomSurface` is set to Motor or SteppingMotor and
       `Class.BasePart.BottomSurfaceInput` is set to Sin. It determines the
@@ -397,10 +407,10 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.BottomParamB
-    summary: |-
+    summary: |
       Determines the second parameter for the SurfaceType on the Bottom face of
       a part.
-    description: |-
+    description: |
       The `BottomParamB` property is relevant when a part's
       `Class.BasePart.BottomSurface` is set to Motor or SteppingMotor and
       `Class.BasePart.BottomSurfaceInput` is set to Constant or Sin. For
@@ -423,8 +433,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.BottomSurface
-    summary: Determines the type of surface for the bottom face of a part.
-    description: |-
+    summary: |
+      Determines the type of surface for the bottom face of a part.
+    description: |
       The `BottomSurface` property determines the type of surface used for the
       negative **Y** direction of a part. When two parts' faces are placed next
       to each other, they may create a joint between them.
@@ -442,8 +453,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.BottomSurfaceInput
-    summary: Determines the kind of input for the Bottom face of a part.
-    description: |-
+    summary: |
+      Determines the kind of input for the Bottom face of a part.
+    description: |
       The `BottomSurfaceInput` property determines the kind of input provided to
       a part's `Class.BasePart.BottomSurface`. This is only relevant for Motor
       or SteppingMotor SurfaceTypes. This property determines how
@@ -474,8 +486,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.BrickColor
-    summary: Determines the color of a part.
-    description: |-
+    summary: |
+      Determines the color of a part.
+    description: |
       This property determines the color of a part. If the part has a
       `Class.BasePart.Material|Material`, this also determines the color used
       when rendering the material texture. For more control over the color, the
@@ -500,10 +513,10 @@ properties:
       can_save: false
     capabilities: []
   - name: BasePart.CFrame
-    summary: |-
+    summary: |
       Determines the position and orientation of the `Class.BasePart` in the
       world.
-    description: |-
+    description: |
       The `CFrame` property determines both the position and orientation of the
       `Class.BasePart` in the world. It acts as an arbitrary reference location
       on the geometry, but `Class.BasePart.ExtentsCFrame|ExtentsCFrame`
@@ -536,8 +549,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.CanCollide
-    summary: Determines whether a part may collide with other parts.
-    description: |-
+    summary: |
+      Determines whether a part may collide with other parts.
+    description: |
       `CanCollide` determines whether a part will physically interact with other
       parts. When disabled, other parts can pass through the part uninterrupted.
       Parts used for **decoration** usually have `CanCollide` disabled, as they
@@ -568,8 +582,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.CanQuery
-    summary: Determines whether the part is considered during spatial query operations.
-    description: |-
+    summary: |
+      Determines whether the part is considered during spatial query operations.
+    description: |
       This property determines whether the part is considered during spatial
       query operations, such as
       `Class.WorldRoot:GetPartBoundsInBox()|GetPartBoundsInBox` or
@@ -595,10 +610,10 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.CanTouch
-    summary: |-
+    summary: |
       Determines if `Class.BasePart.Touched|Touched` and
       `Class.BasePart.TouchEnded|TouchEnded` events fire on the part.
-    description: |-
+    description: |
       This property determines if `Class.BasePart.Touched|Touched` and
       `Class.BasePart.TouchEnded|TouchEnded` events fire on the part. If `true`,
       other touching parts must also have `CanTouch` set to `true` for touch
@@ -634,8 +649,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.CastShadow
-    summary: Determines whether or not a part casts a shadow.
-    description: |-
+    summary: |
+      Determines whether or not a part casts a shadow.
+    description: |
       Determines whether or not a part casts a shadow. Disabling this property
       for a given part can cause visual artifacts on the shadows cast upon that
       part.
@@ -658,8 +674,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.CenterOfMass
-    summary: Describes the world position in which a part's center of mass is located.
-    description: |-
+    summary: |
+      Describes the world position in which a part's center of mass is located.
+    description: |
       The `CenterOfMass` property describes the **local** position of a part's
       center of mass. If this is a single part assembly, this is the
       `Class.BasePart.AssemblyCenterOfMass|AssemblyCenterOfMass` converted from
@@ -682,8 +699,9 @@ properties:
       can_save: false
     capabilities: []
   - name: BasePart.CollisionGroup
-    summary: Describes the name of a part's collision group.
-    description: |-
+    summary: |
+      Describes the name of a part's collision group.
+    description: |
       The `CollisionGroup` property describes the name of the part's collision
       group (maximum of 100 characters). Parts start off in the default group
       whose name is `"Default"`. This value cannot be empty.
@@ -707,8 +725,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.CollisionGroupId
-    summary: Describes the automatically set ID number of a part's collision group.
-    description: |-
+    summary: |
+      Describes the automatically set ID number of a part's collision group.
+    description: |
       The `Class.BasePart.CollisionGroupId` property describes the ID number of
       the part's collision group. Parts start off in the `"Default"` group whose
       ID is 0. If a part is unregistered, the value becomes -1. This value
@@ -734,8 +753,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.Color
-    summary: Determines the color of a part.
-    description: |-
+    summary: |
+      Determines the color of a part.
+    description: |
       The `Color` property determines the color of a part. If the part has a
       `Class.BasePart.Material|Material`, this also determines the color used
       when rendering the material texture.
@@ -762,8 +782,9 @@ properties:
       can_save: false
     capabilities: []
   - name: BasePart.CurrentPhysicalProperties
-    summary: Indicates the current physical properties of the part.
-    description: |-
+    summary: |
+      Indicates the current physical properties of the part.
+    description: |
       `CurrentPhysicalProperties` indicates the current physical properties of
       the part. You can set custom values for the physical properties per part,
       [custom material](../../../parts/materials.md), and material override. The
@@ -792,8 +813,9 @@ properties:
       can_save: false
     capabilities: []
   - name: BasePart.CustomPhysicalProperties
-    summary: Determines several physical properties of a part.
-    description: |-
+    summary: |
+      Determines several physical properties of a part.
+    description: |
       `CustomPhysicalProperties` lets you customize various physical aspects of
       a part, such as its density, friction, and elasticity.
 
@@ -815,10 +837,10 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.Elasticity
-    summary: |-
+    summary: |
       Used to control the Elasticity of the part, but it no longer does
       anything.
-    description: |-
+    description: |
       The Elasticity of a part is now determined by either its `Enum.Material`
       or its `CustomPhysicalProperties`.
     code_samples: []
@@ -827,7 +849,7 @@ properties:
       - Hidden
       - NotReplicated
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This is only one of multiple physics-related properties. It has been
       deprecated in favor of `Class.BasePart.CustomPhysicalProperties`, which
       combines these properties into one.
@@ -841,8 +863,9 @@ properties:
       can_save: false
     capabilities: []
   - name: BasePart.EnableFluidForces
-    summary: Used to enable or disable aerodynamic forces on parts and assemblies.
-    description: |-
+    summary: |
+      Used to enable or disable aerodynamic forces on parts and assemblies.
+    description: |
       When `true`, and when `Class.Workspace.FluidForces` is enabled, causes the
       physics engine to compute aerodynamic forces on this `Class.BasePart`.
     code_samples: []
@@ -859,8 +882,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.ExtentsCFrame
-    summary: The `Datatype.CFrame` of the physical extents of the `Class.BasePart`.
-    description: |-
+    summary: |
+      The `Datatype.CFrame` of the physical extents of the `Class.BasePart`.
+    description: |
       The `Datatype.CFrame` of the physical extents of the `Class.BasePart`,
       representing its physical center.
     code_samples: []
@@ -879,10 +903,10 @@ properties:
       can_save: false
     capabilities: []
   - name: BasePart.ExtentsSize
-    summary: |-
+    summary: |
       The actual physical size of the `Class.BasePart` as regarded by the
       physics engine.
-    description: |-
+    description: |
       The actual physical size of the `Class.BasePart` as regarded by the
       physics engine, for example in
       [collision detection](../../../workspace/collisions.md).
@@ -902,10 +926,10 @@ properties:
       can_save: false
     capabilities: []
   - name: BasePart.Friction
-    summary: |-
+    summary: |
       Used to control the Friction of the part, but now it no longer does
       anything.
-    description: |-
+    description: |
       Used to control the Friction of the part, but now it no longer does
       anything. The Friction of a part is now determined by either its
       `Class.BasePart.Material|Material` or its
@@ -916,7 +940,7 @@ properties:
       - Hidden
       - NotReplicated
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This is only one of multiple physics-related properties. It has been
       deprecated in favor of `Class.BasePart.CustomPhysicalProperties`, which
       combines these properties into one.
@@ -930,10 +954,10 @@ properties:
       can_save: false
     capabilities: []
   - name: BasePart.FrontParamA
-    summary: |-
+    summary: |
       Determines the first parameter for the SurfaceType on the Front face of a
       part.
-    description: |-
+    description: |
       The `FrontParamA` property is relevant when a part's
       `Class.BasePart.FrontSurface` is set to Motor or SteppingMotor and
       `Class.BasePart.FrontSurfaceInput` is set to Sin. It determines the
@@ -955,10 +979,10 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.FrontParamB
-    summary: |-
+    summary: |
       Determines the second parameter for the SurfaceType on the Front face of a
       part.
-    description: |-
+    description: |
       The `FrontParamB` property is relevant when a part's
       `Class.BasePart.FrontSurface` is set to Motor or SteppingMotor and
       `Class.BasePart.FrontSurfaceInput` is set to Constant or Sin. For
@@ -981,8 +1005,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.FrontSurface
-    summary: Determines the type of surface for the front face of a part.
-    description: |-
+    summary: |
+      Determines the type of surface for the front face of a part.
+    description: |
       The `FrontSurface` property determines the type of surface used for the
       negative **Z** direction of a part. When two parts' faces are placed next
       to each other, they may create a joint between them.
@@ -1000,8 +1025,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.FrontSurfaceInput
-    summary: Determines the kind of input for the Front face of a part (-Z direction).
-    description: |-
+    summary: |
+      Determines the kind of input for the Front face of a part (-Z direction).
+    description: |
       The `FrontSurfaceInput` property determines the kind of input provided to
       a part's `Class.BasePart.FrontSurface`. This is only relevant for Motor or
       SteppingMotor SurfaceTypes. This property determines how
@@ -1032,10 +1058,10 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.LeftParamA
-    summary: |-
+    summary: |
       Determines the first parameter for the SurfaceType on the Left face of a
       part.
-    description: |-
+    description: |
       The `LeftParamA` property is relevant when a part's
       `Class.BasePart.LeftSurface` is set to Motor or SteppingMotor and
       `Class.BasePart.LeftSurfaceInput` is set to Sin. It determines the
@@ -1057,10 +1083,10 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.LeftParamB
-    summary: |-
+    summary: |
       Determines the second parameter for the SurfaceType on the Left face of a
       part.
-    description: |-
+    description: |
       The LeftParamB property is relevant when a part's
       `Class.BasePart.LeftSurface` is set to Motor or SteppingMotor and
       `Class.BasePart.LeftSurfaceInput` is set to Constant or Sin. For Constant,
@@ -1083,8 +1109,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.LeftSurface
-    summary: Determines the type of surface for the left face of a part.
-    description: |-
+    summary: |
+      Determines the type of surface for the left face of a part.
+    description: |
       The `LeftSurface` property determines the type of surface used for the
       negative **X** direction of a part. When two parts' faces are placed next
       to each other, they may create a joint between them.
@@ -1102,8 +1129,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.LeftSurfaceInput
-    summary: Determines the kind of input for the Left face of a part.
-    description: |-
+    summary: |
+      Determines the kind of input for the Left face of a part.
+    description: |
       The `LeftSurfaceInput` property determines the kind of input provided to a
       part's `Class.BasePart.LeftSurface`. This is only relevant for Motor or
       SteppingMotor SurfaceTypes. This property determines how
@@ -1134,10 +1162,10 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.LocalTransparencyModifier
-    summary: |-
+    summary: |
       Determines a multiplier for `Class.BasePart.Transparency` that is only
       visible to the local client.
-    description: |-
+    description: |
       The `LocalTransparencyModifier` property is a multiplier to
       `Class.BasePart.Transparency|Transparency` that is only visible to the
       local client. It does not replicate from client to server and is useful
@@ -1209,8 +1237,9 @@ properties:
       can_save: false
     capabilities: []
   - name: BasePart.Locked
-    summary: Determines whether a part is selectable in Studio.
-    description: |-
+    summary: |
+      Determines whether a part is selectable in Studio.
+    description: |
       The `Locked` property determines whether a part (or a `Class.Model` it is
       contained within) may be selected in Studio by clicking on it. This
       property is most often enabled on parts within environment models that
@@ -1230,8 +1259,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.Mass
-    summary: Describes the mass of the part, the product of its density and volume.
-    description: |-
+    summary: |
+      Describes the mass of the part, the product of its density and volume.
+    description: |
       `Mass` is a read-only property that describes the product of a part's
       volume and density. It is returned by the
       `Class.BasePart:GetMass()|GetMass()` function.
@@ -1259,10 +1289,10 @@ properties:
       can_save: false
     capabilities: []
   - name: BasePart.Massless
-    summary: |-
+    summary: |
       Determines whether the part contributes to the total mass or inertia of
       its rigid body.
-    description: |-
+    description: |
       If this property is enabled, the part will not contribute to the total
       mass or inertia of its assembly as long as it is welded to another part
       that has mass.
@@ -1294,8 +1324,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.Material
-    summary: Determines the texture and default physical properties of a part.
-    description: |-
+    summary: |
+      Determines the texture and default physical properties of a part.
+    description: |
       The `Material` property allows you to set a part's texture and default
       physical properties (in the case that
       `Class.BasePart.CustomPhysicalProperties|CustomPhysicalProperties` is
@@ -1331,8 +1362,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.MaterialVariant
-    summary: The name of `Class.MaterialVariant`.
-    description: |-
+    summary: |
+      The name of `Class.MaterialVariant`.
+    description: |
       The system searches the `Class.MaterialVariant` instance with the
       specified `MaterialVariant` name and `Class.BasePart.Material|Material`
       type. If it successfully finds a matching `Class.MaterialVariant`
@@ -1354,8 +1386,9 @@ properties:
       can_save: false
     capabilities: []
   - name: BasePart.Orientation
-    summary: Describes the rotation of the part in the world.
-    description: |-
+    summary: |
+      Describes the rotation of the part in the world.
+    description: |
       The `Orientation` property describes the part's rotation in degrees around
       the **X**, **Y**, and **Z** axes using a `Datatype.Vector3`. The rotations
       are applied in **Y**&nbsp;⟩&nbsp;**X**&nbsp;⟩&nbsp;**Z** order. This
@@ -1394,8 +1427,9 @@ properties:
       can_save: false
     capabilities: []
   - name: BasePart.PivotOffset
-    summary: Specifies the offset of the part's pivot from its `Datatype.CFrame`.
-    description: |-
+    summary: |
+      Specifies the offset of the part's pivot from its `Datatype.CFrame`.
+    description: |
       This property specifies the offset of the part's pivot from its
       `Datatype.CFrame`, that is `Class.BasePart:GetPivot()` is the same as
       `Class.BasePart.CFrame` multiplied by `Class.BasePart.PivotOffset`.
@@ -1427,8 +1461,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.Position
-    summary: Describes the position of the part in the world.
-    description: |-
+    summary: |
+      Describes the position of the part in the world.
+    description: |
       The `Position` property describes the coordinates of a part using a
       `Datatype.Vector3`. It reflects the position of the part's
       `Class.BasePart.CFrame|CFrame`, however it can also be set.
@@ -1455,8 +1490,9 @@ properties:
       can_save: false
     capabilities: []
   - name: BasePart.ReceiveAge
-    summary: Time since last recorded physics update.
-    description: |-
+    summary: |
+      Time since last recorded physics update.
+    description: |
       Indicates the time in seconds since the part's physics were last updated
       on the local client or the server. This value will be `0` when the part
       has no physics (`Class.BasePart.Anchored|Anchored` is `true`).
@@ -1477,8 +1513,9 @@ properties:
       can_save: false
     capabilities: []
   - name: BasePart.Reflectance
-    summary: Determines how much a part reflects the skybox.
-    description: |-
+    summary: |
+      Determines how much a part reflects the skybox.
+    description: |
       The `Reflectance` property determines how much a part reflects the sky. A
       value of `0` indicates the part is not reflective at all, and a value of
       `1` indicates the part should fully reflect.
@@ -1501,10 +1538,10 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.ResizeIncrement
-    summary: |-
+    summary: |
       Describes the smallest change in size allowable by the
       `Class.BasePart:Resize()|Resize()` method.
-    description: |-
+    description: |
       The `ResizeIncrement` property is a read-only property that describes the
       smallest change in size allowable by the
       `Class.BasePart:Resize()|Resize()` method. It differs between
@@ -1527,8 +1564,9 @@ properties:
       can_save: false
     capabilities: []
   - name: BasePart.ResizeableFaces
-    summary: Describes the faces on which a part may be resized.
-    description: |-
+    summary: |
+      Describes the faces on which a part may be resized.
+    description: |
       The `ResizeableFaces` property uses a `Datatype.Faces` object to describe
       the different faces on which a part may be resized. For most
       implementations of `Class.BasePart`, such as `Class.Part` and
@@ -1559,10 +1597,10 @@ properties:
       can_save: false
     capabilities: []
   - name: BasePart.RightParamA
-    summary: |-
+    summary: |
       Determines the first parameter for the SurfaceType on the Right face of a
       part.
-    description: |-
+    description: |
       The `RightParamA` property is relevant when a part's
       `Class.BasePart.RightSurface` is set to Motor or SteppingMotor and
       `Class.BasePart.RightSurfaceInput` is set to Sin. It determines the
@@ -1584,10 +1622,10 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.RightParamB
-    summary: |-
+    summary: |
       Determines the second parameter for the SurfaceType on the Right face of a
       part.
-    description: |-
+    description: |
       The `RightParamB` property is relevant when a part's
       `Class.BasePart.RightSurface` is set to Motor or SteppingMotor and
       `Class.BasePart.RightSurfaceInput` is set to Constant or Sin. For
@@ -1610,8 +1648,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.RightSurface
-    summary: Determines the type of surface for the right face of a part.
-    description: |-
+    summary: |
+      Determines the type of surface for the right face of a part.
+    description: |
       The `RightSurface` property determines the type of surface used for the
       positive **X** direction of a part. When two parts' faces are placed next
       to each other, they may create a joint between them.
@@ -1629,8 +1668,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.RightSurfaceInput
-    summary: Determines the kind of input for the Right face of a part (-X direction).
-    description: |-
+    summary: |
+      Determines the kind of input for the Right face of a part (-X direction).
+    description: |
       The RightSurfaceInput property determines the kind of input provided to a
 
       - For Sin, the motor rotates at a velocity equal to
@@ -1653,8 +1693,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.RootPriority
-    summary: The main rule in determining the root part of an assembly.
-    description: |-
+    summary: |
+      The main rule in determining the root part of an assembly.
+    description: |
       This property is an integer between `-127` and `127` that takes precedence
       over all other rules for root part sort. When considering multiple parts
       that are not `Class.BasePart.Anchored|Anchored` and which share the same
@@ -1680,8 +1721,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.RotVelocity
-    summary: Determines a part's change in orientation over time.
-    description: |-
+    summary: |
+      Determines a part's change in orientation over time.
+    description: |
       The `RotVelocity` of a `Class.BasePart|part` describes how its
       `Class.BasePart.Orientation` is presently changing. In other words, this
       property describes how the fast part is rotating. The part only rotates if
@@ -1697,7 +1739,8 @@ properties:
     tags:
       - Hidden
       - Deprecated
-    deprecation_message: This property is deprecated. Use `AssemblyAngularVelocity` instead.
+    deprecation_message: |
+      This property is deprecated. Use `AssemblyAngularVelocity` instead.
     security:
       read: None
       write: None
@@ -1708,8 +1751,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.Rotation
-    summary: The rotation of the part in degrees for the three axes.
-    description: |-
+    summary: |
+      The rotation of the part in degrees for the three axes.
+    description: |
       The rotation of the part in degrees for the three axes.
 
       When setting this property, any `Class.Weld|Welds` or
@@ -1733,8 +1777,9 @@ properties:
       can_save: false
     capabilities: []
   - name: BasePart.Size
-    summary: Determines the dimensions of a part (length, width, height).
-    description: |-
+    summary: |
+      Determines the dimensions of a part (length, width, height).
+    description: |
       A part's `Size` property determines its **visual** dimensions, while
       `Class.BasePart.ExtentsSize|ExtentsSize` represents the actual size used
       by the physics engine, such as in
@@ -1770,10 +1815,10 @@ properties:
       can_save: false
     capabilities: []
   - name: BasePart.SpecificGravity
-    summary: |-
+    summary: |
       The ratio of the part's density to the density of water determined by the
       `Class.BasePart.Material`.
-    description: |-
+    description: |
       The ratio of the part's density to the density of water determined by the
       `Class.BasePart.Material`. Effects the part's behavior when in a water
       terrain cell. Essentially, SpecificGravity refers to how many times more
@@ -1869,7 +1914,7 @@ properties:
       - ReadOnly
       - NotReplicated
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This item is deprecated. See `Class.BasePart.CustomPhysicalProperties` to
       see how to configure the physical properties of BaseParts. Do not use it
       for new work.
@@ -1883,10 +1928,10 @@ properties:
       can_save: false
     capabilities: []
   - name: BasePart.TopParamA
-    summary: |-
+    summary: |
       Determines the first parameter for the SurfaceType on the Top face of a
       part.
-    description: |-
+    description: |
       The TopParamA property is relevant when a part's
       `Class.BasePart.TopSurface` is set to Motor or SteppingMotor and
       `Class.BasePart.TopSurfaceInput` is set to Sin. It determines the
@@ -1908,10 +1953,10 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.TopParamB
-    summary: |-
+    summary: |
       Determines the second parameter for the SurfaceType on the Top face of a
       part.
-    description: |-
+    description: |
       The TopParamB property is relevant when a part's
       `Class.BasePart.TopSurface` is set to Motor or SteppingMotor and
       `Class.BasePart.TopSurfaceInput` is set to Constant or Sin. For Constant,
@@ -1934,8 +1979,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.TopSurface
-    summary: Determines the type of surface for the top face of a part.
-    description: |-
+    summary: |
+      Determines the type of surface for the top face of a part.
+    description: |
       The `TopSurface` property determines the type of surface used for the
       positive **Y** direction of a part. When two parts' faces are placed next
       to each other, they may create a joint between them.
@@ -1953,8 +1999,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.TopSurfaceInput
-    summary: Determines the kind of input for the Top face of a part (+Y direction).
-    description: |-
+    summary: |
+      Determines the kind of input for the Top face of a part (+Y direction).
+    description: |
       The `TopSurfaceInput` property determines the kind of input provided to a
       part's `Class.BasePart.TopSurface`. This is only relevant for Motor or
       SteppingMotor SurfaceTypes. This property determines how
@@ -1985,10 +2032,10 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.Transparency
-    summary: |-
+    summary: |
       Determines how much a part can be seen through (the inverse of part
       opacity).
-    description: |-
+    description: |
       The `Transparency` property controls the visibility of a part on a scale
       of `0` to `1` where `0` is completely visible (opaque) and `1` is
       completely invisible (not rendered at all).
@@ -2018,8 +2065,9 @@ properties:
       can_save: true
     capabilities: []
   - name: BasePart.Velocity
-    summary: Determines a part's change in position over time.
-    description: |-
+    summary: |
+      Determines a part's change in position over time.
+    description: |
       The Velocity of a part describes how its `Class.BasePart.Position` is
       presently changing. The unit of this property is **studs per second**. For
       reference, the default Roblox character moves at 16 studs per second via
@@ -2042,7 +2090,8 @@ properties:
     tags:
       - Hidden
       - Deprecated
-    deprecation_message: This property is deprecated. Use `AssemblyLinearVelocity` instead.
+    deprecation_message: |
+      This property is deprecated. Use `AssemblyLinearVelocity` instead.
     security:
       read: None
       write: None
@@ -2060,7 +2109,7 @@ properties:
     tags:
       - NotReplicated
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This deprecated property is an old Camel Case variant of the Pascal Case
       `Class.BasePart.BrickColor`, which should be used instead.
     security:
@@ -2095,8 +2144,9 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: BasePart:ApplyAngularImpulse
-    summary: Apply an angular impulse to the assembly.
-    description: |-
+    summary: |
+      Apply an angular impulse to the assembly.
+    description: |
       Applies an instant angular force impulse to this part's assembly, causing
       the assembly to spin.
 
@@ -2118,7 +2168,8 @@ methods:
       - name: impulse
         type: Vector3
         default:
-        summary: An angular impulse vector to be applied to the assembly.
+        summary: |
+          An angular impulse vector to be applied to the assembly.
     returns:
       - type: ()
         summary: ''
@@ -2128,10 +2179,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: BasePart:ApplyImpulse
-    summary: |-
+    summary: |
       Apply an impulse to the assembly at the assembly's
       `Class.BasePart.AssemblyCenterOfMass|center of mass`.
-    description: |-
+    description: |
       This function applies an instant force impulse to this part's assembly.
 
       The force is applied at the assembly's
@@ -2156,7 +2207,8 @@ methods:
       - name: impulse
         type: Vector3
         default:
-        summary: A linear impulse vector to be applied to the assembly.
+        summary: |
+          A linear impulse vector to be applied to the assembly.
     returns:
       - type: ()
         summary: ''
@@ -2166,8 +2218,9 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: BasePart:ApplyImpulseAtPosition
-    summary: Apply an impulse to the assembly at specified position.
-    description: |-
+    summary: |
+      Apply an impulse to the assembly at specified position.
+    description: |
       This function applies an instant force impulse to this part's assembly, at
       the specified position in world space.
 
@@ -2194,11 +2247,13 @@ methods:
       - name: impulse
         type: Vector3
         default:
-        summary: An impulse vector to be applied to the assembly.
+        summary: |
+          An impulse vector to be applied to the assembly.
       - name: position
         type: Vector3
         default:
-        summary: The position, in world space, to apply the impulse.
+        summary: |
+          The position, in world space, to apply the impulse.
     returns:
       - type: ()
         summary: ''
@@ -2208,10 +2263,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: BasePart:BreakJoints
-    summary: |-
+    summary: |
       Breaks any surface connection with any adjacent part, including
       `Class.Weld` and other `Class.JointInstance`.
-    description: |-
+    description: |
       Breaks any surface connection with any adjacent part, including
       `Class.Weld` and other `Class.JointInstance`.
     code_samples: []
@@ -2226,8 +2281,9 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: BasePart:CanCollideWith
-    summary: Returns whether the parts can collide with each other.
-    description: |-
+    summary: |
+      Returns whether the parts can collide with each other.
+    description: |
       Returns whether the parts can collide with each other or not. This
       function takes into account the collision groups of the two parts. This
       function will error if the specified part is not a BasePart.
@@ -2236,18 +2292,21 @@ methods:
       - name: part
         type: BasePart
         default:
-        summary: The specified part being checked for collidability.
+        summary: |
+          The specified part being checked for collidability.
     returns:
       - type: boolean
-        summary: Whether the parts can collide with each other.
+        summary: |
+          Whether the parts can collide with each other.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Safe
     capabilities: []
   - name: BasePart:CanSetNetworkOwnership
-    summary: Checks whether you can set a part's network ownership.
-    description: |-
+    summary: |
+      Checks whether you can set a part's network ownership.
+    description: |
       The CanSetNetworkOwnership function checks whether you can set a part's
       network ownership.
 
@@ -2261,7 +2320,8 @@ methods:
     parameters: []
     returns:
       - type: Tuple
-        summary: Whether you can modify or read the network ownership and the reason.
+        summary: |
+          Whether you can modify or read the network ownership and the reason.
     tags: []
     deprecation_message: ''
     security: None
@@ -2285,10 +2345,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: BasePart:GetConnectedParts
-    summary: |-
+    summary: |
       Returns a table of parts connected to the object by any kind of rigid
       joint.
-    description: |-
+    description: |
       Returns a table of parts connected to the object by any kind of rigid
       joint.
 
@@ -2312,7 +2372,7 @@ methods:
       - name: recursive
         type: boolean
         default: false
-        summary: |-
+        summary: |
           A table of parts connected to the object by any kind of
           `Class.JointInstance|joint`.
     returns:
@@ -2324,21 +2384,25 @@ methods:
     thread_safety: Safe
     capabilities: []
   - name: BasePart:GetJoints
-    summary: Return all Joints or Constraints that is connected to this Part.
-    description: Return all Joints or Constraints that is connected to this Part.
+    summary: |
+      Return all Joints or Constraints that is connected to this Part.
+    description: |
+      Return all Joints or Constraints that is connected to this Part.
     code_samples: []
     parameters: []
     returns:
       - type: Instances
-        summary: An array of all Joints or Constraints connected to the Part.
+        summary: |
+          An array of all Joints or Constraints connected to the Part.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Safe
     capabilities: []
   - name: BasePart:GetMass
-    summary: Returns the value of the `Class.BasePart.Mass|Mass` property.
-    description: |-
+    summary: |
+      Returns the value of the `Class.BasePart.Mass|Mass` property.
+    description: |
       **GetMass** returns the value of the read-only `Class.BasePart.Mass|Mass`
       property.
 
@@ -2349,24 +2413,25 @@ methods:
     parameters: []
     returns:
       - type: float
-        summary: The part's mass.
+        summary: |
+          The part's mass.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Safe
     capabilities: []
   - name: BasePart:GetNetworkOwner
-    summary: |-
+    summary: |
       Returns the current player who is the network owner of this part, or `nil`
       in case of the server.
-    description: |-
+    description: |
       Returns the current player who is the network owner of this part, or `nil`
       in case of the server.
     code_samples: []
     parameters: []
     returns:
       - type: Instance
-        summary: |-
+        summary: |
           The current player who is the network owner of this part, or `nil` in
           case of the server.
     tags: []
@@ -2375,17 +2440,17 @@ methods:
     thread_safety: Safe
     capabilities: []
   - name: BasePart:GetNetworkOwnershipAuto
-    summary: |-
+    summary: |
       Returns true if the game engine automatically decides the network owner
       for this part.
-    description: |-
+    description: |
       Returns true if the game engine automatically decides the network owner
       for this part.
     code_samples: []
     parameters: []
     returns:
       - type: boolean
-        summary: |-
+        summary: |
           Whether the game engine automatically decides the network owner for
           this part.
     tags: []
@@ -2407,8 +2472,9 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: BasePart:GetRenderCFrame
-    summary: OBSOLETE. Returns a CFrame describing where the part is being rendered at.
-    description: |-
+    summary: |
+      OBSOLETE. Returns a CFrame describing where the part is being rendered at.
+    description: |
       This function used to be relevant when Roblox's lag-compensating
       interpolation of parts online was internal. The interpolation is now
       applied to the `Datatype.CFrame` directly.
@@ -2419,15 +2485,16 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This item is been deprecated since interpolation is now applied to the
       `Datatype.CFrame` directly. Do not use it for new work.
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: BasePart:GetRootPart
-    summary: Returns the base part of an assembly of parts.
-    description: |-
+    summary: |
+      Returns the base part of an assembly of parts.
+    description: |
       Returns the base part of an assembly. When moving an assembly of parts
       using a `Datatype.CFrame`. it is important to move this base part (this
       will move all other parts connected to it accordingly). More information
@@ -2441,19 +2508,20 @@ methods:
     parameters: []
     returns:
       - type: Instance
-        summary: |-
+        summary: |
           The base part of an assembly (a collection of parts connected
           together).
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Safe
     capabilities: []
   - name: BasePart:GetTouchingParts
-    summary: |-
+    summary: |
       Returns a table of all `Class.BasePart.CanCollide` true parts that
       intersect with this part.
-    description: |-
+    description: |
       Returns a table of all parts that are physically interacting with this
       part. If the part itself has CanCollide set to false, then this function
       returns an empty table unless the part has a
@@ -2467,17 +2535,18 @@ methods:
     parameters: []
     returns:
       - type: Instances
-        summary: A table of all parts that intersect and can collide with this part.
+        summary: |
+          A table of all parts that intersect and can collide with this part.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: BasePart:GetVelocityAtPosition
-    summary: |-
+    summary: |
       Returns the linear velocity of the part's assembly at the given position
       relative to this part.
-    description: |-
+    description: |
       Returns the linear velocity of the part's assembly at the given position
       relative to this part. It can be used to identify the linear velocity of
       parts in an assembly other than the root part. If the assembly has no
@@ -2498,10 +2567,10 @@ methods:
     thread_safety: Safe
     capabilities: []
   - name: BasePart:IntersectAsync
-    summary: |-
+    summary: |
       Creates a new `Class.IntersectOperation` from the overlapping geometry of
       the part and the other parts in the given array.
-    description: |-
+    description: |
       Creates a new `Class.IntersectOperation` from the intersecting geometry of
       the part and the other parts in the given array. Only `Class.Part|Parts`
       are supported, not `Class.Terrain` or `Class.MeshPart|MeshParts`. Similar
@@ -2557,22 +2626,24 @@ methods:
       - name: parts
         type: Instances
         default:
-        summary: The objects taking part in the intersection.
+        summary: |
+          The objects taking part in the intersection.
       - name: collisionfidelity
         type: CollisionFidelity
         default: Default
-        summary: |-
+        summary: |
           The `Enum.CollisionFidelity` value for the resulting
           `Class.IntersectOperation`.
       - name: renderFidelity
         type: RenderFidelity
         default: Automatic
-        summary: |-
+        summary: |
           The `Enum.RenderFidelity` value of the resulting
           `Class.PartOperation`.
     returns:
       - type: Instance
-        summary: Resulting `Class.IntersectOperation` with default name **Intersect**.
+        summary: |
+          Resulting `Class.IntersectOperation` with default name **Intersect**.
     tags:
       - Yields
     deprecation_message: ''
@@ -2581,11 +2652,11 @@ methods:
     capabilities:
       - CSG
   - name: BasePart:IsGrounded
-    summary: |-
+    summary: |
       Returns true if the object is connected to a part that will hold it in
       place (eg an `Class.BasePart.Anchored|Anchored` part), otherwise returns
       false.
-    description: |-
+    description: |
       Returns true if the object is connected to a part that will hold it in
       place (eg an `Class.BasePart.Anchored|Anchored` part), otherwise returns
       false. In an assembly that has an `Class.BasePart.Anchored|Anchored` part,
@@ -2594,17 +2665,18 @@ methods:
     parameters: []
     returns:
       - type: boolean
-        summary: Whether the object is connected to a part that will hold it in place.
+        summary: |
+          Whether the object is connected to a part that will hold it in place.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Safe
     capabilities: []
   - name: BasePart:MakeJoints
-    summary: |-
+    summary: |
       Creates a joint on any side of the object that has a surface ID that can
       make a joint.
-    description: |-
+    description: |
       Creates a joint on any side of the `Class.BasePart|Part` that has a
       `Enum.SurfaceType` that can make a joint it will create a joint with any
       adjacent parts.
@@ -2640,7 +2712,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       SurfaceType based joining is deprecated, do not use MakeJoints for new
       projects. `Class.WeldConstraint|WeldConstraints` and
       `Class.HingeConstraint|HingeConstraints` should be used instead.
@@ -2648,29 +2720,35 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: BasePart:Resize
-    summary: Changes the size of an object just like using the Studio resize tool.
-    description: Changes the size of an object just like using the Studio resize tool.
+    summary: |
+      Changes the size of an object just like using the Studio resize tool.
+    description: |
+      Changes the size of an object just like using the Studio resize tool.
     code_samples: []
     parameters:
       - name: normalId
         type: NormalId
         default:
-        summary: The side to resize.
+        summary: |
+          The side to resize.
       - name: deltaAmount
         type: int
         default:
-        summary: How much to grow/shrink on the specified side.
+        summary: |
+          How much to grow/shrink on the specified side.
     returns:
       - type: boolean
-        summary: Whether the part is resized.
+        summary: |
+          Whether the part is resized.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: BasePart:SetNetworkOwner
-    summary: Sets the given player as network owner for this and all connected parts.
-    description: |-
+    summary: |
+      Sets the given player as network owner for this and all connected parts.
+    description: |
       Sets the given player as network owner for this and all connected parts.
       When playerInstance is `nil`, the server will be the owner instead of a
       player.
@@ -2679,7 +2757,8 @@ methods:
       - name: playerInstance
         type: Player
         default: nil
-        summary: The player being given network ownership of the part.
+        summary: |
+          The player being given network ownership of the part.
     returns:
       - type: ()
         summary: ''
@@ -2689,10 +2768,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: BasePart:SetNetworkOwnershipAuto
-    summary: |-
+    summary: |
       Lets the game engine dynamically decide who will handle the part's physics
       (one of the clients or the server).
-    description: |-
+    description: |
       Lets the game engine dynamically decide who will handle the part's physics
       (one of the clients or the server).
     code_samples: []
@@ -2706,10 +2785,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: BasePart:SubtractAsync
-    summary: |-
+    summary: |
       Creates a new `Class.UnionOperation` from the part, minus the geometry
       occupied by the parts in the given array.
-    description: |-
+    description: |
       Creates a new `Class.UnionOperation` from the part, minus the geometry
       occupied by the parts in the given array. Only `Class.Part|Parts` are
       supported, not `Class.Terrain` or `Class.MeshPart|MeshParts`. Similar to
@@ -2741,22 +2820,24 @@ methods:
       - name: parts
         type: Instances
         default:
-        summary: The objects taking part in the subtraction.
+        summary: |
+          The objects taking part in the subtraction.
       - name: collisionfidelity
         type: CollisionFidelity
         default: Default
-        summary: |-
+        summary: |
           The `Enum.CollisionFidelity` value for the resulting
           `Class.UnionOperation`.
       - name: renderFidelity
         type: RenderFidelity
         default: Automatic
-        summary: |-
+        summary: |
           The `Enum.RenderFidelity` value of the resulting
           `Class.PartOperation`.
     returns:
       - type: Instance
-        summary: Resulting `Class.UnionOperation` with default name **Union**.
+        summary: |
+          Resulting `Class.UnionOperation` with default name **Union**.
     tags:
       - Yields
     deprecation_message: ''
@@ -2786,10 +2867,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: BasePart:UnionAsync
-    summary: |-
+    summary: |
       Creates a new `Class.UnionOperation` from the part, plus the geometry
       occupied by the parts in the given array.
-    description: |-
+    description: |
       Creates a new `Class.UnionOperation` from the part, plus the geometry
       occupied by the parts in the given array. Only `Class.Part|Parts` are
       supported, not `Class.Terrain` or `Class.MeshPart|MeshParts`. Similar to
@@ -2845,22 +2926,24 @@ methods:
       - name: parts
         type: Instances
         default:
-        summary: The objects taking part in the union with the calling part.
+        summary: |
+          The objects taking part in the union with the calling part.
       - name: collisionfidelity
         type: CollisionFidelity
         default: Default
-        summary: |-
+        summary: |
           The `Enum.CollisionFidelity` value for the resulting
           `Class.UnionOperation`.
       - name: renderFidelity
         type: RenderFidelity
         default: Automatic
-        summary: |-
+        summary: |
           The `Enum.RenderFidelity` value of the resulting
           `Class.PartOperation`.
     returns:
       - type: Instance
-        summary: Resulting `Class.UnionOperation` with default name **Union**.
+        summary: |
+          Resulting `Class.UnionOperation` with default name **Union**.
     tags:
       - Yields
     deprecation_message: ''
@@ -2878,7 +2961,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This deprecated function is a variant of `Class.BasePart:BreakJoints()`
       which should be used instead.
     security: None
@@ -2894,7 +2977,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This Camel Case property has been deprecated in favor of its Pascal Case
       variant, `Class.BasePart:GetMass()`.
     security: None
@@ -2910,7 +2993,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This deprecated function is a variant of `Class.BasePart:MakeJoints()`
       which should be used instead.
     security: None
@@ -2934,7 +3017,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This deprecated function is a variant of `Class.BasePart:Resize()` which
       should be used instead.
     security: None
@@ -2943,7 +3026,7 @@ methods:
 events:
   - name: BasePart.LocalSimulationTouched
     summary: ''
-    description: |-
+    description: |
       Fired when another part comes in contact with another object. This event
       only sends data to the client notifying it that two parts have collided,
       whereas `Class.BasePart.Touched` sends data to the server.
@@ -2956,17 +3039,20 @@ events:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: This event is deprecated in favor of `Class.BasePart.Touched`.
+    deprecation_message: |
+      This event is deprecated in favor of `Class.BasePart.Touched`.
     security: None
     capabilities: []
   - name: BasePart.OutfitChanged
     summary: ''
-    description: Fired if the part's appearance is affected by the `Class.Shirt` class.
+    description: |
+      Fired if the part's appearance is affected by the `Class.Shirt` class.
     code_samples: []
     parameters: []
     tags:
       - Deprecated
-    deprecation_message: This event is deprecated. Do not use it for new work.
+    deprecation_message: |
+      This event is deprecated. Do not use it for new work.
     security: None
     capabilities: []
   - name: BasePart.StoppedTouching
@@ -2980,16 +3066,16 @@ events:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This event is deprecated in favor of `Class.BasePart.TouchEnded`, which
       should be used instead.
     security: None
     capabilities: []
   - name: BasePart.TouchEnded
-    summary: |-
+    summary: |
       Fires when a part stops touching another part as a result of physical
       movement.
-    description: |-
+    description: |
       Fires when a part stops touching another part under similar conditions to
       those of `Class.BasePart.Touched`.
 
@@ -3009,8 +3095,9 @@ events:
     security: None
     capabilities: []
   - name: BasePart.Touched
-    summary: Fires when a part touches another part as a result of physical movement.
-    description: |-
+    summary: |
+      Fires when a part touches another part as a result of physical movement.
+    description: |
       The **Touched** event fires when a part comes in contact with another
       part. For instance, if **PartA** bumps into **PartB**, then
       `Class.BasePart.Touched|PartA.Touched` fires with **PartB**, and
@@ -3033,7 +3120,8 @@ events:
       - name: otherPart
         type: BasePart
         default:
-        summary: The other part that came in contact with the given part.
+        summary: |
+          The other part that came in contact with the given part.
     tags: []
     deprecation_message: ''
     security: None

@@ -5,20 +5,28 @@
 name: TextGenerator
 type: class
 memory_category: Instances
-summary: Gives access to a large language model for text generation.
-description: |-
-  A `TextGenerator` instance lets you use a large language model (LLM) to generate text based on a system prompt from you and a user prompt from the 
-  player. The most common use of this class and its methods is for creating interactive non-player characters (NPCs).
+summary: |
+  Gives access to a large language model for text generation.
+description: |
+  A `TextGenerator` instance lets you use a large language model (LLM) to
+  generate text based on a system prompt from you and a user prompt from the
+  player. The most common use of this class and its methods is for creating
+  interactive non-player characters (NPCs).
 
-  For example, in a survival experience, your system prompt for a talking animal might be "You are a very busy beaver. You end all statements by 
-  mentioning how you need to get back to work on your dam." Users could ask the beaver about water in the area, the size of a nearby forest, predators, 
-  etc.
+  For example, in a survival experience, your system prompt for a talking animal
+  might be "You are a very busy beaver. You end all statements by mentioning how
+  you need to get back to work on your dam." Users could ask the beaver about
+  water in the area, the size of a nearby forest, predators, etc.
 
-  The novelty of LLM responses can help create unique, delightful moments for players, but using the LLM effectively requires a bit of creativity and 
-  tuning. System prompts can be very extensive, so don't hesitate to include a long string with lots of detail.
+  The novelty of LLM responses can help create unique, delightful moments for
+  players, but using the LLM effectively requires a bit of creativity and
+  tuning. System prompts can be very extensive, so don't hesitate to include a
+  long string with lots of detail.
 
-  The `TextGenerator` class currently only supports RCC authentication. As a result, you must use 
-  [Team Test](../../../studio/testing-modes.md#collaborative-testing) to test within your experience.
+  The `TextGenerator` class currently only supports RCC authentication. As a
+  result, you must use
+  [Team Test](../../../studio/testing-modes.md#collaborative-testing) to test
+  within your experience.
 code_samples:
   - TextGenerator-GenerateTextAsync
 inherits:
@@ -27,13 +35,17 @@ tags: []
 deprecation_message: ''
 properties:
   - name: TextGenerator.Seed
-    summary: |-
-      Sets a fixed seed for the random number generator, allowing reproducible responses in cases where the same input parameters are used across 
-      	multiple requests.
-    description: |-
-      Sets a fixed seed for the random number generator, allowing reproducible responses in cases where the same input parameters are used across multiple 
-      requests. By setting the same seed value, you can obtain identical results for debugging, testing, or evaluation purposes. The value of `Seed` should 
-      be an integer. Non-integral values will be truncated. Default is `0`.
+    summary: |
+      Sets a fixed seed for the random number generator, allowing reproducible
+      responses in cases where the same input parameters are used across
+      multiple requests.
+    description: |
+      Sets a fixed seed for the random number generator, allowing reproducible
+      responses in cases where the same input parameters are used across
+      multiple requests. By setting the same seed value, you can obtain
+      identical results for debugging, testing, or evaluation purposes. The
+      value of `Seed` should be an integer. Non-integral values will be
+      truncated. Default is `0`.
     code_samples: []
     type: int
     tags: []
@@ -48,10 +60,14 @@ properties:
       can_save: true
     capabilities: []
   - name: TextGenerator.SystemPrompt
-    summary: Provides context to the model about its role, tone, or behavior during conversation.
-    description: |-
-      The system prompt provides context to the model about its role, tone, or behavior during the conversation. This parameter can guide the model on how 
-      to respond, setting expectations like "You are an assistant" or "Use a formal tone."
+    summary: |
+      Provides context to the model about its role, tone, or behavior during
+      conversation.
+    description: |
+      The system prompt provides context to the model about its role, tone, or
+      behavior during the conversation. This parameter can guide the model on
+      how to respond, setting expectations like "You are an assistant" or "Use a
+      formal tone."
     code_samples: []
     type: string
     tags: []
@@ -66,8 +82,13 @@ properties:
       can_save: true
     capabilities: []
   - name: TextGenerator.Temperature
-    summary: Controls the "creativity" or randomness of the model's responses.
-    description: Controls the "creativity" or randomness of the model's responses. Values closer to `1` increase randomness, while values closer to `0` make the responses more focused and deterministic. Values outside the accepted range will be clamped to the range of `[0.4, 1.0]`. Default is `0.7`.
+    summary: |
+      Controls the "creativity" or randomness of the model's responses.
+    description: |
+      Controls the "creativity" or randomness of the model's responses. Values
+      closer to `1` increase randomness, while values closer to `0` make the
+      responses more focused and deterministic. Values outside the accepted
+      range will be clamped to the range of `[0.4, 1.0]`. Default is `0.7`.
     code_samples: []
     type: float
     tags: []
@@ -82,10 +103,18 @@ properties:
       can_save: true
     capabilities: []
   - name: TextGenerator.TopP
-    summary: Helps the AI model narrow or expand the range of possible words to sample from while generating the next token.
-    description: |-
-      Helps the model narrow or expand the range of possible words to sample from while generating the next token. This setting narrows the token choices to only contain words that together make up a certain percentage of total likelihood (for example, 90%). A lower `TopP` means the model sticks to closer and more 
-      predictable choices, while a higher `TopP` opens the door to more diverse and creative responses. Values outside the accepted range will be clamped to the range of `[0.5, 1.0]`. Default is `0.9`.
+    summary: |
+      Helps the AI model narrow or expand the range of possible words to sample
+      from while generating the next token.
+    description: |
+      Helps the model narrow or expand the range of possible words to sample
+      from while generating the next token. This setting narrows the token
+      choices to only contain words that together make up a certain percentage
+      of total likelihood (for example, 90%). A lower `TopP` means the model
+      sticks to closer and more predictable choices, while a higher `TopP` opens
+      the door to more diverse and creative responses. Values outside the
+      accepted range will be clamped to the range of `[0.5, 1.0]`. Default is
+      `0.9`.
     code_samples: []
     type: float
     tags: []
@@ -101,12 +130,17 @@ properties:
     capabilities: []
 methods:
   - name: TextGenerator:GenerateTextAsync
-    summary: Returns text generated by an LLM based on the provided system and user prompts.
-    description: |-
-      This method returns text generated by an LLM based on the provided system and user prompts, as well as any other optional paramaters that have been 
+    summary: |
+      Returns text generated by an LLM based on the provided system and user
+      prompts.
+    description: |
+      This method returns text generated by an LLM based on the provided system
+      and user prompts, as well as any other optional paramaters that have been
       set.
 
-      The `request` argument for this method should be a dictionary with the following structure:
+      The `request` argument for this method should be a dictionary with the
+      following structure:
+
       <table>
       <thead>
       <tr>
@@ -135,6 +169,7 @@ methods:
       </table>
 
       This method returns a dictionary with the following structure:
+
       <table>
       <thead>
       <tr>
@@ -166,12 +201,14 @@ methods:
       - name: request
         type: Dictionary
         default:
-        summary: |-
-          A dictionary containing optional parameters for the text generation request. The currently supported parameters are `UserPrompt`, 
-          	`ContextToken`, and `MaxTokens`.
+        summary: |
+          A dictionary containing optional parameters for the text generation
+          request. The currently supported parameters are `UserPrompt`,
+          `ContextToken`, and `MaxTokens`.
     returns:
       - type: Dictionary
-        summary: A dictionary containing the LLM's generated response.
+        summary: |
+          A dictionary containing the LLM's generated response.
     tags:
       - Yields
     deprecation_message: ''

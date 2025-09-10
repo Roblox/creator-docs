@@ -80,6 +80,12 @@ You can use existing thumbnail images you have previously uploaded to the Creato
 
 ### Define the campaign
 
+<Alert severity="warning">
+   Campaigns for experiences that are not unique can result in **no ad spend** and **no conversions**.
+   
+   Experiences with metadata and place files that closely resemble existing experiences on Roblox are not prioritized for recommendations and might rank lower in search results. Campaigns for these experiences might not be effective.
+</Alert>
+
 To create an ad campaign with the new Ads Manager:
 
 1. Go to **Manage Ads** and click **Create Campaign**.
