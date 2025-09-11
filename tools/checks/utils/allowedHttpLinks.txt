@@ -125,6 +125,7 @@ https://github.com/Elttob/Fusion
 https://github.com/Roblox/StudioWidgets
 https://github.com/Roblox/creator-docs
 https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/cloud.docs.json
+https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/openapi.json
 https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/assets/v1.json
 https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/datastores-api/ordered-v1.json
 https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/datastores-api/v1.json
@@ -132,6 +133,7 @@ https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/m
 https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/universes-api/v1.json
 https://github.com/Roblox/roact/
 https://github.com/Roblox/roblox-blender-plugin
+https://github.com/OpenAPITools/openapi-generator
 https://github.com/osyrisrblx/t
 https://grandtraining.co.nz/
 https://greece.alg.academy/
@@ -679,3 +681,4 @@ https://en.wikipedia.org/wiki/%22Hello,_World!%22_program
 https://pastebin.com/api
 http://open-notify.org/Open-Notify-API/ISS-Location-Now/
 https://www.ecma-international.org/publications-and-standards/standards/ecma-404/
+https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/

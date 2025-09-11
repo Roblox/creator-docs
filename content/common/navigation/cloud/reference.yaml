@@ -16,7 +16,7 @@ navigation:
         path: /cloud/reference/errors
       - title: Rate limits
         path: /cloud/reference/rate-limits
-      - title: OpenAPI descriptions
+      - title: OpenAPI document
         path: /cloud/reference/openapi
       - title: Scopes
         path: /cloud/reference/scopes
