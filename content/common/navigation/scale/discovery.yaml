@@ -12,8 +12,6 @@ navigation:
         path: /production/publishing/thumbnails
       - title: Badges
         path: /production/publishing/badges
-  - title: Deep links
-    path: /production/promotion/deeplinks
   - title: Events
     path: /production/promotion/experience-events
   - title: Player invite prompts
