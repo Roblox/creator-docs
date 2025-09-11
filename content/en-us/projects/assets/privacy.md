@@ -5,20 +5,97 @@ description: Explore how the asset privacy system lets you control which Roblox 
 
 The **asset privacy system** lets you control how creators and experiences can use and distribute your models, meshes, images, decals, audio, video, and animation assets on Roblox. Assets can have one of two access privacy types:
 
-- **Open Use** — Any creator can use the asset within their experiences.
 - **Restricted** — Creators or experiences can only use the asset after the asset owner grants permission.
-
-When an asset is open use, Roblox doesn't need to check its permissions when it loads into an experience because every creator and experience can use it. However, when an asset is restricted, Roblox **always** checks its permissions when it loads into an experience or when a creator takes an action on the asset, such as inserting it into Studio, sharing it with another creator, or listing it on the [Creator Store](../../production/creator-store.md).
+- **Open Use** — Any creator or experience can use the asset.
 
 If a creator or experience doesn't have permission to use an asset, it cannot load in Studio, and a clickable error message displays in the [Output](../../studio/output.md) window. If a creator has permission to use an asset but the experience they're working on does not, clicking the error message displays a pop-up window to allow the creator to grant permission to the experience for any restricted assets.
 
-<img src="../../assets/studio/general/Output-Window-Error.png" alt="An example of an error that displays in the Output window when a creator or experience doesn't have permission to use a restricted asset." width="100%" />
+<img src="../../assets/studio/general/Output-Window-Error.png" width="90%" alt="An example of an error that displays in the Output window when a creator or experience doesn't have permission to use a restricted asset."  />
+
+When an asset is open use, Roblox doesn't need to check its permissions when it loads into an experience because every creator and experience can freely use it. However, when an asset is restricted, Roblox **always** checks its permissions when it loads into an experience or when a creator takes an action on the asset, such as inserting it into Studio, sharing it with another creator, or listing it on the [Creator Store](../../production/creator-store.md).
 
 <Alert severity="info">
 The asset privacy system controls which creators and experiences can use the asset, but others can still see its metadata, such as its name and description.
 </Alert>
 
-## Grant permission
+## Restrict permissions
+
+<Alert severity="info">
+You can list your or your group's restricted assets by themselves or as a dependency of a restricted asset on the Creator Store. This allows creators to use your assets as you list them under models, mesh parts, or packages, and disallows them from accessing and repackaging your restricted asset dependencies.
+</Alert>
+
+Every model, mesh part, and animation that you create are restricted **by default** to ensure that no one else can use your assets unless you explicitly grant permission to a creator, group, or experience, or list them on the Creator Store. If you want to extend this default permission to meshes, images, and decals, you must opt-in to the **Asset Privacy** beta.
+
+### Beta opt-in
+
+Individual creators and groups can opt into the beta via Creator Dashboard to apply permissions to newly created assets by default. Users and groups who are opted into the beta have their Images, Meshes, and Decals created as **Restricted** as default.
+
+<Tabs>
+  <TabItem key = "1" label="As a creator">
+To restrict your mesh, image, and decal assets on creation through the Asset Privacy beta:
+
+1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+1. In the top-right corner of the page, click on your username and select **Settings**.
+1. In the left-hand navigation, select **Advanced**.
+1. In the **Asset Privacy** section, enable the **Opt-in to restrict assets on creation** toggle. Every non-avatar asset you create is now restricted by default.
+
+  </TabItem>
+  <TabItem key = "2" label="As a group">
+
+<Alert severity="warning">
+You can only complete this process if you are the group owner.
+</Alert>
+
+To restrict your group mesh, image, and decal assets on creation through the Asset Privacy beta:
+
+1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+1. Near the top-left of the page, click the **View As** dropdown, then select your group.
+1. In the left-hand navigation, navigate to **Collaboration** > **Group Profile**.
+1. In the **Asset Privacy** section, enable the **Opt-in to restrict assets on creation** toggle. Every non-avatar asset your group creates is now restricted by default.
+
+  </TabItem>
+</Tabs>
+
+After opting into the beta, you can verify the asset permission of any newly uploaded asset in the asset configuration page:
+
+   <img src="../../assets/creator-dashboard/Asset-Toggle.png" alt="The landing page for asset permissions with the Collaborators tab selected." width="60%" />
+
+Selecting **Open Use** warns that once an asset has been set to **OpenUse**, it cannot be set back to **Restricted**.
+
+   <img src="../../assets/creator-dashboard/Asset-Make-OpenUse.png" alt="The landing page for asset permissions with the Collaborators tab selected." width="60%" />
+
+After setting to **Open Use**, the asset displays its current asset access permission.
+
+   <img src="../../assets/creator-dashboard/Asset-OpenUse.png" alt="The landing page for asset permissions with the Collaborators tab selected." width="60%" />
+
+### Decals
+
+All `Class.Decal|Decals` are linked to an `Image`, which means a `Decal` can only be set to OpenUse if its `Image` dependency is OpenUse. Otherwise the following warning displays:
+
+   <img src="../../assets/creator-dashboard/Asset-Decals-Warning.png" alt="The landing page for asset permissions with the Collaborators tab selected." width="60%" />
+
+### Avatar assets
+
+Avatar assets, such as accessories, clothing, and bodies, require all dependent textures and meshes to be `OpenUse` when uploading the Avatar asset to the Marketplace.
+
+If you are opted into the beta and use a newly imported model in an avatar asset, you will be prompted to set your restricted texture and mesh dependencies to `OpenUse` during Marketplace [upload](../../marketplace/publish-to-marketplace.md#upload-an-asset):
+
+<GridContainer numColumns = "2">
+<figure>
+<img src="../../assets/creator-dashboard/Asset-Avatar-Restricted.png" alt="The landing page for asset permissions with the Collaborators tab selected." width="100%" />
+<figcaption>
+If your avatar item or bundle contains any restricted primitive assets, you must convert them to Open Use.
+</figcaption>
+</figure>
+<figure>
+<img src="../../assets/creator-dashboard/Asset-Avatar-Success.png" alt="The landing page for asset permissions with the Collaborators tab selected." width="100%" />
+<figcaption>
+If your entire avatar item has correct permissions, you can continue to upload and publish your avatar item to the Marketplace.
+</figcaption>
+</figure>
+</GridContainer>
+
+## Grant permissions
 
 In order for a collaborator, such as an individual creator or group, or an experience to use one of your restricted assets, you must explicitly grant permission before it's visible or audible at runtime. Once a collaborator or experience has **explicit** permission to use a restricted asset, they also receive **implicit** permission to use the asset in a variety of additional scenarios. For more information, see the following subsections.
 
@@ -50,7 +127,7 @@ Once a collaborator has permission to use one of your restricted assets, they ca
 
 However, if a collaborator wants to use the restricted asset in a script, or if they want to save or publish a template place that includes the restricted asset, the collaborator must also give the [experience](#to-experiences) itself permission to use the asset. If the creator or group member doesn't complete this step, the asset isn't visible or audible during runtime, and a clickable error message displays in the **Output** window.
 
-<img src="../../assets/studio/general/Output-Window-Error.png" alt="An example of an error that displays in the Output window when a creator or experience doesn't have permission to use a restricted asset." width="100%" />
+<img src="../../assets/studio/general/Output-Window-Error.png" alt="An example of an error that displays in the Output window when a creator or experience doesn't have permission to use a restricted asset." width="90%" />
 
 To grant a collaborator permission to use a restricted asset in any of these scenarios:
 
@@ -148,18 +225,6 @@ To grant an experience permission to use many restricted assets in the previous 
   </TabItem>
 </Tabs>
 
-### To cross-publish
-
-If you want to cross-publish a place from an experience that includes the restricted asset into an entirely different experience, you and the experience that includes the restricted asset must have permission to use the restricted asset, either as the owner of the asset or as a collaborator that has been granted explicit permission. If you meet these conditions, the experience that receives the place file also gains implicit permission to use the restricted asset in any of its place files, even if the asset loads through scripts.
-
-However, if you try to cross-publish an unpublished place into an entirely different experience, a pop-up displays with options on how to manage any restricted assets. If you're qualified to grant permission to the new experience, such as if you own the experience, the pop-up's **Grant All Permissions** button explicitly grants the new experience permission to use the place's restricted assets.
-
-<img src="../../assets/misc/Audio-Error-Popup.png" alt="A pop-up display to inform that the experience doesn't have permission to use the asset." width="100%" />
-
-However, if you're not qualified to grant permission to the new experience, you can still publish the place into the experience, but the experience does not gain permission to any restricted assets, and an error message displays in the **Output** window.
-
-<img src="../../assets/studio/general/Output-Window-Error.png" alt="An example of an error that displays in the Output window when a creator or experience doesn't have permission to use a restricted asset." width="100%" />
-
 ## View permissions
 
 You can view every restricted asset that your or your group's experiences have permission to use by reviewing the experience's **Permissions** page on the Creator Dashboard.
@@ -196,3 +261,24 @@ To revoke permission for a creator to use a restricted asset in any additional e
 1. From the **Collaborators** tab, locate the creator you want to revoke permission from, then click the Access dropdown next to their username. Additional options display.
 1. Click the **Remove** button. A pop-up displays to confirm that you want to revoke permission from the collaborator.
 1. From the pop-up, click the **Remove** button.
+
+## Open permissions
+
+<Alert severity="error">
+Opening an asset's permissions is irreversible. Once you set an asset to open use, it **cannot** be reset to the restricted privacy type.
+</Alert>
+
+While opting in to the **Asset Privacy** beta allows you to restrict your or your group's mesh, image, and decal assets on creation, you are still able to open their permissions so that any creator or experience to freely access and use them in their projects.
+
+To open permissions for your or your group's mesh, image, or decal asset through the Asset Privacy beta:
+
+1. Follow the steps to opt-in to the Asset Privacy beta in [Restrict permissions](#restrict-permissions).
+1. Back in the [Creator Dashboard](https://create.roblox.com/dashboard/creations), navigate to the upper tab bar, select **Development Items**, then click either **Decalss**, **Images**, or **Meshes**. All of your decal, image, or mesh assets display.
+
+   <Alert severity="warning">
+   If you want to set a decal asset to open use, you must set its image dependency to open use **first**, otherwise the Asset Privacy system will block you in future steps.
+   </Alert>
+
+1. Select the asset that you want to every creator and experience to freely use in their projects. The asset's **Configure** page displays.
+1. In the **Asset Access** section, enable **Open Use**. A pop-up displays asking you to confirm this permanent change.
+1. In the pop-up, click the **Make Open Use** button. Anyone on Roblox can now use your asset.
