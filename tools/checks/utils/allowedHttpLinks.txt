@@ -682,3 +682,5 @@ https://pastebin.com/api
 http://open-notify.org/Open-Notify-API/ISS-Location-Now/
 https://www.ecma-international.org/publications-and-standards/standards/ecma-404/
 https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/
+https://www.llama.com/llama3/license/
+https://ai.google.dev/gemini-api/terms
