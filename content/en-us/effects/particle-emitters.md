@@ -100,12 +100,12 @@ The `Class.ParticleEmitter.Color|Color` property tints each particle's texture t
    **keypoint** that determines the color value of the property at that point in
    the particle's lifetime.
 
-	 <img src="../assets/studio/general/ColorSequence-White-Keypoints-Labeled.png" width="640" alt="Keypoints labeled in color sequence popup" />
+    <img src="../assets/studio/general/ColorSequence-White-Keypoints-Labeled.png" width="640" alt="Keypoints labeled in color sequence popup" />
 
 1. Click the keypoint at the start of the color sequence, click the
    small square next to **Color**, and select a color from the popup window.
 
-	 <img src="../assets/studio/general/ColorSequence-Red-White.png" width="640" alt="Color sequence popup from red to white" />
+ <img src="../assets/studio/general/ColorSequence-Red-White.png" width="640" alt="Color sequence popup from red to white" />
 
 1. If you want particles to change their color near the end of their
    lifetime, click the keypoint at the end of the color sequence, click the small square next to **Color**, and select a color from the popup window.
@@ -393,9 +393,24 @@ Particle flipbook textures let you animate a particle's texture over its lifetim
 
 <video src="../assets/lighting-and-effects/particle-emitter/Flipbook.mp4" controls width="800" alt="Flipbook looping over the four particles in its texture"></video>
 
-To use particle flipbooks, the flipbook texture must be of pixel dimensions 8×8, 16×16, 32×32, 64×64, 128×128, 256×256, 512×512, or 1024×1024. If the texture isn't a square with one of these dimensions, you can't set flipbook's properties in the [Properties](../studio/properties.md) window.
+To use particle flipbooks, the texture's dimensions must be divisible by the number of frames in the layout grid. If the texture's dimensions are not compatible with the layout grid size, a warning appears next to the `Class.ParticleEmitter.FlipbookLayout|FlipbookLayout` property in the [Properties](../studio/properties.md) window.
 
-The flipbook texture can have a frame layout of 2×2, 4×4, or 8×8. For example, the following 1024×1024 image has an 8×8 layout, so it's suitable for a 64‑frame animation.
+<GridContainer numColumns="2">
+  <figure>
+    <figcaption>
+    <Alert severity = 'success'>Valid flipbook texture size</Alert>
+    </figcaption>
+      A 1024&times;1024 texture with a `Enum.ParticleFlipbookLayout.Grid4x4|Grid4x4` layout. The texture's dimensions are divisible by 4, so each frame is 256&times;256. Similarly, a 1024&times;512 texture with a custom layout of 8&times;4 is compatible because 1024 is divisible by 8 and 512 is divisible by 4.
+  </figure>
+  <figure>
+    <figcaption>
+    <Alert severity = 'error'>Incompatible flipbook texture size</Alert>
+    </figcaption>
+      A 100&times;100 texture with a `Enum.ParticleFlipbookLayout.Grid8x8|Grid8x8` layout. The texture's dimensions are not divisible by 8, so the frames cannot be divided evenly. Similarly, a 1024&times;1024 texture with a custom layout of 10&times;10 is incompatible because 1024 is not divisible by 10.
+  </figure>
+</GridContainer>
+
+The flipbook texture can have a frame layout of 2×2, 4×4, 8×8 or custom. For example, the following 1024×1024 image has an 8×8 layout, so it's suitable for a 64‑frame animation.
 
 <img src="../assets/lighting-and-effects/particle-emitter/8x8-Explosion.png" width="512" alt="Sample texture for particle flipbooks" />
 
@@ -413,6 +428,7 @@ Once you've specified a valid flipbook [texture](#texture) for the emitter's `Cl
 - **Grid2x2** &mdash; 2&times;2 frames for a 4-frame animation.
 - **Grid4x4** &mdash; 4&times;4 frames for a 16-frame animation.
 - **Grid8x8** &mdash; 8&times;8 frames for a 64-frame animation.
+- **Custom** &ndash; A custom grid size defined by `Class.ParticleEmitter.FlipbookSizeX|FlipbookSizeX` and `Class.ParticleEmitter.FlipbookSizeY|FlipbookSizeY`.
 
 To further customize the flipbook behavior, you can adjust the following properties:
 
@@ -427,7 +443,9 @@ The `Class.ParticleEmitter.FlipbookMode|FlipbookMode` property determines the ty
 - **OneShot** &mdash; Play through the animation only once across the particle's lifetime. With this setting, the `Class.ParticleEmitter.FlipbookFramerate|FlipbookFramerate` property doesn't apply; instead, the framerate is determined by the particle's `Class.ParticleEmitter.Lifetime|Lifetime` divided evenly by the number of frames in the animation. **OneShot** animations are useful for clear non-repeating animations, such as an explosion that creates a puff of smoke and then fades out.
 - **PingPong** &mdash; Play from the first to the last frame, then in reverse from the last to the first, repeating throughout the `Class.ParticleEmitter.Lifetime|Lifetime` of the particle.
 - **Random** &mdash; Play the frames in a random order, blending/crossfading from one frame to the next. This can be useful for organic particle textures at low framerates, such as stars slowly twinkling between subtly different shapes.
+
 </TabItem>
+
 <TabItem label="FlipbookStartRandom">
 The `Class.ParticleEmitter.FlipbookStartRandom|FlipbookStartRandom` property determines whether each particle begins at a random frame of the animation instead of always starting at the first frame. One use case is to enable this property and also set `Class.ParticleEmitter.FlipbookFramerate|FlipbookFramerate` to zero, causing each emitted particle to be a static frame chosen randomly from the flipbook texture.
 </TabItem>
