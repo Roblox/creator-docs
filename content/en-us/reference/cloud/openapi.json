@@ -1291,6 +1291,7 @@
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}": {
       "delete": {
+        "tags": ["Data and memory stores"],
         "summary": "Delete Data Store",
         "description": "Schedules the specified data store for permanent deletion.\n\nThis operation assigns the data store an expiry time 30 days in the future,\nat which point permanent deletion begins. To cancel, use the\n`UndeleteDataStore` operation before the data store's expiry time.\n\nPermanent deletion consists of deleting all of the entries in the data\nstore and then the data store resource itself. The data store is no longer\nreturned by the `ListDataStores` Open Cloud endpoint or\n`ListDataStoresAsync` Luau API, and you can reuse the data store's name.\n\nThe duration of the permanent deletion process depends on the number of\nentries in the data store. However, you can expect a data store with 1\nmillion or fewer entries to be permanently deleted within 3 days.\n\nData stores scheduled for permanent deletion are returned by the\n`ListDataStores` Open Cloud endpoint when the query parameter `showDeleted`\nis set to `true`. In the return value, each data store will have a\n`DELETED` state and an `expireTime` field.\n\nData stores scheduled for permanent deletion are immediately made\ninaccessible, meaning attempts to read or write to their entries will fail.\n\nNote: Due to caching in the backend service, attempts to read from or write\nto entries in these data stores can continue to succeed for a limited time\nafter the deletion:\n* `GetDataStoreEntry`: can succeed for up to 24 hours.\n* All other endpoints: can succeed for several minutes.\n\nIf the data store is already in a `DELETED` state, this operation is a\nno-op, and the data store is returned as-is.",
         "operationId": "Cloud_DeleteDataStore",
@@ -1357,7 +1358,10 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/storage#/DataStore/Cloud_DeleteDataStore"
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries": {
@@ -2803,6 +2807,7 @@
     },
     "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}:undelete": {
       "post": {
+        "tags": ["Data and memory stores"],
         "summary": "Undelete Data Store",
         "description": "Restore the data store",
         "operationId": "Cloud_UndeleteDataStore",
@@ -2879,7 +2884,10 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/storage#/DataStore/Cloud_UndeleteDataStore"
+        }
       }
     },
     "/cloud/v2/universes/{universe_id}/data-stores:snapshot": {
@@ -58095,6 +58103,701 @@
           "url": "https://create.roblox.com/docs/cloud/features/assets#/default/get_toolbox_service_v2_assets__id_"
         }
       }
+    },
+    "/open-eval-api/v1/eval": {
+      "post": {
+        "tags": ["Generative AI"],
+        "summary": "Performs the evaluation of the Lua script.",
+        "parameters": [
+          {
+            "name": "Roblox-Api-Key",
+            "in": "header",
+            "description": "Api Key (UUID).",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EvalRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EvalRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EvalRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EvalRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EvalResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "DAY",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "studio-evaluations:create"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/generative-ai#/default/post_open_eval_api_v1_eval"
+        }
+      }
+    },
+    "/open-eval-api/v1/eval-records/{jobId}": {
+      "get": {
+        "tags": ["Generative AI"],
+        "summary": "Gets the evaluation record by job ID.",
+        "parameters": [
+          {
+            "name": "jobId",
+            "in": "path",
+            "description": "The job ID of the evaluation record.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Roblox-Api-Key",
+            "in": "header",
+            "description": "Api Key (UUID).",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EvalRecord"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "studio-evaluations:create"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/generative-ai#/default/get_open_eval_api_v1_eval_records__jobId_"
+        }
+      }
+    },
+    "/developer-products/v2/universes/{universeId}/developer-products": {
+      "post": {
+        "tags": ["Developer products"],
+        "summary": "Create developer product",
+        "description": "Creates a new developer product with the provided configuration details.",
+        "operationId": "DeveloperProducts_CreateDeveloperProductV2",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": ["name"],
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "The name of the developer product."
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "The description of the developer product.",
+                    "nullable": true
+                  },
+                  "isForSale": {
+                    "type": "boolean",
+                    "description": "Whether the developer product should be on sale.",
+                    "nullable": true
+                  },
+                  "price": {
+                    "type": "integer",
+                    "description": "The default price of the developer product.",
+                    "format": "int64",
+                    "nullable": true
+                  },
+                  "imageFile": {
+                    "type": "string",
+                    "description": "The thumbnail image file to be uploaded.",
+                    "format": "binary",
+                    "nullable": true
+                  },
+                  "isRegionalPricingEnabled": {
+                    "type": "boolean",
+                    "description": "Whether regional pricing should be enabled for the developer product.",
+                    "nullable": true
+                  }
+                }
+              },
+              "encoding": {
+                "name": {
+                  "style": "form"
+                },
+                "description": {
+                  "style": "form"
+                },
+                "isForSale": {
+                  "style": "form"
+                },
+                "price": {
+                  "style": "form"
+                },
+                "imageFile": {
+                  "style": "form"
+                },
+                "isRegionalPricingEnabled": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeveloperProductConfigV2"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeveloperProducts.ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeveloperProducts.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeveloperProducts.ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeveloperProducts.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 3
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "developer-product:write"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/developer-products#/default/DeveloperProducts_CreateDeveloperProductV2"
+        }
+      }
+    },
+    "/developer-products/v2/universes/{universeId}/developer-products/{productId}": {
+      "patch": {
+        "tags": ["Developer products"],
+        "summary": "Update developer product",
+        "description": "Updates a developer product with the provided configuration details. \r\nNote that only fields provided in the request will be updated.",
+        "operationId": "DeveloperProducts_UpdateDeveloperProductV2",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "productId",
+            "in": "path",
+            "description": "The product ID of the developer product.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "The name of the developer product.",
+                    "nullable": true
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "The description of the developer product.",
+                    "nullable": true
+                  },
+                  "isForSale": {
+                    "type": "boolean",
+                    "description": "Whether the developer product should be on sale.",
+                    "nullable": true
+                  },
+                  "price": {
+                    "type": "integer",
+                    "description": "The default price of the developer product.",
+                    "format": "int64",
+                    "nullable": true
+                  },
+                  "imageFile": {
+                    "type": "string",
+                    "description": "The thumbnail image file to be uploaded.",
+                    "format": "binary",
+                    "nullable": true
+                  },
+                  "isRegionalPricingEnabled": {
+                    "type": "boolean",
+                    "description": "Whether regional pricing should be enabled for the developer product.",
+                    "nullable": true
+                  },
+                  "storePageEnabled": {
+                    "type": "boolean",
+                    "description": "Whether the developer product should be available for purchase on the external store page.",
+                    "nullable": true
+                  }
+                }
+              },
+              "encoding": {
+                "name": {
+                  "style": "form"
+                },
+                "description": {
+                  "style": "form"
+                },
+                "isForSale": {
+                  "style": "form"
+                },
+                "price": {
+                  "style": "form"
+                },
+                "imageFile": {
+                  "style": "form"
+                },
+                "isRegionalPricingEnabled": {
+                  "style": "form"
+                },
+                "storePageEnabled": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeveloperProducts.ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeveloperProducts.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeveloperProducts.ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeveloperProducts.ErrorResponse"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeveloperProducts.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 3
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "developer-product:write"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/developer-products#/default/DeveloperProducts_UpdateDeveloperProductV2"
+        }
+      }
+    },
+    "/developer-products/v2/universes/{universeId}/developer-products/{productId}/creator": {
+      "get": {
+        "tags": ["Developer products"],
+        "summary": "Get developer product with configuration details",
+        "operationId": "DeveloperProducts_GetDeveloperProductConfigV2",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "productId",
+            "in": "path",
+            "description": "The product ID of the developer product.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeveloperProductConfigV2"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeveloperProducts.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeveloperProducts.ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeveloperProducts.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "developer-product:read"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/developer-products#/default/DeveloperProducts_GetDeveloperProductConfigV2"
+        }
+      }
+    },
+    "/developer-products/v2/universes/{universeId}/developer-products/creator": {
+      "get": {
+        "tags": ["Developer products"],
+        "summary": "List developer products by universe with configuration details",
+        "operationId": "DeveloperProducts_ListDeveloperProductConfigsByUniverseV2",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "The number of results to return. Defaults to 50.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "The cursor token for pagination.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListDeveloperProductConfigsV2Response"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeveloperProducts.ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeveloperProducts.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeveloperProducts.ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeveloperProducts.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "developer-product:read"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/developer-products#/default/DeveloperProducts_ListDeveloperProductConfigsByUniverseV2"
+        }
+      }
     }
   },
   "components": {
@@ -78596,6 +79299,396 @@
         "additionalProperties": false,
         "description": "model for voting.",
         "nullable": true
+      },
+      "CustomLlmInfo": {
+        "required": ["name", "url"],
+        "type": "object",
+        "properties": {
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The name of the custom LLM."
+          },
+          "url": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The custom LLM endpoint URL."
+          },
+          "api_key": {
+            "type": "string",
+            "description": "The API key to access the custom LLM.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Contains information to override the default LLM endpoint and credentials."
+      },
+      "EvalJsonRecord": {
+        "type": "object",
+        "properties": {
+          "passes": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fails": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "checks": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "warning": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "interruptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InterruptionRecord"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EvalRecord": {
+        "required": ["inputScript", "jobId", "name"],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "user": {
+            "$ref": "#/components/schemas/StudioModelEvaluations.User"
+          },
+          "useReferenceMode": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "jobId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "inputScript": {
+            "type": "string",
+            "nullable": true
+          },
+          "jobStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EvalResultRecord"
+            },
+            "nullable": true
+          },
+          "evalSucceeded": {
+            "type": "string",
+            "nullable": true
+          },
+          "createUtc": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EvalRequest": {
+        "required": ["input_script", "name"],
+        "type": "object",
+        "properties": {
+          "name": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "use_reference_mode": {
+            "type": "boolean"
+          },
+          "input_script": {
+            "minLength": 10,
+            "type": "string"
+          },
+          "custom_llm_info": {
+            "$ref": "#/components/schemas/CustomLlmInfo"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The request model for the evaluation."
+      },
+      "EvalResponse": {
+        "type": "object",
+        "properties": {
+          "job_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "status_code": {
+            "type": "integer",
+            "description": "Gets or sets the status code of the response.",
+            "format": "int32"
+          },
+          "error": {
+            "type": "string",
+            "description": "Gets or sets the error message associated with the response.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The response model for the evaluation."
+      },
+      "EvalResultRecord": {
+        "type": "object",
+        "properties": {
+          "mode": {
+            "type": "string",
+            "nullable": true
+          },
+          "result": {
+            "$ref": "#/components/schemas/EvalJsonRecord"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InterruptionRecord": {
+        "type": "object",
+        "properties": {
+          "check": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StudioModelEvaluations.User": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeveloperProductConfigV2": {
+        "required": [
+          "createdTimestamp",
+          "description",
+          "iconImageAssetId",
+          "isForSale",
+          "isImmutable",
+          "name",
+          "priceInformation",
+          "productId",
+          "storePageEnabled",
+          "universeId",
+          "updatedTimestamp"
+        ],
+        "type": "object",
+        "properties": {
+          "productId": {
+            "type": "integer",
+            "description": "The product ID of the developer product.",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the developer product."
+          },
+          "description": {
+            "type": "string",
+            "description": "The description of the developer product."
+          },
+          "iconImageAssetId": {
+            "type": "integer",
+            "description": "The icon image (thumbnail) asset ID of the developer product.",
+            "format": "int64",
+            "nullable": true
+          },
+          "universeId": {
+            "type": "integer",
+            "description": "The universe ID that the developer product belongs to.",
+            "format": "int64"
+          },
+          "isForSale": {
+            "type": "boolean",
+            "description": "Whether the developer product is currently on sale."
+          },
+          "storePageEnabled": {
+            "type": "boolean",
+            "description": "Whether the developer product is currently available for purchase on the external store page."
+          },
+          "priceInformation": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PriceInformationStruct"
+              }
+            ],
+            "description": "The pricing configuration associated with the product.",
+            "nullable": true
+          },
+          "isImmutable": {
+            "type": "boolean",
+            "description": "Whether the developer product cannot be modified, such as when created as a commerce product."
+          },
+          "createdTimestamp": {
+            "type": "string",
+            "description": "The timestamp when the developer product was created.",
+            "format": "date-time"
+          },
+          "updatedTimestamp": {
+            "type": "string",
+            "description": "The timestamp when the developer product was last updated.",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Creator-facing representation of a developer product configuration."
+      },
+      "ErrorCode": {
+        "enum": [
+          "InvalidImageFile",
+          "UnauthorizedAccess",
+          "NotAuthenticated",
+          "NotFound",
+          "Internal",
+          "BadRequest",
+          "InvalidProductId",
+          "UnauthorizedProductAccess",
+          "InvalidDeveloperProductId",
+          "DuplicateProductName",
+          "InvalidUniverseId",
+          "UnauthorizedUniverseAccess",
+          "InvalidShopId",
+          "UnknownError",
+          "InvalidPriceInRobux",
+          "InvalidPostBody",
+          "InvalidPageNumber",
+          "InvalidPageSize",
+          "UnsupportedDeveloperProductUpdate",
+          "PendingProductsLimitExceeded",
+          "InvalidCursor",
+          "InvalidRegionalPricing",
+          "ProductRetrievalLimitExceeded",
+          "InvalidProductIds",
+          "InvalidName",
+          "InvalidDescription",
+          "InvalidIsForSale",
+          "InvalidStorePageEnabled",
+          "Unavailable",
+          "InvalidPrice",
+          "Blocked",
+          "Conflict"
+        ],
+        "type": "string",
+        "description": "Code representing various error conditions."
+      },
+      "DeveloperProducts.ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "errorCode": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ErrorCode"
+              }
+            ],
+            "description": "The ErrorCode for the exception."
+          },
+          "errorMessage": {
+            "type": "string",
+            "description": "The human readable error message.",
+            "nullable": true
+          },
+          "field": {
+            "type": "string",
+            "description": "The relevant field that caused the error.",
+            "nullable": true
+          },
+          "hint": {
+            "type": "string",
+            "description": "A hint as to what caused the error, if applicable.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "This is the base class for all custom Exceptions that are thrown in this API."
+      },
+      "ListDeveloperProductConfigsV2Response": {
+        "required": ["developerProducts", "nextPageToken"],
+        "type": "object",
+        "properties": {
+          "developerProducts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DeveloperProductConfigV2"
+            },
+            "description": "The list of developer products with their corresponding configuration details."
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "The next page token.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response that contains the list of developer products with their corresponding configuration details and pagination information."
+      },
+      "PriceInformationStruct": {
+        "required": ["defaultPriceInRobux", "enabledFeatures"],
+        "type": "object",
+        "properties": {
+          "defaultPriceInRobux": {
+            "type": "integer",
+            "description": "The configured default price in Robux.",
+            "format": "int64",
+            "nullable": true
+          },
+          "enabledFeatures": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PricingFeature"
+            },
+            "description": "The enabled pricing features for the developer product."
+          }
+        },
+        "additionalProperties": false,
+        "description": "The pricing configuration information."
+      },
+      "PricingFeature": {
+        "enum": [
+          "Invalid",
+          "PriceOptimization",
+          "UserFixedPrice",
+          "RegionalPricing"
+        ],
+        "type": "string",
+        "description": "Enum representing enabled features for this particular developer product.\r\nShould match https://github.rbx.com/Roblox/price-engine/blob/master/protos/roblox/priceengine/shared/v1/price_engine_shared.proto#L94"
       }
     },
     "requestBodies": {
@@ -79044,7 +80137,12 @@
       "x-roblox-tag-info": {
         "path": "developer-products",
         "content": "Lists all HTTP APIs for working with developer products.",
-        "ordering": []
+        "ordering": [
+          "DeveloperProducts_CreateDeveloperProductV2",
+          "DeveloperProducts_UpdateDeveloperProductV2",
+          "DeveloperProducts_GetDeveloperProductConfigV2",
+          "DeveloperProducts_ListDeveloperProductConfigsByUniverseV2"
+        ]
       }
     },
     {
@@ -79202,6 +80300,8 @@
         "content": "Lists all HTTP APIs for working with data stores and memory stores.",
         "ordering": [
           "Cloud_ListDataStores",
+          "Cloud_DeleteDataStore",
+          "Cloud_UndeleteDataStore",
           "Cloud_SnapshotDataStores",
           "Cloud_ListDataStoreEntries__Using_Universes",
           "Cloud_CreateDataStoreEntry__Using_Universes",
