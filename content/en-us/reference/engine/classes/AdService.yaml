@@ -88,7 +88,7 @@ methods:
         type: AdFormat
         default:
         summary: |
-          The format of the requested ad. For example, `RewardedOnDemandVideo`.
+          The format of the requested ad. For example, `RewardedVideo`.
     returns:
       - type: Variant
         summary: ''

@@ -1262,30 +1262,28 @@ methods:
     summary: |
       Returns the server's Unix time in seconds.
     description: |
-      `Class.Workspace:GetServerTimeNow()|GetServerTimeNow()` returns the
-      client's best approximation of the current time on the server. This is
-      useful for creating synchronized experiences as every client will get
-      about the same results regardless of their timezone or local clock.
+      This method returns the client's best approximation of the current time on
+      the server. It is useful for creating synchronized experiences, as every
+      client will get roughly the same results regardless of their timezone or
+      local clock.
 
-      This returns a Unix timestamp, similar to `Library.os|os.time()`, that can
-      be used with `Library.os|os.date()` or with
-      `Datatype.DateTime.fromUnixTimestamp()`.
-
-      The timestamp returned by this function is smoothed so that:
+      This method returns a Unix timestamp, similar to `Library.os|os.time()`,
+      that you can use with `Library.os|os.date()` or
+      `Datatype.DateTime.fromUnixTimestamp()`. The timestamp is smoothed so
+      that:
 
       - It is monotonic; its value will never decrease.
       - It moves at the same rate as the local clock to within 0.6%.
 
-      `Class.Workspace:GetServerTimeNow()|GetServerTimeNow()` is expensive to
-      call compared to `Datatype.DateTime.now()`, and is less precise than
-      `Library.os|os.clock()`, so it should be used to make sure an event starts
-      at the right real world time or to adjust things periodically to keep a
-      series of events in sync.
+      This method is useful for making sure an event starts at the right
+      real-world time and for periodic adjustments to keep a series of events in
+      sync. For benchmarking or other use cases that require higher precision,
+      consider `Library.os|os.clock()`.
 
-      This function relies on the server, so calling it from a client that isn't
-      connected will throw an error. Also note that this function is not
-      suitable for things like timed rewards as it is not secure compared to
-      tracking such timers on the server.
+      This method relies on the server, so calling it from a client that isn't
+      connected will throw an error. Also note that this method is not suitable
+      for things like timed rewards, as it is not secure compared to tracking
+      such timers on the server.
 
       See also:
 
