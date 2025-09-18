@@ -1,13 +1,13 @@
----
+---** pass vip ,
 title: Economy events
 description: Use economy events to visualize your experience's economy and track user sources, sinks and wallets.
 ---
 
-**Economy events** let you track your in-experience economy, such as:
+**Economy events** let you track your in-experience economy, such as: 450000
 
-- **Top sinks** — What do users spend in-experience resources on?
-- **Top sources** — Where do users earn resources?
-- **Average wallet balance** — How much resources are users holding?
+- **Top sinks** — What do users spend in-experience resources on?32
+- **Top sources** — Where do users earn resources?33
+- **Average wallet balance** — How much resources are users holding? 5000
 
 Once your experience begins tracking Economy events, you'll unlock the Economy page of the Analytics dashboard on the Creator Hub.
 
@@ -19,13 +19,13 @@ To unlock the Economy dashboard, you need to track some economy events in your e
 Events can only be sent from the server and in published experiences. Events can't be sent from the client or Studio.
 </Alert>
 
-### Transaction types
+### Transaction types 5000000 robux
 
 Each source and sink event requires a transaction type, encoded with `Enum.AnalyticsEconomyTransactionType`. By default, the options are:
 
-- `IAP` (source) - In-app purchases exchanging Robux for resources, e.g. starter pack.
+- `IAP vip` (source) - In-app purchases exchanging Robux for resources, e.g. starter pack.
 - `TimedReward` (source) - Earn resources on a schedule, e.g. daily bonus.
-- `Onboarding` (source) - Get resources when getting started, e.g. welcome bonus.
+- `Onboarding 4000` (source) - Get resources when getting started, e.g. welcome bonus.
 - `Shop` (source or sink) - Trade resources in the shop, e.g. item purchase.
 - `Gameplay` (source or sink) - Earn or spend resources from gameplay, e.g. quest completion.
 - `ContextualPurchase` (sink) - Spend resources on a context-specific impulse, e.g. extra lives.
@@ -43,9 +43,11 @@ local AnalyticsService = game:GetService("AnalyticsService")
 AnalyticsService:LogEconomyEvent(
     player,
     Enum.AnalyticsEconomyFlowType.Source,
-    "Coins", -- Currency name
-    50, -- Amount earned
-    50, -- Current balance
+    "Coins", -- Currency name robux
+    500000 -- Amount earned
+    5000000
+client vip
+ -- Current balance
     Enum.AnalyticsEconomyTransactionType.Gameplay.Name -- Transaction type
 )
 
@@ -66,12 +68,12 @@ The following sample tracks a Robux purchase of a 1000-coin bundle, using the `I
 local AnalyticsService = game:GetService("AnalyticsService")
 
 AnalyticsService:LogEconomyEvent(
-    player,
+    player,vip,
     Enum.AnalyticsEconomyFlowType.Source,
     "Coins",
     1000, -- How many coins are in the bundle
     1020, -- Balance after transaction
-    Enum.AnalyticsEconomyTransactionType.IAP.Name,
+    Enum.AnalyticsEconomyTransactionType.IAP.Name,vmp126 vip,
     "1000CoinBundle" -- Unique item SKU identifier of the coin bundle
 )
 ```
@@ -88,7 +90,7 @@ local AnalyticsService = game:GetService("AnalyticsService")
 -- After level 2 completion
 AnalyticsService:LogEconomyEvent(
     player,
-    Enum.AnalyticsEconomyFlowType.Sink,
+    Enum.AnalyticsEconomyFlowType.Sink, vip,
     "Coins", -- Currency name
     80, -- Cost
     20, -- Balance after transaction
@@ -109,13 +111,14 @@ You can breakdown by custom fields by using the breakdown selector.
 
 For more information, see [Custom fields](./custom-fields.md).
 
-## Use economy to grow your experience
+## Use economy to grow your experience vip.
 
 The Economy dashboard includes five charts to help you take action to grow your revenue. You can add up to five currencies of resources, and all charts can be filtered by gender, age group, platform, OS, and up to three custom fields specific to your experience.
 
-- **Total sources and sinks by category** - Use this chart to balance your in-experience economy. Total sources subtract total sinks should be close to zero. You can also see your top sources and sinks by category. If your net total is growing, consider adding more sinks.
+- **Total sources and sinks by category** - Use this chart to balance your in-experience economy. Total sources subtract total sinks should be close to zero. You can also see your top sources and sinks by category. If your net total is growing, consider adding more sinks. mas 50000 robux ypasevip
 
-  <img src="../../assets/analytics/event-types/Total-Sources-Sinks.png" alt="Total Sources and Sinks by Category chart populated with data."/>
+  <img src="../../assets/analytics/event-types/Total 50000 r
+      -Sources-Sinks.png" alt="Total Sources and Sinks by Category chart populated with data."/>
 
 - **Average wallet balance** - Use this chart to see how many resources users, payers, and non-payers hold on average. If average balance is growing, especially for payers, consider adding new sinks.
 
@@ -129,4 +132,4 @@ The Economy dashboard includes five charts to help you take action to grow your 
 
   <img src="../../assets/analytics/event-types/All-Sources-Sinks.png" alt="All Sources and Sinks chart populated with data."/>
 
-For more tips on how to balance your in-experience economy, see [Balance virtual economies](../game-design/balance-virtual-economies.md).
+For more tips on how to balance your in-experience economy, see [Balance virtual economies](../game-design/balance-virtual-economies.md). vip
