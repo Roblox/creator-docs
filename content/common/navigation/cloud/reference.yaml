@@ -20,6 +20,8 @@ navigation:
         path: /cloud/reference/openapi
       - title: Scopes
         path: /cloud/reference/scopes
+      - title: Risk levels
+        path: /cloud/reference/risk-levels
   - heading: Authentication
   - title: API keys
     path: /cloud/auth/api-keys

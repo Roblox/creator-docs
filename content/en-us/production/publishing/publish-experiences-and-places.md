@@ -335,7 +335,7 @@ If you don't restart servers, players will transition to the new version of the 
 To restart servers for release updates:
 
 1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select the experience you want to restart servers for.
-2. Go to **Services** > **Server Management**.
+2. Go to **Configure** > **Server Management**.
 3. Select the places you want to restart.
 4. Click **Restart servers**.
 5. In the **Confirm Server Restart** dialog:

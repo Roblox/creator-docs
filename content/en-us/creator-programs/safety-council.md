@@ -46,7 +46,4 @@ Out of respect for the privacy of Council members, we do not intend to announce 
 
 ## How to Apply
 
-Fill out the application in the link below. Application periods open up periodically throughout the
-year.
-
-<Button href="https://survey.roblox.com/jfe/form/SV_6AkAYuMlaVy8jHg" size='large' variant='contained' style={{width:200}}>Apply</Button>
+Applications are currently closed. Check back periodically for updates on when applications reopen.
