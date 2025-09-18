@@ -326,45 +326,36 @@ To allow strong language between players in text chat within your experience:
 
 ## Release updates
 
-When you publish an updated version of an experience to Roblox, players aren't immediately removed from the old version of the experience. Instead, you can transition players to the new version by either restarting or shutting down all of your servers, each with advantages and disadvantages.
+When you publish an updated version of an experience to Roblox, players aren't immediately removed from old versions of the experience. Instead, you can migrate players to the updated version by restarting all of your outdated servers.
 
-If you don't take an action, players transition to the new version of the experience as the servers running the old version eventually empty and shut down. This option is non‑disruptive, but your player base might be playing different versions of the experience for a prolonged period of time. Reserve this approach for only minor updates.
+If you don't restart servers, players will transition to the new version of the experience as the servers running old versions eventually empty and shut down. This option is non‑disruptive, but your player base might be playing different versions of the experience for a prolonged period of time.
 
 ### Restart servers
 
-The **Restart Servers for Updates** option is the best choice for most updates. When you choose this option, Roblox performs the following actions:
+To restart servers for release updates:
 
-- Stops matchmaking to servers running the old version of the experience. Servers running the latest version are unaffected.
-- Starts replacement servers.
-- Shuts down old servers as their replacements become ready.
-- Automatically teleports players to rejoin the new version of the experience. All players on an existing server connect to the same replacement server.
+1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select the experience you want to restart servers for.
+2. Go to **Services** > **Server Management**.
+3. Select the places you want to restart.
+4. Click **Restart servers**.
+5. In the **Confirm Server Restart** dialog:
+   1. Select one or both of the following restart options:
+      - **Restart only servers with outdated versions** to avoid restarting servers that are running the latest published place version.
+      - **Delay server restart** to delay the shutdown of servers and allow players a set time between 1 and 60 minutes to leave the experience on their own instead of being temporarily disconnected. This is also known as server bleed-off.
+   2. Click **Restart**.
 
-Depending on the number of servers to replace, this process can take up to six minutes, although most experiences update in less than one minute.
-
-To restart all servers for updates:
-
-1. Navigate to the [Creator Dashboard][creatordashboard].
-1. Hover over the experience's thumbnail, click the **&ctdot;** button, and select **Restart Servers for Updates**.
-
-   <img src="../../assets/creator-dashboard/Options-Button-Experience-Public.png" width="200" />
-
-1. Confirm restart by clicking the **Restart** button.
-
-### Shut down all servers
-
-The **Shut Down All Servers** option performs the same process as **Restart Servers for Updates**, except it applies to **all** servers rather than those running old versions of the experience. This option is only recommended if you have a process for updating your experiences that does not involve publishing new place versions.
-
-<Alert severity="info">
-Players will automatically reconnect after the servers have shut down. If you would like to completely shut down an experience and not allow players to reconnect, such as in a situation where you need to fix a critical bug causing data loss, you can make the experience private.
+<Alert severity="warning">
+   Unless you have an experience update workflow that is independent of place version, we recommend that you always select **Restart only servers with outdated versions** to avoid unnecessarily disconnecting players.
 </Alert>
 
-To shut down all servers:
+After you restart servers, Roblox:
 
-1. Navigate to the [Creator Dashboard][creatordashboard].
-1. Hover over an experience's thumbnail, click the **&ctdot;** button, and select **Shut Down All Servers**.
+1. Stops all matchmaking to servers designated for shutdown. Players who join your experience by clicking the **Play** button will not be matched to these servers, but they can still join them by accepting invites, teleporting, or joining another user from their profile.
+2. Waits for the configured delay time, if you selected the **Delay server restart** option.
+3. Automatically teleports players to the updated version of the experience. All players on the same old server are sent to the same replacement server running the new version.
 
-   <img src="../../assets/creator-dashboard/Options-Button-Experience-Public.png" width="200" />
-
-1. Confirm shutdown by clicking the **OK** button.
+<Alert severity="info">
+   If you want to completely shut down your experience and not allow players to reconnect after you restart your servers, you must make the experience private.
+</Alert>
 
 [creatordashboard]: https://create.roblox.com/dashboard/creations
