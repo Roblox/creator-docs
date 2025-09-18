@@ -56,6 +56,20 @@ Data store rate limits for the [Open Cloud v1](/reference/cloud/datastores-api/v
         </ul>
       </td>
     </tr>
+    <tr>
+      <td>Delete</td>
+      <td>
+        <ul>
+          <li>Delete Data Store</li>
+          <li>Undelete Data Store</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>300 requests/minute/universe</li>
+        </ul>
+      </td>
+    </tr>
   </tbody>
 </table>
 

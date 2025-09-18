@@ -1201,6 +1201,15 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "showDeleted",
+            "in": "query",
+            "description": "If true, resources marked for pending deletion will be included in the\nresults.",
+            "schema": {
+              "example": true,
+              "type": "boolean"
+            }
           }
         ],
         "responses": {
@@ -1243,6 +1252,79 @@
           }
         },
         "x-roblox-stability": "STABLE",
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}": {
+      "delete": {
+        "tags": ["Cloud"],
+        "summary": "Delete Data Store",
+        "description": "Schedules the specified data store for permanent deletion.\n\nThis operation assigns the data store an expiry time 30 days in the future,\nat which point permanent deletion begins. To cancel, use the\n`UndeleteDataStore` operation before the data store's expiry time.\n\nPermanent deletion consists of deleting all of the entries in the data\nstore and then the data store resource itself. The data store is no longer\nreturned by the `ListDataStores` Open Cloud endpoint or\n`ListDataStoresAsync` Luau API, and you can reuse the data store's name.\n\nThe duration of the permanent deletion process depends on the number of\nentries in the data store. However, you can expect a data store with 1\nmillion or fewer entries to be permanently deleted within 3 days.\n\nData stores scheduled for permanent deletion are returned by the\n`ListDataStores` Open Cloud endpoint when the query parameter `showDeleted`\nis set to `true`. In the return value, each data store will have a\n`DELETED` state and an `expireTime` field.\n\nData stores scheduled for permanent deletion are immediately made\ninaccessible, meaning attempts to read or write to their entries will fail.\n\nNote: Due to caching in the backend service, attempts to read from or write\nto entries in these data stores can continue to succeed for a limited time\nafter the deletion:\n* `GetDataStoreEntry`: can succeed for up to 24 hours.\n* All other endpoints: can succeed for several minutes.\n\nIf the data store is already in a `DELETED` state, this operation is a\nno-op, and the data store is returned as-is.",
+        "operationId": "Cloud_DeleteDataStore",
+        "parameters": [
+          {
+            "name": "universe_id",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data_store_id",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataStore"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "x-roblox-rate-limits": {
+          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 3000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe-datastores.control:delete"
+          }
+        ],
+        "x-roblox-docs": {
+          "category": "Data and memory stores",
+          "methodProperties": {
+            "scopes": ["universe-datastores.control:delete"]
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStore",
+            "name": "DataStore"
+          }
+        },
+        "x-roblox-stability": "BETA",
         "security": [
           {
             "roblox-api-key": []
@@ -1336,7 +1418,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 500000
           }
         },
         "x-roblox-scopes": [
@@ -1431,7 +1513,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -1513,7 +1595,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -1587,7 +1669,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -1686,7 +1768,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -1778,7 +1860,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 500000
           }
         },
         "x-roblox-scopes": [
@@ -2124,7 +2206,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -2215,7 +2297,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -2298,7 +2380,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -2406,7 +2488,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 1000000
           }
         },
         "x-roblox-scopes": [
@@ -2507,7 +2589,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 500000
           }
         },
         "x-roblox-scopes": [
@@ -2656,6 +2738,89 @@
           }
         },
         "x-roblox-stability": "STABLE",
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}:undelete": {
+      "post": {
+        "tags": ["Cloud"],
+        "summary": "Undelete Data Store",
+        "description": "Restore the data store",
+        "operationId": "Cloud_UndeleteDataStore",
+        "parameters": [
+          {
+            "name": "universe_id",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data_store_id",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UndeleteDataStoreRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataStore"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "x-roblox-rate-limits": {
+          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 3000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe-datastores.control:delete"
+          }
+        ],
+        "x-roblox-docs": {
+          "category": "Data and memory stores",
+          "methodProperties": {
+            "scopes": ["universe-datastores.control:delete"]
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStore",
+            "name": "DataStore"
+          }
+        },
+        "x-roblox-stability": "BETA",
         "security": [
           {
             "roblox-api-key": []
@@ -2882,7 +3047,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 1000000
           }
         },
         "security": [
@@ -2958,7 +3123,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 1000000
           }
         },
         "security": [
@@ -3058,7 +3223,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 1000000
           }
         },
         "security": [
@@ -3169,7 +3334,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 1000000
           }
         },
         "security": [
@@ -3263,7 +3428,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 1000000
           }
         },
         "security": [
@@ -3344,7 +3509,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 1000000
           }
         },
         "security": [
@@ -3417,7 +3582,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 1000000
           }
         },
         "security": [
@@ -3515,7 +3680,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 1000000
           }
         },
         "security": [
@@ -3596,7 +3761,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 1000000
           }
         },
         "security": [
@@ -3700,7 +3865,7 @@
           "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 500000
           }
         },
         "x-roblox-scopes": [
@@ -3804,7 +3969,7 @@
           "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 500000
           }
         },
         "x-roblox-scopes": [
@@ -3895,7 +4060,7 @@
           "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 500000
           }
         },
         "x-roblox-scopes": [
@@ -3978,7 +4143,7 @@
           "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 500000
           }
         },
         "x-roblox-scopes": [
@@ -4086,7 +4251,7 @@
           "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 500000
           }
         },
         "x-roblox-scopes": [
@@ -4187,7 +4352,7 @@
           "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 500
+            "maxInPeriod": 500000
           }
         },
         "x-roblox-scopes": [
@@ -8876,6 +9041,11 @@
           }
         },
         "description": "Information about the expiration of a subscription."
+      },
+      "UndeleteDataStoreRequest": {
+        "type": "object",
+        "properties": {},
+        "description": "Restore the data store"
       },
       "Universe": {
         "type": "object",

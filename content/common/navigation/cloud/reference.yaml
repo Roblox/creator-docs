@@ -47,8 +47,6 @@ navigation:
     path: /cloud/features/badges
   - title: Bans and blocks
     path: /cloud/features/bans-and-blocks
-  - title: Chats
-    path: /cloud/features/chats
   - title: Connections
     path: /cloud/features/friends
   - title: Creator Store
@@ -318,12 +316,6 @@ navigation:
         versions:
           - name: v1
             path: /cloud/legacy/gameinternationalization/v1
-      - title: Game join
-        type: cloudlegacy
-        ignoreTranslation: true
-        versions:
-          - name: v1
-            path: /cloud/legacy/gamejoin/v1
       - title: Games v2
         type: cloudlegacy
         ignoreTranslation: true

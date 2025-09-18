@@ -26,7 +26,7 @@ If you meet certain account requirements, you can sell your custom meshes as acc
 
 See the following specifications for general geometry:
 
-- **Budgets** - Individual meshes can not exceed 10,000 triangles. Avatar items have their own individual budget requirements for [characters](../../art/characters/specifications.md) and [accessories](../../art/accessories/specifications.md).
+- **Budgets** - Individual meshes can not exceed 20,000 triangles. Avatar items have their own individual budget requirements for [characters](../../art/characters/specifications.md) and [accessories](../../art/accessories/specifications.md).
 - **Watertight** - All geometry must be watertight without exposed holes or backfaces.
 - **No N-gons** - Meshes must be in quads where possible.
 - **Volume** - Meshes cannot be 0 thickness and must have some volume.
