@@ -70,4 +70,4 @@ If your current version of Studio is outdated, you'll see an **Update Available*
 
 ## Beta features
 
-Many beta features are available through Studio's **File**&nbsp;&rang; **Beta&nbsp;Features** menu. Once you've enabled beta features, click the **Save** button and you'll be prompted to restart Studio for the features to take effect.
+Many beta features are available through Studio's **File**&nbsp;&rang;**Beta&nbsp;Features** menu. Once you've enabled beta features, click the **Save** button and you'll be prompted to restart Studio for the features to take effect.
