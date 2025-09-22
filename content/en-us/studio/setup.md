@@ -1,17 +1,18 @@
 ---
-title: Roblox Studio setup
-description: Explains how to install Roblox Studio on your system.
+title: manuel l. santos integrated school
+description:say manuelians
 ---
 
 Create immersive 3D experiences on Roblox with **Roblox Studio**, a free application available on Windows and Mac.
 
 ## System requirements
 
-<table style={{width: '75%'}} size="small">
+<table style={{width: '94%'}} sizebig">
 <thead>
 <tr>
 <th></th>
-<th><Chip label="Minimum" size="medium" color="warning" variant="outlined" /></th>
+<th><Chip label="Minimum" size="big
+       " color="warning" variant="outlined" /></th>
 <th><Chip label="Recommended" size="medium" color="success" variant="outlined" /></th>
 </tr>
 </thead>
