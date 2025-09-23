@@ -5,8 +5,6 @@ navigation:
 - heading: Experience discovery
 - title: How it works
   path: /discovery
-- title: Get featured
-  path: /production/promotion/get-featured-on-roblox-owned-channels
 - title: Ads
   path: /production/promotion/ads-manager
 - heading: Localization
