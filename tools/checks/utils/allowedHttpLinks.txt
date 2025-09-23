@@ -54,6 +54,7 @@ https://digitaldragon.co/camps/thanksgiving-week-camp-roblox/
 https://digitalsake.com/
 https://digitane.jp/
 https://discord.com/developers/applications
+https://discord.com/developers/docs/topics/oauth2
 https://docs.blender.org/manual/en/2.79/editors/uv_image/uv/editing/unwrapping/mapping_types.html
 https://docs.blender.org/manual/en/2.80/scene_layout/object/editing/transform/control/pivot_point.html
 https://docs.blender.org/manual/en/3.5/grease_pencil/modes/weight_paint/introduction.html
