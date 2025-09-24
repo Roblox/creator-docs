@@ -3,7 +3,7 @@ title: Roblox Innovation Awards
 description: Roblox Innovation Awards is an annual event celebrating the most innovative creators, video stars, and experiences.
 ---
 
-The Roblox Innovation Awards is an annual event celebrating the most innovative creators, video stars, and experiences, nominated by Roblox staff and the community.
+Roblox Innovation Awards is an annual event celebrating the most innovative creators, video stars, and experiences, nominated by Roblox staff and the community.
 
 <figure>
 <Chip
