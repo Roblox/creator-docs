@@ -17,4 +17,4 @@ For some examples of Roblox Developers Conference keynotes, talks, and Q&A sessi
 
 ## Invitations
 
-Eligible creators annually receive invites to the Roblox Developers Conference. These invites can be for in-person attendance or for virtual viewing. Keep an eye on the DevForum for updates regarding the conference each year. We announce "Save the Date" when registration opens.
+Eligible creators annually receive invites to the Roblox Developers Conference. These invites can be for in-person attendance or for virtual viewing. Keep an eye on the developer forum for updates regarding the conference and the "Save the Date" announcement for when registration opens.
