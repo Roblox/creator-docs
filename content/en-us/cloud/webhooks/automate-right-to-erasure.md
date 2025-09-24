@@ -90,19 +90,21 @@ After you add the webhook, use it to configure the bot with the following steps:
 
 <TabItem label="Discord">
 
+Check out Discord's [documentation](https://discord.com/developers/docs/topics/oauth2#bot-vs-user-accounts) for latest instructions.
+
 1. Navigate to the [Applications page](https://discord.com/developers/applications).
 1. Create a new application and name it to `GDPR Bot`.
 1. The system redirects you to the **General Information** settings of the bot. Copy and save its application ID in a secure place.
 1. Under the settings menu, select **OAuth2**.
-1. Under the **Default Authorization Link** section, expand the **Authorization Method** dropdown and select **In-app Authorization**.
-1. Add the **bot** scope and the **Administrator** permission. Save your changes.
-1. Under the **OAuth2** settings, select the **URL Generator** subcategory.
-1. Select the **bot** scope and the **Administrator** permission.
+1. Navigate to the **OAuth2** settings
+   1. Enable the **bot** scope, a list of additional Bot Permissions displays.
+   2. Add the **Administrator** permission. Save your changes.
+   3. Save the generated URL.
 1. Copy the generated URL. Leave the application settings page unclosed.
 1. Navigate to the generated URL. Select the target server. Click the **Continue** button and then the **Authorize** button.
-1. Navigate back to application settings page of your bot. Under the settings menu, select **bot**.
+1. Navigate back to application settings page and navigate to the Bot settings.
 1. Under the **Privileged Gateway Intents** section, enable **Message Content Intent**.
-1. Under the **Build-A-Bot** section, save the bot token in a secure place for later steps. If you don't see the token, click the **Reset Token** button to generate a new one.
+1. In the Bot settings > **Build-A-Bot** section, save the bot token in a secure place for later steps. If you don't see the token, click the **Reset Token** button to generate a new one.
 
 </TabItem>
 </Tabs>

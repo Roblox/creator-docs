@@ -5,9 +5,8 @@
 name: ParticleEmitter
 type: class
 memory_category: Instances
-summary: |
-  A special object that emits customizable 2D particles into the world.
-description: |
+summary: A special object that emits customizable 2D particles into the world.
+description: |-
   A **ParticleEmitter** is a special object that emits customizable 2D particles
   into the world. To emit and render particles, it must be parented to a
   `Class.BasePart` or an `Class.Attachment` within such a part. When parented to
@@ -46,10 +45,10 @@ tags: []
 deprecation_message: ''
 properties:
   - name: ParticleEmitter.Acceleration
-    summary: |
+    summary: |-
       Determines the global-axis acceleration of all active particles, measured
       in studs per second squared.
-    description: |
+    description: |-
       The **Acceleration** property determines how the
       `Class.ParticleEmitter.Speed|Speed` of particles changes over their
       lifetime. It is defined using a `Datatype.Vector3` to determine the
@@ -75,10 +74,10 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.Brightness
-    summary: |
+    summary: |-
       Scales the light emitted from the emitter when
       `Class.ParticleEmitter.LightInfluence` is 0.
-    description: |
+    description: |-
       Scales the light emitted from the emitter when
       `Class.ParticleEmitter.LightInfluence` is 0.
     code_samples: []
@@ -96,10 +95,10 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.Color
-    summary: |
+    summary: |-
       Determines the color of all active particles over their individual
       lifetimes.
-    description: |
+    description: |-
       The **Color** property determines the color of all active particles over
       their individual lifetimes. The color applies to the
       `Class.ParticleEmitter.Texture|Texture` when rendering and it uses the
@@ -131,10 +130,10 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.Drag
-    summary: |
+    summary: |-
       Determines the rate at which particles will lose half their speed through
       exponential decay.
-    description: |
+    description: |-
       The **Drag** property determines the rate in seconds at which individual
       particles will lose half their speed via exponential decay. Drag is
       applied by scaling the expected velocity from
@@ -158,9 +157,8 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.EmissionDirection
-    summary: |
-      Determines the face of the object that particles emit from.
-    description: |
+    summary: Determines the face of the object that particles emit from.
+    description: |-
       The **EmissionDirection** property determines the face (`Enum.NormalId`)
       of the parent object that particles emit from. A negative
       `Class.ParticleEmitter.Speed|Speed` means particles emit in the opposite
@@ -185,9 +183,8 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.Enabled
-    summary: |
-      Determines if particles emit from the emitter.
-    description: |
+    summary: Determines if particles emit from the emitter.
+    description: |-
       The **Enabled** property determines if particles emit from the emitter.
       Setting this to `false` stops further particles from spawning, but any
       existing particles remain active until they expire. This property is
@@ -213,9 +210,8 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.FlipbookFramerate
-    summary: |
-      Determines how fast the flipbook texture animates in frames per second.
-    description: |
+    summary: Determines how fast the flipbook texture animates in frames per second.
+    description: |-
       The **FlipbookFramerate** property determines how fast the flipbook
       texture animates in frames per second. Like
       `Class.ParticleEmitter.Lifetime|Lifetime`, you can set a minimum and
@@ -236,15 +232,13 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.FlipbookIncompatible
-    summary: |
+    summary: |-
       The error message to display if the
       `Class.ParticleEmitter.Texture|Texture` is incompatible for a flipbook.
-    description: |
+    description: |-
       The error message to display if the
       `Class.ParticleEmitter.Texture|Texture` is incompatible for a flipbook.
-      The flipbook texture must be of pixel dimensions 8&times;8, 16&times;16,
-      32&times;32, 64&times;64, 128&times;128, 256&times;256, 512&times;512, or
-      1024&times;1024.
+      The flipbook texture size must be an exact multiple of the flipbook layout size.
     code_samples: []
     type: string
     tags: []
@@ -260,10 +254,10 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.FlipbookLayout
-    summary: |
+    summary: |-
       Determines the layout of the flipbook texture. Must be None, Grid2x2,
-      Grid4x4, or Grid8x8.
-    description: |
+      Grid4x4, Grid8x8 or Custom.
+    description: |-
       The **FlipbookLayout** property determines the layout of the texture. It
       can be any value of the `Enum.ParticleFlipbookLayout` enum:
 
@@ -272,6 +266,7 @@ properties:
       - **Grid2x2** &ndash; 2&times;2 frames for a 4-frame animation.
       - **Grid4x4** &ndash; 4&times;4 frames for a 16-frame animation.
       - **Grid8x8** &ndash; 8&times;8 frames for a 64-frame animation.
+      - **Custom** &ndash; A custom grid size defined by `Class.ParticleEmitter.FlipbookSizeX|FlipbookSizeX` and `Class.ParticleEmitter.FlipbookSizeY|FlipbookSizeY`.
     code_samples: []
     type: ParticleFlipbookLayout
     tags: []
@@ -286,11 +281,45 @@ properties:
       can_save: true
     capabilities:
       - Basic
+  - name: ParticleEmitter.FlipbookSizeX
+    summary: Defines the number of horizontal frames in a custom flipbook layout.
+    description: The **FlipbookSizeX** property defines the number of horizontal frames (columns) in a custom flipbook layout. This property only applies when `Class.ParticleEmitter.FlipbookLayout|FlipbookLayout` is set to `Enum.ParticleFlipbookLayout.Custom|Custom`.
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Flipbook
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+  - name: ParticleEmitter.FlipbookSizeY
+    summary: Defines the number of vertical frames in a custom flipbook layout.
+    description: The **FlipbookSizeY** property defines the number of vertical frames (rows) in a custom flipbook layout. This property only applies when `Class.ParticleEmitter.FlipbookLayout|FlipbookLayout` is set to `Enum.ParticleFlipbookLayout.Custom|Custom`.
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Flipbook
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
   - name: ParticleEmitter.FlipbookMode
-    summary: |
+    summary: |-
       Determines the type of the flipbook animation. Must be Loop, OneShot,
       PingPong, or Random.
-    description: |
+    description: |-
       The **FlipbookMode** property determines the type of the flipbook
       animation. It can be any value of the `Enum.ParticleFlipbookMode` enum:
 
@@ -326,10 +355,10 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.FlipbookStartRandom
-    summary: |
+    summary: |-
       Determines whether the animation starts at a random frame chosen per
       particle instead of always starting at frame zero.
-    description: |
+    description: |-
       The **FlipbookStartRandom** property determines whether each particle
       begins at a random frame of the animation instead of always starting at
       the first frame. One use case is to enable this property and also set
@@ -351,9 +380,8 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.Lifetime
-    summary: |
-      Defines a random range of ages for newly emitted particles.
-    description: |
+    summary: Defines a random range of ages for newly emitted particles.
+    description: |-
       The **Lifetime** property defines the maximum and minimum ages for newly
       emitted particles. Lifetimes are stored on a per-particle basis, so if
       this value is changed, existing particles will stay active until their
@@ -374,10 +402,10 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.LightEmission
-    summary: |
+    summary: |-
       Determines how much particles' colors are blended with the colors behind
       them.
-    description: |
+    description: |-
       The **LightEmission** property determines the blending of the
       `Class.ParticleEmitter.Texture|Texture` colors with the colors behind
       them. A value of 0 uses normal blending mode while a value of 1 uses
@@ -405,9 +433,8 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.LightInfluence
-    summary: |
-      Determines how much particles are influenced by the environmental light.
-    description: |
+    summary: Determines how much particles are influenced by the environmental light.
+    description: |-
       The **LightInfluence** property determines how much environmental light
       affects the color of individual particles when they render. It must be in
       the range of 0–1; behavior of values outside of this range are not
@@ -451,10 +478,10 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.LockedToPart
-    summary: |
+    summary: |-
       Determines whether the particles rigidly move with the part they're being
       emitted from.
-    description: |
+    description: |-
       The **LockedToPart** property determines if particles "stick" to the
       emission source (the `Class.Attachment` or `Class.BasePart` to which the
       `Class.ParticleEmitter` is parented). If `true`, active particles will
@@ -478,9 +505,8 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.Orientation
-    summary: |
-      Specifies how to orient particles.
-    description: |
+    summary: Specifies how to orient particles.
+    description: |-
       The **Orientation** property determines which orientation mode to use for
       an emitter's particle geometry.
 
@@ -525,9 +551,8 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.Rate
-    summary: |
-      Determines the number of particles emitted per second.
-    description: |
+    summary: Determines the number of particles emitted per second.
+    description: |-
       The **Rate** property determines how many particles are emitted per second
       while the emitter is `Class.ParticleEmitter.Enabled|Enabled`. It is the
       inverse of frequency, meaning that a rate of 5 emits a particle every 0.2
@@ -548,10 +573,10 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.RotSpeed
-    summary: |
+    summary: |-
       Determines the range of angular speeds of emitted particles, measured in
       degrees per second.
-    description: |
+    description: |-
       The **RotSpeed** property determines a random range of angular speeds for
       newly emitted particles, measured in degrees per second. A random angular
       speed is chosen upon emission, so changing this property doesn't affect
@@ -578,9 +603,8 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.Rotation
-    summary: |
-      Determines the range of rotations in degrees for newly emitted particles.
-    description: |
+    summary: Determines the range of rotations in degrees for newly emitted particles.
+    description: |-
       The **Rotation** property determines the range of rotations in degrees for
       newly emitted particles, measured in degrees. Positive values are in the
       clockwise direction. This property is commonly set to `[0, 360]` to
@@ -605,9 +629,8 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.Shape
-    summary: |
-      Sets the shape of the emitter to either a box, sphere, cylinder, or disc.
-    description: |
+    summary: Sets the shape of the emitter to either a box, sphere, cylinder, or disc.
+    description: |-
       The **Shape** property sets the shape of the emitter to either a box,
       sphere, cylinder, or disc. After you make a selection, you can adjust the
       `Class.ParticleEmitter.ShapeStyle|ShapeStyle`,
@@ -630,10 +653,10 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.ShapeInOut
-    summary: |
+    summary: |-
       Sets whether particles emit outward only, inward only, or in both
       directions.
-    description: |
+    description: |-
       Sets whether particles emit outward only, inward only, or in both
       directions. For visual examples, see
       [here](../../../effects/particle-emitters.md#shape).
@@ -652,9 +675,8 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.ShapePartial
-    summary: |
-      Influences particle emission from cylinder, disc, sphere, and box shapes.
-    description: |
+    summary: Influences particle emission from cylinder, disc, sphere, and box shapes.
+    description: |-
       Depending on the `Class.ParticleEmitter.Shape|Shape` value, this property
       performs a different action:
 
@@ -689,9 +711,8 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.ShapeStyle
-    summary: |
-      Sets particle emission to either volumetric or surface-only emission.
-    description: |
+    summary: Sets particle emission to either volumetric or surface-only emission.
+    description: |-
       Sets particle emission to either volumetric or surface-only emission. For
       visual examples, see [here](../../../effects/particle-emitters.md#shape).
     code_samples: []
@@ -709,9 +730,8 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.Size
-    summary: |
-      Determines the world size over individual particles' lifetimes.
-    description: |
+    summary: Determines the world size over individual particles' lifetimes.
+    description: |-
       The **Size** property determines the world size of all active particles
       over their individual lifetimes. This property represents the dimensions
       of the square `Class.ParticleEmitter.Texture|Texture` for each particle.
@@ -740,10 +760,10 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.Speed
-    summary: |
+    summary: |-
       Determines a random range of velocities (minimum to maximum) at which new
       particles will emit, measured in studs per second.
-    description: |
+    description: |-
       The **Speed** property determines a random range of velocities (minimum to
       maximum) at which new particles will emit, measured in studs per second.
       Each particle's velocity is chosen upon emission and it applies in the
@@ -771,10 +791,10 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.SpreadAngle
-    summary: |
+    summary: |-
       Determines the angles at which particles may be randomly emit, measured in
       degrees.
-    description: |
+    description: |-
       The **SpreadAngle** property determines the random angles at which a
       particle may be emitted. For example, if the
       `Class.ParticleEmitter.EmissionDirection|EmissionDirection` is **Top**
@@ -799,10 +819,10 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.Squash
-    summary: |
+    summary: |-
       Allows for non-uniform scaling of particles, curve-controlled over their
       lifetime.
-    description: |
+    description: |-
       Allows for non-uniform scaling of particles, curve-controlled over their
       lifetime. Values greater than 0 cause particles to both shrink
       horizontally and grow vertically, while values less than 0 cause particles
@@ -822,9 +842,8 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.Texture
-    summary: |
-      Determines the image rendered on particles.
-    description: |
+    summary: Determines the image rendered on particles.
+    description: |-
       The **Texture** property determines the image rendered on particles. This
       image is influenced by `Class.ParticleEmitter.Color|Color`,
       `Class.ParticleEmitter.Transparency|Transparency`,
@@ -846,9 +865,8 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.TimeScale
-    summary: |
-      Value between 0 and 1 that controls the speed of the particle effect.
-    description: |
+    summary: Value between 0 and 1 that controls the speed of the particle effect.
+    description: |-
       A value between 0 and 1 that controls the speed of the particle effect. At
       1, it runs at normal speed; at 0.5 it runs at half speed; at 0 it freezes
       in time.
@@ -867,9 +885,8 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.Transparency
-    summary: |
-      Determines the transparency of particles over their individual lifetimes.
-    description: |
+    summary: Determines the transparency of particles over their individual lifetimes.
+    description: |-
       The **Transparency** property determines the transparency of all active
       particles over their individual lifetimes. It works similar to
       `Class.ParticleEmitter.Size|Size` in how it affects particles over time.
@@ -898,10 +915,10 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.VelocityInheritance
-    summary: |
+    summary: |-
       Determines how much of the parent's velocity is inherited by particles
       when emitted.
-    description: |
+    description: |-
       The **VelocityInheritance** property determines how much of the parent
       part's `Class.BasePart.Velocity|Velocity` is inherited by particles when
       they are emitted. A value of 0 means that no velocity is inherited, while
@@ -925,10 +942,10 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.VelocitySpread
-    summary: |
+    summary: |-
       Determines how offset a particle can be fired from the local emitter
       direction of its parent.
-    description: |
+    description: |-
       This property determines how offset a particle can be fired from the local
       emitter direction of its parent. When a particle is created its offset is
       picked randomly between 0 and VelocitySpread. This value is measured in
@@ -938,7 +955,7 @@ properties:
     tags:
       - NotReplicated
       - Deprecated
-    deprecation_message: |
+    deprecation_message: |-
       This property has been superseded by `Class.ParticleEmitter.SpreadAngle`
       which should be used in all new work.
     security:
@@ -952,9 +969,8 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.WindAffectsDrag
-    summary: |
-      Whether emitted particles follow the `Class.Workspace.GlobalWind` vector.
-    description: |
+    summary: Whether emitted particles follow the `Class.Workspace.GlobalWind` vector.
+    description: |-
       If true, emitted particles follow the `Class.Workspace.GlobalWind` vector.
       Only applies if the `Class.ParticleEmitter.Drag|Drag` property is greater
       than 0.
@@ -973,10 +989,10 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.ZOffset
-    summary: |
+    summary: |-
       Determines the forward-backward render position of particles; used to
       control what particles render on top/bottom.
-    description: |
+    description: |-
       The **ZOffset** property determines the forward-backward render position
       of particles, in studs, without changing their size on the screen. When
       changed, this property affects both current and future particles. Note
@@ -1002,9 +1018,8 @@ properties:
       - Basic
 methods:
   - name: ParticleEmitter:Clear
-    summary: |
-      Clears all particles that have been emitted.
-    description: |
+    summary: Clears all particles that have been emitted.
+    description: |-
       The **Clear** method instantly clears all existing particles that have
       been emitted by the `Class.ParticleEmitter` through its natural emission
       (non-zero `Class.ParticleEmitter.Rate|Rate` on an
@@ -1023,9 +1038,8 @@ methods:
     capabilities:
       - Basic
   - name: ParticleEmitter:Emit
-    summary: |
-      Emits a given number of particles.
-    description: |
+    summary: Emits a given number of particles.
+    description: |-
       The **Emit** method will cause the `Class.ParticleEmitter` to instantly
       emit the given number of particles.
     code_samples:
@@ -1035,8 +1049,7 @@ methods:
       - name: particleCount
         type: int
         default: 16
-        summary: |
-          The number of particles to emit.
+        summary: The number of particles to emit.
     returns:
       - type: ()
         summary: ''
