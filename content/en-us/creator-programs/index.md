@@ -279,12 +279,12 @@ Roblox offers various programs for creators on the platform to provide additiona
 <h4>Roblox Developers Conference</h4>
 <figure>
 <Chip
-        color="success"
-        label="Status: Open"
+        color="error"
+        label="Status: Closed"
         size="medium"
         variant="filled"/>
 </figure>
-<Typography variant='body1'>RDC is an invite-only hybrid event that brings together Roblox developers, brands, and creators from around the world.</Typography>
+<Typography variant='body1'>RDC is an invite-only, hybrid event that brings together Roblox developers, brands, and creators worldwide.</Typography>
 </CardContent>
 <CardActions>
 <Button href="/creator-programs/rdc" variant="contained" color="secondary" size='large'>Learn More</Button>
@@ -301,12 +301,12 @@ Roblox offers various programs for creators on the platform to provide additiona
 <h4>Roblox Innovation Awards</h4>
 <figure>
 <Chip
-        color="success"
-        label="Status: Open"
+        color="error"
+        label="Status: Closed"
         size="medium"
         variant="filled"/>
 </figure>
-<Typography variant='body1'>Each year, the RIAs are awarded to the most innovative creators, video stars, and experiences.</Typography>
+<Typography variant='body1'>Roblox Innovation Awards is an annual event celebrating the most innovative creators, video stars, and experiences.</Typography>
 </CardContent>
 <CardActions>
 <Button href="/creator-programs/innovation-awards" variant="contained" color="secondary" size='large'>Learn More</Button>
