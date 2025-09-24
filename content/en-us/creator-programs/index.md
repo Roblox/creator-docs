@@ -306,7 +306,7 @@ Roblox offers various programs for creators on the platform to provide additiona
         size="medium"
         variant="filled"/>
 </figure>
-<Typography variant='body1'>The RIAs is an annual event celebrating the most innovative creators, video stars, and experiences.</Typography>
+<Typography variant='body1'>Roblox Innovation Awards is an annual event celebrating the most innovative creators, video stars, and experiences.</Typography>
 </CardContent>
 <CardActions>
 <Button href="/creator-programs/innovation-awards" variant="contained" color="secondary" size='large'>Learn More</Button>
