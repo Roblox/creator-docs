@@ -17,6 +17,9 @@ description: |
     from the text or UI object.
   - Choose the `Class.UIStroke.LineJoinMode|LineJoinMode` of the stroke (round,
     bevel, or miter).
+  - Specify the `Class.UIStroke.BorderStrokePosition|BorderStrokePosition` on
+    its parent's border and/or an additional
+    `Class.UIStroke.BorderOffset|BorderOffset` to the stroke's position.
   - Add a gradient to the stroke via the `Class.UIGradient` instance.
   - Use [rich text](../../../ui/rich-text.md) tags to add stroke to inline text
     segments.
@@ -48,6 +51,69 @@ properties:
       </figure>
     code_samples: []
     type: ApplyStrokeMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+  - name: UIStroke.BorderOffset
+    summary: |
+      Specifies an additional offset to the stroke's position, relative to the
+      parent's minimum height or width.
+    description: |
+      This property specifies an additional offset (`Datatype.UDim`) to the
+      stroke's position, relative to the parent's minimum height or width.
+
+      <figure>
+      <img src="../../../assets/ui/ui-objects/UIStroke-BorderOffset-Out.png" width="312" />
+      <figcaption><code>BorderOffset</code> = <code>(0.15, 0)</code></figcaption>
+      </figure>
+      <figure>
+      <img src="../../../assets/ui/ui-objects/UIStroke-BorderOffset-In.png" width="312" />
+      <figcaption><code>BorderOffset</code> = <code>(0, -16)</code></figcaption>
+      </figure>
+    code_samples: []
+    type: UDim
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+  - name: UIStroke.BorderStrokePosition
+    summary: |
+      Determines the stroke's position on its parent's border.
+    description: |
+      This property determines the stroke's position on its parent's border as
+      an `Enum.BorderStrokePosition` value.
+
+      <figure>
+      <img src="../../../assets/ui/ui-objects/UIStroke-BorderStrokePosition-Center.png" width="312" />
+      <figcaption><code>BorderStrokePosition</code> = <code>Enum.BorderStrokePosition.Center|Center</code></figcaption>
+      </figure>
+      <figure>
+      <img src="../../../assets/ui/ui-objects/UIStroke-BorderStrokePosition-Inner.png" width="312" />
+      <figcaption><code>BorderStrokePosition</code> = <code>Enum.BorderStrokePosition.Inner|Inner</code></figcaption>
+      </figure>
+      <figure>
+      <img src="../../../assets/ui/ui-objects/UIStroke-BorderStrokePosition-Outer.png" width="312" />
+      <figcaption><code>BorderStrokePosition</code> = <code>Enum.BorderStrokePosition.Outer|Outer</code></figcaption>
+      </figure>
+    code_samples: []
+    type: BorderStrokePosition
     tags: []
     deprecation_message: ''
     security:
@@ -144,6 +210,28 @@ properties:
       can_save: true
     capabilities:
       - UI
+  - name: UIStroke.StrokeSizingMode
+    summary: |
+      Determines whether the stroke's `Class.UIStroke.Thickness|Thickness` will
+      be measured in pixels or be relative to the parent.
+    description: |
+      This property determines whether the stroke's
+      `Class.UIStroke.Thickness|Thickness` will be measured in pixels or be
+      relative to the parent. See `Enum.StrokeSizingMode` for further details.
+    code_samples: []
+    type: StrokeSizingMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
   - name: UIStroke.Thickness
     summary: |
       Determines the stroke's thickness.
@@ -199,6 +287,32 @@ properties:
       </figure>
     code_samples: []
     type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+  - name: UIStroke.ZIndex
+    summary: |
+      Determines the order in which the stroke renders relative to sibling
+      `Class.UIStroke` instances.
+    description: |
+      This property determines the order in which the stroke renders relative to
+      sibling `Class.UIStroke` instances. Those with a lower `ZIndex` render
+      under (behind) those with a higher `ZIndex`.
+
+      Note that the rendering order for `Class.UIStroke` instances with the same
+      `ZIndex` is undefined. Do not apply multiple `Class.UIStroke` instances
+      with the same `ZIndex` if their rendering order matters.
+    code_samples: []
+    type: int
     tags: []
     deprecation_message: ''
     security:

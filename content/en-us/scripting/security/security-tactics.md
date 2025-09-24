@@ -80,20 +80,27 @@ Additional defensive design scenarios:
 
 <table><thead>
   <tr>
-    <th>Approach</th>
-    <th>Predictable outcome</th>
+    <th>Potential exploit scenario</th>
+    <th>Reactive Approach (less effective)</th>
+    <th>Defensive approach (more effective)</th>
   </tr></thead>
 <tbody>
   <tr>
-    <td>Chase down bots by writing code that attempts to detect them (reactive approach).</td>
-    <td>Exploiters seeking quick points will find a way around your complex detection code and use their bots in a different way.</td>
+    <td>(Obby) Exploiter teleports to the end to claim rewards</td>
+    <td>Only check the player's final position and try to detect impossible completion times</td>
+    <td>Design with mandatory, sequential checkpoints. Server validates each checkpoint was activated in order before granting rewardsYou can add another layer by flagging players who complete stages faster than humanly possible. The design of the game (requiring checkpoints) is what enables the effective server-side validation.</td>
   </tr>
   <tr>
-    <td>Reduce or outright remove point gains for kills on newly spawned players (defensive approach).</td>
-    <td>Extra time and friction is now required for exploiters because they get no points for instantly killing their bots. Additionally, "spawn campers" are discouraged because they no longer get points for killing newly spawned players.</td>
+    <td>(Combat) Client reports dealing impossible damage amounts</td>
+    <td>Try to detect and filter out impossible damage values</td>
+    <td>Server calculates all damage from server-sided weapon stats and validates hits through server-side raycasting</td>
   </tr>
-</tbody>
-</table>
+  <tr>
+    <td>(Economy) Exploiter duplicates items through rapid requests</td>
+    <td>Try to detect duplicate requests or unusual patterns</td>
+    <td>Implement server-side cooldowns and validate all transactions against current player inventory state</td>
+  </tr>
+</tbody></table>
 
 <Alert severity = 'info'> <AlertTitle>Key principle</AlertTitle> <br /> When designing a new feature, ask yourself: "How would an exploiter abuse this, and can I change the design to make that abuse impossible or worthless?" Instead of trying to detect cheating after it happens, design your game so that cheating either cannot occur or provides no meaningful advantage.</Alert>
 
@@ -192,13 +199,13 @@ An exploiter can send NaN (Not a Number) as an argument. NaN is uniquely dangero
 local function onCreateTradeOffer(player, offeredGold)
     -- 1. TYPE CHECK: This passes! typeof(NaN) is "number".
     if typeof(offeredGold) ~= "number" then
-return "Invalid offer"
+    return "Invalid offer"
     end
 
     -- 2. RANGE CHECK: This is bypassed!
     -- (NaN < 0) is false. (NaN > 1000000) is also false. The check does nothing.
     if offeredGold < 0 or offeredGold > 1000000 then
-return "Offer out of range"
+    return "Offer out of range"
     end
 
     -- 3. INVENTORY CHECK: This is bypassed!
@@ -388,9 +395,9 @@ When one of these events fires, your server script should perform its own valida
 
 **Note on network ownership**: By default, if any of these objects are children of unanchored parts or an unanchored assembly, an exploiter can take network ownership of the parent parts and move them directly to their character, bypassing distance checks. For critical actions, use anchored parts or the network ownership API along with the necessary server-sided validation.
 
-#### BaseRemoteEvent and RemoteFunction
+#### RemoteEvents and RemoteFunctions
 
-Limit the scope and impact of `Class.RemoteFunctions` and `Class.RemoteEvents`. Take extreme care in dynamically loading any assets (even textures or sounds) or running experience code (especially via require) based on the arguments of remote functions/events. Avoid implementing remotes that allow a client to specify an arbitrary path or instance reference for the server to delete or modify, even if such modifications seem trivial. Remotes that can change arbitrary instance state or make widespread changes to the DataModel tree can often be chained with other bugs to severely impact overall state or logic. Check not only the type of instance arguments, but also the class and expected location or structure within the DataModel.
+Limit the scope and impact of `Class.RemoteFunction|RemoteFunctions` and `Class.RemoteEvent|RemoteEvents`. Take extreme care in dynamically loading any assets (even textures or sounds) or running experience code (especially via require) based on the arguments of remote functions/events. Avoid implementing remotes that allow a client to specify an arbitrary path or instance reference for the server to delete or modify, even if such modifications seem trivial. Remotes that can change arbitrary instance state or make widespread changes to the DataModel tree can often be chained with other bugs to severely impact overall state or logic. Check not only the type of instance arguments, but also the class and expected location or structure within the DataModel.
 
 ### 3.4 Client to client communication
 
@@ -526,7 +533,7 @@ When a client has network ownership over parts (including their character), they
 
 **Physics manipulation**
 
-- Control the position and rotation of any unanchored parts or mechanisms, including replicating `Inf` or `NaN` components in `Class.Cframe|CFrames`.
+- Control the position and rotation of any unanchored parts or mechanisms, including replicating `Inf` or `NaN` components in `Class.CFrame|CFrames`.
   Set part velocities to extreme values (including `Inf` or `NaN`), which can interfere with the physics of other unanchored parts/assemblies, even those that are not owned by the exploiter.
   This is often used to fling other player characters and nearby parts.
   Manipulate the firing of Touched events, including not firing Touched at all.
