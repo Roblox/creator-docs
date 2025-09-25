@@ -1,13 +1,9 @@
 ---
-title: Sell plugins on the Creator Store
+title: Sell on the Creator Store
 description: An explanation of Creator Store seller accounts, their prerequisites, and how to create one.
 ---
 
-You can sell [plugins](../studio/plugins.md) on the Creator Store for **United States Dollars** (USD). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted.
-
-<Alert severity="info">
-You will soon be able to sell [models](../parts/models.md#distribute-models) on the Creator Store for **United States Dollars** (USD). You can create a seller account and start uploading models now.
-</Alert>
+You can sell [models](../parts/models.md) and [plugins](../studio/plugins.md) on the Creator Store for **United States Dollars** (USD). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted.
 
 In order to set any USD prices and sell your assets, you must have a **seller account**. Roblox administers seller accounts through **Stripe**, a third-party payments provider. If you meet Roblox's eligibility [requirements](#for-sellers), you can fill out Stripe's [application form](#complete-the-application-form) to create a seller account.
 
@@ -48,9 +44,21 @@ Transactions between any individual customer and seller are **capped** per month
 
 ### For assets
 
-Every asset that you sell on the Creator Store must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), and [Digital Millennium Copyright Act](./publishing/dmca-guidelines.md) (DMCA). If any asset breaks these rules, the asset and your account may be subject to moderation.
+Every asset that you sell on the Creator Store must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), and [Digital Millennium Copyright Act](./publishing/dmca-guidelines.md) (DMCA). If any asset breaks these rules, the asset and your account may be subject to moderation. If you suspect a rights violation involving your asset, you can submit the content for removal using the [Rights Manager](../production/publishing/rights-manager.md).
 
-In addition, you can only sell plugins that you own from an **individual** user account. Group-owned assets are ineligible. If you want to sell a group-owned asset, consider re‑uploading them under individual ownership.
+In addition, the Creator Store restricts use of the following practices to ensure asset safety:
+
+- Obscuring engine features within scripts, including LuaVMs, getfenv(), and setfenv().
+- Requiring remote assets, including require(assetId), loadstring(), InsertService:LoadAsset(), and ModuleScript.LinkedSource. Assets that may look useful on the surface could load another "virus" asset at runtime.
+- Including obfuscated code. For publicly-shared assets, it's important for creators to understand what they are putting into their experiences. If code is obfuscated, creators cannot trust that the script is only doing what it should be doing.
+
+**Plugin Ownership**
+
+You can only sell plugins that you own from an **individual** user account. Group-owned assets are ineligible. If you want to sell group-owned plugins, consider re‑uploading them under individual ownership.
+
+**Asset Privacy for Priced Models**
+
+Opt-in to the [Asset Privacy beta](../projects/assets/privacy.md) before uploading any models you intend to sell. This will ensure that newly-uploaded model dependencies (like the Images and Meshes) are set to Restricted. If you have previously saved models, we recommend opting into the beta and then creating a new model so that all dependencies can be registered correctly.
 
 ## Seller account
 
