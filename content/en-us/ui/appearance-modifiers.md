@@ -3,6 +3,8 @@ title: UI appearance modifiers
 description: Explains how to use appearance modifiers to customize basic user interface objects.
 ---
 
+import BetaAlert from '../includes/beta-features/beta-alert.md'
+
 By utilizing **appearance modifiers**, you can further customize the appearance of your `Class.GuiObject|GuiObjects`.
 
 - Apply a [gradient](#gradient) to the background of an object.
@@ -207,6 +209,8 @@ When applied to a text object, you can override the default stroke behavior by t
 
 ### Border position/offset
 
+<BetaAlert betaName="Improved UIStrokes" leadIn="The properties outlined in this section are currently in beta. Enable them through " leadOut="." components={props.components} />
+
 `Class.UIStroke.BorderStrokePosition|BorderStrokePosition` sets the stroke's position relative to its parent's border and `Class.UIStroke.BorderOffset|BorderOffset` lets you specify an additional offset to the stroke's position.
 
 <GridContainer numColumns="3">
@@ -268,6 +272,14 @@ The `Class.UIStroke.LineJoinMode|LineJoinMode` property lets you control how cor
     <figcaption>`Class.UIStroke.LineJoinMode|LineJoinMode` = `Enum.LineJoinMode.Miter|Miter`</figcaption>
   </figure>
 </GridContainer>
+
+### Layering
+
+<BetaAlert betaName="Improved UIStrokes" leadIn="Stroke layering through the property outlined in this section is currently in beta. Enable it through " leadOut="." components={props.components} />
+
+To layer multiple sibling `Class.UIStroke` instances on a `Class.GuiObject` from front to back, you can utilize the `Class.UIStroke.ZIndex|ZIndex` property. Those with a lower `Class.UIStroke.ZIndex|ZIndex` render under (behind) those with a higher `Class.UIStroke.ZIndex|ZIndex`.
+
+Note that the rendering order for `Class.UIStroke` instances with the same `Class.UIStroke.ZIndex|ZIndex` is undefined. Do not apply multiple `Class.UIStroke` instances with the same index if their rendering order matters.
 
 ## Corners
 
