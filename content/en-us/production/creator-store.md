@@ -61,7 +61,9 @@ For information on how to verify your account either through a government-issued
 
 Distributing to the Creator Store is the only way to make your assets publicly available to all users to use within their own experiences in Studio. You can distribute any mesh or image that you have imported through the [Asset Manager](../projects/assets/manager.md), or any [model](../parts/models.md), [plugin](../studio/plugins.md), or [audio assets](../audio/assets.md) that you have uploaded to your inventory.
 
-Every asset that you import must adhere to the [Community Rules][CommunityRulesURL] and [Terms&nbsp;of&nbsp;Use][TermsUseURL], and respect the [DMCA guidelines](../production/publishing/dmca-guidelines.md) regarding copyright. In addition, there are limits on the number of assets you can distribute per 30 days, depending on whether you've [verified your account](../production/publishing/account-verification.md):
+Every asset that you import must adhere to the [Community Rules][CommunityRulesURL] and [Terms&nbsp;of&nbsp;Use][TermsUseURL], and respect the [DMCA guidelines](../production/publishing/dmca-guidelines.md) regarding copyright. If you suspect a rights violation involving your asset, you can submit the content for removal using the [Rights Manager](../production/publishing/rights-manager.md).
+
+In addition, there are limits on the number of assets you can distribute per 30 days, depending on whether you've [verified your account](../production/publishing/account-verification.md):
 
 <table>
 <thead>
@@ -94,7 +96,7 @@ Every asset that you import must adhere to the [Community Rules][CommunityRulesU
 </tbody>
 </table>
 
-You can also choose to [sell](./sell-on-creator-store.md) plugins on the Creator Store for **United States Dollars** (USD). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. Note that you can only set USD pricing for plugins through the Creator Dashboard.
+Eligible Creators can also choose to [sell](./sell-on-creator-store.md) models and plugins on the Creator Store for **United States Dollars** (USD). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information, see [Sell on the Creator Store](./sell-on-creator-store.md).
 
 ### Through Creator Dashboard
 
