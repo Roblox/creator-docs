@@ -17,3 +17,5 @@ content/en-us/scale.md
 content/en-us/studio/index.md
 content/en-us/assistant/index.md
 content/en-us/education/resources/roblox-educators.md
+content/en-us/reference/cloud/openapi.json
+content/en-us/art/characters/validation-tool.md

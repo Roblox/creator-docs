@@ -1187,7 +1187,7 @@
       "get": {
         "tags": ["Data and memory stores"],
         "summary": "List Data Stores",
-        "description": "Returns a list of data stores.",
+        "description": "Returns a list of data stores.\n\nData stores scheduled for permanent deletion are omitted from the results\nby default (or when `showDeleted` is set to `false`). When this is the\ncase, the operation will check up to 512 data stores. If all checked data\nstores are deleted, it will return an empty list with a page token to\ncontinue iteration.",
         "operationId": "Cloud_ListDataStores",
         "parameters": [
           {
@@ -1334,7 +1334,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 3000
+            "maxInPeriod": 300
           }
         },
         "x-roblox-scopes": [
@@ -2860,7 +2860,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 3000
+            "maxInPeriod": 300
           }
         },
         "x-roblox-scopes": [
@@ -11436,12 +11436,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/AccountSettingsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/AccountSettingsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -11494,12 +11494,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/AccountSettingsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/AccountSettingsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -11656,12 +11656,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/AccountSettingsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/AccountSettingsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -11902,12 +11902,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/AccountSettingsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/AccountSettingsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -11965,12 +11965,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/AccountSettingsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/AccountSettingsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -12622,12 +12622,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/AdConfigurationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/AdConfigurationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -12692,12 +12692,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/AdConfigurationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/AdConfigurationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -14553,12 +14553,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -15279,12 +15279,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -15431,12 +15431,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -15483,12 +15483,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -15642,12 +15642,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -15788,12 +15788,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -15847,12 +15847,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -17366,12 +17366,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -17576,12 +17576,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -17628,12 +17628,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -17681,12 +17681,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -17735,12 +17735,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -17797,12 +17797,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -18079,12 +18079,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -18235,12 +18235,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -18295,12 +18295,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -18354,12 +18354,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -18908,12 +18908,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AvatarPublicApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AvatarPublicApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -19529,12 +19529,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AvatarPublicApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AvatarPublicApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -19589,12 +19589,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AvatarPublicApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AvatarPublicApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -19954,12 +19954,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BadgesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BadgesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -20033,12 +20033,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BadgesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BadgesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -20787,12 +20787,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BadgesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BadgesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -21428,12 +21428,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CatalogApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CatalogApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -21502,12 +21502,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CatalogApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CatalogApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -21641,12 +21641,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CatalogApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CatalogApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -21715,12 +21715,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CatalogApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CatalogApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -23513,12 +23513,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DevelopApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DevelopApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -23592,12 +23592,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DevelopApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DevelopApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -24598,12 +24598,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DevelopApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DevelopApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -24728,12 +24728,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DevelopApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DevelopApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -24766,7 +24766,7 @@
     "/v1/universes/multiget": {
       "get": {
         "tags": ["Universes"],
-        "summary": "Gets a System.Collections.Generic.List`1.",
+        "summary": "Gets a list of universes.",
         "description": "If a universe can not be found for a given ID (such as -1) it will be skipped.",
         "parameters": [
           {
@@ -25450,12 +25450,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DevelopApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DevelopApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -25522,12 +25522,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DevelopApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DevelopApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -25579,12 +25579,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DevelopApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DevelopApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -25651,12 +25651,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DevelopApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DevelopApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -25724,12 +25724,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DevelopApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DevelopApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -25790,12 +25790,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DevelopApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DevelopApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -25865,12 +25865,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DevelopApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DevelopApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -28389,12 +28389,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FriendsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FriendsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -28427,122 +28427,6 @@
         }
       }
     },
-    "/v1/users/{requesterUserId}/accept-trusted-friend-request": {
-      "post": {
-        "tags": ["Connections"],
-        "summary": "Accept a trusted friend request.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "requesterUserId",
-            "description": "Id of user who sent trusted friend request",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.AcceptTrustedFriendRequestResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.AcceptTrustedFriendRequestResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The target user is invalid or does not exist."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed\r\n2: The user is banned from performing operation.\r\n3: The user is blocked from performing this action."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://friends.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/features/friends#/default/post_v1_users__requesterUserId__accept_trusted_friend_request"
-        }
-      }
-    },
-    "/v1/users/{requesterUserId}/accept-castor-request": {
-      "post": {
-        "summary": "Accept a trusted friend request.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "requesterUserId",
-            "description": "Id of user who sent trusted friend request",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.AcceptTrustedFriendRequestResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.AcceptTrustedFriendRequestResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The target user is invalid or does not exist."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed\r\n2: The user is banned from performing operation.\r\n3: The user is blocked from performing this action."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://friends.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ]
-      }
-    },
     "/v1/users/{requesterUserId}/decline-friend-request": {
       "post": {
         "tags": ["Connections"],
@@ -28565,12 +28449,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FriendsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FriendsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -28601,122 +28485,6 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/friends#/default/post_v1_users__requesterUserId__decline_friend_request"
         }
-      }
-    },
-    "/v1/users/{requesterUserId}/ignore-trusted-friend-request": {
-      "post": {
-        "tags": ["Connections"],
-        "summary": "Ignore a trusted friend request.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "requesterUserId",
-            "description": "Id of user who sent the trusted friend request",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.IgnoreTrustedFriendRequestResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.IgnoreTrustedFriendRequestResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The target user is invalid or does not exist."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed"
-          }
-        },
-        "servers": [
-          {
-            "url": "https://friends.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/features/friends#/default/post_v1_users__requesterUserId__ignore_trusted_friend_request"
-        }
-      }
-    },
-    "/v1/users/{requesterUserId}/ignore-castor-request": {
-      "post": {
-        "summary": "Ignore a trusted friend request.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "requesterUserId",
-            "description": "Id of user who sent the trusted friend request",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.IgnoreTrustedFriendRequestResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.IgnoreTrustedFriendRequestResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The target user is invalid or does not exist."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed"
-          }
-        },
-        "servers": [
-          {
-            "url": "https://friends.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ]
       }
     },
     "/v1/users/{senderUserId}/accept-friend-request-with-token": {
@@ -28756,12 +28524,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FriendsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FriendsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -28871,122 +28639,6 @@
         }
       }
     },
-    "/v1/users/{targetUserId}/remove-trusted-friend": {
-      "post": {
-        "tags": ["Connections"],
-        "summary": "Removes target user as trusted friend.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "targetUserId",
-            "description": "The target user id to remove as trusted friend",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.RemoveTrustedFriendResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.RemoveTrustedFriendResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The target user is invalid or does not exist."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed"
-          }
-        },
-        "servers": [
-          {
-            "url": "https://friends.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/features/friends#/default/post_v1_users__targetUserId__remove_trusted_friend"
-        }
-      }
-    },
-    "/v1/users/{targetUserId}/remove-castor": {
-      "post": {
-        "summary": "Removes target user as trusted friend.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "targetUserId",
-            "description": "The target user id to remove as trusted friend",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.RemoveTrustedFriendResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.RemoveTrustedFriendResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The target user is invalid or does not exist."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed"
-          }
-        },
-        "servers": [
-          {
-            "url": "https://friends.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ]
-      }
-    },
     "/v1/users/{targetUserId}/request-friendship": {
       "post": {
         "tags": ["Connections"],
@@ -29066,122 +28718,6 @@
         }
       }
     },
-    "/v1/users/{targetUserId}/send-trusted-friend-request": {
-      "post": {
-        "tags": ["Connections"],
-        "summary": "Send a trusted friend request.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "targetUserId",
-            "description": "Id of target user for the trusted friend request",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.SendTrustedFriendRequestResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.SendTrustedFriendRequestResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The target user is invalid or does not exist."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed\r\n2: The user is banned from performing operation.\r\n3: The user is blocked from performing this action."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://friends.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/features/friends#/default/post_v1_users__targetUserId__send_trusted_friend_request"
-        }
-      }
-    },
-    "/v1/users/{targetUserId}/send-castor-request": {
-      "post": {
-        "summary": "Send a trusted friend request.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "targetUserId",
-            "description": "Id of target user for the trusted friend request",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.SendTrustedFriendRequestResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.SendTrustedFriendRequestResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The target user is invalid or does not exist."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed\r\n2: The user is banned from performing operation.\r\n3: The user is blocked from performing this action."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://friends.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ]
-      }
-    },
     "/v1/users/{targetUserId}/unfollow": {
       "post": {
         "tags": ["Interactions"],
@@ -29204,12 +28740,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FriendsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FriendsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -29267,12 +28803,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FriendsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FriendsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -31287,12 +30823,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -31359,12 +30895,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -31414,6 +30950,55 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_legacy_game_internationalization_v1_source_language_games__gameId_"
         }
+      }
+    },
+    "/v1/source-language/games/{gameId}/language-with-locales": {
+      "get": {
+        "summary": "Gets the source language of a game",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "gameId",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.SourceLanguageWithLocales"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.SourceLanguageWithLocales"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "14: Invalid game id"
+          },
+          "503": {
+            "description": "17: Feature is disabled"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://gameinternationalization.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}]
       }
     },
     "/v1/supported-languages/games/{gameId}": {
@@ -31515,12 +31100,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -31597,12 +31182,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -32432,12 +32017,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -32503,12 +32088,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -32592,12 +32177,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -32682,12 +32267,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -32754,12 +32339,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -32829,12 +32414,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -32918,12 +32503,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -33008,12 +32593,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -33080,12 +32665,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -33155,12 +32740,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -33244,12 +32829,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -33334,12 +32919,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -33406,12 +32991,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -33481,12 +33066,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -33570,12 +33155,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -33660,12 +33245,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -33732,12 +33317,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -34188,12 +33773,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -34288,12 +33873,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -34673,12 +34258,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -34938,12 +34523,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -35127,12 +34712,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -35666,12 +35251,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -35855,12 +35440,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -36388,12 +35973,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -36571,12 +36156,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -37357,12 +36942,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -37451,12 +37036,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -38215,12 +37800,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GamesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GamesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -38892,11 +38477,13 @@
             "description": "1: The private server is invalid or does not exist.\r\n4: The universe does not exist."
           }
         },
+        "deprecated": true,
         "servers": [
           {
             "url": "https://games.roblox.com"
           }
         ],
+        "description": "This endpoint is deprecated and will be removed after October 1st, 2025.",
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/private-servers#/default/get_v1_private_servers"
         }
@@ -39305,12 +38892,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GamesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GamesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -39550,11 +39137,13 @@
             "description": "1: The private server is invalid or does not exist."
           }
         },
+        "deprecated": true,
         "servers": [
           {
             "url": "https://games.roblox.com"
           }
         ],
+        "description": "This endpoint is deprecated and will be removed after October 1st, 2025.",
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/private-servers#/default/patch_v1_vip_servers__id__voicesettings"
         }
@@ -40162,6 +39751,10 @@
                 "DeleteForumCategory",
                 "DeleteForumPost",
                 "DeleteForumComment",
+                "PinForumPost",
+                "UnpinForumPost",
+                "LockForumPost",
+                "UnlockForumPost",
                 "CreateRoleset",
                 "DeleteRoleset",
                 "CreateCommerceProduct",
@@ -40344,6 +39937,10 @@
                 "DeleteForumCategory",
                 "DeleteForumPost",
                 "DeleteForumComment",
+                "PinForumPost",
+                "UnpinForumPost",
+                "LockForumPost",
+                "UnlockForumPost",
                 "CreateRoleset",
                 "DeleteRoleset",
                 "CreateCommerceProduct",
@@ -40548,12 +40145,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -40615,12 +40212,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -40753,12 +40350,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -40824,12 +40421,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -41155,12 +40752,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -41401,12 +40998,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -41468,12 +41065,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -41674,12 +41271,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -42026,12 +41623,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -42171,12 +41768,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -42497,12 +42094,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -43428,12 +43025,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -43488,12 +43085,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -43555,12 +43152,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -43637,12 +43234,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -43714,12 +43311,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -43793,12 +43390,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -43870,12 +43467,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -44285,12 +43882,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -44331,12 +43928,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -44818,12 +44415,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -44972,12 +44569,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -45059,12 +44656,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -45296,12 +44893,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -45383,12 +44980,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -45461,12 +45058,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -45534,12 +45131,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -45604,12 +45201,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -46230,12 +45827,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/InventoryApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/InventoryApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -46299,12 +45896,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/InventoryApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/InventoryApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -46671,12 +46268,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/InventoryApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/InventoryApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -47212,12 +46809,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/ItemConfigurationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/ItemConfigurationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -48675,12 +48272,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/LocalizationTablesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/LocalizationTablesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -48877,12 +48474,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/LocalizationTablesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/LocalizationTablesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -49422,12 +49019,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/LocalizationTablesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/LocalizationTablesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -49498,12 +49095,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/LocalizationTablesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/LocalizationTablesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -49619,12 +49216,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MetricsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MetricsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -49678,12 +49275,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MetricsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MetricsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -53859,12 +53456,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TradesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TradesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -53910,12 +53507,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TradesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TradesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -54411,12 +54008,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/TranslationRolesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/TranslationRolesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -54994,12 +54591,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/TwoStepVerificationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/TwoStepVerificationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -55519,12 +55116,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/TwoStepVerificationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/TwoStepVerificationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -55653,12 +55250,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/TwoStepVerificationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/TwoStepVerificationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -55881,12 +55478,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/TwoStepVerificationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/TwoStepVerificationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -55963,12 +55560,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/TwoStepVerificationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/TwoStepVerificationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -56042,12 +55639,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/TwoStepVerificationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/TwoStepVerificationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -56187,12 +55784,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/TwoStepVerificationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/TwoStepVerificationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -56329,12 +55926,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/TwoStepVerificationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/TwoStepVerificationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -56398,12 +55995,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/TwoStepVerificationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/TwoStepVerificationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -56478,12 +56075,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/TwoStepVerificationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/TwoStepVerificationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -56669,12 +56266,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UsersApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UsersApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -56842,12 +56439,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UsersApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UsersApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -56939,12 +56536,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UsersApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UsersApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -57063,12 +56660,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UsersApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UsersApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -57581,12 +57178,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UsersApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UsersApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -62049,7 +61646,8 @@
             "description": "The birth year",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountInformation.Api.Models.BirthdateResponse": {
         "description": "The birthdate response",
@@ -62070,7 +61668,8 @@
             "description": "The birth year",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountInformation.Api.Models.ConsecutiveLoginDaysResponse": {
         "description": "The consecutive login days response",
@@ -62081,7 +61680,8 @@
             "description": "Consecutive login days",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountInformation.Api.Models.DescriptionRequest": {
         "description": "The description request",
@@ -62091,7 +61691,8 @@
             "description": "The description",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountInformation.Api.Models.DescriptionResponse": {
         "description": "The description response",
@@ -62101,11 +61702,13 @@
             "description": "The description",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountInformation.Api.Models.EmptyRequest": {
         "description": "For API calls without a request body.",
-        "type": "object"
+        "type": "object",
+        "additionalProperties": false
       },
       "Roblox.AccountInformation.Api.Models.GenderRequest": {
         "description": "The gender request",
@@ -62115,7 +61718,8 @@
             "description": "The gender",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountInformation.Api.Models.GenderResponse": {
         "description": "The gender response",
@@ -62126,7 +61730,8 @@
             "description": "The gender",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountInformation.Api.Models.MetadataResponse": {
         "description": "The metadata response",
@@ -62170,7 +61775,8 @@
             "type": "boolean",
             "readOnly": true
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountInformation.Api.Models.PhoneRequest": {
         "description": "The phone request",
@@ -62196,7 +61802,8 @@
             "description": "Verification Channel",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountInformation.Api.Models.PhoneResponse": {
         "description": "The phone response",
@@ -62227,7 +61834,8 @@
             "description": "Whether user needs to provide password to update their phone numbers",
             "type": "boolean"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountInformation.Api.Models.PromotionChannelsByUserIdResponse": {
         "description": "The promotion channels response",
@@ -62253,7 +61861,8 @@
             "description": "The Guilded channel",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountInformation.Api.Models.PromotionChannelsRequest": {
         "description": "The promotion channels request",
@@ -62283,7 +61892,8 @@
             "description": "The promotion channels visibility privacy level",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountInformation.Api.Models.PromotionChannelsResponse": {
         "description": "The promotion channels response",
@@ -62313,7 +61923,8 @@
             "description": "The Guilded channel",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountInformation.Api.Models.StarCodeAffiliateRequest": {
         "description": "The star code affiliate request",
@@ -62323,7 +61934,8 @@
             "description": "The star code affiliate code",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountInformation.Api.Models.StarCodeAffiliateResponse": {
         "description": "The star code affiliate response",
@@ -62342,7 +61954,8 @@
             "description": "The star code affiliate code",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountInformation.Api.Models.VerifyEmailRequest": {
         "description": "Verify Email Request",
@@ -62352,7 +61965,8 @@
             "description": "Ticket to verify email",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountInformation.Api.Models.VerifyEmailResponse": {
         "description": "The verify email response",
@@ -62363,7 +61977,8 @@
             "description": "Free item id after email verification",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountInformation.Api.Models.VerifyPhoneRequest": {
         "description": "Verify Phone Request",
@@ -62373,7 +61988,8 @@
             "description": "Code to verify phone",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AccountInformation.Api.RobloxBadgeResponse": {
         "type": "object",
@@ -62395,7 +62011,8 @@
             "description": "The URL corresponding to the image which represents this Roblox badge.",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Platform.UserPhoneNumberVerification.Models.PendingVerificationResponse": {
         "type": "object",
@@ -62406,10 +62023,12 @@
           "data": {
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Web.WebAPI.ApiEmptyResponseModel": {
-        "type": "object"
+        "type": "object",
+        "additionalProperties": false
       },
       "Roblox.AccountSettings.Api.EmailResponse": {
         "description": "Response model for getting the user's email address and verified status",
@@ -62629,6 +62248,9 @@
             "type": "integer"
           }
         }
+      },
+      "AccountSettingsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
+        "type": "object"
       },
       "Roblox.Web.WebAPI.Models.ApiArrayResponse_System.String_": {
         "type": "object",
@@ -63178,6 +62800,9 @@
           }
         }
       },
+      "AdConfigurationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
+        "type": "object"
+      },
       "Roblox.AssetDelivery.Api.AssetMetadata": {
         "description": "An asset piece of metadata.",
         "type": "object",
@@ -63479,10 +63104,6 @@
             "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.AccountLinkParameters"
           }
         },
-        "additionalProperties": false
-      },
-      "AuthenticationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
-        "type": "object",
         "additionalProperties": false
       },
       "Roblox.Authentication.Api.Models.AuthMetaDataResponse": {
@@ -65572,10 +65193,6 @@
         },
         "additionalProperties": false
       },
-      "AvatarPublicApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
-        "type": "object",
-        "additionalProperties": false
-      },
       "Roblox.Api.Avatar.Models.AvatarFilteredPageResponse_Roblox.Api.Avatar.Models.OutfitModel_": {
         "description": "Filtered page response",
         "type": "object",
@@ -66169,10 +65786,6 @@
             "type": "string"
           }
         },
-        "additionalProperties": false
-      },
-      "BadgesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
-        "type": "object",
         "additionalProperties": false
       },
       "Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Badges.BadgeAwarderType_": {
@@ -67154,10 +66767,6 @@
         },
         "additionalProperties": false
       },
-      "CatalogApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
-        "type": "object",
-        "additionalProperties": false
-      },
       "Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Catalog.Api.BundleDetailsModel_": {
         "type": "object",
         "properties": {
@@ -67972,10 +67581,6 @@
             "type": "boolean"
           }
         },
-        "additionalProperties": false
-      },
-      "DevelopApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
-        "type": "object",
         "additionalProperties": false
       },
       "Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Api.Develop.AssetVersion_": {
@@ -68837,17 +68442,6 @@
           }
         }
       },
-      "Roblox.Friends.Api.AcceptTrustedFriendRequestResponse": {
-        "description": "Response model for AcceptTrustedFriendRequestResposne",
-        "type": "object",
-        "properties": {
-          "success": {
-            "description": "Success",
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Friends.Api.CaptchaStatusResponseModel": {
         "description": "This is response model to notify when action succeeded, failed, or captcha is required",
         "type": "object",
@@ -69018,17 +68612,6 @@
           "senderNickname": {
             "description": "Optional nickname attached to friend request",
             "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Friends.Api.IgnoreTrustedFriendRequestResponse": {
-        "description": "Response model for IgnoreTrustedFriendRequestResponse",
-        "type": "object",
-        "properties": {
-          "success": {
-            "description": "Success",
-            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -69355,28 +68938,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Friends.Api.RemoveTrustedFriendResponse": {
-        "description": "Response model for RemoveTrustedFriendResponse",
-        "type": "object",
-        "properties": {
-          "success": {
-            "description": "Success",
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Friends.Api.SendTrustedFriendRequestResponse": {
-        "description": "Response model for SendTrustedFriendRequestResponse",
-        "type": "object",
-        "properties": {
-          "success": {
-            "description": "Success",
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Friends.Api.TrustedFriendStatusResponse": {
         "description": "The trusted friend status response model",
         "type": "object",
@@ -69406,10 +68967,6 @@
             "type": "string"
           }
         },
-        "additionalProperties": false
-      },
-      "FriendsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
-        "type": "object",
         "additionalProperties": false
       },
       "Roblox.Paging.CursoredPagedResult_Roblox.Friends.Api.Models.Response.FriendResponse_": {
@@ -70342,6 +69899,24 @@
         },
         "additionalProperties": false
       },
+      "Roblox.GameInternationalization.Api.SourceLanguageWithLocales": {
+        "type": "object",
+        "properties": {
+          "languageFamily": {
+            "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.Language"
+          },
+          "defaultLocale": {
+            "$ref": "#/components/schemas/Roblox.Localization.Client.SupportedLocale"
+          },
+          "childLocales": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Localization.Client.SupportedLocale"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.GameInternationalization.Api.SupportedLanguagesMetadataResponse": {
         "type": "object",
         "properties": {
@@ -70846,10 +70421,6 @@
             "type": "integer"
           }
         },
-        "additionalProperties": false
-      },
-      "GameInternationalizationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
-        "type": "object",
         "additionalProperties": false
       },
       "Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.GameInternationalization.Api.GetBadgeIconResponse_": {
@@ -72308,10 +71879,6 @@
             "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.VerifiedBadgeUserResponse"
           }
         },
-        "additionalProperties": false
-      },
-      "GamesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
-        "type": "object",
         "additionalProperties": false
       },
       "Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Games.Api.Models.Response.GameDetailResponse_": {
@@ -74094,10 +73661,6 @@
         },
         "additionalProperties": false
       },
-      "GroupsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
-        "type": "object",
-        "additionalProperties": false
-      },
       "Roblox.Groups.Api.GroupAuditLogPageResponse_Roblox.Groups.Api.Models.Response.GroupAuditLogResponseItem_": {
         "description": "ApiPageResponse for group audit log",
         "type": "object",
@@ -74514,10 +74077,6 @@
             "type": "integer"
           }
         },
-        "additionalProperties": false
-      },
-      "InventoryApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
-        "type": "object",
         "additionalProperties": false
       },
       "Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Inventory.Api.Models.CollectibleUserAssetModel_": {
@@ -75016,6 +74575,9 @@
           }
         }
       },
+      "ItemConfigurationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
+        "type": "object"
+      },
       "Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.ItemConfiguration.Api.ItemWithTags_": {
         "type": "object",
         "properties": {
@@ -75074,7 +74636,8 @@
             "type": "string",
             "readOnly": true
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Locale.Api.CountryRegionListResponse": {
         "description": "Returns list of supported country/regions",
@@ -75087,7 +74650,8 @@
               "$ref": "#/components/schemas/Roblox.Locale.Api.CountryRegion"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Locale.Api.Language": {
         "description": "Model for Language",
@@ -75114,7 +74678,8 @@
             "description": "whether or not the language is read right-to-left",
             "type": "boolean"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Locale.Api.SetShowRobloxTranslationsRequest": {
         "description": "Request entity to set the ShowRobloxTranslations field for an account",
@@ -75124,7 +74689,8 @@
             "description": "Value to set the ShowRobloxTranslations field to",
             "type": "boolean"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Locale.Api.SetSupportedLocaleForUserRequest": {
         "description": "Request entity to set Supported Locale for user",
@@ -75134,7 +74700,8 @@
             "description": "SupportedLocale code",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Locale.Api.SuccessResponse": {
         "description": "Tells the operation is successful or not",
@@ -75144,7 +74711,8 @@
             "description": "Returns true on success otherwise false",
             "type": "boolean"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Locale.Api.SupportedLocale": {
         "description": "Model for Supported locale",
@@ -75163,8 +74731,7 @@
           },
           "name": {
             "description": "Name of supported locale.",
-            "type": "string",
-            "readOnly": true
+            "type": "string"
           },
           "nativeName": {
             "description": "Name of supported locale in native language. Example \"English\"",
@@ -75174,7 +74741,8 @@
           "language": {
             "$ref": "#/components/schemas/Roblox.Locale.Api.Language"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Locale.Api.SupportedLocaleLocus": {
         "description": "Model for Supported locale with user locus information",
@@ -75195,7 +74763,8 @@
             "description": "Is locale enabled for in game ugc",
             "type": "boolean"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Locale.Api.SupportedLocalesResponse": {
         "description": "Returns list of supported locales",
@@ -75208,7 +74777,8 @@
               "$ref": "#/components/schemas/Roblox.Locale.Api.SupportedLocale"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Locale.Api.UserLocaleResponse": {
         "type": "object",
@@ -75219,7 +74789,8 @@
           "nativeLanguage": {
             "$ref": "#/components/schemas/Roblox.Locale.Api.Language"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Locale.Api.UserLocalizationLocusLocalesResponse": {
         "description": "Returns available Roblox.Locale.Api.SupportedLocale models.",
@@ -75238,7 +74809,8 @@
             "description": "Whether Roblox-suggested translations should be shown to the user.",
             "type": "boolean"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Locale.Api.SupportedLocaleLocus_": {
         "type": "object",
@@ -75249,7 +74821,8 @@
               "$ref": "#/components/schemas/Roblox.Locale.Api.SupportedLocaleLocus"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.InGameContentTables.Client.GameLocation": {
         "type": "object",
@@ -76034,6 +75607,9 @@
           }
         }
       },
+      "LocalizationTablesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
+        "type": "object"
+      },
       "Roblox.Metrics.Api.RecordBundleLoadRequest": {
         "description": "Request parameters for tracking a bundle load.",
         "type": "object",
@@ -76103,10 +75679,6 @@
             "type": "number"
           }
         },
-        "additionalProperties": false
-      },
-      "MetricsApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
-        "type": "object",
         "additionalProperties": false
       },
       "Roblox.Api.Notifications.Models.ChromeManifestModel": {
@@ -76809,7 +76381,8 @@
             "description": "Expiration time of current usage limit.",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Publish.Api.AssetQuotasResponse": {
         "description": "Response model for asset quotas.",
@@ -76822,7 +76395,8 @@
               "$ref": "#/components/schemas/Roblox.Publish.Api.AssetQuota"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Publish.Api.PublishAudioResponse": {
         "description": "Response model for publish audio.",
@@ -76837,7 +76411,8 @@
             "description": "Name of the published asset.",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Publish.Api.UploadAudioRequest": {
         "description": "A request model for uploading an audio file.",
@@ -76876,7 +76451,8 @@
             "enum": [1, 2],
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Publish.Api.UploadResponse": {
         "description": "A response used when an upload has completed.",
@@ -76887,7 +76463,8 @@
             "description": "The target Id of the uploaded item.",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Publish.Api.VerifyAudioRequest": {
         "description": "Request model to publish an audio asset.",
@@ -76920,7 +76497,8 @@
             "description": "Gets or sets the duration of the audio in seconds.",
             "type": "number"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Publish.Api.VerifyAudioResponse": {
         "description": "Response model for verify audio endpoint.",
@@ -76944,7 +76522,8 @@
             "description": "Boolean, true if the user can afford to purchase the publishing of the audio file.",
             "type": "boolean"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Thumbnails.Api.Models.UniverseThumbnailsResponse": {
         "description": "A response model for thumbnails which belong to a specific universe ID",
@@ -77352,10 +76931,6 @@
         },
         "additionalProperties": false
       },
-      "TradesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
-        "type": "object",
-        "additionalProperties": false
-      },
       "Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Trades.Api.TradeResponse_": {
         "type": "object",
         "properties": {
@@ -77639,6 +77214,9 @@
             "type": "boolean"
           }
         }
+      },
+      "TranslationRolesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
+        "type": "object"
       },
       "Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.TranslationRoles.Api.Assignee_": {
         "type": "object",
@@ -78160,6 +77738,9 @@
           }
         }
       },
+      "TwoStepVerificationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
+        "type": "object"
+      },
       "Roblox.Users.Api.AuthenticatedGetUserResponse": {
         "description": "A response model representing absolute minimal authenticating user information.\r\nNo new attributes should be added to this response since it is in the critical path of app launch and we want to minimize dependencies.",
         "type": "object",
@@ -78492,10 +78073,6 @@
             "type": "string"
           }
         },
-        "additionalProperties": false
-      },
-      "UsersApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
-        "type": "object",
         "additionalProperties": false
       },
       "Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Users.Api.MultiGetUserByNameResponse_": {
