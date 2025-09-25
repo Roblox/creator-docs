@@ -142,7 +142,7 @@ You can distribute models with less than 15,000 dependencies to the [Creator Sto
 - Restricted assets that you created, excluding audio and video.
 - Audio and video assets from the Creator Store.
 
-If you are in a supported country, you can sell models you created on the Creator Store for United States Dollars (USD). Eligible Creators must complete an application form through Stripe to create their seller account, set prices, and receive payouts. For more information and to start onboarding, see [Selling on the Creator Store](../production/sell-on-creator-store.md).
+If you are in a supported country, you can sell models you created on the Creator Store for **United States Dollars** (USD). Eligible Creators must complete an application form through Stripe to create their seller account, set prices, and receive payouts. For more information and to start onboarding, see [Selling on the Creator Store](../production/sell-on-creator-store.md).
 
 <Alert severity="warning">
 If you want to distribute a model with a child audio asset that you created, you must distribute the audio asset on the Creator Store **_before_** making it a child of the model in order for the audio to be audible at runtime.
