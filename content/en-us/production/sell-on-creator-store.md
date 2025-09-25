@@ -46,17 +46,17 @@ Transactions between any individual customer and seller are **capped** per month
 
 Every asset that you sell on the Creator Store must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), and [Digital Millennium Copyright Act](./publishing/dmca-guidelines.md) (DMCA). If any asset breaks these rules, the asset and your account may be subject to moderation. If you suspect a rights violation involving your asset, you can submit the content for removal using the [Rights Manager](../production/publishing/rights-manager.md).
 
-In addition, the Creator Store restricts use of the following practices to ensure asset safety:
-
-- Obscuring engine features within scripts, including LuaVMs, getfenv(), and setfenv().
-- Requiring remote assets, including require(assetId), loadstring(), InsertService:LoadAsset(), and ModuleScript.LinkedSource. Assets that may look useful on the surface could load another "virus" asset at runtime.
-- Including obfuscated code. For publicly-shared assets, it's important for creators to understand what they are putting into their experiences. If code is obfuscated, creators cannot trust that the script is only doing what it should be doing.
-
-**Plugin Ownership**
-
 You can only sell plugins that you own from an **individual** user account. Group-owned assets are ineligible. If you want to sell group-owned plugins, consider re‑uploading them under individual ownership.
 
-**Asset Privacy for Priced Models**
+In addition, the Creator Store restricts use of the following practices to ensure asset safety:
+
+- Obscuring engine features within scripts, including LuaVMs, `getfenv()`, and `setfenv()`.
+- Requiring remote assets, including `require(assetId)`, `loadstring()`, `Class.InsertService:LoadAsset()`, and `Class.ModuleScript.LinkedSource`. Assets that may look useful on the surface could load another "virus" asset at runtime.
+- Including obfuscated code. For publicly-shared assets, it's important for creators to understand what they are putting into their experiences. If code is obfuscated, creators cannot trust that the script is only doing what it should be doing.
+
+<Alert severity="success">
+Opt-in to the [asset privacy beta](../projects/assets/privacy.md#beta-opt-in) before uploading any models you intend to sell. This will ensure that newly-uploaded model dependencies (like its images and meshes) are set as restricted. If you have previously saved models, it's recommended opting into the beta and then creating a new model so that all dependencies can be registered correctly.
+</Alert>
 
 Opt-in to the [Asset Privacy beta](../projects/assets/privacy.md) before uploading any models you intend to sell. This will ensure that newly-uploaded model dependencies (like the Images and Meshes) are set to Restricted. If you have previously saved models, we recommend opting into the beta and then creating a new model so that all dependencies can be registered correctly.
 
