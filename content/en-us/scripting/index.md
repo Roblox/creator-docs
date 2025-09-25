@@ -13,7 +13,7 @@ If you've never written code before and want an introduction to programming, see
 
 ## Luau
 
-Roblox scripts use the [Luau](https://luau-lang.org) programming language, which is derived from [Lua 5.1](https://www.lua.org/manual/5.1/).
+Roblox scripts use the [Luau](https://luau.org) programming language, which is derived from [Lua 5.1](https://www.lua.org/manual/5.1/).
 
 - Compared to Lua 5.1, Luau adds performance enhancements and many useful features, including an optional typing system, string interpolation, and generalized iteration for tables.
 - All valid Lua 5.1 code is valid Luau code, but the opposite is not true.
