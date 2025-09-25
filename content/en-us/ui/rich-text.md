@@ -108,13 +108,50 @@ Font weight can be a case-insensitive string name including `Thin`, `ExtraLight`
 
 `<stroke> </stroke>`
 
+<table size="small">
+<thead>
+	<tr>
+		<th>Parameter</th>
+		<th>Equivalent Property</th>
+		<th>Example Values</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>`color`</td>
+		<td>`Class.UIStroke.Color`</td>
+		<td>`"rgb(255,125,0)"`, `"#FF7800"`</td>
+	</tr>
+	<tr>
+		<td>`thickness` or `th`</td>
+		<td>`Class.UIStroke.Thickness`</td>
+		<td>`"1"`, `"4"`, `"0.5"`</td>
+	</tr>
+	<tr>
+		<td>`transparency` or `tr`</td>
+		<td>`Class.UIStroke.Transparency`</td>
+		<td>`"0"`, `"0.5"`, `"1"`</td>
+	</tr>
+	<tr>
+		<td>`joins`</td>
+		<td>`Class.UIStroke.LineJoinMode`</td>
+		<td>`"round"`, `"bevel"`, `"miter"`</td>
+	</tr>
+	<tr>
+		<td>`sizing`</td>
+		<td>`Class.UIStroke.StrokeSizingMode`</td>
+		<td>`"fixed"`, `"scaled"`</td>
+	</tr>
+</tbody>
+</table>
+
 <blockquote>
-`You won <stroke color="#00A2FF" joins="miter" thickness="2" transparency="0.25">25 gems</stroke>.`
+`You won <stroke color="#00A2FF" thickness="2" transparency="0.25" joins="miter">25 gems</stroke>.`
 <img src="../assets/ui/rich-text/Example-Stroke.png" width="600" />
 </blockquote>
 
 <Alert severity="info">
-See [Appearance Modifiers](../ui/appearance-modifiers.md) for details on `<stroke>` tag parameters such as `joins` and `thickness`.
+See [UI appearance modifiers](../ui/appearance-modifiers.md#stroke) for details on `<stroke>` tag parameters such as `thickness` and `joins`.
 </Alert>
 
 ### Bold

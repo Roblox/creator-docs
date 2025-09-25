@@ -191,7 +191,7 @@ To change the start place:
 
    <img src="../../assets/publishing/experiences-places-assets/Publish-Window-Select-Start-Place.png" width="720" />
 
-1. <Chip label="OPTIONAL" size="small" variant="outlined" /> If the experience is live, it's recommended that you [restart its servers](#release-updates).
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> If the experience is live, it's recommended that you [restart its servers](#restart-servers).
 
 ## Configure experiences
 
@@ -335,9 +335,9 @@ If you don't restart servers, players will transition to the new version of the 
 To restart servers for release updates:
 
 1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select the experience you want to restart servers for.
-2. Go to **Configure** > **Server Management**.
+2. Go to **Configure** ⟩ **Server Management**.
 3. Select the places you want to restart.
-4. Click **Restart servers**.
+4. Click **Restart Servers**.
 5. In the **Confirm Server Restart** dialog:
    1. Select one or both of the following restart options:
       - **Restart only servers with outdated versions** to avoid restarting servers that are running the latest published place version.
@@ -345,7 +345,7 @@ To restart servers for release updates:
    2. Click **Restart**.
 
 <Alert severity="warning">
-   Unless you have an experience update workflow that is independent of place version, we recommend that you always select **Restart only servers with outdated versions** to avoid unnecessarily disconnecting players.
+   Unless you have an experience update workflow that is independent of place version, it's recommended that you always select **Restart only servers with outdated versions** to avoid unnecessarily disconnecting players.
 </Alert>
 
 After you restart servers, Roblox:
