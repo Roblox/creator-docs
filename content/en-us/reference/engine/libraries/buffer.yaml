@@ -47,7 +47,7 @@ functions:
         type: number
         default:
         summary: |
-          Size of the buffer as a positive integer in byte format.
+          Size of the buffer in bytes. Must be a positive integer.
     returns:
       - type: buffer
         summary: ''
