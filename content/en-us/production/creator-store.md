@@ -96,7 +96,7 @@ In addition, there are limits on the number of assets you can distribute per 30 
 </tbody>
 </table>
 
-Eligible Creators can also choose to [sell](./sell-on-creator-store.md) models and plugins on the Creator Store for **United States Dollars** (USD). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information, see [Sell on the Creator Store](./sell-on-creator-store.md).
+Eligible creators can also choose to [sell](./sell-on-creator-store.md) models and plugins on the Creator Store for **United States Dollars** (USD). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information, see [Sell on the Creator Store](./sell-on-creator-store.md).
 
 ### Through Creator Dashboard
 
