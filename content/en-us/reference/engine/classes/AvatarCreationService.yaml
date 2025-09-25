@@ -70,6 +70,100 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: AvatarCreationService:GenerateAvatar2DPreviewAsync
+    summary: |
+      Creates a 2D avatar preview and returns a previewId.
+    description: |
+      Creates a 2D avatar image preview, taking as input the FileId from
+      `Class.AvatarCreationService:PromptSelectAvatarGenerationImageAsync()|PromptSelectAvatarGenerationImageAsync()`
+      and an optional text prompt. It returns a previewId which can be passed to
+      `Class.AvatarCreationService:LoadAvatar2DPreviewAsync()|LoadAvatar2DPreviewAsync()`
+      to retrieve the preview image on the client. This API can only be used on
+      the game server.
+
+      ```lua
+      local AvatarCreationService = game:GetService("AvatarCreationService")
+
+      function generateAvatar2DPreview(sessionId, fileId, textPrompt)
+          local pcallSuccess, result = pcall(function()
+              local args = {}
+              args.SessionId = sessionId
+              args.FileId = fileId
+              args.TextPrompt = textPrompt
+              return AvatarCreationService:GenerateAvatar2DPreview(args)
+          end)
+
+          if not pcallSuccess then
+              warn("Generating 2D preview failed: ", result)
+          end
+
+          return result
+      end
+      ```
+    code_samples: []
+    parameters:
+      - name: avatarGeneration2dPreviewParams
+        type: Dictionary
+        default:
+        summary: |
+          A table of arguments for 2D preview generation. Type:
+          `avatarGeneration2dPreviewParams: {SessionId: string, FileId: string, TextPrompt: string?}`
+    returns:
+      - type: string
+        summary: |
+          A string previewId
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: AvatarCreationService:GenerateAvatarAsync
+    summary: |
+      Generates an avatar and returns a generationId.
+    description: |
+      Generate an avatar from a preview and return the generationId. The
+      `Class.AvatarCreationService:LoadGeneratedAvatarAsync()|LoadGeneratedAvatarAsync()`
+      method is then called to retrieve the generated
+      `Class.HumanoidDescription` avatar. This API can only be used on the game
+      server.
+
+      ```lua
+      local AvatarCreationService = game:GetService("AvatarCreationService")
+
+      function generateAvatar(sessionId, previewId)
+          local pcallSuccess, result = pcall(function()
+              local args = {}
+              args.SessionId = sessionId
+              args.PreviewId = previewId
+              return AvatarCreationService:GenerateAvatarAsync(args)
+          end)
+
+          if not pcallSuccess then
+              warn("Generating avatar failed: ", result)
+          end
+
+          return result
+      end
+      ```
+    code_samples: []
+    parameters:
+      - name: avatarGenerationParams
+        type: Dictionary
+        default:
+        summary: |
+          A table of arguments for generating an avatar. Type:
+          `avatarGenerationParams: {SessionId: string, PreviewId: string}`
+    returns:
+      - type: string
+        summary: |
+          A string generationId.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: AvatarCreationService:GetBatchTokenDetailsAsync
     summary: |
       Gets the avatar creation token details for a list of avatar creation
@@ -265,12 +359,54 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: AvatarCreationService:LoadAvatar2DPreviewAsync
+    summary: |
+      Load an AvatarGeneration 2D preview on the client from a previewId.
+    description: |
+      Load an AvatarGeneration 2D preview as an `Class.EditableImage` on the
+      client for the given previewId. This API can only be used on the client.
+
+      ```lua
+      local AvatarCreationService = game:GetService("AvatarCreationService")
+
+      function loadAvatar2DPreview(previewId)
+          local pcallSuccess, result = pcall(function()
+              return AvatarCreationService:LoadAvatar2DPreviewAsync(previewId)
+          end)
+
+          if not pcallSuccess then
+              warn("Failed to load preview: ", result)
+          end
+
+          return result
+      end
+      ```
+    code_samples: []
+    parameters:
+      - name: previewId
+        type: string
+        default:
+        summary: |
+          Load the preview generated from
+          `Class.AvatarCreationService:GenerateAvatar2DPreviewAsync()|GenerateAvatar2DPreviewAsync()`.
+    returns:
+      - type: EditableImage
+        summary: |
+          An `Class.EditableImage` containing the preview image.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: AvatarCreationService:LoadGeneratedAvatarAsync
     summary: |
       Loads a generated avatar using an avatar generation ID.
     description: |
       Loads a generated avatar using an avatar generation ID, as returned by
-      `Class.AvatarCreationService:AutoSetupAvatarAsync()|AutoSetupAvatarAsync()`.
+      `Class.AvatarCreationService:AutoSetupAvatarAsync()|AutoSetupAvatarAsync()`
+      or
+      `Class.AvatarCreationService:GenerateAvatarAsync()|GenerateAvatarAsync()`.
       The generated avatar will be returned as a `Class.HumanoidDescription`
       with all the generated instances and properties. Mesh and texture assets
       will be provided as `Class.EditableMesh` and `Class.EditableImage`
@@ -430,6 +566,117 @@ methods:
           - A secondary optional string result. In the case of
             `Enum.PromptCreateAvatarResult.Success`, this will indicate the
             outfit ID. In the case of any failure enum, this will be `nil`.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: AvatarCreationService:PromptSelectAvatarGenerationImageAsync
+    summary: |
+      Prompt the `Class.Player` to take a selfie and return the FileId.
+    description: |
+      Prompt the `Class.Player` to take a selfie and return the FileId of the
+      selfie. This FileId is then passed as an argument to
+      `Class.AvatarCreationService:GenerateAvatar2DPreviewAsync()|GenerateAvatar2DPreviewAsync()`.
+      This API can only be used on the game server.
+
+      ```lua
+      local AvatarCreationService = game:GetService("AvatarCreationService")
+
+      function promptSelectAvatarGenerationImage(player)
+          local pcallSuccess, result = pcall(function()
+              return AvatarCreationService:PromptSelectAvatarGenerationImageAsync(player)
+          end)
+
+          if not pcallSuccess then
+              warn("Failed to prompt for image: ", result)
+          end
+
+          return result
+      end
+      ```
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` to prompt for taking a selfie.
+    returns:
+      - type: string
+        summary: |
+          A string FileId of the selfie.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: AvatarCreationService:RequestAvatarGenerationSessionAsync
+    summary: |
+      Request an AvatarGeneration session for a `Class.Player`.
+    description: |
+      Request an AvatarGeneration session for a `Class.Player`. Information
+      about the session is returned via the callback, including the SessionId
+      which is passed to the
+      `Class.AvatarCreationService:GenerateAvatar2DPreviewAsync()|GenerateAvatar2DPreviewAsync()`
+      and
+      `Class.AvatarCreationService:GenerateAvatarAsync()|GenerateAvatarAsync()`
+      methods. Additional session information includes allowed 2d preview
+      generations, allowed 3d avatar generations, and the session time. The
+      method returns a `Tuple` with an `Datatype.RBXScriptConnection` and
+      estimated `waitTime`. The `Datatype.RBXScriptConnection` allows canceling
+      a session request. The estimated `waitTime` is used to provide the player
+      an estimated time in seconds until the session will be ready. This API can
+      only be used on the game server.
+
+      ```lua
+      local AvatarCreationService = game:GetService("AvatarCreationService")
+      local playerSessions = {}
+      local playerSessionRequests = {}
+
+      function requestAvatarGenerationSession(player)
+          local pcallSuccess, conn, waitTime = pcall(function()
+              return AvatarCreationService:RequestAvatarGenerationSessionAsync(player, function(sessionInfo)
+                  playerSessions[player.UserID] = sessionInfo
+                  playerSessionRequests[player.UserID] = nil
+              end)
+          end)
+
+          if not pcallSuccess then
+              warn("Failed to request Avatar generation session: ", conn)
+          end
+
+          playerSessionRequests[player.UserID] = conn
+          print("Wait time for session: ", tostring(waitTime))
+      end
+
+      function cancelAvatarGenerationSessionRequest(player)
+          if playerSessionRequests[player.UserID] ~= nil then
+              playerSessionRequests[player.UserID]:Disconnect()
+          end
+      end
+      ```
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` to request an AvatarGeneration session for.
+      - name: callback
+        type: Function
+        default:
+        summary: |
+          Callback function that is invoked with a SessionInfo table, with
+          information about the session. Type:
+          `(SessionInfo: { SessionId: string, Allowed2DGenerations: number, Allowed3DGenerations: number, SessionTime: number }) -> ()`
+    returns:
+      - type: Tuple
+        summary: |
+          A tuple containing a `Datatype.RBXScriptConnection` that can be used
+          to cancel the session request and the estimated wait time in seconds.
     tags:
       - Yields
     deprecation_message: ''

@@ -14,9 +14,9 @@ By utilizing **appearance modifiers**, you can further customize the appearance 
 
 The `Class.UIGradient` object applies a color and transparency gradient to its parent `Class.GuiObject`.
 
-<Grid container spacing={2}>
+<Grid container spacing={3}>
   <Grid item>
-		<img src="../assets/ui/ui-objects/UIGradient.jpg" width="500" />
+		<img src="../assets/ui/ui-objects/UIGradient-Example.png" width="480" />
 	</Grid>
 	<Grid item>
 		<img src="../assets/studio/explorer/UIGradient.png" width="320" />
@@ -34,10 +34,10 @@ You can configure the gradient by:
 
 To set a gradient's color sequence:
 
-1. In the **Explorer** window, select the `Class.UIGradient`.
-1. In the **Properties** window, click inside the **Color** property field, then click the **&hellip;** button to the right of the input box. A color sequence pop-up displays.
+1. In the [Explorer](../studio/explorer.md) window, select the `Class.UIGradient`.
+1. In the [Properties](../studio/properties.md) window, click inside the `Class.UIGradient.Color|Color` property field, then click the **&ctdot;** button to the right of the input box. A color sequence pop-up displays.
 
-   <img src="../assets/ui/ui-objects/UIGradient-Open-ColorSequence-Window.png"
+   <img src="../assets/studio/properties/UIGradient-Open-ColorSequence-Window.png"
    width="320" />
 
    Each triangle on the bottom axis of the color sequence is a **keypoint** that determines the color value at that point.
@@ -60,10 +60,10 @@ To set a gradient's color sequence:
 
 To adjust a gradient's transparency across its range:
 
-1. In the **Explorer** window, select the `Class.UIGradient`.
-1. In the **Properties** window, click inside the **Transparency** property field, then click the **&hellip;** button to the right of the input box. A number sequence pop-up displays.
+1. In the [Explorer](../studio/explorer.md) window, select the `Class.UIGradient`.
+1. In the [Properties](../studio/properties.md) window, click inside the `Class.UIGradient.Transparency|Transparency` property field, then click the **&ctdot;** button to the right of the input box. A number sequence pop-up displays.
 
-   <img src="../assets/ui/ui-objects/UIGradient-Open-NumberSequence-Window.png"
+   <img src="../assets/studio/properties/UIGradient-Open-NumberSequence-Window.png"
    width="320" />
 
    Each square across the number sequence graph is a
@@ -85,59 +85,110 @@ To adjust a gradient's transparency across its range:
 
 The `Class.UIGradient.Offset|Offset` and `Class.UIGradient.Rotation|Rotation` properties let you adjust the gradient's control points and its angle. As illustrated in the following diagrams, `Class.UIGradient.Offset|Offset` is based on a **percentage** of the parent's width or height, and both positive or negative values are valid.
 
-<GridContainer numColumns="3">
-  <figure>
-    <img src="../assets/ui/ui-objects/UIGradient-Offset-X-0.png" />
-    <figcaption>Offset (X) = 0</figcaption>
+<Grid container spacing={3}>
+<Grid item container XSmall={12} Small={12} Medium={4} Large={4} XLarge={4}>
+	<figure>
+    <img src="../assets/ui/ui-objects/UIGradient-Offset-X-0.png" width="376" />
+    <figcaption>`Class.UIGradient.Offset|Offset.X` = `0`</figcaption>
   </figure>
-  <figure>
-    <img src="../assets/ui/ui-objects/UIGradient-Offset-X-Pos-0.25.png" />
-    <figcaption>Offset (X) = 0.25</figcaption>
+</Grid>
+<Grid item container XSmall={12} Small={12} Medium={4} Large={4} XLarge={4}>
+	<figure>
+    <img src="../assets/ui/ui-objects/UIGradient-Offset-X-Pos-0.25.png" width="376" />
+    <figcaption>`Class.UIGradient.Offset|Offset.X` = `0.25`</figcaption>
   </figure>
-  <figure>
-    <img src="../assets/ui/ui-objects/UIGradient-Offset-X-Neg-0.25.png" />
-    <figcaption>Offset (X) = -0.25</figcaption>
+</Grid>
+<Grid item container XSmall={12} Small={12} Medium={4} Large={4} XLarge={4}>
+	<figure>
+    <img src="../assets/ui/ui-objects/UIGradient-Offset-X-Neg-0.25.png" width="376" />
+    <figcaption>`Class.UIGradient.Offset|Offset.X` = `-0.25`</figcaption>
   </figure>
-</GridContainer>
+</Grid>
+</Grid>
 
-Similarly, when you rotate the gradient, the control points also rotate.
+Similarly, when you rotate the gradient, the control points also rotate:
 
-<GridContainer numColumns="3">
+<Grid container spacing={3}>
+<Grid item container XSmall={12} Small={12} Medium={4} Large={4} XLarge={4}>
   <figure>
-    <img src="../assets/ui/ui-objects/UIGradient-Rotation-0.png" />
-    <figcaption>Rotation = 0</figcaption>
+    <img src="../assets/ui/ui-objects/UIGradient-Rotation-0.png" width="376" />
+    <figcaption>`Class.UIGradient.Rotation|Rotation` = `0`</figcaption>
   </figure>
+</Grid>
+<Grid item container XSmall={12} Small={12} Medium={4} Large={4} XLarge={4}>
   <figure>
-    <img src="../assets/ui/ui-objects/UIGradient-Rotation-Pos-45.png" />
-    <figcaption>Rotation = 45</figcaption>
+    <img src="../assets/ui/ui-objects/UIGradient-Rotation-Pos-45.png" width="376" />
+    <figcaption>`Class.UIGradient.Rotation|Rotation` = `45`</figcaption>
   </figure>
+</Grid>
+<Grid item container XSmall={12} Small={12} Medium={4} Large={4} XLarge={4}>
   <figure>
-    <img src="../assets/ui/ui-objects/UIGradient-Rotation-Neg-90.png" />
-    <figcaption>Rotation = -90</figcaption>
+    <img src="../assets/ui/ui-objects/UIGradient-Rotation-Neg-90.png" width="376" />
+    <figcaption>`Class.UIGradient.Rotation|Rotation` = `-90`</figcaption>
   </figure>
-</GridContainer>
+</Grid>
+</Grid>
 
 ## Stroke
 
 The `Class.UIStroke` instance applies an outline to text or a border. Key features include:
 
-- Adjustable [color](#color--gradient) and [thickness](#thickness) of the stroke outline.
+- Adjustable [color](#color-or-gradient) and [thickness](#thickness) of the stroke outline.
 - Ability to set the stroke [transparency](#transparency-1) independently of the parent's transparency.
+- Customizable [position and/or offset](#border-positionoffset) relative to the parent's border.
 - Three [corner styles](#corner-style) (round, bevel, or miter).
-- Stroke [gradient](#color--gradient) support through the `Class.UIGradient` instance.
+- Stroke [gradient](#color-or-gradient) support through the `Class.UIGradient` instance.
 
-### Text outline / border
+### Thickness
 
-Depending on its parent, `Class.UIStroke` operates as either a **text outline** or as a **border**. When you parent `Class.UIStroke` to a text object, it applies to the text's outline; when you parent `Class.UIStroke` to other `Class.GuiObject|GuiObjects`, it applies to the border.
+You can set the stroke width through the `Class.UIStroke.Thickness|Thickness` property which is measured in pixels (default) or scaled relative to the parent, depending on the modifier's `Class.UIStroke.StrokeSizingMode|StrokeSizingMode`. If stroke is on text and `Class.UIStroke.StrokeSizingMode|StrokeSizingMode` is set to `Enum.StrokeSizingMode.ScaledSize|ScaledSize`, thickness is relative to the font size.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../assets/ui/ui-objects/UIStroke-Thickness-4.png" />
+    <figcaption>`Class.UIStroke.Thickness` = `4`</figcaption>
+  </figure>
+  <figure>
+    <img src="../assets/ui/ui-objects/UIStroke-Thickness-12.png" />
+    <figcaption>`Class.UIStroke.Thickness` = `12`</figcaption>
+  </figure>
+</GridContainer>
+
+<Alert severity="warning">
+Avoid [tweening](../ui/animation.md) the `Class.UIStroke.Thickness|Thickness` property of a `Class.UIStroke` instance applied to **text** objects. This renders and stores many glyph sizes each frame, potentially causing performance issues or text flickering.
+</Alert>
+
+### Color or gradient
+
+You can set the stroke color through the `Class.UIStroke.Color|Color` property, as well as insert a child `Class.UIGradient` instance to create gradient strokes.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../assets/ui/ui-objects/UIStroke-Color-Solid.png" />
+    <figcaption>`Class.UIStroke.Color` = `(0, 95, 225)`</figcaption>
+  </figure>
+  <figure>
+    <img src="../assets/ui/ui-objects/UIStroke-Color-Gradient.png" />
+    <figcaption>`Class.UIStroke` with `Class.UIGradient` child</figcaption>
+  </figure>
+</GridContainer>
+
+<Alert severity="info">
+Both the parent object and `Class.UIStroke` can have child `Class.UIGradient` instances, letting you set gradients on the **stroke** and **fill** independently.
+</Alert>
+
+### Text outline or border
+
+Depending on its parent type, `Class.UIStroke` operates as either a **text outline** or as a **border**. When you parent `Class.UIStroke` to a text object like `Class.TextLabel`, it applies to the text's outline; when you parent `Class.UIStroke` to other `Class.GuiObject|GuiObjects`, it applies to the border.
 
 <GridContainer numColumns="2">
   <figure>
     <img src="../assets/ui/ui-objects/UIStroke-As-Text-Outline.png" />
-    <figcaption>TextLabel with UIStroke child</figcaption>
+    <figcaption>`Class.TextLabel` with `Class.UIStroke` child</figcaption>
   </figure>
   <figure>
     <img src="../assets/ui/ui-objects/UIStroke-As-Border.png" />
-    <figcaption>Frame with UIStroke and UICorner children</figcaption>
+    <figcaption>`Class.Frame` with `Class.UIStroke` and `Class.UICorner` children</figcaption>
   </figure>
 </GridContainer>
 
@@ -146,51 +197,43 @@ When applied to a text object, you can override the default stroke behavior by t
 <GridContainer numColumns="2">
   <figure>
     <img src="../assets/ui/ui-objects/UIStroke-As-Text-Outline.png" />
-    <figcaption>UIStroke.ApplyStrokeMode = Contextual</figcaption>
+    <figcaption>`Class.UIStroke.ApplyStrokeMode` = `Enum.ApplyStrokeMode.Contextual|Contextual`</figcaption>
   </figure>
   <figure>
     <img src="../assets/ui/ui-objects/UIStroke-Stroke-Mode-Border.png" />
-    <figcaption>UIStroke.ApplyStrokeMode = Border</figcaption>
+    <figcaption>`Class.UIStroke.ApplyStrokeMode` = `Enum.ApplyStrokeMode.Border|Border`</figcaption>
   </figure>
 </GridContainer>
 
-### Thickness
+### Border position/offset
 
-You can set the stroke width through the `Class.UIStroke.Thickness|Thickness` property which is measured in pixels from the parent's outer edges.
+`Class.UIStroke.BorderStrokePosition|BorderStrokePosition` sets the stroke's position relative to its parent's border and `Class.UIStroke.BorderOffset|BorderOffset` lets you specify an additional offset to the stroke's position.
 
-<GridContainer numColumns="2">
-  <figure>
-    <img src="../assets/ui/ui-objects/UIStroke-Thickness-4.png" />
-    <figcaption>UIStroke.Thickness = 4</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/ui/ui-objects/UIStroke-Thickness-12.png" />
-    <figcaption>UIStroke.Thickness = 12</figcaption>
-  </figure>
+<GridContainer numColumns="3">
+	<figure>
+	<img src="../assets/ui/ui-objects/UIStroke-BorderStrokePosition-Center.png" width="312" />
+	<figcaption>`Class.UIStroke.BorderStrokePosition|BorderStrokePosition` = `Enum.BorderStrokePosition.Center|Center`</figcaption>
+	</figure>
+	<figure>
+	<img src="../assets/ui/ui-objects/UIStroke-BorderStrokePosition-Inner.png" width="312" />
+	<figcaption>`Class.UIStroke.BorderStrokePosition|BorderStrokePosition` = `Enum.BorderStrokePosition.Inner|Inner`</figcaption>
+	</figure>
+	<figure>
+	<img src="../assets/ui/ui-objects/UIStroke-BorderStrokePosition-Outer.png" width="312" />
+	<figcaption>`Class.UIStroke.BorderStrokePosition|BorderStrokePosition` = `Enum.BorderStrokePosition.Outer|Outer`</figcaption>
+	</figure>
 </GridContainer>
 
-<Alert severity="warning">
-Avoid [tweening](../ui/animation.md) the `Class.UIStroke.Thickness|Thickness` property of a `Class.UIStroke` instance applied to **text** objects. This renders and stores many glyph sizes each frame, potentially causing performance issues or text flickering.
-</Alert>
-
-### Color / gradient
-
-You can set the stroke color through the `Class.UIStroke.Color|Color` property, as well as insert a child `Class.UIGradient` instance to create gradient strokes.
-
-<GridContainer numColumns="2">
-  <figure>
-    <img src="../assets/ui/ui-objects/UIStroke-Color-Solid.png" />
-    <figcaption>UIStroke.Color = (0, 95, 225)</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/ui/ui-objects/UIStroke-Color-Gradient.png" />
-    <figcaption>UIStroke with UIGradient child</figcaption>
-  </figure>
+<GridContainer numColumns="3">
+	<figure>
+	<img src="../assets/ui/ui-objects/UIStroke-BorderOffset-Out.png" width="312" />
+	<figcaption>`Class.UIStroke.BorderOffset|BorderOffset` = `(0.15, 0)`</figcaption>
+	</figure>
+	<figure>
+	<img src="../assets/ui/ui-objects/UIStroke-BorderOffset-In.png" width="312" />
+	<figcaption>`Class.UIStroke.BorderOffset|BorderOffset` = `(0, -16)`</figcaption>
+	</figure>
 </GridContainer>
-
-<Alert severity="info">
-Both the parent object and `Class.UIStroke` can have child `Class.UIGradient` instances, letting you set gradients on the **stroke** and **fill** independently.
-</Alert>
 
 ### Transparency
 
@@ -199,30 +242,30 @@ The `Class.UIStroke.Transparency|Transparency` property sets the stroke transpar
 <GridContainer numColumns="2">
   <figure>
     <img src="../assets/ui/ui-objects/UIStroke-Transparency-A.png" />
-    <figcaption>TextLabel.TextTransparency = 0 &nbsp;/&nbsp; UIStroke.Transparency = 0.5</figcaption>
+    <figcaption>`Class.TextLabel.TextTransparency` = `0`<br />`Class.UIStroke.Transparency` = `0.5`</figcaption>
   </figure>
   <figure>
     <img src="../assets/ui/ui-objects/UIStroke-Transparency-B.png" />
-    <figcaption>TextLabel.TextTransparency = 1 &nbsp;/&nbsp; UIStroke.Transparency = 0</figcaption>
+    <figcaption>`Class.TextLabel.TextTransparency` = `1`<br />`Class.UIStroke.Transparency` = `0`</figcaption>
   </figure>
 </GridContainer>
 
 ### Corner style
 
-The `Class.UIStroke.LineJoinMode|LineJoinMode` property lets you control how corners are interpreted. It accepts a value of either **Round**, **Bevel**, or **Miter**.
+The `Class.UIStroke.LineJoinMode|LineJoinMode` property lets you control how corners are interpreted. It accepts a value of either `Enum.LineJoinMode.Round|Round`, `Enum.LineJoinMode.Bevel|Bevel`, or `Enum.LineJoinMode.Miter|Miter`.
 
 <GridContainer numColumns="3">
   <figure>
     <img src="../assets/ui/ui-objects/UIStroke-LineJoinMode-Round.png" />
-    <figcaption>UIStroke.LineJoinMode = Round</figcaption>
+    <figcaption>`Class.UIStroke.LineJoinMode|LineJoinMode` = `Enum.LineJoinMode.Round|Round`</figcaption>
   </figure>
   <figure>
     <img src="../assets/ui/ui-objects/UIStroke-LineJoinMode-Bevel.png" />
-    <figcaption>UIStroke.LineJoinMode = Bevel</figcaption>
+    <figcaption>`Class.UIStroke.LineJoinMode|LineJoinMode` = `Enum.LineJoinMode.Bevel|Bevel`</figcaption>
   </figure>
   <figure>
     <img src="../assets/ui/ui-objects/UIStroke-LineJoinMode-Miter.png" />
-    <figcaption>UIStroke.LineJoinMode = Miter</figcaption>
+    <figcaption>`Class.UIStroke.LineJoinMode|LineJoinMode` = `Enum.LineJoinMode.Miter|Miter`</figcaption>
   </figure>
 </GridContainer>
 
@@ -267,9 +310,19 @@ width="320" />
 
 ## Padding
 
-A `Class.UIPadding` object applies top, bottom, left, and/or right padding to the contents of the parent `Class.GuiObject`.
+A `Class.UIPadding` object applies top, bottom, left, and/or right padding to the contents of the parent `Class.GuiObject`. For example, you can move the text inside a text label downward or upward by applying an offset to the modifier's `Class.UIPadding.PaddingBottom|PaddingBottom` property.
 
-For example, you can move the text inside a text button downward or upward by applying an offset to the bottom of the button.
-
-<video src="../assets/ui/ui-objects/UIPadding.mp4" controls
-width="80%"></video>
+<GridContainer numColumns="3">
+  <figure>
+    <img src="../assets/ui/ui-objects/UIPadding-PaddingBottom-Default.png" width="300" />
+    <figcaption>`Class.TextLabel` without `Class.UIPadding`</figcaption>
+  </figure>
+  <figure>
+    <img src="../assets/ui/ui-objects/UIPadding-PaddingBottom-Offset-Negative.png" width="300" />
+    <figcaption>`Class.UIPadding.PaddingBottom` = `(0, -20)`</figcaption>
+  </figure>
+  <figure>
+    <img src="../assets/ui/ui-objects/UIPadding-PaddingBottom-Offset-Positive.png" width="300" />
+    <figcaption>`Class.UIPadding.PaddingBottom` = `(0, 30)`</figcaption>
+  </figure>
+</GridContainer>

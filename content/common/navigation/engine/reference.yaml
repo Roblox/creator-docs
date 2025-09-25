@@ -310,6 +310,11 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/AudioTextToSpeech.yaml
                 ignoreTranslation: true
+              - title: AudioTremolo
+                path: /reference/engine/classes/AudioTremolo
+                type: engineapi
+                source: /reference/engine/classes/AudioTremolo.yaml
+                ignoreTranslation: true
               - title: AvatarCreationService
                 path: /reference/engine/classes/AvatarCreationService
                 type: engineapi
@@ -2884,6 +2889,11 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/TextFilterTranslatedResult.yaml
                 ignoreTranslation: true
+              - title: TextGenerator
+                path: /reference/engine/classes/TextGenerator
+                type: engineapi
+                source: /reference/engine/classes/TextGenerator.yaml
+                ignoreTranslation: true
               - title: TextService
                 path: /reference/engine/classes/TextService
                 type: engineapi
@@ -3853,6 +3863,11 @@ navigation:
         path: /reference/engine/enums/BorderMode
         type: engineapi
         source: /reference/engine/enums/BorderMode.yaml
+        ignoreTranslation: true
+      - title: BorderStrokePosition
+        path: /reference/engine/enums/BorderStrokePosition
+        type: engineapi
+        source: /reference/engine/enums/BorderStrokePosition.yaml
         ignoreTranslation: true
       - title: BreakpointRemoveReason
         path: /reference/engine/enums/BreakpointRemoveReason
@@ -5393,6 +5408,11 @@ navigation:
         path: /reference/engine/enums/StreamOutBehavior
         type: engineapi
         source: /reference/engine/enums/StreamOutBehavior.yaml
+        ignoreTranslation: true
+      - title: StrokeSizingMode
+        path: /reference/engine/enums/StrokeSizingMode
+        type: engineapi
+        source: /reference/engine/enums/StrokeSizingMode.yaml
         ignoreTranslation: true
       - title: StudioCloseMode
         path: /reference/engine/enums/StudioCloseMode

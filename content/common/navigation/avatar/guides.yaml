@@ -118,3 +118,5 @@ navigation:
 
   - title: In-experience creation
     path: /avatar/in-experience-creation
+  - title: Photo-to-Avatar generation
+    path: /avatar/avatar-generation

@@ -61,10 +61,6 @@ methods:
         type: string
         default:
         summary: ''
-      - name: defaultValue
-        type: Variant
-        default:
-        summary: ''
     returns:
       - type: Variant
         summary: ''

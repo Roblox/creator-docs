@@ -5,21 +5,27 @@
 name: AudioTremolo
 type: class
 memory_category: Internal
-summary: |-
+summary: |
   Creates a trembling effect on a sound by varying the volume of the sound up
   and down.
-description: |-
+description: |
   `Class.AudioTremolo` creates a trembling effect on a sound by varying the
-  volume of the sound up and down. It provides one **Input** pin and one **Output** pin which can be connected to/from by `Class.Wire|Wires`.
+  volume of the sound up and down. It provides one **Input** pin and one
+  **Output** pin which can be connected to/from by `Class.Wire|Wires`.
 code_samples: []
 inherits:
   - Instance
-tags: []
+tags:
+  - NotBrowsable
 deprecation_message: ''
 properties:
   - name: AudioTremolo.Depth
-    summary: Controls how much the volume will raise and lower.
-    description: Controls how much the volume will raise and lower, ranging between `0` and `1` with a default of `1`. If set to `0`, the volume will not oscillate at all.
+    summary: |
+      Controls how much the volume will raise and lower.
+    description: |
+      Controls how much the volume will raise and lower, ranging between `0` and
+      `1` with a default of `1`. If set to `0`, the volume will not oscillate at
+      all.
     code_samples: []
     type: float
     tags: []
@@ -35,8 +41,11 @@ properties:
     capabilities:
       - Audio
   - name: AudioTremolo.Duty
-    summary: Controls how long the effect will be active during one volume oscillation.
-    description: Controls how long the effect will be active during one volume oscillation in the range of `0` (0%) to `1` (100%). Default is `0.5`.
+    summary: |
+      Controls how long the effect will be active during one volume oscillation.
+    description: |
+      Controls how long the effect will be active during one volume oscillation
+      in the range of `0` (0%) to `1` (100%). Default is `0.5`.
     code_samples: []
     type: float
     tags: []
@@ -52,8 +61,11 @@ properties:
     capabilities:
       - Audio
   - name: AudioTremolo.Frequency
-    summary: Sets how often the effect will oscillate the volume.
-    description: Sets how often the effect will oscillate the volume, measured in Hz, in the range of `0.1` to `20`. Default is `5`.
+    summary: |
+      Sets how often the effect will oscillate the volume.
+    description: |
+      Sets how often the effect will oscillate the volume, measured in Hz, in
+      the range of `0.1` to `20`. Default is `5`.
     code_samples: []
     type: float
     tags: []
@@ -69,8 +81,11 @@ properties:
     capabilities:
       - Audio
   - name: AudioTremolo.Shape
-    summary: Controls the shape of the low frequency oscillations.
-    description: Morphs the LFO (low frequency oscillation) shape in a range of `0` to `1` where `0` is triangle and `1` is sine. Default is `0`.
+    summary: |
+      Controls the shape of the low frequency oscillations.
+    description: |
+      Morphs the LFO (low frequency oscillation) shape in a range of `0` to `1`
+      where `0` is triangle and `1` is sine. Default is `0`.
     code_samples: []
     type: float
     tags: []
@@ -86,8 +101,12 @@ properties:
     capabilities:
       - Audio
   - name: AudioTremolo.Skew
-    summary: Time-skews the low frequency oscillations cycle.
-    description: Controls the time-skewing of the LFO (low frequency oscillation) cycle in the range of `-1` to `1`. No skewing occurs at `0`, with more extremal forwards and backwards skewing towards `+1`/`-1`. Default is `0`.
+    summary: |
+      Time-skews the low frequency oscillations cycle.
+    description: |
+      Controls the time-skewing of the LFO (low frequency oscillation) cycle in
+      the range of `-1` to `1`. No skewing occurs at `0`, with more extremal
+      forwards and backwards skewing towards `+1`/`-1`. Default is `0`.
     code_samples: []
     type: float
     tags: []
@@ -103,8 +122,12 @@ properties:
     capabilities:
       - Audio
   - name: AudioTremolo.Square
-    summary: Flatness of the low frequency oscillations shape.
-    description: Determines the squareness of the oscillations in the range of `0` to `1`. The original shape is retained when `0` and the shape flattens more as the value increases. Default is `0`.
+    summary: |
+      Flatness of the low frequency oscillations shape.
+    description: |
+      Determines the squareness of the oscillations in the range of `0` to `1`.
+      The original shape is retained when `0` and the shape flattens more as the
+      value increases. Default is `0`.
     code_samples: []
     type: float
     tags: []

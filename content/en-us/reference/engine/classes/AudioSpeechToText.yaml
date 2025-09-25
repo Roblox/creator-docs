@@ -5,9 +5,16 @@
 name: AudioSpeechToText
 type: class
 memory_category: Internal
-summary: ''
-description: ''
-code_samples: []
+summary: |
+  Converts spoken audio into text.
+description: |
+  **This API is in beta and is not publicly available yet.**
+
+  `Class.AudioSpeechToText` is used to convert speech audio into text. This
+  class provides a single **Input** pin that can be connected to other pins via
+  `Class.Wire|Wires`.
+code_samples:
+  - audio-wiring---speech-to-text
 inherits:
   - Instance
 tags:
@@ -15,8 +22,12 @@ tags:
 deprecation_message: ''
 properties:
   - name: AudioSpeechToText.Enabled
-    summary: ''
-    description: ''
+    summary: |
+      Whether the `Class.AudioSpeechToText` object is enabled for processing
+      input audio into text.
+    description: |
+      Whether the `Class.AudioSpeechToText` object is enabled for processing
+      input audio into text.
     code_samples: []
     type: boolean
     tags: []
@@ -32,8 +43,12 @@ properties:
     capabilities:
       - Audio
   - name: AudioSpeechToText.Text
-    summary: ''
-    description: ''
+    summary: |
+      The text resulting from the conversion of speech audio.
+    description: |
+      The text resulting from the conversion of speech audio. Text accumulates
+      until it hits a limit of 280 characters, and then old text is dropped to
+      make room for new text.
     code_samples: []
     type: string
     tags: []
@@ -49,8 +64,14 @@ properties:
     capabilities:
       - Audio
   - name: AudioSpeechToText.VoiceDetected
-    summary: ''
-    description: ''
+    summary: |
+      Whether the `Class.AudioSpeechToText` object is detecting speech in the
+      incoming audio signal.
+    description: |
+      Whether the `Class.AudioSpeechToText` object is detecting speech in the
+      incoming audio signal. `Class.AudioSpeechToText` records the speech audio
+      until it ceases or until a maximum amount of 10 seconds has been recorded.
+      Then it converts the recorded audio into text.
     code_samples: []
     type: boolean
     tags:
@@ -69,8 +90,12 @@ properties:
       - Audio
 methods:
   - name: AudioSpeechToText:GetConnectedWires
-    summary: ''
-    description: ''
+    summary: |
+      Returns an array of `Class.Wire|Wires` that are connected to the specified
+      pin.
+    description: |
+      Returns an array of `Class.Wire|Wires` that are connected to the specified
+      pin. `Class.AudioSpeechToText` has one input pin.
     code_samples: []
     parameters:
       - name: pin
@@ -88,26 +113,37 @@ methods:
       - Audio
 events:
   - name: AudioSpeechToText.WiringChanged
-    summary: ''
-    description: ''
+    summary: |
+      Fires when another instance is connected to or disconnected from the
+      `Class.AudioSpeechToText` via a `Class.Wire`.
+    description: |
+      Event that fires after a `Class.Wire` becomes connected or disconnected,
+      and that `Class.Wire` is now or was previously connected to a pin on the
+      `Class.AudioSpeechToText` and to some other wirable instance.
     code_samples: []
     parameters:
       - name: connected
         type: boolean
         default:
-        summary: ''
+        summary: |
+          Whether the instance got connected or disconnected.
       - name: pin
         type: string
         default:
-        summary: ''
+        summary: |
+          The pin on the `Class.AudioSpeechToText` that the `Class.Wire`
+          targets.
       - name: wire
         type: Wire
         default:
-        summary: ''
+        summary: |
+          The `Class.Wire` between the `Class.AudioSpeechToText` and the other
+          instance.
       - name: instance
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The other instance that is or was connected through the `Class.Wire`.
     tags: []
     deprecation_message: ''
     security: None

@@ -5,9 +5,8 @@
 name: UIStroke
 type: class
 memory_category: Instances
-summary: |
-  Applies an outline to text or a UI border.
-description: |
+summary: Applies an outline to text or a UI border.
+description: |-
   `Class.UIStroke` applies an outline to text or a UI border. Key features
   include:
 
@@ -17,6 +16,9 @@ description: |
     from the text or UI object.
   - Choose the `Class.UIStroke.LineJoinMode|LineJoinMode` of the stroke (round,
     bevel, or miter).
+  - Specify the `Class.UIStroke.BorderStrokePosition|BorderStrokePosition` on
+    its parent's border and/or an additional
+    `Class.UIStroke.BorderOffset|BorderOffset` to the stroke's position.
   - Add a gradient to the stroke via the `Class.UIGradient` instance.
   - Use [rich text](../../../ui/rich-text.md) tags to add stroke to inline text
     segments.
@@ -30,10 +32,10 @@ tags: []
 deprecation_message: ''
 properties:
   - name: UIStroke.ApplyStrokeMode
-    summary: |
+    summary: |-
       Determines whether to apply the stroke to the object's border instead of
       the text itself.
-    description: |
+    description: |-
       When a `Class.UIStroke` instance is applied to a text object, this
       property determines whether to apply the stroke to the object's border
       instead of the text itself.
@@ -60,10 +62,72 @@ properties:
       can_save: true
     capabilities:
       - UI
-  - name: UIStroke.Color
+  - name: UIStroke.BorderOffset
     summary: |
-      Determines the stroke color.
+      Specifies an additional offset to the stroke's position, relative to the
+      parent's minimum height or width.
     description: |
+      This property specifies an additional offset (`Datatype.UDim`) to the
+      stroke's position, relative to the parent's minimum height or width.
+
+      <figure>
+      <img src="../../../assets/ui/ui-objects/UIStroke-BorderOffset-Out.png" width="312" />
+      <figcaption><code>BorderOffset</code> = <code>(0.15, 0)</code></figcaption>
+      </figure>
+      <figure>
+      <img src="../../../assets/ui/ui-objects/UIStroke-BorderOffset-In.png" width="312" />
+      <figcaption><code>BorderOffset</code> = <code>(0, -16)</code></figcaption>
+      </figure>
+    code_samples: []
+    type: UDim
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+  - name: UIStroke.BorderStrokePosition
+    summary: |
+      Determines the stroke's position on its parent's border.
+    description: |
+      This property determines the stroke's position on its parent's border as
+      an `Enum.BorderStrokePosition` value.
+
+      <figure>
+      <img src="../../../assets/ui/ui-objects/UIStroke-BorderStrokePosition-Center.png" width="312" />
+      <figcaption><code>BorderStrokePosition</code> = <code>Enum.BorderStrokePosition.Center|Center</code></figcaption>
+      </figure>
+      <figure>
+      <img src="../../../assets/ui/ui-objects/UIStroke-BorderStrokePosition-Inner.png" width="312" />
+      <figcaption><code>BorderStrokePosition</code> = <code>Enum.BorderStrokePosition.Inner|Inner</code></figcaption>
+      </figure>
+      <figure>
+      <img src="../../../assets/ui/ui-objects/UIStroke-BorderStrokePosition-Outer.png" width="312" />
+      <figcaption><code>BorderStrokePosition</code> = <code>Enum.BorderStrokePosition.Outer|Outer</code></figcaption>
+      </figure>
+    code_samples: []
+    type: BorderStrokePosition
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+  - name: UIStroke.Color
+    summary: Determines the stroke color.
+    description: |-
       Determines the `Class.UIStroke` color. You can also insert a
       `Class.UIGradient` instance as a child to create gradient strokes.
 
@@ -90,9 +154,8 @@ properties:
     capabilities:
       - UI
   - name: UIStroke.Enabled
-    summary: |
-      Determines whether the stroke in visible.
-    description: |
+    summary: Determines whether the stroke in visible.
+    description: |-
       This property determines whether the `Class.UIStroke` is visible. When set
       to `false`, the stroke will not be rendered. Defaults to `true`.
     code_samples: []
@@ -110,9 +173,8 @@ properties:
     capabilities:
       - UI
   - name: UIStroke.LineJoinMode
-    summary: |
-      Determines how corners are interpreted.
-    description: |
+    summary: Determines how corners are interpreted.
+    description: |-
       This property determines how corners are interpreted. It accepts an
       `Enum.LineJoinMode` value of either `Enum.LineJoinMode.Round|Round`
       (default), `Enum.LineJoinMode.Bevel|Bevel`, or
@@ -144,12 +206,32 @@ properties:
       can_save: true
     capabilities:
       - UI
-  - name: UIStroke.Thickness
+  - name: UIStroke.StrokeSizingMode
     summary: |
-      Determines the stroke's thickness.
+      Determines whether the stroke's `Class.UIStroke.Thickness|Thickness` will
+      be measured in pixels or be relative to the parent.
     description: |
-      This property determines the stroke's thickness, measured in pixels from
-      the parent's outer edges.
+      This property determines whether the stroke's
+      `Class.UIStroke.Thickness|Thickness` will be measured in pixels or be
+      relative to the parent. See `Enum.StrokeSizingMode` for further details.
+    code_samples: []
+    type: StrokeSizingMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+  - name: UIStroke.Thickness
+    summary: Determines the stroke's thickness.
+    description: |-
+      This property determines the stroke's thickness, measured in pixels (default) or scaled relative to the parent, depending on `Class.UIStroke.StrokeSizingMode|StrokeSizingMode`.
 
       <figure>
       <img src="../../../assets/ui/ui-objects/UIStroke-Thickness-4.png" width="376" />
@@ -179,11 +261,11 @@ properties:
     capabilities:
       - UI
   - name: UIStroke.Transparency
-    summary: |
+    summary: |-
       Sets the stroke opacity independently of the parent object's
       `Class.GuiObject.BackgroundTransparency|BackgroundTransparency` or
       `Class.TextLabel.TextTransparency|TextTransparency`.
-    description: |
+    description: |-
       This property sets the stroke opacity independently of the parent object's
       `Class.GuiObject.BackgroundTransparency|BackgroundTransparency` or
       `Class.TextLabel.TextTransparency|TextTransparency`. This allows you to
@@ -199,6 +281,32 @@ properties:
       </figure>
     code_samples: []
     type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+  - name: UIStroke.ZIndex
+    summary: |
+      Determines the order in which the stroke renders relative to sibling
+      `Class.UIStroke` instances.
+    description: |
+      This property determines the order in which the stroke renders relative to
+      sibling `Class.UIStroke` instances. Those with a lower `ZIndex` render
+      under (behind) those with a higher `ZIndex`.
+
+      Note that the rendering order for `Class.UIStroke` instances with the same
+      `ZIndex` is undefined. Do not apply multiple `Class.UIStroke` instances
+      with the same `ZIndex` if their rendering order matters.
+    code_samples: []
+    type: int
     tags: []
     deprecation_message: ''
     security:

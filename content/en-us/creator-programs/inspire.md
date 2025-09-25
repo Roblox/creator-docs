@@ -5,12 +5,12 @@ description: Inspire is an annual global online event where creators come togeth
 
 Inspire is an annual global online event where creators come together to exchange ideas, learn from workshops led by top creators, and collaborate to boost connections within the community. By participating, you can share your knowledge and host workshops for the broader creator community.
 
-See [Roblox Learn](https://www.youtube.com/@RobloxLearn) for content from Inspire 2024.
+See [Roblox Learn](https://www.youtube.com/@RobloxLearn/streams) for content from Inspire 2025.
 
 <figure>
 <Chip
-    color="success"
-    label="Status: Open"
+    color="error"
+    label="Status: Closed"
     size="medium"
     variant="filled"/>
 </figure>
@@ -23,9 +23,7 @@ See [Roblox Learn](https://www.youtube.com/@RobloxLearn) for content from Inspir
 
 ## How to participate
 
-- Fill out [this survey](https://survey.roblox.com/jfe/form/SV_3XbrWPyHsu4Q742) by February 28, 2025.
-- If picked, join a Zoom call where a DevRel team member can further assess expertise on your chosen topic, alongside your public speaking skills.
-- Prepare your workshop and present at Inspire.
+Applications for Inspire are currently closed. Check back here for updates about future Inspire events.
 
 ## Contact info
 

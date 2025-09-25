@@ -30,7 +30,7 @@ You can use AI-generated reports to dive deeper into your experience's weekly an
 </Alert>
 
 <Alert severity="info">
-   Analytics and player feedback reports are built with [Meta Llama 3](https://llama.meta.com/llama3/license/).
+   Analytics reports are built with [Gemini 2.5](https://ai.google.dev/gemini-api/terms).
 </Alert>
 
 To access the insights reports:
@@ -60,6 +60,10 @@ You can also review personalized charts and recommendations in the generated rep
 
 <Alert severity="warning">
   Player feedback reports are only available for experiences that have 20+ player feedback comments.
+</Alert>
+
+<Alert severity="info">
+   Player feedback reports are built with [Meta Llama 3](https://www.llama.com/llama3/license/).
 </Alert>
 
 To get more specific insights about player feedback, including what users like about your experience, suggestions for improvements, and feature requests, click **See feedback report** in the analytics report.

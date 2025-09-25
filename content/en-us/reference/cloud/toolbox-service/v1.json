@@ -376,6 +376,24 @@
               }
             }
           },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ProblemDetails"
+                    },
+                    {
+                      "$ref": "#/components/schemas/HttpValidationProblemDetails"
+                    }
+                  ],
+                  "nullable": true
+                }
+              }
+            }
+          },
           "429": {
             "description": "Too Many Requests",
             "content": {
@@ -393,6 +411,9 @@
                 }
               }
             }
+          },
+          "500": {
+            "description": "Server Error"
           }
         },
         "x-roblox-engine-usability": {
@@ -900,11 +921,6 @@
             ],
             "description": "Gets or sets the search infra debug info",
             "nullable": true
-          },
-          "contextualRecommendationsPollingFrequencyInSeconds": {
-            "type": "integer",
-            "description": "Gets or sets the contextual recommendations polling frequency",
-            "format": "int32"
           }
         },
         "additionalProperties": false,

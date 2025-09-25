@@ -5,20 +5,32 @@
 name: KeyframeSequence
 type: class
 memory_category: Animation
-summary: |-
+summary: |
   This object stores all of the `Class.Keyframe|Keyframes` and other data for
   the animation.
-description: |-
-  `Class.KeyframeSequence` stores all the `Class.Keyframe|Keyframes` for an `Class.Animation`, determines if the animation will `Class.KeyframeSequence.Loop|Loop`, and determines its `Class.KeyframeSequence.Priority|Priority` against other animations. The last `Class.Keyframe` in the sequence, meaning the `Class.Keyframe` with the highest `Class.Keyframe.Time|Time` property, determines the length of an animation.
+description: |
+  `Class.KeyframeSequence` stores all the `Class.Keyframe|Keyframes` for an
+  `Class.Animation`, determines if the animation will
+  `Class.KeyframeSequence.Loop|Loop`, and determines its
+  `Class.KeyframeSequence.Priority|Priority` against other animations. The last
+  `Class.Keyframe` in the sequence, meaning the `Class.Keyframe` with the
+  highest `Class.Keyframe.Time|Time` property, determines the length of an
+  animation.
 
-  Although `Class.KeyframeSequence.Priority|Priority` and `Class.KeyframeSequence.Loop|Loop` save the priority and looped animation settings for the sequence, note that `Class.AnimationTrack` properties can eventually overwrite these properties at playback time.
+  Although `Class.KeyframeSequence.Priority|Priority` and
+  `Class.KeyframeSequence.Loop|Loop` save the priority and looped animation
+  settings for the sequence, note that `Class.AnimationTrack` properties can
+  eventually overwrite these properties at playback time.
 
-  If you want to preview an `Class.Animation` before uploading it to Roblox, you can generate a temporary hash ID using
-  `Class.KeyframeSequenceProvider:RegisterKeyframeSequence()` for localized animation testing.
+  If you want to preview an `Class.Animation` before uploading it to Roblox, you
+  can generate a temporary hash ID using
+  `Class.KeyframeSequenceProvider:RegisterKeyframeSequence()` for localized
+  animation testing.
 
   #### Obtaining Sequences
 
-  In some cases you may wish to download the `Class.KeyframeSequence` corresponding to an existing uploaded `Class.Animation`. You can use
+  In some cases you may wish to download the `Class.KeyframeSequence`
+  corresponding to an existing uploaded `Class.Animation`. You can use
   `Class.AnimationClipProvider:GetAnimationClipAsync()` to download an
   animation.
 code_samples:
@@ -30,13 +42,13 @@ tags: []
 deprecation_message: ''
 properties:
   - name: KeyframeSequence.AuthoredHipHeight
-    summary: |-
+    summary: |
       Contains the hip height of the `Class.Humanoid` of the model that was used
       to author this `Class.KeyframeSequence`.
-    description: |-
+    description: |
       Contains the hip height of the `Class.Humanoid` of the model that was used
-      to author this `Class.KeyframeSequence`. Default value is `1.35` since that
-      is the hip height set for a standard R15 character.
+      to author this `Class.KeyframeSequence`. Default value is `1.35` since
+      that is the hip height set for a standard R15 character.
     code_samples: []
     type: float
     tags:
@@ -54,17 +66,17 @@ properties:
       - Animation
 methods:
   - name: KeyframeSequence:AddKeyframe
-    summary: |-
+    summary: |
       Adds a `Class.Keyframe` to the `Class.KeyframeSequence` by parenting it to
       the `Class.KeyframeSequence`.
-    description: |-
+    description: |
       This method adds a `Class.Keyframe` to the `Class.KeyframeSequence` by
       parenting it to the `Class.KeyframeSequence`. It is functionally identical
       to setting the keyframe's `Class.Instance.Parent` to the
       `Class.KeyframeSequence`.
 
-      Note that this method will not error when called with an instance other than
-      a `Class.Keyframe` as the `keyframe` parameter and will parent it
+      Note that this method will not error when called with an instance other
+      than a `Class.Keyframe` as the `keyframe` parameter and will parent it
       successfully.
     code_samples:
       - KeyframeSequence-Instantiation
@@ -72,7 +84,8 @@ methods:
       - name: keyframe
         type: Instance
         default:
-        summary: The `Class.Keyframe` to be added.
+        summary: |
+          The `Class.Keyframe` to be added.
     returns:
       - type: ()
         summary: ''
@@ -83,19 +96,19 @@ methods:
     capabilities:
       - Animation
   - name: KeyframeSequence:GetKeyframes
-    summary: |-
+    summary: |
       Returns an array that contains all `Class.Keyframe|Keyframes` contained in
       a `Class.KeyframeSequence`.
-    description: |-
-      This method returns an array that contains all
-      `Class.Keyframe|Keyframes` that have been added to a
-      `Class.KeyframeSequence`.
+    description: |
+      This method returns an array that contains all `Class.Keyframe|Keyframes`
+      that have been added to a `Class.KeyframeSequence`.
     code_samples:
       - Get-KeyframeSequence-Length
     parameters: []
     returns:
       - type: Instances
-        summary: An array of `Class.Keyframe|Keyframes`.
+        summary: |
+          An array of `Class.Keyframe|Keyframes`.
     tags: []
     deprecation_message: ''
     security: None
@@ -103,25 +116,28 @@ methods:
     capabilities:
       - Animation
   - name: KeyframeSequence:RemoveKeyframe
-    summary: |-
+    summary: |
       This method removes a `Class.Keyframe` from the `Class.KeyframeSequence`
       by setting its parent to `nil`.
-    description: |-
+    description: |
       This method removes a `Class.Keyframe` from the `Class.KeyframeSequence`
       by setting its parent to `nil`. It is functionally identical to setting
       the keyframe's parent to `nil`.
 
-      Note that while this sets the keyframe's parent to `nil`, it does not destroy it. Provided another reference to the keyframe remains, it can be
+      Note that while this sets the keyframe's parent to `nil`, it does not
+      destroy it. Provided another reference to the keyframe remains, it can be
       re-parented later.
 
-      Also note that this method will not error when called with an `Class.Instance` other than a `Class.Keyframe` as the keyframe parameter.
+      Also note that this method will not error when called with an
+      `Class.Instance` other than a `Class.Keyframe` as the keyframe parameter.
     code_samples:
       - KeyframeSequence-RemoveKeyframe
     parameters:
       - name: keyframe
         type: Instance
         default:
-        summary: The `Class.Keyframe` to be removed.
+        summary: |
+          The `Class.Keyframe` to be removed.
     returns:
       - type: ()
         summary: ''

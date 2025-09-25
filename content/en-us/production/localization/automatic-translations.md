@@ -19,6 +19,8 @@ Automatic Text Capture (ATC) captures text strings from UI elements in your expe
 
 ATC evaluates over time which strings should be added to your translation table, so it may take up to a few days for new strings to appear in Translator Portal after users encounter them. If you require strings to be captured immediately, you can use the [Studio text capture process](#text-capture-in-studio).
 
+ATC only captures text objects that have `Class.GuiBase2d.AutoLocalize|AutoLocalize` enabled. If you do not want ATC to collect a certain text string, such as a name or unique text entry, disable this property. Note that for `Class.TextBox` objects, only `Class.TextBox.PlaceholderText|PlaceholderText` is captured; the assumption is that strings in `Class.TextBox.Text|Text` were provided by the player.
+
 To enable Automatic Text Capture:
 
 1. In localization settings, navigate to **Settings**.
@@ -26,8 +28,6 @@ To enable Automatic Text Capture:
 
    <img src="../../assets/localization/Portal-Enable-ATC.png"
    width="800" alt="The Localization Settings section highlighting the toggle for Capture text from Experience UI while users play."/>
-
-ATC adds text strings to the localization table within 1–2 minutes of encountering the text in the experience. If you do not want ATC to collect a certain text string, such as a name or unique text entry, disable the `Class.GuiBase2d.AutoLocalize|AutoLocalize` property of the text object.
 
 <Alert severity="info">
 ATC can not capture some experience objects. These objects may require special handling with <a href="./localize-with-scripting.md">localization scripts</a>. The current exemptions are:

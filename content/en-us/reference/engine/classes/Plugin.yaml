@@ -592,7 +592,8 @@ methods:
     returns:
       - type: ()
         summary: ''
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe

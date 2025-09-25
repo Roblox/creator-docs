@@ -11,7 +11,7 @@ Group ownership of experiences helps creators collaborate and operate as indepen
 
 ## Group creation
 
-Creating a group costs 100 Robux. New groups maintain certain capabilities on the legacy [Groups](https://www.roblox.com/groups) pages, but improved workflows and options for [configuring roles/permissions](#roles-and-permissions) and [inviting members](#invite-members) are only available on the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+Creating a group costs 100 Robux. New groups maintain certain capabilities on the legacy [Groups](https://www.roblox.com/communities) pages, but improved workflows and options for [configuring roles/permissions](#roles-and-permissions) and [inviting members](#invite-members) are only available on the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 
 <Alert severity="warning">
 Before creating a group, carefully read through the [rules and expectations](./group-guidelines.md) for group management.
@@ -32,7 +32,7 @@ Role configuration is only accessible if you're the group owner or you have perm
 </Alert>
 
 <Alert severity="error">
-Roles created using the legacy [Groups](https://www.roblox.com/groups) pages will continue to operate on the legacy system and can only be managed through the legacy workflow. If permissions were granted to a legacy role, **the member will continue to have those permissions**, so it's recommended that you revoke permissions/roles in the legacy system and then migrate members to the new system.
+Roles created using the legacy [Groups](https://www.roblox.com/communities) pages will continue to operate on the legacy system and can only be managed through the legacy workflow. If permissions were granted to a legacy role, **the member will continue to have those permissions**, so it's recommended that you revoke permissions/roles in the legacy system and then migrate members to the new system.
 </Alert>
 
 1. From the [Creator Dashboard](https://create.roblox.com/dashboard/creations), select the group from the **View As** dropdown menu and navigate to **Collaboration** &rang; **Roles**.
@@ -217,7 +217,7 @@ To quickly un-assign a role from the members overview, hover over it and click t
 <img src="../assets/creator-dashboard/Group-Members-Un-Assign-Role.png" width="880" alt="Hover-over showing how to un-assign a role from a group member on the Creator Dashboard." />
 
 <Alert severity="error">
-Currently, roles configured through the legacy [Groups](https://www.roblox.com/groups) pages appear for each member, and new members are assigned the legacy **Member** role. If permissions were granted to a role through the legacy system, **the member will continue to have those permissions**, so it's recommended that you revoke permissions/roles in the legacy system and then migrate members to the new system.
+Currently, roles configured through the legacy [Groups](https://www.roblox.com/communities) pages appear for each member, and new members are assigned the legacy **Member** role. If permissions were granted to a role through the legacy system, **the member will continue to have those permissions**, so it's recommended that you revoke permissions/roles in the legacy system and then migrate members to the new system.
 </Alert>
 
 ### Remove members

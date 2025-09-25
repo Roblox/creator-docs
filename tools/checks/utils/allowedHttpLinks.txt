@@ -54,6 +54,7 @@ https://digitaldragon.co/camps/thanksgiving-week-camp-roblox/
 https://digitalsake.com/
 https://digitane.jp/
 https://discord.com/developers/applications
+https://discord.com/developers/docs/topics/oauth2
 https://docs.blender.org/manual/en/2.79/editors/uv_image/uv/editing/unwrapping/mapping_types.html
 https://docs.blender.org/manual/en/2.80/scene_layout/object/editing/transform/control/pivot_point.html
 https://docs.blender.org/manual/en/3.5/grease_pencil/modes/weight_paint/introduction.html
@@ -125,6 +126,7 @@ https://github.com/Elttob/Fusion
 https://github.com/Roblox/StudioWidgets
 https://github.com/Roblox/creator-docs
 https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/cloud.docs.json
+https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/openapi.json
 https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/assets/v1.json
 https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/datastores-api/ordered-v1.json
 https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/datastores-api/v1.json
@@ -132,6 +134,7 @@ https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/m
 https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/universes-api/v1.json
 https://github.com/Roblox/roact/
 https://github.com/Roblox/roblox-blender-plugin
+https://github.com/OpenAPITools/openapi-generator
 https://github.com/osyrisrblx/t
 https://grandtraining.co.nz/
 https://greece.alg.academy/
@@ -428,6 +431,7 @@ https://www.wizkidlearning.com/
 https://www.wowschool.pl/
 https://www.youthtechinc.com/
 https://www.youtube.com/@RobloxLearn
+https://www.youtube.com/@RobloxLearn/streams
 https://www.youtube-nocookie.com/embed/V1uFFUUCLpo
 https://www.youtube-nocookie.com/embed/2My8jE47clI
 https://www.youtube-nocookie.com/embed/0fAhhoXK12o
@@ -673,3 +677,15 @@ https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Transfer-Encoding
 https://www.youtube-nocookie.com/embed/x1JgsC8c8VQ
 https://www.youtube-nocookie.com/embed/PqB6DC_kxHM
+http://open-notify.org
+https://www.json.org
+https://en.wikipedia.org/wiki/%22Hello,_World!%22_program
+https://pastebin.com/api
+http://open-notify.org/Open-Notify-API/ISS-Location-Now/
+https://www.ecma-international.org/publications-and-standards/standards/ecma-404/
+https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/
+https://www.llama.com/llama3/license/
+https://ai.google.dev/gemini-api/terms
+https://survey.roblox.com/jfe/form/SV_7VTnD59gg3nFiTA
+https://youtube.com/playlist?list=PLuEQ5BB-Z1PJ8Du1rJ_JaMpW1W_G2T_lm
+https://www.youtube.com/watch?v=7DXTQcA9G_A

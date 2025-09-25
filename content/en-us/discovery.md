@@ -22,6 +22,8 @@ Engagement signals from sponsored ads, search, charts, friends, teleport, notifi
 
 We do not count the engagement or monetization of users first acquired from ads, friends, or social media in the ranking stage of Recommended for You.
 
+### Key signals
+
 Roblox ranks the selected experiences based on the following 6 key signals of users acquired from Recommended for You:
 
 <table>

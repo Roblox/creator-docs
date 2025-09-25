@@ -127,6 +127,8 @@ navigation:
     section:
       - title: Save player data
         path: /tutorials/use-case-tutorials/data-storage/save-player-data
+      - title: Create a custom leaderboard
+        path: /tutorials/use-case-tutorials/data-storage/create-leaderboard
   - heading: Advanced paths
   - title: Overview
     path: /tutorials/curriculums/curriculum-overview

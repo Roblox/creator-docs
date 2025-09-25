@@ -5,10 +5,10 @@
 name: AudioListener
 type: class
 memory_category: Internal
-summary: |-
+summary: |
   Records an audio stream from its surrounding
   `Class.AudioEmitter|AudioEmitters` in the 3D world.
-description: |-
+description: |
   `Class.AudioListener` records an audio stream from its surrounding
   `Class.AudioEmitter|AudioEmitters` in the 3D world. It provides a single
   **Output** pin which can be connected to other pins via `Class.Wire|Wires`. If
@@ -24,12 +24,12 @@ tags: []
 deprecation_message: ''
 properties:
   - name: AudioListener.AngleAttenuation
-    summary: |-
+    summary: |
       Represents how the perceived volume of the emitted sound changes based on
       the angle between a `Class.AudioEmitter` and the
       `Datatype.CFrame.LookVector|LookVector` associated with the
       `Class.AudioListener`.
-    description: |-
+    description: |
       Represents a volume-over-angle curve that affects how loudly a
       `Class.AudioListener` will hear the `Class.AudioEmitter`, based on the
       angle between them and the `Datatype.CFrame.LookVector|LookVector`
@@ -54,10 +54,10 @@ properties:
     capabilities:
       - Audio
   - name: AudioListener.AudioInteractionGroup
-    summary: |-
+    summary: |
       Controls which `Class.AudioEmitter|AudioEmitters` are audible to this
       `Class.AudioListener`.
-    description: |-
+    description: |
       Controls which `Class.AudioEmitter|AudioEmitters` are audible to this
       `Class.AudioListener`. Emitters that share an interaction group can be
       heard by this Listener.
@@ -76,11 +76,11 @@ properties:
     capabilities:
       - Audio
   - name: AudioListener.DistanceAttenuation
-    summary: |-
+    summary: |
       Represents how the perceived volume of emitted sounds change as the
       distance between `Class.AudioEmitter|AudioEmitters` and the
       `Class.AudioListener` increases.
-    description: |-
+    description: |
       Represents a volume-over-distance curve that affects how loudly the
       `Class.AudioListener` hears any `Class.AudioEmitter|AudioEmitters`, based
       on the distance between them.
@@ -104,10 +104,10 @@ properties:
     capabilities:
       - Audio
   - name: AudioListener.SimulationFidelity
-    summary: |-
+    summary: |
       Controls how detailed the audio simulation should be for this
       `Class.AudioListener`.
-    description: |-
+    description: |
       Controls how detailed the audio simulation should be for this
       `Class.AudioListener`, similar to `Class.MeshPart.CollisionFidelity` or
       `Class.MeshPart.RenderFidelity`.
@@ -131,10 +131,10 @@ properties:
       - Audio
 methods:
   - name: AudioListener:GetAngleAttenuation
-    summary: |-
+    summary: |
       Gets the angle attenuation curve that the `Class.AudioListener` is using,
       or an empty table if it's using the default curve.
-    description: |-
+    description: |
       Returns a table mapping angle to volume. Keys are numbers between `0` and
       `180` (inclusive), while values are numbers between `0` and `1`
       (inclusive) describing how volume attenuates depending on direction. This
@@ -144,7 +144,8 @@ methods:
     parameters: []
     returns:
       - type: Dictionary
-        summary: Table mapping angle to volume, as described above.
+        summary: |
+          Table mapping angle to volume, as described above.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -153,8 +154,9 @@ methods:
     capabilities:
       - Audio
   - name: AudioListener:GetAudibilityFor
-    summary: Calculates how audible an `Class.AudioEmitter` is for this listener
-    description: |-
+    summary: |
+      Calculates how audible an `Class.AudioEmitter` is for this listener
+    description: |
       Calculates how audible an `Class.AudioEmitter` is for this listener. The
       resulting volume, ranging from `0` to `1`, accounts for distance and angle
       attenuation on both the emitter and listener.
@@ -174,10 +176,10 @@ methods:
     capabilities:
       - Audio
   - name: AudioListener:GetConnectedWires
-    summary: |-
+    summary: |
       Returns an array of `Class.Wire|Wires` that are connected to the specified
       pin.
-    description: |-
+    description: |
       Returns an array of `Class.Wire|Wires` that are connected to the specified
       pin. `Class.AudioListener` has one "Output" pin.
     code_samples: []
@@ -196,10 +198,10 @@ methods:
     capabilities:
       - Audio
   - name: AudioListener:GetDistanceAttenuation
-    summary: |-
+    summary: |
       Gets the distance attenuation curve that the `Class.AudioListener` is
       using, or an empty table if it's using the default curve.
-    description: |-
+    description: |
       Returns a table mapping distance to volume. Keys are numbers greater than
       or equal to 0, while values are numbers between 0 and 1 (inclusive)
       describing how volume attenuates over distance. This method returns an
@@ -231,10 +233,10 @@ methods:
     capabilities:
       - Audio
   - name: AudioListener:GetInteractingEmitters
-    summary: |-
+    summary: |
       Lists all `Class.AudioEmitter|AudioEmitters` that this listener is capable
       of hearing.
-    description: |-
+    description: |
       Returns an array of `Class.AudioEmitter|AudioEmitters` that share an
       `Class.AudioListener.AudioInteractionGroup|AudioInteractionGroup` with the
       listener.
@@ -264,10 +266,10 @@ methods:
     capabilities:
       - Audio
   - name: AudioListener:SetAngleAttenuation
-    summary: |-
+    summary: |
       Sets the angle attenuation curve that the `Class.AudioListener` should
       use, or uses a constant curve of volume `1` if none is provided.
-    description: |-
+    description: |
       Sets a volume-over-angle curve that affects how loudly a
       `Class.AudioListener` will hear the `Class.AudioEmitter`, based on the
       angle between them and the `Datatype.CFrame.LookVector|LookVector`
@@ -311,10 +313,10 @@ methods:
     capabilities:
       - Audio
   - name: AudioListener:SetDistanceAttenuation
-    summary: |-
+    summary: |
       Sets the distance attenuation curve that the `Class.AudioListener` should
       use, or uses an inverse rolloff curve if none is provided.
-    description: |-
+    description: |
       Sets a volume-over-distance curve that affects how loudly the
       `Class.AudioListener` will hear any `Class.AudioEmitter|AudioEmitters`,
       based on the distance between them.
@@ -357,10 +359,10 @@ methods:
       - Audio
 events:
   - name: AudioListener.WiringChanged
-    summary: |-
+    summary: |
       Fires when another instance is connected to or disconnected from the
       `Class.AudioListener` via a `Class.Wire`.
-    description: |-
+    description: |
       Event that fires after a `Class.Wire` becomes connected or disconnected,
       and that `Class.Wire` is now or was previously connected to a pin on the
       `Class.AudioListener` and to some other wirable instance.
@@ -369,21 +371,24 @@ events:
       - name: connected
         type: boolean
         default:
-        summary: Whether the instance got connected or disconnected.
+        summary: |
+          Whether the instance got connected or disconnected.
       - name: pin
         type: string
         default:
-        summary: The pin on the `Class.AudioListener` that the `Class.Wire` targets.
+        summary: |
+          The pin on the `Class.AudioListener` that the `Class.Wire` targets.
       - name: wire
         type: Wire
         default:
-        summary: |-
+        summary: |
           The `Class.Wire` between the `Class.AudioListener` and the other
           instance.
       - name: instance
         type: Instance
         default:
-        summary: The other instance that is or was connected through the `Class.Wire`.
+        summary: |
+          The other instance that is or was connected through the `Class.Wire`.
     tags: []
     deprecation_message: ''
     security: None

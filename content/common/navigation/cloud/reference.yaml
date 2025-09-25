@@ -16,10 +16,12 @@ navigation:
         path: /cloud/reference/errors
       - title: Rate limits
         path: /cloud/reference/rate-limits
-      - title: OpenAPI descriptions
+      - title: OpenAPI document
         path: /cloud/reference/openapi
       - title: Scopes
         path: /cloud/reference/scopes
+      - title: Risk levels
+        path: /cloud/reference/risk-levels
   - heading: Authentication
   - title: API keys
     path: /cloud/auth/api-keys
@@ -47,8 +49,6 @@ navigation:
     path: /cloud/features/badges
   - title: Bans and blocks
     path: /cloud/features/bans-and-blocks
-  - title: Chats
-    path: /cloud/features/chats
   - title: Connections
     path: /cloud/features/friends
   - title: Creator Store
@@ -93,6 +93,14 @@ navigation:
     path: /cloud/features/user-profiles
   - title: Users
     path: /cloud/features/users
+  - title: '' # doesn't show anywhere
+    path: /cloud/features-revamp/
+    type: cloudfeature
+    source: /reference/cloud/openapi.json
+  - title: '' # doesn't show anywhere
+    path: /cloud/domains/
+    type: clouddomain
+    source: /reference/cloud/openapi.json
   - heading: Open Cloud API Reference
   - title: Cloud
     section:
@@ -318,12 +326,6 @@ navigation:
         versions:
           - name: v1
             path: /cloud/legacy/gameinternationalization/v1
-      - title: Game join
-        type: cloudlegacy
-        ignoreTranslation: true
-        versions:
-          - name: v1
-            path: /cloud/legacy/gamejoin/v1
       - title: Games v2
         type: cloudlegacy
         ignoreTranslation: true

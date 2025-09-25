@@ -5,10 +5,10 @@
 name: Selection
 type: class
 memory_category: Instances
-summary: |-
+summary: |
   The Selection service controls the `Class.Instance|Instances` that are
   selected in Roblox Studio.
-description: |-
+description: |
   The Selection service controls the `Class.Instance|Instances` that are
   selected in Roblox Studio.
 
@@ -74,10 +74,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: Selection:Get
-    summary: |-
+    summary: |
       Returns an array of currently selected `Class.Instance|Instances` in
       Roblox Studio.
-    description: |-
+    description: |
       Returns an array of currently selected `Class.Instance|Instances` in
       Roblox Studio.
 
@@ -96,7 +96,8 @@ methods:
     parameters: []
     returns:
       - type: Instances
-        summary: An array of currently selected `Class.Instance|Instances`.
+        summary: |
+          An array of currently selected `Class.Instance|Instances`.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -120,10 +121,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: Selection:Set
-    summary: |-
+    summary: |
       Sets the currently selected objects in Roblox Studio to
       `Class.Instance|Instances` in the given array.
-    description: |-
+    description: |
       Sets the currently selected objects in Roblox Studio to
       `Class.Instance|Instances` in the given array.
 
@@ -146,7 +147,7 @@ methods:
       - name: selection
         type: Instances
         default:
-        summary: |-
+        summary: |
           An array of `Class.Instance|Instances` to set the current selection
           to.
     returns:
@@ -159,10 +160,10 @@ methods:
     capabilities: []
 events:
   - name: Selection.SelectionChanged
-    summary: |-
+    summary: |
       Fires when the `Class.Instance|Instances` selected in Roblox Studio
       changes.
-    description: |-
+    description: |
       Fires when the `Class.Instance|Instances` selected in Roblox Studio
       changes.
 

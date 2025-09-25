@@ -5,11 +5,11 @@
 name: PVInstance
 type: class
 memory_category: Instances
-summary: Abstract class for all objects that have a physical location in the world.
-description: |-
-  A `Class.PVInstance` is an abstract class that
-  cannot be created. It is the base for all objects that have a physical
-  location in the world.
+summary: |
+  Abstract class for all objects that have a physical location in the world.
+description: |
+  A `Class.PVInstance` is an abstract class that cannot be created. It is the
+  base for all objects that have a physical location in the world.
 code_samples: []
 inherits:
   - Instance
@@ -56,8 +56,9 @@ properties:
     capabilities: []
 methods:
   - name: PVInstance:GetPivot
-    summary: Gets the pivot of a `Class.PVInstance`.
-    description: |-
+    summary: |
+      Gets the pivot of a `Class.PVInstance`.
+    description: |
       This function gets the pivot of a `Class.PVInstance`. This is often used
       with `Class.PVInstance:PivotTo()` to move a model.
 
@@ -76,11 +77,11 @@ methods:
     thread_safety: Safe
     capabilities: []
   - name: PVInstance:PivotTo
-    summary: |-
+    summary: |
       Transforms the `Class.PVInstance` along with all of its descendant
       `Class.PVInstance|PVInstances` such that the pivot is now located at the
       specified `Datatype.CFrame`.
-    description: |-
+    description: |
       Transforms the `Class.PVInstance` along with all of its descendant
       `Class.PVInstance|PVInstances` such that the pivot is now located at the
       specified `Datatype.CFrame`. This is the primary function that should be
@@ -111,7 +112,7 @@ methods:
       - name: targetCFrame
         type: CFrame
         default:
-        summary: |-
+        summary: |
           The `Datatype.CFrame` that the `Class.PVInstance` pivot should equal
           after moving it.
     returns:

@@ -524,7 +524,8 @@ methods:
         summary: |
           An array of `Class.BasePart|BaseParts` which matched the spatial
           query.
-    tags: []
+    tags:
+      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Safe
@@ -573,7 +574,8 @@ methods:
         summary: |
           An array of `Class.BasePart|BaseParts` which matched the spatial
           query.
-    tags: []
+    tags:
+      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Safe
@@ -621,7 +623,8 @@ methods:
         summary: |
           An array of `Class.BasePart|BaseParts` which matched the spatial
           query.
-    tags: []
+    tags:
+      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Safe

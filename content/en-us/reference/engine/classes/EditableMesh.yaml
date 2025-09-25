@@ -1430,10 +1430,10 @@ methods:
     capabilities: []
   - name: EditableMesh:GetVerticesWithColor
     summary: |
-      Returns an array of face IDs that use the given color ID.
+      Returns an array of vertex IDs that use the given color ID.
     description: |
-      Returns an array of face IDs that use the given color ID. Use together
-      with `Class.EditableMesh:GetVerticesWithColor()|GetVerticesWithColor()` to
+      Returns an array of vertex IDs that use the given color ID. Use together
+      with `Class.EditableMesh:GetFacesWithColor()|GetFacesWithColor()` to
       obtain all face/vertex pairs.
     code_samples: []
     parameters:
