@@ -199,18 +199,20 @@ An exploiter can send NaN (Not a Number) as an argument. NaN is uniquely dangero
 local function onCreateTradeOffer(player, offeredGold)
     -- 1. TYPE CHECK: This passes! typeof(NaN) is "number".
     if typeof(offeredGold) ~= "number" then
-    return "Invalid offer"
+      return "Invalid offer"
     end
 
     -- 2. RANGE CHECK: This is bypassed!
     -- (NaN < 0) is false. (NaN > 1000000) is also false. The check does nothing.
     if offeredGold < 0 or offeredGold > 1000000 then
-    return "Offer out of range"
+      return "Offer out of range"
     end
 
     -- 3. INVENTORY CHECK: This is bypassed!
     -- (NaN > player.Gold.Value) is false.
-    if offeredGold > player.Gold.Value then return "Not enough gold" end
+    if offeredGold > player.Gold.Value then
+      return "Not enough gold" 
+    end
 
     -- VULNERABILITY: A fraudulent trade offer with NaN gold is created!
     createTrade(player, {gold = offeredGold})
@@ -467,11 +469,13 @@ castLightningEvent.OnServerEvent:Connect(function(player, strikePosition)
     end
 
     -- 5. Example Range validation
-    if not player.Character or not player.Character:FindFirstChild("HumanoidRootPart") then
+    local character = player.Character
+    local humanoidRootPart = character and character:FindFirstChild("HumanoidRootPart")
+    if not humanoidRootPart then
         return
     end
 
-    local distance = (player.Character.HumanoidRootPart.Position - strikePosition).Magnitude
+    local distance = (humanoidRootPart.Position - strikePosition).Magnitude
     if distance > 100 then
         return -- Out of range
     end
@@ -533,7 +537,7 @@ When a client has network ownership over parts (including their character), they
 
 **Physics manipulation**
 
-- Control the position and rotation of any unanchored parts or mechanisms, including replicating `Inf` or `NaN` components in `Class.CFrame|CFrames`.
+- Control the position and rotation of any unanchored parts or mechanisms, including replicating `Inf` or `NaN` components in `Datatype.CFrame|CFrames`.
   Set part velocities to extreme values (including `Inf` or `NaN`), which can interfere with the physics of other unanchored parts/assemblies, even those that are not owned by the exploiter.
   This is often used to fling other player characters and nearby parts.
   Manipulate the firing of Touched events, including not firing Touched at all.
