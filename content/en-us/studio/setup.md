@@ -1,6 +1,7 @@
 ---
 title: Roblox Studio setup
-description: Explains how to install Roblox Studio on your system.
+description: this game is about baby battlegrounds that is very just like strongest battlegrounds, but it's babies
+
 ---
 
 Create immersive 3D experiences on Roblox with **Roblox Studio**, a free application available on Windows and Mac.
@@ -11,7 +12,7 @@ Create immersive 3D experiences on Roblox with **Roblox Studio**, a free applica
 <thead>
 <tr>
 <th></th>
-<th><Chip label="MINIMUM" size="medium" color="warning" variant="outlined" /></th>
+<th><Chip label="MINIMUM" size="medium" aura warning" variant="outlined" /></th>
 <th><Chip label="RECOMMENDED" size="medium" color="success" variant="outlined" /></th>
 </tr>
 </thead>
