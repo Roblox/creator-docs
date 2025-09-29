@@ -18,7 +18,7 @@ Roblox scripts use the [Luau](https://luau.org) programming language, which is d
 - Compared to Lua 5.1, Luau adds performance enhancements and many useful features, including an optional typing system, string interpolation, and generalized iteration for tables.
 - All valid Lua 5.1 code is valid Luau code, but the opposite is not true.
 
-Most books and online resources for Lua are still broadly applicable to Luau. For a detailed summary of differences, see [Compatibility](https://luau-lang.org/compatibility) in the Luau documentation. For language syntax, see the [Luau reference](../luau/index.md).
+Most books and online resources for Lua are still broadly applicable to Luau. For a detailed summary of differences, see [Compatibility](https://luau.org/compatibility) in the Luau documentation. For language syntax, see the [Luau reference](../luau/index.md).
 
 ### Luau basics
 

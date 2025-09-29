@@ -22,6 +22,7 @@ Luau includes the following data types:
 - [Numbers](numbers.md), or `double`, represent double-precision (64-bit) floating-point numbers.
 - [Strings](strings.md) are sequences of characters, such as letters, numbers, and symbols.
 - [Tables](tables.md) are [arrays](tables.md#arrays) or [dictionaries](tables.md#dictionaries) of any value except `nil`.
+- [Enums](enums.md) are fixed lists of items.
 
 Luau is dynamically typed by default. Variables, function parameters, and return values can be any data type. This helps you write code faster because you don't need to provide types for each piece of data. You can still declare explicit types for variables in Luau and enable [strict type checking](type-checking.md) to make type issues obvious and easy to locate.
 

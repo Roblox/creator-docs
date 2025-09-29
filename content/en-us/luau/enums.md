@@ -3,6 +3,10 @@ title: Enums
 description: A fixed list of items (enumeration).
 ---
 
+<Alert severity="info">
+Enums are not a [builtin luau type](https://luau.org/typecheck#builtin-types), and exist only in Roblox. This page is located here because Eunms are conceptually similar enough, and are something you will work with all the time in Roblox development.
+</Alert>
+
 The **enumeration** data type, or `Datatype.Enum`, is a fixed list of items. You can access enums through the global object called `Datatype.Enum`. For a full list of Enums and their items, see [Enums](/reference/engine/enums) in the API Reference.
 
 ## Get enum items
