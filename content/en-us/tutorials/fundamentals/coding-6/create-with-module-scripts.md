@@ -433,7 +433,7 @@ function TreasureManager.openChest(chestPart, whichCharacter)
    local playerTreasure = getPlayerTreasure(whichCharacter)
    playerKeys.Value = playerKeys.Value - chestPickCost
    playerTreasure.Value = playerTreasure.Value + chestReward
-   chestPart:Destroy()
+   chestPart.Parent:Destroy()
 end
 
 function TreasureManager.canOpenChest(whichCharacter)
