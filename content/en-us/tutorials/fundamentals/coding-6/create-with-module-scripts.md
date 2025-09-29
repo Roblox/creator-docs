@@ -332,7 +332,7 @@ So the player can open a chest, create a function in **TreasureManager** that aw
    	local playerTreasure = getPlayerTreasure(whichCharacter)
    	playerKeys.Value = playerKeys.Value - chestPickCost
    	playerTreasure.Value = playerTreasure.Value + chestReward
-   	chestPart:Destroy()
+   	chestPart.Parent:Destroy()
    end
    ```
 
@@ -479,7 +479,7 @@ end
 
 -- Binds every chest part to the touch function so it works on all parts
 for chestIndex = 1, #chestsArray do
-   local chestPart = chestsArray[chestIndex]
+   local chestPart = chestsArray[chestIndex]:WaitForChild("Collider")
    chestPart.Touched:Connect(function(otherPart)
    partTouched(otherPart, chestPart)
    end)
