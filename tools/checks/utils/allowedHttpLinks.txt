@@ -183,7 +183,7 @@ https://luau.org/
 https://luau.org/syntax
 https://luau.org/lint
 https://luau.org/typecheck
-https://luau-lang.org/
+https://luau.org/compatibility
 https://maker-state.com/product/creative-coding-with-minecraft-roblox/
 https://makersplacegh.com/online-sessions/coding-games-in-roblox/
 https://marmoset.co/

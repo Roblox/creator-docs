@@ -3,19 +3,19 @@ title: Avatar Settings
 description: The Avatar Settings window contains all Studio-level settings and customization options for an experience.
 ---
 
-The **Avatar Settings** window allows you to control the look and behavior of user avatars across your entire experience.
+The **Avatar Settings** window, accessible from Studio's **File** menu or the **Avatar** tab, allows you to control the look and behavior of user avatars across your entire experience.
 
-Most experiences will find that the default avatar settings work perfectly right out of the box, offering a seamless player experience. The extensive controls in Avatar Settings are primarily for advanced creators looking to finely tune avatar appearance and behavior for specific gameplay needs.
+<img src="../assets/studio/general/Toolbar-Avatar-Settings.png" width="800" alt="Avatar Settings indicated in Studio's toolbar" />
+
+Most experiences will find that the default avatar settings work perfectly right out of the box, offering a seamless player experience. The extensive controls in **Avatar Settings** are primarily for advanced creators looking to finely tune avatar appearance and behavior for specific gameplay needs.
 
 <Alert severity="warning">
-Avatar Settings modifies underlying experience defaults that are not visible outside of the settings interface or accessible with scripts. This can lead to difficult-to-debug behaviors, especially when working across teams or on a universe with multiple place files.
+**Avatar Settings** modifies underlying experience defaults that are not visible outside of the settings interface or accessible with scripts. This can lead to difficult-to-debug behaviors, especially when working across teams or on a universe with multiple place files.
 
-Test your changes by using the Avatar Settings preview and by playtesting in Studio so that you fully understand the impact on player avatars before publishing changes to your live experience.
+Test your changes by using the window's preview and by playtesting in Studio so that you fully understand the impact on player avatars before publishing changes to your live experience.
 </Alert>
 
-## Top bar
-
-The top bar of the Avatar Settings window provides easy access to quickly set the Avatar Type, assign a preset, and enable preview.
+The top bar of the **Avatar Settings** window provides easy access to quickly set the avatar type, assign a preset, and enable preview.
 
 <table>
 <thead>
@@ -31,11 +31,11 @@ The top bar of the Avatar Settings window provides easy access to quickly set th
   </tr>
   <tr>
     <td>**Preview**</td>
-    <td>Toggles a preview lineup of avatars based off the avatar settings applied. <br/><br/>This creates an `AvatarPreview` folder under **Workspace** > **Camera** with four representative avatar types. You can add or remove avatars to the lineup by dragging them into or out of the folder. <br/> <br/>This folder is removed during Studio runtime playtesting and it is not saved to your place file.</td>
+    <td>Toggles a preview lineup of avatars based off the avatar settings applied. <br/><br/>This creates an `AvatarPreview` folder under **Workspace**&nbsp;⟩ **Camera** with four representative avatar types. You can add or remove avatars to the lineup by dragging them into or out of the folder. <br/> <br/>This folder is removed during Studio runtime playtesting and it is not saved to your place file.</td>
   </tr>
   <tr>
-    <td>**. . .**</td>
-    <td>Avatar Type: sets the default avatar type to either **R6**, **R15**, or **R15 & R6**.</td>
+    <td>**&ctdot;**</td>
+    <td>Sets the default avatar type to either **R6**, **R15**, or **R15 & R6**.</td>
   </tr>
 
 </tbody>
@@ -137,7 +137,7 @@ The **Clothing** tab contains controls for layered and classic clothing.
     <td>
       <ul>
         <li>**Player Choice** (default): Keep user's avatar clothing.</li>
-        <li>**Custom Clothing**: Lets you override a user's layered clothing equip slot or classic clothing type to a custom ID. If you check the box to override, but leave the Asset ID field blank, it will remove all player clothing in that equip slot.</li>
+        <li>**Custom Clothing**: Lets you override a user's layered clothing equip slot or classic clothing type to a custom ID. If you check the box to override, but leave the **Asset ID** field blank, it will remove all player clothing in that equip slot.</li>
       </ul>
     </td>
   </tr>

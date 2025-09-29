@@ -27,19 +27,14 @@ Roblox Studio launches with extra windows open that you don't need for this less
 
 To customize the workspace for your VFX art task:
 
-1. Close any open window on the **left side** of Studio by clicking the **X** button on the top-right corner of the window. If you don't see anything to close, go to the next step.
+1. Close each window on the **left** of the 3D view by clicking the **&times;** in the window's upper-right corner. If you don't see anything to close on the left, go to the next step.
 
-   <img src="../../../assets/education/build-it-play-it-mansion-of-wonder/become-an-artist/close-windows.png" width="50%" />
+2. Leave the **Explorer** and **Properties** windows open on the right side of Studio. If you have done each step correctly, Studio looks like the following image.
 
-2. Leave the **Explorer** and **Properties** window open on the right side of Studio. If you have done each step correctly, Studio looks like the following image.
-
-   <img src="../../../assets/education/build-it-play-it-mansion-of-wonder/become-an-artist/template-interface.jpg" />
+   <img src="../../../assets/education/general/Studio-Setup-Mansion-Of-Wonder.jpg" width="960" />
 
    <Alert severity="warning">
-   If you don't see the Explorer and Properties windows, you can open them by going to the **Home** tab and clicking the **Explorer** and **Properties** buttons.
-
-   <img src="../../../assets/education/general/OpenExplorerandProperties.png" />
-
+   If you don't see the **Explorer** and **Properties** windows, toggle them on from Studio's **Window** menu.
    </Alert>
 
 ## Playtest the experience
@@ -50,7 +45,7 @@ To playtest the experience's gameplay:
 
 1. In the top-left corner of Studio, keep the default **Test** playtest option, then click the **Play** button. Studio enters playtest mode.
 
-   <img src="../../../assets/education/general/play-button.png" width="30%" />
+   <img src="../../../assets/education/general/Play-Button.png" width="360" />
 
    <Alert severity="info">
    There are a variety of additional playtest options that you will explore in a later chapter of the tutorial.
@@ -68,7 +63,7 @@ To playtest the experience's gameplay:
      <tbody>
        <tr>
          <td>**Move**</td>
-         <td><kbd>W A S D</kbd> or arrow keys</td>
+         <td><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> or arrow keys</td>
        </tr>
        <tr>
          <td>**Rotate**</td>
@@ -93,6 +88,6 @@ To playtest the experience's gameplay:
 
 1. When you're done, return to the top-left corner of Studio, then click the **Stop** button. Studio exits playtest mode.
 
-   <img src="../../../assets/education/general/stop-button.png" width="30%" />
+   <img src="../../../assets/education/general/Stop-Button.png" width="360" />
 
 Now that you are familiar with the gameplay, it's time to start creating special effects!

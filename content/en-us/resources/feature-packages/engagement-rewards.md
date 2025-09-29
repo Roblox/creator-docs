@@ -27,21 +27,17 @@ The **Engagement Rewards** feature package is a customizable framework for offer
 
 	</Grid>
 
-2. In Studio, select the **View** tab.
-3. Click **Toolbox**.
-
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" alt="Studio's View tab with the Toolbox tool highlighted." width="876" />
-
-4. In the **Toolbox** window, click the **Inventory** tab.
+2. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../projects/assets/toolbox.md).
+3. In the **Toolbox** window, click the **Inventory** tab. The **My Models** sort displays.
 
    <img src="../../assets/studio/toolbox/Inventory-Tab.png" alt="Studio's Toolbox window with the Inventory tab highlighted." width="360" />
 
-5. Click the **Feature Package Core** tile, then the **Engagement Rewards Feature Package** tile. Both package folders display in the **Explorer** window.
-6. Drag the folders into **ReplicatedStorage**.
+4. Click the **Feature Package Core** tile, then the **Engagement Rewards Feature Package** tile. Both package folders display in the **Explorer** window.
+5. Drag the folders into `Class.ReplicatedStorage`.
 
 ## Initialize the package
 
-Moving the packages to **ReplicatedStorage** and testing your experience runs the `EngagementRewardsExample` script in `ReplicatedStorage.EngagementRewards.Server.Examples`.
+Moving the packages to `Class.ReplicatedStorage` and testing your experience runs the `EngagementRewardsExample` script in `ReplicatedStorage.EngagementRewards.Server.Examples`.
 
 This script shows how to initialize the package for use in your experience, which involves requiring several module scripts and defining a `rewardClaimedHandlerFunction()` function that ultimately gives the reward(s) to the player.
 
@@ -64,7 +60,7 @@ end
 -- more
 ```
 
-You can either modify this script directly or move it to **ServerScriptService** if that's your preferred location for server code. As-is, the script is only useful for testing purposes.
+You can either modify this script directly or move it to `Class.ServerScriptService` if that's your preferred location for server code. As-is, the script is only useful for testing purposes.
 
 Giving the reward to the player varies by experience. In some experiences, you might confer an experience boost or just increment the player's gold count. In other experiences, you might have a custom inventory system, whereas others might place an item into player backpacks. In all cases, however, you must replace `rewardClaimedHandlerFunction()` with your own function.
 

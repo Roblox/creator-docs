@@ -111,11 +111,7 @@ To insert this tutorial's asset pack from the Creator Store to your Studio inven
 
 To get this asset pack from your inventory into your experience:
 
-1. In the toolbar, select the **View** tab.
-1. Click **Toolbox**. The **Toolbox** window displays.
-
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" alt="Studio's View tab with the Toolbox tool highlighted." width="876" />
-
+1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../projects/assets/toolbox.md).
 1. In the **Toolbox** window, click the **Inventory** tab. The **My Models** sort displays.
 
    <img src="../../assets/studio/toolbox/Inventory-Tab.png" alt="Studio's Toolbox window with the Inventory tab highlighted." width="360" />
@@ -126,7 +122,7 @@ To get this asset pack from your inventory into your experience:
 
 ## Customize targets
 
-When you add a 3D object into your experience, Studio updates the **Explorer** window to display the name of the object and a nest of its children within the `Class.Workspace` service. For example, after you add the catapult model into your viewport, the Explorer window displays the **IntrotoStudioCatapult** folder and its child assets alongside the spawn location and baseplate.
+When you add a 3D object into your experience, Studio updates the **Explorer** window to display the name of the object and a nest of its children within the `Class.Workspace` service. For example, after you add the catapult model into your viewport, the **Explorer** window displays the **IntrotoStudioCatapult** folder and its child assets alongside the spawn location and baseplate.
 
 <GridContainer numColumns="2">
   <figure>
@@ -136,9 +132,9 @@ When you add a 3D object into your experience, Studio updates the **Explorer** w
   </figure>
 </GridContainer>
 
-The Explorer window is a fundamental Studio window that represents the data model for the place in your experience that you have open. This means that if you have an experience with multiple places, this window displays different objects depending on the place you're currently working on.
+The **Explorer** window is a fundamental Studio window that represents the data model for the place in your experience that you have open. This means that if you have an experience with multiple places, this window displays different objects depending on the place you're currently working on.
 
-When you select an object in the Explorer window, Studio updates the **Properties** window to display a selection of properties you can customize for that object without using a script, such as the object's size, color, position, or orientation. To demonstrate this process, this section of the tutorial provides guidance on customizing the visual and behavioral characteristics of the gray targets on the floating platforms.
+When you select an object in the **Explorer** window, Studio updates the **Properties** window to display a selection of properties you can customize for that object without using a script, such as the object's size, color, position, or orientation. To demonstrate this process, this section of the tutorial provides guidance on customizing the visual and behavioral characteristics of the gray targets on the floating platforms.
 
 To customize your targets:
 
@@ -220,9 +216,9 @@ To organize folders into their correct container services for the catapult to wo
    1. Press <kbd>Delete</kbd>.
 
 1. Playtest to verify that the catapult now works properly.
-   1. In the toolbar, click the **Play** button. Studio enters playtest mode.
-
-      <img src="../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Play button highlighted in Studio's playtesting options." width="228" />
+   1. Choose **Test** from the dropdown menu and click the **Play** button to its right to begin the playtest.
+	 
+      <img src="../../assets/studio/general/Mezzanine-Testing-Mode-Test.png" width="800" alt="Test option in the testing modes dropdown of Studio's mezzanine." />
 
    1. Equip the **Ice** projectile to the catapult, aim it toward the nearest floating platform, then launch it at the targets.
 
@@ -238,7 +234,7 @@ To organize folders into their correct container services for the catapult to wo
 
    1. When you're done playtesting, click the **Stop** button. Studio exits playtest mode.
 
-      <img src="../../assets/studio/general/Quick-Access-Toolbar-Stop.png" alt="Stop button highlighted in Studio's playtesting options." width="228" />
+      <img src="../../assets/studio/general/Mezzanine-Testing-Stop.png" width="800" alt="Stop button indicated in Studio's mezzanine." />
 
 ## Customize projectiles
 

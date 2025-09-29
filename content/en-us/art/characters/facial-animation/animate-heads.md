@@ -17,7 +17,7 @@ After you create and publish a head that supports facial animation to Roblox, yo
 
 ## Create animations
 
-After you have [opened](../../../animation/editor.md#open-the-animation-editor) the Animation Editor and selected the character model with a head you want to create an animation for, you can either create a head animation by using animation tracks or the Face Animation Editor.
+After you have [opened](../../../animation/editor.md#open-the-animation-editor) the **Animation Editor** and selected the character model with a head you want to create an animation for, you can either create a head animation by using animation tracks or the **Face Animation Editor**.
 
 For details on using Animation Capture to track facial movement as keyframes, see [Animation Capture - Face](../../../animation/capture.md#face).
 
@@ -27,7 +27,7 @@ Similar to inserting other objects like `Class.MeshPart|MeshParts` or `Class.Bon
 
 To create an animation by inserting individual FACS values:
 
-1. In the **track list** of the Animation Editor, click the **plus icon**. A contextual menu displays additional tracks you can add to the track list.
+1. In the **track list** of the **Animation Editor**, click the **plus icon**. A contextual menu displays additional tracks you can add to the track list.
 2. Hover over **Brows**, **Eyes**, **Jaw**, **Mouth**, or **Tongue**. A contextual menu displays all mapped FACS poses for that region of the face.
 
    <img src="../../../assets/avatar/dynamic-heads/animating-dynamic-heads/FACS-Popup.jpg" alt="A close up view of the Animation Editor with the contextual menu and its submenu expanded. The plus icon is highlighted to signify how to open the contextual menu." width="60%" />
@@ -39,7 +39,7 @@ To create an animation by inserting individual FACS values:
 
 ### Use the Face Animation Editor
 
-The Face Animation Editor is an intuitive, visual way to automatically create keyframes as you adjust **sliders** to achieve your desired facial expression. For example, when you drag the thumb of the `LeftEyeClosed` slider all the way down, the character's left eye closes and a new animation track for `LeftEyeClosed` displays with a value of `1` within the track list.
+The **Face Animation Editor** is an intuitive, visual way to automatically create keyframes as you adjust **sliders** to achieve your desired facial expression. For example, when you drag the thumb of the `LeftEyeClosed` slider all the way down, the character's left eye closes and a new animation track for `LeftEyeClosed` displays with a value of `1` within the track list.
 
    <video controls width="80%" src="../../../assets/avatar/dynamic-heads/animating-dynamic-heads/videos/1-Face-Controls-Example.mp4">
    </video>
@@ -50,7 +50,7 @@ You can set multiple sliders to create a complete face expression, then create m
 
 When you click and drag the thumb of the drag box between the eyes, you can control the direction the character's eyes look at. This creates several FACS property tracks in the track list depending on how you adjust the eyes.
 
-At the bottom-left of the panel, the Face Animation Editor also includes the following controls:
+At the bottom-left of the panel, the **Face Animation Editor** also includes the following controls:
 
 <table>
   <thead>
@@ -75,9 +75,9 @@ At the bottom-left of the panel, the Face Animation Editor also includes the fol
   </tbody>
 </table>
 
-To create an animation for your head using the Face Animation Editor:
+To create an animation for your head using the **Face Animation Editor**:
 
-1. In the **track list** of the Animation Editor, click the **Face** button. The **Face Animation Editor** displays to the left of the track list.
+1. In the **track list** of the **Animation Editor**, click the **Face** button. The **Face Animation Editor** displays to the left of the track list.
 
    <img src="../../../assets/avatar/dynamic-heads/animating-dynamic-heads/Face-Button.jpg" alt="A close up view of the track list in the Animation Editor. The Face button is highlighted." width="50%" />
 
@@ -95,9 +95,7 @@ To create an animation for your head using the Face Animation Editor:
 
 When you export a head that supports animation to Studio, it becomes available for use in all of your experiences. This means that you only need to create a head animation once, then you can reuse it as many times for as many characters as you want as long as the character has an [animatable head](../../../art/characters/facial-animation/use-heads-in-studio.md).
 
-You can export head animations using the same workflow as [exporting other animations](../../../animation/editor.md#export-an-animation). Once the upload is complete, copy the animation's asset ID by clicking the copy button. **This ID is required for scripting animations**.
-
-<img src="../../../assets/studio/general/Publish-Copy-Asset-ID.png" alt="A close up view of pop-up window that displays after you upload an asset. The Copy Asset ID button is highlighted." width="60%" />
+You can export head animations using the same workflow outlined for [exporting animations](../../../animation/editor.md#export-an-animation).
 
 ## Script animations
 

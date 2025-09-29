@@ -1,7 +1,7 @@
 ---
 title: Change the script
 description: Part of the Create and Destroy series. Learn how to open and change a script in Roblox Studio.
-next: /education/build-it-play-it-create-and-destroy/icons-and-thumbnails
+next: /education/build-it-play-it-create-and-destroy/challenge-3
 prev: /education/build-it-play-it-create-and-destroy/challenge-2
 ---
 
@@ -63,3 +63,13 @@ Giving players more points can make smashing buildings feel even more rewarding.
    <Alert severity="warning">
    If the project doesn't work as intended once a change has been made in the script, go back to the script editor and **undo** your last change.
    </Alert>
+
+## Share with connections
+
+When you first publish an experience, it's automatically set to private. Making it public in the Game Settings menu will allow connections to be able to join with a link.
+
+1. In the **File** &rarr; **Game Settings** window, select **Permissions**.
+
+2. Choose **Public** and click **Save**.
+
+   <img src="../../assets/education/general/Make-Public.png" width="800" />

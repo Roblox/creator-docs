@@ -119,11 +119,7 @@ Social networks with member lists and post boards. Also allows for collaboration
 
 ### Roblox chat
 
-Most Roblox experiences offer basic chat features.
-
-<img src="../../assets/education/legacy/module4-showChat.jpg" width="80%" />
-
-These features include:
+Most Roblox experiences offer basic chat features. These include:
 
 - Being able to chat among all players in an experience server.
 - Send private messages to a specific player.

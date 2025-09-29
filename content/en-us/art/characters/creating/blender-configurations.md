@@ -102,7 +102,7 @@ When creating Roblox assets in a modeling application, it's important to ensure 
 
 There are two ways to perform this scaling. You can modify your scene scale properties in your project with the following steps:
 
-1. In the Properties panel, navigate to the **Scene Properties** tab.
+1. In the **Properties** window, navigate to the **Scene Properties** tab.
    <img src="../../../assets/art/blender-ui/Scene-Options.png" width = "50%" />
 2. In the Units section, change the **Unit Scale** to `0.01` and the **Length** to **Centimeters**.
 

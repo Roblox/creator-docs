@@ -40,7 +40,7 @@ Animations saved in an `.RBXM` file can be imported into different rigs by yours
 
 2. Right-click on **_AnimSaves_** and select **Insert From File**. Then, pick the `.RBXM` file with the exported animation.
 
-3. To load the animation, in the Animation Editor (see the Plugins tab), click on <img src="../../assets/education/build-it-play-it-island-of-move/sharing-animations/three-dots.png" width="14px" />.
+3. To load the animation, in the Animation Editor (see the Plugins tab), click on **&ctdot;**.
 
    <img src="../../assets/education/build-it-play-it-island-of-move/sharing-animations/click-options.png" width="50%" />
 

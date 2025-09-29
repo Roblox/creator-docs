@@ -468,7 +468,7 @@ with a dot (`.`) rather than a colon (`:`).
 
 [Luau](../luau/) supports gradual typing which means you're free to add optional
 type definitions to some or all of your code. In this project, `strict` typechecking is used for every script. This is the least permissive option for
-Roblox's script analysis tool and thus the most likely to catch type errors
+Roblox's [Script Analysis](../studio/script-editor.md#script-analysis) tool and thus the most likely to catch type errors
 before runtime.
 
 <Alert severity="info">

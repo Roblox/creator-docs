@@ -11,12 +11,10 @@ Moving is always more fun with friends, so let's set up your game for others can
 
 1. **Publish** your game so your friends will get your latest changes.
 
-1. Select **File** → **Game Settings** to open the **Game Settings** window.
-
-   <img src="../../assets/education/build-it-play-it-island-of-move/invite-friends-to-play/game-settings.png" width="50%" />
+1. Select **File** &rarr; **Game Settings** to open the **Game Settings** window.
 
 1. On the left bar, select **Permissions**, then choose **Public**.
 
-   <img src="../../assets/education/general/make-public.png" width="80%" />
+   <img src="../../assets/education/general/Make-Public.png" width="800" />
 
 1. Click the **Save** button.

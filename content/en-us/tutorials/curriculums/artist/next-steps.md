@@ -1,6 +1,7 @@
 ---
 title: Next steps
 description: Explains ways to continue learning about creating special effects in Studio.
+next: /tutorials/curriculums/animator/
 prev: /tutorials/curriculums/artist/test-and-save
 ---
 
@@ -18,13 +19,11 @@ To make your experience public:
 
 1. In the top-left corner of your computer, click **File** > **Game Settings**. The **Game Settings** window displays.
 
-   <img src="../../../assets/education/build-it-play-it-mansion-of-wonder/invite-friends/game-settings.png" width="50%" />
-
 1. In the **Game Settings** window,
    1. Go to the left bar and select the **Permissions** tab. New settings display.
    1. Set **Playability** to **Public**.
 
-   <img src="../../../assets/education/general/make-public.png" width="80%" />
+   <img src="../../../assets/education/general/Make-Public.png" width="800" />
 
 1. Click the **Save** button. Now everyone on Roblox can play your experience!
 
@@ -64,7 +63,3 @@ If you want to continue learning through step-by-step lessons, check out the fol
 - [Create volcanoes](../../use-case-tutorials/vfx/create-volcanoes.md)
 - [Enhance indoor lighting](../../use-case-tutorials/lighting/enhance-indoor-environments.md)
 - [Enhance outdoor lighting](../../use-case-tutorials/lighting/enhance-outdoor-environments.md)
-
-<Alert severity = 'success'>
-Happy creating, we can't wait to see what you make!
-</Alert>

@@ -17,9 +17,7 @@ To offer assets created by third parties in the merch booth, make sure **Allow T
 
 To use the **MerchBooth** module in an experience:
 
-1. From the [View](../../studio/view-tab.md) tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
-
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
+1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
    <img src="../../assets/studio/toolbox/Creator-Store-Tab.png" width="360" />
 
@@ -271,7 +269,7 @@ To create a shoppable region:
    <img src="../../assets/developer-modules/merch-booth/Shoppable-Region-Part.jpg" width="80%" />
    <figcaption>Block to detect when players approach the front of the shop counter</figcaption>
 
-1. Using the [Tags](../../studio/properties.md#instance-tags) section of the block's properties, or Studio's [Tag Editor](../../studio/view-tab.md#windows-and-tools), apply the tag `ShopRegion` to the block so that `Class.CollectionService` detects it.
+1. Using the [Tags](../../studio/properties.md#instance-tags) section of the block's properties, apply the tag `ShopRegion` to the block so that `Class.CollectionService` detects it.
 
 1. Set the part's `Class.BasePart.Transparency|Transparency` to the maximum to hide it from players in the experience. Also disable its `Class.BasePart.CanCollide|CanCollide` and `Class.BasePart.CanQuery|CanQuery` properties so that objects do not physically collide with it and raycasts do not detect it.
 

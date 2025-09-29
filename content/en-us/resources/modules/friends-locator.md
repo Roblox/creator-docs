@@ -13,9 +13,7 @@ It can be challenging to locate friends in-experience. The **FriendsLocator** [d
 
 To use the **FriendsLocator** module in an experience:
 
-1. From the **View** tab, open the **Toolbox** and select the **Creator Store** tab.
-
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
+1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
    <img src="../../assets/studio/toolbox/Creator-Store-Tab.png" width="360" />
 
@@ -52,9 +50,9 @@ To test the module in Studio, the **FriendsLocator** module must be run in a mul
    })
    ```
 
-1. From the toolbar's **Test** tab, select the following combination for **Clients&nbsp;and&nbsp;Servers**, then click the **Start** button. Three new instances of Studio will open; one simulated server and two simulated clients.
+1. From Studio's mezzanine, start a [multi-client simulation](../../studio/testing-modes.md#multi-client-simulation) with 2 clients. Three new instances of Studio will open; one simulated server and two simulated clients.
 
-   <img src="../../assets/developer-modules/friends-locator/Clients-Servers-Start.png" width="800" />
+   <img src="../../assets/studio/general/Mezzanine-Testing-Mode-Server-Clients.png" width="800" alt="Server & Clients option in the testing modes dropdown of Studio's mezzanine." />
 
 1. Go into either of the **client** Studio instances, move a distance of 100 studs away from the other character, and you should see a **locator&nbsp;icon** appear over its head.
 

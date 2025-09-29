@@ -28,13 +28,13 @@ Before you begin to record your face, ensure that you're in a well lit room clos
 
 To record your face and create an animation:
 
-1. From the toolbar's **Avatar** tab, click **Animation Editor**. The [Animation Editor](../animation/editor.md) window displays.
+1. From the toolbar's **Avatar** tab, click **Animation**. The [Animation Editor](../animation/editor.md) window displays.
 2. In the **Explorer** window, select the rig you want your video to animate. A dialog displays.
 
    <img src="../assets/animation/animation-editor/Create-Animation-Dialog.png"
    width="380" />
 
-3. In the **Animation Name** field, enter a new animation name, then click the **Create** button. The Animation Editor window displays the media and playback controls, timeline, and track list.
+3. In the **Animation Name** field, enter a new animation name, then click the **Create** button. The **Animation Editor** window displays the media and playback controls, timeline, and track list.
 
 4. Navigate to the **track list** and click the **Face Capture** button. A pop-up displays asking you to acknowledge that you consent to the collection of your facial movements to enable the feature and camera access.
 
@@ -75,7 +75,7 @@ The **Animation Capture - Body** allows you to quickly generate high-quality, re
 
 ### Import videos for animation
 
-Before you import a video to the Animation Editor, ensure the **.mp4** or **.mov** file meets the following requirements:
+Before you import a video to the **Animation Editor**, ensure the `.mp4` or `.mov` file meets the following requirements:
 
 - It includes just one person who is well-lit and visible throughout the video.
 - It only contains a continuous single shot that's less than 15 seconds from a stable camera.
@@ -83,13 +83,13 @@ Before you import a video to the Animation Editor, ensure the **.mp4** or **.mov
 
 To import a video to create an animation:
 
-1. From the toolbar's **Avatar** tab, click **Animation Editor**. The [Animation Editor](../animation/editor.md) window displays.
+1. From the toolbar's **Avatar** tab, click **Animation**. The [Animation Editor](../animation/editor.md) window displays.
 2. In the **Explorer** window, select the R15 rig you want your video to animate. A dialog displays.
 
    <img src="../assets/animation/animation-editor/Create-Animation-Dialog.png"
    width="380" />
 
-3. In the **Animation Name** field, enter a new animation name, then click the **Create** button. The Animation Editor window displays the media and playback controls, timeline, and track list.
+3. In the **Animation Name** field, enter a new animation name, then click the **Create** button. The editor window displays the media and playback controls, timeline, and track list.
 4. Navigate to the **Media and Playback Controls** and click the **…** button. A pop-up menu displays.
 
    <img src="../assets/animation/live-animation-creator/Media-Playback-Controls.jpg"width="330" />

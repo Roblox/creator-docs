@@ -9,7 +9,7 @@ To see how the carnival ride works, test it out. When playing, you'll ride on a 
 
 1. Click **Play** to test.
 
-   <img src="../../assets/education/general/play-button.png" width="30%" />
+   <img src="../../assets/education/general/Play-Button.png" width="360" />
 
 2. In the experience, walk up to the character under the **Play It** sign and press <kbd>E</kbd> to open up a menu. On that screen, click **Join Game**.
    <img src="../../assets/education/build-it-play-it-mansion-of-wonder/test-and-play/start-game.png" />
@@ -23,4 +23,4 @@ To see how the carnival ride works, test it out. When playing, you'll ride on a 
 
 4. Either finish a round, or press <kbd>1</kbd> to use the mouse. To stop testing, press the **Stop** button or press <kbd>Shift</kbd><kbd>F5</kbd> on the keyboard.
 
-   <img src="../../assets/education/general/stop-button.png" width="30%" />
+   <img src="../../assets/education/general/Stop-Button.png" width="360" />

@@ -26,25 +26,6 @@ With the SpawnLocations done, it's time to design the city. Designing will follo
   </figure>
 </GridContainer>
 
-## Turn off collisions
-
-To make it easier to move and rotate objects without them getting in the way, turn off collisions. **Collisions** is the setting that allows objects to pass through each other or not.
-
-1. In the **Home** tab, turn **Collisions off**. If it's off, it will no longer be highlighted in gray.
-
-   <GridContainer numColumns="2">
-     <figure>
-       <img src="../../assets/education/build-it-play-it-create-and-destroy/collisionsOn.png" />
-       <figcaption>Collisions On</figcaption>
-     </figure>
-     <figure>
-       <img src="../../assets/education/build-it-play-it-create-and-destroy/collisionsOff.png" />
-       <figcaption>Collisions Off</figcaption>
-     </figure>
-   </GridContainer>
-
-2. To make sure buildings move and snap correctly, check your snap settings. In **Model** tab, check that the **Snap to Grid** settings for Move are set to **4 studs**.
-
 ## Start building
 
 To build the city, you'll duplicate buildings from the of objects on the right side of the game world.
@@ -85,7 +66,7 @@ As you work, make sure that you're not accidentally moving the buildings upwards
     <tbody>
     <tr>
       <td><b>Move</b></td>
-      <td><kbd>W A S D</kbd> or arrow keys</td>
+      <td><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> or arrow keys</td>
     </tr>
     <tr>
       <td><b>Rotate</b></td>

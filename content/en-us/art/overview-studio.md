@@ -4,143 +4,72 @@ description: An overview of fundamental 3D art tools, concepts, workflows, and r
 hideBreadcrumbs: true
 ---
 
-Roblox Studio includes free powerful 3D creation tools that enable you to effectively contribute to asset creation, world building, and more. Whether you are just getting started, or are looking for a refresher on Studio tools, this guide provides an overview on using Studio for 3D art creation.
+[Roblox Studio](../studio/setup.md) includes free powerful 3D creation tools that enable you to effectively contribute to asset creation, world building, and more. Whether you are just getting started, or are looking for a refresher on Studio tools, this guide provides an overview on using Studio for 3D art creation.
 
 Each of the following sections include a brief description as well as additional links for further learning:
 
-- [Basic layout of Roblox Studio's interface](#basic-layout) - Familiarize yourself with the various panels and tools available in Roblox Studio to navigate effectively.
-- [Common shortcuts](#common-shortcuts) - Increase efficiency by mastering essential keyboard shortcuts for faster workflows in Roblox Studio.
-- [How to use assets and packages](#assets-and-packages) - Learn to import, edit, and share assets and packages to enhance your workflow and collaboration.
-- [3D modeling within Studio](#3d-modeling) - Explore the fundamentals of creating and importing 3D models within Roblox Studio.
-- [Materials and Textures](#materials-and-textures) - Discover how Roblox uses materials and textures with your models to enhance the surface appearance of your objects.
-- [Environments](#environments) - Craft immersive environments using terrain tools, lighting effects, and atmospheric elements.
+- [Basic layout of Studio's interface](#studio-interface) — Familiarize yourself with the various panels and tools available in Studio to navigate effectively.
+- [How to use assets and packages](#assets-and-packages) — Learn to import, edit, and share assets and packages to enhance your workflow and collaboration.
+- [3D modeling within Studio](#3d-modeling) — Explore the fundamentals of creating and importing 3D models within Studio.
+- [Materials and textures](#materials-and-textures) — Discover how Roblox uses materials and textures with your models to enhance the surface appearance of your objects.
+- [Environments](#environments) — Craft immersive environments using terrain tools, lighting effects, and atmospheric elements.
 
-## Basic layout
+## Studio interface
 
-After [installing Studio](../studio/setup.md), familiarize yourself with Studio's many 3D art tools and interfaces. While you can customize Studio to show various layouts and tools, Studio opens with the most commonly used windows by default:
+After [installing Studio](../studio/setup.md), familiarize yourself with Studio's many 3D art tools and interfaces. While you can customize Studio to show various layouts and tools, Studio opens with the most commonly used windows by default.
 
-<img src="../assets/art/Studio-Overview.png" width = "100%" alt=""/>
+<img src="../assets/engine-comparisons/Roblox-Studio-Layout.png" />
 
-- **3D viewport** &mdash; this window represents the workspace of a place. The items here are rendered similarly to how a user may view the environment they were to play your experience.
+- [Viewport](../studio/ui-overview.md#3d-viewport) — Represents the workspace of a place. The items here are rendered similarly to how a user may view the environment they were to play your experience.
 
-- **Explorer** &mdash; This window shows a hierarchical list of all objects and services in a place. This includes visible objects, like parts and lights, and non-rendered objects like scripts, sounds, and folders.
+- [Explorer](../studio/explorer.md) — Shows a hierarchical list of all objects and services in a place. This includes visible objects, like parts and lights, and non-rendered objects like scripts, sounds, and folders.
 
-- **Properties** &mdash; This window populates all the properties of a selected object, such as size, position, material, and much more.
+- [Properties](../studio/properties.md) — Populates all the properties of a selected object such as size, position, material, and much more. Many properties can be set through this window, or programmatically through a script.
 
-  - Many properties can be set through this window, or programmatically through a script.
+- [Toolbox](../projects/assets/toolbox.md) — Contains a selection of [models](../parts/models.md), [images](../parts/textures-decals.md), [meshes](../parts/meshes.md), [audio](../audio/assets.md), [plugins](../studio/plugins.md), [videos](../ui/video-frames.md), and fonts made by Roblox or Roblox community members.
 
-- **Output** &mdash; This window displays all error, warning, or manually returned messages from the Roblox Engine. This window is useful for troubleshooting behavior in your experience.
+- [Asset Manager](../projects/assets/manager.md) — Lets you manage [places](../production/publishing/publish-experiences-and-places.md) and bulk import assets into your experience.
+
+- [Output](../studio/output.md) — Displays all error, warning, or manually returned messages from the Roblox engine. This window is useful for troubleshooting behavior in your experience.
 
 For more information on the Studio interface and individual tools, see the [Studio overview](../studio/index.md).
-
-## Common shortcuts
-
-Like all creation tools, keyboard shortcuts allow you to work efficiently and quickly. While Studio has many built-in keyboard shortcuts and offers various customizations, the following shortcuts and settings can be very useful for 3D artists:
-
-<table>
-<thead>
-  <tr>
-    <th>Shortcut</th>
-    <th>Action</th>
-    <th>Use case</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> and <kbd>Q</kbd><kbd>E</kbd> in (Studio mode)</td>
-    <td>Basic camera movement</td>
-    <td>Use these hotkeys to navigate through your 3D viewport.</td>
-  </tr>
-  <tr>
-    <td><kbd>Shift</kbd> + camera movement</td>
-    <td>Precise camera movement</td>
-    <td>Hold <kbd>Shift</kbd> with your camera movement to move at a slower and more precise speed.</td>
-  </tr>
-  <tr>
-    <td><kbd>Shift</kbd> + <kbd>P</kbd> (in Test mode)</td>
-    <td>Free camera</td>
-    <td>Untethers camera from your avatar, allowing you to freely navigate through the environment in test mode.</td>
-  </tr>
-  <tr>
-    <td>Mouse wheel up/down</td>
-    <td>Changes camera speed</td>
-    <td>Modify how fast the camera moves for more precise controls.</td>
-  </tr>
-  <tr>
-    <td><kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>L</kbd> (with Move tool)</td>
-    <td>Toggle local space or world space coordinates.</td>
-    <td>Adjust objects based off their local or world orientation.</td>
-  </tr>
-  <tr>
-    <td><kbd>Alt</kbd> + <kbd>D</kbd></td>
-    <td>Toggles constraints visibility</td>
-    <td>See constraints, such as attachments, through objects. </td>
-  </tr>
-  <tr>
-    <td><kbd>Alt</kbd> + <kbd>A</kbd></td>
-    <td>Anchors all selected parts</td>
-    <td>Anchoring a part locks it in place, even when other objects collide with it. </td>
-  </tr>
-  <tr>
-    <td>In [Studio settings](../studio/setup.md#customization)</td>
-    <td>Change highlight and selection colors</td>
-    <td>Changing highlight and selection colors can help with accessibility.</td>
-  </tr>
-  <tr>
-    <td>In [Studio settings](../studio/setup.md#customization)</td>
-    <td>Change camera speed</td>
-    <td>Modify how fast the camera moves by default. </td>
-  </tr>
-</tbody>
-</table>
-
-For additional keyboard shortcuts, see [Studio shortcuts](../studio/shortcuts.md).
 
 ## Assets and packages
 
 Before you begin creating, it's important to understand how Roblox handles **assets** and **packages**, the most basic object or group of objects that you can save, use, and share.
 
-- **Assets** are a cloud-based version of an object that you can access any time to use, share, and modify. You can make nearly any object into an asset, such as a prop, building, character, sound, image, script, and more. For more information, see [Assets](../projects/assets/index.md).
+- [Assets](../projects/assets/index.md) are a cloud-based version of an object that you can access any time to use, share, and modify. You can make nearly any object into an asset, such as a prop, building, character, sound, image, script, and more.
 
-- **Packages** are the Roblox equivalent of Unity prefabs, or a group of assets bundled together to reuse in one or more experiences. Packages can update and propagate their changes to any of their copies across one or more experiences.
+- [Packages](../projects/assets/packages.md) are the Roblox equivalent of Unity **Prefabs** or Unreal **Blueprints**, or a group of assets bundled together to reuse in one or more experiences. Packages can update and propagate their changes to any of their copies across one or more experiences, letting you take advantage of powerful versioning and asset management controls. Roblox recommends that most developers work with packages whenever possible.
 
-  Packages allows you to take advantage of powerful versioning and asset management controls. Roblox recommends that most game developers work with packages whenever possible. For more information, see [Packages](../projects/assets/packages.md).
+All assets and packages save to your account's [Toolbox](../projects/assets/toolbox.md) for you or any associated [groups](../projects/groups.md) to access. You can also manage your saved assets and packages in the **Creations** section of your [Creator Dashboard](https://create.roblox.com/dashboard/creations?activeTab=Model).
 
-All assets and packages save to your account's [Toolbox](#toolbox) for you or any associated groups to access. You can also manage your saved assets and packages in the Creations section of your [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-
-You can also upload your assets to share on the [Creator Store](#creator-store), and sell certain Avatar assets to Roblox's [Marketplace](#marketplace) for users to purchase and equip.
-
-### Toolbox
-
-<img src="../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Studio's View tab with the Toolbox button highlighted." />
-
-The **Toolbox** is a Studio window that contains all the assets and packages created or saved by you or your group. Using the Toolbox, you can also search for community-made assets from the Creator Store, allowing you to add pre-made assets directly into your workspace and implement them in your experiences. For more information, see [Toolbox](../projects/assets/toolbox.md).
-
-<Alert severity = 'warning'>
-While Roblox promotes an open and democratic platform to build and share assets, some of these community assets may come with malicious scripts attached to them.
-
-As a best practice, first try loading community assets in a blank place, remove any unnecessary scripts, and then resave the asset to use in your original experience.
-</Alert>
+You can also upload your assets to share on the [Creator Store](#creator-store), and sell certain avatar assets to Roblox's [Marketplace](#marketplace) for users to purchase and equip.
 
 ### Creator Store
 
-The **Creator Store** is where you can find many assets created and shared by Roblox and the Roblox community for use in Studio and your experiences. Anyone can contribute their assets to the Creator Store, including models, images, meshes, audio, plugins, and more.
+The [Creator Store](../production/creator-store.md), accessible through the [web](https://create.roblox.com/store/) and directly inside Studio's [Toolbox](../projects/assets/toolbox.md), contains millions of assets by Roblox and the Roblox community for use in Studio and your experiences. Anyone can contribute their assets to the store, including models, images, meshes, audio, plugins, and more.
 
-Access the Creator Store through Studio's Toolbox or the [Creator Hub](https://create.roblox.com/store/models). For more information, see [Creator Store](../production/creator-store.md).
+Roblox also provides [free high quality assets](https://create.roblox.com/store/models?creatorName=Roblox), many of which are used in the following showcases:
 
-#### Roblox-created models
-
-Roblox also provides free model packs that you can use within your experiences. These are high quality assets used in many of Roblox's showcase experiences. You can add these to your toolbox in various ways by directly adding them from the Creator Dashboard, or searching for them in the Toolbox.
-
-You can see a complete list of the many [Roblox-created assets on the Creator Store](https://create.roblox.com/store/models?creatorName=Roblox). Many of these assets were used in the following showcases:
-
-- [Mystery of Duvall Drive](https://www.roblox.com/games/7902470429/The-Mystery-of-Duvall-Drive)
-  - [Behind-the-scenes documentation](../resources/the-mystery-of-duvall-drive/index.md)
-  - [Official model packs](https://create.roblox.com/store/models?creatorName=Roblox&includeOnlyVerifiedCreators=true&keyword=duvall+drive&pageNumber=1&querySource=0)
-- [Beyond the Dark](https://www.roblox.com/games/7208091524/Beyond-the-Dark-Vistech-Showcase)
-  - [Behind-the-scenes documentation](../resources/beyond-the-dark/index.md)
-  - [Official model packs](https://create.roblox.com/store/models?creatorName=Roblox&includeOnlyVerifiedCreators=true&keyword=beyond+the+dark&pageNumber=1&querySource=0)
-- [Realistic Forest Demo](https://www.roblox.com/games/5326950832/Roblox-Realistic-Forest-Demo)
+<GridContainer numColumns="3">
+  <figure>
+	  <h4>[Mystery of Duvall Drive](https://www.roblox.com/games/7902470429/The-Mystery-of-Duvall-Drive)</h4>
+    <img src="../assets/resources/mystery-of-duvall-drive/overview/overview.png" />
+    <figcaption>⟩&nbsp; [Behind-the-scenes](../resources/the-mystery-of-duvall-drive/index.md)</figcaption>
+    <figcaption>⟩&nbsp; [Official model packs](https://create.roblox.com/store/models?creatorName=Roblox&includeOnlyVerifiedCreators=true&keyword=duvall+drive&pageNumber=1&querySource=0)</figcaption>
+  </figure>
+	<figure>
+	  <h4>[Beyond the Dark](https://www.roblox.com/games/7208091524/Beyond-the-Dark-Vistech-Showcase)</h4>
+    <img src="../assets/resources/beyond-the-dark/custom-characters/Creature_Banner.png" />
+    <figcaption>⟩&nbsp; [Behind-the-scenes](../resources/beyond-the-dark/index.md)</figcaption>
+    <figcaption>⟩&nbsp; [Official model packs](https://create.roblox.com/store/models?creatorName=Roblox&includeOnlyVerifiedCreators=true&keyword=beyond+the+dark&pageNumber=1&querySource=0)</figcaption>
+  </figure>
+  <figure>
+	  <h4>[Realistic Forest Demo](https://www.roblox.com/games/5326950832/Roblox-Realistic-Forest-Demo)</h4>
+    <img src="../assets/tutorials/enhancing-outdoor-environments/Intro-After.png" />
+  </figure>
+</GridContainer>
 
 ### Marketplace
 
@@ -222,13 +151,7 @@ Materials allow you to quickly set the visual and physical properties of objects
 <figcaption><center>Materials generated by [Material Generator](../parts/materials.md#material-generator) using a natural language prompt</center></figcaption>
 </figure>
 
-Materials also affect physical properties beyond appearance. The following are various default materials and their unique properties:
-
-- **Glass** - When a part's material is set to glass and its transparency is greater than `0`, it distorts and slightly blurs the image behind it, and becomes less transparent when viewed from an angle.
-- **Forcefield** - Any texture object placed on a mesh using the `ForceField` material will shimmer and shine at random intervals depending on the R channel of the texture's RGB color.
-- **Neon** - Adds a glowing effect on parts. This is useful for decorating places, especially sci-fi or night city environments. This behavior might change at lower render settings when playing on less performant devices. For more information on performance behavior, see [Improve performance](../performance-optimization/improve.md).
-
-For additional information, see [Materials](../parts/materials.md).
+Materials also affect physical properties beyond appearance. See [Materials](../parts/materials.md) for more information.
 
 ### Textures
 
@@ -294,7 +217,7 @@ For more information, see [Environmental terrain](../parts/terrain.md).
 
 Lighting can be categorized into the following:
 
-- **Global lighting** - Refers to the luminescence from either the sun or moon in an outdoor environment. You can set the properties of your global lighting by adjusting the `Class.Lighting` service. For additional hands-on instructions on adjusting global lighting, see the [Customize global lighting](../tutorials/curriculums/core/building/customize-global-lighting.md) lesson of our Core Curriculum.
-- **Local lighting** - Refers to light sources placed within your experiences, such as pointlights, spotlights, and surface lights. You can modify lighting scenarios based on different interior rooms or sections of your experience by using one or more light sources.
+- **Global lighting** — Refers to the luminescence from either the sun or moon in an outdoor environment. You can set the properties of your global lighting by adjusting the `Class.Lighting` service. For additional hands-on instructions on adjusting global lighting, see the [Customize global lighting](../tutorials/curriculums/core/building/customize-global-lighting.md) lesson of our Core Curriculum.
+- **Local lighting** — Refers to light sources placed within your experiences, such as pointlights, spotlights, and surface lights. You can modify lighting scenarios based on different interior rooms or sections of your experience by using one or more light sources.
 
 For additional information on modifying your environment's lighting, see [Global lighting](../environment/lighting.md).

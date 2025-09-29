@@ -9,7 +9,7 @@ Before moving on, take time to check that your speeder works correctly.
 
 1. Click **Play** to test.
 
-   <img src="../../assets/education/general/play-button.png" width="30%" />
+   <img src="../../assets/education/general/Play-Button.png" width="360" />
 
 2. In the experience, walk up to the robot character under the spaceship sign and press <kbd>E</kbd> to open up a menu. On that screen, select **Race** and pick your speeder in the selection menu.
 

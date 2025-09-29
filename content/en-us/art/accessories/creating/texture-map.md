@@ -9,7 +9,7 @@ Creating seams and unwrapping tells Blender how to project the 3D surface of the
 
 To create a new texture map:
 
-1. With the clothing mesh selected, navigate to **Properties Panel** > **Material Preview** tab.
+1. With the clothing mesh selected, navigate to the **Properties** panel > **Material Preview** tab.
    <img src="../../../assets/art/accessories/creating/Texturing-Add-Image.png" width="40%" />
 
 2. Select the **+ New** button.

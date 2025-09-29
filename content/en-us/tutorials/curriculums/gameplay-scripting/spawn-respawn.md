@@ -137,9 +137,9 @@ The important note with this script is that the properties are completely option
 - If you only want a character's health to display if it's below 100%, set `Class.Humanoid.HealthDisplayType` to **DisplayWhenDamaged**.
 - If you want characters to break apart when their health reaches 0, set `Class.Humanoid.BreakJointsOnDeath` to **True**.
 
-If you change the values of these properties, it's important to playtest so that you can see the impact of your new settings. You can recreate what players experience in a multiplayer environment by selecting at least two characters in the **Clients and Servers** section of the **Test** tab.
+If you change the values of these properties, it's important to playtest so that you can see the impact of your new settings. You can recreate what players experience in a [multi‑client simulation](../../../studio/testing-modes.md#multi-client-simulation) by selecting at least two characters in a **Server&nbsp;&&nbsp;Clients** playtest from the mezzanine.
 
-<img src="../../../assets/studio/general/Test-Tab-Clients-Servers.png" width="760" alt="Studio's Test tab with the the players dropdown highlighted. This setting needs to be at least two players to see the impact of your new settings." />
+<img src="../../../assets/studio/general/Mezzanine-Testing-Mode-Server-Clients.png" width="800" alt="Server & Clients option in the testing modes dropdown of Studio's mezzanine." />
 
 <Alert severity="info">
 Try changing some of these values and playtesting with multiple players to see how they affect the gameplay of the experience. For instance, how might player strategy change if you chose to hide the health display?

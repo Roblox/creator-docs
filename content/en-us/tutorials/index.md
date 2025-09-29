@@ -185,7 +185,7 @@ While many creators focus on a single area, the following tutorials walk you thr
    <Typography variant='h4'>Animation</Typography>
    <Typography variant='body1' >
      <ul>
-     <li>Learn the basics of <a href="./use-case-tutorials/animation/create-an-animation.md">creating animations</a> using the built-in Animation Editor</li>
+     <li>Learn the basics of <a href="./use-case-tutorials/animation/create-an-animation.md">creating animations</a> using the built-in **Animation Editor**</li>
      <li>Learn how to <a href="./use-case-tutorials/animation/play-character-animations.md#change-default-animations">swap default avatar animations</a> with your own creations</li>
      <li>Learn how to <a href="./use-case-tutorials/animation/play-character-animations.md#trigger-animations">trigger avatar animations</a> from gameplay interactions</li>
      </ul></Typography>

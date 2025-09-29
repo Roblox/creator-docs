@@ -56,7 +56,7 @@ Using the [Sci Fi Mask](../../assets/art/accessories/creating-rigid/Rigid_Mask_M
 1. Open a new Blender project.
 2. Press <kbd>A</kbd> to highlight all and <kbd>X</kbd> to delete the default starting cube and cameras.
 3. Navigate to **File** > **Import** > **FBX** and select the downloaded reference model.
-4. If the object imports at a small scale, **select** the object and navigate to the **Properties panel** > **Object Properties** > **Transform** and adjust the **X**, **Y**, **Z** to `1.000`.
+4. If the object imports at a small scale, **select** the object and navigate to the **Properties** panel > **Object Properties** > **Transform** and adjust the **X**, **Y**, **Z** to `1.000`.
 
    <img src="../../assets/art/accessories/creating-rigid/Blender-Scale-1.png" />
 
@@ -177,7 +177,7 @@ To import your asset, check out the latest information on [importing rigid acces
 
 ## Convert
 
-After importing your asset into Studio, you can begin **fitting** your imported object to a mannequin and **converting** the `Class.Model` object into a `Class.Accessory`. When fitting and converting your accessory it's important to use the **Accessory Fitting Tool (AFT)** to correctly preview the placement and apply the correct configurations to your accessory.
+After importing your asset into Studio, you can begin **fitting** your imported object to a mannequin and **converting** the `Class.Model` object into a `Class.Accessory`. When fitting and converting your accessory it's important to use the [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) (AFT) to correctly preview the placement and apply the correct configurations to your accessory.
 
 To convert your asset into a `Class.Accessory`, check out the latest information on [converting rigid accessories](./importing.md#convert-rigid-accessories).
 
@@ -186,6 +186,7 @@ To convert your asset into a `Class.Accessory`, check out the latest information
 After generating your `Class.Accessory` item, you can now begin the process of **publishing** the asset to the Marketplace. This step is optional and only applicable for creators who intend to sell their asset.
 
 For additional information and instructions on this process, see [uploading and publishing instructions](../../marketplace/publish-to-marketplace.md).
+
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/swQW2VS9ZMA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br />
 

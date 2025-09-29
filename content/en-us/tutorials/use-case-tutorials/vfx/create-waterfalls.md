@@ -107,7 +107,7 @@ To recreate the cascades for the main drop in the sample [Waterfall Island](http
          1. Set **TextureLength** to `64` to stretch the texture's length.
          1. Set **TextureMode** to **Wrap** to repeat the texture to the amount of the beam's overall length in the 3D world between the attachments divided by its **TextureLength**. This allows the texture to look a lot more realistic to flowing water.
          1. Set **Color** to a color sequence that alternates in color from dark and light blues to white.
-            1. Click the **Color** property, then click the ⋯ button. A color sequence pop-up displays.
+            1. Click the **Color** property, then click the **&ctdot;** button. A color sequence pop-up displays.
 
                <img src="../../../assets/tutorials/creating-waterfalls/Cascades-1G1.png" alt="A close up view of Studio's Properties window with the Color property's ellipsis button highlighted." width="60%" />
 
@@ -125,7 +125,7 @@ To recreate the cascades for the main drop in the sample [Waterfall Island](http
                <img src="../../../assets/tutorials/creating-waterfalls/Cascades-1G2.png" alt="" width="80%" />
 
          1. Set **Transparency** to a number sequence that makes the water become more vibrant as it approaches the cliff's edge.
-            1. Click the **Transparency** property, then click the ⋯ button. A number sequence pop-up displays. By default, the graph is a straight line and the image remains the same transparency from left to right.
+            1. Click the **Transparency** property, then click the **&ctdot;** button. A number sequence pop-up displays. By default, the graph is a straight line and the image remains the same transparency from left to right.
 
                <img src="../../../assets/tutorials/creating-waterfalls/Cascades-1H1.png" alt="A close up view of the Transparency number sequence graph." width="80%" />
 

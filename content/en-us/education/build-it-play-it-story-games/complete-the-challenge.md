@@ -16,17 +16,13 @@ One of the most exciting features of Roblox is that it's really easy to share yo
 
 1. Select **File** (top left of Studio) and click **Game Settings**.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/invite-friends/game-settings.png"  />
-
 1. On the left bar, select **Permissions**, then choose **Public**.
 
-   <img src="../../assets/education/general/make-public.png" width="80%" />
+   <img src="../../assets/education/general/Make-Public.png" width="800" />
 
 1. Click the **Save** button.
 
 1. In the top right of Studio, click on the **Share** button. A pop-up menu displays.
-
-   <img src="../../assets/education/general/Share-Links.png" width="40%" />
 
 1. Click the **Copy Link** button, then share the link with your connections.
 

@@ -7,6 +7,8 @@ import BetaAlert from '../includes/beta-features/beta-alert.md'
 
 Studio's [Terrain Editor](../studio/terrain-editor.md) lets you generate and sculpt detailed and realistic terrain environments such as mountains, bodies of water, grass-covered hills, or a flat desert. Terrain is made up of grids of **voxels** which are 4&times;4&times;4 stud regions in the 3D world with a set material.
 
+<img src="../assets/studio/general/Toolbar-Terrain-Editor.png" width="800" alt="Terrain Editor indicated in Studio's toolbar" />
+
 <img src="../assets/modeling/terrain/Showcase.jpg" width="100%" alt="Desert terrain with mountains in the distance" />
 
 Using the editor tools, you can easily [generate](#generate-terrain) and edit terrain either at a [voxel](#detailed-editing) or [region](#large-scale-editing) level with the option of importing a [heightmap](#heightmaps-and-colormaps) and [colormap](#heightmaps-and-colormaps). For more precise, dynamic, or procedural terrain editing, you can also [script](#scripting) terrain creation.
@@ -213,7 +215,7 @@ To customize any material color other than water:
 
    <img src="../assets/studio/properties/Terrain-MaterialColors-Expand.png" width="320" alt="MaterialColors property shown in Properties window of Studio" />
 
-3. For any material, either input a new RGB code or click the color box to open the [colors popup](../parts/index.md#colors-popup).
+3. For any material, either input a new RGB code or click the color box to open the [colors popup](../parts/index.md#color).
 
 ## Generate terrain
 
@@ -492,7 +494,7 @@ Select a region by clicking and dragging in the 3D viewport, reposition it with 
 <figcaption>Move draggers and scale handles on a selected region</figcaption>
 </figure>
 
-Studio also supports the following keyboard and mouse shortcuts, assuming the Select tool is active and nothing is selected in the Explorer window.
+Studio also supports the following keyboard and mouse shortcuts, assuming the Select tool is active and nothing is selected in the **Explorer** window.
 
 <table size="small">
   <thead>
@@ -599,7 +601,7 @@ The **Sea Level** tool lets you create a consistent water level or remove all wa
 
 ## Detailed editing
 
-The editor's **Edit** tab also contains tools for precision editing using a "brush" tool to draw, sculpt, smooth, flatten, or paint terrain.
+The **Edit** tab also contains tools for precision editing using a "brush" tool to draw, sculpt, smooth, flatten, or paint terrain.
 
 <img src="../assets/studio/terrain-editor/Edit-Tab-Detail-Tools.png" width="360" alt="Detailed editing tools indicated in Edit tab of Terrain Editor" />
 

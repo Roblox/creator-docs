@@ -53,25 +53,23 @@ If you're the group owner or a member with sufficient permissions, you can confi
 1. From the [Creator Dashboard](https://create.roblox.com/dashboard/creations), select the group from the **View As** dropdown menu and navigate to **Collaboration** &rang; **Roles**.
 1. Enable [Edit all group experiences](../projects/groups.md#roles-and-permissions) for roles that should have editing permission. Remember to click **Save Changes** for each role that you change.
 
-In Studio's **Manage Collaborators** window for any group-owned experience, eligible roles display **Edit** permission but are muted to indicate that you can't change the permission level from Studio.
+   In Studio's **Manage Collaborators** window for any group-owned experience, eligible roles display **Edit** permission but are muted to indicate that you can't change the permission level from Studio.
 
-   <img src="../assets/studio/general/Toolbar-Collaborate-Button-From-Off.png" width="754" alt="Studio's mezzanine bar with the Collaborate button highlighted." />
+   <img src="../assets/studio/general/Toolbar-Manage-Collaborators.png" width="800" alt="Studio's mezzanine bar with the Collaborate button highlighted." />
 
-   <img src="../assets/studio/collaboration/Edit-Permission-All-Group-Experiences.png" width="780" alt="Manage Collaborators window showing permission level selection for each group role." />
+   <img src="../assets/studio/collaboration/Edit-Permission-All-Group-Experiences.png" width="760" alt="Manage Collaborators window showing permission level selection for each group role." />
 
 </TabItem>
 <TabItem label="Per-experience">
-If you're the group's owner, you can grant **Edit** permission on a per-experience basis to roles that do **not** have permission to edit all group experiences. For example, you can temporarily grant **Edit** permission to an "FX&nbsp;Artist" group role so they can fine-tune visual effects before an experience's public release.
+If you're the group's owner, you can grant permissions on a per-experience basis to roles that do not have those permissions across all group experiences. For example, you can temporarily grant **Edit** permission to an "FX&nbsp;Artist" group role so they can fine-tune visual effects before an experience's public release.
 
-1. With the experience open in Studio, click the **Collaborate** button on the right side of the mezzanine bar.
+1. In Studio's **Manage Collaborators** window for any group-owned experience, select **Edit** from the permissions dropdown for the desired roles. Remember that you can only modify roles that do **not** already have edit permission across all group experiences.
 
-   <img src="../assets/studio/general/Toolbar-Collaborate-Button-From-Off.png" width="754" alt="Studio's mezzanine bar with the Collaborate button highlighted." />
+   <img src="../assets/studio/general/Toolbar-Manage-Collaborators.png" width="800" alt="Studio's mezzanine bar with the Collaborate button highlighted." />
 
-1. Select **Edit** from the permissions dropdown for the desired roles. Remember that you can only modify roles that do **not** already have edit permission across all group experiences.
+   <img src="../assets/studio/collaboration/Edit-Permission-Per-Experience.png" width="760" alt="Manage Collaborators window showing permission level selection for each group role." />
 
-   <img src="../assets/studio/collaboration/Edit-Permission-Per-Experience.png" width="780" alt="Manage Collaborators window showing permission level selection for each group role." />
-
-1. Click **Save** for your collaboration settings to take effect. All group members within the modified roles should now have **Edit** permission for this experience only; this action won't grant them equal permission to other group experiences.
+2. Click **Save** for your collaboration settings to take effect. All group members within the modified roles should now have **Edit** permission for this experience only; this action won't grant them equal permission to other group experiences.
 
 </TabItem>
 </Tabs>
@@ -84,17 +82,13 @@ To give **Edit** permission to a connection for an experience that you own:
 
 1. With the experience open in Studio, click the **Collaborate** button on the right side of the mezzanine bar.
 
-   <img src="../assets/studio/general/Toolbar-Collaborate-Button-From-Off.png" width="754" alt="Studio's mezzanine bar with the Collaborate button highlighted." />
+   <img src="../assets/studio/general/Toolbar-Collaborate.png" width="800" alt="Studio's mezzanine bar with the Collaborate button highlighted." />
 
-1. Type into the search bar at the top to search for a collaborator to add. A dropdown appears listing matching collaborators, with connections indicated by the **Connection** label below their name. Select the collaborator to add.
+1. Type into the search bar at the top to search for a collaborator to add. A dropdown appears listing matching collaborators, with connections indicated by the **Connection** label. Select the collaborator to add.
 
-   <img src="../assets/studio/collaboration/Collaborator-Search.png" width="780" alt="Manage Collaborators window showing search query for a Roblox connection." />
+   <img src="../assets/studio/collaboration/Collaborator-Search.png" width="760" alt="Manage Collaborators window showing search query for a Roblox connection." />
 
-1. Select **Edit** from the permissions dropdown for the connection.
-
-   <img src="../assets/studio/collaboration/Edit-Permission-Per-User.png" width="700" alt="A close up view of a collaborator's tile with the permission dropdown menu highlighted." />
-
-1. Click **Save** for your collaboration settings to take effect.
+1. Select **Edit** from the permissions dropdown for the connection, then click **Save** for your collaboration settings to take effect.
 
 ## Access a session
 
@@ -136,7 +130,7 @@ Those who have permission to edit an experience can join a collaborative session
 
 While working in a collaborative session, you can see the current collaborators in the upper-right corner of Studio, each with a unique assigned color that's consistent across all collaborators' devices.
 
-<img src="../assets/studio/general/Toolbar-Current-Collaborators.png" width="754" alt="Studio's menu bar with icons of the current collaborators highlighted." />
+<img src="../assets/studio/general/Toolbar-Current-Collaborators.png" width="800" alt="Studio's menu bar with icons of the current collaborators highlighted." />
 
 To view more details on the current collaborators, click on any of the icons to open the **Live Collaborators** window. In this window, you can see whether a user is active or inactive inside Studio, as well as an indication of where the user is working. Users become inactive if they do not use Studio for more than 5 minutes.
 
@@ -167,37 +161,28 @@ To quickly jump to a location in the workspace or to the exact line in a script 
 
 ## Comments
 
-Roblox Studio has a comments feature that let you pinpoint an object in the 3D viewport and start a conversation with your collaborators, leave to-do notes, and more. Comments update in real-time, which lets you and your team receive and respond to feedback without disrupting your workflow in Studio.
+Roblox Studio has a **comments** feature that lets you pinpoint an object in the 3D viewport and start a conversation with your collaborators, leave to‑do notes, and more. Comments update in real‑time which lets you and your team receive and respond to feedback without disrupting your workflow in Studio.
 
-To use this feature, you must have [added collaborators](#manage-collaborators) to your experience.
+To create a comment, click the **Comment** button on the right side of Studio's mezzanine (keyboard shortcut <kbd>C</kbd>).
 
-### Create comments
+<img src="../assets/studio/general/Toolbar-Comments.png" alt="Studio's mezzanine bar with the Comments button highlighted." width="800" />
 
-To create a comment, click the **Comment** button in the upper-right corner of Studio (keyboard shortcut <kbd>C</kbd>).
+In the viewport, your cursor turns blue. Click on any object that inherits from `Class.BasePart` (most do, including `Class.Terrain`), type your comment, and click **Submit**.
 
-<img src="../assets/studio/comments/annotations-button.png" alt="Button for comments in the upper-right." width="400" />
+<img src="../assets/studio/collaboration/Comments-Cursor.jpg" alt="Blue comment cursor in the viewport." width="800" />
 
-In the viewport, note how your cursor turns blue. Click on any object that inherits from `Class.BasePart` (most do, including terrain), type your comment, and click **Submit**.
+<Alert severity="info">
+To **tag** a collaborator in your comment, use the `@username` syntax. You can tag any collaborator in the group for a [group‑owned](#group-owned-experiences) experience or any user with **Play** or **Edit** permissions in a [user‑owned](#user-owned-experiences) experience.
+</Alert>
 
-<img src="../assets/studio/comments/annotations-blue.png" alt="Blue cursor in the viewport." width="300" />
+Comments appear in the **Comments** window, accessible from Studio's **Window**&nbsp;⟩ **Collaboration** menu, with the most recent comments at the top. From within the **Comments** window, you can:
 
-To tag a collaborator in your comment, use the `@username` syntax. Collaborators can then check the [Comments window](#manage-comments) and filter for comments that mention them.
-
-<img src="../assets/studio/comments/annotations-tag.png" alt="Creating a comment in the viewport." width="700" />
-
-- In a user-owned experience, any user with play or edit permissions is available in the tagging dropdown.
-- In a group-owned experience, any user within the group is available in the tagging dropdown.
-
-### Manage comments
-
-The **Comments** window shows a list of all comments, with the most-recent at the top. To open the window, switch to the **View** tab and click the **Comments** button.
-
-<img src="../assets/studio/comments/annotations-window.png" alt="List of comments in the window." width="400" />
-
-- Single-click on a comment to show the full conversation.
+- Single-click on a comment to show the full conversation in the 3D viewport.
 - Double-click on a comment to zoom in on it in the viewport.
 - Use the **&ctdot;** menu in the upper-right corner to show resolved comments, filter for only the comments that you've been tagged in, or hide comments in the viewport.
-- Resolve comments as you and your team address them. After you resolve a comment, it disappears from both the viewport and the main list, but it isn't completely gone; you can always unresolve it later.
+- Resolve comments as you and your team address them. After you resolve a comment, it disappears from both the viewport and the main list, but it isn't completely gone; you can always un‑resolve it later.
+
+<img src="../assets/studio/collaboration/Comments-Window.png" width="360" />
 
 ## Collaborative scripting
 
@@ -224,7 +209,7 @@ Live Scripting is **enabled** by default. If you and your team prefer to collabo
 
 ### Drafts mode
 
-Through **Drafts** mode, you can independently edit and test scripts without affecting the experience for others. After you finish drafting a script, you can [commit](#commit-drafts) it to the shared repository and [Team Test](../studio/home-tab.md#team-test) the committed version with collaborators.
+Through **Drafts** mode, you can independently edit and test scripts without affecting the experience for others. After you finish drafting a script, you can [commit](#commit-drafts) it to the shared repository and use [collaborative testing](../studio/testing-modes.md#collaborative-testing) to test the committed version with others.
 
 <Alert severity="warning">
 Drafts Mode is **disabled** by default. To enable it, open Studio's **File**&nbsp;⟩ **Game Settings** window, select the **Other** tab, and turn on **Enable Drafts Mode**.
@@ -234,13 +219,11 @@ Note that all collaborators will need to exit the session for the change to take
 
 #### Commit drafts
 
-Once you've edited a script, it appears in the **Drafts** window, accessible from the [View](../studio/view-tab.md) tab. Drafts are saved to your local file system and persist between Studio sessions on the same machine.
-
-<img src="../assets/studio/general/View-Tab-Drafts.png" alt="Studio's View tab with the Drafts button highlighted." width="776" />
+Once you've edited a script, it appears in the **Drafts** window, a non‑default window which you must add to a [custom tab](../studio/ui-overview.md#custom-tabs) in Studio's toolbar.
 
 <img src="../assets/studio/collaboration/Drafts-Window.png" alt="The Drafts window with two drafted script instances." width="360" />
 
-To commit your local edits to the repository, left-click a script, or hold <kbd>Shift</kbd> and left-click to select multiple scripts. Then click **Commit** to commit all selected scripts.
+Drafts are saved to your local file system and persist between Studio sessions on the same machine. To commit your local edits to the repository, left-click a script, or hold <kbd>Shift</kbd> and left-click to select multiple scripts. Then click **Commit** to commit all selected scripts.
 
 <img src="../assets/studio/collaboration/Drafts-Commit.png" alt="The Drafts window with the Commit button highlighted." width="360" />
 
@@ -315,7 +298,7 @@ You might also want to check [Activity History](activity-history.md). This view 
 
 1. If the [Live Collaborators](#view-collaborators) window isn't already open, click on any of the collaborator icons to open it.
 
-   <img src="../assets/studio/general/Toolbar-Current-Collaborators.png" width="754" />
+   <img src="../assets/studio/general/Toolbar-Current-Collaborators.png" width="800" />
 
 2. In the bottom-right corner of the window, click the **&ctdot;** button and select **Disable Team Create**.
 

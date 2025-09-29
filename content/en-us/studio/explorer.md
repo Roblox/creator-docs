@@ -3,9 +3,9 @@ title: Explorer window
 description: The Explorer window shows a hierarchical list of every instance inside an experience.
 ---
 
-The **Explorer** window shows a hierarchical list of every instance inside an experience. At the highest level of the hierarchy are the services; `Class.Workspace`, for example, is where visible 3D content such as [parts](../parts/index.md) are stored.
+The **Explorer** window, accessible from Studio's **Window** menu or **Home** tab toolbar, shows a hierarchical list of every instance inside an experience. At the highest level of the hierarchy are the services; `Class.Workspace`, for example, is where visible 3D content such as [parts](../parts/index.md) are stored.
 
-<img src="../assets/studio/general/View-Tab-Explorer.png" width="876" alt="Explorer toggle button in Studio" />
+<img src="../assets/studio/general/Toolbar-Explorer.png" width="800" alt="Explorer highlighted in Studio's toolbar." />
 
 ## Parent-child hierarchy
 
@@ -34,7 +34,7 @@ To change the parent of one or more children (reparent), simply drag and drop th
 
 ## Object insertion
 
-While primitive [parts](../parts/index.md) can be inserted from the [Home](../studio/home-tab.md) or [Model](../studio/model-tab.md) tabs, you can select from a full array of objects by hovering over the intended parent and clicking the &CirclePlus; button (shortcut of <kbd>Ctrl</kbd><kbd>I</kbd> on Windows or <kbd>⌘</kbd><kbd>I</kbd> on macOS).
+While primitive [parts](../parts/index.md) can be [inserted](../parts/index.md#insert-parts) from the **Home** or **Model** tab toolbars, you can select from a full array of objects by hovering over the intended parent and clicking the &CirclePlus; button (shortcut of <kbd>Ctrl</kbd><kbd>I</kbd> on Windows or <kbd>⌘</kbd><kbd>I</kbd> on Mac).
 
 <img src="../assets/studio/explorer/Workspace-Add-Object.png" width="320" alt="Hovering over Workspace object to reveal insertion button" />
 
@@ -62,7 +62,7 @@ You can further customize insertion behavior by clicking the **&ctdot;** button 
 </table>
 
 <Alert severity="success">
-To keep the hierarchy cleaner, services such as `Class.VoiceChatService` are hidden by default. You can show hidden services by right‑clicking over any visible service and selecting **Show&nbsp;Services&hellip;** from the context menu. Similarly, you can hide a visible service by right‑clicking it and selecting **Hide&nbsp;Service&nbsp;in&nbsp;Explorer**.
+To keep the hierarchy cleaner, services such as `Class.VoiceChatService` are hidden by default. You can show hidden services by right‑clicking in the window and selecting **Show&nbsp;Services&hellip;** from the context menu. Similarly, you can hide a visible service by right‑clicking it and selecting **Hide&nbsp;Service&nbsp;in&nbsp;Explorer**.
 </Alert>
 
 ## Duplicate and paste
@@ -74,7 +74,7 @@ Objects can be quickly duplicated into the same branch, while items copied to th
 	<tr>
 		<th>Action</th>
 		<th>Windows</th>
-		<th>macOS</th>
+		<th>Mac</th>
 		<th>Description</th>
 	</tr>
 </thead>
@@ -131,11 +131,11 @@ You can organize objects into folders as follows:
 
 - Create a `Class.Folder` instance through a standard [insertion](#object-insertion) method, then drag and drop existing objects into it.
 
-- Select multiple objects, right-click them, and then select **Group&nbsp;As&nbsp;a&nbsp;Folder** from the context menu (shortcut of <kbd>Alt</kbd><kbd>Ctrl</kbd><kbd>G</kbd> on Windows or <kbd>⌥</kbd><kbd>⌘</kbd><kbd>G</kbd> on macOS).
+- Select multiple objects, right-click them, and then select **Group&nbsp;As&nbsp;a&nbsp;Folder** from the context menu (shortcut of <kbd>Alt</kbd><kbd>Ctrl</kbd><kbd>G</kbd> on Windows or <kbd>⌥</kbd><kbd>⌘</kbd><kbd>G</kbd> on Mac).
 
 ## Search methods
 
-Through the **search** input near the top of the window, you can find instances by [name](#name-search), [property](#property-search), class/subclass/tag [bespoke](#bespoke-search) queries, and [ancestry](#ancestry-search) queries. You can also [combine parameters](#combined) for advanced logical searches.
+Through the **search** input near the top of the window, you can find instances by [name](#name-search), [property](#property-search), class/subclass/tag [bespoke](#bespoke-search) queries, and [ancestry](#ancestry-search) queries. You can also [combine parameters](#combined) for advanced logical searches. Quickly access this input by pressing <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>X</kbd> (Windows) or <kbd>⌘</kbd><kbd>Shift</kbd><kbd>X</kbd> (Mac).
 
 <img src="../assets/studio/explorer/Search-Diagram.png" width="360" alt="Example search query and search options" />
 
@@ -148,7 +148,7 @@ Through the **search** input near the top of the window, you can find instances 
 <Grid container spacing={2}>
 	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-B.png" width="40" style={{float:"right"}} /></Grid>
 	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
-	Select all search results (<kbd>Ctrl</kbd><kbd>A</kbd> on Windows or <kbd>⌘</kbd><kbd>A</kbd> on macOS)
+	Select all search results (<kbd>Ctrl</kbd><kbd>A</kbd> on Windows or <kbd>⌘</kbd><kbd>A</kbd> on Mac)
 	</Grid>
 </Grid>
 <Grid container spacing={2}>
@@ -274,7 +274,7 @@ Classes, and subclasses, and tags are searched through various **bespoke** queri
 
 - `is:[Class]` finds everything that is of **class** `[Class]`. For example, `is:Part` finds everything that is a `Class.Part`.
 - `is:[SubClass]` finds everything that is a **subclass** of `[SubClass]`. For example, `is:BasePart` finds everything that is a subclass of `Class.BasePart`, such as `Class.Part` and `Class.MeshPart`.
-- `tag:[TagName]` finds everything with a `Class.CollectionService` tag of `[TagName]`. For example, `tag:LightSource` finds everything that is tagged `LightSource`. You can add tags using the [Tags](../studio/properties.md#instance-tags) section of an instance's properties, or Studio's [Tag&nbsp;Editor](../studio/view-tab.md#windows-and-tools), and tag names will autocomplete.
+- `tag:[TagName]` finds everything with a `Class.CollectionService` tag of `[TagName]`. For example, `tag:LightSource` finds everything that is tagged `LightSource`. You can add tags using the [Tags](../studio/properties.md#instance-tags) section of an instance's properties and tag names will autocomplete.
 
 ### Ancestry search
 
@@ -369,7 +369,7 @@ Within a [searched](#search-methods) hierarchy, certain key shortcuts and mouse 
 
 ### Select all
 
-Within a non‑searched hierarchy, pressing <kbd>Ctrl</kbd><kbd>A</kbd> on Windows or <kbd>⌘</kbd><kbd>A</kbd> on macOS selects all instances. Within a [searched](#search-methods) hierarchy, the same shortcut or the **select&nbsp;all** button selects only the query‑matching objects, for example all objects matching **Board** in a hierarchy searched for `board`.
+Within a non‑searched hierarchy, pressing <kbd>Ctrl</kbd><kbd>A</kbd> on Windows or <kbd>⌘</kbd><kbd>A</kbd> on Mac selects all instances. Within a [searched](#search-methods) hierarchy, the same shortcut or the **select&nbsp;all** button selects only the query‑matching objects, for example all objects matching **Board** in a hierarchy searched for `board`.
 
 <img src="../assets/studio/explorer/Select-All-Searched.png" width="320" alt="Image showing how only matching objects are selected in a searched hierarchy using the Select All shortcut" />
 
@@ -413,7 +413,7 @@ Clicking and dragging from an empty region of the window initiates a selection b
 <img src="../assets/studio/explorer/Drag-Select-Searched.png" width="320" alt="Image showing how only matching objects inside the selection box are selected within a searched hierarchy" />
 </figure>
 
-## Additional key shortcuts
+## Key shortcuts
 
 <table>
   <thead>
@@ -432,20 +432,24 @@ Clicking and dragging from an empty region of the window initiates a selection b
       <td>With any child of a branch selected, moves selection back to the parent node. When pressed again, collapses the entire branch.</td>
     </tr>
 		<tr>
-      <td><kbd>home</kbd></td>
+      <td><kbd>Home</kbd></td>
       <td>Selects the topmost object in the hierarchy (`Class.Workspace`).</td>
     </tr>
     <tr>
-      <td><kbd>end</kbd></td>
+      <td><kbd>End</kbd></td>
       <td>Selects the bottommost object in the hierarchy.</td>
     </tr>
 		<tr>
-      <td><kbd>page&nbsp;up</kbd></td>
+      <td><kbd>PageUp</kbd></td>
       <td>Selects the object in the hierarchy that's above the topmost **visible** hierarchy item.</td>
     </tr>
 		<tr>
-      <td><kbd>page&nbsp;down</kbd></td>
+      <td><kbd>PageDown</kbd></td>
       <td>Selects the object in the hierarchy that's below the bottommost **visible** hierarchy item.</td>
+    </tr>
+		<tr>
+      <td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>X</kbd><br /><kbd>⌘</kbd><kbd>Shift</kbd><kbd>X</kbd></td>
+      <td>Jump to the [search input](#search-methods) near the top of the window.</td>
     </tr>
   </tbody>
 </table>

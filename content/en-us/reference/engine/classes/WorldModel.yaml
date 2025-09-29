@@ -5,16 +5,11 @@
 name: WorldModel
 type: class
 memory_category: PhysicsParts
-summary: |
-  Provides some physics features to a `Class.ViewportFrame`.
-description: |
-  The WorldModel provides some physics features to a `Class.ViewportFrame`.
+summary: Extends limited physics for its children on to a parent `Class.ViewportFrame`.
+description: |-
+  When parented to a `Class.ViewportFrame`, `WorldModel` extends limited physics for its children on to that `Class.ViewportFrame`. For example, `Class.BasePart|BaseParts` that are parented to the `WorldModel` can be animated and spatially queried (for example by raycasts) but those parts are **not** simulated. Furthermore, you can put `Class.Humanoid` characters in the `WorldModel` and their joints will be set up correctly for animation.
 
-  More specifically, you can make a WorldModel a child of a ViewportFrame, and
-  then parent geometry to the WorldModel. This will then allow you to use
-  raycasts in the ViewportFrame through the WorldModel. Furthermore you can put
-  `Class.Humanoid` characters in the WorldModel and their joints will be set-up
-  correctly, and you can animate them.
+  To avoid possible performance issues, make sure to only create `WorldModels` when you want to show them and to delete `WorldModels` that are currently not in use.
 code_samples: []
 inherits:
   - WorldRoot

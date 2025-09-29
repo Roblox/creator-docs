@@ -25,9 +25,7 @@ To see **EventSequencer** in action within an editable place, check out the [Con
 
 To use the **EventSequencer** framework in an experience:
 
-1. From the [View](../../studio/view-tab.md), open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
-
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
+1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
    <img src="../../assets/studio/toolbox/Creator-Store-Tab.png" width="360" />
 
@@ -86,7 +84,7 @@ To get started quickly, you can find an empty scene inside the module's main fol
    <img src="../../assets/developer-modules/event-sequencer/ReplicatedStorage-BlankScene-Folder.png" width="320" />
 
    <Alert severity="warning">
-   While developing an event, you can alternatively place scenes elsewhere in the [Explorer](../../studio/explorer.md) hierarchy and tag them with **SequencerScene** using the [Tags](../../studio/properties.md#instance-tags) section of their properties, or Studio's [Tag&nbsp;Editor](../../studio/view-tab.md#windows-and-tools) (**BlankScene** is already tagged as such). However, you'll need to move all event-ready scenes to **ReplicatedStorage** in order for them to work within the overall event flow.
+   While developing an event, you can alternatively place scenes elsewhere in the [Explorer](../../studio/explorer.md) hierarchy and tag them with **SequencerScene** using the [Tags](../../studio/properties.md#instance-tags) section of their properties (**BlankScene** is already tagged as such). However, you'll need to move all event-ready scenes to **ReplicatedStorage** in order for them to work within the overall event flow.
    </Alert>
 
 #### Time length
@@ -235,10 +233,7 @@ This plugin is not intended for usage with [Inline Mode](#inline-mode), as that 
 
 To install the plugin:
 
-1. From Studio's **View** menu, open the **Toolbox**.
-
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
-
+1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../projects/assets/toolbox.md).
 2. With the **Creator Store** tab selected, select **Plugins** from the dropdown menu.
 3. In the search field, type **Scene Manager** and press <kbd>Enter</kbd> to locate the plugin.
 
@@ -252,7 +247,7 @@ To install the plugin:
 As outlined in [creating scenes](#create-scenes), a scene's **Environment** folder contains everything that users see and hear, including [3D objects](../../parts/index.md). The plugin helps you quickly load a scene's assets into or out of organized folders within the workspace.
 
 <Alert severity="error">
-Scenes must be tagged with **SequencerScene** for the plugin to recognize them (**BlankScene** is already tagged as such). A tool such as the **Tag&nbsp;Editor**, accessible from the [View](../../studio/view-tab.md) tab, may be helpful. If you've created a scene but it doesn't appear in the plugin, make sure that it's tagged, then save and reopen the place.
+Scenes must be tagged with **SequencerScene** for the plugin to recognize them (**BlankScene** is already tagged as such). If you've created a scene but it doesn't appear in the plugin, make sure that it's tagged, then save and reopen the place.
 </Alert>
 
 <table>

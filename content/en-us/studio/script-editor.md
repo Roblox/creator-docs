@@ -1,9 +1,9 @@
 ---
-title: Script editor
+title: Script Editor
 description: Roblox's built-in, fully-featured script editor includes modern conveniences like autocomplete, code highlighting, and multi-cursor editing.
 ---
 
-The **script editor** in Studio is the primary tool for scripting on Roblox. It's a self-improving environment that can help you write high-impact code, shorten your development time, and iterate on your experiences. It can improve your scripting experience by:
+The **Script Editor** in Studio is the primary tool for scripting on Roblox. It's a self-improving environment that can help you write high-impact code, shorten your development time, and iterate on your experiences. It can improve your scripting experience by:
 
 - Formatting and highlighting syntax in your code.
 - Offering ways to [autocomplete](#autocomplete-features) phrases in your code as you type.
@@ -77,7 +77,7 @@ For broader searches, the **Find All / Replace All** window lets you find/replac
 
 ### Script Analysis
 
-The **Script Analysis** window, accessible from the [View](./view-tab.md) tab, performs static analysis on your scripts and displays active errors and warnings. For more information on the errors and warnings, see the [Luau linting](https://luau-lang.org/lint) documentation.
+The **Script Analysis** window, accessible through the **Analysis** button in Studio's **Script** tab toolbar, performs static analysis on your scripts and displays active errors and warnings. For more information on the errors and warnings, see the [Luau linting](https://luau.org/lint) documentation.
 
 <figure>
 <img src="../assets/studio/script-editor/Script-Analysis-1.png" width="800" alt="Script with various marked errors" />
@@ -90,7 +90,7 @@ The **Script Analysis** window, accessible from the [View](./view-tab.md) tab, p
 
 ### Output
 
-The **Output** window, accessible from the [View](./view-tab.md) tab, displays errors captured from running scripts, messages from Roblox Engine, messages from calls to `print()`, and errors from calls to `warn()`. For details on configuring it for your workflow, see [Output](../studio/output.md).
+The [Output](../studio/output.md) window displays errors captured from running scripts, messages from the Roblox engine, messages from calls to `print()`, and errors from calls to `warn()`.
 
 <img src="../assets/studio/general/Output-Window.png" width="800" />
 
@@ -99,7 +99,7 @@ The **Output** window, accessible from the [View](./view-tab.md) tab, displays e
 **Code Assist** is a feature that suggests lines or functions of code as you type, helping you code more efficiently and stay focused. Based on contexts from your comment and code, suggestions will be triggered in two ways:
 
 - **Automatically** when you pause on a line for a few seconds and the AI model has enough context for a suggestion.
-- **Manually** with shortcut <kbd>Alt</kbd><kbd>&Backslash;</kbd> on Windows or <kbd>⌥</kbd><kbd>&Backslash;</kbd> on Mac (you can [customize](../studio/shortcuts.md) this shortcut).
+- **Manually** with shortcut <kbd>Alt</kbd><kbd>&Backslash;</kbd> on Windows or <kbd>⌥</kbd><kbd>&Backslash;</kbd> on Mac.
 
 Press <kbd>Tab</kbd> to accept a suggestion, or ignore it by continuing to type. Currently, your script needs to contain at least a few lines of code to trigger a suggestion.
 
@@ -377,7 +377,7 @@ Many customization options are accessible via the **Script Editor** tab of [Stud
 
 ## Keyboard shortcuts
 
-The Script Editor has the following keyboard shortcuts. You can also access many commands from the [Script](../studio/script-tab.md) tab which appears in the Studio toolbar whenever you're viewing or editing a script.
+The Script Editor has the following keyboard shortcuts.
 
 <Tabs>
 <TabItem label="File and display">

@@ -139,7 +139,7 @@ Once you've declared a function, you can run it by writing its name with parenth
    disappear()
    ```
 
-2. Test the code by pressing the **Play** button. If your code works, the platform should have disappeared by the time the user spawns into the game.
+2. [Initiate a playtest](../../../../studio/testing-modes.md#playtesting). If your code works, the platform should have disappeared by the time the user spawns into the game.
 
 ## Appear function
 

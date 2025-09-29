@@ -3,17 +3,17 @@ title: Avatar Setup Tools
 description: The Avatar setup tool previews animations, clothing, accessories, and body constructs on avatar rigs, directly in Studio.
 ---
 
-Use Avatar Setup's [preview and testing tools](#preview) to ensure your character moves, animates, equips accessories, and looks as expected.
+Use the **Avatar Setup** tool's [preview and testing tools](#preview) to ensure your character moves, animates, equips accessories, and looks as expected.
 
-Avatar Setup also provides tools for [minor editing and adjustments](#edit-tools) that allow you to make minor to moderate changes to your model. Major fixes may require you to make your adjustments in your third-party modeling software and re-export.
+**Avatar Setup** also provides tools for [minor editing and adjustments](#edit-tools) that allow you to make minor to moderate changes to your model. Major fixes may require you to make your adjustments in your third-party modeling software and re-export.
 
 <Alert severity = 'info'>
-As Avatar Setup continues development, check this page for additional tools and features when they release.
+As **Avatar Setup** continues development, check this page for additional tools and features when they release.
 </Alert>
 
 ## Preview
 
-In the Avatar Setup panel, use the side navigation to access the various testing interfaces.
+In the **Avatar Setup** window, use the side navigation to access the various testing interfaces.
 
 <GridContainer numColumns='2'>
 <figure><img src="../assets/avatar/avatar-setup/Testing-Interface.png" alt="" width = "100%"/></figure>
@@ -53,7 +53,7 @@ The add item button allows you to add custom assets to the tool's palette for te
 
 To add an item to the palette:
 
-1. Select a valid **Accessory** or **Body Part** asset from the Explorer or 3D workspace.
+1. Select a valid **Accessory** or **Body Part** asset from the **Explorer** or 3D viewport.
 2. Click the add item button at the bottom of the selection column along the left side of the window.
 
    <img src="../assets/avatar/avatar-setup/Add-Object.png" alt=""width = "20%"/>
@@ -62,14 +62,14 @@ To add an item to the palette:
 
 ### Test in experience
 
-The **Test in Experience** button starts playtesting the experience with the previewed avatar. Any changes made in the Avatar setup preview tools, such as equipped clothing or accessories, or modifications, such as skin tone or body part swaps, do not transfer over to the playable character model in this mode.
+The **Test in Experience** button starts playtesting the experience with the previewed avatar. Any changes made using the preview tools, such as equipped clothing or accessories, or modifications such as skin tone or body part swaps, do not transfer over to the playable character model in this mode.
 
 ## Edit tools
 
-Use the Avatar Setup tool to make quick adjustments to your model and any generated assets.
+Use the **Avatar Setup** tool to make quick adjustments to your model and any generated assets.
 
 <Alert severity = 'info'>
-As Avatar Setup continues development, check here for additional tools and features when they release.
+As **Avatar Setup** continues development, check here for additional tools and features when they release.
 </Alert>
 
 ### Edit cage meshes
@@ -85,7 +85,7 @@ Use the following controls to get fine-grain control on your cage edits:
 - Symmetrical and mirror edits along X-axis.
 - Brush with radius and falloff controls.
 - Brush falloff visualization over the vertices.
-- Ability to hide or display equipped layered clothing items. Layered clothing will update in real-time in the Avatar Setup's preview window
+- Ability to hide or display equipped layered clothing items. Layered clothing will update in real-time in the **Avatar Setup** tool's preview window
 
 <Alert severity = 'warning'>
 Major cage edits may require returning to your third-party modeling tool, making your cage adjustments, and then re-exporting the asset.

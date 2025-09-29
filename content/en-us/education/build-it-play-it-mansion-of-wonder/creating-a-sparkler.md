@@ -22,13 +22,11 @@ To start, add the pre-made sparkler set into your existing experience. You'll th
 
    <br> </br>
 
-1. In Roblox Studio, find the **Toolbox**. If it's not open, enable it by going to the **Home** tab and clicking the **Toolbox** button.
+1. In Studio, find the **Toolbox**. If it's not visible, open it from the **Window** menu.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/open-toolbox.png" />
+1. Select the **Inventory** tab.
 
-1. In the **Toolbox** window, click the icon for **Inventory**.
-
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/set-to-inventory.png" />
+   <img src="../../assets/education/general/Toolbox-Inventory.png" width="360" />
 
 1. Make sure the left dropdown is set to **My Models**, then find and click on **Sparkler Set**. This will add the parts into your experience.
 

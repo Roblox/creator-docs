@@ -36,22 +36,14 @@ To find the script next time you open up Roblox Studio, click on the name of the
 
 ### Test output
 
-You can see the result of running the default code with the **Output** window. The Output window is typically at the bottom of Roblox Studio, but if you've never used it before, you may need to enable it.
+You can see the result of running the default code with the **Output** window. If you've never used it before, you'll need to enable it.
 
-You'll need the Output window throughout this course, so now is a good time to enable it if you haven't already.
-
-1. Select the **View** menu tab.
-
-2. Click **Output**.
-   <img src="../../../assets/education/coding-1/enable-output-window_600x200.png" width="80%" />
-   The window will appear at the bottom of Roblox Studio.
-   <img src="../../../assets/education/coding-1/coding-1-output-window_800.png" width="80%"/>
-
-3. To test the script, click **Play**. `Hello world!` will show up in the Output window.
+1. From Studio's Window menu, open the [Output](../../../studio/output.md) window.
+2. To test the script, [initiate a playtest](../../../studio/testing-modes.md#playtesting). `Hello world!` will show up in the output.
 
    <img src="../../../assets/education/coding-1/helloworld-output_800x150.png" width="80%"/>
 
-4. Click **Stop** to end the playtest. You can now return to the **Script** tab.
+3. Click **Stop** to end the playtest. You can now return to the **Script** tab.
 
 ## Identify data types
 

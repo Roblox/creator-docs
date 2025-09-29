@@ -20,7 +20,7 @@ You can create your own assets in third-party modeling tools and follow along wi
 
 ## Get blaster asset
 
-The **Creator Store** is a tab of the Toolbox that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add an individual asset or asset library directly into an open experience.
+The **Creator Store** is a tab of the **Toolbox** that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add an individual asset or asset library directly into an open experience.
 
 This tutorial references a high-quality laser beam blaster model that you can use as you replicate each step within the following sections.
 
@@ -34,16 +34,12 @@ You can add this model to your inventory within Studio by clicking the **Add to 
 
 To get this blaster asset from your inventory into your experience:
 
-1. In the toolbar, select the **View** tab.
-2. Click **Toolbox**. The **Toolbox** window displays.
-
-   <img src="../../../assets/studio/general/View-Tab-Toolbox.png" width="776" />
-
-3. In the **Toolbox** window, click the **Inventory** tab. The **My Models** sort displays.
+1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../../projects/assets/toolbox.md).
+2. In the **Toolbox** window, click the **Inventory** tab. The **My Models** sort displays.
 
    <img src="../../../assets/studio/toolbox/Inventory-Tab.png" width="360" />
 
-4. Click the **Laser Beam Blaster** tile. The model displays in your viewport.
+3. Click the **Laser Beam Blaster** tile. The model displays in your viewport.
 
 ## Set up a collision box
 
@@ -75,12 +71,7 @@ Before you add a `Class.Beam` object to your blaster, it's important to configur
 
 To configure attachments for the laser beam:
 
-1. **(Optional)** Make attachment visual aids larger in the 3D space so that you can clearly visualize the start and end of the laser beam.
-   1. Navigate to the toolbar's **Model** tab, then the **Constraints** section.
-   1. Set **Scale** to `2.5` to make each attachment visual aid larger.
-
-   <img src="../../../assets/tutorials/laser-traps-with-beams/Attachments-1.png" width="50%" />
-
+1. To make attachments visible in the viewport, enable **Show Constraint Details** from Studio's **View** menu.
 1. Insert two attachments into the collision box.
    1. In the **Explorer** window, hover over **CollisionBox**, then click the ⊕ icon. A contextual menu displays.
    1. From the contextual menu, insert an **Attachment**.
@@ -164,13 +155,13 @@ To script the behavior that damages the player:
 
 3. Test the behavior by walking into the laser beam.
 
-   1. In the toolbar, click the **Play** button. Studio enters playtest mode.
-
-      <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png" width="228" alt="Play button highlighted in Studio's playtesting options." />
+   1. Choose **Test** from the dropdown menu and click the **Play** button to its right to begin the playtest.
+	 
+      <img src="../../../assets/studio/general/Mezzanine-Testing-Mode-Test.png" width="800" alt="Test option in the testing modes dropdown of Studio's mezzanine." />
 
    1. Walk into the laser beam to see your character fall apart. When you're done, click the **Stop** button. Studio exits playtest mode.
 
-      <img src="../../../assets/studio/general/Quick-Access-Toolbar-Stop.png" width="228" alt="Stop button highlighted in Studio's playtesting options." />
+      <img src="../../../assets/studio/general/Mezzanine-Testing-Stop.png" width="800" alt="Stop button indicated in Studio's mezzanine." />
 
    <Alert severity="warning">
    If the behavior isn't working correctly, make sure the script is a child of **LaserBeamBlaster**, and that the collision box is named `CollisionBox`.

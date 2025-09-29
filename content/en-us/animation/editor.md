@@ -3,16 +3,9 @@ title: Animation Editor
 description: Animation Editor allows you to design and publish custom animations on rigs.
 ---
 
-The **Animation Editor** plugin allows you to design and publish custom
-animations on rigs.
-
-A rig is an object with individual sections connected by joints. You can
-move these joints to [create poses](#create-poses), and
-the Animation Editor then smoothly animates the rig from pose-to-pose. As
-long as all moving parts are connected with
-`Class.Motor6D`
-objects, you can use the Animation Editor for both human and non-human
-rigs.
+The **Animation Editor** allows you to design and publish custom
+animations on rigs. A rig is an object with individual sections connected by joints. You can move these joints to [create poses](#create-poses) and
+then smoothly animate the rig from pose to pose.
 
 ## Interface
 
@@ -167,18 +160,18 @@ rigs.
 
 ## Create an animation
 
-You can only create animations using rigs. If you don't have a rig available, insert a pre-built rig using the [Rig Builder](../studio/rig-builder.md) tool. The pre-built rigs have all of the basic parts and mechanisms to
+You can only create animations using rigs. If you don't have a rig available, insert a pre-built rig using the [Rig Generator](../studio/rig-builder.md) tool. The pre-built rigs have all of the basic parts and mechanisms to
 build a character animation.
 
 If you have a rig, you can create a new animation for it using the following steps:
 
-1. From the toolbar's **Avatar** tab, click **Animation Editor**.
+1. From the toolbar's **Avatar** tab, click **Animation**.
 2. Select the rig you want to create an animation for to display the creation dialog.
 
    <img src="../assets/animation/animation-editor/Create-Animation-Dialog.png" width="380" />
 
 3. In the **Animation Name** field, enter a new animation name, then
-   click the **Create** button. The Animation Editor window displays
+   click the **Create** button. The **Animation Editor** window displays
    the [media and playback controls](#media-and-playback-controls), [timeline](#timeline), and [track list](#track-list).
 
 From here, you can begin [creating poses](#create-poses)
@@ -188,7 +181,7 @@ priority](#set-a-priority).
 
 ### Create poses
 
-An animation consists of different **poses**, or specific positions and orientations of `Class.Bone` or `Class.MeshPart` objects within a rig. You can create poses by moving or rotating bones or meshes, such as the rig's hands, feet, or torso. After you create multiple poses on different positions of the timeline, the Animation Editor runs between them with your [easing settings](#easing) to smoothly animate the rig from pose-to-pose.
+An animation consists of different **poses**, or specific positions and orientations of `Class.Bone` or `Class.MeshPart` objects within a rig. You can create poses by moving or rotating bones or meshes, such as the rig's hands, feet, or torso. After you create multiple poses on different positions of the timeline, the **Animation Editor** runs between them with your [easing settings](#easing) to smoothly animate the rig from pose-to-pose.
 
 For example, a simple animation where a humanoid character turns
 to look 45° to the left has two poses:
@@ -202,7 +195,7 @@ To create a pose:
 
 1. In the **Explorer** window, select the rig and expand its child instances to access the bones or meshes.
 
-2. In the Animation Editor window, navigate to the timeline, then
+2. In the **Animation Editor** window, navigate to the timeline, then
    click-and-move the **scrubber** to the frame position where you
    want to set the pose. By default, Roblox represents timeline units as
    **seconds:frames** and animations run at 30 frames per second. For example, 0:15 indicates ½ second.
@@ -218,7 +211,7 @@ To create a pose:
 
    <Alert severity="info" variant="standard">
    When creating poses, you can toggle between **Move** and **Rotate**
-   modes by pressing <kbd>R</kbd>. These modes work exactly like moving and rotating base objects, including the snap settings and incremental values located in the toolbar's **Model** tab.
+   modes by pressing <kbd>R</kbd>. These modes work exactly like moving and rotating base objects, including the snap settings and incremental values located in Studio's toolbar.
    </Alert>
 
 5. Continue moving or rotating bones or meshes until you get the desired pose.
@@ -329,13 +322,13 @@ To delete one or more keyframes, select the keyframe(s), then press
 
 ### Optimize keyframes
 
-Animators can often generate many keyframes during the course of animation, especially when using various animation tools and features. To help reduce the number of unnecessary keyframes and make it easier to animate on the timeline, the Animation Editor provides tools for [automatic](#automatic-optimization) and [on-demand](#on-demand-optimization) keyframe optimization.
+Animators can often generate many keyframes during the course of animation, especially when using various animation tools and features. To help reduce the number of unnecessary keyframes and make it easier to animate on the timeline, the **Animation Editor** provides tools for [automatic](#automatic-optimization) and [on-demand](#on-demand-optimization) keyframe optimization.
 
 #### Automatic optimization
 
-The Animation Editor automatically detects and removes unnecessary keyframes when creating [facial animations](../art/characters/facial-animation/animate-heads.md) and when [promoting a keyframe animation to a curve animation](../animation/curve-editor.md#open-the-curve-editor).
+The **Animation Editor** automatically detects and removes unnecessary keyframes when creating [facial animations](../art/characters/facial-animation/animate-heads.md) and when [promoting a keyframe animation to a curve animation](../animation/curve-editor.md#open-the-curve-editor).
 
-If 3 or more consecutive keyframes have the same value in a track, the Animation Editor removes the intermediary keyframes and keeps only the first and last keyframes.
+If 3 or more consecutive keyframes have the same value in a track, the **Animation Editor** removes the intermediary keyframes and keeps only the first and last keyframes.
 
 If the track only contains keyframes with default values, such as an `Datatype.CFrame.identity|Identity Cframe`, or a `0` value for a curve animation, the entire track is removed from the animation.
 
@@ -346,7 +339,7 @@ If the track only contains keyframes with default values, such as an `Datatype.C
     src="../assets/animation/animation-editor/Optimization-Preview.png"
     width="90%" />
 
-During animating, you can use the Animation Editor's **Keyframe Optimization** tool to quickly reduce the number of unnecessary keyframes. Keyframe Optimization prioritizes the least impactful keyframes first. You can adjust the number of keyframes using the slider.
+During animating, you can use the editor's **Keyframe Optimization** tool to quickly reduce the number of unnecessary keyframes. Keyframe Optimization prioritizes the least impactful keyframes first. You can adjust the number of keyframes using the slider.
 
 While using the slider, you can preview the animation and scrub through the timeline to check your animation but you can not perform editing operations, such as changing keyframe values or adding tracks.
 
@@ -547,11 +540,11 @@ Since local data is stored in `Class.ServerStorage`, it doesn't replicate and is
 
 ### Migrate legacy data
 
-The Animation Editor previously stored animation objects directly within a rig, not within `Class.ServerStorage`. If your experience references legacy animation objects in a rig, you can migrate this data to `Class.ServerStorage` using the animation migration tool, allowing you to [access local animation data](#access-local-data) in the same way.
+The **Animation Editor** previously stored animation objects directly within a rig, not within `Class.ServerStorage`. If your experience references legacy animation objects in a rig, you can migrate this data to `Class.ServerStorage` using the animation migration tool, allowing you to [access local animation data](#access-local-data) in the same way.
 
 To migrate your legacy animation data:
 
-1. With the Animation Editor, select a rig with older animations that aren't saved in `Class.ServerStorage`. A migration window displays.
+1. With the **Animation Editor**, select a rig with older animations that aren't saved in `Class.ServerStorage`. A migration window displays.
 
    <img src="../assets/animation/animation-editor/Migrate-Animations.png" width = "65%" />
 

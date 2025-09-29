@@ -50,8 +50,7 @@ Use the 3D importer to import assets with avatar item components.
 
 To import a 3D object:
 
-1. In the toolbar's **Home** or **Avatar** tab, click **Import 3D**.
-   1. Alternatively, use **File** > **Import 3D** to open up the Import 3D tool.
+1. From Studio's **File** menu, select **Import 3D**.
 2. In the file browser, select the supported `.fbx`, `.gltf` or `.obj` files you intend to import.
    1. If selecting one object, the [import preview](#import-preview) window screen appears for that object.
    2. If selecting multiple objects, the files are added to the [import queue](#import-queue).
@@ -113,9 +112,8 @@ If you selected multiple files with the 3D Importer, you can use the import queu
 
 To open a file browser and add additional files to the import queue, you can:
 
-- Click the **Add file** button in the top bar of the Import queue window.
-- In the Studio's **Home** or **Avatar** tab, click **Import 3D**.
-- Navigate to **File** > **Import 3D**.
+- Click the **Add file** button in the top bar of the import queue window.
+- From Studio's **File** menu, select **Import 3D**.
 
 ### Remove files from queue
 
@@ -225,7 +223,7 @@ The 3D Importer provides the following settings for all meshes:
   </tr>
   <tr>
     <td>Anchored</td>
-    <td>If enabled, the 3D Importer sets the Anchored property to True on all the imported MeshParts. This is disabled for meshes with rig data / avatars. By default, this is **disabled**.</td>
+    <td>If enabled, the 3D Importer sets the `Class.BasePart.Anchored|Anchored` property to `true` on all the imported `Class.MeshPart|MeshParts`. This is disabled for meshes with rig data / avatars. By default, this is **disabled**.</td>
   </tr>
   <tr>
     <td>Uses Cage</td>
@@ -329,7 +327,7 @@ When selecting a specific child object of your mesh, the 3D Importer populates O
   </tr>
   <tr>
     <td>Anchored</td>
-    <td>If enabled, sets the Anchored property to True on the selected child object. By default, this is **disabled**.</td>
+    <td>If enabled, sets the `Class.BasePart.Anchored|Anchored` property to `true` on the selected child object. By default, this is **disabled**.</td>
   </tr>
   <tr>
     <td>Use Imported Pivot</td>
@@ -370,7 +368,7 @@ By default, you can select between two presets:
 - **Studio Default**: The default import behavior.
 - **Last Imported**: Uses the settings applied to the most recent import.
 
-You can use the **. . .** menu next to the Presets dropdown for additional options:
+You can use the **&ctdot;** menu next to the Presets dropdown for additional options:
 
 - **Reset all**: Removes any changes to the current configuration, putting settings back in the default state for the current preset.
 - **Save selection**: Allows you to save any new changes to the importer settings into the currently selected preset.

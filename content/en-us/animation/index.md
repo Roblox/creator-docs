@@ -13,7 +13,7 @@ Animation can apply to any Roblox part or group of parts. Different types of obj
 
 ## Animation Editor
 
-The [Animation Editor](../animation/editor.md) plugin allows you to design and publish custom animations on rigs. You can move the joints that connect individual sections of a rig to create poses, and the Animation Editor smoothly animates the rig from pose-to-pose. As long as all moving parts are connected with `Class.Motor6D` objects, you can use the Animation Editor for both human and non-human rigs.
+The [Animation Editor](../animation/editor.md) allows you to design and publish custom animations on rigs. You can move the joints that connect individual sections of a rig to create poses, and the **Animation Editor** smoothly animates the rig from pose-to-pose. As long as all moving parts are connected with `Class.Motor6D` objects, you can use the editor for both human and non-human rigs.
 
 <video src="../assets/animation/inverse-kinematics/IK-Body-Part.mp4" controls width="80%"></video>
 
@@ -31,4 +31,4 @@ You can use [inverse kinematics](../animation/inverse-kinematics.md) APIs to aut
 
 ## Animation events
 
-An [animation event](../animation/events.md) is a specific point in an animation that triggers an action. You can define animation event markers across the Animation Editor timeline span, then use `Class.AnimationTrack:GetMarkerReachedSignal()` to detect those markers as the animation runs to perform specific actions, such as playing a sound effect whenever the user's foot touches the ground.
+An [animation event](../animation/events.md) is a specific point in an animation that triggers an action. You can define animation event markers across the **Animation Editor** timeline span, then use `Class.AnimationTrack:GetMarkerReachedSignal()` to detect those markers as the animation runs to perform specific actions, such as playing a sound effect whenever the user's foot touches the ground.

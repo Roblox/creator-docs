@@ -33,7 +33,7 @@ To use an NPC in your game:
    </GridContainer>
 
 2. On the NPC's item page, click the green **Get** button and confirm the transaction.
-3. In Roblox Studio, open the [Toolbox](../projects/assets/toolbox.md) (**View** → **Toolbox**).
+3. In Studio, open the [Toolbox](../projects/assets/toolbox.md).
 4. Select your toolbox **Inventory** section.
 
    <img src="../assets/studio/toolbox/Inventory-Tab.png"
@@ -277,7 +277,7 @@ Each NPC includes a `Class.Configuration` object within its hierarchy which acts
 
 The **NPC** script uses `Class.CollectionService` tags to manage aggression toward other characters and players. Various tags from the following table can be assigned as follows:
 
-- To assign tag(s) to another NPC, assign them to the NPC's top-level `Class.Model` using the [Tags](../studio/properties.md#instance-tags) section of its properties, or Studio's [Tag&nbsp;Editor](../studio/view-tab.md#windows-and-tools).
+- To assign tag(s) to another NPC, assign them to the NPC's top-level `Class.Model` using the [Tags](../studio/properties.md#instance-tags) section of its properties.
 - To assign a tag to a `Class.Player` character, you can add a `Class.Script` to **StarterCharacterScripts** with a `Class.CollectionService:AddTag()` call. For example:
 
   ```lua

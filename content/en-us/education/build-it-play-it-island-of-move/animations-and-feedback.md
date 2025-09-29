@@ -31,23 +31,17 @@ The first step in making a victory animation is to create an animation using the
 
 ## Set up for animation
 
-First, you'll change some settings and open the animation editor. Roblox Studio features a powerful, built-in Animation Editor that allows you to design and publish custom animations.
+Roblox Studio features a powerful, built-in **Animation Editor** that allows you to design and publish custom animations.
 
 1. Start or open a project in Roblox Studio.
-2. To animate, you'll need to freely manipulate parts. To do this, go to the Model tab and make sure Rotate and Move snapping is turned off.
+2. To animate, you'll need to freely manipulate parts. From the toolbar, make sure **Move** and **Rotate** snapping are turned off.
 
-   <img src="../../assets/education/build-it-play-it-island-of-move/creating-animations/turn-off-snap.png" />
+   <img src="../../assets/education/general/Snap-Settings-C.png" width="500" />
 
-3. To open the Animation Editor, go to Plugins > Animation Editor.
+3. To open the Animation Editor, select **Animation** from the **Avatar** tab.
+4. To create player animations, a character rig is needed. In the **Avatar** tab, click on **Character**. In the popup, select any rig.
 
-   <img src="../../assets/education/build-it-play-it-island-of-move/creating-animations/open-animation-editor.png" />
-
-4. To create player animations, a character rig is needed. In the Plugins tab, click on Build Rig. In the following pop-up, select any rig
-
-   <GridContainer numColumns="2">
-     <img src="../../assets/education/build-it-play-it-island-of-move-intermediate/bipi_t2_createRig_rigBuilder.jpg" />
-     <img src="../../assets/education/build-it-play-it-island-of-move-intermediate/bipi_t2_createRig_showRig.jpg" />
-   </GridContainer>
+   <img src="../../assets/education/build-it-play-it-island-of-move-intermediate/bipi_t2_createRig_showRig.jpg" />
 
 ### Create a new animation
 

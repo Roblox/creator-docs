@@ -184,22 +184,22 @@ There are many default workspaces, but the following are the most common for cre
 The **Layout** workspace is the default workspace when you load a Blender file, and it provides basic tools for previewing and transforming your 3D objects, such as the Move, Scale, and Rotate tools. The default layout of this workspace includes the following UI for easy access as you set up your 3D art:
 
 - [3D Viewport](https://docs.blender.org/manual/en/latest/editors/3dview/introduction.html) - Displays the entire scene.
-- [Outliner](https://docs.blender.org/manual/en/latest/editors/outliner/introduction.html) - Displays all objects in the scene, comparable to Studio's Explorer window.
-- [Properties Editor](https://docs.blender.org/manual/en/latest/editors/properties_editor.html) - Displays editable data for the active object, comparable to Studio's Properties window.
-- [Timeline Editor](https://docs.blender.org/manual/en/latest/editors/timeline.html) - Displays all animation keyframes, comparable to the Animation Editor's timeline.
+- [Outliner](https://docs.blender.org/manual/en/latest/editors/outliner/introduction.html) - Displays all objects in the scene, comparable to Studio's **Explorer** window.
+- [Properties Editor](https://docs.blender.org/manual/en/latest/editors/properties_editor.html) - Displays editable data for the active object, comparable to Studio's **Properties** window.
+- [Timeline Editor](https://docs.blender.org/manual/en/latest/editors/timeline.html) - Displays all animation keyframes, comparable to the **Animation Editor** timeline.
 
 </TabItem>
 <TabItem key = "2" label="Modeling">
 
 <img src="../assets/art/3p-software/blender/Modeling_Workspace.png" width = "60%" alt="Blender's Topbar with the Modeling workspace highlighted."/>
 
-The **Modeling** workspace is very similar to the Layout workspace, but it offers more space for the 3D Viewport so that you can focus on modifying the geometry of your 3D objects. If you swap between the Modeling and Layout workspaces, you can see the Properties Editor expand, the Outliner shrink in size, and the Timeline Editor disappear altogether.
+The **Modeling** workspace is very similar to the **Layout** workspace, but it offers more space for the 3D viewport so that you can focus on modifying the geometry of your 3D objects. If you swap between the Modeling and Layout workspaces, you can see the **Properties Editor** expand, the **Outliner** shrink in size, and the **Timeline Editor** disappear altogether.
 
 The default layout of this workspace includes the following UI for modeling your 3D art:
 
 - [3D Viewport](https://docs.blender.org/manual/en/latest/editors/3dview/introduction.html) - Displays the entire scene.
-- [Outliner](https://docs.blender.org/manual/en/latest/editors/outliner/introduction.html) - Displays all objects in the scene, comparable to Studio's Explorer window.
-- [Properties Editor](https://docs.blender.org/manual/en/latest/editors/properties_editor.html) - Displays editable data for the active object, comparable to Studio's Properties window.
+- [Outliner](https://docs.blender.org/manual/en/latest/editors/outliner/introduction.html) - Displays all objects in the scene, comparable to Studio's **Explorer** window.
+- [Properties Editor](https://docs.blender.org/manual/en/latest/editors/properties_editor.html) - Displays editable data for the active object, comparable to Studio's **Properties** window.
 
 The most common Roblox creator use case for this workspace is to create the geometrical shape of the 3D art before texturing or animating the geometry.
 
@@ -213,8 +213,8 @@ The **Sculpting** workspace provides sculpting tools for modifying meshes with o
 The default layout of this workspace includes the following UI for sculpting your 3D art:
 
 - [3D Viewport](https://docs.blender.org/manual/en/latest/editors/3dview/introduction.html) - Displays the entire scene.
-- [Outliner](https://docs.blender.org/manual/en/latest/editors/outliner/introduction.html) - Displays all objects in the scene, comparable to Studio's Explorer window.
-- [Properties Editor](https://docs.blender.org/manual/en/latest/editors/properties_editor.html) - Displays editable data for the active object, comparable to Studio's Properties window.
+- [Outliner](https://docs.blender.org/manual/en/latest/editors/outliner/introduction.html) - Displays all objects in the scene, comparable to Studio's **Explorer** window.
+- [Properties Editor](https://docs.blender.org/manual/en/latest/editors/properties_editor.html) - Displays editable data for the active object, comparable to Studio's **Properties** window.
 
 The most common Roblox creator use case for this workspace is to create organic 3D art like humans, animals, and plants.
 
@@ -229,8 +229,8 @@ The default layout of this workspace includes the following UI for UV mapping yo
 
 - [UV Editor](https://docs.blender.org/manual/en/latest/editors/uv/introduction.html) - Displays the image texture that you're mapping onto your 3D object.
 - [3D Viewport](https://docs.blender.org/manual/en/latest/editors/3dview/introduction.html) - Displays the entire scene.
-- [Outliner](https://docs.blender.org/manual/en/latest/editors/outliner/introduction.html) - Displays all objects in the scene, comparable to Studio's Explorer window.
-- [Properties Editor](https://docs.blender.org/manual/en/latest/editors/properties_editor.html) - Displays editable data for the active object, comparable to Studio's Properties window.
+- [Outliner](https://docs.blender.org/manual/en/latest/editors/outliner/introduction.html) - Displays all objects in the scene, comparable to Studio's **Explorer** window.
+- [Properties Editor](https://docs.blender.org/manual/en/latest/editors/properties_editor.html) - Displays editable data for the active object, comparable to Studio's **Properties** window.
 
 The most common Roblox creator use case for this workspace is to create and use trim sheets that you can apply to multiple 3D objects at once. This allows you to add significantly more visual complexity to your experiences without having to import additional textures, saving you a negative impact on memory. For more information on this process, see [Develop polished assets - Trim sheets](../tutorials/curriculums/environmental-art/develop-polished-assets.md#trim-sheets) in the Environmental art curriculum.
 
@@ -249,8 +249,8 @@ The default layout of this workspace includes the following UI for texture paint
 
 - [Image Editor](https://docs.blender.org/manual/en/latest/editors/image/introduction.html) - Displays tools to create, view, and edit images that you can apply to the active object.
 - [3D Viewport](https://docs.blender.org/manual/en/latest/editors/3dview/introduction.html) - Displays the entire scene.
-- [Outliner](https://docs.blender.org/manual/en/latest/editors/outliner/introduction.html) - Displays all objects in the scene, comparable to Studio's Explorer window.
-- [Properties Editor](https://docs.blender.org/manual/en/latest/editors/properties_editor.html) - Displays editable data for the active object, comparable to Studio's Properties window.
+- [Outliner](https://docs.blender.org/manual/en/latest/editors/outliner/introduction.html) - Displays all objects in the scene, comparable to Studio's **Explorer** window.
+- [Properties Editor](https://docs.blender.org/manual/en/latest/editors/properties_editor.html) - Displays editable data for the active object, comparable to Studio's **Properties** window.
 
 The most common Roblox creator use case for this workspace is to create a unique texture for characters, accessories, or important 3D objects that players regualarly interact with in experiences.
 

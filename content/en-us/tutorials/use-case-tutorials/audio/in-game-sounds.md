@@ -79,8 +79,8 @@ The remainder of this tutorial uses a pre-made model. This model includes parts 
 
    ![alt](../../../assets/tutorials/in-game-sounds/ingameSounds-collectablePage.png)
 
-- In Studio, go to the **View** tab and click on the **Toolbox**.
-- In the Toolbox window, click on the **Inventory** button. Then, make sure the dropdown is on **My Models**.
+- From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../../projects/assets/toolbox.md) and select the **Inventory** tab.
+- Make sure the dropdown is on **My Models**.
 - Select the **Collectable Gems** model to add it into the game.
 
 1. In **SoundService**, create a new **Sound** named **FeedbackSound**.

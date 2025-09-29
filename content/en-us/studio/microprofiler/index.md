@@ -89,7 +89,7 @@ If you want to save a set of frame data for later review (or to share with someo
 
   If you use the Universal Windows Platform (UWP) app, check `\Users\<username>\AppData\Local\Packages\ROBLOXCORPORATION.ROBLOX_<hash>\LocalState\logs\`.
 
-- On macOS, check `~/Library/Logs/Roblox`.
+- On Mac, check `~/Library/Logs/Roblox`.
 
 These HTML files use the same [web-based UI](#use-the-web-ui) as the [live connection for mobile devices](#profile-mobile-devices) and [server dumps](#profile-the-server).
 

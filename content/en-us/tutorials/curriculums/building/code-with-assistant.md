@@ -1,5 +1,5 @@
 ---
-title: Code with AI Assistant
+title: AI Assistant
 description: Explains how use AI Assistant prompts to add code to your obby.
 next: /tutorials/curriculums/building/test-and-save
 prev: /tutorials/curriculums/building/work-with-parts
@@ -9,26 +9,17 @@ prev: /tutorials/curriculums/building/work-with-parts
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/PqB6DC_kxHM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </figure><br />
 
-**Assistant** is Roblox's artificial intelligence helper that can help you create and code your experiences. In this chapter, let's walk through how to open Assistant in Studio, write requests that change part behavior, and playtest your results to see if you need to make any changes to the Assistant's code sample.
+**Assistant** is Roblox's AI helper that can help you create and code your experiences. In this chapter, let's walk through how to open Assistant in Studio, write requests that change part behavior, and playtest your results to see if you need to make any changes to the Assistant's code sample.
 
 ## Open Assistant
 
 Assistant is available in the top-right corner of this webpage, as well as directly in Studio. This second placement allows Assistant to directly reference everything that makes up your experience, then make suggestions on how you can add or edit 3D objects and scripts for your specific gameplay goals.
 
-To open Assistant:
-
-1. Go to the top-right corner of Studio.
-1. Click on the sparkles icon. **Assistant** opens underneath the **Properties** window.
-
-   <img src="../../../assets/education/general/Assistant-Tool.png" alt="Assistant tool highlighted." />
-
-   <br> </br>
-
-   <img src="../../../assets/tutorials/building-lesson/open-2.png" alt="" width="80%" />
+<img src="../../../assets/tutorials/building-lesson/Mezzanine-Assistant.png" alt="Assistant button indicated on the right side of Studio's mezzanine bar." width="800" />
 
 ## Create prompt
 
-Now that Assistant is open in Studio, it can reference all of your platforms and add scripts to change their behavior, such as:
+Once Assistant is open in Studio, it can reference all of your platforms and add scripts to change their behavior, such as:
 
 - Turning a different color every time a player touches the part.
 - Moving upward, waiting for 3 seconds, then moving back to its previous position.
@@ -129,7 +120,7 @@ If you make a request and do not get the results you want, rephrase the request 
 Accidentally accept a suggestion that you didn't want? You can undo the change using one of the following methods:
 
 - For non-script changes, press <kbd>Ctrl</kbd><kbd>Z</kbd> or <kbd>⌘</kbd><kbd>Z</kbd>, depending on your computer.
-- If Assistant made a script, click on the script's name in the Explorer window, then press <kbd>Delete</kbd>.
+- If Assistant made a script, click on the script's name in the **Explorer** window, then press <kbd>Delete</kbd>.
 </Alert>
 
 ## Playtest results
@@ -140,12 +131,12 @@ To playtest Assistant's results:
 
 1. In the top-left corner of Studio, keep the default **Test** playtest option, then click the **Play** button. Studio enters playtest mode.
 
-   <img src="../../../assets/education/general/play-button.png" width="30%" />
+   <img src="../../../assets/education/general/Play-Button.png" width="360" />
 
 1. In the experience, jump onto the first platform. If the code sample works correctly, yellow sparkles appear when your character touches the part.
 1. When you're done verifying the results, return to the top-left corner of Studio, then click the **Stop** button. Studio exits playtest mode.
 
-   <img src="../../../assets/education/general/stop-button.png" width="30%" />
+   <img src="../../../assets/education/general/Stop-Button.png" width="360" />
 
 1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Return to the Assistant window, then press the thumbs up or thumbs down icon to let Assistant know if the code sample worked as you intended.
 

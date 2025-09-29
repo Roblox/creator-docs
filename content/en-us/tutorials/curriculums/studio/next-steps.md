@@ -42,7 +42,3 @@ As you start to build your own experiences, be sure to check out the intermediat
 - [Save player data](../../use-case-tutorials/data-storage/save-player-data.md)
 
 When you reach a point where you feel comfortable developing in Studio, you will be ready for the advanced paths that offer a deep dive into industry-standard workflows for areas like [environmental art](../environmental-art/index.md), [gameplay scripting](../gameplay-scripting/index.md), and [UI design](../user-interface-design/index.md).
-
-<Alert severity = 'success'>
-Happy creating, we can't wait to see what you make!
-</Alert>

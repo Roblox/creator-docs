@@ -21,15 +21,6 @@ To change a driftspeeder's speed or how quickly it can turn, you'll open the **_
 
 1. Double-click the **Settings** script to open it.
 
-   <Alert severity="info">
-   <AlertTitle>Switching Between Script and Game View</AlertTitle>
-
-   The **game world** (A) and **script** (B) are in separate tabs. Switch back and forth as needed.
-
-   <img src="../../assets/education/build-it-play-it-galactic-speedway/customize-and-share/script-tab.png" width="60%" />
-
-   </Alert>
-
 ## The Settings script
 
 In the script, you'll see words like `DefaultSpeed` or `BoostSpeed`. These words are **variables**. Variables are placeholders for information that can be changed as needed.

@@ -5,9 +5,8 @@
 name: RunService
 type: class
 memory_category: Instances
-summary: |
-  Service responsible for all runtime activity and progression of time.
-description: |
+summary: Service responsible for all runtime activity and progression of time.
+description: |-
   `RunService` contains methods and events for time management as well as for
   managing the context in which an experience or script is running. Methods like
   `Class.RunService:IsClient()|IsClient()`,
@@ -174,10 +173,10 @@ properties:
       - Basic
 methods:
   - name: RunService:BindToRenderStep
-    summary: |
+    summary: |-
       Given a string name of a function and a priority, this method binds the
       function to `Class.RunService.PreRender`.
-    description: |
+    description: |-
       The `BindToRenderStep()` function binds a custom function to be called at
       a specific time during the render step. There are three main arguments:
       `name`, `priority`, and what `function` to call.
@@ -249,13 +248,13 @@ methods:
       - name: name
         type: string
         default:
-        summary: |
+        summary: |-
           Label for the binding which can be used with
           `Class.RunService.Unbind|Unbind` if the binding is no longer needed.
       - name: priority
         type: int
         default:
-        summary: |
+        summary: |-
           Priority of the binding as an integer; it determines when during the
           render step to call the custom function. The lower this number, the
           sooner the custom function will be called. If two bindings have the
@@ -263,8 +262,7 @@ methods:
       - name: function
         type: Function
         default:
-        summary: |
-          The custom function being bound.
+        summary: The custom function being bound.
     returns:
       - type: ()
         summary: ''
@@ -275,9 +273,8 @@ methods:
     capabilities:
       - Basic
   - name: RunService:IsClient
-    summary: |
-      Returns whether the current environment is running on the client.
-    description: |
+    summary: Returns whether the current environment is running on the client.
+    description: |-
       If the code that invoked this method is running in a client context (in a
       `Class.LocalScript`, in a `Class.ModuleScript` required by a
       `Class.LocalScript`, or in a `Class.Script` with
@@ -292,8 +289,7 @@ methods:
     parameters: []
     returns:
       - type: boolean
-        summary: |
-          Whether the current environment is running the client.
+        summary: Whether the current environment is running the client.
     tags: []
     deprecation_message: ''
     security: None
@@ -301,9 +297,8 @@ methods:
     capabilities:
       - Basic
   - name: RunService:IsEdit
-    summary: |
-      Returns whether the current environment is in `Edit` mode.
-    description: |
+    summary: Returns whether the current environment is in `Edit` mode.
+    description: |-
       This method returns whether the current environment is in "edit" mode, for
       example in Studio when the experience is not running.
 
@@ -314,8 +309,7 @@ methods:
     parameters: []
     returns:
       - type: boolean
-        summary: |
-          Whether the current environment is in "edit" mode.
+        summary: Whether the current environment is in "edit" mode.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -357,8 +351,7 @@ methods:
     parameters: []
     returns:
       - type: boolean
-        summary: |
-          Whether the experience is currently running.
+        summary: Whether the experience is currently running.
     tags: []
     deprecation_message: ''
     security: None
@@ -366,9 +359,8 @@ methods:
     capabilities:
       - Basic
   - name: RunService:IsServer
-    summary: |
-      Returns whether the current environment is running on the server.
-    description: |
+    summary: Returns whether the current environment is running on the server.
+    description: |-
       This method returns whether the current environment is running on the
       server. If the code that invoked this method is running in a server
       context (in a `Class.Script` with `Class.BaseScript.RunContext|RunContext`
@@ -383,8 +375,7 @@ methods:
     parameters: []
     returns:
       - type: boolean
-        summary: |
-          Whether the current environment is running on the server.
+        summary: Whether the current environment is running on the server.
     tags: []
     deprecation_message: ''
     security: None
@@ -392,9 +383,8 @@ methods:
     capabilities:
       - Basic
   - name: RunService:IsStudio
-    summary: |
-      Returns whether the current environment is running in Studio.
-    description: |
+    summary: Returns whether the current environment is running in Studio.
+    description: |-
       This method returns whether the current environment is running in Studio.
       It can be used to wrap code that should only execute when testing in
       Studio.
@@ -402,8 +392,7 @@ methods:
     parameters: []
     returns:
       - type: boolean
-        summary: |
-          Whether the current environment is running in Studio.
+        summary: Whether the current environment is running in Studio.
     tags: []
     deprecation_message: ''
     security: None
@@ -411,10 +400,10 @@ methods:
     capabilities:
       - Basic
   - name: RunService:Pause
-    summary: |
+    summary: |-
       Pauses the experience's simulation if it is running, suspending physics
       and scripts.
-    description: |
+    description: |-
       This method pauses the experience's simulation if it is running,
       suspending physics and scripts. When the simulation is paused,
       `Class.RunService:IsRunning()|IsRunning()` will return `false`.
@@ -430,10 +419,10 @@ methods:
     capabilities:
       - Basic
   - name: RunService:Reset
-    summary: |
+    summary: |-
       Resets the current game to a waypoint set when `Class.RunService:Run()`
       was called.
-    description: |
+    description: |-
       The Reset function resets the current game to a waypoint set when Run was
       called. This method should only be used after Run was called.
     code_samples: []
@@ -443,16 +432,14 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
-      This item is deprecated and should not be used in new work.
+    deprecation_message: This item is deprecated and should not be used in new work.
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities:
       - Basic
   - name: RunService:Run
-    summary: |
-      Runs the game's simulation, running physics and scripts.
-    description: |
+    summary: Runs the game's simulation, running physics and scripts.
+    description: |-
       This method runs the experience's simulation (physics and scripts). When
       the simulation is running, `Class.RunService:IsRunning()|IsRunning()` will
       return `true`. However, `Class.RunService:IsRunMode()|IsRunMode()` will
@@ -470,9 +457,8 @@ methods:
     capabilities:
       - Basic
   - name: RunService:Stop
-    summary: |
-      Stops the experience's simulation if it is running.
-    description: |
+    summary: Stops the experience's simulation if it is running.
+    description: |-
       This method stops the experience's simulation if it is running. When the
       simulation is stopped, `Class.RunService:IsRunning()|IsRunning()` will
       return `false` and `Class.RunService:IsEdit()|IsEdit()` will return
@@ -494,10 +480,10 @@ methods:
     capabilities:
       - Basic
   - name: RunService:UnbindFromRenderStep
-    summary: |
+    summary: |-
       Unbinds a function that was bound to the render loop using
       `Class.RunService:BindToRenderStep()`.
-    description: |
+    description: |-
       Given a name of a function sent to
       `Class.RunService:BindToRenderStep()|BindToRenderStep()`, this method will
       unbind the function from being called during
@@ -512,8 +498,7 @@ methods:
       - name: name
         type: string
         default:
-        summary: |
-          The name of the function being unbound.
+        summary: The name of the function being unbound.
     returns:
       - type: ()
         summary: ''
@@ -525,9 +510,8 @@ methods:
       - Basic
 events:
   - name: RunService.Heartbeat
-    summary: |
-      Fires every frame, after the physics simulation has completed.
-    description: |
+    summary: Fires every frame, after the physics simulation has completed.
+    description: |-
       The `Heartbeat` event fires every frame, after the physics simulation has
       completed. The `deltaTime` argument indicates the time that has elapsed
       since the previous frame.
@@ -547,17 +531,15 @@ events:
       - name: deltaTime
         type: double
         default:
-        summary: |
-          The time (in seconds) that has elapsed since the previous frame.
+        summary: The time (in seconds) that has elapsed since the previous frame.
     tags: []
     deprecation_message: ''
     security: None
     capabilities:
       - Basic
   - name: RunService.PostSimulation
-    summary: |
-      Fires every frame, after the physics simulation has completed.
-    description: |
+    summary: Fires every frame, after the physics simulation has completed.
+    description: |-
       The `PostSimulation` event fires every frame, after the physics simulation
       has completed. The `deltaTimeSim` argument indicates the time that the
       current frame has stepped the physics simulation, not accounting for
@@ -572,7 +554,7 @@ events:
       - name: deltaTimeSim
         type: double
         default:
-        summary: |
+        summary: |-
           The time (in seconds) that the current frame has stepped the physics
           simulation, not accounting for physics throttling.
     tags: []
@@ -581,9 +563,8 @@ events:
     capabilities:
       - Basic
   - name: RunService.PreAnimation
-    summary: |
-      Fires every frame, prior to the physics simulation but after rendering.
-    description: |
+    summary: Fires every frame, prior to the physics simulation but after rendering.
+    description: |-
       The `PreAnimation` event fires every frame, prior to the physics
       simulation but after rendering. The `deltaTimeSim` argument indicates the
       time that the current frame has stepped animations.
@@ -600,17 +581,15 @@ events:
       - name: deltaTimeSim
         type: double
         default:
-        summary: |
-          The time (in seconds) that the current frame has stepped animations.
+        summary: The time (in seconds) that the current frame has stepped animations.
     tags: []
     deprecation_message: ''
     security: None
     capabilities:
       - Basic
   - name: RunService.PreRender
-    summary: |
-      Fires every frame, prior to the frame being rendered.
-    description: |
+    summary: Fires every frame, prior to the frame being rendered.
+    description: |-
       The `PreRender` event (replacement for
       `Class.RunService.RenderStepped|RenderStepped`) fires every frame, prior
       to the frame being rendered. The `deltaTimeRender` argument indicates the
@@ -634,17 +613,15 @@ events:
       - name: deltaTimeRender
         type: double
         default:
-        summary: |
-          The time (in seconds) that has elapsed since the previous frame.
+        summary: The time (in seconds) that has elapsed since the previous frame.
     tags: []
     deprecation_message: ''
     security: None
     capabilities:
       - Basic
   - name: RunService.PreSimulation
-    summary: |
-      Fires every frame, prior to the physics simulation.
-    description: |
+    summary: Fires every frame, prior to the physics simulation.
+    description: |-
       The `PreSimulation` event (replacement for
       `Class.RunService.Stepped|Stepped`) fires every frame, prior to the
       physics simulation. The `deltaTimeSim` argument indicates the time that
@@ -662,7 +639,7 @@ events:
       - name: deltaTimeSim
         type: double
         default:
-        summary: |
+        summary: |-
           The time (in seconds) that the current frame will step the physics
           simulation, not accounting for physics throttling.
     tags: []
@@ -671,9 +648,8 @@ events:
     capabilities:
       - Basic
   - name: RunService.RenderStepped
-    summary: |
-      Fires every frame, prior to the frame being rendered.
-    description: |
+    summary: Fires every frame, prior to the frame being rendered.
+    description: |-
       Fires every frame, prior to the frame being rendered.
 
       ##### Migration Note
@@ -685,17 +661,15 @@ events:
       - name: deltaTime
         type: double
         default:
-        summary: |
-          The time (in seconds) that has elapsed since the previous frame.
+        summary: The time (in seconds) that has elapsed since the previous frame.
     tags: []
     deprecation_message: ''
     security: None
     capabilities:
       - Basic
   - name: RunService.Stepped
-    summary: |
-      Fires every frame, prior to the physics simulation.
-    description: |
+    summary: Fires every frame, prior to the physics simulation.
+    description: |-
       Fires every frame, prior to the physics simulation.
 
       ##### Migration Note
@@ -708,14 +682,13 @@ events:
       - name: time
         type: double
         default:
-        summary: |
+        summary: |-
           The duration (in seconds) that `Class.RunService` has been running
           for.
       - name: deltaTime
         type: double
         default:
-        summary: |
-          The time (in seconds) that has elapsed since the previous frame.
+        summary: The time (in seconds) that has elapsed since the previous frame.
     tags: []
     deprecation_message: ''
     security: None

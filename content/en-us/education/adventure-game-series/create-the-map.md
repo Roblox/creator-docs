@@ -93,10 +93,7 @@ The environment will be created using the **Terrain Editor**. This tool in Roblo
 You'll use the tools in the Terrain Editor to create the world you drew in your game vision document.
 
 1. Open Studio and create a new **Flat Terrain** project.
-2. In the **Home** tab, click the **Editor** button. This opens the **Terrain Editor** on the left of the screen.
-
-   <img src="../../assets/studio/general/Home-Tab-Terrain-Editor.png" width="716" alt="Terrain Editor indicated in Home tab" />
-
+2. In the **Home** tab, click the **Terrain** button. This opens the **Terrain Editor** on the left of the screen.
 3. In the Terrain Editor, go to the **Edit** tab. Then use the **Paint** tool to change the material of the landscape. Depending on your vision, paint in roads, water, or even lava.
 
    <img src="../../assets/studio/terrain-editor/Edit-Tab-Paint.png" width="360" alt="Paint tool indicated in Edit tab of Terrain Editor" />

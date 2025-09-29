@@ -9,26 +9,20 @@ The **Animation Editor** lets you move and rotate your characters' body parts li
 
 <video controls src="../../../assets/education/build-it-play-it-island-of-move/creating-animations/AnimationExample.mp4" width="60%"></video>
 
-In this chapter, let's explore how to open the Animation Editor, customize your settings to help with posing your character, and create an animation with two unique poses that Studio flows together to make it look like the character is swimming in water.
+In this chapter, let's explore how to open the **Animation Editor**, customize your settings to help with posing your character, and create an animation with two unique poses that Studio flows together to make it look like the character is swimming in water.
 
 <video controls src="../../../assets/education/build-it-play-it-island-of-move/creating-animations/show-animation-breakdown.mp4" width="60%"></video>
 
 ## Open Animation Editor
 
-The Animation Editor is Studio's primary animation tool. While it comes with a lot of functionality, such as [animation capture](../../../animation/capture.md) and [inverse kinematics](../../../animation/inverse-kinematics.md) tools, this lesson focuses on its basic tools to help you get started in learning how to create animations.
-
-To open the Animation Editor:
+The **Animation Editor** is Studio's primary animation tool. While it comes with a lot of functionality, such as [animation capture](../../../animation/capture.md) and [inverse kinematics](../../../animation/inverse-kinematics.md) tools, this lesson focuses on its basic tools to help you get started in learning how to create animations.
 
 1. At the top of the toolbar, go to the **Avatar** tab.
-1. In the toolbar, click the **Animation** button. The Animation Editor displays at the bottom of Studio.
-
-   <img src="../../../assets/education/general/Animation-Editor.png" />
-
-   <img src="../../../assets/education/build-it-play-it-island-of-move/creating-animations/highlight-animation-editor.jpg" width="100%" />
+1. Click the **Animation** button. The **Animation Editor** displays at the bottom of Studio.
 
 ## Prepare rig
 
-The Animation Editor requires a **rig**, or poseable figure, to create character animations because rigs include the internal structure you need to move and rotate body parts into different poses. While you can create your own rigs or access several pre-built rigs through the Rig Builder tool, this lesson provides a rig on top of the pedestal in the experience.
+The **Animation Editor** requires a **rig**, or poseable figure, to create character animations because rigs include the internal structure you need to move and rotate body parts into different poses. While you can create your own rigs or access several pre-built rigs through the **Rig Generator** tool, this lesson provides a rig on top of the pedestal in the experience.
 
 <img src="../../../assets/education/build-it-play-it-island-of-move/creating-animations/highlight-figure.jpg" width="100%" />
 
@@ -38,9 +32,9 @@ To prepare your rig:
 
    <img src="../../../assets/education/build-it-play-it-island-of-move/creating-animations/rig-selected.jpg" width="80%" />
 
-1. Back in the **Avatar** tab, find the snapping tools and make sure **Rotate** and **Move** are not checked.
+1. In the toolbar, find the snapping tools and make sure **Rotate** and **Move** are not checked.
 
-   <img src="../../../assets/education/build-it-play-it-island-of-move/creating-animations/turn-off-snap.png" width="80%" />
+   <img src="../../../assets/education/general/Snap-Settings-C.png" width="500" />
 
 1. Using the camera controls, move the camera to get a good view of the part you want to animate. While moving, hold <kbd>Shift</kbd> to slow down camera movements.
 
@@ -54,7 +48,7 @@ To prepare your rig:
      <tbody>
        <tr>
          <td>**Move**</td>
-         <td><kbd>W A S D</kbd> </td>
+         <td><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd></td>
        </tr>
        <tr>
          <td>**Rotate**</td>
@@ -75,12 +69,12 @@ To prepare your rig:
 
    <Alert severity="warning">
    <AlertTitle>Can't move the camera?</AlertTitle>
-   If the camera doesn't move when you press <kbd>W A S D</kbd>, click somewhere inside the 3D viewport.
+   If the camera doesn't move when you press <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd>, click somewhere inside the 3D viewport.
    </Alert>
 
 ## Create first pose
 
-Now that the Animation Editor is open and your rig preparation is complete, it's time to start posing your character for the first pose of your animation. This lesson focuses on a swimming animation, but feel free to adjust the learnings for your own poses. Depending on the animation you want to create, your first pose may be very different.
+Now that the **Animation Editor** is open and your rig preparation is complete, it's time to start posing your character for the first pose of your animation. This lesson focuses on a swimming animation, but feel free to adjust the learnings for your own poses. Depending on the animation you want to create, your first pose may be very different.
 
 <GridContainer numColumns="3">
   <figure>
@@ -105,7 +99,7 @@ To create your first pose for a swimming animation:
 
 1. Back in the toolbar, select the **Rotate** tool, then click on the rig's **LeftUpperArm**. A set of handles display around the body part.
 
-   <img src="../../../assets/education/general/Rotate-Tool.png" width="40%" />
+   <img src="../../../assets/education/general/Rotate-Tool.png" width="328" />
 
    <video controls src="../../../assets/education/build-it-play-it-island-of-move/create-the-first-pose/click-upper-arm.mp4" width="80%"></video>
 
@@ -134,7 +128,7 @@ If you're running into any issues while trying to rotate your rig's body parts, 
 
 Before you begin your second pose, let's take a moment to duplicate your first pose at the end of your animation. This process ensures that your animation repeats smoothly as it loops.
 
-To move your first pose to the end of the animation, you need to move the **scrubber** that marks the current keyframe position to the end of the timeline. The **timeline** is the numbered line at the top of the Animation Editor that represents your animation in seconds.
+To move your first pose to the end of the animation, you need to move the **scrubber** that marks the current keyframe position to the end of the timeline. The **timeline** is the numbered line at the top of the **Animation Editor** that represents your animation in seconds.
 
 <GridContainer numColumns="2">
   <figure>

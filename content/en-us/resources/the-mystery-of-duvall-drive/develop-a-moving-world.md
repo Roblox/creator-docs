@@ -266,7 +266,7 @@ After we [rig and skin](../../art/modeling/rigging.md) the Beechwood tree, we co
 
 <figure>
   <img src="../../assets/resources/mystery-of-duvall-drive/developing-a-moving-world/redwood-tree-animation.png" width="80%" />
-  <figcaption>Using the Animation Editor, we could apply the same Redwood tree animation to the Beechwood tree!</figcaption>
+  <figcaption>Using the **Animation Editor**, we could apply the same Redwood tree animation to the Beechwood tree!</figcaption>
 </figure>
 
 Once we had all the tree types we wanted animated, we made each into [packages](../../projects/assets/packages.md) so we could continue to edit and update while playing several of the animations around the main area of the experience. Since we knew they had a performance cost, we used them sparingly around the house where the effect was most valuable! In the future as this becomes more performant, you'll be able to add more and more skinned mesh instances!

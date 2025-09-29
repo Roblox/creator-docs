@@ -93,7 +93,7 @@ To assist with network ownership debugging, Studio can render colored outlines a
 </table>
 
 <Alert severity="info">
-Note that in a [multi-client simulation](../studio/testing-modes.md#multi-client-simulation), each client is assigned a unique color to indicate their ownership; this is mirrored in the [Server](../studio/testing-modes.md#clientserver-toggle) view, helping you determine which client owns which part(s) at any given time.
+Note that in a [multi-client simulation](../studio/testing-modes.md#multi-client-simulation), each client is assigned a unique color to indicate their ownership; this is mirrored in the [Server](../studio/testing-modes.md#toggle-clientserver) view, helping you determine which client owns which part(s) at any given time.
 </Alert>
 
 To enable network ownership visualization:

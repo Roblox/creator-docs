@@ -103,7 +103,7 @@ The **Suburban** template includes common neighborhood objects such as homes, pl
 
 ## Pirate Island
 
-The **Pirate Island** template includes a destructible ship with working cannons and multiple island examples that you can customize or reference as you create your own with the Terrain Editor.
+The **Pirate Island** template includes a destructible ship with working cannons and multiple island examples that you can customize or reference as you create your own with the **Terrain Editor**.
 
 <img src="../assets/resources/templates/Pirate-Island-Template.png" width="50%" alt="" />
 
@@ -119,7 +119,7 @@ The **Classic Obby** template includes common obstacle objects like checkpoints,
 
 ## Starting Place
 
-The **Starting Place** template includes many basic objects to assist creators in becoming familiar with core Studio functionality, such as modifying basic parts and using the Terrain Editor.
+The **Starting Place** template includes many basic objects to assist creators in becoming familiar with core Studio functionality, such as modifying basic parts and using the **Terrain Editor**.
 
 <img src="../assets/resources/templates/Starting-Place-Template.png" width="50%" alt="" />
 

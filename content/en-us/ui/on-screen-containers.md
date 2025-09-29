@@ -20,7 +20,7 @@ To display a `Class.ScreenGui` and its child `Class.GuiObject|GuiObjects` to eve
 <img src="../assets/ui/ui-objects/StarterGui-To-PlayerGui.png" width="840" alt="Diagram of how a ScreenGui clones from StarterGui to a player's PlayerGui" />
 
 <Alert severity="success">
-By default, `Class.GuiObject|GuiObjects` inside a `Class.ScreenGui` within `Class.StarterGui` appear as an overlay of the [3D&nbsp;viewport](../studio/ui-overview.md#3d-viewport), simulating their appearance and position in a running experience. To hide all such screen overlays, toggle off **GUI&nbsp;overlay** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport, or toggle off [UI&nbsp;Visibility](../studio/view-tab.md#ui-visibility) from the [View](../studio/view-tab.md) tab.
+By default, `Class.GuiObject|GuiObjects` inside a `Class.ScreenGui` within `Class.StarterGui` appear as an overlay of the [3D&nbsp;viewport](../studio/ui-overview.md#3d-viewport), simulating their appearance and position in a running experience. To hide all such screen overlays, toggle off **GUI&nbsp;overlay** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 </Alert>
 
 <Alert severity="info">

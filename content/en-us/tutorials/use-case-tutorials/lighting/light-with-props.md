@@ -23,7 +23,7 @@ Light sources like point lights need to be inserted directly into parts, meshes,
 
    ![alt](../../../assets/tutorials/lighting-with-props/LightPole-Select-Model.jpg)
 
-2. In the Explorer window, expand the model's tree and select the **LightCasing** part.
+2. In the **Explorer** window, expand the model's tree and select the **LightCasing** part.
 
    <img src="../../../assets/tutorials/lighting-with-props/LightPole-Select-LightCasing.png" width="60%" />
 

@@ -13,10 +13,8 @@ Adventuring is always more fun with friends, so let's set up your experience for
 
 2. Select **File** (top left of Studio) and click **Game Settings**.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/invite-friends/game-settings.png"  />
-
 3. On the left bar, select **Permissions**, then choose **Public**.
 
-   <img src="../../assets/education/general/make-public.png" width="80%" />
+   <img src="../../assets/education/general/Make-Public.png" width="800" />
 
 4. Click the **Save** button.

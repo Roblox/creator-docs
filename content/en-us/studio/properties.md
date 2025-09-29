@@ -3,9 +3,11 @@ title: Properties window
 description: The Properties window lets you adjust properties of a selected object to change how it looks and behaves.
 ---
 
-The **properties** window, accessible from the [View](../studio/view-tab.md) tab, allows you to adjust certain properties of a selected object to change how the object looks and behaves. Additionally, you can manage [tags](#instance-tags) and configure instance [attributes](#instance-attributes) at the bottom of the window.
+The **Properties** window, accessible from Studio's **Window** menu or **Home** tab toolbar, allows you to adjust certain properties of a selected object to change how the object looks and behaves. Additionally, you can manage [tags](#instance-tags) and configure instance [attributes](#instance-attributes) at the bottom of the window.
 
-<img src="../assets/studio/general/View-Tab-Properties.png" width="876" alt="Properties toggle button in Studio" />
+<img src="../assets/studio/general/Toolbar-Properties.png" width="800" alt="Properties highlighted in Studio's toolbar." />
+
+<img src="../assets/studio/properties/MeshPart-General.png" width="320" alt="General appearance properties for a MeshPart" />
 
 ## Header bar
 
@@ -57,7 +59,7 @@ After you expand or collapse a property, it remains expanded or collapsed for ot
 
 ## Filter properties
 
-You can filter properties by typing a search query into the **Filter Properties** input near the top of the window. For example, filtering by the letters "velo" finds all properties containing them, such as **AssemblyLinear<u>Velo</u>city** and **AssemblyAngular<u>Velo</u>city**. Quickly access this input by pressing <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>P</kbd> (<kbd>⌘</kbd><kbd>Shift</kbd><kbd>P</kbd>).
+You can filter properties by typing a search query into the **Filter Properties** input near the top of the window. For example, filtering by the letters "velo" finds all properties containing them, such as **AssemblyLinear<u>Velo</u>city** and **AssemblyAngular<u>Velo</u>city**. Quickly access this input by pressing <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>P</kbd> (Windows) or <kbd>⌘</kbd><kbd>Shift</kbd><kbd>P</kbd> (Mac).
 
 <img src="../assets/studio/properties/Instance-Filtered.png" width="320" />
 
@@ -83,33 +85,13 @@ To add tags to an instance through the **Properties** window:
 
 **Attributes** allow you to customize instances with your own data. They are similar to built-in object properties, but you can create and modify your own attributes for any instance. Key features include:
 
-- Attributes can be created, edited, and deleted directly within the **Properties** window, or through [scripting](#scripting).
+- Attributes can be created, edited, and deleted directly within Studio or through scripting (see [properties and attributes](../scripting/attributes.md) for script commands to create, set, get, and delete attributes).
 - Attributes and their values are saved with your place and assets.
 - Value changes can be viewed in real time and are **replicated** so that clients can access them immediately.
 
-<Alert severity="success">
-Attributes are a great tool to help you rapidly iterate and tune your experience. Using attributes, you can expose important parameters so that anyone on the team can test out different values without requiring a complete understanding of the underlying code.
-</Alert>
-
-Examples of attribute usage include:
-
-- Weapons with attributes such as damage, fire rate, shot sound, and reload time.
-
-  <img src="../assets/studio/properties/Attributes-Example-A.png" width="320" />
-
-- Vehicle tuning like acceleration and top speed, body color, and engine sound.
-
-  <img src="../assets/studio/properties/Attributes-Example-B.png" width="320" />
-
-- Additional [package](../projects/assets/packages.md) or asset metadata such as description, version, and author.
-
-  <img src="../assets/studio/properties/Attributes-Example-C.png" width="320" />
-
-### Supported types
-
 You can store the following types/values in attributes:
 
-<Grid container spacing={1}>
+<Grid container spacing={3}>
 	<Grid item>
 		<ul>
 			<li>[string](../luau/strings.md)</li>
@@ -129,7 +111,7 @@ You can store the following types/values in attributes:
 	<Grid item>
 		<ul>
 			<li>`Datatype.Vector3`</li>
-			<li>`Datatype.EnumItem`</li>
+			<li>`Datatype.CFrame`</li>
 			<li>`Datatype.NumberSequence`</li>
 			<li>`Datatype.ColorSequence`</li>
 		</ul>
@@ -139,12 +121,9 @@ You can store the following types/values in attributes:
 			<li>`Datatype.NumberRange`</li>
 			<li>`Datatype.Rect`</li>
 			<li>`Datatype.Font`</li>
-			<li>`Datatype.CFrame`</li>
 		</ul>
 	</Grid>
-</Grid>
-
-### Studio usage
+</Grid><br />
 
 New attributes can be created and modified in Studio as follows:
 
@@ -160,7 +139,3 @@ New attributes can be created and modified in Studio as follows:
 1. If necessary, you can **rename** or **delete** an attribute by clicking the gear icon.
 
    <img src="../assets/studio/properties/Rename-Delete-Attribute-Button.png" width="320" />
-
-### Scripting
-
-Part of the appeal of custom attributes is that you can use scripts to manipulate them. See [Properties and Attributes](../scripting/attributes.md).

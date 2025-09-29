@@ -27,19 +27,14 @@ Roblox Studio launches with extra windows open that you don't need for this less
 
 To customize the workspace for your coding task:
 
-1. Close any open window on the **left side** of Studio by clicking the **X** button on the top-right corner of the window. If you don't see anything to close, go to the next step.
+1. Close each window on the **left** of the 3D view by clicking the **&times;** in the window's upper-right corner. If you don't see anything to close on the left, go to the next step.
 
-   <img src="../../../assets/education/story-games/CloseToolbox.png" width="60%" />
+2. Leave the **Explorer** and **Properties** windows open on the right side of Studio. If you have done each step correctly, Studio looks like the following image.
 
-2. Leave the **Explorer** and **Properties** window open on the right side of Studio. If you have done each step correctly, Studio looks like the following image.
-
-   <img src="../../../assets/education/story-games/studio-setup.png" width="100%" />
+   <img src="../../../assets/education/general/Studio-Setup-Story-Games.jpg" width="960" />
 
    <Alert severity="warning">
-   If you don't see the Explorer and Properties windows, you can open them by going to the **Home** tab and clicking the **Explorer** and **Properties** buttons.
-
-   <img src="../../../assets/education/general/OpenExplorerandProperties.png" />
-
+   If you don't see the **Explorer** and **Properties** windows, open them from Studio's **Window** menu.
    </Alert>
 
 ## Brainstorm your story

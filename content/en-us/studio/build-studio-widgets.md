@@ -1,9 +1,9 @@
 ---
-title: Build Studio widgets
+title: Studio widgets
 description: Building custom widgets in Studio allows you to customize workflows and views.
 ---
 
-Studio gives you the power to create custom **widgets** and use them as Studio tools and extensions. These widgets behave as custom windows/panels in Studio, and you can dock them inside of your interface or have them float as separate windows.
+Studio gives you the power to create custom **widgets** and use them as tools and extensions. These widgets behave as custom windows/panels in Studio, and you can dock them inside of your interface or have them float as separate windows.
 
 ## Create widget UIs
 

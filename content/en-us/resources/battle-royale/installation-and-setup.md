@@ -69,7 +69,7 @@ Roblox Battle Royale must be structured as a game with six unique places. To beg
 
 Once the lobby place is published, you'll need to add **five additional places** to the game:
 
-1. If it's not already visible, open the **Asset Manager** window (View → Asset Manager).
+1. If it's not already visible, open the **Asset Manager** window.
 2. Double-click the **Places** folder.
 
    <img
@@ -91,14 +91,14 @@ Once the lobby place is published, you'll need to add **five additional places**
 
 Each place must be cross-associated so that players can teleport from the lobby to various play mode queues and vice-versa. To achieve this, you'll need to gather the place IDs of the places you created above.
 
-1. In the Asset Manager window, right-click **Lobby** and select **Copy ID to Clipboard**.
+1. In the **Asset Manager** window, right-click **Lobby** and select **Copy ID to Clipboard**.
 
    <img
    alt="Copy Lobby ID"
    src="../../assets/resources/battle-royale/installation-and-setup/Battle-Royale-Lobby-Copy-ID.png"
    width="80%" />
 
-2. If it's not already visible, open the **Explorer** window (**View** → **Explorer**).
+2. If it's not already visible, open the **Explorer** window.
 3. Open the **MainConfiguration** script within **ReplicatedFirst** → **Configurations**.
 
    <img

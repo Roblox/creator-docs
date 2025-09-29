@@ -13,13 +13,7 @@ Creating animations is like posing an action figure. For this tutorial, you'll c
 
 The poses and the final animation will be created using the Animation Editor.
 
-1. To find the Animation Editor, go to the **Avatar** tab, then click the **Animation** button.
-
-   <img src="../../assets/education/general/Animation-Editor.png" />
-
-   The Animation Editor will open at the bottom of your screen.
-
-   <img src="../../assets/education/build-it-play-it-island-of-move/creating-animations/highlight-animation-editor.jpg" width="100%" />
+1. To find the Animation Editor, click **Animation** from the **Avatar** tab. The Animation Editor will open at the bottom of your screen.
 
 2. Next, you need a character to animate. On the pedestal, one has already been set up for you. Select the **figure** on top.
    <img src="../../assets/education/build-it-play-it-island-of-move/creating-animations/highlight-figure.jpg" width="100%" />
@@ -32,9 +26,9 @@ The poses and the final animation will be created using the Animation Editor.
 
 Before creating the poses, make it easier to pose figures by changing a program setting and then position the camera.
 
-1. Back in the **Avatar** tab, find the snapping tools and make sure **Rotate** and **Move** are not checked.
+1. In the toolbar, find the snapping tools and make sure **Rotate** and **Move** are not checked.
 
-   <img src="../../assets/education/build-it-play-it-island-of-move/creating-animations/turn-off-snap.png" width="80%" />
+   <img src="../../assets/education/general/Snap-Settings-C.png" width="500" />
 
 2. Using the camera controls, move the camera to get a good view of the part you want to animate. When moving, hold <kbd>Shift</kbd> to slow down camera movements.
 
@@ -53,7 +47,7 @@ Before creating the poses, make it easier to pose figures by changing a program 
      <tbody>
        <tr>
          <td>**Move**</td>
-         <td><kbd>W A S D</kbd> </td>
+         <td><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd></td>
        </tr>
        <tr>
          <td>**Rotate**</td>
@@ -73,5 +67,5 @@ Before creating the poses, make it easier to pose figures by changing a program 
 
    <Alert severity="warning">
    <AlertTitle>Can't move the camera?</AlertTitle>
-   If the camera doesn't move when you press <kbd>W A S D</kbd>, click somewhere inside the game world.
+   If the camera doesn't move when you press <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd>, click somewhere inside the game world.
    </Alert>

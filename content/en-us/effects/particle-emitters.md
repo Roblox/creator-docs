@@ -58,7 +58,7 @@ see [here](../projects/assets/manager.md#asset-import).
 
 To insert an image into a particle emitter:
 
-1. Navigate to the toolbar's **Home** tab and select **Toolbox**. The **Toolbox** window displays.
+1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../projects/assets/toolbox.md).
 2. If you want to insert an image that you have previously imported, click the **Inventory** tab. If you want to insert an image from another creator, click the **Creator Store** tab.
 
    <img src="../assets/studio/toolbox/Inventory-Tab.png" width="360" alt="Inventory tab indicated in Studio's Toolbox" />

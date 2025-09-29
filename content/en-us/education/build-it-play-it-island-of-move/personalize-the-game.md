@@ -16,8 +16,6 @@ The words you see in-game like "Move It Simulator", and "Roblox Developer" are a
 
 2. In Explorer **search bar**, type _GameSettings_.
 
-   <img src="../../assets/education/build-it-play-it-island-of-move/personalize-the-game/find-game-settings.png" width="50%" />
-
 3. Double-click the _GameSettings_ script.
 
    <img src="../../assets/education/build-it-play-it-island-of-move/personalize-the-game/open-game-settings.png" width="50%" />

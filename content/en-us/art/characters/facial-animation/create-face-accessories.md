@@ -174,7 +174,7 @@ To export:
 
 ## Test in Studio
 
-To use your exported model into Studio as an `Class.Accessory`, use the [Accessory Fitting tool](../../../art/accessories/accessory-fitting-tool.md) to test and generate the accessory object. At this point, you can equip the accessory to a humanoid character. If you intend to transfer skinning data from your character to the accessory model at runtime, you can enable [automatic skinning transfer](../../../art/accessories/automatic-skinning-transfer.md) for your accessory.
+To use your exported model into Studio as an `Class.Accessory`, use the [Accessory Fitting Tool](../../../art/accessories/accessory-fitting-tool.md) to test and generate the accessory object. At this point, you can equip the accessory to a humanoid character. If you intend to transfer skinning data from your character to the accessory model at runtime, you can enable [automatic skinning transfer](../../../art/accessories/automatic-skinning-transfer.md) for your accessory.
 
 <Alert severity="info">
 If following the references provided by this guide, only **EnabledOverride** applies the skinning transfer in Studio, since some skinning data will have been applied to the model during the [parenting](#parent-armature) process.

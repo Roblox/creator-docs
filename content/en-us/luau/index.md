@@ -11,7 +11,7 @@ Contributing your Luau scripts for AI training can help enhance Luau-focused AI 
 
 ## Support in Studio
 
-The Script Editor in Studio supports Luau with autocompletion, syntax highlighting, static linting, type checking, and script analysis. It also shows documentation and function signatures for members of the [Roblox Engine API](/reference/engine).
+The **Script Editor** in Studio supports Luau with autocompletion, syntax highlighting, static linting, type checking, and script analysis. It also shows documentation and function signatures for members of the [Roblox Engine API](/reference/engine).
 
 ## Types
 

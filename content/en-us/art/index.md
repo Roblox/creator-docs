@@ -334,7 +334,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 
 <a href="./modeling/3d-importer.md"><Typography variant='body1' style={{marginBottom: 12}}>3D Importer</Typography></a>
 
-<a href="./accessories/accessory-fitting-tool.md"><Typography variant='body1' style={{marginBottom: 12}}>Accessory Fitting tool</Typography></a>
+<a href="./accessories/accessory-fitting-tool.md"><Typography variant='body1' style={{marginBottom: 12}}>Accessory Fitting Tool</Typography></a>
 
 <a href="../animation/editor.md"><Typography variant='body1' style={{marginBottom: 12}}>Animation Editor</Typography></a>
 

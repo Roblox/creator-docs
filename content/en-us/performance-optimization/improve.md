@@ -185,7 +185,7 @@ per frame on both the server and the client.
   - For objects that don't require collisions, disable collisions and use box or
     hull fidelity, since the collision geometry is still stored in memory.
   - You can render collision geometry for debug purposes in Studio by toggling
-  	on **Collision fidelity** from the [Visualization options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
+  	on **Collision fidelity** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 
     Alternatively, you can apply the `CollisionFidelity=PreciseConvexDecomposition` filter to the [Explorer](../studio/explorer.md#property-filters) which shows a count of all mesh parts with the precise fidelity and allows you to easily select them.
 
@@ -485,7 +485,7 @@ every frame, but larger amounts of information require more compute time.
   means creating and destroying large instance hierarchies like maps at runtime
   can be very network intensive.
 
-  A common culprit here is the complex animation data saved by Animation Editor
+  A common culprit here is the complex animation data saved by **Animation Editor**
   plugins in rigs. If these aren't removed before the game is published and
   the animated model is cloned regularly, a large amount of data will be
   replicated unnecessary.

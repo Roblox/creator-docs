@@ -13,9 +13,9 @@ This walkthrough shows how to use the MicroProfiler to find a problematic aspect
 
 ## Identify the issue
 
-1. After you open the experience in Studio, start testing it with <kbd>F5</kbd> or the **Play** button.
+1. After you open the experience in Studio, [initiate a playtest](../../studio/testing-modes.md#playtesting) (<kbd>F5</kbd>).
 
-1. The frame rate feels decent, but not as smooth as it should be for an experience of this size and scope. Navigate to the **View** tab and click **Summary** under [Stats](../../studio/view-tab.md#diagnostic-stats).
+1. The frame rate feels decent, but not as smooth as it should be for an experience of this size and scope. Navigate to Studio's **Window**&nbsp;⟩ **Performance** menu and select **Stats**.
 
    <img alt="Debug stats summary showing 45 FPS." src="../../assets/optimization/microprofiler/micro-tut-framerate.png" width="500px" />
 
@@ -45,7 +45,7 @@ This walkthrough shows how to use the MicroProfiler to find a problematic aspect
 
 Now that the MicroProfiler has provided a starting point, you can troubleshoot the problematic code.
 
-1. Stop the play test and filter the Explorer window for `localscript` to find the file.
+1. Stop the play test and filter the **Explorer** window for `localscript` to find the file.
 
    <img alt="A view of filtering in the Explorer window." src="../../assets/optimization/microprofiler/micro-tut-explorer-filter.png" width="400px" />
 

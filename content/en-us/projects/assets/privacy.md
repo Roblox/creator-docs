@@ -10,8 +10,6 @@ The **asset privacy system** lets you control how creators and experiences can u
 
 If a creator or experience doesn't have permission to use an asset, it cannot load in Studio, and a clickable error message displays in the [Output](../../studio/output.md) window. If a creator has permission to use an asset but the experience they're working on does not, clicking the error message displays a pop-up window to allow the creator to grant permission to the experience for any restricted assets.
 
-<img src="../../assets/studio/general/Output-Window-Error.png" width="90%" alt="An example of an error that displays in the Output window when a creator or experience doesn't have permission to use a restricted asset."  />
-
 When an asset is open use, Roblox doesn't need to check its permissions when it loads into an experience because every creator and experience can freely use it. However, when an asset is restricted, Roblox **always** checks its permissions when it loads into an experience or when a creator takes an action on the asset, such as inserting it into Studio, sharing it with another creator, or listing it on the [Creator Store](../../production/creator-store.md).
 
 <Alert severity="info">
@@ -127,8 +125,6 @@ Once a collaborator has permission to use one of your restricted assets, they ca
 
 However, if a collaborator wants to use the restricted asset in a script, or if they want to save or publish a template place that includes the restricted asset, the collaborator must also give the [experience](#to-experiences) itself permission to use the asset. If the creator or group member doesn't complete this step, the asset isn't visible or audible during runtime, and a clickable error message displays in the **Output** window.
 
-<img src="../../assets/studio/general/Output-Window-Error.png" alt="An example of an error that displays in the Output window when a creator or experience doesn't have permission to use a restricted asset." width="90%" />
-
 To grant a collaborator permission to use a restricted asset in any of these scenarios:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
@@ -170,7 +166,7 @@ To grant an experience permission to use one of your restricted assets, the expe
 After you or a collaborator with permission grants an experience access to use a restricted asset, anyone who has **Edit** access to that experience gains implicit permission to:
 
 - Copy and paste the asset into another place file within that experience.
-- Use its asset ID in the Properties window or in scripts within any place file within the experience.
+- Use its asset ID in the **Properties** window or in scripts within any place file within the experience.
 
 <Alert severity="info">
 When you grant permission to an experience by inserting it into a collaborator’s experience, the asset is also automatically shared with the experience's owner.

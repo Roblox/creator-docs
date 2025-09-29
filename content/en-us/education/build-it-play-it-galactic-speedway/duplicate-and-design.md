@@ -14,7 +14,7 @@ As you build, parts can be used more than once by creating duplicates. This is u
 
    <Alert severity="info">
    <AlertTitle>Get Precise Rotation</AlertTitle>
-   Instead of rotating by a set amount, you can rotate freely by turning off rotation snapping. In the **Home** tab, next to **Rotate**, uncheck the box. Just remember to turn it back on when you're done.
+   Instead of rotating by a set amount, you can rotate freely by turning off rotation snapping. In the toolbar, next to **Rotate**, uncheck the box. Just remember to turn it back on when you're done.
    </Alert>
 
 ## Continue building

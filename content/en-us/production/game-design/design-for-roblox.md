@@ -82,7 +82,7 @@ Consider how your experience might work in a streaming context when designing: c
 
 While Roblox Studio offers a multitude of features for creating ambitious experiences with high-end visuals, it's wise not to lose focus on performance on lower-end devices. Most users play Roblox on mobile devices, and the audience is sensitive to friction and load times, so be conscious of performance in your designs.
 
-Roblox Studio makes it easy to prototype your experiences through solid modeling and the Toolbox. These tools are invaluable for testing and iteration.
+Roblox Studio makes it easy to prototype your experiences through solid modeling and the **Toolbox**. These tools are invaluable for testing and iteration.
 
 For more information, see the following resources:
 

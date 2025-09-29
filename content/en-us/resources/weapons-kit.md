@@ -55,7 +55,7 @@ To use an endorsed weapon in your experience:
   </GridContainer>
 
 1. On the weapon's item page, click the green **Get** button and confirm the transaction.
-1. In Studio, open the [Toolbox](../projects/assets/toolbox.md) (**View** &rarr; **Toolbox**).
+1. In Studio, open the [Toolbox](../projects/assets/toolbox.md).
 1. Select your toolbox **Inventory** section.
 1. Locate the weapon and click it to add it into the place. When prompted whether to put the tool into the starter pack, click **Yes** if you want players to start with the weapon in their backpack, or click **No** to simply place the weapon in the 3D world as a pickup.
 1. If this is the **first time** bringing in an endorsed weapon, move its **WeaponsSystem** folder into **ServerScriptService** to serve as the unified [system folder](#system-folder-structure) for all endorsed weapons in the experience.

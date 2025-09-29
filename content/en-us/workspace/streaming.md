@@ -409,7 +409,7 @@ player:GetPropertyChangedSignal("GameplayPaused"):Connect(onPauseStateChanged)
 
 In some cases, it's necessary to detect when an object streams in or out and react to that event. A useful pattern for streaming detection is as follows:
 
-1. Using the [Tags](../studio/properties.md#instance-tags) section of an instance's properties, or Studio's [Tag&nbsp;Editor](../studio/view-tab.md#windows-and-tools), assign a logical `Class.CollectionService` tag to all of the affected objects.
+1. Using the [Tags](../studio/properties.md#instance-tags) section of an instance's properties, assign a logical `Class.CollectionService` tag to all of the affected objects.
 
 2. From a single `Class.LocalScript`, detect when a tagged object streams in or out through `Class.CollectionService:GetInstanceAddedSignal()|GetInstanceAddedSignal()` and `Class.CollectionService:GetInstanceRemovedSignal()|GetInstanceRemovedSignal()`, then handle the object accordingly. For example, the following code adds tagged `Class.Light` objects into a "flicker" loop when they stream in and removes them when they stream out.
 

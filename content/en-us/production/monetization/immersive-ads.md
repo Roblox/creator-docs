@@ -137,7 +137,7 @@ Eligible users can see two types of video ads within Roblox experiences, dependi
 
 To insert a video ad:
 
-1. From the **Home** or **Model** tab, insert a **Block** part into your experience.
+1. From the **Home** or **Model** tab toolbar, insert a **Block** part into your experience.
 2. Scale the part to at least 8 studs wide and 4.5 studs tall, but no more than 32 studs wide and 18 studs tall.
 3. In the **Explorer** window, add an **AdGui** object to the part. To do so, hover over the part and click the **Add** button, then insert an AdGui.
 4. In the **Properties** window, with the new AdGui selected, go to the **Face** property and choose a face. You can also keep the default face.
@@ -161,7 +161,7 @@ In order for the ad unit to be valid and serve ads once you publish the experien
 
 To insert an image ad:
 
-1. From the **Home** or **Model** tab, insert a **Block** part into your experience.
+1. From the **Home** or **Model** tab toolbar, insert a **Block** part into your experience.
 2. Scale the part to at least 8 studs wide and 4.5 studs tall, but no more than 32 studs wide and 18 studs tall.
 3. In the **Explorer** window, add an **AdGui** object to the part. To do so, hover over the part and click the **Add** button, then insert an AdGui.
 4. In the **Properties** window, go to the **Face** property and choose a face. You can also keep the default face.
@@ -233,9 +233,11 @@ For example, the following two portal ad packages have the exact same core compo
 To insert a portal ad:
 
 1. Open the Creator Store.
-   1. In the toolbar, go to the **View** tab.
-   1. Select **Toolbox**.
-1. In the **Categories** section, click **See All**.
+
+   1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../projects/assets/toolbox.md).
+   1. Select the **Creator Store** tab.
+
+1. In the **Categories** section, click the **See All** button. All categories display.
 
    <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 

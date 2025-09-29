@@ -9,11 +9,12 @@ Next, duplicate the road tiles in your palette to create roads between the build
 
 1. Select a road in the palette and **duplicate** it. Then, **move** it over into your map.
 2. Rotate the selected road tile to get the desired orientation. To rotate the tiles, select the **Rotate** tool and drag the green handle until the tile rotates.
-   <video controls src="../../assets/education/build-it-play-it-create-and-destroy/cc2019_showRotateBuilding.mp4" width="100%"></video>
 
-  <Alert severity="info">
-  You can save time building roads by duplicating a road tile in your arena, rather than always duplicating from the palette.
-  </Alert>
+   <img src="../../assets/education/general/Rotate-Tool.png" width="328" />
+
+   <Alert severity="info">
+   You can save time building roads by duplicating a road tile in your arena, rather than always duplicating from the palette.
+   </Alert>
 
 ## Map example
 

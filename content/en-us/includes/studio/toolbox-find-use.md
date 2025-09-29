@@ -24,7 +24,7 @@ title: include
 4. To add an asset to an experience:
 
    - If the asset is a [model](../../parts/models.md), [mesh](../../parts/meshes.md), [decal](../../parts/textures-decals.md), [video](../../ui/video-frames.md), or [audio](../../audio/assets.md) asset, click it or drag‑and‑drop it into the 3D viewport. It then inserts into the [Explorer](../../studio/explorer.md) hierarchy, and assets with 3D content display in the viewport.
-   - If the asset is a [plugin](../../studio/plugins.md), click it and use the **Install** button to add it to the mezzanine's [Plugins](../../studio/plugins-tab.md) tab.
+   - If the asset is a [plugin](../../studio/plugins.md), click it and use the **Install** button to add it to the mezzanine's **Plugins** tab.
    - If the asset is a font, click it and use the **Install** button to add it to your font library. It then becomes available for user interface elements such as [text labels](../../ui/labels.md) or [buttons](../../ui/buttons.md).
 
    <Alert severity="info">

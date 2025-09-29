@@ -15,13 +15,13 @@ Many contraptions in Roblox will use multiple constraints to build more complica
 
    <img src="../../../assets/tutorials/building-a-ferris-wheel/Ferris-Wheel-Edit-Place.png" width="780" alt="Edit in Studio option from the experience's main page" />
 
-2. To view constraints and attachments, toggle on **Constraint Details** in the toolbar's **Model** tab.
+2. To view constraints and attachments, toggle on **Show Constraint Details** from Studio's **View** menu.
 
 ## Add attachments
 
 You will need to add attachments to the ferris wheel to determine where it will rotate. When working with attachments, it helps to move the pieces you are working with apart so you can clearly see the position and orientation of the attachments.
 
-1. In the Explorer, expand **FerrisWheel**, select the **MainSupport** model, and move it so you can see the side of the wheel axle as well as the side of the support axle.
+1. In the **Explorer**, expand **FerrisWheel**, select the **MainSupport** model, and move it so you can see the side of the wheel axle as well as the side of the support axle.
 
    ![alt](../../../assets/tutorials/building-a-ferris-wheel/makingAFerrisWheel_moveMainSupport.jpg)
 
@@ -84,11 +84,11 @@ By default, `Class.HingeConstraint|HingeConstraints` will only turn if an outsid
 
    </Alert>
 
-3. Copy the inf value from **MotorMaxAcceleration** to **MotorMaxTorque** so that the wheel can handle any amount of weight.
+3. Copy the `inf` value from **MotorMaxAcceleration** to **MotorMaxTorque** so that the wheel can handle any amount of weight.
 
    <img src="../../../assets/tutorials/building-a-ferris-wheel/makingAFerrisWheel_motorMaxTorque.png" width="60%" />
 
-4. Test your wheel turning behavior by selecting **Play** and testing your experience.
+4. [Initiate a playtest](../../../studio/testing-modes.md#playtesting) to test your wheel turning behavior.
 
 <video controls loop muted>
     <source src="../../../assets/tutorials/building-a-ferris-wheel/ferrisWheel-finalExample.mp4" />

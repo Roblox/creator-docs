@@ -12,9 +12,7 @@ Change the season of Junker's Canyon or make it look even more alien by painting
 
 You can use the **Terrain Paint** tool to add snow, water, or even lava into your world.
 
-1. From the **Home** tab, open the **Terrain Editor**.
-
-   <img src="../../assets/education/build-it-play-it-galactic-speedway/design-the-world/open-terrain-editor.png" />
+1. From the **Home** tab, click **Terrain** to open the **Terrain Editor**.
 
 2. The editor will open on the left. To paint:
 

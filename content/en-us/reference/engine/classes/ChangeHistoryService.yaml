@@ -5,10 +5,10 @@
 name: ChangeHistoryService
 type: class
 memory_category: Instances
-summary: |
+summary: |-
   **Must** be used by plugins to communicate to Studio how to undo and redo the
   changes which they make to the experience.
-description: |
+description: |-
   Plugin developers **must** use `Class.ChangeHistoryService` to tell Studio how
   to undo and redo changes that their plugins make to experiences by recording.
   Before making changes, a plugin calls
@@ -31,7 +31,7 @@ deprecation_message: ''
 properties: []
 methods:
   - name: ChangeHistoryService:FinishRecording
-    summary: |
+    summary: |-
       Communicates to Studio that the identified recording is finished and to
       take the final operation to complete the recording.
     description: ''
@@ -41,7 +41,7 @@ methods:
       - name: identifier
         type: string
         default:
-        summary: |
+        summary: |-
           Identifies the recording from the previous call to
           `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()`.
           If the operation is
@@ -50,12 +50,11 @@ methods:
       - name: operation
         type: FinishRecordingOperation
         default:
-        summary: |
-          Specifies the operation to take.
+        summary: Specifies the operation to take.
       - name: finalOptions
         type: Dictionary?
         default:
-        summary: |
+        summary: |-
           Optional table of values to pass to
           `Class.ChangeHistoryService.OnFinishRecording|OnFinishRecording`.
     returns:
@@ -67,10 +66,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: ChangeHistoryService:GetCanRedo
-    summary: |
+    summary: |-
       Returns whether there are actions that can be redone, and, if there are,
       returns the last of them.
-    description: |
+    description: |-
       Returns whether there are actions that can be redone, and, if there are,
       returns the last of them.
     code_samples: []
@@ -84,10 +83,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: ChangeHistoryService:GetCanUndo
-    summary: |
+    summary: |-
       Returns whether there are actions that can be undone, and, if there are,
       returns the last of them.
-    description: |
+    description: |-
       Returns whether there are actions that can be undone, and, if there are,
       returns the last of them.
     code_samples: []
@@ -118,10 +117,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: ChangeHistoryService:Redo
-    summary: |
-      Executes the last action that was undone.
-    description: |
-      Executes the last action that was undone.
+    summary: Executes the last action that was undone.
+    description: Executes the last action that was undone.
     code_samples: []
     parameters: []
     returns:
@@ -133,10 +130,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: ChangeHistoryService:ResetWaypoints
-    summary: |
-      Clears the history, causing all undo/redo waypoints to be removed.
-    description: |
-      Clears the history, causing all undo/redo waypoints to be removed.
+    summary: Clears the history, causing all undo/redo waypoints to be removed.
+    description: Clears the history, causing all undo/redo waypoints to be removed.
     code_samples: []
     parameters: []
     returns:
@@ -148,9 +143,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: ChangeHistoryService:SetEnabled
-    summary: |
-      Sets whether or not the ChangeHistoryService is enabled.
-    description: |
+    summary: Sets whether or not the ChangeHistoryService is enabled.
+    description: |-
       Sets whether or not the ChangeHistoryService is enabled. When set to
       false, the undo/redo list is cleared, and does not repopulate. When set to
       true again, the original list is not restored, but further operations
@@ -170,9 +164,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: ChangeHistoryService:SetWaypoint
-    summary: |
-      Sets a new waypoint which can be used as an undo or redo point.
-    description: |
+    summary: Sets a new waypoint which can be used as an undo or redo point.
+    description: |-
       This method will be **deprecated soon** in favor of
       `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()`.
 
@@ -203,9 +196,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: ChangeHistoryService:TryBeginRecording
-    summary: |
-      Begins tracking changes made to the data model into a recording.
-    description: |
+    summary: Begins tracking changes made to the data model into a recording.
+    description: |-
       This method begins a recording to track changes to the data model. You
       **must** call it prior to making changes to avoid future warnings or
       errors.
@@ -228,14 +220,13 @@ methods:
       - name: name
         type: string
         default:
-        summary: |
+        summary: |-
           Name of the action being performed suitable for logging and coding
           purposes.
       - name: displayName
         type: string?
         default:
-        summary: |
-          Name of the action being performed to display to the user.
+        summary: Name of the action being performed to display to the user.
     returns:
       - type: string?
         summary: ''
@@ -245,10 +236,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: ChangeHistoryService:Undo
-    summary: |
-      Undos the last action taken, for which there exists a waypoint.
-    description: |
-      Undos the last action taken, for which there exists a waypoint.
+    summary: Undos the last action taken, for which there exists a waypoint.
+    description: Undos the last action taken, for which there exists a waypoint.
     code_samples: []
     parameters: []
     returns:
@@ -261,7 +250,7 @@ methods:
     capabilities: []
 events:
   - name: ChangeHistoryService.OnRecordingFinished
-    summary: |
+    summary: |-
       Fired when the user completes an action. Parameters come from
       `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()` and
       `Class.ChangeHistoryService:FinishRecording()|FinishRecording()`.
@@ -271,19 +260,17 @@ events:
       - name: name
         type: string
         default:
-        summary: |
+        summary: |-
           Name of the action being performed suitable for logging and coding
           purposes.
       - name: displayName
         type: string?
         default:
-        summary: |
-          Name of the action being performed to display to the user.
+        summary: Name of the action being performed to display to the user.
       - name: identifier
         type: string?
         default:
-        summary: |
-          The identifier for the recording.
+        summary: The identifier for the recording.
       - name: operation
         type: FinishRecordingOperation
         default:
@@ -291,7 +278,7 @@ events:
       - name: finalOptions
         type: Dictionary?
         default:
-        summary: |
+        summary: |-
           Optional table from
           `Class.ChangeHistoryService.FinishOperation()| FinishOperation()`.
     tags: []
@@ -299,7 +286,7 @@ events:
     security: PluginSecurity
     capabilities: []
   - name: ChangeHistoryService.OnRecordingStarted
-    summary: |
+    summary: |-
       Fired when the user begins an action. Parameters come from
       `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()`.
     description: ''
@@ -308,23 +295,22 @@ events:
       - name: name
         type: string
         default:
-        summary: |
+        summary: |-
           Name of the action being performed suitable for logging and coding
           purposes.
       - name: displayName
         type: string?
         default:
-        summary: |
-          Name of the action being performed to display to the user.
+        summary: Name of the action being performed to display to the user.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
     capabilities: []
   - name: ChangeHistoryService.OnRedo
-    summary: |
+    summary: |-
       Fired when the user reverses the undo command. Waypoint describes the type
       action that has been redone.
-    description: |
+    description: |-
       Fired when the user reverses the undo command. Waypoint describes the type
       action that has been redone.
     code_samples: []
@@ -338,10 +324,10 @@ events:
     security: PluginSecurity
     capabilities: []
   - name: ChangeHistoryService.OnUndo
-    summary: |
+    summary: |-
       Fired when the user undoes an action in studio. Waypoint describes the
       type action that has been undone.
-    description: |
+    description: |-
       Fired when the user undoes an action in studio. Waypoint describes the
       type action that has been undone.
     code_samples: []

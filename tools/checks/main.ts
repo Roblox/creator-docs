@@ -268,12 +268,15 @@ try {
       config.checkLocalizedContent &&
       !isLocaleFile(filePathFromRepoRoot, Locale.EN_US) // skip for English
     ) {
-      checkVoidTagsHaveNoChildren(filePathFromRepoRoot);
       checkEnglishVersionExists(filePathFromRepoRoot);
-      await checkMdxEquality(filePathFromRepoRoot, fileContent);
-      checkFileImportEquality(filePathFromRepoRoot, fileContent);
       checkFileIsTranslatable(filePathFromRepoRoot);
+      if (isMarkdownFile) {
+        checkVoidTagsHaveNoChildren(filePathFromRepoRoot);
+        await checkMdxEquality(filePathFromRepoRoot, fileContent);
+        checkFileImportEquality(filePathFromRepoRoot, fileContent);
+      }
     }
+
     if (config.checkRetextAnalysis) {
       const retextVFile = (await getReTextAnalysis(
         fileContent

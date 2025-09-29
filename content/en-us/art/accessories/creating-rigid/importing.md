@@ -13,7 +13,7 @@ Studio's 3D Importer provides a quick and easy way to import third-party 3D `.fb
 
 To import your asset ([downloadable reference](../../../assets/art/accessories/creating-rigid/Chest-Texturing-Complete.fbx)):
 
-1. In Studio, navigate to the toolbar's **Avatar** tab and select the **3D Importer**.
+1. From Studio's **File** menu, select **3D Importer**.
 2. In the file browser, select the `.fbx` file saved locally. The 3D Importer loads a preview of the object.
    1. If textures don't load for your asset, continue to the next step and add textures manually later.
 3. Select **Import**.

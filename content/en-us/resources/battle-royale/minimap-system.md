@@ -28,7 +28,7 @@ width="320" />
 
 To add new indicators that show up on the minimap, complete these steps:
 
-1. Using the **Tag&nbsp;Editor**, accessible from the [View](../../studio/view-tab.md) tab, apply a custom tag to the workspace object that you want to show up on the minimap.
+1. Through the [Tags](../../studio/properties.md#instance-tags) section of its properties, apply a custom tag to the workspace object that you want to show up on the minimap.
 
 2. Add the `Class.ImageLabel` you want to represent the object as a child of `ReplicatedStorage/Assets/GuiObjects/minimap/mapframe` and give it a unique name.
 

@@ -46,8 +46,8 @@ For better visualization and access to your bone objects, set your bone objects 
 To set the bone visualization:
 
 1. In the **Viewport**, click on any of the bones in your armature.
-2. In the **Properties Editor panel**, select the **Object Data Properties** tab.
-3. Expand Viewport Display, navigate to the **Show** property, then enable **In Front**.
+2. In the **Properties Editor** panel, select the **Object Data Properties** tab.
+3. Expand **Viewport Display**, navigate to the **Show** property, then enable **In Front**.
    <video controls src="../../assets/modeling/meshes/rigging-humanoid/2-bone-visualization.mp4" width="100%"></video>
 
 At any point during the skinning process, you can also toggle one of the various material previews options in the top right of your 3D Viewport to change the visualization of your character model, such as enabling X-ray or texture view.
@@ -120,7 +120,7 @@ To assign full influence to the head mesh:
 1. In **Object Mode**, click on the **head mesh object** to highlight it.
 2. Switch to **Edit Mode**.
 3. Select all the vertices of your mesh object by pressing <kbd>A</kbd>.
-4. After all the head vertices are highlighted, navigate to the **Object Properties panel** on the right side of the screen.
+4. After all the head vertices are highlighted, navigate to the **Object Properties** panel on the right side of the screen.
 5. In the **Vertex Group** section of the panel, select the name of the bone you want to assign the Head geometry to and click **Assign**.
 
    <video controls src="../../assets/modeling/meshes/rigging-humanoid/7-assign-influence-head.mp4" width="100%"></video>
@@ -129,9 +129,9 @@ You can quickly iterate through all of your mesh objects in this mode by selecti
 
 To quickly assign vertex groups to the rest of the body meshes:
 
-1. In the Outliner panel, **click** the dot next to the object you intend to edit. The dot switches to the active edit icon when pressed.
+1. In the **Outliner** panel, **click** the dot next to the object you intend to edit. The dot switches to the active edit icon when pressed.
 2. If the vertices are not highlighted, press <kbd>A</kbd> to select all vertices.
-3. In the **Object Properties panel** > **Vertex Groups** section, select the appropriate vertex group and click **Assign**. You can use the search bar to find the specific vertex group name.
+3. In the **Object Properties** panel > **Vertex Groups** section, select the appropriate vertex group and click **Assign**. You can use the search bar to find the specific vertex group name.
 
    <video controls src="../../assets/modeling/meshes/rigging-humanoid/8-assign-influence.mp4" width="100%"></video>
 

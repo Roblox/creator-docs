@@ -32,9 +32,7 @@ The **Texture Generator** tool is designed to quickly create custom textures for
 
 ## Generate textures
 
-To begin generating textures, navigate to the [Model](../studio/model-tab.md) tab and open the **Texture Generator** tool.
-
-<img src="../assets/studio/general/Model-Tab-Texture-Generator.png" width="704" alt="Texture Generator indicated in Model tab" />
+To begin generating textures, open the **Texture Generator** from Studio's **Window**&nbsp;⟩ **3D** menu.
 
 With the tool's window open:
 

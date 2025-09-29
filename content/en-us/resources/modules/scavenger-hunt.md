@@ -17,9 +17,7 @@ This module utilizes [data stores](../../cloud-services/data-stores/index.md). T
 
 To use the **ScavengerHunt** module in an experience:
 
-1. From the [View](../../studio/view-tab.md) tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
-
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
+1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
    <img src="../../assets/studio/toolbox/Creator-Store-Tab.png" width="360" />
 
@@ -81,7 +79,7 @@ Regions differ slightly from tokens, as large areas that are marked as "collecte
 
 1. Create an anchored part around the region, such as a block or sphere. The module will automatically disable the `Class.BasePart.CanCollide|CanCollide` property on runtime so players do not physically collide with the region.
 1. Give it a **unique name**. This name is how the module tracks which regions each player has entered.
-1. Using the [Tags](../../studio/properties.md#instance-tags) section of the part's properties, or Studio's [Tag&nbsp;Editor](../../studio/view-tab.md#windows-and-tools), apply the tag `ScavengerHuntPart` to the part so that `Class.CollectionService` detects it. If desired, the tag name which the module utilizes can be changed by setting a different value for `tokenTag` in a [configureServer](#configureserver) call.
+1. Using the [Tags](../../studio/properties.md#instance-tags) section of the part's properties, apply the tag `ScavengerHuntPart` to the part so that `Class.CollectionService` detects it. If desired, the tag name which the module utilizes can be changed by setting a different value for `tokenTag` in a [configureServer](#configureserver) call.
 1. Include a child `Class.StringValue` instance set to the "flavor&nbsp;text" to display when the region is entered.
 
    <img src="../../assets/developer-modules/scavenger-hunt/Region-Structure.png" width="320" />

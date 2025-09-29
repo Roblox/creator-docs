@@ -234,7 +234,7 @@ To recreate the surface ripples on top of the caldera in the sample [Volcano Isl
       1. Set **Texture** to `rbxassetid://16829556885` to render particles that look like foam ripples.
       1. Set **Orientation** to **VelocityPerpendicular** to emit particles perpendicular to the direction of their movement.
       1. Set **Color** to a color sequence in which particles are brown, become bright red, then turn maroon.
-         1. Click the **Color** property, then click the ⋯ button. A color sequence pop-up displays.
+         1. Click the **Color** property, then click the **&ctdot;** button. A color sequence pop-up displays.
 
          <img src="../../../assets/tutorials/creating-waterfalls/Cascades-1G1.png" alt="A close up view of Studio's Properties window with the Color property's ellipsis button highlighted." width="60%" />
 
@@ -248,7 +248,7 @@ To recreate the surface ripples on top of the caldera in the sample [Volcano Isl
          <img src="../../../assets/tutorials/creating-volcanoes/Ripples-3DColor.jpg" alt="" width="80%" />
 
       1. Set **Size** to a number sequence in which particles increase in size toward the middle of their lifetime before returning to their original size with a small window of variation.
-         1. Click the **Size** property, then click the ⋯ button. A number sequence pop-up displays. By default, the graph is a straight line and the image remains the same size from left to right.
+         1. Click the **Size** property, then click the **&ctdot;** button. A number sequence pop-up displays. By default, the graph is a straight line and the image remains the same size from left to right.
 
          <img src="../../../assets/tutorials/creating-waterfalls/Cascades-1H1.png" alt="A close up view of the Size number sequence graph." width="80%" />
 
@@ -265,7 +265,7 @@ To recreate the surface ripples on top of the caldera in the sample [Volcano Isl
          <img src="../../../assets/tutorials/creating-volcanoes/Ripples-3DSize.jpg" alt="" width="80%" />
 
       1. Set **Transparency** to a number sequence in which particles start as transparent, become more opaque toward the middle of their lifetime, then become transparent again at the end of their lifetime.
-         1. Click the **Transparency** property, then click the ⋯ button.
+         1. Click the **Transparency** property, then click the **&ctdot;** button.
          1. Set the following time and value properties throughout the number sequence:
 
          - **Time** = `0`, **Value** = `1`, **Envelope** = `0`

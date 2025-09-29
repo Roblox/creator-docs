@@ -22,9 +22,7 @@ You have an animation but now it needs to go into your game. To use the animatio
 
     </Alert>
 
-2. In the window, give the animation a **name** and **description**.
-
-   <img src="../../assets/education/build-it-play-it-island-of-move/publish-animations/animation-name-description.png" width="100%" />
+2. In the window, give the animation a **title** and **description**.
 
 3. Click the **Submit** button.
 

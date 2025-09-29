@@ -13,12 +13,12 @@ If you've never written code before and want an introduction to programming, see
 
 ## Luau
 
-Roblox scripts use the [Luau](https://luau-lang.org) programming language, which is derived from [Lua 5.1](https://www.lua.org/manual/5.1/).
+Roblox scripts use the [Luau](https://luau.org) programming language, which is derived from [Lua 5.1](https://www.lua.org/manual/5.1/).
 
 - Compared to Lua 5.1, Luau adds performance enhancements and many useful features, including an optional typing system, string interpolation, and generalized iteration for tables.
 - All valid Lua 5.1 code is valid Luau code, but the opposite is not true.
 
-Most books and online resources for Lua are still broadly applicable to Luau. For a detailed summary of differences, see [Compatibility](https://luau-lang.org/compatibility) in the Luau documentation. For language syntax, see the [Luau reference](../luau/index.md).
+Most books and online resources for Lua are still broadly applicable to Luau. For a detailed summary of differences, see [Compatibility](https://luau.org/compatibility) in the Luau documentation. For language syntax, see the [Luau reference](../luau/index.md).
 
 ### Luau basics
 
@@ -112,8 +112,7 @@ end
    ```
 
 1. Ensure that the [Output](../studio/output.md) window is open.
-1. Click **Play** to run your experience.
-1. Note the output:
+1. [Initiate a playtest](../studio/testing-modes.md#playtesting) to run your experience and note the output:
 
    ```text
    h
@@ -130,7 +129,7 @@ A big part of adapting to a new development environment is configuring it to mee
 - The **Script Editor** section of [Studio Settings](../studio/setup.md#customization) lets you adjust quality of life features like font, colors, indentation, autocomplete, brackets, and tooltips. You might also want to enable dark mode in the **Studio** section.
 - Holding <kbd>Ctrl</kbd> or <kbd>Command</kbd> and clicking on a function or variable takes you to its declaration in your codebase (or its online documentation). Using [Find and Find All](../studio/script-editor.md#find-and-replace) can help you navigate larger projects.
 - The [Output](../studio/output.md) window is the most basic tool for understanding the behavior of your scripts. Use the **&#x22EF;** menu to enable **Show Context** and **Show Source**.
-- The **Script Analysis** window shows a summary of errors and warnings, but you might find its utility limited; the Script Editor already highlights these issues as you type.
+- The [Script Analysis](../studio/script-editor.md#script-analysis) window shows a summary of errors and warnings, but you might find its utility limited; the Script Editor already highlights these issues as you type.
 - Logging capabilities are minimal, with no concept of log levels like `DEBUG` or `FATAL`. Use `Global.LuaGlobals.print()` and `Global.RobloxGlobals.warn()`.
 
 For more information about configuring Studio for scripting, see [Script Editor](../studio/script-editor.md). For information on using your favorite text editor and version control system, see [External tools](../projects/external-tools.md).
@@ -144,7 +143,7 @@ For more information about configuring Studio for scripting, see [Script Editor]
    print("Hello script types and locations!")
    ```
 
-1. Click **Play** to run your experience.
+1. [Initiate a playtest](../studio/testing-modes.md#playtesting) to run your experience.
 1. Note how the output is no different than when you ran [your first script](#your-first-script).
 
 To understand why the script didn't run, see [Script Types and Locations](./locations.md).

@@ -221,18 +221,13 @@ which tells the engine to run the script on the server, and prevents clients fro
 It's time to see if the coin collection mechanic works as intended. To playtest
 your experience:
 
-1. In the toolbar, click the **Play** button. Studio enters playtest mode.
+1. Choose **Test** from the dropdown menu and click the **Play** button to its right to begin the playtest.
 
-   <img src="../../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Play button highlighted in Studio's playtesting options." width="228" />
+   <img src="../../../../assets/studio/general/Mezzanine-Testing-Mode-Test.png" width="800" alt="Test option in the testing modes dropdown of Studio's mezzanine." />
 
-1. Move your character to touch a coin. If your scripts are working correctly, the
-   **Output** window displays `Player collected coin`, and the coin disappears for 10 seconds
-   before re-appearing.
+1. Move your character to touch a coin. If your scripts are working correctly, the [Output](../../../../studio/output.md) window displays `Player collected coin`, and the coin disappears for 10 seconds before re-appearing.
 
    <img src="../../../../assets/tutorials/script-game-behavior/Output-Collect-Coin.png" alt="Studio's Output window that displays confirmation that the player collected a coin." width="700" />
-
-   <Alert severity="info"> If you can't see the **Output** window, navigate to the **View** tab, then
-   select **Output**. </Alert>
 
    <video controls loop muted>
    <source src="../../../../assets/tutorials/script-game-behavior/script-game-behavior-coin-collection.mp4" />

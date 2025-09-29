@@ -9,7 +9,7 @@ Current user-generated avatars on the Marketplace do not support 2D classic clot
 
 To ensure the best quality results, you can test your classic clothing before uploading or selling. You can test your clothes without needing to pay any fees by using [Roblox Studio](../studio/setup.md).
 
-1. From the toolbar's **Avatar** tab, click **Rig Builder**.
+1. From the toolbar's **Avatar** tab, click **Character**.
 2. Choose a **Block Avatar** rig type from the popup menu. An avatar mannequin named **Rig** appears in the 3D workspace.
 
    <img src="../assets/accessories/classic-clothing/Block-Avatar-Default.jpg" width="800" />

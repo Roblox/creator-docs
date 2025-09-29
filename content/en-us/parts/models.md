@@ -65,7 +65,7 @@ As models typically contain multiple child [parts](../parts/index.md) or [meshes
 
 ## Transform models
 
-You can move, scale, or rotate a model using the Studio transform tools within the toolbar's **Home** and **Model** tabs. Unless you've set a [primary part](#set-a-primary-part), a model transforms based on the center of its bounding box.
+You can move, scale, or rotate a model using the Studio [transform](../parts/index.md#transform-parts) tools. Unless you've set a [primary part](#set-a-primary-part), a model transforms based on the center of its bounding box.
 
 Additionally, within a `Class.Script` or `Class.LocalScript`, you can move or rotate a model through the following methods:
 

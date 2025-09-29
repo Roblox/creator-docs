@@ -77,7 +77,7 @@ Frame rate differs wildly between devices. For example, a high-end PC might be a
 To check the frame rate of your experience:
 
 - In the client, press <kbd>Shift</kbd><kbd>F5</kbd> to show the debug stats summary.
-- In the Studio **View** tab, select **Stats** > **Summary** to enable debug stats.
+- From Studio's **Window** ⟩ **Performance** menu, toggle on **Stats** to enable debug stats.
 
   <Alert severity="warning">
   Performance stats in Studio are skewed by the Studio application, so you should view the frame rate on the client if you have a production experience.

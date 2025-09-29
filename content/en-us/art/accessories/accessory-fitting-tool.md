@@ -4,7 +4,7 @@ description: The Accessory Fitting Tool lets you adjust and test custom accessor
 labels: Article,Engine,Cloud API
 ---
 
-The **Accessory Fitting Tool (AFT)** is a built-in Studio tool that allows you to test your custom models on multiple combinations of character bodies, animations, and accessories before generating the final `Class.Accessory` object. When testing your accessories, you can make minor fit and positional changes to ensure that you get the best result possible.
+The **Accessory Fitting Tool** (AFT) is a built-in Studio tool that allows you to test your custom models on multiple combinations of character bodies, animations, and accessories before generating the final `Class.Accessory` object. When testing your accessories, you can make minor fit and positional changes to ensure that you get the best result possible.
 
 The AFT automatically handles the conversion of the custom `Class.Model` or `Class.MeshPart` based on the user menu selections, allowing you to create **layerable clothing accessories** or **rigid accessories**. After generating your accessory, the AFT creates the correct `Class.Accessory` object hierarchy with any updated fit edits, sets the appropriate `AccessoryType` property, and generates any required body attachment points.
 
@@ -25,7 +25,7 @@ If you are intending to sell your accessory on the Marketplace, make sure your a
 
 ## Set up accessories
 
-The first stage of the Accessory Fitting Tool allows you to configure the type of accessory to correctly populate the correct fitting tools and generate the appropriate accessory object. When selecting the type of accessory, the following options are available:
+The first stage of the fitting workflow allows you to configure the type of accessory to correctly populate the correct fitting tools and generate the appropriate accessory object. When selecting the type of accessory, the following options are available:
 
 - **Clothing**: Layerable accessories that use an inner and outer cage to stretch and wrap around a body and other clothing items.
 - **Accessory**: Rigid accessories that attach to a specific attachment point of a character and remain static in that position and orientation.
@@ -35,7 +35,7 @@ Before using the tool, ensure that you have the `Class.MeshPart` or `Class.Model
 To setup your accessories:
 
 1. Ensure that your custom asset is selectable in your project. See [3D Importer](../../art/modeling/3d-importer.md) for instructions on importing a custom model into your experience.
-2. From the toolbar's **Avatar** tab, open the **Accessory Fitting Tool**.
+2. In the toolbar's **Avatar** tab, click **Accessory** to open the AFT.
 3. Select the **Part** field and click on the `Class.MeshPart` or `Class.Model` in the viewport that you intend to preview. The text field populates with the name of the object selected.
 
    <img src="../../assets/accessories/accessory-fitting-tool/MeshPart-Selected.png" />
@@ -64,7 +64,7 @@ To setup your accessories:
 After you provide the initial accessory details, the tool displays a preview panel. With the preview panel, you can test how your accessory looks on different combinations of character bodies, clothing items, animations, or even custom assets in your experience.
 
 <Alert severity = 'info'>
-At any point of the testing process, you can start a [Play test](../../studio/testing-modes.md#playtest-options) to launch an instance of your experience where your avatar is replaced with the currently selected character body and accessories from the AFT.
+At any point of the testing process, you can [initiate a playtest](../../studio/testing-modes.md#playtesting) to launch an instance of your experience where your avatar is replaced with the currently selected character body and accessories from the AFT.
 </Alert>
 
 If you notice any fitting issues with your accessory, you can use the [edit](#edit-accessory-fit) tools to make minor adjustments to your accessory.
@@ -146,7 +146,7 @@ To add custom assets:
 
    <img src="../../assets/accessories/accessory-fitting-tool/Custom-Asset-Icon.png" />
 
-2. Select any `Class.Accessory`, `Class.Model`, `Class.MeshPart`, `Class.Animation` or `Class.Folder` within the Workspace or Explorer. The asset displays in the corresponding **Custom** category.
+2. Select any `Class.Accessory`, `Class.Model`, `Class.MeshPart`, `Class.Animation` or `Class.Folder` within the 3D viewport or **Explorer**. The asset displays in the corresponding **Custom** category.
 
    1. If no selection is made, click the tool panel again to exit the prompt.
 
@@ -154,7 +154,7 @@ To add custom assets:
 
 ## Edit accessory fit
 
-The Accessory Fitting Tool populates different fitting tools depending on the type of accessory being created.
+The AFT populates different fitting tools depending on the type of accessory being created.
 
 ### Layered clothing
 

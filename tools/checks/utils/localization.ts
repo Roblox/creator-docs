@@ -193,10 +193,35 @@ export const checkMdxEquality = async (
         `${Emoji.WhiteCheckMark} MDX components match ${comparisonMessage}`
       );
     } else {
-      const errorMessage = `${Emoji.Warning}  Warning: MDX components do not match ${comparisonMessage}`;
-      console.log(errorMessage);
-      outdatedTranslationFiles.push(filePath);
-      addToSummaryOfSuggestions(errorMessage);
+      const englishCount = englishMdxComponents.count;
+      const localizedCount = localizedMdxComponents.count;
+      const diff = Math.abs(localizedCount - englishCount);
+      let isError = false;
+
+      if (englishCount <= 30) {
+        // Low counts: absolute threshold
+        if (diff > 2) {
+          isError = true;
+        }
+      } else {
+        // Higher counts: percent threshold
+        const percentDifference = diff / englishCount;
+        if (percentDifference > 0.05) {
+          isError = true;
+        }
+      }
+
+      if (isError) {
+        const errorMessage = `${Emoji.NoEntry} Requirement: MDX component count differs beyond allowed threshold ${comparisonMessage}`;
+        console.log(errorMessage);
+        outdatedTranslationFiles.push(filePath);
+        addToSummaryOfRequirements(errorMessage);
+      } else {
+        const warningMessage = `${Emoji.Warning}  Warning: MDX components do not match ${comparisonMessage}`;
+        console.log(warningMessage);
+        outdatedTranslationFiles.push(filePath);
+        addToSummaryOfSuggestions(warningMessage);
+      }
     }
   }
 };

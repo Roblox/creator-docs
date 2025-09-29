@@ -5,9 +5,7 @@ description: The Asset Manager lets you manage places and bulk import assets int
 
 import BetaAlert from '../../includes/beta-features/beta-alert.md'
 
-The **Asset Manager**, accessible from the [View](../../studio/view-tab.md) tab, lets you manage [places](../../production/publishing/publish-experiences-and-places.md) and bulk import assets into your experience, including [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [packages](../../projects/assets/packages.md), [audio](../../audio/assets.md), and [models](../../parts/models.md).
-
-<img src="../../assets/studio/general/View-Tab-Asset-Manager.png" width="776" alt="Studio's View tab with the Asset Manager button highlighted." />
+The **Asset Manager**, accessible from Studio's **Window** menu or **Home** tab, lets you manage [places](../../production/publishing/publish-experiences-and-places.md) and bulk import assets into your experience, including [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [packages](../../projects/assets/packages.md), [audio](../../audio/assets.md), and [models](../../parts/models.md).
 
 ## Current
 
@@ -45,7 +43,7 @@ The **bulk import** tool is ideal for importing up to 50 files in one batch. Imp
   </tr>
   <tr>
     <td>**Audio**</td>
-    <td>You can import audio assets that you are certain you have permission to use in `.ogg`, `.mp3`, `.flac`, or `.wav` format. If you're uncertain whether you have permission to use an audio file, the [Creator Store](../../production/creator-store.md) has a variety of free-to-use audio, including more than 100,000 professionally-produced sound effects. See [Audio Assets](../../audio/assets.md) for details.</td>
+    <td>You can import audio assets that you are certain you have permission to use in `.ogg`, `.mp3`, `.flac`, or `.wav` format. If you're uncertain whether you have permission to use an audio file, the [Creator Store](../../production/creator-store.md) has a variety of free-to-use audio, including more than 100,000 professionally-produced audio assets. See [Audio Assets](../../audio/assets.md) for details.</td>
   </tr>
 </tbody>
 </table>
@@ -131,7 +129,7 @@ Quick actions are accessible by right-clicking an asset name/tile and selecting 
   </tr>
   <tr>
     <td>**Rename Alias**</td>
-    <td>Renames the image alias in the Asset Manager.</td>
+    <td>Renames the image alias in the **Asset Manager**.</td>
   </tr>
   <tr>
     <td>**Insert**</td>
@@ -143,7 +141,7 @@ Quick actions are accessible by right-clicking an asset name/tile and selecting 
   </tr>
   <tr>
     <td>**Remove From Game**</td>
-    <td>Removes the image from the Asset Manager but does not remove its instances from the experience.</td>
+    <td>Removes the image from the **Asset Manager** but does not remove its instances from the experience.</td>
   </tr>
 </tbody>
 </table>
@@ -163,7 +161,7 @@ Quick actions are accessible by right-clicking an asset name/tile and selecting 
   </tr>
   <tr>
     <td>**Rename Alias**</td>
-    <td>Renames the mesh alias in the Asset Manager.</td>
+    <td>Renames the mesh alias in the **Asset Manager**.</td>
   </tr>
   <tr>
     <td>**Insert**</td>
@@ -183,7 +181,7 @@ Quick actions are accessible by right-clicking an asset name/tile and selecting 
   </tr>
   <tr>
     <td>**Remove From Game**</td>
-    <td>Removes the mesh from the Asset Manager but does not remove its instances from the experience.</td>
+    <td>Removes the mesh from the **Asset Manager** but does not remove its instances from the experience.</td>
   </tr>
 </tbody>
 </table>
@@ -231,7 +229,7 @@ Quick actions are accessible by right-clicking an asset name/tile and selecting 
   </tr>
   <tr>
     <td>**Rename Alias**</td>
-    <td>Renames the item alias in the Asset Manager.</td>
+    <td>Renames the item alias in the **Asset Manager**.</td>
   </tr>
   <tr>
     <td>**Insert**</td>
@@ -243,7 +241,7 @@ Quick actions are accessible by right-clicking an asset name/tile and selecting 
   </tr>
   <tr>
     <td>**Remove From Game**</td>
-    <td>Removes the audio from the Asset Manager but does not remove its instances from the experience.</td>
+    <td>Removes the audio from the **Asset Manager** but does not remove its instances from the experience.</td>
   </tr>
 </tbody>
 </table>

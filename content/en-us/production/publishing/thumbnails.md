@@ -179,10 +179,9 @@ To delete an uploaded thumbnail, click the thumbnail's **menu** icon and then cl
 Free camera mode is a useful tool to capture in-experience screenshots and videos because it allows you to move the camera to positions that aren't possible when testing or playing under normal circumstances. To enable free camera mode:
 
 1. Go to an experience where you have server-side [Developer Console](../../studio/developer-console.md) access.
+2. Initiate a solo [playtesting](../../studio/testing-modes.md#playtesting) session.
 
-2. Click the **Play** button from the playtesting options.
-
-   <img src="../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Play button highlighted in Studio's playtesting options." width="228" />
+   <img src="../../assets/studio/general/Mezzanine-Testing-Mode-Test.png" width="800" alt="Test option in the testing modes dropdown of Studio's mezzanine." />
 
 3. Press <kbd>Left Shift</kbd> and <kbd>P</kbd>.
 

@@ -20,7 +20,7 @@ After you complete this tutorial, you will have an asset ID for your animation, 
 
 ## Add rig
 
-**Rigs**, or collections of parts connected by joints like `Class.Bone` or `Class.Motor6D` objects, are necessary to create character animations because they include the internal structure you need to move and rotate body parts into different poses. While you can [create your own rigs](../../../art/modeling/rig-a-humanoid-model.md) using external 3D modeling tools, Studio provides several pre-built rigs that you can access through the [Rig Builder](../../../studio/rig-builder.md) tool.
+**Rigs**, or collections of parts connected by joints like `Class.Bone` or `Class.Motor6D` objects, are necessary to create character animations because they include the internal structure you need to move and rotate body parts into different poses. While you can [create your own rigs](../../../art/modeling/rig-a-humanoid-model.md) using external 3D modeling tools, Studio provides several pre-built rigs that you can access through the [Rig Generator](../../../studio/rig-builder.md) tool.
 
 <GridContainer numColumns="3">
   <figure>
@@ -43,7 +43,7 @@ The rest of the tutorial provides an in-depth analysis of the different design d
 
 To add a pre-built rig to the 3D space:
 
-1. From the toolbar's **Avatar** tab, click **Rig Builder**.
+1. From the toolbar's **Home** or **Avatar** tab, click **Character**.
 1. Select a rig type, body shape, then an avatar option. For example, this tutorial uses a **R15** rig type, a **masculine** body shape, and an **Rthro Avatar**. The rig displays in the viewport.
 
    <img src="../../../assets/tutorials/creating-character-animations/Add-Rig-2.jpg" alt="" width="80%" />
@@ -97,7 +97,7 @@ This is an important moment in a character's stride because both feet equally su
 
 To create a first pass Contact pose for the left foot cycle:
 
-1. From the toolbar's **Avatar** tab, click **Animation Editor**. The [Animation Editor](../../../animation/editor.md) window displays.
+1. From the toolbar's **Avatar** tab, click **Animation**. The [Animation Editor](../../../animation/editor.md) window displays.
 1. Select your rig. A contextual menu displays.
 1. In the **Animation Name** field, input a name for your animation, then click the **Create** button.
 1. **(Optional)** Set the timeline to 24 frames per second.
@@ -107,18 +107,19 @@ To create a first pass Contact pose for the left foot cycle:
 
    1. From the contextual menu, set **Frame Rate** to **24 fps**.
 
-1. Add a keyframe for each of the rig's body parts to the Animation Editor's track list.
+1. Add a keyframe for each of the rig's body parts to the editor's track list.
    1. In the **Animation Editor**, click the **+** button. A contextual menu displays.
 
       <img src="../../../assets/tutorials/creating-character-animations/Left-Contact-2A.png" alt="" width="80%" />
 
-   1. Select **Add All Body**. The Animation Editor's track list updates with all the rig's body parts.
-   1. Right-click on the top bar beneath the timeline, then in the contextual menu, select **Add Keyframe**. The Animation Editor adds a keyframe for every body part in the timeline.
+   1. Select **Add All Body**. The editor's track list updates with all the rig's body parts.
+   1. Right-click on the top bar beneath the timeline, then in the contextual menu, select **Add Keyframe**. The editor adds a keyframe for every body part in the timeline.
 
       <video controls src="../../../assets/tutorials/creating-character-animations/Left-Contact-2C.mp4" width="90%"></video>
 
 1. Pose the rig's upper body in a bent position.
-   1. In the toolbar's **Home** tab, select the **Rotate** tool.
+
+   1. From the toolbar, select the **Rotate** tool.
    1. In the viewport, select and angle the **UpperTorso** body part so that the torso is slightly bent forward.
 
       <img src="../../../assets/tutorials/creating-character-animations/Left-Contact-3A.jpg" alt="" width="80%" />
@@ -498,10 +499,8 @@ To test your poses:
 
       1. From the contextual menu, set **Playback Speed** to either **0.25x** or **0.5x**.
    1. Evaluate the animation from multiple angles.
-      1. In the **View** tab, select the **View Selector** button.
-      1. In the viewport, click any of View Selector's 14 faces to move your camera to a different world orientation.
-
-      <img src="../../../assets/studio/general/View-Tab-View-Selector.png" width="782" alt="View Selector tool selected in View tab of Studio" />
+      1. In Studio's **View** menu, enable **Show View Selector**.
+      1. In the viewport, click any of view selector's 14 faces to move your camera to a different world orientation.
 
    1. Select, move, and rotate your rig until the animation matches your character's personality.
 
