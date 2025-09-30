@@ -24,6 +24,8 @@ end
 	Enum.PartType.Ball
 	Enum.PartType.Block
 	Enum.PartType.Cylinder
+	Enum.PartType.Wedge
+	Enum.PartType.CornerWedge
 ]]
 ```
 
@@ -31,20 +33,17 @@ end
 
 The `Datatype.EnumItem` is the data type for items in enums. An `Datatype.EnumItem` has three properties:
 
-- `Name` - The name of the `Datatype.EnumItem`.
-- `Value` - The numerical index of the `Datatype.EnumItem`.
-- `EnumType` - The parent `Datatype.Enum` of the `Datatype.EnumItem`.
+- `Name` — The name of the `Datatype.EnumItem`.
+- `Value` — The numerical index of the `Datatype.EnumItem`.
+- `EnumType` — The parent `Datatype.Enum` of the `Datatype.EnumItem`.
 
-Some properties of objects can only be items of certain enums. For example, the `Shape` property of a `Class.Part` object is an item of the `Enum.PartType` Enum. The following code sample demonstrates how to print the properties of the `Enum.PartType.Cylinder` EnumItem.
+Some properties of objects can only be items of certain enums. For example, the `Class.Part.Shape|Shape` property of a `Class.Part` object is an item of the `Enum.PartType` enum. The following code sample demonstrates how to print the properties of the `Enum.PartType.Cylinder` enum item.
 
 ```lua
--- Properties of the EnumItem called Enum.PartType.Cylinder
 print(Enum.PartType.Cylinder.Name) --> "Cylinder"
 print(Enum.PartType.Cylinder.Value) --> 2
 print(Enum.PartType.Cylinder.EnumType) --> PartType
 ```
-
-## Assign enum items
 
 To assign an `Datatype.EnumItem` as the value of a property, use the full `Datatype.Enum` declaration. You can also use its `Value` or `EnumType`.
 
