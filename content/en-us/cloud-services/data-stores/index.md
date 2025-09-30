@@ -1,6 +1,6 @@
 ---
 title: Data stores
-description: How to implement data stores to store persistent data.
+description: How to implement data stores (DataStores) to store persistent data.
 comments: The Creator Hub links to some of the anchors on this page, so if you move any of the headers, the team might need to update the links.
 ---
 

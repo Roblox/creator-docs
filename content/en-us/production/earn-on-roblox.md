@@ -48,7 +48,7 @@ We are seeing healthy growth across creators and studios of varying sizes. Since
 
 <img src="../assets/monetization/earning/Monetization-Growth-CAGR.png" width="800" />
 
-<figcaption><Typography variant="captionHeader" color="info">⑴</Typography> DAUs as of the quarter ended December&nbsp;31,&nbsp;2024.</figcaption>
+<figcaption><Typography variant="captionHeader" color="info">⑴</Typography> DAUs as of the quarter ended June&nbsp;30,&nbsp;2025.</figcaption>
 <figcaption><Typography variant="captionHeader" color="info">⑵</Typography> Payouts for the year ended December&nbsp;31,&nbsp;2024.</figcaption>
 <figcaption><Typography variant="captionHeader" color="info">⑶</Typography> Based on readily available public data for daily active users of virtual worlds.</figcaption>
 <figcaption><Typography variant="captionHeader" color="info">⑷</Typography> Measured based on Roblox's annual bookings, which measures total economic activity on our platform.</figcaption>

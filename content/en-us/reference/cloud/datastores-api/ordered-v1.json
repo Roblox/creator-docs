@@ -104,7 +104,7 @@
         },
         "security": [
           {
-            "roblox-api-key": ["Label.Read"]
+            "roblox-api-key": ["universe.ordered-data-store.scope.entry:read"]
           }
         ],
         "x-roblox-scopes": [
@@ -206,7 +206,7 @@
         },
         "security": [
           {
-            "roblox-api-key": ["Label.Write"]
+            "roblox-api-key": ["universe.ordered-data-store.scope.entry:write"]
           }
         ],
         "x-roblox-scopes": [
@@ -300,7 +300,7 @@
         },
         "security": [
           {
-            "roblox-api-key": ["Label.Read"]
+            "roblox-api-key": ["universe.ordered-data-store.scope.entry:read"]
           }
         ],
         "x-roblox-scopes": [
@@ -385,7 +385,7 @@
         },
         "security": [
           {
-            "roblox-api-key": ["Label.Write"]
+            "roblox-api-key": ["universe.ordered-data-store.scope.entry:write"]
           }
         ],
         "x-roblox-scopes": [
@@ -498,7 +498,7 @@
         },
         "security": [
           {
-            "roblox-api-key": ["Label.Write"]
+            "roblox-api-key": ["universe.ordered-data-store.scope.entry:write"]
           }
         ],
         "x-roblox-scopes": [
@@ -602,7 +602,7 @@
         },
         "security": [
           {
-            "roblox-api-key": ["Label.Write"]
+            "roblox-api-key": ["universe.ordered-data-store.scope.entry:write"]
           }
         ],
         "x-roblox-scopes": [

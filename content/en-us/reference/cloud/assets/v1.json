@@ -72,7 +72,7 @@
         },
         "security": [
           {
-            "roblox-api-key": ["Label.Read", "Label.Write"]
+            "roblox-api-key": ["asset:read", "asset:write"]
           },
           {
             "roblox-oauth2": ["asset:read", "asset:write"]
@@ -167,7 +167,7 @@
         },
         "security": [
           {
-            "roblox-api-key": ["Label.Read"]
+            "roblox-api-key": ["asset:read"]
           },
           {
             "roblox-oauth2": ["asset:read"]
@@ -285,7 +285,7 @@
         },
         "security": [
           {
-            "roblox-api-key": ["Label.Read", "Label.Write"]
+            "roblox-api-key": ["asset:read", "asset:write"]
           },
           {
             "roblox-oauth2": ["asset:read", "asset:write"]
@@ -372,7 +372,7 @@
         },
         "security": [
           {
-            "roblox-api-key": ["Label.Read", "Label.Write"]
+            "roblox-api-key": ["asset:read", "asset:write"]
           },
           {
             "roblox-oauth2": ["asset:read", "asset:write"]
@@ -447,7 +447,7 @@
         },
         "security": [
           {
-            "roblox-api-key": ["Label.Read", "Label.Write"]
+            "roblox-api-key": ["asset:read", "asset:write"]
           },
           {
             "roblox-oauth2": ["asset:read", "asset:write"]
@@ -528,7 +528,7 @@
         },
         "security": [
           {
-            "roblox-api-key": ["Label.Read"]
+            "roblox-api-key": ["asset:read"]
           },
           {
             "roblox-oauth2": ["asset:read"]
@@ -615,7 +615,7 @@
         },
         "security": [
           {
-            "roblox-api-key": ["Label.Read"]
+            "roblox-api-key": ["asset:read"]
           },
           {
             "roblox-oauth2": ["asset:read"]
@@ -703,7 +703,7 @@
         },
         "security": [
           {
-            "roblox-api-key": ["Label.Read", "Label.Write"]
+            "roblox-api-key": ["asset:read", "asset:write"]
           },
           {
             "roblox-oauth2": ["asset:read", "asset:write"]
@@ -789,7 +789,7 @@
         },
         "security": [
           {
-            "roblox-api-key": ["Label.Read"]
+            "roblox-api-key": ["asset:read"]
           },
           {
             "roblox-oauth2": ["asset:read"]

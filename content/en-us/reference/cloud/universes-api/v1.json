@@ -83,7 +83,7 @@
         },
         "security": [
           {
-            "roblox-api-key": ["Label.Write"]
+            "roblox-api-key": ["universe-places:write"]
           }
         ],
         "x-roblox-scopes": [{ "name": "universe-places:write" }],

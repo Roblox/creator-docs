@@ -1,6 +1,6 @@
 ---
 title: Data Stores Manager
-description:
+description: The Data Stores Manager helps you monitor your data stores (DataStores) on Creator Hub.
 ---
 
 With the Data Stores Manager, you can browse and monitor your data stores, their key entries, and their storage usage directly on the Creator Hub.

@@ -1,6 +1,6 @@
 ---
 title: Best practices for data stores
-description: Guidelines that help you manage your data more efficiently.
+description: Guidelines that help you manage your data and data stores (DataStores) more efficiently.
 ---
 
 Best practices are guidelines that help you manage your data more efficiently.

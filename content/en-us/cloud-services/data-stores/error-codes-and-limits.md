@@ -1,6 +1,6 @@
 ---
-title: Error codes and limits
-description: Error codes you might come across and limits you might hit when using data stores to store data.
+title: Data store error codes and limits
+description: Error codes you might encounter and limits you might hit when using data stores (DataStores) to store data.
 ---
 
 Requests you make to data stores can fail due to poor connectivity or other issues. To handle errors and return messages with an error code, wrap data store functions in `Global.LuaGlobals.pcall()`.
@@ -327,7 +327,7 @@ Each queue has a limit of 30 requests. When the limit of a queue is reached, req
 <Tabs>
 <TabItem label="Server limits">
   Each server is allowed a certain number of data store requests based on the request type and number of users. Use `Class.DataStoreService:GetRequestBudgetForRequestType()|GetRequestBudgetForRequestType()` to confirm the number of data store requests that the current place can make.
-  
+
   For each request type, the limit is shared among all listed functions.
 
   <table>
@@ -422,7 +422,7 @@ Each experience is allowed a certain number of data store requests based on the 
   </table>
 
   <h5>Ordered data stores</h5>
-  
+
   <table>
   <thead>
     <tr>

@@ -94,7 +94,7 @@
         },
         "security": [
           {
-            "roblox-api-key": ["Label.DatastoresList"]
+            "roblox-api-key": ["universe-datastores.control:list"]
           }
         ],
         "x-roblox-scopes": [{ "name": "universe-datastores.control:list" }],
@@ -226,7 +226,7 @@
         },
         "security": [
           {
-            "roblox-api-key": ["Label.DatastoreListObjectKeys"]
+            "roblox-api-key": ["universe-datastores.objects:list"]
           }
         ],
         "x-roblox-scopes": [{ "name": "universe-datastores.objects:list" }],
@@ -364,7 +364,7 @@
         },
         "security": [
           {
-            "roblox-api-key": ["Label.DatastoreReadObject"]
+            "roblox-api-key": ["universe-datastores.objects:read"]
           }
         ],
         "x-roblox-scopes": [{ "name": "universe-datastores.objects:read" }],
@@ -508,8 +508,9 @@
         "security": [
           {
             "roblox-api-key": [
-              "Label.DatastoreCreateObject",
-              "Label.DatastoreUpdateObject"
+              "universe-datastores.objects:create",
+              "universe-datastores.objects:update",
+              "universe-datastores.control:create"
             ]
           }
         ],
@@ -611,7 +612,7 @@
         },
         "security": [
           {
-            "roblox-api-key": ["Label.DatastoreDeleteObject"]
+            "roblox-api-key": ["universe-datastores.objects:delete"]
           }
         ],
         "x-roblox-scopes": [{ "name": "universe-datastores.objects:delete" }],
@@ -778,8 +779,9 @@
         "security": [
           {
             "roblox-api-key": [
-              "Label.DatastoreCreateObject",
-              "Label.DatastoreUpdateObject"
+              "universe-datastores.objects:create",
+              "universe-datastores.objects:update",
+              "universe-datastores.control:create"
             ]
           }
         ],
@@ -937,7 +939,7 @@
         },
         "security": [
           {
-            "roblox-api-key": ["Label.DatastoreReadVersion"]
+            "roblox-api-key": ["universe-datastores.versions:read"]
           }
         ],
         "x-roblox-scopes": [{ "name": "universe-datastores.versions:read" }],
@@ -1093,7 +1095,7 @@
         },
         "security": [
           {
-            "roblox-api-key": ["Label.DatastoreListVersions"]
+            "roblox-api-key": ["universe-datastores.versions:list"]
           }
         ],
         "x-roblox-scopes": [{ "name": "universe-datastores.versions:list" }],

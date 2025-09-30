@@ -98,7 +98,7 @@
         },
         "security": [
           {
-            "roblox-api-key": ["Label.Publish"]
+            "roblox-api-key": ["universe-messaging-service:publish"]
           },
           {
             "roblox-oauth2": ["universe-messaging-service:publish"]

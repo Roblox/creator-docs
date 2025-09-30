@@ -1,6 +1,6 @@
 ---
 title: Data store observability
-description: Explains how to use the observability dashboard for data stores.
+description: Explains how to use the observability dashboard for data stores (DataStores).
 ---
 
 The data stores observability dashboard provides real-time charts on your request counts and on your usage against future data store limits, and allows you to filter the request data by standard or ordered data stores.

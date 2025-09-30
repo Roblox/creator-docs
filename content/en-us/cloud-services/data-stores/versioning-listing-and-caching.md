@@ -1,6 +1,6 @@
 ---
-title: Versioning, listing, and caching
-description: How to manage data stores through versioning, listing, and caching.
+title: Data store versioning, listing, and caching
+description: How to manage data stores (DataStores) through versioning, listing, and caching.
 ---
 
 Manage your data using versioning, listing, and caching.
