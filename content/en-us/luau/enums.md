@@ -4,12 +4,12 @@ description: A fixed list of items (enumeration).
 ---
 
 <Alert severity="info">
-Enums are not a [builtin luau type](https://luau.org/typecheck#builtin-types), and exist only in Roblox. This page is located here because Eunms are conceptually similar enough, and are something you will work with all the time in Roblox development.
+Enums are not a [built-in Luau type](https://luau.org/typecheck#builtin-types) and they exist only in Roblox, but they're conceptually similar to other Luau data types and are something you'll work with frequently in Roblox development.
 </Alert>
 
-The **enumeration** data type, or `Datatype.Enum`, is a fixed list of items. You can access enums through the global object called `Datatype.Enum`. For a full list of Enums and their items, see [Enums](/reference/engine/enums) in the API Reference.
+The **enumeration** data type, or `Datatype.Enum`, is a fixed list of items. You can access enums through the global object called `Datatype.Enum`. For a full list and their respective items, see [Enums](/reference/engine/enums).
 
-## Get enum items
+## Enum items
 
 To get all items of an Enum, call the `GetEnumItems()` method on the enum. The following code sample demonstrates how to call `GetEnumItems()` on the `Enum.PartType` enum.
 
