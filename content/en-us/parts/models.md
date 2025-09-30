@@ -136,23 +136,23 @@ To upload a model you made in Studio:
 
 ## Distribute models
 
-You can distribute models with less than 15,000 descendants to the [Creator Store](../production/creator-store.md) for other creators to use within their own experiences as long as each model only references:
+You can distribute models with less than 15,000 dependencies to the [Creator Store](../production/creator-store.md) for other creators to use within their own experiences as long as each model only references:
 
 - Open use assets.
 - Restricted assets that you created, excluding audio and video.
 - Audio and video assets from the Creator Store.
 
+If you are in a supported country, you can sell models you created on the Creator Store for **United States Dollars** (USD). Eligible Creators must complete an application form through Stripe to create their seller account, set prices, and receive payouts. For more information and to start onboarding, see [Sell on the Creator Store](../production/sell-on-creator-store.md).
+
 <Alert severity="warning">
 If you want to distribute a model with a child audio asset that you created, you must distribute the audio asset on the Creator Store **_before_** making it a child of the model in order for the audio to be audible at runtime.
 </Alert>
 
-As with any asset, all models must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), the [DMCA Guidelines](../production/publishing/dmca-guidelines.md) regarding copyright and Creator Store [asset moderation](../production/creator-store.md#asset-moderation) rules. When creating models for the Creator Store:
+As with any asset, all models must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), the [DMCA Guidelines](../production/publishing/dmca-guidelines.md) regarding copyright, and Creator Store [asset moderation](../production/creator-store.md#asset-moderation) rules. If you suspect a rights violation involving your asset, you can submit the content for removal using the [Rights Manager](../production/publishing/rights-manager.md).
+
+When creating models for the Creator Store:
 
 - Read about Roblox [texture specifications and limits](../art/modeling/texture-specifications.md).
 - Limit each mesh to a maximum of 20,000 triangles.
 - Read and address any warnings shown during the import process.
 - Scale and orient your model appropriately during import so that it's usable out of the box when inserted from the Creator Store.
-
-<Alert severity="info">
-You will soon be able to sell models on the Creator Store for **United States Dollars** (USD). For more information and to start onboarding, see [Selling on the Creator Store](../production/sell-on-creator-store.md).
-</Alert>

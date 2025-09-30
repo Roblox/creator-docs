@@ -7,7 +7,7 @@ import ToolboxFindUse from '../includes/studio/toolbox-find-use.md'
 
 The **Creator Store** features assets made by Roblox and the Roblox community for the community to use within their experiences, including models, images, meshes, audio, fonts, videos, and plugins.
 
-You can create and [distribute](#distribute-and-sell-assets) models, images, meshes, plugins, and audio files to the Creator Store for others to use as long as you are the original creator, and it adheres to Roblox's [Community Rules][CommunityRulesURL] and [Terms of Use][TermsUseURL]. If you have a [seller account](./sell-on-creator-store.md), you can also sell your plugins to other creators.
+You can create and [distribute](#distribute-and-sell-assets) models, images, meshes, plugins, and audio files to the Creator Store for others to use as long as you are the original creator, and it adheres to Roblox's [Community Rules][CommunityRulesURL] and [Terms of Use][TermsUseURL]. If you have a [seller account](./sell-on-creator-store.md), you can also sell your plugins and models to other creators.
 
 <Alert severity="warning">
 To maintain community safety, Roblox may terminate accounts that publish spam or assets with malicious or obfuscated code.
@@ -59,7 +59,9 @@ For information on how to verify your account either through a government-issued
 
 Distributing to the Creator Store is the only way to make your assets publicly available to all users to use within their own experiences in Studio. You can distribute any mesh or image that you have imported through the [Asset Manager](../projects/assets/manager.md), or any [model](../parts/models.md), [plugin](../studio/plugins.md), or [audio assets](../audio/assets.md) that you have uploaded to your inventory.
 
-Every asset that you import must adhere to the [Community Rules][CommunityRulesURL] and [Terms&nbsp;of&nbsp;Use][TermsUseURL], and respect the [DMCA guidelines](../production/publishing/dmca-guidelines.md) regarding copyright. In addition, there are limits on the number of assets you can distribute per 30 days, depending on whether you've [verified your account](../production/publishing/account-verification.md):
+Every asset that you import must adhere to the [Community Rules][CommunityRulesURL] and [Terms&nbsp;of&nbsp;Use][TermsUseURL], and respect the [DMCA guidelines](../production/publishing/dmca-guidelines.md) regarding copyright. If you suspect a rights violation involving your asset, you can submit the content for removal using the [Rights Manager](../production/publishing/rights-manager.md).
+
+In addition, there are limits on the number of assets you can distribute per 30 days, depending on whether you've [verified your account](../production/publishing/account-verification.md):
 
 <table>
 <thead>
@@ -92,7 +94,7 @@ Every asset that you import must adhere to the [Community Rules][CommunityRulesU
 </tbody>
 </table>
 
-You can also choose to [sell](./sell-on-creator-store.md) plugins on the Creator Store for **United States Dollars** (USD). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. Note that you can only set USD pricing for plugins through the Creator Dashboard.
+Eligible creators can also choose to [sell](./sell-on-creator-store.md) plugins and models on the Creator Store for **United States Dollars** (USD). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information, see [Sell on the Creator Store](./sell-on-creator-store.md).
 
 ### Through Creator Dashboard
 
@@ -101,14 +103,14 @@ To distribute an asset through the [Creator Dashboard](https://create.roblox.com
 1. In the horizontal navigation, select [Development Items](https://create.roblox.com/dashboard/creations?activeTab=Model). All assets you have [previously imported](../projects/assets/manager.md#asset-import) display within their respective category.
 1. Select the asset that you want to distribute. The asset's **Configure** page displays.
 1. In the **Configure** ⟩ **Distribution** section, toggle on **Distribute on Creator Store**.
-1. <Chip label="OPTIONAL" size="small" variant="outlined" /> If you have a [seller account](./sell-on-creator-store.md) and are distributing a plugin, set a price in USD for the asset in the **USD Pricing** field. If you keep the default value of **Free**, the asset will be free to all creators.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> If you have a [seller account](./sell-on-creator-store.md) and are distributing a plugin or model, set a price in USD for the asset in the **USD Pricing** field. If you keep the default value of **Free**, the asset will be free to all creators.
 1. <Chip label="OPTIONAL" size="small" variant="outlined" /> If you are [ID or phone verified](../production/publishing/account-verification.md), add up to 5 supplementary thumbnails for your asset.
 1. Click the **Save** button.
 1. If you are distributing an audio asset for the first time, enable all legal agreements, then click the **Submit** button. The asset will become public and visible to everyone within the Creator Store, provided it adheres to the [moderation rules](#asset-moderation).
 
 ### Through Studio
 
-You can upload assets directly in Studio from the [Toolbox](../projects/assets/toolbox.md) or [Explorer](../studio/explorer.md) window. However, you must complete the process on the [Creator Dashboard](#through-creator-dashboard) to list an asset for sale on the Creator Store, distribute audio assets, or set a [USD price](./sell-on-creator-store.md) for a plugin.
+You can upload assets directly in Studio from the [Toolbox](../projects/assets/toolbox.md) or [Explorer](../studio/explorer.md) window. However, you must complete the process on the [Creator Dashboard](#through-creator-dashboard) to list an asset for sale on the Creator Store, distribute audio assets, or set a [USD price](./sell-on-creator-store.md) for a plugin or model.
 
 <Tabs>
 <TabItem label="Toolbox">
