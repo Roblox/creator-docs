@@ -1,0 +1,30 @@
+// https://www.typescriptlang.org/tsconfig
+// https://www.typescriptlang.org/docs/handbook/esm-node.html
+{
+  "compilerOptions": {
+    /* Emit */
+    "jsx": "preserve",
+    "lib": ["ESNext"],
+    "module": "NodeNext",
+    "noEmit": true,
+    "target": "ESNext",
+
+    /* Type-checking options */
+    "strict": true,
+
+    /* Module resolution */
+    "allowImportingTsExtensions": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "moduleResolution": "NodeNext",
+    "resolveJsonModule": true,
+    "skipLibCheck": true
+  },
+  "include": ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
+  "exclude": ["node_modules"],
+  "ts-node": {
+    "esm": true
+  }
+}

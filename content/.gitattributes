@@ -1,0 +1,16 @@
+content/de-de/assets/** filter=lfs diff=lfs merge=lfs -text
+content/en-us/assets/** filter=lfs diff=lfs merge=lfs -text
+content/es-es/assets/** filter=lfs diff=lfs merge=lfs -text
+content/fr-fr/assets/** filter=lfs diff=lfs merge=lfs -text
+content/ja-jp/assets/** filter=lfs diff=lfs merge=lfs -text
+content/ko-kr/assets/** filter=lfs diff=lfs merge=lfs -text
+content/pt-br/assets/** filter=lfs diff=lfs merge=lfs -text
+content/ru-ru/assets/** filter=lfs diff=lfs merge=lfs -text
+content/zh-cn/assets/** filter=lfs diff=lfs merge=lfs -text
+content/zh-tw/assets/** filter=lfs diff=lfs merge=lfs -text
+
+# Git will always convert line endings to LF on checkout
+* text eol=lf
+
+# But treat tarballs as binary (no line ending conversion)
+*.tgz binary
