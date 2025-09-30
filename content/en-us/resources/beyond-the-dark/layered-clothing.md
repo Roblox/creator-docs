@@ -371,7 +371,7 @@ To build a helmet model:
 
 When we had the helmet roughly fitted and placed in our DCC application, we could then import it into Studio with all the effects we wanted.
 
-1. We initially imported the helmet using the **Asset Manager**, but because it's a single mesh, you can also drop a `Class.MeshPart` into your place and specify the MeshId using the **Properties** panel.
+1. We initially imported the helmet using the **Asset Manager**, but because it's a single mesh, you can also drop a `Class.MeshPart` into your place and specify the MeshId using the **Properties** window.
    <img
    alt="Importing Helmet Mesh"
    src="../../assets/resources/beyond-the-dark/layered-clothing/Importing-Helmet-Mesh.jpeg"

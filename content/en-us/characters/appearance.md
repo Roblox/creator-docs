@@ -71,7 +71,7 @@ When updating a character's properties through `Class.HumanoidDescription`, it i
 
 ### Create HumanoidDescription
 
-You can create a new `Class.HumanoidDescription` instance directly within the Explorer hierarchy or within a `Class.Script` with the following code:
+You can create a new `Class.HumanoidDescription` instance directly within the **Explorer** hierarchy or within a `Class.Script` with the following code:
 
 ```lua title="Create new HumanoidDescription instance"
 local humanoidDescription = Instance.new("HumanoidDescription")
@@ -231,7 +231,7 @@ end
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
-If the `Class.HumanoidDescription` instance was created in the Explorer and parented to the workspace, use the following sample code in a `Class.Script` to access the workspace instance:
+If the `Class.HumanoidDescription` instance was created in the **Explorer** and parented to the workspace, use the following sample code in a `Class.Script` to access the workspace instance:
 
 ```lua
 local Players = game:GetService("Players")

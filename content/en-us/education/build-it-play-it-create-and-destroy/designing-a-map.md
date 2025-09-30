@@ -28,9 +28,7 @@ Time to open Roblox Studio! If you need to, <a href = "https://www.roblox.com/cr
    <Button variant="contained">Download Template</Button>
    </a>
 
-3. In Roblox Studio, in the top left, click File > Open from File and select the downloaded file.
-
-   <img src="../../assets/education/build-it-play-it-create-and-destroy/openFromFile.png" />
+3. In Roblox Studio, in the top left, click **File** &rarr; **Open from File** and select the downloaded file.
 
 ## About the template
 

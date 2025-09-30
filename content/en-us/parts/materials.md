@@ -17,21 +17,13 @@ You can quickly apply materials to [parts](../parts/index.md) through the [Mater
 
 ### Material widget
 
-The **Material** widget is accessible from either the toolbar's **Home** or **Model** tabs. Clicking the small dropdown arrow reveals a material picker.
+The **Material** widget is accessible from the **Home** or **Model** tab toolbars. Click‑holding over the small corner arrow on the button reveals a material picker. See [Parts](../parts/index.md#material) for more information.
 
-<img src="../assets/studio/general/Material-Picker.png" width="270" alt="Material widget's picker highlighted." />
+<img src="../assets/studio/general/Toolbar-Material-Picker.png" width="800" alt="Material widget's picker highlighted." />
 
-By default, clicking the overall **Material** button applies the chosen material to any **selected** parts. If you prefer a fill/paint workflow instead, toggle on **Material&nbsp;Action&nbsp;as&nbsp;Tool** and then click parts in the 3D viewport to apply the chosen material.
+### Material Manager
 
-<img src="../assets/studio/general/Model-Tab-Material-Action-As-Tool.png" width="704" alt="Studio's Model tab with the Material Action as Tool selector indicated." />
-
-### Material manager
-
-If you've enabled the [Material Picker](#material-widget) beta, access the **Material Manager** from the picker window. If you have not enabled the beta, locate its dedicated button to the left of the **Color** button in the toolbar's **Home** or **Model** tab.
-
-<img src="../assets/studio/general/Model-Tab-Material-Manager.png" width="704" alt="Studio's Model tab with the Material Manager button highlighted." />
-
-From the manager window, you can apply materials to [parts](../parts/index.md) through the following workflows.
+The **Material Manager** is accessible through **Window**&nbsp;⟩ **3D**&nbsp;⟩ **Material** or from the **Material** widget's picker popup. From the manager window, you can apply materials to [parts](../parts/index.md) through the following workflows.
 
 <Tabs>
 <TabItem label="Apply to Selected">
@@ -1220,7 +1212,7 @@ Shaders generate the look and feel of materials. The base material shaders work 
 
 ### Default colors
 
-The following table lists the default RGB values for each base material. For information on how to color parts and terrain, see [Parts](../parts/index.md#color-parts) and [Environmental Terrain](../parts/terrain.md#custom-terrain-colors).
+The following table lists the default RGB values for each base material. For information on how to color parts and terrain, see [Parts](../parts/index.md#color) and [Environmental Terrain](../parts/terrain.md#custom-terrain-colors).
 
 <table size="small">
 <thead>

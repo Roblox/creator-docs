@@ -25,7 +25,7 @@ A `Class.Part` is Roblox's primary building block that you can move, resize, rot
 
 To create the backboard and border:
 
-1. Select the toolbar's **Model** tab.
+1. Navigate to Studio's **Home** or **Model** tab toolbar.
 1. Click the dropdown arrow on the **Part** button and select **Block**. A block part displays in the workspace that's about to become the backboard of your neon sign.
 1. In the **Explorer** window, select the block, then in the **Properties** window,
 
@@ -89,7 +89,7 @@ To incorporate neon 3D text from the [open-text](../../../assets/tutorials/creat
 
 1. Import the **open-text** `.obj` file.
 
-   1. Navigate to the toolbar's **Home** tab and click **Import 3D**. A file browser displays.
+   1. From Studio's **File** menu, select **Import 3D**. A file browser displays.
    1. Select the **open-text** `.obj` file, then click the **Open** button. The **Import Preview** window displays.
    1. Keep the default import settings, then click the **Import** button. The open text models display within the viewport.
 

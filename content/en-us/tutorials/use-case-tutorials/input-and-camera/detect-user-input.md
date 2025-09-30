@@ -16,8 +16,8 @@ This tutorial uses the **Blaster** tool created in [Create Player Tools](../../.
 Models can be added into your Inventory to be used between any experience. To add a model to your experience:
 
 1. In a browser, open the [model](https://www.roblox.com/library/6571559694/Blaster) page, click the **Get** button. This adds the model into your inventory.
-2. In Studio, go to the **View** tab and click on the **Toolbox**.
-3. In the Toolbox window, click on the **Inventory** button. Then, make sure the dropdown is on **My Models**.
+2. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../../projects/assets/toolbox.md) and select the **Inventory** tab.
+3. Make sure the dropdown is on **My Models**.
 4. Select the **Blaster** model to add it into the experience.
 
 ## Create an action handler

@@ -9,11 +9,8 @@ The tile pieces on the palette are lined up on a grid so that they will snap tog
 
 The small tiles are 4x4 and the large are 8x8, so changing the **Move** setting to 4 studs will make it easier to line the tiles up with each other.
 
-1. Select the **Model** tab.
-   <img src="../../assets/education/build-it-play-it-create-and-destroy/clickMoveTab.png" />
-
-2. Where it says 1 stud, click and type **4**.
-   <img src="../../assets/education/build-it-play-it-create-and-destroy/setSnapSettings.png" />
+1. Select the **Home** or **Model** tab.
+2. Toward the left side of the toolbar where it says **1 studs**, click and type **4**.
 
 ## Place the starting points
 
@@ -26,7 +23,7 @@ In Roblox Studio, the player starting locations are set using SpawnLocation obje
 ## Place the first SpawnLocation
 
 1. From the Model tab, select the **Move** tool.
-   <img src="../../assets/education/build-it-play-it-create-and-destroy/setMoveTool.png" />
+   <img src="../../assets/education/general/Move-Tool.png" width="328" />
 
 2. Select one of the SpawnLocations in the palette.
    <img src="../../assets/education/build-it-play-it-create-and-destroy/SpawnLocation_Select_920x600.jpg" width="75%" />

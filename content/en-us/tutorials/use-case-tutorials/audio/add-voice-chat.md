@@ -19,18 +19,7 @@ Voice chat is only available to players who are at least 13 years of age and hav
 
 ## Configure settings
 
-In order for team chat, push to chat, or time-based chat to work appropriately, you must configure your voice chat setup to enable voice chat and create the appropriate audio objects necessary for picking up and emitting audio within the 3D environment.
-
-To configure your settings for voice chat:
-
-1. Allow players to use their microphones.
-   1. Open Studio's **File**&nbsp;⟩ **Game Settings** window.
-   1. In the left hand navigation, select the **Communication** tab, then toggle **Enable Microphone** so the selector turns from gray to green.
-   1. Publish the place to save your changes.
-1. Configure **VoiceChatService** so that it creates the necessary audio objects for voice chat.
-   1. In the toolbar's **Model** tab, click **Service**.
-   1. In the pop-up window, select **VoiceChatService**, then click the **Insert** button. The new service displays in the **Explorer** window along with the default services in every project.
-   1. In the **Explorer** window, select **VoiceChatService**, then in the **Properties** window, set **UseAudioApi** to **Enabled**.
+In order for team chat, push to chat, or time-based chat to work appropriately, you must [configure your voice chat setup](../../../chat/voice-chat.md#enable-voice-chat) to enable voice chat and create the appropriate audio objects necessary for picking up and emitting audio within the 3D environment.
 
 When players join your experience, your voice chat setup now:
 

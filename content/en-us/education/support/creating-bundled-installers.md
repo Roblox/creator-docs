@@ -13,14 +13,9 @@ The following instructions are applicable to **Windows** computers.
 
 1. Install <a href="https://www.roblox.com/create">Roblox Studio</a> on your computer.
 2. Open the **Command Prompt**. You can do this by clicking the Windows start icon. Then type `CMD` and click on the Command Prompt application.
-
-   <img src="../../assets/education/legacy/showCommandPrompt.png" />
-
 3. Find the installation of Roblox on your computer. You need the executable of what you'll be creating a bundle for. This will typically be in:
 
    `C:\Users\userName\AppData\Local\Roblox\Versions`
-
-   <img src="../../assets/education/legacy/showVersions.png" />
 
    <Alert severity="info">
        If you have multiple versions, you'll have both Roblox Studio and Client. To find which one includes the executable, open the folders and check for either RobloxStudio.exe or RobloxPlayerLauncher.exe.
@@ -39,5 +34,3 @@ The following instructions are applicable to **Windows** computers.
    ```
 
 6. Let the bundler work until it closes.This will create a bundled installer in the same folder as the Roblox executable with a file name such as: `RobloxStudioLauncherBeta_version-6d02431b656044a6.exe`.
-
-   <img src="../../assets/education/legacy/creatingBundler.png" />

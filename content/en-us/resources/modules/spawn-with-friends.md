@@ -17,9 +17,7 @@ It can be challenging to locate friends in-experience. The **SpawnWithFriends** 
 
 To use the **SpawnWithFriends** module in an experience:
 
-1. From the **View** tab, open the **Toolbox** and select the **Creator Store** tab.
-
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
+1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
    <img src="../../assets/studio/toolbox/Creator-Store-Tab.png" width="360" />
 
@@ -46,7 +44,7 @@ This module may result in players spawning in restricted areas like VIP rooms, a
      <figcaption>Block filling the entire prison room to prevent players from spawning inside</figcaption>
    </figure>
 
-1. Using the [Tags](../../studio/properties.md#instance-tags) section of each block's properties, or Studio's [Tag&nbsp;Editor](../../studio/view-tab.md#windows-and-tools), apply the tag `RestrictedSpawnArea` so that `Class.CollectionService` detects them.
+1. Using the [Tags](../../studio/properties.md#instance-tags) section of each block's properties, apply the tag `RestrictedSpawnArea` so that `Class.CollectionService` detects them.
 
 1. Paste the following code into a `Class.Script` within **ServerScriptService**.
 

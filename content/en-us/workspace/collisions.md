@@ -90,9 +90,7 @@ Collision **groups** let you assign `Class.BasePart|BaseParts` to dedicated grou
   <figcaption>In the video above, the spinning objects are in different collision groups such that they collide with objects of another color but not with objects of their own color</figcaption>
 </figure>
 
-You can easily set up collision groups through Studio's **Collision Groups Editor**, accessible by clicking the **Collision&nbsp;Groups** button in the toolbar's **Model** tab.
-
-<img src="../assets/studio/general/Model-Tab-Collision-Groups.png" width="754" alt="Collision Groups tool indicated in Model tab of Studio" />
+You can easily set up collision groups through Studio's **Collision Groups** editor, accessible through Studio's **Window**&nbsp;⟩ **3D** menu.
 
 The editor functions in either **List&nbsp;View** which favors [docking](../studio/ui-overview.md#reposition-windows) to the left or right side of Studio, or in a wider **Table&nbsp;View**, which favors docking to the top or bottom.
 

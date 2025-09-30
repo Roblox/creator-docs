@@ -126,14 +126,14 @@ To assign bone influence to the left and right arms:
    <video controls src="../../assets/modeling/meshes/rigging-simple/6.1-assigning-vertices.mp4" width="80%"></video>
 
 4. Drag and select the vertices you want to move with the right bone.
-5. Navigate to the **Object Properties panel**.
+5. Navigate to the **Object Properties** panel.
 6. In the **Vertex Group** section, select the name of the bone you want to assign and click **Assign**.
 7. **Repeat steps 4-6** for the other bone and arm vertices.
 
    <video controls src="../../assets/modeling/meshes/rigging-simple/6.2-assigning-vertices.mp4" width="80%"></video>
 
 8. Drag and select the rest of the vertices in the center of the robot.
-9. Navigate to the **Object Properties panel**.
+9. Navigate to the **Object Properties** panel.
 10. In the Vertex Group section, select the **Middle bone** and click **Assign**.
 
     <video controls src="../../assets/modeling/meshes/rigging-simple/6.3-assigning-vertices.mp4" width="80%"></video>

@@ -27,6 +27,4 @@ All terrain, whether it's mountains or painting grass, is created using the Terr
 
    <img src="../../assets/education/build-it-play-it-create-and-destroy/clickViewSelectorToTop.jpg" width="100%" />
 
-3. From the **Home** tab, open the **Terrain Editor**.
-
-   <img src="../../assets/education/build-it-play-it-create-and-destroy/genericOpenTerrainEditor.png" />
+3. From the **Home** tab, click **Terrain** to open the **Terrain Editor**.

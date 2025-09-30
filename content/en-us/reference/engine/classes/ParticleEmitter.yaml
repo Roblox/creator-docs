@@ -242,9 +242,8 @@ properties:
     description: |
       The error message to display if the
       `Class.ParticleEmitter.Texture|Texture` is incompatible for a flipbook.
-      The flipbook texture must be of pixel dimensions 8&times;8, 16&times;16,
-      32&times;32, 64&times;64, 128&times;128, 256&times;256, 512&times;512, or
-      1024&times;1024.
+      The flipbook texture size must be an exact multiple of the flipbook layout
+      size.
     code_samples: []
     type: string
     tags: []
@@ -262,7 +261,7 @@ properties:
   - name: ParticleEmitter.FlipbookLayout
     summary: |
       Determines the layout of the flipbook texture. Must be None, Grid2x2,
-      Grid4x4, or Grid8x8.
+      Grid4x4, Grid8x8 or Custom.
     description: |
       The **FlipbookLayout** property determines the layout of the texture. It
       can be any value of the `Enum.ParticleFlipbookLayout` enum:
@@ -272,8 +271,55 @@ properties:
       - **Grid2x2** &ndash; 2&times;2 frames for a 4-frame animation.
       - **Grid4x4** &ndash; 4&times;4 frames for a 16-frame animation.
       - **Grid8x8** &ndash; 8&times;8 frames for a 64-frame animation.
+      - **Custom** &ndash; A custom grid size defined by
+        `Class.ParticleEmitter.FlipbookSizeX|FlipbookSizeX` and
+        `Class.ParticleEmitter.FlipbookSizeY|FlipbookSizeY`.
     code_samples: []
     type: ParticleFlipbookLayout
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Flipbook
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+  - name: ParticleEmitter.FlipbookSizeX
+    summary: |
+      Defines the number of horizontal frames in a custom flipbook layout.
+    description: |
+      The **FlipbookSizeX** property defines the number of horizontal frames
+      (columns) in a custom flipbook layout. This property only applies when
+      `Class.ParticleEmitter.FlipbookLayout|FlipbookLayout` is set to
+      `Enum.ParticleFlipbookLayout.Custom|Custom`.
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Flipbook
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+  - name: ParticleEmitter.FlipbookSizeY
+    summary: |
+      Defines the number of vertical frames in a custom flipbook layout.
+    description: |
+      The **FlipbookSizeY** property defines the number of vertical frames
+      (rows) in a custom flipbook layout. This property only applies when
+      `Class.ParticleEmitter.FlipbookLayout|FlipbookLayout` is set to
+      `Enum.ParticleFlipbookLayout.Custom|Custom`.
+    code_samples: []
+    type: int
     tags: []
     deprecation_message: ''
     security:

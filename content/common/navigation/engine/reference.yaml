@@ -3864,6 +3864,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/BorderMode.yaml
         ignoreTranslation: true
+      - title: BorderStrokePosition
+        path: /reference/engine/enums/BorderStrokePosition
+        type: engineapi
+        source: /reference/engine/enums/BorderStrokePosition.yaml
+        ignoreTranslation: true
       - title: BreakpointRemoveReason
         path: /reference/engine/enums/BreakpointRemoveReason
         type: engineapi
@@ -5403,6 +5408,11 @@ navigation:
         path: /reference/engine/enums/StreamOutBehavior
         type: engineapi
         source: /reference/engine/enums/StreamOutBehavior.yaml
+        ignoreTranslation: true
+      - title: StrokeSizingMode
+        path: /reference/engine/enums/StrokeSizingMode
+        type: engineapi
+        source: /reference/engine/enums/StrokeSizingMode.yaml
         ignoreTranslation: true
       - title: StudioCloseMode
         path: /reference/engine/enums/StudioCloseMode

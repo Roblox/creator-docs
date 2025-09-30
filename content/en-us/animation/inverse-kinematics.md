@@ -24,7 +24,7 @@ This animation technique can provide solutions to the following examples:
 
 ## IKControl
 
-You can use an `Class.IKControl` to procedurally add IK to your character rigs outside of the Animation Editor. Studio allows you to programmatically apply IK to all characters, such as R15, Rthro, and custom imported skinned characters, to create realistic movement and interactions in your experience.
+You can use an `Class.IKControl` to procedurally add IK to your character rigs outside of the **Animation Editor**. Studio allows you to programmatically apply IK to all characters, such as R15, Rthro, and custom imported skinned characters, to create realistic movement and interactions in your experience.
 
 When adding an `Class.IKControl`, set the [required properties](#required-properties) correctly to avoid unexpected and unnatural animation results. As with all animation, [test your IKControls](#test-ikcontrols) to ensure that you achieve the desired behavior.
 
@@ -61,11 +61,11 @@ When adding a `Class.IKControl` to your character's `Class.Humanoid` or `Class.A
 
 ### Test IKControls
 
-You can add and edit `Class.IKControl` programmatically or directly through the Explorer. You can even add and make changes to `Class.IKControl` during a Play test to quickly check how various properties affect a character's movements.
+You can add and edit `Class.IKControl` programmatically or directly through the **Explorer**. You can even add and make changes to `Class.IKControl` during a Play test to quickly check how various properties affect a character's movements.
 
 To quickly test your `Class.IKControl` using an `Class.Attachment` as a target:
 
-1. In the toolbar's **Test** tab, select **Play** to start the playtest.
+1. From Studio's mezzanine, [initiate a playtest](../studio/testing-modes.md#playtesting).
 2. In the **Explorer**, navigate to **Workspace** → your user's `Class.Model`. This `Class.Model` instance is named as your current Roblox account.
 3. Click the **⊕** icon next to your character model's `HumanoidRootPart` and add an **Attachment**.
 
@@ -82,12 +82,12 @@ To quickly test your `Class.IKControl` using an `Class.Attachment` as a target:
    <img src="../assets/animation/inverse-kinematics/IK-Humanoid-Add.png"
    width="40%" />
 
-6. Select the `Class.IKControl` and set the following property values in the **Properties** panel:
+6. Select the `Class.IKControl` and set the following property values in the **Properties** window:
 
    1. **Type**: Select `Transform` from the dropdown.
-   2. **EndEffector**: Select your model's **LeftHand** `Class.MeshPart` in the Explorer.
-   3. **Target**: Select the newly created **Attachment** object in the Explorer.
-   4. **ChainRoot**: Select your model's **LeftUpperArm** `Class.MeshPart` in the Explorer.
+   2. **EndEffector**: Select your model's **LeftHand** `Class.MeshPart` in the **Explorer**.
+   3. **Target**: Select the newly created **Attachment** object in the **Explorer**.
+   4. **ChainRoot**: Select your model's **LeftUpperArm** `Class.MeshPart` in the **Explorer**.
 
    <GridContainer numColumns="2">
      <figure>
@@ -96,7 +96,7 @@ To quickly test your `Class.IKControl` using an `Class.Attachment` as a target:
      </figure>
      <figure>
        <img src="../assets/animation/inverse-kinematics/IK-Explorer-Humanoid.png" width="67%" />
-       <figcaption>Explorer Panel - Character Model</figcaption>
+       <figcaption>Explorer - Character Model</figcaption>
      </figure>
    </GridContainer>
 
@@ -134,9 +134,9 @@ Roblox R15 characters already include attachments in their joints that you can u
 
 To add the `Class.HingeConstraint` and child attachments:
 
-1. In the Explorer, locate your model's **LeftLowerArm** and click the **⊕ button**.
+1. In the **Explorer**, locate your model's **LeftLowerArm** and click the **⊕ button**.
 2. Add a **HingeConstraint** with the name `LeftElbowConstraint`.
-3. In the Explorer, navigate to the **LeftUpperArm.LeftElbowRigAttachment** and add an attachment:
+3. In the **Explorer**, navigate to the **LeftUpperArm.LeftElbowRigAttachment** and add an attachment:
 
    1. Click the **⊕ button** to add an **Attachment** with the name `LeftElbowConstraintAttachment0`.
    2. In the viewport, select the attachment and use the **Rotate tool** to rotate the attachment so the yellow **PrimaryAxis** is the axis of your elbow's expected rotation.
@@ -145,7 +145,7 @@ To add the `Class.HingeConstraint` and child attachments:
 
    3. Set the **LeftElbowConstraint.Attachment0** property to this new attachment.
 
-4. In the Explorer, navigate to your model's **LeftLowerArm.LeftElbowRigAttachment** add an attachment:
+4. In the **Explorer**, navigate to your model's **LeftLowerArm.LeftElbowRigAttachment** add an attachment:
 
    1. Click the **⊕ button** and add an **Attachment** with the name `LeftElbowConstraintAttachment1`.
    2. Set the **LeftUpperArm.LeftElbowConstraint.Attachment1** property to this new attachment.
@@ -173,7 +173,7 @@ You can improve this by adding a `Class.BallSocketConstraint` to limit the rotat
 
 To add a `Class.BallSocketConstraint` for the wrist:
 
-1. In the Explorer, locate your model's **LeftHand** and click the **⊕ button**.
+1. In the **Explorer**, locate your model's **LeftHand** and click the **⊕ button**.
    1. Add a **BallSocketConstraint** with the name `LeftWristConstraint`.
 2. Locate your model's **LeftLowerArm.LeftWristRigAttachment** and add an attachment:
    1. Click the **⊕ button** and add an **Attachment** with the name `LeftWristConstraintAttachment0`.
@@ -184,8 +184,8 @@ To add a `Class.BallSocketConstraint` for the wrist:
    1. Click the **⊕ button** and add an **Attachment** with the name `LeftWristConstraintAttachment1`.
    2. Copy the **LeftWristConstraintAttachment0.CFrameOrientation** property and paste it as the **LeftWristConstraintAttachment1.CFrameOrientation** property.
    3. Set the **LeftWristConstraint.Attachment1** property to this new **LeftWristConstraintAttachment1**.
-4. In the Explorer, select the **LeftWristConstraint**.
-5. In the Properties Editor, set the following:
+4. In the **Explorer**, select the **LeftWristConstraint**.
+5. In the **Properties** window, set the following:
    1. Enable **LimitsEnabled**.
    2. Set **UpperAngle** to `80`. This controls how much the constraint's axis can rotate, and 80 degrees is approximately how much the wrist should be able to bend.
 6. Depending on your character you may want to tweak the direction the cone is pointing in. You can do this by using the **Rotate tool** to rotate the constraint's **Attachment0**.

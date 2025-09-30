@@ -34,13 +34,13 @@ You can download reference `.fbx` models of [eyelashes](../../assets/art/referen
 
 1. In the [3D Importer](../../art/modeling/3d-importer.md), import the `.fbx` files of your face accessory and body. The eyelashes, eyebrows, and body each populate in your Workspace as a `Model`.
    1. If you are using the reference body, set **Rig General** > **Rig Type** to **Rthro**.
-2. Use the Accessory Fitting Tool and select the **Eyelash** or **Eyebrow** model and click **Next**.
+2. Use the [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) and select the **Eyelash** or **Eyebrow** model and click **Next**.
 
    <img src="../../assets/art/accessories/AFT-Eyebrows-Example.png"/>
 
 3. Select the appropriate **Accessory** > **Eyelash** or **Accessory** > **Eyebrow** asset type and click **Next**.
 4. (Optional) Preview the fit of your face accessory.
-   1. If the face accessory was modeled on a specific character body, you may want to import that character body into Studio and use it as a mannequin in the Accessory fitting tool preview. See [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) for more information on adding custom characters.
+   1. If the face accessory was modeled on a specific character body, you may want to import that character body into Studio and use it as a mannequin in the fitting tool's preview. See [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) for more information on adding custom characters.
    2. If using the provided reference body, you can continue to step 5.
 5. Click **Generate MeshPart Accessory** to create your MeshPart.
 6. **Repeat steps 2-5** for the other face accessory.

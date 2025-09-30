@@ -173,7 +173,7 @@ if getSuccess then
 end
 ```
 
-To test the script, click **Run** and notice the `currentGold` value printed to the **Output** window. Note that it may take a couple seconds, as the functions must connect to data store servers.
+To test the script, [initiate a playtest](../../../../studio/testing-modes.md#playtesting) and notice the `currentGold` value printed to the [Output](../../../../studio/output.md) window. Note that it may take a couple seconds, as the functions must connect to data store servers.
 
 ## Read and save automatically
 

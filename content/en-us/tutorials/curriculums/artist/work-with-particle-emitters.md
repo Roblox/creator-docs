@@ -9,11 +9,22 @@ prev: /tutorials/curriculums/artist/get-started
 
 To demonstrate, check out the **Mansion of Wonder** template uses the following three images to create VFX art in different areas of the carnival ride:
 
-<img src="../../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/ParticleTest.png"  width="100%" />
 <GridContainer numColumns="3">
-  <video controls src="../../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/Rock-Video.mp4" width="100%"></video>
-  <video controls src="../../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/Fire-Video.mp4" width="100%"></video>
-  <video controls src="../../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/Portal-Video.mp4" width="100%"></video>
+  <figure>
+		<center><img src="../../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/particle-star.png"  width="80%" /><br />
+		<img src="../../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/Short-Arrow-Down.png"  width="32" /><br />
+  	<video controls src="../../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/Rock-Video.mp4" width="100%" style={{marginTop: 0}}></video></center>
+	</figure>
+	<figure>
+		<center><img src="../../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/particle-flame.png"  width="80%" /><br />
+		<img src="../../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/Short-Arrow-Down.png"  width="32" /><br />
+  	<video controls src="../../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/Fire-Video.mp4" width="100%" style={{marginTop: 0}}></video></center>
+	</figure>
+	<figure>
+		<center><img src="../../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/particle-portal.png"  width="80%" /><br />
+		<img src="../../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/Short-Arrow-Down.png"  width="32" /><br />
+  	<video controls src="../../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/Portal-Video.mp4" width="100%" style={{marginTop: 0}}></video></center>
+	</figure>
 </GridContainer>
 
 Using the exact same techniques, in this chapter, let's explore how to find the carnival ride's laser blast and explosion particle emitters, then customize their properties until you transform the bland starting particles into your own VFX creations.
@@ -41,7 +52,7 @@ To find the sample particle emitters:
      <tbody>
        <tr>
          <td>**Move**</td>
-         <td><kbd>W A S D</kbd> </td>
+         <td><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd></td>
        </tr>
        <tr>
          <td>**Rotate**</td>
@@ -68,18 +79,14 @@ To find the sample particle emitters:
    <img src="../../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/select-blaster-shot.png" width="40%" />
 
    <Alert severity="warning">
-   If you don't see the Explorer and Properties windows, you can open them by going to the **Home** tab and clicking the **Explorer** and **Properties** buttons.
-
-   <img src="../../../assets/education/general/OpenExplorerandProperties.png" />
+   If you don't see the **Explorer** and **Properties** windows, toggle them on from Studio's **Window** menu.
    </Alert>
 
 ## Customize laser blast
 
-Whenever you select something in the 3D viewport or the Explorer window, the **Properties** window updates to display all properties that you can directly customize within Studio's interface. For example, when you selected the **BlastParticles** particle emitter in the previous section, the Properties window updated with all properties for that specific particle emitter.
+Whenever you select something in the 3D viewport or the **Explorer** window, the **Properties** window updates to display all properties that you can directly customize within Studio's interface. For example, when you selected the **BlastParticles** particle emitter in the previous section, the **Properties** window updated with all properties for that specific particle emitter.
 
 To introduce you to customizing properties, let's start with customizing the color and image of the laser blast's particles. As you get more comfortable with this process, you can experiment with more properties.
-
-<img src="../../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/highlight-properties.png" width="100%" />
 
 ### Color
 
@@ -107,52 +114,52 @@ To set the laser blast particles to a new texture:
 
    <GridContainer numColumns="3">
      <figure>
-       <img src="../../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/star-1.png" width="50%"/>
-       <figcaption>rbxassetid://5860841663</figcaption>
+       <center><img src="../../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/star-1.png" width="50%"/></center>
+       <figcaption>`rbxassetid://5860841663`</figcaption>
      </figure>
      <figure>
-       <img src="../../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/swirl.png" width="50%"/>
-       <figcaption>rbxassetid://5857851812</figcaption>
+       <center><img src="../../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/swirl.png" width="50%"/></center>
+       <figcaption>`rbxassetid://5857851812`</figcaption>
      </figure>
      <figure>
-       <img src="../../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/heart.png" width="50%"/>
-       <figcaption>rbxassetid://5857851618</figcaption>
+       <center><img src="../../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/heart.png" width="50%"/></center>
+       <figcaption>`rbxassetid://5857851618`</figcaption>
      </figure>
      <figure>
-       <img src="../../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/circle.png" width="50%"/>
-       <figcaption>rbxassetid://6711256324</figcaption>
+       <center><img src="../../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/circle.png" width="50%"/></center>
+       <figcaption>`rbxassetid://6711256324`</figcaption>
      </figure>
      <figure>
-       <img src="../../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/smoke.png" width="50%"/>
-       <figcaption>rbxassetid://5833235272</figcaption>
+       <center><img src="../../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/smoke.png" width="50%"/></center>
+       <figcaption>`rbxassetid://5833235272`</figcaption>
      </figure>
      <figure>
-       <img src="../../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/star-2.png" width="50%"/>
-       <figcaption>rbxassetid://6772783963</figcaption>
+       <center><img src="../../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/star-2.png" width="50%"/></center>
+       <figcaption>`rbxassetid://6772783963`</figcaption>
      </figure>
      <figure>
-       <img src="../../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/spark.png" width="50%"/>
-       <figcaption>rbxassetid://5833323391</figcaption>
+       <center><img src="../../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/spark.png" width="50%"/></center>
+       <figcaption>`rbxassetid://5833323391`</figcaption>
      </figure>
      <figure>
-       <img src="../../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/circle-2.png" width="50%"/>
-       <figcaption>rbxassetid://5857892330</figcaption>
+       <center><img src="../../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/circle-2.png" width="50%"/></center>
+       <figcaption>`rbxassetid://5857892330`</figcaption>
      </figure>
      <figure>
-       <img src="../../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/scratch.png" width="50%"/>
-       <figcaption>rbxassetid://5857892405</figcaption>
+       <center><img src="../../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/scratch.png" width="50%"/></center>
+       <figcaption>`rbxassetid://5857892405`</figcaption>
      </figure>
      <figure>
-       <img src="../../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/trace.png" width="50%"/>
-       <figcaption>rbxassetid://5857931724</figcaption>
+       <center><img src="../../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/trace.png" width="50%"/></center>
+       <figcaption>`rbxassetid://5857931724`</figcaption>
      </figure>
      <figure>
-       <img src="../../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/triangle.png" width="50%"/>
-       <figcaption>rbxassetid://5857851618</figcaption>
+       <center><img src="../../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/triangle.png" width="50%"/></center>
+       <figcaption>`rbxassetid://5857851618`</figcaption>
      </figure>
      <figure>
-       <img src="../../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/star-3.png" width="50%"/>
-       <figcaption>rbxassetid://5860841737</figcaption>
+       <center><img src="../../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/star-3.png" width="50%"/></center>
+       <figcaption>`rbxassetid://5860841737`</figcaption>
      </figure>
    </GridContainer>
 
@@ -170,7 +177,7 @@ To set the laser blast particles to a new texture:
 
 ## Customize explosion
 
-Now that you have custom VFX art for your laser blast, you can move on to customizing the explosion whenever the laser blast hits a sinister slime or ghastly ghost. To verify that you're customizing the explosion's properties instead of the laser blast, make sure you select the explosion particle emitter so that the Properties window updates with its specific properties:
+Now that you have custom VFX art for your laser blast, you can move on to customizing the explosion whenever the laser blast hits a sinister slime or ghastly ghost. To verify that you're customizing the explosion's properties instead of the laser blast, make sure you select the explosion particle emitter so that the **Properties** window updates with its specific properties:
 
 1. In the **Explorer** window, go to the search bar, then type **ExplosionParticles**.
 1. In your search results, click the particle emitter result.

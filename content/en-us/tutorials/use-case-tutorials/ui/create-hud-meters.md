@@ -27,10 +27,7 @@ The best way to test UI designs across platforms is Studio's [Device Emulator](.
 
    <UseStudioButton variant="" buttonTextTranslationKey="Action.EditInStudio" placeId="99416825187098" universeId="6627378835" />
 
-2. From the **Test** tab, toggle on the **Device** tool.
-
-   <img src="../../../assets/studio/general/Test-Tab-Emulation-Device.png" width="800" alt="Device button indicated in Test tab" />
-
+2. From Studio's **View** menu, toggle on **Device Emulator**.
 3. From the bar directly above the main viewport, select a phone emulation such as **iPhone&nbsp;X** or **Samsung&nbsp;Galaxy&nbsp;A51**. Then, set the view size to **Fit&nbsp;to&nbsp;Window** to utilize the maximum space in Studio.
 
    <img src="../../../assets/studio/general/Device-Emulator-Phone.png" width="800" alt="Device Emulator settings options indicated at top of viewport window." />
@@ -121,7 +118,7 @@ Similar to design applications like Figma and Photoshop, a `Class.Frame` in Robl
    <img src="../../../assets/tutorials/creating-hud-meters/Meter-Design-Parent-Frame.png" width="840" alt="New frame in viewport." />
 
    <Alert severity="warning">
-   If the new frame doesn't appear in the viewport, make sure you've toggled on **GUI&nbsp;overlay** from the [Visualization&nbsp;Options](../../../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport, or toggled on **UI&nbsp;Visibility** from the [View](../../../studio/view-tab.md) tab.
+   If the new frame doesn't appear in the viewport, make sure you've toggled on **GUI&nbsp;overlay** from the [Visualization&nbsp;Options](../../../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
    </Alert>
 
 2. Rename the new frame instance to **MeterBar**.

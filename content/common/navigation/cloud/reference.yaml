@@ -20,6 +20,8 @@ navigation:
         path: /cloud/reference/openapi
       - title: Scopes
         path: /cloud/reference/scopes
+      - title: Risk levels
+        path: /cloud/reference/risk-levels
   - heading: Authentication
   - title: API keys
     path: /cloud/auth/api-keys
@@ -91,6 +93,14 @@ navigation:
     path: /cloud/features/user-profiles
   - title: Users
     path: /cloud/features/users
+  - title: '' # doesn't show anywhere
+    path: /cloud/features-revamp/
+    type: cloudfeature
+    source: /reference/cloud/openapi.json
+  - title: '' # doesn't show anywhere
+    path: /cloud/domains/
+    type: clouddomain
+    source: /reference/cloud/openapi.json
   - heading: Open Cloud API Reference
   - title: Cloud
     section:

@@ -17,11 +17,11 @@ Start by creating parts for the door and its attachments. **Attachments** are wh
 
    ![alt](../../../assets/tutorials/building-a-hinged-door/introToConstraints-showDoorCreated.jpg)
 
-2. Select **DoorFrame**. In the Properties, enable **Anchored** so it won't move.
+2. Select **DoorFrame**. In the **Properties** window, enable **Anchored** so it won't move.
 
    ![alt](../../../assets/tutorials/building-a-hinged-door/introToConstraints_selectAnchored.png)
 
-3. In the Explorer, hover over **DoorFrame** and add a new **Attachment**. Repeat the same to add an attachment to the **Door**.
+3. In the **Explorer**, hover over **DoorFrame** and add a new **Attachment**. Repeat the same to add an attachment to the **Door**.
 
    ![alt](../../../assets/tutorials/building-a-hinged-door/introToConstraints_attachmentsCreated.png)
 
@@ -33,8 +33,8 @@ Start by creating parts for the door and its attachments. **Attachments** are wh
 
 New attachments are created in the center of a part. So they can work with the door, the two attachments need to be moved to face each other.
 
-1. To view constraints and attachments, toggle on **Constraint Details** in the toolbar's **Model** tab.
-2. In the Explorer, select **FrameAttachment**.
+1. To view constraints and attachments, toggle on **Show Constraint Details** from Studio's **View** menu.
+2. In the **Explorer**, select **FrameAttachment**.
 
    ![alt](../../../assets/tutorials/building-a-hinged-door/introToConstraints_selectFrameAttachment.png)
 
@@ -48,7 +48,7 @@ New attachments are created in the center of a part. So they can work with the d
 
    It's best to position attachments so they're precisely aligned with one another. In this case, misaligned attachments may cause the door to swing incorrectly.
 
-   For precise positioning, use <b>Snap to Grid</b> with increments appropriate for the size of the part. Alternatively, edit the attachment's position in the Properties window.
+   For precise positioning, use <b>Snap to Grid</b> with increments appropriate for the size of the part. Alternatively, edit the attachment's position in the **Properties** window.
 
     </Alert>
 
@@ -91,7 +91,7 @@ Remember, constraints are a way of connecting two attachments to move in a speci
 
    ![alt](../../../assets/tutorials/building-a-hinged-door/introToConstraints_showCreateHingeConstraint.png)
 
-2. In the constraint's properties, find **Attachment0**. Click the empty box right of the property and then, in the Explorer, click **DoorAttachment**.
+2. In the constraint's properties, find **Attachment0**. Click the empty box right of the property and then, in the **Explorer**, click **DoorAttachment**.
 
    <video controls muted>
       <source src="../../../assets/tutorials/building-a-hinged-door/introToConstraints_selectAttachment0.mp4" />

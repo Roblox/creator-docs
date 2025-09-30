@@ -103,4 +103,4 @@ To import audio through an HTTP request:
   </TabItem>
 </Tabs>
 
-After the audio assets pass moderation, you can reuse them from the Toolbox in any project on the platform. Although you are initially the only one who can view and use private audio assets, the [asset privacy](../projects/assets/privacy.md) system lets you grant usage permissions to specific connections and experiences.
+After the audio assets pass moderation, you can reuse them in any project on the platform. Although you are initially the only one who can view and use private audio assets, the [asset privacy](../projects/assets/privacy.md) system lets you grant usage permissions to specific connections and experiences.

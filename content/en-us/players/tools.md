@@ -164,7 +164,7 @@ This code sample assumes that the script is a first-level child inside the tool 
 
 The following example shows steps for adding a `Class.Script` on the server that enables users to equip a magic wand that can switch day and night by clicking on the screen:
 
-1. In the Explorer window, hover over the tool object and click the **&CirclePlus;** button to insert a `Class.Script`.
+1. In the **Explorer** window, hover over the tool object and click the **&CirclePlus;** button to insert a `Class.Script`.
 
 2. Copy the following code and paste it into your `Class.Script`.
 

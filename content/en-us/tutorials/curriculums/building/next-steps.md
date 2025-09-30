@@ -1,6 +1,7 @@
 ---
 title: Next steps
 description: Explains ways to continue learning about building in Studio.
+next: /tutorials/curriculums/coding/
 prev: /tutorials/curriculums/building/test-and-save
 ---
 
@@ -14,15 +15,13 @@ To make your experience public:
 
 1. Using the steps from the last chapter, publish your experience so others can see your latest changes.
 
-1. In the top-left corner of your computer, click **File** > **Game Settings**. The **Game Settings** window displays.
-
-   <img src="../../../assets/education/build-it-play-it-mansion-of-wonder/invite-friends/game-settings.png" width="50%" />
+1. In the top-left corner of your computer, click **File** &rang; **Game Settings**.
 
 1. In the **Game Settings** window,
    1. Go to the left bar and select the **Permissions** tab. New settings display.
    1. Set **Playability** to **Public**.
 
-   <img src="../../../assets/education/general/make-public.png" width="80%" />
+   <img src="../../../assets/education/general/Make-Public.png" width="800" />
 
 1. Click the **Save** button. Now everyone on Roblox can play your experience!
 
@@ -45,7 +44,7 @@ Basic parts are an excellent start for building in the 3D space, but Studio offe
     <figcaption>Salt terrain</figcaption>
   </figure>
   <figure>
-    <img src="..../../assets/modeling/textures-decals/Texture-On-Surface.jpg" alt="The same blue texture repeated eight times on a block part." width="85%"/>
+    <img src="../../../assets/tutorials/building-lesson/Texture-On-Surface.jpg" alt="The same blue texture repeated eight times on a block part." />
     <figcaption>Hexagon texture on a part</figcaption>
   </figure>
   <figure>
@@ -53,12 +52,3 @@ Basic parts are an excellent start for building in the 3D space, but Studio offe
     <figcaption>Solid modeling union</figcaption>
   </figure>
 </GridContainer>
-
-If you want to continue learning through step-by-step lessons, check out the following use case tutorials:
-
-- [Create neon signs with solid modeling](../../use-case-tutorials/modeling/create-neon-signs.md)
-- [Assemble modular environments](../../use-case-tutorials/modeling/assemble-modular-environments.md)
-
-<Alert severity = 'success'>
-Happy creating, we can't wait to see what you make!
-</Alert>

@@ -22,9 +22,9 @@ There are six different bodies to choose from in the scrapyard. Each body can be
   </figure>
 </GridContainer>
 
-1. In the **Home** tab, select the **Move** tool.
+1. In the toolbar, select the **Move** tool.
 
-   <img src="../../assets/education/general/Move-Tool.png" width="50%" />
+   <img src="../../assets/education/general/Move-Tool.png" width="328" />
 
 2. Select the body you want. Then, drag the **directional arrows** to move it into the center of the work area.
 

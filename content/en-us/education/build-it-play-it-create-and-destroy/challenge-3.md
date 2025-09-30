@@ -2,7 +2,7 @@
 title: Take the challenge!
 description: Complete the third Create and Destroy challenge to get a free Roblox avatar item.
 next: /education/build-it-play-it-create-and-destroy/finish-the-challenge
-prev: /education/build-it-play-it-create-and-destroy/icons-and-thumbnails
+prev: /education/build-it-play-it-create-and-destroy/change-the-script
 ---
 
 <img src="../../assets/education/build-it-play-it-create-and-destroy/avatarItemHeroBanners_wing.jpg" width="100%" />

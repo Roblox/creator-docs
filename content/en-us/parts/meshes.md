@@ -32,7 +32,7 @@ You can sell `Class.MeshPart` assets as avatar bodies, accessories, and clothing
 
 ## Import meshes
 
-You can import meshes into Studio using the [3D Importer](../art/modeling/3d-importer.md). With this tool, you can preview and examine meshes before importing them into your workspace or Toolbox, such as verifying texture, rigging, skinning, and animation data. It also flags issues and rejects meshes with error.
+You can import meshes into Studio using the [3D Importer](../art/modeling/3d-importer.md). With this tool, you can preview and examine meshes before importing them into your workspace or **Toolbox**, such as verifying texture, rigging, skinning, and animation data. It also flags issues and rejects meshes with error.
 
 If the mesh file you are importing contains objects using specific naming conventions or contains facial animation data, the 3D Importer automatically detects and converts them into the following objects instead of `Class.MeshPart`:
 
@@ -179,4 +179,4 @@ For more information on the performance impact of collision fidelity options and
   </figure>
 </GridContainer>
 
-For more information on rigging and skinning, see [Rigging and skinning](../art/modeling/rigging.md). After rigging a mesh, you can add animation and poses to it using the Animation Editor. See [Create an animation](../animation/editor.md#create-an-animation) for more information. Marketplace 3D assets, such as avatar clothing and bodies, also require rigging and skinning. See [Avatar](../avatar/index.md) for more information on requirements for Marketplace assets.
+For more information on rigging and skinning, see [Rigging and skinning](../art/modeling/rigging.md). After rigging a mesh, you can add animation and poses to it using the **Animation Editor**. See [Create an animation](../animation/editor.md#create-an-animation) for more information. Marketplace 3D assets, such as avatar clothing and bodies, also require rigging and skinning. See [Avatar](../avatar/index.md) for more information on requirements for Marketplace assets.

@@ -163,7 +163,7 @@ RunService.Heartbeat:Connect(function()
 end)
 ```
 
-When you [playtest your experience](../../../studio/test-tab.md), the Heartbeat function executes the following every frame:
+When you [playtest your experience](../../../studio/testing-modes.md#playtesting), the `Class.RunService.Heartbeat|Heartbeat` event connection executes the following every frame:
 
 1. Solves for a time (`numberSequenceTime`) within the `brightnessCurve` `Datatype.NumberSequence` based on the current time.
    - The time is between 0 and 1 as these represent the beginning and end of the NumberSequence, respectively.

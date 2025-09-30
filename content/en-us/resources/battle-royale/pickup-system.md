@@ -63,7 +63,7 @@ As noted above, pickups require both a functional `Class.Tool` and a visual `Cla
 ### Model
 
 1. Create a `Class.Model` for the visual pickup and give it the **same name** as you gave the `Class.Tool`.
-2. Using the **Tag&nbsp;Editor**, accessible from the [View](../../studio/view-tab.md) tab, apply the following tags to the model:
+2. Through the [Tags](../../studio/properties.md#instance-tags) section of its properties, apply the following tags to the model:
 
    - **Action**
    - **Pickup**

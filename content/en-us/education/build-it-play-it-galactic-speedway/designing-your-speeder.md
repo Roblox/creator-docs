@@ -54,13 +54,11 @@ The scrapyard is divided into three sections, one for each step. By combining, r
 
 To move parts where you want them, first turn off **collisions** and **move snapping**. Turning off collisions allow objects to pass through one another. Having snapping off lets you freely move objects.
 
-1. In the **Home** tab, click the **Geometric** button, then turn off **Collisions**.
+1. In the toolbar, click the **Geometric** button and make sure **Collisions** is turned off.
 
-   <img src="../../assets/education/build-it-play-it-galactic-speedway/designing-your-speeder/collisions-off.png" width="70%" />
+1. Make sure that **Move** snapping is also turned **off**.
 
-1. Make sure the **Move** snapping tool is also turned **off**.
-
-   <img src="../../assets/education/build-it-play-it-galactic-speedway/designing-your-speeder/turn-move-snap-off.png" width="70%" />
+   <img src="../../assets/education/general/Snap-Settings-B.png" width="500" />
 
 ## Change the camera view
 
@@ -76,7 +74,7 @@ To work on the driftspeeder, use the camera controls below.
 <tbody>
    <tr>
      <td><b>Move</b></td>
-     <td><kbd>W A S D</kbd></td>
+     <td><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd></td>
    </tr>
    <tr>
      <td><b>Rotate</b></td>
@@ -99,5 +97,5 @@ Move the camera so that you can better see the driftspeeder bodies and the work 
 
 <Alert severity="warning">
 <AlertTitle>Can't move the camera?</AlertTitle>
-If the camera doesn't move when you press <kbd>W A S D</kbd>, click somewhere inside the game world.
+If the camera doesn't move when you press <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd>, click somewhere inside the game world.
 </Alert>

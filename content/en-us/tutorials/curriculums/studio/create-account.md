@@ -12,9 +12,6 @@ Before you start learning about the Roblox engine, it's important to first creat
 To create a Roblox account:
 
 1. Go to Roblox's [home page](https://www.roblox.com/CreateAccount). Because you don't have an account yet, the sign up screen displays.
-
-   <img src="../../../assets/education/legacy/module3-signinScreen.jpg" width="70%" />
-
 2. Follow each prompt, then click the **Sign Up** button. After a moment, Roblox logs you in and the home page displays.
 
    <img src="../../../assets/education/legacy/module2-homepage.jpg" width="70%" />

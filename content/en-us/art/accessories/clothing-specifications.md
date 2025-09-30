@@ -65,10 +65,10 @@ Depending on the type of layerable asset, the size requirements can't exceed the
 
 ### Attachment Points
 
-`Class.Attachment` objects indicate where an accessory model attaches to a point on a character body. Whether you are creating rigid or [layered](./layered-clothing.md) accessories, Studio's [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) automatically adds and configures the appropriate `Class.Attachment` with the following specifications:
+`Class.Attachment` objects indicate where an accessory model attaches to a point on a character body. Whether you are creating rigid or [layered](./layered-clothing.md) accessories, Studio's [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) (AFT) automatically adds and configures the appropriate `Class.Attachment` with the following specifications:
 
 - **One attachment** - Each accessory, including layered clothing, require at least one attachment point to its associated body part.
-- **Naming Convention** - The `Class.Attachment` name must follow a specific naming convention depending on the `Class.Accessory.AccessoryType`. The Accessory Fitting Tool generates an appropriate `Class.Attachment` name automatically.
+- **Naming Convention** - The `Class.Attachment` name must follow a specific naming convention depending on the `Class.Accessory.AccessoryType`. The AFT generates an appropriate `Class.Attachment` name automatically.
 
 If setting attachment names manually in Studio, use the following `Class.Attachment` name for each accessory type:
 

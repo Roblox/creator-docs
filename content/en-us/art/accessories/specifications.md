@@ -35,7 +35,7 @@ Roblox supports 3 types of body scales: `Classic`, `Normal`, and `Slender`. When
 See [Body scale](../accessories/body-scale.md) for more information on the different types of body proportions Roblox supports.
 
 <Alert severity = 'info'>
-You can use tools like the [Accessory fitting tool](../../art/accessories/accessory-fitting-tool.md) to help visualize and adjust the scale of your mesh on a mannequin within a visualized boundary before uploading and publishing the asset.
+You can use tools like the [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) to help visualize and adjust the scale of your mesh on a mannequin within a visualized boundary before uploading and publishing the asset.
 </Alert>
 
 #### Classic
@@ -283,10 +283,10 @@ Textures created for accessories must meet Roblox's [texture specifications](../
 
 ## Attachment points
 
-`Class.Attachment` objects indicate where an accessory model attaches to a point on a character body. Whether you are creating rigid or [layered](./layered-clothing.md) accessories, Studio's [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) automatically adds and configures the appropriate `Class.Attachment` with the following specifications:
+`Class.Attachment` objects indicate where an accessory model attaches to a point on a character body. Whether you are creating rigid or [layered](./layered-clothing.md) accessories, Studio's [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) (AFT) automatically adds and configures the appropriate `Class.Attachment` with the following specifications:
 
 - **One attachment** - Each accessory, including layered clothing, require at least one attachment point to its associated body part.
-- **Naming Convention** - The `Class.Attachment` name must follow a specific naming convention depending on the `Class.Accessory.AccessoryType`. The Accessory Fitting Tool generates an appropriate `Class.Attachment` name automatically.
+- **Naming Convention** - The `Class.Attachment` name must follow a specific naming convention depending on the `Class.Accessory.AccessoryType`. The AFT generates an appropriate `Class.Attachment` name automatically.
 
 If setting or configuring attachments manually in Studio, use the following names for your `Class.Attachment` object depending on the accessory type:
 

@@ -8,13 +8,15 @@ navigation:
     path: /studio/
   - title: Setup
     path: /studio/setup
-  - title: Assistant for Studio
-    path: /assistant/guide
-    section:
-      - title: Prompt guide and examples
-        path: /assistant/prompt-engineering
   - title: Interface
     path: /studio/ui-overview
+  - title: Assistant
+    path: /assistant/guide
+    section:
+      - title: Overview
+        path: /assistant/guide
+      - title: Prompt guide and examples
+        path: /assistant/prompt-engineering
   - heading: Building tools
   - title: Align
     path: /studio/align-tool
@@ -26,7 +28,7 @@ navigation:
     path: /studio/material-generator
   - title: Texture Generator
     path: /studio/texture-generator
-  - title: Rig Builder
+  - title: Rig Generator
     path: /studio/rig-builder
   - heading: Scripting tools
   - title: Script Editor
@@ -48,34 +50,16 @@ navigation:
       - title: Memory usage
         path: /studio/optimization/memory-usage
   - heading: UI reference
-  - title: Quick access tools
-    path: /studio/quick-access
-  - title: Home tab
-    path: /studio/home-tab
-  - title: Model tab
-    path: /studio/model-tab
-  - title: Avatar tab
-    path: /studio/avatar-tab
-  - title: Test tab
-    path: /studio/test-tab
-  - title: View tab
-    path: /studio/view-tab
-  - title: Plugins tab
-    path: /studio/plugins-tab
-  - title: Script tab
-    path: /studio/script-tab
-  - title: Explorer window
+  - title: Explorer
     path: /studio/explorer
-  - title: Properties window
+  - title: Properties
     path: /studio/properties
   - title: Game Settings
     path: /studio/game-settings
   - title: Avatar Settings
     path: /studio/avatar-settings
-  - title: Shortcuts
-    path: /studio/shortcuts
   - heading: Plugins
   - title: Overview
     path: /studio/plugins
-  - title: Build widgets
+  - title: Studio widgets
     path: /studio/build-studio-widgets

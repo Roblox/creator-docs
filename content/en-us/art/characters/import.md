@@ -15,7 +15,7 @@ Keep in mind, your character model must also follow Roblox's [avatar character s
 
 To import your asset:
 
-1. In Studio, navigate to the toolbar's **Avatar** tab and select the **3D Importer**.
+1. From Studio's **File** menu, select **3D Importer**.
 2. In the file browser, select the `.fbx` or `.gltf` file saved locally. The 3D Importer loads a preview of the object.
 
     <img src="../../assets/art/avatar/Avatar-3D-Importer.png" width = "60%"/>
@@ -83,6 +83,6 @@ With this new character `Class.Model`, you can perform any of the following:
 
 - Use the model in your current experience and modify the model's appearance with [HumanoidDescription](../../characters/appearance.md#manually-modify-appearance).
 
-  - Playtest as the character by renaming the `Class.Model` to `StarterCharacter` and moving the `Class.Model` to the StarterPlayer folder in your Explorer before play testing.
+  - Playtest as the character by renaming the `Class.Model` to `StarterCharacter` and moving the `Class.Model` to the `Class.StarterPlayer` folder in the **Explorer** before play testing.
 
 - Save the model to your [Toolbox](../../projects/assets/toolbox.md) or make it public on the [Creator Store](../../production/creator-store.md) to share or use within any of your experiences.

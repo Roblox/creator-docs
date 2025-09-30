@@ -1,6 +1,6 @@
 ---
-title: Save player data with data stores
-description: Create basic data stores to save, store, and load player data.
+title: Save player data with standard data stores
+description: Create basic standard data stores to save, store, and load player data.
 ---
 
 **Data stores** are a service you can use to save and load **persistent player data** across different game sessions. They store important information, like a player's progress or inventory, and allow you to retrieve it for the player next time they join your experience. Without data stores, a player would lose all of their progress every time they left the game.
@@ -38,7 +38,7 @@ To enable Studio access to API services so that you can use data stores:
 4. Turn on **Enable Studio Access to API Services**.
 5. Save your changes.
 
-## Create a data store
+## Create a standard data store
 
 When creating a data store, you should always call the `DataStoreService` from a server-side `Class.Script`. Doing so is important because:
 
@@ -286,7 +286,7 @@ To save and load the character's position:
 
 ## Final code
 
-See the following code snippets for the complete `GoldManager` and `PositionManager` scripts. You can paste and run them directly in the [Gold Rush data store tutorial - Start](https://www.roblox.com/games/116344152904993/Gold-Rush-save-data-tutorial-Start) `.rbxl` file in Studio.
+See the following code snippets for the complete **GoldManager** and **PositionManager** scripts. You can paste and run them directly in the [Gold Rush save data tutorial - Start](https://www.roblox.com/games/5268331031/Gold-Rush) `.rbxl` file in Studio.
 
 ### GoldManager
 

@@ -68,7 +68,7 @@ During gameplay, unequipped tools are stored within the player's hierarchy in th
 
 Storing a tool in `Class.StarterPack` will place it in a player's `Class.Backpack` when they join the game or respawn.
 
-1. Move the **Blaster** to **StarterPack** in the Explorer.
+1. Move the **Blaster** to **StarterPack** in the **Explorer**.
 
    ![](../../../../assets/tutorials/creating-player-tools/explorer-starterpack.png)
 
@@ -86,7 +86,7 @@ Currently the player is holding the center of the blaster instead of the grip.
 
    ![](../../../../assets/tutorials/creating-player-tools/property-grippos.png)
 
-2. Click the **Play** button to test the tool. Notice how the tool is now being gripped in a different position.
+2. [Initiate a playtest](../../../../studio/testing-modes.md#playtesting) to test the tool. Notice how the tool is now being gripped in a different position.
 
    <GridContainer numColumns="2">
      <figure>

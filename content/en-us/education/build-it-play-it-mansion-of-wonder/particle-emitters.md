@@ -31,7 +31,7 @@ The template has two customizable particle emitters: one for the **magic blast**
     <tbody>
     <tr>
       <td><b>Move</b></td>
-      <td><kbd>W A S D</kbd> or arrow keys</td>
+      <td><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> or arrow keys</td>
     </tr>
     <tr>
       <td><b>Rotate</b></td>
@@ -52,12 +52,8 @@ The template has two customizable particle emitters: one for the **magic blast**
 
 2. In the top-right box in Roblox Studio, find the **Explorer** window. This has all of the pieces of the project, such as code, decorations, and the blast you'll personalize.
 
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/highlight-explorer.png" />
-
    <Alert severity="info">
-   If you don't see it the **Explorer** window, enable it by going to the **Home** tab and clicking the **Explorer** button.
-
-   <img src="../../assets/education/general/Explorer-Window.png" />
+   If you don't see it the **Explorer** window, open it from Studio's **Window** menu.
    </Alert>
 
 3. You'll need to find the magic blast's particles in the **Explorer** window to work with it. In the **Explorer** window's **search bar**, type **BlastParticles**, then select the object found.
@@ -69,12 +65,6 @@ The template has two customizable particle emitters: one for the **magic blast**
 Start personalizing the magical blast by giving it a new color.
 
 1. You can make changes to particle emitters in the **Properties** window. Find it on the bottom right of Studio, under the **Explorer** window.
-
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/highlight-properties.png" />
-
-   <Alert severity="info">
-   If you don't see the Properties window, click the **View** tab and then click the **Properties** button.
-   </Alert>
 
 2. In the **Properties** window, find the **Color** property, then double-click the light grey box to its right. A pop-up **Colors** window displays.
 

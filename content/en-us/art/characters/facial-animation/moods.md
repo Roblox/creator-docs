@@ -29,13 +29,13 @@ To create a mood:
 1. Add a character model with an animatable head to the viewport.
 1. Open the **Face Animation Editor**.
 
-   1. From the toolbar's **Avatar** tab, click **Animation Editor**. The [Animation Editor](../../../animation/editor.md) window displays.
+   1. From the toolbar's **Avatar** tab, click **Animation**. The [Animation Editor](../../../animation/editor.md) window displays.
    1. In the viewport, select your character model with an animatable head. A dialog displays.
 
       <img width="40%" img src="../../../assets/animation/animation-editor/Create-Animation-Dialog.png" />
 
-   1. In the **Animation Name** field, enter a new animation name, then click the **Create** button. The Animation Editor window displays the **media and playback controls**, **timeline**, and **track list**.
-   1. In the **track list** of the Animation Editor, click the **Face** button. The **Face Animation Editor** displays to the left of the track list.
+   1. In the **Animation Name** field, enter a new animation name, then click the **Create** button. The **Animation Editor** window displays the **media and playback controls**, **timeline**, and **track list**.
+   1. In the editor's **track list**, click the **Face** button. The **Face Animation Editor** displays to the left of the track list.
 
 1. In the **Face Animation Editor**, adjust sliders for the facial parts you want to manipulate. Animation tracks for each facial part you manipulate automatically display in the track list along with keyframes for your current position in the timeline. The character's face also updates in the viewport.
 

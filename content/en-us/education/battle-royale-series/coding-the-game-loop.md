@@ -32,7 +32,7 @@ The battle royale will use a combination of module scripts and normal scripts. B
 
 Create a module script named GameSettings to store variables used by other scripts, like match and intermission duration. These variables will be used by the GameManager script later.
 
-1. In **ServerStorage**, create a folder named ModuleScripts. In that folder, create a new module script named GameSettings.
+1. In **ServerStorage**, create a folder named **ModuleScripts**. In that folder, create a new module script named **GameSettings**.
 
    <img src="../../assets/education/battle-royale-series/arena_2_showGameSettingsCreated.png" />
 
@@ -97,7 +97,7 @@ The main game loop will be coded in the GameManager script using the variables j
 
 This script is a normal server script, so put it in ServerScriptService, rather than the module scripts folder. The actual game loop will be in a while true do loop.
 
-1. In ServerScriptService, create a new script named GameManager.
+1. In **ServerScriptService**, create a new script named **GameManager**.
 
    <img src="../../assets/education/battle-royale-series/arena_2_showGameManagerCreated.png" />
 
@@ -233,15 +233,9 @@ Right now, to have the code run `prepareGame()`, it needs to exit the repeat loo
 
 To test code requiring more than one player, create a local server. While published games are normally on Roblox servers, a **local server** simulates a multiplayer game on your computer with simulated players.
 
-1. To start a local server, in the **Test** tab > **Clients and Servers** section > set the player dropdown to the number of players in GameSetting's variable minimumPlayers. This lesson uses 2 players.
+1. To start a local server, navigate to the **Test** menu's **Start Test Session** ⟩ **Server and Clients**. This lesson uses 2 players.
 
-   <img src="../../assets/education/battle-royale-series/arena_2_showLocalServer_2Players.png" />
-
-2. Click Start to begin the server.
-
-   <img src="../../assets/education/battle-royale-series/arena_2_showLocalServer_start.png" />
-
-3. Wait a few seconds for the server to set up. Multiple windows will open in addition to your original Studio window. You may need to allow access to Roblox Studio from firewalls or other online security software.
+2. Wait a few seconds for the server to set up. Multiple windows will open in addition to your original Studio window. You may need to allow access to Roblox Studio from firewalls or other online security software.
 
 ### Troubleshooting tips
 
@@ -275,9 +269,7 @@ With the server up, you can check if the code worked.
 
    <img src="../../assets/education/battle-royale-series/arena_2_showFinishedOutput.png" />
 
-2. Once you're done testing, in any window, close the server by Cleanup button. This closes all Server and Client windows and takes you back to your normal Studio window.
-
-   <img src="../../assets/education/battle-royale-series/arena_2_showCleanup.png" />
+2. Once you're done testing, click the **End Session** button in any window to close all server and client windows and return to your normal Studio window.
 
 ### Troubleshooting tips
 

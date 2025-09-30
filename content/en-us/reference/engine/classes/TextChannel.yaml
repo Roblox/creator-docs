@@ -5,9 +5,8 @@
 name: TextChannel
 type: class
 memory_category: Instances
-summary: |
-  Represents a text chat channel.
-description: |
+summary: Represents a text chat channel.
+description: |-
   Represents a text chat channel. Contains `Class.TextSource|TextSources` as
   descendants.
 
@@ -28,10 +27,10 @@ tags: []
 deprecation_message: ''
 properties:
   - name: TextChannel.DirectChatRequester
-    summary: |
+    summary: |-
       The `TextChannel` will only deliver messages to users that can send direct
       messages to the `DirectChatRequester`.
-    description: |
+    description: |-
       The `TextChannel` will only deliver messages to users that can send direct
       messages to the `DirectChatRequester`. This property can only be set using
       `Class.TextChannel.SetDirectChatRequester()|SetDirectChatRequester()`.
@@ -53,10 +52,10 @@ properties:
       - Chat
 methods:
   - name: TextChannel:AddUserAsync
-    summary: |
+    summary: |-
       Adds a `Class.TextSource` to the `Class.TextChannel` given userId of a
       `Class.Player`.
-    description: |
+    description: |-
       Adds a `Class.TextSource` to the `Class.TextChannel` given userId of the
       user (with `Class.Player.UserId`). Can only be used in a `Class.Script`.
 
@@ -73,11 +72,10 @@ methods:
       - name: userId
         type: int64
         default:
-        summary: |
-          The userId of the `Class.Player`.
+        summary: The userId of the `Class.Player`.
     returns:
       - type: Tuple
-        summary: |
+        summary: |-
           Returns `Class.TextSource` and `true` if a new `Class.TextSource` is
           created for the user, `Class.TextSource` and `false` if there is an
           existing `Class.TextSource`, or `nil` and `false` if the user has chat
@@ -90,9 +88,8 @@ methods:
     capabilities:
       - Chat
   - name: TextChannel:DisplaySystemMessage
-    summary: |
-      Displays a system message to the user.
-    description: |
+    summary: Displays a system message to the user.
+    description: |-
       Displays a system message to user. Can only be used in a
       `Class.LocalScript`, or in a `Class.Script` with
       `Class.Script.RunContext|RunContext` of `Enum.RunContext.Client`. Messages
@@ -103,17 +100,16 @@ methods:
       - name: systemMessage
         type: string
         default:
-        summary: |
-          The system message sent to the `Class.TextChannel`.
+        summary: The system message sent to the `Class.TextChannel`.
       - name: metadata
         type: string
         default:
-        summary: |
+        summary: |-
           Use to identify system message types, such as the default system
           messages.
     returns:
       - type: TextChatMessage
-        summary: |
+        summary: |-
           A `Class.TextChatMessage` with `Class.TextChatMessage.Status` property
           that indicates the condition of the message.
     tags: []
@@ -123,9 +119,8 @@ methods:
     capabilities:
       - Chat
   - name: TextChannel:SendAsync
-    summary: |
-      Sends a `Class.TextChatMessage` to the server.
-    description: |
+    summary: Sends a `Class.TextChatMessage` to the server.
+    description: |-
       Sends a `Class.TextChatMessage` to the server. Can only be used in a
       `Class.LocalScript`, or in a `Class.Script` with
       `Class.Script.RunContext|RunContext` of `Enum.RunContext.Client`.
@@ -140,16 +135,14 @@ methods:
       - name: message
         type: string
         default:
-        summary: |
-          The message to send to the `Class.TextChannel`.
+        summary: The message to send to the `Class.TextChannel`.
       - name: metadata
         type: string
         default:
-        summary: |
-          Custom metadata to attach to the message.
+        summary: Custom metadata to attach to the message.
     returns:
       - type: TextChatMessage
-        summary: |
+        summary: |-
           A `Class.TextChatMessage` with `Class.TextChatMessage.Status` property
           that indicates the condition of the message.
     tags:
@@ -160,11 +153,11 @@ methods:
     capabilities:
       - Chat
   - name: TextChannel:SetDirectChatRequester
-    summary: |
+    summary: |-
       Sets the `Class.TextChannel.DirectChatRequester|DirectChatRequester` for
       the `TextChannel`. The `TextChannel` will only deliver messages to users
       that can send direct messages to the `DirectChatRequester`.
-    description: |
+    description: |-
       Sets the `Class.TextChannel.DirectChatRequester|DirectChatRequester` for
       the `TextChannel`. This method is only available for use in server
       scripts.
@@ -206,11 +199,11 @@ methods:
       - Chat
 events:
   - name: TextChannel.MessageReceived
-    summary: |
+    summary: |-
       Fires when `Class.TextChannel:DisplaySystemMessage()` is invoked on the
       client, or when the client receives a valid
       `Class.TextChannel:SendAsync()` response from the server.
-    description: |
+    description: |-
       Like `Class.TextChatService.MessageReceived`, fires when
       `Class.TextChannel:DisplaySystemMessage()` is invoked on the client, or
       when the client receives a valid `Class.TextChannel:SendAsync()` response
@@ -231,8 +224,7 @@ events:
       - name: incomingMessage
         type: TextChatMessage
         default:
-        summary: |
-          The received `Class.TextChatMessage`.
+        summary: The received `Class.TextChatMessage`.
     tags: []
     deprecation_message: ''
     security: None
@@ -240,9 +232,8 @@ events:
       - Chat
 callbacks:
   - name: TextChannel.OnIncomingMessage
-    summary: |
-      Called when `Class.TextChannel` is receiving an incoming message.
-    description: |
+    summary: Called when `Class.TextChannel` is receiving an incoming message.
+    description: |-
       Called when `Class.TextChannel` is receiving an incoming message. Can only
       be implemented on the client.
 
@@ -272,11 +263,10 @@ callbacks:
       - name: message
         type: TextChatMessage
         default:
-        summary: |
-          The incoming `Class.TextChatMessage`.
+        summary: The incoming `Class.TextChatMessage`.
     returns:
       - type: Tuple
-        summary: |
+        summary: |-
           If a `Class.TextChatMessageProperties` is returned, those properties
           are merged with the `Class.TextChatMessage` parameter to create a new
           `Class.TextChatMessage` with those properties.
@@ -287,10 +277,10 @@ callbacks:
     capabilities:
       - Chat
   - name: TextChannel.ShouldDeliverCallback
-    summary: |
+    summary: |-
       Called for each client when `Class.TextChannel` is receiving an incoming
       message to determine whether or not it should be delivered to that client.
-    description: |
+    description: |-
       Called for each client when `Class.TextChannel` is receiving an incoming
       message to determine whether or not it should be delivered to that client.
       Can only be defined on the server.
@@ -309,13 +299,11 @@ callbacks:
       - name: message
         type: TextChatMessage
         default:
-        summary: |
-          The message being sent, which also contains the sender of the message.
+        summary: The message being sent, which also contains the sender of the message.
       - name: textSource
         type: TextSource
         default:
-        summary: |
-          The `Class.TextSource` of the user who will be receiving the message.
+        summary: The `Class.TextSource` of the user who will be receiving the message.
     returns:
       - type: Tuple
         summary: ''

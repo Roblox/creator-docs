@@ -97,13 +97,13 @@ Roblox is actually two software packages with different hardware requirements.
 #### Common questions about software
 
 **Roblox client plays all experiences**
-Installing Roblox Client allows you to play any experience on Roblox. Experiences do not have their own installations.
+Installing the Roblox client allows you to play any experience on Roblox. Experiences do not have their own installations.
 
 **More detail on hardware specifications**
 For more details such as supported graphics cards or unique mobile device questions, see the <a href="https://en.help.roblox.com/hc/en-us/articles/203312800-Computer-Hardware-Operating-System-Requirements">Hardware Requirements</a> page.
 
 **Software Updates**
-Both Client and Studio require consistent internet access. Regular updates occur on a weekly basis. When the software does update, changes are often minor and do not disrupt curriculum.
+Both the Roblox client and Studio require consistent internet access. Regular updates occur on a weekly basis. When the software does update, changes are often minor and do not disrupt curriculum.
 
 ### Recommended ages
 

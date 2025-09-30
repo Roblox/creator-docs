@@ -19,16 +19,3 @@ Next, start placing provided props, such as trees or cars, around the map. Playe
 An example of props placed is below.
 
 <img src="../../assets/education/build-it-play-it-create-and-destroy/showPropsPlaced.jpg" width="100%" />
-
-Note that some props, like cars might not snap as you desire. For unrestricted movement, you can turn off snapping by going to the **Model** tab and unchecking the box next to **Move**. If you've finished moving props, be sure to turn snap back on.
-
-<GridContainer numColumns="2">
-  <figure>
-    <img src="../../assets/education/build-it-play-it-create-and-destroy/showMoveSnapInactive.png" />
-    <figcaption>Snap Off When Using Props</figcaption>
-  </figure>
-  <figure>
-    <img src="../../assets/education/build-it-play-it-create-and-destroy/showMoveSnapActive.png" />
-    <figcaption>Snap On For Buildings and Roads</figcaption>
-  </figure>
-</GridContainer>

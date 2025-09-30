@@ -9,7 +9,7 @@ navigation:
     path: /tutorials/curriculums/building/get-started
   - title: Work with parts
     path: /tutorials/curriculums/building/work-with-parts
-  - title: Code with AI Assistant
+  - title: AI Assistant
     path: /tutorials/curriculums/building/code-with-assistant
   - title: Test and save
     path: /tutorials/curriculums/building/test-and-save

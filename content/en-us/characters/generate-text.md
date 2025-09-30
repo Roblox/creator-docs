@@ -18,7 +18,7 @@ For a more full-featured example, see the [demo experience](https://www.roblox.c
 - The text generation API is an [Open Cloud API](../cloud/index.md), meaning that the request requires a [path](../cloud/reference/patterns.md), formed from your universe ID. You can find your universe ID in the overflow menu of the experience tile on the [Creator Hub](https://create.roblox.com/dashboard/creations).
 - You must include the [Open Cloud client package](../production/promotion/experience-notifications.md#include-the-package) in your experience; the server script requires it.
 - Requests are limited to 100 per second, per experience.
-- The text generation API currently only supports RCC authentication. As a result, you must use [Team Test](../studio/home-tab.md#team-test) to test the API within your experience.
+- The text generation API currently only supports RCC authentication. As a result, you must use [collaborative testing](../studio/testing-modes.md#collaborative-testing) to test the API within your experience.
 
 ```lua title="Client script"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")

@@ -7,9 +7,7 @@ The **Material Generator** is designed to create material variants from text ent
 
 ## Generate materials
 
-To generate materials, click **Generate** from the [Material Picker](../parts/materials.md#material-widget) dropdown.
-
-<img src="../assets/studio/general/Model-Tab-Material-Generator.png" width="704" alt="Studio's Model tab with the Material Generator button highlighted." />
+To generate materials, open the **Material Generator** from Studio's **Window**&nbsp;⟩ **3D** menu, or click **Generate** from the [Material](../parts/materials.md#material-widget) widget's picker popup.
 
 With the tool's window open:
 

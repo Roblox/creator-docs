@@ -5,7 +5,7 @@ description: How scripts run in Roblox, and how location impacts that behavior.
 
 import ScriptLocations from '../includes/engine-comparisons/script-locations.md'
 
-For many developers, the fundamental challenge of adapting to Roblox scripting is the importance of file location and the `Class.Script.RunContext` property. Depending on script type, location in the Explorer, and run context, scripts can behave very differently. Certain method calls might fail, objects in your experience might be inaccessible, or scripts might not run at all.
+For many developers, the fundamental challenge of adapting to Roblox scripting is the importance of file location and the `Class.Script.RunContext` property. Depending on script type, location in the **Explorer**, and run context, scripts can behave very differently. Certain method calls might fail, objects in your experience might be inaccessible, or scripts might not run at all.
 
 The reason for this complexity is that Roblox experiences are multiplayer by default. Scripts need the ability to only run on the server, only run on the client, or be shared across both. The evolution of the Roblox platform over time has further complicated the situation.
 
@@ -40,7 +40,7 @@ To change a script run context, select it in the [Explorer](../studio/explorer.m
 
 <ScriptLocations components={props.components} />
 
-This image shows which Explorer window locations can contain client scripts. Remember, `ReplicatedFirst` and `ReplicatedStorage` can contain `Class.Script|Scripts` with a `Class.BaseScript.RunContext|RunContext` of `Enum.RunContext|Client`, whereas the `Starter[]` containers should use `Class.LocalScript|LocalScripts`.
+This image shows which **Explorer** window locations can contain client scripts. Remember, `ReplicatedFirst` and `ReplicatedStorage` can contain `Class.Script|Scripts` with a `Class.BaseScript.RunContext|RunContext` of `Enum.RunContext|Client`, whereas the `Starter[]` containers should use `Class.LocalScript|LocalScripts`.
 
 <img alt="Diagram showing which script locations run on clients." src="../assets/scripting/client-server/Client-Script-Containers.png" width="520" />
 

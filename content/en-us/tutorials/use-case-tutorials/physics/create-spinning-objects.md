@@ -119,12 +119,7 @@ The sample [Spinning Objects](https://www.roblox.com/games/16550477904/Spinning-
 
 To configure an `Class.AngularVelocity` constraint:
 
-1. **(Optional)** Make the constraint visible in the 3D space so that you can reference its rotational direction.
-   1. Navigate to the toolbar's **Model** tab, then the **Constraints** section.
-   1. If it's not currently enabled, click **Constraint Details** to display constraint visual aids.
-
-   <img src="../../../assets/tutorials/laser-traps-with-beams/Attachments-1.png" width="40%" />
-
+1. To make the constraint visible in the viewport so that you can reference its rotational direction, enable **Show Constraint Details** from Studio's **View** menu.
 1. Insert an `Class.AngularVelocity` constraint into the part.
    1. In the **Explorer** window, hover over the part, then click the ⊕ icon. A contextual menu displays.
    1. From the contextual menu, insert **AngularVelocity**. The constraint's visual aid displays in the middle of the part.
@@ -139,12 +134,12 @@ To configure an `Class.AngularVelocity` constraint:
    <img src="../../../assets/tutorials/creating-spinning-objects/AV-Constraint-2.jpg" width="80%" />
 
 1. Verify the amount of torque you set spins the block 6 radians per second along the world's Y axis.
-   1. In the toolbar, navigate to the **Test** tab.
-   1. Select **Run** from the playtest modes. Studio simulates the experience at the current camera position without your avatar in the 3D space.
 
-   <img src="../../../assets/studio/general/Test-Tab-Playtest-Options.png" width="760" alt="Rapid playtest options in Studio." />
+   - Select the **Run** simulation mode from the mezzanine's dropdown menu and click the **Play** button to begin. Studio simulates the experience at the current camera position without your avatar in the 3D space.
 
-   <video controls src="../../../assets/tutorials/creating-spinning-objects/AV-Constraint-2.mp4" width="80%"></video>
+     <img src="../../../assets/studio/general/Mezzanine-Testing-Mode-Run.png" width="800" alt="Run option in the testing modes dropdown of Studio's mezzanine." />
+
+     <video controls src="../../../assets/tutorials/creating-spinning-objects/AV-Constraint-2.mp4" width="80%"></video>
 
 You may need to adjust your torque depending on your block's scale and any oppositional physical forces in your environment. For example, the properties of the `Class.AngularVelocity` constraint in the sample experience work for a block part with a default size of `4, 1, 2` on a flat platform with a plastic material, and an environment with the classic preset gravity.
 
@@ -173,7 +168,7 @@ To demonstrate this process, you will add a propeller assembly with two objects 
 
 #### Get propeller asset
 
-The **Creator Store** is a tab of the Toolbox that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add an individual asset or asset library directly into an open experience.
+The **Creator Store** is a tab of the **Toolbox** that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add an individual asset or asset library directly into an open experience.
 
 This tutorial references a propeller model that you can use as you replicate each step of the `Class.HingeConstraint` technique of spinning objects. You can add this model to your inventory within Studio by clicking the **Add to Inventory** link in the following component. Once assets are within your inventory, you can reuse them in any project on the platform.
 
@@ -183,16 +178,12 @@ This tutorial references a propeller model that you can use as you replicate eac
 
 To get this propeller asset from your inventory into your experience:
 
-1. In the toolbar, select the **View** tab.
-2. Click **Toolbox**. The **Toolbox** window displays.
-
-   <img src="../../../assets/studio/general/View-Tab-Toolbox.png" width="776" />
-
-3. In the **Toolbox** window, click the **Inventory** tab. The **My Models** sort displays.
+1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../../projects/assets/toolbox.md).
+2. In the **Toolbox** window, click the **Inventory** tab. The **My Models** sort displays.
 
    <img src="../../../assets/studio/toolbox/Inventory-Tab.png" width="360" />
 
-4. Click the **Propeller** tile. The model displays in your viewport.
+3. Click the **Propeller** tile. The model displays in your viewport.
 
    <img src="../../../assets/tutorials/creating-spinning-objects/Propeller.jpg" mg width="80%" />
 
@@ -247,12 +238,12 @@ To configure a hinge constraint:
    <img src="../../../assets/tutorials/creating-spinning-objects/HC-Hinge-3.jpg" width="80%" />
 
 1. Verify the amount of torque you set spins the propeller 3 radians per second along the Y axis.
-   1. In the toolbar, navigate to the **Test** tab.
-   1. Select **Run** from the playtest modes. Studio simulates the experience at the current camera position without your avatar in the 3D space.
 
-   <img src="../../../assets/studio/general/Test-Tab-Playtest-Options.png" width="760" alt="Rapid playtest options in Studio." />
+   - Select the **Run** simulation mode from the mezzanine's dropdown menu and click the **Play** button to begin. Studio simulates the experience at the current camera position without your avatar in the 3D space.
 
-   <video controls src="../../../assets/tutorials/creating-spinning-objects/HC-Hinge-3.mp4" width="80%"></video>
+     <img src="../../../assets/studio/general/Mezzanine-Testing-Mode-Run.png" width="800" alt="Run option in the testing modes dropdown of Studio's mezzanine." />
+
+     <video controls src="../../../assets/tutorials/creating-spinning-objects/HC-Hinge-3.mp4" width="80%"></video>
 
 ## Apply an initial angular force
 

@@ -8,34 +8,34 @@ import CodeSample from './includes/engine-comparisons/fishing-pole-code-sample.m
 import ScriptLocations from './includes/engine-comparisons/script-locations.md'
 import Transforms from './includes/engine-comparisons/transforms.md'
 
-This page includes information to help experienced Unreal Engine developers get started with Roblox: basic orientation, a conceptual comparison, and key differences between the two platforms.
+This page contains information to help experienced Unreal Engine developers get started with Roblox, including basic orientation, a conceptual comparison, and key differences between the two platforms.
 
 ## Get oriented
 
-![The Unreal Editor user interface with markup to show the various windows and panels.](./assets/engine-comparisons/unreal-editor.png)
+<img src="./assets/engine-comparisons/Unreal-Editor-Layout.png" alt="The Unreal Editor user interface with markup to show the various windows and panels." />
 
-![The Roblox Studio user interface with markup to show the various windows and panels.](./assets/engine-comparisons/roblox-studio-markup.png)
+<img src="./assets/engine-comparisons/Roblox-Studio-Layout.png" alt="The Roblox Studio user interface with markup to show the various windows and panels." />
 
-Unreal's Outliner and Roblox Studio's [Explorer](studio/explorer.md) are the primary windows for organizing elements in 3D spaces. Both display a hierarchy of objects and folders. However, Outliner has a flatter, less defined structure and only shows `Actors`. The Explorer window has a deeply nested, strict structure and displays all objects as part of the hierarchy, even objects that would be considered components in Unreal.
+Unreal's **Outliner** and Roblox Studio's [Explorer](studio/explorer.md) are the primary windows for organizing elements in 3D spaces. Both display a hierarchy of objects and folders. However, **Outliner** has a flatter, less defined structure and only shows `Actors`. The **Explorer** window has a deeply nested, strict structure and displays all objects as part of the hierarchy, even objects that would be considered components in Unreal.
 
-The Roblox Studio [Asset Manager](projects/assets/manager.md) and [Toolbox](projects/assets/toolbox.md) overlap with the Unreal Content Browser. The Asset Manager lets you manage all assets within your experience, whereas the Toolbox lets you access any assets you've published. The Toolbox also lets you search the Creator Store for assets from Roblox or the community. The Creator Store is similar to the Unreal Engine Marketplace, but you can access it directly from the Studio user interface.
+The Roblox Studio [Asset Manager](projects/assets/manager.md) and [Toolbox](projects/assets/toolbox.md) overlap with the Unreal **Content Browser**. The **Asset Manager** lets you manage all assets within your experience, whereas the **Toolbox** lets you access any assets you've published. The **Toolbox** also lets you search the [Creator Store](production/creator-store.md) for assets from Roblox or the community, similar to the Unreal Engine **Marketplace** but accessible directly from the Studio user interface.
 
 ## Philosophical differences
 
 Roblox is a "simulation engine" rather than a traditional game engine. Unreal `Actors` and Roblox `Class.Part|Parts` both serve as fundamental building blocks, but in practice, the two are quite different:
 
-- **Representation**: `Actors` in Unreal are a higher-level concept for any object in a level, whereas `Parts` in Roblox are designed to represent physical objects like wooden blocks and plastic spheres.
-- **Physics**: To perform physics simulations in Unreal, you enable physics within certain components (such as the `StaticMeshComponent`) or by adding components to `Actors`, such as physics constraints. In Roblox, physics are built into the `Parts` data type; the engine handles interactions automatically.
+- **Representation**: `Actors` in Unreal are a higher-level concept for any object in a level, whereas `Class.Part|Parts` in Roblox are designed to represent physical objects like wooden blocks and plastic spheres.
+- **Physics**: To perform physics simulations in Unreal, you enable physics within certain components (such as the `StaticMeshComponent`) or by adding components to `Actors`, such as physics constraints. In Roblox, physics are built into the `Class.Part|Parts` data type; the engine handles interactions automatically.
 
-You can see the difference immediately if you create an `Actor` and a `Part`. The `Actor` has little more than a location, rotation, and scale. The `Part` has that same information—plus a material and color, values for reflectance and transparency, mass and shape, and much more. The two only start to share similar properties when you compare a `StaticMeshActor` in Unreal (e.g. a cube) to a `Class.MeshPart` in Roblox.
+You can see the difference immediately if you create an `Actor` and a `Class.Part`. The `Actor` has little more than a location, rotation, and scale. The `Class.Part` has that same information, plus a material and color, values for reflectance and transparency, mass and shape, and much more. The two only start to share similar properties when you compare a `StaticMeshActor` in Unreal to a `Class.MeshPart` in Roblox.
 
 <GridContainer numColumns="2">
 <figure>
-  <img alt="An example Unreal actor in the Details panel." src="./assets/engine-comparisons/unreal-details.png" />
+  <img alt="An example Unreal actor in the Details panel." src="./assets/engine-comparisons/Unreal-Details-Panel.png" />
   <figcaption>Unreal Editor Details panel</figcaption>
 </figure>
 <figure>
-  <img alt="An example Roblox part in the Properties window." src="./assets/engine-comparisons/roblox-properties.png" />
+  <img alt="An example Roblox part in the Properties window." src="./assets/engine-comparisons/Studio-Properties.png" />
   <figcaption>Roblox Studio Properties window</figcaption>
 </figure>
 </GridContainer>
@@ -44,7 +44,7 @@ Another useful comparison is the Unreal `Actor` to the Roblox `Class.Model`. Mod
 
 For example, an Unreal `Actor` might have a `NiagaraComponent` that uses several emitters to achieve the desired visual effect, a mesh for the shape, a physics constraint to add springiness, and a script for player interactivity. In Outliner, you see a single `Actor` named `SpringyFireball`.
 
-In Roblox, a comparable `SpringyFireball` model in the Explorer window might look something like this:
+In Roblox, a comparable `SpringyFireball` model in the **Explorer** window might look something like this:
 
 ```text
 Model
@@ -81,7 +81,7 @@ For scripting, Unreal uses C++. Roblox uses [Luau](luau/index.md), a scripting l
 
 Compared to Luau, C++ has an overall performance advantage, which might or might not be relevant to the kinds of experiences you want to build. Luau is gradually typed and has a less verbose syntax. In larger projects, however, gradual typing can introduce categories of bugs that strongly typed languages like C++ avoid, so consider enabling [strict type checking](luau/type-checking.md#inference-modes) in Roblox scripts.
 
-Unreal also includes a visual scripting system called Blueprints. Roblox has third-party plugins that offer similar functionality, but no comparable system built-in.
+Unreal also includes a visual scripting system called **Blueprints**. Roblox has third-party plugins that offer similar functionality, but no comparable system built-in.
 
 ### Luau code sample
 
@@ -97,7 +97,7 @@ Unreal and Roblox both support importing custom meshes and models in `.fbx` form
 - [3D modeling specifications](art/modeling/specifications.md)
 - [Blender and Maya export requirements](art/modeling/export-requirements.md)
 
-In Unreal, assets import into your `Content` directory, visible in the Content Browser. In Roblox, assets import into your Workspace and into the [Toolbox](projects/assets/toolbox.md) or **Inventory** section of the [Asset Manager](projects/assets/manager.md).
+In Unreal, assets import into your `Content` directory, visible in the **Content Browser**. In Roblox, assets import into your Workspace and into the [Toolbox](projects/assets/toolbox.md) or [Asset Manager](projects/assets/manager.md).
 
 Roblox also offers an open-source [Blender plugin](art/modeling/roblox-blender-plugin) to streamline the import process, similar to the **Send to Unreal** feature of Blender Tools.
 
@@ -126,14 +126,14 @@ Similar to Unreal, Roblox Studio supports [plugins](studio/plugins.md), which ca
 | Level | [Place](projects.md#places) | |
 | Actor | `Class.Part` or `Class.Model` | See [Philosophical differences](#philosophical-differences). |
 | Blueprint Class | [Package](projects/assets/packages.md) | |
-| Transform | `Datatype.CFrame` | `CFrame` doesn't include scale information. See [Transforms](#transforms). |
-| Outliner | Explorer window | |
-| Details panel | Properties window |
-| Level Viewport | Viewport | |
+| Transform | `Datatype.CFrame` | `Datatype.CFrame` doesn't include scale information. See [Transforms](#transforms). |
+| Outliner | [Explorer](studio/explorer.md) | |
+| Details panel | [Properties](studio/properties.md) |
+| Level Viewport | [3D viewport](studio/ui-overview.md#3d-viewport) | |
 | Content Browser | [Asset Manager](projects/assets/manager.md) or [Toolbox](projects/assets/toolbox.md) | |
-| Landscape Mode | Terrain Editor | |
+| Landscape Mode | [Terrain Editor](studio/terrain-editor.md) | |
 | PlayerStart | `Class.SpawnLocation` | |
-| Output Log | Output | |
+| Output Log | [Output](studio/output.md) | |
 | Marketplace | [Creator Store](production/creator-store.md) | |
-| Menu bar | Menu bar | |
+| Menu bar | [Toolbar](studio/ui-overview.md#toolbar-and-mezzanine) | |
 | Plugin | [Plugin](studio/plugins.md) | |

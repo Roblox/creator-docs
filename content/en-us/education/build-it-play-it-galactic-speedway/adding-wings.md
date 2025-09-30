@@ -13,24 +13,26 @@ To work correctly in a race, the driftspeeder can only have one body. But, it ca
 
 Before adding wings, set **rotate snapping** to make it easier to position your wings. Snapping rotates parts a set amount a time.
 
-1. Back in the **Home** tab, turn the **Rotate** snapping tool on.
-1. Set it to `45`.
+1. In the toolbar, make sure **Rotate** snapping is enabled.
+1. Set it to `45°`.
 
-   <img src="../../assets/education/build-it-play-it-galactic-speedway/adding-wings/snap-settings.png" width="70%" />
+   <img src="../../assets/education/general/Snap-Settings-A.png" width="500" />
 
 ## Place the first wing
 
 1. In the 3D viewport, click a wing from the second section of the scrapyard, then use the **Move** tool to drag it into the work area.
 
+   <img src="../../assets/education/general/Move-Tool.png" width="328" />
+
    <video controls src="../../assets/education/build-it-play-it-galactic-speedway/adding-wings/move-wing.mp4" width="80%"></video>
    <Alert severity="warning">
    <AlertTitle>Trouble moving the wing?</AlertTitle>
-   Check in the **Home** tab that **Collisions** and **Move** snapping are turned off.
+   In the toolbar, make sure **Move** snapping is turned off.
    </Alert>
 
-1. Back in the **Home** tab, select the **Rotate** tool, then drag the handles in the 3D viewport to rotate the wings. Each handle rotates in a different direction.
+1. In the toolbar, select the **Rotate** tool, then drag the handles in the 3D viewport to rotate the wings. Each handle rotates in a different direction.
 
-   <img src="../../assets/education/general/Rotate-Tool.png" width="50%" />
+   <img src="../../assets/education/general/Rotate-Tool.png" width="328" />
 
    <video controls src="../../assets/education/build-it-play-it-galactic-speedway/adding-wings/rotate-wing.mp4" width="100%"></video>
 
@@ -39,9 +41,9 @@ Before adding wings, set **rotate snapping** to make it easier to position your 
    To rotate an object 90 degrees, select that part and press <kbd>Ctrl</kbd><kbd>R</kbd> or <kbd>⌘</kbd><kbd>R</kbd>.
    </Alert>
 
-1. Back in the **Home** tab, select the **Scale** tool and drag the handles to scale the wings to a desired size.
+1. In the toolbar, select the **Scale** tool and drag the handles to scale the wings to a desired size.
 
-   <img src="../../assets/education/general/Scale-Tool.png" width="50%" />
+   <img src="../../assets/education/general/Scale-Tool.png" width="328" />
 
    <video controls src="../../assets/education/build-it-play-it-galactic-speedway/adding-wings/scale-wing.mp4" width="100%"></video>
 

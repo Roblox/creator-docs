@@ -24,7 +24,7 @@ Instead of using the default Dope Sheet Editor timeline's method of manually mov
   src="../assets/animation/curve-editor/UI-Overview.png"
   width="600" />
 
-While the Animation Editor displays a rig's orientation as three separate X, Y, and Z [Euler angles](https://en.wikipedia.org/wiki/Euler_angles) in the track list, Studio internally handles these X, Y, and Z angles for `Class.KeyframeSequence` as a single [quaternion](https://en.wikipedia.org/wiki/Quaternion) that represents the orientation of a specific part of the rig at a specific time. Quaternions allow Studio to configure changes in your rig's orientation using the shortest path possible between its starting orientation to its next orientation, but this might cause some animations to not appear as natural as you might like.
+While the **Animation Editor** displays a rig's orientation as three separate X, Y, and Z [Euler angles](https://en.wikipedia.org/wiki/Euler_angles) in the track list, Studio internally handles these X, Y, and Z angles for `Class.KeyframeSequence` as a single [quaternion](https://en.wikipedia.org/wiki/Quaternion) that represents the orientation of a specific part of the rig at a specific time. Quaternions allow Studio to configure changes in your rig's orientation using the shortest path possible between its starting orientation to its next orientation, but this might cause some animations to not appear as natural as you might like.
 
 However, the Curve Editor allows you to work with Euler angles either globally or on a per-part basis, which allows you to define independent tracks for the X, Y and Z angles. This provides additional levels of control to make your animations more fluid and realistic.
 
@@ -34,11 +34,11 @@ However, the Curve Editor allows you to work with Euler angles either globally o
 It's important to verify your rotation type **before you open the Curve Editor** because once you convert quaternions to Euler angle tracks, it's impossible to convert them back into quaternions.
 </Alert>
 
-The Animation Editor automatically converts quaternions to Euler angles when you [open the Curve Editor](#open-the-curve-editor), but you can keep quaternion values by setting the Animation Editor's rotation type to quaternions.
+The **Animation Editor** automatically converts quaternions to Euler angles when you [open the Curve Editor](#open-the-curve-editor), but you can keep quaternion values by setting the rotation type to quaternions.
 
 To set rotation type:
 
-1. In the top-right corner of the Animation Editor, click the **gear icon**. A contextual menu displays.
+1. In the top-right corner of the **Animation Editor**, click the gear icon. A contextual menu displays.
 
    <img
    alt="Gear Icon"
@@ -49,11 +49,11 @@ To set rotation type:
 
 ## Open the Curve Editor
 
-You can switch the Animation Editor's timeline between the Dope Sheet Editor and the Curve Editor at any time.
+You can switch the editor's timeline between the Dope Sheet Editor and the Curve Editor at any time.
 
 To open the Curve Editor:
 
-1. [Open the Animation Editor](../animation/editor.md#open-the-animation-editor).
+1. Open the [Animation Editor](../animation/editor.md#open-the-animation-editor).
 2. (Optional) If you want to keep your orientation keyframe quaternion values, [set the rotation type](#set-rotation-type) to **quaternions**.
 3. In the top-left corner of the **timeline**, click the **Curve Animation** icon. A pop-up window displays to confirm that your `Class.KeyframeSequence` clip will convert to a new CurveAnimation clip.
 
@@ -64,7 +64,7 @@ To open the Curve Editor:
 
 4. Click the Confirm button. The timeline changes to the Curve Editor, and the Curve Editor icon changes to the Dope Sheet Editor icon. If you already had a keyframe within the timeline, your animation name changes to include a [CHANNELS] suffix.
 
-   1. If you keep the default rotation type of Euler angles, the Animation Editor automatically converts any pre-existing quaternions to Euler angles following the Euler angles order setting.
+   1. If you keep the default rotation type of Euler angles, the **Animation Editor** automatically converts any pre-existing quaternions to Euler angles following the Euler angles order setting.
       <img
       alt="Convert Euler Angles"
       src="../assets/animation/curve-editor/Convert-Euler-Angles.png"
@@ -121,7 +121,7 @@ For quaternion curve tangents, no matter how much you adjust each tangent, each 
 
 Tangents change appearance when you set them to a new position. For example, when you manually set a tangent, the handle displays as a white circle, otherwise an unset tangent displays as a clear circle. For keyframes with two tangents, you can manually set either one or both tangents, and their appearance changes accordingly.
 
-Tangents change appearance when you set them to a new position; an unset tangent displays as a clear circle, and a set tangent displays as a white circle. The Animation Editor automatically calculates the position for unset tangents based on the position of any set tangents. For instance, if you only set one tangent and leave the other unset, the unset tangent aligns with its opposite tangent:
+Tangents change appearance when you set them to a new position; an unset tangent displays as a clear circle, and a set tangent displays as a white circle. The **Animation Editor** automatically calculates the position for unset tangents based on the position of any set tangents. For instance, if you only set one tangent and leave the other unset, the unset tangent aligns with its opposite tangent:
 
 <img
   alt="Tangent Image"
@@ -170,7 +170,7 @@ To change interpolation mode:
 
 ### Generate interpolation curves
 
-For curve animations, bounce and elastic easing styles are not available as standard interpolations like they are for `Class.KeyframeSequence|KeyframeSequences`. However, when you convert a `Class.KeyframeSequence` to a curve animation, the Animation Editor automatically adds additional keyframes to your animation to keep the animation intact, and you can select two or more keyframes and generate an **interpolation curve** that removes and replaces any of their intermediate keyframes to mimic bounce and elastic easing behavior.
+For curve animations, bounce and elastic easing styles are not available as standard interpolations like they are for `Class.KeyframeSequence|KeyframeSequences`. However, when you convert a `Class.KeyframeSequence` to a curve animation, the **Animation Editor** automatically adds additional keyframes to your animation to keep the animation intact, and you can select two or more keyframes and generate an **interpolation curve** that removes and replaces any of their intermediate keyframes to mimic bounce and elastic easing behavior.
 
 When generating an interpolation curve, you must select one of the following easing directions, which define which end of the animation movement is affected by the bounce or elastic easing style:
 
@@ -192,7 +192,7 @@ To generate interpolation curves:
 
 ## Set Euler angles order
 
-When you're working with Euler angles, Studio represents the X, Y, and Z axis through three channel values that follow a specific order to move your rig from its starting orientation to its next orientation. Each order is named after the [matrix multiplications](https://en.wikipedia.org/wiki/Matrix_multiplication) to get to the final orientation. For example, an XYZ order (X × Y × Z) means that the rig moves starting on the Z axis, then the Y axis, then the X axis. The Animation Editor defaults to this **XYZ order**, but you can change the order at any time.
+When you're working with Euler angles, Studio represents the X, Y, and Z axis through three channel values that follow a specific order to move your rig from its starting orientation to its next orientation. Each order is named after the [matrix multiplications](https://en.wikipedia.org/wiki/Matrix_multiplication) to get to the final orientation. For example, an XYZ order (X × Y × Z) means that the rig moves starting on the Z axis, then the Y axis, then the X axis. The **Animation Editor** defaults to this **XYZ order**, but you can change the order at any time.
 
 How an animation changes when you set Euler angles order is dependent on **when** you change the order:
 
@@ -201,7 +201,7 @@ How an animation changes when you set Euler angles order is dependent on **when*
 
 To set the Euler angles order:
 
-1. In the top-right corner of the Animation Editor, click the **gear icon**. A contextual menu displays.
+1. In the top-right corner of the **Animation Editor**, click the gear icon. A contextual menu displays.
 
    <img
    alt="Gear Icon"

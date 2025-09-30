@@ -58,7 +58,7 @@ Using the checkboxes, you can filter output messages in the log:
 </TabItem>
 <TabItem label="Command bar">
 
-The **Server** view also includes a command bar that lets users with editing permissions run arbitrary Luau code. Unlike the [Command Bar](../studio/ui-overview.md#command-bar) in Studio, this console command bar has the same security restrictions as `Class.Script|Scripts` and `Class.LocalScript|LocalScripts`, so it can't run protected functions.
+The **Server** view also includes a command bar that lets users with editing permissions run arbitrary Luau code. Unlike the [Command](../studio/ui-overview.md#command) bar in Studio, this console command bar has the same security restrictions as `Class.Script|Scripts` and `Class.LocalScript|LocalScripts`, so it can't run protected functions.
 
 </TabItem>
 </Tabs>

@@ -274,5 +274,23 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-events: []
+events:
+  - name: HapticEffect.Ended
+    summary: |
+      Fires when the `Class.HapticEffect` has completed playback and stopped.
+    description: |
+      Fires when the `Class.HapticEffect` has completed playback and stopped.
+      Note this event will **not** fire for audio with
+      `Class.HapticEffect.Looped|Looped` set to `true` since it continues
+      playing upon reaching its end. This event will also **not** fire when the
+      audio is stopped before playback has completed.
+
+      This event is often used to destroy an `Class.HapticEffect` when it has
+      completed playback.
+    code_samples: []
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities: []
 callbacks: []

@@ -175,7 +175,7 @@ Ordered data stores:
 - [GetUser](/cloud/features/users#/User/Cloud_GetUser)
 - [GenerateUserThumbnail](/cloud/features/users#/User/Cloud_GenerateUserThumbnail)
 
-### Limitations
+## Limitations
 
 - Only the `x-api-key` and `content-type` headers are allowed.
 - The `x-api-key` header must be a `Datatype.Secret`. See [Secrets stores](./secrets.md).
@@ -183,7 +183,7 @@ Ordered data stores:
 - Only the HTTPS protocol is supported.
 - You cannot use port `1194` or any port below `1024`, except `80` and `443`. If you try to use a blocked port, you receive either a `403 Forbidden` or `ERR_ACCESS_DENIED` error.
 
-### Rate limits
+## Rate limits
 
 For each Roblox game server, there is a limit of 500 HTTP requests per minute. Exceeding this can cause request-sending methods to stall for around 30 seconds. Your `Global.LuaGlobals.pcall()` may also fail with a message of `Number of requests exceeded limit`.
 
@@ -192,7 +192,7 @@ For each Roblox game server, there is a limit of 500 HTTP requests per minute. E
 
 For detailed information about Open Cloud rate limits, authentication-based rate limiting, and best practices, see [Rate Limits](/cloud/reference/rate-limits).
 
-### Additional considerations
+## Additional considerations
 
 - Web requests can fail for many reasons. Use `Global.LuaGlobals.pcall()` and have a plan for when
   requests fail.

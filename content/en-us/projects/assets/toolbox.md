@@ -6,11 +6,9 @@ id: toolbox
 
 import ToolboxFindUse from '../../includes/studio/toolbox-find-use.md'
 
-The **Toolbox**, accessible from the [View](../../studio/view-tab.md) tab, contains a selection of [models](../../parts/models.md), [decals](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [audio](../../audio/assets.md), [plugins](../../studio/plugins.md), [videos](../../ui/video-frames.md), and fonts made by Roblox or Roblox community members. It also includes all of the creations that you've personally published or those which were published by [groups](../../projects/groups.md) you belong to.
+The **Toolbox**, accessible from Studio's **Window** menu or **Home** tab toolbar, contains a selection of [models](../../parts/models.md), [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [audio](../../audio/assets.md), [plugins](../../studio/plugins.md), [videos](../../ui/video-frames.md), and fonts made by Roblox or Roblox community members. It also includes all of the creations that you've personally published or those which were published by [groups](../../projects/groups.md) you belong to.
 
-<figure>
-<img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Studio's View tab with the Toolbox button highlighted." />
-</figure>
+<img src="../../assets/studio/general/Toolbar-Toolbox.png" width="800" alt="Toolbox highlighted in Studio's toolbar." />
 
 The toolbox contains four distinct sections:
 

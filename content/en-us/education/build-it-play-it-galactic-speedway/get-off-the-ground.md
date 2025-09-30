@@ -24,18 +24,12 @@ With the template open, you can see Junker's Canyon, home to crafty builders and
 
 The first time you launch Roblox Studio, extra windows might open up that aren't needed right now. Closing the extra windows will give you more space to work. You can always open them up again later.
 
-1. Close each window on the left of the 3D view by clicking the **X** icon. If you don't see anything to close on the left, go to the next step.
+1. Close each window on the **left** of the 3D view by clicking the **&times;** in the window's upper-right corner. If you don't see anything to close on the left, go to the next step.
 
-   <img src="../../assets/education/build-it-play-it-galactic-speedway/get-off-the-ground/close-toolbox.png" width="50%" />
+2. Leave the **Explorer** and **Properties** windows open on the right side of Studio. If you have done each step correctly, Studio looks like the following image.
 
-2. Leave the windows on the right open. Studio should look like the image below.
-
-   <img
-   src="../../assets/education/build-it-play-it-galactic-speedway/get-off-the-ground/studio-interface.png" width="100%" />
+   <img src="../../assets/education/general/Studio-Setup-Galactic-Speedway.jpg" width="960" />
 
    <Alert severity="warning">
-   If you don't see the windows on the right, enable them by going to the **Home** tab and clicking the **Explorer** and **Properties** buttons.
-
-   <img src="../../assets/education/general/OpenExplorerandProperties.png" />
-
+   If you don't see the **Explorer** and **Properties** windows on the right, toggle them on from Studio's **Window** menu.
    </Alert>

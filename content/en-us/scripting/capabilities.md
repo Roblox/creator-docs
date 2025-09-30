@@ -15,7 +15,7 @@ This page describes a feature that is still experimental and is available as a c
 
 ## Enable script capabilities
 
-To enable this feature, change the `Class.Workspace.SandboxedInstanceMode|SandboxedInstanceMode` setting from `Default` to `Experimental` in the Explorer.
+To enable this feature, change the `Class.Workspace.SandboxedInstanceMode|SandboxedInstanceMode` setting from `Default` to `Experimental` in the **Explorer**.
 
 When the client beta test is completed, this step will no longer be required.
 

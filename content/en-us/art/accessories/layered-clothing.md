@@ -174,7 +174,7 @@ If you are interested in specific avatar creation topics, use the following tabl
   </tr>
   <tr>
     <td>Cosmetic creation</td>
-    <td>[Accessories overview](../../art/accessories/specifications.md)<br /><br />[Layered clothing overview](../../art/accessories/index.md)<br /><br />[Create face accessories](../../art/characters/facial-animation/create-face-accessories.md)<br /><br />[Accessory fitting tool](../../art/accessories/accessory-fitting-tool.md)<br /><br />[Accessory specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace requirements](../../marketplace/marketplace-policy.md)</td>
+    <td>[Accessories overview](../../art/accessories/specifications.md)<br /><br />[Layered clothing overview](../../art/accessories/index.md)<br /><br />[Create face accessories](../../art/characters/facial-animation/create-face-accessories.md)<br /><br />[Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md)<br /><br />[Accessory specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace requirements](../../marketplace/marketplace-policy.md)</td>
   </tr>
   <tr>
     <td>Texturing</td>

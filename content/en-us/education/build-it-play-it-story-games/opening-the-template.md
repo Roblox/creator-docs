@@ -24,25 +24,12 @@ A template has been created that has everything needed for the experience to wor
    <Button variant="contained">Download Template</Button>
    </a>
 
-2. In Roblox Studio, in the top left, click **File** > **Open from File** and select the downloaded file.
-
-   <img src="../../assets/education/story-games/openFromFile.png" width="40%" />
+2. In Roblox Studio, in the top left, click **File** &rarr; **Open from File** and select the downloaded file.
 
 ## Close extra windows
 
 The first time you launch Roblox Studio, extra windows might open up that you don't need right now. Closing the extra windows will give you more space to see what you're doing.
 
-1. Close all windows on the **left** side of Studio by clicking the **X**. If you don't see anything to close, go to the next step.
+1. Close each window on the **left** of the 3D view by clicking the **&times;** in the window's upper-right corner. If you don't see anything to close on the left, go to the next step.
 
-   <img src="../../assets/education/story-games/CloseToolbox.png" />
-
-2. Leave the **Explorer** window on the right side open. Studio should look like the image below:
-
-   <img src="../../assets/education/story-games/studio-setup.jpg" />
-
-   <Alert severity="warning">
-   If you don't see the windows on the right, enable them by going to the **Home** tab and clicking the **Explorer** and **Properties** buttons.
-
-   <img src="../../assets/education/general/OpenExplorerandProperties.png" />
-
-   </Alert>
+2. Leave the **Explorer** and **Properties** windows open on the right side of Studio.

@@ -419,12 +419,11 @@ properties:
       experience, as an `Enum.LightingStyle` option.
     code_samples: []
     type: LightingStyle
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
       read: None
-      write: None
+      write: RobloxScriptSecurity
     thread_safety: ReadSafe
     category: Appearance
     serialization:
@@ -510,12 +509,11 @@ properties:
       prioritizes view distance.
     code_samples: []
     type: boolean
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
       read: None
-      write: None
+      write: RobloxScriptSecurity
     thread_safety: ReadSafe
     category: Appearance
     serialization:

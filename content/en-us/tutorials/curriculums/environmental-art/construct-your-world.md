@@ -2159,12 +2159,12 @@ To apply your asset library to the left-most planter:
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/Planters-1.jpg" width="100%"/>
 
 2. Select the divot part.
-3. Navigate to the toolbar's **Model** tab, then click the **Negate** button. The part turns translucent.
+3. Navigate to Studio's **Model** tab toolbar, then click the **Negate** button. The part turns translucent.
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/Planters-3.jpg" width="100%"/>
 
 4. Select both the negated part and the planter exterior part.
-5. In the toolbar's **Model** tab, click the **Union** button. The negated part is cut out from the overlapping planter exterior part.
+5. In Studio's **Model** tab toolbar, click the **Union** button. The negated part is cut out from the overlapping planter exterior part.
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/Planters-5.jpg" width="100%"/>
 
@@ -3600,7 +3600,7 @@ To delete excess geometry:
 
 Right now your environment is mostly architectural aside from foliage in your planters. However, following the sample art style from [Develop Polished Assets](./develop-polished-assets.md), the 3D space should contain a healthy mix of futuristic technology and lush greenery to inform users that the world values technological advances, but not at the expense of the earth.
 
-Using the [Terrain Editor](../../../parts/terrain.md), you can quickly generate and sculpt detailed and realistic terrain to bring organic life to the outdoor space. Because you set material overrides as you created your custom materials in [Assemble an Asset Library](./assemble-an-asset-library.md), you can also utilize your tileable textures through Terrain Editor brushes to add moss, flowers, and stone paths that are cohesive with the rest of your environment.
+Using the [Terrain Editor](../../../parts/terrain.md), you can quickly generate and sculpt detailed and realistic terrain to bring organic life to the outdoor space. Because you set material overrides as you created your custom materials in [Assemble an Asset Library](./assemble-an-asset-library.md), you can also utilize your tileable textures through **Terrain Editor** brushes to add moss, flowers, and stone paths that are cohesive with the rest of your environment.
 
 <Alert severity="info">
     Sculpting terrain is an art form, and it's difficult to exactly recreate brush strokes and subtle material edits. As long as your terrain meets the needs of your own experience, it's normal and expected for your environment to look and feel different from the sample laser tag environment.
@@ -3611,7 +3611,7 @@ Using the [Terrain Editor](../../../parts/terrain.md), you can quickly generate 
 
 To apply your own terrain to the outdoor area:
 
-1. From the toolbar's **Home** tab, click **Editor**. The [Terrain Editor](../../../studio/terrain-editor.md) window opens.
+1. From the toolbar's **Home** tab, click **Terrain**. The [Terrain Editor](../../../studio/terrain-editor.md) window opens.
 1. Navigate to the **Edit** tab, then click the **Draw** button.
 1. In the **Brush Settings** section, customize your brush according to the material you want to add to your map. For example, the sample starts this process with the settings in the following image.
 
@@ -3640,7 +3640,7 @@ To apply your own terrain to the outdoor area:
 
 To recreate the terrain within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file:
 
-1. From the toolbar's **Home** tab, click **Editor**. The [Terrain Editor](../../../studio/terrain-editor.md) window opens.
+1. From the toolbar's **Home** tab, click **Terrain**. The [Terrain Editor](../../../studio/terrain-editor.md) window opens.
 2. Navigate to the **Edit** tab, then click the **Draw** button.
 3. In the **Brush Settings** section,
 
@@ -3661,7 +3661,7 @@ To recreate the terrain within the sample [Environment Art - Constructing](https
 
    <video controls src="../../../assets/tutorials/environmental-art-curriculum/Section4/Terrain-4.mp4" width="100%"></video>
 
-5. Navigate back to the Terrain Editor's **Brush Settings** section, then
+5. Navigate back to the **Brush Settings** section, then
 
    1. Set **Base Size** to `10`.
    1. Set **Height** to `10`.

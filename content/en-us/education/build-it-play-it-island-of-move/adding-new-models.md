@@ -17,19 +17,16 @@ Get extra parts to work with by importing an asset. **Assets** are parts of a Ro
    </a>
 
 2. On the page for the asset, click the **Get** button to add it into your inventory.
-   <img src="../../assets/education/build-it-play-it-island-of-move/adding-new-models/show-assets.jpeg" width="100%" />
 
 ## Import into the game
 
 All assets can be found in your **Inventory**. This stores any models you've added and lets you add them into a game.
 
-1. In Roblox Studio, find the Toolbox. If it's not open, go to the **View** tab and click the **Toolbox** button.
+1. In Studio, find the **Toolbox**. If it's not visible, open it from the **Window** menu.
 
-   <img src="../../assets/education/build-it-play-it-island-of-move/adding-new-models/open-toolbox.png" width="100%" />
+2. Select the **Inventory** tab.
 
-2. In the Toolbox window, click the icon for **Inventory**.
-
-   <img src="../../assets/education/build-it-play-it-island-of-move/adding-new-models/inventory.png" width="50%" />
+   <img src="../../assets/education/general/Toolbox-Inventory.png" width="360" />
 
 3. Make sure the left dropdown is set to **My Models**. Then, find and click on **Island of Move Extra Props**. This will add the parts into your game.
    <img src="../../assets/education/build-it-play-it-island-of-move/adding-new-models/show-new-assets.jpeg" width="100%" />

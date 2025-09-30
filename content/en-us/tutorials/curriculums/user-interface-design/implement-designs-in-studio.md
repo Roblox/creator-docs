@@ -103,11 +103,7 @@ You can add most of the library to your inventory within Studio by clicking the 
 
 To get the asset library from your inventory into your experience:
 
-1. In the toolbar, select the **View** tab.
-1. Click **Toolbox**. The **Toolbox** window displays.
-
-   <img src="../../../assets/studio/general/View-Tab-Toolbox.png" width="876" />
-
+1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../../projects/assets/toolbox.md).
 1. In the **Toolbox** window, click the **Inventory** tab. The **My Models** sort displays.
 
    <img src="../../../assets/studio/toolbox/Inventory-Tab.png" width="360" />
@@ -117,24 +113,20 @@ To get the asset library from your inventory into your experience:
 
 ## Emulate devices
 
-Studio's **Device Emulator** allows you to test how players will see and interact with your UI on various devices. This tool is a vital part of the implementation process because the aspect ratio of your viewport in Studio doesn't necessarily reflect the aspect ratio of the screens players use to access your experience, and it's important that your UI is both legible and accessible on every device.
+Studio's [Device Emulator](../../../studio/testing-modes.md#device-emulation) allows you to test how players will see and interact with your UI on various devices. This tool is a vital part of the implementation process because the aspect ratio of your viewport in Studio doesn't necessarily reflect the aspect ratio of the screens players use to access your experience, and it's important that your UI is both legible and accessible on every device.
 
 For example, if you don't test your UI on a range of screen sizes, players with large screens may not be able to read your text or decipher your icons, and players with small screens may not be able to see the 3D space because your UI elements take up too much room on the display.
 
-To emulate your screen to the smallest screen size:
+To emulate your UI on various screen sizes:
 
-1. In the toolbar, select the **Test** tab.
-1. Click **Device**. The viewport changes to reflect the aspect ratio of an average laptop.
-
-   <img src="../../../assets/studio/general/Test-Tab-Emulation-Device.png" width="800" alt="Device button indicated in Test tab" />
-
+1. From Studio's **View** menu, toggle on **Device Emulator**.
 1. In the resolution dropdown, select **Actual Resolution**. This allows you to see the true resolution of your UI elements on the device you're emulating.
 
-   <img src="../../../assets/tutorials/user-interface-design/Section3/ResolutionDropdown.jpg" width="80%" />
+   <img src="../../../assets/tutorials/user-interface-design/Section3/Device-Emulator-Setup.png" width="800" alt="Device Emulator settings options indicated at top of viewport window." />
 
-1. In the device dropdown, select the device with the smallest screen size that players can use to access your experience. While the best option varies according to the devices your experience supports, the sample laser tag experience tests with an iPhone 4S to verify how the UI looks with limited screen space.
+1. In the device dropdown, select at least one device within the **Phone**, **Tablet**, **Desktop**, and **Console** sections.
 
-   <img src="../../../assets/tutorials/user-interface-design/Section3/DeviceDropdown.jpg" width="80%" />
+   <img src="../../../assets/tutorials/user-interface-design/Section3/Device-Emulator-Preview.png" width="840" />
 
 ## Create ScreenGui objects
 
@@ -1498,7 +1490,7 @@ To exactly recreate the force field screen within the sample [Laser Tag](https:/
    1. Set **Color** to a color sequence that starts blue, turns white, then turns blue again.
 
       1. Set **Color** to `120, 192, 250` to apply a light blue hue to all of the hexagons.
-      1. Click the **Color** property, then click the **⋯** button. A color sequence pop-up displays.
+      1. Click the **Color** property, then click the **&ctdot;** button. A color sequence pop-up displays.
 
          <img src="../../../assets/tutorials/user-interface-design/Section3/Join-4Ai.png" />
 
@@ -1516,7 +1508,7 @@ To exactly recreate the force field screen within the sample [Laser Tag](https:/
 
    1. Set **Transparency** to a number sequence that makes the force field look like it's shimmering.
 
-      1. Click the **Transparency** property, then click the **⋯** button. A number sequence pop-up displays. Each square at the start and end of the number sequence is a keypoint that determines the transparency value of the property at that point of the image from left to right.
+      1. Click the **Transparency** property, then click the **&ctdot;** button. A number sequence pop-up displays. Each square at the start and end of the number sequence is a keypoint that determines the transparency value of the property at that point of the image from left to right.
 
       1. Set the following time and value properties throughout the number sequence:
 
@@ -1540,7 +1532,7 @@ To exactly recreate the force field screen within the sample [Laser Tag](https:/
 
    1. Modify **Transparency** to make the shimmer look more organic.
 
-      1. Click the **Transparency** property, then click the **⋯** button. A number sequence pop-up displays.
+      1. Click the **Transparency** property, then click the **&ctdot;** button. A number sequence pop-up displays.
       1. Select the third keyframe, then click the **Delete** button.
 
        <img src="../../../assets/tutorials/user-interface-design/Section3/Join-6C.png" width="80%" />
@@ -2191,7 +2183,7 @@ To exactly recreate the team indicator within the sample [Laser Tag](https://www
 
 1. Insert a **BillboardGui** object into a temporary rig.
 
-   1. From the toolbar's **Avatar** tab, click **Rig Builder**.
+   1. From the toolbar's **Home** or **Avatar** tab, click **Character**.
    1. Select from the available options. The sample uses a **R15** rig type, a **feminine** body shape, and a **Rthro** avatar. The rig displays both in the 3D viewport and in the **Explorer** window under the name **Rig**.
    1. In the **Explorer** window, navigate to the rig's child **Head** mesh, then click the **⊕** icon. A contextual menu displays.
    1. From the contextual menu, insert a **BillboardGui**.
@@ -2371,7 +2363,7 @@ To exactly recreate the tagged out indicator within the sample [Laser Tag](https
 
 1. Insert a **BillboardGui** object into a temporary rig so that you can visualize the changes in each step of the process.
 
-   1. From the toolbar's **Avatar** tab, click **Rig Builder**.
+   1. From the toolbar's **Home** or **Avatar** tab, click **Character**.
    1. ​Select from the available options. The sample uses a **R15** rig type, a **masculine** body shape, and a **Rthro** avatar. The rig displays both in the 3D viewport and in the **Explorer** window under the name **Rig**.
    1. In the **Explorer** window, navigate to the rig's child **Head** mesh, then click the **⊕** icon. A contextual menu displays.
    1. From the contextual menu, insert a **BillboardGui**.

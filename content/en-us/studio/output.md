@@ -1,13 +1,11 @@
 ---
-title: Output window
+title: Output
 description: The Output window in Roblox Studio displays error messages, calls to print(), and calls to warn().
 ---
 
-The **Output** window, accessible from the [View](./view-tab.md) tab, displays errors captured from running scripts, messages from Roblox Engine, messages from calls to `print()`, and errors from calls to `warn()`.
+The **Output** window, accessible from Studio's **Window** menu or **Script** tab toolbar, displays errors captured from running scripts, messages from Roblox Engine, messages from calls to `print()`, and errors from calls to `warn()`.
 
-<img src="../assets/studio/general/View-Tab-Output.png" width="768" alt="Output button indicated in View tab of Studio" />
-
-Plugins can interact with the Output window through `Class.LogService`, which can record and clear the Output window contents. You can customize the output through the following elements:
+Plugins can interact with the **Output** window through `Class.LogService` which can record and clear the window's contents. You can customize the output through the following elements:
 
 <img src="../assets/studio/general/Output-Window-Diagram.png" width="820" alt="Sections of Output window indicated by lettered pointers" />
 

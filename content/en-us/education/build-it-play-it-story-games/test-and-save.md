@@ -9,9 +9,9 @@ This is a good point at which to check your code and make sure it runs. Testing 
 
 1. Test your by code by clicking the **Play** button.
 
-   <img src="../../assets/education/general/play-button.png" width="30%" />
+   <img src="../../assets/education/general/Play-Button.png" width="360" />
 
-2. Walk up to the pedestal using <kbd>W A S D</kbd> on your keyboard and press <kbd>E</kbd>.
+2. Walk up to the pedestal using <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> on your keyboard and press <kbd>E</kbd>.
 
    <table>
     <thead>
@@ -54,18 +54,14 @@ This is a good point at which to check your code and make sure it runs. Testing 
 
 4. **Stop** the playtest.
 
-   <img src="../../assets/education/general/stop-button.png" width="30%" />
+   <img src="../../assets/education/general/Stop-Button.png" width="360" />
 
 ## Save your code
 
 It's important to save the whole project by **publishing** it to Roblox. It's a good idea to publish every ten minutes while you're working or after making a big change.
 
-1. Select **File → Publish to Roblox** to open the publishing window.
-
-   <img src="../../assets/education/story-games/PublishToRoblox.png" />
+1. Select **File** → **Publish to Roblox** to open the publishing window.
 
 2. Enter a place name and an optional description.
-
-   <img src="../../assets/education/general/name-description.png" />
 
 3. When ready, click the **Create** button. Once published, games can be edited from any computer since they're connected to your account.

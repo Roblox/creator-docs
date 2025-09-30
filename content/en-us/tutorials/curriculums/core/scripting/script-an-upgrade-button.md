@@ -303,11 +303,12 @@ To add the button to the player's GUI when they join:
 
 You should now be able to purchase jump upgrades for coins using the upgrade button. To test out the project:
 
-1. In the toolbar, click the **Play** button. Studio enters playtest mode.
+1. Choose **Test** from the dropdown menu and click the **Play** button to its right to begin the playtest.
 
-   <img src="../../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Play button highlighted in Studio's playtesting options." width="228" />
+   <img src="../../../../assets/studio/general/Mezzanine-Testing-Mode-Test.png" width="800" alt="Test option in the testing modes dropdown of Studio's mezzanine." />
 
 1. If your scripts are working correctly, a button for purchasing jumping power appears on-screen. Try clicking the button before you collect any coins to check that it doesn't award you additional jumping power, then try collecting some coins and see if the upgrade works when you click again.
+
    <video controls loop muted>
    <source src="../../../../assets/tutorials/script-an-upgrade-button/script-an-upgrade-button-example.mp4" />
    </video>

@@ -16,10 +16,7 @@ After you [create a trail](#create-trails), you can:
 
 ## Create trails
 
-Before you begin to create a trail, it's useful to toggle on visibility of attachments so you can more easily discern how their spacing affects the trail's width.
-
-1. Navigate to the toolbar's **Model** tab.
-2. If it's not currently enabled, toggle on **Constraint Details**.
+Before you begin to create a trail, it's useful to toggle on visibility of attachments so you can more easily discern how their spacing affects the trail's width. You can do so by enabling **Show Constraint Details** from Studio's **View** menu.
 
 The following video demonstrates how attachments that are closer to each other create a trail with a smaller width:
 

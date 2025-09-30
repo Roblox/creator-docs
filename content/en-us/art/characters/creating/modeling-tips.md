@@ -23,5 +23,5 @@ Whenever you use a modeling application, switch between different viewport optio
 Enable wireframes on your material view by setting the following:
 
 1. Select the **Head_Geo**.
-2. In the side Properties panel, navigate to **Object Properties** <img src="../../../assets/art/blender-ui/Object-Select-Icon.png" style={{marginBottom:"0px;"}} width="20px"/>.
+2. In the **Properties** panel, navigate to **Object Properties** <img src="../../../assets/art/blender-ui/Object-Select-Icon.png" style={{marginBottom:"0px;"}} width="20px"/>.
 3. In Viewport Display, enable **Wireframe**.

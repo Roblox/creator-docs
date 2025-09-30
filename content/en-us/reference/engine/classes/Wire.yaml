@@ -22,9 +22,9 @@ description: |
   The following instances may be connected by `Class.Wire|Wires`:
 
   - `Class.AudioAnalyzer`
-  - `Class.AudioCompressor`
   - `Class.AudioChannelMixer`
   - `Class.AudioChannelSplitter`
+  - `Class.AudioCompressor`
   - `Class.AudioDeviceInput`
   - `Class.AudioDeviceOutput`
   - `Class.AudioDistortion`
@@ -34,12 +34,13 @@ description: |
   - `Class.AudioFader`
   - `Class.AudioFilter`
   - `Class.AudioFlanger`
-  - `Class.AudioListener`
   - `Class.AudioLimiter`
+  - `Class.AudioListener`
   - `Class.AudioPitchShifter`
   - `Class.AudioPlayer`
   - `Class.AudioRecorder`
   - `Class.AudioReverb`
+  - `Class.AudioSpeechToText`
   - `Class.AudioTextToSpeech`
 code_samples: []
 inherits:

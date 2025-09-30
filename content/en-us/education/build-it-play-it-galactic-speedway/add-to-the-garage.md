@@ -14,9 +14,7 @@ Remember how you flew a test speeder earlier? To fly your own speeder, it needs 
    <img src="../../assets/education/build-it-play-it-galactic-speedway/add-to-the-garage/find-garage.png" width="40%" />
 
    <Alert severity="info">
-   If you don't see it the **Explorer** window, enable it by going to the **Home** tab and clicking the **Explorer** button.
-
-   <img src="../../assets/education/general/Explorer-Window.png" />
+   If you don't see it the **Explorer** window, enable it from Studio's **Window** menu.
    </Alert>
 
 1. Instead of using paste, right-click on **Garage** and select **Paste Into**. Your speeder will then reappear.

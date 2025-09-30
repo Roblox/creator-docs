@@ -75,7 +75,7 @@ end
 
 ## Testing
 
-The real-time translation API currently only supports RCC authentication. As a result, you must deploy your code to a test instance in order to test the API from Studio. Use [Team Test](../../studio/home-tab.md#team-test) to deploy the script to a test instance and test your changes.
+The real-time translation API currently only supports RCC authentication. As a result, you must deploy your code to a test instance in order to test the API from Studio. Use [collaborative testing](../../studio/testing-modes.md#collaborative-testing) to deploy the script to a test instance and test your changes.
 
 ## Translation API reference
 

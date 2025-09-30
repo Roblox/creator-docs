@@ -62,10 +62,7 @@ To complete the core setup, you'll need to link various properties of the `Class
 
 With [sensors](#sensor-setup) and [controllers](#controller-setup) in place, and with [references linked](#link-references), you can test the controller in Studio.
 
-1. Start a playtest using the **Run** mode (<kbd>F8</kbd>) since you don't need to insert your avatar character in this scenario.
-
-   <img src="../assets/studio/general/Test-Tab-Playtest-Options.png" width="760" alt="Rapid playtest options in Studio." />
-
+1. [Initiate a playtest](../studio/testing-modes.md#playtesting) using the **Run** mode (<kbd>F8</kbd>) since you don't need to insert your avatar character in this scenario.
 2. **RootPart** should levitate above the ground at the `Class.GroundController.GroundOffset` value you set in [Adding Controllers](#controller-setup). It should also rotate to align with the `Class.ControllerManager.FacingDirection` vector.
 
    <img src="../assets/physics/character-controller/Testing-Labeled.jpg" width="800" alt="Character levitating above ground at GroundOffset, facing in direction of FacingDirection vector." />

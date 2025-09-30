@@ -207,7 +207,7 @@ The skinned character's mesh positions aren't updated when the Creature animates
    ```
 
 2. We created a **VFXUpdateModule** `Class.ModuleScript` to tell any objects tagged appropriately with **AnimatedVfxModel** to update on a play event.
-3. We tagged the necessary model groups with the **AnimatedVfxModel** using the **Tag Editor**, accessible from the [View](../../studio/view-tab.md) tab. Using tags allows the **VFXUpdateModule** to know which object to look for as the first VFX child and to apply the update.
+3. We tagged the necessary model groups with **AnimatedVfxModel** using the [Tags](../../studio/properties.md#instance-tags) section of its properties. Using tags allows the **VFXUpdateModule** to know which object to look for as the first VFX child and to apply the update.
 
    <img
    alt="VFX In Studio Example"
@@ -253,7 +253,7 @@ Here's how we created the surface appearance texture maps:
 
 ## Animate the creature
 
-Animating is very subjective and has a personal style. Options include motion capture, hand "key frame" animating in your DCC application, or using Studio's powerful Animation Editor.
+Animating is very subjective and has a personal style. Options include motion capture, hand "key frame" animating in your DCC application, or using Studio's powerful **Animation Editor**.
 
 As we mentioned earlier, we wanted to make sure we had enough joints for fluid motion as well as enough limbs, so the creature animation felt natural and "layered." Layering, also known as secondary motion, is something you see in everyday life — when you throw your arm out, every joint is reacting to the initial impulse from your upper arm, and every joint in your body doesn't move or rest at the same time.
 
@@ -270,11 +270,11 @@ If using an external DCC application for animation, we found the following guide
 - Create your animations with the same character you're applying it to.
 - Export your animation data as a separate `.fbx` file.
 
-Because we animated the character outside of Studio, we needed to use the Animation Editor to import the animation `.fbx` file. The editor lets you select any avatar with joints or motors and drive them via points in the timeline.
+Because we animated the character outside of Studio, we needed to use the **Animation Editor** to import the animation `.fbx` file. The editor lets you select any avatar with joints or motors and drive them via points in the timeline.
 
 To import an animation:
 
-1. In the toolbar's **Avatar** tab, open the **Animation Editor**.
+1. In the toolbar's **Avatar** tab, click **Animation**.
 2. Select the rigged character that you want to animate in Roblox. The character should be the same one you are rigging in your external DCC application.
 3. Click the **&ctdot;** button in the upper-left section of the editor window, select **Import From FBX Animation**, and locate your exported `.fbx` animation file.
 
@@ -307,7 +307,7 @@ To import an animation:
    ```
 
    <Alert severity="warning">
-   Check the character after you've closed the Animation Editor to ensure that the **AnimSaves** folder was deleted, as its files are only useful during editing.
+   Check the character after you've closed the **Animation Editor** to ensure that the **AnimSaves** folder was deleted, as its files are only useful during editing.
    </Alert>
 
 ## Final results

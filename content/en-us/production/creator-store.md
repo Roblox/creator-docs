@@ -29,9 +29,7 @@ These policies only apply to assets on the Creator Store, **not** private models
 
 ## Open the Creator Store
 
-The Creator Store is available on the [web](https://create.roblox.com/store/) and directly inside Studio's [Toolbox](../projects/assets/toolbox.md). To open it in Studio, navigate to the [View](../studio/view-tab.md) tab and click **Toolbox**. The **Creator Store** tab is shown by default.
-
-<img src="../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
+The Creator Store is available on the [web](https://create.roblox.com/store/) and directly inside Studio's [Toolbox](../projects/assets/toolbox.md). To open it in Studio, select **Toolbox** from the **Window** menu. The **Creator Store** tab is shown by default.
 
 <img src="../assets/studio/toolbox/Creator-Store-Tab.png" width="360" />
 

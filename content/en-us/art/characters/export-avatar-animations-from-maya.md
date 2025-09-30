@@ -131,14 +131,14 @@ To test the animation in Studio:
 
 1. Open a pre-built character rig.
 
-   1. From the toolbar's **Avatar** tab, click **Rig Builder**.
+   1. From the toolbar's **Avatar** tab, click **Character**.
    1. Select any rig you want to use as a test. The rig displays within the viewport.
 
 1. Connect the rig to the **Animation Editor**.
 
-   1. From the toolbar's **Avatar** tab, click **Animation Editor**. The [Animation Editor](../../animation/editor.md) window displays.
+   1. From the toolbar's **Avatar** tab, click **Animation**. The [Animation Editor](../../animation/editor.md) window displays.
    1. In the viewport, click your rig. A dialog displays in the editor.
-   1. In the **Animation Name** field, enter a new animation name, then click the **Create** button. The Animation Editor window displays the media and playback controls, timeline, and track list.
+   1. In the **Animation Name** field, enter a new animation name, then click the **Create** button. The editor window displays the media and playback controls, timeline, and track list.
 
 1. Import your avatar animation into the rig.
 
@@ -147,6 +147,6 @@ To test the animation in Studio:
 
       <img width="60%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Importing-From-FBX-Animation.jpg" alt="A close up view of the Animation Editor window. The ellipsis contextual menu displays, and the From FBX Animation submenu item is highlighted." />
 
-   1. Select the FBX animation you just exported from Maya, then click **Open**. The animation's keyframes load into the Animation Editor.
+   1. Select the FBX animation you just exported from Maya, then click **Open**. The animation's keyframes load into the **Animation Editor**.
 
 1. Navigate to the **Media and Playback Controls** and click the **Play button** to play the avatar animation.

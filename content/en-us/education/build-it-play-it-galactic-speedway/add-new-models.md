@@ -19,7 +19,6 @@ Get extra parts to work with by importing an asset. Assets are parts of a Roblox
    </a>
 
 2. On the page for the asset, click the **Get** button to add it into your inventory.
-   <img src="../../assets/education/build-it-play-it-galactic-speedway/add-new-models/driftspeeder-part-asset.png" />
 
 ## Import into the game
 
@@ -30,17 +29,13 @@ All assets can be found in your **Inventory**. This stores any models you've add
 The kit will be imported wherever your camera is positioned. To make sure your kit is imported near the repair station, move your camera there.
 </Alert>
 
-1. In Roblox Studio, find the Toolbox. If it's not open, go to the **View** tab and click the **Toolbox** button.
+1. In Studio, find the **Toolbox**. If it's not visible, open it from the **Window** menu.
 
-   <img src="../../assets/education/build-it-play-it-galactic-speedway/add-new-models/open-toolbox.png" />
+2. Select the **Inventory** tab.
 
-2. In the Toolbox window, click the icon for **Inventory**.
-
-   <img src="../../assets/education/build-it-play-it-galactic-speedway/add-new-models/set-to-inventory.png" width="50%" />
+   <img src="../../assets/education/general/Toolbox-Inventory.png" width="360" />
 
 3. Make sure the left dropdown is to **My Models**. Then, find and click on **Driftspeeder Parts**.
-
-   <img src="../../assets/education/build-it-play-it-galactic-speedway/add-new-models/add-asset-from-inventory.png" width="50%" />
 
 4. To make it easy to work, move the kit somewhere near your work area.
 

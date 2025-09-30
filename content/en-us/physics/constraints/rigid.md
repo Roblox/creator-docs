@@ -9,13 +9,7 @@ A `Class.RigidConstraint` connects two `Class.Attachment|Attachments` or `Class.
 To attach two `Class.BasePart|BaseParts` together, versus two `Class.Attachment|Attachments` or `Class.Bone|Bones`, see [WeldConstraint](../../physics/constraints/weld.md).
 </Alert>
 
-The fastest way to create a `Class.RigidConstraint` is by selecting **Rigid Constraint** through Studio's **Create** menu in the toolbar's **Model** tab.
-
-<img
-src="../../assets/studio/general/Model-Tab-Constraints-Create-Menu.png"
-width="754" alt="Constraint picker indicated in Studio toolbar" />
-
-Note that this tool behaves differently depending on whether you click on existing `Class.BasePart|BaseParts`, `Class.Attachment|Attachments`, or `Class.Bone|Bones` after the tool is activated:
+When creating a `Class.RigidConstraint` using Studio's [Constraint](../mechanical-constraints.md#create-constraints) button, the tool behaves differently depending on whether you click on existing `Class.BasePart|BaseParts`, `Class.Attachment|Attachments`, or `Class.Bone|Bones` after the tool is activated:
 
 - Clicking on an existing `Class.BasePart` creates a new `Class.Attachment` upon it as the intended `Class.RigidConstraint.Attachment0` or `Class.RigidConstraint.Attachment1`.
 - Clicking on an existing `Class.Attachment` or `Class.Bone` uses that instance as the intended `Class.RigidConstraint.Attachment0` or `Class.RigidConstraint.Attachment1`.

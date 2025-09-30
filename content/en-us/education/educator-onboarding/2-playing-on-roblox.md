@@ -11,45 +11,19 @@ By the end of this article, you will:
 
 - Create and login into a Roblox account.
 - Understand the layout of the Roblox platform and how to launch experiences.
-- Learn basic skills in Roblox Client, such as avatar controls and camera manipulation.
+- Learn basic skills in the Roblox client, such as avatar controls and camera manipulation.
 
 ## Create your account
 
-To play and create on Roblox, you need a **free** account.
-
-### Account creation
+To play and create on Roblox, you need a free account.
 
 1. Create an account by signing up on the <a href="https://www.roblox.com" target="_blank" rel="noopener">Roblox Home Page</a>. Follow the prompts to create your account.
-
-   <img src="../../assets/education/legacy/module3-signinScreen.jpg" width="80%" />
-
 2. To create an account, you may be asked to complete a **CAPTCHA**. These are timed challenges used to discourage people creating fake accounts. Challenges vary, but often ask you to find a specific object in an image.
 
-  <Grid container>
-    <Grid item XSmall={4}>
-      <figure>
-      <img
-      src="../../assets/education/legacy/module2-verify.png"
-      width="100%" />
-      <figcaption>Captcha prompt</figcaption>
-      </figure>
-    </Grid>
-    <Grid item XSmall={4}>
-      <figure>
-      <img
-      src="../../assets/education/legacy/module2-capture.jpg"
-      width="100%" />
-      <figcaption>Captcha calculateshallenge</figcaption>
-      </figure>
-    </Grid>
-  </Grid>
-
-    <Alert severity="info">
-    <AlertTitle>CAPTCHAs and students</AlertTitle>
-    Note that your students may have to accomplish CAPTCHA challenges when logging
-    into accounts. Because of this, we encourage setting aside time for account
-    log-ins at the start of class.
-    </Alert>
+   <Alert severity="info">
+   <AlertTitle>CAPTCHAs and students</AlertTitle>
+   Note that your students may have to accomplish CAPTCHA challenges when logging into accounts. Because of this, we encourage setting aside time for account log-ins at the start of class.
+   </Alert>
 
 ## The Roblox home page
 
@@ -91,7 +65,7 @@ Alternatively, you can view the <a href="../../assets/education/legacy/Handout_-
 
 ### Experience Pages
 
-All Roblox experiences have their own page. This page includes a description and button used to open that specific experience in Roblox Client.
+All Roblox experiences have their own page. This page includes a description and button used to open that specific experience in the Roblox client.
 
 A sample page is below.
 
@@ -105,7 +79,7 @@ A sample page is below.
 
    <img src="../../assets/education/legacy/module2-clickPlay.jpg" width="80%" />
 
-3. With Roblox Client open, go through the experience as instructed. This should take about 5 - 10 minutes. Come back to your web browser when you see a sign reading "Find new games!"
+3. With the Roblox client open, go through the experience as instructed. This should take about 5–10 minutes. Come back to your web browser when you see a sign reading "Find new games!"
 
    <GridContainer numColumns="2">
      <figure>
@@ -125,77 +99,45 @@ While all controls are introduced in the experience, here's a quick reference.
 <table>
 <tbody>
 <tr>
-<td>
-<p><strong>Move Forward</strong></p>
-</td>
-<td>
-<p><kbd>W</kbd> or <kbd>↑</kbd></p>
-</td>
+<td>**Move Forward**</td>
+<td><kbd>W</kbd> or <kbd>↑</kbd></td>
 </tr>
 <tr>
-<td>
-<p><strong>Move Backward</strong></p>
-</td>
-<td>
-<p><kbd>S</kbd> or <kbd>↓</kbd></p>
-</td>
+<td>**Move Backward**</td>
+<td><kbd>S</kbd> or <kbd>↓</kbd></td>
 </tr>
 <tr>
-<td>
-<p><strong>Move Left</strong></p>
-</td>
-<td>
-<p><kbd>A</kbd></p>
-</td>
+<td>**Move Left**</td>
+<td><kbd>A</kbd></td>
 </tr>
 <tr>
-<td>
-<p><strong>Move Right</strong></p>
-</td>
-<td>
-<p><kbd>D</kbd></p>
-</td>
+<td>**Move Right**</td>
+<td><kbd>D</kbd></td>
 </tr>
 <tr>
-<td>
-<p><strong>Jump</strong></p>
-</td>
-<td>
-<p><kbd>Space</kbd></p>
-</td>
+<td>**Jump**</td>
+<td><kbd>Space</kbd></td>
 </tr>
 </tbody>
 </table>
 
 ### Mobile controls
 
-Roblox works easily on any mobile device. Whenever playing Roblox, we recommend holding the phone with thumbs on the screen like below.
+Roblox works easily on any mobile device. Whenever playing Roblox, we recommend holding the device with thumbs on the screen like below.
 
 <table>
 <tbody>
 <tr>
-<td>
-<p><strong>Move</strong></p>
-</td>
-<td>
-<p><span>Tap and drag on the left side of the screen.</span></p>
-</td>
+<td>**Move**</td>
+<td>Tap and drag in the lower-left area of the screen</td>
 </tr>
 <tr>
-<td>
-<p><strong>Jump</strong></p>
-</td>
-<td>
-<p><span>Press the jump button on the left side of the screen.</span></p>
-</td>
+<td>**Jump**</td>
+<td>Press the jump button in the lower-right area of the screen</td>
 </tr>
 <tr>
-<td>
-<p><strong>Rotate Camera</strong></p>
-</td>
-<td>
-<p><span>Tap and drag on the middle side of the screen</span></p>
-</td>
+<td>**Rotate Camera**</td>
+<td>Tap and drag in the middle of the screen</td>
 </tr>
 </tbody>
 </table>

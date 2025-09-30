@@ -13,14 +13,14 @@ Use the following steps to import and configure the animation for publishing emo
 
 ## Import into Animation Editor
 
-If your animation data is saved to a `.fbx` file and your animation meets the emote [technical specifications](./specifications.md), use the Animation Editor to import your animation. If your animation is already in Studio, skip this step.
+If your animation data is saved to a `.fbx` file and your animation meets the emote [technical specifications](./specifications.md), use the **Animation Editor** to import your animation. If your animation is already in Studio, skip this step.
 <br />
 To import your animation in Studio:
 
 1. If you don't already have a rigged R15 character in your workspace, add one by selecting **Avatar** > **Character**.
-2. Select **Avatar** > **Animation** to open the Animation Editor.
-3. With Animation Editor open, select the rigged character in the Workspace.
-4. In the Animation Editor, select **⋯** > **Import** > **From FBX Animation** and select your `.fbx` file.
+2. Select **Avatar** > **Animation** to open the **Animation Editor**.
+3. With editor open, select the rigged character in the 3D viewport.
+4. In the **Animation Editor**, select **&ctdot;** > **Import** > **From FBX Animation** and select your `.fbx` file.
 
    <img src="../../assets/avatar/avatar-emotes/Animation-Editor-Import.png" />
 
@@ -29,7 +29,7 @@ To import your animation in Studio:
 
 ## Convert to CurveAnimation
 
-To generate an asset ID for your animation, use the Animation Editor to convert the animation to a `CurveAnimation` and save the animation to Roblox to generate an asset ID.
+To generate an asset ID for your animation, use the **Animation Editor** to convert the animation to a `CurveAnimation` and save the animation to Roblox to generate an asset ID.
 
 <Alert severity = 'warning'>
 The animation data for emotes must be a `CurveAnimation` clip.
@@ -37,7 +37,7 @@ The animation data for emotes must be a `CurveAnimation` clip.
 
 To convert an existing keyframe sequence to a `CurveAnimation`:
 
-1. In the Animation Editor, select the Curve Editor button next to the timeline. A confirmation prompt displays.
+1. In the **Animation Editor**, select the **Curve Editor** button next to the timeline. A confirmation prompt displays.
 
    <img src="../../assets/avatar/avatar-emotes/Animation-Editor-Curve-Animation-Icon.png" />
 
@@ -47,9 +47,9 @@ To convert an existing keyframe sequence to a `CurveAnimation`:
 
 ## Generate Asset ID
 
-To create an asset ID of the `CurveAnimation` in the Animation Editor:
+To create an asset ID of the `CurveAnimation`:
 
-1. In the Animation Editor, select the **⋯** > **Publish to Roblox**.
+1. In the **Animation Editor**, select the **&ctdot;** > **Publish to Roblox**.
 
    <img src="../../assets/avatar/avatar-emotes/Animation-Editor-Publish.png" />
 
@@ -76,8 +76,8 @@ To submit an emote to the Marketplace, you must submit an `Class.Animation` obje
 
 To create an `Class.Animation` object you can publish as an emote:
 
-1. In the Explorer, add a new `Animation` object.
-2. In the Properties window, add the asset ID of the emote animation.
+1. In the **Explorer**, add a new `Animation` object.
+2. In the **Properties** window, add the asset ID of the emote animation.
 
 ## Upload and publish an emote
 

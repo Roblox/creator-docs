@@ -135,13 +135,7 @@ The sample [Moving Objects](https://www.roblox.com/games/17560154079/UCT-Linear-
 
 To configure a `Class.LinearVelocity` constraint:
 
-1. **(Optional)** Make the constraint visible in the 3D space so that you can reference its linear direction.
-
-   1. Navigate to the toolbar's **Model** tab, then the **Constraints** section.
-   1. If it's not currently enabled, click **Constraint Details** to display constraint visual aids.
-
-   <img src="../../../assets/tutorials/laser-traps-with-beams/Attachments-1.png" alt="A close up view of the Studio's Constraints section UI." width="40%" />
-
+1. To make the constraint visible in the viewport so that you can reference its linear direction, enable **Show Constraint Details** from Studio's **View** menu.
 1. Insert a `Class.LinearVelocity` constraint into the **Pad** mesh.
    1. In the **Explorer** window, hover over the mesh, then click the ⊕ icon. A contextual menu displays.
    1. From the contextual menu, insert **LinearVelocity**.
@@ -164,12 +158,11 @@ To configure a `Class.LinearVelocity` constraint:
 
 1. Verify the amount of force you set moves the mesh 15 studs per second along the world's negative X axis.
 
-   1. In the toolbar, navigate to the **Test** tab.
-   1. Select **Run** from the playtest modes. Studio simulates the experience at the current camera position without your avatar in the 3D space.
+   - Select the **Run** simulation mode from the mezzanine's dropdown menu and click the **Play** button to begin. Studio simulates the experience at the current camera position without your avatar in the 3D space.
 
-   <img src="../../../assets/studio/general/Test-Tab-Playtest-Options.png" width="760" alt="Rapid playtest options in Studio." />
+     <img src="../../../assets/studio/general/Mezzanine-Testing-Mode-Run.png" width="800" alt="Run option in the testing modes dropdown of Studio's mezzanine." />
 
-   <video controls src="../../../assets/tutorials/creating-moving-objects/LV-4.mp4" width="80%" alt="A lily pad floats from the left to the right of the screen across a river." ></video>
+     <video controls src="../../../assets/tutorials/creating-moving-objects/LV-4.mp4" width="80%" alt="A lily pad floats from the left to the right of the screen across a river." ></video>
 
 ### Use PrismaticConstraint constraints
 
@@ -242,7 +235,7 @@ To configure a prismatic constraint:
 
    <img width="80%" img src="../../../assets/tutorials/creating-moving-objects/PC-2.jpg" alt="A close up view of a log and its constraint visual aid. It doesn't have a arrow visual aid because it doesn't yet have a set velocity." />
 
-1. In the **Explorer** window, select the constraint, then in the Properties window,
+1. In the **Explorer** window, select the constraint, then in the **Properties** window:
 
    1. Set **ActuatorType** to **Motor**. New property fields display.
    1. Set **MotorMaxForce** to `50000` to apply up to 50000 Rowtons of constant force to achieve the target linear velocity.
@@ -252,12 +245,11 @@ To configure a prismatic constraint:
 
 1. Verify the amount of force you set moves the log 40 studs per second along the world's negative X axis.
 
-   1. In the toolbar, navigate to the **Test** tab.
-   1. Select **Run** from the playtest modes. Studio simulates the experience at the current camera position without your avatar in the 3D space.
+   - Select the **Run** simulation mode from the mezzanine's dropdown menu and click the **Play** button to begin. Studio simulates the experience at the current camera position without your avatar in the 3D space.
 
-   <img src="../../../assets/studio/general/Test-Tab-Playtest-Options.png" width="760" alt="Rapid playtest options in Studio." />
+     <img src="../../../assets/studio/general/Mezzanine-Testing-Mode-Run.png" width="800" alt="Run option in the testing modes dropdown of Studio's mezzanine." />
 
-   <video controls src="../../../assets/tutorials/creating-moving-objects/PC-4.mp4" width="90%" alt="A log floats on a river from the left to the right of the screen." ></video>
+     <video controls src="../../../assets/tutorials/creating-moving-objects/PC-4.mp4" width="90%" alt="A log floats on a river from the left to the right of the screen." ></video>
 
 ## Apply an initial linear force
 

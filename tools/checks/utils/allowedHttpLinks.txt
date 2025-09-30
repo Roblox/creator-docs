@@ -54,6 +54,7 @@ https://digitaldragon.co/camps/thanksgiving-week-camp-roblox/
 https://digitalsake.com/
 https://digitane.jp/
 https://discord.com/developers/applications
+https://discord.com/developers/docs/topics/oauth2
 https://docs.blender.org/manual/en/2.79/editors/uv_image/uv/editing/unwrapping/mapping_types.html
 https://docs.blender.org/manual/en/2.80/scene_layout/object/editing/transform/control/pivot_point.html
 https://docs.blender.org/manual/en/3.5/grease_pencil/modes/weight_paint/introduction.html
@@ -182,7 +183,7 @@ https://luau.org/
 https://luau.org/syntax
 https://luau.org/lint
 https://luau.org/typecheck
-https://luau-lang.org/
+https://luau.org/compatibility
 https://maker-state.com/product/creative-coding-with-minecraft-roblox/
 https://makersplacegh.com/online-sessions/coding-games-in-roblox/
 https://marmoset.co/
@@ -430,6 +431,7 @@ https://www.wizkidlearning.com/
 https://www.wowschool.pl/
 https://www.youthtechinc.com/
 https://www.youtube.com/@RobloxLearn
+https://www.youtube.com/@RobloxLearn/streams
 https://www.youtube-nocookie.com/embed/V1uFFUUCLpo
 https://www.youtube-nocookie.com/embed/2My8jE47clI
 https://www.youtube-nocookie.com/embed/0fAhhoXK12o
@@ -684,3 +686,6 @@ https://www.ecma-international.org/publications-and-standards/standards/ecma-404
 https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/
 https://www.llama.com/llama3/license/
 https://ai.google.dev/gemini-api/terms
+https://survey.roblox.com/jfe/form/SV_7VTnD59gg3nFiTA
+https://youtube.com/playlist?list=PLuEQ5BB-Z1PJ8Du1rJ_JaMpW1W_G2T_lm
+https://www.youtube.com/watch?v=7DXTQcA9G_A

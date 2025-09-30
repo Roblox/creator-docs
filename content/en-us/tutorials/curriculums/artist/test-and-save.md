@@ -21,7 +21,7 @@ To playtest your art:
 
 1. In the top-left corner of Studio, verify that your playtest is set to either **Test** or **Test Here**, then click the **Play** button. Studio enters playtest mode.
 
-   <img src="../../../assets/education/general/play-button.png" width="30%" />
+   <img src="../../../assets/education/general/Play-Button.png" width="360" />
 
 1. In the experience, walk up to the character under the **Play It** sign and press <kbd>E</kbd> to open up a menu. From that menu, click the **Join Game** button.
 
@@ -37,7 +37,7 @@ To playtest your art:
 
 1. When you're done, return to the top-left corner of Studio, then click the **Stop** button. Studio exits playtest mode.
 
-   <img src="../../../assets/education/general/stop-button.png" width="30%" />
+   <img src="../../../assets/education/general/Stop-Button.png" width="360" />
 
 ## Publish to Roblox
 
@@ -47,9 +47,7 @@ If you were to close Studio now, you would lose every edit you made to your expe
 It's recommended to publish to Roblox every ten minutes or after making a big change.
 </Alert>
 
-1. In the top-left corner of your computer, click **File → Publish to Roblox**. The **Publish Game** window displays.
-
-   <img src="../../../assets/education/build-it-play-it-mansion-of-wonder/save-by-publishing/publish.png"/>
+1. In the top-left corner of your computer, click **File** → **Publish to Roblox**. The **Publish Game** window displays.
 
 1. In the **Publish Game** window,
 
@@ -57,8 +55,6 @@ It's recommended to publish to Roblox every ten minutes or after making a big ch
    1. <Chip label="OPTIONAL" size="small" variant="outlined" /> In the **Description** field, provide a summary of what a player can expect from the experience.
    1. In the **Devices** section, enable every device you want players to use to access your experience.
    1. At the bottom-right of the window, click the **Create** button.
-
-   <img src="../../../assets/education/general/name-description.png" width="80%" />
 
 Now that your experience is published and connected to your account, you can edit it from any computer!
 

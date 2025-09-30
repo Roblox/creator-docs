@@ -17,7 +17,7 @@ Keep in mind, the model that you intend to create as a rigid accessory must also
 
 To import your asset:
 
-1. In Studio, navigate to the toolbar's **Avatar** tab and select the **3D Importer**.
+1. From Studio's **File** menu, select **3D Importer**.
 2. In the file browser, select the `.fbx` or `.gltf` file saved locally. The 3D Importer loads a preview of the object.
 
       <img src="../../assets/art/accessories/creating-rigid/3D-Importer.png" />
@@ -58,12 +58,12 @@ After successful import, your model object should populate in your project as a 
 
 ## Convert rigid accessories
 
-After importing your asset into Studio, you can begin **fitting** your imported object to a mannequin and **converting** the `Class.Model` object into a `Class.Accessory`. When fitting and converting your accessory it's important to use the [Accessory Fitting Tool](../accessories/accessory-fitting-tool.md) to correctly preview the placement and apply the correct configurations to your accessory.
+After importing your asset into Studio, you can begin **fitting** your imported object to a mannequin and **converting** the `Class.Model` object into a `Class.Accessory`. When fitting and converting your accessory it's important to use the [Accessory Fitting Tool](../accessories/accessory-fitting-tool.md) (AFT) to correctly preview the placement and apply the correct configurations to your accessory.
 
 To fit and generate your accessory:
 
-1. In the toolbar's **Avatar** tab, open the **Accessory Fitting Tool** (AFT).
-2. In the new AFT panel, select the **Part** field and, in the workspace, select the accessory `Class.MeshPart` object in the workspace and press **Next**.
+1. In the toolbar's **Avatar** tab, click **Accessory** to open the AFT.
+2. In the tool's panel, select the **Part** field and, in the workspace, select the accessory `Class.MeshPart` object in the workspace and press **Next**.
 
    <img src="../../assets/art/accessories/creating-rigid/AFT-Select-Mesh.png" />
 

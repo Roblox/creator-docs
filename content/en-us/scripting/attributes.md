@@ -48,7 +48,7 @@ If your experience uses [instance streaming](../workspace/streaming.md) (`Class.
 
 ## Get objects
 
-The first step to modifying object properties and attributes is to get a reference to the object. The simplest solution is to make the script a child of the object in the Explorer and use `script.Parent` to reference the object.
+The first step to modifying object properties and attributes is to get a reference to the object. The simplest solution is to make the script a child of the object in the **Explorer** and use `script.Parent` to reference the object.
 
 <img alt="A script parented to a model in the Explorer." src="../assets/studio/explorer/Script-Parent-Model.png" width="320" />
 
@@ -84,7 +84,7 @@ chair.LeftArmRest.Size = Vector3.new(10, 1, 10)
 
 Although you can create attributes programmatically, the more common solution is to create them with default values in the Studio user interface. Then you can use scripts to modify their values in response to player actions.
 
-<img alt="A script within a folder in ReplicatedStorage." src="../assets/studio/properties/Attributes-Example-B.png" width="320" />
+<img alt="A script within a folder in ReplicatedStorage." src="../assets/studio/properties/Attributes-Example.png" width="320" />
 
 For information on creating attributes in Studio, see [Instance attributes](../studio/properties.md#instance-attributes).
 

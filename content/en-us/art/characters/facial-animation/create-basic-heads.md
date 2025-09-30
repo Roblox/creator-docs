@@ -383,11 +383,11 @@ A **combination pose**, or **corrective**, is the combination of 2-3 FACS poses 
   </figure>
 </GridContainer>
 
-On import, Studio calculates and stores the corrective difference for combination poses in the head's `Class.FaceControls` instance, and the `Class.FaceControls` instance corrects the base poses values as they combine in the Animation Editor.
+On import, Studio calculates and stores the corrective difference for combination poses in the head's `Class.FaceControls` instance, and the `Class.FaceControls` instance corrects the base poses values as they combine in the [Animation Editor](../../../animation/editor.md).
 
 ## Map
 
-After you finish posing each FACS pose that your character needs, you must map, or link, **each animation frame that you pose** to its corresponding FACS base or combination pose name. Mapping stores the bone positions and translations within the head `Class.MeshPart`, and when you begin to animate your head within the [Animation Editor](../../../animation/editor.md), the `Class.FaceControls` instance uses this stored data to transform your character's facial features to the applicable FACS pose.
+After you finish posing each FACS pose that your character needs, you must map, or link, **each animation frame that you pose** to its corresponding FACS base or combination pose name. Mapping stores the bone positions and translations within the head `Class.MeshPart`, and when you begin to animate your head within the **Animation Editor**, the `Class.FaceControls` instance uses this stored data to transform your character's facial features to the applicable FACS pose.
 
 <Alert severity = 'warning'>
 If you intend to sell your character head to the Marketplace, you must include the minimum 17 base [FACS poses](./facs-poses-reference.md).

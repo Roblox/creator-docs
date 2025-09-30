@@ -90,7 +90,7 @@ end)
     severity="info"
     variant="standard">
 You can specify a <b>Parameter</b> value for any event
-marker within the Animation Editor. This lets you pass a custom <b>string</b>
+marker within the **Animation Editor**. This lets you pass a custom <b>string</b>
 (single value, comma-separated string, etc.) to the `Class.AnimationTrack:GetMarkerReachedSignal()|GetMarkerReachedSignal()` function, as illustrated by the <b>paramString</b> argument in the code example above. This string can then be parsed or converted, if necessary, and used for whatever action you wish to perform in the event.
 </Alert>
 

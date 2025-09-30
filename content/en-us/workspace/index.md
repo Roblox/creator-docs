@@ -17,26 +17,38 @@ the workspace:
 
 `Class.Part` objects represent the primitive building blocks in Roblox. By default, all parts have their physics simulated and are rendered if they appear in the 3D workspace. Parts can take the shape of blocks, spheres, cylinders, wedges, or corner wedges. In addition, `Class.TrussPart` acts as a truss beam that characters can climb like a ladder.
 
-<table>
-<thead>
-<tr>
-<th><center>Block</center></th>
-<th><center>Sphere</center></th>
-<th><center>Cylinder</center></th>
-<th><center>Wedge</center></th>
-<th><center>Corner wedge</center></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="../assets/modeling/parts/Basic-Part-Block.png" alt="A single gray block part" /></td>
-<td><img src="../assets/modeling/parts/Basic-Part-Sphere.png" alt="A single gray sphere part" /></td>
-<td><img src="../assets/modeling/parts/Basic-Part-Cylinder.png" alt="A single gray cylinder part" /></td>
-<td><img src="../assets/modeling/parts/Basic-Part-Wedge.png" alt="A single gray wedge part" /></td>
-<td><img src="../assets/modeling/parts/Basic-Part-Corner-Wedge.png" alt="A single gray corner wedge part" /></td>
-</tr>
-</tbody>
-</table>
+<Grid container spacing={1}>
+<Grid item XSmall={4} XLarge={2}>
+	<figure>
+	<img src="../assets/modeling/parts/Basic-Part-Block.png" alt="A single Block part." />
+	<figcaption><center>Block</center></figcaption>
+	</figure>
+</Grid>
+<Grid item XSmall={4} XLarge={2}>
+	<figure>
+	<img src="../assets/modeling/parts/Basic-Part-Sphere.png" alt="A single Sphere part." />
+	<figcaption><center>Sphere</center></figcaption>
+	</figure>
+</Grid>
+<Grid item XSmall={4} XLarge={2}>
+	<figure>
+	<img src="../assets/modeling/parts/Basic-Part-Cylinder.png" alt="A single Cylinder part." />
+	<figcaption><center>Cylinder</center></figcaption>
+	</figure>
+</Grid>
+<Grid item XSmall={4} XLarge={2}>
+	<figure>
+	<img src="../assets/modeling/parts/Basic-Part-Wedge.png" alt="A single Wedge part." />
+	<figcaption><center>Wedge</center></figcaption>
+	</figure>
+</Grid>
+<Grid item XSmall={4} XLarge={2}>
+	<figure>
+	<img src="../assets/modeling/parts/Basic-Part-Corner-Wedge.png" alt="A single Corner Wedge part." />
+	<figcaption><center>Corner Wedge</center></figcaption>
+	</figure>
+</Grid>
+</Grid>
 
 You can also apply [solid modeling](../parts/solid-modeling.md) operations to parts, such as union or negate, to combine them into something more complex like bowls or hollow pipes.
 

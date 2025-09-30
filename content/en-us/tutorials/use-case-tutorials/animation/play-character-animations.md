@@ -164,9 +164,9 @@ To replace the default walk animation asset ID:
    ```
 
 1. Playtest your experience to ensure your custom walk animation overrides the default animation.
-   1. In the toolbar, click the **Play** button. Studio enters playtest mode.
-
-      <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Play button highlighted in Studio's playtesting options." width="228" />
+   1. Choose **Test** from the dropdown menu and click the **Play** button to its right to begin the playtest.
+	 
+      <img src="../../../assets/studio/general/Mezzanine-Testing-Mode-Test.png" width="800" alt="Test option in the testing modes dropdown of Studio's mezzanine." />
 
    1. Walk around the space station with your avatar.
 

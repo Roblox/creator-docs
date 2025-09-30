@@ -215,7 +215,7 @@ The content folder's location depends on the user's operating system:
 		</tr>
 		<tr>
 			<td>`GameThumbnail`</td>
-			<td>ID for an experience (`Class.DataModel.GameId`); shows the experience's primary [thumbnail](../../production/publishing/thumbnails.md)</td>
+			<td>ID for an experience (`Class.DataModel.PlaceId`); shows the experience's primary [thumbnail](../../production/publishing/thumbnails.md)</td>
 			<td scope="row">256&times;144, 384&times;216, 480&times;270, 576&times;324, 768&times;432</td>
 		</tr>
 		<tr>

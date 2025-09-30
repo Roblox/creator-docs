@@ -21,7 +21,7 @@ To playtest your animation:
 
 1. In the top-left corner of Studio, verify that your playtest is set to either **Test** or **Test Here**, then click the **Play** button. Studio enters playtest mode.
 
-   <img src="../../../assets/education/general/play-button.png" width="30%" />
+   <img src="../../../assets/education/general/Play-Button.png" width="360" />
 
 1. Use the <kbd>WASD</kbd> keys to walk around and see the animation play.
 
@@ -33,7 +33,7 @@ To playtest your animation:
 
 1. When you're done, return to the top-left corner of Studio, then click the **Stop** button. Studio exits playtest mode.
 
-   <img src="../../../assets/education/general/stop-button.png" width="30%" />
+   <img src="../../../assets/education/general/Stop-Button.png" width="360" />
 
 If you're running into any issues with your animation, check out the following troubleshooting tips:
 
@@ -44,7 +44,7 @@ If you're running into any issues with your animation, check out the following t
 
 **Issue:** Animation isn't the one that you were working on.
 
-- Check that you've published the animation through the Animation Editor.
+- Check that you've published the animation through the **Animation Editor**.
 - In the **Explorer** window, find an object named **WalkAnimationID**, then make sure its `Value` property is only a number.
 
 ## Publish to Roblox
@@ -55,9 +55,7 @@ You have access to your animation ID for other projects, but if you were to clos
 It's recommended to publish to Roblox every ten minutes or after making a big change.
 </Alert>
 
-1. In the top-left corner of your computer, click **File → Publish to Roblox**. The **Publish Game** window displays.
-
-   <img src="../../../assets/education/build-it-play-it-island-of-move/save-and-publish/publish-to-roblox.png" width="50%" />
+1. In the top-left corner of your computer, click **File** → **Publish to Roblox** to open the publishing window.
 
 1. In the **Publish Game** window,
 
@@ -66,11 +64,9 @@ It's recommended to publish to Roblox every ten minutes or after making a big ch
    1. In the **Devices** section, enable every device you want players to use to access your experience. Because this experience allows players to use mobile devices with accelerometers as a way to move characters, it's recommended to at least enable phones.
    1. At the bottom-right of the window, click the **Create** button.
 
-   <img src="../../../assets/education/general/name-description.png" width="80%" />
-
 Now that your experience is published and connected to your account, you can edit it from any computer!
 
 <Alert severity="info">
 <AlertTitle>Saving after publishing</AlertTitle>
-Next time you want to save your work, just go to **File → Publish to Roblox** or use the hotkey combo (<kbd>Alt</kbd><kbd>P</kbd>/<kbd>⌥</kbd><kbd>P</kbd>).
+Next time you want to save your work, just go to **File** → **Publish to Roblox** or use the hotkey combo (<kbd>Alt</kbd><kbd>P</kbd>/<kbd>⌥</kbd><kbd>P</kbd>).
 </Alert>

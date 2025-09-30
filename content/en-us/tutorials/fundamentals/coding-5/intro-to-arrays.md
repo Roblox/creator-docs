@@ -46,26 +46,30 @@ These steps use an array to store different phrases for the NPC to say when play
 2. In ChatManager, where marked in the script, create an **empty array** to store dialogue options.
 
    ```lua
-      -- Cycles through chat dialogue when prompt is used
+   -- Cycles through chat dialogue when prompt is used
 
-      local Chat = game:GetService("Chat")
+   local Chat = game:GetService("Chat")
 
-      local prompt = script.Parent
+   local prompt = script.Parent
 
-      local npc = prompt.Parent
-      local characterParts = npc.CharacterParts
-      local head = characterParts.Head
+   local npc = prompt.Parent
+   local characterParts = npc.CharacterParts
+   local head = characterParts.Head
 
-      -- Add array here
-      local dialogueArray = {}
+   -- Add array here
+   local dialogueArray = {}
 
-      local function speak()
-         local dialogue = "I've got one thing to say!"
-         Chat:Chat(head, dialogue)
-      end
+   local function speak()
+      local dialogue = "I've got one thing to say!"
+      Chat:Chat(head, dialogue)
+   end
 
-      prompt.Triggered:Connect(speak)
+   prompt.Triggered:Connect(speak)
    ```
+
+   <Alert severity="warning">
+   This lesson uses the legacy chat API and is strictly for demonstrating how to use arrays. In real experiences, use `Class.TextChatService`.
+   </Alert>
 
 3. Within the brackets `{}` of the array just created, type at least three strings of dialogue, separated by commas.
 
@@ -252,7 +256,7 @@ If the character doesn't go through the array of dialogue, try the following tro
 
 Try one of the optional challenges below.
 
-- Code the script so the NPC's dialogue goes backward through the array. The dialogueIndex should start at the array and subtract each time instead of adding.
+- Code the script so the NPC's dialogue goes backward through the array. The dialogue index should start at the array length and subtract each time instead of adding.
 - Instead of showing dialogue in order, have the NPC show a random line of dialogue each time using `Datatype.Random.new()`. A sample script is included below to reference
 
 ```lua

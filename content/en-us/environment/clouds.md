@@ -23,7 +23,7 @@ To enable dynamic clouds:
 
 ## Cloud properties
 
-From the `Class.Clouds` object under `Class.Terrain`, you can adjust the appearance of clouds through the Properties window.
+From the `Class.Clouds` object under `Class.Terrain`, you can adjust the appearance of clouds through the **Properties** window.
 
 ### Cover
 

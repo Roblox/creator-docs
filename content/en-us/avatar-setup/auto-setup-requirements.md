@@ -1,16 +1,16 @@
 ---
 title: Auto-setup model requirements
-description: The Avatar setup tool previews animations, clothing, accessories, and body constructs on avatar rigs, directly in Studio.
+description: The Avatar Setup tool previews animations, clothing, accessories, and body constructs on avatar rigs, directly in Studio.
 ---
 
 <Alert severity = 'warning'>
 Auto-setup is currently in [active development](https://devforum.roblox.com/t/avatar-auto-setup-now-supports-clothing-and-accessories/3709128) with many improvements on the roadmap. Note that some inputs might work better than others and your results can vary over time as additional training and improvements are made.
 </Alert>
 
-Avatar Setup's **auto-setup** feature is an automatic process to convert 3D models into avatar characters, accessories, or layered clothing. Auto-setup analyzes your model, checks for components, and converts it to the correct avatar item object for publishing on the Marketplace or for use in experiences.
+The **Avatar Setup** tool's **auto-setup** feature is an automatic process to convert 3D models into avatar characters, accessories, or layered clothing. Auto-setup analyzes your model, checks for components, and converts it to the correct avatar item object for publishing on the Marketplace or for use in experiences.
 
 <Alert severity = 'info'>
-If the selected model already contains all the required components for a Roblox avatar, the Avatar Setup tool skips auto-setup and immediately opens the selected model in the [test interface](./index.md#test-and-edit).
+If the selected model already contains all the required components for a Roblox avatar, the **Avatar Setup** tool skips auto-setup and immediately opens the selected model in the [test interface](./index.md#test-and-edit).
 </Alert>
 
 To prevent errors and achieve the best auto-setup results, make sure your asset is a [supported input](#supported-asset-types) and the base mesh follow the appropriate auto-setup requirements for the intended asset type.
@@ -256,7 +256,7 @@ To convert a mesh model into an accessory using auto-setup:
 
 1. Fit the model onto a base body in Studio or your 3D modeling software.
 2. [Bundle](#bundle-multiple-assets) the assets together in a single `Class.Folder`.
-3. Use Avatar Setup to use auto-setup on your assets.
+3. Use **Avatar Setup** to use auto-setup on your assets.
 
 During this process, you will be able to designate individual meshes or models as rigid accessories, layered accessories, or body parts. After conversion, a prompt displays allowing you to select the specific **Asset Type**.
 
@@ -274,7 +274,7 @@ To convert a mesh model into an accessory using auto-setup:
 
 1. Fit the model onto a base body in Studio or your 3D modeling software.
 2. [Bundle](#bundle-multiple-assets) the assets together in a single `Class.Folder`.
-3. Use Avatar Setup to use auto-setup on your assets.
+3. Use **Avatar Setup** to use auto-setup on your assets.
 
 During this process, you will be able to designate individual meshes or models as rigid accessories, layered accessories, or body parts. After conversion, a prompt displays allowing you to select the specific **Asset Type**.
 
@@ -282,7 +282,7 @@ For best results, ensure your models adhere to Roblox's [layered clothing geomet
 
 ## Bundle multiple assets
 
-Auto-setup can process multiple accessory or clothing models with a single body model. To submit multiple models in the Avatar Setup tool, parent your models within a single folder.
+Auto-setup can process multiple accessory or clothing models with a single body model. To submit multiple models in the **Avatar Setup** tool, parent your models within a single folder.
 
 <figure>
 <center><img src="../assets/avatar/avatar-setup/Folder-Hierarchy.png"/></center>
@@ -291,9 +291,9 @@ Auto-setup can process multiple accessory or clothing models with a single body 
 
 To quickly parent your objects to folder:
 
-1. In the Explorer, hold <kbd>Shift</kbd> and select the `Class.Model` objects you intend to process with auto-setup. Ensure you are selecting a [supported base body](#body) as one of the `Class.Model` objects.
+1. In the **Explorer**, hold <kbd>Shift</kbd> and select the `Class.Model` objects you intend to process with auto-setup. Ensure you are selecting a [supported base body](#body) as one of the `Class.Model` objects.
 2. Right-click and select **Group as Folder**.
-3. Select the `Class.Folder` and then select the Avatar Setup tool to begin processing.
+3. Select the `Class.Folder` and then select the **Avatar Setup** tool to begin processing.
 
 <Alert severity = 'warning'>
 At this time, you must bundle your accessory and clothing models with a base body to utilize auto-setup.

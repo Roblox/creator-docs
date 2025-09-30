@@ -3,13 +3,13 @@ title: Avatar Setup
 description: The Avatar Setup tool previews animations, clothing, accessories, and body constructs on avatar rigs, directly in Studio.
 ---
 
-The **Avatar Setup tool** helps accelerate the avatar character, clothing, and accessory creation process by automatically processing custom models into avatar assets:
+The **Avatar Setup** tool helps accelerate the avatar character, clothing, and accessory creation process by automatically processing custom models into avatar assets:
 
 1. **Input a model** you intend to convert to an avatar model. If the model doesn't include [properly configured avatar components](../art/characters/index.md#components-of-an-avatar), the tool **automatically** adds them.
 2. **Preview the avatar character model** with different animation, clothes, skin, facial poses, and more.
-3. **Upload and publish** your avatar creations to the Marketplace directly from the Avatar Setup tool.
+3. **Upload and publish** your avatar creations to the Marketplace directly from the setup tool.
 
-<img src="../assets/studio/general/Avatar-Tab-Avatar-Setup.png" width="760" alt="Avatar Preview button indicated in Avatar tab" />
+<img src="../assets/studio/general/Toolbar-Avatar-Setup.png" width="800" alt="Avatar Preview button indicated in Avatar tab" />
 
 <GridContainer numColumns="2">
 <figure>
@@ -24,7 +24,7 @@ The **Avatar Setup tool** helps accelerate the avatar character, clothing, and a
 
 ## Auto-setup
 
-If the Avatar Setup tool detects that the input model is an incomplete avatar model, the **auto-setup** feature attempts to complete the avatar model with all the advanced components that allow characters to interact with the world and express themselves.
+If the **Avatar Setup** tool detects that the input model is an incomplete avatar model, the **auto-setup** feature attempts to complete the avatar model with all the advanced components that allow characters to interact with the world and express themselves.
 
 Auto-setup can perform the following on a submitted humanoid-shaped model:
 
@@ -41,7 +41,7 @@ Auto-setup has specific model requirements and accepts certain configurations of
 
 ## How to use
 
-The Avatar Setup tool allows you to input an existing model or import a custom asset from outside Studio.
+The **Avatar Setup** tool allows you to input an existing model or import a custom asset from outside Studio.
 
 If your model does not include all the components of an avatar model, the tool attempts to automatically add them to your model. To ensure the best results and prevent errors or unexpected behavior, make sure your model meets [Auto-setup requirements](./auto-setup-requirements.md).
 
@@ -49,11 +49,11 @@ If your model does not include all the components of an avatar model, the tool a
 
 If you are using a custom 3D asset, import your asset into Studio using the 3D importer tool. To import the model into Studio:
 
-1. In Studio, navigate to the **Avatar tab** and select **3D Importer**.
+1. From Studio's **File** menu, select **3D Importer**.
 2. In the file browser, select your model object.
 3. When your model object loads in the 3D Import preview, disable the **Upload To Roblox** option.
-   1. This prevents the asset immediately saving to your Toolbox, preventing unwanted copies of similar assets.
-   2. To save time in the future, click the **...** dropdown in the top-right of the 3D Importer window and **Save as New** to create an import profile for this workflow.
+   1. This prevents the asset immediately saving to your **Toolbox**, preventing unwanted copies of similar assets.
+   2. To save time in the future, click the **&ctdot;** dropdown in the top-right of the 3D Importer window and **Save as New** to create an import profile for this workflow.
 4. Verify the preview and any warnings or errors in your model object.
    1. See [3D Importer](../art/modeling/3d-importer.md) for additional information. Certain warnings and errors may require readjusting the model in a third-party software.
 5. Select **Import** to add the `Class.Model` instance into your workspace.
@@ -67,9 +67,9 @@ If you are using a custom 3D asset, import your asset into Studio using the 3D i
 When your project has the appropriate `Class.Model` in your workspace, you can begin the avatar setup process.
 
 1. Select the model in the workspace.
-   1. If you want to select only specific meshes of your model, navigate to the Explorer, expand the `Class.Model` object, and hold shift and click on the individual mesh objects.
-2. With the Model selected, navigate to the **Avatar tab** and select **Avatar Setup**.
-3. In the Avatar Setup panel, click the blue **Set Up Avatar** button. If your model requires [auto-setup](#auto-setup), this process can take several minutes.
+   1. If you want to select only specific meshes of your model, navigate to the **Explorer**, expand the `Class.Model` object, and hold shift and click on the individual mesh objects.
+2. With the model selected, navigate to the **Avatar** tab and click **Setup**.
+3. In the **Avatar Setup** panel, click the blue **Set Up Avatar** button. If your model requires [auto-setup](#auto-setup), this process can take several minutes.
    <img src="../assets/avatar/avatar-setup/Auto-Setup-Start.png" alt=""/>
 
 4. Once complete, a `Class.Model` of your avatar populates in your workspace. Review any warnings or errors before using any testing or editing tools.
@@ -81,7 +81,7 @@ When your project has the appropriate `Class.Model` in your workspace, you can b
 
 ### Test and edit
 
-After successfully loading a character model into Avatar Setup, the character populates in the preview window with various testing, editing, and preview tools. If you discover any issues that can't be resolved with the Avatar Setup edit tools, you may need to update your base input model in your third-party modeling software and/or retry the auto-setup process.
+After successfully loading a character model into the tool, the character populates in the preview window with various testing, editing, and preview tools. If you discover any issues that can't be resolved with the edit tools, you may need to update your base input model in your third-party modeling software and/or retry the auto-setup process.
 
 For more information on the various testing interfaces and editing features, see [Test and Edit Tools](./tools.md).
 

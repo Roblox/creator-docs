@@ -46,7 +46,7 @@ There may be situations in which you need to immediately capture strings to your
 
 To enable text capture in Studio:
 
-1. In the Studio toolbar, open **Plugins** ⟩ **Tools**.
+1. In Studio, open **Localization Tools** from the **Window**&nbsp;⟩ **Localization** menu.
 2. Enable **Automatic Text Capture**.
 
    <img src="../../assets/localization/ATC-Studio-Enabled.png" width="45%" alt="The in-Studio localization tool showing ATC toggle enabled." />

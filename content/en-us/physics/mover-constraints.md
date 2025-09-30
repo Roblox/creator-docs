@@ -3,6 +3,9 @@ title: Mover constraints
 description: Mover constraints apply force or torque to move one or more assemblies.
 ---
 
+import ConstraintVisualization from '../includes/studio/constraint-visualization.md'
+import ConstraintSimulation from '../includes/studio/constraint-simulation.md'
+
 The physics engine includes the following `Class.Constraint|Constraints` that apply force or torque to move one or more assemblies. In addition, various [mechanical constraints](../physics/mechanical-constraints.md) are available which behave as conceptual mechanical connections, including hinges, springs, ropes, and more.
 
 <Grid container spacing={4}>
@@ -95,49 +98,24 @@ The physics engine includes the following `Class.Constraint|Constraints` that ap
 
 ## Constraint visualization
 
-To accurately visualize constraints in Studio, you can use the following options from the toolbar's **Model** tab:
-
-<img src="../assets/studio/general/Model-Tab-Constraints-Section-Labeled.png" width="754" alt="Constraints tools indicated in Model tab" />
-
-<Grid container spacing={2}>
-	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-A.png" width="40" style={{float:"right"}} /></Grid>
-	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
-	**Show Welds** &mdash; Show `Class.WeldConstraint|WeldConstraints`, separately from the visualization of other constraints.
-	</Grid>
-</Grid>
-<Grid container spacing={2}>
-	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-B.png" width="40" style={{float:"right"}} /></Grid>
-	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
-	**Constraint Details** &mdash; Show complete visual details of non-weld constraints.
-	</Grid>
-</Grid>
-<Grid container spacing={2}>
-	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-C.png" width="40" style={{float:"right"}} /></Grid>
-	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
-	**Scale** &mdash; Relative scale of visualizations.
-	</Grid>
-</Grid>
-
-<Alert severity="success">
-In addition to the above visualization, you can view colored outlines around mechanisms (groups of parts that share simulation step and [network ownership](../physics/network-ownership.md)) by toggling on **Mechanisms** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
-</Alert>
+<ConstraintVisualization components={props.components} />
 
 ## Create constraints
 
 Mover constraints typically connect one or two `Class.Attachment|Attachments` or `Class.Bone|Bones`. When connected to `Class.Bone|Bones`, the constraint will use their animated position and orientation.
 
-To create a mover constraint, you can use either the **Create** tool or the [Explorer](../studio/explorer.md) window.
+To create a mechanical constraint, you can either insert one from the **Constraint** picker/button or through the [Explorer](../studio/explorer.md) window.
 
 <Tabs>
-<TabItem label="Create tool">
+<TabItem label="Constraint Picker">
 
-1. In the **Model** tab, access the **Create** button's picker menu and select the desired constraint type, for example **Angular&nbsp;Velocity**.
+1. In Studio's **Model** tab toolbar, click‑hold over the small corner arrow on a constraint button to open its picker menu, then select the desired constraint.
 
-   <img src="../assets/studio/general/Model-Tab-Constraints-Create-Menu.png" width="754" alt="Constraint picker indicated in Studio toolbar" />
+   <img src="../assets/studio/general/Toolbar-Constraint-Pickers.png" width="800" alt="Constraint pickers indicated in Studio's toolbar" />
 
-1. In the 3D viewport, hover over any `Class.Part` or `Class.MeshPart` and click to add a new `Class.Attachment` to the part at the visualized point. Alternatively, hover over and click an existing `Class.Attachment` or `Class.Bone` to use it for the constraint.
+2. In the 3D viewport, hover over any `Class.Part` or `Class.MeshPart` and click to add a new `Class.Attachment` to the part at the visualized point. Alternatively, hover over and click an existing `Class.Attachment` or `Class.Bone` to use it for the constraint.
 
-1. Some mover constraints utilize or support a **secondary** attachment in their functionality, so the tool might prompt you to repeat the previous step on another `Class.Part`, `Class.MeshPart`, or `Class.Attachment`, or `Class.Bone`.
+3. Some mover constraints utilize or support a **secondary** attachment in their functionality, so the tool might prompt you to repeat the previous step on another `Class.Part`, `Class.MeshPart`, or `Class.Attachment`, or `Class.Bone`.
 
    <GridContainer numColumns="2">
    <figure>
@@ -153,19 +131,19 @@ To create a mover constraint, you can use either the **Create** tool or the [Exp
 </TabItem>
 <TabItem label="Explorer">
 
-1. In the **Explorer** window, hover over the intended parent, click the **&CirclePlus;** button, and insert the desired constraint from the drop‑down menu, such as a [LinearVelocity](../physics/constraints/linear-velocity.md) constraint.
+1. In the [Explorer](../studio/explorer.md) hierarchy, hover over the intended parent, click the **&CirclePlus;** button, and insert the desired constraint from the dropdown menu, such as a [LinearVelocity](../physics/constraints/linear-velocity.md) constraint.
 
-   <img src="../assets/physics/constraints/Explorer-New-LinearVelocity.png" width="320" alt="New LinearVelocity in Explorer window." />
+   <img src="../assets/studio/explorer/LinearVelocity.png" width="320" alt="New LinearVelocity in Explorer window." />
 
-1. With the new constraint selected, locate its currently empty **Attachment0** property in the **Properties** window.
+1. With the new constraint selected, locate its currently empty **Attachment0** property in the [Properties](../studio/properties.md) window.
 
-   <img src="../assets/physics/constraints/Properties-LinearVelocity-Attachment0-Unassigned.png" width="320" alt="Constraint's Attachment0 property highlighted in Properties window." />
+   <img src="../assets/studio/properties/LinearVelocity-Attachment0-Unassigned.png" width="320" alt="Constraint's Attachment0 property highlighted in Properties window." />
 
 1. Link the **Attachment0** property to an `Class.Attachment` or `Class.Bone` in two consecutive steps:
 
    1. In the [Properties](../studio/properties.md) window, click in the **Attachment0** row to reveal the selection cursor.
 
-   2. In the **Explorer** window, click on the target `Class.Attachment` or `Class.Bone`.
+   2. In the [Explorer](../studio/explorer.md) hierarchy, click on the target `Class.Attachment` or `Class.Bone`.
 
    <Grid container spacing={3}>
    <Grid item>
@@ -186,9 +164,7 @@ To create a mover constraint, you can use either the **Create** tool or the [Exp
 
 ## Physical simulation
 
-To simulate physics while [moving](../parts/index.md#move) or [rotating](../parts/index.md#rotate) parts, you can switch to **Physical** mode in the Studio's toolbar, effectively forcing parts to obey physical limitations. For example, if you drag one part around the scene and it collides with another part, it will physically push that part out of the way.
-
-<img src="../assets/physics/constraints/Model-Tab-Mode-Physical.png" alt="" width="670" />
+<ConstraintSimulation components={props.components} />
 
 ## Legacy mover conversion
 

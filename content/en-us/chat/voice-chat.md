@@ -33,7 +33,7 @@ If you previously set the maximum number of players in a place to more than 50, 
 1. In the **Max Players** field, enter any number less than or equal to 50.
 1. Click the **Save** button and then [publish](../production/publishing/publish-experiences-and-places.md) to save the changes.
 
-When you update the maximum number of players in a place to fewer than 50, there may be servers already configured to a different, higher number. Since those servers won't support Voice Chat, it's recommended to [restart servers](../production/publishing/publish-experiences-and-places.md#update-experiences).
+When you update the maximum number of players in a place to fewer than 50, there may be servers already configured to a different, higher number. Since those servers won't support Voice Chat, it's recommended to [restart servers](../production/publishing/publish-experiences-and-places.md#restart-servers).
 
 ### Customize voice behavior
 
@@ -41,7 +41,7 @@ Voice Chat is **proximity-based** by default, adjusting the volume of participan
 
 If `Class.VoiceChatService` does not appear already:
 
-1. Right‑click over any visible service in the **Explorer** window and select **Show&nbsp;Services…** from the context menu.
+1. Right‑click in the **Explorer** window and select **Show&nbsp;Services…** from the context menu.
 2. Select `Class.VoiceChatService` in the popup window and click **Insert**. The service appears in the **Explorer** hierarchy.
 
    <img src="../assets/studio/explorer/VoiceChatService.png" width="320" alt="VoiceChatService in Explorer hierarchy" />
@@ -159,13 +159,13 @@ If you're currently setting a place's **Max Players** to a value over 50 in orde
 
 To disable Voice Chat for a specific place within an experience:
 
-1. Right‑click over any visible service in the **Explorer** window and select **Show&nbsp;Services…** from the context menu.
+1. Right‑click in the **Explorer** window and select **Show&nbsp;Services…** from the context menu.
 2. Select `Class.VoiceChatService` in the popup window and click **Insert**. The service appears in the **Explorer** hierarchy.
 
    <img src="../assets/studio/explorer/VoiceChatService.png" width="320" alt="VoiceChatService in Explorer hierarchy" />
 
 3. With `Class.VoiceChatService` selected, disable `Class.VoiceChatService.EnableDefaultVoice|EnableDefaultVoice` in the **Properties** window.
-4. Publish the place to save the changes and [restart servers](../production/publishing/publish-experiences-and-places.md#update-experiences) to ensure the change takes effect for all servers currently running your experience.
+4. Publish the place to save the changes and [restart servers](../production/publishing/publish-experiences-and-places.md#restart-servers) to ensure the change takes effect for all servers currently running your experience.
 
 ## Check status
 

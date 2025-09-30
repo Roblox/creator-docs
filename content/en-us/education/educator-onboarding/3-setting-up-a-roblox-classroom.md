@@ -24,13 +24,8 @@ Account registration is through a form that asks for basic information like a bi
 
 Each account grants that user full access to:
 
-- Play experiences with **Roblox Client**.
+- Play experiences with the **Roblox client**.
 - Code and create experiences with **Roblox Studio**.
-
-<figure>
-    <img src="../../assets/education/legacy/module3-signinScreen.jpg" width="80%" />
-    <figcaption>Roblox account creation screen</figcaption>
-</figure>
 
 <Alert severity="info">
 <AlertTitle>Accounts for students under 13</AlertTitle>
@@ -53,7 +48,7 @@ We understand that password management can be a challenge for younger students. 
 
 ## Install software
 
-Roblox is two software packages (Client and Studio), each installed separately.
+Roblox is two software packages (client and Studio), each installed separately.
 
 Software can be installed in two ways:
 

@@ -35,9 +35,7 @@ Particles emitted by a `Class.ParticleEmitter` will follow the global wind vecto
 
 ## Wind direction widget
 
-To make it easier to tune global wind, you can use the **Wind&nbsp;Direction** widget, accessible from the [View](../studio/view-tab.md) tab. The widget lets you visualize how wind is blowing using a "wind&nbsp;sock" model, and you can dynamically set the wind's **Speed**, **Yaw**, and **Pitch** by clicking the desired aspect name and sliding the slider along the bottom, or you can adjust yaw or pitch by manipulating the green ring and blue arrow on the animated portion. You can also click and drag the widget to reposition it anywhere in the 3D viewport.
-
-<img src="../assets/studio/general/View-Tab-Wind-Direction.png" width="782" alt="Wind Direction tool indicated in View tab of Studio" />
+To make it easier to tune global wind, you can use the **Wind Direction** widget, accessible from Studio's **View** menu. The widget lets you visualize how wind is blowing using a wind sock model, and you can dynamically set the wind's **Speed**, **Yaw**, and **Pitch** by clicking the desired aspect name and sliding the slider along the bottom, or you can adjust yaw or pitch by manipulating the green ring and blue arrow on the animated portion. You can also click and drag the widget to reposition it anywhere in the 3D viewport.
 
 <img src="../assets/lighting-and-effects/aero-fluid-dynamics/Wind-Direction-Widget.jpg" width="800" alt="Wind Direction widget showing in 3D viewport of Studio" />
 

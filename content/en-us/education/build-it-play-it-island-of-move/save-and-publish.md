@@ -20,13 +20,9 @@ With the first pose is finished, save the animation.
 
 The animation is saved, but it's important to save the whole project by publishing it to Roblox. It's a good idea to **publish** every ten minutes while you're working or after making a big change.
 
-1. Select **File → Publish to Roblox** to open the publishing window.
-
-   <img src="../../assets/education/build-it-play-it-island-of-move/save-and-publish/publish-to-roblox.png" width="50%" />
+1. Select **File** → **Publish to Roblox** to open the publishing window.
 
 2. Enter a place name and an optional description.
-
-   <img src="../../assets/education/general/name-description.png" />
 
 3. When ready, click the **Create** button. Once published, games can be edited from any computer since they're connected to your account.
 

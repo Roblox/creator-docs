@@ -6,7 +6,7 @@ description: Verify the important aspects of your character model in a custom St
 
 Test your character model in Studio to understand how it looks and feels within a Roblox experience. To test your custom character in Studio, first [import the character model](../../characters/import.md) into your Studio project.
 
-You can test in Studio using the [Avatar Setup tool](../../../avatar-setup/) to preview and test various components of your avatar character.
+You can test in Studio using the [Avatar Setup](../../../avatar-setup/) tool to preview and test various components of your avatar character.
 
 You can also playtest your character in the [Avatar Test experience](https://www.roblox.com/games/13176231501/Avatar-Test-Place). This experience provides a wide variety of environmental and clothing tests to ensure that your character model and related components work as expected.
 
@@ -35,7 +35,7 @@ To download the Avatar Test experience:
 
 After you open the test experience in Studio, import your custom character model.
 
-1. Navigate to toolbar's **Avatar** tab and select **Import 3D**. A file browser displays.
+1. From Studio's **File** menu, select **Import 3D**. A file browser displays.
 
    <img src="../../../assets/art/avatar/basic-creation/Testing-3d-Importer.png" />
 
@@ -57,7 +57,7 @@ After you open the test experience in Studio, import your custom character model
 4. Click **Import**. The character's model populates into the workspace.
 
   <Alert severity = 'warning'>
-  If an error or warning message displays in the Output window, see [Troubleshooting](../../../art/characters/facial-animation/use-heads-in-studio.md#troubleshooting) for guidance on how to handle your specific error or warning message.
+  If an error or warning message displays in the **Output** window, see [Troubleshooting](../../../art/characters/facial-animation/use-heads-in-studio.md#troubleshooting) for guidance on how to handle your specific error or warning message.
   </Alert>
 
 ### Add SurfaceAppearance
@@ -66,12 +66,12 @@ If you exported your textures separately, or if the 3D Importer fails to pick up
 
 To add individual image texture files:
 
-1. Open the **Asset Toolbox**. You may need to publish your experience first.
-2. **Bulk Upload** the image map assets to your Asset Toolbox.
+1. Open the **Asset Manager**. You may need to publish your experience first.
+2. **Bulk Upload** the image map assets.
 
    <img src="../../../assets/art/avatar/basic-creation/Testing-Asset-Upload.png" />
 
-3. In the Explorer, expand the **Head_Geo** and check if a `Class.SurfaceAppearance` object exists.
+3. In the **Explorer**, expand the **Head_Geo** and check if a `Class.SurfaceAppearance` object exists.
    - If `Class.SurfaceAppearance` is present, continue to step 4.
    - If `Class.SurfaceAppearance` is not present, select the ⊕ next to the Head_Geo and add a `Class.SurfaceAppearance` object.
 4. Set each property to the corresponding uploaded image map
@@ -88,13 +88,13 @@ To add individual image texture files:
 
 In order to play as the character during a playtest, rename and move the model instance:
 
-1. In the Explorer, rename the character **model** as `StarterCharacter`.
-2. In the Explorer, navigate to the `Class.StarterPlayer` directory. If a `StarterCharacter` model already exists, remove it.
+1. In the **Explorer**, rename the character **model** as `StarterCharacter`.
+2. In the **Explorer**, navigate to the `Class.StarterPlayer` directory. If a `StarterCharacter` model already exists, remove it.
 3. Click and drag the model under the directory.
 
    <img src="../../../assets/art/avatar/basic-creation/Testing-StarterPlayer.png" />
 
-After you rename and add your model, navigate to the **Test** > **Play** button to start a test session of the experience as the custom model.
+After you rename and add your model, [playtest](../../../studio/testing-modes.md#playtesting) the experience as the custom model.
 
 ## Use test experience
 

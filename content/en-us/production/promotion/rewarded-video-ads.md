@@ -220,7 +220,7 @@ To access your rewarded video ad metrics:
     <td>The number of rewards granted for video ad views in your experience. <br /><br /> Different lines show you this metric for different ad placements inside the experience.</td>
   </tr>
   <tr>
-    <td>**DUV (Daily Unique Views)**</td>
+    <td>**DUV (Daily Unique Viewers)**</td>
     <td>The number of unique users who have viewed one or more video ads in your experience in a day. A view is defined by an impression. <br /><br /> This data is updated with 1 day delay.</td>
   </tr>
   <tr>
@@ -228,8 +228,12 @@ To access your rewarded video ad metrics:
     <td>The earnings generated per daily unique viewer for rewarded video ads. <br /><br /> This data is updated with 1 day delay.</td>
   </tr>
   <tr>
-    <td>**DUV/DAU (Daily Unique Views/Daily Active Users)**</td>
-    <td>The percentage of unique users who have viewed a video ad in a day divided by the total number of users who joined your experience that day. <br /><br /> This data is updated with 1 day delay.</td>
+    <td>**Eligible Daily Active Users**</td>
+    <td>The number of unique daily visitors to your experience who were eligible to see Rewarded Video ads. <br /><br /> This data is updated with 1 day delay.</td>
+  </tr>
+  <tr>
+    <td>**DUV/eDAU (Daily Unique Viewers/Eligible Daily Active Users)**</td>
+    <td>The percent of ads eligible visitors to your experience, known as Eligible Daily Active Users, who saw at least one ad on a day. <br /><br /> This data is updated with 1 day delay.</td>
   </tr>
 </tbody>
 </table>

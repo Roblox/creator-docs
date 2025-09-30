@@ -20,7 +20,7 @@ import BetaAlert from '../includes/beta-features/beta-alert.md'
 
 ## Studio features
 
-In Studio, Assistant consists of a large language model (LLM) that generates code and a run-command module (similar to the existing [command bar](../studio/ui-overview.md#command-bar)) that runs code. As a result, Assistant can act directly on your data model, such as inserting and modifying objects, writing and inserting scripts, and automating repetitive tasks like modifying properties in bulk.
+In Studio, Assistant consists of a large language model (LLM) that generates code and a run-command module (similar to the existing [Command](../studio/ui-overview.md#command) bar) that runs code. As a result, Assistant can act directly on your data model, such as inserting and modifying objects, writing and inserting scripts, and automating repetitive tasks like modifying properties in bulk.
 
 For a more in-depth look at what Assistant can do and how to use it, see the [Prompt guide and examples](prompt-engineering.md) and the following Roblox Staff livestream for tips, tricks, and inspiration.
 
@@ -73,7 +73,7 @@ To access Assistant from Studio:
 
 1. Click **Assistant** on the right side of the mezzanine bar.
 
-   <img src="../assets/studio/general/Toolbar-Assistant.png" width="754" alt="Assistant button indicated in top-right area of toolbar." />
+   <img src="../assets/studio/general/Toolbar-Assistant.png" width="800" alt="Assistant button indicated on the right side of the mezzanine bar." />
 
 2. Type a request into the field near the bottom of the window, using guidance from the [prompt guide](prompt-engineering.md) to generate improved responses.
 

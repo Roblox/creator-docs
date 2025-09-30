@@ -151,10 +151,10 @@ When using surface appearance, keep the following tips in mind:
 
 To apply `Class.SurfaceAppearance`:
 
-1. Click on the at the end of a `Class.MeshPart` or folder name in the Explorer and search for `Class.SurfaceAppearance`. Adding one will override any BrickColor, Color, Material, and TextureID you may have already applied.
+1. Click on the at the end of a `Class.MeshPart` or folder name in the **Explorer** and search for `Class.SurfaceAppearance`. Adding one will override any BrickColor, Color, Material, and TextureID you may have already applied.
 
 2. Rename the `Class.SurfaceAppearance` node to something unique and add a postfix of `_SA` to make them easy to search for. In this example, we used `Metal_Trim_A_SA`.
-3. Import the trim sheet maps, copy the IDs from the **Asset Manager** panel, and paste them into the appropriate slots in the Properties panel. Here's how the `Metal_Trim_A_SA` node looks with all the map IDs inserted into and applied to the door.
+3. Import the trim sheet maps, copy the IDs from the **Asset Manager** window, and paste them into the appropriate slots in the **Properties** window. Here's how the `Metal_Trim_A_SA` node looks with all the map IDs inserted into and applied to the door.
 
 <img
   alt="Surface Appearance Example 2"

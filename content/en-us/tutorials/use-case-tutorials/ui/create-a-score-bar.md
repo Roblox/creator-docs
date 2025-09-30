@@ -117,21 +117,17 @@ To recreate the score text within the sample [Gold Rush](https://www.roblox.com/
 
 ## Test the design
 
-Studio's **Device Emulator** allows you to test how players will see and interact with your UI on various devices. This tool is a vital part of designing UI because the aspect ratio of your viewport in Studio doesn't necessarily reflect the aspect ratio of the screens players use to access your experience, and it's important that your UI is both legible and accessible on every device.
+Studio's [Device Emulator](../../../studio/testing-modes.md#device-emulation) allows you to test how players will see and interact with your UI on various devices. This tool is a vital part of designing UI because the aspect ratio of your viewport in Studio doesn't necessarily reflect the aspect ratio of the screens players use to access your experience, and it's important that your UI is both legible and accessible on every device.
 
 For example, if you don't test your UI on a range of screen sizes, players with large screens may not be able to read your text or decipher your icons, and players with small screens may not be able to see the 3D space because your UI elements take up too much room on the display.
 
 To emulate your UI on various screen sizes:
 
-1. In the toolbar, select the **Test** tab.
-1. Click **Device**. The viewport changes to reflect the aspect ratio of an average laptop.
-
-   <img src="../../../assets/studio/general/Test-Tab-Emulation-Device.png" width="800" alt="Device button indicated in Test tab" />
-
+1. From Studio's **View** menu, toggle on **Device Emulator**.
 1. In the resolution dropdown, select **Actual Resolution**. This allows you to see the true resolution of your UI elements on the device you're emulating.
 
-   <img src="../../../assets/tutorials/creating-a-score-bar/ResolutionDropdown.png" width="80%" />
+   <img src="../../../assets/tutorials/creating-a-score-bar/Device-Emulator-Setup.png" width="800" alt="Device Emulator settings options indicated at top of viewport window." />
 
 1. In the device dropdown, select at least one device within the **Phone**, **Tablet**, **Desktop**, and **Console** sections.
 
-   <img src="../../../assets/tutorials/creating-a-score-bar/DeviceDropdown.png" />
+   <img src="../../../assets/tutorials/creating-a-score-bar/Device-Emulator-Preview.png" width="840" />

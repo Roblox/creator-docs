@@ -9,19 +9,22 @@ In order to start the process of recreating the **Island Jump** [3D platformer e
 
 - **Baseplate** template — Contains a baseplate and `Class.SpawnLocation` object.
 - **Modern City** template — Contains a sample high-quality city and modular asset kit.
-- **Mansion of Wonder** template — Contains assets and scripts for a first-person shooter experience.
+- **Laser Tag** template — Contains assets and scripts for a first-person shooter experience.
 
 To create a project with the **Baseplate** template:
 
 1. Open Roblox Studio.
-1. In the vertical navigation bar, select the **New** tab. All templates display.
-1. Select the **Baseplate** template. Studio opens a new experience.
+1. In the upper-left corner, click the **New Experience** button. Studio opens a new experience.
+1. In the **Explorer** window on the right side of the window, expand the **Workspace** branch and then select the **Baseplate** object.
 
-   <img src="../../../../assets/tutorials/core-building-and-scripting/Templates-Baseplate.jpg" alt="Studio's landing page interface with the Baseplate template highlighted." width="640" />
+   <img src="../../../../assets/studio/explorer/Workspace-Baseplate.png" width="320" />
 
-1. In the **Explorer** window, right-click the **Baseplate** object. A contextual menu displays.
-1. Select **Delete**. The viewport displays an empty world with a spawn location in the middle.
+   <Alert severity="warning">
+   If you don't see the **Explorer** window, toggle it on from Studio's **Window** menu.
+   </Alert>
+
+1. Press <kbd>Delete</kbd>. The viewport displays an empty world with a spawn location in the middle.
 
    <img src="../../../../assets/tutorials/core-building-and-scripting/Baseplate-Deleted.jpg" alt="A viewport view of the baseplate template without the baseplate. The spawn location is highlighted in the middle of the view." width="81%" />
 
-In the next section of the tutorial, you will learn how to use the Terrain Editor to create an island environment around the spawn location.
+In the next section of the tutorial, you will learn how to use the **Terrain Editor** to create an island environment around the spawn location.

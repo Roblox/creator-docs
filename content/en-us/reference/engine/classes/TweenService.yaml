@@ -127,49 +127,61 @@ methods:
       - Basic
   - name: TweenService:SmoothDamp
     summary: |
-      Calculates a value simulating a critically damped spring.
+      Smoothly interpolates a value towards a target, simulating a critically
+      damped spring.
     description: |
-      Returns a tuple that allows smoothing a value towards a target, simulating
-      a critically damped spring. Supports `Datatype.Vector2`,
-      `Datatype.Vector3`, `Datatype.CFrame`, and number.
+      Smoothly interpolates a value towards a target, simulating a critically
+      damped spring. Returns a tuple with `(newValue, newVelocity`).
+      `newVelocity` needs to be fed to the next call of SmoothDamp to ensure
+      smooth results. Supports `Datatype.number`, `Datatype.Vector2`,
+      `Datatype.Vector3`, and `Datatype.CFrame`.
     code_samples: []
     parameters:
       - name: current
         type: Variant
         default:
         summary: |
-          The current position.
+          The current value to smooth.
       - name: target
         type: Variant
         default:
         summary: |
-          The target position.
+          The target value to reach.
       - name: velocity
         type: Variant
         default:
         summary: |
-          The initial velocity at which the current position should approach the
-          target position.
+          The current velocity with which the current value should approach the
+          target value. You shouldn't modify this value between calls yourself,
+          it's used to store the stateful velocity. In most cases, initialize
+          this with `0`, `Vector2.zero`, `Vector3.zero`, or `CFrame.identity`
+          depending on the type, or if needed, with your initial velocity.
       - name: smoothTime
         type: float
         default:
         summary: |
-          The duration in which the total smoothing operation should take place.
+          The duration over which the total smoothing operation should take
+          place. Note that since this is a damped spring, there's no guarantee
+          `current` will be exactly `target` after this time, but it will be
+          close. Smaller values result in quicker smoothing.
       - name: maxSpeed
         type: float?
         default:
         summary: |
-          The maximum speed at which the current position should approach the
-          target position.
+          The maximum speed at which the current value should approach the
+          target value. Leaving this nil defaults to `math.huge`, meaning the
+          velocity isn't clamped.
       - name: dt
         type: float?
         default:
         summary: |
-          The rate at which the smoothing operation should be applied.
+          The rate at which the smoothing operation should be applied. If left
+          nil, the current engine delta time will be used.
     returns:
       - type: Tuple
         summary: |
-          The new position and velocity calculated from the smoothing operation.
+          The new value and new velocity calculated from the smoothing
+          operation.
     tags: []
     deprecation_message: ''
     security: None

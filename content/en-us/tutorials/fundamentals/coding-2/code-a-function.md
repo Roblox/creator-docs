@@ -96,8 +96,6 @@ There's one more thing we need to do before the function will work, and that's t
 
 2. Test the code. Your favorite food should appear in the [Output](../../../studio/output.md) window.
 
-   <img src="../../../assets/education/coding-2/output-function-example.png" width="70%" />
-
 ### Troubleshooting tips
 
 If your code doesn't run, check for errors such as the following:

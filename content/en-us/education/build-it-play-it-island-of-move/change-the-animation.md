@@ -13,13 +13,10 @@ Now that you have the animation ID, you can enter it in your game. Then, Studio 
 
 1. Make sure the **Explorer** and **Properties** windows are open.
 
-   <img src="../../assets/education/build-it-play-it-island-of-move/change-the-animation/show-explorer-properties.png" width="100%" />
+   <img src="../../assets/education/general/Studio-Setup-Island-Of-Move.jpg" width="960" />
 
    <Alert severity="warning">
-   If you don't see the windows on the right, enable them by going to the **Home** tab and clicking the **Explorer** and **Properties** buttons.
-
-   <img src="../../assets/education/general/OpenExplorerandProperties.png" />
-
+   If you don't see the windows on the right, open them from Studio's **Window** menu.
    </Alert>
 
 1. To find the walk setting,
@@ -36,13 +33,13 @@ Now that you have the animation ID, you can enter it in your game. Then, Studio 
    <AlertTitle>Need to Get the Animation ID?</AlertTitle>
    If nothing was pasted, or another line of text was used, you'll need to get the animation ID again.
 
-   1. Go to the [Creator Dashboard](https://create.roblox.com/dashboard/creations)/
+   1. Go to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
    1. In the horizontal navigation, select **Development Items**, then click the **Animations** button. All animations you have ever published display here.
 
       <img src="../../assets/education/build-it-play-it-island-of-move/change-the-animation/Animations-Button.png" width="100%" />
 
    1. Select your animation. The animation's **Configure** page displays.
-   1. In the left-hand navigation, click the vertical three dots icon, then select ** Copy Asset ID** from the contextual menu.
+   1. In the left-hand navigation, click the vertical three dots icon, then select **Copy Asset ID** from the contextual menu.
 
       <img src="../../assets/education/build-it-play-it-island-of-move/change-the-animation/CopyAssetID.png" width="50%" />
 

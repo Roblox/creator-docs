@@ -5,6 +5,8 @@ next: /tutorials/curriculums/environmental-art/develop-polished-assets
 prev: /tutorials/curriculums/environmental-art/
 ---
 
+import PlaytestModes from '../../../includes/studio/playtest-modes.md'
+
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/mW2IptQVeL0?si=RbvxFyCI1iYVc-hk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <br/>
@@ -95,11 +97,7 @@ In addition, a rise in elevation creates both a physical and emotional sense of 
 To create your own floor geometry:
 
 1. Open Roblox Studio with a **Baseplate** template.
-1. Navigate to the toolbar's **Model** tab, then:
-
-   1. Set **Rotate** to `90`.
-   1. Set **Move** to `5` studs. This allows you to equally position all greybox geometry on or away from each other in 5 stud increments.
-
+1. Navigate to Studio's **Home** or **Model** tab toolbar, then set [transform snapping](../../../parts/index.md#transform-parts) to **5&nbsp;studs** and **90&deg;**. This allows you to equally position all greybox geometry on or away from each other in 5 stud increments.
 1. Using **block** parts, create symmetrical left and right surfaces for the **main floor** of your building. This geometry represents the length of your playable interior, and its symmetry denotes the center of the map.
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/GeneralFloor-1.jpg" alt="An angled top-down view of the main floor greybox geometry highlighted in yellow." width="100%"/>
@@ -124,15 +122,9 @@ To create your own floor geometry:
 To exactly recreate the floor geometry within the sample [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) place file:
 
 1. Open Roblox Studio with a **Baseplate** template.
-1. Navigate to the toolbar's **Model** tab, then:
-
-   1. Set **Rotate** to `90`.
-   1. Set **Move** to `5` studs. This allows you to equally position all greybox geometry on or away from each other in 5 stud increments.
-
+1. Navigate to Studio's **Home** or **Model** tab toolbar, then set [transform snapping](../../../parts/index.md#transform-parts) to **5&nbsp;studs** and **90&deg;**. This allows you to equally position all greybox geometry on or away from each other in 5 stud increments.
 1. Add and configure a **block** part for the left-side surface of the **main floor**. You can use this same process for each step as you create all of the playable areas.
 
-   1. Navigate to the toolbar's **Model** tab.
-   1. Click the dropdown arrow on the **Part** button and select **Block**. A block part displays in the viewport.
    1. In the **Explorer** window, select the block, then in the **Properties** window,
       1. Set **Size** to `105, 1, 185`.
       1. Set **CFrame.Position** to `-77.5, 4.5, 252.5`.
@@ -1080,16 +1072,10 @@ It's important to continuously playtest the layout of your environment **at near
 - Will this make users feel the way I want them to when they're in this area?
 - Is there any part of the map that I can bypass and still achieve my goals?
 
-To playtest your experience:
+To playtest, select one of the following simulation modes from the mezzanine's dropdown menu and click the **Play** button to begin.
 
-1. In the toolbar's **Test** tab, navigate to the **Play** icon and click the **Mode Picker** dropdown arrow.
+<img src="../../../assets/studio/general/Mezzanine-Testing-Mode-Test.png" width="800" alt="Test option in the testing modes dropdown of Studio's mezzanine." />
 
-   <img src="../../../assets/studio/general/Test-Tab-Playtest-Options.png" width="760" alt="Rapid playtest options in Studio." />
-
-2. Select from one of the following playtest options:
-
-   - **Play** – Starts simulating the experience, inserting your avatar at either a `Class.SpawnLocation` or coordinates of around `0, 100, 0`.
-   - **Play Here** – Starts simulating the experience, inserting your avatar in front of the camera's current position.
-   - **Run** – Starts simulating the experience without inserting your avatar. Instead, the simulation begins at the current camera position and you can navigate around using the Studio camera controls.
+<PlaytestModes components={props.components} />
 
 While playtesting, you can use the same controls as a default Roblox experience. Once you are happy with the overall layout of your experience, you can move on to creating polishing assets that will replace the greybox geometry in accordance with your art style.

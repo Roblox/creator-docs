@@ -4,37 +4,37 @@ description: Solid modeling is the process of joining parts together to form com
 ---
 
 **Solid modeling** is the process of joining [parts](../parts/index.md)
-together in unique ways to form more complex shapes known as **unions** or **intersections**. You can perform four solid modeling operations using the tools within the toolbar's **Model** tab.
+together in unique ways to form more complex shapes known as **unions** or **intersections**. You can perform four solid modeling operations using the tools within the **Model** tab toolbar.
 
-<img src="../assets/studio/general/Model-Tab-Solid-Modeling.png" alt="Studio's Model tab with the Solid Modeling tools highlighted." width="732" />
+<img src="../assets/studio/general/Toolbar-Solid-Modeling.png" alt="Solid modeling tools highlighted in Studio's toolbar." width="800" />
 
 <table>
   <thead>
     <tr>
       <th>Tool</th>
-	  <th>Shortcut</th>
+	    <th>Shortcut</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>[Union](#union-parts)</td>
-	  <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>G</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>G</kbd> (Mac)</td>
+	    <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>G</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>G</kbd> (Mac)</td>
       <td>Join two or more parts together to form a single solid union.</td>
     </tr>
 	<tr>
       <td>[Intersect](#intersect-parts)</td>
-	  <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>I</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>I</kbd> (Mac)</td>
+	    <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>I</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>I</kbd> (Mac)</td>
       <td>Intersect overlapping parts into a single solid intersection.</td>
     </tr>
     <tr>
       <td>[Negate](#negate-parts)</td>
-	  <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>N</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>N</kbd> (Mac)</td>
+	    <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>N</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>N</kbd> (Mac)</td>
       <td>Negate parts, useful for making holes and indentations.</td>
     </tr>
     <tr>
       <td>[Separate](#separate-unions-or-intersections)</td>
-	  <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>U</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>U</kbd> (Mac)</td>
+	    <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>U</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>U</kbd> (Mac)</td>
       <td>Separate the union or intersection back into its individual parts.</td>
     </tr>
   </tbody>

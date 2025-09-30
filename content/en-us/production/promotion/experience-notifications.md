@@ -47,9 +47,7 @@ Alternatively, you can use the [Open Cloud API](../../cloud/guides/experience-no
 
 To implement experience notifications, you must obtain the Luau package from the [Creator Store](../../production/creator-store.md).
 
-1. From the [View](../../studio/view-tab.md) tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
-
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
+1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
    <img src="../../assets/studio/toolbox/Creator-Store-Tab.png" width="360" />
 

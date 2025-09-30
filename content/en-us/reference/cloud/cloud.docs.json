@@ -1159,7 +1159,7 @@
       "get": {
         "tags": ["Cloud"],
         "summary": "List Data Stores",
-        "description": "Returns a list of data stores.",
+        "description": "Returns a list of data stores.\n\nData stores scheduled for permanent deletion are omitted from the results\nby default (or when `showDeleted` is set to `false`). When this is the\ncase, the operation will check up to 512 data stores. If all checked data\nstores are deleted, it will return an empty list with a page token to\ncontinue iteration.",
         "operationId": "Cloud_ListDataStores",
         "parameters": [
           {
@@ -1305,7 +1305,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 3000
+            "maxInPeriod": 300
           }
         },
         "x-roblox-scopes": [
@@ -2801,7 +2801,7 @@
           "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 3000
+            "maxInPeriod": 300
           }
         },
         "x-roblox-scopes": [

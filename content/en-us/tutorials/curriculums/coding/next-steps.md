@@ -1,6 +1,7 @@
 ---
 title: Next steps
 description: Explains ways to continue learning about coding in Studio.
+next: /tutorials/curriculums/artist/
 prev: /tutorials/curriculums/coding/customize-strings
 ---
 
@@ -14,15 +15,13 @@ To make your experience public:
 
 1. Using the steps from the **Test and save** chapter, publish your experience so others can see your latest changes.
 
-1. In the top-left corner of your computer, click **File** > **Game Settings**. The **Game Settings** window displays.
-
-   <img src="../../../assets/education/build-it-play-it-mansion-of-wonder/invite-friends/game-settings.png" width="50%" />
+1. In the top-left corner of your computer, click **File** ⟩ **Game Settings**. The **Game Settings** window displays.
 
 1. In the **Game Settings** window,
    1. Go to the left bar and select the **Permissions** tab. New settings display.
    1. Set **Playability** to **Public**.
 
-   <img src="../../../assets/education/general/make-public.png" width="80%" />
+   <img src="../../../assets/education/general/Make-Public.png" width="800" />
 
 1. Click the **Save** button. Now everyone on Roblox can play your experience!
 
@@ -41,7 +40,3 @@ It's recommended to continue learning with the [Coding fundamentals](../../funda
 - [Create fading traps](../../use-case-tutorials/scripting/basic-scripting/fading-trap.md)
 - [Create health pickups](../../use-case-tutorials/scripting/intermediate-scripting/create-a-health-pickup.md)
 - [Save player data](../../use-case-tutorials/scripting/intermediate-scripting/save-data.md)
-
-<Alert severity = 'success'>
-Happy creating, we can't wait to see what you make!
-</Alert>

@@ -7,13 +7,11 @@ The **pivot** tools and related properties give you full control over the points
 
 ## Interactive Studio tools
 
-The interactive Studio tools are located in the [Model](./model-tab.md) tab.
+The interactive Studio tools are located in the **Model** tab toolbar.
 
-<img src="../assets/studio/general/Model-Tab-Pivot-Tools.png" width="768" alt="Studio's Model tab with the Pivot Tools section highlighted." />
+<img src="../assets/studio/general/Toolbar-Pivot.png" width="800" alt="Pivot tool highlighted in Studio's toolbar." />
 
-### Edit Pivot
-
-The **Edit Pivot** tool lets you move or rotate the pivot point of a [part](../parts/index.md) or [model](../parts/models.md). Once set, rotation and scaling occur around the pivot point. For more information, see [Setting a PrimaryPart](../parts/models.md#setting-a-primary-part).
+When **Pivot** is toggled on, you can move or rotate the pivot point of a [part](../parts/index.md) or [model](../parts/models.md). Once set, rotation and scaling occur around the pivot point. For more information, see [setting a primary part](../parts/models.md#set-a-primary-part).
 
 The following diagrams show example pivot locations in relation to object bounds.
 
@@ -64,7 +62,7 @@ You can specify a `Class.Model.PrimaryPart|PrimaryPart` for models, which is a `
 
 ### Snap
 
-The **Snap** checkbox toggles whether the pivot point snaps to **hotspots** such as corners, edges, or centers when you move it with the **Edit&nbsp;Pivot** tool. When snapping is enabled, hotspots display as small magenta points.
+The **Snap** checkbox, available by click‑holding the small corner arrow on the **Pivot** button, toggles whether the pivot point snaps to **hotspots** such as corners, edges, or centers when you move it with the **Edit&nbsp;Pivot** tool. When snapping is enabled, hotspots display as small magenta points.
 
 <GridContainer numColumns="2">
   <figure>
@@ -80,6 +78,8 @@ The **Snap** checkbox toggles whether the pivot point snaps to **hotspots** such
 ### Reset
 
 The **Reset** button moves the pivot point to the **center** of an object or model's bounding box. This operation is useful after you've changed the composition of a model and wish to place its pivot point at the center of its new bounding box.
+
+<img src="../assets/studio/general/Toolbar-Pivot-Reset.png" width="800" alt="Pivot Reset tool highlighted in Studio's toolbar." />
 
 ## Pivot properties
 

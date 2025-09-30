@@ -509,7 +509,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 
 <Typography variant='h2'>Studio animation</Typography>
 
-Use the Animation Editor directly in Studio to create animations for models or meshes with rigging and skinning data.
+Use the **Animation Editor** directly in Studio to create animations for models or meshes with rigging and skinning data.
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
@@ -609,7 +609,7 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Scripting</Typography>
 
 <div style={{marginBottom: 24}}>
-**Scripting** in Studio is the use of the [Luau](https://luau-lang.org/) programming language to add custom, dynamic behavior to your experiences so that they are engaging and fun to play. Understanding how programming works on Roblox is important because it allows you to write and organize your scripts that control things like logic, movement, events, and interactions between objects in the 3D space in a way that improves performance and optimization.
+**Scripting** in Studio is the use of the [Luau](https://luau.org/) programming language to add custom, dynamic behavior to your experiences so that they are engaging and fun to play. Understanding how programming works on Roblox is important because it allows you to write and organize your scripts that control things like logic, movement, events, and interactions between objects in the 3D space in a way that improves performance and optimization.
 
 </div>
 

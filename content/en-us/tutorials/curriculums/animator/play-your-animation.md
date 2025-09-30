@@ -15,13 +15,11 @@ If you were to close Studio right now, you would lose all of your work on your a
 
 To export your new animation:
 
-1. In the **Animation Editor**, click on the **...** and select **Publish to Roblox**. The **Asset Configuration** window displays.
+1. In the **Animation Editor**, click on the **&ctdot;** and select **Publish to Roblox**. The **Asset Configuration** window displays.
 
    <img src="../../../assets/education/build-it-play-it-island-of-move/publish-animations/Publish-Highlight.png" width="60%" />
 
 1. In the **Asset Configuration** window, give your animation a name and description, then click the **Save** button. After a few moments, the window confirms your animation was successfully submitted.
-
-   <img src="../../../assets/education/build-it-play-it-island-of-move/publish-animations/animation-name-description.png" width="100%" />
 
 1. Copy your animation's animationID by clicking the icon next to the ID.  A green "_ID Copied!_" text pop-up displays when you have done this step correctly.
 
@@ -59,10 +57,7 @@ To replace the default walking animation with your custom swimming animation:
    <img src="../../../assets/education/build-it-play-it-island-of-move/change-the-animation/search-walk-select.png" width="50%" />
 
    <Alert severity="warning">
-   If you don't see the Explorer and Properties windows, you can open them by going to the **Home** tab and clicking the **Explorer** and **Properties** buttons.
-
-   <img src="../../../assets/education/general/OpenExplorerandProperties.png" />
-
+   If you don't see the **Explorer** and **Properties** windows, open them from Studio's **Window** menu.
    </Alert>
 
 1. In the **Properties** window, click the **Value** field and paste your animation ID by pressing <kbd>Ctrl</kbd><kbd>V</kbd> or <kbd>⌘</kbd><kbd>V</kbd>, depending on your computer.

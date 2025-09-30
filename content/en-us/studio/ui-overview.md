@@ -4,50 +4,104 @@ description: User interface overview for Roblox Studio, the essential building t
 ---
 
 import BetaAlert from '../includes/beta-features/beta-alert.md'
+import StudioCameraControls from '../includes/studio/camera-controls.md'
 
-## Toolbar
+## Toolbar and mezzanine
 
-The **toolbar** resides at the top of Studio. The buttons and tools visible in the bar change when you click on the [Home](../studio/home-tab.md), [Model](../studio/model-tab.md), [Avatar](../studio/avatar-tab.md), [Test](../studio/test-tab.md), [View](../studio/view-tab.md), and [Plugins](../studio/plugins-tab.md) tabs.
+The **toolbar** and **mezzanine** reside at the top of Studio.
 
-<img src="../assets/studio/general/Toolbar-Tabs-Labeled.png"
-   width="800" alt="Studio's toolbar with the Home, Model, Avatar, Test, View, and Plugins tabs highlighted." />
+<figure>
+<img src="../assets/studio/general/Toolbar-Mezzanine.png" width="960" alt="Mezzanine and toolbar indicated in Studio." />
+</figure>
 
-<Grid container spacing={2}>
-	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-A.png" width="40" style={{float:"right"}} /></Grid>
-	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
-	The [Home](../studio/home-tab.md) tab contains basic tools for manipulating 3D objects and testing your experience.
+<figure>
+The left side of the mezzanine contains easily-accessible [testing controls](../studio/testing-modes.md#playtest-options).
+
+<img src="../assets/studio/general/Mezzanine-Testing-Controls.png" width="800" alt="Testing controls indicated in Studio's mezzanine." />
+</figure>
+
+<figure>
+The right side of the mezzanine contains buttons/menus for [collaboration](../projects/collaboration.md), sharing, [Assistant](../assistant/guide.md), creator notifications, and account options.
+
+<img src="../assets/studio/general/Mezzanine-Right.png" width="800" alt="Other options indicated in Studio's mezzanine." />
+</figure>
+
+<figure>
+In the center of the mezzanine are the default tool tabs of **Home**, **Model**, **Avatar**, **UI**, **Script**, and **Plugins**. You can also add [custom&nbsp;tabs](#custom-tabs) for your specific needs.
+
+<img src="../assets/studio/general/Mezzanine-Default-Tabs.png" width="800" alt="Default tabs indicated in Studio's mezzanine." />
+
+<Tabs>
+<TabItem label="Home">
+The **Home** tab contains the core [transform](../parts/index.md#transform-parts) tools, [part inserter](../parts/index.md#insert-parts), the [color](../parts/index.md#color) and [material](../parts/index.md#material) widgets, the [group](../parts/index.md#group) and [lock](../parts/index.md#lock) tools, and [anchor](../parts/index.md#anchor) toggle. Also contains the [Terrain Editor](./terrain-editor.md).
+</TabItem>
+<TabItem label="Model">
+The **Model** tab contains the core [transform](../parts/index.md#transform-parts) tools, the [pivot](../studio/pivot-tools.md) and [align](../studio/align-tool.md) tools, insertion widgets for [effects](../effects/index.md) and [constraints](../physics/index.md#constraints), and [solid‑modeling](../parts/solid-modeling.md) tools.
+</TabItem>
+<TabItem label="Avatar">
+The **Avatar** tab contains the core [transform](../parts/index.md#transform-parts) tools, as well as specialized tools for building default rigs, configuring [avatars](../avatar-setup/index.md), working with [animations](../animation/index.md), and [creating/fitting accessories](../art/accessories/accessory-fitting-tool.md).
+</TabItem>
+<TabItem label="UI">
+The **UI** tab contains insertion widgets for [UI objects](../ui/index.md#ui-objects) and lets you access the [Style&nbsp;Editor](../ui/styling/editor.md), a comprehensive tool that allows you to create, manage, and apply UI styles.
+</TabItem>
+<TabItem label="Script">
+The **Script** tab contains tools for writing and testing scripts, including [debugging](../studio/debugging.md) tools.
+</TabItem>
+<TabItem label="Plugins">
+The **Plugins** tab contains [plugins](./plugins.md) created by the community or plugins you've created yourself to use across your experiences.
+</TabItem>
+</Tabs>
+</figure>
+
+### Appearance
+
+You can customize the appearance of the toolbar by right-clicking in an empty area within the mezzanine/toolbar and selecting from the following options:
+
+- **Manage&nbsp;tabs** — Reveals a popup window with the following options:
+
+	<figure>
+	<Grid container spacing={3}>
+	<Grid item Medium={12} Large={5} XLarge={5}>
+	<img src="../assets/studio/general/Manage-Tabs-Popup.png" width="300" alt="The Manage Tabs popup in Studio." />
 	</Grid>
-</Grid>
-<Grid container spacing={2}>
-	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-B.png" width="40" style={{float:"right"}} /></Grid>
-	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
-	The [Model](../studio/model-tab.md) tab contains tools for manipulating 3D objects in the workspace, creating detailed models, working with physical constraints, and adding advanced objects.
+	<Grid item Medium={12} Large={7} XLarge={7}>
+	<ol style={{listStyleType: 'upper-alpha'}}>
+	<li>Show or hide the tab.</li>
+	<li>With a tab selected, reorder it relative to the other tabs.</li>
+	<li>Delete a selected [custom tab](#custom-tabs).</li>
+	<li>Choose between tabs **Center** alignment or **Left** alignment (next to the [testing controls](../studio/testing-modes.md#playtest-options)).</li>
+	</ol>
 	</Grid>
-</Grid>
-<Grid container spacing={2}>
-	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-C.png" width="40" style={{float:"right"}} /></Grid>
-	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
-	The [Avatar](../studio/avatar-tab.md) tab contains specialized tools for creating and fitting accessories, importing custom meshes, building default rigs, and creating animations.
 	</Grid>
-</Grid>
-<Grid container spacing={2}>
-	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-D.png" width="40" style={{float:"right"}} /></Grid>
-	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
-	The [Test](../studio/test-tab.md) tab contains tools for testing an experience, simulating multiple clients, and emulating different devices.
-	</Grid>
-</Grid>
-<Grid container spacing={2}>
-	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-E.png" width="40" style={{float:"right"}} /></Grid>
-	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
-	The [View](../studio/view-tab.md) tab lets you toggle the various windows of Studio, as well as several display features.
-	</Grid>
-</Grid>
-<Grid container spacing={2}>
-	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-F.png" width="40" style={{float:"right"}} /></Grid>
-	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
-	The [Plugins](../studio/plugins-tab.md) tab contains tools for managing [plugins](../studio/plugins.md), configuring localization, and creating animations. Any plugins you install can also add buttons to this tab.
-	</Grid>
-</Grid>
+	</figure>
+
+- **Collapse toolbar** — Maximizes space by hiding the toolbar while keeping the mezzanine visible. Hovering over a tab in the mezzanine temporarily reveals the toolbar.
+- **Compact toolbar** — Makes the toolbar considerably more compact through smaller icons and labels, ideal for laptops or smaller monitors.
+- **Show labels** — Toggles the text labels below tools on or off.
+
+### Custom tabs
+
+Beyond the default tool tabs, you can add **custom tabs** for your specific needs:
+
+1. Click the <kbd>+</kbd> button to the right of the default tabs, then type in a name for the new tab and press <kbd>Enter</kbd>.
+
+   <img src="../assets/studio/general/Toolbar-Add-Custom-Tab.png" width="800" alt="Button to add custom tab indicated in Studio's mezzanine." />
+
+   <Alert severity="success">
+   Alternatively to creating a new, empty tab, you can duplicate any existing tab by right‑clicking it and selecting **Duplicate&nbsp;tab**. Unlike default tabs, tools within duplicated tabs can be freely modified.
+   </Alert>
+
+2. Click the button or right‑click in an empty region of the toolbar and select **Add&nbsp;tools**.
+
+   <img src="../assets/studio/general/Toolbar-Custom-Tab-Add-Tool.png" width="800" alt="Button to add new tool to a custom tab in Studio's toolbar." />
+
+3. In the popup window, search for a tool and toggle its checkbox to add. New tools appear to the right of other tools, but you can right‑click any tool and select **Move&nbsp;left** or **Move&nbsp;right** to reorder it relative to other tools. You can also insert a divider by right‑clicking in an empty region of the toolbar and selecting **Add&nbsp;divider**.
+
+   <img src="../assets/studio/general/Toolbar-Custom-Tab-Filled.png" width="800" alt="Custom tab populated with tools." />
+
+   <Alert severity="info">
+   If you need to remove a tool from a custom tab, right‑click it and select **Remove&nbsp;tool**.
+   </Alert>
 
 ## 3D viewport
 
@@ -62,50 +116,9 @@ The 3D viewport represents the `Class.Workspace` of a place. From here, you can 
 
 ### Camera controls
 
-Inside the viewport, you can move the camera with the following controls. See also [Studio shortcuts](../studio/shortcuts.md#camera-controls) for additional key shortcuts.
+Inside the viewport, you can move the camera with the following controls.
 
-<table>
-<thead>
-  <tr>
-    <th>Keys/Shortcuts</th>
-    <th>Action</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd></td>
-    <td>Moves the camera forward/left/back/right.</td>
-  </tr>
-  <tr>
-    <td><kbd>Q</kbd> <kbd>E</kbd></td>
-    <td>Moves the camera down/up.</td>
-  </tr>
-  <tr>
-    <td><kbd>Shift</kbd></td>
-    <td>In combination with any movement key, changes the camera speed. If desired, you can [customize](../studio/setup.md#customization) the camera speed within Studio's settings.</td>
-  </tr>
-  <tr>
-    <td><kbd>F</kbd></td>
-    <td>Focuses the camera on a selected part.</td>
-  </tr>
-  <tr>
-    <td>**Right Mouse Button**</td>
-    <td>When pressed, dragging the mouse moves the camera view around.</td>
-  </tr>
-  <tr>
-    <td>**Mouse Scroll Wheel**</td>
-    <td>Zooms the camera in or out.</td>
-  </tr>
-  <tr>
-    <td>**Middle Mouse Button**</td>
-    <td>When pressed, dragging the mouse pans the camera.</td>
-  </tr>
-	<tr>
-    <td>**Right Mouse Button**&nbsp;& **Mouse Scroll Wheel**</td>
-		<td>Pressing the right mouse button and scrolling the mouse wheel **up** increases the camera scroll speed. Conversely, pressing the right mouse button and scrolling the mouse wheel **down** reduces the camera scroll speed.<BetaAlert betaName="New Studio Camera Controls" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} /><Alert severity="success">Camera scroll speed is also adjustable from the [visualization options](#visualization-options) menu in the upper‑right corner of the 3D viewport.</Alert></td>
-	</tr>
-</tbody>
-</table>
+<StudioCameraControls components={props.components} />
 
 ### Object selection
 
@@ -113,24 +126,15 @@ As you hover over parts and models in the viewport, they are outlined to indicat
 
 <img src="../assets/studio/general/Editor-Window-Object-Selection.jpg" width="800" alt="A warehouse environment with the stairs and multiple pallet box objects with a blue highlight to signify that they are selected in the 3D viewport."/>
 
-<h4>Selection cycling</h4>
-
 In more complex environments or when zoomed in, objects will commonly be hidden from your view by other objects in front. To select hidden objects without moving the camera around, hold <kbd>Alt</kbd> or <kbd>⌥</kbd> and click to perform **selection&nbsp;cycling** to the next further object behind the currently selected object.
 
-<figure>
-  <video src="../assets/studio/general/Selection-Cycling.mp4" controls width="800" alt="Video showing selection cycling through a model"></video>
-  <figcaption>Selection cycling</figcaption>
-</figure>
+<video src="../assets/studio/general/Selection-Cycling.mp4" controls width="800" alt="Video showing selection cycling through a model"></video>
 
-<h4>Children or parents</h4>
+<Alert severity="info">
+When one or more objects or [models](../parts/models.md) are selected in the [Explorer](../studio/explorer.md) window, you can select all of their **children** by right-clicking and choosing **Hierarchy**&nbsp;⟩&nbsp;**Select&nbsp;Children** from the context menu. Similarly, choosing **Select&nbsp;Parent(s)** selects the **direct parents** of those objects.
+</Alert>
 
-When one or more objects or [models](../parts/models.md) are selected in the [Explorer](../studio/explorer.md) window, you can select all of their **children** by right-clicking and choosing **Select&nbsp;Children** from the context menu. Similarly, right-clicking and choosing **Select&nbsp;Parent(s)** selects the **direct parents** of those objects.
-
-<h4>Selection style</h4>
-
-To display **outlines** and/or **bounding boxes** around selected objects, choose an option from the **Selection Style** menu in the [View](../studio/view-tab.md) tab.
-
-<img src="../assets/studio/general/View-Tab-Selection-Style.png" width="670" alt="Studio's View tab with the Selection Style tool highlighted." />
+To customize the appearance of selection lines and boxes around objects, set your desired options in the **Selection Visualization** section within the **Selection** panel of Studio's settings.
 
 <img src="../assets/studio/general/Selected-Object-Bounding-Box.jpg" width="800" alt="A warehouse environment with rope object's selection outline and bounding box highlighted." />
 
@@ -142,55 +146,43 @@ In the upper-right corner of the 3D viewport, you can quickly toggle or set comm
 
 ## Common windows
 
-You can toggle on commonly used windows through the [View](../studio/view-tab.md) tab, including the [Explorer](../studio/explorer.md) window, [Properties](../studio/properties.md) window, [Asset Manager](../projects/assets/manager.md), [Toolbox](../projects/assets/toolbox.md), and many others.
-
-<img src="../assets/studio/general/Toolbar-View-Tab.png" width="876" alt="Studio's toolbar and View tab with the tab highlighted." />
+Commonly used windows include the [Explorer](../studio/explorer.md), the [Properties](../studio/properties.md) window, [Asset Manager](../projects/assets/manager.md), [Toolbox](../projects/assets/toolbox.md), and others.
 
 ### Explorer
 
-The [Explorer](../studio/explorer.md) window, visible by default, shows a hierarchical list of every object and service inside the place, collectively referred to as its **data model**. Frequently used services in the hierarchy include `Class.Workspace` which mirrors the [3D viewport](#3d-viewport), as well as `Class.ReplicatedStorage` and `Class.ServerStorage`.
-
-<img src="../assets/studio/general/View-Tab-Explorer.png" width="876" alt="Studio's View tab with the Explorer button highlighted." />
+The [Explorer](../studio/explorer.md) window, visible by default and accessible from Studio's **Window** menu or **Home** tab, shows a hierarchical list of every object and service inside the place, collectively referred to as its **data model**. Frequently used services in the hierarchy include `Class.Workspace` which mirrors the [3D viewport](#3d-viewport), as well as `Class.ReplicatedStorage` and `Class.ServerStorage`.
 
 <img src="../assets/studio/explorer/Parent-Child-Hierarchy.png" width="320" alt="Explorer hierarchy showing Camera, Terrain, and SignModel as children of Workspace; Board and Post as children of SignModel" />
 
 ### Properties
 
-The [Properties](../studio/properties.md) window lets you adjust properties of a selected object to change how it looks and behaves. Object properties are divided into sections; for example, a `Class.MeshPart` includes sections like **Appearance** which allows you to change its color, material, transparency, and more.
-
-<img src="../assets/studio/general/View-Tab-Properties.png" width="876" alt="Studio's View tab with the Properties button highlighted." />
+The [Properties](../studio/properties.md) window, visible by default and accessible from Studio's **Window** menu or **Home** tab, lets you adjust properties of a selected object to change how it looks and behaves. Object properties are divided into sections; for example, a `Class.MeshPart` includes sections like **Appearance** which allows you to change its color, material, transparency, and more.
 
 <img src="../assets/studio/properties/Sections-Example.png" width="320" />
 
 At the bottom of the window, you can define custom [attributes](../studio/properties.md#instance-attributes) for an object, similar to its default properties. Attributes and their values are saved with your place/assets and they're an ideal way for team members to experiment with different values during runtime, even if they don't understand the underlying code.
 
-<img src="../assets/studio/properties/Attributes-Example-B.png" alt="A close up view of the Attributes section of the Properties window." width="320" />
+<img src="../assets/studio/properties/Attributes-Example.png" alt="A close up view of the Attributes section of the Properties window." width="320" />
 
 ### Asset Manager
 
-The [Asset Manager](../projects/assets/manager.md) lets you manage places, images, meshes, audio, and more. It also provides a mechanism to bulk import large groups of assets.
-
-<img src="../assets/studio/general/View-Tab-Asset-Manager.png" width="776" alt="Studio's View tab with the Asset Manager button highlighted." />
+The [Asset Manager](../projects/assets/manager.md), accessible from Studio's **Window** menu or **Home** tab, lets you manage places, images, meshes, audio, and more. It also provides a mechanism to bulk import large groups of assets.
 
 ### Toolbox
 
-The [Toolbox](../projects/assets/toolbox.md) contains a selection of models, images, meshes, audio, plugins, videos, and fonts made by Roblox or Roblox community members. It also includes all of the creations that you've personally [distributed on the Creator Store](../production/creator-store.md) or those which were distributed by [groups](../projects/groups.md) you belong to.
-
-<img src="../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Studio's View tab with the Toolbox button highlighted." />
+The [Toolbox](../projects/assets/toolbox.md), accessible from Studio's **Window** menu or **Home** tab, contains a selection of models, images, meshes, audio, plugins, videos, and fonts made by Roblox or Roblox community members. It also includes all of the creations that you've personally [distributed on the Creator Store](../production/creator-store.md) or those which were distributed by [groups](../projects/groups.md) you belong to.
 
 <img src="../assets/studio/toolbox/Model-Search-Example.png" width="360" alt="The Toolbox window." />
 
 ### Output
 
-The [Output](../studio/output.md) window, accessible from the [View](../studio/view-tab.md) tab, displays errors captured from running scripts, messages from Roblox Engine, messages from calls to `print()`, and errors from calls to `warn()`.
+The [Output](../studio/output.md) window, accessible from Studio's **Window** menu or **Script** tab, displays errors captured from running scripts, messages from Roblox Engine, messages from calls to `Global.LuaGlobals.print()`, and errors from calls to `Global.RobloxGlobals.warn()`.
 
-<img src="../assets/studio/general/View-Tab-Output.png" width="768" alt="Studio's View tab with the Output button highlighted." />
+### Command
 
-### Command Bar
+The **Command** bar, accessible from Studio's **Script** tab toolbar or the **Window**&nbsp;⟩ **Script** menu, lets you execute Luau code outside of scripts. Similar to a terminal, pressing <kbd>↑</kbd> or <kbd>↓</kbd> while using the command bar navigates up and down among previously-executed commands. Clicking the small arrow on the right side similarly reveals a list of previously-executed commands.
 
-The **Command Bar**, accessible from the [View](../studio/view-tab.md) tab, lets you execute Luau code outside of scripts. Similar to a terminal, pressing <kbd>↑</kbd> or <kbd>↓</kbd> while using the command bar navigates up and down among previously-executed commands. Clicking the small arrow on the right side similarly reveals a list of previously-executed commands.
-
-<img src="../assets/studio/general/View-Tab-Command-Bar.png" width="768" alt="Studio's View tab with the Command Bar button highlighted." />
+To quickly jump to the **Command** bar at any time, press <kbd>Ctrl</kbd><kbd>9</kbd> (Windows) or <kbd>⌘</kbd><kbd>9</kbd> (Mac).
 
 ## Layout customization
 
@@ -201,7 +193,7 @@ Studio's drag-and-drop interface lets you easily customize window layout to best
 You can reposition any window by click-dragging its **header bar**. As you begin dragging the window, the interface reveals **empty docking area** regions. If you drag the mouse pointer into any empty region, a floating **position selector** appears in that region. Dragging the pointer over the "center" of the floating selector targets the empty region as the dragged window's destination, indicated by the region darkening and becoming outlined.
 
 <figure>
-<img src="../assets/studio/general/Docking-Position-Selector-Empty.jpg" width="880" alt="Mouse pointer hovering over the 'center' icon of the position selector in an empty docking area, showing that region as the dragged window's destination." />
+<img src="../assets/studio/general/Docking-Position-Selector-Empty.png" width="880" alt="Mouse pointer hovering over the 'center' icon of the position selector in an empty docking area, showing that region as the dragged window's destination." />
 <figcaption>Mouse pointer hovering over the "center" icon of the position selector in an empty docking area</figcaption>
 </figure>
 
@@ -209,10 +201,10 @@ If you drag the mouse pointer into a **populated** region such as the 3D viewpor
 
 <Tabs>
   <TabItem label="Viewport left">
-	<img src="../assets/studio/general/Docking-Position-Selector-Left.jpg" width="880" height="520" alt="Mouse pointer hovering over the 'left half' icon of the position selector in a populated region, showing the left side of the region as the dragged window's destination." />
+	<img src="../assets/studio/general/Docking-Position-Selector-Left.png" width="880" height="520" alt="Mouse pointer hovering over the 'left half' icon of the position selector in a populated region, showing the left side of the region as the dragged window's destination." />
   </TabItem>
   <TabItem label="Viewport right">
-    <img src="../assets/studio/general/Docking-Position-Selector-Right.jpg" width="880" height="520" alt="Mouse pointer hovering over the 'right half' icon of the position selector in a populated region, showing the right side of the region as the dragged window's destination." />
+    <img src="../assets/studio/general/Docking-Position-Selector-Right.png" width="880" height="520" alt="Mouse pointer hovering over the 'right half' icon of the position selector in a populated region, showing the right side of the region as the dragged window's destination." />
   </TabItem>
 </Tabs>
 
@@ -230,7 +222,7 @@ If you drag a window into a **populated** region and choose the "center" icon of
 To maximize screen space for the 3D viewport, you can **pin** windows (or&nbsp;an entire [group](#group-windows) of windows) to the edges of the overall Studio window. Once pinned, you can temporarily open any window by clicking its tab&nbsp;&mdash; this does not disturb other windows, and the expanded window will automatically collapse when you click in another window or click its tab again.
 
 <figure>
-  <img src="../assets/studio/general/Docking-Pinned-Tabs.jpg" width="800" alt="An example 3D viewport where the Explorer, Properties, and Terrain Editor windows are pinned to the right of the Studio window." />
+  <img src="../assets/studio/general/Docking-Pinned-Tabs.png" width="800" alt="An example 3D viewport where the Explorer, Properties, and Terrain Editor windows are pinned to the right of the Studio window." />
   <figcaption>Three windows pinned to the right side of the Studio window</figcaption>
 </figure>
 
@@ -242,22 +234,11 @@ To pin a window or an entire [group](#group-windows) of windows, click the "coll
 
 To float a window freely of other windows, simply drag‑and‑drop it without selecting any icon from the floating [position selector](#reposition-windows).
 
-## In-Studio testing
-
-Studio offers a suite of options for testing an experience before [releasing it to the public](../production/publishing/publish-experiences-and-places.md#release-to-the-public). All of the testing options are accessible from the [Test](../studio/test-tab.md) tab.
-
-- [Rapid paytesting](../studio/testing-modes.md#playtest-options) &mdash; Provides a close simulation of the experience running on the Roblox application.
-- [Multi-client simulation](../studio/testing-modes.md#multi-client-simulation) &mdash; Compares how each client "sees" other clients within the experience.
-- [Device emulation](../studio/testing-modes.md#device-emulation) &mdash; Provides insight on how controls operate on a mobile device or how on-screen UI displays on different screens and aspect ratios.
-- [Controller emulation](../studio/testing-modes.md#controller-emulation) &mdash; Accurately emulates [gamepad input](../input/gamepad.md) directly in Studio.
-
-See [Studio testing modes](../studio/testing-modes.md) for more information on each testing option.
-
 ## Next-gen toolbar mapping
 
-<BetaAlert betaName="Next Gen Studio Preview" leadIn="The following remapping reference applies to the next-gen Studio toolbar beta, enabled through " leadOut="." components={props.components} />
+<BetaAlert betaName="Next Gen Studio Preview" leadIn="The following remapping reference applies to the next-gen Studio toolbar beta, currently enabled by default through " leadOut="." components={props.components} />
 
-The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-preparing-for-takeoff-beta/3634123) introduces a wide array of improvements and optimizations, including cleaner appearance, customizable tabs with your own tool collections, and the ability to show/hide tabs as desired. The following tables map the previous Studio toolbar workflows to next‑gen equivalents.
+The **next-gen Studio toolbar** introduces a wide array of improvements and optimizations, including cleaner appearance, customizable tabs with your own tool collections, and the ability to show/hide tabs as desired. The following tables map the previous Studio toolbar workflows to next‑gen equivalents.
 
 <Tabs>
 <TabItem label="General">
@@ -361,7 +342,7 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 			<td>🄐 Application's **Window** menu&nbsp;⟩ **Script**&nbsp;⟩ **Command&nbsp;Bar**<br />🄑 **Script** tab&nbsp;⟩ **Command**</td>
 		</tr>
 		<tr>
-			<td>[Manage Plugins](./plugins-tab.md#manage-plugins)</td>
+			<td>Manage Plugins</td>
 			<td>**Plugins** tab</td>
 			<td>Application's **Plugins** menu&nbsp;⟩ **Manage&nbsp;Plugins**</td>
 		</tr>
@@ -547,7 +528,7 @@ The [next-gen Studio toolbar](https://devforum.roblox.com/t/next-gen-studio-prep
 		<tr>
 			<td>Advanced&nbsp;⟩ Service</td>
 			<td>**Model** tab</td>
-			<td>Right‑click over any visible service in the [Explorer](./explorer.md) and select **Show&nbsp;Services…** from the context menu</td>
+			<td>Right‑click in the [Explorer](./explorer.md) and select **Show&nbsp;Services…** from the context menu</td>
 		</tr>
 		<tr>
 			<td>Advanced&nbsp;⟩ Collision Groups</td>

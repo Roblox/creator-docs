@@ -13,9 +13,9 @@ The built-in **Style Editor** is a comprehensive tool that allows you to create,
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_k1ea0OIKaU?si=A9mdnnG95qdaZbB_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </figure>
 
-Access the Style Editor via the **UI** tab (if it isn't visible, access it from the [Home](../../studio/home-tab.md#ui-designer) tab).
+Access the **Style Editor** via the **UI** tab.
 
-<img src="../../assets/studio/general/UI-Tab-Style-Editor.png" width="780" alt="Style Editor tool indicated in UI tab of Studio toolbar" />
+<img src="../../assets/studio/general/Toolbar-Style-Editor.png" width="800" alt="Style Editor tool indicated in UI tab of Studio toolbar" />
 
 Once open, click the **Create Design** button to generate a base style set.
 

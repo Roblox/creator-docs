@@ -25,7 +25,7 @@ If saving to Roblox fails due to the file size limit, Studio automatically gener
 
 On Windows, recovery files are located in `C:\Users\Admin\AppData\Local\Roblox\RobloxStudio\AutoSaves`.
 
-On macOS, you can find them in `/Users/your-username/Library/Application Support/Roblox/RobloxStudio/AutoSaves/`.
+On Mac, you can find them in `/Users/your-username/Library/Application Support/Roblox/RobloxStudio/AutoSaves/`.
 
 ## Troubleshoot place file size
 
@@ -53,7 +53,7 @@ Unreferenced or hidden assets can accumulate over time and unnecessarily increas
 Reducing or simplifying terrain can significantly reduce place size and improve performance. Avoiding excessive terrain features like dense forests or complex hills helps make experiences run faster and more efficiently. Of course, the experience should match your artistic vision, but consider the following optimizations:
 
 1. Horizontal layers of the same material/occupancy compress much better than sloped layers. If possible, try to limit subsurface detail to horizontal layers.
-1. Turn on [wireframe rendering](../studio/view-tab.md#grid-and-wireframe) and check for messy holes or misplaced water under the terrain surface. These mistakes can increase compressed size.
+1. Turn on **Show Wireframe Rendering** from Studio's **View** menu and check for messy holes or misplaced water under the terrain surface. These mistakes can increase compressed size.
 1. There are community plugins that optimize non-visible blocks of terrain for better compression, such as [this one](https://create.roblox.com/store/asset/133396894381603/Terrain-File-Size-Optimizer).
 
 ### Collision fidelity

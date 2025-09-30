@@ -137,4 +137,4 @@ To create variables for your story and to use player answers:
    storyMaker:Write(story)
    ```
 
-Let's stop here for now to playtest the experience in the next chapter and make sure the story is working!
+Now's a good point to stop momentarily, playtest the experience in the next chapter, and make sure the story is working!
