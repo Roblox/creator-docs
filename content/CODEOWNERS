@@ -1,0 +1,8 @@
+*                                                           @Roblox/creator-knowledge
+
+/content/                                                   @Roblox/documentation
+/STYLE.md                                                   @Roblox/documentation
+/content/en-us/education/                                   @Roblox/documentation @Roblox/education
+/content/en-us/assets/education/                            @Roblox/documentation @Roblox/education
+/tools/checks/utils/allowedHttpLinks.txt                    @Roblox/creator-knowledge @Roblox/documentation @Roblox/education
+/tools/checks/utils/do-not-machine-translate.txt            @Roblox/creator-knowledge @Roblox/documentation @Roblox/education
