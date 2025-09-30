@@ -11,7 +11,7 @@ The **enumeration** data type, or `Datatype.Enum`, is a fixed list of items. You
 
 ## Enum items
 
-To get all items of an Enum, call the `GetEnumItems()` method on the enum. The following code sample demonstrates how to call `GetEnumItems()` on the `Enum.PartType` enum.
+To get all items of an enum, call the `Datatype.Enum:GetEnumItems()|GetEnumItems()` method on it. The following code sample demonstrates how to call `Datatype.Enum:GetEnumItems()|GetEnumItems()` on the `Enum.PartType` enum.
 
 ```lua
 local partTypes = Enum.PartType:GetEnumItems()
