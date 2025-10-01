@@ -709,17 +709,22 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: MarketplaceService:GetUsersPriceLevelsAsync
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Returns the regionalized price level of a user.
+    description: |
+      Returns the regionalized price level of a user, representing the recommended price for an item in their regional market. For example, a price level of 100 means that the suggested price for that user (based on their region and purchasing power) is 100 Robux.
+    code_samples:
+      - MarketplaceService-GetUsersPriceLevelAsync
     parameters:
       - name: userIds
         type: Array
         default:
-        summary: ''
+        summary: |
+          An array of user IDs.
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          Returns an array of `PriceLevelInfo` objects with a dictionary where the keys are user IDs (strings) and their values are the corresponding price levels  (integers between 1 and 1000).
     tags:
       - Yields
     deprecation_message: ''

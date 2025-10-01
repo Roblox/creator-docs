@@ -10,7 +10,7 @@ Content maturity consists of two components:
 - **Content maturity label** - Indicates the level of maturity suitable for the experience according to child development research and industry standards.
 - **Content descriptors** - Indicates what type of content is within an experience, such as realistic depictions of blood or paid item trading.
 
-If an experience does not have accurate or all content maturity information, Roblox restricts the playability of the experience on the platform for players younger than 13. In addition, experiences without content maturity information cannot contain any [Restricted content](https://en.help.roblox.com/hc/en-us/articles/15869919570708-Roblox-17-Policy-Standards) without risk of moderation. For this reason, Roblox strongly recommends that you fill out the questionnaire for each of your experiences so that they're available to the largest appropriate audience as possible.
+If an experience does not have accurate or all content maturity information, Roblox restricts the playability of the experience on the platform for all players. In addition, experiences without content maturity information cannot contain any [Restricted content](https://en.help.roblox.com/hc/en-us/articles/15869919570708-Roblox-17-Policy-Standards) without risk of moderation. For this reason, Roblox strongly recommends that you fill out the questionnaire for each of your experiences so that they're available to the largest appropriate audience as possible.
 
 <Alert severity="warning">
    Content descriptors that generate content maturity labels are separate from [genres](../publishing/experience-genres.md) that classify experiences according to their core gameplay. In cases where there is overlap between genres and in-experience content or behavior, answer the Maturity & Compliance questionnaire as accurately as you can regardless of your genre selection or assignment from Roblox.
@@ -491,7 +491,7 @@ Roblox relies on the information you provide in the Maturity & Compliance Questi
 - Roblox provides a moderation action.
   - If your experience contains restricted content without a Restricted maturity label, your experience is subject to moderation consequences.
   - If your experience contains content that is prohibited by Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), or [Restricted Content Policy](https://en.help.roblox.com/hc/articles/15869919570708), your experience is subject to moderation consequences.
-  - If your experience otherwise has inaccurate content maturity information according to its content, Roblox may remove the maturity label (or only some or all descriptors if the maturity label is Restricted) from your experience. If an experience does not have content maturity information, Roblox restricts the playability of the experience on the platform for players younger than 13.
+  - If your experience otherwise has inaccurate content maturity information according to its content, Roblox may remove the maturity label (or only some or all descriptors if the maturity label is Restricted) from your experience. If an experience does not have content maturity information, Roblox restricts the playability of the experience on the platform for all players.
   - If you repeatedly include inaccurate content maturity information, **your experience and/or account is subject to moderation consequences**.
 
 If receive a moderation action and believe Roblox made a mistake, you can appeal the decision:
