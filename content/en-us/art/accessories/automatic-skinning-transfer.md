@@ -29,6 +29,56 @@ When there isn't any skinning data on the accessory, or if you choose to overrid
 
 While Automatic Skinning Transfer often works better than manual skinning, there are some best practices to reduce unexpected behavior with the accessory skinning. Like all modeling processes, constantly test your layered clothing and facial accessories on different avatar types to achieve the results you want.
 
+### Special skinning transfer joints
+
+Automatic skinning transfer may not work well for certain detailed accessory types, like eyelashes. To get a more controlled skinning transfer result, you have the option to skin accessory geometry to one of two specially named joints: `RBX_Leader` and `RBX_Follower`.
+
+<Alert severity = 'info'>
+It's best to create these joints/bones directly beneath the Root joint in your hierarchy for simplicity and clarity. These joints/bones won't be detected as a part of your character model's R15 rig on import.
+</Alert>
+
+Any vertices skinned to `RBX_Leader` will undergo the same transfer process that exists today. However, any vertices skinned to `RBX_Follower` will actually transfer based on their nearest leader vertex. This allows for better results in situations like an eyelash where the tip of an eyelash strand would normally transfer to somewhere on the brow area, rather than follow the base of the eyelash strand when moving.
+
+For eyelashes, good candidates for RBX_Leader are the ones that are intended to sit right on the eyelid of the character. The remaining vertices can be skinned to RBX_Follower.
+
+<GridContainer numColumns="2">
+<figure>
+  <img alt="Screenshot of vertices assigned as leader." src="../../assets/avatar/dynamic-heads/creating-face-accessories/Vertices-Group-Leader.png" />
+  <figcaption>Vertices of an eyelash assigned to a RBX_Leader bone vertex group.</figcaption>
+</figure>
+<figure>
+  <img alt="Screenshot of vertices assigned as follower." src="../../assets/avatar/dynamic-heads/creating-face-accessories/Vertices-Group-Follower.png" />
+  <figcaption>Vertices of an eyelash assigned to a RBX_Follower bone vertex group.</figcaption>
+</figure>
+</GridContainer>
+
+In Blender, user the **Object Data Properties** > **Vertex Groups** to manage and view your vertex group assignments.
+
+  <img alt="Screenshot of properties panel with vertex group assignments" src="../../assets/avatar/dynamic-heads/creating-face-accessories/Vertices-Group-Assign.png" />
+
+<Alert severity = 'info'>
+In Blender, vertex groups automatically created after you make a bone object. This allows you to quickly set vertices to a specific bone vertex group.
+</Alert>
+
+<GridContainer numColumns="2">
+<figure>
+  <video src="../../assets/avatar/dynamic-heads/creating-face-accessories/Vertices-Transfer-Off.mov" controls width="100%"></video>
+  <figcaption>Eyelashes without transfer joints. Notice how the upper eyelashes near the bridge of the nose doesn't follow the eyelids as expected.</figcaption>
+</figure>
+<figure>
+  <video src="../../assets/avatar/dynamic-heads/creating-face-accessories/Vertices-Transfer-On.mov" controls width="100%"></video>
+  <figcaption>Eyelashes with transfer joints. All eyelashes follow the leading vertices closest to the eyes.</figcaption>
+</figure>
+</GridContainer>
+
+No additional work is needed in Studio to support this method. If your accessory is set to `Class.WrapLayer.AutoSkin.EnabledOverride` and these joints exist with vertices assigned to them, then this skinning transfer variation will be in effect.
+
+If you wish to upload an accessory using these joints as a UGC item, there are a few rules to be aware of:
+
+- Vertices cannot be partially weighted to these joints. If you want to use them you must skin the vertex to the joint with a weight of `1.0`.
+- If these joints are present in the mesh, then the accessory must be set to `WrapLayerAutoSkin.EnabledOverride`.
+- Body part meshes containing these joints will be rejected by validation.
+
 ### Modify character cages
 
 <Alert severity = 'error'>
@@ -66,16 +116,16 @@ By modifying different regions of the character's cage, you can ensure that your
 During the asset creation process, it's important to verify what skinning solution works best for your design by testing your individual assets on multiple models and animations. You can always skin your assets manually and choose to use the Automatic Skinning Transfer later.
 </Alert>
 
-### Different accessory types
+### Different accessory categories
 
-Automatic skinning transfer may not work well for certain accessory types, such as eyelash, hat, and glasses-type accessories. For example, eyelash-type accessories might have issues due to the typical complexity of the character's geometry around the eye region, and hat or glasses-type accessories might introduce deformation in areas that should typically be rigid. In general, those types of accessories should remain rigid, and you shouldn't associate any skinning data with them.
+Automatic skinning transfer may not work well for certain accessory categories, such as hat, and glasses-type accessories. For example, hat or glasses accessories might introduce deformation in areas that should typically be rigid. In general, those accessories should remain rigid, and you shouldn't associate any skinning data with them.
 
-For a summary of suggested `Class.WrapLayer.AutoSkin` parameters for different accessory types, see the following table:
+For a summary of suggested `Class.WrapLayer.AutoSkin` parameters for different accessory categories, see the following table:
 
 <table>
 <thead>
   <tr>
-    <th>Accessory Type</th>
+    <th>Accessory Category</th>
     <th>Suggested Parameter</th>
   </tr>
 </thead>
@@ -90,11 +140,11 @@ For a summary of suggested `Class.WrapLayer.AutoSkin` parameters for different a
   </tr>
   <tr>
     <td>Eyelash</td>
-    <td>`Disabled`</td>
+    <td>`EnabledOverride`</td>
   </tr>
   <tr>
     <td>Hair</td>
-    <td>`EnabledOverride`</td>
+    <td>`Disabled`</td>
   </tr>
   <tr>
     <td>Hat</td>
