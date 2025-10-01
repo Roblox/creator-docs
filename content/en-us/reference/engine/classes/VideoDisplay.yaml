@@ -5,8 +5,12 @@
 name: VideoDisplay
 type: class
 memory_category: Gui
-summary: ''
-description: ''
+summary: |
+  A GUI object that displays video content from a connected `Class.VideoPlayer`.
+description: |
+  A `Class.VideoDisplay` is a GUI object that displays video content from a
+  `Class.VideoPlayer` connected via a `Class.Wire`. It functions similarly to a
+  `Class.ImageLabel` but is designed for video playback.
 code_samples: []
 inherits:
   - GuiObject
@@ -15,8 +19,14 @@ tags:
 deprecation_message: ''
 properties:
   - name: VideoDisplay.ResampleMode
-    summary: ''
-    description: ''
+    summary: |
+      Selects the texture resampling mode for the `Class.VideoDisplay`.
+    description: |
+      Determines how the video looks when it is scaled. By default, the video
+      smooths out texturing when displayed on the screen larger or smaller than
+      its size in texture memory. When set to
+      `Enum.ResamplerMode.Pixelated|Enum.ResamplerMode.Pixelated`, the video
+      preserves the sharp edges of pixels.
     code_samples: []
     type: ResamplerMode
     tags: []
@@ -32,8 +42,16 @@ properties:
     capabilities:
       - UI
   - name: VideoDisplay.ScaleType
-    summary: ''
-    description: ''
+    summary: |
+      Determines how a video will scale if displayed in a UI element whose
+      aspect ratio differs from the source video.
+    description: |
+      Determines how a video texture is rendered when the UI element's aspect
+      ratio differs from the source video's aspect ratio.
+
+      By default, this property is `Enum.ScaleType.Stretch` which will simply
+      stretch/compact the video texture dimensions so it fits the UI element's
+      space exactly.
     code_samples: []
     type: ScaleType
     tags: []
@@ -66,8 +84,11 @@ properties:
     capabilities:
       - UI
   - name: VideoDisplay.VideoColor3
-    summary: ''
-    description: ''
+    summary: |
+      Determines how a rendered video will be colorized.
+    description: |
+      Determines how a video is colorized. When set to white, no colorization
+      occurs. This property is useful for reusing video assets.
     code_samples: []
     type: Color3
     tags: []
@@ -83,8 +104,12 @@ properties:
     capabilities:
       - UI
   - name: VideoDisplay.VideoRectOffset
-    summary: ''
-    description: ''
+    summary: |
+      The offset in pixels of the sub-area of a video to be displayed.
+    description: |
+      Allows the partial display of a video in conjunction with
+      `Class.VideoDisplay.VideoRectSize|VideoRectSize`. This property determines
+      the pixel offset (from the top-left) of the video area to be displayed.
     code_samples: []
     type: Vector2
     tags: []
@@ -100,8 +125,13 @@ properties:
     capabilities:
       - UI
   - name: VideoDisplay.VideoRectSize
-    summary: ''
-    description: ''
+    summary: |
+      Determines the size in pixels of the sub-area of a video to be displayed.
+    description: |
+      Allows the partial display of a video in conjunction with
+      `Class.VideoDisplay.VideoRectOffset|VideoRectOffset`. This property
+      determines the pixel size of the video area to be displayed. If either
+      dimension is set to `0`, the entire video is displayed instead.
     code_samples: []
     type: Vector2
     tags: []
@@ -117,8 +147,12 @@ properties:
     capabilities:
       - UI
   - name: VideoDisplay.VideoTransparency
-    summary: ''
-    description: ''
+    summary: |
+      Determines the transparency of the rendered video.
+    description: |
+      Determines the alpha of a UI element's rendered video texture. A value of
+      `0` is completely opaque, and a value of `1` is completely transparent
+      (invisible).
     code_samples: []
     type: float
     tags: []
@@ -135,8 +169,12 @@ properties:
       - UI
 methods:
   - name: VideoDisplay:GetConnectedWires
-    summary: ''
-    description: ''
+    summary: |
+      Returns an array of `Class.Wire|Wires` that are connected to the specified
+      pin.
+    description: |
+      Returns an array of `Class.Wire|Wires` that are connected to the specified
+      pin. `Class.VideoDisplay` has one "Input" pin.
     code_samples: []
     parameters:
       - name: pin
@@ -182,26 +220,36 @@ methods:
       - UI
 events:
   - name: VideoDisplay.WiringChanged
-    summary: ''
-    description: ''
+    summary: |
+      Fires when another instance is connected to or disconnected from the
+      `Class.VideoDisplay` via a `Class.Wire`.
+    description: |
+      Fires after a `Class.Wire` becomes connected or disconnected, and that
+      `Class.Wire` is now or was previously connected to a pin on the
+      `Class.VideoDisplay` and to some other wirable instance.
     code_samples: []
     parameters:
       - name: connected
         type: boolean
         default:
-        summary: ''
+        summary: |
+          Whether the instance got connected or disconnected.
       - name: pin
         type: string
         default:
-        summary: ''
+        summary: |
+          The pin on the `Class.VideoDisplay` that the `Class.Wire` targets.
       - name: wire
         type: Wire
         default:
-        summary: ''
+        summary: |
+          The `Class.Wire` between the `Class.VideoDisplay` and the other
+          instance.
       - name: instance
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The other instance that is or was connected through the `Class.Wire`.
     tags: []
     deprecation_message: ''
     security: None

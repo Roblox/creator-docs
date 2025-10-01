@@ -5,9 +5,15 @@
 name: VideoPlayer
 type: class
 memory_category: Instances
-summary: ''
-description: ''
-code_samples: []
+summary: |
+  Used to play video assets.
+description: |
+  An instance for playing video assets. It can be connected to a
+  `Class.VideoDisplay` via a `Class.Wire` to show the video and can be connected
+  to audio instances via a `Class.Wire` to play the audio track.
+code_samples:
+  - video-player-server
+  - video-player-client
 inherits:
   - Instance
 tags:
@@ -15,8 +21,15 @@ tags:
 deprecation_message: ''
 properties:
   - name: VideoPlayer.AutoLoadInStudio
-    summary: ''
-    description: ''
+    summary: |
+      Loads the `Class.VideoPlayer.VideoContent|VideoContent` while in Studio
+      Edit mode.
+    description: |
+      By default, `Class.VideoPlayer.VideoContent|VideoContent` does not load
+      while in Studio Edit mode and shows no output when wired to
+      `Class.VideoDisplay` to reduce studio memory usage. Toggle this option to
+      load `Class.VideoPlayer.VideoContent|VideoContent` while in Studio Edit
+      mode.
     code_samples: []
     type: boolean
     tags:
@@ -33,8 +46,13 @@ properties:
       can_save: false
     capabilities: []
   - name: VideoPlayer.AutoPlayInStudio
-    summary: ''
-    description: ''
+    summary: |
+      Plays the `Class.VideoPlayer.VideoContent|VideoContent` while in Studio
+      Edit mode.
+    description: |
+      Plays the `Class.VideoPlayer.VideoContent|VideoContent` while in Studio
+      Edit mode. `Class.VideoPlayer.AutoLoadInStudio|AutoLoadInStudio` must be
+      on for this option to show.
     code_samples: []
     type: boolean
     tags:
@@ -51,8 +69,13 @@ properties:
       can_save: false
     capabilities: []
   - name: VideoPlayer.IsLoaded
-    summary: ''
-    description: ''
+    summary: |
+      Indicates when the `Class.VideoPlayer.VideoContent|VideoContent` has
+      loaded and is ready to play.
+    description: |
+      This property is true when the
+      `Class.VideoPlayer.VideoContent|VideoContent` has loaded and is ready to
+      play.
     code_samples: []
     type: boolean
     tags:
@@ -69,8 +92,13 @@ properties:
       can_save: false
     capabilities: []
   - name: VideoPlayer.IsPlaying
-    summary: ''
-    description: ''
+    summary: |
+      Denotes whether this `Class.VideoPlayer` is currently playing.
+    description: |
+      Denotes whether this `Class.VideoPlayer` is currently playing. This
+      property is read-only, but replicates. To play and pause a
+      `Class.VideoPlayer` at runtime, use the `Class.VideoPlayer:Play()|Play()`
+      and `Class.VideoPlayer:Pause()|Pause()` methods.
     code_samples: []
     type: boolean
     tags:
@@ -87,8 +115,11 @@ properties:
       can_save: false
     capabilities: []
   - name: VideoPlayer.Looping
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether this `Class.VideoPlayer` loops.
+    description: |
+      Controls whether this `Class.VideoPlayer` loops after reaching the end of
+      its `Class.VideoPlayer.TimeLength|TimeLength`.
     code_samples: []
     type: boolean
     tags: []
@@ -103,8 +134,11 @@ properties:
       can_save: true
     capabilities: []
   - name: VideoPlayer.PlaybackSpeed
-    summary: ''
-    description: ''
+    summary: |
+      Controls the speed at which the video is played.
+    description: |
+      Multiplier that controls how quickly the video plays, directly controlling
+      the perceived pitch of the audio track. Ranges from 0 to 1.
     code_samples: []
     type: float
     tags: []
@@ -119,8 +153,12 @@ properties:
       can_save: true
     capabilities: []
   - name: VideoPlayer.Resolution
-    summary: ''
-    description: ''
+    summary: |
+      Gets the original source resolution of the
+      `Class.VideoPlayer.VideoContent|VideoContent` file.
+    description: |
+      This property gets the original source resolution of the
+      `Class.VideoPlayer.VideoContent|VideoContent` file.
     code_samples: []
     type: Vector2
     tags:
@@ -137,8 +175,13 @@ properties:
       can_save: false
     capabilities: []
   - name: VideoPlayer.TimeLength
-    summary: ''
-    description: ''
+    summary: |
+      Indicates the length of the `Class.VideoPlayer.VideoContent|VideoContent`
+      in seconds.
+    description: |
+      This property indicates the length of the
+      `Class.VideoPlayer.VideoContent|VideoContent` in seconds. If the video is
+      not loaded, this value is 0.
     code_samples: []
     type: double
     tags:
@@ -155,8 +198,13 @@ properties:
       can_save: false
     capabilities: []
   - name: VideoPlayer.TimePosition
-    summary: ''
-    description: ''
+    summary: |
+      Indicates the progress in seconds of the
+      `Class.VideoPlayer.VideoContent|VideoContent`.
+    description: |
+      This property indicates the progress in seconds of the
+      `Class.VideoPlayer.VideoContent|VideoContent`. It can be changed to move
+      the playback position of the video both before and during playback.
     code_samples: []
     type: double
     tags: []
@@ -170,9 +218,34 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: VideoPlayer.VideoContent
+    summary: |
+      The asset to be loaded into the `Class.VideoPlayer`.
+    description: |
+      The content ID of the video file a `Class.VideoPlayer` object is
+      associated with. To save resources and improve performance, call the
+      `Class.VideoPlayer:Unload()|Unload()` method to unload the
+      `Class.VideoPlayer.VideoContent|VideoContent` when the `Class.VideoPlayer`
+      is not visible or in use.
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Asset
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: VideoPlayer.Volume
-    summary: ''
-    description: ''
+    summary: |
+      Controls how loudly the audio track will be played.
+    description: |
+      Volume level, which is multiplied onto the output audio stream,
+      controlling how loudly the audio track plays. Ranges from 0 to 3.
     code_samples: []
     type: float
     tags: []
@@ -188,8 +261,12 @@ properties:
     capabilities: []
 methods:
   - name: VideoPlayer:GetConnectedWires
-    summary: ''
-    description: ''
+    summary: |
+      Returns an array of `Class.Wire|Wires` that are connected to the specified
+      pin.
+    description: |
+      Returns an array of `Class.Wire|Wires` that are connected to the specified
+      pin. `Class.VideoPlayer` has one "Output" pin.
     code_samples: []
     parameters:
       - name: pin
@@ -231,8 +308,16 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: VideoPlayer:LoadAsync
-    summary: ''
-    description: ''
+    summary: |
+      Loads the `Class.VideoPlayer.VideoContent|VideoContent` before it is
+      played.
+    description: |
+      `Class.VideoPlayer.VideoContent|VideoContent` is typically only loaded
+      when `Class.VideoPlayer:Play()|Play()` is called, causing some buffering
+      delay. This function can preload
+      `Class.VideoPlayer.VideoContent|VideoContent` so that it can be
+      immediately played when `Class.VideoPlayer:Play()|Play()` is called.
+      Loading videos can consume a significant amount of device memory.
     code_samples: []
     parameters: []
     returns:
@@ -245,8 +330,13 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: VideoPlayer:Pause
-    summary: ''
-    description: ''
+    summary: |
+      Pauses the `Class.VideoPlayer` wherever its
+      `Class.VideoPlayer.TimePosition|TimePosition` is.
+    description: |
+      Pauses the `Class.VideoPlayer` wherever its
+      `Class.VideoPlayer.TimePosition|TimePosition` is. Replicates from server
+      to client.
     code_samples: []
     parameters: []
     returns:
@@ -258,8 +348,16 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: VideoPlayer:Play
-    summary: ''
-    description: ''
+    summary: |
+      Plays the `Class.VideoPlayer` from wherever its
+      `Class.VideoPlayer.TimePosition|TimePosition` is.
+    description: |
+      Plays the `Class.VideoPlayer` from wherever its
+      `Class.VideoPlayer.TimePosition|TimePosition` is. Replicates from server
+      to client. To save resources and improve performance, call the
+      `Class.VideoPlayer:Unload()|Unload()` method to unload the
+      `Class.VideoPlayer.VideoContent|VideoContent` when the `Class.VideoPlayer`
+      is not visible or in use.
     code_samples: []
     parameters: []
     returns:
@@ -271,8 +369,16 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: VideoPlayer:Unload
-    summary: ''
-    description: ''
+    summary: |
+      Unloads the `Class.VideoPlayer.VideoContent` to save resources.
+    description: |
+      Unloads the `Class.VideoPlayer.VideoContent|VideoContent` to save
+      resources. After calling this method, the
+      `Class.VideoPlayer.IsLoaded|IsLoaded` property is false, and the
+      `Class.VideoPlayer.TimePosition|TimePosition` resets to 0. To play the
+      video again, the `Class.VideoPlayer:LoadAsync()|LoadAsync()` or
+      `Class.VideoPlayer:Play()|Play()` method must be called to reload the
+      video.
     code_samples: []
     parameters: []
     returns:
@@ -285,8 +391,17 @@ methods:
     capabilities: []
 events:
   - name: VideoPlayer.DidEnd
-    summary: ''
-    description: ''
+    summary: |
+      Fires when the `Class.VideoPlayer.VideoContent|VideoContent` has completed
+      playback and stopped.
+    description: |
+      Fires after the `Class.VideoPlayer` has completed playback and stopped.
+      Note this event does **not** fire for videos with
+      `Class.VideoPlayer.Looped|Looped` set to `true` since it continues playing
+      upon reaching its end. This event also does **not** fire when the video is
+      stopped before playback has completed; for this, use
+      `Class.VideoPlayer:GetPropertyChangedSignal()` on the
+      `Class.VideoPlayer.IsPlaying|IsPlaying` property.
     code_samples: []
     parameters: []
     tags: []
@@ -294,8 +409,13 @@ events:
     security: None
     capabilities: []
   - name: VideoPlayer.DidLoop
-    summary: ''
-    description: ''
+    summary: |
+      Fires when the `Class.VideoPlayer.VideoContent|VideoContent` loops.
+    description: |
+      Event that fires after the `Class.VideoPlayer` loops. This happens when
+      the video reaches the end of its content. This event does **not** fire if
+      the video is looped manually by changing its
+      `Class.VideoPlayer.TimePosition|TimePosition`.
     code_samples: []
     parameters: []
     tags: []
@@ -316,26 +436,36 @@ events:
     security: None
     capabilities: []
   - name: VideoPlayer.WiringChanged
-    summary: ''
-    description: ''
+    summary: |
+      Fires when another instance is connected to or disconnected from the
+      `Class.VideoPlayer` via a `Class.Wire`.
+    description: |
+      Event that fires after a `Class.Wire` becomes connected or disconnected,
+      and that `Class.Wire` is now or was previously connected to a pin on the
+      `Class.VideoPlayer` and to some other wirable instance.
     code_samples: []
     parameters:
       - name: connected
         type: boolean
         default:
-        summary: ''
+        summary: |
+          Whether the instance was connected or disconnected.
       - name: pin
         type: string
         default:
-        summary: ''
+        summary: |
+          The pin on the `Class.VideoPlayer` that the `Class.Wire` targets.
       - name: wire
         type: Wire
         default:
-        summary: ''
+        summary: |
+          The `Class.Wire` between the `Class.VideoPlayer` and the other
+          instance.
       - name: instance
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The other instance that is or was connected through the `Class.Wire`.
     tags: []
     deprecation_message: ''
     security: None
