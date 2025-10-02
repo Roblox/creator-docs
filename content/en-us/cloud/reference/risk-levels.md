@@ -41,7 +41,7 @@ The "try it out" feature uses four risk levels, which control the warnings and r
       <td>&#9989;</td>
       <td>Yes (per endpoint, per session)</td>
       <td>Yes</td>
-      <td>No</td>
+      <td>Yes (after accepting second warning dialog)</td>
     </tr>
     <tr>
       <td>Critical</td>
@@ -60,6 +60,6 @@ The "try it out" feature uses four risk levels, which control the warnings and r
   - They display a confirmation dialog before you send a request. This dialog appears once per endpoint per browser session.
   - They show a warning banner to remind you of the risk level.
 
-- **High risk** endpoints can modify or delete private information in ways that may be difficult or impossible to reverse. This category includes most DELETE operations and other potentially destructive actions. In addition to the confirmation dialog and warning banner from medium risk endpoints, cookie authentication is not supported for these endpoints.
+- **High risk** endpoints can modify or delete private information in ways that may be difficult or impossible to reverse. This category includes most DELETE operations and other potentially destructive actions. In addition to the confirmation dialog and warning banner from medium risk endpoints, a second confirmation dialog is required to send the first request (enforced only per session, not per endpoint).
 
 - **Critical risk** endpoints access or modify highly sensitive data that could compromise account security or privacy. "Try it out" is disabled for these endpoints.

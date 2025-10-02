@@ -5,17 +5,24 @@
 name: WireframeHandleAdornment
 type: class
 memory_category: Instances
-summary: ''
-description: ''
-code_samples: []
+summary: Renders a wireframe adornment consisting of one or more lines onto a `Class.BasePart` (including `Class.Terrain`) or into the `Class.Workspace`.
+description: |-
+  `WireframeHandleAdornment` renders a wireframe adornment consisting of one or more lines onto a `Class.BasePart` (including `Class.Terrain`) or into the `Class.Workspace`. If parented to a player's `Class.PlayerGui` or the `Class.CoreGui`, this adornment can listen to input events for purposes such as making dragger tools.
+
+  Note that a `WireframeHandleAdornment` instance **begins empty** and you must add lines or paths to it through methods like `Class.WireframeHandleAdornment:AddLines()|AddLines()` or `Class.WireframeHandleAdornment:AddPath()|AddPath()`.
+
+  The rendered wireframe can be customized visually through its `Class.WireframeHandleAdornment.Thickness|Thickness`, `Class.WireframeHandleAdornment.Color3|Color3`, and `Class.WireframeHandleAdornment.Transparency|Transparency` properties, although these properties only affect subsequent draws and do not update lines already drawn into the adornment.
+code_samples:
+  - WireframeHandleAdornment-Basic-Path
+  - WireframeHandleAdornment-Multicolor
 inherits:
   - HandleAdornment
 tags: []
 deprecation_message: ''
 properties:
   - name: WireframeHandleAdornment.Scale
-    summary: ''
-    description: ''
+    summary: The **XYZ** scale of the wireframe adornment.
+    description: This property specifies the **XYZ** scale of the wireframe adornment as a `Datatype.Vector3`. For example, a scale of `Datatype.Vector3.new(1, 2, 1)` will scale the adornment twice its normal size on the **Y** axis while keeping the **X** and **Z** axes unchanged.
     code_samples: []
     type: Vector3
     tags: []
@@ -32,8 +39,8 @@ properties:
       - Basic
       - UI
   - name: WireframeHandleAdornment.Thickness
-    summary: ''
-    description: ''
+    summary: Thickness of the wireframe adornment's lines in pixels.
+    description: This property determines the thickness of the wireframe adornment's lines in pixels. Note that this visual thickness does not change relative to the adornment's distance from the viewer's camera.
     code_samples: []
     type: float
     tags: []
@@ -51,18 +58,22 @@ properties:
       - UI
 methods:
   - name: WireframeHandleAdornment:AddLine
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: Adds a line to the wireframe adornment from a starting point to an ending point relative to the center of the `Class.WireframeHandleAdornment.Adornee|Adornee`.
+    description: |-
+      This method adds a line to the wireframe adornment from a starting point to an ending point, both defined as a `Datatype.Vector3` relative to the center of the `Class.WireframeHandleAdornment.Adornee|Adornee`.
+
+      Note that you can make a multicolor wireframe by changing the adornment's `Class.WireframeHandleAdornment.Color3|Color3` property before new lines are drawn via `Class.WireframeHandleAdornment:AddLine()|AddLine()`, as demonstrated in the following code sample.
+    code_samples:
+      - WireframeHandleAdornment-Multicolor
     parameters:
       - name: from
         type: Vector3
         default:
-        summary: ''
+        summary: Starting point of the line.
       - name: to
         type: Vector3
         default:
-        summary: ''
+        summary: Ending point of the line.
     returns:
       - type: ()
         summary: ''
@@ -74,14 +85,18 @@ methods:
       - Basic
       - UI
   - name: WireframeHandleAdornment:AddLines
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: Adds one or more lines to the wireframe adornment using an array.
+    description: |-
+      This method adds one or more lines of the current `Class.WireframeHandleAdornment.Color3|Color3` color to the wireframe adornment using an array. Each pair of `Datatype.Vector3` points in the array acts as a starting point and ending point for a line, relative to the center of the `Class.WireframeHandleAdornment.Adornee|Adornee`.
+
+      Note that lines are rendered independently and their ending points are not connected to the starting point of any other line. To connect multiple line segments in a sequence from point to point, see `Class.WireframeHandleAdornment:AddPath()|AddPath()`.
+    code_samples:
+      - WireframeHandleAdornment-Lines-Array
     parameters:
       - name: points
         type: Array
         default:
-        summary: ''
+        summary: Array of `Datatype.Vector3` points in which each pair acts as a starting point and ending point for a line.
     returns:
       - type: ()
         summary: ''
@@ -93,18 +108,19 @@ methods:
       - Basic
       - UI
   - name: WireframeHandleAdornment:AddPath
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: Adds multiple line segments to the wireframe adornment in a sequence from point to point.
+    description: This method adds multiple line segments of the current `Class.WireframeHandleAdornment.Color3|Color3` color to the wireframe adornment in a sequence from point to point. The path can be closed (ending point connected to starting point) by setting the `loop` parameter to `true`.
+    code_samples:
+      - WireframeHandleAdornment-Basic-Path
     parameters:
       - name: points
         type: Array
         default:
-        summary: ''
+        summary: Array of `Datatype.Vector3` points to connect in sequence with line segments.
       - name: loop
         type: boolean
         default:
-        summary: ''
+        summary: Whether the path is closed by connecting its ending point to its starting point with an additional line.
     returns:
       - type: ()
         summary: ''
@@ -116,22 +132,22 @@ methods:
       - Basic
       - UI
   - name: WireframeHandleAdornment:AddText
-    summary: ''
-    description: ''
+    summary: Adds a text label to the wireframe adornment.
+    description: Adds a text label to the wireframe adornment at a `Datatype.Vector3` point relative to the center of the `Class.WireframeHandleAdornment.Adornee|Adornee`. You can adjust the size of the text through the `size` parameter, and the label renders in the current `Class.WireframeHandleAdornment.Color3|Color3` color.
     code_samples: []
     parameters:
       - name: point
         type: Vector3
         default:
-        summary: ''
+        summary: Position of the text in the adornment.
       - name: text
         type: string
         default:
-        summary: ''
+        summary: String to display.
       - name: size
         type: int
         default: 12
-        summary: ''
+        summary: Size of the text.
     returns:
       - type: ()
         summary: ''
@@ -143,8 +159,8 @@ methods:
       - Basic
       - UI
   - name: WireframeHandleAdornment:Clear
-    summary: ''
-    description: ''
+    summary: Instantly clears all lines and text in the wireframe adornment.
+    description: Instantly clears all lines and text in the wireframe adornment.
     code_samples: []
     parameters: []
     returns:
