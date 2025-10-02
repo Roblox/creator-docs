@@ -76,8 +76,16 @@ navigation:
         path: /art/emotes/export-settings
       - title: Import and configure in Studio
         path: /art/emotes/import
-
-
+  - title: Makeup (Beta)
+    section:
+      - title: Overview
+        path: /makeup/
+      - title: Specifications
+        path: /makeup/specifications
+      - title: Import into Studio
+        path: /makeup/import
+      - title: Face cage optimizations
+        path: /makeup/face-caging-best-practices
   - title: Publish
     section:
       - title: Overview
@@ -86,18 +94,20 @@ navigation:
         path: /marketplace/publish-to-marketplace
       - title: UGC Homestore
         path: /marketplace/homestore
-  - title: Studio tools
+  - title: Avatar Setup
+    section:
+      - title: Overview
+        path: /avatar-setup/
+      - title: Auto-setup
+        path: /avatar-setup/auto-setup
+      - title: Auto-setup requirements
+        path: /avatar-setup/auto-setup-requirements
+      - title: Preview and edit tools
+        path: /avatar-setup/tools
+  - title: More Studio tools
     section:
       - title: 3D Importer
         path: /art/modeling/3d-importer
-      - title: Avatar Setup
-        section:
-          - title: Overview
-            path: /avatar-setup/
-          - title: Auto-setup requirements
-            path: /avatar-setup/auto-setup-requirements
-          - title: Edit tools
-            path: /avatar-setup/tools
       - title: Accessory Fitting
         path: /art/accessories/accessory-fitting-tool
       - title: Automatic Skinning Transfer

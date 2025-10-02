@@ -7,53 +7,15 @@ description: The Avatar Setup tool previews animations, clothing, accessories, a
 Auto-setup is currently in [active development](https://devforum.roblox.com/t/avatar-auto-setup-now-supports-clothing-and-accessories/3709128) with many improvements on the roadmap. Note that some inputs might work better than others and your results can vary over time as additional training and improvements are made.
 </Alert>
 
-The **Avatar Setup** tool's **auto-setup** feature is an automatic process to convert 3D models into avatar characters, accessories, or layered clothing. Auto-setup analyzes your model, checks for components, and converts it to the correct avatar item object for publishing on the Marketplace or for use in experiences.
-
-<Alert severity = 'info'>
-If the selected model already contains all the required components for a Roblox avatar, the **Avatar Setup** tool skips auto-setup and immediately opens the selected model in the [test interface](./index.md#test-and-edit).
-</Alert>
-
-To prevent errors and achieve the best auto-setup results, make sure your asset is a [supported input](#supported-asset-types) and the base mesh follow the appropriate auto-setup requirements for the intended asset type.
-
-## Supported asset types
-
-Auto-setup supports the conversion of following asset types from a base `Class.Model`:
-
-<figure>
-<table><thead>
-  <tr>
-    <th>Asset type</th>
-    <th>Input object</th>
-    <th>Output object</th>
-  </tr></thead>
-<tbody>
-  <tr>
-    <td>Avatar body</td>
-    <td>`Class.Model` containing one or more `Class.MeshPart` objects that meets auto-setup's supported [body inputs](#body).</td>
-    <td>`Class.Model` parenting associated 15 `Class.MeshPart` objects and other expected [avatar components](../art/characters/index.md#components-of-an-avatar).</td>
-  </tr>
-  <tr>
-    <td>Accessory</td>
-    <td>`Class.Model` containing one or more `Class.MeshPart` objects that meet's auto-setup's supported [accessory inputs](#accessories-and-clothing). <br /> <br />Must [bundle](#bundle-multiple-assets) with an avatar body `Class.Model` for auto-setup.</td>
-    <td>`Class.Accessory` that includes all expected [rigid accessory components](../art/accessories/index.md#components-of-a-rigid-accessory).</td>
-  </tr>
-  <tr>
-    <td>Layered clothing</td>
-    <td>`Class.Model` containing one or more `Class.MeshPart` objects that meet's auto-setup's supported [accessory inputs](#accessories-and-clothing). <br /> <br />Must [bundle](#bundle-multiple-assets) with an avatar body `Class.Model` for auto-setup.</td>
-    <td>`Class.Accessory` that includes all expected [layered accessory components](../art/accessories/layered-clothing.md#components-of-a-layered-clothing-accessory).</td>
-  </tr>
-  <tr>
-    <td>Multiple accessories and clothing with single body</td>
-    <td>`Class.Folder` containing one or more `Class.Model` that meet supported inputs for accessories, clothing, or body. <br /> <br />Must [bundle](#bundle-multiple-assets) with an avatar body `Class.Model` for auto-setup.</td>
-    <td>`Class.Model` character body and any `Class.Accessory` equipable items. <br /> <br />All generated assets include expected avatar item components.</td>
-  </tr>
-</tbody>
-</table>
-</figure>
+[Auto-setup](./auto-setup.md) supports the automatic conversion of basic custom models to Roblox-ready bodies, rigid accessories, and layered clothing. By [bundling](#bundle-multiple-assets) your models together, you can automatically setup multiple custom models into avatar items for use in-experience or for upload to the Marketplace.
 
 ### Body
 
-At this time, every auto-setup submission must include a base body. If converting accessories or clothing, you must [bundle](#bundle-multiple-assets) them with a base body for fitting.
+Auto-setup can attempt to process a 3D model into a Roblox-ready character model. This is one of the most common use-cases for auto-setup and can help you save time by automating the rigging, caging, and other configurations required to make a Roblox-ready avatar character.
+
+At this time, avatar assets like [rigid accessories](#accessories) and [layered clothing](#layered-clothing) may require processing with a base body. Auto-setup is able to use this base body as a mannequin, creating more accurate attachment points and other components to ensure a better fit. If converting accessories or clothing, you must [bundle](#bundle-multiple-assets) them with a base body for fitting.
+
+#### Supported inputs
 
 Auto-setup detects the following partial avatar body inputs:
 
@@ -73,11 +35,11 @@ Auto-setup detects the following partial avatar body inputs:
   </tr>
   <tr>
     <td><img src="../assets/avatar/avatar-setup/Partial-Inputs-Head-Rigged.png"/><br /></td>
-    <td><Alert severity = "error">A single or multiple mesh with **only facial rigging**.</Alert>At this time, auto-setup does not support cases where only a facial rig is present with the input model. <br /> <br /> If you intend to use your own custom facial rigging, you must also include an R15 rig and set the FaceRootJoint (and all child bones) as a child of the R15 head joint. For more information, see [optional rig requirements](#optional-rig-requirements). </td>
+    <td><Alert severity = "success">A multiple mesh with **only facial rigging**.</Alert> <br /> <br /> If you intend to use your own custom facial rigging, set the FaceRootJoint (and all child bones) as a child of the R15 head joint. For more information, see [optional rig requirements](#optional-rig-requirements). </td>
   </tr>
   <tr>
     <td><img src="../assets/avatar/avatar-setup/Partial-Inputs-All-Rigged.png"/><br /></td>
-    <td><Alert severity = "success">A single mesh body with **both body and facial rigging**.</Alert>If the body rig, facial rig, and appropriate FACS data is included, auto-setup preserves that data and only generates the missing Roblox-specific components. **Bodies comprised of multiple meshes are not supported for this input.**<br /><br />For more information, see [optional rig requirements](#optional-rig-requirements).</td>
+    <td><Alert severity = "success">A **single mesh** body with **both body and facial rigging**.</Alert>If the body rig, facial rig, and appropriate FACS data is included, auto-setup preserves that data and only generates the missing Roblox-specific components. **Bodies comprised of multiple meshes are not supported for this input.**<br /><br />For more information, see [optional rig requirements](#optional-rig-requirements).</td>
   </tr>
 </tbody></table>
 
@@ -247,7 +209,7 @@ The following are common examples of bodies that may not yield expected results 
 ### Accessories
 
 <Alert severity = 'warning'>
-At this time, you must [bundle](#bundle-multiple-assets) your accessory and clothing models with a base body to utilize auto-setup.
+At this time, you must [bundle](#bundle-multiple-assets) your accessory and clothing models with a base body to utilize auto-setup. For more information, see [supported inputs](#supported-inputs-1).
 </Alert>
 
 Auto-setup can convert models into rigid accessories, configuring the scale type and attachment components required for rigid accessories.
@@ -262,23 +224,91 @@ During this process, you will be able to designate individual meshes or models a
 
 For best results, ensure your models adhere to Roblox's [accessory geometry specifications](../art/accessories/specifications.md#geometry-and-budgets).
 
+#### Supported inputs
+
+Rigid accessory meshes must be bundled with a body for auto-setup to configure. See the following supported inputs for rigid accessory meshes.
+
+<table><thead>
+  <tr>
+    <th>Input object</th>
+    <th>Auto setup generates</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>
+    <ul>
+      <li>`Folder` [bundle](#bundle-multiple-assets) containing:</li>
+      <ul>
+        <li>`Class.Model` containing fully or partially configured character body </li>
+        <li>`Class.Model` containing accessory mesh object (this is the object created when importing a custom 3D object)</li>
+      </ul>
+    </ul>
+    </td>
+    <td>`Class.Accessory` containing clothing mesh, `BodyPartScaleType`, and attachment points</td>
+  </tr>
+</tbody>
+</table>
+
 ### Layered clothing
 
-<Alert severity = 'warning'>
-At this time, you must [bundle](#bundle) your accessory and clothing models with a base body to utilize auto-setup.
-</Alert>
-
-Auto-setup can convert models into clothing accessories, adding in rigging and caging data that normally requires manual configuration.
+Auto-setup can convert models into clothing accessories, adding in rigging and caging data that normally requires manual configuration in a separate software.
 
 To convert a mesh model into an accessory using auto-setup:
 
 1. Fit the model onto a base body in Studio or your 3D modeling software.
-2. [Bundle](#bundle-multiple-assets) the assets together in a single `Class.Folder`.
-3. Use **Avatar Setup** to use auto-setup on your assets.
+2. (Optional - for best results) [Bundle](#bundle-multiple-assets) the assets together in a single `Class.Folder`.
+3. Use Avatar Setup to use auto-setup on your assets.
 
 During this process, you will be able to designate individual meshes or models as rigid accessories, layered accessories, or body parts. After conversion, a prompt displays allowing you to select the specific **Asset Type**.
 
 For best results, ensure your models adhere to Roblox's [layered clothing geometry specifications](../art/accessories/clothing-specifications.md#geometry-and-budgets).
+
+#### Supported inputs
+
+Auto-setup can configure clothing models to a layered clothing `Class.Accessory` complete with caging and rigging data. While auto-setup can configure models without a bundled body, you may find better results if you include a base body for setup.
+
+<table><thead>
+  <tr>
+    <th>Input object</th>
+    <th>Auto setup generates</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>`Class.Model` containing clothing mesh object with no additional components (this is the object created when importing a custom 3D object)   </td>
+    <td>
+        <ul>
+          <li>`Class.Accessory` containing clothing mesh and the following generated components:</li>
+          <ul>
+            <li>Inner and outer cage data</li>
+            <li>Attachment points</li>
+          </ul>
+        </ul>
+    <Alert severity = 'warning'>Without an accompanying body asset, auto setup makes a best effort for generating cage data.</Alert>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    <ul>
+      <li>`Folder` [bundle](#bundle-multiple-assets) containing:</li>
+      <ul>
+        <li>`Class.Model` containing fully or partially configured character body </li>
+        <li>`Class.Model` containing accessory mesh object (this is the object created when importing a custom 3D object)</li>
+      </ul>
+    </ul>
+    </td>
+    <td>
+        <ul>
+          <li>`Class.Accessory` containing clothing mesh and the following generated components:</li>
+          <ul>
+            <li>Inner and outer cage data</li>
+            <li>Attachment points</li>
+          </ul>
+        </ul>
+    </td>
+  </tr>
+
+</tbody>
+</table>
 
 ## Bundle multiple assets
 
@@ -298,55 +328,3 @@ To quickly parent your objects to folder:
 <Alert severity = 'warning'>
 At this time, you must bundle your accessory and clothing models with a base body to utilize auto-setup.
 </Alert>
-
-## Reference models
-
-Studio supports `.gltf`, `.fbx`, and `.obj` models using the 3D Importer. If you are exporting your model from a third-party tool, see [Export Settings](../art/characters/export-settings.md) for export configurations.
-
-For an asset that meets all of these model requirements, download one of the following auto-setup templates for your own reference and testing:
-
-<Grid container alignItems='stretch' style={{margin: -6}}>
-
-<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
-<Card style={{height: '100%'}}>
-<CardContent>
-
-<center>Nature Girl - Auto-Setup</center>
-<figure>
-<center> <img src="../assets/art/resources/Archer-Girl-Preview.png" width="100%" /> </center>
-</figure>
-<figure>
-A comprehensive `.zip` folder of an [Avatar auto-setup](./auto-setup-requirements.md) ready character model, including clothing and rigid accessory assets and PBR texture assets. <br /> <br />
-This auto-setup template is not compatible with the traditional avatar creation workflow.
-</figure>
-</CardContent>
-
-<CardActions style={{bottom: 0, width: '100%'}}>
-<Button href="../assets/art/reference-files/NatureArcherGirl-AutoSetup.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
-</CardActions>
-
-</Card>
-</Grid>
-
-<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
-<Card style={{height: '100%'}}>
-<CardContent>
-
-<center>Stylish Male - Auto-Setup</center>
-<figure>
-<center> <img src="../assets/art/resources/StylizedMale-Preview.png" width="100%" /> </center>
-</figure>
-<figure>
-A comprehensive `.zip` folder of an [Avatar auto-setup](./index.md) ready character model, including the base body and associated PBR textures. <br /> <br />
-This auto-setup template is not compatible with the traditional avatar creation workflow.
-</figure>
-</CardContent>
-
-<CardActions style={{bottom: 0, width: '100%'}}>
-<Button href="../assets/art/reference-files/StylizedMale-AutoSetup.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
-</CardActions>
-
-</Card>
-</Grid>
-
-</Grid> <br /> <br />

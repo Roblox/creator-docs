@@ -121,9 +121,13 @@ https://gameuidatabase.com/
 https://gdpr-info.eu/
 https://gdpr-info.eu/art-17-gdpr/
 https://gdpr.eu/right-to-be-forgotten/
+https://www.adobe.com/products/substance3d/apps/painter.html
+https://extensions.blender.org/add-ons/ucupaint/
+http://boundingboxsoftware.com/materialize/index.php
 https://github.com/
 https://github.com/Elttob/Fusion
 https://github.com/Roblox/StudioWidgets
+https://github.com/Roblox/avatar/tree/main/Makeup
 https://github.com/Roblox/creator-docs
 https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/cloud.docs.json
 https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/openapi.json
@@ -431,6 +435,7 @@ https://www.wizkidlearning.com/
 https://www.wowschool.pl/
 https://www.youthtechinc.com/
 https://www.youtube.com/@RobloxLearn
+https://www.youtube-nocookie.com/embed/Hp9pr2FpZa8
 https://www.youtube.com/@RobloxLearn/streams
 https://www.youtube-nocookie.com/embed/V1uFFUUCLpo
 https://www.youtube-nocookie.com/embed/2My8jE47clI
