@@ -3216,6 +3216,11 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/Wire.yaml
                 ignoreTranslation: true
+              - title: WrapTextureTransfer
+                path: /reference/engine/classes/WrapTextureTransfer
+                type: engineapi
+                source: /reference/engine/classes/WrapTextureTransfer.yaml
+                ignoreTranslation: true
           - title: MLSession
             path: /reference/engine/classes/MLSession
             type: engineapi
