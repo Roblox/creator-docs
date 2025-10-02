@@ -314,7 +314,9 @@ methods:
       and matches the selection box rendered in Studio when the model is
       selected. Mirroring the behavior of `Class.Terrain:FillBlock()`, it
       returns a `Datatype.CFrame` representing the center of that bounding box
-      and a `Datatype.Vector3` representing its size.
+      and a `Datatype.Vector3` representing its size. The size may be inaccurate
+      at runtime if physics constraints are acting upon the parts within the
+      `Class.Model`.
 
       If there is no `Class.Model.PrimaryPart|PrimaryPart` for the model, the
       bounding box will be aligned to the world axes.

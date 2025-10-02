@@ -293,7 +293,7 @@ When modifying or adding translations with file upload, the following behavior a
     <td>Source string removed</td>
     <td>No change - entry will not be deleted. <br /><br />To delete an entry through `.csv`, either: <br />
      — In Creator Hub, use **Delete Table** and then **Upload CSV**.<br />
-     — In Studio, use **Advanced** > **Replace** in the Cloud Localization Table section.</td>
+     — In Studio, use **Advanced** ⟩ **Replace** in the Cloud Localization Table section.</td>
   </tr>
 </tbody>
 </table>

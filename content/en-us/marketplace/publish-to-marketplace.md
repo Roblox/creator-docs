@@ -67,7 +67,7 @@ To upload your asset:
      - If uploading shoes, each shoe must be their own accessory object:
 
        - Name the respective shoe accessories `LeftShoeAccessory` and `RightShoeAccessory`.
-       - Select both left and right shoe accessories and right-click > **Group as a Model** before step 2.
+       - Select both left and right shoe accessories and right-click ⟩ **Group as a Model** before step 2.
 
      - For bodies and heads, the item must be a `Class.Model`. For information on the required specifications, see [Avatar character specifications](../art/characters/specifications.md).
        - You can add a default skin color to your body by adding a `Class.BodyColors` object to your model.

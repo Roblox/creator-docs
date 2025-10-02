@@ -127,7 +127,7 @@ methods:
       <td>Any experience that is available in China.</td>
       <td>When <code>true</code>, an experience should enforce compliance changes. See <a href="https://devforum.roblox.com/t/new-programs-available-roblox-china-licensed-to-operate/1023361">this forum post</a> for more information.</td>
       </tr>
-       	</tbody>
+        </tbody>
       </table>
 
       ##### Exceptions

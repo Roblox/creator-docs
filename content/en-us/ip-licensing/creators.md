@@ -42,7 +42,7 @@ To apply to use an IP license in your experience:
 
 ## View license agreements
 
-To view all of your offers and license agreements, go to **Intellectual Property** > **Licenses**. You can filter all license agreements by:
+To view all of your offers and license agreements, go to **Intellectual Property** ⟩ **Licenses**. You can filter all license agreements by:
 
 <table>
 <thead>
@@ -88,7 +88,7 @@ After you receive an offer, you can review the offer details and either:
 
 To dispute a license offer:
 
-1. Go to **Intellectual Property** > **Licenses**.
+1. Go to **Intellectual Property** ⟩ **Licenses**.
 2. Select the license offer you want to dispute.
 3. Under **Actions you can take**, click **dispute this license**.
 4. In the dispute modal, select one of the following reasons for the dispute:

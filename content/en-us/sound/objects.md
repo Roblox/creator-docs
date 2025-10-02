@@ -4,7 +4,7 @@ description: Sound objects are legacy instances that emit sound within an experi
 ---
 
 <Alert severity = 'warning'>
-There is a newer set of [Audio objects](../audio/objects.md) that offer more control and address robust use cases. For more information, see [Audio](../audio/index.md).
+There is a newer set of [audio objects](../audio/objects.md) that offer more control and address robust use cases. For more information, see [Audio](../audio/index.md).
 </Alert>
 
 Audio playback occurs through `Class.Sound` objects which emit audio within an experience. Roblox assigns each [audio asset](../audio/assets.md) a unique ID that you can assign to `Class.Sound` objects to play a specific sound effect or music track. You can either set this audio to play automatically at runtime, or trigger it to [play from scripts](#script-sound-objects).

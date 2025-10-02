@@ -133,7 +133,7 @@ Reward banners encourage users to invite connections to join your experience by 
 To create a customized reward banner:
 
 1. In the Creator Hub, go to **Creations** and select the experience that you have set up a referral event for.
-2. Go to **Engagement** > **Referral Rewards**.
+2. Go to **Engagement** ⟩ **Referral Rewards**.
 3. Click **Add Reward Details**.
 4. In the **Referral Rewards** page:
     1. Replace the default icon with an image that represents your experience.

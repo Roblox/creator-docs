@@ -41,7 +41,7 @@ Here are some sample music IDs you can use:
 
 Background music can be played in a game through a script.
 
-1. In **StarterPlayer** > **StarterPlayerScripts**, create a **LocalScript** named **MusicPlayer**.
+1. In **StarterPlayer** ⟩ **StarterPlayerScripts**, create a **LocalScript** named **MusicPlayer**.
 
    ![alt](../../../assets/tutorials/playing-background-music/playingBGMusic_pressPreview.png)
 

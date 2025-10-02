@@ -57,9 +57,9 @@ items:
     value: 6
     tags: []
     deprecation_message: ''
-  - name: PhysicsParts
+  - name: BaseParts
     summary: |
-      Physics bodies and the components that control their behavior.
+      3D parts used for simulation.
     value: 7
     tags: []
     deprecation_message: ''

@@ -50,6 +50,7 @@ properties:
     type: boolean
     tags:
       - Hidden
+      - Deprecated
     deprecation_message: ''
     security:
       read: None
@@ -86,6 +87,7 @@ properties:
     type: Vector3
     tags:
       - Hidden
+      - Deprecated
     deprecation_message: ''
     security:
       read: None

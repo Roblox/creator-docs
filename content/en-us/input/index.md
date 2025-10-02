@@ -23,56 +23,38 @@ For example, a touch‑enabled device assumes touch is the default input and tha
 
 <Tabs>
 <TabItem label="Behavior">
-The behavior of `Class.UserInputService.PreferredInput|PreferredInput` is summarized in the following table. Its value changes based on the value of legacy `Class.UserInputService` properties such as `Class.UserInputService.KeyboardEnabled|KeyboardEnabled`, `Class.UserInputService.GamepadEnabled|GamepadEnabled`, and `Class.UserInputService.TouchEnabled|TouchEnabled`, as well as the player's most recent interaction with a connected gamepad or keyboard/mouse.
+The value of `Class.UserInputService.PreferredInput|PreferredInput` changes based on built‑in device inputs and the player's most recent interaction with a connected gamepad or keyboard/mouse. Examples include:
 
 <table>
 	<thead>
 		<tr>
-			<th>`Class.UserInputService.KeyboardEnabled|KeyboardEnabled`;<br />`Class.UserInputService.GamepadEnabled|GamepadEnabled`;<br />`Class.UserInputService.TouchEnabled|TouchEnabled`</th>
-			<th>Most Recent Interaction</th>
+			<th>Real-World Scenario</th>
 			<th>`PreferredInput`</th>
-			<th>Example</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<td>`false`;&nbsp; `false`;&nbsp; `true`</td>
-			<td>(don't&nbsp;care)</td>
+			<td>Player is using a phone with no other connected input devices; no possibility of an input type change.</td>
 			<td>`Enum.PreferredInput|Touch`</td>
-			<td>⒜</td>
 		</tr>
 		<tr>
-			<td>`true`;&nbsp; `false`;&nbsp; (don't&nbsp;care)</td>
-			<td>(don't&nbsp;care)</td>
+			<td>Player is using a mobile device with a bluetooth keyboard & mouse connected, but no gamepad is connected.</td>
 			<td>`Enum.PreferredInput|KeyboardAndMouse`</td>
-			<td>⒝</td>
 		</tr>
 		<tr>
-			<td>`false`;&nbsp; `true`;&nbsp; (don't&nbsp;care)</td>
-			<td>(don't&nbsp;care)</td>
+			<td>Player is using a tablet with a bluetooth gamepad connected, but no keyboard or mouse is connected.</td>
 			<td>`Enum.PreferredInput|Gamepad`</td>
-			<td>⒞</td>
 		</tr>
 		<tr>
-			<td>`true`;&nbsp; `true`;&nbsp; (don't&nbsp;care)</td>
-			<td>Keyboard or Mouse</td>
+			<td>Player is using an Xbox or PlayStation with a bluetooth keyboard & mouse connected and has most recently interacted with the keyboard or mouse.</td>
 			<td>`Enum.PreferredInput|KeyboardAndMouse`</td>
-			<td>⒟</td>
 		</tr>
 		<tr>
-			<td>`true`;&nbsp; `true`;&nbsp; (don't&nbsp;care)</td>
-			<td>Gamepad</td>
+			<td>Player is on a Windows or Mac PC with a gamepad connected and has most recently interacted with the gamepad.</td>
 			<td>`Enum.PreferredInput|Gamepad`</td>
-			<td>⒠</td>
 		</tr>
 	</tbody>
 </table>
-
-<figcaption>⒜ Phone with no other connected input devices; no possibility of an input type change</figcaption>
-<figcaption>⒝ Mobile device with bluetooth keyboard and mouse connected, but no connected gamepad</figcaption>
-<figcaption>⒞ Tablet with a gamepad connected, but no connected mouse/keyboard</figcaption>
-<figcaption>⒟ Xbox or PlayStation with a bluetooth keyboard/mouse connected, and keyboard or mouse most recently interacted with</figcaption>
-<figcaption>⒠ Windows or Mac with a gamepad connected, and gamepad most recently interacted with</figcaption><br />
 </TabItem>
 <TabItem label="Benefits">
 Importantly, the `Class.UserInputService.PreferredInput|PreferredInput` property overcomes the following issues related to `Class.UserInputService.TouchEnabled` and `Class.UserInputService:GetLastInputType()`, both traditionally used to detect input types.

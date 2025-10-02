@@ -81,8 +81,8 @@ In the [Creator Dashboard](https://create.roblox.com/), you can connect your Rob
 At this time, due to the link between the Shopify store and a Roblox account, Roblox group ownership transfer is not allowed for a group that owns any commerce items.
 </Alert>
 
-1. Navigate to your experience in the [Creator Dashboard](https://create.roblox.com/) and select **Monetization Products** > **Commerce**.
-2. Click **Go to Imported Catalog** > **Start Importing**.
+1. Navigate to your experience in the [Creator Dashboard](https://create.roblox.com/) and select **Monetization Products** ⟩ **Commerce**.
+2. Click **Go to Imported Catalog** ⟩ **Start Importing**.
 3. Click **Connect**.
 4. Install the Roblox sales channel onto your store.
 5. Connect your Roblox account. Click **Next**.
@@ -118,7 +118,7 @@ You cannot create an avatar item type digital benefit while creating the commerc
 
 To create a commerce product:
 
-1.  Navigate to your experience in the Creator Dashboard and select **Monetization Products** > **Commerce**.
+1.  Navigate to your experience in the Creator Dashboard and select **Monetization Products** ⟩ **Commerce**.
 2.  Click **Start Creating** or **Create Products**.
 3.  Select which imported catalog items you want to include in your commerce products and click **Next**.
     1. If you do not see a **Next** button, your experience is not eligible to create bundles with digital benefits. Skip to step 4.

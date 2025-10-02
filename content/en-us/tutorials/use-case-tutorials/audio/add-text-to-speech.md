@@ -107,7 +107,7 @@ To recreate the basic 3D TTS audio in the sample [Gingerbread House - Text-to-Sp
    1. In the **Properties** window, set **DefaultListenerLocation** to **Character**. When you run the experience, the engine automatically:
       - Creates a `Class.AudioListener` under each player character's `Class.Humanoid.RootPart` so that you can hear sounds shift in your real-world speakers according to the position and scale of sound sources within the experience.
       - Creates an `Class.AudioDeviceOutput` under **SoundService**.
-1. In the **Explorer** window, navigate to **Workspace** > **DialogueVolume**, then:
+1. In the **Explorer** window, navigate to **Workspace** ⟩ **DialogueVolume**, then:
    1. Insert an **AudioTextToSpeech** object to create an audio speech generator for the volume around the snowman.
    1. Insert an **AudioEmitter** object to emit a positional stream from **DialogueVolume**.
    1. Insert a **Wire** object to carry the stream from the audio speech generator to the audio emitter.
@@ -118,7 +118,7 @@ To recreate the basic 3D TTS audio in the sample [Gingerbread House - Text-to-Sp
 1. Select the **Wire**, then in the **Properties** window:
    1. Set **SourceInstance** to your new **AudioTextToSpeech** to specify that you want the wire to carry audio from this specific audio speech generator.
    1. Set **TargetInstance** to your new **AudioEmitter** to specify that you want the wire to carry audio to this specific audio emitter within the volume.
-1. Back in the **Explorer** window, navigate to **StarterPlayer** > **StarterCharacterScripts**, then insert a **LocalScript**, rename it **PlayBasicTTSAudioWhenInVolume**, and paste the following code into the local script:
+1. Back in the **Explorer** window, navigate to **StarterPlayer** ⟩ **StarterCharacterScripts**, then insert a **LocalScript**, rename it **PlayBasicTTSAudioWhenInVolume**, and paste the following code into the local script:
 
   ``` lua
   local Workspace = game:GetService("Workspace")
@@ -237,7 +237,7 @@ While there are many ways to accomplish this task, the sample uses custom attrib
 
 To recreate the context-aware 3D TTS audio in the sample [Gingerbread House - Text-to-Speech](https://www.roblox.com/games/129041658365712/Gingerbread-House-Text-to-Speech) place file:
 
-1. In the **Explorer** window, navigate to **Workspace** > **GumDrops**.
+1. In the **Explorer** window, navigate to **Workspace** ⟩ **GumDrops**.
 1. Configure three custom attributes to track the yellow gumdrop.
    1. Select the yellow gumdrop, then in the **Properties** window, navigate to the **Attributes** section, then click the plus icon. A pop-up dialog displays.
    1. In the **Name** field, input **ColorDescription**.
@@ -330,14 +330,14 @@ To recreate the context-aware 3D TTS audio in the sample [Gingerbread House - Te
    </tbody>
    </table>
 
-1. In the **Explorer** window, navigate to **Workspace** > **HintVolume**, then:
+1. In the **Explorer** window, navigate to **Workspace** ⟩ **HintVolume**, then:
    1. Insert an **AudioTextToSpeech** object to create an audio speech generator for the volume around the reindeer.
    1. Insert an **AudioEmitter** object to emit a positional stream from **HintVolume**.
    1. Insert a **Wire** object to carry the stream from the audio speech generator to the audio emitter.
 1. Select the **Wire**, then in the **Properties** window:
    1. Set **SourceInstance** to your new **AudioTextToSpeech** to specify that you want the wire to carry audio from this specific audio speech generator.
    1. Set **TargetInstance** to your new **AudioEmitter** to specify that you want the wire to carry audio to this specific audio emitter within the volume.
-1. Back in the **Explorer** window, navigate to **StarterPlayer** > **StarterCharacterScripts**, then insert a **LocalScript**, rename it **PlayContextTTSAudioWhenInVolume**, and paste the following code into the local script:
+1. Back in the **Explorer** window, navigate to **StarterPlayer** ⟩ **StarterCharacterScripts**, then insert a **LocalScript**, rename it **PlayContextTTSAudioWhenInVolume**, and paste the following code into the local script:
 
   ``` lua
   local Workspace = game:GetService("Workspace")

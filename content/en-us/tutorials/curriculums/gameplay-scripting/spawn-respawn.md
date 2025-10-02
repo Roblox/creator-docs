@@ -42,7 +42,7 @@ To combat this problem, the sample laser tag experience configures both spawn lo
 The `Class.SpawnLocation.TeamColor` property is different from the `Class.SpawnLocation.BrickColor` and `Class.SpawnLocation.Color` properties which represent the visual color of the spawn object and are not related to team functionality.
 </Alert>
 
-When a player joins the experience, **ServerScriptService** > **Gameplay** > **Rounds** > **spawnPlayersInMap** checks to see how many players are already on each team, then returns the team with the least amount of players.
+When a player joins the experience, **ServerScriptService** ⟩ **Gameplay** ⟩ **Rounds** ⟩ **spawnPlayersInMap** checks to see how many players are already on each team, then returns the team with the least amount of players.
 
 ```lua title="spawnPlayersInMap"
 local function getSmallestTeam(): Team
@@ -73,7 +73,7 @@ local function spawnPlayersInMap(players: { Player })
 end
 ```
 
-If you examine **Workspace** > **World** > **Map** > **Spawns**, you can see that there is one more spawn location in the map: **NeutralSpawn**. This spawn location is unique from the others because it doesn't have a `Class.SpawnLocation.TeamColor|TeamColor` property set to one of the two teams in the experience; instead, this spawn location has a `Class.SpawnLocation.Neutral|Neutral` property that changes depending on if a round is active.
+If you examine **Workspace** ⟩ **World** ⟩ **Map** ⟩ **Spawns**, you can see that there is one more spawn location in the map: **NeutralSpawn**. This spawn location is unique from the others because it doesn't have a `Class.SpawnLocation.TeamColor|TeamColor` property set to one of the two teams in the experience; instead, this spawn location has a `Class.SpawnLocation.Neutral|Neutral` property that changes depending on if a round is active.
 
 For example, if the round is active, the `Class.SpawnLocation.Neutral|Neutral` property sets to **false** so **spawnPlayersInMap** can sort players into teams and spawn them into the arena. However, if the round isn't active, such as the time between one round and the next, the `Class.SpawnLocation.Neutral|Neutral` property sets to **true** so players can spawn there regardless of their team status. This process is what makes the **Neutral** spawn location a functional lobby.
 
@@ -82,7 +82,7 @@ For example, if the round is active, the `Class.SpawnLocation.Neutral|Neutral` p
    <figcaption>Neutral</figcaption>
 </figure>
 
-To demonstrate, if you examine **ServerScriptService** > **Gameplay** > **Rounds** > **SpawnPlayersInLobby**, which runs at the end of a round, you can see that for every player that is passed into the `players: { Player }` table, the script:
+To demonstrate, if you examine **ServerScriptService** ⟩ **Gameplay** ⟩ **Rounds** ⟩ **SpawnPlayersInLobby**, which runs at the end of a round, you can see that for every player that is passed into the `players: { Player }` table, the script:
 
 - Sets their `Class.Player.Neutral` property to true to automatically reset their `Class.Player.Team` to `nil`, allowing the player to respawn in the lobby when a round isn't active, as the spawn location's `Class.SpawnLocation.Neutral|Neutral` property is also set to **true**.
 - Changes their `PlayerState` to `InLobby` to remove the player's blaster and first-person UI visuals.
@@ -109,12 +109,12 @@ Luau code in Studio is often event-driven, meaning that scripts listen for event
 
 <img src="../../../assets/tutorials/gameplay-scripting/Spawn-Respawn/Find-All.png" alt="Studio's Find All window with the Players.PlayerAdded results highlighted." width="80%"/>
 
-To demonstrate, open **ServerScriptService** > **SetupHumanoid**. The distinction between `Class.Player` and `Class.Player.Character|Character` is key to understanding this script:
+To demonstrate, open **ServerScriptService** ⟩ **SetupHumanoid**. The distinction between `Class.Player` and `Class.Player.Character|Character` is key to understanding this script:
 
 - A **player** is a connected client, and a **character** is a `Class.Humanoid` model.
 - Players need to choose a blaster and be added to the leaderboard. Characters need to spawn and receive a blaster.
 
-`SetupHumanoid` immediately checks if the player has a character (just joined) or doesn't (is respawning). After it finds one, it calls `onCharacterAdded()`, gets the `Class.Humanoid` model from the character, and passes it to **ServerScriptService** > **SetupHumanoid** > **setupHumanoidAsync** for customization. After setting these values, the script then waits for the character's health to reach zero. You will learn more about respawning later in this section of the tutorial.
+`SetupHumanoid` immediately checks if the player has a character (just joined) or doesn't (is respawning). After it finds one, it calls `onCharacterAdded()`, gets the `Class.Humanoid` model from the character, and passes it to **ServerScriptService** ⟩ **SetupHumanoid** ⟩ **setupHumanoidAsync** for customization. After setting these values, the script then waits for the character's health to reach zero. You will learn more about respawning later in this section of the tutorial.
 
 ```lua title="setupHumanoidAsync"
 local function setupHumanoidAsync(player: Player, humanoid: Humanoid)
@@ -145,7 +145,7 @@ If you change the values of these properties, it's important to playtest so that
 Try changing some of these values and playtesting with multiple players to see how they affect the gameplay of the experience. For instance, how might player strategy change if you chose to hide the health display?
 </Alert>
 
-Another example of the `Players.PlayerAdded:Connect` event is in **ServerScriptService** > **PlayerStateHandler**. Just like in the previous example, `PlayerStateHandler` immediately checks for a character. If the player isn't in the lobby, the script sets a player attribute to the `SelectingBlaster` state, the initial state for a round in which players can select from one of two different blaster types after spawning into the arena. This state also includes a force field that prevents players from taking damage while they're making their selection.
+Another example of the `Players.PlayerAdded:Connect` event is in **ServerScriptService** ⟩ **PlayerStateHandler**. Just like in the previous example, `PlayerStateHandler` immediately checks for a character. If the player isn't in the lobby, the script sets a player attribute to the `SelectingBlaster` state, the initial state for a round in which players can select from one of two different blaster types after spawning into the arena. This state also includes a force field that prevents players from taking damage while they're making their selection.
 
 ```lua title="PlayerStateHandler"
 local function onPlayerAdded(player: Player)
@@ -197,13 +197,13 @@ local function onPlayerStateChanged(player: Player, newPlayerState: string)
 end
 ```
 
-If you add breakpoints or even just a `print()` statement, you can see that `onPlayerStateChanged()` gets called frequently throughout the experience: such as during initial setup of a round, to set itself on the main code path, after the player chooses a blaster, and when the player returns to the lobby, or the **Neutral** spawn location. Furthermore, after the player chooses a blaster, **ServerScriptService** > **BlasterSelectedHandler** sets the `PlayerState` to `Playing`, and `PlayerStateHandler` can finally remove the force field by calling `scheduleDestroyForceField()`.
+If you add breakpoints or even just a `print()` statement, you can see that `onPlayerStateChanged()` gets called frequently throughout the experience: such as during initial setup of a round, to set itself on the main code path, after the player chooses a blaster, and when the player returns to the lobby, or the **Neutral** spawn location. Furthermore, after the player chooses a blaster, **ServerScriptService** ⟩ **BlasterSelectedHandler** sets the `PlayerState` to `Playing`, and `PlayerStateHandler` can finally remove the force field by calling `scheduleDestroyForceField()`.
 
 ## Customize force fields
 
-Instead of using a custom implementation, the sample laser tag experience uses Studio's built-in `Class.ForceField` class to prevent players from taking damage while they're selecting their blaster. This ensures that the only requirement for players to spawn with a force field is to include spawn locations with a `Class.SpawnLocation.Duration` property that is greater than 0. The sample uses an arbitrary value of 9,999 to enable force fields, then handles the actual duration programmatically in **ReplicatedStorage** > **ForceFieldClientVisuals**.
+Instead of using a custom implementation, the sample laser tag experience uses Studio's built-in `Class.ForceField` class to prevent players from taking damage while they're selecting their blaster. This ensures that the only requirement for players to spawn with a force field is to include spawn locations with a `Class.SpawnLocation.Duration` property that is greater than 0. The sample uses an arbitrary value of 9,999 to enable force fields, then handles the actual duration programmatically in **ReplicatedStorage** ⟩ **ForceFieldClientVisuals**.
 
-Similar to `setupHumanoidAsync`, most of the lines in `ForceFieldClientVisuals` are optional. For example, if you comment out the contents of the function like the following script does, the experience uses the default sparkling force field instead of the hexagonal script in **StarterGui** > **ForceFieldGui**.
+Similar to `setupHumanoidAsync`, most of the lines in `ForceFieldClientVisuals` are optional. For example, if you comment out the contents of the function like the following script does, the experience uses the default sparkling force field instead of the hexagonal script in **StarterGui** ⟩ **ForceFieldGui**.
 
 ```lua title="Commenting Out Properties in ForceFieldClientVisuals"
 local function onCharacterAddedAsync(character: Model)
@@ -231,7 +231,7 @@ Because the custom force field is a GUI rather than a new `Class.ParticleEmitter
   </figure>
 </GridContainer>
 
-Force fields are useful because they provide players enough time to between spawning and respawning without needing to worry about enemy players, but eventually they need to disappear for the main laser tag gameplay. The script that handles force field removal is in **ReplicatedStorage** > **scheduleDestroyForceField**, and it checks for three unique conditions:
+Force fields are useful because they provide players enough time to between spawning and respawning without needing to worry about enemy players, but eventually they need to disappear for the main laser tag gameplay. The script that handles force field removal is in **ReplicatedStorage** ⟩ **scheduleDestroyForceField**, and it checks for three unique conditions:
 
 - After players select a blaster, force fields need to last long enough to allow players to acclimate to their surroundings.
 - During this acclimation time, force fields can't be an advantage, so they need to disappear the moment a player blasts their blaster.
@@ -277,13 +277,13 @@ To learn more about dealing with this type of situation, see [Debounce Patterns]
 
 ## Handle client state
 
-While most of this section focuses on **ServerScriptService** > **PlayerStateHandler**, there's another script of the same name in **ReplicatedStorage**. The reason for the split is the client-server architecture:
+While most of this section focuses on **ServerScriptService** ⟩ **PlayerStateHandler**, there's another script of the same name in **ReplicatedStorage**. The reason for the split is the client-server architecture:
 
 - The client needs to understand player state information so that it can respond appropriately in real time, such as displaying the right user interface elements, or enabling players to move and blast.
 
 - The server needs all this same information so that it can prevent exploits. For example, the server also needs player state to perform actions like spawning and equipping characters, disabling force fields, and displaying a leaderboard. This is why this script is in **ReplicatedStorage** and not a purely client-side location.
 
-To see this core logic, review the following script in **ReplicatedStorage** > **PlayerStateHandler** that verifies the user's current state, then calls the appropriate function that handles the corresponding actions for that state.
+To see this core logic, review the following script in **ReplicatedStorage** ⟩ **PlayerStateHandler** that verifies the user's current state, then calls the appropriate function that handles the corresponding actions for that state.
 
 ```lua title="PlayerStateHandler"
 local function onPlayerStateChanged(newPlayerState: string)
@@ -328,7 +328,7 @@ end
 
 ## Respawn characters
 
-The sample laser tag experience handles respawning character back into a round through the `onTaggedOut()` state in **ReplicatedStorage** > **PlayerStateHandler**. Like the `onSelectingBlaster()` and `onPlaying()` state, `onTaggedOut()` triggers unique behavior according to the changes to the `playerState` attribute. Specifically, it disables player movement, presents the respawn UI, and disables the blaster.
+The sample laser tag experience handles respawning character back into a round through the `onTaggedOut()` state in **ReplicatedStorage** ⟩ **PlayerStateHandler**. Like the `onSelectingBlaster()` and `onPlaying()` state, `onTaggedOut()` triggers unique behavior according to the changes to the `playerState` attribute. Specifically, it disables player movement, presents the respawn UI, and disables the blaster.
 
 ```lua title="PlayerStateHandler"
 local function onTaggedOut()
@@ -355,7 +355,7 @@ If you want to test this behavior, you can press <kbd>Esc</kbd>, navigate to the
   </figure>
 </GridContainer>
 
-It's important to note that this script doesn't actually respawn characters, it just stops them from acting and provides visual feedback to players that the **server** is respawning their characters. To demonstrate, if you examine **ServerScriptService** > **SetupHumanoid** > **setupHumanoidAsync** > **onHumanoidDied**, the script sets `PlayerState` to `TaggedOut` (essentially notifying **ReplicatedStorage** > **PlayerStateHandler**), and adds some visual indicators. The actual logic of respawning is a built-in Roblox behavior.
+It's important to note that this script doesn't actually respawn characters, it just stops them from acting and provides visual feedback to players that the **server** is respawning their characters. To demonstrate, if you examine **ServerScriptService** ⟩ **SetupHumanoid** ⟩ **setupHumanoidAsync** ⟩ **onHumanoidDied**, the script sets `PlayerState` to `TaggedOut` (essentially notifying **ReplicatedStorage** ⟩ **PlayerStateHandler**), and adds some visual indicators. The actual logic of respawning is a built-in Roblox behavior.
 
 When players respawn back into the round, they respawn at their team's spawn location according to the `Class.SpawnLocation.TeamColor` property. To customize the respawn time, you can add the following line to the top of `SetupHumanoid`. To learn more about this technique, see `Class.Players.RespawnTime`.
 
@@ -372,10 +372,10 @@ In an experience with a progression system, such as checkpoints, you can use `Cl
 
 As part of initial setup, the sample laser tag experience also performs some small, but critical steps:
 
-- The experience includes an empty script named **StarterPlayer** > **StarterCharacterScripts** > **Health** that disables the default Roblox health regeneration. For an explanation of this property's behavior, see `Class.Humanoid.Health`.
+- The experience includes an empty script named **StarterPlayer** ⟩ **StarterCharacterScripts** ⟩ **Health** that disables the default Roblox health regeneration. For an explanation of this property's behavior, see `Class.Humanoid.Health`.
 
 - The experience uses a first-person camera by setting the `StarterPlayer.CameraMode.LockFirstPerson` property. Note that if you want to let users change between first- and third-person cameras, you must change the property programmatically rather than just setting it once in Studio, and modify the controls and UI to compensate for the change in perspective.
 
-- The experience uses the built-in Roblox leaderboard with the unit of "points", which players earn each time they tag another player out. You can see the configuration in **ServerScriptService** > **SetupLeaderboard**, but [In-Experience Leaderboards](../../../players/leaderboards.md) offers a full overview. Note that `onPlayerTagged` adds points to the leaderboard, which you'll learn about in [Add rounds](./add-rounds.md) and [Detect hits](detect-hits.md).
+- The experience uses the built-in Roblox leaderboard with the unit of "points", which players earn each time they tag another player out. You can see the configuration in **ServerScriptService** ⟩ **SetupLeaderboard**, but [In-Experience Leaderboards](../../../players/leaderboards.md) offers a full overview. Note that `onPlayerTagged` adds points to the leaderboard, which you'll learn about in [Add rounds](./add-rounds.md) and [Detect hits](detect-hits.md).
 
 Now that players can spawn, choose a blaster, and aim it from a first-person point of view, the next section teaches you about the scripts behind creating round-based gameplay.

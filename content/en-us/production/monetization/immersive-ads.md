@@ -317,7 +317,7 @@ By tracking these trends over time, you can make strategic decisions on the numb
 To view immersive ad metrics:
 
 1. Go to Creations and select an experience.
-2. Go to **Monetization** > **Ads**.
+2. Go to **Monetization** ⟩ **Ads**.
 
 <Alert severity="info">
    Metrics graphs that report impressions and teleports per ad unit use each ad unit's name in Studio.

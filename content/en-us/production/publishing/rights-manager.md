@@ -11,7 +11,7 @@ In order to use the Rights Manager, you must first register either as a rights o
 
 To register as a rights holder or as an authorized representative:
 
-1. In the Creator Hub, go to **Intellectual Property** > **Registration**.
+1. In the Creator Hub, go to **Intellectual Property** ⟩ **Registration**.
 2. Click **Start registration**.
 3. Fill out the registration form.
     1. Under **Rights holder**:
@@ -43,7 +43,7 @@ Once Roblox accepts your registration, you can create IP removal requests for on
 
 To file an IP removal request:
 
-1. Go to **Intellectual Property** > **Rights Manager** > **Removal Requests**.
+1. Go to **Intellectual Property** ⟩ **Rights Manager** ⟩ **Removal Requests**.
 2. In the **Removal Requests** tab, click **New Removal Request**.
 3. Fill out the removal request form.
    1. Under **Select creations for removal**:

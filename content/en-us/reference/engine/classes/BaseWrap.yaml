@@ -103,11 +103,10 @@ properties:
     description: ''
     code_samples: []
     type: ContentId
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
-      read: RobloxEngineSecurity
+      read: RobloxScriptSecurity
       write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Data

@@ -24,7 +24,7 @@ Every place is represented by a data model that stores and organizes:
 - All objects that make up the 3D world of a place, such as its parts, meshes, terrain, and lighting.
 - All objects that can control runtime behavior, such as scripts.
 
-Understanding both the general structure of a place's data model, and how the Roblox engine uses it as the source of truth for a place's state is important for understanding where to store and configure different types of objects. For more information, see [Data Model](../../projects/data-model.md).
+Understanding both the general structure of a place's data model, and how the Roblox engine uses it as the source of truth for a place's state is important for understanding where to store and configure different types of objects. For more information, see [data model](../../projects/data-model.md).
 
 ## Create experiences
 
@@ -35,37 +35,35 @@ To create an experience:
 1. Open Studio.
 1. In the **Open a Template** section, select a template with the objects you want to start working with for your experience, such as:
 
-   - **Baseplate** - Starts with a SpawnLocation and a baseplate.
-   - **Platformer** - Starts with customizable platforms, coin pickups, and double-jump, dashing, rolling, and long jump character mechanics!
-   - **Racing** - Starts with a working racecar and customizable track objects.
+   - **Baseplate** — Starts with a `Class.SpawnLocation` and a baseplate.
+   - **Platformer** — Starts with customizable platforms, coin pickups, and double-jump, dashing, rolling, and long jump character mechanics!
+   - **Racing** — Starts with a working racecar and customizable track objects.
 
 When Studio opens up the template, you now have `Place1` that represents your overall experience.
 
-   <img src="../../assets/publishing/experiences-places-assets/Place1.png" width="25%" />
-
 ## Publish experiences
 
-When you publish an experience, Roblox stores the data model of your start place as a `.rblx` file in the Cloud. This is an important process because it connects the experience to your account, allowing you to access and work on it from any computer.
+When you publish an experience, Roblox stores the data model of your start place as a `.rblx` file in the cloud. This is an important process because it connects the experience to your account, allowing you to access and work on it from any computer.
 
 By default, new experiences are set to **private**, meaning that they are only accessible to you as the creator, as well as any group members with the appropriate [roles and permissions](../../projects/groups.md#roles-and-permissions). When you are ready to go live to everyone, you can [release your experience to the public](#release-to-the-public).
 
 <Alert severity="info">
-When creating and collaborating on experiences as part of a [group](../../projects/groups.md), the ability for group members to play/edit/publish experiences is, by default, dependent on their role permissions. However, group owners or members with sufficient permissions can adjust access on a per‑experience level. For more info, see [Configure experiences](#configure-experiences).
+When creating and collaborating on experiences as part of a [group](../../projects/groups.md), the ability for group members to play/edit/publish experiences is, by default, dependent on their role permissions. However, group owners or members with sufficient permissions can adjust access on a per‑experience level. For more info, see [configure experiences](#configure-experiences).
 </Alert>
 
 To publish an experience:
 
-1. In the top-left corner of your computer, click **File** > **Publish to Roblox**. The **Publish Game** window displays.
+1. In the top-left corner of your computer, click **File** ⟩ **Publish to Roblox**.
 1. In the **Publish Game** window, fill in the following fields:
 
-   - **Name** / **Description** - The experience name and a description that describes what a potential player should expect. See the metadata best practices dropdown at the bottom of this section for guidelines.
-   - **Creator** - The creator you'd like to attribute as the creator of the experience.
+   - **Name** / **Description** — The experience name and a description that describes what a potential player should expect. See the metadata best practices dropdown at the bottom of this section for guidelines.
+   - **Creator** — The creator you'd like to attribute as the creator of the experience.
 
      <Alert severity="success">
      It's highly recommended that you [create a group](../../projects/groups.md) and publish a new experience under the group's account, not your personal account. Even if you're a solo creator, this allows you to expand your team over time, recruit playtesters, and operate as an independent studio.
      </Alert>
 
-   - **Devices** - Each applicable device type that you want to support. The default options are practical for most new creators.
+   - **Devices** — Each applicable device type that you want to support. The default options are practical for most new creators.
 
 1. At the bottom-right of the window, click the **Create** button.
 
@@ -166,7 +164,7 @@ After you have published your experience, you can add additional places for diff
 1. In the **Publish Game** window, click the tile for the experience you'd like to add the place to.
 1. In the next view, select **Add as a new place**, then click the **Create** button.
 
-Whether you choose to have a single, large place or many smaller places is mostly personal preference. For more information, see [Design for performance](../../performance-optimization/design.md#streaming-and-teleportation).
+Whether you choose to have a single, large place or many smaller places is mostly personal preference. For more information, see [design for performance](../../performance-optimization/design.md#streaming-and-teleportation).
 
 ### Change start place
 
@@ -176,12 +174,12 @@ To change the start place:
 
 1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Save your **current** start place to a `.rbxl` file or to a new place within the experience.
 1. Navigate to the [Creator Dashboard][creatordashboard] and click on the thumbnail of the experience with the start place that you want to change. The experience's **Overview** page displays.
-1. In the left-hand navigation, navigate to **Configure** > **Places**.
+1. In the left-hand navigation, navigate to **Configure** ⟩ **Places**.
 1. Click the **Edit in Studio** button for the intended **new** start place. Studio opens and loads that specific place.
 
    <img src="../../assets/creator-dashboard/Experience-Change-Start-Place.png" width="550" />
 
-1. In the top-left corner of Studio, navigate to **File** > **Publish to Roblox As…**.
+1. In the top-left corner of Studio, navigate to **File** ⟩ **Publish to Roblox As…**.
 
    <Alert severity="error">
    Do not select **Publish to Roblox** as this would publish the place over itself.
@@ -203,13 +201,13 @@ The **Maturity & Compliance Questionnaire** contains a set of questions about th
 
 Maturity and compliance information consists of two components:
 
-- **Maturity label** - Indicates the level of maturity suitable for the experience according to child development research and industry standards. For more information, see Age Recommendations.
-- **Content descriptors** - Indicates what type of content is within an experience, such as realistic depictions of blood or paid item trading.
+- **Maturity label** — Indicates the level of maturity suitable for the experience according to child development research and industry standards. For more information, see Age Recommendations.
+- **Content descriptors** — Indicates what type of content is within an experience, such as realistic depictions of blood or paid item trading.
 
 Roblox strongly recommends that you fill out the Maturity & Compliance questionnaire for each of your experiences so that they're available to the largest appropriate audience possible. Roblox does not recommend experiences without content maturity information to players under 13 years old. In addition, if your experience doesn't have Content Maturity information but it does contain [restricted content](https://en.help.roblox.com/hc/en-us/articles/15869919570708), the experience will be moderated.
 
 <Alert severity="info">
-For step-by-step instructions on how to fill out the questionnaire, see [Content maturity & compliance](../promotion/content-maturity.md).
+For step-by-step instructions on how to fill out the questionnaire, see [content maturity & compliance](../promotion/content-maturity.md).
 </Alert>
 
 ### Release to the public
@@ -233,7 +231,7 @@ To set age and geography restrictions:
 
 1. Navigate to the [Creator Dashboard][creatordashboard].
 1. Click on the thumbnail of the experience for which you want to set age and geography restriction. The experience's **Overview** page displays.
-1. In the left-hand navigation, navigate to **Audience** > **Access Settings**.
+1. In the left-hand navigation, navigate to **Audience** ⟩ **Access Settings**.
 1. In the **Age** section, set **Minimum age** to the youngest age a player can have to access your experience.
 1. In the **Region** section, enable every region that can access your experience.
 1. At the bottom of the page, click the **Save Changes** button.
@@ -270,7 +268,7 @@ After you publish your experience, Roblox generates a landing page for the exper
 When creating and collaborating on experiences as part of a [group](../../projects/groups.md), abilities granted to group members are dependent on their **role permissions**. Owners or other group members with sufficient permissions can adjust play/edit/publish access and more on a per‑experience level, such as allowing a limited group role the ability to edit a specific experience even if that role cannot edit all experiences.
 
 <Alert severity="info">
-For step-by-step instructions on how to edit collaborator permissions, see [Roles and permissions](../../projects/groups.md#roles-and-permissions).
+For step-by-step instructions on how to edit collaborator permissions, see [roles and permissions](../../projects/groups.md#roles-and-permissions).
 </Alert>
 
 ### Access version history
@@ -278,7 +276,7 @@ For step-by-step instructions on how to edit collaborator permissions, see [Role
 Roblox automatically retains saved versions of each place for version control and backup purposes. To access and revert to a previously saved version of any place within an experience:
 
 1. Navigate to the [Creator Dashboard][creatordashboard] and click on the thumbnail of the experience. The experience's **Overview** page displays.
-1. In the left-hand navigation, navigate to **Configure** > **Places**.
+1. In the left-hand navigation, navigate to **Configure** ⟩ **Places**.
 1. On the **Places** page, click the thumbnail of the place you'd like to revert to a previous version.
 1. In the left-hand navigation, click **Version History**.
 1. Locate and select the version to revert to, then click the **Restore** button. Confirm the action to restore to that version.
@@ -295,7 +293,7 @@ To allow the community to access an editable copy of your experience:
 
 1. Navigate to the [Creator Dashboard][creatordashboard].
 1. Click on the thumbnail of the experience you want to allow players to copy. The experience's **Overview** page displays.
-1. In the left-hand navigation, navigate to **Configure** > **Places**.
+1. In the left-hand navigation, navigate to **Configure** ⟩ **Places**.
 1. Click the **start place** marked with a star icon. The place's **Basic Settings** page displays.
 
    <img src="../../assets/creator-dashboard/Places-Start-Place-Icon.png" width="200" alt="Start place tile indicated in Places display on the Creator Dashboard" />
@@ -321,7 +319,7 @@ In-experience assets and experience metadata cannot contain strong language, eve
 To allow strong language between players in text chat within your experience:
 
 1. Navigate to the [Creator Dashboard][creatordashboard] and click on the thumbnail of the experience in which you want to allow strong language. The experience's **Overview** page displays.
-1. In the left-hand navigation, navigate to **Audience** > **Communication Settings**.
+1. In the left-hand navigation, navigate to **Audience** ⟩ **Communication Settings**.
 1. Enable the **Allow Strong Language** toggle, then press the **Save Changes** button. Players within your experience can now use strong language in text chat.
 
 ## Release updates

@@ -92,7 +92,7 @@ To test how functions work in module scripts, create a new function named `getKe
 
 Now, the module function `getKey()` can be used in other scripts. To test that function, you'll open a premade script and call it.
 
-1. Open the key script in **Workspace** > **Keys** > **KeyScript**.
+1. Open the key script in **Workspace** ⟩ **Keys** ⟩ **KeyScript**.
 
 2. In keyScript, store the module script in a variable named `treasureManager` and set it equal to:
    `require(ServerStorage:WaitForChild("TreasureManager"))`
@@ -261,7 +261,7 @@ The **TreasureManager** module script will be used when players touch a treasure
 
 ### Check if chests can be opened
 
-1. First in **ServerStorage** > **TreasureManager** script, set up variables for how many keys it costs to open a chest, and how much gold each chest contains.
+1. First in **ServerStorage** ⟩ **TreasureManager** script, set up variables for how many keys it costs to open a chest, and how much gold each chest contains.
 
    ```lua
    local TreasureManager = {}
@@ -340,7 +340,7 @@ So the player can open a chest, create a function in **TreasureManager** that aw
 
 Now that the two module functions, `canOpenChest()` and `openChest()`, have been created, they can be called by the Chest parts whenever a player touches them using the premade `partTouched()` function.
 
-1. In **Workspace** > **Chests** open **ChestScript**.
+1. In **Workspace** ⟩ **Chests** open **ChestScript**.
 
 2. Create a new variable named `treasureManager` and require the **TreasureManager** module script in **ServerStorage**.
 

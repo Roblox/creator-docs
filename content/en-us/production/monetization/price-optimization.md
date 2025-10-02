@@ -45,7 +45,7 @@ local priceInRobux = 500
 To use the dynamic price check tool:
 
 1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select an experience.
-2. Go to **Monetization** > **Price Optimization**.
+2. Go to **Monetization** ⟩ **Price Optimization**.
 3. Click **Dynamic Price Check**.
 4. Under **Add test accounts**, enter up to five Roblox users to check for hard-coded prices.
 5. Select a testing type.
@@ -60,9 +60,9 @@ To disable the dynamic price check tool, go to the **Dynamic Price Check** page 
 To use price optimization:
 
 1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select an experience.
-2. Go to **Monetization** > **Price Optimization**.
+2. Go to **Monetization** ⟩ **Price Optimization**.
 3. Select the developer products and passes you want to include in the price test. For best results, include all products.
-4. Click **Start Test**. After approximately two weeks, you receive an e-mail notification that the test is complete. The **Price Optimization** page updates with the optimized product prices, the recommended price percentage change, and the approximate long-term revenue impact of applying the new product prices.
+4. Click **Start Test**. Users will see the test prices when they re-join your experience. After approximately two weeks, you will receive an e-mail notification that the test is complete. The **Price Optimization** page will update with the optimized product prices, the recommended price percentage change, and the approximate long-term revenue impact of applying the new product prices.
 5. Click **Review & Apply prices** to apply the results of the price optimization test.
 6. **(Optional)** Click **Start price review** to [run a price review period](#run-a-price-review-period).
 

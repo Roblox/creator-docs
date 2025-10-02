@@ -32,7 +32,7 @@ To enable Studio access to API services so that you can use data stores:
 
 1. Open the [Gold Rush create leaderboard tutorial - Start](https://www.roblox.com/games/123363025813820/Gold-Rush-create-leaderboard-tutorial-Start) file in Studio. This starting place file already includes the code from the [Save player data](./save-player-data.md) tutorial and the UI skeleton for the player leaderboard.
 2. [Publish your experience](../../../production/publishing/publish-experiences-and-places.md#publish-experiences).
-3. Back in Studio, go to **File** > **Game Settings** > **Security**.
+3. Back in Studio, go to **File** ⟩ **Game Settings** ⟩ **Security**.
 4. Turn on **Enable Studio Access to API Services**.
 5. Save your changes.
 
@@ -201,7 +201,7 @@ To request leaderboard data from the server:
 
 1. Under **ReplicatedStorage**, insert a **RemoteFunction** called **LeaderboardRemote**. This remote function acts as the bridge between the UI script on the client and the leaderboard logic on the server.
 2. Under **ServerScriptService**, create a script called **LeaderboardRemoteHandler**. In this script:
-    1. Call `Class.ReplicatedStorage|ReplicatedStorage` (the shared space between client and server), `Class.ServerScriptService|ServerScriptService` (which holds the leaderboard module), and `leaderboardRemote` (the remote function that the client will call to ask for the leaderboard data).
+   1. Call `Class.ReplicatedStorage|ReplicatedStorage` (the shared space between client and server), `Class.ServerScriptService|ServerScriptService` (which holds the leaderboard module), and `leaderboardRemote` (the remote function that the client will call to ask for the leaderboard data).
 
       ```lua
       local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -210,13 +210,13 @@ To request leaderboard data from the server:
       local leaderboardRemote = ReplicatedStorage:WaitForChild("LeaderboardRemote")
       ```
 
-    2. Load the **LeaderboardManager** module that you created earlier, which includes the function that gets the top scores from the ordered data store.
+   2. Load the **LeaderboardManager** module that you created earlier, which includes the function that gets the top scores from the ordered data store.
 
       ```lua
       local leaderboardManager = require(ServerScriptService:WaitForChild("LeaderboardManager"))
       ```
 
-    3. Set the behavior for when the client calls `Class.RemoteFunction.InvokeServer|InvokeServer`. The server responds by fetching the top 3 scores and sending the result back to the client.
+   3. Set the behavior for when the client calls `Class.RemoteFunction.InvokeServer|InvokeServer`. The server responds by fetching the top 3 scores and sending the result back to the client.
 
       ```lua
       leaderboardRemote.OnServerInvoke = function(player)
@@ -230,11 +230,11 @@ To request leaderboard data from the server:
 	Because of backend caching, the scores in your custom leaderboard can take a few extra seconds to update. To get instant, real-time updates across servers, you can use [memory stores](../../../cloud-services/memory-stores/index.md).
 </Alert>
 
-After setting up the server-side scripts, create a local script to fetch the top 3 players every 3 seconds and display the results in a global UI leaderboard inside the experience. 
+After setting up the server-side scripts, create a local script to fetch the top 3 players every 3 seconds and display the results in a global UI leaderboard inside the experience.
 
 To display data in your custom leaderboard:
 
-1. Under **StarterGui** > **LeaderboardGui**, create a local script called **LeaderboardGuiScript**.
+1. Under **StarterGui** ⟩ **LeaderboardGui**, create a local script called **LeaderboardGuiScript**.
 2. At the top of the script, connect to the remote function. Call `Class.ReplicatedStorage|ReplicatedStorage` to get access to shared objects between the server and client, then call `leaderboardRemote` to allow the client to request the leaderboard data from the server.
 
     ```lua

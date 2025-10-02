@@ -522,6 +522,6 @@ To publish your animation:
 
    <img src="../../../assets/tutorials/creating-character-animations/Publish-4.png" alt="" width="60%" />
 
-Now that your animation is in the cloud, you can find, edit, and reuse the asset across all of your projects through the [Creator Dashboard](https://create.roblox.com/dashboard/creations) under **Development Items** > **Animations**.
+Now that your animation is in the cloud, you can find, edit, and reuse the asset across all of your projects through the [Creator Dashboard](https://create.roblox.com/dashboard/creations) under **Development Items** ⟩ **Animations**.
 
    <img src="../../../assets/tutorials/creating-character-animations/Creations-Animations.png" alt="" width="100%" />

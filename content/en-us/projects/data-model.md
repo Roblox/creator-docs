@@ -92,33 +92,33 @@ Roblox Engine expects certain objects to be in certain **container services**
 which are objects that have specific behaviors and can affect the behaviors of
 the objects they contain. The main categories of container services include:
 
-- **Workspace** - `Class.Workspace` stores all objects that render in the 3D
+- **Workspace** — `Class.Workspace` stores all objects that render in the 3D
   world.
-- **Environment** - Containers like `Class.Lighting` and `Class.SoundService`
+- **Environment** — Containers like `Class.Lighting` and `Class.SoundService`
   that contain objects for environmental settings and elements.
-- **Replication** - Containers for content and logic that replicates between the
+- **Replication** — Containers for content and logic that replicates between the
   server and client, such as `Class.ReplicatedStorage` and
   `Class.ReplicatedFirst`.
-- **Server** - Containers for server-side only content and logic, such as
+- **Server** — Containers for server-side only content and logic, such as
   `Class.ServerScriptService` and `Class.ServerStorage`.
-- **Client** - Containers for client-side content and logic, such as
+- **Client** — Containers for client-side content and logic, such as
   `Class.StarterPlayer` and `Class.StarterGui`.
-- **Chat** - Containers for objects that enable chat features, such as
+- **Chat** — Containers for objects that enable chat features, such as
   `Class.VoiceChatService` and `Class.TextChatService`.
 
 <Alert severity="info">
 The Roblox Engine has many more services that provide
 built-in functionality that you can call within your scripts. The Roblox Engine
 doesn't give these services special treatment in the data model. For more
-information, see [Services](../scripting/services.md).
+information, see [services](../scripting/services.md).
 </Alert>
 
 In addition, you can further organize your objects with the following objects:
 
-- **Folders** - A `Class.Folder` is for organizational purposes and doesn't
+- **Folders** — A `Class.Folder` is for organizational purposes and doesn't
   define any behavior. For example, you can use folders to group similar objects
   like a set of scripts in server storage.
-- **Models** - A `Class.Model` is mainly intended for geometric groupings of
+- **Models** — A `Class.Model` is mainly intended for geometric groupings of
   parts, such as grouping together a desk set that includes a chair, table, and
   a lamp. To organize more complex sets, you can even nest models within models.
 
@@ -143,7 +143,7 @@ For example, you can set a camera to follow user movements or stay fixed in a
 particular location. You can also adjust the field of view, distance, and angle
 to create different visual effects of how users view your 3D world.
 
-For more information, see [Customize the camera](../workspace/camera.md).
+For more information, see [customize the camera](../workspace/camera.md).
 
 <h4>Terrain</h4>
 
@@ -154,35 +154,13 @@ for your 3D world and apply one material to that terrain, you can use the
 [Terrain Editor](../studio/terrain-editor.md) to edit regions of your
 terrain.
 
-For more information, see [Environmental terrain](../parts/terrain.md).
+For more information, see [environmental terrain](../parts/terrain.md).
 
 ### Environment
 
-Lighting and sound effects can make your 3D world much more immersive and
-realistic. Although it isn't necessary to add these effects to your place, they
-can make it more visually and aurally appealing.
+Custom lighting can make your 3D world much more immersive and realistic. The `Class.Lighting` service contains objects that control global lighting settings of your place, such as `Class.Atmosphere` for simulating atmospheric effects or `Class.Sky` to alter the sun, moon, and stars in your environments. In addition, you can use [light sources](../effects/light-sources.md) to emit light from specific objects.
 
-<Alert severity="info">
-In addition to using the light and sound services, you
-can add parts that emit light and sound. For more information, see
-[Lighting Effects](../effects/light-sources.md) and
-[Sound Objects](../sound/objects.md).
-</Alert>
-
-<h4>Lighting</h4>
-
-`Class.Lighting` contains objects that control global lighting settings of your
-place, such as `Class.Atmosphere` for simulating atmospheric effects or
-`Class.Sky` to alter the sun, moon, and stars in your environments.
-
-For more information, see [Global lighting](../environment/lighting.md).
-
-<h4>Sound</h4>
-
-`Class.SoundService` can control volume and playback settings of child
-`Class.Sound` objects for background music or environmental sound effects.
-
-For more information, see [Sound](../sound/index.md).
+Adding [audio](../audio/index.md) to your experiences is also crucial for elevating your experiences to new heights. By strategically using positional and non-positional audio, you can immerse players into your worlds, provide them useful feedback for their actions, and direct their attention to what they need to do to be successful in their objectives.
 
 ### Replication
 
@@ -212,7 +190,7 @@ container to replicate any objects that don't need to exist in the 3D world
 until needed, such as a `Class.ParticleEmitter` for cloning and parenting to all
 incoming character models.
 
-For more information on how replication works, see [Client-server runtime](../projects/client-server.md).
+For more information on how replication works, see [client-server runtime](../projects/client-server.md).
 
 ### Server
 
@@ -306,7 +284,7 @@ the client:
 </table>
 
 <Alert severity="info">
-For more information on edit and runtime data models, see [Client-server runtime](./client-server.md#client).
+For more information on edit and runtime data models, see [client-server runtime](./client-server.md#client).
 </Alert>
 
 <Alert severity="warning">
@@ -322,7 +300,7 @@ service explicitly.
 in-experience text chat tasks, such as managing channels, decorating messages,
 filtering text, creating commands, and developing custom chats interfaces.
 
-For more information, see [In-experience text chat system](../chat/in-experience-text-chat.md).
+For more information, see [text chat overview](../chat/in-experience-text-chat.md).
 
 <h4>VoiceChatService</h4>
 
@@ -330,7 +308,7 @@ For more information, see [In-experience text chat system](../chat/in-experience
 feature that simulates realistic communication based on how close you are to
 other users. You can use this service to toggle the feature on and off.
 
-For more information, see [Voice chat](../chat/voice-chat.md).
+For more information, see [voice chat](../chat/voice-chat.md).
 
 ## Folders and models
 

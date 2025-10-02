@@ -74,7 +74,7 @@ local StarterGui = game:GetService("StarterGui")
 StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.EmotesMenu, false)
 ```
 
-In addition to disabling the menu, you can disable loading of user-owned emotes by setting the `Class.StarterPlayer.UserEmotesEnabled` property within **StarterPlayer** > **Character** to **false**. This specific property can only be set in Studio and cannot be set by scripts.
+In addition to disabling the menu, you can disable loading of user-owned emotes by setting the `Class.StarterPlayer.UserEmotesEnabled` property within **StarterPlayer** ⟩ **Character** to **false**. This specific property can only be set in Studio and cannot be set by scripts.
 
 ## Play emotes
 

@@ -29,7 +29,7 @@ To implement a rewarded video ad, you must set up the video ad inside your exper
 
 To set up a rewarded video ad inside your experience:
 
-1. In Studio, go to **Game Settings** > **Monetization**.
+1. In Studio, go to **Game Settings** ⟩ **Monetization**.
 2. Check the **Enable Rewarded Video Ads** checkbox.
   <img src="../../assets/promotion/ads-manager/EnableRewardedVideoAdsToggle.png" width="750" alt="The default Roblox matchmaking flow." />
 3. Select the reward you want to grant the user. If the reward doesn't already exist, [create a new developer product in the Creator Hub](../monetization/developer-products.md#create-a-developer-product). This developer product must have been created for the specific universe the place is in.
@@ -48,13 +48,13 @@ local AdService = game:GetService("AdService")
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
--- StarterGui > ScreenGui > ShopFrame > RewardedAdButton
+-- StarterGui ⟩ ScreenGui ⟩ ShopFrame ⟩ RewardedAdButton
 local PlayerGui = Players.LocalPlayer:WaitForChild("PlayerGui")
 local ScreenGui = PlayerGui:WaitForChild("ScreenGui")
 local ShopFrame = ScreenGui:WaitForChild("ShopFrame")
 local RewardedAdButton = ShopFrame:WaitForChild("RewardedAdButton")
 
--- StarterGui > ScreenGui > OpenShopButton
+-- StarterGui ⟩ ScreenGui ⟩ OpenShopButton
 local OpenShopButton = ScreenGui:WaitForChild("OpenShopButton")
 
 -- Event to communicate between clients & server
@@ -171,7 +171,7 @@ Use placements to track the performance of individual rewarded video ads inside 
 To create a rewarded video ad placement:
 
 1. In the Creator Dashboard, go to **Creations** and select an experience.
-2. Go to **Monetization** > **Ads** > **Placements**.
+2. Go to **Monetization** ⟩ **Ads** ⟩ **Placements**.
 3. Click **Create Placement**.
 4. Enter a name for the placement and click **Create**.
 
@@ -184,7 +184,7 @@ Use analytics metrics to evaluate the effectiveness of your rewarded video ads, 
 To access your rewarded video ad metrics:
 
 1. In the Creator Dashboard, go to **Creations** and select an experience.
-2. Go to **Monetization** > **Ads** > **Analytics**.
+2. Go to **Monetization** ⟩ **Ads** ⟩ **Analytics**.
 3. Filter by **Rewarded Video** to see all of the available metrics.
 
 <table>

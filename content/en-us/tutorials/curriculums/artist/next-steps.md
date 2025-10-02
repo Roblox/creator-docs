@@ -17,7 +17,7 @@ To make your experience public:
 
 1. Using the steps from the last chapter, publish your experience so others can see your latest changes.
 
-1. In the top-left corner of your computer, click **File** > **Game Settings**. The **Game Settings** window displays.
+1. In the top-left corner of your computer, click **File** ⟩ **Game Settings**. The **Game Settings** window displays.
 
 1. In the **Game Settings** window,
    1. Go to the left bar and select the **Permissions** tab. New settings display.

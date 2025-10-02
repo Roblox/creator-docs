@@ -116,7 +116,7 @@ To enable paid access in Roblox Studio:
 
 To view your transaction history for local currency paid access purchases:
 
-1. In the Creator Hub, go to **Finances** > **Transactions**.
+1. In the Creator Hub, go to **Finances** ⟩ **Transactions**.
 2. Select **Paid access in local currency**. The transaction table displays the date of the transaction, the user who made the purchase, the experience name, how much the user paid, and the user's refund status.
 
 ## Policies

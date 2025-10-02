@@ -54,7 +54,7 @@ To access Avatar Items analytics:
 
 1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
 
-2. Navigate to **Monetization > Avatar Items** and select the **Analytics** tab.
+2. Navigate to **Monetization** ⟩ **Avatar Items** and select the **Analytics** tab.
 
 <img src="../../assets/monetization/avatar-items/avatar-items-analytics.png" width="100%" />
 

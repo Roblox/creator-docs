@@ -13,7 +13,7 @@ To practice for loops, you'll create a lamp that gradually glows brighter and th
 
 The lamp will be a part with an attached light and script.
 
-1. To make it easier to see the light, change the game world to **night time**. In the Explorer > Lighting > change **ClockTime** to 0.
+1. To make it easier to see the light, change the game world to **night time**. In the **Explorer** ⟩ **Lighting**, change **ClockTime** to `0`.
 
    <img src="../../../assets/education/coding-4/glowing-lights-setClockTime.png" alt = "image" />
 

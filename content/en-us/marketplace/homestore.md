@@ -13,7 +13,7 @@ The homestore template provides the following features that you can quickly cust
 - **Integrated shop** — Conveniently located shop button at the bottom of the screen opens a catalog where users can view and purchase items.
 - **Modular Building Parts** — Customizable building components for creating a unique and personalized shopfront.
 
-You can find the UGC Homestore Template in Roblox Studio's start screen. To access Studio's provided templates at any time, select **File** > **Open from Roblox** and select **Templates**.
+You can find the UGC Homestore Template in Roblox Studio's start screen. To access Studio's provided templates at any time, select **File** ⟩ **Open from Roblox** and select **Templates**.
 
 ## Customize Homestore
 
@@ -35,7 +35,7 @@ Each mannequin includes custom attributes that allow you to add avatar items, di
 To customize a mannequin:
 
 1. Select an existing mannequin object.
-2. In **Properties Panel** > **Attributes**, modify the following fields:
+2. In **Properties Panel** ⟩ **Attributes**, modify the following fields:
    1. `accessoryIds` — Comma separated list of accessory IDs that display on mannequin.
    2. `bundleIds` — Comma separated list of bundle IDs that display on the mannequin.
       1. To add shoes, you must set them as a bundle to include the right and left shoe.

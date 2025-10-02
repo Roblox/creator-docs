@@ -20,7 +20,7 @@ A **developer product** is an item or ability that a user can purchase more than
 To create a developer product:
 
 1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select an experience.
-2. Go to **Monetization** > **Developer Products**.
+2. Go to **Monetization** ⟩ **Developer Products**.
 3. Click **Create a Developer Product**.
 4. Upload an image to display as the product icon. Make sure the image doesn't exceed 512x512 pixels, doesn't include important details outside of its circular boundaries, and is in `.jpg`, `.png`, or `.bmp` format.
 5. Enter a name and a description for the product.
@@ -178,7 +178,7 @@ The developer products you put up for sale in test mode can only be seen by you 
 
 To test your implementation:
 
-1. In the **Creator Hub**, go to **Monetization** > **Developer Products**.
+1. In the **Creator Hub**, go to **Monetization** ⟩ **Developer Products**.
 2. Click the **&vellip;** menu and select **External Purchase Settings**.
 3. In the **External Purchase Settings** page, click **Enable test mode**.
 4. Once test mode is active, return to the **Developer Products** page and select a product to test.
@@ -305,7 +305,7 @@ With analytics, you can:
 To access developer product analytics:
 
 1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select an experience.
-2. Go to **Monetization** > **Developer Products**.
+2. Go to **Monetization** ⟩ **Developer Products**.
 3. Select the **Analytics** tab.
 
 <img src="../../assets/monetization/developer-products/developer-products-analytics-2.png" width="100%" />

@@ -22,6 +22,6 @@ items:
     deprecation_message: ''
   - name: NoError
     summary: ''
-    value: 2
+    value: 3
     tags: []
     deprecation_message: ''

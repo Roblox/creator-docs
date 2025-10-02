@@ -50,7 +50,7 @@ Because of this default functionality, the sample enables the `Class.Teams` serv
 To learn more about this color theme, see [Select a Color Theme](../user-interface-design/choose-an-art-style.md#select-a-color-theme) from the UI Curriculum.
 </Alert>
 
-It's important to note the exact `Datatype.BrickColor` name for the `Class.Team.Color` property because the experience uses this name throughout many scripts in the experience to keep track of players as they sort into teams, increment points as players tag out enemy players during a round, and update custom UI elements. For example, when a round begins, **ReplicatedStorage** > **HUDGuiSetup** requires `startSyncingTeamColor`,and `startSyncingTeamPoints` which both reference `Class.Team.Color` to perform unique actions for each team.
+It's important to note the exact `Datatype.BrickColor` name for the `Class.Team.Color` property because the experience uses this name throughout many scripts in the experience to keep track of players as they sort into teams, increment points as players tag out enemy players during a round, and update custom UI elements. For example, when a round begins, **ReplicatedStorage** ⟩ **HUDGuiSetup** requires `startSyncingTeamColor`,and `startSyncingTeamPoints` which both reference `Class.Team.Color` to perform unique actions for each team.
 
 <Tabs>
   <TabItem key = "1" label="startSyncingTeamColor">
@@ -171,7 +171,7 @@ You don't need to do any additional work for the Leaderboard Indicator or Name T
 
 While some first-person shooter experiences penalize players who blast their own teammates, the sample laser tag experience allows for more forgiving gameplay by disabling friendly fire. This design decision allows everyone to only increase their team score, not subtract from it due to gameplay accidents.
 
-To understand how the sample implements this functionality, examine how **ServerScriptService** > **LaserBlastHandler** > **processTaggedPlayers** > **onPlayerTagged** handles dealing damage to tagged players. When the server detects a collision between a player's blast and another player, it calls the `onPlayerTagged` function to understand which player fired the blast, which player was hit by the blast, and how much damage it should remove from the player's health according to the blaster type.
+To understand how the sample implements this functionality, examine how **ServerScriptService** ⟩ **LaserBlastHandler** ⟩ **processTaggedPlayers** ⟩ **onPlayerTagged** handles dealing damage to tagged players. When the server detects a collision between a player's blast and another player, it calls the `onPlayerTagged` function to understand which player fired the blast, which player was hit by the blast, and how much damage it should remove from the player's health according to the blaster type.
 
 ```lua
 local function onPlayerTagged(playerBlasted: Player, playerTagged: Player, damageAmount: number)

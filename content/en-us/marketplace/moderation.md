@@ -28,7 +28,7 @@ If you archive an avatar item:
 
 To archive items:
 
-1. Navigate to **Creator Dashboard** > **Creations**.
+1. Navigate to **Creator Dashboard** ⟩ **Creations**.
 2. On the asset you intend to archive, click the **&ctdot;** icon on the thumbnail.
 3. Select **Archive in Marketplace**.
 

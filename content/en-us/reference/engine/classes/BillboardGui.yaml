@@ -233,7 +233,8 @@ properties:
       `Class.BillboardGui.DistanceLowerLimit|DistanceLowerLimit` distance.
     code_samples: []
     type: float
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security:
       read: None
@@ -258,7 +259,8 @@ properties:
       `Class.BillboardGui.DistanceLowerLimit|DistanceLowerLimit`.
     code_samples: []
     type: float
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -267,7 +269,7 @@ properties:
     category: Data
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
     capabilities:
       - UI
   - name: BillboardGui.DistanceUpperLimit
@@ -286,7 +288,8 @@ properties:
       is `-1`, meaning the property is ignored by default.
     code_samples: []
     type: float
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security:
       read: None

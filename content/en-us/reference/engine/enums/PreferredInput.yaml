@@ -30,7 +30,7 @@ items:
   - name: Touch
     summary: |
       The player's device has touch capability and no other input method is
-      available or connected.
+      available or was recently interacted with.
     value: 2
     tags: []
     deprecation_message: ''

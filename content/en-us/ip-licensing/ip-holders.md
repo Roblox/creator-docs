@@ -22,7 +22,7 @@ Before managing your IP licenses, you must first register your account either as
 
 To register as an IP holder or as an authorized representative:
 
-1. In the Creator Hub, go to **Intellectual Property** > **Registration**.
+1. In the Creator Hub, go to **Intellectual Property** ⟩ **Registration**.
 2. Click **Start registration**.
 3. Fill out the registration form.
     1. Under **Rights holder**:
@@ -56,7 +56,7 @@ An **IP family** is a folder that contains keywords that represents a particular
 
 To create an IP family:
 
-1. Go to **Intellectual Property** > **IP Library**.
+1. Go to **Intellectual Property** ⟩ **IP Library**.
 2. Click **Create IP family**.
 3. Fill out the IP family form.
     1. Under **Details**, enter a name for your IP.
@@ -69,9 +69,9 @@ To create an IP family:
 
 <img src="../assets/ip-licensing/CreateIPFamily.png" alt="Screenshot of IP family creation screen." width="500" />
 
-After you submit an IP family for approval, Roblox reviews your submission and either approves or rejects it. If your submission is rejected, you can go to **IP Library** > **[IP family name]** and click **Rejection reason** for more details. Usually, Roblox will ask for additional legal documentation, such as copyright or trademark registrations, to validate the ownership of elements in your IP library.
+After you submit an IP family for approval, Roblox reviews your submission and either approves or rejects it. If your submission is rejected, you can go to **IP Library** ⟩ **[IP family name]** and click **Rejection reason** for more details. Usually, Roblox will ask for additional legal documentation, such as copyright or trademark registrations, to validate the ownership of elements in your IP library.
 
-You can also add more keywords to your IP family at any time by going to **IP Library** > **[IP family name]** and clicking **Add IP media**.
+You can also add more keywords to your IP family at any time by going to **IP Library** ⟩ **[IP family name]** and clicking **Add IP media**.
 
 ## Create a license listing
 
@@ -84,7 +84,7 @@ License listings consist of:
 
 To create your license listing:
 
-1. Go to **Intellectual Property** > **License Manager** > **Licenses**.
+1. Go to **Intellectual Property** ⟩ **License Manager** ⟩ **Licenses**.
 2. Select the **My Licenses** tab.
 3. Click **Create license listing**.
 4. In the **Create listing** step, set up the listing.
@@ -115,7 +115,7 @@ To create your license listing:
 
 6. Review the details of the license listing and click **Create**.
 
-After you create a license listing, you can go to **My licenses** > **[IP license listing]** to make changes to both the listing and its associated licenses:
+After you create a license listing, you can go to **My licenses** ⟩ **[IP license listing]** to make changes to both the listing and its associated licenses:
 
 - To edit details of the listing, like its IP family and thumbnails, click **Edit listing**.
 - To edit details of a specific license, click the edit icon next to that license. You can edit any field except for the revenue share rate.
@@ -139,7 +139,7 @@ You can review the experiences matched to your IP and send them a license offer 
 
 To review your matches and send a license offer:
 
-1. Go to **Intellectual Property** > **License Manager** > **Matches**.
+1. Go to **Intellectual Property** ⟩ **License Manager** ⟩ **Matches**.
 2. Select the experience you want to send an offer to.
 3. In the **New license offer** panel:
     1. Select an IP family and a license.
@@ -154,7 +154,7 @@ To review your matches and send a license offer:
 
 To view all of your offers and license agreements:
 
-1. Go to **Intellectual Property** > **License Manager** > **Licenses**.
+1. Go to **Intellectual Property** ⟩ **License Manager** ⟩ **Licenses**.
 2. Select the **My License Agreements** tab. You can filter all license agreements by:
 
 <table>
@@ -190,7 +190,7 @@ After you send a license offer to a creator, they can choose to dispute that off
 
 To review an offer dispute from a creator:
 
-1. Go to **Intellectual Property** > **License Manager** > **Licenses**.
+1. Go to **Intellectual Property** ⟩ **License Manager** ⟩ **Licenses**.
 2. Select the creation that has disputed your offer. The reason for the creator's dispute displays at the top of the page.
 3. Accept or reject the dispute.
     - To accept the dispute and archive the offer, click **Accept dispute**.
@@ -202,7 +202,7 @@ If the creator disputes the offer again, the offer is automatically archived and
 
 Use analytics to analyze the impact of your individual licenses. To view a license's metrics:
 
-1. Go to **Intellectual Property** > **License Manager** > **Licenses**.
+1. Go to **Intellectual Property** ⟩ **License Manager** ⟩ **Licenses**.
 2. Select the **My licenses** tab.
 3. Select a license.
 4. Select the **Analytics** tab to see the following:

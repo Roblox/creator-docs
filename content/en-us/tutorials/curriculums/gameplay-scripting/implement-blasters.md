@@ -19,7 +19,7 @@ After you complete this section, you will learn about the scripts that allow the
 
 ## Detect player input
 
-The first step to implementing blaster behavior is to listen for when a player presses the blast button. The input type that players use to press the blast button depends on which device they're using to access the experience. For example, the sample laser tag experience supports mouse and keyboard controls, gamepads, and touch controls. You can see each of these input types in **ReplicatedStorage** > **UserInputHandler**.
+The first step to implementing blaster behavior is to listen for when a player presses the blast button. The input type that players use to press the blast button depends on which device they're using to access the experience. For example, the sample laser tag experience supports mouse and keyboard controls, gamepads, and touch controls. You can see each of these input types in **ReplicatedStorage** ⟩ **UserInputHandler**.
 
 This client script uses `Class.ContextActionService` to bind `MouseButton1` and `ButtonR2` to the blasting action. This means that every time a player either presses a left mouse button or a gamepad's R2 button, it triggers a laser beam to blast out of the blaster. Note that the **HUDGui** contains a button for blasting on mobile devices, which it connects to later in the script.
 
@@ -45,7 +45,7 @@ end
 
 ## Check whether the player can blast
 
-After `UserInputHandler` detects a button press or screen tap, it calls **ReplicatedStorage** > **Blaster** > **attemptBlastClient** to check whether the player can blast or not. Like most checks in the sample laser tag experience, it occurs twice: first on the client, then later on the server. `attemptBlastClient` then calls **ReplicatedStorage** > **Blaster** > **canLocalPlayerBlast** to perform a simple check of the `blasterStateClient` player attribute:
+After `UserInputHandler` detects a button press or screen tap, it calls **ReplicatedStorage** ⟩ **Blaster** ⟩ **attemptBlastClient** to check whether the player can blast or not. Like most checks in the sample laser tag experience, it occurs twice: first on the client, then later on the server. `attemptBlastClient` then calls **ReplicatedStorage** ⟩ **Blaster** ⟩ **canLocalPlayerBlast** to perform a simple check of the `blasterStateClient` player attribute:
 
 ```lua title="canLocalPlayerBlast"
 local function canLocalPlayerBlast(): boolean
@@ -53,7 +53,7 @@ local function canLocalPlayerBlast(): boolean
 end
 ```
 
-If you examine **ReplicatedStorage** > **Blaster** > **BlasterState**, you can see that the experience has three blaster states: `Ready`, `Blasting`, and `Disabled`. To see the effect of each of these states, you can playtest the experience, select your player under the **Players** service, then observe the **blasterStateClient** attribute in the **Properties** window. Notice how it displays `Disabled` while you choose your blaster, `Ready` most of the time, and `Blasting` for less than a second after you press the button.
+If you examine **ReplicatedStorage** ⟩ **Blaster** ⟩ **BlasterState**, you can see that the experience has three blaster states: `Ready`, `Blasting`, and `Disabled`. To see the effect of each of these states, you can playtest the experience, select your player under the **Players** service, then observe the **blasterStateClient** attribute in the **Properties** window. Notice how it displays `Disabled` while you choose your blaster, `Ready` most of the time, and `Blasting` for less than a second after you press the button.
 
 <video controls src="../../../assets/tutorials/gameplay-scripting/Blaster-Behavior/Normal-BlastState.mp4" width="100%"></video>
 
@@ -69,19 +69,19 @@ end
 
 ## Generate blast data
 
-After verifying that the player's blaster is in the `Ready` state, `attemptBlastClient` calls **ReplicatedStorage** > **attemptBlastClient** > **blastClient**. The first step that `blastClient` takes is to set the `blasterStateClient` player attribute to `Blasting`, which avoids the same rapid fire case from earlier.
+After verifying that the player's blaster is in the `Ready` state, `attemptBlastClient` calls **ReplicatedStorage** ⟩ **attemptBlastClient** ⟩ **blastClient**. The first step that `blastClient` takes is to set the `blasterStateClient` player attribute to `Blasting`, which avoids the same rapid fire case from earlier.
 
 <Alert severity="info">
-Changing `BlasterState` to `Blasting` also plays a sound in **ReplicatedStorage** > **SoundHandler**.
+Changing `BlasterState` to `Blasting` also plays a sound in **ReplicatedStorage** ⟩ **SoundHandler**.
 </Alert>
 
-The next step is to generate the blast data. If you review **ReplicatedStorage** > **Blaster** > **BlastData**, you can see that each blast consists of three pieces of information:
+The next step is to generate the blast data. If you review **ReplicatedStorage** ⟩ **Blaster** ⟩ **BlastData**, you can see that each blast consists of three pieces of information:
 
 - The player who initiates the blast.
 - A `DataType.CFrame` that represents the blast's point of origin.
 - A `RayResult` table that contains each laser beam's final destination and the hit player, if hit another player.
 
-To generate this data, `blastClient` calls **ReplicatedStorage** > **attemptBlastClient** > **blastClient** > **generateBlastData**, which you can review below.
+To generate this data, `blastClient` calls **ReplicatedStorage** ⟩ **attemptBlastClient** ⟩ **blastClient** ⟩ **generateBlastData**, which you can review below.
 
 ```lua title="generateBlastData"
 local function generateBlastData(): BlastData.Type
@@ -101,7 +101,7 @@ local function generateBlastData(): BlastData.Type
 end
 ```
 
-This function starts by using `getBlasterConfig` to retrieve the player's blaster type. The sample provides two types of blasters: one that produces several beams with a wide, horizontal spread, and another that produces a single beam. You can find their configurations in **ReplicatedStorage** > **Instances** > **LaserBlastersFolder**.
+This function starts by using `getBlasterConfig` to retrieve the player's blaster type. The sample provides two types of blasters: one that produces several beams with a wide, horizontal spread, and another that produces a single beam. You can find their configurations in **ReplicatedStorage** ⟩ **Instances** ⟩ **LaserBlastersFolder**.
 
 The function then uses `currentCamera.CFrame` as the point of origin for the blast, passing it to `getDirectionsForBlast`. At this point, the code is no longer about the blaster, it's about the laser beam, which you will learn more about in the [detect hits](./detect-hits.md) section of the tutorial. Finally, after creating the `rayResults` table, `generateBlastData` has all the information it needs to return the blast data to `blastClient`.
 
@@ -117,7 +117,7 @@ laserBlastedBindableEvent:Fire(blastData)
 laserBlastedEvent:FireServer(blastData)
 ```
 
-The `Class.BindableEvent` notifies other client scripts of the blast. For example, **ReplicatedStorage** > **FirstPersonBlasterVisuals** uses this event to know when to display visual effects, such as the blast animation and cooldown bar. Similarly, the `Class.RemoteEvent` notifies server scripts of the blast, which begins processing the blast in **ServerScriptService** > **LaserBlastHandler**.
+The `Class.BindableEvent` notifies other client scripts of the blast. For example, **ReplicatedStorage** ⟩ **FirstPersonBlasterVisuals** uses this event to know when to display visual effects, such as the blast animation and cooldown bar. Similarly, the `Class.RemoteEvent` notifies server scripts of the blast, which begins processing the blast in **ServerScriptService** ⟩ **LaserBlastHandler**.
 
 ```lua title="LaserBlastHandler"
 local function onLaserBlastedEvent(playerBlasted: Player, blastData: BlastData.Type)
@@ -171,14 +171,14 @@ As you move and blast, note the output. It might look something like this:
 2.6434271335601807
 ```
 
-If you increase the movement speed for players in **ReplicatedStorage** > **PlayerStateHandler** > **togglePlayerMovement**, then playtest again, you will likely encounter many failed checks due to excessive movement between blasts.
+If you increase the movement speed for players in **ReplicatedStorage** ⟩ **PlayerStateHandler** ⟩ **togglePlayerMovement**, then playtest again, you will likely encounter many failed checks due to excessive movement between blasts.
 
 ```lua title="togglePlayerMovement"
 local ENABLED_WALK_SPEED = 60 -- updated line, be sure to change back
 ```
 
 <Alert severity="info">
-    For this reason, if you decide to increase movement speed, consider adjusting `DISTANCE_SANITY_CHECK_TOLERANCE_STUDS` in **ServerStorage** > **ToleranceValues**. For more information on how to approach this problem, see [Movement Validation](../../../scripting/security/security-tactics.md#movement-validation).
+    For this reason, if you decide to increase movement speed, consider adjusting `DISTANCE_SANITY_CHECK_TOLERANCE_STUDS` in **ServerStorage** ⟩ **ToleranceValues**. For more information on how to approach this problem, see [Movement Validation](../../../scripting/security/security-tactics.md#movement-validation).
 </Alert>
 
 The server then does the following:
@@ -207,6 +207,6 @@ task.delay(secondsBetweenBlasts, function()
 end)
 ```
 
-The `secondsBetweenBlasts` attribute is part of the blaster configuration in **ReplicatedStorage** > **Instances** > **LaserBlastersFolder**. After the `secondsBetweenBlasts` delay passes, the player can blast again, and the entire process repeats. To help the player understand when they can blast again, the experience includes a cooldown bar.
+The `secondsBetweenBlasts` attribute is part of the blaster configuration in **ReplicatedStorage** ⟩ **Instances** ⟩ **LaserBlastersFolder**. After the `secondsBetweenBlasts` delay passes, the player can blast again, and the entire process repeats. To help the player understand when they can blast again, the experience includes a cooldown bar.
 
 At this point, players can spawn and respawn, aim and blast, but the experience still has to determine the results of each blast. In the next section of the tutorial, you will learn how to program the ability for the blaster to detect when the blast hits another player, then reduce the appropriate amount of player health according to blaster settings.

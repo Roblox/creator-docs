@@ -386,12 +386,6 @@ navigation:
         versions:
           - name: v1
             path: /cloud/legacy/matchmaking/v1
-      - title: Metrics
-        type: cloudlegacy
-        ignoreTranslation: true
-        versions:
-          - name: v1
-            path: /cloud/legacy/metrics/v1
       - title: Notifications
         type: cloudlegacy
         ignoreTranslation: true

@@ -174,7 +174,7 @@ To access payout data for one of your experiences:
 
 1. On Creator Dashboard, go to your [Creations](https://create.roblox.com/dashboard/creations) page
    and select the desired experience.
-2. Click **Monetization** > **Creator Rewards** in the left menu.
+2. Click **Monetization** ⟩ **Creator Rewards** in the left menu.
 
 The dashboard displays the following metrics:
 

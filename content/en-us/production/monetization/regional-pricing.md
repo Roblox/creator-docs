@@ -28,10 +28,10 @@ To prevent price arbitrage when users gift or trade items with different regiona
 To enable Regional Pricing for passes:
 
 1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select an experience.
-2. Go to **Monetization** > **Passes**.
+2. Go to **Monetization** ⟩ **Passes**.
 3. Select an existing pass or multiple passes, or create a new pass.
 4. Click **Enable Regional Pricing**.
-5. (Optional) To view regional prices by country or region, select a pass and go to its **Sales** page. The **Top Countries/Regions** list updates to show the adjusted regional prices based on the default price of the pass. To view regional prices for all countries and regions, click **View all countries**.
+5. <Chip label="OPTIONAL" size="small" variant="outlined" /> To view regional prices by country or region, select a pass and go to its **Sales** page. The **Top Countries/Regions** list updates to show the adjusted regional prices based on the default price of the pass. To view regional prices for all countries and regions, click **View all countries**.
 
 ### For developer products
 
@@ -40,10 +40,10 @@ To enable Regional Pricing for developer products:
 1. Check that your developer products have [dynamically-scripted prices](#check-for-dynamic-pricing).
 2. [Implement the `GetUsersPriceLevelsAsync` method](#protect-your-trades-and-gifts) to regulate item transfers based on users' price levels.
 3. Go to [Creations](https://create.roblox.com/dashboard/creations) and select an experience.
-4. Go to **Monetization** > **Developer Products**.
+4. Go to **Monetization** ⟩ **Developer Products**.
 5. Select an existing product or multiple products, or create a new product.
 6. Click **Enable Regional Pricing**.
-7. (Optional) To view regional prices by country or region, select a product and go to its **Basic Settings** page. The **Top Countries/Regions** list updates to show the adjusted regional prices based on the default price of the product. To view regional prices for all countries and regions, click **View all countries**.
+7. <Chip label="OPTIONAL" size="small" variant="outlined" /> To view regional prices by country or region, select a product and go to its **Basic Settings** page. The **Top Countries/Regions** list updates to show the adjusted regional prices based on the default price of the product. To view regional prices for all countries and regions, click **View all countries**.
 
 ### For Avatar items
 

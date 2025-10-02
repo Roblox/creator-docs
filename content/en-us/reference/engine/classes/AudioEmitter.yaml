@@ -118,7 +118,8 @@ properties:
       of detail will use the less-detailed option.
     code_samples: []
     type: AudioSimulationFidelity
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security:
       read: None

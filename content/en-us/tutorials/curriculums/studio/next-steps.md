@@ -13,10 +13,10 @@ Not sure where to get started? Let's look at some of your options according to y
 
 If you are brand new to game development, check out the following beginner tutorials on different development areas that you can specialize in:
 
-- [Building lesson](../building/index.md) - Learn how to **build a simple platformer** using one of Studio's templates.
-- [Coding lesson](../coding/index.md) - Learn how to **code an interactive story** where players replace placeholder words with their own answers.
-- [VFX lesson](../artist/index.md) - Learn how to **customize special effects art** for a pre-made carnival ride experience.
-- [Animation lesson](../animator/index.md) - Learn how to **create keyframes for various poses**, then loop them into a swimming animation that you can reuse in any experience.
+- [Building lesson](../building/index.md) — Learn how to **build a simple platformer** using one of Studio's templates.
+- [Coding lesson](../coding/index.md) — Learn how to **code an interactive story** where players replace placeholder words with their own answers.
+- [VFX lesson](../artist/index.md) — Learn how to **customize special effects art** for a pre-made carnival ride experience.
+- [Animation lesson](../animator/index.md) — Learn how to **create keyframes for various poses**, then loop them into a swimming animation that you can reuse in any experience.
 
 After you complete each of these tutorials, you will be ready to [create your first experience](../core/index.md) and learn about [coding fundamentals](../../fundamentals/coding-1/landing.md) for Luau, Studio's programming language.
 
@@ -28,16 +28,16 @@ Game development is a massive field with a lot of different specializations. If 
 
 If you aren't new to game development, but are new to Studio, check out the following guides for an overview of how experiences technically work:
 
-- [Projects](../../../projects/index.md) - Learn how to create and manage projects in Studio.
-- [Assets](../../../projects/assets/index.md) - Learn about how everything in Roblox is represented as a cloud-based asset.
-- [Data model](../../../projects/data-model.md) - Learn how places look and function in your experiences.
-- [Client-server runtime](../../../projects/client-server.md) - Learn how experiences run in the Cloud.
+- [Projects](../../../projects/index.md) — Learn how to create and manage projects in Studio.
+- [Assets](../../../projects/assets/index.md) — Learn about how everything in Roblox is represented as a cloud-based asset.
+- [Data model](../../../projects/data-model.md) — Learn how places look and function in your experiences.
+- [Client-server runtime](../../../projects/client-server.md) — Learn how experiences run in the Cloud.
 
 After you have a solid understanding of these guides, you will be ready to examine the [Plant](../../../resources/plant-reference-project.md) reference project that focuses on common use cases that you might encounter when you develop an experience on Roblox, including tradeoffs, compromises, and the rationale of various implementation choices so that you can make the best decisions for your own experiences.
 
 As you start to build your own experiences, be sure to check out the intermediate tutorials for common use cases, such as:
 
-- [Create score bars](../../use-case-tutorials/ui/create-a-score-bar.md)
+- [Create HUD meters](../../use-case-tutorials/ui/create-hud-meters.md)
 - [Add 3D audio](../../use-case-tutorials/audio/add-3D-audio.md)
 - [Save player data](../../use-case-tutorials/data-storage/save-player-data.md)
 

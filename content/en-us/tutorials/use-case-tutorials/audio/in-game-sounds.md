@@ -93,7 +93,7 @@ The remainder of this tutorial uses a pre-made model. This model includes parts 
 
 ### Set up the script
 
-1. In **StarterPlayer** > **StarterPlayerScripts**, create a new local script named **CollectableSounds**.
+1. In **StarterPlayer** ⟩ **StarterPlayerScripts**, create a new local script named **CollectableSounds**.
 
 2. The code below will run the `partTouched` function whenever the player touches a collectable. Copy the code into your script.
 

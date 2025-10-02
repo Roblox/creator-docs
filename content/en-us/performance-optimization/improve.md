@@ -312,7 +312,7 @@ A draw call is a set of instructions from the engine to the GPU to render
 something. Draw calls have significant overhead. Generally, the fewer draw
 calls per frame, the less computational time is spent rendering a frame.
 
-You can see how many draw calls are currently occurring with the **Render Stats** > **Timing** item in Studio. You can view **Render Stats** in the client by pressing <kbd>Shift</kbd><kbd>F2</kbd>.
+You can see how many draw calls are currently occurring with the **Render Stats** ⟩ **Timing** item in Studio. You can view **Render Stats** in the client by pressing <kbd>Shift</kbd><kbd>F2</kbd>.
 
 The more objects that need to be drawn in your scene in a given frame, the more
 draw calls are made to the GPU. However, the Roblox Engine utilizes a process

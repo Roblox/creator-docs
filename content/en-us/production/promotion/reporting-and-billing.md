@@ -357,7 +357,7 @@ The delivery column of the Ads Manager defines the **status** of your campaign, 
 
 ## Billing
 
-The ads billing tool charges you for ad placements on Roblox using the payment method you have on file. To view billing information, go to **Billing Center** > **Payment Activity**.
+The ads billing tool charges you for ad placements on Roblox using the payment method you have on file. To view billing information, go to **Billing Center** ⟩ **Payment Activity**.
 
 ### Credit and debit cards
 

@@ -5,8 +5,9 @@
 name: CollectionService
 type: class
 memory_category: Instances
-summary: A service which manages instance collections using assigned tags.
-description: |-
+summary: |
+  A service which manages instance collections using assigned tags.
+description: |
   `CollectionService` manages groups (collections) of instances with **tags**.
   Tags are sets of strings applied to instances that replicate from the server
   to the client. They are also serialized when places are saved.
@@ -44,8 +45,9 @@ deprecation_message: ''
 properties: []
 methods:
   - name: CollectionService:AddTag
-    summary: Applies a tag to an `Class.Instance`.
-    description: |-
+    summary: |
+      Applies a tag to an `Class.Instance`.
+    description: |
       This method applies a tag to an `Class.Instance`, doing nothing if the tag
       is already applied to that instance. Successfully adding a tag will fire a
       signal created by
@@ -87,8 +89,10 @@ methods:
     capabilities:
       - Basic
   - name: CollectionService:GetAllTags
-    summary: Returns an array of all tags in the experience.
-    description: Returns an array of all tags in the experience.
+    summary: |
+      Returns an array of all tags in the experience.
+    description: |
+      Returns an array of all tags in the experience.
     code_samples: []
     parameters: []
     returns:
@@ -101,8 +105,9 @@ methods:
     capabilities:
       - Basic
   - name: CollectionService:GetCollection
-    summary: Returns all instances of a given class which are in the `Class.DataModel`.
-    description: |-
+    summary: |
+      Returns all instances of a given class which are in the `Class.DataModel`.
+    description: |
       This function returns all instances of a given class which are in the
       `Class.DataModel`. Only works for `Class.Configuration`,
       `Class.CustomEvent`, `Class.CustomEventReceiver`, `Class.Dialog`, and
@@ -119,7 +124,7 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This item has been superseded by a `Class.CollectionService` tagging
       method. The equivalent function using the new method is
       `Class.CollectionService:GetTagged()` which should be used in new work.
@@ -128,8 +133,9 @@ methods:
     capabilities:
       - Basic
   - name: CollectionService:GetInstanceAddedSignal
-    summary: Returns a signal that fires when a given tag is added to an instance.
-    description: |-
+    summary: |
+      Returns a signal that fires when a given tag is added to an instance.
+    description: |
       Given a tag (string), this method returns a signal which fires under two
       conditions:
 
@@ -155,10 +161,12 @@ methods:
       - name: tag
         type: string
         default:
-        summary: The tag to watch for.
+        summary: |
+          The tag to watch for.
     returns:
       - type: RBXScriptSignal
-        summary: An event that fires when you add the tag to an instance.
+        summary: |
+          An event that fires when you add the tag to an instance.
     tags: []
     deprecation_message: ''
     security: None
@@ -166,8 +174,9 @@ methods:
     capabilities:
       - Basic
   - name: CollectionService:GetInstanceRemovedSignal
-    summary: Returns a signal that fires when a given tag is removed from an instance.
-    description: |-
+    summary: |
+      Returns a signal that fires when a given tag is removed from an instance.
+    description: |
       Given a tag (string), this method returns a signal which fires under two
       conditions:
 
@@ -191,10 +200,12 @@ methods:
       - name: tag
         type: string
         default:
-        summary: The tag to watch for.
+        summary: |
+          The tag to watch for.
     returns:
       - type: RBXScriptSignal
-        summary: An event that fires when you remove the tag from an instance.
+        summary: |
+          An event that fires when you remove the tag from an instance.
     tags: []
     deprecation_message: ''
     security: None
@@ -202,8 +213,9 @@ methods:
     capabilities:
       - Basic
   - name: CollectionService:GetTagged
-    summary: Returns an array of instances in the game with a given tag.
-    description: |-
+    summary: |
+      Returns an array of instances in the game with a given tag.
+    description: |
       This method returns an array of instances with a given tag which are
       descendants of the `Class.DataModel`. Removing a tag using
       `Class.CollectionService:RemoveTag()` or `Class.Instance:RemoveTag()`
@@ -224,10 +236,12 @@ methods:
       - name: tag
         type: string
         default:
-        summary: The tag to search for.
+        summary: |
+          The tag to search for.
     returns:
       - type: Instances
-        summary: An array of all instances with the tag.
+        summary: |
+          An array of all instances with the tag.
     tags: []
     deprecation_message: ''
     security: None
@@ -235,8 +249,9 @@ methods:
     capabilities:
       - Basic
   - name: CollectionService:GetTags
-    summary: Gets an array of all tags applied to a given instance.
-    description: |-
+    summary: |
+      Gets an array of all tags applied to a given instance.
+    description: |
       Given an `Class.Instance`, this method returns an array of strings which
       are the tags applied to the instance.
 
@@ -250,10 +265,12 @@ methods:
       - name: instance
         type: Instance
         default:
-        summary: The instance whose tags should be returned.
+        summary: |
+          The instance whose tags should be returned.
     returns:
       - type: Array
-        summary: An array of strings which are the tags applied to the given instance.
+        summary: |
+          An array of strings which are the tags applied to the given instance.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -262,8 +279,9 @@ methods:
     capabilities:
       - Basic
   - name: CollectionService:HasTag
-    summary: Check whether an instance has a given tag.
-    description: |-
+    summary: |
+      Check whether an instance has a given tag.
+    description: |
       This method returns whether a given `Class.Instance` has a tag.
 
       By extension, any tags returned by a call to
@@ -275,14 +293,17 @@ methods:
       - name: instance
         type: Instance
         default:
-        summary: The instance to check for the presence of a tag.
+        summary: |
+          The instance to check for the presence of a tag.
       - name: tag
         type: string
         default:
-        summary: The tag to check for.
+        summary: |
+          The tag to check for.
     returns:
       - type: boolean
-        summary: Whether the instance has the tag.
+        summary: |
+          Whether the instance has the tag.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -291,8 +312,9 @@ methods:
     capabilities:
       - Basic
   - name: CollectionService:RemoveTag
-    summary: Removes a tag from an instance.
-    description: |-
+    summary: |
+      Removes a tag from an instance.
+    description: |
       This method removes a tag from an instance. Successfully removing a tag
       will fire a signal created by
       `Class.CollectionService:GetInstanceRemovedSignal()|GetInstanceRemovedSignal()`
@@ -308,11 +330,13 @@ methods:
       - name: instance
         type: Instance
         default:
-        summary: The instance to remove the tag from.
+        summary: |
+          The instance to remove the tag from.
       - name: tag
         type: string
         default:
-        summary: The tag to remove from the instance.
+        summary: |
+          The tag to remove from the instance.
     returns:
       - type: ()
         summary: ''
@@ -325,11 +349,11 @@ methods:
       - Basic
 events:
   - name: CollectionService.ItemAdded
-    summary: |-
+    summary: |
       Fires when a `Class.Configuration`, `Class.CustomEvent`,
       `Class.CustomEventReceiver`, `Class.Dialog`, or `Class.VehicleSeat` is
       added to the `Class.DataModel`.
-    description: |-
+    description: |
       This function fires when a `Class.Configuration`, `Class.CustomEvent`,
       `Class.CustomEventReceiver`, `Class.Dialog`, or `Class.VehicleSeat` is
       added to the `Class.DataModel`.
@@ -342,18 +366,18 @@ events:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This item has been superseded by a `Class.CollectionService` tagging
       method. There is currently no means of checking when a tag is added.
     security: None
     capabilities:
       - Basic
   - name: CollectionService.ItemRemoved
-    summary: |-
+    summary: |
       Fires when a `Class.Configuration`, `Class.CustomEvent`,
       `Class.CustomEventReceiver`, `Class.Dialog`, or `Class.VehicleSeat` is
       removed from the `Class.DataModel`.
-    description: |-
+    description: |
       This function fires when a `Class.Configuration`, `Class.CustomEvent`,
       `Class.CustomEventReceiver`, `Class.Dialog`, or `Class.VehicleSeat` is
       removed from the `Class.DataModel`.
@@ -366,17 +390,17 @@ events:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This item has been superseded by a `Class.CollectionService` tagging
       method. There is currently no means of checking when a tag is removed.
     security: None
     capabilities:
       - Basic
   - name: CollectionService.TagAdded
-    summary: |-
+    summary: |
       Fires when a tag is added to an instance and the added tag is the only
       occurrence of that tag in the place.
-    description: |-
+    description: |
       This event fires when a tag is added to an instance and the added tag is
       the only occurrence of that tag in the place.
     code_samples: []
@@ -391,10 +415,10 @@ events:
     capabilities:
       - Basic
   - name: CollectionService.TagRemoved
-    summary: |-
+    summary: |
       Fires when a tag is removed from an instance and the removed tag is no
       longer used anywhere in the place.
-    description: |-
+    description: |
       This event fires when a tag is removed from an instance and the removed
       tag is no longer used anywhere in the place.
     code_samples: []

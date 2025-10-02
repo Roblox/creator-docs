@@ -156,7 +156,7 @@ Although Roblox itself does **not** record the purchase history of developer pro
 
 To sell a pass on the **Store** tab of the experience details page:
 
-1. Go to **Monetization** > **Passes**.
+1. Go to **Monetization** ⟩ **Passes**.
 2. Hover over the pass and click the **&ctdot;** menu.
 3. Select the pass you want to sell.
 4. Select **Sales**.
@@ -214,7 +214,7 @@ With analytics, you can:
 To access pass analytics:
 
 1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select an experience.
-2. Go to **Monetization** > **Passes**.
+2. Go to **Monetization** ⟩ **Passes**.
 3. Select the **Analytics** tab.
 
 <img src="../../assets/monetization/game-passes/passes-analytics-2.png" width="100%" />

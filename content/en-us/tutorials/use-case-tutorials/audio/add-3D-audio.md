@@ -72,7 +72,7 @@ To recreate the looping 3D audio in the sample [Gingerbread House - Complete Aud
    1. In the **Properties** window, set **DefaultListenerLocation** to **Character**. When you run the experience, the engine automatically:
       - Creates a `Class.AudioListener` under each player character's `Class.Humanoid.RootPart` so that you can hear sounds shift in your real-world speakers according to the position and scale of sound sources within the experience.
       - Creates an `Class.AudioDeviceOutput` under **SoundService**.
-1. In the **Explorer** window, navigate to **Workspace** > **WaterfallAudioObject**, then:
+1. In the **Explorer** window, navigate to **Workspace** ⟩ **WaterfallAudioObject**, then:
    1. Insert an **AudioPlayer** object to create an audio source for the waterfall.
    1. Insert an **AudioEmitter** object to emit a positional stream from **WaterfallAudioObject**.
    1. Insert a **Wire** object to carry the stream from the audio player to the audio emitter.
@@ -131,7 +131,7 @@ Because there isn't a specific order that players need to collect the gumdrops, 
 
 To recreate the one shot event feedback 3D audio in the sample [Gingerbread House - Complete Audio](https://www.roblox.com/games/94670255584609/Gingerbread-House-Complete-Audio) place file:
 
-1. In the **Explorer** window, navigate to **Workspace** > **Door**, then:
+1. In the **Explorer** window, navigate to **Workspace** ⟩ **Door**, then:
    1. Insert an **AudioPlayer** object to create an audio source for the volume.
    1. Insert an **AudioEmitter** object to emit a positional stream from **Door**.
    1. Insert a **Wire** object to carry the stream from the audio player to the audio emitter.
@@ -286,7 +286,7 @@ From here, you can connect this interaction to all sorts of unique gameplay acti
 
 To recreate the one shot object interaction 3D audio in the sample [Gingerbread House - Complete Audio](https://www.roblox.com/games/94670255584609/Gingerbread-House-Complete-Audio) place file:
 
-1. In the **Explorer** window, navigate to **Workspace** > **3DAudioButton**, then:
+1. In the **Explorer** window, navigate to **Workspace** ⟩ **3DAudioButton**, then:
    1. Insert an **AudioPlayer** object to create an audio source for the button.
    1. Insert an **AudioEmitter** object to emit a positional stream from **3DAudioButton**.
    1. Insert a **Wire** object to carry the stream from the audio player to the audio emitter.
@@ -409,7 +409,7 @@ To illustrate, the sample uses a **volume**, or invisible region within the 3D s
 
 To recreate the one shot character dialogue 3D audio in the sample [Gingerbread House - Complete Audio](https://www.roblox.com/games/94670255584609/Gingerbread-House-Complete-Audio) place file:
 
-1. In the **Explorer** window, navigate to **Workspace** > **DialogueVolume**, then:
+1. In the **Explorer** window, navigate to **Workspace** ⟩ **DialogueVolume**, then:
    1. Insert an **AudioPlayer** object to create an audio source for the volume.
    1. Insert an **AudioEmitter** object to emit a positional stream from **DialogueVolume**.
    1. Insert a **Wire** object to carry the stream from the audio player to the audio emitter.
@@ -420,7 +420,7 @@ To recreate the one shot character dialogue 3D audio in the sample [Gingerbread 
 1. Select the **Wire**, then in the **Properties** window,
    1. Set **SourceInstance** to your new **AudioPlayer** to specify that you want the wire to carry audio from this specific audio player.
    1. Set **TargetInstance** to your new **AudioEmitter** to specify that you want the wire to carry audio to this specific audio emitter within the volume.
-1. Back in the **Explorer** window, navigate to **StarterPlayer** > **StarterCharacterScripts**, insert a **LocalScript**, rename it **PlayAudioWhenInVolume**, and paste the following code into the local script:
+1. Back in the **Explorer** window, navigate to **StarterPlayer** ⟩ **StarterCharacterScripts**, insert a **LocalScript**, rename it **PlayAudioWhenInVolume**, and paste the following code into the local script:
 
    ``` lua
    local Workspace = game:GetService("Workspace")

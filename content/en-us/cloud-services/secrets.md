@@ -12,7 +12,7 @@ You could copy and paste the API key into a script or add it to a data store, bu
 To view, create, or edit secrets, you must be the experience owner or group owner. You can have up to 500 secrets per experience.
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-2. Select your experience, and then select **Secrets** > **Create Secret**.
+2. Select your experience, and then select **Secrets** ⟩ **Create Secret**.
 3. Enter a name, the secret, and the applicable domain.
 
    - The name acts as a unique identifier for the secret, so we recommend something descriptive.
@@ -27,7 +27,7 @@ You can also use Open Cloud to manage your secrets. See the [reference documenta
 
 For security reasons, the secrets store for each experience is only available to live servers or [collaborative testing](../studio/testing-modes.md#collaborative-testing) environments. If you try to access a secret during [local playtesting](../studio/testing-modes.md#playtesting), you'll receive a `Can't find secret with given key` error.
 
-To specify secrets for local testing, go to Studio and then go to **File** > **Game Settings** > **Security**. You can create new secrets and edit or delete existing secrets in the **Secrets** section.
+To specify secrets for local testing, go to Studio and then go to **File** ⟩ **Game Settings** ⟩ **Security**. You can create new secrets and edit or delete existing secrets in the **Secrets** section.
 
 <img src="../assets/data/secrets-store/LocalSecrets.png" width="750px" alt="View, create, edit secrets with the Secrets UI."/>
 
@@ -35,7 +35,7 @@ To specify secrets for local testing, go to Studio and then go to **File** > **G
 
 ## Use secrets
 
-Before using secrets within your experience, you must enable **Allow HTTP Requests** in the **Security** section of Studio's **File** > **Game Settings** window. Then call `Class.HttpService:GetSecret()` within a script:
+Before using secrets within your experience, you must enable **Allow HTTP Requests** in the **Security** section of Studio's **File** ⟩ **Game Settings** window. Then call `Class.HttpService:GetSecret()` within a script:
 
 ```lua
 local HttpService = game:GetService("HttpService")

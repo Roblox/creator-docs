@@ -29,11 +29,11 @@ To unlock and use Extended Services:
 2. Go to **Extended Services**.
 3. If you haven't entered your account details and payment information yet, click **Add missing information** on the top banner.
     1. Enter your account information. The **Account type**, **Tax ID type**, and **Tax ID** fields are optional.
-        - You can also go to **Finances** > **Account Information** under the **Extended Services** section to manage your account information. You don't need to update anything else on this page.
-    3. Click **Next**.
-    4. Enter a payment method. You can enter a new payment method or select from the available payment options already associated with your Roblox account.
-        - You can also go to **Finances** > **Payments** to add new payment methods, or go to **Finances** > **Billing** to set a new default payment method.
-    5. Click **Save**.
+        - You can also go to **Finances** ⟩ **Account Information** under the **Extended Services** section to manage your account information. You don't need to update anything else on this page.
+    2. Click **Next**.
+    3. Enter a payment method. You can enter a new payment method or select from the available payment options already associated with your Roblox account.
+        - You can also go to **Finances** ⟩ **Payments** to add new payment methods, or go to **Finances** ⟩ **Billing** to set a new default payment method.
+    4. Click **Save**.
 
 <h5>Account status</h5>
 
@@ -86,7 +86,7 @@ Roblox notifies you by email when your usage reaches 80% of your budget, and the
 
 To access the Extended Services billing dashboard:
 
-1. Go to **Finances** > **Billing**.
+1. Go to **Finances** ⟩ **Billing**.
 2. Select the **Cloud services** tab to display the following:
     - Your pending balance, including month-to-date cost
     - Your billing history, including all Extended Services billing activity across your experiences
@@ -115,9 +115,9 @@ See the following table for Extended Services pricing.
   <tr>
     <td style={{paddingBottom: '24px'}}>Storage</td>
     <td style={{paddingBottom: '24px'}}>64KB + (CCU x 1.2KB)</td>
-    <td style={{paddingBottom: '24px'}}>$0.10 / GB Hours<sup>1</sup></td>
+    <td style={{paddingBottom: '24px'}}>$0.10 / GB Hours&sup1;</td>
   </tr>
 </tbody>
 </table>
 
-<sup>1. GB Hours = the storage consumption multiplied by the amount of time. For example, 100GB Hours might equate to "100GB x 1 hour" or "200GB x 0.5 hours".</sup>
+<figcaption>&sup1; GB Hours = the storage consumption multiplied by the amount of time. For example, 100GB Hours might equate to "100GB x 1 hour" or "200GB x 0.5 hours".</figcaption>

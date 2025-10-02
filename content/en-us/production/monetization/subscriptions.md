@@ -34,7 +34,7 @@ Before creating your subscriptions, ensure they align with [Roblox's Terms of Us
 
 Before you can create a subscription, you must be phone or [ID verified](../publishing/account-verification.md). To create a subscription:
 
-1. Navigate to your experience in the [Creator Dashboard](https://create.roblox.com/) and select **Monetization Products** > **Subscriptions**. Then click **Create A Subscription**.
+1. Navigate to your experience in the [Creator Dashboard](https://create.roblox.com/) and select **Monetization Products** ⟩ **Subscriptions**. Then click **Create A Subscription**.
 
    <img src="../../assets/monetization/subscriptions/subscriptions-1.png" width="40%"/>
 
@@ -75,7 +75,7 @@ Before activating your subscription for the first time, you must confirm a short
 
 ## Edit subscriptions
 
-You can have up to 50 subscriptions per experience between active and inactive subscriptions. To edit subscriptions, navigate to your experience in the [Creator Dashboard](https://create.roblox.com/) and select **Monetization Products** > **Subscriptions**.
+You can have up to 50 subscriptions per experience between active and inactive subscriptions. To edit subscriptions, navigate to your experience in the [Creator Dashboard](https://create.roblox.com/) and select **Monetization Products** ⟩ **Subscriptions**.
 
 You can edit a subscription's image, description, or state. If you want to edit more than these properties, you need to delete and recreate the subscriptions with the desired changes.
 
@@ -361,7 +361,7 @@ Subscriptions are currently ineligible to be cross-sold by other experiences and
 
 ### Subscription payouts
 
-Payouts are found in **Robux Balance** > **My Transactions**:
+Payouts are found in **Robux Balance** ⟩ **My Transactions**:
 
 <img src="../../assets/monetization/subscriptions/subscriptions-my-transaction.png" width="30%"/>
 

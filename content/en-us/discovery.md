@@ -82,7 +82,7 @@ For example:
 
 ## Use Home Recommendations analytics to grow your experience
 
-The **Home Recommendations** dashboard helps you monitor these recommendation signals. To access it, go to **Analytics** > **Acquisition** on the Creator Hub and select the **Home Recommendations** tab.
+The **Home Recommendations** dashboard helps you monitor these recommendation signals. To access it, go to **Analytics** ⟩ **Acquisition** on the Creator Hub and select the **Home Recommendations** tab.
 
 You can use the Home Recommendation dashboard to:
 

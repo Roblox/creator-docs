@@ -61,15 +61,15 @@ For more information on both types of these assets for places, such as where and
 	<tbody>
 		<tr>
 			<td>**Model**</td>
-			<td>A `Class.Model` is a container object for geometric groupings such as `Class.BasePart|BaseParts`, `Class.MeshPart|MeshParts`, and other `Class.Model` objects. Models can also contain objects such as `Class.Script|Scripts`. Whenever you group objects together in Studio, they automatically become a `Class.Model` object. For more information, see [Models](../../parts/models.md).</td>
+			<td>A `Class.Model` is a container object for geometric groupings such as `Class.BasePart|BaseParts`, `Class.MeshPart|MeshParts`, and other `Class.Model` objects. Models can also contain objects such as `Class.Script|Scripts`. Whenever you group objects together in Studio, they automatically become a `Class.Model` object. For more information, see [models](../../parts/models.md).</td>
 		</tr>
 		<tr>
 			<td>**Mesh**</td>
-			<td>A `Class.MeshPart` is a type of part object that includes a physically-simulated custom mesh. For more information, see [Meshes](../../parts/meshes.md).</td>
+			<td>A `Class.MeshPart` is a type of part object that includes a physically-simulated custom mesh. For more information, see [meshes](../../parts/meshes.md).</td>
 		</tr>
 		<tr>
 			<td>**Audio**</td>
-			<td>A `Class.Sound` object is an object that emits audio when you apply an audio asset ID within its `Class.Sound.SoundId|SoundId` property. Where you place the `Class.Sound` object in the data model changes how and where the sound emits within the experience. For more information, see [Audio Assets](../../audio/assets.md) and [Sound Objects](../../sound/objects.md).</td>
+			<td>An `Class.AudioPlayer` instance loads and plays an audio file and passes the output through a `Class.Wire` to an `Class.AudioEmitter` or `Class.AudioDeviceOutput`. For more information, see [audio assets](../../audio/assets.md) and [audio objects](../../audio/objects.md).</td>
 		</tr>
 		<tr>
 			<td>**Image**</td>
@@ -81,7 +81,7 @@ For more information on both types of these assets for places, such as where and
 		</tr>
 		<tr>
 			<td>**Video**</td>
-			<td>A `Class.VideoFrame` object displays a video through its `Class.VideoFrame.Video|Video` asset property. See [Video Frames](../../ui/video-frames.md) for more information.</td>
+			<td>A `Class.VideoFrame` object displays a video through its `Class.VideoFrame.Video|Video` asset property. See [video frames](../../ui/video-frames.md) for more information.</td>
 		</tr>
 	</tbody>
 </table>
@@ -94,13 +94,13 @@ There are three categories of asset types for avatars that you can find in the [
 - **Clothing and Accessories** — Assets that represent clothing and accessories on top of body parts.
 - **Animations** — Assets that animate the avatar character model, such as how it runs, jumps, or swims.
 
-Every [character](../../characters/index.md) model contains a `Class.HumanoidDescription` object with asset IDs for the character's body parts, clothing, accessories, and animations. By default, a user's playable character references their personal Roblox avatar, but you can apply a custom `Class.HumanoidDescription` if desired. For more information, see [Character appearance](../../characters/appearance.md).
+Every [character](../../characters/index.md) model contains a `Class.HumanoidDescription` object with asset IDs for the character's body parts, clothing, accessories, and animations. By default, a user's playable character references their personal Roblox avatar, but you can apply a custom `Class.HumanoidDescription` if desired. For more information, see [character appearance](../../characters/appearance.md).
 
 ## Packages
 
 Within Studio, you can convert single assets or asset hierarchies into **packages** and reuse them in multiple experiences, letting you optimize asset management across your entire team or across multiple projects. When a package is updated, you or your team members can update specific copies to the most current version, update all copies across an experience, or set specific copies to auto update.
 
-For more information, see [Packages](../../projects/assets/packages.md).
+For more information, see [packages](../../projects/assets/packages.md).
 
 ## Asset URIs
 
@@ -296,7 +296,7 @@ In the above example, `Images` is the category/folder that appears in the [Asset
 An asset's privacy status determines who has permission to use the asset within their experiences. By default, all assets are **private** when you or your [group](../../projects/groups.md) members import them into Studio. If you want to grant everyone access to the asset ID, you must distribute the asset to the [Creator Store][CreatorMarketplaceURL].
 
 <Alert severity="warning">
-Special privacy rules and workflows apply to **audio** and **video** assets. See [Asset Privacy](../../projects/assets/privacy.md) for details on sharing these asset types among connections and experiences.
+Special privacy rules and workflows apply to **audio** and **video** assets. See [asset privacy](../../projects/assets/privacy.md) for details on sharing these asset types among connections and experiences.
 </Alert>
 
 ## Asset moderation
@@ -345,7 +345,7 @@ To further help with organization, you can archive most asset types in the **Cre
 After you archive an asset, it disappears from the website and is no longer usable or visible in Roblox experiences, including your own.
 
 <Alert severity = 'warning'>
-For more information on how archiving works with Marketplace items, see [Moderation](../../marketplace/moderation.md#archive-assets).
+For more information on how archiving works with Marketplace items, see [moderation](../../marketplace/moderation.md#archive-assets).
 </Alert>
 
 [CreatorMarketplaceURL]: https://create.roblox.com/store

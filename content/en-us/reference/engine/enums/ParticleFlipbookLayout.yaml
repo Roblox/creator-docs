@@ -37,3 +37,11 @@ items:
     value: 3
     tags: []
     deprecation_message: ''
+  - name: Custom
+    summary: |
+      A custom grid size defined by
+      `Class.ParticleEmitter.FlipbookSizeX|FlipbookSizeX` and
+      `Class.ParticleEmitter.FlipbookSizeY|FlipbookSizeY`.
+    value: 4
+    tags: []
+    deprecation_message: ''

@@ -122,7 +122,7 @@ For example, the sample includes various audio triggers throughout the experienc
 
 To recreate the one shot game state feedback audio in the sample [Gingerbread House - Complete Audio](https://www.roblox.com/games/94670255584609/Gingerbread-House-Complete-Audio) place file:
 
-1. In the **Explorer** window, navigate to **Workspace** > **Gumdrops** > **Gumdrop**, then:
+1. In the **Explorer** window, navigate to **Workspace** ⟩ **Gumdrops** ⟩ **Gumdrop**, then:
    1. Insert an **AudioPlayer** object to create an audio source.
    1. Insert an **AudioDeviceOutput** object to create a speaker that plays throughout the experience.
    1. Insert a **Wire** object to carry the stream from the audio player to the speaker.
@@ -293,7 +293,7 @@ From here, you can connect this interaction to all sorts of useful gameplay acti
 
 To recreate the one shot UI interaction audio in the sample [Gingerbread House - Complete Audio](https://www.roblox.com/games/94670255584609/Gingerbread-House-Complete-Audio) place file:
 
-1. In the **Explorer** window, navigate to **StarterGui** > **2DAudioButton**, then:
+1. In the **Explorer** window, navigate to **StarterGui** ⟩ **2DAudioButton**, then:
    1. Insert an **AudioPlayer** object to create an audio source.
    1. Insert an **AudioDeviceOutput** object to create a speaker that plays throughout the experience.
    1. Insert a **Wire** object to carry the stream from the audio player to the speaker.

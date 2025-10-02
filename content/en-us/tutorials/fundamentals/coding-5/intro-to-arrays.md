@@ -35,13 +35,13 @@ This project will use a pre-made NPC model, which includes a partial script and 
    <Button variant="contained">Download</Button>
    </a>
 
-2. In Explorer, import the NPC by right-clicking on **Workspace** > **Insert From File** and select the downloaded file.
+2. In Explorer, import the NPC by right-clicking on **Workspace** ⟩ **Insert From File** and select the downloaded file.
 
 ## Code a dialogue array
 
 These steps use an array to store different phrases for the NPC to say when players interact with it.
 
-1. In the **Explorer**, go to NPC > ProximityPrompt > ChatManager.
+1. In the **Explorer**, go to **NPC** ⟩ **ProximityPrompt** ⟩ **ChatManager**.
 
 2. In ChatManager, where marked in the script, create an **empty array** to store dialogue options.
 

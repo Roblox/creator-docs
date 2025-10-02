@@ -22,14 +22,14 @@ After you complete this section, you can explore additional development topics t
 
 ## Get blast direction
 
-After a player blasts their blaster, **ReplicatedStorage** > **Blaster** > **attemptBlastClient** > **blastClient** > **generateBlastData** calls two functions to start the hit detection process: `rayDirections()` and `rayResults()`.
+After a player blasts their blaster, **ReplicatedStorage** ⟩ **Blaster** ⟩ **attemptBlastClient** ⟩ **blastClient** ⟩ **generateBlastData** calls two functions to start the hit detection process: `rayDirections()` and `rayResults()`.
 
 ```lua title="generateBlastData"
 local rayDirections = getDirectionsForBlast(currentCamera.CFrame, blasterConfig)
 local rayResults = castLaserRay(localPlayer, currentCamera.CFrame.Position, rayDirections)
 ```
 
-The inputs for `rayDirections` are straightforward: the current camera position and rotation values, and the player's blaster type. If the sample laser tag experience only gave players blasters that produce a single laser beam, **ReplicatedStorage** > **LaserRay** > **getDirectionsForBlast** would be unnecessary because you could use `currentCamera.CFrame.LookVector` to calculate the direction for the blast.
+The inputs for `rayDirections` are straightforward: the current camera position and rotation values, and the player's blaster type. If the sample laser tag experience only gave players blasters that produce a single laser beam, **ReplicatedStorage** ⟩ **LaserRay** ⟩ **getDirectionsForBlast** would be unnecessary because you could use `currentCamera.CFrame.LookVector` to calculate the direction for the blast.
 
 However, because the sample provides an additional blaster type that produces several laser beams with a wide, horizontal spread, `getDirectionsForBlast` must calculate the direction for each laser beam of the spread according to their angles within the blaster configuration:
 
@@ -85,7 +85,7 @@ local rayResults = castLaserRay(localPlayer, currentCamera.CFrame.Position, rayD
 
 ## Cast rays
 
-`castLaserRay()`, the second function in **ReplicatedStorage** > **Blaster** > **attemptBlastClient** > **blastClient** > **generateBlastData**, performs the more complex operations within the script. It begins by specifying parameters so that it can make `Class.Workspace:Raycast()` calls for raycasting purposes. Raycasting is the process of sending out an invisible ray from a `Datatype.Vector3` point in a specific direction with a defined length, then checking its path to see where it intersects with other objects.
+`castLaserRay()`, the second function in **ReplicatedStorage** ⟩ **Blaster** ⟩ **attemptBlastClient** ⟩ **blastClient** ⟩ **generateBlastData**, performs the more complex operations within the script. It begins by specifying parameters so that it can make `Class.Workspace:Raycast()` calls for raycasting purposes. Raycasting is the process of sending out an invisible ray from a `Datatype.Vector3` point in a specific direction with a defined length, then checking its path to see where it intersects with other objects.
 
 This information is particularly useful for first-person shooter experiences because it allows you to see when and where blasts intersect with players or the environment. For example, the following image demonstrates two rays that are casting parallel to each other. According to their point of origin and direction, Ray A misses the wall and continues until it meets its maximum distance, while Ray B collides with the wall. For more information on this process, see [Raycasting](../../../workspace/raycasting.md).
 
@@ -105,7 +105,7 @@ The `castLaserRay()` parameters specify that `Raycast()` calls must consider eve
 By default, `Raycast()` does **not** respect the `Class.BasePart.CanCollide` property. If some parts in your experience are strictly decorative, consider how you want them to behave and see `Datatype.RaycastParams.RespectCanCollide`.
 </Alert>
 
-The `Datatype.RaycastResult.Instance|Instance` value is the most critical of these properties for the sample laser tag experience's gameplay because it communicates when rays collide with other players. To retrieve this information, the experience uses the **ReplicatedStorage** > **LaserRay** > **castLaserRay** > **getPlayerFromDescendant** helper function. If it returns `nil`, the instance isn't part of a player, meaning the ray hit an inanimate object within the environment.
+The `Datatype.RaycastResult.Instance|Instance` value is the most critical of these properties for the sample laser tag experience's gameplay because it communicates when rays collide with other players. To retrieve this information, the experience uses the **ReplicatedStorage** ⟩ **LaserRay** ⟩ **castLaserRay** ⟩ **getPlayerFromDescendant** helper function. If it returns `nil`, the instance isn't part of a player, meaning the ray hit an inanimate object within the environment.
 
 `castLaserRay()` then uses `Datatype.RaycastResult.Position|Position` and `Datatype.RaycastResult.Normal|Normal` to create a new `Datatype.CFrame` that it calls the ray's `destination`. Every ray has a destination, and it's either where the ray hit in the 3D space, or the point at the end of its maximum distance. Depending on how well your players aim, many or most `taggedPlayer` values are `nil`.
 
@@ -129,7 +129,7 @@ end
 
 ## Validate the blast
 
-To prevent cheating, the previous chapter [Implementing Blasters](implement-blasters.md) explains how `blastClient` notifies the server of the blast using a `Class.RemoteEvent` so that it can verify all data that each client sends, such as whether or not they truly tagged another player with their blaster. This ray validation process occurs in **ServerScriptService** > **LaserBlastHandler** > **getValidatedBlastData** > **getValidatedRayResults**, and each check correlates to a nested module script:
+To prevent cheating, the previous chapter [Implementing Blasters](implement-blasters.md) explains how `blastClient` notifies the server of the blast using a `Class.RemoteEvent` so that it can verify all data that each client sends, such as whether or not they truly tagged another player with their blaster. This ray validation process occurs in **ServerScriptService** ⟩ **LaserBlastHandler** ⟩ **getValidatedBlastData** ⟩ **getValidatedRayResults**, and each check correlates to a nested module script:
 
 1. First, `getValidatedRayResults` calls `validateRayResult` to check that each entry in the `rayResults` table from the client is a `Datatype.CFrame` and a `Player` (or nil).
 
@@ -179,7 +179,7 @@ After verifying that a player tagged another player, the final steps in completi
 
 Starting with reducing the tagged player's health, [Spawning and respawning](spawn-respawn.md) covers the distinction between `Class.Player` and `Class.Player.Character`, specifically that a character is a `Class.Humanoid` model. `Class.Humanoid` models have a `Class.Humanoid.Health|Health` property with a default value of 100. Rather than implementing its own system, the sample laser tag experience uses this built-in property to keep track of how much damage a player needs before they are tagged out of the round.
 
-The experience stores damage values in the `damagePerHit` attribute of each blaster. For example, the blaster that blasts a single laser beam inflicts 10 points of damage, so it takes ten blasts with this blaster to tag out another player. To start the process of tagging a player out, `LaserBlastHandler` calls **ServerScriptService** > **LaserBlastHandler** > **processTaggedPlayers**, which checks the now-validated `rayResults` table for players and passes `damagePerHit` to `onPlayerTagged`.
+The experience stores damage values in the `damagePerHit` attribute of each blaster. For example, the blaster that blasts a single laser beam inflicts 10 points of damage, so it takes ten blasts with this blaster to tag out another player. To start the process of tagging a player out, `LaserBlastHandler` calls **ServerScriptService** ⟩ **LaserBlastHandler** ⟩ **processTaggedPlayers**, which checks the now-validated `rayResults` table for players and passes `damagePerHit` to `onPlayerTagged`.
 
 <Alert severity="info">
 Note that this process occurs for each **ray**, not each player. A blast can have multiple laser beams, so a player can receive damage several times from a single blast.
@@ -222,8 +222,8 @@ The next step is to increment the leaderboard. It might have seemed unnecessary 
 
 The five chapters in this curriculum cover the experience's core gameplay loop, but there are still plenty of areas to explore, such as:
 
-- **Blaster visuals**: See **ReplicatedStorage** > **FirstPersonBlasterVisuals** and **ServerScriptService** > **ThirdPersonBlasterVisuals**.
-- **Audio**: See **ReplicatedStorage** > **SoundHandler**.
+- **Blaster visuals**: See **ReplicatedStorage** ⟩ **FirstPersonBlasterVisuals** and **ServerScriptService** ⟩ **ThirdPersonBlasterVisuals**.
+- **Audio**: See **ReplicatedStorage** ⟩ **SoundHandler**.
 - **Custom Modes**: How could you modify this experience to introduce new types of objectives, such as scoring the most points before the time runs out?
 
 For extended gameplay logic for the laser tag experience, as well as reusable, high-quality environmental assets, review the [Laser Tag](../../../resources/templates.md#laser-tag) template.
