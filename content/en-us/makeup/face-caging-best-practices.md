@@ -5,7 +5,7 @@ hideBreadcrumbs: true
 ---
 
 <Alert severity ='warning'>
-Makeup is currently in beta and is not yet available for sale or implementation in-experience. The information provided is subject to change and is intended to prepare creators for the final release. For the latest news and updates, see the DevForum announcement.
+Makeup is currently in beta and is not yet available for sale or implementation in-experience. The information provided is subject to change and is intended to prepare creators for the final release. For the latest news and updates, see the [DevForum announcement](https://devforum.roblox.com/t/studio-beta-introducing-avatar-makeup/3973764).
 </Alert>
 
 <Alert severity = 'info'>

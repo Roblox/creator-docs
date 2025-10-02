@@ -7,7 +7,7 @@ hideBreadcrumbs: true
 **Makeup** is a cosmetic look available for Roblox characters that allows additional expression, allowing you to add elements like eyeshadow, lipstick, scars, glitter, and blush. This feature uses a combination of specialized facial textures and optional eyebrow and eyelash mesh assets.
 
 <Alert severity ='warning'>
-Makeup is currently in beta and is not yet available for sale or implementation in-experience. The information provided is subject to change and is intended to prepare creators for the final release. For the latest news and updates, see the DevForum announcement.
+Makeup is currently in beta and is not yet available for sale or implementation in-experience. The information provided is subject to change and is intended to prepare creators for the final release. For the latest news and updates, see the [DevForum announcement](https://devforum.roblox.com/t/studio-beta-introducing-avatar-makeup/3973764).
 </Alert>
 
 <center>
@@ -63,7 +63,11 @@ For a general workflow on authoring makeup using the template, see [the makeup c
 Makeup is currently in beta. Check out the DevForum announcement for the latest information on additional features, tools, and details regarding creating or implementing makeup.
 </Alert>
 
-As always with 3D art and creation workflows, there are many ways to achieve a specific goal and that is no different for makeup and your own PBR publishing flow.
+<GridContainer numColumns="3">
+  <figure><img src="../assets/makeup/Creation-Steps-1.png" /><figcaption>Download the 3D reference template head and texture templates applicable to your workflowe.</figcaption></figure>
+  <figure><img src="../assets/makeup/Creation-Steps-2.png" /><figcaption>Modify the texture images in the tools of your choice.</figcaption></figure>
+  <figure><img src="../assets/makeup/Creation-Steps-3.png" /><figcaption>In Blender/Maya, replace the textures in the template with your new textures and export. </figcaption></figure>
+</GridContainer>
 
 While you can easily swap decal images in Studio to make a quick change to a character's makeup, the following instructions is a best practice for implementing PBR-based textures into Roblox makeup at scale. This process requires:
 
@@ -73,6 +77,8 @@ While you can easily swap decal images in Studio to make a quick change to a cha
 
 <Alert severity ='warning'>
 This process assumes a proficiency in 3D modeling software such as Blender or Maya and understand how to update, replace, export, save, and alter materials within your modeling tool and any additional texturing software or plugins.
+
+As always with 3D art and creation workflows, there are many ways to achieve a specific goal and that is no different for makeup and your own PBR publishing flow.
 </Alert>
 
 1. Download a [reference template head](https://github.com/Roblox/avatar/tree/main/Makeup) and open it in the general modeling software of your choice.
@@ -82,6 +88,6 @@ This process assumes a proficiency in 3D modeling software such as Blender or Ma
 3. When you've created your new texture images, update the existing file textures in the template to point to your newly created textures.
    1. Blender: Save any new textures files to your project using  **File** > **External Data** > **Pack Resources** before exporting or sharing your `.blend`.
 4. Export the entire template file as a `.fbx`or `.gltf`. See [Export specifications](../art/modeling/export-requirements.md) for additional export instructions from Maya or Blender.
-5. In the test place, import the template file into Studio. Studio should automatically detect your mesh object names and associated textures and generate `Decal` objects. For more details, see [import into Studio](./import.md).
+5. In the test place, [import](./import.md) the template file into Studio. Studio should automatically detect your mesh object names and associated textures and generate `Decal` objects. For more details, see [import into Studio](./import.md).
 6. Apply any makeup decals or eyebrow and eyelash accessories to characters in the test place by dropping makeup assets in the appropriate character's `Makeup` or `Accessories` folder.
 7. Press Play, and navigate to the character with new makeup assets to preview.
