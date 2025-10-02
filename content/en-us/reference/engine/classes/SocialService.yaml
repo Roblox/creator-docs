@@ -347,14 +347,14 @@ methods:
       	local launchData = HttpService:JSONEncode(data)
 
       	local LinkSharingOptions = {
-      	ExpirationSeconds = 20000,
-      	PreviewTitle = "Awesome Game",
-      	PreviewDescription = " Lets play together",
-      	PreviewAssetId = 15303457470,
-      	LaunchData= "rewards=50coins,roomId=20"
+      		ExpirationSeconds = 20000,
+      		PreviewTitle = "Awesome Game",
+      		PreviewDescription = " Lets play together",
+      		PreviewAssetId = 15303457470,
+      		LaunchData= "rewards=50coins,roomId=20"
       	}
       	return SocialService:PromptLinkSharing(player, LinkSharingOptions)
-      	end)
+      end)
 
       if not pcallSuccess or result ~= Enum.PromptLinkSharingResult.Success then
       	warn(`PromptLinkSharing failed:`, tostring(result))
