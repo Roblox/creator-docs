@@ -339,25 +339,25 @@ methods:
       local HttpService = game:GetService("HttpService")
       local SocialService = game:GetService("SocialService")
 
-      local pcallSuccess, result  = pcall(function()
-      	local data = {
-      		senderUserID = player.UserId,
-      		spawnLocation = {12, 48, 205.5}
-      	}
-      	local launchData = HttpService:JSONEncode(data)
+      local success, result  = pcall(function()
+        local data = {
+          promoCode = "j7du67"
+        }
 
-      	local LinkSharingOptions = {
-      		ExpirationSeconds = 20000,
-      		PreviewTitle = "Awesome Game",
-      		PreviewDescription = " Lets play together",
-      		PreviewAssetId = 15303457470,
-      		LaunchData= "rewards=50coins,roomId=20"
-      	}
-      	return SocialService:PromptLinkSharing(player, LinkSharingOptions)
+        local launchData = HttpService:JSONEncode(data)
+
+        local LinkSharingOptions = {
+          ExpirationSeconds = 20000,
+          PreviewTitle = "Awesome Game",
+          PreviewDescription = "Lets play together",
+          LaunchData = launchData,
+        }
+
+        return SocialService:PromptLinkSharing(player, LinkSharingOptions)
       end)
 
-      if not pcallSuccess or result ~= Enum.PromptLinkSharingResult.Success then
-      	warn(`PromptLinkSharing failed:`, tostring(result))
+      if not success or result ~= Enum.PromptLinkSharingResult.Success then
+        warn("PromptLinkSharing failed:", tostring(result))
       end
       ```
     code_samples: []
