@@ -381,9 +381,9 @@ methods:
             share link is created. Truncates to nearest integer. Defaults to
             86,400.
           - `PreviewTitle` (string) Preview title of the share link.
-          - `PreiviewDescription` (string) Preview description of the share
+          - `PreviewDescription` (string) Preview description of the share
             link.
-          - `PreviewAssettId` (number) Image asset ID used for share link
+          - `PreviewAssetId` (number) Image asset ID used for share link
             preview.
           - `LaunchData` (string). Used to set a parameter in
             `Class.Player:GetJoinData()` when a player joined using the
