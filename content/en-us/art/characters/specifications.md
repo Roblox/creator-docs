@@ -455,7 +455,7 @@ To ensure that avatar sizes are visually consistent, you must standardize body p
 - **Opacity** - Body parts must be fully opaque.
 - **Bounding Boxes** - Body part assets must take up a significant visible portion of their bounding box in a front, side, and back view.
   - Body parts, such as Torso, Left Arm, Right Leg, must take up at least 50% of body part's bounding box.
-  - The head part must take up at least 35% of the mesh's bounding box.
+  - The head part must take up at least 50% of the mesh's bounding box.
     <GridContainer numColumns="2">
       <figure>
         <img src="../../assets/art/avatar/Valid-Visibility.png" />

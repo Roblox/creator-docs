@@ -379,8 +379,8 @@ same `MeshId` are handled in a single draw call when:
 
 - **Excessive shadow casting** - Handling shadows is an expensive process, and
   maps that contain a high number and density of light objects that cast shadows
-  (or a high number and density of small parts influenced by shadows) are likely to
-  have performance issues.
+  (or a high number and density of small parts influenced by shadows) can have
+  performance issues.
 
 - **High transparency overdraw** - Placing objects with partial transparency
   near each other forces the engine to render the overlapping pixels multiple
@@ -410,12 +410,15 @@ same `MeshId` are handled in a single draw call when:
   **Performance**. This allows meshes to fall back to less complex
   alternatives, which can reduce the number of polygons that need to be drawn.
 - **Disabling shadow casting on appropriate parts and light objects** - The
-  complexity of the shadows in a scene can be reduced by selectively disabling
-  shadow casting properties on light objects and parts. This can be done at edit
-  time or dynamically at runtime. Some examples are:
+  Roblox engine automatically degrades shadow quality as client graphics quality
+  level decreases, eventually disabling shadows altogether at quality levels
+  below 4. However, you can selectively disable shadow casting properties on
+  light objects and parts to improve performance while shadows are enabled and
+  increase the likelihood that shadows remain enabled. Some examples of
+  optimizations you can make either at edit time or dynamically at runtime:
   - Use the `Class.BasePart.CastShadow` property to disable shadow casting on
-    small parts where shadows are unlikely to be visible. This can be
-    particularly effective when only applied to parts that are far away from the
+    small parts where shadows are unlikely to be visible. This strategy is
+    particularly effective when applied to parts that are far away from the
     user's camera.
 
     <Alert severity="warning">
@@ -423,8 +426,8 @@ same `MeshId` are handled in a single draw call when:
     </Alert>
 
   - Disable shadows on moving objects when possible.
-  - Disable `Class.Light.Shadows` on light instances where the object does
-    not need to cast shadows.
+  - Disable `Class.Light.Shadows` on light instances where the object does not
+    need to cast shadows.
   - Limit the range and angle of light instances.
   - Use fewer light instances.
   - Consider disabling lights that are outside of a specific range or on a
