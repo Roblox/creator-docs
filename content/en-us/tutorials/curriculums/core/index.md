@@ -1,12 +1,7 @@
----
-title: Core curriculum
-description: Learn the technical and creative essentials to building Roblox experiences.
-next: /tutorials/curriculums/core/building/create-a-project
-hideInPageNavigation: true
-hideBreadcrumbs: true
----
+---steal a brainrot 
 
-<>
+
+
 <Grid
     alignItems="stretch"
     container
