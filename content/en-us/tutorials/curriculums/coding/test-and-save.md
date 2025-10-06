@@ -21,7 +21,7 @@ To playtest your code:
 
 1. In the top-left corner of Studio, verify that your playtest is set to either **Test** or **Test Here**, then click the **Play** button. Studio enters playtest mode.
 
-   <img src="../../../assets/education/general/Play-Button.png" width="360" />
+   <img src="../../../assets/education/general/play-button.png" width="360" />
 
 1. In the experience, use the following player controls to walk up to the pedestal, then press <kbd>E</kbd> to open the book and start your story. Your first question should display if the code is working properly.
 
@@ -56,7 +56,7 @@ To playtest your code:
 
 1. When you're done, return to the top-left corner of Studio, then click the **Stop** button. Studio exits playtest mode.
 
-   <img src="../../../assets/education/general/Stop-Button.png" width="360" />
+   <img src="../../../assets/education/general/stop-button.png" width="360" />
 
 If your first sentence didn't show up, check out the following troubleshooting tips:
 

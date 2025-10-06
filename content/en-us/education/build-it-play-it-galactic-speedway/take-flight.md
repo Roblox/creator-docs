@@ -9,7 +9,7 @@ Before designing your own driftspeeder, try flying a test speeder that's already
 
 1. Click **Play** to test.
 
-   <img src="../../assets/education/general/Play-Button.png" width="360" />
+   <img src="../../assets/education/general/play-button.png" width="360" />
 
 1. In the experience, walk up to the robot character under the spaceship sign and press <kbd>E</kbd> to open up a menu. On that screen, click **Race**. In a race, you'll fly through rings to make the fastest time.
 
@@ -73,4 +73,4 @@ Before designing your own driftspeeder, try flying a test speeder that's already
 
 1. Stop playing by pressing the red square or press <kbd>Shift</kbd><kbd>F5</kbd>.
 
-   <img src="../../assets/education/general/Stop-Button.png" width="360" />
+   <img src="../../assets/education/general/stop-button.png" width="360" />

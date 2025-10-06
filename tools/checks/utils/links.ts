@@ -304,7 +304,20 @@ const processRelativeLink = ({
   const fileDir = path.dirname(filePath);
   const newFilePathFromRoot = path.join(fileDir, urlNoHash);
   const newFilePathFull = path.join(repositoryRoot, fileDir, urlNoHash);
-  const doesFileExist = fs.existsSync(newFilePathFull);
+  
+  // Case-sensitive file existence check
+  // First check if file exists, then verify the case matches exactly on disk
+  let doesFileExist = fs.existsSync(newFilePathFull);
+  if (doesFileExist) {
+    try {
+      const actualPathOnDisk = fs.realpathSync.native(newFilePathFull);
+      const expectedPath = path.resolve(newFilePathFull);
+      doesFileExist = actualPathOnDisk === expectedPath;
+    } catch {
+      doesFileExist = false;
+    }
+  }
+
   let isClosedSourceFile = false;
   if (!doesFileExist) {
     isClosedSourceFile = closedSourceFilesSet.has(newFilePathFromRoot);

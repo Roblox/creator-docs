@@ -9,7 +9,7 @@ Before animating, test out the template to see how the game works. In-game, play
 
 1. Click **Play** to test.
 
-   <img src="../../assets/education/general/Play-Button.png" width="360" />
+   <img src="../../assets/education/general/play-button.png" width="360" />
 
 2. In the experience, walk up to the golem character on the stage and press <kbd>E</kbd> to open up a menu. On that screen, click **Play Game**.
 
@@ -21,4 +21,4 @@ Before animating, test out the template to see how the game works. In-game, play
 
 4. **Stop** playing by clicking the red square.
 
-   <img src="../../assets/education/general/Stop-Button.png" width="360" />
+   <img src="../../assets/education/general/stop-button.png" width="360" />

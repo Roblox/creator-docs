@@ -18,7 +18,7 @@ One of the most exciting features of Roblox is that it's really easy to share yo
 
 1. On the left bar, select **Permissions**, then choose **Public**.
 
-   <img src="../../assets/education/general/Make-Public.png" width="800" />
+   <img src="../../assets/education/general/make-public.png" width="800" />
 
 1. Click the **Save** button.
 

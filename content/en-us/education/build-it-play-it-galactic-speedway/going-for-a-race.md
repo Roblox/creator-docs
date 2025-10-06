@@ -24,6 +24,6 @@ When you first publish a game, it's automatically set to private. Set it to **pu
 
 1. On the left bar, select **Permissions**, then choose **Public**.
 
-   <img src="../../assets/education/general/Make-Public.png" width="800" />
+   <img src="../../assets/education/general/make-public.png" width="800" />
 
 1. Click the **Save** button.
