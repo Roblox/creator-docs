@@ -1384,12 +1384,17 @@ methods:
         type: HumanoidDescription
         default:
         summary: |
-          The `Class.HumanoidDescription` Instance which you want to set the
+          The `Class.HumanoidDescription` instance which you want to set the
           character to match.
       - name: assetTypeVerification
         type: AssetTypeVerification
         default: Default
-        summary: ''
+        summary: |
+          ⚠️ The default value for this parameter will change from
+          `Enum.AssetTypeVerification.ClientOnly|ClientOnly` to
+          `Enum.AssetTypeVerification.Always|Always` after 10/20/2025. See
+          [here](https://devforum.roblox.com/t/potential-action-required-update-for-humanoiddescription-apis/3982903)
+          for details.
     returns:
       - type: ()
         summary: ''
@@ -1430,7 +1435,12 @@ methods:
       - name: assetTypeVerification
         type: AssetTypeVerification
         default: Default
-        summary: ''
+        summary: |
+          ⚠️ The default value for this parameter will change from
+          `Enum.AssetTypeVerification.ClientOnly|ClientOnly` to
+          `Enum.AssetTypeVerification.Always|Always` after 10/20/2025. See
+          [here](https://devforum.roblox.com/t/potential-action-required-update-for-humanoiddescription-apis/3982903)
+          for details.
     returns:
       - type: ()
         summary: ''

@@ -5004,6 +5004,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/PlayerDataLoadFailureBehavior.yaml
         ignoreTranslation: true
+      - title: PlayerExitReason
+        path: /reference/engine/enums/PlayerExitReason
+        type: engineapi
+        source: /reference/engine/enums/PlayerExitReason.yaml
+        ignoreTranslation: true
       - title: PoseEasingDirection
         path: /reference/engine/enums/PoseEasingDirection
         type: engineapi

@@ -493,11 +493,12 @@ methods:
       - Players
   - name: Players:CreateHumanoidModelFromDescription
     summary: |
-      Returns a character Model equipped with everything specified in the passed
-      in HumanoidDescription, and is R6 or R15 as specified by the rigType.
+      Returns a character `Class.Model` equipped with everything specified in
+      the passed in `Class.HumanoidDescription`.
     description: |
-      Returns a character Model equipped with everything specified in the passed
-      in HumanoidDescription, and is R6 or R15 as specified by the rigType.
+      Returns a character `Class.Model` equipped with everything specified in
+      the passed in `Class.HumanoidDescription`, and is R6 or R15 as specified
+      by `rigType`.
     code_samples:
       - create-humanoid-model-from-description
     parameters:
@@ -516,12 +517,15 @@ methods:
         default: Default
         summary: |
           Asset type verification determines if this function will load models
-          or not (You should set this to Always unless you want to load
-          non-catalog assets).
+          or not. ⚠️&nbsp;The default value for this parameter will change from
+          `Enum.AssetTypeVerification.ClientOnly|ClientOnly` to
+          `Enum.AssetTypeVerification.Always|Always` after 10/20/2025. See
+          [here](https://devforum.roblox.com/t/potential-action-required-update-for-humanoiddescription-apis/3982903)
+          for details.
     returns:
       - type: Model
         summary: |
-          A Humanoid character Model.
+          A `Class.Humanoid` character `Class.Model`.
     tags:
       - Yields
     deprecation_message: ''
@@ -1314,8 +1318,8 @@ events:
       	print(player.Name .. " joined the game!")
       end)
 
-      Players.PlayerRemoving:Connect(function(player)
-      	print(player.Name .. " left the game!")
+      Players.PlayerRemoving:Connect(function(player, reason)
+      	print(player.Name .. " left the game! Reason: " .. tostring(exitReason))
       end)
       ```
 
@@ -1401,8 +1405,8 @@ events:
       	print(player.Name .. " joined the game!")
       end)
 
-      Players.PlayerRemoving:Connect(function(player)
-      	print(player.Name .. " left the game!")
+      Players.PlayerRemoving:Connect(function(player, exitReason)
+      	print(player.Name .. " left the game! - Reason: " .. tostring(reason))
       end)
       ```
 
@@ -1418,6 +1422,11 @@ events:
         default:
         summary: |
           An instance of the player that is leaving the game.
+      - name: reason
+        type: PlayerExitReason
+        default:
+        summary: |
+          Enum.PlayerExitReason in attempt to inform why.
     tags: []
     deprecation_message: ''
     security: None

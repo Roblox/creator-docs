@@ -8,11 +8,19 @@ summary: |
   Determines the asset type verification mode.
 description: |
   Determines the asset type verification mode used when calling
-  `Class.Humanoid:ApplyDescription()`. Asset type verification determines if
-  ApplyDescription will load models or not. Loading models can be insecure if
-  it's possible for malicious users to trick your game into loading unexpected
-  models that you own which may include malicious scripts. You should set this
-  to Always unless you want to load non-catalog assets.
+  `Class.Humanoid:ApplyDescription()` or
+  `Class.Players:CreateHumanoidModelFromDescription()`. This verification mode
+  determines if the method will load models or not. Loading models can be
+  insecure if it's possible for malicious users to trick your game into loading
+  unexpected models that you own which may include malicious scripts. You should
+  set this to `Always` unless you want to load non-catalog assets.
+
+  ##### Warning
+
+  The default value for this parameter will change from `ClientOnly` to `Always`
+  after 10/20/2025. See
+  [here](https://devforum.roblox.com/t/potential-action-required-update-for-humanoiddescription-apis/3982903)
+  for details.
 code_samples: []
 tags: []
 deprecation_message: ''
