@@ -15,7 +15,23 @@ Instead of directly accessing raw data, memory stores have three primitive data 
 - **Shared inventories** - Save inventory items and statistics in a shared **hash map**, where users can utilize inventory items concurrently with one another.
 - **Cache for Persistent Data** - Sync and copy your persistent data in a data store to a memory store **hash map** that can act as a cache and improve your experience's performance.
 
-<img src="../../assets/data/memory-store/Flow-Chart.svg" width="60%" />
+```mermaid
+graph TD
+    A[Does your data need to be sorted in a specific order?]
+    B[Use a sorted map.]
+    C[Do you need the ability to scan all of your items at once?]
+    D[Use a hash map.]
+    E[Do you expect to have fewer than 1,000 keys?]
+
+    A -- YES --> B
+    A -- NO --> C
+
+    C -- YES --> E
+    C -- NO --> D
+
+    E -- YES --> B
+    E -- NO --> D
+```
 
 In general, if you need to access data based on a specific key, use a hash map. If you need that data to be ordered, use a sorted map. If you need to process your data in a specific order, use a queue.
 
