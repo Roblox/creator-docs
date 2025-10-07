@@ -45,7 +45,7 @@ To playtest the experience's gameplay:
 
 1. In the top-left corner of Studio, keep the default **Test** playtest option, then click the **Play** button. Studio enters playtest mode.
 
-   <img src="../../assets/education/general/Play-Button.png" width="360" />
+   <img src="../../../assets/education/general/play-button.png" width="360" />
 
    <Alert severity="info">
    There are a variety of additional playtest options that you will explore in a later chapter of the tutorial.
@@ -84,6 +84,6 @@ To playtest the experience's gameplay:
 
 1. When you're done, return to the top-left corner of Studio, then click the **Stop** button. Studio exits playtest mode.
 
-   <img src="../../../assets/education/general/Stop-Button.png" width="360" />
+   <img src="../../../assets/education/general/stop-button.png" width="360" />
 
 Now that you are familiar with the gameplay, it's time to start animating!

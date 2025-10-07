@@ -742,8 +742,7 @@
           "UserFixedPrice",
           "RegionalPricing"
         ],
-        "type": "string",
-        "description": "Enum representing enabled features for this particular developer product.\r\nShould match https://github.rbx.com/Roblox/price-engine/blob/master/protos/roblox/priceengine/shared/v1/price_engine_shared.proto#L94"
+        "type": "string"
       }
     },
     "securitySchemes": {

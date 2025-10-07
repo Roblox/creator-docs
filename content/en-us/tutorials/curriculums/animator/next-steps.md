@@ -20,7 +20,7 @@ To make your experience public:
    1. Go to the left bar and select the **Permissions** tab. New settings display.
    1. Set **Playability** to **Public**.
 
-   <img src="../../../assets/education/general/Make-Public.png" width="800" />
+   <img src="../../../assets/education/general/make-public.png" width="800" />
 
 1. Click the **Save** button. Now everyone on Roblox can play your experience!
 

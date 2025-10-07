@@ -49,8 +49,7 @@ The **Digital Millennium Copyright Act** ("DMCA") allows copyright holders or th
 
   If you are a copyright owner or an agent of a copyright owner and believe that
   any content on Roblox infringes upon your copyrights, you may submit a
-  notification pursuant to the DMCA by contacting our Copyright Agent at copyright_agent@roblox.com, or Legal, Roblox Corporation, 970 Park Place, Suite
-  100, San Mateo, CA 94403. You may also contact us by phone at (888)&nbsp;858-2569.
+  notification pursuant to the DMCA by contacting our [Copyright Agent](mailto:copyright_agent@roblox.com), or Legal, Roblox Corporation, 3150 S. Delaware St. San Mateo, CA 94403. You may also contact us by phone at (888)&nbsp;858-2569.
 
 - **What information must I provide when filing a DMCA claim?**
 

@@ -21,7 +21,7 @@ To make your experience public:
    1. Go to the left bar and select the **Permissions** tab. New settings display.
    1. Set **Playability** to **Public**.
 
-   <img src="../../../assets/education/general/Make-Public.png" width="800" />
+   <img src="../../../assets/education/general/make-public.png" width="800" />
 
 1. Click the **Save** button. Now everyone on Roblox can play your experience!
 
@@ -34,7 +34,7 @@ Variables are an excellent start in your coding journey, but Luau includes addit
 - [Properties and attributes](../../../scripting/attributes.md)
 - [Events](../../../scripting/events/index.md)
 
-It's recommended to continue learning with the [Coding fundamentals](../../fundamentals/coding-1/) series, then if you want to continue learning through step-by-step lessons, check out the following use case tutorials:
+It's recommended to continue learning with the [Coding fundamentals](../../fundamentals/coding-1/coding-fundamentals.md) series, then if you want to continue learning through step-by-step lessons, check out the following use case tutorials:
 
 - [Create deadly lava](../../use-case-tutorials/scripting/basic-scripting/deadly-lava.md)
 - [Create fading traps](../../use-case-tutorials/scripting/basic-scripting/fading-trap.md)

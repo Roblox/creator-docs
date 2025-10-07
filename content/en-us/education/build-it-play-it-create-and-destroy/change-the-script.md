@@ -72,4 +72,4 @@ When you first publish an experience, it's automatically set to private. Making 
 
 2. Choose **Public** and click **Save**.
 
-   <img src="../../assets/education/general/Make-Public.png" width="800" />
+   <img src="../../assets/education/general/make-public.png" width="800" />

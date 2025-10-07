@@ -21,7 +21,7 @@ To playtest your art:
 
 1. In the top-left corner of Studio, verify that your playtest is set to either **Test** or **Test Here**, then click the **Play** button. Studio enters playtest mode.
 
-   <img src="../../../assets/education/general/Play-Button.png" width="360" />
+   <img src="../../../assets/education/general/play-button.png" width="360" />
 
 1. In the experience, walk up to the character under the **Play It** sign and press <kbd>E</kbd> to open up a menu. From that menu, click the **Join Game** button.
 
@@ -37,7 +37,7 @@ To playtest your art:
 
 1. When you're done, return to the top-left corner of Studio, then click the **Stop** button. Studio exits playtest mode.
 
-   <img src="../../../assets/education/general/Stop-Button.png" width="360" />
+   <img src="../../../assets/education/general/stop-button.png" width="360" />
 
 ## Publish to Roblox
 

@@ -9,7 +9,7 @@ This is a good point at which to check your code and make sure it runs. Testing 
 
 1. Test your by code by clicking the **Play** button.
 
-   <img src="../../assets/education/general/Play-Button.png" width="360" />
+   <img src="../../assets/education/general/play-button.png" width="360" />
 
 2. Walk up to the pedestal using <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> on your keyboard and press <kbd>E</kbd>.
 
@@ -54,7 +54,7 @@ This is a good point at which to check your code and make sure it runs. Testing 
 
 4. **Stop** the playtest.
 
-   <img src="../../assets/education/general/Stop-Button.png" width="360" />
+   <img src="../../assets/education/general/stop-button.png" width="360" />
 
 ## Save your code
 

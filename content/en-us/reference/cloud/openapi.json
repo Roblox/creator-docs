@@ -10074,22 +10074,21 @@
         }
       },
       "post": {
-        "tags": ["Accounts"],
         "summary": "Update the user's birthdate",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Roblox.AccountInformation.Api.Models.BirthdateRequest"
+                "$ref": "#/components/schemas/Roblox.Users.Api.BirthdateRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Roblox.AccountInformation.Api.Models.BirthdateRequest"
+                "$ref": "#/components/schemas/Roblox.Users.Api.BirthdateRequest"
               }
             }
           },
-          "description": "The Roblox.AccountInformation.Api.Models.BirthdateRequest",
+          "description": "The Roblox.Users.Api.BirthdateRequest",
           "required": true
         },
         "responses": {
@@ -10115,7 +10114,7 @@
             "description": "0: Authorization has been denied for this request."
           },
           "403": {
-            "description": "0: Token Validation Failed\r\n5: Invalid birthdate change."
+            "description": "0: Token Validation Failed\r\n2: PIN is locked.\r\n5: Invalid birthdate change."
           },
           "500": {
             "description": "0: An unknown error occured.\r\n5: Invalid birthdate change."
@@ -10123,7 +10122,7 @@
         },
         "servers": [
           {
-            "url": "https://accountinformation.roblox.com"
+            "url": "https://users.roblox.com"
           }
         ],
         "x-roblox-engine-usability": {
@@ -10133,10 +10132,7 @@
           {
             "roblox-legacy-cookie": []
           }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/features/accounts#/default/post_v1_birthdate"
-        }
+        ]
       }
     },
     "/v1/description": {
@@ -46811,12 +46807,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ItemConfigurationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ItemConfigurationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -53595,6 +53591,55 @@
         }
       }
     },
+    "/v2/users/{userId}/can-trade-with": {
+      "get": {
+        "summary": "Checks if the user can trade with a specific user.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "userId",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Trades.Api.Models.V2.CanTradeWithResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Trades.Api.Models.V2.CanTradeWithResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request.\r\n4: You are not authorized to modify this trade."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://trades.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      }
+    },
     "/v2/users/{userId}/tradableItems": {
       "get": {
         "tags": ["Trades"],
@@ -53739,51 +53784,32 @@
         }
       }
     },
-    "/v1/game-localization-roles/games/{gameId}/current-user/roles": {
+    "/v2/users/me/can-trade": {
       "get": {
-        "tags": ["Localization", "Universes"],
-        "summary": "Retrieves the list of roles granted to current logged-in user",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "gameId",
-            "description": "The id of the game",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
+        "summary": "Checks if the calling user can trade with others.",
         "responses": {
           "200": {
             "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_System.String_"
+                  "$ref": "#/components/schemas/Roblox.Trades.Api.Models.V2.CanTradeResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_System.String_"
+                  "$ref": "#/components/schemas/Roblox.Trades.Api.Models.V2.CanTradeResponse"
                 }
               }
             }
           },
-          "400": {
-            "description": "3: Invalid game id"
-          },
           "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "503": {
-            "description": "2: Feature is disabled"
+            "description": "0: Authorization has been denied for this request.\r\n4: You are not authorized to modify this trade."
           }
         },
         "servers": [
           {
-            "url": "https://translationroles.roblox.com"
+            "url": "https://trades.roblox.com"
           }
         ],
         "x-roblox-engine-usability": {
@@ -53793,253 +53819,7 @@
           {
             "roblox-legacy-cookie": []
           }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/get_v1_game_localization_roles_games__gameId__current_user_roles"
-        }
-      }
-    },
-    "/v1/game-localization-roles/games/{gameId}/roles/{role}/assignees": {
-      "get": {
-        "tags": ["Localization", "Universes", "Users"],
-        "summary": "Gets list of users assigned a specific role in a game.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "gameId",
-            "description": "The id of the game",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "in": "path",
-            "name": "role",
-            "description": "The Roblox.GameLocalization.Client.GameLocalizationRoles.GameLocalizationRoleType",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "enum": ["translator"]
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.TranslationRoles.Api.Assignee_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.TranslationRoles.Api.Assignee_"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "3: Invalid game id"
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "1: You must be authorized to use this endpoint"
-          },
-          "503": {
-            "description": "2: Feature is disabled"
-          }
-        },
-        "servers": [
-          {
-            "url": "https://translationroles.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/get_v1_game_localization_roles_games__gameId__roles__role__assignees"
-        }
-      }
-    },
-    "/v1/game-localization-roles/roles/{role}/current-user": {
-      "get": {
-        "tags": ["Localization", "Universes"],
-        "summary": "Gets the list of games and associated role assignment info for the requested user and role.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "role",
-            "description": "The Roblox.GameLocalization.Client.GameLocalizationRoles.GameLocalizationRoleType",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "enum": ["translator"]
-            }
-          },
-          {
-            "in": "query",
-            "name": "exclusiveStartKey",
-            "description": "Part of pagination. Last primary key of returned items in previous operation.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "in": "query",
-            "name": "pageSize",
-            "description": "Part of pagination. Maximum number of items that might be returned in the page.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "in": "query",
-            "name": "groupId",
-            "description": "Optional seleted groupId of resources requested for the user and role.",
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.TranslationRoles.Api.GetGameLocalizationRoleAssignmentsForUserResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.TranslationRoles.Api.GetGameLocalizationRoleAssignmentsForUserResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "10: Invalid page size\r\n11: Maximum page size exceeded\r\n12: Invalid exclusive start key"
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "500": {
-            "description": "0: An unknown error occurred"
-          },
-          "503": {
-            "description": "2: Feature is disabled"
-          }
-        },
-        "servers": [
-          {
-            "url": "https://translationroles.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/get_v1_game_localization_roles_roles__role__current_user"
-        }
-      }
-    },
-    "/v1/game-localization-roles/games/{gameId}": {
-      "patch": {
-        "tags": ["Localization", "Universes"],
-        "summary": "Assigns or revokes a role",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "gameId",
-            "description": "The id of the game",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.TranslationRoles.Api.UpdateRoleRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.TranslationRoles.Api.UpdateRoleRequest"
-              }
-            }
-          },
-          "description": "The request body"
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TranslationRolesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TranslationRolesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "3: Invalid game id\r\n4: Invalid assignee id\r\n6: Request body can't be null\r\n7: The role you are assigning has reached max limit"
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed\r\n1: You must be authorized to use this endpoint"
-          },
-          "429": {
-            "description": "5: Too many attempts. Please try again later."
-          },
-          "503": {
-            "description": "2: Feature is disabled"
-          }
-        },
-        "servers": [
-          {
-            "url": "https://translationroles.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_v1_game_localization_roles_games__gameId_"
-        }
+        ]
       }
     },
     "/v1/metadata#TwoStepVerificationApi": {
@@ -56216,67 +55996,6 @@
           },
           "401": {
             "description": "0: Authorization has been denied for this request."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://users.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ]
-      },
-      "post": {
-        "summary": "Update the user's birthdate",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Users.Api.BirthdateRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Users.Api.BirthdateRequest"
-              }
-            }
-          },
-          "description": "The Roblox.Users.Api.BirthdateRequest",
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: User not found.\r\n4: The birthdate provided is invalid.\r\n8: Password is incorrect."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed\r\n2: PIN is locked.\r\n5: Invalid birthdate change."
-          },
-          "500": {
-            "description": "0: An unknown error occured.\r\n5: Invalid birthdate change."
           }
         },
         "servers": [
@@ -62149,28 +61868,6 @@
             "type": "string",
             "nullable": true,
             "description": "The message content that you want to publish to the live server."
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.AccountInformation.Api.Models.BirthdateRequest": {
-        "description": "The birthdate request",
-        "type": "object",
-        "properties": {
-          "birthMonth": {
-            "format": "int32",
-            "description": "The birth month",
-            "type": "integer"
-          },
-          "birthDay": {
-            "format": "int32",
-            "description": "The birth day",
-            "type": "integer"
-          },
-          "birthYear": {
-            "format": "int32",
-            "description": "The birth year",
-            "type": "integer"
           }
         },
         "additionalProperties": false
@@ -74877,7 +74574,8 @@
               "type": "integer"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.ItemConfiguration.Api.AssetCreationsDetailsResponse": {
         "type": "object",
@@ -74956,7 +74654,8 @@
             "description": "If the asset is part of a bundle.",
             "type": "boolean"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.ItemConfiguration.Api.AssetCreationsResponse": {
         "description": "Asset Status response model.",
@@ -74971,7 +74670,8 @@
             "description": "The asset name.",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.ItemConfiguration.Api.CreateItemTagRequest": {
         "description": "Request model to add a tag to an item.",
@@ -74985,7 +74685,8 @@
             "description": "Gets or sets the tag Id.",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.ItemConfiguration.Api.ItemTagDetails": {
         "type": "object",
@@ -74997,7 +74698,8 @@
           "tag": {
             "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.TagDetails"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.ItemConfiguration.Api.ItemTagsMetadataResponse": {
         "description": "Item-tags related metadata response model.",
@@ -75019,7 +74721,8 @@
             "description": "Gets or sets the maximum item tags per item limit.",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.ItemConfiguration.Api.ItemWithTags": {
         "type": "object",
@@ -75035,7 +74738,8 @@
               "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.ItemTagDetails"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.ItemConfiguration.Api.PriceConfigurationModel": {
         "description": "Defines the configuration options for an items price.",
@@ -75061,7 +74765,8 @@
             "description": "Gets or sets the price offset of the item in Robux above the price floor.",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.ItemConfiguration.Api.ReleaseConfigurationResponseModel": {
         "description": "Defines the configuration options associated with releasing an item.",
@@ -75076,7 +74781,8 @@
               "type": "string"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.ItemConfiguration.Api.TagDetails": {
         "description": "The tag model for any tag-related gets.",
@@ -75099,10 +74805,8 @@
             "enum": ["Success", "MissingItem"],
             "type": "string"
           }
-        }
-      },
-      "ItemConfigurationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
-        "type": "object"
+        },
+        "additionalProperties": false
       },
       "Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.ItemConfiguration.Api.ItemWithTags_": {
         "type": "object",
@@ -75113,7 +74817,8 @@
               "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.ItemWithTags"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.ItemConfiguration.Api.TagDetails_": {
         "type": "object",
@@ -75124,7 +74829,8 @@
               "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.TagDetails"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.ItemConfiguration.Api.AssetCreationsResponse_": {
         "type": "object",
@@ -75141,7 +74847,8 @@
               "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.AssetCreationsResponse"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Locale.Api.CountryRegion": {
         "description": "Model for Country Regions",
@@ -77492,6 +77199,68 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Trades.Api.Models.V2.CanTradeResponse": {
+        "description": "The response for the CanTrade endpoint.",
+        "type": "object",
+        "properties": {
+          "userId": {
+            "format": "int64",
+            "description": "The ID of the user.",
+            "type": "integer"
+          },
+          "canTrade": {
+            "description": "Whether the user can trade or not.",
+            "type": "boolean"
+          },
+          "tradeEligibility": {
+            "description": "The trade eligibility status of the user. ['Unknown' = 0, 'Eligible' = 1, 'IneligibleTradeSystemDisabled' = 2, 'IneligibleCannotTradeWithRoblox' = 3, 'IneligibleUserNotFound' = 4, 'IneligibleMissingPremiumMembership' = 5, 'IneligibleLegalOrRegulatoryRestrictions' = 6]",
+            "enum": [
+              "Unknown",
+              "Eligible",
+              "IneligibleTradeSystemDisabled",
+              "IneligibleCannotTradeWithRoblox",
+              "IneligibleUserNotFound",
+              "IneligibleMissingPremiumMembership",
+              "IneligibleLegalOrRegulatoryRestrictions"
+            ],
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Trades.Api.Models.V2.CanTradeWithResponse": {
+        "description": "The response for the CanTradeWith endpoint.",
+        "type": "object",
+        "properties": {
+          "userId": {
+            "format": "int64",
+            "description": "The ID of the user.",
+            "type": "integer"
+          },
+          "targetUserId": {
+            "format": "int64",
+            "description": "The ID of the target user.",
+            "type": "integer"
+          },
+          "canTrade": {
+            "description": "Whether the user can trade with the target user or not.",
+            "type": "boolean"
+          },
+          "mutualTradeEligibility": {
+            "description": "The mutual trade eligibility status between the two users. ['Unknown' = 0, 'Eligible' = 1, 'CallingUserIneligible' = 2, 'TargetUserIneligible' = 3, 'CannotTradeWithSelf' = 4, 'CallingUserPrivacySettingsRestricted' = 5]",
+            "enum": [
+              "Unknown",
+              "Eligible",
+              "CallingUserIneligible",
+              "TargetUserIneligible",
+              "CannotTradeWithSelf",
+              "CallingUserPrivacySettingsRestricted"
+            ],
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.Trades.Api.Models.V2.GetUserTradableItemsResponse": {
         "description": "The response for the GetUserTradableItems endpoint.",
         "type": "object",
@@ -77668,109 +77437,6 @@
           }
         },
         "additionalProperties": false
-      },
-      "Roblox.GameLocalization.Client.GameLocalizationRoles.Assignee": {
-        "type": "object",
-        "properties": {
-          "assigneeType": {
-            "description": " ['User' = 0, 'Group' = 1, 'GroupRole' = 2]",
-            "enum": ["user", "group", "groupRole"],
-            "type": "string"
-          },
-          "id": {
-            "format": "int64",
-            "type": "integer"
-          }
-        }
-      },
-      "Roblox.GameLocalization.Client.GameLocalizationRoles.GameLocalizationRoleAssignment": {
-        "type": "object",
-        "properties": {
-          "gameId": {
-            "format": "int64",
-            "type": "integer"
-          },
-          "assignee": {
-            "$ref": "#/components/schemas/Roblox.GameLocalization.Client.GameLocalizationRoles.Assignee"
-          }
-        }
-      },
-      "Roblox.TranslationRoles.Api.Assignee": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "format": "int64",
-            "type": "integer"
-          },
-          "name": {
-            "type": "string"
-          },
-          "type": {
-            "description": " ['User' = 0, 'Group' = 1, 'GroupRole' = 2]",
-            "enum": ["user", "group", "groupRole"],
-            "type": "string"
-          }
-        }
-      },
-      "Roblox.TranslationRoles.Api.GetGameLocalizationRoleAssignmentsForUserResponse": {
-        "description": "Response model containing a list of games and associated role assignment info for the requested user and role.",
-        "type": "object",
-        "properties": {
-          "games": {
-            "description": "List of games with associated role assignment info.",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.GameLocalization.Client.GameLocalizationRoles.GameLocalizationRoleAssignment"
-            }
-          },
-          "previousPageCursor": {
-            "description": "Cursor which can be used for navigating to previous page.",
-            "type": "string"
-          },
-          "nextPageCursor": {
-            "description": "Cursor which can be used for navigating to next page.",
-            "type": "string"
-          }
-        }
-      },
-      "Roblox.TranslationRoles.Api.UpdateRoleRequest": {
-        "description": "The request body for update role endpoints",
-        "type": "object",
-        "properties": {
-          "assigneeId": {
-            "format": "int64",
-            "description": "The id of the assignee",
-            "type": "integer"
-          },
-          "assigneeType": {
-            "description": "The type of the assignee ['User' = 0, 'Group' = 1, 'GroupRole' = 2]",
-            "enum": ["user", "group", "groupRole"],
-            "type": "string"
-          },
-          "role": {
-            "description": "The role to be assigned or revoked ['Translator' = 0]",
-            "enum": ["translator"],
-            "type": "string"
-          },
-          "revoke": {
-            "description": "To assign or to revoke",
-            "type": "boolean"
-          }
-        }
-      },
-      "TranslationRolesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
-        "type": "object"
-      },
-      "Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.TranslationRoles.Api.Assignee_": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.TranslationRoles.Api.Assignee"
-            }
-          }
-        }
       },
       "Roblox.TwoStepVerification.Api.ClearRecoveryCodesRequest": {
         "description": "Request information needed to clear existing recovery codes.",
@@ -78030,6 +77696,10 @@
             "format": "int32",
             "description": "The enum representing which experiment group the user is in.",
             "type": "integer"
+          },
+          "isEppUIEnabled": {
+            "description": "Whether the EPP UI is enabled.",
+            "type": "boolean"
           }
         }
       },

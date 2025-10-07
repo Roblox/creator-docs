@@ -15,6 +15,6 @@ Moving is always more fun with friends, so let's set up your game for others can
 
 1. On the left bar, select **Permissions**, then choose **Public**.
 
-   <img src="../../assets/education/general/Make-Public.png" width="800" />
+   <img src="../../assets/education/general/make-public.png" width="800" />
 
 1. Click the **Save** button.

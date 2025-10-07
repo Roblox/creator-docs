@@ -91,3 +91,115 @@ As always with 3D art and creation workflows, there are many ways to achieve a s
 5. In the test place, [import](./import.md) the template file into Studio. Studio should automatically detect your mesh object names and associated textures and generate `Decal` objects. For more details, see [import into Studio](./import.md).
 6. Apply any makeup decals or eyebrow and eyelash accessories to characters in the test place by dropping makeup assets in the appropriate character's `Makeup` or `Accessories` folder.
 7. Press Play, and navigate to the character with new makeup assets to preview.
+
+## Resources
+
+The following are downloadable resources. See [Template heads](#template-heads) for required 3D models to import makeup assets with. See [Template textures](#template-textures) for additional image and project files available for your convenience and refernece.
+
+### Template heads
+
+<Grid container alignItems="stretch" style={{}}>
+  <Grid item xs={12} md={6} lg={4} style={{ padding: 6, display: 'flex' }}>
+    <Card style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+      <CardContent style={{ flexGrow: 1 }}>
+<center>Blender template reference files</center>
+<figure>
+<center> <img src="../assets/makeup/resources/Blender-Thumbnail.png" width="100%" /> </center>
+</figure>
+<figure>
+A comprehensive `.zip` folder of Blender assets, including multiple reference heads pre-configured for testing in the Makeup test place or for authoring your own makeup.
+</figure>
+</CardContent>
+
+<CardActions style={{bottom: 0, width: '100%'}}>
+<Button href="../assets/makeup/resources/Makeup-Reference-Blender.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
+</CardActions>
+
+</Card>
+</Grid>
+
+  <Grid item xs={12} md={6} lg={4} style={{ padding: 6, display: 'flex' }}>
+    <Card style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+      <CardContent style={{ flexGrow: 1 }}>
+
+<center>Maya template reference files</center>
+<figure>
+<center> <img src="../assets/makeup/resources/Maya-Thumbnail.png" width="100%" /> </center>
+</figure>
+<figure>
+A comprehensive `.zip` folder of Maya assets, including multiple reference heads pre-configured for testing in the Makeup test place or for authoring your own makeup.
+</figure>
+</CardContent>
+
+<CardActions style={{bottom: 0, width: '100%'}}>
+<Button href="../assets/makeup/resources/Makeup-Reference-Maya.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
+</CardActions>
+
+</Card>
+</Grid>
+
+</Grid>
+
+### Template textures
+
+<Grid container alignItems="stretch" style={{}}>
+  <Grid item xs={12} md={6} lg={4} style={{ padding: 6, display: 'flex' }}>
+    <Card style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+      <CardContent style={{ flexGrow: 1 }}>
+        <center>Photoshop / GIMP texture images</center>
+        <figure>
+          <center>
+            <img src="../assets/makeup/resources/Photoshop-Thumbnail.png" width="100%" />
+          </center>
+        </figure>
+        <figure>
+          A comprehensive `.zip` folder texture images for use in Photoshop or your preferred image editor.
+          <br />
+          When you are finished making changes to these texture images, swap out the textures in the template head using Blender/Maya and import the reference head with new textures into Studio.
+        </figure>
+      </CardContent>
+      <CardActions style={{ width: '100%' }}>
+        <Button
+          href="../assets/makeup/resources/Makeup-Textures-Photoshop_Gimp.zip"
+          fullWidth
+          size="large"
+          color="primary"
+          variant="contained"
+          style={{ marginBottom: '4px' }}
+        >
+          Download
+        </Button>
+      </CardActions>
+    </Card>
+  </Grid>
+
+  <Grid item xs={12} md={6} lg={4} style={{ padding: 6, display: 'flex' }}>
+    <Card style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+      <CardContent style={{ flexGrow: 1 }}>
+        <center>Substance Painter files</center>
+        <figure>
+          <center>
+            <img src="../assets/makeup/resources/Substance-Thumbnail.png" width="100%" />
+          </center>
+        </figure>
+        <figure>
+          A comprehensive `.zip` folder texture files for use in Substance Painter, an industry-standard PBR authoring software.
+          <br />
+          When you are finished making changes to these texture images, swap out the textures in the template head using Blender/Maya and import the reference head with new textures into Studio.
+        </figure>
+      </CardContent>
+      <CardActions style={{ width: '100%' }}>
+        <Button
+          href="../assets/makeup/resources/Makeup-Textures-SubstancePainter.zip"
+          fullWidth
+          size="large"
+          color="primary"
+          variant="contained"
+          style={{ marginBottom: '4px' }}
+        >
+          Download
+        </Button>
+      </CardActions>
+    </Card>
+  </Grid>
+</Grid>

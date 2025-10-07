@@ -15,9 +15,7 @@ authenticate to Open Cloud on your behalf.
 ## Create API keys
 
 You can create and configure API keys for your individually-owned
-experiences or group-owned experiences (A Roblox
-[group](../../projects/groups.md) allows multiple creators to work on the same
-experience, use the same assets, and share API keys).
+experiences or [group-owned](../../projects/groups.md) experiences.
 
 You must be the group owner or assigned to a role within the group that has the
 API key admin permission in order to create an API key for your group. A group
@@ -29,36 +27,37 @@ To create an API key:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. **(Optional)** Click the **Creator Hub** dropdown to select a group if you are creating the API key for a group.
-1. In the left navigation menu, select **Open Cloud** &rarr; **API Keys**.
+1. In the left navigation menu, select **Open Cloud** &rarr; [API Keys](https://create.roblox.com/dashboard/credentials?activeTab=ApiKeysTab).
 1. Click the **Create API Key** button.
 1. Enter a unique name for your API key. Use a name that can help you recall the
    purpose later, such as `PLACE_PUBLISHING_KEY` for publishing places to your
    experience.
 1. In the **Access Permissions** section, select an API from the **Select API
-   System** menu and click the **Add API System** button. Repeat this step if
+   System** menu. Repeat this step if
    you need to add multiple APIs to the key.
 
    <Alert severity="info">
    Certain permissions, generally those with the `legacy` prefix, aren't available for group-owned API keys. To add those permissions and send requests to the associated endpoints, you must use a user-owned API key.
    </Alert>
 
-1. Select the experience that you want to access with the API key.
-1. From the **Experience Operations** dropdown, select the operations that you
+1. If applicable, select the experience that you want to access with the API key.
+1. From the **Select Operations** dropdown, select the operations that you
    want to enable for the API key.
 
-   Many operations in the [API reference](../index.md) include the required permission scopes. For example, the [flush memory store](/cloud/reference/MemoryStore#Cloud_FlushMemoryStore) operation requires the `universe.memory-store:flush` permission.
+   Most operations in the [API reference](../index.md) include the required permission scopes. For example, the [flush memory store](/cloud/reference/MemoryStore#Cloud_FlushMemoryStore) operation requires the `universe.memory-store:flush` permission.
+
+   For a list of all scopes and the APIs they support, see [Scopes](../reference/scopes.md).
 
    <Alert severity="warning">
    For security reasons, give each API key the minimum number of required permissions. If an API key leaks, this principle of least privilege ensures that only a subset of your resources are compromised.
    </Alert>
 
-1. In the **Security** section, explicitly set IP access to the key using [CIDR
-   notation](#cidr-format), otherwise you can't use the API key. You can find
+1. (Optional) In the **Security** section, explicitly restrict IP access to the key using [CIDR
+   notation](#cidr-format). You can find
    the IP address of your local machine and add it to the **Accepted IP
    Addresses** section along with additional IP addresses for those that need
    access. If you don't have a fixed IP, or you are using the API key only in a
-   local environment, you can just add `0.0.0.0/0` to the **Accepted IP
-   Addresses** section to allow any IPs to use your API key.
+   local environment, you can leave the `Restrict IP addresses` toggle unchecked to allow any IP to use your API key.
 
 1. **(Optional)**: To add additional protection for your resources, set an
    explicit expiration date so your key automatically stops working after that

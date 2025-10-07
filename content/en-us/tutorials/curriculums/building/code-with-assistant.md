@@ -131,12 +131,12 @@ To playtest Assistant's results:
 
 1. In the top-left corner of Studio, keep the default **Test** playtest option, then click the **Play** button. Studio enters playtest mode.
 
-   <img src="../../../assets/education/general/Play-Button.png" width="360" />
+   <img src="../../../assets/education/general/play-button.png" width="360" />
 
 1. In the experience, jump onto the first platform. If the code sample works correctly, yellow sparkles appear when your character touches the part.
 1. When you're done verifying the results, return to the top-left corner of Studio, then click the **Stop** button. Studio exits playtest mode.
 
-   <img src="../../../assets/education/general/Stop-Button.png" width="360" />
+   <img src="../../../assets/education/general/stop-button.png" width="360" />
 
 1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Return to the Assistant window, then press the thumbs up or thumbs down icon to let Assistant know if the code sample worked as you intended.
 

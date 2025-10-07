@@ -9,7 +9,7 @@ To test your map as it will look in-game, playtest the map in Studio. **Playtest
 
 1. Click **Play**. You'll start out in a lobby area, and then get transported to the city.
 
-   <img src="../../assets/education/general/Play-Button.png" width="360" />
+   <img src="../../assets/education/general/play-button.png" width="360" />
 
 2. Wait until the 5 second intermission finishes to be teleported to the map you built. Run around and make sure that you didn't miss any floating buildings that need to be fixed. Test the experience by holding <kbd>E</kbd> to destroy buildings.
    <img src="../../assets/education/build-it-play-it-create-and-destroy/playtestRunCenter.jpg" width="100%" />
@@ -40,4 +40,4 @@ To test your map as it will look in-game, playtest the map in Studio. **Playtest
 
 3. Click the **Stop** button to exit the playtest. If you don't stop the playtest, any changes made will be lost.
 
-   <img src="../../assets/education/general/Stop-Button.png" width="360" />
+   <img src="../../assets/education/general/stop-button.png" width="360" />
