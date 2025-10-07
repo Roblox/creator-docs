@@ -224,6 +224,10 @@
             },
             "nullable": true
           },
+          "fullLogs": {
+            "type": "string",
+            "nullable": true
+          },
           "evalSucceeded": {
             "type": "string",
             "nullable": true
