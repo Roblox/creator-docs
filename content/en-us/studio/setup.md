@@ -1,6 +1,6 @@
 ---
-title: Roblox Studio setup
-description: Explains how to install Roblox Studio on your system.
+title: dress to impress fun gaming
+
 ---
 
 import StudioSystemReqs from '../includes/studio/system-reqs.md'
