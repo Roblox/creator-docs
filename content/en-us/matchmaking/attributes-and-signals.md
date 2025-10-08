@@ -221,7 +221,7 @@ end
 ```
 
 ```lua title="Server attribute example"
-local MatchmakingService = game::GetService("MatchmakingService")
+local MatchmakingService = game:GetService("MatchmakingService")
 local RunService = game:GetService("RunService")
 
 if RunService:IsStudio() then
