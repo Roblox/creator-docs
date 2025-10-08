@@ -82,15 +82,15 @@ Submissions of accessory and clothing items to the Marketplace must follow addit
 Do not miscategorize items when you upload them. Proper categorization includes the following:
 
 - Complete hairstyles (hair with full head coverage) must be in the Hair category.
-  - Partial hairstyles (e.g. Bangs and Braids) can be in Head, Face, or Hair categories.
+  - Partial hairstyles (e.g. Bangs and Braids) can be in Hat, Face, or Hair categories.
   - Facial hair must be in the Face category.
-- Non-hair accessories that are primarily visible above the neck must be in either Head or Face. Accessories not primarily visible above the neck cannot be in these categories.
+- Non-hair accessories that are primarily visible above the neck must be in either Hat or Face categories. Accessories not primarily visible above the neck cannot be in these categories.
   - Items that sit on only the avatar shoulders can be in Shoulder.
 - Clothing categories must be in their proper grouping of either Tops or Bottoms.
   - Designs that are distinctly Tops (T-Shirt, Shirt, Jacket) must be in one of those Tops categories.
   - Designs that are distinctly Bottoms (Shorts, Pants, Skirt) must be in one of those Bottoms categories.
-- Hat designs (e.g. baseball caps, beanies, cowboy hats) must be in the Head category.
-  - Designs that combine Head items with hair designs (e.g. beanie with hair sticking out, mohawk with headphones) can be in the Head or Hair category.
+- Hat designs (e.g. baseball caps, beanies, cowboy hats) must be in the Hat category.
+  - Designs that combine items with hair designs (e.g. beanie with hair sticking out, mohawk with headphones) can be in the Hat or Hair category.
 - Designs that are components of facial anatomy (e.g. noses, mustache) or accessories that augment facial anatomy (e.g. eyeshadow, blush, wrinkles) must be in the Face category.
 - Roblox automatically detects bodysuits, clothing items that completely cover a body below the head, and automatically categorizes them after upload.
 

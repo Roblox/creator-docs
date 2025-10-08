@@ -39,12 +39,16 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
         <ul>
           <li>`.mp3`</li>
           <li>`.ogg`</li>
+          <li>`.wav`</li>
+          <li>`.flac`</li>
         </ul>
       </td>
       <td>
         <ul>
           <li>`audio/mpeg`</li>
           <li>`audio/ogg`</li>
+          <li>`audio/wav`</li>
+          <li>`audio/flac`</li>
         </ul>
       </td>
       <td>
