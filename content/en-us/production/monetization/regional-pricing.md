@@ -120,8 +120,8 @@ This example shows you how to retrieve price levels for a list of users, which c
 -- Get the MarketplaceService
 local MarketplaceService = game:GetService("MarketplaceService")
 
--- Define a function to retrieve price levels for a list of users
-local function getPriceLevels(userIds)
+-- Define a function to retrieve price levels for a list of users and creates a lookup table of UserId to PriceLevel
+local function getPriceLevelsLookup(userIds)
     local success, result = pcall(function()
         return MarketplaceService:GetUsersPriceLevelsAsync(userIds)
     end)
@@ -129,9 +129,9 @@ local function getPriceLevels(userIds)
     if success then
         -- Map each PriceLevelInfo to a UserId -> PriceLevel lookup table
         local lookup = {}
-        for _, info in ipairs(result) do
-            lookup[info.UserId] = info.PriceLevel
-        end 
+        for _, userData in ipairs(result) do
+            lookup[userData.UserId] = userData.PriceLevel
+        end
         return lookup
     else
         warn("Error getting price levels:", result)
@@ -144,7 +144,7 @@ local user1Id = 123456789
 local user2Id = 987654321
 
 -- Call the function and store the result
-local priceLevels = getPriceLevels({user1Id, user2Id})
+local priceLevels = getPriceLevelsLookup({user1Id, user2Id})
 -- If successful, print each user's level
 if priceLevels then
     print("Price level for User 1:", priceLevels[user1Id])
@@ -154,27 +154,7 @@ else
 end
 ```
 
-<h5 style={{marginTop: '36px'}}>Example 2: Return a dictionary mapping each user ID to their corresponding price level</h5>
-
-This example shows you how to use a helper function to transform the array returned by `GetUsersPriceLevelsAsync` into a user ID to price level mapping, which makes the results easier to read.
-
-```lua
--- Get the MarketplaceService
-local MarketplaceService = game:GetService("MarketplaceService")
-
--- Define a helper function to map users to their price levels
--- The parameter priceLevelData is the array returned by MarketplaceService:GetUsersPriceLevelsAsync(), where each object contains a user ID and a price level
--- The function returns a dictionary mapping each user ID to their corresponding price level
-local function mapUserIdsToPriceLevels(priceLevelData)
-	local userIdToPriceLevelMap = {}
-	for _, userData in ipairs(priceLevelData) do
-		userIdToPriceLevelMap[userData.UserId] = userData.PriceLevel
-	end
-	return userIdToPriceLevelMap
-end
-```
-
-<h5 style={{marginTop: '36px'}}>Example 3: Compare a sender's price level to a recipient's price level</h5>
+<h5 style={{marginTop: '36px'}}>Example 2: Compare a sender's price level to a recipient's price level</h5>
 
 This example shows you a **sample implementation** of how to check a sender's price level against the recipient's price level. This can help you manage gifting from users in higher-priced regions to users in lower-priced regions.
 
@@ -182,49 +162,81 @@ This example shows you a **sample implementation** of how to check a sender's pr
 -- Get the MarketplaceService
 local MarketplaceService = game:GetService("MarketplaceService")
 
+-- Define a function to retrieve price levels for a list of users and creates a lookup table of UserId to PriceLevel
+local function getPriceLevelsLookup(userIds)
+    local success, result = pcall(function()
+        return MarketplaceService:GetUsersPriceLevelsAsync(userIds)
+    end)
+
+    if success then
+        -- Map each PriceLevelInfo to a UserId -> PriceLevel lookup table
+        local lookup = {}
+        for _, userData in ipairs(result) do
+            lookup[userData.UserId] = userData.PriceLevel
+        end
+        return lookup
+    else
+        warn("Error getting price levels:", result)
+        return nil
+    end
+end
+
 -- Define a function that checks if the sender has a higher or equal price level to the recipient
 -- The parameters are the Player sending the item and the Player receiving the item
--- The function returns true if the sender’s price level is greater than or equal to the recipient’s price level
+-- The function returns true if the sender's price level is greater than or equal to the recipient's price level
 function isSenderPriceLevelHigherOrEqualforGifting(sender, recipient)
-	local success, priceLevelData = pcall(function()
-		return MarketplaceService:GetUsersPriceLevelsAsync({ sender.UserId, recipient.UserId })
-	end)
+	local priceLevelsLookup = getPriceLevelsLookup({ sender.UserId, recipient.UserId })
 
-	if not success then
+	if not priceLevelsLookup then
 		error("MarketplaceService:GetUsersPriceLevelsAsync failed. Unable to retrieve user price levels.")
 	end
 
-	local priceLevelMap = mapUserIdsToPriceLevels(priceLevelData)
-	local senderPriceLevel = priceLevelMap[sender.UserId]
-	local recipientPriceLevel = priceLevelMap[recipient.UserId]
+	local senderPriceLevel = priceLevelsLookup[sender.UserId]
+	local recipientPriceLevel = priceLevelsLookup[recipient.UserId]
 
 	return senderPriceLevel >= recipientPriceLevel
 end
 ```
 
-<h5 style={{marginTop: '36px'}}>Example 4: Check if two users have the same price level</h5>
+<h5 style={{marginTop: '36px'}}>Example 3: Check if two users have the same price level</h5>
 
-This example shows you a **sample implementation** of how to check if two users have the same price level. This can help you manage trading and ensure a fair exchange between users from different regions
+This example shows you a **sample implementation** of how to check if two users have the same price level. This can help you manage trading and ensure a fair exchange between users from different regions.
 
 ```lua
 -- Get the MarketplaceService
 local MarketplaceService = game:GetService("MarketplaceService")
 
+-- Define a function to retrieve price levels for a list of users and creates a lookup table of UserId to PriceLevel
+local function getPriceLevelsLookup(userIds)
+    local success, result = pcall(function()
+        return MarketplaceService:GetUsersPriceLevelsAsync(userIds)
+    end)
+
+    if success then
+        -- Map each PriceLevelInfo to a UserId -> PriceLevel lookup table
+        local lookup = {}
+        for _, userData in ipairs(result) do
+            lookup[userData.UserId] = userData.PriceLevel
+        end
+        return lookup
+    else
+        warn("Error getting price levels:", result)
+        return nil
+    end
+end
+
 -- Define a function that checks if two users have the same price level
 -- The parameters are the two users whose price levels you want to compare
 -- The function returns true if both users have the same price level
 function haveSamePriceLevelForTrading(userA, userB)
-	local success, priceLevelData = pcall(function()
-		return MarketplaceService:GetUsersPriceLevelsAsync({ userA.UserId, userB.UserId })
-	end)
+	local priceLevelsLookup = getPriceLevelsLookup({ userA.UserId, userB.UserId })
 
-	if not success then
+	if not priceLevelsLookup then
 		error("MarketplaceService:GetUsersPriceLevelsAsync failed. Unable to retrieve user price levels.")
 	end
 
-	local priceLevelMap = mapUserIdsToPriceLevels(priceLevelData)
-	local userAPriceLevel = priceLevelMap[userA.UserId]
-	local userBPriceLevel = priceLevelMap[userB.UserId]
+	local userAPriceLevel = priceLevelsLookup[userA.UserId]
+	local userBPriceLevel = priceLevelsLookup[userB.UserId]
 
 	return userAPriceLevel == userBPriceLevel
 end
