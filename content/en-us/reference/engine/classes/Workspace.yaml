@@ -4,7 +4,7 @@
 
 name: Workspace
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   **Workspace** houses 3D objects which are rendered to the 3D world. Objects
   not descending from it will not be rendered or physically interact with the
@@ -1050,23 +1050,6 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Behavior
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-  - name: Workspace.UseImprovedModelLod
-    summary: ''
-    description: ''
-    code_samples: []
-    type: RolloutState
-    tags:
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Streaming
     serialization:
       can_load: true
       can_save: true

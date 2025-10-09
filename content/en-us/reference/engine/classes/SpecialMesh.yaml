@@ -4,7 +4,7 @@
 
 name: SpecialMesh
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   The `Class.SpecialMesh` object applies a mesh to a `Class.BasePart` depending
   on the `Class.SpecialMesh.MeshType|MeshType` property.

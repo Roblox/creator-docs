@@ -4,7 +4,7 @@
 
 name: Seat
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   A type of `Class.BasePart` that characters can 'sit' in. When a character
   touches an enabled Seat object, it will be attached to the part by a

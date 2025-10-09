@@ -4,7 +4,7 @@
 
 name: WorldModel
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   Extends limited physics for its children on to a parent `Class.ViewportFrame`.
 description: |

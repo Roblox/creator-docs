@@ -229,8 +229,7 @@ properties:
       a default of `0`. If the
       `Class.BillboardGui.CurrentDistance|CurrentDistance` of the
       `Class.BillboardGui` is below this value, it will not scale any larger
-      than it would at this
-      `Class.BillboardGui.DistanceLowerLimit|DistanceLowerLimit` distance.
+      than it would at this distance.
     code_samples: []
     type: float
     tags:
@@ -254,9 +253,7 @@ properties:
     description: |
       Determines the size `Class.BillboardGui.CurrentDistance|CurrentDistance`
       increments and decrements in studs as the player's camera moves closer and
-      further from the `Class.BillboardGui`. The property defaults to `0` and
-      rounds up starting from
-      `Class.BillboardGui.DistanceLowerLimit|DistanceLowerLimit`.
+      further from the `Class.BillboardGui`. The property defaults to `0`.
     code_samples: []
     type: float
     tags:
@@ -281,8 +278,7 @@ properties:
       stop scaling smaller in size relative to the player's current camera. If
       the `Class.BillboardGui.CurrentDistance|CurrentDistance` of the
       `Class.BillboardGui` is above this value, it will not scale any smaller
-      than it would at this
-      `Class.BillboardGui.DistanceUpperLimit|DistanceUpperLimit` distance.
+      than it would at this distance.
 
       This property is ignored if the value is less than `0`. The default value
       is `-1`, meaning the property is ignored by default.

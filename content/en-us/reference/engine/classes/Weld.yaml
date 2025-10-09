@@ -4,7 +4,7 @@
 
 name: Weld
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: ''
 description: |
   An object used to hold two objects together in a relative position, regardless

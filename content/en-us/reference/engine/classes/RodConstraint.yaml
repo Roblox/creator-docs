@@ -4,7 +4,7 @@
 
 name: RodConstraint
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   Keeps two attachments separated by its defined
   `Class.RodConstraint.Length|Length`.

@@ -4,7 +4,7 @@
 
 name: Status
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   An unfinished object which offers no functionality to developers.
 description: |

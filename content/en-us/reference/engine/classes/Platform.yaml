@@ -4,7 +4,7 @@
 
 name: Platform
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   Historically a form of `Class.Seat` that wouldn't place the player in a
   sitting pose. This object is no longer create-able and cannot be used by

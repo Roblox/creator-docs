@@ -4,7 +4,7 @@
 
 name: SpawnLocation
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   `Class.SpawnLocation|SpawnLocations`, or "spawns" determine where a
   `Class.Player` respawns when they die. They can be configured to allow only

@@ -4,7 +4,7 @@
 
 name: Tool
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   An object, such as a weapon, that can be equipped by a `Class.Humanoid`.
 description: |

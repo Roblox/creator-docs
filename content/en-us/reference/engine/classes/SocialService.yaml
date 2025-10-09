@@ -340,24 +340,24 @@ methods:
       local SocialService = game:GetService("SocialService")
 
       local success, result  = pcall(function()
-        local data = {
-          promoCode = "j7du67"
-        }
+      	local data = {
+          	promoCode = "j7du67"
+      	}
 
-        local launchData = HttpService:JSONEncode(data)
+      	local launchData = HttpService:JSONEncode(data)
 
-        local LinkSharingOptions = {
-          ExpirationSeconds = 20000,
-          PreviewTitle = "Awesome Game",
-          PreviewDescription = "Lets play together",
-          LaunchData = launchData,
-        }
+      	local LinkSharingOptions = {
+      		ExpirationSeconds = 20000,
+      		PreviewTitle = "Awesome Game",
+      		PreviewDescription = "Lets play together",
+      		LaunchData = launchData,
+      	}
 
-        return SocialService:PromptLinkSharing(player, LinkSharingOptions)
+      	return SocialService:PromptLinkSharing(player, LinkSharingOptions)
       end)
 
       if not success or result ~= Enum.PromptLinkSharingResult.Success then
-        warn("PromptLinkSharing failed:", tostring(result))
+      	warn("PromptLinkSharing failed:", tostring(result))
       end
       ```
     code_samples: []
@@ -381,8 +381,7 @@ methods:
             share link is created. Truncates to nearest integer. Defaults to
             86,400.
           - `PreviewTitle` (string) Preview title of the share link.
-          - `PreviewDescription` (string) Preview description of the share
-            link.
+          - `PreviewDescription` (string) Preview description of the share link.
           - `PreviewAssetId` (number) Image asset ID used for share link
             preview.
           - `LaunchData` (string). Used to set a parameter in
@@ -390,7 +389,9 @@ methods:
             generated share link.
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          A tuple containing an `Enum.PromptLinkSharingResult` indicating the
+          result of the link sharing prompt.
     tags:
       - Yields
     deprecation_message: ''

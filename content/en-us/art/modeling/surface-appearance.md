@@ -22,6 +22,10 @@ description: PBR textures are advanced textures using multiple texture maps.
 
 Various applications and workflows are available for creating PBR textures. You can use these during the modeling and texturing phases of custom 3D object creation, provided that Roblox Studio [supports](../../art/characters/specifications.md#textures) the specific texture maps you're using.
 
+<Alert severity = 'info'>
+For information on how to properly connect PBR textures to your model in Blender and Maya for import into Studio, see [Blender / Maya texture settings](./assign-textures.md).
+</Alert>
+
 This guide provides instructions on [setting up](#enable-surface-appearance) your mesh objects to use PBR texture maps, and describes common use-cases and best practices for Roblox's supported PBR [texture maps](#texture-maps). When creating your own surfaces, see [material references](../../art/modeling/material-reference.md) for common material values, image comparisons and clothing examples.
 
 ## Enable surface appearance

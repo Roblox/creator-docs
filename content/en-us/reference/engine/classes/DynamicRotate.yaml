@@ -4,7 +4,7 @@
 
 name: DynamicRotate
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   The base class for classic motor joints.
 description: |

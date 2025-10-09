@@ -45,19 +45,15 @@ navigation:
         path: /art/modeling/project-files
       - title: Rigging and skinning
         path: /art/modeling/rigging
-      - title: Blender and Maya export settings
+      - title: Blender / Maya export settings
         path: /art/modeling/export-requirements
-      - title: 3D Importer
-        path: /art/modeling/3d-importer
-      - title: glTF Export
-        path: /art/modeling/gltf-export
-      - title: Roblox Blender plugin
-        path: /art/modeling/roblox-blender-plugin
 
   - title: Texturing
     section:
       - title: Texture specifications
         path: /art/modeling/texture-specifications
+      - title: Blender / Maya texture settings
+        path: /art/modeling/assign-textures
       - title: Physically-based rendering (PBR)
         path: /art/modeling/surface-appearance
       - title: PBR material references
@@ -70,3 +66,9 @@ navigation:
       - title: Head animation
         path: /art/characters/facial-animation/animate-heads
   
+  - title: 3D Importer
+    path: /art/modeling/3d-importer
+  - title: glTF Export
+    path: /art/modeling/gltf-export
+  - title: Roblox Blender plugin
+    path: /art/modeling/roblox-blender-plugin

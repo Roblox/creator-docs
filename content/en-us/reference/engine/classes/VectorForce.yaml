@@ -4,7 +4,7 @@
 
 name: VectorForce
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   Applies constant force to an assembly.
 description: |

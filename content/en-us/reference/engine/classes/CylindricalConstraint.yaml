@@ -4,7 +4,7 @@
 
 name: CylindricalConstraint
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   Constrains two attachments on two parts to have a relative linear and
   rotational motion.

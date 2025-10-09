@@ -7,7 +7,9 @@ type: class
 memory_category: Instances
 summary: ''
 description: |
-  See [Data Stores](../../../cloud-services/data-stores/index.md).
+  See [Data stores](../../../cloud-services/data-stores/index.md) for an
+  in-depth guide on data structure, management, error handling, limits, and
+  more.
 code_samples: []
 inherits:
   - GlobalDataStore

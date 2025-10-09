@@ -4,7 +4,7 @@
 
 name: WeldConstraint
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   Connects two `Class.BasePart|BaseParts` together such that their relative
   position and orientation remain the same.

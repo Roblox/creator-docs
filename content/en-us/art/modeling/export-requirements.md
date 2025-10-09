@@ -16,8 +16,7 @@ Check that your model meets Roblox's [modeling specifications](../../art/modelin
 </ul>
 </Alert>
 
-<Tabs>
-  <TabItem label="Blender">
+## Blender
 
 Before exporting a mesh from Blender, make sure to set the Scene Unit Length to **Centimeters** and, if applicable, set the Unit Scale to **.01** to ensure similar `.fbx` scaling within Studio.
 
@@ -43,8 +42,8 @@ To export the `.fbx` file in Blender:
 
 7. Click the **Export FBX** button.
 
-</TabItem>
-<TabItem label="Maya">
+## Maya
+
 To export a mesh in Maya as a `.fbx` file:
 
 1. In the topbar, click **File**. A pop-up menu displays.
@@ -61,6 +60,3 @@ To export a mesh in Maya as a `.fbx` file:
 9. Click the **Export All** button.
 
    <img src="../../assets/accessories/lc-requirements-maya-settings.png" alt="Maya export sidebar showing Bake Animation as unchecked"  />
-
-</TabItem>
-</Tabs>

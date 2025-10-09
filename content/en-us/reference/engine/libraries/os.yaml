@@ -73,117 +73,117 @@ functions:
         </thead>
       <tbody>
       <tr>
-        <td>%a</td>
+        <td><code>%a</code></td>
         <td>Abbreviated weekday name *</td>
         <td>Mon</td>
       </tr>
       <tr>
-        <td>%A</td>
+        <td><code>%A</code></td>
         <td>Full weekday name *</td>
         <td>Monday</td>
       </tr>
       <tr>
-        <td>%b</td>
+        <td><code>%b</code></td>
         <td>Abbreviated month name *</td>
         <td>Feb</td>
       </tr>
       <tr>
-        <td>%B</td>
+        <td><code>%B</code></td>
         <td>Full month name *</td>
         <td>February</td>
       </tr>
       <tr>
-        <td>%c</td>
+        <td><code>%c</code></td>
         <td>Date and time *</td>
         <td>Mon Feb 12 14:14:35 2024</td>
       </tr>
       <tr>
-        <td>%d</td>
+        <td><code>%d</code></td>
         <td>Day of the month</td>
         <td>12</td>
       </tr>
       <tr>
-        <td>%H</td>
+        <td><code>%H</code></td>
         <td>Hour, using 24-hour clock</td>
         <td>14</td>
       </tr>
       <tr>
-        <td>%I</td>
+        <td><code>%I</code></td>
         <td>Hour, using 12-hour clock</td>
         <td>02</td>
       </tr>
       <tr>
-        <td>%j</td>
+        <td><code>%j</code></td>
         <td>Day of year</td>
         <td>043</td>
       </tr>
       <tr>
-        <td>%m</td>
+        <td><code>%m</code></td>
         <td>Month</td>
         <td>02</td>
       </tr>
       <tr>
-        <td>%M</td>
+        <td><code>%M</code></td>
         <td>Minute</td>
         <td>14</td>
       </tr>
       <tr>
-        <td>%p</td>
+        <td><code>%p</code></td>
         <td>Either "AM" or "PM"</td>
         <td>PM</td>
       </tr>
       <tr>
-        <td>%S</td>
+        <td><code>%S</code></td>
         <td>Second</td>
         <td>35</td>
       </tr>
       <tr>
-        <td>%U</td>
+        <td><code>%U</code></td>
         <td>Week number (first Sunday as the first day of week one)</td>
         <td>06</td>
       </tr>
       <tr>
-        <td>%w</td>
+        <td><code>%w</code></td>
         <td>Weekday</td>
         <td>1</td>
       </tr>
       <tr>
-        <td>%W</td>
+        <td><code>%W</code></td>
         <td>Week number (first Monday as the first day of week one)</td>
         <td>07</td>
       </tr>
       <tr>
-        <td>%x</td>
+        <td><code>%x</code></td>
         <td>Date *</td>
         <td>02/12/24</td>
       </tr>
       <tr>
-        <td>%X</td>
+        <td><code>%X</code></td>
         <td>Time *</td>
         <td>14:14:35</td>
       </tr>
       <tr>
-        <td>%y</td>
+        <td><code>%y</code></td>
         <td>Two-digit year</td>
         <td>24</td>
       </tr>
       <tr>
-        <td>%Y</td>
+        <td><code>%Y</code></td>
         <td>Full year</td>
         <td>2024</td>
       </tr>
       <tr>
-        <td>%z</td>
+        <td><code>%z</code></td>
         <td>ISO 8601 offset from UTC in timezone (1 minute = 1, 1 hour = 100)</td>
         <td>-0800</td>
       </tr>
       <tr>
-        <td>%Z</td>
+        <td><code>%Z</code></td>
         <td>Timezone name or abbreviation *</td>
         <td>PST</td>
       </tr>
       <tr>
-        <td>%%</td>
+        <td><code>%%</code></td>
         <td>The % character</td>
         <td>%</td>
       </tr>

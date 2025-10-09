@@ -4,7 +4,7 @@
 
 name: UniversalConstraint
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   Ensures two axes on two bodies remain perpendicular.
 description: |

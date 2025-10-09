@@ -7,6 +7,10 @@ A texture is a digital image applied to the surface of a 3D object to simulate a
 
 Roblox also supports [physically-based rendering (PBR) textures](../../art/modeling/surface-appearance.md) which override a mesh's existing `Class.MeshPart.TextureID|TextureID` and can be used to create immersive environments and objects.
 
+<Alert severity = 'info'>
+For information on how to properly connect textures to your model in Blender and Maya for import into Studio, see [Blender / Maya texture settings](./assign-textures.md).
+</Alert>
+
 See the following requirements when creating your own basic and advanced textures:
 
 - **File formats** — File formats for textures that are uploaded separately in Studio must be submitted as a `.png`, `.jpg`, `.tga`, or `.bmp`.
@@ -29,6 +33,10 @@ Roblox default [materials](../../parts/materials.md) follow a similar texel reso
 ## SurfaceAppearance
 
 You can add a [surface appearance](../../art/modeling/surface-appearance.md) to your mesh in Studio to add PBR texture options. The `Class.SurfaceAppearance` instance uses UV mapping, a form of texture mapping, to accurately map up to four 2D images onto the mesh object.
+
+<Alert severity = 'info'>
+For information on how to properly connect PBR textures to your model in Blender and Maya for import into Studio, see [Blender / Maya texture settings](./assign-textures.md).
+</Alert>
 
 See the following requirements for `Class.SurfaceAppearance` assets:
 

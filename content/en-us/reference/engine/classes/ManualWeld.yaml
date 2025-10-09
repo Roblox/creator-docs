@@ -4,7 +4,7 @@
 
 name: ManualWeld
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   Holds two parts together and functions identically to `Class.Weld`.
 description: |

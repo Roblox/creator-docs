@@ -4,7 +4,7 @@
 
 name: CylinderMesh
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   The CylinderMesh object applies a 'cylinder' mesh to the `Class.BasePart` it
   is parented to.

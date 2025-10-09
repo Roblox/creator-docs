@@ -3450,6 +3450,11 @@ navigation:
         type: engineapi
         source: /reference/engine/datatypes/UDim2.yaml
         ignoreTranslation: true
+      - title: ValueCurveKey
+        path: /reference/engine/datatypes/ValueCurveKey
+        type: engineapi
+        source: /reference/engine/datatypes/ValueCurveKey.yaml
+        ignoreTranslation: true
       - title: Vector2
         path: /reference/engine/datatypes/Vector2
         type: engineapi

@@ -56,7 +56,9 @@ See the following requirements for general rigging and skinning:
 
 ## Textures
 
-Roblox supports basic color textures and modern [PBR textures](../../art/modeling/surface-appearance.md). For technical requirements and best practices when generating individual texture images, see [Texture specifications](../../art/modeling/texture-specifications.md).
+- Roblox supports basic color textures and modern [PBR textures](../../art/modeling/surface-appearance.md).
+- For instructions on assigning texture images to natively import with your mesh, see [Assign textures in modeling tools](./assign-textures.md).
+- For technical requirements and best practices when generating individual texture images, see [Texture specifications](../../art/modeling/texture-specifications.md).
 
 ## Animations
 
@@ -81,5 +83,6 @@ For general use, see the following requirements for adding inner and outer cage 
    <img src="../../assets/accessories/lc-blender-selecting-cage-in-outlier.png" alt="The Outliner in Blender showing two mesh objects called Tshirt_InnerCage and Tshirt_OuterCage."/>
 
 - **Outer cage** - Models, such as a playable character, that aren't expected deform but are the target of meshes that will stretch over it, only require an Outer Cage.
+  - For more information on applying and implementing cages on non-Humanoid targets, see [layered clothing on non-R15](../../characters/appearance.md#layered-clothing-on-non-r15).
 - **Vertices and UV map** - Don't delete vertices or alter the UVs on the Inner or Outer Cages as this can cause errors when importing in Studio or when equipping onto a character.
 - **Symmetry and consistency** - Keep each face (the space between vertices) consistently sized and retain symmetry wherever possible. Use symmetry tools in your modeling software whenever possible.

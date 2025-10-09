@@ -4,7 +4,7 @@
 
 name: ManualGlue
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   ManualGlue is a joint created in a similar manner to the `Class.ManualWeld`
   class. It functions identically to the `Class.Glue` class.

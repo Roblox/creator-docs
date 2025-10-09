@@ -4,7 +4,7 @@
 
 name: RotateP
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: ''
 description: |
   A **RotateP** object joins two parts together and allows rotation about a set

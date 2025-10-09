@@ -4,7 +4,7 @@
 
 name: SkateboardPlatform
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   A SkateboardPlatform can be used to create a skateboard. When characters get
   on a skateboard, they are stuck to it until they press the escape key. Until

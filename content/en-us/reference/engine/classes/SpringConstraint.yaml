@@ -4,7 +4,7 @@
 
 name: SpringConstraint
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   Simulates spring and damper behavior between two attachments.
 description: |

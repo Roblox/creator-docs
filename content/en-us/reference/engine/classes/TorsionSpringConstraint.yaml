@@ -4,7 +4,7 @@
 
 name: TorsionSpringConstraint
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   A rotational spring that opposes the angular motion between two axes.
 description: |

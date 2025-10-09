@@ -10,27 +10,14 @@ summary: |
   defined in `Class.TextChatService.OnIncomingMessage` or
   `Class.TextChannel.OnIncomingMessage`.
 description: |
-  Overrides `Class.TextChatMessage` properties when returned by callbacks
-  defined in `Class.TextChatService.OnIncomingMessage` or
+  Overrides `Class.TextChatMessage` properties like
+  `Class.TextChatMessage.ChatWindowMessageProperties|ChatWindowMessageProperties`
+  and
+  `Class.TextChatMessage.BubbleChatMessageProperties|BubbleChatMessageProperties`
+  when returned by callbacks defined in
+  `Class.TextChatService.OnIncomingMessage` or
   `Class.TextChannel.OnIncomingMessage`. This can be used to customize the
   appearance of a message with [rich text](../../../ui/rich-text.md) tags.
-
-  ```lua
-  local TextChatService = game:GetService("TextChatService")
-
-  TextChatService.OnIncomingMessage = function(message: TextChatMessage)
-    -- Derive chat message properties
-    local properties = TextChatService.ChatWindowConfiguration:DeriveNewMessageProperties()
-
-    -- Change color of message
-    properties.TextColor3 = Color3.fromRGB(255, 121, 121)
-
-  	-- Set chat window message properties
-    message.ChatWindowMessageProperties = properties
-
-    return properties
-  end
-  ```
 code_samples: []
 inherits:
   - Instance

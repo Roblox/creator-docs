@@ -4,7 +4,7 @@
 
 name: WorldRoot
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   Base class for handling physics simulation and 3D spatial queries.
 description: |

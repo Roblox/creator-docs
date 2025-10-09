@@ -4,7 +4,7 @@
 
 name: BlockMesh
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   The BlockMesh object applies a 'brick' mesh to the `Class.BasePart` it is
   parented to. It behaves identically to a `Class.SpecialMesh` with

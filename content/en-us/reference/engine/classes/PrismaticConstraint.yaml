@@ -4,7 +4,7 @@
 
 name: PrismaticConstraint
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   Constraint which creates a rigid joint between two
   `Class.Attachment|Attachments`, allowing them to slide along one axis but not

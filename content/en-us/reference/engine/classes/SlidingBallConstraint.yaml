@@ -4,7 +4,7 @@
 
 name: SlidingBallConstraint
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   The base class for constraints that allow their attachments to slide along an
   axis but not rotate.

@@ -82,6 +82,8 @@ navigation:
         path: /makeup/
       - title: Specifications
         path: /makeup/specifications
+      - title: Reassign textures
+        path: /makeup/reassign-textures
       - title: Import into Studio
         path: /makeup/import
       - title: Face cage optimizations

@@ -11,8 +11,9 @@ description: |
   A **GlobalDataStore** exposes functions for saving and loading data for the
   `Class.DataStoreService`.
 
-  See [Data Stores](../../../cloud-services/data-stores/index.md) for an
-  in-depth guide on data structure, management, error handling, etc.
+  See [Data stores](../../../cloud-services/data-stores/index.md) for an
+  in-depth guide on data structure, management, error handling, limits, and
+  more.
 
   Ordered data stores do not support versioning and metadata, so
   `Class.DataStoreKeyInfo` is always `nil` for keys in an

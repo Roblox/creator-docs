@@ -4,7 +4,7 @@
 
 name: FileMesh
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   The FileMesh object applies a mesh to a `Class.BasePart` when parented to it.
   Its properties are inherited by the `Class.SpecialMesh` object.

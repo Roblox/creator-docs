@@ -1381,18 +1381,50 @@ methods:
     thread_safety: Safe
     capabilities: []
   - name: Camera:ZoomToExtents
-    summary: ''
-    description: ''
+    summary: |
+      Adjusts the `Class.Camera.CFrame|CFrame` so that the specified bounding
+      box is fully visible within the camera's viewport.
+    description: |
+      This method adjusts the `Class.Camera.CFrame|CFrame` so that a specified
+      bounding box is fully visible within the camera's viewport, without
+      cropping any part of the box.
+
+      The bounding box is defined by its center and orientation
+      (`boundingBoxCFrame`) and its size (`boundingBoxSize`).
+
+      This can be used to focus the camera on a 3D object or model, such as when
+      framing content in a `Class.ViewportFrame`, taking screenshots, or
+      smoothly transitioning the camera to highlight specific content.
+
+      The method automatically accounts for the camera's field of view and
+      viewport aspect ratio to ensure the entire bounding box fits.
+
+      ```lua
+      local Workspace = game:GetService("Workspace")
+
+      local camera = Workspace.CurrentCamera
+      local model = Workspace:FindFirstChild("MyModel")
+
+      if model then
+      	local modelCFrame = model:GetModelCFrame()
+      	local extentsSize = model:GetExtentsSize()
+      	camera:ZoomToExtents(modelCFrame, extentsSize)
+      end
+      ```
     code_samples: []
     parameters:
       - name: boundingBoxCFrame
         type: CFrame
         default:
-        summary: ''
+        summary: |
+          The `Datatype.CFrame` representing the center and orientation of the
+          bounding box to fit into the viewport.
       - name: boundingBoxSize
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The `Datatype.Vector3` size of the bounding box to fit into the
+          viewport.
     returns:
       - type: ()
         summary: ''

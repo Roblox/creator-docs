@@ -4,7 +4,7 @@
 
 name: VelocityMotor
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: ''
 description: |
   The VelocityMotor is a special type of joint that works similarly to a

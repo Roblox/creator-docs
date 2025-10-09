@@ -453,63 +453,40 @@ properties:
       to switch to that as the primary input type and possibly use touch as a
       backup input for on‑screen UI.
 
-      The behavior of `PreferredInput` is summarized in the following table. Its
-      value changes based on the value of legacy `Class.UserInputService`
-      properties such as
-      `Class.UserInputService.KeyboardEnabled|KeyboardEnabled`,
-      `Class.UserInputService.GamepadEnabled|GamepadEnabled`, and
-      `Class.UserInputService.TouchEnabled|TouchEnabled`, as well as the
-      player's most recent interaction with a connected gamepad or
-      keyboard/mouse.
+      The value of `PreferredInput` changes based on built‑in device inputs and
+      the player's most recent interaction with a connected gamepad or
+      keyboard/mouse. Examples include:
 
       <table>
-      <thead>
-      <tr>
-        <th><code>Class.UserInputService.KeyboardEnabled|KeyboardEnabled</code>;<br /><code>Class.UserInputService.GamepadEnabled|GamepadEnabled</code>;<br /><code>Class.UserInputService.TouchEnabled|TouchEnabled</code></th>
-        <th>Most Recent Interaction</th>
-        <th><code>PreferredInput</code></th>
-        <th>Example</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td><code>false</code>;&nbsp; <code>false</code>;&nbsp; <code>true</code></td>
-        <td>(don't&nbsp;care)</td>
-        <td><code>Enum.PreferredInput|Touch</code></td>
-        <td>⒜</td>
-      </tr>
-      <tr>
-        <td><code>true</code>;&nbsp; <code>false</code>;&nbsp; (don't&nbsp;care)</td>
-        <td>(don't&nbsp;care)</td>
-        <td><code>Enum.PreferredInput|KeyboardAndMouse</code></td>
-        <td>⒝</td>
-      </tr>
-      <tr>
-        <td><code>false</code>;&nbsp; <code>true</code>;&nbsp; (don't&nbsp;care)</td>
-        <td>(don't&nbsp;care)</td>
-        <td><code>Enum.PreferredInput|Gamepad</code></td>
-        <td>⒞</td>
-      </tr>
-      <tr>
-        <td><code>true</code>;&nbsp; <code>true</code>;&nbsp; (don't&nbsp;care)</td>
-        <td>Keyboard or Mouse</td>
-        <td><code>Enum.PreferredInput|KeyboardAndMouse</code></td>
-        <td>⒟</td>
-      </tr>
-      <tr>
-        <td><code>true</code>;&nbsp; <code>true</code>;&nbsp; (don't&nbsp;care)</td>
-        <td>Gamepad</td>
-        <td><code>Enum.PreferredInput|Gamepad</code></td>
-        <td>⒠</td>
-      </tr>
-      </tbody>
+        <thead>
+          <tr>
+            <th>Real-World Scenario</th>
+            <th><code>PreferredInput</code></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Player is using a phone with no other connected input devices; no possibility of an input type change.</td>
+            <td><code>Enum.PreferredInput|Touch</code></td>
+          </tr>
+          <tr>
+            <td>Player is using a mobile device with a bluetooth keyboard & mouse connected, but no gamepad is connected.</td>
+            <td><code>Enum.PreferredInput|KeyboardAndMouse</code></td>
+          </tr>
+          <tr>
+            <td>Player is using a tablet with a bluetooth gamepad connected, but no keyboard or mouse is connected.</td>
+            <td><code>Enum.PreferredInput|Gamepad</code></td>
+          </tr>
+          <tr>
+            <td>Player is using an Xbox or PlayStation with a bluetooth keyboard & mouse connected and has most recently interacted with the keyboard or mouse.</td>
+            <td><code>Enum.PreferredInput|KeyboardAndMouse</code></td>
+          </tr>
+          <tr>
+            <td>Player is on a Windows or Mac PC with a gamepad connected and has most recently interacted with the gamepad.</td>
+            <td><code>Enum.PreferredInput|Gamepad</code></td>
+          </tr>
+        </tbody>
       </table>
-
-      <figcaption>⒜ Phone with no other connected input devices; no possibility of an input type change</figcaption>
-      <figcaption>⒝ Mobile device with bluetooth keyboard and mouse connected, but no connected gamepad</figcaption>
-      <figcaption>⒞ Tablet with a gamepad connected, but no connected mouse/keyboard</figcaption>
-      <figcaption>⒟ Xbox or PlayStation with a bluetooth keyboard/mouse connected, and keyboard or mouse most recently interacted with</figcaption>
-      <figcaption>⒠ Windows or Mac with a gamepad connected, and gamepad most recently interacted with</figcaption>
     code_samples:
       - UserInputService-PreferredInput
     type: PreferredInput

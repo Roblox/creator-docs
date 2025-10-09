@@ -4,7 +4,7 @@
 
 name: Rotate
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: ''
 description: |
   The **Rotate** object is used to allow rotation between two parts. Most

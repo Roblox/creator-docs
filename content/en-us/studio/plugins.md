@@ -1,5 +1,5 @@
 ---
-title: Plugins
+title: Studio plugins
 description: Explains how to create, publish, and monetize extensions to Studio that add custom functionality.
 ---
 

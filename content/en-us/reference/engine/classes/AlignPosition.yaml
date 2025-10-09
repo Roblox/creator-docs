@@ -4,7 +4,7 @@
 
 name: AlignPosition
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   Constraint which applies force to move two attachments together, or to move
   one attachment to a goal position.

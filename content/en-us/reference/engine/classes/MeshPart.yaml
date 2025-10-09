@@ -4,7 +4,7 @@
 
 name: MeshPart
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   A form of `Class.BasePart` that includes a physically simulated custom mesh.
 description: |

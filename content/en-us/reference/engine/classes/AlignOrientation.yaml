@@ -4,7 +4,7 @@
 
 name: AlignOrientation
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   Constraint which applies torque to align two attachments, or to align one
   attachment with a goal orientation.

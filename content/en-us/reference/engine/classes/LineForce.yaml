@@ -4,7 +4,7 @@
 
 name: LineForce
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   Applies a force along the theoretical line connecting its two
   `Class.Attachment|Attachments`.

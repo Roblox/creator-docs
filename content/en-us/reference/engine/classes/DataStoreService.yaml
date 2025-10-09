@@ -15,7 +15,8 @@ description: |
   or a `Class.ModuleScript` that is used by a `Class.Script`.
 
   See [Data stores](../../../cloud-services/data-stores/index.md) for an
-  in-depth guide on data structure, management, error handling, etc.
+  in-depth guide on data structure, management, error handling, limits, and
+  more.
 code_samples:
   - DataStore-Budget
 inherits:

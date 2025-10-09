@@ -4,7 +4,7 @@
 
 name: AngularVelocity
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   Applies torque on an assembly to maintain a constant angular velocity.
 description: |

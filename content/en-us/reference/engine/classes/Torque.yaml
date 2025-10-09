@@ -4,7 +4,7 @@
 
 name: Torque
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   Applies constant torque to an assembly from its center of mass.
 description: |

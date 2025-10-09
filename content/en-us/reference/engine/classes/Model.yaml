@@ -4,7 +4,7 @@
 
 name: Model
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   Models are container objects, meaning they group objects together. They are
   best used to hold collections of `Class.BasePart|BaseParts` and have a number

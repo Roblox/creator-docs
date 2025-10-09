@@ -5,8 +5,12 @@
 name: PVAdornment
 type: class
 memory_category: Instances
-summary: An abstract class of which the inheritors can be adorned to objects of the `Class.PVInstance` class.
-description: The `Class.PVAdornment` class is an abstract class of which the inheritors can be adorned to objects of the `Class.PVInstance` class.
+summary: |
+  An abstract class of which the inheritors can be adorned to objects of the
+  `Class.PVInstance` class.
+description: |
+  The `Class.PVAdornment` class is an abstract class of which the inheritors can
+  be adorned to objects of the `Class.PVInstance` class.
 code_samples: []
 inherits:
   - GuiBase3d
@@ -15,10 +19,12 @@ tags:
 deprecation_message: ''
 properties:
   - name: PVAdornment.Adornee
-    summary: The `Class.PVInstance` which this `Class.PVAdornment` is attached to.
-    description: |-
+    summary: |
+      The `Class.PVInstance` which this `Class.PVAdornment` is attached to.
+    description: |
       The `Class.PVInstance` which this `Class.PVAdornment` is attached to. An
-      adornment will stay positioned and rotated relative to its adornee, even if the adornee moves.
+      adornment will stay positioned and rotated relative to its adornee, even
+      if the adornee moves.
     code_samples: []
     type: PVInstance
     tags: []

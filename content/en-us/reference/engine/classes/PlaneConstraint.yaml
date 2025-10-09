@@ -4,7 +4,7 @@
 
 name: PlaneConstraint
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   Moves its attachments into a position/orientation along a plane whose normal
   vector is the primary axis of `Class.Constraint.Attachment0|Attachment0`.

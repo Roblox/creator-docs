@@ -4,7 +4,7 @@
 
 name: NoCollisionConstraint
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   An instance used to prevent collisions between two specific parts.
 description: |

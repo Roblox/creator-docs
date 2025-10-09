@@ -4,7 +4,7 @@
 
 name: AnimationConstraint
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   Aligns two `Class.BasePart|BaseParts` with an animate-able kinematic or
   force-based joint.

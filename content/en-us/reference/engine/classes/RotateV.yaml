@@ -4,7 +4,7 @@
 
 name: RotateV
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: ''
 description: |
   A **RotateV** object joins two parts together and allows rotation about a set

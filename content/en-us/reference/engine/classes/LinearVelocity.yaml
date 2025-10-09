@@ -4,7 +4,7 @@
 
 name: LinearVelocity
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   Applies force on an assembly to maintain a constant linear velocity.
 description: |

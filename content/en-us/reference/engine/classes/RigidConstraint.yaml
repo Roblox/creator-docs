@@ -4,7 +4,7 @@
 
 name: RigidConstraint
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   Creates a rigid connection between two `Class.Attachment|Attachments` or
   `Class.Bone|Bones`.

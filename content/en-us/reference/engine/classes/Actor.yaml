@@ -4,7 +4,7 @@
 
 name: Actor
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   An `Class.Actor` is a container for code that can be safely split into its own
   thread.

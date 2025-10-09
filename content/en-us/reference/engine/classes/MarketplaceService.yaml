@@ -719,7 +719,7 @@ methods:
       their region and purchasing power) is 100 Robux.
 
       See
-      [Manage in-experience transfers](../../../production/monetization/regional-pricing.md#manage-in-experience-transfers)
+      [Protect your trades and gifts](../../../production/monetization/regional-pricing.md#protect-your-trades-and-gifts)
       for more information.
     code_samples:
       - MarketplaceService-GetUsersPriceLevelAsync

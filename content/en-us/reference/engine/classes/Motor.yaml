@@ -4,7 +4,7 @@
 
 name: Motor
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   Makes a movable `Class.JointInstance` between two parts.
 description: |

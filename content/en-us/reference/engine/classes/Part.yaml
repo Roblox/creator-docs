@@ -4,7 +4,7 @@
 
 name: Part
 type: class
-memory_category: PhysicsParts
+memory_category: BaseParts
 summary: |
   A common type of `Class.BasePart` that comes in different primitive shapes.
 description: |

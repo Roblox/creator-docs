@@ -122,12 +122,18 @@ methods:
       <td>When <code>true</code>, the player can trade virtual items that they purchased with in-experience currency or Robux.</td>
       </tr>
       <tr>
+      <td><code>IsPhotoToAvatarAllowed</code></td>
+      <td>Boolean</td>
+      <td>Any experience that uses the Photo-to-Avatar APIs.</td>
+      <td>When <code>true</code>, the Photo-to-Avatar API `Class.AvatarCreationService: PromptSelectAvatarGenerationImageAsync()` is available to the player.</td>
+      </tr>
+      <tr>
       <td><code>IsSubjectToChinaPolicies</code></td>
       <td>Boolean</td>
       <td>Any experience that is available in China.</td>
       <td>When <code>true</code>, an experience should enforce compliance changes. See <a href="https://devforum.roblox.com/t/new-programs-available-roblox-china-licensed-to-operate/1023361">this forum post</a> for more information.</td>
       </tr>
-        </tbody>
+       	</tbody>
       </table>
 
       ##### Exceptions

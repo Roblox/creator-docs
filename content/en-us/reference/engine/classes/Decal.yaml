@@ -203,8 +203,17 @@ properties:
     capabilities:
       - Basic
   - name: Decal.TextureContent
-    summary: ''
-    description: ''
+    summary: |
+      The texture content displayed by the Decal. Supports
+      [asset URIs](../../../projects/assets/index.md#asset-uris) and
+      `Class.EditableImage` objects.
+    description: |
+      The texture content displayed by the Decal. Supports
+      [asset URIs](../../../projects/assets/index.md#asset-uris) and
+      `Class.EditableImage` objects.
+
+      For more information on how the URI Content ID can be obtained, see
+      `Class.Decal.Texture`.
     code_samples: []
     type: Content
     tags: []

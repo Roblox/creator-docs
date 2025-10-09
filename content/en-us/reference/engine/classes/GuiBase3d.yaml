@@ -5,8 +5,10 @@
 name: GuiBase3d
 type: class
 memory_category: Instances
-summary: An abstract class for 3D GUI elements that are rendered in the world.
-description: An abstract class for 3D GUI elements that are rendered in the world.
+summary: |
+  An abstract class for 3D GUI elements that are rendered in the world.
+description: |
+  An abstract class for 3D GUI elements that are rendered in the world.
 code_samples: []
 inherits:
   - GuiBase
@@ -15,15 +17,17 @@ tags:
 deprecation_message: ''
 properties:
   - name: GuiBase3d.Color
-    summary: Sets the color of a GUI object.
-    description: Sets the color of a GUI object.
+    summary: |
+      Sets the color of a GUI object.
+    description: |
+      Sets the color of a GUI object.
     code_samples: []
     type: BrickColor
     tags:
       - Hidden
       - NotReplicated
       - Deprecated
-    deprecation_message: |-
+    deprecation_message: |
       This property has been deprecated in favor of `Class.GuiBase3d.Color3`,
       which allows for greater color customization and should be used in new
       work instead.
@@ -38,8 +42,10 @@ properties:
     capabilities:
       - UI
   - name: GuiBase3d.Color3
-    summary: Sets the color of this `Class.GuiBase3d` object.
-    description: Sets the color of this `Class.GuiBase3d` object.
+    summary: |
+      Sets the color of this `Class.GuiBase3d` object.
+    description: |
+      Sets the color of this `Class.GuiBase3d` object.
     code_samples: []
     type: Color3
     tags: []
@@ -55,8 +61,11 @@ properties:
     capabilities:
       - UI
   - name: GuiBase3d.Transparency
-    summary: Sets the transparency of this `Class.GuiBase3d` object.
-    description: Sets the transparency of this `Class.GuiBase3d` object, where `1` is invisible and `0` is fully visible.
+    summary: |
+      Sets the transparency of this `Class.GuiBase3d` object.
+    description: |
+      Sets the transparency of this `Class.GuiBase3d` object, where `1` is
+      invisible and `0` is fully visible.
     code_samples: []
     type: float
     tags: []
@@ -72,8 +81,12 @@ properties:
     capabilities:
       - UI
   - name: GuiBase3d.Visible
-    summary: Determines whether this `Class.GuiBase3d` object and its descendants will be displayed.
-    description: Determines whether this `Class.GuiBase3d` object and its descendants will be displayed.
+    summary: |
+      Determines whether this `Class.GuiBase3d` object and its descendants will
+      be displayed.
+    description: |
+      Determines whether this `Class.GuiBase3d` object and its descendants will
+      be displayed.
     code_samples: []
     type: boolean
     tags: []

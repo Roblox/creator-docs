@@ -30,6 +30,6 @@ items:
   - name: Disabled
     summary: |
       A lower resolution mesh will not be displayed.
-    value: 2
+    value: 3
     tags: []
     deprecation_message: ''
