@@ -226,8 +226,7 @@ local RunService = game:GetService("RunService")
 
 if RunService:IsStudio() then
   -- Sets up initial attributes and schema for testing
-  MatchmakingService:InitializeServerAttributesForStudio(
-  {
+  MatchmakingService:InitializeServerAttributesForStudio({
     Level = "Advanced",
     Elo = 123.456,
     TrainingMode = true
@@ -235,18 +234,17 @@ if RunService:IsStudio() then
 end
 
 -- Retrieves the Level attribute
-local currentLevel, error = MatchmakingService:GetServerAttribute("Level")
-
-if error then
-  print(error)
+local currentLevel, errorMessage = MatchmakingService:GetServerAttribute("Level")
+if errorMessage then
+  warn(errorMessage)
 else
   print("Current level: " .. currentLevel)
 end
 
 -- Updates the Level attribute value to Advanced
-local success, error = MatchmakingService:SetServerAttribute("Level", "Advanced")
+local success, errorMessage = MatchmakingService:SetServerAttribute("Level", "Advanced")
 if not success then
-  print("Failed to update server attribute [Level] to [Advanced] due to error: " .. error)
+  warn("Failed to update server attribute [Level] to [Advanced] due to error: " .. errorMessage)
 else
   print("Successfully set [Level] to [Advanced]")
 end
@@ -386,7 +384,7 @@ local score = math.min(diff / max_relevant_difference, 1)
 The score is 1 when the server's attribute value (for example, Game Mode) is equal to the player's attribute value (for example, Preferred Game Mode). Otherwise, the signal score is 0.
 
 ```lua title="Joining player formula for server categorical signal"
-if server_{attribute_name} = joining_player_{attribute_name} then
+if server_{attribute_name} == joining_player_{attribute_name} then
   return 1 
 else
   return 0 
@@ -397,7 +395,7 @@ end
 local server_GameMode = "Survival"
 local joining_player_GameMode = "Survival"
 
-if server_GameMode = joining_player_GameMode then
+if server_GameMode == joining_player_GameMode then
   return 1
 else
   return 0
@@ -409,7 +407,7 @@ end
 The score is 1 when the server's attribute value is equal to a constant value of true. Otherwise, the signal score is 0.
 
 ```lua title="Constant value formula for server categorical signal"
-if server_{attribute_name} = constant_value then
+if server_{attribute_name} == constant_value then
   return 1 
 else
   return 0
@@ -419,7 +417,7 @@ end
 ```lua title="Constant value example for server categorical signal"
 local server_GameNotStarted = true
 
-if server_GameNotStarted = true then
+if server_GameNotStarted == true then
   return 1
 else
   return 0
