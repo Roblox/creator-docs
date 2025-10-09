@@ -211,12 +211,12 @@ local DataStoreService = game:GetService("DataStoreService")
 local eloStore = DataStoreService:GetDataStore("PlayerElo")
 
 function onMatchEnded(players: {Player}, winners: {Player}, losers: {Player})
-  for _, player in players do
-    local updatedElo = CalculateUpdatedElo(player, winners, losers)
-    local success, errorMessage = pcall(function()
-      eloStore:SetAsync(player.UserId, updatedElo)
-    end)
-  end
+	for _, player in players do
+		local updatedElo = CalculateUpdatedElo(player, winners, losers)
+		local success, errorMessage = pcall(function()
+			eloStore:SetAsync(player.UserId, updatedElo)
+		end)
+	end
 end
 ```
 
@@ -225,28 +225,28 @@ local MatchmakingService = game:GetService("MatchmakingService")
 local RunService = game:GetService("RunService")
 
 if RunService:IsStudio() then
-  -- Sets up initial attributes and schema for testing
-  MatchmakingService:InitializeServerAttributesForStudio({
-    Level = "Advanced",
-    Elo = 123.456,
-    TrainingMode = true
-  })
+	-- Sets up initial attributes and schema for testing
+	MatchmakingService:InitializeServerAttributesForStudio({
+		Level = "Advanced",
+		Elo = 123.456,
+		TrainingMode = true
+	})
 end
 
 -- Retrieves the Level attribute
 local currentLevel, errorMessage = MatchmakingService:GetServerAttribute("Level")
 if errorMessage then
-  warn(errorMessage)
+	warn(errorMessage)
 else
-  print("Current level: " .. currentLevel)
+	print("Current level: " .. currentLevel)
 end
 
 -- Updates the Level attribute value to Advanced
 local success, errorMessage = MatchmakingService:SetServerAttribute("Level", "Advanced")
 if not success then
-  warn("Failed to update server attribute [Level] to [Advanced] due to error: " .. errorMessage)
+	warn("Failed to update server attribute [Level] to [Advanced] due to error: " .. errorMessage)
 else
-  print("Successfully set [Level] to [Advanced]")
+	print("Successfully set [Level] to [Advanced]")
 end
 ```
 
@@ -385,9 +385,9 @@ The score is 1 when the server's attribute value (for example, Game Mode) is equ
 
 ```lua title="Joining player formula for server categorical signal"
 if server_{attribute_name} == joining_player_{attribute_name} then
-  return 1 
+	return 1 
 else
-  return 0 
+	return 0 
 end
 ```
 
@@ -396,9 +396,9 @@ local server_GameMode = "Survival"
 local joining_player_GameMode = "Survival"
 
 if server_GameMode == joining_player_GameMode then
-  return 1
+	return 1
 else
-  return 0
+	return 0
 end
 ```
 
@@ -408,9 +408,9 @@ The score is 1 when the server's attribute value is equal to a constant value of
 
 ```lua title="Constant value formula for server categorical signal"
 if server_{attribute_name} == constant_value then
-  return 1 
+	return 1 
 else
-  return 0
+	return 0
 end
 ```
 
@@ -418,8 +418,8 @@ end
 local server_GameNotStarted = true
 
 if server_GameNotStarted == true then
-  return 1
+	return 1
 else
-  return 0
+	return 0
 end
 ```
