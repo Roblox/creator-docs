@@ -10,52 +10,154 @@ tags:
   - Breakpoints
 ---
 
-Studio offers many debugging tools commonly found in Integrated Development Environments (IDEs). These tools help you resolve errors and inspect scripts line-by-line as they run. Debugging info is displayed in the [Watch](#watch), [Call Stack](#call-stack), [Breakpoints](#breakpoints-window), and [Output](#output) windows for you to inspect.
+Studio offers many debugging tools and workflows commonly found in Integrated Development Environments (IDEs). These help you inspect and resolve errors in scripts as they run.
 
-## General workflow
+## Breakpoint debugging
 
-If you notice a problem in your experience or want to verify that it works as you intend, you can debug the code related to it as follows:
+Breakpoints are checkpoints that pause or "break" the execution of your scripts at specific lines. You can use the pauses to inspect and debug your experience, [watch](#watch) variables, and inspect the [call stack](#call-stack). Breakpoints are one of the most effective ways to debug functions, so they're one of the most important debugging tools.
 
-1. [Insert breakpoints](#insert-breakpoints) on the lines of codes that you want to examine.
-2. From Studio's mezzanine, [initiate a playtest](../studio/testing-modes.md#playtesting) to begin debugging.
+### Management
+
+In the [Script Editor](./script-editor.md), you can [insert](#insert) several types of breakpoints and edit the configuration of a breakpoint at any time, including during playtest sessions. If you edit breakpoints during a playtest session, the edits persist even after you finish it. You can also edit a breakpoint that's actively pausing your playtest session, but changes don't apply until the next playtest session.
+
+#### Insert
+
+Breakpoints take multiple variations and can be inserted at any line of executable code as follows:
+
+<Tabs>
+<TabItem label="Standard">
+To insert a standard breakpoint at a line of code, click in the gutter directly to the right of its line number. Alternatively, right‑click in the gutter and select **Insert&nbsp;Breakpoint**. The breakpoint icon appears as a red circle.
+
+<img alt="Standard breakpoint shown in the script gutter" src="../assets/studio/debugging/Gutter-Breakpoint.png" width="400" />
+</TabItem>
+<TabItem label="Conditional">
+A conditional breakpoint pauses your script only if a specified condition is true, so it's useful for debugging how functions execute when certain variables have certain values or if you want to break only on certain executions in a loop.
+
+To insert a conditional breakpoint, right‑click in the gutter and select **Insert&nbsp;Conditional&nbsp;Breakpoint**. In the popup window that appears, enter the desired condition, such as <Typography noWrap>`var == 10`</Typography>, then click **Save**. The conditional breakpoint icon appears as a circled **=** sign.
+
+<img alt="Conditional breakpoint shown in the script gutter" src="../assets/studio/debugging/Gutter-Breakpoint-Conditional.png" width="400" />
+</TabItem>
+<TabItem label="Logpoint">
+A logpoint is a special breakpoint that logs messages to the [Output](./output.md) window without pausing the script, making it useful for debugging the values of the variables before the line executes.
+
+To insert a logpoint, right‑click in the gutter and select **Insert&nbsp;Logpoint**. In the popup window that appears, enter the desired log message, such as <Typography noWrap>`"The value of var:", var`</Typography>, then click **Save**. The logpoint icon appears as a red diamond.
+
+<img alt="Logpoint shown in the script gutter" src="../assets/studio/debugging/Gutter-Breakpoint-Logpoint.png" width="400" />
+</TabItem>
+<TabItem label="Temporary">
+A temporary breakpoint offers the same [options](#edit) as other breakpoint types, except that it automatically removes itself after the first [playtest session](#workflow). This makes it ideal for quickly testing variable values or functionality without needing to disable or delete the breakpoint afterward.
+
+To insert a temporary breakpoint, right‑click in the gutter and select **Insert&nbsp;Temporary&nbsp;Breakpoint**. It initially appears as red circle and then you can [edit](#edit) its options to specify the behavior.
+
+<img alt="Standard breakpoint shown in the script gutter" src="../assets/studio/debugging/Gutter-Breakpoint.png" width="400" />
+</TabItem>
+</Tabs>
+
+#### Disable
+
+To temporarily disable a breakpoint without [deleting](#delete) it, use any of the following workflows:
+
+- Click the breakpoint's icon.
+- Right-click the breakpoint's icon and select **Disable Breakpoint**.
+- [Edit](#edit) the breakpoint and toggle its **Enabled** checkbox.
+
+A disabled breakpoint appears as a hollow version of its enabled icon, for example a hollow circle for a disabled standard breakpoint, or a hollow diamond for a disabled logpoint.
+
+<Grid container spacing={3}>
+	<Grid item>
+		<figure>
+		<img alt="Disabled standard breakpoint shown in the script gutter" src="../assets/studio/debugging/Gutter-Breakpoint-Disabled.png" width="400" />
+		<figcaption>Disabled standard breakpoint</figcaption>
+		</figure>
+	</Grid>
+	<Grid item>
+		<figure>
+		<img alt="Disabled logpoint shown in the script gutter" src="../assets/studio/debugging/Gutter-Breakpoint-Logpoint-Disabled.png" width="400" />
+		<figcaption>Disabled logpoint</figcaption>
+		</figure>
+	</Grid>
+</Grid>
+
+#### Delete
+
+To delete a breakpoint, middle-click its icon or right‑click its icon and select **Delete Breakpoint**.
+
+<Alert severity="warning">
+Deleting a breakpoint deletes its **Condition** and **Log Message**. If you want to keep this information for future debugging, [disable](#disable) the breakpoint instead.
+</Alert>
+
+#### Edit
+
+You can edit the configuration of a breakpoint at any time, including during playtest sessions. If you edit breakpoints during a playtest session, the edits persist even after you finish it. You can also edit a breakpoint that's actively pausing your playtest session, but changes don't apply until the next playtest session.
+
+To edit a breakpoint:
+
+1. Right-click the breakpoint icon and select **Edit Breakpoint**.
+2. In the **Edit Breakpoint** window, configure the breakpoint as desired. You can mix these configurations together to best suit your debugging needs.
+
+	 <table>
+	 <thead>
+	   <tr>
+       <th>Option</th>
+       <th>Description</th>
+	   </tr>
+	 </thead>
+	 <tbody>
+     <tr>
+       <td>**Condition**</td>
+       <td>An optional expression that determines whether the breakpoint activates. If the condition is empty, the breakpoint always activates. If the condition exists, the breakpoint becomes a [conditional breakpoint](#insert) and activates only if the condition is true. For example, if you want the breakpoint to activate only if the variable `var` equals `10`, set the condition to <Typography noWrap>`var == 10`</Typography>.</td>
+     </tr>
+     <tr>
+       <td>**Log&nbsp;Message**</td>
+       <td>An expression that prints to the [Output](./output.md) window when the breakpoint is hit. The format of the log message is the same as that of a `Global.LuaGlobals.print()` statement. For example, set the log message as <Typography noWrap>`"The value of var:", var`</Typography> to output the same message as <Typography noWrap>`print("The value of var:", var)`</Typography>.</td>
+     </tr>
+     <tr>
+       <td>**Continue&nbsp;Execution**</td>
+       <td>Determines whether the breakpoint pauses the script if it activates. This option is disabled by default unless the inserted breakpoint is a [logpoint](#insert).</td>
+     </tr>
+     <tr>
+       <td>**Remove Breakpoint on Hit**</td>
+       <td>If checked, the breakpoint automatically removes itself after the first playtest session, effectively making it a [temporary](#insert) breakpoint.</td>
+     </tr>
+     <tr>
+       <td>**Trigger At**</td>
+       <td>The **context** of a breakpoint determines whether it should activate on the **Client** (client‑side scripts), **Server** (server‑side scripts), or **Edit** (debugging [plugin](./plugins.md) scripts). If you choose **Custom Context**, the window indicates the current trigger contexts.</td>
+     </tr>
+   </tbody>
+   </table>
+
+### Workflow
+
+The typical workflow for breakpoint debugging is as follows:
+
+1. Open the script you'd like to debug and [insert breakpoints](#insert) on the lines of codes that you want to examine.
+1. From Studio's mezzanine, [initiate a playtest](../studio/testing-modes.md#playtesting) to begin debugging.
 
    <img src="../assets/studio/general/Mezzanine-Testing-Mode-Test.png" width="800" alt="Test option in the testing modes dropdown of Studio's mezzanine." />
 
-3. When a script hits a breakpoint, the playtest session pauses. Inspect the [Watch](#watch), [Call Stack](#call-stack), and [Output](#output) windows to help you diagnose and understand the problem.
-4. Insert additional breakpoints on lines of code that haven't executed yet to inspect additional data. [Disable](#disable-breakpoints) or [delete](#delete-breakpoints) breakpoints that you don't need anymore.
-5. In the mezzanine, click **Stop** to end the debugging session.
+1. When the script hits a breakpoint, the playtest session **pauses** unless that breakpoint is [configured](#edit) to continue execution. A yellow arrow over the breakpoint indicates which line of code executes next.
 
-   <img src="../assets/studio/general/Mezzanine-Debug-Stop.png" width="800" alt="Stop button indicated in Studio's mezzanine." />
+   <img alt="Active breakpoint in the debugger showing yellow arrow" src="../assets/studio/debugging/Gutter-Breakpoint-Active.png" width="400" />
 
-Repeat the previous steps until you solve the problem or find its root cause. As you learn the general workflow, you can configure the breakpoints to break only if certain conditions are met, to print a message to the [Output](#output) window, and to run only on the client or server. For more information, see [Breakpoint Configurations](#breakpoint-configurations).
+1. As the script pauses, inspect the [Breakpoints](#breakpoints) window, [Watch](#watch) window, [Call Stack](#call-stack) window, [Output](./output.md) window, and [Script Editor](#script-editor) to find information about variable values and function executions.
 
-### Insert breakpoints
+1. To continue executing code after hitting a breakpoint, click **Resume Scripts** in the mezzanine.
 
-Breakpoints are checkpoints that pause or "break" the execution of your scripts at specific lines. You can use the pauses to inspect and debug your experience, [watch](#watch) variables, and inspect the [call stack](#call-stack). Breakpoints are one of the most effective ways to debug functions, so they're one of the most important debugging tools. You can insert a breakpoint at any line of executable code.
+   <img src="../assets/studio/general/Mezzanine-Debug-Resume-Scripts.png" width="800" alt="Resume Scripts button indicated in Studio's mezzanine" />
 
-To insert a standard breakpoint at a line of code, left-click the margin to the right of its line number. You can also right-click the margin and click **Insert Breakpoint**. The breakpoint appears as a red dot. To disable it, click the dot.
+   You can also execute code one line at a time with the stepping buttons in the mezzanine:
 
-<img alt="Breakpoint in gutter is a red dot" src="../assets/studio/debugging/Gutter-Breakpoint.png" width="320" />
+   <img src="../assets/studio/general/Mezzanine-Debug-Tools.png" width="800" alt="Breakpoint stepping buttons indicated in Studio's mezzanine" />
 
-### Step through code
-
-If you insert a breakpoint at a line in a script, the script pauses before it executes that line. A yellow arrow called the "debugger" indicates which line of code executes next.
-
-<img alt="Active breakpoint in the debugger shows yellow arrow" src="../assets/studio/debugging/Gutter-Breakpoint-Active.png" width="320" />
-
-When the script pauses, execute the following code one line at a time with the buttons on the left side of Studio's mezzanine (the buttons also appear in the top-left corner of the [Call Stack](#call-stack) window). As you step through the code, monitor how your experience changes as the current line executes.
-
-<img src="../assets/studio/general/Mezzanine-Debug-Tools.png" width="800" alt="Breakpoint stepping buttons indicated in Studio's mezzanine" />
-
-<table>
-  <thead>
+   <table>
+   <thead>
     <tr>
       <th>Action</th>
       <th>Shortcut</th>
       <th>Description</th>
     </tr>
-  </thead>
-  <tbody>
+   </thead>
+   <tbody>
     <tr>
       <td>**Step&nbsp;Into**</td>
       <td><kbd>F11</kbd></td>
@@ -71,238 +173,71 @@ When the script pauses, execute the following code one line at a time with the b
       <td><kbd>Shift</kbd><kbd>F11</kbd></td>
       <td>The **Step Out** button moves the debugger out of the current function and to the next line of code after the function call. If the current line isn't inside a function, the debugger moves to the next line.</td>
     </tr>
-  </tbody>
-</table>
+   </tbody>
+   </table>
 
-To continue executing your code after you hit a breakpoint, click **Resume Scripts** in the mezzanine.
+1. When you're finished debugging the current session, click the **Stop** button.
 
-<img src="../assets/studio/general/Mezzanine-Debug-Resume-Scripts.png" width="800" alt="Resume Scripts button indicated in Studio's mezzanine" />
+   <img src="../assets/studio/general/Mezzanine-Debug-Stop.png" width="800" alt="Stop button indicated in Studio's mezzanine." />
 
-### Inspect code
+### Monitoring
 
-When a breakpoint pauses the experience during a playtest, you can inspect the [Watch](#watch) window, [Call Stack](#call-stack) window, [Output](#output) window, and [Script Editor](#script-editor) to find information about variable values and function executions. With this information, you can find the root cause of the problem in your experience.
+Studio includes multiple windows and tools to monitor variable values and function executions while debugging. With this information, you can find the root cause of most problems in your scripts.
 
-#### Watch
+<img src="../assets/studio/general/Toolbar-Debugging-Tools.png" width="800" alt="Breakpoints button indicated in Studio's toolbar" />
 
-The **Watch** window has two tabs: **Variables** and **My Watches**. The **Variables** tab shows information about the current variables in scope, and the **My Watches** tab shows the value of variables or expressions that you define. Both tabs show information before the line executes.
+#### Breakpoints
 
-The **Variables** tab has the following columns:
+The **Breakpoints** window is a unified view that shows all breakpoints within all scripts. To open it, click **Breakpoints** from Studio's **Script** tab toolbar, or navigate to the **Window**&nbsp;⟩ **Debug** menu and toggle on **Breakpoints**.
 
-- **Name** — The declared name of the variable.
-- **Scope** — The scope of the variable: where it can be "seen" and accessed, such as **Local**, **Global**, or **Upvalue**.
-- **Value** — The current value of the variable.
-- **Data Type** — The data type of the variable.
+In the window, the **Script** and **Line** columns always display, and you can toggle on/off other [configuration](#edit) columns through the **&#8942;** menu in the upper‑right corner. Within the **Script** column, right‑click any breakpoint to reveal an options menu to [edit](#edit), [disable/enable](#disable), [delete](#delete), or jump to the breakpoint's line within the script.
 
-The **My Watches** tab has the following columns:
+<img alt="Breakpoints window in Studio" src="../assets/studio/debugging/Breakpoints-Window.png" width="720" />
 
-- **Expression** — The expression that you want to watch.
-- **Value** — The current value of the expression.
-- **Data Type** — The data type of the expression.
+While in a debugging session, the furthest left column shows **(x3)** which indicates the multiple contexts (**Client**, **Server**, **Edit**) for the breakpoint. By expanding any breakpoint's branch, you can then click the icon next to a specific context to [disable/enable](#disable) it for that context, such as disabling a breakpoint only in the **Client** context while keeping it enabled in the **Server** context.
 
-In the **Variables** tab, you can filter the scope of variables by clicking the filter icon. You can also sort the rows by clicking the name of the column to sort by. The watch window provides both expanded and collapsed views of tables.
-
-<img alt="Watch Window with variable values" src="../assets/studio/debugging/Watch-Window-Variables.png" width="474" />
-
-To inspect code in the **Watch** window:
-
-1. If the window isn't open, click the **Watch** button in Studio's **Script** tab toolbar, or select **Watch** from the **Window**&nbsp;⟩ **Debug** menu.
-2. When your playtest session pauses at a breakpoint, think about how you expect the current line to change the values of variables in that script.
-3. As you step through code, watch how the value of variables change in the **Variables** tab. If you want to watch an expression not in the **Variables** tab, open the **My&nbsp;Watches** tab, click an empty row in the **Expression** column, then type the expression into it. If you want to watch a variable in the [Script Editor](#script-editor), double-click the name of the variable, right-click, then click **Add&nbsp;Watch**.
-
-   <img src="../assets/studio/debugging/Watch-Window-My-Watches.png" width="474" />
-
-4. Compare the values of variables and expressions from what you expect and what you see in the Watch window. If there's a difference between how you expect the variables to change and how they actually change, then the variables or the functions interacting with them might be causing problems or bugs.
+<img alt="Breakpoint expanded to show contexts" src="../assets/studio/debugging/Breakpoints-Window-Contexts.png" width="720" />
 
 #### Call Stack
 
-The **Call Stack** window shows which line of code is going to execute next when the debugger reaches a breakpoint. It indicates which line you call a function from and, if you call the function in other functions, the order of function calls and which lines you call the other functions. The top function of the call stack is the last called and first to execute. You can use the call stack to check whether the order of function calls in your scripts matches your mental model of the function calls.
+The **Call Stack** window, accessible from Studio's **Script** tab toolbar or the **Window**&nbsp;⟩ **Debug** menu, shows which line of code is going to execute next when the debugger reaches a breakpoint. If you call functions from inside other functions, it indicates which lines those functions were called from, letting you confirm whether the actual call flow matches the expected flow.
 
-<img src="../assets/studio/debugging/Call-Stack.png" width="474" alt="Call Stack in Studio" />
+<img src="../assets/studio/debugging/Call-Stack-Flow-Script.png" width="640" alt="Call stack flow in a script" />
 
-If you have multiple breakpoints in different scripts, they might pause the playtest session at the same time. You can jump to the breakpoints by clicking the arrow next to the name of the script in the window. If you click **Resume**, then you step over all the breakpoints that paused at the same time.
+<img src="../assets/studio/debugging/Call-Stack-Flow-Window.png" width="720" alt="Call stack flow in the Call Stack window" />
 
-<img src="../assets/studio/debugging/Call-Stack-Multiple-Breakpoints.png" width="474" alt="Call Stack with multiple breakpoints" />
+As the script pauses at breakpoints, use the stepping buttons in the mezzanine to step into, over, or out of a function/line as outlined in [workflow](#workflow).
 
-To inspect code in the **Call Stack** window during a debugging session:
+<img src="../assets/studio/general/Mezzanine-Debug-Tools.png" width="800" alt="Breakpoint stepping buttons indicated in Studio's mezzanine" />
 
-1. If the window isn't open, click the **Call Stack** button in Studio's **Script** tab toolbar, or select **Call&nbsp;Stack** from the **Window**&nbsp;⟩ **Debug** menu.
-2. When your experience pauses at a breakpoint, think about how you expect the order of function calls to be in that script.
+#### Watch
 
-   <img alt="Script Editor with two functions and one breakpoint" src="../assets/studio/debugging/Script-Editor-Breakpoint-Two-Functions.png" width="430" />
+The **Watch** window, accessible from Studio's **Script** tab toolbar or the **Window**&nbsp;⟩ **Debug** menu, lets you actively watch variable and expression values as you step through breakpoints.
 
-3. The call stack shows the order of function calls. If the breakpoint is inside a function, the call stack shows which function calls that function, if any. It also shows the name and line number of each function. Click the row for a function to jump to it.
+<Tabs>
+<TabItem label="Variables">
+The **Variables** tab shows information about the current variables in [scope](../luau/scope.md), filterable by clicking the **All&nbsp;Scopes** button in the window's upper bar. Expanding a branch shows the members of that variable or instance and their values. You can also watch any variable by double‑click highlighting it in the [Script&nbsp;Editor](./script-editor.md), right‑clicking, and selecting **Add&nbsp;Watch** from the popup menu.
 
-   <img alt="Click in Call Stack to jump to line" src="../assets/studio/debugging/Call-Stack-Jump.png" width="474" />
+<img alt="Variables to watch inside a script" src="../assets/studio/debugging/Watch-Variables-Script.png" width="760" />
 
-4. Compare the order of function calls that you thought of in step 2 and the actual order from step 3. If there are any differences, then there's a difference between how you expect the code to behave and how it actually behaves, thereby causing potential problems and bugs.
+<img src="../assets/studio/debugging/Watch-Variables-Window.png" width="720" alt="Variables information in the Watch window" />
 
-#### Output
+</TabItem>
+<TabItem label="My Watches">
+The **My Watches** tab shows the value of variables or expressions that you define. To watch a specific expression, click an empty row in the **Expression** column and type the expression into it. This allows you to check any expression value without monitoring individual variables in the **Variables** tab or adding `Global.LuaGlobals.print()` statements in the script to check expression values.
 
-The [Output](./output.md) panel, accessible from Studio's **Window** menu or **Script** tab toolbar, displays errors captured from running scripts, messages from Roblox Engine, log messages, messages from calls to `print()`, and errors from calls to `warn()`.
+<img alt="Variables to watch inside a script" src="../assets/studio/debugging/Watch-Expressions-Script.png" width="760" />
+
+<img src="../assets/studio/debugging/Watch-Expressions-Window.png" width="720" alt="Expression entered into Watch window for analysis" />
+
+</TabItem>
+</Tabs>
 
 #### Script Editor
 
-The debugger is integrated with the [Script Editor](../studio/script-editor.md). When your experience pauses at a breakpoint in a script, you can hover your mouse over the name of a variable to see its value. For example, you can see the value of a table that you pass as an argument in a function call.
+The debugger is integrated with the [Script Editor](../studio/script-editor.md). When your experience pauses at a breakpoint in a script, you can hover your mouse over the name of a variable to see its value. For example, you can see the composition of a table and its contained keys/values.
 
-<img alt="Mouseover a variable in Script Editor to show value" src="../assets/studio/debugging/Script-Editor-Mouseover-Table.png" width="700" />
-
-## Breakpoint configurations
-
-You can configure breakpoints to break only if certain conditions are met, to print a message to the [Output](#output) window, and to run only on the client or server. You can also mix these configurations together to best suit your debugging needs.
-
-### Edit breakpoints
-
-You can edit the configuration of a breakpoint at any time, including during playtest sessions. If you edit breakpoints during a playtest session, the edits persist even after you finish it. You can also edit a breakpoint that's actively pausing your playtest session, but changes don't apply until the next playtest session.
-
-To edit the configuration of a breakpoint:
-
-1. Right-click the breakpoint, then click **Edit Breakpoint**.
-
-   <img alt="Right click to edit a breakpoint in Studio" src="../assets/studio/debugging/Gutter-Right-Click-Edit-Breakpoint.png" width="320" />
-
-2. In the **Edit Breakpoint** window, configure the breakpoint as you want.
-
-   <img alt="Edit Breakpoint window in Studio" src="../assets/studio/debugging/Edit-Breakpoint-Window.png" width="472" />
-
-For each breakpoint, you can set its **Condition**, **Log Message**, **Continue Execution**, and **Context**.
-
-The **Condition** is the optional expression that determines whether the breakpoint activates. If the condition is empty, the breakpoint always activates. If the condition exists, then the breakpoint activates only if the condition is true. For example, if you want the breakpoint to activate only if the variable `n` equals `42`, then set the condition as `n == 42`. Conditions are useful for debugging how functions execute when certain variables have certain values or if you want to break only on certain executions in a loop.
-
-The **Log Message** is the expression that prints to the [Output](#output) window when the condition is true. The format of the log message is the same as the argument for a `print()` statement. For example, set the log message as `"The value of n:", n` to print the same message as `print("The value of n:", n)`. You can add and remove log messages without having to stop the execution, unlike print statements.
-
-The **Continue Execution** option determines whether the breakpoint pauses the script if it activates. It's useful if you want to log values of variables or expressions without stopping execution. This option is disabled by default.
-
-The **Context** of a breakpoint determines whether the breakpoint should activate on the **Client** (client‑side scripts), **Server** (server‑side scripts), or **Edit** (debugging plugins). If you choose **Custom Context**, the window indicates the current context.
-
-<img alt="Edit Breakpoint Window shows Custom Context" src="../assets/studio/debugging/Edit-Breakpoint-Window-Custom-Context.png" width="472" />
-
-#### Conditional breakpoints and logpoints
-
-Studio offers named variations of breakpoints to make breakpoint insertion faster. To insert a named variation, right-click the margin to the right of its line number, then click the variant you want to insert.
-
-<img alt="Right click to insert a breakpoint" src="../assets/studio/debugging/Gutter-Right-Click-Insert-Breakpoint.png" width="320" />
-
-A **conditional breakpoint** is a breakpoint with a **Condition** and **Continued Execution** disabled. Conditional breakpoints pause your script only if a condition is true, so they're useful for debugging how functions execute when certain variables have certain values. Conditional breakpoints use the values of the variables before the line executes. When you insert a conditional breakpoint, your cursor focuses on the **Condition** option for you to set quickly.
-
-A **Logpoint** is a breakpoint with a **Log Message** and **Continued Execution** enabled. Logpoints log messages to the [Output](#output) window without pausing your scripts, so they're useful for debugging variable values. Logpoints use the values of the variables before the line executes. When you insert a logpoint, your cursor focuses on the **Log&nbsp;Message** for you to set it quickly.
-
-### Disable breakpoints
-
-There are several ways to disable and reenable a breakpoint:
-
-- Click the breakpoint's icon.
-- Edit the breakpoint and toggle its **Enabled** checkbox.
-- Right-click the breakpoint icon and click **Disable Breakpoint** or **Enable Breakpoint**.
-
-### Delete breakpoints
-
-To delete a breakpoint, middle-click its icon. You can also right-click its icon and click **Delete Breakpoint**.
-
-<Alert severity="error">
-Deleting a breakpoint deletes its **Condition** and **Log Message**. If you want to keep this information for future debugging, disable the breakpoint instead.
-</Alert>
-
-### Breakpoints window
-
-The **Breakpoints** window shows all the breakpoints in your experience. To open it, access Studio's **Window**&nbsp;⟩ **Debug** menu and toggle on **Breakpoints**.
-
-<img alt="Breakpoints window in Studio" src="../assets/studio/debugging/Breakpoints-Window.png" width="443" />
-
-The **Breakpoints** window has the following columns: **Script**, **Line**, **Source&nbsp;Line**, **Condition**, **Log&nbsp;Message**, and **Continue&nbsp;Execution**. The **Script** and **Line** columns always display, but you can toggle the other columns by clicking the three dots in the top-right corner of the window.
-
-In the furthest left column, the **(x3)** label indicates the number of breakpoints on the same line of code, and the icon indicates the breakpoint configuration. The breakpoints on the same line share the same **Condition**, **Log&nbsp;Message**, and **Continue&nbsp;Execution** but vary in context. You can edit the configuration of a breakpoint in the **Breakpoints** window.
-
-<img alt="Edit the Condition of a Breakpoint in the Breakpoints Window" src="../assets/studio/debugging/Breakpoints-Window-Edit-Condition.png" width="443" />
-
-You can enable and disable breakpoints by clicking its breakpoint icon in the **Enabled** column. You can also click the following buttons to enable, disable, and delete some or all breakpoints.
-
-<table>
-  <thead>
-    <tr>
-      <th>Button</th>
-      <th>Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th><img alt="Button to disable all breakpoints" src="../assets/studio/debugging/Icon-Disable-All-Breakpoints.png" width="16" /></th>
-      <td>Disable all breakpoints. If any breakpoints are disabled, enable them all.</td>
-    </tr>
-        <tr>
-      <th><img alt="Button to delete all breakpoints" src="../assets/studio/debugging/Icon-Delete-All-Breakpoints.png" width="16" /></th>
-      <td>Delete all breakpoints.</td>
-    </tr>
-  </tbody>
-</table>
-
-### Breakpoint icons
-
-The icon of a breakpoint depends on whether it's enabled, has a condition, and has a log message. If a breakpoint has a log message, then it appears as a logpoint regardless of whether it has a condition.
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Icon</th>
-      <th>Enabled</th>
-      <th>Condition</th>
-      <th>Log Message</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowspan={2}>Breakpoint</td>
-      <td>
-        <img src="../assets/studio/debugging/Icon-Breakpoint-Enabled.png" width="16" />
-      </td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <td>
-        <img src="../assets/studio/debugging/Icon-Breakpoint-Disabled.png" width="16" />
-      </td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <td rowspan={2}>Conditional Breakpoint</td>
-      <td>
-        <img src="../assets/studio/debugging/Icon-Conditional-Breakpoint-Enabled.png" width="16" />
-      </td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <td>
-        <img src="../assets/studio/debugging/Icon-Conditional-Breakpoint-Disabled.png" width="16" />
-      </td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <td rowspan={2}>Logpoint</td>
-      <td>
-        <img src="../assets/studio/debugging/Icon-Logpoint-Enabled.png" width="16" />
-      </td>
-      <td>Yes</td>
-      <td>Maybe</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <td>
-      <img src="../assets/studio/debugging/Icon-Logpoint-Disabled.png" width="16" />
-      </td>
-      <td>No</td>
-      <td>Maybe</td>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
+<img alt="Mouseover a variable in Script Editor to show value" src="../assets/studio/debugging/Script-Editor-Mouseover-Table.png" width="640" />
 
 ## Additional debugging tools
 

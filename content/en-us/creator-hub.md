@@ -6,7 +6,7 @@ hideInPageNavigation: true
 
 export const sections = [
   {
-    description: "You often use Creator Hub and Studio together when you're creating, like managin your creations, tracking analytics, requesting monetization payouts, and a host of other creator actions, all on the web.",
+    description: "You'll often use Creator Hub and Studio together when you're creating, like managing your creations, tracking analytics, requesting monetization payouts, and a host of other creator actions, all on the web.",
     buttons: [
       {
         text: "Go to dashboard", href: "https://create.roblox.com/dashboard/creations"
@@ -26,13 +26,13 @@ export const sections = [
         description: "Access a variety of analytics features to help you chart your creations' growth, track user behavior and retention, and find opportunities for optimization. You can use analytics to understand what actions you can take to grow your experience.",
         image: "./assets/analytics/overview/step3.png",
         links: [
-          { text: "Analytics dashboard", href: "https://create.roblox.com/dashboard/analytics" },
-          { text: "Docs", href: "./production/analytics" },
+          { text: "Guides", href: "./production/analytics" },
+					{ text: "Analytics dashboard", href: "https://create.roblox.com/dashboard/analytics" },
         ]
       },
       {
         title: "Monetize your creations and track your finances",
-        description: "You can request a developer exchange payment, track Creator Store transactions, create ad campaigns, sponsored ads, and more.",
+        description: "You can request a developer exchange payment, track Creator Store transactions, create ad campaigns, sponsor ads, and more.",
         image: "./assets/promotion/search-ads/Ad-Set-Search.png",
         links: [
           { text: "Developer exchange", href: "https://create.roblox.com/dashboard/devex" },
@@ -43,10 +43,10 @@ export const sections = [
       },
       {
         title: "Access other properties like the Creator Store, Forum, and the Creator Roadmap",
-        description: "The Creator Hub gives you quick access to other creator-related properties such as the Creator Store, where you can publish, share, and discover assets Forum, where you can interact with the rest of the community, and Roadmap, where you can learn new features that we plan on shipping.",
+        description: "The Creator Hub gives you quick access to other creator-related properties such as the Creator Store where you can publish, share, and discover assets. In the Forum, you can interact with the rest of the community. Finally, the Creator Roadmap outlines new features that we plan on shipping.",
         image: "./assets/landing/store.jpg",
         links: [
-          { text: "Store", href: "https://create.roblox.com/store" },
+          { text: "Creator Store", href: "https://create.roblox.com/store" },
           { text: "Forum", href: "https://devforum.roblox.com" },
           { text: "Roadmap", href: "https://create.roblox.com/roadmap" }
         ]

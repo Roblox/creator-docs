@@ -1,239 +1,216 @@
 ---
 title: In-experience tools
-description: Create in-experience tools for your users.
+description: Create in-experience tools for your players.
 ---
 
-In-experience `Class.Tool|Tools` are interactive tools that users can equip in sessions, such as swords, rocket launchers, and magic wands. You can create customized in-experience tools, put them in your experience hierarchy, and write scripts to implement them for your users.
+In-experience `Class.Tool|Tools` are interactive tools that players can equip in sessions, such as weapons, magic wands, flashlights, keys, and more. You can design tools and include them in a player's inventory or place them around the world as pickups.
 
-## Create an in-Experience Tool
+## Create an in-experience tool
 
-For the first step of creating any in-experience tool, you need to [create a tool object](#create-the-tool-object) to contain all elements that make up the tool. You can then add other instances to the tool object including [parts and meshes](#add-parts-or-meshes), sound effects, and scripts which provide functionality. You can also set up a [tool handle](#set-the-tool-handle), [adjust the tool grip](#adjust-the-tool-grip-orientation), and [customize your tool icon](#customize-the-tool-icon) to improve the user experience.
+The `Class.Tool` object is the basis of any tool in Roblox, so you'll need to create one. It's easier to preview how a tool looks by designing it in the `Class.Workspace`, and later you can make it an [inventory](#player-inventory) item or an [earned/purchased](#earnedpurchased-tool) item.
 
-### Create the tool object
+1. In the [Explorer](../studio/explorer.md) hierarchy, hover over `Class.Workspace`, click the **&CirclePlus;** button, and insert a `Class.Tool`.
 
-You can create a new tool object with the following steps:
+   <img src="../assets/studio/explorer/Workspace-Tool.png" width="320" alt="Tool object created in the workspace" />
 
-1. In the **Explorer** window, hover over **Workspace** and click the **&CirclePlus;** button to show the list of objects.
+2. With the new `Class.Tool` selected, access the [Properties](../studio/properties.md) window and customize how the tool will appear in the player's inventory:
 
-2. Select **Tool** under the **Interaction** category.
+   - `Class.Tool.TextureId|TextureId` — Specifies the image asset ID for the tool in a player's inventory.
+   - `Class.Tool.ToolTip|ToolTip` — The on-hover tooltip name for the tool in a player's inventory.
 
-   <img src="../assets/players/in-experience-tools/Create-New-Tool.png" width="45%" />
+   <img src="../assets/players/in-experience-tools/Tool-Inventory.jpg" width="800" />
 
-### Add parts or meshes
+3. Decide whether the tool will be a [physical tool in the 3D environment](#physical-tool) (most common) or a [non‑physical](#non-physical-tool) tool that simply occupies a player's inventory and responds to their input.
 
-After creating the tool object, you need to add `Class.Part|Parts` or `Class.MeshPart|MeshParts` to the tool model or [create the tool as an inventory item](#create-tools-as-inventory-items) without parts and meshes. Like other models, in-experience tools can consist of multiple `Class.Part|Parts`, so you need to connect all parts of the tool together using the `Class.Weld` constraints.
+### Physical tool
 
-<Alert severity="warning">
-When constructing tools, make sure tool parts are not anchored, otherwise users might get stuck in place when equipping it.
-</Alert>
+After creating the `Class.Tool` instance for a physical tool, you'll need to [add&nbsp;parts/meshes](#add-partsmeshes) to compose its appearance in the 3D world. You'll also need to include a [handle](#set-the-handle) which player characters [grip](#adjust-the-grip-positionorientation).
 
-If you want to create a tool without adding parts or meshes, you can [create it as an inventory item](#create-tools-as-inventory-items).
+#### Add parts/meshes
 
-### Set the tool handle
+In-experience tools can consist of one or more `Class.Part|Parts` and/or `Class.MeshPart|MeshParts`. If you construct the tool of multiple pieces, remember to connect them all together using `Class.WeldConstraint|WeldConstraints` or other [mechanical constraints](../physics/mechanical-constraints.md) so that the tool stays intact as a unit while the player carries it around.
 
-To enable users to carry tools around, you need to set a `Class.Part` and name it `Handle` for attaching to the user's hand. The following example shows a magic wand with three parts: a glowing tip, the main body, and a red handle. When a user equips the wand, they hold it at the `Class.Part` named `Handle`.
-
-<img src="../assets/players/in-experience-tools/Tool-Wand-Handle-Focus.jpeg" width="45%" />
-
-Make sure to have only one `Class.Part` named `Handle`. If you name multiple `Class.Part|Parts` as `Handle`, the tool randomly picks one of them as the hand attachment point that might cause issues such as users holding blades of swords instead of hilts.
+<img src="../assets/studio/general/Toolbar-Constraint-Pickers.png" width="800" alt="Constraint pickers indicated in Studio's toolbar" />
 
 <Alert severity="warning">
-The `Handle` must be a **direct child** of the tool object. Do not nest it inside a model or folder within the object.
+When constructing tools, make sure that no parts are `Class.BasePart.Anchored|Anchored`. If you anchor the tool in 3D space, player characters will get stuck in place when they pick up or equip the tool.
+
+If you want to place collectible tools as pickups around the 3D world and anchor them in specific places, such as floating slightly above the ground, you can anchor them but you'll need to add a `Class.Script` to each tool which unanchors its parts upon collection. See [collectible tools](#collectible-tool) for details.
 </Alert>
 
-### Adjust the tool grip orientation
+#### Set the handle
 
-If your tool's grip orientation is incorrect, such as dragging on the ground or facing backwards, you can fix it by adjusting **Grip** properties under the **Appearance** category in the **Properties** window.
+To enable players to carry tools around, one part of the tool needs to be named `Handle`. This is where the tool will attach to the character model's `RightHand` part (R15) or <Typography noWrap>`Right Arm`</Typography> part (R6).
 
-<img src="../assets/players/in-experience-tools/Tool-Grip-Properties.png" width="45%" />
+If the tool is composed of just one `Class.MeshPart`, simply name that part `Handle`. Otherwise, you can include a separate part named `Handle` as a **direct child** of the parent `Class.Tool` and then attach it to another part with a `Class.WeldConstraint` or [mechanical constraint](../physics/mechanical-constraints.md).
 
-Since the ideal grip orientation for every tool is different, you need to experiment with changing the values next to the **GripForward**, **GripRight**, and **GripUp** properties until your tool's grip looks correct. The following example shows possible incorrect and correct grips for a magic wand:
+The following example shows a tool with three instances: the `Handle` mesh, a `Class.RopeConstraint`, and a lantern mesh which hangs from the rope.
 
-<GridContainer numColumns="3">
-  <figure>
-    <img src="../assets/players/in-experience-tools/Tool-Grip-Dragging.jpeg" />
-    <figcaption>Tool dragging on ground</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/players/in-experience-tools/Tool-Grip-Backwards.jpeg" />
-    <figcaption>Tool facing backwards</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/players/in-experience-tools/Tool-Grip-Correct.jpeg" />
-    <figcaption>Tool oriented correctly</figcaption>
-  </figure>
-</GridContainer>
+<img src="../assets/players/in-experience-tools/Tool-Handle-Example.jpg" width="720" />
 
-You can also enable user characters to offset tools from their hand with the **GripPos** property. This can be useful when making a tool that should appear to rest on the user's shoulder.
+<Alert severity="warning">
+Make sure to include only **one** part named `Handle`. If you include multiple parts named `Handle`, one will be randomly chosen as the attachment point for the character's hand, potentially causing issues such as the character holding a sword's blade instead of its hilt.
+</Alert>
+
+#### Adjust the grip position/orientation
+
+The tool's `Class.Tool.Grip|Grip` property is a `Datatype.CFrame` which specifies how the tool is positioned and oriented relative to the character holding it.
+
+<img src="../assets/studio/properties/Tool-Grip.png" width="320" />
+
+Since the ideal grip position/orientation is different for every tool, you'll need to experiment with the values until your tool's grip looks correct. The following example shows possible incorrect and correct `Class.Tool.Grip|Grip` settings for the hanging lantern:
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../assets/players/in-experience-tools/Tool-Grip-Offset-Default.jpeg" />
-    <figcaption>Default offset (0,0,0)</figcaption>
+    <img src="../assets/players/in-experience-tools/Tool-Grip-Incorrect.jpg" />
+    <figcaption>Lantern dragging on ground with `Class.Tool.Grip|Grip.Position` of <Typography noWrap>`(0, -2, 0)`</Typography> and `Class.Tool.Grip|Grip.Orientation` of <Typography noWrap>`(-90, 0, 0)`</Typography></figcaption>
   </figure>
   <figure>
-    <img src="../assets/players/in-experience-tools/Tool-Grip-Offset-Shoulder.jpeg" />
-    <figcaption>Tool offset to shoulder</figcaption>
+    <img src="../assets/players/in-experience-tools/Tool-Grip-Correct.jpg" />
+    <figcaption>Lantern in front of character with `Class.Tool.Grip|Grip.Position` of <Typography noWrap>`(0, -1.5, 0)`</Typography> and `Class.Tool.Grip|Grip.Orientation` of <Typography noWrap>`(25, 0, 0)`</Typography></figcaption>
   </figure>
 </GridContainer>
 
-### Customize the tool icon
+### Non-physical tool
 
-Tools that a user owns are stored in their `Class.Backpack`. Users can view the icon of each tool in their backpacks on an **action bar**:
+A non-physical `Class.Tool` simply occupies a player's [inventory](#player-inventory) and responds to their input. For example, a roleplaying experience might feature a series of magical spells that player's can "cast" through their inventory.
 
-<img src="../assets/players/in-experience-tools/Tool-Action-Bar.jpeg" width="90%" />
+<img src="../assets/players/in-experience-tools/Tool-Inventory-Non-Physical.jpg" width="800" />
 
-In the tool's **Properties** window, use the following properties to customize the tool's appearance in the action bar:
+Non-physical tools don't require any 3D composition and do not utilize a `Handle` part, so you should **disable** the tool's `Class.Tool.RequiresHandle|RequiresHandle` property:
 
-- **TextureID** — The tool icon. Set the image ID for this property the same way as decals and image buttons.
-- **ToolTip** — The on-hover tooltip name.
+<img src="../assets/studio/properties/Tool-RequiresHandle.png" width="320" />
 
-### Enable and disable users to drop tools
+## Add tools to an experience
 
-By default, a user can drop a tool by pressing the **Backspace** key on Windows or **delete** on Mac. You can disable this option by setting the **CanBeDropped** property of the tool to `false`. If **CanBeDropped** is `false`, pressing **Backspace** or **delete** returns the tool to the user's backpack.
+Once you finish [creating](#create-an-in-experience-tool) your in-experience tool, you'll need to place it in the correct area of the [Explorer](../studio/explorer.md) hierarchy. Where you place the tool in the hierarchy depends on its intended usage.
 
-### Create tools as inventory items
+### Player inventory
 
-You can also make an in-experience tool without parts or meshes as an inventory item that waits for user input, such as a magic spell that user characters can click others or touch the screen to cast it. Inventory item tools don't require handles, so you need to uncheck the **RequiresHandle** property in the tool's **Properties** window.
+If you want all players to start out with a tool in their inventory, put it inside the `Class.StarterPack` container. When any player spawns, the system copies the tool to their `Class.Backpack`. From there, the player can equip the tool by clicking its inventory icon or by pressing the associated hotkey such as <kbd>1</kbd> or <kbd>2</kbd>.
 
-<img src="../assets/players/in-experience-tools/Tool-RequiresHandle.png" width="45%" />
+<img src="../assets/studio/explorer/StarterPack-Tools.png" width="320" />
 
-## Add tools to your experience
+Note that tools are copied to the player's inventory (`Class.Backpack`) in the order they were added to `Class.StarterPack`. For a more controlled ordering, you can add a `Class.LocalScript` to `Class.StarterPack` which temporarily moves the tools to `Class.ReplicatedStorage` then re‑parents them to `Class.Backpack` in the order specified in the `order` table.
 
-Once you finish setting up your in-experience tool, you need to place it in the proper area of your experience's object hierarchy. Where you place the tool within the experience's object hierarchy depends on it's intended use.
+```lua title="Reorder Inventory"
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-### Default starting tool
+local order = {"WaterSpell", "FireSpell", "AirSpell", "EarthSpell"}
+local backpack = script.Parent
 
-If you want all users to start out with a tool in their inventory, put it inside the **StarterPack** folder. When any user spawns, the system copies the tool to their backpack.
+for _, item in backpack:GetChildren() do
+	if item:IsA("Tool") then
+		item.Parent = ReplicatedStorage
+	end
+end
 
-<img src="../assets/players/in-experience-tools/Tool-StarterPack.png" width="45%" />
+-- Re-parent tools to backpack in the specified order
+for i = 1, #order do
+	local tool = ReplicatedStorage:FindFirstChild(order[i])
+	if tool then
+		tool.Parent = backpack
+	end
+end
+```
 
 ### Collectible tool
 
-If you want to allow users to collect tools as they move, you can place the tools in the **Workspace** in the **Explorer** hierarchy. For example, you might want to place a super rocket launcher in a hard-to-reach area of your experience world.
+If you want to allow players to collect physical tools as they explore the 3D world, place the tools in the `Class.Workspace` just like normal 3D objects. Collected tools will be automatically equipped and added to the player's inventory (you do not need to add extra collision detection for characters to grab the tool).
 
-<img src="../assets/players/in-experience-tools/Tool-Workspace.png" width="45%" />
+As noted in the [add parts/meshes](#add-partsmeshes) section, tool parts should not typically be `Class.BasePart.Anchored|Anchored`, since player characters will get stuck in place when they pick up or equip an anchored tool. However, if you want to anchor a collectible tool to a specific place in the 3D world, such as floating slightly above the ground, you can add the following `Class.Script` to the tool to unanchor its parts upon collection.
 
-### Earned and purchased tool
-
-If you want to set a tool as awards when a user does something special or offer it for sale in an in-experience store, put the tool inside **ServerStorage** in the **Explorer** hierarchy, which can clone the tool to the user's backpack at the proper time.
-
-<img src="../assets/players/in-experience-tools/Tool-ServerStorage.png" width="45%" />
-
-## Add tools effects
-
-After adding your tools to your experience, you can add scripts to enable users to use tools to do special effects.
-
-### Tool-specific events
-
-You can use the following four tool-specific conditions indicating the state of the tool and the user's input with it in your tool script:
-
-- `Class.Tool.Equipped|Tool:Equipped()`: Occurs when the user selects the tool from their backpack.
-
-- `Class.Tool.Unequipped|Tool:Unequipped()`: Occurs when the user drops the tool or switches tools.
-
-- `Class.Tool.Activated|Tool:Activated()`: Occurs when the user starts activating the tool (clicks, taps, or presses **A** on a gamepad).
-
-- `Class.Tool.Deactivated|Tool:Deactivated()`: Occurs when the user stops the activation input (releases the button or touch).
-
-Though you might not need all four conditions when designing a tool, you can use the following code script as a basic tool script template:
-
-```lua
+```lua title="Unanchor Tool on Equip/Collect"
 local tool = script.Parent
+
+tool.Equipped:Connect(function()
+	for _, part in tool:GetDescendants() do
+		if part:IsA("BasePart") and part.Anchored then
+			part.Anchored = false
+		end
+	end
+end)
+```
+
+### Earned/purchased tool
+
+If you want to set tools as awards for when players accomplish tasks, or offer tools for sale in an in‑experience store, put those tools inside `Class.ReplicatedStorage`. From there, you can `Class.Instance:Clone()|Clone()` a tool to the player's `Class.Backpack` at the proper time.
+
+<img src="../assets/studio/explorer/ReplicatedStorage-Tools.png" width="320" />
+
+```lua title="Clone Tool to Player's Inventory"
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local player = Players.LocalPlayer
+local backpack = player:WaitForChild("Backpack")
+
+-- Create a clone of the tool
+local tool = ReplicatedStorage:FindFirstChild("WaterSpell")
+if tool then
+	local clone = tool:Clone()
+	clone.Parent = backpack  -- Adds clone to the player's backpack
+end
+```
+
+## Implement tool effects
+
+After [adding tools to your experience](#add-tools-to-an-experience), you can implement scripts to enable players to use their tools and perform the desired actions. The following tool‑specific events indicate the state of the tool and the player's input with it.
+
+- `Class.Tool.Equipped|Equipped()` — Fires when the player selects the tool from their backpack.
+- `Class.Tool.Unequipped|Unequipped()` — Fires when the player switches tools or drops the tool.
+- `Class.Tool.Activated|Activated()` — Fires when the player starts activating the tool (clicks, taps, or presses the back‑right trigger on a gamepad).
+- `Class.Tool.Deactivated|Deactivated()` — Fires when the player stops the activation input (releases the button or touch).
+
+```lua title="Tool Events Template"
+local tool = script.Parent
+
 local function onEquip()
-	print("The tool is now equipped.")
+	print(tool.Name, "tool equipped")
 end
 local function onUnequip()
-	print("The tool is now unequipped.")
+	print(tool.Name, "tool unequipped")
 end
 local function onActivate()
-	print("The tool is now activated.")
+	print(tool.Name, "tool activated")
 end
 local function onDeactivate()
-	print("The tool is now deactivated.")
+	print(tool.Name, "tool deactivated")
 end
+
 tool.Equipped:Connect(onEquip)
 tool.Unequipped:Connect(onUnequip)
 tool.Activated:Connect(onActivate)
 tool.Deactivated:Connect(onDeactivate)
 ```
 
-This code sample assumes that the script is a first-level child inside the tool object. If the script is elsewhere, adjust the path on line 1 (the value of `tool`) to point to the core tool object.
+Tool events only fire in client‑side `Class.LocalScript|LocalScripts` because only the player's device knows when [input](../input/index.md) happens. As a result, most tools require both a `Class.LocalScript` and a server‑side `Class.Script` where each handles certain aspects of the tool's behavior and a `Class.RemoteEvent` passes information from the client to the server (see [remote events and callbacks](../scripting/events/remote.md) for more information).
 
-### Add a basic script
-
-The following example shows steps for adding a `Class.Script` on the server that enables users to equip a magic wand that can switch day and night by clicking on the screen:
-
-1. In the **Explorer** window, hover over the tool object and click the **&CirclePlus;** button to insert a `Class.Script`.
-
-2. Copy the following code and paste it into your `Class.Script`.
-
-   ```lua
-   local Lighting = game:GetService("Lighting")
-
-   local tool = script.Parent
-   local function onActivate()
-   	if Lighting.ClockTime >= 8 and Lighting.ClockTime < 16 then
-   		Lighting.ClockTime = 20
-   	else
-   		Lighting.ClockTime = 8
-   	end
-   end
-   tool.Activated:Connect(onActivate)
-   ```
-
-3. Playtest your experience by picking up the tool and then clicking anywhere on the screen of your experience to switch between day and night:
-
-   <GridContainer numColumns="2">
-     <img src="../assets/players/in-experience-tools/Tool-Time-Wand-Day.jpeg" />
-     <img src="../assets/players/in-experience-tools/Tool-Time-Wand-Night.jpeg" />
-   </GridContainer>
-
-### Different types of scripts for tools implementation
-
-Some tools only need a `Class.Script` on the server to implement, such as the previous example, but most tools require both a `Class.Script` on the server and a `Class.LocalScript` on the client, where each takes care of certain aspects of the tool's behavior.
-
-Before adding your scripts, make sure you understand the core difference between each script type:
-
-- **Script** manages changes within the overall experience world visible to all users, such as unlocking a door and shooting an arrow.
-- **LocalScript** manages things that happen only on the user's device, such as detecting the location of where they touch or click the screen.
-
-Here are some example tools and their behaviors managed by either a local script or a server script:
+As follows are example tools and their behaviors managed by either a `Class.LocalScript` or a `Class.Script`:
 
 <table>
   <thead>
     <tr>
       <td>Tool</td>
-      <td>Local script</td>
-      <td>Server script</td>
+      <td>`Class.LocalScript`</td>
+      <td>`Class.Script`</td>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><b>Creator's Wand</b></td>
-      <td>Detects where the player touches or clicks on the screen.</td>
+      <td>**Creator's Wand**</td>
+      <td>Detects where the player activates the tool (`Class.Tool.Activated|Activated()`).</td>
       <td>Creates a new part at the location within the game world where the player touched or clicked.</td>
     </tr>
     <tr>
-      <td><b>Invisibility Cloak</b></td>
-      <td></td>
-      <td>Temporarily makes the player invisible to all other users, while the cloak is equipped.</td>
+      <td>**Invisibility Cloak**</td>
+      <td>Detects when the player equips the tool (`Class.Tool.Equipped|Equipped()`) or unequips the tool (`Class.Tool.Unequipped|Unequipped()`).</td>
+      <td>Makes the player invisible to all other players while the cloak is equipped and restores the player to full visibility when the cloak is unequipped.</td>
     </tr>
     <tr>
-      <td><b>Mega-Bow</b></td>
-      <td>Detects how long the player activates the tool (time between activation and deactivation).</td>
+      <td>**Mega‑Bow**</td>
+      <td>Detects how long the player activates the tool (time between `Class.Tool.Activated|Activated()` and `Class.Tool.Deactivated|Deactivated()`).</td>
       <td>Shoots a magical arrow with greater or lesser power, depending on the detected activation time.</td>
     </tr>
   </tbody>
 </table>
-
-For more information on the different script types, see [Scripts](../scripting/index.md).
-
-#### Troubleshooting tips
-
-A tool might work fine in Studio but not in a live Roblox experience. If this occurs, use the following tips for troubleshooting:
-
-- `Class.LocalScript|LocalScripts` and `Class.Script|Scripts` can't directly listen to each other, so you need to add a `Class.RemoteEvent` to send messages between the two scripts.
-- Make sure that each `Class.Script` and `Class.LocalScript` only takes care of exactly what it's supposed to do.
-
-For more information on `Class.RemoteEvent|RemoteEvents`, see [Remote Events and Callbacks](../scripting/events/remote.md).

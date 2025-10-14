@@ -5,13 +5,13 @@ description: In-experience Leaderboards let you display user information to all 
 
 Roblox has a built-in **leaderboard system** that lets you display user information like scores, currency, or the fastest time in a race.
 
-<img alt="Leaderboard Screen" src="../assets/players/leaderboard/Leaderboard-Screen-1.jpeg" width="100%" />
+<img alt="Leaderboard Screen" src="../assets/players/leaderboard/Leaderboard-On-Screen.jpg" width="100%" />
 
 ## Set up the leaderboard
 
 To set up the leaderboard and add players when they enter the experience:
 
-1. Create a new `Class.Script` within `Class.ServerScriptService` and name it **Leaderboard**.
+1. Create a new `Class.Script` within `Class.ServerScriptService` and name it `Leaderboard`.
 
    <img alt="Leaderboard Insert Script" src="../assets/players/leaderboard/Leaderboards-Insert-Script.png" width="320" />
 
@@ -24,7 +24,6 @@ To set up the leaderboard and add players when they enter the experience:
 
    end
 
-   -- Connect the "leaderboardSetup()" function to the "PlayerAdded" event
    Players.PlayerAdded:Connect(leaderboardSetup)
    ```
 
@@ -39,7 +38,6 @@ To set up the leaderboard and add players when they enter the experience:
    	leaderstats.Parent = player
    end
 
-   -- Connect the "leaderboardSetup()" function to the "PlayerAdded" event
    Players.PlayerAdded:Connect(leaderboardSetup)
    ```
 
@@ -67,7 +65,6 @@ local function leaderboardSetup(player)
 	gold.Parent = leaderstats
 end
 
--- Connect the "leaderboardSetup()" function to the "PlayerAdded" event
 Players.PlayerAdded:Connect(leaderboardSetup)
 ```
 
@@ -77,7 +74,7 @@ These lines accomplish the following:
 
 2. The instance's `Class.Instance.Name|Name` is set to `"Gold"`. This is exactly how the stat will appear on the leaderboard.
 
-   <img alt="Leaderboards Name Column" src="../assets/players/leaderboard/Leaderboards-Name-Column.png" width="80%" />
+   <img alt="Stat name 'Gold' shown on leaderboard" src="../assets/players/leaderboard/Leaderboard-Stat-Name.png" width="540" />
 
 3. The stat's initial `Class.IntValue.Value|Value` is set to `0`. This can be set to any value you wish, including a value stored in a [data store](../cloud-services/data-stores) if you're implementing persistent leaderboards.
 
@@ -87,11 +84,11 @@ These lines accomplish the following:
 
 4. The instance is parented to the `leaderstats` folder which adds it to the leaderboard. When a player enters the experience, their name appears on the board.
 
-   <img alt="Leaderboards Multiple Players" src="../assets/players/leaderboard/Leaderboards-Multiple-Players.png" width="80%" />
+   <img alt="Multiple players shown on leaderboard" src="../assets/players/leaderboard/Leaderboards-Multiple-Players.png" width="540" />
 
 ## Update stats
 
-To update a player's leaderboard stat, change the `Value` property of that stat within their `leaderstats` folder. For example, you can attach the following `Class.Script` to any pickup object to increase the **Gold** stat of the player collects it.
+To update a player's leaderboard stat, change the `Value` property of that stat within their `leaderstats` folder. For example, you can attach the following `Class.Script` to any pickup object to increase the `Gold` stat of the player collects it.
 
 ```lua
 local Players = game:GetService("Players")
@@ -122,7 +119,7 @@ There are three ways to control the order of stats in a leaderboard:
 
 - Add the stats in the order that you want them to appear.
 - Add a child `Class.BoolValue` named `IsPrimary` to the stat and set its value to `true` to place the stat first in the leaderboard.
-- Add a child `Class.NumberValue` named `Priority` to the stat and set its value to an integer. Higher priority values appear earlier in the leaderboard. Stats without a priority have a default priority of 0.
+- Add a child `Class.NumberValue` named `Priority` to the stat and set its value to an integer. Higher priority values appear earlier in the leaderboard. Stats without a priority have a default priority of `0`.
 
 This code sample shows how to add an `IsPrimary` value to a stat:
 
@@ -158,5 +155,6 @@ To hide the leaderboard, such as on a menu screen or during a cutscene, place a 
 
 ```lua
 local StarterGui = game:GetService("StarterGui")
+
 StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false)
 ```

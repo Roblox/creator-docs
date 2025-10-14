@@ -114,6 +114,7 @@ const getCachedContentForFilePath = (filePath: string): string => {
 };
 
 export const outdatedTranslationFiles: string[] = [];
+export const translationFilesWithMdxMismatchErrors: string[] = [];
 
 export const checkFileImportEquality = (
   filePath: string,
@@ -215,6 +216,7 @@ export const checkMdxEquality = async (
         const errorMessage = `${Emoji.NoEntry} Requirement: MDX component count differs beyond allowed threshold ${comparisonMessage}`;
         console.log(errorMessage);
         outdatedTranslationFiles.push(filePath);
+        translationFilesWithMdxMismatchErrors.push(filePath);
         addToSummaryOfRequirements(errorMessage);
       } else {
         const warningMessage = `${Emoji.Warning}  Warning: MDX components do not match ${comparisonMessage}`;

@@ -190,7 +190,7 @@ export const sections = [
   <Grid item xs={12} md={7}>
     <img
       style={{ width: '100%', aspectRatio: 16/9, height: 'auto', objectFit: 'cover' }}
-      src="./assets/getting-started/platform-overview/Everything-You-Need.png"
+      src="./assets/getting-started/platform-overview/Everything-You-Need.jpg"
       alt=""
     />
   </Grid>

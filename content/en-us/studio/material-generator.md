@@ -57,7 +57,7 @@ With the tool's window open:
 2. Click a generated image tile to view more options, as well as apply the material in "preview" mode to all selected parts.
 
    <Grid container spacing={2}>
-   <Grid item><img src="../assets/modeling/materials/Material-Generator-Expanded-Options.png" width="220" /></Grid>
+   <Grid item><img src="../assets/modeling/materials/Material-Generator-Expanded-Options.png" width="240" /></Grid>
    <Grid item><img src="../assets/modeling/materials/Material-Generator-Preview-On-Part.jpg" width="540" /></Grid>
    </Grid>
 

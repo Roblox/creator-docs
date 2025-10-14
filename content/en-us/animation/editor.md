@@ -3,9 +3,9 @@ title: Animation Editor
 description: Animation Editor allows you to design and publish custom animations on rigs.
 ---
 
-The **Animation Editor** allows you to design and publish custom
-animations on rigs. A rig is an object with individual sections connected by joints. You can move these joints to [create poses](#create-poses) and
-then smoothly animate the rig from pose to pose.
+The **Animation Editor**, accessible from Studio's **Avatar** tab or **Window**&nbsp;⟩ **Avatar** menu, allows you to design and publish custom animations on rigs. A rig is an object with individual sections connected by joints. You can move these joints to [create poses](#create-poses) and then smoothly animate the rig from pose to pose.
+
+<img src="../assets/studio/general/Toolbar-Animation.png" width="800" alt="Animation Editor indicated in Studio's toolbar" />
 
 ## Interface
 

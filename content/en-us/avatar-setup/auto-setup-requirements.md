@@ -35,7 +35,7 @@ Auto-setup detects the following partial avatar body inputs:
   </tr>
   <tr>
     <td><img src="../assets/avatar/avatar-setup/Partial-Inputs-Head-Rigged.png"/><br /></td>
-    <td><Alert severity = "success">A multiple mesh with **only facial rigging**.</Alert> <br /> <br /> If you intend to use your own custom facial rigging, set the FaceRootJoint (and all child bones) as a child of the R15 head joint. For more information, see [optional rig requirements](#optional-rig-requirements). </td>
+    <td><Alert severity = "success">A multiple mesh with **only facial rigging**.</Alert>If you intend to use your own custom facial rigging, set the FaceRootJoint (and all child bones) as a child of the R15 head joint. For more information, see [optional rig requirements](#optional-rig-requirements). </td>
   </tr>
   <tr>
     <td><img src="../assets/avatar/avatar-setup/Partial-Inputs-All-Rigged.png"/><br /></td>
@@ -56,6 +56,7 @@ Many existing [downloadable resources](../avatar/resources.md) for avatar bodies
 The full requirements for the input body model are as follows:
 
 1. **Single or multiple mesh** — In most cases, auto-setup accepts bodies comprising of 1 or more meshes. If your body includes multiple meshes, the tool automatically recombines all selected meshes as a single mesh, then decimates the combined parts to the appropriate R15 structure.
+   1. If providing the standard 15 multiple meshes that adhere to the R15 character naming convention, auto-setup attempts to place joints according to the user-partitioned body parts.
 2. **5 distinct head components** — Whether you are using a single or multi-mesh character model, the following head components are required:
 
    1. **2 eyes** — Heads must include 2 connected eyebags containing half-sphere eyes that do not share any vertices with the head component.
@@ -130,7 +131,7 @@ The full requirements for the input body model are as follows:
 7. **Negative Z Axis** — The body front should face the negative Z axis.
 8. **Symmetrical** — Asymmetrical bodies may work on a case-to-case basis. Position the center of the body with the Y-axis to improve the accuracy of the result.
    1. If your asymmetrical model experiences setup issues, try using a more symmetrical version.
-9. **Watertight** — Ensure the model is watertight in all regions with the exception of the eyes and mouth. Watertight means that there are no holes in the mesh and no back faces are exposed.
+9.  **Watertight** — Ensure the model is watertight in all regions with the exception of the eyes and mouth. Watertight means that there are no holes in the mesh and no back faces are exposed.
 10. **No accessories** — Do not include accessories, including face accessories, like hair, eyebrows, beards, and eyelashes.
 11. **Distinct neck area** — Keep the neck distinct and not merged with the shoulders or upper torso.
 12. **Includes texture** — Models should include one or more texture maps. If the input body includes multiple textures, the tool bakes the textures to a single map. This applies to [PBR textures](../art/modeling/surface-appearance.md) where the four textures are baked — one for each albedo, normal, metalness and roughness.
@@ -139,6 +140,10 @@ The full requirements for the input body model are as follows:
 #### Rig requirements (Optional)
 
 You can use your own custom body and face rig for your character model input instead of allowing auto-setup to generate a new one.
+
+<Alert severity = 'info'>
+If you provide the standard 15 multiple meshes that adhere to the R15 character naming convention **without a rig**, auto-setup attempts to generate joints according to the user-partitioned body parts.
+</Alert>
 
 To ensure that auto-setup uses your **own custom body rig**:
 

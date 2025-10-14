@@ -5,6 +5,8 @@ inputs:
     description: Base branch
   CHECK_LOCALIZED_CONTENT:
     description: Whether to check localized content
+  DELETE_MDX_MISMATCHED_ERROR_ON_FAIL:
+    description: Whether to delete localized files with MDX mismatched errors
   CHECK_MARKDOWN_LINT:
     description: Whether to check markdown lint
   CHECK_PROTECTED_FIELDS:
@@ -56,6 +58,7 @@ runs:
         CHECK_RELATIVE_LINKS: ${{ inputs.CHECK_RELATIVE_LINKS }}
         CHECK_RETEXT_ANALYSIS: ${{ inputs.CHECK_RETEXT_ANALYSIS }}
         CHECK_UNUSED_ASSETS: ${{ inputs.CHECK_UNUSED_ASSETS }}
+        DELETE_MDX_MISMATCHED_ERROR_ON_FAIL: ${{ inputs.DELETE_MDX_MISMATCHED_ERROR_ON_FAIL }}
         COMMIT_HASH: ${{ inputs.COMMIT_HASH }}
         POST_PULL_REQUEST_COMMENTS: ${{ inputs.POST_PULL_REQUEST_COMMENTS }}
         PULL_REQUEST_NUMBER: ${{ inputs.PULL_REQUEST_NUMBER }}

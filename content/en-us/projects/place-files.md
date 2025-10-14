@@ -5,7 +5,7 @@ description: Learn how to manage and optimize your place files in Roblox.
 
 Each Roblox experience consists of one or more [places](index.md#places), and Studio uploads your place data to Roblox's servers whenever you save or publish to Roblox in the **File** menu.
 
-You might also want to export local copies of places for use with a version control system or other [external tools](external-tools.md). To export your place in Studio, select **Save to File** or **Download a Copy** from the **File** menu. Studio offers two file formats:
+You might also want to export local copies of places for use with a version control system or other [external tools](external-tools.md). To export your place in Studio, select **Save&nbsp;to&nbsp;File** or **Download&nbsp;a&nbsp;Copy** from the **File** menu. Studio offers two file formats:
 
 - `.rbxl` is the binary place file format. This format is compact, but not human-readable.
 - `.rbxlx` is the XML-based place file format, which is quite a bit larger on disk than the binary format.

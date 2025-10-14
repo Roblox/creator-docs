@@ -88,6 +88,7 @@ describe('OpenAPI Schema Validation Module', () => {
       checkUnusedAssets: false,
       debug: false,
       deleteUnusedAssets: false,
+      deleteMdxMismatchedErrorOnFail: false,
       files: 'changed' as any,
       onlyRequiredChecks: false,
       postPullRequestComments: false,

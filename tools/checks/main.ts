@@ -44,6 +44,7 @@ import {
   checkMdxEquality,
   isLocaleFile,
   outdatedTranslationFiles,
+  translationFilesWithMdxMismatchErrors,
   checkVoidTagsHaveNoChildren,
 } from './utils/localization.js';
 import { Emoji } from './utils/utils.js';
@@ -344,6 +345,26 @@ try {
       outdatedTranslationFiles,
       'utf-8'
     );
+  }
+  if (
+    config.checkLocalizedContent &&
+    config.deleteMdxMismatchedErrorOnFail &&
+    translationFilesWithMdxMismatchErrors.length > 0
+  ) {
+    console.log(
+      `${Emoji.WasteBasket} Deleting ${translationFilesWithMdxMismatchErrors.length} localized files with MDX mismatch errors...`
+    );
+    for (const filePath of translationFilesWithMdxMismatchErrors) {
+      try {
+        await fs.promises.unlink(filePath);
+        console.log(`${Emoji.WasteBasket} Deleted ${filePath}`);
+      } catch (e) {
+        const err = e as NodeJS.ErrnoException;
+        if (err.code !== 'ENOENT') {
+          console.log(`${Emoji.Warning} Failed to delete ${filePath}`, e);
+        }
+      }
+    }
   }
   if (config.postPullRequestComments && pullRequestReviewComments.length > 0) {
     await postCommentsToGitHub();

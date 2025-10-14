@@ -47,6 +47,7 @@ export interface IConfig {
   checkUnusedAssets: boolean;
   debug: boolean;
   deleteUnusedAssets: boolean;
+  deleteMdxMismatchedErrorOnFail: boolean;
   files: FileOption;
   onlyRequiredChecks: boolean;
   postPullRequestComments: boolean;
@@ -223,6 +224,15 @@ export const getConfig = async (): Promise<IConfig> => {
       type: 'boolean',
       description: 'Whether to delete unused assets',
       default: getEnvVar('DELETE_UNUSED_ASSETS', DataType.Boolean),
+    })
+    .option('deleteMdxMismatchedErrorOnFail', {
+      type: 'boolean',
+      description:
+        'Whether to delete localized files with MDX mismatch errors beyond threshold',
+      default: getEnvVar(
+        'DELETE_MDX_MISMATCHED_ERROR_ON_FAIL',
+        DataType.Boolean
+      ),
     })
     .option('debug', {
       type: 'boolean',

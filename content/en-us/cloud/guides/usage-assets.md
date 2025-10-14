@@ -61,7 +61,7 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
       </td>
     </tr>
     <tr>
-      <td><a href="../../parts/textures-decals.md">Decal</a></td>
+      <td><a href="../../parts/textures-decals.md">Decal, Image</a></td>
       <td>
         <ul>
           <li>`.png`</li>
@@ -80,8 +80,27 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
       </td>
       <td>
         <ul>
-          <li>Not available for updating.</li>
           <li>Must be smaller than 8000x8000 pixels.</li>
+          <li>Not available for updating.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="../../parts/meshes.md">Mesh</a></td>
+      <td>
+        <ul>
+          Roblox only
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>`model/x-file-mesh-data`</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Only content downloaded from [Asset Delivery API](../../cloud/api/asset-delivery.md) is accepted. If you are not trying to export and re-import meshes, then use [3D Importer](../../art/modeling/3d-importer.md) to import meshes instead.</li>
+          <li>Not available for updating.</li>
         </ul>
       </td>
     </tr>
@@ -98,9 +117,14 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
         </ul>
       </td>
       <td>
-        Depending on your use-case, consider uploading certain models manually using the [3D Importer](../../art/modeling/3d-importer.md).
-
-        The 3D Importer provides a 3D preview, various error-checking, and many customizable import settings.
+        <ul>
+          <li>Imports custom 3D models (`.fbx`) as a `Class.Model` container containing one or more `Class.MeshPart` objects.</li>
+          <ul>
+            <li>Depending on your use-case, consider uploading custom 3D models manually using the [3D Importer](../../art/modeling/3d-importer.md).</li>
+          <li>The 3D Importer provides a 3D preview, various error-checking, and many customizable import settings.</li>
+          </ul>
+          <li>Does not support Roblox `.rbxm` formats</li>
+        </ul>
       </td>
     </tr>
     <tr>

@@ -7,17 +7,17 @@ hideBreadcrumbs: true
 
 export const sections = [
   {
-    description: "Assets are anything you publish to the Roblox cloud, like 3D models with scripts, multimedia files, Studio plugins, and much more. You can reuse assets across all of your creations and share them with the community.",
+    description: "Assets are anything you publish to the Roblox cloud, like 3D models with scripts, textures, multimedia files, Studio plugins, and much more. You can reuse assets across all of your creations and share them with the community.",
     buttons: [
       { text: "Learn more about assets", href: "./projects/assets" },
     ],
     content: [
       {
-        title: "Create in Studio, other 3P tools, or experiences",
-        description: "Studio provides drag and drop tools and programmatic access to building and modeling with engine primitives, such as parts and constraints. You can also import standard types of assets such as .fbx, .obj, .gLTF, and more into Studio for import. Lastly, you can allow users to create assets directly in your experiences and save it to their own accounts.",
-        image: "/assets/getting-started/platform-overview/Everything-You-Need.png",
+        title: "Create in Studio, other third-party tools, or in experiences",
+        description: "Roblox Studio provides drag-and-drop tools and programmatic access to building and modeling with engine primitives such as parts and constraints. You can also import industry standard asset types for 3D modeling, audio, and more directly into Studio. Lastly, you can allow users to create assets directly in your experiences and save them to their own accounts.",
+        image: "/assets/getting-started/platform-overview/Everything-You-Need.jpg",
         links: [
-          { text: "Studio", href: "./art/overview-studio" },
+          { text: "Roblox Studio", href: "./art/overview-studio" },
           { text: "Third-party", href: "./art/overview-dcc" },
           { text: "In-experience", href: "./projects/assets/in-experience-asset-creation" }
         ]
