@@ -48,7 +48,7 @@ To demonstrate, the following section teaches you how to swap out the default wa
 
 ### Create script
 
-Every character's `Class.Humanoid` object includes a child `Class.Animator` object that stores all of the character's default animations. In order to set any of these default animations to new asset IDs, you must create a script in the `Class.ServiceScriptService` so that it can reference and override the `Class.Animator` object's default values as soon as players load into the experience.
+Every character's `Class.Humanoid` object includes a child `Class.Animator` object that stores all of the character's default animations. In order to set any of these default animations to new asset IDs, you must create a script in the `Class.ServerScriptService` so that it can reference and override the `Class.Animator` object's default values as soon as players load into the experience.
 
 To create a script that will reference the default animation asset IDs:
 

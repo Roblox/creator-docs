@@ -201,7 +201,7 @@ To access your rewarded video ad metrics:
   </tr>
   <tr>
     <td>**Monetization Funnel at Experience level**</td>
-    <td>This metric shows you: <br /><br /> <ul><li>**Requested**: The number of ads requested in your experience.</li><li>**Filled/Number of fills**: The number of ads received in your experience.</li><li>**Impression**: The number of impressions from the video ads in your experience. The first frame of a video ad shown to a user counts as an impression.</li><li>**Rewarded/Number of rewards**: The number of video ad rewards granted to users.</li></ul> </td>
+    <td>This metric shows you: <br /><br /> <ul><li>**Requested**: The number of ads requested by ads-eligible users in your experience.</li><li>**Filled/Number of fills**: The number of ads received by ads-eligible users in your experience.</li><li>**Impression**: The number of impressions from the video ads in your experience. The first frame of a video ad shown to a user counts as an impression.</li><li>**Rewarded/Number of rewards**: The number of video ad rewards granted to users.</li></ul> </td>
   </tr>
   <tr>
     <td>**Fill Rate**</td>
@@ -224,16 +224,12 @@ To access your rewarded video ad metrics:
     <td>The number of unique users who have viewed one or more video ads in your experience in a day. A view is defined by an impression. <br /><br /> This data is updated with 1 day delay.</td>
   </tr>
   <tr>
-    <td>**AEPDUV (Average Earnings Per Daily Uniquer Viewers)**</td>
+    <td>**eDAU (Ads Eligible Daily Active Users)**</td>
+    <td>The number of unique daily users to your experience who were eligible to view rewarded video ads. <br /><br /> This data is updated with 1 day delay.</td>
+  </tr>
+  <tr>
+    <td>**AEPDUV (Average Earnings Per Daily Unique Viewer)**</td>
     <td>The earnings generated per daily unique viewer for rewarded video ads. <br /><br /> This data is updated with 1 day delay.</td>
-  </tr>
-  <tr>
-    <td>**Eligible Daily Active Users**</td>
-    <td>The number of unique daily visitors to your experience who were eligible to see Rewarded Video ads. <br /><br /> This data is updated with 1 day delay.</td>
-  </tr>
-  <tr>
-    <td>**DUV/eDAU (Daily Unique Viewers/Eligible Daily Active Users)**</td>
-    <td>The percent of ads eligible visitors to your experience, known as Eligible Daily Active Users, who saw at least one ad on a day. <br /><br /> This data is updated with 1 day delay.</td>
   </tr>
 </tbody>
 </table>

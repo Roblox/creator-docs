@@ -7,7 +7,7 @@ Deep links let you send users to a specific place in an experience, which can
 make the process of joining more seamless, help users find their connections, and provide traffic attribution. The optional launch data in these links lets you customize the user experience when someone joins.
 
 <Alert severity="success">
-You can create deep links manually, but the better solution is to generate and use [share links](share-links.md).
+This process is deprecated. To create public deep links, use [share links](share-links.md).
 </Alert>
 
 ## Construct a deep link

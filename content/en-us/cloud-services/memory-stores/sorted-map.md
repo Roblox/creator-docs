@@ -71,14 +71,14 @@ In the sorting order of your keys, a sort key takes precedence over a key. For e
 Example of some data sorted in ascending order -
 
 ```text
-{Key: "player1", Value: someValue1, SortKey: -1}
-{Key: "player2", Value: someValue2, SortKey: 0}
-{Key: "player4", Value: someValue3, SortKey: 1}
-{Key: "player5", Value: someValue4, SortKey: 1}
-{Key: "player3", Value: someValue5, SortKey: 3.14}
-{Key: "player6", Value: someValue6, SortKey: "someString"}
-{Key: "player0", Value: someValue7}
-{Key: "player7", Value: someValue8}
+{key: "player1", value: someValue1, sortKey: -1}
+{key: "player2", value: someValue2, sortKey: 0}
+{key: "player4", value: someValue3, sortKey: 1}
+{key: "player5", value: someValue4, sortKey: 1}
+{key: "player3", value: someValue5, sortKey: 3.14}
+{key: "player6", value: someValue6, sortKey: "someString"}
+{key: "player0", value: someValue7}
+{key: "player7", value: someValue8}
 ```
 
 Note how `player0` sorts after all keys with a sort key. `player6` sorts after all keys with a numeric sort key. `player4` and `player5` have the same sort key, so they are sorted in ascending order by key.
