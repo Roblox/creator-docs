@@ -24,8 +24,11 @@ If you are following the best practice creation process, ensure that your templa
 - A **head mesh object** and associated **cage mesh object**.
   - These two objects must include the prefix "TransferTarget_" in their name.
 - **TransferTexture mesh objects** for each region: `Eyes`, `Face`, `Lips`.
-  - These three objects must include the prefix "TransferTexture_" in their name.
-  - Always export every region. Even if exporting makeup applied to the `TransferTexture_Eye` object, export `TransferTexture_Lips` and `TransferTexture_Face` as well.
+  - These three objects must follow the following naming conventions.
+    - `TransferTexture_Eyes_01`
+    - `TransferTexture_Lips_01`
+    - `TransferTexture_Face_01`
+    - Any for multiple regions, increment the affix number: `TransferTexture_Face_02`
 - Optional [eyebrows and eyelashes](#optional-eyebrows-and-eyelashes).
 
 <Alert severity = 'warning'>

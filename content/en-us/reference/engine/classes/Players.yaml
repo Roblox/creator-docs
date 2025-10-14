@@ -1406,7 +1406,7 @@ events:
       end)
 
       Players.PlayerRemoving:Connect(function(player, exitReason)
-      	print(player.Name .. " left the game! - Reason: " .. tostring(reason))
+      	print(player.Name .. " left the game! - Reason: " .. tostring(exitReason))
       end)
       ```
 

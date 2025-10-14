@@ -9,6 +9,58 @@ To import custom makeup textures, use Blender or Maya to reassign the existing t
 The following information is **specific for applying makeup textures to the Roblox provided head reference**, which already has PBR texture nodes assigned. For more information on assigning textures from scratch, see [Assign textures in Blender and Maya](../art/modeling/assign-textures.md).
 </Alert>
 
+## Video workflows
+
+The following are video workflows for various tasks in exporting textures from a texture editing tool and reconnecting them in Blender and Maya.
+
+<BaseAccordion>
+<AccordionSummary>
+<Typography variant="label1">Reassigning textures in Blender</Typography>
+</AccordionSummary>
+<AccordionDetails>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/B0y5fLlwkF0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br /><br />
+
+Additional notes:
+
+- In the video, the presenter opts to clear all existing image links by navigating to **File** > **External Data** > **Unpack Resources** and selecting **Remove Pack**.
+  - This is a method to unassign all images, equivalent to the [Blender](#blender) reassignment step #5.
+
+</AccordionDetails>
+</BaseAccordion>
+
+<BaseAccordion>
+<AccordionSummary>
+<Typography variant="label1">Reassigning textures in Maya</Typography>
+</AccordionSummary>
+<AccordionDetails>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/JaX5rcsStvQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</AccordionDetails>
+</BaseAccordion>
+
+<BaseAccordion>
+<AccordionSummary>
+<Typography variant="label1">Exporting textures from Photoshop</Typography>
+</AccordionSummary>
+<AccordionDetails>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/0se12PNhVCI" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br /><br />
+
+Additional notes:
+
+- In the video, the presenter uses **File** > **Export** > **Layers to Files** to export each layer as its own `.png` file.
+
+</AccordionDetails>
+</BaseAccordion>
+
+<BaseAccordion>
+<AccordionSummary>
+<Typography variant="label1">Exporting textures from Substance Painter</Typography>
+</AccordionSummary>
+<AccordionDetails>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/g79GBh0AcXA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</AccordionDetails>
+</BaseAccordion>
+
 ## Blender
 
 1. Unzip and open the [Blender reference head file](../assets/makeup/resources/Makeup-Reference-Blender.zip).

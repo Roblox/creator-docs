@@ -94,9 +94,7 @@ When applicable enclose the open edge of the eye section right up to the eye mes
 
 It's a little easier to visualize the eyebrow shape using the vertex color provided in the template. Once you've established the head and tail of the eyebrow, you should place the three upper and lower verts equidistant from each other.
 
-<GridContainer numColumns="2">
-  <figure><img src="../assets/makeup/caging-examples/Primary-A.png" /></figure><figure><img src="../assets/makeup/caging-examples/Primary-B.png" /></figure>
-</GridContainer>
+<img src="../assets/makeup/caging-examples/Primary-B.png" />
 
 ### Establish the head and tail
 
@@ -145,12 +143,12 @@ Establish the top of the ear with the triangle portion of the ear, the bottom wi
 ## Hairline
 
 Establish from eyebrows the forehead shape and hairline.
- <figure><img src="../assets/makeup/caging-examples/Nose.png" /></figure>
+ <figure><img src="../assets/makeup/caging-examples/Hairline-A.png" /></figure>
 
 If working with sideburns, define the shape of the sideburns in front and around the ears and consider where the hairline should end at the base of the neck. This will help determine how layered hair accessories fits to the head.
 
 <GridContainer numColumns="2">
-  <figure><img src="../assets/makeup/caging-examples/Ears-A.png" /></figure><figure><img src="../assets/makeup/caging-examples/Ears-B.png" /></figure>
+  <figure><img src="../assets/makeup/caging-examples/Hairline-A.png" /></figure><figure><img src="../assets/makeup/caging-examples/Hairline-B.png" /></figure>
 </GridContainer>
 
 ## Caging examples of other facial types

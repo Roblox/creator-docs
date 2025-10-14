@@ -18,15 +18,22 @@ These instructions apply specifically to the Makeup test place, available in the
    1. Primarily, ensure that your model includes:
       - Target head mesh
       - Target head cage mesh
-      - `Lips` mesh and associated textures.
-      - `Face` mesh and associated textures.
-      - `Eyes` mesh and associated textures.
+      - If modified, `Lips` mesh and associated textures.
+      - If modified, `Face` mesh and associated textures.
+      - If modified, `Eyes` mesh and associated textures.
 2. In Studio, open up the Makeup test place.
 3. Click **File** > **Import 3D** and select your 3D makeup asset. Verify there are no errors with the imported components.
 4. Click **Import** to add the file into Studio. A new `Model` populates in the workspace.
 5. In the Explorer, expand the new `Model`. Verify that `Decal` child objects have populated, each with their own `WrapTextureTransfer` child object.
 
-    <img src="../assets/makeup/Makeup-Studio-Datamodel.png" width="25%" />
+    <GridContainer numColumns="2">
+      <figure><img src="../assets/makeup/Imported-DataModel.png" width = "80%"/><figcaption>On import, makeup decals appear within the Model. </figcaption></figure>
+      <figure><img src="../assets/makeup/Makeup-Studio-Datamodel.png" width = "60%" /><figcaption>Each decal parents a WrapTextureTransfer object</figcaption></figure>
+   </GridContainer>
+
 6. In the test place, copy your new `Decal` objects into a character model's `Makeup` folder.
    1. If you want to apply eyebrows or eyelashes, move those `MeshParts` into the character's `Accessories` folder. For this place file, you do not need to convert eyelashes and eyebrows into Accessories first.
+
+   <img src="../assets/makeup/Makeup-Character-Folders.png" />
+
 7. Press **Play** to playtest and verify that the character has the new makeup applied.
