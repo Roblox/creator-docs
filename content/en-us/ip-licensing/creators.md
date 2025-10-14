@@ -28,9 +28,12 @@ To apply to use an IP license in your experience:
 2. Select an IP from the available licenses.
 3. Click **Request license**.
 4. Select the experience you want to apply to the license with and click **Next**.
-5. Select how ready your experience is to use the license and click **Next**. You can still apply to use a license even if your experience isn't fully ready to incorporate the IP.
-6. Download the content standards file, review and agree to the content standards, and click **Next**.
-7. Click **Submit** to submit your application. The IP holder then reviews and either approves or rejects your application.
+5. (Optional) Under **Intent**, enter more details about your experience in the form of a pitch. This can help the IP holder make a decision about your application. For more information about writing a pitch, see [Pitch details](#pitch-details).
+6. Under **Experience readiness**, select one of the following:
+    - **Yes, my experience is ready to use this intellectual property** if you're done incorporating the IP into your experience. Revenue share will start as soon as the license agreement becomes active.
+    - **No, I need time to incorporate this intellectual property into my experience** if you're not done incorporating the IP into your experience. Revenue share won't start immediately, but the IP holder can still turn on monetization at any time.
+7. Download the content standards file, review and agree to the content standards, and click **Next**.
+8. Click **Request** to submit your application. The IP holder then reviews and either approves or rejects your application.
 
 <Alert severity="info">
   You can currently only request or be offered a license for a full experience, where the IP is central to and present throughout the experience.
@@ -39,6 +42,30 @@ To apply to use an IP license in your experience:
 <Alert severity="warning">
   After you enter an IP license agreement, you **cannot** cancel it.
 </Alert>
+
+### Pitch details
+
+Including a well-written pitch with your request can make the IP holder more likely to approve your application. Your pitch should convey a compelling idea and show that you are confident in your ability to execute this creative vision.
+
+We recommend that you include the following information in your pitch:
+
+- **Overall vision**:
+    - What makes your adaption of the IP unique and exciting for players.
+    - Your team's relevant experience, including examples of previous games you have developed, along with any previous work involving IP.
+    - How you believe the IP integration will engage players, expand the IP's reach, and create new opportunities for monetization and community growth.
+
+- **Creative elements**:
+    - How your experience's visual and audio design will reflect the IP, including character models, environments, UI, and soundscapes. For example, if you're applying to integrate an IP like the Blair Witch, you can highlight the use of atmospheric visuals and sound effects that evoke suspense and dread.
+    - How the story, lore, or signature moments from the IP will be integrated into your experience. This could involve recreating iconic scenes, referencing key plot points, or introducing original storylines that fit within the universe of the IP.
+    - How you will maintain the integrity of the IP, making sure all creative choices align with the IP's established tone, themes, and content standards.
+
+- **Gameplay**:
+    - How the main gameplay loops will leverage the IP's unique features. For example, a survival horror IP could include mechanics like stealth, resource management, or cooperative puzzle-solving.
+    - How players will interact with the IP. You can describe progression systems, challenges, and rewards that are consistent with the theme of the IP.
+    - How your experience genre aligns with the IP. For example, an IP like The Strangers might be more aligned with PvE escape games or social deduction horror, while an IP like Fall might be more aligned with high-stakes obbys or survival challenges.
+
+- **Timeline**:
+    - What the current state of your experience is and when you expect the IP to be fully integrated into your experience.
 
 ## View license agreements
 

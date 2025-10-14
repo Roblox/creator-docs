@@ -6228,88 +6228,6 @@
         }
       }
     },
-    "/cloud/v2/universes/{universe_id}:generateSpeech": {
-      "post": {
-        "tags": ["Generative AI"],
-        "summary": "Generate Speech",
-        "description": "Generates English speech audio from the specified text.",
-        "operationId": "Cloud_GenerateSpeech",
-        "parameters": [
-          {
-            "name": "universe_id",
-            "in": "path",
-            "description": "The universe ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GenerateSpeechRequest"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GenerateSpeechResponse"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "x-roblox-scopes": [
-          {
-            "description": "Required",
-            "name": "universe:write"
-          }
-        ],
-        "x-roblox-docs": {
-          "category": "Universes and places",
-          "methodProperties": {
-            "scopes": ["universe:write"]
-          },
-          "resource": {
-            "$ref": "#/components/schemas/Universe",
-            "name": "Universe"
-          }
-        },
-        "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "SECOND",
-            "maxInPeriod": 4
-          },
-          "perOauth2Authorization": {
-            "period": "SECOND",
-            "maxInPeriod": 4
-          }
-        },
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/features/generative-ai#/Universe/Cloud_GenerateSpeech"
-        }
-      }
-    },
     "/cloud/v2/universes/{universe_id}:generateSpeechAsset": {
       "post": {
         "tags": ["Assets", "Generative AI"],
@@ -38425,68 +38343,6 @@
         }
       }
     },
-    "/v1/private-servers": {
-      "get": {
-        "tags": ["Private servers", "Universes"],
-        "summary": "Get private servers from private server ids",
-        "parameters": [
-          {
-            "in": "query",
-            "name": "privateServerIds",
-            "description": "",
-            "required": true,
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "array",
-              "items": {
-                "format": "int64",
-                "type": "integer"
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Games.Api.PrivateServersResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Games.Api.PrivateServersResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "8: The creator of this game has disabled private servers for this game.\r\n34: Invalid request, private server ids cannot be null.\r\n35: Guest users are not allowed."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "2: You are not the owner of this private server."
-          },
-          "404": {
-            "description": "1: The private server is invalid or does not exist.\r\n4: The universe does not exist."
-          }
-        },
-        "deprecated": true,
-        "servers": [
-          {
-            "url": "https://games.roblox.com"
-          }
-        ],
-        "description": "This endpoint is deprecated and will be removed after October 1st, 2025.",
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/features/private-servers#/default/get_v1_private_servers"
-        }
-      }
-    },
     "/v1/private-servers/enabled-in-universe/{universeId}": {
       "get": {
         "tags": ["Private servers", "Universes"],
@@ -39071,79 +38927,6 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/private-servers#/default/patch_v1_vip_servers__id__subscription"
-        }
-      }
-    },
-    "/v1/vip-servers/{id}/voicesettings": {
-      "patch": {
-        "tags": ["Private servers", "Universes"],
-        "summary": "Update voice settings for a private server.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "id",
-            "description": "The VIP Server ID",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Games.Api.VipServerUpdateVoiceSettingsRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Games.Api.VipServerUpdateVoiceSettingsRequest"
-              }
-            }
-          },
-          "description": "The Roblox.Games.Api.VipServerUpdateVoiceSettingsRequest",
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Games.Api.VipServerVoiceSettingsResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Games.Api.VipServerVoiceSettingsResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "8: The creator of this game has disabled private servers for this game."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed\r\n2: You are not the owner of this private server.\r\n33: You are not eligible for voice chat."
-          },
-          "404": {
-            "description": "1: The private server is invalid or does not exist."
-          }
-        },
-        "deprecated": true,
-        "servers": [
-          {
-            "url": "https://games.roblox.com"
-          }
-        ],
-        "description": "This endpoint is deprecated and will be removed after October 1st, 2025.",
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/features/private-servers#/default/patch_v1_vip_servers__id__voicesettings"
         }
       }
     },
@@ -57646,6 +57429,13 @@
             }
           },
           {
+            "name": "category",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "searchView",
             "in": "query",
             "description": "Indicates which fields will be populated in the response.",
@@ -58563,6 +58353,7 @@
     },
     "/asset-permissions-api/v1/assets/permissions": {
       "patch": {
+        "tags": ["Assets"],
         "summary": "Grant a subject permission to multiple assets.\n            \nAuthorization is required to grant permissions to the subject and asset IDs in the request.",
         "requestBody": {
           "content": {
@@ -58631,14 +58422,31 @@
           }
         },
         "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "asset-permissions:write"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/assets#/default/patch_asset_permissions_api_v1_assets_permissions"
+        }
       }
     }
   },
@@ -59061,11 +58869,32 @@
             "description": "The text to be translated."
           },
           "speechStyle": {
-            "$ref": "#/components/schemas/GeneratedSpeechStyle",
+            "$ref": "#/components/schemas/GenerateSpeechAssetRequest_GeneratedSpeechStyle",
             "description": "The style of the generated speech."
           }
         },
         "description": "Specifies the text from which to generate speech and the voice style."
+      },
+      "GenerateSpeechAssetRequest_GeneratedSpeechStyle": {
+        "type": "object",
+        "properties": {
+          "voiceId": {
+            "example": "1",
+            "type": "string",
+            "description": "An ID corresponding to the voice type specified. A mapping of voice type\nto\nID number is available in the documentation."
+          },
+          "pitch": {
+            "type": "number",
+            "description": "The pitch of the generated speech.",
+            "format": "double"
+          },
+          "speed": {
+            "type": "number",
+            "description": "The speed of the generated speech.",
+            "format": "double"
+          }
+        },
+        "description": "Information about the style of generated speech."
       },
       "GenerateSpeechAssetResponse": {
         "type": "object",
@@ -59082,37 +58911,6 @@
         },
         "description": "Contains a generated audio asset in MPEG-2 Audio Layer III (MP3) format."
       },
-      "GenerateSpeechRequest": {
-        "required": ["text"],
-        "type": "object",
-        "properties": {
-          "text": {
-            "example": "Hello",
-            "type": "string",
-            "description": "The text to be translated."
-          },
-          "speechStyle": {
-            "$ref": "#/components/schemas/GeneratedSpeechStyle",
-            "description": "The style of generated speech."
-          }
-        },
-        "description": "Specifies the text from which to generate speech and the voice style."
-      },
-      "GenerateSpeechResponse": {
-        "type": "object",
-        "properties": {
-          "audio": {
-            "type": "string",
-            "description": "The generated audio."
-          },
-          "remainingQuota": {
-            "type": "integer",
-            "description": "The remaining quota (remaining number of requests available\nto the user this calendar month).",
-            "format": "int32"
-          }
-        },
-        "description": "Contains the generated audio bytes in RFC 6716 (Opus) format."
-      },
       "GenerateUserThumbnailMetadata": {
         "type": "object",
         "properties": {},
@@ -59127,27 +58925,6 @@
           }
         },
         "description": "Returns the URL for the user's avatar thumbnail."
-      },
-      "GeneratedSpeechStyle": {
-        "type": "object",
-        "properties": {
-          "voiceId": {
-            "example": "1",
-            "type": "string",
-            "description": "An ID corresponding to the voice type specified. A mapping of voice type to\nID number is available in the documentation."
-          },
-          "pitch": {
-            "type": "number",
-            "description": "The pitch of the generated speech.",
-            "format": "double"
-          },
-          "speed": {
-            "type": "number",
-            "description": "The speed of the generated speech.",
-            "format": "double"
-          }
-        },
-        "description": "Information about the style of generated speech."
       },
       "GetInstanceMetadata": {
         "type": "object",
@@ -61662,7 +61439,7 @@
         "properties": {
           "assetType": {
             "type": "string",
-            "description": "The asset type. Can only be `Audio`, `Decal`, or `Model`. Required for [Create Asset](#POST-v1-assets).",
+            "description": "The asset type. Required for [Create Asset](#POST-v1-assets).",
             "format": "enum"
           },
           "assetId": {
@@ -64759,6 +64536,11 @@
           "availabilityStatus": {
             "description": "Asset availability status.",
             "type": "string"
+          },
+          "expirationTime": {
+            "format": "date-time",
+            "description": "For rental assets only. (Future) ownership expiration time of the asset.",
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -65553,7 +65335,7 @@
           "outfitType": {
             "format": "int32",
             "description": "The type of outfit",
-            "enum": [0, 1, 2, 4],
+            "enum": [0, 1, 2, 4, 5],
             "type": "integer"
           }
         },
@@ -65702,7 +65484,7 @@
           "outfitType": {
             "format": "int32",
             "description": "The type of outfit.",
-            "enum": [0, 1, 2, 4],
+            "enum": [0, 1, 2, 4, 5],
             "type": "integer"
           }
         },
@@ -71807,20 +71589,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Games.Api.PrivateServersResponse": {
-        "description": "User Presences Response model",
-        "type": "object",
-        "properties": {
-          "privateServerResponses": {
-            "description": "A collection of game server responses",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.Web.Responses.Games.GameServerResponse"
-            }
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Games.Api.VipServerCanInviteResponse": {
         "description": "Response model for VIP server can-invite user.",
         "type": "object",
@@ -72017,15 +71785,6 @@
             "format": "int64",
             "description": "Price",
             "type": "integer"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Games.Api.VipServerUpdateVoiceSettingsRequest": {
-        "type": "object",
-        "properties": {
-          "enabled": {
-            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -77696,10 +77455,6 @@
             "format": "int32",
             "description": "The enum representing which experiment group the user is in.",
             "type": "integer"
-          },
-          "isEppUIEnabled": {
-            "description": "Whether the EPP UI is enabled.",
-            "type": "boolean"
           }
         }
       },
@@ -79242,7 +78997,12 @@
           "name": {
             "minLength": 1,
             "type": "string",
-            "description": "The name of the custom LLM."
+            "description": "The name of the custom LLM provider (claude, gemini, openai)."
+          },
+          "model_version": {
+            "type": "string",
+            "description": "The specific model version to use (e.g., \"gemini-2.5-pro-preview-03-25\").\nIf not provided, falls back to the provider name.",
+            "nullable": true
           },
           "url": {
             "minLength": 1,
@@ -79331,6 +79091,10 @@
             "items": {
               "$ref": "#/components/schemas/EvalResultRecord"
             },
+            "nullable": true
+          },
+          "fullLogs": {
+            "type": "string",
             "nullable": true
           },
           "evalSucceeded": {
@@ -79622,47 +79386,40 @@
           "UserFixedPrice",
           "RegionalPricing"
         ],
-        "type": "string",
-        "description": "Enum representing enabled features for this particular developer product.\r\nShould match https://github.rbx.com/Roblox/price-engine/blob/master/protos/roblox/priceengine/shared/v1/price_engine_shared.proto#L94"
+        "type": "string"
       },
-      "AssetConsumerAction": {
+      "AssetAction": {
         "enum": [
           "Invalid",
           "Edit",
           "Use",
           "Download",
-          "CreateAssetVersion",
-          "UpdateAssetText",
-          "GrantAssetPermissions",
-          "CreateAssetFromAsset",
           "CopyFromRcc",
-          "UpdateFromRcc",
-          "UseInAnyScope",
-          "UseInCreatorScope",
-          "ForkAsset"
+          "UpdateFromRcc"
         ],
-        "type": "string"
+        "type": "string",
+        "description": "Asset permission actions that can be granted.\n            \nActions:\n* Invalid - default value, not a valid action.\n* Edit - grants the ability to edit and manage the asset.\n* Use - grants the ability to use the asset.\n* Download - grants the ability to download the asset.\n* CopyFromRcc - grants the ability to copy the asset from RCC, used to enable AssetService:CreatePlaceAsync().\n* UpdateFromRcc - grants the ability to update the asset from RCC, used to enable AssetService:UpdatePlaceAsync().\n            \nValid AssetType - SubjectType - Action combinations:\n* Animation - Group/User/Universe - Use\n* Audio - Group/User/Universe - Use\n* Decal - All/Group/User/Universe - Use\n* Image - All/Group/User/Universe - Use\n* Mesh - All/Group/User/Universe - Use\n* MeshPart - Group/User/Universe - Use\n* Model - User - Edit\n  * Group/User/Universe - Use\n* Place - All - Download\n  * Universe - CopyFromRcc/UpdateFromRcc\n* Video - Group/User/Universe - Use."
       },
       "AssetGrantRequest": {
         "type": "object",
         "properties": {
           "assetId": {
             "type": "integer",
-            "description": "The asset id to grant permission to.",
+            "description": "The asset ID to grant permission to.",
             "format": "int64"
           },
           "grantToDependencies": {
             "type": "boolean",
-            "description": "Whether to extend the permission grant to dependencies of the asset."
+            "description": "Whether to extend the permission grant to dependencies of the asset. This will be done asynchronously after the main grant."
           },
           "parentVersionNumber": {
             "type": "integer",
-            "description": "The asset version number to use for determining asset dependencies.",
+            "description": "The version number of 'assetId' to use for determining asset dependencies.",
             "format": "int32"
           }
         },
         "additionalProperties": false,
-        "description": "AssetGrantRequest model.\nWARNING: the XML comments on this class are viewable by the public."
+        "description": "Asset grant requests with additional options to grant to dependencies."
       },
       "BatchGrantPermissionsRequest": {
         "type": "object",
@@ -79672,18 +79429,18 @@
           },
           "subjectId": {
             "type": "string",
-            "description": "The subject id to grant to.",
+            "description": "The subject ID to grant to. Must be empty for SubjectType 'All'.",
             "nullable": true
           },
           "action": {
-            "$ref": "#/components/schemas/AssetConsumerAction"
+            "$ref": "#/components/schemas/AssetAction"
           },
           "requests": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/AssetGrantRequest"
             },
-            "description": "Array of asset grant requests. This will override assetIds if populated.",
+            "description": "Array of asset grant requests. If populated, 'requests' will override 'assetIds'.",
             "nullable": true
           },
           "assetIds": {
@@ -79692,16 +79449,17 @@
               "type": "integer",
               "format": "int64"
             },
-            "description": "[Deprecated] The list of asset ids to grant this permission to. Requests will be prioritized over this list.",
-            "nullable": true
+            "description": "[Deprecated] The list of asset IDs to grant this permission to. 'requests' will be prioritized over this list.",
+            "nullable": true,
+            "deprecated": true
           },
           "enableDeepAccessCheck": {
             "type": "boolean",
-            "description": "An optional boolean to indicate if a deep access check (discovery) should be done."
+            "description": "[Do not use] An optional boolean to indicate if a deep access check should be done. This is not intended for public use."
           }
         },
         "additionalProperties": false,
-        "description": "Request object to grant one permission to multiple assets.\nWARNING: the XML comments on this class are viewable by the public."
+        "description": "Request object to grant one permission to multiple assets."
       },
       "BatchGrantPermissionsResponse": {
         "type": "object",
@@ -79712,15 +79470,7 @@
               "type": "integer",
               "format": "int64"
             },
-            "description": "The list of asset ids that granted successfully.",
-            "nullable": true
-          },
-          "dependenciesGrantResults": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/DependenciesGrantResult"
-            },
-            "description": "Dependencies that were granted.",
+            "description": "The list of asset IDs that granted successfully.",
             "nullable": true
           },
           "errors": {
@@ -79729,27 +79479,6 @@
               "$ref": "#/components/schemas/GrantPermissionError"
             },
             "description": "The list of grants that had errors.",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false,
-        "description": "Response object to grant one permission to multiple assets.\nWARNING: the XML comments on this class are viewable by the public."
-      },
-      "DependenciesGrantResult": {
-        "type": "object",
-        "properties": {
-          "parentAssetId": {
-            "type": "integer",
-            "description": "Parent asset id.",
-            "format": "int64"
-          },
-          "grantedDependentAssetIds": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int64"
-            },
-            "description": "Dependencies that were granted.",
             "nullable": true
           }
         },
@@ -79801,7 +79530,7 @@
         "properties": {
           "assetId": {
             "type": "integer",
-            "description": "Failed asset id.",
+            "description": "Failed asset ID.",
             "format": "int64"
           },
           "code": {
@@ -79809,7 +79538,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Single error for Roblox.AssetPermissionsApi.BatchGrantPermissionsResponse."
+        "description": "Single error for BatchGrantPermissionsResponse."
       },
       "SubjectType": {
         "enum": ["Invalid", "User", "Group", "GroupRoleset", "All", "Universe"],
@@ -80294,7 +80023,7 @@
       "x-roblox-tag-info": {
         "path": "generative-ai",
         "content": "Lists all HTTP APIs related to Generative AI and LLMs on Open Cloud.",
-        "ordering": ["Cloud_GenerateSpeech", "Cloud_GenerateSpeechAsset"]
+        "ordering": ["Cloud_GenerateSpeechAsset"]
       }
     },
     {

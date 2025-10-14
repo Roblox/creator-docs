@@ -325,6 +325,13 @@
             }
           },
           {
+            "name": "category",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "searchView",
             "in": "query",
             "description": "Indicates which fields will be populated in the response.",

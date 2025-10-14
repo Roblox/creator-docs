@@ -6098,86 +6098,6 @@
         ]
       }
     },
-    "/cloud/v2/universes/{universe_id}:generateSpeech": {
-      "post": {
-        "tags": ["Cloud"],
-        "summary": "Generate Speech",
-        "description": "Generates English speech audio from the specified text.",
-        "operationId": "Cloud_GenerateSpeech",
-        "parameters": [
-          {
-            "name": "universe_id",
-            "in": "path",
-            "description": "The universe ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GenerateSpeechRequest"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GenerateSpeechResponse"
-                }
-              }
-            }
-          }
-        },
-        "x-visibility": "BETA",
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "x-roblox-scopes": [
-          {
-            "description": "Required",
-            "name": "universe:write"
-          }
-        ],
-        "x-roblox-docs": {
-          "category": "Universes and places",
-          "methodProperties": {
-            "scopes": ["universe:write"]
-          },
-          "resource": {
-            "$ref": "#/components/schemas/Universe",
-            "name": "Universe"
-          }
-        },
-        "x-roblox-stability": "BETA",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "SECOND",
-            "maxInPeriod": 4
-          },
-          "perOauth2Authorization": {
-            "period": "SECOND",
-            "maxInPeriod": 4
-          }
-        },
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ]
-      }
-    },
     "/cloud/v2/universes/{universe_id}:generateSpeechAsset": {
       "post": {
         "tags": ["Cloud"],
@@ -7299,11 +7219,32 @@
             "description": "The text to be translated."
           },
           "speechStyle": {
-            "$ref": "#/components/schemas/GeneratedSpeechStyle",
+            "$ref": "#/components/schemas/GenerateSpeechAssetRequest_GeneratedSpeechStyle",
             "description": "The style of the generated speech."
           }
         },
         "description": "Specifies the text from which to generate speech and the voice style."
+      },
+      "GenerateSpeechAssetRequest_GeneratedSpeechStyle": {
+        "type": "object",
+        "properties": {
+          "voiceId": {
+            "example": "1",
+            "type": "string",
+            "description": "An ID corresponding to the voice type specified. A mapping of voice type\nto\nID number is available in the documentation."
+          },
+          "pitch": {
+            "type": "number",
+            "description": "The pitch of the generated speech.",
+            "format": "double"
+          },
+          "speed": {
+            "type": "number",
+            "description": "The speed of the generated speech.",
+            "format": "double"
+          }
+        },
+        "description": "Information about the style of generated speech."
       },
       "GenerateSpeechAssetResponse": {
         "type": "object",
@@ -7320,37 +7261,6 @@
         },
         "description": "Contains a generated audio asset in MPEG-2 Audio Layer III (MP3) format."
       },
-      "GenerateSpeechRequest": {
-        "required": ["text"],
-        "type": "object",
-        "properties": {
-          "text": {
-            "example": "Hello",
-            "type": "string",
-            "description": "The text to be translated."
-          },
-          "speechStyle": {
-            "$ref": "#/components/schemas/GeneratedSpeechStyle",
-            "description": "The style of generated speech."
-          }
-        },
-        "description": "Specifies the text from which to generate speech and the voice style."
-      },
-      "GenerateSpeechResponse": {
-        "type": "object",
-        "properties": {
-          "audio": {
-            "type": "string",
-            "description": "The generated audio."
-          },
-          "remainingQuota": {
-            "type": "integer",
-            "description": "The remaining quota (remaining number of requests available\nto the user this calendar month).",
-            "format": "int32"
-          }
-        },
-        "description": "Contains the generated audio bytes in RFC 6716 (Opus) format."
-      },
       "GenerateUserThumbnailMetadata": {
         "type": "object",
         "properties": {},
@@ -7365,27 +7275,6 @@
           }
         },
         "description": "Returns the URL for the user's avatar thumbnail."
-      },
-      "GeneratedSpeechStyle": {
-        "type": "object",
-        "properties": {
-          "voiceId": {
-            "example": "1",
-            "type": "string",
-            "description": "An ID corresponding to the voice type specified. A mapping of voice type to\nID number is available in the documentation."
-          },
-          "pitch": {
-            "type": "number",
-            "description": "The pitch of the generated speech.",
-            "format": "double"
-          },
-          "speed": {
-            "type": "number",
-            "description": "The speed of the generated speech.",
-            "format": "double"
-          }
-        },
-        "description": "Information about the style of generated speech."
       },
       "GetInstanceMetadata": {
         "type": "object",

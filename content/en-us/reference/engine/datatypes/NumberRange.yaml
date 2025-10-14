@@ -8,6 +8,10 @@ summary: |
   Represents a range of numbers.
 description: |
   The `Datatype.NumberRange` represents a range of numbers.
+
+  `NumberRange` stores its `Datatype.NumberRange.Min` and
+  `Datatype.NumberRange.Max` values as 32-bit floating-point numbers. Very large
+  numbers or numbers requiring high decimal precision may lose accuracy.
 code_samples: []
 tags: []
 deprecation_message: ''

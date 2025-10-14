@@ -5,9 +5,276 @@
     "version": "1.0",
     "x-roblox-extensions-version": "1.0.0"
   },
-  "paths": {},
+  "paths": {
+    "/asset-permissions-api/v1/assets/permissions": {
+      "patch": {
+        "tags": ["AssetPermissions"],
+        "summary": "Grant a subject permission to multiple assets.\n            \nAuthorization is required to grant permissions to the subject and asset IDs in the request.",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BatchGrantPermissionsRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BatchGrantPermissionsRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BatchGrantPermissionsRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BatchGrantPermissionsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BatchGrantPermissionsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "asset-permissions:write"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    }
+  },
   "components": {
-    "securitySchemes": {}
+    "schemas": {
+      "AssetAction": {
+        "enum": [
+          "Invalid",
+          "Edit",
+          "Use",
+          "Download",
+          "CopyFromRcc",
+          "UpdateFromRcc"
+        ],
+        "type": "string",
+        "description": "Asset permission actions that can be granted.\n            \nActions:\n* Invalid - default value, not a valid action.\n* Edit - grants the ability to edit and manage the asset.\n* Use - grants the ability to use the asset.\n* Download - grants the ability to download the asset.\n* CopyFromRcc - grants the ability to copy the asset from RCC, used to enable AssetService:CreatePlaceAsync().\n* UpdateFromRcc - grants the ability to update the asset from RCC, used to enable AssetService:UpdatePlaceAsync().\n            \nValid AssetType - SubjectType - Action combinations:\n* Animation - Group/User/Universe - Use\n* Audio - Group/User/Universe - Use\n* Decal - All/Group/User/Universe - Use\n* Image - All/Group/User/Universe - Use\n* Mesh - All/Group/User/Universe - Use\n* MeshPart - Group/User/Universe - Use\n* Model - User - Edit\n  * Group/User/Universe - Use\n* Place - All - Download\n  * Universe - CopyFromRcc/UpdateFromRcc\n* Video - Group/User/Universe - Use."
+      },
+      "AssetGrantRequest": {
+        "type": "object",
+        "properties": {
+          "assetId": {
+            "type": "integer",
+            "description": "The asset ID to grant permission to.",
+            "format": "int64"
+          },
+          "grantToDependencies": {
+            "type": "boolean",
+            "description": "Whether to extend the permission grant to dependencies of the asset. This will be done asynchronously after the main grant."
+          },
+          "parentVersionNumber": {
+            "type": "integer",
+            "description": "The version number of 'assetId' to use for determining asset dependencies.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Asset grant requests with additional options to grant to dependencies."
+      },
+      "BatchGrantPermissionsRequest": {
+        "type": "object",
+        "properties": {
+          "subjectType": {
+            "$ref": "#/components/schemas/SubjectType"
+          },
+          "subjectId": {
+            "type": "string",
+            "description": "The subject ID to grant to. Must be empty for SubjectType 'All'.",
+            "nullable": true
+          },
+          "action": {
+            "$ref": "#/components/schemas/AssetAction"
+          },
+          "requests": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AssetGrantRequest"
+            },
+            "description": "Array of asset grant requests. If populated, 'requests' will override 'assetIds'.",
+            "nullable": true
+          },
+          "assetIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "description": "[Deprecated] The list of asset IDs to grant this permission to. 'requests' will be prioritized over this list.",
+            "nullable": true,
+            "deprecated": true
+          },
+          "enableDeepAccessCheck": {
+            "type": "boolean",
+            "description": "[Do not use] An optional boolean to indicate if a deep access check should be done. This is not intended for public use."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request object to grant one permission to multiple assets."
+      },
+      "BatchGrantPermissionsResponse": {
+        "type": "object",
+        "properties": {
+          "successAssetIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "description": "The list of asset IDs that granted successfully.",
+            "nullable": true
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GrantPermissionError"
+            },
+            "description": "The list of grants that had errors.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response object to grant one permission to multiple assets."
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ErrorCode"
+          },
+          "message": {
+            "type": "string",
+            "description": "The human readable error message.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The error object for results."
+      },
+      "ErrorCode": {
+        "enum": [
+          "UnknownError",
+          "InvalidRequest",
+          "AssetNotFound",
+          "CannotManageAsset",
+          "PublicAssetCannotBeGrantedTo",
+          "CannotManageSubject",
+          "SubjectNotFound",
+          "AssetTypeNotEnabled",
+          "PermissionLimitReached"
+        ],
+        "type": "string",
+        "description": "Enums for customized error code in error responses."
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/Error"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The error object for responses."
+      },
+      "GrantPermissionError": {
+        "type": "object",
+        "properties": {
+          "assetId": {
+            "type": "integer",
+            "description": "Failed asset ID.",
+            "format": "int64"
+          },
+          "code": {
+            "$ref": "#/components/schemas/ErrorCode"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Single error for BatchGrantPermissionsResponse."
+      },
+      "SubjectType": {
+        "enum": ["Invalid", "User", "Group", "GroupRoleset", "All", "Universe"],
+        "type": "string"
+      }
+    },
+    "securitySchemes": {
+      "roblox-legacy-cookie": {
+        "type": "apiKey",
+        "description": "A browser cookie that represents the identity of a Roblox user. DO NOT SHARE THIS. Sharing this will allow someone to log in as you and to steal your Robux and items. When possible, use API keys with the x-api-key header or OAuth 2.0 instead for authentication.",
+        "in": "cookie",
+        "name": ".ROBLOSECURITY"
+      },
+      "roblox-api-key": {
+        "type": "apiKey",
+        "description": "A configurable key that allows granular access to Roblox resources. See https://create.roblox.com/docs/cloud/auth/api-keys for more information.",
+        "in": "header",
+        "name": "x-api-key"
+      }
+    }
   },
   "servers": [
     {

@@ -8,6 +8,8 @@ memory_category: Internal
 summary: |
   Records audio streams in-experience.
 description: |
+  **This API is in development and is not available yet.**
+
   `AudioRecorder` records audio streams in-experience with a fixed time limit of
   60 seconds. The results can be loaded into an `Class.AudioPlayer` for
   playback.

@@ -133,7 +133,12 @@
           "name": {
             "minLength": 1,
             "type": "string",
-            "description": "The name of the custom LLM."
+            "description": "The name of the custom LLM provider (claude, gemini, openai)."
+          },
+          "model_version": {
+            "type": "string",
+            "description": "The specific model version to use (e.g., \"gemini-2.5-pro-preview-03-25\").\nIf not provided, falls back to the provider name.",
+            "nullable": true
           },
           "url": {
             "minLength": 1,

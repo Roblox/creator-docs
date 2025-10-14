@@ -326,9 +326,9 @@ methods:
     capabilities: []
   - name: Instance:ClearAllChildren
     summary: |
-      This function destroys all of an instance's children.
+      This method destroys all of an instance's children.
     description: |
-      This function destroys all of an instance's children and descendants.
+      This method destroys all of an instance's children and descendants.
 
       ```
       local part = Instance.new("Part")
@@ -386,7 +386,7 @@ methods:
       `Class.Instance.Archivable|Archivable`. The copy of the root instance is
       returned by this method and its `Class.Instance.Parent|Parent` is set to
       `nil`. Note that if the instance itself has
-      `Class.Instance.Archivable|Archivable` set to `false`, this function will
+      `Class.Instance.Archivable|Archivable` set to `false`, this method will
       return `nil`.
 
       If a reference property such as `Class.ObjectValue.Value` is set in a
@@ -417,8 +417,8 @@ methods:
     description: |
       Sets the `Class.Instance.Parent` property to `nil`, locks the
       `Class.Instance.Parent` property, disconnects all connections, and calls
-      `Destroy()` on all children. This function is the correct way to dispose
-      of objects that are no longer required.
+      `Destroy()` on all children. This method is the correct way to dispose of
+      objects that are no longer required.
 
       Disposing of unneeded objects is important, since unnecessary objects and
       connections in a place use up memory which can lead to serious performance
@@ -472,7 +472,7 @@ methods:
       Returns the first ancestor of the `Class.Instance` whose
       `Class.Instance.Name` is equal to the given name.
 
-      This function works upwards, meaning it starts at the instance's immediate
+      This method works upwards, meaning it starts at the instance's immediate
       `Class.Instance.Parent` and works up towards the `Class.DataModel`. If no
       matching ancestor is found, it returns `nil`.
 
@@ -483,7 +483,7 @@ methods:
       local car = object:FindFirstAncestor("Car")
       ```
 
-      For variants of this function that find ancestors of a specific class,
+      For variants of this method that find ancestors of a specific class,
       please see `Class.Instance:FindFirstAncestorOfClass()` and
       `Class.Instance:FindFirstAncestorWhichIsA()`.
     code_samples: []
@@ -510,18 +510,18 @@ methods:
       Returns the first ancestor of the `Class.Instance` whose
       `Class.Object.ClassName` is equal to the given className.
 
-      This function works upwards, meaning it starts at the instance's immediate
+      This method works upwards, meaning it starts at the instance's immediate
       `Class.Instance.Parent` and works up towards the `Class.DataModel`. If no
       matching ancestor is found, it returns `nil`.
 
-      A common use of this function is finding the `Class.Model` a
+      A common use of this method is finding the `Class.Model` a
       `Class.BasePart` belongs to. For example:
 
       ```
       local model = part:FindFirstAncestorOfClass("Model")
       ```
 
-      This function is a variant of `Class.Instance:FindFirstAncestor()` which
+      This method is a variant of `Class.Instance:FindFirstAncestor()` which
       checks the `Class.Object.ClassName` property rather than
       `Class.Instance.Name`. `Class.Instance:FindFirstAncestorWhichIsA()` also
       exists, using the `Class.Object:IsA()` method instead to respect class
@@ -550,11 +550,11 @@ methods:
       Returns the first ancestor of the `Class.Instance` for whom
       `Class.Object:IsA()` returns true for the given className.
 
-      This function works upwards, meaning it starts at the instance's immediate
+      This method works upwards, meaning it starts at the instance's immediate
       `Class.Instance.Parent` and works up towards the `Class.DataModel`. If no
       matching ancestor is found, it returns `nil`.
 
-      Unlike `Class.Instance:FindFirstAncestorOfClass()`, this function uses
+      Unlike `Class.Instance:FindFirstAncestorOfClass()`, this method uses
       `Class.Object:IsA()` which respects class inheritance. For example:
 
       ```
@@ -594,7 +594,7 @@ methods:
     description: |
       Returns the first child of the `Class.Instance` with the given name, or
       `nil` if no such child exists. If the optional `recursive` argument is
-      `true`, this function searches all descendants rather than only the
+      `true`, this method searches all descendants rather than only the
       immediate children of the `Class.Instance`.
 
       ##### Checking the Existence of an Object
@@ -684,9 +684,9 @@ methods:
     description: |
       Returns the first child of the `Class.Instance` whose
       `Class.Object.ClassName|ClassName` is equal to the given `className`.
-      Unlike `Class.Instance:FindFirstChildWhichIsA()`, this function only
-      returns objects whose class matches `className`, ignoring class
-      inheritance. If no matching child is found, this function returns `nil`.
+      Unlike `Class.Instance:FindFirstChildWhichIsA()`, this method only returns
+      objects whose class matches `className`, ignoring class inheritance. If no
+      matching child is found, this method returns `nil`.
     code_samples:
       - Instance-FindFirstChildOfClass1
     parameters:
@@ -712,12 +712,11 @@ methods:
       Returns the first child of the `Class.Instance` for whom
       `Class.Object:IsA()` returns true for the given className.
 
-      If no matching child is found, this function returns `nil`. If the
-      optional recursive argument is true, this function searches all
-      descendants rather than only the immediate children of the
-      `Class.Instance`.
+      If no matching child is found, this method returns `nil`. If the optional
+      recursive argument is true, this method searches all descendants rather
+      than only the immediate children of the `Class.Instance`.
 
-      Unlike `Class.Instance:FindFirstChildOfClass()`, this function uses
+      Unlike `Class.Instance:FindFirstChildOfClass()`, this method uses
       `Class.Object:IsA()` which respects class inheritance. For example:
 
       ```lua
@@ -847,7 +846,7 @@ methods:
     summary: |
       Returns an event that fires when the given attribute changes.
     description: |
-      This function returns an event that behaves exactly like the
+      This method returns an event that behaves exactly like the
       `Class.Object.Changed|Changed` event, except that it only fires when the
       specific given attribute changes; effectively it is similar to
       `Class.Object:GetPropertyChangedSignal()|GetPropertyChangedSignal()` but
@@ -938,12 +937,12 @@ methods:
       Returns an array (a numerically indexed table) containing all of the
       instance's direct children, or every `Class.Instance` whose
       `Class.Instance.Parent|Parent` is equal to the object. The array can be
-      iterated upon using either a numeric or generic for-loop:
+      iterated upon using either a numeric or generic `for` loop:
 
       ```lua
       local Workspace = game:GetService("Workspace")
 
-      -- Numeric for-loop example
+      -- Numeric loop example
       local children = Workspace:GetChildren()
       for i = 1, #children do
       	local child = children[i]
@@ -954,17 +953,18 @@ methods:
       ```lua
       local Workspace = game:GetService("Workspace")
 
-      -- Generic for-loop example
+      -- Generic loop example
       local children = Workspace:GetChildren()
       for i, child in children do
       	print(child.Name .. " is child number " .. i)
       end
       ```
 
-      The children are sorted by the order in which their
-      `Class.Instance.Parent|Parent` property was set to the object.
+      Note that the array is **not** sorted in any particular order, so manual
+      sorting (for example using `Library.table.sort()`) is advised for sorting
+      the children returned by this method.
 
-      See also the `Class.Instance:GetDescendants()|GetDescendants` function.
+      See also the `Class.Instance:GetDescendants()|GetDescendants()` method.
     code_samples:
       - Instance-GetChildren1
     parameters: []
@@ -1042,12 +1042,12 @@ methods:
       return `Class.Workspace.Part`.
 
       When called on an `Class.Instance` that is not a descendant of the
-      `Class.DataModel`, this function considers all ancestors up to and
-      including the topmost one without a `Class.Instance.Parent|Parent`.
+      `Class.DataModel`, this method considers all ancestors up to and including
+      the topmost one without a `Class.Instance.Parent|Parent`.
 
-      This function is useful for logging and debugging. You shouldn't attempt
-      to parse the returned string for any useful operation; this function does
-      not escape periods (or any other symbol) in object names. In other words,
+      This method is useful for logging and debugging. You shouldn't attempt to
+      parse the returned string for any useful operation; this method does not
+      escape periods (or any other symbol) in object names. In other words,
       although its output often appears to be a valid Luau identifier, it is not
       guaranteed.
     code_samples:
@@ -1308,7 +1308,7 @@ methods:
       Sets the object's `Parent` to `nil`, and does the same for all its
       descendants.
     description: |
-      This function sets the object's `Class.Instance.Parent` to `nil`, and does
+      This method sets the object's `Class.Instance.Parent` to `nil`, and does
       the same for all its descendants.
 
       If the object is referenced before being removed, it is possible to
@@ -1461,7 +1461,7 @@ methods:
 
       ##### Notes
 
-      - This function does not yield if a child with the given name exists when
+      - This method does not yield if a child with the given name exists when
         the call is made.
       - `Class.Instance:FindFirstChild()` is a more efficient alternative to
         `Class.Instance:WaitForChild()|WaitForChild()` for objects that are
@@ -1698,8 +1698,8 @@ events:
     description: |
       Fires after an object is parented to this `Class.Instance`.
 
-      Note, when using this function on a client to detect objects created by
-      the server it is necessary to use `Class.Instance:WaitForChild()` when
+      Note, when using this method on a client to detect objects created by the
+      server it is necessary to use `Class.Instance:WaitForChild()` when
       indexing these object's descendants. This is because the object and its
       descendants are not guaranteed to replicate from the server to the client
       simultaneously. For example:
@@ -1713,8 +1713,8 @@ events:
       end)
       ```
 
-      Note, this function only works for immediate children of the
-      `Class.Instance`. For a function that captures all descendants, use
+      Note, this event only operates for immediate children of the
+      `Class.Instance`. For an event that captures all descendants, use
       `Class.Instance.DescendantAdded`.
 
       See also `Class.Instance.ChildRemoved`.
@@ -1742,8 +1742,8 @@ events:
       `Class.Instance:Destroy()`) as the destroy function sets an object's
       parent to `nil`.
 
-      This function only works for immediate children of the `Class.Instance`.
-      For a function that captures all descendants, use
+      This event only operates for immediate children of the `Class.Instance`.
+      For an event that captures all descendants, use
       `Class.Instance.DescendantRemoving`.
 
       See also `Class.Instance.ChildAdded`.

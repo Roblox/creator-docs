@@ -842,7 +842,7 @@
         "properties": {
           "assetType": {
             "type": "string",
-            "description": "The asset type. Can only be `Audio`, `Decal`, or `Model`. Required for [Create Asset](#POST-v1-assets).",
+            "description": "The asset type. Required for [Create Asset](#POST-v1-assets).",
             "format": "enum"
           },
           "assetId": {

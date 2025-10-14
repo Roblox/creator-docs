@@ -8,8 +8,11 @@ memory_category: Instances
 summary: |
   Applies an outline to text or a UI border.
 description: |
-  `Class.UIStroke` applies an outline to text or a UI border. Key features
-  include:
+  `Class.UIStroke` applies an outline to text or a UI border. Some properties
+  may require enabling the
+  [Improved UIStrokes beta](https://devforum.roblox.com/t/studio-beta-uistroke-improvements-scaling-offsets-and-more/3958036).
+
+  Key features include:
 
   - Adjust the `Class.UIStroke.Color|Color` and
     `Class.UIStroke.Thickness|Thickness` of the stroke outline.

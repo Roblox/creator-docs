@@ -1,0 +1,17 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "game-passes-http-service",
+    "version": "v1",
+    "x-roblox-extensions-version": "1.0.0"
+  },
+  "paths": {},
+  "components": {
+    "securitySchemes": {}
+  },
+  "servers": [
+    {
+      "url": "https://apis.roblox.com"
+    }
+  ]
+}
