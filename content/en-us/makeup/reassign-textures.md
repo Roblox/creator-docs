@@ -1,5 +1,5 @@
 ---
-title: Reassign Textures
+title: Reassign textures
 description: To import custom makeup, replace the existing textures on the head template with your custom textures.
 ---
 

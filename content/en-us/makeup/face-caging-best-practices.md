@@ -1,5 +1,5 @@
 ---
-title: Face Caging Best Practices
+title: Face caging best practices
 description: Tips on optimizing facial cages for use with makeup assets.
 hideBreadcrumbs: true
 ---
@@ -179,11 +179,11 @@ If working with sideburns, define the shape of the sideburns in front and around
 
 ## Missing features
 
-Not always applicable, but a good guide to fall back on.
+For faces that are missing major facial features, use the following guidance. These tips may not always applicable, but they provide a good framework to understand how to cage faces with missing features.
 
 - The face is divided horizontally into three equal parts
-  - Hairline to eyebrows.
-  - Eyebrows to the bottom of the nose.
+  - Hairline to eyebrows
+  - Eyebrows to the bottom of the nose
   - Bottom of the nose to the bottom of the chin.
 - Eyes are halfway down the head
 - Space between eyes is approximately eye width

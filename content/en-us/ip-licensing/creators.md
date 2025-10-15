@@ -67,6 +67,8 @@ We recommend that you include the following information in your pitch:
 - **Timeline**:
     - What the current state of your experience is and when you expect the IP to be fully integrated into your experience.
 
+Your pitch should **not** include foul or harmful language, negotiation intent, request for financial information, or request to connect with the IP holder outside of Roblox.
+
 ## View license agreements
 
 To view all of your offers and license agreements, go to **Intellectual Property** ⟩ **Licenses**. You can filter all license agreements by:
