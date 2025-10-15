@@ -57,10 +57,6 @@ events:
         type: int
         default:
         summary: ''
-      - name: reason
-        type: string
-        default:
-        summary: ''
     tags: []
     deprecation_message: ''
     security: None
