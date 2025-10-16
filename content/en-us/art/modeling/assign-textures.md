@@ -41,7 +41,7 @@ To assign Roblox-supported textures to your 3D model in Blender:
       3. Connect NormalMap's `Normal` to PrincipledBSDF's `Normal` socket.
 
 <Alert severity ='success'>
-After replacing your PBR textures, [export the entire head](../../art/modeling/export-requirements.md#blender) and follow instructions to [import into Studio](./3d-importer.md).
+After replacing your PBR textures, [export the entire model](../../art/modeling/export-requirements.md#blender) and follow instructions to [import into Studio](./3d-importer.md).
 </Alert>
 
 ## Maya
@@ -66,5 +66,5 @@ To assign Roblox-supported textures to your 3D model in Maya:
        <img src="../../assets/modeling/textures-decals/Maya-Assign-Material.png" width="65%" />
 
 <Alert severity ='success'>
-After replacing your PBR textures, [export the entire head](../../art/modeling/export-requirements.md#maya) and follow instructions to [import into Studio](./3d-importer.md).
+After replacing your PBR textures, [export the model](../../art/modeling/export-requirements.md#maya) and follow instructions to [import into Studio](./3d-importer.md).
 </Alert>

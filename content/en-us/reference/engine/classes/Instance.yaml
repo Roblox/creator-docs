@@ -1272,21 +1272,29 @@ methods:
     capabilities: []
   - name: Instance:IsPropertyModified
     summary: |
-      Returns `true` if the value stored in the specified property is equal to
-      the code-instantiated default.
+      Returns `true` if the value stored in the specified property is not equal
+      to the code-instantiated default.
     description: |
-      Returns `true` if the value stored in the specified property is equal to
-      the code‑instantiated default. For example, if outputting the
-      `Class.TextLabel.TextSize|TextSize` property of a `Class.TextLabel`
-      indicates `8`, then calling `IsPropertyModified("TextSize")` on the label
-      will return `false` because `8` is the default value for
-      `Class.TextLabel.TextSize` when the label is created via
-      `Instance.new("TextLabel")` rather than inserted through the Studio
-      insertion workflows.
+      This method indicates whether a specific property has been modified from
+      the code‑instantiated default. If called on an instance newly created via
+      code (`Datatype.Instance.new()`), this method will return `false`. If
+      called on an object newly created by Studio workflows such as
+      [Explorer](../../../studio/explorer.md) window insertion, the result may
+      differ.
+
+      For example, querying the
+      `Class.TextLabel.BackgroundColor3|BackgroundColor3` property of a
+      `Class.TextLabel` inserted via the [Explorer](../../../studio/explorer.md)
+      will return `true`, but querying the same property of a `Class.TextLabel`
+      created through `Datatype.Instance.new()` will return `false`, assuming no
+      other changes were made to its
+      `Class.TextLabel.BackgroundColor3|BackgroundColor3`.
 
       Note that if this method returns `true`, styling will **not** affect the
       property because explicitly modifying a property takes precedence over
-      styling it.
+      styling it. To reset a property to its code‑instantiated default and allow
+      styling on it, use
+      `Class.Instance:ResetPropertyToDefault()|ResetPropertyToDefault()`.
     code_samples: []
     parameters:
       - name: property
@@ -1297,7 +1305,8 @@ methods:
     returns:
       - type: boolean
         summary: |
-          Boolean indicating whether the property is modified.
+          Boolean indicating whether the property is modified from its
+          code‑instantiated default.
     tags: []
     deprecation_message: ''
     security: None

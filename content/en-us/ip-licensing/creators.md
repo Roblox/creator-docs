@@ -28,7 +28,7 @@ To apply to use an IP license in your experience:
 2. Select an IP from the available licenses.
 3. Click **Request license**.
 4. Select the experience you want to apply to the license with and click **Next**.
-5. (Optional) Under **Intent**, enter more details about your experience in the form of a pitch. This can help the IP holder make a decision about your application. For more information about writing a pitch, see [Pitch details](#pitch-details).
+5. Under **Intent**, enter more details about your experience in the form of a pitch. This can help the IP holder make a decision about your application. For more information about writing a pitch, see [Pitch details](#pitch-details).
 6. Under **Experience readiness**, select one of the following:
     - **Yes, my experience is ready to use this intellectual property** if you're done incorporating the IP into your experience. Revenue share will start as soon as the license agreement becomes active.
     - **No, I need time to incorporate this intellectual property into my experience** if you're not done incorporating the IP into your experience. Revenue share won't start immediately, but the IP holder can still turn on monetization at any time.

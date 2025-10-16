@@ -69,6 +69,12 @@ properties:
       "imposter" mesh (colored, coarse mesh that wraps around all child parts of
       the model) renders outside the streaming radius.
 
+      When set to `Enum.ModelLevelOfDetail|SLIM`, a Scalable Lightweight
+      Interactive Model, or SLIM, model (a composite of all child parts of the
+      model) renders at progressively lower resolutions at distances based on
+      the streaming radius. This greatly improves visual quality over
+      `StreamingMesh`.
+
       When set to `Enum.ModelLevelOfDetail|Disabled` or
       `Enum.ModelLevelOfDetail|Automatic`, lower resolution meshes will not be
       displayed.

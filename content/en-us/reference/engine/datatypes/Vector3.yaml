@@ -38,8 +38,8 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: Vector3.new
-    summary: Returns a new `Datatype.Vector3` from the given x, y, and z components.
-    description: Returns a new `Datatype.Vector3` using the given x, y, and z components.
+    summary: Returns a new `Datatype.Vector3` from the given `x`, `y`, and `z` components.
+    description: Returns a new `Datatype.Vector3` using the given `x`, `y`, and `z` components.
     parameters:
       - name: x
         type: number
@@ -81,9 +81,9 @@ constructors:
 constants:
   - name: Vector3.zero
     type: Vector3
-    summary: A `Datatype.Vector3` with a magnitude of zero.
+    summary: A `Datatype.Vector3` with a magnitude of `0`.
     description: |-
-      A `Datatype.Vector3` with a magnitude of zero.
+      A `Datatype.Vector3` with a magnitude of `0`.
 
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3` object.
@@ -96,9 +96,9 @@ constants:
     deprecation_message: ''
   - name: Vector3.one
     type: Vector3
-    summary: A `Datatype.Vector3` with a value of 1 on every axis.
+    summary: A `Datatype.Vector3` with a value of `1` on every axis.
     description: |-
-      A `Datatype.Vector3` with a value of 1 on every axis.
+      A `Datatype.Vector3` with a value of `1` on every axis.
 
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3` object.
@@ -111,9 +111,9 @@ constants:
     deprecation_message: ''
   - name: Vector3.xAxis
     type: Vector3
-    summary: A `Datatype.Vector3` with a value of 1 on the X axis.
+    summary: A `Datatype.Vector3` with a value of `1` on the **X** axis.
     description: |-
-      A `Datatype.Vector3` with a value of 1 on the X axis.
+      A `Datatype.Vector3` with a value of `1` on the **X** axis.
 
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3` object.
@@ -126,9 +126,9 @@ constants:
     deprecation_message: ''
   - name: Vector3.yAxis
     type: Vector3
-    summary: A `Datatype.Vector3` with a value of 1 on the Y axis.
+    summary: A `Datatype.Vector3` with a value of `1` on the **Y** axis.
     description: |-
-      A `Datatype.Vector3` with a value of 1 on the Y axis.
+      A `Datatype.Vector3` with a value of `1` on the **Y** axis.
 
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3` object.
@@ -141,9 +141,9 @@ constants:
     deprecation_message: ''
   - name: Vector3.zAxis
     type: Vector3
-    summary: A `Datatype.Vector3` with a value of 1 on the Z axis.
+    summary: A `Datatype.Vector3` with a value of `1` on the **Z** axis.
     description: |-
-      A `Datatype.Vector3` with a value of 1 on the Z axis.
+      A `Datatype.Vector3` with a value of `1` on the **Z** axis.
 
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3` object.
@@ -158,9 +158,9 @@ properties:
   - name: Vector3.zero
     type: Vector3
     summary: |
-      A `Datatype.Vector3` with a magnitude of zero.
+      A `Datatype.Vector3` with a magnitude of `0`.
     description: |
-      A `Datatype.Vector3` with a magnitude of zero.
+      A `Datatype.Vector3` with a magnitude of `0`.
 
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
@@ -176,9 +176,9 @@ properties:
   - name: Vector3.one
     type: Vector3
     summary: |
-      A `Datatype.Vector3` with a value of 1 on every axis.
+      A `Datatype.Vector3` with a value of `1` on every axis.
     description: |
-      A `Datatype.Vector3` with a value of 1 on every axis.
+      A `Datatype.Vector3` with a value of `1` on every axis.
 
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
@@ -194,9 +194,9 @@ properties:
   - name: Vector3.xAxis
     type: Vector3
     summary: |
-      A `Datatype.Vector3` with a value of 1 on the X axis.
+      A `Datatype.Vector3` with a value of `1` on the **X** axis.
     description: |
-      A `Datatype.Vector3` with a value of 1 on the X axis.
+      A `Datatype.Vector3` with a value of `1` on the **X** axis.
 
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
@@ -212,9 +212,9 @@ properties:
   - name: Vector3.yAxis
     type: Vector3
     summary: |
-      A `Datatype.Vector3` with a value of 1 on the Y axis.
+      A `Datatype.Vector3` with a value of `1 `on the **Y** axis.
     description: |
-      A `Datatype.Vector3` with a value of 1 on the Y axis.
+      A `Datatype.Vector3` with a value of `1` on the **Y** axis.
 
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
@@ -230,9 +230,9 @@ properties:
   - name: Vector3.zAxis
     type: Vector3
     summary: |
-      A `Datatype.Vector3` with a value of 1 on the Z axis.
+      A `Datatype.Vector3` with a value of `1` on the **Z** axis.
     description: |
-      A `Datatype.Vector3` with a value of 1 on the Z axis.
+      A `Datatype.Vector3` with a value of `1` on the **Z** axis.
 
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
@@ -248,9 +248,9 @@ properties:
   - name: Vector3.X
     type: number
     summary: |
-      The x-coordinate of the Vector3.
+      The **X** coordinate of the `Datatype.Vector3`.
     description: |
-      The x-coordinate of the Vector3.
+      The **X** coordinate of the `Datatype.Vector3`.
     default:
     code_samples: []
     tags: []
@@ -258,9 +258,9 @@ properties:
   - name: Vector3.Y
     type: number
     summary: |
-      The y-coordinate of the Vector3.
+      The **Y** coordinate of the `Datatype.Vector3`.
     description: |
-      The y-coordinate of the Vector3.
+      The **Y** coordinate of the `Datatype.Vector3`.
     default:
     code_samples: []
     tags: []
@@ -268,9 +268,9 @@ properties:
   - name: Vector3.Z
     type: number
     summary: |
-      The z-coordinate of the Vector3.
+      The **Z** coordinate of the `Datatype.Vector3`.
     description: |
-      The z-coordinate of the Vector3.
+      The **Z** coordinate of the `Datatype.Vector3`.
     default:
     code_samples: []
     tags: []
@@ -278,9 +278,9 @@ properties:
   - name: Vector3.Magnitude
     type: number
     summary: |
-      The length of the Vector3.
+      The length of the `Datatype.Vector3`.
     description: |
-      The length of the Vector3.
+      The length of the `Datatype.Vector3`.
     default:
     code_samples: []
     tags: []
@@ -289,10 +289,10 @@ properties:
     type: Vector3
     summary: |
       A normalized copy of the `Datatype.Vector3` - one that has the same
-      direction as the original but a magnitude of 1.
+      direction as the original but a magnitude of `1`.
     description: |
       A normalized copy of the `Datatype.Vector3` - one that has the same
-      direction as the original but a magnitude of 1.
+      direction as the original but a magnitude of `1`.
     default:
     code_samples: []
     tags: []
@@ -439,9 +439,7 @@ methods:
     description: |
       Returns a `Datatype.Vector3` linearly interpolated between this
       `Datatype.Vector3` and the given `goal` `Datatype.Vector3` by the fraction
-      `alpha`.
-
-      Note: the `alpha` value is **not** limited to the range [0, 1].
+      `alpha`. Note that `alpha` is **not** limited to the range `[0, 1]`.
     parameters:
       - name: goal
         type: Vector3

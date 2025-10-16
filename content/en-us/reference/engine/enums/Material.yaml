@@ -125,7 +125,7 @@ items:
     deprecation_message: ''
   - name: CorrodedMetal
     summary: |
-      Applies to `Class.BasePart` and `Class.Terrain`.
+      Applies to `Class.BasePart` only.
     value: 1040
     tags: []
     deprecation_message: ''

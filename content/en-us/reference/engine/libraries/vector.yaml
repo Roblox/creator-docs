@@ -245,6 +245,33 @@ functions:
     tags: []
     code_samples: []
     deprecation_message: ''
+  - name: vector.lerp
+    summary: |
+      Returns a vector linearly interpolated between two vectors by a fractional
+      alpha.
+    description: |
+      Returns a vector linearly interpolated between two vectors (`vec1`,
+      `vec2`) by the fraction `alpha`. Note that `alpha` is **not** limited to
+      the range `[0, 1]`.
+    parameters:
+      - name: vec1
+        type: vector
+        default:
+        summary: ''
+      - name: vec2
+        type: vector
+        default:
+        summary: ''
+      - name: alpha
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: vector
+        summary: ''
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: vector.max
     summary: |
       Applies `Library.math.max()` to the corresponding components of the input

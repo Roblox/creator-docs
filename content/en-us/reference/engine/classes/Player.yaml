@@ -666,8 +666,8 @@ properties:
     thread_safety: ReadSafe
     category: Behavior
     serialization:
-      can_load: true
-      can_save: true
+      can_load: false
+      can_save: false
     capabilities:
       - Players
   - name: Player.HasVerifiedBadge
@@ -1276,7 +1276,7 @@ methods:
           <tr>
             <th><code>LaunchData</code></th>
             <td>string</td>
-            <td>A plain or JSON encoded string that contains launch data specified in a <a href="../../../production/promotion/deeplinks.md">deep link</a> URL or
+            <td>A plain or JSON encoded string that contains launch data specified in a <a href="../../../production/promotion/share-links.md">share link</a> or
             <code>Class.ExperienceInviteOptions.LaunchData</code>.</td>
           </tr>
           <tr>
