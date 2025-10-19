@@ -1,4 +1,4 @@
----
+RED-IDK
 title: Script Editor
 description: Roblox's built-in, fully-featured script editor includes modern conveniences like autocomplete, code highlighting, and multi-cursor editing.
 ---
