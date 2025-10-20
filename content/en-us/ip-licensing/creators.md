@@ -30,8 +30,8 @@ To apply to use an IP license in your experience:
 4. Select the experience you want to apply to the license with and click **Next**.
 5. Under **Intent**, enter more details about your experience in the form of a pitch. This can help the IP holder make a decision about your application. For more information about writing a pitch, see [Pitch details](#pitch-details).
 6. Under **Experience readiness**, select one of the following:
-    - **Yes, my experience is ready to use this intellectual property** if you're done incorporating the IP into your experience. Revenue share will start as soon as the license agreement becomes active.
-    - **No, I need time to incorporate this intellectual property into my experience** if you're not done incorporating the IP into your experience. Revenue share won't start immediately, but the IP holder can still turn on monetization at any time.
+   - **Yes, my experience is ready to use this intellectual property** if you're done incorporating the IP into your experience. Revenue share will start as soon as the license agreement becomes active.
+   - **No, I need time to incorporate this intellectual property into my experience** if you're not done incorporating the IP into your experience. Revenue share won't start immediately, but the IP holder can still turn on monetization at any time.
 7. Download the content standards file, review and agree to the content standards, and click **Next**.
 8. Click **Request** to submit your application. The IP holder then reviews and either approves or rejects your application.
 
@@ -50,22 +50,26 @@ Including a well-written pitch with your request can make the IP holder more lik
 We recommend that you include the following information in your pitch:
 
 - **Overall vision**:
-    - What makes your adaption of the IP unique and exciting for players.
-    - Your team's relevant experience, including examples of previous games you have developed, along with any previous work involving IP.
-    - How you believe the IP integration will engage players, expand the IP's reach, and create new opportunities for monetization and community growth.
+
+  - What makes your adaption of the IP unique and exciting for players.
+  - Your team's relevant experience, including examples of previous games you have developed, along with any previous work involving IP.
+  - How you believe the IP integration will engage players, expand the IP's reach, and create new opportunities for monetization and community growth.
 
 - **Creative elements**:
-    - How your experience's visual and audio design will reflect the IP, including character models, environments, UI, and soundscapes. For example, if you're applying to integrate an IP like the Blair Witch, you can highlight the use of atmospheric visuals and sound effects that evoke suspense and dread.
-    - How the story, lore, or signature moments from the IP will be integrated into your experience. This could involve recreating iconic scenes, referencing key plot points, or introducing original storylines that fit within the universe of the IP.
-    - How you will maintain the integrity of the IP, making sure all creative choices align with the IP's established tone, themes, and content standards.
+
+  - How your experience's visual and audio design will reflect the IP, including character models, environments, UI, and soundscapes. For example, if you're applying to integrate an IP like the Blair Witch, you can highlight the use of atmospheric visuals and sound effects that evoke suspense and dread.
+  - How the story, lore, or signature moments from the IP will be integrated into your experience. This could involve recreating iconic scenes, referencing key plot points, or introducing original storylines that fit within the universe of the IP.
+  - How you will maintain the integrity of the IP, making sure all creative choices align with the IP's established tone, themes, and content standards.
 
 - **Gameplay**:
-    - How the main gameplay loops will leverage the IP's unique features. For example, a survival horror IP could include mechanics like stealth, resource management, or cooperative puzzle-solving.
-    - How players will interact with the IP. You can describe progression systems, challenges, and rewards that are consistent with the theme of the IP.
-    - How your experience genre aligns with the IP. For example, an IP like The Strangers might be more aligned with PvE escape games or social deduction horror, while an IP like Fall might be more aligned with high-stakes obbys or survival challenges.
+
+  - How the main gameplay loops will leverage the IP's unique features. For example, a survival horror IP could include mechanics like stealth, resource management, or cooperative puzzle-solving.
+  - How players will interact with the IP. You can describe progression systems, challenges, and rewards that are consistent with the theme of the IP.
+  - How your experience genre aligns with the IP. For example, an IP like The Strangers might be more aligned with PvE escape games or social deduction horror, while an IP like Fall might be more aligned with high-stakes obbys or survival challenges.
 
 - **Timeline**:
-    - What the current state of your experience is and when you expect the IP to be fully integrated into your experience.
+
+  - What the current state of your experience is and when you expect the IP to be fully integrated into your experience.
 
 Your pitch should **not** include foul or harmful language, negotiation intent, request for financial information, or request to connect with the IP holder outside of Roblox.
 
@@ -121,9 +125,9 @@ To dispute a license offer:
 2. Select the license offer you want to dispute.
 3. Under **Actions you can take**, click **dispute this license**.
 4. In the dispute modal, select one of the following reasons for the dispute:
-    - **My creation does not use this IP** if you believe that the IP holder made the license offer by mistake.
-    - **My use of this IP is licensed or otherwise authorized by law** if you believe that you already have the rights to use the IP.
-    - **I modified my creation to remove the IP** if you have fully removed the IP from your experience.
+   - **My creation does not use this IP** if you believe that the IP holder made the license offer by mistake.
+   - **My use of this IP is licensed or otherwise authorized by law** if you believe that you already have the rights to use the IP.
+   - **I modified my creation to remove the IP** if you have fully removed the IP from your experience.
 5. Click **Next**.
 6. Review and accept the legal agreements.
 7. Click **Dispute**. The IP holder can then accept or reject your offer dispute.

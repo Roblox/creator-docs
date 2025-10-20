@@ -106,6 +106,8 @@ navigation:
     section:
       - title: Asset delivery
         path: /cloud/api/asset-delivery
+      - title: Asset permissions
+        path: /cloud/api/asset-permissions
       - title: Badges
         path: /cloud/api/badges
       - title: Develop

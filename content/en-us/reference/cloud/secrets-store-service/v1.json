@@ -26,22 +26,7 @@
         "requestBody": {
           "description": "The secret to create with encrypted content",
           "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Secret"
-              }
-            },
             "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Secret"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Secret"
-              }
-            },
-            "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/Secret"
               }
@@ -244,22 +229,7 @@
         "requestBody": {
           "description": "The updated secret data with encrypted content",
           "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Secret"
-              }
-            },
             "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Secret"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Secret"
-              }
-            },
-            "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/Secret"
               }

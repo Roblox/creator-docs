@@ -3146,6 +3146,11 @@ navigation:
                     type: engineapi
                     source: /reference/engine/classes/Vector3Value.yaml
                     ignoreTranslation: true
+              - title: ValueCurve
+                path: /reference/engine/classes/ValueCurve
+                type: engineapi
+                source: /reference/engine/classes/ValueCurve.yaml
+                ignoreTranslation: true
               - title: Vector3Curve
                 path: /reference/engine/classes/Vector3Curve
                 type: engineapi
