@@ -1256,7 +1256,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500
@@ -1331,7 +1331,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 300
@@ -1446,7 +1446,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500000
@@ -1543,7 +1543,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 1000000
@@ -1627,7 +1627,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 1000000
@@ -1703,7 +1703,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 1000000
@@ -1804,7 +1804,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 1000000
@@ -1898,7 +1898,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500000
@@ -2020,7 +2020,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500
@@ -2144,7 +2144,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500
@@ -2250,7 +2250,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 1000000
@@ -2343,7 +2343,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 1000000
@@ -2428,7 +2428,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 1000000
@@ -2538,7 +2538,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 1000000
@@ -2641,7 +2641,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500000
@@ -2772,7 +2772,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500
@@ -2857,7 +2857,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 300
@@ -2894,7 +2894,7 @@
       "post": {
         "tags": ["Data and memory stores"],
         "summary": "Snapshot Data Stores",
-        "description": "Takes a new snapshot of the data stores in an experience.\n\nAfter a snapshot, the next write to every key in the experience will\ncreate a versioned backup of the previous data, regardless of the time of\nthe last write.\n\nIn effect, all data current at the time of the snapshot is guaranteed to be\navailable as a versioned backup for at least 30 days.\n\nSnapshots can be taken once per UTC day, per experience. If the latest\nsnapshot was taken within the same UTC day, this operation is a no-op and\nthe time of the latest snapshot will be returned.\n\nFor more information on using snapshots, see the [Data\nStores](https://create.roblox.com/docs/cloud-services/data-stores#snapshots)\nEngine guide.",
+        "description": "Takes a new snapshot of the data stores in an experience.\n\nAfter a snapshot, the next write to every key in the experience will\ncreate a versioned backup of the previous data, regardless of the time of\nthe last write.\n\nIn effect, all data current at the time of the snapshot is guaranteed to be\navailable as a versioned backup for at least 30 days.\n\nSnapshots can be taken once per UTC day, per experience. If the latest\nsnapshot was taken within the same UTC day, this operation is a no-op and\nthe time of the latest snapshot will be returned.\n\nFor more information on using snapshots, see the [Data\nstores](https://create.roblox.com/docs/cloud-services/data-stores#snapshots)\nEngine guide.",
         "operationId": "Cloud_SnapshotDataStores",
         "parameters": [
           {
@@ -2933,7 +2933,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 60
@@ -3945,7 +3945,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
+          "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500000
@@ -4051,7 +4051,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
+          "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500000
@@ -4144,7 +4144,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
+          "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500000
@@ -4229,7 +4229,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
+          "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500000
@@ -4339,7 +4339,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
+          "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500000
@@ -4442,7 +4442,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
+          "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500000
@@ -6474,6 +6474,78 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/universes#/Universe/Cloud_RestartUniverseServers"
         }
+      }
+    },
+    "/cloud/v2/universes/{universe_id}:translateText": {
+      "post": {
+        "summary": "Translate Text",
+        "description": "Translates the provided text from one language to another.",
+        "operationId": "Cloud_TranslateText",
+        "parameters": [
+          {
+            "name": "universe_id",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TranslateTextRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TranslateTextResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "x-roblox-rate-limits": {
+          "description": "Text translation requests are subject to additional rate limits [documented here](https://create.roblox.com/docs/production/localization/auto-translate-dynamic-content#limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 10000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe:write"
+          }
+        ],
+        "x-roblox-docs": {
+          "category": "Universes and places",
+          "methodProperties": {
+            "scopes": ["universe:write"]
+          },
+          "resource": {
+            "$ref": "#/components/schemas/Universe",
+            "name": "Universe"
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/cloud/v2/users/{user_id}": {
@@ -39814,6 +39886,512 @@
         ]
       }
     },
+    "/v1/groups/{groupId}/bans": {
+      "get": {
+        "summary": "Gets the bans for the group",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "groupId",
+            "description": "The group Id.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "description": "The number of results per request.",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "enum": [10, 25, 50, 100],
+              "default": 10
+            }
+          },
+          {
+            "in": "query",
+            "name": "cursor",
+            "description": "The paging cursor for the previous or next page.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "sortOrder",
+            "description": "The order the results are sorted in.",
+            "schema": {
+              "type": "string",
+              "enum": ["Asc", "Desc"],
+              "default": "Asc"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Groups.Api.GroupBanMemberResponse_"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Groups.Api.GroupBanMemberResponse_"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "19: You have insufficient permissions for this request."
+          },
+          "404": {
+            "description": "1: The group is invalid or does not exist."
+          },
+          "405": {
+            "description": "18: The operation is temporarily unavailable. Please try again later."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://groups.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      }
+    },
+    "/v1/groups/{groupId}/bans/{userId}": {
+      "get": {
+        "summary": "Fetch the group ban of a user from a group",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "groupId",
+            "description": "The group Id.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "path",
+            "name": "userId",
+            "description": "The user Id.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Groups.Api.GroupBanMemberResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Groups.Api.GroupBanMemberResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "19: You have insufficient permissions for this request."
+          },
+          "404": {
+            "description": "1: The group is invalid or does not exist.\r\n3: The user is invalid or does not exist."
+          },
+          "405": {
+            "description": "18: The operation is temporarily unavailable. Please try again later."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://groups.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "Bans a user from a group",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "groupId",
+            "description": "The group Id.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "path",
+            "name": "userId",
+            "description": "The Id of the user being banned.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Groups.Api.GroupBanMemberResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Groups.Api.GroupBanMemberResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "28: The user is already banned from the group.\r\n31: You cannot perform this action against the group owner."
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n19: You have insufficient permissions for this request."
+          },
+          "404": {
+            "description": "1: The group is invalid or does not exist.\r\n3: The user is invalid or does not exist.\r\n3: The user is invalid or does not exist.\r\n15: User is not a member of the group."
+          },
+          "405": {
+            "description": "18: The operation is temporarily unavailable. Please try again later."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://groups.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Unbans a user from a group",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "groupId",
+            "description": "The group Id.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "path",
+            "name": "userId",
+            "description": "The Id of the user being unbanned.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "29: The user is not banned from the group."
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n19: You have insufficient permissions for this request."
+          },
+          "404": {
+            "description": "1: The group is invalid or does not exist."
+          },
+          "405": {
+            "description": "18: The operation is temporarily unavailable. Please try again later."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://groups.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      }
+    },
+    "/v1/groups/{groupId}/blocked-keywords": {
+      "get": {
+        "summary": "Retrieves a paginated list of blocked keywords for a specific Group.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "groupId",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "description": "The number of results per request.",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "enum": [10, 25, 50, 100],
+              "default": 10
+            }
+          },
+          {
+            "in": "query",
+            "name": "cursor",
+            "description": "The paging cursor for the previous or next page.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "sortOrder",
+            "description": "The order the results are sorted in.",
+            "schema": {
+              "type": "string",
+              "enum": ["Asc", "Desc"],
+              "default": "Asc"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Groups.Api.BlockedKeywordPageResponse_Roblox.Groups.Client.BlockedKeywordModel_"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Groups.Api.BlockedKeywordPageResponse_Roblox.Groups.Client.BlockedKeywordModel_"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "1: Group is invalid or does not exist.\r\n6: Limit is invalid."
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "9: User is invalid or does not exist.\r\n10: Insufficient permissions to complete the request."
+          },
+          "405": {
+            "description": "31: Service is currently unavailable."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://groups.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "Adds new blocked keyword(s) to the specified Group.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "groupId",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Groups.Api.CreateBlockedKeywordsRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Groups.Api.CreateBlockedKeywordsRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Groups.Client.CreateBlockedKeywordsResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Groups.Client.CreateBlockedKeywordsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "1: Group is invalid or does not exist.\r\n2: One or more keywords are invalid.\r\n4: Invalid request.\r\n12: The provided content was moderated."
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n8: Insufficient permissions to complete the request.\r\n9: User is invalid or does not exist.\r\n10: Insufficient permissions to complete the request."
+          },
+          "405": {
+            "description": "31: Service is currently unavailable."
+          },
+          "409": {
+            "description": "11: There was a conflict in your request."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://groups.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      }
+    },
+    "/v1/groups/{groupId}/emotes": {
+      "get": {
+        "summary": "Gets a groups emote sets.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "groupId",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Groups.Client.GetGroupEmoteSetsResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Groups.Client.GetGroupEmoteSetsResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://groups.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      }
+    },
     "/v1/groups/{groupId}/join-requests": {
       "get": {
         "tags": ["Groups"],
@@ -43742,6 +44320,148 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/groups#/default/delete_v1_user_groups_primary"
         }
+      }
+    },
+    "/v1/groups/{groupId}/blocked-keywords/{keywordId}": {
+      "delete": {
+        "summary": "Deletes a specific blocked keyword from the specified Group.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "groupId",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "path",
+            "name": "keywordId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "1: Group is invalid or does not exist.\r\n3: KeywordId is invalid.\r\n4: Invalid request."
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n9: User is invalid or does not exist.\r\n10: Insufficient permissions to complete the request."
+          },
+          "404": {
+            "description": "7: Not found."
+          },
+          "405": {
+            "description": "31: Service is currently unavailable."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://groups.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      },
+      "patch": {
+        "summary": "Updates an existing blocked keyword for the specified Group.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "groupId",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "path",
+            "name": "keywordId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Groups.Api.UpdateBlockedKeywordRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Groups.Api.UpdateBlockedKeywordRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Groups.Client.BlockedKeywordModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Groups.Client.BlockedKeywordModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "1: Group is invalid or does not exist.\r\n3: KeywordId is invalid.\r\n4: Invalid request.\r\n12: The provided content was moderated."
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n8: Insufficient permissions to complete the request.\r\n9: User is invalid or does not exist.\r\n10: Insufficient permissions to complete the request."
+          },
+          "404": {
+            "description": "7: Not found."
+          },
+          "405": {
+            "description": "31: Service is currently unavailable."
+          },
+          "409": {
+            "description": "11: There was a conflict in your request."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://groups.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
       }
     },
     "/legacy-groups/v1/groups/{groupId}/description": {
@@ -60588,6 +61308,48 @@
         },
         "description": "Information about the expiration of a subscription."
       },
+      "TranslateTextRequest": {
+        "required": ["text"],
+        "type": "object",
+        "properties": {
+          "text": {
+            "example": "Hello",
+            "type": "string",
+            "description": "The text to be translated."
+          },
+          "sourceLanguageCode": {
+            "example": "en-us",
+            "type": "string",
+            "description": "The IETF BCP-47 language code representing the language of the\ninput text.\n\nIf not provided, the system automatically detects the\nsource language.\n\nSupported language codes include:\n\n- English (en-us)\n- French (fr-fr)\n- Vietnamese (vi-vn)\n- Thai (th-th)\n- Turkish (tr-tr)\n- Russian (ru-ru)\n- Spanish (es-es)\n- Portuguese (pt-br)\n- Korean (ko-kr)\n- Japanese (ja-jp)\n- Chinese Simplified (zh-cn)\n- Chinese Traditional (zh-tw)\n- German (de-de)\n- Polish (pl-pl)\n- Italian (it-it)\n- Indonesian (id-id)"
+          },
+          "targetLanguageCodes": {
+            "example": "fr-fr, vi-vn, ja-jp",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "A list of target language codes in IETF BCP-47 format for translation.\n\nSupported language codes include:\n\n- English (en-us)\n- French (fr-fr)\n- Vietnamese (vi-vn)\n- Thai (th-th)\n- Turkish (tr-tr)\n- Russian (ru-ru)\n- Spanish (es-es)\n- Portuguese (pt-br)\n- Korean (ko-kr)\n- Japanese (ja-jp)\n- Chinese Simplified (zh-cn)\n- Chinese Traditional (zh-tw)\n- German (de-de)\n- Polish (pl-pl)\n- Italian (it-it)\n- Indonesian (id-id)"
+          }
+        },
+        "description": "Contains the text to be translated, the source language (optional), and a\nlist of target languages for translation."
+      },
+      "TranslateTextResponse": {
+        "type": "object",
+        "properties": {
+          "sourceLanguageCode": {
+            "type": "string",
+            "description": "The IETF BCP-47 language code representing the detected or user-specified\nlanguage of the source text."
+          },
+          "translations": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "description": "A map containing the requested translations. The key is the IETF BCP-47\nlanguage code, and the value is the translated text for that language.\nThe map contains all requested translations."
+          }
+        },
+        "description": "Contains the detected or specified source language code and a map of\nrequested translations, where each key is a language code and the value is\nthe translated text."
+      },
       "UndeleteDataStoreRequest": {
         "type": "object",
         "properties": {},
@@ -72253,6 +73015,18 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Groups.Api.CreateBlockedKeywordsRequest": {
+        "type": "object",
+        "properties": {
+          "keywords": {
+            "type": "string"
+          },
+          "isPrivate": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.Groups.Api.GroupAllRolesResponse": {
         "description": "A group roles response model",
         "type": "object",
@@ -72268,6 +73042,24 @@
             "items": {
               "$ref": "#/components/schemas/Roblox.Groups.Api.GroupRoleResponse"
             }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Groups.Api.GroupBanMemberResponse": {
+        "description": "A ban member from group response",
+        "type": "object",
+        "properties": {
+          "user": {
+            "$ref": "#/components/schemas/Roblox.Groups.Api.Models.Response.UserModel"
+          },
+          "actingUser": {
+            "$ref": "#/components/schemas/Roblox.Groups.Api.UserGroupRoleResponse"
+          },
+          "created": {
+            "format": "date-time",
+            "description": "The group ban's created time",
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -72996,6 +73788,12 @@
             "description": "The account tenure requirement for the group. Null if the account tenure requirement could not be determined due to an error.",
             "enum": [0, 1, 2, 3, 4, 5],
             "type": "integer"
+          },
+          "slowmode": {
+            "format": "int32",
+            "description": "The slowmode level for the group (0-4).\r\n0 = No slowmode, 1-4 = Slowmode levels with increasing restrictions.",
+            "enum": [0, 1, 2, 3],
+            "type": "integer"
           }
         },
         "additionalProperties": false
@@ -73407,6 +74205,18 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Groups.Api.UpdateBlockedKeywordRequest": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string"
+          },
+          "isPrivate": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.Groups.Api.UpdateGroupDescriptionRequest": {
         "description": "A request model for setting a description for the group",
         "type": "object",
@@ -73486,6 +74296,12 @@
             "format": "int32",
             "description": "The account tenure requirement for the group.",
             "enum": [0, 1, 2, 3, 4, 5],
+            "type": "integer"
+          },
+          "slowmode": {
+            "format": "int32",
+            "description": "The slowmode level for the group (0-4).\r\n0 = No slowmode, 1-4 = Slowmode levels with increasing restrictions.\r\nNull = No change to current slowmode setting.",
+            "enum": [0, 1, 2, 3],
             "type": "integer"
           }
         },
@@ -73627,6 +74443,93 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Groups.Client.BlockedKeywordModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "keyword": {
+            "type": "string"
+          },
+          "createdBy": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "isPrivate": {
+            "type": "boolean"
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Groups.Client.CreateBlockedKeywordsResponse": {
+        "type": "object",
+        "properties": {
+          "createdKeywords": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Groups.Client.BlockedKeywordModel"
+            }
+          },
+          "hadModeratedKeywords": {
+            "type": "boolean"
+          },
+          "hadDuplicateKeywords": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Groups.Client.EmoteModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Groups.Client.EmoteSetModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "emotes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Groups.Client.EmoteModel"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Groups.Client.GetGroupEmoteSetsResponse": {
+        "type": "object",
+        "properties": {
+          "emoteSets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Groups.Client.EmoteSetModel"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.Groups.Client.GroupFeaturedContentResponse": {
         "type": "object",
         "properties": {
@@ -73639,6 +74542,30 @@
           },
           "contentId": {
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Groups.Api.BlockedKeywordPageResponse_Roblox.Groups.Client.BlockedKeywordModel_": {
+        "description": "ApiPageResponse for blocked keywords",
+        "type": "object",
+        "properties": {
+          "totalActiveKeywordsCount": {
+            "format": "int32",
+            "description": "Total number of active keywords in the group",
+            "type": "integer"
+          },
+          "previousPageCursor": {
+            "type": "string"
+          },
+          "nextPageCursor": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Groups.Client.BlockedKeywordModel"
+            }
           }
         },
         "additionalProperties": false
@@ -73753,6 +74680,24 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Roblox.Web.Responses.Groups.GroupBasicResponse"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Web.WebAPI.Models.ApiPageResponse_Roblox.Groups.Api.GroupBanMemberResponse_": {
+        "type": "object",
+        "properties": {
+          "previousPageCursor": {
+            "type": "string"
+          },
+          "nextPageCursor": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Groups.Api.GroupBanMemberResponse"
             }
           }
         },

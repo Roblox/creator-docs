@@ -1229,7 +1229,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500
@@ -1302,7 +1302,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 300
@@ -1415,7 +1415,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500000
@@ -1510,7 +1510,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 1000000
@@ -1592,7 +1592,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 1000000
@@ -1666,7 +1666,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 1000000
@@ -1765,7 +1765,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 1000000
@@ -1857,7 +1857,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500000
@@ -1977,7 +1977,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500
@@ -2099,7 +2099,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500
@@ -2203,7 +2203,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 1000000
@@ -2294,7 +2294,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 1000000
@@ -2377,7 +2377,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 1000000
@@ -2485,7 +2485,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 1000000
@@ -2586,7 +2586,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500000
@@ -2715,7 +2715,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500
@@ -2798,7 +2798,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 300
@@ -2832,7 +2832,7 @@
       "post": {
         "tags": ["Cloud"],
         "summary": "Snapshot Data Stores",
-        "description": "Takes a new snapshot of the data stores in an experience.\n\nAfter a snapshot, the next write to every key in the experience will\ncreate a versioned backup of the previous data, regardless of the time of\nthe last write.\n\nIn effect, all data current at the time of the snapshot is guaranteed to be\navailable as a versioned backup for at least 30 days.\n\nSnapshots can be taken once per UTC day, per experience. If the latest\nsnapshot was taken within the same UTC day, this operation is a no-op and\nthe time of the latest snapshot will be returned.\n\nFor more information on using snapshots, see the [Data\nStores](https://create.roblox.com/docs/cloud-services/data-stores#snapshots)\nEngine guide.",
+        "description": "Takes a new snapshot of the data stores in an experience.\n\nAfter a snapshot, the next write to every key in the experience will\ncreate a versioned backup of the previous data, regardless of the time of\nthe last write.\n\nIn effect, all data current at the time of the snapshot is guaranteed to be\navailable as a versioned backup for at least 30 days.\n\nSnapshots can be taken once per UTC day, per experience. If the latest\nsnapshot was taken within the same UTC day, this operation is a no-op and\nthe time of the latest snapshot will be returned.\n\nFor more information on using snapshots, see the [Data\nstores](https://create.roblox.com/docs/cloud-services/data-stores#snapshots)\nEngine guide.",
         "operationId": "Cloud_SnapshotDataStores",
         "parameters": [
           {
@@ -2872,7 +2872,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#standard-data-stores-throttling-limits).",
+          "description": "Data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 60
@@ -3862,7 +3862,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
+          "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500000
@@ -3966,7 +3966,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
+          "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500000
@@ -4057,7 +4057,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
+          "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500000
@@ -4140,7 +4140,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
+          "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500000
@@ -4248,7 +4248,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
+          "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500000
@@ -4349,7 +4349,7 @@
           "apiKeyWithHttpService": false
         },
         "x-roblox-rate-limits": {
-          "description": "Ordered Data Stores requests are subject to additional throttling limits described in the [Open Cloud guide for Data Stores](https://create.roblox.com/docs/cloud/guides/data-stores#ordered-data-stores-throttling-limits).",
+          "description": "Ordered data stores requests are subject to additional throttling limits described in the [Open Cloud guide for data stores](https://create.roblox.com/docs/cloud/guides/data-stores/throttling).",
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 500000
@@ -6336,6 +6336,80 @@
           },
           {
             "roblox-oauth2": []
+          }
+        ]
+      }
+    },
+    "/cloud/v2/universes/{universe_id}:translateText": {
+      "post": {
+        "tags": ["Cloud"],
+        "summary": "Translate Text",
+        "description": "Translates the provided text from one language to another.",
+        "operationId": "Cloud_TranslateText",
+        "parameters": [
+          {
+            "name": "universe_id",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TranslateTextRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TranslateTextResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "x-roblox-rate-limits": {
+          "description": "Text translation requests are subject to additional rate limits [documented here](https://create.roblox.com/docs/production/localization/auto-translate-dynamic-content#limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 10000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "description": "Required",
+            "name": "universe:write"
+          }
+        ],
+        "x-roblox-docs": {
+          "category": "Universes and places",
+          "methodProperties": {
+            "scopes": ["universe:write"]
+          },
+          "resource": {
+            "$ref": "#/components/schemas/Universe",
+            "name": "Universe"
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "security": [
+          {
+            "roblox-api-key": []
           }
         ]
       }
@@ -8937,6 +9011,48 @@
           }
         },
         "description": "Information about the expiration of a subscription."
+      },
+      "TranslateTextRequest": {
+        "required": ["text"],
+        "type": "object",
+        "properties": {
+          "text": {
+            "example": "Hello",
+            "type": "string",
+            "description": "The text to be translated."
+          },
+          "sourceLanguageCode": {
+            "example": "en-us",
+            "type": "string",
+            "description": "The IETF BCP-47 language code representing the language of the\ninput text.\n\nIf not provided, the system automatically detects the\nsource language.\n\nSupported language codes include:\n\n- English (en-us)\n- French (fr-fr)\n- Vietnamese (vi-vn)\n- Thai (th-th)\n- Turkish (tr-tr)\n- Russian (ru-ru)\n- Spanish (es-es)\n- Portuguese (pt-br)\n- Korean (ko-kr)\n- Japanese (ja-jp)\n- Chinese Simplified (zh-cn)\n- Chinese Traditional (zh-tw)\n- German (de-de)\n- Polish (pl-pl)\n- Italian (it-it)\n- Indonesian (id-id)"
+          },
+          "targetLanguageCodes": {
+            "example": "fr-fr, vi-vn, ja-jp",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "A list of target language codes in IETF BCP-47 format for translation.\n\nSupported language codes include:\n\n- English (en-us)\n- French (fr-fr)\n- Vietnamese (vi-vn)\n- Thai (th-th)\n- Turkish (tr-tr)\n- Russian (ru-ru)\n- Spanish (es-es)\n- Portuguese (pt-br)\n- Korean (ko-kr)\n- Japanese (ja-jp)\n- Chinese Simplified (zh-cn)\n- Chinese Traditional (zh-tw)\n- German (de-de)\n- Polish (pl-pl)\n- Italian (it-it)\n- Indonesian (id-id)"
+          }
+        },
+        "description": "Contains the text to be translated, the source language (optional), and a\nlist of target languages for translation."
+      },
+      "TranslateTextResponse": {
+        "type": "object",
+        "properties": {
+          "sourceLanguageCode": {
+            "type": "string",
+            "description": "The IETF BCP-47 language code representing the detected or user-specified\nlanguage of the source text."
+          },
+          "translations": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "description": "A map containing the requested translations. The key is the IETF BCP-47\nlanguage code, and the value is the translated text for that language.\nThe map contains all requested translations."
+          }
+        },
+        "description": "Contains the detected or specified source language code and a map of\nrequested translations, where each key is a language code and the value is\nthe translated text."
       },
       "UndeleteDataStoreRequest": {
         "type": "object",

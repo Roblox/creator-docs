@@ -102,7 +102,7 @@ properties:
       required to render a frame.
     description: |
       This property is only available in client scripts and is a measurement of
-      how long it took to render the most-recent frame in seconds. Divide 1 by
+      how long it took to render the most-recent frame in seconds. Divide `1` by
       this value to calculate an FPS value for the frame time. High frame times
       are indicative of performance problems on the device. Consider using the
       [MicroProfiler](/studio/microprofiler) to troubleshoot.
@@ -124,10 +124,10 @@ properties:
   - name: Stats.HeartbeatTime
     summary: |
       A measurement of the total amount of time it takes for the server to
-      update its Task Scheduler jobs in seconds.
+      update its task scheduler jobs in seconds.
     description: |
       This property is a measurement of the total amount of time it takes for
-      the server to update its Task Scheduler jobs in seconds. If this value is
+      the server to update its task scheduler jobs in seconds. If this value is
       high, examine
       [server compute](/performance-optimization/identifying#server-compute).
     code_samples: []
@@ -148,10 +148,10 @@ properties:
   - name: Stats.HeartbeatTimeMs
     summary: |
       A measurement of the total amount of time it takes long it takes for
-      Roblox to update all of its Task Scheduler jobs, in milliseconds.
+      Roblox to update all of its task scheduler jobs, in milliseconds.
     description: |
-      The HeartbeatTimeMs property is a measurement of the total amount of time
-      it takes long it takes for Roblox to update all of its Task Scheduler
+      The `HeartbeatTimeMs` property is a measurement of the total amount of
+      time it takes long it takes for Roblox to update all of its task scheduler
       jobs, in milliseconds. If this value is high, then it means one of the
       tasks are hogging up a lot of resources.
     code_samples: []
@@ -174,10 +174,10 @@ properties:
     summary: |
       A measurement of how many `Class.Instance` are currently in memory.
     description: |
-      InstanceCount is a read-only measurement of how many `Class.Instance` are
-      currently in memory. This includes the `Class.DataModel`, its descendants,
-      as well as any object created with `Datatype.Instance.new()` which is
-      still present in memory.
+      `InstanceCount` is a read-only measurement of how many `Class.Instance`
+      are currently in memory. This includes the `Class.DataModel`, its
+      descendants, as well as any object created with `Datatype.Instance.new()`
+      which is still present in memory.
     code_samples: []
     type: int
     tags:
@@ -198,13 +198,14 @@ properties:
       An indication of whether memory tracking is enabled. This is guaranteed to
       be unchanged until the next time the Client is started.
     description: |
-      If MemoryTrackingEnabled returns false, any API that returns
-      category-based memory usage e.g. `GetMemoryUsageMbForTag` or
-      `GetTotalMemoryUsageMb` will return 0 and emit a warning. Therefore, usage
-      of category-based memory usage API should be conditional on
-      MemoryTrackingEnabled returning true. The value of MemoryTrackingEnabled
-      will not change from one experience to the next. It will only potentially
-      change after restarting the Roblox client application.
+      If `MemoryTrackingEnabled` returns `false`, any API that returns
+      category-based memory usage such as `Class.Stats:GetMemoryUsageMbForTag()`
+      or `Class.Stats:GetMemoryUsageMbAllCategories()` will return `0` and emit
+      a warning. Therefore, usage of category-based memory usage API should be
+      conditional on `MemoryTrackingEnabled` returning `true`. The value of
+      `MemoryTrackingEnabled` will not change from one experience to the next;
+      it will only potentially change after restarting the Roblox client
+      application.
     code_samples: []
     type: boolean
     tags:
@@ -273,10 +274,10 @@ properties:
       In a networked game, this describes roughly how many kilobytes of physics
       data are being sent by the current instance, per second.
     description: |
-      PhysicsSendKbps describes roughly how many kilobytes of physics data are
-      being sent by the current instance, per second.If from the server's
+      `PhysicsSendKbps` describes roughly how many kilobytes of physics data are
+      being sent by the current instance, per second. If from the server's
       perspective, this represents the total amount of physics data being sent
-      to the clients connected to the server.If from a client's perspective,
+      to the clients connected to the server. If from a client's perspective,
       this represents the total amount of physics data being sent to the server.
     code_samples: []
     type: float
@@ -628,12 +629,13 @@ methods:
   - name: Stats:GetMemoryUsageMbAllCategories
     summary: |
       Returns the number of megabytes that are being consumed by all available
-      categories, or an empty array if `MemoryTrackingEnabled` is false.
+      categories, or an empty array if
+      `Class.Stats.MemoryTrackingEnabled|MemoryTrackingEnabled` is `false`.
     description: |
       Returns the number of megabytes that are being consumed by all available
-      categories. If `MemoryTrackingEnabled` is false, calling
-      GetMemoryUsageMbAllCategories will return an empty array and emit a
-      warning to the console.
+      categories. If `Class.Stats.MemoryTrackingEnabled|MemoryTrackingEnabled`
+      is `false`, calling `GetMemoryUsageMbAllCategories()` will return an empty
+      array and emit a warning to the console.
     code_samples: []
     parameters: []
     returns:
@@ -648,13 +650,14 @@ methods:
   - name: Stats:GetMemoryUsageMbForTag
     summary: |
       Returns the number of megabytes that are being consumed in the specified
-      `Enum.DeveloperMemoryTag` category, or 0 if `MemoryTrackingEnabled` is
-      false.
+      `Enum.DeveloperMemoryTag` category, or `0` if
+      `Class.Stats.MemoryTrackingEnabled|MemoryTrackingEnabled` is `false`.
     description: |
       Returns the number of megabytes that are being consumed in the specified
-      `Enum.DeveloperMemoryTag` category. If `MemoryTrackingEnabled` is false,
-      calling GetMemoryUsageMbForTag will return 0 and emit a warning to the
-      console.
+      `Enum.DeveloperMemoryTag` category. If
+      `Class.Stats.MemoryTrackingEnabled|MemoryTrackingEnabled` is `false`,
+      calling `GetMemoryUsageMbForTag()` will return `0` and emit a warning to
+      the console.
     code_samples: []
     parameters:
       - name: tag
@@ -672,11 +675,10 @@ methods:
   - name: Stats:GetTotalMemoryUsageMb
     summary: |
       Returns the total amount of memory being consumed by the current game
-      session, in megabytes, or 0 if `MemoryTrackingEnabled` is false.
+      session, in megabytes.
     description: |
       Returns the total amount of memory being consumed by the current game
-      session, in megabytes. If `MemoryTrackingEnabled` is false, calling
-      GetTotalMemoryUsageMb will return 0 and emit a warning to the console.
+      session, in megabytes.
 
       This method gets memory usage from the operating system, which may exclude
       memory that has been paged out to disk. As such, the return value tends to

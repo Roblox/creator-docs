@@ -7,8 +7,8 @@ type: enum
 summary: |
   An enum that specifies the reason for **Players.PlayerRemoving** signal.
 description: |
-  Second argument in **Players.PlayerRemoving**. Helps identify on whether a
-  kick was caused by the Roblox platform, of the Creator.
+  Second argument in `Class.Players.PlayerRemoving`. Helps identify whether a
+  kick was caused by the Roblox platform or the Creator.
 code_samples: []
 tags: []
 deprecation_message: ''

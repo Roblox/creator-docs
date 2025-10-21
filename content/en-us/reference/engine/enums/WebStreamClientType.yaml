@@ -25,10 +25,17 @@ items:
     deprecation_message: ''
   - name: RawStream
     summary: |
-      The client can connect to any server that provides streaming data transfer
-      (e.g.
+      General purpose HTTP streaming client. It can connect to any server that
+      provides streaming data transfer (e.g.
       [chunked encoding](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Transfer-Encoding)).
       It provides no guarantees about the stream format.
     value: 1
+    tags: []
+    deprecation_message: ''
+  - name: WebSocket
+    summary: |
+      [WebSocket](https://en.wikipedia.org/wiki/WebSocket) client that provides
+      a bidirectional communication channel over a TCP connection.
+    value: 2
     tags: []
     deprecation_message: ''

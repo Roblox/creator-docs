@@ -24,6 +24,10 @@ description: |
   The Changed event for this (and other objects like it) will fire with the new
   value being stored in the object, instead of a string representing the
   property being changed.
+
+  If [streaming](../../../workspace/streaming.md) is enabled, the `Value`
+  property is nil until the referenced object streams in, at which point the
+  `Changed` event fires.
 code_samples:
   - ObjectValue-Example
 inherits:

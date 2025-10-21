@@ -3146,6 +3146,11 @@ navigation:
                     type: engineapi
                     source: /reference/engine/classes/Vector3Value.yaml
                     ignoreTranslation: true
+              - title: ValueCurve
+                path: /reference/engine/classes/ValueCurve
+                type: engineapi
+                source: /reference/engine/classes/ValueCurve.yaml
+                ignoreTranslation: true
               - title: Vector3Curve
                 path: /reference/engine/classes/Vector3Curve
                 type: engineapi
@@ -4064,6 +4069,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/CompletionTriggerKind.yaml
         ignoreTranslation: true
+      - title: CompressionAlgorithm
+        path: /reference/engine/enums/CompressionAlgorithm
+        type: engineapi
+        source: /reference/engine/enums/CompressionAlgorithm.yaml
+        ignoreTranslation: true
       - title: ComputerCameraMovementMode
         path: /reference/engine/enums/ComputerCameraMovementMode
         type: engineapi
@@ -4483,6 +4493,11 @@ navigation:
         path: /reference/engine/enums/HapticEffectType
         type: engineapi
         source: /reference/engine/enums/HapticEffectType.yaml
+        ignoreTranslation: true
+      - title: HashAlgorithm
+        path: /reference/engine/enums/HashAlgorithm
+        type: engineapi
+        source: /reference/engine/enums/HashAlgorithm.yaml
         ignoreTranslation: true
       - title: HighlightDepthMode
         path: /reference/engine/enums/HighlightDepthMode
