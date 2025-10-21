@@ -30,12 +30,12 @@ description: |
 
   Within Studio, use
   `Class.HttpService:CreateWebStreamClient()|CreateWebStreamClient()` to process
-  data in real-time from HTTP servers that support streaming protocols such as
-  [SSE](https://en.wikipedia.org/wiki/Server-sent_events) or
-  [chunked transfer encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding).
-  You can connect callback functions to stream events, allowing you to process
-  data immediately as it arrives instead of waiting for the entire response to
-  complete.
+  data in real-time from servers that support streaming protocols such as
+  [SSE](https://en.wikipedia.org/wiki/Server-sent_events),
+  [chunked transfer encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding),
+  and [WebSockets](https://en.wikipedia.org/wiki/WebSocket). You can connect
+  callback functions to stream events, allowing you to process data immediately
+  as it arrives instead of waiting for the entire response to complete.
 
   Only send HTTP requests to trusted third-party platforms to avoid introducing
   unnecessary security risks to your experience.
@@ -92,11 +92,10 @@ methods:
       these callbacks to process messages as soon as they arrive, as well as
       respond to open, close, and error events.
 
-      There is a limit of six total `Enum.WebStreamClientType.SSE` or
-      `Enum.WebStreamClientType.RawStream` clients allowed at one time. Close
-      streams that you no longer need with `Class.WebStreamClient:Close()`. When
-      the stream is no longer needed, you should disconnect any associated
-      `Datatype.RBXScriptConnection` to avoid memory leaks.
+      There is a limit of six total clients allowed at one time. Close streams
+      that you no longer need with `Class.WebStreamClient:Close()`. When the
+      stream is no longer needed, you should disconnect any associated
+      `Datatype.RBXScriptConnection|RBXScriptConnections` to avoid memory leaks.
 
       This method is available in Studio only. If you use it inside scripts,
       make sure to remove any references before publishing the experience. We
