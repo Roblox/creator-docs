@@ -44,11 +44,11 @@ deprecation_message: ''
 properties:
   - name: CompressorSoundEffect.Attack
     summary: |
-      The time the effect takes to become active after its Threshold has be
+      The time the effect takes to become active after its Threshold has been
       reached.
     description: |
       Range: 0.1 to 1 (default 0.1) The time the effect takes to become active
-      after its Threshold has be reached. Measured in seconds.
+      after its Threshold has been reached. Measured in seconds.
     code_samples: []
     type: float
     tags: []
@@ -71,7 +71,7 @@ properties:
       Range: 0 to 30 (default 0) The overall amplification applied to the
       effect's Sound or SoundGroup after attenuation of sounds above the
       threshold. Keep in mind this amplification will occur as long as the
-      effect is Active, regardless of whether the Threshold has be reached or
+      effect is Active, regardless of whether the Threshold has been reached or
       not. Measured in dB.
     code_samples: []
     type: float
