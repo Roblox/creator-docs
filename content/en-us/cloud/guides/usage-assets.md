@@ -117,7 +117,7 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
       </td>
       <td>
         <ul>
-          <li>Only content downloaded from [Asset Delivery API](../../cloud/api/asset-delivery.md) is accepted. If you are not trying to download and re-upload meshes, then use [3D Importer](../../art/modeling/3d-importer.md) to import meshes instead.</li>
+          <li>Only content downloaded from [Asset delivery API](../api/asset-delivery.md) is accepted. If you are not trying to download and re-upload meshes, then use [3D Importer](../../art/modeling/3d-importer.md) to import meshes instead.</li>
           <li>Not available for updating.</li>
         </ul>
       </td>

@@ -4319,6 +4319,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/ExperienceAuthScope.yaml
         ignoreTranslation: true
+      - title: ExperienceEventStatus
+        path: /reference/engine/enums/ExperienceEventStatus
+        type: engineapi
+        source: /reference/engine/enums/ExperienceEventStatus.yaml
+        ignoreTranslation: true
       - title: ExplosionType
         path: /reference/engine/enums/ExplosionType
         type: engineapi

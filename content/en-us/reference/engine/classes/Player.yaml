@@ -658,7 +658,8 @@ properties:
         paused.
     code_samples: []
     type: boolean
-    tags: []
+    tags:
+      - Hidden
     deprecation_message: ''
     security:
       read: None

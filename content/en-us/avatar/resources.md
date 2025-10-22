@@ -342,7 +342,7 @@ Template file containing all content from previous templates, includes rig skele
 
 </CardContent>
 <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
-  <Button href="../assets/modeling/meshes/reference-files/Clothing_Cage_Templates.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download (.blend, .ma, .fbx)</Button>
+  <Button href="../assets/modeling/meshes/reference-files/Combined_Templates.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download (.blend, .ma, .fbx)</Button>
 </CardActions>
 </Card>
 </Grid>

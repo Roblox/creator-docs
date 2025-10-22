@@ -8,34 +8,37 @@ memory_category: Instances
 summary: |
   Adjusts the dynamic range of audio.
 description: |
-  A compressor is used to reduce the dynamic range of audio by moving the highs
-  and lows of a signal closer together. It does this by lowering the volume of
-  the highest parts of a source while at the same time raising the overall
-  volume. This type of effect is useful when you have many sounds playing and
-  you want to make sure the quieter ones are still audible. This effect can be
-  applied to either an individual `Class.Sound` or `Class.SoundGroup` by
-  parenting it to the desired instance.
+  A `Class.CompressorSoundEffect` is used to reduce the dynamic range of audio
+  by moving the highs and lows of a signal closer together. It does this by
+  lowering the volume of the highest parts of a source while at the same time
+  raising the overall volume. This type of effect is useful when you have many
+  sounds playing and you want to make sure the quieter ones are still audible.
+  This effect can be applied to either an individual `Class.Sound` or
+  `Class.SoundGroup` by parenting it to the desired instance.
 
   A compressor has several properties which determine how it works. The
-  `Class.CompressorSoundEffect.Threshold` is the audio level where the
+  `Class.CompressorSoundEffect.Threshold|Threshold` is the audio level where the
   compressor will start to lower the volume. As soon as the source goes below
   the threshold, the compressor will stop lowering the volume.
 
-  The `Class.CompressorSoundEffect.Attack` determines how long it takes for the
-  compressed effect to fully apply. After the threshold has been crossed the
-  compressor will lower the volume over time until the desired ratio has been
-  reached. It will take the time specified by Attack to reach this ratio.
+  The `Class.CompressorSoundEffect.Attack|Attack` determines how long it takes
+  for the compressed effect to fully apply. After the threshold has been crossed
+  the compressor will lower the volume over time until the desired ratio has
+  been reached. It will take the time specified by
+  `Class.CompressorSoundEffect.Attack|Attack` to reach this ratio.
 
-  The `Class.CompressorSoundEffect.Release` determines how long it takes for the
-  compressor to remove its effect. After the volume of the source is under the
-  threshold, the compressor will restore the volume back to the original over
-  the time specified by Release.
+  The `Class.CompressorSoundEffect.Release|Release` determines how long it takes
+  for the compressor to remove its effect. After the volume of the source is
+  under the threshold, the compressor will restore the volume back to the
+  original over the time specified by
+  `Class.CompressorSoundEffect.Release|Release`.
 
   Along with lowering the volume when the sound has passed the threshold, a
   compressor will also amplify the entire sound (after any threshold lowering
   has taken effect). This allows quieter sounds to be amplified while louder
-  sounds can stay about the same. The `Class.CompressorSoundEffect.GainMakeup`
-  determines how much the effect amplifies the sound.
+  sounds can stay about the same. The
+  `Class.CompressorSoundEffect.GainMakeup|GainMakeup` determines how much the
+  effect amplifies the sound.
 code_samples: []
 inherits:
   - SoundEffect
@@ -44,11 +47,12 @@ deprecation_message: ''
 properties:
   - name: CompressorSoundEffect.Attack
     summary: |
-      The time the effect takes to become active after its Threshold has been
-      reached.
+      The time the effect takes to become active after its
+      `Class.CompressorSoundEffect.Threshold|Threshold` has been reached.
     description: |
-      Range: 0.1 to 1 (default 0.1) The time the effect takes to become active
-      after its Threshold has been reached. Measured in seconds.
+      The time the effect takes to become active after its
+      `Class.CompressorSoundEffect.Threshold|Threshold` has been reached. Range
+      is `0.1` to `1` (default `0.1`), measured in seconds.
     code_samples: []
     type: float
     tags: []
@@ -65,14 +69,15 @@ properties:
       - LegacySound
   - name: CompressorSoundEffect.GainMakeup
     summary: |
-      The overall amplification applied to the effect's Sound or SoundGroup
-      after attenuation of sounds above the threshold.
+      The overall amplification applied to the effect's `Class.Sound` or
+      `Class.SoundGroup` after attenuation of sounds above the threshold.
     description: |
-      Range: 0 to 30 (default 0) The overall amplification applied to the
-      effect's Sound or SoundGroup after attenuation of sounds above the
-      threshold. Keep in mind this amplification will occur as long as the
-      effect is Active, regardless of whether the Threshold has been reached or
-      not. Measured in dB.
+      The overall amplification applied to the effect's `Class.Sound` or
+      `Class.SoundGroup` after attenuation of sounds above the threshold. Keep
+      in mind this amplification will occur as long as the effect is active,
+      regardless of whether the
+      `Class.CompressorSoundEffect.Threshold|Threshold` has been reached or not.
+      Range is `0` to `30` (default `0`), measured in dB.
     code_samples: []
     type: float
     tags: []
@@ -89,11 +94,11 @@ properties:
       - LegacySound
   - name: CompressorSoundEffect.Ratio
     summary: |
-      The ratio between the `Class.CompressorSoundEffect.SideChain` sound
-      effect, and this sound effect.
+      The ratio between the `Class.CompressorSoundEffect.SideChain|SideChain`
+      sound effect, and this sound effect.
     description: |
-      The ratio between the `Class.CompressorSoundEffect.SideChain` sound
-      effect, and this sound effect.
+      The ratio between the `Class.CompressorSoundEffect.SideChain|SideChain`
+      sound effect, and this sound effect.
     code_samples: []
     type: float
     tags: []
@@ -111,10 +116,11 @@ properties:
   - name: CompressorSoundEffect.Release
     summary: |
       The time the effect takes to become inactive after its sound is below the
-      Threshold.
+      `Class.CompressorSoundEffect.Threshold|Threshold`.
     description: |
-      Range: 0 to 5 (default 0.1) The time the effect takes to become inactive
-      after its sound is below the Threshold. Measured in seconds.
+      The time the effect takes to become inactive after its sound is below the
+      `Class.CompressorSoundEffect.Threshold|Threshold`. Range is `0` to `5`
+      (default `0.1`), measured in seconds.
     code_samples: []
     type: float
     tags: []
@@ -135,10 +141,9 @@ properties:
       the sidechain depends on the `Class.Sound` or `Class.SoundGroup` linked to
       it.
     description: |
-      Applies a
-      <a rel="nofollow" href="https://en.wikipedia.org/wiki/Ducking">ducking</a>
-      effect to the compressor sound effect. The behavior of the sidechain
-      depends on the `Class.Sound` or `Class.SoundGroup` linked to it.
+      Applies a ducking effect to the compressor sound effect. The behavior of
+      the sidechain depends on the `Class.Sound` or `Class.SoundGroup` linked to
+      it.
     code_samples: []
     type: Instance
     tags: []
@@ -157,10 +162,11 @@ properties:
     summary: |
       Volume level at which point the compressor applies its effect.
     description: |
-      Range: -80 to 0 (default 0) Volume level at which point the compressor
-      applies its effect. If the effect's Sound or SoundGroup is below the
-      effect will not attenuate the sound, although the GainMakeup will still be
-      applied. Measured in dB.
+      Volume level at which point the compressor applies its effect. If the
+      effect's `Class.Sound` or `Class.SoundGroup` is below the effect will not
+      attenuate the sound, although the
+      `Class.CompressorSoundEffect.GainMakeup|GainMakeup` will still be applied.
+      Range is `-80` to `0` (default `0`), measured in dB.
     code_samples: []
     type: float
     tags: []

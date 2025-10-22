@@ -56,6 +56,29 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: WebStreamClient:Send
+    summary: |
+      Enqueues data to be transmitted to the server over the streaming
+      connection.
+    description: |
+      Enqueues data to be transmitted to the server over the connection. Only
+      works on clients created with `Enum.WebStreamClientType.WebSocket`. For
+      other client types it does nothing.
+    code_samples: []
+    parameters:
+      - name: data
+        type: string
+        default:
+        summary: |
+          Text string to send to the server.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
 events:
   - name: WebStreamClient.Closed
     summary: ''
