@@ -513,6 +513,10 @@ methods:
       Additionally, benign asset types such as t-shirts, shirts, pants and
       avatar accessories are loadable from any game as they are `OpenUse`.
 
+      To load assets which do not meet the above criteria, such as free Models
+      published on the Store, you must use `Class.AssetService:LoadAssetAsync()`
+      and enable `Class.AssetService.AllowInsertFreeAssets`.
+
       See also:
 
       - `Class.AssetService:GetBundleDetailsAsync()`, to find out which assets

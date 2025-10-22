@@ -22,8 +22,8 @@ Makeup is currently in beta and is not yet available for sale or implementation 
 Makeup is made up of multiple textures baked into a `Class.Decal` that you can apply to a face of a character. There are three primary regions of the face (eyes, lips, face/cheeks) that you can apply textures to. Each region has some overlapping surfaces with other regions.
 
 <GridContainer numColumns="3">
-  <figure><img src="../assets/makeup/Makeup-Eye-Section.png" /><figcaption>Eye region<sup>&dagger;</sup></figcaption></figure>
-  <figure><img src="../assets/makeup/Makeup-Mouth-Section.png" /><figcaption>Lips region<sup>&dagger;</sup></figcaption></figure>
+  <figure><img src="../assets/makeup/Makeup-Eye-Section.png" /><figcaption>Eye region</figcaption></figure>
+  <figure><img src="../assets/makeup/Makeup-Mouth-Section.png" /><figcaption>Lips region</figcaption></figure>
   <figure><img src="../assets/makeup/Makeup-Face-Section.png" /><figcaption>Face/cheek region</figcaption></figure>
 </GridContainer>
 

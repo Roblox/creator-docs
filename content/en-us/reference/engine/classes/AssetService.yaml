@@ -18,7 +18,37 @@ tags:
   - NotCreatable
   - Service
 deprecation_message: ''
-properties: []
+properties:
+  - name: AssetService.AllowInsertFreeAssets
+    summary: |
+      Controls whether `Class.AssetService:LoadAssetAsync()` can load assets
+      that are not owned by the experience creator.
+    description: |
+      This property can only be modified in Studio by changing **Allow Loading
+      Third Party Assets** in **Home > Game Settings > Security**.
+
+      When `false` (default), `Class.AssetService:LoadAssetAsync()` can only
+      load assets that meet one of the following:
+
+      - The asset must be **created or owned** by the game creator.
+      - The asset must be **shared** by the asset owner.
+      - The asset must be owned by Roblox.
+
+      When `true`, `Class.AssetService:LoadAssetAsync()` can additionally load
+      any public free asset on the Creator Store.
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
 methods:
   - name: AssetService:ComposeDecalAsync
     summary: |
@@ -654,6 +684,72 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: AssetService:LoadAssetAsync
+    summary: |
+      Loads a `Class.Model` instance given its asset ID. This is the modern
+      replacement for `Class.InsertService:LoadAsset()` and supports loading
+      third-party assets.
+    description: |
+      Loads the latest version of an asset from the given `assetId` and returns
+      it wrapped in a `Class.Model`. This method is the modern replacement for
+      `Class.InsertService:LoadAsset()` and
+      `Class.InsertService:LoadAssetVersion()` methods.
+
+      Calls to this function may fail if the asset does not exist, or if the
+      server providing the model is having problems. It is recommended to wrap
+      calls to this function in `pcall()` to handle potential errors.
+
+      ```lua
+      local AssetService = game:GetService("AssetService")
+
+      local assetId = 257489726
+
+      local success, model = pcall(AssetService.LoadAssetAsync, AssetService, assetId)
+      if success and model then
+      	print("Model loaded successfully")
+      	model.Parent = workspace
+      else
+      	warn("Model failed to load:", model) -- 'model' will contain the error message
+      end
+      ```
+
+      #### Script Sandbox Security
+
+      For enhanced security, the returned `Class.Model` is sandboxed by default
+      (`Class.Model.Sandboxed|Sandboxed` is `true`) and has no script
+      `Enum.SecurityCapability|Capabilities`. This prevents untrusted scripts
+      descending from the returned Model from running. To enable scripts in a
+      model you trust, you can manually grant a safe set of
+      `Enum.SecurityCapability|Capabilities` on the Model after loading.
+
+      #### Third-Party Asset Loading
+
+      Unlike `Class.InsertService:LoadAsset()`, this method can load public
+      assets created by **third parties** (assets not owned by the experience
+      creator). To enable this functionality, you must first enable the **Allow
+      Loading Third Party Assets** setting in **Home > Game Settings >
+      Security**.
+
+      If this setting is disabled (which it is by default), `LoadAssetAsync`
+      will only load assets that are owned by the experience creator, behaving
+      identically to the old `Class.InsertService:LoadAsset()` security check.
+    code_samples: []
+    parameters:
+      - name: assetId
+        type: int64
+        default:
+        summary: |
+          The asset ID number of the asset being loaded.
+    returns:
+      - type: Instance
+        summary: |
+          A `Class.Model` instance containing the loaded asset.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
   - name: AssetService:PromptCreateAssetAsync
     summary: |
       Allows in-experience asset creation for users by prompting a publish
@@ -766,20 +862,20 @@ methods:
 
       <table>
         <thead>
-          <tr>
-            <th>Error Message</th>
-            <th>Reason</th>
-          </tr>
+      	<tr>
+      		<th>Error Message</th>
+      		<th>Reason</th>
+      	</tr>
         </thead>
         <tbody>
-          <tr>
-            <td>HTTP 429 (Too Many Requests)</td>
-            <td><code>Class.AssetService:SearchAudio()</code> has been called too many times.</td>
-          </tr>
-          <tr>
-            <td>Unexpected type for data, expected array got null</td>
-            <td>The keyword argument was filtered.</td>
-          </tr>
+      	<tr>
+      		<td>HTTP 429 (Too Many Requests)</td>
+      		<td><code>Class.AssetService:SearchAudio()</code> has been called too many times.</td>
+      	</tr>
+      	<tr>
+      		<td>Unexpected type for data, expected array got null</td>
+      		<td>The keyword argument was filtered.</td>
+      	</tr>
         </tbody>
       </table>
     code_samples:

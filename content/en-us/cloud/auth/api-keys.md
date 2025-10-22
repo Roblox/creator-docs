@@ -41,6 +41,9 @@ To create an API key:
    </Alert>
 
 1. If applicable, select the experience that you want to access with the API key.
+
+   For user-owned API keys, you have the option to disable **Restrict by Experience**. When disabled, your API key has access to all of your user-owned experiences and any group-owned experiences that you have the correct permissions for, including experiences created in the future.
+
 1. From the **Select Operations** dropdown, select the operations that you
    want to enable for the API key.
 
@@ -52,7 +55,7 @@ To create an API key:
    For security reasons, give each API key the minimum number of required permissions. If an API key leaks, this principle of least privilege ensures that only a subset of your resources are compromised.
    </Alert>
 
-1. (Optional) In the **Security** section, explicitly restrict IP access to the key using [CIDR
+1. **(Optional)** In the **Security** section, explicitly restrict IP access to the key using [CIDR
    notation](#cidr-format). You can find
    the IP address of your local machine and add it to the **Accepted IP
    Addresses** section along with additional IP addresses for those that need

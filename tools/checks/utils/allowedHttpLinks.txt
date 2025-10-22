@@ -713,7 +713,7 @@ https://github.com/roblox/roact-performance-benchmarks
 https://github.com/roblox/graphql-lua
 https://github.com/roblox/graphql-tag-lua
 https://github.com/roblox/apollo-client-lua
-https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation
+https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing
 https://en.wikipedia.org/wiki/Zstd
 https://en.wikipedia.org/wiki/Cryptographic_hash_function
 https://en.wikipedia.org/wiki/BLAKE2

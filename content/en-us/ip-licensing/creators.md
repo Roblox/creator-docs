@@ -71,7 +71,13 @@ We recommend that you include the following information in your pitch:
 
   - What the current state of your experience is and when you expect the IP to be fully integrated into your experience.
 
-Your pitch should **not** include foul or harmful language, negotiation intent, request for financial information, or request to connect with the IP holder outside of Roblox.
+Your pitch must **not** include any of the following:
+
+- Attempts to negotiate or discuss terms
+- Requests for financial of personal information
+- Foul or harmful language
+- Legal or threatening language that could be considered harassing for a 13+ audience
+- Requests to connect with the IP holder outside of Roblox
 
 ## View license agreements
 

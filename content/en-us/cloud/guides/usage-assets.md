@@ -34,6 +34,24 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
   </thead>
   <tbody>
     <tr>
+      <td><a href="../../animation/index.md">Animation</a></td>
+      <td>
+        <ul>
+          <li>`.rbxm`</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>`model/x-rbxm`</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>`.rbxm` files edited outside of [Roblox Studio](../../studio/setup.md) might not upload or function.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
       <td><a href="../../audio/assets.md">Audio</a></td>
       <td>
         <ul>
@@ -99,7 +117,7 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
       </td>
       <td>
         <ul>
-          <li>Only content downloaded from [Asset Delivery API](../../cloud/api/asset-delivery.md) is accepted. If you are not trying to export and re-import meshes, then use [3D Importer](../../art/modeling/3d-importer.md) to import meshes instead.</li>
+          <li>Only content downloaded from [Asset Delivery API](../../cloud/api/asset-delivery.md) is accepted. If you are not trying to download and re-upload meshes, then use [3D Importer](../../art/modeling/3d-importer.md) to import meshes instead.</li>
           <li>Not available for updating.</li>
         </ul>
       </td>
@@ -109,21 +127,27 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
       <td>
         <ul>
           <li>`.fbx`</li>
+          <li>`.gltf`</li>
+          <li>`.glb`</li>
+          <li>`.rbxm`</li>
         </ul>
       </td>
       <td>
         <ul>
           <li>`model/fbx`</li>
+          <li>`model/gltf+json`</li>
+          <li>`model/gltf-binary`</li>
+          <li>`model/x-rbxm`</li>
         </ul>
       </td>
       <td>
         <ul>
-          <li>Imports custom 3D models (`.fbx`) as a `Class.Model` container containing one or more `Class.MeshPart` objects.</li>
+          <li>Imports custom 3D models as a `Class.Model` container containing one or more `Class.MeshPart` objects.</li>
           <ul>
             <li>Depending on your use-case, consider uploading custom 3D models manually using the [3D Importer](../../art/modeling/3d-importer.md).</li>
           <li>The 3D Importer provides a 3D preview, various error-checking, and many customizable import settings.</li>
           </ul>
-          <li>Does not support Roblox `.rbxm` formats</li>
+          <li>`.rbxm` files edited outside of [Roblox Studio](../../studio/setup.md) might not upload or function.</li>
         </ul>
       </td>
     </tr>

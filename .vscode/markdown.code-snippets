@@ -49,5 +49,178 @@
       "</Tabs>"
     ],
     "scope": "markdown"
+  },
+  "Markdown Alert": {
+    "prefix": ["rbx:alert"],
+    "description": "Alert component for warnings, info, success, error",
+    "body": [
+      "<Alert severity='${1|info,warning,error,success|}'>",
+      "${0}",
+      "</Alert>"
+    ],
+    "scope": "markdown"
+  },
+  "Markdown Grid Container": {
+    "prefix": ["rbx:grid-container"],
+    "description": "Grid container for layout",
+    "body": [
+      "<GridContainer numColumns='${1:2}'>",
+      "\t${0}",
+      "</GridContainer>"
+    ],
+    "scope": "markdown"
+  },
+  "Markdown Grid": {
+    "prefix": ["rbx:grid"],
+    "description": "Grid component with items",
+    "body": [
+      "<Grid container spacing={${1:2}} style={{marginBottom: ${2:24}}}>",
+      "\t<Grid item container XSmall={12} Medium={6} Large={4} direction='row' style={{gap: ${3:24}, marginBottom: ${4:12}}}>",
+      "\t\t<Grid item container wrap='nowrap' direction='column' style={{gap: ${5:8}, flex: 1}}>",
+      "\t\t\t${0}",
+      "\t\t</Grid>",
+      "\t</Grid>",
+      "</Grid>"
+    ],
+    "scope": "markdown"
+  },
+  "Markdown Typography": {
+    "prefix": ["rbx:typography"],
+    "description": "Typography component",
+    "body": [
+      "<Typography variant='${1|h1,h2,h3,h4,h5,h6,body1,body2,subtitle1,subtitle2|}'>${0}</Typography>"
+    ],
+    "scope": "markdown"
+  },
+  "Markdown Figure": {
+    "prefix": ["rbx:figure"],
+    "description": "Figure with image and caption",
+    "body": [
+      "<figure>",
+      "\t<img src='${1:../assets/path/to/image.png}' alt='${2:Alt text}' />",
+      "\t<figcaption>${3:Caption text}</figcaption>",
+      "</figure>"
+    ],
+    "scope": "markdown"
+  },
+  "Markdown Image": {
+    "prefix": ["rbx:img"],
+    "description": "Image with common attributes",
+    "body": [
+      "<img src='${1:../assets/path/to/image.png}' alt='${2:Alt text}' width='${3:50%}' />"
+    ],
+    "scope": "markdown"
+  },
+  "Markdown YouTube Iframe": {
+    "prefix": ["rbx:youtube"],
+    "description": "YouTube video iframe",
+    "body": [
+      "<iframe width='${1:800}' height='${2:450}' src='https://www.youtube-nocookie.com/embed/${3:VIDEO_ID}' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>"
+    ],
+    "scope": "markdown"
+  },
+  "Markdown Lua Code Block": {
+    "prefix": ["rbx:lua"],
+    "description": "Lua code block",
+    "body": [
+      "```lua",
+      "${0}",
+      "```"
+    ],
+    "scope": "markdown"
+  },
+  "Markdown Lua Code Block with Highlight": {
+    "prefix": ["rbx:lua-highlight"],
+    "description": "Lua code block with line highlighting",
+    "body": [
+      "```lua highlight='${1:2}'",
+      "${0}",
+      "```"
+    ],
+    "scope": "markdown"
+  },
+  "Markdown Table": {
+    "prefix": ["rbx:table"],
+    "description": "HTML table structure",
+    "body": [
+      "<table>",
+      "<thead>",
+      "\t<tr>",
+      "\t\t<th>${1:Header 1}</th>",
+      "\t\t<th>${2:Header 2}</th>",
+      "\t</tr>",
+      "</thead>",
+      "<tbody>",
+      "\t<tr>",
+      "\t\t<td>${3:Cell 1}</td>",
+      "\t\t<td>${4:Cell 2}</td>",
+      "\t</tr>",
+      "</tbody>",
+      "</table>"
+    ],
+    "scope": "markdown"
+  },
+  "Markdown Frontmatter": {
+    "prefix": ["rbx:frontmatter"],
+    "description": "YAML frontmatter for markdown files",
+    "body": [
+      "---",
+      "title: ${1:Page Title}",
+      "description: ${2:Page description}",
+      "---",
+      "",
+      "${0}"
+    ],
+    "scope": "markdown"
+  },
+  "Markdown Blockquote": {
+    "prefix": ["rbx:blockquote"],
+    "description": "Blockquote element",
+    "body": [
+      "<blockquote>",
+      "${0}",
+      "</blockquote>"
+    ],
+    "scope": "markdown"
+  },
+  "Markdown Code Inline": {
+    "prefix": ["rbx:code"],
+    "description": "Inline code with backticks",
+    "body": [
+      "`${0}`"
+    ],
+    "scope": "markdown"
+  },
+  "Markdown Link": {
+    "prefix": ["rbx:link"],
+    "description": "Markdown link",
+    "body": [
+      "[${1:Link Text}](${2:../path/to/page.md})"
+    ],
+    "scope": "markdown"
+  },
+  "Markdown Class Reference": {
+    "prefix": ["rbx:class"],
+    "description": "Class reference link",
+    "body": [
+      "`Class.${1:ClassName}`"
+    ],
+    "scope": "markdown"
+  },
+  "Markdown Property Reference": {
+    "prefix": ["rbx:property"],
+    "description": "Property reference link",
+    "body": [
+      "`Class.${1:ClassName}.${2:PropertyName}`"
+    ],
+    "scope": "markdown"
+  },
+  "Markdown Method Reference": {
+    "prefix": ["rbx:method"],
+    "description": "Method reference link",
+    "body": [
+      "`Class.${1:ClassName}:${2:MethodName}()`"
+    ],
+    "scope": "markdown"
   }
 }
