@@ -3,8 +3,6 @@ title: Instance streaming
 description: Instance streaming allows the Roblox Engine to dynamically load and unload 3D content in regions of the world.
 ---
 
-import BetaAlert from '../includes/beta-features/beta-alert.md'
-
 In-experience **instance streaming** allows the Roblox Engine to dynamically load and unload 3D content and related instances in regions of the world. This can improve the overall player experience in several ways, for example:
 
 - **Faster join times** &mdash; Players can start playing in one part of the world while more of the world loads in the background.
@@ -447,23 +445,17 @@ In some cases, it's necessary to detect when an object streams in or out and rea
 
 ## Model level of detail
 
-<BetaAlert betaName="SLIM" leadIn="SLIM meshes are currently in Studio beta. Enable them through " leadOut="." components={props.components} />
-
-When streaming is enabled, `Class.Model|Models` outside of the currently streamed area are not visible by default. However, you can instruct the engine to render lightweight "SLIM" meshes or low resolution "imposter" meshes for models that are not present on clients. You control this behavior through each model's `Class.Model.LevelOfDetail|LevelOfDetail` property.
+When streaming is enabled, `Class.Model|Models` outside of the currently streamed area will not be visible by default. However, you can instruct the engine to render lower resolution "imposter" meshes for models that are not present on clients through each model's `Class.Model.LevelOfDetail|LevelOfDetail` property.
 
 <img src="../assets/studio/properties/Model-LevelOfDetail.png" width="320" alt="LevelOfDetail property indicated for Model instance"/>
 
-<GridContainer numColumns="3">
+<GridContainer numColumns="2">
   <figure>
-    <img src="../assets/modeling/model-objects/LevelOfDetail-Original.jpg" alt="A globe model displays in its actual level of detail." />
-    <figcaption>Original model</figcaption>
+    <img src="../assets/modeling/model-objects/LevelOfDetail-Actual.jpg" alt="A globe model displays in its actual level of detail." />
+    <figcaption>Actual model</figcaption>
   </figure>
   <figure>
-    <img src="../assets/modeling/model-objects/LevelOfDetail-Slim.jpg" alt="The same globe model with a SLIM mesh, which is recognizable as the original globe." />
-    <figcaption>Lightweight "SLIM" mesh (beta)</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/modeling/model-objects/LevelOfDetail-Imposter.jpg" alt="The same globe model as a low resolution imposter mesh with rough edges that obscure the globe's details." />
+    <img src="../assets/modeling/model-objects/LevelOfDetail-StreamingMesh.jpg" alt="The same globe model displays as a low resolution imposter mesh with rough edges that obscure the globe's details." />
     <figcaption>Low resolution "imposter" mesh</figcaption>
   </figure>
 </GridContainer>
@@ -472,37 +464,28 @@ When streaming is enabled, `Class.Model|Models` outside of the currently streame
   <thead>
     <tr>
       <th>Model setting</th>
-      <th>Behavior outside of streaming radius</th>
+      <th>Streaming behavior</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>**SLIM**</td>
-      <td>
-        Display a composite mesh of all child parts in the model when the original model is not present on the client. Roblox automatically generates many SLIM (Scalable Lightweight Interactive Model) meshes for the model and uses progressively less complex ones as distance from the camera increases.
-        - During the Studio beta, you must enable [Team Create](../projects/collaboration.md) in your experience for Roblox to generate SLIM meshes.
-        - Visual quality is superior to imposter meshes, with comparable performance.
-        - Whether SLIM meshes display at all depends on the position of the **character**. The quality level of SLIM meshes depends on the position of the **camera**.
-        - SLIM currently only supports models with static meshes, not skinned meshes, avatars, or animations.
-        - The first time a model set to `Enum.ModelLevelOfDetail.SLIM|SLIM` is loaded, Roblox generates its optimized assets in the cloud. This one-time process can take a few moments for very complex models. If you have a large place and don't see some models immediately, wait a few minutes and try again.
-        - SLIM relies on models to understand how to group geometry. For best results, use `Class.Model|Models` to group parts that are spatially and logically related (for example, all the parts of a car). For arbitrary organization in your project, use folders, which SLIM ignores.
-      </td>
-    </tr>
-    <tr>
       <td>**StreamingMesh**</td>
-      <td>
-        Display an imposter mesh when the model is not present on the client.
-        - If a model and its descendant models are all set to `Enum.ModelLevelOfDetail.StreamingMesh|StreamingMesh`, only the top-level model is rendered as an imposter mesh, wrapping all geometries under it as well as its descendant models. For better performance, set descendant models to **Disabled**.
-        - Imposter meshes look best at **1024 studs away from the camera** or further. If you reduce [StreamingTargetRadius](#streamingtargetradius) to smaller values, imposter meshes might not be an acceptable visual replacement for the model. Consider whether SLIM is a better fit for your use case.
-        - Imposter meshes do not support textures; they render as smooth meshes.
-        - If a model is not completely streamed in, the imposter mesh is rendered instead of individual parts of the model. After all individual parts are streamed in, they render and the imposter mesh is ignored.
-        - Imposter meshes have no physical significance and are non-existent with respect to [raycasting](../workspace/raycasting.md), [collision detection](./collisions.md), and physics simulation.
-        - Editing a model in Studio, such as adding, deleting, or repositioning child parts or resetting colors automatically updates the representative mesh.
-      </td>
+      <td>Activates the asynchronous generation of an imposter mesh to display when the model is not present on clients.</td>
     </tr>
     <tr>
       <td>**Disabled** / **Automatic**</td>
-      <td>The model isn't present until the player enters the streaming radius and can stream out at any time after the players leaves the radius.</td>
+      <td>The model disappears when outside the streaming radius.</td>
     </tr>
   </tbody>
 </table>
+
+When using imposter meshes, note the following:
+
+- Imposter meshes are designed to be seen at **1024 studs away from the camera** or further. If you've reduced [StreamingTargetRadius](#streamingtargetradius) to a much smaller value like 256, imposter meshes may not be visually acceptable for the model they replace.
+- If a model **and** its descendant models are all set to **StreamingMesh**, only the top-level ancestor model is rendered as an imposter mesh, wrapping all geometries under the ancestor as well as its descendant models. For better performance, it's recommended that you use **Disabled** for descendant models.
+- Textures are not supported; imposter meshes are rendered as smooth meshes.
+- While a `Class.Model` is not completely streamed in, the imposter mesh is rendered instead of individual parts of the model. Once all individual parts are streamed in, they render and the imposter mesh is ignored.
+- Imposter meshes have no physical significance and
+  they act as non-existent with respect to [raycasting](../workspace/raycasting.md), [collision detection](./collisions.md),
+  and physics simulation.
+- Editing a model in Studio, such as adding/deleting/repositioning child parts or resetting colors, automatically updates the representative mesh.

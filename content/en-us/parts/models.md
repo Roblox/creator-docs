@@ -108,9 +108,11 @@ To prevent parts that have fallen off of an experience's map from continuing to 
 
 ## Model streaming
 
-Instance [streaming](../workspace/streaming.md) dynamically loads and unloads `Class.Model|Models` on a player's device as their character explores the 3D world. With streaming enabled, you can specify the way each model should be treated under streaming behavior. For example, a model set to [Persistent](../workspace/streaming.md#persistent) will never stream out, or a model set to [Atomic](../workspace/streaming.md#atomic) will stream in and out as a single unit with all of its descendants. For more information, see [Per-model streaming controls](../workspace/streaming.md#per-model-streaming-controls).
+Instance [streaming](../workspace/streaming.md) dynamically loads and unloads `Class.Model|Models` on a player's device as their character explores the 3D world. With streaming enabled, you can specify the way each model should be treated under streaming behavior. For example, a model set to [Persistent](../workspace/streaming.md#persistent) will never stream out, or a model set to [Atomic](../workspace/streaming.md#atomic) will stream in and out as a single unit with all of its descendants.
 
-Because the 3D content that exists on the client changes dynamically in a streaming-enabled experience, models might suddenly disappear, which can be visually jarring for the player. To avoid this situation, you can set specific models to render as optimized "SLIM" meshes or as lower resolution "imposter" meshes when streamed out. See [Model level of detail](../workspace/streaming.md#model-level-of-detail).
+Because 3D content that exists on the client changes dynamically in a streaming-enabled experience, models may suddenly disappear. To alleviate this, you can set specific models to render as lower resolution "imposter" meshes when streamed out, as detailed in [Model Level&nbsp;of&nbsp;Detail](../workspace/streaming.md#model-level-of-detail).
+
+See [Model Streaming Controls](../workspace/streaming.md#model-streaming-controls) for more on model-level streaming controls.
 
 ## Upload models
 
