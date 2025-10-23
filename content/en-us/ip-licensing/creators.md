@@ -74,7 +74,7 @@ We recommend that you include the following information in your pitch:
 Your pitch must **not** include any of the following:
 
 - Attempts to negotiate or discuss terms
-- Requests for financial of personal information
+- Requests for financial or personal information
 - Foul or harmful language
 - Legal or threatening language that could be considered harassing for a 13+ audience
 - Requests to connect with the IP holder outside of Roblox
