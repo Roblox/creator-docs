@@ -29,6 +29,8 @@ Videos that don't meet these requirements are rejected. Alpha channels are not s
 
 A `Class.VideoFrame` must be parented to a `Class.ScreenGui`, `Class.SurfaceGui`, or `Class.BillboardGui` in order to be playable.
 
+Note that currently, at most 2 videos can play simultaneously.  
+
 To play a video in your experience without code:
 
 1. Create a `Class.ScreenGui` as outlined in [On-Screen UI Containers](../ui/on-screen-containers.md), or a `Class.SurfaceGui` or `Class.BillboardGui` as outlined in [In-Experience UI Containers](../ui/in-experience-containers.md).
