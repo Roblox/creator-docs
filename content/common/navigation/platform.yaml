@@ -32,6 +32,8 @@ navigation:
   - heading: Guidelines and policies
   - title: General
     section:
+      - title: Safety on Roblox
+        path: /safety
       - title: Content maturity
         path: /production/promotion/content-maturity
       - title: GDPR and CCPA

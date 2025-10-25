@@ -6478,6 +6478,7 @@
     },
     "/cloud/v2/universes/{universe_id}:translateText": {
       "post": {
+        "tags": ["Generative AI"],
         "summary": "Translate Text",
         "description": "Translates the provided text from one language to another.",
         "operationId": "Cloud_TranslateText",
@@ -6545,7 +6546,10 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/generative-ai#/Universe/Cloud_TranslateText"
+        }
       }
     },
     "/cloud/v2/users/{user_id}": {
@@ -8991,17 +8995,17 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 60
+            "maxInPeriod": 120
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 120
           }
         },
         "x-roblox-throttling-limit": {
           "perApiKey": {
             "periodInSeconds": "60",
-            "maxInPeriod": 60
+            "maxInPeriod": 120
           }
         },
         "x-roblox-engine-usability": {
@@ -9093,17 +9097,17 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 60
+            "maxInPeriod": 120
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 120
           }
         },
         "x-roblox-throttling-limit": {
           "perApiKey": {
             "periodInSeconds": "60",
-            "maxInPeriod": 60
+            "maxInPeriod": 120
           }
         },
         "x-roblox-engine-usability": {
@@ -9228,17 +9232,17 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 60
+            "maxInPeriod": 120
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 120
           }
         },
         "x-roblox-throttling-limit": {
           "perApiKey": {
             "periodInSeconds": "60",
-            "maxInPeriod": 60
+            "maxInPeriod": 120
           }
         },
         "x-roblox-engine-usability": {
@@ -9319,7 +9323,7 @@
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 100
           }
         },
         "x-roblox-throttling-limit": {
@@ -9406,7 +9410,7 @@
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 100
           }
         },
         "x-roblox-throttling-limit": {
@@ -9496,7 +9500,7 @@
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 100
           }
         },
         "x-roblox-throttling-limit": {
@@ -9599,7 +9603,7 @@
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 100
           }
         },
         "x-roblox-throttling-limit": {
@@ -9696,7 +9700,7 @@
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 100
           }
         },
         "x-roblox-cloud-api-operation-code-samples": [
@@ -9789,11 +9793,11 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100
+            "maxInPeriod": 300
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 300
           }
         },
         "x-roblox-throttling-limit": {
@@ -14437,6 +14441,330 @@
         }
       }
     },
+    "/v1/openCloud/assetId/{assetId}": {
+      "get": {
+        "summary": "Retrieves an asset by its ID with OpenCloud auth.",
+        "description": "Returns an object containing a `location` property which is a temporary CDN URL for the asset content. All asset types are supported.\r\nYou should request that URL with the `Accept-Encoding: gzip` header and decompress the result if the response is gzipped. If you are using cURL, the `--compressed` flag will automate these steps for you.\r\nThis endpoint is expected to be called with API key authentication through `apis.roblox.com/asset-delivery-api/v1/assetId/{assetId}`.\r\nWhile you are able to make requests to this endpoint with Cookie authentication via `assetdelivery.roblox.com/v1/openCloud/assetId/{assetId}`, we highly discourage use this way.\r\nExpect unannounced removal of this second route in the future.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "assetId",
+            "description": "The ID of the asset to retrieve.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Accept-Encoding",
+            "description": "The Accept-Encoding header value specifying compression formats (e.g., \"gzip, deflate\"). Defaults to \"gzip, deflate\" if not provided.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Roblox-Place-Id",
+            "description": "The Roblox-Place-Id header value identifying the place making the request.",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "header",
+            "name": "AssetType",
+            "description": "The AssetType header value specifying the expected asset type.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Accept",
+            "description": "The Accept header value specifying the preferred response content type.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "AssetFormat",
+            "description": "The AssetFormat header value specifying the desired asset format. Overridden by robloxAssetFormat if both are provided.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Roblox-AssetFormat",
+            "description": "The Roblox-AssetFormat header value specifying the preferred Roblox-specific asset format. Takes precedence over assetFormat.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "skipSigningScripts",
+            "description": "Whether to skip script signing for the returned asset. Used for script assets that don't require signing.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "in": "query",
+            "name": "clientInsert",
+            "description": "Set to 1 to indicate this is a client insert request.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "scriptinsert",
+            "description": "Set to 1 to indicate this is a script insert request.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "modulePlaceId",
+            "description": "The place ID of the module making the request.",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "query",
+            "name": "serverplaceid",
+            "description": "The server place ID making the request.",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "query",
+            "name": "expectedAssetType",
+            "description": "The expected asset type as a fallback when assetType header is not provided.",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "in": "query",
+            "name": "doNotFallbackToBaselineRepresentation",
+            "description": "Whether to prevent fallback to baseline representation when specific content representations are not available.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "in": "query",
+            "name": "contentRepresentationPriorityList",
+            "description": "Base64URL-encoded JSON string specifying the priority list of desired content representations (format, version, fidelity).",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.Assets.AssetResponseItemV1"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.Assets.AssetResponseItemV1"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://assetdelivery.roblox.com"
+          }
+        ]
+      }
+    },
+    "/v1/openCloud/assetId/{assetId}/version/{versionNumber}": {
+      "get": {
+        "summary": "Retrieves an asset by its ID and version number with OpenCloud auth.",
+        "description": "Refer to the assetId endpoint for details on usage.\r\nThis endpoint is expected to be called with API key authentication through `apis.roblox.com/asset-delivery-api/v1/assetId/{assetId}/version/{versionNumber}`.\r\nWhile you are able to make requests to this endpoint with Cookie authentication via `assetdelivery.roblox.com/v1/openCloud/assetId/{assetId}/version/{versionNumber}`, we highly discourage use this way.\r\nExpect unannounced removal of this second route in the future.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "assetId",
+            "description": "The ID of the asset to retrieve.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "path",
+            "name": "versionNumber",
+            "description": "The version number of the asset to retrieve.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Accept-Encoding",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Roblox-Place-Id",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "header",
+            "name": "AssetType",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Accept",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "AssetFormat",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Roblox-AssetFormat",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "skipSigningScripts",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "in": "query",
+            "name": "clientInsert",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "scriptinsert",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "modulePlaceId",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "query",
+            "name": "serverplaceid",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "query",
+            "name": "expectedAssetType",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "in": "query",
+            "name": "doNotFallbackToBaselineRepresentation",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "in": "query",
+            "name": "contentRepresentationPriorityList",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.Assets.AssetResponseItemV1"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.Assets.AssetResponseItemV1"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://assetdelivery.roblox.com"
+          }
+        ]
+      }
+    },
     "/v1/assets/batch": {
       "post": {
         "tags": ["Assets"],
@@ -18019,6 +18347,30 @@
       "post": {
         "tags": ["Accounts"],
         "summary": "Initiates Passkey registration by providing credential creation options.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "flow",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.StartPasskeyRegistrationRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.StartPasskeyRegistrationRequest"
+              }
+            }
+          },
+          "required": true
+        },
         "responses": {
           "200": {
             "description": "OK",
@@ -22285,6 +22637,14 @@
         "summary": "Search for catalog items.",
         "description": "This endpoint is for search by item type ids.",
         "parameters": [
+          {
+            "in": "query",
+            "name": "Taxonomy",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "in": "query",
             "name": "AssetTypeIds",
@@ -27050,59 +27410,6 @@
         }
       }
     },
-    "/v1/my/castors/{userId}/status": {
-      "get": {
-        "summary": "Gets trusted friend status of a specified user against the requesting user.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "userId",
-            "description": "The user to check the trusted friend status for.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.TrustedFriendStatusResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.TrustedFriendStatusResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The target user is invalid or does not exist."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://friends.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ]
-      }
-    },
     "/v1/user/{userId}/multiget-are-trusted-friends": {
       "get": {
         "tags": ["Connections"],
@@ -27171,72 +27478,6 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/friends#/default/get_v1_user__userId__multiget_are_trusted_friends"
         }
-      }
-    },
-    "/v1/user/{userId}/multiget-are-castors": {
-      "get": {
-        "summary": "Check if the requesting user is trusted friends with the specified users.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "userId",
-            "description": "The requesting userId.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "in": "query",
-            "name": "userIds",
-            "description": "The user ids to check against with the requesting user.",
-            "required": true,
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "array",
-              "items": {
-                "format": "int64",
-                "type": "integer"
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.MultigetAreTrustedFriendsResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Friends.Api.MultigetAreTrustedFriendsResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "1: The target user is invalid or does not exist."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://friends.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {},
-          {
-            "roblox-legacy-cookie": []
-          }
-        ]
       }
     },
     "/v1/user/friend-requests/count": {
@@ -33897,90 +34138,6 @@
         ]
       }
     },
-    "/v1/name-description/games/{gameId}/history": {
-      "post": {
-        "tags": ["Localization", "Universes"],
-        "summary": "Gets the history for name or description in a provided language.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "gameId",
-            "description": "The id of the game",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.GetNameDescriptionHistoryRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.GetNameDescriptionHistoryRequest"
-              }
-            }
-          },
-          "description": "The request.",
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.GetNameDescriptionHistoryResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.GetNameDescriptionHistoryResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "13: Request body can't be null\r\n14: Invalid game id\r\n18: You do not have permission to manage this game\r\n22: Invalid language code\r\n39: Count should be at least 1 and less than 50.\r\n53: Language is not supported for the game.\r\n54: No history available for source data\r\n55: Invalid exclusive start Id"
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed"
-          },
-          "500": {
-            "description": "0: An unknown error occurred."
-          },
-          "503": {
-            "description": "17: Feature is disabled"
-          }
-        },
-        "deprecated": true,
-        "servers": [
-          {
-            "url": "https://gameinternationalization.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "description": "Please use the /translation-history endpoint instead.",
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/post_v1_name_description_games__gameId__history"
-        }
-      }
-    },
     "/legacy-game-internationalization/v1/name-description/games/translation-history": {
       "post": {
         "tags": ["Localization", "Universes"],
@@ -39888,6 +40045,7 @@
     },
     "/v1/groups/{groupId}/bans": {
       "get": {
+        "tags": ["Bans and blocks", "Groups"],
         "summary": "Gets the bans for the group",
         "parameters": [
           {
@@ -39971,11 +40129,15 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/bans-and-blocks#/default/get_v1_groups__groupId__bans"
+        }
       }
     },
     "/v1/groups/{groupId}/bans/{userId}": {
       "get": {
+        "tags": ["Bans and blocks", "Groups"],
         "summary": "Fetch the group ban of a user from a group",
         "parameters": [
           {
@@ -40040,9 +40202,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/bans-and-blocks#/default/get_v1_groups__groupId__bans__userId_"
+        }
       },
       "post": {
+        "tags": ["Bans and blocks", "Groups"],
         "summary": "Bans a user from a group",
         "parameters": [
           {
@@ -40110,9 +40276,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/bans-and-blocks#/default/post_v1_groups__groupId__bans__userId_"
+        }
       },
       "delete": {
+        "tags": ["Bans and blocks", "Groups"],
         "summary": "Unbans a user from a group",
         "parameters": [
           {
@@ -40180,11 +40350,15 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/bans-and-blocks#/default/delete_v1_groups__groupId__bans__userId_"
+        }
       }
     },
     "/v1/groups/{groupId}/blocked-keywords": {
       "get": {
+        "tags": ["Bans and blocks", "Groups"],
         "summary": "Retrieves a paginated list of blocked keywords for a specific Group.",
         "parameters": [
           {
@@ -40267,9 +40441,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/bans-and-blocks#/default/get_v1_groups__groupId__blocked_keywords"
+        }
       },
       "post": {
+        "tags": ["Bans and blocks", "Groups"],
         "summary": "Adds new blocked keyword(s) to the specified Group.",
         "parameters": [
           {
@@ -40341,11 +40519,15 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/bans-and-blocks#/default/post_v1_groups__groupId__blocked_keywords"
+        }
       }
     },
     "/v1/groups/{groupId}/emotes": {
       "get": {
+        "tags": ["Groups"],
         "summary": "Gets a groups emote sets.",
         "parameters": [
           {
@@ -40389,7 +40571,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/groups#/default/get_v1_groups__groupId__emotes"
+        }
       }
     },
     "/v1/groups/{groupId}/join-requests": {
@@ -44324,6 +44509,7 @@
     },
     "/v1/groups/{groupId}/blocked-keywords/{keywordId}": {
       "delete": {
+        "tags": ["Bans and blocks", "Groups"],
         "summary": "Deletes a specific blocked keyword from the specified Group.",
         "parameters": [
           {
@@ -44376,9 +44562,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/bans-and-blocks#/default/delete_v1_groups__groupId__blocked_keywords__keywordId_"
+        }
       },
       "patch": {
+        "tags": ["Bans and blocks", "Groups"],
         "summary": "Updates an existing blocked keyword for the specified Group.",
         "parameters": [
           {
@@ -44461,7 +44651,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/bans-and-blocks#/default/patch_v1_groups__groupId__blocked_keywords__keywordId_"
+        }
       }
     },
     "/legacy-groups/v1/groups/{groupId}/description": {
@@ -48471,6 +48664,16 @@
               "type": "integer",
               "format": "int64"
             }
+          },
+          {
+            "in": "query",
+            "name": "entryFormat",
+            "description": "",
+            "schema": {
+              "type": "string",
+              "enum": ["Invalid", "Legacy", "Icu"],
+              "default": "Legacy"
+            }
           }
         ],
         "responses": {
@@ -48544,6 +48747,16 @@
             "schema": {
               "type": "integer",
               "format": "int64"
+            }
+          },
+          {
+            "in": "query",
+            "name": "entryFormat",
+            "description": "",
+            "schema": {
+              "type": "string",
+              "enum": ["Invalid", "Legacy", "Icu"],
+              "default": "Legacy"
             }
           }
         ],
@@ -48626,6 +48839,15 @@
               "type": "integer",
               "format": "int64"
             }
+          },
+          {
+            "in": "query",
+            "name": "entryFormat",
+            "schema": {
+              "type": "string",
+              "enum": ["Invalid", "Legacy", "Icu"],
+              "default": 1
+            }
           }
         ],
         "responses": {
@@ -48691,6 +48913,15 @@
             "schema": {
               "type": "integer",
               "format": "int64"
+            }
+          },
+          {
+            "in": "query",
+            "name": "entryFormat",
+            "schema": {
+              "type": "string",
+              "enum": ["Invalid", "Legacy", "Icu"],
+              "default": 1
             }
           }
         ],
@@ -48773,12 +49004,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/LocalizationTablesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/LocalizationTablesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -48975,12 +49206,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/LocalizationTablesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/LocalizationTablesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -49520,12 +49751,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/LocalizationTablesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/LocalizationTablesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -49596,12 +49827,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/LocalizationTablesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/LocalizationTablesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -54325,6 +54556,309 @@
         ]
       }
     },
+    "/v1/game-localization-roles/games/{gameId}/current-user/roles": {
+      "get": {
+        "tags": ["Localization", "Universes"],
+        "summary": "Retrieves the list of roles granted to current logged-in user",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "gameId",
+            "description": "The id of the game",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_System.String_"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_System.String_"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "3: Invalid game id"
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "503": {
+            "description": "2: Feature is disabled"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://translationroles.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/get_v1_game_localization_roles_games__gameId__current_user_roles"
+        }
+      }
+    },
+    "/v1/game-localization-roles/games/{gameId}/roles/{role}/assignees": {
+      "get": {
+        "tags": ["Localization", "Universes", "Users"],
+        "summary": "Gets list of users assigned a specific role in a game.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "gameId",
+            "description": "The id of the game",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "in": "path",
+            "name": "role",
+            "description": "The Roblox.GameLocalization.Client.GameLocalizationRoles.GameLocalizationRoleType",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": ["translator"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.TranslationRoles.Api.Assignee_"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.TranslationRoles.Api.Assignee_"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "3: Invalid game id"
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "1: You must be authorized to use this endpoint"
+          },
+          "503": {
+            "description": "2: Feature is disabled"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://translationroles.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/get_v1_game_localization_roles_games__gameId__roles__role__assignees"
+        }
+      }
+    },
+    "/v1/game-localization-roles/roles/{role}/current-user": {
+      "get": {
+        "tags": ["Localization", "Universes"],
+        "summary": "Gets the list of games and associated role assignment info for the requested user and role.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "role",
+            "description": "The Roblox.GameLocalization.Client.GameLocalizationRoles.GameLocalizationRoleType",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": ["translator"]
+            }
+          },
+          {
+            "in": "query",
+            "name": "exclusiveStartKey",
+            "description": "Part of pagination. Last primary key of returned items in previous operation.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "description": "Part of pagination. Maximum number of items that might be returned in the page.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "groupId",
+            "description": "Optional seleted groupId of resources requested for the user and role.",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.TranslationRoles.Api.GetGameLocalizationRoleAssignmentsForUserResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.TranslationRoles.Api.GetGameLocalizationRoleAssignmentsForUserResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "10: Invalid page size\r\n11: Maximum page size exceeded\r\n12: Invalid exclusive start key"
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "500": {
+            "description": "0: An unknown error occurred"
+          },
+          "503": {
+            "description": "2: Feature is disabled"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://translationroles.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/get_v1_game_localization_roles_roles__role__current_user"
+        }
+      }
+    },
+    "/v1/game-localization-roles/games/{gameId}": {
+      "patch": {
+        "tags": ["Localization", "Universes"],
+        "summary": "Assigns or revokes a role",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "gameId",
+            "description": "The id of the game",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.TranslationRoles.Api.UpdateRoleRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.TranslationRoles.Api.UpdateRoleRequest"
+              }
+            }
+          },
+          "description": "The request body"
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TranslationRolesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TranslationRolesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "3: Invalid game id\r\n4: Invalid assignee id\r\n6: Request body can't be null\r\n7: The role you are assigning has reached max limit"
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n1: You must be authorized to use this endpoint"
+          },
+          "429": {
+            "description": "5: Too many attempts. Please try again later."
+          },
+          "503": {
+            "description": "2: Feature is disabled"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://translationroles.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/localization#/default/patch_v1_game_localization_roles_games__gameId_"
+        }
+      }
+    },
     "/v1/metadata#TwoStepVerificationApi": {
       "get": {
         "tags": ["Accounts", "Metadata"],
@@ -54356,16 +54890,6 @@
               "type": "integer",
               "format": "int32",
               "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8]
-            }
-          },
-          {
-            "in": "query",
-            "name": "mediaType",
-            "description": "",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "enum": [0, 1, 2, 3, 4, 5, 6, 7]
             }
           }
         ],
@@ -58149,7 +58673,7 @@
             }
           },
           {
-            "name": "category",
+            "name": "categoryPath",
             "in": "query",
             "schema": {
               "type": "string"
@@ -59166,6 +59690,552 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/features/assets#/default/patch_asset_permissions_api_v1_assets_permissions"
+        }
+      }
+    },
+    "/game-passes/v1/universes/{universeId}/game-passes": {
+      "post": {
+        "tags": ["Game passes"],
+        "summary": "Create game pass",
+        "description": "Creates a new game pass with the provided configuration details.",
+        "operationId": "GamePasses_CreateGamePass",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": ["name"],
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "The name of the game pass."
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "The description of the game pass.",
+                    "nullable": true
+                  },
+                  "imageFile": {
+                    "type": "string",
+                    "description": "The thumbnail image file to be uploaded.",
+                    "format": "binary",
+                    "nullable": true
+                  },
+                  "isForSale": {
+                    "type": "boolean",
+                    "description": "Whether the game pass should be on sale.",
+                    "nullable": true
+                  },
+                  "price": {
+                    "type": "integer",
+                    "description": "The default price of the game pass.",
+                    "format": "int64",
+                    "nullable": true
+                  },
+                  "isRegionalPricingEnabled": {
+                    "type": "boolean",
+                    "description": "Whether regional pricing should be enabled for the game pass.",
+                    "nullable": true
+                  }
+                }
+              },
+              "encoding": {
+                "name": {
+                  "style": "form"
+                },
+                "description": {
+                  "style": "form"
+                },
+                "imageFile": {
+                  "style": "form"
+                },
+                "isForSale": {
+                  "style": "form"
+                },
+                "price": {
+                  "style": "form"
+                },
+                "isRegionalPricingEnabled": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GamePassConfigV2"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GamePasses.ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GamePasses.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GamePasses.ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GamePasses.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 5
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "game-pass:write"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/game-passes#/default/GamePasses_CreateGamePass"
+        }
+      }
+    },
+    "/game-passes/v1/universes/{universeId}/game-passes/{gamePassId}": {
+      "patch": {
+        "tags": ["Game passes"],
+        "summary": "Update game pass",
+        "description": "Updates a game pass with the provided configuration details.\r\nNote that only fields provided in the request will be updated.",
+        "operationId": "GamePasses_UpdateGamePass",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "gamePassId",
+            "in": "path",
+            "description": "The game pass ID.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "The name of the game pass.",
+                    "nullable": true
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "The description of the game pass.",
+                    "nullable": true
+                  },
+                  "file": {
+                    "type": "string",
+                    "description": "The thumbnail image file to be uploaded.",
+                    "format": "binary",
+                    "nullable": true
+                  },
+                  "isForSale": {
+                    "type": "boolean",
+                    "description": "Whether the game pass should be on sale.",
+                    "nullable": true
+                  },
+                  "price": {
+                    "type": "integer",
+                    "description": "The default price of the game pass.",
+                    "format": "int64",
+                    "nullable": true
+                  },
+                  "isRegionalPricingEnabled": {
+                    "type": "boolean",
+                    "description": "Whether regional pricing should be enabled for the game pass.",
+                    "nullable": true
+                  }
+                }
+              },
+              "encoding": {
+                "name": {
+                  "style": "form"
+                },
+                "description": {
+                  "style": "form"
+                },
+                "file": {
+                  "style": "form"
+                },
+                "isForSale": {
+                  "style": "form"
+                },
+                "price": {
+                  "style": "form"
+                },
+                "isRegionalPricingEnabled": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GamePasses.ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GamePasses.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GamePasses.ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GamePasses.ErrorResponse"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GamePasses.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 5
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "game-pass:write"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/game-passes#/default/GamePasses_UpdateGamePass"
+        }
+      }
+    },
+    "/game-passes/v1/universes/{universeId}/game-passes/{gamePassId}/creator": {
+      "get": {
+        "tags": ["Game passes"],
+        "summary": "Get game pass with configuration details",
+        "operationId": "GamePasses_GetGamePassConfig",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "gamePassId",
+            "in": "path",
+            "description": "The game pass ID.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GamePassConfigV2"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GamePasses.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GamePasses.ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GamePasses.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "game-pass:read"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/game-passes#/default/GamePasses_GetGamePassConfig"
+        }
+      }
+    },
+    "/game-passes/v1/universes/{universeId}/game-passes/creator": {
+      "get": {
+        "tags": ["Game passes"],
+        "summary": "List game passes by universe with configuration details",
+        "operationId": "GamePasses_ListGamePassConfigsByUniverse",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "The number of results to return. Defaults to 50 if not provided.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "The cursor token for pagination.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListGamePassConfigsByUniverseResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GamePasses.ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GamePasses.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GamePasses.ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GamePasses.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "game-pass:read"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/features/game-passes#/default/GamePasses_ListGamePassConfigsByUniverse"
         }
       }
     }
@@ -63737,9 +64807,10 @@
           },
           "CustomErrorCode": {
             "format": "int32",
-            "description": "Custom error code for Roblox.Web.Assets.IAssetItemError ['UnknownError' = 0, 'NoPermissionToAsset' = 1, 'AssetPermissionCheckFailed' = 2, 'NotAuthorizedForAgeRecommendation' = 3, 'AgeRecommendationCheckFailed' = 4, 'InvalidPlaceRequestFromGameServer' = 5, 'BlockedAssetTypeRequestedFromInsertService' = 6, 'BlockedAssetTypeRequestedFromGameServer' = 7, 'AssetTypeMismatch' = 8, 'MissingAssetTypeInRequestHeader' = 9, 'AssetNotTrustedForPlace' = 10, 'NoAuthentication' = 11, 'AssetContentRepresentationBlockedDueToModeration' = 12, 'AssetNotFound' = 13, 'AssetVersionNotFound' = 14, 'AssetContentRepresentationNotFound' = 15, 'BlockedByAgeGeoRestriction' = 16, 'BlockedAssetTypeRequestedFromNonGameServer' = 17]",
+            "description": "Custom error code for Roblox.Web.Assets.IAssetItemError ['UnknownError' = 0, 'NoPermissionToAsset' = 1, 'AssetPermissionCheckFailed' = 2, 'NotAuthorizedForAgeRecommendation' = 3, 'AgeRecommendationCheckFailed' = 4, 'InvalidPlaceRequestFromGameServer' = 5, 'BlockedAssetTypeRequestedFromInsertService' = 6, 'BlockedAssetTypeRequestedFromGameServer' = 7, 'AssetTypeMismatch' = 8, 'MissingAssetTypeInRequestHeader' = 9, 'AssetNotTrustedForPlace' = 10, 'NoAuthentication' = 11, 'AssetContentRepresentationBlockedDueToModeration' = 12, 'AssetNotFound' = 13, 'AssetVersionNotFound' = 14, 'AssetContentRepresentationNotFound' = 15, 'BlockedByAgeGeoRestriction' = 16, 'BlockedAssetTypeRequestedFromNonGameServer' = 17, 'AssetPendingReview' = 18, 'NotApprovedForRequestor' = 19, 'NotApprovedByContentCompliance' = 20, 'AssetContentRepresentationGenerating' = 21]",
             "enum": [
-              0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17
+              0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+              19, 20, 21
             ],
             "type": "integer"
           }
@@ -63991,9 +65062,6 @@
             "type": "boolean"
           },
           "IsUserAgreementsSignupIntegrationEnabled": {
-            "type": "boolean"
-          },
-          "IsKoreaIdVerificationEnabled": {
             "type": "boolean"
           },
           "IsPasswordRequiredForUsernameChange": {
@@ -64932,6 +66000,15 @@
         "properties": {
           "username": {
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Request.StartPasskeyRegistrationRequest": {
+        "type": "object",
+        "properties": {
+          "isSilentUpgrade": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -67122,6 +68199,10 @@
             "enum": [0, 1, 2, 3, 4, 5, 11, 12, 13, 14, 15, 16, 17, 18],
             "type": "integer"
           },
+          "taxonomy": {
+            "description": "The associated public facing web_stable_id corresponding to internal taxonomy uuid for this category.",
+            "type": "string"
+          },
           "assetTypeIds": {
             "description": "List of AssetTypeIds corresponding to AssetType enum that this category returns.",
             "type": "array",
@@ -67411,6 +68492,10 @@
             ],
             "type": "integer"
           },
+          "taxonomy": {
+            "description": "The taxonomy UUID associated with this node.",
+            "type": "string"
+          },
           "assetTypeIds": {
             "description": "List of AssetTypeIds corresponding to AssetType enum that this category returns.",
             "type": "array",
@@ -67649,7 +68734,8 @@
             "format": "int32",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Contacts.Api.Request.GetUserTagsRequestModel": {
         "type": "object",
@@ -67661,7 +68747,8 @@
               "type": "integer"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Contacts.Api.Request.SetUserTagRequestModel": {
         "type": "object",
@@ -67675,7 +68762,8 @@
             "description": "The userTag to be set",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Contacts.Api.Response.GetUserTagsResponseModel": {
         "type": "object",
@@ -67687,7 +68775,8 @@
           "targetUserTag": {
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Contacts.Api.Response.SetUserTagResponseModel": {
         "type": "object",
@@ -67697,7 +68786,8 @@
             "enum": ["Success", "Moderated"],
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Contacts.Api.Response.ValidateUserTagResponseModel": {
         "type": "object",
@@ -67707,7 +68797,8 @@
             "enum": ["Success", "Moderated", "TooLong"],
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.ClientSettings.Api.Models.Response.ClientVersionResponse": {
         "type": "object",
@@ -70248,33 +71339,6 @@
             "items": {
               "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.MediaAssetResponse"
             }
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.GameInternationalization.Api.GetNameDescriptionHistoryRequest": {
-        "description": "A model containing request for getting history of name or description.",
-        "type": "object",
-        "properties": {
-          "requestType": {
-            "description": "The enum representing the type of request while requesting name/description history ['Name' = 0, 'Description' = 1]",
-            "enum": ["Name", "Description"],
-            "type": "string"
-          },
-          "languageCode": {
-            "type": "string"
-          },
-          "cursor": {
-            "type": "string"
-          },
-          "count": {
-            "format": "int32",
-            "type": "integer"
-          },
-          "sortOrder": {
-            "description": " ['Asc' = 1, 'Desc' = 2]",
-            "enum": ["Asc", "Desc"],
-            "type": "string"
           }
         },
         "additionalProperties": false
@@ -75767,7 +76831,8 @@
           "path": {
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.AutoLocalizationMetadataResponse": {
         "type": "object",
@@ -75788,7 +76853,8 @@
             "description": "Is Quota UI Enabled for Automatic Translations",
             "type": "boolean"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.AutoScrapeEntry": {
         "type": "object",
@@ -75805,7 +76871,8 @@
           "meta": {
             "$ref": "#/components/schemas/Roblox.LocalizationTables.Api.AutoScrapeEntryMetadata"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.AutoScrapeEntryMetadata": {
         "type": "object",
@@ -75827,7 +76894,8 @@
           "matchedEntry": {
             "$ref": "#/components/schemas/Roblox.LocalizationTables.Api.MatchedEntry"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.CreateTableRequest": {
         "type": "object",
@@ -75843,7 +76911,8 @@
             "format": "int64",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.CreateTableResponse": {
         "type": "object",
@@ -75856,7 +76925,8 @@
             "format": "int64",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.CursorEntryIdentifier": {
         "description": "A model that contains an entry identifier and an associated cursor for paged lookups.",
@@ -75879,7 +76949,8 @@
             "enum": ["Asc", "Desc"],
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.Entry": {
         "type": "object",
@@ -75900,7 +76971,8 @@
             "format": "date-time",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.EntryIdentifier": {
         "type": "object",
@@ -75913,8 +76985,13 @@
           },
           "source": {
             "type": "string"
+          },
+          "entryFormat": {
+            "enum": ["Invalid", "Legacy", "Icu"],
+            "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.EntryIdentifierWithTranslation": {
         "type": "object",
@@ -75930,8 +77007,13 @@
           },
           "source": {
             "type": "string"
+          },
+          "entryFormat": {
+            "enum": ["Invalid", "Legacy", "Icu"],
+            "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.EntryMetadata": {
         "type": "object",
@@ -75944,8 +77026,13 @@
             "items": {
               "$ref": "#/components/schemas/Roblox.InGameContentTables.Client.GameLocation"
             }
+          },
+          "entryFormat": {
+            "enum": ["Invalid", "Legacy", "Icu"],
+            "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.EntryOperationLimits": {
         "type": "object",
@@ -75975,7 +77062,8 @@
             "description": "Maximum character limit for game location path",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.EntryTranslationFeedback": {
         "type": "object",
@@ -76014,7 +77102,8 @@
             "description": "Roblox translation suggestion in text for the given entry identifier.",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.EntryTranslationHistoryPaged": {
         "type": "object",
@@ -76033,7 +77122,8 @@
             "description": "The cursor to send up on the next request if more history data is required.",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.Error": {
         "type": "object",
@@ -76045,7 +77135,8 @@
           "errorMessage": {
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.FailedEntry": {
         "type": "object",
@@ -76069,7 +77160,8 @@
             "format": "date-time",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.FailedEntryTranslationHistoryPaged": {
         "type": "object",
@@ -76084,7 +77176,8 @@
           "error": {
             "$ref": "#/components/schemas/Roblox.LocalizationTables.Api.Error"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.GameAutolocalizationInformationResponse": {
         "type": "object",
@@ -76112,7 +77205,8 @@
             "format": "int64",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.GetLimitsResponse": {
         "type": "object",
@@ -76123,7 +77217,8 @@
           "tableOperationLimits": {
             "$ref": "#/components/schemas/Roblox.LocalizationTables.Api.TableOperationLimits"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.GetTableEntriesPagedResponse": {
         "type": "object",
@@ -76140,7 +77235,8 @@
               "$ref": "#/components/schemas/Roblox.LocalizationTables.Api.Entry"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.GetTableEntriesTranslationFeedbackRequest": {
         "description": "A request model for GetTableEntriesTranslationFeedback.",
@@ -76157,7 +77253,8 @@
               "$ref": "#/components/schemas/Roblox.LocalizationTables.Api.EntryIdentifierWithTranslation"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.GetTableEntriesTranslationFeedbackResponse": {
         "description": "A response model for GetTableEntriesTranslationFeedback.",
@@ -76175,7 +77272,8 @@
               "$ref": "#/components/schemas/Roblox.LocalizationTables.Api.EntryTranslationFeedback"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.GetTableEntriesTranslationHistoryRequest": {
         "type": "object",
@@ -76189,7 +77287,8 @@
               "$ref": "#/components/schemas/Roblox.LocalizationTables.Api.CursorEntryIdentifier"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.GetTableEntriesTranslationHistoryResponse": {
         "description": "A response model for GetTableEntriesTranslationHistory.",
@@ -76218,7 +77317,8 @@
               "$ref": "#/components/schemas/Roblox.LocalizationTables.Api.FailedEntryTranslationHistoryPaged"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.GetTableEntryCountResponse": {
         "type": "object",
@@ -76231,7 +77331,8 @@
             "format": "int32",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.GetTableResponse": {
         "type": "object",
@@ -76256,7 +77357,8 @@
             "format": "int64",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.IngestAutoScrapedContentForGameRequest": {
         "description": "An ingest content request to IngestAutoScrapedContentForGame.",
@@ -76272,7 +77374,8 @@
           "metadata": {
             "$ref": "#/components/schemas/Roblox.LocalizationTables.Api.IngestContentMetadata"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.IngestContentMetadata": {
         "description": "The metadata of an ingest content request.",
@@ -76281,7 +77384,8 @@
           "placeInformation": {
             "$ref": "#/components/schemas/Roblox.LocalizationTables.Api.IngestContentMetadataPlaceInformation"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.IngestContentMetadataPlaceInformation": {
         "description": "The place information metadata of an ingest content request.",
@@ -76297,7 +77401,8 @@
             "description": "The place version number of an ingest content request.",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.LocalizationTablesMetadataResponse": {
         "type": "object",
@@ -76326,7 +77431,8 @@
             "description": "Is filter for automatic translations on UI is enabled",
             "type": "boolean"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.MatchedEntry": {
         "type": "object",
@@ -76338,7 +77444,8 @@
             "format": "int32",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.ModifiedEntry": {
         "type": "object",
@@ -76352,7 +77459,8 @@
               "$ref": "#/components/schemas/Roblox.LocalizationTables.Api.Translation"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.PatchEntry": {
         "type": "object",
@@ -76372,7 +77480,8 @@
           "delete": {
             "type": "boolean"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.PatchTranslation": {
         "type": "object",
@@ -76393,7 +77502,8 @@
             "format": "date-time",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.RaiseEventForAutoScrapedEntriesCleanupRequest": {
         "type": "object",
@@ -76402,7 +77512,8 @@
             "description": "The time range to remove entries from. Following ISO 8601 Durations format",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.SetAutolocalizationSettingsForGameRequest": {
         "type": "object",
@@ -76419,7 +77530,8 @@
           "shouldUseLocalizationTable": {
             "type": "boolean"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.SetAutolocalizationTableForGameRequest": {
         "type": "object",
@@ -76428,7 +77540,8 @@
             "format": "uuid",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.TableOperationLimits": {
         "type": "object",
@@ -76438,7 +77551,8 @@
             "description": "Maximum number of entries for a patch request",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.Translation": {
         "type": "object",
@@ -76460,7 +77574,8 @@
             "format": "int32",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.TranslationHistory": {
         "description": "A model containing a translation, translator, and translation time.",
@@ -76478,7 +77593,8 @@
             "description": "The time the translation was provided.",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.Translator": {
         "type": "object",
@@ -76492,7 +77608,8 @@
             "enum": ["User", "Automation"],
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.UpdateTableContentsRequest": {
         "type": "object",
@@ -76506,7 +77623,8 @@
               "$ref": "#/components/schemas/Roblox.LocalizationTables.Api.PatchEntry"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.LocalizationTables.Api.UpdateTableContentsResponse": {
         "type": "object",
@@ -76523,7 +77641,8 @@
               "$ref": "#/components/schemas/Roblox.LocalizationTables.Api.ModifiedEntry"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.Localizationtables.Localizationtables.V1.ChangeAgent": {
         "type": "object",
@@ -76542,10 +77661,8 @@
             "type": "string",
             "readOnly": true
           }
-        }
-      },
-      "LocalizationTablesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
-        "type": "object"
+        },
+        "additionalProperties": false
       },
       "Roblox.Metrics.Api.RecordBundleLoadRequest": {
         "description": "Request parameters for tracking a bundle load.",
@@ -77082,14 +78199,6 @@
           "userId": {
             "type": "integer",
             "format": "int64"
-          },
-          "lastOnline": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "invisibleModeExpiry": {
-            "type": "string",
-            "format": "date-time"
           }
         },
         "additionalProperties": false
@@ -78142,6 +79251,109 @@
         },
         "additionalProperties": false
       },
+      "Roblox.GameLocalization.Client.GameLocalizationRoles.Assignee": {
+        "type": "object",
+        "properties": {
+          "assigneeType": {
+            "description": " ['User' = 0, 'Group' = 1, 'GroupRole' = 2]",
+            "enum": ["user", "group", "groupRole"],
+            "type": "string"
+          },
+          "id": {
+            "format": "int64",
+            "type": "integer"
+          }
+        }
+      },
+      "Roblox.GameLocalization.Client.GameLocalizationRoles.GameLocalizationRoleAssignment": {
+        "type": "object",
+        "properties": {
+          "gameId": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "assignee": {
+            "$ref": "#/components/schemas/Roblox.GameLocalization.Client.GameLocalizationRoles.Assignee"
+          }
+        }
+      },
+      "Roblox.TranslationRoles.Api.Assignee": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "description": " ['User' = 0, 'Group' = 1, 'GroupRole' = 2]",
+            "enum": ["user", "group", "groupRole"],
+            "type": "string"
+          }
+        }
+      },
+      "Roblox.TranslationRoles.Api.GetGameLocalizationRoleAssignmentsForUserResponse": {
+        "description": "Response model containing a list of games and associated role assignment info for the requested user and role.",
+        "type": "object",
+        "properties": {
+          "games": {
+            "description": "List of games with associated role assignment info.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.GameLocalization.Client.GameLocalizationRoles.GameLocalizationRoleAssignment"
+            }
+          },
+          "previousPageCursor": {
+            "description": "Cursor which can be used for navigating to previous page.",
+            "type": "string"
+          },
+          "nextPageCursor": {
+            "description": "Cursor which can be used for navigating to next page.",
+            "type": "string"
+          }
+        }
+      },
+      "Roblox.TranslationRoles.Api.UpdateRoleRequest": {
+        "description": "The request body for update role endpoints",
+        "type": "object",
+        "properties": {
+          "assigneeId": {
+            "format": "int64",
+            "description": "The id of the assignee",
+            "type": "integer"
+          },
+          "assigneeType": {
+            "description": "The type of the assignee ['User' = 0, 'Group' = 1, 'GroupRole' = 2]",
+            "enum": ["user", "group", "groupRole"],
+            "type": "string"
+          },
+          "role": {
+            "description": "The role to be assigned or revoked ['Translator' = 0]",
+            "enum": ["translator"],
+            "type": "string"
+          },
+          "revoke": {
+            "description": "To assign or to revoke",
+            "type": "boolean"
+          }
+        }
+      },
+      "TranslationRolesApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
+        "type": "object"
+      },
+      "Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.TranslationRoles.Api.Assignee_": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.TranslationRoles.Api.Assignee"
+            }
+          }
+        }
+      },
       "Roblox.TwoStepVerification.Api.ClearRecoveryCodesRequest": {
         "description": "Request information needed to clear existing recovery codes.",
         "type": "object",
@@ -78400,6 +79612,18 @@
             "format": "int32",
             "description": "The enum representing which experiment group the user is in.",
             "type": "integer"
+          },
+          "isEppUIEnabled": {
+            "description": "Whether the EPP UI is enabled.",
+            "type": "boolean"
+          },
+          "maskedUserEmail": {
+            "description": "The masked email for the authenticated user. Typically used in Email 2SV challenges after\r\nthe challenge has been verified to match the target user.",
+            "type": "string"
+          },
+          "isUserU13": {
+            "description": "Whether the user is O13.",
+            "type": "boolean"
           }
         }
       },
@@ -80455,7 +81679,8 @@
           "CannotManageSubject",
           "SubjectNotFound",
           "AssetTypeNotEnabled",
-          "PermissionLimitReached"
+          "PermissionLimitReached",
+          "DependenciesLimitReached"
         ],
         "type": "string",
         "description": "Enums for customized error code in error responses."
@@ -80488,6 +81713,174 @@
       "SubjectType": {
         "enum": ["Invalid", "User", "Group", "GroupRoleset", "All", "Universe"],
         "type": "string"
+      },
+      "GamePasses.ErrorCode": {
+        "enum": [
+          "InternalError",
+          "BadRequest",
+          "NotFound",
+          "UnauthorizedAccess",
+          "NotAuthenticated",
+          "PassNotFound",
+          "TargetUnauthorizedAccess",
+          "UniverseNotFound",
+          "MissingArgument",
+          "AssetCreationFailure",
+          "PassRevokeFailure",
+          "PassAlreadyRevoked",
+          "SalesNotFound",
+          "CommissionRateNotFound",
+          "AssetNotFound",
+          "FileTooLarge",
+          "ActiveInPO",
+          "NotForSale",
+          "NotSameUniverse",
+          "PricingConfigError",
+          "InvalidCount",
+          "Blocked",
+          "InvalidPageSize"
+        ],
+        "type": "string",
+        "description": "Code representing various error conditions."
+      },
+      "GamePasses.ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "errorCode": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GamePasses.ErrorCode"
+              }
+            ],
+            "description": "The ErrorCode for the exception."
+          },
+          "errorMessage": {
+            "type": "string",
+            "description": "The human readable error message.",
+            "nullable": true
+          },
+          "field": {
+            "type": "string",
+            "description": "The relevant field that caused the error.",
+            "nullable": true
+          },
+          "hint": {
+            "type": "string",
+            "description": "A hint as to what caused the error, if applicable.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "This is the base class for all custom Exceptions that are thrown in this API."
+      },
+      "GamePassConfigV2": {
+        "required": [
+          "createdTimestamp",
+          "description",
+          "gamePassId",
+          "iconAssetId",
+          "isForSale",
+          "name",
+          "priceInformation",
+          "updatedTimestamp"
+        ],
+        "type": "object",
+        "properties": {
+          "gamePassId": {
+            "type": "integer",
+            "description": "The game pass ID.",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the game pass."
+          },
+          "description": {
+            "type": "string",
+            "description": "The description of the game pass."
+          },
+          "isForSale": {
+            "type": "boolean",
+            "description": "Whether the game pass is currently on sale."
+          },
+          "iconAssetId": {
+            "type": "integer",
+            "description": "The icon image (thumbnail) asset ID of the game pass.",
+            "format": "int64"
+          },
+          "createdTimestamp": {
+            "type": "string",
+            "description": "The timestamp when the game pass was created.",
+            "format": "date-time"
+          },
+          "updatedTimestamp": {
+            "type": "string",
+            "description": "The timestamp when the game pass was last updated.",
+            "format": "date-time"
+          },
+          "priceInformation": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GamePasses.PriceInformationStruct"
+              }
+            ],
+            "description": "The pricing configuration associated with the game pass.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Creator-facing representation of a game pass configuration."
+      },
+      "ListGamePassConfigsByUniverseResponse": {
+        "required": ["gamePasses", "nextPageToken"],
+        "type": "object",
+        "properties": {
+          "gamePasses": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GamePassConfigV2"
+            },
+            "description": "The list of game passes with their corresponding configuration details."
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "The next page token.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response for listing game pass configuration details by universe"
+      },
+      "GamePasses.PriceInformationStruct": {
+        "required": ["defaultPriceInRobux", "enabledFeatures"],
+        "type": "object",
+        "properties": {
+          "defaultPriceInRobux": {
+            "type": "integer",
+            "description": "The configured default price in Robux.",
+            "format": "int64",
+            "nullable": true
+          },
+          "enabledFeatures": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GamePasses.PricingFeature"
+            },
+            "description": "The enabled pricing features for the game pass."
+          }
+        },
+        "additionalProperties": false,
+        "description": "The pricing configuration information."
+      },
+      "GamePasses.PricingFeature": {
+        "enum": [
+          "Invalid",
+          "PriceOptimization",
+          "UserFixedPrice",
+          "RegionalPricing"
+        ],
+        "type": "string",
+        "description": "Enum representing enabled features for this particular game pass."
       }
     },
     "requestBodies": {
@@ -80959,7 +82352,12 @@
       "x-roblox-tag-info": {
         "path": "game-passes",
         "content": "Lists all HTTP APIs for working with game passes.",
-        "ordering": []
+        "ordering": [
+          "GamePasses_CreateGamePass",
+          "GamePasses_UpdateGamePass",
+          "GamePasses_GetGamePassConfig",
+          "GamePasses_ListGamePassConfigsByUniverse"
+        ]
       }
     },
     {
@@ -80968,7 +82366,7 @@
       "x-roblox-tag-info": {
         "path": "generative-ai",
         "content": "Lists all HTTP APIs related to Generative AI and LLMs on Open Cloud.",
-        "ordering": ["Cloud_GenerateSpeechAsset"]
+        "ordering": ["Cloud_TranslateText", "Cloud_GenerateSpeechAsset"]
       }
     },
     {
