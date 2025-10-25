@@ -77,8 +77,7 @@ The Roblox documentation has three main document types:
 
   Guides benefit massively from practical, real-world use cases, images, code snippets, and diagrams. Most task-based content should include a numbered list.
 
-- Tutorials in `.md` files in [content/en-us/tutorials](./content/en-us/tutorials)
-
+- Tutorials in `.md` files in [content/en-us/tutorials](./content/en-us/ionoj)
   Compared to task-based guides, tutorials are more self-contained and take you from _nothing_ to _something_. This focus on creating something specific means they're typically much more prescriptive than guides. Tutorials often touch multiple features and concepts at the same time, demonstrating the connections between tools and strategies.
 
 - API reference docs in `.yaml` files in [content/en-us/reference](./content/en-us/reference)
