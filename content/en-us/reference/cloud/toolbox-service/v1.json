@@ -325,7 +325,7 @@
             }
           },
           {
-            "name": "category",
+            "name": "categoryPath",
             "in": "query",
             "schema": {
               "type": "string"
@@ -2069,6 +2069,11 @@
             ],
             "description": "Optional thumbnail information for the subcategory",
             "nullable": true
+          },
+          "categoryPath": {
+            "type": "string",
+            "description": "The taxonomy slug for this subcategory. e.g. \"3d__characters\"",
+            "nullable": true
           }
         },
         "additionalProperties": false,
@@ -2147,6 +2152,11 @@
               }
             ],
             "description": "The music chart type.",
+            "nullable": true
+          },
+          "categoryPath": {
+            "type": "string",
+            "description": "The taxonomy category path slug to use for category filtering",
             "nullable": true
           }
         },

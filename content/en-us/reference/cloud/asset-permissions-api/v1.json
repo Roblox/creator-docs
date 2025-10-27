@@ -226,7 +226,8 @@
           "CannotManageSubject",
           "SubjectNotFound",
           "AssetTypeNotEnabled",
-          "PermissionLimitReached"
+          "PermissionLimitReached",
+          "DependenciesLimitReached"
         ],
         "type": "string",
         "description": "Enums for customized error code in error responses."

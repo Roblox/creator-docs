@@ -143,3 +143,7 @@ To use Messaging Service API for your application and request permissions from y
    --header 'Content-Type: application/json' \
    --data-raw '{"topic": "some-topic","message":"message to publish"}'
    ```
+
+## Use with HTTPService
+
+This API is one of the [Open Cloud endpoints supported](../../cloud-services/http-service.md#supported-open-cloud-endpoints) by `Class.HttpService`. You can use it to publish messages across different experiences from within an experience.

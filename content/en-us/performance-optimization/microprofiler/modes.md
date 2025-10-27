@@ -58,6 +58,8 @@ In addition to the bar graph from frame mode, detailed mode adds a colorful time
 
   <img alt="The graph showing how long tasks take per frame." src="../../assets/optimization/microprofiler/micro-graph.png" width="300px" />
 
+  This graph is synchronized with the main profiler bars. The currently selected frame range is highlighted in green on the graph. You can also click anywhere on this graph to re-center the main profiler view to that specific frame, which is helpful for finding spikes in the detailed view.
+  
   <Alert severity="info">
   Use the **Options** menu to change the reference line on the graph to a different number of milliseconds.
   </Alert>

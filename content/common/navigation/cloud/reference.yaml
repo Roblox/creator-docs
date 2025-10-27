@@ -118,6 +118,8 @@ navigation:
         path: /cloud/api/followings
       - title: Game internationalization
         path: /cloud/api/game-internationalization
+      - title: Game passes
+        path: /cloud/api/game-passes
       - title: Groups
         path: /cloud/api/groups
       - title: Localization tables

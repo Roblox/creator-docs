@@ -91,21 +91,21 @@
         "x-roblox-rate-limits": {
           "perIp": {
             "period": "MINUTE",
-            "maxInPeriod": 60
+            "maxInPeriod": 120
           },
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 60
+            "maxInPeriod": 120
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 120
           }
         },
         "x-roblox-throttling-limit": {
           "perApiKey": {
             "periodInSeconds": "60",
-            "maxInPeriod": 60
+            "maxInPeriod": 120
           }
         }
       }
@@ -187,21 +187,21 @@
         "x-roblox-rate-limits": {
           "perIp": {
             "period": "MINUTE",
-            "maxInPeriod": 60
+            "maxInPeriod": 120
           },
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 60
+            "maxInPeriod": 120
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 120
           }
         },
         "x-roblox-throttling-limit": {
           "perApiKey": {
             "periodInSeconds": "60",
-            "maxInPeriod": 60
+            "maxInPeriod": 120
           }
         }
       },
@@ -316,21 +316,21 @@
         "x-roblox-rate-limits": {
           "perIp": {
             "period": "MINUTE",
-            "maxInPeriod": 60
+            "maxInPeriod": 120
           },
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 60
+            "maxInPeriod": 120
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 120
           }
         },
         "x-roblox-throttling-limit": {
           "perApiKey": {
             "periodInSeconds": "60",
-            "maxInPeriod": 60
+            "maxInPeriod": 120
           }
         }
       }
@@ -399,7 +399,7 @@
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 100
           }
         },
         "x-roblox-throttling-limit": {
@@ -474,7 +474,7 @@
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 100
           }
         },
         "x-roblox-throttling-limit": {
@@ -552,7 +552,7 @@
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 100
           }
         },
         "x-roblox-throttling-limit": {
@@ -639,7 +639,7 @@
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 100
           }
         },
         "x-roblox-throttling-limit": {
@@ -724,7 +724,7 @@
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 100
           }
         },
         "x-roblox-cloud-api-operation-code-samples": [
@@ -805,15 +805,15 @@
         "x-roblox-rate-limits": {
           "perIp": {
             "period": "MINUTE",
-            "maxInPeriod": 100
+            "maxInPeriod": 300
           },
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 100
+            "maxInPeriod": 300
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 300
           }
         },
         "x-roblox-throttling-limit": {
