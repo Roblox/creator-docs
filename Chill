@@ -1,0 +1,180 @@
+★彡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★彡
+             🌙  MIDNIGHT SHORE  🌙
+        ── Romantic Edition ──
+     A World of Stars, Love & Ocean Dreams
+★彡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★彡
+
+
+███████╗███╗   ███╗██╗██████╗ ███╗   ██╗██╗ ██████╗ ██╗  ██╗
+██╔════╝████╗ ████║██║██╔══██╗████╗  ██║██║██╔═══██╗██║  ██║
+███████╗██╔████╔██║██║██████╔╝██╔██╗ ██║██║██║   ██║███████║
+╚════██║██║╚██╔╝██║██║██╔═══╝ ██║╚██╗██║██║██║   ██║██╔══██║
+███████║██║ ╚═╝ ██║██║██║     ██║ ╚████║██║╚██████╔╝██║  ██║
+╚══════╝╚═╝     ╚═╝╚═╝╚═╝     ╚═╝  ╚═══╝╚═╝ ╚═════╝ ╚═╝  ╚═╝
+
+─────────────────────────────────────────────
+        World by gokusb6
+─────────────────────────────────────────────
+
+
+🏝️ OVERVIEW
+Welcome to **Midnight Shore – Romantic Edition**, a Roblox world built for peaceful and emotional connections beneath the stars.  
+Players can gather by the beach, share ice cream, relax on benches, and enjoy lo-fi romantic music under moonlight.
+
+---
+
+🌙 FEATURES
+• Realistic & Cartoon versions included  
+• Night-time beach with soft waves and starlight  
+• Houses and benches you can sit on  
+• Ice cream vendor, cake, and drinks  
+• Romantic and emotional background music  
+• Music changer GUI  
+• Voice chat zone for chill or deep talks  
+• VIP System (100 Robux) to unlock avatar customization  
+• Cinematic intro sequence (walk from pier to bonfire)  
+• Custom “🌙 VIP Dreamer” title and glow effect  
+
+---
+
+⚙️ LIGHTING SETTINGS (Explorer → Lighting)
+```lua
+Ambient = Color3.fromRGB(30,30,60)
+OutdoorAmbient = Color3.fromRGB(20,20,40)
+Brightness = 1
+ClockTime = 22
+FogColor = Color3.fromRGB(10,10,25)
+FogEnd = 150 local seat = script.Parent:FindFirstChildOfClass("Seat") or script.Parent:WaitForChild("Seat")
+seat.Touched:Connect(function(hit)
+	local hum = hit.Parent:FindFirstChildOfClass("Humanoid")
+	if hum then seat:Sit(hum) end
+end) local prompt = Instance.new("ProximityPrompt")
+prompt.ActionText = "Get Ice Cream"
+prompt.ObjectText = "Vendor"
+prompt.RequiresLineOfSight = false
+prompt.MaxActivationDistance = 8
+prompt.Parent = script.Parent
+
+prompt.Triggered:Connect(function(player)
+	local iceCream = Instance.new("Tool")
+	iceCream.Name = "Ice Cream"
+	local handle = Instance.new("Part")
+	handle.Name = "Handle"
+	handle.Size = Vector3.new(1,1,1)
+	handle.Color = Color3.fromRGB(255,228,196)
+	handle.Parent = iceCream
+	iceCream.RequiresHandle = true
+	iceCream.Parent = player.Backpack
+end) local soundService = game:GetService("SoundService")
+local songs = {
+	["Sad Piano – Memories"] = "rbxassetid://YOUR_SOUND_ID_1",
+	["Soft Guitar – Lonely Heart"] = "rbxassetid://YOUR_SOUND_ID_2",
+	["Lo-Fi Love – Night Breeze"] = "rbxassetid://YOUR_SOUND_ID_3"
+}
+
+for name,id in pairs(songs) do
+	local button = Instance.new("TextButton")
+	button.Text = name
+	button.Size = UDim2.new(1,0,0,30)
+	button.Parent = script.Parent.SongList
+	button.MouseButton1Click:Connect(function()
+		soundService:ClearAllChildren()
+		local s = Instance.new("Sound")
+		s.SoundId = id
+		s.Volume = 0.5
+		s.Looped = true
+		s.Parent = soundService
+		s:Play()
+	end)
+end) local Players = game:GetService("Players")
+local MarketplaceService = game:GetService("MarketplaceService")
+local DataStoreService = game:GetService("DataStoreService")
+
+local GAMEPASS_ID = 1234567890  -- Replace with your actual Gamepass ID
+local vipData = DataStoreService:GetDataStore("VIPStatus")
+
+Players.PlayerAdded:Connect(function(player)
+	local owns = false
+	pcall(function()
+		owns = MarketplaceService:UserOwnsGamePassAsync(player.UserId, GAMEPASS_ID)
+	end)
+	local stored = nil
+	pcall(function()
+		stored = vipData:GetAsync(player.UserId)
+	end)
+	if owns or stored then
+		player:SetAttribute("HasVIP", true)
+		pcall(function() vipData:SetAsync(player.UserId, true) end)
+	else
+		player:SetAttribute("HasVIP", false)
+	end
+end) local MarketplaceService = game:GetService("MarketplaceService")
+local player = game.Players.LocalPlayer
+local GAMEPASS_ID = 1234567890
+
+script.Parent.ChangeLookButton.MouseButton1Click:Connect(function()
+	if player:GetAttribute("HasVIP") then
+		script.Parent.CustomizerFrame.Visible = true
+	else
+		MarketplaceService:PromptGamePassPurchase(player, GAMEPASS_ID)
+	end
+end) local Players = game:GetService("Players")
+Players.PlayerAdded:Connect(function(player)
+	player.CharacterAdded:Connect(function(char)
+		if player:GetAttribute("HasVIP") then
+			local billboard = Instance.new("BillboardGui")
+			billboard.Size = UDim2.new(0,200,0,50)
+			billboard.StudsOffset = Vector3.new(0,3,0)
+			billboard.Adornee = char:WaitForChild("Head")
+			billboard.AlwaysOnTop = true
+
+			local text = Instance.new("TextLabel")
+			text.Size = UDim2.new(1,0,1,0)
+			text.BackgroundTransparency = 1
+			text.Text = "🌙 VIP Dreamer"
+			text.TextColor3 = Color3.fromRGB(255,223,186)
+			text.Font = Enum.Font.GothamBold
+			text.TextScaled = true
+			text.Parent = billboard
+			billboard.Parent = char
+
+			local glow = Instance.new("PointLight")
+			glow.Color = Color3.fromRGB(255,200,150)
+			glow.Range = 12
+			glow.Brightness = 2
+			glow.Parent = char:WaitForChild("HumanoidRootPart")
+		end
+	end)
+end) local player = game.Players.LocalPlayer
+local camera = workspace.CurrentCamera
+local tweenService = game:GetService("TweenService")
+camera.CameraType = Enum.CameraType.Scriptable
+
+local startPart = workspace:WaitForChild("IntroStart")
+local endPart = workspace:WaitForChild("IntroEnd")
+
+camera.CFrame = startPart.CFrame
+local tweenInfo = TweenInfo.new(10, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut)
+local tween = tweenService:Create(camera, tweenInfo, {CFrame = endPart.CFrame})
+tween:Play()
+tween.Completed:Wait()
+camera.CameraType = Enum.CameraType.Custom local player = game.Players.LocalPlayer
+local zone = workspace:WaitForChild("VoiceZone")
+local gui = player:WaitForChild("PlayerGui"):WaitForChild("VoiceHint")
+local inside = false
+
+game:GetService("RunService").Heartbeat:Connect(function()
+	local char = player.Character
+	if not char or not char:FindFirstChild("HumanoidRootPart") then return end
+	local distance = (char.HumanoidRootPart.Position - zone.Position).magnitude
+	if distance < 20 and not inside then
+		inside = true
+		gui.Text = "🌙 You can talk here"
+		gui.TextTransparency = 1
+		game:GetService("TweenService"):Create(gui,TweenInfo.new(1),{TextTransparency=0}):Play()
+		task.wait(3)
+		game:GetService("TweenService"):Create(gui,TweenInfo.new(2),{TextTransparency=1}):Play()
+	elseif distance >= 20 and inside then
+		inside = false
+	end
+end)
