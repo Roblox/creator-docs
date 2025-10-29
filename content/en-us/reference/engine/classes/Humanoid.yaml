@@ -614,8 +614,8 @@ properties:
 
       This property is only visible in the
       [Properties](../../../studio/properties.md) window if
-      `Class.Humanoid.UseJumpPower` is set to **false**, as it would not be
-      relevant otherwise (instead, `Class.Humanoid.JumpPower` is used).
+      `Class.Humanoid.UseJumpPower` is set to **false**, as it is not relevant
+      otherwise (instead, `Class.Humanoid.JumpPower` is used).
     code_samples: []
     type: float
     tags: []
@@ -649,8 +649,8 @@ properties:
 
       This property is only visible in the
       [Properties](../../../studio/properties.md) window if
-      `Class.Humanoid.UseJumpPower` is set to **true**, as it would not be
-      relevant otherwise (instead, `Class.Humanoid.JumpHeight` is used).
+      `Class.Humanoid.UseJumpPower` is set to **true**, as it is not relevant
+      otherwise (instead, `Class.Humanoid.JumpHeight` is used).
     code_samples: []
     type: float
     tags: []
@@ -1086,11 +1086,11 @@ properties:
       `Class.Humanoid.JumpPower` (true) property is used.
     description: |
       When a character spawns, this property is set according to the value of
-      `Class.StarterPlayer.CharacterUseJumpPower` which defaults to true.
+      `Class.StarterPlayer.CharacterUseJumpPower`, which defaults to true.
 
-      When jumping, with this set to true, the `Class.Humanoid.JumpHeight` value
-      is used to ensure the humanoid jumps to that height. With this set to
-      false, the `Class.Humanoid.JumpPower` value is used to apply an upward
+      When jumping, with this set to false, the `Class.Humanoid.JumpHeight`
+      value is used to ensure the humanoid jumps to that height. With this set
+      to true, the `Class.Humanoid.JumpPower` value is used to apply an upward
       force.
     code_samples: []
     type: boolean

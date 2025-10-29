@@ -12612,12 +12612,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdConfigurationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdConfigurationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -12682,12 +12682,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdConfigurationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdConfigurationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel"
+                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
                 }
               }
             }
@@ -62102,6 +62102,7 @@
         }
       },
       "Place": {
+        "required": ["templatePlace"],
         "type": "object",
         "properties": {
           "path": {
@@ -62137,6 +62138,25 @@
             "type": "integer",
             "description": "The maximum number of allowed users in a single server.",
             "format": "int32"
+          },
+          "root": {
+            "readOnly": true,
+            "example": true,
+            "type": "boolean",
+            "description": "Whether this place is its parent universe's root place or not.\nEach universe has exactly one root place."
+          },
+          "universeRuntimeCreation": {
+            "readOnly": true,
+            "example": true,
+            "type": "boolean",
+            "description": "Whether this place was created through in-experience creation.\nIf true, the place was created by calling AssetService::CreatePlaceAsync()\nfrom a script."
+          },
+          "templatePlace": {
+            "writeOnly": true,
+            "example": "universes/{universe_id}/places/{place_id}",
+            "type": "string",
+            "description": "The resource path of the template place used to initialize the place on\ncreation.\nThe newly created place will be a clone of this template.\nA list of the valid template places can be obtained from\nListTemplatePlaces. Format: universes/{universe_id}/places/{place_id}",
+            "x-immutable": true
           }
         },
         "description": "Represents a Roblox place.",
@@ -62426,6 +62446,7 @@
         "description": "Restore the data store"
       },
       "Universe": {
+        "required": ["templateRootPlace"],
         "type": "object",
         "properties": {
           "path": {
@@ -62465,9 +62486,9 @@
             "description": "The universe is user-owned."
           },
           "group": {
-            "readOnly": true,
             "type": "string",
-            "description": "The universe is group-owned."
+            "description": "The universe is group-owned.",
+            "x-immutable": true
           },
           "visibility": {
             "readOnly": true,
@@ -62553,6 +62574,18 @@
             "example": true,
             "type": "boolean",
             "description": "Whether or not players can join the Experience via VR."
+          },
+          "rootPlace": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The resource path of the root place of this universe\nFormat: universes/{universe_id}/places/{place_id}"
+          },
+          "templateRootPlace": {
+            "writeOnly": true,
+            "example": "universes/{universe_id}/places/{place_id}",
+            "type": "string",
+            "description": "The resource path of the template place, used for CreateUniverse.\nThe root place of the newly-created universe will be a clone of this\ntemplate. A list of the valid template places can be obtained from\nListTemplatePlaces. Format: universes/{universe_id}/places/{place_id}",
+            "x-immutable": true
           }
         },
         "description": "Represents a Roblox experience.",
@@ -64146,7 +64179,8 @@
             "description": "The bid amount of the Ad in Robux",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AdConfiguration.Api.CreativeModel": {
         "description": "A model representing an Ad Creative (for example, an ad thumbnail).",
@@ -64165,7 +64199,8 @@
             "type": "integer",
             "example": 1
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AdConfiguration.Api.GetSponsoredCampaignsResponse": {
         "description": "A response model for retrieving a page of Roblox.AdConfiguration.Api.SponsoredCampaignModel.",
@@ -64186,7 +64221,8 @@
             "description": "The cursor for retrieving the next page, if present.",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AdConfiguration.Api.GetSponsoredGamesResponse": {
         "description": "A response model for retrieving a page of Roblox.AdConfiguration.Api.SponsoredGameV2Model.",
@@ -64207,7 +64243,8 @@
             "description": "The cursor for retrieving the next page, if present.",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AdConfiguration.Api.Models.CampaignTargetModel": {
         "description": "Represents a sponsored ad campaign target",
@@ -64228,7 +64265,8 @@
             "description": "The name of the campaign target (i.e. the asset name, universe name, group name, etc.)",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AdConfiguration.Api.Models.CreateSponsoredCampaignRequest": {
         "description": "A request model for creating a sponsored game",
@@ -64298,7 +64336,8 @@
           "creativeModel": {
             "$ref": "#/components/schemas/Roblox.AdConfiguration.Api.CreativeModel"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AdConfiguration.Api.Models.GetCampaignTargetsResponse": {
         "description": "The response model which returns a collection of Roblox.AdConfiguration.Api.Models.CampaignTargetModel",
@@ -64311,7 +64350,8 @@
               "$ref": "#/components/schemas/Roblox.AdConfiguration.Api.Models.CampaignTargetModel"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AdConfiguration.Api.Models.GetEligibleCampaignTargetsRequest": {
         "description": "A model represents a request to stop a sponsored campaign / ad.",
@@ -64332,7 +64372,8 @@
             "description": "The group id, if applicable.",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AdConfiguration.Api.Models.GetRecentAdsRankedUniversesResponse": {
         "description": "The response model for getting a list of recent-ads-ranked universes.",
@@ -64345,7 +64386,8 @@
               "$ref": "#/components/schemas/Roblox.AdConfiguration.Api.Models.UniverseModel"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AdConfiguration.Api.Models.StopSponsoredCampaignRequest": {
         "description": "A model represents a request to stop a sponsored campaign / ad.",
@@ -64356,7 +64398,8 @@
             "description": "The ID of the ad set to stop.",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AdConfiguration.Api.Models.StopSponsoredGameV2Request": {
         "description": "A model represents a request to stop a sponsored game ad.",
@@ -64367,7 +64410,8 @@
             "description": "Gets the ID of the ad set to stop.",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AdConfiguration.Api.Models.UniverseModel": {
         "description": "Represents a universe in API endpoint results.",
@@ -64382,7 +64426,8 @@
             "description": "The name of the universe",
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AdConfiguration.Api.SponsoredCampaignModel": {
         "description": "A response model represents an Ad with complete information, including infos from its associated campaign and ad set",
@@ -64504,7 +64549,8 @@
             "description": "The number of conversions by ad click generated by the ad",
             "type": "integer"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Roblox.AdConfiguration.Api.SponsoredGameV2Model": {
         "description": "A response model represents an Ad with complete information, including infos from its associated campaign and ad set",
@@ -64630,10 +64676,8 @@
             "description": "The number of conversions by ad click generated by the ad",
             "type": "integer"
           }
-        }
-      },
-      "AdConfigurationApi.Roblox.Web.WebAPI.ApiEmptyResponseModel": {
-        "type": "object"
+        },
+        "additionalProperties": false
       },
       "Roblox.AssetDelivery.Api.AssetMetadata": {
         "description": "An asset piece of metadata.",
@@ -68872,6 +68916,13 @@
           "isDevelopmentConfig": {
             "description": "Indicates whether the LuaApp OTA is a development configuration.",
             "type": "boolean"
+          },
+          "assetsManifest": {
+            "description": "",
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
           }
         },
         "additionalProperties": false
@@ -70613,6 +70664,11 @@
         "properties": {
           "userPresence": {
             "$ref": "#/components/schemas/Roblox.Friends.Api.Models.Response.UserPresenceResponseModel"
+          },
+          "sortScore": {
+            "format": "double",
+            "description": "Carousel sort score",
+            "type": "number"
           },
           "id": {
             "format": "int64",

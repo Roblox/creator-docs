@@ -30,7 +30,7 @@ When ready to export, see [Export requirements](../../art/accessories/export-set
 
 ### Body scale
 
-Roblox supports 3 types of body scales: `Classic`, `Normal`, and `Slender`. When designing your accessory, the size of your accessory cannot exceed the following sizes based on body scale and accessory asset type.
+Roblox supports 3 types of body scales: `Classic`, `Normal`, and `Slender`. When designing your accessory, the size of your accessory cannot exceed the following sizes based on body scale and accessory asset type. Accessory size is measured based on attachment orientation.
 
 See [Body scale](../accessories/body-scale.md) for more information on the different types of body proportions Roblox supports.
 

@@ -66,6 +66,74 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: TerrainDetail.EmissiveMaskContent
+    summary: |
+      Determines the emissivity across the surface.
+    description: |
+      This property determines the apparent emissivity across the surface. An
+      emissive mask is a grayscale image where black pixels correspond to no
+      emissivity, and white pixels correspond to full emissivity.
+
+      The emissive contribution gets added to total lighting contribution across
+      the surface, and the sum gets multiplied by the albedo texture, which
+      would be sampled from `Class.TerrainDetail.ColorMap|ColorMap` if provided.
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+  - name: TerrainDetail.EmissiveStrength
+    summary: |
+      Determines the strength of emissive contribution.
+    description: |
+      This value is a multiplier to control how strong the emissive contribution
+      is across the surface. If the final contribution of emissives goes beyond
+      supported dynamic range, it will get clamped; this could result in
+      emissive contribution appearing all white when using large emissive
+      strength values. Since this value is a multiplier, the maximum value to
+      prevent clamping depends on all of the other contributing values,
+      including `Class.TerrainDetail.EmissiveTint|EmissiveTint`,
+      `Class.TerrainDetail.ColorMap|ColorMap` and combined lighting
+      contribution.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+  - name: TerrainDetail.EmissiveTint
+    summary: |
+      Determines the tinting color for emissive contribution.
+    description: |
+      This value is an RGB color for tinting emissive contribution.
+    code_samples: []
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: TerrainDetail.Face
     summary: |
       The face this TerrainDetail overrides.

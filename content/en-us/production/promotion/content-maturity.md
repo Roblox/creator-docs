@@ -22,7 +22,7 @@ If an experience does not have accurate or all content maturity information, Rob
 
 ## Generate labels
 
-If your Roblox account is at least 30 days old, you can generate content maturity information by filling out the **Maturity & Compliance Questionnaire**, which contains a set of questions about the type of content players can possibly encounter within your experience, as well as how frequently it occurs. Your answers give Roblox an understanding of the content in your experience and ensure that the experience is available to the appropriate audience.
+You can generate content maturity information by filling out the **Maturity & Compliance Questionnaire**, which contains a set of questions about the type of content players can possibly encounter within your experience, as well as how frequently it occurs. Your answers give Roblox an understanding of the content in your experience and ensure that the experience is available to the appropriate audience.
 
 <Alert severity="warning">
    If your experience is going to have [Restricted content](https://en.help.roblox.com/hc/articles/15869919570708), it must first receive a Restricted maturity label so that its content is restricted to ID-verified players who are at least 17 years old. You must not add any restricted content to your experience before adding content maturity information.

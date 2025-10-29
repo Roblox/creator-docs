@@ -8,11 +8,12 @@ memory_category: Internal
 summary: |
   Converts spoken audio into text.
 description: |
-  **This API is in beta and is not publicly available yet.**
-
   `Class.AudioSpeechToText` is used to convert speech audio into text. This
   class provides a single **Input** pin that can be connected to other pins via
   `Class.Wire|Wires`.
+
+  For more information, see
+  [Speech-to-text](../../../audio/objects.md#speech-to-text).
 code_samples:
   - audio-wiring---speech-to-text
 inherits:

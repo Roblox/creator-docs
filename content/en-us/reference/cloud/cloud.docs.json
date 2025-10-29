@@ -8736,6 +8736,7 @@
         }
       },
       "Place": {
+        "required": ["templatePlace"],
         "type": "object",
         "properties": {
           "path": {
@@ -8771,6 +8772,25 @@
             "type": "integer",
             "description": "The maximum number of allowed users in a single server.",
             "format": "int32"
+          },
+          "root": {
+            "readOnly": true,
+            "example": true,
+            "type": "boolean",
+            "description": "Whether this place is its parent universe's root place or not.\nEach universe has exactly one root place."
+          },
+          "universeRuntimeCreation": {
+            "readOnly": true,
+            "example": true,
+            "type": "boolean",
+            "description": "Whether this place was created through in-experience creation.\nIf true, the place was created by calling AssetService::CreatePlaceAsync()\nfrom a script."
+          },
+          "templatePlace": {
+            "writeOnly": true,
+            "example": "universes/{universe_id}/places/{place_id}",
+            "type": "string",
+            "description": "The resource path of the template place used to initialize the place on\ncreation.\nThe newly created place will be a clone of this template.\nA list of the valid template places can be obtained from\nListTemplatePlaces. Format: universes/{universe_id}/places/{place_id}",
+            "x-immutable": true
           }
         },
         "description": "Represents a Roblox place.",
@@ -9060,6 +9080,7 @@
         "description": "Restore the data store"
       },
       "Universe": {
+        "required": ["templateRootPlace"],
         "type": "object",
         "properties": {
           "path": {
@@ -9099,9 +9120,9 @@
             "description": "The universe is user-owned."
           },
           "group": {
-            "readOnly": true,
             "type": "string",
-            "description": "The universe is group-owned."
+            "description": "The universe is group-owned.",
+            "x-immutable": true
           },
           "visibility": {
             "readOnly": true,
@@ -9187,6 +9208,18 @@
             "example": true,
             "type": "boolean",
             "description": "Whether or not players can join the Experience via VR."
+          },
+          "rootPlace": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The resource path of the root place of this universe\nFormat: universes/{universe_id}/places/{place_id}"
+          },
+          "templateRootPlace": {
+            "writeOnly": true,
+            "example": "universes/{universe_id}/places/{place_id}",
+            "type": "string",
+            "description": "The resource path of the template place, used for CreateUniverse.\nThe root place of the newly-created universe will be a clone of this\ntemplate. A list of the valid template places can be obtained from\nListTemplatePlaces. Format: universes/{universe_id}/places/{place_id}",
+            "x-immutable": true
           }
         },
         "description": "Represents a Roblox experience.",

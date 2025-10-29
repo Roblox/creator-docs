@@ -38,16 +38,18 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
       <td>
         <ul>
           <li>`.rbxm`</li>
+          <li>`.rbxmx`</li>
         </ul>
       </td>
       <td>
         <ul>
           <li>`model/x-rbxm`</li>
+          <li>`model/x-rbxm`</li>
         </ul>
       </td>
       <td>
         <ul>
-          <li>`.rbxm` files edited outside of [Roblox Studio](../../studio/setup.md) might not upload or function.</li>
+          <li>`.rbxm` or `.rbxmx` files edited outside of [Roblox Studio](../../studio/setup.md) might not upload or function.</li>
         </ul>
       </td>
     </tr>
@@ -130,6 +132,7 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
           <li>`.gltf`</li>
           <li>`.glb`</li>
           <li>`.rbxm`</li>
+          <li>`.rbxmx`</li>
         </ul>
       </td>
       <td>
@@ -137,6 +140,7 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
           <li>`model/fbx`</li>
           <li>`model/gltf+json`</li>
           <li>`model/gltf-binary`</li>
+          <li>`model/x-rbxm`</li>
           <li>`model/x-rbxm`</li>
         </ul>
       </td>
@@ -147,7 +151,7 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
             <li>Depending on your use-case, consider uploading custom 3D models manually using the [3D Importer](../../art/modeling/3d-importer.md).</li>
           <li>The 3D Importer provides a 3D preview, various error-checking, and many customizable import settings.</li>
           </ul>
-          <li>`.rbxm` files edited outside of [Roblox Studio](../../studio/setup.md) might not upload or function.</li>
+          <li>`.rbxm` or `.rbxmx` files edited outside of [Roblox Studio](../../studio/setup.md) might not upload or function.</li>
         </ul>
       </td>
     </tr>

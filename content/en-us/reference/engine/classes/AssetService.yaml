@@ -517,6 +517,9 @@ methods:
           - `RoughnessMap` — A `Datatype.Content` object that contains the
             roughness map. If more than one channel is present, only the red
             channel is used. Default is `nil`.
+          - `EmissiveMask` — A `Datatype.Content` object that contains the
+            emissive mask. If more than one channel is present, only the red
+            channel is used. Default is `nil`.
     returns:
       - type: SurfaceAppearance
         summary: |

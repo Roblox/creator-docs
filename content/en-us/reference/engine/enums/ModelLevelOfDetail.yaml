@@ -27,18 +27,18 @@ items:
     value: 1
     tags: []
     deprecation_message: ''
+  - name: Disabled
+    summary: |
+      A lower resolution mesh will not be displayed.
+    value: 2
+    tags: []
+    deprecation_message: ''
   - name: SLIM
     summary: |
       A Scalable Lightweight Interactive Model, or SLIM, model (a composite of
       all child parts of the model) renders at progressively lower resolutions
       at distances based on the streaming radius. Greatly improves visual
       quality over `StreamingMesh`.
-    value: 2
-    tags: []
-    deprecation_message: ''
-  - name: Disabled
-    summary: |
-      A lower resolution mesh will not be displayed.
-    value: 3
+    value: 4
     tags: []
     deprecation_message: ''

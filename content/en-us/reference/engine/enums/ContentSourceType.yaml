@@ -34,3 +34,9 @@ items:
     value: 2
     tags: []
     deprecation_message: ''
+  - name: Opaque
+    summary: |
+      A non-`nil` `Opaque` reference contained in `Datatype.Content.Opaque`.
+    value: 3
+    tags: []
+    deprecation_message: ''

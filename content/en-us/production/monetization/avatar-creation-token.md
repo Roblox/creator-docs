@@ -3,7 +3,7 @@ title: Avatar creation token
 description: Enable users to create and purchase avatar items in experience.
 ---
 
-An **avatar creation token** enables developers to allow users to create, purchase, and save avatar items directly from an experience to their platform-level inventory using [in-experience creation](../../avatar/in-experience-creation.md). Experiences that implement in-experience creation APIs, such as `Class.AvatarCreationService.PromptCreateAvatarAsync|PromptCreateAvatarAsync`, must include one or more avatar creation tokens. You can purchase and manage tokens in your experience's [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+An **avatar creation token** enables developers to allow users to create, purchase, and save avatar items directly from an experience to their platform-level inventory using [in-experience creation](../../avatar/in-experience-creation.md). Experiences that implement in-experience creation APIs, such as `Class.AvatarCreationService.PromptCreateAvatarAsync|PromptCreateAvatarAsync` and `Class.AvatarCreationService.PromptCreateAvatarAssetAsync|PromptCreateAvatarAssetAsync`, must include one or more avatar creation tokens. You can purchase and manage tokens in your experience's [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 
 <Alert severity = 'info'>
 Owners of experiences that incorporate in-experience avatar item creation also benefit from [Marketplace commissions](../../marketplace/marketplace-fees-and-commissions.md#commissions) as both **creator** and **experience owner**.
@@ -31,11 +31,12 @@ To create a token:
 
    1. **Name** - The name of your token. This is not user-facing and can be changed after creation.
    2. **Description** - The description of your token. This is not user-facing and can be changed after creation.
-   3. **Item Type** - At this time, you can only create the **Body** item type in experience. You cannot change this setting after token creation.
+   3. **Item Type** - The **Body** item type can be used in experience with `Class.AvatarCreationService.PromptCreateAvatarAsync|PromptCreateAvatarAsync` whereas the rest of the item types are meant to be used with
+   `Class.AvatarCreationService.PromptCreateAvatarAssetAsync|PromptCreateAvatarAssetAsync`. You cannot change this setting after token creation.
    4. **Amount Above Price Floor** - Set the price above the Marketplace Price Floor for created items. If you intend to have different price points for items of the same type in your experience, the best way to achieve this is by purchasing multiple tokens. You can modify this field after creation.
    5. **Do not price below (Optional)** - Set the minimum price for users to purchase your item. You can modify this field after creation.
       <img src="../../assets/monetization/avatar-creation-tokens/Avatar-Creation-Token-Prices.png" width="90%" alt="Price related fields for avatar token creation, including a calculated item price."/>
 
 7. When complete, verify the **Creation Advance** and **Creation Fee** calculations and select **Create Token** to submit your purchase.
-8. You can now access the created token in the experience's **avatar creation tokens** settings. To implement `Class.AvatarCreationService.PromptCreateAvatarAsync|PromptCreateAvatarAsync`, you'll need the token ID which you can access by selecting the three dots on the thumbnail and selecting **Copy Token ID**.
+8. You can now access the created token in the experience's **avatar creation tokens** settings. To implement `Class.AvatarCreationService.PromptCreateAvatarAsync|PromptCreateAvatarAsync` or `Class.AvatarCreationService.PromptCreateAvatarAssetAsync|PromptCreateAvatarAssetAsync`, you'll need the token ID, which you can access by selecting the three dots on the thumbnail and selecting **Copy Token ID**.
    <img src="../../assets/monetization/avatar-creation-tokens/Avatar-Creation-Token-Copy-ID.png" width="30%" alt="Dropdown for created tokens revealing a Copy Token ID option" />

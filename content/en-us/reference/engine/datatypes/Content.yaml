@@ -120,6 +120,20 @@ properties:
     code_samples: []
     tags: []
     deprecation_message: ''
+  - name: Content.Opaque
+    type: Opaque?
+    summary: |
+      A reference to a non-`nil` `Opaque` content if
+      `Datatype.Content.SourceType` is `Enum.ContentSourceType|Opaque`,
+      otherwise `nil`.
+    description: |
+      A reference to a non-`nil` `Opaque` content if
+      `Datatype.Content.SourceType` is `Enum.ContentSourceType|Opaque`,
+      otherwise `nil`.
+    default:
+    code_samples: []
+    tags: []
+    deprecation_message: ''
 methods: []
 functions: []
 math_operations: []

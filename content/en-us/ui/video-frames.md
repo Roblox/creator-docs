@@ -27,7 +27,7 @@ Videos that don't meet these requirements are rejected. Alpha channels are not s
 
 ## Play videos
 
-A `Class.VideoFrame` must be parented to a `Class.ScreenGui`, `Class.SurfaceGui`, or `Class.BillboardGui` in order to be playable. Currently, a maximum of 2 videos can play simultaneously.  
+A `Class.VideoFrame` must be parented to a `Class.ScreenGui`, `Class.SurfaceGui`, or `Class.BillboardGui` in order to be playable. Currently, a maximum of two videos can play simultaneously.
 
 To play a video in your experience without code:
 
