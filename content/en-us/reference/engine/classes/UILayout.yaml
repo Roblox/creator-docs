@@ -12,6 +12,8 @@ description: |
 code_samples: []
 inherits:
   - UIComponent
+descendants:
+  - UIGridStyleLayout
 tags:
   - NotCreatable
 deprecation_message: ''

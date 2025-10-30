@@ -17,6 +17,7 @@ code_samples:
   - audio-wiring---device-output
 inherits:
   - Instance
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

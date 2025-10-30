@@ -38,6 +38,8 @@ code_samples:
   - Changing-Decal-Texture
 inherits:
   - FaceInstance
+descendants:
+  - Texture
 tags: []
 deprecation_message: ''
 properties:

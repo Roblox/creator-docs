@@ -26,6 +26,7 @@ description: |
 code_samples: []
 inherits:
   - Part
+descendants: []
 tags:
   - NotCreatable
 deprecation_message: |

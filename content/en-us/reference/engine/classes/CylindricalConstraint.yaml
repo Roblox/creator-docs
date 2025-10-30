@@ -87,6 +87,7 @@ description: |
 code_samples: []
 inherits:
   - SlidingBallConstraint
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

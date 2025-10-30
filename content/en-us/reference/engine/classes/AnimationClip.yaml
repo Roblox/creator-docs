@@ -22,6 +22,9 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - CurveAnimation
+  - KeyframeSequence
 tags:
   - NotCreatable
 deprecation_message: ''

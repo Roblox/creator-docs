@@ -54,6 +54,7 @@ code_samples:
   - SpawnLocation-Checkpoints
 inherits:
   - Part
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

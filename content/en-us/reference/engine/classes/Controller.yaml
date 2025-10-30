@@ -14,6 +14,10 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - HumanoidController
+  - SkateboardController
+  - VehicleController
 tags:
   - NotCreatable
 deprecation_message: ''

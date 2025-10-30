@@ -15,6 +15,9 @@ description: |
 code_samples: []
 inherits:
   - BasePart
+descendants:
+  - Part
+  - WedgePart
 tags:
   - NotCreatable
 deprecation_message: |

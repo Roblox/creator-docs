@@ -21,6 +21,7 @@ code_samples:
   - audio-recorder
 inherits:
   - Instance
+descendants: []
 tags:
   - NotBrowsable
 deprecation_message: ''

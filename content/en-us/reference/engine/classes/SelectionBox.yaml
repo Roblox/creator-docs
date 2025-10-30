@@ -20,6 +20,7 @@ description: |
 code_samples: []
 inherits:
   - InstanceAdornment
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

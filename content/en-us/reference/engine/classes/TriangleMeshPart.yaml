@@ -17,6 +17,9 @@ description: |
 code_samples: []
 inherits:
   - BasePart
+descendants:
+  - MeshPart
+  - PartOperation
 tags:
   - NotCreatable
 deprecation_message: ''

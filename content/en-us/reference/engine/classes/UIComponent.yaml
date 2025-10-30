@@ -13,6 +13,16 @@ description: |
 code_samples: []
 inherits:
   - UIBase
+descendants:
+  - UIConstraint
+  - UICorner
+  - UIDragDetector
+  - UIFlexItem
+  - UIGradient
+  - UILayout
+  - UIPadding
+  - UIScale
+  - UIStroke
 tags:
   - NotCreatable
 deprecation_message: ''

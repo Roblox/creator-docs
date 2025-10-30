@@ -65,6 +65,7 @@ code_samples:
   - Debris-AddItem
 inherits:
   - Instance
+descendants: []
 tags:
   - NotCreatable
   - Service

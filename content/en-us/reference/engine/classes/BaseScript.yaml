@@ -12,6 +12,8 @@ description: |
 code_samples: []
 inherits:
   - LuaSourceContainer
+descendants:
+  - Script
 tags:
   - NotCreatable
 deprecation_message: ''

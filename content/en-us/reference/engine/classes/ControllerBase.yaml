@@ -10,6 +10,11 @@ description: ''
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - AirController
+  - ClimbController
+  - GroundController
+  - SwimController
 tags:
   - NotCreatable
 deprecation_message: ''

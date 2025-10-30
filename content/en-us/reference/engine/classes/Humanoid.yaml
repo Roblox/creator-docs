@@ -48,6 +48,7 @@ code_samples:
   - Walking-Camera-Bobble-Effect
 inherits:
   - Instance
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

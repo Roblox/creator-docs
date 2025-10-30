@@ -11,6 +11,7 @@ code_samples:
   - Hat1
 inherits:
   - Accoutrement
+descendants: []
 tags:
   - Deprecated
 deprecation_message: |

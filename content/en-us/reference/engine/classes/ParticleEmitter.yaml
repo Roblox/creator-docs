@@ -42,6 +42,7 @@ code_samples:
   - Creating-A-ParticleEmitter-from-Scratch
 inherits:
   - Instance
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

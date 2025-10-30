@@ -19,6 +19,7 @@ code_samples:
   - audio-wiring---sidechain-compression
 inherits:
   - Instance
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

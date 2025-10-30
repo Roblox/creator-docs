@@ -13,6 +13,18 @@ description: |
   Object. It is not possible to directly create Object.
 code_samples: []
 inherits: []
+descendants:
+  - Capture
+  - ConfigSnapshot
+  - EditableImage
+  - EditableMesh
+  - Instance
+  - MLSession
+  - TerrainIterateOperation
+  - TerrainModifyOperation
+  - TerrainReadOperation
+  - TerrainWriteOperation
+  - WebStreamClient
 tags:
   - NotCreatable
   - NotReplicated

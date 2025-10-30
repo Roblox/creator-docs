@@ -22,6 +22,7 @@ code_samples:
   - Shirt-Pants
 inherits:
   - Clothing
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

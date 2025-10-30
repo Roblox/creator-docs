@@ -29,6 +29,7 @@ code_samples:
   - surfacelight
 inherits:
   - Light
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

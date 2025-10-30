@@ -18,6 +18,7 @@ description: |
 code_samples: []
 inherits:
   - PlaneConstraint
+descendants: []
 tags:
   - Deprecated
 deprecation_message: ''

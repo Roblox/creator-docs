@@ -12,6 +12,12 @@ description: |
 code_samples: []
 inherits:
   - GuiBase
+descendants:
+  - FloorWire
+  - InstanceAdornment
+  - PVAdornment
+  - PartAdornment
+  - SelectionLasso
 tags:
   - NotCreatable
 deprecation_message: ''

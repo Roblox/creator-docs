@@ -27,6 +27,7 @@ description: |
 code_samples: []
 inherits:
   - DynamicRotate
+descendants: []
 tags:
   - Deprecated
 deprecation_message: |

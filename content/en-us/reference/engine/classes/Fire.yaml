@@ -40,6 +40,7 @@ code_samples:
   - Lighting-Torches
 inherits:
   - Instance
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

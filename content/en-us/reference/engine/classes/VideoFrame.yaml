@@ -34,6 +34,7 @@ code_samples:
   - creating-and-playing-a-video
 inherits:
   - GuiObject
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

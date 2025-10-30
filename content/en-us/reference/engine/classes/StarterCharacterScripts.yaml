@@ -19,6 +19,7 @@ description: |
 code_samples: []
 inherits:
   - StarterPlayerScripts
+descendants: []
 tags:
   - NotCreatable
 deprecation_message: ''

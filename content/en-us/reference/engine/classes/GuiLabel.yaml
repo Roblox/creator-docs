@@ -16,6 +16,9 @@ description: |
 code_samples: []
 inherits:
   - GuiObject
+descendants:
+  - ImageLabel
+  - TextLabel
 tags:
   - NotCreatable
 deprecation_message: ''

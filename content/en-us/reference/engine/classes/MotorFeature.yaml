@@ -12,6 +12,7 @@ description: |
 code_samples: []
 inherits:
   - Feature
+descendants: []
 tags:
   - Deprecated
 deprecation_message: |

@@ -52,6 +52,7 @@ code_samples:
   - CylinderMesh-Instantiation
 inherits:
   - BevelMesh
+descendants: []
 tags:
   - Deprecated
 deprecation_message: |

@@ -16,6 +16,7 @@ description: |
 code_samples: []
 inherits:
   - GuiObject
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

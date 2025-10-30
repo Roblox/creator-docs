@@ -10,6 +10,8 @@ description: ''
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - WorkspaceAnnotation
 tags: []
 deprecation_message: ''
 properties: []

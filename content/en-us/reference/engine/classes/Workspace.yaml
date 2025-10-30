@@ -59,6 +59,7 @@ description: |
 code_samples: []
 inherits:
   - WorldRoot
+descendants: []
 tags:
   - NotCreatable
   - Service

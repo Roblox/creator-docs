@@ -12,6 +12,10 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - PointLight
+  - SpotLight
+  - SurfaceLight
 tags:
   - NotCreatable
 deprecation_message: ''

@@ -13,6 +13,7 @@ description: |
 code_samples: []
 inherits:
   - Part
+descendants: []
 tags:
   - Deprecated
 deprecation_message: |

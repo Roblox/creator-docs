@@ -18,6 +18,7 @@ code_samples:
   - audio-wiring---emitter-filtering
 inherits:
   - Instance
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

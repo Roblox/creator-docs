@@ -21,6 +21,9 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - BevelMesh
+  - FileMesh
 tags:
   - NotCreatable
   - NotBrowsable

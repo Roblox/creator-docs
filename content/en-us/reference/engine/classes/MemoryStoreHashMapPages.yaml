@@ -17,6 +17,7 @@ code_samples:
   - listing-data-hash-map-memory-store
 inherits:
   - Pages
+descendants: []
 tags:
   - NotCreatable
   - NotReplicated

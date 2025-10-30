@@ -10,6 +10,7 @@ description: ''
 code_samples: []
 inherits:
   - GuiBase
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

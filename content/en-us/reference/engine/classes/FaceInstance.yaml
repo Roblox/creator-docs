@@ -14,6 +14,8 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - Decal
 tags:
   - NotCreatable
   - NotBrowsable

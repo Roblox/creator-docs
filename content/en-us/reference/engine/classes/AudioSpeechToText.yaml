@@ -18,6 +18,7 @@ code_samples:
   - audio-wiring---speech-to-text
 inherits:
   - Instance
+descendants: []
 tags:
   - NotBrowsable
 deprecation_message: ''

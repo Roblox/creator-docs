@@ -14,6 +14,7 @@ description: |
 code_samples: []
 inherits:
   - ReflectionMetadataItem
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

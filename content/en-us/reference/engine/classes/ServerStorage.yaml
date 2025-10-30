@@ -35,6 +35,7 @@ code_samples:
   - ServerStorage-Maps
 inherits:
   - Instance
+descendants: []
 tags:
   - NotCreatable
   - Service

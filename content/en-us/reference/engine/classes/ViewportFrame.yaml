@@ -39,6 +39,7 @@ code_samples:
   - viewportframe---control-camera
 inherits:
   - GuiObject
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

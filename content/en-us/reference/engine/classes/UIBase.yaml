@@ -12,6 +12,8 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - UIComponent
 tags:
   - NotCreatable
 deprecation_message: ''

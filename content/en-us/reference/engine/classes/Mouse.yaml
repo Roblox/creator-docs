@@ -59,6 +59,9 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - PlayerMouse
+  - PluginMouse
 tags:
   - NotCreatable
 deprecation_message: ''

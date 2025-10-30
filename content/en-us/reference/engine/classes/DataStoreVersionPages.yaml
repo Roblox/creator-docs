@@ -21,6 +21,7 @@ description: |
 code_samples: []
 inherits:
   - Pages
+descendants: []
 tags:
   - NotCreatable
   - NotReplicated

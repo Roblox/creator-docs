@@ -16,6 +16,7 @@ code_samples:
   - video-player-client
 inherits:
   - Instance
+descendants: []
 tags:
   - NotBrowsable
 deprecation_message: ''

@@ -18,6 +18,7 @@ description: |
 code_samples: []
 inherits:
   - SensorBase
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

@@ -22,6 +22,7 @@ description: |
 code_samples: []
 inherits:
   - BaseWrap
+descendants: []
 tags: []
 deprecation_message: ''
 properties: []

@@ -17,6 +17,8 @@ description: |
 code_samples: []
 inherits:
   - Constraint
+descendants:
+  - Plane
 tags: []
 deprecation_message: ''
 properties: []

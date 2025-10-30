@@ -14,6 +14,12 @@ code_samples:
   - using-a-script-to-create-a-part
 inherits:
   - FormFactorPart
+descendants:
+  - FlagStand
+  - Platform
+  - Seat
+  - SkateboardPlatform
+  - SpawnLocation
 tags: []
 deprecation_message: ''
 properties:

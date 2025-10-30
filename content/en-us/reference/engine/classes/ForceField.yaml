@@ -46,6 +46,7 @@ code_samples:
   - ForceField-Instantiation
 inherits:
   - Instance
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

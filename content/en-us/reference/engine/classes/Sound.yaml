@@ -28,6 +28,7 @@ code_samples:
   - Sound-3D-Parent
 inherits:
   - Instance
+descendants: []
 tags: []
 deprecation_message: ''
 properties:

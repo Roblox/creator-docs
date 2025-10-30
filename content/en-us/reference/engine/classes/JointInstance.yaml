@@ -24,6 +24,15 @@ description: |
 code_samples: []
 inherits:
   - Instance
+descendants:
+  - DynamicRotate
+  - Glue
+  - ManualSurfaceJointInstance
+  - Motor
+  - Rotate
+  - Snap
+  - VelocityMotor
+  - Weld
 tags:
   - NotCreatable
 deprecation_message: ''
